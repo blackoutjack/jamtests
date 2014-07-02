@@ -1,0 +1,144 @@
+jamtests
+========
+
+Benchmark and microbenchmarks woven by the JAM policy weaver, ready to
+be run with the JAMScript browser
+
+##### RUNNING #####
+
+A web server can be set up to point to the top directory in this
+repository, and from there you can access the bench/ and micro/
+subdirectories. The index.php file at each of these locations will
+automatically compile and present a list of test cases. Each benchmark
+(bench/) case is segregated into its own subdirectory, and the
+microbenchmarks are all loaded together. See the AUTOMATION section
+below for a description of the automated testing facilities.
+
+##### FILES #####
+
+Multiple variants of each test case are available. The variant is
+indicated by the file extension (prior to .js). Additionally, each of
+the variants listed below have another ``profile'' version which
+contains instrumentation for performance profiling.
+
+transformed: The final output of weaving, with direct transactional
+  introspection and indirection in place. This is the primary case of
+  interest when evaluating the functionality and performance of weaving.
+optimized: The ``transformed'' variant after an additional optimization
+  pass (consisting of the usual JavaScript ``minification'' performed by
+  Google Closure). The minification logic had to be modified somewhat to
+  safely handle transaction blocks; this functionality has not been
+  comprehensively tested so the result may be unstable.
+instrumented: The result of weaving prior to the application of
+  indirection. Dynamically-generated code is not generally protected in
+  this variant. Also, performance may suffer because callsites may
+  remain within transactions, causing transaction nesting.
+preprocessed: The source file after a normalization pass implemented in
+  the JAM weaver. This serves a purpose akin to a single static
+  assignment (SSA) tranformation; complex expressions are divided into
+  multiple simple ones with the same semantics to aid the static
+  analysis.
+closure: The source file as transformed by various passes implemented by
+  Google Closure. This is collected mainly as a check to help verify
+  correctness of the ``preprocessed'' variant described above.
+original.modular: The original code fully enclosed within a single
+  transaction. This is the variant evaluated as the ``coarse-grained''
+  variant compared to the ``fine-grained'' result of weaving (see the
+  ``transformed'' variant above).
+original: The original, unprotected JavaScript code. Code from all
+  script files and inline scripts loaded by a particular HTML page is
+  gathered in this file. This is the file provided to the JAM weaver
+  as input.
+
+Multiple policy files may also be included for each application.
+
+policy: Policy file used for the fully instrumented ``transformed''
+  code. It may contain specialized introspectors that only examine
+  the state with regards to a subset of the policy transitions.
+instrumented.policy: Policy used with the ``instrumented'' source
+  variant for which callsite indirection is not applied.
+modular.policy: The policy to be used for the ``coarse-grained''
+  (a.k.a.``modular'') test case. This defines a single
+  ``comprehensive'' introspector.
+
+Some application-specific files may also be found in the test
+directories. These include HTML, CSS, image files and other static
+content.
+
+To populate this repository, the JAM weaver repository
+(https://github.com/blackoutjack/jamweaver) contains a script at
+util/transfer_results.py. Along with the configuration at
+util/transferconfig.py, this utility scans the results of weaving (which
+are collected in the output/ directory of the weaver) and updates the
+files found here. The configuration file contains pattern-matching
+options that enable the insertion of profiling instrumentation for
+various program actions. (Profiling of the page ``load'' action is
+automatic.)
+
+This repository also contains several files that serve as the testing
+framework and implement some rudimentary automated testing.
+
+testindex.php: Symbolically linked as ``index.php'' in both the micro/
+  and bench/ directories. This script automatically loads up a list of
+  the available test cases and generates a link for each one that
+  includes the necessary URL parameters to be passed to test.php (see
+  below).
+test.php: A symbolic link within each test directory (micro/ and each
+  individual benchmark) points to this file. It take several URL
+  parameters that tell it how to generate the HTML for that test case.
+  policy: The JavaScript policy file to load. (The JAMScript library
+    file, libTx.js, is loaded automatically.)
+  script: The source file (one of the variants described above) to load.
+  head: HTML code to load within the head element. This typically loads
+    CSS or other static content.
+  html: HTML markup to include in the body. This typically instantiates
+    various HTML elements that are expected by the script.
+  auto*: Various parameters to control the automated testing (see
+    AUTOMATION below).
+auto.js: Contains JavaScript utility functions that control automated
+  testing (see AUTOMATION below).
+libTx.js: This file is currently not included in this repository, but
+  the jamscript repository (https://github.com/blackoutjack/jamscript).
+  Assuming that the jamtests repository is situated as a subdirectory
+  of tests/ in the jamscript repo, a symbolic link within each test
+  case directory will point to this file. (This is clearly a brittle
+  setup and should be changed soon.)
+
+##### AUTOMATION #####
+
+The benchmark tests (bench/) can be run in an automated fashion. Prior
+to automated testing, the file libTx.js should be altered to set the
+PERFORMANCE_TESTING variable to true. This does two things: 1) policy
+violations are allowed to pass through, so that execution is not cut
+off prematurely, and 2) the alert function is redirected to
+JAMScript.log, so that user interation is not needed to complete a test.
+
+To initiate automated testing, navigate to the bench/ directory in a
+browser. Then the following URL parameters can be entered to trigger
+the automation.
+
+  ?auto=1&autowait=5000
+
+The ``auto'' parameter is simply a flag that starts the automation,
+and ``autowait'' specifies the number of milliseconds to wait between
+page navigation. (If a script is still running when this timeout occurs,
+the navigation won't occur until after it completes. However, scripts
+that are put on the asynchronous execution queue after the timeout will
+be preempted.) Finally, the optional ``autoapp'' parameter (default: 0)
+can be set to an integer to start on an application further down the
+list.
+
+The testindex.php file contains a list of variants (in the variable
+$autotests) that are to be loaded for each application. Currently,
+the ``optimized'' variant is loaded to prime the system, followed by
+the ``original,'' ``transformed,'' and ``original.modular'' variants.
+These last 3 constitute the performance measurements reported in our
+paper.
+
+Automation should continue until the browser is closed (or until you
+can intervene and navigate to a URL outside of the loop). Uncaught
+JavaScript exceptions may cause the automation to fail. Performance
+statistics are printed to the terminal from which the browser was run.
+(Currently, some info is printed to stderr and some to stdout.)
+
+
