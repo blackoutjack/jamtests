@@ -1,20 +1,34 @@
-jamtests
-========
+##### About #####
 
-Benchmark and microbenchmarks woven by the JAM policy weaver, ready to
-be run with the JAMScript browser
+This repository contains benchmark and microbenchmark applications
+woven by the JAM policy weaver, ready to be run with the JAMScript
+browser. This project is being built and maintained by Rich Joiner
+(joiner@cs.wisc.edu) at the University of Wisconsin-Madison. This work
+is done under the advisement of Professors Tom Reps and Somesh Jha.
 
-##### RUNNING #####
+The latest version of the repository can be obtained via the Git
+repository hosted at the following address.
+
+https://github.com/blackoutjack/jamtests
+
+The JAM weaver (which produces these files) and the JAMScript browser
+extension (which is needed to run them) can be obtained via the Git
+repositories hosted at the following addresses, respectively.
+
+https://github.com/blackoutjack/jamweaver
+https://github.com/blackoutjack/jamscript
+
+##### Getting started #####
 
 A web server can be set up to point to the top directory in this
 repository, and from there you can access the bench/ and micro/
 subdirectories. The index.php file at each of these locations will
 automatically compile and present a list of test cases. Each benchmark
 (bench/) case is segregated into its own subdirectory, and the
-microbenchmarks are all loaded together. See the AUTOMATION section
+microbenchmarks are all loaded together. See the Automation section
 below for a description of the automated testing facilities.
 
-##### FILES #####
+##### Files #####
 
 Multiple variants of each test case are available. The variant is
 indicated by the file extension (prior to .js). Additionally, each of
@@ -94,9 +108,9 @@ test.php: A symbolic link within each test directory (micro/ and each
   html: HTML markup to include in the body. This typically instantiates
     various HTML elements that are expected by the script.
   auto*: Various parameters to control the automated testing (see
-    AUTOMATION below).
+    Automation below).
 auto.js: Contains JavaScript utility functions that control automated
-  testing (see AUTOMATION below).
+  testing (see Automation below).
 libTx.js: This file is currently not included in this repository, but
   the jamscript repository (https://github.com/blackoutjack/jamscript).
   Assuming that the jamtests repository is situated as a subdirectory
@@ -104,7 +118,7 @@ libTx.js: This file is currently not included in this repository, but
   case directory will point to this file. (This is clearly a brittle
   setup and should be changed soon.)
 
-##### AUTOMATION #####
+##### Automation #####
 
 The benchmark tests (bench/) can be run in an automated fashion. Prior
 to automated testing, the file libTx.js should be altered to set the
