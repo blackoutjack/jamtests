@@ -1,0 +1,17 @@
+function runTest() {
+
+  JAM.startProfile('load');
+introspect(JAMScript.introspectors.processAll) {
+  x = Math.random() * 3;
+  x = 4;
+  x = Math.random() * 3;
+  x = 5;
+  x = Math.random() * 3;
+  x = 6;
+
+  }
+
+  JAM.stopProfile('load');
+
+  return x === 6;
+}

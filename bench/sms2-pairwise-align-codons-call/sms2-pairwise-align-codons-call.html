@@ -1,0 +1,217 @@
+
+  <!-- MAIN TABLE -->
+
+  <table border="0" cellspacing="2" cellpadding="2">
+    <tbody>
+      <tr>
+        <td class="links">
+          <a href="index.html"><img src="includes/logo.png" alt="SMS logo" width="144" height="56" border="0" /></a> <!-- INSERT LINKS -->
+
+          <div class="copyright">
+            <br />
+            The Sequence Manipulation Suite Copyright &copy; 2000, 2004 Paul Stothard. Send questions and comments to stothard@ualberta.ca
+          </div>
+        </td><!-- PROGRAM CONTENT -->
+
+        <td class="program">
+          <table border="0" cellspacing="0" cellpadding="2">
+            <tbody>
+              <tr>
+                <td class="sms">Sequence Manipulation Suite:</td>
+              </tr>
+
+              <tr>
+                <td class="title">Pairwise Align Codons</td>
+              </tr>
+
+              <tr>
+                <td class="description">
+                  Pairwise Align Codons accepts two coding sequences and determines the optimal global alignment. The scoring matrix used to calculate the alignment is described in <a href="http://www.ncbi.nlm.nih.gov/entrez/query.fcgi?cmd=Retrieve&amp;db=PubMed&amp;list_uids=15927081&amp;dopt=Abstract" target="_blank">Schneider et al. (2005)</a>. Use Pairwise Align Codons to look for conserved coding sequence regions. Only the bases A,C,G,T and U are used in the alignment.<br />
+                  <br />
+
+                  <form action="" name="main_form" id="main_form">
+                    Paste sequence one (in raw sequence or FASTA format) into the text area below. Input limit is 6000 characters.<br />
+                    <textarea rows="6" cols="61">
+&gt;sequence one
+atgtttcagaaagaggatcttgctacatggatgcaaatttcaatgagtggtcaatttgatgatacagcattagaggaatggagtacaaatggtaaagaacctgagatctgtgagaaatctccaaaagctgatggagttactacgattatggagagagctctatgtccatgggatagcagagtcaactaccaagagagccgagaacctaaattgattgctgaatcagtttgtctatgccgtaagagccgtggttctacaggagctttctgtatgccaattgttcgaaaagttccaattctccgacgtgtctcttgtgatcgttcaacaggtttatggaattatgtaagatcaactgagctaataactgttggatgtcattctgtattgccaagaactcaaagagcagcacgtcttgcccatttatcatcttctcgtattattgtttaa
+</textarea><br />
+                    Paste sequence two (in raw sequence or FASTA format) into the text area below. Input limit is 6000 characters.<br />
+                    <textarea rows="6" cols="61">
+&gt;sequence two
+caggttacaattggagccatttcatcttctgactgaggaaatcaggtccgacagcgtagatgtatacacgctctattcacaaaattggtaacgattctg
+</textarea><br />
+                    <input type="button" value="Submit" name="main_submit" id="submitbtn" /> <input type="button" value="Clear" id="clearbtn" /> <input type="reset" value="Reset" />
+                    Use the following parameters to specify how alignments are scored.
+
+                    <ul>
+                      <li>Value for gaps preceding a sequence <select>
+                        <option value="-6">
+                          6
+                        </option>
+
+                        <option value="-5">
+                          5
+                        </option>
+
+                        <option value="-4">
+                          4
+                        </option>
+
+                        <option value="-3">
+                          3
+                        </option>
+
+                        <option value="-2">
+                          2
+                        </option>
+
+                        <option value="-1">
+                          1
+                        </option>
+
+                        <option selected="selected" value="0">
+                          0
+                        </option>
+
+                        <option value="1">
+                          -1
+                        </option>
+
+                        <option value="2">
+                          -2
+                        </option>
+
+                        <option value="3">
+                          -3
+                        </option>
+
+                        <option value="4">
+                          -4
+                        </option>
+
+                        <option value="5">
+                          -5
+                        </option>
+
+                        <option value="6">
+                          -6
+                        </option>
+                      </select></li>
+
+                      <li>Value for internal gaps <select>
+                        <option value="-6">
+                          6
+                        </option>
+
+                        <option value="-5">
+                          5
+                        </option>
+
+                        <option value="-4">
+                          4
+                        </option>
+
+                        <option value="-3">
+                          3
+                        </option>
+
+                        <option value="-2">
+                          2
+                        </option>
+
+                        <option value="-1">
+                          1
+                        </option>
+
+                        <option value="0">
+                          0
+                        </option>
+
+                        <option value="1">
+                          -1
+                        </option>
+
+                        <option selected="selected" value="2">
+                          -2
+                        </option>
+
+                        <option value="3">
+                          -3
+                        </option>
+
+                        <option value="4">
+                          -4
+                        </option>
+
+                        <option value="5">
+                          -5
+                        </option>
+
+                        <option value="6">
+                          -6
+                        </option>
+                      </select></li>
+
+                      <li>Value for gaps following a sequence <select>
+                        <option value="-6">
+                          6
+                        </option>
+
+                        <option value="-5">
+                          5
+                        </option>
+
+                        <option value="-4">
+                          4
+                        </option>
+
+                        <option value="-3">
+                          3
+                        </option>
+
+                        <option value="-2">
+                          2
+                        </option>
+
+                        <option value="-1">
+                          1
+                        </option>
+
+                        <option selected="selected" value="0">
+                          0
+                        </option>
+
+                        <option value="1">
+                          -1
+                        </option>
+
+                        <option value="2">
+                          -2
+                        </option>
+
+                        <option value="3">
+                          -3
+                        </option>
+
+                        <option value="4">
+                          -4
+                        </option>
+
+                        <option value="5">
+                          -5
+                        </option>
+
+                        <option value="6">
+                          -6
+                        </option>
+                      </select></li>
+                    </ul>
+                  </form>*This page requires JavaScript. See <a href="browser_compat.html">browser compatibility.</a><br />
+                </td>
+              </tr>
+            </tbody>
+          </table><!-- MAIN TABLE END -->
+        </td>
+      </tr>
+    </tbody>
+  </table>

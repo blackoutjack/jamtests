@@ -1,0 +1,107 @@
+An initial proof-of-concept implementation of speculative execution, which
+we refer to here as ForkIsolate, illuminates several requirements for such a sys-
+tem. Most obviously, the enforcement mechanism must be performant, particu-
+larly with regard to the startup time for each speculative execution. ForkIsolate
+pointedly did not meet this requirement; as the name indicates, each time spec-
+ulative mode was entered, the browser process was duplicated via a POSIX fork.
+In spite of copy-on-write semantics, the overhead incurred by this mechanism
+caused runtimes 3 or 4 orders of magnitude slower than unprotected execution
+for some applications.
+Furthermore, our experience with ForkIsolate shows that a speculative ex-
+ecution framework should be comprehensive with regards to the code that
+it can evaluate. The core JavaScript language provides methods of executing
+dynamically-generated code, most notoriously through the use of the eval func-
+tion. This fact necessitates that the speculative execution framework be able
+to faithfully maintain the semantics of all possible executions (in the absence
+of policy violations). We found that due to the underlying mechanism of isola-
+tion used by ForkIsolate, many modes of execution, for example those involving
+calls to DOM methods expecting access to a GUI, resulted in unexpected be-
+havior, including freezes and crashes. Additionally, because of the architecture
+of ForkIsolate these dangerous cases needed to be recognized and handled within
+the introspection mechanism itself. Consequently, converting ForkIsolate from a
+proof-of-concept into a general-purpose tool would have required special logic
+for a practically unbounded number of scenarios induced by JavaScript's ten-
+dency to be embedded in other systems and its susceptibility to dynamic code
+generation.
+Finally, a speculative execution framework that integrates with the JAM im-
+plementation of SafetyWeave needs to allow for extensibility of the capabilities
+for implementing introspection. Even if the ForkIsolate mechanism was able to
+correctly maintain the semantics of arbitrary code (corresponding to the com-
+prehensive requirement stated above), additional logic would still be needed to
+achieve complete introspection for all executions. For example, if the speculative
+execution of an expression results in a call to the document:write DOM method,
+the goal of comprehensive policy enforcement dictates that the contents of any
+script elements within the generated HTML should be speculatively executed as
+well; this entails a method of identifying and extracting such code during the
+introspection. Rather than building these domain-specic capabilities into the
+core of a speculative execution framework, it is more general to provide plug-in
+capabilities such that the embedding system (such as the DOM) can provide this
+functionality.
+The JAMScript extension to the JavaScript language consists of one new key-
+word, transaction. Addition of a new keyword may at rst appear to be an
+onerous barrier to acceptance into a language such as JavaScript that must
+only be modied with great care to maintain correct operation of legacy code.
+This concern is, however, mitigated by the fact that the transaction keyword
+need only be interpreted as such within syntactical context; that is, the syntax
+of transaction blocks as introduced in JAMScript is distinguishable from other
+statement types in the language and can thus be recognized uniquely even if
+\transaction" is used as an identier elsewhere in the program. See Fig. 2 for
+an annotated diagram of a transaction block. The distinction between the use
+of transaction as a keyword and an identier can be easily made via top down
+operator precedence parsing [6] as applied to JavaScript [3]. Such an approach
+means that legacy JavaScript code without transactional instrumentation will
+have exactly the same semantics when running in an interpreter that supports
+transaction blocks. Conversely, programs with transaction blocks will produce
+a syntax error when run in an environment that doesn't support transactions,
+which is preferable to running with unexpected semantics due to confusion of the
+intended keyword transaction with the identier transaction. The syntax of
+JAMScript avoids such confusion.
+
+JAMScript is an evolution and simplication of the Transcript system [5]. Tran-
+script is an extension to the JavaScript language that implements speculative
+execution with introspection. Transcript adds the transaction keyword and ac-
+companying syntax, which gives the programmer the ability to enclose sections
+of code in transaction blocks. It also provides introspection|via \iblock code"|
+which can evaluate actions that were recorded during speculative execution and
+determine whether the speculative state should be committed or suppressed.
+As presented by Dhawan et al. [5], the goal for the Transcript system is
+security-policy enforcement applied to untrusted code. They targeted the use
+case in which a web application is composed of several modules, delineated as
+diㄦent source code les included in a web page via HTML script tags. This
+situation is indeed the canonical formulation of the execution environment for
+JavaScript applications (MISSING: cite other papers using this setup). To make
+use of Transcript's transactions, any modules that are deemed to be untrusted
+(typically those provided by some untrusted third-party developer), are included
+via a script tag augmented with a new func attribute that references a Java-
+Script function f. In ect, the body of the untrusted script is wrapped in
+function f, which the host can then invoke in the context of a transaction.
+
+The Transactional Memory Introspection architecture [1] applies the prin-
+ciples of transactional instrumentation to multithreaded server software and
+demonstrates additional benets of this approach in that context. The Java-
+Script language does not exhibit true multithreaded behavior (the proposed
+standardization of the Worker API allows for parallel execution, but with each
+thread in a natively isolated environment, with communication via exchange of
+strings [10]), and thus parallelism does not factor in to our implementation, but
+this work demonstrates that transaction-based enforcement is viable and even
+preferable in a multithreaded context.
+Richards, et al. [7] apply speculative execution semantics (referred to as
+delimited histories) to untrusted code in an automatic but coarse-grained fash-
+ion, where untrustedness is based on the browser's same origin policy. Unlike
+in the JAM system, the entirety of the third-party code is speculatively exe-
+cuted, which, as we have shown, acts the performance prole of the execution.
+The assumption that the host code can be trusted may be reasonable in many
+contexts, though it always leaves open the possibility of indirect subversion of
+the policy by clever attackers that can manipulate the environment in such a
+way that coerces the host code into violating its own policy. It also precludes
+the practice of hosting copies of untrusted third-party code or integrating un-
+trusted code snippets into the host program. Another diㄦentiator is that the
+introspection code in [7] is written manually on a case-by-case (albeit reusable)
+basis in C++ modules, with the intent of shielding the instrumentation from
+manipulation. Contrastingly, JAM automatically produces introspection code as
+a translation of the policy automaton, and we provide a relatively simple scheme
+for protecting the integrity of the instrumentation.
+
+This appendix provides a full representation of the policy object that is generated
+by the JAM analysis, as well as relevant portions of the JAMScript library that
+interact with the policy.

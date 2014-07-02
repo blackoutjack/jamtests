@@ -1,0 +1,77 @@
+div.footnote  {
+	position : absolute;
+	z-index : 2;
+	visibility : hidden;
+	top : 10px;
+	left : 10px;
+	border : 2px solid Black;
+	background-color : White;
+	padding : 5px;
+	text-align : justify;
+	overflow : hidden;
+}
+a.note {
+	position : relative;
+	top : -5;
+	font-style : normal;
+	font-weight : bold;
+	font-size : 8pt;
+	color : blue;
+}
+
+a.topic {
+        text-decoration : none; font-weight : bold; color : black;
+}
+a.topic:hover {
+        color : red;
+}
+span.topic {
+        color : blue;
+        font-weight : bold;
+}
+
+div.menuBar {
+	position : absolute;
+	background-color:blue;
+	border-top:2px outset silver;
+	border-left:2px outset silver;
+	border-bottom:2px outset silver;
+	border-right:2px outset silver;
+	padding : 1px;
+	visibility : visible;
+	white-space : nowrap;
+	text-align : center;
+}
+img.menuBar {
+	margin : 1px;
+	padding : 0px;
+	border : 0px;
+}
+div.menuBody {
+	position : absolute;
+	background-color:blue;
+	border-top:0px solid blue;
+	border-left:2px outset silver;
+	border-bottom:2px outset silver;
+	border-right:2px outset silver;
+	z-index:1;
+	visibility : hidden;
+}
+div.menuItem {
+	font-family : "Times New Roman", Times, serif;
+	position : absolute;
+	left : 0px; top : 0px;
+	padding-top : 2px;
+	padding-left : 2px;
+	padding-bottom : 0px;
+	padding-right : 0px;
+	margin : 0px;
+	text-align : left;
+	background-color : blue;
+	color : White;
+	white-space : nowrap;
+	cursor: pointer;
+	border : 0px outset silver;
+	border-top : 2px solid blue;
+	font-size : 10pt;
+}

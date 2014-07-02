@@ -1,0 +1,20 @@
+This directory houses various versions of the updated Secure Note
+application. All JavaScript code is accumulated into a single source
+file.
+
+You may have to create the SNote/Blobs/ directory and change its owner
+to www-data (for an Apache web server on Linux at least).
+
+The test.php page can be loaded with a parameter string as follows to
+choose which version to run.
+
+http://mwwidgets/test.php?script=mwwidgets.jam.js&policy=policy.js
+
+
+Original README notes from MIT-LL:
+
+KNOWN ATTACKS
+
+* XSS - since the widget id read from the wiki text is used as the id of
+the div added for the widget without proper validation, including
+javascript in the widget id can result in a cross-site scripting attack.

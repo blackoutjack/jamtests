@@ -1,0 +1,204 @@
+
+  <!-- MAIN TABLE -->
+
+  <table border="0" cellspacing="2" cellpadding="2">
+    <tbody>
+      <tr>
+        <td class="links">
+          <a href="index.html"><img src="includes/logo.png" alt="SMS logo" width="144" height="56" border="0" /></a> <!-- INSERT LINKS -->
+
+          <div class="copyright">
+            <br />
+            The Sequence Manipulation Suite Copyright &copy; 2000, 2004 Paul Stothard. Send questions and comments to stothard@ualberta.ca
+          </div>
+        </td><!-- PROGRAM CONTENT -->
+
+        <td class="program">
+          <table border="0" cellspacing="0" cellpadding="2">
+            <tbody>
+              <tr>
+                <td class="sms">Sequence Manipulation Suite:</td>
+              </tr>
+
+              <tr>
+                <td class="title">Fuzzy Search Protein</td>
+              </tr>
+
+              <tr>
+                <td class="description">
+                  Fuzzy Search Protein accepts a protein sequence along with a query sequence and returns sites that are identical or similar to the query.<br />
+                  <br />
+
+                  <form action="" name="main_form" id="main_form">
+                    Enter the sequence to search (in raw sequence or FASTA format) into the text area below. Input limit is 2000 characters.<br />
+                    <textarea rows="6" cols="61">
+&gt;test sequence
+GKGKYGLEAFNGKFVQTDGQLAGTANEQTQFTLIFTSGHLVLRDNNGRHLGVDSGTRVLK
+SSKPGLTKANYFILEDSCPQGAFEFGGKYASLKQGEDVSFKLLVDEDIEDTETFQLEFVE
+TDKYAIRVCDPKKNSRDAKFWKTVAAGIQANGNSKDQTDCQFSVEYNGNDMHVRAPGGKY
+&gt;test sequence
+GKGKYGLEAFNGKFVQTDGQLAGTANEQTQFTLIFTSGHLVLRDNNGRHLGVDSGTRVLK
+SSKPGLTKANYFILEDSCPQGAFEFGGKYASLKQGEDVSFKLLVDEDIEDTETFQLEFVE
+TDKYAIRVCDPKKNSRDAKFWKTVAAGIQANGNSKDQTDCQFSVEYNGNDMHVRAPGGKY
+&gt;test sequence
+GKGKYGLEAFNGKFVQTDGQLAGTANEQTQFTLIFTSGHLVLRDNNGRHLGVDSGTRVLK
+SSKPGLTKANYFILEDSCPQGAFEFGGKYASLKQGEDVSFKLLVDEDIEDTETFQLEFVE
+TDKYAIRVCDPKKNSRDAKFWKTVAAGIQANGNSKDQTDCQFSVEYNGNDMHVRAPGGKY
+&gt;test sequence
+GKGKYGLEAFNGKFVQTDGQLAGTANEQTQFTLIFTSGHLVLRDNNGRHLGVDSGTRVLK
+SSKPGLTKANYFILEDSCPQGAFEFGGKYASLKQGEDVSFKLLVDEDIEDTETFQLEFVE
+TDKYAIRVCDPKKNSRDAKFWKTVAAGIQANGNSKDQTDCQFSVEYNGNDMHVRAPGGKY
+&gt;test sequence
+GKGKYGLEAFNGKFVQTDGQLAGTANEQTQFTLIFTSGHLVLRDNNGRHLGVDSGTRVLK
+SSKPGLTKANYFILEDSCPQGAFEFGGKYASLKQGEDVSFKLLVDEDIEDTETFQLEFVE
+TDKYAIRVCDPKKNSRDAKFWKTVAAGIQANGNSKDQTDCQFSVEYNGNDMHVRAPGGKY
+&gt;test sequence
+GKGKYGLEAFNGKFVQTDGQLAGTANEQTQFTLIFTSGHLVLRDNNGRHLGVDSGTRVLK
+SSKPGLTKANYFILEDSCPQGAFEFGGKYASLKQGEDVSFKLLVDEDIEDTETFQLEFVE
+TDKYAIRVCDPKKNSRDAKFWKTVAAGIQANGNSKDQTDCQFSVEYNGNDMHVRAPGGKY
+&gt;test sequence
+GKGKYGLEAFNGKFVQTDGQLAGTANEQTQFTLIFTSGHLVLRDNNGRHLGVDSGTRVLK
+SSKPGLTKANYFILEDSCPQGAFEFGGKYASLKQGEDVSFKLLVDEDIEDTETFQLEFVE
+TDKYAIRVCDPKKNSRDAKFWKTVAAGIQANGNSKDQTDCQFSVEYNGNDMHVRAPGGKY
+&gt;test sequence
+GKGKYGLEAFNGKFVQTDGQLAGTANEQTQFTLIFTSGHLVLRDNNGRHLGVDSGTRVLK
+SSKPGLTKANYFILEDSCPQGAFEFGGKYASLKQGEDVSFKLLVDEDIEDTETFQLEFVE
+TDKYAIRVCDPKKNSRDAKFWKTVAAGIQANGNSKDQTDCQFSVEYNGNDMHVRAPGGKY
+</textarea><br />
+                    Enter the query sequence into the text area below. Input limit is 30 characters.<br />
+                    <input type="text" size="30" value="GAD" /><br />
+                    <input type="button" value="Submit" name="main_submit" id="submitbtn" /> <input type="button" value="Clear" id="clearbtn" /> <input type="reset" value="Reset" />
+                    Use the following parameters to specify how hits are scored, and to control which hits are returned.
+
+                    <ul>
+                      <li>Scoring matrix <select>
+                        <option value="pam30">
+                          PAM30
+                        </option>
+
+                        <option value="pam70">
+                          PAM70
+                        </option>
+
+                        <option value="blosum80">
+                          BLOSUM80
+                        </option>
+
+                        <option selected="selected" value="blosum62">
+                          BLOSUM62
+                        </option>
+
+                        <option value="blosum45">
+                          BLOSUM45
+                        </option>
+                      </select></li>
+
+                      <li>Gap penalty <select>
+                        <option value="-5">
+                          5
+                        </option>
+
+                        <option value="-4">
+                          4
+                        </option>
+
+                        <option value="-3">
+                          3
+                        </option>
+
+                        <option value="-2">
+                          2
+                        </option>
+
+                        <option value="-1">
+                          1
+                        </option>
+
+                        <option value="0">
+                          0
+                        </option>
+
+                        <option value="1">
+                          -1
+                        </option>
+
+                        <option selected="selected" value="2">
+                          -2
+                        </option>
+
+                        <option value="3">
+                          -3
+                        </option>
+
+                        <option value="4">
+                          -4
+                        </option>
+
+                        <option value="5">
+                          -5
+                        </option>
+                      </select></li>
+
+                      <li>Report the the top <select>
+                        <option value="40">
+                          40
+                        </option>
+
+                        <option value="30">
+                          30
+                        </option>
+
+                        <option value="20">
+                          20
+                        </option>
+
+                        <option value="10">
+                          10
+                        </option>
+
+                        <option value="9">
+                          9
+                        </option>
+
+                        <option value="8">
+                          8
+                        </option>
+
+                        <option value="7">
+                          7
+                        </option>
+
+                        <option value="6">
+                          6
+                        </option>
+
+                        <option selected="selected" value="5">
+                          5
+                        </option>
+
+                        <option value="4">
+                          4
+                        </option>
+
+                        <option value="3">
+                          3
+                        </option>
+
+                        <option value="2">
+                          2
+                        </option>
+
+                        <option value="1">
+                          1
+                        </option>
+                      </select> hits.</li>
+                    </ul>
+                  </form>*This page requires JavaScript. See <a href="browser_compat.html">browser compatibility.</a><br />
+                </td>
+              </tr>
+            </tbody>
+          </table><!-- MAIN TABLE END -->
+        </td>
+      </tr>
+    </tbody>
+  </table>

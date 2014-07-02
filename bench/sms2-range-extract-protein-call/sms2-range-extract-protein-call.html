@@ -1,0 +1,68 @@
+
+  <!-- MAIN TABLE -->
+
+  <table border="0" cellspacing="2" cellpadding="2">
+    <tbody>
+      <tr>
+        <td class="links">
+          <a href="index.html"><img src="includes/logo.png" alt="SMS logo" width="144" height="56" border="0" /></a> <!-- INSERT LINKS -->
+
+          <div class="copyright">
+            <br />
+            The Sequence Manipulation Suite Copyright &copy; 2000, 2004 Paul Stothard. Send questions and comments to stothard@ualberta.ca
+          </div>
+        </td><!-- PROGRAM CONTENT -->
+
+        <td class="program">
+          <table border="0" cellspacing="0" cellpadding="2">
+            <tbody>
+              <tr>
+                <td class="sms">Sequence Manipulation Suite:</td>
+              </tr>
+
+              <tr>
+                <td class="title">Range Extractor Protein</td>
+              </tr>
+
+              <tr>
+                <td class="description">
+                  Range Extractor Protein accepts a protein sequence along with a set of positions or ranges. The residues corresponding to the positions or ranges are returned, either as a single new sequence, a set of FASTA records, as uppercase text, or as lowercase text. Use Range Extractor Protein to obtain subsequences using position information.<br />
+                  <br />
+
+                  <form action="" name="main_form" id="main_form">
+                    Paste a raw sequence or one or more FASTA sequences into the text area below. Input limit is 500000 characters.<br />
+                    <textarea rows="6" cols="61">
+&gt;sample sequence
+MQKSPLEKASFISKLFFSWTTPILRKGYRHHLELSDIYQAPSADSADHLSEKLEREWDREQASKKNPQLIHALRRCFFWRFLFYGILLYLGEVTKAVQPVLLGRIIASYDPENKVERSIAIYLGIGLCLLFIVRTLLLHPAIFGLHRIGMQMRTAMFSLIYKKTLKLSSRVLDKISIGQLVSLLSNNLNKFDEGLALAHFIWIAPLQVTLLMGLLWDLLQFSAFCGLGLLIILVIFQAILGKMMVKYRDQRAAKINERLVITSEIIDNIYSVKAYCWESAMEKMIENLREVELKMTRKAAYMRFFTSSAFFFSGFFVVFLSVLPYTVINGIVLRKIFTTISFCIVLRMSVTRQFPTAVQIWYDSFGMIRKIQDFLQKQEYKVLEYNLMTTGIIMENVTAFWEEGFGELLQKAQQSNGDRKHSSDENNVSFSHLCLVGNPVLKNINLNIEKGEMLAITGSTGLGKTSLLMLILGELEASEGIIKHSGRVSFCSQFSWIMPGTIKENIIFGVSYDEYRYKSVVKACQLQQDITKFAEQDNTVLGEGGVTLSGGQRARISLARAVYKDADLYLLDSPFGYLDVFTEEQVFESCVCKLMANKTRILVTSKMEHLRKADKILILHQGTSYFYGTFSELQSLRPSFSSKLMGYDTFDQFTEERRSSILTETLRRFSVDDSSAPWSKPKQSFRQTGEVGEKRKNSILNSFSSVRKISIVQKTPLCIDGESDDLQEKRLSLVPDSEQGEAALPRSNMIATGPTFPGRRRQSVLDLMTFTPNSGSSNLQRTRTSIRKISLVPQISLNEVDVYSRRLSQDSTLNITEEINEEDLKECFLDDVIKIPPVTTWNTYLRYFTLHKGLLLVLIWCVLVFLVEVAASLFVLWLLKNNPVNSGNNGTKISNSSYVVIITSTSFYYIFYIYVGVADTLLALSLFRGLPLVHTLITASKILHRKMLHSILHAPMSTISKLKAGGILNRFSKDIAILDDFLPLTIFDFIQLVFIVIGAIIVVSALQPYIFLATVPGLVVFILLRAYFLHTAQQLKQLESEGRSPIFTHLVTSLKGLWTLRAFRRQTYFETLFHKALNLHTANWFMYLATLRWFQMRIDMIFVLFFIVVTFISILTTGEGEGTAGIILTLAMNIMSTLQWAVNSSIDTDSLMRSVSRVFKFIDIQTEESMYTQIIKELPREGSSDVLVIKNEHVKKSDIWPSGGEMVVKDLTVKYMDDGNAVLENISFSISPGQRVGLLGRTGSGKSTLLSAFLRMLNIKGDIEIDGVSWNSVTLQEWRKAFGVITQKVFIFSGTFRQNLDPNGKWKDEEIWKVADEVGLKSVIEQFPGQLNFTLVDGGYVLSHGHKQLMCLARSVLSKAKIILLDEPSAHLDPITYQVIRRVLKQAFAGCTVILCEHRIEAMLDCQRFLVIEESNVWQYDSLQALLSEKSIFQQAISSSEKMRFFQGRHSSKHKPRTQITALKEETEEEVQETRL
+</textarea><br />
+                    Enter the residue positions or ranges to be extracted. Use ".." to represent a range, and use a comma to separate entries. The words 'start', 'end', 'center', and 'length' can be used in place of digits, to represent the beginning, end, middle, and length of the sequence. Arithmetic expressions can be included in the ranges. For example, to obtain the last three residues of a sequence, the range '(end - 2)..end' can be used. To obtain the 30 bases on either side of the center residue along with the center residue, the ranges '(center - 30)..(center - 1), center, (center + 1)..(center + 30)' can be used.<br />
+                    <input type="text" value="1, 5, 10..12" /><br />
+                    <input type="button" value="Submit" name="main_submit" id="submitbtn" /> <input type="button" value="Clear" id="clearbtn" /> <input type="reset" value="Reset" />
+                    <ul>
+                      <li>Sequence segments should be returned as <select>
+                        <option value="new_sequence" selected="selected">
+                          a new sequence
+                        </option>
+
+                        <option value="separate">
+                          separate FASTA records
+                        </option>
+
+                        <option value="uppercased">
+                          uppercased text
+                        </option>
+
+                        <option value="lowercased">
+                          lowercased text
+                        </option>
+                      </select></li>
+                    </ul>
+                  </form>*This page requires JavaScript. See <a href="browser_compat.html">browser compatibility.</a><br />
+                </td>
+              </tr>
+            </tbody>
+          </table><!-- MAIN TABLE END -->
+        </td>
+      </tr>
+    </tbody>
+  </table>

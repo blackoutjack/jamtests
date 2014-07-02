@@ -1,0 +1,1 @@
+a.innerHTML === "THIS SHOULD REMAIN"

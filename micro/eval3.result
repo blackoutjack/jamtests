@@ -1,0 +1,1 @@
+b instanceof Boolean && !(a instanceof Boolean)
