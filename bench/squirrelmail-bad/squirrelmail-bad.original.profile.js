@@ -16,8 +16,7 @@ while( pos == -1 && i < f ) {
 }
 if( pos >= 0 ) {
     document.forms[i-1].elements[pos].focus();
-	document.getElementById("c1").src = "http://www.richjoiner.com"
+	document.getElementById("c1").src = "http://www.blackoutjack.com/pics/TweekGhost.jpg"
 }
 
 JAM.stopProfile('load');
-

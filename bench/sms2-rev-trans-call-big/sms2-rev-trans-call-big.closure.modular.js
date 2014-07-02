@@ -1,6 +1,6 @@
 introspect(JAMScript.introspectors.processAll) {
 function addReturns(sequence) {
-  sequence = sequence.replace(/(.{60})/g, function(str$$7, p1, offset$$12, s$$2) {
+  sequence = sequence.replace(/(.{60})/g, function(str$$6, p1, offset$$12, s$$2) {
     return p1 + "\n"
   });
   return sequence
@@ -482,7 +482,7 @@ function testScript() {
     alert("Exception handling not supported. See browser compatibility page.")
   }
   testString = "123";
-  testString = testString.replace(/(\d)/g, function(str$$8, p1$$1, offset$$13, s$$3) {
+  testString = testString.replace(/(\d)/g, function(str$$7, p1$$1, offset$$13, s$$3) {
     return p1$$1 + "X"
   });
   if(testString != "1X2X3X") {
@@ -904,7 +904,7 @@ function revTrans(theDocument) {
 function writeRevTransSeqNoDegen(protein, title$$10, codonTable$$2) {
   var aminoAcid;
   protein = protein.replace(/\*/g, "z");
-  protein = protein.replace(/(.)/g, function(str$$9, p1$$2, offset$$14, s$$4) {
+  protein = protein.replace(/(.)/g, function(str$$8, p1$$2, offset$$14, s$$4) {
     aminoAcid = codonTable$$2[p1$$2.toString().toLowerCase()];
     return aminoAcid.mostCommonCodon
   });
@@ -916,7 +916,7 @@ function writeRevTransSeqNoDegen(protein, title$$10, codonTable$$2) {
 function writeRevTransSeqDegen(protein$$1, title$$11, codonTable$$3) {
   var aminoAcid$$1;
   protein$$1 = protein$$1.replace(/\*/g, "z");
-  protein$$1 = protein$$1.replace(/(.)/g, function(str$$10, p1$$3, offset$$15, s$$5) {
+  protein$$1 = protein$$1.replace(/(.)/g, function(str$$9, p1$$3, offset$$15, s$$5) {
     aminoAcid$$1 = codonTable$$3[p1$$3.toString().toLowerCase()];
     return aminoAcid$$1.degenCodon
   });
@@ -928,9 +928,9 @@ function writeRevTransSeqDegen(protein$$1, title$$11, codonTable$$3) {
 function writeRevTransGraph(protein$$2, codonTable$$4) {
   var aminoAcid$$2;
   protein$$2 = protein$$2.replace(/\*/g, "z");
-  protein$$2 = protein$$2.replace(/(.)/g, function(str$$11, p1$$4, offset$$16, s$$6) {
+  protein$$2 = protein$$2.replace(/(.)/g, function(str$$10, p1$$4, offset$$16, s$$6) {
     aminoAcid$$2 = codonTable$$4[p1$$4.toString().toLowerCase()];
-    return"<b>" + (offset$$16 + 1) + "_" + str$$11 + "_" + "first</b>\n" + aminoAcid$$2.rulerPosOne + "<b>" + (offset$$16 + 1) + "_" + str$$11 + "_" + "second</b>\n" + aminoAcid$$2.rulerPosTwo + "<b>" + (offset$$16 + 1) + "_" + str$$11 + "_" + "third</b>\n" + aminoAcid$$2.rulerPosThree + "\n"
+    return"<b>" + (offset$$16 + 1) + "_" + str$$10 + "_" + "first</b>\n" + aminoAcid$$2.rulerPosOne + "<b>" + (offset$$16 + 1) + "_" + str$$10 + "_" + "second</b>\n" + aminoAcid$$2.rulerPosTwo + "<b>" + (offset$$16 + 1) + "_" + str$$10 + "_" + "third</b>\n" + aminoAcid$$2.rulerPosThree + "\n"
   });
   outputWindow.document.write(protein$$2);
   return true
@@ -1261,4 +1261,3 @@ document.getElementById("clearbtn").onclick = function() {
 };
 
 }
-

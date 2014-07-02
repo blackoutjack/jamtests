@@ -328,5 +328,4 @@ new SNote("./SNote/", v41);
 var v42 = document.getElementById("div2");
 new SNoteSwindler("", v42, "div1");
 
-
 JAM.stopProfile('load');

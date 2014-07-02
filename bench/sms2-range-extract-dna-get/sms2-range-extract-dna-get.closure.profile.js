@@ -1,7 +1,7 @@
 
 JAM.startProfile('load');
 function addReturns(sequence) {
-  sequence = sequence.replace(/(.{60})/g, function(str$$7, p1, offset$$12, s$$2) {
+  sequence = sequence.replace(/(.{60})/g, function(str$$6, p1, offset$$12, s$$2) {
     return p1 + "\n"
   });
   return sequence
@@ -483,7 +483,7 @@ function testScript() {
     alert("Exception handling not supported. See browser compatibility page.")
   }
   testString = "123";
-  testString = testString.replace(/(\d)/g, function(str$$8, p1$$1, offset$$13, s$$3) {
+  testString = testString.replace(/(\d)/g, function(str$$7, p1$$1, offset$$13, s$$3) {
     return p1$$1 + "X"
   });
   if(testString != "1X2X3X") {
@@ -1046,13 +1046,13 @@ function writeRanges(sequence$$20) {
         if(this.ranges[i$$13].start > 1) {
           re$$3 = "(.{" + (this.ranges[i$$13].start - 1) + "})\\B(.{" + (this.ranges[i$$13].stop - this.ranges[i$$13].start + 1) + "})";
           re$$3 = new RegExp(re$$3);
-          sequence$$20 = sequence$$20.replace(re$$3, function(str$$9, p1$$2, p2, offset$$14, s$$4) {
+          sequence$$20 = sequence$$20.replace(re$$3, function(str$$8, p1$$2, p2, offset$$14, s$$4) {
             return p1$$2 + p2.toUpperCase()
           })
         }else {
           re$$3 = "(.{" + (this.ranges[i$$13].stop - this.ranges[i$$13].start + 1) + "})";
           re$$3 = new RegExp(re$$3);
-          sequence$$20 = sequence$$20.replace(re$$3, function(str$$10, p1$$3, offset$$15, s$$5) {
+          sequence$$20 = sequence$$20.replace(re$$3, function(str$$9, p1$$3, offset$$15, s$$5) {
             return p1$$3.toUpperCase()
           })
         }
@@ -1073,13 +1073,13 @@ function writeRanges(sequence$$20) {
         if(this.ranges[i$$13].start > 1) {
           re$$3 = "(.{" + (this.ranges[i$$13].start - 1) + "})\\B(.{" + (this.ranges[i$$13].stop - this.ranges[i$$13].start + 1) + "})";
           re$$3 = new RegExp(re$$3);
-          sequence$$20 = sequence$$20.replace(re$$3, function(str$$11, p1$$4, p2$$1, offset$$16, s$$6) {
+          sequence$$20 = sequence$$20.replace(re$$3, function(str$$10, p1$$4, p2$$1, offset$$16, s$$6) {
             return p1$$4 + p2$$1.toLowerCase()
           })
         }else {
           re$$3 = "(.{" + (this.ranges[i$$13].stop - this.ranges[i$$13].start + 1) + "})";
           re$$3 = new RegExp(re$$3);
-          sequence$$20 = sequence$$20.replace(re$$3, function(str$$12, p1$$5, offset$$17, s$$7) {
+          sequence$$20 = sequence$$20.replace(re$$3, function(str$$11, p1$$5, offset$$17, s$$7) {
             return p1$$5.toLowerCase()
           })
         }
@@ -1099,13 +1099,13 @@ function writeRanges(sequence$$20) {
         if(this.ranges[i$$13].start > 1) {
           re$$3 = "(.{" + (this.ranges[i$$13].start - 1) + "})\\B(.{" + (this.ranges[i$$13].stop - this.ranges[i$$13].start + 1) + "})";
           re$$3 = new RegExp(re$$3);
-          sequence$$20 = sequence$$20.replace(re$$3, function(str$$13, p1$$6, p2$$2, offset$$18, s$$8) {
+          sequence$$20 = sequence$$20.replace(re$$3, function(str$$12, p1$$6, p2$$2, offset$$18, s$$8) {
             return p1$$6 + getRandomSequence(["g", "a", "c", "t"], p2$$2.length)
           })
         }else {
           re$$3 = "(.{" + (this.ranges[i$$13].stop - this.ranges[i$$13].start + 1) + "})";
           re$$3 = new RegExp(re$$3);
-          sequence$$20 = sequence$$20.replace(re$$3, function(str$$14, p1$$7, offset$$19, s$$9) {
+          sequence$$20 = sequence$$20.replace(re$$3, function(str$$13, p1$$7, offset$$19, s$$9) {
             return getRandomSequence(["g", "a", "c", "t"], p1$$7.length)
           })
         }
@@ -1126,13 +1126,13 @@ function writeRanges(sequence$$20) {
         if(this.ranges[i$$13].start > 1) {
           re$$3 = "(.{" + (this.ranges[i$$13].start - 1) + "})\\B(.{" + (this.ranges[i$$13].stop - this.ranges[i$$13].start + 1) + "})";
           re$$3 = new RegExp(re$$3);
-          randomSequence = randomSequence.replace(re$$3, function(str$$15, p1$$8, p2$$3, offset$$20, s$$10) {
+          randomSequence = randomSequence.replace(re$$3, function(str$$14, p1$$8, p2$$3, offset$$20, s$$10) {
             return p1$$8 + sequence$$20.substring(p1$$8.length, p1$$8.length + p2$$3.length)
           })
         }else {
           re$$3 = "(.{" + (this.ranges[i$$13].stop - this.ranges[i$$13].start + 1) + "})";
           re$$3 = new RegExp(re$$3);
-          randomSequence = randomSequence.replace(re$$3, function(str$$16, p1$$9, offset$$21, s$$11) {
+          randomSequence = randomSequence.replace(re$$3, function(str$$15, p1$$9, offset$$21, s$$11) {
             return sequence$$20.substring(offset$$21, offset$$21 + p1$$9.length)
           })
         }

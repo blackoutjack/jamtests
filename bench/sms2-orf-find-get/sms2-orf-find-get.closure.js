@@ -1,5 +1,5 @@
 function addReturns(sequence) {
-  sequence = sequence.replace(/(.{60})/g, function(str$$7, p1, offset$$12, s$$2) {
+  sequence = sequence.replace(/(.{60})/g, function(str$$6, p1, offset$$12, s$$2) {
     return p1 + "\n"
   });
   return sequence
@@ -481,7 +481,7 @@ function testScript() {
     alert("Exception handling not supported. See browser compatibility page.")
   }
   testString = "123";
-  testString = testString.replace(/(\d)/g, function(str$$8, p1$$1, offset$$13, s$$3) {
+  testString = testString.replace(/(\d)/g, function(str$$7, p1$$1, offset$$13, s$$3) {
     return p1$$1 + "X"
   });
   if(testString != "1X2X3X") {
@@ -1015,7 +1015,7 @@ function writeOrfs(dnaSequence$$3, geneticCode$$1, startCodons, startPos, strand
         outputWindow.document.write("&gt;ORF number " + (k$$3 + 1) + " in reading frame " + rf + " on the " + strand + " strand extends from base " + (startPos + 1) + " to base " + (i$$11 + 3) + ".\n");
         outputWindow.document.write(addReturns(sequenceToTranslate) + "\n\n");
         outputWindow.document.write("&gt;Translation of ORF number " + (k$$3 + 1) + " in reading frame " + rf + " on the " + strand + " strand.\n");
-        sequenceToTranslate = sequenceToTranslate.replace(/(...)/g, function(str$$9, p1$$2, offset$$14, s$$4) {
+        sequenceToTranslate = sequenceToTranslate.replace(/(...)/g, function(str$$8, p1$$2, offset$$14, s$$4) {
           return" " + p1$$2 + " "
         });
         var m = 0;
@@ -1055,4 +1055,3 @@ document.getElementById("clearbtn").onclick = function() {
   document.forms[0].elements[0].value = " ";
   document.forms[0].elements[4].value = " "
 };
-

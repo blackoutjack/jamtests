@@ -18,5 +18,5 @@ if(pos >= 0) {
   document.forms[i - 1].elements[pos].focus()
 }
 ;
-JAM.stopProfile('load');
 
+JAM.stopProfile('load');

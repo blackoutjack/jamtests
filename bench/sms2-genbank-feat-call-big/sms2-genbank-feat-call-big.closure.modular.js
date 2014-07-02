@@ -1,6 +1,6 @@
 introspect(JAMScript.introspectors.processAll) {
 function addReturns(sequence) {
-  sequence = sequence.replace(/(.{60})/g, function(str$$7, p1, offset$$12, s$$2) {
+  sequence = sequence.replace(/(.{60})/g, function(str$$6, p1, offset$$12, s$$2) {
     return p1 + "\n"
   });
   return sequence
@@ -482,7 +482,7 @@ function testScript() {
     alert("Exception handling not supported. See browser compatibility page.")
   }
   testString = "123";
-  testString = testString.replace(/(\d)/g, function(str$$8, p1$$1, offset$$13, s$$3) {
+  testString = testString.replace(/(\d)/g, function(str$$7, p1$$1, offset$$13, s$$3) {
     return p1$$1 + "X"
   });
   if(testString != "1X2X3X") {
@@ -1021,4 +1021,3 @@ document.getElementById("clearbtn").onclick = function() {
 };
 
 }
-

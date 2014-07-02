@@ -64,5 +64,5 @@ if(v6) {
   v5.focus()
 }
 ;
-JAM.stopProfile('load');
 
+JAM.stopProfile('load');

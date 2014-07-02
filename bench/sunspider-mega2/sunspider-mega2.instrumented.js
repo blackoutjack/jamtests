@@ -1,6 +1,10 @@
 function warmup() {
-  var start$$5 = new Date;
-  var v37 = new Date;
+  introspect(JAMScript.introspectors.process1B86041E88256BE6084AEF81CF31F2F9188E6B1892E16B2FAFF5400F36AD63DDA9FC90140E606212) {
+    var start$$5 = new Date
+  }
+  introspect(JAMScript.introspectors.process1B86041E88256BE6084AEF81CF31F2F9188E6B1892E16B2FAFF5400F36AD63DDA9FC90140E606212) {
+    var v37 = new Date
+  }
   var v23 = v37 - start$$5;
   var v2 = v23 < warmupMS;
   for(;v2;) {
@@ -26,7 +30,9 @@ function warmup() {
       i$$2 = i$$2 + 1;
       v1 = i$$2 < 100
     }
-    var v39 = new Date;
+    introspect(JAMScript.introspectors.process1B86041E88256BE6084AEF81CF31F2F9188E6B1892E16B2FAFF5400F36AD63DDA9FC90140E606212) {
+      var v39 = new Date
+    }
     var v25 = v39 - start$$5;
     v2 = v25 < warmupMS
   }

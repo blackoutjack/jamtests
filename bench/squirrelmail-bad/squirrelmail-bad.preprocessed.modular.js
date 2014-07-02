@@ -62,8 +62,7 @@ if(v7) {
   var v5 = v14[pos];
   v5.focus();
   var v6 = document.getElementById("c1");
-  v6.src = "http://www.richjoiner.com"
+  v6.src = "http://www.blackoutjack.com/pics/TweekGhost.jpg"
 }
 ;
 }
-

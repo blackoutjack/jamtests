@@ -64,10 +64,9 @@ if(v7) {
   v5.focus();
   var v6 = document.getElementById("c1");
   introspect(JAMScript.introspectors.processD0BBA7FAE07D4CAC3C07091FDFB8C6213A5ACAAB) {
-    v6.src = "http://www.richjoiner.com"
+    v6.src = "http://www.blackoutjack.com/pics/TweekGhost.jpg"
   }
 }
 ;
 
 JAM.stopProfile('load');
-

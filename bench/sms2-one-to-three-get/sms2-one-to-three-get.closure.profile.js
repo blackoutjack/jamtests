@@ -1,7 +1,7 @@
 
 JAM.startProfile('load');
 function addReturns(sequence) {
-  sequence = sequence.replace(/(.{60})/g, function(str$$7, p1, offset$$12, s$$2) {
+  sequence = sequence.replace(/(.{60})/g, function(str$$6, p1, offset$$12, s$$2) {
     return p1 + "\n"
   });
   return sequence
@@ -483,7 +483,7 @@ function testScript() {
     alert("Exception handling not supported. See browser compatibility page.")
   }
   testString = "123";
-  testString = testString.replace(/(\d)/g, function(str$$8, p1$$1, offset$$13, s$$3) {
+  testString = testString.replace(/(\d)/g, function(str$$7, p1$$1, offset$$13, s$$3) {
     return p1$$1 + "X"
   });
   if(testString != "1X2X3X") {
@@ -898,7 +898,7 @@ function oneToThree(theDocument) {
 }
 function writeOneToThree(proteinSequence$$1) {
   proteinSequence$$1 = proteinSequence$$1.toLowerCase();
-  proteinSequence$$1 = proteinSequence$$1.replace(/(.)/g, function(str$$9, p1$$2, offset$$14, s$$4) {
+  proteinSequence$$1 = proteinSequence$$1.replace(/(.)/g, function(str$$8, p1$$2, offset$$14, s$$4) {
     return" " + p1$$2 + " "
   });
   proteinSequence$$1 = proteinSequence$$1.replace(/a/g, "ALA");
@@ -925,7 +925,7 @@ function writeOneToThree(proteinSequence$$1) {
   proteinSequence$$1 = proteinSequence$$1.replace(/y/g, "TYR");
   proteinSequence$$1 = proteinSequence$$1.replace(/z/g, "GLX");
   proteinSequence$$1 = proteinSequence$$1.replace(/\*/g, "***");
-  proteinSequence$$1 = proteinSequence$$1.replace(/\s*(.)(.)(.)\s*/g, function(str$$10, p1$$3, p2, p3, offset$$15, s$$5) {
+  proteinSequence$$1 = proteinSequence$$1.replace(/\s*(.)(.)(.)\s*/g, function(str$$9, p1$$3, p2, p3, offset$$15, s$$5) {
     return p1$$3 + p2.toLowerCase() + p3.toLowerCase()
   });
   outputWindow.document.write(addReturns(proteinSequence$$1));

@@ -1,7 +1,7 @@
 
 JAM.startProfile('load');
 function addReturns(sequence) {
-  sequence = sequence.replace(/(.{60})/g, function(str$$7, p1, offset$$12, s$$2) {
+  sequence = sequence.replace(/(.{60})/g, function(str$$6, p1, offset$$12, s$$2) {
     return p1 + "\n"
   });
   return sequence
@@ -483,7 +483,7 @@ function testScript() {
     alert("Exception handling not supported. See browser compatibility page.")
   }
   testString = "123";
-  testString = testString.replace(/(\d)/g, function(str$$8, p1$$1, offset$$13, s$$3) {
+  testString = testString.replace(/(\d)/g, function(str$$7, p1$$1, offset$$13, s$$3) {
     return p1$$1 + "X"
   });
   if(testString != "1X2X3X") {
@@ -997,7 +997,7 @@ function writeTranslation(dnaSequence$$3, geneticCode$$1, startPos, strand) {
   if(dnaSequence$$3.replace(/[^A-Za-z]/g, "").length < 3) {
     return""
   }
-  dnaSequence$$3 = dnaSequence$$3.replace(/(...)/g, function(str$$9, p1$$2, offset$$14, s$$4) {
+  dnaSequence$$3 = dnaSequence$$3.replace(/(...)/g, function(str$$8, p1$$2, offset$$14, s$$4) {
     return" " + p1$$2 + " "
   });
   var i$$12 = 0;

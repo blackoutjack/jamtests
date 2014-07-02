@@ -1,6 +1,6 @@
 introspect(JAMScript.introspectors.processAll) {
 function addReturns(sequence) {
-  sequence = sequence.replace(/(.{60})/g, function(str$$7, p1, offset$$12, s$$2) {
+  sequence = sequence.replace(/(.{60})/g, function(str$$6, p1, offset$$12, s$$2) {
     return p1 + "\n"
   });
   return sequence
@@ -482,7 +482,7 @@ function testScript() {
     alert("Exception handling not supported. See browser compatibility page.")
   }
   testString = "123";
-  testString = testString.replace(/(\d)/g, function(str$$8, p1$$1, offset$$13, s$$3) {
+  testString = testString.replace(/(\d)/g, function(str$$7, p1$$1, offset$$13, s$$3) {
     return p1$$1 + "X"
   });
   if(testString != "1X2X3X") {
@@ -990,7 +990,7 @@ function writeCodonTable(codonTable$$2) {
 }
 function addCodons(codonTable$$3, dnaSequence$$3) {
   dnaSequence$$3 = dnaSequence$$3.replace(/u/gi, "t");
-  dnaSequence$$3 = dnaSequence$$3.replace(/(...)/g, function(str$$9, p1$$2, offset$$14, s$$4) {
+  dnaSequence$$3 = dnaSequence$$3.replace(/(...)/g, function(str$$8, p1$$2, offset$$14, s$$4) {
     return" " + p1$$2 + " "
   });
   var matchExp$$2;
@@ -1023,7 +1023,7 @@ function makeCodonTable(geneticCode$$1) {
   var codonTable$$5 = new CodonTable;
   var geneticCodeMatchExp$$2 = getGeneticCodeMatchExp(geneticCode$$1);
   var geneticCodeMatchResult$$2 = getGeneticCodeMatchResult(geneticCode$$1);
-  codonSequence = codonSequence.replace(/(...)/g, function(str$$10, p1$$3, offset$$15, s$$5) {
+  codonSequence = codonSequence.replace(/(...)/g, function(str$$9, p1$$3, offset$$15, s$$5) {
     return" " + p1$$3 + " "
   });
   var codonSequenceCopy = codonSequence;
@@ -1082,8 +1082,8 @@ function count() {
 function addCodon(codon$$1) {
   this.codons.push(codon$$1)
 }
-function AminoAcid(name$$32) {
-  this.name = name$$32;
+function AminoAcid(name$$31) {
+  this.name = name$$31;
   this.codons = new Array;
   this.number = 0
 }
@@ -1166,4 +1166,3 @@ document.getElementById("clearbtn").onclick = function() {
 };
 
 }
-

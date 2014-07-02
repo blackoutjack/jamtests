@@ -1,6 +1,6 @@
 introspect(JAMScript.introspectors.processAll) {
 function addReturns(sequence) {
-  sequence = sequence.replace(/(.{60})/g, function(str$$7, p1, offset$$12, s$$2) {
+  sequence = sequence.replace(/(.{60})/g, function(str$$6, p1, offset$$12, s$$2) {
     return p1 + "\n"
   });
   return sequence
@@ -482,7 +482,7 @@ function testScript() {
     alert("Exception handling not supported. See browser compatibility page.")
   }
   testString = "123";
-  testString = testString.replace(/(\d)/g, function(str$$8, p1$$1, offset$$13, s$$3) {
+  testString = testString.replace(/(\d)/g, function(str$$7, p1$$1, offset$$13, s$$3) {
     return p1$$1 + "X"
   });
   if(testString != "1X2X3X") {
@@ -1075,7 +1075,7 @@ function translate(dnaSequence$$4, geneticCodeMatchExp$$3, geneticCodeMatchResul
   if(dnaSequence$$4.replace(/[^A-Za-z]/g, "").length < 3) {
     return""
   }
-  dnaSequence$$4 = dnaSequence$$4.replace(/(...)/g, function(str$$9, p1$$2, offset$$14, s$$4) {
+  dnaSequence$$4 = dnaSequence$$4.replace(/(...)/g, function(str$$8, p1$$2, offset$$14, s$$4) {
     return" " + p1$$2 + " "
   });
   var i$$13 = 0;
@@ -1092,7 +1092,7 @@ function uppercaseTranslate(dnaSequence$$5, geneticCodeMatchExp$$4, geneticCodeM
   if(dnaSequence$$5.replace(/[^A-Za-z]/g, "").length < 3) {
     return""
   }
-  dnaSequence$$5 = dnaSequence$$5.replace(/([A-Z])(\s*)([A-Z])(\s*)([A-Z])(\s*)/g, function(str$$10, p1$$3, p2, p3, p4, p5, p6, offset$$15, s$$5) {
+  dnaSequence$$5 = dnaSequence$$5.replace(/([A-Z])(\s*)([A-Z])(\s*)([A-Z])(\s*)/g, function(str$$9, p1$$3, p2, p3, p4, p5, p6, offset$$15, s$$5) {
     return" " + p1$$3 + p3 + p5 + " " + p2 + p4 + p6
   });
   dnaSequence$$5 = dnaSequence$$5.replace(/\s\S{1,2}\s/g, "");
@@ -1443,4 +1443,3 @@ document.getElementById("clearbtn").onclick = function() {
 };
 
 }
-

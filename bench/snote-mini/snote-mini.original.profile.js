@@ -1,6 +1,5 @@
 
 JAM.startProfile('load');
-
 /*
  * SNote/SNote.js
  */
@@ -549,6 +548,4 @@ function SNoteSwindler(serverPath, divParent, strNoteId) {
 new SNote("./SNote/", document.getElementById("div1"));
 new SNoteSwindler("", document.getElementById("div2"), "div1");
 
-
 JAM.stopProfile('load');
-

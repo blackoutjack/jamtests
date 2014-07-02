@@ -1,6 +1,6 @@
 introspect(JAMScript.introspectors.processAll) {
 function addReturns(sequence) {
-  sequence = sequence.replace(/(.{60})/g, function(str$$7, p1, offset$$12, s$$2) {
+  sequence = sequence.replace(/(.{60})/g, function(str$$6, p1, offset$$12, s$$2) {
     return p1 + "\n"
   });
   return sequence
@@ -482,7 +482,7 @@ function testScript() {
     alert("Exception handling not supported. See browser compatibility page.")
   }
   testString = "123";
-  testString = testString.replace(/(\d)/g, function(str$$8, p1$$1, offset$$13, s$$3) {
+  testString = testString.replace(/(\d)/g, function(str$$7, p1$$1, offset$$13, s$$3) {
     return p1$$1 + "X"
   });
   if(testString != "1X2X3X") {
@@ -1064,7 +1064,7 @@ function translate(dnaSequence$$4, geneticCodeMatchExp$$3, geneticCodeMatchResul
   if(dnaSequence$$4.replace(/[^A-Za-z]/g, "").length < 3) {
     return""
   }
-  dnaSequence$$4 = dnaSequence$$4.replace(/(...)/g, function(str$$9, p1$$2, offset$$14, s$$4) {
+  dnaSequence$$4 = dnaSequence$$4.replace(/(...)/g, function(str$$8, p1$$2, offset$$14, s$$4) {
     return" " + p1$$2 + " "
   });
   var i$$13 = 0;
@@ -1081,7 +1081,7 @@ function uppercaseTranslate(dnaSequence$$5, geneticCodeMatchExp$$4, geneticCodeM
   if(dnaSequence$$5.replace(/[^A-Za-z]/g, "").length < 3) {
     return""
   }
-  dnaSequence$$5 = dnaSequence$$5.replace(/([A-Z])(\s*)([A-Z])(\s*)([A-Z])(\s*)/g, function(str$$10, p1$$3, p2, p3, p4, p5, p6, offset$$15, s$$5) {
+  dnaSequence$$5 = dnaSequence$$5.replace(/([A-Z])(\s*)([A-Z])(\s*)([A-Z])(\s*)/g, function(str$$9, p1$$3, p2, p3, p4, p5, p6, offset$$15, s$$5) {
     return" " + p1$$3 + p3 + p5 + " " + p2 + p4 + p6
   });
   dnaSequence$$5 = dnaSequence$$5.replace(/\s\S{1,2}\s/g, "");
@@ -1190,7 +1190,7 @@ function buildRuler() {
   var sequence$$19 = this.characters.join("");
   var count$$6 = 0;
   var spacing = "         ";
-  sequence$$19 = sequence$$19.replace(/(.{1,10})/g, function(str$$13, p1$$6, offset$$18, s$$8) {
+  sequence$$19 = sequence$$19.replace(/(.{1,10})/g, function(str$$12, p1$$6, offset$$18, s$$8) {
     var ruler$$1 = count$$6 + spacing;
     if(count$$6 == 0) {
       ruler$$1 = spacing
@@ -1267,10 +1267,10 @@ RulerComponent.prototype = new LayoutComponent;
 RulerComponent.prototype.writeLayoutComponent = function(start$$10, stop$$6) {
   outputWindow.document.write(rightNum(this.positionLabel, "", 8, ""));
   var text$$15 = this.characters.slice(start$$10, stop$$6).join("");
-  text$$15 = text$$15.replace(/^(\d+)/g, function(str$$11, p1$$4, offset$$16, s$$6) {
+  text$$15 = text$$15.replace(/^(\d+)/g, function(str$$10, p1$$4, offset$$16, s$$6) {
     return p1$$4.replace(/./g, " ")
   });
-  text$$15 = text$$15.replace(/(\d+)$/g, function(str$$12, p1$$5, offset$$17, s$$7) {
+  text$$15 = text$$15.replace(/(\d+)$/g, function(str$$11, p1$$5, offset$$17, s$$7) {
     return p1$$5.replace(/./g, " ")
   });
   outputWindow.document.write(text$$15 + "\n");
@@ -1297,4 +1297,3 @@ document.getElementById("clearbtn").onclick = function() {
 };
 
 }
-
