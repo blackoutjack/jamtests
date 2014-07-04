@@ -1,5 +1,6 @@
 
 JAM.startProfile('load');
+// http://www.gnucitizen.org/blog/javascript-port-scanner/
 var AttackAPI = {
   version: '0.1',
   author: 'Petko Petkov (architect)',
@@ -37,4 +38,3 @@ function cb(tgt, p, res) {
 AttackAPI.PortScanner.scanTarget(cb, "localhost", [20,21,22,23,24,100,101,102,103], 1000);
 
 JAM.stopProfile('load');
-
