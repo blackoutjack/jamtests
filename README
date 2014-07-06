@@ -144,10 +144,10 @@ list.
 
 The testindex.php file contains a list of variants (in the variable
 $autotests) that are to be loaded for each application. Currently,
-the ``optimized'' variant is loaded to prime the system, followed by
-the ``original,'' ``transformed,'' and ``original.modular'' variants.
-These last 3 constitute the performance measurements reported in our
-paper.
+the ``original,'' ``transformed,'' and ``original.modular'' variants are
+each loaded to prime the system, followed by the ``profile'' version of
+each of these. The latter 3 constitute the performance measurements
+reported in our paper.
 
 Automation should continue until the browser is closed (or until you
 can intervene and navigate to a URL outside of the loop). Uncaught

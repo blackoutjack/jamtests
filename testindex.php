@@ -8,7 +8,7 @@ $autoindex = (isset($_REQUEST['autoindex']) && is_numeric($_REQUEST['autoindex']
 $autowait = (isset($_REQUEST['autowait']) && is_numeric($_REQUEST['autowait'])) ? $_REQUEST['autowait'] : 1000;
 $autoapp = (isset($_REQUEST['autoapp']) && is_numeric($_REQUEST['autoapp'])) ? $_REQUEST['autoapp'] : 0;
 
-$autotests = array('optimized.profile', 'original.profile', 'transformed.profile', 'original.modular.profile');
+$autotests = array('original', 'transformed', 'original.modular', 'original.profile', 'transformed.profile', 'original.modular.profile');
 
 function getSubArray($parent, $idx) {
   $sub = null;
@@ -115,6 +115,9 @@ function appendScriptLink($html, $info, $hrefbase, $extra, $name) {
 function findPolicy($info, $key) {
   $sub = $info[$key];
   if (isset($sub['policy'])) return $sub['policy'];
+  if ($key == 'original' || $key == 'original.profile') {
+    return 'false';
+  }
 
   $keyparts = explode('.', $key);
   for ($i=sizeof($keyparts)-1; $i>=0; $i--) {
