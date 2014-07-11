@@ -17,6 +17,8 @@ var policy = function() {
       JAMScript.prevent(tx)
     }
   }
+  processAll.subsumedBy = processAll;
+  Object.freeze(processAll);
   function processAll(tx) {
     var commit = true;
     var as = tx.getActionSequence();
@@ -34,5 +36,7 @@ var policy = function() {
       JAMScript.prevent(tx)
     }
   }
+  processAll.subsumedBy = processAll;
+  Object.freeze(processAll);
   return{introspectors:{processAll:processAll, processAll:processAll}}
 }()

@@ -19,6 +19,8 @@ var policy = function() {
       JAMScript.prevent(tx)
     }
   }
+  processAll.subsumedBy = processAll;
+  Object.freeze(processAll);
   function process94EE778565BE169537F46A7EF198441AC12F2E68(tx) {
     var commit = true;
     var as = tx.getActionSequence();
@@ -36,5 +38,7 @@ var policy = function() {
       JAMScript.prevent(tx)
     }
   }
+  process94EE778565BE169537F46A7EF198441AC12F2E68.subsumedBy = processAll;
+  Object.freeze(process94EE778565BE169537F46A7EF198441AC12F2E68);
   return{introspectors:{process94EE778565BE169537F46A7EF198441AC12F2E68:process94EE778565BE169537F46A7EF198441AC12F2E68, processAll:processAll}}
 }()

@@ -22,6 +22,7 @@ foreach ($allfiles as $fl) {
   if ($fl == 'txjs') continue;
   if ($fl == 'kraken-results') continue;
   if ($fl == 'jsbench-yahoo-firefox-urem-eval') continue;
+  //if (substr($fl, strlen($fl) - 4) == '-big') continue;
   
   // Tests disabled for lack of good test cases.
   if ($fl == 'jsbeautifier') continue;
@@ -51,6 +52,7 @@ foreach ($allfiles as $fl) {
   if ($fl == 'octane-zlib-eval') continue;
   if ($fl == 'sunspider-mega') continue;
   if ($fl == 'sunspider-mega2') continue;
+  if ($fl == 'squirrelmail-bad') continue;
 
   $apps[] = $fl;
 }

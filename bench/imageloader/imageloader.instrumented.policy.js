@@ -18,6 +18,8 @@ var policy = function() {
       JAMScript.prevent(tx)
     }
   }
+  processAll.subsumedBy = processAll;
+  Object.freeze(processAll);
   function processD1AC21BB80EC25700F3E2B60070EE2799345578F(tx) {
     var commit = true;
     var as = tx.getActionSequence();
@@ -35,5 +37,7 @@ var policy = function() {
       JAMScript.prevent(tx)
     }
   }
+  processD1AC21BB80EC25700F3E2B60070EE2799345578F.subsumedBy = processAll;
+  Object.freeze(processD1AC21BB80EC25700F3E2B60070EE2799345578F);
   return{introspectors:{processD1AC21BB80EC25700F3E2B60070EE2799345578F:processD1AC21BB80EC25700F3E2B60070EE2799345578F, processAll:processAll}}
 }()

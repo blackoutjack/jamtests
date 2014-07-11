@@ -20,6 +20,8 @@ var policy = function() {
       JAMScript.prevent(tx)
     }
   }
+  processAll.subsumedBy = processAll;
+  Object.freeze(processAll);
   function processBEAFBB2FD8125A1CE4C97F75106BD93D0D091F0C(tx) {
     var commit = true;
     var as = tx.getActionSequence();
@@ -37,5 +39,7 @@ var policy = function() {
       JAMScript.prevent(tx)
     }
   }
+  processBEAFBB2FD8125A1CE4C97F75106BD93D0D091F0C.subsumedBy = processAll;
+  Object.freeze(processBEAFBB2FD8125A1CE4C97F75106BD93D0D091F0C);
   return{introspectors:{processBEAFBB2FD8125A1CE4C97F75106BD93D0D091F0C:processBEAFBB2FD8125A1CE4C97F75106BD93D0D091F0C, processAll:processAll}}
 }()

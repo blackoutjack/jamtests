@@ -39,5 +39,7 @@ var policy = function() {
       JAMScript.prevent(tx)
     }
   }
+  processAll.subsumedBy = processAll;
+  Object.freeze(processAll);
   return{introspectors:{processAll:processAll}}
 }()

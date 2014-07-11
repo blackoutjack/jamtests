@@ -17,6 +17,8 @@ var policy = function() {
       JAMScript.prevent(tx)
     }
   }
+  processAll.subsumedBy = processAll;
+  Object.freeze(processAll);
   function process6CB626AF3B00A2806871E6DD34E13FD7B9D46DB2(tx) {
     var commit = true;
     var as = tx.getActionSequence();
@@ -34,5 +36,7 @@ var policy = function() {
       JAMScript.prevent(tx)
     }
   }
+  process6CB626AF3B00A2806871E6DD34E13FD7B9D46DB2.subsumedBy = processAll;
+  Object.freeze(process6CB626AF3B00A2806871E6DD34E13FD7B9D46DB2);
   return{introspectors:{process6CB626AF3B00A2806871E6DD34E13FD7B9D46DB2:process6CB626AF3B00A2806871E6DD34E13FD7B9D46DB2, processAll:processAll}}
 }()

@@ -18,6 +18,8 @@ var policy = function() {
       JAMScript.prevent(tx)
     }
   }
+  processAll.subsumedBy = processAll;
+  Object.freeze(processAll);
   function processF1BA71A55F9319E61520953F6A9F05F1A5D05A94(node) {
     var commit = true;
     if(node.type === "call" && JAM.identical(node.value, _String_prototype_indexOf) && node.argc > 0 && typeof node.args[0] === "string") {
@@ -25,5 +27,6 @@ var policy = function() {
     }
     return commit
   }
+  Object.freeze(processF1BA71A55F9319E61520953F6A9F05F1A5D05A94);
   return{introspectors:{processF1BA71A55F9319E61520953F6A9F05F1A5D05A94:processF1BA71A55F9319E61520953F6A9F05F1A5D05A94, processAll:processAll}}
 }()

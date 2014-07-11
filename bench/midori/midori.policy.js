@@ -23,6 +23,8 @@ var policy = function() {
       JAMScript.prevent(tx)
     }
   }
+  processAll.subsumedBy = processAll;
+  Object.freeze(processAll);
   function process3F9F399AB000376076BBFF3A9A9C0103B23A9835(tx) {
     var s1 = states.indexOf(1) > -1;
     var as = tx.getActionSequence();
@@ -36,6 +38,8 @@ var policy = function() {
     }
     JAMScript.process(tx)
   }
+  process3F9F399AB000376076BBFF3A9A9C0103B23A9835.subsumedBy = processAll;
+  Object.freeze(process3F9F399AB000376076BBFF3A9A9C0103B23A9835);
   function process425E08A28862414CF7130381FE99A660F52DB811(tx) {
     var commit = true;
     var s1 = states.indexOf(1) > -1;
@@ -56,5 +60,7 @@ var policy = function() {
       JAMScript.prevent(tx)
     }
   }
+  process425E08A28862414CF7130381FE99A660F52DB811.subsumedBy = processAll;
+  Object.freeze(process425E08A28862414CF7130381FE99A660F52DB811);
   return{introspectors:{process3F9F399AB000376076BBFF3A9A9C0103B23A9835:process3F9F399AB000376076BBFF3A9A9C0103B23A9835, process425E08A28862414CF7130381FE99A660F52DB811:process425E08A28862414CF7130381FE99A660F52DB811, processAll:processAll}}
 }()

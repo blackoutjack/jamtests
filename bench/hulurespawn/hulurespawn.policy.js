@@ -24,6 +24,8 @@ var policy = function() {
       JAMScript.prevent(tx)
     }
   }
+  processAll.subsumedBy = processAll;
+  Object.freeze(processAll);
   function process9C5FFCABA70857D69F2974E6410A585B5EFE64DC(node) {
     var s1 = states.indexOf(1) > -1;
     if(!s1) {
@@ -34,6 +36,7 @@ var policy = function() {
     }
     return true
   }
+  Object.freeze(process9C5FFCABA70857D69F2974E6410A585B5EFE64DC);
   function process425E08A28862414CF7130381FE99A660F52DB811(tx) {
     var commit = true;
     var s1 = states.indexOf(1) > -1;
@@ -54,5 +57,7 @@ var policy = function() {
       JAMScript.prevent(tx)
     }
   }
+  process425E08A28862414CF7130381FE99A660F52DB811.subsumedBy = processAll;
+  Object.freeze(process425E08A28862414CF7130381FE99A660F52DB811);
   return{introspectors:{process9C5FFCABA70857D69F2974E6410A585B5EFE64DC:process9C5FFCABA70857D69F2974E6410A585B5EFE64DC, process425E08A28862414CF7130381FE99A660F52DB811:process425E08A28862414CF7130381FE99A660F52DB811, processAll:processAll}}
 }()

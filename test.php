@@ -12,8 +12,10 @@ if ($script) {
   $err = "Please specify a 'script' parameter.";
 }
 
+// Pass a falsy |lib| parameter to suppress libTx.js.
+$lib = isset($_REQUEST['lib']) ? (!$_REQUEST['lib'] ? false : true) : true;
 // Optional policy and html files
-$policy = isset($_REQUEST['policy']) ? $_REQUEST['policy'] : false;
+$policy = isset($_REQUEST['policy']) ? (!$_REQUEST['policy'] ? false : $_REQUEST['policy']) : false;
 $html = isset($_REQUEST['html']) ? $_REQUEST['html'] : false;
 $head = isset($_REQUEST['head']) ? $_REQUEST['head'] : false;
 $auto = isset($_REQUEST['auto']) ? $_REQUEST['auto'] : false;
@@ -34,14 +36,6 @@ if (file_exists('actions.txt')) {
     if ($action != "") {
       $autoactions[] = $action;
     }
-  }
-}
-
-// Pass a falsy |lib| parameter to suppress libTx.js.
-$lib = true;
-if (isset($_REQUEST['lib'])) {
-  if (!$_REQUEST['lib']) {
-    $lib = false;
   }
 }
 ?>

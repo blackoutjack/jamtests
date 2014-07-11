@@ -20,6 +20,8 @@ var policy = function() {
       JAMScript.prevent(tx)
     }
   }
+  processAll.subsumedBy = processAll;
+  Object.freeze(processAll);
   function process68DCD5A3B6F708E10DB2D4E94C3DD418A4DE8ABC(node) {
     var commit = true;
     if(node.type === "call" && JAM.identical(node.value, _Window_prototype_open) && !(node.argc > 0 && __RegExp_prototype_test_call_bind__RegExp_prototype_test_(/^http:\/\/jamscript.*/i, node.args[0]))) {
@@ -27,5 +29,6 @@ var policy = function() {
     }
     return commit
   }
+  Object.freeze(process68DCD5A3B6F708E10DB2D4E94C3DD418A4DE8ABC);
   return{introspectors:{process68DCD5A3B6F708E10DB2D4E94C3DD418A4DE8ABC:process68DCD5A3B6F708E10DB2D4E94C3DD418A4DE8ABC, processAll:processAll}}
 }()

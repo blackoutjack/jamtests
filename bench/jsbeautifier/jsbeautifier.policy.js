@@ -24,6 +24,8 @@ var policy = function() {
       JAMScript.prevent(tx)
     }
   }
+  processAll.subsumedBy = processAll;
+  Object.freeze(processAll);
   function process750A7ECA0CEA34F16F7CDD3F0C47CDDFC768D4A5(node) {
     var s1 = states.indexOf(1) > -1;
     if(!s1) {
@@ -34,5 +36,6 @@ var policy = function() {
     }
     return true
   }
+  Object.freeze(process750A7ECA0CEA34F16F7CDD3F0C47CDDFC768D4A5);
   return{introspectors:{process750A7ECA0CEA34F16F7CDD3F0C47CDDFC768D4A5:process750A7ECA0CEA34F16F7CDD3F0C47CDDFC768D4A5, processAll:processAll}}
 }()

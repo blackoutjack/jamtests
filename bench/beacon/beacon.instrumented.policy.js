@@ -25,6 +25,8 @@ var policy = function() {
       JAMScript.prevent(tx)
     }
   }
+  processAll.subsumedBy = processAll;
+  Object.freeze(processAll);
   function process76F930B34187247043082CAF9881927B310E8F564E301A1AA8BF2B7374C3F6541DC9BB72815A4493(tx) {
     var s1 = states.indexOf(1) > -1;
     var as = tx.getActionSequence();
@@ -38,6 +40,8 @@ var policy = function() {
     }
     JAMScript.process(tx)
   }
+  process76F930B34187247043082CAF9881927B310E8F564E301A1AA8BF2B7374C3F6541DC9BB72815A4493.subsumedBy = processAll;
+  Object.freeze(process76F930B34187247043082CAF9881927B310E8F564E301A1AA8BF2B7374C3F6541DC9BB72815A4493);
   function process425E08A28862414CF7130381FE99A660F52DB811(tx) {
     var commit = true;
     var s1 = states.indexOf(1) > -1;
@@ -58,5 +62,7 @@ var policy = function() {
       JAMScript.prevent(tx)
     }
   }
+  process425E08A28862414CF7130381FE99A660F52DB811.subsumedBy = processAll;
+  Object.freeze(process425E08A28862414CF7130381FE99A660F52DB811);
   return{introspectors:{process76F930B34187247043082CAF9881927B310E8F564E301A1AA8BF2B7374C3F6541DC9BB72815A4493:process76F930B34187247043082CAF9881927B310E8F564E301A1AA8BF2B7374C3F6541DC9BB72815A4493, process425E08A28862414CF7130381FE99A660F52DB811:process425E08A28862414CF7130381FE99A660F52DB811, processAll:processAll}}
 }()

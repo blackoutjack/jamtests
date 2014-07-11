@@ -116,7 +116,7 @@ function findPolicy($info, $key) {
   $sub = $info[$key];
   if (isset($sub['policy'])) return $sub['policy'];
   if ($key == 'original' || $key == 'original.profile') {
-    return 'false';
+    return '0';
   }
 
   $keyparts = explode('.', $key);
