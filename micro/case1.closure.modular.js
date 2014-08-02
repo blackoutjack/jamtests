@@ -1,5 +1,5 @@
 function runTest() {
-introspect(JAMScript.introspectors.processAll) {
+  introspect(JAM.policy.pFull) {
   x = 1;
   switch(x) {
     case 1:
@@ -9,6 +9,7 @@ introspect(JAMScript.introspectors.processAll) {
       alert(x + 1)
   }
   ;
+
   }
 
   return x === 1 && y === 1;

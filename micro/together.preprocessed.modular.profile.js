@@ -1,7 +1,7 @@
 function runTest() {
 
   JAM.startProfile('load');
-introspect(JAMScript.introspectors.processAll) {
+  introspect(JAM.policy.pFull) {
   function v0() {
     notanid();
     return
@@ -27,6 +27,7 @@ introspect(JAMScript.introspectors.processAll) {
     console.error(v2)
   }
   ;
+
   }
 
   JAM.stopProfile('load');

@@ -62,11 +62,11 @@ function unpacker_filter(source$$1) {
   if(v13) {
     var stripped_source = trim_leading_comments(source$$1);
     var unpacked = "";
-    introspect(JAMScript.introspectors.process750A7ECA0CEA34F16F7CDD3F0C47CDDFC768D4A5) {
+    introspect(JAM.policy.p750A7ECA0CEA34F16F7CDD3F0C47CDDFC768D4A5) {
       var v8 = P_A_C_K_E_R.detect(stripped_source)
     }
     if(v8) {
-      introspect(JAMScript.introspectors.process750A7ECA0CEA34F16F7CDD3F0C47CDDFC768D4A5) {
+      introspect(JAM.policy.p750A7ECA0CEA34F16F7CDD3F0C47CDDFC768D4A5) {
         unpacked = P_A_C_K_E_R.unpack(stripped_source)
       }
       var v7 = unpacked !== stripped_source;
@@ -74,11 +74,11 @@ function unpacker_filter(source$$1) {
         return unpacker_filter(unpacked)
       }
     }
-    introspect(JAMScript.introspectors.process750A7ECA0CEA34F16F7CDD3F0C47CDDFC768D4A5) {
+    introspect(JAM.policy.p750A7ECA0CEA34F16F7CDD3F0C47CDDFC768D4A5) {
       var v10 = EscapedBookmarklet.detect(source$$1)
     }
     if(v10) {
-      introspect(JAMScript.introspectors.process750A7ECA0CEA34F16F7CDD3F0C47CDDFC768D4A5) {
+      introspect(JAM.policy.p750A7ECA0CEA34F16F7CDD3F0C47CDDFC768D4A5) {
         unpacked = EscapedBookmarklet.unpack(source$$1)
       }
       var v9 = unpacked !== stripped_source;
@@ -86,11 +86,11 @@ function unpacker_filter(source$$1) {
         return unpacker_filter(unpacked)
       }
     }
-    introspect(JAMScript.introspectors.process750A7ECA0CEA34F16F7CDD3F0C47CDDFC768D4A5) {
+    introspect(JAM.policy.p750A7ECA0CEA34F16F7CDD3F0C47CDDFC768D4A5) {
       var v12 = JavascriptObfuscator.detect(stripped_source)
     }
     if(v12) {
-      introspect(JAMScript.introspectors.process750A7ECA0CEA34F16F7CDD3F0C47CDDFC768D4A5) {
+      introspect(JAM.policy.p750A7ECA0CEA34F16F7CDD3F0C47CDDFC768D4A5) {
         unpacked = JavascriptObfuscator.unpack(stripped_source)
       }
       var v11 = unpacked !== stripped_source;
@@ -104,7 +104,7 @@ function unpacker_filter(source$$1) {
 function do_js_beautify() {
   var v14 = document.getElementById("beautify");
   v14.disabled = true;
-  introspect(JAMScript.introspectors.process750A7ECA0CEA34F16F7CDD3F0C47CDDFC768D4A5) {
+  introspect(JAM.policy.p750A7ECA0CEA34F16F7CDD3F0C47CDDFC768D4A5) {
     var v34 = document.getElementById("content")
   }
   var v15 = v34.value;
@@ -136,20 +136,20 @@ function do_js_beautify() {
   }
   var v23 = v35;
   if(v23) {
-    introspect(JAMScript.introspectors.process750A7ECA0CEA34F16F7CDD3F0C47CDDFC768D4A5) {
+    introspect(JAM.policy.p750A7ECA0CEA34F16F7CDD3F0C47CDDFC768D4A5) {
       var v21 = document.getElementById("content")
     }
-    introspect(JAMScript.introspectors.process750A7ECA0CEA34F16F7CDD3F0C47CDDFC768D4A5) {
+    introspect(JAM.policy.p750A7ECA0CEA34F16F7CDD3F0C47CDDFC768D4A5) {
       var v46 = style_html(js_source, indent_size, indent_char, 80, brace_style$$1)
     }
     v21.value = v46
   }else {
-    introspect(JAMScript.introspectors.process750A7ECA0CEA34F16F7CDD3F0C47CDDFC768D4A5) {
+    introspect(JAM.policy.p750A7ECA0CEA34F16F7CDD3F0C47CDDFC768D4A5) {
       var v22 = document.getElementById("content")
     }
     var v36 = unpacker_filter(js_source);
     var v37 = {indent_size:indent_size, indent_char:indent_char, preserve_newlines:preserve_newlines, brace_style:brace_style$$1, keep_array_indentation:keep_array_indentation, space_after_anon_function:true};
-    introspect(JAMScript.introspectors.process750A7ECA0CEA34F16F7CDD3F0C47CDDFC768D4A5) {
+    introspect(JAM.policy.p750A7ECA0CEA34F16F7CDD3F0C47CDDFC768D4A5) {
       var v47 = js_beautify(v36, v37)
     }
     v22.value = v47
@@ -164,7 +164,7 @@ function get_var(name$$31) {
   var reg = new RegExp(v25);
   var v39 = window.location;
   var v26 = v39.href;
-  introspect(JAMScript.introspectors.process750A7ECA0CEA34F16F7CDD3F0C47CDDFC768D4A5) {
+  introspect(JAM.policy.p750A7ECA0CEA34F16F7CDD3F0C47CDDFC768D4A5) {
     var res = reg.exec(v26)
   }
   var v27;
@@ -177,16 +177,16 @@ function get_var(name$$31) {
 }
 function run_tests() {
   var st = new SanityTest;
-  introspect(JAMScript.introspectors.process750A7ECA0CEA34F16F7CDD3F0C47CDDFC768D4A5) {
+  introspect(JAM.policy.p750A7ECA0CEA34F16F7CDD3F0C47CDDFC768D4A5) {
     run_beautifier_tests(st)
   }
-  introspect(JAMScript.introspectors.process750A7ECA0CEA34F16F7CDD3F0C47CDDFC768D4A5) {
+  introspect(JAM.policy.p750A7ECA0CEA34F16F7CDD3F0C47CDDFC768D4A5) {
     JavascriptObfuscator.run_tests(st)
   }
-  introspect(JAMScript.introspectors.process750A7ECA0CEA34F16F7CDD3F0C47CDDFC768D4A5) {
+  introspect(JAM.policy.p750A7ECA0CEA34F16F7CDD3F0C47CDDFC768D4A5) {
     P_A_C_K_E_R.run_tests(st)
   }
-  introspect(JAMScript.introspectors.process750A7ECA0CEA34F16F7CDD3F0C47CDDFC768D4A5) {
+  introspect(JAM.policy.p750A7ECA0CEA34F16F7CDD3F0C47CDDFC768D4A5) {
     EscapedBookmarklet.run_tests(st)
   }
   var v40 = document.getElementById("testresults");

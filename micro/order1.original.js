@@ -1,5 +1,5 @@
 function runTest() {
-function f() {
+  function f() {
     return { ok: "got it!" };
   }
   function g() {

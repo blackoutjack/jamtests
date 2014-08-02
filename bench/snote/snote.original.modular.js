@@ -1,5 +1,4 @@
-introspect(JAMScript.introspectors.processAll) {
-
+introspect(JAM.policy.pFull) {
 /*
  * SNote/SNote.js
  */
@@ -643,6 +642,4 @@ function SNoteSwindler(serverPath, divParent, strNoteId) {
 new SNote("./SNote/", document.getElementById("div1"));
 new SNoteSwindler("", document.getElementById("div2"), "div1");
 
-
 }
-

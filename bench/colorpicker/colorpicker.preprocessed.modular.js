@@ -1,4 +1,4 @@
-introspect(JAMScript.introspectors.processAll) {
+introspect(JAM.policy.pFull) {
 function v485() {
   var v486 = $("#red, #green, #blue");
   var v487 = {orientation:"horizontal", range:"min", max:255, value:127, slide:refreshSwatch, change:refreshSwatch};

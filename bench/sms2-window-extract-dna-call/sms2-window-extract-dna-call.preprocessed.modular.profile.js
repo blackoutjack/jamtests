@@ -1,6 +1,6 @@
 
 JAM.startProfile('load');
-introspect(JAMScript.introspectors.processAll) {
+introspect(JAM.policy.pFull) {
 function v12() {
   var v924 = document.forms;
   var v765 = v924[0];

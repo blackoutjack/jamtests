@@ -1,6 +1,6 @@
 
 JAM.startProfile('load');
-introspect(JAMScript.introspectors.processAll) {
+introspect(JAM.policy.pFull) {
 function YUI() {
   function i$$5(e$$9, t$$1) {
     return e$$9 && e$$9.hasOwnProperty && e$$9 instanceof t$$1

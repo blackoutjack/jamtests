@@ -1,6 +1,6 @@
 
 JAM.startProfile('load');
-introspect(JAMScript.introspectors.processAll) {
+introspect(JAM.policy.pFull) {
 function v53(el$$4) {
   var v579 = YAHOO.env;
   var v487 = v579.ua;

@@ -1,5 +1,5 @@
 function runTest() {
-function click_inner() {
+  function click_inner() {
     var event$$1 = new Event("click");
     var v0 = document.getElementById("test2");
     v0.dispatchEvent(event$$1);

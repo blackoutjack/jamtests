@@ -1,7 +1,7 @@
 function runTest() {
 
   JAM.startProfile('load');
-function Stack() {
+  function Stack() {
     this.discs = [Infinity];
     this.push = function(disc) {
       if(typeof disc != "number") {

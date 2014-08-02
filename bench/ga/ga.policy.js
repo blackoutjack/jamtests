@@ -1,8 +1,7 @@
 var policy = function() {
-  var states = [0];
   var _HTMLDocument_prototype_createElement = HTMLDocument.prototype.createElement;
   var _HTMLDocument_prototype_write = HTMLDocument.prototype.write;
-  function processAll(tx) {
+  function pFull(tx) {
     var commit = true;
     var as = tx.getActionSequence();
     var len = as.length;
@@ -14,28 +13,50 @@ var policy = function() {
       }
     }
     if(commit) {
-      JAMScript.process(tx)
+      JAM.process(tx)
     }else {
-      JAMScript.prevent(tx)
+      JAM.prevent(tx)
     }
   }
-  processAll.subsumedBy = processAll;
-  Object.freeze(processAll);
-  function process0FFB1518291BEE7C5744977B581D549C9B6BD5A04CDAF44D89391C6FE13FBBD6677C6DE0505D675A(node) {
+  pFull.subsumedBy = pFull;
+  Object.freeze(pFull);
+  function p0FFB1518291BEE7C5744977B581D549C9B6BD5A04CDAF44D89391C6FE13FBBD6677C6DE0505D675A(tx) {
     var commit = true;
-    if(node.type === "call" && (JAM.identical(node.value, _HTMLDocument_prototype_createElement) && JAM.identical(node.args[0], "script") || JAM.identical(node.value, _HTMLDocument_prototype_write) && !JAM.identical(node.args[0], undefined))) {
-      commit = false
+    var as = tx.getActionSequence();
+    var len = as.length;
+    for(var i = 0;i < len;i++) {
+      var node = as[i];
+      if(node.type === "call" && (JAM.identical(node.value, _HTMLDocument_prototype_createElement) && JAM.identical(node.args[0], "script") || JAM.identical(node.value, _HTMLDocument_prototype_write) && !JAM.identical(node.args[0], undefined))) {
+        commit = false;
+        break
+      }
     }
-    return commit
+    if(commit) {
+      JAM.process(tx)
+    }else {
+      JAM.prevent(tx)
+    }
   }
-  Object.freeze(process0FFB1518291BEE7C5744977B581D549C9B6BD5A04CDAF44D89391C6FE13FBBD6677C6DE0505D675A);
-  function process4CDAF44D89391C6FE13FBBD6677C6DE0505D675A(node) {
+  p0FFB1518291BEE7C5744977B581D549C9B6BD5A04CDAF44D89391C6FE13FBBD6677C6DE0505D675A.subsumedBy = pFull;
+  Object.freeze(p0FFB1518291BEE7C5744977B581D549C9B6BD5A04CDAF44D89391C6FE13FBBD6677C6DE0505D675A);
+  function p4CDAF44D89391C6FE13FBBD6677C6DE0505D675A(tx) {
     var commit = true;
-    if(node.type === "call" && JAM.identical(node.value, _HTMLDocument_prototype_write) && !JAM.identical(node.args[0], undefined)) {
-      commit = false
+    var as = tx.getActionSequence();
+    var len = as.length;
+    for(var i = 0;i < len;i++) {
+      var node = as[i];
+      if(node.type === "call" && JAM.identical(node.value, _HTMLDocument_prototype_write) && !JAM.identical(node.args[0], undefined)) {
+        commit = false;
+        break
+      }
     }
-    return commit
+    if(commit) {
+      JAM.process(tx)
+    }else {
+      JAM.prevent(tx)
+    }
   }
-  Object.freeze(process4CDAF44D89391C6FE13FBBD6677C6DE0505D675A);
-  return{introspectors:{process0FFB1518291BEE7C5744977B581D549C9B6BD5A04CDAF44D89391C6FE13FBBD6677C6DE0505D675A:process0FFB1518291BEE7C5744977B581D549C9B6BD5A04CDAF44D89391C6FE13FBBD6677C6DE0505D675A, process4CDAF44D89391C6FE13FBBD6677C6DE0505D675A:process4CDAF44D89391C6FE13FBBD6677C6DE0505D675A, processAll:processAll}}
+  p4CDAF44D89391C6FE13FBBD6677C6DE0505D675A.subsumedBy = pFull;
+  Object.freeze(p4CDAF44D89391C6FE13FBBD6677C6DE0505D675A);
+  return{p0FFB1518291BEE7C5744977B581D549C9B6BD5A04CDAF44D89391C6FE13FBBD6677C6DE0505D675A:p0FFB1518291BEE7C5744977B581D549C9B6BD5A04CDAF44D89391C6FE13FBBD6677C6DE0505D675A, p4CDAF44D89391C6FE13FBBD6677C6DE0505D675A:p4CDAF44D89391C6FE13FBBD6677C6DE0505D675A, pFull:pFull}
 }()

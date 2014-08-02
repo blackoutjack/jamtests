@@ -48,7 +48,7 @@ function SNote(serverPath, divParent) {
     m_divDeleteDialog = createPopupDialog("delete_dialog", m_divInternal$$1);
     var parent$$inline_25 = m_divDeleteDialog;
     label = document.createElement("label");
-    introspect(JAMScript.introspectors.process60BC769F7FE69A3D16A7359015C19BE54348D76E510AD27954A2595FF3D635DFFE9522029FA0A17D643B7C49AB8946BE23E67884C2A1A1A95BFE0CBF) {
+    introspect(JAM.policy.p60BC769F7FE69A3D16A7359015C19BE54348D76E510AD27954A2595FF3D635DFFE9522029FA0A17D643B7C49AB8946BE23E67884C2A1A1A95BFE0CBF) {
       label.textContent = "Are you sure you want to delete?"
     }
     parent$$inline_25.appendChild(label);
@@ -74,7 +74,7 @@ function SNote(serverPath, divParent) {
     divPassword = document.createElement("div");
     parent$$1.appendChild(divPassword);
     labelPassword = document.createElement("label");
-    introspect(JAMScript.introspectors.process60BC769F7FE69A3D16A7359015C19BE54348D76E510AD27954A2595FF3D635DFFE9522029FA0A17D643B7C49AB8946BE23E67884C2A1A1A95BFE0CBF) {
+    introspect(JAM.policy.p60BC769F7FE69A3D16A7359015C19BE54348D76E510AD27954A2595FF3D635DFFE9522029FA0A17D643B7C49AB8946BE23E67884C2A1A1A95BFE0CBF) {
       labelPassword.textContent = strPrompt
     }
     divPassword.appendChild(labelPassword);
@@ -96,14 +96,14 @@ function SNote(serverPath, divParent) {
     divButtons = document.createElement("div");
     buttonOk = document.createElement("button");
     buttonOk.type = "input";
-    introspect(JAMScript.introspectors.process60BC769F7FE69A3D16A7359015C19BE54348D76E510AD27954A2595FF3D635DFFE9522029FA0A17D643B7C49AB8946BE23E67884C2A1A1A95BFE0CBF) {
+    introspect(JAM.policy.p60BC769F7FE69A3D16A7359015C19BE54348D76E510AD27954A2595FF3D635DFFE9522029FA0A17D643B7C49AB8946BE23E67884C2A1A1A95BFE0CBF) {
       buttonOk.textContent = "ok"
     }
     buttonOk.onclick = funcHandleOk;
     divButtons.appendChild(buttonOk);
     buttonCancel = document.createElement("button");
     buttonCancel.type = "input";
-    introspect(JAMScript.introspectors.process60BC769F7FE69A3D16A7359015C19BE54348D76E510AD27954A2595FF3D635DFFE9522029FA0A17D643B7C49AB8946BE23E67884C2A1A1A95BFE0CBF) {
+    introspect(JAM.policy.p60BC769F7FE69A3D16A7359015C19BE54348D76E510AD27954A2595FF3D635DFFE9522029FA0A17D643B7C49AB8946BE23E67884C2A1A1A95BFE0CBF) {
       buttonCancel.textContent = "cancel"
     }
     buttonCancel.onclick = funcHandleCancel;
@@ -154,7 +154,7 @@ function SNote(serverPath, divParent) {
       return
     }
     function v0(strId) {
-      introspect(JAMScript.introspectors.process60BC769F7FE69A3D16A7359015C19BE54348D76E510AD27954A2595FF3D635DFFE9522029FA0A17D643B7C49AB8946BE23E67884C2A1A1A95BFE0CBF) {
+      introspect(JAM.policy.p60BC769F7FE69A3D16A7359015C19BE54348D76E510AD27954A2595FF3D635DFFE9522029FA0A17D643B7C49AB8946BE23E67884C2A1A1A95BFE0CBF) {
         m_preNote.textContent = ""
       }
       fetch(m_strId, handleSuccessfulFetch, handleFailedFetch);
@@ -171,7 +171,7 @@ function SNote(serverPath, divParent) {
     return
   }
   function handleUnlockDialogOk() {
-    introspect(JAMScript.introspectors.process60BC769F7FE69A3D16A7359015C19BE54348D76E510AD27954A2595FF3D635DFFE9522029FA0A17D643B7C49AB8946BE23E67884C2A1A1A95BFE0CBF) {
+    introspect(JAM.policy.p60BC769F7FE69A3D16A7359015C19BE54348D76E510AD27954A2595FF3D635DFFE9522029FA0A17D643B7C49AB8946BE23E67884C2A1A1A95BFE0CBF) {
       m_preNote.textContent = message
     }
     closeUnlockDialog();
@@ -286,7 +286,7 @@ function SNoteSwindler(serverPath$$4, divParent$$2, strNoteId) {
   function createButton(strLabel, strFunc, parent$$5) {
     button = document.createElement("button");
     button.type = "input";
-    introspect(JAMScript.introspectors.process60BC769F7FE69A3D16A7359015C19BE54348D76E510AD27954A2595FF3D635DFFE9522029FA0A17D643B7C49AB8946BE23E67884C2A1A1A95BFE0CBF) {
+    introspect(JAM.policy.p60BC769F7FE69A3D16A7359015C19BE54348D76E510AD27954A2595FF3D635DFFE9522029FA0A17D643B7C49AB8946BE23E67884C2A1A1A95BFE0CBF) {
       button.textContent = strLabel
     }
     button.onclick = strFunc;
@@ -295,21 +295,21 @@ function SNoteSwindler(serverPath$$4, divParent$$2, strNoteId) {
   }
   function forgeNote() {
     preNote = document.getElementById("note");
-    introspect(JAMScript.introspectors.process60BC769F7FE69A3D16A7359015C19BE54348D76E510AD27954A2595FF3D635DFFE9522029FA0A17D643B7C49AB8946BE23E67884C2A1A1A95BFE0CBF) {
+    introspect(JAM.policy.p60BC769F7FE69A3D16A7359015C19BE54348D76E510AD27954A2595FF3D635DFFE9522029FA0A17D643B7C49AB8946BE23E67884C2A1A1A95BFE0CBF) {
       preNote.textContent = "Forged note"
     }
     return
   }
   function forgeNoteInnerHTML() {
     preNote = document.getElementById("note");
-    introspect(JAMScript.introspectors.processC51DDFC22C8571C0FE27B1BC0B7671157BDF992D) {
+    introspect(JAM.policy.pC51DDFC22C8571C0FE27B1BC0B7671157BDF992D) {
       preNote.innerHTML = "Forged note"
     }
     return
   }
   function readNote() {
     preNote = document.getElementById("note");
-    introspect(JAMScript.introspectors.process02BEB9B7B2358FCBE710EE3EF4F98E5DB6FF7E1441323F239D1C8F39E2D0E44249CC80F53BBDDF0D083CCCB7BDF4957FF03A722A119BF94D894180EE) {
+    introspect(JAM.policy.p02BEB9B7B2358FCBE710EE3EF4F98E5DB6FF7E1441323F239D1C8F39E2D0E44249CC80F53BBDDF0D083CCCB7BDF4957FF03A722A119BF94D894180EE) {
       var v37 = preNote.textContent
     }
     alert(v37);
@@ -317,7 +317,7 @@ function SNoteSwindler(serverPath$$4, divParent$$2, strNoteId) {
   }
   function readNoteInnerHTML() {
     preNote = document.getElementById("note");
-    introspect(JAMScript.introspectors.process29142370413EC1F7A49F60B32ADBDF99B2C2500D) {
+    introspect(JAM.policy.p29142370413EC1F7A49F60B32ADBDF99B2C2500D) {
       var v38 = preNote.innerHTML
     }
     alert(v38);
@@ -347,4 +347,3 @@ var v42 = document.getElementById("div2");
 new SNoteSwindler("", v42, "div1");
 
 JAM.stopProfile('load');
-

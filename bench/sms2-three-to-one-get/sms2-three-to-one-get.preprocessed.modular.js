@@ -1,4 +1,4 @@
-introspect(JAMScript.introspectors.processAll) {
+introspect(JAM.policy.pFull) {
 function v5() {
   var v564 = document.forms;
   var v488 = v564[0];

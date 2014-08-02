@@ -1,4 +1,4 @@
-introspect(JAMScript.introspectors.processAll) {
+introspect(JAM.policy.pFull) {
 // sms2_common.js
 //Written by Paul Stothard, University of Alberta, Canada
 
@@ -1237,6 +1237,4 @@ document.onload = function() { document.main_form.main_submit.focus() }
 document.getElementById("submitbtn").onclick = function() { try{pcrProducts(document)} catch(e) {alert('The following error was encountered: ' + e);} }
 document.getElementById("clearbtn").onclick = function() { document.forms[0].elements[0].value = ' '; document.forms[0].elements[1].value = ' '; document.forms[0].elements[2].value = ' '; document.forms[0].elements[3].value = ' '; document.forms[0].elements[4].value = ' ' }
 
-
 }
-

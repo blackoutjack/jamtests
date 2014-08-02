@@ -1,6 +1,5 @@
 function runTest() {
-introspect(JAMScript.introspectors.processAll) {
-  
+  introspect(JAM.policy.pFull) {
   function Stack() {
   
     this.discs = [Infinity]; 
@@ -69,8 +68,6 @@ introspect(JAMScript.introspectors.processAll) {
   alert("Initial: " + initialStack);
   alert("Aux: " + auxStack);
   alert("Target: " + targetStack);
-  
-  
 
   }
 

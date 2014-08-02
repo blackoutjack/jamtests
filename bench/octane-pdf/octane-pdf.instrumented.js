@@ -2,7 +2,7 @@ function pdfjsWrapper() {
   function MetadataClosure() {
     function Metadata_has(name$$72) {
       var v20990 = this.metadata;
-      introspect(JAMScript.introspectors.processC545F199BE443C5FB0DC91C55134FB746FD8B074) {
+      introspect(JAM.policy.pC545F199BE443C5FB0DC91C55134FB746FD8B074) {
         var v6227 = v20990[name$$72]
       }
       var v91 = typeof v6227;
@@ -10,7 +10,7 @@ function pdfjsWrapper() {
     }
     function Metadata_get(name$$71) {
       var v6228 = this.metadata;
-      introspect(JAMScript.introspectors.processC545F199BE443C5FB0DC91C55134FB746FD8B074) {
+      introspect(JAM.policy.pC545F199BE443C5FB0DC91C55134FB746FD8B074) {
         var v92 = v6228[name$$71]
       }
       var v6229 = !v92;
@@ -93,7 +93,7 @@ function pdfjsWrapper() {
         var v101 = ii$$77 < iLength;
         for(;v101;) {
           var v22912 = desc.childNodes;
-          introspect(JAMScript.introspectors.processC545F199BE443C5FB0DC91C55134FB746FD8B074) {
+          introspect(JAM.policy.pC545F199BE443C5FB0DC91C55134FB746FD8B074) {
             var v22365 = v22912[ii$$77]
           }
           var v20997 = v22365.nodeName;
@@ -101,7 +101,7 @@ function pdfjsWrapper() {
           var v100 = v6236 !== "#text";
           if(v100) {
             var v6237 = desc.childNodes;
-            introspect(JAMScript.introspectors.processC545F199BE443C5FB0DC91C55134FB746FD8B074) {
+            introspect(JAM.policy.pC545F199BE443C5FB0DC91C55134FB746FD8B074) {
               var v99 = v6237[ii$$77]
             }
             entries$$3.push(v99)
@@ -220,7 +220,7 @@ function pdfjsWrapper() {
       var j$$79 = end$$20 - 1;
       var v113 = i$$197 < j$$79;
       for(;v113;) {
-        introspect(JAMScript.introspectors.processC545F199BE443C5FB0DC91C55134FB746FD8B074) {
+        introspect(JAM.policy.pC545F199BE443C5FB0DC91C55134FB746FD8B074) {
           var temp$$1 = arr$$15[i$$197]
         }
         arr$$15[i$$197] = arr$$15[j$$79];
@@ -253,7 +253,7 @@ function pdfjsWrapper() {
         var charType = "L";
         var v121 = charCode <= 255;
         if(v121) {
-          introspect(JAMScript.introspectors.processC545F199BE443C5FB0DC91C55134FB746FD8B074) {
+          introspect(JAM.policy.pC545F199BE443C5FB0DC91C55134FB746FD8B074) {
             charType = baseTypes[charCode]
           }
         }else {
@@ -343,7 +343,7 @@ function pdfjsWrapper() {
       i$$198 = 0;
       var v130 = i$$198 < strLength;
       for(;v130;) {
-        introspect(JAMScript.introspectors.processC545F199BE443C5FB0DC91C55134FB746FD8B074) {
+        introspect(JAM.policy.pC545F199BE443C5FB0DC91C55134FB746FD8B074) {
           var v6255 = types$$3[i$$198]
         }
         var v129 = v6255 == "NSM";
@@ -359,7 +359,7 @@ function pdfjsWrapper() {
       i$$198 = 0;
       var v134 = i$$198 < strLength;
       for(;v134;) {
-        introspect(JAMScript.introspectors.processC545F199BE443C5FB0DC91C55134FB746FD8B074) {
+        introspect(JAM.policy.pC545F199BE443C5FB0DC91C55134FB746FD8B074) {
           var t$$8 = types$$3[i$$198]
         }
         var v133 = t$$8 == "EN";
@@ -406,19 +406,19 @@ function pdfjsWrapper() {
       var v6258 = strLength - 1;
       var v140 = i$$198 < v6258;
       for(;v140;) {
-        introspect(JAMScript.introspectors.processC545F199BE443C5FB0DC91C55134FB746FD8B074) {
+        introspect(JAM.policy.pC545F199BE443C5FB0DC91C55134FB746FD8B074) {
           var v21006 = types$$3[i$$198]
         }
         var v6259 = v21006 == "ES";
         if(v6259) {
           var v22915 = i$$198 - 1;
-          introspect(JAMScript.introspectors.processC545F199BE443C5FB0DC91C55134FB746FD8B074) {
+          introspect(JAM.policy.pC545F199BE443C5FB0DC91C55134FB746FD8B074) {
             var v22370 = types$$3[v22915]
           }
           var v21007 = v22370 == "EN";
           if(v21007) {
             var v22916 = i$$198 + 1;
-            introspect(JAMScript.introspectors.processC545F199BE443C5FB0DC91C55134FB746FD8B074) {
+            introspect(JAM.policy.pC545F199BE443C5FB0DC91C55134FB746FD8B074) {
               var v22371 = types$$3[v22916]
             }
             v21007 = v22371 == "EN"
@@ -429,20 +429,20 @@ function pdfjsWrapper() {
         if(v137) {
           types$$3[i$$198] = "EN"
         }
-        introspect(JAMScript.introspectors.processC545F199BE443C5FB0DC91C55134FB746FD8B074) {
+        introspect(JAM.policy.pC545F199BE443C5FB0DC91C55134FB746FD8B074) {
           var v21008 = types$$3[i$$198]
         }
         var v6260 = v21008 == "CS";
         if(v6260) {
           var v23100 = i$$198 - 1;
-          introspect(JAMScript.introspectors.processC545F199BE443C5FB0DC91C55134FB746FD8B074) {
+          introspect(JAM.policy.pC545F199BE443C5FB0DC91C55134FB746FD8B074) {
             var v22917 = types$$3[v23100]
           }
           var v22372 = v22917 == "EN";
           var v22919 = !v22372;
           if(v22919) {
             var v23101 = i$$198 - 1;
-            introspect(JAMScript.introspectors.processC545F199BE443C5FB0DC91C55134FB746FD8B074) {
+            introspect(JAM.policy.pC545F199BE443C5FB0DC91C55134FB746FD8B074) {
               var v22918 = types$$3[v23101]
             }
             v22372 = v22918 == "AN"
@@ -450,11 +450,11 @@ function pdfjsWrapper() {
           var v21009 = v22372;
           if(v21009) {
             var v22920 = i$$198 + 1;
-            introspect(JAMScript.introspectors.processC545F199BE443C5FB0DC91C55134FB746FD8B074) {
+            introspect(JAM.policy.pC545F199BE443C5FB0DC91C55134FB746FD8B074) {
               var v22373 = types$$3[v22920]
             }
             var v22921 = i$$198 - 1;
-            introspect(JAMScript.introspectors.processC545F199BE443C5FB0DC91C55134FB746FD8B074) {
+            introspect(JAM.policy.pC545F199BE443C5FB0DC91C55134FB746FD8B074) {
               var v22374 = types$$3[v22921]
             }
             v21009 = v22373 == v22374
@@ -473,7 +473,7 @@ function pdfjsWrapper() {
       i$$198 = 0;
       var v146 = i$$198 < strLength;
       for(;v146;) {
-        introspect(JAMScript.introspectors.processC545F199BE443C5FB0DC91C55134FB746FD8B074) {
+        introspect(JAM.policy.pC545F199BE443C5FB0DC91C55134FB746FD8B074) {
           var v6262 = types$$3[i$$198]
         }
         var v145 = v6262 == "EN";
@@ -481,7 +481,7 @@ function pdfjsWrapper() {
           var j$$80 = i$$198 - 1;
           var v142 = j$$80 >= 0;
           for(;v142;) {
-            introspect(JAMScript.introspectors.processC545F199BE443C5FB0DC91C55134FB746FD8B074) {
+            introspect(JAM.policy.pC545F199BE443C5FB0DC91C55134FB746FD8B074) {
               var v6263 = types$$3[j$$80]
             }
             var v141 = v6263 != "ET";
@@ -495,7 +495,7 @@ function pdfjsWrapper() {
           j$$80 = i$$198 + 1;
           var v144 = j$$80 < strLength;
           for(;v144;) {
-            introspect(JAMScript.introspectors.processC545F199BE443C5FB0DC91C55134FB746FD8B074) {
+            introspect(JAM.policy.pC545F199BE443C5FB0DC91C55134FB746FD8B074) {
               var v6264 = types$$3[j$$80]
             }
             var v143 = v6264 != "ET";
@@ -568,7 +568,7 @@ function pdfjsWrapper() {
       i$$198 = 0;
       var v164 = i$$198 < strLength;
       for(;v164;) {
-        introspect(JAMScript.introspectors.processC545F199BE443C5FB0DC91C55134FB746FD8B074) {
+        introspect(JAM.policy.pC545F199BE443C5FB0DC91C55134FB746FD8B074) {
           var v6268 = types$$3[i$$198]
         }
         var v163 = v6268 == "ON";
@@ -580,7 +580,7 @@ function pdfjsWrapper() {
             var jj$$inline_267 = types$$3.length;
             var v154 = j$$inline_266 < jj$$inline_267;
             for(;v154;) {
-              introspect(JAMScript.introspectors.processC545F199BE443C5FB0DC91C55134FB746FD8B074) {
+              introspect(JAM.policy.pC545F199BE443C5FB0DC91C55134FB746FD8B074) {
                 var v6269 = types$$3[j$$inline_266]
               }
               var v153 = v6269 != "ON";
@@ -635,7 +635,7 @@ function pdfjsWrapper() {
       i$$198 = 0;
       var v166 = i$$198 < strLength;
       for(;v166;) {
-        introspect(JAMScript.introspectors.processC545F199BE443C5FB0DC91C55134FB746FD8B074) {
+        introspect(JAM.policy.pC545F199BE443C5FB0DC91C55134FB746FD8B074) {
           var v6271 = types$$3[i$$198]
         }
         var v165 = v6271 == "ON";
@@ -649,7 +649,7 @@ function pdfjsWrapper() {
       var v171 = i$$198 < strLength;
       for(;v171;) {
         t$$8 = types$$3[i$$198];
-        introspect(JAMScript.introspectors.processC545F199BE443C5FB0DC91C55134FB746FD8B074) {
+        introspect(JAM.policy.pC545F199BE443C5FB0DC91C55134FB746FD8B074) {
           var v21013 = levels[i$$198]
         }
         var v6272 = v21013 & 1;
@@ -657,7 +657,7 @@ function pdfjsWrapper() {
         if(v170) {
           var v168 = t$$8 == "R";
           if(v168) {
-            introspect(JAMScript.introspectors.processC545F199BE443C5FB0DC91C55134FB746FD8B074) {
+            introspect(JAM.policy.pC545F199BE443C5FB0DC91C55134FB746FD8B074) {
               var v6273 = levels[i$$198]
             }
             levels[i$$198] = v6273 + 1
@@ -669,7 +669,7 @@ function pdfjsWrapper() {
             }
             var v167 = v6274;
             if(v167) {
-              introspect(JAMScript.introspectors.processC545F199BE443C5FB0DC91C55134FB746FD8B074) {
+              introspect(JAM.policy.pC545F199BE443C5FB0DC91C55134FB746FD8B074) {
                 var v6275 = levels[i$$198]
               }
               levels[i$$198] = v6275 + 2
@@ -688,7 +688,7 @@ function pdfjsWrapper() {
           }
           var v169 = v6276;
           if(v169) {
-            introspect(JAMScript.introspectors.processC545F199BE443C5FB0DC91C55134FB746FD8B074) {
+            introspect(JAM.policy.pC545F199BE443C5FB0DC91C55134FB746FD8B074) {
               var v6277 = levels[i$$198]
             }
             levels[i$$198] = v6277 + 1
@@ -703,7 +703,7 @@ function pdfjsWrapper() {
       var ii$$76 = levels.length;
       var v174 = i$$198 < ii$$76;
       for(;v174;) {
-        introspect(JAMScript.introspectors.processC545F199BE443C5FB0DC91C55134FB746FD8B074) {
+        introspect(JAM.policy.pC545F199BE443C5FB0DC91C55134FB746FD8B074) {
           var level$$16 = levels[i$$198]
         }
         var v172 = highestLevel < level$$16;
@@ -730,7 +730,7 @@ function pdfjsWrapper() {
         ii$$76 = levels.length;
         var v178 = i$$198 < ii$$76;
         for(;v178;) {
-          introspect(JAMScript.introspectors.processC545F199BE443C5FB0DC91C55134FB746FD8B074) {
+          introspect(JAM.policy.pC545F199BE443C5FB0DC91C55134FB746FD8B074) {
             var v6279 = levels[i$$198]
           }
           var v177 = v6279 < level$$16;
@@ -762,7 +762,7 @@ function pdfjsWrapper() {
       ii$$76 = chars$$1.length;
       var v183 = i$$198 < ii$$76;
       for(;v183;) {
-        introspect(JAMScript.introspectors.processC545F199BE443C5FB0DC91C55134FB746FD8B074) {
+        introspect(JAM.policy.pC545F199BE443C5FB0DC91C55134FB746FD8B074) {
           var ch$$14 = chars$$1[i$$198]
         }
         var v6280 = ch$$14 != "<";
@@ -804,15 +804,15 @@ function pdfjsWrapper() {
         for(;v189;) {
           var v187 = x$$83;
           var v188 = j$$76;
-          introspect(JAMScript.introspectors.processC545F199BE443C5FB0DC91C55134FB746FD8B074) {
+          introspect(JAM.policy.pC545F199BE443C5FB0DC91C55134FB746FD8B074) {
             var v6282 = y$$61[j$$76]
           }
           var v23169 = j$$76 - 1;
-          introspect(JAMScript.introspectors.processC545F199BE443C5FB0DC91C55134FB746FD8B074) {
+          introspect(JAM.policy.pC545F199BE443C5FB0DC91C55134FB746FD8B074) {
             var v23102 = y$$61[v23169]
           }
           var v23170 = j$$76 + 1;
-          introspect(JAMScript.introspectors.processC545F199BE443C5FB0DC91C55134FB746FD8B074) {
+          introspect(JAM.policy.pC545F199BE443C5FB0DC91C55134FB746FD8B074) {
             var v23103 = y$$61[v23170]
           }
           var v22923 = v23102 + v23103;
@@ -831,15 +831,15 @@ function pdfjsWrapper() {
         for(;v192;) {
           var v190 = x$$83;
           var v191 = j$$76;
-          introspect(JAMScript.introspectors.processC545F199BE443C5FB0DC91C55134FB746FD8B074) {
+          introspect(JAM.policy.pC545F199BE443C5FB0DC91C55134FB746FD8B074) {
             var v6284 = y$$61[j$$76]
           }
           var v23104 = j$$76 - 1;
-          introspect(JAMScript.introspectors.processC545F199BE443C5FB0DC91C55134FB746FD8B074) {
+          introspect(JAM.policy.pC545F199BE443C5FB0DC91C55134FB746FD8B074) {
             var v22924 = x$$83[v23104]
           }
           var v23105 = j$$76 + 1;
-          introspect(JAMScript.introspectors.processC545F199BE443C5FB0DC91C55134FB746FD8B074) {
+          introspect(JAM.policy.pC545F199BE443C5FB0DC91C55134FB746FD8B074) {
             var v22925 = x$$83[v23105]
           }
           var v22379 = v22924 + v22925;
@@ -884,7 +884,7 @@ function pdfjsWrapper() {
         var nn$$1 = i1_ + 2;
         var v199 = n$$46 < nn$$1;
         for(;v199;) {
-          introspect(JAMScript.introspectors.processC545F199BE443C5FB0DC91C55134FB746FD8B074) {
+          introspect(JAM.policy.pC545F199BE443C5FB0DC91C55134FB746FD8B074) {
             var v198 = y$$60[j$$75]
           }
           x$$82[j$$75] = K$$2 * v198;
@@ -897,7 +897,7 @@ function pdfjsWrapper() {
         nn$$1 = i1_ + 2;
         var v201 = n$$46 < nn$$1;
         for(;v201;) {
-          introspect(JAMScript.introspectors.processC545F199BE443C5FB0DC91C55134FB746FD8B074) {
+          introspect(JAM.policy.pC545F199BE443C5FB0DC91C55134FB746FD8B074) {
             var v200 = y$$60[j$$75]
           }
           x$$82[j$$75] = K_ * v200;
@@ -910,15 +910,15 @@ function pdfjsWrapper() {
         nn$$1 = i1_ + 2;
         var v202 = n$$46 < nn$$1;
         for(;v202;) {
-          introspect(JAMScript.introspectors.processC545F199BE443C5FB0DC91C55134FB746FD8B074) {
+          introspect(JAM.policy.pC545F199BE443C5FB0DC91C55134FB746FD8B074) {
             var v6288 = x$$82[j$$75]
           }
           var v22926 = j$$75 - 1;
-          introspect(JAMScript.introspectors.processC545F199BE443C5FB0DC91C55134FB746FD8B074) {
+          introspect(JAM.policy.pC545F199BE443C5FB0DC91C55134FB746FD8B074) {
             var v22380 = x$$82[v22926]
           }
           var v22927 = j$$75 + 1;
-          introspect(JAMScript.introspectors.processC545F199BE443C5FB0DC91C55134FB746FD8B074) {
+          introspect(JAM.policy.pC545F199BE443C5FB0DC91C55134FB746FD8B074) {
             var v22381 = x$$82[v22927]
           }
           var v21020 = v22380 + v22381;
@@ -933,15 +933,15 @@ function pdfjsWrapper() {
         nn$$1 = i1_ + 1;
         var v203 = n$$46 < nn$$1;
         for(;v203;) {
-          introspect(JAMScript.introspectors.processC545F199BE443C5FB0DC91C55134FB746FD8B074) {
+          introspect(JAM.policy.pC545F199BE443C5FB0DC91C55134FB746FD8B074) {
             var v6290 = x$$82[j$$75]
           }
           var v22928 = j$$75 - 1;
-          introspect(JAMScript.introspectors.processC545F199BE443C5FB0DC91C55134FB746FD8B074) {
+          introspect(JAM.policy.pC545F199BE443C5FB0DC91C55134FB746FD8B074) {
             var v22382 = x$$82[v22928]
           }
           var v22929 = j$$75 + 1;
-          introspect(JAMScript.introspectors.processC545F199BE443C5FB0DC91C55134FB746FD8B074) {
+          introspect(JAM.policy.pC545F199BE443C5FB0DC91C55134FB746FD8B074) {
             var v22383 = x$$82[v22929]
           }
           var v21021 = v22382 + v22383;
@@ -956,15 +956,15 @@ function pdfjsWrapper() {
         nn$$1 = i1_ + 1;
         var v204 = n$$46 < nn$$1;
         for(;v204;) {
-          introspect(JAMScript.introspectors.processC545F199BE443C5FB0DC91C55134FB746FD8B074) {
+          introspect(JAM.policy.pC545F199BE443C5FB0DC91C55134FB746FD8B074) {
             var v6292 = x$$82[j$$75]
           }
           var v22930 = j$$75 - 1;
-          introspect(JAMScript.introspectors.processC545F199BE443C5FB0DC91C55134FB746FD8B074) {
+          introspect(JAM.policy.pC545F199BE443C5FB0DC91C55134FB746FD8B074) {
             var v22384 = x$$82[v22930]
           }
           var v22931 = j$$75 + 1;
-          introspect(JAMScript.introspectors.processC545F199BE443C5FB0DC91C55134FB746FD8B074) {
+          introspect(JAM.policy.pC545F199BE443C5FB0DC91C55134FB746FD8B074) {
             var v22385 = x$$82[v22931]
           }
           var v21022 = v22384 + v22385;
@@ -979,15 +979,15 @@ function pdfjsWrapper() {
         nn$$1 = i1_;
         var v205 = n$$46 < nn$$1;
         for(;v205;) {
-          introspect(JAMScript.introspectors.processC545F199BE443C5FB0DC91C55134FB746FD8B074) {
+          introspect(JAM.policy.pC545F199BE443C5FB0DC91C55134FB746FD8B074) {
             var v6294 = x$$82[j$$75]
           }
           var v22932 = j$$75 - 1;
-          introspect(JAMScript.introspectors.processC545F199BE443C5FB0DC91C55134FB746FD8B074) {
+          introspect(JAM.policy.pC545F199BE443C5FB0DC91C55134FB746FD8B074) {
             var v22386 = x$$82[v22932]
           }
           var v22933 = j$$75 + 1;
-          introspect(JAMScript.introspectors.processC545F199BE443C5FB0DC91C55134FB746FD8B074) {
+          introspect(JAM.policy.pC545F199BE443C5FB0DC91C55134FB746FD8B074) {
             var v22387 = x$$82[v22933]
           }
           var v21023 = v22386 + v22387;
@@ -1040,7 +1040,7 @@ function pdfjsWrapper() {
           var jj$$18 = llWidth;
           var v210 = j$$74 < jj$$18;
           for(;v210;) {
-            introspect(JAMScript.introspectors.processC545F199BE443C5FB0DC91C55134FB746FD8B074) {
+            introspect(JAM.policy.pC545F199BE443C5FB0DC91C55134FB746FD8B074) {
               items$$4[l$$4] = llItems[k$$23]
             }
             j$$74 = j$$74 + 1;
@@ -1063,7 +1063,7 @@ function pdfjsWrapper() {
           jj$$18 = hlWidth;
           var v213 = j$$74 < jj$$18;
           for(;v213;) {
-            introspect(JAMScript.introspectors.processC545F199BE443C5FB0DC91C55134FB746FD8B074) {
+            introspect(JAM.policy.pC545F199BE443C5FB0DC91C55134FB746FD8B074) {
               items$$4[l$$4] = hlItems[k$$23]
             }
             j$$74 = j$$74 + 1;
@@ -1086,7 +1086,7 @@ function pdfjsWrapper() {
           jj$$18 = lhWidth;
           var v216 = j$$74 < jj$$18;
           for(;v216;) {
-            introspect(JAMScript.introspectors.processC545F199BE443C5FB0DC91C55134FB746FD8B074) {
+            introspect(JAM.policy.pC545F199BE443C5FB0DC91C55134FB746FD8B074) {
               items$$4[l$$4] = lhItems[k$$23]
             }
             j$$74 = j$$74 + 1;
@@ -1110,7 +1110,7 @@ function pdfjsWrapper() {
           jj$$18 = hhWidth;
           var v219 = j$$74 < jj$$18;
           for(;v219;) {
-            introspect(JAMScript.introspectors.processC545F199BE443C5FB0DC91C55134FB746FD8B074) {
+            introspect(JAM.policy.pC545F199BE443C5FB0DC91C55134FB746FD8B074) {
               items$$4[l$$4] = hhItems[k$$23]
             }
             j$$74 = j$$74 + 1;
@@ -1137,7 +1137,7 @@ function pdfjsWrapper() {
             var v223 = v6302 != 0;
             if(v223) {
               var v222 = v$$20 * width$$45;
-              introspect(JAMScript.introspectors.processC545F199BE443C5FB0DC91C55134FB746FD8B074) {
+              introspect(JAM.policy.pC545F199BE443C5FB0DC91C55134FB746FD8B074) {
                 var v21025 = items$$4[v222]
               }
               items$$4[v222] = v21025 / 2
@@ -1151,7 +1151,7 @@ function pdfjsWrapper() {
           var u$$1 = 0;
           var v225 = u$$1 < width$$45;
           for(;v225;) {
-            introspect(JAMScript.introspectors.processC545F199BE443C5FB0DC91C55134FB746FD8B074) {
+            introspect(JAM.policy.pC545F199BE443C5FB0DC91C55134FB746FD8B074) {
               buffer$$29[l$$4] = items$$4[k$$23]
             }
             u$$1 = u$$1 + 1;
@@ -1227,7 +1227,7 @@ function pdfjsWrapper() {
             var v6311 = v0$$2 % 1;
             var v237 = v6311 != 0;
             if(v237) {
-              introspect(JAMScript.introspectors.processC545F199BE443C5FB0DC91C55134FB746FD8B074) {
+              introspect(JAM.policy.pC545F199BE443C5FB0DC91C55134FB746FD8B074) {
                 var v6312 = items$$4[u$$1]
               }
               items$$4[u$$1] = v6312 / 2
@@ -1241,7 +1241,7 @@ function pdfjsWrapper() {
           v$$20 = 0;
           var v239 = v$$20 < height$$37;
           for(;v239;) {
-            introspect(JAMScript.introspectors.processC545F199BE443C5FB0DC91C55134FB746FD8B074) {
+            introspect(JAM.policy.pC545F199BE443C5FB0DC91C55134FB746FD8B074) {
               buffer$$29[l$$4] = items$$4[k$$23]
             }
             v$$20 = v$$20 + 1;
@@ -1318,15 +1318,15 @@ function pdfjsWrapper() {
         var j$$73 = 1;
         var v254 = i$$193 < ii$$74;
         for(;v254;) {
-          introspect(JAMScript.introspectors.processC545F199BE443C5FB0DC91C55134FB746FD8B074) {
+          introspect(JAM.policy.pC545F199BE443C5FB0DC91C55134FB746FD8B074) {
             var v251 = subbands$$2[i$$193]
           }
           var v6321 = i$$193 + 1;
-          introspect(JAMScript.introspectors.processC545F199BE443C5FB0DC91C55134FB746FD8B074) {
+          introspect(JAM.policy.pC545F199BE443C5FB0DC91C55134FB746FD8B074) {
             var v252 = subbands$$2[v6321]
           }
           var v6322 = i$$193 + 2;
-          introspect(JAMScript.introspectors.processC545F199BE443C5FB0DC91C55134FB746FD8B074) {
+          introspect(JAM.policy.pC545F199BE443C5FB0DC91C55134FB746FD8B074) {
             var v253 = subbands$$2[v6322]
           }
           ll = this.iterate(ll, v251, v252, v253, u0, v0$$1);
@@ -1374,48 +1374,48 @@ function pdfjsWrapper() {
             var v6323 = i0$$2 + 3;
             var v258 = v6323 < height$$36;
             if(v258) {
-              introspect(JAMScript.introspectors.processC545F199BE443C5FB0DC91C55134FB746FD8B074) {
+              introspect(JAM.policy.pC545F199BE443C5FB0DC91C55134FB746FD8B074) {
                 var v21026 = processingFlags$$2[index0]
               }
               var v6324 = v21026 == 0;
               if(v6324) {
                 var v22934 = index0 + oneRowDown;
-                introspect(JAMScript.introspectors.processC545F199BE443C5FB0DC91C55134FB746FD8B074) {
+                introspect(JAM.policy.pC545F199BE443C5FB0DC91C55134FB746FD8B074) {
                   var v22388 = processingFlags$$2[v22934]
                 }
                 var v21027 = v22388 == 0;
                 if(v21027) {
                   var v23106 = index0 + twoRowsDown;
-                  introspect(JAMScript.introspectors.processC545F199BE443C5FB0DC91C55134FB746FD8B074) {
+                  introspect(JAM.policy.pC545F199BE443C5FB0DC91C55134FB746FD8B074) {
                     var v22935 = processingFlags$$2[v23106]
                   }
                   var v22389 = v22935 == 0;
                   if(v22389) {
                     var v23171 = index0 + threeRowsDown;
-                    introspect(JAMScript.introspectors.processC545F199BE443C5FB0DC91C55134FB746FD8B074) {
+                    introspect(JAM.policy.pC545F199BE443C5FB0DC91C55134FB746FD8B074) {
                       var v23107 = processingFlags$$2[v23171]
                     }
                     var v22936 = v23107 == 0;
                     if(v22936) {
-                      introspect(JAMScript.introspectors.processC545F199BE443C5FB0DC91C55134FB746FD8B074) {
+                      introspect(JAM.policy.pC545F199BE443C5FB0DC91C55134FB746FD8B074) {
                         var v23172 = neighborsSignificance$$3[index0]
                       }
                       var v23108 = v23172 == 0;
                       if(v23108) {
                         var v23232 = index0 + oneRowDown;
-                        introspect(JAMScript.introspectors.processC545F199BE443C5FB0DC91C55134FB746FD8B074) {
+                        introspect(JAM.policy.pC545F199BE443C5FB0DC91C55134FB746FD8B074) {
                           var v23205 = neighborsSignificance$$3[v23232]
                         }
                         var v23173 = v23205 == 0;
                         if(v23173) {
                           var v23254 = index0 + twoRowsDown;
-                          introspect(JAMScript.introspectors.processC545F199BE443C5FB0DC91C55134FB746FD8B074) {
+                          introspect(JAM.policy.pC545F199BE443C5FB0DC91C55134FB746FD8B074) {
                             var v23233 = neighborsSignificance$$3[v23254]
                           }
                           var v23206 = v23233 == 0;
                           if(v23206) {
                             var v23255 = index0 + threeRowsDown;
-                            introspect(JAMScript.introspectors.processC545F199BE443C5FB0DC91C55134FB746FD8B074) {
+                            introspect(JAM.policy.pC545F199BE443C5FB0DC91C55134FB746FD8B074) {
                               var v23234 = neighborsSignificance$$3[v23255]
                             }
                             v23206 = v23234 == 0
@@ -1444,25 +1444,25 @@ function pdfjsWrapper() {
               var hasSignificantCoefficent = decoder$$4.readBit(cx$$6);
               var v259 = !hasSignificantCoefficent;
               if(v259) {
-                introspect(JAMScript.introspectors.processC545F199BE443C5FB0DC91C55134FB746FD8B074) {
+                introspect(JAM.policy.pC545F199BE443C5FB0DC91C55134FB746FD8B074) {
                   var v6325 = bitsDecoded$$3[index0]
                 }
                 bitsDecoded$$3[index0] = v6325 + 1;
                 var v6326 = index0 + oneRowDown;
                 var v22390 = index0 + oneRowDown;
-                introspect(JAMScript.introspectors.processC545F199BE443C5FB0DC91C55134FB746FD8B074) {
+                introspect(JAM.policy.pC545F199BE443C5FB0DC91C55134FB746FD8B074) {
                   var v21028 = bitsDecoded$$3[v22390]
                 }
                 bitsDecoded$$3[v6326] = v21028 + 1;
                 var v6327 = index0 + twoRowsDown;
                 var v22391 = index0 + twoRowsDown;
-                introspect(JAMScript.introspectors.processC545F199BE443C5FB0DC91C55134FB746FD8B074) {
+                introspect(JAM.policy.pC545F199BE443C5FB0DC91C55134FB746FD8B074) {
                   var v21029 = bitsDecoded$$3[v22391]
                 }
                 bitsDecoded$$3[v6327] = v21029 + 1;
                 var v6328 = index0 + threeRowsDown;
                 var v22392 = index0 + threeRowsDown;
-                introspect(JAMScript.introspectors.processC545F199BE443C5FB0DC91C55134FB746FD8B074) {
+                introspect(JAM.policy.pC545F199BE443C5FB0DC91C55134FB746FD8B074) {
                   var v21030 = bitsDecoded$$3[v22392]
                 }
                 bitsDecoded$$3[v6328] = v21030 + 1;
@@ -1482,7 +1482,7 @@ function pdfjsWrapper() {
               coefficentsSign$$2[index$$67] = sign$$1;
               coefficentsMagnitude$$3[index$$67] = 1;
               this.setNeighborsSignificance(i$$192, j$$72);
-              introspect(JAMScript.introspectors.processC545F199BE443C5FB0DC91C55134FB746FD8B074) {
+              introspect(JAM.policy.pC545F199BE443C5FB0DC91C55134FB746FD8B074) {
                 var v6331 = processingFlags$$2[index$$67]
               }
               processingFlags$$2[index$$67] = v6331 | firstMagnitudeBitMask$$2;
@@ -1490,7 +1490,7 @@ function pdfjsWrapper() {
               var i2 = i0$$2;
               var v262 = i2 <= i$$192;
               for(;v262;) {
-                introspect(JAMScript.introspectors.processC545F199BE443C5FB0DC91C55134FB746FD8B074) {
+                introspect(JAM.policy.pC545F199BE443C5FB0DC91C55134FB746FD8B074) {
                   var v6332 = bitsDecoded$$3[index$$67]
                 }
                 bitsDecoded$$3[index$$67] = v6332 + 1;
@@ -1507,12 +1507,12 @@ function pdfjsWrapper() {
               if(v263) {
                 break
               }
-              introspect(JAMScript.introspectors.processC545F199BE443C5FB0DC91C55134FB746FD8B074) {
+              introspect(JAM.policy.pC545F199BE443C5FB0DC91C55134FB746FD8B074) {
                 var v6333 = coefficentsMagnitude$$3[index$$67]
               }
               var v21032 = !v6333;
               if(v21032) {
-                introspect(JAMScript.introspectors.processC545F199BE443C5FB0DC91C55134FB746FD8B074) {
+                introspect(JAM.policy.pC545F199BE443C5FB0DC91C55134FB746FD8B074) {
                   var v22393 = processingFlags$$2[index$$67]
                 }
                 var v21031 = v22393 & processedMask$$2;
@@ -1525,13 +1525,13 @@ function pdfjsWrapper() {
                 v267 = i1$$3 < 4;
                 continue
               }
-              introspect(JAMScript.introspectors.processC545F199BE443C5FB0DC91C55134FB746FD8B074) {
+              introspect(JAM.policy.pC545F199BE443C5FB0DC91C55134FB746FD8B074) {
                 var v265 = neighborsSignificance$$3[index$$67]
               }
-              introspect(JAMScript.introspectors.processC545F199BE443C5FB0DC91C55134FB746FD8B074) {
+              introspect(JAM.policy.pC545F199BE443C5FB0DC91C55134FB746FD8B074) {
                 var contextLabel$$3 = labels$$1[v265]
               }
-              introspect(JAMScript.introspectors.processC545F199BE443C5FB0DC91C55134FB746FD8B074) {
+              introspect(JAM.policy.pC545F199BE443C5FB0DC91C55134FB746FD8B074) {
                 cx$$6 = contexts$$2[contextLabel$$3]
               }
               var decision$$1 = decoder$$4.readBit(cx$$6);
@@ -1541,12 +1541,12 @@ function pdfjsWrapper() {
                 coefficentsSign$$2[index$$67] = sign$$1;
                 coefficentsMagnitude$$3[index$$67] = 1;
                 this.setNeighborsSignificance(i$$192, j$$72);
-                introspect(JAMScript.introspectors.processC545F199BE443C5FB0DC91C55134FB746FD8B074) {
+                introspect(JAM.policy.pC545F199BE443C5FB0DC91C55134FB746FD8B074) {
                   var v6334 = processingFlags$$2[index$$67]
                 }
                 processingFlags$$2[index$$67] = v6334 | firstMagnitudeBitMask$$2
               }
-              introspect(JAMScript.introspectors.processC545F199BE443C5FB0DC91C55134FB746FD8B074) {
+              introspect(JAM.policy.pC545F199BE443C5FB0DC91C55134FB746FD8B074) {
                 var v6335 = bitsDecoded$$3[index$$67]
               }
               bitsDecoded$$3[index$$67] = v6335 + 1;
@@ -1589,13 +1589,13 @@ function pdfjsWrapper() {
               }
               var v271 = i$$191 * width$$43;
               var index$$66 = v271 + j$$71;
-              introspect(JAMScript.introspectors.processC545F199BE443C5FB0DC91C55134FB746FD8B074) {
+              introspect(JAM.policy.pC545F199BE443C5FB0DC91C55134FB746FD8B074) {
                 var v21033 = coefficentsMagnitude$$2[index$$66]
               }
               var v6336 = !v21033;
               var v21035 = !v6336;
               if(v21035) {
-                introspect(JAMScript.introspectors.processC545F199BE443C5FB0DC91C55134FB746FD8B074) {
+                introspect(JAM.policy.pC545F199BE443C5FB0DC91C55134FB746FD8B074) {
                   var v22394 = processingFlags$$1[index$$66]
                 }
                 var v21034 = v22394 & processedMask$$1;
@@ -1608,7 +1608,7 @@ function pdfjsWrapper() {
                 continue
               }
               var contextLabel$$2 = 16;
-              introspect(JAMScript.introspectors.processC545F199BE443C5FB0DC91C55134FB746FD8B074) {
+              introspect(JAM.policy.pC545F199BE443C5FB0DC91C55134FB746FD8B074) {
                 var v21036 = processingFlags$$1[index$$66]
               }
               var v6337 = v21036 & firstMagnitudeBitMask$$1;
@@ -1616,11 +1616,11 @@ function pdfjsWrapper() {
               if(v277) {
                 var v6338 = i$$191 * width$$43;
                 var v273 = v6338 + j$$71;
-                introspect(JAMScript.introspectors.processC545F199BE443C5FB0DC91C55134FB746FD8B074) {
+                introspect(JAM.policy.pC545F199BE443C5FB0DC91C55134FB746FD8B074) {
                   var v21037 = processingFlags$$1[v273]
                 }
                 processingFlags$$1[v273] = v21037 ^ firstMagnitudeBitMask$$1;
-                introspect(JAMScript.introspectors.processC545F199BE443C5FB0DC91C55134FB746FD8B074) {
+                introspect(JAM.policy.pC545F199BE443C5FB0DC91C55134FB746FD8B074) {
                   var significance = neighborsSignificance$$2[index$$66]
                 }
                 var v6339 = significance & 3;
@@ -1639,20 +1639,20 @@ function pdfjsWrapper() {
                 }
                 contextLabel$$2 = v276
               }
-              introspect(JAMScript.introspectors.processC545F199BE443C5FB0DC91C55134FB746FD8B074) {
+              introspect(JAM.policy.pC545F199BE443C5FB0DC91C55134FB746FD8B074) {
                 var cx$$5 = contexts$$1[contextLabel$$2]
               }
               var bit$$2 = decoder$$3.readBit(cx$$5);
-              introspect(JAMScript.introspectors.processC545F199BE443C5FB0DC91C55134FB746FD8B074) {
+              introspect(JAM.policy.pC545F199BE443C5FB0DC91C55134FB746FD8B074) {
                 var v6343 = coefficentsMagnitude$$2[index$$66]
               }
               var v278 = v6343 << 1;
               coefficentsMagnitude$$2[index$$66] = v278 | bit$$2;
-              introspect(JAMScript.introspectors.processC545F199BE443C5FB0DC91C55134FB746FD8B074) {
+              introspect(JAM.policy.pC545F199BE443C5FB0DC91C55134FB746FD8B074) {
                 var v6344 = bitsDecoded$$2[index$$66]
               }
               bitsDecoded$$2[index$$66] = v6344 + 1;
-              introspect(JAMScript.introspectors.processC545F199BE443C5FB0DC91C55134FB746FD8B074) {
+              introspect(JAM.policy.pC545F199BE443C5FB0DC91C55134FB746FD8B074) {
                 var v6345 = processingFlags$$1[index$$66]
               }
               processingFlags$$1[index$$66] = v6345 | processedMask$$1;
@@ -1681,20 +1681,20 @@ function pdfjsWrapper() {
         }
         var v283 = v6346;
         var v6347 = index$$65 - 1;
-        introspect(JAMScript.introspectors.processC545F199BE443C5FB0DC91C55134FB746FD8B074) {
+        introspect(JAM.policy.pC545F199BE443C5FB0DC91C55134FB746FD8B074) {
           var v284 = coefficentsSign$$1[v6347]
         }
         var v21040 = column$$1 + 1;
         var v6348 = v21040 < width$$42;
         if(v6348) {
           var v21041 = index$$65 + 1;
-          introspect(JAMScript.introspectors.processC545F199BE443C5FB0DC91C55134FB746FD8B074) {
+          introspect(JAM.policy.pC545F199BE443C5FB0DC91C55134FB746FD8B074) {
             v6348 = coefficentsMagnitude$$1[v21041]
           }
         }
         var v285 = v6348;
         var v6349 = index$$65 + 1;
-        introspect(JAMScript.introspectors.processC545F199BE443C5FB0DC91C55134FB746FD8B074) {
+        introspect(JAM.policy.pC545F199BE443C5FB0DC91C55134FB746FD8B074) {
           var v286 = coefficentsSign$$1[v6349]
         }
         var horizontalContribution = calcSignContribution(v283, v284, v285, v286);
@@ -1705,20 +1705,20 @@ function pdfjsWrapper() {
         }
         var v287 = v6350;
         var v6351 = index$$65 - width$$42;
-        introspect(JAMScript.introspectors.processC545F199BE443C5FB0DC91C55134FB746FD8B074) {
+        introspect(JAM.policy.pC545F199BE443C5FB0DC91C55134FB746FD8B074) {
           var v288 = coefficentsSign$$1[v6351]
         }
         var v21043 = row$$4 + 1;
         var v6352 = v21043 < height$$34;
         if(v6352) {
           var v21044 = index$$65 + width$$42;
-          introspect(JAMScript.introspectors.processC545F199BE443C5FB0DC91C55134FB746FD8B074) {
+          introspect(JAM.policy.pC545F199BE443C5FB0DC91C55134FB746FD8B074) {
             v6352 = coefficentsMagnitude$$1[v21044]
           }
         }
         var v289 = v6352;
         var v6353 = index$$65 + width$$42;
-        introspect(JAMScript.introspectors.processC545F199BE443C5FB0DC91C55134FB746FD8B074) {
+        introspect(JAM.policy.pC545F199BE443C5FB0DC91C55134FB746FD8B074) {
           var v290 = coefficentsSign$$1[v6353]
         }
         var verticalContribution = calcSignContribution(v287, v288, v289, v290);
@@ -1726,12 +1726,12 @@ function pdfjsWrapper() {
         var v6354 = 3 * v21045;
         var v6355 = 1 - verticalContribution;
         var v291 = v6354 + v6355;
-        introspect(JAMScript.introspectors.processC545F199BE443C5FB0DC91C55134FB746FD8B074) {
+        introspect(JAM.policy.pC545F199BE443C5FB0DC91C55134FB746FD8B074) {
           var contextLabelAndXor = SignContextLabels[v291]
         }
         var contextLabel$$1 = contextLabelAndXor.contextLabel;
         var v292 = this.contexts;
-        introspect(JAMScript.introspectors.processC545F199BE443C5FB0DC91C55134FB746FD8B074) {
+        introspect(JAM.policy.pC545F199BE443C5FB0DC91C55134FB746FD8B074) {
           var cx$$4 = v292[contextLabel$$1]
         }
         var v293 = this.decoder;
@@ -1758,7 +1758,7 @@ function pdfjsWrapper() {
         var qq$$1 = width$$41 * height$$33;
         var v295 = q$$6 < qq$$1;
         for(;v295;) {
-          introspect(JAMScript.introspectors.processC545F199BE443C5FB0DC91C55134FB746FD8B074) {
+          introspect(JAM.policy.pC545F199BE443C5FB0DC91C55134FB746FD8B074) {
             var v6356 = processingFlags[q$$6]
           }
           processingFlags[q$$6] = v6356 & processedInverseMask;
@@ -1781,12 +1781,12 @@ function pdfjsWrapper() {
               if(v297) {
                 break
               }
-              introspect(JAMScript.introspectors.processC545F199BE443C5FB0DC91C55134FB746FD8B074) {
+              introspect(JAM.policy.pC545F199BE443C5FB0DC91C55134FB746FD8B074) {
                 var v6357 = coefficentsMagnitude[index$$64]
               }
               var v21047 = !v6357;
               if(v21047) {
-                introspect(JAMScript.introspectors.processC545F199BE443C5FB0DC91C55134FB746FD8B074) {
+                introspect(JAM.policy.pC545F199BE443C5FB0DC91C55134FB746FD8B074) {
                   var v21046 = neighborsSignificance$$1[index$$64]
                 }
                 v6357 = !v21046
@@ -1798,13 +1798,13 @@ function pdfjsWrapper() {
                 v300 = i1$$1 < 4;
                 continue
               }
-              introspect(JAMScript.introspectors.processC545F199BE443C5FB0DC91C55134FB746FD8B074) {
+              introspect(JAM.policy.pC545F199BE443C5FB0DC91C55134FB746FD8B074) {
                 var v299 = neighborsSignificance$$1[index$$64]
               }
-              introspect(JAMScript.introspectors.processC545F199BE443C5FB0DC91C55134FB746FD8B074) {
+              introspect(JAM.policy.pC545F199BE443C5FB0DC91C55134FB746FD8B074) {
                 var contextLabel = labels[v299]
               }
-              introspect(JAMScript.introspectors.processC545F199BE443C5FB0DC91C55134FB746FD8B074) {
+              introspect(JAM.policy.pC545F199BE443C5FB0DC91C55134FB746FD8B074) {
                 var cx$$3 = contexts[contextLabel]
               }
               var decision = decoder$$2.readBit(cx$$3);
@@ -1813,16 +1813,16 @@ function pdfjsWrapper() {
                 coefficentsSign[index$$64] = sign;
                 coefficentsMagnitude[index$$64] = 1;
                 this.setNeighborsSignificance(i$$190, j$$70);
-                introspect(JAMScript.introspectors.processC545F199BE443C5FB0DC91C55134FB746FD8B074) {
+                introspect(JAM.policy.pC545F199BE443C5FB0DC91C55134FB746FD8B074) {
                   var v6358 = processingFlags[index$$64]
                 }
                 processingFlags[index$$64] = v6358 | firstMagnitudeBitMask
               }
-              introspect(JAMScript.introspectors.processC545F199BE443C5FB0DC91C55134FB746FD8B074) {
+              introspect(JAM.policy.pC545F199BE443C5FB0DC91C55134FB746FD8B074) {
                 var v6359 = bitsDecoded$$1[index$$64]
               }
               bitsDecoded$$1[index$$64] = v6359 + 1;
-              introspect(JAMScript.introspectors.processC545F199BE443C5FB0DC91C55134FB746FD8B074) {
+              introspect(JAM.policy.pC545F199BE443C5FB0DC91C55134FB746FD8B074) {
                 var v6360 = processingFlags[index$$64]
               }
               processingFlags[index$$64] = v6360 | processedMask;
@@ -1850,7 +1850,7 @@ function pdfjsWrapper() {
           if(v305) {
             var v6361 = index$$63 - width$$40;
             var v304 = v6361 - 1;
-            introspect(JAMScript.introspectors.processC545F199BE443C5FB0DC91C55134FB746FD8B074) {
+            introspect(JAM.policy.pC545F199BE443C5FB0DC91C55134FB746FD8B074) {
               var v21048 = neighborsSignificance[v304]
             }
             neighborsSignificance[v304] = v21048 + 16
@@ -1860,13 +1860,13 @@ function pdfjsWrapper() {
           if(v307) {
             var v6363 = index$$63 - width$$40;
             var v306 = v6363 + 1;
-            introspect(JAMScript.introspectors.processC545F199BE443C5FB0DC91C55134FB746FD8B074) {
+            introspect(JAM.policy.pC545F199BE443C5FB0DC91C55134FB746FD8B074) {
               var v21049 = neighborsSignificance[v306]
             }
             neighborsSignificance[v306] = v21049 + 16
           }
           var v308 = index$$63 - width$$40;
-          introspect(JAMScript.introspectors.processC545F199BE443C5FB0DC91C55134FB746FD8B074) {
+          introspect(JAM.policy.pC545F199BE443C5FB0DC91C55134FB746FD8B074) {
             var v21050 = neighborsSignificance[v308]
           }
           neighborsSignificance[v308] = v21050 + 4
@@ -1878,7 +1878,7 @@ function pdfjsWrapper() {
           if(v311) {
             var v6365 = index$$63 + width$$40;
             var v310 = v6365 - 1;
-            introspect(JAMScript.introspectors.processC545F199BE443C5FB0DC91C55134FB746FD8B074) {
+            introspect(JAM.policy.pC545F199BE443C5FB0DC91C55134FB746FD8B074) {
               var v21051 = neighborsSignificance[v310]
             }
             neighborsSignificance[v310] = v21051 + 16
@@ -1888,13 +1888,13 @@ function pdfjsWrapper() {
           if(v313) {
             var v6367 = index$$63 + width$$40;
             var v312 = v6367 + 1;
-            introspect(JAMScript.introspectors.processC545F199BE443C5FB0DC91C55134FB746FD8B074) {
+            introspect(JAM.policy.pC545F199BE443C5FB0DC91C55134FB746FD8B074) {
               var v21052 = neighborsSignificance[v312]
             }
             neighborsSignificance[v312] = v21052 + 16
           }
           var v314 = index$$63 + width$$40;
-          introspect(JAMScript.introspectors.processC545F199BE443C5FB0DC91C55134FB746FD8B074) {
+          introspect(JAM.policy.pC545F199BE443C5FB0DC91C55134FB746FD8B074) {
             var v21053 = neighborsSignificance[v314]
           }
           neighborsSignificance[v314] = v21053 + 4
@@ -1902,7 +1902,7 @@ function pdfjsWrapper() {
         var v317 = column > 0;
         if(v317) {
           var v316 = index$$63 - 1;
-          introspect(JAMScript.introspectors.processC545F199BE443C5FB0DC91C55134FB746FD8B074) {
+          introspect(JAM.policy.pC545F199BE443C5FB0DC91C55134FB746FD8B074) {
             var v21054 = neighborsSignificance[v316]
           }
           neighborsSignificance[v316] = v21054 + 1
@@ -1911,12 +1911,12 @@ function pdfjsWrapper() {
         var v319 = v6368 < width$$40;
         if(v319) {
           var v318 = index$$63 + 1;
-          introspect(JAMScript.introspectors.processC545F199BE443C5FB0DC91C55134FB746FD8B074) {
+          introspect(JAM.policy.pC545F199BE443C5FB0DC91C55134FB746FD8B074) {
             var v21055 = neighborsSignificance[v318]
           }
           neighborsSignificance[v318] = v21055 + 1
         }
-        introspect(JAMScript.introspectors.processC545F199BE443C5FB0DC91C55134FB746FD8B074) {
+        introspect(JAM.policy.pC545F199BE443C5FB0DC91C55134FB746FD8B074) {
           var v6369 = neighborsSignificance[index$$63]
         }
         neighborsSignificance[index$$63] = v6369 | 128;
@@ -2062,7 +2062,7 @@ function pdfjsWrapper() {
       function ArithmeticDecoder_exchangeLps(cx$$2) {
         var d$$10;
         var v344 = cx$$2.index;
-        introspect(JAMScript.introspectors.processC545F199BE443C5FB0DC91C55134FB746FD8B074) {
+        introspect(JAM.policy.pC545F199BE443C5FB0DC91C55134FB746FD8B074) {
           var qeTableIcx$$1 = QeTable[v344]
         }
         var v6377 = this.a;
@@ -2089,7 +2089,7 @@ function pdfjsWrapper() {
       function ArithmeticDecoder_exchangeMps(cx$$1) {
         var d$$9;
         var v349 = cx$$1.index;
-        introspect(JAMScript.introspectors.processC545F199BE443C5FB0DC91C55134FB746FD8B074) {
+        introspect(JAM.policy.pC545F199BE443C5FB0DC91C55134FB746FD8B074) {
           var qeTableIcx = QeTable[v349]
         }
         var v6380 = this.a;
@@ -2143,7 +2143,7 @@ function pdfjsWrapper() {
       }
       function ArithmeticDecoder_readBit(cx) {
         var v6391 = cx.index;
-        introspect(JAMScript.introspectors.processC545F199BE443C5FB0DC91C55134FB746FD8B074) {
+        introspect(JAM.policy.pC545F199BE443C5FB0DC91C55134FB746FD8B074) {
           var v359 = QeTable[v6391]
         }
         var qeIcx = v359.qe;
@@ -2174,13 +2174,13 @@ function pdfjsWrapper() {
       function ArithmeticDecoder_byteIn() {
         var data$$107 = this.data;
         var bp = this.bp;
-        introspect(JAMScript.introspectors.processC545F199BE443C5FB0DC91C55134FB746FD8B074) {
+        introspect(JAM.policy.pC545F199BE443C5FB0DC91C55134FB746FD8B074) {
           var v6396 = data$$107[bp]
         }
         var v364 = v6396 == 255;
         if(v364) {
           var v362 = bp + 1;
-          introspect(JAMScript.introspectors.processC545F199BE443C5FB0DC91C55134FB746FD8B074) {
+          introspect(JAM.policy.pC545F199BE443C5FB0DC91C55134FB746FD8B074) {
             var b1$$2 = data$$107[v362]
           }
           var v363 = b1$$2 > 143;
@@ -2191,7 +2191,7 @@ function pdfjsWrapper() {
           }else {
             bp = bp + 1;
             var v6398 = this.clow;
-            introspect(JAMScript.introspectors.processC545F199BE443C5FB0DC91C55134FB746FD8B074) {
+            introspect(JAM.policy.pC545F199BE443C5FB0DC91C55134FB746FD8B074) {
               var v21065 = data$$107[bp]
             }
             var v6399 = v21065 << 9;
@@ -2206,7 +2206,7 @@ function pdfjsWrapper() {
           var v22937 = this.dataEnd;
           var v22396 = bp < v22937;
           if(v22396) {
-            introspect(JAMScript.introspectors.processC545F199BE443C5FB0DC91C55134FB746FD8B074) {
+            introspect(JAM.policy.pC545F199BE443C5FB0DC91C55134FB746FD8B074) {
               var v22395 = data$$107[bp]
             }
             v21066 = v22395 << 8
@@ -2234,7 +2234,7 @@ function pdfjsWrapper() {
         this.data = data$$106;
         this.bp = start$$23;
         this.dataEnd = end$$18;
-        introspect(JAMScript.introspectors.processC545F199BE443C5FB0DC91C55134FB746FD8B074) {
+        introspect(JAM.policy.pC545F199BE443C5FB0DC91C55134FB746FD8B074) {
           this.chigh = data$$106[start$$23]
         }
         this.clow = 0;
@@ -2309,12 +2309,12 @@ function pdfjsWrapper() {
       function InclusionTree_nextLevel() {
         var currentLevel$$3 = this.currentLevel;
         var v416 = this.levels;
-        introspect(JAMScript.introspectors.processC545F199BE443C5FB0DC91C55134FB746FD8B074) {
+        introspect(JAM.policy.pC545F199BE443C5FB0DC91C55134FB746FD8B074) {
           var level$$15 = v416[currentLevel$$3]
         }
         var v417 = level$$15.items;
         var v418 = level$$15.index;
-        introspect(JAMScript.introspectors.processC545F199BE443C5FB0DC91C55134FB746FD8B074) {
+        introspect(JAM.policy.pC545F199BE443C5FB0DC91C55134FB746FD8B074) {
           var value$$75 = v417[v418]
         }
         var v419 = level$$15.items;
@@ -2327,7 +2327,7 @@ function pdfjsWrapper() {
         }
         this.currentLevel = currentLevel$$3;
         var v422 = this.levels;
-        introspect(JAMScript.introspectors.processC545F199BE443C5FB0DC91C55134FB746FD8B074) {
+        introspect(JAM.policy.pC545F199BE443C5FB0DC91C55134FB746FD8B074) {
           level$$15 = v422[currentLevel$$3]
         }
         var v423 = level$$15.items;
@@ -2338,19 +2338,19 @@ function pdfjsWrapper() {
       function InclusionTree_propagateValues() {
         var levelIndex = this.currentLevel;
         var v425 = this.levels;
-        introspect(JAMScript.introspectors.processC545F199BE443C5FB0DC91C55134FB746FD8B074) {
+        introspect(JAM.policy.pC545F199BE443C5FB0DC91C55134FB746FD8B074) {
           var level$$14 = v425[levelIndex]
         }
         var v426 = level$$14.items;
         var v427 = level$$14.index;
-        introspect(JAMScript.introspectors.processC545F199BE443C5FB0DC91C55134FB746FD8B074) {
+        introspect(JAM.policy.pC545F199BE443C5FB0DC91C55134FB746FD8B074) {
           var currentValue = v426[v427]
         }
         var v6410 = levelIndex = levelIndex - 1;
         var v431 = v6410 >= 0;
         for(;v431;) {
           var v428 = this.levels;
-          introspect(JAMScript.introspectors.processC545F199BE443C5FB0DC91C55134FB746FD8B074) {
+          introspect(JAM.policy.pC545F199BE443C5FB0DC91C55134FB746FD8B074) {
             level$$14 = v428[levelIndex]
           }
           var v429 = level$$14.items;
@@ -2364,7 +2364,7 @@ function pdfjsWrapper() {
       function InclusionTree_incrementValue(stopValue$$1) {
         var v432 = this.levels;
         var v433 = this.currentLevel;
-        introspect(JAMScript.introspectors.processC545F199BE443C5FB0DC91C55134FB746FD8B074) {
+        introspect(JAM.policy.pC545F199BE443C5FB0DC91C55134FB746FD8B074) {
           var level$$13 = v432[v433]
         }
         var v434 = level$$13.items;
@@ -2380,7 +2380,7 @@ function pdfjsWrapper() {
         var v441 = currentLevel$$2 < v6412;
         for(;v441;) {
           var v436 = this.levels;
-          introspect(JAMScript.introspectors.processC545F199BE443C5FB0DC91C55134FB746FD8B074) {
+          introspect(JAM.policy.pC545F199BE443C5FB0DC91C55134FB746FD8B074) {
             var level$$12 = v436[currentLevel$$2]
           }
           var v6413 = level$$12.width;
@@ -2388,7 +2388,7 @@ function pdfjsWrapper() {
           var index$$62 = i$$187 + v437;
           level$$12.index = index$$62;
           var v438 = level$$12.items;
-          introspect(JAMScript.introspectors.processC545F199BE443C5FB0DC91C55134FB746FD8B074) {
+          introspect(JAM.policy.pC545F199BE443C5FB0DC91C55134FB746FD8B074) {
             var value$$74 = v438[index$$62]
           }
           var v439 = value$$74 == 255;
@@ -2448,12 +2448,12 @@ function pdfjsWrapper() {
       function TagTree_nextLevel() {
         var currentLevel$$1 = this.currentLevel;
         var v449 = this.levels;
-        introspect(JAMScript.introspectors.processC545F199BE443C5FB0DC91C55134FB746FD8B074) {
+        introspect(JAM.policy.pC545F199BE443C5FB0DC91C55134FB746FD8B074) {
           var level$$10 = v449[currentLevel$$1]
         }
         var v450 = level$$10.items;
         var v451 = level$$10.index;
-        introspect(JAMScript.introspectors.processC545F199BE443C5FB0DC91C55134FB746FD8B074) {
+        introspect(JAM.policy.pC545F199BE443C5FB0DC91C55134FB746FD8B074) {
           var value$$73 = v450[v451]
         }
         currentLevel$$1 = currentLevel$$1 - 1;
@@ -2464,7 +2464,7 @@ function pdfjsWrapper() {
         }
         this.currentLevel = currentLevel$$1;
         var v453 = this.levels;
-        introspect(JAMScript.introspectors.processC545F199BE443C5FB0DC91C55134FB746FD8B074) {
+        introspect(JAM.policy.pC545F199BE443C5FB0DC91C55134FB746FD8B074) {
           level$$10 = v453[currentLevel$$1]
         }
         var v454 = level$$10.items;
@@ -2475,14 +2475,14 @@ function pdfjsWrapper() {
       function TagTree_incrementValue() {
         var v456 = this.levels;
         var v457 = this.currentLevel;
-        introspect(JAMScript.introspectors.processC545F199BE443C5FB0DC91C55134FB746FD8B074) {
+        introspect(JAM.policy.pC545F199BE443C5FB0DC91C55134FB746FD8B074) {
           var level$$9 = v456[v457]
         }
         var v6416 = level$$9.items;
         var v6417 = level$$9.index;
         var v22397 = level$$9.items;
         var v22398 = level$$9.index;
-        introspect(JAMScript.introspectors.processC545F199BE443C5FB0DC91C55134FB746FD8B074) {
+        introspect(JAM.policy.pC545F199BE443C5FB0DC91C55134FB746FD8B074) {
           var v21072 = v22397[v22398]
         }
         v6416[v6417] = v21072 + 1;
@@ -2496,7 +2496,7 @@ function pdfjsWrapper() {
         var v462 = currentLevel < v6418;
         for(;v462;) {
           var v458 = this.levels;
-          introspect(JAMScript.introspectors.processC545F199BE443C5FB0DC91C55134FB746FD8B074) {
+          introspect(JAM.policy.pC545F199BE443C5FB0DC91C55134FB746FD8B074) {
             var level$$8 = v458[currentLevel]
           }
           var v6419 = level$$8.width;
@@ -2506,7 +2506,7 @@ function pdfjsWrapper() {
           var v461 = index$$61 in v6420;
           if(v461) {
             var v460 = level$$8.items;
-            introspect(JAMScript.introspectors.processC545F199BE443C5FB0DC91C55134FB746FD8B074) {
+            introspect(JAM.policy.pC545F199BE443C5FB0DC91C55134FB746FD8B074) {
               value$$72 = v460[index$$61]
             }
             break
@@ -2611,23 +2611,23 @@ function pdfjsWrapper() {
               var i$$183 = 0;
               var v492 = i$$183 < componentsCount$$8;
               for(;v492;) {
-                introspect(JAMScript.introspectors.processC545F199BE443C5FB0DC91C55134FB746FD8B074) {
+                introspect(JAM.policy.pC545F199BE443C5FB0DC91C55134FB746FD8B074) {
                   var v21075 = data$$105[j$$66]
                 }
                 var v6431 = v21075 & 127;
                 var v480 = v6431 + 1;
-                introspect(JAMScript.introspectors.processC545F199BE443C5FB0DC91C55134FB746FD8B074) {
+                introspect(JAM.policy.pC545F199BE443C5FB0DC91C55134FB746FD8B074) {
                   var v22399 = data$$105[j$$66]
                 }
                 var v21076 = v22399 & 128;
                 var v6432 = !v21076;
                 var v481 = !v6432;
                 var v6433 = j$$66 + 1;
-                introspect(JAMScript.introspectors.processC545F199BE443C5FB0DC91C55134FB746FD8B074) {
+                introspect(JAM.policy.pC545F199BE443C5FB0DC91C55134FB746FD8B074) {
                   var v482 = data$$105[v6433]
                 }
                 var v6434 = j$$66 + 1;
-                introspect(JAMScript.introspectors.processC545F199BE443C5FB0DC91C55134FB746FD8B074) {
+                introspect(JAM.policy.pC545F199BE443C5FB0DC91C55134FB746FD8B074) {
                   var v483 = data$$105[v6434]
                 }
                 var component$$20 = {precision:v480, isSigned:v481, XRsiz:v482, YRsiz:v483};
@@ -2746,7 +2746,7 @@ function pdfjsWrapper() {
               var ii$$inline_197 = componentsCount$$inline_195;
               var v515 = i$$inline_196 < ii$$inline_197;
               for(;v515;) {
-                introspect(JAMScript.introspectors.processC545F199BE443C5FB0DC91C55134FB746FD8B074) {
+                introspect(JAM.policy.pC545F199BE443C5FB0DC91C55134FB746FD8B074) {
                   var component$$inline_198 = components$$inline_187[i$$inline_196]
                 }
                 var tileComponents$$inline_199 = [];
@@ -2803,7 +2803,7 @@ function pdfjsWrapper() {
               j$$66 = position$$5 + 2;
               var v516 = j$$66;
               j$$66 = j$$66 + 1;
-              introspect(JAMScript.introspectors.processC545F199BE443C5FB0DC91C55134FB746FD8B074) {
+              introspect(JAM.policy.pC545F199BE443C5FB0DC91C55134FB746FD8B074) {
                 var sqcd = data$$105[v516]
               }
               var spqcdSize;
@@ -2837,23 +2837,23 @@ function pdfjsWrapper() {
                 if(v522) {
                   var v6456 = j$$66;
                   j$$66 = j$$66 + 1;
-                  introspect(JAMScript.introspectors.processC545F199BE443C5FB0DC91C55134FB746FD8B074) {
+                  introspect(JAM.policy.pC545F199BE443C5FB0DC91C55134FB746FD8B074) {
                     var v518 = data$$105[v6456]
                   }
                   spqcd.epsilon = v518 >> 3;
                   spqcd.mu = 0
                 }else {
-                  introspect(JAMScript.introspectors.processC545F199BE443C5FB0DC91C55134FB746FD8B074) {
+                  introspect(JAM.policy.pC545F199BE443C5FB0DC91C55134FB746FD8B074) {
                     var v519 = data$$105[j$$66]
                   }
                   spqcd.epsilon = v519 >> 3;
-                  introspect(JAMScript.introspectors.processC545F199BE443C5FB0DC91C55134FB746FD8B074) {
+                  introspect(JAM.policy.pC545F199BE443C5FB0DC91C55134FB746FD8B074) {
                     var v21105 = data$$105[j$$66]
                   }
                   var v6457 = v21105 & 7;
                   var v520 = v6457 << 8;
                   var v6458 = j$$66 + 1;
-                  introspect(JAMScript.introspectors.processC545F199BE443C5FB0DC91C55134FB746FD8B074) {
+                  introspect(JAM.policy.pC545F199BE443C5FB0DC91C55134FB746FD8B074) {
                     var v521 = data$$105[v6458]
                   }
                   spqcd.mu = v520 | v521;
@@ -2885,7 +2885,7 @@ function pdfjsWrapper() {
               if(v528) {
                 var v527 = j$$66;
                 j$$66 = j$$66 + 1;
-                introspect(JAMScript.introspectors.processC545F199BE443C5FB0DC91C55134FB746FD8B074) {
+                introspect(JAM.policy.pC545F199BE443C5FB0DC91C55134FB746FD8B074) {
                   cqcc = data$$105[v527]
                 }
               }else {
@@ -2894,7 +2894,7 @@ function pdfjsWrapper() {
               }
               var v529 = j$$66;
               j$$66 = j$$66 + 1;
-              introspect(JAMScript.introspectors.processC545F199BE443C5FB0DC91C55134FB746FD8B074) {
+              introspect(JAM.policy.pC545F199BE443C5FB0DC91C55134FB746FD8B074) {
                 sqcd = data$$105[v529]
               }
               var v530 = sqcd & 31;
@@ -2926,23 +2926,23 @@ function pdfjsWrapper() {
                 if(v535) {
                   var v6462 = j$$66;
                   j$$66 = j$$66 + 1;
-                  introspect(JAMScript.introspectors.processC545F199BE443C5FB0DC91C55134FB746FD8B074) {
+                  introspect(JAM.policy.pC545F199BE443C5FB0DC91C55134FB746FD8B074) {
                     var v531 = data$$105[v6462]
                   }
                   spqcd.epsilon = v531 >> 3;
                   spqcd.mu = 0
                 }else {
-                  introspect(JAMScript.introspectors.processC545F199BE443C5FB0DC91C55134FB746FD8B074) {
+                  introspect(JAM.policy.pC545F199BE443C5FB0DC91C55134FB746FD8B074) {
                     var v532 = data$$105[j$$66]
                   }
                   spqcd.epsilon = v532 >> 3;
-                  introspect(JAMScript.introspectors.processC545F199BE443C5FB0DC91C55134FB746FD8B074) {
+                  introspect(JAM.policy.pC545F199BE443C5FB0DC91C55134FB746FD8B074) {
                     var v21107 = data$$105[j$$66]
                   }
                   var v6463 = v21107 & 7;
                   var v533 = v6463 << 8;
                   var v6464 = j$$66 + 1;
-                  introspect(JAMScript.introspectors.processC545F199BE443C5FB0DC91C55134FB746FD8B074) {
+                  introspect(JAM.policy.pC545F199BE443C5FB0DC91C55134FB746FD8B074) {
                     var v534 = data$$105[v6464]
                   }
                   spqcd.mu = v533 | v534;
@@ -2969,7 +2969,7 @@ function pdfjsWrapper() {
               j$$66 = position$$5 + 2;
               var v540 = j$$66;
               j$$66 = j$$66 + 1;
-              introspect(JAMScript.introspectors.processC545F199BE443C5FB0DC91C55134FB746FD8B074) {
+              introspect(JAM.policy.pC545F199BE443C5FB0DC91C55134FB746FD8B074) {
                 var scod = data$$105[v540]
               }
               var v6467 = scod & 1;
@@ -2983,7 +2983,7 @@ function pdfjsWrapper() {
               cod.ephMarkerUsed = !v543;
               var v544 = j$$66;
               j$$66 = j$$66 + 1;
-              introspect(JAMScript.introspectors.processC545F199BE443C5FB0DC91C55134FB746FD8B074) {
+              introspect(JAM.policy.pC545F199BE443C5FB0DC91C55134FB746FD8B074) {
                 cod.progressionOrder = data$$105[v544]
               }
               var v545 = cod;
@@ -2992,31 +2992,31 @@ function pdfjsWrapper() {
               j$$66 = j$$66 + 2;
               var v546 = j$$66;
               j$$66 = j$$66 + 1;
-              introspect(JAMScript.introspectors.processC545F199BE443C5FB0DC91C55134FB746FD8B074) {
+              introspect(JAM.policy.pC545F199BE443C5FB0DC91C55134FB746FD8B074) {
                 cod.multipleComponentTransform = data$$105[v546]
               }
               var v547 = j$$66;
               j$$66 = j$$66 + 1;
-              introspect(JAMScript.introspectors.processC545F199BE443C5FB0DC91C55134FB746FD8B074) {
+              introspect(JAM.policy.pC545F199BE443C5FB0DC91C55134FB746FD8B074) {
                 cod.decompositionLevelsCount = data$$105[v547]
               }
               var v21108 = j$$66;
               j$$66 = j$$66 + 1;
-              introspect(JAMScript.introspectors.processC545F199BE443C5FB0DC91C55134FB746FD8B074) {
+              introspect(JAM.policy.pC545F199BE443C5FB0DC91C55134FB746FD8B074) {
                 var v6470 = data$$105[v21108]
               }
               var v548 = v6470 & 15;
               cod.xcb = v548 + 2;
               var v21109 = j$$66;
               j$$66 = j$$66 + 1;
-              introspect(JAMScript.introspectors.processC545F199BE443C5FB0DC91C55134FB746FD8B074) {
+              introspect(JAM.policy.pC545F199BE443C5FB0DC91C55134FB746FD8B074) {
                 var v6471 = data$$105[v21109]
               }
               var v549 = v6471 & 15;
               cod.ycb = v549 + 2;
               var v550 = j$$66;
               j$$66 = j$$66 + 1;
-              introspect(JAMScript.introspectors.processC545F199BE443C5FB0DC91C55134FB746FD8B074) {
+              introspect(JAM.policy.pC545F199BE443C5FB0DC91C55134FB746FD8B074) {
                 var blockStyle = data$$105[v550]
               }
               var v6472 = blockStyle & 1;
@@ -3039,7 +3039,7 @@ function pdfjsWrapper() {
               cod.segmentationSymbolUsed = !v556;
               var v557 = j$$66;
               j$$66 = j$$66 + 1;
-              introspect(JAMScript.introspectors.processC545F199BE443C5FB0DC91C55134FB746FD8B074) {
+              introspect(JAM.policy.pC545F199BE443C5FB0DC91C55134FB746FD8B074) {
                 cod.transformation = data$$105[v557]
               }
               var v560 = cod.entropyCoderWithCustomPrecincts;
@@ -3048,7 +3048,7 @@ function pdfjsWrapper() {
                 var v6478 = length$$73 + position$$5;
                 var v559 = j$$66 < v6478;
                 for(;v559;) {
-                  introspect(JAMScript.introspectors.processC545F199BE443C5FB0DC91C55134FB746FD8B074) {
+                  introspect(JAM.policy.pC545F199BE443C5FB0DC91C55134FB746FD8B074) {
                     var precinctsSize = data$$105[j$$66]
                   }
                   var v6479 = precinctsSize & 15;
@@ -3125,11 +3125,11 @@ function pdfjsWrapper() {
               var v568 = v6485 + position$$5;
               tile$$8.dataEnd = v568 - 2;
               var v569 = position$$5 + 8;
-              introspect(JAMScript.introspectors.processC545F199BE443C5FB0DC91C55134FB746FD8B074) {
+              introspect(JAM.policy.pC545F199BE443C5FB0DC91C55134FB746FD8B074) {
                 tile$$8.partIndex = data$$105[v569]
               }
               var v570 = position$$5 + 9;
-              introspect(JAMScript.introspectors.processC545F199BE443C5FB0DC91C55134FB746FD8B074) {
+              introspect(JAM.policy.pC545F199BE443C5FB0DC91C55134FB746FD8B074) {
                 tile$$8.partsCount = data$$105[v570]
               }
               context$$12.mainHeader = false;
@@ -3159,7 +3159,7 @@ function pdfjsWrapper() {
                 var componentsCount$$inline_207 = siz$$inline_206.Csiz;
                 var v574 = context$$inline_204.tiles;
                 var v575 = tile$$8.index;
-                introspect(JAMScript.introspectors.processC545F199BE443C5FB0DC91C55134FB746FD8B074) {
+                introspect(JAM.policy.pC545F199BE443C5FB0DC91C55134FB746FD8B074) {
                   var tile$$inline_208 = v574[v575]
                 }
                 var resultTiles$$inline_209 = [];
@@ -3167,7 +3167,7 @@ function pdfjsWrapper() {
                 var v579 = c$$inline_210 < componentsCount$$inline_207;
                 for(;v579;) {
                   var v576 = tile$$inline_208.components;
-                  introspect(JAMScript.introspectors.processC545F199BE443C5FB0DC91C55134FB746FD8B074) {
+                  introspect(JAM.policy.pC545F199BE443C5FB0DC91C55134FB746FD8B074) {
                     var component$$inline_211 = v576[c$$inline_210]
                   }
                   var v577;
@@ -3208,7 +3208,7 @@ function pdfjsWrapper() {
                 var v581 = context$$inline_215.currentTile;
                 var tileIndex$$inline_217 = v581.index;
                 var v582 = context$$inline_215.tiles;
-                introspect(JAMScript.introspectors.processC545F199BE443C5FB0DC91C55134FB746FD8B074) {
+                introspect(JAM.policy.pC545F199BE443C5FB0DC91C55134FB746FD8B074) {
                   var tile$$inline_218 = v582[tileIndex$$inline_217]
                 }
                 var componentsCount$$inline_219 = siz$$inline_216.Csiz;
@@ -3216,7 +3216,7 @@ function pdfjsWrapper() {
                 var v620 = c$$inline_220 < componentsCount$$inline_219;
                 for(;v620;) {
                   var v583 = tile$$inline_218.components;
-                  introspect(JAMScript.introspectors.processC545F199BE443C5FB0DC91C55134FB746FD8B074) {
+                  introspect(JAM.policy.pC545F199BE443C5FB0DC91C55134FB746FD8B074) {
                     var component$$inline_221 = v583[c$$inline_220]
                   }
                   var v584 = component$$inline_221.codingStyleParameters;
@@ -3237,12 +3237,12 @@ function pdfjsWrapper() {
                       result$$inline_299.PPy = 15
                     }else {
                       var v6497 = codOrCoc$$inline_298.precinctsSizes;
-                      introspect(JAMScript.introspectors.processC545F199BE443C5FB0DC91C55134FB746FD8B074) {
+                      introspect(JAM.policy.pC545F199BE443C5FB0DC91C55134FB746FD8B074) {
                         var v585 = v6497[r$$inline_297]
                       }
                       result$$inline_299.PPx = v585.PPx;
                       var v6498 = codOrCoc$$inline_298.precinctsSizes;
-                      introspect(JAMScript.introspectors.processC545F199BE443C5FB0DC91C55134FB746FD8B074) {
+                      introspect(JAM.policy.pC545F199BE443C5FB0DC91C55134FB746FD8B074) {
                         var v586 = v6498[r$$inline_297]
                       }
                       result$$inline_299.PPy = v586.PPy
@@ -3532,7 +3532,7 @@ function pdfjsWrapper() {
       var v709 = i$$inline_240 < ii$$inline_241;
       for(;v709;) {
         var v632 = context$$inline_235.tiles;
-        introspect(JAMScript.introspectors.processC545F199BE443C5FB0DC91C55134FB746FD8B074) {
+        introspect(JAM.policy.pC545F199BE443C5FB0DC91C55134FB746FD8B074) {
           var tile$$inline_242 = v632[i$$inline_240]
         }
         var result$$inline_243 = [];
@@ -3541,7 +3541,7 @@ function pdfjsWrapper() {
         for(;v690;) {
           var image$$inline_245;
           var v633 = tile$$inline_242.components;
-          introspect(JAMScript.introspectors.processC545F199BE443C5FB0DC91C55134FB746FD8B074) {
+          introspect(JAM.policy.pC545F199BE443C5FB0DC91C55134FB746FD8B074) {
             var component$$inline_315 = v633[c$$inline_244]
           }
           var codingStyleParameters$$inline_316 = component$$inline_315.codingStyleParameters;
@@ -3552,7 +3552,7 @@ function pdfjsWrapper() {
           var guardBits$$inline_321 = quantizationParameters$$inline_317.guardBits;
           var transformation$$inline_322 = codingStyleParameters$$inline_316.transformation;
           var v6531 = context$$inline_235.components;
-          introspect(JAMScript.introspectors.processC545F199BE443C5FB0DC91C55134FB746FD8B074) {
+          introspect(JAM.policy.pC545F199BE443C5FB0DC91C55134FB746FD8B074) {
             var v634 = v6531[c$$inline_244]
           }
           var precision$$inline_323 = v634.precision;
@@ -3563,7 +3563,7 @@ function pdfjsWrapper() {
           var v681 = i$$inline_327 <= decompositionLevelsCount$$inline_318;
           for(;v681;) {
             var v635 = component$$inline_315.resolutions;
-            introspect(JAMScript.introspectors.processC545F199BE443C5FB0DC91C55134FB746FD8B074) {
+            introspect(JAM.policy.pC545F199BE443C5FB0DC91C55134FB746FD8B074) {
               var resolution$$inline_328 = v635[i$$inline_327]
             }
             var j$$inline_329 = 0;
@@ -3589,17 +3589,17 @@ function pdfjsWrapper() {
                 var v639 = v6533;
                 epsilon$$inline_332 = v638 + v639
               }else {
-                introspect(JAMScript.introspectors.processC545F199BE443C5FB0DC91C55134FB746FD8B074) {
+                introspect(JAM.policy.pC545F199BE443C5FB0DC91C55134FB746FD8B074) {
                   var v640 = spqcds$$inline_319[b$$inline_326]
                 }
                 mu$$inline_331 = v640.mu;
-                introspect(JAMScript.introspectors.processC545F199BE443C5FB0DC91C55134FB746FD8B074) {
+                introspect(JAM.policy.pC545F199BE443C5FB0DC91C55134FB746FD8B074) {
                   var v641 = spqcds$$inline_319[b$$inline_326]
                 }
                 epsilon$$inline_332 = v641.epsilon
               }
               var v643 = resolution$$inline_328.subbands;
-              introspect(JAMScript.introspectors.processC545F199BE443C5FB0DC91C55134FB746FD8B074) {
+              introspect(JAM.policy.pC545F199BE443C5FB0DC91C55134FB746FD8B074) {
                 var subband$$inline_333 = v643[j$$inline_329]
               }
               var v644 = subband$$inline_333.tbx1;
@@ -3609,7 +3609,7 @@ function pdfjsWrapper() {
               var v647 = subband$$inline_333.tby0;
               var height$$inline_335 = v646 - v647;
               var v648 = subband$$inline_333.type;
-              introspect(JAMScript.introspectors.processC545F199BE443C5FB0DC91C55134FB746FD8B074) {
+              introspect(JAM.policy.pC545F199BE443C5FB0DC91C55134FB746FD8B074) {
                 var gainLog2$$inline_336 = SubbandsGainLog2[v648]
               }
               var v21157 = precision$$inline_323 + gainLog2$$inline_336;
@@ -3635,7 +3635,7 @@ function pdfjsWrapper() {
               var ii$$inline_350 = codeblocks$$inline_346.length;
               var v678 = i$$inline_349 < ii$$inline_350;
               for(;v678;) {
-                introspect(JAMScript.introspectors.processC545F199BE443C5FB0DC91C55134FB746FD8B074) {
+                introspect(JAM.policy.pC545F199BE443C5FB0DC91C55134FB746FD8B074) {
                   var codeblock$$inline_351 = codeblocks$$inline_346[i$$inline_349]
                 }
                 var v653 = codeblock$$inline_351.tbx1_;
@@ -3675,7 +3675,7 @@ function pdfjsWrapper() {
                 var qq$$inline_360 = data$$inline_356.length;
                 var v661 = q$$inline_359 < qq$$inline_360;
                 for(;v661;) {
-                  introspect(JAMScript.introspectors.processC545F199BE443C5FB0DC91C55134FB746FD8B074) {
+                  introspect(JAM.policy.pC545F199BE443C5FB0DC91C55134FB746FD8B074) {
                     var dataItem$$inline_361 = data$$inline_356[q$$inline_359]
                   }
                   var v21159 = dataItem$$inline_361.end;
@@ -3739,7 +3739,7 @@ function pdfjsWrapper() {
                   for(;v676;) {
                     var v6543;
                     var v22424 = bitModel$$inline_354.coefficentsSign;
-                    introspect(JAMScript.introspectors.processC545F199BE443C5FB0DC91C55134FB746FD8B074) {
+                    introspect(JAM.policy.pC545F199BE443C5FB0DC91C55134FB746FD8B074) {
                       var v21162 = v22424[position$$inline_367]
                     }
                     if(v21162) {
@@ -3749,12 +3749,12 @@ function pdfjsWrapper() {
                     }
                     var v670 = v6543;
                     var v6544 = bitModel$$inline_354.coefficentsMagnitude;
-                    introspect(JAMScript.introspectors.processC545F199BE443C5FB0DC91C55134FB746FD8B074) {
+                    introspect(JAM.policy.pC545F199BE443C5FB0DC91C55134FB746FD8B074) {
                       var v671 = v6544[position$$inline_367]
                     }
                     var n$$inline_369 = v670 * v671;
                     var v672 = bitModel$$inline_354.bitsDecoded;
-                    introspect(JAMScript.introspectors.processC545F199BE443C5FB0DC91C55134FB746FD8B074) {
+                    introspect(JAM.policy.pC545F199BE443C5FB0DC91C55134FB746FD8B074) {
                       var nb$$inline_370 = v672[position$$inline_367]
                     }
                     var correction$$inline_371;
@@ -3846,13 +3846,13 @@ function pdfjsWrapper() {
           var jj$$inline_250 = y0items$$inline_246.length;
           var v695 = j$$inline_249 < jj$$inline_250;
           for(;v695;) {
-            introspect(JAMScript.introspectors.processC545F199BE443C5FB0DC91C55134FB746FD8B074) {
+            introspect(JAM.policy.pC545F199BE443C5FB0DC91C55134FB746FD8B074) {
               var y0$$inline_251 = y0items$$inline_246[j$$inline_249]
             }
-            introspect(JAMScript.introspectors.processC545F199BE443C5FB0DC91C55134FB746FD8B074) {
+            introspect(JAM.policy.pC545F199BE443C5FB0DC91C55134FB746FD8B074) {
               var y1$$inline_252 = y1items$$inline_247[j$$inline_249]
             }
-            introspect(JAMScript.introspectors.processC545F199BE443C5FB0DC91C55134FB746FD8B074) {
+            introspect(JAM.policy.pC545F199BE443C5FB0DC91C55134FB746FD8B074) {
               var y2$$inline_253 = y2items$$inline_248[j$$inline_249]
             }
             var v6551 = y2$$inline_253 + y1$$inline_252;
@@ -3868,7 +3868,7 @@ function pdfjsWrapper() {
         c$$inline_244 = 0;
         var v700 = c$$inline_244 < componentsCount$$inline_238;
         for(;v700;) {
-          introspect(JAMScript.introspectors.processC545F199BE443C5FB0DC91C55134FB746FD8B074) {
+          introspect(JAM.policy.pC545F199BE443C5FB0DC91C55134FB746FD8B074) {
             var component$$inline_255 = components$$inline_237[c$$inline_244]
           }
           var v697 = component$$inline_255.isSigned;
@@ -3880,7 +3880,7 @@ function pdfjsWrapper() {
           var v6552 = component$$inline_255.precision;
           var v698 = v6552 - 1;
           var offset$$inline_256 = 1 << v698;
-          introspect(JAMScript.introspectors.processC545F199BE443C5FB0DC91C55134FB746FD8B074) {
+          introspect(JAM.policy.pC545F199BE443C5FB0DC91C55134FB746FD8B074) {
             var tileImage$$inline_257 = result$$inline_243[c$$inline_244]
           }
           var items$$inline_258 = tileImage$$inline_257.items;
@@ -3888,7 +3888,7 @@ function pdfjsWrapper() {
           jj$$inline_250 = items$$inline_258.length;
           var v699 = j$$inline_249 < jj$$inline_250;
           for(;v699;) {
-            introspect(JAMScript.introspectors.processC545F199BE443C5FB0DC91C55134FB746FD8B074) {
+            introspect(JAM.policy.pC545F199BE443C5FB0DC91C55134FB746FD8B074) {
               var v6553 = items$$inline_258[j$$inline_249]
             }
             items$$inline_258[j$$inline_249] = v6553 + offset$$inline_256;
@@ -3920,7 +3920,7 @@ function pdfjsWrapper() {
           jj$$inline_250 = items$$inline_258.length;
           var v706 = j$$inline_249 < jj$$inline_250;
           for(;v706;) {
-            introspect(JAMScript.introspectors.processC545F199BE443C5FB0DC91C55134FB746FD8B074) {
+            introspect(JAM.policy.pC545F199BE443C5FB0DC91C55134FB746FD8B074) {
               var v6555 = items$$inline_258[j$$inline_249]
             }
             var v704 = v6555 >> shift$$inline_259;
@@ -3943,7 +3943,7 @@ function pdfjsWrapper() {
             j$$inline_249 = j$$inline_249 + 1;
             v706 = j$$inline_249 < jj$$inline_250
           }
-          introspect(JAMScript.introspectors.processC545F199BE443C5FB0DC91C55134FB746FD8B074) {
+          introspect(JAM.policy.pC545F199BE443C5FB0DC91C55134FB746FD8B074) {
             var v707 = result$$inline_243[c$$inline_244]
           }
           v707.items = data$$inline_260;
@@ -3978,7 +3978,7 @@ function pdfjsWrapper() {
         for(;v717;) {
           var v715 = n$$45 * 256;
           var v21166 = offset$$41 + i$$182;
-          introspect(JAMScript.introspectors.processC545F199BE443C5FB0DC91C55134FB746FD8B074) {
+          introspect(JAM.policy.pC545F199BE443C5FB0DC91C55134FB746FD8B074) {
             var v6562 = data$$104[v21166]
           }
           var v716 = v6562 & 255;
@@ -4051,7 +4051,7 @@ function pdfjsWrapper() {
       }
       var v727 = PdfJS_window.XMLHttpRequest;
       var xhr$$2 = new v727;
-      introspect(JAMScript.introspectors.processC545F199BE443C5FB0DC91C55134FB746FD8B074) {
+      introspect(JAM.policy.pC545F199BE443C5FB0DC91C55134FB746FD8B074) {
         xhr$$2.open("GET", url$$7, true)
       }
       xhr$$2.responseType = "arraybuffer";
@@ -4066,35 +4066,35 @@ function pdfjsWrapper() {
       return
     }
     function readUint32(data$$97, offset$$36) {
-      introspect(JAMScript.introspectors.processC545F199BE443C5FB0DC91C55134FB746FD8B074) {
+      introspect(JAM.policy.pC545F199BE443C5FB0DC91C55134FB746FD8B074) {
         var v22427 = data$$97[offset$$36]
       }
       var v21168 = v22427 << 24;
       var v22941 = offset$$36 + 1;
-      introspect(JAMScript.introspectors.processC545F199BE443C5FB0DC91C55134FB746FD8B074) {
+      introspect(JAM.policy.pC545F199BE443C5FB0DC91C55134FB746FD8B074) {
         var v22428 = data$$97[v22941]
       }
       var v21169 = v22428 << 16;
       var v6564 = v21168 | v21169;
       var v22429 = offset$$36 + 2;
-      introspect(JAMScript.introspectors.processC545F199BE443C5FB0DC91C55134FB746FD8B074) {
+      introspect(JAM.policy.pC545F199BE443C5FB0DC91C55134FB746FD8B074) {
         var v21170 = data$$97[v22429]
       }
       var v6565 = v21170 << 8;
       var v729 = v6564 | v6565;
       var v6566 = offset$$36 + 3;
-      introspect(JAMScript.introspectors.processC545F199BE443C5FB0DC91C55134FB746FD8B074) {
+      introspect(JAM.policy.pC545F199BE443C5FB0DC91C55134FB746FD8B074) {
         var v730 = data$$97[v6566]
       }
       return v729 | v730
     }
     function readUint16$$1(data$$98, offset$$37) {
-      introspect(JAMScript.introspectors.processC545F199BE443C5FB0DC91C55134FB746FD8B074) {
+      introspect(JAM.policy.pC545F199BE443C5FB0DC91C55134FB746FD8B074) {
         var v6567 = data$$98[offset$$37]
       }
       var v731 = v6567 << 8;
       var v6568 = offset$$37 + 1;
-      introspect(JAMScript.introspectors.processC545F199BE443C5FB0DC91C55134FB746FD8B074) {
+      introspect(JAM.policy.pC545F199BE443C5FB0DC91C55134FB746FD8B074) {
         var v732 = data$$98[v6568]
       }
       return v731 | v732
@@ -4245,7 +4245,7 @@ function pdfjsWrapper() {
       var ii$$69 = subbands.length;
       var v764 = i$$175 < ii$$69;
       for(;v764;) {
-        introspect(JAMScript.introspectors.processC545F199BE443C5FB0DC91C55134FB746FD8B074) {
+        introspect(JAM.policy.pC545F199BE443C5FB0DC91C55134FB746FD8B074) {
           var subband$$1 = subbands[i$$175]
         }
         var codeblocks$$1 = subband$$1.codeblocks;
@@ -4253,7 +4253,7 @@ function pdfjsWrapper() {
         var jj$$14 = codeblocks$$1.length;
         var v763 = j$$62 < jj$$14;
         for(;v763;) {
-          introspect(JAMScript.introspectors.processC545F199BE443C5FB0DC91C55134FB746FD8B074) {
+          introspect(JAM.policy.pC545F199BE443C5FB0DC91C55134FB746FD8B074) {
             var codeblock$$1 = codeblocks$$1[j$$62]
           }
           var v6598 = codeblock$$1.precinctNumber;
@@ -4281,7 +4281,7 @@ function pdfjsWrapper() {
             var v770 = i$$176 < componentsCount$$3;
             for(;v770;) {
               var v765 = tile$$1.components;
-              introspect(JAMScript.introspectors.processC545F199BE443C5FB0DC91C55134FB746FD8B074) {
+              introspect(JAM.policy.pC545F199BE443C5FB0DC91C55134FB746FD8B074) {
                 var component$$14 = v765[i$$176]
               }
               var v21175 = component$$14.codingStyleParameters;
@@ -4293,7 +4293,7 @@ function pdfjsWrapper() {
                 continue
               }
               var v767 = component$$14.resolutions;
-              introspect(JAMScript.introspectors.processC545F199BE443C5FB0DC91C55134FB746FD8B074) {
+              introspect(JAM.policy.pC545F199BE443C5FB0DC91C55134FB746FD8B074) {
                 var resolution$$2 = v767[r$$14]
               }
               var v768 = resolution$$2.precinctParameters;
@@ -4322,7 +4322,7 @@ function pdfjsWrapper() {
       var v773 = context$$5.currentTile;
       var tileIndex = v773.index;
       var v774 = context$$5.tiles;
-      introspect(JAMScript.introspectors.processC545F199BE443C5FB0DC91C55134FB746FD8B074) {
+      introspect(JAM.policy.pC545F199BE443C5FB0DC91C55134FB746FD8B074) {
         var tile$$1 = v774[tileIndex]
       }
       var v775 = tile$$1.codingStyleDefaultParameters;
@@ -4333,7 +4333,7 @@ function pdfjsWrapper() {
       var v777 = q$$3 < componentsCount$$3;
       for(;v777;) {
         var v22430 = tile$$1.components;
-        introspect(JAMScript.introspectors.processC545F199BE443C5FB0DC91C55134FB746FD8B074) {
+        introspect(JAM.policy.pC545F199BE443C5FB0DC91C55134FB746FD8B074) {
           var v21176 = v22430[q$$3]
         }
         var v6600 = v21176.codingStyleParameters;
@@ -4358,7 +4358,7 @@ function pdfjsWrapper() {
             var v783 = i$$177 < componentsCount$$4;
             for(;v783;) {
               var v778 = tile$$2.components;
-              introspect(JAMScript.introspectors.processC545F199BE443C5FB0DC91C55134FB746FD8B074) {
+              introspect(JAM.policy.pC545F199BE443C5FB0DC91C55134FB746FD8B074) {
                 var component$$15 = v778[i$$177]
               }
               var v21177 = component$$15.codingStyleParameters;
@@ -4370,7 +4370,7 @@ function pdfjsWrapper() {
                 continue
               }
               var v780 = component$$15.resolutions;
-              introspect(JAMScript.introspectors.processC545F199BE443C5FB0DC91C55134FB746FD8B074) {
+              introspect(JAM.policy.pC545F199BE443C5FB0DC91C55134FB746FD8B074) {
                 var resolution$$3 = v780[r$$15]
               }
               var v781 = resolution$$3.precinctParameters;
@@ -4399,7 +4399,7 @@ function pdfjsWrapper() {
       var v786 = context$$6.currentTile;
       var tileIndex$$1 = v786.index;
       var v787 = context$$6.tiles;
-      introspect(JAMScript.introspectors.processC545F199BE443C5FB0DC91C55134FB746FD8B074) {
+      introspect(JAM.policy.pC545F199BE443C5FB0DC91C55134FB746FD8B074) {
         var tile$$2 = v787[tileIndex$$1]
       }
       var v788 = tile$$2.codingStyleDefaultParameters;
@@ -4410,7 +4410,7 @@ function pdfjsWrapper() {
       var v790 = q$$4 < componentsCount$$4;
       for(;v790;) {
         var v22431 = tile$$2.components;
-        introspect(JAMScript.introspectors.processC545F199BE443C5FB0DC91C55134FB746FD8B074) {
+        introspect(JAM.policy.pC545F199BE443C5FB0DC91C55134FB746FD8B074) {
           var v21178 = v22431[q$$4]
         }
         var v6602 = v21178.codingStyleParameters;
@@ -4431,7 +4431,7 @@ function pdfjsWrapper() {
         var v795 = bufferSize < count$$21;
         for(;v795;) {
           var v791 = offset$$38 + position$$2;
-          introspect(JAMScript.introspectors.processC545F199BE443C5FB0DC91C55134FB746FD8B074) {
+          introspect(JAM.policy.pC545F199BE443C5FB0DC91C55134FB746FD8B074) {
             var b$$29 = data$$99[v791]
           }
           position$$2 = position$$2 + 1;
@@ -4499,7 +4499,7 @@ function pdfjsWrapper() {
       var v813 = context$$8.currentTile;
       var tileIndex$$3 = v813.index;
       var v814 = context$$8.tiles;
-      introspect(JAMScript.introspectors.processC545F199BE443C5FB0DC91C55134FB746FD8B074) {
+      introspect(JAM.policy.pC545F199BE443C5FB0DC91C55134FB746FD8B074) {
         var tile$$4 = v814[tileIndex$$3]
       }
       var packetsIterator$$1 = tile$$4.packetsIterator;
@@ -4525,7 +4525,7 @@ function pdfjsWrapper() {
         var v837 = i$$178 < ii$$70;
         for(;v837;) {
           var v817 = packet$$2.codeblocks;
-          introspect(JAMScript.introspectors.processC545F199BE443C5FB0DC91C55134FB746FD8B074) {
+          introspect(JAM.policy.pC545F199BE443C5FB0DC91C55134FB746FD8B074) {
             var codeblock$$2 = v817[i$$178]
           }
           var precinct$$1 = codeblock$$2.precinct;
@@ -5166,12 +5166,12 @@ function pdfjsWrapper() {
     }
     function parse(data$$94) {
       function readUint16() {
-        introspect(JAMScript.introspectors.processC545F199BE443C5FB0DC91C55134FB746FD8B074) {
+        introspect(JAM.policy.pC545F199BE443C5FB0DC91C55134FB746FD8B074) {
           var v6664 = data$$94[offset$$34]
         }
         var v947 = v6664 << 8;
         var v6665 = offset$$34 + 1;
-        introspect(JAMScript.introspectors.processC545F199BE443C5FB0DC91C55134FB746FD8B074) {
+        introspect(JAM.policy.pC545F199BE443C5FB0DC91C55134FB746FD8B074) {
           var v948 = data$$94[v6665]
         }
         var value$$69 = v947 | v948;
@@ -5198,7 +5198,7 @@ function pdfjsWrapper() {
           var v953 = v6668.hasOwnProperty(componentId$$1);
           if(v953) {
             var v950 = frame$$4.components;
-            introspect(JAMScript.introspectors.processC545F199BE443C5FB0DC91C55134FB746FD8B074) {
+            introspect(JAM.policy.pC545F199BE443C5FB0DC91C55134FB746FD8B074) {
               component$$10 = v950[componentId$$1]
             }
             var v6669 = component$$10.h;
@@ -5227,7 +5227,7 @@ function pdfjsWrapper() {
           var v965 = v6673.hasOwnProperty(componentId$$1);
           if(v965) {
             var v957 = frame$$4.components;
-            introspect(JAMScript.introspectors.processC545F199BE443C5FB0DC91C55134FB746FD8B074) {
+            introspect(JAM.policy.pC545F199BE443C5FB0DC91C55134FB746FD8B074) {
               component$$10 = v957[componentId$$1]
             }
             var v22946 = frame$$4.samplesPerLine;
@@ -5435,7 +5435,7 @@ function pdfjsWrapper() {
             for(;v991;) {
               var v984 = offset$$34;
               offset$$34 = offset$$34 + 1;
-              introspect(JAMScript.introspectors.processC545F199BE443C5FB0DC91C55134FB746FD8B074) {
+              introspect(JAM.policy.pC545F199BE443C5FB0DC91C55134FB746FD8B074) {
                 var quantizationTableSpec = data$$94[v984]
               }
               var tableData$$1 = new Int32Array(64);
@@ -5445,12 +5445,12 @@ function pdfjsWrapper() {
                 j$$57 = 0;
                 var v986 = j$$57 < 64;
                 for(;v986;) {
-                  introspect(JAMScript.introspectors.processC545F199BE443C5FB0DC91C55134FB746FD8B074) {
+                  introspect(JAM.policy.pC545F199BE443C5FB0DC91C55134FB746FD8B074) {
                     var z$$6 = dctZigZag[j$$57]
                   }
                   var v985 = offset$$34;
                   offset$$34 = offset$$34 + 1;
-                  introspect(JAMScript.introspectors.processC545F199BE443C5FB0DC91C55134FB746FD8B074) {
+                  introspect(JAM.policy.pC545F199BE443C5FB0DC91C55134FB746FD8B074) {
                     tableData$$1[z$$6] = data$$94[v985]
                   }
                   j$$57 = j$$57 + 1;
@@ -5463,7 +5463,7 @@ function pdfjsWrapper() {
                   j$$57 = 0;
                   var v987 = j$$57 < 64;
                   for(;v987;) {
-                    introspect(JAMScript.introspectors.processC545F199BE443C5FB0DC91C55134FB746FD8B074) {
+                    introspect(JAM.policy.pC545F199BE443C5FB0DC91C55134FB746FD8B074) {
                       z$$6 = dctZigZag[j$$57]
                     }
                     var v23416 = readUint16();
@@ -5489,7 +5489,7 @@ function pdfjsWrapper() {
             frame$$3.progressive = fileMarker === 65474;
             var v992 = offset$$34;
             offset$$34 = offset$$34 + 1;
-            introspect(JAMScript.introspectors.processC545F199BE443C5FB0DC91C55134FB746FD8B074) {
+            introspect(JAM.policy.pC545F199BE443C5FB0DC91C55134FB746FD8B074) {
               frame$$3.precision = data$$94[v992]
             }
             var v993 = frame$$3;
@@ -5502,7 +5502,7 @@ function pdfjsWrapper() {
             frame$$3.componentsOrder = [];
             var v995 = offset$$34;
             offset$$34 = offset$$34 + 1;
-            introspect(JAMScript.introspectors.processC545F199BE443C5FB0DC91C55134FB746FD8B074) {
+            introspect(JAM.policy.pC545F199BE443C5FB0DC91C55134FB746FD8B074) {
               var componentsCount$$1 = data$$94[v995]
             }
             var componentId;
@@ -5511,27 +5511,27 @@ function pdfjsWrapper() {
             i$$169 = 0;
             var v1001 = i$$169 < componentsCount$$1;
             for(;v1001;) {
-              introspect(JAMScript.introspectors.processC545F199BE443C5FB0DC91C55134FB746FD8B074) {
+              introspect(JAM.policy.pC545F199BE443C5FB0DC91C55134FB746FD8B074) {
                 componentId = data$$94[offset$$34]
               }
               var v6692 = offset$$34 + 1;
-              introspect(JAMScript.introspectors.processC545F199BE443C5FB0DC91C55134FB746FD8B074) {
+              introspect(JAM.policy.pC545F199BE443C5FB0DC91C55134FB746FD8B074) {
                 var v996 = data$$94[v6692]
               }
               var h$$15 = v996 >> 4;
               var v6693 = offset$$34 + 1;
-              introspect(JAMScript.introspectors.processC545F199BE443C5FB0DC91C55134FB746FD8B074) {
+              introspect(JAM.policy.pC545F199BE443C5FB0DC91C55134FB746FD8B074) {
                 var v997 = data$$94[v6693]
               }
               var v$$19 = v997 & 15;
               var v998 = offset$$34 + 2;
-              introspect(JAMScript.introspectors.processC545F199BE443C5FB0DC91C55134FB746FD8B074) {
+              introspect(JAM.policy.pC545F199BE443C5FB0DC91C55134FB746FD8B074) {
                 var qId = data$$94[v998]
               }
               var v999 = frame$$3.componentsOrder;
               v999.push(componentId);
               var v1000 = frame$$3.components;
-              introspect(JAMScript.introspectors.processC545F199BE443C5FB0DC91C55134FB746FD8B074) {
+              introspect(JAM.policy.pC545F199BE443C5FB0DC91C55134FB746FD8B074) {
                 var v6694 = quantizationTables[qId]
               }
               v1000[componentId] = {h:h$$15, v:v$$19, quantizationTable:v6694};
@@ -5549,7 +5549,7 @@ function pdfjsWrapper() {
             for(;v1007;) {
               var v1002 = offset$$34;
               offset$$34 = offset$$34 + 1;
-              introspect(JAMScript.introspectors.processC545F199BE443C5FB0DC91C55134FB746FD8B074) {
+              introspect(JAM.policy.pC545F199BE443C5FB0DC91C55134FB746FD8B074) {
                 var huffmanTableSpec = data$$94[v1002]
               }
               var codeLengths$$2 = new Uint8Array(16);
@@ -5557,7 +5557,7 @@ function pdfjsWrapper() {
               j$$57 = 0;
               var v1003 = j$$57 < 16;
               for(;v1003;) {
-                introspect(JAMScript.introspectors.processC545F199BE443C5FB0DC91C55134FB746FD8B074) {
+                introspect(JAM.policy.pC545F199BE443C5FB0DC91C55134FB746FD8B074) {
                   var v6695 = codeLengths$$2[j$$57] = data$$94[offset$$34]
                 }
                 codeLengthSum = codeLengthSum + v6695;
@@ -5569,7 +5569,7 @@ function pdfjsWrapper() {
               j$$57 = 0;
               var v1004 = j$$57 < codeLengthSum;
               for(;v1004;) {
-                introspect(JAMScript.introspectors.processC545F199BE443C5FB0DC91C55134FB746FD8B074) {
+                introspect(JAM.policy.pC545F199BE443C5FB0DC91C55134FB746FD8B074) {
                   huffmanValues[j$$57] = data$$94[offset$$34]
                 }
                 j$$57 = j$$57 + 1;
@@ -5601,7 +5601,7 @@ function pdfjsWrapper() {
             var scanLength = readUint16();
             var v1008 = offset$$34;
             offset$$34 = offset$$34 + 1;
-            introspect(JAMScript.introspectors.processC545F199BE443C5FB0DC91C55134FB746FD8B074) {
+            introspect(JAM.policy.pC545F199BE443C5FB0DC91C55134FB746FD8B074) {
               var selectorsCount = data$$94[v1008]
             }
             var components$$3 = [];
@@ -5612,15 +5612,15 @@ function pdfjsWrapper() {
               var v1009 = frame$$3.components;
               var v6698 = offset$$34;
               offset$$34 = offset$$34 + 1;
-              introspect(JAMScript.introspectors.processC545F199BE443C5FB0DC91C55134FB746FD8B074) {
+              introspect(JAM.policy.pC545F199BE443C5FB0DC91C55134FB746FD8B074) {
                 var v1010 = data$$94[v6698]
               }
-              introspect(JAMScript.introspectors.processC545F199BE443C5FB0DC91C55134FB746FD8B074) {
+              introspect(JAM.policy.pC545F199BE443C5FB0DC91C55134FB746FD8B074) {
                 component$$9 = v1009[v1010]
               }
               var v1011 = offset$$34;
               offset$$34 = offset$$34 + 1;
-              introspect(JAMScript.introspectors.processC545F199BE443C5FB0DC91C55134FB746FD8B074) {
+              introspect(JAM.policy.pC545F199BE443C5FB0DC91C55134FB746FD8B074) {
                 var tableSpec = data$$94[v1011]
               }
               var v1012 = tableSpec >> 4;
@@ -5633,17 +5633,17 @@ function pdfjsWrapper() {
             }
             var v1015 = offset$$34;
             offset$$34 = offset$$34 + 1;
-            introspect(JAMScript.introspectors.processC545F199BE443C5FB0DC91C55134FB746FD8B074) {
+            introspect(JAM.policy.pC545F199BE443C5FB0DC91C55134FB746FD8B074) {
               var spectralStart$$1 = data$$94[v1015]
             }
             var v1016 = offset$$34;
             offset$$34 = offset$$34 + 1;
-            introspect(JAMScript.introspectors.processC545F199BE443C5FB0DC91C55134FB746FD8B074) {
+            introspect(JAM.policy.pC545F199BE443C5FB0DC91C55134FB746FD8B074) {
               var spectralEnd$$1 = data$$94[v1016]
             }
             var v1017 = offset$$34;
             offset$$34 = offset$$34 + 1;
-            introspect(JAMScript.introspectors.processC545F199BE443C5FB0DC91C55134FB746FD8B074) {
+            introspect(JAM.policy.pC545F199BE443C5FB0DC91C55134FB746FD8B074) {
               var successiveApproximation = data$$94[v1017]
             }
             var v1018 = successiveApproximation >> 4;
@@ -5675,10 +5675,10 @@ function pdfjsWrapper() {
       for(;v1027;) {
         var v1023 = frame$$3.components;
         var v6701 = frame$$3.componentsOrder;
-        introspect(JAMScript.introspectors.processC545F199BE443C5FB0DC91C55134FB746FD8B074) {
+        introspect(JAM.policy.pC545F199BE443C5FB0DC91C55134FB746FD8B074) {
           var v1024 = v6701[i$$169]
         }
-        introspect(JAMScript.introspectors.processC545F199BE443C5FB0DC91C55134FB746FD8B074) {
+        introspect(JAM.policy.pC545F199BE443C5FB0DC91C55134FB746FD8B074) {
           component$$9 = v1023[v1024]
         }
         var v1025 = this.components;
@@ -5716,7 +5716,7 @@ function pdfjsWrapper() {
       }
       var v1030 = PdfJS_window.XMLHttpRequest;
       var xhr$$1 = new v1030;
-      introspect(JAMScript.introspectors.processC545F199BE443C5FB0DC91C55134FB746FD8B074) {
+      introspect(JAM.policy.pC545F199BE443C5FB0DC91C55134FB746FD8B074) {
         xhr$$1.open("GET", path, true)
       }
       xhr$$1.responseType = "arraybuffer";
@@ -5738,7 +5738,7 @@ function pdfjsWrapper() {
       var v6707 = length$$67 > 0;
       if(v6707) {
         var v22473 = length$$67 - 1;
-        introspect(JAMScript.introspectors.processC545F199BE443C5FB0DC91C55134FB746FD8B074) {
+        introspect(JAM.policy.pC545F199BE443C5FB0DC91C55134FB746FD8B074) {
           var v21245 = codeLengths$$1[v22473]
         }
         v6707 = !v21245
@@ -5749,7 +5749,7 @@ function pdfjsWrapper() {
         var v6708 = length$$67 > 0;
         if(v6708) {
           var v22474 = length$$67 - 1;
-          introspect(JAMScript.introspectors.processC545F199BE443C5FB0DC91C55134FB746FD8B074) {
+          introspect(JAM.policy.pC545F199BE443C5FB0DC91C55134FB746FD8B074) {
             var v21246 = codeLengths$$1[v22474]
           }
           v6708 = !v21246
@@ -5764,7 +5764,7 @@ function pdfjsWrapper() {
       var v1046 = i$$165 < length$$67;
       for(;v1046;) {
         j$$54 = 0;
-        introspect(JAMScript.introspectors.processC545F199BE443C5FB0DC91C55134FB746FD8B074) {
+        introspect(JAM.policy.pC545F199BE443C5FB0DC91C55134FB746FD8B074) {
           var v6709 = codeLengths$$1[i$$165]
         }
         var v1041 = j$$54 < v6709;
@@ -5797,7 +5797,7 @@ function pdfjsWrapper() {
           }
           k$$14 = k$$14 + 1;
           j$$54 = j$$54 + 1;
-          introspect(JAMScript.introspectors.processC545F199BE443C5FB0DC91C55134FB746FD8B074) {
+          introspect(JAM.policy.pC545F199BE443C5FB0DC91C55134FB746FD8B074) {
             var v6715 = codeLengths$$1[i$$165]
           }
           v1041 = j$$54 < v6715
@@ -5828,14 +5828,14 @@ function pdfjsWrapper() {
         }
         var v1050 = offset$$32;
         offset$$32 = offset$$32 + 1;
-        introspect(JAMScript.introspectors.processC545F199BE443C5FB0DC91C55134FB746FD8B074) {
+        introspect(JAM.policy.pC545F199BE443C5FB0DC91C55134FB746FD8B074) {
           bitsData = data$$92[v1050]
         }
         var v1053 = bitsData == 255;
         if(v1053) {
           var v1051 = offset$$32;
           offset$$32 = offset$$32 + 1;
-          introspect(JAMScript.introspectors.processC545F199BE443C5FB0DC91C55134FB746FD8B074) {
+          introspect(JAM.policy.pC545F199BE443C5FB0DC91C55134FB746FD8B074) {
             var nextByte = data$$92[v1051]
           }
           if(nextByte) {
@@ -5854,7 +5854,7 @@ function pdfjsWrapper() {
         var v6718 = bit = readBit();
         var v1056 = v6718 !== null;
         for(;v1056;) {
-          introspect(JAMScript.introspectors.processC545F199BE443C5FB0DC91C55134FB746FD8B074) {
+          introspect(JAM.policy.pC545F199BE443C5FB0DC91C55134FB746FD8B074) {
             node$$2 = node$$2[bit]
           }
           var v6719 = typeof node$$2;
@@ -5931,7 +5931,7 @@ function pdfjsWrapper() {
             continue
           }
           k$$16 = k$$16 + r$$9;
-          introspect(JAMScript.introspectors.processC545F199BE443C5FB0DC91C55134FB746FD8B074) {
+          introspect(JAM.policy.pC545F199BE443C5FB0DC91C55134FB746FD8B074) {
             var z$$3 = dctZigZag[k$$16]
           }
           var v23421 = receiveAndExtend(s$$13);
@@ -5994,7 +5994,7 @@ function pdfjsWrapper() {
             continue
           }
           k$$17 = k$$17 + r$$10;
-          introspect(JAMScript.introspectors.processC545F199BE443C5FB0DC91C55134FB746FD8B074) {
+          introspect(JAM.policy.pC545F199BE443C5FB0DC91C55134FB746FD8B074) {
             var z$$4 = dctZigZag[k$$17]
           }
           var v1076 = zz$$3;
@@ -6013,7 +6013,7 @@ function pdfjsWrapper() {
         var r$$11 = 0;
         var v1097 = k$$18 <= e$$28;
         for(;v1097;) {
-          introspect(JAMScript.introspectors.processC545F199BE443C5FB0DC91C55134FB746FD8B074) {
+          introspect(JAM.policy.pC545F199BE443C5FB0DC91C55134FB746FD8B074) {
             var z$$5 = dctZigZag[k$$18]
           }
           switch(successiveACState) {
@@ -6053,13 +6053,13 @@ function pdfjsWrapper() {
             case 1:
             ;
             case 2:
-              introspect(JAMScript.introspectors.processC545F199BE443C5FB0DC91C55134FB746FD8B074) {
+              introspect(JAM.policy.pC545F199BE443C5FB0DC91C55134FB746FD8B074) {
                 var v1090 = zz$$4[z$$5]
               }
               if(v1090) {
                 var v1086 = zz$$4;
                 var v1087 = z$$5;
-                introspect(JAMScript.introspectors.processC545F199BE443C5FB0DC91C55134FB746FD8B074) {
+                introspect(JAM.policy.pC545F199BE443C5FB0DC91C55134FB746FD8B074) {
                   var v21251 = v1086[v1087]
                 }
                 var v22476 = readBit();
@@ -6081,13 +6081,13 @@ function pdfjsWrapper() {
               }
               break;
             case 3:
-              introspect(JAMScript.introspectors.processC545F199BE443C5FB0DC91C55134FB746FD8B074) {
+              introspect(JAM.policy.pC545F199BE443C5FB0DC91C55134FB746FD8B074) {
                 var v1093 = zz$$4[z$$5]
               }
               if(v1093) {
                 var v1091 = zz$$4;
                 var v1092 = z$$5;
-                introspect(JAMScript.introspectors.processC545F199BE443C5FB0DC91C55134FB746FD8B074) {
+                introspect(JAM.policy.pC545F199BE443C5FB0DC91C55134FB746FD8B074) {
                   var v21253 = v1091[v1092]
                 }
                 var v22477 = readBit();
@@ -6099,13 +6099,13 @@ function pdfjsWrapper() {
               }
               break;
             case 4:
-              introspect(JAMScript.introspectors.processC545F199BE443C5FB0DC91C55134FB746FD8B074) {
+              introspect(JAM.policy.pC545F199BE443C5FB0DC91C55134FB746FD8B074) {
                 var v1096 = zz$$4[z$$5]
               }
               if(v1096) {
                 var v1094 = zz$$4;
                 var v1095 = z$$5;
-                introspect(JAMScript.introspectors.processC545F199BE443C5FB0DC91C55134FB746FD8B074) {
+                introspect(JAM.policy.pC545F199BE443C5FB0DC91C55134FB746FD8B074) {
                   var v21255 = v1094[v1095]
                 }
                 var v22478 = readBit();
@@ -6137,10 +6137,10 @@ function pdfjsWrapper() {
         var v1102 = mcuCol * v6735;
         var blockCol = v1102 + col;
         var v21257 = component$$6.blocks;
-        introspect(JAMScript.introspectors.processC545F199BE443C5FB0DC91C55134FB746FD8B074) {
+        introspect(JAM.policy.pC545F199BE443C5FB0DC91C55134FB746FD8B074) {
           var v6736 = v21257[blockRow]
         }
-        introspect(JAMScript.introspectors.processC545F199BE443C5FB0DC91C55134FB746FD8B074) {
+        introspect(JAM.policy.pC545F199BE443C5FB0DC91C55134FB746FD8B074) {
           var v1103 = v6736[blockCol]
         }
         decode$$4(component$$6, v1103);
@@ -6153,10 +6153,10 @@ function pdfjsWrapper() {
         var v1105 = component$$7.blocksPerLine;
         var blockCol$$1 = mcu$$2 % v1105;
         var v21258 = component$$7.blocks;
-        introspect(JAMScript.introspectors.processC545F199BE443C5FB0DC91C55134FB746FD8B074) {
+        introspect(JAM.policy.pC545F199BE443C5FB0DC91C55134FB746FD8B074) {
           var v6738 = v21258[blockRow$$1]
         }
-        introspect(JAMScript.introspectors.processC545F199BE443C5FB0DC91C55134FB746FD8B074) {
+        introspect(JAM.policy.pC545F199BE443C5FB0DC91C55134FB746FD8B074) {
           var v1106 = v6738[blockCol$$1]
         }
         decode$$5(component$$7, v1106);
@@ -6231,7 +6231,7 @@ function pdfjsWrapper() {
         i$$166 = 0;
         var v1116 = i$$166 < componentsLength;
         for(;v1116;) {
-          introspect(JAMScript.introspectors.processC545F199BE443C5FB0DC91C55134FB746FD8B074) {
+          introspect(JAM.policy.pC545F199BE443C5FB0DC91C55134FB746FD8B074) {
             var v1115 = components$$2[i$$166]
           }
           v1115.pred = 0;
@@ -6257,7 +6257,7 @@ function pdfjsWrapper() {
             i$$166 = 0;
             var v1120 = i$$166 < componentsLength;
             for(;v1120;) {
-              introspect(JAMScript.introspectors.processC545F199BE443C5FB0DC91C55134FB746FD8B074) {
+              introspect(JAM.policy.pC545F199BE443C5FB0DC91C55134FB746FD8B074) {
                 component = components$$2[i$$166]
               }
               h$$14 = component.h;
@@ -6284,12 +6284,12 @@ function pdfjsWrapper() {
           }
         }
         bitsCount = 0;
-        introspect(JAMScript.introspectors.processC545F199BE443C5FB0DC91C55134FB746FD8B074) {
+        introspect(JAM.policy.pC545F199BE443C5FB0DC91C55134FB746FD8B074) {
           var v6743 = data$$92[offset$$32]
         }
         var v1123 = v6743 << 8;
         var v6744 = offset$$32 + 1;
-        introspect(JAMScript.introspectors.processC545F199BE443C5FB0DC91C55134FB746FD8B074) {
+        introspect(JAM.policy.pC545F199BE443C5FB0DC91C55134FB746FD8B074) {
           var v1124 = data$$92[v6744]
         }
         marker = v1123 | v1124;
@@ -6336,10 +6336,10 @@ function pdfjsWrapper() {
         var v1227 = blockCol$$2 < blocksPerLine;
         for(;v1227;) {
           var v6746 = component$$8.blocks;
-          introspect(JAMScript.introspectors.processC545F199BE443C5FB0DC91C55134FB746FD8B074) {
+          introspect(JAM.policy.pC545F199BE443C5FB0DC91C55134FB746FD8B074) {
             var v1130 = v6746[blockRow$$2]
           }
-          introspect(JAMScript.introspectors.processC545F199BE443C5FB0DC91C55134FB746FD8B074) {
+          introspect(JAM.policy.pC545F199BE443C5FB0DC91C55134FB746FD8B074) {
             var zz$$inline_128 = v1130[blockCol$$2]
           }
           var dataOut$$inline_129 = r$$12;
@@ -6359,10 +6359,10 @@ function pdfjsWrapper() {
           i$$inline_142 = 0;
           var v1133 = i$$inline_142 < 64;
           for(;v1133;) {
-            introspect(JAMScript.introspectors.processC545F199BE443C5FB0DC91C55134FB746FD8B074) {
+            introspect(JAM.policy.pC545F199BE443C5FB0DC91C55134FB746FD8B074) {
               var v1131 = zz$$inline_128[i$$inline_142]
             }
-            introspect(JAMScript.introspectors.processC545F199BE443C5FB0DC91C55134FB746FD8B074) {
+            introspect(JAM.policy.pC545F199BE443C5FB0DC91C55134FB746FD8B074) {
               var v1132 = qt$$inline_131[i$$inline_142]
             }
             p$$inline_141[i$$inline_142] = v1131 * v1132;
@@ -6374,43 +6374,43 @@ function pdfjsWrapper() {
           for(;v1176;) {
             var row$$inline_143 = 8 * i$$inline_142;
             var v22479 = 1 + row$$inline_143;
-            introspect(JAMScript.introspectors.processC545F199BE443C5FB0DC91C55134FB746FD8B074) {
+            introspect(JAM.policy.pC545F199BE443C5FB0DC91C55134FB746FD8B074) {
               var v21259 = p$$inline_141[v22479]
             }
             var v6747 = v21259 == 0;
             if(v6747) {
               var v22953 = 2 + row$$inline_143;
-              introspect(JAMScript.introspectors.processC545F199BE443C5FB0DC91C55134FB746FD8B074) {
+              introspect(JAM.policy.pC545F199BE443C5FB0DC91C55134FB746FD8B074) {
                 var v22480 = p$$inline_141[v22953]
               }
               var v21260 = v22480 == 0;
               if(v21260) {
                 var v23115 = 3 + row$$inline_143;
-                introspect(JAMScript.introspectors.processC545F199BE443C5FB0DC91C55134FB746FD8B074) {
+                introspect(JAM.policy.pC545F199BE443C5FB0DC91C55134FB746FD8B074) {
                   var v22954 = p$$inline_141[v23115]
                 }
                 var v22481 = v22954 == 0;
                 if(v22481) {
                   var v23178 = 4 + row$$inline_143;
-                  introspect(JAMScript.introspectors.processC545F199BE443C5FB0DC91C55134FB746FD8B074) {
+                  introspect(JAM.policy.pC545F199BE443C5FB0DC91C55134FB746FD8B074) {
                     var v23116 = p$$inline_141[v23178]
                   }
                   var v22955 = v23116 == 0;
                   if(v22955) {
                     var v23209 = 5 + row$$inline_143;
-                    introspect(JAMScript.introspectors.processC545F199BE443C5FB0DC91C55134FB746FD8B074) {
+                    introspect(JAM.policy.pC545F199BE443C5FB0DC91C55134FB746FD8B074) {
                       var v23179 = p$$inline_141[v23209]
                     }
                     var v23117 = v23179 == 0;
                     if(v23117) {
                       var v23236 = 6 + row$$inline_143;
-                      introspect(JAMScript.introspectors.processC545F199BE443C5FB0DC91C55134FB746FD8B074) {
+                      introspect(JAM.policy.pC545F199BE443C5FB0DC91C55134FB746FD8B074) {
                         var v23210 = p$$inline_141[v23236]
                       }
                       var v23180 = v23210 == 0;
                       if(v23180) {
                         var v23237 = 7 + row$$inline_143;
-                        introspect(JAMScript.introspectors.processC545F199BE443C5FB0DC91C55134FB746FD8B074) {
+                        introspect(JAM.policy.pC545F199BE443C5FB0DC91C55134FB746FD8B074) {
                           var v23211 = p$$inline_141[v23237]
                         }
                         v23180 = v23211 == 0
@@ -6428,7 +6428,7 @@ function pdfjsWrapper() {
             var v1143 = v6747;
             if(v1143) {
               var v22482 = 0 + row$$inline_143;
-              introspect(JAMScript.introspectors.processC545F199BE443C5FB0DC91C55134FB746FD8B074) {
+              introspect(JAM.policy.pC545F199BE443C5FB0DC91C55134FB746FD8B074) {
                 var v21261 = p$$inline_141[v22482]
               }
               var v6748 = dctSqrt2 * v21261;
@@ -6455,14 +6455,14 @@ function pdfjsWrapper() {
               continue
             }
             var v22483 = 0 + row$$inline_143;
-            introspect(JAMScript.introspectors.processC545F199BE443C5FB0DC91C55134FB746FD8B074) {
+            introspect(JAM.policy.pC545F199BE443C5FB0DC91C55134FB746FD8B074) {
               var v21262 = p$$inline_141[v22483]
             }
             var v6749 = dctSqrt2 * v21262;
             var v1144 = v6749 + 128;
             v0$$inline_132 = v1144 >> 8;
             var v22484 = 4 + row$$inline_143;
-            introspect(JAMScript.introspectors.processC545F199BE443C5FB0DC91C55134FB746FD8B074) {
+            introspect(JAM.policy.pC545F199BE443C5FB0DC91C55134FB746FD8B074) {
               var v21263 = p$$inline_141[v22484]
             }
             var v6750 = dctSqrt2 * v21263;
@@ -6473,11 +6473,11 @@ function pdfjsWrapper() {
             var v1147 = 6 + row$$inline_143;
             v3$$inline_135 = p$$inline_141[v1147];
             var v22956 = 1 + row$$inline_143;
-            introspect(JAMScript.introspectors.processC545F199BE443C5FB0DC91C55134FB746FD8B074) {
+            introspect(JAM.policy.pC545F199BE443C5FB0DC91C55134FB746FD8B074) {
               var v22485 = p$$inline_141[v22956]
             }
             var v22957 = 7 + row$$inline_143;
-            introspect(JAMScript.introspectors.processC545F199BE443C5FB0DC91C55134FB746FD8B074) {
+            introspect(JAM.policy.pC545F199BE443C5FB0DC91C55134FB746FD8B074) {
               var v22486 = p$$inline_141[v22957]
             }
             var v21264 = v22485 - v22486;
@@ -6485,11 +6485,11 @@ function pdfjsWrapper() {
             var v1148 = v6751 + 128;
             v4$$inline_136 = v1148 >> 8;
             var v22958 = 1 + row$$inline_143;
-            introspect(JAMScript.introspectors.processC545F199BE443C5FB0DC91C55134FB746FD8B074) {
+            introspect(JAM.policy.pC545F199BE443C5FB0DC91C55134FB746FD8B074) {
               var v22487 = p$$inline_141[v22958]
             }
             var v22959 = 7 + row$$inline_143;
-            introspect(JAMScript.introspectors.processC545F199BE443C5FB0DC91C55134FB746FD8B074) {
+            introspect(JAM.policy.pC545F199BE443C5FB0DC91C55134FB746FD8B074) {
               var v22488 = p$$inline_141[v22959]
             }
             var v21265 = v22487 + v22488;
@@ -6497,12 +6497,12 @@ function pdfjsWrapper() {
             var v1149 = v6752 + 128;
             v7$$inline_139 = v1149 >> 8;
             var v6753 = 3 + row$$inline_143;
-            introspect(JAMScript.introspectors.processC545F199BE443C5FB0DC91C55134FB746FD8B074) {
+            introspect(JAM.policy.pC545F199BE443C5FB0DC91C55134FB746FD8B074) {
               var v1150 = p$$inline_141[v6753]
             }
             v5$$inline_137 = v1150 << 4;
             var v6754 = 5 + row$$inline_143;
-            introspect(JAMScript.introspectors.processC545F199BE443C5FB0DC91C55134FB746FD8B074) {
+            introspect(JAM.policy.pC545F199BE443C5FB0DC91C55134FB746FD8B074) {
               var v1151 = p$$inline_141[v6754]
             }
             v6$$inline_138 = v1151 << 4;
@@ -6599,49 +6599,49 @@ function pdfjsWrapper() {
             var col$$inline_144 = i$$inline_142;
             var v22960 = 1 * 8;
             var v22489 = v22960 + col$$inline_144;
-            introspect(JAMScript.introspectors.processC545F199BE443C5FB0DC91C55134FB746FD8B074) {
+            introspect(JAM.policy.pC545F199BE443C5FB0DC91C55134FB746FD8B074) {
               var v21278 = p$$inline_141[v22489]
             }
             var v6771 = v21278 == 0;
             if(v6771) {
               var v23118 = 2 * 8;
               var v22961 = v23118 + col$$inline_144;
-              introspect(JAMScript.introspectors.processC545F199BE443C5FB0DC91C55134FB746FD8B074) {
+              introspect(JAM.policy.pC545F199BE443C5FB0DC91C55134FB746FD8B074) {
                 var v22490 = p$$inline_141[v22961]
               }
               var v21279 = v22490 == 0;
               if(v21279) {
                 var v23181 = 3 * 8;
                 var v23119 = v23181 + col$$inline_144;
-                introspect(JAMScript.introspectors.processC545F199BE443C5FB0DC91C55134FB746FD8B074) {
+                introspect(JAM.policy.pC545F199BE443C5FB0DC91C55134FB746FD8B074) {
                   var v22962 = p$$inline_141[v23119]
                 }
                 var v22491 = v22962 == 0;
                 if(v22491) {
                   var v23212 = 4 * 8;
                   var v23182 = v23212 + col$$inline_144;
-                  introspect(JAMScript.introspectors.processC545F199BE443C5FB0DC91C55134FB746FD8B074) {
+                  introspect(JAM.policy.pC545F199BE443C5FB0DC91C55134FB746FD8B074) {
                     var v23120 = p$$inline_141[v23182]
                   }
                   var v22963 = v23120 == 0;
                   if(v22963) {
                     var v23238 = 5 * 8;
                     var v23213 = v23238 + col$$inline_144;
-                    introspect(JAMScript.introspectors.processC545F199BE443C5FB0DC91C55134FB746FD8B074) {
+                    introspect(JAM.policy.pC545F199BE443C5FB0DC91C55134FB746FD8B074) {
                       var v23183 = p$$inline_141[v23213]
                     }
                     var v23121 = v23183 == 0;
                     if(v23121) {
                       var v23256 = 6 * 8;
                       var v23239 = v23256 + col$$inline_144;
-                      introspect(JAMScript.introspectors.processC545F199BE443C5FB0DC91C55134FB746FD8B074) {
+                      introspect(JAM.policy.pC545F199BE443C5FB0DC91C55134FB746FD8B074) {
                         var v23214 = p$$inline_141[v23239]
                       }
                       var v23184 = v23214 == 0;
                       if(v23184) {
                         var v23257 = 7 * 8;
                         var v23240 = v23257 + col$$inline_144;
-                        introspect(JAMScript.introspectors.processC545F199BE443C5FB0DC91C55134FB746FD8B074) {
+                        introspect(JAM.policy.pC545F199BE443C5FB0DC91C55134FB746FD8B074) {
                           var v23215 = p$$inline_141[v23240]
                         }
                         v23184 = v23215 == 0
@@ -6659,7 +6659,7 @@ function pdfjsWrapper() {
             var v1186 = v6771;
             if(v1186) {
               var v22492 = i$$inline_142 + 0;
-              introspect(JAMScript.introspectors.processC545F199BE443C5FB0DC91C55134FB746FD8B074) {
+              introspect(JAM.policy.pC545F199BE443C5FB0DC91C55134FB746FD8B074) {
                 var v21280 = dataIn$$inline_130[v22492]
               }
               var v6772 = dctSqrt2 * v21280;
@@ -6695,7 +6695,7 @@ function pdfjsWrapper() {
             }
             var v22964 = 0 * 8;
             var v22493 = v22964 + col$$inline_144;
-            introspect(JAMScript.introspectors.processC545F199BE443C5FB0DC91C55134FB746FD8B074) {
+            introspect(JAM.policy.pC545F199BE443C5FB0DC91C55134FB746FD8B074) {
               var v21281 = p$$inline_141[v22493]
             }
             var v6781 = dctSqrt2 * v21281;
@@ -6703,7 +6703,7 @@ function pdfjsWrapper() {
             v0$$inline_132 = v1187 >> 12;
             var v22965 = 4 * 8;
             var v22494 = v22965 + col$$inline_144;
-            introspect(JAMScript.introspectors.processC545F199BE443C5FB0DC91C55134FB746FD8B074) {
+            introspect(JAM.policy.pC545F199BE443C5FB0DC91C55134FB746FD8B074) {
               var v21282 = p$$inline_141[v22494]
             }
             var v6782 = dctSqrt2 * v21282;
@@ -6717,12 +6717,12 @@ function pdfjsWrapper() {
             v3$$inline_135 = p$$inline_141[v1190];
             var v23122 = 1 * 8;
             var v22966 = v23122 + col$$inline_144;
-            introspect(JAMScript.introspectors.processC545F199BE443C5FB0DC91C55134FB746FD8B074) {
+            introspect(JAM.policy.pC545F199BE443C5FB0DC91C55134FB746FD8B074) {
               var v22495 = p$$inline_141[v22966]
             }
             var v23123 = 7 * 8;
             var v22967 = v23123 + col$$inline_144;
-            introspect(JAMScript.introspectors.processC545F199BE443C5FB0DC91C55134FB746FD8B074) {
+            introspect(JAM.policy.pC545F199BE443C5FB0DC91C55134FB746FD8B074) {
               var v22496 = p$$inline_141[v22967]
             }
             var v21283 = v22495 - v22496;
@@ -6731,12 +6731,12 @@ function pdfjsWrapper() {
             v4$$inline_136 = v1191 >> 12;
             var v23124 = 1 * 8;
             var v22968 = v23124 + col$$inline_144;
-            introspect(JAMScript.introspectors.processC545F199BE443C5FB0DC91C55134FB746FD8B074) {
+            introspect(JAM.policy.pC545F199BE443C5FB0DC91C55134FB746FD8B074) {
               var v22497 = p$$inline_141[v22968]
             }
             var v23125 = 7 * 8;
             var v22969 = v23125 + col$$inline_144;
-            introspect(JAMScript.introspectors.processC545F199BE443C5FB0DC91C55134FB746FD8B074) {
+            introspect(JAM.policy.pC545F199BE443C5FB0DC91C55134FB746FD8B074) {
               var v22498 = p$$inline_141[v22969]
             }
             var v21284 = v22497 + v22498;
@@ -6847,7 +6847,7 @@ function pdfjsWrapper() {
           i$$inline_142 = 0;
           var v1222 = i$$inline_142 < 64;
           for(;v1222;) {
-            introspect(JAMScript.introspectors.processC545F199BE443C5FB0DC91C55134FB746FD8B074) {
+            introspect(JAM.policy.pC545F199BE443C5FB0DC91C55134FB746FD8B074) {
               var v21297 = p$$inline_141[i$$inline_142]
             }
             var v6813 = v21297 + 8;
@@ -6877,7 +6877,7 @@ function pdfjsWrapper() {
           var v1226 = j$$56 < 8;
           for(;v1226;) {
             var v1223 = scanLine + j$$56;
-            introspect(JAMScript.introspectors.processC545F199BE443C5FB0DC91C55134FB746FD8B074) {
+            introspect(JAM.policy.pC545F199BE443C5FB0DC91C55134FB746FD8B074) {
               var line = lines[v1223]
             }
             i$$167 = 0;
@@ -6915,7 +6915,7 @@ function pdfjsWrapper() {
     return constructor
   }
   function timeEnd(name$$69) {
-    introspect(JAMScript.introspectors.processC545F199BE443C5FB0DC91C55134FB746FD8B074) {
+    introspect(JAM.policy.pC545F199BE443C5FB0DC91C55134FB746FD8B074) {
       var time$$2 = consoleTimer[name$$69]
     }
     var v1231 = time$$2 == null;
@@ -7000,7 +7000,7 @@ function pdfjsWrapper() {
       var ii$$66 = dependency$$3.length;
       var v1247 = i$$164 < ii$$66;
       for(;v1247;) {
-        introspect(JAMScript.introspectors.processC545F199BE443C5FB0DC91C55134FB746FD8B074) {
+        introspect(JAM.policy.pC545F199BE443C5FB0DC91C55134FB746FD8B074) {
           var dep$$1 = dependency$$3[i$$164]
         }
         var v6825 = dep$$1.indexOf("font_");
@@ -7086,7 +7086,7 @@ function pdfjsWrapper() {
   }
   function messageHandlerOn(actionName, handler$$9, scope) {
     var ah$$1 = this.actionHandler;
-    introspect(JAMScript.introspectors.processC545F199BE443C5FB0DC91C55134FB746FD8B074) {
+    introspect(JAM.policy.pC545F199BE443C5FB0DC91C55134FB746FD8B074) {
       var v1269 = ah$$1[actionName]
     }
     if(v1269) {
@@ -7138,17 +7138,17 @@ function pdfjsWrapper() {
           if(v1276) {
             var v1274 = code$$23 < nextCode;
             if(v1274) {
-              introspect(JAMScript.introspectors.processC545F199BE443C5FB0DC91C55134FB746FD8B074) {
+              introspect(JAM.policy.pC545F199BE443C5FB0DC91C55134FB746FD8B074) {
                 currentSequenceLength = dictionaryLengths[code$$23]
               }
               j$$53 = currentSequenceLength - 1;
               q = code$$23;
               var v1272 = j$$53 >= 0;
               for(;v1272;) {
-                introspect(JAMScript.introspectors.processC545F199BE443C5FB0DC91C55134FB746FD8B074) {
+                introspect(JAM.policy.pC545F199BE443C5FB0DC91C55134FB746FD8B074) {
                   currentSequence[j$$53] = dictionaryValues[q]
                 }
-                introspect(JAMScript.introspectors.processC545F199BE443C5FB0DC91C55134FB746FD8B074) {
+                introspect(JAM.policy.pC545F199BE443C5FB0DC91C55134FB746FD8B074) {
                   q = dictionaryPrevCodes[q]
                 }
                 j$$53 = j$$53 - 1;
@@ -7177,7 +7177,7 @@ function pdfjsWrapper() {
         }
         if(hasPrev) {
           dictionaryPrevCodes[nextCode] = prevCode;
-          introspect(JAMScript.introspectors.processC545F199BE443C5FB0DC91C55134FB746FD8B074) {
+          introspect(JAM.policy.pC545F199BE443C5FB0DC91C55134FB746FD8B074) {
             var v1278 = dictionaryLengths[prevCode]
           }
           dictionaryLengths[nextCode] = v1278 + 1;
@@ -7218,7 +7218,7 @@ function pdfjsWrapper() {
         for(;v1284;) {
           var v1283 = currentBufferLength;
           currentBufferLength = currentBufferLength + 1;
-          introspect(JAMScript.introspectors.processC545F199BE443C5FB0DC91C55134FB746FD8B074) {
+          introspect(JAM.policy.pC545F199BE443C5FB0DC91C55134FB746FD8B074) {
             buffer$$27[v1283] = currentSequence[j$$53]
           }
           j$$53 = j$$53 + 1;
@@ -7355,7 +7355,7 @@ function pdfjsWrapper() {
         var v6855 = code$$22 >> 7;
         var v1315 = v6855 == 0;
         if(v1315) {
-          introspect(JAMScript.introspectors.processC545F199BE443C5FB0DC91C55134FB746FD8B074) {
+          introspect(JAM.policy.pC545F199BE443C5FB0DC91C55134FB746FD8B074) {
             p$$7 = blackTable1[code$$22]
           }
         }else {
@@ -7417,7 +7417,7 @@ function pdfjsWrapper() {
         var v6859 = code$$21 >> 5;
         var v1324 = v6859 == 0;
         if(v1324) {
-          introspect(JAMScript.introspectors.processC545F199BE443C5FB0DC91C55134FB746FD8B074) {
+          introspect(JAM.policy.pC545F199BE443C5FB0DC91C55134FB746FD8B074) {
             p$$6 = whiteTable1[code$$21]
           }
         }else {
@@ -7453,7 +7453,7 @@ function pdfjsWrapper() {
       var v1333 = this.eoblock;
       if(v1333) {
         code$$20 = this.lookBits(7);
-        introspect(JAMScript.introspectors.processC545F199BE443C5FB0DC91C55134FB746FD8B074) {
+        introspect(JAM.policy.pC545F199BE443C5FB0DC91C55134FB746FD8B074) {
           p$$5 = twoDimTable[code$$20]
         }
         var v6861 = p$$5;
@@ -7504,7 +7504,7 @@ function pdfjsWrapper() {
         var v1339 = v6864;
         if(v1339) {
           var v1336 = code$$19 - limitValue;
-          introspect(JAMScript.introspectors.processC545F199BE443C5FB0DC91C55134FB746FD8B074) {
+          introspect(JAM.policy.pC545F199BE443C5FB0DC91C55134FB746FD8B074) {
             var p$$4 = table$$4[v1336]
           }
           var v6865 = p$$4[0];
@@ -7546,14 +7546,14 @@ function pdfjsWrapper() {
         var v1385 = this.nextLine2D;
         if(v1385) {
           var i$$160 = 0;
-          introspect(JAMScript.introspectors.processC545F199BE443C5FB0DC91C55134FB746FD8B074) {
+          introspect(JAM.policy.pC545F199BE443C5FB0DC91C55134FB746FD8B074) {
             var v6868 = codingLine$$2[i$$160]
           }
           var v1343 = v6868 < columns$$2;
           for(;v1343;) {
             refLine[i$$160] = codingLine$$2[i$$160];
             i$$160 = i$$160 + 1;
-            introspect(JAMScript.introspectors.processC545F199BE443C5FB0DC91C55134FB746FD8B074) {
+            introspect(JAM.policy.pC545F199BE443C5FB0DC91C55134FB746FD8B074) {
               var v6869 = codingLine$$2[i$$160]
             }
             v1343 = v6869 < columns$$2
@@ -7567,7 +7567,7 @@ function pdfjsWrapper() {
           refPos = 0;
           blackPixels$$2 = 0;
           var v21311 = this.codingPos;
-          introspect(JAMScript.introspectors.processC545F199BE443C5FB0DC91C55134FB746FD8B074) {
+          introspect(JAM.policy.pC545F199BE443C5FB0DC91C55134FB746FD8B074) {
             var v6870 = codingLine$$2[v21311]
           }
           var v1380 = v6870 < columns$$2;
@@ -7576,12 +7576,12 @@ function pdfjsWrapper() {
             switch(code1$$2) {
               case twoDimPass:
                 var v6871 = refPos + 1;
-                introspect(JAMScript.introspectors.processC545F199BE443C5FB0DC91C55134FB746FD8B074) {
+                introspect(JAM.policy.pC545F199BE443C5FB0DC91C55134FB746FD8B074) {
                   var v1345 = refLine[v6871]
                 }
                 this.addPixels(v1345, blackPixels$$2);
                 var v21312 = refPos + 1;
-                introspect(JAMScript.introspectors.processC545F199BE443C5FB0DC91C55134FB746FD8B074) {
+                introspect(JAM.policy.pC545F199BE443C5FB0DC91C55134FB746FD8B074) {
                   var v6872 = refLine[v21312]
                 }
                 var v1346 = v6872 < columns$$2;
@@ -7623,35 +7623,35 @@ function pdfjsWrapper() {
                   }while(v1350)
                 }
                 var v21313 = this.codingPos;
-                introspect(JAMScript.introspectors.processC545F199BE443C5FB0DC91C55134FB746FD8B074) {
+                introspect(JAM.policy.pC545F199BE443C5FB0DC91C55134FB746FD8B074) {
                   var v6881 = codingLine$$2[v21313]
                 }
                 var v1351 = v6881 + code1$$2;
                 this.addPixels(v1351, blackPixels$$2);
                 var v21314 = this.codingPos;
-                introspect(JAMScript.introspectors.processC545F199BE443C5FB0DC91C55134FB746FD8B074) {
+                introspect(JAM.policy.pC545F199BE443C5FB0DC91C55134FB746FD8B074) {
                   var v6882 = codingLine$$2[v21314]
                 }
                 var v1354 = v6882 < columns$$2;
                 if(v1354) {
                   var v21315 = this.codingPos;
-                  introspect(JAMScript.introspectors.processC545F199BE443C5FB0DC91C55134FB746FD8B074) {
+                  introspect(JAM.policy.pC545F199BE443C5FB0DC91C55134FB746FD8B074) {
                     var v6883 = codingLine$$2[v21315]
                   }
                   var v1352 = v6883 + code2$$2;
                   var v1353 = blackPixels$$2 ^ 1;
                   this.addPixels(v1352, v1353)
                 }
-                introspect(JAMScript.introspectors.processC545F199BE443C5FB0DC91C55134FB746FD8B074) {
+                introspect(JAM.policy.pC545F199BE443C5FB0DC91C55134FB746FD8B074) {
                   var v21316 = refLine[refPos]
                 }
                 var v22502 = this.codingPos;
-                introspect(JAMScript.introspectors.processC545F199BE443C5FB0DC91C55134FB746FD8B074) {
+                introspect(JAM.policy.pC545F199BE443C5FB0DC91C55134FB746FD8B074) {
                   var v21317 = codingLine$$2[v22502]
                 }
                 var v6884 = v21316 <= v21317;
                 if(v6884) {
-                  introspect(JAMScript.introspectors.processC545F199BE443C5FB0DC91C55134FB746FD8B074) {
+                  introspect(JAM.policy.pC545F199BE443C5FB0DC91C55134FB746FD8B074) {
                     var v21318 = refLine[refPos]
                   }
                   v6884 = v21318 < columns$$2
@@ -7659,16 +7659,16 @@ function pdfjsWrapper() {
                 var v1355 = v6884;
                 for(;v1355;) {
                   refPos = refPos + 2;
-                  introspect(JAMScript.introspectors.processC545F199BE443C5FB0DC91C55134FB746FD8B074) {
+                  introspect(JAM.policy.pC545F199BE443C5FB0DC91C55134FB746FD8B074) {
                     var v21319 = refLine[refPos]
                   }
                   var v22503 = this.codingPos;
-                  introspect(JAMScript.introspectors.processC545F199BE443C5FB0DC91C55134FB746FD8B074) {
+                  introspect(JAM.policy.pC545F199BE443C5FB0DC91C55134FB746FD8B074) {
                     var v21320 = codingLine$$2[v22503]
                   }
                   var v6885 = v21319 <= v21320;
                   if(v6885) {
-                    introspect(JAMScript.introspectors.processC545F199BE443C5FB0DC91C55134FB746FD8B074) {
+                    introspect(JAM.policy.pC545F199BE443C5FB0DC91C55134FB746FD8B074) {
                       var v21321 = refLine[refPos]
                     }
                     v6885 = v21321 < columns$$2
@@ -7677,29 +7677,29 @@ function pdfjsWrapper() {
                 }
                 break;
               case twoDimVertR3:
-                introspect(JAMScript.introspectors.processC545F199BE443C5FB0DC91C55134FB746FD8B074) {
+                introspect(JAM.policy.pC545F199BE443C5FB0DC91C55134FB746FD8B074) {
                   var v6886 = refLine[refPos]
                 }
                 var v1356 = v6886 + 3;
                 this.addPixels(v1356, blackPixels$$2);
                 blackPixels$$2 = blackPixels$$2 ^ 1;
                 var v21322 = this.codingPos;
-                introspect(JAMScript.introspectors.processC545F199BE443C5FB0DC91C55134FB746FD8B074) {
+                introspect(JAM.policy.pC545F199BE443C5FB0DC91C55134FB746FD8B074) {
                   var v6887 = codingLine$$2[v21322]
                 }
                 var v1358 = v6887 < columns$$2;
                 if(v1358) {
                   refPos = refPos + 1;
-                  introspect(JAMScript.introspectors.processC545F199BE443C5FB0DC91C55134FB746FD8B074) {
+                  introspect(JAM.policy.pC545F199BE443C5FB0DC91C55134FB746FD8B074) {
                     var v21323 = refLine[refPos]
                   }
                   var v22504 = this.codingPos;
-                  introspect(JAMScript.introspectors.processC545F199BE443C5FB0DC91C55134FB746FD8B074) {
+                  introspect(JAM.policy.pC545F199BE443C5FB0DC91C55134FB746FD8B074) {
                     var v21324 = codingLine$$2[v22504]
                   }
                   var v6888 = v21323 <= v21324;
                   if(v6888) {
-                    introspect(JAMScript.introspectors.processC545F199BE443C5FB0DC91C55134FB746FD8B074) {
+                    introspect(JAM.policy.pC545F199BE443C5FB0DC91C55134FB746FD8B074) {
                       var v21325 = refLine[refPos]
                     }
                     v6888 = v21325 < columns$$2
@@ -7707,16 +7707,16 @@ function pdfjsWrapper() {
                   var v1357 = v6888;
                   for(;v1357;) {
                     refPos = refPos + 2;
-                    introspect(JAMScript.introspectors.processC545F199BE443C5FB0DC91C55134FB746FD8B074) {
+                    introspect(JAM.policy.pC545F199BE443C5FB0DC91C55134FB746FD8B074) {
                       var v21326 = refLine[refPos]
                     }
                     var v22505 = this.codingPos;
-                    introspect(JAMScript.introspectors.processC545F199BE443C5FB0DC91C55134FB746FD8B074) {
+                    introspect(JAM.policy.pC545F199BE443C5FB0DC91C55134FB746FD8B074) {
                       var v21327 = codingLine$$2[v22505]
                     }
                     var v6889 = v21326 <= v21327;
                     if(v6889) {
-                      introspect(JAMScript.introspectors.processC545F199BE443C5FB0DC91C55134FB746FD8B074) {
+                      introspect(JAM.policy.pC545F199BE443C5FB0DC91C55134FB746FD8B074) {
                         var v21328 = refLine[refPos]
                       }
                       v6889 = v21328 < columns$$2
@@ -7726,29 +7726,29 @@ function pdfjsWrapper() {
                 }
                 break;
               case twoDimVertR2:
-                introspect(JAMScript.introspectors.processC545F199BE443C5FB0DC91C55134FB746FD8B074) {
+                introspect(JAM.policy.pC545F199BE443C5FB0DC91C55134FB746FD8B074) {
                   var v6890 = refLine[refPos]
                 }
                 var v1359 = v6890 + 2;
                 this.addPixels(v1359, blackPixels$$2);
                 blackPixels$$2 = blackPixels$$2 ^ 1;
                 var v21329 = this.codingPos;
-                introspect(JAMScript.introspectors.processC545F199BE443C5FB0DC91C55134FB746FD8B074) {
+                introspect(JAM.policy.pC545F199BE443C5FB0DC91C55134FB746FD8B074) {
                   var v6891 = codingLine$$2[v21329]
                 }
                 var v1361 = v6891 < columns$$2;
                 if(v1361) {
                   refPos = refPos + 1;
-                  introspect(JAMScript.introspectors.processC545F199BE443C5FB0DC91C55134FB746FD8B074) {
+                  introspect(JAM.policy.pC545F199BE443C5FB0DC91C55134FB746FD8B074) {
                     var v21330 = refLine[refPos]
                   }
                   var v22506 = this.codingPos;
-                  introspect(JAMScript.introspectors.processC545F199BE443C5FB0DC91C55134FB746FD8B074) {
+                  introspect(JAM.policy.pC545F199BE443C5FB0DC91C55134FB746FD8B074) {
                     var v21331 = codingLine$$2[v22506]
                   }
                   var v6892 = v21330 <= v21331;
                   if(v6892) {
-                    introspect(JAMScript.introspectors.processC545F199BE443C5FB0DC91C55134FB746FD8B074) {
+                    introspect(JAM.policy.pC545F199BE443C5FB0DC91C55134FB746FD8B074) {
                       var v21332 = refLine[refPos]
                     }
                     v6892 = v21332 < columns$$2
@@ -7756,16 +7756,16 @@ function pdfjsWrapper() {
                   var v1360 = v6892;
                   for(;v1360;) {
                     refPos = refPos + 2;
-                    introspect(JAMScript.introspectors.processC545F199BE443C5FB0DC91C55134FB746FD8B074) {
+                    introspect(JAM.policy.pC545F199BE443C5FB0DC91C55134FB746FD8B074) {
                       var v21333 = refLine[refPos]
                     }
                     var v22507 = this.codingPos;
-                    introspect(JAMScript.introspectors.processC545F199BE443C5FB0DC91C55134FB746FD8B074) {
+                    introspect(JAM.policy.pC545F199BE443C5FB0DC91C55134FB746FD8B074) {
                       var v21334 = codingLine$$2[v22507]
                     }
                     var v6893 = v21333 <= v21334;
                     if(v6893) {
-                      introspect(JAMScript.introspectors.processC545F199BE443C5FB0DC91C55134FB746FD8B074) {
+                      introspect(JAM.policy.pC545F199BE443C5FB0DC91C55134FB746FD8B074) {
                         var v21335 = refLine[refPos]
                       }
                       v6893 = v21335 < columns$$2
@@ -7775,29 +7775,29 @@ function pdfjsWrapper() {
                 }
                 break;
               case twoDimVertR1:
-                introspect(JAMScript.introspectors.processC545F199BE443C5FB0DC91C55134FB746FD8B074) {
+                introspect(JAM.policy.pC545F199BE443C5FB0DC91C55134FB746FD8B074) {
                   var v6894 = refLine[refPos]
                 }
                 var v1362 = v6894 + 1;
                 this.addPixels(v1362, blackPixels$$2);
                 blackPixels$$2 = blackPixels$$2 ^ 1;
                 var v21336 = this.codingPos;
-                introspect(JAMScript.introspectors.processC545F199BE443C5FB0DC91C55134FB746FD8B074) {
+                introspect(JAM.policy.pC545F199BE443C5FB0DC91C55134FB746FD8B074) {
                   var v6895 = codingLine$$2[v21336]
                 }
                 var v1364 = v6895 < columns$$2;
                 if(v1364) {
                   refPos = refPos + 1;
-                  introspect(JAMScript.introspectors.processC545F199BE443C5FB0DC91C55134FB746FD8B074) {
+                  introspect(JAM.policy.pC545F199BE443C5FB0DC91C55134FB746FD8B074) {
                     var v21337 = refLine[refPos]
                   }
                   var v22508 = this.codingPos;
-                  introspect(JAMScript.introspectors.processC545F199BE443C5FB0DC91C55134FB746FD8B074) {
+                  introspect(JAM.policy.pC545F199BE443C5FB0DC91C55134FB746FD8B074) {
                     var v21338 = codingLine$$2[v22508]
                   }
                   var v6896 = v21337 <= v21338;
                   if(v6896) {
-                    introspect(JAMScript.introspectors.processC545F199BE443C5FB0DC91C55134FB746FD8B074) {
+                    introspect(JAM.policy.pC545F199BE443C5FB0DC91C55134FB746FD8B074) {
                       var v21339 = refLine[refPos]
                     }
                     v6896 = v21339 < columns$$2
@@ -7805,16 +7805,16 @@ function pdfjsWrapper() {
                   var v1363 = v6896;
                   for(;v1363;) {
                     refPos = refPos + 2;
-                    introspect(JAMScript.introspectors.processC545F199BE443C5FB0DC91C55134FB746FD8B074) {
+                    introspect(JAM.policy.pC545F199BE443C5FB0DC91C55134FB746FD8B074) {
                       var v21340 = refLine[refPos]
                     }
                     var v22509 = this.codingPos;
-                    introspect(JAMScript.introspectors.processC545F199BE443C5FB0DC91C55134FB746FD8B074) {
+                    introspect(JAM.policy.pC545F199BE443C5FB0DC91C55134FB746FD8B074) {
                       var v21341 = codingLine$$2[v22509]
                     }
                     var v6897 = v21340 <= v21341;
                     if(v6897) {
-                      introspect(JAMScript.introspectors.processC545F199BE443C5FB0DC91C55134FB746FD8B074) {
+                      introspect(JAM.policy.pC545F199BE443C5FB0DC91C55134FB746FD8B074) {
                         var v21342 = refLine[refPos]
                       }
                       v6897 = v21342 < columns$$2
@@ -7824,28 +7824,28 @@ function pdfjsWrapper() {
                 }
                 break;
               case twoDimVert0:
-                introspect(JAMScript.introspectors.processC545F199BE443C5FB0DC91C55134FB746FD8B074) {
+                introspect(JAM.policy.pC545F199BE443C5FB0DC91C55134FB746FD8B074) {
                   var v1365 = refLine[refPos]
                 }
                 this.addPixels(v1365, blackPixels$$2);
                 blackPixels$$2 = blackPixels$$2 ^ 1;
                 var v21343 = this.codingPos;
-                introspect(JAMScript.introspectors.processC545F199BE443C5FB0DC91C55134FB746FD8B074) {
+                introspect(JAM.policy.pC545F199BE443C5FB0DC91C55134FB746FD8B074) {
                   var v6898 = codingLine$$2[v21343]
                 }
                 var v1367 = v6898 < columns$$2;
                 if(v1367) {
                   refPos = refPos + 1;
-                  introspect(JAMScript.introspectors.processC545F199BE443C5FB0DC91C55134FB746FD8B074) {
+                  introspect(JAM.policy.pC545F199BE443C5FB0DC91C55134FB746FD8B074) {
                     var v21344 = refLine[refPos]
                   }
                   var v22510 = this.codingPos;
-                  introspect(JAMScript.introspectors.processC545F199BE443C5FB0DC91C55134FB746FD8B074) {
+                  introspect(JAM.policy.pC545F199BE443C5FB0DC91C55134FB746FD8B074) {
                     var v21345 = codingLine$$2[v22510]
                   }
                   var v6899 = v21344 <= v21345;
                   if(v6899) {
-                    introspect(JAMScript.introspectors.processC545F199BE443C5FB0DC91C55134FB746FD8B074) {
+                    introspect(JAM.policy.pC545F199BE443C5FB0DC91C55134FB746FD8B074) {
                       var v21346 = refLine[refPos]
                     }
                     v6899 = v21346 < columns$$2
@@ -7853,16 +7853,16 @@ function pdfjsWrapper() {
                   var v1366 = v6899;
                   for(;v1366;) {
                     refPos = refPos + 2;
-                    introspect(JAMScript.introspectors.processC545F199BE443C5FB0DC91C55134FB746FD8B074) {
+                    introspect(JAM.policy.pC545F199BE443C5FB0DC91C55134FB746FD8B074) {
                       var v21347 = refLine[refPos]
                     }
                     var v22511 = this.codingPos;
-                    introspect(JAMScript.introspectors.processC545F199BE443C5FB0DC91C55134FB746FD8B074) {
+                    introspect(JAM.policy.pC545F199BE443C5FB0DC91C55134FB746FD8B074) {
                       var v21348 = codingLine$$2[v22511]
                     }
                     var v6900 = v21347 <= v21348;
                     if(v6900) {
-                      introspect(JAMScript.introspectors.processC545F199BE443C5FB0DC91C55134FB746FD8B074) {
+                      introspect(JAM.policy.pC545F199BE443C5FB0DC91C55134FB746FD8B074) {
                         var v21349 = refLine[refPos]
                       }
                       v6900 = v21349 < columns$$2
@@ -7872,14 +7872,14 @@ function pdfjsWrapper() {
                 }
                 break;
               case twoDimVertL3:
-                introspect(JAMScript.introspectors.processC545F199BE443C5FB0DC91C55134FB746FD8B074) {
+                introspect(JAM.policy.pC545F199BE443C5FB0DC91C55134FB746FD8B074) {
                   var v6901 = refLine[refPos]
                 }
                 var v1368 = v6901 - 3;
                 this.addPixelsNeg(v1368, blackPixels$$2);
                 blackPixels$$2 = blackPixels$$2 ^ 1;
                 var v21350 = this.codingPos;
-                introspect(JAMScript.introspectors.processC545F199BE443C5FB0DC91C55134FB746FD8B074) {
+                introspect(JAM.policy.pC545F199BE443C5FB0DC91C55134FB746FD8B074) {
                   var v6902 = codingLine$$2[v21350]
                 }
                 var v1371 = v6902 < columns$$2;
@@ -7890,16 +7890,16 @@ function pdfjsWrapper() {
                   }else {
                     refPos = refPos + 1
                   }
-                  introspect(JAMScript.introspectors.processC545F199BE443C5FB0DC91C55134FB746FD8B074) {
+                  introspect(JAM.policy.pC545F199BE443C5FB0DC91C55134FB746FD8B074) {
                     var v21351 = refLine[refPos]
                   }
                   var v22512 = this.codingPos;
-                  introspect(JAMScript.introspectors.processC545F199BE443C5FB0DC91C55134FB746FD8B074) {
+                  introspect(JAM.policy.pC545F199BE443C5FB0DC91C55134FB746FD8B074) {
                     var v21352 = codingLine$$2[v22512]
                   }
                   var v6903 = v21351 <= v21352;
                   if(v6903) {
-                    introspect(JAMScript.introspectors.processC545F199BE443C5FB0DC91C55134FB746FD8B074) {
+                    introspect(JAM.policy.pC545F199BE443C5FB0DC91C55134FB746FD8B074) {
                       var v21353 = refLine[refPos]
                     }
                     v6903 = v21353 < columns$$2
@@ -7907,16 +7907,16 @@ function pdfjsWrapper() {
                   var v1370 = v6903;
                   for(;v1370;) {
                     refPos = refPos + 2;
-                    introspect(JAMScript.introspectors.processC545F199BE443C5FB0DC91C55134FB746FD8B074) {
+                    introspect(JAM.policy.pC545F199BE443C5FB0DC91C55134FB746FD8B074) {
                       var v21354 = refLine[refPos]
                     }
                     var v22513 = this.codingPos;
-                    introspect(JAMScript.introspectors.processC545F199BE443C5FB0DC91C55134FB746FD8B074) {
+                    introspect(JAM.policy.pC545F199BE443C5FB0DC91C55134FB746FD8B074) {
                       var v21355 = codingLine$$2[v22513]
                     }
                     var v6904 = v21354 <= v21355;
                     if(v6904) {
-                      introspect(JAMScript.introspectors.processC545F199BE443C5FB0DC91C55134FB746FD8B074) {
+                      introspect(JAM.policy.pC545F199BE443C5FB0DC91C55134FB746FD8B074) {
                         var v21356 = refLine[refPos]
                       }
                       v6904 = v21356 < columns$$2
@@ -7926,14 +7926,14 @@ function pdfjsWrapper() {
                 }
                 break;
               case twoDimVertL2:
-                introspect(JAMScript.introspectors.processC545F199BE443C5FB0DC91C55134FB746FD8B074) {
+                introspect(JAM.policy.pC545F199BE443C5FB0DC91C55134FB746FD8B074) {
                   var v6905 = refLine[refPos]
                 }
                 var v1372 = v6905 - 2;
                 this.addPixelsNeg(v1372, blackPixels$$2);
                 blackPixels$$2 = blackPixels$$2 ^ 1;
                 var v21357 = this.codingPos;
-                introspect(JAMScript.introspectors.processC545F199BE443C5FB0DC91C55134FB746FD8B074) {
+                introspect(JAM.policy.pC545F199BE443C5FB0DC91C55134FB746FD8B074) {
                   var v6906 = codingLine$$2[v21357]
                 }
                 var v1375 = v6906 < columns$$2;
@@ -7944,16 +7944,16 @@ function pdfjsWrapper() {
                   }else {
                     refPos = refPos + 1
                   }
-                  introspect(JAMScript.introspectors.processC545F199BE443C5FB0DC91C55134FB746FD8B074) {
+                  introspect(JAM.policy.pC545F199BE443C5FB0DC91C55134FB746FD8B074) {
                     var v21358 = refLine[refPos]
                   }
                   var v22514 = this.codingPos;
-                  introspect(JAMScript.introspectors.processC545F199BE443C5FB0DC91C55134FB746FD8B074) {
+                  introspect(JAM.policy.pC545F199BE443C5FB0DC91C55134FB746FD8B074) {
                     var v21359 = codingLine$$2[v22514]
                   }
                   var v6907 = v21358 <= v21359;
                   if(v6907) {
-                    introspect(JAMScript.introspectors.processC545F199BE443C5FB0DC91C55134FB746FD8B074) {
+                    introspect(JAM.policy.pC545F199BE443C5FB0DC91C55134FB746FD8B074) {
                       var v21360 = refLine[refPos]
                     }
                     v6907 = v21360 < columns$$2
@@ -7961,16 +7961,16 @@ function pdfjsWrapper() {
                   var v1374 = v6907;
                   for(;v1374;) {
                     refPos = refPos + 2;
-                    introspect(JAMScript.introspectors.processC545F199BE443C5FB0DC91C55134FB746FD8B074) {
+                    introspect(JAM.policy.pC545F199BE443C5FB0DC91C55134FB746FD8B074) {
                       var v21361 = refLine[refPos]
                     }
                     var v22515 = this.codingPos;
-                    introspect(JAMScript.introspectors.processC545F199BE443C5FB0DC91C55134FB746FD8B074) {
+                    introspect(JAM.policy.pC545F199BE443C5FB0DC91C55134FB746FD8B074) {
                       var v21362 = codingLine$$2[v22515]
                     }
                     var v6908 = v21361 <= v21362;
                     if(v6908) {
-                      introspect(JAMScript.introspectors.processC545F199BE443C5FB0DC91C55134FB746FD8B074) {
+                      introspect(JAM.policy.pC545F199BE443C5FB0DC91C55134FB746FD8B074) {
                         var v21363 = refLine[refPos]
                       }
                       v6908 = v21363 < columns$$2
@@ -7980,14 +7980,14 @@ function pdfjsWrapper() {
                 }
                 break;
               case twoDimVertL1:
-                introspect(JAMScript.introspectors.processC545F199BE443C5FB0DC91C55134FB746FD8B074) {
+                introspect(JAM.policy.pC545F199BE443C5FB0DC91C55134FB746FD8B074) {
                   var v6909 = refLine[refPos]
                 }
                 var v1376 = v6909 - 1;
                 this.addPixelsNeg(v1376, blackPixels$$2);
                 blackPixels$$2 = blackPixels$$2 ^ 1;
                 var v21364 = this.codingPos;
-                introspect(JAMScript.introspectors.processC545F199BE443C5FB0DC91C55134FB746FD8B074) {
+                introspect(JAM.policy.pC545F199BE443C5FB0DC91C55134FB746FD8B074) {
                   var v6910 = codingLine$$2[v21364]
                 }
                 var v1379 = v6910 < columns$$2;
@@ -7998,16 +7998,16 @@ function pdfjsWrapper() {
                   }else {
                     refPos = refPos + 1
                   }
-                  introspect(JAMScript.introspectors.processC545F199BE443C5FB0DC91C55134FB746FD8B074) {
+                  introspect(JAM.policy.pC545F199BE443C5FB0DC91C55134FB746FD8B074) {
                     var v21365 = refLine[refPos]
                   }
                   var v22516 = this.codingPos;
-                  introspect(JAMScript.introspectors.processC545F199BE443C5FB0DC91C55134FB746FD8B074) {
+                  introspect(JAM.policy.pC545F199BE443C5FB0DC91C55134FB746FD8B074) {
                     var v21366 = codingLine$$2[v22516]
                   }
                   var v6911 = v21365 <= v21366;
                   if(v6911) {
-                    introspect(JAMScript.introspectors.processC545F199BE443C5FB0DC91C55134FB746FD8B074) {
+                    introspect(JAM.policy.pC545F199BE443C5FB0DC91C55134FB746FD8B074) {
                       var v21367 = refLine[refPos]
                     }
                     v6911 = v21367 < columns$$2
@@ -8015,16 +8015,16 @@ function pdfjsWrapper() {
                   var v1378 = v6911;
                   for(;v1378;) {
                     refPos = refPos + 2;
-                    introspect(JAMScript.introspectors.processC545F199BE443C5FB0DC91C55134FB746FD8B074) {
+                    introspect(JAM.policy.pC545F199BE443C5FB0DC91C55134FB746FD8B074) {
                       var v21368 = refLine[refPos]
                     }
                     var v22517 = this.codingPos;
-                    introspect(JAMScript.introspectors.processC545F199BE443C5FB0DC91C55134FB746FD8B074) {
+                    introspect(JAM.policy.pC545F199BE443C5FB0DC91C55134FB746FD8B074) {
                       var v21369 = codingLine$$2[v22517]
                     }
                     var v6912 = v21368 <= v21369;
                     if(v6912) {
-                      introspect(JAMScript.introspectors.processC545F199BE443C5FB0DC91C55134FB746FD8B074) {
+                      introspect(JAM.policy.pC545F199BE443C5FB0DC91C55134FB746FD8B074) {
                         var v21370 = refLine[refPos]
                       }
                       v6912 = v21370 < columns$$2
@@ -8043,7 +8043,7 @@ function pdfjsWrapper() {
                 this.err = true
             }
             var v21371 = this.codingPos;
-            introspect(JAMScript.introspectors.processC545F199BE443C5FB0DC91C55134FB746FD8B074) {
+            introspect(JAM.policy.pC545F199BE443C5FB0DC91C55134FB746FD8B074) {
               var v6913 = codingLine$$2[v21371]
             }
             v1380 = v6913 < columns$$2
@@ -8053,7 +8053,7 @@ function pdfjsWrapper() {
           this.codingPos = 0;
           blackPixels$$2 = 0;
           var v21372 = this.codingPos;
-          introspect(JAMScript.introspectors.processC545F199BE443C5FB0DC91C55134FB746FD8B074) {
+          introspect(JAM.policy.pC545F199BE443C5FB0DC91C55134FB746FD8B074) {
             var v6914 = codingLine$$2[v21372]
           }
           var v1384 = v6914 < columns$$2;
@@ -8077,14 +8077,14 @@ function pdfjsWrapper() {
               }while(v1382)
             }
             var v21373 = this.codingPos;
-            introspect(JAMScript.introspectors.processC545F199BE443C5FB0DC91C55134FB746FD8B074) {
+            introspect(JAM.policy.pC545F199BE443C5FB0DC91C55134FB746FD8B074) {
               var v6919 = codingLine$$2[v21373]
             }
             var v1383 = v6919 + code1$$2;
             this.addPixels(v1383, blackPixels$$2);
             blackPixels$$2 = blackPixels$$2 ^ 1;
             var v21374 = this.codingPos;
-            introspect(JAMScript.introspectors.processC545F199BE443C5FB0DC91C55134FB746FD8B074) {
+            introspect(JAM.policy.pC545F199BE443C5FB0DC91C55134FB746FD8B074) {
               var v6920 = codingLine$$2[v21374]
             }
             v1384 = v6920 < columns$$2
@@ -8241,7 +8241,7 @@ function pdfjsWrapper() {
         var v6937 = v21381 == 0;
         if(v6937) {
           var v22519 = this.codingPos;
-          introspect(JAMScript.introspectors.processC545F199BE443C5FB0DC91C55134FB746FD8B074) {
+          introspect(JAM.policy.pC545F199BE443C5FB0DC91C55134FB746FD8B074) {
             var v21382 = codingLine$$2[v22519]
           }
           v6937 = v21382 < columns$$2
@@ -8251,12 +8251,12 @@ function pdfjsWrapper() {
           var v6938 = this.codingPos;
           this.codingPos = v6938 + 1;
           var v6939 = this.codingPos;
-          introspect(JAMScript.introspectors.processC545F199BE443C5FB0DC91C55134FB746FD8B074) {
+          introspect(JAM.policy.pC545F199BE443C5FB0DC91C55134FB746FD8B074) {
             var v1411 = codingLine$$2[v6939]
           }
           var v21383 = this.codingPos;
           var v6940 = v21383 - 1;
-          introspect(JAMScript.introspectors.processC545F199BE443C5FB0DC91C55134FB746FD8B074) {
+          introspect(JAM.policy.pC545F199BE443C5FB0DC91C55134FB746FD8B074) {
             var v1412 = codingLine$$2[v6940]
           }
           this.outputBits = v1411 - v1412
@@ -8300,7 +8300,7 @@ function pdfjsWrapper() {
             bits$$9 = bits$$9 - v6952;
             this.outputBits = 0;
             var v21388 = this.codingPos;
-            introspect(JAMScript.introspectors.processC545F199BE443C5FB0DC91C55134FB746FD8B074) {
+            introspect(JAM.policy.pC545F199BE443C5FB0DC91C55134FB746FD8B074) {
               var v6953 = codingLine$$2[v21388]
             }
             var v1419 = v6953 < columns$$2;
@@ -8308,12 +8308,12 @@ function pdfjsWrapper() {
               var v6954 = this.codingPos;
               this.codingPos = v6954 + 1;
               var v6955 = this.codingPos;
-              introspect(JAMScript.introspectors.processC545F199BE443C5FB0DC91C55134FB746FD8B074) {
+              introspect(JAM.policy.pC545F199BE443C5FB0DC91C55134FB746FD8B074) {
                 var v1416 = codingLine$$2[v6955]
               }
               var v21389 = this.codingPos;
               var v6956 = v21389 - 1;
-              introspect(JAMScript.introspectors.processC545F199BE443C5FB0DC91C55134FB746FD8B074) {
+              introspect(JAM.policy.pC545F199BE443C5FB0DC91C55134FB746FD8B074) {
                 var v1417 = codingLine$$2[v6956]
               }
               this.outputBits = v1416 - v1417
@@ -8338,7 +8338,7 @@ function pdfjsWrapper() {
     function ccittFaxStreamAddPixelsNeg(a1$$1, blackPixels$$1) {
       var codingLine$$1 = this.codingLine;
       var codingPos$$1 = this.codingPos;
-      introspect(JAMScript.introspectors.processC545F199BE443C5FB0DC91C55134FB746FD8B074) {
+      introspect(JAM.policy.pC545F199BE443C5FB0DC91C55134FB746FD8B074) {
         var v6959 = codingLine$$1[codingPos$$1]
       }
       var v1428 = a1$$1 > v6959;
@@ -8357,7 +8357,7 @@ function pdfjsWrapper() {
         }
         codingLine$$1[codingPos$$1] = a1$$1
       }else {
-        introspect(JAMScript.introspectors.processC545F199BE443C5FB0DC91C55134FB746FD8B074) {
+        introspect(JAM.policy.pC545F199BE443C5FB0DC91C55134FB746FD8B074) {
           var v6962 = codingLine$$1[codingPos$$1]
         }
         var v1427 = a1$$1 < v6962;
@@ -8371,7 +8371,7 @@ function pdfjsWrapper() {
           var v6963 = codingPos$$1 > 0;
           if(v6963) {
             var v22521 = codingPos$$1 - 1;
-            introspect(JAMScript.introspectors.processC545F199BE443C5FB0DC91C55134FB746FD8B074) {
+            introspect(JAM.policy.pC545F199BE443C5FB0DC91C55134FB746FD8B074) {
               var v21390 = codingLine$$1[v22521]
             }
             v6963 = a1$$1 < v21390
@@ -8382,7 +8382,7 @@ function pdfjsWrapper() {
             var v6964 = codingPos$$1 > 0;
             if(v6964) {
               var v22522 = codingPos$$1 - 1;
-              introspect(JAMScript.introspectors.processC545F199BE443C5FB0DC91C55134FB746FD8B074) {
+              introspect(JAM.policy.pC545F199BE443C5FB0DC91C55134FB746FD8B074) {
                 var v21391 = codingLine$$1[v22522]
               }
               v6964 = a1$$1 < v21391
@@ -8398,7 +8398,7 @@ function pdfjsWrapper() {
     function ccittFaxStreamAddPixels(a1, blackPixels) {
       var codingLine = this.codingLine;
       var codingPos = this.codingPos;
-      introspect(JAMScript.introspectors.processC545F199BE443C5FB0DC91C55134FB746FD8B074) {
+      introspect(JAM.policy.pC545F199BE443C5FB0DC91C55134FB746FD8B074) {
         var v6965 = codingLine[codingPos]
       }
       var v1431 = a1 > v6965;
@@ -9735,10 +9735,10 @@ function pdfjsWrapper() {
       length$$66 = bytes$$21.length;
       var v2542 = i$$158 < length$$66;
       for(;v2542;) {
-        introspect(JAMScript.introspectors.processC545F199BE443C5FB0DC91C55134FB746FD8B074) {
+        introspect(JAM.policy.pC545F199BE443C5FB0DC91C55134FB746FD8B074) {
           var v2534 = bytes$$21[i$$158]
         }
-        introspect(JAMScript.introspectors.processC545F199BE443C5FB0DC91C55134FB746FD8B074) {
+        introspect(JAM.policy.pC545F199BE443C5FB0DC91C55134FB746FD8B074) {
           c$$22 = hexvalueMap[v2534]
         }
         var v6990 = c$$22 == -1;
@@ -9749,10 +9749,10 @@ function pdfjsWrapper() {
         var v2536 = v6990;
         for(;v2536;) {
           var v6991 = i$$158 = i$$158 + 1;
-          introspect(JAMScript.introspectors.processC545F199BE443C5FB0DC91C55134FB746FD8B074) {
+          introspect(JAM.policy.pC545F199BE443C5FB0DC91C55134FB746FD8B074) {
             var v2535 = bytes$$21[v6991]
           }
-          introspect(JAMScript.introspectors.processC545F199BE443C5FB0DC91C55134FB746FD8B074) {
+          introspect(JAM.policy.pC545F199BE443C5FB0DC91C55134FB746FD8B074) {
             c$$22 = hexvalueMap[v2535]
           }
           var v6992 = c$$22 == -1;
@@ -9766,7 +9766,7 @@ function pdfjsWrapper() {
         var v6993 = v21397 < length$$66;
         if(v6993) {
           var v22526 = i$$158 + 1;
-          introspect(JAMScript.introspectors.processC545F199BE443C5FB0DC91C55134FB746FD8B074) {
+          introspect(JAM.policy.pC545F199BE443C5FB0DC91C55134FB746FD8B074) {
             var v21398 = bytes$$21[v22526]
           }
           v6993 = v21398 !== gtCode
@@ -9774,10 +9774,10 @@ function pdfjsWrapper() {
         var v2541 = v6993;
         if(v2541) {
           var v6994 = i$$158 = i$$158 + 1;
-          introspect(JAMScript.introspectors.processC545F199BE443C5FB0DC91C55134FB746FD8B074) {
+          introspect(JAM.policy.pC545F199BE443C5FB0DC91C55134FB746FD8B074) {
             var v2537 = bytes$$21[v6994]
           }
-          introspect(JAMScript.introspectors.processC545F199BE443C5FB0DC91C55134FB746FD8B074) {
+          introspect(JAM.policy.pC545F199BE443C5FB0DC91C55134FB746FD8B074) {
             n$$34 = hexvalueMap[v2537]
           }
           var v2538 = bufferLength$$10;
@@ -9785,7 +9785,7 @@ function pdfjsWrapper() {
           var v6995 = c$$22 * 16;
           buffer$$25[v2538] = v6995 + n$$34
         }else {
-          introspect(JAMScript.introspectors.processC545F199BE443C5FB0DC91C55134FB746FD8B074) {
+          introspect(JAM.policy.pC545F199BE443C5FB0DC91C55134FB746FD8B074) {
             var v6996 = bytes$$21[i$$158]
           }
           var v2540 = v6996 !== gtCode;
@@ -9904,7 +9904,7 @@ function pdfjsWrapper() {
         var v2558 = i$$157 < 5;
         for(;v2558;) {
           var v2556 = t$$4 * 85;
-          introspect(JAMScript.introspectors.processC545F199BE443C5FB0DC91C55134FB746FD8B074) {
+          introspect(JAM.policy.pC545F199BE443C5FB0DC91C55134FB746FD8B074) {
             var v7008 = input$$7[i$$157]
           }
           var v2557 = v7008 - 33;
@@ -9967,7 +9967,7 @@ function pdfjsWrapper() {
       for(;v2568;) {
         var v2567 = bufferLength$$8;
         bufferLength$$8 = bufferLength$$8 + 1;
-        introspect(JAMScript.introspectors.processC545F199BE443C5FB0DC91C55134FB746FD8B074) {
+        introspect(JAM.policy.pC545F199BE443C5FB0DC91C55134FB746FD8B074) {
           buffer$$23[v2567] = chunk$$1[i$$156]
         }
         i$$156 = i$$156 + 1;
@@ -10031,7 +10031,7 @@ function pdfjsWrapper() {
       var v2609 = k$$13 < kk$$3;
       for(;v2609;) {
         var v2577 = jpxImage.tiles;
-        introspect(JAMScript.introspectors.processC545F199BE443C5FB0DC91C55134FB746FD8B074) {
+        introspect(JAM.policy.pC545F199BE443C5FB0DC91C55134FB746FD8B074) {
           var tileCompoments = v2577[k$$13]
         }
         var v2578 = tileCompoments[0];
@@ -10097,17 +10097,17 @@ function pdfjsWrapper() {
               for(;v2595;) {
                 var v2592 = dataPosition;
                 dataPosition = dataPosition + 1;
-                introspect(JAMScript.introspectors.processC545F199BE443C5FB0DC91C55134FB746FD8B074) {
+                introspect(JAM.policy.pC545F199BE443C5FB0DC91C55134FB746FD8B074) {
                   data$$85[v2592] = data0[sourcePosition]
                 }
                 var v2593 = dataPosition;
                 dataPosition = dataPosition + 1;
-                introspect(JAMScript.introspectors.processC545F199BE443C5FB0DC91C55134FB746FD8B074) {
+                introspect(JAM.policy.pC545F199BE443C5FB0DC91C55134FB746FD8B074) {
                   data$$85[v2593] = data1[sourcePosition]
                 }
                 var v2594 = dataPosition;
                 dataPosition = dataPosition + 1;
-                introspect(JAMScript.introspectors.processC545F199BE443C5FB0DC91C55134FB746FD8B074) {
+                introspect(JAM.policy.pC545F199BE443C5FB0DC91C55134FB746FD8B074) {
                   data$$85[v2594] = data2[sourcePosition]
                 }
                 sourcePosition = sourcePosition + 1;
@@ -10142,22 +10142,22 @@ function pdfjsWrapper() {
               for(;v2607;) {
                 var v2603 = dataPosition;
                 dataPosition = dataPosition + 1;
-                introspect(JAMScript.introspectors.processC545F199BE443C5FB0DC91C55134FB746FD8B074) {
+                introspect(JAM.policy.pC545F199BE443C5FB0DC91C55134FB746FD8B074) {
                   data$$85[v2603] = data0[sourcePosition]
                 }
                 var v2604 = dataPosition;
                 dataPosition = dataPosition + 1;
-                introspect(JAMScript.introspectors.processC545F199BE443C5FB0DC91C55134FB746FD8B074) {
+                introspect(JAM.policy.pC545F199BE443C5FB0DC91C55134FB746FD8B074) {
                   data$$85[v2604] = data1[sourcePosition]
                 }
                 var v2605 = dataPosition;
                 dataPosition = dataPosition + 1;
-                introspect(JAMScript.introspectors.processC545F199BE443C5FB0DC91C55134FB746FD8B074) {
+                introspect(JAM.policy.pC545F199BE443C5FB0DC91C55134FB746FD8B074) {
                   data$$85[v2605] = data2[sourcePosition]
                 }
                 var v2606 = dataPosition;
                 dataPosition = dataPosition + 1;
-                introspect(JAMScript.introspectors.processC545F199BE443C5FB0DC91C55134FB746FD8B074) {
+                introspect(JAM.policy.pC545F199BE443C5FB0DC91C55134FB746FD8B074) {
                   data$$85[v2606] = data3[sourcePosition]
                 }
                 sourcePosition = sourcePosition + 1;
@@ -10292,61 +10292,61 @@ function pdfjsWrapper() {
         var i$$inline_122 = 0;
         var v2627 = i$$inline_122 < maxBytesScanned$$inline_121;
         for(;v2627;) {
-          introspect(JAMScript.introspectors.processC545F199BE443C5FB0DC91C55134FB746FD8B074) {
+          introspect(JAM.policy.pC545F199BE443C5FB0DC91C55134FB746FD8B074) {
             var v21410 = bytes$$inline_120[i$$inline_122]
           }
           var v7027 = v21410 == 255;
           if(v7027) {
             var v22971 = i$$inline_122 + 1;
-            introspect(JAMScript.introspectors.processC545F199BE443C5FB0DC91C55134FB746FD8B074) {
+            introspect(JAM.policy.pC545F199BE443C5FB0DC91C55134FB746FD8B074) {
               var v22529 = bytes$$inline_120[v22971]
             }
             var v21411 = v22529 == 238;
             if(v21411) {
               var v23127 = i$$inline_122 + 2;
-              introspect(JAMScript.introspectors.processC545F199BE443C5FB0DC91C55134FB746FD8B074) {
+              introspect(JAM.policy.pC545F199BE443C5FB0DC91C55134FB746FD8B074) {
                 var v22972 = bytes$$inline_120[v23127]
               }
               var v22530 = v22972 == 0;
               if(v22530) {
                 var v23185 = i$$inline_122 + 3;
-                introspect(JAMScript.introspectors.processC545F199BE443C5FB0DC91C55134FB746FD8B074) {
+                introspect(JAM.policy.pC545F199BE443C5FB0DC91C55134FB746FD8B074) {
                   var v23128 = bytes$$inline_120[v23185]
                 }
                 var v22973 = v23128 == 14;
                 if(v22973) {
                   var v23216 = i$$inline_122 + 4;
-                  introspect(JAMScript.introspectors.processC545F199BE443C5FB0DC91C55134FB746FD8B074) {
+                  introspect(JAM.policy.pC545F199BE443C5FB0DC91C55134FB746FD8B074) {
                     var v23186 = bytes$$inline_120[v23216]
                   }
                   var v23129 = v23186 == 65;
                   if(v23129) {
                     var v23241 = i$$inline_122 + 5;
-                    introspect(JAMScript.introspectors.processC545F199BE443C5FB0DC91C55134FB746FD8B074) {
+                    introspect(JAM.policy.pC545F199BE443C5FB0DC91C55134FB746FD8B074) {
                       var v23217 = bytes$$inline_120[v23241]
                     }
                     var v23187 = v23217 == 100;
                     if(v23187) {
                       var v23258 = i$$inline_122 + 6;
-                      introspect(JAMScript.introspectors.processC545F199BE443C5FB0DC91C55134FB746FD8B074) {
+                      introspect(JAM.policy.pC545F199BE443C5FB0DC91C55134FB746FD8B074) {
                         var v23242 = bytes$$inline_120[v23258]
                       }
                       var v23218 = v23242 == 111;
                       if(v23218) {
                         var v23270 = i$$inline_122 + 7;
-                        introspect(JAMScript.introspectors.processC545F199BE443C5FB0DC91C55134FB746FD8B074) {
+                        introspect(JAM.policy.pC545F199BE443C5FB0DC91C55134FB746FD8B074) {
                           var v23259 = bytes$$inline_120[v23270]
                         }
                         var v23243 = v23259 == 98;
                         if(v23243) {
                           var v23282 = i$$inline_122 + 8;
-                          introspect(JAMScript.introspectors.processC545F199BE443C5FB0DC91C55134FB746FD8B074) {
+                          introspect(JAM.policy.pC545F199BE443C5FB0DC91C55134FB746FD8B074) {
                             var v23271 = bytes$$inline_120[v23282]
                           }
                           var v23260 = v23271 == 101;
                           if(v23260) {
                             var v23283 = i$$inline_122 + 9;
-                            introspect(JAMScript.introspectors.processC545F199BE443C5FB0DC91C55134FB746FD8B074) {
+                            introspect(JAM.policy.pC545F199BE443C5FB0DC91C55134FB746FD8B074) {
                               var v23272 = bytes$$inline_120[v23283]
                             }
                             v23260 = v23272 == 0
@@ -10372,13 +10372,13 @@ function pdfjsWrapper() {
             JSCompiler_inline_result$$9 = true;
             break JSCompiler_inline_label_isAdobeImage_123
           }
-          introspect(JAMScript.introspectors.processC545F199BE443C5FB0DC91C55134FB746FD8B074) {
+          introspect(JAM.policy.pC545F199BE443C5FB0DC91C55134FB746FD8B074) {
             var v21412 = bytes$$inline_120[i$$inline_122]
           }
           var v7028 = v21412 == 255;
           if(v7028) {
             var v22531 = i$$inline_122 + 1;
-            introspect(JAMScript.introspectors.processC545F199BE443C5FB0DC91C55134FB746FD8B074) {
+            introspect(JAM.policy.pC545F199BE443C5FB0DC91C55134FB746FD8B074) {
               var v21413 = bytes$$inline_120[v22531]
             }
             v7028 = v21413 == 192
@@ -10472,10 +10472,10 @@ function pdfjsWrapper() {
           var v2647 = i$$153 < rowBytes$$3;
           for(;v2647;) {
             var v21414 = j$$51 - pixBytes;
-            introspect(JAMScript.introspectors.processC545F199BE443C5FB0DC91C55134FB746FD8B074) {
+            introspect(JAM.policy.pC545F199BE443C5FB0DC91C55134FB746FD8B074) {
               var v7033 = buffer$$22[v21414]
             }
-            introspect(JAMScript.introspectors.processC545F199BE443C5FB0DC91C55134FB746FD8B074) {
+            introspect(JAM.policy.pC545F199BE443C5FB0DC91C55134FB746FD8B074) {
               var v7034 = rawBytes$$1[i$$153]
             }
             var v2646 = v7033 + v7034;
@@ -10491,10 +10491,10 @@ function pdfjsWrapper() {
           for(;v2649;) {
             var v2648 = j$$51;
             j$$51 = j$$51 + 1;
-            introspect(JAMScript.introspectors.processC545F199BE443C5FB0DC91C55134FB746FD8B074) {
+            introspect(JAM.policy.pC545F199BE443C5FB0DC91C55134FB746FD8B074) {
               var v21415 = prevRow[i$$153]
             }
-            introspect(JAMScript.introspectors.processC545F199BE443C5FB0DC91C55134FB746FD8B074) {
+            introspect(JAM.policy.pC545F199BE443C5FB0DC91C55134FB746FD8B074) {
               var v21416 = rawBytes$$1[i$$153]
             }
             var v7035 = v21415 + v21416;
@@ -10509,11 +10509,11 @@ function pdfjsWrapper() {
           for(;v2651;) {
             var v2650 = j$$51;
             j$$51 = j$$51 + 1;
-            introspect(JAMScript.introspectors.processC545F199BE443C5FB0DC91C55134FB746FD8B074) {
+            introspect(JAM.policy.pC545F199BE443C5FB0DC91C55134FB746FD8B074) {
               var v21417 = prevRow[i$$153]
             }
             var v7036 = v21417 >> 1;
-            introspect(JAMScript.introspectors.processC545F199BE443C5FB0DC91C55134FB746FD8B074) {
+            introspect(JAM.policy.pC545F199BE443C5FB0DC91C55134FB746FD8B074) {
               var v7037 = rawBytes$$1[i$$153]
             }
             buffer$$22[v2650] = v7036 + v7037;
@@ -10522,16 +10522,16 @@ function pdfjsWrapper() {
           }
           var v2653 = i$$153 < rowBytes$$3;
           for(;v2653;) {
-            introspect(JAMScript.introspectors.processC545F199BE443C5FB0DC91C55134FB746FD8B074) {
+            introspect(JAM.policy.pC545F199BE443C5FB0DC91C55134FB746FD8B074) {
               var v22532 = prevRow[i$$153]
             }
             var v22974 = j$$51 - pixBytes;
-            introspect(JAMScript.introspectors.processC545F199BE443C5FB0DC91C55134FB746FD8B074) {
+            introspect(JAM.policy.pC545F199BE443C5FB0DC91C55134FB746FD8B074) {
               var v22533 = buffer$$22[v22974]
             }
             var v21418 = v22532 + v22533;
             var v7038 = v21418 >> 1;
-            introspect(JAMScript.introspectors.processC545F199BE443C5FB0DC91C55134FB746FD8B074) {
+            introspect(JAM.policy.pC545F199BE443C5FB0DC91C55134FB746FD8B074) {
               var v7039 = rawBytes$$1[i$$153]
             }
             var v2652 = v7038 + v7039;
@@ -10545,10 +10545,10 @@ function pdfjsWrapper() {
           i$$153 = 0;
           var v2655 = i$$153 < pixBytes;
           for(;v2655;) {
-            introspect(JAMScript.introspectors.processC545F199BE443C5FB0DC91C55134FB746FD8B074) {
+            introspect(JAM.policy.pC545F199BE443C5FB0DC91C55134FB746FD8B074) {
               var up$$1 = prevRow[i$$153]
             }
-            introspect(JAMScript.introspectors.processC545F199BE443C5FB0DC91C55134FB746FD8B074) {
+            introspect(JAM.policy.pC545F199BE443C5FB0DC91C55134FB746FD8B074) {
               var c$$20 = rawBytes$$1[i$$153]
             }
             var v2654 = j$$51;
@@ -10561,11 +10561,11 @@ function pdfjsWrapper() {
           for(;v2667;) {
             up$$1 = prevRow[i$$153];
             var v2656 = i$$153 - pixBytes;
-            introspect(JAMScript.introspectors.processC545F199BE443C5FB0DC91C55134FB746FD8B074) {
+            introspect(JAM.policy.pC545F199BE443C5FB0DC91C55134FB746FD8B074) {
               var upLeft = prevRow[v2656]
             }
             var v2657 = j$$51 - pixBytes;
-            introspect(JAMScript.introspectors.processC545F199BE443C5FB0DC91C55134FB746FD8B074) {
+            introspect(JAM.policy.pC545F199BE443C5FB0DC91C55134FB746FD8B074) {
               var left$$3 = buffer$$22[v2657]
             }
             var v2658 = left$$3 + up$$1;
@@ -10638,7 +10638,7 @@ function pdfjsWrapper() {
         var i$$152 = 0;
         var v2673 = i$$152 < rowBytes$$2;
         for(;v2673;) {
-          introspect(JAMScript.introspectors.processC545F199BE443C5FB0DC91C55134FB746FD8B074) {
+          introspect(JAM.policy.pC545F199BE443C5FB0DC91C55134FB746FD8B074) {
             var c$$19 = rawBytes[i$$152]
           }
           var v2671 = inbuf << 8;
@@ -10667,10 +10667,10 @@ function pdfjsWrapper() {
           var v2678 = i$$152 < rowBytes$$2;
           for(;v2678;) {
             var v7043 = pos$$18 - colors$$1;
-            introspect(JAMScript.introspectors.processC545F199BE443C5FB0DC91C55134FB746FD8B074) {
+            introspect(JAM.policy.pC545F199BE443C5FB0DC91C55134FB746FD8B074) {
               var v2676 = buffer$$21[v7043]
             }
-            introspect(JAMScript.introspectors.processC545F199BE443C5FB0DC91C55134FB746FD8B074) {
+            introspect(JAM.policy.pC545F199BE443C5FB0DC91C55134FB746FD8B074) {
               var v2677 = rawBytes[i$$152]
             }
             buffer$$21[pos$$18] = v2676 + v2677;
@@ -10697,14 +10697,14 @@ function pdfjsWrapper() {
                 var v2681 = inbuf << 8;
                 var v21420 = j$$50;
                 j$$50 = j$$50 + 1;
-                introspect(JAMScript.introspectors.processC545F199BE443C5FB0DC91C55134FB746FD8B074) {
+                introspect(JAM.policy.pC545F199BE443C5FB0DC91C55134FB746FD8B074) {
                   var v7044 = rawBytes[v21420]
                 }
                 var v2682 = v7044 & 255;
                 inbuf = v2681 | v2682;
                 inbits = inbits + 8
               }
-              introspect(JAMScript.introspectors.processC545F199BE443C5FB0DC91C55134FB746FD8B074) {
+              introspect(JAM.policy.pC545F199BE443C5FB0DC91C55134FB746FD8B074) {
                 var v7045 = compArray[kk$$2]
               }
               var v21421 = inbits - bits$$8;
@@ -10713,7 +10713,7 @@ function pdfjsWrapper() {
               compArray[kk$$2] = v2684 & bitMask;
               inbits = inbits - bits$$8;
               var v2685 = outbuf << bits$$8;
-              introspect(JAMScript.introspectors.processC545F199BE443C5FB0DC91C55134FB746FD8B074) {
+              introspect(JAM.policy.pC545F199BE443C5FB0DC91C55134FB746FD8B074) {
                 var v2686 = compArray[kk$$2]
               }
               outbuf = v2685 | v2686;
@@ -10837,7 +10837,7 @@ function pdfjsWrapper() {
         var b$$27;
         var v22536 = bytesPos$$3;
         bytesPos$$3 = bytesPos$$3 + 1;
-        introspect(JAMScript.introspectors.processC545F199BE443C5FB0DC91C55134FB746FD8B074) {
+        introspect(JAM.policy.pC545F199BE443C5FB0DC91C55134FB746FD8B074) {
           var v21427 = b$$27 = bytes$$16[v22536]
         }
         var v7059 = typeof v21427;
@@ -10848,7 +10848,7 @@ function pdfjsWrapper() {
         var blockLen = b$$27;
         var v22537 = bytesPos$$3;
         bytesPos$$3 = bytesPos$$3 + 1;
-        introspect(JAMScript.introspectors.processC545F199BE443C5FB0DC91C55134FB746FD8B074) {
+        introspect(JAM.policy.pC545F199BE443C5FB0DC91C55134FB746FD8B074) {
           var v21428 = b$$27 = bytes$$16[v22537]
         }
         var v7060 = typeof v21428;
@@ -10860,7 +10860,7 @@ function pdfjsWrapper() {
         blockLen = blockLen | v7061;
         var v22538 = bytesPos$$3;
         bytesPos$$3 = bytesPos$$3 + 1;
-        introspect(JAMScript.introspectors.processC545F199BE443C5FB0DC91C55134FB746FD8B074) {
+        introspect(JAM.policy.pC545F199BE443C5FB0DC91C55134FB746FD8B074) {
           var v21429 = b$$27 = bytes$$16[v22538]
         }
         var v7062 = typeof v21429;
@@ -10871,7 +10871,7 @@ function pdfjsWrapper() {
         var check = b$$27;
         var v22539 = bytesPos$$3;
         bytesPos$$3 = bytesPos$$3 + 1;
-        introspect(JAMScript.introspectors.processC545F199BE443C5FB0DC91C55134FB746FD8B074) {
+        introspect(JAM.policy.pC545F199BE443C5FB0DC91C55134FB746FD8B074) {
           var v21430 = b$$27 = bytes$$16[v22539]
         }
         var v7063 = typeof v21430;
@@ -10899,7 +10899,7 @@ function pdfjsWrapper() {
         for(;v2716;) {
           var v22540 = bytesPos$$3;
           bytesPos$$3 = bytesPos$$3 + 1;
-          introspect(JAMScript.introspectors.processC545F199BE443C5FB0DC91C55134FB746FD8B074) {
+          introspect(JAM.policy.pC545F199BE443C5FB0DC91C55134FB746FD8B074) {
             var v21432 = b$$27 = bytes$$16[v22540]
           }
           var v7066 = typeof v21432;
@@ -10936,7 +10936,7 @@ function pdfjsWrapper() {
           var v2724 = i$$151 < numCodeLenCodes;
           for(;v2724;) {
             var v2722 = codeLenCodeLengths;
-            introspect(JAMScript.introspectors.processC545F199BE443C5FB0DC91C55134FB746FD8B074) {
+            introspect(JAM.policy.pC545F199BE443C5FB0DC91C55134FB746FD8B074) {
               var v2723 = codeLenCodeMap[i$$151]
             }
             var v23435 = this.getBits(3);
@@ -11032,7 +11032,7 @@ function pdfjsWrapper() {
           return
         }
         code1 = code1 - 257;
-        introspect(JAMScript.introspectors.processC545F199BE443C5FB0DC91C55134FB746FD8B074) {
+        introspect(JAM.policy.pC545F199BE443C5FB0DC91C55134FB746FD8B074) {
           code1 = lengthDecode[code1]
         }
         var code2$$1 = code1 >> 16;
@@ -11043,7 +11043,7 @@ function pdfjsWrapper() {
         var v2744 = code1 & 65535;
         len$$2 = v2744 + code2$$1;
         code1 = this.getCode(distCodeTable);
-        introspect(JAMScript.introspectors.processC545F199BE443C5FB0DC91C55134FB746FD8B074) {
+        introspect(JAM.policy.pC545F199BE443C5FB0DC91C55134FB746FD8B074) {
           code1 = distDecode[code1]
         }
         code2$$1 = code1 >> 16;
@@ -11078,7 +11078,7 @@ function pdfjsWrapper() {
       var i$$150 = 0;
       var v2752 = i$$150 < n$$31;
       for(;v2752;) {
-        introspect(JAMScript.introspectors.processC545F199BE443C5FB0DC91C55134FB746FD8B074) {
+        introspect(JAM.policy.pC545F199BE443C5FB0DC91C55134FB746FD8B074) {
           var v7071 = lengths[i$$150]
         }
         var v2751 = v7071 > maxLen$$1;
@@ -11098,7 +11098,7 @@ function pdfjsWrapper() {
         var val = 0;
         var v2759 = val < n$$31;
         for(;v2759;) {
-          introspect(JAMScript.introspectors.processC545F199BE443C5FB0DC91C55134FB746FD8B074) {
+          introspect(JAM.policy.pC545F199BE443C5FB0DC91C55134FB746FD8B074) {
             var v7072 = lengths[val]
           }
           var v2758 = v7072 == len$$1;
@@ -11147,7 +11147,7 @@ function pdfjsWrapper() {
         var b$$26;
         var v22541 = bytesPos$$2;
         bytesPos$$2 = bytesPos$$2 + 1;
-        introspect(JAMScript.introspectors.processC545F199BE443C5FB0DC91C55134FB746FD8B074) {
+        introspect(JAM.policy.pC545F199BE443C5FB0DC91C55134FB746FD8B074) {
           var v21433 = b$$26 = bytes$$15[v22541]
         }
         var v7073 = typeof v21433;
@@ -11163,7 +11163,7 @@ function pdfjsWrapper() {
       var v21434 = 1 << maxLen;
       var v7075 = v21434 - 1;
       var v2763 = codeBuf$$2 & v7075;
-      introspect(JAMScript.introspectors.processC545F199BE443C5FB0DC91C55134FB746FD8B074) {
+      introspect(JAM.policy.pC545F199BE443C5FB0DC91C55134FB746FD8B074) {
         var code$$16 = codes$$2[v2763]
       }
       var codeLen = code$$16 >> 16;
@@ -11197,7 +11197,7 @@ function pdfjsWrapper() {
       for(;v2766;) {
         var v22543 = bytesPos$$1;
         bytesPos$$1 = bytesPos$$1 + 1;
-        introspect(JAMScript.introspectors.processC545F199BE443C5FB0DC91C55134FB746FD8B074) {
+        introspect(JAM.policy.pC545F199BE443C5FB0DC91C55134FB746FD8B074) {
           var v21437 = b$$25 = bytes$$14[v22543]
         }
         var v7077 = typeof v21437;
@@ -11224,12 +11224,12 @@ function pdfjsWrapper() {
       this.dict = stream$$34.dict;
       var v2768 = bytesPos;
       bytesPos = bytesPos + 1;
-      introspect(JAMScript.introspectors.processC545F199BE443C5FB0DC91C55134FB746FD8B074) {
+      introspect(JAM.policy.pC545F199BE443C5FB0DC91C55134FB746FD8B074) {
         var cmf = bytes$$13[v2768]
       }
       var v2769 = bytesPos;
       bytesPos = bytesPos + 1;
-      introspect(JAMScript.introspectors.processC545F199BE443C5FB0DC91C55134FB746FD8B074) {
+      introspect(JAM.policy.pC545F199BE443C5FB0DC91C55134FB746FD8B074) {
         var flg = bytes$$13[v2769]
       }
       var v7080 = cmf == -1;
@@ -11456,7 +11456,7 @@ function pdfjsWrapper() {
       var v7101 = this.pos;
       var v22545 = this.pos;
       this.pos = v22545 + 1;
-      introspect(JAMScript.introspectors.processC545F199BE443C5FB0DC91C55134FB746FD8B074) {
+      introspect(JAM.policy.pC545F199BE443C5FB0DC91C55134FB746FD8B074) {
         var v2804 = v7100[v7101]
       }
       return String.fromCharCode(v2804)
@@ -11476,7 +11476,7 @@ function pdfjsWrapper() {
       }
       var v7104 = this.buffer;
       var v7105 = this.pos;
-      introspect(JAMScript.introspectors.processC545F199BE443C5FB0DC91C55134FB746FD8B074) {
+      introspect(JAM.policy.pC545F199BE443C5FB0DC91C55134FB746FD8B074) {
         var v2807 = v7104[v7105]
       }
       return String.fromCharCode(v2807)
@@ -11546,7 +11546,7 @@ function pdfjsWrapper() {
       var v2817 = this.pos;
       var v21456 = this.pos;
       this.pos = v21456 + 1;
-      introspect(JAMScript.introspectors.processC545F199BE443C5FB0DC91C55134FB746FD8B074) {
+      introspect(JAM.policy.pC545F199BE443C5FB0DC91C55134FB746FD8B074) {
         return v2816[v2817]
       }
     }
@@ -11643,7 +11643,7 @@ function pdfjsWrapper() {
       var v7117 = this.pos;
       var v22546 = this.pos;
       this.pos = v22546 + 1;
-      introspect(JAMScript.introspectors.processC545F199BE443C5FB0DC91C55134FB746FD8B074) {
+      introspect(JAM.policy.pC545F199BE443C5FB0DC91C55134FB746FD8B074) {
         var v2828 = v7116[v7117]
       }
       return String.fromCharCode(v2828)
@@ -11657,7 +11657,7 @@ function pdfjsWrapper() {
       }
       var v7120 = this.bytes;
       var v7121 = this.pos;
-      introspect(JAMScript.introspectors.processC545F199BE443C5FB0DC91C55134FB746FD8B074) {
+      introspect(JAM.policy.pC545F199BE443C5FB0DC91C55134FB746FD8B074) {
         var v2830 = v7120[v7121]
       }
       return String.fromCharCode(v2830)
@@ -11689,7 +11689,7 @@ function pdfjsWrapper() {
       var v2835 = this.pos;
       var v21457 = this.pos;
       this.pos = v21457 + 1;
-      introspect(JAMScript.introspectors.processC545F199BE443C5FB0DC91C55134FB746FD8B074) {
+      introspect(JAM.policy.pC545F199BE443C5FB0DC91C55134FB746FD8B074) {
         return v2834[v2835]
       }
     }
@@ -11942,7 +11942,7 @@ function pdfjsWrapper() {
         var ii$$65 = colorStops$$1.length;
         var v2889 = i$$148 < ii$$65;
         for(;v2889;) {
-          introspect(JAMScript.introspectors.processC545F199BE443C5FB0DC91C55134FB746FD8B074) {
+          introspect(JAM.policy.pC545F199BE443C5FB0DC91C55134FB746FD8B074) {
             var c$$18 = colorStops$$1[i$$148]
           }
           var v2887 = c$$18[0];
@@ -12079,7 +12079,7 @@ function pdfjsWrapper() {
     }
     function Pattern_shadingFromIR(raw$$7) {
       var v7139 = raw$$7[0];
-      introspect(JAMScript.introspectors.processC545F199BE443C5FB0DC91C55134FB746FD8B074) {
+      introspect(JAM.policy.pC545F199BE443C5FB0DC91C55134FB746FD8B074) {
         var v2907 = Shadings[v7139]
       }
       return v2907.fromIR(raw$$7)
@@ -12111,7 +12111,7 @@ function pdfjsWrapper() {
           var v22976 = obj1$$2.length;
           var v22549 = v22976 >= 2;
           if(v22549) {
-            introspect(JAMScript.introspectors.processC545F199BE443C5FB0DC91C55134FB746FD8B074) {
+            introspect(JAM.policy.pC545F199BE443C5FB0DC91C55134FB746FD8B074) {
               var v23130 = obj2$$2 = obj1$$2[index$$60]
             }
             var v22977 = isInt(v23130);
@@ -12323,7 +12323,7 @@ function pdfjsWrapper() {
           }else {
             var v21493 = specialChars;
             var v21494 = ch$$12.charCodeAt(0);
-            introspect(JAMScript.introspectors.processC545F199BE443C5FB0DC91C55134FB746FD8B074) {
+            introspect(JAM.policy.pC545F199BE443C5FB0DC91C55134FB746FD8B074) {
               var v7160 = v21493[v21494]
             }
             var v2929 = v7160 != 1;
@@ -12399,7 +12399,7 @@ function pdfjsWrapper() {
       if(v7161) {
         var v22553 = specialChars;
         var v22554 = ch$$12.charCodeAt(0);
-        introspect(JAMScript.introspectors.processC545F199BE443C5FB0DC91C55134FB746FD8B074) {
+        introspect(JAM.policy.pC545F199BE443C5FB0DC91C55134FB746FD8B074) {
           var v21496 = v22553[v22554]
         }
         v7161 = !v21496
@@ -12421,7 +12421,7 @@ function pdfjsWrapper() {
         if(v7164) {
           var v22556 = specialChars;
           var v22557 = ch$$12.charCodeAt(0);
-          introspect(JAMScript.introspectors.processC545F199BE443C5FB0DC91C55134FB746FD8B074) {
+          introspect(JAM.policy.pC545F199BE443C5FB0DC91C55134FB746FD8B074) {
             var v21498 = v22556[v22557]
           }
           v7164 = !v21498
@@ -12458,7 +12458,7 @@ function pdfjsWrapper() {
         }
         var v21499 = specialChars;
         var v21500 = ch$$11.charCodeAt(0);
-        introspect(JAMScript.introspectors.processC545F199BE443C5FB0DC91C55134FB746FD8B074) {
+        introspect(JAM.policy.pC545F199BE443C5FB0DC91C55134FB746FD8B074) {
           var v7165 = v21499[v21500]
         }
         var v2947 = v7165 != 1;
@@ -12474,7 +12474,7 @@ function pdfjsWrapper() {
           ch$$11 = stream$$28.getChar();
           var v21501 = specialChars;
           var v21502 = ch$$11.charCodeAt(0);
-          introspect(JAMScript.introspectors.processC545F199BE443C5FB0DC91C55134FB746FD8B074) {
+          introspect(JAM.policy.pC545F199BE443C5FB0DC91C55134FB746FD8B074) {
             var v7167 = v21501[v21502]
           }
           var v2944 = v7167 == 1;
@@ -12482,7 +12482,7 @@ function pdfjsWrapper() {
             ch$$11 = stream$$28.getChar();
             var v21503 = specialChars;
             var v21504 = ch$$11.charCodeAt(0);
-            introspect(JAMScript.introspectors.processC545F199BE443C5FB0DC91C55134FB746FD8B074) {
+            introspect(JAM.policy.pC545F199BE443C5FB0DC91C55134FB746FD8B074) {
               var v7168 = v21503[v21504]
             }
             v2944 = v7168 == 1
@@ -12511,7 +12511,7 @@ function pdfjsWrapper() {
       if(v7172) {
         var v22560 = specialChars;
         var v22561 = ch$$10.charCodeAt(0);
-        introspect(JAMScript.introspectors.processC545F199BE443C5FB0DC91C55134FB746FD8B074) {
+        introspect(JAM.policy.pC545F199BE443C5FB0DC91C55134FB746FD8B074) {
           var v21507 = v22560[v22561]
         }
         v7172 = !v21507
@@ -12551,7 +12551,7 @@ function pdfjsWrapper() {
         if(v7175) {
           var v22564 = specialChars;
           var v22565 = ch$$10.charCodeAt(0);
-          introspect(JAMScript.introspectors.processC545F199BE443C5FB0DC91C55134FB746FD8B074) {
+          introspect(JAM.policy.pC545F199BE443C5FB0DC91C55134FB746FD8B074) {
             var v21510 = v22564[v22565]
           }
           v7175 = !v21510
@@ -13296,7 +13296,7 @@ function pdfjsWrapper() {
       var i$$145 = 0;
       var v3050 = i$$145 < length$$53;
       for(;v3050;) {
-        introspect(JAMScript.introspectors.processC545F199BE443C5FB0DC91C55134FB746FD8B074) {
+        introspect(JAM.policy.pC545F199BE443C5FB0DC91C55134FB746FD8B074) {
           var v7236 = comps$$1[i$$145]
         }
         var v3049 = scale$$10 * v7236;
@@ -13486,14 +13486,14 @@ function pdfjsWrapper() {
         var v3082 = i$$141 < ii$$62;
         for(;v3082;) {
           var compIndex = i$$141 % numComps$$7;
-          introspect(JAMScript.introspectors.processC545F199BE443C5FB0DC91C55134FB746FD8B074) {
+          introspect(JAM.policy.pC545F199BE443C5FB0DC91C55134FB746FD8B074) {
             var value$$67 = buffer$$13[i$$141]
           }
           var value$$inline_107 = value$$67;
-          introspect(JAMScript.introspectors.processC545F199BE443C5FB0DC91C55134FB746FD8B074) {
+          introspect(JAM.policy.pC545F199BE443C5FB0DC91C55134FB746FD8B074) {
             var v3079 = decodeAddends[compIndex]
           }
-          introspect(JAMScript.introspectors.processC545F199BE443C5FB0DC91C55134FB746FD8B074) {
+          introspect(JAM.policy.pC545F199BE443C5FB0DC91C55134FB746FD8B074) {
             var v7247 = decodeCoefficients[compIndex]
           }
           var v3080 = value$$inline_107 * v7247;
@@ -13591,7 +13591,7 @@ function pdfjsWrapper() {
               var v3091 = buf$$2 << 8;
               var v7255 = bufferPos$$1;
               bufferPos$$1 = bufferPos$$1 + 1;
-              introspect(JAMScript.introspectors.processC545F199BE443C5FB0DC91C55134FB746FD8B074) {
+              introspect(JAM.policy.pC545F199BE443C5FB0DC91C55134FB746FD8B074) {
                 var v3092 = buffer$$13[v7255]
               }
               buf$$2 = v3091 | v3092;
@@ -13603,10 +13603,10 @@ function pdfjsWrapper() {
             if(needsDecode) {
               compIndex = i$$141 % numComps$$7;
               var value$$inline_112 = value$$67;
-              introspect(JAMScript.introspectors.processC545F199BE443C5FB0DC91C55134FB746FD8B074) {
+              introspect(JAM.policy.pC545F199BE443C5FB0DC91C55134FB746FD8B074) {
                 var v3094 = decodeAddends[compIndex]
               }
-              introspect(JAMScript.introspectors.processC545F199BE443C5FB0DC91C55134FB746FD8B074) {
+              introspect(JAM.policy.pC545F199BE443C5FB0DC91C55134FB746FD8B074) {
                 var v7256 = decodeCoefficients[compIndex]
               }
               var v3095 = value$$inline_112 * v7256;
@@ -13679,7 +13679,7 @@ function pdfjsWrapper() {
           oldIndex = v3106 + px;
           var v3110 = components$$1 === 1;
           if(v3110) {
-            introspect(JAMScript.introspectors.processC545F199BE443C5FB0DC91C55134FB746FD8B074) {
+            introspect(JAM.policy.pC545F199BE443C5FB0DC91C55134FB746FD8B074) {
               temp[newIndex] = pixels$$3[oldIndex]
             }
           }else {
@@ -13687,7 +13687,7 @@ function pdfjsWrapper() {
             if(v3109) {
               newIndex = newIndex * 3;
               oldIndex = oldIndex * 3;
-              introspect(JAMScript.introspectors.processC545F199BE443C5FB0DC91C55134FB746FD8B074) {
+              introspect(JAM.policy.pC545F199BE443C5FB0DC91C55134FB746FD8B074) {
                 temp[newIndex] = pixels$$3[oldIndex]
               }
               var v3107 = newIndex + 1;
@@ -13854,12 +13854,12 @@ function pdfjsWrapper() {
         var v3137 = i$$139 < v7275;
         for(;v3137;) {
           var v3132 = this.decode;
-          introspect(JAMScript.introspectors.processC545F199BE443C5FB0DC91C55134FB746FD8B074) {
+          introspect(JAM.policy.pC545F199BE443C5FB0DC91C55134FB746FD8B074) {
             var dmin$$1 = v3132[i$$139]
           }
           var v3133 = this.decode;
           var v3134 = i$$139 + 1;
-          introspect(JAMScript.introspectors.processC545F199BE443C5FB0DC91C55134FB746FD8B074) {
+          introspect(JAM.policy.pC545F199BE443C5FB0DC91C55134FB746FD8B074) {
             var dmax$$1 = v3133[v3134]
           }
           var v3135 = this.decodeCoefficients;
@@ -13935,7 +13935,7 @@ function pdfjsWrapper() {
       var i$$138 = 0;
       var v3149 = i$$138 < count$$20;
       for(;v3149;) {
-        introspect(JAMScript.introspectors.processC545F199BE443C5FB0DC91C55134FB746FD8B074) {
+        introspect(JAM.policy.pC545F199BE443C5FB0DC91C55134FB746FD8B074) {
           var v21562 = objects$$1[i$$138]
         }
         var v7284 = v21562.length;
@@ -13998,11 +13998,11 @@ function pdfjsWrapper() {
             }
           }
         }
-        introspect(JAMScript.introspectors.processC545F199BE443C5FB0DC91C55134FB746FD8B074) {
+        introspect(JAM.policy.pC545F199BE443C5FB0DC91C55134FB746FD8B074) {
           var v3166 = objects$$1[i$$138]
         }
         if(v3166) {
-          introspect(JAMScript.introspectors.processC545F199BE443C5FB0DC91C55134FB746FD8B074) {
+          introspect(JAM.policy.pC545F199BE443C5FB0DC91C55134FB746FD8B074) {
             var v21563 = objects$$1[i$$138]
           }
           var v7292 = v21563.length;
@@ -14016,27 +14016,27 @@ function pdfjsWrapper() {
       i$$138 = 0;
       var v3174 = i$$138 < count$$20;
       for(;v3174;) {
-        introspect(JAMScript.introspectors.processC545F199BE443C5FB0DC91C55134FB746FD8B074) {
+        introspect(JAM.policy.pC545F199BE443C5FB0DC91C55134FB746FD8B074) {
           var v3170 = trackers$$1[i$$138]
         }
         if(v3170) {
-          introspect(JAMScript.introspectors.processC545F199BE443C5FB0DC91C55134FB746FD8B074) {
+          introspect(JAM.policy.pC545F199BE443C5FB0DC91C55134FB746FD8B074) {
             var v3168 = trackers$$1[i$$138]
           }
           var v3169 = data$$82.length;
           v3168.offset(v3169)
         }
         var j$$46 = 0;
-        introspect(JAMScript.introspectors.processC545F199BE443C5FB0DC91C55134FB746FD8B074) {
+        introspect(JAM.policy.pC545F199BE443C5FB0DC91C55134FB746FD8B074) {
           var v3171 = objects$$1[i$$138]
         }
         var jj$$12 = v3171.length;
         var v3173 = j$$46 < jj$$12;
         for(;v3173;) {
-          introspect(JAMScript.introspectors.processC545F199BE443C5FB0DC91C55134FB746FD8B074) {
+          introspect(JAM.policy.pC545F199BE443C5FB0DC91C55134FB746FD8B074) {
             var v7294 = objects$$1[i$$138]
           }
-          introspect(JAMScript.introspectors.processC545F199BE443C5FB0DC91C55134FB746FD8B074) {
+          introspect(JAM.policy.pC545F199BE443C5FB0DC91C55134FB746FD8B074) {
             var v3172 = v7294[j$$46]
           }
           data$$82.push(v3172);
@@ -14088,7 +14088,7 @@ function pdfjsWrapper() {
       var ii$$60 = strings$$10.length;
       var v3182 = i$$136 < ii$$60;
       for(;v3182;) {
-        introspect(JAMScript.introspectors.processC545F199BE443C5FB0DC91C55134FB746FD8B074) {
+        introspect(JAM.policy.pC545F199BE443C5FB0DC91C55134FB746FD8B074) {
           var v7295 = strings$$10[i$$136]
         }
         var v3181 = stringToArray$$1(v7295);
@@ -14105,7 +14105,7 @@ function pdfjsWrapper() {
       var v7296 = order$$1.length;
       var v3200 = i$$135 < v7296;
       for(;v3200;) {
-        introspect(JAMScript.introspectors.processC545F199BE443C5FB0DC91C55134FB746FD8B074) {
+        introspect(JAM.policy.pC545F199BE443C5FB0DC91C55134FB746FD8B074) {
           var key$$45 = order$$1[i$$135]
         }
         var v21564 = dict$$20.values;
@@ -14118,11 +14118,11 @@ function pdfjsWrapper() {
           continue
         }
         var v3184 = dict$$20.values;
-        introspect(JAMScript.introspectors.processC545F199BE443C5FB0DC91C55134FB746FD8B074) {
+        introspect(JAM.policy.pC545F199BE443C5FB0DC91C55134FB746FD8B074) {
           var values$$5 = v3184[key$$45]
         }
         var v3185 = dict$$20.types;
-        introspect(JAMScript.introspectors.processC545F199BE443C5FB0DC91C55134FB746FD8B074) {
+        introspect(JAM.policy.pC545F199BE443C5FB0DC91C55134FB746FD8B074) {
           var types$$2 = v3185[key$$45]
         }
         var v7299 = isArray(types$$2);
@@ -14147,10 +14147,10 @@ function pdfjsWrapper() {
         var jj$$11 = types$$2.length;
         var v3198 = j$$45 < jj$$11;
         for(;v3198;) {
-          introspect(JAMScript.introspectors.processC545F199BE443C5FB0DC91C55134FB746FD8B074) {
+          introspect(JAM.policy.pC545F199BE443C5FB0DC91C55134FB746FD8B074) {
             var type$$41 = types$$2[j$$45]
           }
-          introspect(JAMScript.introspectors.processC545F199BE443C5FB0DC91C55134FB746FD8B074) {
+          introspect(JAM.policy.pC545F199BE443C5FB0DC91C55134FB746FD8B074) {
             var value$$65 = values$$5[j$$45]
           }
           switch(type$$41) {
@@ -14162,7 +14162,7 @@ function pdfjsWrapper() {
               break;
             case "offset":
               var v3190 = dict$$20.keyToNameMap;
-              introspect(JAMScript.introspectors.processC545F199BE443C5FB0DC91C55134FB746FD8B074) {
+              introspect(JAM.policy.pC545F199BE443C5FB0DC91C55134FB746FD8B074) {
                 var name$$65 = v3190[key$$45]
               }
               var v7303 = offsetTracker.isTracking(name$$65);
@@ -14183,7 +14183,7 @@ function pdfjsWrapper() {
               var kk$$1 = values$$5.length;
               var v3196 = k$$10 < kk$$1;
               for(;v3196;) {
-                introspect(JAMScript.introspectors.processC545F199BE443C5FB0DC91C55134FB746FD8B074) {
+                introspect(JAM.policy.pC545F199BE443C5FB0DC91C55134FB746FD8B074) {
                   var v7304 = values$$5[k$$10]
                 }
                 var v3195 = this.encodeNumber(v7304);
@@ -14200,7 +14200,7 @@ function pdfjsWrapper() {
           v3198 = j$$45 < jj$$11
         }
         var v7305 = dict$$20.opcodes;
-        introspect(JAMScript.introspectors.processC545F199BE443C5FB0DC91C55134FB746FD8B074) {
+        introspect(JAM.policy.pC545F199BE443C5FB0DC91C55134FB746FD8B074) {
           var v3199 = v7305[key$$45]
         }
         out$$5 = out$$5.concat(v3199);
@@ -14215,7 +14215,7 @@ function pdfjsWrapper() {
       var ii$$59 = dicts$$1.length;
       var v3208 = i$$134 < ii$$59;
       for(;v3208;) {
-        introspect(JAMScript.introspectors.processC545F199BE443C5FB0DC91C55134FB746FD8B074) {
+        introspect(JAM.policy.pC545F199BE443C5FB0DC91C55134FB746FD8B074) {
           var fontDict$$2 = dicts$$1[i$$134]
         }
         var v21565 = fontDict$$2.privateDict;
@@ -14236,7 +14236,7 @@ function pdfjsWrapper() {
         var privateDictData = this.compileDict(privateDict$$1, privateDictTracker);
         var v3202 = output$$4.length;
         privateDictTracker.offset(v3202);
-        introspect(JAMScript.introspectors.processC545F199BE443C5FB0DC91C55134FB746FD8B074) {
+        introspect(JAM.policy.pC545F199BE443C5FB0DC91C55134FB746FD8B074) {
           var v3203 = trackers[i$$134]
         }
         var v7308 = privateDictData.length;
@@ -14269,7 +14269,7 @@ function pdfjsWrapper() {
       var ii$$58 = dicts.length;
       var v3209 = i$$133 < ii$$58;
       for(;v3209;) {
-        introspect(JAMScript.introspectors.processC545F199BE443C5FB0DC91C55134FB746FD8B074) {
+        introspect(JAM.policy.pC545F199BE443C5FB0DC91C55134FB746FD8B074) {
           var fontDict$$1 = dicts[i$$133]
         }
         var fontDictTracker = new CFFOffsetTracker;
@@ -14289,7 +14289,7 @@ function pdfjsWrapper() {
       var ii$$57 = names$$6.length;
       var v3211 = i$$132 < ii$$57;
       for(;v3211;) {
-        introspect(JAMScript.introspectors.processC545F199BE443C5FB0DC91C55134FB746FD8B074) {
+        introspect(JAM.policy.pC545F199BE443C5FB0DC91C55134FB746FD8B074) {
           var v7312 = names$$6[i$$132]
         }
         var v3210 = stringToArray$$1(v7312);
@@ -14432,12 +14432,12 @@ function pdfjsWrapper() {
       ii$$56 = nibbles.length;
       var v3244 = i$$131 < ii$$56;
       for(;v3244;) {
-        introspect(JAMScript.introspectors.processC545F199BE443C5FB0DC91C55134FB746FD8B074) {
+        introspect(JAM.policy.pC545F199BE443C5FB0DC91C55134FB746FD8B074) {
           var v21568 = nibbles[i$$131]
         }
         var v7327 = v21568 << 4;
         var v21569 = i$$131 + 1;
-        introspect(JAMScript.introspectors.processC545F199BE443C5FB0DC91C55134FB746FD8B074) {
+        introspect(JAM.policy.pC545F199BE443C5FB0DC91C55134FB746FD8B074) {
           var v7328 = nibbles[v21569]
         }
         var v3243 = v7327 | v7328;
@@ -14608,7 +14608,7 @@ function pdfjsWrapper() {
       }
       var data$$79 = output$$2.data;
       var v3283 = this.offsets;
-      introspect(JAMScript.introspectors.processC545F199BE443C5FB0DC91C55134FB746FD8B074) {
+      introspect(JAM.policy.pC545F199BE443C5FB0DC91C55134FB746FD8B074) {
         var dataOffset = v3283[key$$44]
       }
       var size$$11 = 5;
@@ -14622,31 +14622,31 @@ function pdfjsWrapper() {
         var offset2 = offset0$$1 + 2;
         var offset3 = offset0$$1 + 3;
         var offset4 = offset0$$1 + 4;
-        introspect(JAMScript.introspectors.processC545F199BE443C5FB0DC91C55134FB746FD8B074) {
+        introspect(JAM.policy.pC545F199BE443C5FB0DC91C55134FB746FD8B074) {
           var v21578 = data$$79[offset0$$1]
         }
         var v7346 = v21578 !== 29;
         var v21580 = !v7346;
         if(v21580) {
-          introspect(JAMScript.introspectors.processC545F199BE443C5FB0DC91C55134FB746FD8B074) {
+          introspect(JAM.policy.pC545F199BE443C5FB0DC91C55134FB746FD8B074) {
             var v22582 = data$$79[offset1$$1]
           }
           var v21579 = v22582 !== 0;
           var v22584 = !v21579;
           if(v22584) {
-            introspect(JAMScript.introspectors.processC545F199BE443C5FB0DC91C55134FB746FD8B074) {
+            introspect(JAM.policy.pC545F199BE443C5FB0DC91C55134FB746FD8B074) {
               var v22981 = data$$79[offset2]
             }
             var v22583 = v22981 !== 0;
             var v22983 = !v22583;
             if(v22983) {
-              introspect(JAMScript.introspectors.processC545F199BE443C5FB0DC91C55134FB746FD8B074) {
+              introspect(JAM.policy.pC545F199BE443C5FB0DC91C55134FB746FD8B074) {
                 var v23131 = data$$79[offset3]
               }
               var v22982 = v23131 !== 0;
               var v23133 = !v22982;
               if(v23133) {
-                introspect(JAMScript.introspectors.processC545F199BE443C5FB0DC91C55134FB746FD8B074) {
+                introspect(JAM.policy.pC545F199BE443C5FB0DC91C55134FB746FD8B074) {
                   var v23132 = data$$79[offset4]
                 }
                 v22982 = v23132 !== 0
@@ -14661,7 +14661,7 @@ function pdfjsWrapper() {
         if(v3285) {
           error$$3("writing to an offset that is not empty")
         }
-        introspect(JAMScript.introspectors.processC545F199BE443C5FB0DC91C55134FB746FD8B074) {
+        introspect(JAM.policy.pC545F199BE443C5FB0DC91C55134FB746FD8B074) {
           var value$$61 = values$$4[i$$129]
         }
         data$$79[offset0$$1] = 29;
@@ -14682,7 +14682,7 @@ function pdfjsWrapper() {
       var v3291 = this.offsets;
       for(key$$43 in v3291) {
         var v3290 = this.offsets;
-        introspect(JAMScript.introspectors.processC545F199BE443C5FB0DC91C55134FB746FD8B074) {
+        introspect(JAM.policy.pC545F199BE443C5FB0DC91C55134FB746FD8B074) {
           var v21581 = v3290[key$$43]
         }
         v3290[key$$43] = v21581 + value$$60
@@ -14871,7 +14871,7 @@ function pdfjsWrapper() {
       var ii$$53 = layout.length;
       var v3361 = i$$128 < ii$$53;
       for(;v3361;) {
-        introspect(JAMScript.introspectors.processC545F199BE443C5FB0DC91C55134FB746FD8B074) {
+        introspect(JAM.policy.pC545F199BE443C5FB0DC91C55134FB746FD8B074) {
           var entry$$2 = layout[i$$128]
         }
         var v3352;
@@ -14919,7 +14919,7 @@ function pdfjsWrapper() {
     function CFFDict_removeByName(name$$64) {
       var v3362 = this.values;
       var v7391 = this.nameToKeyMap;
-      introspect(JAMScript.introspectors.processC545F199BE443C5FB0DC91C55134FB746FD8B074) {
+      introspect(JAM.policy.pC545F199BE443C5FB0DC91C55134FB746FD8B074) {
         var v3363 = v7391[name$$64]
       }
       delete v3362[v3363];
@@ -14935,7 +14935,7 @@ function pdfjsWrapper() {
         error$$3(v3364)
       }
       var v3366 = this.nameToKeyMap;
-      introspect(JAMScript.introspectors.processC545F199BE443C5FB0DC91C55134FB746FD8B074) {
+      introspect(JAM.policy.pC545F199BE443C5FB0DC91C55134FB746FD8B074) {
         var key$$39 = v3366[name$$63]
       }
       var v21588 = this.values;
@@ -14943,18 +14943,18 @@ function pdfjsWrapper() {
       var v3368 = !v7394;
       if(v3368) {
         var v3367 = this.defaults;
-        introspect(JAMScript.introspectors.processC545F199BE443C5FB0DC91C55134FB746FD8B074) {
+        introspect(JAM.policy.pC545F199BE443C5FB0DC91C55134FB746FD8B074) {
           return v3367[key$$39]
         }
       }
       var v3369 = this.values;
-      introspect(JAMScript.introspectors.processC545F199BE443C5FB0DC91C55134FB746FD8B074) {
+      introspect(JAM.policy.pC545F199BE443C5FB0DC91C55134FB746FD8B074) {
         return v3369[key$$39]
       }
     }
     function CFFDict_hasName(name$$62) {
       var v7395 = this.nameToKeyMap;
-      introspect(JAMScript.introspectors.processC545F199BE443C5FB0DC91C55134FB746FD8B074) {
+      introspect(JAM.policy.pC545F199BE443C5FB0DC91C55134FB746FD8B074) {
         var v3370 = v7395[name$$62]
       }
       var v3371 = this.values;
@@ -14973,7 +14973,7 @@ function pdfjsWrapper() {
         return true
       }
       var v3374 = this.types;
-      introspect(JAMScript.introspectors.processC545F199BE443C5FB0DC91C55134FB746FD8B074) {
+      introspect(JAM.policy.pC545F199BE443C5FB0DC91C55134FB746FD8B074) {
         var type$$40 = v3374[key$$38]
       }
       var v7398 = type$$40 === "num";
@@ -15012,7 +15012,7 @@ function pdfjsWrapper() {
   function CFFIndexClosure() {
     function CFFIndex_get(index$$58) {
       var v3377 = this.objects;
-      introspect(JAMScript.introspectors.processC545F199BE443C5FB0DC91C55134FB746FD8B074) {
+      introspect(JAM.policy.pC545F199BE443C5FB0DC91C55134FB746FD8B074) {
         return v3377[index$$58]
       }
     }
@@ -15052,7 +15052,7 @@ function pdfjsWrapper() {
       }
       var v3382 = v7403;
       if(v3382) {
-        introspect(JAMScript.introspectors.processC545F199BE443C5FB0DC91C55134FB746FD8B074) {
+        introspect(JAM.policy.pC545F199BE443C5FB0DC91C55134FB746FD8B074) {
           return CFFStandardStrings[index$$57]
         }
       }
@@ -15063,7 +15063,7 @@ function pdfjsWrapper() {
       if(v3385) {
         var v3383 = this.strings;
         var v3384 = index$$57 - 391;
-        introspect(JAMScript.introspectors.processC545F199BE443C5FB0DC91C55134FB746FD8B074) {
+        introspect(JAM.policy.pC545F199BE443C5FB0DC91C55134FB746FD8B074) {
           return v3383[v3384]
         }
       }
@@ -15117,7 +15117,7 @@ function pdfjsWrapper() {
       var bytes$$9 = this.bytes;
       var v3388 = pos$$9;
       pos$$9 = pos$$9 + 1;
-      introspect(JAMScript.introspectors.processC545F199BE443C5FB0DC91C55134FB746FD8B074) {
+      introspect(JAM.policy.pC545F199BE443C5FB0DC91C55134FB746FD8B074) {
         var format$$10 = bytes$$9[v3388]
       }
       var fdSelect = [];
@@ -15128,7 +15128,7 @@ function pdfjsWrapper() {
           for(;v3390;) {
             var v3389 = pos$$9;
             pos$$9 = pos$$9 + 1;
-            introspect(JAMScript.introspectors.processC545F199BE443C5FB0DC91C55134FB746FD8B074) {
+            introspect(JAM.policy.pC545F199BE443C5FB0DC91C55134FB746FD8B074) {
               var id$$4 = bytes$$9[v3389]
             }
             fdSelect.push(id$$4);
@@ -15139,13 +15139,13 @@ function pdfjsWrapper() {
         case 3:
           var v21593 = pos$$9;
           pos$$9 = pos$$9 + 1;
-          introspect(JAMScript.introspectors.processC545F199BE443C5FB0DC91C55134FB746FD8B074) {
+          introspect(JAM.policy.pC545F199BE443C5FB0DC91C55134FB746FD8B074) {
             var v7408 = bytes$$9[v21593]
           }
           var v3391 = v7408 << 8;
           var v7409 = pos$$9;
           pos$$9 = pos$$9 + 1;
-          introspect(JAMScript.introspectors.processC545F199BE443C5FB0DC91C55134FB746FD8B074) {
+          introspect(JAM.policy.pC545F199BE443C5FB0DC91C55134FB746FD8B074) {
             var v3392 = bytes$$9[v7409]
           }
           var rangesCount$$1 = v3391 | v3392;
@@ -15154,27 +15154,27 @@ function pdfjsWrapper() {
           for(;v3399;) {
             var v21594 = pos$$9;
             pos$$9 = pos$$9 + 1;
-            introspect(JAMScript.introspectors.processC545F199BE443C5FB0DC91C55134FB746FD8B074) {
+            introspect(JAM.policy.pC545F199BE443C5FB0DC91C55134FB746FD8B074) {
               var v7410 = bytes$$9[v21594]
             }
             var v3393 = v7410 << 8;
             var v7411 = pos$$9;
             pos$$9 = pos$$9 + 1;
-            introspect(JAMScript.introspectors.processC545F199BE443C5FB0DC91C55134FB746FD8B074) {
+            introspect(JAM.policy.pC545F199BE443C5FB0DC91C55134FB746FD8B074) {
               var v3394 = bytes$$9[v7411]
             }
             var first$$4 = v3393 | v3394;
             var v3395 = pos$$9;
             pos$$9 = pos$$9 + 1;
-            introspect(JAMScript.introspectors.processC545F199BE443C5FB0DC91C55134FB746FD8B074) {
+            introspect(JAM.policy.pC545F199BE443C5FB0DC91C55134FB746FD8B074) {
               var fdIndex = bytes$$9[v3395]
             }
-            introspect(JAMScript.introspectors.processC545F199BE443C5FB0DC91C55134FB746FD8B074) {
+            introspect(JAM.policy.pC545F199BE443C5FB0DC91C55134FB746FD8B074) {
               var v7412 = bytes$$9[pos$$9]
             }
             var v3396 = v7412 << 8;
             var v7413 = pos$$9 + 1;
-            introspect(JAMScript.introspectors.processC545F199BE443C5FB0DC91C55134FB746FD8B074) {
+            introspect(JAM.policy.pC545F199BE443C5FB0DC91C55134FB746FD8B074) {
               var v3397 = bytes$$9[v7413]
             }
             var next$$2 = v3396 | v3397;
@@ -15226,7 +15226,7 @@ function pdfjsWrapper() {
         var ii$$52 = charset$$4.length;
         var v3405 = i$$125 < ii$$52;
         for(;v3405;) {
-          introspect(JAMScript.introspectors.processC545F199BE443C5FB0DC91C55134FB746FD8B074) {
+          introspect(JAM.policy.pC545F199BE443C5FB0DC91C55134FB746FD8B074) {
             var v3403 = charset$$4[i$$125]
           }
           var index$$56 = baseEncoding$$1.indexOf(v3403);
@@ -15242,7 +15242,7 @@ function pdfjsWrapper() {
         var dataStart = pos$$8;
         var v3406 = pos$$8;
         pos$$8 = pos$$8 + 1;
-        introspect(JAMScript.introspectors.processC545F199BE443C5FB0DC91C55134FB746FD8B074) {
+        introspect(JAM.policy.pC545F199BE443C5FB0DC91C55134FB746FD8B074) {
           format$$9 = bytes$$8[v3406]
         }
         var v3416 = format$$9 & 127;
@@ -15250,7 +15250,7 @@ function pdfjsWrapper() {
           case 0:
             var v3407 = pos$$8;
             pos$$8 = pos$$8 + 1;
-            introspect(JAMScript.introspectors.processC545F199BE443C5FB0DC91C55134FB746FD8B074) {
+            introspect(JAM.policy.pC545F199BE443C5FB0DC91C55134FB746FD8B074) {
               var glyphsCount = bytes$$8[v3407]
             }
             i$$125 = 1;
@@ -15258,7 +15258,7 @@ function pdfjsWrapper() {
             for(;v3409;) {
               var v7415 = pos$$8;
               pos$$8 = pos$$8 + 1;
-              introspect(JAMScript.introspectors.processC545F199BE443C5FB0DC91C55134FB746FD8B074) {
+              introspect(JAM.policy.pC545F199BE443C5FB0DC91C55134FB746FD8B074) {
                 var v3408 = bytes$$8[v7415]
               }
               encoding$$9[v3408] = i$$125;
@@ -15269,7 +15269,7 @@ function pdfjsWrapper() {
           case 1:
             var v3410 = pos$$8;
             pos$$8 = pos$$8 + 1;
-            introspect(JAMScript.introspectors.processC545F199BE443C5FB0DC91C55134FB746FD8B074) {
+            introspect(JAM.policy.pC545F199BE443C5FB0DC91C55134FB746FD8B074) {
               var rangesCount = bytes$$8[v3410]
             }
             gid$$1 = 1;
@@ -15278,12 +15278,12 @@ function pdfjsWrapper() {
             for(;v3414;) {
               var v3411 = pos$$8;
               pos$$8 = pos$$8 + 1;
-              introspect(JAMScript.introspectors.processC545F199BE443C5FB0DC91C55134FB746FD8B074) {
+              introspect(JAM.policy.pC545F199BE443C5FB0DC91C55134FB746FD8B074) {
                 var start$$15 = bytes$$8[v3411]
               }
               var v3412 = pos$$8;
               pos$$8 = pos$$8 + 1;
-              introspect(JAMScript.introspectors.processC545F199BE443C5FB0DC91C55134FB746FD8B074) {
+              introspect(JAM.policy.pC545F199BE443C5FB0DC91C55134FB746FD8B074) {
                 var left$$2 = bytes$$8[v3412]
               }
               var j$$43 = start$$15;
@@ -15308,13 +15308,13 @@ function pdfjsWrapper() {
         var dataEnd = pos$$8;
         var v3424 = format$$9 & 128;
         if(v3424) {
-          introspect(JAMScript.introspectors.processC545F199BE443C5FB0DC91C55134FB746FD8B074) {
+          introspect(JAM.policy.pC545F199BE443C5FB0DC91C55134FB746FD8B074) {
             var v7419 = bytes$$8[dataStart]
           }
           bytes$$8[dataStart] = v7419 & 127;
           var v3417 = pos$$8;
           pos$$8 = pos$$8 + 1;
-          introspect(JAMScript.introspectors.processC545F199BE443C5FB0DC91C55134FB746FD8B074) {
+          introspect(JAM.policy.pC545F199BE443C5FB0DC91C55134FB746FD8B074) {
             var supplementsCount$$inline_102 = bytes$$8[v3417]
           }
           var i$$inline_103 = 0;
@@ -15322,18 +15322,18 @@ function pdfjsWrapper() {
           for(;v3423;) {
             var v3418 = pos$$8;
             pos$$8 = pos$$8 + 1;
-            introspect(JAMScript.introspectors.processC545F199BE443C5FB0DC91C55134FB746FD8B074) {
+            introspect(JAM.policy.pC545F199BE443C5FB0DC91C55134FB746FD8B074) {
               var code$$inline_104 = bytes$$8[v3418]
             }
             var v21596 = pos$$8;
             pos$$8 = pos$$8 + 1;
-            introspect(JAMScript.introspectors.processC545F199BE443C5FB0DC91C55134FB746FD8B074) {
+            introspect(JAM.policy.pC545F199BE443C5FB0DC91C55134FB746FD8B074) {
               var v7420 = bytes$$8[v21596]
             }
             var v3419 = v7420 << 8;
             var v21597 = pos$$8;
             pos$$8 = pos$$8 + 1;
-            introspect(JAMScript.introspectors.processC545F199BE443C5FB0DC91C55134FB746FD8B074) {
+            introspect(JAM.policy.pC545F199BE443C5FB0DC91C55134FB746FD8B074) {
               var v7421 = bytes$$8[v21597]
             }
             var v3420 = v7421 & 255;
@@ -15376,7 +15376,7 @@ function pdfjsWrapper() {
       var start$$14 = pos$$7;
       var v3432 = pos$$7;
       pos$$7 = pos$$7 + 1;
-      introspect(JAMScript.introspectors.processC545F199BE443C5FB0DC91C55134FB746FD8B074) {
+      introspect(JAM.policy.pC545F199BE443C5FB0DC91C55134FB746FD8B074) {
         var format$$8 = bytes$$7[v3432]
       }
       var charset$$3 = [".notdef"];
@@ -15388,13 +15388,13 @@ function pdfjsWrapper() {
           for(;v3436;) {
             var v21598 = pos$$7;
             pos$$7 = pos$$7 + 1;
-            introspect(JAMScript.introspectors.processC545F199BE443C5FB0DC91C55134FB746FD8B074) {
+            introspect(JAM.policy.pC545F199BE443C5FB0DC91C55134FB746FD8B074) {
               var v7424 = bytes$$7[v21598]
             }
             var v3433 = v7424 << 8;
             var v7425 = pos$$7;
             pos$$7 = pos$$7 + 1;
-            introspect(JAMScript.introspectors.processC545F199BE443C5FB0DC91C55134FB746FD8B074) {
+            introspect(JAM.policy.pC545F199BE443C5FB0DC91C55134FB746FD8B074) {
               var v3434 = bytes$$7[v7425]
             }
             var id$$3 = v3433 | v3434;
@@ -15416,19 +15416,19 @@ function pdfjsWrapper() {
           for(;v3442;) {
             var v21599 = pos$$7;
             pos$$7 = pos$$7 + 1;
-            introspect(JAMScript.introspectors.processC545F199BE443C5FB0DC91C55134FB746FD8B074) {
+            introspect(JAM.policy.pC545F199BE443C5FB0DC91C55134FB746FD8B074) {
               var v7428 = bytes$$7[v21599]
             }
             var v3437 = v7428 << 8;
             var v7429 = pos$$7;
             pos$$7 = pos$$7 + 1;
-            introspect(JAMScript.introspectors.processC545F199BE443C5FB0DC91C55134FB746FD8B074) {
+            introspect(JAM.policy.pC545F199BE443C5FB0DC91C55134FB746FD8B074) {
               var v3438 = bytes$$7[v7429]
             }
             id$$3 = v3437 | v3438;
             var v3439 = pos$$7;
             pos$$7 = pos$$7 + 1;
-            introspect(JAMScript.introspectors.processC545F199BE443C5FB0DC91C55134FB746FD8B074) {
+            introspect(JAM.policy.pC545F199BE443C5FB0DC91C55134FB746FD8B074) {
               var count$$19 = bytes$$7[v3439]
             }
             i$$124 = 0;
@@ -15458,25 +15458,25 @@ function pdfjsWrapper() {
           for(;v3449;) {
             var v21601 = pos$$7;
             pos$$7 = pos$$7 + 1;
-            introspect(JAMScript.introspectors.processC545F199BE443C5FB0DC91C55134FB746FD8B074) {
+            introspect(JAM.policy.pC545F199BE443C5FB0DC91C55134FB746FD8B074) {
               var v7433 = bytes$$7[v21601]
             }
             var v3443 = v7433 << 8;
             var v7434 = pos$$7;
             pos$$7 = pos$$7 + 1;
-            introspect(JAMScript.introspectors.processC545F199BE443C5FB0DC91C55134FB746FD8B074) {
+            introspect(JAM.policy.pC545F199BE443C5FB0DC91C55134FB746FD8B074) {
               var v3444 = bytes$$7[v7434]
             }
             id$$3 = v3443 | v3444;
             var v21602 = pos$$7;
             pos$$7 = pos$$7 + 1;
-            introspect(JAMScript.introspectors.processC545F199BE443C5FB0DC91C55134FB746FD8B074) {
+            introspect(JAM.policy.pC545F199BE443C5FB0DC91C55134FB746FD8B074) {
               var v7435 = bytes$$7[v21602]
             }
             var v3445 = v7435 << 8;
             var v7436 = pos$$7;
             pos$$7 = pos$$7 + 1;
-            introspect(JAMScript.introspectors.processC545F199BE443C5FB0DC91C55134FB746FD8B074) {
+            introspect(JAM.policy.pC545F199BE443C5FB0DC91C55134FB746FD8B074) {
               var v3446 = bytes$$7[v7436]
             }
             count$$19 = v3445 | v3446;
@@ -15586,14 +15586,14 @@ function pdfjsWrapper() {
         for(;v3465;) {
           var v3458 = j$$42;
           j$$42 = j$$42 + 1;
-          introspect(JAMScript.introspectors.processC545F199BE443C5FB0DC91C55134FB746FD8B074) {
+          introspect(JAM.policy.pC545F199BE443C5FB0DC91C55134FB746FD8B074) {
             var value$$57 = data$$77[v3458]
           }
           var v7444 = value$$57 == 12;
           if(v7444) {
             var v22590 = j$$42;
             j$$42 = j$$42 + 1;
-            introspect(JAMScript.introspectors.processC545F199BE443C5FB0DC91C55134FB746FD8B074) {
+            introspect(JAM.policy.pC545F199BE443C5FB0DC91C55134FB746FD8B074) {
               var v21611 = data$$77[v22590]
             }
             v7444 = v21611 == 0
@@ -15638,7 +15638,7 @@ function pdfjsWrapper() {
       var ii$$51 = dict$$18.length;
       var v3467 = i$$122 < ii$$51;
       for(;v3467;) {
-        introspect(JAMScript.introspectors.processC545F199BE443C5FB0DC91C55134FB746FD8B074) {
+        introspect(JAM.policy.pC545F199BE443C5FB0DC91C55134FB746FD8B074) {
           var pair = dict$$18[i$$122]
         }
         var key$$37 = pair[0];
@@ -15677,7 +15677,7 @@ function pdfjsWrapper() {
         var j$$41 = 0;
         var v3473 = j$$41 < length$$45;
         for(;v3473;) {
-          introspect(JAMScript.introspectors.processC545F199BE443C5FB0DC91C55134FB746FD8B074) {
+          introspect(JAM.policy.pC545F199BE443C5FB0DC91C55134FB746FD8B074) {
             var c$$17 = name$$61[j$$41]
           }
           var v7447 = j$$41 === 0;
@@ -15770,13 +15770,13 @@ function pdfjsWrapper() {
       var bytes$$6 = this.bytes;
       var v21615 = pos$$6;
       pos$$6 = pos$$6 + 1;
-      introspect(JAMScript.introspectors.processC545F199BE443C5FB0DC91C55134FB746FD8B074) {
+      introspect(JAM.policy.pC545F199BE443C5FB0DC91C55134FB746FD8B074) {
         var v7450 = bytes$$6[v21615]
       }
       var v3476 = v7450 << 8;
       var v7451 = pos$$6;
       pos$$6 = pos$$6 + 1;
-      introspect(JAMScript.introspectors.processC545F199BE443C5FB0DC91C55134FB746FD8B074) {
+      introspect(JAM.policy.pC545F199BE443C5FB0DC91C55134FB746FD8B074) {
         var v3477 = bytes$$6[v7451]
       }
       var count$$17 = v3476 | v3477;
@@ -15787,7 +15787,7 @@ function pdfjsWrapper() {
       if(v3483) {
         var v3478 = pos$$6;
         pos$$6 = pos$$6 + 1;
-        introspect(JAMScript.introspectors.processC545F199BE443C5FB0DC91C55134FB746FD8B074) {
+        introspect(JAM.policy.pC545F199BE443C5FB0DC91C55134FB746FD8B074) {
           var offsetSize = bytes$$6[v3478]
         }
         var v21616 = count$$17 + 1;
@@ -15805,7 +15805,7 @@ function pdfjsWrapper() {
             offset$$29 = offset$$29 << 8;
             var v21617 = pos$$6;
             pos$$6 = pos$$6 + 1;
-            introspect(JAMScript.introspectors.processC545F199BE443C5FB0DC91C55134FB746FD8B074) {
+            introspect(JAM.policy.pC545F199BE443C5FB0DC91C55134FB746FD8B074) {
               var v7453 = bytes$$6[v21617]
             }
             offset$$29 = offset$$29 + v7453;
@@ -15824,11 +15824,11 @@ function pdfjsWrapper() {
       ii$$48 = v3484 - 1;
       var v3487 = i$$119 < ii$$48;
       for(;v3487;) {
-        introspect(JAMScript.introspectors.processC545F199BE443C5FB0DC91C55134FB746FD8B074) {
+        introspect(JAM.policy.pC545F199BE443C5FB0DC91C55134FB746FD8B074) {
           var offsetStart = offsets$$1[i$$119]
         }
         var v3485 = i$$119 + 1;
-        introspect(JAMScript.introspectors.processC545F199BE443C5FB0DC91C55134FB746FD8B074) {
+        introspect(JAM.policy.pC545F199BE443C5FB0DC91C55134FB746FD8B074) {
           var offsetEnd = offsets$$1[v3485]
         }
         var v3486 = bytes$$6.subarray(offsetStart, offsetEnd);
@@ -15842,7 +15842,7 @@ function pdfjsWrapper() {
       function parseOperand() {
         var v3488 = pos$$5;
         pos$$5 = pos$$5 + 1;
-        introspect(JAMScript.introspectors.processC545F199BE443C5FB0DC91C55134FB746FD8B074) {
+        introspect(JAM.policy.pC545F199BE443C5FB0DC91C55134FB746FD8B074) {
           var value$$55 = dict$$17[v3488]
         }
         var v3510 = value$$55 === 30;
@@ -15856,7 +15856,7 @@ function pdfjsWrapper() {
           for(;v3492;) {
             var v3489 = pos$$5;
             pos$$5 = pos$$5 + 1;
-            introspect(JAMScript.introspectors.processC545F199BE443C5FB0DC91C55134FB746FD8B074) {
+            introspect(JAM.policy.pC545F199BE443C5FB0DC91C55134FB746FD8B074) {
               var b$$inline_97 = dict$$17[v3489]
             }
             var b1$$inline_98 = b$$inline_97 >> 4;
@@ -15865,7 +15865,7 @@ function pdfjsWrapper() {
             if(v3490) {
               break
             }
-            introspect(JAMScript.introspectors.processC545F199BE443C5FB0DC91C55134FB746FD8B074) {
+            introspect(JAM.policy.pC545F199BE443C5FB0DC91C55134FB746FD8B074) {
               var v7454 = lookup$$inline_95[b1$$inline_98]
             }
             str$$inline_93 = str$$inline_93 + v7454;
@@ -15873,7 +15873,7 @@ function pdfjsWrapper() {
             if(v3491) {
               break
             }
-            introspect(JAMScript.introspectors.processC545F199BE443C5FB0DC91C55134FB746FD8B074) {
+            introspect(JAM.policy.pC545F199BE443C5FB0DC91C55134FB746FD8B074) {
               var v7455 = lookup$$inline_95[b2$$inline_99]
             }
             str$$inline_93 = str$$inline_93 + v7455;
@@ -15886,13 +15886,13 @@ function pdfjsWrapper() {
           if(v3509) {
             var v3493 = pos$$5;
             pos$$5 = pos$$5 + 1;
-            introspect(JAMScript.introspectors.processC545F199BE443C5FB0DC91C55134FB746FD8B074) {
+            introspect(JAM.policy.pC545F199BE443C5FB0DC91C55134FB746FD8B074) {
               value$$55 = dict$$17[v3493]
             }
             var v3494 = value$$55 << 8;
             var v7456 = pos$$5;
             pos$$5 = pos$$5 + 1;
-            introspect(JAMScript.introspectors.processC545F199BE443C5FB0DC91C55134FB746FD8B074) {
+            introspect(JAM.policy.pC545F199BE443C5FB0DC91C55134FB746FD8B074) {
               var v3495 = dict$$17[v7456]
             }
             value$$55 = v3494 | v3495;
@@ -15902,27 +15902,27 @@ function pdfjsWrapper() {
             if(v3508) {
               var v3496 = pos$$5;
               pos$$5 = pos$$5 + 1;
-              introspect(JAMScript.introspectors.processC545F199BE443C5FB0DC91C55134FB746FD8B074) {
+              introspect(JAM.policy.pC545F199BE443C5FB0DC91C55134FB746FD8B074) {
                 value$$55 = dict$$17[v3496]
               }
               var v3497 = value$$55 << 8;
               var v7457 = pos$$5;
               pos$$5 = pos$$5 + 1;
-              introspect(JAMScript.introspectors.processC545F199BE443C5FB0DC91C55134FB746FD8B074) {
+              introspect(JAM.policy.pC545F199BE443C5FB0DC91C55134FB746FD8B074) {
                 var v3498 = dict$$17[v7457]
               }
               value$$55 = v3497 | v3498;
               var v3499 = value$$55 << 8;
               var v7458 = pos$$5;
               pos$$5 = pos$$5 + 1;
-              introspect(JAMScript.introspectors.processC545F199BE443C5FB0DC91C55134FB746FD8B074) {
+              introspect(JAM.policy.pC545F199BE443C5FB0DC91C55134FB746FD8B074) {
                 var v3500 = dict$$17[v7458]
               }
               value$$55 = v3499 | v3500;
               var v3501 = value$$55 << 8;
               var v7459 = pos$$5;
               pos$$5 = pos$$5 + 1;
-              introspect(JAMScript.introspectors.processC545F199BE443C5FB0DC91C55134FB746FD8B074) {
+              introspect(JAM.policy.pC545F199BE443C5FB0DC91C55134FB746FD8B074) {
                 var v3502 = dict$$17[v7459]
               }
               value$$55 = v3501 | v3502;
@@ -15946,7 +15946,7 @@ function pdfjsWrapper() {
                   var v7462 = v21618 * 256;
                   var v21619 = pos$$5;
                   pos$$5 = pos$$5 + 1;
-                  introspect(JAMScript.introspectors.processC545F199BE443C5FB0DC91C55134FB746FD8B074) {
+                  introspect(JAM.policy.pC545F199BE443C5FB0DC91C55134FB746FD8B074) {
                     var v7463 = dict$$17[v21619]
                   }
                   var v3503 = v7462 + v7463;
@@ -15963,7 +15963,7 @@ function pdfjsWrapper() {
                     var v7465 = -v21620;
                     var v21621 = pos$$5;
                     pos$$5 = pos$$5 + 1;
-                    introspect(JAMScript.introspectors.processC545F199BE443C5FB0DC91C55134FB746FD8B074) {
+                    introspect(JAM.policy.pC545F199BE443C5FB0DC91C55134FB746FD8B074) {
                       var v7466 = dict$$17[v21621]
                     }
                     var v3504 = v7465 - v7466;
@@ -15985,7 +15985,7 @@ function pdfjsWrapper() {
       var end$$7 = dict$$17.length;
       var v3517 = pos$$5 < end$$7;
       for(;v3517;) {
-        introspect(JAMScript.introspectors.processC545F199BE443C5FB0DC91C55134FB746FD8B074) {
+        introspect(JAM.policy.pC545F199BE443C5FB0DC91C55134FB746FD8B074) {
           var b$$22 = dict$$17[pos$$5]
         }
         var v3516 = b$$22 <= 21;
@@ -15994,7 +15994,7 @@ function pdfjsWrapper() {
           if(v3513) {
             var v3511 = b$$22 << 8;
             var v7467 = pos$$5 = pos$$5 + 1;
-            introspect(JAMScript.introspectors.processC545F199BE443C5FB0DC91C55134FB746FD8B074) {
+            introspect(JAM.policy.pC545F199BE443C5FB0DC91C55134FB746FD8B074) {
               var v3512 = dict$$17[v7467]
             }
             b$$22 = v3511 | v3512
@@ -16014,13 +16014,13 @@ function pdfjsWrapper() {
     function CFFParser_parseHeader() {
       var bytes$$5 = this.bytes;
       var offset$$28 = 0;
-      introspect(JAMScript.introspectors.processC545F199BE443C5FB0DC91C55134FB746FD8B074) {
+      introspect(JAM.policy.pC545F199BE443C5FB0DC91C55134FB746FD8B074) {
         var v7468 = bytes$$5[offset$$28]
       }
       var v3518 = v7468 != 1;
       for(;v3518;) {
         offset$$28 = offset$$28 + 1;
-        introspect(JAMScript.introspectors.processC545F199BE443C5FB0DC91C55134FB746FD8B074) {
+        introspect(JAM.policy.pC545F199BE443C5FB0DC91C55134FB746FD8B074) {
           var v7469 = bytes$$5[offset$$28]
         }
         v3518 = v7469 != 1
@@ -16148,7 +16148,7 @@ function pdfjsWrapper() {
       if(v3550) {
         var charcode$$3;
         for(charcode$$3 in encoding$$7) {
-          introspect(JAMScript.introspectors.processC545F199BE443C5FB0DC91C55134FB746FD8B074) {
+          introspect(JAM.policy.pC545F199BE443C5FB0DC91C55134FB746FD8B074) {
             var v3549 = encoding$$7[charcode$$3]
           }
           inverseEncoding[v3549] = charcode$$3 | 0
@@ -16160,7 +16160,7 @@ function pdfjsWrapper() {
       var ii$$46 = charsets.length;
       var v3554 = i$$117 < ii$$46;
       for(;v3554;) {
-        introspect(JAMScript.introspectors.processC545F199BE443C5FB0DC91C55134FB746FD8B074) {
+        introspect(JAM.policy.pC545F199BE443C5FB0DC91C55134FB746FD8B074) {
           var glyph$$5 = charsets[i$$117]
         }
         var v3551 = glyph$$5 == ".notdef";
@@ -16169,7 +16169,7 @@ function pdfjsWrapper() {
           v3554 = i$$117 < ii$$46;
           continue
         }
-        introspect(JAMScript.introspectors.processC545F199BE443C5FB0DC91C55134FB746FD8B074) {
+        introspect(JAM.policy.pC545F199BE443C5FB0DC91C55134FB746FD8B074) {
           var code$$13 = inverseEncoding[i$$117]
         }
         var v7478 = !code$$13;
@@ -16203,7 +16203,7 @@ function pdfjsWrapper() {
         }
         var unicode$$6 = nextUnusedUnicode;
         nextUnusedUnicode = nextUnusedUnicode + 1;
-        introspect(JAMScript.introspectors.processC545F199BE443C5FB0DC91C55134FB746FD8B074) {
+        introspect(JAM.policy.pC545F199BE443C5FB0DC91C55134FB746FD8B074) {
           var v21624 = inverseEncoding[i$$117]
         }
         var v22595 = !v21624;
@@ -16211,7 +16211,7 @@ function pdfjsWrapper() {
           v21624 = 0
         }
         var v7479 = v21624;
-        introspect(JAMScript.introspectors.processC545F199BE443C5FB0DC91C55134FB746FD8B074) {
+        introspect(JAM.policy.pC545F199BE443C5FB0DC91C55134FB746FD8B074) {
           var v7480 = charsets[i$$117]
         }
         var v3556 = {unicode:unicode$$6, code:v7479, gid:i$$117, glyph:v7480};
@@ -16240,7 +16240,7 @@ function pdfjsWrapper() {
       var ii$$45 = charstrings$$5.length;
       var v3561 = i$$116 < ii$$45;
       for(;v3561;) {
-        introspect(JAMScript.introspectors.processC545F199BE443C5FB0DC91C55134FB746FD8B074) {
+        introspect(JAM.policy.pC545F199BE443C5FB0DC91C55134FB746FD8B074) {
           var v7483 = charstrings$$5[i$$116]
         }
         var v3560 = v7483.gid;
@@ -16285,7 +16285,7 @@ function pdfjsWrapper() {
           continue
         }
         var v3564 = properties$$19.privateData;
-        introspect(JAMScript.introspectors.processC545F199BE443C5FB0DC91C55134FB746FD8B074) {
+        introspect(JAM.policy.pC545F199BE443C5FB0DC91C55134FB746FD8B074) {
           var value$$54 = v3564[field$$2]
         }
         var v3566 = isArray(value$$54);
@@ -16299,11 +16299,11 @@ function pdfjsWrapper() {
           var v3565 = i$$115 < ii$$44;
           for(;v3565;) {
             var v7488 = data$$74;
-            introspect(JAMScript.introspectors.processC545F199BE443C5FB0DC91C55134FB746FD8B074) {
+            introspect(JAM.policy.pC545F199BE443C5FB0DC91C55134FB746FD8B074) {
               var v22596 = value$$54[i$$115]
             }
             var v22986 = i$$115 - 1;
-            introspect(JAMScript.introspectors.processC545F199BE443C5FB0DC91C55134FB746FD8B074) {
+            introspect(JAM.policy.pC545F199BE443C5FB0DC91C55134FB746FD8B074) {
               var v22597 = value$$54[v22986]
             }
             var v21627 = v22596 - v22597;
@@ -16317,7 +16317,7 @@ function pdfjsWrapper() {
           var v7491 = self$$8.encodeNumber(value$$54);
           data$$74 = v7490 + v7491
         }
-        introspect(JAMScript.introspectors.processC545F199BE443C5FB0DC91C55134FB746FD8B074) {
+        introspect(JAM.policy.pC545F199BE443C5FB0DC91C55134FB746FD8B074) {
           var v7492 = fieldMap[field$$2]
         }
         data$$74 = data$$74 + v7492
@@ -16336,7 +16336,7 @@ function pdfjsWrapper() {
       var i$$114 = 0;
       var v3569 = i$$114 < count$$16;
       for(;v3569;) {
-        introspect(JAMScript.introspectors.processC545F199BE443C5FB0DC91C55134FB746FD8B074) {
+        introspect(JAM.policy.pC545F199BE443C5FB0DC91C55134FB746FD8B074) {
           var v7495 = charstrings$$4[i$$114]
         }
         var v3567 = v7495.glyph;
@@ -16373,7 +16373,7 @@ function pdfjsWrapper() {
         var v3571 = i$$113 < ii$$43;
         for(;v3571;) {
           var v7499 = dict$$16;
-          introspect(JAMScript.introspectors.processC545F199BE443C5FB0DC91C55134FB746FD8B074) {
+          introspect(JAM.policy.pC545F199BE443C5FB0DC91C55134FB746FD8B074) {
             var v21632 = boundingBox[i$$113]
           }
           var v7500 = self$$5.encodeNumber(v21632);
@@ -16461,7 +16461,7 @@ function pdfjsWrapper() {
     var cff$$1 = [];
     var index$$52;
     for(index$$52 in fields$$1) {
-      introspect(JAMScript.introspectors.processC545F199BE443C5FB0DC91C55134FB746FD8B074) {
+      introspect(JAM.policy.pC545F199BE443C5FB0DC91C55134FB746FD8B074) {
         var field$$1 = fields$$1[index$$52]
       }
       var i$$112 = 0;
@@ -16481,12 +16481,12 @@ function pdfjsWrapper() {
     var v7519 = charstring$$4.length;
     var v3602 = i$$111 < v7519;
     for(;v3602;) {
-      introspect(JAMScript.introspectors.processC545F199BE443C5FB0DC91C55134FB746FD8B074) {
+      introspect(JAM.policy.pC545F199BE443C5FB0DC91C55134FB746FD8B074) {
         var command$$1 = charstring$$4[i$$111]
       }
       var v3601 = command$$1.charAt;
       if(v3601) {
-        introspect(JAMScript.introspectors.processC545F199BE443C5FB0DC91C55134FB746FD8B074) {
+        introspect(JAM.policy.pC545F199BE443C5FB0DC91C55134FB746FD8B074) {
           var cmd$$5 = map$$2[command$$1]
         }
         var v3590 = !cmd$$5;
@@ -16508,7 +16508,7 @@ function pdfjsWrapper() {
         var v3600 = command$$1 > 32E3;
         if(v3600) {
           var v3595 = i$$111 + 1;
-          introspect(JAMScript.introspectors.processC545F199BE443C5FB0DC91C55134FB746FD8B074) {
+          introspect(JAM.policy.pC545F199BE443C5FB0DC91C55134FB746FD8B074) {
             var divisor = charstring$$4[v3595]
           }
           command$$1 = command$$1 / divisor;
@@ -16554,7 +16554,7 @@ function pdfjsWrapper() {
     i$$110 = 0;
     var v3609 = i$$110 < count$$15;
     for(;v3609;) {
-      introspect(JAMScript.introspectors.processC545F199BE443C5FB0DC91C55134FB746FD8B074) {
+      introspect(JAM.policy.pC545F199BE443C5FB0DC91C55134FB746FD8B074) {
         var subr = type1Subrs[i$$110]
       }
       var v3607 = !subr;
@@ -16575,7 +16575,7 @@ function pdfjsWrapper() {
     var i$$109 = 0;
     var v3612 = i$$109 < count$$14;
     for(;v3612;) {
-      introspect(JAMScript.introspectors.processC545F199BE443C5FB0DC91C55134FB746FD8B074) {
+      introspect(JAM.policy.pC545F199BE443C5FB0DC91C55134FB746FD8B074) {
         var v3610 = type1Charstrings[i$$109]
       }
       var charstring$$3 = v3610.charstring;
@@ -16603,14 +16603,14 @@ function pdfjsWrapper() {
     length$$43 = glyphs$$8.length;
     var v3617 = i$$108 < length$$43;
     for(;v3617;) {
-      introspect(JAMScript.introspectors.processC545F199BE443C5FB0DC91C55134FB746FD8B074) {
+      introspect(JAM.policy.pC545F199BE443C5FB0DC91C55134FB746FD8B074) {
         var item$$3 = glyphs$$8[i$$108]
       }
       glyphName$$4 = item$$3.glyph;
       var v3615;
       var v7524 = glyphName$$4 in GlyphsUnicode;
       if(v7524) {
-        introspect(JAMScript.introspectors.processC545F199BE443C5FB0DC91C55134FB746FD8B074) {
+        introspect(JAM.policy.pC545F199BE443C5FB0DC91C55134FB746FD8B074) {
           v3615 = GlyphsUnicode[glyphName$$4]
         }
       }else {
@@ -16689,11 +16689,11 @@ function pdfjsWrapper() {
       var v21651 = relativeOffset & 255;
       var v7537 = String.fromCharCode(v21648, v21649, v21650, v21651);
       data$$73 = v7536 + v7537;
-      introspect(JAMScript.introspectors.processC545F199BE443C5FB0DC91C55134FB746FD8B074) {
+      introspect(JAM.policy.pC545F199BE443C5FB0DC91C55134FB746FD8B074) {
         var v3626 = objects[i$$107]
       }
       if(v3626) {
-        introspect(JAMScript.introspectors.processC545F199BE443C5FB0DC91C55134FB746FD8B074) {
+        introspect(JAM.policy.pC545F199BE443C5FB0DC91C55134FB746FD8B074) {
           var v21652 = objects[i$$107]
         }
         var v7538 = v21652.length;
@@ -16707,7 +16707,7 @@ function pdfjsWrapper() {
     var v3630 = i$$107 < count$$13;
     for(;v3630;) {
       var j$$38 = 0;
-      introspect(JAMScript.introspectors.processC545F199BE443C5FB0DC91C55134FB746FD8B074) {
+      introspect(JAM.policy.pC545F199BE443C5FB0DC91C55134FB746FD8B074) {
         var v3628 = objects[i$$107]
       }
       var jj$$9 = v3628.length;
@@ -16716,16 +16716,16 @@ function pdfjsWrapper() {
         var v7540 = data$$73;
         var v21653;
         if(isByte) {
-          introspect(JAMScript.introspectors.processC545F199BE443C5FB0DC91C55134FB746FD8B074) {
+          introspect(JAM.policy.pC545F199BE443C5FB0DC91C55134FB746FD8B074) {
             var v23139 = objects[i$$107]
           }
-          introspect(JAMScript.introspectors.processC545F199BE443C5FB0DC91C55134FB746FD8B074) {
+          introspect(JAM.policy.pC545F199BE443C5FB0DC91C55134FB746FD8B074) {
             var v22993 = v23139[j$$38]
           }
           var v22615 = v22993 & 255;
           v21653 = String.fromCharCode(v22615)
         }else {
-          introspect(JAMScript.introspectors.processC545F199BE443C5FB0DC91C55134FB746FD8B074) {
+          introspect(JAM.policy.pC545F199BE443C5FB0DC91C55134FB746FD8B074) {
             var v22616 = objects[i$$107]
           }
           v21653 = v22616[j$$38]
@@ -16745,7 +16745,7 @@ function pdfjsWrapper() {
       var charsCache = this.charsCache;
       var glyphs$$7;
       if(charsCache) {
-        introspect(JAMScript.introspectors.processC545F199BE443C5FB0DC91C55134FB746FD8B074) {
+        introspect(JAM.policy.pC545F199BE443C5FB0DC91C55134FB746FD8B074) {
           glyphs$$7 = charsCache[chars]
         }
         if(glyphs$$7) {
@@ -16804,7 +16804,7 @@ function pdfjsWrapper() {
       var operatorList$$4;
       var disabled;
       var v3639 = this.widths;
-      introspect(JAMScript.introspectors.processC545F199BE443C5FB0DC91C55134FB746FD8B074) {
+      introspect(JAM.policy.pC545F199BE443C5FB0DC91C55134FB746FD8B074) {
         width$$22 = v3639[charcode$$1]
       }
       var v3669 = this.type;
@@ -16814,7 +16814,7 @@ function pdfjsWrapper() {
           if(v3642) {
             var v3640 = this.widths;
             var v21655 = this.unicodeToCID;
-            introspect(JAMScript.introspectors.processC545F199BE443C5FB0DC91C55134FB746FD8B074) {
+            introspect(JAM.policy.pC545F199BE443C5FB0DC91C55134FB746FD8B074) {
               var v7544 = v21655[charcode$$1]
             }
             var v21656 = !v7544;
@@ -16822,14 +16822,14 @@ function pdfjsWrapper() {
               v7544 = charcode$$1
             }
             var v3641 = v7544;
-            introspect(JAMScript.introspectors.processC545F199BE443C5FB0DC91C55134FB746FD8B074) {
+            introspect(JAM.policy.pC545F199BE443C5FB0DC91C55134FB746FD8B074) {
               width$$22 = v3640[v3641]
             }
             fontCharCode$$2 = mapPrivateUseChars(charcode$$1);
             break
           }
           var v7545 = this.toFontChar;
-          introspect(JAMScript.introspectors.processC545F199BE443C5FB0DC91C55134FB746FD8B074) {
+          introspect(JAM.policy.pC545F199BE443C5FB0DC91C55134FB746FD8B074) {
             var v3643 = v7545[charcode$$1]
           }
           var v7546 = !v3643;
@@ -16843,7 +16843,7 @@ function pdfjsWrapper() {
           if(v3646) {
             var v3644 = this.widths;
             var v21657 = this.unicodeToCID;
-            introspect(JAMScript.introspectors.processC545F199BE443C5FB0DC91C55134FB746FD8B074) {
+            introspect(JAM.policy.pC545F199BE443C5FB0DC91C55134FB746FD8B074) {
               var v7547 = v21657[charcode$$1]
             }
             var v21658 = !v7547;
@@ -16851,14 +16851,14 @@ function pdfjsWrapper() {
               v7547 = charcode$$1
             }
             var v3645 = v7547;
-            introspect(JAMScript.introspectors.processC545F199BE443C5FB0DC91C55134FB746FD8B074) {
+            introspect(JAM.policy.pC545F199BE443C5FB0DC91C55134FB746FD8B074) {
               width$$22 = v3644[v3645]
             }
             fontCharCode$$2 = mapPrivateUseChars(charcode$$1);
             break
           }
           var v7548 = this.toFontChar;
-          introspect(JAMScript.introspectors.processC545F199BE443C5FB0DC91C55134FB746FD8B074) {
+          introspect(JAM.policy.pC545F199BE443C5FB0DC91C55134FB746FD8B074) {
             var v3647 = v7548[charcode$$1]
           }
           var v7549 = !v3647;
@@ -16869,13 +16869,13 @@ function pdfjsWrapper() {
           break;
         case "Type1":
           var v7550 = this.differences;
-          introspect(JAMScript.introspectors.processC545F199BE443C5FB0DC91C55134FB746FD8B074) {
+          introspect(JAM.policy.pC545F199BE443C5FB0DC91C55134FB746FD8B074) {
             var v3648 = v7550[charcode$$1]
           }
           var v7552 = !v3648;
           if(v7552) {
             var v7551 = this.encoding;
-            introspect(JAMScript.introspectors.processC545F199BE443C5FB0DC91C55134FB746FD8B074) {
+            introspect(JAM.policy.pC545F199BE443C5FB0DC91C55134FB746FD8B074) {
               v3648 = v7551[charcode$$1]
             }
           }
@@ -16884,13 +16884,13 @@ function pdfjsWrapper() {
           var v3650 = !v7553;
           if(v3650) {
             var v3649 = this.widths;
-            introspect(JAMScript.introspectors.processC545F199BE443C5FB0DC91C55134FB746FD8B074) {
+            introspect(JAM.policy.pC545F199BE443C5FB0DC91C55134FB746FD8B074) {
               width$$22 = v3649[glyphName$$3]
             }
           }
           var v3652 = this.noUnicodeAdaptation;
           if(v3652) {
-            introspect(JAMScript.introspectors.processC545F199BE443C5FB0DC91C55134FB746FD8B074) {
+            introspect(JAM.policy.pC545F199BE443C5FB0DC91C55134FB746FD8B074) {
               var v7554 = GlyphsUnicode[glyphName$$3]
             }
             var v21659 = !v7554;
@@ -16902,12 +16902,12 @@ function pdfjsWrapper() {
             break
           }
           var v7555 = this.glyphNameMap;
-          introspect(JAMScript.introspectors.processC545F199BE443C5FB0DC91C55134FB746FD8B074) {
+          introspect(JAM.policy.pC545F199BE443C5FB0DC91C55134FB746FD8B074) {
             var v3653 = v7555[glyphName$$3]
           }
           var v7557 = !v3653;
           if(v7557) {
-            introspect(JAMScript.introspectors.processC545F199BE443C5FB0DC91C55134FB746FD8B074) {
+            introspect(JAM.policy.pC545F199BE443C5FB0DC91C55134FB746FD8B074) {
               var v7556 = GlyphsUnicode[glyphName$$3]
             }
             var v21660 = !v7556;
@@ -16920,19 +16920,19 @@ function pdfjsWrapper() {
           break;
         case "Type3":
           var v7558 = this.differences;
-          introspect(JAMScript.introspectors.processC545F199BE443C5FB0DC91C55134FB746FD8B074) {
+          introspect(JAM.policy.pC545F199BE443C5FB0DC91C55134FB746FD8B074) {
             var v3654 = v7558[charcode$$1]
           }
           var v7560 = !v3654;
           if(v7560) {
             var v7559 = this.encoding;
-            introspect(JAMScript.introspectors.processC545F199BE443C5FB0DC91C55134FB746FD8B074) {
+            introspect(JAM.policy.pC545F199BE443C5FB0DC91C55134FB746FD8B074) {
               v3654 = v7559[charcode$$1]
             }
           }
           glyphName$$3 = v3654;
           var v3655 = this.charProcOperatorList;
-          introspect(JAMScript.introspectors.processC545F199BE443C5FB0DC91C55134FB746FD8B074) {
+          introspect(JAM.policy.pC545F199BE443C5FB0DC91C55134FB746FD8B074) {
             operatorList$$4 = v3655[glyphName$$3]
           }
           fontCharCode$$2 = charcode$$1;
@@ -16941,7 +16941,7 @@ function pdfjsWrapper() {
           var v3657 = this.useToFontChar;
           if(v3657) {
             var v7561 = this.toFontChar;
-            introspect(JAMScript.introspectors.processC545F199BE443C5FB0DC91C55134FB746FD8B074) {
+            introspect(JAM.policy.pC545F199BE443C5FB0DC91C55134FB746FD8B074) {
               var v3656 = v7561[charcode$$1]
             }
             var v7562 = !v3656;
@@ -16952,13 +16952,13 @@ function pdfjsWrapper() {
             break
           }
           var v7563 = this.differences;
-          introspect(JAMScript.introspectors.processC545F199BE443C5FB0DC91C55134FB746FD8B074) {
+          introspect(JAM.policy.pC545F199BE443C5FB0DC91C55134FB746FD8B074) {
             var v3658 = v7563[charcode$$1]
           }
           var v7565 = !v3658;
           if(v7565) {
             var v7564 = this.encoding;
-            introspect(JAMScript.introspectors.processC545F199BE443C5FB0DC91C55134FB746FD8B074) {
+            introspect(JAM.policy.pC545F199BE443C5FB0DC91C55134FB746FD8B074) {
               v3658 = v7564[charcode$$1]
             }
           }
@@ -16966,7 +16966,7 @@ function pdfjsWrapper() {
           var v3660 = !glyphName$$3;
           if(v3660) {
             var v3659 = Encodings.StandardEncoding;
-            introspect(JAMScript.introspectors.processC545F199BE443C5FB0DC91C55134FB746FD8B074) {
+            introspect(JAM.policy.pC545F199BE443C5FB0DC91C55134FB746FD8B074) {
               glyphName$$3 = v3659[charcode$$1]
             }
           }
@@ -16974,13 +16974,13 @@ function pdfjsWrapper() {
           var v3662 = !v7566;
           if(v3662) {
             var v3661 = this.widths;
-            introspect(JAMScript.introspectors.processC545F199BE443C5FB0DC91C55134FB746FD8B074) {
+            introspect(JAM.policy.pC545F199BE443C5FB0DC91C55134FB746FD8B074) {
               width$$22 = v3661[glyphName$$3]
             }
           }
           var v3664 = this.noUnicodeAdaptation;
           if(v3664) {
-            introspect(JAMScript.introspectors.processC545F199BE443C5FB0DC91C55134FB746FD8B074) {
+            introspect(JAM.policy.pC545F199BE443C5FB0DC91C55134FB746FD8B074) {
               var v3663 = GlyphsUnicode[glyphName$$3]
             }
             var v7567 = !v3663;
@@ -17002,7 +17002,7 @@ function pdfjsWrapper() {
             var v7570 = this.useToFontChar;
             if(v7570) {
               var v7569 = this.toFontChar;
-              introspect(JAMScript.introspectors.processC545F199BE443C5FB0DC91C55134FB746FD8B074) {
+              introspect(JAM.policy.pC545F199BE443C5FB0DC91C55134FB746FD8B074) {
                 v3665 = v7569[charcode$$1]
               }
             }else {
@@ -17016,11 +17016,11 @@ function pdfjsWrapper() {
           var v7572 = glyphName$$3 in v21663;
           if(v7572) {
             var v7571 = this.glyphNameMap;
-            introspect(JAMScript.introspectors.processC545F199BE443C5FB0DC91C55134FB746FD8B074) {
+            introspect(JAM.policy.pC545F199BE443C5FB0DC91C55134FB746FD8B074) {
               v3667 = v7571[glyphName$$3]
             }
           }else {
-            introspect(JAMScript.introspectors.processC545F199BE443C5FB0DC91C55134FB746FD8B074) {
+            introspect(JAM.policy.pC545F199BE443C5FB0DC91C55134FB746FD8B074) {
               v3667 = GlyphsUnicode[glyphName$$3]
             }
           }
@@ -17038,7 +17038,7 @@ function pdfjsWrapper() {
         v3670 = charcode$$1
       }else {
         var v21665 = this.toUnicode;
-        introspect(JAMScript.introspectors.processC545F199BE443C5FB0DC91C55134FB746FD8B074) {
+        introspect(JAM.policy.pC545F199BE443C5FB0DC91C55134FB746FD8B074) {
           var v7574 = v21665[charcode$$1]
         }
         var v21666 = !v7574;
@@ -17067,7 +17067,7 @@ function pdfjsWrapper() {
       var v7579 = this.unicodeIsEnabled;
       if(v7579) {
         var v21668 = this.unicodeIsEnabled;
-        introspect(JAMScript.introspectors.processC545F199BE443C5FB0DC91C55134FB746FD8B074) {
+        introspect(JAM.policy.pC545F199BE443C5FB0DC91C55134FB746FD8B074) {
           var v7578 = v21668[fontCharCode$$2]
         }
         v3674 = !v7578
@@ -17129,7 +17129,7 @@ function pdfjsWrapper() {
         var v7587 = v21673 + "-";
         var v7588 = cidSystemInfo$$1.ordering;
         var v3683 = v7587 + v7588;
-        introspect(JAMScript.introspectors.processC545F199BE443C5FB0DC91C55134FB746FD8B074) {
+        introspect(JAM.policy.pC545F199BE443C5FB0DC91C55134FB746FD8B074) {
           cidToUnicode = CIDToUnicodeMaps[v3683]
         }
       }
@@ -17146,7 +17146,7 @@ function pdfjsWrapper() {
       ii$$36 = cidToUnicode.length;
       var v3690 = i$$99 < ii$$36;
       for(;v3690;) {
-        introspect(JAMScript.introspectors.processC545F199BE443C5FB0DC91C55134FB746FD8B074) {
+        introspect(JAM.policy.pC545F199BE443C5FB0DC91C55134FB746FD8B074) {
           var unicode$$4 = cidToUnicode[i$$99]
         }
         var v3689 = isArray(unicode$$4);
@@ -17155,10 +17155,10 @@ function pdfjsWrapper() {
           j$$34 = 0;
           var v3686 = j$$34 < length$$40;
           for(;v3686;) {
-            introspect(JAMScript.introspectors.processC545F199BE443C5FB0DC91C55134FB746FD8B074) {
+            introspect(JAM.policy.pC545F199BE443C5FB0DC91C55134FB746FD8B074) {
               cidToUnicodeMap[cid$$2] = unicode$$4[j$$34]
             }
-            introspect(JAMScript.introspectors.processC545F199BE443C5FB0DC91C55134FB746FD8B074) {
+            introspect(JAM.policy.pC545F199BE443C5FB0DC91C55134FB746FD8B074) {
               var v3685 = unicode$$4[j$$34]
             }
             unicodeToCIDMap[v3685] = cid$$2;
@@ -17221,7 +17221,7 @@ function pdfjsWrapper() {
             v3692 = cid$$1
           }else {
             var v7592 = this.cidToUnicode;
-            introspect(JAMScript.introspectors.processC545F199BE443C5FB0DC91C55134FB746FD8B074) {
+            introspect(JAM.policy.pC545F199BE443C5FB0DC91C55134FB746FD8B074) {
               v3692 = v7592[cid$$1]
             }
           }
@@ -17235,13 +17235,13 @@ function pdfjsWrapper() {
         var v3698 = i$$98 <= ii$$35;
         for(;v3698;) {
           var v3694 = properties$$14.differences;
-          introspect(JAMScript.introspectors.processC545F199BE443C5FB0DC91C55134FB746FD8B074) {
+          introspect(JAM.policy.pC545F199BE443C5FB0DC91C55134FB746FD8B074) {
             var glyph$$1 = v3694[i$$98]
           }
           var v3696 = !glyph$$1;
           if(v3696) {
             var v3695 = properties$$14.baseEncoding;
-            introspect(JAMScript.introspectors.processC545F199BE443C5FB0DC91C55134FB746FD8B074) {
+            introspect(JAM.policy.pC545F199BE443C5FB0DC91C55134FB746FD8B074) {
               glyph$$1 = v3695[i$$98]
             }
           }
@@ -17252,7 +17252,7 @@ function pdfjsWrapper() {
           }
           var v3697 = v7593;
           if(v3697) {
-            introspect(JAMScript.introspectors.processC545F199BE443C5FB0DC91C55134FB746FD8B074) {
+            introspect(JAM.policy.pC545F199BE443C5FB0DC91C55134FB746FD8B074) {
               map$$1[i$$98] = GlyphsUnicode[glyph$$1]
             }
           }
@@ -17270,7 +17270,7 @@ function pdfjsWrapper() {
       var ii$$34 = toUnicode$$2.length;
       var v3702 = i$$97 < ii$$34;
       for(;v3702;) {
-        introspect(JAMScript.introspectors.processC545F199BE443C5FB0DC91C55134FB746FD8B074) {
+        introspect(JAM.policy.pC545F199BE443C5FB0DC91C55134FB746FD8B074) {
           var unicode$$3 = toUnicode$$2[i$$97]
         }
         var v3700;
@@ -17300,7 +17300,7 @@ function pdfjsWrapper() {
         var ii$$33 = charstrings$$1.length;
         var v3704 = i$$96 < ii$$33;
         for(;v3704;) {
-          introspect(JAMScript.introspectors.processC545F199BE443C5FB0DC91C55134FB746FD8B074) {
+          introspect(JAM.policy.pC545F199BE443C5FB0DC91C55134FB746FD8B074) {
             var charstring$$1 = charstrings$$1[i$$96]
           }
           var v3703;
@@ -17327,11 +17327,11 @@ function pdfjsWrapper() {
         var ii$$32 = v3705 - 1;
         var v3707 = i$$95 < ii$$32;
         for(;v3707;) {
-          introspect(JAMScript.introspectors.processC545F199BE443C5FB0DC91C55134FB746FD8B074) {
+          introspect(JAM.policy.pC545F199BE443C5FB0DC91C55134FB746FD8B074) {
             var v7599 = glyphs$$6[i$$95]
           }
           var v21678 = i$$95 + 1;
-          introspect(JAMScript.introspectors.processC545F199BE443C5FB0DC91C55134FB746FD8B074) {
+          introspect(JAM.policy.pC545F199BE443C5FB0DC91C55134FB746FD8B074) {
             var v7600 = glyphs$$6[v21678]
           }
           var v3706 = v7599 != v7600;
@@ -17357,7 +17357,7 @@ function pdfjsWrapper() {
       var v7602 = charstrings$$1.length;
       var v3711 = i$$94 < v7602;
       for(;v3711;) {
-        introspect(JAMScript.introspectors.processC545F199BE443C5FB0DC91C55134FB746FD8B074) {
+        introspect(JAM.policy.pC545F199BE443C5FB0DC91C55134FB746FD8B074) {
           var charstring = charstrings$$1[i$$94]
         }
         var v3710 = charstring.glyph;
@@ -17499,13 +17499,13 @@ function pdfjsWrapper() {
       var fields = {"CFF ":v3718, "OS/2":v3719, "cmap":v3720, "head":v3721, "hhea":v3722, "hmtx":v3723, "maxp":v3724, "name":v3725, "post":v3726};
       var field;
       for(field in fields) {
-        introspect(JAMScript.introspectors.processC545F199BE443C5FB0DC91C55134FB746FD8B074) {
+        introspect(JAM.policy.pC545F199BE443C5FB0DC91C55134FB746FD8B074) {
           var v3727 = fields[field]
         }
         createTableEntry(otf, field, v3727)
       }
       for(field in fields) {
-        introspect(JAMScript.introspectors.processC545F199BE443C5FB0DC91C55134FB746FD8B074) {
+        introspect(JAM.policy.pC545F199BE443C5FB0DC91C55134FB746FD8B074) {
           var table$$2 = fields[field]
         }
         var v3728 = otf;
@@ -17578,10 +17578,10 @@ function pdfjsWrapper() {
         var i$$87 = 0;
         var v3744 = i$$87 < glyphsLength$$1;
         for(;v3744;) {
-          introspect(JAMScript.introspectors.processC545F199BE443C5FB0DC91C55134FB746FD8B074) {
+          introspect(JAM.policy.pC545F199BE443C5FB0DC91C55134FB746FD8B074) {
             var v3740 = ids$$1[i$$87]
           }
-          introspect(JAMScript.introspectors.processC545F199BE443C5FB0DC91C55134FB746FD8B074) {
+          introspect(JAM.policy.pC545F199BE443C5FB0DC91C55134FB746FD8B074) {
             var glyphName$$1 = glyphNames$$1[v3740]
           }
           var v3741 = !glyphName$$1;
@@ -17590,12 +17590,12 @@ function pdfjsWrapper() {
             v3744 = i$$87 < glyphsLength$$1;
             continue
           }
-          introspect(JAMScript.introspectors.processC545F199BE443C5FB0DC91C55134FB746FD8B074) {
+          introspect(JAM.policy.pC545F199BE443C5FB0DC91C55134FB746FD8B074) {
             var v3742 = glyphs$$4[i$$87]
           }
           var unicode$$2 = v3742.unicode;
           glyphNameMap[glyphName$$1] = unicode$$2;
-          introspect(JAMScript.introspectors.processC545F199BE443C5FB0DC91C55134FB746FD8B074) {
+          introspect(JAM.policy.pC545F199BE443C5FB0DC91C55134FB746FD8B074) {
             var v3743 = glyphs$$4[i$$87]
           }
           var code$$11 = v3743.code;
@@ -17659,11 +17659,11 @@ function pdfjsWrapper() {
         i$$88 = 1;
         var v3757 = i$$88 < numRecords;
         for(;v3757;) {
-          introspect(JAMScript.introspectors.processC545F199BE443C5FB0DC91C55134FB746FD8B074) {
+          introspect(JAM.policy.pC545F199BE443C5FB0DC91C55134FB746FD8B074) {
             var current$$5 = records[i$$88]
           }
           var v3755 = i$$88 - 1;
-          introspect(JAMScript.introspectors.processC545F199BE443C5FB0DC91C55134FB746FD8B074) {
+          introspect(JAM.policy.pC545F199BE443C5FB0DC91C55134FB746FD8B074) {
             var previous = records[v3755]
           }
           var v22629 = current$$5.platformID;
@@ -17694,7 +17694,7 @@ function pdfjsWrapper() {
           i$$88 = 0;
           var v3761 = i$$88 < numRecords;
           for(;v3761;) {
-            introspect(JAMScript.introspectors.processC545F199BE443C5FB0DC91C55134FB746FD8B074) {
+            introspect(JAM.policy.pC545F199BE443C5FB0DC91C55134FB746FD8B074) {
               var table$$1 = tables$$1[i$$88]
             }
             var v7638 = data$$61;
@@ -17774,7 +17774,7 @@ function pdfjsWrapper() {
               segIndex = 0;
               var v3775 = segIndex < segCount$$1;
               for(;v3775;) {
-                introspect(JAMScript.introspectors.processC545F199BE443C5FB0DC91C55134FB746FD8B074) {
+                introspect(JAM.policy.pC545F199BE443C5FB0DC91C55134FB746FD8B074) {
                   var v3774 = segments[segIndex]
                 }
                 var v7642 = font$$8.getBytes(2);
@@ -17786,7 +17786,7 @@ function pdfjsWrapper() {
               segIndex = 0;
               var v3777 = segIndex < segCount$$1;
               for(;v3777;) {
-                introspect(JAMScript.introspectors.processC545F199BE443C5FB0DC91C55134FB746FD8B074) {
+                introspect(JAM.policy.pC545F199BE443C5FB0DC91C55134FB746FD8B074) {
                   var v3776 = segments[segIndex]
                 }
                 var v7643 = font$$8.getBytes(2);
@@ -17799,7 +17799,7 @@ function pdfjsWrapper() {
               segIndex = 0;
               var v3783 = segIndex < segCount$$1;
               for(;v3783;) {
-                introspect(JAMScript.introspectors.processC545F199BE443C5FB0DC91C55134FB746FD8B074) {
+                introspect(JAM.policy.pC545F199BE443C5FB0DC91C55134FB746FD8B074) {
                   var segment = segments[segIndex]
                 }
                 var v3778 = font$$8.getBytes(2);
@@ -17839,7 +17839,7 @@ function pdfjsWrapper() {
               segIndex = 0;
               var v3792 = segIndex < segCount$$1;
               for(;v3792;) {
-                introspect(JAMScript.introspectors.processC545F199BE443C5FB0DC91C55134FB746FD8B074) {
+                introspect(JAM.policy.pC545F199BE443C5FB0DC91C55134FB746FD8B074) {
                   segment = segments[segIndex]
                 }
                 start$$9 = segment.start;
@@ -18012,12 +18012,12 @@ function pdfjsWrapper() {
         var i$$90 = 0;
         var v3820 = i$$90 < contoursCount;
         for(;v3820;) {
-          introspect(JAMScript.introspectors.processC545F199BE443C5FB0DC91C55134FB746FD8B074) {
+          introspect(JAM.policy.pC545F199BE443C5FB0DC91C55134FB746FD8B074) {
             var v7659 = glyf$$1[j$$30]
           }
           var v3818 = v7659 << 8;
           var v7660 = j$$30 + 1;
-          introspect(JAMScript.introspectors.processC545F199BE443C5FB0DC91C55134FB746FD8B074) {
+          introspect(JAM.policy.pC545F199BE443C5FB0DC91C55134FB746FD8B074) {
             var v3819 = glyf$$1[v7660]
           }
           var endPoint = v3818 | v3819;
@@ -18026,12 +18026,12 @@ function pdfjsWrapper() {
           i$$90 = i$$90 + 1;
           v3820 = i$$90 < contoursCount
         }
-        introspect(JAMScript.introspectors.processC545F199BE443C5FB0DC91C55134FB746FD8B074) {
+        introspect(JAM.policy.pC545F199BE443C5FB0DC91C55134FB746FD8B074) {
           var v7661 = glyf$$1[j$$30]
         }
         var v3821 = v7661 << 8;
         var v7662 = j$$30 + 1;
-        introspect(JAMScript.introspectors.processC545F199BE443C5FB0DC91C55134FB746FD8B074) {
+        introspect(JAM.policy.pC545F199BE443C5FB0DC91C55134FB746FD8B074) {
           var v3822 = glyf$$1[v7662]
         }
         var instructionsLength = v3821 | v3822;
@@ -18043,7 +18043,7 @@ function pdfjsWrapper() {
         for(;v3829;) {
           var v3823 = j$$30;
           j$$30 = j$$30 + 1;
-          introspect(JAMScript.introspectors.processC545F199BE443C5FB0DC91C55134FB746FD8B074) {
+          introspect(JAM.policy.pC545F199BE443C5FB0DC91C55134FB746FD8B074) {
             var flag$$1 = glyf$$1[v3823]
           }
           var v3824 = flag$$1 & 192;
@@ -18086,7 +18086,7 @@ function pdfjsWrapper() {
           if(v3828) {
             var v3827 = j$$30;
             j$$30 = j$$30 + 1;
-            introspect(JAMScript.introspectors.processC545F199BE443C5FB0DC91C55134FB746FD8B074) {
+            introspect(JAM.policy.pC545F199BE443C5FB0DC91C55134FB746FD8B074) {
               var repeat = glyf$$1[v3827]
             }
             i$$90 = i$$90 + repeat;
@@ -18126,12 +18126,12 @@ function pdfjsWrapper() {
           return
         }
         function fontItemDecode(data$$64, offset$$22) {
-          introspect(JAMScript.introspectors.processC545F199BE443C5FB0DC91C55134FB746FD8B074) {
+          introspect(JAM.policy.pC545F199BE443C5FB0DC91C55134FB746FD8B074) {
             var v7670 = data$$64[offset$$22]
           }
           var v3837 = v7670 << 9;
           var v21718 = offset$$22 + 1;
-          introspect(JAMScript.introspectors.processC545F199BE443C5FB0DC91C55134FB746FD8B074) {
+          introspect(JAM.policy.pC545F199BE443C5FB0DC91C55134FB746FD8B074) {
             var v7671 = data$$64[v21718]
           }
           var v3838 = v7671 << 1;
@@ -18151,24 +18151,24 @@ function pdfjsWrapper() {
           return
         }
         function fontItemDecodeLong(data$$62, offset$$20) {
-          introspect(JAMScript.introspectors.processC545F199BE443C5FB0DC91C55134FB746FD8B074) {
+          introspect(JAM.policy.pC545F199BE443C5FB0DC91C55134FB746FD8B074) {
             var v22637 = data$$62[offset$$20]
           }
           var v21719 = v22637 << 24;
           var v23000 = offset$$20 + 1;
-          introspect(JAMScript.introspectors.processC545F199BE443C5FB0DC91C55134FB746FD8B074) {
+          introspect(JAM.policy.pC545F199BE443C5FB0DC91C55134FB746FD8B074) {
             var v22638 = data$$62[v23000]
           }
           var v21720 = v22638 << 16;
           var v7674 = v21719 | v21720;
           var v22639 = offset$$20 + 2;
-          introspect(JAMScript.introspectors.processC545F199BE443C5FB0DC91C55134FB746FD8B074) {
+          introspect(JAM.policy.pC545F199BE443C5FB0DC91C55134FB746FD8B074) {
             var v21721 = data$$62[v22639]
           }
           var v7675 = v21721 << 8;
           var v3843 = v7674 | v7675;
           var v7676 = offset$$20 + 3;
-          introspect(JAMScript.introspectors.processC545F199BE443C5FB0DC91C55134FB746FD8B074) {
+          introspect(JAM.policy.pC545F199BE443C5FB0DC91C55134FB746FD8B074) {
             var v3844 = data$$62[v7676]
           }
           return v3843 | v3844
@@ -18238,36 +18238,36 @@ function pdfjsWrapper() {
       }
       function findEmptyGlyphs(locaTable, isGlyphLocationsLong$$2, emptyGlyphIds$$1) {
         function fontItemDecode$$1(data$$68, offset$$26) {
-          introspect(JAMScript.introspectors.processC545F199BE443C5FB0DC91C55134FB746FD8B074) {
+          introspect(JAM.policy.pC545F199BE443C5FB0DC91C55134FB746FD8B074) {
             var v7677 = data$$68[offset$$26]
           }
           var v3852 = v7677 << 9;
           var v21722 = offset$$26 + 1;
-          introspect(JAMScript.introspectors.processC545F199BE443C5FB0DC91C55134FB746FD8B074) {
+          introspect(JAM.policy.pC545F199BE443C5FB0DC91C55134FB746FD8B074) {
             var v7678 = data$$68[v21722]
           }
           var v3853 = v7678 << 1;
           return v3852 | v3853
         }
         function fontItemDecodeLong$$1(data$$67, offset$$25) {
-          introspect(JAMScript.introspectors.processC545F199BE443C5FB0DC91C55134FB746FD8B074) {
+          introspect(JAM.policy.pC545F199BE443C5FB0DC91C55134FB746FD8B074) {
             var v22640 = data$$67[offset$$25]
           }
           var v21723 = v22640 << 24;
           var v23001 = offset$$25 + 1;
-          introspect(JAMScript.introspectors.processC545F199BE443C5FB0DC91C55134FB746FD8B074) {
+          introspect(JAM.policy.pC545F199BE443C5FB0DC91C55134FB746FD8B074) {
             var v22641 = data$$67[v23001]
           }
           var v21724 = v22641 << 16;
           var v7679 = v21723 | v21724;
           var v22642 = offset$$25 + 2;
-          introspect(JAMScript.introspectors.processC545F199BE443C5FB0DC91C55134FB746FD8B074) {
+          introspect(JAM.policy.pC545F199BE443C5FB0DC91C55134FB746FD8B074) {
             var v21725 = data$$67[v22642]
           }
           var v7680 = v21725 << 8;
           var v3854 = v7679 | v7680;
           var v7681 = offset$$25 + 3;
-          introspect(JAMScript.introspectors.processC545F199BE443C5FB0DC91C55134FB746FD8B074) {
+          introspect(JAM.policy.pC545F199BE443C5FB0DC91C55134FB746FD8B074) {
             var v3855 = data$$67[v7681]
           }
           return v3854 | v3855
@@ -18358,12 +18358,12 @@ function pdfjsWrapper() {
             i$$93 = 0;
             var v3869 = i$$93 < numGlyphs$$3;
             for(;v3869;) {
-              introspect(JAMScript.introspectors.processC545F199BE443C5FB0DC91C55134FB746FD8B074) {
+              introspect(JAM.policy.pC545F199BE443C5FB0DC91C55134FB746FD8B074) {
                 var j$$33 = glyphNameIndexes[i$$93]
               }
               var v3867 = j$$33 < 258;
               if(v3867) {
-                introspect(JAMScript.introspectors.processC545F199BE443C5FB0DC91C55134FB746FD8B074) {
+                introspect(JAM.policy.pC545F199BE443C5FB0DC91C55134FB746FD8B074) {
                   var v3866 = MacStandardGlyphOrdering[j$$33]
                 }
                 glyphNames$$2.push(v3866);
@@ -18372,7 +18372,7 @@ function pdfjsWrapper() {
                 continue
               }
               var v7688 = j$$33 - 258;
-              introspect(JAMScript.introspectors.processC545F199BE443C5FB0DC91C55134FB746FD8B074) {
+              introspect(JAM.policy.pC545F199BE443C5FB0DC91C55134FB746FD8B074) {
                 var v3868 = customNames[v7688]
               }
               glyphNames$$2.push(v3868);
@@ -18596,7 +18596,7 @@ function pdfjsWrapper() {
           var j$$28 = v3909 - 1;
           var v3910 = j$$28 >= 0;
           for(;v3910;) {
-            introspect(JAMScript.introspectors.processC545F199BE443C5FB0DC91C55134FB746FD8B074) {
+            introspect(JAM.policy.pC545F199BE443C5FB0DC91C55134FB746FD8B074) {
               var gid = cidToGidMap$$1[j$$28]
             }
             if(gid) {
@@ -18609,7 +18609,7 @@ function pdfjsWrapper() {
           i$$86 = 1;
           var v3912 = i$$86 < numGlyphs;
           for(;v3912;) {
-            introspect(JAMScript.introspectors.processC545F199BE443C5FB0DC91C55134FB746FD8B074) {
+            introspect(JAM.policy.pC545F199BE443C5FB0DC91C55134FB746FD8B074) {
               var v7711 = gidToCidMap[i$$86]
             }
             var v3911 = !v7711;
@@ -18628,7 +18628,7 @@ function pdfjsWrapper() {
         i$$86 = 1;
         var v3918 = i$$86 < numGlyphs;
         for(;v3918;) {
-          introspect(JAMScript.introspectors.processC545F199BE443C5FB0DC91C55134FB746FD8B074) {
+          introspect(JAM.policy.pC545F199BE443C5FB0DC91C55134FB746FD8B074) {
             var v3914 = gidToCidMap[i$$86]
           }
           var v7712 = !v3914;
@@ -18637,7 +18637,7 @@ function pdfjsWrapper() {
           }
           var cid = v3914;
           var v3915 = this.toFontChar;
-          introspect(JAMScript.introspectors.processC545F199BE443C5FB0DC91C55134FB746FD8B074) {
+          introspect(JAM.policy.pC545F199BE443C5FB0DC91C55134FB746FD8B074) {
             var unicode$$1 = v3915[cid]
           }
           var v7713 = !unicode$$1;
@@ -18676,7 +18676,7 @@ function pdfjsWrapper() {
         var v3924 = j$$28 < jj$$7;
         for(;v3924;) {
           i$$86 = unassignedUnicodeItems[j$$28];
-          introspect(JAMScript.introspectors.processC545F199BE443C5FB0DC91C55134FB746FD8B074) {
+          introspect(JAM.policy.pC545F199BE443C5FB0DC91C55134FB746FD8B074) {
             var v3919 = gidToCidMap[i$$86]
           }
           var v7714 = !v3919;
@@ -18750,7 +18750,7 @@ function pdfjsWrapper() {
           ii$$29 = glyphs$$3.length;
           var v3930 = i$$86 < ii$$29;
           for(;v3930;) {
-            introspect(JAMScript.introspectors.processC545F199BE443C5FB0DC91C55134FB746FD8B074) {
+            introspect(JAM.policy.pC545F199BE443C5FB0DC91C55134FB746FD8B074) {
               var v21737 = glyphs$$3[i$$86]
             }
             var v7720 = v21737.unicode;
@@ -18796,7 +18796,7 @@ function pdfjsWrapper() {
                 v3934 = i$$86 < ii$$29;
                 continue
               }
-              introspect(JAMScript.introspectors.processC545F199BE443C5FB0DC91C55134FB746FD8B074) {
+              introspect(JAM.policy.pC545F199BE443C5FB0DC91C55134FB746FD8B074) {
                 var v3933 = glyphs$$3[i$$86]
               }
               v3933.unicode = unicode$$1;
@@ -18820,7 +18820,7 @@ function pdfjsWrapper() {
               if(v3936) {
                 toFontChar[cid] = unusedUnicode
               }
-              introspect(JAMScript.introspectors.processC545F199BE443C5FB0DC91C55134FB746FD8B074) {
+              introspect(JAM.policy.pC545F199BE443C5FB0DC91C55134FB746FD8B074) {
                 var v3937 = glyphs$$3[i$$86]
               }
               v3937.unicode = unusedUnicode;
@@ -18836,15 +18836,15 @@ function pdfjsWrapper() {
         i$$86 = v3941 - 1;
         var v3943 = i$$86 >= 0;
         for(;v3943;) {
-          introspect(JAMScript.introspectors.processC545F199BE443C5FB0DC91C55134FB746FD8B074) {
+          introspect(JAM.policy.pC545F199BE443C5FB0DC91C55134FB746FD8B074) {
             var v21741 = ids[i$$86]
           }
           var v7725 = v21741 < numGlyphs;
           if(v7725) {
-            introspect(JAMScript.introspectors.processC545F199BE443C5FB0DC91C55134FB746FD8B074) {
+            introspect(JAM.policy.pC545F199BE443C5FB0DC91C55134FB746FD8B074) {
               var v23003 = ids[i$$86]
             }
-            introspect(JAMScript.introspectors.processC545F199BE443C5FB0DC91C55134FB746FD8B074) {
+            introspect(JAM.policy.pC545F199BE443C5FB0DC91C55134FB746FD8B074) {
               var v22650 = emptyGlyphIds[v23003]
             }
             var v21742 = !v22650;
@@ -18874,7 +18874,7 @@ function pdfjsWrapper() {
           ii$$29 = glyphs$$3.length;
           var v3945 = i$$86 < ii$$29;
           for(;v3945;) {
-            introspect(JAMScript.introspectors.processC545F199BE443C5FB0DC91C55134FB746FD8B074) {
+            introspect(JAM.policy.pC545F199BE443C5FB0DC91C55134FB746FD8B074) {
               var v3944 = glyphs$$3[i$$86]
             }
             unicode$$1 = v3944.unicode;
@@ -18914,35 +18914,35 @@ function pdfjsWrapper() {
           ii$$29 = glyphs$$3.length;
           var v3957 = i$$86 < ii$$29;
           for(;v3957;) {
-            introspect(JAMScript.introspectors.processC545F199BE443C5FB0DC91C55134FB746FD8B074) {
+            introspect(JAM.policy.pC545F199BE443C5FB0DC91C55134FB746FD8B074) {
               var v3950 = glyphs$$3[i$$86]
             }
             var code$$10 = v3950.unicode;
-            introspect(JAMScript.introspectors.processC545F199BE443C5FB0DC91C55134FB746FD8B074) {
+            introspect(JAM.policy.pC545F199BE443C5FB0DC91C55134FB746FD8B074) {
               gid = ids[i$$86]
             }
-            introspect(JAMScript.introspectors.processC545F199BE443C5FB0DC91C55134FB746FD8B074) {
+            introspect(JAM.policy.pC545F199BE443C5FB0DC91C55134FB746FD8B074) {
               var v3951 = glyphs$$3[i$$86]
             }
             var v21745 = v3951.unicode;
             v3951.unicode = v21745 + kCmapGlyphOffset;
-            introspect(JAMScript.introspectors.processC545F199BE443C5FB0DC91C55134FB746FD8B074) {
+            introspect(JAM.policy.pC545F199BE443C5FB0DC91C55134FB746FD8B074) {
               var v3952 = glyphs$$3[i$$86]
             }
             toFontChar[code$$10] = v3952.unicode;
-            introspect(JAMScript.introspectors.processC545F199BE443C5FB0DC91C55134FB746FD8B074) {
+            introspect(JAM.policy.pC545F199BE443C5FB0DC91C55134FB746FD8B074) {
               var v3953 = glyphNames[gid]
             }
             var v7730 = !v3953;
             if(v7730) {
-              introspect(JAMScript.introspectors.processC545F199BE443C5FB0DC91C55134FB746FD8B074) {
+              introspect(JAM.policy.pC545F199BE443C5FB0DC91C55134FB746FD8B074) {
                 v3953 = encoding$$2[code$$10]
               }
             }
             var glyphName = v3953;
             var v3956 = glyphName in GlyphsUnicode;
             if(v3956) {
-              introspect(JAMScript.introspectors.processC545F199BE443C5FB0DC91C55134FB746FD8B074) {
+              introspect(JAM.policy.pC545F199BE443C5FB0DC91C55134FB746FD8B074) {
                 unicode$$1 = GlyphsUnicode[glyphName]
               }
               var v3954 = unicode$$1 in usedUnicodes;
@@ -18952,7 +18952,7 @@ function pdfjsWrapper() {
                 continue
               }
               usedUnicodes[unicode$$1] = true;
-              introspect(JAMScript.introspectors.processC545F199BE443C5FB0DC91C55134FB746FD8B074) {
+              introspect(JAM.policy.pC545F199BE443C5FB0DC91C55134FB746FD8B074) {
                 var v21746 = glyphs$$3[i$$86]
               }
               var v7731 = v21746.code;
@@ -18989,7 +18989,7 @@ function pdfjsWrapper() {
             ii$$29 = glyphs$$3.length;
             var v3959 = i$$86 < ii$$29;
             for(;v3959;) {
-              introspect(JAMScript.introspectors.processC545F199BE443C5FB0DC91C55134FB746FD8B074) {
+              introspect(JAM.policy.pC545F199BE443C5FB0DC91C55134FB746FD8B074) {
                 var v7733 = glyphs$$3[i$$86]
               }
               var v3958 = v7733.unicode;
@@ -19002,25 +19002,25 @@ function pdfjsWrapper() {
             ii$$29 = glyphs$$3.length;
             var v3965 = i$$86 < ii$$29;
             for(;v3965;) {
-              introspect(JAMScript.introspectors.processC545F199BE443C5FB0DC91C55134FB746FD8B074) {
+              introspect(JAM.policy.pC545F199BE443C5FB0DC91C55134FB746FD8B074) {
                 var v3960 = glyphs$$3[i$$86]
               }
               code$$10 = v3960.unicode;
               var changeCode = false;
-              introspect(JAMScript.introspectors.processC545F199BE443C5FB0DC91C55134FB746FD8B074) {
+              introspect(JAM.policy.pC545F199BE443C5FB0DC91C55134FB746FD8B074) {
                 gid = ids[i$$86]
               }
-              introspect(JAMScript.introspectors.processC545F199BE443C5FB0DC91C55134FB746FD8B074) {
+              introspect(JAM.policy.pC545F199BE443C5FB0DC91C55134FB746FD8B074) {
                 glyphName = glyphNames[gid]
               }
               var v3962 = !glyphName;
               if(v3962) {
-                introspect(JAMScript.introspectors.processC545F199BE443C5FB0DC91C55134FB746FD8B074) {
+                introspect(JAM.policy.pC545F199BE443C5FB0DC91C55134FB746FD8B074) {
                   var v3961 = differences$$1[code$$10]
                 }
                 var v7734 = !v3961;
                 if(v7734) {
-                  introspect(JAMScript.introspectors.processC545F199BE443C5FB0DC91C55134FB746FD8B074) {
+                  introspect(JAM.policy.pC545F199BE443C5FB0DC91C55134FB746FD8B074) {
                     v3961 = encoding$$2[code$$10]
                   }
                 }
@@ -19029,13 +19029,13 @@ function pdfjsWrapper() {
               }
               var v3964 = glyphName in GlyphsUnicode;
               if(v3964) {
-                introspect(JAMScript.introspectors.processC545F199BE443C5FB0DC91C55134FB746FD8B074) {
+                introspect(JAM.policy.pC545F199BE443C5FB0DC91C55134FB746FD8B074) {
                   unicode$$1 = GlyphsUnicode[glyphName]
                 }
                 var v7735 = !unicode$$1;
                 var v21750 = !v7735;
                 if(v21750) {
-                  introspect(JAMScript.introspectors.processC545F199BE443C5FB0DC91C55134FB746FD8B074) {
+                  introspect(JAM.policy.pC545F199BE443C5FB0DC91C55134FB746FD8B074) {
                     var v21749 = reverseMap[unicode$$1]
                   }
                   v7735 = v21749 === i$$86
@@ -19056,21 +19056,21 @@ function pdfjsWrapper() {
               v3965 = i$$86 < ii$$29
             }
             for(index$$45 in newGlyphUnicodes) {
-              introspect(JAMScript.introspectors.processC545F199BE443C5FB0DC91C55134FB746FD8B074) {
+              introspect(JAM.policy.pC545F199BE443C5FB0DC91C55134FB746FD8B074) {
                 unicode$$1 = newGlyphUnicodes[index$$45]
               }
-              introspect(JAMScript.introspectors.processC545F199BE443C5FB0DC91C55134FB746FD8B074) {
+              introspect(JAM.policy.pC545F199BE443C5FB0DC91C55134FB746FD8B074) {
                 var v3967 = reverseMap[unicode$$1]
               }
               if(v3967) {
-                introspect(JAMScript.introspectors.processC545F199BE443C5FB0DC91C55134FB746FD8B074) {
+                introspect(JAM.policy.pC545F199BE443C5FB0DC91C55134FB746FD8B074) {
                   var v3966 = glyphs$$3[index$$45]
                 }
                 v3966.unicode = unusedUnicode;
                 unusedUnicode = unusedUnicode + 1;
                 continue
               }
-              introspect(JAMScript.introspectors.processC545F199BE443C5FB0DC91C55134FB746FD8B074) {
+              introspect(JAM.policy.pC545F199BE443C5FB0DC91C55134FB746FD8B074) {
                 var v3968 = glyphs$$3[index$$45]
               }
               v3968.unicode = unicode$$1;
@@ -19085,13 +19085,13 @@ function pdfjsWrapper() {
           ii$$29 = glyphs$$3.length;
           var v3973 = i$$86 < ii$$29;
           for(;v3973;) {
-            introspect(JAMScript.introspectors.processC545F199BE443C5FB0DC91C55134FB746FD8B074) {
+            introspect(JAM.policy.pC545F199BE443C5FB0DC91C55134FB746FD8B074) {
               var v7736 = glyphs$$3[i$$86]
             }
             var v3971 = v7736.unicode;
             code$$10 = v3971 & 255;
             var fontCharCode = kSymbolicFontGlyphOffset | code$$10;
-            introspect(JAMScript.introspectors.processC545F199BE443C5FB0DC91C55134FB746FD8B074) {
+            introspect(JAM.policy.pC545F199BE443C5FB0DC91C55134FB746FD8B074) {
               var v3972 = glyphs$$3[i$$86]
             }
             v3972.unicode = toFontChar[code$$10] = fontCharCode;
@@ -19111,7 +19111,7 @@ function pdfjsWrapper() {
       ii$$29 = glyphs$$3.length;
       var v3978 = i$$86 < ii$$29;
       for(;v3978;) {
-        introspect(JAMScript.introspectors.processC545F199BE443C5FB0DC91C55134FB746FD8B074) {
+        introspect(JAM.policy.pC545F199BE443C5FB0DC91C55134FB746FD8B074) {
           var v7737 = glyphs$$3[i$$86]
         }
         var v3977 = v7737.unicode;
@@ -19182,7 +19182,7 @@ function pdfjsWrapper() {
       ii$$29 = tables.length;
       var v3993 = i$$86 < ii$$29;
       for(;v3993;) {
-        introspect(JAMScript.introspectors.processC545F199BE443C5FB0DC91C55134FB746FD8B074) {
+        introspect(JAM.policy.pC545F199BE443C5FB0DC91C55134FB746FD8B074) {
           table = tables[i$$86]
         }
         var data$$59 = [];
@@ -19191,7 +19191,7 @@ function pdfjsWrapper() {
         jj$$7 = tableData.length;
         var v3991 = j$$28 < jj$$7;
         for(;v3991;) {
-          introspect(JAMScript.introspectors.processC545F199BE443C5FB0DC91C55134FB746FD8B074) {
+          introspect(JAM.policy.pC545F199BE443C5FB0DC91C55134FB746FD8B074) {
             var v3990 = tableData[j$$28]
           }
           data$$59.push(v3990);
@@ -19207,7 +19207,7 @@ function pdfjsWrapper() {
       ii$$29 = tables.length;
       var v3997 = i$$86 < ii$$29;
       for(;v3997;) {
-        introspect(JAMScript.introspectors.processC545F199BE443C5FB0DC91C55134FB746FD8B074) {
+        introspect(JAM.policy.pC545F199BE443C5FB0DC91C55134FB746FD8B074) {
           table = tables[i$$86]
         }
         tableData = table.data;
@@ -19302,12 +19302,12 @@ function pdfjsWrapper() {
       var v4013 = !file$$1;
       if(v4013) {
         var fontName$$2 = name$$56.replace(/[,_]/g, "-");
-        introspect(JAMScript.introspectors.processC545F199BE443C5FB0DC91C55134FB746FD8B074) {
+        introspect(JAM.policy.pC545F199BE443C5FB0DC91C55134FB746FD8B074) {
           var v4008 = stdFontMap[fontName$$2]
         }
         var v7756 = !v4008;
         if(v7756) {
-          introspect(JAMScript.introspectors.processC545F199BE443C5FB0DC91C55134FB746FD8B074) {
+          introspect(JAM.policy.pC545F199BE443C5FB0DC91C55134FB746FD8B074) {
             var v7755 = nonStdFontMap[fontName$$2]
           }
           var v21773 = !v7755;
@@ -19410,7 +19410,7 @@ function pdfjsWrapper() {
       var v4020 = i$$80 < ii$$27;
       for(;v4020;) {
         var v7764 = str$$21;
-        introspect(JAMScript.introspectors.processC545F199BE443C5FB0DC91C55134FB746FD8B074) {
+        introspect(JAM.policy.pC545F199BE443C5FB0DC91C55134FB746FD8B074) {
           var v21778 = arr$$12[i$$80]
         }
         var v7765 = String.fromCharCode(v21778);
@@ -19562,19 +19562,19 @@ function pdfjsWrapper() {
       var v4038 = i$$82 < n$$26;
       for(;v4038;) {
         var v7796 = checksum;
-        introspect(JAMScript.introspectors.processC545F199BE443C5FB0DC91C55134FB746FD8B074) {
+        introspect(JAM.policy.pC545F199BE443C5FB0DC91C55134FB746FD8B074) {
           var v22675 = data$$58[i$$82]
         }
         var v23012 = i$$82 + 1;
-        introspect(JAMScript.introspectors.processC545F199BE443C5FB0DC91C55134FB746FD8B074) {
+        introspect(JAM.policy.pC545F199BE443C5FB0DC91C55134FB746FD8B074) {
           var v22676 = data$$58[v23012]
         }
         var v23013 = i$$82 + 2;
-        introspect(JAMScript.introspectors.processC545F199BE443C5FB0DC91C55134FB746FD8B074) {
+        introspect(JAM.policy.pC545F199BE443C5FB0DC91C55134FB746FD8B074) {
           var v22677 = data$$58[v23013]
         }
         var v23014 = i$$82 + 3;
-        introspect(JAMScript.introspectors.processC545F199BE443C5FB0DC91C55134FB746FD8B074) {
+        introspect(JAM.policy.pC545F199BE443C5FB0DC91C55134FB746FD8B074) {
           var v22678 = data$$58[v23014]
         }
         var v21790 = [v22675, v22676, v22677, v22678];
@@ -19609,7 +19609,7 @@ function pdfjsWrapper() {
       var n$$27 = 0;
       var v4044 = n$$27 < length$$35;
       for(;v4044;) {
-        introspect(JAMScript.introspectors.processC545F199BE443C5FB0DC91C55134FB746FD8B074) {
+        introspect(JAM.policy.pC545F199BE443C5FB0DC91C55134FB746FD8B074) {
           var v21793 = glyphs$$1[n$$27]
         }
         var v7803 = v21793.unicode;
@@ -19623,11 +19623,11 @@ function pdfjsWrapper() {
       n$$27 = 0;
       var v4050 = n$$27 < length$$35;
       for(;v4050;) {
-        introspect(JAMScript.introspectors.processC545F199BE443C5FB0DC91C55134FB746FD8B074) {
+        introspect(JAM.policy.pC545F199BE443C5FB0DC91C55134FB746FD8B074) {
           var v4045 = codes[n$$27]
         }
         var start$$7 = v4045.unicode;
-        introspect(JAMScript.introspectors.processC545F199BE443C5FB0DC91C55134FB746FD8B074) {
+        introspect(JAM.policy.pC545F199BE443C5FB0DC91C55134FB746FD8B074) {
           var v7804 = codes[n$$27]
         }
         var v4046 = v7804.code;
@@ -19637,7 +19637,7 @@ function pdfjsWrapper() {
         var v7805 = n$$27 < length$$35;
         if(v7805) {
           var v21794 = end$$3 + 1;
-          introspect(JAMScript.introspectors.processC545F199BE443C5FB0DC91C55134FB746FD8B074) {
+          introspect(JAM.policy.pC545F199BE443C5FB0DC91C55134FB746FD8B074) {
             var v22679 = codes[n$$27]
           }
           var v21795 = v22679.unicode;
@@ -19645,7 +19645,7 @@ function pdfjsWrapper() {
         }
         var v4048 = v7805;
         for(;v4048;) {
-          introspect(JAMScript.introspectors.processC545F199BE443C5FB0DC91C55134FB746FD8B074) {
+          introspect(JAM.policy.pC545F199BE443C5FB0DC91C55134FB746FD8B074) {
             var v7806 = codes[n$$27]
           }
           var v4047 = v7806.code;
@@ -19655,7 +19655,7 @@ function pdfjsWrapper() {
           var v7807 = n$$27 < length$$35;
           if(v7807) {
             var v21796 = end$$3 + 1;
-            introspect(JAMScript.introspectors.processC545F199BE443C5FB0DC91C55134FB746FD8B074) {
+            introspect(JAM.policy.pC545F199BE443C5FB0DC91C55134FB746FD8B074) {
               var v22680 = codes[n$$27]
             }
             var v21797 = v22680.unicode;
@@ -19701,7 +19701,7 @@ function pdfjsWrapper() {
         var v7810 = segCount - 1;
         var v4061 = i$$83 < v7810;
         for(;v4061;) {
-          introspect(JAMScript.introspectors.processC545F199BE443C5FB0DC91C55134FB746FD8B074) {
+          introspect(JAM.policy.pC545F199BE443C5FB0DC91C55134FB746FD8B074) {
             var range$$14 = ranges$$1[i$$83]
           }
           var start$$8 = range$$14[0];
@@ -19731,10 +19731,10 @@ function pdfjsWrapper() {
           var v4060 = j$$26 < jj$$5;
           for(;v4060;) {
             var v7821 = glyphsIds;
-            introspect(JAMScript.introspectors.processC545F199BE443C5FB0DC91C55134FB746FD8B074) {
+            introspect(JAM.policy.pC545F199BE443C5FB0DC91C55134FB746FD8B074) {
               var v22682 = codes$$1[j$$26]
             }
-            introspect(JAMScript.introspectors.processC545F199BE443C5FB0DC91C55134FB746FD8B074) {
+            introspect(JAM.policy.pC545F199BE443C5FB0DC91C55134FB746FD8B074) {
               var v21801 = deltas[v22682]
             }
             var v7822 = string16(v21801);
@@ -19820,7 +19820,7 @@ function pdfjsWrapper() {
         var v7837 = charstrings.length;
         var v4076 = i$$84 < v7837;
         for(;v4076;) {
-          introspect(JAMScript.introspectors.processC545F199BE443C5FB0DC91C55134FB746FD8B074) {
+          introspect(JAM.policy.pC545F199BE443C5FB0DC91C55134FB746FD8B074) {
             var v4067 = charstrings[i$$84]
           }
           var code$$9 = v4067.unicode;
@@ -19843,7 +19843,7 @@ function pdfjsWrapper() {
             var ii$$inline_87 = UnicodeRanges.length;
             var v4071 = i$$inline_86 < ii$$inline_87;
             for(;v4071;) {
-              introspect(JAMScript.introspectors.processC545F199BE443C5FB0DC91C55134FB746FD8B074) {
+              introspect(JAM.policy.pC545F199BE443C5FB0DC91C55134FB746FD8B074) {
                 var range$$inline_88 = UnicodeRanges[i$$inline_86]
               }
               var v21807 = range$$inline_88.begin;
@@ -20061,7 +20061,7 @@ function pdfjsWrapper() {
       var ii$$28 = strings.length;
       var v4089 = i$$85 < ii$$28;
       for(;v4089;) {
-        introspect(JAMScript.introspectors.processC545F199BE443C5FB0DC91C55134FB746FD8B074) {
+        introspect(JAM.policy.pC545F199BE443C5FB0DC91C55134FB746FD8B074) {
           var str$$22 = strings[i$$85]
         }
         var strUnicode = "";
@@ -20098,7 +20098,7 @@ function pdfjsWrapper() {
       ii$$28 = platforms.length;
       var v4097 = i$$85 < ii$$28;
       for(;v4097;) {
-        introspect(JAMScript.introspectors.processC545F199BE443C5FB0DC91C55134FB746FD8B074) {
+        introspect(JAM.policy.pC545F199BE443C5FB0DC91C55134FB746FD8B074) {
           var strs = names$$4[i$$85]
         }
         j$$27 = 0;
@@ -20106,14 +20106,14 @@ function pdfjsWrapper() {
         var v4096 = j$$27 < jj$$6;
         for(;v4096;) {
           str$$22 = strs[j$$27];
-          introspect(JAMScript.introspectors.processC545F199BE443C5FB0DC91C55134FB746FD8B074) {
+          introspect(JAM.policy.pC545F199BE443C5FB0DC91C55134FB746FD8B074) {
             var v23024 = platforms[i$$85]
           }
-          introspect(JAMScript.introspectors.processC545F199BE443C5FB0DC91C55134FB746FD8B074) {
+          introspect(JAM.policy.pC545F199BE443C5FB0DC91C55134FB746FD8B074) {
             var v23025 = encodings[i$$85]
           }
           var v22691 = v23024 + v23025;
-          introspect(JAMScript.introspectors.processC545F199BE443C5FB0DC91C55134FB746FD8B074) {
+          introspect(JAM.policy.pC545F199BE443C5FB0DC91C55134FB746FD8B074) {
             var v22692 = languages[i$$85]
           }
           var v21819 = v22691 + v22692;
@@ -20147,26 +20147,26 @@ function pdfjsWrapper() {
       var ii$$37 = possibleSpaceReplacements.length;
       var v4106 = i$$100 < ii$$37;
       for(;v4106;) {
-        introspect(JAMScript.introspectors.processC545F199BE443C5FB0DC91C55134FB746FD8B074) {
+        introspect(JAM.policy.pC545F199BE443C5FB0DC91C55134FB746FD8B074) {
           var glyphName$$2 = possibleSpaceReplacements[i$$100]
         }
         var v7868 = this.widths;
         var v4099 = glyphName$$2 in v7868;
         if(v4099) {
           var v4098 = this.widths;
-          introspect(JAMScript.introspectors.processC545F199BE443C5FB0DC91C55134FB746FD8B074) {
+          introspect(JAM.policy.pC545F199BE443C5FB0DC91C55134FB746FD8B074) {
             width$$21 = v4098[glyphName$$2]
           }
           break
         }
-        introspect(JAMScript.introspectors.processC545F199BE443C5FB0DC91C55134FB746FD8B074) {
+        introspect(JAM.policy.pC545F199BE443C5FB0DC91C55134FB746FD8B074) {
           var glyphUnicode$$1 = GlyphsUnicode[glyphName$$2]
         }
         var charcode = 0;
         var v4101 = this.composite;
         if(v4101) {
           var v4100 = this.unicodeToCID;
-          introspect(JAMScript.introspectors.processC545F199BE443C5FB0DC91C55134FB746FD8B074) {
+          introspect(JAM.policy.pC545F199BE443C5FB0DC91C55134FB746FD8B074) {
             charcode = v4100[glyphUnicode$$1]
           }
         }
@@ -20185,7 +20185,7 @@ function pdfjsWrapper() {
           charcode = glyphUnicode$$1
         }
         var v4105 = this.widths;
-        introspect(JAMScript.introspectors.processC545F199BE443C5FB0DC91C55134FB746FD8B074) {
+        introspect(JAM.policy.pC545F199BE443C5FB0DC91C55134FB746FD8B074) {
           width$$21 = v4105[charcode]
         }
         if(width$$21) {
@@ -20220,7 +20220,7 @@ function pdfjsWrapper() {
       var ii$$25 = fonts$$3.length;
       var v4111 = i$$78 < ii$$25;
       for(;v4111;) {
-        introspect(JAMScript.introspectors.processC545F199BE443C5FB0DC91C55134FB746FD8B074) {
+        introspect(JAM.policy.pC545F199BE443C5FB0DC91C55134FB746FD8B074) {
           var font$$6 = fonts$$3[i$$78]
         }
         font$$6.loading = false;
@@ -20254,7 +20254,7 @@ function pdfjsWrapper() {
     var ii$$24 = names$$2.length;
     var v4118 = i$$77 < ii$$24;
     for(;v4118;) {
-      introspect(JAMScript.introspectors.processC545F199BE443C5FB0DC91C55134FB746FD8B074) {
+      introspect(JAM.policy.pC545F199BE443C5FB0DC91C55134FB746FD8B074) {
         var v22693 = names$$2[i$$77]
       }
       var v21828 = '<span style="font-family:' + v22693;
@@ -20280,7 +20280,7 @@ function pdfjsWrapper() {
     ii$$24 = rules$$1.length;
     var v4122 = i$$77 < ii$$24;
     for(;v4122;) {
-      introspect(JAMScript.introspectors.processC545F199BE443C5FB0DC91C55134FB746FD8B074) {
+      introspect(JAM.policy.pC545F199BE443C5FB0DC91C55134FB746FD8B074) {
         var v7880 = rules$$1[i$$77]
       }
       src$$2 = src$$2 + v7880;
@@ -20294,7 +20294,7 @@ function pdfjsWrapper() {
     ii$$24 = names$$2.length;
     var v4123 = i$$77 < ii$$24;
     for(;v4123;) {
-      introspect(JAMScript.introspectors.processC545F199BE443C5FB0DC91C55134FB746FD8B074) {
+      introspect(JAM.policy.pC545F199BE443C5FB0DC91C55134FB746FD8B074) {
         var v22694 = names$$2[i$$77]
       }
       var v21829 = '"' + v22694;
@@ -20315,7 +20315,7 @@ function pdfjsWrapper() {
     ii$$24 = names$$2.length;
     var v4124 = i$$77 < ii$$24;
     for(;v4124;) {
-      introspect(JAMScript.introspectors.processC545F199BE443C5FB0DC91C55134FB746FD8B074) {
+      introspect(JAM.policy.pC545F199BE443C5FB0DC91C55134FB746FD8B074) {
         var v22695 = names$$2[i$$77]
       }
       var v21831 = "<p style=\"font-family:'" + v22695;
@@ -20342,7 +20342,7 @@ function pdfjsWrapper() {
       var ii$$23 = fonts$$2.length;
       var v4129 = i$$76 < ii$$23;
       for(;v4129;) {
-        introspect(JAMScript.introspectors.processC545F199BE443C5FB0DC91C55134FB746FD8B074) {
+        introspect(JAM.policy.pC545F199BE443C5FB0DC91C55134FB746FD8B074) {
           var fontObj$$1 = fonts$$2[i$$76]
         }
         var v4128 = fontObj$$1.loading;
@@ -20366,7 +20366,7 @@ function pdfjsWrapper() {
     var ii$$22 = fonts$$2.length;
     var v4134 = i$$75 < ii$$22;
     for(;v4134;) {
-      introspect(JAMScript.introspectors.processC545F199BE443C5FB0DC91C55134FB746FD8B074) {
+      introspect(JAM.policy.pC545F199BE443C5FB0DC91C55134FB746FD8B074) {
         var font$$5 = fonts$$2[i$$75]
       }
       var v7888 = font$$5.attached;
@@ -20391,7 +20391,7 @@ function pdfjsWrapper() {
         var v4132 = j$$25 < length$$33;
         for(;v4132;) {
           var v7889 = str$$19;
-          introspect(JAMScript.introspectors.processC545F199BE443C5FB0DC91C55134FB746FD8B074) {
+          introspect(JAM.policy.pC545F199BE443C5FB0DC91C55134FB746FD8B074) {
             var v21834 = data$$56[j$$25]
           }
           var v7890 = String.fromCharCode(v21834);
@@ -20504,7 +20504,7 @@ function pdfjsWrapper() {
           var v4147 = baseFontName$$1.split("-");
           var fontNameWoStyle = v4147[0];
           var v7900;
-          introspect(JAMScript.introspectors.processC545F199BE443C5FB0DC91C55134FB746FD8B074) {
+          introspect(JAM.policy.pC545F199BE443C5FB0DC91C55134FB746FD8B074) {
             var v22696 = serifFonts[fontNameWoStyle]
           }
           var v23027 = !v22696;
@@ -20520,7 +20520,7 @@ function pdfjsWrapper() {
           }
           var v4148 = v7900;
           var v7901;
-          introspect(JAMScript.introspectors.processC545F199BE443C5FB0DC91C55134FB746FD8B074) {
+          introspect(JAM.policy.pC545F199BE443C5FB0DC91C55134FB746FD8B074) {
             var v21836 = symbolsFonts[fontNameWoStyle]
           }
           if(v21836) {
@@ -20606,7 +20606,7 @@ function pdfjsWrapper() {
         properties$$6.charProcOperatorList = {};
         var key$$35;
         for(key$$35 in charProcs) {
-          introspect(JAMScript.introspectors.processC545F199BE443C5FB0DC91C55134FB746FD8B074) {
+          introspect(JAM.policy.pC545F199BE443C5FB0DC91C55134FB746FD8B074) {
             var glyphStream = charProcs[key$$35]
           }
           var v4176 = properties$$6.charProcOperatorList;
@@ -20621,7 +20621,7 @@ function pdfjsWrapper() {
     function PartialEvaluator_getBaseFontMetrics(name$$55) {
       var defaultWidth$$1 = 0;
       var widths$$1 = [];
-      introspect(JAMScript.introspectors.processC545F199BE443C5FB0DC91C55134FB746FD8B074) {
+      introspect(JAM.policy.pC545F199BE443C5FB0DC91C55134FB746FD8B074) {
         var v7907 = stdFontMap[name$$55]
       }
       var v21838 = !v7907;
@@ -20629,7 +20629,7 @@ function pdfjsWrapper() {
         v7907 = name$$55
       }
       var v4180 = v7907;
-      introspect(JAMScript.introspectors.processC545F199BE443C5FB0DC91C55134FB746FD8B074) {
+      introspect(JAM.policy.pC545F199BE443C5FB0DC91C55134FB746FD8B074) {
         var glyphWidths = Metrics[v4180]
       }
       var v4181 = isNum(glyphWidths);
@@ -20659,7 +20659,7 @@ function pdfjsWrapper() {
           var ii$$21 = widths.length;
           var v4188 = i$$74 < ii$$21;
           for(;v4188;) {
-            introspect(JAMScript.introspectors.processC545F199BE443C5FB0DC91C55134FB746FD8B074) {
+            introspect(JAM.policy.pC545F199BE443C5FB0DC91C55134FB746FD8B074) {
               var code$$8 = widths[i$$74]
             }
             var v4187 = isArray(code$$8);
@@ -20670,7 +20670,7 @@ function pdfjsWrapper() {
               for(;v4184;) {
                 var v4183 = start$$6;
                 start$$6 = start$$6 + 1;
-                introspect(JAMScript.introspectors.processC545F199BE443C5FB0DC91C55134FB746FD8B074) {
+                introspect(JAM.policy.pC545F199BE443C5FB0DC91C55134FB746FD8B074) {
                   glyphsWidths[v4183] = code$$8[j$$24]
                 }
                 j$$24 = j$$24 + 1;
@@ -20680,7 +20680,7 @@ function pdfjsWrapper() {
             }else {
               if(start$$6) {
                 var v4185 = i$$74 = i$$74 + 1;
-                introspect(JAMScript.introspectors.processC545F199BE443C5FB0DC91C55134FB746FD8B074) {
+                introspect(JAM.policy.pC545F199BE443C5FB0DC91C55134FB746FD8B074) {
                   var width$$19 = widths[v4185]
                 }
                 j$$24 = start$$6;
@@ -20745,11 +20745,11 @@ function pdfjsWrapper() {
       for(;v4198;) {
         var v21839 = j$$23;
         j$$23 = j$$23 + 1;
-        introspect(JAMScript.introspectors.processC545F199BE443C5FB0DC91C55134FB746FD8B074) {
+        introspect(JAM.policy.pC545F199BE443C5FB0DC91C55134FB746FD8B074) {
           var v7911 = glyphsData[v21839]
         }
         var v4195 = v7911 << 8;
-        introspect(JAMScript.introspectors.processC545F199BE443C5FB0DC91C55134FB746FD8B074) {
+        introspect(JAM.policy.pC545F199BE443C5FB0DC91C55134FB746FD8B074) {
           var v4196 = glyphsData[j$$23]
         }
         var glyphID = v4195 | v4196;
@@ -20790,7 +20790,7 @@ function pdfjsWrapper() {
           var ii$$20 = cmap.length;
           var v4228 = i$$73 < ii$$20;
           for(;v4228;) {
-            introspect(JAMScript.introspectors.processC545F199BE443C5FB0DC91C55134FB746FD8B074) {
+            introspect(JAM.policy.pC545F199BE443C5FB0DC91C55134FB746FD8B074) {
               var octet = cmap[i$$73]
             }
             var v7913 = octet == 32;
@@ -20841,15 +20841,15 @@ function pdfjsWrapper() {
                   var jj$$2 = tokens.length;
                   var v4209 = j$$22 < jj$$2;
                   for(;v4209;) {
-                    introspect(JAMScript.introspectors.processC545F199BE443C5FB0DC91C55134FB746FD8B074) {
+                    introspect(JAM.policy.pC545F199BE443C5FB0DC91C55134FB746FD8B074) {
                       var startRange = tokens[j$$22]
                     }
                     var v4202 = j$$22 + 1;
-                    introspect(JAMScript.introspectors.processC545F199BE443C5FB0DC91C55134FB746FD8B074) {
+                    introspect(JAM.policy.pC545F199BE443C5FB0DC91C55134FB746FD8B074) {
                       var endRange = tokens[v4202]
                     }
                     var v4203 = j$$22 + 2;
-                    introspect(JAMScript.introspectors.processC545F199BE443C5FB0DC91C55134FB746FD8B074) {
+                    introspect(JAM.policy.pC545F199BE443C5FB0DC91C55134FB746FD8B074) {
                       var code$$6 = tokens[v4203]
                     }
                     var v4204 = code$$6 == 65535;
@@ -20887,7 +20887,7 @@ function pdfjsWrapper() {
                   jj$$2 = tokens.length;
                   var v4211 = j$$22 < jj$$2;
                   for(;v4211;) {
-                    introspect(JAMScript.introspectors.processC545F199BE443C5FB0DC91C55134FB746FD8B074) {
+                    introspect(JAM.policy.pC545F199BE443C5FB0DC91C55134FB746FD8B074) {
                       var index$$44 = tokens[j$$22]
                     }
                     var v4210 = j$$22 + 1;
@@ -21056,7 +21056,7 @@ function pdfjsWrapper() {
           var baseName = encoding$$1.get("BaseEncoding");
           if(baseName) {
             var v4239 = baseName.name;
-            introspect(JAMScript.introspectors.processC545F199BE443C5FB0DC91C55134FB746FD8B074) {
+            introspect(JAM.policy.pC545F199BE443C5FB0DC91C55134FB746FD8B074) {
               baseEncoding = Encodings[v4239]
             }
           }else {
@@ -21070,7 +21070,7 @@ function pdfjsWrapper() {
             var jj$$1 = diffEncoding.length;
             var v4242 = j$$21 < jj$$1;
             for(;v4242;) {
-              introspect(JAMScript.introspectors.processC545F199BE443C5FB0DC91C55134FB746FD8B074) {
+              introspect(JAM.policy.pC545F199BE443C5FB0DC91C55134FB746FD8B074) {
                 var data$$55 = diffEncoding[j$$21]
               }
               var v4241 = isNum(data$$55);
@@ -21089,7 +21089,7 @@ function pdfjsWrapper() {
           var v4245 = isName(encoding$$1);
           if(v4245) {
             var v4244 = encoding$$1.name;
-            introspect(JAMScript.introspectors.processC545F199BE443C5FB0DC91C55134FB746FD8B074) {
+            introspect(JAM.policy.pC545F199BE443C5FB0DC91C55134FB746FD8B074) {
               baseEncoding = Encodings[v4244]
             }
           }else {
@@ -21181,13 +21181,13 @@ function pdfjsWrapper() {
         var ii$$19 = depList.length;
         var v4253 = i$$72 < ii$$19;
         for(;v4253;) {
-          introspect(JAMScript.introspectors.processC545F199BE443C5FB0DC91C55134FB746FD8B074) {
+          introspect(JAM.policy.pC545F199BE443C5FB0DC91C55134FB746FD8B074) {
             var dep = depList[i$$72]
           }
           var v7932 = dependency$$1.indexOf(dep);
           var v4252 = v7932 == -1;
           if(v4252) {
-            introspect(JAMScript.introspectors.processC545F199BE443C5FB0DC91C55134FB746FD8B074) {
+            introspect(JAM.policy.pC545F199BE443C5FB0DC91C55134FB746FD8B074) {
               var v4251 = depList[i$$72]
             }
             dependency$$1.push(v4251)
@@ -21405,7 +21405,7 @@ function pdfjsWrapper() {
         var v4330 = isCmd(obj$$31);
         if(v4330) {
           var cmd$$4 = obj$$31.cmd;
-          introspect(JAMScript.introspectors.processC545F199BE443C5FB0DC91C55134FB746FD8B074) {
+          introspect(JAM.policy.pC545F199BE443C5FB0DC91C55134FB746FD8B074) {
             var fn$$4 = OP_MAP[cmd$$4]
           }
           var v4292 = !fn$$4;
@@ -21413,7 +21413,7 @@ function pdfjsWrapper() {
             var cmds = splitCombinedOperations(cmd$$4);
             if(cmds) {
               cmd$$4 = cmds[0];
-              introspect(JAMScript.introspectors.processC545F199BE443C5FB0DC91C55134FB746FD8B074) {
+              introspect(JAM.policy.pC545F199BE443C5FB0DC91C55134FB746FD8B074) {
                 fn$$4 = OP_MAP[cmd$$4]
               }
               hasNextObj = true;
@@ -21433,7 +21433,7 @@ function pdfjsWrapper() {
           if(v7958) {
             var v23149 = args$$5.length;
             var v23031 = v23149 - 1;
-            introspect(JAMScript.introspectors.processC545F199BE443C5FB0DC91C55134FB746FD8B074) {
+            introspect(JAM.policy.pC545F199BE443C5FB0DC91C55134FB746FD8B074) {
               var v22701 = args$$5[v23031]
             }
             var v21854 = v22701.code;
@@ -21443,7 +21443,7 @@ function pdfjsWrapper() {
           if(v4320) {
             var v7959 = args$$5.length;
             var v4294 = v7959 - 1;
-            introspect(JAMScript.introspectors.processC545F199BE443C5FB0DC91C55134FB746FD8B074) {
+            introspect(JAM.policy.pC545F199BE443C5FB0DC91C55134FB746FD8B074) {
               var patternName = args$$5[v4294]
             }
             var v4302 = isName(patternName);
@@ -21796,7 +21796,7 @@ function pdfjsWrapper() {
       for(;v4351;) {
         var v4350 = i$$inline_71;
         i$$inline_71 = i$$inline_71 + 1;
-        introspect(JAMScript.introspectors.processC545F199BE443C5FB0DC91C55134FB746FD8B074) {
+        introspect(JAM.policy.pC545F199BE443C5FB0DC91C55134FB746FD8B074) {
           hashData$$inline_70[v4350] = ownerPassword$$inline_63[j$$inline_72]
         }
         j$$inline_72 = j$$inline_72 + 1;
@@ -21823,7 +21823,7 @@ function pdfjsWrapper() {
       for(;v4357;) {
         var v4356 = i$$inline_71;
         i$$inline_71 = i$$inline_71 + 1;
-        introspect(JAMScript.introspectors.processC545F199BE443C5FB0DC91C55134FB746FD8B074) {
+        introspect(JAM.policy.pC545F199BE443C5FB0DC91C55134FB746FD8B074) {
           hashData$$inline_70[v4356] = fileId$$inline_61[j$$inline_72]
         }
         j$$inline_72 = j$$inline_72 + 1;
@@ -21872,7 +21872,7 @@ function pdfjsWrapper() {
         for(;v4366;) {
           var v4365 = i$$inline_71;
           i$$inline_71 = i$$inline_71 + 1;
-          introspect(JAMScript.introspectors.processC545F199BE443C5FB0DC91C55134FB746FD8B074) {
+          introspect(JAM.policy.pC545F199BE443C5FB0DC91C55134FB746FD8B074) {
             hashData$$inline_70[v4365] = fileId$$inline_61[j$$inline_72]
           }
           j$$inline_72 = j$$inline_72 + 1;
@@ -21890,7 +21890,7 @@ function pdfjsWrapper() {
           k$$inline_80 = 0;
           var v4369 = k$$inline_80 < n$$inline_73;
           for(;v4369;) {
-            introspect(JAMScript.introspectors.processC545F199BE443C5FB0DC91C55134FB746FD8B074) {
+            introspect(JAM.policy.pC545F199BE443C5FB0DC91C55134FB746FD8B074) {
               var v4368 = encryptionKey$$inline_76[k$$inline_80]
             }
             derivedKey$$inline_79[k$$inline_80] = v4368 ^ j$$inline_72;
@@ -21911,10 +21911,10 @@ function pdfjsWrapper() {
       n$$inline_73 = checkData$$inline_78.length;
       var v4374 = j$$inline_72 < n$$inline_73;
       for(;v4374;) {
-        introspect(JAMScript.introspectors.processC545F199BE443C5FB0DC91C55134FB746FD8B074) {
+        introspect(JAM.policy.pC545F199BE443C5FB0DC91C55134FB746FD8B074) {
           var v7990 = userPassword$$inline_64[j$$inline_72]
         }
-        introspect(JAMScript.introspectors.processC545F199BE443C5FB0DC91C55134FB746FD8B074) {
+        introspect(JAM.policy.pC545F199BE443C5FB0DC91C55134FB746FD8B074) {
           var v7991 = checkData$$inline_78[j$$inline_72]
         }
         var v4373 = v7990 != v7991;
@@ -21961,7 +21961,7 @@ function pdfjsWrapper() {
       n$$25 = encryptionKey$$1.length;
       var v4380 = i$$70 < n$$25;
       for(;v4380;) {
-        introspect(JAMScript.introspectors.processC545F199BE443C5FB0DC91C55134FB746FD8B074) {
+        introspect(JAM.policy.pC545F199BE443C5FB0DC91C55134FB746FD8B074) {
           key$$31[i$$70] = encryptionKey$$1[i$$70]
         }
         i$$70 = i$$70 + 1;
@@ -22088,7 +22088,7 @@ function pdfjsWrapper() {
       }
       var v4400 = v8003;
       for(;v4400;) {
-        introspect(JAMScript.introspectors.processC545F199BE443C5FB0DC91C55134FB746FD8B074) {
+        introspect(JAM.policy.pC545F199BE443C5FB0DC91C55134FB746FD8B074) {
           buffer$$12[bufferLength$$1] = data$$52[i$$68]
         }
         i$$68 = i$$68 + 1;
@@ -22123,34 +22123,34 @@ function pdfjsWrapper() {
       var v4409 = j$$inline_39 < b$$inline_37;
       for(;v4409;) {
         var v4403 = j$$inline_39 - 3;
-        introspect(JAMScript.introspectors.processC545F199BE443C5FB0DC91C55134FB746FD8B074) {
+        introspect(JAM.policy.pC545F199BE443C5FB0DC91C55134FB746FD8B074) {
           var t1$$inline_41 = result$$inline_38[v4403]
         }
         var v4404 = j$$inline_39 - 2;
-        introspect(JAMScript.introspectors.processC545F199BE443C5FB0DC91C55134FB746FD8B074) {
+        introspect(JAM.policy.pC545F199BE443C5FB0DC91C55134FB746FD8B074) {
           var t2$$inline_42 = result$$inline_38[v4404]
         }
         var v4405 = j$$inline_39 - 1;
-        introspect(JAMScript.introspectors.processC545F199BE443C5FB0DC91C55134FB746FD8B074) {
+        introspect(JAM.policy.pC545F199BE443C5FB0DC91C55134FB746FD8B074) {
           var t3$$inline_43 = result$$inline_38[v4405]
         }
         var v4406 = j$$inline_39 - 4;
-        introspect(JAMScript.introspectors.processC545F199BE443C5FB0DC91C55134FB746FD8B074) {
+        introspect(JAM.policy.pC545F199BE443C5FB0DC91C55134FB746FD8B074) {
           var t4$$inline_44 = result$$inline_38[v4406]
         }
-        introspect(JAMScript.introspectors.processC545F199BE443C5FB0DC91C55134FB746FD8B074) {
+        introspect(JAM.policy.pC545F199BE443C5FB0DC91C55134FB746FD8B074) {
           t1$$inline_41 = s$$11[t1$$inline_41]
         }
-        introspect(JAMScript.introspectors.processC545F199BE443C5FB0DC91C55134FB746FD8B074) {
+        introspect(JAM.policy.pC545F199BE443C5FB0DC91C55134FB746FD8B074) {
           t2$$inline_42 = s$$11[t2$$inline_42]
         }
-        introspect(JAMScript.introspectors.processC545F199BE443C5FB0DC91C55134FB746FD8B074) {
+        introspect(JAM.policy.pC545F199BE443C5FB0DC91C55134FB746FD8B074) {
           t3$$inline_43 = s$$11[t3$$inline_43]
         }
-        introspect(JAMScript.introspectors.processC545F199BE443C5FB0DC91C55134FB746FD8B074) {
+        introspect(JAM.policy.pC545F199BE443C5FB0DC91C55134FB746FD8B074) {
           t4$$inline_44 = s$$11[t4$$inline_44]
         }
-        introspect(JAMScript.introspectors.processC545F199BE443C5FB0DC91C55134FB746FD8B074) {
+        introspect(JAM.policy.pC545F199BE443C5FB0DC91C55134FB746FD8B074) {
           var v4407 = rcon[i$$inline_40]
         }
         t1$$inline_41 = t1$$inline_41 ^ v4407;
@@ -22158,25 +22158,25 @@ function pdfjsWrapper() {
         var v4408 = n$$inline_45 < 4;
         for(;v4408;) {
           var v21876 = j$$inline_39 - 16;
-          introspect(JAMScript.introspectors.processC545F199BE443C5FB0DC91C55134FB746FD8B074) {
+          introspect(JAM.policy.pC545F199BE443C5FB0DC91C55134FB746FD8B074) {
             var v8005 = result$$inline_38[v21876]
           }
           result$$inline_38[j$$inline_39] = t1$$inline_41 = t1$$inline_41 ^ v8005;
           j$$inline_39 = j$$inline_39 + 1;
           var v21877 = j$$inline_39 - 16;
-          introspect(JAMScript.introspectors.processC545F199BE443C5FB0DC91C55134FB746FD8B074) {
+          introspect(JAM.policy.pC545F199BE443C5FB0DC91C55134FB746FD8B074) {
             var v8006 = result$$inline_38[v21877]
           }
           result$$inline_38[j$$inline_39] = t2$$inline_42 = t2$$inline_42 ^ v8006;
           j$$inline_39 = j$$inline_39 + 1;
           var v21878 = j$$inline_39 - 16;
-          introspect(JAMScript.introspectors.processC545F199BE443C5FB0DC91C55134FB746FD8B074) {
+          introspect(JAM.policy.pC545F199BE443C5FB0DC91C55134FB746FD8B074) {
             var v8007 = result$$inline_38[v21878]
           }
           result$$inline_38[j$$inline_39] = t3$$inline_43 = t3$$inline_43 ^ v8007;
           j$$inline_39 = j$$inline_39 + 1;
           var v21879 = j$$inline_39 - 16;
-          introspect(JAMScript.introspectors.processC545F199BE443C5FB0DC91C55134FB746FD8B074) {
+          introspect(JAM.policy.pC545F199BE443C5FB0DC91C55134FB746FD8B074) {
             var v8008 = result$$inline_38[v21879]
           }
           result$$inline_38[j$$inline_39] = t4$$inline_44 = t4$$inline_44 ^ v8008;
@@ -22206,7 +22206,7 @@ function pdfjsWrapper() {
       i$$67 = 0;
       var v4430 = i$$67 < sourceLength;
       for(;v4430;) {
-        introspect(JAMScript.introspectors.processC545F199BE443C5FB0DC91C55134FB746FD8B074) {
+        introspect(JAM.policy.pC545F199BE443C5FB0DC91C55134FB746FD8B074) {
           buffer$$11[bufferLength] = data$$51[i$$67]
         }
         bufferLength = bufferLength + 1;
@@ -22231,10 +22231,10 @@ function pdfjsWrapper() {
         k$$inline_52 = 160;
         var v4411 = j$$inline_51 < 16;
         for(;v4411;) {
-          introspect(JAMScript.introspectors.processC545F199BE443C5FB0DC91C55134FB746FD8B074) {
+          introspect(JAM.policy.pC545F199BE443C5FB0DC91C55134FB746FD8B074) {
             var v8009 = state$$inline_49[j$$inline_51]
           }
-          introspect(JAMScript.introspectors.processC545F199BE443C5FB0DC91C55134FB746FD8B074) {
+          introspect(JAM.policy.pC545F199BE443C5FB0DC91C55134FB746FD8B074) {
             var v8010 = key$$inline_48[k$$inline_52]
           }
           state$$inline_49[j$$inline_51] = v8009 ^ v8010;
@@ -22266,10 +22266,10 @@ function pdfjsWrapper() {
           j$$inline_51 = 0;
           var v4413 = j$$inline_51 < 16;
           for(;v4413;) {
-            introspect(JAMScript.introspectors.processC545F199BE443C5FB0DC91C55134FB746FD8B074) {
+            introspect(JAM.policy.pC545F199BE443C5FB0DC91C55134FB746FD8B074) {
               var v4412 = state$$inline_49[j$$inline_51]
             }
-            introspect(JAMScript.introspectors.processC545F199BE443C5FB0DC91C55134FB746FD8B074) {
+            introspect(JAM.policy.pC545F199BE443C5FB0DC91C55134FB746FD8B074) {
               state$$inline_49[j$$inline_51] = inv_s[v4412]
             }
             j$$inline_51 = j$$inline_51 + 1;
@@ -22279,10 +22279,10 @@ function pdfjsWrapper() {
           k$$inline_52 = i$$inline_50 * 16;
           var v4414 = j$$inline_51 < 16;
           for(;v4414;) {
-            introspect(JAMScript.introspectors.processC545F199BE443C5FB0DC91C55134FB746FD8B074) {
+            introspect(JAM.policy.pC545F199BE443C5FB0DC91C55134FB746FD8B074) {
               var v8011 = state$$inline_49[j$$inline_51]
             }
-            introspect(JAMScript.introspectors.processC545F199BE443C5FB0DC91C55134FB746FD8B074) {
+            introspect(JAM.policy.pC545F199BE443C5FB0DC91C55134FB746FD8B074) {
               var v8012 = key$$inline_48[k$$inline_52]
             }
             state$$inline_49[j$$inline_51] = v8011 ^ v8012;
@@ -22293,31 +22293,31 @@ function pdfjsWrapper() {
           j$$inline_51 = 0;
           var v4425 = j$$inline_51 < 16;
           for(;v4425;) {
-            introspect(JAMScript.introspectors.processC545F199BE443C5FB0DC91C55134FB746FD8B074) {
+            introspect(JAM.policy.pC545F199BE443C5FB0DC91C55134FB746FD8B074) {
               var v4415 = state$$inline_49[j$$inline_51]
             }
-            introspect(JAMScript.introspectors.processC545F199BE443C5FB0DC91C55134FB746FD8B074) {
+            introspect(JAM.policy.pC545F199BE443C5FB0DC91C55134FB746FD8B074) {
               var s0$$inline_56 = mix[v4415]
             }
             var v8013 = j$$inline_51 + 1;
-            introspect(JAMScript.introspectors.processC545F199BE443C5FB0DC91C55134FB746FD8B074) {
+            introspect(JAM.policy.pC545F199BE443C5FB0DC91C55134FB746FD8B074) {
               var v4416 = state$$inline_49[v8013]
             }
-            introspect(JAMScript.introspectors.processC545F199BE443C5FB0DC91C55134FB746FD8B074) {
+            introspect(JAM.policy.pC545F199BE443C5FB0DC91C55134FB746FD8B074) {
               var s1$$inline_57 = mix[v4416]
             }
             var v8014 = j$$inline_51 + 2;
-            introspect(JAMScript.introspectors.processC545F199BE443C5FB0DC91C55134FB746FD8B074) {
+            introspect(JAM.policy.pC545F199BE443C5FB0DC91C55134FB746FD8B074) {
               var v4417 = state$$inline_49[v8014]
             }
-            introspect(JAMScript.introspectors.processC545F199BE443C5FB0DC91C55134FB746FD8B074) {
+            introspect(JAM.policy.pC545F199BE443C5FB0DC91C55134FB746FD8B074) {
               var s2$$inline_58 = mix[v4417]
             }
             var v8015 = j$$inline_51 + 3;
-            introspect(JAMScript.introspectors.processC545F199BE443C5FB0DC91C55134FB746FD8B074) {
+            introspect(JAM.policy.pC545F199BE443C5FB0DC91C55134FB746FD8B074) {
               var v4418 = state$$inline_49[v8015]
             }
-            introspect(JAMScript.introspectors.processC545F199BE443C5FB0DC91C55134FB746FD8B074) {
+            introspect(JAM.policy.pC545F199BE443C5FB0DC91C55134FB746FD8B074) {
               var s3$$inline_59 = mix[v4418]
             }
             var v23150 = s1$$inline_57 >>> 8;
@@ -22369,16 +22369,16 @@ function pdfjsWrapper() {
         j$$inline_51 = 0;
         var v4428 = j$$inline_51 < 16;
         for(;v4428;) {
-          introspect(JAMScript.introspectors.processC545F199BE443C5FB0DC91C55134FB746FD8B074) {
+          introspect(JAM.policy.pC545F199BE443C5FB0DC91C55134FB746FD8B074) {
             var v4427 = state$$inline_49[j$$inline_51]
           }
-          introspect(JAMScript.introspectors.processC545F199BE443C5FB0DC91C55134FB746FD8B074) {
+          introspect(JAM.policy.pC545F199BE443C5FB0DC91C55134FB746FD8B074) {
             state$$inline_49[j$$inline_51] = inv_s[v4427]
           }
-          introspect(JAMScript.introspectors.processC545F199BE443C5FB0DC91C55134FB746FD8B074) {
+          introspect(JAM.policy.pC545F199BE443C5FB0DC91C55134FB746FD8B074) {
             var v8020 = state$$inline_49[j$$inline_51]
           }
-          introspect(JAMScript.introspectors.processC545F199BE443C5FB0DC91C55134FB746FD8B074) {
+          introspect(JAM.policy.pC545F199BE443C5FB0DC91C55134FB746FD8B074) {
             var v8021 = key$$inline_48[j$$inline_51]
           }
           state$$inline_49[j$$inline_51] = v8020 ^ v8021;
@@ -22389,10 +22389,10 @@ function pdfjsWrapper() {
         j$$19 = 0;
         var v4429 = j$$19 < 16;
         for(;v4429;) {
-          introspect(JAMScript.introspectors.processC545F199BE443C5FB0DC91C55134FB746FD8B074) {
+          introspect(JAM.policy.pC545F199BE443C5FB0DC91C55134FB746FD8B074) {
             var v8022 = plain[j$$19]
           }
-          introspect(JAMScript.introspectors.processC545F199BE443C5FB0DC91C55134FB746FD8B074) {
+          introspect(JAM.policy.pC545F199BE443C5FB0DC91C55134FB746FD8B074) {
             var v8023 = iv[j$$19]
           }
           plain[j$$19] = v8022 ^ v8023;
@@ -22427,7 +22427,7 @@ function pdfjsWrapper() {
       ii$$18 = result$$6.length;
       var v4435 = i$$67 < ii$$18;
       for(;v4435;) {
-        introspect(JAMScript.introspectors.processC545F199BE443C5FB0DC91C55134FB746FD8B074) {
+        introspect(JAM.policy.pC545F199BE443C5FB0DC91C55134FB746FD8B074) {
           var v4434 = result$$6[i$$67]
         }
         output$$1.set(v4434, j$$19);
@@ -22487,7 +22487,7 @@ function pdfjsWrapper() {
       for(;v4443;) {
         var v4442 = offset$$16;
         offset$$16 = offset$$16 + 1;
-        introspect(JAMScript.introspectors.processC545F199BE443C5FB0DC91C55134FB746FD8B074) {
+        introspect(JAM.policy.pC545F199BE443C5FB0DC91C55134FB746FD8B074) {
           padded[i$$64] = data$$49[v4442]
         }
         i$$64 = i$$64 + 1;
@@ -22540,23 +22540,23 @@ function pdfjsWrapper() {
         j$$16 = 0;
         var v4457 = j$$16 < 16;
         for(;v4457;) {
-          introspect(JAMScript.introspectors.processC545F199BE443C5FB0DC91C55134FB746FD8B074) {
+          introspect(JAM.policy.pC545F199BE443C5FB0DC91C55134FB746FD8B074) {
             var v21882 = padded[i$$64]
           }
           var v23034 = i$$64 + 1;
-          introspect(JAMScript.introspectors.processC545F199BE443C5FB0DC91C55134FB746FD8B074) {
+          introspect(JAM.policy.pC545F199BE443C5FB0DC91C55134FB746FD8B074) {
             var v22709 = padded[v23034]
           }
           var v21883 = v22709 << 8;
           var v8032 = v21882 | v21883;
           var v22710 = i$$64 + 2;
-          introspect(JAMScript.introspectors.processC545F199BE443C5FB0DC91C55134FB746FD8B074) {
+          introspect(JAM.policy.pC545F199BE443C5FB0DC91C55134FB746FD8B074) {
             var v21884 = padded[v22710]
           }
           var v8033 = v21884 << 16;
           var v4455 = v8032 | v8033;
           var v21885 = i$$64 + 3;
-          introspect(JAMScript.introspectors.processC545F199BE443C5FB0DC91C55134FB746FD8B074) {
+          introspect(JAM.policy.pC545F199BE443C5FB0DC91C55134FB746FD8B074) {
             var v8034 = padded[v21885]
           }
           var v4456 = v8034 << 24;
@@ -22610,16 +22610,16 @@ function pdfjsWrapper() {
           }
           var tmp$$2 = d$$7;
           var v21886 = a$$11 + f$$5;
-          introspect(JAMScript.introspectors.processC545F199BE443C5FB0DC91C55134FB746FD8B074) {
+          introspect(JAM.policy.pC545F199BE443C5FB0DC91C55134FB746FD8B074) {
             var v21887 = k$$5[j$$16]
           }
           var v8040 = v21886 + v21887;
-          introspect(JAMScript.introspectors.processC545F199BE443C5FB0DC91C55134FB746FD8B074) {
+          introspect(JAM.policy.pC545F199BE443C5FB0DC91C55134FB746FD8B074) {
             var v8041 = w$$15[g$$6]
           }
           var v4470 = v8040 + v8041;
           var rotateArg = v4470 | 0;
-          introspect(JAMScript.introspectors.processC545F199BE443C5FB0DC91C55134FB746FD8B074) {
+          introspect(JAM.policy.pC545F199BE443C5FB0DC91C55134FB746FD8B074) {
             var rotate$$3 = r$$7[j$$16]
           }
           d$$7 = c$$13;
@@ -22697,22 +22697,22 @@ function pdfjsWrapper() {
       for(;v4485;) {
         var v4481 = a$$10 + 1;
         a$$10 = v4481 & 255;
-        introspect(JAMScript.introspectors.processC545F199BE443C5FB0DC91C55134FB746FD8B074) {
+        introspect(JAM.policy.pC545F199BE443C5FB0DC91C55134FB746FD8B074) {
           tmp$$1 = s$$10[a$$10]
         }
         var v4482 = b$$13 + tmp$$1;
         b$$13 = v4482 & 255;
-        introspect(JAMScript.introspectors.processC545F199BE443C5FB0DC91C55134FB746FD8B074) {
+        introspect(JAM.policy.pC545F199BE443C5FB0DC91C55134FB746FD8B074) {
           tmp2 = s$$10[b$$13]
         }
         s$$10[a$$10] = tmp2;
         s$$10[b$$13] = tmp$$1;
-        introspect(JAMScript.introspectors.processC545F199BE443C5FB0DC91C55134FB746FD8B074) {
+        introspect(JAM.policy.pC545F199BE443C5FB0DC91C55134FB746FD8B074) {
           var v4483 = data$$48[i$$63]
         }
         var v21902 = tmp$$1 + tmp2;
         var v8059 = v21902 & 255;
-        introspect(JAMScript.introspectors.processC545F199BE443C5FB0DC91C55134FB746FD8B074) {
+        introspect(JAM.policy.pC545F199BE443C5FB0DC91C55134FB746FD8B074) {
           var v4484 = s$$10[v8059]
         }
         output[i$$63] = v4483 ^ v4484;
@@ -22741,12 +22741,12 @@ function pdfjsWrapper() {
       i$$62 = 0;
       var v4488 = i$$62 < 256;
       for(;v4488;) {
-        introspect(JAMScript.introspectors.processC545F199BE443C5FB0DC91C55134FB746FD8B074) {
+        introspect(JAM.policy.pC545F199BE443C5FB0DC91C55134FB746FD8B074) {
           tmp = s$$9[i$$62]
         }
         var v8060 = j$$15 + tmp;
         var v21903 = i$$62 % keyLength;
-        introspect(JAMScript.introspectors.processC545F199BE443C5FB0DC91C55134FB746FD8B074) {
+        introspect(JAM.policy.pC545F199BE443C5FB0DC91C55134FB746FD8B074) {
           var v8061 = key$$28[v21903]
         }
         var v4487 = v8060 + v8061;
@@ -22821,15 +22821,15 @@ function pdfjsWrapper() {
       i$$61 = 0;
       var v4498 = i$$61 < length$$31;
       for(;v4498;) {
-        introspect(JAMScript.introspectors.processC545F199BE443C5FB0DC91C55134FB746FD8B074) {
+        introspect(JAM.policy.pC545F199BE443C5FB0DC91C55134FB746FD8B074) {
           var v8065 = input$$5[i$$61]
         }
         var v21906 = i$$61 + 1;
-        introspect(JAMScript.introspectors.processC545F199BE443C5FB0DC91C55134FB746FD8B074) {
+        introspect(JAM.policy.pC545F199BE443C5FB0DC91C55134FB746FD8B074) {
           var v8066 = input$$5[v21906]
         }
         var v21907 = i$$61 + 2;
-        introspect(JAMScript.introspectors.processC545F199BE443C5FB0DC91C55134FB746FD8B074) {
+        introspect(JAM.policy.pC545F199BE443C5FB0DC91C55134FB746FD8B074) {
           var v8067 = input$$5[v21907]
         }
         var v4494 = [v8065, v8066, v8067];
@@ -23032,7 +23032,7 @@ function pdfjsWrapper() {
         for(;v4528;) {
           var v21923 = colorBufPos;
           colorBufPos = colorBufPos + 1;
-          introspect(JAMScript.introspectors.processC545F199BE443C5FB0DC91C55134FB746FD8B074) {
+          introspect(JAM.policy.pC545F199BE443C5FB0DC91C55134FB746FD8B074) {
             var v8080 = colorBuf[v21923]
           }
           var v4527 = scale$$8 * v8080;
@@ -23047,7 +23047,7 @@ function pdfjsWrapper() {
           var v4529 = rgbBuf$$2;
           var v4530 = rgbBufPos;
           rgbBufPos = rgbBufPos + 1;
-          introspect(JAMScript.introspectors.processC545F199BE443C5FB0DC91C55134FB746FD8B074) {
+          introspect(JAM.policy.pC545F199BE443C5FB0DC91C55134FB746FD8B074) {
             var v21924 = rgb[j$$13]
           }
           var v8081 = v21924 * 255;
@@ -23108,7 +23108,7 @@ function pdfjsWrapper() {
       i$$59 = 0;
       var v4540 = i$$59 < length$$29;
       for(;v4540;) {
-        introspect(JAMScript.introspectors.processC545F199BE443C5FB0DC91C55134FB746FD8B074) {
+        introspect(JAM.policy.pC545F199BE443C5FB0DC91C55134FB746FD8B074) {
           var v8086 = input$$4[i$$59]
         }
         var v4539 = scale$$7 * v8086;
@@ -23146,7 +23146,7 @@ function pdfjsWrapper() {
       var j$$12 = 0;
       var v4548 = i$$58 < length$$28;
       for(;v4548;) {
-        introspect(JAMScript.introspectors.processC545F199BE443C5FB0DC91C55134FB746FD8B074) {
+        introspect(JAM.policy.pC545F199BE443C5FB0DC91C55134FB746FD8B074) {
           var v8088 = input$$3[i$$58]
         }
         var v4544 = scale$$6 * v8088;
@@ -23193,7 +23193,7 @@ function pdfjsWrapper() {
       var i$$57 = 0;
       var v4553 = i$$57 < length$$27;
       for(;v4553;) {
-        introspect(JAMScript.introspectors.processC545F199BE443C5FB0DC91C55134FB746FD8B074) {
+        introspect(JAM.policy.pC545F199BE443C5FB0DC91C55134FB746FD8B074) {
           var v4550 = input$$2[i$$57]
         }
         var lookupPos = v4550 * numComps$$5;
@@ -23223,7 +23223,7 @@ function pdfjsWrapper() {
       var v4557 = i$$56 < ii$$17;
       for(;v4557;) {
         var v8090 = this.lookup;
-        introspect(JAMScript.introspectors.processC545F199BE443C5FB0DC91C55134FB746FD8B074) {
+        introspect(JAM.policy.pC545F199BE443C5FB0DC91C55134FB746FD8B074) {
           var v4556 = v8090[i$$56]
         }
         c$$9.push(v4556);
@@ -23304,7 +23304,7 @@ function pdfjsWrapper() {
         var v4569 = z$$2 < numComps$$3;
         for(;v4569;) {
           var v8092 = i$$54 + z$$2;
-          introspect(JAMScript.introspectors.processC545F199BE443C5FB0DC91C55134FB746FD8B074) {
+          introspect(JAM.policy.pC545F199BE443C5FB0DC91C55134FB746FD8B074) {
             var v4568 = input$$1[v8092]
           }
           scaled[z$$2] = v4568 * scale$$5;
@@ -23317,7 +23317,7 @@ function pdfjsWrapper() {
         for(;v4571;) {
           var v4570 = pos$$4;
           pos$$4 = pos$$4 + 1;
-          introspect(JAMScript.introspectors.processC545F199BE443C5FB0DC91C55134FB746FD8B074) {
+          introspect(JAM.policy.pC545F199BE443C5FB0DC91C55134FB746FD8B074) {
             var v8093 = tinted$$1[j$$10]
           }
           baseBuf[v4570] = 255 * v8093;
@@ -23370,14 +23370,14 @@ function pdfjsWrapper() {
       var ii$$16 = decode$$2.length;
       var v4579 = i$$52 < ii$$16;
       for(;v4579;) {
-        introspect(JAMScript.introspectors.processC545F199BE443C5FB0DC91C55134FB746FD8B074) {
+        introspect(JAM.policy.pC545F199BE443C5FB0DC91C55134FB746FD8B074) {
           var v21925 = decode$$2[i$$52]
         }
         var v8096 = v21925 != 0;
         var v21927 = !v8096;
         if(v21927) {
           var v22720 = i$$52 + 1;
-          introspect(JAMScript.introspectors.processC545F199BE443C5FB0DC91C55134FB746FD8B074) {
+          introspect(JAM.policy.pC545F199BE443C5FB0DC91C55134FB746FD8B074) {
             var v21926 = decode$$2[v22720]
           }
           v8096 = v21926 != 1
@@ -23744,7 +23744,7 @@ function pdfjsWrapper() {
   }
   function PostScriptTokenClosure() {
     function PostScriptToken_getOperator(op) {
-      introspect(JAMScript.introspectors.processC545F199BE443C5FB0DC91C55134FB746FD8B074) {
+      introspect(JAM.policy.pC545F199BE443C5FB0DC91C55134FB746FD8B074) {
         var opValue = opCache[op]
       }
       if(opValue) {
@@ -23922,7 +23922,7 @@ function pdfjsWrapper() {
       for(;v4706;) {
         var v4661 = counter;
         counter = counter + 1;
-        introspect(JAMScript.introspectors.processC545F199BE443C5FB0DC91C55134FB746FD8B074) {
+        introspect(JAM.policy.pC545F199BE443C5FB0DC91C55134FB746FD8B074) {
           operator = operators$$1[v4661]
         }
         var v8122 = typeof operator;
@@ -24240,10 +24240,10 @@ function pdfjsWrapper() {
       j$$9 = r$$5;
       var v4711 = i$$51 < j$$9;
       for(;v4711;) {
-        introspect(JAMScript.introspectors.processC545F199BE443C5FB0DC91C55134FB746FD8B074) {
+        introspect(JAM.policy.pC545F199BE443C5FB0DC91C55134FB746FD8B074) {
           t = stack$$2[i$$51]
         }
-        introspect(JAMScript.introspectors.processC545F199BE443C5FB0DC91C55134FB746FD8B074) {
+        introspect(JAM.policy.pC545F199BE443C5FB0DC91C55134FB746FD8B074) {
           stack$$2[i$$51] = stack$$2[j$$9]
         }
         stack$$2[j$$9] = t;
@@ -24255,10 +24255,10 @@ function pdfjsWrapper() {
       j$$9 = c$$8 - 1;
       var v4712 = i$$51 < j$$9;
       for(;v4712;) {
-        introspect(JAMScript.introspectors.processC545F199BE443C5FB0DC91C55134FB746FD8B074) {
+        introspect(JAM.policy.pC545F199BE443C5FB0DC91C55134FB746FD8B074) {
           t = stack$$2[i$$51]
         }
-        introspect(JAMScript.introspectors.processC545F199BE443C5FB0DC91C55134FB746FD8B074) {
+        introspect(JAM.policy.pC545F199BE443C5FB0DC91C55134FB746FD8B074) {
           stack$$2[i$$51] = stack$$2[j$$9]
         }
         stack$$2[j$$9] = t;
@@ -24270,10 +24270,10 @@ function pdfjsWrapper() {
       j$$9 = r$$5;
       var v4713 = i$$51 < j$$9;
       for(;v4713;) {
-        introspect(JAMScript.introspectors.processC545F199BE443C5FB0DC91C55134FB746FD8B074) {
+        introspect(JAM.policy.pC545F199BE443C5FB0DC91C55134FB746FD8B074) {
           t = stack$$2[i$$51]
         }
-        introspect(JAMScript.introspectors.processC545F199BE443C5FB0DC91C55134FB746FD8B074) {
+        introspect(JAM.policy.pC545F199BE443C5FB0DC91C55134FB746FD8B074) {
           stack$$2[i$$51] = stack$$2[j$$9]
         }
         stack$$2[j$$9] = t;
@@ -24289,7 +24289,7 @@ function pdfjsWrapper() {
       var v22724 = v23039.length;
       var v21935 = v22724 - n$$18;
       var v8134 = v21935 - 1;
-      introspect(JAMScript.introspectors.processC545F199BE443C5FB0DC91C55134FB746FD8B074) {
+      introspect(JAM.policy.pC545F199BE443C5FB0DC91C55134FB746FD8B074) {
         var v4714 = v8133[v8134]
       }
       this.push(v4714);
@@ -24309,7 +24309,7 @@ function pdfjsWrapper() {
       var j$$8 = n$$17 - 1;
       var v4718 = j$$8 >= 0;
       for(;v4718;) {
-        introspect(JAMScript.introspectors.processC545F199BE443C5FB0DC91C55134FB746FD8B074) {
+        introspect(JAM.policy.pC545F199BE443C5FB0DC91C55134FB746FD8B074) {
           var v4717 = stack$$1[i$$50]
         }
         stack$$1.push(v4717);
@@ -24362,7 +24362,7 @@ function pdfjsWrapper() {
     }
     function FunctionCache_get(key$$26) {
       var v4725 = this.cache;
-      introspect(JAMScript.introspectors.processC545F199BE443C5FB0DC91C55134FB746FD8B074) {
+      introspect(JAM.policy.pC545F199BE443C5FB0DC91C55134FB746FD8B074) {
         return v4725[key$$26]
       }
     }
@@ -24388,7 +24388,7 @@ function pdfjsWrapper() {
         var ii$$15 = v4727 / 2;
         var v4729 = i$$49 < ii$$15;
         for(;v4729;) {
-          introspect(JAMScript.introspectors.processC545F199BE443C5FB0DC91C55134FB746FD8B074) {
+          introspect(JAM.policy.pC545F199BE443C5FB0DC91C55134FB746FD8B074) {
             var v4728 = args$$4[i$$49]
           }
           initialStack.push(v4728);
@@ -24407,7 +24407,7 @@ function pdfjsWrapper() {
         for(;v4734;) {
           var out$$3 = stack.pop();
           var rangeIndex = 2 * i$$49;
-          introspect(JAMScript.introspectors.processC545F199BE443C5FB0DC91C55134FB746FD8B074) {
+          introspect(JAM.policy.pC545F199BE443C5FB0DC91C55134FB746FD8B074) {
             var v8140 = range$$11[rangeIndex]
           }
           var v4733 = out$$3 < v8140;
@@ -24415,7 +24415,7 @@ function pdfjsWrapper() {
             out$$3 = range$$11[rangeIndex]
           }else {
             var v21939 = rangeIndex + 1;
-            introspect(JAMScript.introspectors.processC545F199BE443C5FB0DC91C55134FB746FD8B074) {
+            introspect(JAM.policy.pC545F199BE443C5FB0DC91C55134FB746FD8B074) {
               var v8141 = range$$11[v21939]
             }
             var v4732 = out$$3 > v8141;
@@ -24476,7 +24476,7 @@ function pdfjsWrapper() {
         var ii$$14 = bounds$$1.length;
         var v4741 = i$$48 < ii$$14;
         for(;v4741;) {
-          introspect(JAMScript.introspectors.processC545F199BE443C5FB0DC91C55134FB746FD8B074) {
+          introspect(JAM.policy.pC545F199BE443C5FB0DC91C55134FB746FD8B074) {
             var v8142 = bounds$$1[i$$48]
           }
           var v4740 = v$$15 < v8142;
@@ -24499,12 +24499,12 @@ function pdfjsWrapper() {
           dmax = bounds$$1[i$$48]
         }
         var v4745 = 2 * i$$48;
-        introspect(JAMScript.introspectors.processC545F199BE443C5FB0DC91C55134FB746FD8B074) {
+        introspect(JAM.policy.pC545F199BE443C5FB0DC91C55134FB746FD8B074) {
           var rmin = encode$$3[v4745]
         }
         var v8144 = 2 * i$$48;
         var v4746 = v8144 + 1;
-        introspect(JAMScript.introspectors.processC545F199BE443C5FB0DC91C55134FB746FD8B074) {
+        introspect(JAM.policy.pC545F199BE443C5FB0DC91C55134FB746FD8B074) {
           var rmax = encode$$3[v4746]
         }
         var v21940 = v$$15 - dmin;
@@ -24514,7 +24514,7 @@ function pdfjsWrapper() {
         var v4747 = v8145 / v8146;
         var v2 = rmin + v4747;
         var v4748 = [v2];
-        introspect(JAMScript.introspectors.processC545F199BE443C5FB0DC91C55134FB746FD8B074) {
+        introspect(JAM.policy.pC545F199BE443C5FB0DC91C55134FB746FD8B074) {
           return fns$$1[i$$48](v4748)
         }
       }
@@ -24527,7 +24527,7 @@ function pdfjsWrapper() {
       var ii$$13 = fnsIR.length;
       var v4750 = i$$47 < ii$$13;
       for(;v4750;) {
-        introspect(JAMScript.introspectors.processC545F199BE443C5FB0DC91C55134FB746FD8B074) {
+        introspect(JAM.policy.pC545F199BE443C5FB0DC91C55134FB746FD8B074) {
           var v8147 = fnsIR[i$$47]
         }
         var v4749 = PDFFunction.fromIR(v8147);
@@ -24555,7 +24555,7 @@ function pdfjsWrapper() {
       var ii$$12 = fnRefs.length;
       var v4755 = i$$46 < ii$$12;
       for(;v4755;) {
-        introspect(JAMScript.introspectors.processC545F199BE443C5FB0DC91C55134FB746FD8B074) {
+        introspect(JAM.policy.pC545F199BE443C5FB0DC91C55134FB746FD8B074) {
           var v21942 = fnRefs[i$$46]
         }
         var v8148 = xref$$11.fetchIfRef(v21942);
@@ -24583,10 +24583,10 @@ function pdfjsWrapper() {
         var j$$7 = 0;
         var v4758 = j$$7 < length$$23;
         for(;v4758;) {
-          introspect(JAMScript.introspectors.processC545F199BE443C5FB0DC91C55134FB746FD8B074) {
+          introspect(JAM.policy.pC545F199BE443C5FB0DC91C55134FB746FD8B074) {
             var v8151 = c0$$1[j$$7]
           }
-          introspect(JAMScript.introspectors.processC545F199BE443C5FB0DC91C55134FB746FD8B074) {
+          introspect(JAM.policy.pC545F199BE443C5FB0DC91C55134FB746FD8B074) {
             var v21943 = diff$$1[j$$7]
           }
           var v8152 = x$$74 * v21943;
@@ -24633,10 +24633,10 @@ function pdfjsWrapper() {
       var i$$45 = 0;
       var v4763 = i$$45 < length$$22;
       for(;v4763;) {
-        introspect(JAMScript.introspectors.processC545F199BE443C5FB0DC91C55134FB746FD8B074) {
+        introspect(JAM.policy.pC545F199BE443C5FB0DC91C55134FB746FD8B074) {
           var v8156 = c1[i$$45]
         }
-        introspect(JAMScript.introspectors.processC545F199BE443C5FB0DC91C55134FB746FD8B074) {
+        introspect(JAM.policy.pC545F199BE443C5FB0DC91C55134FB746FD8B074) {
           var v8157 = c0[i$$45]
         }
         var v4762 = v8156 - v8157;
@@ -24682,29 +24682,29 @@ function pdfjsWrapper() {
         var i$$44 = 0;
         var v4778 = i$$44 < m$$15;
         for(;v4778;) {
-          introspect(JAMScript.introspectors.processC545F199BE443C5FB0DC91C55134FB746FD8B074) {
+          introspect(JAM.policy.pC545F199BE443C5FB0DC91C55134FB746FD8B074) {
             var v4767 = domain$$1[i$$44]
           }
           var domain_2i = v4767[0];
-          introspect(JAMScript.introspectors.processC545F199BE443C5FB0DC91C55134FB746FD8B074) {
+          introspect(JAM.policy.pC545F199BE443C5FB0DC91C55134FB746FD8B074) {
             var v4768 = domain$$1[i$$44]
           }
           var domain_2i_1 = v4768[1];
-          introspect(JAMScript.introspectors.processC545F199BE443C5FB0DC91C55134FB746FD8B074) {
+          introspect(JAM.policy.pC545F199BE443C5FB0DC91C55134FB746FD8B074) {
             var v8161 = x$$73[i$$44]
           }
           var v4769 = Math.max(v8161, domain_2i);
           var xi = Math.min(v4769, domain_2i_1);
-          introspect(JAMScript.introspectors.processC545F199BE443C5FB0DC91C55134FB746FD8B074) {
+          introspect(JAM.policy.pC545F199BE443C5FB0DC91C55134FB746FD8B074) {
             var v8162 = encode$$1[i$$44]
           }
           var v4770 = v8162[0];
           var v8163 = xi - domain_2i;
-          introspect(JAMScript.introspectors.processC545F199BE443C5FB0DC91C55134FB746FD8B074) {
+          introspect(JAM.policy.pC545F199BE443C5FB0DC91C55134FB746FD8B074) {
             var v23040 = encode$$1[i$$44]
           }
           var v22726 = v23040[1];
-          introspect(JAMScript.introspectors.processC545F199BE443C5FB0DC91C55134FB746FD8B074) {
+          introspect(JAM.policy.pC545F199BE443C5FB0DC91C55134FB746FD8B074) {
             var v23041 = encode$$1[i$$44]
           }
           var v22727 = v23041[0];
@@ -24713,7 +24713,7 @@ function pdfjsWrapper() {
           var v8164 = v21948 / v21949;
           var v4771 = v8163 * v8164;
           var e$$22 = v4770 + v4771;
-          introspect(JAMScript.introspectors.processC545F199BE443C5FB0DC91C55134FB746FD8B074) {
+          introspect(JAM.policy.pC545F199BE443C5FB0DC91C55134FB746FD8B074) {
             var size_i = size$$8[i$$44]
           }
           var v4772 = Math.max(e$$22, 0);
@@ -24738,20 +24738,20 @@ function pdfjsWrapper() {
           for(;v4777;) {
             var v4776 = j$$6 & pos$$3;
             if(v4776) {
-              introspect(JAMScript.introspectors.processC545F199BE443C5FB0DC91C55134FB746FD8B074) {
+              introspect(JAM.policy.pC545F199BE443C5FB0DC91C55134FB746FD8B074) {
                 var v8166 = cubeN[j$$6]
               }
               cubeN[j$$6] = v8166 * n1;
-              introspect(JAMScript.introspectors.processC545F199BE443C5FB0DC91C55134FB746FD8B074) {
+              introspect(JAM.policy.pC545F199BE443C5FB0DC91C55134FB746FD8B074) {
                 var v8167 = cubeVertex[j$$6]
               }
               cubeVertex[j$$6] = v8167 + offset1
             }else {
-              introspect(JAMScript.introspectors.processC545F199BE443C5FB0DC91C55134FB746FD8B074) {
+              introspect(JAM.policy.pC545F199BE443C5FB0DC91C55134FB746FD8B074) {
                 var v8168 = cubeN[j$$6]
               }
               cubeN[j$$6] = v8168 * n0;
-              introspect(JAMScript.introspectors.processC545F199BE443C5FB0DC91C55134FB746FD8B074) {
+              introspect(JAM.policy.pC545F199BE443C5FB0DC91C55134FB746FD8B074) {
                 var v8169 = cubeVertex[j$$6]
               }
               cubeVertex[j$$6] = v8169 + offset0
@@ -24772,14 +24772,14 @@ function pdfjsWrapper() {
           i$$44 = 0;
           var v4779 = i$$44 < cubeVertices;
           for(;v4779;) {
-            introspect(JAMScript.introspectors.processC545F199BE443C5FB0DC91C55134FB746FD8B074) {
+            introspect(JAM.policy.pC545F199BE443C5FB0DC91C55134FB746FD8B074) {
               var v23042 = cubeVertex[i$$44]
             }
             var v22728 = v23042 + j$$6;
-            introspect(JAMScript.introspectors.processC545F199BE443C5FB0DC91C55134FB746FD8B074) {
+            introspect(JAM.policy.pC545F199BE443C5FB0DC91C55134FB746FD8B074) {
               var v21951 = samples$$1[v22728]
             }
-            introspect(JAMScript.introspectors.processC545F199BE443C5FB0DC91C55134FB746FD8B074) {
+            introspect(JAM.policy.pC545F199BE443C5FB0DC91C55134FB746FD8B074) {
               var v21952 = cubeN[i$$44]
             }
             var v8170 = v21951 * v21952;
@@ -24787,16 +24787,16 @@ function pdfjsWrapper() {
             i$$44 = i$$44 + 1;
             v4779 = i$$44 < cubeVertices
           }
-          introspect(JAMScript.introspectors.processC545F199BE443C5FB0DC91C55134FB746FD8B074) {
+          introspect(JAM.policy.pC545F199BE443C5FB0DC91C55134FB746FD8B074) {
             var v8171 = decode$$1[j$$6]
           }
           var v4780 = v8171[0];
           var v8172 = rj - 0;
-          introspect(JAMScript.introspectors.processC545F199BE443C5FB0DC91C55134FB746FD8B074) {
+          introspect(JAM.policy.pC545F199BE443C5FB0DC91C55134FB746FD8B074) {
             var v23043 = decode$$1[j$$6]
           }
           var v22729 = v23043[1];
-          introspect(JAMScript.introspectors.processC545F199BE443C5FB0DC91C55134FB746FD8B074) {
+          introspect(JAM.policy.pC545F199BE443C5FB0DC91C55134FB746FD8B074) {
             var v23044 = decode$$1[j$$6]
           }
           var v22730 = v23044[0];
@@ -24807,12 +24807,12 @@ function pdfjsWrapper() {
           rj = v4780 + v4781;
           var v4782 = y$$56;
           var v4783 = j$$6;
-          introspect(JAMScript.introspectors.processC545F199BE443C5FB0DC91C55134FB746FD8B074) {
+          introspect(JAM.policy.pC545F199BE443C5FB0DC91C55134FB746FD8B074) {
             var v22731 = range$$9[j$$6]
           }
           var v21955 = v22731[0];
           var v8174 = Math.max(rj, v21955);
-          introspect(JAMScript.introspectors.processC545F199BE443C5FB0DC91C55134FB746FD8B074) {
+          introspect(JAM.policy.pC545F199BE443C5FB0DC91C55134FB746FD8B074) {
             var v21956 = range$$9[j$$6]
           }
           var v8175 = v21956[1];
@@ -24835,11 +24835,11 @@ function pdfjsWrapper() {
         var i$$43 = 0;
         var v4788 = i$$43 < inputLength;
         for(;v4788;) {
-          introspect(JAMScript.introspectors.processC545F199BE443C5FB0DC91C55134FB746FD8B074) {
+          introspect(JAM.policy.pC545F199BE443C5FB0DC91C55134FB746FD8B074) {
             var v4786 = arr$$11[i$$43]
           }
           var v8176 = i$$43 + 1;
-          introspect(JAMScript.introspectors.processC545F199BE443C5FB0DC91C55134FB746FD8B074) {
+          introspect(JAM.policy.pC545F199BE443C5FB0DC91C55134FB746FD8B074) {
             var v4787 = arr$$11[v8176]
           }
           out$$1[index$$42] = [v4786, v4787];
@@ -24886,7 +24886,7 @@ function pdfjsWrapper() {
         var v4796 = i$$42 < inputSize$$1;
         for(;v4796;) {
           encode.push(0);
-          introspect(JAMScript.introspectors.processC545F199BE443C5FB0DC91C55134FB746FD8B074) {
+          introspect(JAM.policy.pC545F199BE443C5FB0DC91C55134FB746FD8B074) {
             var v8178 = size$$7[i$$42]
           }
           var v4795 = v8178 - 1;
@@ -24940,7 +24940,7 @@ function pdfjsWrapper() {
       var v4804 = this.constructPostScript;
       var types = [v4801, null, v4802, v4803, v4804];
       var typeNum = dict$$4.get("FunctionType");
-      introspect(JAMScript.introspectors.processC545F199BE443C5FB0DC91C55134FB746FD8B074) {
+      introspect(JAM.policy.pC545F199BE443C5FB0DC91C55134FB746FD8B074) {
         var typeFn = types[typeNum]
       }
       var v4805 = !typeFn;
@@ -24955,7 +24955,7 @@ function pdfjsWrapper() {
       var ii$$11 = size$$6.length;
       var v4806 = i$$41 < ii$$11;
       for(;v4806;) {
-        introspect(JAMScript.introspectors.processC545F199BE443C5FB0DC91C55134FB746FD8B074) {
+        introspect(JAM.policy.pC545F199BE443C5FB0DC91C55134FB746FD8B074) {
           var v8180 = size$$6[i$$41]
         }
         length$$21 = length$$21 * v8180;
@@ -24982,7 +24982,7 @@ function pdfjsWrapper() {
           codeBuf = codeBuf << 8;
           var v21959 = strIdx;
           strIdx = strIdx + 1;
-          introspect(JAMScript.introspectors.processC545F199BE443C5FB0DC91C55134FB746FD8B074) {
+          introspect(JAM.policy.pC545F199BE443C5FB0DC91C55134FB746FD8B074) {
             var v8183 = strBytes[v21959]
           }
           codeBuf = codeBuf | v8183;
@@ -25016,14 +25016,14 @@ function pdfjsWrapper() {
     }
     function PDFObjects_hasData(objId$$7) {
       var objs$$5 = this.objs;
-      introspect(JAMScript.introspectors.processC545F199BE443C5FB0DC91C55134FB746FD8B074) {
+      introspect(JAM.policy.pC545F199BE443C5FB0DC91C55134FB746FD8B074) {
         var v8186 = objs$$5[objId$$7]
       }
       var v4814 = !v8186;
       if(v4814) {
         return false
       }else {
-        introspect(JAMScript.introspectors.processC545F199BE443C5FB0DC91C55134FB746FD8B074) {
+        introspect(JAM.policy.pC545F199BE443C5FB0DC91C55134FB746FD8B074) {
           var v4813 = objs$$5[objId$$7]
         }
         return v4813.hasData
@@ -25032,14 +25032,14 @@ function pdfjsWrapper() {
     }
     function PDFObjects_isResolved(objId$$6) {
       var objs$$4 = this.objs;
-      introspect(JAMScript.introspectors.processC545F199BE443C5FB0DC91C55134FB746FD8B074) {
+      introspect(JAM.policy.pC545F199BE443C5FB0DC91C55134FB746FD8B074) {
         var v8187 = objs$$4[objId$$6]
       }
       var v4816 = !v8187;
       if(v4816) {
         return false
       }else {
-        introspect(JAMScript.introspectors.processC545F199BE443C5FB0DC91C55134FB746FD8B074) {
+        introspect(JAM.policy.pC545F199BE443C5FB0DC91C55134FB746FD8B074) {
           var v4815 = objs$$4[objId$$6]
         }
         return v4815.isResolved
@@ -25053,11 +25053,11 @@ function pdfjsWrapper() {
     }
     function PDFObjects_resolve(objId$$4, data$$46) {
       var objs$$3 = this.objs;
-      introspect(JAMScript.introspectors.processC545F199BE443C5FB0DC91C55134FB746FD8B074) {
+      introspect(JAM.policy.pC545F199BE443C5FB0DC91C55134FB746FD8B074) {
         var v4819 = objs$$3[objId$$4]
       }
       if(v4819) {
-        introspect(JAMScript.introspectors.processC545F199BE443C5FB0DC91C55134FB746FD8B074) {
+        introspect(JAM.policy.pC545F199BE443C5FB0DC91C55134FB746FD8B074) {
           var v4818 = objs$$3[objId$$4]
         }
         v4818.resolve(data$$46)
@@ -25073,7 +25073,7 @@ function pdfjsWrapper() {
         return null
       }
       var v4821 = this.objs;
-      introspect(JAMScript.introspectors.processC545F199BE443C5FB0DC91C55134FB746FD8B074) {
+      introspect(JAM.policy.pC545F199BE443C5FB0DC91C55134FB746FD8B074) {
         var obj$$30 = v4821[objId$$3]
       }
       var v8188 = !obj$$30;
@@ -25091,12 +25091,12 @@ function pdfjsWrapper() {
     }
     function PDFObjects_ensureObj(objId$$2, data$$45) {
       var v8189 = this.objs;
-      introspect(JAMScript.introspectors.processC545F199BE443C5FB0DC91C55134FB746FD8B074) {
+      introspect(JAM.policy.pC545F199BE443C5FB0DC91C55134FB746FD8B074) {
         var v4825 = v8189[objId$$2]
       }
       if(v4825) {
         var v4824 = this.objs;
-        introspect(JAMScript.introspectors.processC545F199BE443C5FB0DC91C55134FB746FD8B074) {
+        introspect(JAM.policy.pC545F199BE443C5FB0DC91C55134FB746FD8B074) {
           return v4824[objId$$2]
         }
       }
@@ -25124,7 +25124,7 @@ function pdfjsWrapper() {
       var v4830 = num$$7 in v8190;
       if(v4830) {
         var v4829 = this.cache;
-        introspect(JAMScript.introspectors.processC545F199BE443C5FB0DC91C55134FB746FD8B074) {
+        introspect(JAM.policy.pC545F199BE443C5FB0DC91C55134FB746FD8B074) {
           return v4829[num$$7]
         }
       }
@@ -25281,17 +25281,17 @@ function pdfjsWrapper() {
         var v4858 = parser$$3.getObj();
         entries.push(v4858);
         var v4859 = this.cache;
-        introspect(JAMScript.introspectors.processC545F199BE443C5FB0DC91C55134FB746FD8B074) {
+        introspect(JAM.policy.pC545F199BE443C5FB0DC91C55134FB746FD8B074) {
           var v4860 = nums[i$$40]
         }
-        introspect(JAMScript.introspectors.processC545F199BE443C5FB0DC91C55134FB746FD8B074) {
+        introspect(JAM.policy.pC545F199BE443C5FB0DC91C55134FB746FD8B074) {
           v4859[v4860] = entries[i$$40]
         }
         i$$40 = i$$40 + 1;
         v4861 = i$$40 < n$$13
       }
       var v4862 = e$$21.gen;
-      introspect(JAMScript.introspectors.processC545F199BE443C5FB0DC91C55134FB746FD8B074) {
+      introspect(JAM.policy.pC545F199BE443C5FB0DC91C55134FB746FD8B074) {
         e$$21 = entries[v4862]
       }
       var v4863 = !e$$21;
@@ -25310,7 +25310,7 @@ function pdfjsWrapper() {
     }
     function XRef_getEntry(i$$39) {
       var v4865 = this.entries;
-      introspect(JAMScript.introspectors.processC545F199BE443C5FB0DC91C55134FB746FD8B074) {
+      introspect(JAM.policy.pC545F199BE443C5FB0DC91C55134FB746FD8B074) {
         var e$$20 = v4865[i$$39]
       }
       var v4866 = e$$20 === null;
@@ -25405,7 +25405,7 @@ function pdfjsWrapper() {
     function XRef_indexObjects() {
       function readToken(data$$43, offset$$13) {
         var token$$5 = "";
-        introspect(JAMScript.introspectors.processC545F199BE443C5FB0DC91C55134FB746FD8B074) {
+        introspect(JAM.policy.pC545F199BE443C5FB0DC91C55134FB746FD8B074) {
           var ch$$2 = data$$43[offset$$13]
         }
         var v8209 = ch$$2 !== 13;
@@ -25423,7 +25423,7 @@ function pdfjsWrapper() {
           var v8212 = token$$5;
           var v8213 = String.fromCharCode(ch$$2);
           token$$5 = v8212 + v8213;
-          introspect(JAMScript.introspectors.processC545F199BE443C5FB0DC91C55134FB746FD8B074) {
+          introspect(JAM.policy.pC545F199BE443C5FB0DC91C55134FB746FD8B074) {
             ch$$2 = data$$43[offset$$13]
           }
           var v8214 = ch$$2 !== 13;
@@ -25444,10 +25444,10 @@ function pdfjsWrapper() {
           var v8215 = i$$38 < length$$20;
           if(v8215) {
             var v22738 = offset$$14 + i$$38;
-            introspect(JAMScript.introspectors.processC545F199BE443C5FB0DC91C55134FB746FD8B074) {
+            introspect(JAM.policy.pC545F199BE443C5FB0DC91C55134FB746FD8B074) {
               var v21976 = data$$44[v22738]
             }
-            introspect(JAMScript.introspectors.processC545F199BE443C5FB0DC91C55134FB746FD8B074) {
+            introspect(JAM.policy.pC545F199BE443C5FB0DC91C55134FB746FD8B074) {
               var v21977 = what$$1[i$$38]
             }
             v8215 = v21976 == v21977
@@ -25458,10 +25458,10 @@ function pdfjsWrapper() {
             var v8216 = i$$38 < length$$20;
             if(v8216) {
               var v22739 = offset$$14 + i$$38;
-              introspect(JAMScript.introspectors.processC545F199BE443C5FB0DC91C55134FB746FD8B074) {
+              introspect(JAM.policy.pC545F199BE443C5FB0DC91C55134FB746FD8B074) {
                 var v21978 = data$$44[v22739]
               }
-              introspect(JAMScript.introspectors.processC545F199BE443C5FB0DC91C55134FB746FD8B074) {
+              introspect(JAM.policy.pC545F199BE443C5FB0DC91C55134FB746FD8B074) {
                 var v21979 = what$$1[i$$38]
               }
               v8216 = v21978 == v21979
@@ -25497,7 +25497,7 @@ function pdfjsWrapper() {
       var currentToken;
       var v4900 = position < length$$19;
       for(;v4900;) {
-        introspect(JAMScript.introspectors.processC545F199BE443C5FB0DC91C55134FB746FD8B074) {
+        introspect(JAM.policy.pC545F199BE443C5FB0DC91C55134FB746FD8B074) {
           var ch$$1 = buffer$$10[position]
         }
         var v8217 = ch$$1 === 32;
@@ -25530,7 +25530,7 @@ function pdfjsWrapper() {
           var v4890 = v8218;
           do {
             position = position + 1;
-            introspect(JAMScript.introspectors.processC545F199BE443C5FB0DC91C55134FB746FD8B074) {
+            introspect(JAM.policy.pC545F199BE443C5FB0DC91C55134FB746FD8B074) {
               ch$$1 = buffer$$10[position]
             }
             var v8219 = ch$$1 !== 13;
@@ -25569,7 +25569,7 @@ function pdfjsWrapper() {
             var v8225 = xrefTagOffset < contentLength;
             if(v8225) {
               var v22742 = xrefTagOffset + 5;
-              introspect(JAMScript.introspectors.processC545F199BE443C5FB0DC91C55134FB746FD8B074) {
+              introspect(JAM.policy.pC545F199BE443C5FB0DC91C55134FB746FD8B074) {
                 var v21983 = content$$2[v22742]
               }
               v8225 = v21983 < 64
@@ -25593,7 +25593,7 @@ function pdfjsWrapper() {
       var ii$$10 = xrefStms.length;
       var v4902 = i$$37 < ii$$10;
       for(;v4902;) {
-        introspect(JAMScript.introspectors.processC545F199BE443C5FB0DC91C55134FB746FD8B074) {
+        introspect(JAM.policy.pC545F199BE443C5FB0DC91C55134FB746FD8B074) {
           var v4901 = xrefStms[i$$37]
         }
         this.readXRef(v4901, true);
@@ -25745,7 +25745,7 @@ function pdfjsWrapper() {
           }
           var v21994 = this.entries;
           var v21995 = first$$2 + i$$36;
-          introspect(JAMScript.introspectors.processC545F199BE443C5FB0DC91C55134FB746FD8B074) {
+          introspect(JAM.policy.pC545F199BE443C5FB0DC91C55134FB746FD8B074) {
             var v8234 = v21994[v21995]
           }
           var v4927 = !v8234;
@@ -25831,7 +25831,7 @@ function pdfjsWrapper() {
           }
           var v22004 = this.entries;
           var v22005 = i$$35 + first$$1;
-          introspect(JAMScript.introspectors.processC545F199BE443C5FB0DC91C55134FB746FD8B074) {
+          introspect(JAM.policy.pC545F199BE443C5FB0DC91C55134FB746FD8B074) {
             var v8240 = v22004[v22005]
           }
           var v4939 = !v8240;
@@ -25909,7 +25909,7 @@ function pdfjsWrapper() {
       }
       var v4949 = this.pageCache;
       var v4950 = n$$11 - 1;
-      introspect(JAMScript.introspectors.processC545F199BE443C5FB0DC91C55134FB746FD8B074) {
+      introspect(JAM.policy.pC545F199BE443C5FB0DC91C55134FB746FD8B074) {
         return v4949[v4950]
       }
     }
@@ -25922,7 +25922,7 @@ function pdfjsWrapper() {
       var ii$$9 = kids$$1.length;
       var v4957 = i$$33 < ii$$9;
       for(;v4957;) {
-        introspect(JAMScript.introspectors.processC545F199BE443C5FB0DC91C55134FB746FD8B074) {
+        introspect(JAM.policy.pC545F199BE443C5FB0DC91C55134FB746FD8B074) {
           var kid = kids$$1[i$$33]
         }
         var v4952 = isRef(kid);
@@ -26180,7 +26180,7 @@ function pdfjsWrapper() {
             n$$10 = kids$$2.length;
             var v4997 = i$$34 < n$$10;
             for(;v4997;) {
-              introspect(JAMScript.introspectors.processC545F199BE443C5FB0DC91C55134FB746FD8B074) {
+              introspect(JAM.policy.pC545F199BE443C5FB0DC91C55134FB746FD8B074) {
                 var kid$$1 = kids$$2[i$$34]
               }
               var v4996 = processed$$1.has(kid$$1);
@@ -26202,11 +26202,11 @@ function pdfjsWrapper() {
           var v5001 = i$$34 < n$$10;
           for(;v5001;) {
             var v4999 = dests;
-            introspect(JAMScript.introspectors.processC545F199BE443C5FB0DC91C55134FB746FD8B074) {
+            introspect(JAM.policy.pC545F199BE443C5FB0DC91C55134FB746FD8B074) {
               var v5000 = names[i$$34]
             }
             var v22756 = i$$34 + 1;
-            introspect(JAMScript.introspectors.processC545F199BE443C5FB0DC91C55134FB746FD8B074) {
+            introspect(JAM.policy.pC545F199BE443C5FB0DC91C55134FB746FD8B074) {
               var v22019 = names[v22756]
             }
             var v8268 = xref$$8.fetchIfRef(v22019);
@@ -26258,7 +26258,7 @@ function pdfjsWrapper() {
       var v22758 = v23056 + ".";
       var v22759 = ref$$4.gen;
       var v22032 = v22758 + v22759;
-      introspect(JAMScript.introspectors.processC545F199BE443C5FB0DC91C55134FB746FD8B074) {
+      introspect(JAM.policy.pC545F199BE443C5FB0DC91C55134FB746FD8B074) {
         var v8277 = v22031[v22032]
       }
       var v5006 = !v8277;
@@ -26316,13 +26316,13 @@ function pdfjsWrapper() {
         return all
       }
       function Dict_getRaw(key$$18) {
-        introspect(JAMScript.introspectors.processC545F199BE443C5FB0DC91C55134FB746FD8B074) {
+        introspect(JAM.policy.pC545F199BE443C5FB0DC91C55134FB746FD8B074) {
           return map[key$$18]
         }
       }
       function Dict_get(key1, key2, key3) {
         var value$$37;
-        introspect(JAMScript.introspectors.processC545F199BE443C5FB0DC91C55134FB746FD8B074) {
+        introspect(JAM.policy.pC545F199BE443C5FB0DC91C55134FB746FD8B074) {
           var v22760 = value$$37 = map[key1]
         }
         var v22034 = typeof v22760;
@@ -26347,7 +26347,7 @@ function pdfjsWrapper() {
           }
           return v5010
         }
-        introspect(JAMScript.introspectors.processC545F199BE443C5FB0DC91C55134FB746FD8B074) {
+        introspect(JAM.policy.pC545F199BE443C5FB0DC91C55134FB746FD8B074) {
           var v22763 = value$$37 = map[key2]
         }
         var v22037 = typeof v22763;
@@ -26372,7 +26372,7 @@ function pdfjsWrapper() {
           }
           return v5012
         }
-        introspect(JAMScript.introspectors.processC545F199BE443C5FB0DC91C55134FB746FD8B074) {
+        introspect(JAM.policy.pC545F199BE443C5FB0DC91C55134FB746FD8B074) {
           var v5014 = map[key3]
         }
         var v8281 = !v5014;
@@ -26406,7 +26406,7 @@ function pdfjsWrapper() {
   }
   function CmdClosure() {
     function Cmd_get(cmd$$3) {
-      introspect(JAMScript.introspectors.processC545F199BE443C5FB0DC91C55134FB746FD8B074) {
+      introspect(JAM.policy.pC545F199BE443C5FB0DC91C55134FB746FD8B074) {
         var cmdValue = cmdCache[cmd$$3]
       }
       if(cmdValue) {
@@ -26440,7 +26440,7 @@ function pdfjsWrapper() {
     len = len - 1;
     for(;v5017;) {
       var v5016 = imgData$$3.data;
-      introspect(JAMScript.introspectors.processC545F199BE443C5FB0DC91C55134FB746FD8B074) {
+      introspect(JAM.policy.pC545F199BE443C5FB0DC91C55134FB746FD8B074) {
         tmpImgDataPixels[len] = v5016[len]
       }
       v5017 = len;
@@ -26905,7 +26905,7 @@ function pdfjsWrapper() {
           var i$$30 = 0;
           var v5123 = i$$30 < baseComps;
           for(;v5123;) {
-            introspect(JAMScript.introspectors.processC545F199BE443C5FB0DC91C55134FB746FD8B074) {
+            introspect(JAM.policy.pC545F199BE443C5FB0DC91C55134FB746FD8B074) {
               var v5122 = args[i$$30]
             }
             color$$3.push(v5122);
@@ -27036,7 +27036,7 @@ function pdfjsWrapper() {
       var i$$29 = 0;
       var v5155 = i$$29 < arrLength;
       for(;v5155;) {
-        introspect(JAMScript.introspectors.processC545F199BE443C5FB0DC91C55134FB746FD8B074) {
+        introspect(JAM.policy.pC545F199BE443C5FB0DC91C55134FB746FD8B074) {
           var e$$17 = arr$$10[i$$29]
         }
         var v5154 = isNum(e$$17);
@@ -27166,7 +27166,7 @@ function pdfjsWrapper() {
         var i$$28 = 0;
         var v5173 = i$$28 < glyphsLength;
         for(;v5173;) {
-          introspect(JAMScript.introspectors.processC545F199BE443C5FB0DC91C55134FB746FD8B074) {
+          introspect(JAM.policy.pC545F199BE443C5FB0DC91C55134FB746FD8B074) {
             var glyph = glyphs[i$$28]
           }
           var v5167 = glyph === null;
@@ -27339,7 +27339,7 @@ function pdfjsWrapper() {
             var v5186 = ii$$8 >= 0;
             for(;v5186;) {
               var v8342 = text$$7.str;
-              introspect(JAMScript.introspectors.processC545F199BE443C5FB0DC91C55134FB746FD8B074) {
+              introspect(JAM.policy.pC545F199BE443C5FB0DC91C55134FB746FD8B074) {
                 var v8343 = glyphUnicode[ii$$8]
               }
               text$$7.str = v8342 + v8343;
@@ -27835,7 +27835,7 @@ function pdfjsWrapper() {
       var ii$$7 = states.length;
       var v5281 = i$$27 < ii$$7;
       for(;v5281;) {
-        introspect(JAMScript.introspectors.processC545F199BE443C5FB0DC91C55134FB746FD8B074) {
+        introspect(JAM.policy.pC545F199BE443C5FB0DC91C55134FB746FD8B074) {
           var state = states[i$$27]
         }
         var key$$17 = state[0];
@@ -27912,14 +27912,14 @@ function pdfjsWrapper() {
     }
     function CanvasGraphics_setLineJoin(style$$1) {
       var v5289 = this.ctx;
-      introspect(JAMScript.introspectors.processC545F199BE443C5FB0DC91C55134FB746FD8B074) {
+      introspect(JAM.policy.pC545F199BE443C5FB0DC91C55134FB746FD8B074) {
         v5289.lineJoin = LINE_JOIN_STYLES[style$$1]
       }
       return
     }
     function CanvasGraphics_setLineCap(style) {
       var v5290 = this.ctx;
-      introspect(JAMScript.introspectors.processC545F199BE443C5FB0DC91C55134FB746FD8B074) {
+      introspect(JAM.policy.pC545F199BE443C5FB0DC91C55134FB746FD8B074) {
         v5290.lineCap = LINE_CAP_STYLES[style]
       }
       return
@@ -27967,27 +27967,27 @@ function pdfjsWrapper() {
           stepper$$1.breakIt(i$$26, continueCallback);
           return i$$26
         }
-        introspect(JAMScript.introspectors.processC545F199BE443C5FB0DC91C55134FB746FD8B074) {
+        introspect(JAM.policy.pC545F199BE443C5FB0DC91C55134FB746FD8B074) {
           fnName = fnArray[i$$26]
         }
         var v5303 = fnName !== "dependency";
         if(v5303) {
-          introspect(JAMScript.introspectors.processC545F199BE443C5FB0DC91C55134FB746FD8B074) {
+          introspect(JAM.policy.pC545F199BE443C5FB0DC91C55134FB746FD8B074) {
             var v5299 = this[fnName]
           }
-          introspect(JAMScript.introspectors.processC545F199BE443C5FB0DC91C55134FB746FD8B074) {
+          introspect(JAM.policy.pC545F199BE443C5FB0DC91C55134FB746FD8B074) {
             var v5300 = argsArray[i$$26]
           }
           v5299.apply(this, v5300)
         }else {
-          introspect(JAMScript.introspectors.processC545F199BE443C5FB0DC91C55134FB746FD8B074) {
+          introspect(JAM.policy.pC545F199BE443C5FB0DC91C55134FB746FD8B074) {
             var deps = argsArray[i$$26]
           }
           var n$$9 = 0;
           var nn = deps.length;
           var v5302 = n$$9 < nn;
           for(;v5302;) {
-            introspect(JAMScript.introspectors.processC545F199BE443C5FB0DC91C55134FB746FD8B074) {
+            introspect(JAM.policy.pC545F199BE443C5FB0DC91C55134FB746FD8B074) {
               var depObjId = deps[n$$9]
             }
             var v8376 = objs$$2.isResolved(depObjId);
@@ -28007,7 +28007,7 @@ function pdfjsWrapper() {
         }
         var v8377 = continueCallback;
         if(v8377) {
-          introspect(JAMScript.introspectors.processC545F199BE443C5FB0DC91C55134FB746FD8B074) {
+          introspect(JAM.policy.pC545F199BE443C5FB0DC91C55134FB746FD8B074) {
             var v22085 = slowCommands[fnName]
           }
           if(v22085) {
@@ -28127,7 +28127,7 @@ function pdfjsWrapper() {
       var v5315 = pageIndex in v8379;
       if(v5315) {
         var v5314 = this.pagePromises;
-        introspect(JAMScript.introspectors.processC545F199BE443C5FB0DC91C55134FB746FD8B074) {
+        introspect(JAM.policy.pC545F199BE443C5FB0DC91C55134FB746FD8B074) {
           return v5314[pageIndex]
         }
       }
@@ -28219,7 +28219,7 @@ function pdfjsWrapper() {
         var v5334 = this.pageCache;
         var v8384 = data$$39.pageNum;
         var v5335 = v8384 - 1;
-        introspect(JAMScript.introspectors.processC545F199BE443C5FB0DC91C55134FB746FD8B074) {
+        introspect(JAM.policy.pC545F199BE443C5FB0DC91C55134FB746FD8B074) {
           var page$$3 = v5334[v5335]
         }
         var v5339 = page$$3.displayReadyPromise;
@@ -28274,7 +28274,7 @@ function pdfjsWrapper() {
       function transportRender(data$$37) {
         var v5346 = this.pageCache;
         var v5347 = data$$37.pageIndex;
-        introspect(JAMScript.introspectors.processC545F199BE443C5FB0DC91C55134FB746FD8B074) {
+        introspect(JAM.policy.pC545F199BE443C5FB0DC91C55134FB746FD8B074) {
           var page$$2 = v5346[v5347]
         }
         var depFonts = data$$37.depFonts;
@@ -28288,7 +28288,7 @@ function pdfjsWrapper() {
         var annotations$$2 = data$$36.annotations;
         var v8386 = this.pageCache;
         var v8387 = data$$36.pageIndex;
-        introspect(JAMScript.introspectors.processC545F199BE443C5FB0DC91C55134FB746FD8B074) {
+        introspect(JAM.policy.pC545F199BE443C5FB0DC91C55134FB746FD8B074) {
           var v5350 = v8386[v8387]
         }
         var promise$$12 = v5350.annotationsPromise;
@@ -28303,7 +28303,7 @@ function pdfjsWrapper() {
         v5351[v5352] = page$$1;
         var v5353 = this.pagePromises;
         var v5354 = pageInfo$$1.pageIndex;
-        introspect(JAMScript.introspectors.processC545F199BE443C5FB0DC91C55134FB746FD8B074) {
+        introspect(JAM.policy.pC545F199BE443C5FB0DC91C55134FB746FD8B074) {
           var promise$$11 = v5353[v5354]
         }
         promise$$11.resolve(page$$1);
@@ -28503,10 +28503,10 @@ function pdfjsWrapper() {
       for(;v5379;) {
         var v22089 = this.objs;
         var v8396 = v22089.objs;
-        introspect(JAMScript.introspectors.processC545F199BE443C5FB0DC91C55134FB746FD8B074) {
+        introspect(JAM.policy.pC545F199BE443C5FB0DC91C55134FB746FD8B074) {
           var v8397 = fonts$$1[i$$24]
         }
-        introspect(JAMScript.introspectors.processC545F199BE443C5FB0DC91C55134FB746FD8B074) {
+        introspect(JAM.policy.pC545F199BE443C5FB0DC91C55134FB746FD8B074) {
           var v5378 = v8396[v8397]
         }
         fonts$$1[i$$24] = v5378.data;
@@ -28780,7 +28780,7 @@ function pdfjsWrapper() {
       var ii$$5 = times.length;
       var v5432 = i$$23 < ii$$5;
       for(;v5432;) {
-        introspect(JAMScript.introspectors.processC545F199BE443C5FB0DC91C55134FB746FD8B074) {
+        introspect(JAM.policy.pC545F199BE443C5FB0DC91C55134FB746FD8B074) {
           var v5430 = times[i$$23]
         }
         var name$$47 = v5430["name"];
@@ -28796,7 +28796,7 @@ function pdfjsWrapper() {
       ii$$5 = times.length;
       var v5437 = i$$23 < ii$$5;
       for(;v5437;) {
-        introspect(JAMScript.introspectors.processC545F199BE443C5FB0DC91C55134FB746FD8B074) {
+        introspect(JAM.policy.pC545F199BE443C5FB0DC91C55134FB746FD8B074) {
           var span = times[i$$23]
         }
         var v5433 = span.end;
@@ -28836,7 +28836,7 @@ function pdfjsWrapper() {
       }
       var v5440 = this.times;
       var v22096 = this.started;
-      introspect(JAMScript.introspectors.processC545F199BE443C5FB0DC91C55134FB746FD8B074) {
+      introspect(JAM.policy.pC545F199BE443C5FB0DC91C55134FB746FD8B074) {
         var v8428 = v22096[name$$46]
       }
       var v8429 = Date.now();
@@ -28928,7 +28928,7 @@ function pdfjsWrapper() {
       var ii$$4 = errbacks.length;
       var v5459 = i$$22 < ii$$4;
       for(;v5459;) {
-        introspect(JAMScript.introspectors.processC545F199BE443C5FB0DC91C55134FB746FD8B074) {
+        introspect(JAM.policy.pC545F199BE443C5FB0DC91C55134FB746FD8B074) {
           var v5458 = errbacks[i$$22]
         }
         v5458.call(null, reason);
@@ -28943,7 +28943,7 @@ function pdfjsWrapper() {
       var ii$$3 = callbacks$$2.length;
       var v5461 = i$$21 < ii$$3;
       for(;v5461;) {
-        introspect(JAMScript.introspectors.processC545F199BE443C5FB0DC91C55134FB746FD8B074) {
+        introspect(JAM.policy.pC545F199BE443C5FB0DC91C55134FB746FD8B074) {
           var v5460 = callbacks$$2[i$$21]
         }
         v5460.call(null, data$$31);
@@ -28972,7 +28972,7 @@ function pdfjsWrapper() {
       var ii$$2 = callbacks$$1.length;
       var v5467 = i$$20 < ii$$2;
       for(;v5467;) {
-        introspect(JAMScript.introspectors.processC545F199BE443C5FB0DC91C55134FB746FD8B074) {
+        introspect(JAM.policy.pC545F199BE443C5FB0DC91C55134FB746FD8B074) {
           var v5466 = callbacks$$1[i$$20]
         }
         v5466.call(null, data$$30);
@@ -29017,7 +29017,7 @@ function pdfjsWrapper() {
       var ii$$1 = promises.length;
       var v5473 = i$$18 < ii$$1;
       for(;v5473;) {
-        introspect(JAMScript.introspectors.processC545F199BE443C5FB0DC91C55134FB746FD8B074) {
+        introspect(JAM.policy.pC545F199BE443C5FB0DC91C55134FB746FD8B074) {
           var promise$$1 = promises[i$$18]
         }
         var v5472 = v82(i$$18);
@@ -29564,7 +29564,7 @@ function pdfjsWrapper() {
         var v5552 = i$$17 < length$$16;
         for(;v5552;) {
           var v8518 = fileID;
-          introspect(JAMScript.introspectors.processC545F199BE443C5FB0DC91C55134FB746FD8B074) {
+          introspect(JAM.policy.pC545F199BE443C5FB0DC91C55134FB746FD8B074) {
             var v22846 = hash$$1[i$$17]
           }
           var v22160 = Number(v22846);
@@ -29870,7 +29870,7 @@ function pdfjsWrapper() {
       i$$16 = 0;
       var v5611 = i$$16 < n$$6;
       for(;v5611;) {
-        introspect(JAMScript.introspectors.processC545F199BE443C5FB0DC91C55134FB746FD8B074) {
+        introspect(JAM.policy.pC545F199BE443C5FB0DC91C55134FB746FD8B074) {
           var annotationRef = annotations$$1[i$$16]
         }
         var annotation = xref$$2.fetch(annotationRef);
@@ -29960,7 +29960,7 @@ function pdfjsWrapper() {
                 jj = kids.length;
                 var v5598 = j$$2 < jj;
                 for(;v5598;) {
-                  introspect(JAMScript.introspectors.processC545F199BE443C5FB0DC91C55134FB746FD8B074) {
+                  introspect(JAM.policy.pC545F199BE443C5FB0DC91C55134FB746FD8B074) {
                     var kidRef = kids[j$$2]
                   }
                   var v22177 = kidRef.num;
@@ -30061,7 +30061,7 @@ function pdfjsWrapper() {
       i$$15 = 0;
       var v5614 = i$$15 < n$$5;
       for(;v5614;) {
-        introspect(JAMScript.introspectors.processC545F199BE443C5FB0DC91C55134FB746FD8B074) {
+        introspect(JAM.policy.pC545F199BE443C5FB0DC91C55134FB746FD8B074) {
           var v22185 = annotations[i$$15]
         }
         var v8559 = v22185.type;
@@ -30071,7 +30071,7 @@ function pdfjsWrapper() {
           v5614 = i$$15 < n$$5;
           continue
         }
-        introspect(JAMScript.introspectors.processC545F199BE443C5FB0DC91C55134FB746FD8B074) {
+        introspect(JAM.policy.pC545F199BE443C5FB0DC91C55134FB746FD8B074) {
           var v5613 = annotations[i$$15]
         }
         links.push(v5613);
@@ -30092,7 +30092,7 @@ function pdfjsWrapper() {
         i$$14 = 0;
         var v5616 = i$$14 < n$$4;
         for(;v5616;) {
-          introspect(JAMScript.introspectors.processC545F199BE443C5FB0DC91C55134FB746FD8B074) {
+          introspect(JAM.policy.pC545F199BE443C5FB0DC91C55134FB746FD8B074) {
             var v8560 = content[i$$14]
           }
           var v5615 = xref$$1.fetchIfRef(v8560);
@@ -30254,7 +30254,7 @@ function pdfjsWrapper() {
     var v5640 = data$$72.properties;
     for(info$$2 in v5640) {
       var v5639 = data$$72.properties;
-      introspect(JAMScript.introspectors.processC545F199BE443C5FB0DC91C55134FB746FD8B074) {
+      introspect(JAM.policy.pC545F199BE443C5FB0DC91C55134FB746FD8B074) {
         properties$$17[info$$2] = v5639[info$$2]
       }
     }
@@ -30272,7 +30272,7 @@ function pdfjsWrapper() {
   function Type1Parser() {
     function Type1Parser_extractFontHeader(stream$$18, properties$$16) {
       function getToken$$3() {
-        introspect(JAMScript.introspectors.processC545F199BE443C5FB0DC91C55134FB746FD8B074) {
+        introspect(JAM.policy.pC545F199BE443C5FB0DC91C55134FB746FD8B074) {
           var character$$1 = headerString[i$$106]
         }
         var v8573 = i$$106 < count$$12;
@@ -30287,7 +30287,7 @@ function pdfjsWrapper() {
         var v5645 = v8573;
         for(;v5645;) {
           var v5644 = i$$106 = i$$106 + 1;
-          introspect(JAMScript.introspectors.processC545F199BE443C5FB0DC91C55134FB746FD8B074) {
+          introspect(JAM.policy.pC545F199BE443C5FB0DC91C55134FB746FD8B074) {
             character$$1 = headerString[v5644]
           }
           var v8574 = i$$106 < count$$12;
@@ -30316,7 +30316,7 @@ function pdfjsWrapper() {
         for(;v5647;) {
           token$$10 = token$$10 + character$$1;
           var v5646 = i$$106 = i$$106 + 1;
-          introspect(JAMScript.introspectors.processC545F199BE443C5FB0DC91C55134FB746FD8B074) {
+          introspect(JAM.policy.pC545F199BE443C5FB0DC91C55134FB746FD8B074) {
             character$$1 = headerString[v5646]
           }
           var v8576 = i$$106 < count$$12;
@@ -30339,7 +30339,7 @@ function pdfjsWrapper() {
       var v5648 = i$$106 < ii$$41;
       for(;v5648;) {
         var v8577 = headerString;
-        introspect(JAMScript.introspectors.processC545F199BE443C5FB0DC91C55134FB746FD8B074) {
+        introspect(JAM.policy.pC545F199BE443C5FB0DC91C55134FB746FD8B074) {
           var v22209 = stream$$18[i$$106]
         }
         var v8578 = String.fromCharCode(v22209);
@@ -30353,7 +30353,7 @@ function pdfjsWrapper() {
       var v5657 = i$$106 < count$$12;
       for(;v5657;) {
         var getToken$$2 = getToken$$3;
-        introspect(JAMScript.introspectors.processC545F199BE443C5FB0DC91C55134FB746FD8B074) {
+        introspect(JAM.policy.pC545F199BE443C5FB0DC91C55134FB746FD8B074) {
           var c$$16 = headerString[i$$106]
         }
         var v5656 = isSeparator(c$$16);
@@ -30366,7 +30366,7 @@ function pdfjsWrapper() {
               var jj$$8 = matrix$$2.length;
               var v5650 = j$$37 < jj$$8;
               for(;v5650;) {
-                introspect(JAMScript.introspectors.processC545F199BE443C5FB0DC91C55134FB746FD8B074) {
+                introspect(JAM.policy.pC545F199BE443C5FB0DC91C55134FB746FD8B074) {
                   var v8579 = matrix$$2[j$$37]
                 }
                 matrix$$2[j$$37] = v8579 * 1E3;
@@ -30383,7 +30383,7 @@ function pdfjsWrapper() {
               var v8581 = /^\d+$/.test(encodingArg);
               var v5654 = !v8581;
               if(v5654) {
-                introspect(JAMScript.introspectors.processC545F199BE443C5FB0DC91C55134FB746FD8B074) {
+                introspect(JAM.policy.pC545F199BE443C5FB0DC91C55134FB746FD8B074) {
                   encoding$$5 = Encodings[encodingArg]
                 }
               }else {
@@ -30429,7 +30429,7 @@ function pdfjsWrapper() {
       function getToken$$1() {
         var v8583 = i$$105 < count$$11;
         if(v8583) {
-          introspect(JAMScript.introspectors.processC545F199BE443C5FB0DC91C55134FB746FD8B074) {
+          introspect(JAM.policy.pC545F199BE443C5FB0DC91C55134FB746FD8B074) {
             var v22211 = eexecStr[i$$105]
           }
           v8583 = isSeparator(v22211)
@@ -30439,7 +30439,7 @@ function pdfjsWrapper() {
           i$$105 = i$$105 + 1;
           var v8584 = i$$105 < count$$11;
           if(v8584) {
-            introspect(JAMScript.introspectors.processC545F199BE443C5FB0DC91C55134FB746FD8B074) {
+            introspect(JAM.policy.pC545F199BE443C5FB0DC91C55134FB746FD8B074) {
               var v22212 = eexecStr[i$$105]
             }
             v8584 = isSeparator(v22212)
@@ -30449,7 +30449,7 @@ function pdfjsWrapper() {
         var token$$8 = "";
         var v8585 = i$$105 < count$$11;
         if(v8585) {
-          introspect(JAMScript.introspectors.processC545F199BE443C5FB0DC91C55134FB746FD8B074) {
+          introspect(JAM.policy.pC545F199BE443C5FB0DC91C55134FB746FD8B074) {
             var v22853 = eexecStr[i$$105]
           }
           var v22213 = isSeparator(v22853);
@@ -30459,13 +30459,13 @@ function pdfjsWrapper() {
         for(;v5659;) {
           var v22214 = i$$105;
           i$$105 = i$$105 + 1;
-          introspect(JAMScript.introspectors.processC545F199BE443C5FB0DC91C55134FB746FD8B074) {
+          introspect(JAM.policy.pC545F199BE443C5FB0DC91C55134FB746FD8B074) {
             var v8586 = eexecStr[v22214]
           }
           token$$8 = token$$8 + v8586;
           var v8587 = i$$105 < count$$11;
           if(v8587) {
-            introspect(JAMScript.introspectors.processC545F199BE443C5FB0DC91C55134FB746FD8B074) {
+            introspect(JAM.policy.pC545F199BE443C5FB0DC91C55134FB746FD8B074) {
               var v22854 = eexecStr[i$$105]
             }
             var v22215 = isSeparator(v22854);
@@ -30482,7 +30482,7 @@ function pdfjsWrapper() {
       var v5660 = i$$105 < ii$$40;
       for(;v5660;) {
         var v8588 = eexecStr;
-        introspect(JAMScript.introspectors.processC545F199BE443C5FB0DC91C55134FB746FD8B074) {
+        introspect(JAM.policy.pC545F199BE443C5FB0DC91C55134FB746FD8B074) {
           var v22216 = eexec[i$$105]
         }
         var v8589 = String.fromCharCode(v22216);
@@ -30504,7 +30504,7 @@ function pdfjsWrapper() {
       var v5691 = i$$105 < count$$11;
       for(;v5691;) {
         var getToken = getToken$$1;
-        introspect(JAMScript.introspectors.processC545F199BE443C5FB0DC91C55134FB746FD8B074) {
+        introspect(JAM.policy.pC545F199BE443C5FB0DC91C55134FB746FD8B074) {
           c$$15 = eexecStr[i$$105]
         }
         var v8591 = glyphsSection || subrsSection;
@@ -30658,14 +30658,14 @@ function pdfjsWrapper() {
               if(v5687) {
                 token$$7 = glyph$$3 = "";
                 var v22221 = i$$105 = i$$105 + 1;
-                introspect(JAMScript.introspectors.processC545F199BE443C5FB0DC91C55134FB746FD8B074) {
+                introspect(JAM.policy.pC545F199BE443C5FB0DC91C55134FB746FD8B074) {
                   var v8605 = c$$15 = eexecStr[v22221]
                 }
                 var v5686 = v8605 != " ";
                 for(;v5686;) {
                   glyph$$3 = glyph$$3 + c$$15;
                   var v22222 = i$$105 = i$$105 + 1;
-                  introspect(JAMScript.introspectors.processC545F199BE443C5FB0DC91C55134FB746FD8B074) {
+                  introspect(JAM.policy.pC545F199BE443C5FB0DC91C55134FB746FD8B074) {
                     var v8606 = c$$15 = eexecStr[v22222]
                   }
                   v5686 = v8606 != " "
@@ -30720,7 +30720,7 @@ function pdfjsWrapper() {
           var v5718 = value$$52 == kEscapeCommand;
           if(v5718) {
             var v5696 = i$$103 = i$$103 + 1;
-            introspect(JAMScript.introspectors.processC545F199BE443C5FB0DC91C55134FB746FD8B074) {
+            introspect(JAM.policy.pC545F199BE443C5FB0DC91C55134FB746FD8B074) {
               var escape$$1 = array$$11[v5696]
             }
             var v5702 = escape$$1 == 16;
@@ -30779,7 +30779,7 @@ function pdfjsWrapper() {
               }
             }
             var v5703 = charStringDictionary["12"];
-            introspect(JAMScript.introspectors.processC545F199BE443C5FB0DC91C55134FB746FD8B074) {
+            introspect(JAM.policy.pC545F199BE443C5FB0DC91C55134FB746FD8B074) {
               command = v5703[escape$$1]
             }
           }else {
@@ -30834,7 +30834,7 @@ function pdfjsWrapper() {
               if(v5716) {
                 var v22858 = charstring$$2.length;
                 var v22230 = v22858 - 1;
-                introspect(JAMScript.introspectors.processC545F199BE443C5FB0DC91C55134FB746FD8B074) {
+                introspect(JAM.policy.pC545F199BE443C5FB0DC91C55134FB746FD8B074) {
                   var v8614 = charstring$$2[v22230]
                 }
                 var v5712 = v8614 < 3;
@@ -30890,7 +30890,7 @@ function pdfjsWrapper() {
                 }
               }
             }
-            introspect(JAMScript.introspectors.processC545F199BE443C5FB0DC91C55134FB746FD8B074) {
+            introspect(JAM.policy.pC545F199BE443C5FB0DC91C55134FB746FD8B074) {
               command = charStringDictionary[value$$52]
             }
           }
@@ -30945,7 +30945,7 @@ function pdfjsWrapper() {
               var v22233 = value$$52 - 247;
               var v8619 = v22233 * 256;
               var v22234 = i$$103 = i$$103 + 1;
-              introspect(JAMScript.introspectors.processC545F199BE443C5FB0DC91C55134FB746FD8B074) {
+              introspect(JAM.policy.pC545F199BE443C5FB0DC91C55134FB746FD8B074) {
                 var v8620 = array$$11[v22234]
               }
               var v5724 = v8619 + v8620;
@@ -30957,34 +30957,34 @@ function pdfjsWrapper() {
                 var v22235 = v22861 * 256;
                 var v8621 = -v22235;
                 var v22236 = i$$103 = i$$103 + 1;
-                introspect(JAMScript.introspectors.processC545F199BE443C5FB0DC91C55134FB746FD8B074) {
+                introspect(JAM.policy.pC545F199BE443C5FB0DC91C55134FB746FD8B074) {
                   var v8622 = array$$11[v22236]
                 }
                 var v5725 = v8621 - v8622;
                 value$$52 = v5725 - 108
               }else {
                 var v23161 = i$$103 = i$$103 + 1;
-                introspect(JAMScript.introspectors.processC545F199BE443C5FB0DC91C55134FB746FD8B074) {
+                introspect(JAM.policy.pC545F199BE443C5FB0DC91C55134FB746FD8B074) {
                   var v23074 = array$$11[v23161]
                 }
                 var v22862 = v23074 & 255;
                 var v22237 = v22862 << 24;
                 var v23162 = i$$103 = i$$103 + 1;
-                introspect(JAMScript.introspectors.processC545F199BE443C5FB0DC91C55134FB746FD8B074) {
+                introspect(JAM.policy.pC545F199BE443C5FB0DC91C55134FB746FD8B074) {
                   var v23075 = array$$11[v23162]
                 }
                 var v22863 = v23075 & 255;
                 var v22238 = v22863 << 16;
                 var v8623 = v22237 | v22238;
                 var v23076 = i$$103 = i$$103 + 1;
-                introspect(JAMScript.introspectors.processC545F199BE443C5FB0DC91C55134FB746FD8B074) {
+                introspect(JAM.policy.pC545F199BE443C5FB0DC91C55134FB746FD8B074) {
                   var v22864 = array$$11[v23076]
                 }
                 var v22239 = v22864 & 255;
                 var v8624 = v22239 << 8;
                 var v5726 = v8623 | v8624;
                 var v22865 = i$$103 = i$$103 + 1;
-                introspect(JAMScript.introspectors.processC545F199BE443C5FB0DC91C55134FB746FD8B074) {
+                introspect(JAM.policy.pC545F199BE443C5FB0DC91C55134FB746FD8B074) {
                   var v22240 = array$$11[v22865]
                 }
                 var v8625 = v22240 & 255;
@@ -31004,7 +31004,7 @@ function pdfjsWrapper() {
       var start$$11 = index$$48;
       var v22241 = index$$48;
       index$$48 = index$$48 + 1;
-      introspect(JAMScript.introspectors.processC545F199BE443C5FB0DC91C55134FB746FD8B074) {
+      introspect(JAM.policy.pC545F199BE443C5FB0DC91C55134FB746FD8B074) {
         var v8626 = str$$23[v22241]
       }
       var v5733 = v8626 != "[";
@@ -31012,7 +31012,7 @@ function pdfjsWrapper() {
         start$$11 = start$$11 + 1;
         var v22242 = index$$48;
         index$$48 = index$$48 + 1;
-        introspect(JAMScript.introspectors.processC545F199BE443C5FB0DC91C55134FB746FD8B074) {
+        introspect(JAM.policy.pC545F199BE443C5FB0DC91C55134FB746FD8B074) {
           var v8627 = str$$23[v22242]
         }
         v5733 = v8627 != "["
@@ -31021,7 +31021,7 @@ function pdfjsWrapper() {
       var count$$9 = 0;
       var v22243 = index$$48;
       index$$48 = index$$48 + 1;
-      introspect(JAMScript.introspectors.processC545F199BE443C5FB0DC91C55134FB746FD8B074) {
+      introspect(JAM.policy.pC545F199BE443C5FB0DC91C55134FB746FD8B074) {
         var v8628 = str$$23[v22243]
       }
       var v5734 = v8628 != "]";
@@ -31029,7 +31029,7 @@ function pdfjsWrapper() {
         count$$9 = count$$9 + 1;
         var v22244 = index$$48;
         index$$48 = index$$48 + 1;
-        introspect(JAMScript.introspectors.processC545F199BE443C5FB0DC91C55134FB746FD8B074) {
+        introspect(JAM.policy.pC545F199BE443C5FB0DC91C55134FB746FD8B074) {
           var v8629 = str$$23[v22244]
         }
         v5734 = v8629 != "]"
@@ -31044,7 +31044,7 @@ function pdfjsWrapper() {
       for(;v5737;) {
         var v5735 = array$$12;
         var v5736 = i$$104;
-        introspect(JAMScript.introspectors.processC545F199BE443C5FB0DC91C55134FB746FD8B074) {
+        introspect(JAM.policy.pC545F199BE443C5FB0DC91C55134FB746FD8B074) {
           var v22245 = array$$12[i$$104]
         }
         var v22866 = !v22245;
@@ -31060,13 +31060,13 @@ function pdfjsWrapper() {
       return array$$12
     }
     function readNumber(str$$24, index$$49) {
-      introspect(JAMScript.introspectors.processC545F199BE443C5FB0DC91C55134FB746FD8B074) {
+      introspect(JAM.policy.pC545F199BE443C5FB0DC91C55134FB746FD8B074) {
         var v8631 = str$$24[index$$49]
       }
       var v5738 = v8631 == " ";
       for(;v5738;) {
         index$$49 = index$$49 + 1;
-        introspect(JAMScript.introspectors.processC545F199BE443C5FB0DC91C55134FB746FD8B074) {
+        introspect(JAM.policy.pC545F199BE443C5FB0DC91C55134FB746FD8B074) {
           var v8632 = str$$24[index$$49]
         }
         v5738 = v8632 == " "
@@ -31075,7 +31075,7 @@ function pdfjsWrapper() {
       var count$$10 = 0;
       var v22246 = index$$49;
       index$$49 = index$$49 + 1;
-      introspect(JAMScript.introspectors.processC545F199BE443C5FB0DC91C55134FB746FD8B074) {
+      introspect(JAM.policy.pC545F199BE443C5FB0DC91C55134FB746FD8B074) {
         var v8633 = str$$24[v22246]
       }
       var v5739 = v8633 != " ";
@@ -31083,7 +31083,7 @@ function pdfjsWrapper() {
         count$$10 = count$$10 + 1;
         var v22247 = index$$49;
         index$$49 = index$$49 + 1;
-        introspect(JAMScript.introspectors.processC545F199BE443C5FB0DC91C55134FB746FD8B074) {
+        introspect(JAM.policy.pC545F199BE443C5FB0DC91C55134FB746FD8B074) {
           var v8634 = str$$24[v22247]
         }
         v5739 = v8634 != " "
@@ -31162,7 +31162,7 @@ function pdfjsWrapper() {
     var v5748 = PdfJS_window.XMLHttpRequest;
     var xhr = new v5748;
     var v5749 = params.url;
-    introspect(JAMScript.introspectors.processC545F199BE443C5FB0DC91C55134FB746FD8B074) {
+    introspect(JAM.policy.pC545F199BE443C5FB0DC91C55134FB746FD8B074) {
       xhr.open("GET", v5749)
     }
     xhr.mozResponseType = xhr.responseType = "arraybuffer";
@@ -31294,7 +31294,7 @@ function pdfjsWrapper() {
     var v5767 = n$$1 < length$$13;
     for(;v5767;) {
       var v8654 = str$$6;
-      introspect(JAMScript.introspectors.processC545F199BE443C5FB0DC91C55134FB746FD8B074) {
+      introspect(JAM.policy.pC545F199BE443C5FB0DC91C55134FB746FD8B074) {
         var v22258 = bytes[n$$1]
       }
       var v8655 = String.fromCharCode(v22258);
@@ -31351,7 +31351,7 @@ function pdfjsWrapper() {
       for(;v5774;) {
         var v5772 = PDFStringTranslateTable;
         var v5773 = str$$8.charCodeAt(i$$12);
-        introspect(JAMScript.introspectors.processC545F199BE443C5FB0DC91C55134FB746FD8B074) {
+        introspect(JAM.policy.pC545F199BE443C5FB0DC91C55134FB746FD8B074) {
           var code$$2 = v5772[v5773]
         }
         var v8660 = str2;
@@ -31684,7 +31684,7 @@ function pdfjsWrapper() {
         var v8700 = data$$27.callbackId;
         var v5824 = v8700 in callbacks;
         if(v5824) {
-          introspect(JAMScript.introspectors.processC545F199BE443C5FB0DC91C55134FB746FD8B074) {
+          introspect(JAM.policy.pC545F199BE443C5FB0DC91C55134FB746FD8B074) {
             var callback$$26 = callbacks[callbackId]
           }
           delete callbacks[callbackId];
@@ -31699,7 +31699,7 @@ function pdfjsWrapper() {
         var v5834 = v8701 in ah;
         if(v5834) {
           var v5825 = data$$27.action;
-          introspect(JAMScript.introspectors.processC545F199BE443C5FB0DC91C55134FB746FD8B074) {
+          introspect(JAM.policy.pC545F199BE443C5FB0DC91C55134FB746FD8B074) {
             var action = ah[v5825]
           }
           var v5832 = data$$27.callbackId;
@@ -45154,164 +45154,161 @@ function pdfjsWrapper() {
   var CFFFDSelect = CFFFDSelectClosure();
   var CFFOffsetTracker = CFFOffsetTrackerClosure();
   var CFFCompiler = CFFCompilerClosure();
-  introspect(JAMScript.introspectors.processC545F199BE443C5FB0DC91C55134FB746FD8B074) {
-    var GlyphsUnicode = {A:65, AE:198, AEacute:508, AEmacron:482, AEsmall:63462, Aacute:193, Aacutesmall:63457, Abreve:258, Abreveacute:7854, Abrevecyrillic:1232, Abrevedotbelow:7862, Abrevegrave:7856, Abrevehookabove:7858, Abrevetilde:7860, Acaron:461, Acircle:9398, Acircumflex:194, Acircumflexacute:7844, Acircumflexdotbelow:7852, Acircumflexgrave:7846, Acircumflexhookabove:7848, Acircumflexsmall:63458, Acircumflextilde:7850, Acute:63177, Acutesmall:63412, Acyrillic:1040, Adblgrave:512, Adieresis:196, 
-    Adieresiscyrillic:1234, Adieresismacron:478, Adieresissmall:63460, Adotbelow:7840, Adotmacron:480, Agrave:192, Agravesmall:63456, Ahookabove:7842, Aiecyrillic:1236, Ainvertedbreve:514, Alpha:913, Alphatonos:902, Amacron:256, Amonospace:65313, Aogonek:260, Aring:197, Aringacute:506, Aringbelow:7680, Aringsmall:63461, Asmall:63329, Atilde:195, Atildesmall:63459, Aybarmenian:1329, B:66, Bcircle:9399, Bdotaccent:7682, Bdotbelow:7684, Becyrillic:1041, Benarmenian:1330, Beta:914, Bhook:385, Blinebelow:7686, 
-    Bmonospace:65314, Brevesmall:63220, Bsmall:63330, Btopbar:386, C:67, Caarmenian:1342, Cacute:262, Caron:63178, Caronsmall:63221, Ccaron:268, Ccedilla:199, Ccedillaacute:7688, Ccedillasmall:63463, Ccircle:9400, Ccircumflex:264, Cdot:266, Cdotaccent:266, Cedillasmall:63416, Chaarmenian:1353, Cheabkhasiancyrillic:1212, Checyrillic:1063, Chedescenderabkhasiancyrillic:1214, Chedescendercyrillic:1206, Chedieresiscyrillic:1268, Cheharmenian:1347, Chekhakassiancyrillic:1227, Cheverticalstrokecyrillic:1208, 
-    Chi:935, Chook:391, Circumflexsmall:63222, Cmonospace:65315, Coarmenian:1361, Csmall:63331, D:68, DZ:497, DZcaron:452, Daarmenian:1332, Dafrican:393, Dcaron:270, Dcedilla:7696, Dcircle:9401, Dcircumflexbelow:7698, Dcroat:272, Ddotaccent:7690, Ddotbelow:7692, Decyrillic:1044, Deicoptic:1006, Delta:8710, Deltagreek:916, Dhook:394, Dieresis:63179, DieresisAcute:63180, DieresisGrave:63181, Dieresissmall:63400, Digammagreek:988, Djecyrillic:1026, Dlinebelow:7694, Dmonospace:65316, Dotaccentsmall:63223, 
-    Dslash:272, Dsmall:63332, Dtopbar:395, Dz:498, Dzcaron:453, Dzeabkhasiancyrillic:1248, Dzecyrillic:1029, Dzhecyrillic:1039, E:69, Eacute:201, Eacutesmall:63465, Ebreve:276, Ecaron:282, Ecedillabreve:7708, Echarmenian:1333, Ecircle:9402, Ecircumflex:202, Ecircumflexacute:7870, Ecircumflexbelow:7704, Ecircumflexdotbelow:7878, Ecircumflexgrave:7872, Ecircumflexhookabove:7874, Ecircumflexsmall:63466, Ecircumflextilde:7876, Ecyrillic:1028, Edblgrave:516, Edieresis:203, Edieresissmall:63467, Edot:278, 
-    Edotaccent:278, Edotbelow:7864, Efcyrillic:1060, Egrave:200, Egravesmall:63464, Eharmenian:1335, Ehookabove:7866, Eightroman:8551, Einvertedbreve:518, Eiotifiedcyrillic:1124, Elcyrillic:1051, Elevenroman:8554, Emacron:274, Emacronacute:7702, Emacrongrave:7700, Emcyrillic:1052, Emonospace:65317, Encyrillic:1053, Endescendercyrillic:1186, Eng:330, Enghecyrillic:1188, Enhookcyrillic:1223, Eogonek:280, Eopen:400, Epsilon:917, Epsilontonos:904, Ercyrillic:1056, Ereversed:398, Ereversedcyrillic:1069, 
-    Escyrillic:1057, Esdescendercyrillic:1194, Esh:425, Esmall:63333, Eta:919, Etarmenian:1336, Etatonos:905, Eth:208, Ethsmall:63472, Etilde:7868, Etildebelow:7706, Euro:8364, Ezh:439, Ezhcaron:494, Ezhreversed:440, F:70, Fcircle:9403, Fdotaccent:7710, Feharmenian:1366, Feicoptic:996, Fhook:401, Fitacyrillic:1138, Fiveroman:8548, Fmonospace:65318, Fourroman:8547, Fsmall:63334, G:71, GBsquare:13191, Gacute:500, Gamma:915, Gammaafrican:404, Gangiacoptic:1002, Gbreve:286, Gcaron:486, Gcedilla:290, 
-    Gcircle:9404, Gcircumflex:284, Gcommaaccent:290, Gdot:288, Gdotaccent:288, Gecyrillic:1043, Ghadarmenian:1346, Ghemiddlehookcyrillic:1172, Ghestrokecyrillic:1170, Gheupturncyrillic:1168, Ghook:403, Gimarmenian:1331, Gjecyrillic:1027, Gmacron:7712, Gmonospace:65319, Grave:63182, Gravesmall:63328, Gsmall:63335, Gsmallhook:667, Gstroke:484, H:72, H18533:9679, H18543:9642, H18551:9643, H22073:9633, HPsquare:13259, Haabkhasiancyrillic:1192, Hadescendercyrillic:1202, Hardsigncyrillic:1066, Hbar:294, 
-    Hbrevebelow:7722, Hcedilla:7720, Hcircle:9405, Hcircumflex:292, Hdieresis:7718, Hdotaccent:7714, Hdotbelow:7716, Hmonospace:65320, Hoarmenian:1344, Horicoptic:1E3, Hsmall:63336, Hungarumlaut:63183, Hungarumlautsmall:63224, Hzsquare:13200, I:73, IAcyrillic:1071, IJ:306, IUcyrillic:1070, Iacute:205, Iacutesmall:63469, Ibreve:300, Icaron:463, Icircle:9406, Icircumflex:206, Icircumflexsmall:63470, Icyrillic:1030, Idblgrave:520, Idieresis:207, Idieresisacute:7726, Idieresiscyrillic:1252, Idieresissmall:63471, 
-    Idot:304, Idotaccent:304, Idotbelow:7882, Iebrevecyrillic:1238, Iecyrillic:1045, Ifraktur:8465, Igrave:204, Igravesmall:63468, Ihookabove:7880, Iicyrillic:1048, Iinvertedbreve:522, Iishortcyrillic:1049, Imacron:298, Imacroncyrillic:1250, Imonospace:65321, Iniarmenian:1339, Iocyrillic:1025, Iogonek:302, Iota:921, Iotaafrican:406, Iotadieresis:938, Iotatonos:906, Ismall:63337, Istroke:407, Itilde:296, Itildebelow:7724, Izhitsacyrillic:1140, Izhitsadblgravecyrillic:1142, J:74, Jaarmenian:1345, Jcircle:9407, 
-    Jcircumflex:308, Jecyrillic:1032, Jheharmenian:1355, Jmonospace:65322, Jsmall:63338, K:75, KBsquare:13189, KKsquare:13261, Kabashkircyrillic:1184, Kacute:7728, Kacyrillic:1050, Kadescendercyrillic:1178, Kahookcyrillic:1219, Kappa:922, Kastrokecyrillic:1182, Kaverticalstrokecyrillic:1180, Kcaron:488, Kcedilla:310, Kcircle:9408, Kcommaaccent:310, Kdotbelow:7730, Keharmenian:1364, Kenarmenian:1343, Khacyrillic:1061, Kheicoptic:998, Khook:408, Kjecyrillic:1036, Klinebelow:7732, Kmonospace:65323, 
-    Koppacyrillic:1152, Koppagreek:990, Ksicyrillic:1134, Ksmall:63339, L:76, LJ:455, LL:63167, Lacute:313, Lambda:923, Lcaron:317, Lcedilla:315, Lcircle:9409, Lcircumflexbelow:7740, Lcommaaccent:315, Ldot:319, Ldotaccent:319, Ldotbelow:7734, Ldotbelowmacron:7736, Liwnarmenian:1340, Lj:456, Ljecyrillic:1033, Llinebelow:7738, Lmonospace:65324, Lslash:321, Lslashsmall:63225, Lsmall:63340, M:77, MBsquare:13190, Macron:63184, Macronsmall:63407, Macute:7742, Mcircle:9410, Mdotaccent:7744, Mdotbelow:7746, 
-    Menarmenian:1348, Mmonospace:65325, Msmall:63341, Mturned:412, Mu:924, N:78, NJ:458, Nacute:323, Ncaron:327, Ncedilla:325, Ncircle:9411, Ncircumflexbelow:7754, Ncommaaccent:325, Ndotaccent:7748, Ndotbelow:7750, Nhookleft:413, Nineroman:8552, Nj:459, Njecyrillic:1034, Nlinebelow:7752, Nmonospace:65326, Nowarmenian:1350, Nsmall:63342, Ntilde:209, Ntildesmall:63473, Nu:925, O:79, OE:338, OEsmall:63226, Oacute:211, Oacutesmall:63475, Obarredcyrillic:1256, Obarreddieresiscyrillic:1258, Obreve:334, 
-    Ocaron:465, Ocenteredtilde:415, Ocircle:9412, Ocircumflex:212, Ocircumflexacute:7888, Ocircumflexdotbelow:7896, Ocircumflexgrave:7890, Ocircumflexhookabove:7892, Ocircumflexsmall:63476, Ocircumflextilde:7894, Ocyrillic:1054, Odblacute:336, Odblgrave:524, Odieresis:214, Odieresiscyrillic:1254, Odieresissmall:63478, Odotbelow:7884, Ogoneksmall:63227, Ograve:210, Ogravesmall:63474, Oharmenian:1365, Ohm:8486, Ohookabove:7886, Ohorn:416, Ohornacute:7898, Ohorndotbelow:7906, Ohorngrave:7900, Ohornhookabove:7902, 
-    Ohorntilde:7904, Ohungarumlaut:336, Oi:418, Oinvertedbreve:526, Omacron:332, Omacronacute:7762, Omacrongrave:7760, Omega:8486, Omegacyrillic:1120, Omegagreek:937, Omegaroundcyrillic:1146, Omegatitlocyrillic:1148, Omegatonos:911, Omicron:927, Omicrontonos:908, Omonospace:65327, Oneroman:8544, Oogonek:490, Oogonekmacron:492, Oopen:390, Oslash:216, Oslashacute:510, Oslashsmall:63480, Osmall:63343, Ostrokeacute:510, Otcyrillic:1150, Otilde:213, Otildeacute:7756, Otildedieresis:7758, Otildesmall:63477, 
-    P:80, Pacute:7764, Pcircle:9413, Pdotaccent:7766, Pecyrillic:1055, Peharmenian:1354, Pemiddlehookcyrillic:1190, Phi:934, Phook:420, Pi:928, Piwrarmenian:1363, Pmonospace:65328, Psi:936, Psicyrillic:1136, Psmall:63344, Q:81, Qcircle:9414, Qmonospace:65329, Qsmall:63345, R:82, Raarmenian:1356, Racute:340, Rcaron:344, Rcedilla:342, Rcircle:9415, Rcommaaccent:342, Rdblgrave:528, Rdotaccent:7768, Rdotbelow:7770, Rdotbelowmacron:7772, Reharmenian:1360, Rfraktur:8476, Rho:929, Ringsmall:63228, Rinvertedbreve:530, 
-    Rlinebelow:7774, Rmonospace:65330, Rsmall:63346, Rsmallinverted:641, Rsmallinvertedsuperior:694, S:83, SF010000:9484, SF020000:9492, SF030000:9488, SF040000:9496, SF050000:9532, SF060000:9516, SF070000:9524, SF080000:9500, SF090000:9508, SF100000:9472, SF110000:9474, SF190000:9569, SF200000:9570, SF210000:9558, SF220000:9557, SF230000:9571, SF240000:9553, SF250000:9559, SF260000:9565, SF270000:9564, SF280000:9563, SF360000:9566, SF370000:9567, SF380000:9562, SF390000:9556, SF400000:9577, SF410000:9574, 
-    SF420000:9568, SF430000:9552, SF440000:9580, SF450000:9575, SF460000:9576, SF470000:9572, SF480000:9573, SF490000:9561, SF500000:9560, SF510000:9554, SF520000:9555, SF530000:9579, SF540000:9578, Sacute:346, Sacutedotaccent:7780, Sampigreek:992, Scaron:352, Scarondotaccent:7782, Scaronsmall:63229, Scedilla:350, Schwa:399, Schwacyrillic:1240, Schwadieresiscyrillic:1242, Scircle:9416, Scircumflex:348, Scommaaccent:536, Sdotaccent:7776, Sdotbelow:7778, Sdotbelowdotaccent:7784, Seharmenian:1357, Sevenroman:8550, 
-    Shaarmenian:1351, Shacyrillic:1064, Shchacyrillic:1065, Sheicoptic:994, Shhacyrillic:1210, Shimacoptic:1004, Sigma:931, Sixroman:8549, Smonospace:65331, Softsigncyrillic:1068, Ssmall:63347, Stigmagreek:986, T:84, Tau:932, Tbar:358, Tcaron:356, Tcedilla:354, Tcircle:9417, Tcircumflexbelow:7792, Tcommaaccent:354, Tdotaccent:7786, Tdotbelow:7788, Tecyrillic:1058, Tedescendercyrillic:1196, Tenroman:8553, Tetsecyrillic:1204, Theta:920, Thook:428, Thorn:222, Thornsmall:63486, Threeroman:8546, Tildesmall:63230, 
-    Tiwnarmenian:1359, Tlinebelow:7790, Tmonospace:65332, Toarmenian:1337, Tonefive:444, Tonesix:388, Tonetwo:423, Tretroflexhook:430, Tsecyrillic:1062, Tshecyrillic:1035, Tsmall:63348, Twelveroman:8555, Tworoman:8545, U:85, Uacute:218, Uacutesmall:63482, Ubreve:364, Ucaron:467, Ucircle:9418, Ucircumflex:219, Ucircumflexbelow:7798, Ucircumflexsmall:63483, Ucyrillic:1059, Udblacute:368, Udblgrave:532, Udieresis:220, Udieresisacute:471, Udieresisbelow:7794, Udieresiscaron:473, Udieresiscyrillic:1264, 
-    Udieresisgrave:475, Udieresismacron:469, Udieresissmall:63484, Udotbelow:7908, Ugrave:217, Ugravesmall:63481, Uhookabove:7910, Uhorn:431, Uhornacute:7912, Uhorndotbelow:7920, Uhorngrave:7914, Uhornhookabove:7916, Uhorntilde:7918, Uhungarumlaut:368, Uhungarumlautcyrillic:1266, Uinvertedbreve:534, Ukcyrillic:1144, Umacron:362, Umacroncyrillic:1262, Umacrondieresis:7802, Umonospace:65333, Uogonek:370, Upsilon:933, Upsilon1:978, Upsilonacutehooksymbolgreek:979, Upsilonafrican:433, Upsilondieresis:939, 
-    Upsilondieresishooksymbolgreek:980, Upsilonhooksymbol:978, Upsilontonos:910, Uring:366, Ushortcyrillic:1038, Usmall:63349, Ustraightcyrillic:1198, Ustraightstrokecyrillic:1200, Utilde:360, Utildeacute:7800, Utildebelow:7796, V:86, Vcircle:9419, Vdotbelow:7806, Vecyrillic:1042, Vewarmenian:1358, Vhook:434, Vmonospace:65334, Voarmenian:1352, Vsmall:63350, Vtilde:7804, W:87, Wacute:7810, Wcircle:9420, Wcircumflex:372, Wdieresis:7812, Wdotaccent:7814, Wdotbelow:7816, Wgrave:7808, Wmonospace:65335, 
-    Wsmall:63351, X:88, Xcircle:9421, Xdieresis:7820, Xdotaccent:7818, Xeharmenian:1341, Xi:926, Xmonospace:65336, Xsmall:63352, Y:89, Yacute:221, Yacutesmall:63485, Yatcyrillic:1122, Ycircle:9422, Ycircumflex:374, Ydieresis:376, Ydieresissmall:63487, Ydotaccent:7822, Ydotbelow:7924, Yericyrillic:1067, Yerudieresiscyrillic:1272, Ygrave:7922, Yhook:435, Yhookabove:7926, Yiarmenian:1349, Yicyrillic:1031, Yiwnarmenian:1362, Ymonospace:65337, Ysmall:63353, Ytilde:7928, Yusbigcyrillic:1130, Yusbigiotifiedcyrillic:1132, 
-    Yuslittlecyrillic:1126, Yuslittleiotifiedcyrillic:1128, Z:90, Zaarmenian:1334, Zacute:377, Zcaron:381, Zcaronsmall:63231, Zcircle:9423, Zcircumflex:7824, Zdot:379, Zdotaccent:379, Zdotbelow:7826, Zecyrillic:1047, Zedescendercyrillic:1176, Zedieresiscyrillic:1246, Zeta:918, Zhearmenian:1338, Zhebrevecyrillic:1217, Zhecyrillic:1046, Zhedescendercyrillic:1174, Zhedieresiscyrillic:1244, Zlinebelow:7828, Zmonospace:65338, Zsmall:63354, Zstroke:437, a:97, aabengali:2438, aacute:225, aadeva:2310, aagujarati:2694, 
-    aagurmukhi:2566, aamatragurmukhi:2622, aarusquare:13059, aavowelsignbengali:2494, aavowelsigndeva:2366, aavowelsigngujarati:2750, abbreviationmarkarmenian:1375, abbreviationsigndeva:2416, abengali:2437, abopomofo:12570, abreve:259, abreveacute:7855, abrevecyrillic:1233, abrevedotbelow:7863, abrevegrave:7857, abrevehookabove:7859, abrevetilde:7861, acaron:462, acircle:9424, acircumflex:226, acircumflexacute:7845, acircumflexdotbelow:7853, acircumflexgrave:7847, acircumflexhookabove:7849, acircumflextilde:7851, 
-    acute:180, acutebelowcmb:791, acutecmb:769, acutecomb:769, acutedeva:2388, acutelowmod:719, acutetonecmb:833, acyrillic:1072, adblgrave:513, addakgurmukhi:2673, adeva:2309, adieresis:228, adieresiscyrillic:1235, adieresismacron:479, adotbelow:7841, adotmacron:481, ae:230, aeacute:509, aekorean:12624, aemacron:483, afii00208:8213, afii08941:8356, afii10017:1040, afii10018:1041, afii10019:1042, afii10020:1043, afii10021:1044, afii10022:1045, afii10023:1025, afii10024:1046, afii10025:1047, afii10026:1048, 
-    afii10027:1049, afii10028:1050, afii10029:1051, afii10030:1052, afii10031:1053, afii10032:1054, afii10033:1055, afii10034:1056, afii10035:1057, afii10036:1058, afii10037:1059, afii10038:1060, afii10039:1061, afii10040:1062, afii10041:1063, afii10042:1064, afii10043:1065, afii10044:1066, afii10045:1067, afii10046:1068, afii10047:1069, afii10048:1070, afii10049:1071, afii10050:1168, afii10051:1026, afii10052:1027, afii10053:1028, afii10054:1029, afii10055:1030, afii10056:1031, afii10057:1032, afii10058:1033, 
-    afii10059:1034, afii10060:1035, afii10061:1036, afii10062:1038, afii10063:63172, afii10064:63173, afii10065:1072, afii10066:1073, afii10067:1074, afii10068:1075, afii10069:1076, afii10070:1077, afii10071:1105, afii10072:1078, afii10073:1079, afii10074:1080, afii10075:1081, afii10076:1082, afii10077:1083, afii10078:1084, afii10079:1085, afii10080:1086, afii10081:1087, afii10082:1088, afii10083:1089, afii10084:1090, afii10085:1091, afii10086:1092, afii10087:1093, afii10088:1094, afii10089:1095, 
-    afii10090:1096, afii10091:1097, afii10092:1098, afii10093:1099, afii10094:1100, afii10095:1101, afii10096:1102, afii10097:1103, afii10098:1169, afii10099:1106, afii10100:1107, afii10101:1108, afii10102:1109, afii10103:1110, afii10104:1111, afii10105:1112, afii10106:1113, afii10107:1114, afii10108:1115, afii10109:1116, afii10110:1118, afii10145:1039, afii10146:1122, afii10147:1138, afii10148:1140, afii10192:63174, afii10193:1119, afii10194:1123, afii10195:1139, afii10196:1141, afii10831:63175, 
-    afii10832:63176, afii10846:1241, afii299:8206, afii300:8207, afii301:8205, afii57381:1642, afii57388:1548, afii57392:1632, afii57393:1633, afii57394:1634, afii57395:1635, afii57396:1636, afii57397:1637, afii57398:1638, afii57399:1639, afii57400:1640, afii57401:1641, afii57403:1563, afii57407:1567, afii57409:1569, afii57410:1570, afii57411:1571, afii57412:1572, afii57413:1573, afii57414:1574, afii57415:1575, afii57416:1576, afii57417:1577, afii57418:1578, afii57419:1579, afii57420:1580, afii57421:1581, 
-    afii57422:1582, afii57423:1583, afii57424:1584, afii57425:1585, afii57426:1586, afii57427:1587, afii57428:1588, afii57429:1589, afii57430:1590, afii57431:1591, afii57432:1592, afii57433:1593, afii57434:1594, afii57440:1600, afii57441:1601, afii57442:1602, afii57443:1603, afii57444:1604, afii57445:1605, afii57446:1606, afii57448:1608, afii57449:1609, afii57450:1610, afii57451:1611, afii57452:1612, afii57453:1613, afii57454:1614, afii57455:1615, afii57456:1616, afii57457:1617, afii57458:1618, afii57470:1607, 
-    afii57505:1700, afii57506:1662, afii57507:1670, afii57508:1688, afii57509:1711, afii57511:1657, afii57512:1672, afii57513:1681, afii57514:1722, afii57519:1746, afii57534:1749, afii57636:8362, afii57645:1470, afii57658:1475, afii57664:1488, afii57665:1489, afii57666:1490, afii57667:1491, afii57668:1492, afii57669:1493, afii57670:1494, afii57671:1495, afii57672:1496, afii57673:1497, afii57674:1498, afii57675:1499, afii57676:1500, afii57677:1501, afii57678:1502, afii57679:1503, afii57680:1504, afii57681:1505, 
-    afii57682:1506, afii57683:1507, afii57684:1508, afii57685:1509, afii57686:1510, afii57687:1511, afii57688:1512, afii57689:1513, afii57690:1514, afii57694:64298, afii57695:64299, afii57700:64331, afii57705:64287, afii57716:1520, afii57717:1521, afii57718:1522, afii57723:64309, afii57793:1460, afii57794:1461, afii57795:1462, afii57796:1467, afii57797:1464, afii57798:1463, afii57799:1456, afii57800:1458, afii57801:1457, afii57802:1459, afii57803:1474, afii57804:1473, afii57806:1465, afii57807:1468, 
-    afii57839:1469, afii57841:1471, afii57842:1472, afii57929:700, afii61248:8453, afii61289:8467, afii61352:8470, afii61573:8236, afii61574:8237, afii61575:8238, afii61664:8204, afii63167:1645, afii64937:701, agrave:224, agujarati:2693, agurmukhi:2565, ahiragana:12354, ahookabove:7843, aibengali:2448, aibopomofo:12574, aideva:2320, aiecyrillic:1237, aigujarati:2704, aigurmukhi:2576, aimatragurmukhi:2632, ainarabic:1593, ainfinalarabic:65226, aininitialarabic:65227, ainmedialarabic:65228, ainvertedbreve:515, 
-    aivowelsignbengali:2504, aivowelsigndeva:2376, aivowelsigngujarati:2760, akatakana:12450, akatakanahalfwidth:65393, akorean:12623, alef:1488, alefarabic:1575, alefdageshhebrew:64304, aleffinalarabic:65166, alefhamzaabovearabic:1571, alefhamzaabovefinalarabic:65156, alefhamzabelowarabic:1573, alefhamzabelowfinalarabic:65160, alefhebrew:1488, aleflamedhebrew:64335, alefmaddaabovearabic:1570, alefmaddaabovefinalarabic:65154, alefmaksuraarabic:1609, alefmaksurafinalarabic:65264, alefmaksurainitialarabic:65267, 
-    alefmaksuramedialarabic:65268, alefpatahhebrew:64302, alefqamatshebrew:64303, aleph:8501, allequal:8780, alpha:945, alphatonos:940, amacron:257, amonospace:65345, ampersand:38, ampersandmonospace:65286, ampersandsmall:63270, amsquare:13250, anbopomofo:12578, angbopomofo:12580, angbracketleft:12296, angbracketright:12297, angkhankhuthai:3674, angle:8736, anglebracketleft:12296, anglebracketleftvertical:65087, anglebracketright:12297, anglebracketrightvertical:65088, angleleft:9001, angleright:9002, 
-    angstrom:8491, anoteleia:903, anudattadeva:2386, anusvarabengali:2434, anusvaradeva:2306, anusvaragujarati:2690, aogonek:261, apaatosquare:13056, aparen:9372, apostrophearmenian:1370, apostrophemod:700, apple:63743, approaches:8784, approxequal:8776, approxequalorimage:8786, approximatelyequal:8773, araeaekorean:12686, araeakorean:12685, arc:8978, arighthalfring:7834, aring:229, aringacute:507, aringbelow:7681, arrowboth:8596, arrowdashdown:8675, arrowdashleft:8672, arrowdashright:8674, arrowdashup:8673, 
-    arrowdblboth:8660, arrowdbldown:8659, arrowdblleft:8656, arrowdblright:8658, arrowdblup:8657, arrowdown:8595, arrowdownleft:8601, arrowdownright:8600, arrowdownwhite:8681, arrowheaddownmod:709, arrowheadleftmod:706, arrowheadrightmod:707, arrowheadupmod:708, arrowhorizex:63719, arrowleft:8592, arrowleftdbl:8656, arrowleftdblstroke:8653, arrowleftoverright:8646, arrowleftwhite:8678, arrowright:8594, arrowrightdblstroke:8655, arrowrightheavy:10142, arrowrightoverleft:8644, arrowrightwhite:8680, 
-    arrowtableft:8676, arrowtabright:8677, arrowup:8593, arrowupdn:8597, arrowupdnbse:8616, arrowupdownbase:8616, arrowupleft:8598, arrowupleftofdown:8645, arrowupright:8599, arrowupwhite:8679, arrowvertex:63718, asciicircum:94, asciicircummonospace:65342, asciitilde:126, asciitildemonospace:65374, ascript:593, ascriptturned:594, asmallhiragana:12353, asmallkatakana:12449, asmallkatakanahalfwidth:65383, asterisk:42, asteriskaltonearabic:1645, asteriskarabic:1645, asteriskmath:8727, asteriskmonospace:65290, 
-    asterisksmall:65121, asterism:8258, asuperior:63209, asymptoticallyequal:8771, at:64, atilde:227, atmonospace:65312, atsmall:65131, aturned:592, aubengali:2452, aubopomofo:12576, audeva:2324, augujarati:2708, augurmukhi:2580, aulengthmarkbengali:2519, aumatragurmukhi:2636, auvowelsignbengali:2508, auvowelsigndeva:2380, auvowelsigngujarati:2764, avagrahadeva:2365, aybarmenian:1377, ayin:1506, ayinaltonehebrew:64288, ayinhebrew:1506, b:98, babengali:2476, backslash:92, backslashmonospace:65340, 
-    badeva:2348, bagujarati:2732, bagurmukhi:2604, bahiragana:12400, bahtthai:3647, bakatakana:12496, bar:124, barmonospace:65372, bbopomofo:12549, bcircle:9425, bdotaccent:7683, bdotbelow:7685, beamedsixteenthnotes:9836, because:8757, becyrillic:1073, beharabic:1576, behfinalarabic:65168, behinitialarabic:65169, behiragana:12409, behmedialarabic:65170, behmeeminitialarabic:64671, behmeemisolatedarabic:64520, behnoonfinalarabic:64621, bekatakana:12505, benarmenian:1378, bet:1489, beta:946, betasymbolgreek:976, 
-    betdagesh:64305, betdageshhebrew:64305, bethebrew:1489, betrafehebrew:64332, bhabengali:2477, bhadeva:2349, bhagujarati:2733, bhagurmukhi:2605, bhook:595, bihiragana:12403, bikatakana:12499, bilabialclick:664, bindigurmukhi:2562, birusquare:13105, blackcircle:9679, blackdiamond:9670, blackdownpointingtriangle:9660, blackleftpointingpointer:9668, blackleftpointingtriangle:9664, blacklenticularbracketleft:12304, blacklenticularbracketleftvertical:65083, blacklenticularbracketright:12305, blacklenticularbracketrightvertical:65084, 
-    blacklowerlefttriangle:9699, blacklowerrighttriangle:9698, blackrectangle:9644, blackrightpointingpointer:9658, blackrightpointingtriangle:9654, blacksmallsquare:9642, blacksmilingface:9787, blacksquare:9632, blackstar:9733, blackupperlefttriangle:9700, blackupperrighttriangle:9701, blackuppointingsmalltriangle:9652, blackuppointingtriangle:9650, blank:9251, blinebelow:7687, block:9608, bmonospace:65346, bobaimaithai:3610, bohiragana:12412, bokatakana:12508, bparen:9373, bqsquare:13251, braceex:63732, 
-    braceleft:123, braceleftbt:63731, braceleftmid:63730, braceleftmonospace:65371, braceleftsmall:65115, bracelefttp:63729, braceleftvertical:65079, braceright:125, bracerightbt:63742, bracerightmid:63741, bracerightmonospace:65373, bracerightsmall:65116, bracerighttp:63740, bracerightvertical:65080, bracketleft:91, bracketleftbt:63728, bracketleftex:63727, bracketleftmonospace:65339, bracketlefttp:63726, bracketright:93, bracketrightbt:63739, bracketrightex:63738, bracketrightmonospace:65341, bracketrighttp:63737, 
-    breve:728, brevebelowcmb:814, brevecmb:774, breveinvertedbelowcmb:815, breveinvertedcmb:785, breveinverteddoublecmb:865, bridgebelowcmb:810, bridgeinvertedbelowcmb:826, brokenbar:166, bstroke:384, bsuperior:63210, btopbar:387, buhiragana:12406, bukatakana:12502, bullet:8226, bulletinverse:9688, bulletoperator:8729, bullseye:9678, c:99, caarmenian:1390, cabengali:2458, cacute:263, cadeva:2330, cagujarati:2714, cagurmukhi:2586, calsquare:13192, candrabindubengali:2433, candrabinducmb:784, candrabindudeva:2305, 
-    candrabindugujarati:2689, capslock:8682, careof:8453, caron:711, caronbelowcmb:812, caroncmb:780, carriagereturn:8629, cbopomofo:12568, ccaron:269, ccedilla:231, ccedillaacute:7689, ccircle:9426, ccircumflex:265, ccurl:597, cdot:267, cdotaccent:267, cdsquare:13253, cedilla:184, cedillacmb:807, cent:162, centigrade:8451, centinferior:63199, centmonospace:65504, centoldstyle:63394, centsuperior:63200, chaarmenian:1401, chabengali:2459, chadeva:2331, chagujarati:2715, chagurmukhi:2587, chbopomofo:12564, 
-    cheabkhasiancyrillic:1213, checkmark:10003, checyrillic:1095, chedescenderabkhasiancyrillic:1215, chedescendercyrillic:1207, chedieresiscyrillic:1269, cheharmenian:1395, chekhakassiancyrillic:1228, cheverticalstrokecyrillic:1209, chi:967, chieuchacirclekorean:12919, chieuchaparenkorean:12823, chieuchcirclekorean:12905, chieuchkorean:12618, chieuchparenkorean:12809, chochangthai:3594, chochanthai:3592, chochingthai:3593, chochoethai:3596, chook:392, cieucacirclekorean:12918, cieucaparenkorean:12822, 
-    cieuccirclekorean:12904, cieuckorean:12616, cieucparenkorean:12808, cieucuparenkorean:12828, circle:9675, circlecopyrt:169, circlemultiply:8855, circleot:8857, circleplus:8853, circlepostalmark:12342, circlewithlefthalfblack:9680, circlewithrighthalfblack:9681, circumflex:710, circumflexbelowcmb:813, circumflexcmb:770, clear:8999, clickalveolar:450, clickdental:448, clicklateral:449, clickretroflex:451, club:9827, clubsuitblack:9827, clubsuitwhite:9831, cmcubedsquare:13220, cmonospace:65347, 
-    cmsquaredsquare:13216, coarmenian:1409, colon:58, colonmonetary:8353, colonmonospace:65306, colonsign:8353, colonsmall:65109, colontriangularhalfmod:721, colontriangularmod:720, comma:44, commaabovecmb:787, commaaboverightcmb:789, commaaccent:63171, commaarabic:1548, commaarmenian:1373, commainferior:63201, commamonospace:65292, commareversedabovecmb:788, commareversedmod:701, commasmall:65104, commasuperior:63202, commaturnedabovecmb:786, commaturnedmod:699, compass:9788, congruent:8773, contourintegral:8750, 
-    control:8963, controlACK:6, controlBEL:7, controlBS:8, controlCAN:24, controlCR:13, controlDC1:17, controlDC2:18, controlDC3:19, controlDC4:20, controlDEL:127, controlDLE:16, controlEM:25, controlENQ:5, controlEOT:4, controlESC:27, controlETB:23, controlETX:3, controlFF:12, controlFS:28, controlGS:29, controlHT:9, controlLF:10, controlNAK:21, controlRS:30, controlSI:15, controlSO:14, controlSOT:2, controlSTX:1, controlSUB:26, controlSYN:22, controlUS:31, controlVT:11, copyright:169, copyrightsans:63721, 
-    copyrightserif:63193, cornerbracketleft:12300, cornerbracketlefthalfwidth:65378, cornerbracketleftvertical:65089, cornerbracketright:12301, cornerbracketrighthalfwidth:65379, cornerbracketrightvertical:65090, corporationsquare:13183, cosquare:13255, coverkgsquare:13254, cparen:9374, cruzeiro:8354, cstretched:663, curlyand:8911, curlyor:8910, currency:164, cyrBreve:63185, cyrFlex:63186, cyrbreve:63188, cyrflex:63189, d:100, daarmenian:1380, dabengali:2470, dadarabic:1590, dadeva:2342, dadfinalarabic:65214, 
-    dadinitialarabic:65215, dadmedialarabic:65216, dagesh:1468, dageshhebrew:1468, dagger:8224, daggerdbl:8225, dagujarati:2726, dagurmukhi:2598, dahiragana:12384, dakatakana:12480, dalarabic:1583, dalet:1491, daletdagesh:64307, daletdageshhebrew:64307, dalethebrew:1491, dalfinalarabic:65194, dammaarabic:1615, dammalowarabic:1615, dammatanaltonearabic:1612, dammatanarabic:1612, danda:2404, dargahebrew:1447, dargalefthebrew:1447, dasiapneumatacyrilliccmb:1157, dblGrave:63187, dblanglebracketleft:12298, 
-    dblanglebracketleftvertical:65085, dblanglebracketright:12299, dblanglebracketrightvertical:65086, dblarchinvertedbelowcmb:811, dblarrowleft:8660, dblarrowright:8658, dbldanda:2405, dblgrave:63190, dblgravecmb:783, dblintegral:8748, dbllowline:8215, dbllowlinecmb:819, dbloverlinecmb:831, dblprimemod:698, dblverticalbar:8214, dblverticallineabovecmb:782, dbopomofo:12553, dbsquare:13256, dcaron:271, dcedilla:7697, dcircle:9427, dcircumflexbelow:7699, dcroat:273, ddabengali:2465, ddadeva:2337, ddagujarati:2721, 
-    ddagurmukhi:2593, ddalarabic:1672, ddalfinalarabic:64393, dddhadeva:2396, ddhabengali:2466, ddhadeva:2338, ddhagujarati:2722, ddhagurmukhi:2594, ddotaccent:7691, ddotbelow:7693, decimalseparatorarabic:1643, decimalseparatorpersian:1643, decyrillic:1076, degree:176, dehihebrew:1453, dehiragana:12391, deicoptic:1007, dekatakana:12487, deleteleft:9003, deleteright:8998, delta:948, deltaturned:397, denominatorminusonenumeratorbengali:2552, dezh:676, dhabengali:2471, dhadeva:2343, dhagujarati:2727, 
-    dhagurmukhi:2599, dhook:599, dialytikatonos:901, dialytikatonoscmb:836, diamond:9830, diamondsuitwhite:9826, dieresis:168, dieresisacute:63191, dieresisbelowcmb:804, dieresiscmb:776, dieresisgrave:63192, dieresistonos:901, dihiragana:12386, dikatakana:12482, dittomark:12291, divide:247, divides:8739, divisionslash:8725, djecyrillic:1106, dkshade:9619, dlinebelow:7695, dlsquare:13207, dmacron:273, dmonospace:65348, dnblock:9604, dochadathai:3598, dodekthai:3604, dohiragana:12393, dokatakana:12489, 
-    dollar:36, dollarinferior:63203, dollarmonospace:65284, dollaroldstyle:63268, dollarsmall:65129, dollarsuperior:63204, dong:8363, dorusquare:13094, dotaccent:729, dotaccentcmb:775, dotbelowcmb:803, dotbelowcomb:803, dotkatakana:12539, dotlessi:305, dotlessj:63166, dotlessjstrokehook:644, dotmath:8901, dottedcircle:9676, doubleyodpatah:64287, doubleyodpatahhebrew:64287, downtackbelowcmb:798, downtackmod:725, dparen:9375, dsuperior:63211, dtail:598, dtopbar:396, duhiragana:12389, dukatakana:12485, 
-    dz:499, dzaltone:675, dzcaron:454, dzcurl:677, dzeabkhasiancyrillic:1249, dzecyrillic:1109, dzhecyrillic:1119, e:101, eacute:233, earth:9793, ebengali:2447, ebopomofo:12572, ebreve:277, ecandradeva:2317, ecandragujarati:2701, ecandravowelsigndeva:2373, ecandravowelsigngujarati:2757, ecaron:283, ecedillabreve:7709, echarmenian:1381, echyiwnarmenian:1415, ecircle:9428, ecircumflex:234, ecircumflexacute:7871, ecircumflexbelow:7705, ecircumflexdotbelow:7879, ecircumflexgrave:7873, ecircumflexhookabove:7875, 
-    ecircumflextilde:7877, ecyrillic:1108, edblgrave:517, edeva:2319, edieresis:235, edot:279, edotaccent:279, edotbelow:7865, eegurmukhi:2575, eematragurmukhi:2631, efcyrillic:1092, egrave:232, egujarati:2703, eharmenian:1383, ehbopomofo:12573, ehiragana:12360, ehookabove:7867, eibopomofo:12575, eight:56, eightarabic:1640, eightbengali:2542, eightcircle:9319, eightcircleinversesansserif:10129, eightdeva:2414, eighteencircle:9329, eighteenparen:9349, eighteenperiod:9369, eightgujarati:2798, eightgurmukhi:2670, 
-    eighthackarabic:1640, eighthangzhou:12328, eighthnotebeamed:9835, eightideographicparen:12839, eightinferior:8328, eightmonospace:65304, eightoldstyle:63288, eightparen:9339, eightperiod:9359, eightpersian:1784, eightroman:8567, eightsuperior:8312, eightthai:3672, einvertedbreve:519, eiotifiedcyrillic:1125, ekatakana:12456, ekatakanahalfwidth:65396, ekonkargurmukhi:2676, ekorean:12628, elcyrillic:1083, element:8712, elevencircle:9322, elevenparen:9342, elevenperiod:9362, elevenroman:8570, ellipsis:8230, 
-    ellipsisvertical:8942, emacron:275, emacronacute:7703, emacrongrave:7701, emcyrillic:1084, emdash:8212, emdashvertical:65073, emonospace:65349, emphasismarkarmenian:1371, emptyset:8709, enbopomofo:12579, encyrillic:1085, endash:8211, endashvertical:65074, endescendercyrillic:1187, eng:331, engbopomofo:12581, enghecyrillic:1189, enhookcyrillic:1224, enspace:8194, eogonek:281, eokorean:12627, eopen:603, eopenclosed:666, eopenreversed:604, eopenreversedclosed:606, eopenreversedhook:605, eparen:9376, 
-    epsilon:949, epsilontonos:941, equal:61, equalmonospace:65309, equalsmall:65126, equalsuperior:8316, equivalence:8801, erbopomofo:12582, ercyrillic:1088, ereversed:600, ereversedcyrillic:1101, escyrillic:1089, esdescendercyrillic:1195, esh:643, eshcurl:646, eshortdeva:2318, eshortvowelsigndeva:2374, eshreversedloop:426, eshsquatreversed:645, esmallhiragana:12359, esmallkatakana:12455, esmallkatakanahalfwidth:65386, estimated:8494, esuperior:63212, eta:951, etarmenian:1384, etatonos:942, eth:240, 
-    etilde:7869, etildebelow:7707, etnahtafoukhhebrew:1425, etnahtafoukhlefthebrew:1425, etnahtahebrew:1425, etnahtalefthebrew:1425, eturned:477, eukorean:12641, euro:8364, evowelsignbengali:2503, evowelsigndeva:2375, evowelsigngujarati:2759, exclam:33, exclamarmenian:1372, exclamdbl:8252, exclamdown:161, exclamdownsmall:63393, exclammonospace:65281, exclamsmall:63265, existential:8707, ezh:658, ezhcaron:495, ezhcurl:659, ezhreversed:441, ezhtail:442, f:102, fadeva:2398, fagurmukhi:2654, fahrenheit:8457, 
-    fathaarabic:1614, fathalowarabic:1614, fathatanarabic:1611, fbopomofo:12552, fcircle:9429, fdotaccent:7711, feharabic:1601, feharmenian:1414, fehfinalarabic:65234, fehinitialarabic:65235, fehmedialarabic:65236, feicoptic:997, female:9792, ff:64256, ffi:64259, ffl:64260, fi:64257, fifteencircle:9326, fifteenparen:9346, fifteenperiod:9366, figuredash:8210, filledbox:9632, filledrect:9644, finalkaf:1498, finalkafdagesh:64314, finalkafdageshhebrew:64314, finalkafhebrew:1498, finalmem:1501, finalmemhebrew:1501, 
-    finalnun:1503, finalnunhebrew:1503, finalpe:1507, finalpehebrew:1507, finaltsadi:1509, finaltsadihebrew:1509, firsttonechinese:713, fisheye:9673, fitacyrillic:1139, five:53, fivearabic:1637, fivebengali:2539, fivecircle:9316, fivecircleinversesansserif:10126, fivedeva:2411, fiveeighths:8541, fivegujarati:2795, fivegurmukhi:2667, fivehackarabic:1637, fivehangzhou:12325, fiveideographicparen:12836, fiveinferior:8325, fivemonospace:65301, fiveoldstyle:63285, fiveparen:9336, fiveperiod:9356, fivepersian:1781, 
-    fiveroman:8564, fivesuperior:8309, fivethai:3669, fl:64258, florin:402, fmonospace:65350, fmsquare:13209, fofanthai:3615, fofathai:3613, fongmanthai:3663, forall:8704, four:52, fourarabic:1636, fourbengali:2538, fourcircle:9315, fourcircleinversesansserif:10125, fourdeva:2410, fourgujarati:2794, fourgurmukhi:2666, fourhackarabic:1636, fourhangzhou:12324, fourideographicparen:12835, fourinferior:8324, fourmonospace:65300, fournumeratorbengali:2551, fouroldstyle:63284, fourparen:9335, fourperiod:9355, 
-    fourpersian:1780, fourroman:8563, foursuperior:8308, fourteencircle:9325, fourteenparen:9345, fourteenperiod:9365, fourthai:3668, fourthtonechinese:715, fparen:9377, fraction:8260, franc:8355, g:103, gabengali:2455, gacute:501, gadeva:2327, gafarabic:1711, gaffinalarabic:64403, gafinitialarabic:64404, gafmedialarabic:64405, gagujarati:2711, gagurmukhi:2583, gahiragana:12364, gakatakana:12460, gamma:947, gammalatinsmall:611, gammasuperior:736, gangiacoptic:1003, gbopomofo:12557, gbreve:287, gcaron:487, 
-    gcedilla:291, gcircle:9430, gcircumflex:285, gcommaaccent:291, gdot:289, gdotaccent:289, gecyrillic:1075, gehiragana:12370, gekatakana:12466, geometricallyequal:8785, gereshaccenthebrew:1436, gereshhebrew:1523, gereshmuqdamhebrew:1437, germandbls:223, gershayimaccenthebrew:1438, gershayimhebrew:1524, getamark:12307, ghabengali:2456, ghadarmenian:1394, ghadeva:2328, ghagujarati:2712, ghagurmukhi:2584, ghainarabic:1594, ghainfinalarabic:65230, ghaininitialarabic:65231, ghainmedialarabic:65232, 
-    ghemiddlehookcyrillic:1173, ghestrokecyrillic:1171, gheupturncyrillic:1169, ghhadeva:2394, ghhagurmukhi:2650, ghook:608, ghzsquare:13203, gihiragana:12366, gikatakana:12462, gimarmenian:1379, gimel:1490, gimeldagesh:64306, gimeldageshhebrew:64306, gimelhebrew:1490, gjecyrillic:1107, glottalinvertedstroke:446, glottalstop:660, glottalstopinverted:662, glottalstopmod:704, glottalstopreversed:661, glottalstopreversedmod:705, glottalstopreversedsuperior:740, glottalstopstroke:673, glottalstopstrokereversed:674, 
-    gmacron:7713, gmonospace:65351, gohiragana:12372, gokatakana:12468, gparen:9378, gpasquare:13228, gradient:8711, grave:96, gravebelowcmb:790, gravecmb:768, gravecomb:768, gravedeva:2387, gravelowmod:718, gravemonospace:65344, gravetonecmb:832, greater:62, greaterequal:8805, greaterequalorless:8923, greatermonospace:65310, greaterorequivalent:8819, greaterorless:8823, greateroverequal:8807, greatersmall:65125, gscript:609, gstroke:485, guhiragana:12368, guillemotleft:171, guillemotright:187, guilsinglleft:8249, 
-    guilsinglright:8250, gukatakana:12464, guramusquare:13080, gysquare:13257, h:104, haabkhasiancyrillic:1193, haaltonearabic:1729, habengali:2489, hadescendercyrillic:1203, hadeva:2361, hagujarati:2745, hagurmukhi:2617, haharabic:1581, hahfinalarabic:65186, hahinitialarabic:65187, hahiragana:12399, hahmedialarabic:65188, haitusquare:13098, hakatakana:12495, hakatakanahalfwidth:65418, halantgurmukhi:2637, hamzaarabic:1569, hamzalowarabic:1569, hangulfiller:12644, hardsigncyrillic:1098, harpoonleftbarbup:8636, 
-    harpoonrightbarbup:8640, hasquare:13258, hatafpatah:1458, hatafpatah16:1458, hatafpatah23:1458, hatafpatah2f:1458, hatafpatahhebrew:1458, hatafpatahnarrowhebrew:1458, hatafpatahquarterhebrew:1458, hatafpatahwidehebrew:1458, hatafqamats:1459, hatafqamats1b:1459, hatafqamats28:1459, hatafqamats34:1459, hatafqamatshebrew:1459, hatafqamatsnarrowhebrew:1459, hatafqamatsquarterhebrew:1459, hatafqamatswidehebrew:1459, hatafsegol:1457, hatafsegol17:1457, hatafsegol24:1457, hatafsegol30:1457, hatafsegolhebrew:1457, 
-    hatafsegolnarrowhebrew:1457, hatafsegolquarterhebrew:1457, hatafsegolwidehebrew:1457, hbar:295, hbopomofo:12559, hbrevebelow:7723, hcedilla:7721, hcircle:9431, hcircumflex:293, hdieresis:7719, hdotaccent:7715, hdotbelow:7717, he:1492, heart:9829, heartsuitblack:9829, heartsuitwhite:9825, hedagesh:64308, hedageshhebrew:64308, hehaltonearabic:1729, heharabic:1607, hehebrew:1492, hehfinalaltonearabic:64423, hehfinalalttwoarabic:65258, hehfinalarabic:65258, hehhamzaabovefinalarabic:64421, hehhamzaaboveisolatedarabic:64420, 
-    hehinitialaltonearabic:64424, hehinitialarabic:65259, hehiragana:12408, hehmedialaltonearabic:64425, hehmedialarabic:65260, heiseierasquare:13179, hekatakana:12504, hekatakanahalfwidth:65421, hekutaarusquare:13110, henghook:615, herutusquare:13113, het:1495, hethebrew:1495, hhook:614, hhooksuperior:689, hieuhacirclekorean:12923, hieuhaparenkorean:12827, hieuhcirclekorean:12909, hieuhkorean:12622, hieuhparenkorean:12813, hihiragana:12402, hikatakana:12498, hikatakanahalfwidth:65419, hiriq:1460, 
-    hiriq14:1460, hiriq21:1460, hiriq2d:1460, hiriqhebrew:1460, hiriqnarrowhebrew:1460, hiriqquarterhebrew:1460, hiriqwidehebrew:1460, hlinebelow:7830, hmonospace:65352, hoarmenian:1392, hohipthai:3627, hohiragana:12411, hokatakana:12507, hokatakanahalfwidth:65422, holam:1465, holam19:1465, holam26:1465, holam32:1465, holamhebrew:1465, holamnarrowhebrew:1465, holamquarterhebrew:1465, holamwidehebrew:1465, honokhukthai:3630, hookabovecomb:777, hookcmb:777, hookpalatalizedbelowcmb:801, hookretroflexbelowcmb:802, 
-    hoonsquare:13122, horicoptic:1001, horizontalbar:8213, horncmb:795, hotsprings:9832, house:8962, hparen:9379, hsuperior:688, hturned:613, huhiragana:12405, huiitosquare:13107, hukatakana:12501, hukatakanahalfwidth:65420, hungarumlaut:733, hungarumlautcmb:779, hv:405, hyphen:45, hypheninferior:63205, hyphenmonospace:65293, hyphensmall:65123, hyphensuperior:63206, hyphentwo:8208, i:105, iacute:237, iacyrillic:1103, ibengali:2439, ibopomofo:12583, ibreve:301, icaron:464, icircle:9432, icircumflex:238, 
-    icyrillic:1110, idblgrave:521, ideographearthcircle:12943, ideographfirecircle:12939, ideographicallianceparen:12863, ideographiccallparen:12858, ideographiccentrecircle:12965, ideographicclose:12294, ideographiccomma:12289, ideographiccommaleft:65380, ideographiccongratulationparen:12855, ideographiccorrectcircle:12963, ideographicearthparen:12847, ideographicenterpriseparen:12861, ideographicexcellentcircle:12957, ideographicfestivalparen:12864, ideographicfinancialcircle:12950, ideographicfinancialparen:12854, 
-    ideographicfireparen:12843, ideographichaveparen:12850, ideographichighcircle:12964, ideographiciterationmark:12293, ideographiclaborcircle:12952, ideographiclaborparen:12856, ideographicleftcircle:12967, ideographiclowcircle:12966, ideographicmedicinecircle:12969, ideographicmetalparen:12846, ideographicmoonparen:12842, ideographicnameparen:12852, ideographicperiod:12290, ideographicprintcircle:12958, ideographicreachparen:12867, ideographicrepresentparen:12857, ideographicresourceparen:12862, 
-    ideographicrightcircle:12968, ideographicsecretcircle:12953, ideographicselfparen:12866, ideographicsocietyparen:12851, ideographicspace:12288, ideographicspecialparen:12853, ideographicstockparen:12849, ideographicstudyparen:12859, ideographicsunparen:12848, ideographicsuperviseparen:12860, ideographicwaterparen:12844, ideographicwoodparen:12845, ideographiczero:12295, ideographmetalcircle:12942, ideographmooncircle:12938, ideographnamecircle:12948, ideographsuncircle:12944, ideographwatercircle:12940, 
-    ideographwoodcircle:12941, ideva:2311, idieresis:239, idieresisacute:7727, idieresiscyrillic:1253, idotbelow:7883, iebrevecyrillic:1239, iecyrillic:1077, ieungacirclekorean:12917, ieungaparenkorean:12821, ieungcirclekorean:12903, ieungkorean:12615, ieungparenkorean:12807, igrave:236, igujarati:2695, igurmukhi:2567, ihiragana:12356, ihookabove:7881, iibengali:2440, iicyrillic:1080, iideva:2312, iigujarati:2696, iigurmukhi:2568, iimatragurmukhi:2624, iinvertedbreve:523, iishortcyrillic:1081, iivowelsignbengali:2496, 
-    iivowelsigndeva:2368, iivowelsigngujarati:2752, ij:307, ikatakana:12452, ikatakanahalfwidth:65394, ikorean:12643, ilde:732, iluyhebrew:1452, imacron:299, imacroncyrillic:1251, imageorapproximatelyequal:8787, imatragurmukhi:2623, imonospace:65353, increment:8710, infinity:8734, iniarmenian:1387, integral:8747, integralbottom:8993, integralbt:8993, integralex:63733, integraltop:8992, integraltp:8992, intersection:8745, intisquare:13061, invbullet:9688, invcircle:9689, invsmileface:9787, iocyrillic:1105, 
-    iogonek:303, iota:953, iotadieresis:970, iotadieresistonos:912, iotalatin:617, iotatonos:943, iparen:9380, irigurmukhi:2674, ismallhiragana:12355, ismallkatakana:12451, ismallkatakanahalfwidth:65384, issharbengali:2554, istroke:616, isuperior:63213, iterationhiragana:12445, iterationkatakana:12541, itilde:297, itildebelow:7725, iubopomofo:12585, iucyrillic:1102, ivowelsignbengali:2495, ivowelsigndeva:2367, ivowelsigngujarati:2751, izhitsacyrillic:1141, izhitsadblgravecyrillic:1143, j:106, jaarmenian:1393, 
-    jabengali:2460, jadeva:2332, jagujarati:2716, jagurmukhi:2588, jbopomofo:12560, jcaron:496, jcircle:9433, jcircumflex:309, jcrossedtail:669, jdotlessstroke:607, jecyrillic:1112, jeemarabic:1580, jeemfinalarabic:65182, jeeminitialarabic:65183, jeemmedialarabic:65184, jeharabic:1688, jehfinalarabic:64395, jhabengali:2461, jhadeva:2333, jhagujarati:2717, jhagurmukhi:2589, jheharmenian:1403, jis:12292, jmonospace:65354, jparen:9381, jsuperior:690, k:107, kabashkircyrillic:1185, kabengali:2453, kacute:7729, 
-    kacyrillic:1082, kadescendercyrillic:1179, kadeva:2325, kaf:1499, kafarabic:1603, kafdagesh:64315, kafdageshhebrew:64315, kaffinalarabic:65242, kafhebrew:1499, kafinitialarabic:65243, kafmedialarabic:65244, kafrafehebrew:64333, kagujarati:2709, kagurmukhi:2581, kahiragana:12363, kahookcyrillic:1220, kakatakana:12459, kakatakanahalfwidth:65398, kappa:954, kappasymbolgreek:1008, kapyeounmieumkorean:12657, kapyeounphieuphkorean:12676, kapyeounpieupkorean:12664, kapyeounssangpieupkorean:12665, karoriisquare:13069, 
-    kashidaautoarabic:1600, kashidaautonosidebearingarabic:1600, kasmallkatakana:12533, kasquare:13188, kasraarabic:1616, kasratanarabic:1613, kastrokecyrillic:1183, katahiraprolongmarkhalfwidth:65392, kaverticalstrokecyrillic:1181, kbopomofo:12558, kcalsquare:13193, kcaron:489, kcedilla:311, kcircle:9434, kcommaaccent:311, kdotbelow:7731, keharmenian:1412, kehiragana:12369, kekatakana:12465, kekatakanahalfwidth:65401, kenarmenian:1391, kesmallkatakana:12534, kgreenlandic:312, khabengali:2454, khacyrillic:1093, 
-    khadeva:2326, khagujarati:2710, khagurmukhi:2582, khaharabic:1582, khahfinalarabic:65190, khahinitialarabic:65191, khahmedialarabic:65192, kheicoptic:999, khhadeva:2393, khhagurmukhi:2649, khieukhacirclekorean:12920, khieukhaparenkorean:12824, khieukhcirclekorean:12906, khieukhkorean:12619, khieukhparenkorean:12810, khokhaithai:3586, khokhonthai:3589, khokhuatthai:3587, khokhwaithai:3588, khomutthai:3675, khook:409, khorakhangthai:3590, khzsquare:13201, kihiragana:12365, kikatakana:12461, kikatakanahalfwidth:65399, 
-    kiroguramusquare:13077, kiromeetorusquare:13078, kirosquare:13076, kiyeokacirclekorean:12910, kiyeokaparenkorean:12814, kiyeokcirclekorean:12896, kiyeokkorean:12593, kiyeokparenkorean:12800, kiyeoksioskorean:12595, kjecyrillic:1116, klinebelow:7733, klsquare:13208, kmcubedsquare:13222, kmonospace:65355, kmsquaredsquare:13218, kohiragana:12371, kohmsquare:13248, kokaithai:3585, kokatakana:12467, kokatakanahalfwidth:65402, kooposquare:13086, koppacyrillic:1153, koreanstandardsymbol:12927, koroniscmb:835, 
-    kparen:9382, kpasquare:13226, ksicyrillic:1135, ktsquare:13263, kturned:670, kuhiragana:12367, kukatakana:12463, kukatakanahalfwidth:65400, kvsquare:13240, kwsquare:13246, l:108, labengali:2482, lacute:314, ladeva:2354, lagujarati:2738, lagurmukhi:2610, lakkhangyaothai:3653, lamaleffinalarabic:65276, lamalefhamzaabovefinalarabic:65272, lamalefhamzaaboveisolatedarabic:65271, lamalefhamzabelowfinalarabic:65274, lamalefhamzabelowisolatedarabic:65273, lamalefisolatedarabic:65275, lamalefmaddaabovefinalarabic:65270, 
-    lamalefmaddaaboveisolatedarabic:65269, lamarabic:1604, lambda:955, lambdastroke:411, lamed:1500, lameddagesh:64316, lameddageshhebrew:64316, lamedhebrew:1500, lamfinalarabic:65246, lamhahinitialarabic:64714, laminitialarabic:65247, lamjeeminitialarabic:64713, lamkhahinitialarabic:64715, lamlamhehisolatedarabic:65010, lammedialarabic:65248, lammeemhahinitialarabic:64904, lammeeminitialarabic:64716, largecircle:9711, lbar:410, lbelt:620, lbopomofo:12556, lcaron:318, lcedilla:316, lcircle:9435, 
-    lcircumflexbelow:7741, lcommaaccent:316, ldot:320, ldotaccent:320, ldotbelow:7735, ldotbelowmacron:7737, leftangleabovecmb:794, lefttackbelowcmb:792, less:60, lessequal:8804, lessequalorgreater:8922, lessmonospace:65308, lessorequivalent:8818, lessorgreater:8822, lessoverequal:8806, lesssmall:65124, lezh:622, lfblock:9612, lhookretroflex:621, lira:8356, liwnarmenian:1388, lj:457, ljecyrillic:1113, ll:63168, lladeva:2355, llagujarati:2739, llinebelow:7739, llladeva:2356, llvocalicbengali:2529, 
-    llvocalicdeva:2401, llvocalicvowelsignbengali:2531, llvocalicvowelsigndeva:2403, lmiddletilde:619, lmonospace:65356, lmsquare:13264, lochulathai:3628, logicaland:8743, logicalnot:172, logicalnotreversed:8976, logicalor:8744, lolingthai:3621, longs:383, lowlinecenterline:65102, lowlinecmb:818, lowlinedashed:65101, lozenge:9674, lparen:9383, lslash:322, lsquare:8467, lsuperior:63214, ltshade:9617, luthai:3622, lvocalicbengali:2444, lvocalicdeva:2316, lvocalicvowelsignbengali:2530, lvocalicvowelsigndeva:2402, 
-    lxsquare:13267, m:109, mabengali:2478, macron:175, macronbelowcmb:817, macroncmb:772, macronlowmod:717, macronmonospace:65507, macute:7743, madeva:2350, magujarati:2734, magurmukhi:2606, mahapakhhebrew:1444, mahapakhlefthebrew:1444, mahiragana:12414, maichattawalowleftthai:63637, maichattawalowrightthai:63636, maichattawathai:3659, maichattawaupperleftthai:63635, maieklowleftthai:63628, maieklowrightthai:63627, maiekthai:3656, maiekupperleftthai:63626, maihanakatleftthai:63620, maihanakatthai:3633, 
-    maitaikhuleftthai:63625, maitaikhuthai:3655, maitholowleftthai:63631, maitholowrightthai:63630, maithothai:3657, maithoupperleftthai:63629, maitrilowleftthai:63634, maitrilowrightthai:63633, maitrithai:3658, maitriupperleftthai:63632, maiyamokthai:3654, makatakana:12510, makatakanahalfwidth:65423, male:9794, mansyonsquare:13127, maqafhebrew:1470, mars:9794, masoracirclehebrew:1455, masquare:13187, mbopomofo:12551, mbsquare:13268, mcircle:9436, mcubedsquare:13221, mdotaccent:7745, mdotbelow:7747, 
-    meemarabic:1605, meemfinalarabic:65250, meeminitialarabic:65251, meemmedialarabic:65252, meemmeeminitialarabic:64721, meemmeemisolatedarabic:64584, meetorusquare:13133, mehiragana:12417, meizierasquare:13182, mekatakana:12513, mekatakanahalfwidth:65426, mem:1502, memdagesh:64318, memdageshhebrew:64318, memhebrew:1502, menarmenian:1396, merkhahebrew:1445, merkhakefulahebrew:1446, merkhakefulalefthebrew:1446, merkhalefthebrew:1445, mhook:625, mhzsquare:13202, middledotkatakanahalfwidth:65381, middot:183, 
-    mieumacirclekorean:12914, mieumaparenkorean:12818, mieumcirclekorean:12900, mieumkorean:12609, mieumpansioskorean:12656, mieumparenkorean:12804, mieumpieupkorean:12654, mieumsioskorean:12655, mihiragana:12415, mikatakana:12511, mikatakanahalfwidth:65424, minus:8722, minusbelowcmb:800, minuscircle:8854, minusmod:727, minusplus:8723, minute:8242, miribaarusquare:13130, mirisquare:13129, mlonglegturned:624, mlsquare:13206, mmcubedsquare:13219, mmonospace:65357, mmsquaredsquare:13215, mohiragana:12418, 
-    mohmsquare:13249, mokatakana:12514, mokatakanahalfwidth:65427, molsquare:13270, momathai:3617, moverssquare:13223, moverssquaredsquare:13224, mparen:9384, mpasquare:13227, mssquare:13235, msuperior:63215, mturned:623, mu:181, mu1:181, muasquare:13186, muchgreater:8811, muchless:8810, mufsquare:13196, mugreek:956, mugsquare:13197, muhiragana:12416, mukatakana:12512, mukatakanahalfwidth:65425, mulsquare:13205, multiply:215, mumsquare:13211, munahhebrew:1443, munahlefthebrew:1443, musicalnote:9834, 
-    musicalnotedbl:9835, musicflatsign:9837, musicsharpsign:9839, mussquare:13234, muvsquare:13238, muwsquare:13244, mvmegasquare:13241, mvsquare:13239, mwmegasquare:13247, mwsquare:13245, n:110, nabengali:2472, nabla:8711, nacute:324, nadeva:2344, nagujarati:2728, nagurmukhi:2600, nahiragana:12394, nakatakana:12490, nakatakanahalfwidth:65413, napostrophe:329, nasquare:13185, nbopomofo:12555, nbspace:160, ncaron:328, ncedilla:326, ncircle:9437, ncircumflexbelow:7755, ncommaaccent:326, ndotaccent:7749, 
-    ndotbelow:7751, nehiragana:12397, nekatakana:12493, nekatakanahalfwidth:65416, newsheqelsign:8362, nfsquare:13195, ngabengali:2457, ngadeva:2329, ngagujarati:2713, ngagurmukhi:2585, ngonguthai:3591, nhiragana:12435, nhookleft:626, nhookretroflex:627, nieunacirclekorean:12911, nieunaparenkorean:12815, nieuncieuckorean:12597, nieuncirclekorean:12897, nieunhieuhkorean:12598, nieunkorean:12596, nieunpansioskorean:12648, nieunparenkorean:12801, nieunsioskorean:12647, nieuntikeutkorean:12646, nihiragana:12395, 
-    nikatakana:12491, nikatakanahalfwidth:65414, nikhahitleftthai:63641, nikhahitthai:3661, nine:57, ninearabic:1641, ninebengali:2543, ninecircle:9320, ninecircleinversesansserif:10130, ninedeva:2415, ninegujarati:2799, ninegurmukhi:2671, ninehackarabic:1641, ninehangzhou:12329, nineideographicparen:12840, nineinferior:8329, ninemonospace:65305, nineoldstyle:63289, nineparen:9340, nineperiod:9360, ninepersian:1785, nineroman:8568, ninesuperior:8313, nineteencircle:9330, nineteenparen:9350, nineteenperiod:9370, 
-    ninethai:3673, nj:460, njecyrillic:1114, nkatakana:12531, nkatakanahalfwidth:65437, nlegrightlong:414, nlinebelow:7753, nmonospace:65358, nmsquare:13210, nnabengali:2467, nnadeva:2339, nnagujarati:2723, nnagurmukhi:2595, nnnadeva:2345, nohiragana:12398, nokatakana:12494, nokatakanahalfwidth:65417, nonbreakingspace:160, nonenthai:3603, nonuthai:3609, noonarabic:1606, noonfinalarabic:65254, noonghunnaarabic:1722, noonghunnafinalarabic:64415, nooninitialarabic:65255, noonjeeminitialarabic:64722, 
-    noonjeemisolatedarabic:64587, noonmedialarabic:65256, noonmeeminitialarabic:64725, noonmeemisolatedarabic:64590, noonnoonfinalarabic:64653, notcontains:8716, notelement:8713, notelementof:8713, notequal:8800, notgreater:8815, notgreaternorequal:8817, notgreaternorless:8825, notidentical:8802, notless:8814, notlessnorequal:8816, notparallel:8742, notprecedes:8832, notsubset:8836, notsucceeds:8833, notsuperset:8837, nowarmenian:1398, nparen:9385, nssquare:13233, nsuperior:8319, ntilde:241, nu:957, 
-    nuhiragana:12396, nukatakana:12492, nukatakanahalfwidth:65415, nuktabengali:2492, nuktadeva:2364, nuktagujarati:2748, nuktagurmukhi:2620, numbersign:35, numbersignmonospace:65283, numbersignsmall:65119, numeralsigngreek:884, numeralsignlowergreek:885, numero:8470, nun:1504, nundagesh:64320, nundageshhebrew:64320, nunhebrew:1504, nvsquare:13237, nwsquare:13243, nyabengali:2462, nyadeva:2334, nyagujarati:2718, nyagurmukhi:2590, o:111, oacute:243, oangthai:3629, obarred:629, obarredcyrillic:1257, 
-    obarreddieresiscyrillic:1259, obengali:2451, obopomofo:12571, obreve:335, ocandradeva:2321, ocandragujarati:2705, ocandravowelsigndeva:2377, ocandravowelsigngujarati:2761, ocaron:466, ocircle:9438, ocircumflex:244, ocircumflexacute:7889, ocircumflexdotbelow:7897, ocircumflexgrave:7891, ocircumflexhookabove:7893, ocircumflextilde:7895, ocyrillic:1086, odblacute:337, odblgrave:525, odeva:2323, odieresis:246, odieresiscyrillic:1255, odotbelow:7885, oe:339, oekorean:12634, ogonek:731, ogonekcmb:808, 
-    ograve:242, ogujarati:2707, oharmenian:1413, ohiragana:12362, ohookabove:7887, ohorn:417, ohornacute:7899, ohorndotbelow:7907, ohorngrave:7901, ohornhookabove:7903, ohorntilde:7905, ohungarumlaut:337, oi:419, oinvertedbreve:527, okatakana:12458, okatakanahalfwidth:65397, okorean:12631, olehebrew:1451, omacron:333, omacronacute:7763, omacrongrave:7761, omdeva:2384, omega:969, omega1:982, omegacyrillic:1121, omegalatinclosed:631, omegaroundcyrillic:1147, omegatitlocyrillic:1149, omegatonos:974, 
-    omgujarati:2768, omicron:959, omicrontonos:972, omonospace:65359, one:49, onearabic:1633, onebengali:2535, onecircle:9312, onecircleinversesansserif:10122, onedeva:2407, onedotenleader:8228, oneeighth:8539, onefitted:63196, onegujarati:2791, onegurmukhi:2663, onehackarabic:1633, onehalf:189, onehangzhou:12321, oneideographicparen:12832, oneinferior:8321, onemonospace:65297, onenumeratorbengali:2548, oneoldstyle:63281, oneparen:9332, oneperiod:9352, onepersian:1777, onequarter:188, oneroman:8560, 
-    onesuperior:185, onethai:3665, onethird:8531, oogonek:491, oogonekmacron:493, oogurmukhi:2579, oomatragurmukhi:2635, oopen:596, oparen:9386, openbullet:9702, option:8997, ordfeminine:170, ordmasculine:186, orthogonal:8735, oshortdeva:2322, oshortvowelsigndeva:2378, oslash:248, oslashacute:511, osmallhiragana:12361, osmallkatakana:12457, osmallkatakanahalfwidth:65387, ostrokeacute:511, osuperior:63216, otcyrillic:1151, otilde:245, otildeacute:7757, otildedieresis:7759, oubopomofo:12577, overline:8254, 
-    overlinecenterline:65098, overlinecmb:773, overlinedashed:65097, overlinedblwavy:65100, overlinewavy:65099, overscore:175, ovowelsignbengali:2507, ovowelsigndeva:2379, ovowelsigngujarati:2763, p:112, paampssquare:13184, paasentosquare:13099, pabengali:2474, pacute:7765, padeva:2346, pagedown:8671, pageup:8670, pagujarati:2730, pagurmukhi:2602, pahiragana:12401, paiyannoithai:3631, pakatakana:12497, palatalizationcyrilliccmb:1156, palochkacyrillic:1216, pansioskorean:12671, paragraph:182, parallel:8741, 
-    parenleft:40, parenleftaltonearabic:64830, parenleftbt:63725, parenleftex:63724, parenleftinferior:8333, parenleftmonospace:65288, parenleftsmall:65113, parenleftsuperior:8317, parenlefttp:63723, parenleftvertical:65077, parenright:41, parenrightaltonearabic:64831, parenrightbt:63736, parenrightex:63735, parenrightinferior:8334, parenrightmonospace:65289, parenrightsmall:65114, parenrightsuperior:8318, parenrighttp:63734, parenrightvertical:65078, partialdiff:8706, paseqhebrew:1472, pashtahebrew:1433, 
-    pasquare:13225, patah:1463, patah11:1463, patah1d:1463, patah2a:1463, patahhebrew:1463, patahnarrowhebrew:1463, patahquarterhebrew:1463, patahwidehebrew:1463, pazerhebrew:1441, pbopomofo:12550, pcircle:9439, pdotaccent:7767, pe:1508, pecyrillic:1087, pedagesh:64324, pedageshhebrew:64324, peezisquare:13115, pefinaldageshhebrew:64323, peharabic:1662, peharmenian:1402, pehebrew:1508, pehfinalarabic:64343, pehinitialarabic:64344, pehiragana:12410, pehmedialarabic:64345, pekatakana:12506, pemiddlehookcyrillic:1191, 
-    perafehebrew:64334, percent:37, percentarabic:1642, percentmonospace:65285, percentsmall:65130, period:46, periodarmenian:1417, periodcentered:183, periodhalfwidth:65377, periodinferior:63207, periodmonospace:65294, periodsmall:65106, periodsuperior:63208, perispomenigreekcmb:834, perpendicular:8869, perthousand:8240, peseta:8359, pfsquare:13194, phabengali:2475, phadeva:2347, phagujarati:2731, phagurmukhi:2603, phi:966, phi1:981, phieuphacirclekorean:12922, phieuphaparenkorean:12826, phieuphcirclekorean:12908, 
-    phieuphkorean:12621, phieuphparenkorean:12812, philatin:632, phinthuthai:3642, phisymbolgreek:981, phook:421, phophanthai:3614, phophungthai:3612, phosamphaothai:3616, pi:960, pieupacirclekorean:12915, pieupaparenkorean:12819, pieupcieuckorean:12662, pieupcirclekorean:12901, pieupkiyeokkorean:12658, pieupkorean:12610, pieupparenkorean:12805, pieupsioskiyeokkorean:12660, pieupsioskorean:12612, pieupsiostikeutkorean:12661, pieupthieuthkorean:12663, pieuptikeutkorean:12659, pihiragana:12404, pikatakana:12500, 
-    pisymbolgreek:982, piwrarmenian:1411, plus:43, plusbelowcmb:799, pluscircle:8853, plusminus:177, plusmod:726, plusmonospace:65291, plussmall:65122, plussuperior:8314, pmonospace:65360, pmsquare:13272, pohiragana:12413, pointingindexdownwhite:9759, pointingindexleftwhite:9756, pointingindexrightwhite:9758, pointingindexupwhite:9757, pokatakana:12509, poplathai:3611, postalmark:12306, postalmarkface:12320, pparen:9387, precedes:8826, prescription:8478, primemod:697, primereversed:8245, product:8719, 
-    projective:8965, prolongedkana:12540, propellor:8984, propersubset:8834, propersuperset:8835, proportion:8759, proportional:8733, psi:968, psicyrillic:1137, psilipneumatacyrilliccmb:1158, pssquare:13232, puhiragana:12407, pukatakana:12503, pvsquare:13236, pwsquare:13242, q:113, qadeva:2392, qadmahebrew:1448, qafarabic:1602, qaffinalarabic:65238, qafinitialarabic:65239, qafmedialarabic:65240, qamats:1464, qamats10:1464, qamats1a:1464, qamats1c:1464, qamats27:1464, qamats29:1464, qamats33:1464, 
-    qamatsde:1464, qamatshebrew:1464, qamatsnarrowhebrew:1464, qamatsqatanhebrew:1464, qamatsqatannarrowhebrew:1464, qamatsqatanquarterhebrew:1464, qamatsqatanwidehebrew:1464, qamatsquarterhebrew:1464, qamatswidehebrew:1464, qarneyparahebrew:1439, qbopomofo:12561, qcircle:9440, qhook:672, qmonospace:65361, qof:1511, qofdagesh:64327, qofdageshhebrew:64327, qofhebrew:1511, qparen:9388, quarternote:9833, qubuts:1467, qubuts18:1467, qubuts25:1467, qubuts31:1467, qubutshebrew:1467, qubutsnarrowhebrew:1467, 
-    qubutsquarterhebrew:1467, qubutswidehebrew:1467, question:63, questionarabic:1567, questionarmenian:1374, questiondown:191, questiondownsmall:63423, questiongreek:894, questionmonospace:65311, questionsmall:63295, quotedbl:34, quotedblbase:8222, quotedblleft:8220, quotedblmonospace:65282, quotedblprime:12318, quotedblprimereversed:12317, quotedblright:8221, quoteleft:8216, quoteleftreversed:8219, quotereversed:8219, quoteright:8217, quoterightn:329, quotesinglbase:8218, quotesingle:39, quotesinglemonospace:65287, 
-    r:114, raarmenian:1404, rabengali:2480, racute:341, radeva:2352, radical:8730, radicalex:63717, radoverssquare:13230, radoverssquaredsquare:13231, radsquare:13229, rafe:1471, rafehebrew:1471, ragujarati:2736, ragurmukhi:2608, rahiragana:12425, rakatakana:12521, rakatakanahalfwidth:65431, ralowerdiagonalbengali:2545, ramiddlediagonalbengali:2544, ramshorn:612, ratio:8758, rbopomofo:12566, rcaron:345, rcedilla:343, rcircle:9441, rcommaaccent:343, rdblgrave:529, rdotaccent:7769, rdotbelow:7771, 
-    rdotbelowmacron:7773, referencemark:8251, reflexsubset:8838, reflexsuperset:8839, registered:174, registersans:63720, registerserif:63194, reharabic:1585, reharmenian:1408, rehfinalarabic:65198, rehiragana:12428, rekatakana:12524, rekatakanahalfwidth:65434, resh:1512, reshdageshhebrew:64328, reshhebrew:1512, reversedtilde:8765, reviahebrew:1431, reviamugrashhebrew:1431, revlogicalnot:8976, rfishhook:638, rfishhookreversed:639, rhabengali:2525, rhadeva:2397, rho:961, rhook:637, rhookturned:635, 
-    rhookturnedsuperior:693, rhosymbolgreek:1009, rhotichookmod:734, rieulacirclekorean:12913, rieulaparenkorean:12817, rieulcirclekorean:12899, rieulhieuhkorean:12608, rieulkiyeokkorean:12602, rieulkiyeoksioskorean:12649, rieulkorean:12601, rieulmieumkorean:12603, rieulpansioskorean:12652, rieulparenkorean:12803, rieulphieuphkorean:12607, rieulpieupkorean:12604, rieulpieupsioskorean:12651, rieulsioskorean:12605, rieulthieuthkorean:12606, rieultikeutkorean:12650, rieulyeorinhieuhkorean:12653, rightangle:8735, 
-    righttackbelowcmb:793, righttriangle:8895, rihiragana:12426, rikatakana:12522, rikatakanahalfwidth:65432, ring:730, ringbelowcmb:805, ringcmb:778, ringhalfleft:703, ringhalfleftarmenian:1369, ringhalfleftbelowcmb:796, ringhalfleftcentered:723, ringhalfright:702, ringhalfrightbelowcmb:825, ringhalfrightcentered:722, rinvertedbreve:531, rittorusquare:13137, rlinebelow:7775, rlongleg:636, rlonglegturned:634, rmonospace:65362, rohiragana:12429, rokatakana:12525, rokatakanahalfwidth:65435, roruathai:3619, 
-    rparen:9389, rrabengali:2524, rradeva:2353, rragurmukhi:2652, rreharabic:1681, rrehfinalarabic:64397, rrvocalicbengali:2528, rrvocalicdeva:2400, rrvocalicgujarati:2784, rrvocalicvowelsignbengali:2500, rrvocalicvowelsigndeva:2372, rrvocalicvowelsigngujarati:2756, rsuperior:63217, rtblock:9616, rturned:633, rturnedsuperior:692, ruhiragana:12427, rukatakana:12523, rukatakanahalfwidth:65433, rupeemarkbengali:2546, rupeesignbengali:2547, rupiah:63197, ruthai:3620, rvocalicbengali:2443, rvocalicdeva:2315, 
-    rvocalicgujarati:2699, rvocalicvowelsignbengali:2499, rvocalicvowelsigndeva:2371, rvocalicvowelsigngujarati:2755, s:115, sabengali:2488, sacute:347, sacutedotaccent:7781, sadarabic:1589, sadeva:2360, sadfinalarabic:65210, sadinitialarabic:65211, sadmedialarabic:65212, sagujarati:2744, sagurmukhi:2616, sahiragana:12373, sakatakana:12469, sakatakanahalfwidth:65403, sallallahoualayhewasallamarabic:65018, samekh:1505, samekhdagesh:64321, samekhdageshhebrew:64321, samekhhebrew:1505, saraaathai:3634, 
-    saraaethai:3649, saraaimaimalaithai:3652, saraaimaimuanthai:3651, saraamthai:3635, saraathai:3632, saraethai:3648, saraiileftthai:63622, saraiithai:3637, saraileftthai:63621, saraithai:3636, saraothai:3650, saraueeleftthai:63624, saraueethai:3639, saraueleftthai:63623, sarauethai:3638, sarauthai:3640, sarauuthai:3641, sbopomofo:12569, scaron:353, scarondotaccent:7783, scedilla:351, schwa:601, schwacyrillic:1241, schwadieresiscyrillic:1243, schwahook:602, scircle:9442, scircumflex:349, scommaaccent:537, 
-    sdotaccent:7777, sdotbelow:7779, sdotbelowdotaccent:7785, seagullbelowcmb:828, second:8243, secondtonechinese:714, section:167, seenarabic:1587, seenfinalarabic:65202, seeninitialarabic:65203, seenmedialarabic:65204, segol:1462, segol13:1462, segol1f:1462, segol2c:1462, segolhebrew:1462, segolnarrowhebrew:1462, segolquarterhebrew:1462, segoltahebrew:1426, segolwidehebrew:1462, seharmenian:1405, sehiragana:12379, sekatakana:12475, sekatakanahalfwidth:65406, semicolon:59, semicolonarabic:1563, 
-    semicolonmonospace:65307, semicolonsmall:65108, semivoicedmarkkana:12444, semivoicedmarkkanahalfwidth:65439, sentisquare:13090, sentosquare:13091, seven:55, sevenarabic:1639, sevenbengali:2541, sevencircle:9318, sevencircleinversesansserif:10128, sevendeva:2413, seveneighths:8542, sevengujarati:2797, sevengurmukhi:2669, sevenhackarabic:1639, sevenhangzhou:12327, sevenideographicparen:12838, seveninferior:8327, sevenmonospace:65303, sevenoldstyle:63287, sevenparen:9338, sevenperiod:9358, sevenpersian:1783, 
-    sevenroman:8566, sevensuperior:8311, seventeencircle:9328, seventeenparen:9348, seventeenperiod:9368, seventhai:3671, sfthyphen:173, shaarmenian:1399, shabengali:2486, shacyrillic:1096, shaddaarabic:1617, shaddadammaarabic:64609, shaddadammatanarabic:64606, shaddafathaarabic:64608, shaddakasraarabic:64610, shaddakasratanarabic:64607, shade:9618, shadedark:9619, shadelight:9617, shademedium:9618, shadeva:2358, shagujarati:2742, shagurmukhi:2614, shalshelethebrew:1427, shbopomofo:12565, shchacyrillic:1097, 
-    sheenarabic:1588, sheenfinalarabic:65206, sheeninitialarabic:65207, sheenmedialarabic:65208, sheicoptic:995, sheqel:8362, sheqelhebrew:8362, sheva:1456, sheva115:1456, sheva15:1456, sheva22:1456, sheva2e:1456, shevahebrew:1456, shevanarrowhebrew:1456, shevaquarterhebrew:1456, shevawidehebrew:1456, shhacyrillic:1211, shimacoptic:1005, shin:1513, shindagesh:64329, shindageshhebrew:64329, shindageshshindot:64300, shindageshshindothebrew:64300, shindageshsindot:64301, shindageshsindothebrew:64301, 
-    shindothebrew:1473, shinhebrew:1513, shinshindot:64298, shinshindothebrew:64298, shinsindot:64299, shinsindothebrew:64299, shook:642, sigma:963, sigma1:962, sigmafinal:962, sigmalunatesymbolgreek:1010, sihiragana:12375, sikatakana:12471, sikatakanahalfwidth:65404, siluqhebrew:1469, siluqlefthebrew:1469, similar:8764, sindothebrew:1474, siosacirclekorean:12916, siosaparenkorean:12820, sioscieuckorean:12670, sioscirclekorean:12902, sioskiyeokkorean:12666, sioskorean:12613, siosnieunkorean:12667, 
-    siosparenkorean:12806, siospieupkorean:12669, siostikeutkorean:12668, six:54, sixarabic:1638, sixbengali:2540, sixcircle:9317, sixcircleinversesansserif:10127, sixdeva:2412, sixgujarati:2796, sixgurmukhi:2668, sixhackarabic:1638, sixhangzhou:12326, sixideographicparen:12837, sixinferior:8326, sixmonospace:65302, sixoldstyle:63286, sixparen:9337, sixperiod:9357, sixpersian:1782, sixroman:8565, sixsuperior:8310, sixteencircle:9327, sixteencurrencydenominatorbengali:2553, sixteenparen:9347, sixteenperiod:9367, 
-    sixthai:3670, slash:47, slashmonospace:65295, slong:383, slongdotaccent:7835, smileface:9786, smonospace:65363, sofpasuqhebrew:1475, softhyphen:173, softsigncyrillic:1100, sohiragana:12381, sokatakana:12477, sokatakanahalfwidth:65407, soliduslongoverlaycmb:824, solidusshortoverlaycmb:823, sorusithai:3625, sosalathai:3624, sosothai:3595, sosuathai:3626, space:32, spacehackarabic:32, spade:9824, spadesuitblack:9824, spadesuitwhite:9828, sparen:9390, squarebelowcmb:827, squarecc:13252, squarecm:13213, 
-    squarediagonalcrosshatchfill:9641, squarehorizontalfill:9636, squarekg:13199, squarekm:13214, squarekmcapital:13262, squareln:13265, squarelog:13266, squaremg:13198, squaremil:13269, squaremm:13212, squaremsquared:13217, squareorthogonalcrosshatchfill:9638, squareupperlefttolowerrightfill:9639, squareupperrighttolowerleftfill:9640, squareverticalfill:9637, squarewhitewithsmallblack:9635, srsquare:13275, ssabengali:2487, ssadeva:2359, ssagujarati:2743, ssangcieuckorean:12617, ssanghieuhkorean:12677, 
-    ssangieungkorean:12672, ssangkiyeokkorean:12594, ssangnieunkorean:12645, ssangpieupkorean:12611, ssangsioskorean:12614, ssangtikeutkorean:12600, ssuperior:63218, sterling:163, sterlingmonospace:65505, strokelongoverlaycmb:822, strokeshortoverlaycmb:821, subset:8834, subsetnotequal:8842, subsetorequal:8838, succeeds:8827, suchthat:8715, suhiragana:12377, sukatakana:12473, sukatakanahalfwidth:65405, sukunarabic:1618, summation:8721, sun:9788, superset:8835, supersetnotequal:8843, supersetorequal:8839, 
-    svsquare:13276, syouwaerasquare:13180, t:116, tabengali:2468, tackdown:8868, tackleft:8867, tadeva:2340, tagujarati:2724, tagurmukhi:2596, taharabic:1591, tahfinalarabic:65218, tahinitialarabic:65219, tahiragana:12383, tahmedialarabic:65220, taisyouerasquare:13181, takatakana:12479, takatakanahalfwidth:65408, tatweelarabic:1600, tau:964, tav:1514, tavdages:64330, tavdagesh:64330, tavdageshhebrew:64330, tavhebrew:1514, tbar:359, tbopomofo:12554, tcaron:357, tccurl:680, tcedilla:355, tcheharabic:1670, 
-    tchehfinalarabic:64379, tchehinitialarabic:64380, tchehmedialarabic:64381, tcircle:9443, tcircumflexbelow:7793, tcommaaccent:355, tdieresis:7831, tdotaccent:7787, tdotbelow:7789, tecyrillic:1090, tedescendercyrillic:1197, teharabic:1578, tehfinalarabic:65174, tehhahinitialarabic:64674, tehhahisolatedarabic:64524, tehinitialarabic:65175, tehiragana:12390, tehjeeminitialarabic:64673, tehjeemisolatedarabic:64523, tehmarbutaarabic:1577, tehmarbutafinalarabic:65172, tehmedialarabic:65176, tehmeeminitialarabic:64676, 
-    tehmeemisolatedarabic:64526, tehnoonfinalarabic:64627, tekatakana:12486, tekatakanahalfwidth:65411, telephone:8481, telephoneblack:9742, telishagedolahebrew:1440, telishaqetanahebrew:1449, tencircle:9321, tenideographicparen:12841, tenparen:9341, tenperiod:9361, tenroman:8569, tesh:679, tet:1496, tetdagesh:64312, tetdageshhebrew:64312, tethebrew:1496, tetsecyrillic:1205, tevirhebrew:1435, tevirlefthebrew:1435, thabengali:2469, thadeva:2341, thagujarati:2725, thagurmukhi:2597, thalarabic:1584, 
-    thalfinalarabic:65196, thanthakhatlowleftthai:63640, thanthakhatlowrightthai:63639, thanthakhatthai:3660, thanthakhatupperleftthai:63638, theharabic:1579, thehfinalarabic:65178, thehinitialarabic:65179, thehmedialarabic:65180, thereexists:8707, therefore:8756, theta:952, theta1:977, thetasymbolgreek:977, thieuthacirclekorean:12921, thieuthaparenkorean:12825, thieuthcirclekorean:12907, thieuthkorean:12620, thieuthparenkorean:12811, thirteencircle:9324, thirteenparen:9344, thirteenperiod:9364, 
-    thonangmonthothai:3601, thook:429, thophuthaothai:3602, thorn:254, thothahanthai:3607, thothanthai:3600, thothongthai:3608, thothungthai:3606, thousandcyrillic:1154, thousandsseparatorarabic:1644, thousandsseparatorpersian:1644, three:51, threearabic:1635, threebengali:2537, threecircle:9314, threecircleinversesansserif:10124, threedeva:2409, threeeighths:8540, threegujarati:2793, threegurmukhi:2665, threehackarabic:1635, threehangzhou:12323, threeideographicparen:12834, threeinferior:8323, threemonospace:65299, 
-    threenumeratorbengali:2550, threeoldstyle:63283, threeparen:9334, threeperiod:9354, threepersian:1779, threequarters:190, threequartersemdash:63198, threeroman:8562, threesuperior:179, threethai:3667, thzsquare:13204, tihiragana:12385, tikatakana:12481, tikatakanahalfwidth:65409, tikeutacirclekorean:12912, tikeutaparenkorean:12816, tikeutcirclekorean:12898, tikeutkorean:12599, tikeutparenkorean:12802, tilde:732, tildebelowcmb:816, tildecmb:771, tildecomb:771, tildedoublecmb:864, tildeoperator:8764, 
-    tildeoverlaycmb:820, tildeverticalcmb:830, timescircle:8855, tipehahebrew:1430, tipehalefthebrew:1430, tippigurmukhi:2672, titlocyrilliccmb:1155, tiwnarmenian:1407, tlinebelow:7791, tmonospace:65364, toarmenian:1385, tohiragana:12392, tokatakana:12488, tokatakanahalfwidth:65412, tonebarextrahighmod:741, tonebarextralowmod:745, tonebarhighmod:742, tonebarlowmod:744, tonebarmidmod:743, tonefive:445, tonesix:389, tonetwo:424, tonos:900, tonsquare:13095, topatakthai:3599, tortoiseshellbracketleft:12308, 
-    tortoiseshellbracketleftsmall:65117, tortoiseshellbracketleftvertical:65081, tortoiseshellbracketright:12309, tortoiseshellbracketrightsmall:65118, tortoiseshellbracketrightvertical:65082, totaothai:3605, tpalatalhook:427, tparen:9391, trademark:8482, trademarksans:63722, trademarkserif:63195, tretroflexhook:648, triagdn:9660, triaglf:9668, triagrt:9658, triagup:9650, ts:678, tsadi:1510, tsadidagesh:64326, tsadidageshhebrew:64326, tsadihebrew:1510, tsecyrillic:1094, tsere:1461, tsere12:1461, 
-    tsere1e:1461, tsere2b:1461, tserehebrew:1461, tserenarrowhebrew:1461, tserequarterhebrew:1461, tserewidehebrew:1461, tshecyrillic:1115, tsuperior:63219, ttabengali:2463, ttadeva:2335, ttagujarati:2719, ttagurmukhi:2591, tteharabic:1657, ttehfinalarabic:64359, ttehinitialarabic:64360, ttehmedialarabic:64361, tthabengali:2464, tthadeva:2336, tthagujarati:2720, tthagurmukhi:2592, tturned:647, tuhiragana:12388, tukatakana:12484, tukatakanahalfwidth:65410, tusmallhiragana:12387, tusmallkatakana:12483, 
-    tusmallkatakanahalfwidth:65391, twelvecircle:9323, twelveparen:9343, twelveperiod:9363, twelveroman:8571, twentycircle:9331, twentyhangzhou:21316, twentyparen:9351, twentyperiod:9371, two:50, twoarabic:1634, twobengali:2536, twocircle:9313, twocircleinversesansserif:10123, twodeva:2408, twodotenleader:8229, twodotleader:8229, twodotleadervertical:65072, twogujarati:2792, twogurmukhi:2664, twohackarabic:1634, twohangzhou:12322, twoideographicparen:12833, twoinferior:8322, twomonospace:65298, twonumeratorbengali:2549, 
-    twooldstyle:63282, twoparen:9333, twoperiod:9353, twopersian:1778, tworoman:8561, twostroke:443, twosuperior:178, twothai:3666, twothirds:8532, u:117, uacute:250, ubar:649, ubengali:2441, ubopomofo:12584, ubreve:365, ucaron:468, ucircle:9444, ucircumflex:251, ucircumflexbelow:7799, ucyrillic:1091, udattadeva:2385, udblacute:369, udblgrave:533, udeva:2313, udieresis:252, udieresisacute:472, udieresisbelow:7795, udieresiscaron:474, udieresiscyrillic:1265, udieresisgrave:476, udieresismacron:470, 
-    udotbelow:7909, ugrave:249, ugujarati:2697, ugurmukhi:2569, uhiragana:12358, uhookabove:7911, uhorn:432, uhornacute:7913, uhorndotbelow:7921, uhorngrave:7915, uhornhookabove:7917, uhorntilde:7919, uhungarumlaut:369, uhungarumlautcyrillic:1267, uinvertedbreve:535, ukatakana:12454, ukatakanahalfwidth:65395, ukcyrillic:1145, ukorean:12636, umacron:363, umacroncyrillic:1263, umacrondieresis:7803, umatragurmukhi:2625, umonospace:65365, underscore:95, underscoredbl:8215, underscoremonospace:65343, 
-    underscorevertical:65075, underscorewavy:65103, union:8746, universal:8704, uogonek:371, uparen:9392, upblock:9600, upperdothebrew:1476, upsilon:965, upsilondieresis:971, upsilondieresistonos:944, upsilonlatin:650, upsilontonos:973, uptackbelowcmb:797, uptackmod:724, uragurmukhi:2675, uring:367, ushortcyrillic:1118, usmallhiragana:12357, usmallkatakana:12453, usmallkatakanahalfwidth:65385, ustraightcyrillic:1199, ustraightstrokecyrillic:1201, utilde:361, utildeacute:7801, utildebelow:7797, uubengali:2442, 
-    uudeva:2314, uugujarati:2698, uugurmukhi:2570, uumatragurmukhi:2626, uuvowelsignbengali:2498, uuvowelsigndeva:2370, uuvowelsigngujarati:2754, uvowelsignbengali:2497, uvowelsigndeva:2369, uvowelsigngujarati:2753, v:118, vadeva:2357, vagujarati:2741, vagurmukhi:2613, vakatakana:12535, vav:1493, vavdagesh:64309, vavdagesh65:64309, vavdageshhebrew:64309, vavhebrew:1493, vavholam:64331, vavholamhebrew:64331, vavvavhebrew:1520, vavyodhebrew:1521, vcircle:9445, vdotbelow:7807, vecyrillic:1074, veharabic:1700, 
-    vehfinalarabic:64363, vehinitialarabic:64364, vehmedialarabic:64365, vekatakana:12537, venus:9792, verticalbar:124, verticallineabovecmb:781, verticallinebelowcmb:809, verticallinelowmod:716, verticallinemod:712, vewarmenian:1406, vhook:651, vikatakana:12536, viramabengali:2509, viramadeva:2381, viramagujarati:2765, visargabengali:2435, visargadeva:2307, visargagujarati:2691, vmonospace:65366, voarmenian:1400, voicediterationhiragana:12446, voicediterationkatakana:12542, voicedmarkkana:12443, 
-    voicedmarkkanahalfwidth:65438, vokatakana:12538, vparen:9393, vtilde:7805, vturned:652, vuhiragana:12436, vukatakana:12532, w:119, wacute:7811, waekorean:12633, wahiragana:12431, wakatakana:12527, wakatakanahalfwidth:65436, wakorean:12632, wasmallhiragana:12430, wasmallkatakana:12526, wattosquare:13143, wavedash:12316, wavyunderscorevertical:65076, wawarabic:1608, wawfinalarabic:65262, wawhamzaabovearabic:1572, wawhamzaabovefinalarabic:65158, wbsquare:13277, wcircle:9446, wcircumflex:373, wdieresis:7813, 
-    wdotaccent:7815, wdotbelow:7817, wehiragana:12433, weierstrass:8472, wekatakana:12529, wekorean:12638, weokorean:12637, wgrave:7809, whitebullet:9702, whitecircle:9675, whitecircleinverse:9689, whitecornerbracketleft:12302, whitecornerbracketleftvertical:65091, whitecornerbracketright:12303, whitecornerbracketrightvertical:65092, whitediamond:9671, whitediamondcontainingblacksmalldiamond:9672, whitedownpointingsmalltriangle:9663, whitedownpointingtriangle:9661, whiteleftpointingsmalltriangle:9667, 
-    whiteleftpointingtriangle:9665, whitelenticularbracketleft:12310, whitelenticularbracketright:12311, whiterightpointingsmalltriangle:9657, whiterightpointingtriangle:9655, whitesmallsquare:9643, whitesmilingface:9786, whitesquare:9633, whitestar:9734, whitetelephone:9743, whitetortoiseshellbracketleft:12312, whitetortoiseshellbracketright:12313, whiteuppointingsmalltriangle:9653, whiteuppointingtriangle:9651, wihiragana:12432, wikatakana:12528, wikorean:12639, wmonospace:65367, wohiragana:12434, 
-    wokatakana:12530, wokatakanahalfwidth:65382, won:8361, wonmonospace:65510, wowaenthai:3623, wparen:9394, wring:7832, wsuperior:695, wturned:653, wynn:447, x:120, xabovecmb:829, xbopomofo:12562, xcircle:9447, xdieresis:7821, xdotaccent:7819, xeharmenian:1389, xi:958, xmonospace:65368, xparen:9395, xsuperior:739, y:121, yaadosquare:13134, yabengali:2479, yacute:253, yadeva:2351, yaekorean:12626, yagujarati:2735, yagurmukhi:2607, yahiragana:12420, yakatakana:12516, yakatakanahalfwidth:65428, yakorean:12625, 
-    yamakkanthai:3662, yasmallhiragana:12419, yasmallkatakana:12515, yasmallkatakanahalfwidth:65388, yatcyrillic:1123, ycircle:9448, ycircumflex:375, ydieresis:255, ydotaccent:7823, ydotbelow:7925, yeharabic:1610, yehbarreearabic:1746, yehbarreefinalarabic:64431, yehfinalarabic:65266, yehhamzaabovearabic:1574, yehhamzaabovefinalarabic:65162, yehhamzaaboveinitialarabic:65163, yehhamzaabovemedialarabic:65164, yehinitialarabic:65267, yehmedialarabic:65268, yehmeeminitialarabic:64733, yehmeemisolatedarabic:64600, 
-    yehnoonfinalarabic:64660, yehthreedotsbelowarabic:1745, yekorean:12630, yen:165, yenmonospace:65509, yeokorean:12629, yeorinhieuhkorean:12678, yerahbenyomohebrew:1450, yerahbenyomolefthebrew:1450, yericyrillic:1099, yerudieresiscyrillic:1273, yesieungkorean:12673, yesieungpansioskorean:12675, yesieungsioskorean:12674, yetivhebrew:1434, ygrave:7923, yhook:436, yhookabove:7927, yiarmenian:1397, yicyrillic:1111, yikorean:12642, yinyang:9775, yiwnarmenian:1410, ymonospace:65369, yod:1497, yoddagesh:64313, 
-    yoddageshhebrew:64313, yodhebrew:1497, yodyodhebrew:1522, yodyodpatahhebrew:64287, yohiragana:12424, yoikorean:12681, yokatakana:12520, yokatakanahalfwidth:65430, yokorean:12635, yosmallhiragana:12423, yosmallkatakana:12519, yosmallkatakanahalfwidth:65390, yotgreek:1011, yoyaekorean:12680, yoyakorean:12679, yoyakthai:3618, yoyingthai:3597, yparen:9396, ypogegrammeni:890, ypogegrammenigreekcmb:837, yr:422, yring:7833, ysuperior:696, ytilde:7929, yturned:654, yuhiragana:12422, yuikorean:12684, 
-    yukatakana:12518, yukatakanahalfwidth:65429, yukorean:12640, yusbigcyrillic:1131, yusbigiotifiedcyrillic:1133, yuslittlecyrillic:1127, yuslittleiotifiedcyrillic:1129, yusmallhiragana:12421, yusmallkatakana:12517, yusmallkatakanahalfwidth:65389, yuyekorean:12683, yuyeokorean:12682, yyabengali:2527, yyadeva:2399, z:122, zaarmenian:1382, zacute:378, zadeva:2395, zagurmukhi:2651, zaharabic:1592, zahfinalarabic:65222, zahinitialarabic:65223, zahiragana:12374, zahmedialarabic:65224, zainarabic:1586, 
-    zainfinalarabic:65200, zakatakana:12470, zaqefgadolhebrew:1429, zaqefqatanhebrew:1428, zarqahebrew:1432, zayin:1494, zayindagesh:64310, zayindageshhebrew:64310, zayinhebrew:1494, zbopomofo:12567, zcaron:382, zcircle:9449, zcircumflex:7825, zcurl:657, zdot:380, zdotaccent:380, zdotbelow:7827, zecyrillic:1079, zedescendercyrillic:1177, zedieresiscyrillic:1247, zehiragana:12380, zekatakana:12476, zero:48, zeroarabic:1632, zerobengali:2534, zerodeva:2406, zerogujarati:2790, zerogurmukhi:2662, zerohackarabic:1632, 
-    zeroinferior:8320, zeromonospace:65296, zerooldstyle:63280, zeropersian:1776, zerosuperior:8304, zerothai:3664, zerowidthjoiner:65279, zerowidthnonjoiner:8204, zerowidthspace:8203, zeta:950, zhbopomofo:12563, zhearmenian:1386, zhebrevecyrillic:1218, zhecyrillic:1078, zhedescendercyrillic:1175, zhedieresiscyrillic:1245, zihiragana:12376, zikatakana:12472, zinorhebrew:1454, zlinebelow:7829, zmonospace:65370, zohiragana:12382, zokatakana:12478, zparen:9397, zretroflexhook:656, zstroke:438, zuhiragana:12378, 
-    zukatakana:12474, ".notdef":0}
-  }
+  var GlyphsUnicode = {A:65, AE:198, AEacute:508, AEmacron:482, AEsmall:63462, Aacute:193, Aacutesmall:63457, Abreve:258, Abreveacute:7854, Abrevecyrillic:1232, Abrevedotbelow:7862, Abrevegrave:7856, Abrevehookabove:7858, Abrevetilde:7860, Acaron:461, Acircle:9398, Acircumflex:194, Acircumflexacute:7844, Acircumflexdotbelow:7852, Acircumflexgrave:7846, Acircumflexhookabove:7848, Acircumflexsmall:63458, Acircumflextilde:7850, Acute:63177, Acutesmall:63412, Acyrillic:1040, Adblgrave:512, Adieresis:196, 
+  Adieresiscyrillic:1234, Adieresismacron:478, Adieresissmall:63460, Adotbelow:7840, Adotmacron:480, Agrave:192, Agravesmall:63456, Ahookabove:7842, Aiecyrillic:1236, Ainvertedbreve:514, Alpha:913, Alphatonos:902, Amacron:256, Amonospace:65313, Aogonek:260, Aring:197, Aringacute:506, Aringbelow:7680, Aringsmall:63461, Asmall:63329, Atilde:195, Atildesmall:63459, Aybarmenian:1329, B:66, Bcircle:9399, Bdotaccent:7682, Bdotbelow:7684, Becyrillic:1041, Benarmenian:1330, Beta:914, Bhook:385, Blinebelow:7686, 
+  Bmonospace:65314, Brevesmall:63220, Bsmall:63330, Btopbar:386, C:67, Caarmenian:1342, Cacute:262, Caron:63178, Caronsmall:63221, Ccaron:268, Ccedilla:199, Ccedillaacute:7688, Ccedillasmall:63463, Ccircle:9400, Ccircumflex:264, Cdot:266, Cdotaccent:266, Cedillasmall:63416, Chaarmenian:1353, Cheabkhasiancyrillic:1212, Checyrillic:1063, Chedescenderabkhasiancyrillic:1214, Chedescendercyrillic:1206, Chedieresiscyrillic:1268, Cheharmenian:1347, Chekhakassiancyrillic:1227, Cheverticalstrokecyrillic:1208, 
+  Chi:935, Chook:391, Circumflexsmall:63222, Cmonospace:65315, Coarmenian:1361, Csmall:63331, D:68, DZ:497, DZcaron:452, Daarmenian:1332, Dafrican:393, Dcaron:270, Dcedilla:7696, Dcircle:9401, Dcircumflexbelow:7698, Dcroat:272, Ddotaccent:7690, Ddotbelow:7692, Decyrillic:1044, Deicoptic:1006, Delta:8710, Deltagreek:916, Dhook:394, Dieresis:63179, DieresisAcute:63180, DieresisGrave:63181, Dieresissmall:63400, Digammagreek:988, Djecyrillic:1026, Dlinebelow:7694, Dmonospace:65316, Dotaccentsmall:63223, 
+  Dslash:272, Dsmall:63332, Dtopbar:395, Dz:498, Dzcaron:453, Dzeabkhasiancyrillic:1248, Dzecyrillic:1029, Dzhecyrillic:1039, E:69, Eacute:201, Eacutesmall:63465, Ebreve:276, Ecaron:282, Ecedillabreve:7708, Echarmenian:1333, Ecircle:9402, Ecircumflex:202, Ecircumflexacute:7870, Ecircumflexbelow:7704, Ecircumflexdotbelow:7878, Ecircumflexgrave:7872, Ecircumflexhookabove:7874, Ecircumflexsmall:63466, Ecircumflextilde:7876, Ecyrillic:1028, Edblgrave:516, Edieresis:203, Edieresissmall:63467, Edot:278, 
+  Edotaccent:278, Edotbelow:7864, Efcyrillic:1060, Egrave:200, Egravesmall:63464, Eharmenian:1335, Ehookabove:7866, Eightroman:8551, Einvertedbreve:518, Eiotifiedcyrillic:1124, Elcyrillic:1051, Elevenroman:8554, Emacron:274, Emacronacute:7702, Emacrongrave:7700, Emcyrillic:1052, Emonospace:65317, Encyrillic:1053, Endescendercyrillic:1186, Eng:330, Enghecyrillic:1188, Enhookcyrillic:1223, Eogonek:280, Eopen:400, Epsilon:917, Epsilontonos:904, Ercyrillic:1056, Ereversed:398, Ereversedcyrillic:1069, 
+  Escyrillic:1057, Esdescendercyrillic:1194, Esh:425, Esmall:63333, Eta:919, Etarmenian:1336, Etatonos:905, Eth:208, Ethsmall:63472, Etilde:7868, Etildebelow:7706, Euro:8364, Ezh:439, Ezhcaron:494, Ezhreversed:440, F:70, Fcircle:9403, Fdotaccent:7710, Feharmenian:1366, Feicoptic:996, Fhook:401, Fitacyrillic:1138, Fiveroman:8548, Fmonospace:65318, Fourroman:8547, Fsmall:63334, G:71, GBsquare:13191, Gacute:500, Gamma:915, Gammaafrican:404, Gangiacoptic:1002, Gbreve:286, Gcaron:486, Gcedilla:290, Gcircle:9404, 
+  Gcircumflex:284, Gcommaaccent:290, Gdot:288, Gdotaccent:288, Gecyrillic:1043, Ghadarmenian:1346, Ghemiddlehookcyrillic:1172, Ghestrokecyrillic:1170, Gheupturncyrillic:1168, Ghook:403, Gimarmenian:1331, Gjecyrillic:1027, Gmacron:7712, Gmonospace:65319, Grave:63182, Gravesmall:63328, Gsmall:63335, Gsmallhook:667, Gstroke:484, H:72, H18533:9679, H18543:9642, H18551:9643, H22073:9633, HPsquare:13259, Haabkhasiancyrillic:1192, Hadescendercyrillic:1202, Hardsigncyrillic:1066, Hbar:294, Hbrevebelow:7722, 
+  Hcedilla:7720, Hcircle:9405, Hcircumflex:292, Hdieresis:7718, Hdotaccent:7714, Hdotbelow:7716, Hmonospace:65320, Hoarmenian:1344, Horicoptic:1E3, Hsmall:63336, Hungarumlaut:63183, Hungarumlautsmall:63224, Hzsquare:13200, I:73, IAcyrillic:1071, IJ:306, IUcyrillic:1070, Iacute:205, Iacutesmall:63469, Ibreve:300, Icaron:463, Icircle:9406, Icircumflex:206, Icircumflexsmall:63470, Icyrillic:1030, Idblgrave:520, Idieresis:207, Idieresisacute:7726, Idieresiscyrillic:1252, Idieresissmall:63471, Idot:304, 
+  Idotaccent:304, Idotbelow:7882, Iebrevecyrillic:1238, Iecyrillic:1045, Ifraktur:8465, Igrave:204, Igravesmall:63468, Ihookabove:7880, Iicyrillic:1048, Iinvertedbreve:522, Iishortcyrillic:1049, Imacron:298, Imacroncyrillic:1250, Imonospace:65321, Iniarmenian:1339, Iocyrillic:1025, Iogonek:302, Iota:921, Iotaafrican:406, Iotadieresis:938, Iotatonos:906, Ismall:63337, Istroke:407, Itilde:296, Itildebelow:7724, Izhitsacyrillic:1140, Izhitsadblgravecyrillic:1142, J:74, Jaarmenian:1345, Jcircle:9407, 
+  Jcircumflex:308, Jecyrillic:1032, Jheharmenian:1355, Jmonospace:65322, Jsmall:63338, K:75, KBsquare:13189, KKsquare:13261, Kabashkircyrillic:1184, Kacute:7728, Kacyrillic:1050, Kadescendercyrillic:1178, Kahookcyrillic:1219, Kappa:922, Kastrokecyrillic:1182, Kaverticalstrokecyrillic:1180, Kcaron:488, Kcedilla:310, Kcircle:9408, Kcommaaccent:310, Kdotbelow:7730, Keharmenian:1364, Kenarmenian:1343, Khacyrillic:1061, Kheicoptic:998, Khook:408, Kjecyrillic:1036, Klinebelow:7732, Kmonospace:65323, Koppacyrillic:1152, 
+  Koppagreek:990, Ksicyrillic:1134, Ksmall:63339, L:76, LJ:455, LL:63167, Lacute:313, Lambda:923, Lcaron:317, Lcedilla:315, Lcircle:9409, Lcircumflexbelow:7740, Lcommaaccent:315, Ldot:319, Ldotaccent:319, Ldotbelow:7734, Ldotbelowmacron:7736, Liwnarmenian:1340, Lj:456, Ljecyrillic:1033, Llinebelow:7738, Lmonospace:65324, Lslash:321, Lslashsmall:63225, Lsmall:63340, M:77, MBsquare:13190, Macron:63184, Macronsmall:63407, Macute:7742, Mcircle:9410, Mdotaccent:7744, Mdotbelow:7746, Menarmenian:1348, 
+  Mmonospace:65325, Msmall:63341, Mturned:412, Mu:924, N:78, NJ:458, Nacute:323, Ncaron:327, Ncedilla:325, Ncircle:9411, Ncircumflexbelow:7754, Ncommaaccent:325, Ndotaccent:7748, Ndotbelow:7750, Nhookleft:413, Nineroman:8552, Nj:459, Njecyrillic:1034, Nlinebelow:7752, Nmonospace:65326, Nowarmenian:1350, Nsmall:63342, Ntilde:209, Ntildesmall:63473, Nu:925, O:79, OE:338, OEsmall:63226, Oacute:211, Oacutesmall:63475, Obarredcyrillic:1256, Obarreddieresiscyrillic:1258, Obreve:334, Ocaron:465, Ocenteredtilde:415, 
+  Ocircle:9412, Ocircumflex:212, Ocircumflexacute:7888, Ocircumflexdotbelow:7896, Ocircumflexgrave:7890, Ocircumflexhookabove:7892, Ocircumflexsmall:63476, Ocircumflextilde:7894, Ocyrillic:1054, Odblacute:336, Odblgrave:524, Odieresis:214, Odieresiscyrillic:1254, Odieresissmall:63478, Odotbelow:7884, Ogoneksmall:63227, Ograve:210, Ogravesmall:63474, Oharmenian:1365, Ohm:8486, Ohookabove:7886, Ohorn:416, Ohornacute:7898, Ohorndotbelow:7906, Ohorngrave:7900, Ohornhookabove:7902, Ohorntilde:7904, Ohungarumlaut:336, 
+  Oi:418, Oinvertedbreve:526, Omacron:332, Omacronacute:7762, Omacrongrave:7760, Omega:8486, Omegacyrillic:1120, Omegagreek:937, Omegaroundcyrillic:1146, Omegatitlocyrillic:1148, Omegatonos:911, Omicron:927, Omicrontonos:908, Omonospace:65327, Oneroman:8544, Oogonek:490, Oogonekmacron:492, Oopen:390, Oslash:216, Oslashacute:510, Oslashsmall:63480, Osmall:63343, Ostrokeacute:510, Otcyrillic:1150, Otilde:213, Otildeacute:7756, Otildedieresis:7758, Otildesmall:63477, P:80, Pacute:7764, Pcircle:9413, 
+  Pdotaccent:7766, Pecyrillic:1055, Peharmenian:1354, Pemiddlehookcyrillic:1190, Phi:934, Phook:420, Pi:928, Piwrarmenian:1363, Pmonospace:65328, Psi:936, Psicyrillic:1136, Psmall:63344, Q:81, Qcircle:9414, Qmonospace:65329, Qsmall:63345, R:82, Raarmenian:1356, Racute:340, Rcaron:344, Rcedilla:342, Rcircle:9415, Rcommaaccent:342, Rdblgrave:528, Rdotaccent:7768, Rdotbelow:7770, Rdotbelowmacron:7772, Reharmenian:1360, Rfraktur:8476, Rho:929, Ringsmall:63228, Rinvertedbreve:530, Rlinebelow:7774, Rmonospace:65330, 
+  Rsmall:63346, Rsmallinverted:641, Rsmallinvertedsuperior:694, S:83, SF010000:9484, SF020000:9492, SF030000:9488, SF040000:9496, SF050000:9532, SF060000:9516, SF070000:9524, SF080000:9500, SF090000:9508, SF100000:9472, SF110000:9474, SF190000:9569, SF200000:9570, SF210000:9558, SF220000:9557, SF230000:9571, SF240000:9553, SF250000:9559, SF260000:9565, SF270000:9564, SF280000:9563, SF360000:9566, SF370000:9567, SF380000:9562, SF390000:9556, SF400000:9577, SF410000:9574, SF420000:9568, SF430000:9552, 
+  SF440000:9580, SF450000:9575, SF460000:9576, SF470000:9572, SF480000:9573, SF490000:9561, SF500000:9560, SF510000:9554, SF520000:9555, SF530000:9579, SF540000:9578, Sacute:346, Sacutedotaccent:7780, Sampigreek:992, Scaron:352, Scarondotaccent:7782, Scaronsmall:63229, Scedilla:350, Schwa:399, Schwacyrillic:1240, Schwadieresiscyrillic:1242, Scircle:9416, Scircumflex:348, Scommaaccent:536, Sdotaccent:7776, Sdotbelow:7778, Sdotbelowdotaccent:7784, Seharmenian:1357, Sevenroman:8550, Shaarmenian:1351, 
+  Shacyrillic:1064, Shchacyrillic:1065, Sheicoptic:994, Shhacyrillic:1210, Shimacoptic:1004, Sigma:931, Sixroman:8549, Smonospace:65331, Softsigncyrillic:1068, Ssmall:63347, Stigmagreek:986, T:84, Tau:932, Tbar:358, Tcaron:356, Tcedilla:354, Tcircle:9417, Tcircumflexbelow:7792, Tcommaaccent:354, Tdotaccent:7786, Tdotbelow:7788, Tecyrillic:1058, Tedescendercyrillic:1196, Tenroman:8553, Tetsecyrillic:1204, Theta:920, Thook:428, Thorn:222, Thornsmall:63486, Threeroman:8546, Tildesmall:63230, Tiwnarmenian:1359, 
+  Tlinebelow:7790, Tmonospace:65332, Toarmenian:1337, Tonefive:444, Tonesix:388, Tonetwo:423, Tretroflexhook:430, Tsecyrillic:1062, Tshecyrillic:1035, Tsmall:63348, Twelveroman:8555, Tworoman:8545, U:85, Uacute:218, Uacutesmall:63482, Ubreve:364, Ucaron:467, Ucircle:9418, Ucircumflex:219, Ucircumflexbelow:7798, Ucircumflexsmall:63483, Ucyrillic:1059, Udblacute:368, Udblgrave:532, Udieresis:220, Udieresisacute:471, Udieresisbelow:7794, Udieresiscaron:473, Udieresiscyrillic:1264, Udieresisgrave:475, 
+  Udieresismacron:469, Udieresissmall:63484, Udotbelow:7908, Ugrave:217, Ugravesmall:63481, Uhookabove:7910, Uhorn:431, Uhornacute:7912, Uhorndotbelow:7920, Uhorngrave:7914, Uhornhookabove:7916, Uhorntilde:7918, Uhungarumlaut:368, Uhungarumlautcyrillic:1266, Uinvertedbreve:534, Ukcyrillic:1144, Umacron:362, Umacroncyrillic:1262, Umacrondieresis:7802, Umonospace:65333, Uogonek:370, Upsilon:933, Upsilon1:978, Upsilonacutehooksymbolgreek:979, Upsilonafrican:433, Upsilondieresis:939, Upsilondieresishooksymbolgreek:980, 
+  Upsilonhooksymbol:978, Upsilontonos:910, Uring:366, Ushortcyrillic:1038, Usmall:63349, Ustraightcyrillic:1198, Ustraightstrokecyrillic:1200, Utilde:360, Utildeacute:7800, Utildebelow:7796, V:86, Vcircle:9419, Vdotbelow:7806, Vecyrillic:1042, Vewarmenian:1358, Vhook:434, Vmonospace:65334, Voarmenian:1352, Vsmall:63350, Vtilde:7804, W:87, Wacute:7810, Wcircle:9420, Wcircumflex:372, Wdieresis:7812, Wdotaccent:7814, Wdotbelow:7816, Wgrave:7808, Wmonospace:65335, Wsmall:63351, X:88, Xcircle:9421, Xdieresis:7820, 
+  Xdotaccent:7818, Xeharmenian:1341, Xi:926, Xmonospace:65336, Xsmall:63352, Y:89, Yacute:221, Yacutesmall:63485, Yatcyrillic:1122, Ycircle:9422, Ycircumflex:374, Ydieresis:376, Ydieresissmall:63487, Ydotaccent:7822, Ydotbelow:7924, Yericyrillic:1067, Yerudieresiscyrillic:1272, Ygrave:7922, Yhook:435, Yhookabove:7926, Yiarmenian:1349, Yicyrillic:1031, Yiwnarmenian:1362, Ymonospace:65337, Ysmall:63353, Ytilde:7928, Yusbigcyrillic:1130, Yusbigiotifiedcyrillic:1132, Yuslittlecyrillic:1126, Yuslittleiotifiedcyrillic:1128, 
+  Z:90, Zaarmenian:1334, Zacute:377, Zcaron:381, Zcaronsmall:63231, Zcircle:9423, Zcircumflex:7824, Zdot:379, Zdotaccent:379, Zdotbelow:7826, Zecyrillic:1047, Zedescendercyrillic:1176, Zedieresiscyrillic:1246, Zeta:918, Zhearmenian:1338, Zhebrevecyrillic:1217, Zhecyrillic:1046, Zhedescendercyrillic:1174, Zhedieresiscyrillic:1244, Zlinebelow:7828, Zmonospace:65338, Zsmall:63354, Zstroke:437, a:97, aabengali:2438, aacute:225, aadeva:2310, aagujarati:2694, aagurmukhi:2566, aamatragurmukhi:2622, aarusquare:13059, 
+  aavowelsignbengali:2494, aavowelsigndeva:2366, aavowelsigngujarati:2750, abbreviationmarkarmenian:1375, abbreviationsigndeva:2416, abengali:2437, abopomofo:12570, abreve:259, abreveacute:7855, abrevecyrillic:1233, abrevedotbelow:7863, abrevegrave:7857, abrevehookabove:7859, abrevetilde:7861, acaron:462, acircle:9424, acircumflex:226, acircumflexacute:7845, acircumflexdotbelow:7853, acircumflexgrave:7847, acircumflexhookabove:7849, acircumflextilde:7851, acute:180, acutebelowcmb:791, acutecmb:769, 
+  acutecomb:769, acutedeva:2388, acutelowmod:719, acutetonecmb:833, acyrillic:1072, adblgrave:513, addakgurmukhi:2673, adeva:2309, adieresis:228, adieresiscyrillic:1235, adieresismacron:479, adotbelow:7841, adotmacron:481, ae:230, aeacute:509, aekorean:12624, aemacron:483, afii00208:8213, afii08941:8356, afii10017:1040, afii10018:1041, afii10019:1042, afii10020:1043, afii10021:1044, afii10022:1045, afii10023:1025, afii10024:1046, afii10025:1047, afii10026:1048, afii10027:1049, afii10028:1050, afii10029:1051, 
+  afii10030:1052, afii10031:1053, afii10032:1054, afii10033:1055, afii10034:1056, afii10035:1057, afii10036:1058, afii10037:1059, afii10038:1060, afii10039:1061, afii10040:1062, afii10041:1063, afii10042:1064, afii10043:1065, afii10044:1066, afii10045:1067, afii10046:1068, afii10047:1069, afii10048:1070, afii10049:1071, afii10050:1168, afii10051:1026, afii10052:1027, afii10053:1028, afii10054:1029, afii10055:1030, afii10056:1031, afii10057:1032, afii10058:1033, afii10059:1034, afii10060:1035, afii10061:1036, 
+  afii10062:1038, afii10063:63172, afii10064:63173, afii10065:1072, afii10066:1073, afii10067:1074, afii10068:1075, afii10069:1076, afii10070:1077, afii10071:1105, afii10072:1078, afii10073:1079, afii10074:1080, afii10075:1081, afii10076:1082, afii10077:1083, afii10078:1084, afii10079:1085, afii10080:1086, afii10081:1087, afii10082:1088, afii10083:1089, afii10084:1090, afii10085:1091, afii10086:1092, afii10087:1093, afii10088:1094, afii10089:1095, afii10090:1096, afii10091:1097, afii10092:1098, afii10093:1099, 
+  afii10094:1100, afii10095:1101, afii10096:1102, afii10097:1103, afii10098:1169, afii10099:1106, afii10100:1107, afii10101:1108, afii10102:1109, afii10103:1110, afii10104:1111, afii10105:1112, afii10106:1113, afii10107:1114, afii10108:1115, afii10109:1116, afii10110:1118, afii10145:1039, afii10146:1122, afii10147:1138, afii10148:1140, afii10192:63174, afii10193:1119, afii10194:1123, afii10195:1139, afii10196:1141, afii10831:63175, afii10832:63176, afii10846:1241, afii299:8206, afii300:8207, afii301:8205, 
+  afii57381:1642, afii57388:1548, afii57392:1632, afii57393:1633, afii57394:1634, afii57395:1635, afii57396:1636, afii57397:1637, afii57398:1638, afii57399:1639, afii57400:1640, afii57401:1641, afii57403:1563, afii57407:1567, afii57409:1569, afii57410:1570, afii57411:1571, afii57412:1572, afii57413:1573, afii57414:1574, afii57415:1575, afii57416:1576, afii57417:1577, afii57418:1578, afii57419:1579, afii57420:1580, afii57421:1581, afii57422:1582, afii57423:1583, afii57424:1584, afii57425:1585, afii57426:1586, 
+  afii57427:1587, afii57428:1588, afii57429:1589, afii57430:1590, afii57431:1591, afii57432:1592, afii57433:1593, afii57434:1594, afii57440:1600, afii57441:1601, afii57442:1602, afii57443:1603, afii57444:1604, afii57445:1605, afii57446:1606, afii57448:1608, afii57449:1609, afii57450:1610, afii57451:1611, afii57452:1612, afii57453:1613, afii57454:1614, afii57455:1615, afii57456:1616, afii57457:1617, afii57458:1618, afii57470:1607, afii57505:1700, afii57506:1662, afii57507:1670, afii57508:1688, afii57509:1711, 
+  afii57511:1657, afii57512:1672, afii57513:1681, afii57514:1722, afii57519:1746, afii57534:1749, afii57636:8362, afii57645:1470, afii57658:1475, afii57664:1488, afii57665:1489, afii57666:1490, afii57667:1491, afii57668:1492, afii57669:1493, afii57670:1494, afii57671:1495, afii57672:1496, afii57673:1497, afii57674:1498, afii57675:1499, afii57676:1500, afii57677:1501, afii57678:1502, afii57679:1503, afii57680:1504, afii57681:1505, afii57682:1506, afii57683:1507, afii57684:1508, afii57685:1509, afii57686:1510, 
+  afii57687:1511, afii57688:1512, afii57689:1513, afii57690:1514, afii57694:64298, afii57695:64299, afii57700:64331, afii57705:64287, afii57716:1520, afii57717:1521, afii57718:1522, afii57723:64309, afii57793:1460, afii57794:1461, afii57795:1462, afii57796:1467, afii57797:1464, afii57798:1463, afii57799:1456, afii57800:1458, afii57801:1457, afii57802:1459, afii57803:1474, afii57804:1473, afii57806:1465, afii57807:1468, afii57839:1469, afii57841:1471, afii57842:1472, afii57929:700, afii61248:8453, 
+  afii61289:8467, afii61352:8470, afii61573:8236, afii61574:8237, afii61575:8238, afii61664:8204, afii63167:1645, afii64937:701, agrave:224, agujarati:2693, agurmukhi:2565, ahiragana:12354, ahookabove:7843, aibengali:2448, aibopomofo:12574, aideva:2320, aiecyrillic:1237, aigujarati:2704, aigurmukhi:2576, aimatragurmukhi:2632, ainarabic:1593, ainfinalarabic:65226, aininitialarabic:65227, ainmedialarabic:65228, ainvertedbreve:515, aivowelsignbengali:2504, aivowelsigndeva:2376, aivowelsigngujarati:2760, 
+  akatakana:12450, akatakanahalfwidth:65393, akorean:12623, alef:1488, alefarabic:1575, alefdageshhebrew:64304, aleffinalarabic:65166, alefhamzaabovearabic:1571, alefhamzaabovefinalarabic:65156, alefhamzabelowarabic:1573, alefhamzabelowfinalarabic:65160, alefhebrew:1488, aleflamedhebrew:64335, alefmaddaabovearabic:1570, alefmaddaabovefinalarabic:65154, alefmaksuraarabic:1609, alefmaksurafinalarabic:65264, alefmaksurainitialarabic:65267, alefmaksuramedialarabic:65268, alefpatahhebrew:64302, alefqamatshebrew:64303, 
+  aleph:8501, allequal:8780, alpha:945, alphatonos:940, amacron:257, amonospace:65345, ampersand:38, ampersandmonospace:65286, ampersandsmall:63270, amsquare:13250, anbopomofo:12578, angbopomofo:12580, angbracketleft:12296, angbracketright:12297, angkhankhuthai:3674, angle:8736, anglebracketleft:12296, anglebracketleftvertical:65087, anglebracketright:12297, anglebracketrightvertical:65088, angleleft:9001, angleright:9002, angstrom:8491, anoteleia:903, anudattadeva:2386, anusvarabengali:2434, anusvaradeva:2306, 
+  anusvaragujarati:2690, aogonek:261, apaatosquare:13056, aparen:9372, apostrophearmenian:1370, apostrophemod:700, apple:63743, approaches:8784, approxequal:8776, approxequalorimage:8786, approximatelyequal:8773, araeaekorean:12686, araeakorean:12685, arc:8978, arighthalfring:7834, aring:229, aringacute:507, aringbelow:7681, arrowboth:8596, arrowdashdown:8675, arrowdashleft:8672, arrowdashright:8674, arrowdashup:8673, arrowdblboth:8660, arrowdbldown:8659, arrowdblleft:8656, arrowdblright:8658, arrowdblup:8657, 
+  arrowdown:8595, arrowdownleft:8601, arrowdownright:8600, arrowdownwhite:8681, arrowheaddownmod:709, arrowheadleftmod:706, arrowheadrightmod:707, arrowheadupmod:708, arrowhorizex:63719, arrowleft:8592, arrowleftdbl:8656, arrowleftdblstroke:8653, arrowleftoverright:8646, arrowleftwhite:8678, arrowright:8594, arrowrightdblstroke:8655, arrowrightheavy:10142, arrowrightoverleft:8644, arrowrightwhite:8680, arrowtableft:8676, arrowtabright:8677, arrowup:8593, arrowupdn:8597, arrowupdnbse:8616, arrowupdownbase:8616, 
+  arrowupleft:8598, arrowupleftofdown:8645, arrowupright:8599, arrowupwhite:8679, arrowvertex:63718, asciicircum:94, asciicircummonospace:65342, asciitilde:126, asciitildemonospace:65374, ascript:593, ascriptturned:594, asmallhiragana:12353, asmallkatakana:12449, asmallkatakanahalfwidth:65383, asterisk:42, asteriskaltonearabic:1645, asteriskarabic:1645, asteriskmath:8727, asteriskmonospace:65290, asterisksmall:65121, asterism:8258, asuperior:63209, asymptoticallyequal:8771, at:64, atilde:227, atmonospace:65312, 
+  atsmall:65131, aturned:592, aubengali:2452, aubopomofo:12576, audeva:2324, augujarati:2708, augurmukhi:2580, aulengthmarkbengali:2519, aumatragurmukhi:2636, auvowelsignbengali:2508, auvowelsigndeva:2380, auvowelsigngujarati:2764, avagrahadeva:2365, aybarmenian:1377, ayin:1506, ayinaltonehebrew:64288, ayinhebrew:1506, b:98, babengali:2476, backslash:92, backslashmonospace:65340, badeva:2348, bagujarati:2732, bagurmukhi:2604, bahiragana:12400, bahtthai:3647, bakatakana:12496, bar:124, barmonospace:65372, 
+  bbopomofo:12549, bcircle:9425, bdotaccent:7683, bdotbelow:7685, beamedsixteenthnotes:9836, because:8757, becyrillic:1073, beharabic:1576, behfinalarabic:65168, behinitialarabic:65169, behiragana:12409, behmedialarabic:65170, behmeeminitialarabic:64671, behmeemisolatedarabic:64520, behnoonfinalarabic:64621, bekatakana:12505, benarmenian:1378, bet:1489, beta:946, betasymbolgreek:976, betdagesh:64305, betdageshhebrew:64305, bethebrew:1489, betrafehebrew:64332, bhabengali:2477, bhadeva:2349, bhagujarati:2733, 
+  bhagurmukhi:2605, bhook:595, bihiragana:12403, bikatakana:12499, bilabialclick:664, bindigurmukhi:2562, birusquare:13105, blackcircle:9679, blackdiamond:9670, blackdownpointingtriangle:9660, blackleftpointingpointer:9668, blackleftpointingtriangle:9664, blacklenticularbracketleft:12304, blacklenticularbracketleftvertical:65083, blacklenticularbracketright:12305, blacklenticularbracketrightvertical:65084, blacklowerlefttriangle:9699, blacklowerrighttriangle:9698, blackrectangle:9644, blackrightpointingpointer:9658, 
+  blackrightpointingtriangle:9654, blacksmallsquare:9642, blacksmilingface:9787, blacksquare:9632, blackstar:9733, blackupperlefttriangle:9700, blackupperrighttriangle:9701, blackuppointingsmalltriangle:9652, blackuppointingtriangle:9650, blank:9251, blinebelow:7687, block:9608, bmonospace:65346, bobaimaithai:3610, bohiragana:12412, bokatakana:12508, bparen:9373, bqsquare:13251, braceex:63732, braceleft:123, braceleftbt:63731, braceleftmid:63730, braceleftmonospace:65371, braceleftsmall:65115, bracelefttp:63729, 
+  braceleftvertical:65079, braceright:125, bracerightbt:63742, bracerightmid:63741, bracerightmonospace:65373, bracerightsmall:65116, bracerighttp:63740, bracerightvertical:65080, bracketleft:91, bracketleftbt:63728, bracketleftex:63727, bracketleftmonospace:65339, bracketlefttp:63726, bracketright:93, bracketrightbt:63739, bracketrightex:63738, bracketrightmonospace:65341, bracketrighttp:63737, breve:728, brevebelowcmb:814, brevecmb:774, breveinvertedbelowcmb:815, breveinvertedcmb:785, breveinverteddoublecmb:865, 
+  bridgebelowcmb:810, bridgeinvertedbelowcmb:826, brokenbar:166, bstroke:384, bsuperior:63210, btopbar:387, buhiragana:12406, bukatakana:12502, bullet:8226, bulletinverse:9688, bulletoperator:8729, bullseye:9678, c:99, caarmenian:1390, cabengali:2458, cacute:263, cadeva:2330, cagujarati:2714, cagurmukhi:2586, calsquare:13192, candrabindubengali:2433, candrabinducmb:784, candrabindudeva:2305, candrabindugujarati:2689, capslock:8682, careof:8453, caron:711, caronbelowcmb:812, caroncmb:780, carriagereturn:8629, 
+  cbopomofo:12568, ccaron:269, ccedilla:231, ccedillaacute:7689, ccircle:9426, ccircumflex:265, ccurl:597, cdot:267, cdotaccent:267, cdsquare:13253, cedilla:184, cedillacmb:807, cent:162, centigrade:8451, centinferior:63199, centmonospace:65504, centoldstyle:63394, centsuperior:63200, chaarmenian:1401, chabengali:2459, chadeva:2331, chagujarati:2715, chagurmukhi:2587, chbopomofo:12564, cheabkhasiancyrillic:1213, checkmark:10003, checyrillic:1095, chedescenderabkhasiancyrillic:1215, chedescendercyrillic:1207, 
+  chedieresiscyrillic:1269, cheharmenian:1395, chekhakassiancyrillic:1228, cheverticalstrokecyrillic:1209, chi:967, chieuchacirclekorean:12919, chieuchaparenkorean:12823, chieuchcirclekorean:12905, chieuchkorean:12618, chieuchparenkorean:12809, chochangthai:3594, chochanthai:3592, chochingthai:3593, chochoethai:3596, chook:392, cieucacirclekorean:12918, cieucaparenkorean:12822, cieuccirclekorean:12904, cieuckorean:12616, cieucparenkorean:12808, cieucuparenkorean:12828, circle:9675, circlecopyrt:169, 
+  circlemultiply:8855, circleot:8857, circleplus:8853, circlepostalmark:12342, circlewithlefthalfblack:9680, circlewithrighthalfblack:9681, circumflex:710, circumflexbelowcmb:813, circumflexcmb:770, clear:8999, clickalveolar:450, clickdental:448, clicklateral:449, clickretroflex:451, club:9827, clubsuitblack:9827, clubsuitwhite:9831, cmcubedsquare:13220, cmonospace:65347, cmsquaredsquare:13216, coarmenian:1409, colon:58, colonmonetary:8353, colonmonospace:65306, colonsign:8353, colonsmall:65109, 
+  colontriangularhalfmod:721, colontriangularmod:720, comma:44, commaabovecmb:787, commaaboverightcmb:789, commaaccent:63171, commaarabic:1548, commaarmenian:1373, commainferior:63201, commamonospace:65292, commareversedabovecmb:788, commareversedmod:701, commasmall:65104, commasuperior:63202, commaturnedabovecmb:786, commaturnedmod:699, compass:9788, congruent:8773, contourintegral:8750, control:8963, controlACK:6, controlBEL:7, controlBS:8, controlCAN:24, controlCR:13, controlDC1:17, controlDC2:18, 
+  controlDC3:19, controlDC4:20, controlDEL:127, controlDLE:16, controlEM:25, controlENQ:5, controlEOT:4, controlESC:27, controlETB:23, controlETX:3, controlFF:12, controlFS:28, controlGS:29, controlHT:9, controlLF:10, controlNAK:21, controlRS:30, controlSI:15, controlSO:14, controlSOT:2, controlSTX:1, controlSUB:26, controlSYN:22, controlUS:31, controlVT:11, copyright:169, copyrightsans:63721, copyrightserif:63193, cornerbracketleft:12300, cornerbracketlefthalfwidth:65378, cornerbracketleftvertical:65089, 
+  cornerbracketright:12301, cornerbracketrighthalfwidth:65379, cornerbracketrightvertical:65090, corporationsquare:13183, cosquare:13255, coverkgsquare:13254, cparen:9374, cruzeiro:8354, cstretched:663, curlyand:8911, curlyor:8910, currency:164, cyrBreve:63185, cyrFlex:63186, cyrbreve:63188, cyrflex:63189, d:100, daarmenian:1380, dabengali:2470, dadarabic:1590, dadeva:2342, dadfinalarabic:65214, dadinitialarabic:65215, dadmedialarabic:65216, dagesh:1468, dageshhebrew:1468, dagger:8224, daggerdbl:8225, 
+  dagujarati:2726, dagurmukhi:2598, dahiragana:12384, dakatakana:12480, dalarabic:1583, dalet:1491, daletdagesh:64307, daletdageshhebrew:64307, dalethebrew:1491, dalfinalarabic:65194, dammaarabic:1615, dammalowarabic:1615, dammatanaltonearabic:1612, dammatanarabic:1612, danda:2404, dargahebrew:1447, dargalefthebrew:1447, dasiapneumatacyrilliccmb:1157, dblGrave:63187, dblanglebracketleft:12298, dblanglebracketleftvertical:65085, dblanglebracketright:12299, dblanglebracketrightvertical:65086, dblarchinvertedbelowcmb:811, 
+  dblarrowleft:8660, dblarrowright:8658, dbldanda:2405, dblgrave:63190, dblgravecmb:783, dblintegral:8748, dbllowline:8215, dbllowlinecmb:819, dbloverlinecmb:831, dblprimemod:698, dblverticalbar:8214, dblverticallineabovecmb:782, dbopomofo:12553, dbsquare:13256, dcaron:271, dcedilla:7697, dcircle:9427, dcircumflexbelow:7699, dcroat:273, ddabengali:2465, ddadeva:2337, ddagujarati:2721, ddagurmukhi:2593, ddalarabic:1672, ddalfinalarabic:64393, dddhadeva:2396, ddhabengali:2466, ddhadeva:2338, ddhagujarati:2722, 
+  ddhagurmukhi:2594, ddotaccent:7691, ddotbelow:7693, decimalseparatorarabic:1643, decimalseparatorpersian:1643, decyrillic:1076, degree:176, dehihebrew:1453, dehiragana:12391, deicoptic:1007, dekatakana:12487, deleteleft:9003, deleteright:8998, delta:948, deltaturned:397, denominatorminusonenumeratorbengali:2552, dezh:676, dhabengali:2471, dhadeva:2343, dhagujarati:2727, dhagurmukhi:2599, dhook:599, dialytikatonos:901, dialytikatonoscmb:836, diamond:9830, diamondsuitwhite:9826, dieresis:168, dieresisacute:63191, 
+  dieresisbelowcmb:804, dieresiscmb:776, dieresisgrave:63192, dieresistonos:901, dihiragana:12386, dikatakana:12482, dittomark:12291, divide:247, divides:8739, divisionslash:8725, djecyrillic:1106, dkshade:9619, dlinebelow:7695, dlsquare:13207, dmacron:273, dmonospace:65348, dnblock:9604, dochadathai:3598, dodekthai:3604, dohiragana:12393, dokatakana:12489, dollar:36, dollarinferior:63203, dollarmonospace:65284, dollaroldstyle:63268, dollarsmall:65129, dollarsuperior:63204, dong:8363, dorusquare:13094, 
+  dotaccent:729, dotaccentcmb:775, dotbelowcmb:803, dotbelowcomb:803, dotkatakana:12539, dotlessi:305, dotlessj:63166, dotlessjstrokehook:644, dotmath:8901, dottedcircle:9676, doubleyodpatah:64287, doubleyodpatahhebrew:64287, downtackbelowcmb:798, downtackmod:725, dparen:9375, dsuperior:63211, dtail:598, dtopbar:396, duhiragana:12389, dukatakana:12485, dz:499, dzaltone:675, dzcaron:454, dzcurl:677, dzeabkhasiancyrillic:1249, dzecyrillic:1109, dzhecyrillic:1119, e:101, eacute:233, earth:9793, ebengali:2447, 
+  ebopomofo:12572, ebreve:277, ecandradeva:2317, ecandragujarati:2701, ecandravowelsigndeva:2373, ecandravowelsigngujarati:2757, ecaron:283, ecedillabreve:7709, echarmenian:1381, echyiwnarmenian:1415, ecircle:9428, ecircumflex:234, ecircumflexacute:7871, ecircumflexbelow:7705, ecircumflexdotbelow:7879, ecircumflexgrave:7873, ecircumflexhookabove:7875, ecircumflextilde:7877, ecyrillic:1108, edblgrave:517, edeva:2319, edieresis:235, edot:279, edotaccent:279, edotbelow:7865, eegurmukhi:2575, eematragurmukhi:2631, 
+  efcyrillic:1092, egrave:232, egujarati:2703, eharmenian:1383, ehbopomofo:12573, ehiragana:12360, ehookabove:7867, eibopomofo:12575, eight:56, eightarabic:1640, eightbengali:2542, eightcircle:9319, eightcircleinversesansserif:10129, eightdeva:2414, eighteencircle:9329, eighteenparen:9349, eighteenperiod:9369, eightgujarati:2798, eightgurmukhi:2670, eighthackarabic:1640, eighthangzhou:12328, eighthnotebeamed:9835, eightideographicparen:12839, eightinferior:8328, eightmonospace:65304, eightoldstyle:63288, 
+  eightparen:9339, eightperiod:9359, eightpersian:1784, eightroman:8567, eightsuperior:8312, eightthai:3672, einvertedbreve:519, eiotifiedcyrillic:1125, ekatakana:12456, ekatakanahalfwidth:65396, ekonkargurmukhi:2676, ekorean:12628, elcyrillic:1083, element:8712, elevencircle:9322, elevenparen:9342, elevenperiod:9362, elevenroman:8570, ellipsis:8230, ellipsisvertical:8942, emacron:275, emacronacute:7703, emacrongrave:7701, emcyrillic:1084, emdash:8212, emdashvertical:65073, emonospace:65349, emphasismarkarmenian:1371, 
+  emptyset:8709, enbopomofo:12579, encyrillic:1085, endash:8211, endashvertical:65074, endescendercyrillic:1187, eng:331, engbopomofo:12581, enghecyrillic:1189, enhookcyrillic:1224, enspace:8194, eogonek:281, eokorean:12627, eopen:603, eopenclosed:666, eopenreversed:604, eopenreversedclosed:606, eopenreversedhook:605, eparen:9376, epsilon:949, epsilontonos:941, equal:61, equalmonospace:65309, equalsmall:65126, equalsuperior:8316, equivalence:8801, erbopomofo:12582, ercyrillic:1088, ereversed:600, 
+  ereversedcyrillic:1101, escyrillic:1089, esdescendercyrillic:1195, esh:643, eshcurl:646, eshortdeva:2318, eshortvowelsigndeva:2374, eshreversedloop:426, eshsquatreversed:645, esmallhiragana:12359, esmallkatakana:12455, esmallkatakanahalfwidth:65386, estimated:8494, esuperior:63212, eta:951, etarmenian:1384, etatonos:942, eth:240, etilde:7869, etildebelow:7707, etnahtafoukhhebrew:1425, etnahtafoukhlefthebrew:1425, etnahtahebrew:1425, etnahtalefthebrew:1425, eturned:477, eukorean:12641, euro:8364, 
+  evowelsignbengali:2503, evowelsigndeva:2375, evowelsigngujarati:2759, exclam:33, exclamarmenian:1372, exclamdbl:8252, exclamdown:161, exclamdownsmall:63393, exclammonospace:65281, exclamsmall:63265, existential:8707, ezh:658, ezhcaron:495, ezhcurl:659, ezhreversed:441, ezhtail:442, f:102, fadeva:2398, fagurmukhi:2654, fahrenheit:8457, fathaarabic:1614, fathalowarabic:1614, fathatanarabic:1611, fbopomofo:12552, fcircle:9429, fdotaccent:7711, feharabic:1601, feharmenian:1414, fehfinalarabic:65234, 
+  fehinitialarabic:65235, fehmedialarabic:65236, feicoptic:997, female:9792, ff:64256, ffi:64259, ffl:64260, fi:64257, fifteencircle:9326, fifteenparen:9346, fifteenperiod:9366, figuredash:8210, filledbox:9632, filledrect:9644, finalkaf:1498, finalkafdagesh:64314, finalkafdageshhebrew:64314, finalkafhebrew:1498, finalmem:1501, finalmemhebrew:1501, finalnun:1503, finalnunhebrew:1503, finalpe:1507, finalpehebrew:1507, finaltsadi:1509, finaltsadihebrew:1509, firsttonechinese:713, fisheye:9673, fitacyrillic:1139, 
+  five:53, fivearabic:1637, fivebengali:2539, fivecircle:9316, fivecircleinversesansserif:10126, fivedeva:2411, fiveeighths:8541, fivegujarati:2795, fivegurmukhi:2667, fivehackarabic:1637, fivehangzhou:12325, fiveideographicparen:12836, fiveinferior:8325, fivemonospace:65301, fiveoldstyle:63285, fiveparen:9336, fiveperiod:9356, fivepersian:1781, fiveroman:8564, fivesuperior:8309, fivethai:3669, fl:64258, florin:402, fmonospace:65350, fmsquare:13209, fofanthai:3615, fofathai:3613, fongmanthai:3663, 
+  forall:8704, four:52, fourarabic:1636, fourbengali:2538, fourcircle:9315, fourcircleinversesansserif:10125, fourdeva:2410, fourgujarati:2794, fourgurmukhi:2666, fourhackarabic:1636, fourhangzhou:12324, fourideographicparen:12835, fourinferior:8324, fourmonospace:65300, fournumeratorbengali:2551, fouroldstyle:63284, fourparen:9335, fourperiod:9355, fourpersian:1780, fourroman:8563, foursuperior:8308, fourteencircle:9325, fourteenparen:9345, fourteenperiod:9365, fourthai:3668, fourthtonechinese:715, 
+  fparen:9377, fraction:8260, franc:8355, g:103, gabengali:2455, gacute:501, gadeva:2327, gafarabic:1711, gaffinalarabic:64403, gafinitialarabic:64404, gafmedialarabic:64405, gagujarati:2711, gagurmukhi:2583, gahiragana:12364, gakatakana:12460, gamma:947, gammalatinsmall:611, gammasuperior:736, gangiacoptic:1003, gbopomofo:12557, gbreve:287, gcaron:487, gcedilla:291, gcircle:9430, gcircumflex:285, gcommaaccent:291, gdot:289, gdotaccent:289, gecyrillic:1075, gehiragana:12370, gekatakana:12466, geometricallyequal:8785, 
+  gereshaccenthebrew:1436, gereshhebrew:1523, gereshmuqdamhebrew:1437, germandbls:223, gershayimaccenthebrew:1438, gershayimhebrew:1524, getamark:12307, ghabengali:2456, ghadarmenian:1394, ghadeva:2328, ghagujarati:2712, ghagurmukhi:2584, ghainarabic:1594, ghainfinalarabic:65230, ghaininitialarabic:65231, ghainmedialarabic:65232, ghemiddlehookcyrillic:1173, ghestrokecyrillic:1171, gheupturncyrillic:1169, ghhadeva:2394, ghhagurmukhi:2650, ghook:608, ghzsquare:13203, gihiragana:12366, gikatakana:12462, 
+  gimarmenian:1379, gimel:1490, gimeldagesh:64306, gimeldageshhebrew:64306, gimelhebrew:1490, gjecyrillic:1107, glottalinvertedstroke:446, glottalstop:660, glottalstopinverted:662, glottalstopmod:704, glottalstopreversed:661, glottalstopreversedmod:705, glottalstopreversedsuperior:740, glottalstopstroke:673, glottalstopstrokereversed:674, gmacron:7713, gmonospace:65351, gohiragana:12372, gokatakana:12468, gparen:9378, gpasquare:13228, gradient:8711, grave:96, gravebelowcmb:790, gravecmb:768, gravecomb:768, 
+  gravedeva:2387, gravelowmod:718, gravemonospace:65344, gravetonecmb:832, greater:62, greaterequal:8805, greaterequalorless:8923, greatermonospace:65310, greaterorequivalent:8819, greaterorless:8823, greateroverequal:8807, greatersmall:65125, gscript:609, gstroke:485, guhiragana:12368, guillemotleft:171, guillemotright:187, guilsinglleft:8249, guilsinglright:8250, gukatakana:12464, guramusquare:13080, gysquare:13257, h:104, haabkhasiancyrillic:1193, haaltonearabic:1729, habengali:2489, hadescendercyrillic:1203, 
+  hadeva:2361, hagujarati:2745, hagurmukhi:2617, haharabic:1581, hahfinalarabic:65186, hahinitialarabic:65187, hahiragana:12399, hahmedialarabic:65188, haitusquare:13098, hakatakana:12495, hakatakanahalfwidth:65418, halantgurmukhi:2637, hamzaarabic:1569, hamzalowarabic:1569, hangulfiller:12644, hardsigncyrillic:1098, harpoonleftbarbup:8636, harpoonrightbarbup:8640, hasquare:13258, hatafpatah:1458, hatafpatah16:1458, hatafpatah23:1458, hatafpatah2f:1458, hatafpatahhebrew:1458, hatafpatahnarrowhebrew:1458, 
+  hatafpatahquarterhebrew:1458, hatafpatahwidehebrew:1458, hatafqamats:1459, hatafqamats1b:1459, hatafqamats28:1459, hatafqamats34:1459, hatafqamatshebrew:1459, hatafqamatsnarrowhebrew:1459, hatafqamatsquarterhebrew:1459, hatafqamatswidehebrew:1459, hatafsegol:1457, hatafsegol17:1457, hatafsegol24:1457, hatafsegol30:1457, hatafsegolhebrew:1457, hatafsegolnarrowhebrew:1457, hatafsegolquarterhebrew:1457, hatafsegolwidehebrew:1457, hbar:295, hbopomofo:12559, hbrevebelow:7723, hcedilla:7721, hcircle:9431, 
+  hcircumflex:293, hdieresis:7719, hdotaccent:7715, hdotbelow:7717, he:1492, heart:9829, heartsuitblack:9829, heartsuitwhite:9825, hedagesh:64308, hedageshhebrew:64308, hehaltonearabic:1729, heharabic:1607, hehebrew:1492, hehfinalaltonearabic:64423, hehfinalalttwoarabic:65258, hehfinalarabic:65258, hehhamzaabovefinalarabic:64421, hehhamzaaboveisolatedarabic:64420, hehinitialaltonearabic:64424, hehinitialarabic:65259, hehiragana:12408, hehmedialaltonearabic:64425, hehmedialarabic:65260, heiseierasquare:13179, 
+  hekatakana:12504, hekatakanahalfwidth:65421, hekutaarusquare:13110, henghook:615, herutusquare:13113, het:1495, hethebrew:1495, hhook:614, hhooksuperior:689, hieuhacirclekorean:12923, hieuhaparenkorean:12827, hieuhcirclekorean:12909, hieuhkorean:12622, hieuhparenkorean:12813, hihiragana:12402, hikatakana:12498, hikatakanahalfwidth:65419, hiriq:1460, hiriq14:1460, hiriq21:1460, hiriq2d:1460, hiriqhebrew:1460, hiriqnarrowhebrew:1460, hiriqquarterhebrew:1460, hiriqwidehebrew:1460, hlinebelow:7830, 
+  hmonospace:65352, hoarmenian:1392, hohipthai:3627, hohiragana:12411, hokatakana:12507, hokatakanahalfwidth:65422, holam:1465, holam19:1465, holam26:1465, holam32:1465, holamhebrew:1465, holamnarrowhebrew:1465, holamquarterhebrew:1465, holamwidehebrew:1465, honokhukthai:3630, hookabovecomb:777, hookcmb:777, hookpalatalizedbelowcmb:801, hookretroflexbelowcmb:802, hoonsquare:13122, horicoptic:1001, horizontalbar:8213, horncmb:795, hotsprings:9832, house:8962, hparen:9379, hsuperior:688, hturned:613, 
+  huhiragana:12405, huiitosquare:13107, hukatakana:12501, hukatakanahalfwidth:65420, hungarumlaut:733, hungarumlautcmb:779, hv:405, hyphen:45, hypheninferior:63205, hyphenmonospace:65293, hyphensmall:65123, hyphensuperior:63206, hyphentwo:8208, i:105, iacute:237, iacyrillic:1103, ibengali:2439, ibopomofo:12583, ibreve:301, icaron:464, icircle:9432, icircumflex:238, icyrillic:1110, idblgrave:521, ideographearthcircle:12943, ideographfirecircle:12939, ideographicallianceparen:12863, ideographiccallparen:12858, 
+  ideographiccentrecircle:12965, ideographicclose:12294, ideographiccomma:12289, ideographiccommaleft:65380, ideographiccongratulationparen:12855, ideographiccorrectcircle:12963, ideographicearthparen:12847, ideographicenterpriseparen:12861, ideographicexcellentcircle:12957, ideographicfestivalparen:12864, ideographicfinancialcircle:12950, ideographicfinancialparen:12854, ideographicfireparen:12843, ideographichaveparen:12850, ideographichighcircle:12964, ideographiciterationmark:12293, ideographiclaborcircle:12952, 
+  ideographiclaborparen:12856, ideographicleftcircle:12967, ideographiclowcircle:12966, ideographicmedicinecircle:12969, ideographicmetalparen:12846, ideographicmoonparen:12842, ideographicnameparen:12852, ideographicperiod:12290, ideographicprintcircle:12958, ideographicreachparen:12867, ideographicrepresentparen:12857, ideographicresourceparen:12862, ideographicrightcircle:12968, ideographicsecretcircle:12953, ideographicselfparen:12866, ideographicsocietyparen:12851, ideographicspace:12288, ideographicspecialparen:12853, 
+  ideographicstockparen:12849, ideographicstudyparen:12859, ideographicsunparen:12848, ideographicsuperviseparen:12860, ideographicwaterparen:12844, ideographicwoodparen:12845, ideographiczero:12295, ideographmetalcircle:12942, ideographmooncircle:12938, ideographnamecircle:12948, ideographsuncircle:12944, ideographwatercircle:12940, ideographwoodcircle:12941, ideva:2311, idieresis:239, idieresisacute:7727, idieresiscyrillic:1253, idotbelow:7883, iebrevecyrillic:1239, iecyrillic:1077, ieungacirclekorean:12917, 
+  ieungaparenkorean:12821, ieungcirclekorean:12903, ieungkorean:12615, ieungparenkorean:12807, igrave:236, igujarati:2695, igurmukhi:2567, ihiragana:12356, ihookabove:7881, iibengali:2440, iicyrillic:1080, iideva:2312, iigujarati:2696, iigurmukhi:2568, iimatragurmukhi:2624, iinvertedbreve:523, iishortcyrillic:1081, iivowelsignbengali:2496, iivowelsigndeva:2368, iivowelsigngujarati:2752, ij:307, ikatakana:12452, ikatakanahalfwidth:65394, ikorean:12643, ilde:732, iluyhebrew:1452, imacron:299, imacroncyrillic:1251, 
+  imageorapproximatelyequal:8787, imatragurmukhi:2623, imonospace:65353, increment:8710, infinity:8734, iniarmenian:1387, integral:8747, integralbottom:8993, integralbt:8993, integralex:63733, integraltop:8992, integraltp:8992, intersection:8745, intisquare:13061, invbullet:9688, invcircle:9689, invsmileface:9787, iocyrillic:1105, iogonek:303, iota:953, iotadieresis:970, iotadieresistonos:912, iotalatin:617, iotatonos:943, iparen:9380, irigurmukhi:2674, ismallhiragana:12355, ismallkatakana:12451, 
+  ismallkatakanahalfwidth:65384, issharbengali:2554, istroke:616, isuperior:63213, iterationhiragana:12445, iterationkatakana:12541, itilde:297, itildebelow:7725, iubopomofo:12585, iucyrillic:1102, ivowelsignbengali:2495, ivowelsigndeva:2367, ivowelsigngujarati:2751, izhitsacyrillic:1141, izhitsadblgravecyrillic:1143, j:106, jaarmenian:1393, jabengali:2460, jadeva:2332, jagujarati:2716, jagurmukhi:2588, jbopomofo:12560, jcaron:496, jcircle:9433, jcircumflex:309, jcrossedtail:669, jdotlessstroke:607, 
+  jecyrillic:1112, jeemarabic:1580, jeemfinalarabic:65182, jeeminitialarabic:65183, jeemmedialarabic:65184, jeharabic:1688, jehfinalarabic:64395, jhabengali:2461, jhadeva:2333, jhagujarati:2717, jhagurmukhi:2589, jheharmenian:1403, jis:12292, jmonospace:65354, jparen:9381, jsuperior:690, k:107, kabashkircyrillic:1185, kabengali:2453, kacute:7729, kacyrillic:1082, kadescendercyrillic:1179, kadeva:2325, kaf:1499, kafarabic:1603, kafdagesh:64315, kafdageshhebrew:64315, kaffinalarabic:65242, kafhebrew:1499, 
+  kafinitialarabic:65243, kafmedialarabic:65244, kafrafehebrew:64333, kagujarati:2709, kagurmukhi:2581, kahiragana:12363, kahookcyrillic:1220, kakatakana:12459, kakatakanahalfwidth:65398, kappa:954, kappasymbolgreek:1008, kapyeounmieumkorean:12657, kapyeounphieuphkorean:12676, kapyeounpieupkorean:12664, kapyeounssangpieupkorean:12665, karoriisquare:13069, kashidaautoarabic:1600, kashidaautonosidebearingarabic:1600, kasmallkatakana:12533, kasquare:13188, kasraarabic:1616, kasratanarabic:1613, kastrokecyrillic:1183, 
+  katahiraprolongmarkhalfwidth:65392, kaverticalstrokecyrillic:1181, kbopomofo:12558, kcalsquare:13193, kcaron:489, kcedilla:311, kcircle:9434, kcommaaccent:311, kdotbelow:7731, keharmenian:1412, kehiragana:12369, kekatakana:12465, kekatakanahalfwidth:65401, kenarmenian:1391, kesmallkatakana:12534, kgreenlandic:312, khabengali:2454, khacyrillic:1093, khadeva:2326, khagujarati:2710, khagurmukhi:2582, khaharabic:1582, khahfinalarabic:65190, khahinitialarabic:65191, khahmedialarabic:65192, kheicoptic:999, 
+  khhadeva:2393, khhagurmukhi:2649, khieukhacirclekorean:12920, khieukhaparenkorean:12824, khieukhcirclekorean:12906, khieukhkorean:12619, khieukhparenkorean:12810, khokhaithai:3586, khokhonthai:3589, khokhuatthai:3587, khokhwaithai:3588, khomutthai:3675, khook:409, khorakhangthai:3590, khzsquare:13201, kihiragana:12365, kikatakana:12461, kikatakanahalfwidth:65399, kiroguramusquare:13077, kiromeetorusquare:13078, kirosquare:13076, kiyeokacirclekorean:12910, kiyeokaparenkorean:12814, kiyeokcirclekorean:12896, 
+  kiyeokkorean:12593, kiyeokparenkorean:12800, kiyeoksioskorean:12595, kjecyrillic:1116, klinebelow:7733, klsquare:13208, kmcubedsquare:13222, kmonospace:65355, kmsquaredsquare:13218, kohiragana:12371, kohmsquare:13248, kokaithai:3585, kokatakana:12467, kokatakanahalfwidth:65402, kooposquare:13086, koppacyrillic:1153, koreanstandardsymbol:12927, koroniscmb:835, kparen:9382, kpasquare:13226, ksicyrillic:1135, ktsquare:13263, kturned:670, kuhiragana:12367, kukatakana:12463, kukatakanahalfwidth:65400, 
+  kvsquare:13240, kwsquare:13246, l:108, labengali:2482, lacute:314, ladeva:2354, lagujarati:2738, lagurmukhi:2610, lakkhangyaothai:3653, lamaleffinalarabic:65276, lamalefhamzaabovefinalarabic:65272, lamalefhamzaaboveisolatedarabic:65271, lamalefhamzabelowfinalarabic:65274, lamalefhamzabelowisolatedarabic:65273, lamalefisolatedarabic:65275, lamalefmaddaabovefinalarabic:65270, lamalefmaddaaboveisolatedarabic:65269, lamarabic:1604, lambda:955, lambdastroke:411, lamed:1500, lameddagesh:64316, lameddageshhebrew:64316, 
+  lamedhebrew:1500, lamfinalarabic:65246, lamhahinitialarabic:64714, laminitialarabic:65247, lamjeeminitialarabic:64713, lamkhahinitialarabic:64715, lamlamhehisolatedarabic:65010, lammedialarabic:65248, lammeemhahinitialarabic:64904, lammeeminitialarabic:64716, largecircle:9711, lbar:410, lbelt:620, lbopomofo:12556, lcaron:318, lcedilla:316, lcircle:9435, lcircumflexbelow:7741, lcommaaccent:316, ldot:320, ldotaccent:320, ldotbelow:7735, ldotbelowmacron:7737, leftangleabovecmb:794, lefttackbelowcmb:792, 
+  less:60, lessequal:8804, lessequalorgreater:8922, lessmonospace:65308, lessorequivalent:8818, lessorgreater:8822, lessoverequal:8806, lesssmall:65124, lezh:622, lfblock:9612, lhookretroflex:621, lira:8356, liwnarmenian:1388, lj:457, ljecyrillic:1113, ll:63168, lladeva:2355, llagujarati:2739, llinebelow:7739, llladeva:2356, llvocalicbengali:2529, llvocalicdeva:2401, llvocalicvowelsignbengali:2531, llvocalicvowelsigndeva:2403, lmiddletilde:619, lmonospace:65356, lmsquare:13264, lochulathai:3628, 
+  logicaland:8743, logicalnot:172, logicalnotreversed:8976, logicalor:8744, lolingthai:3621, longs:383, lowlinecenterline:65102, lowlinecmb:818, lowlinedashed:65101, lozenge:9674, lparen:9383, lslash:322, lsquare:8467, lsuperior:63214, ltshade:9617, luthai:3622, lvocalicbengali:2444, lvocalicdeva:2316, lvocalicvowelsignbengali:2530, lvocalicvowelsigndeva:2402, lxsquare:13267, m:109, mabengali:2478, macron:175, macronbelowcmb:817, macroncmb:772, macronlowmod:717, macronmonospace:65507, macute:7743, 
+  madeva:2350, magujarati:2734, magurmukhi:2606, mahapakhhebrew:1444, mahapakhlefthebrew:1444, mahiragana:12414, maichattawalowleftthai:63637, maichattawalowrightthai:63636, maichattawathai:3659, maichattawaupperleftthai:63635, maieklowleftthai:63628, maieklowrightthai:63627, maiekthai:3656, maiekupperleftthai:63626, maihanakatleftthai:63620, maihanakatthai:3633, maitaikhuleftthai:63625, maitaikhuthai:3655, maitholowleftthai:63631, maitholowrightthai:63630, maithothai:3657, maithoupperleftthai:63629, 
+  maitrilowleftthai:63634, maitrilowrightthai:63633, maitrithai:3658, maitriupperleftthai:63632, maiyamokthai:3654, makatakana:12510, makatakanahalfwidth:65423, male:9794, mansyonsquare:13127, maqafhebrew:1470, mars:9794, masoracirclehebrew:1455, masquare:13187, mbopomofo:12551, mbsquare:13268, mcircle:9436, mcubedsquare:13221, mdotaccent:7745, mdotbelow:7747, meemarabic:1605, meemfinalarabic:65250, meeminitialarabic:65251, meemmedialarabic:65252, meemmeeminitialarabic:64721, meemmeemisolatedarabic:64584, 
+  meetorusquare:13133, mehiragana:12417, meizierasquare:13182, mekatakana:12513, mekatakanahalfwidth:65426, mem:1502, memdagesh:64318, memdageshhebrew:64318, memhebrew:1502, menarmenian:1396, merkhahebrew:1445, merkhakefulahebrew:1446, merkhakefulalefthebrew:1446, merkhalefthebrew:1445, mhook:625, mhzsquare:13202, middledotkatakanahalfwidth:65381, middot:183, mieumacirclekorean:12914, mieumaparenkorean:12818, mieumcirclekorean:12900, mieumkorean:12609, mieumpansioskorean:12656, mieumparenkorean:12804, 
+  mieumpieupkorean:12654, mieumsioskorean:12655, mihiragana:12415, mikatakana:12511, mikatakanahalfwidth:65424, minus:8722, minusbelowcmb:800, minuscircle:8854, minusmod:727, minusplus:8723, minute:8242, miribaarusquare:13130, mirisquare:13129, mlonglegturned:624, mlsquare:13206, mmcubedsquare:13219, mmonospace:65357, mmsquaredsquare:13215, mohiragana:12418, mohmsquare:13249, mokatakana:12514, mokatakanahalfwidth:65427, molsquare:13270, momathai:3617, moverssquare:13223, moverssquaredsquare:13224, 
+  mparen:9384, mpasquare:13227, mssquare:13235, msuperior:63215, mturned:623, mu:181, mu1:181, muasquare:13186, muchgreater:8811, muchless:8810, mufsquare:13196, mugreek:956, mugsquare:13197, muhiragana:12416, mukatakana:12512, mukatakanahalfwidth:65425, mulsquare:13205, multiply:215, mumsquare:13211, munahhebrew:1443, munahlefthebrew:1443, musicalnote:9834, musicalnotedbl:9835, musicflatsign:9837, musicsharpsign:9839, mussquare:13234, muvsquare:13238, muwsquare:13244, mvmegasquare:13241, mvsquare:13239, 
+  mwmegasquare:13247, mwsquare:13245, n:110, nabengali:2472, nabla:8711, nacute:324, nadeva:2344, nagujarati:2728, nagurmukhi:2600, nahiragana:12394, nakatakana:12490, nakatakanahalfwidth:65413, napostrophe:329, nasquare:13185, nbopomofo:12555, nbspace:160, ncaron:328, ncedilla:326, ncircle:9437, ncircumflexbelow:7755, ncommaaccent:326, ndotaccent:7749, ndotbelow:7751, nehiragana:12397, nekatakana:12493, nekatakanahalfwidth:65416, newsheqelsign:8362, nfsquare:13195, ngabengali:2457, ngadeva:2329, 
+  ngagujarati:2713, ngagurmukhi:2585, ngonguthai:3591, nhiragana:12435, nhookleft:626, nhookretroflex:627, nieunacirclekorean:12911, nieunaparenkorean:12815, nieuncieuckorean:12597, nieuncirclekorean:12897, nieunhieuhkorean:12598, nieunkorean:12596, nieunpansioskorean:12648, nieunparenkorean:12801, nieunsioskorean:12647, nieuntikeutkorean:12646, nihiragana:12395, nikatakana:12491, nikatakanahalfwidth:65414, nikhahitleftthai:63641, nikhahitthai:3661, nine:57, ninearabic:1641, ninebengali:2543, ninecircle:9320, 
+  ninecircleinversesansserif:10130, ninedeva:2415, ninegujarati:2799, ninegurmukhi:2671, ninehackarabic:1641, ninehangzhou:12329, nineideographicparen:12840, nineinferior:8329, ninemonospace:65305, nineoldstyle:63289, nineparen:9340, nineperiod:9360, ninepersian:1785, nineroman:8568, ninesuperior:8313, nineteencircle:9330, nineteenparen:9350, nineteenperiod:9370, ninethai:3673, nj:460, njecyrillic:1114, nkatakana:12531, nkatakanahalfwidth:65437, nlegrightlong:414, nlinebelow:7753, nmonospace:65358, 
+  nmsquare:13210, nnabengali:2467, nnadeva:2339, nnagujarati:2723, nnagurmukhi:2595, nnnadeva:2345, nohiragana:12398, nokatakana:12494, nokatakanahalfwidth:65417, nonbreakingspace:160, nonenthai:3603, nonuthai:3609, noonarabic:1606, noonfinalarabic:65254, noonghunnaarabic:1722, noonghunnafinalarabic:64415, nooninitialarabic:65255, noonjeeminitialarabic:64722, noonjeemisolatedarabic:64587, noonmedialarabic:65256, noonmeeminitialarabic:64725, noonmeemisolatedarabic:64590, noonnoonfinalarabic:64653, 
+  notcontains:8716, notelement:8713, notelementof:8713, notequal:8800, notgreater:8815, notgreaternorequal:8817, notgreaternorless:8825, notidentical:8802, notless:8814, notlessnorequal:8816, notparallel:8742, notprecedes:8832, notsubset:8836, notsucceeds:8833, notsuperset:8837, nowarmenian:1398, nparen:9385, nssquare:13233, nsuperior:8319, ntilde:241, nu:957, nuhiragana:12396, nukatakana:12492, nukatakanahalfwidth:65415, nuktabengali:2492, nuktadeva:2364, nuktagujarati:2748, nuktagurmukhi:2620, 
+  numbersign:35, numbersignmonospace:65283, numbersignsmall:65119, numeralsigngreek:884, numeralsignlowergreek:885, numero:8470, nun:1504, nundagesh:64320, nundageshhebrew:64320, nunhebrew:1504, nvsquare:13237, nwsquare:13243, nyabengali:2462, nyadeva:2334, nyagujarati:2718, nyagurmukhi:2590, o:111, oacute:243, oangthai:3629, obarred:629, obarredcyrillic:1257, obarreddieresiscyrillic:1259, obengali:2451, obopomofo:12571, obreve:335, ocandradeva:2321, ocandragujarati:2705, ocandravowelsigndeva:2377, 
+  ocandravowelsigngujarati:2761, ocaron:466, ocircle:9438, ocircumflex:244, ocircumflexacute:7889, ocircumflexdotbelow:7897, ocircumflexgrave:7891, ocircumflexhookabove:7893, ocircumflextilde:7895, ocyrillic:1086, odblacute:337, odblgrave:525, odeva:2323, odieresis:246, odieresiscyrillic:1255, odotbelow:7885, oe:339, oekorean:12634, ogonek:731, ogonekcmb:808, ograve:242, ogujarati:2707, oharmenian:1413, ohiragana:12362, ohookabove:7887, ohorn:417, ohornacute:7899, ohorndotbelow:7907, ohorngrave:7901, 
+  ohornhookabove:7903, ohorntilde:7905, ohungarumlaut:337, oi:419, oinvertedbreve:527, okatakana:12458, okatakanahalfwidth:65397, okorean:12631, olehebrew:1451, omacron:333, omacronacute:7763, omacrongrave:7761, omdeva:2384, omega:969, omega1:982, omegacyrillic:1121, omegalatinclosed:631, omegaroundcyrillic:1147, omegatitlocyrillic:1149, omegatonos:974, omgujarati:2768, omicron:959, omicrontonos:972, omonospace:65359, one:49, onearabic:1633, onebengali:2535, onecircle:9312, onecircleinversesansserif:10122, 
+  onedeva:2407, onedotenleader:8228, oneeighth:8539, onefitted:63196, onegujarati:2791, onegurmukhi:2663, onehackarabic:1633, onehalf:189, onehangzhou:12321, oneideographicparen:12832, oneinferior:8321, onemonospace:65297, onenumeratorbengali:2548, oneoldstyle:63281, oneparen:9332, oneperiod:9352, onepersian:1777, onequarter:188, oneroman:8560, onesuperior:185, onethai:3665, onethird:8531, oogonek:491, oogonekmacron:493, oogurmukhi:2579, oomatragurmukhi:2635, oopen:596, oparen:9386, openbullet:9702, 
+  option:8997, ordfeminine:170, ordmasculine:186, orthogonal:8735, oshortdeva:2322, oshortvowelsigndeva:2378, oslash:248, oslashacute:511, osmallhiragana:12361, osmallkatakana:12457, osmallkatakanahalfwidth:65387, ostrokeacute:511, osuperior:63216, otcyrillic:1151, otilde:245, otildeacute:7757, otildedieresis:7759, oubopomofo:12577, overline:8254, overlinecenterline:65098, overlinecmb:773, overlinedashed:65097, overlinedblwavy:65100, overlinewavy:65099, overscore:175, ovowelsignbengali:2507, ovowelsigndeva:2379, 
+  ovowelsigngujarati:2763, p:112, paampssquare:13184, paasentosquare:13099, pabengali:2474, pacute:7765, padeva:2346, pagedown:8671, pageup:8670, pagujarati:2730, pagurmukhi:2602, pahiragana:12401, paiyannoithai:3631, pakatakana:12497, palatalizationcyrilliccmb:1156, palochkacyrillic:1216, pansioskorean:12671, paragraph:182, parallel:8741, parenleft:40, parenleftaltonearabic:64830, parenleftbt:63725, parenleftex:63724, parenleftinferior:8333, parenleftmonospace:65288, parenleftsmall:65113, parenleftsuperior:8317, 
+  parenlefttp:63723, parenleftvertical:65077, parenright:41, parenrightaltonearabic:64831, parenrightbt:63736, parenrightex:63735, parenrightinferior:8334, parenrightmonospace:65289, parenrightsmall:65114, parenrightsuperior:8318, parenrighttp:63734, parenrightvertical:65078, partialdiff:8706, paseqhebrew:1472, pashtahebrew:1433, pasquare:13225, patah:1463, patah11:1463, patah1d:1463, patah2a:1463, patahhebrew:1463, patahnarrowhebrew:1463, patahquarterhebrew:1463, patahwidehebrew:1463, pazerhebrew:1441, 
+  pbopomofo:12550, pcircle:9439, pdotaccent:7767, pe:1508, pecyrillic:1087, pedagesh:64324, pedageshhebrew:64324, peezisquare:13115, pefinaldageshhebrew:64323, peharabic:1662, peharmenian:1402, pehebrew:1508, pehfinalarabic:64343, pehinitialarabic:64344, pehiragana:12410, pehmedialarabic:64345, pekatakana:12506, pemiddlehookcyrillic:1191, perafehebrew:64334, percent:37, percentarabic:1642, percentmonospace:65285, percentsmall:65130, period:46, periodarmenian:1417, periodcentered:183, periodhalfwidth:65377, 
+  periodinferior:63207, periodmonospace:65294, periodsmall:65106, periodsuperior:63208, perispomenigreekcmb:834, perpendicular:8869, perthousand:8240, peseta:8359, pfsquare:13194, phabengali:2475, phadeva:2347, phagujarati:2731, phagurmukhi:2603, phi:966, phi1:981, phieuphacirclekorean:12922, phieuphaparenkorean:12826, phieuphcirclekorean:12908, phieuphkorean:12621, phieuphparenkorean:12812, philatin:632, phinthuthai:3642, phisymbolgreek:981, phook:421, phophanthai:3614, phophungthai:3612, phosamphaothai:3616, 
+  pi:960, pieupacirclekorean:12915, pieupaparenkorean:12819, pieupcieuckorean:12662, pieupcirclekorean:12901, pieupkiyeokkorean:12658, pieupkorean:12610, pieupparenkorean:12805, pieupsioskiyeokkorean:12660, pieupsioskorean:12612, pieupsiostikeutkorean:12661, pieupthieuthkorean:12663, pieuptikeutkorean:12659, pihiragana:12404, pikatakana:12500, pisymbolgreek:982, piwrarmenian:1411, plus:43, plusbelowcmb:799, pluscircle:8853, plusminus:177, plusmod:726, plusmonospace:65291, plussmall:65122, plussuperior:8314, 
+  pmonospace:65360, pmsquare:13272, pohiragana:12413, pointingindexdownwhite:9759, pointingindexleftwhite:9756, pointingindexrightwhite:9758, pointingindexupwhite:9757, pokatakana:12509, poplathai:3611, postalmark:12306, postalmarkface:12320, pparen:9387, precedes:8826, prescription:8478, primemod:697, primereversed:8245, product:8719, projective:8965, prolongedkana:12540, propellor:8984, propersubset:8834, propersuperset:8835, proportion:8759, proportional:8733, psi:968, psicyrillic:1137, psilipneumatacyrilliccmb:1158, 
+  pssquare:13232, puhiragana:12407, pukatakana:12503, pvsquare:13236, pwsquare:13242, q:113, qadeva:2392, qadmahebrew:1448, qafarabic:1602, qaffinalarabic:65238, qafinitialarabic:65239, qafmedialarabic:65240, qamats:1464, qamats10:1464, qamats1a:1464, qamats1c:1464, qamats27:1464, qamats29:1464, qamats33:1464, qamatsde:1464, qamatshebrew:1464, qamatsnarrowhebrew:1464, qamatsqatanhebrew:1464, qamatsqatannarrowhebrew:1464, qamatsqatanquarterhebrew:1464, qamatsqatanwidehebrew:1464, qamatsquarterhebrew:1464, 
+  qamatswidehebrew:1464, qarneyparahebrew:1439, qbopomofo:12561, qcircle:9440, qhook:672, qmonospace:65361, qof:1511, qofdagesh:64327, qofdageshhebrew:64327, qofhebrew:1511, qparen:9388, quarternote:9833, qubuts:1467, qubuts18:1467, qubuts25:1467, qubuts31:1467, qubutshebrew:1467, qubutsnarrowhebrew:1467, qubutsquarterhebrew:1467, qubutswidehebrew:1467, question:63, questionarabic:1567, questionarmenian:1374, questiondown:191, questiondownsmall:63423, questiongreek:894, questionmonospace:65311, questionsmall:63295, 
+  quotedbl:34, quotedblbase:8222, quotedblleft:8220, quotedblmonospace:65282, quotedblprime:12318, quotedblprimereversed:12317, quotedblright:8221, quoteleft:8216, quoteleftreversed:8219, quotereversed:8219, quoteright:8217, quoterightn:329, quotesinglbase:8218, quotesingle:39, quotesinglemonospace:65287, r:114, raarmenian:1404, rabengali:2480, racute:341, radeva:2352, radical:8730, radicalex:63717, radoverssquare:13230, radoverssquaredsquare:13231, radsquare:13229, rafe:1471, rafehebrew:1471, ragujarati:2736, 
+  ragurmukhi:2608, rahiragana:12425, rakatakana:12521, rakatakanahalfwidth:65431, ralowerdiagonalbengali:2545, ramiddlediagonalbengali:2544, ramshorn:612, ratio:8758, rbopomofo:12566, rcaron:345, rcedilla:343, rcircle:9441, rcommaaccent:343, rdblgrave:529, rdotaccent:7769, rdotbelow:7771, rdotbelowmacron:7773, referencemark:8251, reflexsubset:8838, reflexsuperset:8839, registered:174, registersans:63720, registerserif:63194, reharabic:1585, reharmenian:1408, rehfinalarabic:65198, rehiragana:12428, 
+  rekatakana:12524, rekatakanahalfwidth:65434, resh:1512, reshdageshhebrew:64328, reshhebrew:1512, reversedtilde:8765, reviahebrew:1431, reviamugrashhebrew:1431, revlogicalnot:8976, rfishhook:638, rfishhookreversed:639, rhabengali:2525, rhadeva:2397, rho:961, rhook:637, rhookturned:635, rhookturnedsuperior:693, rhosymbolgreek:1009, rhotichookmod:734, rieulacirclekorean:12913, rieulaparenkorean:12817, rieulcirclekorean:12899, rieulhieuhkorean:12608, rieulkiyeokkorean:12602, rieulkiyeoksioskorean:12649, 
+  rieulkorean:12601, rieulmieumkorean:12603, rieulpansioskorean:12652, rieulparenkorean:12803, rieulphieuphkorean:12607, rieulpieupkorean:12604, rieulpieupsioskorean:12651, rieulsioskorean:12605, rieulthieuthkorean:12606, rieultikeutkorean:12650, rieulyeorinhieuhkorean:12653, rightangle:8735, righttackbelowcmb:793, righttriangle:8895, rihiragana:12426, rikatakana:12522, rikatakanahalfwidth:65432, ring:730, ringbelowcmb:805, ringcmb:778, ringhalfleft:703, ringhalfleftarmenian:1369, ringhalfleftbelowcmb:796, 
+  ringhalfleftcentered:723, ringhalfright:702, ringhalfrightbelowcmb:825, ringhalfrightcentered:722, rinvertedbreve:531, rittorusquare:13137, rlinebelow:7775, rlongleg:636, rlonglegturned:634, rmonospace:65362, rohiragana:12429, rokatakana:12525, rokatakanahalfwidth:65435, roruathai:3619, rparen:9389, rrabengali:2524, rradeva:2353, rragurmukhi:2652, rreharabic:1681, rrehfinalarabic:64397, rrvocalicbengali:2528, rrvocalicdeva:2400, rrvocalicgujarati:2784, rrvocalicvowelsignbengali:2500, rrvocalicvowelsigndeva:2372, 
+  rrvocalicvowelsigngujarati:2756, rsuperior:63217, rtblock:9616, rturned:633, rturnedsuperior:692, ruhiragana:12427, rukatakana:12523, rukatakanahalfwidth:65433, rupeemarkbengali:2546, rupeesignbengali:2547, rupiah:63197, ruthai:3620, rvocalicbengali:2443, rvocalicdeva:2315, rvocalicgujarati:2699, rvocalicvowelsignbengali:2499, rvocalicvowelsigndeva:2371, rvocalicvowelsigngujarati:2755, s:115, sabengali:2488, sacute:347, sacutedotaccent:7781, sadarabic:1589, sadeva:2360, sadfinalarabic:65210, sadinitialarabic:65211, 
+  sadmedialarabic:65212, sagujarati:2744, sagurmukhi:2616, sahiragana:12373, sakatakana:12469, sakatakanahalfwidth:65403, sallallahoualayhewasallamarabic:65018, samekh:1505, samekhdagesh:64321, samekhdageshhebrew:64321, samekhhebrew:1505, saraaathai:3634, saraaethai:3649, saraaimaimalaithai:3652, saraaimaimuanthai:3651, saraamthai:3635, saraathai:3632, saraethai:3648, saraiileftthai:63622, saraiithai:3637, saraileftthai:63621, saraithai:3636, saraothai:3650, saraueeleftthai:63624, saraueethai:3639, 
+  saraueleftthai:63623, sarauethai:3638, sarauthai:3640, sarauuthai:3641, sbopomofo:12569, scaron:353, scarondotaccent:7783, scedilla:351, schwa:601, schwacyrillic:1241, schwadieresiscyrillic:1243, schwahook:602, scircle:9442, scircumflex:349, scommaaccent:537, sdotaccent:7777, sdotbelow:7779, sdotbelowdotaccent:7785, seagullbelowcmb:828, second:8243, secondtonechinese:714, section:167, seenarabic:1587, seenfinalarabic:65202, seeninitialarabic:65203, seenmedialarabic:65204, segol:1462, segol13:1462, 
+  segol1f:1462, segol2c:1462, segolhebrew:1462, segolnarrowhebrew:1462, segolquarterhebrew:1462, segoltahebrew:1426, segolwidehebrew:1462, seharmenian:1405, sehiragana:12379, sekatakana:12475, sekatakanahalfwidth:65406, semicolon:59, semicolonarabic:1563, semicolonmonospace:65307, semicolonsmall:65108, semivoicedmarkkana:12444, semivoicedmarkkanahalfwidth:65439, sentisquare:13090, sentosquare:13091, seven:55, sevenarabic:1639, sevenbengali:2541, sevencircle:9318, sevencircleinversesansserif:10128, 
+  sevendeva:2413, seveneighths:8542, sevengujarati:2797, sevengurmukhi:2669, sevenhackarabic:1639, sevenhangzhou:12327, sevenideographicparen:12838, seveninferior:8327, sevenmonospace:65303, sevenoldstyle:63287, sevenparen:9338, sevenperiod:9358, sevenpersian:1783, sevenroman:8566, sevensuperior:8311, seventeencircle:9328, seventeenparen:9348, seventeenperiod:9368, seventhai:3671, sfthyphen:173, shaarmenian:1399, shabengali:2486, shacyrillic:1096, shaddaarabic:1617, shaddadammaarabic:64609, shaddadammatanarabic:64606, 
+  shaddafathaarabic:64608, shaddakasraarabic:64610, shaddakasratanarabic:64607, shade:9618, shadedark:9619, shadelight:9617, shademedium:9618, shadeva:2358, shagujarati:2742, shagurmukhi:2614, shalshelethebrew:1427, shbopomofo:12565, shchacyrillic:1097, sheenarabic:1588, sheenfinalarabic:65206, sheeninitialarabic:65207, sheenmedialarabic:65208, sheicoptic:995, sheqel:8362, sheqelhebrew:8362, sheva:1456, sheva115:1456, sheva15:1456, sheva22:1456, sheva2e:1456, shevahebrew:1456, shevanarrowhebrew:1456, 
+  shevaquarterhebrew:1456, shevawidehebrew:1456, shhacyrillic:1211, shimacoptic:1005, shin:1513, shindagesh:64329, shindageshhebrew:64329, shindageshshindot:64300, shindageshshindothebrew:64300, shindageshsindot:64301, shindageshsindothebrew:64301, shindothebrew:1473, shinhebrew:1513, shinshindot:64298, shinshindothebrew:64298, shinsindot:64299, shinsindothebrew:64299, shook:642, sigma:963, sigma1:962, sigmafinal:962, sigmalunatesymbolgreek:1010, sihiragana:12375, sikatakana:12471, sikatakanahalfwidth:65404, 
+  siluqhebrew:1469, siluqlefthebrew:1469, similar:8764, sindothebrew:1474, siosacirclekorean:12916, siosaparenkorean:12820, sioscieuckorean:12670, sioscirclekorean:12902, sioskiyeokkorean:12666, sioskorean:12613, siosnieunkorean:12667, siosparenkorean:12806, siospieupkorean:12669, siostikeutkorean:12668, six:54, sixarabic:1638, sixbengali:2540, sixcircle:9317, sixcircleinversesansserif:10127, sixdeva:2412, sixgujarati:2796, sixgurmukhi:2668, sixhackarabic:1638, sixhangzhou:12326, sixideographicparen:12837, 
+  sixinferior:8326, sixmonospace:65302, sixoldstyle:63286, sixparen:9337, sixperiod:9357, sixpersian:1782, sixroman:8565, sixsuperior:8310, sixteencircle:9327, sixteencurrencydenominatorbengali:2553, sixteenparen:9347, sixteenperiod:9367, sixthai:3670, slash:47, slashmonospace:65295, slong:383, slongdotaccent:7835, smileface:9786, smonospace:65363, sofpasuqhebrew:1475, softhyphen:173, softsigncyrillic:1100, sohiragana:12381, sokatakana:12477, sokatakanahalfwidth:65407, soliduslongoverlaycmb:824, 
+  solidusshortoverlaycmb:823, sorusithai:3625, sosalathai:3624, sosothai:3595, sosuathai:3626, space:32, spacehackarabic:32, spade:9824, spadesuitblack:9824, spadesuitwhite:9828, sparen:9390, squarebelowcmb:827, squarecc:13252, squarecm:13213, squarediagonalcrosshatchfill:9641, squarehorizontalfill:9636, squarekg:13199, squarekm:13214, squarekmcapital:13262, squareln:13265, squarelog:13266, squaremg:13198, squaremil:13269, squaremm:13212, squaremsquared:13217, squareorthogonalcrosshatchfill:9638, 
+  squareupperlefttolowerrightfill:9639, squareupperrighttolowerleftfill:9640, squareverticalfill:9637, squarewhitewithsmallblack:9635, srsquare:13275, ssabengali:2487, ssadeva:2359, ssagujarati:2743, ssangcieuckorean:12617, ssanghieuhkorean:12677, ssangieungkorean:12672, ssangkiyeokkorean:12594, ssangnieunkorean:12645, ssangpieupkorean:12611, ssangsioskorean:12614, ssangtikeutkorean:12600, ssuperior:63218, sterling:163, sterlingmonospace:65505, strokelongoverlaycmb:822, strokeshortoverlaycmb:821, 
+  subset:8834, subsetnotequal:8842, subsetorequal:8838, succeeds:8827, suchthat:8715, suhiragana:12377, sukatakana:12473, sukatakanahalfwidth:65405, sukunarabic:1618, summation:8721, sun:9788, superset:8835, supersetnotequal:8843, supersetorequal:8839, svsquare:13276, syouwaerasquare:13180, t:116, tabengali:2468, tackdown:8868, tackleft:8867, tadeva:2340, tagujarati:2724, tagurmukhi:2596, taharabic:1591, tahfinalarabic:65218, tahinitialarabic:65219, tahiragana:12383, tahmedialarabic:65220, taisyouerasquare:13181, 
+  takatakana:12479, takatakanahalfwidth:65408, tatweelarabic:1600, tau:964, tav:1514, tavdages:64330, tavdagesh:64330, tavdageshhebrew:64330, tavhebrew:1514, tbar:359, tbopomofo:12554, tcaron:357, tccurl:680, tcedilla:355, tcheharabic:1670, tchehfinalarabic:64379, tchehinitialarabic:64380, tchehmedialarabic:64381, tcircle:9443, tcircumflexbelow:7793, tcommaaccent:355, tdieresis:7831, tdotaccent:7787, tdotbelow:7789, tecyrillic:1090, tedescendercyrillic:1197, teharabic:1578, tehfinalarabic:65174, 
+  tehhahinitialarabic:64674, tehhahisolatedarabic:64524, tehinitialarabic:65175, tehiragana:12390, tehjeeminitialarabic:64673, tehjeemisolatedarabic:64523, tehmarbutaarabic:1577, tehmarbutafinalarabic:65172, tehmedialarabic:65176, tehmeeminitialarabic:64676, tehmeemisolatedarabic:64526, tehnoonfinalarabic:64627, tekatakana:12486, tekatakanahalfwidth:65411, telephone:8481, telephoneblack:9742, telishagedolahebrew:1440, telishaqetanahebrew:1449, tencircle:9321, tenideographicparen:12841, tenparen:9341, 
+  tenperiod:9361, tenroman:8569, tesh:679, tet:1496, tetdagesh:64312, tetdageshhebrew:64312, tethebrew:1496, tetsecyrillic:1205, tevirhebrew:1435, tevirlefthebrew:1435, thabengali:2469, thadeva:2341, thagujarati:2725, thagurmukhi:2597, thalarabic:1584, thalfinalarabic:65196, thanthakhatlowleftthai:63640, thanthakhatlowrightthai:63639, thanthakhatthai:3660, thanthakhatupperleftthai:63638, theharabic:1579, thehfinalarabic:65178, thehinitialarabic:65179, thehmedialarabic:65180, thereexists:8707, therefore:8756, 
+  theta:952, theta1:977, thetasymbolgreek:977, thieuthacirclekorean:12921, thieuthaparenkorean:12825, thieuthcirclekorean:12907, thieuthkorean:12620, thieuthparenkorean:12811, thirteencircle:9324, thirteenparen:9344, thirteenperiod:9364, thonangmonthothai:3601, thook:429, thophuthaothai:3602, thorn:254, thothahanthai:3607, thothanthai:3600, thothongthai:3608, thothungthai:3606, thousandcyrillic:1154, thousandsseparatorarabic:1644, thousandsseparatorpersian:1644, three:51, threearabic:1635, threebengali:2537, 
+  threecircle:9314, threecircleinversesansserif:10124, threedeva:2409, threeeighths:8540, threegujarati:2793, threegurmukhi:2665, threehackarabic:1635, threehangzhou:12323, threeideographicparen:12834, threeinferior:8323, threemonospace:65299, threenumeratorbengali:2550, threeoldstyle:63283, threeparen:9334, threeperiod:9354, threepersian:1779, threequarters:190, threequartersemdash:63198, threeroman:8562, threesuperior:179, threethai:3667, thzsquare:13204, tihiragana:12385, tikatakana:12481, tikatakanahalfwidth:65409, 
+  tikeutacirclekorean:12912, tikeutaparenkorean:12816, tikeutcirclekorean:12898, tikeutkorean:12599, tikeutparenkorean:12802, tilde:732, tildebelowcmb:816, tildecmb:771, tildecomb:771, tildedoublecmb:864, tildeoperator:8764, tildeoverlaycmb:820, tildeverticalcmb:830, timescircle:8855, tipehahebrew:1430, tipehalefthebrew:1430, tippigurmukhi:2672, titlocyrilliccmb:1155, tiwnarmenian:1407, tlinebelow:7791, tmonospace:65364, toarmenian:1385, tohiragana:12392, tokatakana:12488, tokatakanahalfwidth:65412, 
+  tonebarextrahighmod:741, tonebarextralowmod:745, tonebarhighmod:742, tonebarlowmod:744, tonebarmidmod:743, tonefive:445, tonesix:389, tonetwo:424, tonos:900, tonsquare:13095, topatakthai:3599, tortoiseshellbracketleft:12308, tortoiseshellbracketleftsmall:65117, tortoiseshellbracketleftvertical:65081, tortoiseshellbracketright:12309, tortoiseshellbracketrightsmall:65118, tortoiseshellbracketrightvertical:65082, totaothai:3605, tpalatalhook:427, tparen:9391, trademark:8482, trademarksans:63722, trademarkserif:63195, 
+  tretroflexhook:648, triagdn:9660, triaglf:9668, triagrt:9658, triagup:9650, ts:678, tsadi:1510, tsadidagesh:64326, tsadidageshhebrew:64326, tsadihebrew:1510, tsecyrillic:1094, tsere:1461, tsere12:1461, tsere1e:1461, tsere2b:1461, tserehebrew:1461, tserenarrowhebrew:1461, tserequarterhebrew:1461, tserewidehebrew:1461, tshecyrillic:1115, tsuperior:63219, ttabengali:2463, ttadeva:2335, ttagujarati:2719, ttagurmukhi:2591, tteharabic:1657, ttehfinalarabic:64359, ttehinitialarabic:64360, ttehmedialarabic:64361, 
+  tthabengali:2464, tthadeva:2336, tthagujarati:2720, tthagurmukhi:2592, tturned:647, tuhiragana:12388, tukatakana:12484, tukatakanahalfwidth:65410, tusmallhiragana:12387, tusmallkatakana:12483, tusmallkatakanahalfwidth:65391, twelvecircle:9323, twelveparen:9343, twelveperiod:9363, twelveroman:8571, twentycircle:9331, twentyhangzhou:21316, twentyparen:9351, twentyperiod:9371, two:50, twoarabic:1634, twobengali:2536, twocircle:9313, twocircleinversesansserif:10123, twodeva:2408, twodotenleader:8229, 
+  twodotleader:8229, twodotleadervertical:65072, twogujarati:2792, twogurmukhi:2664, twohackarabic:1634, twohangzhou:12322, twoideographicparen:12833, twoinferior:8322, twomonospace:65298, twonumeratorbengali:2549, twooldstyle:63282, twoparen:9333, twoperiod:9353, twopersian:1778, tworoman:8561, twostroke:443, twosuperior:178, twothai:3666, twothirds:8532, u:117, uacute:250, ubar:649, ubengali:2441, ubopomofo:12584, ubreve:365, ucaron:468, ucircle:9444, ucircumflex:251, ucircumflexbelow:7799, ucyrillic:1091, 
+  udattadeva:2385, udblacute:369, udblgrave:533, udeva:2313, udieresis:252, udieresisacute:472, udieresisbelow:7795, udieresiscaron:474, udieresiscyrillic:1265, udieresisgrave:476, udieresismacron:470, udotbelow:7909, ugrave:249, ugujarati:2697, ugurmukhi:2569, uhiragana:12358, uhookabove:7911, uhorn:432, uhornacute:7913, uhorndotbelow:7921, uhorngrave:7915, uhornhookabove:7917, uhorntilde:7919, uhungarumlaut:369, uhungarumlautcyrillic:1267, uinvertedbreve:535, ukatakana:12454, ukatakanahalfwidth:65395, 
+  ukcyrillic:1145, ukorean:12636, umacron:363, umacroncyrillic:1263, umacrondieresis:7803, umatragurmukhi:2625, umonospace:65365, underscore:95, underscoredbl:8215, underscoremonospace:65343, underscorevertical:65075, underscorewavy:65103, union:8746, universal:8704, uogonek:371, uparen:9392, upblock:9600, upperdothebrew:1476, upsilon:965, upsilondieresis:971, upsilondieresistonos:944, upsilonlatin:650, upsilontonos:973, uptackbelowcmb:797, uptackmod:724, uragurmukhi:2675, uring:367, ushortcyrillic:1118, 
+  usmallhiragana:12357, usmallkatakana:12453, usmallkatakanahalfwidth:65385, ustraightcyrillic:1199, ustraightstrokecyrillic:1201, utilde:361, utildeacute:7801, utildebelow:7797, uubengali:2442, uudeva:2314, uugujarati:2698, uugurmukhi:2570, uumatragurmukhi:2626, uuvowelsignbengali:2498, uuvowelsigndeva:2370, uuvowelsigngujarati:2754, uvowelsignbengali:2497, uvowelsigndeva:2369, uvowelsigngujarati:2753, v:118, vadeva:2357, vagujarati:2741, vagurmukhi:2613, vakatakana:12535, vav:1493, vavdagesh:64309, 
+  vavdagesh65:64309, vavdageshhebrew:64309, vavhebrew:1493, vavholam:64331, vavholamhebrew:64331, vavvavhebrew:1520, vavyodhebrew:1521, vcircle:9445, vdotbelow:7807, vecyrillic:1074, veharabic:1700, vehfinalarabic:64363, vehinitialarabic:64364, vehmedialarabic:64365, vekatakana:12537, venus:9792, verticalbar:124, verticallineabovecmb:781, verticallinebelowcmb:809, verticallinelowmod:716, verticallinemod:712, vewarmenian:1406, vhook:651, vikatakana:12536, viramabengali:2509, viramadeva:2381, viramagujarati:2765, 
+  visargabengali:2435, visargadeva:2307, visargagujarati:2691, vmonospace:65366, voarmenian:1400, voicediterationhiragana:12446, voicediterationkatakana:12542, voicedmarkkana:12443, voicedmarkkanahalfwidth:65438, vokatakana:12538, vparen:9393, vtilde:7805, vturned:652, vuhiragana:12436, vukatakana:12532, w:119, wacute:7811, waekorean:12633, wahiragana:12431, wakatakana:12527, wakatakanahalfwidth:65436, wakorean:12632, wasmallhiragana:12430, wasmallkatakana:12526, wattosquare:13143, wavedash:12316, 
+  wavyunderscorevertical:65076, wawarabic:1608, wawfinalarabic:65262, wawhamzaabovearabic:1572, wawhamzaabovefinalarabic:65158, wbsquare:13277, wcircle:9446, wcircumflex:373, wdieresis:7813, wdotaccent:7815, wdotbelow:7817, wehiragana:12433, weierstrass:8472, wekatakana:12529, wekorean:12638, weokorean:12637, wgrave:7809, whitebullet:9702, whitecircle:9675, whitecircleinverse:9689, whitecornerbracketleft:12302, whitecornerbracketleftvertical:65091, whitecornerbracketright:12303, whitecornerbracketrightvertical:65092, 
+  whitediamond:9671, whitediamondcontainingblacksmalldiamond:9672, whitedownpointingsmalltriangle:9663, whitedownpointingtriangle:9661, whiteleftpointingsmalltriangle:9667, whiteleftpointingtriangle:9665, whitelenticularbracketleft:12310, whitelenticularbracketright:12311, whiterightpointingsmalltriangle:9657, whiterightpointingtriangle:9655, whitesmallsquare:9643, whitesmilingface:9786, whitesquare:9633, whitestar:9734, whitetelephone:9743, whitetortoiseshellbracketleft:12312, whitetortoiseshellbracketright:12313, 
+  whiteuppointingsmalltriangle:9653, whiteuppointingtriangle:9651, wihiragana:12432, wikatakana:12528, wikorean:12639, wmonospace:65367, wohiragana:12434, wokatakana:12530, wokatakanahalfwidth:65382, won:8361, wonmonospace:65510, wowaenthai:3623, wparen:9394, wring:7832, wsuperior:695, wturned:653, wynn:447, x:120, xabovecmb:829, xbopomofo:12562, xcircle:9447, xdieresis:7821, xdotaccent:7819, xeharmenian:1389, xi:958, xmonospace:65368, xparen:9395, xsuperior:739, y:121, yaadosquare:13134, yabengali:2479, 
+  yacute:253, yadeva:2351, yaekorean:12626, yagujarati:2735, yagurmukhi:2607, yahiragana:12420, yakatakana:12516, yakatakanahalfwidth:65428, yakorean:12625, yamakkanthai:3662, yasmallhiragana:12419, yasmallkatakana:12515, yasmallkatakanahalfwidth:65388, yatcyrillic:1123, ycircle:9448, ycircumflex:375, ydieresis:255, ydotaccent:7823, ydotbelow:7925, yeharabic:1610, yehbarreearabic:1746, yehbarreefinalarabic:64431, yehfinalarabic:65266, yehhamzaabovearabic:1574, yehhamzaabovefinalarabic:65162, yehhamzaaboveinitialarabic:65163, 
+  yehhamzaabovemedialarabic:65164, yehinitialarabic:65267, yehmedialarabic:65268, yehmeeminitialarabic:64733, yehmeemisolatedarabic:64600, yehnoonfinalarabic:64660, yehthreedotsbelowarabic:1745, yekorean:12630, yen:165, yenmonospace:65509, yeokorean:12629, yeorinhieuhkorean:12678, yerahbenyomohebrew:1450, yerahbenyomolefthebrew:1450, yericyrillic:1099, yerudieresiscyrillic:1273, yesieungkorean:12673, yesieungpansioskorean:12675, yesieungsioskorean:12674, yetivhebrew:1434, ygrave:7923, yhook:436, 
+  yhookabove:7927, yiarmenian:1397, yicyrillic:1111, yikorean:12642, yinyang:9775, yiwnarmenian:1410, ymonospace:65369, yod:1497, yoddagesh:64313, yoddageshhebrew:64313, yodhebrew:1497, yodyodhebrew:1522, yodyodpatahhebrew:64287, yohiragana:12424, yoikorean:12681, yokatakana:12520, yokatakanahalfwidth:65430, yokorean:12635, yosmallhiragana:12423, yosmallkatakana:12519, yosmallkatakanahalfwidth:65390, yotgreek:1011, yoyaekorean:12680, yoyakorean:12679, yoyakthai:3618, yoyingthai:3597, yparen:9396, 
+  ypogegrammeni:890, ypogegrammenigreekcmb:837, yr:422, yring:7833, ysuperior:696, ytilde:7929, yturned:654, yuhiragana:12422, yuikorean:12684, yukatakana:12518, yukatakanahalfwidth:65429, yukorean:12640, yusbigcyrillic:1131, yusbigiotifiedcyrillic:1133, yuslittlecyrillic:1127, yuslittleiotifiedcyrillic:1129, yusmallhiragana:12421, yusmallkatakana:12517, yusmallkatakanahalfwidth:65389, yuyekorean:12683, yuyeokorean:12682, yyabengali:2527, yyadeva:2399, z:122, zaarmenian:1382, zacute:378, zadeva:2395, 
+  zagurmukhi:2651, zaharabic:1592, zahfinalarabic:65222, zahinitialarabic:65223, zahiragana:12374, zahmedialarabic:65224, zainarabic:1586, zainfinalarabic:65200, zakatakana:12470, zaqefgadolhebrew:1429, zaqefqatanhebrew:1428, zarqahebrew:1432, zayin:1494, zayindagesh:64310, zayindageshhebrew:64310, zayinhebrew:1494, zbopomofo:12567, zcaron:382, zcircle:9449, zcircumflex:7825, zcurl:657, zdot:380, zdotaccent:380, zdotbelow:7827, zecyrillic:1079, zedescendercyrillic:1177, zedieresiscyrillic:1247, zehiragana:12380, 
+  zekatakana:12476, zero:48, zeroarabic:1632, zerobengali:2534, zerodeva:2406, zerogujarati:2790, zerogurmukhi:2662, zerohackarabic:1632, zeroinferior:8320, zeromonospace:65296, zerooldstyle:63280, zeropersian:1776, zerosuperior:8304, zerothai:3664, zerowidthjoiner:65279, zerowidthnonjoiner:8204, zerowidthspace:8203, zeta:950, zhbopomofo:12563, zhearmenian:1386, zhebrevecyrillic:1218, zhecyrillic:1078, zhedescendercyrillic:1175, zhedieresiscyrillic:1245, zihiragana:12376, zikatakana:12472, zinorhebrew:1454, 
+  zlinebelow:7829, zmonospace:65370, zohiragana:12382, zokatakana:12478, zparen:9397, zretroflexhook:656, zstroke:438, zuhiragana:12378, zukatakana:12474, ".notdef":0};
   var PDFImage = PDFImageClosure();
   var v5988 = {"space":278, "exclam":278, "quotedbl":355, "numbersign":556, "dollar":556, "percent":889, "ampersand":667, "quoteright":222, "parenleft":333, "parenright":333, "asterisk":389, "plus":584, "comma":278, "hyphen":333, "period":278, "slash":278, "zero":556, "one":556, "two":556, "three":556, "four":556, "five":556, "six":556, "seven":556, "eight":556, "nine":556, "colon":278, "semicolon":278, "less":584, "equal":584, "greater":584, "question":556, "at":1015, "A":667, "B":667, "C":722, 
   "D":722, "E":667, "F":611, "G":778, "H":722, "I":278, "J":500, "K":667, "L":556, "M":833, "N":722, "O":778, "P":667, "Q":778, "R":722, "S":667, "T":611, "U":722, "V":667, "W":944, "X":667, "Y":667, "Z":611, "bracketleft":278, "backslash":278, "bracketright":278, "asciicircum":469, "underscore":556, "quoteleft":222, "a":556, "b":556, "c":500, "d":556, "e":556, "f":278, "g":556, "h":556, "i":222, "j":222, "k":500, "l":222, "m":833, "n":556, "o":556, "p":556, "q":556, "r":333, "s":500, "t":278, "u":556, 
@@ -45695,7 +45692,7 @@ function v43(type$$26) {
   function v37(event$$1) {
     var v6041 = this.__listeners__;
     var v6042 = event$$1.name;
-    introspect(JAMScript.introspectors.processC545F199BE443C5FB0DC91C55134FB746FD8B074) {
+    introspect(JAM.policy.pC545F199BE443C5FB0DC91C55134FB746FD8B074) {
       v6041[v6042](event$$1)
     }
     return
@@ -45740,7 +45737,7 @@ function v30() {
   function v29() {
     var v6045 = PdfJS_window.__resources__;
     var v6046 = this.url;
-    introspect(JAMScript.introspectors.processC545F199BE443C5FB0DC91C55134FB746FD8B074) {
+    introspect(JAM.policy.pC545F199BE443C5FB0DC91C55134FB746FD8B074) {
       this.response = v6045[v6046]
     }
     this.readyState = 4;
@@ -45857,7 +45854,7 @@ function v25(data$$21) {
       var b3 = v6060 & 255;
       var v22308 = PdfJS_window.__to64__;
       var v22309 = b1 >> 2;
-      introspect(JAMScript.introspectors.processC545F199BE443C5FB0DC91C55134FB746FD8B074) {
+      introspect(JAM.policy.pC545F199BE443C5FB0DC91C55134FB746FD8B074) {
         var v20873 = v22308[v22309]
       }
       result$$2 = result$$2 + v20873;
@@ -45868,7 +45865,7 @@ function v25(data$$21) {
         var v22887 = PdfJS_window.__to64__;
         var v23085 = b1 & 3;
         var v22888 = v23085 << 4;
-        introspect(JAMScript.introspectors.processC545F199BE443C5FB0DC91C55134FB746FD8B074) {
+        introspect(JAM.policy.pC545F199BE443C5FB0DC91C55134FB746FD8B074) {
           var v22311 = v22887[v22888]
         }
         var v20875 = v22311 + "==";
@@ -45879,7 +45876,7 @@ function v25(data$$21) {
         var v22889 = v23086 << 4;
         var v22890 = b2 >> 4;
         var v22313 = v22889 | v22890;
-        introspect(JAMScript.introspectors.processC545F199BE443C5FB0DC91C55134FB746FD8B074) {
+        introspect(JAM.policy.pC545F199BE443C5FB0DC91C55134FB746FD8B074) {
           var v20876 = v22312[v22313]
         }
         result$$2 = result$$2 + v20876;
@@ -45890,7 +45887,7 @@ function v25(data$$21) {
           var v22891 = PdfJS_window.__to64__;
           var v23087 = b2 & 15;
           var v22892 = v23087 << 2;
-          introspect(JAMScript.introspectors.processC545F199BE443C5FB0DC91C55134FB746FD8B074) {
+          introspect(JAM.policy.pC545F199BE443C5FB0DC91C55134FB746FD8B074) {
             var v22315 = v22891[v22892]
           }
           var v20878 = v22315 + "=";
@@ -45901,12 +45898,12 @@ function v25(data$$21) {
           var v23088 = v23163 << 2;
           var v23089 = b3 >> 6;
           var v22894 = v23088 | v23089;
-          introspect(JAMScript.introspectors.processC545F199BE443C5FB0DC91C55134FB746FD8B074) {
+          introspect(JAM.policy.pC545F199BE443C5FB0DC91C55134FB746FD8B074) {
             var v22316 = v22893[v22894]
           }
           var v22895 = PdfJS_window.__to64__;
           var v22896 = b3 & 63;
-          introspect(JAMScript.introspectors.processC545F199BE443C5FB0DC91C55134FB746FD8B074) {
+          introspect(JAM.policy.pC545F199BE443C5FB0DC91C55134FB746FD8B074) {
             var v22317 = v22895[v22896]
           }
           var v20879 = v22316 + v22317;
@@ -45951,7 +45948,7 @@ function v22(runner$$2) {
     if(v6071) {
       try {
         var v20884 = suite$$1.benchmarks;
-        introspect(JAMScript.introspectors.processC545F199BE443C5FB0DC91C55134FB746FD8B074) {
+        introspect(JAM.policy.pC545F199BE443C5FB0DC91C55134FB746FD8B074) {
           var v6070 = v20884[index$$40]
         }
         v6070.Setup()
@@ -45967,7 +45964,7 @@ function v22(runner$$2) {
   function RunNextBenchmark() {
     try {
       var v20885 = suite$$1.benchmarks;
-      introspect(JAMScript.introspectors.processC545F199BE443C5FB0DC91C55134FB746FD8B074) {
+      introspect(JAM.policy.pC545F199BE443C5FB0DC91C55134FB746FD8B074) {
         var v6072 = v20885[index$$40]
       }
       data$$20 = suite$$1.RunSingleBenchmark(v6072, data$$20)
@@ -45989,7 +45986,7 @@ function v22(runner$$2) {
       var v20887 = suite$$1.benchmarks;
       var v20888 = index$$40;
       index$$40 = index$$40 + 1;
-      introspect(JAMScript.introspectors.processC545F199BE443C5FB0DC91C55134FB746FD8B074) {
+      introspect(JAM.policy.pC545F199BE443C5FB0DC91C55134FB746FD8B074) {
         var v6074 = v20887[v20888]
       }
       v6074.TearDown()
@@ -46203,14 +46200,14 @@ function v15(measurements$$1) {
   var v20910 = measurements$$1.length;
   var v6119 = i$$4 < v20910;
   for(;v6119;) {
-    introspect(JAMScript.introspectors.processC545F199BE443C5FB0DC91C55134FB746FD8B074) {
+    introspect(JAM.policy.pC545F199BE443C5FB0DC91C55134FB746FD8B074) {
       var v22326 = measurements$$1[i$$4]
     }
     var v20911 = v22326.latency;
     var v6118 = v20911 != 0;
     if(v6118) {
       var v20912 = log$$2;
-      introspect(JAMScript.introspectors.processC545F199BE443C5FB0DC91C55134FB746FD8B074) {
+      introspect(JAM.policy.pC545F199BE443C5FB0DC91C55134FB746FD8B074) {
         var v22897 = measurements$$1[i$$4]
       }
       var v22327 = v22897.latency;
@@ -46239,7 +46236,7 @@ function v14(measurements) {
   var v6122 = i$$3 < v20916;
   for(;v6122;) {
     var v20917 = log$$1;
-    introspect(JAMScript.introspectors.processC545F199BE443C5FB0DC91C55134FB746FD8B074) {
+    introspect(JAM.policy.pC545F199BE443C5FB0DC91C55134FB746FD8B074) {
       var v22898 = measurements[i$$3]
     }
     var v22328 = v22898.time;
@@ -46261,7 +46258,7 @@ function v13(numbers) {
   var v6125 = i$$2 < v20921;
   for(;v6125;) {
     var v20922 = log;
-    introspect(JAMScript.introspectors.processC545F199BE443C5FB0DC91C55134FB746FD8B074) {
+    introspect(JAM.policy.pC545F199BE443C5FB0DC91C55134FB746FD8B074) {
       var v22329 = numbers[i$$2]
     }
     var v20923 = Math.log(v22329);
@@ -46282,7 +46279,7 @@ function v12() {
   var v20926 = suites$$1.length;
   var v6128 = i$$1 < v20926;
   for(;v6128;) {
-    introspect(JAMScript.introspectors.processC545F199BE443C5FB0DC91C55134FB746FD8B074) {
+    introspect(JAM.policy.pC545F199BE443C5FB0DC91C55134FB746FD8B074) {
       var v22899 = suites$$1[i$$1]
     }
     var v22330 = v22899.benchmarks;
@@ -46308,7 +46305,7 @@ function v11(runner, skipBenchmarks$$1) {
       }else {
         var v6129 = index$$39;
         index$$39 = index$$39 + 1;
-        introspect(JAMScript.introspectors.processC545F199BE443C5FB0DC91C55134FB746FD8B074) {
+        introspect(JAM.policy.pC545F199BE443C5FB0DC91C55134FB746FD8B074) {
           var suite = suites[v6129]
         }
         var v6131 = runner.NotifyStart;
@@ -46576,11 +46573,11 @@ function tearDownPdfJS() {
   var v20951 = canvas_logs.length;
   var v6174 = i$$7 < v20951;
   for(;v6174;) {
-    introspect(JAMScript.introspectors.processC545F199BE443C5FB0DC91C55134FB746FD8B074) {
+    introspect(JAM.policy.pC545F199BE443C5FB0DC91C55134FB746FD8B074) {
       var v6169 = canvas_logs[i$$7]
     }
     var log_length = v6169.length;
-    introspect(JAMScript.introspectors.processC545F199BE443C5FB0DC91C55134FB746FD8B074) {
+    introspect(JAM.policy.pC545F199BE443C5FB0DC91C55134FB746FD8B074) {
       var v20952 = canvas_logs[i$$7]
     }
     var v6170 = v20952.join(" ");

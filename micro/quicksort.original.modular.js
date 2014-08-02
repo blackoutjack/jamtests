@@ -1,5 +1,5 @@
 function runTest() {
-introspect(JAMScript.introspectors.processAll) {
+  introspect(JAM.policy.pFull) {
   function partition(a, lo, hi) {
     var i = lo + 1;
     var j = hi;

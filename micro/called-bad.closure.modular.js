@@ -1,5 +1,5 @@
 function runTest() {
-introspect(JAMScript.introspectors.processAll) {
+  introspect(JAM.policy.pFull) {
   var f = document;
   var x = f.getElementById("ok");
 

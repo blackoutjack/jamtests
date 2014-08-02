@@ -1,7 +1,7 @@
 function runTest() {
 
   JAM.startProfile('load');
-introspect(JAMScript.introspectors.processAll) {
+  introspect(JAM.policy.pFull) {
   var html = "<img src='notapic.jpg' onerror='String.prototype.indexOf = false' />";
   var elt = document.getElementById("note");
   elt.innerHTML = html;

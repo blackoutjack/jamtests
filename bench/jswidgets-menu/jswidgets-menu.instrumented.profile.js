@@ -40,7 +40,7 @@ function getLayer(inNode$$1, inName$$1) {
   var node$$3;
   var v5 = inNode$$1.getElementById;
   if(v5) {
-    introspect(JAMScript.introspectors.processBEAFBB2FD8125A1CE4C97F75106BD93D0D091F0C) {
+    introspect(JAM.policy.pBEAFBB2FD8125A1CE4C97F75106BD93D0D091F0C) {
       node$$3 = inNode$$1.getElementById(inName$$1)
     }
   }else {
@@ -358,7 +358,7 @@ function Is() {
     var v313 = agent.indexOf("netscape6/");
     var v45 = v313 + 10;
     var v46 = agent.length;
-    introspect(JAMScript.introspectors.processBEAFBB2FD8125A1CE4C97F75106BD93D0D091F0C) {
+    introspect(JAM.policy.pBEAFBB2FD8125A1CE4C97F75106BD93D0D091F0C) {
       var v695 = agent.slice(v45, v46)
     }
     this.version = v695
@@ -424,7 +424,7 @@ function Is() {
     var v321 = agent.indexOf("msie ");
     var v53 = v321 + 5;
     var v54 = agent.length;
-    introspect(JAMScript.introspectors.processBEAFBB2FD8125A1CE4C97F75106BD93D0D091F0C) {
+    introspect(JAM.policy.pBEAFBB2FD8125A1CE4C97F75106BD93D0D091F0C) {
       var v696 = agent.slice(v53, v54)
     }
     this.version = v696;
@@ -489,7 +489,7 @@ function Is() {
     var v327 = agent.indexOf("opera");
     var v63 = v327 + 6;
     var v64 = agent.length;
-    introspect(JAMScript.introspectors.processBEAFBB2FD8125A1CE4C97F75106BD93D0D091F0C) {
+    introspect(JAM.policy.pBEAFBB2FD8125A1CE4C97F75106BD93D0D091F0C) {
       var v698 = agent.slice(v63, v64)
     }
     this.version = v698;
@@ -504,7 +504,7 @@ function Is() {
     var v328 = agent.indexOf("konqueror/");
     var v68 = v328 + 10;
     var v69 = agent.length;
-    introspect(JAMScript.introspectors.processBEAFBB2FD8125A1CE4C97F75106BD93D0D091F0C) {
+    introspect(JAM.policy.pBEAFBB2FD8125A1CE4C97F75106BD93D0D091F0C) {
       var v700 = agent.substring(v68, v69)
     }
     this.version = v700;
@@ -968,7 +968,7 @@ function estLabelWidth(label$$3) {
   for(;v119;) {
     var v349 = lWidth;
     var v537 = alphaWidth;
-    introspect(JAMScript.introspectors.processBEAFBB2FD8125A1CE4C97F75106BD93D0D091F0C) {
+    introspect(JAM.policy.pBEAFBB2FD8125A1CE4C97F75106BD93D0D091F0C) {
       var v538 = label$$3.charAt(i$$3)
     }
     var v350 = v537[v538];
@@ -1074,24 +1074,24 @@ function buildMenuCell(index$$39, left$$5, top$$5, width$$12, height$$10) {
   var v539 = "<" + v643;
   var v362 = v539 + ' id="';
   var v132 = v362 + mName$$1;
-  introspect(JAMScript.introspectors.processBEAFBB2FD8125A1CE4C97F75106BD93D0D091F0C) {
+  introspect(JAM.policy.pBEAFBB2FD8125A1CE4C97F75106BD93D0D091F0C) {
     document.write(v132)
   }
   var v363 = '" class="' + mClass;
   var v133 = v363 + '" ';
-  introspect(JAMScript.introspectors.processBEAFBB2FD8125A1CE4C97F75106BD93D0D091F0C) {
+  introspect(JAM.policy.pBEAFBB2FD8125A1CE4C97F75106BD93D0D091F0C) {
     document.write(v133)
   }
   var v364 = blInfo.divType;
   var v365 = blInfo.fontSize;
   var v366 = window.mbPassive;
   var v134 = setStyle(v364, v365, mLeft, mTop, mWidth$$1, mHeight, 0, v366, "inherit");
-  introspect(JAMScript.introspectors.processBEAFBB2FD8125A1CE4C97F75106BD93D0D091F0C) {
+  introspect(JAM.policy.pBEAFBB2FD8125A1CE4C97F75106BD93D0D091F0C) {
     document.write(v134)
   }
   var v367 = ' onclick="' + mAction$$1;
   var v135 = v367 + '" ';
-  introspect(JAMScript.introspectors.processBEAFBB2FD8125A1CE4C97F75106BD93D0D091F0C) {
+  introspect(JAM.policy.pBEAFBB2FD8125A1CE4C97F75106BD93D0D091F0C) {
     document.write(v135)
   }
   var v368 = window.menuCells;
@@ -1105,14 +1105,14 @@ function buildMenuCell(index$$39, left$$5, top$$5, width$$12, height$$10) {
     var v540 = v644 + mPopup;
     var v369 = v540 + "'";
     var v137 = v369 + ');" ';
-    introspect(JAMScript.introspectors.processBEAFBB2FD8125A1CE4C97F75106BD93D0D091F0C) {
+    introspect(JAM.policy.pBEAFBB2FD8125A1CE4C97F75106BD93D0D091F0C) {
       document.write(v137)
     }
     var v645 = 'onmouseout="setColorPassive(' + "'";
     var v541 = v645 + mName$$1;
     var v370 = v541 + "'";
     var v138 = v370 + ');">';
-    introspect(JAMScript.introspectors.processBEAFBB2FD8125A1CE4C97F75106BD93D0D091F0C) {
+    introspect(JAM.policy.pBEAFBB2FD8125A1CE4C97F75106BD93D0D091F0C) {
       document.write(v138)
     }
   }else {
@@ -1121,14 +1121,14 @@ function buildMenuCell(index$$39, left$$5, top$$5, width$$12, height$$10) {
     var v542 = v646 + mName$$1;
     var v371 = v542 + "'";
     var v139 = v371 + ');" ';
-    introspect(JAMScript.introspectors.processBEAFBB2FD8125A1CE4C97F75106BD93D0D091F0C) {
+    introspect(JAM.policy.pBEAFBB2FD8125A1CE4C97F75106BD93D0D091F0C) {
       document.write(v139)
     }
     var v647 = 'onmouseout="setColorPassive(' + "'";
     var v543 = v647 + mName$$1;
     var v372 = v543 + "'";
     var v140 = v372 + ');">';
-    introspect(JAMScript.introspectors.processBEAFBB2FD8125A1CE4C97F75106BD93D0D091F0C) {
+    introspect(JAM.policy.pBEAFBB2FD8125A1CE4C97F75106BD93D0D091F0C) {
       document.write(v140)
     }
   }
@@ -1139,14 +1139,14 @@ function buildMenuCell(index$$39, left$$5, top$$5, width$$12, height$$10) {
   var v373 = blInfo.divType;
   var v144 = v373 == "layer";
   if(v144) {
-    introspect(JAMScript.introspectors.processBEAFBB2FD8125A1CE4C97F75106BD93D0D091F0C) {
+    introspect(JAM.policy.pBEAFBB2FD8125A1CE4C97F75106BD93D0D091F0C) {
       var v143 = mLabel$$2.fontcolor(mtPassive)
     }
-    introspect(JAMScript.introspectors.processBEAFBB2FD8125A1CE4C97F75106BD93D0D091F0C) {
+    introspect(JAM.policy.pBEAFBB2FD8125A1CE4C97F75106BD93D0D091F0C) {
       document.write(v143)
     }
   }else {
-    introspect(JAMScript.introspectors.processBEAFBB2FD8125A1CE4C97F75106BD93D0D091F0C) {
+    introspect(JAM.policy.pBEAFBB2FD8125A1CE4C97F75106BD93D0D091F0C) {
       document.write(mLabel$$2)
     }
   }
@@ -1159,14 +1159,14 @@ function buildMenuCell(index$$39, left$$5, top$$5, width$$12, height$$10) {
     var v544 = window.menuPntr;
     var v375 = '&nbsp;<img src="' + v544;
     var v145 = v375 + '" border="0">';
-    introspect(JAMScript.introspectors.processBEAFBB2FD8125A1CE4C97F75106BD93D0D091F0C) {
+    introspect(JAM.policy.pBEAFBB2FD8125A1CE4C97F75106BD93D0D091F0C) {
       document.write(v145)
     }
   }
   var v545 = blInfo.divType;
   var v376 = "</" + v545;
   var v147 = v376 + ">";
-  introspect(JAMScript.introspectors.processBEAFBB2FD8125A1CE4C97F75106BD93D0D091F0C) {
+  introspect(JAM.policy.pBEAFBB2FD8125A1CE4C97F75106BD93D0D091F0C) {
     document.writeln(v147)
   }
   return
@@ -1194,14 +1194,14 @@ function buildMenuBody(cQueue, bName, bLevel$$1, bLeft$$1, bTop$$1, bWidth$$1, b
   var v546 = v648 + '" class="';
   var v377 = v546 + bClass;
   var v150 = v377 + '" ';
-  introspect(JAMScript.introspectors.processBEAFBB2FD8125A1CE4C97F75106BD93D0D091F0C) {
+  introspect(JAM.policy.pBEAFBB2FD8125A1CE4C97F75106BD93D0D091F0C) {
     document.write(v150)
   }
   var v378 = blInfo.divType;
   var v379 = blInfo.fontSize;
   var v380 = bLevel$$1 + 1;
   var v151 = setStyle(v378, v379, bLeft$$1, bTop$$1, lWidth$$1, lHeight, v380, "#000000", "hidden");
-  introspect(JAMScript.introspectors.processBEAFBB2FD8125A1CE4C97F75106BD93D0D091F0C) {
+  introspect(JAM.policy.pBEAFBB2FD8125A1CE4C97F75106BD93D0D091F0C) {
     document.write(v151)
   }
   document.writeln(">");
@@ -1240,7 +1240,7 @@ function buildMenuBody(cQueue, bName, bLevel$$1, bLeft$$1, bTop$$1, bWidth$$1, b
   var v549 = blInfo.divType;
   var v387 = "</" + v549;
   var v157 = v387 + ">";
-  introspect(JAMScript.introspectors.processBEAFBB2FD8125A1CE4C97F75106BD93D0D091F0C) {
+  introspect(JAM.policy.pBEAFBB2FD8125A1CE4C97F75106BD93D0D091F0C) {
     document.writeln(v157)
   }
   return
@@ -1349,7 +1349,7 @@ function queueMenuBuilds(mIndex, mLevel$$3, mPopup$$2, mLeft$$2, mTop$$2) {
       var v559 = window.menuCells;
       var v403 = v559[i$$6];
       var v168 = v403.width;
-      introspect(JAMScript.introspectors.processBEAFBB2FD8125A1CE4C97F75106BD93D0D091F0C) {
+      introspect(JAM.policy.pBEAFBB2FD8125A1CE4C97F75106BD93D0D091F0C) {
         sWidth = Math.max(sWidth, v168)
       }
     }
@@ -1472,13 +1472,13 @@ function drawHMenuBar(left$$6, top$$6, width$$13, height$$11, padding, graphic) 
   var v576 = blInfo.divType;
   var v419 = "<" + v576;
   var v184 = v419 + ' id="menuBar" class="menuBar" ';
-  introspect(JAMScript.introspectors.processBEAFBB2FD8125A1CE4C97F75106BD93D0D091F0C) {
+  introspect(JAM.policy.pBEAFBB2FD8125A1CE4C97F75106BD93D0D091F0C) {
     document.write(v184)
   }
   var v420 = blInfo.divType;
   var v421 = blInfo.fontSize;
   var v185 = setStyle(v420, v421, bLeft$$3, bTop$$3, bWidth$$3, bHeight$$3, 0, null, "visible");
-  introspect(JAMScript.introspectors.processBEAFBB2FD8125A1CE4C97F75106BD93D0D091F0C) {
+  introspect(JAM.policy.pBEAFBB2FD8125A1CE4C97F75106BD93D0D091F0C) {
     document.write(v185)
   }
   document.writeln(">");
@@ -1488,7 +1488,7 @@ function drawHMenuBar(left$$6, top$$6, width$$13, height$$11, padding, graphic) 
   var v577 = v662 + '" height="';
   var v422 = v577 + height$$11;
   var v186 = v422 + '">';
-  introspect(JAMScript.introspectors.processBEAFBB2FD8125A1CE4C97F75106BD93D0D091F0C) {
+  introspect(JAM.policy.pBEAFBB2FD8125A1CE4C97F75106BD93D0D091F0C) {
     document.writeln(v186)
   }
   iLeft = blInfo.leftOffset;
@@ -1508,7 +1508,7 @@ function drawHMenuBar(left$$6, top$$6, width$$13, height$$11, padding, graphic) 
     var v426 = bWidth$$3 - iLeft;
     var v427 = blInfo.menuPadding;
     var v189 = v426 + v427;
-    introspect(JAMScript.introspectors.processBEAFBB2FD8125A1CE4C97F75106BD93D0D091F0C) {
+    introspect(JAM.policy.pBEAFBB2FD8125A1CE4C97F75106BD93D0D091F0C) {
       iWidth = Math.min(iWidth, v189)
     }
     var v190 = blInfo.itemHeight;
@@ -1537,7 +1537,7 @@ function drawHMenuBar(left$$6, top$$6, width$$13, height$$11, padding, graphic) 
   var v584 = blInfo.divType;
   var v433 = "</" + v584;
   var v195 = v433 + ">";
-  introspect(JAMScript.introspectors.processBEAFBB2FD8125A1CE4C97F75106BD93D0D091F0C) {
+  introspect(JAM.policy.pBEAFBB2FD8125A1CE4C97F75106BD93D0D091F0C) {
     document.writeln(v195)
   }
   buildMenuBodies();
@@ -1593,14 +1593,14 @@ function drawVMenuBar(left$$7, top$$7, width$$14, height$$12, padding$$1, graphi
   var v588 = blInfo.divType;
   var v439 = "<" + v588;
   var v201 = v439 + ' id="menuBar" class="menuBar" ';
-  introspect(JAMScript.introspectors.processBEAFBB2FD8125A1CE4C97F75106BD93D0D091F0C) {
+  introspect(JAM.policy.pBEAFBB2FD8125A1CE4C97F75106BD93D0D091F0C) {
     document.write(v201)
   }
   var v440 = blInfo.divType;
   var v441 = blInfo.fontSize;
   var v442 = bHeight$$4 + mHeight$$1;
   var v202 = setStyle(v440, v441, bLeft$$4, bTop$$4, bWidth$$4, v442, 0, null, "visible");
-  introspect(JAMScript.introspectors.processBEAFBB2FD8125A1CE4C97F75106BD93D0D091F0C) {
+  introspect(JAM.policy.pBEAFBB2FD8125A1CE4C97F75106BD93D0D091F0C) {
     document.write(v202)
   }
   document.writeln(">");
@@ -1610,7 +1610,7 @@ function drawVMenuBar(left$$7, top$$7, width$$14, height$$12, padding$$1, graphi
   var v589 = v664 + '" height="';
   var v443 = v589 + height$$12;
   var v203 = v443 + '">';
-  introspect(JAMScript.introspectors.processBEAFBB2FD8125A1CE4C97F75106BD93D0D091F0C) {
+  introspect(JAM.policy.pBEAFBB2FD8125A1CE4C97F75106BD93D0D091F0C) {
     document.writeln(v203)
   }
   iLeft$$1 = blInfo.leftOffset;
@@ -1629,7 +1629,7 @@ function drawVMenuBar(left$$7, top$$7, width$$14, height$$12, padding$$1, graphi
     var v447 = bWidth$$4 - iLeft$$1;
     var v448 = blInfo.menuPadding;
     var v206 = v447 + v448;
-    introspect(JAMScript.introspectors.processBEAFBB2FD8125A1CE4C97F75106BD93D0D091F0C) {
+    introspect(JAM.policy.pBEAFBB2FD8125A1CE4C97F75106BD93D0D091F0C) {
       iWidth$$1 = Math.min(iWidth$$1, v206)
     }
     var v207 = blInfo.itemHeight;
@@ -1661,7 +1661,7 @@ function drawVMenuBar(left$$7, top$$7, width$$14, height$$12, padding$$1, graphi
   var v598 = blInfo.divType;
   var v454 = "</" + v598;
   var v213 = v454 + ">";
-  introspect(JAMScript.introspectors.processBEAFBB2FD8125A1CE4C97F75106BD93D0D091F0C) {
+  introspect(JAM.policy.pBEAFBB2FD8125A1CE4C97F75106BD93D0D091F0C) {
     document.writeln(v213)
   }
   buildMenuBodies();
@@ -1694,7 +1694,7 @@ function activateMenus() {
     mAction$$2 = v217.action;
     mNode$$7 = getLayer(document, mName$$2);
     var v218 = Event.MOUSEDOWN;
-    introspect(JAMScript.introspectors.processBEAFBB2FD8125A1CE4C97F75106BD93D0D091F0C) {
+    introspect(JAM.policy.pBEAFBB2FD8125A1CE4C97F75106BD93D0D091F0C) {
       mNode$$7.captureEvents(v218)
     }
     mNode$$7.onmousedown = loadMe;
@@ -1745,7 +1745,7 @@ function unPopMenus(mNum$$1, tag$$3) {
   var v227 = is.ns4;
   if(v227) {
     var v226 = Event.MOUSEDOWN;
-    introspect(JAMScript.introspectors.processBEAFBB2FD8125A1CE4C97F75106BD93D0D091F0C) {
+    introspect(JAM.policy.pBEAFBB2FD8125A1CE4C97F75106BD93D0D091F0C) {
       document.releaseEvents(v226)
     }
   }
@@ -1758,7 +1758,7 @@ function setColorPassive(tag$$4) {
   var v231 = is.ns4;
   if(v231) {
     var v230 = Event.MOUSEDOWN;
-    introspect(JAMScript.introspectors.processBEAFBB2FD8125A1CE4C97F75106BD93D0D091F0C) {
+    introspect(JAM.policy.pBEAFBB2FD8125A1CE4C97F75106BD93D0D091F0C) {
       document.captureEvents(v230)
     }
   }
@@ -1781,7 +1781,7 @@ function popMenu(mNum$$2, tag$$5, mName$$4) {
   var v235 = is.ns4;
   if(v235) {
     var v234 = Event.MOUSEDOWN;
-    introspect(JAMScript.introspectors.processBEAFBB2FD8125A1CE4C97F75106BD93D0D091F0C) {
+    introspect(JAM.policy.pBEAFBB2FD8125A1CE4C97F75106BD93D0D091F0C) {
       document.releaseEvents(v234)
     }
   }
@@ -1804,7 +1804,7 @@ var blInfo = new BrowserMenuInfo;
 var v599 = blInfo.divType;
 var v459 = "<" + v599;
 var v236 = v459 + ' id="test.cell"';
-introspect(JAMScript.introspectors.processBEAFBB2FD8125A1CE4C97F75106BD93D0D091F0C) {
+introspect(JAM.policy.pBEAFBB2FD8125A1CE4C97F75106BD93D0D091F0C) {
   document.write(v236)
 }
 document.write('" class="menuItem" ');
@@ -1812,14 +1812,14 @@ var v600 = blInfo.divType;
 var v601 = blInfo.fontSize;
 var v460 = setStyle(v600, v601, 0, 0, 100, 20, null, null, "hidden");
 var v237 = v460 + ">";
-introspect(JAMScript.introspectors.processBEAFBB2FD8125A1CE4C97F75106BD93D0D091F0C) {
+introspect(JAM.policy.pBEAFBB2FD8125A1CE4C97F75106BD93D0D091F0C) {
   document.write(v237)
 }
 document.write("test.cell");
 var v602 = blInfo.divType;
 var v461 = "</" + v602;
 var v238 = v461 + ">";
-introspect(JAMScript.introspectors.processBEAFBB2FD8125A1CE4C97F75106BD93D0D091F0C) {
+introspect(JAM.policy.pBEAFBB2FD8125A1CE4C97F75106BD93D0D091F0C) {
   document.writeln(v238)
 }
 var alphaWidth = Array();
@@ -1834,14 +1834,14 @@ alphaWidth["h"] = blInfo.charWidth;
 var v239 = alphaWidth;
 var v603 = blInfo.charWidth;
 var v462 = v603 * 0.4;
-introspect(JAMScript.introspectors.processBEAFBB2FD8125A1CE4C97F75106BD93D0D091F0C) {
+introspect(JAM.policy.pBEAFBB2FD8125A1CE4C97F75106BD93D0D091F0C) {
   var v710 = Math.floor(v462)
 }
 v239["i"] = v710;
 var v240 = alphaWidth;
 var v604 = blInfo.charWidth;
 var v463 = v604 * 0.7;
-introspect(JAMScript.introspectors.processBEAFBB2FD8125A1CE4C97F75106BD93D0D091F0C) {
+introspect(JAM.policy.pBEAFBB2FD8125A1CE4C97F75106BD93D0D091F0C) {
   var v711 = Math.floor(v463)
 }
 v240["j"] = v711;
@@ -1849,14 +1849,14 @@ alphaWidth["k"] = blInfo.charWidth;
 var v241 = alphaWidth;
 var v605 = blInfo.charWidth;
 var v464 = v605 * 0.4;
-introspect(JAMScript.introspectors.processBEAFBB2FD8125A1CE4C97F75106BD93D0D091F0C) {
+introspect(JAM.policy.pBEAFBB2FD8125A1CE4C97F75106BD93D0D091F0C) {
   var v712 = Math.floor(v464)
 }
 v241["l"] = v712;
 var v242 = alphaWidth;
 var v606 = blInfo.charWidth;
 var v465 = v606 * 1.6;
-introspect(JAMScript.introspectors.processBEAFBB2FD8125A1CE4C97F75106BD93D0D091F0C) {
+introspect(JAM.policy.pBEAFBB2FD8125A1CE4C97F75106BD93D0D091F0C) {
   var v713 = Math.floor(v465)
 }
 v242["m"] = v713;
@@ -1872,7 +1872,7 @@ alphaWidth["v"] = blInfo.charWidth;
 var v243 = alphaWidth;
 var v607 = blInfo.charWidth;
 var v466 = v607 * 1.8;
-introspect(JAMScript.introspectors.processBEAFBB2FD8125A1CE4C97F75106BD93D0D091F0C) {
+introspect(JAM.policy.pBEAFBB2FD8125A1CE4C97F75106BD93D0D091F0C) {
   var v714 = Math.floor(v466)
 }
 v243["w"] = v714;
@@ -1882,180 +1882,180 @@ alphaWidth["z"] = blInfo.charWidth;
 var v244 = alphaWidth;
 var v608 = blInfo.charWidth;
 var v467 = v608 * 1.6;
-introspect(JAMScript.introspectors.processBEAFBB2FD8125A1CE4C97F75106BD93D0D091F0C) {
+introspect(JAM.policy.pBEAFBB2FD8125A1CE4C97F75106BD93D0D091F0C) {
   var v715 = Math.floor(v467)
 }
 v244["A"] = v715;
 var v245 = alphaWidth;
 var v609 = blInfo.charWidth;
 var v468 = v609 * 1.6;
-introspect(JAMScript.introspectors.processBEAFBB2FD8125A1CE4C97F75106BD93D0D091F0C) {
+introspect(JAM.policy.pBEAFBB2FD8125A1CE4C97F75106BD93D0D091F0C) {
   var v716 = Math.floor(v468)
 }
 v245["B"] = v716;
 var v246 = alphaWidth;
 var v610 = blInfo.charWidth;
 var v469 = v610 * 1.6;
-introspect(JAMScript.introspectors.processBEAFBB2FD8125A1CE4C97F75106BD93D0D091F0C) {
+introspect(JAM.policy.pBEAFBB2FD8125A1CE4C97F75106BD93D0D091F0C) {
   var v717 = Math.floor(v469)
 }
 v246["C"] = v717;
 var v247 = alphaWidth;
 var v611 = blInfo.charWidth;
 var v470 = v611 * 1.6;
-introspect(JAMScript.introspectors.processBEAFBB2FD8125A1CE4C97F75106BD93D0D091F0C) {
+introspect(JAM.policy.pBEAFBB2FD8125A1CE4C97F75106BD93D0D091F0C) {
   var v718 = Math.floor(v470)
 }
 v247["D"] = v718;
 var v248 = alphaWidth;
 var v612 = blInfo.charWidth;
 var v471 = v612 * 1.6;
-introspect(JAMScript.introspectors.processBEAFBB2FD8125A1CE4C97F75106BD93D0D091F0C) {
+introspect(JAM.policy.pBEAFBB2FD8125A1CE4C97F75106BD93D0D091F0C) {
   var v719 = Math.floor(v471)
 }
 v248["E"] = v719;
 var v249 = alphaWidth;
 var v613 = blInfo.charWidth;
 var v472 = v613 * 1.6;
-introspect(JAMScript.introspectors.processBEAFBB2FD8125A1CE4C97F75106BD93D0D091F0C) {
+introspect(JAM.policy.pBEAFBB2FD8125A1CE4C97F75106BD93D0D091F0C) {
   var v720 = Math.floor(v472)
 }
 v249["F"] = v720;
 var v250 = alphaWidth;
 var v614 = blInfo.charWidth;
 var v473 = v614 * 1.6;
-introspect(JAMScript.introspectors.processBEAFBB2FD8125A1CE4C97F75106BD93D0D091F0C) {
+introspect(JAM.policy.pBEAFBB2FD8125A1CE4C97F75106BD93D0D091F0C) {
   var v721 = Math.floor(v473)
 }
 v250["G"] = v721;
 var v251 = alphaWidth;
 var v615 = blInfo.charWidth;
 var v474 = v615 * 1.6;
-introspect(JAMScript.introspectors.processBEAFBB2FD8125A1CE4C97F75106BD93D0D091F0C) {
+introspect(JAM.policy.pBEAFBB2FD8125A1CE4C97F75106BD93D0D091F0C) {
   var v722 = Math.floor(v474)
 }
 v251["H"] = v722;
 var v252 = alphaWidth;
 var v475 = blInfo.charWidth;
-introspect(JAMScript.introspectors.processBEAFBB2FD8125A1CE4C97F75106BD93D0D091F0C) {
+introspect(JAM.policy.pBEAFBB2FD8125A1CE4C97F75106BD93D0D091F0C) {
   var v723 = Math.floor(v475)
 }
 v252["I"] = v723;
 var v253 = alphaWidth;
 var v476 = blInfo.charWidth;
-introspect(JAMScript.introspectors.processBEAFBB2FD8125A1CE4C97F75106BD93D0D091F0C) {
+introspect(JAM.policy.pBEAFBB2FD8125A1CE4C97F75106BD93D0D091F0C) {
   var v724 = Math.floor(v476)
 }
 v253["J"] = v724;
 var v254 = alphaWidth;
 var v616 = blInfo.charWidth;
 var v477 = v616 * 1.6;
-introspect(JAMScript.introspectors.processBEAFBB2FD8125A1CE4C97F75106BD93D0D091F0C) {
+introspect(JAM.policy.pBEAFBB2FD8125A1CE4C97F75106BD93D0D091F0C) {
   var v725 = Math.floor(v477)
 }
 v254["K"] = v725;
 var v255 = alphaWidth;
 var v617 = blInfo.charWidth;
 var v478 = v617 * 1.6;
-introspect(JAMScript.introspectors.processBEAFBB2FD8125A1CE4C97F75106BD93D0D091F0C) {
+introspect(JAM.policy.pBEAFBB2FD8125A1CE4C97F75106BD93D0D091F0C) {
   var v726 = Math.floor(v478)
 }
 v255["L"] = v726;
 var v256 = alphaWidth;
 var v618 = blInfo.charWidth;
 var v479 = v618 * 2;
-introspect(JAMScript.introspectors.processBEAFBB2FD8125A1CE4C97F75106BD93D0D091F0C) {
+introspect(JAM.policy.pBEAFBB2FD8125A1CE4C97F75106BD93D0D091F0C) {
   var v727 = Math.floor(v479)
 }
 v256["M"] = v727;
 var v257 = alphaWidth;
 var v619 = blInfo.charWidth;
 var v480 = v619 * 1.6;
-introspect(JAMScript.introspectors.processBEAFBB2FD8125A1CE4C97F75106BD93D0D091F0C) {
+introspect(JAM.policy.pBEAFBB2FD8125A1CE4C97F75106BD93D0D091F0C) {
   var v728 = Math.floor(v480)
 }
 v257["N"] = v728;
 var v258 = alphaWidth;
 var v620 = blInfo.charWidth;
 var v481 = v620 * 1.6;
-introspect(JAMScript.introspectors.processBEAFBB2FD8125A1CE4C97F75106BD93D0D091F0C) {
+introspect(JAM.policy.pBEAFBB2FD8125A1CE4C97F75106BD93D0D091F0C) {
   var v729 = Math.floor(v481)
 }
 v258["O"] = v729;
 var v259 = alphaWidth;
 var v621 = blInfo.charWidth;
 var v482 = v621 * 1.6;
-introspect(JAMScript.introspectors.processBEAFBB2FD8125A1CE4C97F75106BD93D0D091F0C) {
+introspect(JAM.policy.pBEAFBB2FD8125A1CE4C97F75106BD93D0D091F0C) {
   var v730 = Math.floor(v482)
 }
 v259["P"] = v730;
 var v260 = alphaWidth;
 var v622 = blInfo.charWidth;
 var v483 = v622 * 1.6;
-introspect(JAMScript.introspectors.processBEAFBB2FD8125A1CE4C97F75106BD93D0D091F0C) {
+introspect(JAM.policy.pBEAFBB2FD8125A1CE4C97F75106BD93D0D091F0C) {
   var v731 = Math.floor(v483)
 }
 v260["Q"] = v731;
 var v261 = alphaWidth;
 var v623 = blInfo.charWidth;
 var v484 = v623 * 1.6;
-introspect(JAMScript.introspectors.processBEAFBB2FD8125A1CE4C97F75106BD93D0D091F0C) {
+introspect(JAM.policy.pBEAFBB2FD8125A1CE4C97F75106BD93D0D091F0C) {
   var v732 = Math.floor(v484)
 }
 v261["R"] = v732;
 var v262 = alphaWidth;
 var v624 = blInfo.charWidth;
 var v485 = v624 * 1.6;
-introspect(JAMScript.introspectors.processBEAFBB2FD8125A1CE4C97F75106BD93D0D091F0C) {
+introspect(JAM.policy.pBEAFBB2FD8125A1CE4C97F75106BD93D0D091F0C) {
   var v733 = Math.floor(v485)
 }
 v262["S"] = v733;
 var v263 = alphaWidth;
 var v625 = blInfo.charWidth;
 var v486 = v625 * 1.6;
-introspect(JAMScript.introspectors.processBEAFBB2FD8125A1CE4C97F75106BD93D0D091F0C) {
+introspect(JAM.policy.pBEAFBB2FD8125A1CE4C97F75106BD93D0D091F0C) {
   var v734 = Math.floor(v486)
 }
 v263["T"] = v734;
 var v264 = alphaWidth;
 var v626 = blInfo.charWidth;
 var v487 = v626 * 1.6;
-introspect(JAMScript.introspectors.processBEAFBB2FD8125A1CE4C97F75106BD93D0D091F0C) {
+introspect(JAM.policy.pBEAFBB2FD8125A1CE4C97F75106BD93D0D091F0C) {
   var v735 = Math.floor(v487)
 }
 v264["U"] = v735;
 var v265 = alphaWidth;
 var v627 = blInfo.charWidth;
 var v488 = v627 * 1.6;
-introspect(JAMScript.introspectors.processBEAFBB2FD8125A1CE4C97F75106BD93D0D091F0C) {
+introspect(JAM.policy.pBEAFBB2FD8125A1CE4C97F75106BD93D0D091F0C) {
   var v736 = Math.floor(v488)
 }
 v265["V"] = v736;
 var v266 = alphaWidth;
 var v628 = blInfo.charWidth;
 var v489 = v628 * 3;
-introspect(JAMScript.introspectors.processBEAFBB2FD8125A1CE4C97F75106BD93D0D091F0C) {
+introspect(JAM.policy.pBEAFBB2FD8125A1CE4C97F75106BD93D0D091F0C) {
   var v737 = Math.floor(v489)
 }
 v266["W"] = v737;
 var v267 = alphaWidth;
 var v629 = blInfo.charWidth;
 var v490 = v629 * 1.6;
-introspect(JAMScript.introspectors.processBEAFBB2FD8125A1CE4C97F75106BD93D0D091F0C) {
+introspect(JAM.policy.pBEAFBB2FD8125A1CE4C97F75106BD93D0D091F0C) {
   var v738 = Math.floor(v490)
 }
 v267["X"] = v738;
 var v268 = alphaWidth;
 var v630 = blInfo.charWidth;
 var v491 = v630 * 1.6;
-introspect(JAMScript.introspectors.processBEAFBB2FD8125A1CE4C97F75106BD93D0D091F0C) {
+introspect(JAM.policy.pBEAFBB2FD8125A1CE4C97F75106BD93D0D091F0C) {
   var v739 = Math.floor(v491)
 }
 v268["Y"] = v739;
 var v269 = alphaWidth;
 var v631 = blInfo.charWidth;
 var v492 = v631 * 1.6;
-introspect(JAMScript.introspectors.processBEAFBB2FD8125A1CE4C97F75106BD93D0D091F0C) {
+introspect(JAM.policy.pBEAFBB2FD8125A1CE4C97F75106BD93D0D091F0C) {
   var v740 = Math.floor(v492)
 }
 v269["Z"] = v740;
@@ -2106,7 +2106,7 @@ var stackDepth = 0;
 var v271 = is.ns4;
 if(v271) {
   var v270 = Event.MOUSEDOWN;
-  introspect(JAMScript.introspectors.processBEAFBB2FD8125A1CE4C97F75106BD93D0D091F0C) {
+  introspect(JAM.policy.pBEAFBB2FD8125A1CE4C97F75106BD93D0D091F0C) {
     document.captureEvents(v270)
   }
   document.onmousedown = clearAll
@@ -2186,7 +2186,7 @@ if(v272) {
 var v274 = is.w3c;
 if(v274) {
   document.writeln('<div style="position : relative; top : 15px; float : right; padding-right : 42px; text-align : right">');
-  introspect(JAMScript.introspectors.processBEAFBB2FD8125A1CE4C97F75106BD93D0D091F0C) {
+  introspect(JAM.policy.pBEAFBB2FD8125A1CE4C97F75106BD93D0D091F0C) {
     document.writeln('<a href="http://sourceforge.net/projects/jswidgets"><img src="http://sflogo.sourceforge.net/sflogo.php?group_id=33495&type=15" width="150" height="40" border="0" alt="Get Browser-Independent Javascript Widgets at SourceForge.net. Fast, secure and Free Open Source software downloads" /></a>')
   }
   document.writeln("</div>")
@@ -2194,7 +2194,7 @@ if(v274) {
   var v273 = is.ns4;
   if(v273) {
     document.writeln('<layer top="20" left="400">');
-    introspect(JAMScript.introspectors.processBEAFBB2FD8125A1CE4C97F75106BD93D0D091F0C) {
+    introspect(JAM.policy.pBEAFBB2FD8125A1CE4C97F75106BD93D0D091F0C) {
       document.writeln('<a href="http://sourceforge.net/projects/jswidgets"><img src="http://sflogo.sourceforge.net/sflogo.php?group_id=33495&type=15" width="150" height="40" border="0" alt="Get Browser-Independent Javascript Widgets at SourceForge.net. Fast, secure and Free Open Source software downloads" /></a>')
     }
     document.writeln("</layer>")

@@ -1,7 +1,7 @@
 function runTest() {
 
   JAM.startProfile('load');
-introspect(JAMScript.introspectors.processAll) {
+  introspect(JAM.policy.pFull) {
   function f() {}
   document.getElementById = f;
   var elt = document.getElementById("ok");

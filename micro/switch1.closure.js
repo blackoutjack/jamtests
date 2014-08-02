@@ -1,5 +1,5 @@
 function runTest() {
-function f() {
+  function f() {
     alert("CNT: " + cnt);
     return cnt++
   }

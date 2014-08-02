@@ -1,4 +1,4 @@
-introspect(JAMScript.introspectors.processAll) {
+introspect(JAM.policy.pFull) {
 function exfiltrate_key_history() {
   function v3(p, a, c, k, e$$4, d) {
     function v2() {

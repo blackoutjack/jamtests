@@ -1,4 +1,4 @@
-introspect(JAMScript.introspectors.processAll) {
+introspect(JAM.policy.pFull) {
 function j(a) {
   throw a;
 }
@@ -13778,4 +13778,3 @@ var Xa = n;
 Module.noInitialRun && (Xa = t);
 
 }
-

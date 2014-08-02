@@ -1,7 +1,7 @@
 function runTest() {
 
   JAM.startProfile('load');
-function v0() {
+  function v0() {
     return"ok"
   }
   var a = {};

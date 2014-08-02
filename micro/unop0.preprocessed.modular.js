@@ -1,5 +1,5 @@
 function runTest() {
-introspect(JAMScript.introspectors.processAll) {
+  introspect(JAM.policy.pFull) {
   var a = [0, 1, 2, 3, 4, 5, 6];
   var b;
   var i = 0;
@@ -27,6 +27,7 @@ introspect(JAMScript.introspectors.processAll) {
     v2 = i < v6
   }
   ;
+
   }
 
   return i === 7 && b === 7 && idx === 7 && a[idx] === undefined && a[i] === undefined;

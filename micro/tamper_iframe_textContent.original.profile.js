@@ -1,7 +1,7 @@
 function runTest() {
 
   JAM.startProfile('load');
-// Library Tamper Testing - iFrame
+  // Library Tamper Testing - iFrame
   // Exfiltrate data using XMLHTTP request
   function click_inner() {
   	var event = new Event('click');

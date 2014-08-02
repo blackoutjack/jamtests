@@ -40,11 +40,11 @@ function next() {
   if(v11) {
     warmup();
     var v5 = testFrame.contentDocument;
-    introspect(JAMScript.introspectors.processC545F199BE443C5FB0DC91C55134FB746FD8B074) {
+    introspect(JAM.policy.pC545F199BE443C5FB0DC91C55134FB746FD8B074) {
       v5.open()
     }
     var v6 = testFrame.contentDocument;
-    introspect(JAMScript.introspectors.processC545F199BE443C5FB0DC91C55134FB746FD8B074) {
+    introspect(JAM.policy.pC545F199BE443C5FB0DC91C55134FB746FD8B074) {
       var v7 = testContents[testIndex]
     }
     v6.write(v7);
@@ -68,10 +68,10 @@ function next() {
 function recordResult(time) {
   var v14 = currentRepeat >= 0;
   if(v14) {
-    introspect(JAMScript.introspectors.processC545F199BE443C5FB0DC91C55134FB746FD8B074) {
+    introspect(JAM.policy.pC545F199BE443C5FB0DC91C55134FB746FD8B074) {
       var v12 = output[currentRepeat]
     }
-    introspect(JAMScript.introspectors.processC545F199BE443C5FB0DC91C55134FB746FD8B074) {
+    introspect(JAM.policy.pC545F199BE443C5FB0DC91C55134FB746FD8B074) {
       var v13 = tests[testIndex]
     }
     v12[v13] = time
@@ -91,10 +91,10 @@ function finish() {
     var v30 = output.length;
     var v17 = i$$3 < v30;
     for(;v17;) {
-      introspect(JAMScript.introspectors.processC545F199BE443C5FB0DC91C55134FB746FD8B074) {
+      introspect(JAM.policy.pC545F199BE443C5FB0DC91C55134FB746FD8B074) {
         var v15 = output[i$$3]
       }
-      introspect(JAMScript.introspectors.processC545F199BE443C5FB0DC91C55134FB746FD8B074) {
+      introspect(JAM.policy.pC545F199BE443C5FB0DC91C55134FB746FD8B074) {
         var time$$1 = v15[test]
       }
       var v16 = time$$1 != time$$1;
@@ -331,4 +331,3 @@ for(;v22;) {
   v22 = i < v36
 }
 start();
-

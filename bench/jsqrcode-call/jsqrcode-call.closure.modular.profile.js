@@ -1,6 +1,6 @@
 
 JAM.startProfile('load');
-introspect(JAMScript.introspectors.processAll) {
+introspect(JAM.policy.pFull) {
 function ECB(count$$6, dataCodewords) {
   this.count = count$$6;
   this.dataCodewords = dataCodewords;

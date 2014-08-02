@@ -1,7 +1,7 @@
 function runTest() {
 
   JAM.startProfile('load');
-var v0 = Math.random();
+  var v0 = Math.random();
   x = v0 * 3;
   x = 4;
   var v1 = Math.random();

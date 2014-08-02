@@ -1,4 +1,4 @@
-introspect(JAMScript.introspectors.processAll) {
+introspect(JAM.policy.pFull) {
 function v254() {
   function v253() {
     var a$$530 = v$$1;

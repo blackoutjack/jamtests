@@ -1,4 +1,4 @@
-introspect(JAMScript.introspectors.processAll) {
+introspect(JAM.policy.pFull) {
 function v316() {
   function v315(onready_handler$$2) {
     var m1 = window.addEventListener;

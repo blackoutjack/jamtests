@@ -1,6 +1,6 @@
 
 JAM.startProfile('load');
-introspect(JAMScript.introspectors.processAll) {
+introspect(JAM.policy.pFull) {
 function add_onload_function(fn) {
   var oe = window.onload;
   window.onload = function() {

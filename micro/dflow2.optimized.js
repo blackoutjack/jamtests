@@ -1,5 +1,5 @@
 function runTest() {
-x=y=z=3;
+  x=y=z=3;
 
   return x === 3;
 }

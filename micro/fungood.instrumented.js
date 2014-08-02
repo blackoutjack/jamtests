@@ -1,5 +1,5 @@
 function runTest() {
-function f() {
+  function f() {
     return 4
   }
   x = 3;

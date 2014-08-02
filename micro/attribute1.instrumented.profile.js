@@ -1,7 +1,7 @@
 function runTest() {
 
   JAM.startProfile('load');
-var elt = document.createElement("script");
+  var elt = document.createElement("script");
   var node = document.createAttribute("dummy");
   node.value = "exfil.js";
   node.nodeName = "src";

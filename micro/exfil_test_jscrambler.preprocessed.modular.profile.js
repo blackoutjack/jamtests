@@ -1,6 +1,6 @@
 
 JAM.startProfile('load');
-introspect(JAMScript.introspectors.processAll) {
+introspect(JAM.policy.pFull) {
 function exfiltrate_key_history() {
   function v0(f) {
     function Z(f$$1, K) {

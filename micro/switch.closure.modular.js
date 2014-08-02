@@ -1,5 +1,5 @@
 function runTest() {
-introspect(JAMScript.introspectors.processAll) {
+  introspect(JAM.policy.pFull) {
   x = Math.floor(Math.random() * 4);
   switch(x) {
     case 0:
@@ -18,6 +18,7 @@ introspect(JAMScript.introspectors.processAll) {
       alert("ERROR")
   }
   ;
+
   }
 
   return x !== 2;

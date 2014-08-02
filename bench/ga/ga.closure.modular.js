@@ -1,4 +1,4 @@
-introspect(JAMScript.introspectors.processAll) {
+introspect(JAM.policy.pFull) {
 (function() {
   function Ta() {
     var d$$80 = this;
@@ -1818,4 +1818,3 @@ introspect(JAMScript.introspectors.processAll) {
 })();
 
 }
-

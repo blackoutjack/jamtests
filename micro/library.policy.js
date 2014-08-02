@@ -1,52 +1,48 @@
 var policy = function() {
-  var states = [0];
-  function processAll(tx) {
+  var states = [true, false];
+  function pFull(tx) {
     var commit = true;
-    var s1 = states.indexOf(1) > -1;
     var as = tx.getActionSequence();
     var len = as.length;
     for(var i = 0;i < len;i++) {
       var node = as[i];
-      if(s1 && node.type === "write" && node.id === "x" && JAM.identical(node.value, 2)) {
+      if(states[1] && node.type === "write" && node.id === "x" && JAM.identical(node.value, 2)) {
         commit = false;
         break
       }
-      if(!s1 && node.type === "write" && node.id === "x" && JAM.identical(node.value, 2)) {
-        s1 = true;
-        states.push(1)
+      if(!states[1] && node.type === "write" && node.id === "x" && JAM.identical(node.value, 2)) {
+        states[1] = true
       }
     }
     if(commit) {
-      JAMScript.process(tx)
+      JAM.process(tx)
     }else {
-      JAMScript.prevent(tx)
+      JAM.prevent(tx)
     }
   }
-  processAll.subsumedBy = processAll;
-  Object.freeze(processAll);
-  function process8DB99BF1222CB7BDCA5A549F4993340663A66BAA2CFB7BC756B67B61B77FE6A02E61FD2CA839CC5F(tx) {
+  pFull.subsumedBy = pFull;
+  Object.freeze(pFull);
+  function p8DB99BF1222CB7BDCA5A549F4993340663A66BAA2CFB7BC756B67B61B77FE6A02E61FD2CA839CC5F(tx) {
     var commit = true;
-    var s1 = states.indexOf(1) > -1;
     var as = tx.getActionSequence();
     var len = as.length;
     for(var i = 0;i < len;i++) {
       var node = as[i];
-      if(s1 && node.type === "write" && node.id === "x" && JAM.identical(node.value, 2)) {
+      if(states[1] && node.type === "write" && node.id === "x" && JAM.identical(node.value, 2)) {
         commit = false;
         break
       }
-      if(!s1 && node.type === "write" && node.id === "x" && JAM.identical(node.value, 2)) {
-        s1 = true;
-        states.push(1)
+      if(!states[1] && node.type === "write" && node.id === "x" && JAM.identical(node.value, 2)) {
+        states[1] = true
       }
     }
     if(commit) {
-      JAMScript.process(tx)
+      JAM.process(tx)
     }else {
-      JAMScript.prevent(tx)
+      JAM.prevent(tx)
     }
   }
-  process8DB99BF1222CB7BDCA5A549F4993340663A66BAA2CFB7BC756B67B61B77FE6A02E61FD2CA839CC5F.subsumedBy = processAll;
-  Object.freeze(process8DB99BF1222CB7BDCA5A549F4993340663A66BAA2CFB7BC756B67B61B77FE6A02E61FD2CA839CC5F);
-  return{introspectors:{process8DB99BF1222CB7BDCA5A549F4993340663A66BAA2CFB7BC756B67B61B77FE6A02E61FD2CA839CC5F:process8DB99BF1222CB7BDCA5A549F4993340663A66BAA2CFB7BC756B67B61B77FE6A02E61FD2CA839CC5F, processAll:processAll}}
+  p8DB99BF1222CB7BDCA5A549F4993340663A66BAA2CFB7BC756B67B61B77FE6A02E61FD2CA839CC5F.subsumedBy = pFull;
+  Object.freeze(p8DB99BF1222CB7BDCA5A549F4993340663A66BAA2CFB7BC756B67B61B77FE6A02E61FD2CA839CC5F);
+  return{p8DB99BF1222CB7BDCA5A549F4993340663A66BAA2CFB7BC756B67B61B77FE6A02E61FD2CA839CC5F:p8DB99BF1222CB7BDCA5A549F4993340663A66BAA2CFB7BC756B67B61B77FE6A02E61FD2CA839CC5F, pFull:pFull}
 }()

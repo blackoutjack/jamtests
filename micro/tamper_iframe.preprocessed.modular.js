@@ -1,5 +1,5 @@
 function runTest() {
-introspect(JAMScript.introspectors.processAll) {
+  introspect(JAM.policy.pFull) {
   function click_inner() {
     var event$$1 = new Event("click");
     var v0 = document.getElementById("test2");

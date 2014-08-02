@@ -1,5 +1,5 @@
 function runTest() {
-introspect(JAMScript.introspectors.processAll) {
+  introspect(JAM.policy.pFull) {
   function f() {
     alert("CNT: " + cnt);
     return cnt++
@@ -27,6 +27,7 @@ introspect(JAMScript.introspectors.processAll) {
     i *= 2
   }
   ;
+
   }
 
   return i === 0 && cnt === 5;

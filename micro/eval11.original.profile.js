@@ -1,7 +1,7 @@
 function runTest() {
 
   JAM.startProfile('load');
-eval("var x = 4;");
+  eval("var x = 4;");
   function f() {
     var y = x;
     eval("var z;");

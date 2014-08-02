@@ -1,7 +1,7 @@
 function runTest() {
 
   JAM.startProfile('load');
-function f1(a) {
+  function f1(a) {
     var i$$1 = 0;
     for(;i$$1 < 2;i$$1++) {
       a[i$$1] = letters[i$$1 * 2]

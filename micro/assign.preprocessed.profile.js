@@ -1,7 +1,7 @@
 function runTest() {
 
   JAM.startProfile('load');
-var a = document;
+  var a = document;
   a.cookie = "ok";
 
   JAM.stopProfile('load');

@@ -1,5 +1,5 @@
 function runTest() {
-function f() {
+  function f() {
     var y$$31 = x;
     eval('eval("var x;");');
     return y$$31

@@ -1,7 +1,7 @@
 function runTest() {
 
   JAM.startProfile('load');
-function f() {
+  function f() {
     cnt = cnt + 1;
     return 3
   }

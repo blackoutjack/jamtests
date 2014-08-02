@@ -1,5 +1,5 @@
 function runTest() {
-introspect(JAMScript.introspectors.processAll) {
+  introspect(JAM.policy.pFull) {
   var a = document.getElementById("ok");
   var b = document.cookie;
   document.cookie = "other";

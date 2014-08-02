@@ -1,4 +1,4 @@
-introspect(JAMScript.introspectors.processAll) {
+introspect(JAM.policy.pFull) {
 function udm_(a, b) {
   var c = "comScore=";
   var d = document;
@@ -94,4 +94,3 @@ typeof _comscore == "undefined" && (_comscore = []), function() {
 }();
 
 }
-

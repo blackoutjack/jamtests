@@ -1,7 +1,7 @@
 function runTest() {
 
   JAM.startProfile('load');
-function merge(left$$2, right$$2) {
+  function merge(left$$2, right$$2) {
     var result = [];
     var v24 = left$$2.length;
     var v15 = v24 > 0;

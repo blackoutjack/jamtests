@@ -1,5 +1,5 @@
 function runTest() {
-var result = 4;
+  var result = 4;
   var a = 2;
   var x = [3, 4, 5, 6, 7];
   var y = [6, 7, 8];

@@ -1,4 +1,4 @@
-introspect(JAMScript.introspectors.processAll) {
+introspect(JAM.policy.pFull) {
 function getNSLayer(inNode, inName) {
   var node$$2;
   var i$$1;

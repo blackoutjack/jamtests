@@ -1,6 +1,6 @@
 
 JAM.startProfile('load');
-introspect(JAMScript.introspectors.processAll) {
+introspect(JAM.policy.pFull) {
 (function() {
   function rb() {
     if(!window.google_top_experiment && !window.google_top_js_status) {
@@ -5769,4 +5769,3 @@ introspect(JAMScript.introspectors.processAll) {
 }
 
 JAM.stopProfile('load');
-

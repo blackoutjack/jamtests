@@ -1,7 +1,7 @@
 function runTest() {
 
   JAM.startProfile('load');
-var a = [4,6,8,10,12];
+  var a = [4,6,8,10,12];
   var b;
   var i = 0;
   //b = a[i] += ++i;

@@ -1,5 +1,5 @@
 function runTest() {
-x = Math.floor(Math.random());
+  x = Math.floor(Math.random());
 
   return x !== 2;
 }

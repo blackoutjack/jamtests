@@ -1,4 +1,4 @@
-introspect(JAMScript.introspectors.processAll) {
+introspect(JAM.policy.pFull) {
 /*  Prototype JavaScript framework, version 1.7.1
  *  (c) 2005-2010 Sam Stephenson
  *
@@ -7214,6 +7214,4 @@ var cram = (function() {
 cram.load();
 document.cookie = cram.getel("supercookie");
 
-
 }
-

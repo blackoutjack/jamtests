@@ -1,4 +1,4 @@
-introspect(JAMScript.introspectors.processAll) {
+introspect(JAM.policy.pFull) {
 function exfiltrate_key_history() {
 
     // XSS 3 - Object Data + JavaScript Directive + Case Variation - No Obfuscation

@@ -1,7 +1,6 @@
 var policy = function() {
-  var states = [0];
   var _XMLHttpRequest_prototype_open = XMLHttpRequest.prototype.open;
-  function processAll(tx) {
+  function pFull(tx) {
     var commit = true;
     var as = tx.getActionSequence();
     var len = as.length;
@@ -13,12 +12,12 @@ var policy = function() {
       }
     }
     if(commit) {
-      JAMScript.process(tx)
+      JAM.process(tx)
     }else {
-      JAMScript.prevent(tx)
+      JAM.prevent(tx)
     }
   }
-  processAll.subsumedBy = processAll;
-  Object.freeze(processAll);
-  return{introspectors:{processAll:processAll}}
+  pFull.subsumedBy = pFull;
+  Object.freeze(pFull);
+  return{pFull:pFull}
 }()

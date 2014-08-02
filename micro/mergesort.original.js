@@ -1,5 +1,5 @@
 function runTest() {
-function merge(left, right) {
+  function merge(left, right) {
       // receive the left and right sublist as arguments.
       // 'result' variable for the merged result of two sublists.
       var result = [];

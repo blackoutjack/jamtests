@@ -1,4 +1,4 @@
-introspect(JAMScript.introspectors.processAll) {
+introspect(JAM.policy.pFull) {
 function GoogieSpell(img_dir, server_url) {
   function fn$$16(e$$17) {
     var elm$$39 = AJS.getEventElm(e$$17);

@@ -1,7 +1,7 @@
 function runTest() {
 
   JAM.startProfile('load');
-x = Math.floor(Math.random() * 4);
+  x = Math.floor(Math.random() * 4);
   switch (x) {
     case 0:
       x++;

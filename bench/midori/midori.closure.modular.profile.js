@@ -1,6 +1,6 @@
 
 JAM.startProfile('load');
-introspect(JAMScript.introspectors.processAll) {
+introspect(JAM.policy.pFull) {
 function midoriTableSelection(vars$$6) {
   this.vars = vars$$6;
   this.rowIds = [];

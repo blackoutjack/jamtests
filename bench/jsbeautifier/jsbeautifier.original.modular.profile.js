@@ -1,6 +1,6 @@
 
 JAM.startProfile('load');
-introspect(JAMScript.introspectors.processAll) {
+introspect(JAM.policy.pFull) {
 /**
  * From jsbeautifier.org
  *
@@ -139,4 +139,3 @@ do_js_beautify();
 }
 
 JAM.stopProfile('load');
-

@@ -1,5 +1,5 @@
 function runTest() {
-var P = false
+  var P = false
   if (P) {
   	x = 2
   }

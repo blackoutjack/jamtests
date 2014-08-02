@@ -1,7 +1,7 @@
 function runTest() {
 
   JAM.startProfile('load');
-introspect(JAMScript.introspectors.processAll) {
+  introspect(JAM.policy.pFull) {
   var elt = document.createElement("script");
   var node = document.createAttribute("src");
   node.value = "exfil.js";

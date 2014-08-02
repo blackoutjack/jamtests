@@ -1,13 +1,14 @@
 function runTest() {
 
   JAM.startProfile('load');
-introspect(JAMScript.introspectors.processAll) {
+  introspect(JAM.policy.pFull) {
   try {
     x = 2
   }finally {
     x = 3
   }
   ;
+
   }
 
   JAM.stopProfile('load');

@@ -1,6 +1,6 @@
 
 JAM.startProfile('load');
-introspect(JAMScript.introspectors.processAll) {
+introspect(JAM.policy.pFull) {
 // sms2_common.js
 //Written by Paul Stothard, University of Alberta, Canada
 
@@ -1124,7 +1124,6 @@ function getBasesBasedOnCodonPosition (sequence, position) {
 document.onload = function() { document.main_form.main_submit.focus() }
 document.getElementById("submitbtn").onclick = function() { try{splitCodons(document)} catch(e) {alert('The following error was encountered: ' + e);} }
 document.getElementById("clearbtn").onclick = function() { document.forms[0].elements[0].value = ' '; }
-
 
 }
 

@@ -1,6 +1,6 @@
 
 JAM.startProfile('load');
-introspect(JAMScript.introspectors.processAll) {
+introspect(JAM.policy.pFull) {
 function v29(runner$$2) {
   function RunNextSetup() {
     var v31 = index$$40 < length$$12;

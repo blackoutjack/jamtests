@@ -1,5 +1,5 @@
 function runTest() {
-function Stack() {
+  function Stack() {
     function v2() {
       var v3 = this.discs;
       var str$$6 = v3.join(",");

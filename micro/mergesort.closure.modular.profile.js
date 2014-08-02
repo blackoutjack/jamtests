@@ -1,7 +1,7 @@
 function runTest() {
 
   JAM.startProfile('load');
-introspect(JAMScript.introspectors.processAll) {
+  introspect(JAM.policy.pFull) {
   function merge(left$$2, right$$2) {
     var result = [];
     for(;left$$2.length > 0 || right$$2.length > 0;) {

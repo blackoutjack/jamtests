@@ -1,4 +1,4 @@
-introspect(JAMScript.introspectors.processAll) {
+introspect(JAM.policy.pFull) {
 /*
 
   Midori JS Framework 2010.06 Copyright (c) 2008-2010 Aycan Gulez
@@ -1505,4 +1505,3 @@ function midoriInlineEdit(vars)
 midori.setCookie(1,2,3,4,5);
 
 }
-

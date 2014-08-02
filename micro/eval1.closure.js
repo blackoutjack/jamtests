@@ -1,5 +1,5 @@
 function runTest() {
-function f() {
+  function f() {
     eval("x = 2")
   }
   x = 0;

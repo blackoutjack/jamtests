@@ -1,146 +1,150 @@
 var policy = function() {
-  var states = [0];
+  var states = [true, false, false];
   var _HTMLElement = HTMLElement;
   var _HTMLDocument_prototype_createElement = HTMLDocument.prototype.createElement;
   var _document = document;
   var _HTMLDocument_prototype_write = HTMLDocument.prototype.write;
   var _HTMLDocument_prototype_getElementById = HTMLDocument.prototype.getElementById;
-  function processAll(tx) {
+  function pFull(tx) {
     var commit = true;
-    var s2 = states.indexOf(2) > -1;
-    var s1 = states.indexOf(1) > -1;
     var as = tx.getActionSequence();
     var len = as.length;
     for(var i = 0;i < len;i++) {
       var node = as[i];
-      if(s2 && node.type === "write" && node.id === "src" && JAM.instanceof(node.obj, _HTMLElement)) {
+      if(states[2] && node.type === "write" && node.id === "src" && JAM.instanceof(node.obj, _HTMLElement)) {
         commit = false;
         break
       }
-      if(s1 && !s2 && node.type === "call" && JAM.identical(node.value, _HTMLDocument_prototype_createElement)) {
-        s2 = true;
-        states.push(2)
+      if(states[1] && !states[2] && node.type === "call" && JAM.identical(node.value, _HTMLDocument_prototype_createElement)) {
+        states[2] = true
       }
-      if(s1 && node.type === "write" && JAM.identical(node.obj, _document) && node.id === "cookie") {
+      if(states[1] && node.type === "write" && JAM.identical(node.obj, _document) && node.id === "cookie") {
         commit = false;
         break
       }
-      if(s1 && node.type === "call" && JAM.identical(node.value, _HTMLDocument_prototype_write)) {
+      if(states[1] && node.type === "call" && JAM.identical(node.value, _HTMLDocument_prototype_write)) {
         commit = false;
         break
       }
-      if(!s1 && node.type === "read" && JAM.identical(node.obj, _document) && node.id === "cookie") {
-        s1 = true;
-        states.push(1)
+      if(!states[1] && node.type === "read" && JAM.identical(node.obj, _document) && node.id === "cookie") {
+        states[1] = true
       }
-      if(!s1 && node.type === "call" && JAM.identical(node.value, _HTMLDocument_prototype_getElementById)) {
-        s1 = true;
-        states.push(1)
+      if(!states[1] && node.type === "call" && JAM.identical(node.value, _HTMLDocument_prototype_getElementById)) {
+        states[1] = true
       }
     }
     if(commit) {
-      JAMScript.process(tx)
+      JAM.process(tx)
     }else {
-      JAMScript.prevent(tx)
+      JAM.prevent(tx)
     }
   }
-  processAll.subsumedBy = processAll;
-  Object.freeze(processAll);
-  function processB66E1E6A02EE17375C126A2C8AC7D7F8CC6B0C12(tx) {
-    var s1 = states.indexOf(1) > -1;
+  pFull.subsumedBy = pFull;
+  Object.freeze(pFull);
+  function pB66E1E6A02EE17375C126A2C8AC7D7F8CC6B0C12(tx) {
     var as = tx.getActionSequence();
     var len = as.length;
-    for(var i = 0;i < len && !s1;i++) {
+    for(var i = 0;i < len && !states[1];i++) {
       var node = as[i];
-      if(!s1 && node.type === "read" && JAM.identical(node.obj, _document) && node.id === "cookie") {
-        s1 = true;
-        states.push(1)
+      if(!states[1] && node.type === "read" && JAM.identical(node.obj, _document) && node.id === "cookie") {
+        states[1] = true
       }
     }
-    JAMScript.process(tx)
+    JAM.process(tx)
   }
-  processB66E1E6A02EE17375C126A2C8AC7D7F8CC6B0C12.subsumedBy = processAll;
-  Object.freeze(processB66E1E6A02EE17375C126A2C8AC7D7F8CC6B0C12);
-  function process7A76F4A052B00CB8470C5456FB7E9CD32CA4843C(node) {
-    var s1 = states.indexOf(1) > -1;
-    var s2 = states.indexOf(2) > -1;
-    if(s1) {
-      if(!s2) {
-        if(s1 && !s2 && node.type === "call" && JAM.identical(node.value, _HTMLDocument_prototype_createElement)) {
-          s2 = true;
-          states.push(2)
+  pB66E1E6A02EE17375C126A2C8AC7D7F8CC6B0C12.subsumedBy = pFull;
+  Object.freeze(pB66E1E6A02EE17375C126A2C8AC7D7F8CC6B0C12);
+  function p7A76F4A052B00CB8470C5456FB7E9CD32CA4843C(tx) {
+    if(states[1]) {
+      var as = tx.getActionSequence();
+      var len = as.length;
+      for(var i = 0;i < len && !states[2];i++) {
+        var node = as[i];
+        if(states[1] && !states[2] && node.type === "call" && JAM.identical(node.value, _HTMLDocument_prototype_createElement)) {
+          states[2] = true
         }
       }
     }
-    return true
+    JAM.process(tx)
   }
-  Object.freeze(process7A76F4A052B00CB8470C5456FB7E9CD32CA4843C);
-  function processF87540E947B0B5FFDF4D142ACFD250D318FB96BE(tx) {
+  p7A76F4A052B00CB8470C5456FB7E9CD32CA4843C.subsumedBy = pFull;
+  Object.freeze(p7A76F4A052B00CB8470C5456FB7E9CD32CA4843C);
+  function pF87540E947B0B5FFDF4D142ACFD250D318FB96BE(tx) {
     var commit = true;
-    var s2 = states.indexOf(2) > -1;
-    if(s2) {
+    if(states[2]) {
       var as = tx.getActionSequence();
       var len = as.length;
       for(var i = 0;i < len;i++) {
         var node = as[i];
-        if(s2 && node.type === "write" && node.id === "src" && JAM.instanceof(node.obj, _HTMLElement)) {
+        if(states[2] && node.type === "write" && node.id === "src" && JAM.instanceof(node.obj, _HTMLElement)) {
           commit = false;
           break
         }
       }
     }
     if(commit) {
-      JAMScript.process(tx)
+      JAM.process(tx)
     }else {
-      JAMScript.prevent(tx)
+      JAM.prevent(tx)
     }
   }
-  processF87540E947B0B5FFDF4D142ACFD250D318FB96BE.subsumedBy = processAll;
-  Object.freeze(processF87540E947B0B5FFDF4D142ACFD250D318FB96BE);
-  function process425E08A28862414CF7130381FE99A660F52DB811(tx) {
+  pF87540E947B0B5FFDF4D142ACFD250D318FB96BE.subsumedBy = pFull;
+  Object.freeze(pF87540E947B0B5FFDF4D142ACFD250D318FB96BE);
+  function p425E08A28862414CF7130381FE99A660F52DB811(tx) {
     var commit = true;
-    var s1 = states.indexOf(1) > -1;
-    if(s1) {
+    if(states[1]) {
       var as = tx.getActionSequence();
       var len = as.length;
       for(var i = 0;i < len;i++) {
         var node = as[i];
-        if(s1 && node.type === "write" && JAM.identical(node.obj, _document) && node.id === "cookie") {
+        if(states[1] && node.type === "write" && JAM.identical(node.obj, _document) && node.id === "cookie") {
           commit = false;
           break
         }
       }
     }
     if(commit) {
-      JAMScript.process(tx)
+      JAM.process(tx)
     }else {
-      JAMScript.prevent(tx)
+      JAM.prevent(tx)
     }
   }
-  process425E08A28862414CF7130381FE99A660F52DB811.subsumedBy = processAll;
-  Object.freeze(process425E08A28862414CF7130381FE99A660F52DB811);
-  function processA08CEDA442E424AE71BF7DCC829F61A509D2BF14(node) {
+  p425E08A28862414CF7130381FE99A660F52DB811.subsumedBy = pFull;
+  Object.freeze(p425E08A28862414CF7130381FE99A660F52DB811);
+  function pA08CEDA442E424AE71BF7DCC829F61A509D2BF14(tx) {
     var commit = true;
-    var s1 = states.indexOf(1) > -1;
-    if(s1) {
-      if(s1 && node.type === "call" && JAM.identical(node.value, _HTMLDocument_prototype_write)) {
-        commit = false
+    if(states[1]) {
+      var as = tx.getActionSequence();
+      var len = as.length;
+      for(var i = 0;i < len;i++) {
+        var node = as[i];
+        if(states[1] && node.type === "call" && JAM.identical(node.value, _HTMLDocument_prototype_write)) {
+          commit = false;
+          break
+        }
       }
     }
-    return commit
+    if(commit) {
+      JAM.process(tx)
+    }else {
+      JAM.prevent(tx)
+    }
   }
-  Object.freeze(processA08CEDA442E424AE71BF7DCC829F61A509D2BF14);
-  function process76F930B34187247043082CAF9881927B310E8F56(node) {
-    var s1 = states.indexOf(1) > -1;
-    if(!s1) {
-      if(!s1 && node.type === "call" && JAM.identical(node.value, _HTMLDocument_prototype_getElementById)) {
-        s1 = true;
-        states.push(1)
+  pA08CEDA442E424AE71BF7DCC829F61A509D2BF14.subsumedBy = pFull;
+  Object.freeze(pA08CEDA442E424AE71BF7DCC829F61A509D2BF14);
+  function p76F930B34187247043082CAF9881927B310E8F56(tx) {
+    var as = tx.getActionSequence();
+    var len = as.length;
+    for(var i = 0;i < len && !states[1];i++) {
+      var node = as[i];
+      if(!states[1] && node.type === "call" && JAM.identical(node.value, _HTMLDocument_prototype_getElementById)) {
+        states[1] = true
       }
     }
-    return true
+    JAM.process(tx)
   }
-  Object.freeze(process76F930B34187247043082CAF9881927B310E8F56);
-  return{introspectors:{processB66E1E6A02EE17375C126A2C8AC7D7F8CC6B0C12:processB66E1E6A02EE17375C126A2C8AC7D7F8CC6B0C12, process7A76F4A052B00CB8470C5456FB7E9CD32CA4843C:process7A76F4A052B00CB8470C5456FB7E9CD32CA4843C, processF87540E947B0B5FFDF4D142ACFD250D318FB96BE:processF87540E947B0B5FFDF4D142ACFD250D318FB96BE, process425E08A28862414CF7130381FE99A660F52DB811:process425E08A28862414CF7130381FE99A660F52DB811, processA08CEDA442E424AE71BF7DCC829F61A509D2BF14:processA08CEDA442E424AE71BF7DCC829F61A509D2BF14, 
-  process76F930B34187247043082CAF9881927B310E8F56:process76F930B34187247043082CAF9881927B310E8F56, processAll:processAll}}
+  p76F930B34187247043082CAF9881927B310E8F56.subsumedBy = pFull;
+  Object.freeze(p76F930B34187247043082CAF9881927B310E8F56);
+  return{pB66E1E6A02EE17375C126A2C8AC7D7F8CC6B0C12:pB66E1E6A02EE17375C126A2C8AC7D7F8CC6B0C12, p7A76F4A052B00CB8470C5456FB7E9CD32CA4843C:p7A76F4A052B00CB8470C5456FB7E9CD32CA4843C, pF87540E947B0B5FFDF4D142ACFD250D318FB96BE:pF87540E947B0B5FFDF4D142ACFD250D318FB96BE, p425E08A28862414CF7130381FE99A660F52DB811:p425E08A28862414CF7130381FE99A660F52DB811, pA08CEDA442E424AE71BF7DCC829F61A509D2BF14:pA08CEDA442E424AE71BF7DCC829F61A509D2BF14, p76F930B34187247043082CAF9881927B310E8F56:p76F930B34187247043082CAF9881927B310E8F56, 
+  pFull:pFull}
 }()

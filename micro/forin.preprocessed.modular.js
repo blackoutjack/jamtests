@@ -1,5 +1,5 @@
 function runTest() {
-introspect(JAMScript.introspectors.processAll) {
+  introspect(JAM.policy.pFull) {
   o = new Object;
   o.y = 2;
   o.z = 3;
@@ -8,6 +8,7 @@ introspect(JAMScript.introspectors.processAll) {
     x = o[i]
   }
   ;
+
   }
 
   return x === 3;

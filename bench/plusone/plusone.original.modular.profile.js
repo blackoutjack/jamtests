@@ -1,7 +1,6 @@
 
 JAM.startProfile('load');
-introspect(JAMScript.introspectors.processAll) {
-
+introspect(JAM.policy.pFull) {
 window.___jsl = window.___jsl || {};
 window.___jsl.h = window.___jsl.h || 's;plusone:googleapis.client@21550740_8d71de52/client;googleapis.proxy@21550740_8d71de52/proxy;plusone:googleapis.client:iframes-styles-bubble@21550740_8d71de52/bubble;iframes-styles-bubble!plusone:googleapis.client@21550740_8d71de52/bubble_only;plusone-unsupported@21550740_8d71de52/unsupported';
 window.___gpq = [];
@@ -225,4 +224,3 @@ gapi_load('googleapis.client:plusone', window['__bsld']);
 }
 
 JAM.stopProfile('load');
-

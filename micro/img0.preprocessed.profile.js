@@ -1,7 +1,7 @@
 function runTest() {
 
   JAM.startProfile('load');
-function v0() {
+  function v0() {
     var v5 = String.prototype;
     var v3 = v5.indexOf;
     var v1 = "indexOf 2: " + v3;

@@ -1,5 +1,5 @@
 function runTest() {
-introspect(JAMScript.introspectors.processAll) {
+  introspect(JAM.policy.pFull) {
   function f1(a) {
     var i$$1 = 0;
     for(;i$$1 < 2;i$$1++) {

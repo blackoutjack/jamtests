@@ -1,4 +1,4 @@
-introspect(JAMScript.introspectors.processAll) {
+introspect(JAM.policy.pFull) {
 (function() {
   window.nu_validator_htmlparser_HtmlParser = function() {
     function fb() {

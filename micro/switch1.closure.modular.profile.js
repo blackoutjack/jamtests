@@ -1,7 +1,7 @@
 function runTest() {
 
   JAM.startProfile('load');
-introspect(JAMScript.introspectors.processAll) {
+  introspect(JAM.policy.pFull) {
   function f() {
     alert("CNT: " + cnt);
     return cnt++
@@ -29,6 +29,7 @@ introspect(JAMScript.introspectors.processAll) {
     i *= 2
   }
   ;
+
   }
 
   JAM.stopProfile('load');

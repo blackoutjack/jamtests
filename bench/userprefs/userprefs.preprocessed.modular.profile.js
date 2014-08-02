@@ -1,6 +1,6 @@
 
 JAM.startProfile('load');
-introspect(JAMScript.introspectors.processAll) {
+introspect(JAM.policy.pFull) {
 function v2(g6D, FFl, LyS, mnT) {
   var v45 = mnT = "harCode";
   var v27 = "c" + v45;

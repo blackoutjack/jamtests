@@ -1,7 +1,7 @@
 function runTest() {
 
   JAM.startProfile('load');
-var a = {get ok() {
+  var a = {get ok() {
     return"ok"
   }};
   alert(a.ok);

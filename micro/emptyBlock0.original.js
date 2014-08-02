@@ -1,5 +1,5 @@
 function runTest() {
-function f() {
+  function f() {
     if (typeof x === "undefined") {
       //do nothing
     } else {

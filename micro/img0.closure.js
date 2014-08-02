@@ -1,5 +1,5 @@
 function runTest() {
-var html = "<img src='notapic.jpg' onerror='String.prototype.indexOf = false' />";
+  var html = "<img src='notapic.jpg' onerror='String.prototype.indexOf = false' />";
   var elt = document.getElementById("note");
   elt.innerHTML = html;
   alert("indexOf 1: " + String.prototype.indexOf);

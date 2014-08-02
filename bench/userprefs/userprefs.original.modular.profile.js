@@ -1,6 +1,6 @@
 
 JAM.startProfile('load');
-introspect(JAMScript.introspectors.processAll) {
+introspect(JAM.policy.pFull) {
 // Get a value of one cookie set by it's name
 // Impmentation from the JS 1.3 Client Guide by Netscape
 function getCookie(Name)
@@ -88,4 +88,3 @@ function boldEvents()
 }
 
 JAM.stopProfile('load');
-

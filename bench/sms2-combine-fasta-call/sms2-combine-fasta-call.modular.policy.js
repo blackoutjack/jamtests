@@ -1,5 +1,4 @@
 var policy = function() {
-  var states = [0];
   var _HTMLElement = HTMLElement;
   var _HTMLDocument = HTMLDocument;
   var _Window = Window;
@@ -10,7 +9,7 @@ var policy = function() {
   var _Window_prototype_postMessage = Window.prototype.postMessage;
   var _WebSocket_prototype_send = WebSocket.prototype.send;
   var _HTMLFormElement_prototype_submit = HTMLFormElement.prototype.submit;
-  function processAll(tx) {
+  function pFull(tx) {
     var commit = true;
     var as = tx.getActionSequence();
     var len = as.length;
@@ -26,12 +25,12 @@ var policy = function() {
       }
     }
     if(commit) {
-      JAMScript.process(tx)
+      JAM.process(tx)
     }else {
-      JAMScript.prevent(tx)
+      JAM.prevent(tx)
     }
   }
-  processAll.subsumedBy = processAll;
-  Object.freeze(processAll);
-  return{introspectors:{processAll:processAll}}
+  pFull.subsumedBy = pFull;
+  Object.freeze(pFull);
+  return{pFull:pFull}
 }()

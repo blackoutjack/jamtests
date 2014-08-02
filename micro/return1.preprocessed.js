@@ -1,5 +1,5 @@
 function runTest() {
-function g() {
+  function g() {
     try {
       if(x) {
         return

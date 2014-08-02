@@ -1,7 +1,6 @@
 var policy = function() {
-  var states = [0];
   var _HTMLDocument_prototype_getElementById = HTMLDocument.prototype.getElementById;
-  function processAll(tx) {
+  function pFull(tx) {
     var commit = true;
     var as = tx.getActionSequence();
     var len = as.length;
@@ -13,20 +12,31 @@ var policy = function() {
       }
     }
     if(commit) {
-      JAMScript.process(tx)
+      JAM.process(tx)
     }else {
-      JAMScript.prevent(tx)
+      JAM.prevent(tx)
     }
   }
-  processAll.subsumedBy = processAll;
-  Object.freeze(processAll);
-  function processD5795DFA086639893C72614AC0D6E60E856B441D(node) {
+  pFull.subsumedBy = pFull;
+  Object.freeze(pFull);
+  function pD5795DFA086639893C72614AC0D6E60E856B441D(tx) {
     var commit = true;
-    if(node.type === "call" && JAM.identical(node.value, _HTMLDocument_prototype_getElementById)) {
-      commit = false
+    var as = tx.getActionSequence();
+    var len = as.length;
+    for(var i = 0;i < len;i++) {
+      var node = as[i];
+      if(node.type === "call" && JAM.identical(node.value, _HTMLDocument_prototype_getElementById)) {
+        commit = false;
+        break
+      }
     }
-    return commit
+    if(commit) {
+      JAM.process(tx)
+    }else {
+      JAM.prevent(tx)
+    }
   }
-  Object.freeze(processD5795DFA086639893C72614AC0D6E60E856B441D);
-  return{introspectors:{processD5795DFA086639893C72614AC0D6E60E856B441D:processD5795DFA086639893C72614AC0D6E60E856B441D, processAll:processAll}}
+  pD5795DFA086639893C72614AC0D6E60E856B441D.subsumedBy = pFull;
+  Object.freeze(pD5795DFA086639893C72614AC0D6E60E856B441D);
+  return{pD5795DFA086639893C72614AC0D6E60E856B441D:pD5795DFA086639893C72614AC0D6E60E856B441D, pFull:pFull}
 }()

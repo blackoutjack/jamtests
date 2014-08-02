@@ -1,5 +1,5 @@
 function runTest() {
-x = 1;
+  x = 1;
   switch (x) {
     case 1:
       y = x;

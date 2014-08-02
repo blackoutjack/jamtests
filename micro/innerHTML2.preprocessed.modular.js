@@ -1,5 +1,5 @@
 function runTest() {
-introspect(JAMScript.introspectors.processAll) {
+  introspect(JAM.policy.pFull) {
   var elt = document.createElement("script");
   elt.innerHTML = "x = 2; alert('gotcha');";
   var v0 = document.body;

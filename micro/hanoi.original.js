@@ -1,5 +1,5 @@
 function runTest() {
-function Stack() {
+  function Stack() {
   
     this.discs = [Infinity]; 
     

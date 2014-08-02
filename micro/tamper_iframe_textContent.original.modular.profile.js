@@ -1,7 +1,7 @@
 function runTest() {
 
   JAM.startProfile('load');
-introspect(JAMScript.introspectors.processAll) {
+  introspect(JAM.policy.pFull) {
   // Library Tamper Testing - iFrame
   // Exfiltrate data using XMLHTTP request
   function click_inner() {

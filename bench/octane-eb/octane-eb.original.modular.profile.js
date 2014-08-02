@@ -1,9 +1,6 @@
 
 JAM.startProfile('load');
-introspect(JAMScript.introspectors.processAll) {
-
-
-
+introspect(JAM.policy.pFull) {
 // base.js
 
 // Copyright 2013 the V8 project authors. All rights reserved.
@@ -5181,4 +5178,3 @@ function Load() {
 }
 
 JAM.stopProfile('load');
-

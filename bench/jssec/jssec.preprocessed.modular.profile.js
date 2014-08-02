@@ -1,6 +1,6 @@
 
 JAM.startProfile('load');
-introspect(JAMScript.introspectors.processAll) {
+introspect(JAM.policy.pFull) {
 function snipDisplay(c, p) {
   var v1;
   var v27 = document.getElementById(c);
@@ -75,4 +75,3 @@ v12.onclick();
 }
 
 JAM.stopProfile('load');
-

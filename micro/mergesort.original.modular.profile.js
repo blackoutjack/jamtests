@@ -1,7 +1,7 @@
 function runTest() {
 
   JAM.startProfile('load');
-introspect(JAMScript.introspectors.processAll) {
+  introspect(JAM.policy.pFull) {
   function merge(left, right) {
       // receive the left and right sublist as arguments.
       // 'result' variable for the merged result of two sublists.
@@ -75,7 +75,6 @@ introspect(JAMScript.introspectors.processAll) {
   
   // Sort the array.
   var sorted = mergeSort(vals);
-  
 
   }
 

@@ -276,11 +276,11 @@ function v881() {
         var v924 = parentObj$$667.memoryReader;
         var v925 = data$$135;
         data$$135 = data$$135 + 1;
-        introspect(JAMScript.introspectors.processC545F199BE443C5FB0DC91C55134FB746FD8B074) {
+        introspect(JAM.policy.pC545F199BE443C5FB0DC91C55134FB746FD8B074) {
           newData$$1 = v924[data$$135](parentObj$$667, v925)
         }
         var v8495 = parentObj$$667.memory;
-        introspect(JAMScript.introspectors.processC545F199BE443C5FB0DC91C55134FB746FD8B074) {
+        introspect(JAM.policy.pC545F199BE443C5FB0DC91C55134FB746FD8B074) {
           var v5572 = v8495[address$$161]
         }
         var v928 = newData$$1 != v5572;
@@ -307,7 +307,7 @@ function v881() {
           var v5574 = parentObj$$667.memoryReader;
           var v5575 = data$$135;
           data$$135 = data$$135 + 1;
-          introspect(JAMScript.introspectors.processC545F199BE443C5FB0DC91C55134FB746FD8B074) {
+          introspect(JAM.policy.pC545F199BE443C5FB0DC91C55134FB746FD8B074) {
             var v10772 = v5574[data$$135](parentObj$$667, v5575)
           }
           v930[v931] = v10772;
@@ -317,7 +317,7 @@ function v881() {
           var v5576 = parentObj$$667.memoryReader;
           var v5577 = data$$135;
           data$$135 = data$$135 + 1;
-          introspect(JAMScript.introspectors.processC545F199BE443C5FB0DC91C55134FB746FD8B074) {
+          introspect(JAM.policy.pC545F199BE443C5FB0DC91C55134FB746FD8B074) {
             var v10773 = v5576[data$$135](parentObj$$667, v5577)
           }
           v932[v933] = v10773;
@@ -327,7 +327,7 @@ function v881() {
           var v5578 = parentObj$$667.memoryReader;
           var v5579 = data$$135;
           data$$135 = data$$135 + 1;
-          introspect(JAMScript.introspectors.processC545F199BE443C5FB0DC91C55134FB746FD8B074) {
+          introspect(JAM.policy.pC545F199BE443C5FB0DC91C55134FB746FD8B074) {
             var v10774 = v5578[data$$135](parentObj$$667, v5579)
           }
           v934[v935] = v10774;
@@ -337,7 +337,7 @@ function v881() {
           var v5580 = parentObj$$667.memoryReader;
           var v5581 = data$$135;
           data$$135 = data$$135 + 1;
-          introspect(JAMScript.introspectors.processC545F199BE443C5FB0DC91C55134FB746FD8B074) {
+          introspect(JAM.policy.pC545F199BE443C5FB0DC91C55134FB746FD8B074) {
             var v10775 = v5580[data$$135](parentObj$$667, v5581)
           }
           v936[v937] = v10775;
@@ -678,11 +678,11 @@ function v881() {
         var v1006 = parentObj$$650.memoryReader;
         var v1007 = data$$118;
         data$$118 = data$$118 + 1;
-        introspect(JAMScript.introspectors.processC545F199BE443C5FB0DC91C55134FB746FD8B074) {
+        introspect(JAM.policy.pC545F199BE443C5FB0DC91C55134FB746FD8B074) {
           newData = v1006[data$$118](parentObj$$650, v1007)
         }
         var v8516 = parentObj$$650.memory;
-        introspect(JAMScript.introspectors.processC545F199BE443C5FB0DC91C55134FB746FD8B074) {
+        introspect(JAM.policy.pC545F199BE443C5FB0DC91C55134FB746FD8B074) {
           var v5620 = v8516[address$$144]
         }
         var v1010 = newData != v5620;
@@ -709,7 +709,7 @@ function v881() {
           var v5622 = parentObj$$650.memoryReader;
           var v5623 = data$$118;
           data$$118 = data$$118 + 1;
-          introspect(JAMScript.introspectors.processC545F199BE443C5FB0DC91C55134FB746FD8B074) {
+          introspect(JAM.policy.pC545F199BE443C5FB0DC91C55134FB746FD8B074) {
             var v10777 = v5622[data$$118](parentObj$$650, v5623)
           }
           v1012[v1013] = v10777;
@@ -719,7 +719,7 @@ function v881() {
           var v5624 = parentObj$$650.memoryReader;
           var v5625 = data$$118;
           data$$118 = data$$118 + 1;
-          introspect(JAMScript.introspectors.processC545F199BE443C5FB0DC91C55134FB746FD8B074) {
+          introspect(JAM.policy.pC545F199BE443C5FB0DC91C55134FB746FD8B074) {
             var v10778 = v5624[data$$118](parentObj$$650, v5625)
           }
           v1014[v1015] = v10778;
@@ -729,7 +729,7 @@ function v881() {
           var v5626 = parentObj$$650.memoryReader;
           var v5627 = data$$118;
           data$$118 = data$$118 + 1;
-          introspect(JAMScript.introspectors.processC545F199BE443C5FB0DC91C55134FB746FD8B074) {
+          introspect(JAM.policy.pC545F199BE443C5FB0DC91C55134FB746FD8B074) {
             var v10779 = v5626[data$$118](parentObj$$650, v5627)
           }
           v1016[v1017] = v10779;
@@ -739,7 +739,7 @@ function v881() {
           var v5628 = parentObj$$650.memoryReader;
           var v5629 = data$$118;
           data$$118 = data$$118 + 1;
-          introspect(JAMScript.introspectors.processC545F199BE443C5FB0DC91C55134FB746FD8B074) {
+          introspect(JAM.policy.pC545F199BE443C5FB0DC91C55134FB746FD8B074) {
             var v10780 = v5628[data$$118](parentObj$$650, v5629)
           }
           v1018[v1019] = v10780;
@@ -2163,7 +2163,7 @@ function v800(tilesToTransfer) {
         var v1327 = 32768 | destination;
         var v5829 = source$$1;
         source$$1 = source$$1 + 1;
-        introspect(JAMScript.introspectors.processC545F199BE443C5FB0DC91C55134FB746FD8B074) {
+        introspect(JAM.policy.pC545F199BE443C5FB0DC91C55134FB746FD8B074) {
           var v10781 = memoryReader[source$$1](this, v5829)
         }
         v1326[v1327] = v10781;
@@ -2171,7 +2171,7 @@ function v800(tilesToTransfer) {
         var v1329 = 32769 | destination;
         var v5830 = source$$1;
         source$$1 = source$$1 + 1;
-        introspect(JAMScript.introspectors.processC545F199BE443C5FB0DC91C55134FB746FD8B074) {
+        introspect(JAM.policy.pC545F199BE443C5FB0DC91C55134FB746FD8B074) {
           var v10782 = memoryReader[source$$1](this, v5830)
         }
         v1328[v1329] = v10782;
@@ -2179,7 +2179,7 @@ function v800(tilesToTransfer) {
         var v1331 = 32770 | destination;
         var v5831 = source$$1;
         source$$1 = source$$1 + 1;
-        introspect(JAMScript.introspectors.processC545F199BE443C5FB0DC91C55134FB746FD8B074) {
+        introspect(JAM.policy.pC545F199BE443C5FB0DC91C55134FB746FD8B074) {
           var v10783 = memoryReader[source$$1](this, v5831)
         }
         v1330[v1331] = v10783;
@@ -2187,7 +2187,7 @@ function v800(tilesToTransfer) {
         var v1333 = 32771 | destination;
         var v5832 = source$$1;
         source$$1 = source$$1 + 1;
-        introspect(JAMScript.introspectors.processC545F199BE443C5FB0DC91C55134FB746FD8B074) {
+        introspect(JAM.policy.pC545F199BE443C5FB0DC91C55134FB746FD8B074) {
           var v10784 = memoryReader[source$$1](this, v5832)
         }
         v1332[v1333] = v10784;
@@ -2195,7 +2195,7 @@ function v800(tilesToTransfer) {
         var v1335 = 32772 | destination;
         var v5833 = source$$1;
         source$$1 = source$$1 + 1;
-        introspect(JAMScript.introspectors.processC545F199BE443C5FB0DC91C55134FB746FD8B074) {
+        introspect(JAM.policy.pC545F199BE443C5FB0DC91C55134FB746FD8B074) {
           var v10785 = memoryReader[source$$1](this, v5833)
         }
         v1334[v1335] = v10785;
@@ -2203,7 +2203,7 @@ function v800(tilesToTransfer) {
         var v1337 = 32773 | destination;
         var v5834 = source$$1;
         source$$1 = source$$1 + 1;
-        introspect(JAMScript.introspectors.processC545F199BE443C5FB0DC91C55134FB746FD8B074) {
+        introspect(JAM.policy.pC545F199BE443C5FB0DC91C55134FB746FD8B074) {
           var v10786 = memoryReader[source$$1](this, v5834)
         }
         v1336[v1337] = v10786;
@@ -2211,7 +2211,7 @@ function v800(tilesToTransfer) {
         var v1339 = 32774 | destination;
         var v5835 = source$$1;
         source$$1 = source$$1 + 1;
-        introspect(JAMScript.introspectors.processC545F199BE443C5FB0DC91C55134FB746FD8B074) {
+        introspect(JAM.policy.pC545F199BE443C5FB0DC91C55134FB746FD8B074) {
           var v10787 = memoryReader[source$$1](this, v5835)
         }
         v1338[v1339] = v10787;
@@ -2219,7 +2219,7 @@ function v800(tilesToTransfer) {
         var v1341 = 32775 | destination;
         var v5836 = source$$1;
         source$$1 = source$$1 + 1;
-        introspect(JAMScript.introspectors.processC545F199BE443C5FB0DC91C55134FB746FD8B074) {
+        introspect(JAM.policy.pC545F199BE443C5FB0DC91C55134FB746FD8B074) {
           var v10788 = memoryReader[source$$1](this, v5836)
         }
         v1340[v1341] = v10788;
@@ -2227,7 +2227,7 @@ function v800(tilesToTransfer) {
         var v1343 = 32776 | destination;
         var v5837 = source$$1;
         source$$1 = source$$1 + 1;
-        introspect(JAMScript.introspectors.processC545F199BE443C5FB0DC91C55134FB746FD8B074) {
+        introspect(JAM.policy.pC545F199BE443C5FB0DC91C55134FB746FD8B074) {
           var v10789 = memoryReader[source$$1](this, v5837)
         }
         v1342[v1343] = v10789;
@@ -2235,7 +2235,7 @@ function v800(tilesToTransfer) {
         var v1345 = 32777 | destination;
         var v5838 = source$$1;
         source$$1 = source$$1 + 1;
-        introspect(JAMScript.introspectors.processC545F199BE443C5FB0DC91C55134FB746FD8B074) {
+        introspect(JAM.policy.pC545F199BE443C5FB0DC91C55134FB746FD8B074) {
           var v10790 = memoryReader[source$$1](this, v5838)
         }
         v1344[v1345] = v10790;
@@ -2243,7 +2243,7 @@ function v800(tilesToTransfer) {
         var v1347 = 32778 | destination;
         var v5839 = source$$1;
         source$$1 = source$$1 + 1;
-        introspect(JAMScript.introspectors.processC545F199BE443C5FB0DC91C55134FB746FD8B074) {
+        introspect(JAM.policy.pC545F199BE443C5FB0DC91C55134FB746FD8B074) {
           var v10791 = memoryReader[source$$1](this, v5839)
         }
         v1346[v1347] = v10791;
@@ -2251,7 +2251,7 @@ function v800(tilesToTransfer) {
         var v1349 = 32779 | destination;
         var v5840 = source$$1;
         source$$1 = source$$1 + 1;
-        introspect(JAMScript.introspectors.processC545F199BE443C5FB0DC91C55134FB746FD8B074) {
+        introspect(JAM.policy.pC545F199BE443C5FB0DC91C55134FB746FD8B074) {
           var v10792 = memoryReader[source$$1](this, v5840)
         }
         v1348[v1349] = v10792;
@@ -2259,7 +2259,7 @@ function v800(tilesToTransfer) {
         var v1351 = 32780 | destination;
         var v5841 = source$$1;
         source$$1 = source$$1 + 1;
-        introspect(JAMScript.introspectors.processC545F199BE443C5FB0DC91C55134FB746FD8B074) {
+        introspect(JAM.policy.pC545F199BE443C5FB0DC91C55134FB746FD8B074) {
           var v10793 = memoryReader[source$$1](this, v5841)
         }
         v1350[v1351] = v10793;
@@ -2267,7 +2267,7 @@ function v800(tilesToTransfer) {
         var v1353 = 32781 | destination;
         var v5842 = source$$1;
         source$$1 = source$$1 + 1;
-        introspect(JAMScript.introspectors.processC545F199BE443C5FB0DC91C55134FB746FD8B074) {
+        introspect(JAM.policy.pC545F199BE443C5FB0DC91C55134FB746FD8B074) {
           var v10794 = memoryReader[source$$1](this, v5842)
         }
         v1352[v1353] = v10794;
@@ -2275,7 +2275,7 @@ function v800(tilesToTransfer) {
         var v1355 = 32782 | destination;
         var v5843 = source$$1;
         source$$1 = source$$1 + 1;
-        introspect(JAMScript.introspectors.processC545F199BE443C5FB0DC91C55134FB746FD8B074) {
+        introspect(JAM.policy.pC545F199BE443C5FB0DC91C55134FB746FD8B074) {
           var v10795 = memoryReader[source$$1](this, v5843)
         }
         v1354[v1355] = v10795;
@@ -2283,7 +2283,7 @@ function v800(tilesToTransfer) {
         var v1357 = 32783 | destination;
         var v5844 = source$$1;
         source$$1 = source$$1 + 1;
-        introspect(JAMScript.introspectors.processC545F199BE443C5FB0DC91C55134FB746FD8B074) {
+        introspect(JAM.policy.pC545F199BE443C5FB0DC91C55134FB746FD8B074) {
           var v10796 = memoryReader[source$$1](this, v5844)
         }
         v1356[v1357] = v10796;
@@ -2296,7 +2296,7 @@ function v800(tilesToTransfer) {
         destination = destination + 1;
         var v5845 = source$$1;
         source$$1 = source$$1 + 1;
-        introspect(JAMScript.introspectors.processC545F199BE443C5FB0DC91C55134FB746FD8B074) {
+        introspect(JAM.policy.pC545F199BE443C5FB0DC91C55134FB746FD8B074) {
           var v10797 = memoryReader[source$$1](this, v5845)
         }
         v1358[v1359] = v10797;
@@ -2305,7 +2305,7 @@ function v800(tilesToTransfer) {
         destination = destination + 1;
         var v5846 = source$$1;
         source$$1 = source$$1 + 1;
-        introspect(JAMScript.introspectors.processC545F199BE443C5FB0DC91C55134FB746FD8B074) {
+        introspect(JAM.policy.pC545F199BE443C5FB0DC91C55134FB746FD8B074) {
           var v10798 = memoryReader[source$$1](this, v5846)
         }
         v1360[v1361] = v10798;
@@ -2314,7 +2314,7 @@ function v800(tilesToTransfer) {
         destination = destination + 1;
         var v5847 = source$$1;
         source$$1 = source$$1 + 1;
-        introspect(JAMScript.introspectors.processC545F199BE443C5FB0DC91C55134FB746FD8B074) {
+        introspect(JAM.policy.pC545F199BE443C5FB0DC91C55134FB746FD8B074) {
           var v10799 = memoryReader[source$$1](this, v5847)
         }
         v1362[v1363] = v10799;
@@ -2323,7 +2323,7 @@ function v800(tilesToTransfer) {
         destination = destination + 1;
         var v5848 = source$$1;
         source$$1 = source$$1 + 1;
-        introspect(JAMScript.introspectors.processC545F199BE443C5FB0DC91C55134FB746FD8B074) {
+        introspect(JAM.policy.pC545F199BE443C5FB0DC91C55134FB746FD8B074) {
           var v10800 = memoryReader[source$$1](this, v5848)
         }
         v1364[v1365] = v10800;
@@ -2332,7 +2332,7 @@ function v800(tilesToTransfer) {
         destination = destination + 1;
         var v5849 = source$$1;
         source$$1 = source$$1 + 1;
-        introspect(JAMScript.introspectors.processC545F199BE443C5FB0DC91C55134FB746FD8B074) {
+        introspect(JAM.policy.pC545F199BE443C5FB0DC91C55134FB746FD8B074) {
           var v10801 = memoryReader[source$$1](this, v5849)
         }
         v1366[v1367] = v10801;
@@ -2341,7 +2341,7 @@ function v800(tilesToTransfer) {
         destination = destination + 1;
         var v5850 = source$$1;
         source$$1 = source$$1 + 1;
-        introspect(JAMScript.introspectors.processC545F199BE443C5FB0DC91C55134FB746FD8B074) {
+        introspect(JAM.policy.pC545F199BE443C5FB0DC91C55134FB746FD8B074) {
           var v10802 = memoryReader[source$$1](this, v5850)
         }
         v1368[v1369] = v10802;
@@ -2350,7 +2350,7 @@ function v800(tilesToTransfer) {
         destination = destination + 1;
         var v5851 = source$$1;
         source$$1 = source$$1 + 1;
-        introspect(JAMScript.introspectors.processC545F199BE443C5FB0DC91C55134FB746FD8B074) {
+        introspect(JAM.policy.pC545F199BE443C5FB0DC91C55134FB746FD8B074) {
           var v10803 = memoryReader[source$$1](this, v5851)
         }
         v1370[v1371] = v10803;
@@ -2359,7 +2359,7 @@ function v800(tilesToTransfer) {
         destination = destination + 1;
         var v5852 = source$$1;
         source$$1 = source$$1 + 1;
-        introspect(JAMScript.introspectors.processC545F199BE443C5FB0DC91C55134FB746FD8B074) {
+        introspect(JAM.policy.pC545F199BE443C5FB0DC91C55134FB746FD8B074) {
           var v10804 = memoryReader[source$$1](this, v5852)
         }
         v1372[v1373] = v10804;
@@ -2368,7 +2368,7 @@ function v800(tilesToTransfer) {
         destination = destination + 1;
         var v5853 = source$$1;
         source$$1 = source$$1 + 1;
-        introspect(JAMScript.introspectors.processC545F199BE443C5FB0DC91C55134FB746FD8B074) {
+        introspect(JAM.policy.pC545F199BE443C5FB0DC91C55134FB746FD8B074) {
           var v10805 = memoryReader[source$$1](this, v5853)
         }
         v1374[v1375] = v10805;
@@ -2377,7 +2377,7 @@ function v800(tilesToTransfer) {
         destination = destination + 1;
         var v5854 = source$$1;
         source$$1 = source$$1 + 1;
-        introspect(JAMScript.introspectors.processC545F199BE443C5FB0DC91C55134FB746FD8B074) {
+        introspect(JAM.policy.pC545F199BE443C5FB0DC91C55134FB746FD8B074) {
           var v10806 = memoryReader[source$$1](this, v5854)
         }
         v1376[v1377] = v10806;
@@ -2386,7 +2386,7 @@ function v800(tilesToTransfer) {
         destination = destination + 1;
         var v5855 = source$$1;
         source$$1 = source$$1 + 1;
-        introspect(JAMScript.introspectors.processC545F199BE443C5FB0DC91C55134FB746FD8B074) {
+        introspect(JAM.policy.pC545F199BE443C5FB0DC91C55134FB746FD8B074) {
           var v10807 = memoryReader[source$$1](this, v5855)
         }
         v1378[v1379] = v10807;
@@ -2395,7 +2395,7 @@ function v800(tilesToTransfer) {
         destination = destination + 1;
         var v5856 = source$$1;
         source$$1 = source$$1 + 1;
-        introspect(JAMScript.introspectors.processC545F199BE443C5FB0DC91C55134FB746FD8B074) {
+        introspect(JAM.policy.pC545F199BE443C5FB0DC91C55134FB746FD8B074) {
           var v10808 = memoryReader[source$$1](this, v5856)
         }
         v1380[v1381] = v10808;
@@ -2404,7 +2404,7 @@ function v800(tilesToTransfer) {
         destination = destination + 1;
         var v5857 = source$$1;
         source$$1 = source$$1 + 1;
-        introspect(JAMScript.introspectors.processC545F199BE443C5FB0DC91C55134FB746FD8B074) {
+        introspect(JAM.policy.pC545F199BE443C5FB0DC91C55134FB746FD8B074) {
           var v10809 = memoryReader[source$$1](this, v5857)
         }
         v1382[v1383] = v10809;
@@ -2413,7 +2413,7 @@ function v800(tilesToTransfer) {
         destination = destination + 1;
         var v5858 = source$$1;
         source$$1 = source$$1 + 1;
-        introspect(JAMScript.introspectors.processC545F199BE443C5FB0DC91C55134FB746FD8B074) {
+        introspect(JAM.policy.pC545F199BE443C5FB0DC91C55134FB746FD8B074) {
           var v10810 = memoryReader[source$$1](this, v5858)
         }
         v1384[v1385] = v10810;
@@ -2422,7 +2422,7 @@ function v800(tilesToTransfer) {
         destination = destination + 1;
         var v5859 = source$$1;
         source$$1 = source$$1 + 1;
-        introspect(JAMScript.introspectors.processC545F199BE443C5FB0DC91C55134FB746FD8B074) {
+        introspect(JAM.policy.pC545F199BE443C5FB0DC91C55134FB746FD8B074) {
           var v10811 = memoryReader[source$$1](this, v5859)
         }
         v1386[v1387] = v10811;
@@ -2431,7 +2431,7 @@ function v800(tilesToTransfer) {
         destination = destination + 1;
         var v5860 = source$$1;
         source$$1 = source$$1 + 1;
-        introspect(JAMScript.introspectors.processC545F199BE443C5FB0DC91C55134FB746FD8B074) {
+        introspect(JAM.policy.pC545F199BE443C5FB0DC91C55134FB746FD8B074) {
           var v10812 = memoryReader[source$$1](this, v5860)
         }
         v1388[v1389] = v10812;
@@ -2452,7 +2452,7 @@ function v800(tilesToTransfer) {
         var v1394 = destination;
         var v5861 = source$$1;
         source$$1 = source$$1 + 1;
-        introspect(JAMScript.introspectors.processC545F199BE443C5FB0DC91C55134FB746FD8B074) {
+        introspect(JAM.policy.pC545F199BE443C5FB0DC91C55134FB746FD8B074) {
           var v10813 = memoryReader[source$$1](this, v5861)
         }
         v1393[v1394] = v10813;
@@ -2460,7 +2460,7 @@ function v800(tilesToTransfer) {
         var v1396 = destination | 1;
         var v5862 = source$$1;
         source$$1 = source$$1 + 1;
-        introspect(JAMScript.introspectors.processC545F199BE443C5FB0DC91C55134FB746FD8B074) {
+        introspect(JAM.policy.pC545F199BE443C5FB0DC91C55134FB746FD8B074) {
           var v10814 = memoryReader[source$$1](this, v5862)
         }
         v1395[v1396] = v10814;
@@ -2468,7 +2468,7 @@ function v800(tilesToTransfer) {
         var v1398 = destination | 2;
         var v5863 = source$$1;
         source$$1 = source$$1 + 1;
-        introspect(JAMScript.introspectors.processC545F199BE443C5FB0DC91C55134FB746FD8B074) {
+        introspect(JAM.policy.pC545F199BE443C5FB0DC91C55134FB746FD8B074) {
           var v10815 = memoryReader[source$$1](this, v5863)
         }
         v1397[v1398] = v10815;
@@ -2476,7 +2476,7 @@ function v800(tilesToTransfer) {
         var v1400 = destination | 3;
         var v5864 = source$$1;
         source$$1 = source$$1 + 1;
-        introspect(JAMScript.introspectors.processC545F199BE443C5FB0DC91C55134FB746FD8B074) {
+        introspect(JAM.policy.pC545F199BE443C5FB0DC91C55134FB746FD8B074) {
           var v10816 = memoryReader[source$$1](this, v5864)
         }
         v1399[v1400] = v10816;
@@ -2484,7 +2484,7 @@ function v800(tilesToTransfer) {
         var v1402 = destination | 4;
         var v5865 = source$$1;
         source$$1 = source$$1 + 1;
-        introspect(JAMScript.introspectors.processC545F199BE443C5FB0DC91C55134FB746FD8B074) {
+        introspect(JAM.policy.pC545F199BE443C5FB0DC91C55134FB746FD8B074) {
           var v10817 = memoryReader[source$$1](this, v5865)
         }
         v1401[v1402] = v10817;
@@ -2492,7 +2492,7 @@ function v800(tilesToTransfer) {
         var v1404 = destination | 5;
         var v5866 = source$$1;
         source$$1 = source$$1 + 1;
-        introspect(JAMScript.introspectors.processC545F199BE443C5FB0DC91C55134FB746FD8B074) {
+        introspect(JAM.policy.pC545F199BE443C5FB0DC91C55134FB746FD8B074) {
           var v10818 = memoryReader[source$$1](this, v5866)
         }
         v1403[v1404] = v10818;
@@ -2500,7 +2500,7 @@ function v800(tilesToTransfer) {
         var v1406 = destination | 6;
         var v5867 = source$$1;
         source$$1 = source$$1 + 1;
-        introspect(JAMScript.introspectors.processC545F199BE443C5FB0DC91C55134FB746FD8B074) {
+        introspect(JAM.policy.pC545F199BE443C5FB0DC91C55134FB746FD8B074) {
           var v10819 = memoryReader[source$$1](this, v5867)
         }
         v1405[v1406] = v10819;
@@ -2508,7 +2508,7 @@ function v800(tilesToTransfer) {
         var v1408 = destination | 7;
         var v5868 = source$$1;
         source$$1 = source$$1 + 1;
-        introspect(JAMScript.introspectors.processC545F199BE443C5FB0DC91C55134FB746FD8B074) {
+        introspect(JAM.policy.pC545F199BE443C5FB0DC91C55134FB746FD8B074) {
           var v10820 = memoryReader[source$$1](this, v5868)
         }
         v1407[v1408] = v10820;
@@ -2516,7 +2516,7 @@ function v800(tilesToTransfer) {
         var v1410 = destination | 8;
         var v5869 = source$$1;
         source$$1 = source$$1 + 1;
-        introspect(JAMScript.introspectors.processC545F199BE443C5FB0DC91C55134FB746FD8B074) {
+        introspect(JAM.policy.pC545F199BE443C5FB0DC91C55134FB746FD8B074) {
           var v10821 = memoryReader[source$$1](this, v5869)
         }
         v1409[v1410] = v10821;
@@ -2524,7 +2524,7 @@ function v800(tilesToTransfer) {
         var v1412 = destination | 9;
         var v5870 = source$$1;
         source$$1 = source$$1 + 1;
-        introspect(JAMScript.introspectors.processC545F199BE443C5FB0DC91C55134FB746FD8B074) {
+        introspect(JAM.policy.pC545F199BE443C5FB0DC91C55134FB746FD8B074) {
           var v10822 = memoryReader[source$$1](this, v5870)
         }
         v1411[v1412] = v10822;
@@ -2532,7 +2532,7 @@ function v800(tilesToTransfer) {
         var v1414 = destination | 10;
         var v5871 = source$$1;
         source$$1 = source$$1 + 1;
-        introspect(JAMScript.introspectors.processC545F199BE443C5FB0DC91C55134FB746FD8B074) {
+        introspect(JAM.policy.pC545F199BE443C5FB0DC91C55134FB746FD8B074) {
           var v10823 = memoryReader[source$$1](this, v5871)
         }
         v1413[v1414] = v10823;
@@ -2540,7 +2540,7 @@ function v800(tilesToTransfer) {
         var v1416 = destination | 11;
         var v5872 = source$$1;
         source$$1 = source$$1 + 1;
-        introspect(JAMScript.introspectors.processC545F199BE443C5FB0DC91C55134FB746FD8B074) {
+        introspect(JAM.policy.pC545F199BE443C5FB0DC91C55134FB746FD8B074) {
           var v10824 = memoryReader[source$$1](this, v5872)
         }
         v1415[v1416] = v10824;
@@ -2548,7 +2548,7 @@ function v800(tilesToTransfer) {
         var v1418 = destination | 12;
         var v5873 = source$$1;
         source$$1 = source$$1 + 1;
-        introspect(JAMScript.introspectors.processC545F199BE443C5FB0DC91C55134FB746FD8B074) {
+        introspect(JAM.policy.pC545F199BE443C5FB0DC91C55134FB746FD8B074) {
           var v10825 = memoryReader[source$$1](this, v5873)
         }
         v1417[v1418] = v10825;
@@ -2556,7 +2556,7 @@ function v800(tilesToTransfer) {
         var v1420 = destination | 13;
         var v5874 = source$$1;
         source$$1 = source$$1 + 1;
-        introspect(JAMScript.introspectors.processC545F199BE443C5FB0DC91C55134FB746FD8B074) {
+        introspect(JAM.policy.pC545F199BE443C5FB0DC91C55134FB746FD8B074) {
           var v10826 = memoryReader[source$$1](this, v5874)
         }
         v1419[v1420] = v10826;
@@ -2564,7 +2564,7 @@ function v800(tilesToTransfer) {
         var v1422 = destination | 14;
         var v5875 = source$$1;
         source$$1 = source$$1 + 1;
-        introspect(JAMScript.introspectors.processC545F199BE443C5FB0DC91C55134FB746FD8B074) {
+        introspect(JAM.policy.pC545F199BE443C5FB0DC91C55134FB746FD8B074) {
           var v10827 = memoryReader[source$$1](this, v5875)
         }
         v1421[v1422] = v10827;
@@ -2572,7 +2572,7 @@ function v800(tilesToTransfer) {
         var v1424 = destination | 15;
         var v5876 = source$$1;
         source$$1 = source$$1 + 1;
-        introspect(JAMScript.introspectors.processC545F199BE443C5FB0DC91C55134FB746FD8B074) {
+        introspect(JAM.policy.pC545F199BE443C5FB0DC91C55134FB746FD8B074) {
           var v10828 = memoryReader[source$$1](this, v5876)
         }
         v1423[v1424] = v10828;
@@ -2585,7 +2585,7 @@ function v800(tilesToTransfer) {
         destination = destination + 1;
         var v5877 = source$$1;
         source$$1 = source$$1 + 1;
-        introspect(JAMScript.introspectors.processC545F199BE443C5FB0DC91C55134FB746FD8B074) {
+        introspect(JAM.policy.pC545F199BE443C5FB0DC91C55134FB746FD8B074) {
           var v10829 = memoryReader[source$$1](this, v5877)
         }
         v1425[v1426] = v10829;
@@ -2594,7 +2594,7 @@ function v800(tilesToTransfer) {
         destination = destination + 1;
         var v5878 = source$$1;
         source$$1 = source$$1 + 1;
-        introspect(JAMScript.introspectors.processC545F199BE443C5FB0DC91C55134FB746FD8B074) {
+        introspect(JAM.policy.pC545F199BE443C5FB0DC91C55134FB746FD8B074) {
           var v10830 = memoryReader[source$$1](this, v5878)
         }
         v1427[v1428] = v10830;
@@ -2603,7 +2603,7 @@ function v800(tilesToTransfer) {
         destination = destination + 1;
         var v5879 = source$$1;
         source$$1 = source$$1 + 1;
-        introspect(JAMScript.introspectors.processC545F199BE443C5FB0DC91C55134FB746FD8B074) {
+        introspect(JAM.policy.pC545F199BE443C5FB0DC91C55134FB746FD8B074) {
           var v10831 = memoryReader[source$$1](this, v5879)
         }
         v1429[v1430] = v10831;
@@ -2612,7 +2612,7 @@ function v800(tilesToTransfer) {
         destination = destination + 1;
         var v5880 = source$$1;
         source$$1 = source$$1 + 1;
-        introspect(JAMScript.introspectors.processC545F199BE443C5FB0DC91C55134FB746FD8B074) {
+        introspect(JAM.policy.pC545F199BE443C5FB0DC91C55134FB746FD8B074) {
           var v10832 = memoryReader[source$$1](this, v5880)
         }
         v1431[v1432] = v10832;
@@ -2621,7 +2621,7 @@ function v800(tilesToTransfer) {
         destination = destination + 1;
         var v5881 = source$$1;
         source$$1 = source$$1 + 1;
-        introspect(JAMScript.introspectors.processC545F199BE443C5FB0DC91C55134FB746FD8B074) {
+        introspect(JAM.policy.pC545F199BE443C5FB0DC91C55134FB746FD8B074) {
           var v10833 = memoryReader[source$$1](this, v5881)
         }
         v1433[v1434] = v10833;
@@ -2630,7 +2630,7 @@ function v800(tilesToTransfer) {
         destination = destination + 1;
         var v5882 = source$$1;
         source$$1 = source$$1 + 1;
-        introspect(JAMScript.introspectors.processC545F199BE443C5FB0DC91C55134FB746FD8B074) {
+        introspect(JAM.policy.pC545F199BE443C5FB0DC91C55134FB746FD8B074) {
           var v10834 = memoryReader[source$$1](this, v5882)
         }
         v1435[v1436] = v10834;
@@ -2639,7 +2639,7 @@ function v800(tilesToTransfer) {
         destination = destination + 1;
         var v5883 = source$$1;
         source$$1 = source$$1 + 1;
-        introspect(JAMScript.introspectors.processC545F199BE443C5FB0DC91C55134FB746FD8B074) {
+        introspect(JAM.policy.pC545F199BE443C5FB0DC91C55134FB746FD8B074) {
           var v10835 = memoryReader[source$$1](this, v5883)
         }
         v1437[v1438] = v10835;
@@ -2648,7 +2648,7 @@ function v800(tilesToTransfer) {
         destination = destination + 1;
         var v5884 = source$$1;
         source$$1 = source$$1 + 1;
-        introspect(JAMScript.introspectors.processC545F199BE443C5FB0DC91C55134FB746FD8B074) {
+        introspect(JAM.policy.pC545F199BE443C5FB0DC91C55134FB746FD8B074) {
           var v10836 = memoryReader[source$$1](this, v5884)
         }
         v1439[v1440] = v10836;
@@ -2657,7 +2657,7 @@ function v800(tilesToTransfer) {
         destination = destination + 1;
         var v5885 = source$$1;
         source$$1 = source$$1 + 1;
-        introspect(JAMScript.introspectors.processC545F199BE443C5FB0DC91C55134FB746FD8B074) {
+        introspect(JAM.policy.pC545F199BE443C5FB0DC91C55134FB746FD8B074) {
           var v10837 = memoryReader[source$$1](this, v5885)
         }
         v1441[v1442] = v10837;
@@ -2666,7 +2666,7 @@ function v800(tilesToTransfer) {
         destination = destination + 1;
         var v5886 = source$$1;
         source$$1 = source$$1 + 1;
-        introspect(JAMScript.introspectors.processC545F199BE443C5FB0DC91C55134FB746FD8B074) {
+        introspect(JAM.policy.pC545F199BE443C5FB0DC91C55134FB746FD8B074) {
           var v10838 = memoryReader[source$$1](this, v5886)
         }
         v1443[v1444] = v10838;
@@ -2675,7 +2675,7 @@ function v800(tilesToTransfer) {
         destination = destination + 1;
         var v5887 = source$$1;
         source$$1 = source$$1 + 1;
-        introspect(JAMScript.introspectors.processC545F199BE443C5FB0DC91C55134FB746FD8B074) {
+        introspect(JAM.policy.pC545F199BE443C5FB0DC91C55134FB746FD8B074) {
           var v10839 = memoryReader[source$$1](this, v5887)
         }
         v1445[v1446] = v10839;
@@ -2684,7 +2684,7 @@ function v800(tilesToTransfer) {
         destination = destination + 1;
         var v5888 = source$$1;
         source$$1 = source$$1 + 1;
-        introspect(JAMScript.introspectors.processC545F199BE443C5FB0DC91C55134FB746FD8B074) {
+        introspect(JAM.policy.pC545F199BE443C5FB0DC91C55134FB746FD8B074) {
           var v10840 = memoryReader[source$$1](this, v5888)
         }
         v1447[v1448] = v10840;
@@ -2693,7 +2693,7 @@ function v800(tilesToTransfer) {
         destination = destination + 1;
         var v5889 = source$$1;
         source$$1 = source$$1 + 1;
-        introspect(JAMScript.introspectors.processC545F199BE443C5FB0DC91C55134FB746FD8B074) {
+        introspect(JAM.policy.pC545F199BE443C5FB0DC91C55134FB746FD8B074) {
           var v10841 = memoryReader[source$$1](this, v5889)
         }
         v1449[v1450] = v10841;
@@ -2702,7 +2702,7 @@ function v800(tilesToTransfer) {
         destination = destination + 1;
         var v5890 = source$$1;
         source$$1 = source$$1 + 1;
-        introspect(JAMScript.introspectors.processC545F199BE443C5FB0DC91C55134FB746FD8B074) {
+        introspect(JAM.policy.pC545F199BE443C5FB0DC91C55134FB746FD8B074) {
           var v10842 = memoryReader[source$$1](this, v5890)
         }
         v1451[v1452] = v10842;
@@ -2711,7 +2711,7 @@ function v800(tilesToTransfer) {
         destination = destination + 1;
         var v5891 = source$$1;
         source$$1 = source$$1 + 1;
-        introspect(JAMScript.introspectors.processC545F199BE443C5FB0DC91C55134FB746FD8B074) {
+        introspect(JAM.policy.pC545F199BE443C5FB0DC91C55134FB746FD8B074) {
           var v10843 = memoryReader[source$$1](this, v5891)
         }
         v1453[v1454] = v10843;
@@ -2720,7 +2720,7 @@ function v800(tilesToTransfer) {
         destination = destination + 1;
         var v5892 = source$$1;
         source$$1 = source$$1 + 1;
-        introspect(JAMScript.introspectors.processC545F199BE443C5FB0DC91C55134FB746FD8B074) {
+        introspect(JAM.policy.pC545F199BE443C5FB0DC91C55134FB746FD8B074) {
           var v10844 = memoryReader[source$$1](this, v5892)
         }
         v1455[v1456] = v10844;
@@ -2744,7 +2744,7 @@ function v799(parentObj$$592, address$$86, data$$60) {
   if(v1463) {
     address$$86 = address$$86 & 2047;
     var v8576 = parentObj$$592.BGCHRCurrentBank;
-    introspect(JAMScript.introspectors.processC545F199BE443C5FB0DC91C55134FB746FD8B074) {
+    introspect(JAM.policy.pC545F199BE443C5FB0DC91C55134FB746FD8B074) {
       var v5894 = v8576[address$$86]
     }
     var v1462 = v5894 != data$$60;
@@ -2762,7 +2762,7 @@ function v798(parentObj$$591, address$$85, data$$59) {
   if(v1466) {
     address$$85 = address$$85 & 2047;
     var v8577 = parentObj$$591.BGCHRBank1;
-    introspect(JAMScript.introspectors.processC545F199BE443C5FB0DC91C55134FB746FD8B074) {
+    introspect(JAM.policy.pC545F199BE443C5FB0DC91C55134FB746FD8B074) {
       var v5896 = v8577[address$$85]
     }
     var v1465 = v5896 != data$$59;
@@ -2782,7 +2782,7 @@ function v797(parentObj$$590, address$$84, data$$58) {
     var v1471 = v5898 == 0;
     if(v1471) {
       var v8578 = parentObj$$590.memory;
-      introspect(JAMScript.introspectors.processC545F199BE443C5FB0DC91C55134FB746FD8B074) {
+      introspect(JAM.policy.pC545F199BE443C5FB0DC91C55134FB746FD8B074) {
         var v5899 = v8578[address$$84]
       }
       var v1468 = v5899 != data$$58;
@@ -2795,7 +2795,7 @@ function v797(parentObj$$590, address$$84, data$$58) {
     }else {
       address$$84 = address$$84 & 8191;
       var v8579 = parentObj$$590.VRAM;
-      introspect(JAMScript.introspectors.processC545F199BE443C5FB0DC91C55134FB746FD8B074) {
+      introspect(JAM.policy.pC545F199BE443C5FB0DC91C55134FB746FD8B074) {
         var v5900 = v8579[address$$84]
       }
       var v1470 = v5900 != data$$58;
@@ -2814,7 +2814,7 @@ function v796(parentObj$$589, address$$83, data$$57) {
   var v1475 = v5901 < 3;
   if(v1475) {
     var v8580 = parentObj$$589.memory;
-    introspect(JAMScript.introspectors.processC545F199BE443C5FB0DC91C55134FB746FD8B074) {
+    introspect(JAM.policy.pC545F199BE443C5FB0DC91C55134FB746FD8B074) {
       var v5902 = v8580[address$$83]
     }
     var v1474 = v5902 != data$$57;
@@ -2832,7 +2832,7 @@ function v795(parentObj$$588, address$$82, data$$56) {
   var v1478 = v5903 < 3;
   if(v1478) {
     var v8581 = parentObj$$588.memory;
-    introspect(JAMScript.introspectors.processC545F199BE443C5FB0DC91C55134FB746FD8B074) {
+    introspect(JAM.policy.pC545F199BE443C5FB0DC91C55134FB746FD8B074) {
       var v5904 = v8581[address$$82]
     }
     var v1477 = v5904 != data$$56;
@@ -2863,7 +2863,7 @@ function v792(parentObj$$585, address$$79, data$$53) {
   var v1485 = v5906 < 2;
   if(v1485) {
     var v8582 = parentObj$$585.memory;
-    introspect(JAMScript.introspectors.processC545F199BE443C5FB0DC91C55134FB746FD8B074) {
+    introspect(JAM.policy.pC545F199BE443C5FB0DC91C55134FB746FD8B074) {
       var v5907 = v8582[address$$79]
     }
     var v1484 = v5907 != data$$53;
@@ -3399,14 +3399,14 @@ function v772() {
 }
 function v771(address$$59, data$$33) {
   var v1604 = this.memoryHighWriter;
-  introspect(JAMScript.introspectors.processC545F199BE443C5FB0DC91C55134FB746FD8B074) {
+  introspect(JAM.policy.pC545F199BE443C5FB0DC91C55134FB746FD8B074) {
     v1604[address$$59](this, address$$59, data$$33)
   }
   return
 }
 function v770(address$$58, data$$32) {
   var v1605 = this.memoryWriter;
-  introspect(JAMScript.introspectors.processC545F199BE443C5FB0DC91C55134FB746FD8B074) {
+  introspect(JAM.policy.pC545F199BE443C5FB0DC91C55134FB746FD8B074) {
     v1605[address$$58](this, address$$58, data$$32)
   }
   return
@@ -3486,7 +3486,7 @@ function v764(parentObj$$563, address$$55) {
     v1613 = 255
   }else {
     var v5954 = parentObj$$563.memory;
-    introspect(JAMScript.introspectors.processC545F199BE443C5FB0DC91C55134FB746FD8B074) {
+    introspect(JAM.policy.pC545F199BE443C5FB0DC91C55134FB746FD8B074) {
       v1613 = v5954[address$$55]
     }
   }
@@ -3504,7 +3504,7 @@ function v763(parentObj$$562, address$$54) {
     var v8609 = v9798 == 0;
     if(v8609) {
       var v8606 = parentObj$$562.memory;
-      introspect(JAMScript.introspectors.processC545F199BE443C5FB0DC91C55134FB746FD8B074) {
+      introspect(JAM.policy.pC545F199BE443C5FB0DC91C55134FB746FD8B074) {
         v5956 = v8606[address$$54]
       }
     }else {
@@ -3522,7 +3522,7 @@ function v762(parentObj$$561, address$$53) {
 function v761(parentObj$$560, address$$52) {
   var v1615 = parentObj$$560.memory;
   var v1616 = address$$52 - 8192;
-  introspect(JAMScript.introspectors.processC545F199BE443C5FB0DC91C55134FB746FD8B074) {
+  introspect(JAM.policy.pC545F199BE443C5FB0DC91C55134FB746FD8B074) {
     return v1615[v1616]
   }
 }
@@ -3530,7 +3530,7 @@ function v760(parentObj$$559, address$$51) {
   var v1617 = parentObj$$559.GBCMemory;
   var v5958 = parentObj$$559.gbcRamBankPositionECHO;
   var v1618 = address$$51 + v5958;
-  introspect(JAMScript.introspectors.processC545F199BE443C5FB0DC91C55134FB746FD8B074) {
+  introspect(JAM.policy.pC545F199BE443C5FB0DC91C55134FB746FD8B074) {
     return v1617[v1618]
   }
 }
@@ -3542,7 +3542,7 @@ function v759(parentObj$$558, address$$50) {
     v1619 = 255
   }else {
     var v5959 = parentObj$$558.memory;
-    introspect(JAMScript.introspectors.processC545F199BE443C5FB0DC91C55134FB746FD8B074) {
+    introspect(JAM.policy.pC545F199BE443C5FB0DC91C55134FB746FD8B074) {
       v1619 = v5959[address$$50]
     }
   }
@@ -3552,7 +3552,7 @@ function v758(parentObj$$557, address$$49) {
   var v1620 = parentObj$$557.GBCMemory;
   var v5961 = parentObj$$557.gbcRamBankPosition;
   var v1621 = address$$49 + v5961;
-  introspect(JAMScript.introspectors.processC545F199BE443C5FB0DC91C55134FB746FD8B074) {
+  introspect(JAM.policy.pC545F199BE443C5FB0DC91C55134FB746FD8B074) {
     return v1620[v1621]
   }
 }
@@ -3576,7 +3576,7 @@ function v757(parentObj$$556, address$$48) {
         var v1622 = parentObj$$556.MBCRam;
         var v5963 = parentObj$$556.currMBCRAMBankPosition;
         var v1623 = address$$48 + v5963;
-        introspect(JAMScript.introspectors.processC545F199BE443C5FB0DC91C55134FB746FD8B074) {
+        introspect(JAM.policy.pC545F199BE443C5FB0DC91C55134FB746FD8B074) {
           return v1622[v1623]
         }
       ;
@@ -3641,7 +3641,7 @@ function v756(parentObj$$555, address$$47) {
         var v1628 = parentObj$$555.MBCRam;
         var v5967 = parentObj$$555.currMBCRAMBankPosition;
         var v1629 = address$$47 + v5967;
-        introspect(JAMScript.introspectors.processC545F199BE443C5FB0DC91C55134FB746FD8B074) {
+        introspect(JAM.policy.pC545F199BE443C5FB0DC91C55134FB746FD8B074) {
           return v1628[v1629]
         }
     }
@@ -3659,7 +3659,7 @@ function v755(parentObj$$554, address$$46) {
     var v1631 = parentObj$$554.MBCRam;
     var v5969 = parentObj$$554.currMBCRAMBankPosition;
     var v1632 = address$$46 + v5969;
-    introspect(JAMScript.introspectors.processC545F199BE443C5FB0DC91C55134FB746FD8B074) {
+    introspect(JAM.policy.pC545F199BE443C5FB0DC91C55134FB746FD8B074) {
       return v1631[v1632]
     }
   }
@@ -3669,20 +3669,20 @@ function v754(parentObj$$553, address$$45) {
   var v1634 = parentObj$$553.ROM;
   var v5970 = parentObj$$553.currentROMBank;
   var v1635 = v5970 + address$$45;
-  introspect(JAMScript.introspectors.processC545F199BE443C5FB0DC91C55134FB746FD8B074) {
+  introspect(JAM.policy.pC545F199BE443C5FB0DC91C55134FB746FD8B074) {
     return v1634[v1635]
   }
 }
 function v753(parentObj$$552, address$$44) {
   var v1636 = parentObj$$552.memory;
   var v1637 = 65280 | address$$44;
-  introspect(JAMScript.introspectors.processC545F199BE443C5FB0DC91C55134FB746FD8B074) {
+  introspect(JAM.policy.pC545F199BE443C5FB0DC91C55134FB746FD8B074) {
     return v1636[v1637]
   }
 }
 function v752(parentObj$$551, address$$43) {
   var v1638 = parentObj$$551.memory;
-  introspect(JAMScript.introspectors.processC545F199BE443C5FB0DC91C55134FB746FD8B074) {
+  introspect(JAM.policy.pC545F199BE443C5FB0DC91C55134FB746FD8B074) {
     return v1638[address$$43]
   }
 }
@@ -3803,7 +3803,7 @@ function v751() {
       v1651 = v5985[v5986]
     }else {
       var v5987 = parentObj$$536.memory;
-      introspect(JAMScript.introspectors.processC545F199BE443C5FB0DC91C55134FB746FD8B074) {
+      introspect(JAM.policy.pC545F199BE443C5FB0DC91C55134FB746FD8B074) {
         v1651 = v5987[address$$28]
       }
     }
@@ -4370,13 +4370,13 @@ function v751() {
 }
 function v717(address$$9) {
   var v1759 = this.memoryHighReader;
-  introspect(JAMScript.introspectors.processC545F199BE443C5FB0DC91C55134FB746FD8B074) {
+  introspect(JAM.policy.pC545F199BE443C5FB0DC91C55134FB746FD8B074) {
     return v1759[address$$9](this, address$$9)
   }
 }
 function v716(address$$8) {
   var v1760 = this.memoryReader;
-  introspect(JAMScript.introspectors.processC545F199BE443C5FB0DC91C55134FB746FD8B074) {
+  introspect(JAM.policy.pC545F199BE443C5FB0DC91C55134FB746FD8B074) {
     return v1760[address$$8](this, address$$8)
   }
 }
@@ -4710,38 +4710,38 @@ function v708() {
 function v707(address$$7) {
   var v8658 = this.memory;
   var v8659 = 1 | address$$7;
-  introspect(JAMScript.introspectors.processC545F199BE443C5FB0DC91C55134FB746FD8B074) {
+  introspect(JAM.policy.pC545F199BE443C5FB0DC91C55134FB746FD8B074) {
     var v6104 = v8658[v8659]
   }
   var v1818 = v6104 << 8;
   var v6105 = this.memory;
   var v6106 = 40958 & address$$7;
-  introspect(JAMScript.introspectors.processC545F199BE443C5FB0DC91C55134FB746FD8B074) {
+  introspect(JAM.policy.pC545F199BE443C5FB0DC91C55134FB746FD8B074) {
     var v1819 = v6105[v6106]
   }
   var lineCopy$$5 = v1818 | v1819;
   address$$7 = address$$7 & 8190;
   var v1820 = this.tileCache;
   var v1821 = address$$7 >> 4;
-  introspect(JAMScript.introspectors.processC545F199BE443C5FB0DC91C55134FB746FD8B074) {
+  introspect(JAM.policy.pC545F199BE443C5FB0DC91C55134FB746FD8B074) {
     var tileBlock1$$4 = v1820[v1821]
   }
   var v1822 = this.tileCache;
   var v6107 = address$$7 >> 4;
   var v1823 = 512 | v6107;
-  introspect(JAMScript.introspectors.processC545F199BE443C5FB0DC91C55134FB746FD8B074) {
+  introspect(JAM.policy.pC545F199BE443C5FB0DC91C55134FB746FD8B074) {
     var tileBlock2$$4 = v1822[v1823]
   }
   var v1824 = this.tileCache;
   var v6108 = address$$7 >> 4;
   var v1825 = 1024 | v6108;
-  introspect(JAMScript.introspectors.processC545F199BE443C5FB0DC91C55134FB746FD8B074) {
+  introspect(JAM.policy.pC545F199BE443C5FB0DC91C55134FB746FD8B074) {
     var tileBlock3$$4 = v1824[v1825]
   }
   var v1826 = this.tileCache;
   var v6109 = address$$7 >> 4;
   var v1827 = 1536 | v6109;
-  introspect(JAMScript.introspectors.processC545F199BE443C5FB0DC91C55134FB746FD8B074) {
+  introspect(JAM.policy.pC545F199BE443C5FB0DC91C55134FB746FD8B074) {
     var tileBlock4$$4 = v1826[v1827]
   }
   var v1828 = address$$7 & 14;
@@ -4820,22 +4820,22 @@ function v706(vramAddress$$1) {
   var address$$6 = vramAddress$$1 >> 4;
   var v1837 = this.tileCache;
   var v1838 = 2048 | address$$6;
-  introspect(JAMScript.introspectors.processC545F199BE443C5FB0DC91C55134FB746FD8B074) {
+  introspect(JAM.policy.pC545F199BE443C5FB0DC91C55134FB746FD8B074) {
     var tileBlock1$$3 = v1837[v1838]
   }
   var v1839 = this.tileCache;
   var v1840 = 2560 | address$$6;
-  introspect(JAMScript.introspectors.processC545F199BE443C5FB0DC91C55134FB746FD8B074) {
+  introspect(JAM.policy.pC545F199BE443C5FB0DC91C55134FB746FD8B074) {
     var tileBlock2$$3 = v1839[v1840]
   }
   var v1841 = this.tileCache;
   var v1842 = 3072 | address$$6;
-  introspect(JAMScript.introspectors.processC545F199BE443C5FB0DC91C55134FB746FD8B074) {
+  introspect(JAM.policy.pC545F199BE443C5FB0DC91C55134FB746FD8B074) {
     var tileBlock3$$3 = v1841[v1842]
   }
   var v1843 = this.tileCache;
   var v1844 = 3584 | address$$6;
-  introspect(JAMScript.introspectors.processC545F199BE443C5FB0DC91C55134FB746FD8B074) {
+  introspect(JAM.policy.pC545F199BE443C5FB0DC91C55134FB746FD8B074) {
     var tileBlock4$$3 = v1843[v1844]
   }
   var lineCopy$$4 = 0;
@@ -4845,12 +4845,12 @@ function v706(vramAddress$$1) {
   do {
     var v8670 = this.VRAM;
     var v8671 = 1 | vramAddress$$1;
-    introspect(JAMScript.introspectors.processC545F199BE443C5FB0DC91C55134FB746FD8B074) {
+    introspect(JAM.policy.pC545F199BE443C5FB0DC91C55134FB746FD8B074) {
       var v6118 = v8670[v8671]
     }
     var v1845 = v6118 << 8;
     var v6119 = this.VRAM;
-    introspect(JAMScript.introspectors.processC545F199BE443C5FB0DC91C55134FB746FD8B074) {
+    introspect(JAM.policy.pC545F199BE443C5FB0DC91C55134FB746FD8B074) {
       var v1846 = v6119[vramAddress$$1]
     }
     lineCopy$$4 = v1845 | v1846;
@@ -4931,38 +4931,38 @@ function v706(vramAddress$$1) {
 function v705(address$$5) {
   var v8682 = this.VRAM;
   var v8683 = 1 | address$$5;
-  introspect(JAMScript.introspectors.processC545F199BE443C5FB0DC91C55134FB746FD8B074) {
+  introspect(JAM.policy.pC545F199BE443C5FB0DC91C55134FB746FD8B074) {
     var v6128 = v8682[v8683]
   }
   var v1856 = v6128 << 8;
   var v6129 = this.VRAM;
   var v6130 = 8190 & address$$5;
-  introspect(JAMScript.introspectors.processC545F199BE443C5FB0DC91C55134FB746FD8B074) {
+  introspect(JAM.policy.pC545F199BE443C5FB0DC91C55134FB746FD8B074) {
     var v1857 = v6129[v6130]
   }
   var lineCopy$$3 = v1856 | v1857;
   var v1858 = this.tileCache;
   var v6131 = address$$5 >> 4;
   var v1859 = 2048 | v6131;
-  introspect(JAMScript.introspectors.processC545F199BE443C5FB0DC91C55134FB746FD8B074) {
+  introspect(JAM.policy.pC545F199BE443C5FB0DC91C55134FB746FD8B074) {
     var tileBlock1$$2 = v1858[v1859]
   }
   var v1860 = this.tileCache;
   var v6132 = address$$5 >> 4;
   var v1861 = 2560 | v6132;
-  introspect(JAMScript.introspectors.processC545F199BE443C5FB0DC91C55134FB746FD8B074) {
+  introspect(JAM.policy.pC545F199BE443C5FB0DC91C55134FB746FD8B074) {
     var tileBlock2$$2 = v1860[v1861]
   }
   var v1862 = this.tileCache;
   var v6133 = address$$5 >> 4;
   var v1863 = 3072 | v6133;
-  introspect(JAMScript.introspectors.processC545F199BE443C5FB0DC91C55134FB746FD8B074) {
+  introspect(JAM.policy.pC545F199BE443C5FB0DC91C55134FB746FD8B074) {
     var tileBlock3$$2 = v1862[v1863]
   }
   var v1864 = this.tileCache;
   var v6134 = address$$5 >> 4;
   var v1865 = 3584 | v6134;
-  introspect(JAMScript.introspectors.processC545F199BE443C5FB0DC91C55134FB746FD8B074) {
+  introspect(JAM.policy.pC545F199BE443C5FB0DC91C55134FB746FD8B074) {
     var tileBlock4$$2 = v1864[v1865]
   }
   var v1866 = address$$5 & 14;
@@ -5040,22 +5040,22 @@ function v705(address$$5) {
 function v704(vramAddress) {
   var address$$4 = vramAddress >> 4;
   var v1875 = this.tileCache;
-  introspect(JAMScript.introspectors.processC545F199BE443C5FB0DC91C55134FB746FD8B074) {
+  introspect(JAM.policy.pC545F199BE443C5FB0DC91C55134FB746FD8B074) {
     var tileBlock1$$1 = v1875[address$$4]
   }
   var v1876 = this.tileCache;
   var v1877 = 512 | address$$4;
-  introspect(JAMScript.introspectors.processC545F199BE443C5FB0DC91C55134FB746FD8B074) {
+  introspect(JAM.policy.pC545F199BE443C5FB0DC91C55134FB746FD8B074) {
     var tileBlock2$$1 = v1876[v1877]
   }
   var v1878 = this.tileCache;
   var v1879 = 1024 | address$$4;
-  introspect(JAMScript.introspectors.processC545F199BE443C5FB0DC91C55134FB746FD8B074) {
+  introspect(JAM.policy.pC545F199BE443C5FB0DC91C55134FB746FD8B074) {
     var tileBlock3$$1 = v1878[v1879]
   }
   var v1880 = this.tileCache;
   var v1881 = 1536 | address$$4;
-  introspect(JAMScript.introspectors.processC545F199BE443C5FB0DC91C55134FB746FD8B074) {
+  introspect(JAM.policy.pC545F199BE443C5FB0DC91C55134FB746FD8B074) {
     var tileBlock4$$1 = v1880[v1881]
   }
   var lineCopy$$2 = 0;
@@ -5066,12 +5066,12 @@ function v704(vramAddress) {
   do {
     var v8694 = this.memory;
     var v8695 = 1 | vramAddress;
-    introspect(JAMScript.introspectors.processC545F199BE443C5FB0DC91C55134FB746FD8B074) {
+    introspect(JAM.policy.pC545F199BE443C5FB0DC91C55134FB746FD8B074) {
       var v6143 = v8694[v8695]
     }
     var v1882 = v6143 << 8;
     var v6144 = this.memory;
-    introspect(JAMScript.introspectors.processC545F199BE443C5FB0DC91C55134FB746FD8B074) {
+    introspect(JAM.policy.pC545F199BE443C5FB0DC91C55134FB746FD8B074) {
       var v1883 = v6144[vramAddress]
     }
     lineCopy$$2 = v1882 | v1883;
@@ -5152,38 +5152,38 @@ function v704(vramAddress) {
 function v703(address$$3) {
   var v8706 = this.memory;
   var v8707 = 1 | address$$3;
-  introspect(JAMScript.introspectors.processC545F199BE443C5FB0DC91C55134FB746FD8B074) {
+  introspect(JAM.policy.pC545F199BE443C5FB0DC91C55134FB746FD8B074) {
     var v6153 = v8706[v8707]
   }
   var v1893 = v6153 << 8;
   var v6154 = this.memory;
   var v6155 = 40958 & address$$3;
-  introspect(JAMScript.introspectors.processC545F199BE443C5FB0DC91C55134FB746FD8B074) {
+  introspect(JAM.policy.pC545F199BE443C5FB0DC91C55134FB746FD8B074) {
     var v1894 = v6154[v6155]
   }
   var lineCopy$$1 = v1893 | v1894;
   address$$3 = address$$3 & 8190;
   var v1895 = this.tileCache;
   var v1896 = address$$3 >> 4;
-  introspect(JAMScript.introspectors.processC545F199BE443C5FB0DC91C55134FB746FD8B074) {
+  introspect(JAM.policy.pC545F199BE443C5FB0DC91C55134FB746FD8B074) {
     var tileBlock1 = v1895[v1896]
   }
   var v1897 = this.tileCache;
   var v6156 = address$$3 >> 4;
   var v1898 = 512 | v6156;
-  introspect(JAMScript.introspectors.processC545F199BE443C5FB0DC91C55134FB746FD8B074) {
+  introspect(JAM.policy.pC545F199BE443C5FB0DC91C55134FB746FD8B074) {
     var tileBlock2 = v1897[v1898]
   }
   var v1899 = this.tileCache;
   var v6157 = address$$3 >> 4;
   var v1900 = 1024 | v6157;
-  introspect(JAMScript.introspectors.processC545F199BE443C5FB0DC91C55134FB746FD8B074) {
+  introspect(JAM.policy.pC545F199BE443C5FB0DC91C55134FB746FD8B074) {
     var tileBlock3 = v1899[v1900]
   }
   var v1901 = this.tileCache;
   var v6158 = address$$3 >> 4;
   var v1902 = 1536 | v6158;
-  introspect(JAMScript.introspectors.processC545F199BE443C5FB0DC91C55134FB746FD8B074) {
+  introspect(JAM.policy.pC545F199BE443C5FB0DC91C55134FB746FD8B074) {
     var tileBlock4 = v1901[v1902]
   }
   var v1903 = address$$3 & 14;
@@ -5261,20 +5261,20 @@ function v703(address$$3) {
 function v702(address$$2) {
   var v8718 = this.memory;
   var v8719 = 1 | address$$2;
-  introspect(JAMScript.introspectors.processC545F199BE443C5FB0DC91C55134FB746FD8B074) {
+  introspect(JAM.policy.pC545F199BE443C5FB0DC91C55134FB746FD8B074) {
     var v6167 = v8718[v8719]
   }
   var v1912 = v6167 << 8;
   var v6168 = this.memory;
   var v6169 = 40958 & address$$2;
-  introspect(JAMScript.introspectors.processC545F199BE443C5FB0DC91C55134FB746FD8B074) {
+  introspect(JAM.policy.pC545F199BE443C5FB0DC91C55134FB746FD8B074) {
     var v1913 = v6168[v6169]
   }
   var lineCopy = v1912 | v1913;
   var v1914 = this.tileCache;
   var v6170 = address$$2 & 8176;
   var v1915 = v6170 >> 4;
-  introspect(JAMScript.introspectors.processC545F199BE443C5FB0DC91C55134FB746FD8B074) {
+  introspect(JAM.policy.pC545F199BE443C5FB0DC91C55134FB746FD8B074) {
     var tileBlock = v1914[v1915]
   }
   var v1916 = address$$2 & 14;
@@ -5351,7 +5351,7 @@ function v701(scanlineToRender$$9) {
       var v1946 = v6187;
       for(;v1946;) {
         var v6188 = this.memory;
-        introspect(JAMScript.introspectors.processC545F199BE443C5FB0DC91C55134FB746FD8B074) {
+        introspect(JAM.policy.pC545F199BE443C5FB0DC91C55134FB746FD8B074) {
           var v1926 = v6188[OAMAddress$$2]
         }
         yoffset$$5 = lineAdjusted$$2 - v1926;
@@ -5360,7 +5360,7 @@ function v701(scanlineToRender$$9) {
         if(v1945) {
           var v6190 = this.memory;
           var v6191 = OAMAddress$$2 | 1;
-          introspect(JAMScript.introspectors.processC545F199BE443C5FB0DC91C55134FB746FD8B074) {
+          introspect(JAM.policy.pC545F199BE443C5FB0DC91C55134FB746FD8B074) {
             var v1927 = v6190[v6191]
           }
           xcoord$$1 = v1927 - 8;
@@ -5379,7 +5379,7 @@ function v701(scanlineToRender$$9) {
           var v6192 = v8733 | v8734;
           var v8735 = this.memory;
           var v8736 = OAMAddress$$2 | 2;
-          introspect(JAMScript.introspectors.processC545F199BE443C5FB0DC91C55134FB746FD8B074) {
+          introspect(JAM.policy.pC545F199BE443C5FB0DC91C55134FB746FD8B074) {
             var v6193 = v8735[v8736]
           }
           var v1933 = v6192 | v6193;
@@ -5399,7 +5399,7 @@ function v701(scanlineToRender$$9) {
           var v1944 = xCounter < endX;
           for(;v1944;) {
             var v8737 = this.frameBuffer;
-            introspect(JAMScript.introspectors.processC545F199BE443C5FB0DC91C55134FB746FD8B074) {
+            introspect(JAM.policy.pC545F199BE443C5FB0DC91C55134FB746FD8B074) {
               var v6196 = v8737[currentPixel$$1]
             }
             var v1943 = v6196 >= 33554432;
@@ -5415,7 +5415,7 @@ function v701(scanlineToRender$$9) {
               }
             }else {
               var v8738 = this.frameBuffer;
-              introspect(JAMScript.introspectors.processC545F199BE443C5FB0DC91C55134FB746FD8B074) {
+              introspect(JAM.policy.pC545F199BE443C5FB0DC91C55134FB746FD8B074) {
                 var v6199 = v8738[currentPixel$$1]
               }
               var v1942 = v6199 < 16777216;
@@ -5456,7 +5456,7 @@ function v701(scanlineToRender$$9) {
       var v1970 = v6204;
       for(;v1970;) {
         var v6205 = this.memory;
-        introspect(JAMScript.introspectors.processC545F199BE443C5FB0DC91C55134FB746FD8B074) {
+        introspect(JAM.policy.pC545F199BE443C5FB0DC91C55134FB746FD8B074) {
           var v1947 = v6205[OAMAddress$$2]
         }
         yoffset$$5 = lineAdjusted$$2 - v1947;
@@ -5465,7 +5465,7 @@ function v701(scanlineToRender$$9) {
         if(v1969) {
           var v6207 = this.memory;
           var v6208 = OAMAddress$$2 | 1;
-          introspect(JAMScript.introspectors.processC545F199BE443C5FB0DC91C55134FB746FD8B074) {
+          introspect(JAM.policy.pC545F199BE443C5FB0DC91C55134FB746FD8B074) {
             var v1948 = v6207[v6208]
           }
           xcoord$$1 = v1948 - 8;
@@ -5489,7 +5489,7 @@ function v701(scanlineToRender$$9) {
             var v6211 = v8740 | v8741;
             var v9874 = this.memory;
             var v9875 = OAMAddress$$2 | 2;
-            introspect(JAMScript.introspectors.processC545F199BE443C5FB0DC91C55134FB746FD8B074) {
+            introspect(JAM.policy.pC545F199BE443C5FB0DC91C55134FB746FD8B074) {
               var v8742 = v9874[v9875]
             }
             var v6212 = v8742 & 254;
@@ -5504,7 +5504,7 @@ function v701(scanlineToRender$$9) {
             var v8743 = v9876 | v9877;
             var v9878 = this.memory;
             var v9879 = OAMAddress$$2 | 2;
-            introspect(JAMScript.introspectors.processC545F199BE443C5FB0DC91C55134FB746FD8B074) {
+            introspect(JAM.policy.pC545F199BE443C5FB0DC91C55134FB746FD8B074) {
               var v8744 = v9878[v9879]
             }
             var v6213 = v8743 | v8744;
@@ -5527,7 +5527,7 @@ function v701(scanlineToRender$$9) {
           var v1968 = xCounter < endX;
           for(;v1968;) {
             var v8746 = this.frameBuffer;
-            introspect(JAMScript.introspectors.processC545F199BE443C5FB0DC91C55134FB746FD8B074) {
+            introspect(JAM.policy.pC545F199BE443C5FB0DC91C55134FB746FD8B074) {
               var v6216 = v8746[currentPixel$$1]
             }
             var v1967 = v6216 >= 33554432;
@@ -5543,7 +5543,7 @@ function v701(scanlineToRender$$9) {
               }
             }else {
               var v8747 = this.frameBuffer;
-              introspect(JAMScript.introspectors.processC545F199BE443C5FB0DC91C55134FB746FD8B074) {
+              introspect(JAM.policy.pC545F199BE443C5FB0DC91C55134FB746FD8B074) {
                 var v6219 = v8747[currentPixel$$1]
               }
               var v1966 = v6219 < 16777216;
@@ -5591,7 +5591,7 @@ function v700(scanlineToRender$$8, drawableRange) {
   var v1977 = v6224;
   for(;v1977;) {
     var v6225 = this.memory;
-    introspect(JAMScript.introspectors.processC545F199BE443C5FB0DC91C55134FB746FD8B074) {
+    introspect(JAM.policy.pC545F199BE443C5FB0DC91C55134FB746FD8B074) {
       var v1973 = v6225[address$$1]
     }
     diff = scanlineToRender$$8 - v1973;
@@ -5645,7 +5645,7 @@ function v699(scanlineToRender$$7) {
         var v1981 = this.OAMAddressCache;
         OAMAddress$$1 = v1981[spriteCount];
         var v8748 = this.memory;
-        introspect(JAMScript.introspectors.processC545F199BE443C5FB0DC91C55134FB746FD8B074) {
+        introspect(JAM.policy.pC545F199BE443C5FB0DC91C55134FB746FD8B074) {
           var v6228 = v8748[OAMAddress$$1]
         }
         var v1982 = lineAdjusted$$1 - v6228;
@@ -5660,7 +5660,7 @@ function v699(scanlineToRender$$7) {
         var v6229 = v8749 << 4;
         var v8750 = this.memory;
         var v8751 = OAMAddress$$1 | 2;
-        introspect(JAMScript.introspectors.processC545F199BE443C5FB0DC91C55134FB746FD8B074) {
+        introspect(JAM.policy.pC545F199BE443C5FB0DC91C55134FB746FD8B074) {
           var v6230 = v8750[v8751]
         }
         var v1987 = v6229 | v6230;
@@ -5691,13 +5691,13 @@ function v699(scanlineToRender$$7) {
         var v2005 = xcoord < xCoordEnd;
         for(;v2005;) {
           var v8753 = this.sortBuffer;
-          introspect(JAMScript.introspectors.processC545F199BE443C5FB0DC91C55134FB746FD8B074) {
+          introspect(JAM.policy.pC545F199BE443C5FB0DC91C55134FB746FD8B074) {
             var v6233 = v8753[linePixel]
           }
           var v2004 = v6233 > xCoordStart;
           if(v2004) {
             var v8754 = this.frameBuffer;
-            introspect(JAMScript.introspectors.processC545F199BE443C5FB0DC91C55134FB746FD8B074) {
+            introspect(JAM.policy.pC545F199BE443C5FB0DC91C55134FB746FD8B074) {
               var v6234 = v8754[currentPixel]
             }
             var v2003 = v6234 >= 33554432;
@@ -5715,7 +5715,7 @@ function v699(scanlineToRender$$7) {
               }
             }else {
               var v8755 = this.frameBuffer;
-              introspect(JAMScript.introspectors.processC545F199BE443C5FB0DC91C55134FB746FD8B074) {
+              introspect(JAM.policy.pC545F199BE443C5FB0DC91C55134FB746FD8B074) {
                 var v6237 = v8755[currentPixel]
               }
               var v2002 = v6237 < 16777216;
@@ -5753,7 +5753,7 @@ function v699(scanlineToRender$$7) {
         var v2007 = this.OAMAddressCache;
         OAMAddress$$1 = v2007[spriteCount];
         var v8756 = this.memory;
-        introspect(JAMScript.introspectors.processC545F199BE443C5FB0DC91C55134FB746FD8B074) {
+        introspect(JAM.policy.pC545F199BE443C5FB0DC91C55134FB746FD8B074) {
           var v6241 = v8756[OAMAddress$$1]
         }
         var v2008 = lineAdjusted$$1 - v6241;
@@ -5772,7 +5772,7 @@ function v699(scanlineToRender$$7) {
           var v6244 = v8757 << 4;
           var v9880 = this.memory;
           var v9881 = OAMAddress$$1 | 2;
-          introspect(JAMScript.introspectors.processC545F199BE443C5FB0DC91C55134FB746FD8B074) {
+          introspect(JAM.policy.pC545F199BE443C5FB0DC91C55134FB746FD8B074) {
             var v8758 = v9880[v9881]
           }
           var v6245 = v8758 & 254;
@@ -5784,7 +5784,7 @@ function v699(scanlineToRender$$7) {
           var v8759 = v9882 << 4;
           var v9883 = this.memory;
           var v9884 = OAMAddress$$1 | 2;
-          introspect(JAMScript.introspectors.processC545F199BE443C5FB0DC91C55134FB746FD8B074) {
+          introspect(JAM.policy.pC545F199BE443C5FB0DC91C55134FB746FD8B074) {
             var v8760 = v9883[v9884]
           }
           var v6246 = v8759 | v8760;
@@ -5818,13 +5818,13 @@ function v699(scanlineToRender$$7) {
         var v2034 = xcoord < xCoordEnd;
         for(;v2034;) {
           var v8762 = this.sortBuffer;
-          introspect(JAMScript.introspectors.processC545F199BE443C5FB0DC91C55134FB746FD8B074) {
+          introspect(JAM.policy.pC545F199BE443C5FB0DC91C55134FB746FD8B074) {
             var v6249 = v8762[linePixel]
           }
           var v2033 = v6249 > xCoordStart;
           if(v2033) {
             var v8763 = this.frameBuffer;
-            introspect(JAMScript.introspectors.processC545F199BE443C5FB0DC91C55134FB746FD8B074) {
+            introspect(JAM.policy.pC545F199BE443C5FB0DC91C55134FB746FD8B074) {
               var v6250 = v8763[currentPixel]
             }
             var v2032 = v6250 >= 33554432;
@@ -5842,7 +5842,7 @@ function v699(scanlineToRender$$7) {
               }
             }else {
               var v8764 = this.frameBuffer;
-              introspect(JAMScript.introspectors.processC545F199BE443C5FB0DC91C55134FB746FD8B074) {
+              introspect(JAM.policy.pC545F199BE443C5FB0DC91C55134FB746FD8B074) {
                 var v6253 = v8764[currentPixel]
               }
               var v2031 = v6253 < 16777216;
@@ -5912,7 +5912,7 @@ function v698(scanlineToRender$$6) {
         var v2045 = v6262 >> 3;
         var tileNumber$$6 = v2044 + v2045;
         var v2046 = this.BGCHRBank1;
-        introspect(JAMScript.introspectors.processC545F199BE443C5FB0DC91C55134FB746FD8B074) {
+        introspect(JAM.policy.pC545F199BE443C5FB0DC91C55134FB746FD8B074) {
           var chrCode$$5 = v2046[tileNumber$$6]
         }
         var v6263 = this.gfxBackgroundBankOffset;
@@ -5921,7 +5921,7 @@ function v698(scanlineToRender$$6) {
           chrCode$$5 = chrCode$$5 | 256
         }
         var v2048 = this.BGCHRBank2;
-        introspect(JAMScript.introspectors.processC545F199BE443C5FB0DC91C55134FB746FD8B074) {
+        introspect(JAM.policy.pC545F199BE443C5FB0DC91C55134FB746FD8B074) {
           var attrCode$$3 = v2048[tileNumber$$6]
         }
         var v2049 = this.tileCache;
@@ -5931,7 +5931,7 @@ function v698(scanlineToRender$$6) {
         var v8768 = v9886 << 4;
         var v6264 = v8767 | v8768;
         var v2050 = v6264 | chrCode$$5;
-        introspect(JAMScript.introspectors.processC545F199BE443C5FB0DC91C55134FB746FD8B074) {
+        introspect(JAM.policy.pC545F199BE443C5FB0DC91C55134FB746FD8B074) {
           var tile$$5 = v2049[v2050]
         }
         var v2051 = attrCode$$3 & 7;
@@ -5951,7 +5951,7 @@ function v698(scanlineToRender$$6) {
           var v10443 = texel$$5;
           texel$$5 = texel$$5 + 1;
           var v9887 = tileYLine$$5 | v10443;
-          introspect(JAMScript.introspectors.processC545F199BE443C5FB0DC91C55134FB746FD8B074) {
+          introspect(JAM.policy.pC545F199BE443C5FB0DC91C55134FB746FD8B074) {
             var v8769 = tile$$5[v9887]
           }
           var v6268 = palette$$3 | v8769;
@@ -5990,7 +5990,7 @@ function v698(scanlineToRender$$6) {
           var v6272 = this.gbcBGPalette;
           var v9890 = texel$$5;
           texel$$5 = texel$$5 + 1;
-          introspect(JAMScript.introspectors.processC545F199BE443C5FB0DC91C55134FB746FD8B074) {
+          introspect(JAM.policy.pC545F199BE443C5FB0DC91C55134FB746FD8B074) {
             var v8772 = tile$$5[v9890]
           }
           var v6273 = palette$$3 | v8772;
@@ -6001,7 +6001,7 @@ function v698(scanlineToRender$$6) {
           var v6274 = this.gbcBGPalette;
           var v9891 = texel$$5;
           texel$$5 = texel$$5 + 1;
-          introspect(JAMScript.introspectors.processC545F199BE443C5FB0DC91C55134FB746FD8B074) {
+          introspect(JAM.policy.pC545F199BE443C5FB0DC91C55134FB746FD8B074) {
             var v8773 = tile$$5[v9891]
           }
           var v6275 = palette$$3 | v8773;
@@ -6012,7 +6012,7 @@ function v698(scanlineToRender$$6) {
           var v6276 = this.gbcBGPalette;
           var v9892 = texel$$5;
           texel$$5 = texel$$5 + 1;
-          introspect(JAMScript.introspectors.processC545F199BE443C5FB0DC91C55134FB746FD8B074) {
+          introspect(JAM.policy.pC545F199BE443C5FB0DC91C55134FB746FD8B074) {
             var v8774 = tile$$5[v9892]
           }
           var v6277 = palette$$3 | v8774;
@@ -6023,7 +6023,7 @@ function v698(scanlineToRender$$6) {
           var v6278 = this.gbcBGPalette;
           var v9893 = texel$$5;
           texel$$5 = texel$$5 + 1;
-          introspect(JAMScript.introspectors.processC545F199BE443C5FB0DC91C55134FB746FD8B074) {
+          introspect(JAM.policy.pC545F199BE443C5FB0DC91C55134FB746FD8B074) {
             var v8775 = tile$$5[v9893]
           }
           var v6279 = palette$$3 | v8775;
@@ -6034,7 +6034,7 @@ function v698(scanlineToRender$$6) {
           var v6280 = this.gbcBGPalette;
           var v9894 = texel$$5;
           texel$$5 = texel$$5 + 1;
-          introspect(JAMScript.introspectors.processC545F199BE443C5FB0DC91C55134FB746FD8B074) {
+          introspect(JAM.policy.pC545F199BE443C5FB0DC91C55134FB746FD8B074) {
             var v8776 = tile$$5[v9894]
           }
           var v6281 = palette$$3 | v8776;
@@ -6045,7 +6045,7 @@ function v698(scanlineToRender$$6) {
           var v6282 = this.gbcBGPalette;
           var v9895 = texel$$5;
           texel$$5 = texel$$5 + 1;
-          introspect(JAMScript.introspectors.processC545F199BE443C5FB0DC91C55134FB746FD8B074) {
+          introspect(JAM.policy.pC545F199BE443C5FB0DC91C55134FB746FD8B074) {
             var v8777 = tile$$5[v9895]
           }
           var v6283 = palette$$3 | v8777;
@@ -6056,7 +6056,7 @@ function v698(scanlineToRender$$6) {
           var v6284 = this.gbcBGPalette;
           var v9896 = texel$$5;
           texel$$5 = texel$$5 + 1;
-          introspect(JAMScript.introspectors.processC545F199BE443C5FB0DC91C55134FB746FD8B074) {
+          introspect(JAM.policy.pC545F199BE443C5FB0DC91C55134FB746FD8B074) {
             var v8778 = tile$$5[v9896]
           }
           var v6285 = palette$$3 | v8778;
@@ -6065,7 +6065,7 @@ function v698(scanlineToRender$$6) {
           var v2080 = pixelPosition$$7;
           pixelPosition$$7 = pixelPosition$$7 + 1;
           var v6286 = this.gbcBGPalette;
-          introspect(JAMScript.introspectors.processC545F199BE443C5FB0DC91C55134FB746FD8B074) {
+          introspect(JAM.policy.pC545F199BE443C5FB0DC91C55134FB746FD8B074) {
             var v8779 = tile$$5[texel$$5]
           }
           var v6287 = palette$$3 | v8779;
@@ -6101,7 +6101,7 @@ function v698(scanlineToRender$$6) {
               var v2090 = pixelPosition$$7 + 6;
               var v6290 = this.gbcBGPalette;
               var v9899 = tileYLine$$5 | 6;
-              introspect(JAMScript.introspectors.processC545F199BE443C5FB0DC91C55134FB746FD8B074) {
+              introspect(JAM.policy.pC545F199BE443C5FB0DC91C55134FB746FD8B074) {
                 var v8782 = tile$$5[v9899]
               }
               var v6291 = palette$$3 | v8782;
@@ -6111,7 +6111,7 @@ function v698(scanlineToRender$$6) {
               var v2092 = pixelPosition$$7 + 5;
               var v6292 = this.gbcBGPalette;
               var v9900 = tileYLine$$5 | 5;
-              introspect(JAMScript.introspectors.processC545F199BE443C5FB0DC91C55134FB746FD8B074) {
+              introspect(JAM.policy.pC545F199BE443C5FB0DC91C55134FB746FD8B074) {
                 var v8783 = tile$$5[v9900]
               }
               var v6293 = palette$$3 | v8783;
@@ -6121,7 +6121,7 @@ function v698(scanlineToRender$$6) {
               var v2094 = pixelPosition$$7 + 4;
               var v6294 = this.gbcBGPalette;
               var v9901 = tileYLine$$5 | 4;
-              introspect(JAMScript.introspectors.processC545F199BE443C5FB0DC91C55134FB746FD8B074) {
+              introspect(JAM.policy.pC545F199BE443C5FB0DC91C55134FB746FD8B074) {
                 var v8784 = tile$$5[v9901]
               }
               var v6295 = palette$$3 | v8784;
@@ -6131,7 +6131,7 @@ function v698(scanlineToRender$$6) {
               var v2096 = pixelPosition$$7 + 3;
               var v6296 = this.gbcBGPalette;
               var v9902 = tileYLine$$5 | 3;
-              introspect(JAMScript.introspectors.processC545F199BE443C5FB0DC91C55134FB746FD8B074) {
+              introspect(JAM.policy.pC545F199BE443C5FB0DC91C55134FB746FD8B074) {
                 var v8785 = tile$$5[v9902]
               }
               var v6297 = palette$$3 | v8785;
@@ -6141,7 +6141,7 @@ function v698(scanlineToRender$$6) {
               var v2098 = pixelPosition$$7 + 2;
               var v6298 = this.gbcBGPalette;
               var v9903 = tileYLine$$5 | 2;
-              introspect(JAMScript.introspectors.processC545F199BE443C5FB0DC91C55134FB746FD8B074) {
+              introspect(JAM.policy.pC545F199BE443C5FB0DC91C55134FB746FD8B074) {
                 var v8786 = tile$$5[v9903]
               }
               var v6299 = palette$$3 | v8786;
@@ -6151,7 +6151,7 @@ function v698(scanlineToRender$$6) {
               var v2100 = pixelPosition$$7 + 1;
               var v6300 = this.gbcBGPalette;
               var v9904 = tileYLine$$5 | 1;
-              introspect(JAMScript.introspectors.processC545F199BE443C5FB0DC91C55134FB746FD8B074) {
+              introspect(JAM.policy.pC545F199BE443C5FB0DC91C55134FB746FD8B074) {
                 var v8787 = tile$$5[v9904]
               }
               var v6301 = palette$$3 | v8787;
@@ -6159,7 +6159,7 @@ function v698(scanlineToRender$$6) {
             case 1:
               var v2101 = this.frameBuffer;
               var v6302 = this.gbcBGPalette;
-              introspect(JAMScript.introspectors.processC545F199BE443C5FB0DC91C55134FB746FD8B074) {
+              introspect(JAM.policy.pC545F199BE443C5FB0DC91C55134FB746FD8B074) {
                 var v8788 = tile$$5[tileYLine$$5]
               }
               var v6303 = palette$$3 | v8788;
@@ -6206,7 +6206,7 @@ function v697(scanlineToRender$$5) {
         var v2114 = v6309 >> 3;
         var tileNumber$$5 = v2113 + v2114;
         var v2115 = this.BGCHRBank1;
-        introspect(JAMScript.introspectors.processC545F199BE443C5FB0DC91C55134FB746FD8B074) {
+        introspect(JAM.policy.pC545F199BE443C5FB0DC91C55134FB746FD8B074) {
           var chrCode$$4 = v2115[tileNumber$$5]
         }
         var v6310 = this.gfxBackgroundBankOffset;
@@ -6215,7 +6215,7 @@ function v697(scanlineToRender$$5) {
           chrCode$$4 = chrCode$$4 | 256
         }
         var v2117 = this.BGCHRBank2;
-        introspect(JAMScript.introspectors.processC545F199BE443C5FB0DC91C55134FB746FD8B074) {
+        introspect(JAM.policy.pC545F199BE443C5FB0DC91C55134FB746FD8B074) {
           var attrCode$$2 = v2117[tileNumber$$5]
         }
         var v2118 = this.tileCache;
@@ -6225,7 +6225,7 @@ function v697(scanlineToRender$$5) {
         var v8792 = v9906 << 4;
         var v6311 = v8791 | v8792;
         var v2119 = v6311 | chrCode$$4;
-        introspect(JAMScript.introspectors.processC545F199BE443C5FB0DC91C55134FB746FD8B074) {
+        introspect(JAM.policy.pC545F199BE443C5FB0DC91C55134FB746FD8B074) {
           var tile$$4 = v2118[v2119]
         }
         var v6312 = attrCode$$2 & 7;
@@ -6248,7 +6248,7 @@ function v697(scanlineToRender$$5) {
           var v10444 = texel$$4;
           texel$$4 = texel$$4 + 1;
           var v9907 = tileYLine$$4 | v10444;
-          introspect(JAMScript.introspectors.processC545F199BE443C5FB0DC91C55134FB746FD8B074) {
+          introspect(JAM.policy.pC545F199BE443C5FB0DC91C55134FB746FD8B074) {
             var v8793 = tile$$4[v9907]
           }
           var v6317 = palette$$2 | v8793;
@@ -6290,7 +6290,7 @@ function v697(scanlineToRender$$5) {
           var v6323 = this.gbcBGPalette;
           var v9910 = texel$$4;
           texel$$4 = texel$$4 + 1;
-          introspect(JAMScript.introspectors.processC545F199BE443C5FB0DC91C55134FB746FD8B074) {
+          introspect(JAM.policy.pC545F199BE443C5FB0DC91C55134FB746FD8B074) {
             var v8796 = tile$$4[v9910]
           }
           var v6324 = palette$$2 | v8796;
@@ -6301,7 +6301,7 @@ function v697(scanlineToRender$$5) {
           var v6325 = this.gbcBGPalette;
           var v9911 = texel$$4;
           texel$$4 = texel$$4 + 1;
-          introspect(JAMScript.introspectors.processC545F199BE443C5FB0DC91C55134FB746FD8B074) {
+          introspect(JAM.policy.pC545F199BE443C5FB0DC91C55134FB746FD8B074) {
             var v8797 = tile$$4[v9911]
           }
           var v6326 = palette$$2 | v8797;
@@ -6312,7 +6312,7 @@ function v697(scanlineToRender$$5) {
           var v6327 = this.gbcBGPalette;
           var v9912 = texel$$4;
           texel$$4 = texel$$4 + 1;
-          introspect(JAMScript.introspectors.processC545F199BE443C5FB0DC91C55134FB746FD8B074) {
+          introspect(JAM.policy.pC545F199BE443C5FB0DC91C55134FB746FD8B074) {
             var v8798 = tile$$4[v9912]
           }
           var v6328 = palette$$2 | v8798;
@@ -6323,7 +6323,7 @@ function v697(scanlineToRender$$5) {
           var v6329 = this.gbcBGPalette;
           var v9913 = texel$$4;
           texel$$4 = texel$$4 + 1;
-          introspect(JAMScript.introspectors.processC545F199BE443C5FB0DC91C55134FB746FD8B074) {
+          introspect(JAM.policy.pC545F199BE443C5FB0DC91C55134FB746FD8B074) {
             var v8799 = tile$$4[v9913]
           }
           var v6330 = palette$$2 | v8799;
@@ -6334,7 +6334,7 @@ function v697(scanlineToRender$$5) {
           var v6331 = this.gbcBGPalette;
           var v9914 = texel$$4;
           texel$$4 = texel$$4 + 1;
-          introspect(JAMScript.introspectors.processC545F199BE443C5FB0DC91C55134FB746FD8B074) {
+          introspect(JAM.policy.pC545F199BE443C5FB0DC91C55134FB746FD8B074) {
             var v8800 = tile$$4[v9914]
           }
           var v6332 = palette$$2 | v8800;
@@ -6345,7 +6345,7 @@ function v697(scanlineToRender$$5) {
           var v6333 = this.gbcBGPalette;
           var v9915 = texel$$4;
           texel$$4 = texel$$4 + 1;
-          introspect(JAMScript.introspectors.processC545F199BE443C5FB0DC91C55134FB746FD8B074) {
+          introspect(JAM.policy.pC545F199BE443C5FB0DC91C55134FB746FD8B074) {
             var v8801 = tile$$4[v9915]
           }
           var v6334 = palette$$2 | v8801;
@@ -6356,7 +6356,7 @@ function v697(scanlineToRender$$5) {
           var v6335 = this.gbcBGPalette;
           var v9916 = texel$$4;
           texel$$4 = texel$$4 + 1;
-          introspect(JAMScript.introspectors.processC545F199BE443C5FB0DC91C55134FB746FD8B074) {
+          introspect(JAM.policy.pC545F199BE443C5FB0DC91C55134FB746FD8B074) {
             var v8802 = tile$$4[v9916]
           }
           var v6336 = palette$$2 | v8802;
@@ -6365,7 +6365,7 @@ function v697(scanlineToRender$$5) {
           var v2151 = pixelPosition$$6;
           pixelPosition$$6 = pixelPosition$$6 + 1;
           var v6337 = this.gbcBGPalette;
-          introspect(JAMScript.introspectors.processC545F199BE443C5FB0DC91C55134FB746FD8B074) {
+          introspect(JAM.policy.pC545F199BE443C5FB0DC91C55134FB746FD8B074) {
             var v8803 = tile$$4[texel$$4]
           }
           var v6338 = palette$$2 | v8803;
@@ -6404,7 +6404,7 @@ function v697(scanlineToRender$$5) {
               var v2162 = pixelPosition$$6 + 6;
               var v6343 = this.gbcBGPalette;
               var v9919 = tileYLine$$4 | 6;
-              introspect(JAMScript.introspectors.processC545F199BE443C5FB0DC91C55134FB746FD8B074) {
+              introspect(JAM.policy.pC545F199BE443C5FB0DC91C55134FB746FD8B074) {
                 var v8806 = tile$$4[v9919]
               }
               var v6344 = palette$$2 | v8806;
@@ -6414,7 +6414,7 @@ function v697(scanlineToRender$$5) {
               var v2164 = pixelPosition$$6 + 5;
               var v6345 = this.gbcBGPalette;
               var v9920 = tileYLine$$4 | 5;
-              introspect(JAMScript.introspectors.processC545F199BE443C5FB0DC91C55134FB746FD8B074) {
+              introspect(JAM.policy.pC545F199BE443C5FB0DC91C55134FB746FD8B074) {
                 var v8807 = tile$$4[v9920]
               }
               var v6346 = palette$$2 | v8807;
@@ -6424,7 +6424,7 @@ function v697(scanlineToRender$$5) {
               var v2166 = pixelPosition$$6 + 4;
               var v6347 = this.gbcBGPalette;
               var v9921 = tileYLine$$4 | 4;
-              introspect(JAMScript.introspectors.processC545F199BE443C5FB0DC91C55134FB746FD8B074) {
+              introspect(JAM.policy.pC545F199BE443C5FB0DC91C55134FB746FD8B074) {
                 var v8808 = tile$$4[v9921]
               }
               var v6348 = palette$$2 | v8808;
@@ -6434,7 +6434,7 @@ function v697(scanlineToRender$$5) {
               var v2168 = pixelPosition$$6 + 3;
               var v6349 = this.gbcBGPalette;
               var v9922 = tileYLine$$4 | 3;
-              introspect(JAMScript.introspectors.processC545F199BE443C5FB0DC91C55134FB746FD8B074) {
+              introspect(JAM.policy.pC545F199BE443C5FB0DC91C55134FB746FD8B074) {
                 var v8809 = tile$$4[v9922]
               }
               var v6350 = palette$$2 | v8809;
@@ -6444,7 +6444,7 @@ function v697(scanlineToRender$$5) {
               var v2170 = pixelPosition$$6 + 2;
               var v6351 = this.gbcBGPalette;
               var v9923 = tileYLine$$4 | 2;
-              introspect(JAMScript.introspectors.processC545F199BE443C5FB0DC91C55134FB746FD8B074) {
+              introspect(JAM.policy.pC545F199BE443C5FB0DC91C55134FB746FD8B074) {
                 var v8810 = tile$$4[v9923]
               }
               var v6352 = palette$$2 | v8810;
@@ -6454,7 +6454,7 @@ function v697(scanlineToRender$$5) {
               var v2172 = pixelPosition$$6 + 1;
               var v6353 = this.gbcBGPalette;
               var v9924 = tileYLine$$4 | 1;
-              introspect(JAMScript.introspectors.processC545F199BE443C5FB0DC91C55134FB746FD8B074) {
+              introspect(JAM.policy.pC545F199BE443C5FB0DC91C55134FB746FD8B074) {
                 var v8811 = tile$$4[v9924]
               }
               var v6354 = palette$$2 | v8811;
@@ -6462,7 +6462,7 @@ function v697(scanlineToRender$$5) {
             case 1:
               var v2173 = this.frameBuffer;
               var v6355 = this.gbcBGPalette;
-              introspect(JAMScript.introspectors.processC545F199BE443C5FB0DC91C55134FB746FD8B074) {
+              introspect(JAM.policy.pC545F199BE443C5FB0DC91C55134FB746FD8B074) {
                 var v8812 = tile$$4[tileYLine$$4]
               }
               var v6356 = palette$$2 | v8812;
@@ -6509,7 +6509,7 @@ function v696(scanlineToRender$$4) {
         var v2186 = v6362 >> 3;
         var tileNumber$$4 = v2185 + v2186;
         var v2187 = this.BGCHRBank1;
-        introspect(JAMScript.introspectors.processC545F199BE443C5FB0DC91C55134FB746FD8B074) {
+        introspect(JAM.policy.pC545F199BE443C5FB0DC91C55134FB746FD8B074) {
           var chrCode$$3 = v2187[tileNumber$$4]
         }
         var v6363 = this.gfxBackgroundBankOffset;
@@ -6518,7 +6518,7 @@ function v696(scanlineToRender$$4) {
           chrCode$$3 = chrCode$$3 | 256
         }
         var v2189 = this.tileCache;
-        introspect(JAMScript.introspectors.processC545F199BE443C5FB0DC91C55134FB746FD8B074) {
+        introspect(JAM.policy.pC545F199BE443C5FB0DC91C55134FB746FD8B074) {
           var tile$$3 = v2189[chrCode$$3]
         }
         var v6364 = this.windowX;
@@ -6536,10 +6536,10 @@ function v696(scanlineToRender$$4) {
           var v9925 = texel$$3;
           texel$$3 = texel$$3 + 1;
           var v8815 = tileYLine$$3 | v9925;
-          introspect(JAMScript.introspectors.processC545F199BE443C5FB0DC91C55134FB746FD8B074) {
+          introspect(JAM.policy.pC545F199BE443C5FB0DC91C55134FB746FD8B074) {
             var v6367 = tile$$3[v8815]
           }
-          introspect(JAMScript.introspectors.processC545F199BE443C5FB0DC91C55134FB746FD8B074) {
+          introspect(JAM.policy.pC545F199BE443C5FB0DC91C55134FB746FD8B074) {
             v2192[v2193] = v6366[v6367]
           }
           v2194 = texel$$3 < scrollXRangeAdjusted
@@ -6558,7 +6558,7 @@ function v696(scanlineToRender$$4) {
             chrCode$$3 = chrCode$$3 | 256
           }
           var v2199 = this.tileCache;
-          introspect(JAMScript.introspectors.processC545F199BE443C5FB0DC91C55134FB746FD8B074) {
+          introspect(JAM.policy.pC545F199BE443C5FB0DC91C55134FB746FD8B074) {
             tile$$3 = v2199[chrCode$$3]
           }
           texel$$3 = tileYLine$$3;
@@ -6568,10 +6568,10 @@ function v696(scanlineToRender$$4) {
           var v6370 = this.BGPalette;
           var v8816 = texel$$3;
           texel$$3 = texel$$3 + 1;
-          introspect(JAMScript.introspectors.processC545F199BE443C5FB0DC91C55134FB746FD8B074) {
+          introspect(JAM.policy.pC545F199BE443C5FB0DC91C55134FB746FD8B074) {
             var v6371 = tile$$3[v8816]
           }
-          introspect(JAMScript.introspectors.processC545F199BE443C5FB0DC91C55134FB746FD8B074) {
+          introspect(JAM.policy.pC545F199BE443C5FB0DC91C55134FB746FD8B074) {
             v2200[v2201] = v6370[v6371]
           }
           var v2202 = this.frameBuffer;
@@ -6580,10 +6580,10 @@ function v696(scanlineToRender$$4) {
           var v6372 = this.BGPalette;
           var v8817 = texel$$3;
           texel$$3 = texel$$3 + 1;
-          introspect(JAMScript.introspectors.processC545F199BE443C5FB0DC91C55134FB746FD8B074) {
+          introspect(JAM.policy.pC545F199BE443C5FB0DC91C55134FB746FD8B074) {
             var v6373 = tile$$3[v8817]
           }
-          introspect(JAMScript.introspectors.processC545F199BE443C5FB0DC91C55134FB746FD8B074) {
+          introspect(JAM.policy.pC545F199BE443C5FB0DC91C55134FB746FD8B074) {
             v2202[v2203] = v6372[v6373]
           }
           var v2204 = this.frameBuffer;
@@ -6592,10 +6592,10 @@ function v696(scanlineToRender$$4) {
           var v6374 = this.BGPalette;
           var v8818 = texel$$3;
           texel$$3 = texel$$3 + 1;
-          introspect(JAMScript.introspectors.processC545F199BE443C5FB0DC91C55134FB746FD8B074) {
+          introspect(JAM.policy.pC545F199BE443C5FB0DC91C55134FB746FD8B074) {
             var v6375 = tile$$3[v8818]
           }
-          introspect(JAMScript.introspectors.processC545F199BE443C5FB0DC91C55134FB746FD8B074) {
+          introspect(JAM.policy.pC545F199BE443C5FB0DC91C55134FB746FD8B074) {
             v2204[v2205] = v6374[v6375]
           }
           var v2206 = this.frameBuffer;
@@ -6604,10 +6604,10 @@ function v696(scanlineToRender$$4) {
           var v6376 = this.BGPalette;
           var v8819 = texel$$3;
           texel$$3 = texel$$3 + 1;
-          introspect(JAMScript.introspectors.processC545F199BE443C5FB0DC91C55134FB746FD8B074) {
+          introspect(JAM.policy.pC545F199BE443C5FB0DC91C55134FB746FD8B074) {
             var v6377 = tile$$3[v8819]
           }
-          introspect(JAMScript.introspectors.processC545F199BE443C5FB0DC91C55134FB746FD8B074) {
+          introspect(JAM.policy.pC545F199BE443C5FB0DC91C55134FB746FD8B074) {
             v2206[v2207] = v6376[v6377]
           }
           var v2208 = this.frameBuffer;
@@ -6616,10 +6616,10 @@ function v696(scanlineToRender$$4) {
           var v6378 = this.BGPalette;
           var v8820 = texel$$3;
           texel$$3 = texel$$3 + 1;
-          introspect(JAMScript.introspectors.processC545F199BE443C5FB0DC91C55134FB746FD8B074) {
+          introspect(JAM.policy.pC545F199BE443C5FB0DC91C55134FB746FD8B074) {
             var v6379 = tile$$3[v8820]
           }
-          introspect(JAMScript.introspectors.processC545F199BE443C5FB0DC91C55134FB746FD8B074) {
+          introspect(JAM.policy.pC545F199BE443C5FB0DC91C55134FB746FD8B074) {
             v2208[v2209] = v6378[v6379]
           }
           var v2210 = this.frameBuffer;
@@ -6628,10 +6628,10 @@ function v696(scanlineToRender$$4) {
           var v6380 = this.BGPalette;
           var v8821 = texel$$3;
           texel$$3 = texel$$3 + 1;
-          introspect(JAMScript.introspectors.processC545F199BE443C5FB0DC91C55134FB746FD8B074) {
+          introspect(JAM.policy.pC545F199BE443C5FB0DC91C55134FB746FD8B074) {
             var v6381 = tile$$3[v8821]
           }
-          introspect(JAMScript.introspectors.processC545F199BE443C5FB0DC91C55134FB746FD8B074) {
+          introspect(JAM.policy.pC545F199BE443C5FB0DC91C55134FB746FD8B074) {
             v2210[v2211] = v6380[v6381]
           }
           var v2212 = this.frameBuffer;
@@ -6640,20 +6640,20 @@ function v696(scanlineToRender$$4) {
           var v6382 = this.BGPalette;
           var v8822 = texel$$3;
           texel$$3 = texel$$3 + 1;
-          introspect(JAMScript.introspectors.processC545F199BE443C5FB0DC91C55134FB746FD8B074) {
+          introspect(JAM.policy.pC545F199BE443C5FB0DC91C55134FB746FD8B074) {
             var v6383 = tile$$3[v8822]
           }
-          introspect(JAMScript.introspectors.processC545F199BE443C5FB0DC91C55134FB746FD8B074) {
+          introspect(JAM.policy.pC545F199BE443C5FB0DC91C55134FB746FD8B074) {
             v2212[v2213] = v6382[v6383]
           }
           var v2214 = this.frameBuffer;
           var v2215 = pixelPosition$$5;
           pixelPosition$$5 = pixelPosition$$5 + 1;
           var v6384 = this.BGPalette;
-          introspect(JAMScript.introspectors.processC545F199BE443C5FB0DC91C55134FB746FD8B074) {
+          introspect(JAM.policy.pC545F199BE443C5FB0DC91C55134FB746FD8B074) {
             var v6385 = tile$$3[texel$$3]
           }
-          introspect(JAMScript.introspectors.processC545F199BE443C5FB0DC91C55134FB746FD8B074) {
+          introspect(JAM.policy.pC545F199BE443C5FB0DC91C55134FB746FD8B074) {
             v2214[v2215] = v6384[v6385]
           }
           v2216 = tileNumber$$4 < scrollXRangeAdjusted
@@ -6669,7 +6669,7 @@ function v696(scanlineToRender$$4) {
             chrCode$$3 = chrCode$$3 | 256
           }
           var v2220 = this.tileCache;
-          introspect(JAMScript.introspectors.processC545F199BE443C5FB0DC91C55134FB746FD8B074) {
+          introspect(JAM.policy.pC545F199BE443C5FB0DC91C55134FB746FD8B074) {
             tile$$3 = v2220[chrCode$$3]
           }
           var v2234 = pixelPositionEnd$$3 - pixelPosition$$5;
@@ -6679,10 +6679,10 @@ function v696(scanlineToRender$$4) {
               var v2222 = pixelPosition$$5 + 6;
               var v6387 = this.BGPalette;
               var v8823 = tileYLine$$3 | 6;
-              introspect(JAMScript.introspectors.processC545F199BE443C5FB0DC91C55134FB746FD8B074) {
+              introspect(JAM.policy.pC545F199BE443C5FB0DC91C55134FB746FD8B074) {
                 var v6388 = tile$$3[v8823]
               }
-              introspect(JAMScript.introspectors.processC545F199BE443C5FB0DC91C55134FB746FD8B074) {
+              introspect(JAM.policy.pC545F199BE443C5FB0DC91C55134FB746FD8B074) {
                 v2221[v2222] = v6387[v6388]
               }
             ;
@@ -6691,10 +6691,10 @@ function v696(scanlineToRender$$4) {
               var v2224 = pixelPosition$$5 + 5;
               var v6389 = this.BGPalette;
               var v8824 = tileYLine$$3 | 5;
-              introspect(JAMScript.introspectors.processC545F199BE443C5FB0DC91C55134FB746FD8B074) {
+              introspect(JAM.policy.pC545F199BE443C5FB0DC91C55134FB746FD8B074) {
                 var v6390 = tile$$3[v8824]
               }
-              introspect(JAMScript.introspectors.processC545F199BE443C5FB0DC91C55134FB746FD8B074) {
+              introspect(JAM.policy.pC545F199BE443C5FB0DC91C55134FB746FD8B074) {
                 v2223[v2224] = v6389[v6390]
               }
             ;
@@ -6703,10 +6703,10 @@ function v696(scanlineToRender$$4) {
               var v2226 = pixelPosition$$5 + 4;
               var v6391 = this.BGPalette;
               var v8825 = tileYLine$$3 | 4;
-              introspect(JAMScript.introspectors.processC545F199BE443C5FB0DC91C55134FB746FD8B074) {
+              introspect(JAM.policy.pC545F199BE443C5FB0DC91C55134FB746FD8B074) {
                 var v6392 = tile$$3[v8825]
               }
-              introspect(JAMScript.introspectors.processC545F199BE443C5FB0DC91C55134FB746FD8B074) {
+              introspect(JAM.policy.pC545F199BE443C5FB0DC91C55134FB746FD8B074) {
                 v2225[v2226] = v6391[v6392]
               }
             ;
@@ -6715,10 +6715,10 @@ function v696(scanlineToRender$$4) {
               var v2228 = pixelPosition$$5 + 3;
               var v6393 = this.BGPalette;
               var v8826 = tileYLine$$3 | 3;
-              introspect(JAMScript.introspectors.processC545F199BE443C5FB0DC91C55134FB746FD8B074) {
+              introspect(JAM.policy.pC545F199BE443C5FB0DC91C55134FB746FD8B074) {
                 var v6394 = tile$$3[v8826]
               }
-              introspect(JAMScript.introspectors.processC545F199BE443C5FB0DC91C55134FB746FD8B074) {
+              introspect(JAM.policy.pC545F199BE443C5FB0DC91C55134FB746FD8B074) {
                 v2227[v2228] = v6393[v6394]
               }
             ;
@@ -6727,10 +6727,10 @@ function v696(scanlineToRender$$4) {
               var v2230 = pixelPosition$$5 + 2;
               var v6395 = this.BGPalette;
               var v8827 = tileYLine$$3 | 2;
-              introspect(JAMScript.introspectors.processC545F199BE443C5FB0DC91C55134FB746FD8B074) {
+              introspect(JAM.policy.pC545F199BE443C5FB0DC91C55134FB746FD8B074) {
                 var v6396 = tile$$3[v8827]
               }
-              introspect(JAMScript.introspectors.processC545F199BE443C5FB0DC91C55134FB746FD8B074) {
+              introspect(JAM.policy.pC545F199BE443C5FB0DC91C55134FB746FD8B074) {
                 v2229[v2230] = v6395[v6396]
               }
             ;
@@ -6739,20 +6739,20 @@ function v696(scanlineToRender$$4) {
               var v2232 = pixelPosition$$5 + 1;
               var v6397 = this.BGPalette;
               var v8828 = tileYLine$$3 | 1;
-              introspect(JAMScript.introspectors.processC545F199BE443C5FB0DC91C55134FB746FD8B074) {
+              introspect(JAM.policy.pC545F199BE443C5FB0DC91C55134FB746FD8B074) {
                 var v6398 = tile$$3[v8828]
               }
-              introspect(JAMScript.introspectors.processC545F199BE443C5FB0DC91C55134FB746FD8B074) {
+              introspect(JAM.policy.pC545F199BE443C5FB0DC91C55134FB746FD8B074) {
                 v2231[v2232] = v6397[v6398]
               }
             ;
             case 1:
               var v2233 = this.frameBuffer;
               var v6399 = this.BGPalette;
-              introspect(JAMScript.introspectors.processC545F199BE443C5FB0DC91C55134FB746FD8B074) {
+              introspect(JAM.policy.pC545F199BE443C5FB0DC91C55134FB746FD8B074) {
                 var v6400 = tile$$3[tileYLine$$3]
               }
-              introspect(JAMScript.introspectors.processC545F199BE443C5FB0DC91C55134FB746FD8B074) {
+              introspect(JAM.policy.pC545F199BE443C5FB0DC91C55134FB746FD8B074) {
                 v2233[pixelPosition$$5] = v6399[v6400]
               }
           }
@@ -6803,7 +6803,7 @@ function v695(scanlineToRender$$3) {
   var v2248 = scrollXAdjusted$$2 >> 3;
   var tileNumber$$3 = tileYDown$$2 + v2248;
   var v2249 = this.BGCHRBank1;
-  introspect(JAMScript.introspectors.processC545F199BE443C5FB0DC91C55134FB746FD8B074) {
+  introspect(JAM.policy.pC545F199BE443C5FB0DC91C55134FB746FD8B074) {
     var chrCode$$2 = v2249[tileNumber$$3]
   }
   var v6406 = this.gfxBackgroundBankOffset;
@@ -6812,7 +6812,7 @@ function v695(scanlineToRender$$3) {
     chrCode$$2 = chrCode$$2 | 256
   }
   var v2251 = this.BGCHRBank2;
-  introspect(JAMScript.introspectors.processC545F199BE443C5FB0DC91C55134FB746FD8B074) {
+  introspect(JAM.policy.pC545F199BE443C5FB0DC91C55134FB746FD8B074) {
     var attrCode$$1 = v2251[tileNumber$$3]
   }
   var v2252 = this.tileCache;
@@ -6822,7 +6822,7 @@ function v695(scanlineToRender$$3) {
   var v8833 = v9930 << 4;
   var v6407 = v8832 | v8833;
   var v2253 = v6407 | chrCode$$2;
-  introspect(JAMScript.introspectors.processC545F199BE443C5FB0DC91C55134FB746FD8B074) {
+  introspect(JAM.policy.pC545F199BE443C5FB0DC91C55134FB746FD8B074) {
     var tile$$2 = v2252[v2253]
   }
   var v2254 = attrCode$$1 & 7;
@@ -6845,7 +6845,7 @@ function v695(scanlineToRender$$3) {
     var v10447 = texel$$2;
     texel$$2 = texel$$2 + 1;
     var v9931 = tileYLine$$2 | v10447;
-    introspect(JAMScript.introspectors.processC545F199BE443C5FB0DC91C55134FB746FD8B074) {
+    introspect(JAM.policy.pC545F199BE443C5FB0DC91C55134FB746FD8B074) {
       var v8835 = tile$$2[v9931]
     }
     var v6410 = palette$$1 | v8835;
@@ -6897,7 +6897,7 @@ function v695(scanlineToRender$$3) {
     var v6417 = this.gbcBGPalette;
     var v9934 = texel$$2;
     texel$$2 = texel$$2 + 1;
-    introspect(JAMScript.introspectors.processC545F199BE443C5FB0DC91C55134FB746FD8B074) {
+    introspect(JAM.policy.pC545F199BE443C5FB0DC91C55134FB746FD8B074) {
       var v8839 = tile$$2[v9934]
     }
     var v6418 = palette$$1 | v8839;
@@ -6908,7 +6908,7 @@ function v695(scanlineToRender$$3) {
     var v6419 = this.gbcBGPalette;
     var v9935 = texel$$2;
     texel$$2 = texel$$2 + 1;
-    introspect(JAMScript.introspectors.processC545F199BE443C5FB0DC91C55134FB746FD8B074) {
+    introspect(JAM.policy.pC545F199BE443C5FB0DC91C55134FB746FD8B074) {
       var v8840 = tile$$2[v9935]
     }
     var v6420 = palette$$1 | v8840;
@@ -6919,7 +6919,7 @@ function v695(scanlineToRender$$3) {
     var v6421 = this.gbcBGPalette;
     var v9936 = texel$$2;
     texel$$2 = texel$$2 + 1;
-    introspect(JAMScript.introspectors.processC545F199BE443C5FB0DC91C55134FB746FD8B074) {
+    introspect(JAM.policy.pC545F199BE443C5FB0DC91C55134FB746FD8B074) {
       var v8841 = tile$$2[v9936]
     }
     var v6422 = palette$$1 | v8841;
@@ -6930,7 +6930,7 @@ function v695(scanlineToRender$$3) {
     var v6423 = this.gbcBGPalette;
     var v9937 = texel$$2;
     texel$$2 = texel$$2 + 1;
-    introspect(JAMScript.introspectors.processC545F199BE443C5FB0DC91C55134FB746FD8B074) {
+    introspect(JAM.policy.pC545F199BE443C5FB0DC91C55134FB746FD8B074) {
       var v8842 = tile$$2[v9937]
     }
     var v6424 = palette$$1 | v8842;
@@ -6941,7 +6941,7 @@ function v695(scanlineToRender$$3) {
     var v6425 = this.gbcBGPalette;
     var v9938 = texel$$2;
     texel$$2 = texel$$2 + 1;
-    introspect(JAMScript.introspectors.processC545F199BE443C5FB0DC91C55134FB746FD8B074) {
+    introspect(JAM.policy.pC545F199BE443C5FB0DC91C55134FB746FD8B074) {
       var v8843 = tile$$2[v9938]
     }
     var v6426 = palette$$1 | v8843;
@@ -6952,7 +6952,7 @@ function v695(scanlineToRender$$3) {
     var v6427 = this.gbcBGPalette;
     var v9939 = texel$$2;
     texel$$2 = texel$$2 + 1;
-    introspect(JAMScript.introspectors.processC545F199BE443C5FB0DC91C55134FB746FD8B074) {
+    introspect(JAM.policy.pC545F199BE443C5FB0DC91C55134FB746FD8B074) {
       var v8844 = tile$$2[v9939]
     }
     var v6428 = palette$$1 | v8844;
@@ -6963,7 +6963,7 @@ function v695(scanlineToRender$$3) {
     var v6429 = this.gbcBGPalette;
     var v9940 = texel$$2;
     texel$$2 = texel$$2 + 1;
-    introspect(JAMScript.introspectors.processC545F199BE443C5FB0DC91C55134FB746FD8B074) {
+    introspect(JAM.policy.pC545F199BE443C5FB0DC91C55134FB746FD8B074) {
       var v8845 = tile$$2[v9940]
     }
     var v6430 = palette$$1 | v8845;
@@ -6972,7 +6972,7 @@ function v695(scanlineToRender$$3) {
     var v2281 = pixelPosition$$4;
     pixelPosition$$4 = pixelPosition$$4 + 1;
     var v6431 = this.gbcBGPalette;
-    introspect(JAMScript.introspectors.processC545F199BE443C5FB0DC91C55134FB746FD8B074) {
+    introspect(JAM.policy.pC545F199BE443C5FB0DC91C55134FB746FD8B074) {
       var v8846 = tile$$2[texel$$2]
     }
     var v6432 = palette$$1 | v8846;
@@ -7015,7 +7015,7 @@ function v695(scanlineToRender$$3) {
         pixelPosition$$4 = pixelPosition$$4 + 1;
         var v6436 = this.gbcBGPalette;
         var v9943 = texel$$2 = texel$$2 + 1;
-        introspect(JAMScript.introspectors.processC545F199BE443C5FB0DC91C55134FB746FD8B074) {
+        introspect(JAM.policy.pC545F199BE443C5FB0DC91C55134FB746FD8B074) {
           var v8849 = tile$$2[v9943]
         }
         var v6437 = palette$$1 | v8849;
@@ -7061,7 +7061,7 @@ function v695(scanlineToRender$$3) {
       var v6442 = this.gbcBGPalette;
       var v9946 = texel$$2;
       texel$$2 = texel$$2 + 1;
-      introspect(JAMScript.introspectors.processC545F199BE443C5FB0DC91C55134FB746FD8B074) {
+      introspect(JAM.policy.pC545F199BE443C5FB0DC91C55134FB746FD8B074) {
         var v8852 = tile$$2[v9946]
       }
       var v6443 = palette$$1 | v8852;
@@ -7072,7 +7072,7 @@ function v695(scanlineToRender$$3) {
       var v6444 = this.gbcBGPalette;
       var v9947 = texel$$2;
       texel$$2 = texel$$2 + 1;
-      introspect(JAMScript.introspectors.processC545F199BE443C5FB0DC91C55134FB746FD8B074) {
+      introspect(JAM.policy.pC545F199BE443C5FB0DC91C55134FB746FD8B074) {
         var v8853 = tile$$2[v9947]
       }
       var v6445 = palette$$1 | v8853;
@@ -7083,7 +7083,7 @@ function v695(scanlineToRender$$3) {
       var v6446 = this.gbcBGPalette;
       var v9948 = texel$$2;
       texel$$2 = texel$$2 + 1;
-      introspect(JAMScript.introspectors.processC545F199BE443C5FB0DC91C55134FB746FD8B074) {
+      introspect(JAM.policy.pC545F199BE443C5FB0DC91C55134FB746FD8B074) {
         var v8854 = tile$$2[v9948]
       }
       var v6447 = palette$$1 | v8854;
@@ -7094,7 +7094,7 @@ function v695(scanlineToRender$$3) {
       var v6448 = this.gbcBGPalette;
       var v9949 = texel$$2;
       texel$$2 = texel$$2 + 1;
-      introspect(JAMScript.introspectors.processC545F199BE443C5FB0DC91C55134FB746FD8B074) {
+      introspect(JAM.policy.pC545F199BE443C5FB0DC91C55134FB746FD8B074) {
         var v8855 = tile$$2[v9949]
       }
       var v6449 = palette$$1 | v8855;
@@ -7105,7 +7105,7 @@ function v695(scanlineToRender$$3) {
       var v6450 = this.gbcBGPalette;
       var v9950 = texel$$2;
       texel$$2 = texel$$2 + 1;
-      introspect(JAMScript.introspectors.processC545F199BE443C5FB0DC91C55134FB746FD8B074) {
+      introspect(JAM.policy.pC545F199BE443C5FB0DC91C55134FB746FD8B074) {
         var v8856 = tile$$2[v9950]
       }
       var v6451 = palette$$1 | v8856;
@@ -7116,7 +7116,7 @@ function v695(scanlineToRender$$3) {
       var v6452 = this.gbcBGPalette;
       var v9951 = texel$$2;
       texel$$2 = texel$$2 + 1;
-      introspect(JAMScript.introspectors.processC545F199BE443C5FB0DC91C55134FB746FD8B074) {
+      introspect(JAM.policy.pC545F199BE443C5FB0DC91C55134FB746FD8B074) {
         var v8857 = tile$$2[v9951]
       }
       var v6453 = palette$$1 | v8857;
@@ -7127,7 +7127,7 @@ function v695(scanlineToRender$$3) {
       var v6454 = this.gbcBGPalette;
       var v9952 = texel$$2;
       texel$$2 = texel$$2 + 1;
-      introspect(JAMScript.introspectors.processC545F199BE443C5FB0DC91C55134FB746FD8B074) {
+      introspect(JAM.policy.pC545F199BE443C5FB0DC91C55134FB746FD8B074) {
         var v8858 = tile$$2[v9952]
       }
       var v6455 = palette$$1 | v8858;
@@ -7136,7 +7136,7 @@ function v695(scanlineToRender$$3) {
       var v2317 = pixelPosition$$4;
       pixelPosition$$4 = pixelPosition$$4 + 1;
       var v6456 = this.gbcBGPalette;
-      introspect(JAMScript.introspectors.processC545F199BE443C5FB0DC91C55134FB746FD8B074) {
+      introspect(JAM.policy.pC545F199BE443C5FB0DC91C55134FB746FD8B074) {
         var v8859 = tile$$2[texel$$2]
       }
       var v6457 = palette$$1 | v8859;
@@ -7171,7 +7171,7 @@ function v695(scanlineToRender$$3) {
           var v2326 = pixelPosition$$4 + 6;
           var v6460 = this.gbcBGPalette;
           var v9955 = tileYLine$$2 | 6;
-          introspect(JAMScript.introspectors.processC545F199BE443C5FB0DC91C55134FB746FD8B074) {
+          introspect(JAM.policy.pC545F199BE443C5FB0DC91C55134FB746FD8B074) {
             var v8862 = tile$$2[v9955]
           }
           var v6461 = palette$$1 | v8862;
@@ -7181,7 +7181,7 @@ function v695(scanlineToRender$$3) {
           var v2328 = pixelPosition$$4 + 5;
           var v6462 = this.gbcBGPalette;
           var v9956 = tileYLine$$2 | 5;
-          introspect(JAMScript.introspectors.processC545F199BE443C5FB0DC91C55134FB746FD8B074) {
+          introspect(JAM.policy.pC545F199BE443C5FB0DC91C55134FB746FD8B074) {
             var v8863 = tile$$2[v9956]
           }
           var v6463 = palette$$1 | v8863;
@@ -7191,7 +7191,7 @@ function v695(scanlineToRender$$3) {
           var v2330 = pixelPosition$$4 + 4;
           var v6464 = this.gbcBGPalette;
           var v9957 = tileYLine$$2 | 4;
-          introspect(JAMScript.introspectors.processC545F199BE443C5FB0DC91C55134FB746FD8B074) {
+          introspect(JAM.policy.pC545F199BE443C5FB0DC91C55134FB746FD8B074) {
             var v8864 = tile$$2[v9957]
           }
           var v6465 = palette$$1 | v8864;
@@ -7201,7 +7201,7 @@ function v695(scanlineToRender$$3) {
           var v2332 = pixelPosition$$4 + 3;
           var v6466 = this.gbcBGPalette;
           var v9958 = tileYLine$$2 | 3;
-          introspect(JAMScript.introspectors.processC545F199BE443C5FB0DC91C55134FB746FD8B074) {
+          introspect(JAM.policy.pC545F199BE443C5FB0DC91C55134FB746FD8B074) {
             var v8865 = tile$$2[v9958]
           }
           var v6467 = palette$$1 | v8865;
@@ -7211,7 +7211,7 @@ function v695(scanlineToRender$$3) {
           var v2334 = pixelPosition$$4 + 2;
           var v6468 = this.gbcBGPalette;
           var v9959 = tileYLine$$2 | 2;
-          introspect(JAMScript.introspectors.processC545F199BE443C5FB0DC91C55134FB746FD8B074) {
+          introspect(JAM.policy.pC545F199BE443C5FB0DC91C55134FB746FD8B074) {
             var v8866 = tile$$2[v9959]
           }
           var v6469 = palette$$1 | v8866;
@@ -7221,7 +7221,7 @@ function v695(scanlineToRender$$3) {
           var v2336 = pixelPosition$$4 + 1;
           var v6470 = this.gbcBGPalette;
           var v9960 = tileYLine$$2 | 1;
-          introspect(JAMScript.introspectors.processC545F199BE443C5FB0DC91C55134FB746FD8B074) {
+          introspect(JAM.policy.pC545F199BE443C5FB0DC91C55134FB746FD8B074) {
             var v8867 = tile$$2[v9960]
           }
           var v6471 = palette$$1 | v8867;
@@ -7229,7 +7229,7 @@ function v695(scanlineToRender$$3) {
         case 1:
           var v2337 = this.frameBuffer;
           var v6472 = this.gbcBGPalette;
-          introspect(JAMScript.introspectors.processC545F199BE443C5FB0DC91C55134FB746FD8B074) {
+          introspect(JAM.policy.pC545F199BE443C5FB0DC91C55134FB746FD8B074) {
             var v8868 = tile$$2[tileYLine$$2]
           }
           var v6473 = palette$$1 | v8868;
@@ -7280,7 +7280,7 @@ function v694(scanlineToRender$$2) {
   var v2350 = scrollXAdjusted$$1 >> 3;
   var tileNumber$$2 = tileYDown$$1 + v2350;
   var v2351 = this.BGCHRBank1;
-  introspect(JAMScript.introspectors.processC545F199BE443C5FB0DC91C55134FB746FD8B074) {
+  introspect(JAM.policy.pC545F199BE443C5FB0DC91C55134FB746FD8B074) {
     var chrCode$$1 = v2351[tileNumber$$2]
   }
   var v6479 = this.gfxBackgroundBankOffset;
@@ -7289,7 +7289,7 @@ function v694(scanlineToRender$$2) {
     chrCode$$1 = chrCode$$1 | 256
   }
   var v2353 = this.BGCHRBank2;
-  introspect(JAMScript.introspectors.processC545F199BE443C5FB0DC91C55134FB746FD8B074) {
+  introspect(JAM.policy.pC545F199BE443C5FB0DC91C55134FB746FD8B074) {
     var attrCode = v2353[tileNumber$$2]
   }
   var v2354 = this.tileCache;
@@ -7299,7 +7299,7 @@ function v694(scanlineToRender$$2) {
   var v8873 = v9965 << 4;
   var v6480 = v8872 | v8873;
   var v2355 = v6480 | chrCode$$1;
-  introspect(JAMScript.introspectors.processC545F199BE443C5FB0DC91C55134FB746FD8B074) {
+  introspect(JAM.policy.pC545F199BE443C5FB0DC91C55134FB746FD8B074) {
     var tile$$1 = v2354[v2355]
   }
   var v6481 = attrCode & 7;
@@ -7325,7 +7325,7 @@ function v694(scanlineToRender$$2) {
     var v10450 = texel$$1;
     texel$$1 = texel$$1 + 1;
     var v9966 = tileYLine$$1 | v10450;
-    introspect(JAMScript.introspectors.processC545F199BE443C5FB0DC91C55134FB746FD8B074) {
+    introspect(JAM.policy.pC545F199BE443C5FB0DC91C55134FB746FD8B074) {
       var v8875 = tile$$1[v9966]
     }
     var v6485 = palette | v8875;
@@ -7380,7 +7380,7 @@ function v694(scanlineToRender$$2) {
     var v6494 = this.gbcBGPalette;
     var v9969 = texel$$1;
     texel$$1 = texel$$1 + 1;
-    introspect(JAMScript.introspectors.processC545F199BE443C5FB0DC91C55134FB746FD8B074) {
+    introspect(JAM.policy.pC545F199BE443C5FB0DC91C55134FB746FD8B074) {
       var v8879 = tile$$1[v9969]
     }
     var v6495 = palette | v8879;
@@ -7391,7 +7391,7 @@ function v694(scanlineToRender$$2) {
     var v6496 = this.gbcBGPalette;
     var v9970 = texel$$1;
     texel$$1 = texel$$1 + 1;
-    introspect(JAMScript.introspectors.processC545F199BE443C5FB0DC91C55134FB746FD8B074) {
+    introspect(JAM.policy.pC545F199BE443C5FB0DC91C55134FB746FD8B074) {
       var v8880 = tile$$1[v9970]
     }
     var v6497 = palette | v8880;
@@ -7402,7 +7402,7 @@ function v694(scanlineToRender$$2) {
     var v6498 = this.gbcBGPalette;
     var v9971 = texel$$1;
     texel$$1 = texel$$1 + 1;
-    introspect(JAMScript.introspectors.processC545F199BE443C5FB0DC91C55134FB746FD8B074) {
+    introspect(JAM.policy.pC545F199BE443C5FB0DC91C55134FB746FD8B074) {
       var v8881 = tile$$1[v9971]
     }
     var v6499 = palette | v8881;
@@ -7413,7 +7413,7 @@ function v694(scanlineToRender$$2) {
     var v6500 = this.gbcBGPalette;
     var v9972 = texel$$1;
     texel$$1 = texel$$1 + 1;
-    introspect(JAMScript.introspectors.processC545F199BE443C5FB0DC91C55134FB746FD8B074) {
+    introspect(JAM.policy.pC545F199BE443C5FB0DC91C55134FB746FD8B074) {
       var v8882 = tile$$1[v9972]
     }
     var v6501 = palette | v8882;
@@ -7424,7 +7424,7 @@ function v694(scanlineToRender$$2) {
     var v6502 = this.gbcBGPalette;
     var v9973 = texel$$1;
     texel$$1 = texel$$1 + 1;
-    introspect(JAMScript.introspectors.processC545F199BE443C5FB0DC91C55134FB746FD8B074) {
+    introspect(JAM.policy.pC545F199BE443C5FB0DC91C55134FB746FD8B074) {
       var v8883 = tile$$1[v9973]
     }
     var v6503 = palette | v8883;
@@ -7435,7 +7435,7 @@ function v694(scanlineToRender$$2) {
     var v6504 = this.gbcBGPalette;
     var v9974 = texel$$1;
     texel$$1 = texel$$1 + 1;
-    introspect(JAMScript.introspectors.processC545F199BE443C5FB0DC91C55134FB746FD8B074) {
+    introspect(JAM.policy.pC545F199BE443C5FB0DC91C55134FB746FD8B074) {
       var v8884 = tile$$1[v9974]
     }
     var v6505 = palette | v8884;
@@ -7446,7 +7446,7 @@ function v694(scanlineToRender$$2) {
     var v6506 = this.gbcBGPalette;
     var v9975 = texel$$1;
     texel$$1 = texel$$1 + 1;
-    introspect(JAMScript.introspectors.processC545F199BE443C5FB0DC91C55134FB746FD8B074) {
+    introspect(JAM.policy.pC545F199BE443C5FB0DC91C55134FB746FD8B074) {
       var v8885 = tile$$1[v9975]
     }
     var v6507 = palette | v8885;
@@ -7455,7 +7455,7 @@ function v694(scanlineToRender$$2) {
     var v2385 = pixelPosition$$3;
     pixelPosition$$3 = pixelPosition$$3 + 1;
     var v6508 = this.gbcBGPalette;
-    introspect(JAMScript.introspectors.processC545F199BE443C5FB0DC91C55134FB746FD8B074) {
+    introspect(JAM.policy.pC545F199BE443C5FB0DC91C55134FB746FD8B074) {
       var v8886 = tile$$1[texel$$1]
     }
     var v6509 = palette | v8886;
@@ -7501,7 +7501,7 @@ function v694(scanlineToRender$$2) {
         pixelPosition$$3 = pixelPosition$$3 + 1;
         var v6515 = this.gbcBGPalette;
         var v9978 = texel$$1 = texel$$1 + 1;
-        introspect(JAMScript.introspectors.processC545F199BE443C5FB0DC91C55134FB746FD8B074) {
+        introspect(JAM.policy.pC545F199BE443C5FB0DC91C55134FB746FD8B074) {
           var v8889 = tile$$1[v9978]
         }
         var v6516 = palette | v8889;
@@ -7550,7 +7550,7 @@ function v694(scanlineToRender$$2) {
       var v6523 = this.gbcBGPalette;
       var v9981 = texel$$1;
       texel$$1 = texel$$1 + 1;
-      introspect(JAMScript.introspectors.processC545F199BE443C5FB0DC91C55134FB746FD8B074) {
+      introspect(JAM.policy.pC545F199BE443C5FB0DC91C55134FB746FD8B074) {
         var v8892 = tile$$1[v9981]
       }
       var v6524 = palette | v8892;
@@ -7561,7 +7561,7 @@ function v694(scanlineToRender$$2) {
       var v6525 = this.gbcBGPalette;
       var v9982 = texel$$1;
       texel$$1 = texel$$1 + 1;
-      introspect(JAMScript.introspectors.processC545F199BE443C5FB0DC91C55134FB746FD8B074) {
+      introspect(JAM.policy.pC545F199BE443C5FB0DC91C55134FB746FD8B074) {
         var v8893 = tile$$1[v9982]
       }
       var v6526 = palette | v8893;
@@ -7572,7 +7572,7 @@ function v694(scanlineToRender$$2) {
       var v6527 = this.gbcBGPalette;
       var v9983 = texel$$1;
       texel$$1 = texel$$1 + 1;
-      introspect(JAMScript.introspectors.processC545F199BE443C5FB0DC91C55134FB746FD8B074) {
+      introspect(JAM.policy.pC545F199BE443C5FB0DC91C55134FB746FD8B074) {
         var v8894 = tile$$1[v9983]
       }
       var v6528 = palette | v8894;
@@ -7583,7 +7583,7 @@ function v694(scanlineToRender$$2) {
       var v6529 = this.gbcBGPalette;
       var v9984 = texel$$1;
       texel$$1 = texel$$1 + 1;
-      introspect(JAMScript.introspectors.processC545F199BE443C5FB0DC91C55134FB746FD8B074) {
+      introspect(JAM.policy.pC545F199BE443C5FB0DC91C55134FB746FD8B074) {
         var v8895 = tile$$1[v9984]
       }
       var v6530 = palette | v8895;
@@ -7594,7 +7594,7 @@ function v694(scanlineToRender$$2) {
       var v6531 = this.gbcBGPalette;
       var v9985 = texel$$1;
       texel$$1 = texel$$1 + 1;
-      introspect(JAMScript.introspectors.processC545F199BE443C5FB0DC91C55134FB746FD8B074) {
+      introspect(JAM.policy.pC545F199BE443C5FB0DC91C55134FB746FD8B074) {
         var v8896 = tile$$1[v9985]
       }
       var v6532 = palette | v8896;
@@ -7605,7 +7605,7 @@ function v694(scanlineToRender$$2) {
       var v6533 = this.gbcBGPalette;
       var v9986 = texel$$1;
       texel$$1 = texel$$1 + 1;
-      introspect(JAMScript.introspectors.processC545F199BE443C5FB0DC91C55134FB746FD8B074) {
+      introspect(JAM.policy.pC545F199BE443C5FB0DC91C55134FB746FD8B074) {
         var v8897 = tile$$1[v9986]
       }
       var v6534 = palette | v8897;
@@ -7616,7 +7616,7 @@ function v694(scanlineToRender$$2) {
       var v6535 = this.gbcBGPalette;
       var v9987 = texel$$1;
       texel$$1 = texel$$1 + 1;
-      introspect(JAMScript.introspectors.processC545F199BE443C5FB0DC91C55134FB746FD8B074) {
+      introspect(JAM.policy.pC545F199BE443C5FB0DC91C55134FB746FD8B074) {
         var v8898 = tile$$1[v9987]
       }
       var v6536 = palette | v8898;
@@ -7625,7 +7625,7 @@ function v694(scanlineToRender$$2) {
       var v2423 = pixelPosition$$3;
       pixelPosition$$3 = pixelPosition$$3 + 1;
       var v6537 = this.gbcBGPalette;
-      introspect(JAMScript.introspectors.processC545F199BE443C5FB0DC91C55134FB746FD8B074) {
+      introspect(JAM.policy.pC545F199BE443C5FB0DC91C55134FB746FD8B074) {
         var v8899 = tile$$1[texel$$1]
       }
       var v6538 = palette | v8899;
@@ -7663,7 +7663,7 @@ function v694(scanlineToRender$$2) {
           var v2433 = pixelPosition$$3 + 6;
           var v6543 = this.gbcBGPalette;
           var v9990 = tileYLine$$1 | 6;
-          introspect(JAMScript.introspectors.processC545F199BE443C5FB0DC91C55134FB746FD8B074) {
+          introspect(JAM.policy.pC545F199BE443C5FB0DC91C55134FB746FD8B074) {
             var v8902 = tile$$1[v9990]
           }
           var v6544 = palette | v8902;
@@ -7673,7 +7673,7 @@ function v694(scanlineToRender$$2) {
           var v2435 = pixelPosition$$3 + 5;
           var v6545 = this.gbcBGPalette;
           var v9991 = tileYLine$$1 | 5;
-          introspect(JAMScript.introspectors.processC545F199BE443C5FB0DC91C55134FB746FD8B074) {
+          introspect(JAM.policy.pC545F199BE443C5FB0DC91C55134FB746FD8B074) {
             var v8903 = tile$$1[v9991]
           }
           var v6546 = palette | v8903;
@@ -7683,7 +7683,7 @@ function v694(scanlineToRender$$2) {
           var v2437 = pixelPosition$$3 + 4;
           var v6547 = this.gbcBGPalette;
           var v9992 = tileYLine$$1 | 4;
-          introspect(JAMScript.introspectors.processC545F199BE443C5FB0DC91C55134FB746FD8B074) {
+          introspect(JAM.policy.pC545F199BE443C5FB0DC91C55134FB746FD8B074) {
             var v8904 = tile$$1[v9992]
           }
           var v6548 = palette | v8904;
@@ -7693,7 +7693,7 @@ function v694(scanlineToRender$$2) {
           var v2439 = pixelPosition$$3 + 3;
           var v6549 = this.gbcBGPalette;
           var v9993 = tileYLine$$1 | 3;
-          introspect(JAMScript.introspectors.processC545F199BE443C5FB0DC91C55134FB746FD8B074) {
+          introspect(JAM.policy.pC545F199BE443C5FB0DC91C55134FB746FD8B074) {
             var v8905 = tile$$1[v9993]
           }
           var v6550 = palette | v8905;
@@ -7703,7 +7703,7 @@ function v694(scanlineToRender$$2) {
           var v2441 = pixelPosition$$3 + 2;
           var v6551 = this.gbcBGPalette;
           var v9994 = tileYLine$$1 | 2;
-          introspect(JAMScript.introspectors.processC545F199BE443C5FB0DC91C55134FB746FD8B074) {
+          introspect(JAM.policy.pC545F199BE443C5FB0DC91C55134FB746FD8B074) {
             var v8906 = tile$$1[v9994]
           }
           var v6552 = palette | v8906;
@@ -7713,7 +7713,7 @@ function v694(scanlineToRender$$2) {
           var v2443 = pixelPosition$$3 + 1;
           var v6553 = this.gbcBGPalette;
           var v9995 = tileYLine$$1 | 1;
-          introspect(JAMScript.introspectors.processC545F199BE443C5FB0DC91C55134FB746FD8B074) {
+          introspect(JAM.policy.pC545F199BE443C5FB0DC91C55134FB746FD8B074) {
             var v8907 = tile$$1[v9995]
           }
           var v6554 = palette | v8907;
@@ -7721,7 +7721,7 @@ function v694(scanlineToRender$$2) {
         case 1:
           var v2444 = this.frameBuffer;
           var v6555 = this.gbcBGPalette;
-          introspect(JAMScript.introspectors.processC545F199BE443C5FB0DC91C55134FB746FD8B074) {
+          introspect(JAM.policy.pC545F199BE443C5FB0DC91C55134FB746FD8B074) {
             var v8908 = tile$$1[tileYLine$$1]
           }
           var v6556 = palette | v8908;
@@ -7772,7 +7772,7 @@ function v693(scanlineToRender$$1) {
   var v2457 = scrollXAdjusted >> 3;
   var tileNumber$$1 = tileYDown + v2457;
   var v2458 = this.BGCHRBank1;
-  introspect(JAMScript.introspectors.processC545F199BE443C5FB0DC91C55134FB746FD8B074) {
+  introspect(JAM.policy.pC545F199BE443C5FB0DC91C55134FB746FD8B074) {
     var chrCode = v2458[tileNumber$$1]
   }
   var v6562 = this.gfxBackgroundBankOffset;
@@ -7781,7 +7781,7 @@ function v693(scanlineToRender$$1) {
     chrCode = chrCode | 256
   }
   var v2460 = this.tileCache;
-  introspect(JAMScript.introspectors.processC545F199BE443C5FB0DC91C55134FB746FD8B074) {
+  introspect(JAM.policy.pC545F199BE443C5FB0DC91C55134FB746FD8B074) {
     var tile = v2460[chrCode]
   }
   var texel = scrollXAdjusted & 7;
@@ -7802,10 +7802,10 @@ function v693(scanlineToRender$$1) {
     var v9999 = texel;
     texel = texel + 1;
     var v8913 = tileYLine | v9999;
-    introspect(JAMScript.introspectors.processC545F199BE443C5FB0DC91C55134FB746FD8B074) {
+    introspect(JAM.policy.pC545F199BE443C5FB0DC91C55134FB746FD8B074) {
       var v6565 = tile[v8913]
     }
-    introspect(JAMScript.introspectors.processC545F199BE443C5FB0DC91C55134FB746FD8B074) {
+    introspect(JAM.policy.pC545F199BE443C5FB0DC91C55134FB746FD8B074) {
       v2461[v2462] = v6564[v6565]
     }
     scrollXAdjusted = scrollXAdjusted + 1;
@@ -7837,7 +7837,7 @@ function v693(scanlineToRender$$1) {
       chrCode = chrCode | 256
     }
     var v2468 = this.tileCache;
-    introspect(JAMScript.introspectors.processC545F199BE443C5FB0DC91C55134FB746FD8B074) {
+    introspect(JAM.policy.pC545F199BE443C5FB0DC91C55134FB746FD8B074) {
       tile = v2468[chrCode]
     }
     texel = tileYLine;
@@ -7847,10 +7847,10 @@ function v693(scanlineToRender$$1) {
     var v6571 = this.BGPalette;
     var v8915 = texel;
     texel = texel + 1;
-    introspect(JAMScript.introspectors.processC545F199BE443C5FB0DC91C55134FB746FD8B074) {
+    introspect(JAM.policy.pC545F199BE443C5FB0DC91C55134FB746FD8B074) {
       var v6572 = tile[v8915]
     }
-    introspect(JAMScript.introspectors.processC545F199BE443C5FB0DC91C55134FB746FD8B074) {
+    introspect(JAM.policy.pC545F199BE443C5FB0DC91C55134FB746FD8B074) {
       v2469[v2470] = v6571[v6572]
     }
     var v2471 = this.frameBuffer;
@@ -7859,10 +7859,10 @@ function v693(scanlineToRender$$1) {
     var v6573 = this.BGPalette;
     var v8916 = texel;
     texel = texel + 1;
-    introspect(JAMScript.introspectors.processC545F199BE443C5FB0DC91C55134FB746FD8B074) {
+    introspect(JAM.policy.pC545F199BE443C5FB0DC91C55134FB746FD8B074) {
       var v6574 = tile[v8916]
     }
-    introspect(JAMScript.introspectors.processC545F199BE443C5FB0DC91C55134FB746FD8B074) {
+    introspect(JAM.policy.pC545F199BE443C5FB0DC91C55134FB746FD8B074) {
       v2471[v2472] = v6573[v6574]
     }
     var v2473 = this.frameBuffer;
@@ -7871,10 +7871,10 @@ function v693(scanlineToRender$$1) {
     var v6575 = this.BGPalette;
     var v8917 = texel;
     texel = texel + 1;
-    introspect(JAMScript.introspectors.processC545F199BE443C5FB0DC91C55134FB746FD8B074) {
+    introspect(JAM.policy.pC545F199BE443C5FB0DC91C55134FB746FD8B074) {
       var v6576 = tile[v8917]
     }
-    introspect(JAMScript.introspectors.processC545F199BE443C5FB0DC91C55134FB746FD8B074) {
+    introspect(JAM.policy.pC545F199BE443C5FB0DC91C55134FB746FD8B074) {
       v2473[v2474] = v6575[v6576]
     }
     var v2475 = this.frameBuffer;
@@ -7883,10 +7883,10 @@ function v693(scanlineToRender$$1) {
     var v6577 = this.BGPalette;
     var v8918 = texel;
     texel = texel + 1;
-    introspect(JAMScript.introspectors.processC545F199BE443C5FB0DC91C55134FB746FD8B074) {
+    introspect(JAM.policy.pC545F199BE443C5FB0DC91C55134FB746FD8B074) {
       var v6578 = tile[v8918]
     }
-    introspect(JAMScript.introspectors.processC545F199BE443C5FB0DC91C55134FB746FD8B074) {
+    introspect(JAM.policy.pC545F199BE443C5FB0DC91C55134FB746FD8B074) {
       v2475[v2476] = v6577[v6578]
     }
     var v2477 = this.frameBuffer;
@@ -7895,10 +7895,10 @@ function v693(scanlineToRender$$1) {
     var v6579 = this.BGPalette;
     var v8919 = texel;
     texel = texel + 1;
-    introspect(JAMScript.introspectors.processC545F199BE443C5FB0DC91C55134FB746FD8B074) {
+    introspect(JAM.policy.pC545F199BE443C5FB0DC91C55134FB746FD8B074) {
       var v6580 = tile[v8919]
     }
-    introspect(JAMScript.introspectors.processC545F199BE443C5FB0DC91C55134FB746FD8B074) {
+    introspect(JAM.policy.pC545F199BE443C5FB0DC91C55134FB746FD8B074) {
       v2477[v2478] = v6579[v6580]
     }
     var v2479 = this.frameBuffer;
@@ -7907,10 +7907,10 @@ function v693(scanlineToRender$$1) {
     var v6581 = this.BGPalette;
     var v8920 = texel;
     texel = texel + 1;
-    introspect(JAMScript.introspectors.processC545F199BE443C5FB0DC91C55134FB746FD8B074) {
+    introspect(JAM.policy.pC545F199BE443C5FB0DC91C55134FB746FD8B074) {
       var v6582 = tile[v8920]
     }
-    introspect(JAMScript.introspectors.processC545F199BE443C5FB0DC91C55134FB746FD8B074) {
+    introspect(JAM.policy.pC545F199BE443C5FB0DC91C55134FB746FD8B074) {
       v2479[v2480] = v6581[v6582]
     }
     var v2481 = this.frameBuffer;
@@ -7919,20 +7919,20 @@ function v693(scanlineToRender$$1) {
     var v6583 = this.BGPalette;
     var v8921 = texel;
     texel = texel + 1;
-    introspect(JAMScript.introspectors.processC545F199BE443C5FB0DC91C55134FB746FD8B074) {
+    introspect(JAM.policy.pC545F199BE443C5FB0DC91C55134FB746FD8B074) {
       var v6584 = tile[v8921]
     }
-    introspect(JAMScript.introspectors.processC545F199BE443C5FB0DC91C55134FB746FD8B074) {
+    introspect(JAM.policy.pC545F199BE443C5FB0DC91C55134FB746FD8B074) {
       v2481[v2482] = v6583[v6584]
     }
     var v2483 = this.frameBuffer;
     var v2484 = pixelPosition$$2;
     pixelPosition$$2 = pixelPosition$$2 + 1;
     var v6585 = this.BGPalette;
-    introspect(JAMScript.introspectors.processC545F199BE443C5FB0DC91C55134FB746FD8B074) {
+    introspect(JAM.policy.pC545F199BE443C5FB0DC91C55134FB746FD8B074) {
       var v6586 = tile[texel]
     }
-    introspect(JAMScript.introspectors.processC545F199BE443C5FB0DC91C55134FB746FD8B074) {
+    introspect(JAM.policy.pC545F199BE443C5FB0DC91C55134FB746FD8B074) {
       v2483[v2484] = v6585[v6586]
     }
     v2485 = tileNumber$$1 < scrollXAdjustedAligned
@@ -7950,7 +7950,7 @@ function v693(scanlineToRender$$1) {
         chrCode = chrCode | 256
       }
       var v2489 = this.tileCache;
-      introspect(JAMScript.introspectors.processC545F199BE443C5FB0DC91C55134FB746FD8B074) {
+      introspect(JAM.policy.pC545F199BE443C5FB0DC91C55134FB746FD8B074) {
         tile = v2489[chrCode]
       }
       texel = tileYLine - 1;
@@ -7965,10 +7965,10 @@ function v693(scanlineToRender$$1) {
         pixelPosition$$2 = pixelPosition$$2 + 1;
         var v6589 = this.BGPalette;
         var v8922 = texel = texel + 1;
-        introspect(JAMScript.introspectors.processC545F199BE443C5FB0DC91C55134FB746FD8B074) {
+        introspect(JAM.policy.pC545F199BE443C5FB0DC91C55134FB746FD8B074) {
           var v6590 = tile[v8922]
         }
-        introspect(JAMScript.introspectors.processC545F199BE443C5FB0DC91C55134FB746FD8B074) {
+        introspect(JAM.policy.pC545F199BE443C5FB0DC91C55134FB746FD8B074) {
           v2490[v2491] = v6589[v6590]
         }
         scrollXAdjusted = scrollXAdjusted + 1;
@@ -7994,7 +7994,7 @@ function v693(scanlineToRender$$1) {
         chrCode = chrCode | 256
       }
       var v2498 = this.tileCache;
-      introspect(JAMScript.introspectors.processC545F199BE443C5FB0DC91C55134FB746FD8B074) {
+      introspect(JAM.policy.pC545F199BE443C5FB0DC91C55134FB746FD8B074) {
         tile = v2498[chrCode]
       }
       texel = tileYLine;
@@ -8004,10 +8004,10 @@ function v693(scanlineToRender$$1) {
       var v6594 = this.BGPalette;
       var v8923 = texel;
       texel = texel + 1;
-      introspect(JAMScript.introspectors.processC545F199BE443C5FB0DC91C55134FB746FD8B074) {
+      introspect(JAM.policy.pC545F199BE443C5FB0DC91C55134FB746FD8B074) {
         var v6595 = tile[v8923]
       }
-      introspect(JAMScript.introspectors.processC545F199BE443C5FB0DC91C55134FB746FD8B074) {
+      introspect(JAM.policy.pC545F199BE443C5FB0DC91C55134FB746FD8B074) {
         v2499[v2500] = v6594[v6595]
       }
       var v2501 = this.frameBuffer;
@@ -8016,10 +8016,10 @@ function v693(scanlineToRender$$1) {
       var v6596 = this.BGPalette;
       var v8924 = texel;
       texel = texel + 1;
-      introspect(JAMScript.introspectors.processC545F199BE443C5FB0DC91C55134FB746FD8B074) {
+      introspect(JAM.policy.pC545F199BE443C5FB0DC91C55134FB746FD8B074) {
         var v6597 = tile[v8924]
       }
-      introspect(JAMScript.introspectors.processC545F199BE443C5FB0DC91C55134FB746FD8B074) {
+      introspect(JAM.policy.pC545F199BE443C5FB0DC91C55134FB746FD8B074) {
         v2501[v2502] = v6596[v6597]
       }
       var v2503 = this.frameBuffer;
@@ -8028,10 +8028,10 @@ function v693(scanlineToRender$$1) {
       var v6598 = this.BGPalette;
       var v8925 = texel;
       texel = texel + 1;
-      introspect(JAMScript.introspectors.processC545F199BE443C5FB0DC91C55134FB746FD8B074) {
+      introspect(JAM.policy.pC545F199BE443C5FB0DC91C55134FB746FD8B074) {
         var v6599 = tile[v8925]
       }
-      introspect(JAMScript.introspectors.processC545F199BE443C5FB0DC91C55134FB746FD8B074) {
+      introspect(JAM.policy.pC545F199BE443C5FB0DC91C55134FB746FD8B074) {
         v2503[v2504] = v6598[v6599]
       }
       var v2505 = this.frameBuffer;
@@ -8040,10 +8040,10 @@ function v693(scanlineToRender$$1) {
       var v6600 = this.BGPalette;
       var v8926 = texel;
       texel = texel + 1;
-      introspect(JAMScript.introspectors.processC545F199BE443C5FB0DC91C55134FB746FD8B074) {
+      introspect(JAM.policy.pC545F199BE443C5FB0DC91C55134FB746FD8B074) {
         var v6601 = tile[v8926]
       }
-      introspect(JAMScript.introspectors.processC545F199BE443C5FB0DC91C55134FB746FD8B074) {
+      introspect(JAM.policy.pC545F199BE443C5FB0DC91C55134FB746FD8B074) {
         v2505[v2506] = v6600[v6601]
       }
       var v2507 = this.frameBuffer;
@@ -8052,10 +8052,10 @@ function v693(scanlineToRender$$1) {
       var v6602 = this.BGPalette;
       var v8927 = texel;
       texel = texel + 1;
-      introspect(JAMScript.introspectors.processC545F199BE443C5FB0DC91C55134FB746FD8B074) {
+      introspect(JAM.policy.pC545F199BE443C5FB0DC91C55134FB746FD8B074) {
         var v6603 = tile[v8927]
       }
-      introspect(JAMScript.introspectors.processC545F199BE443C5FB0DC91C55134FB746FD8B074) {
+      introspect(JAM.policy.pC545F199BE443C5FB0DC91C55134FB746FD8B074) {
         v2507[v2508] = v6602[v6603]
       }
       var v2509 = this.frameBuffer;
@@ -8064,10 +8064,10 @@ function v693(scanlineToRender$$1) {
       var v6604 = this.BGPalette;
       var v8928 = texel;
       texel = texel + 1;
-      introspect(JAMScript.introspectors.processC545F199BE443C5FB0DC91C55134FB746FD8B074) {
+      introspect(JAM.policy.pC545F199BE443C5FB0DC91C55134FB746FD8B074) {
         var v6605 = tile[v8928]
       }
-      introspect(JAMScript.introspectors.processC545F199BE443C5FB0DC91C55134FB746FD8B074) {
+      introspect(JAM.policy.pC545F199BE443C5FB0DC91C55134FB746FD8B074) {
         v2509[v2510] = v6604[v6605]
       }
       var v2511 = this.frameBuffer;
@@ -8076,20 +8076,20 @@ function v693(scanlineToRender$$1) {
       var v6606 = this.BGPalette;
       var v8929 = texel;
       texel = texel + 1;
-      introspect(JAMScript.introspectors.processC545F199BE443C5FB0DC91C55134FB746FD8B074) {
+      introspect(JAM.policy.pC545F199BE443C5FB0DC91C55134FB746FD8B074) {
         var v6607 = tile[v8929]
       }
-      introspect(JAMScript.introspectors.processC545F199BE443C5FB0DC91C55134FB746FD8B074) {
+      introspect(JAM.policy.pC545F199BE443C5FB0DC91C55134FB746FD8B074) {
         v2511[v2512] = v6606[v6607]
       }
       var v2513 = this.frameBuffer;
       var v2514 = pixelPosition$$2;
       pixelPosition$$2 = pixelPosition$$2 + 1;
       var v6608 = this.BGPalette;
-      introspect(JAMScript.introspectors.processC545F199BE443C5FB0DC91C55134FB746FD8B074) {
+      introspect(JAM.policy.pC545F199BE443C5FB0DC91C55134FB746FD8B074) {
         var v6609 = tile[texel]
       }
-      introspect(JAMScript.introspectors.processC545F199BE443C5FB0DC91C55134FB746FD8B074) {
+      introspect(JAM.policy.pC545F199BE443C5FB0DC91C55134FB746FD8B074) {
         v2513[v2514] = v6608[v6609]
       }
       v2515 = tileYDown < scrollXAdjustedAligned
@@ -8104,7 +8104,7 @@ function v693(scanlineToRender$$1) {
         chrCode = chrCode | 256
       }
       var v2518 = this.tileCache;
-      introspect(JAMScript.introspectors.processC545F199BE443C5FB0DC91C55134FB746FD8B074) {
+      introspect(JAM.policy.pC545F199BE443C5FB0DC91C55134FB746FD8B074) {
         tile = v2518[chrCode]
       }
       var v2532 = pixelPositionEnd - pixelPosition$$2;
@@ -8114,10 +8114,10 @@ function v693(scanlineToRender$$1) {
           var v2520 = pixelPosition$$2 + 6;
           var v6611 = this.BGPalette;
           var v8930 = tileYLine | 6;
-          introspect(JAMScript.introspectors.processC545F199BE443C5FB0DC91C55134FB746FD8B074) {
+          introspect(JAM.policy.pC545F199BE443C5FB0DC91C55134FB746FD8B074) {
             var v6612 = tile[v8930]
           }
-          introspect(JAMScript.introspectors.processC545F199BE443C5FB0DC91C55134FB746FD8B074) {
+          introspect(JAM.policy.pC545F199BE443C5FB0DC91C55134FB746FD8B074) {
             v2519[v2520] = v6611[v6612]
           }
         ;
@@ -8126,10 +8126,10 @@ function v693(scanlineToRender$$1) {
           var v2522 = pixelPosition$$2 + 5;
           var v6613 = this.BGPalette;
           var v8931 = tileYLine | 5;
-          introspect(JAMScript.introspectors.processC545F199BE443C5FB0DC91C55134FB746FD8B074) {
+          introspect(JAM.policy.pC545F199BE443C5FB0DC91C55134FB746FD8B074) {
             var v6614 = tile[v8931]
           }
-          introspect(JAMScript.introspectors.processC545F199BE443C5FB0DC91C55134FB746FD8B074) {
+          introspect(JAM.policy.pC545F199BE443C5FB0DC91C55134FB746FD8B074) {
             v2521[v2522] = v6613[v6614]
           }
         ;
@@ -8138,10 +8138,10 @@ function v693(scanlineToRender$$1) {
           var v2524 = pixelPosition$$2 + 4;
           var v6615 = this.BGPalette;
           var v8932 = tileYLine | 4;
-          introspect(JAMScript.introspectors.processC545F199BE443C5FB0DC91C55134FB746FD8B074) {
+          introspect(JAM.policy.pC545F199BE443C5FB0DC91C55134FB746FD8B074) {
             var v6616 = tile[v8932]
           }
-          introspect(JAMScript.introspectors.processC545F199BE443C5FB0DC91C55134FB746FD8B074) {
+          introspect(JAM.policy.pC545F199BE443C5FB0DC91C55134FB746FD8B074) {
             v2523[v2524] = v6615[v6616]
           }
         ;
@@ -8150,10 +8150,10 @@ function v693(scanlineToRender$$1) {
           var v2526 = pixelPosition$$2 + 3;
           var v6617 = this.BGPalette;
           var v8933 = tileYLine | 3;
-          introspect(JAMScript.introspectors.processC545F199BE443C5FB0DC91C55134FB746FD8B074) {
+          introspect(JAM.policy.pC545F199BE443C5FB0DC91C55134FB746FD8B074) {
             var v6618 = tile[v8933]
           }
-          introspect(JAMScript.introspectors.processC545F199BE443C5FB0DC91C55134FB746FD8B074) {
+          introspect(JAM.policy.pC545F199BE443C5FB0DC91C55134FB746FD8B074) {
             v2525[v2526] = v6617[v6618]
           }
         ;
@@ -8162,10 +8162,10 @@ function v693(scanlineToRender$$1) {
           var v2528 = pixelPosition$$2 + 2;
           var v6619 = this.BGPalette;
           var v8934 = tileYLine | 2;
-          introspect(JAMScript.introspectors.processC545F199BE443C5FB0DC91C55134FB746FD8B074) {
+          introspect(JAM.policy.pC545F199BE443C5FB0DC91C55134FB746FD8B074) {
             var v6620 = tile[v8934]
           }
-          introspect(JAMScript.introspectors.processC545F199BE443C5FB0DC91C55134FB746FD8B074) {
+          introspect(JAM.policy.pC545F199BE443C5FB0DC91C55134FB746FD8B074) {
             v2527[v2528] = v6619[v6620]
           }
         ;
@@ -8174,20 +8174,20 @@ function v693(scanlineToRender$$1) {
           var v2530 = pixelPosition$$2 + 1;
           var v6621 = this.BGPalette;
           var v8935 = tileYLine | 1;
-          introspect(JAMScript.introspectors.processC545F199BE443C5FB0DC91C55134FB746FD8B074) {
+          introspect(JAM.policy.pC545F199BE443C5FB0DC91C55134FB746FD8B074) {
             var v6622 = tile[v8935]
           }
-          introspect(JAMScript.introspectors.processC545F199BE443C5FB0DC91C55134FB746FD8B074) {
+          introspect(JAM.policy.pC545F199BE443C5FB0DC91C55134FB746FD8B074) {
             v2529[v2530] = v6621[v6622]
           }
         ;
         case 1:
           var v2531 = this.frameBuffer;
           var v6623 = this.BGPalette;
-          introspect(JAMScript.introspectors.processC545F199BE443C5FB0DC91C55134FB746FD8B074) {
+          introspect(JAM.policy.pC545F199BE443C5FB0DC91C55134FB746FD8B074) {
             var v6624 = tile[tileYLine]
           }
-          introspect(JAMScript.introspectors.processC545F199BE443C5FB0DC91C55134FB746FD8B074) {
+          introspect(JAM.policy.pC545F199BE443C5FB0DC91C55134FB746FD8B074) {
             v2531[pixelPosition$$2] = v6623[v6624]
           }
       }
@@ -8197,7 +8197,7 @@ function v693(scanlineToRender$$1) {
 }
 function v692(index$$61, data$$29) {
   var v8936 = this.gbcOBJRawPalette;
-  introspect(JAMScript.introspectors.processC545F199BE443C5FB0DC91C55134FB746FD8B074) {
+  introspect(JAM.policy.pC545F199BE443C5FB0DC91C55134FB746FD8B074) {
     var v6625 = v8936[index$$61]
   }
   var v2539 = v6625 != data$$29;
@@ -8212,13 +8212,13 @@ function v692(index$$61, data$$29) {
       var v2537 = index$$61 >> 1;
       var v10655 = this.gbcOBJRawPalette;
       var v10656 = index$$61 | 1;
-      introspect(JAMScript.introspectors.processC545F199BE443C5FB0DC91C55134FB746FD8B074) {
+      introspect(JAM.policy.pC545F199BE443C5FB0DC91C55134FB746FD8B074) {
         var v10453 = v10655[v10656]
       }
       var v10000 = v10453 << 8;
       var v10454 = this.gbcOBJRawPalette;
       var v10455 = index$$61 & 62;
-      introspect(JAMScript.introspectors.processC545F199BE443C5FB0DC91C55134FB746FD8B074) {
+      introspect(JAM.policy.pC545F199BE443C5FB0DC91C55134FB746FD8B074) {
         var v10001 = v10454[v10455]
       }
       var v8937 = v10000 | v10001;
@@ -8230,7 +8230,7 @@ function v692(index$$61, data$$29) {
 }
 function v691(index$$60, data$$28) {
   var v8938 = this.gbcBGRawPalette;
-  introspect(JAMScript.introspectors.processC545F199BE443C5FB0DC91C55134FB746FD8B074) {
+  introspect(JAM.policy.pC545F199BE443C5FB0DC91C55134FB746FD8B074) {
     var v6628 = v8938[index$$60]
   }
   var v2550 = v6628 != data$$28;
@@ -8243,13 +8243,13 @@ function v691(index$$60, data$$28) {
     if(v2549) {
       var v10456 = this.gbcBGRawPalette;
       var v10457 = index$$60 | 1;
-      introspect(JAMScript.introspectors.processC545F199BE443C5FB0DC91C55134FB746FD8B074) {
+      introspect(JAM.policy.pC545F199BE443C5FB0DC91C55134FB746FD8B074) {
         var v10002 = v10456[v10457]
       }
       var v8939 = v10002 << 8;
       var v10003 = this.gbcBGRawPalette;
       var v10004 = index$$60 & 62;
-      introspect(JAMScript.introspectors.processC545F199BE443C5FB0DC91C55134FB746FD8B074) {
+      introspect(JAM.policy.pC545F199BE443C5FB0DC91C55134FB746FD8B074) {
         var v8940 = v10003[v10004]
       }
       var v6630 = v8939 | v8940;
@@ -8264,13 +8264,13 @@ function v691(index$$60, data$$28) {
     }else {
       var v10005 = this.gbcBGRawPalette;
       var v10006 = index$$60 | 1;
-      introspect(JAMScript.introspectors.processC545F199BE443C5FB0DC91C55134FB746FD8B074) {
+      introspect(JAM.policy.pC545F199BE443C5FB0DC91C55134FB746FD8B074) {
         var v8941 = v10005[v10006]
       }
       var v6631 = v8941 << 8;
       var v8942 = this.gbcBGRawPalette;
       var v8943 = index$$60 & 62;
-      introspect(JAMScript.introspectors.processC545F199BE443C5FB0DC91C55134FB746FD8B074) {
+      introspect(JAM.policy.pC545F199BE443C5FB0DC91C55134FB746FD8B074) {
         var v6632 = v8942[v8943]
       }
       var v2545 = v6631 | v6632;
@@ -8332,7 +8332,7 @@ function v688(data$$25) {
   var v2563 = this.gbBGColorizedPalette;
   var v8949 = this.cachedBGPaletteConversion;
   var v8950 = data$$25 & 3;
-  introspect(JAMScript.introspectors.processC545F199BE443C5FB0DC91C55134FB746FD8B074) {
+  introspect(JAM.policy.pC545F199BE443C5FB0DC91C55134FB746FD8B074) {
     var v6645 = v8949[v8950]
   }
   v2563[0] = v6645 | 33554432;
@@ -8356,7 +8356,7 @@ function v687(data$$24) {
   var v2567 = this.gbBGPalette;
   var v8953 = this.colors;
   var v8954 = data$$24 & 3;
-  introspect(JAMScript.introspectors.processC545F199BE443C5FB0DC91C55134FB746FD8B074) {
+  introspect(JAM.policy.pC545F199BE443C5FB0DC91C55134FB746FD8B074) {
     var v6652 = v8953[v8954]
   }
   v2567[0] = v6652 | 33554432;
@@ -8385,12 +8385,12 @@ function v686() {
     var v2572 = counter;
     var v10458 = this.gbcBGRawPalette;
     var v10459 = adjustedIndex | 1;
-    introspect(JAMScript.introspectors.processC545F199BE443C5FB0DC91C55134FB746FD8B074) {
+    introspect(JAM.policy.pC545F199BE443C5FB0DC91C55134FB746FD8B074) {
       var v10009 = v10458[v10459]
     }
     var v8957 = v10009 << 8;
     var v10010 = this.gbcBGRawPalette;
-    introspect(JAMScript.introspectors.processC545F199BE443C5FB0DC91C55134FB746FD8B074) {
+    introspect(JAM.policy.pC545F199BE443C5FB0DC91C55134FB746FD8B074) {
       var v8958 = v10010[adjustedIndex]
     }
     var v6659 = v8957 | v8958;
@@ -8400,12 +8400,12 @@ function v686() {
     var v2574 = counter;
     var v10460 = this.gbcOBJRawPalette;
     var v10461 = adjustedIndex | 1;
-    introspect(JAMScript.introspectors.processC545F199BE443C5FB0DC91C55134FB746FD8B074) {
+    introspect(JAM.policy.pC545F199BE443C5FB0DC91C55134FB746FD8B074) {
       var v10011 = v10460[v10461]
     }
     var v8959 = v10011 << 8;
     var v10012 = this.gbcOBJRawPalette;
-    introspect(JAMScript.introspectors.processC545F199BE443C5FB0DC91C55134FB746FD8B074) {
+    introspect(JAM.policy.pC545F199BE443C5FB0DC91C55134FB746FD8B074) {
       var v8960 = v10012[adjustedIndex]
     }
     var v6660 = v8959 | v8960;
@@ -8422,12 +8422,12 @@ function v686() {
     var v2577 = counter;
     var v10462 = this.gbcOBJRawPalette;
     var v10463 = adjustedIndex | 1;
-    introspect(JAMScript.introspectors.processC545F199BE443C5FB0DC91C55134FB746FD8B074) {
+    introspect(JAM.policy.pC545F199BE443C5FB0DC91C55134FB746FD8B074) {
       var v10013 = v10462[v10463]
     }
     var v8961 = v10013 << 8;
     var v10014 = this.gbcOBJRawPalette;
-    introspect(JAMScript.introspectors.processC545F199BE443C5FB0DC91C55134FB746FD8B074) {
+    introspect(JAM.policy.pC545F199BE443C5FB0DC91C55134FB746FD8B074) {
       var v8962 = v10014[adjustedIndex]
     }
     var v6661 = v8961 | v8962;
@@ -8818,14 +8818,14 @@ function v674() {
   for(;v2639;) {
     var v2636 = canvasIndex$$1;
     canvasIndex$$1 = canvasIndex$$1 + 1;
-    introspect(JAMScript.introspectors.processC545F199BE443C5FB0DC91C55134FB746FD8B074) {
+    introspect(JAM.policy.pC545F199BE443C5FB0DC91C55134FB746FD8B074) {
       var v8977 = frameBuffer$$1[bufferIndex$$1]
     }
     var v6685 = v8977 >> 16;
     swizzledFrame[v2636] = v6685 & 255;
     var v2637 = canvasIndex$$1;
     canvasIndex$$1 = canvasIndex$$1 + 1;
-    introspect(JAMScript.introspectors.processC545F199BE443C5FB0DC91C55134FB746FD8B074) {
+    introspect(JAM.policy.pC545F199BE443C5FB0DC91C55134FB746FD8B074) {
       var v8978 = frameBuffer$$1[bufferIndex$$1]
     }
     var v6686 = v8978 >> 8;
@@ -8834,7 +8834,7 @@ function v674() {
     canvasIndex$$1 = canvasIndex$$1 + 1;
     var v8979 = bufferIndex$$1;
     bufferIndex$$1 = bufferIndex$$1 + 1;
-    introspect(JAMScript.introspectors.processC545F199BE443C5FB0DC91C55134FB746FD8B074) {
+    introspect(JAM.policy.pC545F199BE443C5FB0DC91C55134FB746FD8B074) {
       var v6687 = frameBuffer$$1[v8979]
     }
     swizzledFrame[v2638] = v6687 & 255;
@@ -9083,7 +9083,7 @@ function v667() {
       }
       var v2676 = parentObj$$516.LINECONTROL;
       var v2677 = parentObj$$516.actualScanLine;
-      introspect(JAMScript.introspectors.processC545F199BE443C5FB0DC91C55134FB746FD8B074) {
+      introspect(JAM.policy.pC545F199BE443C5FB0DC91C55134FB746FD8B074) {
         v2676[v2677](parentObj$$516)
       }
     }
@@ -9271,7 +9271,7 @@ function v667() {
           parentObj$$514.modeSTAT = 2;
           var v2704 = parentObj$$514.LINECONTROL;
           var v2705 = parentObj$$514.actualScanLine;
-          introspect(JAMScript.introspectors.processC545F199BE443C5FB0DC91C55134FB746FD8B074) {
+          introspect(JAM.policy.pC545F199BE443C5FB0DC91C55134FB746FD8B074) {
             v2704[v2705](parentObj$$514)
           }
         }
@@ -9325,7 +9325,7 @@ function v661() {
   this.LCDTicks = v6760 + v6761;
   var v2718 = this.LCDCONTROL;
   var v2719 = this.actualScanLine;
-  introspect(JAMScript.introspectors.processC545F199BE443C5FB0DC91C55134FB746FD8B074) {
+  introspect(JAM.policy.pC545F199BE443C5FB0DC91C55134FB746FD8B074) {
     v2718[v2719](this)
   }
   var v2720 = this.CPUTicks;
@@ -9448,7 +9448,7 @@ function v659(line$$2) {
     var v2737 = v6791;
     for(;v2737;) {
       var v6792 = this.memory;
-      introspect(JAMScript.introspectors.processC545F199BE443C5FB0DC91C55134FB746FD8B074) {
+      introspect(JAM.policy.pC545F199BE443C5FB0DC91C55134FB746FD8B074) {
         var v2735 = v6792[OAMAddress]
       }
       yoffset$$3 = lineAdjusted - v2735;
@@ -9697,7 +9697,7 @@ function v650() {
     var v2771 = this.memoryReader;
     var v2772 = this.programCounter;
     var v2773 = this.programCounter;
-    introspect(JAMScript.introspectors.processC545F199BE443C5FB0DC91C55134FB746FD8B074) {
+    introspect(JAM.policy.pC545F199BE443C5FB0DC91C55134FB746FD8B074) {
       opcodeToExecute = v2771[v2772](this, v2773)
     }
     var v6835 = this.programCounter;
@@ -9711,11 +9711,11 @@ function v650() {
       this.skipPCIncrement = false
     }
     var v2777 = this.TICKTable;
-    introspect(JAMScript.introspectors.processC545F199BE443C5FB0DC91C55134FB746FD8B074) {
+    introspect(JAM.policy.pC545F199BE443C5FB0DC91C55134FB746FD8B074) {
       this.CPUTicks = v2777[opcodeToExecute]
     }
     var v2778 = this.OPCODE;
-    introspect(JAMScript.introspectors.processC545F199BE443C5FB0DC91C55134FB746FD8B074) {
+    introspect(JAM.policy.pC545F199BE443C5FB0DC91C55134FB746FD8B074) {
       v2778[opcodeToExecute](this)
     }
     var v6837 = this.LCDTicks;
@@ -9725,7 +9725,7 @@ function v650() {
     this.LCDTicks = v6837 + v6838;
     var v2779 = this.LCDCONTROL;
     var v2780 = this.actualScanLine;
-    introspect(JAMScript.introspectors.processC545F199BE443C5FB0DC91C55134FB746FD8B074) {
+    introspect(JAM.policy.pC545F199BE443C5FB0DC91C55134FB746FD8B074) {
       v2779[v2780](this)
     }
     var v2781 = this.CPUTicks;
@@ -9893,7 +9893,7 @@ function v647(address, data$$23) {
 function v646() {
   var v6879 = this.channel3PCM;
   var v6880 = this.channel3lastSampleLookup;
-  introspect(JAMScript.introspectors.processC545F199BE443C5FB0DC91C55134FB746FD8B074) {
+  introspect(JAM.policy.pC545F199BE443C5FB0DC91C55134FB746FD8B074) {
     var v2807 = v6879[v6880]
   }
   var v2808 = this.channel3patternType;
@@ -10025,7 +10025,7 @@ function v638() {
 function v637() {
   var v6892 = this.channel2CachedDuty;
   var v6893 = this.channel2DutyTracker;
-  introspect(JAMScript.introspectors.processC545F199BE443C5FB0DC91C55134FB746FD8B074) {
+  introspect(JAM.policy.pC545F199BE443C5FB0DC91C55134FB746FD8B074) {
     var v2820 = v6892[v6893]
   }
   if(v2820) {
@@ -10096,7 +10096,7 @@ function v633() {
 function v632() {
   var v6898 = this.channel1CachedDuty;
   var v6899 = this.channel1DutyTracker;
-  introspect(JAMScript.introspectors.processC545F199BE443C5FB0DC91C55134FB746FD8B074) {
+  introspect(JAM.policy.pC545F199BE443C5FB0DC91C55134FB746FD8B074) {
     var v2826 = v6898[v6899]
   }
   if(v2826) {
@@ -11404,7 +11404,7 @@ function v602() {
     if(v3072) {
       var v7044 = this.name;
       var v9107 = this.ROMImage;
-      introspect(JAMScript.introspectors.processC545F199BE443C5FB0DC91C55134FB746FD8B074) {
+      introspect(JAM.policy.pC545F199BE443C5FB0DC91C55134FB746FD8B074) {
         var v7045 = v9107[index$$54]
       }
       this.name = v7044 + v7045
@@ -11421,7 +11421,7 @@ function v602() {
     if(v3074) {
       var v7047 = this.gameCode;
       var v9109 = this.ROMImage;
-      introspect(JAMScript.introspectors.processC545F199BE443C5FB0DC91C55134FB746FD8B074) {
+      introspect(JAM.policy.pC545F199BE443C5FB0DC91C55134FB746FD8B074) {
         var v7048 = v9109[index$$54]
       }
       this.gameCode = v7047 + v7048
@@ -11598,7 +11598,7 @@ function v602() {
   var v3083 = this.ROMBanks;
   var v7054 = this.ROM;
   var v3084 = v7054[328];
-  introspect(JAMScript.introspectors.processC545F199BE443C5FB0DC91C55134FB746FD8B074) {
+  introspect(JAM.policy.pC545F199BE443C5FB0DC91C55134FB746FD8B074) {
     this.numROMBanks = v3083[v3084]
   }
   var v7055 = this.numROMBanks;
@@ -11607,7 +11607,7 @@ function v602() {
   var v7056 = this.RAMBanks;
   var v9112 = this.ROM;
   var v7057 = v9112[329];
-  introspect(JAMScript.introspectors.processC545F199BE443C5FB0DC91C55134FB746FD8B074) {
+  introspect(JAM.policy.pC545F199BE443C5FB0DC91C55134FB746FD8B074) {
     var v3086 = v7056[v7057]
   }
   switch(v3086) {
@@ -11718,7 +11718,7 @@ function v601() {
   for(;v3101;) {
     var v7065 = this.ROMImage;
     var v10076 = this.ROM;
-    introspect(JAMScript.introspectors.processC545F199BE443C5FB0DC91C55134FB746FD8B074) {
+    introspect(JAM.policy.pC545F199BE443C5FB0DC91C55134FB746FD8B074) {
       var v9119 = v10076[index$$53]
     }
     var v7066 = String.fromCharCode(v9119);
@@ -11887,7 +11887,7 @@ function v598() {
     if(v3138) {
       var v3132 = 65280 | index$$52;
       var v7084 = this.ffxxDump;
-      introspect(JAMScript.introspectors.processC545F199BE443C5FB0DC91C55134FB746FD8B074) {
+      introspect(JAM.policy.pC545F199BE443C5FB0DC91C55134FB746FD8B074) {
         var v3133 = v7084[index$$52]
       }
       this.memoryWrite(v3132, v3133)
@@ -11908,7 +11908,7 @@ function v598() {
         case 255:
           var v3134 = 65280 | index$$52;
           var v7085 = this.ffxxDump;
-          introspect(JAMScript.introspectors.processC545F199BE443C5FB0DC91C55134FB746FD8B074) {
+          introspect(JAM.policy.pC545F199BE443C5FB0DC91C55134FB746FD8B074) {
             var v3135 = v7085[index$$52]
           }
           this.memoryWrite(v3134, v3135);
@@ -12156,7 +12156,7 @@ function v593(returnedFrom) {
   var state$$1 = returnedFrom.slice(0);
   var v7089 = index$$50;
   index$$50 = index$$50 + 1;
-  introspect(JAMScript.introspectors.processC545F199BE443C5FB0DC91C55134FB746FD8B074) {
+  introspect(JAM.policy.pC545F199BE443C5FB0DC91C55134FB746FD8B074) {
     var v3169 = state$$1[v7089]
   }
   var v10899 = this.toTypedArray(v3169, "uint8");
@@ -12222,21 +12222,21 @@ function v593(returnedFrom) {
   this.doubleSpeedShifter = state$$1[v3188];
   var v7091 = index$$50;
   index$$50 = index$$50 + 1;
-  introspect(JAMScript.introspectors.processC545F199BE443C5FB0DC91C55134FB746FD8B074) {
+  introspect(JAM.policy.pC545F199BE443C5FB0DC91C55134FB746FD8B074) {
     var v3189 = state$$1[v7091]
   }
   var v10901 = this.toTypedArray(v3189, "uint8");
   this.memory = v10901;
   var v7092 = index$$50;
   index$$50 = index$$50 + 1;
-  introspect(JAMScript.introspectors.processC545F199BE443C5FB0DC91C55134FB746FD8B074) {
+  introspect(JAM.policy.pC545F199BE443C5FB0DC91C55134FB746FD8B074) {
     var v3190 = state$$1[v7092]
   }
   var v10902 = this.toTypedArray(v3190, "uint8");
   this.MBCRam = v10902;
   var v7093 = index$$50;
   index$$50 = index$$50 + 1;
-  introspect(JAMScript.introspectors.processC545F199BE443C5FB0DC91C55134FB746FD8B074) {
+  introspect(JAM.policy.pC545F199BE443C5FB0DC91C55134FB746FD8B074) {
     var v3191 = state$$1[v7093]
   }
   var v10903 = this.toTypedArray(v3191, "uint8");
@@ -12246,7 +12246,7 @@ function v593(returnedFrom) {
   this.currVRAMBank = state$$1[v3192];
   var v7094 = index$$50;
   index$$50 = index$$50 + 1;
-  introspect(JAMScript.introspectors.processC545F199BE443C5FB0DC91C55134FB746FD8B074) {
+  introspect(JAM.policy.pC545F199BE443C5FB0DC91C55134FB746FD8B074) {
     var v3193 = state$$1[v7094]
   }
   var v10904 = this.toTypedArray(v3193, "uint8");
@@ -12394,7 +12394,7 @@ function v593(returnedFrom) {
   this.drewBlank = state$$1[v3240];
   var v7095 = index$$50;
   index$$50 = index$$50 + 1;
-  introspect(JAMScript.introspectors.processC545F199BE443C5FB0DC91C55134FB746FD8B074) {
+  introspect(JAM.policy.pC545F199BE443C5FB0DC91C55134FB746FD8B074) {
     var v3241 = state$$1[v7095]
   }
   var v10905 = this.toTypedArray(v3241, "int32");
@@ -12497,7 +12497,7 @@ function v593(returnedFrom) {
   this.channel3consecutive = state$$1[v3273];
   var v7096 = index$$50;
   index$$50 = index$$50 + 1;
-  introspect(JAMScript.introspectors.processC545F199BE443C5FB0DC91C55134FB746FD8B074) {
+  introspect(JAM.policy.pC545F199BE443C5FB0DC91C55134FB746FD8B074) {
     var v3274 = state$$1[v7096]
   }
   var v10906 = this.toTypedArray(v3274, "int8");
@@ -12744,84 +12744,84 @@ function v593(returnedFrom) {
   this.windowX = state$$1[v3354];
   var v7097 = index$$50;
   index$$50 = index$$50 + 1;
-  introspect(JAMScript.introspectors.processC545F199BE443C5FB0DC91C55134FB746FD8B074) {
+  introspect(JAM.policy.pC545F199BE443C5FB0DC91C55134FB746FD8B074) {
     var v3355 = state$$1[v7097]
   }
   var v10907 = this.toTypedArray(v3355, "uint8");
   this.gbcOBJRawPalette = v10907;
   var v7098 = index$$50;
   index$$50 = index$$50 + 1;
-  introspect(JAMScript.introspectors.processC545F199BE443C5FB0DC91C55134FB746FD8B074) {
+  introspect(JAM.policy.pC545F199BE443C5FB0DC91C55134FB746FD8B074) {
     var v3356 = state$$1[v7098]
   }
   var v10908 = this.toTypedArray(v3356, "uint8");
   this.gbcBGRawPalette = v10908;
   var v7099 = index$$50;
   index$$50 = index$$50 + 1;
-  introspect(JAMScript.introspectors.processC545F199BE443C5FB0DC91C55134FB746FD8B074) {
+  introspect(JAM.policy.pC545F199BE443C5FB0DC91C55134FB746FD8B074) {
     var v3357 = state$$1[v7099]
   }
   var v10909 = this.toTypedArray(v3357, "int32");
   this.gbOBJPalette = v10909;
   var v7100 = index$$50;
   index$$50 = index$$50 + 1;
-  introspect(JAMScript.introspectors.processC545F199BE443C5FB0DC91C55134FB746FD8B074) {
+  introspect(JAM.policy.pC545F199BE443C5FB0DC91C55134FB746FD8B074) {
     var v3358 = state$$1[v7100]
   }
   var v10910 = this.toTypedArray(v3358, "int32");
   this.gbBGPalette = v10910;
   var v7101 = index$$50;
   index$$50 = index$$50 + 1;
-  introspect(JAMScript.introspectors.processC545F199BE443C5FB0DC91C55134FB746FD8B074) {
+  introspect(JAM.policy.pC545F199BE443C5FB0DC91C55134FB746FD8B074) {
     var v3359 = state$$1[v7101]
   }
   var v10911 = this.toTypedArray(v3359, "int32");
   this.gbcOBJPalette = v10911;
   var v7102 = index$$50;
   index$$50 = index$$50 + 1;
-  introspect(JAMScript.introspectors.processC545F199BE443C5FB0DC91C55134FB746FD8B074) {
+  introspect(JAM.policy.pC545F199BE443C5FB0DC91C55134FB746FD8B074) {
     var v3360 = state$$1[v7102]
   }
   var v10912 = this.toTypedArray(v3360, "int32");
   this.gbcBGPalette = v10912;
   var v7103 = index$$50;
   index$$50 = index$$50 + 1;
-  introspect(JAMScript.introspectors.processC545F199BE443C5FB0DC91C55134FB746FD8B074) {
+  introspect(JAM.policy.pC545F199BE443C5FB0DC91C55134FB746FD8B074) {
     var v3361 = state$$1[v7103]
   }
   var v10913 = this.toTypedArray(v3361, "int32");
   this.gbBGColorizedPalette = v10913;
   var v7104 = index$$50;
   index$$50 = index$$50 + 1;
-  introspect(JAMScript.introspectors.processC545F199BE443C5FB0DC91C55134FB746FD8B074) {
+  introspect(JAM.policy.pC545F199BE443C5FB0DC91C55134FB746FD8B074) {
     var v3362 = state$$1[v7104]
   }
   var v10914 = this.toTypedArray(v3362, "int32");
   this.gbOBJColorizedPalette = v10914;
   var v7105 = index$$50;
   index$$50 = index$$50 + 1;
-  introspect(JAMScript.introspectors.processC545F199BE443C5FB0DC91C55134FB746FD8B074) {
+  introspect(JAM.policy.pC545F199BE443C5FB0DC91C55134FB746FD8B074) {
     var v3363 = state$$1[v7105]
   }
   var v10915 = this.toTypedArray(v3363, "int32");
   this.cachedBGPaletteConversion = v10915;
   var v7106 = index$$50;
   index$$50 = index$$50 + 1;
-  introspect(JAMScript.introspectors.processC545F199BE443C5FB0DC91C55134FB746FD8B074) {
+  introspect(JAM.policy.pC545F199BE443C5FB0DC91C55134FB746FD8B074) {
     var v3364 = state$$1[v7106]
   }
   var v10916 = this.toTypedArray(v3364, "int32");
   this.cachedOBJPaletteConversion = v10916;
   var v7107 = index$$50;
   index$$50 = index$$50 + 1;
-  introspect(JAMScript.introspectors.processC545F199BE443C5FB0DC91C55134FB746FD8B074) {
+  introspect(JAM.policy.pC545F199BE443C5FB0DC91C55134FB746FD8B074) {
     var v3365 = state$$1[v7107]
   }
   var v10917 = this.toTypedArray(v3365, "uint8");
   this.BGCHRBank1 = v10917;
   var v7108 = index$$50;
   index$$50 = index$$50 + 1;
-  introspect(JAMScript.introspectors.processC545F199BE443C5FB0DC91C55134FB746FD8B074) {
+  introspect(JAM.policy.pC545F199BE443C5FB0DC91C55134FB746FD8B074) {
     var v3366 = state$$1[v7108]
   }
   var v10918 = this.toTypedArray(v3366, "uint8");
@@ -13163,11 +13163,11 @@ function v588(parentObj$$511) {
   var v9135 = parentObj$$511.memoryReader;
   var v9136 = parentObj$$511.registersHL;
   var v9137 = parentObj$$511.registersHL;
-  introspect(JAMScript.introspectors.processC545F199BE443C5FB0DC91C55134FB746FD8B074) {
+  introspect(JAM.policy.pC545F199BE443C5FB0DC91C55134FB746FD8B074) {
     var v7133 = v9135[v9136](parentObj$$511, v9137)
   }
   var v3602 = v7133 | 128;
-  introspect(JAMScript.introspectors.processC545F199BE443C5FB0DC91C55134FB746FD8B074) {
+  introspect(JAM.policy.pC545F199BE443C5FB0DC91C55134FB746FD8B074) {
     v3599[v3600](parentObj$$511, v3601, v3602)
   }
   return
@@ -13214,11 +13214,11 @@ function v580(parentObj$$503) {
   var v9138 = parentObj$$503.memoryReader;
   var v9139 = parentObj$$503.registersHL;
   var v9140 = parentObj$$503.registersHL;
-  introspect(JAMScript.introspectors.processC545F199BE443C5FB0DC91C55134FB746FD8B074) {
+  introspect(JAM.policy.pC545F199BE443C5FB0DC91C55134FB746FD8B074) {
     var v7141 = v9138[v9139](parentObj$$503, v9140)
   }
   var v3606 = v7141 | 64;
-  introspect(JAMScript.introspectors.processC545F199BE443C5FB0DC91C55134FB746FD8B074) {
+  introspect(JAM.policy.pC545F199BE443C5FB0DC91C55134FB746FD8B074) {
     v3603[v3604](parentObj$$503, v3605, v3606)
   }
   return
@@ -13265,11 +13265,11 @@ function v572(parentObj$$495) {
   var v9141 = parentObj$$495.memoryReader;
   var v9142 = parentObj$$495.registersHL;
   var v9143 = parentObj$$495.registersHL;
-  introspect(JAMScript.introspectors.processC545F199BE443C5FB0DC91C55134FB746FD8B074) {
+  introspect(JAM.policy.pC545F199BE443C5FB0DC91C55134FB746FD8B074) {
     var v7149 = v9141[v9142](parentObj$$495, v9143)
   }
   var v3610 = v7149 | 32;
-  introspect(JAMScript.introspectors.processC545F199BE443C5FB0DC91C55134FB746FD8B074) {
+  introspect(JAM.policy.pC545F199BE443C5FB0DC91C55134FB746FD8B074) {
     v3607[v3608](parentObj$$495, v3609, v3610)
   }
   return
@@ -13316,11 +13316,11 @@ function v564(parentObj$$487) {
   var v9144 = parentObj$$487.memoryReader;
   var v9145 = parentObj$$487.registersHL;
   var v9146 = parentObj$$487.registersHL;
-  introspect(JAMScript.introspectors.processC545F199BE443C5FB0DC91C55134FB746FD8B074) {
+  introspect(JAM.policy.pC545F199BE443C5FB0DC91C55134FB746FD8B074) {
     var v7157 = v9144[v9145](parentObj$$487, v9146)
   }
   var v3614 = v7157 | 16;
-  introspect(JAMScript.introspectors.processC545F199BE443C5FB0DC91C55134FB746FD8B074) {
+  introspect(JAM.policy.pC545F199BE443C5FB0DC91C55134FB746FD8B074) {
     v3611[v3612](parentObj$$487, v3613, v3614)
   }
   return
@@ -13367,11 +13367,11 @@ function v556(parentObj$$479) {
   var v9147 = parentObj$$479.memoryReader;
   var v9148 = parentObj$$479.registersHL;
   var v9149 = parentObj$$479.registersHL;
-  introspect(JAMScript.introspectors.processC545F199BE443C5FB0DC91C55134FB746FD8B074) {
+  introspect(JAM.policy.pC545F199BE443C5FB0DC91C55134FB746FD8B074) {
     var v7165 = v9147[v9148](parentObj$$479, v9149)
   }
   var v3618 = v7165 | 8;
-  introspect(JAMScript.introspectors.processC545F199BE443C5FB0DC91C55134FB746FD8B074) {
+  introspect(JAM.policy.pC545F199BE443C5FB0DC91C55134FB746FD8B074) {
     v3615[v3616](parentObj$$479, v3617, v3618)
   }
   return
@@ -13418,11 +13418,11 @@ function v548(parentObj$$471) {
   var v9150 = parentObj$$471.memoryReader;
   var v9151 = parentObj$$471.registersHL;
   var v9152 = parentObj$$471.registersHL;
-  introspect(JAMScript.introspectors.processC545F199BE443C5FB0DC91C55134FB746FD8B074) {
+  introspect(JAM.policy.pC545F199BE443C5FB0DC91C55134FB746FD8B074) {
     var v7173 = v9150[v9151](parentObj$$471, v9152)
   }
   var v3622 = v7173 | 4;
-  introspect(JAMScript.introspectors.processC545F199BE443C5FB0DC91C55134FB746FD8B074) {
+  introspect(JAM.policy.pC545F199BE443C5FB0DC91C55134FB746FD8B074) {
     v3619[v3620](parentObj$$471, v3621, v3622)
   }
   return
@@ -13469,11 +13469,11 @@ function v540(parentObj$$463) {
   var v9153 = parentObj$$463.memoryReader;
   var v9154 = parentObj$$463.registersHL;
   var v9155 = parentObj$$463.registersHL;
-  introspect(JAMScript.introspectors.processC545F199BE443C5FB0DC91C55134FB746FD8B074) {
+  introspect(JAM.policy.pC545F199BE443C5FB0DC91C55134FB746FD8B074) {
     var v7181 = v9153[v9154](parentObj$$463, v9155)
   }
   var v3626 = v7181 | 2;
-  introspect(JAMScript.introspectors.processC545F199BE443C5FB0DC91C55134FB746FD8B074) {
+  introspect(JAM.policy.pC545F199BE443C5FB0DC91C55134FB746FD8B074) {
     v3623[v3624](parentObj$$463, v3625, v3626)
   }
   return
@@ -13520,11 +13520,11 @@ function v532(parentObj$$455) {
   var v9156 = parentObj$$455.memoryReader;
   var v9157 = parentObj$$455.registersHL;
   var v9158 = parentObj$$455.registersHL;
-  introspect(JAMScript.introspectors.processC545F199BE443C5FB0DC91C55134FB746FD8B074) {
+  introspect(JAM.policy.pC545F199BE443C5FB0DC91C55134FB746FD8B074) {
     var v7189 = v9156[v9157](parentObj$$455, v9158)
   }
   var v3630 = v7189 | 1;
-  introspect(JAMScript.introspectors.processC545F199BE443C5FB0DC91C55134FB746FD8B074) {
+  introspect(JAM.policy.pC545F199BE443C5FB0DC91C55134FB746FD8B074) {
     v3627[v3628](parentObj$$455, v3629, v3630)
   }
   return
@@ -13571,11 +13571,11 @@ function v524(parentObj$$447) {
   var v9159 = parentObj$$447.memoryReader;
   var v9160 = parentObj$$447.registersHL;
   var v9161 = parentObj$$447.registersHL;
-  introspect(JAMScript.introspectors.processC545F199BE443C5FB0DC91C55134FB746FD8B074) {
+  introspect(JAM.policy.pC545F199BE443C5FB0DC91C55134FB746FD8B074) {
     var v7197 = v9159[v9160](parentObj$$447, v9161)
   }
   var v3634 = v7197 & 127;
-  introspect(JAMScript.introspectors.processC545F199BE443C5FB0DC91C55134FB746FD8B074) {
+  introspect(JAM.policy.pC545F199BE443C5FB0DC91C55134FB746FD8B074) {
     v3631[v3632](parentObj$$447, v3633, v3634)
   }
   return
@@ -13622,11 +13622,11 @@ function v516(parentObj$$439) {
   var v9162 = parentObj$$439.memoryReader;
   var v9163 = parentObj$$439.registersHL;
   var v9164 = parentObj$$439.registersHL;
-  introspect(JAMScript.introspectors.processC545F199BE443C5FB0DC91C55134FB746FD8B074) {
+  introspect(JAM.policy.pC545F199BE443C5FB0DC91C55134FB746FD8B074) {
     var v7205 = v9162[v9163](parentObj$$439, v9164)
   }
   var v3638 = v7205 & 191;
-  introspect(JAMScript.introspectors.processC545F199BE443C5FB0DC91C55134FB746FD8B074) {
+  introspect(JAM.policy.pC545F199BE443C5FB0DC91C55134FB746FD8B074) {
     v3635[v3636](parentObj$$439, v3637, v3638)
   }
   return
@@ -13673,11 +13673,11 @@ function v508(parentObj$$431) {
   var v9165 = parentObj$$431.memoryReader;
   var v9166 = parentObj$$431.registersHL;
   var v9167 = parentObj$$431.registersHL;
-  introspect(JAMScript.introspectors.processC545F199BE443C5FB0DC91C55134FB746FD8B074) {
+  introspect(JAM.policy.pC545F199BE443C5FB0DC91C55134FB746FD8B074) {
     var v7213 = v9165[v9166](parentObj$$431, v9167)
   }
   var v3642 = v7213 & 223;
-  introspect(JAMScript.introspectors.processC545F199BE443C5FB0DC91C55134FB746FD8B074) {
+  introspect(JAM.policy.pC545F199BE443C5FB0DC91C55134FB746FD8B074) {
     v3639[v3640](parentObj$$431, v3641, v3642)
   }
   return
@@ -13724,11 +13724,11 @@ function v500(parentObj$$423) {
   var v9168 = parentObj$$423.memoryReader;
   var v9169 = parentObj$$423.registersHL;
   var v9170 = parentObj$$423.registersHL;
-  introspect(JAMScript.introspectors.processC545F199BE443C5FB0DC91C55134FB746FD8B074) {
+  introspect(JAM.policy.pC545F199BE443C5FB0DC91C55134FB746FD8B074) {
     var v7221 = v9168[v9169](parentObj$$423, v9170)
   }
   var v3646 = v7221 & 239;
-  introspect(JAMScript.introspectors.processC545F199BE443C5FB0DC91C55134FB746FD8B074) {
+  introspect(JAM.policy.pC545F199BE443C5FB0DC91C55134FB746FD8B074) {
     v3643[v3644](parentObj$$423, v3645, v3646)
   }
   return
@@ -13775,11 +13775,11 @@ function v492(parentObj$$415) {
   var v9171 = parentObj$$415.memoryReader;
   var v9172 = parentObj$$415.registersHL;
   var v9173 = parentObj$$415.registersHL;
-  introspect(JAMScript.introspectors.processC545F199BE443C5FB0DC91C55134FB746FD8B074) {
+  introspect(JAM.policy.pC545F199BE443C5FB0DC91C55134FB746FD8B074) {
     var v7229 = v9171[v9172](parentObj$$415, v9173)
   }
   var v3650 = v7229 & 247;
-  introspect(JAMScript.introspectors.processC545F199BE443C5FB0DC91C55134FB746FD8B074) {
+  introspect(JAM.policy.pC545F199BE443C5FB0DC91C55134FB746FD8B074) {
     v3647[v3648](parentObj$$415, v3649, v3650)
   }
   return
@@ -13826,11 +13826,11 @@ function v484(parentObj$$407) {
   var v9174 = parentObj$$407.memoryReader;
   var v9175 = parentObj$$407.registersHL;
   var v9176 = parentObj$$407.registersHL;
-  introspect(JAMScript.introspectors.processC545F199BE443C5FB0DC91C55134FB746FD8B074) {
+  introspect(JAM.policy.pC545F199BE443C5FB0DC91C55134FB746FD8B074) {
     var v7237 = v9174[v9175](parentObj$$407, v9176)
   }
   var v3654 = v7237 & 251;
-  introspect(JAMScript.introspectors.processC545F199BE443C5FB0DC91C55134FB746FD8B074) {
+  introspect(JAM.policy.pC545F199BE443C5FB0DC91C55134FB746FD8B074) {
     v3651[v3652](parentObj$$407, v3653, v3654)
   }
   return
@@ -13877,11 +13877,11 @@ function v476(parentObj$$399) {
   var v9177 = parentObj$$399.memoryReader;
   var v9178 = parentObj$$399.registersHL;
   var v9179 = parentObj$$399.registersHL;
-  introspect(JAMScript.introspectors.processC545F199BE443C5FB0DC91C55134FB746FD8B074) {
+  introspect(JAM.policy.pC545F199BE443C5FB0DC91C55134FB746FD8B074) {
     var v7245 = v9177[v9178](parentObj$$399, v9179)
   }
   var v3658 = v7245 & 253;
-  introspect(JAMScript.introspectors.processC545F199BE443C5FB0DC91C55134FB746FD8B074) {
+  introspect(JAM.policy.pC545F199BE443C5FB0DC91C55134FB746FD8B074) {
     v3655[v3656](parentObj$$399, v3657, v3658)
   }
   return
@@ -13928,11 +13928,11 @@ function v468(parentObj$$391) {
   var v9180 = parentObj$$391.memoryReader;
   var v9181 = parentObj$$391.registersHL;
   var v9182 = parentObj$$391.registersHL;
-  introspect(JAMScript.introspectors.processC545F199BE443C5FB0DC91C55134FB746FD8B074) {
+  introspect(JAM.policy.pC545F199BE443C5FB0DC91C55134FB746FD8B074) {
     var v7253 = v9180[v9181](parentObj$$391, v9182)
   }
   var v3662 = v7253 & 254;
-  introspect(JAMScript.introspectors.processC545F199BE443C5FB0DC91C55134FB746FD8B074) {
+  introspect(JAM.policy.pC545F199BE443C5FB0DC91C55134FB746FD8B074) {
     v3659[v3660](parentObj$$391, v3661, v3662)
   }
   return
@@ -13982,7 +13982,7 @@ function v460(parentObj$$383) {
   var v10082 = parentObj$$383.memoryReader;
   var v10083 = parentObj$$383.registersHL;
   var v10084 = parentObj$$383.registersHL;
-  introspect(JAMScript.introspectors.processC545F199BE443C5FB0DC91C55134FB746FD8B074) {
+  introspect(JAM.policy.pC545F199BE443C5FB0DC91C55134FB746FD8B074) {
     var v9183 = v10082[v10083](parentObj$$383, v10084)
   }
   var v7261 = v9183 & 128;
@@ -14052,7 +14052,7 @@ function v452(parentObj$$375) {
   var v10085 = parentObj$$375.memoryReader;
   var v10086 = parentObj$$375.registersHL;
   var v10087 = parentObj$$375.registersHL;
-  introspect(JAMScript.introspectors.processC545F199BE443C5FB0DC91C55134FB746FD8B074) {
+  introspect(JAM.policy.pC545F199BE443C5FB0DC91C55134FB746FD8B074) {
     var v9184 = v10085[v10086](parentObj$$375, v10087)
   }
   var v7269 = v9184 & 64;
@@ -14122,7 +14122,7 @@ function v444(parentObj$$367) {
   var v10088 = parentObj$$367.memoryReader;
   var v10089 = parentObj$$367.registersHL;
   var v10090 = parentObj$$367.registersHL;
-  introspect(JAMScript.introspectors.processC545F199BE443C5FB0DC91C55134FB746FD8B074) {
+  introspect(JAM.policy.pC545F199BE443C5FB0DC91C55134FB746FD8B074) {
     var v9185 = v10088[v10089](parentObj$$367, v10090)
   }
   var v7277 = v9185 & 32;
@@ -14192,7 +14192,7 @@ function v436(parentObj$$359) {
   var v10091 = parentObj$$359.memoryReader;
   var v10092 = parentObj$$359.registersHL;
   var v10093 = parentObj$$359.registersHL;
-  introspect(JAMScript.introspectors.processC545F199BE443C5FB0DC91C55134FB746FD8B074) {
+  introspect(JAM.policy.pC545F199BE443C5FB0DC91C55134FB746FD8B074) {
     var v9186 = v10091[v10092](parentObj$$359, v10093)
   }
   var v7285 = v9186 & 16;
@@ -14262,7 +14262,7 @@ function v428(parentObj$$351) {
   var v10094 = parentObj$$351.memoryReader;
   var v10095 = parentObj$$351.registersHL;
   var v10096 = parentObj$$351.registersHL;
-  introspect(JAMScript.introspectors.processC545F199BE443C5FB0DC91C55134FB746FD8B074) {
+  introspect(JAM.policy.pC545F199BE443C5FB0DC91C55134FB746FD8B074) {
     var v9187 = v10094[v10095](parentObj$$351, v10096)
   }
   var v7293 = v9187 & 8;
@@ -14332,7 +14332,7 @@ function v420(parentObj$$343) {
   var v10097 = parentObj$$343.memoryReader;
   var v10098 = parentObj$$343.registersHL;
   var v10099 = parentObj$$343.registersHL;
-  introspect(JAMScript.introspectors.processC545F199BE443C5FB0DC91C55134FB746FD8B074) {
+  introspect(JAM.policy.pC545F199BE443C5FB0DC91C55134FB746FD8B074) {
     var v9188 = v10097[v10098](parentObj$$343, v10099)
   }
   var v7301 = v9188 & 4;
@@ -14402,7 +14402,7 @@ function v412(parentObj$$335) {
   var v10100 = parentObj$$335.memoryReader;
   var v10101 = parentObj$$335.registersHL;
   var v10102 = parentObj$$335.registersHL;
-  introspect(JAMScript.introspectors.processC545F199BE443C5FB0DC91C55134FB746FD8B074) {
+  introspect(JAM.policy.pC545F199BE443C5FB0DC91C55134FB746FD8B074) {
     var v9189 = v10100[v10101](parentObj$$335, v10102)
   }
   var v7309 = v9189 & 2;
@@ -14472,7 +14472,7 @@ function v404(parentObj$$327) {
   var v10103 = parentObj$$327.memoryReader;
   var v10104 = parentObj$$327.registersHL;
   var v10105 = parentObj$$327.registersHL;
-  introspect(JAMScript.introspectors.processC545F199BE443C5FB0DC91C55134FB746FD8B074) {
+  introspect(JAM.policy.pC545F199BE443C5FB0DC91C55134FB746FD8B074) {
     var v9190 = v10103[v10104](parentObj$$327, v10105)
   }
   var v7317 = v9190 & 1;
@@ -14542,7 +14542,7 @@ function v396(parentObj$$319) {
   var v3729 = parentObj$$319.memoryReader;
   var v3730 = parentObj$$319.registersHL;
   var v3731 = parentObj$$319.registersHL;
-  introspect(JAMScript.introspectors.processC545F199BE443C5FB0DC91C55134FB746FD8B074) {
+  introspect(JAM.policy.pC545F199BE443C5FB0DC91C55134FB746FD8B074) {
     var temp_var$$19 = v3729[v3730](parentObj$$319, v3731)
   }
   var v3732 = temp_var$$19 & 1;
@@ -14551,7 +14551,7 @@ function v396(parentObj$$319) {
   var v3734 = parentObj$$319.registersHL;
   var v3735 = parentObj$$319.registersHL;
   var v3736 = temp_var$$19 >> 1;
-  introspect(JAMScript.introspectors.processC545F199BE443C5FB0DC91C55134FB746FD8B074) {
+  introspect(JAM.policy.pC545F199BE443C5FB0DC91C55134FB746FD8B074) {
     v3733[v3734](parentObj$$319, v3735, v3736)
   }
   parentObj$$319.FHalfCarry = parentObj$$319.FSubtract = false;
@@ -14649,7 +14649,7 @@ function v388(parentObj$$311) {
   var v3756 = parentObj$$311.memoryReader;
   var v3757 = parentObj$$311.registersHL;
   var v3758 = parentObj$$311.registersHL;
-  introspect(JAMScript.introspectors.processC545F199BE443C5FB0DC91C55134FB746FD8B074) {
+  introspect(JAM.policy.pC545F199BE443C5FB0DC91C55134FB746FD8B074) {
     var temp_var$$18 = v3756[v3757](parentObj$$311, v3758)
   }
   var v7343 = temp_var$$18 & 15;
@@ -14659,7 +14659,7 @@ function v388(parentObj$$311) {
   var v3761 = parentObj$$311.memoryWriter;
   var v3762 = parentObj$$311.registersHL;
   var v3763 = parentObj$$311.registersHL;
-  introspect(JAMScript.introspectors.processC545F199BE443C5FB0DC91C55134FB746FD8B074) {
+  introspect(JAM.policy.pC545F199BE443C5FB0DC91C55134FB746FD8B074) {
     v3761[v3762](parentObj$$311, v3763, temp_var$$18)
   }
   parentObj$$311.FZero = temp_var$$18 == 0;
@@ -14765,7 +14765,7 @@ function v380(parentObj$$303) {
   var v3786 = parentObj$$303.memoryReader;
   var v3787 = parentObj$$303.registersHL;
   var v3788 = parentObj$$303.registersHL;
-  introspect(JAMScript.introspectors.processC545F199BE443C5FB0DC91C55134FB746FD8B074) {
+  introspect(JAM.policy.pC545F199BE443C5FB0DC91C55134FB746FD8B074) {
     var temp_var$$17 = v3786[v3787](parentObj$$303, v3788)
   }
   var v3789 = temp_var$$17 & 1;
@@ -14776,7 +14776,7 @@ function v380(parentObj$$303) {
   var v3792 = parentObj$$303.memoryWriter;
   var v3793 = parentObj$$303.registersHL;
   var v3794 = parentObj$$303.registersHL;
-  introspect(JAMScript.introspectors.processC545F199BE443C5FB0DC91C55134FB746FD8B074) {
+  introspect(JAM.policy.pC545F199BE443C5FB0DC91C55134FB746FD8B074) {
     v3792[v3793](parentObj$$303, v3794, temp_var$$17)
   }
   parentObj$$303.FHalfCarry = parentObj$$303.FSubtract = false;
@@ -14885,7 +14885,7 @@ function v372(parentObj$$295) {
   var v3822 = parentObj$$295.memoryReader;
   var v3823 = parentObj$$295.registersHL;
   var v3824 = parentObj$$295.registersHL;
-  introspect(JAMScript.introspectors.processC545F199BE443C5FB0DC91C55134FB746FD8B074) {
+  introspect(JAM.policy.pC545F199BE443C5FB0DC91C55134FB746FD8B074) {
     var temp_var$$16 = v3822[v3823](parentObj$$295, v3824)
   }
   parentObj$$295.FCarry = temp_var$$16 > 127;
@@ -14894,7 +14894,7 @@ function v372(parentObj$$295) {
   var v3826 = parentObj$$295.memoryWriter;
   var v3827 = parentObj$$295.registersHL;
   var v3828 = parentObj$$295.registersHL;
-  introspect(JAMScript.introspectors.processC545F199BE443C5FB0DC91C55134FB746FD8B074) {
+  introspect(JAM.policy.pC545F199BE443C5FB0DC91C55134FB746FD8B074) {
     v3826[v3827](parentObj$$295, v3828, temp_var$$16)
   }
   parentObj$$295.FHalfCarry = parentObj$$295.FSubtract = false;
@@ -15000,7 +15000,7 @@ function v364(parentObj$$287) {
   var v3853 = parentObj$$287.memoryReader;
   var v3854 = parentObj$$287.registersHL;
   var v3855 = parentObj$$287.registersHL;
-  introspect(JAMScript.introspectors.processC545F199BE443C5FB0DC91C55134FB746FD8B074) {
+  introspect(JAM.policy.pC545F199BE443C5FB0DC91C55134FB746FD8B074) {
     var temp_var$$15 = v3853[v3854](parentObj$$287, v3855)
   }
   var v3856 = temp_var$$15 & 1;
@@ -15019,7 +15019,7 @@ function v364(parentObj$$287) {
   var v3859 = parentObj$$287.memoryWriter;
   var v3860 = parentObj$$287.registersHL;
   var v3861 = parentObj$$287.registersHL;
-  introspect(JAMScript.introspectors.processC545F199BE443C5FB0DC91C55134FB746FD8B074) {
+  introspect(JAM.policy.pC545F199BE443C5FB0DC91C55134FB746FD8B074) {
     v3859[v3860](parentObj$$287, v3861, temp_var$$15)
   }
   parentObj$$287.FHalfCarry = parentObj$$287.FSubtract = false;
@@ -15186,7 +15186,7 @@ function v356(parentObj$$279) {
   var v3890 = parentObj$$279.memoryReader;
   var v3891 = parentObj$$279.registersHL;
   var v3892 = parentObj$$279.registersHL;
-  introspect(JAMScript.introspectors.processC545F199BE443C5FB0DC91C55134FB746FD8B074) {
+  introspect(JAM.policy.pC545F199BE443C5FB0DC91C55134FB746FD8B074) {
     var temp_var$$14 = v3890[v3891](parentObj$$279, v3892)
   }
   var newFCarry$$6 = temp_var$$14 > 127;
@@ -15205,7 +15205,7 @@ function v356(parentObj$$279) {
   var v3895 = parentObj$$279.memoryWriter;
   var v3896 = parentObj$$279.registersHL;
   var v3897 = parentObj$$279.registersHL;
-  introspect(JAMScript.introspectors.processC545F199BE443C5FB0DC91C55134FB746FD8B074) {
+  introspect(JAM.policy.pC545F199BE443C5FB0DC91C55134FB746FD8B074) {
     v3895[v3896](parentObj$$279, v3897, temp_var$$14)
   }
   parentObj$$279.FHalfCarry = parentObj$$279.FSubtract = false;
@@ -15370,7 +15370,7 @@ function v348(parentObj$$271) {
   var v3926 = parentObj$$271.memoryReader;
   var v3927 = parentObj$$271.registersHL;
   var v3928 = parentObj$$271.registersHL;
-  introspect(JAMScript.introspectors.processC545F199BE443C5FB0DC91C55134FB746FD8B074) {
+  introspect(JAM.policy.pC545F199BE443C5FB0DC91C55134FB746FD8B074) {
     var temp_var$$13 = v3926[v3927](parentObj$$271, v3928)
   }
   var v3929 = temp_var$$13 & 1;
@@ -15388,7 +15388,7 @@ function v348(parentObj$$271) {
   var v3932 = parentObj$$271.memoryWriter;
   var v3933 = parentObj$$271.registersHL;
   var v3934 = parentObj$$271.registersHL;
-  introspect(JAMScript.introspectors.processC545F199BE443C5FB0DC91C55134FB746FD8B074) {
+  introspect(JAM.policy.pC545F199BE443C5FB0DC91C55134FB746FD8B074) {
     v3932[v3933](parentObj$$271, v3934, temp_var$$13)
   }
   parentObj$$271.FHalfCarry = parentObj$$271.FSubtract = false;
@@ -15548,7 +15548,7 @@ function v340(parentObj$$263) {
   var v3963 = parentObj$$263.memoryReader;
   var v3964 = parentObj$$263.registersHL;
   var v3965 = parentObj$$263.registersHL;
-  introspect(JAMScript.introspectors.processC545F199BE443C5FB0DC91C55134FB746FD8B074) {
+  introspect(JAM.policy.pC545F199BE443C5FB0DC91C55134FB746FD8B074) {
     var temp_var$$12 = v3963[v3964](parentObj$$263, v3965)
   }
   parentObj$$263.FCarry = temp_var$$12 > 127;
@@ -15566,7 +15566,7 @@ function v340(parentObj$$263) {
   var v3968 = parentObj$$263.memoryWriter;
   var v3969 = parentObj$$263.registersHL;
   var v3970 = parentObj$$263.registersHL;
-  introspect(JAMScript.introspectors.processC545F199BE443C5FB0DC91C55134FB746FD8B074) {
+  introspect(JAM.policy.pC545F199BE443C5FB0DC91C55134FB746FD8B074) {
     v3968[v3969](parentObj$$263, v3970, temp_var$$12)
   }
   parentObj$$263.FHalfCarry = parentObj$$263.FSubtract = false;
@@ -15728,7 +15728,7 @@ function v332(parentObj$$255) {
   var v7486 = parentObj$$255.memoryReader;
   var v7487 = parentObj$$255.programCounter;
   var v7488 = parentObj$$255.programCounter;
-  introspect(JAMScript.introspectors.processC545F199BE443C5FB0DC91C55134FB746FD8B074) {
+  introspect(JAM.policy.pC545F199BE443C5FB0DC91C55134FB746FD8B074) {
     var v4006 = v7486[v7487](parentObj$$255, v7488)
   }
   var dirtySum$$43 = v4005 - v4006;
@@ -15764,7 +15764,7 @@ function v329(parentObj$$252) {
     var v10670 = parentObj$$252.memoryReader;
     var v10671 = parentObj$$252.programCounter;
     var v10672 = parentObj$$252.programCounter;
-    introspect(JAMScript.introspectors.processC545F199BE443C5FB0DC91C55134FB746FD8B074) {
+    introspect(JAM.policy.pC545F199BE443C5FB0DC91C55134FB746FD8B074) {
       var v10491 = v10670[v10671](parentObj$$252, v10672)
     }
     v10121 = v10491 == 118
@@ -15788,7 +15788,7 @@ function v328(parentObj$$251) {
   var v10123 = parentObj$$251.memoryReader;
   var v10124 = parentObj$$251.programCounter;
   var v10125 = parentObj$$251.programCounter;
-  introspect(JAMScript.introspectors.processC545F199BE443C5FB0DC91C55134FB746FD8B074) {
+  introspect(JAM.policy.pC545F199BE443C5FB0DC91C55134FB746FD8B074) {
     var v9263 = v10123[v10124](parentObj$$251, v10125)
   }
   var v7492 = v9262 | v9263;
@@ -15807,7 +15807,7 @@ function v326(parentObj$$249) {
   var v9264 = parentObj$$249.memoryReader;
   var v9265 = parentObj$$249.programCounter;
   var v9266 = parentObj$$249.programCounter;
-  introspect(JAMScript.introspectors.processC545F199BE443C5FB0DC91C55134FB746FD8B074) {
+  introspect(JAM.policy.pC545F199BE443C5FB0DC91C55134FB746FD8B074) {
     var v7494 = v9264[v9265](parentObj$$249, v9266)
   }
   var v4013 = v7494 << 24;
@@ -15857,7 +15857,7 @@ function v324(parentObj$$247) {
   var v10126 = parentObj$$247.memoryReader;
   var v10127 = parentObj$$247.programCounter;
   var v10128 = parentObj$$247.programCounter;
-  introspect(JAMScript.introspectors.processC545F199BE443C5FB0DC91C55134FB746FD8B074) {
+  introspect(JAM.policy.pC545F199BE443C5FB0DC91C55134FB746FD8B074) {
     var v9268 = v10126[v10127](parentObj$$247, v10128)
   }
   v4030.registerA = v9267 | v9268;
@@ -15937,7 +15937,7 @@ function v320(parentObj$$243) {
   var v7507 = parentObj$$243.memoryHighReader;
   var v7508 = parentObj$$243.registerC;
   var v7509 = parentObj$$243.registerC;
-  introspect(JAMScript.introspectors.processC545F199BE443C5FB0DC91C55134FB746FD8B074) {
+  introspect(JAM.policy.pC545F199BE443C5FB0DC91C55134FB746FD8B074) {
     var v10922 = v7507[v7508](parentObj$$243, v7509)
   }
   v4043.registerA = v10922;
@@ -15947,7 +15947,7 @@ function v319(parentObj$$242) {
   var v4044 = parentObj$$242.memoryReader;
   var v4045 = parentObj$$242.stackPointer;
   var v4046 = parentObj$$242.stackPointer;
-  introspect(JAMScript.introspectors.processC545F199BE443C5FB0DC91C55134FB746FD8B074) {
+  introspect(JAM.policy.pC545F199BE443C5FB0DC91C55134FB746FD8B074) {
     var temp_var$$10 = v4044[v4045](parentObj$$242, v4046)
   }
   parentObj$$242.FZero = temp_var$$10 > 127;
@@ -15973,7 +15973,7 @@ function v318(parentObj$$241) {
   var v9273 = parentObj$$241.memoryReader;
   var v9274 = parentObj$$241.programCounter;
   var v9275 = parentObj$$241.programCounter;
-  introspect(JAMScript.introspectors.processC545F199BE443C5FB0DC91C55134FB746FD8B074) {
+  introspect(JAM.policy.pC545F199BE443C5FB0DC91C55134FB746FD8B074) {
     var v7512 = v9273[v9274](parentObj$$241, v9275)
   }
   var v10924 = parentObj$$241.memoryHighRead(v7512);
@@ -16011,7 +16011,7 @@ function v316(parentObj$$239) {
   var v10134 = parentObj$$239.memoryReader;
   var v10135 = parentObj$$239.programCounter;
   var v10136 = parentObj$$239.programCounter;
-  introspect(JAMScript.introspectors.processC545F199BE443C5FB0DC91C55134FB746FD8B074) {
+  introspect(JAM.policy.pC545F199BE443C5FB0DC91C55134FB746FD8B074) {
     var v9277 = v10134[v10135](parentObj$$239, v10136)
   }
   v4064.registerA = v9276 ^ v9277;
@@ -16047,7 +16047,7 @@ function v312(parentObj$$235) {
   var v9279 = parentObj$$235.memoryReader;
   var v9280 = parentObj$$235.programCounter;
   var v9281 = parentObj$$235.programCounter;
-  introspect(JAMScript.introspectors.processC545F199BE443C5FB0DC91C55134FB746FD8B074) {
+  introspect(JAM.policy.pC545F199BE443C5FB0DC91C55134FB746FD8B074) {
     var v7520 = v9279[v9280](parentObj$$235, v9281)
   }
   var v4067 = v7519 | v7520;
@@ -16066,7 +16066,7 @@ function v310(parentObj$$233) {
   var v9282 = parentObj$$233.memoryReader;
   var v9283 = parentObj$$233.programCounter;
   var v9284 = parentObj$$233.programCounter;
-  introspect(JAMScript.introspectors.processC545F199BE443C5FB0DC91C55134FB746FD8B074) {
+  introspect(JAM.policy.pC545F199BE443C5FB0DC91C55134FB746FD8B074) {
     var v7522 = v9282[v9283](parentObj$$233, v9284)
   }
   var v4070 = v7522 << 24;
@@ -16116,7 +16116,7 @@ function v308(parentObj$$231) {
   var v10138 = parentObj$$231.memoryReader;
   var v10139 = parentObj$$231.programCounter;
   var v10140 = parentObj$$231.programCounter;
-  introspect(JAMScript.introspectors.processC545F199BE443C5FB0DC91C55134FB746FD8B074) {
+  introspect(JAM.policy.pC545F199BE443C5FB0DC91C55134FB746FD8B074) {
     var v9286 = v10138[v10139](parentObj$$231, v10140)
   }
   v4086.registerA = v9285 & v9286;
@@ -16165,7 +16165,7 @@ function v304(parentObj$$227) {
   var v4100 = parentObj$$227.registerC;
   var v4101 = parentObj$$227.registerC;
   var v4102 = parentObj$$227.registerA;
-  introspect(JAMScript.introspectors.processC545F199BE443C5FB0DC91C55134FB746FD8B074) {
+  introspect(JAM.policy.pC545F199BE443C5FB0DC91C55134FB746FD8B074) {
     v4099[v4100](parentObj$$227, v4101, v4102)
   }
   return
@@ -16180,7 +16180,7 @@ function v303(parentObj$$226) {
   var v9288 = parentObj$$226.memoryReader;
   var v9289 = parentObj$$226.stackPointer;
   var v9290 = parentObj$$226.stackPointer;
-  introspect(JAMScript.introspectors.processC545F199BE443C5FB0DC91C55134FB746FD8B074) {
+  introspect(JAM.policy.pC545F199BE443C5FB0DC91C55134FB746FD8B074) {
     var v7536 = v9288[v9289](parentObj$$226, v9290)
   }
   v4103.registersHL = v7535 | v7536;
@@ -16193,7 +16193,7 @@ function v302(parentObj$$225) {
   var v7538 = parentObj$$225.memoryReader;
   var v7539 = parentObj$$225.programCounter;
   var v7540 = parentObj$$225.programCounter;
-  introspect(JAMScript.introspectors.processC545F199BE443C5FB0DC91C55134FB746FD8B074) {
+  introspect(JAM.policy.pC545F199BE443C5FB0DC91C55134FB746FD8B074) {
     var v4105 = v7538[v7539](parentObj$$225, v7540)
   }
   var v4106 = parentObj$$225.registerA;
@@ -16229,7 +16229,7 @@ function v300(parentObj$$223) {
   var v4118 = parentObj$$223.memoryReader;
   var v4119 = parentObj$$223.programCounter;
   var v4120 = parentObj$$223.programCounter;
-  introspect(JAMScript.introspectors.processC545F199BE443C5FB0DC91C55134FB746FD8B074) {
+  introspect(JAM.policy.pC545F199BE443C5FB0DC91C55134FB746FD8B074) {
     var temp_var$$9 = v4118[v4119](parentObj$$223, v4120)
   }
   var v7546 = parentObj$$223.programCounter;
@@ -16283,7 +16283,7 @@ function v298(parentObj$$221) {
     var v7552 = parentObj$$221.memoryReader;
     var v7553 = parentObj$$221.programCounter;
     var v7554 = parentObj$$221.programCounter;
-    introspect(JAMScript.introspectors.processC545F199BE443C5FB0DC91C55134FB746FD8B074) {
+    introspect(JAM.policy.pC545F199BE443C5FB0DC91C55134FB746FD8B074) {
       var v4127 = v7552[v7553](parentObj$$221, v7554)
     }
     var temp_pc$$4 = v4126 | v4127;
@@ -16335,7 +16335,7 @@ function v296(parentObj$$219) {
     var v9297 = parentObj$$219.memoryReader;
     var v9298 = parentObj$$219.programCounter;
     var v9299 = parentObj$$219.programCounter;
-    introspect(JAMScript.introspectors.processC545F199BE443C5FB0DC91C55134FB746FD8B074) {
+    introspect(JAM.policy.pC545F199BE443C5FB0DC91C55134FB746FD8B074) {
       var v7563 = v9297[v9298](parentObj$$219, v9299)
     }
     v4141.programCounter = v7562 | v7563;
@@ -16358,7 +16358,7 @@ function v295(parentObj$$218) {
   var v9301 = parentObj$$218.memoryReader;
   var v9302 = parentObj$$218.stackPointer;
   var v9303 = parentObj$$218.stackPointer;
-  introspect(JAMScript.introspectors.processC545F199BE443C5FB0DC91C55134FB746FD8B074) {
+  introspect(JAM.policy.pC545F199BE443C5FB0DC91C55134FB746FD8B074) {
     var v7567 = v9301[v9302](parentObj$$218, v9303)
   }
   v4144.programCounter = v7566 | v7567;
@@ -16374,7 +16374,7 @@ function v295(parentObj$$218) {
     var v10680 = parentObj$$218.memoryReader;
     var v10681 = parentObj$$218.programCounter;
     var v10682 = parentObj$$218.programCounter;
-    introspect(JAMScript.introspectors.processC545F199BE443C5FB0DC91C55134FB746FD8B074) {
+    introspect(JAM.policy.pC545F199BE443C5FB0DC91C55134FB746FD8B074) {
       var v10503 = v10680[v10681](parentObj$$218, v10682)
     }
     v10147 = v10503 == 118
@@ -16400,7 +16400,7 @@ function v294(parentObj$$217) {
     var v9306 = parentObj$$217.memoryReader;
     var v9307 = parentObj$$217.stackPointer;
     var v9308 = parentObj$$217.stackPointer;
-    introspect(JAMScript.introspectors.processC545F199BE443C5FB0DC91C55134FB746FD8B074) {
+    introspect(JAM.policy.pC545F199BE443C5FB0DC91C55134FB746FD8B074) {
       var v7571 = v9306[v9307](parentObj$$217, v9308)
     }
     v4147.programCounter = v7570 | v7571;
@@ -16439,7 +16439,7 @@ function v292(parentObj$$215) {
   var v7578 = parentObj$$215.memoryReader;
   var v7579 = parentObj$$215.programCounter;
   var v7580 = parentObj$$215.programCounter;
-  introspect(JAMScript.introspectors.processC545F199BE443C5FB0DC91C55134FB746FD8B074) {
+  introspect(JAM.policy.pC545F199BE443C5FB0DC91C55134FB746FD8B074) {
     var v4161 = v7578[v7579](parentObj$$215, v7580)
   }
   var dirtySum$$41 = v4160 - v4161;
@@ -16487,7 +16487,7 @@ function v290(parentObj$$213) {
     var v7587 = parentObj$$213.memoryReader;
     var v7588 = parentObj$$213.programCounter;
     var v7589 = parentObj$$213.programCounter;
-    introspect(JAMScript.introspectors.processC545F199BE443C5FB0DC91C55134FB746FD8B074) {
+    introspect(JAM.policy.pC545F199BE443C5FB0DC91C55134FB746FD8B074) {
       var v4176 = v7587[v7588](parentObj$$213, v7589)
     }
     var temp_pc$$3 = v4175 | v4176;
@@ -16540,7 +16540,7 @@ function v288(parentObj$$211) {
     var v9311 = parentObj$$211.memoryReader;
     var v9312 = parentObj$$211.programCounter;
     var v9313 = parentObj$$211.programCounter;
-    introspect(JAMScript.introspectors.processC545F199BE443C5FB0DC91C55134FB746FD8B074) {
+    introspect(JAM.policy.pC545F199BE443C5FB0DC91C55134FB746FD8B074) {
       var v7599 = v9311[v9312](parentObj$$211, v9313)
     }
     v4190.programCounter = v7598 | v7599;
@@ -16558,7 +16558,7 @@ function v287(parentObj$$210) {
   var v7602 = parentObj$$210.memoryReader;
   var v7603 = parentObj$$210.stackPointer;
   var v7604 = parentObj$$210.stackPointer;
-  introspect(JAMScript.introspectors.processC545F199BE443C5FB0DC91C55134FB746FD8B074) {
+  introspect(JAM.policy.pC545F199BE443C5FB0DC91C55134FB746FD8B074) {
     var v10925 = v7602[v7603](parentObj$$210, v7604)
   }
   v4193.registerE = v10925;
@@ -16586,7 +16586,7 @@ function v286(parentObj$$209) {
     var v9316 = parentObj$$209.memoryReader;
     var v9317 = parentObj$$209.stackPointer;
     var v9318 = parentObj$$209.stackPointer;
-    introspect(JAMScript.introspectors.processC545F199BE443C5FB0DC91C55134FB746FD8B074) {
+    introspect(JAM.policy.pC545F199BE443C5FB0DC91C55134FB746FD8B074) {
       var v7609 = v9316[v9317](parentObj$$209, v9318)
     }
     v4196.programCounter = v7608 | v7609;
@@ -16624,7 +16624,7 @@ function v284(parentObj$$207) {
   var v4209 = parentObj$$207.memoryReader;
   var v4210 = parentObj$$207.programCounter;
   var v4211 = parentObj$$207.programCounter;
-  introspect(JAMScript.introspectors.processC545F199BE443C5FB0DC91C55134FB746FD8B074) {
+  introspect(JAM.policy.pC545F199BE443C5FB0DC91C55134FB746FD8B074) {
     var tempValue$$3 = v4209[v4210](parentObj$$207, v4211)
   }
   var v7616 = parentObj$$207.programCounter;
@@ -16671,7 +16671,7 @@ function v283(parentObj$$206) {
   var v7622 = parentObj$$206.memoryReader;
   var v7623 = parentObj$$206.programCounter;
   var v7624 = parentObj$$206.programCounter;
-  introspect(JAMScript.introspectors.processC545F199BE443C5FB0DC91C55134FB746FD8B074) {
+  introspect(JAM.policy.pC545F199BE443C5FB0DC91C55134FB746FD8B074) {
     var v4218 = v7622[v7623](parentObj$$206, v7624)
   }
   var temp_pc$$2 = v4217 | v4218;
@@ -16710,7 +16710,7 @@ function v282(parentObj$$205) {
     var v7631 = parentObj$$205.memoryReader;
     var v7632 = parentObj$$205.programCounter;
     var v7633 = parentObj$$205.programCounter;
-    introspect(JAMScript.introspectors.processC545F199BE443C5FB0DC91C55134FB746FD8B074) {
+    introspect(JAM.policy.pC545F199BE443C5FB0DC91C55134FB746FD8B074) {
       var v4231 = v7631[v7632](parentObj$$205, v7633)
     }
     var temp_pc$$1 = v4230 | v4231;
@@ -16749,7 +16749,7 @@ function v281(parentObj$$204) {
   var v4245 = parentObj$$204.memoryReader;
   var v4246 = parentObj$$204.programCounter;
   var v4247 = parentObj$$204.programCounter;
-  introspect(JAMScript.introspectors.processC545F199BE443C5FB0DC91C55134FB746FD8B074) {
+  introspect(JAM.policy.pC545F199BE443C5FB0DC91C55134FB746FD8B074) {
     var opcode = v4245[v4246](parentObj$$204, v4247)
   }
   var v7641 = parentObj$$204.programCounter;
@@ -16757,12 +16757,12 @@ function v281(parentObj$$204) {
   parentObj$$204.programCounter = v4248 & 65535;
   var v7642 = parentObj$$204.CPUTicks;
   var v9325 = parentObj$$204.SecondaryTICKTable;
-  introspect(JAMScript.introspectors.processC545F199BE443C5FB0DC91C55134FB746FD8B074) {
+  introspect(JAM.policy.pC545F199BE443C5FB0DC91C55134FB746FD8B074) {
     var v7643 = v9325[opcode]
   }
   parentObj$$204.CPUTicks = v7642 + v7643;
   var v4249 = parentObj$$204.CBOPCODE;
-  introspect(JAMScript.introspectors.processC545F199BE443C5FB0DC91C55134FB746FD8B074) {
+  introspect(JAM.policy.pC545F199BE443C5FB0DC91C55134FB746FD8B074) {
     v4249[opcode](parentObj$$204)
   }
   return
@@ -16779,7 +16779,7 @@ function v280(parentObj$$203) {
     var v9327 = parentObj$$203.memoryReader;
     var v9328 = parentObj$$203.programCounter;
     var v9329 = parentObj$$203.programCounter;
-    introspect(JAMScript.introspectors.processC545F199BE443C5FB0DC91C55134FB746FD8B074) {
+    introspect(JAM.policy.pC545F199BE443C5FB0DC91C55134FB746FD8B074) {
       var v7645 = v9327[v9328](parentObj$$203, v9329)
     }
     v4250.programCounter = v7644 | v7645;
@@ -16802,7 +16802,7 @@ function v279(parentObj$$202) {
   var v9331 = parentObj$$202.memoryReader;
   var v9332 = parentObj$$202.stackPointer;
   var v9333 = parentObj$$202.stackPointer;
-  introspect(JAMScript.introspectors.processC545F199BE443C5FB0DC91C55134FB746FD8B074) {
+  introspect(JAM.policy.pC545F199BE443C5FB0DC91C55134FB746FD8B074) {
     var v7649 = v9331[v9332](parentObj$$202, v9333)
   }
   v4253.programCounter = v7648 | v7649;
@@ -16823,7 +16823,7 @@ function v278(parentObj$$201) {
     var v9335 = parentObj$$201.memoryReader;
     var v9336 = parentObj$$201.stackPointer;
     var v9337 = parentObj$$201.stackPointer;
-    introspect(JAMScript.introspectors.processC545F199BE443C5FB0DC91C55134FB746FD8B074) {
+    introspect(JAM.policy.pC545F199BE443C5FB0DC91C55134FB746FD8B074) {
       var v7652 = v9335[v9336](parentObj$$201, v9337)
     }
     v4255.programCounter = v7651 | v7652;
@@ -16862,7 +16862,7 @@ function v276(parentObj$$199) {
   var v7659 = parentObj$$199.memoryReader;
   var v7660 = parentObj$$199.programCounter;
   var v7661 = parentObj$$199.programCounter;
-  introspect(JAMScript.introspectors.processC545F199BE443C5FB0DC91C55134FB746FD8B074) {
+  introspect(JAM.policy.pC545F199BE443C5FB0DC91C55134FB746FD8B074) {
     var v4269 = v7659[v7660](parentObj$$199, v7661)
   }
   var dirtySum$$39 = v4268 + v4269;
@@ -16911,7 +16911,7 @@ function v274(parentObj$$197) {
     var v7668 = parentObj$$197.memoryReader;
     var v7669 = parentObj$$197.programCounter;
     var v7670 = parentObj$$197.programCounter;
-    introspect(JAMScript.introspectors.processC545F199BE443C5FB0DC91C55134FB746FD8B074) {
+    introspect(JAM.policy.pC545F199BE443C5FB0DC91C55134FB746FD8B074) {
       var v4285 = v7668[v7669](parentObj$$197, v7670)
     }
     var temp_pc = v4284 | v4285;
@@ -16956,7 +16956,7 @@ function v273(parentObj$$196) {
   var v9340 = parentObj$$196.memoryReader;
   var v9341 = parentObj$$196.programCounter;
   var v9342 = parentObj$$196.programCounter;
-  introspect(JAMScript.introspectors.processC545F199BE443C5FB0DC91C55134FB746FD8B074) {
+  introspect(JAM.policy.pC545F199BE443C5FB0DC91C55134FB746FD8B074) {
     var v7679 = v9340[v9341](parentObj$$196, v9342)
   }
   v4299.programCounter = v7678 | v7679;
@@ -16975,7 +16975,7 @@ function v272(parentObj$$195) {
     var v9344 = parentObj$$195.memoryReader;
     var v9345 = parentObj$$195.programCounter;
     var v9346 = parentObj$$195.programCounter;
-    introspect(JAMScript.introspectors.processC545F199BE443C5FB0DC91C55134FB746FD8B074) {
+    introspect(JAM.policy.pC545F199BE443C5FB0DC91C55134FB746FD8B074) {
       var v7682 = v9344[v9345](parentObj$$195, v9346)
     }
     v4300.programCounter = v7681 | v7682;
@@ -16993,7 +16993,7 @@ function v271(parentObj$$194) {
   var v7685 = parentObj$$194.memoryReader;
   var v7686 = parentObj$$194.stackPointer;
   var v7687 = parentObj$$194.stackPointer;
-  introspect(JAMScript.introspectors.processC545F199BE443C5FB0DC91C55134FB746FD8B074) {
+  introspect(JAM.policy.pC545F199BE443C5FB0DC91C55134FB746FD8B074) {
     var v10927 = v7685[v7686](parentObj$$194, v7687)
   }
   v4303.registerC = v10927;
@@ -17021,7 +17021,7 @@ function v270(parentObj$$193) {
     var v9349 = parentObj$$193.memoryReader;
     var v9350 = parentObj$$193.stackPointer;
     var v9351 = parentObj$$193.stackPointer;
-    introspect(JAMScript.introspectors.processC545F199BE443C5FB0DC91C55134FB746FD8B074) {
+    introspect(JAM.policy.pC545F199BE443C5FB0DC91C55134FB746FD8B074) {
       var v7692 = v9349[v9350](parentObj$$193, v9351)
     }
     v4306.programCounter = v7691 | v7692;
@@ -17043,7 +17043,7 @@ function v268(parentObj$$191) {
   var v7695 = parentObj$$191.memoryReader;
   var v7696 = parentObj$$191.registersHL;
   var v7697 = parentObj$$191.registersHL;
-  introspect(JAMScript.introspectors.processC545F199BE443C5FB0DC91C55134FB746FD8B074) {
+  introspect(JAM.policy.pC545F199BE443C5FB0DC91C55134FB746FD8B074) {
     var v4310 = v7695[v7696](parentObj$$191, v7697)
   }
   var dirtySum$$38 = v4309 - v4310;
@@ -17148,7 +17148,7 @@ function v260(parentObj$$183) {
   var v10165 = parentObj$$183.memoryReader;
   var v10166 = parentObj$$183.registersHL;
   var v10167 = parentObj$$183.registersHL;
-  introspect(JAMScript.introspectors.processC545F199BE443C5FB0DC91C55134FB746FD8B074) {
+  introspect(JAM.policy.pC545F199BE443C5FB0DC91C55134FB746FD8B074) {
     var v9353 = v10165[v10166](parentObj$$183, v10167)
   }
   v4338.registerA = v9352 | v9353;
@@ -17225,7 +17225,7 @@ function v252(parentObj$$175) {
   var v10168 = parentObj$$175.memoryReader;
   var v10169 = parentObj$$175.registersHL;
   var v10170 = parentObj$$175.registersHL;
-  introspect(JAMScript.introspectors.processC545F199BE443C5FB0DC91C55134FB746FD8B074) {
+  introspect(JAM.policy.pC545F199BE443C5FB0DC91C55134FB746FD8B074) {
     var v9357 = v10168[v10169](parentObj$$175, v10170)
   }
   v4346.registerA = v9356 ^ v9357;
@@ -17303,7 +17303,7 @@ function v244(parentObj$$167) {
   var v10171 = parentObj$$167.memoryReader;
   var v10172 = parentObj$$167.registersHL;
   var v10173 = parentObj$$167.registersHL;
-  introspect(JAMScript.introspectors.processC545F199BE443C5FB0DC91C55134FB746FD8B074) {
+  introspect(JAM.policy.pC545F199BE443C5FB0DC91C55134FB746FD8B074) {
     var v9361 = v10171[v10172](parentObj$$167, v10173)
   }
   v4355.registerA = v9360 & v9361;
@@ -17391,7 +17391,7 @@ function v236(parentObj$$159) {
   var v4364 = parentObj$$159.memoryReader;
   var v4365 = parentObj$$159.registersHL;
   var v4366 = parentObj$$159.registersHL;
-  introspect(JAMScript.introspectors.processC545F199BE443C5FB0DC91C55134FB746FD8B074) {
+  introspect(JAM.policy.pC545F199BE443C5FB0DC91C55134FB746FD8B074) {
     var temp_var$$8 = v4364[v4365](parentObj$$159, v4366)
   }
   var v7743 = parentObj$$159.registerA;
@@ -17648,7 +17648,7 @@ function v228(parentObj$$151) {
   var v7776 = parentObj$$151.memoryReader;
   var v7777 = parentObj$$151.registersHL;
   var v7778 = parentObj$$151.registersHL;
-  introspect(JAMScript.introspectors.processC545F199BE443C5FB0DC91C55134FB746FD8B074) {
+  introspect(JAM.policy.pC545F199BE443C5FB0DC91C55134FB746FD8B074) {
     var v4397 = v7776[v7777](parentObj$$151, v7778)
   }
   var dirtySum$$24 = v4396 - v4397;
@@ -17784,7 +17784,7 @@ function v220(parentObj$$143) {
   var v4428 = parentObj$$143.memoryReader;
   var v4429 = parentObj$$143.registersHL;
   var v4430 = parentObj$$143.registersHL;
-  introspect(JAMScript.introspectors.processC545F199BE443C5FB0DC91C55134FB746FD8B074) {
+  introspect(JAM.policy.pC545F199BE443C5FB0DC91C55134FB746FD8B074) {
     var tempValue$$2 = v4428[v4429](parentObj$$143, v4430)
   }
   var v7792 = parentObj$$143.registerA;
@@ -18048,7 +18048,7 @@ function v212(parentObj$$135) {
   var v7826 = parentObj$$135.memoryReader;
   var v7827 = parentObj$$135.registersHL;
   var v7828 = parentObj$$135.registersHL;
-  introspect(JAMScript.introspectors.processC545F199BE443C5FB0DC91C55134FB746FD8B074) {
+  introspect(JAM.policy.pC545F199BE443C5FB0DC91C55134FB746FD8B074) {
     var v4466 = v7826[v7827](parentObj$$135, v7828)
   }
   var dirtySum$$9 = v4465 + v4466;
@@ -18163,7 +18163,7 @@ function v204(parentObj$$127) {
   var v7838 = parentObj$$127.memoryReader;
   var v7839 = parentObj$$127.registersHL;
   var v7840 = parentObj$$127.registersHL;
-  introspect(JAMScript.introspectors.processC545F199BE443C5FB0DC91C55134FB746FD8B074) {
+  introspect(JAM.policy.pC545F199BE443C5FB0DC91C55134FB746FD8B074) {
     var v10929 = v7838[v7839](parentObj$$127, v7840)
   }
   v4500.registerA = v10929;
@@ -18200,7 +18200,7 @@ function v197(parentObj$$120) {
   var v4504 = parentObj$$120.registersHL;
   var v4505 = parentObj$$120.registersHL;
   var v4506 = parentObj$$120.registerA;
-  introspect(JAMScript.introspectors.processC545F199BE443C5FB0DC91C55134FB746FD8B074) {
+  introspect(JAM.policy.pC545F199BE443C5FB0DC91C55134FB746FD8B074) {
     v4503[v4504](parentObj$$120, v4505, v4506)
   }
   return
@@ -18236,7 +18236,7 @@ function v195(parentObj$$118) {
   var v4511 = parentObj$$118.registersHL;
   var v7844 = parentObj$$118.registersHL;
   var v4512 = v7844 & 255;
-  introspect(JAMScript.introspectors.processC545F199BE443C5FB0DC91C55134FB746FD8B074) {
+  introspect(JAM.policy.pC545F199BE443C5FB0DC91C55134FB746FD8B074) {
     v4509[v4510](parentObj$$118, v4511, v4512)
   }
   return
@@ -18247,7 +18247,7 @@ function v194(parentObj$$117) {
   var v4515 = parentObj$$117.registersHL;
   var v7845 = parentObj$$117.registersHL;
   var v4516 = v7845 >> 8;
-  introspect(JAMScript.introspectors.processC545F199BE443C5FB0DC91C55134FB746FD8B074) {
+  introspect(JAM.policy.pC545F199BE443C5FB0DC91C55134FB746FD8B074) {
     v4513[v4514](parentObj$$117, v4515, v4516)
   }
   return
@@ -18257,7 +18257,7 @@ function v193(parentObj$$116) {
   var v4518 = parentObj$$116.registersHL;
   var v4519 = parentObj$$116.registersHL;
   var v4520 = parentObj$$116.registerE;
-  introspect(JAMScript.introspectors.processC545F199BE443C5FB0DC91C55134FB746FD8B074) {
+  introspect(JAM.policy.pC545F199BE443C5FB0DC91C55134FB746FD8B074) {
     v4517[v4518](parentObj$$116, v4519, v4520)
   }
   return
@@ -18267,7 +18267,7 @@ function v192(parentObj$$115) {
   var v4522 = parentObj$$115.registersHL;
   var v4523 = parentObj$$115.registersHL;
   var v4524 = parentObj$$115.registerD;
-  introspect(JAMScript.introspectors.processC545F199BE443C5FB0DC91C55134FB746FD8B074) {
+  introspect(JAM.policy.pC545F199BE443C5FB0DC91C55134FB746FD8B074) {
     v4521[v4522](parentObj$$115, v4523, v4524)
   }
   return
@@ -18277,7 +18277,7 @@ function v191(parentObj$$114) {
   var v4526 = parentObj$$114.registersHL;
   var v4527 = parentObj$$114.registersHL;
   var v4528 = parentObj$$114.registerC;
-  introspect(JAMScript.introspectors.processC545F199BE443C5FB0DC91C55134FB746FD8B074) {
+  introspect(JAM.policy.pC545F199BE443C5FB0DC91C55134FB746FD8B074) {
     v4525[v4526](parentObj$$114, v4527, v4528)
   }
   return
@@ -18287,7 +18287,7 @@ function v190(parentObj$$113) {
   var v4530 = parentObj$$113.registersHL;
   var v4531 = parentObj$$113.registersHL;
   var v4532 = parentObj$$113.registerB;
-  introspect(JAMScript.introspectors.processC545F199BE443C5FB0DC91C55134FB746FD8B074) {
+  introspect(JAM.policy.pC545F199BE443C5FB0DC91C55134FB746FD8B074) {
     v4529[v4530](parentObj$$113, v4531, v4532)
   }
   return
@@ -18306,7 +18306,7 @@ function v188(parentObj$$111) {
   var v9427 = parentObj$$111.memoryReader;
   var v9428 = parentObj$$111.registersHL;
   var v9429 = parentObj$$111.registersHL;
-  introspect(JAMScript.introspectors.processC545F199BE443C5FB0DC91C55134FB746FD8B074) {
+  introspect(JAM.policy.pC545F199BE443C5FB0DC91C55134FB746FD8B074) {
     var v7848 = v9427[v9428](parentObj$$111, v9429)
   }
   v4535.registersHL = v7847 | v7848;
@@ -18364,7 +18364,7 @@ function v180(parentObj$$103) {
   var v10215 = parentObj$$103.memoryReader;
   var v10216 = parentObj$$103.registersHL;
   var v10217 = parentObj$$103.registersHL;
-  introspect(JAMScript.introspectors.processC545F199BE443C5FB0DC91C55134FB746FD8B074) {
+  introspect(JAM.policy.pC545F199BE443C5FB0DC91C55134FB746FD8B074) {
     var v9430 = v10215[v10216](parentObj$$103, v10217)
   }
   var v7857 = v9430 << 8;
@@ -18423,7 +18423,7 @@ function v172(parentObj$$95) {
   var v7868 = parentObj$$95.memoryReader;
   var v7869 = parentObj$$95.registersHL;
   var v7870 = parentObj$$95.registersHL;
-  introspect(JAMScript.introspectors.processC545F199BE443C5FB0DC91C55134FB746FD8B074) {
+  introspect(JAM.policy.pC545F199BE443C5FB0DC91C55134FB746FD8B074) {
     var v10930 = v7868[v7869](parentObj$$95, v7870)
   }
   v4558.registerE = v10930;
@@ -18463,7 +18463,7 @@ function v164(parentObj$$87) {
   var v7871 = parentObj$$87.memoryReader;
   var v7872 = parentObj$$87.registersHL;
   var v7873 = parentObj$$87.registersHL;
-  introspect(JAMScript.introspectors.processC545F199BE443C5FB0DC91C55134FB746FD8B074) {
+  introspect(JAM.policy.pC545F199BE443C5FB0DC91C55134FB746FD8B074) {
     var v10931 = v7871[v7872](parentObj$$87, v7873)
   }
   v4561.registerD = v10931;
@@ -18503,7 +18503,7 @@ function v156(parentObj$$79) {
   var v7874 = parentObj$$79.memoryReader;
   var v7875 = parentObj$$79.registersHL;
   var v7876 = parentObj$$79.registersHL;
-  introspect(JAMScript.introspectors.processC545F199BE443C5FB0DC91C55134FB746FD8B074) {
+  introspect(JAM.policy.pC545F199BE443C5FB0DC91C55134FB746FD8B074) {
     var v10932 = v7874[v7875](parentObj$$79, v7876)
   }
   v4564.registerC = v10932;
@@ -18543,7 +18543,7 @@ function v148(parentObj$$71) {
   var v7877 = parentObj$$71.memoryReader;
   var v7878 = parentObj$$71.registersHL;
   var v7879 = parentObj$$71.registersHL;
-  introspect(JAMScript.introspectors.processC545F199BE443C5FB0DC91C55134FB746FD8B074) {
+  introspect(JAM.policy.pC545F199BE443C5FB0DC91C55134FB746FD8B074) {
     var v10933 = v7877[v7878](parentObj$$71, v7879)
   }
   v4567.registerB = v10933;
@@ -18585,7 +18585,7 @@ function v140(parentObj$$63) {
   var v7880 = parentObj$$63.memoryReader;
   var v7881 = parentObj$$63.programCounter;
   var v7882 = parentObj$$63.programCounter;
-  introspect(JAMScript.introspectors.processC545F199BE443C5FB0DC91C55134FB746FD8B074) {
+  introspect(JAM.policy.pC545F199BE443C5FB0DC91C55134FB746FD8B074) {
     var v10934 = v7880[v7881](parentObj$$63, v7882)
   }
   v4571.registerA = v10934;
@@ -18629,7 +18629,7 @@ function v136(parentObj$$59) {
   var v7889 = parentObj$$59.memoryReader;
   var v7890 = parentObj$$59.registersHL;
   var v7891 = parentObj$$59.registersHL;
-  introspect(JAMScript.introspectors.processC545F199BE443C5FB0DC91C55134FB746FD8B074) {
+  introspect(JAM.policy.pC545F199BE443C5FB0DC91C55134FB746FD8B074) {
     var v10935 = v7889[v7890](parentObj$$59, v7891)
   }
   v4580.registerA = v10935;
@@ -18659,7 +18659,7 @@ function v134(parentObj$$57) {
     var v10728 = parentObj$$57.memoryReader;
     var v10729 = parentObj$$57.programCounter;
     var v10730 = parentObj$$57.programCounter;
-    introspect(JAMScript.introspectors.processC545F199BE443C5FB0DC91C55134FB746FD8B074) {
+    introspect(JAM.policy.pC545F199BE443C5FB0DC91C55134FB746FD8B074) {
       var v10692 = v10728[v10729](parentObj$$57, v10730)
     }
     var v10518 = v10692 << 24;
@@ -18688,10 +18688,10 @@ function v132(parentObj$$55) {
   var v7897 = parentObj$$55.memoryReader;
   var v7898 = parentObj$$55.programCounter;
   var v7899 = parentObj$$55.programCounter;
-  introspect(JAMScript.introspectors.processC545F199BE443C5FB0DC91C55134FB746FD8B074) {
+  introspect(JAM.policy.pC545F199BE443C5FB0DC91C55134FB746FD8B074) {
     var v4592 = v7897[v7898](parentObj$$55, v7899)
   }
-  introspect(JAMScript.introspectors.processC545F199BE443C5FB0DC91C55134FB746FD8B074) {
+  introspect(JAM.policy.pC545F199BE443C5FB0DC91C55134FB746FD8B074) {
     v4589[v4590](parentObj$$55, v4591, v4592)
   }
   var v7900 = parentObj$$55.programCounter;
@@ -18703,7 +18703,7 @@ function v131(parentObj$$54) {
   var v9433 = parentObj$$54.memoryReader;
   var v9434 = parentObj$$54.registersHL;
   var v9435 = parentObj$$54.registersHL;
-  introspect(JAMScript.introspectors.processC545F199BE443C5FB0DC91C55134FB746FD8B074) {
+  introspect(JAM.policy.pC545F199BE443C5FB0DC91C55134FB746FD8B074) {
     var v7901 = v9433[v9434](parentObj$$54, v9435)
   }
   var v4594 = v7901 - 1;
@@ -18715,7 +18715,7 @@ function v131(parentObj$$54) {
   var v4596 = parentObj$$54.memoryWriter;
   var v4597 = parentObj$$54.registersHL;
   var v4598 = parentObj$$54.registersHL;
-  introspect(JAMScript.introspectors.processC545F199BE443C5FB0DC91C55134FB746FD8B074) {
+  introspect(JAM.policy.pC545F199BE443C5FB0DC91C55134FB746FD8B074) {
     v4596[v4597](parentObj$$54, v4598, temp_var$$6)
   }
   return
@@ -18724,7 +18724,7 @@ function v130(parentObj$$53) {
   var v9436 = parentObj$$53.memoryReader;
   var v9437 = parentObj$$53.registersHL;
   var v9438 = parentObj$$53.registersHL;
-  introspect(JAMScript.introspectors.processC545F199BE443C5FB0DC91C55134FB746FD8B074) {
+  introspect(JAM.policy.pC545F199BE443C5FB0DC91C55134FB746FD8B074) {
     var v7902 = v9436[v9437](parentObj$$53, v9438)
   }
   var v4599 = v7902 + 1;
@@ -18736,7 +18736,7 @@ function v130(parentObj$$53) {
   var v4601 = parentObj$$53.memoryWriter;
   var v4602 = parentObj$$53.registersHL;
   var v4603 = parentObj$$53.registersHL;
-  introspect(JAMScript.introspectors.processC545F199BE443C5FB0DC91C55134FB746FD8B074) {
+  introspect(JAM.policy.pC545F199BE443C5FB0DC91C55134FB746FD8B074) {
     v4601[v4602](parentObj$$53, v4603, temp_var$$5)
   }
   return
@@ -18752,7 +18752,7 @@ function v128(parentObj$$51) {
   var v4606 = parentObj$$51.registersHL;
   var v4607 = parentObj$$51.registersHL;
   var v4608 = parentObj$$51.registerA;
-  introspect(JAMScript.introspectors.processC545F199BE443C5FB0DC91C55134FB746FD8B074) {
+  introspect(JAM.policy.pC545F199BE443C5FB0DC91C55134FB746FD8B074) {
     v4605[v4606](parentObj$$51, v4607, v4608)
   }
   var v7904 = parentObj$$51.registersHL;
@@ -18770,7 +18770,7 @@ function v127(parentObj$$50) {
   var v9440 = parentObj$$50.memoryReader;
   var v9441 = parentObj$$50.programCounter;
   var v9442 = parentObj$$50.programCounter;
-  introspect(JAMScript.introspectors.processC545F199BE443C5FB0DC91C55134FB746FD8B074) {
+  introspect(JAM.policy.pC545F199BE443C5FB0DC91C55134FB746FD8B074) {
     var v7906 = v9440[v9441](parentObj$$50, v9442)
   }
   v4610.stackPointer = v7905 | v7906;
@@ -18788,7 +18788,7 @@ function v126(parentObj$$49) {
     var v10731 = parentObj$$49.memoryReader;
     var v10732 = parentObj$$49.programCounter;
     var v10733 = parentObj$$49.programCounter;
-    introspect(JAMScript.introspectors.processC545F199BE443C5FB0DC91C55134FB746FD8B074) {
+    introspect(JAM.policy.pC545F199BE443C5FB0DC91C55134FB746FD8B074) {
       var v10694 = v10731[v10732](parentObj$$49, v10733)
     }
     var v10520 = v10694 << 24;
@@ -18818,7 +18818,7 @@ function v124(parentObj$$47) {
   var v9445 = parentObj$$47.memoryReader;
   var v9446 = parentObj$$47.programCounter;
   var v9447 = parentObj$$47.programCounter;
-  introspect(JAMScript.introspectors.processC545F199BE443C5FB0DC91C55134FB746FD8B074) {
+  introspect(JAM.policy.pC545F199BE443C5FB0DC91C55134FB746FD8B074) {
     var v7914 = v9445[v9446](parentObj$$47, v9447)
   }
   v4615.registersHL = v7913 | v7914;
@@ -18864,7 +18864,7 @@ function v120(parentObj$$43) {
   var v7921 = parentObj$$43.memoryReader;
   var v7922 = parentObj$$43.registersHL;
   var v7923 = parentObj$$43.registersHL;
-  introspect(JAMScript.introspectors.processC545F199BE443C5FB0DC91C55134FB746FD8B074) {
+  introspect(JAM.policy.pC545F199BE443C5FB0DC91C55134FB746FD8B074) {
     var v10936 = v7921[v7922](parentObj$$43, v7923)
   }
   v4624.registerA = v10936;
@@ -18893,7 +18893,7 @@ function v118(parentObj$$41) {
     var v10734 = parentObj$$41.memoryReader;
     var v10735 = parentObj$$41.programCounter;
     var v10736 = parentObj$$41.programCounter;
-    introspect(JAMScript.introspectors.processC545F199BE443C5FB0DC91C55134FB746FD8B074) {
+    introspect(JAM.policy.pC545F199BE443C5FB0DC91C55134FB746FD8B074) {
       var v10695 = v10734[v10735](parentObj$$41, v10736)
     }
     var v10521 = v10695 << 24;
@@ -18978,7 +18978,7 @@ function v116(parentObj$$39) {
   var v10226 = parentObj$$39.memoryReader;
   var v10227 = parentObj$$39.programCounter;
   var v10228 = parentObj$$39.programCounter;
-  introspect(JAMScript.introspectors.processC545F199BE443C5FB0DC91C55134FB746FD8B074) {
+  introspect(JAM.policy.pC545F199BE443C5FB0DC91C55134FB746FD8B074) {
     var v9453 = v10226[v10227](parentObj$$39, v10228)
   }
   var v7939 = v9453 << 8;
@@ -19031,7 +19031,7 @@ function v112(parentObj$$35) {
   var v4656 = parentObj$$35.registersHL;
   var v4657 = parentObj$$35.registersHL;
   var v4658 = parentObj$$35.registerA;
-  introspect(JAMScript.introspectors.processC545F199BE443C5FB0DC91C55134FB746FD8B074) {
+  introspect(JAM.policy.pC545F199BE443C5FB0DC91C55134FB746FD8B074) {
     v4655[v4656](parentObj$$35, v4657, v4658)
   }
   var v7947 = parentObj$$35.registersHL;
@@ -19049,7 +19049,7 @@ function v111(parentObj$$34) {
   var v9458 = parentObj$$34.memoryReader;
   var v9459 = parentObj$$34.programCounter;
   var v9460 = parentObj$$34.programCounter;
-  introspect(JAMScript.introspectors.processC545F199BE443C5FB0DC91C55134FB746FD8B074) {
+  introspect(JAM.policy.pC545F199BE443C5FB0DC91C55134FB746FD8B074) {
     var v7949 = v9458[v9459](parentObj$$34, v9460)
   }
   v4660.registersHL = v7948 | v7949;
@@ -19067,7 +19067,7 @@ function v110(parentObj$$33) {
     var v10737 = parentObj$$33.memoryReader;
     var v10738 = parentObj$$33.programCounter;
     var v10739 = parentObj$$33.programCounter;
-    introspect(JAMScript.introspectors.processC545F199BE443C5FB0DC91C55134FB746FD8B074) {
+    introspect(JAM.policy.pC545F199BE443C5FB0DC91C55134FB746FD8B074) {
       var v10697 = v10737[v10738](parentObj$$33, v10739)
     }
     var v10523 = v10697 << 24;
@@ -19107,7 +19107,7 @@ function v108(parentObj$$31) {
   var v7958 = parentObj$$31.memoryReader;
   var v7959 = parentObj$$31.programCounter;
   var v7960 = parentObj$$31.programCounter;
-  introspect(JAMScript.introspectors.processC545F199BE443C5FB0DC91C55134FB746FD8B074) {
+  introspect(JAM.policy.pC545F199BE443C5FB0DC91C55134FB746FD8B074) {
     var v10937 = v7958[v7959](parentObj$$31, v7960)
   }
   v4668.registerE = v10937;
@@ -19183,7 +19183,7 @@ function v102(parentObj$$25) {
   var v10740 = parentObj$$25.memoryReader;
   var v10741 = parentObj$$25.programCounter;
   var v10742 = parentObj$$25.programCounter;
-  introspect(JAMScript.introspectors.processC545F199BE443C5FB0DC91C55134FB746FD8B074) {
+  introspect(JAM.policy.pC545F199BE443C5FB0DC91C55134FB746FD8B074) {
     var v10698 = v10740[v10741](parentObj$$25, v10742)
   }
   var v10524 = v10698 << 24;
@@ -19216,7 +19216,7 @@ function v100(parentObj$$23) {
   var v7974 = parentObj$$23.memoryReader;
   var v7975 = parentObj$$23.programCounter;
   var v7976 = parentObj$$23.programCounter;
-  introspect(JAMScript.introspectors.processC545F199BE443C5FB0DC91C55134FB746FD8B074) {
+  introspect(JAM.policy.pC545F199BE443C5FB0DC91C55134FB746FD8B074) {
     var v10939 = v7974[v7975](parentObj$$23, v7976)
   }
   v4686.registerD = v10939;
@@ -19274,7 +19274,7 @@ function v95(parentObj$$18) {
   var v7986 = parentObj$$18.memoryReader;
   var v7987 = parentObj$$18.programCounter;
   var v7988 = parentObj$$18.programCounter;
-  introspect(JAMScript.introspectors.processC545F199BE443C5FB0DC91C55134FB746FD8B074) {
+  introspect(JAM.policy.pC545F199BE443C5FB0DC91C55134FB746FD8B074) {
     var v10940 = v7986[v7987](parentObj$$18, v7988)
   }
   v4698.registerE = v10940;
@@ -19341,7 +19341,7 @@ function v92(parentObj$$15) {
   var v7995 = parentObj$$15.memoryReader;
   var v7996 = parentObj$$15.programCounter;
   var v7997 = parentObj$$15.programCounter;
-  introspect(JAMScript.introspectors.processC545F199BE443C5FB0DC91C55134FB746FD8B074) {
+  introspect(JAM.policy.pC545F199BE443C5FB0DC91C55134FB746FD8B074) {
     var v10942 = v7995[v7996](parentObj$$15, v7997)
   }
   v4710.registerC = v10942;
@@ -19420,7 +19420,7 @@ function v86(parentObj$$9) {
   var v8009 = parentObj$$9.memoryReader;
   var v8010 = parentObj$$9.programCounter;
   var v8011 = parentObj$$9.programCounter;
-  introspect(JAMScript.introspectors.processC545F199BE443C5FB0DC91C55134FB746FD8B074) {
+  introspect(JAM.policy.pC545F199BE443C5FB0DC91C55134FB746FD8B074) {
     var v4725 = v8009[v8010](parentObj$$9, v8011)
   }
   var temp_var$$1 = v4724 | v4725;
@@ -19454,7 +19454,7 @@ function v84(parentObj$$7) {
   var v8018 = parentObj$$7.memoryReader;
   var v8019 = parentObj$$7.programCounter;
   var v8020 = parentObj$$7.programCounter;
-  introspect(JAMScript.introspectors.processC545F199BE443C5FB0DC91C55134FB746FD8B074) {
+  introspect(JAM.policy.pC545F199BE443C5FB0DC91C55134FB746FD8B074) {
     var v10944 = v8018[v8019](parentObj$$7, v8020)
   }
   v4733.registerB = v10944;
@@ -19512,7 +19512,7 @@ function v79(parentObj$$2) {
   var v8030 = parentObj$$2.memoryReader;
   var v8031 = parentObj$$2.programCounter;
   var v8032 = parentObj$$2.programCounter;
-  introspect(JAMScript.introspectors.processC545F199BE443C5FB0DC91C55134FB746FD8B074) {
+  introspect(JAM.policy.pC545F199BE443C5FB0DC91C55134FB746FD8B074) {
     var v10945 = v8030[v8031](parentObj$$2, v8032)
   }
   v4745.registerC = v10945;
@@ -19612,12 +19612,12 @@ function v70(buffer$$24) {
     for(;v4764;) {
       var v4760 = finalOffset$$3;
       finalOffset$$3 = finalOffset$$3 + 1;
-      introspect(JAMScript.introspectors.processC545F199BE443C5FB0DC91C55134FB746FD8B074) {
+      introspect(JAM.policy.pC545F199BE443C5FB0DC91C55134FB746FD8B074) {
         var v9488 = buffer$$24[pixelOffset$$7]
       }
       var v8040 = v9488 * firstWeight;
       var v10242 = pixelOffset$$7 + 4;
-      introspect(JAMScript.introspectors.processC545F199BE443C5FB0DC91C55134FB746FD8B074) {
+      introspect(JAM.policy.pC545F199BE443C5FB0DC91C55134FB746FD8B074) {
         var v9489 = buffer$$24[v10242]
       }
       var v8041 = v9489 * secondWeight;
@@ -19625,12 +19625,12 @@ function v70(buffer$$24) {
       var v4761 = finalOffset$$3;
       finalOffset$$3 = finalOffset$$3 + 1;
       var v10243 = pixelOffset$$7 + 1;
-      introspect(JAMScript.introspectors.processC545F199BE443C5FB0DC91C55134FB746FD8B074) {
+      introspect(JAM.policy.pC545F199BE443C5FB0DC91C55134FB746FD8B074) {
         var v9490 = buffer$$24[v10243]
       }
       var v8042 = v9490 * firstWeight;
       var v10244 = pixelOffset$$7 + 5;
-      introspect(JAMScript.introspectors.processC545F199BE443C5FB0DC91C55134FB746FD8B074) {
+      introspect(JAM.policy.pC545F199BE443C5FB0DC91C55134FB746FD8B074) {
         var v9491 = buffer$$24[v10244]
       }
       var v8043 = v9491 * secondWeight;
@@ -19638,12 +19638,12 @@ function v70(buffer$$24) {
       var v4762 = finalOffset$$3;
       finalOffset$$3 = finalOffset$$3 + 1;
       var v10245 = pixelOffset$$7 + 2;
-      introspect(JAMScript.introspectors.processC545F199BE443C5FB0DC91C55134FB746FD8B074) {
+      introspect(JAM.policy.pC545F199BE443C5FB0DC91C55134FB746FD8B074) {
         var v9492 = buffer$$24[v10245]
       }
       var v8044 = v9492 * firstWeight;
       var v10246 = pixelOffset$$7 + 6;
-      introspect(JAMScript.introspectors.processC545F199BE443C5FB0DC91C55134FB746FD8B074) {
+      introspect(JAM.policy.pC545F199BE443C5FB0DC91C55134FB746FD8B074) {
         var v9493 = buffer$$24[v10246]
       }
       var v8045 = v9493 * secondWeight;
@@ -19651,12 +19651,12 @@ function v70(buffer$$24) {
       var v4763 = finalOffset$$3;
       finalOffset$$3 = finalOffset$$3 + 1;
       var v10247 = pixelOffset$$7 + 3;
-      introspect(JAMScript.introspectors.processC545F199BE443C5FB0DC91C55134FB746FD8B074) {
+      introspect(JAM.policy.pC545F199BE443C5FB0DC91C55134FB746FD8B074) {
         var v9494 = buffer$$24[v10247]
       }
       var v8046 = v9494 * firstWeight;
       var v10248 = pixelOffset$$7 + 7;
-      introspect(JAMScript.introspectors.processC545F199BE443C5FB0DC91C55134FB746FD8B074) {
+      introspect(JAM.policy.pC545F199BE443C5FB0DC91C55134FB746FD8B074) {
         var v9495 = buffer$$24[v10248]
       }
       var v8047 = v9495 * secondWeight;
@@ -19721,48 +19721,48 @@ function v69(buffer$$23) {
         for(;v4776;) {
           var v4772 = pixelOffset$$6;
           pixelOffset$$6 = pixelOffset$$6 + 1;
-          introspect(JAMScript.introspectors.processC545F199BE443C5FB0DC91C55134FB746FD8B074) {
+          introspect(JAM.policy.pC545F199BE443C5FB0DC91C55134FB746FD8B074) {
             var v9497 = output$$3[v4772]
           }
           var v10526 = actualPosition$$3;
           actualPosition$$3 = actualPosition$$3 + 1;
-          introspect(JAMScript.introspectors.processC545F199BE443C5FB0DC91C55134FB746FD8B074) {
+          introspect(JAM.policy.pC545F199BE443C5FB0DC91C55134FB746FD8B074) {
             var v10249 = buffer$$23[v10526]
           }
           var v9498 = v10249 * amountToNext$$3;
           output$$3[v4772] = v9497 + v9498;
           var v4773 = pixelOffset$$6;
           pixelOffset$$6 = pixelOffset$$6 + 1;
-          introspect(JAMScript.introspectors.processC545F199BE443C5FB0DC91C55134FB746FD8B074) {
+          introspect(JAM.policy.pC545F199BE443C5FB0DC91C55134FB746FD8B074) {
             var v9499 = output$$3[v4773]
           }
           var v10527 = actualPosition$$3;
           actualPosition$$3 = actualPosition$$3 + 1;
-          introspect(JAMScript.introspectors.processC545F199BE443C5FB0DC91C55134FB746FD8B074) {
+          introspect(JAM.policy.pC545F199BE443C5FB0DC91C55134FB746FD8B074) {
             var v10250 = buffer$$23[v10527]
           }
           var v9500 = v10250 * amountToNext$$3;
           output$$3[v4773] = v9499 + v9500;
           var v4774 = pixelOffset$$6;
           pixelOffset$$6 = pixelOffset$$6 + 1;
-          introspect(JAMScript.introspectors.processC545F199BE443C5FB0DC91C55134FB746FD8B074) {
+          introspect(JAM.policy.pC545F199BE443C5FB0DC91C55134FB746FD8B074) {
             var v9501 = output$$3[v4774]
           }
           var v10528 = actualPosition$$3;
           actualPosition$$3 = actualPosition$$3 + 1;
-          introspect(JAMScript.introspectors.processC545F199BE443C5FB0DC91C55134FB746FD8B074) {
+          introspect(JAM.policy.pC545F199BE443C5FB0DC91C55134FB746FD8B074) {
             var v10251 = buffer$$23[v10528]
           }
           var v9502 = v10251 * amountToNext$$3;
           output$$3[v4774] = v9501 + v9502;
           var v4775 = pixelOffset$$6;
           pixelOffset$$6 = pixelOffset$$6 + 1;
-          introspect(JAMScript.introspectors.processC545F199BE443C5FB0DC91C55134FB746FD8B074) {
+          introspect(JAM.policy.pC545F199BE443C5FB0DC91C55134FB746FD8B074) {
             var v9503 = output$$3[v4775]
           }
           var v10529 = actualPosition$$3;
           actualPosition$$3 = actualPosition$$3 + 1;
-          introspect(JAMScript.introspectors.processC545F199BE443C5FB0DC91C55134FB746FD8B074) {
+          introspect(JAM.policy.pC545F199BE443C5FB0DC91C55134FB746FD8B074) {
             var v10252 = buffer$$23[v10529]
           }
           var v9504 = v10252 * amountToNext$$3;
@@ -19780,48 +19780,48 @@ function v69(buffer$$23) {
         for(;v4781;) {
           var v4777 = pixelOffset$$6;
           pixelOffset$$6 = pixelOffset$$6 + 1;
-          introspect(JAMScript.introspectors.processC545F199BE443C5FB0DC91C55134FB746FD8B074) {
+          introspect(JAM.policy.pC545F199BE443C5FB0DC91C55134FB746FD8B074) {
             var v9505 = output$$3[v4777]
           }
           var v10530 = amountToNext$$3;
           amountToNext$$3 = amountToNext$$3 + 1;
-          introspect(JAMScript.introspectors.processC545F199BE443C5FB0DC91C55134FB746FD8B074) {
+          introspect(JAM.policy.pC545F199BE443C5FB0DC91C55134FB746FD8B074) {
             var v10253 = buffer$$23[v10530]
           }
           var v9506 = v10253 * weight$$6;
           output$$3[v4777] = v9505 + v9506;
           var v4778 = pixelOffset$$6;
           pixelOffset$$6 = pixelOffset$$6 + 1;
-          introspect(JAMScript.introspectors.processC545F199BE443C5FB0DC91C55134FB746FD8B074) {
+          introspect(JAM.policy.pC545F199BE443C5FB0DC91C55134FB746FD8B074) {
             var v9507 = output$$3[v4778]
           }
           var v10531 = amountToNext$$3;
           amountToNext$$3 = amountToNext$$3 + 1;
-          introspect(JAMScript.introspectors.processC545F199BE443C5FB0DC91C55134FB746FD8B074) {
+          introspect(JAM.policy.pC545F199BE443C5FB0DC91C55134FB746FD8B074) {
             var v10254 = buffer$$23[v10531]
           }
           var v9508 = v10254 * weight$$6;
           output$$3[v4778] = v9507 + v9508;
           var v4779 = pixelOffset$$6;
           pixelOffset$$6 = pixelOffset$$6 + 1;
-          introspect(JAMScript.introspectors.processC545F199BE443C5FB0DC91C55134FB746FD8B074) {
+          introspect(JAM.policy.pC545F199BE443C5FB0DC91C55134FB746FD8B074) {
             var v9509 = output$$3[v4779]
           }
           var v10532 = amountToNext$$3;
           amountToNext$$3 = amountToNext$$3 + 1;
-          introspect(JAMScript.introspectors.processC545F199BE443C5FB0DC91C55134FB746FD8B074) {
+          introspect(JAM.policy.pC545F199BE443C5FB0DC91C55134FB746FD8B074) {
             var v10255 = buffer$$23[v10532]
           }
           var v9510 = v10255 * weight$$6;
           output$$3[v4779] = v9509 + v9510;
           var v4780 = pixelOffset$$6;
           pixelOffset$$6 = pixelOffset$$6 + 1;
-          introspect(JAMScript.introspectors.processC545F199BE443C5FB0DC91C55134FB746FD8B074) {
+          introspect(JAM.policy.pC545F199BE443C5FB0DC91C55134FB746FD8B074) {
             var v9511 = output$$3[v4780]
           }
           var v10533 = amountToNext$$3;
           amountToNext$$3 = amountToNext$$3 + 1;
-          introspect(JAMScript.introspectors.processC545F199BE443C5FB0DC91C55134FB746FD8B074) {
+          introspect(JAM.policy.pC545F199BE443C5FB0DC91C55134FB746FD8B074) {
             var v10256 = buffer$$23[v10533]
           }
           var v9512 = v10256 * weight$$6;
@@ -19848,7 +19848,7 @@ function v69(buffer$$23) {
       outputOffset$$3 = outputOffset$$3 + 1;
       var v10257 = pixelOffset$$6;
       pixelOffset$$6 = pixelOffset$$6 + 1;
-      introspect(JAMScript.introspectors.processC545F199BE443C5FB0DC91C55134FB746FD8B074) {
+      introspect(JAM.policy.pC545F199BE443C5FB0DC91C55134FB746FD8B074) {
         var v9514 = output$$3[v10257]
       }
       var v8060 = v9514 / ratioWeight$$6;
@@ -19859,7 +19859,7 @@ function v69(buffer$$23) {
       outputOffset$$3 = outputOffset$$3 + 1;
       var v10258 = pixelOffset$$6;
       pixelOffset$$6 = pixelOffset$$6 + 1;
-      introspect(JAMScript.introspectors.processC545F199BE443C5FB0DC91C55134FB746FD8B074) {
+      introspect(JAM.policy.pC545F199BE443C5FB0DC91C55134FB746FD8B074) {
         var v9515 = output$$3[v10258]
       }
       var v8061 = v9515 / ratioWeight$$6;
@@ -19870,7 +19870,7 @@ function v69(buffer$$23) {
       outputOffset$$3 = outputOffset$$3 + 1;
       var v10259 = pixelOffset$$6;
       pixelOffset$$6 = pixelOffset$$6 + 1;
-      introspect(JAMScript.introspectors.processC545F199BE443C5FB0DC91C55134FB746FD8B074) {
+      introspect(JAM.policy.pC545F199BE443C5FB0DC91C55134FB746FD8B074) {
         var v9516 = output$$3[v10259]
       }
       var v8062 = v9516 / ratioWeight$$6;
@@ -19881,7 +19881,7 @@ function v69(buffer$$23) {
       outputOffset$$3 = outputOffset$$3 + 1;
       var v10260 = pixelOffset$$6;
       pixelOffset$$6 = pixelOffset$$6 + 1;
-      introspect(JAMScript.introspectors.processC545F199BE443C5FB0DC91C55134FB746FD8B074) {
+      introspect(JAM.policy.pC545F199BE443C5FB0DC91C55134FB746FD8B074) {
         var v9517 = output$$3[v10260]
       }
       var v8063 = v9517 / ratioWeight$$6;
@@ -19923,12 +19923,12 @@ function v68(buffer$$22) {
       var v4799 = finalOffset$$2;
       finalOffset$$2 = finalOffset$$2 + 1;
       var v10261 = pixelOffsetAccumulated + pixelOffset$$5;
-      introspect(JAMScript.introspectors.processC545F199BE443C5FB0DC91C55134FB746FD8B074) {
+      introspect(JAM.policy.pC545F199BE443C5FB0DC91C55134FB746FD8B074) {
         var v9518 = buffer$$22[v10261]
       }
       var v8069 = v9518 * firstWeight;
       var v10262 = pixelOffsetAccumulated2 + pixelOffset$$5;
-      introspect(JAMScript.introspectors.processC545F199BE443C5FB0DC91C55134FB746FD8B074) {
+      introspect(JAM.policy.pC545F199BE443C5FB0DC91C55134FB746FD8B074) {
         var v9519 = buffer$$22[v10262]
       }
       var v8070 = v9519 * secondWeight;
@@ -19990,36 +19990,36 @@ function v67(buffer$$21) {
         for(;v4810;) {
           var v4807 = pixelOffset$$4;
           pixelOffset$$4 = pixelOffset$$4 + 1;
-          introspect(JAMScript.introspectors.processC545F199BE443C5FB0DC91C55134FB746FD8B074) {
+          introspect(JAM.policy.pC545F199BE443C5FB0DC91C55134FB746FD8B074) {
             var v9521 = output$$2[v4807]
           }
           var v10534 = actualPosition$$2;
           actualPosition$$2 = actualPosition$$2 + 1;
-          introspect(JAMScript.introspectors.processC545F199BE443C5FB0DC91C55134FB746FD8B074) {
+          introspect(JAM.policy.pC545F199BE443C5FB0DC91C55134FB746FD8B074) {
             var v10263 = buffer$$21[v10534]
           }
           var v9522 = v10263 * amountToNext$$2;
           output$$2[v4807] = v9521 + v9522;
           var v4808 = pixelOffset$$4;
           pixelOffset$$4 = pixelOffset$$4 + 1;
-          introspect(JAMScript.introspectors.processC545F199BE443C5FB0DC91C55134FB746FD8B074) {
+          introspect(JAM.policy.pC545F199BE443C5FB0DC91C55134FB746FD8B074) {
             var v9523 = output$$2[v4808]
           }
           var v10535 = actualPosition$$2;
           actualPosition$$2 = actualPosition$$2 + 1;
-          introspect(JAMScript.introspectors.processC545F199BE443C5FB0DC91C55134FB746FD8B074) {
+          introspect(JAM.policy.pC545F199BE443C5FB0DC91C55134FB746FD8B074) {
             var v10264 = buffer$$21[v10535]
           }
           var v9524 = v10264 * amountToNext$$2;
           output$$2[v4808] = v9523 + v9524;
           var v4809 = pixelOffset$$4;
           pixelOffset$$4 = pixelOffset$$4 + 1;
-          introspect(JAMScript.introspectors.processC545F199BE443C5FB0DC91C55134FB746FD8B074) {
+          introspect(JAM.policy.pC545F199BE443C5FB0DC91C55134FB746FD8B074) {
             var v9525 = output$$2[v4809]
           }
           var v10536 = actualPosition$$2;
           actualPosition$$2 = actualPosition$$2 + 1;
-          introspect(JAMScript.introspectors.processC545F199BE443C5FB0DC91C55134FB746FD8B074) {
+          introspect(JAM.policy.pC545F199BE443C5FB0DC91C55134FB746FD8B074) {
             var v10265 = buffer$$21[v10536]
           }
           var v9526 = v10265 * amountToNext$$2;
@@ -20037,36 +20037,36 @@ function v67(buffer$$21) {
         for(;v4814;) {
           var v4811 = pixelOffset$$4;
           pixelOffset$$4 = pixelOffset$$4 + 1;
-          introspect(JAMScript.introspectors.processC545F199BE443C5FB0DC91C55134FB746FD8B074) {
+          introspect(JAM.policy.pC545F199BE443C5FB0DC91C55134FB746FD8B074) {
             var v9527 = output$$2[v4811]
           }
           var v10537 = amountToNext$$2;
           amountToNext$$2 = amountToNext$$2 + 1;
-          introspect(JAMScript.introspectors.processC545F199BE443C5FB0DC91C55134FB746FD8B074) {
+          introspect(JAM.policy.pC545F199BE443C5FB0DC91C55134FB746FD8B074) {
             var v10266 = buffer$$21[v10537]
           }
           var v9528 = v10266 * weight$$4;
           output$$2[v4811] = v9527 + v9528;
           var v4812 = pixelOffset$$4;
           pixelOffset$$4 = pixelOffset$$4 + 1;
-          introspect(JAMScript.introspectors.processC545F199BE443C5FB0DC91C55134FB746FD8B074) {
+          introspect(JAM.policy.pC545F199BE443C5FB0DC91C55134FB746FD8B074) {
             var v9529 = output$$2[v4812]
           }
           var v10538 = amountToNext$$2;
           amountToNext$$2 = amountToNext$$2 + 1;
-          introspect(JAMScript.introspectors.processC545F199BE443C5FB0DC91C55134FB746FD8B074) {
+          introspect(JAM.policy.pC545F199BE443C5FB0DC91C55134FB746FD8B074) {
             var v10267 = buffer$$21[v10538]
           }
           var v9530 = v10267 * weight$$4;
           output$$2[v4812] = v9529 + v9530;
           var v4813 = pixelOffset$$4;
           pixelOffset$$4 = pixelOffset$$4 + 1;
-          introspect(JAMScript.introspectors.processC545F199BE443C5FB0DC91C55134FB746FD8B074) {
+          introspect(JAM.policy.pC545F199BE443C5FB0DC91C55134FB746FD8B074) {
             var v9531 = output$$2[v4813]
           }
           var v10539 = amountToNext$$2;
           amountToNext$$2 = amountToNext$$2 + 1;
-          introspect(JAMScript.introspectors.processC545F199BE443C5FB0DC91C55134FB746FD8B074) {
+          introspect(JAM.policy.pC545F199BE443C5FB0DC91C55134FB746FD8B074) {
             var v10268 = buffer$$21[v10539]
           }
           var v9532 = v10268 * weight$$4;
@@ -20093,7 +20093,7 @@ function v67(buffer$$21) {
       outputOffset$$2 = outputOffset$$2 + 1;
       var v10269 = pixelOffset$$4;
       pixelOffset$$4 = pixelOffset$$4 + 1;
-      introspect(JAMScript.introspectors.processC545F199BE443C5FB0DC91C55134FB746FD8B074) {
+      introspect(JAM.policy.pC545F199BE443C5FB0DC91C55134FB746FD8B074) {
         var v9534 = output$$2[v10269]
       }
       var v8083 = v9534 / ratioWeight$$4;
@@ -20104,7 +20104,7 @@ function v67(buffer$$21) {
       outputOffset$$2 = outputOffset$$2 + 1;
       var v10270 = pixelOffset$$4;
       pixelOffset$$4 = pixelOffset$$4 + 1;
-      introspect(JAMScript.introspectors.processC545F199BE443C5FB0DC91C55134FB746FD8B074) {
+      introspect(JAM.policy.pC545F199BE443C5FB0DC91C55134FB746FD8B074) {
         var v9535 = output$$2[v10270]
       }
       var v8084 = v9535 / ratioWeight$$4;
@@ -20115,7 +20115,7 @@ function v67(buffer$$21) {
       outputOffset$$2 = outputOffset$$2 + 1;
       var v10271 = pixelOffset$$4;
       pixelOffset$$4 = pixelOffset$$4 + 1;
-      introspect(JAMScript.introspectors.processC545F199BE443C5FB0DC91C55134FB746FD8B074) {
+      introspect(JAM.policy.pC545F199BE443C5FB0DC91C55134FB746FD8B074) {
         var v9536 = output$$2[v10271]
       }
       var v8085 = v9536 / ratioWeight$$4;
@@ -20150,48 +20150,48 @@ function v66(buffer$$20) {
     var v8091 = this.widthPassResultSize;
     var v4832 = finalOffset$$1 < v8091;
     for(;v4832;) {
-      introspect(JAMScript.introspectors.processC545F199BE443C5FB0DC91C55134FB746FD8B074) {
+      introspect(JAM.policy.pC545F199BE443C5FB0DC91C55134FB746FD8B074) {
         var v8092 = buffer$$20[pixelOffset$$3]
       }
       var v4827 = v8092 * firstWeight;
       var v9537 = pixelOffset$$3 + 4;
-      introspect(JAMScript.introspectors.processC545F199BE443C5FB0DC91C55134FB746FD8B074) {
+      introspect(JAM.policy.pC545F199BE443C5FB0DC91C55134FB746FD8B074) {
         var v8093 = buffer$$20[v9537]
       }
       var v4828 = v8093 * secondWeight;
       outputBuffer$$3[finalOffset$$1] = v4827 + v4828;
       var v4829 = finalOffset$$1 + 1;
       var v10272 = pixelOffset$$3 + 1;
-      introspect(JAMScript.introspectors.processC545F199BE443C5FB0DC91C55134FB746FD8B074) {
+      introspect(JAM.policy.pC545F199BE443C5FB0DC91C55134FB746FD8B074) {
         var v9538 = buffer$$20[v10272]
       }
       var v8094 = v9538 * firstWeight;
       var v10273 = pixelOffset$$3 + 5;
-      introspect(JAMScript.introspectors.processC545F199BE443C5FB0DC91C55134FB746FD8B074) {
+      introspect(JAM.policy.pC545F199BE443C5FB0DC91C55134FB746FD8B074) {
         var v9539 = buffer$$20[v10273]
       }
       var v8095 = v9539 * secondWeight;
       outputBuffer$$3[v4829] = v8094 + v8095;
       var v4830 = finalOffset$$1 + 2;
       var v10274 = pixelOffset$$3 + 2;
-      introspect(JAMScript.introspectors.processC545F199BE443C5FB0DC91C55134FB746FD8B074) {
+      introspect(JAM.policy.pC545F199BE443C5FB0DC91C55134FB746FD8B074) {
         var v9540 = buffer$$20[v10274]
       }
       var v8096 = v9540 * firstWeight;
       var v10275 = pixelOffset$$3 + 6;
-      introspect(JAMScript.introspectors.processC545F199BE443C5FB0DC91C55134FB746FD8B074) {
+      introspect(JAM.policy.pC545F199BE443C5FB0DC91C55134FB746FD8B074) {
         var v9541 = buffer$$20[v10275]
       }
       var v8097 = v9541 * secondWeight;
       outputBuffer$$3[v4830] = v8096 + v8097;
       var v4831 = finalOffset$$1 + 3;
       var v10276 = pixelOffset$$3 + 3;
-      introspect(JAMScript.introspectors.processC545F199BE443C5FB0DC91C55134FB746FD8B074) {
+      introspect(JAM.policy.pC545F199BE443C5FB0DC91C55134FB746FD8B074) {
         var v9542 = buffer$$20[v10276]
       }
       var v8098 = v9542 * firstWeight;
       var v10277 = pixelOffset$$3 + 7;
-      introspect(JAMScript.introspectors.processC545F199BE443C5FB0DC91C55134FB746FD8B074) {
+      introspect(JAM.policy.pC545F199BE443C5FB0DC91C55134FB746FD8B074) {
         var v9543 = buffer$$20[v10277]
       }
       var v8099 = v9543 * secondWeight;
@@ -20266,46 +20266,46 @@ function v65(buffer$$19) {
         for(;v4846;) {
           var v4842 = line$$1;
           line$$1 = line$$1 + 1;
-          introspect(JAMScript.introspectors.processC545F199BE443C5FB0DC91C55134FB746FD8B074) {
+          introspect(JAM.policy.pC545F199BE443C5FB0DC91C55134FB746FD8B074) {
             var v9545 = output$$1[v4842]
           }
           var v10540 = pixelOffset$$2;
           pixelOffset$$2 = pixelOffset$$2 + 1;
-          introspect(JAMScript.introspectors.processC545F199BE443C5FB0DC91C55134FB746FD8B074) {
+          introspect(JAM.policy.pC545F199BE443C5FB0DC91C55134FB746FD8B074) {
             var v10280 = buffer$$19[v10540]
           }
           var v9546 = v10280 * amountToNext$$1;
           output$$1[v4842] = v9545 + v9546;
           var v4843 = line$$1;
           line$$1 = line$$1 + 1;
-          introspect(JAMScript.introspectors.processC545F199BE443C5FB0DC91C55134FB746FD8B074) {
+          introspect(JAM.policy.pC545F199BE443C5FB0DC91C55134FB746FD8B074) {
             var v9547 = output$$1[v4843]
           }
           var v10541 = pixelOffset$$2;
           pixelOffset$$2 = pixelOffset$$2 + 1;
-          introspect(JAMScript.introspectors.processC545F199BE443C5FB0DC91C55134FB746FD8B074) {
+          introspect(JAM.policy.pC545F199BE443C5FB0DC91C55134FB746FD8B074) {
             var v10281 = buffer$$19[v10541]
           }
           var v9548 = v10281 * amountToNext$$1;
           output$$1[v4843] = v9547 + v9548;
           var v4844 = line$$1;
           line$$1 = line$$1 + 1;
-          introspect(JAMScript.introspectors.processC545F199BE443C5FB0DC91C55134FB746FD8B074) {
+          introspect(JAM.policy.pC545F199BE443C5FB0DC91C55134FB746FD8B074) {
             var v9549 = output$$1[v4844]
           }
           var v10542 = pixelOffset$$2;
           pixelOffset$$2 = pixelOffset$$2 + 1;
-          introspect(JAMScript.introspectors.processC545F199BE443C5FB0DC91C55134FB746FD8B074) {
+          introspect(JAM.policy.pC545F199BE443C5FB0DC91C55134FB746FD8B074) {
             var v10282 = buffer$$19[v10542]
           }
           var v9550 = v10282 * amountToNext$$1;
           output$$1[v4844] = v9549 + v9550;
           var v4845 = line$$1;
           line$$1 = line$$1 + 1;
-          introspect(JAMScript.introspectors.processC545F199BE443C5FB0DC91C55134FB746FD8B074) {
+          introspect(JAM.policy.pC545F199BE443C5FB0DC91C55134FB746FD8B074) {
             var v9551 = output$$1[v4845]
           }
-          introspect(JAMScript.introspectors.processC545F199BE443C5FB0DC91C55134FB746FD8B074) {
+          introspect(JAM.policy.pC545F199BE443C5FB0DC91C55134FB746FD8B074) {
             var v10283 = buffer$$19[pixelOffset$$2]
           }
           var v9552 = v10283 * amountToNext$$1;
@@ -20324,46 +20324,46 @@ function v65(buffer$$19) {
         for(;v4851;) {
           var v4847 = line$$1;
           line$$1 = line$$1 + 1;
-          introspect(JAMScript.introspectors.processC545F199BE443C5FB0DC91C55134FB746FD8B074) {
+          introspect(JAM.policy.pC545F199BE443C5FB0DC91C55134FB746FD8B074) {
             var v9553 = output$$1[v4847]
           }
           var v10543 = pixelOffset$$2;
           pixelOffset$$2 = pixelOffset$$2 + 1;
-          introspect(JAMScript.introspectors.processC545F199BE443C5FB0DC91C55134FB746FD8B074) {
+          introspect(JAM.policy.pC545F199BE443C5FB0DC91C55134FB746FD8B074) {
             var v10284 = buffer$$19[v10543]
           }
           var v9554 = v10284 * weight$$2;
           output$$1[v4847] = v9553 + v9554;
           var v4848 = line$$1;
           line$$1 = line$$1 + 1;
-          introspect(JAMScript.introspectors.processC545F199BE443C5FB0DC91C55134FB746FD8B074) {
+          introspect(JAM.policy.pC545F199BE443C5FB0DC91C55134FB746FD8B074) {
             var v9555 = output$$1[v4848]
           }
           var v10544 = pixelOffset$$2;
           pixelOffset$$2 = pixelOffset$$2 + 1;
-          introspect(JAMScript.introspectors.processC545F199BE443C5FB0DC91C55134FB746FD8B074) {
+          introspect(JAM.policy.pC545F199BE443C5FB0DC91C55134FB746FD8B074) {
             var v10285 = buffer$$19[v10544]
           }
           var v9556 = v10285 * weight$$2;
           output$$1[v4848] = v9555 + v9556;
           var v4849 = line$$1;
           line$$1 = line$$1 + 1;
-          introspect(JAMScript.introspectors.processC545F199BE443C5FB0DC91C55134FB746FD8B074) {
+          introspect(JAM.policy.pC545F199BE443C5FB0DC91C55134FB746FD8B074) {
             var v9557 = output$$1[v4849]
           }
           var v10545 = pixelOffset$$2;
           pixelOffset$$2 = pixelOffset$$2 + 1;
-          introspect(JAMScript.introspectors.processC545F199BE443C5FB0DC91C55134FB746FD8B074) {
+          introspect(JAM.policy.pC545F199BE443C5FB0DC91C55134FB746FD8B074) {
             var v10286 = buffer$$19[v10545]
           }
           var v9558 = v10286 * weight$$2;
           output$$1[v4849] = v9557 + v9558;
           var v4850 = line$$1;
           line$$1 = line$$1 + 1;
-          introspect(JAMScript.introspectors.processC545F199BE443C5FB0DC91C55134FB746FD8B074) {
+          introspect(JAM.policy.pC545F199BE443C5FB0DC91C55134FB746FD8B074) {
             var v9559 = output$$1[v4850]
           }
-          introspect(JAMScript.introspectors.processC545F199BE443C5FB0DC91C55134FB746FD8B074) {
+          introspect(JAM.policy.pC545F199BE443C5FB0DC91C55134FB746FD8B074) {
             var v10287 = buffer$$19[pixelOffset$$2]
           }
           var v9560 = v10287 * weight$$2;
@@ -20391,7 +20391,7 @@ function v65(buffer$$19) {
       pixelOffset$$2 = pixelOffset$$2 + 1;
       var v9562 = line$$1;
       line$$1 = line$$1 + 1;
-      introspect(JAMScript.introspectors.processC545F199BE443C5FB0DC91C55134FB746FD8B074) {
+      introspect(JAM.policy.pC545F199BE443C5FB0DC91C55134FB746FD8B074) {
         var v8112 = output$$1[v9562]
       }
       outputBuffer$$2[v4854] = v8112 / ratioWeight$$2;
@@ -20399,7 +20399,7 @@ function v65(buffer$$19) {
       pixelOffset$$2 = pixelOffset$$2 + 1;
       var v9563 = line$$1;
       line$$1 = line$$1 + 1;
-      introspect(JAMScript.introspectors.processC545F199BE443C5FB0DC91C55134FB746FD8B074) {
+      introspect(JAM.policy.pC545F199BE443C5FB0DC91C55134FB746FD8B074) {
         var v8113 = output$$1[v9563]
       }
       outputBuffer$$2[v4855] = v8113 / ratioWeight$$2;
@@ -20407,13 +20407,13 @@ function v65(buffer$$19) {
       pixelOffset$$2 = pixelOffset$$2 + 1;
       var v9564 = line$$1;
       line$$1 = line$$1 + 1;
-      introspect(JAMScript.introspectors.processC545F199BE443C5FB0DC91C55134FB746FD8B074) {
+      introspect(JAM.policy.pC545F199BE443C5FB0DC91C55134FB746FD8B074) {
         var v8114 = output$$1[v9564]
       }
       outputBuffer$$2[v4856] = v8114 / ratioWeight$$2;
       var v8115 = line$$1;
       line$$1 = line$$1 + 1;
-      introspect(JAMScript.introspectors.processC545F199BE443C5FB0DC91C55134FB746FD8B074) {
+      introspect(JAM.policy.pC545F199BE443C5FB0DC91C55134FB746FD8B074) {
         var v4857 = output$$1[v8115]
       }
       outputBuffer$$2[pixelOffset$$2] = v4857 / ratioWeight$$2;
@@ -20448,36 +20448,36 @@ function v64(buffer$$18) {
     var v8121 = this.widthPassResultSize;
     var v4866 = finalOffset < v8121;
     for(;v4866;) {
-      introspect(JAMScript.introspectors.processC545F199BE443C5FB0DC91C55134FB746FD8B074) {
+      introspect(JAM.policy.pC545F199BE443C5FB0DC91C55134FB746FD8B074) {
         var v8122 = buffer$$18[pixelOffset$$1]
       }
       var v4862 = v8122 * firstWeight;
       var v9565 = pixelOffset$$1 + 3;
-      introspect(JAMScript.introspectors.processC545F199BE443C5FB0DC91C55134FB746FD8B074) {
+      introspect(JAM.policy.pC545F199BE443C5FB0DC91C55134FB746FD8B074) {
         var v8123 = buffer$$18[v9565]
       }
       var v4863 = v8123 * secondWeight;
       outputBuffer$$1[finalOffset] = v4862 + v4863;
       var v4864 = finalOffset + 1;
       var v10288 = pixelOffset$$1 + 1;
-      introspect(JAMScript.introspectors.processC545F199BE443C5FB0DC91C55134FB746FD8B074) {
+      introspect(JAM.policy.pC545F199BE443C5FB0DC91C55134FB746FD8B074) {
         var v9566 = buffer$$18[v10288]
       }
       var v8124 = v9566 * firstWeight;
       var v10289 = pixelOffset$$1 + 4;
-      introspect(JAMScript.introspectors.processC545F199BE443C5FB0DC91C55134FB746FD8B074) {
+      introspect(JAM.policy.pC545F199BE443C5FB0DC91C55134FB746FD8B074) {
         var v9567 = buffer$$18[v10289]
       }
       var v8125 = v9567 * secondWeight;
       outputBuffer$$1[v4864] = v8124 + v8125;
       var v4865 = finalOffset + 2;
       var v10290 = pixelOffset$$1 + 2;
-      introspect(JAMScript.introspectors.processC545F199BE443C5FB0DC91C55134FB746FD8B074) {
+      introspect(JAM.policy.pC545F199BE443C5FB0DC91C55134FB746FD8B074) {
         var v9568 = buffer$$18[v10290]
       }
       var v8126 = v9568 * firstWeight;
       var v10291 = pixelOffset$$1 + 5;
-      introspect(JAMScript.introspectors.processC545F199BE443C5FB0DC91C55134FB746FD8B074) {
+      introspect(JAM.policy.pC545F199BE443C5FB0DC91C55134FB746FD8B074) {
         var v9569 = buffer$$18[v10291]
       }
       var v8127 = v9569 * secondWeight;
@@ -20549,34 +20549,34 @@ function v63(buffer$$17) {
         for(;v4878;) {
           var v4875 = line;
           line = line + 1;
-          introspect(JAMScript.introspectors.processC545F199BE443C5FB0DC91C55134FB746FD8B074) {
+          introspect(JAM.policy.pC545F199BE443C5FB0DC91C55134FB746FD8B074) {
             var v9571 = output[v4875]
           }
           var v10546 = pixelOffset;
           pixelOffset = pixelOffset + 1;
-          introspect(JAMScript.introspectors.processC545F199BE443C5FB0DC91C55134FB746FD8B074) {
+          introspect(JAM.policy.pC545F199BE443C5FB0DC91C55134FB746FD8B074) {
             var v10294 = buffer$$17[v10546]
           }
           var v9572 = v10294 * amountToNext;
           output[v4875] = v9571 + v9572;
           var v4876 = line;
           line = line + 1;
-          introspect(JAMScript.introspectors.processC545F199BE443C5FB0DC91C55134FB746FD8B074) {
+          introspect(JAM.policy.pC545F199BE443C5FB0DC91C55134FB746FD8B074) {
             var v9573 = output[v4876]
           }
           var v10547 = pixelOffset;
           pixelOffset = pixelOffset + 1;
-          introspect(JAMScript.introspectors.processC545F199BE443C5FB0DC91C55134FB746FD8B074) {
+          introspect(JAM.policy.pC545F199BE443C5FB0DC91C55134FB746FD8B074) {
             var v10295 = buffer$$17[v10547]
           }
           var v9574 = v10295 * amountToNext;
           output[v4876] = v9573 + v9574;
           var v4877 = line;
           line = line + 1;
-          introspect(JAMScript.introspectors.processC545F199BE443C5FB0DC91C55134FB746FD8B074) {
+          introspect(JAM.policy.pC545F199BE443C5FB0DC91C55134FB746FD8B074) {
             var v9575 = output[v4877]
           }
-          introspect(JAMScript.introspectors.processC545F199BE443C5FB0DC91C55134FB746FD8B074) {
+          introspect(JAM.policy.pC545F199BE443C5FB0DC91C55134FB746FD8B074) {
             var v10296 = buffer$$17[pixelOffset]
           }
           var v9576 = v10296 * amountToNext;
@@ -20595,34 +20595,34 @@ function v63(buffer$$17) {
         for(;v4882;) {
           var v4879 = line;
           line = line + 1;
-          introspect(JAMScript.introspectors.processC545F199BE443C5FB0DC91C55134FB746FD8B074) {
+          introspect(JAM.policy.pC545F199BE443C5FB0DC91C55134FB746FD8B074) {
             var v9577 = output[v4879]
           }
           var v10548 = pixelOffset;
           pixelOffset = pixelOffset + 1;
-          introspect(JAMScript.introspectors.processC545F199BE443C5FB0DC91C55134FB746FD8B074) {
+          introspect(JAM.policy.pC545F199BE443C5FB0DC91C55134FB746FD8B074) {
             var v10297 = buffer$$17[v10548]
           }
           var v9578 = v10297 * weight;
           output[v4879] = v9577 + v9578;
           var v4880 = line;
           line = line + 1;
-          introspect(JAMScript.introspectors.processC545F199BE443C5FB0DC91C55134FB746FD8B074) {
+          introspect(JAM.policy.pC545F199BE443C5FB0DC91C55134FB746FD8B074) {
             var v9579 = output[v4880]
           }
           var v10549 = pixelOffset;
           pixelOffset = pixelOffset + 1;
-          introspect(JAMScript.introspectors.processC545F199BE443C5FB0DC91C55134FB746FD8B074) {
+          introspect(JAM.policy.pC545F199BE443C5FB0DC91C55134FB746FD8B074) {
             var v10298 = buffer$$17[v10549]
           }
           var v9580 = v10298 * weight;
           output[v4880] = v9579 + v9580;
           var v4881 = line;
           line = line + 1;
-          introspect(JAMScript.introspectors.processC545F199BE443C5FB0DC91C55134FB746FD8B074) {
+          introspect(JAM.policy.pC545F199BE443C5FB0DC91C55134FB746FD8B074) {
             var v9581 = output[v4881]
           }
-          introspect(JAMScript.introspectors.processC545F199BE443C5FB0DC91C55134FB746FD8B074) {
+          introspect(JAM.policy.pC545F199BE443C5FB0DC91C55134FB746FD8B074) {
             var v10299 = buffer$$17[pixelOffset]
           }
           var v9582 = v10299 * weight;
@@ -20650,7 +20650,7 @@ function v63(buffer$$17) {
       pixelOffset = pixelOffset + 1;
       var v9584 = line;
       line = line + 1;
-      introspect(JAMScript.introspectors.processC545F199BE443C5FB0DC91C55134FB746FD8B074) {
+      introspect(JAM.policy.pC545F199BE443C5FB0DC91C55134FB746FD8B074) {
         var v8140 = output[v9584]
       }
       outputBuffer[v4885] = v8140 / ratioWeight;
@@ -20658,13 +20658,13 @@ function v63(buffer$$17) {
       pixelOffset = pixelOffset + 1;
       var v9585 = line;
       line = line + 1;
-      introspect(JAMScript.introspectors.processC545F199BE443C5FB0DC91C55134FB746FD8B074) {
+      introspect(JAM.policy.pC545F199BE443C5FB0DC91C55134FB746FD8B074) {
         var v8141 = output[v9585]
       }
       outputBuffer[v4886] = v8141 / ratioWeight;
       var v8142 = line;
       line = line + 1;
-      introspect(JAMScript.introspectors.processC545F199BE443C5FB0DC91C55134FB746FD8B074) {
+      introspect(JAM.policy.pC545F199BE443C5FB0DC91C55134FB746FD8B074) {
         var v4887 = output[v8142]
       }
       outputBuffer[pixelOffset] = v4887 / ratioWeight;
@@ -20851,7 +20851,7 @@ function v59(buffer$$16) {
     var v4915 = this.mozAudioTail;
     var v8160 = index$$46;
     index$$46 = index$$46 + 1;
-    introspect(JAMScript.introspectors.processC545F199BE443C5FB0DC91C55134FB746FD8B074) {
+    introspect(JAM.policy.pC545F199BE443C5FB0DC91C55134FB746FD8B074) {
       var v4916 = buffer$$16[v8160]
     }
     v4915.push(v4916);
@@ -21416,7 +21416,7 @@ function v34(runner$$2) {
     if(v4993) {
       try {
         var v8223 = suite$$1.benchmarks;
-        introspect(JAMScript.introspectors.processC545F199BE443C5FB0DC91C55134FB746FD8B074) {
+        introspect(JAM.policy.pC545F199BE443C5FB0DC91C55134FB746FD8B074) {
           var v4992 = v8223[index$$40]
         }
         v4992.Setup()
@@ -21432,7 +21432,7 @@ function v34(runner$$2) {
   function RunNextBenchmark() {
     try {
       var v8224 = suite$$1.benchmarks;
-      introspect(JAMScript.introspectors.processC545F199BE443C5FB0DC91C55134FB746FD8B074) {
+      introspect(JAM.policy.pC545F199BE443C5FB0DC91C55134FB746FD8B074) {
         var v4994 = v8224[index$$40]
       }
       data$$20 = suite$$1.RunSingleBenchmark(v4994, data$$20)
@@ -21454,7 +21454,7 @@ function v34(runner$$2) {
       var v8226 = suite$$1.benchmarks;
       var v8227 = index$$40;
       index$$40 = index$$40 + 1;
-      introspect(JAMScript.introspectors.processC545F199BE443C5FB0DC91C55134FB746FD8B074) {
+      introspect(JAM.policy.pC545F199BE443C5FB0DC91C55134FB746FD8B074) {
         var v4996 = v8226[v8227]
       }
       v4996.TearDown()
@@ -21668,14 +21668,14 @@ function v27(measurements$$1) {
   var v8249 = measurements$$1.length;
   var v5041 = i$$4 < v8249;
   for(;v5041;) {
-    introspect(JAMScript.introspectors.processC545F199BE443C5FB0DC91C55134FB746FD8B074) {
+    introspect(JAM.policy.pC545F199BE443C5FB0DC91C55134FB746FD8B074) {
       var v9629 = measurements$$1[i$$4]
     }
     var v8250 = v9629.latency;
     var v5040 = v8250 != 0;
     if(v5040) {
       var v8251 = log$$2;
-      introspect(JAMScript.introspectors.processC545F199BE443C5FB0DC91C55134FB746FD8B074) {
+      introspect(JAM.policy.pC545F199BE443C5FB0DC91C55134FB746FD8B074) {
         var v10315 = measurements$$1[i$$4]
       }
       var v9630 = v10315.latency;
@@ -21704,7 +21704,7 @@ function v26(measurements) {
   var v5044 = i$$3 < v8255;
   for(;v5044;) {
     var v8256 = log$$1;
-    introspect(JAMScript.introspectors.processC545F199BE443C5FB0DC91C55134FB746FD8B074) {
+    introspect(JAM.policy.pC545F199BE443C5FB0DC91C55134FB746FD8B074) {
       var v10316 = measurements[i$$3]
     }
     var v9631 = v10316.time;
@@ -21726,7 +21726,7 @@ function v25(numbers) {
   var v5047 = i$$2 < v8260;
   for(;v5047;) {
     var v8261 = log;
-    introspect(JAMScript.introspectors.processC545F199BE443C5FB0DC91C55134FB746FD8B074) {
+    introspect(JAM.policy.pC545F199BE443C5FB0DC91C55134FB746FD8B074) {
       var v9632 = numbers[i$$2]
     }
     var v8262 = Math.log(v9632);
@@ -21747,7 +21747,7 @@ function v24() {
   var v8265 = suites$$1.length;
   var v5050 = i$$1 < v8265;
   for(;v5050;) {
-    introspect(JAMScript.introspectors.processC545F199BE443C5FB0DC91C55134FB746FD8B074) {
+    introspect(JAM.policy.pC545F199BE443C5FB0DC91C55134FB746FD8B074) {
       var v10317 = suites$$1[i$$1]
     }
     var v9633 = v10317.benchmarks;
@@ -21773,7 +21773,7 @@ function v23(runner, skipBenchmarks$$1) {
       }else {
         var v5051 = index$$39;
         index$$39 = index$$39 + 1;
-        introspect(JAMScript.introspectors.processC545F199BE443C5FB0DC91C55134FB746FD8B074) {
+        introspect(JAM.policy.pC545F199BE443C5FB0DC91C55134FB746FD8B074) {
           var suite = suites[v5051]
         }
         var v5053 = runner.NotifyStart;
@@ -22027,7 +22027,7 @@ function GameBoyContext() {
     var v5078 = i$$6 < v8292;
     for(;v5078;) {
       var v10323 = buffer$$8.data;
-      introspect(JAMScript.introspectors.processC545F199BE443C5FB0DC91C55134FB746FD8B074) {
+      introspect(JAM.policy.pC545F199BE443C5FB0DC91C55134FB746FD8B074) {
         var v9643 = v10323[i$$6]
       }
       var v8293 = i$$6 * v9643;
@@ -22078,7 +22078,7 @@ function GameBoyAudioContext() {
   function v12(bufferSize, inputChannels, outputChannels) {
     function v11(i$$8) {
       var v5080 = this.channelData;
-      introspect(JAMScript.introspectors.processC545F199BE443C5FB0DC91C55134FB746FD8B074) {
+      introspect(JAM.policy.pC545F199BE443C5FB0DC91C55134FB746FD8B074) {
         return v5080[i$$8]
       }
     }
@@ -22130,7 +22130,7 @@ function checkFinalState() {
     var v8297 = a.length;
     var v5084 = i$$9 < v8297;
     for(;v5084;) {
-      introspect(JAMScript.introspectors.processC545F199BE443C5FB0DC91C55134FB746FD8B074) {
+      introspect(JAM.policy.pC545F199BE443C5FB0DC91C55134FB746FD8B074) {
         var v8298 = a[i$$9]
       }
       result$$3 = result$$3 + v8298;
@@ -22239,7 +22239,7 @@ function base64(data$$21) {
         bytes = [v5102, v5103, v5104];
         var v10743 = bytes[0];
         var v10703 = v10743 >> 2;
-        introspect(JAMScript.introspectors.processC545F199BE443C5FB0DC91C55134FB746FD8B074) {
+        introspect(JAM.policy.pC545F199BE443C5FB0DC91C55134FB746FD8B074) {
           var v10561 = toBase64[v10703]
         }
         var v10765 = bytes[0];
@@ -22248,7 +22248,7 @@ function base64(data$$21) {
         var v10759 = bytes[1];
         var v10745 = v10759 >> 4;
         var v10704 = v10744 | v10745;
-        introspect(JAMScript.introspectors.processC545F199BE443C5FB0DC91C55134FB746FD8B074) {
+        introspect(JAM.policy.pC545F199BE443C5FB0DC91C55134FB746FD8B074) {
           var v10562 = toBase64[v10704]
         }
         var v10325 = v10561 + v10562;
@@ -22258,13 +22258,13 @@ function base64(data$$21) {
         var v10747 = bytes[2];
         var v10706 = v10747 >> 6;
         var v10563 = v10705 | v10706;
-        introspect(JAMScript.introspectors.processC545F199BE443C5FB0DC91C55134FB746FD8B074) {
+        introspect(JAM.policy.pC545F199BE443C5FB0DC91C55134FB746FD8B074) {
           var v10326 = toBase64[v10563]
         }
         var v9656 = v10325 + v10326;
         var v10564 = bytes[2];
         var v10327 = v10564 & 63;
-        introspect(JAMScript.introspectors.processC545F199BE443C5FB0DC91C55134FB746FD8B074) {
+        introspect(JAM.policy.pC545F199BE443C5FB0DC91C55134FB746FD8B074) {
           var v9657 = toBase64[v10327]
         }
         var v8311 = v9656 + v9657;
@@ -22401,14 +22401,14 @@ function arrayToBase64(arrayIn) {
   var index$$43 = 0;
   var v5127 = index$$43 < length$$13;
   for(;v5127;) {
-    introspect(JAMScript.introspectors.processC545F199BE443C5FB0DC91C55134FB746FD8B074) {
+    introspect(JAM.policy.pC545F199BE443C5FB0DC91C55134FB746FD8B074) {
       var v9670 = arrayIn[index$$43]
     }
     var v8332 = typeof v9670;
     var v5126 = v8332 == "number";
     if(v5126) {
       var v8333 = binString;
-      introspect(JAMScript.introspectors.processC545F199BE443C5FB0DC91C55134FB746FD8B074) {
+      introspect(JAM.policy.pC545F199BE443C5FB0DC91C55134FB746FD8B074) {
         var v9671 = arrayIn[index$$43]
       }
       var v8334 = String.fromCharCode(v9671);
@@ -22580,7 +22580,7 @@ function generateFlashStereoString() {
     var v8347 = copyBinaryStringLeft;
     var v10769 = resampleBufferStart;
     resampleBufferStart = resampleBufferStart + 1;
-    introspect(JAMScript.introspectors.processC545F199BE443C5FB0DC91C55134FB746FD8B074) {
+    introspect(JAM.policy.pC545F199BE443C5FB0DC91C55134FB746FD8B074) {
       var v10766 = resampled[v10769]
     }
     var v10762 = v10766 + 1;
@@ -22594,7 +22594,7 @@ function generateFlashStereoString() {
     var v8349 = copyBinaryStringRight;
     var v10770 = resampleBufferStart;
     resampleBufferStart = resampleBufferStart + 1;
-    introspect(JAMScript.introspectors.processC545F199BE443C5FB0DC91C55134FB746FD8B074) {
+    introspect(JAM.policy.pC545F199BE443C5FB0DC91C55134FB746FD8B074) {
       var v10767 = resampled[v10770]
     }
     var v10763 = v10767 + 1;
@@ -22630,7 +22630,7 @@ function generateFlashMonoString() {
     var v8353 = copyBinaryString;
     var v10771 = resampleBufferStart;
     resampleBufferStart = resampleBufferStart + 1;
-    introspect(JAMScript.introspectors.processC545F199BE443C5FB0DC91C55134FB746FD8B074) {
+    introspect(JAM.policy.pC545F199BE443C5FB0DC91C55134FB746FD8B074) {
       var v10768 = resampled[v10771]
     }
     var v10764 = v10768 + 1;
@@ -22671,7 +22671,7 @@ function audioOutputEvent(event$$3) {
     for(;v5148;) {
       var v8357 = resampleBufferStart;
       resampleBufferStart = resampleBufferStart + 1;
-      introspect(JAMScript.introspectors.processC545F199BE443C5FB0DC91C55134FB746FD8B074) {
+      introspect(JAM.policy.pC545F199BE443C5FB0DC91C55134FB746FD8B074) {
         var v5145 = resampled[v8357]
       }
       buffer1[index$$49] = v5145 * XAudioJSVolume;
@@ -22679,7 +22679,7 @@ function audioOutputEvent(event$$3) {
       index$$49 = index$$49 + 1;
       var v9684 = resampleBufferStart;
       resampleBufferStart = resampleBufferStart + 1;
-      introspect(JAMScript.introspectors.processC545F199BE443C5FB0DC91C55134FB746FD8B074) {
+      introspect(JAM.policy.pC545F199BE443C5FB0DC91C55134FB746FD8B074) {
         var v8358 = resampled[v9684]
       }
       buffer2[v5146] = v8358 * XAudioJSVolume;
@@ -22702,7 +22702,7 @@ function audioOutputEvent(event$$3) {
     for(;v5151;) {
       var v8361 = resampleBufferStart;
       resampleBufferStart = resampleBufferStart + 1;
-      introspect(JAMScript.introspectors.processC545F199BE443C5FB0DC91C55134FB746FD8B074) {
+      introspect(JAM.policy.pC545F199BE443C5FB0DC91C55134FB746FD8B074) {
         var v5149 = resampled[v8361]
       }
       buffer2[index$$49] = buffer1[index$$49] = v5149 * XAudioJSVolume;
@@ -23383,7 +23383,7 @@ function import_save(blobData) {
       var v5232 = index$$68 < v8398;
       for(;v5232;) {
         var v10575 = blobData.blobs;
-        introspect(JAMScript.introspectors.processC545F199BE443C5FB0DC91C55134FB746FD8B074) {
+        introspect(JAM.policy.pC545F199BE443C5FB0DC91C55134FB746FD8B074) {
           var v10347 = v10575[index$$68]
         }
         var v9707 = v10347.blobID;
@@ -23391,13 +23391,13 @@ function import_save(blobData) {
         var v5223 = v8399 + '"';
         cout(v5223, 0);
         var v9708 = blobData.blobs;
-        introspect(JAMScript.introspectors.processC545F199BE443C5FB0DC91C55134FB746FD8B074) {
+        introspect(JAM.policy.pC545F199BE443C5FB0DC91C55134FB746FD8B074) {
           var v8400 = v9708[index$$68]
         }
         var v5231 = v8400.blobContent;
         if(v5231) {
           var v10576 = blobData.blobs;
-          introspect(JAMScript.introspectors.processC545F199BE443C5FB0DC91C55134FB746FD8B074) {
+          introspect(JAM.policy.pC545F199BE443C5FB0DC91C55134FB746FD8B074) {
             var v10348 = v10576[index$$68]
           }
           var v9709 = v10348.blobID;
@@ -23405,13 +23405,13 @@ function import_save(blobData) {
           var v5228 = v8401 == "SRAM_";
           if(v5228) {
             var v10349 = blobData.blobs;
-            introspect(JAMScript.introspectors.processC545F199BE443C5FB0DC91C55134FB746FD8B074) {
+            introspect(JAM.policy.pC545F199BE443C5FB0DC91C55134FB746FD8B074) {
               var v9710 = v10349[index$$68]
             }
             var v8402 = v9710.blobID;
             var v5224 = "B64_" + v8402;
             var v10350 = blobData.blobs;
-            introspect(JAMScript.introspectors.processC545F199BE443C5FB0DC91C55134FB746FD8B074) {
+            introspect(JAM.policy.pC545F199BE443C5FB0DC91C55134FB746FD8B074) {
               var v9711 = v10350[index$$68]
             }
             var v8403 = v9711.blobContent;
@@ -23419,12 +23419,12 @@ function import_save(blobData) {
             setValue(v5224, v5225)
           }else {
             var v9712 = blobData.blobs;
-            introspect(JAMScript.introspectors.processC545F199BE443C5FB0DC91C55134FB746FD8B074) {
+            introspect(JAM.policy.pC545F199BE443C5FB0DC91C55134FB746FD8B074) {
               var v8404 = v9712[index$$68]
             }
             var v5226 = v8404.blobID;
             var v10351 = blobData.blobs;
-            introspect(JAMScript.introspectors.processC545F199BE443C5FB0DC91C55134FB746FD8B074) {
+            introspect(JAM.policy.pC545F199BE443C5FB0DC91C55134FB746FD8B074) {
               var v9713 = v10351[index$$68]
             }
             var v8405 = v9713.blobContent;
@@ -23433,13 +23433,13 @@ function import_save(blobData) {
           }
         }else {
           var v9714 = blobData.blobs;
-          introspect(JAMScript.introspectors.processC545F199BE443C5FB0DC91C55134FB746FD8B074) {
+          introspect(JAM.policy.pC545F199BE443C5FB0DC91C55134FB746FD8B074) {
             var v8406 = v9714[index$$68]
           }
           var v5230 = v8406.blobID;
           if(v5230) {
             var v10577 = blobData.blobs;
-            introspect(JAMScript.introspectors.processC545F199BE443C5FB0DC91C55134FB746FD8B074) {
+            introspect(JAM.policy.pC545F199BE443C5FB0DC91C55134FB746FD8B074) {
               var v10352 = v10577[index$$68]
             }
             var v9715 = v10352.blobID;
@@ -23512,11 +23512,11 @@ function generateMultiBlob(blobPairs) {
   var v8422 = blobPairs.length;
   var v5242 = index$$69 < v8422;
   for(;v5242;) {
-    introspect(JAMScript.introspectors.processC545F199BE443C5FB0DC91C55134FB746FD8B074) {
+    introspect(JAM.policy.pC545F199BE443C5FB0DC91C55134FB746FD8B074) {
       var v5240 = blobPairs[index$$69]
     }
     keyName$$1 = v5240[0];
-    introspect(JAMScript.introspectors.processC545F199BE443C5FB0DC91C55134FB746FD8B074) {
+    introspect(JAM.policy.pC545F199BE443C5FB0DC91C55134FB746FD8B074) {
       var v5241 = blobPairs[index$$69]
     }
     encodedData$$2 = v5241[1];
@@ -23596,7 +23596,7 @@ function decodeBlob(blobData$$1) {
             var v5249 = blobsCount = blobsCount + 1;
             v5248[v5249] = {};
             var v8437 = blobProperties.blobs;
-            introspect(JAMScript.introspectors.processC545F199BE443C5FB0DC91C55134FB746FD8B074) {
+            introspect(JAM.policy.pC545F199BE443C5FB0DC91C55134FB746FD8B074) {
               var v5250 = v8437[blobsCount]
             }
             var v8438 = index$$70 + blobIDLength;
@@ -23628,7 +23628,7 @@ function decodeBlob(blobData$$1) {
               var v5254 = v8443 <= length$$21;
               if(v5254) {
                 var v8444 = blobProperties.blobs;
-                introspect(JAMScript.introspectors.processC545F199BE443C5FB0DC91C55134FB746FD8B074) {
+                introspect(JAM.policy.pC545F199BE443C5FB0DC91C55134FB746FD8B074) {
                   var v5253 = v8444[blobsCount]
                 }
                 var v8445 = index$$70 + blobLength;
@@ -23661,7 +23661,7 @@ function matchKey(key$$15) {
   var v5262 = index$$71 < v8446;
   for(;v5262;) {
     var v9735 = settings[3];
-    introspect(JAMScript.introspectors.processC545F199BE443C5FB0DC91C55134FB746FD8B074) {
+    introspect(JAM.policy.pC545F199BE443C5FB0DC91C55134FB746FD8B074) {
       var v8447 = v9735[index$$71]
     }
     var v5261 = v8447 == key$$15;

@@ -1,5 +1,4 @@
-introspect(JAMScript.introspectors.processAll) {
-
+introspect(JAM.policy.pFull) {
 // AJS.js
 
 /*
@@ -2689,6 +2688,5 @@ var x = document.cookie;
 //var googie1 = new GoogieSpell("googiespell/", "https://www.google.com/tbproxy/spell?lang=");
 var googie1 = new GoogieSpell("./", "./spell-check/spell-check.php?lang=");
 googie1.decorateTextarea("ta1");
-
 
 }

@@ -1,6 +1,5 @@
 var policy = function() {
-  var states = [0];
-  function processAll(tx) {
+  function pFull(tx) {
     var commit = true;
     var as = tx.getActionSequence();
     var len = as.length;
@@ -12,14 +11,14 @@ var policy = function() {
       }
     }
     if(commit) {
-      JAMScript.process(tx)
+      JAM.process(tx)
     }else {
-      JAMScript.prevent(tx)
+      JAM.prevent(tx)
     }
   }
-  processAll.subsumedBy = processAll;
-  Object.freeze(processAll);
-  function process6CB626AF3B00A2806871E6DD34E13FD7B9D46DB2(tx) {
+  pFull.subsumedBy = pFull;
+  Object.freeze(pFull);
+  function p6CB626AF3B00A2806871E6DD34E13FD7B9D46DB2(tx) {
     var commit = true;
     var as = tx.getActionSequence();
     var len = as.length;
@@ -31,12 +30,12 @@ var policy = function() {
       }
     }
     if(commit) {
-      JAMScript.process(tx)
+      JAM.process(tx)
     }else {
-      JAMScript.prevent(tx)
+      JAM.prevent(tx)
     }
   }
-  process6CB626AF3B00A2806871E6DD34E13FD7B9D46DB2.subsumedBy = processAll;
-  Object.freeze(process6CB626AF3B00A2806871E6DD34E13FD7B9D46DB2);
-  return{introspectors:{process6CB626AF3B00A2806871E6DD34E13FD7B9D46DB2:process6CB626AF3B00A2806871E6DD34E13FD7B9D46DB2, processAll:processAll}}
+  p6CB626AF3B00A2806871E6DD34E13FD7B9D46DB2.subsumedBy = pFull;
+  Object.freeze(p6CB626AF3B00A2806871E6DD34E13FD7B9D46DB2);
+  return{p6CB626AF3B00A2806871E6DD34E13FD7B9D46DB2:p6CB626AF3B00A2806871E6DD34E13FD7B9D46DB2, pFull:pFull}
 }()

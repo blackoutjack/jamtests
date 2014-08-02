@@ -1,7 +1,7 @@
 function runTest() {
 
   JAM.startProfile('load');
-introspect(JAMScript.introspectors.processAll) {
+  introspect(JAM.policy.pFull) {
   i = 3;
   var v0 = i < 5;
   for(;v0;) {
@@ -10,6 +10,7 @@ introspect(JAMScript.introspectors.processAll) {
     v0 = i < 5
   }
   ;
+
   }
 
   JAM.stopProfile('load');

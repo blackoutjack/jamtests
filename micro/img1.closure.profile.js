@@ -1,7 +1,7 @@
 function runTest() {
 
   JAM.startProfile('load');
-var html = "<img src='notapic.jpg' onerror='String.prototype.indexOf = false' />";
+  var html = "<img src='notapic.jpg' onerror='String.prototype.indexOf = false' />";
   var elts = document.getElementsByTagName("div");
   var elt = elts.item(0);
   elt.innerHTML = html;

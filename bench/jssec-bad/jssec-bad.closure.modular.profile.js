@@ -1,6 +1,6 @@
 
 JAM.startProfile('load');
-introspect(JAMScript.introspectors.processAll) {
+introspect(JAM.policy.pFull) {
 function snipDisplay(c, p) {
   document.getElementById(c).checked == true ? document.getElementById(p).style.display = "block" : document.getElementById(p).style.displayx = "none"
 }
@@ -34,4 +34,3 @@ document.getElementById("c1").onclick();
 }
 
 JAM.stopProfile('load');
-

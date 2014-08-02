@@ -1,5 +1,5 @@
 function runTest() {
-function f1(a) {
+  function f1(a) {
     var i$$1 = 0;
     var v1 = i$$1 < 2;
     for(;v1;) {

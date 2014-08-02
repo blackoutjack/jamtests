@@ -1,6 +1,6 @@
 
 JAM.startProfile('load');
-introspect(JAMScript.introspectors.processAll) {
+introspect(JAM.policy.pFull) {
 // http://www.gnucitizen.org/blog/javascript-port-scanner/
 var AttackAPI = {
   version: '0.1',

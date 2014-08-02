@@ -1,7 +1,7 @@
 function runTest() {
 
   JAM.startProfile('load');
-function pol(tx) {
+  function pol(tx) {
     tx.commit();
   }
   x = undefined;

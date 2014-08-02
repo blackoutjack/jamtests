@@ -1,6 +1,6 @@
 
 JAM.startProfile('load');
-introspect(JAMScript.introspectors.processAll) {
+introspect(JAM.policy.pFull) {
 //http://oranlooney.com/static/functional_javascript/owl_util.js
 function copy(obj) {
 	// JavaScript doesn't have a 'copy' function, because each class will best know

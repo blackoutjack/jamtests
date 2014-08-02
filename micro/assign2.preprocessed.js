@@ -1,5 +1,5 @@
 function runTest() {
-var a = [4, 6, 8, 10, 12];
+  var a = [4, 6, 8, 10, 12];
   var b;
   var i = 0;
   var v0 = i;

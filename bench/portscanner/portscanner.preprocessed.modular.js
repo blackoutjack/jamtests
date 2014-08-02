@@ -1,4 +1,4 @@
-introspect(JAMScript.introspectors.processAll) {
+introspect(JAM.policy.pFull) {
 function v3(callback$$26, target$$38, ports$$1, timeout$$1) {
   index = 0;
   var v16 = ports$$1.length;

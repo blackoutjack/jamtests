@@ -1,5 +1,5 @@
 function runTest() {
-var f=JAMScript.new(Function,["x = 2"]);JAMScript.call(f,null,[]);
+  var f=JAM.new(Function,["x = 2"]);f();
 
   return typeof x === "undefined";
 }

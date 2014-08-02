@@ -1,5 +1,5 @@
 function runTest() {
-function f() {
+  function f() {
     e("x = 2");
     return
   }

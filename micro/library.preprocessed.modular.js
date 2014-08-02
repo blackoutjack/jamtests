@@ -1,5 +1,5 @@
 function runTest() {
-introspect(JAMScript.introspectors.processAll) {
+  introspect(JAM.policy.pFull) {
   function f() {
     function v0() {
       x = 2;
@@ -17,6 +17,7 @@ introspect(JAMScript.introspectors.processAll) {
     return
   }
   ;
+
   }
 
   return "No state to inspect";

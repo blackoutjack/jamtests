@@ -1,7 +1,7 @@
 function runTest() {
 
   JAM.startProfile('load');
-function g(){return 2}f=g;var v0=eval;introspect(JAMScript.introspectors.processAll)x=v0("f()");
+  function g(){return 2}f=g;x=JAM.call(eval,null,["f()"]);
 
   JAM.stopProfile('load');
 

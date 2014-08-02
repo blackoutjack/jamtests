@@ -1,5 +1,5 @@
 function runTest() {
-var a = {
+  var a = {
     get ok() {
       return "ok";
     }

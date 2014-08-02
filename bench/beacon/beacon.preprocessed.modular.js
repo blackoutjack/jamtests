@@ -1,4 +1,4 @@
-introspect(JAMScript.introspectors.processAll) {
+introspect(JAM.policy.pFull) {
 function v1() {
   function l$$1(b$$3) {
     b$$3 = b$$3 || _comscore;

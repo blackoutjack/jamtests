@@ -1,9 +1,8 @@
 var policy = function() {
-  var states = [0];
   var _HTMLImageElement_prototype_setAttribute = HTMLImageElement.prototype.setAttribute;
   var _RegExp_prototype_test = RegExp.prototype.test;
   var __RegExp_prototype_test_call_bind__RegExp_prototype_test_ = _RegExp_prototype_test.call.bind(_RegExp_prototype_test);
-  function processAll(tx) {
+  function pFull(tx) {
     var commit = true;
     var as = tx.getActionSequence();
     var len = as.length;
@@ -15,12 +14,12 @@ var policy = function() {
       }
     }
     if(commit) {
-      JAMScript.process(tx)
+      JAM.process(tx)
     }else {
-      JAMScript.prevent(tx)
+      JAM.prevent(tx)
     }
   }
-  processAll.subsumedBy = processAll;
-  Object.freeze(processAll);
-  return{introspectors:{processAll:processAll}}
+  pFull.subsumedBy = pFull;
+  Object.freeze(pFull);
+  return{pFull:pFull}
 }()

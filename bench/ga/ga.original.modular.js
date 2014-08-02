@@ -1,4 +1,4 @@
-introspect(JAMScript.introspectors.processAll) {
+introspect(JAM.policy.pFull) {
 (function () {
   var k = void 0,
       aa = encodeURIComponent,
@@ -1536,4 +1536,3 @@ introspect(JAMScript.introspectors.processAll) {
 })();
 
 }
-

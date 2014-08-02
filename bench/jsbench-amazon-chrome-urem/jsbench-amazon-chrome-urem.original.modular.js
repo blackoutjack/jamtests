@@ -1,4 +1,4 @@
-introspect(JAMScript.introspectors.processAll) {
+introspect(JAM.policy.pFull) {
 /* Replayable replacements for global functions */
 
 /***************************************************************
@@ -15180,4 +15180,3 @@ cb(); return null; }
 finalize(); })();
 
 }
-

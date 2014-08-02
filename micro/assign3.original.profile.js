@@ -1,7 +1,7 @@
 function runTest() {
 
   JAM.startProfile('load');
-var cnt = 10;
+  var cnt = 10;
   function f() {
     cnt++;
     return 3;

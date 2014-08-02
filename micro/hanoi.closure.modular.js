@@ -1,5 +1,5 @@
 function runTest() {
-introspect(JAMScript.introspectors.processAll) {
+  introspect(JAM.policy.pFull) {
   function Stack() {
     this.discs = [Infinity];
     this.push = function(disc) {

@@ -1,7 +1,7 @@
 function runTest() {
 
   JAM.startProfile('load');
-x = 0;
+  x = 0;
   var i = 0;
   lbl:for(;i < 4;i++) {
     x++;

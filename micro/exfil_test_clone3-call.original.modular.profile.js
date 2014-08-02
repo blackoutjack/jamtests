@@ -1,6 +1,6 @@
 
 JAM.startProfile('load');
-introspect(JAMScript.introspectors.processAll) {
+introspect(JAM.policy.pFull) {
 /*Function.prototype.clone = function() {
     var that = this;
     var temp = function temporary() { return that.apply(this, arguments); };

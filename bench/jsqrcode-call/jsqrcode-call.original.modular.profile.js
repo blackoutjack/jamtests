@@ -1,7 +1,6 @@
 
 JAM.startProfile('load');
-introspect(JAMScript.introspectors.processAll) {
-
+introspect(JAM.policy.pFull) {
 // grid.js
 /*
   Ported to JavaScript by Lazar Laszlo 2011 

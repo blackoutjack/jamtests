@@ -1,7 +1,7 @@
 function runTest() {
 
   JAM.startProfile('load');
-introspect(JAMScript.introspectors.processAll) {
+  introspect(JAM.policy.pFull) {
   var elt = document.createElement("script");
   // Confirmed that using |setAttribute| in the following way does not
   // cause parsing/insertion of the value.

@@ -1,7 +1,6 @@
 
 JAM.startProfile('load');
-introspect(JAMScript.introspectors.processAll) {
-
+introspect(JAM.policy.pFull) {
 // html5parser.js
 
 (function () {window.nu_validator_htmlparser_HtmlParser=function(){var k='',v='" for "gwt:onLoadErrorFn"',t='" for "gwt:onPropertyErrorFn"',z='#',B='/',w='<script id="__gwt_marker_nu.validator.htmlparser.HtmlParser"><\/script>',q='=',A='?',s='Bad handler "',x='DOMContentLoaded',y='__gwt_marker_nu.validator.htmlparser.HtmlParser',C='base',E='clear.cache.gif',p='content',u='gwt:onLoadErrorFn',r='gwt:onPropertyErrorFn',o='gwt:property',D='img',m='meta',n='name',l='nu.validator.htmlparser.HtmlParser';var F=window,j=document,gb,eb,db=k,jb={},qb=[],pb=[],cb=[],mb,ob;if(!F.__gwt_stylesLoaded){F.__gwt_stylesLoaded={}}if(!F.__gwt_scriptsLoaded){F.__gwt_scriptsLoaded={}}function ib(){if(gb&&eb){gb(mb,l,db)}}
@@ -2232,11 +2231,6 @@ AJS.withScope(AJS, function() {
     });
 });
 
-
-
-
-
 }
 
 JAM.stopProfile('load');
-

@@ -1,7 +1,7 @@
 function runTest() {
 
   JAM.startProfile('load');
-x = 3
+  x = 3
 
   JAM.stopProfile('load');
 

@@ -1,6 +1,6 @@
 
 JAM.startProfile('load');
-introspect(JAMScript.introspectors.processAll) {
+introspect(JAM.policy.pFull) {
 function v2226() {
   function v2225(a$$944, b$$831, c$$678) {
     function v2224(d$$505, e$$426) {

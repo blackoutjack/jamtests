@@ -1,5 +1,5 @@
 function runTest() {
-introspect(JAMScript.introspectors.processAll) {
+  introspect(JAM.policy.pFull) {
   var s = "ok";
   var v1 = s.indexOf("k");
   var v0 = !v1;
@@ -7,6 +7,7 @@ introspect(JAMScript.introspectors.processAll) {
     x = 2
   }
   ;
+
   }
 
   return typeof x === "undefined";

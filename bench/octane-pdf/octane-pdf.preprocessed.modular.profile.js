@@ -1,6 +1,6 @@
 
 JAM.startProfile('load');
-introspect(JAMScript.introspectors.processAll) {
+introspect(JAM.policy.pFull) {
 function pdfjsWrapper() {
   function MetadataClosure() {
     function Metadata_has(name$$72) {

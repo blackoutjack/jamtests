@@ -1,7 +1,7 @@
 function runTest() {
 
   JAM.startProfile('load');
-function transformed() {
+  function transformed() {
     xxx = undefined;
     xxx = 5
   }

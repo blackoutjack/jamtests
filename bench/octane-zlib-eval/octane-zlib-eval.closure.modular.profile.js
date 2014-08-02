@@ -1,6 +1,6 @@
 
 JAM.startProfile('load');
-introspect(JAMScript.introspectors.processAll) {
+introspect(JAM.policy.pFull) {
 function j(a) {
   throw a;
 }
@@ -13782,4 +13782,3 @@ Module.noInitialRun && (Xa = t);
 }
 
 JAM.stopProfile('load');
-

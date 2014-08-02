@@ -1,5 +1,5 @@
 function runTest() {
-function partition(a, lo, hi) {
+  function partition(a, lo, hi) {
     var i = lo + 1;
     var j = hi;
     while (true) {

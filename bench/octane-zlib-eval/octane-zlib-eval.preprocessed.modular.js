@@ -1,4 +1,4 @@
-introspect(JAMScript.introspectors.processAll) {
+introspect(JAM.policy.pFull) {
 function v81(a$$140) {
   function b$$93() {
     var a$$141 = 0;
@@ -29752,4 +29752,5 @@ if(v5327) {
   Xa = t
 }
 ;
+
 }

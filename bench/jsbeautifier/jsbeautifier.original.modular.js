@@ -1,4 +1,4 @@
-introspect(JAMScript.introspectors.processAll) {
+introspect(JAM.policy.pFull) {
 /**
  * From jsbeautifier.org
  *
@@ -135,4 +135,3 @@ function run_tests()
 do_js_beautify();
 
 }
-

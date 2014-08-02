@@ -5,7 +5,7 @@ function v195() {
     var v4040 = sortable.onDrag;
     var v4041 = sortable.onEnd;
     var v197 = {move_x:true, move_y:true, on_start:v4039, on_drag:v4040, on_end:v4041};
-    introspect(JAMScript.introspectors.processBEAFBB2FD8125A1CE4C97F75106BD93D0D091F0C) {
+    introspect(JAM.policy.pBEAFBB2FD8125A1CE4C97F75106BD93D0D091F0C) {
       v196.dragAble(item, v197)
     }
     return
@@ -13,17 +13,17 @@ function v195() {
   function v193() {
     var v198 = AJS.dnd;
     var root$$6 = v198.current_root;
-    introspect(JAMScript.introspectors.processBEAFBB2FD8125A1CE4C97F75106BD93D0D091F0C) {
+    introspect(JAM.policy.pBEAFBB2FD8125A1CE4C97F75106BD93D0D091F0C) {
       setOpacity(root$$6, 1)
     }
     var v199 = root$$6.style;
     v199.position = "";
     var v200 = this.current_replacer;
-    introspect(JAMScript.introspectors.processBEAFBB2FD8125A1CE4C97F75106BD93D0D091F0C) {
+    introspect(JAM.policy.pBEAFBB2FD8125A1CE4C97F75106BD93D0D091F0C) {
       insertBefore(root$$6, v200)
     }
     var v201 = this.current_replacer;
-    introspect(JAMScript.introspectors.processBEAFBB2FD8125A1CE4C97F75106BD93D0D091F0C) {
+    introspect(JAM.policy.pBEAFBB2FD8125A1CE4C97F75106BD93D0D091F0C) {
       removeElement(v201)
     }
     this.current_replacer = null;
@@ -33,14 +33,14 @@ function v195() {
     function v191(drop_zone) {
       var v208 = drop_zone != root$$5;
       if(v208) {
-        introspect(JAMScript.introspectors.processBEAFBB2FD8125A1CE4C97F75106BD93D0D091F0C) {
+        introspect(JAM.policy.pBEAFBB2FD8125A1CE4C97F75106BD93D0D091F0C) {
           var v202 = $AP(drop_zone)
         }
         var d_z_top = v202.y;
         var v4042 = drop_zone.offsetHeight;
         var v203 = v4042 / 2;
         var d_z_middle = d_z_top + v203;
-        introspect(JAMScript.introspectors.processBEAFBB2FD8125A1CE4C97F75106BD93D0D091F0C) {
+        introspect(JAM.policy.pBEAFBB2FD8125A1CE4C97F75106BD93D0D091F0C) {
           var v204 = $AP(root$$5)
         }
         var d_e_top$$1 = v204.y;
@@ -52,7 +52,7 @@ function v195() {
         }
         var v206 = v4043;
         if(v206) {
-          introspect(JAMScript.introspectors.processBEAFBB2FD8125A1CE4C97F75106BD93D0D091F0C) {
+          introspect(JAM.policy.pBEAFBB2FD8125A1CE4C97F75106BD93D0D091F0C) {
             insertAfter(current_replacer, drop_zone)
           }
         }
@@ -62,7 +62,7 @@ function v195() {
         }
         var v207 = v4044;
         if(v207) {
-          introspect(JAMScript.introspectors.processBEAFBB2FD8125A1CE4C97F75106BD93D0D091F0C) {
+          introspect(JAM.policy.pBEAFBB2FD8125A1CE4C97F75106BD93D0D091F0C) {
             insertBefore(current_replacer, drop_zone)
           }
         }
@@ -73,7 +73,7 @@ function v195() {
     var root$$5 = v209.current_root;
     var current_replacer = this.current_replacer;
     var v210 = this.li_items;
-    introspect(JAMScript.introspectors.processBEAFBB2FD8125A1CE4C97F75106BD93D0D091F0C) {
+    introspect(JAM.policy.pBEAFBB2FD8125A1CE4C97F75106BD93D0D091F0C) {
       map(v210, v191)
     }
     return
@@ -81,48 +81,48 @@ function v195() {
   function v190() {
     var v211 = AJS.dnd;
     var root$$4 = v211.current_root;
-    introspect(JAMScript.introspectors.processBEAFBB2FD8125A1CE4C97F75106BD93D0D091F0C) {
+    introspect(JAM.policy.pBEAFBB2FD8125A1CE4C97F75106BD93D0D091F0C) {
       var old_pos = $AP(root$$4)
     }
     var v15624 = LI();
     var replacer = this.current_replacer = v15624;
     var v4045 = root$$4.offsetHeight;
     var v212 = v4045 - 2;
-    introspect(JAMScript.introspectors.processBEAFBB2FD8125A1CE4C97F75106BD93D0D091F0C) {
+    introspect(JAM.policy.pBEAFBB2FD8125A1CE4C97F75106BD93D0D091F0C) {
       setHeight(replacer, v212)
     }
     var v213 = root$$4.className;
-    introspect(JAMScript.introspectors.processBEAFBB2FD8125A1CE4C97F75106BD93D0D091F0C) {
+    introspect(JAM.policy.pBEAFBB2FD8125A1CE4C97F75106BD93D0D091F0C) {
       setClass(replacer, v213)
     }
-    introspect(JAMScript.introspectors.processBEAFBB2FD8125A1CE4C97F75106BD93D0D091F0C) {
+    introspect(JAM.policy.pBEAFBB2FD8125A1CE4C97F75106BD93D0D091F0C) {
       addClass(replacer, "drop_item")
     }
-    introspect(JAMScript.introspectors.processBEAFBB2FD8125A1CE4C97F75106BD93D0D091F0C) {
+    introspect(JAM.policy.pBEAFBB2FD8125A1CE4C97F75106BD93D0D091F0C) {
       insertAfter(replacer, root$$4)
     }
     var v4046 = old_pos.y;
     var v214 = {position:"absolute", top:v4046, opacity:0.5};
-    introspect(JAMScript.introspectors.processBEAFBB2FD8125A1CE4C97F75106BD93D0D091F0C) {
+    introspect(JAM.policy.pBEAFBB2FD8125A1CE4C97F75106BD93D0D091F0C) {
       setStyle(root$$4, v214)
     }
     return
   }
   function v189(items) {
     this.li_items = items;
-    introspect(JAMScript.introspectors.processBEAFBB2FD8125A1CE4C97F75106BD93D0D091F0C) {
+    introspect(JAM.policy.pBEAFBB2FD8125A1CE4C97F75106BD93D0D091F0C) {
       bindMethods(this)
     }
     return
   }
   var v215 = {current_replacer:null, init:v189, onStart:v190, onDrag:v192, onEnd:v193};
-  introspect(JAMScript.introspectors.processBEAFBB2FD8125A1CE4C97F75106BD93D0D091F0C) {
+  introspect(JAM.policy.pBEAFBB2FD8125A1CE4C97F75106BD93D0D091F0C) {
     Sortable = AJS.Class(v215)
   }
   var v216 = AJS.$("puzzle");
   var li_items = AJS.$bytc("img", null, v216);
   var sortable = new Sortable(li_items);
-  introspect(JAMScript.introspectors.processBEAFBB2FD8125A1CE4C97F75106BD93D0D091F0C) {
+  introspect(JAM.policy.pBEAFBB2FD8125A1CE4C97F75106BD93D0D091F0C) {
     map(li_items, v194)
   }
   return
@@ -131,11 +131,11 @@ function v188(ev$$3) {
   var root$$3 = this.current_root;
   var handler$$11 = this.current_handler;
   var v217 = this._move;
-  introspect(JAMScript.introspectors.processBEAFBB2FD8125A1CE4C97F75106BD93D0D091F0C) {
+  introspect(JAM.policy.pBEAFBB2FD8125A1CE4C97F75106BD93D0D091F0C) {
     AJS.REV(document, "mousemove", v217)
   }
   var v218 = this._end;
-  introspect(JAMScript.introspectors.processBEAFBB2FD8125A1CE4C97F75106BD93D0D091F0C) {
+  introspect(JAM.policy.pBEAFBB2FD8125A1CE4C97F75106BD93D0D091F0C) {
     AJS.REV(document, "mouseup", v218)
   }
   var v4047 = handler$$11._kws;
@@ -148,7 +148,7 @@ function v188(ev$$3) {
   this.current_root = null;
   var v221 = root$$3.style;
   v221.zIndex = this.old_z_index;
-  introspect(JAMScript.introspectors.processBEAFBB2FD8125A1CE4C97F75106BD93D0D091F0C) {
+  introspect(JAM.policy.pBEAFBB2FD8125A1CE4C97F75106BD93D0D091F0C) {
     AJS.preventDefault(ev$$3)
   }
   return false
@@ -161,7 +161,7 @@ function v187(ev$$2) {
   }
   var root$$2 = this.current_root;
   var kws$$1 = handler$$10._kws;
-  introspect(JAMScript.introspectors.processBEAFBB2FD8125A1CE4C97F75106BD93D0D091F0C) {
+  introspect(JAM.policy.pBEAFBB2FD8125A1CE4C97F75106BD93D0D091F0C) {
     var cur_mouse_pos = AJS.getMousePos(ev$$2)
   }
   var last_mouse_pos = this.last_mouse_pos;
@@ -177,7 +177,7 @@ function v187(ev$$2) {
   new_x = new_x + v4049;
   var v227 = kws$$1.move_filter;
   if(v227) {
-    introspect(JAMScript.introspectors.processBEAFBB2FD8125A1CE4C97F75106BD93D0D091F0C) {
+    introspect(JAM.policy.pBEAFBB2FD8125A1CE4C97F75106BD93D0D091F0C) {
       var vals = kws$$1.move_filter(new_x, new_y)
     }
     new_x = vals[0];
@@ -186,20 +186,20 @@ function v187(ev$$2) {
   var v4050 = kws$$1.move_x;
   var v228 = v4050 != false;
   if(v228) {
-    introspect(JAMScript.introspectors.processBEAFBB2FD8125A1CE4C97F75106BD93D0D091F0C) {
+    introspect(JAM.policy.pBEAFBB2FD8125A1CE4C97F75106BD93D0D091F0C) {
       AJS.setLeft(root$$2, new_x)
     }
   }
   var v4051 = kws$$1.move_y;
   var v229 = v4051 != false;
   if(v229) {
-    introspect(JAMScript.introspectors.processBEAFBB2FD8125A1CE4C97F75106BD93D0D091F0C) {
+    introspect(JAM.policy.pBEAFBB2FD8125A1CE4C97F75106BD93D0D091F0C) {
       AJS.setTop(root$$2, new_y)
     }
   }
   var v230 = kws$$1.on_drag;
   if(v230) {
-    introspect(JAMScript.introspectors.processBEAFBB2FD8125A1CE4C97F75106BD93D0D091F0C) {
+    introspect(JAM.policy.pBEAFBB2FD8125A1CE4C97F75106BD93D0D091F0C) {
       kws$$1.on_drag(new_x, new_y)
     }
   }
@@ -212,7 +212,7 @@ function v187(ev$$2) {
     var v4053 = AJS.getWindowSize();
     var v232 = v4053.h;
     var sc_bottom = v231 + v232;
-    introspect(JAMScript.introspectors.processBEAFBB2FD8125A1CE4C97F75106BD93D0D091F0C) {
+    introspect(JAM.policy.pBEAFBB2FD8125A1CE4C97F75106BD93D0D091F0C) {
       var v233 = AJS.absolutePosition(root$$2)
     }
     var d_e_top = v233.y;
@@ -231,7 +231,7 @@ function v187(ev$$2) {
       }
     }
   }
-  introspect(JAMScript.introspectors.processBEAFBB2FD8125A1CE4C97F75106BD93D0D091F0C) {
+  introspect(JAM.policy.pBEAFBB2FD8125A1CE4C97F75106BD93D0D091F0C) {
     AJS.preventDefault(ev$$2)
   }
   return false
@@ -239,7 +239,7 @@ function v187(ev$$2) {
 function v186(handler$$9, ev$$1) {
   this.current_handler = handler$$9;
   var root$$1 = this.current_root = handler$$9._root;
-  introspect(JAMScript.introspectors.processBEAFBB2FD8125A1CE4C97F75106BD93D0D091F0C) {
+  introspect(JAM.policy.pBEAFBB2FD8125A1CE4C97F75106BD93D0D091F0C) {
     var v15625 = AJS.getMousePos(ev$$1)
   }
   this.last_mouse_pos = v15625;
@@ -254,11 +254,11 @@ function v186(handler$$9, ev$$1) {
     v241.on_start()
   }
   var v243 = this._move;
-  introspect(JAMScript.introspectors.processBEAFBB2FD8125A1CE4C97F75106BD93D0D091F0C) {
+  introspect(JAM.policy.pBEAFBB2FD8125A1CE4C97F75106BD93D0D091F0C) {
     AJS.AEV(document, "mousemove", v243)
   }
   var v244 = this._end;
-  introspect(JAMScript.introspectors.processBEAFBB2FD8125A1CE4C97F75106BD93D0D091F0C) {
+  introspect(JAM.policy.pBEAFBB2FD8125A1CE4C97F75106BD93D0D091F0C) {
     AJS.AEV(document, "mouseup", v244)
   }
   return
@@ -267,7 +267,7 @@ function v185(elm$$39) {
   var v246 = elm$$39._start_fn;
   if(v246) {
     var v245 = elm$$39._start_fn;
-    introspect(JAMScript.introspectors.processBEAFBB2FD8125A1CE4C97F75106BD93D0D091F0C) {
+    introspect(JAM.policy.pBEAFBB2FD8125A1CE4C97F75106BD93D0D091F0C) {
       AJS.REV(elm$$39, "mousedown", v245)
     }
   }
@@ -276,10 +276,10 @@ function v185(elm$$39) {
 function v184(root, kws) {
   function v183(ev) {
     var v247 = AJS.dnd;
-    introspect(JAMScript.introspectors.processBEAFBB2FD8125A1CE4C97F75106BD93D0D091F0C) {
+    introspect(JAM.policy.pBEAFBB2FD8125A1CE4C97F75106BD93D0D091F0C) {
       v247._start(handler$$8, ev)
     }
-    introspect(JAMScript.introspectors.processBEAFBB2FD8125A1CE4C97F75106BD93D0D091F0C) {
+    introspect(JAM.policy.pBEAFBB2FD8125A1CE4C97F75106BD93D0D091F0C) {
       AJS.preventDefault(ev)
     }
     return false
@@ -291,24 +291,24 @@ function v184(root, kws) {
     v248 = root
   }
   var handler$$8 = v248;
-  introspect(JAMScript.introspectors.processBEAFBB2FD8125A1CE4C97F75106BD93D0D091F0C) {
+  introspect(JAM.policy.pBEAFBB2FD8125A1CE4C97F75106BD93D0D091F0C) {
     handler$$8 = AJS.$(handler$$8)
   }
   handler$$8._kws = kws;
   var v249 = handler$$8;
-  introspect(JAMScript.introspectors.processBEAFBB2FD8125A1CE4C97F75106BD93D0D091F0C) {
+  introspect(JAM.policy.pBEAFBB2FD8125A1CE4C97F75106BD93D0D091F0C) {
     var v15626 = AJS.$(root)
   }
   v249._root = v15626;
   handler$$8._start_fn = v183;
   var v250 = handler$$8._start_fn;
-  introspect(JAMScript.introspectors.processBEAFBB2FD8125A1CE4C97F75106BD93D0D091F0C) {
+  introspect(JAM.policy.pBEAFBB2FD8125A1CE4C97F75106BD93D0D091F0C) {
     AJS.AEV(handler$$8, "mousedown", v250)
   }
   return
 }
 function v182() {
-  introspect(JAMScript.introspectors.processBEAFBB2FD8125A1CE4C97F75106BD93D0D091F0C) {
+  introspect(JAM.policy.pBEAFBB2FD8125A1CE4C97F75106BD93D0D091F0C) {
     AJS.bindMethods(this)
   }
   return
@@ -319,32 +319,32 @@ function v181(data$$21) {
   var http_url = this.http_url;
   var v256 = http_method == "POST";
   if(v256) {
-    introspect(JAMScript.introspectors.processBEAFBB2FD8125A1CE4C97F75106BD93D0D091F0C) {
+    introspect(JAM.policy.pBEAFBB2FD8125A1CE4C97F75106BD93D0D091F0C) {
       req$$6.open(http_method, http_url, true)
     }
     var v251 = req$$6;
     var v4058 = this._onreadystatechange;
-    introspect(JAMScript.introspectors.processBEAFBB2FD8125A1CE4C97F75106BD93D0D091F0C) {
+    introspect(JAM.policy.pBEAFBB2FD8125A1CE4C97F75106BD93D0D091F0C) {
       var v15627 = AJS.$b(v4058, this)
     }
     v251.onreadystatechange = v15627;
     req$$6.setRequestHeader("Content-type", "application/x-www-form-urlencoded");
-    introspect(JAMScript.introspectors.processBEAFBB2FD8125A1CE4C97F75106BD93D0D091F0C) {
+    introspect(JAM.policy.pBEAFBB2FD8125A1CE4C97F75106BD93D0D091F0C) {
       var v254 = AJS.isObject(data$$21)
     }
     if(v254) {
-      introspect(JAMScript.introspectors.processBEAFBB2FD8125A1CE4C97F75106BD93D0D091F0C) {
+      introspect(JAM.policy.pBEAFBB2FD8125A1CE4C97F75106BD93D0D091F0C) {
         var v252 = AJS.encodeArguments(data$$21)
       }
-      introspect(JAMScript.introspectors.processBEAFBB2FD8125A1CE4C97F75106BD93D0D091F0C) {
+      introspect(JAM.policy.pBEAFBB2FD8125A1CE4C97F75106BD93D0D091F0C) {
         req$$6.send(v252)
       }
     }else {
-      introspect(JAMScript.introspectors.processBEAFBB2FD8125A1CE4C97F75106BD93D0D091F0C) {
+      introspect(JAM.policy.pBEAFBB2FD8125A1CE4C97F75106BD93D0D091F0C) {
         var v253 = AJS.isDefined(data$$21)
       }
       if(v253) {
-        introspect(JAMScript.introspectors.processBEAFBB2FD8125A1CE4C97F75106BD93D0D091F0C) {
+        introspect(JAM.policy.pBEAFBB2FD8125A1CE4C97F75106BD93D0D091F0C) {
           req$$6.send(data$$21)
         }
       }else {
@@ -355,7 +355,7 @@ function v181(data$$21) {
     req$$6.open("GET", http_url, true);
     var v255 = req$$6;
     var v4059 = this._onreadystatechange;
-    introspect(JAMScript.introspectors.processBEAFBB2FD8125A1CE4C97F75106BD93D0D091F0C) {
+    introspect(JAM.policy.pBEAFBB2FD8125A1CE4C97F75106BD93D0D091F0C) {
       var v15628 = AJS.$b(v4059, this)
     }
     v255.onreadystatechange = v15628;
@@ -395,10 +395,10 @@ function v180() {
   return
 }
 function v179(fn1, fn2) {
-  introspect(JAMScript.introspectors.processBEAFBB2FD8125A1CE4C97F75106BD93D0D091F0C) {
+  introspect(JAM.policy.pBEAFBB2FD8125A1CE4C97F75106BD93D0D091F0C) {
     this.addCallback(fn1)
   }
-  introspect(JAMScript.introspectors.processBEAFBB2FD8125A1CE4C97F75106BD93D0D091F0C) {
+  introspect(JAM.policy.pBEAFBB2FD8125A1CE4C97F75106BD93D0D091F0C) {
     this.addErrback(fn2)
   }
   return
@@ -410,14 +410,14 @@ function v178() {
 }
 function v177(fn$$15) {
   var v260 = this.callbacks;
-  introspect(JAMScript.introspectors.processBEAFBB2FD8125A1CE4C97F75106BD93D0D091F0C) {
+  introspect(JAM.policy.pBEAFBB2FD8125A1CE4C97F75106BD93D0D091F0C) {
     v260.unshift(fn$$15)
   }
   return
 }
 function v176(fn$$14) {
   var v261 = this.errbacks;
-  introspect(JAMScript.introspectors.processBEAFBB2FD8125A1CE4C97F75106BD93D0D091F0C) {
+  introspect(JAM.policy.pBEAFBB2FD8125A1CE4C97F75106BD93D0D091F0C) {
     v261.unshift(fn$$14)
   }
   return
@@ -430,14 +430,14 @@ function v175() {
     var v266 = AJS.ajaxErrorHandler;
     if(v266) {
       var v262 = req.responseText;
-      introspect(JAMScript.introspectors.processBEAFBB2FD8125A1CE4C97F75106BD93D0D091F0C) {
+      introspect(JAM.policy.pBEAFBB2FD8125A1CE4C97F75106BD93D0D091F0C) {
         AJS.ajaxErrorHandler(v262, req)
       }
     }else {
       var v4063 = this.req;
       var v263 = v4063.responseText;
       var txt$$1 = v263.substring(0, 200);
-      introspect(JAMScript.introspectors.processBEAFBB2FD8125A1CE4C97F75106BD93D0D091F0C) {
+      introspect(JAM.policy.pBEAFBB2FD8125A1CE4C97F75106BD93D0D091F0C) {
         var v4064 = AJS.strip(txt$$1)
       }
       if(v4064) {
@@ -454,7 +454,7 @@ function v175() {
   var v270 = AJS.generalErrorback;
   if(v270) {
     var v268 = this.req;
-    introspect(JAMScript.introspectors.processBEAFBB2FD8125A1CE4C97F75106BD93D0D091F0C) {
+    introspect(JAM.policy.pBEAFBB2FD8125A1CE4C97F75106BD93D0D091F0C) {
       var result$$1 = AJS.generalErrorback(v268)
     }
     var v269 = !result$$1;
@@ -464,7 +464,7 @@ function v175() {
   }
   var v271 = this.req;
   var v272 = this.errbacks;
-  introspect(JAMScript.introspectors.processBEAFBB2FD8125A1CE4C97F75106BD93D0D091F0C) {
+  introspect(JAM.policy.pBEAFBB2FD8125A1CE4C97F75106BD93D0D091F0C) {
     this.excCallbackSeq(v271, v272)
   }
   return
@@ -472,7 +472,7 @@ function v175() {
 function v174() {
   var v273 = this.req;
   var v274 = this.callbacks;
-  introspect(JAMScript.introspectors.processBEAFBB2FD8125A1CE4C97F75106BD93D0D091F0C) {
+  introspect(JAM.policy.pBEAFBB2FD8125A1CE4C97F75106BD93D0D091F0C) {
     this.excCallbackSeq(v273, v274)
   }
   return
@@ -481,7 +481,7 @@ function v173(req$$4, list$$10) {
   var data$$20 = req$$4.responseText;
   var v276 = AJS.generalCallback;
   if(v276) {
-    introspect(JAMScript.introspectors.processBEAFBB2FD8125A1CE4C97F75106BD93D0D091F0C) {
+    introspect(JAM.policy.pBEAFBB2FD8125A1CE4C97F75106BD93D0D091F0C) {
       data$$20 = AJS.generalCallback(req$$4, list$$10)
     }
     var v275 = !data$$20;
@@ -493,7 +493,7 @@ function v173(req$$4, list$$10) {
   var v278 = v4065 > 0;
   for(;v278;) {
     var fn$$13 = list$$10.pop();
-    introspect(JAMScript.introspectors.processBEAFBB2FD8125A1CE4C97F75106BD93D0D091F0C) {
+    introspect(JAM.policy.pBEAFBB2FD8125A1CE4C97F75106BD93D0D091F0C) {
       var new_data = fn$$13(data$$20, req$$4)
     }
     if(new_data) {
@@ -520,7 +520,7 @@ function v172(req$$3, method$$2, url$$5) {
 function v171(cur$$1, prev$$1) {
   function v170() {
     this.parent = prev$$1;
-    introspect(JAMScript.introspectors.processBEAFBB2FD8125A1CE4C97F75106BD93D0D091F0C) {
+    introspect(JAM.policy.pBEAFBB2FD8125A1CE4C97F75106BD93D0D091F0C) {
       return cur$$1.apply(this, arguments)
     }
   }
@@ -528,7 +528,7 @@ function v171(cur$$1, prev$$1) {
 }
 function v169(members$$2) {
   var v279 = this.prototype;
-  introspect(JAMScript.introspectors.processBEAFBB2FD8125A1CE4C97F75106BD93D0D091F0C) {
+  introspect(JAM.policy.pBEAFBB2FD8125A1CE4C97F75106BD93D0D091F0C) {
     AJS.update(v279, members$$2)
   }
   return
@@ -549,7 +549,7 @@ function v168(members$$1) {
     }
     var v280 = v4067;
     if(v280) {
-      introspect(JAMScript.introspectors.processBEAFBB2FD8125A1CE4C97F75106BD93D0D091F0C) {
+      introspect(JAM.policy.pBEAFBB2FD8125A1CE4C97F75106BD93D0D091F0C) {
         cur = this._parentize(cur, prev)
       }
     }
@@ -564,7 +564,7 @@ function v167(members) {
     var v283 = v4068 != "no_init";
     if(v283) {
       var v282 = this.init;
-      introspect(JAMScript.introspectors.processBEAFBB2FD8125A1CE4C97F75106BD93D0D091F0C) {
+      introspect(JAM.policy.pBEAFBB2FD8125A1CE4C97F75106BD93D0D091F0C) {
         return v282.apply(this, arguments)
       }
     }
@@ -573,7 +573,7 @@ function v167(members) {
   fn$$12.prototype = members;
   var v4069 = AJS.Class;
   var v284 = v4069.prototype;
-  introspect(JAMScript.introspectors.processBEAFBB2FD8125A1CE4C97F75106BD93D0D091F0C) {
+  introspect(JAM.policy.pBEAFBB2FD8125A1CE4C97F75106BD93D0D091F0C) {
     AJS.update(fn$$12, v284)
   }
   return fn$$12
@@ -593,7 +593,7 @@ function v165(str$$9) {
   return v288.replace(/\s+$/g, "")
 }
 function v164(export_scope, fn$$11) {
-  introspect(JAMScript.introspectors.processBEAFBB2FD8125A1CE4C97F75106BD93D0D091F0C) {
+  introspect(JAM.policy.pBEAFBB2FD8125A1CE4C97F75106BD93D0D091F0C) {
     fn$$11.apply(export_scope, [])
   }
   return
@@ -603,13 +603,13 @@ function v163(o$$12) {
     var v291 = window._firebug;
     if(v291) {
       var v289 = window._firebug;
-      introspect(JAMScript.introspectors.processBEAFBB2FD8125A1CE4C97F75106BD93D0D091F0C) {
+      introspect(JAM.policy.pBEAFBB2FD8125A1CE4C97F75106BD93D0D091F0C) {
         v289.log(o$$12)
       }
     }else {
       var v290 = window.console;
       if(v290) {
-        introspect(JAMScript.introspectors.processBEAFBB2FD8125A1CE4C97F75106BD93D0D091F0C) {
+        introspect(JAM.policy.pBEAFBB2FD8125A1CE4C97F75106BD93D0D091F0C) {
           console.log(o$$12)
         }
       }
@@ -665,7 +665,7 @@ function v155(o$$10) {
   return v298
 }
 function v154(str$$8) {
-  introspect(JAMScript.introspectors.processBEAFBB2FD8125A1CE4C97F75106BD93D0D091F0C) {
+  introspect(JAM.policy.pBEAFBB2FD8125A1CE4C97F75106BD93D0D091F0C) {
     var v9559 = AJS.isDefined(str$$8)
   }
   if(v9559) {
@@ -681,7 +681,7 @@ function v154(str$$8) {
   return result.replace(/\+/g, " ")
 }
 function v153(str$$7) {
-  introspect(JAMScript.introspectors.processBEAFBB2FD8125A1CE4C97F75106BD93D0D091F0C) {
+  introspect(JAM.policy.pBEAFBB2FD8125A1CE4C97F75106BD93D0D091F0C) {
     var v9561 = AJS.isDefined(str$$7)
   }
   if(v9561) {
@@ -700,7 +700,7 @@ function v152(obj$$17) {
   var prop$$7;
   for(prop$$7 in obj$$17) {
     var v301 = obj$$17[prop$$7];
-    introspect(JAMScript.introspectors.processBEAFBB2FD8125A1CE4C97F75106BD93D0D091F0C) {
+    introspect(JAM.policy.pBEAFBB2FD8125A1CE4C97F75106BD93D0D091F0C) {
       rval$$1.push(v301)
     }
   }
@@ -710,7 +710,7 @@ function v151(obj$$16) {
   var rval = [];
   var prop$$6;
   for(prop$$6 in obj$$16) {
-    introspect(JAMScript.introspectors.processBEAFBB2FD8125A1CE4C97F75106BD93D0D091F0C) {
+    introspect(JAM.policy.pBEAFBB2FD8125A1CE4C97F75106BD93D0D091F0C) {
       rval.push(prop$$6)
     }
   }
@@ -732,17 +732,17 @@ function v149(fn$$9, extra_args$$1) {
   function v148() {
     try {
       var v305 = AJS.$FA(arguments);
-      introspect(JAMScript.introspectors.processBEAFBB2FD8125A1CE4C97F75106BD93D0D091F0C) {
+      introspect(JAM.policy.pBEAFBB2FD8125A1CE4C97F75106BD93D0D091F0C) {
         var args$$14 = v305.concat(extra_args$$1)
       }
-      introspect(JAMScript.introspectors.processBEAFBB2FD8125A1CE4C97F75106BD93D0D091F0C) {
+      introspect(JAM.policy.pBEAFBB2FD8125A1CE4C97F75106BD93D0D091F0C) {
         return fn$$9.apply(scope$$2, args$$14)
       }
     }catch(e$$97) {
     }
     return
   }
-  introspect(JAMScript.introspectors.processBEAFBB2FD8125A1CE4C97F75106BD93D0D091F0C) {
+  introspect(JAM.policy.pBEAFBB2FD8125A1CE4C97F75106BD93D0D091F0C) {
     extra_args$$1 = AJS.$A(extra_args$$1)
   }
   var v306 = fn$$9._cscope;
@@ -755,7 +755,7 @@ function v149(fn$$9, extra_args$$1) {
 }
 function v147(elm$$38, type$$30, fn$$8) {
   function r_fn() {
-    introspect(JAMScript.introspectors.processBEAFBB2FD8125A1CE4C97F75106BD93D0D091F0C) {
+    introspect(JAM.policy.pBEAFBB2FD8125A1CE4C97F75106BD93D0D091F0C) {
       AJS.removeEventListener(elm$$38, type$$30, r_fn)
     }
     fn$$8(arguments);
@@ -782,7 +782,7 @@ function v145(self$$1) {
     if(v311) {
       var v309 = self$$1;
       var v310 = k$$7;
-      introspect(JAMScript.introspectors.processBEAFBB2FD8125A1CE4C97F75106BD93D0D091F0C) {
+      introspect(JAM.policy.pBEAFBB2FD8125A1CE4C97F75106BD93D0D091F0C) {
         var v15630 = AJS.$b(func$$4, self$$1)
       }
       v309[v310] = v15630
@@ -792,7 +792,7 @@ function v145(self$$1) {
 }
 function v144(fn$$7, scope$$1, extra_args) {
   fn$$7._cscope = scope$$1;
-  introspect(JAMScript.introspectors.processBEAFBB2FD8125A1CE4C97F75106BD93D0D091F0C) {
+  introspect(JAM.policy.pBEAFBB2FD8125A1CE4C97F75106BD93D0D091F0C) {
     return AJS._getRealScope(fn$$7, extra_args)
   }
 }
@@ -812,10 +812,10 @@ function v143(elms$$4, type$$29, handler$$7) {
     }
     return
   }
-  introspect(JAMScript.introspectors.processBEAFBB2FD8125A1CE4C97F75106BD93D0D091F0C) {
+  introspect(JAM.policy.pBEAFBB2FD8125A1CE4C97F75106BD93D0D091F0C) {
     elms$$4 = AJS.$A(elms$$4)
   }
-  introspect(JAMScript.introspectors.processBEAFBB2FD8125A1CE4C97F75106BD93D0D091F0C) {
+  introspect(JAM.policy.pBEAFBB2FD8125A1CE4C97F75106BD93D0D091F0C) {
     map(elms$$4, v142)
   }
   return
@@ -849,7 +849,7 @@ function v141(event$$1) {
   }
   var v319 = v4080;
   if(v319) {
-    introspect(JAMScript.introspectors.processBEAFBB2FD8125A1CE4C97F75106BD93D0D091F0C) {
+    introspect(JAM.policy.pBEAFBB2FD8125A1CE4C97F75106BD93D0D091F0C) {
       AJS.setEventKey(event$$1)
     }
   }
@@ -866,12 +866,12 @@ function v141(event$$1) {
     if(v322) {
       continue
     }
-    introspect(JAMScript.introspectors.processBEAFBB2FD8125A1CE4C97F75106BD93D0D091F0C) {
+    introspect(JAM.policy.pBEAFBB2FD8125A1CE4C97F75106BD93D0D091F0C) {
       res$$1 = handler$$5(event$$1)
     }
     var v323 = handler$$5.listen_once;
     if(v323) {
-      introspect(JAMScript.introspectors.processBEAFBB2FD8125A1CE4C97F75106BD93D0D091F0C) {
+      introspect(JAM.policy.pBEAFBB2FD8125A1CE4C97F75106BD93D0D091F0C) {
         handlers_to_delete.push(handler$$5)
       }
     }
@@ -879,7 +879,7 @@ function v141(event$$1) {
   var v4082 = handlers_to_delete.length;
   var v324 = v4082 > 0;
   if(v324) {
-    introspect(JAMScript.introspectors.processBEAFBB2FD8125A1CE4C97F75106BD93D0D091F0C) {
+    introspect(JAM.policy.pBEAFBB2FD8125A1CE4C97F75106BD93D0D091F0C) {
       AJS.map(handlers_to_delete, v140)
     }
   }
@@ -897,7 +897,7 @@ function v139(elms$$3, types, handler$$4, listen_once$$1) {
       var v335 = v4083;
       if(v335) {
         var v326 = AJS.ready_list;
-        introspect(JAMScript.introspectors.processBEAFBB2FD8125A1CE4C97F75106BD93D0D091F0C) {
+        introspect(JAM.policy.pBEAFBB2FD8125A1CE4C97F75106BD93D0D091F0C) {
           v326.push(handler$$4)
         }
       }else {
@@ -926,7 +926,7 @@ function v139(elms$$3, types, handler$$4, listen_once$$1) {
         var v333 = handler$$4.$f_guid;
         handlers[v333] = handler$$4;
         var v334 = AJS.handleEvent;
-        introspect(JAMScript.introspectors.processBEAFBB2FD8125A1CE4C97F75106BD93D0D091F0C) {
+        introspect(JAM.policy.pBEAFBB2FD8125A1CE4C97F75106BD93D0D091F0C) {
           elm$$36.addEventListener(type$$28, v334, false)
         }
       }
@@ -947,26 +947,26 @@ function v139(elms$$3, types, handler$$4, listen_once$$1) {
     if(v337) {
       elm$$36.events = {}
     }
-    introspect(JAMScript.introspectors.processBEAFBB2FD8125A1CE4C97F75106BD93D0D091F0C) {
+    introspect(JAM.policy.pBEAFBB2FD8125A1CE4C97F75106BD93D0D091F0C) {
       AJS.map(types, v137)
     }
     elm$$36 = null;
     return
   }
-  introspect(JAMScript.introspectors.processBEAFBB2FD8125A1CE4C97F75106BD93D0D091F0C) {
+  introspect(JAM.policy.pBEAFBB2FD8125A1CE4C97F75106BD93D0D091F0C) {
     elms$$3 = AJS.$A(elms$$3)
   }
-  introspect(JAMScript.introspectors.processBEAFBB2FD8125A1CE4C97F75106BD93D0D091F0C) {
+  introspect(JAM.policy.pBEAFBB2FD8125A1CE4C97F75106BD93D0D091F0C) {
     types = AJS.$A(types)
   }
-  introspect(JAMScript.introspectors.processBEAFBB2FD8125A1CE4C97F75106BD93D0D091F0C) {
+  introspect(JAM.policy.pBEAFBB2FD8125A1CE4C97F75106BD93D0D091F0C) {
     AJS.map(elms$$3, v138)
   }
   return
 }
 function v136(fn$$5) {
   function v135(fn$$6) {
-    introspect(JAMScript.introspectors.processBEAFBB2FD8125A1CE4C97F75106BD93D0D091F0C) {
+    introspect(JAM.policy.pBEAFBB2FD8125A1CE4C97F75106BD93D0D091F0C) {
       fn$$6.call(window)
     }
     return
@@ -978,7 +978,7 @@ function v136(fn$$5) {
   AJS.is_ready = true;
   var v339 = AJS.ready_list;
   var rt = v339.length;
-  introspect(JAMScript.introspectors.processBEAFBB2FD8125A1CE4C97F75106BD93D0D091F0C) {
+  introspect(JAM.policy.pBEAFBB2FD8125A1CE4C97F75106BD93D0D091F0C) {
     AJS.map(rt, v135)
   }
   AJS.ready_list = [];
@@ -1042,7 +1042,7 @@ function v134() {
     }
   }
   var v350 = AJS.ready;
-  introspect(JAMScript.introspectors.processBEAFBB2FD8125A1CE4C97F75106BD93D0D091F0C) {
+  introspect(JAM.policy.pBEAFBB2FD8125A1CE4C97F75106BD93D0D091F0C) {
     AJS.AEV(window, "load", v350)
   }
   return
@@ -1056,13 +1056,13 @@ function v130(elms$$2, type$$27, handler$$3, listen_once) {
     }
     return
   }
-  introspect(JAMScript.introspectors.processBEAFBB2FD8125A1CE4C97F75106BD93D0D091F0C) {
+  introspect(JAM.policy.pBEAFBB2FD8125A1CE4C97F75106BD93D0D091F0C) {
     elms$$2 = AJS.$A(elms$$2)
   }
-  introspect(JAMScript.introspectors.processBEAFBB2FD8125A1CE4C97F75106BD93D0D091F0C) {
+  introspect(JAM.policy.pBEAFBB2FD8125A1CE4C97F75106BD93D0D091F0C) {
     AJS.map(elms$$2, v129)
   }
-  introspect(JAMScript.introspectors.processBEAFBB2FD8125A1CE4C97F75106BD93D0D091F0C) {
+  introspect(JAM.policy.pBEAFBB2FD8125A1CE4C97F75106BD93D0D091F0C) {
     return AJS.AEV(elms$$2, type$$27, handler$$3, listen_once)
   }
 }
@@ -1140,10 +1140,10 @@ function v126(elm1, elm2) {
     }
     return
   }
-  introspect(JAMScript.introspectors.processBEAFBB2FD8125A1CE4C97F75106BD93D0D091F0C) {
+  introspect(JAM.policy.pBEAFBB2FD8125A1CE4C97F75106BD93D0D091F0C) {
     var pos_elm1 = AJS.absolutePosition(elm1)
   }
-  introspect(JAMScript.introspectors.processBEAFBB2FD8125A1CE4C97F75106BD93D0D091F0C) {
+  introspect(JAM.policy.pBEAFBB2FD8125A1CE4C97F75106BD93D0D091F0C) {
     var pos_elm2 = AJS.absolutePosition(elm2)
   }
   var top1 = pos_elm1.y;
@@ -1369,11 +1369,11 @@ function v119(data$$19) {
   for(k in data$$19) {
     var v4118 = k + "=";
     var v9586 = data$$19[k];
-    introspect(JAMScript.introspectors.processBEAFBB2FD8125A1CE4C97F75106BD93D0D091F0C) {
+    introspect(JAM.policy.pBEAFBB2FD8125A1CE4C97F75106BD93D0D091F0C) {
       var v4119 = AJS.urlencode(v9586)
     }
     var v400 = v4118 + v4119;
-    introspect(JAMScript.introspectors.processBEAFBB2FD8125A1CE4C97F75106BD93D0D091F0C) {
+    introspect(JAM.policy.pBEAFBB2FD8125A1CE4C97F75106BD93D0D091F0C) {
       post_data.push(v400)
     }
   }
@@ -1413,20 +1413,20 @@ function v116(url$$4, type$$26, debug) {
     var text$$8 = req$$2.responseText;
     var v405 = text$$8 == "Error";
     if(v405) {
-      introspect(JAMScript.introspectors.processBEAFBB2FD8125A1CE4C97F75106BD93D0D091F0C) {
+      introspect(JAM.policy.pBEAFBB2FD8125A1CE4C97F75106BD93D0D091F0C) {
         d$$108.errback(req$$2)
       }
     }else {
-      introspect(JAMScript.introspectors.processBEAFBB2FD8125A1CE4C97F75106BD93D0D091F0C) {
+      introspect(JAM.policy.pBEAFBB2FD8125A1CE4C97F75106BD93D0D091F0C) {
         return AJS.evalTxt(text$$8)
       }
     }
     return
   }
-  introspect(JAMScript.introspectors.processBEAFBB2FD8125A1CE4C97F75106BD93D0D091F0C) {
+  introspect(JAM.policy.pBEAFBB2FD8125A1CE4C97F75106BD93D0D091F0C) {
     var d$$108 = AJS.getRequest(url$$4, type$$26)
   }
-  introspect(JAMScript.introspectors.processBEAFBB2FD8125A1CE4C97F75106BD93D0D091F0C) {
+  introspect(JAM.policy.pBEAFBB2FD8125A1CE4C97F75106BD93D0D091F0C) {
     d$$108.addCallback(eval_req)
   }
   return d$$108
@@ -1454,7 +1454,7 @@ function v115(o$$8) {
   }
   var v409 = objtype == "string";
   if(v409) {
-    introspect(JAMScript.introspectors.processBEAFBB2FD8125A1CE4C97F75106BD93D0D091F0C) {
+    introspect(JAM.policy.pBEAFBB2FD8125A1CE4C97F75106BD93D0D091F0C) {
       return AJS._reprString(o$$8)
     }
   }
@@ -1464,7 +1464,7 @@ function v115(o$$8) {
   }
   var v410 = v4124;
   if(v410) {
-    introspect(JAMScript.introspectors.processBEAFBB2FD8125A1CE4C97F75106BD93D0D091F0C) {
+    introspect(JAM.policy.pBEAFBB2FD8125A1CE4C97F75106BD93D0D091F0C) {
       return AJS._reprDate(o$$8)
     }
   }
@@ -1483,7 +1483,7 @@ function v115(o$$8) {
     var v413 = i$$29 < v4126;
     for(;v413;) {
       var v411 = o$$8[i$$29];
-      introspect(JAMScript.introspectors.processBEAFBB2FD8125A1CE4C97F75106BD93D0D091F0C) {
+      introspect(JAM.policy.pBEAFBB2FD8125A1CE4C97F75106BD93D0D091F0C) {
         var val$$3 = me(v411)
       }
       var v4127 = typeof val$$3;
@@ -1491,7 +1491,7 @@ function v115(o$$8) {
       if(v412) {
         val$$3 = "undefined"
       }
-      introspect(JAMScript.introspectors.processBEAFBB2FD8125A1CE4C97F75106BD93D0D091F0C) {
+      introspect(JAM.policy.pBEAFBB2FD8125A1CE4C97F75106BD93D0D091F0C) {
         res.push(val$$3)
       }
       i$$29 = i$$29 + 1;
@@ -1519,7 +1519,7 @@ function v115(o$$8) {
       var v4131 = typeof k$$6;
       var v418 = v4131 == "string";
       if(v418) {
-        introspect(JAMScript.introspectors.processBEAFBB2FD8125A1CE4C97F75106BD93D0D091F0C) {
+        introspect(JAM.policy.pBEAFBB2FD8125A1CE4C97F75106BD93D0D091F0C) {
           useKey = AJS._reprString(k$$6)
         }
       }else {
@@ -1527,7 +1527,7 @@ function v115(o$$8) {
       }
     }
     var v420 = o$$8[k$$6];
-    introspect(JAMScript.introspectors.processBEAFBB2FD8125A1CE4C97F75106BD93D0D091F0C) {
+    introspect(JAM.policy.pBEAFBB2FD8125A1CE4C97F75106BD93D0D091F0C) {
       val$$3 = me(v420)
     }
     var v4132 = typeof val$$3;
@@ -1537,7 +1537,7 @@ function v115(o$$8) {
     }
     var v4133 = useKey + ":";
     var v422 = v4133 + val$$3;
-    introspect(JAMScript.introspectors.processBEAFBB2FD8125A1CE4C97F75106BD93D0D091F0C) {
+    introspect(JAM.policy.pBEAFBB2FD8125A1CE4C97F75106BD93D0D091F0C) {
       res.push(v422)
     }
   }
@@ -1598,7 +1598,7 @@ function v113() {
     try {
       return func$$3()
     }catch(e$$91) {
-      introspect(JAMScript.introspectors.processBEAFBB2FD8125A1CE4C97F75106BD93D0D091F0C) {
+      introspect(JAM.policy.pBEAFBB2FD8125A1CE4C97F75106BD93D0D091F0C) {
         AJS.log(e$$91)
       }
     }
@@ -1618,7 +1618,7 @@ function v107(tmpl, ns, scope) {
     var v432 = i$$27 < v4142;
     for(;v432;) {
       var v431 = g$$33[i$$27];
-      introspect(JAMScript.introspectors.processBEAFBB2FD8125A1CE4C97F75106BD93D0D091F0C) {
+      introspect(JAM.policy.pBEAFBB2FD8125A1CE4C97F75106BD93D0D091F0C) {
         cnt = scope[v431](cnt)
       }
       i$$27 = i$$27 + 1;
@@ -1650,15 +1650,15 @@ function v106() {
       pic.src = src$$2;
       return
     }
-    introspect(JAMScript.introspectors.processBEAFBB2FD8125A1CE4C97F75106BD93D0D091F0C) {
+    introspect(JAM.policy.pBEAFBB2FD8125A1CE4C97F75106BD93D0D091F0C) {
       AJS.map(args$$13, v104)
     }
     return
   }
-  introspect(JAMScript.introspectors.processBEAFBB2FD8125A1CE4C97F75106BD93D0D091F0C) {
+  introspect(JAM.policy.pBEAFBB2FD8125A1CE4C97F75106BD93D0D091F0C) {
     var v435 = AJS.$p(v105, arguments)
   }
-  introspect(JAMScript.introspectors.processBEAFBB2FD8125A1CE4C97F75106BD93D0D091F0C) {
+  introspect(JAM.policy.pBEAFBB2FD8125A1CE4C97F75106BD93D0D091F0C) {
     AJS.AEV(window, "load", v435)
   }
   return
@@ -1697,7 +1697,7 @@ function v101() {
     var v4146 = elm$$32.className;
     var v9593 = "(^|\\s)" + cls$$2;
     var v4147 = new RegExp(v9593, "g");
-    introspect(JAMScript.introspectors.processBEAFBB2FD8125A1CE4C97F75106BD93D0D091F0C) {
+    introspect(JAM.policy.pBEAFBB2FD8125A1CE4C97F75106BD93D0D091F0C) {
       var v15631 = v4146.replace(v4147, "")
     }
     v442.className = v15631;
@@ -1705,7 +1705,7 @@ function v101() {
   }
   var args$$12 = AJS.flattenElmArguments(arguments);
   var cls$$2 = args$$12.pop();
-  introspect(JAMScript.introspectors.processBEAFBB2FD8125A1CE4C97F75106BD93D0D091F0C) {
+  introspect(JAM.policy.pBEAFBB2FD8125A1CE4C97F75106BD93D0D091F0C) {
     AJS.map(args$$12, v100)
   }
   return
@@ -1731,7 +1731,7 @@ function v99(elm$$31, cls$$1) {
       var v12455 = "(^|\\s)" + cls$$1;
       var v12228 = v12455 + "(\\s|$)";
       var v9596 = new RegExp(v12228);
-      introspect(JAMScript.introspectors.processBEAFBB2FD8125A1CE4C97F75106BD93D0D091F0C) {
+      introspect(JAM.policy.pBEAFBB2FD8125A1CE4C97F75106BD93D0D091F0C) {
         v4150 = v9596.test(e_cls)
       }
     }
@@ -1746,7 +1746,7 @@ function v98() {
     var v12229 = v12456 + "(\\s|$)";
     var v9598 = new RegExp(v12229);
     var v9599 = o$$inline_347.className;
-    introspect(JAMScript.introspectors.processBEAFBB2FD8125A1CE4C97F75106BD93D0D091F0C) {
+    introspect(JAM.policy.pBEAFBB2FD8125A1CE4C97F75106BD93D0D091F0C) {
       var v4151 = v9598.test(v9599)
     }
     var v445 = !v4151;
@@ -1767,7 +1767,7 @@ function v98() {
   }
   var args$$11 = AJS.flattenElmArguments(arguments);
   var cls = args$$11.pop();
-  introspect(JAMScript.introspectors.processBEAFBB2FD8125A1CE4C97F75106BD93D0D091F0C) {
+  introspect(JAM.policy.pBEAFBB2FD8125A1CE4C97F75106BD93D0D091F0C) {
     AJS.map(args$$11, v97)
   }
   return
@@ -1779,7 +1779,7 @@ function v96() {
   }
   var args$$10 = AJS.flattenElmArguments(arguments);
   var c$$168 = args$$10.pop();
-  introspect(JAMScript.introspectors.processBEAFBB2FD8125A1CE4C97F75106BD93D0D091F0C) {
+  introspect(JAM.policy.pBEAFBB2FD8125A1CE4C97F75106BD93D0D091F0C) {
     AJS.map(args$$10, v95)
   }
   return
@@ -1800,7 +1800,7 @@ function v90() {
   return AJS.__cssDim(arguments, "width")
 }
 function v89(args$$9, property$$4) {
-  introspect(JAMScript.introspectors.processBEAFBB2FD8125A1CE4C97F75106BD93D0D091F0C) {
+  introspect(JAM.policy.pBEAFBB2FD8125A1CE4C97F75106BD93D0D091F0C) {
     args$$9 = AJS.$FA(args$$9)
   }
   var v4154 = args$$9.length;
@@ -1812,11 +1812,11 @@ function v89(args$$9, property$$4) {
 }
 function v88() {
   function v87(elm$$28) {
-    introspect(JAMScript.introspectors.processBEAFBB2FD8125A1CE4C97F75106BD93D0D091F0C) {
+    introspect(JAM.policy.pBEAFBB2FD8125A1CE4C97F75106BD93D0D091F0C) {
       var v449 = AJS.isIn(property$$3, num_styles)
     }
     if(v449) {
-      introspect(JAMScript.introspectors.processBEAFBB2FD8125A1CE4C97F75106BD93D0D091F0C) {
+      introspect(JAM.policy.pBEAFBB2FD8125A1CE4C97F75106BD93D0D091F0C) {
         var v4155 = AJS.isString(value$$29)
       }
       if(v4155) {
@@ -1836,11 +1836,11 @@ function v88() {
   function v86(elm$$27) {
     function v85(prop$$5) {
       var css_dim = value$$29[prop$$5];
-      introspect(JAMScript.introspectors.processBEAFBB2FD8125A1CE4C97F75106BD93D0D091F0C) {
+      introspect(JAM.policy.pBEAFBB2FD8125A1CE4C97F75106BD93D0D091F0C) {
         var v452 = AJS.isIn(prop$$5, num_styles)
       }
       if(v452) {
-        introspect(JAMScript.introspectors.processBEAFBB2FD8125A1CE4C97F75106BD93D0D091F0C) {
+        introspect(JAM.policy.pBEAFBB2FD8125A1CE4C97F75106BD93D0D091F0C) {
           var v4157 = AJS.isString(css_dim)
         }
         if(v4157) {
@@ -1857,10 +1857,10 @@ function v88() {
       v453[prop$$5] = css_dim;
       return
     }
-    introspect(JAMScript.introspectors.processBEAFBB2FD8125A1CE4C97F75106BD93D0D091F0C) {
+    introspect(JAM.policy.pBEAFBB2FD8125A1CE4C97F75106BD93D0D091F0C) {
       var v454 = AJS.keys(value$$29)
     }
-    introspect(JAMScript.introspectors.processBEAFBB2FD8125A1CE4C97F75106BD93D0D091F0C) {
+    introspect(JAM.policy.pBEAFBB2FD8125A1CE4C97F75106BD93D0D091F0C) {
       AJS.map(v454, v85)
     }
     return
@@ -1868,23 +1868,23 @@ function v88() {
   var args$$8 = AJS.flattenElmArguments(arguments);
   var value$$29 = args$$8.pop();
   var num_styles = ["top", "left", "right", "width", "height"];
-  introspect(JAMScript.introspectors.processBEAFBB2FD8125A1CE4C97F75106BD93D0D091F0C) {
+  introspect(JAM.policy.pBEAFBB2FD8125A1CE4C97F75106BD93D0D091F0C) {
     var v455 = AJS.isObject(value$$29)
   }
   if(v455) {
-    introspect(JAMScript.introspectors.processBEAFBB2FD8125A1CE4C97F75106BD93D0D091F0C) {
+    introspect(JAM.policy.pBEAFBB2FD8125A1CE4C97F75106BD93D0D091F0C) {
       AJS.map(args$$8, v86)
     }
   }else {
     var property$$3 = args$$8.pop();
-    introspect(JAMScript.introspectors.processBEAFBB2FD8125A1CE4C97F75106BD93D0D091F0C) {
+    introspect(JAM.policy.pBEAFBB2FD8125A1CE4C97F75106BD93D0D091F0C) {
       AJS.map(args$$8, v87)
     }
   }
   return
 }
 function v84(elm$$26) {
-  introspect(JAMScript.introspectors.processBEAFBB2FD8125A1CE4C97F75106BD93D0D091F0C) {
+  introspect(JAM.policy.pBEAFBB2FD8125A1CE4C97F75106BD93D0D091F0C) {
     var v456 = AJS.isElementHidden(elm$$26)
   }
   return!v456
@@ -1903,14 +1903,14 @@ function v83(elm$$25) {
 }
 function v82(elm$$24) {
   var v458 = AJS.flattenElmArguments(arguments);
-  introspect(JAMScript.introspectors.processBEAFBB2FD8125A1CE4C97F75106BD93D0D091F0C) {
+  introspect(JAM.policy.pBEAFBB2FD8125A1CE4C97F75106BD93D0D091F0C) {
     AJS.setStyle(v458, "display", "none")
   }
   return
 }
 function v81() {
   var v459 = AJS.flattenElmArguments(arguments);
-  introspect(JAMScript.introspectors.processBEAFBB2FD8125A1CE4C97F75106BD93D0D091F0C) {
+  introspect(JAM.policy.pBEAFBB2FD8125A1CE4C97F75106BD93D0D091F0C) {
     AJS.setStyle(v459, "display", "")
   }
   return
@@ -1927,7 +1927,7 @@ function v80() {
     v460 = "hidden"
   }
   var val$$2 = v460;
-  introspect(JAMScript.introspectors.processBEAFBB2FD8125A1CE4C97F75106BD93D0D091F0C) {
+  introspect(JAM.policy.pBEAFBB2FD8125A1CE4C97F75106BD93D0D091F0C) {
     AJS.setStyle(args$$7, "visibility", val$$2)
   }
   return
@@ -1941,14 +1941,14 @@ function v79() {
   }
   var args$$6 = AJS.flattenElmArguments(arguments);
   var html = args$$6.pop();
-  introspect(JAMScript.introspectors.processBEAFBB2FD8125A1CE4C97F75106BD93D0D091F0C) {
+  introspect(JAM.policy.pBEAFBB2FD8125A1CE4C97F75106BD93D0D091F0C) {
     AJS.map(args$$6, v78)
   }
   return args$$6[0]
 }
 function v77() {
   function v76(text$$7) {
-    introspect(JAMScript.introspectors.processBEAFBB2FD8125A1CE4C97F75106BD93D0D091F0C) {
+    introspect(JAM.policy.pBEAFBB2FD8125A1CE4C97F75106BD93D0D091F0C) {
       return document.createTextNode(text$$7)
     }
   }
@@ -1963,7 +1963,7 @@ function v77() {
     return
   }
   var elms$$1 = ["ul", "li", "td", "tr", "th", "tbody", "table", "input", "span", "b", "a", "div", "img", "button", "h1", "h2", "h3", "h4", "h5", "h6", "br", "textarea", "form", "p", "select", "option", "optgroup", "iframe", "script", "center", "dl", "dt", "dd", "small", "pre", "i", "label", "thead"];
-  introspect(JAMScript.introspectors.processBEAFBB2FD8125A1CE4C97F75106BD93D0D091F0C) {
+  introspect(JAM.policy.pBEAFBB2FD8125A1CE4C97F75106BD93D0D091F0C) {
     AJS.map(elms$$1, extends_ajs)
   }
   AJS.TN = v76;
@@ -1972,12 +1972,12 @@ function v77() {
 function v74(name$$32, attrs) {
   var i$$26 = 0;
   var attr;
-  introspect(JAMScript.introspectors.processBEAFBB2FD8125A1CE4C97F75106BD93D0D091F0C) {
+  introspect(JAM.policy.pBEAFBB2FD8125A1CE4C97F75106BD93D0D091F0C) {
     var elm$$21 = document.createElement(name$$32)
   }
   var first_attr = attrs[0];
   var v4164 = attrs[i$$26];
-  introspect(JAMScript.introspectors.processBEAFBB2FD8125A1CE4C97F75106BD93D0D091F0C) {
+  introspect(JAM.policy.pBEAFBB2FD8125A1CE4C97F75106BD93D0D091F0C) {
     var v467 = AJS.isDict(v4164)
   }
   if(v467) {
@@ -2007,7 +2007,7 @@ function v74(name$$32, attrs) {
         if(v465) {
           elm$$21.className = attr
         }else {
-          introspect(JAMScript.introspectors.processBEAFBB2FD8125A1CE4C97F75106BD93D0D091F0C) {
+          introspect(JAM.policy.pBEAFBB2FD8125A1CE4C97F75106BD93D0D091F0C) {
             elm$$21.setAttribute(k, attr)
           }
         }
@@ -2033,11 +2033,11 @@ function v74(name$$32, attrs) {
       }
       var v469 = v4168;
       if(v469) {
-        introspect(JAMScript.introspectors.processBEAFBB2FD8125A1CE4C97F75106BD93D0D091F0C) {
+        introspect(JAM.policy.pBEAFBB2FD8125A1CE4C97F75106BD93D0D091F0C) {
           attr = AJS.TN(attr)
         }
       }
-      introspect(JAMScript.introspectors.processBEAFBB2FD8125A1CE4C97F75106BD93D0D091F0C) {
+      introspect(JAM.policy.pBEAFBB2FD8125A1CE4C97F75106BD93D0D091F0C) {
         elm$$21.appendChild(attr)
       }
     }
@@ -2049,11 +2049,11 @@ function v74(name$$32, attrs) {
 }
 function v73() {
   function v72(elm$$20) {
-    introspect(JAMScript.introspectors.processBEAFBB2FD8125A1CE4C97F75106BD93D0D091F0C) {
+    introspect(JAM.policy.pBEAFBB2FD8125A1CE4C97F75106BD93D0D091F0C) {
       var v471 = $(elm$$20)
     }
     if(v471) {
-      introspect(JAMScript.introspectors.processBEAFBB2FD8125A1CE4C97F75106BD93D0D091F0C) {
+      introspect(JAM.policy.pBEAFBB2FD8125A1CE4C97F75106BD93D0D091F0C) {
         AJS.swapDOM(elm$$20, null)
       }
     }
@@ -2061,7 +2061,7 @@ function v73() {
   }
   var args$$5 = AJS.flattenElmArguments(arguments);
   try {
-    introspect(JAMScript.introspectors.processBEAFBB2FD8125A1CE4C97F75106BD93D0D091F0C) {
+    introspect(JAM.policy.pBEAFBB2FD8125A1CE4C97F75106BD93D0D091F0C) {
       AJS.map(args$$5, v72)
     }
   }catch(e$$90) {
@@ -2069,19 +2069,19 @@ function v73() {
   return
 }
 function v71(dest, src$$1) {
-  introspect(JAMScript.introspectors.processBEAFBB2FD8125A1CE4C97F75106BD93D0D091F0C) {
+  introspect(JAM.policy.pBEAFBB2FD8125A1CE4C97F75106BD93D0D091F0C) {
     dest = AJS.getElement(dest)
   }
   var parent$$1 = dest.parentNode;
   if(src$$1) {
-    introspect(JAMScript.introspectors.processBEAFBB2FD8125A1CE4C97F75106BD93D0D091F0C) {
+    introspect(JAM.policy.pBEAFBB2FD8125A1CE4C97F75106BD93D0D091F0C) {
       src$$1 = AJS.getElement(src$$1)
     }
-    introspect(JAMScript.introspectors.processBEAFBB2FD8125A1CE4C97F75106BD93D0D091F0C) {
+    introspect(JAM.policy.pBEAFBB2FD8125A1CE4C97F75106BD93D0D091F0C) {
       parent$$1.replaceChild(src$$1, dest)
     }
   }else {
-    introspect(JAMScript.introspectors.processBEAFBB2FD8125A1CE4C97F75106BD93D0D091F0C) {
+    introspect(JAM.policy.pBEAFBB2FD8125A1CE4C97F75106BD93D0D091F0C) {
       parent$$1.removeChild(dest)
     }
   }
@@ -2089,7 +2089,7 @@ function v71(dest, src$$1) {
 }
 function v70(elm$$19, reference_elm$$1) {
   var v472 = reference_elm$$1.parentNode;
-  introspect(JAMScript.introspectors.processBEAFBB2FD8125A1CE4C97F75106BD93D0D091F0C) {
+  introspect(JAM.policy.pBEAFBB2FD8125A1CE4C97F75106BD93D0D091F0C) {
     v472.insertBefore(elm$$19, reference_elm$$1)
   }
   return elm$$19
@@ -2097,7 +2097,7 @@ function v70(elm$$19, reference_elm$$1) {
 function v69(elm$$18, reference_elm) {
   var v473 = reference_elm.parentNode;
   var v474 = reference_elm.nextSibling;
-  introspect(JAMScript.introspectors.processBEAFBB2FD8125A1CE4C97F75106BD93D0D091F0C) {
+  introspect(JAM.policy.pBEAFBB2FD8125A1CE4C97F75106BD93D0D091F0C) {
     v473.insertBefore(elm$$18, v474)
   }
   return elm$$18
@@ -2106,7 +2106,7 @@ function v68(elm$$17) {
   var child$$1;
   var v475 = child$$1 = elm$$17.firstChild;
   for(;v475;) {
-    introspect(JAMScript.introspectors.processBEAFBB2FD8125A1CE4C97F75106BD93D0D091F0C) {
+    introspect(JAM.policy.pBEAFBB2FD8125A1CE4C97F75106BD93D0D091F0C) {
       AJS.swapDOM(child$$1, null)
     }
     v475 = child$$1 = elm$$17.firstChild
@@ -2132,7 +2132,7 @@ function v67(elm$$16) {
       for(;true;) {
         var t_elm = args$$4.shift();
         if(t_elm) {
-          introspect(JAMScript.introspectors.processBEAFBB2FD8125A1CE4C97F75106BD93D0D091F0C) {
+          introspect(JAM.policy.pBEAFBB2FD8125A1CE4C97F75106BD93D0D091F0C) {
             AJS.insertBefore(t_elm, first_child)
           }
         }else {
@@ -2148,19 +2148,19 @@ function v67(elm$$16) {
 }
 function v66(elm$$15) {
   function v65(n$$3) {
-    introspect(JAMScript.introspectors.processBEAFBB2FD8125A1CE4C97F75106BD93D0D091F0C) {
+    introspect(JAM.policy.pBEAFBB2FD8125A1CE4C97F75106BD93D0D091F0C) {
       var v481 = AJS.isString(n$$3)
     }
     if(v481) {
-      introspect(JAMScript.introspectors.processBEAFBB2FD8125A1CE4C97F75106BD93D0D091F0C) {
+      introspect(JAM.policy.pBEAFBB2FD8125A1CE4C97F75106BD93D0D091F0C) {
         n$$3 = AJS.TN(n$$3)
       }
     }
-    introspect(JAMScript.introspectors.processBEAFBB2FD8125A1CE4C97F75106BD93D0D091F0C) {
+    introspect(JAM.policy.pBEAFBB2FD8125A1CE4C97F75106BD93D0D091F0C) {
       var v482 = AJS.isDefined(n$$3)
     }
     if(v482) {
-      introspect(JAMScript.introspectors.processBEAFBB2FD8125A1CE4C97F75106BD93D0D091F0C) {
+      introspect(JAM.policy.pBEAFBB2FD8125A1CE4C97F75106BD93D0D091F0C) {
         elm$$15.appendChild(n$$3)
       }
     }
@@ -2177,19 +2177,19 @@ function v64(elm$$14) {
   var v4173 = typeof elm$$14;
   var v484 = v4173 == "string";
   if(v484) {
-    introspect(JAMScript.introspectors.processBEAFBB2FD8125A1CE4C97F75106BD93D0D091F0C) {
+    introspect(JAM.policy.pBEAFBB2FD8125A1CE4C97F75106BD93D0D091F0C) {
       elm$$14 = AJS.HTML2DOM(elm$$14)
     }
   }
   document.write('<span id="dummy_holder"></span>');
   var v485 = AJS.$("dummy_holder");
-  introspect(JAMScript.introspectors.processBEAFBB2FD8125A1CE4C97F75106BD93D0D091F0C) {
+  introspect(JAM.policy.pBEAFBB2FD8125A1CE4C97F75106BD93D0D091F0C) {
     AJS.swapDOM(v485, elm$$14)
   }
   return
 }
 function v63(select) {
-  introspect(JAMScript.introspectors.processBEAFBB2FD8125A1CE4C97F75106BD93D0D091F0C) {
+  introspect(JAM.policy.pBEAFBB2FD8125A1CE4C97F75106BD93D0D091F0C) {
     select = AJS.$(select)
   }
   var v4174 = select.options;
@@ -2222,19 +2222,19 @@ function v62(form, name$$31) {
     }
     return
   }
-  introspect(JAMScript.introspectors.processBEAFBB2FD8125A1CE4C97F75106BD93D0D091F0C) {
+  introspect(JAM.policy.pBEAFBB2FD8125A1CE4C97F75106BD93D0D091F0C) {
     form = AJS.$(form)
   }
   var r$$7 = null;
   var v489 = form.elements;
-  introspect(JAMScript.introspectors.processBEAFBB2FD8125A1CE4C97F75106BD93D0D091F0C) {
+  introspect(JAM.policy.pBEAFBB2FD8125A1CE4C97F75106BD93D0D091F0C) {
     AJS.map(v489, v60)
   }
   if(r$$7) {
     return r$$7
   }
   var v490 = AJS.$bytc("select", null, form);
-  introspect(JAMScript.introspectors.processBEAFBB2FD8125A1CE4C97F75106BD93D0D091F0C) {
+  introspect(JAM.policy.pBEAFBB2FD8125A1CE4C97F75106BD93D0D091F0C) {
     AJS.map(v490, v61)
   }
   return r$$7
@@ -2247,7 +2247,7 @@ function v58(elm$$11, tag_name$$5, class_name$$5) {
   function v57(m$$5) {
     return m$$5.nextSibling
   }
-  introspect(JAMScript.introspectors.processBEAFBB2FD8125A1CE4C97F75106BD93D0D091F0C) {
+  introspect(JAM.policy.pBEAFBB2FD8125A1CE4C97F75106BD93D0D091F0C) {
     return AJS._nodeWalk(elm$$11, tag_name$$5, class_name$$5, v57)
   }
 }
@@ -2255,7 +2255,7 @@ function v56(elm$$10, tag_name$$4, class_name$$4) {
   function v55(m$$4) {
     return m$$4.previousSibling
   }
-  introspect(JAMScript.introspectors.processBEAFBB2FD8125A1CE4C97F75106BD93D0D091F0C) {
+  introspect(JAM.policy.pBEAFBB2FD8125A1CE4C97F75106BD93D0D091F0C) {
     return AJS._nodeWalk(elm$$10, tag_name$$4, class_name$$4, v55)
   }
 }
@@ -2270,12 +2270,12 @@ function v54(elm$$9, parent_to_consider, max_look_up) {
   }
   var v494 = elm$$9.parentNode;
   var v495 = max_look_up - 1;
-  introspect(JAMScript.introspectors.processBEAFBB2FD8125A1CE4C97F75106BD93D0D091F0C) {
+  introspect(JAM.policy.pBEAFBB2FD8125A1CE4C97F75106BD93D0D091F0C) {
     return AJS.hasParent(v494, parent_to_consider, v495)
   }
 }
 function v53(elm$$8, tag_name$$3, class_name$$3) {
-  introspect(JAMScript.introspectors.processBEAFBB2FD8125A1CE4C97F75106BD93D0D091F0C) {
+  introspect(JAM.policy.pBEAFBB2FD8125A1CE4C97F75106BD93D0D091F0C) {
     var elms = AJS.$bytc(tag_name$$3, class_name$$3, elm$$8)
   }
   var v4178 = elms.length;
@@ -2294,35 +2294,35 @@ function v52(elm$$7, tag_name$$2, class_name$$2) {
     }
     return
   }
-  introspect(JAMScript.introspectors.processBEAFBB2FD8125A1CE4C97F75106BD93D0D091F0C) {
+  introspect(JAM.policy.pBEAFBB2FD8125A1CE4C97F75106BD93D0D091F0C) {
     return AJS._nodeWalk(elm$$7, tag_name$$2, class_name$$2, v51)
   }
 }
 function v50(elm$$6, tag_name$$1, class_name$$1, fn_next_elm) {
   function v49(p$$8) {
-    introspect(JAMScript.introspectors.processBEAFBB2FD8125A1CE4C97F75106BD93D0D091F0C) {
+    introspect(JAM.policy.pBEAFBB2FD8125A1CE4C97F75106BD93D0D091F0C) {
       return AJS.hasClass(p$$8, class_name$$1)
     }
   }
   function v48(p$$7) {
-    introspect(JAMScript.introspectors.processBEAFBB2FD8125A1CE4C97F75106BD93D0D091F0C) {
+    introspect(JAM.policy.pBEAFBB2FD8125A1CE4C97F75106BD93D0D091F0C) {
       var v497 = AJS.nodeName(p$$7)
     }
     return v497 == tag_name$$1
   }
   function v47(p$$6) {
-    introspect(JAMScript.introspectors.processBEAFBB2FD8125A1CE4C97F75106BD93D0D091F0C) {
+    introspect(JAM.policy.pBEAFBB2FD8125A1CE4C97F75106BD93D0D091F0C) {
       var v4179 = AJS.nodeName(p$$6)
     }
     var v498 = v4179 == tag_name$$1;
     if(v498) {
-      introspect(JAMScript.introspectors.processBEAFBB2FD8125A1CE4C97F75106BD93D0D091F0C) {
+      introspect(JAM.policy.pBEAFBB2FD8125A1CE4C97F75106BD93D0D091F0C) {
         v498 = AJS.hasClass(p$$6, class_name$$1)
       }
     }
     return v498
   }
-  introspect(JAMScript.introspectors.processBEAFBB2FD8125A1CE4C97F75106BD93D0D091F0C) {
+  introspect(JAM.policy.pBEAFBB2FD8125A1CE4C97F75106BD93D0D091F0C) {
     var p$$5 = fn_next_elm(elm$$6)
   }
   var checkFn;
@@ -2336,20 +2336,20 @@ function v50(elm$$6, tag_name$$1, class_name$$1, fn_next_elm) {
       checkFn = v49
     }
   }
-  introspect(JAMScript.introspectors.processBEAFBB2FD8125A1CE4C97F75106BD93D0D091F0C) {
+  introspect(JAM.policy.pBEAFBB2FD8125A1CE4C97F75106BD93D0D091F0C) {
     var v500 = checkFn(elm$$6)
   }
   if(v500) {
     return elm$$6
   }
   for(;p$$5;) {
-    introspect(JAMScript.introspectors.processBEAFBB2FD8125A1CE4C97F75106BD93D0D091F0C) {
+    introspect(JAM.policy.pBEAFBB2FD8125A1CE4C97F75106BD93D0D091F0C) {
       var v501 = checkFn(p$$5)
     }
     if(v501) {
       return p$$5
     }
-    introspect(JAMScript.introspectors.processBEAFBB2FD8125A1CE4C97F75106BD93D0D091F0C) {
+    introspect(JAM.policy.pBEAFBB2FD8125A1CE4C97F75106BD93D0D091F0C) {
       p$$5 = fn_next_elm(p$$5)
     }
   }
@@ -2361,14 +2361,14 @@ function v46(elm$$5) {
 }
 function v45(tag_name, class_name, parent, first_match) {
   var class_elements = [];
-  introspect(JAMScript.introspectors.processBEAFBB2FD8125A1CE4C97F75106BD93D0D091F0C) {
+  introspect(JAM.policy.pBEAFBB2FD8125A1CE4C97F75106BD93D0D091F0C) {
     var v4180 = AJS.isDefined(parent)
   }
   var v503 = !v4180;
   if(v503) {
     parent = document
   }
-  introspect(JAMScript.introspectors.processBEAFBB2FD8125A1CE4C97F75106BD93D0D091F0C) {
+  introspect(JAM.policy.pBEAFBB2FD8125A1CE4C97F75106BD93D0D091F0C) {
     var v4181 = AJS.isDefined(tag_name)
   }
   var v504 = !v4181;
@@ -2383,12 +2383,12 @@ function v45(tag_name, class_name, parent, first_match) {
   }
   var v514 = v4182;
   if(v514) {
-    introspect(JAMScript.introspectors.processBEAFBB2FD8125A1CE4C97F75106BD93D0D091F0C) {
+    introspect(JAM.policy.pBEAFBB2FD8125A1CE4C97F75106BD93D0D091F0C) {
       var els = parent.getElementsByClassName(class_name)
     }
     var v508 = tag_name == "*";
     if(v508) {
-      introspect(JAMScript.introspectors.processBEAFBB2FD8125A1CE4C97F75106BD93D0D091F0C) {
+      introspect(JAM.policy.pBEAFBB2FD8125A1CE4C97F75106BD93D0D091F0C) {
         class_elements = AJS.forceArray(els)
       }
     }else {
@@ -2402,7 +2402,7 @@ function v45(tag_name, class_name, parent, first_match) {
         var v506 = v4183 == tag_name;
         if(v506) {
           var v505 = els[i$$25];
-          introspect(JAMScript.introspectors.processBEAFBB2FD8125A1CE4C97F75106BD93D0D091F0C) {
+          introspect(JAM.policy.pBEAFBB2FD8125A1CE4C97F75106BD93D0D091F0C) {
             class_elements.push(v505)
           }
         }
@@ -2411,12 +2411,12 @@ function v45(tag_name, class_name, parent, first_match) {
       }
     }
   }else {
-    introspect(JAMScript.introspectors.processBEAFBB2FD8125A1CE4C97F75106BD93D0D091F0C) {
+    introspect(JAM.policy.pBEAFBB2FD8125A1CE4C97F75106BD93D0D091F0C) {
       els = parent.getElementsByTagName(tag_name)
     }
     var v513 = !class_name;
     if(v513) {
-      introspect(JAMScript.introspectors.processBEAFBB2FD8125A1CE4C97F75106BD93D0D091F0C) {
+      introspect(JAM.policy.pBEAFBB2FD8125A1CE4C97F75106BD93D0D091F0C) {
         class_elements = AJS.forceArray(els)
       }
     }else {
@@ -2429,7 +2429,7 @@ function v45(tag_name, class_name, parent, first_match) {
       for(;v512;) {
         var v12233 = els[i$$25];
         var v9610 = v12233.className;
-        introspect(JAMScript.introspectors.processBEAFBB2FD8125A1CE4C97F75106BD93D0D091F0C) {
+        introspect(JAM.policy.pBEAFBB2FD8125A1CE4C97F75106BD93D0D091F0C) {
           var v4185 = pattern$$1.test(v9610)
         }
         var v9611 = !v4185;
@@ -2439,7 +2439,7 @@ function v45(tag_name, class_name, parent, first_match) {
         var v511 = v4185;
         if(v511) {
           var v510 = els[i$$25];
-          introspect(JAMScript.introspectors.processBEAFBB2FD8125A1CE4C97F75106BD93D0D091F0C) {
+          introspect(JAM.policy.pBEAFBB2FD8125A1CE4C97F75106BD93D0D091F0C) {
             class_elements.push(v510)
           }
         }
@@ -2463,10 +2463,10 @@ function v44() {
   var v516 = i$$24 < v4186;
   for(;v516;) {
     var v515 = args$$3[i$$24];
-    introspect(JAMScript.introspectors.processBEAFBB2FD8125A1CE4C97F75106BD93D0D091F0C) {
+    introspect(JAM.policy.pBEAFBB2FD8125A1CE4C97F75106BD93D0D091F0C) {
       var element$$3 = AJS.getElement(v515)
     }
-    introspect(JAMScript.introspectors.processBEAFBB2FD8125A1CE4C97F75106BD93D0D091F0C) {
+    introspect(JAM.policy.pBEAFBB2FD8125A1CE4C97F75106BD93D0D091F0C) {
       elements.push(element$$3)
     }
     i$$24 = i$$24 + 1;
@@ -2476,18 +2476,18 @@ function v44() {
   return elements
 }
 function v43(id) {
-  introspect(JAMScript.introspectors.processBEAFBB2FD8125A1CE4C97F75106BD93D0D091F0C) {
+  introspect(JAM.policy.pBEAFBB2FD8125A1CE4C97F75106BD93D0D091F0C) {
     var v4188 = AJS.isString(id)
   }
   var v9612 = !v4188;
   if(v9612) {
-    introspect(JAMScript.introspectors.processBEAFBB2FD8125A1CE4C97F75106BD93D0D091F0C) {
+    introspect(JAM.policy.pBEAFBB2FD8125A1CE4C97F75106BD93D0D091F0C) {
       v4188 = AJS.isNumber(id)
     }
   }
   var v517 = v4188;
   if(v517) {
-    introspect(JAMScript.introspectors.processBEAFBB2FD8125A1CE4C97F75106BD93D0D091F0C) {
+    introspect(JAM.policy.pBEAFBB2FD8125A1CE4C97F75106BD93D0D091F0C) {
       return document.getElementById(id)
     }
   }else {
@@ -2498,10 +2498,10 @@ function v43(id) {
 function v42(fn$$3) {
   function v41() {
     var v518 = AJS.$FA(arguments);
-    introspect(JAMScript.introspectors.processBEAFBB2FD8125A1CE4C97F75106BD93D0D091F0C) {
+    introspect(JAM.policy.pBEAFBB2FD8125A1CE4C97F75106BD93D0D091F0C) {
       args$$2 = args$$2.concat(v518)
     }
-    introspect(JAMScript.introspectors.processBEAFBB2FD8125A1CE4C97F75106BD93D0D091F0C) {
+    introspect(JAM.policy.pBEAFBB2FD8125A1CE4C97F75106BD93D0D091F0C) {
       return fn$$3.apply(window, args$$2)
     }
   }
@@ -2511,18 +2511,18 @@ function v42(fn$$3) {
 }
 function v40(list$$9, fn$$2, start_index$$1, end_index$$1) {
   function v39(elm$$4) {
-    introspect(JAMScript.introspectors.processBEAFBB2FD8125A1CE4C97F75106BD93D0D091F0C) {
+    introspect(JAM.policy.pBEAFBB2FD8125A1CE4C97F75106BD93D0D091F0C) {
       var v519 = fn$$2(elm$$4)
     }
     if(v519) {
-      introspect(JAMScript.introspectors.processBEAFBB2FD8125A1CE4C97F75106BD93D0D091F0C) {
+      introspect(JAM.policy.pBEAFBB2FD8125A1CE4C97F75106BD93D0D091F0C) {
         r$$6.push(elm$$4)
       }
     }
     return
   }
   var r$$6 = [];
-  introspect(JAMScript.introspectors.processBEAFBB2FD8125A1CE4C97F75106BD93D0D091F0C) {
+  introspect(JAM.policy.pBEAFBB2FD8125A1CE4C97F75106BD93D0D091F0C) {
     AJS.map(list$$9, v39, start_index$$1, end_index$$1)
   }
   return r$$6
@@ -2557,7 +2557,7 @@ function v37(list$$7, fn, start_index, end_index) {
   var v526 = i$$22 < l$$5;
   for(;v526;) {
     var v524 = list$$7[i$$22];
-    introspect(JAMScript.introspectors.processBEAFBB2FD8125A1CE4C97F75106BD93D0D091F0C) {
+    introspect(JAM.policy.pBEAFBB2FD8125A1CE4C97F75106BD93D0D091F0C) {
       var val = fn(v524, i$$22)
     }
     var v525 = val != undefined;
@@ -2570,10 +2570,10 @@ function v37(list$$7, fn, start_index, end_index) {
   return
 }
 function v36(args$$1) {
-  introspect(JAMScript.introspectors.processBEAFBB2FD8125A1CE4C97F75106BD93D0D091F0C) {
+  introspect(JAM.policy.pBEAFBB2FD8125A1CE4C97F75106BD93D0D091F0C) {
     var f$$59 = AJS.forceArray(args$$1)
   }
-  introspect(JAMScript.introspectors.processBEAFBB2FD8125A1CE4C97F75106BD93D0D091F0C) {
+  introspect(JAM.policy.pBEAFBB2FD8125A1CE4C97F75106BD93D0D091F0C) {
     return AJS.flattenList(f$$59)
   }
 }
@@ -2583,20 +2583,20 @@ function v35(list$$6) {
       var v528 = o$$5 == null;
       if(v528) {
       }else {
-        introspect(JAMScript.introspectors.processBEAFBB2FD8125A1CE4C97F75106BD93D0D091F0C) {
+        introspect(JAM.policy.pBEAFBB2FD8125A1CE4C97F75106BD93D0D091F0C) {
           var v527 = AJS.isArray(o$$5)
         }
         if(v527) {
           _flatten(r$$5, o$$5)
         }else {
-          introspect(JAMScript.introspectors.processBEAFBB2FD8125A1CE4C97F75106BD93D0D091F0C) {
+          introspect(JAM.policy.pBEAFBB2FD8125A1CE4C97F75106BD93D0D091F0C) {
             r$$5.push(o$$5)
           }
         }
       }
       return
     }
-    introspect(JAMScript.introspectors.processBEAFBB2FD8125A1CE4C97F75106BD93D0D091F0C) {
+    introspect(JAM.policy.pBEAFBB2FD8125A1CE4C97F75106BD93D0D091F0C) {
       AJS.map(l$$4, v34)
     }
     return
@@ -2608,7 +2608,7 @@ function v35(list$$6) {
   var v531 = i$$21 < v4190;
   for(;v531;) {
     var elm$$3 = list$$6[i$$21];
-    introspect(JAMScript.introspectors.processBEAFBB2FD8125A1CE4C97F75106BD93D0D091F0C) {
+    introspect(JAM.policy.pBEAFBB2FD8125A1CE4C97F75106BD93D0D091F0C) {
       var v529 = AJS.isArray(elm$$3)
     }
     if(v529) {
@@ -2617,7 +2617,7 @@ function v35(list$$6) {
     }
     var v530 = elm$$3 != null;
     if(v530) {
-      introspect(JAMScript.introspectors.processBEAFBB2FD8125A1CE4C97F75106BD93D0D091F0C) {
+      introspect(JAM.policy.pBEAFBB2FD8125A1CE4C97F75106BD93D0D091F0C) {
         new_list.push(elm$$3)
       }
     }
@@ -2645,7 +2645,7 @@ function v32(list$$5) {
   var v9613 = Math.random();
   var v9614 = list$$5.length;
   var v4192 = v9613 * v9614;
-  introspect(JAMScript.introspectors.processBEAFBB2FD8125A1CE4C97F75106BD93D0D091F0C) {
+  introspect(JAM.policy.pBEAFBB2FD8125A1CE4C97F75106BD93D0D091F0C) {
     var v534 = Math.floor(v4192)
   }
   return v533[v534]
@@ -2680,7 +2680,7 @@ function v29(elm$$2, list$$2, eval_fn) {
     var v9615 = eval_fn;
     if(v9615) {
       var v12234 = list$$2[i$$19];
-      introspect(JAMScript.introspectors.processBEAFBB2FD8125A1CE4C97F75106BD93D0D091F0C) {
+      introspect(JAM.policy.pBEAFBB2FD8125A1CE4C97F75106BD93D0D091F0C) {
         v9615 = eval_fn(v12234)
       }
     }
@@ -2701,7 +2701,7 @@ function v29(elm$$2, list$$2, eval_fn) {
   return-1
 }
 function v28(elm$$1, list$$1) {
-  introspect(JAMScript.introspectors.processBEAFBB2FD8125A1CE4C97F75106BD93D0D091F0C) {
+  introspect(JAM.policy.pBEAFBB2FD8125A1CE4C97F75106BD93D0D091F0C) {
     var i$$18 = AJS.getIndex(elm$$1, list$$1)
   }
   var v540 = i$$18 != -1;
@@ -2719,7 +2719,7 @@ function v27(delim, list) {
     return
   }
   try {
-    introspect(JAMScript.introspectors.processBEAFBB2FD8125A1CE4C97F75106BD93D0D091F0C) {
+    introspect(JAM.policy.pBEAFBB2FD8125A1CE4C97F75106BD93D0D091F0C) {
       return list.join(delim)
     }
   }catch(e$$89) {
@@ -2729,7 +2729,7 @@ function v27(delim, list) {
       v541 = ""
     }
     var r$$3 = v541;
-    introspect(JAMScript.introspectors.processBEAFBB2FD8125A1CE4C97F75106BD93D0D091F0C) {
+    introspect(JAM.policy.pBEAFBB2FD8125A1CE4C97F75106BD93D0D091F0C) {
       AJS.map(list, v26, 1)
     }
     return r$$3 + ""
@@ -2743,7 +2743,7 @@ function v25(args) {
   var v543 = i$$17 < v4201;
   for(;v543;) {
     var v542 = args[i$$17];
-    introspect(JAMScript.introspectors.processBEAFBB2FD8125A1CE4C97F75106BD93D0D091F0C) {
+    introspect(JAM.policy.pBEAFBB2FD8125A1CE4C97F75106BD93D0D091F0C) {
       r$$2.push(v542)
     }
     i$$17 = i$$17 + 1;
@@ -2753,11 +2753,11 @@ function v25(args) {
   return r$$2
 }
 function v24(v$$1) {
-  introspect(JAMScript.introspectors.processBEAFBB2FD8125A1CE4C97F75106BD93D0D091F0C) {
+  introspect(JAM.policy.pBEAFBB2FD8125A1CE4C97F75106BD93D0D091F0C) {
     var v4203 = AJS.isArray(v$$1)
   }
   if(v4203) {
-    introspect(JAMScript.introspectors.processBEAFBB2FD8125A1CE4C97F75106BD93D0D091F0C) {
+    introspect(JAM.policy.pBEAFBB2FD8125A1CE4C97F75106BD93D0D091F0C) {
       var v9618 = AJS.isString(v$$1)
     }
     v4203 = !v9618
@@ -2858,7 +2858,7 @@ function v15() {
     return this.tS()
   }
   function v13(a$$334) {
-    introspect(JAMScript.introspectors.processBEAFBB2FD8125A1CE4C97F75106BD93D0D091F0C) {
+    introspect(JAM.policy.pBEAFBB2FD8125A1CE4C97F75106BD93D0D091F0C) {
       $wnd.__gwtStatsEvent(a$$334)
     }
     return
@@ -3091,7 +3091,7 @@ function v15() {
     }
     var v4231 = v9632;
     if(v4231) {
-      introspect(JAMScript.introspectors.processBEAFBB2FD8125A1CE4C97F75106BD93D0D091F0C) {
+      introspect(JAM.policy.pBEAFBB2FD8125A1CE4C97F75106BD93D0D091F0C) {
         v573 = b$$8.eQ(a$$18)
       }
     }else {
@@ -3357,7 +3357,7 @@ function v15() {
     d$$7 = d$$7 % 1.8446744073709552E19;
     a$$31 = c$$9 % 4294967296;
     var v4246 = d$$7 / 4294967296;
-    introspect(JAMScript.introspectors.processBEAFBB2FD8125A1CE4C97F75106BD93D0D091F0C) {
+    introspect(JAM.policy.pBEAFBB2FD8125A1CE4C97F75106BD93D0D091F0C) {
       var v591 = Math.floor(v4246)
     }
     b$$18 = v591 * 4294967296;
@@ -3408,12 +3408,12 @@ function v15() {
     }
     var v603 = a$$32 > 0;
     if(v603) {
-      introspect(JAMScript.introspectors.processBEAFBB2FD8125A1CE4C97F75106BD93D0D091F0C) {
+      introspect(JAM.policy.pBEAFBB2FD8125A1CE4C97F75106BD93D0D091F0C) {
         var v601 = Math.floor(a$$32)
       }
       return rai(v601, 0)
     }else {
-      introspect(JAMScript.introspectors.processBEAFBB2FD8125A1CE4C97F75106BD93D0D091F0C) {
+      introspect(JAM.policy.pBEAFBB2FD8125A1CE4C97F75106BD93D0D091F0C) {
         var v602 = Math.ceil(a$$32)
       }
       return rai(v602, 0)
@@ -3490,12 +3490,12 @@ function v15() {
     var v615 = a$$35.b;
     if(v615) {
       var v613 = a$$35.c;
-      introspect(JAMScript.introspectors.processBEAFBB2FD8125A1CE4C97F75106BD93D0D091F0C) {
+      introspect(JAM.policy.pBEAFBB2FD8125A1CE4C97F75106BD93D0D091F0C) {
         $wnd.clearInterval(v613)
       }
     }else {
       var v614 = a$$35.c;
-      introspect(JAMScript.introspectors.processBEAFBB2FD8125A1CE4C97F75106BD93D0D091F0C) {
+      introspect(JAM.policy.pBEAFBB2FD8125A1CE4C97F75106BD93D0D091F0C) {
         $wnd.clearTimeout(v614)
       }
     }
@@ -3603,7 +3603,7 @@ function v15() {
     function v9() {
       return
     }
-    introspect(JAMScript.introspectors.processBEAFBB2FD8125A1CE4C97F75106BD93D0D091F0C) {
+    introspect(JAM.policy.pBEAFBB2FD8125A1CE4C97F75106BD93D0D091F0C) {
       __gwt_initHandlers(v9, v10, v11)
     }
     return
@@ -3824,7 +3824,7 @@ function v15() {
       var v651 = a$$inline_60;
       var v652 = b$$inline_61;
       b$$inline_61 = b$$inline_61 + 1;
-      introspect(JAMScript.introspectors.processBEAFBB2FD8125A1CE4C97F75106BD93D0D091F0C) {
+      introspect(JAM.policy.pBEAFBB2FD8125A1CE4C97F75106BD93D0D091F0C) {
         var v15633 = f$$inline_57.charCodeAt(e$$inline_62)
       }
       v651[v652] = v15633;
@@ -3853,7 +3853,7 @@ function v15() {
     return
   }
   function ofi(c$$18, b$$34, a$$55) {
-    introspect(JAMScript.introspectors.processBEAFBB2FD8125A1CE4C97F75106BD93D0D091F0C) {
+    introspect(JAM.policy.pBEAFBB2FD8125A1CE4C97F75106BD93D0D091F0C) {
       c$$18 = c$$18.slice(b$$34, a$$55)
     }
     var v661 = String.fromCharCode;
@@ -3938,7 +3938,7 @@ function v15() {
       for(;v667;) {
         a$$inline_68 = a$$inline_68 << 1;
         var v4274 = a$$inline_68;
-        introspect(JAMScript.introspectors.processBEAFBB2FD8125A1CE4C97F75106BD93D0D091F0C) {
+        introspect(JAM.policy.pBEAFBB2FD8125A1CE4C97F75106BD93D0D091F0C) {
           var v4275 = e$$inline_67.charCodeAt(b$$inline_69)
         }
         a$$inline_68 = v4274 + v4275;
@@ -4011,7 +4011,7 @@ function v15() {
       var v9664 = a$$67.substr(0, v12268);
       var v12469 = a$$67.length;
       var v12269 = v12469 - c$$24;
-      introspect(JAMScript.introspectors.processBEAFBB2FD8125A1CE4C97F75106BD93D0D091F0C) {
+      introspect(JAM.policy.pBEAFBB2FD8125A1CE4C97F75106BD93D0D091F0C) {
         var v9665 = a$$67.substr(c$$24, v12269)
       }
       var v4278 = [v9664, cNh, v9665];
@@ -4043,7 +4043,7 @@ function v15() {
       var v682 = b$$43.b;
       v682.length = b$$43.a;
       var v683 = b$$43.b;
-      introspect(JAMScript.introspectors.processBEAFBB2FD8125A1CE4C97F75106BD93D0D091F0C) {
+      introspect(JAM.policy.pBEAFBB2FD8125A1CE4C97F75106BD93D0D091F0C) {
         a$$68 = v683.join(cNh)
       }
       var v684 = b$$43;
@@ -4239,13 +4239,13 @@ function v15() {
       var v701 = v4298.splice;
       var v4299 = [d$$14, g$$3];
       var v9681 = j$$2 + g$$3;
-      introspect(JAMScript.introspectors.processBEAFBB2FD8125A1CE4C97F75106BD93D0D091F0C) {
+      introspect(JAM.policy.pBEAFBB2FD8125A1CE4C97F75106BD93D0D091F0C) {
         var v4300 = h$$7.slice(j$$2, v9681)
       }
-      introspect(JAMScript.introspectors.processBEAFBB2FD8125A1CE4C97F75106BD93D0D091F0C) {
+      introspect(JAM.policy.pBEAFBB2FD8125A1CE4C97F75106BD93D0D091F0C) {
         var v702 = v4299.concat(v4300)
       }
-      introspect(JAMScript.introspectors.processBEAFBB2FD8125A1CE4C97F75106BD93D0D091F0C) {
+      introspect(JAM.policy.pBEAFBB2FD8125A1CE4C97F75106BD93D0D091F0C) {
         v701.apply(a$$70, v702)
       }
     }
@@ -4542,7 +4542,7 @@ function v15() {
       for(;v745;) {
         var c$$33 = a$$84[f$$11];
         var d$$19 = c$$33.Ab();
-        introspect(JAMScript.introspectors.processBEAFBB2FD8125A1CE4C97F75106BD93D0D091F0C) {
+        introspect(JAM.policy.pBEAFBB2FD8125A1CE4C97F75106BD93D0D091F0C) {
           var v744 = h$$8.yb(g$$5, d$$19)
         }
         if(v744) {
@@ -4564,7 +4564,7 @@ function v15() {
       for(;v748;) {
         var c$$34 = a$$85[f$$12];
         var d$$20 = c$$34.Ab();
-        introspect(JAMScript.introspectors.processBEAFBB2FD8125A1CE4C97F75106BD93D0D091F0C) {
+        introspect(JAM.policy.pBEAFBB2FD8125A1CE4C97F75106BD93D0D091F0C) {
           var v747 = h$$9.yb(g$$6, d$$20)
         }
         if(v747) {
@@ -4661,7 +4661,7 @@ function v15() {
       var v4338 = a$$88.a;
       var v755 = Chi(v4338);
       d$$21 = p9h(v755, 14);
-      introspect(JAMScript.introspectors.processBEAFBB2FD8125A1CE4C97F75106BD93D0D091F0C) {
+      introspect(JAM.policy.pBEAFBB2FD8125A1CE4C97F75106BD93D0D091F0C) {
         var v4339 = this.wb(d$$21)
       }
       var v756 = !v4339;
@@ -4843,7 +4843,7 @@ function v15() {
         c$$inline_502.b = b$$inline_374;
         c$$inline_502.a = a$$inline_503;
         b$$inline_96 = c$$inline_502;
-        introspect(JAMScript.introspectors.processBEAFBB2FD8125A1CE4C97F75106BD93D0D091F0C) {
+        introspect(JAM.policy.pBEAFBB2FD8125A1CE4C97F75106BD93D0D091F0C) {
           a$$inline_93.vb(b$$inline_96)
         }
       }
@@ -4863,7 +4863,7 @@ function v15() {
         var v773 = f$$inline_103 < b$$inline_104;
         for(;v773;) {
           var v772 = a$$inline_102[f$$inline_103];
-          introspect(JAMScript.introspectors.processBEAFBB2FD8125A1CE4C97F75106BD93D0D091F0C) {
+          introspect(JAM.policy.pBEAFBB2FD8125A1CE4C97F75106BD93D0D091F0C) {
             c$$inline_99.vb(v772)
           }
           f$$inline_103 = f$$inline_103 + 1;
@@ -4979,7 +4979,7 @@ function v15() {
   }
   function gii(a$$98) {
     var v789 = this.bc();
-    introspect(JAMScript.introspectors.processBEAFBB2FD8125A1CE4C97F75106BD93D0D091F0C) {
+    introspect(JAM.policy.pBEAFBB2FD8125A1CE4C97F75106BD93D0D091F0C) {
       this.ub(v789, a$$98)
     }
     return true
@@ -5141,7 +5141,7 @@ function v15() {
     var v808 = a$$106.a;
     var v9732 = a$$106.a;
     a$$106.a = v9732 + 1;
-    introspect(JAMScript.introspectors.processBEAFBB2FD8125A1CE4C97F75106BD93D0D091F0C) {
+    introspect(JAM.policy.pBEAFBB2FD8125A1CE4C97F75106BD93D0D091F0C) {
       return v807.Db(v808)
     }
   }
@@ -5257,7 +5257,7 @@ function v15() {
     var v4392 = d$$25.a;
     b$$82 = v4392[a$$115];
     var v821 = d$$25.a;
-    introspect(JAMScript.introspectors.processBEAFBB2FD8125A1CE4C97F75106BD93D0D091F0C) {
+    introspect(JAM.policy.pBEAFBB2FD8125A1CE4C97F75106BD93D0D091F0C) {
       v821.splice(a$$115, 1)
     }
     var v4393 = d$$25.b;
@@ -5285,7 +5285,7 @@ function v15() {
       lii(a$$117, v822)
     }
     var v824 = this.a;
-    introspect(JAMScript.introspectors.processBEAFBB2FD8125A1CE4C97F75106BD93D0D091F0C) {
+    introspect(JAM.policy.pBEAFBB2FD8125A1CE4C97F75106BD93D0D091F0C) {
       v824.splice(a$$117, 0, b$$83)
     }
     var v4397 = this.b;
@@ -5840,7 +5840,7 @@ function v15() {
         var v931 = e$$inline_119.hasChildNodes();
         for(;v931;) {
           var v930 = e$$inline_119.firstChild;
-          introspect(JAMScript.introspectors.processBEAFBB2FD8125A1CE4C97F75106BD93D0D091F0C) {
+          introspect(JAM.policy.pBEAFBB2FD8125A1CE4C97F75106BD93D0D091F0C) {
             d$$inline_120.appendChild(v930)
           }
           v931 = e$$inline_119.hasChildNodes()
@@ -7028,7 +7028,7 @@ function v15() {
                           var v1088 = v4488 >> 1;
                           f$$inline_385 = e$$inline_384 + v1088;
                           g$$inline_386 = h$$inline_379[f$$inline_385];
-                          introspect(JAMScript.introspectors.processBEAFBB2FD8125A1CE4C97F75106BD93D0D091F0C) {
+                          introspect(JAM.policy.pBEAFBB2FD8125A1CE4C97F75106BD93D0D091F0C) {
                             b$$inline_382 = g$$inline_386.cT(d$$inline_380)
                           }
                           var v1090 = b$$inline_382 < 0;
@@ -7374,7 +7374,7 @@ function v15() {
         var e$$inline_395;
         try {
           var v1143 = i$$inline_388.a;
-          introspect(JAMScript.introspectors.processBEAFBB2FD8125A1CE4C97F75106BD93D0D091F0C) {
+          introspect(JAM.policy.pBEAFBB2FD8125A1CE4C97F75106BD93D0D091F0C) {
             c$$inline_393 = v1143.createTextNode(h$$inline_389)
           }
           e$$inline_395 = g$$inline_390.parentNode;
@@ -7386,11 +7386,11 @@ function v15() {
           }
           var v1144 = v4511;
           if(v1144) {
-            introspect(JAMScript.introspectors.processBEAFBB2FD8125A1CE4C97F75106BD93D0D091F0C) {
+            introspect(JAM.policy.pBEAFBB2FD8125A1CE4C97F75106BD93D0D091F0C) {
               e$$inline_395.insertBefore(c$$inline_393, g$$inline_390)
             }
           }else {
-            introspect(JAMScript.introspectors.processBEAFBB2FD8125A1CE4C97F75106BD93D0D091F0C) {
+            introspect(JAM.policy.pBEAFBB2FD8125A1CE4C97F75106BD93D0D091F0C) {
               f$$inline_391.appendChild(c$$inline_393)
             }
           }
@@ -7550,11 +7550,11 @@ function v15() {
       }
       var v1162 = v4523;
       if(v1162) {
-        introspect(JAMScript.introspectors.processBEAFBB2FD8125A1CE4C97F75106BD93D0D091F0C) {
+        introspect(JAM.policy.pBEAFBB2FD8125A1CE4C97F75106BD93D0D091F0C) {
           e$$inline_179.insertBefore(c$$inline_174, b$$135)
         }
       }else {
-        introspect(JAMScript.introspectors.processBEAFBB2FD8125A1CE4C97F75106BD93D0D091F0C) {
+        introspect(JAM.policy.pBEAFBB2FD8125A1CE4C97F75106BD93D0D091F0C) {
           f$$inline_176.appendChild(c$$inline_174)
         }
       }
@@ -8070,13 +8070,13 @@ function v15() {
       for(;v1257;) {
         g$$21 = AUi(c$$100, f$$35);
         i$$7 = BUi(c$$100, f$$35);
-        introspect(JAMScript.introspectors.processBEAFBB2FD8125A1CE4C97F75106BD93D0D091F0C) {
+        introspect(JAM.policy.pBEAFBB2FD8125A1CE4C97F75106BD93D0D091F0C) {
           var v4570 = e$$53.hasAttributeNS(i$$7, g$$21)
         }
         var v1256 = !v4570;
         if(v1256) {
           var v1255 = CUi(c$$100, f$$35);
-          introspect(JAMScript.introspectors.processBEAFBB2FD8125A1CE4C97F75106BD93D0D091F0C) {
+          introspect(JAM.policy.pBEAFBB2FD8125A1CE4C97F75106BD93D0D091F0C) {
             e$$53.setAttributeNS(i$$7, g$$21, v1255)
           }
         }
@@ -8105,18 +8105,18 @@ function v15() {
       if(v1261) {
         var v1259 = f$$36.d;
         var v4573 = f$$36.a;
-        introspect(JAMScript.introspectors.processBEAFBB2FD8125A1CE4C97F75106BD93D0D091F0C) {
+        introspect(JAM.policy.pBEAFBB2FD8125A1CE4C97F75106BD93D0D091F0C) {
           var v1260 = v4573.createTextNode(e$$54)
         }
-        introspect(JAMScript.introspectors.processBEAFBB2FD8125A1CE4C97F75106BD93D0D091F0C) {
+        introspect(JAM.policy.pBEAFBB2FD8125A1CE4C97F75106BD93D0D091F0C) {
           v1259.appendChild(v1260)
         }
       }
       var v4574 = f$$36.a;
-      introspect(JAMScript.introspectors.processBEAFBB2FD8125A1CE4C97F75106BD93D0D091F0C) {
+      introspect(JAM.policy.pBEAFBB2FD8125A1CE4C97F75106BD93D0D091F0C) {
         var v1262 = v4574.createTextNode(e$$54)
       }
-      introspect(JAMScript.introspectors.processBEAFBB2FD8125A1CE4C97F75106BD93D0D091F0C) {
+      introspect(JAM.policy.pBEAFBB2FD8125A1CE4C97F75106BD93D0D091F0C) {
         d$$63.appendChild(v1262)
       }
     }catch(a$$210) {
@@ -8140,18 +8140,18 @@ function v15() {
       if(v1266) {
         var v1264 = f$$38.d;
         var v4576 = f$$38.a;
-        introspect(JAMScript.introspectors.processBEAFBB2FD8125A1CE4C97F75106BD93D0D091F0C) {
+        introspect(JAM.policy.pBEAFBB2FD8125A1CE4C97F75106BD93D0D091F0C) {
           var v1265 = v4576.createComment(c$$103)
         }
-        introspect(JAMScript.introspectors.processBEAFBB2FD8125A1CE4C97F75106BD93D0D091F0C) {
+        introspect(JAM.policy.pBEAFBB2FD8125A1CE4C97F75106BD93D0D091F0C) {
           v1264.appendChild(v1265)
         }
       }
       var v4577 = f$$38.a;
-      introspect(JAMScript.introspectors.processBEAFBB2FD8125A1CE4C97F75106BD93D0D091F0C) {
+      introspect(JAM.policy.pBEAFBB2FD8125A1CE4C97F75106BD93D0D091F0C) {
         var v1267 = v4577.createComment(c$$103)
       }
-      introspect(JAMScript.introspectors.processBEAFBB2FD8125A1CE4C97F75106BD93D0D091F0C) {
+      introspect(JAM.policy.pBEAFBB2FD8125A1CE4C97F75106BD93D0D091F0C) {
         e$$56.appendChild(v1267)
       }
     }catch(a$$214) {
@@ -8175,11 +8175,11 @@ function v15() {
       if(v1271) {
         var v1269 = f$$39.d;
         var v1270 = c$$105.cloneNode(true);
-        introspect(JAMScript.introspectors.processBEAFBB2FD8125A1CE4C97F75106BD93D0D091F0C) {
+        introspect(JAM.policy.pBEAFBB2FD8125A1CE4C97F75106BD93D0D091F0C) {
           v1269.appendChild(v1270)
         }
       }
-      introspect(JAMScript.introspectors.processBEAFBB2FD8125A1CE4C97F75106BD93D0D091F0C) {
+      introspect(JAM.policy.pBEAFBB2FD8125A1CE4C97F75106BD93D0D091F0C) {
         e$$58.appendChild(c$$105)
       }
     }catch(a$$218) {
@@ -8212,7 +8212,7 @@ function v15() {
       var v12495 = Math.random();
       var v12496 = chars.length;
       var v12323 = v12495 * v12496;
-      introspect(JAMScript.introspectors.processBEAFBB2FD8125A1CE4C97F75106BD93D0D091F0C) {
+      introspect(JAM.policy.pBEAFBB2FD8125A1CE4C97F75106BD93D0D091F0C) {
         var v9802 = Math.floor(v12323)
       }
       var v4582 = v9801[v9802];
@@ -8234,7 +8234,7 @@ function v15() {
     var attrvalue;
     try {
       var v1276 = i$$9.a;
-      introspect(JAMScript.introspectors.processBEAFBB2FD8125A1CE4C97F75106BD93D0D091F0C) {
+      introspect(JAM.policy.pBEAFBB2FD8125A1CE4C97F75106BD93D0D091F0C) {
         h$$19 = v1276.createElementNS(g$$22, f$$40)
       }
       tagname$$2 = f$$40;
@@ -8245,7 +8245,7 @@ function v15() {
         attrname = AUi(c$$106, e$$59);
         attrvalue = CUi(c$$106, e$$59);
         var v1277 = BUi(c$$106, e$$59);
-        introspect(JAMScript.introspectors.processBEAFBB2FD8125A1CE4C97F75106BD93D0D091F0C) {
+        introspect(JAM.policy.pBEAFBB2FD8125A1CE4C97F75106BD93D0D091F0C) {
           h$$19.setAttributeNS(v1277, attrname, attrvalue)
         }
         var v4584 = f$$40 == hIg;
@@ -8310,7 +8310,7 @@ function v15() {
         i$$9.d = h$$19;
         var v1285 = i$$9;
         var v4590 = i$$9.a;
-        introspect(JAMScript.introspectors.processBEAFBB2FD8125A1CE4C97F75106BD93D0D091F0C) {
+        introspect(JAM.policy.pBEAFBB2FD8125A1CE4C97F75106BD93D0D091F0C) {
           var v15642 = v4590.createElementNS(jKg, hIg)
         }
         v1285.b = v15642;
@@ -8322,7 +8322,7 @@ function v15() {
           var v1286 = BUi(c$$106, e$$59);
           var v1287 = AUi(c$$106, e$$59);
           var v1288 = CUi(c$$106, e$$59);
-          introspect(JAMScript.introspectors.processBEAFBB2FD8125A1CE4C97F75106BD93D0D091F0C) {
+          introspect(JAM.policy.pBEAFBB2FD8125A1CE4C97F75106BD93D0D091F0C) {
             h$$19.setAttributeNS(v1286, v1287, v1288)
           }
           e$$59 = e$$59 + 1;
@@ -8373,7 +8373,7 @@ function v15() {
     var check;
     try {
       var v1294 = g$$24.a;
-      introspect(JAMScript.introspectors.processBEAFBB2FD8125A1CE4C97F75106BD93D0D091F0C) {
+      introspect(JAM.policy.pBEAFBB2FD8125A1CE4C97F75106BD93D0D091F0C) {
         check = v1294.getElementsByTagNameNS(hrg, hAg)
       }
       var v1295 = check.length;
@@ -8381,7 +8381,7 @@ function v15() {
         return check[0]
       }
       var v1296 = g$$24.a;
-      introspect(JAMScript.introspectors.processBEAFBB2FD8125A1CE4C97F75106BD93D0D091F0C) {
+      introspect(JAM.policy.pBEAFBB2FD8125A1CE4C97F75106BD93D0D091F0C) {
         f$$42 = v1296.createElementNS(hrg, hAg)
       }
       e$$61 = 0;
@@ -8391,7 +8391,7 @@ function v15() {
         var v1297 = BUi(c$$108, e$$61);
         var v1298 = AUi(c$$108, e$$61);
         var v1299 = CUi(c$$108, e$$61);
-        introspect(JAMScript.introspectors.processBEAFBB2FD8125A1CE4C97F75106BD93D0D091F0C) {
+        introspect(JAM.policy.pBEAFBB2FD8125A1CE4C97F75106BD93D0D091F0C) {
           f$$42.setAttributeNS(v1297, v1298, v1299)
         }
         e$$61 = e$$61 + 1;
@@ -8399,7 +8399,7 @@ function v15() {
         v1300 = e$$61 < v4594
       }
       var v1301 = g$$24.a;
-      introspect(JAMScript.introspectors.processBEAFBB2FD8125A1CE4C97F75106BD93D0D091F0C) {
+      introspect(JAM.policy.pBEAFBB2FD8125A1CE4C97F75106BD93D0D091F0C) {
         v1301.appendChild(f$$42)
       }
       return f$$42
@@ -8424,7 +8424,7 @@ function v15() {
     try {
       e$$62 = d$$71.parentNode;
       if(e$$62) {
-        introspect(JAMScript.introspectors.processBEAFBB2FD8125A1CE4C97F75106BD93D0D091F0C) {
+        introspect(JAM.policy.pBEAFBB2FD8125A1CE4C97F75106BD93D0D091F0C) {
           e$$62.removeChild(d$$71)
         }
       }
@@ -8458,7 +8458,7 @@ function v15() {
       var b$$inline_188 = b$$156.b;
       var v1307 = b$$inline_188.parentNode;
       var v1308 = b$$156.d;
-      introspect(JAMScript.introspectors.processBEAFBB2FD8125A1CE4C97F75106BD93D0D091F0C) {
+      introspect(JAM.policy.pBEAFBB2FD8125A1CE4C97F75106BD93D0D091F0C) {
         v1307.replaceChild(v1308, b$$inline_188)
       }
       var v9805 = b$$156.e;
@@ -8484,7 +8484,7 @@ function v15() {
     function v12(c$$112, a$$234) {
       var v1322 = hrg == c$$112;
       if(v1322) {
-        introspect(JAMScript.introspectors.processBEAFBB2FD8125A1CE4C97F75106BD93D0D091F0C) {
+        introspect(JAM.policy.pBEAFBB2FD8125A1CE4C97F75106BD93D0D091F0C) {
           return d$$74.createElement(a$$234)
         }
       }else {
@@ -8493,30 +8493,30 @@ function v15() {
           var v4598 = d$$74.mathplayerinitialized;
           var v1314 = !v4598;
           if(v1314) {
-            introspect(JAMScript.introspectors.processBEAFBB2FD8125A1CE4C97F75106BD93D0D091F0C) {
+            introspect(JAM.policy.pBEAFBB2FD8125A1CE4C97F75106BD93D0D091F0C) {
               var b$$157 = document.createElement(FKg)
             }
-            introspect(JAMScript.introspectors.processBEAFBB2FD8125A1CE4C97F75106BD93D0D091F0C) {
+            introspect(JAM.policy.pBEAFBB2FD8125A1CE4C97F75106BD93D0D091F0C) {
               b$$157.setAttribute(kLg, wLg)
             }
-            introspect(JAMScript.introspectors.processBEAFBB2FD8125A1CE4C97F75106BD93D0D091F0C) {
+            introspect(JAM.policy.pBEAFBB2FD8125A1CE4C97F75106BD93D0D091F0C) {
               b$$157.setAttribute(bMg, mMg)
             }
-            introspect(JAMScript.introspectors.processBEAFBB2FD8125A1CE4C97F75106BD93D0D091F0C) {
+            introspect(JAM.policy.pBEAFBB2FD8125A1CE4C97F75106BD93D0D091F0C) {
               var v4599 = document.getElementsByTagName(Drg)
             }
             var v1312 = v4599[0];
-            introspect(JAMScript.introspectors.processBEAFBB2FD8125A1CE4C97F75106BD93D0D091F0C) {
+            introspect(JAM.policy.pBEAFBB2FD8125A1CE4C97F75106BD93D0D091F0C) {
               v1312.appendChild(b$$157)
             }
             var v1313 = document.namespaces;
-            introspect(JAMScript.introspectors.processBEAFBB2FD8125A1CE4C97F75106BD93D0D091F0C) {
+            introspect(JAM.policy.pBEAFBB2FD8125A1CE4C97F75106BD93D0D091F0C) {
               v1313.add(xMg, wDg, cNg)
             }
             d$$74.mathplayerinitialized = true
           }
           var v1315 = nNg + a$$234;
-          introspect(JAMScript.introspectors.processBEAFBB2FD8125A1CE4C97F75106BD93D0D091F0C) {
+          introspect(JAM.policy.pBEAFBB2FD8125A1CE4C97F75106BD93D0D091F0C) {
             return d$$74.createElement(v1315)
           }
         }else {
@@ -8525,30 +8525,30 @@ function v15() {
             var v4600 = d$$74.renesisinitialized;
             var v1318 = !v4600;
             if(v1318) {
-              introspect(JAMScript.introspectors.processBEAFBB2FD8125A1CE4C97F75106BD93D0D091F0C) {
+              introspect(JAM.policy.pBEAFBB2FD8125A1CE4C97F75106BD93D0D091F0C) {
                 b$$157 = document.createElement(FKg)
               }
-              introspect(JAMScript.introspectors.processBEAFBB2FD8125A1CE4C97F75106BD93D0D091F0C) {
+              introspect(JAM.policy.pBEAFBB2FD8125A1CE4C97F75106BD93D0D091F0C) {
                 b$$157.setAttribute(kLg, yNg)
               }
-              introspect(JAMScript.introspectors.processBEAFBB2FD8125A1CE4C97F75106BD93D0D091F0C) {
+              introspect(JAM.policy.pBEAFBB2FD8125A1CE4C97F75106BD93D0D091F0C) {
                 b$$157.setAttribute(bMg, dOg)
               }
-              introspect(JAMScript.introspectors.processBEAFBB2FD8125A1CE4C97F75106BD93D0D091F0C) {
+              introspect(JAM.policy.pBEAFBB2FD8125A1CE4C97F75106BD93D0D091F0C) {
                 var v4601 = document.getElementsByTagName(Drg)
               }
               var v1316 = v4601[0];
-              introspect(JAMScript.introspectors.processBEAFBB2FD8125A1CE4C97F75106BD93D0D091F0C) {
+              introspect(JAM.policy.pBEAFBB2FD8125A1CE4C97F75106BD93D0D091F0C) {
                 v1316.appendChild(b$$157)
               }
               var v1317 = document.namespaces;
-              introspect(JAMScript.introspectors.processBEAFBB2FD8125A1CE4C97F75106BD93D0D091F0C) {
+              introspect(JAM.policy.pBEAFBB2FD8125A1CE4C97F75106BD93D0D091F0C) {
                 v1317.add(oOg, bEg, zOg)
               }
               d$$74.renesisinitialized = true
             }
             var v1319 = fPg + a$$234;
-            introspect(JAMScript.introspectors.processBEAFBB2FD8125A1CE4C97F75106BD93D0D091F0C) {
+            introspect(JAM.policy.pBEAFBB2FD8125A1CE4C97F75106BD93D0D091F0C) {
               return d$$74.createElement(v1319)
             }
           }else {
@@ -8674,7 +8674,7 @@ function v15() {
         b$$inline_200 = b$$inline_200 + 1;
         var v4614 = e$$inline_197;
         e$$inline_197 = e$$inline_197 + 1;
-        introspect(JAMScript.introspectors.processBEAFBB2FD8125A1CE4C97F75106BD93D0D091F0C) {
+        introspect(JAM.policy.pBEAFBB2FD8125A1CE4C97F75106BD93D0D091F0C) {
           var v15643 = c$$inline_201.charCodeAt(v4614)
         }
         v1337[v1338] = v15643;
@@ -11572,7 +11572,7 @@ function v15() {
     ezi, dAi, Ewi, kxi, Cwi, Fwi, CEi, vEi, FCi, FBi, DDi, yDi, cDi, AGi, vGi, Bpi, dqi, qpi, vqi, jqi, ppi, vti, hti, zsi, Cti, mui, kui, tui, Dvi, Dyi, mAi, Bzi, ozi, syi, aAi, Azi, eyi, iyi, Bwi, Dwi, cxi, ixi, jwi, nFi, kFi, mFi, hGi, jGi, aGi, iBi, uDi, qEi, lEi, dCi, zDi, FDi, rpi, zpi, toi, oqi, fqi, cqi, mqi, eqi, iqi, gqi, wpi, upi, sqi, rqi, spi, nqi, Dqi, hsi, bsi, vri, Fsi, Eui, cui, fyi, izi, lyi, xzi, vyi, qAi, myi, vxi, owi, lFi, aFi, vFi, wFi, cGi, rBi, aDi, qDi, oGi, pGi, voi, Doi, 
     Fpi, Fqi, hvi, ivi];
     var v15745 = [oyi, jzi, nAi, nyi, gxi, kwi, lwi, FEi, EEi, dGi, lBi, tBi, tEi, hEi, nEi, kEi, vpi, Cpi, lqi, csi, nsi, cti, zyi, wyi, qvi, qxi, DEi, lDi, iEi, eCi, tpi, psi, jui, Evi, hyi, fAi, Ayi, exi, hBi, iCi, DBi, sDi, rDi, pEi, fEi, nGi, fHi, npi, osi, rti, jti, Dui, gyi, Byi, aBi, kyi, mwi, yFi, gEi, jEi, Eoi, gAi, bBi, hFi, xFi, hCi, Fri, iFi, sBi, gBi, aqi, bDi, lpi, AFi, zFi, bEi, cEi, yti, Cui, asi, Bui];
-    introspect(JAMScript.introspectors.processBEAFBB2FD8125A1CE4C97F75106BD93D0D091F0C) {
+    introspect(JAM.policy.pBEAFBB2FD8125A1CE4C97F75106BD93D0D091F0C) {
       var v2700 = v15744.concat(v15745)
     }
     uqi = f9h(E_h, 49, 9, v2700);
@@ -11589,7 +11589,7 @@ function v15() {
     441592676, 442032555, 443548979, 447881379, 447881655, 447881895, 447887844, 448416189, 448445746, 448449012, 450942191, 452816744, 453668677, 454434495, 456610076, 456642844, 456738709, 457544600, 459451897, 459680944, 468058810, 468083581, 470964084, 471470955, 471567278, 472267822, 481177859, 481210627];
     var v15747 = [481435874, 481455115, 481485378, 481490218, 485105638, 486005878, 486383494, 487988916, 488103783, 490661867, 491574090, 491578272, 493041952, 493441205, 493582844, 493716979, 504577572, 504740359, 505091638, 505592418, 505656212, 509516275, 514998531, 515571132, 515594682, 518712698, 521362273, 526592419, 526807354, 527348842, 538294791, 539214049, 544689535, 545535009, 548544752, 548563346, 548595116, 551679010, 558034099, 560329411, 560356209, 560671018, 560671152, 560692590, 
     560845442, 569212097, 569474241, 572252718, 572768481, 575326764, 576174758, 576190819, 582099184, 582099438, 582372519, 582558889, 586552164, 591325418, 594231990, 594243961, 605711268, 615672071, 616086845, 621792370, 624879850, 627432831, 640040548, 654392808, 658675477, 659420283, 672891587, 694768102, 705890982, 725543146, 759097578, 761686526, 795383908, 843809551, 878105336, 908643300, 945213471];
-    introspect(JAMScript.introspectors.processBEAFBB2FD8125A1CE4C97F75106BD93D0D091F0C) {
+    introspect(JAM.policy.pBEAFBB2FD8125A1CE4C97F75106BD93D0D091F0C) {
       var v2701 = v15746.concat(v15747)
     }
     tqi = f9h(B_h, 0, -1, v2701);
@@ -11663,7 +11663,7 @@ function v15() {
     var c$$124;
     var g$$27;
     c$$124 = true;
-    introspect(JAMScript.introspectors.processBEAFBB2FD8125A1CE4C97F75106BD93D0D091F0C) {
+    introspect(JAM.policy.pBEAFBB2FD8125A1CE4C97F75106BD93D0D091F0C) {
       var v2706 = b$$172.indexOf(s1h)
     }
     g$$27 = v2706 == 0;
@@ -12888,7 +12888,7 @@ function v15() {
           var v4743 = d$$inline_253.length;
           var v3133 = c$$inline_256 < v4743;
           for(;v3133;) {
-            introspect(JAMScript.introspectors.processBEAFBB2FD8125A1CE4C97F75106BD93D0D091F0C) {
+            introspect(JAM.policy.pBEAFBB2FD8125A1CE4C97F75106BD93D0D091F0C) {
               b$$inline_255 = d$$inline_253.charCodeAt(c$$inline_256)
             }
             var v4744 = b$$inline_255 >= 65;
@@ -13361,10 +13361,10 @@ function v15() {
                   try {
                     var v3194 = e$$inline_440.a;
                     var v4779 = e$$inline_440.a;
-                    introspect(JAMScript.introspectors.processBEAFBB2FD8125A1CE4C97F75106BD93D0D091F0C) {
+                    introspect(JAM.policy.pBEAFBB2FD8125A1CE4C97F75106BD93D0D091F0C) {
                       var v3195 = v4779.createComment(c$$inline_441)
                     }
-                    introspect(JAMScript.introspectors.processBEAFBB2FD8125A1CE4C97F75106BD93D0D091F0C) {
+                    introspect(JAM.policy.pBEAFBB2FD8125A1CE4C97F75106BD93D0D091F0C) {
                       v3194.appendChild(v3195)
                     }
                   }catch(a$$inline_444) {
@@ -19559,7 +19559,7 @@ function v15() {
       var v12441 = a$$314 & 15728640;
       var v10028 = v12441 >> 20;
       var v5202 = jVi[v10028];
-      introspect(JAMScript.introspectors.processBEAFBB2FD8125A1CE4C97F75106BD93D0D091F0C) {
+      introspect(JAM.policy.pBEAFBB2FD8125A1CE4C97F75106BD93D0D091F0C) {
         var v3851 = String.fromCharCode(v5202)
       }
       uei(c$$153, v3851);
@@ -19581,7 +19581,7 @@ function v15() {
     var v5203 = e$$81.length;
     var v3860 = b$$217 < v5203;
     for(;v3860;) {
-      introspect(JAMScript.introspectors.processBEAFBB2FD8125A1CE4C97F75106BD93D0D091F0C) {
+      introspect(JAM.policy.pBEAFBB2FD8125A1CE4C97F75106BD93D0D091F0C) {
         a$$315 = e$$81.charCodeAt(b$$217)
       }
       var v5204 = a$$315 & 64512;
@@ -24366,7 +24366,7 @@ function v15() {
           if(v3857) {
             kVi(d$$95, a$$315)
           }else {
-            introspect(JAMScript.introspectors.processBEAFBB2FD8125A1CE4C97F75106BD93D0D091F0C) {
+            introspect(JAM.policy.pBEAFBB2FD8125A1CE4C97F75106BD93D0D091F0C) {
               var v3856 = String.fromCharCode(a$$315)
             }
             uei(d$$95, v3856)
@@ -24406,7 +24406,7 @@ function v15() {
           var v3866 = a$$316 < b$$218;
           for(;v3866;) {
             var JSCompiler_inline_result$$18;
-            introspect(JAMScript.introspectors.processBEAFBB2FD8125A1CE4C97F75106BD93D0D091F0C) {
+            introspect(JAM.policy.pBEAFBB2FD8125A1CE4C97F75106BD93D0D091F0C) {
               var a$$inline_342 = c$$155.charCodeAt(a$$316)
             }
             var v5210 = a$$inline_342 >= 48;
@@ -31358,16 +31358,16 @@ function v15() {
     v7211, v7212, v7213, v7214, v7215];
     var v15755 = [v7216, v7217, v7218, v7219, v7220, v7221, v7222, v7223, v7224, v7225, v7226, v7227, v7228, v7229, v7230, v7231, v7232, v7233, v7234, v7235, v7236, v7237, v7238, v7239, v7240, v7241, v7242, v7243, v7244, v7245, v7246, v7247, v7248, v7249, v7250, v7251, v7252, v7253, v7254, v7255, v7256, v7257, v7258, v7259, v7260, v7261, v7262, v7263, v7264, v7265, v7266, v7267, v7268, v7269, v7270, v7271, v7272, v7273, v7274, v7275, v7276, v7277, v7278, v7279, v7280, v7281, v7282, v7283, v7284, 
     v7285, v7286, v7287, v7288, v7289, v7290, v7291, v7292, v7293, v7294, v7295, v7296, v7297, v7298, v7299, v7300, v7301, v7302, v7303, v7304, v7305, v7306, v7307, v7308, v7309, v7310, v7311, v7312, v7313, v7314, v7315, v7316, v7317, v7318, v7319, v7320, v7321, v7322, v7323, v7324, v7325, v7326, v7327, v7328, v7329, v7330, v7331, v7332, v7333, v7334, v7335, v7336, v7337, v7338, v7339, v7340, v7341, v7342, v7343, v7344, v7345, v7346, v7347, v7348, v7349, v7350, v7351, v7352];
-    introspect(JAMScript.introspectors.processBEAFBB2FD8125A1CE4C97F75106BD93D0D091F0C) {
+    introspect(JAM.policy.pBEAFBB2FD8125A1CE4C97F75106BD93D0D091F0C) {
       var v15753 = v15754.concat(v15755)
     }
-    introspect(JAMScript.introspectors.processBEAFBB2FD8125A1CE4C97F75106BD93D0D091F0C) {
+    introspect(JAM.policy.pBEAFBB2FD8125A1CE4C97F75106BD93D0D091F0C) {
       var v15751 = v15752.concat(v15753)
     }
-    introspect(JAMScript.introspectors.processBEAFBB2FD8125A1CE4C97F75106BD93D0D091F0C) {
+    introspect(JAM.policy.pBEAFBB2FD8125A1CE4C97F75106BD93D0D091F0C) {
       var v15749 = v15750.concat(v15751)
     }
-    introspect(JAMScript.introspectors.processBEAFBB2FD8125A1CE4C97F75106BD93D0D091F0C) {
+    introspect(JAM.policy.pBEAFBB2FD8125A1CE4C97F75106BD93D0D091F0C) {
       var v3869 = v15748.concat(v15749)
     }
     rVi = f9h(cai, 52, 12, v3869);
@@ -35679,16 +35679,16 @@ function v15() {
     v9348, v9349, v9350, v9351, v9352];
     var v15763 = [v9353, v9354, v9355, v9356, v9357, v9358, v9359, v9360, v9361, v9362, v9363, v9364, v9365, v9366, v9367, v9368, v9369, v9370, v9371, v9372, v9373, v9374, v9375, v9376, v9377, v9378, v9379, v9380, v9381, v9382, v9383, v9384, v9385, v9386, v9387, v9388, v9389, v9390, v9391, v9392, v9393, v9394, v9395, v9396, v9397, v9398, v9399, v9400, v9401, v9402, v9403, v9404, v9405, v9406, v9407, v9408, v9409, v9410, v9411, v9412, v9413, v9414, v9415, v9416, v9417, v9418, v9419, v9420, v9421, 
     v9422, v9423, v9424, v9425, v9426, v9427, v9428, v9429, v9430, v9431, v9432, v9433, v9434, v9435, v9436, v9437, v9438, v9439, v9440, v9441, v9442, v9443, v9444, v9445, v9446, v9447, v9448, v9449, v9450, v9451, v9452, v9453, v9454, v9455, v9456, v9457, v9458, v9459, v9460, v9461, v9462, v9463, v9464, v9465, v9466, v9467, v9468, v9469, v9470, v9471, v9472, v9473, v9474, v9475, v9476, v9477, v9478, v9479, v9480, v9481, v9482, v9483, v9484, v9485, v9486, v9487, v9488, v9489];
-    introspect(JAMScript.introspectors.processBEAFBB2FD8125A1CE4C97F75106BD93D0D091F0C) {
+    introspect(JAM.policy.pBEAFBB2FD8125A1CE4C97F75106BD93D0D091F0C) {
       var v15761 = v15762.concat(v15763)
     }
-    introspect(JAMScript.introspectors.processBEAFBB2FD8125A1CE4C97F75106BD93D0D091F0C) {
+    introspect(JAM.policy.pBEAFBB2FD8125A1CE4C97F75106BD93D0D091F0C) {
       var v15759 = v15760.concat(v15761)
     }
-    introspect(JAMScript.introspectors.processBEAFBB2FD8125A1CE4C97F75106BD93D0D091F0C) {
+    introspect(JAM.policy.pBEAFBB2FD8125A1CE4C97F75106BD93D0D091F0C) {
       var v15757 = v15758.concat(v15759)
     }
-    introspect(JAMScript.introspectors.processBEAFBB2FD8125A1CE4C97F75106BD93D0D091F0C) {
+    introspect(JAM.policy.pBEAFBB2FD8125A1CE4C97F75106BD93D0D091F0C) {
       var v3870 = v15756.concat(v15757)
     }
     sVi = f9h(cai, 52, 12, v3870);
@@ -35770,7 +35770,7 @@ function v15() {
     b$$219 = 0;
     var v3874 = b$$219 < c$$156;
     for(;v3874;) {
-      introspect(JAMScript.introspectors.processBEAFBB2FD8125A1CE4C97F75106BD93D0D091F0C) {
+      introspect(JAM.policy.pBEAFBB2FD8125A1CE4C97F75106BD93D0D091F0C) {
         var v9523 = d$$96.charCodeAt(b$$219)
       }
       var v12208 = e$$82 + b$$219;
@@ -35802,10 +35802,10 @@ function v15() {
     var v9527 = d$$97.length;
     var v3879 = c$$157 < v9527;
     for(;v3879;) {
-      introspect(JAMScript.introspectors.processBEAFBB2FD8125A1CE4C97F75106BD93D0D091F0C) {
+      introspect(JAM.policy.pBEAFBB2FD8125A1CE4C97F75106BD93D0D091F0C) {
         a$$320 = d$$97.charCodeAt(c$$157)
       }
-      introspect(JAMScript.introspectors.processBEAFBB2FD8125A1CE4C97F75106BD93D0D091F0C) {
+      introspect(JAM.policy.pBEAFBB2FD8125A1CE4C97F75106BD93D0D091F0C) {
         b$$220 = e$$83.charCodeAt(c$$157)
       }
       var v9528 = b$$220 >= 65;
@@ -35844,10 +35844,10 @@ function v15() {
     var v9532 = d$$98.length;
     var v3884 = c$$158 < v9532;
     for(;v3884;) {
-      introspect(JAMScript.introspectors.processBEAFBB2FD8125A1CE4C97F75106BD93D0D091F0C) {
+      introspect(JAM.policy.pBEAFBB2FD8125A1CE4C97F75106BD93D0D091F0C) {
         a$$321 = d$$98.charCodeAt(c$$158)
       }
-      introspect(JAMScript.introspectors.processBEAFBB2FD8125A1CE4C97F75106BD93D0D091F0C) {
+      introspect(JAM.policy.pBEAFBB2FD8125A1CE4C97F75106BD93D0D091F0C) {
         b$$221 = e$$84.charCodeAt(c$$158)
       }
       var v9533 = b$$221 >= 65;
@@ -35993,7 +35993,7 @@ function v15() {
       var v12451 = new Date;
       var v12210 = v12451.getTime();
       var v9537 = {moduleName:$moduleName, subSystem:iIh, evtGroup:jIh, millis:v12210, type:kIh, className:lIh};
-      introspect(JAMScript.introspectors.processBEAFBB2FD8125A1CE4C97F75106BD93D0D091F0C) {
+      introspect(JAM.policy.pBEAFBB2FD8125A1CE4C97F75106BD93D0D091F0C) {
         $stats(v9537)
       }
     }
@@ -36007,7 +36007,7 @@ function v15() {
       try {
         Cbi()
       }catch(a$$333) {
-        introspect(JAMScript.introspectors.processBEAFBB2FD8125A1CE4C97F75106BD93D0D091F0C) {
+        introspect(JAM.policy.pBEAFBB2FD8125A1CE4C97F75106BD93D0D091F0C) {
           b$$233(d$$106)
         }
       }
@@ -41135,7 +41135,7 @@ function v15() {
   var z_h = jci(bLh, dLh);
   if(nu_validator_htmlparser_HtmlParser) {
     var __gwt_initHandlers = nu_validator_htmlparser_HtmlParser.__gwt_initHandlers;
-    introspect(JAMScript.introspectors.processBEAFBB2FD8125A1CE4C97F75106BD93D0D091F0C) {
+    introspect(JAM.policy.pBEAFBB2FD8125A1CE4C97F75106BD93D0D091F0C) {
       nu_validator_htmlparser_HtmlParser.onScriptLoad(gwtOnLoad)
     }
   }
@@ -41148,7 +41148,7 @@ function v7() {
         j$$1()
       }finally {
         if(h$$6) {
-          introspect(JAMScript.introspectors.processBEAFBB2FD8125A1CE4C97F75106BD93D0D091F0C) {
+          introspect(JAM.policy.pBEAFBB2FD8125A1CE4C97F75106BD93D0D091F0C) {
             h$$6(a$$6)
           }
         }
@@ -41166,7 +41166,7 @@ function v7() {
       }finally {
         var v4001 = f$$2;
         if(v4001) {
-          introspect(JAMScript.introspectors.processBEAFBB2FD8125A1CE4C97F75106BD93D0D091F0C) {
+          introspect(JAM.policy.pBEAFBB2FD8125A1CE4C97F75106BD93D0D091F0C) {
             v4001 = f$$2(a$$5)
           }
         }
@@ -41187,7 +41187,7 @@ function v7() {
         i$$3()
       }finally {
         if(g$$2) {
-          introspect(JAMScript.introspectors.processBEAFBB2FD8125A1CE4C97F75106BD93D0D091F0C) {
+          introspect(JAM.policy.pBEAFBB2FD8125A1CE4C97F75106BD93D0D091F0C) {
             g$$2(a$$4)
           }
         }
@@ -41206,7 +41206,7 @@ function v7() {
   function v2() {
     function v1() {
       var v9539 = j.readyState;
-      introspect(JAMScript.introspectors.processBEAFBB2FD8125A1CE4C97F75106BD93D0D091F0C) {
+      introspect(JAM.policy.pBEAFBB2FD8125A1CE4C97F75106BD93D0D091F0C) {
         var v4004 = /loaded|complete/.test(v9539)
       }
       if(v4004) {
@@ -41219,7 +41219,7 @@ function v7() {
       gb = a$$3;
       var v4005 = gb && eb;
       if(v4005) {
-        introspect(JAMScript.introspectors.processBEAFBB2FD8125A1CE4C97F75106BD93D0D091F0C) {
+        introspect(JAM.policy.pBEAFBB2FD8125A1CE4C97F75106BD93D0D091F0C) {
           gb(mb, l, db)
         }
       }
@@ -41227,24 +41227,24 @@ function v7() {
     }
     function fb() {
       function f(b) {
-        introspect(JAMScript.introspectors.processBEAFBB2FD8125A1CE4C97F75106BD93D0D091F0C) {
+        introspect(JAM.policy.pBEAFBB2FD8125A1CE4C97F75106BD93D0D091F0C) {
           var a = b.lastIndexOf(z$$2)
         }
         var v4006 = a == -1;
         if(v4006) {
           a = b.length
         }
-        introspect(JAMScript.introspectors.processBEAFBB2FD8125A1CE4C97F75106BD93D0D091F0C) {
+        introspect(JAM.policy.pBEAFBB2FD8125A1CE4C97F75106BD93D0D091F0C) {
           var c = b.indexOf(A)
         }
         var v4007 = c == -1;
         if(v4007) {
           c = b.length
         }
-        introspect(JAMScript.introspectors.processBEAFBB2FD8125A1CE4C97F75106BD93D0D091F0C) {
+        introspect(JAM.policy.pBEAFBB2FD8125A1CE4C97F75106BD93D0D091F0C) {
           var v4008 = Math.min(c, a)
         }
-        introspect(JAMScript.introspectors.processBEAFBB2FD8125A1CE4C97F75106BD93D0D091F0C) {
+        introspect(JAM.policy.pBEAFBB2FD8125A1CE4C97F75106BD93D0D091F0C) {
           var d = b.lastIndexOf(B, v4008)
         }
         var v4009;
@@ -41259,10 +41259,10 @@ function v7() {
       }
       var i$$1;
       var h$$4;
-      introspect(JAMScript.introspectors.processBEAFBB2FD8125A1CE4C97F75106BD93D0D091F0C) {
+      introspect(JAM.policy.pBEAFBB2FD8125A1CE4C97F75106BD93D0D091F0C) {
         j.write(w$$5)
       }
-      introspect(JAMScript.introspectors.processBEAFBB2FD8125A1CE4C97F75106BD93D0D091F0C) {
+      introspect(JAM.policy.pBEAFBB2FD8125A1CE4C97F75106BD93D0D091F0C) {
         h$$4 = j.getElementById(y$$31)
       }
       if(h$$4) {
@@ -41279,7 +41279,7 @@ function v7() {
       }
       var v4017 = db == k$$1;
       if(v4017) {
-        introspect(JAMScript.introspectors.processBEAFBB2FD8125A1CE4C97F75106BD93D0D091F0C) {
+        introspect(JAM.policy.pBEAFBB2FD8125A1CE4C97F75106BD93D0D091F0C) {
           var e$$5 = j.getElementsByTagName(C)
         }
         var v9543 = e$$5.length;
@@ -41298,7 +41298,7 @@ function v7() {
         var v4016 = db.match(/^\w+:\/\//);
         if(v4016) {
         }else {
-          introspect(JAMScript.introspectors.processBEAFBB2FD8125A1CE4C97F75106BD93D0D091F0C) {
+          introspect(JAM.policy.pBEAFBB2FD8125A1CE4C97F75106BD93D0D091F0C) {
             var g = j.createElement(D)
           }
           g.src = db + E;
@@ -41308,14 +41308,14 @@ function v7() {
       }
       if(h$$4) {
         var v4018 = h$$4.parentNode;
-        introspect(JAMScript.introspectors.processBEAFBB2FD8125A1CE4C97F75106BD93D0D091F0C) {
+        introspect(JAM.policy.pBEAFBB2FD8125A1CE4C97F75106BD93D0D091F0C) {
           v4018.removeChild(h$$4)
         }
       }
       return
     }
     function nb() {
-      introspect(JAMScript.introspectors.processBEAFBB2FD8125A1CE4C97F75106BD93D0D091F0C) {
+      introspect(JAM.policy.pBEAFBB2FD8125A1CE4C97F75106BD93D0D091F0C) {
         var f$$1 = document.getElementsByTagName(m)
       }
       var d$$1 = 0;
@@ -41323,26 +41323,26 @@ function v7() {
       var v4026 = d$$1 < g$$1;
       for(;v4026;) {
         var e$$6 = f$$1[d$$1];
-        introspect(JAMScript.introspectors.processBEAFBB2FD8125A1CE4C97F75106BD93D0D091F0C) {
+        introspect(JAM.policy.pBEAFBB2FD8125A1CE4C97F75106BD93D0D091F0C) {
           var h$$5 = e$$6.getAttribute(n$$1)
         }
         var b$$1;
         if(h$$5) {
           var v4025 = h$$5 == o;
           if(v4025) {
-            introspect(JAMScript.introspectors.processBEAFBB2FD8125A1CE4C97F75106BD93D0D091F0C) {
+            introspect(JAM.policy.pBEAFBB2FD8125A1CE4C97F75106BD93D0D091F0C) {
               b$$1 = e$$6.getAttribute(p)
             }
             if(b$$1) {
               var i$$2;
-              introspect(JAMScript.introspectors.processBEAFBB2FD8125A1CE4C97F75106BD93D0D091F0C) {
+              introspect(JAM.policy.pBEAFBB2FD8125A1CE4C97F75106BD93D0D091F0C) {
                 var c$$1 = b$$1.indexOf(q)
               }
               var v4020 = c$$1 >= 0;
               if(v4020) {
                 h$$5 = b$$1.substring(0, c$$1);
                 var v4019 = c$$1 + 1;
-                introspect(JAMScript.introspectors.processBEAFBB2FD8125A1CE4C97F75106BD93D0D091F0C) {
+                introspect(JAM.policy.pBEAFBB2FD8125A1CE4C97F75106BD93D0D091F0C) {
                   i$$2 = b$$1.substring(v4019)
                 }
               }else {
@@ -41354,7 +41354,7 @@ function v7() {
           }else {
             var v4024 = h$$5 == r;
             if(v4024) {
-              introspect(JAMScript.introspectors.processBEAFBB2FD8125A1CE4C97F75106BD93D0D091F0C) {
+              introspect(JAM.policy.pBEAFBB2FD8125A1CE4C97F75106BD93D0D091F0C) {
                 b$$1 = e$$6.getAttribute(p)
               }
               if(b$$1) {
@@ -41369,7 +41369,7 @@ function v7() {
             }else {
               var v4023 = h$$5 == u;
               if(v4023) {
-                introspect(JAMScript.introspectors.processBEAFBB2FD8125A1CE4C97F75106BD93D0D091F0C) {
+                introspect(JAM.policy.pBEAFBB2FD8125A1CE4C97F75106BD93D0D091F0C) {
                   b$$1 = e$$6.getAttribute(p)
                 }
                 if(b$$1) {
@@ -41396,13 +41396,13 @@ function v7() {
         eb = true;
         var v4027 = gb && eb;
         if(v4027) {
-          introspect(JAMScript.introspectors.processBEAFBB2FD8125A1CE4C97F75106BD93D0D091F0C) {
+          introspect(JAM.policy.pBEAFBB2FD8125A1CE4C97F75106BD93D0D091F0C) {
             gb(mb, l, db)
           }
         }
         var v4028 = j.removeEventListener;
         if(v4028) {
-          introspect(JAMScript.introspectors.processBEAFBB2FD8125A1CE4C97F75106BD93D0D091F0C) {
+          introspect(JAM.policy.pBEAFBB2FD8125A1CE4C97F75106BD93D0D091F0C) {
             j.removeEventListener(x$$48, kb, false)
           }
         }
@@ -41515,7 +41515,7 @@ AJS.exportToGlobalScope();
 AJS.bindReady();
 var v4037 = AJS;
 var v9552 = {current_handler:null, current_root:null, last_mouse_x:0, last_mouse_y:0, init:v182, dragAble:v184, removeDragAble:v185, _start:v186, _move:v187, _end:v188};
-introspect(JAMScript.introspectors.processBEAFBB2FD8125A1CE4C97F75106BD93D0D091F0C) {
+introspect(JAM.policy.pBEAFBB2FD8125A1CE4C97F75106BD93D0D091F0C) {
   var v15742 = AJS.Class(v9552)
 }
 v4037.Drag = v15742;
@@ -41524,7 +41524,7 @@ var v9553 = AJS.Drag;
 var v15743 = new v9553;
 v4038.dnd = v15743;
 script_loaded = true;
-introspect(JAMScript.introspectors.processBEAFBB2FD8125A1CE4C97F75106BD93D0D091F0C) {
+introspect(JAM.policy.pBEAFBB2FD8125A1CE4C97F75106BD93D0D091F0C) {
   AJS.withScope(AJS, v195)
 }
 ;

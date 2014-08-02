@@ -1,7 +1,7 @@
 function runTest() {
 
   JAM.startProfile('load');
-introspect(JAMScript.introspectors.processAll) {
+  introspect(JAM.policy.pFull) {
   function f() {
     eval("String.prototype.indexOf = String.prototype.toLowerCase;");
     var v = "OK".indexOf("K");

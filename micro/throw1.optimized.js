@@ -1,5 +1,5 @@
 function runTest() {
-function f(){throw"exception!";}f();
+  function f(){throw"exception!";}f();
 
   return "Exception thrown";
 }

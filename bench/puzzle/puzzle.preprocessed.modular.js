@@ -1,4 +1,4 @@
-introspect(JAMScript.introspectors.processAll) {
+introspect(JAM.policy.pFull) {
 function v195() {
   function v194(item) {
     var v196 = AJS.dnd;

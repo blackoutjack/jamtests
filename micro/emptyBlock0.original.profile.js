@@ -1,7 +1,7 @@
 function runTest() {
 
   JAM.startProfile('load');
-function f() {
+  function f() {
     if (typeof x === "undefined") {
       //do nothing
     } else {

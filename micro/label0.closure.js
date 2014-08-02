@@ -1,5 +1,5 @@
 function runTest() {
-x = 0;
+  x = 0;
   var i = 0;
   lbl:for(;i < 4;i++) {
     x++;

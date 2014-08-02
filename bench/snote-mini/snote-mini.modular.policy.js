@@ -1,9 +1,7 @@
 var policy = function() {
-  var states = [0];
-  function processAll(tx) {
+  var states = [true, false, false];
+  function pFull(tx) {
     var commit = true;
-    var s1 = states.indexOf(1) > -1;
-    var s2 = states.indexOf(2) > -1;
     var as = tx.getActionSequence();
     var len = as.length;
     for(var i = 0;i < len;i++) {
@@ -16,30 +14,28 @@ var policy = function() {
         commit = false;
         break
       }
-      if(s1 && node.type === "read" && node.id === "textContent" && JAM.identical(node.obj["className"], "destructive-read read-only")) {
+      if(states[1] && node.type === "read" && node.id === "textContent" && JAM.identical(node.obj["className"], "destructive-read read-only")) {
         commit = false;
         break
       }
-      if(!s1 && node.type === "read" && node.id === "textContent" && JAM.identical(node.obj["className"], "destructive-read read-only")) {
-        s1 = true;
-        states.push(1)
+      if(!states[1] && node.type === "read" && node.id === "textContent" && JAM.identical(node.obj["className"], "destructive-read read-only")) {
+        states[1] = true
       }
-      if(s2 && node.type === "write" && node.id === "textContent" && JAM.identical(node.obj["className"], "write-only non-editable")) {
+      if(states[2] && node.type === "write" && node.id === "textContent" && JAM.identical(node.obj["className"], "write-only non-editable")) {
         commit = false;
         break
       }
-      if(!s2 && node.type === "write" && node.id === "textContent" && JAM.identical(node.obj["className"], "write-only non-editable")) {
-        s2 = true;
-        states.push(2)
+      if(!states[2] && node.type === "write" && node.id === "textContent" && JAM.identical(node.obj["className"], "write-only non-editable")) {
+        states[2] = true
       }
     }
     if(commit) {
-      JAMScript.process(tx)
+      JAM.process(tx)
     }else {
-      JAMScript.prevent(tx)
+      JAM.prevent(tx)
     }
   }
-  processAll.subsumedBy = processAll;
-  Object.freeze(processAll);
-  return{introspectors:{processAll:processAll}}
+  pFull.subsumedBy = pFull;
+  Object.freeze(pFull);
+  return{pFull:pFull}
 }()

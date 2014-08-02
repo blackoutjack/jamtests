@@ -1,6 +1,6 @@
 
 JAM.startProfile('load');
-introspect(JAMScript.introspectors.processAll) {
+introspect(JAM.policy.pFull) {
 function rtmItURL() {
   var ifrmURL = window.location.href;
   var msgId = getURLParameter(ifrmURL, ";eb_trk=", ";");

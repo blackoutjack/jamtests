@@ -1,5 +1,5 @@
 function runTest() {
-function f() {
+  function f() {
     x = 2
   }
   setTimeout(f, 1E3);

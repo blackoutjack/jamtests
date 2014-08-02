@@ -1,6 +1,6 @@
 
 JAM.startProfile('load');
-introspect(JAMScript.introspectors.processAll) {
+introspect(JAM.policy.pFull) {
 function v0() {
   xmlhttp = new XMLHttpRequest;
   xmlhttp.open("GET", "http://AnalyticsInc:8000/submission.html?test=onclick3", true);

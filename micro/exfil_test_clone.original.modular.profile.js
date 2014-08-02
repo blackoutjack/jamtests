@@ -1,6 +1,6 @@
 
 JAM.startProfile('load');
-introspect(JAMScript.introspectors.processAll) {
+introspect(JAM.policy.pFull) {
 function clone(obj){
     if(obj == null || typeof(obj) != 'object')
         return obj;

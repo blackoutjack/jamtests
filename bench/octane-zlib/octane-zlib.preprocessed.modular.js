@@ -1,4 +1,4 @@
-introspect(JAMScript.introspectors.processAll) {
+introspect(JAM.policy.pFull) {
 function v20(runner$$2) {
   function RunNextSetup() {
     var v22 = index$$40 < length$$12;

@@ -1,7 +1,7 @@
 function runTest() {
 
   JAM.startProfile('load');
-var s = "ok";
+  var s = "ok";
   if(!s.indexOf("k")) {
     x = 2
   }

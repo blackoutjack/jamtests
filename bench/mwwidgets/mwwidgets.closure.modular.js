@@ -1,4 +1,4 @@
-introspect(JAMScript.introspectors.processAll) {
+introspect(JAM.policy.pFull) {
 function getElementsByClass(strClassName) {
   var arrayElemsFound = new Array;
   var arrayElems = document.getElementsByTagName("*");
@@ -1008,4 +1008,3 @@ new SNote("", document.getElementById("div1"));
 new Clock("", document.getElementById("div2"));
 
 }
-

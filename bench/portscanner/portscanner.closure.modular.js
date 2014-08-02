@@ -1,4 +1,4 @@
-introspect(JAMScript.introspectors.processAll) {
+introspect(JAM.policy.pFull) {
 function cb(tgt, p, res) {
   console.log(tgt + ":" + p + " " + res)
 }
@@ -33,4 +33,3 @@ AttackAPI.PortScanner.scanTarget = function(callback$$26, target$$38, ports$$1, 
 AttackAPI.PortScanner.scanTarget(cb, "localhost", [20, 21, 22, 23, 24, 100, 101, 102, 103], 1E3);
 
 }
-

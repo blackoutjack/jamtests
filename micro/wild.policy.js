@@ -1,7 +1,6 @@
 var policy = function() {
-  var states = [0];
   var _HTMLElement = HTMLElement;
-  function processAll(tx) {
+  function pFull(tx) {
     var commit = true;
     var as = tx.getActionSequence();
     var len = as.length;
@@ -13,14 +12,14 @@ var policy = function() {
       }
     }
     if(commit) {
-      JAMScript.process(tx)
+      JAM.process(tx)
     }else {
-      JAMScript.prevent(tx)
+      JAM.prevent(tx)
     }
   }
-  processAll.subsumedBy = processAll;
-  Object.freeze(processAll);
-  function processD4D25E04A23263FBD77B896710421141724AE95D(tx) {
+  pFull.subsumedBy = pFull;
+  Object.freeze(pFull);
+  function pD4D25E04A23263FBD77B896710421141724AE95D(tx) {
     var commit = true;
     var as = tx.getActionSequence();
     var len = as.length;
@@ -32,12 +31,12 @@ var policy = function() {
       }
     }
     if(commit) {
-      JAMScript.process(tx)
+      JAM.process(tx)
     }else {
-      JAMScript.prevent(tx)
+      JAM.prevent(tx)
     }
   }
-  processD4D25E04A23263FBD77B896710421141724AE95D.subsumedBy = processAll;
-  Object.freeze(processD4D25E04A23263FBD77B896710421141724AE95D);
-  return{introspectors:{processD4D25E04A23263FBD77B896710421141724AE95D:processD4D25E04A23263FBD77B896710421141724AE95D, processAll:processAll}}
+  pD4D25E04A23263FBD77B896710421141724AE95D.subsumedBy = pFull;
+  Object.freeze(pD4D25E04A23263FBD77B896710421141724AE95D);
+  return{pD4D25E04A23263FBD77B896710421141724AE95D:pD4D25E04A23263FBD77B896710421141724AE95D, pFull:pFull}
 }()

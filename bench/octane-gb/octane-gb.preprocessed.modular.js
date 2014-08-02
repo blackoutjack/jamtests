@@ -1,4 +1,4 @@
-introspect(JAMScript.introspectors.processAll) {
+introspect(JAM.policy.pFull) {
 function v888() {
   var testTypedArray = new Uint8Array(1);
   testTypedArray[0] = -1;

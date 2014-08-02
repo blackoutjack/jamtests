@@ -1,5 +1,5 @@
 function runTest() {
-try {
+  try {
   alert("OK1");
   function f() {
     notanid();

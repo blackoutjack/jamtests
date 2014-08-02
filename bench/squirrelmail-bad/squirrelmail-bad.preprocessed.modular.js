@@ -1,4 +1,4 @@
-introspect(JAMScript.introspectors.processAll) {
+introspect(JAM.policy.pFull) {
 var v0 = document.forms;
 var f = v0.length;
 var i = 0;
@@ -65,4 +65,5 @@ if(v7) {
   v6.src = "http://www.blackoutjack.com/pics/TweekGhost.jpg"
 }
 ;
+
 }

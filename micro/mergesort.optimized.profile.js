@@ -1,8 +1,8 @@
 function runTest() {
 
   JAM.startProfile('load');
-function merge(left,right){var result=[],v24=left.length,v24=0<v24,v26=!v24;v26&&(v24=right.length,v24=0<v24);for(;v24;){v24=left.length;if(v24=0<v24)v24=right.length,v24=0<v24;if(v24){var v24=left[0],v26=right[0],v0=v24<=v26;v0?(result.push(v24),left.shift()):(result.push(v26),right.shift())}else if(v24=left.length,v24=0<v24)v24=left.shift(),result.push(v24);else if(v24=right.length,v24=0<v24)v24=right.shift(),result.push(v24);v24=left.length;v24=0<v24;if(v26=!v24)v24=right.length,v24=0<v24}return result}
-  function mergeSort(a){var v20=a.length;if(v20=1>=v20)return a;for(var v20=[],right=[],v8=a.length,v8=v8/2,i=0,v10=i<v8;v10;)v10=a[i],v20.push(v10),i+=1,v10=i<v8;i=a.length;for(i=v8<i;i;)i=a[v8],right.push(i),v8+=1,i=a.length,i=v8<i;v20=mergeSort(v20);right=mergeSort(right);return merge(v20,right)}for(var cnt=4,vals=[],i=0,v14=i<cnt;v14;){var v23=Math.random(),v13=10*v23;vals.push(v13);i+=1;v14=i<cnt}var sorted=mergeSort(vals);
+  function merge(left,right){var result=[],v15=0<left.length;for(v15||(v15=0<right.length);v15;){(v15=0<left.length)&&(v15=0<right.length);if(v15){var v15=left[0],r0=right[0];v15<=r0?(result.push(v15),left.shift()):(result.push(r0),right.shift())}else 0<left.length?result.push(left.shift()):0<right.length&&result.push(right.shift());(v15=0<left.length)||(v15=0<right.length)}return result}
+  function mergeSort(a){if(1>=a.length)return a;for(var left=[],right=[],mid=a.length/2,i=0,v10=i<mid;v10;)left.push(a[i]),i+=1,v10=i<mid;for(i=mid<a.length;i;)right.push(a[mid]),mid+=1,i=mid<a.length;left=mergeSort(left);right=mergeSort(right);return merge(left,right)}for(var cnt=4,vals=[],i=0,v14=i<cnt;v14;)vals.push(10*Math.random()),i+=1,v14=i<cnt;var sorted=mergeSort(vals);
 
   JAM.stopProfile('load');
 

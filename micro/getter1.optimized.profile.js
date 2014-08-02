@@ -1,7 +1,7 @@
 function runTest() {
 
   JAM.startProfile('load');
-function hello(){return"hello"}function v2(){function inner(){var f=JAMScript.isEval(eval)?eval("introspect(JAMScript.introspectors.processAll) { hello }"):JAMScript.call(eval,null,["hello"]),f=JAMScript.call(f,null,[]);return f+" whatever"}var v1=inner();return"ok"+v1}var a={},v4={get:v2};JAMScript.call(Object.defineProperty,Object,[a,"ok",v4]);var v3=a.ok;alert(v3);
+  function hello(){return"hello"}function v2(){function inner(){var f=JAM.isEval(eval)?eval("introspect(JAM.policy.pFull) { hello }"):JAM.call(eval,null,["hello"]);return f()+" whatever"}return"ok"+inner()}var a={};JAM.call(Object.defineProperty,Object,[a,"ok",{get:v2}]);alert(a.ok);
 
   JAM.stopProfile('load');
 

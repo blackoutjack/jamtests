@@ -1,5 +1,5 @@
 function runTest() {
-introspect(JAMScript.introspectors.processAll) {
+  introspect(JAM.policy.pFull) {
   function f() {
     prop = "b";
     return 2
@@ -23,6 +23,7 @@ introspect(JAMScript.introspectors.processAll) {
     alert("o[" + p + "]: " + o[p])
   }
   ;
+
   }
 
   return prop === "b" && n["a"] === 2 && n["b"] === 7 && n["c"] === "ok" && o["x"] === "other";

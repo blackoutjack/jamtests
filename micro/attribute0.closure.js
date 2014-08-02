@@ -1,5 +1,5 @@
 function runTest() {
-var elt = document.createElement("script");
+  var elt = document.createElement("script");
   var node = document.createAttribute("src");
   node.value = "exfil.js";
   elt.setAttributeNode(node);

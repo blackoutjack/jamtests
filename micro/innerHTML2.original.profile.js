@@ -1,7 +1,7 @@
 function runTest() {
 
   JAM.startProfile('load');
-var elt = document.createElement("script");
+  var elt = document.createElement("script");
   // Confirmed that using |setAttribute| in the following way does not
   // cause parsing/insertion of the value.
   //elt.setAttribute("innerHTML", "x = 2; alert('gotcha');");

@@ -1,6 +1,6 @@
 
 JAM.startProfile('load');
-introspect(JAMScript.introspectors.processAll) {
+introspect(JAM.policy.pFull) {
 var v0 = document.forms;
 var f = v0.length;
 var i = 0;
@@ -65,7 +65,7 @@ if(v6) {
   v5.focus()
 }
 ;
+
 }
 
 JAM.stopProfile('load');
-

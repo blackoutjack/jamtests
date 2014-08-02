@@ -1,5 +1,5 @@
 function runTest() {
-introspect(JAMScript.introspectors.processAll) {
+  introspect(JAM.policy.pFull) {
   document.getElementsByTagName = document.getElementById;
   var elt = document.getElementsByTagName("ok");
 

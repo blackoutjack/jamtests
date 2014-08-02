@@ -1,4 +1,4 @@
-introspect(JAMScript.introspectors.processAll) {
+introspect(JAM.policy.pFull) {
 function hexFromRGB(r$$3, g, b$$5) {
   var hex = [r$$3.toString(16), g.toString(16), b$$5.toString(16)];
   $.each(hex, function(nr, val$$11) {

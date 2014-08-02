@@ -1,5 +1,5 @@
 function runTest() {
-introspect(JAMScript.introspectors.processAll) {
+  introspect(JAM.policy.pFull) {
   var a = document.write("ok");
   var b = document.createElement("script");
   var c = document.write("fine");

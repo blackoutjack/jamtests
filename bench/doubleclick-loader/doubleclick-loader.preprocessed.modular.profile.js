@@ -1,6 +1,6 @@
 
 JAM.startProfile('load');
-introspect(JAMScript.introspectors.processAll) {
+introspect(JAM.policy.pFull) {
 function rtmItURL() {
   var v0 = window.location;
   var ifrmURL = v0.href;

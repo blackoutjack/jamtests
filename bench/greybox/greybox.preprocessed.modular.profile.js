@@ -1,6 +1,6 @@
 
 JAM.startProfile('load');
-introspect(JAMScript.introspectors.processAll) {
+introspect(JAM.policy.pFull) {
 function v247() {
   var v248 = GB_ROOT_DIR + "next.gif";
   var v249 = GB_ROOT_DIR + "prev.gif";

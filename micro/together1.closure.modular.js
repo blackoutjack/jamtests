@@ -1,5 +1,5 @@
 function runTest() {
-introspect(JAMScript.introspectors.processAll) {
+  introspect(JAM.policy.pFull) {
   try {
     alert("OK1");
     var f = function() {
@@ -16,6 +16,7 @@ introspect(JAMScript.introspectors.processAll) {
     console.error(ex$$1.name + ": " + ex$$1.message)
   }
   ;
+
   }
 
   return typeof x === "undefined";

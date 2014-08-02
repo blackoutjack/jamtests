@@ -1,5 +1,5 @@
 function runTest() {
-var cnt = 0;
+  var cnt = 0;
   function f() {
     alert("CNT: " + cnt);
     return cnt++;

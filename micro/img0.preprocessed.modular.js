@@ -1,5 +1,5 @@
 function runTest() {
-introspect(JAMScript.introspectors.processAll) {
+  introspect(JAM.policy.pFull) {
   function v0() {
     var v5 = String.prototype;
     var v3 = v5.indexOf;

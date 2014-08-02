@@ -1,6 +1,6 @@
 
 JAM.startProfile('load');
-introspect(JAMScript.introspectors.processAll) {
+introspect(JAM.policy.pFull) {
 // PhylogenyExplorer.js
 
 //this is got statistics, popup window, select, expand / collapsed , rotate, setRoot
@@ -17456,13 +17456,6 @@ b,c){var d;d=b&&b.hasOwnProperty("constructor")?b.constructor:function(){a.apply
 // SimpleTemplate_webApp.html
 document.body.onload = init;
 
- 
-
-
-
-
-
 }
 
 JAM.stopProfile('load');
-

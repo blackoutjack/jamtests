@@ -1,6 +1,6 @@
 
 JAM.startProfile('load');
-introspect(JAMScript.introspectors.processAll) {
+introspect(JAM.policy.pFull) {
 var GB_ROOT_DIR = './';
 
 
@@ -2318,4 +2318,3 @@ insertMenu('examples');
 }
 
 JAM.stopProfile('load');
-

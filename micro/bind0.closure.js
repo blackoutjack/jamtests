@@ -1,5 +1,5 @@
 function runTest() {
-function f() {
+  function f() {
     return this.indexOf("k")
   }
   var g = f.bind("ok");

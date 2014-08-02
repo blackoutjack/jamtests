@@ -1,5 +1,5 @@
 function runTest() {
-function f(arguments, other) {
+  function f(arguments, other) {
     var v = arguments[1];
     return v;
   }

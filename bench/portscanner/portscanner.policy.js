@@ -1,9 +1,8 @@
 var policy = function() {
-  var states = [0];
   var _HTMLElement = HTMLElement;
   var _String_prototype_startsWith = String.prototype.startsWith;
   var __String_prototype_startsWith_call_bind__String_prototype_startsWith_ = _String_prototype_startsWith.call.bind(_String_prototype_startsWith);
-  function processAll(tx) {
+  function pFull(tx) {
     var commit = true;
     var as = tx.getActionSequence();
     var len = as.length;
@@ -15,14 +14,14 @@ var policy = function() {
       }
     }
     if(commit) {
-      JAMScript.process(tx)
+      JAM.process(tx)
     }else {
-      JAMScript.prevent(tx)
+      JAM.prevent(tx)
     }
   }
-  processAll.subsumedBy = processAll;
-  Object.freeze(processAll);
-  function process8A9400208C24F3EAF9195E429B8E1C6C4C412B95(tx) {
+  pFull.subsumedBy = pFull;
+  Object.freeze(pFull);
+  function p8A9400208C24F3EAF9195E429B8E1C6C4C412B95(tx) {
     var commit = true;
     var as = tx.getActionSequence();
     var len = as.length;
@@ -34,12 +33,12 @@ var policy = function() {
       }
     }
     if(commit) {
-      JAMScript.process(tx)
+      JAM.process(tx)
     }else {
-      JAMScript.prevent(tx)
+      JAM.prevent(tx)
     }
   }
-  process8A9400208C24F3EAF9195E429B8E1C6C4C412B95.subsumedBy = processAll;
-  Object.freeze(process8A9400208C24F3EAF9195E429B8E1C6C4C412B95);
-  return{introspectors:{process8A9400208C24F3EAF9195E429B8E1C6C4C412B95:process8A9400208C24F3EAF9195E429B8E1C6C4C412B95, processAll:processAll}}
+  p8A9400208C24F3EAF9195E429B8E1C6C4C412B95.subsumedBy = pFull;
+  Object.freeze(p8A9400208C24F3EAF9195E429B8E1C6C4C412B95);
+  return{p8A9400208C24F3EAF9195E429B8E1C6C4C412B95:p8A9400208C24F3EAF9195E429B8E1C6C4C412B95, pFull:pFull}
 }()

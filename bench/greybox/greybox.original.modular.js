@@ -1,4 +1,4 @@
-introspect(JAMScript.introspectors.processAll) {
+introspect(JAM.policy.pFull) {
 var GB_ROOT_DIR = './';
 
 
@@ -2314,4 +2314,3 @@ insertHeader();
 insertMenu('examples');
 
 }
-

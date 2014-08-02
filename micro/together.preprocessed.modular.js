@@ -1,5 +1,5 @@
 function runTest() {
-introspect(JAMScript.introspectors.processAll) {
+  introspect(JAM.policy.pFull) {
   function v0() {
     notanid();
     return
@@ -25,6 +25,7 @@ introspect(JAMScript.introspectors.processAll) {
     console.error(v2)
   }
   ;
+
   }
 
   return "\"OK1\" and \"OK2\" should be alerted";

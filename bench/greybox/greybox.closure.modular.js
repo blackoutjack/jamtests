@@ -1,4 +1,4 @@
-introspect(JAMScript.introspectors.processAll) {
+introspect(JAM.policy.pFull) {
 function insertHeader() {
   AJS.DI(tmpl_header)
 }

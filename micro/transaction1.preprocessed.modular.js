@@ -1,14 +1,15 @@
 function runTest() {
-introspect(JAMScript.introspectors.processAll) {
+  introspect(JAM.policy.pFull) {
   function pol(tx) {
     tx.commit();
     return
   }
   x = undefined;
-  introspect(JAMScript.introspectors.process6CB626AF3B00A2806871E6DD34E13FD7B9D46DB2) {
+  introspect(JAM.policy.p6CB626AF3B00A2806871E6DD34E13FD7B9D46DB2) {
     x = 2
   }
   ;
+
   }
 
   return x === undefined;

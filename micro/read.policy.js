@@ -1,7 +1,6 @@
 var policy = function() {
-  var states = [0];
   var _document = document;
-  function processAll(tx) {
+  function pFull(tx) {
     var commit = true;
     var as = tx.getActionSequence();
     var len = as.length;
@@ -13,14 +12,14 @@ var policy = function() {
       }
     }
     if(commit) {
-      JAMScript.process(tx)
+      JAM.process(tx)
     }else {
-      JAMScript.prevent(tx)
+      JAM.prevent(tx)
     }
   }
-  processAll.subsumedBy = processAll;
-  Object.freeze(processAll);
-  function process9BEA8110656EA88D0164D65AC8F05610035C05FE(tx) {
+  pFull.subsumedBy = pFull;
+  Object.freeze(pFull);
+  function p9BEA8110656EA88D0164D65AC8F05610035C05FE(tx) {
     var commit = true;
     var as = tx.getActionSequence();
     var len = as.length;
@@ -32,12 +31,12 @@ var policy = function() {
       }
     }
     if(commit) {
-      JAMScript.process(tx)
+      JAM.process(tx)
     }else {
-      JAMScript.prevent(tx)
+      JAM.prevent(tx)
     }
   }
-  process9BEA8110656EA88D0164D65AC8F05610035C05FE.subsumedBy = processAll;
-  Object.freeze(process9BEA8110656EA88D0164D65AC8F05610035C05FE);
-  return{introspectors:{process9BEA8110656EA88D0164D65AC8F05610035C05FE:process9BEA8110656EA88D0164D65AC8F05610035C05FE, processAll:processAll}}
+  p9BEA8110656EA88D0164D65AC8F05610035C05FE.subsumedBy = pFull;
+  Object.freeze(p9BEA8110656EA88D0164D65AC8F05610035C05FE);
+  return{p9BEA8110656EA88D0164D65AC8F05610035C05FE:p9BEA8110656EA88D0164D65AC8F05610035C05FE, pFull:pFull}
 }()

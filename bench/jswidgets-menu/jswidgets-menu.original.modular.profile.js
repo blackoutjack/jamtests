@@ -1,6 +1,6 @@
 
 JAM.startProfile('load');
-introspect(JAMScript.introspectors.processAll) {
+introspect(JAM.policy.pFull) {
 // This application comes from the SourceForge page for the JSWidgets
 // project, and is itself a use of the JSWidgets library.
 // http://jswidgets.sourceforge.net/home.shtml
@@ -1112,8 +1112,6 @@ document.body.background = "images/researchbg.gif";
 document.body.onload = initialize;
 document.getElementById("cleardiv").onmouseover = clearAll;
 
-
 }
 
 JAM.stopProfile('load');
-

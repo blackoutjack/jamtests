@@ -1,5 +1,5 @@
 function runTest() {
-introspect(JAMScript.introspectors.processAll) {
+  introspect(JAM.policy.pFull) {
   x = 0;
   var i = 0;
   lbl:for(;i < 4;i++) {
@@ -9,6 +9,7 @@ introspect(JAMScript.introspectors.processAll) {
     }
   }
   ;
+
   }
 
   return x === 1;

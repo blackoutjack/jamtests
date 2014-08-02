@@ -1,5 +1,5 @@
 function runTest() {
-eval("var x = 4;");
+  eval("var x = 4;");
   function f() {
     var y = x;
     eval("var z;");

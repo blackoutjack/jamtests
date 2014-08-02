@@ -1,4 +1,4 @@
-introspect(JAMScript.introspectors.processAll) {
+introspect(JAM.policy.pFull) {
 function v154(patterns) {
   function distance(pattern1$$1, pattern2$$1) {
     var v155 = pattern1$$1.X;

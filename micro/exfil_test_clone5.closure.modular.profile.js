@@ -1,6 +1,6 @@
 
 JAM.startProfile('load');
-introspect(JAMScript.introspectors.processAll) {
+introspect(JAM.policy.pFull) {
 function copy(obj$$16) {
   if(typeof obj$$16 !== "object") {
     return obj$$16

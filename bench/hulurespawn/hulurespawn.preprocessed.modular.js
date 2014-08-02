@@ -1,4 +1,4 @@
-introspect(JAMScript.introspectors.processAll) {
+introspect(JAM.policy.pFull) {
 function v392() {
   function v391(key$$37) {
     if(store$$1) {

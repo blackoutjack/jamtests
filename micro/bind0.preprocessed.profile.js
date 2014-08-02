@@ -1,7 +1,7 @@
 function runTest() {
 
   JAM.startProfile('load');
-function f() {
+  function f() {
     return this.indexOf("k")
   }
   var g = f.bind("ok");

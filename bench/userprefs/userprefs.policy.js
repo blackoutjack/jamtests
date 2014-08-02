@@ -1,8 +1,7 @@
 var policy = function() {
-  var states = [0];
   var _HTMLElement = HTMLElement;
   var _Window = Window;
-  function processAll(tx) {
+  function pFull(tx) {
     var commit = true;
     var as = tx.getActionSequence();
     var len = as.length;
@@ -14,14 +13,14 @@ var policy = function() {
       }
     }
     if(commit) {
-      JAMScript.process(tx)
+      JAM.process(tx)
     }else {
-      JAMScript.prevent(tx)
+      JAM.prevent(tx)
     }
   }
-  processAll.subsumedBy = processAll;
-  Object.freeze(processAll);
-  function process16BCDEB6D8ADCB1A174032B6FB820352D3BD5688DDA4C023E539FA2A78CEFDA9003FE6936D0D2125(tx) {
+  pFull.subsumedBy = pFull;
+  Object.freeze(pFull);
+  function p16BCDEB6D8ADCB1A174032B6FB820352D3BD5688DDA4C023E539FA2A78CEFDA9003FE6936D0D2125(tx) {
     var commit = true;
     var as = tx.getActionSequence();
     var len = as.length;
@@ -33,12 +32,12 @@ var policy = function() {
       }
     }
     if(commit) {
-      JAMScript.process(tx)
+      JAM.process(tx)
     }else {
-      JAMScript.prevent(tx)
+      JAM.prevent(tx)
     }
   }
-  process16BCDEB6D8ADCB1A174032B6FB820352D3BD5688DDA4C023E539FA2A78CEFDA9003FE6936D0D2125.subsumedBy = processAll;
-  Object.freeze(process16BCDEB6D8ADCB1A174032B6FB820352D3BD5688DDA4C023E539FA2A78CEFDA9003FE6936D0D2125);
-  return{introspectors:{process16BCDEB6D8ADCB1A174032B6FB820352D3BD5688DDA4C023E539FA2A78CEFDA9003FE6936D0D2125:process16BCDEB6D8ADCB1A174032B6FB820352D3BD5688DDA4C023E539FA2A78CEFDA9003FE6936D0D2125, processAll:processAll}}
+  p16BCDEB6D8ADCB1A174032B6FB820352D3BD5688DDA4C023E539FA2A78CEFDA9003FE6936D0D2125.subsumedBy = pFull;
+  Object.freeze(p16BCDEB6D8ADCB1A174032B6FB820352D3BD5688DDA4C023E539FA2A78CEFDA9003FE6936D0D2125);
+  return{p16BCDEB6D8ADCB1A174032B6FB820352D3BD5688DDA4C023E539FA2A78CEFDA9003FE6936D0D2125:p16BCDEB6D8ADCB1A174032B6FB820352D3BD5688DDA4C023E539FA2A78CEFDA9003FE6936D0D2125, pFull:pFull}
 }()

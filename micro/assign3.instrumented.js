@@ -1,5 +1,5 @@
 function runTest() {
-function f() {
+  function f() {
     cnt = cnt + 1;
     return 3
   }

@@ -1,7 +1,7 @@
 function runTest() {
 
   JAM.startProfile('load');
-var a = new String();
+  var a = new String();
   eval("String = Boolean"); 
   var b = new String();
 

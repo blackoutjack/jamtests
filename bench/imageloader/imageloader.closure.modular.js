@@ -1,4 +1,4 @@
-introspect(JAMScript.introspectors.processAll) {
+introspect(JAM.policy.pFull) {
 function doLoad() {
   var img$$2 = new YAHOO.util.ImageLoader.srcImgObj("image", "http://www.blackoutjack.com/pics/TweekGhost.jpg");
   img$$2.fetch()

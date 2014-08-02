@@ -1,4 +1,4 @@
-introspect(JAMScript.introspectors.processAll) {
+introspect(JAM.policy.pFull) {
 function smitsNode2JSON(node$$2) {
   var childJSON = [];
   var leaves = 0;

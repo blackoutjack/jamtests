@@ -1,5 +1,5 @@
 function runTest() {
-introspect(JAMScript.introspectors.processAll) {
+  introspect(JAM.policy.pFull) {
   var elt = document.createElement("script");
   elt.setAttribute("src", "notascript.js");
   var node = elt.getAttributeNode("src");

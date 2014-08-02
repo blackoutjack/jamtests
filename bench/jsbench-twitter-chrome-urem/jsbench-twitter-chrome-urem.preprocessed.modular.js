@@ -1,4 +1,4 @@
-introspect(JAMScript.introspectors.processAll) {
+introspect(JAM.policy.pFull) {
 function v69() {
   function v68(real$$1, cb$$1) {
     var v70 = !real$$1;

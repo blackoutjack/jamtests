@@ -93,7 +93,7 @@ if ($err) {
         dobtn.type = 'button';
         dobtn.onclick = function () {
           var result = runTest();
-          JAMScript.log("Result: " + result);
+          JAM.log("Result: " + result);
         };
         dobtn.value = "Run test";
         dodiv.appendChild(dobtn);
@@ -113,9 +113,9 @@ if ($auto) {
 <?
     }
 ?>
-      // JAMScript.bind is used here because a jsbench app seems to
+      // JAM.bind is used here because a jsbench app seems to
       // clobber Function.prototype.bind.
-      JAMScript.bind(goToPage, [null, document.referrer, 'autoindex', <?=$autoindex + 1?>])
+      JAM.bind(goToPage, [null, document.referrer, 'autoindex', <?=$autoindex + 1?>])
     ];
     for (var i=0; i<actions.length; i++) {
       var action = actions[i];

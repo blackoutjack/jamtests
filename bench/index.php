@@ -3,6 +3,7 @@ error_reporting(E_ALL);
 
 $err = '';
 
+define('PERFORMANCE', 1);
 define('CYCLE', 1);
 
 $auto = isset($_REQUEST['auto']) ? !!$_REQUEST['auto'] : false;
@@ -22,7 +23,6 @@ foreach ($allfiles as $fl) {
   if ($fl == 'txjs') continue;
   if ($fl == 'kraken-results') continue;
   if ($fl == 'jsbench-yahoo-firefox-urem-eval') continue;
-  //if (substr($fl, strlen($fl) - 4) == '-big') continue;
   
   // Tests disabled for lack of good test cases.
   if ($fl == 'jsbeautifier') continue;
@@ -31,28 +31,37 @@ foreach ($allfiles as $fl) {
   if ($fl == 'jssec-bad') continue;
   if ($fl == 'snote-mini') continue;
 
-  // Tests disabled for semantic divergence.
-  if ($fl == 'jsbench-twitter-chrome-urem') continue;
-  if ($fl == 'jsbench-yahoo-chrome-urem') continue;
-  if ($fl == 'jsbench-yahoo-firefox-urem') continue;
-  if ($fl == 'jsbench-yahoo-safari-urem') continue;
-  if ($fl == 'googlemaps') continue;
-  if ($fl == 'octane') continue;
+    // Tests disabled for semantic divergence.
+    if ($fl == 'jsbench-twitter-chrome-urem') continue;
+    if ($fl == 'jsbench-yahoo-chrome-urem') continue;
+    if ($fl == 'jsbench-yahoo-firefox-urem') continue;
+    if ($fl == 'jsbench-yahoo-safari-urem') continue;
+    if ($fl == 'googlemaps') continue;
+    if ($fl == 'octane') continue;
+  
+    // Tests disabled because they are redundant.
+    if ($fl == 'kraken-mega') continue;
+    if ($fl == 'kraken-mega2') continue;
+    if ($fl == 'octane-codeload') continue;
+    if ($fl == 'octane-crypto') continue;
+    if ($fl == 'octane-eb') continue;
+    if ($fl == 'octane-gb') continue;
+    if ($fl == 'octane-mandreel') continue;
+    if ($fl == 'octane-pdf') continue;
+    if ($fl == 'octane-typescript') continue;
+    if ($fl == 'octane-zlib') continue;
+    if ($fl == 'octane-zlib-eval') continue;
+    if ($fl == 'sunspider-mega') continue;
+    if ($fl == 'sunspider-mega2') continue;
+    if ($fl == 'squirrelmail-bad') continue;
 
-  // Tests disabled because they are redundant.
-  if ($fl == 'kraken-mega') continue;
-  if ($fl == 'kraken-mega2') continue;
-  if ($fl == 'octane-codeload') continue;
-  if ($fl == 'octane-eb') continue;
-  if ($fl == 'octane-gb') continue;
-  if ($fl == 'octane-mandreel') continue;
-  if ($fl == 'octane-pdf') continue;
-  if ($fl == 'octane-typescript') continue;
-  if ($fl == 'octane-zlib') continue;
-  if ($fl == 'octane-zlib-eval') continue;
-  if ($fl == 'sunspider-mega') continue;
-  if ($fl == 'sunspider-mega2') continue;
-  if ($fl == 'squirrelmail-bad') continue;
+  if (PERFORMANCE) {
+    if ($fl == 'sms2-codon-plot-newcall') continue;
+    if ($fl == 'sms2-codon-plot-newcall-big') continue;
+  } else {
+    // For correctness tests, skip "big" input.
+    if (substr($fl, strlen($fl) - 4) == '-big') continue;
+  }
 
   $apps[] = $fl;
 }
@@ -69,6 +78,7 @@ foreach ($allfiles as $fl) {
 <?
 
 $applinks = array();
+$tabidx = 0;
 foreach ($apps as $app) { 
   $href = "./$app";
   if ($auto) {
@@ -83,8 +93,9 @@ foreach ($apps as $app) {
   }
   $applinks[] = $href;
 ?>
-    <li><a href="<?=$href?>"><?=$app?></a></li>
+    <li><a href="<?=$href?>" tabindex="<?=$tabidx?>" ><?=$app?></a></li>
 <?
+  $tabidx++;
 }
 ?>
     </ul>
@@ -96,26 +107,27 @@ if ($err) {
 }
 if ($auto) {
   // Cut off execution if we've reached the end.
-  if (!CYCLE && $autoapp >= sizeof($applinks)) {
+  $appcnt = sizeof($applinks);
+  $appidx = $autoapp % $appcnt;
+  if (!CYCLE && $autoapp >= $appcnt && $appidx == 0) {
 ?>
     <p>Done with all apps</p>
 <?
   } else {
-    $autoapp = $autoapp % sizeof($applinks);
 ?>
     <script src="../auto.js"></script>
     <script>
       var apps = [
 <?
-      foreach ($applinks as $href) {
+      foreach ($applinks as $applink) {
 ?>
-        '<?=$href?>',
+        '<?=$applink?>',
 <?
       }
 ?>
       ];
       // No reason to wait on this screen.
-      doApp(apps, <?=$autoapp?>);
+      doApp(apps, <?=$appidx?>);
     </script>
 <?
   }

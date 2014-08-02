@@ -1,7 +1,7 @@
 function runTest() {
 
   JAM.startProfile('load');
-introspect(JAMScript.introspectors.processAll) {
+  introspect(JAM.policy.pFull) {
   document.write("<script>alert('ok1');</script><p>MID</p><script>alert('ok2');</script>");
   document.close();
 

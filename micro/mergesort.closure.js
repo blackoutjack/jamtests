@@ -1,5 +1,5 @@
 function runTest() {
-function merge(left$$2, right$$2) {
+  function merge(left$$2, right$$2) {
     var result = [];
     for(;left$$2.length > 0 || right$$2.length > 0;) {
       if(left$$2.length > 0 && right$$2.length > 0) {

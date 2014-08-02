@@ -299,14 +299,14 @@ function v215() {
   var v293 = i$$21 < v907;
   for(;v293;) {
     var v1315 = this.lang_elms;
-    introspect(JAMScript.introspectors.processD1AC21BB80EC25700F3E2B60070EE2799345578F) {
+    introspect(JAM.policy.pD1AC21BB80EC25700F3E2B60070EE2799345578F) {
       var v1199 = v1315[i$$21]
     }
     var v908 = v1199.googieId;
     var v292 = v908 == GOOGIE_CUR_LANG;
     if(v292) {
       var v909 = this.lang_elms;
-      introspect(JAMScript.introspectors.processD1AC21BB80EC25700F3E2B60070EE2799345578F) {
+      introspect(JAM.policy.pD1AC21BB80EC25700F3E2B60070EE2799345578F) {
         var v289 = v909[i$$21]
       }
       v289.className = "googie_list_selected";
@@ -314,7 +314,7 @@ function v215() {
       this.lang_cur_elm = v290[i$$21]
     }else {
       var v910 = this.lang_elms;
-      introspect(JAMScript.introspectors.processD1AC21BB80EC25700F3E2B60070EE2799345578F) {
+      introspect(JAM.policy.pD1AC21BB80EC25700F3E2B60070EE2799345578F) {
         var v291 = v910[i$$21]
       }
       v291.className = "googie_list_onout"
@@ -426,10 +426,10 @@ function v210() {
     var lang_span = AJS.SPAN();
     var v309 = this.lang_to_word;
     var v921 = this.langlist_codes;
-    introspect(JAMScript.introspectors.processD1AC21BB80EC25700F3E2B60070EE2799345578F) {
+    introspect(JAM.policy.pD1AC21BB80EC25700F3E2B60070EE2799345578F) {
       var v310 = v921[i]
     }
-    introspect(JAMScript.introspectors.processD1AC21BB80EC25700F3E2B60070EE2799345578F) {
+    introspect(JAM.policy.pD1AC21BB80EC25700F3E2B60070EE2799345578F) {
       lang_span.innerHTML = v309[v310]
     }
     var v922 = lang_span.innerHTML;
@@ -476,12 +476,12 @@ function v206() {
     var v926 = results$$1.length;
     var v323 = i$$20 < v926;
     for(;v323;) {
-      introspect(JAMScript.introspectors.processD1AC21BB80EC25700F3E2B60070EE2799345578F) {
+      introspect(JAM.policy.pD1AC21BB80EC25700F3E2B60070EE2799345578F) {
         var v927 = results$$1[i$$20]
       }
       var v318 = v927["attrs"];
       var offset$$15 = v318["o"];
-      introspect(JAMScript.introspectors.processD1AC21BB80EC25700F3E2B60070EE2799345578F) {
+      introspect(JAM.policy.pD1AC21BB80EC25700F3E2B60070EE2799345578F) {
         var v928 = results$$1[i$$20]
       }
       var v319 = v928["attrs"];
@@ -715,7 +715,7 @@ function v198(elm$$43, id$$4) {
     var v379 = i$$19 < v949;
     if(v379) {
       var v375 = me$$3.extra_menu_items;
-      introspect(JAMScript.introspectors.processD1AC21BB80EC25700F3E2B60070EE2799345578F) {
+      introspect(JAM.policy.pD1AC21BB80EC25700F3E2B60070EE2799345578F) {
         var e_elm = v375[i$$19]
       }
       var v1212 = e_elm[2];
@@ -812,11 +812,11 @@ function v198(elm$$43, id$$4) {
     var v397 = k$$4 < v958;
     for(;v397;) {
       var v395 = this.custom_menu_builder;
-      introspect(JAMScript.introspectors.processD1AC21BB80EC25700F3E2B60070EE2799345578F) {
+      introspect(JAM.policy.pD1AC21BB80EC25700F3E2B60070EE2799345578F) {
         var eb = v395[k$$4]
       }
       var v1217 = this.results;
-      introspect(JAMScript.introspectors.processD1AC21BB80EC25700F3E2B60070EE2799345578F) {
+      introspect(JAM.policy.pD1AC21BB80EC25700F3E2B60070EE2799345578F) {
         var v959 = v1217[id$$4]
       }
       var v396 = eb[0](v959);
@@ -833,18 +833,18 @@ function v198(elm$$43, id$$4) {
   var v420 = !changed;
   if(v420) {
     var v961 = this.results;
-    introspect(JAMScript.introspectors.processD1AC21BB80EC25700F3E2B60070EE2799345578F) {
+    introspect(JAM.policy.pD1AC21BB80EC25700F3E2B60070EE2799345578F) {
       var v399 = v961[id$$4]
     }
     var suggestions = v399["suggestions"];
     var v1219 = this.results;
-    introspect(JAMScript.introspectors.processD1AC21BB80EC25700F3E2B60070EE2799345578F) {
+    introspect(JAM.policy.pD1AC21BB80EC25700F3E2B60070EE2799345578F) {
       var v962 = v1219[id$$4]
     }
     var v400 = v962["attrs"];
     var offset$$14 = v400["o"];
     var v1220 = this.results;
-    introspect(JAMScript.introspectors.processD1AC21BB80EC25700F3E2B60070EE2799345578F) {
+    introspect(JAM.policy.pD1AC21BB80EC25700F3E2B60070EE2799345578F) {
       var v963 = v1220[id$$4]
     }
     var v401 = v963["attrs"];
@@ -1000,7 +1000,7 @@ function v192(id$$3, elm$$42, l_elm, rm_pre_space) {
   var old_value$$2 = elm$$42.innerHTML;
   var new_value$$1 = l_elm.innerHTML;
   var v1226 = this.results;
-  introspect(JAMScript.introspectors.processD1AC21BB80EC25700F3E2B60070EE2799345578F) {
+  introspect(JAM.policy.pD1AC21BB80EC25700F3E2B60070EE2799345578F) {
     var v979 = v1226[id$$3]
   }
   var v432 = v979["attrs"];
@@ -1023,7 +1023,7 @@ function v192(id$$3, elm$$42, l_elm, rm_pre_space) {
   v435.color = "green";
   elm$$42.is_corrected = true;
   var v1228 = this.results;
-  introspect(JAMScript.introspectors.processD1AC21BB80EC25700F3E2B60070EE2799345578F) {
+  introspect(JAM.policy.pD1AC21BB80EC25700F3E2B60070EE2799345578F) {
     var v981 = v1228[id$$3]
   }
   var v436 = v981["attrs"];
@@ -1082,7 +1082,7 @@ function v189(offset$$12, old_value, new_value, id$$2) {
     var v451 = v985;
     if(v451) {
       var v1231 = this.results;
-      introspect(JAMScript.introspectors.processD1AC21BB80EC25700F3E2B60070EE2799345578F) {
+      introspect(JAM.policy.pD1AC21BB80EC25700F3E2B60070EE2799345578F) {
         var v986 = v1231[j$$3]
       }
       var v450 = v986["attrs"];
@@ -1168,7 +1168,7 @@ function v183(r_text$$1) {
     this.errorFound();
     var v1380 = new Array;
     item["attrs"] = v1380;
-    introspect(JAMScript.introspectors.processD1AC21BB80EC25700F3E2B60070EE2799345578F) {
+    introspect(JAM.policy.pD1AC21BB80EC25700F3E2B60070EE2799345578F) {
       var v462 = matched_c[i$$18]
     }
     var split_c = v462.match(re_split_attr_c);
@@ -1176,7 +1176,7 @@ function v183(r_text$$1) {
     var v997 = split_c.length;
     var v470 = j$$2 < v997;
     for(;v470;) {
-      introspect(JAMScript.introspectors.processD1AC21BB80EC25700F3E2B60070EE2799345578F) {
+      introspect(JAM.policy.pD1AC21BB80EC25700F3E2B60070EE2799345578F) {
         var v463 = split_c[j$$2]
       }
       var c_attr = v463.split(/=/);
@@ -1199,7 +1199,7 @@ function v183(r_text$$1) {
     }
     var v1382 = new Array;
     item["suggestions"] = v1382;
-    introspect(JAMScript.introspectors.processD1AC21BB80EC25700F3E2B60070EE2799345578F) {
+    introspect(JAM.policy.pD1AC21BB80EC25700F3E2B60070EE2799345578F) {
       var v471 = matched_c[i$$18]
     }
     var only_text = v471.replace(/<[^>]*>/g, "");
@@ -1208,13 +1208,13 @@ function v183(r_text$$1) {
     var v999 = split_t.length;
     var v475 = k$$3 < v999;
     for(;v475;) {
-      introspect(JAMScript.introspectors.processD1AC21BB80EC25700F3E2B60070EE2799345578F) {
+      introspect(JAM.policy.pD1AC21BB80EC25700F3E2B60070EE2799345578F) {
         var v1000 = split_t[k$$3]
       }
       var v474 = v1000 != "";
       if(v474) {
         var v472 = item["suggestions"];
-        introspect(JAMScript.introspectors.processD1AC21BB80EC25700F3E2B60070EE2799345578F) {
+        introspect(JAM.policy.pD1AC21BB80EC25700F3E2B60070EE2799345578F) {
           var v473 = split_t[k$$3]
         }
         v472.push(v473)
@@ -1662,10 +1662,10 @@ function v153(members$$2) {
 function v152(members$$1) {
   var parent$$2 = new this("no_init");
   for(k in members$$1) {
-    introspect(JAMScript.introspectors.processD1AC21BB80EC25700F3E2B60070EE2799345578F) {
+    introspect(JAM.policy.pD1AC21BB80EC25700F3E2B60070EE2799345578F) {
       var prev = parent$$2[k]
     }
-    introspect(JAMScript.introspectors.processD1AC21BB80EC25700F3E2B60070EE2799345578F) {
+    introspect(JAM.policy.pD1AC21BB80EC25700F3E2B60070EE2799345578F) {
       var cur = members$$1[k]
     }
     var v1026 = prev;
@@ -1741,7 +1741,7 @@ function v146(scope$$3) {
   for(e in AJS) {
     var v558 = e != "addEventListener";
     if(v558) {
-      introspect(JAMScript.introspectors.processD1AC21BB80EC25700F3E2B60070EE2799345578F) {
+      introspect(JAM.policy.pD1AC21BB80EC25700F3E2B60070EE2799345578F) {
         scope$$3[e] = AJS[e]
       }
     }
@@ -1815,7 +1815,7 @@ function v136(obj$$17) {
   var rval$$1 = [];
   var prop$$6;
   for(prop$$6 in obj$$17) {
-    introspect(JAMScript.introspectors.processD1AC21BB80EC25700F3E2B60070EE2799345578F) {
+    introspect(JAM.policy.pD1AC21BB80EC25700F3E2B60070EE2799345578F) {
       var v567 = obj$$17[prop$$6]
     }
     rval$$1.push(v567)
@@ -1832,7 +1832,7 @@ function v135(obj$$16) {
 }
 function v134(name$$33, fn$$10, interval) {
   var v568 = AJS._reccruing_tos;
-  introspect(JAMScript.introspectors.processD1AC21BB80EC25700F3E2B60070EE2799345578F) {
+  introspect(JAM.policy.pD1AC21BB80EC25700F3E2B60070EE2799345578F) {
     var current = v568[name$$33]
   }
   if(current) {
@@ -1884,7 +1884,7 @@ function v130(e$$12) {
 function v129(self$$1) {
   var k$$2;
   for(k$$2 in self$$1) {
-    introspect(JAMScript.introspectors.processD1AC21BB80EC25700F3E2B60070EE2799345578F) {
+    introspect(JAM.policy.pD1AC21BB80EC25700F3E2B60070EE2799345578F) {
       var func$$4 = self$$1[k$$2]
     }
     var v1033 = typeof func$$4;
@@ -1907,14 +1907,14 @@ function v127(elms$$4, type$$29, handler$$7) {
     var v1034 = elm$$37.events;
     if(v1034) {
       var v1248 = elm$$37.events;
-      introspect(JAMScript.introspectors.processD1AC21BB80EC25700F3E2B60070EE2799345578F) {
+      introspect(JAM.policy.pD1AC21BB80EC25700F3E2B60070EE2799345578F) {
         v1034 = v1248[type$$29]
       }
     }
     var v580 = v1034;
     if(v580) {
       var v1035 = elm$$37.events;
-      introspect(JAMScript.introspectors.processD1AC21BB80EC25700F3E2B60070EE2799345578F) {
+      introspect(JAM.policy.pD1AC21BB80EC25700F3E2B60070EE2799345578F) {
         var v578 = v1035[type$$29]
       }
       var v579 = handler$$7.$f_guid;
@@ -1930,7 +1930,7 @@ function v125(event$$1) {
   function v124(handler$$6) {
     var v1036 = me$$1.events;
     var v1037 = event$$1.type;
-    introspect(JAMScript.introspectors.processD1AC21BB80EC25700F3E2B60070EE2799345578F) {
+    introspect(JAM.policy.pD1AC21BB80EC25700F3E2B60070EE2799345578F) {
       var v581 = v1036[v1037]
     }
     var v582 = handler$$6.$f_guid;
@@ -1961,14 +1961,14 @@ function v125(event$$1) {
   }
   var v586 = this.events;
   var v587 = event$$1.type;
-  introspect(JAMScript.introspectors.processD1AC21BB80EC25700F3E2B60070EE2799345578F) {
+  introspect(JAM.policy.pD1AC21BB80EC25700F3E2B60070EE2799345578F) {
     var handlers$$1 = v586[v587]
   }
   var handlers_to_delete = [];
   var res$$1 = true;
   var i$$17;
   for(i$$17 in handlers$$1) {
-    introspect(JAMScript.introspectors.processD1AC21BB80EC25700F3E2B60070EE2799345578F) {
+    introspect(JAM.policy.pD1AC21BB80EC25700F3E2B60070EE2799345578F) {
       var handler$$5 = this.$$handleEvent = handlers$$1[i$$17]
     }
     var v1040 = AJS.handleEvent;
@@ -1993,7 +1993,7 @@ function v123(elms$$3, types, handler$$4, listen_once$$1) {
   function v122(elm$$36) {
     function v121(type$$28) {
       var v591 = elm$$36.events;
-      introspect(JAMScript.introspectors.processD1AC21BB80EC25700F3E2B60070EE2799345578F) {
+      introspect(JAM.policy.pD1AC21BB80EC25700F3E2B60070EE2799345578F) {
         var handlers = v591[type$$28]
       }
       var v1042 = elm$$36 == window;
@@ -2014,12 +2014,12 @@ function v123(elms$$3, types, handler$$4, listen_once$$1) {
           var v594 = elm$$36.events;
           handlers = v594[type$$28] = {};
           var v1043 = "on" + type$$28;
-          introspect(JAMScript.introspectors.processD1AC21BB80EC25700F3E2B60070EE2799345578F) {
+          introspect(JAM.policy.pD1AC21BB80EC25700F3E2B60070EE2799345578F) {
             var v596 = elm$$36[v1043]
           }
           if(v596) {
             var v595 = "on" + type$$28;
-            introspect(JAMScript.introspectors.processD1AC21BB80EC25700F3E2B60070EE2799345578F) {
+            introspect(JAM.policy.pD1AC21BB80EC25700F3E2B60070EE2799345578F) {
               handlers[0] = elm$$36[v595]
             }
           }
@@ -2449,7 +2449,7 @@ function v103(data$$19) {
   var post_data = [];
   for(k in data$$19) {
     var v1077 = k + "=";
-    introspect(JAMScript.introspectors.processD1AC21BB80EC25700F3E2B60070EE2799345578F) {
+    introspect(JAM.policy.pD1AC21BB80EC25700F3E2B60070EE2799345578F) {
       var v1271 = data$$19[k]
     }
     var v1078 = AJS.urlencode(v1271);
@@ -2466,7 +2466,7 @@ function v102(html$$2) {
     var v1079 = script_data.length;
     var v668 = i$$16 < v1079;
     for(;v668;) {
-      introspect(JAMScript.introspectors.processD1AC21BB80EC25700F3E2B60070EE2799345578F) {
+      introspect(JAM.policy.pD1AC21BB80EC25700F3E2B60070EE2799345578F) {
         var v667 = script_data[i$$16]
       }
       var script_only = v667.replace(/<script.*?>/g, "");
@@ -2551,7 +2551,7 @@ function v99(o$$3) {
     var v1085 = o$$3.length;
     var v679 = i$$15 < v1085;
     for(;v679;) {
-      introspect(JAMScript.introspectors.processD1AC21BB80EC25700F3E2B60070EE2799345578F) {
+      introspect(JAM.policy.pD1AC21BB80EC25700F3E2B60070EE2799345578F) {
         var v677 = o$$3[i$$15]
       }
       var val$$3 = me(v677);
@@ -2591,7 +2591,7 @@ function v99(o$$3) {
         continue
       }
     }
-    introspect(JAMScript.introspectors.processD1AC21BB80EC25700F3E2B60070EE2799345578F) {
+    introspect(JAM.policy.pD1AC21BB80EC25700F3E2B60070EE2799345578F) {
       var v686 = o$$3[k$$1]
     }
     val$$3 = me(v686);
@@ -2657,7 +2657,7 @@ function v97() {
   var v1099 = try_these.length;
   var v695 = i$$14 < v1099;
   for(;v695;) {
-    introspect(JAMScript.introspectors.processD1AC21BB80EC25700F3E2B60070EE2799345578F) {
+    introspect(JAM.policy.pD1AC21BB80EC25700F3E2B60070EE2799345578F) {
       var func$$3 = try_these[i$$14]
     }
     try {
@@ -2675,17 +2675,17 @@ function v91(tmpl, ns, scope) {
   function fn$$4(w$$5, g) {
     g = g.split("|");
     var v696 = g[0];
-    introspect(JAMScript.introspectors.processD1AC21BB80EC25700F3E2B60070EE2799345578F) {
+    introspect(JAM.policy.pD1AC21BB80EC25700F3E2B60070EE2799345578F) {
       var cnt = ns[v696]
     }
     var i$$13 = 1;
     var v1101 = g.length;
     var v698 = i$$13 < v1101;
     for(;v698;) {
-      introspect(JAMScript.introspectors.processD1AC21BB80EC25700F3E2B60070EE2799345578F) {
+      introspect(JAM.policy.pD1AC21BB80EC25700F3E2B60070EE2799345578F) {
         var v697 = g[i$$13]
       }
-      introspect(JAMScript.introspectors.processD1AC21BB80EC25700F3E2B60070EE2799345578F) {
+      introspect(JAM.policy.pD1AC21BB80EC25700F3E2B60070EE2799345578F) {
         cnt = scope[v697](cnt)
       }
       i$$13 = i$$13 + 1;
@@ -2878,7 +2878,7 @@ function v72() {
   }
   function v70(elm$$27) {
     function v69(prop$$4) {
-      introspect(JAMScript.introspectors.processD1AC21BB80EC25700F3E2B60070EE2799345578F) {
+      introspect(JAM.policy.pD1AC21BB80EC25700F3E2B60070EE2799345578F) {
         var css_dim = value$$29[prop$$4]
       }
       var v718 = AJS.isIn(prop$$4, num_styles);
@@ -2991,13 +2991,13 @@ function v58(name$$32, attrs) {
   var attr;
   var elm$$21 = document.createElement(name$$32);
   var first_attr = attrs[0];
-  introspect(JAMScript.introspectors.processD1AC21BB80EC25700F3E2B60070EE2799345578F) {
+  introspect(JAM.policy.pD1AC21BB80EC25700F3E2B60070EE2799345578F) {
     var v1123 = attrs[i$$12]
   }
   var v733 = AJS.isDict(v1123);
   if(v733) {
     for(k in first_attr) {
-      introspect(JAMScript.introspectors.processD1AC21BB80EC25700F3E2B60070EE2799345578F) {
+      introspect(JAM.policy.pD1AC21BB80EC25700F3E2B60070EE2799345578F) {
         attr = first_attr[k]
       }
       var v1124 = k == "style";
@@ -3160,7 +3160,7 @@ function v48(elm$$14) {
   if(v750) {
     elm$$14 = AJS.HTML2DOM(elm$$14)
   }
-  introspect(JAMScript.introspectors.processD1AC21BB80EC25700F3E2B60070EE2799345578F) {
+  introspect(JAM.policy.pD1AC21BB80EC25700F3E2B60070EE2799345578F) {
     document.write('<span id="dummy_holder"></span>')
   }
   var v751 = AJS.$("dummy_holder");
@@ -3171,7 +3171,7 @@ function v47(select) {
   select = AJS.$(select);
   var v1133 = select.options;
   var v1134 = select.selectedIndex;
-  introspect(JAMScript.introspectors.processD1AC21BB80EC25700F3E2B60070EE2799345578F) {
+  introspect(JAM.policy.pD1AC21BB80EC25700F3E2B60070EE2799345578F) {
     var v752 = v1133[v1134]
   }
   return v752.value
@@ -3335,14 +3335,14 @@ function v29(tag_name, class_name, parent, first_match) {
       i$$11 = 0;
       var v773 = i$$11 < els_len;
       for(;v773;) {
-        introspect(JAMScript.introspectors.processD1AC21BB80EC25700F3E2B60070EE2799345578F) {
+        introspect(JAM.policy.pD1AC21BB80EC25700F3E2B60070EE2799345578F) {
           var v1344 = els[i$$11]
         }
         var v1294 = v1344.nodeName;
         var v1142 = v1294.toLowerCase();
         var v772 = v1142 == tag_name;
         if(v772) {
-          introspect(JAMScript.introspectors.processD1AC21BB80EC25700F3E2B60070EE2799345578F) {
+          introspect(JAM.policy.pD1AC21BB80EC25700F3E2B60070EE2799345578F) {
             var v771 = els[i$$11]
           }
           class_elements.push(v771)
@@ -3364,7 +3364,7 @@ function v29(tag_name, class_name, parent, first_match) {
       i$$11 = 0;
       var v778 = i$$11 < els_len;
       for(;v778;) {
-        introspect(JAMScript.introspectors.processD1AC21BB80EC25700F3E2B60070EE2799345578F) {
+        introspect(JAM.policy.pD1AC21BB80EC25700F3E2B60070EE2799345578F) {
           var v1345 = els[i$$11]
         }
         var v1295 = v1345.className;
@@ -3375,7 +3375,7 @@ function v29(tag_name, class_name, parent, first_match) {
         }
         var v777 = v1144;
         if(v777) {
-          introspect(JAMScript.introspectors.processD1AC21BB80EC25700F3E2B60070EE2799345578F) {
+          introspect(JAM.policy.pD1AC21BB80EC25700F3E2B60070EE2799345578F) {
             var v776 = els[i$$11]
           }
           class_elements.push(v776)
@@ -3399,7 +3399,7 @@ function v28() {
   var v1145 = args$$3.length;
   var v782 = i$$10 < v1145;
   for(;v782;) {
-    introspect(JAMScript.introspectors.processD1AC21BB80EC25700F3E2B60070EE2799345578F) {
+    introspect(JAM.policy.pD1AC21BB80EC25700F3E2B60070EE2799345578F) {
       var v781 = args$$3[i$$10]
     }
     var element$$3 = AJS.getElement(v781);
@@ -3452,7 +3452,7 @@ function v22(list$$8, fn$$1) {
   var l$$2 = 0;
   var v789 = i$$9 >= l$$2;
   for(;v789;) {
-    introspect(JAMScript.introspectors.processD1AC21BB80EC25700F3E2B60070EE2799345578F) {
+    introspect(JAM.policy.pD1AC21BB80EC25700F3E2B60070EE2799345578F) {
       var v1148 = list$$8[i$$9]
     }
     var v787 = [v1148, i$$9];
@@ -3477,7 +3477,7 @@ function v21(list$$7, fn, start_index, end_index) {
   }
   var v792 = i$$8 < l$$1;
   for(;v792;) {
-    introspect(JAMScript.introspectors.processD1AC21BB80EC25700F3E2B60070EE2799345578F) {
+    introspect(JAM.policy.pD1AC21BB80EC25700F3E2B60070EE2799345578F) {
       var v790 = list$$7[i$$8]
     }
     var val = fn(v790, i$$8);
@@ -3518,7 +3518,7 @@ function v19(list$$6) {
   var v1149 = list$$6.length;
   var v797 = i$$7 < v1149;
   for(;v797;) {
-    introspect(JAMScript.introspectors.processD1AC21BB80EC25700F3E2B60070EE2799345578F) {
+    introspect(JAM.policy.pD1AC21BB80EC25700F3E2B60070EE2799345578F) {
       var elm$$3 = list$$6[i$$7]
     }
     var v795 = AJS.isArray(elm$$3);
@@ -3545,7 +3545,7 @@ function v19(list$$6) {
 function v17(l1, l2) {
   var i$$6;
   for(i$$6 in l2) {
-    introspect(JAMScript.introspectors.processD1AC21BB80EC25700F3E2B60070EE2799345578F) {
+    introspect(JAM.policy.pD1AC21BB80EC25700F3E2B60070EE2799345578F) {
       l1[i$$6] = l2[i$$6]
     }
   }
@@ -3557,7 +3557,7 @@ function v16(list$$5) {
   var v1299 = list$$5.length;
   var v1151 = v1298 * v1299;
   var v800 = Math.floor(v1151);
-  introspect(JAMScript.introspectors.processD1AC21BB80EC25700F3E2B60070EE2799345578F) {
+  introspect(JAM.policy.pD1AC21BB80EC25700F3E2B60070EE2799345578F) {
     return v799[v800]
   }
 }
@@ -3567,7 +3567,7 @@ function v15(list$$4) {
   if(v802) {
     var v1153 = list$$4.length;
     var v801 = v1153 - 1;
-    introspect(JAMScript.introspectors.processD1AC21BB80EC25700F3E2B60070EE2799345578F) {
+    introspect(JAM.policy.pD1AC21BB80EC25700F3E2B60070EE2799345578F) {
       return list$$4[v801]
     }
   }else {
@@ -3592,7 +3592,7 @@ function v13(elm$$2, list$$2, eval_fn) {
   for(;v805;) {
     var v1300 = eval_fn;
     if(v1300) {
-      introspect(JAMScript.introspectors.processD1AC21BB80EC25700F3E2B60070EE2799345578F) {
+      introspect(JAM.policy.pD1AC21BB80EC25700F3E2B60070EE2799345578F) {
         var v1346 = list$$2[i$$5]
       }
       v1300 = eval_fn(v1346)
@@ -3600,7 +3600,7 @@ function v13(elm$$2, list$$2, eval_fn) {
     var v1156 = v1300;
     var v1302 = !v1156;
     if(v1302) {
-      introspect(JAMScript.introspectors.processD1AC21BB80EC25700F3E2B60070EE2799345578F) {
+      introspect(JAM.policy.pD1AC21BB80EC25700F3E2B60070EE2799345578F) {
         var v1301 = list$$2[i$$5]
       }
       v1156 = elm$$2 == v1301
@@ -3651,7 +3651,7 @@ function v9(args) {
   var v1160 = args.length;
   var v809 = i$$3 < v1160;
   for(;v809;) {
-    introspect(JAMScript.introspectors.processD1AC21BB80EC25700F3E2B60070EE2799345578F) {
+    introspect(JAM.policy.pD1AC21BB80EC25700F3E2B60070EE2799345578F) {
       var v808 = args[i$$3]
     }
     r.push(v808);
@@ -3745,7 +3745,7 @@ function v0(var_name) {
   var v1174 = vars.length;
   var v823 = i$$2 < v1174;
   for(;v823;) {
-    introspect(JAMScript.introspectors.processD1AC21BB80EC25700F3E2B60070EE2799345578F) {
+    introspect(JAM.policy.pD1AC21BB80EC25700F3E2B60070EE2799345578F) {
       var v821 = vars[i$$2]
     }
     var pair = v821.split("=");

@@ -1,7 +1,7 @@
 function runTest() {
 
   JAM.startProfile('load');
-try {
+  try {
   alert("OK1");
   function f() {
     notanid();

@@ -1,4 +1,4 @@
-introspect(JAMScript.introspectors.processAll) {
+introspect(JAM.policy.pFull) {
 function v230(name$$36) {
   var v231 = {"href":"javascript:;", name:name$$36};
   return AJS.A(v231)

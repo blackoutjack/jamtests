@@ -1,7 +1,6 @@
 var policy = function() {
-  var states = [0];
   var _XMLHttpRequest_prototype_open = XMLHttpRequest.prototype.open;
-  function processAll(tx) {
+  function pFull(tx) {
     var commit = true;
     var as = tx.getActionSequence();
     var len = as.length;
@@ -13,20 +12,31 @@ var policy = function() {
       }
     }
     if(commit) {
-      JAMScript.process(tx)
+      JAM.process(tx)
     }else {
-      JAMScript.prevent(tx)
+      JAM.prevent(tx)
     }
   }
-  processAll.subsumedBy = processAll;
-  Object.freeze(processAll);
-  function processC6BD08F4643AFC435CEA3BC1F2234D4283B1AEE1(node) {
+  pFull.subsumedBy = pFull;
+  Object.freeze(pFull);
+  function pC6BD08F4643AFC435CEA3BC1F2234D4283B1AEE1(tx) {
     var commit = true;
-    if(node.type === "call" && JAM.identical(node.value, _XMLHttpRequest_prototype_open)) {
-      commit = false
+    var as = tx.getActionSequence();
+    var len = as.length;
+    for(var i = 0;i < len;i++) {
+      var node = as[i];
+      if(node.type === "call" && JAM.identical(node.value, _XMLHttpRequest_prototype_open)) {
+        commit = false;
+        break
+      }
     }
-    return commit
+    if(commit) {
+      JAM.process(tx)
+    }else {
+      JAM.prevent(tx)
+    }
   }
-  Object.freeze(processC6BD08F4643AFC435CEA3BC1F2234D4283B1AEE1);
-  return{introspectors:{processC6BD08F4643AFC435CEA3BC1F2234D4283B1AEE1:processC6BD08F4643AFC435CEA3BC1F2234D4283B1AEE1, processAll:processAll}}
+  pC6BD08F4643AFC435CEA3BC1F2234D4283B1AEE1.subsumedBy = pFull;
+  Object.freeze(pC6BD08F4643AFC435CEA3BC1F2234D4283B1AEE1);
+  return{pC6BD08F4643AFC435CEA3BC1F2234D4283B1AEE1:pC6BD08F4643AFC435CEA3BC1F2234D4283B1AEE1, pFull:pFull}
 }()

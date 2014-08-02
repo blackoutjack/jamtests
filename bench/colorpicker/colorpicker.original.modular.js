@@ -1,4 +1,4 @@
-introspect(JAMScript.introspectors.processAll) {
+introspect(JAM.policy.pFull) {
 /*!
  * jQuery JavaScript Library v1.4.2
  * http://jquery.com/
@@ -7978,8 +7978,4 @@ $(function() {
   $("#blue").slider("value", 60);
 });
 
-
-
-
 }
-

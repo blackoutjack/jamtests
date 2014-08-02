@@ -1,5 +1,5 @@
 function runTest() {
-function pol(tx) {
+  function pol(tx) {
     tx.commit();
     return
   }

@@ -1,5 +1,5 @@
 function runTest() {
-document.getElementById = document.getElementsByTagName;
+  document.getElementById = document.getElementsByTagName;
   var elt = document.getElementById("ok");
 
   return elt instanceof HTMLCollection;

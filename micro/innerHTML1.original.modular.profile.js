@@ -1,9 +1,9 @@
 function runTest() {
 
   JAM.startProfile('load');
-introspect(JAMScript.introspectors.processAll) {
+  introspect(JAM.policy.pFull) {
   var div = document.createElement("div");
-  introspect(JAMScript.process) {
+  introspect(JAM.process) {
   div.innerHTML = "<a href='#'></a>";
   var d = div.childNodes[0];
   }

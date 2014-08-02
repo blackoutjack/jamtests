@@ -1,6 +1,6 @@
 
 JAM.startProfile('load');
-introspect(JAMScript.introspectors.processAll) {
+introspect(JAM.policy.pFull) {
 function __bsld() {
   var p = window.gapi.plusone = window.googleapisv0.plusone;
   var f$$1;
@@ -229,4 +229,3 @@ gapi_load("googleapis.client:plusone", window["__bsld"]);
 }
 
 JAM.stopProfile('load');
-

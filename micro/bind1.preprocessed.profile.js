@@ -1,7 +1,7 @@
 function runTest() {
 
   JAM.startProfile('load');
-x = 1;
+  x = 1;
   var e = eval.bind(null, "x = 2");
   e();
 

@@ -1,5 +1,5 @@
 function runTest() {
-introspect(JAMScript.introspectors.processAll) {
+  introspect(JAM.policy.pFull) {
   var elt = document.createElement("script");
   var node = document.createAttribute("dummy");
   node.value = "exfil.js";

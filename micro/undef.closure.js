@@ -1,5 +1,5 @@
 function runTest() {
-x = y;
+  x = y;
 
   return "Expect an exception";
 }

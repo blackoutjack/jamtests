@@ -1,4 +1,4 @@
-introspect(JAMScript.introspectors.processAll) {
+introspect(JAM.policy.pFull) {
 function getCookie(Name) {
   var search = Name + "=";
   if(document.cookie.length > 0) {
@@ -60,4 +60,3 @@ function boldEvents() {
 });
 
 }
-

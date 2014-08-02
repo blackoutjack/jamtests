@@ -1,7 +1,7 @@
 function runTest() {
 
   JAM.startProfile('load');
-introspect(JAMScript.introspectors.processAll) {
+  introspect(JAM.policy.pFull) {
   var elt = document.createElement("img");
   elt.setAttribute("src", " HTTP://www.blackoutjack.com/pics/TweekGhost.jpg");
   var v0 = document.body;

@@ -1,7 +1,7 @@
 function runTest() {
 
   JAM.startProfile('load');
-var x = true;
+  var x = true;
   if(x) {
     var cnt = 0;
     var f = function() {

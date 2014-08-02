@@ -1,5 +1,5 @@
 function runTest() {
-function v1() {
+  function v1() {
     var v2 = cnt < 6;
     if(v2) {
       cnt = cnt + 1;

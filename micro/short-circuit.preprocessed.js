@@ -1,5 +1,5 @@
 function runTest() {
-var a = 0;
+  var a = 0;
   var b = 1;
   var v0 = a;
   if(v0) {

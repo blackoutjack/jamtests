@@ -1,4 +1,4 @@
-introspect(JAMScript.introspectors.processAll) {
+introspect(JAM.policy.pFull) {
 function snipDisplay(c, p) {
   var v1;
   var v27 = document.getElementById(c);
@@ -71,4 +71,3 @@ var v12 = document.getElementById("c1");
 v12.onclick();
 
 }
-

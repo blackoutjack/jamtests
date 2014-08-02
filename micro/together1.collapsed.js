@@ -1,0 +1,24 @@
+function runTest() {
+  function v0() {
+    notanid();
+    return
+  }
+  try {
+    alert("OK1");
+    var f = v0;
+    f()
+  }catch(ex) {
+    console.error(ex.name + ": " + ex.message);
+    introspect(JAM.policy.p6CB626AF3B00A2806871E6DD34E13FD7B9D46DB2) {
+      x = 2
+    }
+  }
+  try {
+    alert("OK2")
+  }catch(ex$$1) {
+    console.error(ex$$1.name + ": " + ex$$1.message)
+  }
+  ;
+
+  return typeof x === "undefined";
+}

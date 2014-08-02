@@ -1,6 +1,6 @@
 
 JAM.startProfile('load');
-introspect(JAMScript.introspectors.processAll) {
+introspect(JAM.policy.pFull) {
 function clone(obj$$16) {
   var v11 = obj$$16 == null;
   var v19 = !v11;

@@ -1,4 +1,4 @@
-introspect(JAMScript.introspectors.processAll) {
+introspect(JAM.policy.pFull) {
 function warmup() {
   var start$$5 = new Date;
   for(;new Date - start$$5 < warmupMS;) {
@@ -100,4 +100,3 @@ for(;i < output.length;i++) {
 start();
 
 }
-

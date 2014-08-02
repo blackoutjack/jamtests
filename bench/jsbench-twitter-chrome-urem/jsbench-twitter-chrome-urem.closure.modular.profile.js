@@ -1,6 +1,6 @@
 
 JAM.startProfile('load');
-introspect(JAMScript.introspectors.processAll) {
+introspect(JAM.policy.pFull) {
 (function() {
   function arrsort(comp$$2) {
     return stable(this, comp$$2)

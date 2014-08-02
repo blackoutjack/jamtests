@@ -1,6 +1,7 @@
 function runTest() {
-introspect(JAMScript.introspectors.processAll) {
+  introspect(JAM.policy.pFull) {
   throw"exception!";
+
   }
 
   return "Exception thrown";

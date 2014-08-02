@@ -1,4 +1,4 @@
-introspect(JAMScript.introspectors.processAll) {
+introspect(JAM.policy.pFull) {
 /////////////////////////////////////////////////////////////////////////////
 /////////////////////////////////////////////////////////////////////////////
 // Common functionality
@@ -767,4 +767,3 @@ new SNote("", document.getElementById("div1"));
 new Clock("", document.getElementById("div2"));
 
 }
-

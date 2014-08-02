@@ -1,7 +1,7 @@
 function runTest() {
 
   JAM.startProfile('load');
-throw "exception!";
+  throw "exception!";
 
   JAM.stopProfile('load');
 

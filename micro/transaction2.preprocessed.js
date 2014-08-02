@@ -1,5 +1,5 @@
 function runTest() {
-function f() {
+  function f() {
     var v111 = 1;
     x = undefined;
     introspect(alert) {

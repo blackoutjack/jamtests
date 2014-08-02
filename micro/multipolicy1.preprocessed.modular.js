@@ -1,5 +1,5 @@
 function runTest() {
-introspect(JAMScript.introspectors.processAll) {
+  introspect(JAM.policy.pFull) {
   var b = 1;
   var v0 = document.cookie;
   document.cookie = v0 + 1;

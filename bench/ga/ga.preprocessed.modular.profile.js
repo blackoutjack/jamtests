@@ -1,6 +1,6 @@
 
 JAM.startProfile('load');
-introspect(JAMScript.introspectors.processAll) {
+introspect(JAM.policy.pFull) {
 function v209() {
   function v208(d$$64, f$$40) {
     var v779 = $.$c;

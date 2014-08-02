@@ -1,5 +1,5 @@
 function runTest() {
-function h$$4() {
+  function h$$4() {
     x = 2;
     return
   }

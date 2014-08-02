@@ -1,7 +1,7 @@
 function runTest() {
 
   JAM.startProfile('load');
-var i = 0;
+  var i = 0;
   for(;;) {
     var v0 = i > 5;
     if(v0) {

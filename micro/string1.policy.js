@@ -1,8 +1,7 @@
 var policy = function() {
-  var states = [0];
   var _String_prototype_startsWith = String.prototype.startsWith;
   var __String_prototype_startsWith_call_bind__String_prototype_startsWith_ = _String_prototype_startsWith.call.bind(_String_prototype_startsWith);
-  function processAll(tx) {
+  function pFull(tx) {
     var commit = true;
     var as = tx.getActionSequence();
     var len = as.length;
@@ -14,14 +13,14 @@ var policy = function() {
       }
     }
     if(commit) {
-      JAMScript.process(tx)
+      JAM.process(tx)
     }else {
-      JAMScript.prevent(tx)
+      JAM.prevent(tx)
     }
   }
-  processAll.subsumedBy = processAll;
-  Object.freeze(processAll);
-  function process94EE778565BE169537F46A7EF198441AC12F2E68(tx) {
+  pFull.subsumedBy = pFull;
+  Object.freeze(pFull);
+  function p94EE778565BE169537F46A7EF198441AC12F2E68(tx) {
     var commit = true;
     var as = tx.getActionSequence();
     var len = as.length;
@@ -33,12 +32,12 @@ var policy = function() {
       }
     }
     if(commit) {
-      JAMScript.process(tx)
+      JAM.process(tx)
     }else {
-      JAMScript.prevent(tx)
+      JAM.prevent(tx)
     }
   }
-  process94EE778565BE169537F46A7EF198441AC12F2E68.subsumedBy = processAll;
-  Object.freeze(process94EE778565BE169537F46A7EF198441AC12F2E68);
-  return{introspectors:{process94EE778565BE169537F46A7EF198441AC12F2E68:process94EE778565BE169537F46A7EF198441AC12F2E68, processAll:processAll}}
+  p94EE778565BE169537F46A7EF198441AC12F2E68.subsumedBy = pFull;
+  Object.freeze(p94EE778565BE169537F46A7EF198441AC12F2E68);
+  return{p94EE778565BE169537F46A7EF198441AC12F2E68:p94EE778565BE169537F46A7EF198441AC12F2E68, pFull:pFull}
 }()

@@ -1,6 +1,6 @@
 
 JAM.startProfile('load');
-introspect(JAMScript.introspectors.processAll) {
+introspect(JAM.policy.pFull) {
 function cb(tgt, p, res) {
   console.log(tgt + ":" + p + " " + res)
 }
@@ -37,4 +37,3 @@ AttackAPI.PortScanner.scanTarget(cb, "localhost", [20, 21, 22, 23, 24, 100, 101,
 }
 
 JAM.stopProfile('load');
-

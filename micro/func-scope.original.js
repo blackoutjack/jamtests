@@ -1,5 +1,5 @@
 function runTest() {
-var x = true;
+  var x = true;
   if (x) {
     var cnt = 0;
     function f() {

@@ -1,4 +1,4 @@
-introspect(JAMScript.introspectors.processAll) {
+introspect(JAM.policy.pFull) {
 /*
  * Piwik - Web Analytics
  *
@@ -34,7 +34,6 @@ if(c){e.setDownloadExtensions(c)}c=a("hosts_alias");if(c){e.setDomains(c)}c=a("i
 var pkBaseURL = (("https:" == document.location.protocol) ? "https://cms.demo.crash" : "http://cms.demo.crash");
 var piwikTracker = Piwik.getTracker(pkBaseURL + "piwik.php", 'crash'); 
 piwikTracker.trackPageView(); 
-piwikTracker.enableLinkTracking(); 
+piwikTracker.enableLinkTracking();
 
 }
-

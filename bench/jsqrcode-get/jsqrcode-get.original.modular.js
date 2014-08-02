@@ -1,5 +1,4 @@
-introspect(JAMScript.introspectors.processAll) {
-
+introspect(JAM.policy.pFull) {
 // grid.js
 /*
   Ported to JavaScript by Lazar Laszlo 2011 
@@ -3876,4 +3875,3 @@ function captureToCanvas() {
 document.getElementById("decode").onclick = load;
 
 }
-

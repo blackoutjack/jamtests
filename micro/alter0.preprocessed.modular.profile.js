@@ -1,7 +1,7 @@
 function runTest() {
 
   JAM.startProfile('load');
-introspect(JAMScript.introspectors.processAll) {
+  introspect(JAM.policy.pFull) {
   function f() {
     prop = "b";
     return 2
@@ -39,6 +39,7 @@ introspect(JAMScript.introspectors.processAll) {
     alert(v4)
   }
   ;
+
   }
 
   JAM.stopProfile('load');

@@ -1,4 +1,4 @@
-introspect(JAMScript.introspectors.processAll) {
+introspect(JAM.policy.pFull) {
 function piwik_log(b$$2, f$$7, d$$2, g$$2) {
   function a$$2(h$$6) {
     try {
@@ -1372,4 +1372,3 @@ piwikTracker.trackPageView();
 piwikTracker.enableLinkTracking();
 
 }
-

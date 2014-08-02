@@ -1,5 +1,5 @@
 function runTest() {
-var a = document;
+  var a = document;
   a.cookie = "ok";
 
   return document.cookie !== "ok";
