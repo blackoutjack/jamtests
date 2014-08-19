@@ -24,27 +24,28 @@ var policy = function() {
   }
   pFull.subsumedBy = pFull;
   Object.freeze(pFull);
-  function p9C5FFCABA70857D69F2974E6410A585B5EFE64DC(tx) {
-    var as = tx.getActionSequence();
+  function p1(tx) {
+    var as = tx.getCallSequence();
     var len = as.length;
     for(var i = 0;i < len && !states[1];i++) {
       var node = as[i];
-      if(!states[1] && node.type === "call" && JAM.identical(node.value, _Storage_prototype_getItem)) {
+      if(!states[1] && JAM.identical(node.value, _Storage_prototype_getItem)) {
         states[1] = true
       }
     }
     JAM.process(tx)
   }
-  p9C5FFCABA70857D69F2974E6410A585B5EFE64DC.subsumedBy = pFull;
-  Object.freeze(p9C5FFCABA70857D69F2974E6410A585B5EFE64DC);
-  function p425E08A28862414CF7130381FE99A660F52DB811(tx) {
+  p1.subsumedBy = pFull;
+  p1.itype = "call";
+  Object.freeze(p1);
+  function p2(tx) {
     var commit = true;
     if(states[1]) {
-      var as = tx.getActionSequence();
+      var as = tx.getWriteSequence();
       var len = as.length;
       for(var i = 0;i < len;i++) {
         var node = as[i];
-        if(states[1] && node.type === "write" && JAM.identical(node.obj, _document) && node.id === "cookie") {
+        if(states[1] && JAM.identical(node.obj, _document) && node.id === "cookie") {
           commit = false;
           break
         }
@@ -56,7 +57,8 @@ var policy = function() {
       JAM.prevent(tx)
     }
   }
-  p425E08A28862414CF7130381FE99A660F52DB811.subsumedBy = pFull;
-  Object.freeze(p425E08A28862414CF7130381FE99A660F52DB811);
-  return{p9C5FFCABA70857D69F2974E6410A585B5EFE64DC:p9C5FFCABA70857D69F2974E6410A585B5EFE64DC, p425E08A28862414CF7130381FE99A660F52DB811:p425E08A28862414CF7130381FE99A660F52DB811, pFull:pFull}
+  p2.subsumedBy = pFull;
+  p2.itype = "write";
+  Object.freeze(p2);
+  return{p1:p1, p2:p2, pFull:pFull, woven:true}
 }()

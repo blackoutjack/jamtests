@@ -1,6 +1,6 @@
 function runTest() {
   var a = "ok";
-  introspect(JAM.policy.pD4D25E04A23263FBD77B896710421141724AE95D) {
+  introspect(JAM.policy.p1) {
     a.innerHTML = 1
   }
   ;

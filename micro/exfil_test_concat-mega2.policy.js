@@ -325,7 +325,7 @@ var policy = function() {
   }
   pFull.subsumedBy = pFull;
   Object.freeze(pFull);
-  function pD1B26E82C3C7C4AA5A6D93F7A0110D043B1A982F6FDE2E7025F368C3AE67F96C507DCB6901C6433F9CB8A41433C08E91270D0B4B596856AC65D440B81C0DACAB8A030DE26DF30A320CF2FEB0065B4F71(tx) {
+  function p5(tx) {
     var as = tx.getActionSequence();
     var len = as.length;
     for(var i = 0;i < len && (!states[1] || !states[3] || !states[44] || !states[46]);i++) {
@@ -345,15 +345,15 @@ var policy = function() {
     }
     JAM.process(tx)
   }
-  pD1B26E82C3C7C4AA5A6D93F7A0110D043B1A982F6FDE2E7025F368C3AE67F96C507DCB6901C6433F9CB8A41433C08E91270D0B4B596856AC65D440B81C0DACAB8A030DE26DF30A320CF2FEB0065B4F71.subsumedBy = pFull;
-  Object.freeze(pD1B26E82C3C7C4AA5A6D93F7A0110D043B1A982F6FDE2E7025F368C3AE67F96C507DCB6901C6433F9CB8A41433C08E91270D0B4B596856AC65D440B81C0DACAB8A030DE26DF30A320CF2FEB0065B4F71);
-  function pAF65661CDDA02BEF577B9796994F429B325DEECD(tx) {
+  p5.subsumedBy = pFull;
+  Object.freeze(p5);
+  function p3(tx) {
     var commit = true;
-    var as = tx.getActionSequence();
+    var as = tx.getWriteSequence();
     var len = as.length;
     for(var i = 0;i < len;i++) {
       var node = as[i];
-      if(node.type === "write" && true && JAM.instanceof(node.obj, _CSSStyleDeclaration) && !JAM.identical(node.id, "display")) {
+      if(true && JAM.instanceof(node.obj, _CSSStyleDeclaration) && !JAM.identical(node.id, "display")) {
         commit = false;
         break
       }
@@ -364,7 +364,8 @@ var policy = function() {
       JAM.prevent(tx)
     }
   }
-  pAF65661CDDA02BEF577B9796994F429B325DEECD.subsumedBy = pFull;
-  Object.freeze(pAF65661CDDA02BEF577B9796994F429B325DEECD);
-  return{pD1B26E82C3C7C4AA5A6D93F7A0110D043B1A982F6FDE2E7025F368C3AE67F96C507DCB6901C6433F9CB8A41433C08E91270D0B4B596856AC65D440B81C0DACAB8A030DE26DF30A320CF2FEB0065B4F71:pD1B26E82C3C7C4AA5A6D93F7A0110D043B1A982F6FDE2E7025F368C3AE67F96C507DCB6901C6433F9CB8A41433C08E91270D0B4B596856AC65D440B81C0DACAB8A030DE26DF30A320CF2FEB0065B4F71, pAF65661CDDA02BEF577B9796994F429B325DEECD:pAF65661CDDA02BEF577B9796994F429B325DEECD, pFull:pFull}
+  p3.subsumedBy = pFull;
+  p3.itype = "write";
+  Object.freeze(p3);
+  return{p5:p5, p3:p3, pFull:pFull, woven:true}
 }()

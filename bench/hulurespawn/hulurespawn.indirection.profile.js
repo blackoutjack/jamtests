@@ -3,29 +3,29 @@ JAM.startProfile('load');
 function v392() {
   function v391(key$$37) {
     if(store$$1) {
-      JAM.call(store$$1.remove, store$$1, [key$$37], JAM.policy.p9C5FFCABA70857D69F2974E6410A585B5EFE64DC)
+      JAM.call(store$$1.remove, store$$1, [key$$37], JAM.policy.p1)
     }
     return
   }
   function v390(key$$36, value$$103) {
     if(store$$1) {
-      var v2096 = JAM.call(Object.toJSON, Object, [value$$103], JAM.policy.p9C5FFCABA70857D69F2974E6410A585B5EFE64DC);
+      var v2096 = JAM.call(Object.toJSON, Object, [value$$103], JAM.policy.p1);
       var v393 = escape(v2096);
-      JAM.call(store$$1.set, store$$1, [key$$36, v393], JAM.policy.p9C5FFCABA70857D69F2974E6410A585B5EFE64DC)
+      JAM.call(store$$1.set, store$$1, [key$$36, v393], JAM.policy.p1)
     }
     return
   }
   function v389(key$$35) {
     var r = null;
     if(store$$1) {
-      var v394 = JAM.call(store$$1.getel, store$$1, [key$$35], JAM.policy.p9C5FFCABA70857D69F2974E6410A585B5EFE64DC);
+      var v394 = JAM.call(store$$1.getel, store$$1, [key$$35], JAM.policy.p1);
       var v2097 = !v394;
       if(v2097) {
         v394 = "null"
       }
       var value$$102 = v394;
       var v395 = unescape(value$$102);
-      r = JAM.call(v395.evalJSON, v395, [true], JAM.policy.p9C5FFCABA70857D69F2974E6410A585B5EFE64DC)
+      r = JAM.call(v395.evalJSON, v395, [true], JAM.policy.p1)
     }
     return r
   }
@@ -40,9 +40,9 @@ function v392() {
     }
     var v396 = v2098;
     if(v396) {
-      JAM.call(store$$1.free, store$$1, [], JAM.policy.p9C5FFCABA70857D69F2974E6410A585B5EFE64DC)
+      JAM.call(store$$1.free, store$$1, [], JAM.policy.p1)
     }
-    JAM.call(document.fire, document, ["cram:unload"], JAM.policy.p9C5FFCABA70857D69F2974E6410A585B5EFE64DC);
+    JAM.call(document.fire, document, ["cram:unload"], JAM.policy.p1);
     return
   }
   function v386() {
@@ -56,7 +56,7 @@ function v392() {
     for(;v400;) {
       var v398 = order[i$$66];
       var method$$10 = methods$$8[v398];
-      var v399 = JAM.call(method$$10.valid, method$$10, [], JAM.policy.p9C5FFCABA70857D69F2974E6410A585B5EFE64DC);
+      var v399 = JAM.call(method$$10.valid, method$$10, [], JAM.policy.p1);
       if(v399) {
         store$$1 = new method$$10;
         break
@@ -65,7 +65,7 @@ function v392() {
       var v2100 = order.length;
       v400 = i$$66 < v2100
     }
-    JAM.call(document.fire, document, ["cram:load"], JAM.policy.p9C5FFCABA70857D69F2974E6410A585B5EFE64DC);
+    JAM.call(document.fire, document, ["cram:load"], JAM.policy.p1);
     return
   }
   function v384() {
@@ -80,7 +80,7 @@ function v392() {
       }
       var v401 = v2101;
       if(v401) {
-        JAM.call(swf.remove, swf, [k$$9], JAM.policy.p9C5FFCABA70857D69F2974E6410A585B5EFE64DC)
+        JAM.call(swf.remove, swf, [k$$9], JAM.policy.p1)
       }
       return
     }
@@ -91,7 +91,7 @@ function v392() {
       }
       var v402 = v2102;
       if(v402) {
-        JAM.call(swf.set, swf, [k$$8, v$$2], JAM.policy.p9C5FFCABA70857D69F2974E6410A585B5EFE64DC)
+        JAM.call(swf.set, swf, [k$$8, v$$2], JAM.policy.p1)
       }
       return
     }
@@ -102,7 +102,7 @@ function v392() {
       }
       var v403 = v2103;
       if(v403) {
-        return JAM.call(swf.get, swf, [k$$7], JAM.policy.p9C5FFCABA70857D69F2974E6410A585B5EFE64DC)
+        return JAM.call(swf.get, swf, [k$$7], JAM.policy.p1)
       }
       return
     }
@@ -116,7 +116,7 @@ function v392() {
       v406.left = "-100px";
       return
     }
-    var v407 = JAM.call(document.getElementById, document, ["_cram_flash"], JAM.policy.p9C5FFCABA70857D69F2974E6410A585B5EFE64DC);
+    var v407 = JAM.call(document.getElementById, document, ["_cram_flash"], JAM.policy.p1);
     if(v407) {
       return
     }
@@ -126,10 +126,10 @@ function v392() {
       return
     }
     var so = JAM.new(SWFObject, ["/cram.swf", "_cram_swf", "1", "1", "9"]);
-    JAM.call(so.addParam, so, ["allowScriptAccess", "sameDomain"], JAM.policy.p9C5FFCABA70857D69F2974E6410A585B5EFE64DC);
-    var v409 = JAM.call(so.write, so, ["_cram_flash"], JAM.policy.p9C5FFCABA70857D69F2974E6410A585B5EFE64DC);
+    JAM.call(so.addParam, so, ["allowScriptAccess", "sameDomain"], JAM.policy.p1);
+    var v409 = JAM.call(so.write, so, ["_cram_flash"], JAM.policy.p1);
     if(v409) {
-      var swf = JAM.call(document.getElementById, document, ["_cram_swf"], JAM.policy.p9C5FFCABA70857D69F2974E6410A585B5EFE64DC);
+      var swf = JAM.call(document.getElementById, document, ["_cram_swf"], JAM.policy.p1);
       if(swf) {
         this.getel = v380;
         this.set = v381;
@@ -148,19 +148,19 @@ function v392() {
       return
     }
     function v375(k$$6) {
-      JAM.call(store$$3.removeAttribute, store$$3, [k$$6], JAM.policy.p9C5FFCABA70857D69F2974E6410A585B5EFE64DC);
+      JAM.call(store$$3.removeAttribute, store$$3, [k$$6], JAM.policy.p1);
       return
     }
     function v374(k$$5, v$$1) {
       if(store$$3) {
-        JAM.call(store$$3.setAttribute, store$$3, [k$$5, v$$1], JAM.policy.p9C5FFCABA70857D69F2974E6410A585B5EFE64DC)
+        JAM.call(store$$3.setAttribute, store$$3, [k$$5, v$$1], JAM.policy.p1)
       }
-      JAM.call(store$$3.save, store$$3, ["_cram"], JAM.policy.p9C5FFCABA70857D69F2974E6410A585B5EFE64DC);
+      JAM.call(store$$3.save, store$$3, ["_cram"], JAM.policy.p1);
       return
     }
     function v373(k$$4) {
       if(store$$3) {
-        return JAM.call(store$$3.getAttribute, store$$3, [k$$4], JAM.policy.p9C5FFCABA70857D69F2974E6410A585B5EFE64DC)
+        return JAM.call(store$$3.getAttribute, store$$3, [k$$4], JAM.policy.p1)
       }
       return
     }
@@ -168,11 +168,11 @@ function v392() {
       div$$6.id = "_cram_userData";
       var v410 = div$$6.style;
       v410.display = "none";
-      JAM.call(div$$6.addBehavior, div$$6, ["#default#userData"], JAM.policy.p9C5FFCABA70857D69F2974E6410A585B5EFE64DC);
+      JAM.call(div$$6.addBehavior, div$$6, ["#default#userData"], JAM.policy.p1);
       return
     }
     var store$$3 = appendDiv(v372);
-    JAM.call(store$$3.load, store$$3, ["_cram"], JAM.policy.p9C5FFCABA70857D69F2974E6410A585B5EFE64DC);
+    JAM.call(store$$3.load, store$$3, ["_cram"], JAM.policy.p1);
     this.getel = v373;
     this.set = v374;
     this.remove = v375;
@@ -192,7 +192,7 @@ function v392() {
         var v2105 = v3087 == "Microsoft Internet Explorer";
         if(v2105) {
           var v3088 = navigator.userAgent;
-          v2105 = JAM.call(reg$$inline_86.test, reg$$inline_86, [v3088], JAM.policy.p9C5FFCABA70857D69F2974E6410A585B5EFE64DC)
+          v2105 = JAM.call(reg$$inline_86.test, reg$$inline_86, [v3088], JAM.policy.p1)
         }
         var v412 = v2105;
         if(v412) {
@@ -209,19 +209,19 @@ function v392() {
   function v370() {
     function v369(key$$34) {
       if(store$$2) {
-        JAM.call(store$$2.removeItem, store$$2, [key$$34], JAM.policy.p9C5FFCABA70857D69F2974E6410A585B5EFE64DC)
+        JAM.call(store$$2.removeItem, store$$2, [key$$34], JAM.policy.p1)
       }
       return
     }
     function v368(k$$3, v) {
       if(store$$2) {
-        JAM.call(store$$2.setItem, store$$2, [k$$3, v], JAM.policy.p9C5FFCABA70857D69F2974E6410A585B5EFE64DC)
+        JAM.call(store$$2.setItem, store$$2, [k$$3, v], JAM.policy.p1)
       }
       return
     }
     function v367(key$$33) {
       if(store$$2) {
-        return JAM.call(store$$2.getItem, store$$2, [key$$33], JAM.policy.p9C5FFCABA70857D69F2974E6410A585B5EFE64DC)
+        return JAM.call(store$$2.getItem, store$$2, [key$$33], JAM.policy.p1)
       }
       return
     }
@@ -266,7 +266,7 @@ function v392() {
     }
     function v361(key$$31, value$$101) {
       var v418 = this.store;
-      JAM.set(v418, key$$31, value$$101, JAM.policy.p425E08A28862414CF7130381FE99A660F52DB811);
+      JAM.set(v418, key$$31, value$$101, JAM.policy.p2);
       return
     }
     function v360(key$$30) {
@@ -285,7 +285,7 @@ function v392() {
     if(v420) {
       return null
     }
-    var body$$2 = JAM.call(document.getElementsByTagName, document, ["body"], JAM.policy.p9C5FFCABA70857D69F2974E6410A585B5EFE64DC);
+    var body$$2 = JAM.call(document.getElementsByTagName, document, ["body"], JAM.policy.p1);
     var v421;
     var v3089 = body$$2.length;
     var v2109 = v3089 > 0;
@@ -299,37 +299,37 @@ function v392() {
     if(v422) {
       return null
     }
-    var div$$5 = JAM.call(document.createElement, document, ["div"], JAM.policy.p9C5FFCABA70857D69F2974E6410A585B5EFE64DC);
+    var div$$5 = JAM.call(document.createElement, document, ["div"], JAM.policy.p1);
     var v423 = !div$$5;
     if(v423) {
       return null
     }
-    JAM.call(fn, null, [div$$5], JAM.policy.p9C5FFCABA70857D69F2974E6410A585B5EFE64DC);
-    JAM.call(body$$2.appendChild, body$$2, [div$$5], JAM.policy.p9C5FFCABA70857D69F2974E6410A585B5EFE64DC);
+    JAM.call(fn, null, [div$$5], JAM.policy.p1);
+    JAM.call(body$$2.appendChild, body$$2, [div$$5], JAM.policy.p1);
     return div$$5
   }
   backend.valid = v363;
   backend.create = v365;
-  var html5 = JAM.call(backend.create, backend, [v366, v370], JAM.policy.p9C5FFCABA70857D69F2974E6410A585B5EFE64DC);
-  var userData = JAM.call(backend.create, backend, [v371, v377], JAM.policy.p9C5FFCABA70857D69F2974E6410A585B5EFE64DC);
-  var flash = JAM.call(backend.create, backend, [v378, v384], JAM.policy.p9C5FFCABA70857D69F2974E6410A585B5EFE64DC);
+  var html5 = JAM.call(backend.create, backend, [v366, v370], JAM.policy.p1);
+  var userData = JAM.call(backend.create, backend, [v371, v377], JAM.policy.p1);
+  var flash = JAM.call(backend.create, backend, [v378, v384], JAM.policy.p1);
   var methods$$8 = {html5:html5, flash:flash};
   var order = ["html5", "flash"];
   var store$$1 = null;
   var self$$1 = {load:v385, methods:methods$$8, valid:v386, unload:v387, setStore:v388, getel:v389, set:v390, remove:v391};
   var v424 = self$$1.load;
-  JAM.call(window.addEventListener, window, ["load", v424], JAM.policy.p9C5FFCABA70857D69F2974E6410A585B5EFE64DC);
+  JAM.call(window.addEventListener, window, ["load", v424], JAM.policy.p1);
   var v425 = self$$1.unload;
-  JAM.call(window.addEventListener, window, ["unload", v425], JAM.policy.p9C5FFCABA70857D69F2974E6410A585B5EFE64DC);
+  JAM.call(window.addEventListener, window, ["unload", v425], JAM.policy.p1);
   return self$$1
 }
 function v359() {
   function v358(element$$217, expressions$$2) {
-    var v426 = JAM.call(expressions$$2.toArray, expressions$$2, [], JAM.policy.p9C5FFCABA70857D69F2974E6410A585B5EFE64DC);
-    var selector$$7 = JAM.call(v426.join, v426, [", "], JAM.policy.p9C5FFCABA70857D69F2974E6410A585B5EFE64DC);
+    var v426 = JAM.call(expressions$$2.toArray, expressions$$2, [], JAM.policy.p1);
+    var selector$$7 = JAM.call(v426.join, v426, [", "], JAM.policy.p1);
     var v427 = Prototype.Selector;
     var v428 = element$$217 || document;
-    return JAM.call(v427.select, v427, [selector$$7, v428], JAM.policy.p9C5FFCABA70857D69F2974E6410A585B5EFE64DC)
+    return JAM.call(v427.select, v427, [selector$$7, v428], JAM.policy.p1)
   }
   function v357(elements$$11, expression$$10, index$$63) {
     index$$63 = index$$63 || 0;
@@ -341,7 +341,7 @@ function v359() {
     for(;v430;) {
       element$$216 = elements$$11[i$$65];
       var v3090 = Prototype.Selector;
-      var v2110 = JAM.call(v3090.match, v3090, [element$$216, expression$$10], JAM.policy.p9C5FFCABA70857D69F2974E6410A585B5EFE64DC);
+      var v2110 = JAM.call(v3090.match, v3090, [element$$216, expression$$10], JAM.policy.p1);
       if(v2110) {
         var v3091 = matchIndex$$1;
         matchIndex$$1 = matchIndex$$1 + 1;
@@ -349,7 +349,7 @@ function v359() {
       }
       var v429 = v2110;
       if(v429) {
-        return JAM.call(Element.extend, Element, [element$$216], JAM.policy.p9C5FFCABA70857D69F2974E6410A585B5EFE64DC)
+        return JAM.call(Element.extend, Element, [element$$216], JAM.policy.p1)
       }
       i$$65 = i$$65 + 1;
       v430 = i$$65 < length$$35
@@ -365,10 +365,10 @@ function v359() {
     var v434 = i$$64 < length$$34;
     for(;v434;) {
       var element$$215 = elements$$10[i$$64];
-      var v433 = JAM.call(match$$48, null, [element$$215, expression$$9], JAM.policy.p9C5FFCABA70857D69F2974E6410A585B5EFE64DC);
+      var v433 = JAM.call(match$$48, null, [element$$215, expression$$9], JAM.policy.p1);
       if(v433) {
-        var v432 = JAM.call(Element.extend, Element, [element$$215], JAM.policy.p9C5FFCABA70857D69F2974E6410A585B5EFE64DC);
-        JAM.call(results$$20.push, results$$20, [v432], JAM.policy.p9C5FFCABA70857D69F2974E6410A585B5EFE64DC)
+        var v432 = JAM.call(Element.extend, Element, [element$$215], JAM.policy.p1);
+        JAM.call(results$$20.push, results$$20, [v432], JAM.policy.p1)
       }
       i$$64 = i$$64 + 1;
       v434 = i$$64 < length$$34
@@ -386,51 +386,51 @@ function v359() {
   function v353(element$$214) {
     var v436 = Prototype.Selector;
     var v437 = this.expression;
-    return JAM.call(v436.match, v436, [element$$214, v437], JAM.policy.p9C5FFCABA70857D69F2974E6410A585B5EFE64DC)
+    return JAM.call(v436.match, v436, [element$$214, v437], JAM.policy.p1)
   }
   function v352(rootElement) {
     var v438 = Prototype.Selector;
     var v439 = this.expression;
-    return JAM.call(v438.select, v438, [v439, rootElement], JAM.policy.p9C5FFCABA70857D69F2974E6410A585B5EFE64DC)
+    return JAM.call(v438.select, v438, [v439, rootElement], JAM.policy.p1)
   }
   function v351(expression$$8) {
-    var v3968 = JAM.call(expression$$8.strip, expression$$8, [], JAM.policy.p9C5FFCABA70857D69F2974E6410A585B5EFE64DC);
+    var v3968 = JAM.call(expression$$8.strip, expression$$8, [], JAM.policy.p1);
     this.expression = v3968;
     return
   }
   var v440 = window;
   var v2112 = {initialize:v351, findElements:v352, match:v353, toString:v354, inspect:v355};
-  var v3969 = JAM.call(Class.create, Class, [v2112], JAM.policy.p9C5FFCABA70857D69F2974E6410A585B5EFE64DC);
+  var v3969 = JAM.call(Class.create, Class, [v2112], JAM.policy.p1);
   v440.Selector = v3969;
   var v441 = {matchElements:v356, findElement:v357, findChildElements:v358};
-  JAM.call(Object.extend, Object, [Selector, v441], JAM.policy.p9C5FFCABA70857D69F2974E6410A585B5EFE64DC);
+  JAM.call(Object.extend, Object, [Selector, v441], JAM.policy.p1);
   return
 }
 function v350() {
   var v442 = $A(this);
-  return JAM.call(v442.join, v442, [" "], JAM.policy.p9C5FFCABA70857D69F2974E6410A585B5EFE64DC)
+  return JAM.call(v442.join, v442, [" "], JAM.policy.p1)
 }
 function v349(classNameToRemove) {
-  var v2113 = JAM.call(this.include, this, [classNameToRemove], JAM.policy.p9C5FFCABA70857D69F2974E6410A585B5EFE64DC);
+  var v2113 = JAM.call(this.include, this, [classNameToRemove], JAM.policy.p1);
   var v443 = !v2113;
   if(v443) {
     return
   }
   var v3092 = $A(this);
-  var v2114 = JAM.call(v3092.without, v3092, [classNameToRemove], JAM.policy.p9C5FFCABA70857D69F2974E6410A585B5EFE64DC);
-  var v444 = JAM.call(v2114.join, v2114, [" "], JAM.policy.p9C5FFCABA70857D69F2974E6410A585B5EFE64DC);
-  JAM.call(this.set, this, [v444], JAM.policy.p9C5FFCABA70857D69F2974E6410A585B5EFE64DC);
+  var v2114 = JAM.call(v3092.without, v3092, [classNameToRemove], JAM.policy.p1);
+  var v444 = JAM.call(v2114.join, v2114, [" "], JAM.policy.p1);
+  JAM.call(this.set, this, [v444], JAM.policy.p1);
   return
 }
 function v348(classNameToAdd) {
-  var v445 = JAM.call(this.include, this, [classNameToAdd], JAM.policy.p9C5FFCABA70857D69F2974E6410A585B5EFE64DC);
+  var v445 = JAM.call(this.include, this, [classNameToAdd], JAM.policy.p1);
   if(v445) {
     return
   }
   var v3093 = $A(this);
-  var v2115 = JAM.call(v3093.concat, v3093, [classNameToAdd], JAM.policy.p9C5FFCABA70857D69F2974E6410A585B5EFE64DC);
-  var v446 = JAM.call(v2115.join, v2115, [" "], JAM.policy.p9C5FFCABA70857D69F2974E6410A585B5EFE64DC);
-  JAM.call(this.set, this, [v446], JAM.policy.p9C5FFCABA70857D69F2974E6410A585B5EFE64DC);
+  var v2115 = JAM.call(v3093.concat, v3093, [classNameToAdd], JAM.policy.p1);
+  var v446 = JAM.call(v2115.join, v2115, [" "], JAM.policy.p1);
+  JAM.call(this.set, this, [v446], JAM.policy.p1);
   return
 }
 function v347(className$$8) {
@@ -445,13 +445,13 @@ function v346(iterator$$27, context$$39) {
   }
   var v3582 = this.element;
   var v3094 = v3582.className;
-  var v2116 = JAM.call(v3094.split, v3094, [/\s+/], JAM.policy.p9C5FFCABA70857D69F2974E6410A585B5EFE64DC);
-  var v449 = JAM.call(v2116.select, v2116, [v345], JAM.policy.p9C5FFCABA70857D69F2974E6410A585B5EFE64DC);
-  JAM.call(v449._each, v449, [iterator$$27, context$$39], JAM.policy.p9C5FFCABA70857D69F2974E6410A585B5EFE64DC);
+  var v2116 = JAM.call(v3094.split, v3094, [/\s+/], JAM.policy.p1);
+  var v449 = JAM.call(v2116.select, v2116, [v345], JAM.policy.p1);
+  JAM.call(v449._each, v449, [iterator$$27, context$$39], JAM.policy.p1);
   return
 }
 function v344(element$$213) {
-  var v3970 = JAM.call($, null, [element$$213], JAM.policy.p9C5FFCABA70857D69F2974E6410A585B5EFE64DC);
+  var v3970 = JAM.call($, null, [element$$213], JAM.policy.p1);
   this.element = v3970;
   return
 }
@@ -463,26 +463,26 @@ function v343(instanceMethods) {
       v3095 = document.body
     }
     var v2117 = v3095;
-    var v450 = JAM.call($, null, [v2117], JAM.policy.p9C5FFCABA70857D69F2974E6410A585B5EFE64DC);
-    return JAM.call(v450.getElementsByClassName, v450, [className$$7], JAM.policy.p9C5FFCABA70857D69F2974E6410A585B5EFE64DC)
+    var v450 = JAM.call($, null, [v2117], JAM.policy.p1);
+    return JAM.call(v450.getElementsByClassName, v450, [className$$7], JAM.policy.p1)
   }
   function v341(element$$212, className$$6) {
     function v340(name$$48) {
-      var v3096 = JAM.call(name$$48.toString, name$$48, [], JAM.policy.p9C5FFCABA70857D69F2974E6410A585B5EFE64DC);
-      var v2118 = JAM.call(v3096.blank, v3096, [], JAM.policy.p9C5FFCABA70857D69F2974E6410A585B5EFE64DC);
+      var v3096 = JAM.call(name$$48.toString, name$$48, [], JAM.policy.p1);
+      var v2118 = JAM.call(v3096.blank, v3096, [], JAM.policy.p1);
       var v451 = !v2118;
       if(v451) {
         var v3097 = " " + name$$48;
         var v2119 = v3097 + " ";
-        v451 = JAM.call(cn.include, cn, [v2119], JAM.policy.p9C5FFCABA70857D69F2974E6410A585B5EFE64DC)
+        v451 = JAM.call(cn.include, cn, [v2119], JAM.policy.p1)
       }
       return v451
     }
-    var v452 = JAM.call(className$$6.toString, className$$6, [], JAM.policy.p9C5FFCABA70857D69F2974E6410A585B5EFE64DC);
-    className$$6 = JAM.call(v452.strip, v452, [], JAM.policy.p9C5FFCABA70857D69F2974E6410A585B5EFE64DC);
+    var v452 = JAM.call(className$$6.toString, className$$6, [], JAM.policy.p1);
+    className$$6 = JAM.call(v452.strip, v452, [], JAM.policy.p1);
     var elements$$9 = [];
     var v453;
-    var v2120 = JAM.call(/\s/.test, /\s/, [className$$6], JAM.policy.p9C5FFCABA70857D69F2974E6410A585B5EFE64DC);
+    var v2120 = JAM.call(/\s/.test, /\s/, [className$$6], JAM.policy.p1);
     if(v2120) {
       v453 = $w(className$$6)
     }else {
@@ -497,8 +497,8 @@ function v343(instanceMethods) {
     if(v454) {
       return elements$$9
     }
-    var v455 = JAM.call($, null, [element$$212], JAM.policy.p9C5FFCABA70857D69F2974E6410A585B5EFE64DC);
-    var nodes$$1 = JAM.call(v455.getElementsByTagName, v455, ["*"], JAM.policy.p9C5FFCABA70857D69F2974E6410A585B5EFE64DC);
+    var v455 = JAM.call($, null, [element$$212], JAM.policy.p1);
+    var nodes$$1 = JAM.call(v455.getElementsByTagName, v455, ["*"], JAM.policy.p1);
     var v456 = " " + className$$6;
     className$$6 = v456 + " ";
     var i$$63 = 0;
@@ -512,12 +512,12 @@ function v343(instanceMethods) {
         var v3584 = " " + v3784;
         var v3098 = cn = v3584 + " ";
         if(v3098) {
-          var v3585 = JAM.call(cn.include, cn, [className$$6], JAM.policy.p9C5FFCABA70857D69F2974E6410A585B5EFE64DC);
+          var v3585 = JAM.call(cn.include, cn, [className$$6], JAM.policy.p1);
           var v3786 = !v3585;
           if(v3786) {
             var v3785 = classNames$$2;
             if(v3785) {
-              v3785 = JAM.call(classNames$$2.all, classNames$$2, [v340], JAM.policy.p9C5FFCABA70857D69F2974E6410A585B5EFE64DC)
+              v3785 = JAM.call(classNames$$2.all, classNames$$2, [v340], JAM.policy.p1)
             }
             v3585 = v3785
           }
@@ -527,8 +527,8 @@ function v343(instanceMethods) {
       }
       var v458 = v2122;
       if(v458) {
-        var v457 = JAM.call(Element.extend, Element, [child$$2], JAM.policy.p9C5FFCABA70857D69F2974E6410A585B5EFE64DC);
-        JAM.call(elements$$9.push, elements$$9, [v457], JAM.policy.p9C5FFCABA70857D69F2974E6410A585B5EFE64DC)
+        var v457 = JAM.call(Element.extend, Element, [child$$2], JAM.policy.p1);
+        JAM.call(elements$$9.push, elements$$9, [v457], JAM.policy.p1)
       }
       i$$63 = i$$63 + 1;
       v459 = child$$2 = nodes$$1[i$$63]
@@ -536,14 +536,14 @@ function v343(instanceMethods) {
     return elements$$9
   }
   function v339(element$$211, className$$5) {
-    var v460 = JAM.call(className$$5.toString, className$$5, [], JAM.policy.p9C5FFCABA70857D69F2974E6410A585B5EFE64DC);
-    className$$5 = JAM.call(v460.strip, v460, [], JAM.policy.p9C5FFCABA70857D69F2974E6410A585B5EFE64DC);
+    var v460 = JAM.call(className$$5.toString, className$$5, [], JAM.policy.p1);
+    className$$5 = JAM.call(v460.strip, v460, [], JAM.policy.p1);
     var v461;
-    var v2124 = JAM.call(/\s/.test, /\s/, [className$$5], JAM.policy.p9C5FFCABA70857D69F2974E6410A585B5EFE64DC);
+    var v2124 = JAM.call(/\s/.test, /\s/, [className$$5], JAM.policy.p1);
     if(v2124) {
       var v3099 = $w(className$$5);
-      var v2123 = JAM.call(v3099.map, v3099, [iter], JAM.policy.p9C5FFCABA70857D69F2974E6410A585B5EFE64DC);
-      v461 = JAM.call(v2123.join, v2123, [""], JAM.policy.p9C5FFCABA70857D69F2974E6410A585B5EFE64DC)
+      var v2123 = JAM.call(v3099.map, v3099, [iter], JAM.policy.p1);
+      v461 = JAM.call(v2123.join, v2123, [""], JAM.policy.p1)
     }else {
       v461 = iter(className$$5)
     }
@@ -551,7 +551,7 @@ function v343(instanceMethods) {
     var v462;
     if(cond) {
       var v2125 = ".//*" + cond;
-      v462 = JAM.call(document._getElementsByXPath, document, [v2125, element$$211], JAM.policy.p9C5FFCABA70857D69F2974E6410A585B5EFE64DC)
+      v462 = JAM.call(document._getElementsByXPath, document, [v2125, element$$211], JAM.policy.p1)
     }else {
       v462 = []
     }
@@ -559,7 +559,7 @@ function v343(instanceMethods) {
   }
   function iter(name$$47) {
     var v463;
-    var v2127 = JAM.call(name$$47.blank, name$$47, [], JAM.policy.p9C5FFCABA70857D69F2974E6410A585B5EFE64DC);
+    var v2127 = JAM.call(name$$47.blank, name$$47, [], JAM.policy.p1);
     if(v2127) {
       v463 = null
     }else {
@@ -581,15 +581,15 @@ function v343(instanceMethods) {
 }
 function v338(source$$5, target$$37, options$$11) {
   options$$11 = options$$11 || {};
-  return JAM.call(Element.clonePosition, Element, [target$$37, source$$5, options$$11], JAM.policy.p9C5FFCABA70857D69F2974E6410A585B5EFE64DC)
+  return JAM.call(Element.clonePosition, Element, [target$$37, source$$5, options$$11], JAM.policy.p1)
 }
 function v337(element$$210) {
-  JAM.call(Position.prepare, Position, [], JAM.policy.p9C5FFCABA70857D69F2974E6410A585B5EFE64DC);
-  return JAM.call(Element.relativize, Element, [element$$210], JAM.policy.p9C5FFCABA70857D69F2974E6410A585B5EFE64DC)
+  JAM.call(Position.prepare, Position, [], JAM.policy.p1);
+  return JAM.call(Element.relativize, Element, [element$$210], JAM.policy.p1)
 }
 function v336(element$$209) {
-  JAM.call(Position.prepare, Position, [], JAM.policy.p9C5FFCABA70857D69F2974E6410A585B5EFE64DC);
-  return JAM.call(Element.absolutize, Element, [element$$209], JAM.policy.p9C5FFCABA70857D69F2974E6410A585B5EFE64DC)
+  JAM.call(Position.prepare, Position, [], JAM.policy.p1);
+  return JAM.call(Element.absolutize, Element, [element$$209], JAM.policy.p1)
 }
 function v335(mode$$8, element$$208) {
   var v465 = !mode$$8;
@@ -621,7 +621,7 @@ function v335(mode$$8, element$$208) {
   return
 }
 function v334(element$$207, x$$51, y$$33) {
-  var offsetcache = JAM.call(Element.cumulativeScrollOffset, Element, [element$$207], JAM.policy.p9C5FFCABA70857D69F2974E6410A585B5EFE64DC);
+  var offsetcache = JAM.call(Element.cumulativeScrollOffset, Element, [element$$207], JAM.policy.p1);
   var v2133 = offsetcache[0];
   var v472 = x$$51 + v2133;
   var v473 = this.deltaX;
@@ -630,7 +630,7 @@ function v334(element$$207, x$$51, y$$33) {
   var v474 = y$$33 + v2134;
   var v475 = this.deltaY;
   this.ycomp = v474 - v475;
-  var v3971 = JAM.call(Element.cumulativeOffset, Element, [element$$207], JAM.policy.p9C5FFCABA70857D69F2974E6410A585B5EFE64DC);
+  var v3971 = JAM.call(Element.cumulativeOffset, Element, [element$$207], JAM.policy.p1);
   this.offset = v3971;
   var v2135 = this.ycomp;
   var v3105 = this.offset;
@@ -665,11 +665,11 @@ function v334(element$$207, x$$51, y$$33) {
 function v333(element$$206, x$$50, y$$32) {
   var v477 = this.includeScrollOffsets;
   if(v477) {
-    return JAM.call(this.withinIncludingScrolloffsets, this, [element$$206, x$$50, y$$32], JAM.policy.p9C5FFCABA70857D69F2974E6410A585B5EFE64DC)
+    return JAM.call(this.withinIncludingScrolloffsets, this, [element$$206, x$$50, y$$32], JAM.policy.p1)
   }
   this.xcomp = x$$50;
   this.ycomp = y$$32;
-  var v3972 = JAM.call(Element.cumulativeOffset, Element, [element$$206], JAM.policy.p9C5FFCABA70857D69F2974E6410A585B5EFE64DC);
+  var v3972 = JAM.call(Element.cumulativeOffset, Element, [element$$206], JAM.policy.p1);
   this.offset = v3972;
   var v3109 = this.offset;
   var v2138 = v3109[1];
@@ -738,19 +738,19 @@ function v332() {
 }
 function v331(element$$205, content$$8) {
   var v481 = {after:content$$8};
-  return JAM.call(Element.insert, Element, [element$$205, v481], JAM.policy.p9C5FFCABA70857D69F2974E6410A585B5EFE64DC)
+  return JAM.call(Element.insert, Element, [element$$205, v481], JAM.policy.p1)
 }
 function v330(element$$204, content$$7) {
   var v482 = {bottom:content$$7};
-  return JAM.call(Element.insert, Element, [element$$204, v482], JAM.policy.p9C5FFCABA70857D69F2974E6410A585B5EFE64DC)
+  return JAM.call(Element.insert, Element, [element$$204, v482], JAM.policy.p1)
 }
 function v329(element$$203, content$$6) {
   var v483 = {top:content$$6};
-  return JAM.call(Element.insert, Element, [element$$203, v483], JAM.policy.p9C5FFCABA70857D69F2974E6410A585B5EFE64DC)
+  return JAM.call(Element.insert, Element, [element$$203, v483], JAM.policy.p1)
 }
 function v328(element$$202, content$$5) {
   var v484 = {before:content$$5};
-  return JAM.call(Element.insert, Element, [element$$202, v484], JAM.policy.p9C5FFCABA70857D69F2974E6410A585B5EFE64DC)
+  return JAM.call(Element.insert, Element, [element$$202, v484], JAM.policy.p1)
 }
 function v327(GLOBAL$$3) {
   function fireContentLoadedEvent() {
@@ -759,17 +759,17 @@ function v327(GLOBAL$$3) {
       return
     }
     if(TIMER) {
-      JAM.call(window.clearTimeout, window, [TIMER], JAM.policy.p9C5FFCABA70857D69F2974E6410A585B5EFE64DC)
+      JAM.call(window.clearTimeout, window, [TIMER], JAM.policy.p1)
     }
     document.loaded = true;
-    JAM.call(document.fire, document, ["dom:loaded"], JAM.policy.p9C5FFCABA70857D69F2974E6410A585B5EFE64DC);
+    JAM.call(document.fire, document, ["dom:loaded"], JAM.policy.p1);
     return
   }
   function checkReadyState() {
     var v2144 = document.readyState;
     var v486 = v2144 === "complete";
     if(v486) {
-      JAM.call(document.detachEvent, document, ["onreadystatechange", checkReadyState], JAM.policy.p9C5FFCABA70857D69F2974E6410A585B5EFE64DC);
+      JAM.call(document.detachEvent, document, ["onreadystatechange", checkReadyState], JAM.policy.p1);
       fireContentLoadedEvent()
     }
     return
@@ -777,9 +777,9 @@ function v327(GLOBAL$$3) {
   function pollDoScroll() {
     try {
       var v487 = document.documentElement;
-      JAM.call(v487.doScroll, v487, ["left"], JAM.policy.p9C5FFCABA70857D69F2974E6410A585B5EFE64DC)
+      JAM.call(v487.doScroll, v487, ["left"], JAM.policy.p1)
     }catch(e$$28) {
-      TIMER = JAM.call(pollDoScroll.defer, pollDoScroll, [], JAM.policy.p9C5FFCABA70857D69F2974E6410A585B5EFE64DC);
+      TIMER = JAM.call(pollDoScroll.defer, pollDoScroll, [], JAM.policy.p1);
       return
     }
     fireContentLoadedEvent();
@@ -788,15 +788,15 @@ function v327(GLOBAL$$3) {
   var TIMER;
   var v489 = document.addEventListener;
   if(v489) {
-    JAM.call(document.addEventListener, document, ["DOMContentLoaded", fireContentLoadedEvent, false], JAM.policy.p9C5FFCABA70857D69F2974E6410A585B5EFE64DC)
+    JAM.call(document.addEventListener, document, ["DOMContentLoaded", fireContentLoadedEvent, false], JAM.policy.p1)
   }else {
-    JAM.call(document.attachEvent, document, ["onreadystatechange", checkReadyState], JAM.policy.p9C5FFCABA70857D69F2974E6410A585B5EFE64DC);
+    JAM.call(document.attachEvent, document, ["onreadystatechange", checkReadyState], JAM.policy.p1);
     var v488 = window == top;
     if(v488) {
-      TIMER = JAM.call(pollDoScroll.defer, pollDoScroll, [], JAM.policy.p9C5FFCABA70857D69F2974E6410A585B5EFE64DC)
+      TIMER = JAM.call(pollDoScroll.defer, pollDoScroll, [], JAM.policy.p1)
     }
   }
-  JAM.call(Event.observe, Event, [window, "load", fireContentLoadedEvent], JAM.policy.p9C5FFCABA70857D69F2974E6410A585B5EFE64DC);
+  JAM.call(Event.observe, Event, [window, "load", fireContentLoadedEvent], JAM.policy.p1);
   return
 }
 function v326(GLOBAL$$2) {
@@ -805,11 +805,11 @@ function v326(GLOBAL$$2) {
       var v490 = Event.cache;
       var cacheEntry = v490[uid$$8];
       var element$$199 = cacheEntry.element;
-      JAM.call(Event.extend, Event, [event$$25, element$$199], JAM.policy.p9C5FFCABA70857D69F2974E6410A585B5EFE64DC);
-      JAM.call(handler$$8.call, handler$$8, [element$$199, event$$25], JAM.policy.p9C5FFCABA70857D69F2974E6410A585B5EFE64DC);
+      JAM.call(Event.extend, Event, [event$$25, element$$199], JAM.policy.p1);
+      JAM.call(handler$$8.call, handler$$8, [element$$199, event$$25], JAM.policy.p1);
       return
     }
-    var v491 = JAM.call(Event._isCustomEvent, Event, [eventName$$19], JAM.policy.p9C5FFCABA70857D69F2974E6410A585B5EFE64DC);
+    var v491 = JAM.call(Event._isCustomEvent, Event, [eventName$$19], JAM.policy.p1);
     if(v491) {
       return createResponderForCustomEvent(uid$$8, eventName$$19, handler$$8)
     }
@@ -834,7 +834,7 @@ function v326(GLOBAL$$2) {
       var cacheEntry$$1 = v493[uid$$9];
       var element$$200 = cacheEntry$$1.element;
       var v2146 = event$$26.eventName;
-      var v494 = JAM.call(Object.isUndefined, Object, [v2146], JAM.policy.p9C5FFCABA70857D69F2974E6410A585B5EFE64DC);
+      var v494 = JAM.call(Object.isUndefined, Object, [v2146], JAM.policy.p1);
       if(v494) {
         return false
       }
@@ -843,8 +843,8 @@ function v326(GLOBAL$$2) {
       if(v495) {
         return false
       }
-      JAM.call(Event.extend, Event, [event$$26, element$$200], JAM.policy.p9C5FFCABA70857D69F2974E6410A585B5EFE64DC);
-      JAM.call(handler$$9.call, handler$$9, [element$$200, event$$26], JAM.policy.p9C5FFCABA70857D69F2974E6410A585B5EFE64DC);
+      JAM.call(Event.extend, Event, [event$$26, element$$200], JAM.policy.p1);
+      JAM.call(handler$$9.call, handler$$9, [element$$200, event$$26], JAM.policy.p1);
       return
     }
     return v324
@@ -854,7 +854,7 @@ function v326(GLOBAL$$2) {
       var v496 = Event.cache;
       var cacheEntry$$2 = v496[uid$$10];
       var element$$201 = cacheEntry$$2.element;
-      JAM.call(Event.extend, Event, [event$$27, element$$201], JAM.policy.p9C5FFCABA70857D69F2974E6410A585B5EFE64DC);
+      JAM.call(Event.extend, Event, [event$$27, element$$201], JAM.policy.p1);
       var parent$$10 = event$$27.relatedTarget;
       var v2148 = parent$$10;
       if(v2148) {
@@ -877,7 +877,7 @@ function v326(GLOBAL$$2) {
       if(v498) {
         return
       }
-      JAM.call(handler$$10.call, handler$$10, [element$$201, event$$27], JAM.policy.p9C5FFCABA70857D69F2974E6410A585B5EFE64DC);
+      JAM.call(handler$$10.call, handler$$10, [element$$201, event$$27], JAM.policy.p1);
       return
     }
     return v325
@@ -896,11 +896,11 @@ function v326(GLOBAL$$2) {
 function v322(GLOBAL$$1) {
   function v321(event$$24) {
     var v501 = this.selector;
-    var element$$198 = JAM.call(Event$$1.findElement, Event$$1, [event$$24, v501], JAM.policy.p9C5FFCABA70857D69F2974E6410A585B5EFE64DC);
+    var element$$198 = JAM.call(Event$$1.findElement, Event$$1, [event$$24, v501], JAM.policy.p1);
     if(element$$198) {
       var v502 = this.callback;
       var v503 = this.element;
-      JAM.call(v502.call, v502, [v503, event$$24, element$$198], JAM.policy.p9C5FFCABA70857D69F2974E6410A585B5EFE64DC)
+      JAM.call(v502.call, v502, [v503, event$$24, element$$198], JAM.policy.p1)
     }
     return
   }
@@ -908,24 +908,24 @@ function v322(GLOBAL$$1) {
     var v504 = this.element;
     var v505 = this.eventName;
     var v506 = this.handler;
-    JAM.call(Event$$1.stopObserving, Event$$1, [v504, v505, v506], JAM.policy.p9C5FFCABA70857D69F2974E6410A585B5EFE64DC);
+    JAM.call(Event$$1.stopObserving, Event$$1, [v504, v505, v506], JAM.policy.p1);
     return this
   }
   function v319() {
     var v507 = this.element;
     var v508 = this.eventName;
     var v509 = this.handler;
-    JAM.call(Event$$1.observe, Event$$1, [v507, v508, v509], JAM.policy.p9C5FFCABA70857D69F2974E6410A585B5EFE64DC);
+    JAM.call(Event$$1.observe, Event$$1, [v507, v508, v509], JAM.policy.p1);
     return this
   }
   function v318(element$$197, eventName$$17, selector$$6, callback$$30) {
-    var v3973 = JAM.call($, null, [element$$197], JAM.policy.p9C5FFCABA70857D69F2974E6410A585B5EFE64DC);
+    var v3973 = JAM.call($, null, [element$$197], JAM.policy.p1);
     this.element = v3973;
     this.eventName = eventName$$17;
     this.selector = selector$$6;
     this.callback = callback$$30;
     var v510 = this.handleEvent;
-    var v3974 = JAM.call(v510.bind, v510, [this], JAM.policy.p9C5FFCABA70857D69F2974E6410A585B5EFE64DC);
+    var v3974 = JAM.call(v510.bind, v510, [this], JAM.policy.p1);
     this.handler = v3974;
     return
   }
@@ -934,7 +934,7 @@ function v322(GLOBAL$$1) {
     if(v511) {
       return false
     }
-    var v2150 = JAM.call(isIELegacyEvent, null, [event$$23], JAM.policy.p9C5FFCABA70857D69F2974E6410A585B5EFE64DC);
+    var v2150 = JAM.call(isIELegacyEvent, null, [event$$23], JAM.policy.p1);
     var v512 = !v2150;
     if(v512) {
       return event$$23
@@ -944,20 +944,20 @@ function v322(GLOBAL$$1) {
       return event$$23
     }
     event$$23._extendedByPrototype = Prototype.emptyFunction;
-    var pointer$$1 = JAM.call(Event$$1.pointer, Event$$1, [event$$23], JAM.policy.p9C5FFCABA70857D69F2974E6410A585B5EFE64DC);
+    var pointer$$1 = JAM.call(Event$$1.pointer, Event$$1, [event$$23], JAM.policy.p1);
     var v3119 = event$$23.srcElement;
     var v3603 = !v3119;
     if(v3603) {
       v3119 = element$$196
     }
     var v2151 = v3119;
-    var v2152 = JAM.call(_relatedTarget, null, [event$$23], JAM.policy.p9C5FFCABA70857D69F2974E6410A585B5EFE64DC);
+    var v2152 = JAM.call(_relatedTarget, null, [event$$23], JAM.policy.p1);
     var v2153 = pointer$$1.x;
     var v2154 = pointer$$1.y;
     var v514 = {target:v2151, relatedTarget:v2152, pageX:v2153, pageY:v2154};
-    JAM.call(Object.extend, Object, [event$$23, v514], JAM.policy.p9C5FFCABA70857D69F2974E6410A585B5EFE64DC);
-    JAM.call(Object.extend, Object, [event$$23, methods$$7], JAM.policy.p9C5FFCABA70857D69F2974E6410A585B5EFE64DC);
-    JAM.call(Object.extend, Object, [event$$23, additionalMethods], JAM.policy.p9C5FFCABA70857D69F2974E6410A585B5EFE64DC);
+    JAM.call(Object.extend, Object, [event$$23, v514], JAM.policy.p1);
+    JAM.call(Object.extend, Object, [event$$23, methods$$7], JAM.policy.p1);
+    JAM.call(Object.extend, Object, [event$$23, additionalMethods], JAM.policy.p1);
     return event$$23
   }
   function v316() {
@@ -988,20 +988,20 @@ function v322(GLOBAL$$1) {
       default:
         return null
     }
-    return JAM.call(Element.extend, Element, [element$$195], JAM.policy.p9C5FFCABA70857D69F2974E6410A585B5EFE64DC)
+    return JAM.call(Element.extend, Element, [element$$195], JAM.policy.p1)
   }
   function v312(m$$5, name$$46) {
     var v516 = m$$5;
     var v517 = name$$46;
     var v3120 = Event$$1.Methods;
     var v2155 = v3120[name$$46];
-    var v3975 = JAM.call(v2155.methodize, v2155, [], JAM.policy.p9C5FFCABA70857D69F2974E6410A585B5EFE64DC);
-    JAM.set(v516, v517, v3975, JAM.policy.p425E08A28862414CF7130381FE99A660F52DB811);
+    var v3975 = JAM.call(v2155.methodize, v2155, [], JAM.policy.p1);
+    JAM.set(v516, v517, v3975, JAM.policy.p2);
     return m$$5
   }
   function v311(event$$21, code$$5) {
     var v518;
-    var v2156 = JAM.call(isIELegacyEvent, null, [event$$21], JAM.policy.p9C5FFCABA70857D69F2974E6410A585B5EFE64DC);
+    var v2156 = JAM.call(isIELegacyEvent, null, [event$$21], JAM.policy.p1);
     if(v2156) {
       v518 = _isButtonForLegacyEvents(event$$21, code$$5)
     }else {
@@ -1070,20 +1070,20 @@ function v322(GLOBAL$$1) {
     return
   }
   function isLeftClick(event$$5) {
-    return JAM.call(_isButton, null, [event$$5, 0], JAM.policy.p9C5FFCABA70857D69F2974E6410A585B5EFE64DC)
+    return JAM.call(_isButton, null, [event$$5, 0], JAM.policy.p1)
   }
   function isMiddleClick(event$$6) {
-    return JAM.call(_isButton, null, [event$$6, 1], JAM.policy.p9C5FFCABA70857D69F2974E6410A585B5EFE64DC)
+    return JAM.call(_isButton, null, [event$$6, 1], JAM.policy.p1)
   }
   function isRightClick(event$$7) {
-    return JAM.call(_isButton, null, [event$$7, 2], JAM.policy.p9C5FFCABA70857D69F2974E6410A585B5EFE64DC)
+    return JAM.call(_isButton, null, [event$$7, 2], JAM.policy.p1)
   }
   function element$$173(event$$8) {
     var v526 = _element(event$$8);
-    return JAM.call(Element.extend, Element, [v526], JAM.policy.p9C5FFCABA70857D69F2974E6410A585B5EFE64DC)
+    return JAM.call(Element.extend, Element, [v526], JAM.policy.p1)
   }
   function _element(event$$9) {
-    event$$9 = JAM.call(Event$$1.extend, Event$$1, [event$$9], JAM.policy.p9C5FFCABA70857D69F2974E6410A585B5EFE64DC);
+    event$$9 = JAM.call(Event$$1.extend, Event$$1, [event$$9], JAM.policy.p1);
     var node$$19 = event$$9.target;
     var type$$33 = event$$9.type;
     var currentTarget = event$$9.currentTarget;
@@ -1102,7 +1102,7 @@ function v322(GLOBAL$$1) {
           var v3604 = type$$33 === "click";
           if(v3604) {
             var v3911 = currentTarget.tagName;
-            var v3867 = JAM.call(v3911.toLowerCase, v3911, [], JAM.policy.p9C5FFCABA70857D69F2974E6410A585B5EFE64DC);
+            var v3867 = JAM.call(v3911.toLowerCase, v3911, [], JAM.policy.p1);
             var v3795 = v3867 === "input";
             if(v3795) {
               var v3868 = currentTarget.type;
@@ -1125,7 +1125,7 @@ function v322(GLOBAL$$1) {
     if(v529) {
       node$$19 = node$$19.parentNode
     }
-    return JAM.call(Element.extend, Element, [node$$19], JAM.policy.p9C5FFCABA70857D69F2974E6410A585B5EFE64DC)
+    return JAM.call(Element.extend, Element, [node$$19], JAM.policy.p1)
   }
   function findElement(event$$10, expression$$7) {
     var element$$174 = _element(event$$10);
@@ -1133,16 +1133,16 @@ function v322(GLOBAL$$1) {
     var match$$47 = v530.match;
     var v531 = !expression$$7;
     if(v531) {
-      return JAM.call(Element.extend, Element, [element$$174], JAM.policy.p9C5FFCABA70857D69F2974E6410A585B5EFE64DC)
+      return JAM.call(Element.extend, Element, [element$$174], JAM.policy.p1)
     }
     for(;element$$174;) {
-      var v2171 = JAM.call(Object.isElement, Object, [element$$174], JAM.policy.p9C5FFCABA70857D69F2974E6410A585B5EFE64DC);
+      var v2171 = JAM.call(Object.isElement, Object, [element$$174], JAM.policy.p1);
       if(v2171) {
-        v2171 = JAM.call(match$$47, null, [element$$174, expression$$7], JAM.policy.p9C5FFCABA70857D69F2974E6410A585B5EFE64DC)
+        v2171 = JAM.call(match$$47, null, [element$$174, expression$$7], JAM.policy.p1)
       }
       var v532 = v2171;
       if(v532) {
-        return JAM.call(Element.extend, Element, [element$$174], JAM.policy.p9C5FFCABA70857D69F2974E6410A585B5EFE64DC)
+        return JAM.call(Element.extend, Element, [element$$174], JAM.policy.p1)
       }
       element$$174 = element$$174.parentNode
     }
@@ -1212,9 +1212,9 @@ function v322(GLOBAL$$1) {
     return v538
   }
   function stop(event$$14) {
-    JAM.call(Event$$1.extend, Event$$1, [event$$14], JAM.policy.p9C5FFCABA70857D69F2974E6410A585B5EFE64DC);
-    JAM.call(event$$14.preventDefault, event$$14, [], JAM.policy.p9C5FFCABA70857D69F2974E6410A585B5EFE64DC);
-    JAM.call(event$$14.stopPropagation, event$$14, [], JAM.policy.p9C5FFCABA70857D69F2974E6410A585B5EFE64DC);
+    JAM.call(Event$$1.extend, Event$$1, [event$$14], JAM.policy.p1);
+    JAM.call(event$$14.preventDefault, event$$14, [], JAM.policy.p1);
+    JAM.call(event$$14.stopPropagation, event$$14, [], JAM.policy.p1);
     event$$14.stopped = true;
     return
   }
@@ -1256,24 +1256,24 @@ function v322(GLOBAL$$1) {
     return element$$176.uniqueID
   }
   function isCustomEvent(eventName$$1) {
-    return JAM.call(eventName$$1.include, eventName$$1, [":"], JAM.policy.p9C5FFCABA70857D69F2974E6410A585B5EFE64DC)
+    return JAM.call(eventName$$1.include, eventName$$1, [":"], JAM.policy.p1)
   }
   function getRegistryForElement(element$$177, uid$$4) {
     var v544 = GLOBAL$$1.Event;
     var CACHE = v544.cache;
-    var v545 = JAM.call(Object.isUndefined, Object, [uid$$4], JAM.policy.p9C5FFCABA70857D69F2974E6410A585B5EFE64DC);
+    var v545 = JAM.call(Object.isUndefined, Object, [uid$$4], JAM.policy.p1);
     if(v545) {
-      uid$$4 = JAM.call(getUniqueElementID$$1, null, [element$$177], JAM.policy.p9C5FFCABA70857D69F2974E6410A585B5EFE64DC)
+      uid$$4 = JAM.call(getUniqueElementID$$1, null, [element$$177], JAM.policy.p1)
     }
     var v2184 = CACHE[uid$$4];
     var v546 = !v2184;
     if(v546) {
-      JAM.set(CACHE, uid$$4, {element:element$$177}, JAM.policy.p425E08A28862414CF7130381FE99A660F52DB811)
+      JAM.set(CACHE, uid$$4, {element:element$$177}, JAM.policy.p2)
     }
     return CACHE[uid$$4]
   }
   function observe(element$$181, eventName$$4, handler$$5) {
-    element$$181 = JAM.call($, null, [element$$181], JAM.policy.p9C5FFCABA70857D69F2974E6410A585B5EFE64DC);
+    element$$181 = JAM.call($, null, [element$$181], JAM.policy.p1);
     var entry$$2;
     JSCompiler_inline_label_register_43: {
       var element$$inline_34 = element$$181;
@@ -1283,7 +1283,7 @@ function v322(GLOBAL$$1) {
       var v2185 = registry$$inline_37[eventName$$inline_35];
       var v547 = !v2185;
       if(v547) {
-        JAM.set(registry$$inline_37, eventName$$inline_35, [], JAM.policy.p425E08A28862414CF7130381FE99A660F52DB811)
+        JAM.set(registry$$inline_37, eventName$$inline_35, [], JAM.policy.p2)
       }
       var entries$$inline_38 = registry$$inline_37[eventName$$inline_35];
       var i$$inline_39 = entries$$inline_38.length;
@@ -1300,11 +1300,11 @@ function v322(GLOBAL$$1) {
         v549 = i$$inline_39;
         i$$inline_39 = i$$inline_39 - 1
       }
-      var uid$$inline_40 = JAM.call(getUniqueElementID$$1, null, [element$$inline_34], JAM.policy.p9C5FFCABA70857D69F2974E6410A585B5EFE64DC);
+      var uid$$inline_40 = JAM.call(getUniqueElementID$$1, null, [element$$inline_34], JAM.policy.p1);
       var v550 = GLOBAL$$1.Event;
-      var responder$$inline_41 = JAM.call(v550._createResponder, v550, [uid$$inline_40, eventName$$inline_35, handler$$inline_36], JAM.policy.p9C5FFCABA70857D69F2974E6410A585B5EFE64DC);
+      var responder$$inline_41 = JAM.call(v550._createResponder, v550, [uid$$inline_40, eventName$$inline_35, handler$$inline_36], JAM.policy.p1);
       var entry$$inline_42 = {responder:responder$$inline_41, handler:handler$$inline_36};
-      JAM.call(entries$$inline_38.push, entries$$inline_38, [entry$$inline_42], JAM.policy.p9C5FFCABA70857D69F2974E6410A585B5EFE64DC);
+      JAM.call(entries$$inline_38.push, entries$$inline_38, [entry$$inline_42], JAM.policy.p1);
       entry$$2 = entry$$inline_42
     }
     var v551 = entry$$2 === null;
@@ -1318,30 +1318,30 @@ function v322(GLOBAL$$1) {
       var responder$$inline_46 = responder$$4;
       var v552 = element$$inline_44.addEventListener;
       if(v552) {
-        JAM.call(element$$inline_44.addEventListener, element$$inline_44, ["dataavailable", responder$$inline_46, false], JAM.policy.p9C5FFCABA70857D69F2974E6410A585B5EFE64DC)
+        JAM.call(element$$inline_44.addEventListener, element$$inline_44, ["dataavailable", responder$$inline_46, false], JAM.policy.p1)
       }else {
-        JAM.call(element$$inline_44.attachEvent, element$$inline_44, ["ondataavailable", responder$$inline_46], JAM.policy.p9C5FFCABA70857D69F2974E6410A585B5EFE64DC);
-        JAM.call(element$$inline_44.attachEvent, element$$inline_44, ["onlosecapture", responder$$inline_46], JAM.policy.p9C5FFCABA70857D69F2974E6410A585B5EFE64DC)
+        JAM.call(element$$inline_44.attachEvent, element$$inline_44, ["ondataavailable", responder$$inline_46], JAM.policy.p1);
+        JAM.call(element$$inline_44.attachEvent, element$$inline_44, ["onlosecapture", responder$$inline_46], JAM.policy.p1)
       }
     }else {
       var element$$inline_48 = element$$181;
       var responder$$inline_50 = responder$$4;
-      var actualEventName$$inline_51 = JAM.call(getDOMEventName, null, [eventName$$4], JAM.policy.p9C5FFCABA70857D69F2974E6410A585B5EFE64DC);
+      var actualEventName$$inline_51 = JAM.call(getDOMEventName, null, [eventName$$4], JAM.policy.p1);
       var v554 = element$$inline_48.addEventListener;
       if(v554) {
-        JAM.call(element$$inline_48.addEventListener, element$$inline_48, [actualEventName$$inline_51, responder$$inline_50, false], JAM.policy.p9C5FFCABA70857D69F2974E6410A585B5EFE64DC)
+        JAM.call(element$$inline_48.addEventListener, element$$inline_48, [actualEventName$$inline_51, responder$$inline_50, false], JAM.policy.p1)
       }else {
         var v553 = "on" + actualEventName$$inline_51;
-        JAM.call(element$$inline_48.attachEvent, element$$inline_48, [v553, responder$$inline_50], JAM.policy.p9C5FFCABA70857D69F2974E6410A585B5EFE64DC)
+        JAM.call(element$$inline_48.attachEvent, element$$inline_48, [v553, responder$$inline_50], JAM.policy.p1)
       }
     }
     return element$$181
   }
   function stopObserving(element$$184, eventName$$7, handler$$6) {
-    element$$184 = JAM.call($, null, [element$$184], JAM.policy.p9C5FFCABA70857D69F2974E6410A585B5EFE64DC);
-    var v556 = JAM.call(Object.isUndefined, Object, [handler$$6], JAM.policy.p9C5FFCABA70857D69F2974E6410A585B5EFE64DC);
+    element$$184 = JAM.call($, null, [element$$184], JAM.policy.p1);
+    var v556 = JAM.call(Object.isUndefined, Object, [handler$$6], JAM.policy.p1);
     var handlerGiven = !v556;
-    var v557 = JAM.call(Object.isUndefined, Object, [eventName$$7], JAM.policy.p9C5FFCABA70857D69F2974E6410A585B5EFE64DC);
+    var v557 = JAM.call(Object.isUndefined, Object, [eventName$$7], JAM.policy.p1);
     var eventNameGiven = !v557;
     var v2187 = !eventNameGiven;
     if(v2187) {
@@ -1350,13 +1350,13 @@ function v322(GLOBAL$$1) {
     var v563 = v2187;
     if(v563) {
       var element$$inline_53 = element$$184;
-      var uid$$inline_54 = JAM.call(getUniqueElementID$$1, null, [element$$inline_53], JAM.policy.p9C5FFCABA70857D69F2974E6410A585B5EFE64DC);
+      var uid$$inline_54 = JAM.call(getUniqueElementID$$1, null, [element$$inline_53], JAM.policy.p1);
       var registry$$inline_55 = getRegistryForElement(element$$inline_53, uid$$inline_54);
       var element$$inline_88 = element$$inline_53;
       var uid$$inline_89 = uid$$inline_54;
-      var v558 = JAM.call(Object.isUndefined, Object, [uid$$inline_89], JAM.policy.p9C5FFCABA70857D69F2974E6410A585B5EFE64DC);
+      var v558 = JAM.call(Object.isUndefined, Object, [uid$$inline_89], JAM.policy.p1);
       if(v558) {
-        uid$$inline_89 = JAM.call(getUniqueElementID$$1, null, [element$$inline_88], JAM.policy.p9C5FFCABA70857D69F2974E6410A585B5EFE64DC)
+        uid$$inline_89 = JAM.call(getUniqueElementID$$1, null, [element$$inline_88], JAM.policy.p1)
       }
       var v2188 = GLOBAL$$1.Event;
       var v559 = v2188.cache;
@@ -1439,8 +1439,8 @@ function v322(GLOBAL$$1) {
         entry$$3 = void 0;
         break JSCompiler_inline_label_unregister_74
       }
-      var index$$inline_73 = JAM.call(entries$$inline_70.indexOf, entries$$inline_70, [entry$$inline_72], JAM.policy.p9C5FFCABA70857D69F2974E6410A585B5EFE64DC);
-      JAM.call(entries$$inline_70.splice, entries$$inline_70, [index$$inline_73, 1], JAM.policy.p9C5FFCABA70857D69F2974E6410A585B5EFE64DC);
+      var index$$inline_73 = JAM.call(entries$$inline_70.indexOf, entries$$inline_70, [entry$$inline_72], JAM.policy.p1);
+      JAM.call(entries$$inline_70.splice, entries$$inline_70, [index$$inline_73, 1], JAM.policy.p1);
       entry$$3 = entry$$inline_72
     }
     var v572 = !entry$$3;
@@ -1458,28 +1458,28 @@ function v322(GLOBAL$$1) {
       var responder$$inline_77 = handler$$7;
       var v574 = element$$inline_75.removeEventListener;
       if(v574) {
-        JAM.call(element$$inline_75.removeEventListener, element$$inline_75, ["dataavailable", responder$$inline_77, false], JAM.policy.p9C5FFCABA70857D69F2974E6410A585B5EFE64DC)
+        JAM.call(element$$inline_75.removeEventListener, element$$inline_75, ["dataavailable", responder$$inline_77, false], JAM.policy.p1)
       }else {
-        JAM.call(element$$inline_75.detachEvent, element$$inline_75, ["ondataavailable", responder$$inline_77], JAM.policy.p9C5FFCABA70857D69F2974E6410A585B5EFE64DC);
-        JAM.call(element$$inline_75.detachEvent, element$$inline_75, ["onlosecapture", responder$$inline_77], JAM.policy.p9C5FFCABA70857D69F2974E6410A585B5EFE64DC)
+        JAM.call(element$$inline_75.detachEvent, element$$inline_75, ["ondataavailable", responder$$inline_77], JAM.policy.p1);
+        JAM.call(element$$inline_75.detachEvent, element$$inline_75, ["onlosecapture", responder$$inline_77], JAM.policy.p1)
       }
     }else {
       var element$$inline_79 = element$$189;
       var responder$$inline_81 = handler$$7;
-      var actualEventName$$inline_82 = JAM.call(getDOMEventName, null, [eventName$$12], JAM.policy.p9C5FFCABA70857D69F2974E6410A585B5EFE64DC);
+      var actualEventName$$inline_82 = JAM.call(getDOMEventName, null, [eventName$$12], JAM.policy.p1);
       var v576 = element$$inline_79.removeEventListener;
       if(v576) {
-        JAM.call(element$$inline_79.removeEventListener, element$$inline_79, [actualEventName$$inline_82, responder$$inline_81, false], JAM.policy.p9C5FFCABA70857D69F2974E6410A585B5EFE64DC)
+        JAM.call(element$$inline_79.removeEventListener, element$$inline_79, [actualEventName$$inline_82, responder$$inline_81, false], JAM.policy.p1)
       }else {
         var v575 = "on" + actualEventName$$inline_82;
-        JAM.call(element$$inline_79.detachEvent, element$$inline_79, [v575, responder$$inline_81], JAM.policy.p9C5FFCABA70857D69F2974E6410A585B5EFE64DC)
+        JAM.call(element$$inline_79.detachEvent, element$$inline_79, [v575, responder$$inline_81], JAM.policy.p1)
       }
     }
     return
   }
   function fire(element$$191, eventName$$13, memo$$2, bubble) {
     JSCompiler_inline_label_getFireTarget_85: {
-      var element$$inline_84 = JAM.call($, null, [element$$191], JAM.policy.p9C5FFCABA70857D69F2974E6410A585B5EFE64DC);
+      var element$$inline_84 = JAM.call($, null, [element$$191], JAM.policy.p1);
       var v578 = element$$inline_84 !== document;
       if(v578) {
         element$$191 = element$$inline_84;
@@ -1497,24 +1497,24 @@ function v322(GLOBAL$$1) {
       }
       element$$191 = element$$inline_84
     }
-    var v580 = JAM.call(Object.isUndefined, Object, [bubble], JAM.policy.p9C5FFCABA70857D69F2974E6410A585B5EFE64DC);
+    var v580 = JAM.call(Object.isUndefined, Object, [bubble], JAM.policy.p1);
     if(v580) {
       bubble = true
     }
     memo$$2 = memo$$2 || {};
-    var event$$15 = JAM.call(fireEvent, null, [element$$191, eventName$$13, memo$$2, bubble], JAM.policy.p9C5FFCABA70857D69F2974E6410A585B5EFE64DC);
-    return JAM.call(Event$$1.extend, Event$$1, [event$$15], JAM.policy.p9C5FFCABA70857D69F2974E6410A585B5EFE64DC)
+    var event$$15 = JAM.call(fireEvent, null, [element$$191, eventName$$13, memo$$2, bubble], JAM.policy.p1);
+    return JAM.call(Event$$1.extend, Event$$1, [event$$15], JAM.policy.p1)
   }
   function fireEvent_DOM(element$$192, eventName$$14, memo$$3, bubble$$1) {
-    var event$$16 = JAM.call(document.createEvent, document, ["HTMLEvents"], JAM.policy.p9C5FFCABA70857D69F2974E6410A585B5EFE64DC);
-    JAM.call(event$$16.initEvent, event$$16, ["dataavailable", bubble$$1, true], JAM.policy.p9C5FFCABA70857D69F2974E6410A585B5EFE64DC);
+    var event$$16 = JAM.call(document.createEvent, document, ["HTMLEvents"], JAM.policy.p1);
+    JAM.call(event$$16.initEvent, event$$16, ["dataavailable", bubble$$1, true], JAM.policy.p1);
     event$$16.eventName = eventName$$14;
     event$$16.memo = memo$$3;
-    JAM.call(element$$192.dispatchEvent, element$$192, [event$$16], JAM.policy.p9C5FFCABA70857D69F2974E6410A585B5EFE64DC);
+    JAM.call(element$$192.dispatchEvent, element$$192, [event$$16], JAM.policy.p1);
     return event$$16
   }
   function fireEvent_IE(element$$193, eventName$$15, memo$$4, bubble$$2) {
-    var event$$17 = JAM.call(document.createEventObject, document, [], JAM.policy.p9C5FFCABA70857D69F2974E6410A585B5EFE64DC);
+    var event$$17 = JAM.call(document.createEventObject, document, [], JAM.policy.p1);
     var v581;
     if(bubble$$2) {
       v581 = "ondataavailable"
@@ -1525,14 +1525,14 @@ function v322(GLOBAL$$1) {
     event$$17.eventName = eventName$$15;
     event$$17.memo = memo$$4;
     var v582 = event$$17.eventType;
-    JAM.call(element$$193.fireEvent, element$$193, [v582, event$$17], JAM.policy.p9C5FFCABA70857D69F2974E6410A585B5EFE64DC);
+    JAM.call(element$$193.fireEvent, element$$193, [v582, event$$17], JAM.policy.p1);
     return event$$17
   }
   function on(element$$194, eventName$$16, selector$$5, callback$$29) {
-    element$$194 = JAM.call($, null, [element$$194], JAM.policy.p9C5FFCABA70857D69F2974E6410A585B5EFE64DC);
-    var v2193 = JAM.call(Object.isFunction, Object, [selector$$5], JAM.policy.p9C5FFCABA70857D69F2974E6410A585B5EFE64DC);
+    element$$194 = JAM.call($, null, [element$$194], JAM.policy.p1);
+    var v2193 = JAM.call(Object.isFunction, Object, [selector$$5], JAM.policy.p1);
     if(v2193) {
-      v2193 = JAM.call(Object.isUndefined, Object, [callback$$29], JAM.policy.p9C5FFCABA70857D69F2974E6410A585B5EFE64DC)
+      v2193 = JAM.call(Object.isUndefined, Object, [callback$$29], JAM.policy.p1)
     }
     var v583 = v2193;
     if(v583) {
@@ -1541,14 +1541,14 @@ function v322(GLOBAL$$1) {
     }
     var v2194 = Event$$1.Handler;
     var v584 = JAM.new(v2194, [element$$194, eventName$$16, selector$$5, callback$$29]);
-    return JAM.call(v584.start, v584, [], JAM.policy.p9C5FFCABA70857D69F2974E6410A585B5EFE64DC)
+    return JAM.call(v584.start, v584, [], JAM.policy.p1)
   }
   function destroyCache_IE() {
     var v585 = GLOBAL$$1.Event;
     v585.cache = null;
     return
   }
-  var DIV$$1 = JAM.call(document.createElement, document, ["div"], JAM.policy.p9C5FFCABA70857D69F2974E6410A585B5EFE64DC);
+  var DIV$$1 = JAM.call(document.createElement, document, ["div"], JAM.policy.p1);
   var docEl$$1 = document.documentElement;
   var v586 = "onmouseenter" in docEl$$1;
   if(v586) {
@@ -1587,8 +1587,8 @@ function v322(GLOBAL$$1) {
   }
   Event$$1.Methods = {isLeftClick:isLeftClick, isMiddleClick:isMiddleClick, isRightClick:isRightClick, element:element$$173, findElement:findElement, pointer:pointer, pointerX:pointerX, pointerY:pointerY, stop:stop};
   var v2197 = Event$$1.Methods;
-  var v592 = JAM.call(Object.keys, Object, [v2197], JAM.policy.p9C5FFCABA70857D69F2974E6410A585B5EFE64DC);
-  var methods$$7 = JAM.call(v592.inject, v592, [{}, v312], JAM.policy.p9C5FFCABA70857D69F2974E6410A585B5EFE64DC);
+  var v592 = JAM.call(Object.keys, Object, [v2197], JAM.policy.p1);
+  var methods$$7 = JAM.call(v592.inject, v592, [{}, v312], JAM.policy.p1);
   var v593 = window.attachEvent;
   if(v593) {
     var _relatedTarget = v313;
@@ -1604,12 +1604,12 @@ function v322(GLOBAL$$1) {
     var v2198 = v3135.prototype;
     var v3137 = !v2198;
     if(v3137) {
-      var v3136 = JAM.call(document.createEvent, document, ["HTMLEvents"], JAM.policy.p9C5FFCABA70857D69F2974E6410A585B5EFE64DC);
+      var v3136 = JAM.call(document.createEvent, document, ["HTMLEvents"], JAM.policy.p1);
       v2198 = v3136.__proto__
     }
     v594.prototype = v2198;
     var v595 = Event$$1.prototype;
-    JAM.call(Object.extend, Object, [v595, methods$$7], JAM.policy.p9C5FFCABA70857D69F2974E6410A585B5EFE64DC)
+    JAM.call(Object.extend, Object, [v595, methods$$7], JAM.policy.p1)
   }
   var EVENT_TRANSLATIONS = {mouseenter:"mouseover", mouseleave:"mouseout"};
   if(MOUSEENTER_MOUSELEAVE_EVENTS_SUPPORTED) {
@@ -1630,24 +1630,24 @@ function v322(GLOBAL$$1) {
   var fireEvent = v598;
   var v599 = Event$$1;
   var v2200 = {initialize:v318, start:v319, stop:v320, handleEvent:v321};
-  var v3976 = JAM.call(Class.create, Class, [v2200], JAM.policy.p9C5FFCABA70857D69F2974E6410A585B5EFE64DC);
+  var v3976 = JAM.call(Class.create, Class, [v2200], JAM.policy.p1);
   v599.Handler = v3976;
   var v600 = Event$$1.Methods;
-  JAM.call(Object.extend, Object, [Event$$1, v600], JAM.policy.p9C5FFCABA70857D69F2974E6410A585B5EFE64DC);
+  JAM.call(Object.extend, Object, [Event$$1, v600], JAM.policy.p1);
   var v601 = {fire:fire, observe:observe, stopObserving:stopObserving, on:on};
-  JAM.call(Object.extend, Object, [Event$$1, v601], JAM.policy.p9C5FFCABA70857D69F2974E6410A585B5EFE64DC);
+  JAM.call(Object.extend, Object, [Event$$1, v601], JAM.policy.p1);
   var v602 = {fire:fire, observe:observe, stopObserving:stopObserving, on:on};
-  JAM.call(Element.addMethods, Element, [v602], JAM.policy.p9C5FFCABA70857D69F2974E6410A585B5EFE64DC);
-  var v2201 = JAM.call(fire.methodize, fire, [], JAM.policy.p9C5FFCABA70857D69F2974E6410A585B5EFE64DC);
-  var v2202 = JAM.call(observe.methodize, observe, [], JAM.policy.p9C5FFCABA70857D69F2974E6410A585B5EFE64DC);
-  var v2203 = JAM.call(stopObserving.methodize, stopObserving, [], JAM.policy.p9C5FFCABA70857D69F2974E6410A585B5EFE64DC);
-  var v2204 = JAM.call(on.methodize, on, [], JAM.policy.p9C5FFCABA70857D69F2974E6410A585B5EFE64DC);
+  JAM.call(Element.addMethods, Element, [v602], JAM.policy.p1);
+  var v2201 = JAM.call(fire.methodize, fire, [], JAM.policy.p1);
+  var v2202 = JAM.call(observe.methodize, observe, [], JAM.policy.p1);
+  var v2203 = JAM.call(stopObserving.methodize, stopObserving, [], JAM.policy.p1);
+  var v2204 = JAM.call(on.methodize, on, [], JAM.policy.p1);
   var v603 = {fire:v2201, observe:v2202, stopObserving:v2203, on:v2204, loaded:false};
-  JAM.call(Object.extend, Object, [document, v603], JAM.policy.p9C5FFCABA70857D69F2974E6410A585B5EFE64DC);
+  JAM.call(Object.extend, Object, [document, v603], JAM.policy.p1);
   var v605 = GLOBAL$$1.Event;
   if(v605) {
     var v604 = window.Event;
-    JAM.call(Object.extend, Object, [v604, Event$$1], JAM.policy.p9C5FFCABA70857D69F2974E6410A585B5EFE64DC)
+    JAM.call(Object.extend, Object, [v604, Event$$1], JAM.policy.p1)
   }else {
     GLOBAL$$1.Event = Event$$1
   }
@@ -1655,7 +1655,7 @@ function v322(GLOBAL$$1) {
   v606.cache = {};
   var v607 = window.attachEvent;
   if(v607) {
-    JAM.call(window.attachEvent, window, ["onunload", destroyCache_IE], JAM.policy.p9C5FFCABA70857D69F2974E6410A585B5EFE64DC)
+    JAM.call(window.attachEvent, window, ["onunload", destroyCache_IE], JAM.policy.p1)
   }
   DIV$$1 = null;
   docEl$$1 = null;
@@ -1663,86 +1663,86 @@ function v322(GLOBAL$$1) {
 }
 function v308() {
   var v608 = this.element;
-  return JAM.call(Form.serialize, Form, [v608], JAM.policy.p9C5FFCABA70857D69F2974E6410A585B5EFE64DC)
+  return JAM.call(Form.serialize, Form, [v608], JAM.policy.p1)
 }
 function v307() {
   var v609 = Form.Element;
   var v610 = this.element;
-  return JAM.call(v609.getValue, v609, [v610], JAM.policy.p9C5FFCABA70857D69F2974E6410A585B5EFE64DC)
+  return JAM.call(v609.getValue, v609, [v610], JAM.policy.p1)
 }
 function v306(element$$172) {
   var v614 = element$$172.type;
   if(v614) {
     var v2205 = element$$172.type;
-    var v613 = JAM.call(v2205.toLowerCase, v2205, [], JAM.policy.p9C5FFCABA70857D69F2974E6410A585B5EFE64DC);
+    var v613 = JAM.call(v2205.toLowerCase, v2205, [], JAM.policy.p1);
     switch(v613) {
       case "checkbox":
       ;
       case "radio":
         var v2206 = this.onElementEvent;
-        var v611 = JAM.call(v2206.bind, v2206, [this], JAM.policy.p9C5FFCABA70857D69F2974E6410A585B5EFE64DC);
-        JAM.call(Event.observe, Event, [element$$172, "click", v611], JAM.policy.p9C5FFCABA70857D69F2974E6410A585B5EFE64DC);
+        var v611 = JAM.call(v2206.bind, v2206, [this], JAM.policy.p1);
+        JAM.call(Event.observe, Event, [element$$172, "click", v611], JAM.policy.p1);
         break;
       default:
         var v2207 = this.onElementEvent;
-        var v612 = JAM.call(v2207.bind, v2207, [this], JAM.policy.p9C5FFCABA70857D69F2974E6410A585B5EFE64DC);
-        JAM.call(Event.observe, Event, [element$$172, "change", v612], JAM.policy.p9C5FFCABA70857D69F2974E6410A585B5EFE64DC)
+        var v612 = JAM.call(v2207.bind, v2207, [this], JAM.policy.p1);
+        JAM.call(Event.observe, Event, [element$$172, "change", v612], JAM.policy.p1)
     }
   }
   return
 }
 function v305() {
   var v2208 = this.element;
-  var v615 = JAM.call(Form.getElements, Form, [v2208], JAM.policy.p9C5FFCABA70857D69F2974E6410A585B5EFE64DC);
+  var v615 = JAM.call(Form.getElements, Form, [v2208], JAM.policy.p1);
   var v616 = this.registerCallback;
-  JAM.call(v615.each, v615, [v616, this], JAM.policy.p9C5FFCABA70857D69F2974E6410A585B5EFE64DC);
+  JAM.call(v615.each, v615, [v616, this], JAM.policy.p1);
   return
 }
 function v304() {
-  var value$$100 = JAM.call(this.getValue, this, [], JAM.policy.p9C5FFCABA70857D69F2974E6410A585B5EFE64DC);
+  var value$$100 = JAM.call(this.getValue, this, [], JAM.policy.p1);
   var v2209 = this.lastValue;
   var v618 = v2209 != value$$100;
   if(v618) {
     var v617 = this.element;
-    JAM.call(this.callback, this, [v617, value$$100], JAM.policy.p9C5FFCABA70857D69F2974E6410A585B5EFE64DC);
+    JAM.call(this.callback, this, [v617, value$$100], JAM.policy.p1);
     this.lastValue = value$$100
   }
   return
 }
 function v303(element$$171, callback$$28) {
-  var v3977 = JAM.call($, null, [element$$171], JAM.policy.p9C5FFCABA70857D69F2974E6410A585B5EFE64DC);
+  var v3977 = JAM.call($, null, [element$$171], JAM.policy.p1);
   this.element = v3977;
   this.callback = callback$$28;
-  var v3978 = JAM.call(this.getValue, this, [], JAM.policy.p9C5FFCABA70857D69F2974E6410A585B5EFE64DC);
+  var v3978 = JAM.call(this.getValue, this, [], JAM.policy.p1);
   this.lastValue = v3978;
   var v3611 = this.element;
   var v3138 = v3611.tagName;
-  var v2210 = JAM.call(v3138.toLowerCase, v3138, [], JAM.policy.p9C5FFCABA70857D69F2974E6410A585B5EFE64DC);
+  var v2210 = JAM.call(v3138.toLowerCase, v3138, [], JAM.policy.p1);
   var v620 = v2210 == "form";
   if(v620) {
-    JAM.call(this.registerFormCallbacks, this, [], JAM.policy.p9C5FFCABA70857D69F2974E6410A585B5EFE64DC)
+    JAM.call(this.registerFormCallbacks, this, [], JAM.policy.p1)
   }else {
     var v619 = this.element;
-    JAM.call(this.registerCallback, this, [v619], JAM.policy.p9C5FFCABA70857D69F2974E6410A585B5EFE64DC)
+    JAM.call(this.registerCallback, this, [v619], JAM.policy.p1)
   }
   return
 }
 function v302() {
   var v621 = this.element;
-  return JAM.call(Form.serialize, Form, [v621], JAM.policy.p9C5FFCABA70857D69F2974E6410A585B5EFE64DC)
+  return JAM.call(Form.serialize, Form, [v621], JAM.policy.p1)
 }
 function v301() {
   var v622 = Form.Element;
   var v623 = this.element;
-  return JAM.call(v622.getValue, v622, [v623], JAM.policy.p9C5FFCABA70857D69F2974E6410A585B5EFE64DC)
+  return JAM.call(v622.getValue, v622, [v623], JAM.policy.p1)
 }
 function v300() {
-  var value$$99 = JAM.call(this.getValue, this, [], JAM.policy.p9C5FFCABA70857D69F2974E6410A585B5EFE64DC);
+  var value$$99 = JAM.call(this.getValue, this, [], JAM.policy.p1);
   var v2211;
   var v3798 = this.lastValue;
-  var v3612 = JAM.call(Object.isString, Object, [v3798], JAM.policy.p9C5FFCABA70857D69F2974E6410A585B5EFE64DC);
+  var v3612 = JAM.call(Object.isString, Object, [v3798], JAM.policy.p1);
   if(v3612) {
-    v3612 = JAM.call(Object.isString, Object, [value$$99], JAM.policy.p9C5FFCABA70857D69F2974E6410A585B5EFE64DC)
+    v3612 = JAM.call(Object.isString, Object, [value$$99], JAM.policy.p1)
   }
   var v3142 = v3612;
   if(v3142) {
@@ -1757,23 +1757,23 @@ function v300() {
   var v625 = v2211;
   if(v625) {
     var v624 = this.element;
-    JAM.call(this.callback, this, [v624, value$$99], JAM.policy.p9C5FFCABA70857D69F2974E6410A585B5EFE64DC);
+    JAM.call(this.callback, this, [v624, value$$99], JAM.policy.p1);
     this.lastValue = value$$99
   }
   return
 }
 function v299($super$$5, element$$170, frequency$$1, callback$$27) {
-  JAM.call($super$$5, null, [callback$$27, frequency$$1], JAM.policy.p9C5FFCABA70857D69F2974E6410A585B5EFE64DC);
-  var v3979 = JAM.call($, null, [element$$170], JAM.policy.p9C5FFCABA70857D69F2974E6410A585B5EFE64DC);
+  JAM.call($super$$5, null, [callback$$27, frequency$$1], JAM.policy.p1);
+  var v3979 = JAM.call($, null, [element$$170], JAM.policy.p1);
   this.element = v3979;
-  var v3980 = JAM.call(this.getValue, this, [], JAM.policy.p9C5FFCABA70857D69F2974E6410A585B5EFE64DC);
+  var v3980 = JAM.call(this.getValue, this, [], JAM.policy.p1);
   this.lastValue = v3980;
   return
 }
 function v298() {
   function input$$1(element$$164, value$$95) {
     var v2212 = element$$164.type;
-    var v626 = JAM.call(v2212.toLowerCase, v2212, [], JAM.policy.p9C5FFCABA70857D69F2974E6410A585B5EFE64DC);
+    var v626 = JAM.call(v2212.toLowerCase, v2212, [], JAM.policy.p1);
     switch(v626) {
       case "checkbox":
       ;
@@ -1785,7 +1785,7 @@ function v298() {
     return
   }
   function inputSelector(element$$165, value$$96) {
-    var v629 = JAM.call(Object.isUndefined, Object, [value$$96], JAM.policy.p9C5FFCABA70857D69F2974E6410A585B5EFE64DC);
+    var v629 = JAM.call(Object.isUndefined, Object, [value$$96], JAM.policy.p1);
     if(v629) {
       var v627;
       var v2213 = element$$165.checked;
@@ -1802,7 +1802,7 @@ function v298() {
     return
   }
   function valueSelector(element$$166, value$$97) {
-    var v630 = JAM.call(Object.isUndefined, Object, [value$$97], JAM.policy.p9C5FFCABA70857D69F2974E6410A585B5EFE64DC);
+    var v630 = JAM.call(Object.isUndefined, Object, [value$$97], JAM.policy.p1);
     if(v630) {
       return element$$166.value
     }else {
@@ -1811,7 +1811,7 @@ function v298() {
     return
   }
   function select$$3(element$$167, value$$98) {
-    var v632 = JAM.call(Object.isUndefined, Object, [value$$98], JAM.policy.p9C5FFCABA70857D69F2974E6410A585B5EFE64DC);
+    var v632 = JAM.call(Object.isUndefined, Object, [value$$98], JAM.policy.p1);
     if(v632) {
       var v2214;
       var v3614 = element$$167.type;
@@ -1822,11 +1822,11 @@ function v298() {
         v2214 = selectMany
       }
       var v631 = v2214;
-      return JAM.call(v631, null, [element$$167], JAM.policy.p9C5FFCABA70857D69F2974E6410A585B5EFE64DC)
+      return JAM.call(v631, null, [element$$167], JAM.policy.p1)
     }
     var opt;
     var currentValue;
-    var v633 = JAM.call(Object.isArray, Object, [value$$98], JAM.policy.p9C5FFCABA70857D69F2974E6410A585B5EFE64DC);
+    var v633 = JAM.call(Object.isArray, Object, [value$$98], JAM.policy.p1);
     var single = !v633;
     var i$$57 = 0;
     var length$$32 = element$$167.length;
@@ -1834,7 +1834,7 @@ function v298() {
     for(;v637;) {
       var v634 = element$$167.options;
       opt = v634[i$$57];
-      currentValue = JAM.call(this.optionValue, this, [opt], JAM.policy.p9C5FFCABA70857D69F2974E6410A585B5EFE64DC);
+      currentValue = JAM.call(this.optionValue, this, [opt], JAM.policy.p1);
       if(single) {
         var v635 = currentValue == value$$98;
         if(v635) {
@@ -1843,7 +1843,7 @@ function v298() {
         }
       }else {
         var v636 = opt;
-        var v3981 = JAM.call(value$$98.include, value$$98, [currentValue], JAM.policy.p9C5FFCABA70857D69F2974E6410A585B5EFE64DC);
+        var v3981 = JAM.call(value$$98.include, value$$98, [currentValue], JAM.policy.p1);
         v636.selected = v3981
       }
       i$$57 = i$$57 + 1;
@@ -1880,7 +1880,7 @@ function v298() {
       var v642 = opt$$1.selected;
       if(v642) {
         var v641 = optionValue(opt$$1);
-        JAM.call(values$$8.push, values$$8, [v641], JAM.policy.p9C5FFCABA70857D69F2974E6410A585B5EFE64DC)
+        JAM.call(values$$8.push, values$$8, [v641], JAM.policy.p1)
       }
       i$$58 = i$$58 + 1;
       v643 = i$$58 < length$$33
@@ -1889,7 +1889,7 @@ function v298() {
   }
   function optionValue(opt$$2) {
     var v644;
-    var v2217 = JAM.call(Element.hasAttribute, Element, [opt$$2, "value"], JAM.policy.p9C5FFCABA70857D69F2974E6410A585B5EFE64DC);
+    var v2217 = JAM.call(Element.hasAttribute, Element, [opt$$2, "value"], JAM.policy.p1);
     if(v2217) {
       v644 = opt$$2.value
     }else {
@@ -1900,69 +1900,69 @@ function v298() {
   return{input:input$$1, inputSelector:inputSelector, textarea:valueSelector, select:select$$3, selectOne:selectOne, selectMany:selectMany, optionValue:optionValue, button:valueSelector}
 }
 function v297(element$$163) {
-  element$$163 = JAM.call($, null, [element$$163], JAM.policy.p9C5FFCABA70857D69F2974E6410A585B5EFE64DC);
+  element$$163 = JAM.call($, null, [element$$163], JAM.policy.p1);
   element$$163.disabled = false;
   return element$$163
 }
 function v296(element$$162) {
-  element$$162 = JAM.call($, null, [element$$162], JAM.policy.p9C5FFCABA70857D69F2974E6410A585B5EFE64DC);
+  element$$162 = JAM.call($, null, [element$$162], JAM.policy.p1);
   element$$162.disabled = true;
   return element$$162
 }
 function v295(element$$161) {
-  element$$161 = JAM.call($, null, [element$$161], JAM.policy.p9C5FFCABA70857D69F2974E6410A585B5EFE64DC);
+  element$$161 = JAM.call($, null, [element$$161], JAM.policy.p1);
   try {
-    JAM.call(element$$161.focus, element$$161, [], JAM.policy.p9C5FFCABA70857D69F2974E6410A585B5EFE64DC);
+    JAM.call(element$$161.focus, element$$161, [], JAM.policy.p1);
     var v2218 = element$$161.select;
     if(v2218) {
       var v3799 = element$$161.tagName;
-      var v3615 = JAM.call(v3799.toLowerCase, v3799, [], JAM.policy.p9C5FFCABA70857D69F2974E6410A585B5EFE64DC);
+      var v3615 = JAM.call(v3799.toLowerCase, v3799, [], JAM.policy.p1);
       var v3145 = v3615 != "input";
       var v3617 = !v3145;
       if(v3617) {
         var v3800 = element$$161.type;
-        var v3616 = JAM.call(/^(?:button|reset|submit)$/i.test, /^(?:button|reset|submit)$/i, [v3800], JAM.policy.p9C5FFCABA70857D69F2974E6410A585B5EFE64DC);
+        var v3616 = JAM.call(/^(?:button|reset|submit)$/i.test, /^(?:button|reset|submit)$/i, [v3800], JAM.policy.p1);
         v3145 = !v3616
       }
       v2218 = v3145
     }
     var v645 = v2218;
     if(v645) {
-      JAM.call(element$$161.select, element$$161, [], JAM.policy.p9C5FFCABA70857D69F2974E6410A585B5EFE64DC)
+      JAM.call(element$$161.select, element$$161, [], JAM.policy.p1)
     }
   }catch(e$$26) {
   }
   return element$$161
 }
 function v294(element$$160) {
-  var v2219 = JAM.call($, null, [element$$160], JAM.policy.p9C5FFCABA70857D69F2974E6410A585B5EFE64DC);
+  var v2219 = JAM.call($, null, [element$$160], JAM.policy.p1);
   var v646 = v2219.value;
   return v646 != ""
 }
 function v293(element$$159) {
-  var v647 = JAM.call($, null, [element$$159], JAM.policy.p9C5FFCABA70857D69F2974E6410A585B5EFE64DC);
+  var v647 = JAM.call($, null, [element$$159], JAM.policy.p1);
   v647.value = "";
   return element$$159
 }
 function v292(element$$158, value$$94) {
-  element$$158 = JAM.call($, null, [element$$158], JAM.policy.p9C5FFCABA70857D69F2974E6410A585B5EFE64DC);
+  element$$158 = JAM.call($, null, [element$$158], JAM.policy.p1);
   var v648 = element$$158.tagName;
-  var method$$9 = JAM.call(v648.toLowerCase, v648, [], JAM.policy.p9C5FFCABA70857D69F2974E6410A585B5EFE64DC);
+  var method$$9 = JAM.call(v648.toLowerCase, v648, [], JAM.policy.p1);
   var v2220 = Form.Element;
   var v649 = v2220.Serializers;
-  JAM.call(v649[method$$9], v649, [element$$158, value$$94], JAM.policy.p9C5FFCABA70857D69F2974E6410A585B5EFE64DC);
+  JAM.call(v649[method$$9], v649, [element$$158, value$$94], JAM.policy.p1);
   return element$$158
 }
 function v291(element$$157) {
-  element$$157 = JAM.call($, null, [element$$157], JAM.policy.p9C5FFCABA70857D69F2974E6410A585B5EFE64DC);
+  element$$157 = JAM.call($, null, [element$$157], JAM.policy.p1);
   var v650 = element$$157.tagName;
-  var method$$8 = JAM.call(v650.toLowerCase, v650, [], JAM.policy.p9C5FFCABA70857D69F2974E6410A585B5EFE64DC);
+  var method$$8 = JAM.call(v650.toLowerCase, v650, [], JAM.policy.p1);
   var v2221 = Form.Element;
   var v651 = v2221.Serializers;
-  return JAM.call(v651[method$$8], v651, [element$$157], JAM.policy.p9C5FFCABA70857D69F2974E6410A585B5EFE64DC)
+  return JAM.call(v651[method$$8], v651, [element$$157], JAM.policy.p1)
 }
 function v290(element$$156) {
-  element$$156 = JAM.call($, null, [element$$156], JAM.policy.p9C5FFCABA70857D69F2974E6410A585B5EFE64DC);
+  element$$156 = JAM.call($, null, [element$$156], JAM.policy.p1);
   var v3146 = element$$156.disabled;
   var v2222 = !v3146;
   if(v2222) {
@@ -1970,55 +1970,55 @@ function v290(element$$156) {
   }
   var v654 = v2222;
   if(v654) {
-    var value$$93 = JAM.call(element$$156.getValue, element$$156, [], JAM.policy.p9C5FFCABA70857D69F2974E6410A585B5EFE64DC);
+    var value$$93 = JAM.call(element$$156.getValue, element$$156, [], JAM.policy.p1);
     var v653 = value$$93 != undefined;
     if(v653) {
       var pair$$7 = {};
       var v652 = element$$156.name;
-      JAM.set(pair$$7, v652, value$$93, JAM.policy.p425E08A28862414CF7130381FE99A660F52DB811);
-      return JAM.call(Object.toQueryString, Object, [pair$$7], JAM.policy.p9C5FFCABA70857D69F2974E6410A585B5EFE64DC)
+      JAM.set(pair$$7, v652, value$$93, JAM.policy.p2);
+      return JAM.call(Object.toQueryString, Object, [pair$$7], JAM.policy.p1)
     }
   }
   return""
 }
 function v289(element$$155) {
-  var v655 = JAM.call($, null, [element$$155], JAM.policy.p9C5FFCABA70857D69F2974E6410A585B5EFE64DC);
-  JAM.call(v655.select, v655, [], JAM.policy.p9C5FFCABA70857D69F2974E6410A585B5EFE64DC);
+  var v655 = JAM.call($, null, [element$$155], JAM.policy.p1);
+  JAM.call(v655.select, v655, [], JAM.policy.p1);
   return element$$155
 }
 function v288(element$$154) {
-  var v656 = JAM.call($, null, [element$$154], JAM.policy.p9C5FFCABA70857D69F2974E6410A585B5EFE64DC);
-  JAM.call(v656.focus, v656, [], JAM.policy.p9C5FFCABA70857D69F2974E6410A585B5EFE64DC);
+  var v656 = JAM.call($, null, [element$$154], JAM.policy.p1);
+  JAM.call(v656.focus, v656, [], JAM.policy.p1);
   return element$$154
 }
 function v287(form$$10, options$$10) {
-  form$$10 = JAM.call($, null, [form$$10], JAM.policy.p9C5FFCABA70857D69F2974E6410A585B5EFE64DC);
+  form$$10 = JAM.call($, null, [form$$10], JAM.policy.p1);
   var v2223 = options$$10 || {};
-  options$$10 = JAM.call(Object.clone, Object, [v2223], JAM.policy.p9C5FFCABA70857D69F2974E6410A585B5EFE64DC);
+  options$$10 = JAM.call(Object.clone, Object, [v2223], JAM.policy.p1);
   var params$$1 = options$$10.parameters;
-  var v657 = JAM.call(form$$10.readAttribute, form$$10, ["action"], JAM.policy.p9C5FFCABA70857D69F2974E6410A585B5EFE64DC);
+  var v657 = JAM.call(form$$10.readAttribute, form$$10, ["action"], JAM.policy.p1);
   var v2224 = !v657;
   if(v2224) {
     v657 = ""
   }
   var action = v657;
-  var v659 = JAM.call(action.blank, action, [], JAM.policy.p9C5FFCABA70857D69F2974E6410A585B5EFE64DC);
+  var v659 = JAM.call(action.blank, action, [], JAM.policy.p1);
   if(v659) {
     var v658 = window.location;
     action = v658.href
   }
   var v660 = options$$10;
-  var v3982 = JAM.call(form$$10.serialize, form$$10, [true], JAM.policy.p9C5FFCABA70857D69F2974E6410A585B5EFE64DC);
+  var v3982 = JAM.call(form$$10.serialize, form$$10, [true], JAM.policy.p1);
   v660.parameters = v3982;
   if(params$$1) {
-    var v661 = JAM.call(Object.isString, Object, [params$$1], JAM.policy.p9C5FFCABA70857D69F2974E6410A585B5EFE64DC);
+    var v661 = JAM.call(Object.isString, Object, [params$$1], JAM.policy.p1);
     if(v661) {
-      params$$1 = JAM.call(params$$1.toQueryParams, params$$1, [], JAM.policy.p9C5FFCABA70857D69F2974E6410A585B5EFE64DC)
+      params$$1 = JAM.call(params$$1.toQueryParams, params$$1, [], JAM.policy.p1)
     }
     var v662 = options$$10.parameters;
-    JAM.call(Object.extend, Object, [v662, params$$1], JAM.policy.p9C5FFCABA70857D69F2974E6410A585B5EFE64DC)
+    JAM.call(Object.extend, Object, [v662, params$$1], JAM.policy.p1)
   }
-  var v2225 = JAM.call(form$$10.hasAttribute, form$$10, ["method"], JAM.policy.p9C5FFCABA70857D69F2974E6410A585B5EFE64DC);
+  var v2225 = JAM.call(form$$10.hasAttribute, form$$10, ["method"], JAM.policy.p1);
   if(v2225) {
     var v3147 = options$$10.method;
     v2225 = !v3147
@@ -2031,23 +2031,23 @@ function v287(form$$10, options$$10) {
   return JAM.new(v664, [action, options$$10])
 }
 function v286(form$$9) {
-  form$$9 = JAM.call($, null, [form$$9], JAM.policy.p9C5FFCABA70857D69F2974E6410A585B5EFE64DC);
-  var element$$153 = JAM.call(form$$9.findFirstElement, form$$9, [], JAM.policy.p9C5FFCABA70857D69F2974E6410A585B5EFE64DC);
+  form$$9 = JAM.call($, null, [form$$9], JAM.policy.p1);
+  var element$$153 = JAM.call(form$$9.findFirstElement, form$$9, [], JAM.policy.p1);
   if(element$$153) {
-    JAM.call(element$$153.activate, element$$153, [], JAM.policy.p9C5FFCABA70857D69F2974E6410A585B5EFE64DC)
+    JAM.call(element$$153.activate, element$$153, [], JAM.policy.p1)
   }
   return form$$9
 }
 function v285(form$$8) {
   function v284(element$$152) {
     var v665 = element$$152.tagName;
-    return JAM.call(/^(?:input|select|textarea)$/i.test, /^(?:input|select|textarea)$/i, [v665], JAM.policy.p9C5FFCABA70857D69F2974E6410A585B5EFE64DC)
+    return JAM.call(/^(?:input|select|textarea)$/i.test, /^(?:input|select|textarea)$/i, [v665], JAM.policy.p1)
   }
   function v283(element$$151) {
     return element$$151.tabIndex
   }
   function v282(element$$150) {
-    var v666 = JAM.call(element$$150.hasAttribute, element$$150, ["tabIndex"], JAM.policy.p9C5FFCABA70857D69F2974E6410A585B5EFE64DC);
+    var v666 = JAM.call(element$$150.hasAttribute, element$$150, ["tabIndex"], JAM.policy.p1);
     if(v666) {
       var v2226 = element$$150.tabIndex;
       v666 = v2226 >= 0
@@ -2063,35 +2063,35 @@ function v285(form$$8) {
     }
     return v667
   }
-  var v2229 = JAM.call($, null, [form$$8], JAM.policy.p9C5FFCABA70857D69F2974E6410A585B5EFE64DC);
-  var v668 = JAM.call(v2229.getElements, v2229, [], JAM.policy.p9C5FFCABA70857D69F2974E6410A585B5EFE64DC);
-  var elements$$8 = JAM.call(v668.findAll, v668, [v281], JAM.policy.p9C5FFCABA70857D69F2974E6410A585B5EFE64DC);
-  var v2230 = JAM.call(elements$$8.findAll, elements$$8, [v282], JAM.policy.p9C5FFCABA70857D69F2974E6410A585B5EFE64DC);
-  var v669 = JAM.call(v2230.sortBy, v2230, [v283], JAM.policy.p9C5FFCABA70857D69F2974E6410A585B5EFE64DC);
-  var firstByIndex = JAM.call(v669.first, v669, [], JAM.policy.p9C5FFCABA70857D69F2974E6410A585B5EFE64DC);
+  var v2229 = JAM.call($, null, [form$$8], JAM.policy.p1);
+  var v668 = JAM.call(v2229.getElements, v2229, [], JAM.policy.p1);
+  var elements$$8 = JAM.call(v668.findAll, v668, [v281], JAM.policy.p1);
+  var v2230 = JAM.call(elements$$8.findAll, elements$$8, [v282], JAM.policy.p1);
+  var v669 = JAM.call(v2230.sortBy, v2230, [v283], JAM.policy.p1);
+  var firstByIndex = JAM.call(v669.first, v669, [], JAM.policy.p1);
   var v670;
   if(firstByIndex) {
     v670 = firstByIndex
   }else {
-    v670 = JAM.call(elements$$8.find, elements$$8, [v284], JAM.policy.p9C5FFCABA70857D69F2974E6410A585B5EFE64DC)
+    v670 = JAM.call(elements$$8.find, elements$$8, [v284], JAM.policy.p1)
   }
   return v670
 }
 function v280(form$$7) {
-  form$$7 = JAM.call($, null, [form$$7], JAM.policy.p9C5FFCABA70857D69F2974E6410A585B5EFE64DC);
-  var v671 = JAM.call(Form.getElements, Form, [form$$7], JAM.policy.p9C5FFCABA70857D69F2974E6410A585B5EFE64DC);
-  JAM.call(v671.invoke, v671, ["enable"], JAM.policy.p9C5FFCABA70857D69F2974E6410A585B5EFE64DC);
+  form$$7 = JAM.call($, null, [form$$7], JAM.policy.p1);
+  var v671 = JAM.call(Form.getElements, Form, [form$$7], JAM.policy.p1);
+  JAM.call(v671.invoke, v671, ["enable"], JAM.policy.p1);
   return form$$7
 }
 function v279(form$$6) {
-  form$$6 = JAM.call($, null, [form$$6], JAM.policy.p9C5FFCABA70857D69F2974E6410A585B5EFE64DC);
-  var v672 = JAM.call(Form.getElements, Form, [form$$6], JAM.policy.p9C5FFCABA70857D69F2974E6410A585B5EFE64DC);
-  JAM.call(v672.invoke, v672, ["disable"], JAM.policy.p9C5FFCABA70857D69F2974E6410A585B5EFE64DC);
+  form$$6 = JAM.call($, null, [form$$6], JAM.policy.p1);
+  var v672 = JAM.call(Form.getElements, Form, [form$$6], JAM.policy.p1);
+  JAM.call(v672.invoke, v672, ["disable"], JAM.policy.p1);
   return form$$6
 }
 function v278(form$$5, typeName, name$$45) {
-  form$$5 = JAM.call($, null, [form$$5], JAM.policy.p9C5FFCABA70857D69F2974E6410A585B5EFE64DC);
-  var inputs = JAM.call(form$$5.getElementsByTagName, form$$5, ["input"], JAM.policy.p9C5FFCABA70857D69F2974E6410A585B5EFE64DC);
+  form$$5 = JAM.call($, null, [form$$5], JAM.policy.p1);
+  var inputs = JAM.call(form$$5.getElementsByTagName, form$$5, ["input"], JAM.policy.p1);
   var v2231 = !typeName;
   if(v2231) {
     v2231 = !name$$45
@@ -2100,7 +2100,7 @@ function v278(form$$5, typeName, name$$45) {
   if(v675) {
     var v673 = $A(inputs);
     var v674 = Element.extend;
-    return JAM.call(v673.map, v673, [v674], JAM.policy.p9C5FFCABA70857D69F2974E6410A585B5EFE64DC)
+    return JAM.call(v673.map, v673, [v674], JAM.policy.p1)
   }
   var i$$56 = 0;
   var matchingInputs = [];
@@ -2129,16 +2129,16 @@ function v278(form$$5, typeName, name$$45) {
       v678 = i$$56 < length$$31;
       continue
     }
-    var v677 = JAM.call(Element.extend, Element, [input], JAM.policy.p9C5FFCABA70857D69F2974E6410A585B5EFE64DC);
-    JAM.call(matchingInputs.push, matchingInputs, [v677], JAM.policy.p9C5FFCABA70857D69F2974E6410A585B5EFE64DC);
+    var v677 = JAM.call(Element.extend, Element, [input], JAM.policy.p1);
+    JAM.call(matchingInputs.push, matchingInputs, [v677], JAM.policy.p1);
     i$$56 = i$$56 + 1;
     v678 = i$$56 < length$$31
   }
   return matchingInputs
 }
 function v277(form$$4) {
-  var v679 = JAM.call($, null, [form$$4], JAM.policy.p9C5FFCABA70857D69F2974E6410A585B5EFE64DC);
-  var elements$$7 = JAM.call(v679.getElementsByTagName, v679, ["*"], JAM.policy.p9C5FFCABA70857D69F2974E6410A585B5EFE64DC);
+  var v679 = JAM.call($, null, [form$$4], JAM.policy.p1);
+  var elements$$7 = JAM.call(v679.getElementsByTagName, v679, ["*"], JAM.policy.p1);
   var element$$148;
   var results$$19 = [];
   var v680 = Form.Element;
@@ -2148,11 +2148,11 @@ function v277(form$$4) {
   for(;v683;) {
     var v2233 = serializers;
     var v3151 = element$$148.tagName;
-    var v2234 = JAM.call(v3151.toLowerCase, v3151, [], JAM.policy.p9C5FFCABA70857D69F2974E6410A585B5EFE64DC);
+    var v2234 = JAM.call(v3151.toLowerCase, v3151, [], JAM.policy.p1);
     var v682 = v2233[v2234];
     if(v682) {
-      var v681 = JAM.call(Element.extend, Element, [element$$148], JAM.policy.p9C5FFCABA70857D69F2974E6410A585B5EFE64DC);
-      JAM.call(results$$19.push, results$$19, [v681], JAM.policy.p9C5FFCABA70857D69F2974E6410A585B5EFE64DC)
+      var v681 = JAM.call(Element.extend, Element, [element$$148], JAM.policy.p1);
+      JAM.call(results$$19.push, results$$19, [v681], JAM.policy.p1)
     }
     i$$55 = i$$55 + 1;
     v683 = element$$148 = elements$$7[i$$55]
@@ -2160,8 +2160,8 @@ function v277(form$$4) {
   return results$$19
 }
 function v276(form$$3, options$$9) {
-  var v684 = JAM.call(Form.getElements, Form, [form$$3], JAM.policy.p9C5FFCABA70857D69F2974E6410A585B5EFE64DC);
-  return JAM.call(Form.serializeElements, Form, [v684, options$$9], JAM.policy.p9C5FFCABA70857D69F2974E6410A585B5EFE64DC)
+  var v684 = JAM.call(Form.getElements, Form, [form$$3], JAM.policy.p1);
+  return JAM.call(Form.serializeElements, Form, [v684, options$$9], JAM.policy.p1)
 }
 function v275(elements$$6, options$$8) {
   function v274(result$$15, element$$147) {
@@ -2173,8 +2173,8 @@ function v275(elements$$6, options$$8) {
     var v687 = v2235;
     if(v687) {
       key$$27 = element$$147.name;
-      var v685 = JAM.call($, null, [element$$147], JAM.policy.p9C5FFCABA70857D69F2974E6410A585B5EFE64DC);
-      value$$90 = JAM.call(v685.getValue, v685, [], JAM.policy.p9C5FFCABA70857D69F2974E6410A585B5EFE64DC);
+      var v685 = JAM.call($, null, [element$$147], JAM.policy.p1);
+      value$$90 = JAM.call(v685.getValue, v685, [], JAM.policy.p1);
       var v2236 = value$$90 != null;
       if(v2236) {
         var v3620 = element$$147.type;
@@ -2209,15 +2209,15 @@ function v275(elements$$6, options$$8) {
       }
       var v686 = v2236;
       if(v686) {
-        result$$15 = JAM.call(accumulator, null, [result$$15, key$$27, value$$90], JAM.policy.p9C5FFCABA70857D69F2974E6410A585B5EFE64DC)
+        result$$15 = JAM.call(accumulator, null, [result$$15, key$$27, value$$90], JAM.policy.p1)
       }
     }
     return result$$15
   }
   function v273(result$$14, key$$29, value$$92) {
-    value$$92 = JAM.call(value$$92.gsub, value$$92, [/(\r)?\n/, "\r\n"], JAM.policy.p9C5FFCABA70857D69F2974E6410A585B5EFE64DC);
+    value$$92 = JAM.call(value$$92.gsub, value$$92, [/(\r)?\n/, "\r\n"], JAM.policy.p1);
     value$$92 = encodeURIComponent(value$$92);
-    value$$92 = JAM.call(value$$92.gsub, value$$92, [/%20/, "+"], JAM.policy.p9C5FFCABA70857D69F2974E6410A585B5EFE64DC);
+    value$$92 = JAM.call(value$$92.gsub, value$$92, [/%20/, "+"], JAM.policy.p1);
     var v3804;
     if(result$$14) {
       v3804 = "&"
@@ -2235,16 +2235,16 @@ function v275(elements$$6, options$$8) {
     var v692 = key$$28 in result$$13;
     if(v692) {
       var v3156 = result$$13[key$$28];
-      var v2238 = JAM.call(Object.isArray, Object, [v3156], JAM.policy.p9C5FFCABA70857D69F2974E6410A585B5EFE64DC);
+      var v2238 = JAM.call(Object.isArray, Object, [v3156], JAM.policy.p1);
       var v690 = !v2238;
       if(v690) {
         var v689 = result$$13[key$$28];
-        JAM.set(result$$13, key$$28, [v689], JAM.policy.p425E08A28862414CF7130381FE99A660F52DB811)
+        JAM.set(result$$13, key$$28, [v689], JAM.policy.p2)
       }
       var v691 = result$$13[key$$28];
-      JAM.call(v691.push, v691, [value$$91], JAM.policy.p9C5FFCABA70857D69F2974E6410A585B5EFE64DC)
+      JAM.call(v691.push, v691, [value$$91], JAM.policy.p1)
     }else {
-      JAM.set(result$$13, key$$28, value$$91, JAM.policy.p425E08A28862414CF7130381FE99A660F52DB811)
+      JAM.set(result$$13, key$$28, value$$91, JAM.policy.p2)
     }
     return result$$13
   }
@@ -2256,7 +2256,7 @@ function v275(elements$$6, options$$8) {
     options$$8 = {hash:v693}
   }else {
     var v2241 = options$$8.hash;
-    var v694 = JAM.call(Object.isUndefined, Object, [v2241], JAM.policy.p9C5FFCABA70857D69F2974E6410A585B5EFE64DC);
+    var v694 = JAM.call(Object.isUndefined, Object, [v2241], JAM.policy.p1);
     if(v694) {
       options$$8.hash = true
     }
@@ -2275,22 +2275,22 @@ function v275(elements$$6, options$$8) {
     initial = "";
     accumulator = v273
   }
-  return JAM.call(elements$$6.inject, elements$$6, [initial, v274], JAM.policy.p9C5FFCABA70857D69F2974E6410A585B5EFE64DC)
+  return JAM.call(elements$$6.inject, elements$$6, [initial, v274], JAM.policy.p1)
 }
 function v271(form$$2) {
-  form$$2 = JAM.call($, null, [form$$2], JAM.policy.p9C5FFCABA70857D69F2974E6410A585B5EFE64DC);
-  JAM.call(form$$2.reset, form$$2, [], JAM.policy.p9C5FFCABA70857D69F2974E6410A585B5EFE64DC);
+  form$$2 = JAM.call($, null, [form$$2], JAM.policy.p1);
+  JAM.call(form$$2.reset, form$$2, [], JAM.policy.p1);
   return form$$2
 }
 function v270(engine) {
   function select$$2(selector$$3, scope) {
     var v2242 = scope || document;
-    var v697 = JAM.call(engine, null, [selector$$3, v2242], JAM.policy.p9C5FFCABA70857D69F2974E6410A585B5EFE64DC);
-    return JAM.call(extendElements$$1, null, [v697], JAM.policy.p9C5FFCABA70857D69F2974E6410A585B5EFE64DC)
+    var v697 = JAM.call(engine, null, [selector$$3, v2242], JAM.policy.p1);
+    return JAM.call(extendElements$$1, null, [v697], JAM.policy.p1)
   }
   function match$$46(element$$146, selector$$4) {
     var v3157 = [element$$146];
-    var v2243 = JAM.call(engine.matches, engine, [selector$$4, v3157], JAM.policy.p9C5FFCABA70857D69F2974E6410A585B5EFE64DC);
+    var v2243 = JAM.call(engine.matches, engine, [selector$$4, v3157], JAM.policy.p1);
     var v698 = v2243.length;
     return v698 == 1
   }
@@ -2332,7 +2332,7 @@ function v269() {
     return false
   }
   function v266(a$$11, b$$5) {
-    var v3159 = JAM.call(a$$11.compareDocumentPosition, a$$11, [b$$5], JAM.policy.p9C5FFCABA70857D69F2974E6410A585B5EFE64DC);
+    var v3159 = JAM.call(a$$11.compareDocumentPosition, a$$11, [b$$5], JAM.policy.p1);
     var v2246 = v3159 & 16;
     var v705 = !v2246;
     return!v705
@@ -2343,7 +2343,7 @@ function v269() {
       var v2247;
       var v3160 = a$$10.contains;
       if(v3160) {
-        v2247 = JAM.call(a$$10.contains, a$$10, [b$$4], JAM.policy.p9C5FFCABA70857D69F2974E6410A585B5EFE64DC)
+        v2247 = JAM.call(a$$10.contains, a$$10, [b$$4], JAM.policy.p1)
       }else {
         v2247 = true
       }
@@ -2362,17 +2362,17 @@ function v269() {
       var v708 = v2248;
       if(v708) {
         var v707 = match$$44[1];
-        return JAM.call(context$$37.getElementsByClassName, context$$37, [v707], JAM.policy.p9C5FFCABA70857D69F2974E6410A585B5EFE64DC)
+        return JAM.call(context$$37.getElementsByClassName, context$$37, [v707], JAM.policy.p1)
       }
       return
     }
-    var div$$4 = JAM.call(document.createElement, document, ["div"], JAM.policy.p9C5FFCABA70857D69F2974E6410A585B5EFE64DC);
+    var div$$4 = JAM.call(document.createElement, document, ["div"], JAM.policy.p1);
     JAM.set(div$$4, "innerHTML", "<div class='test e'></div><div class='test'></div>");
     var v3162 = div$$4.getElementsByClassName;
     var v2249 = !v3162;
     var v3164 = !v2249;
     if(v3164) {
-      var v3625 = JAM.call(div$$4.getElementsByClassName, div$$4, ["e"], JAM.policy.p9C5FFCABA70857D69F2974E6410A585B5EFE64DC);
+      var v3625 = JAM.call(div$$4.getElementsByClassName, div$$4, ["e"], JAM.policy.p1);
       var v3163 = v3625.length;
       v2249 = v3163 === 0
     }
@@ -2382,14 +2382,14 @@ function v269() {
     }
     var v710 = div$$4.lastChild;
     v710.className = "e";
-    var v3165 = JAM.call(div$$4.getElementsByClassName, div$$4, ["e"], JAM.policy.p9C5FFCABA70857D69F2974E6410A585B5EFE64DC);
+    var v3165 = JAM.call(div$$4.getElementsByClassName, div$$4, ["e"], JAM.policy.p1);
     var v2250 = v3165.length;
     var v711 = v2250 === 1;
     if(v711) {
       return
     }
     var v712 = Expr.order;
-    JAM.call(v712.splice, v712, [1, 0, "CLASS"], JAM.policy.p9C5FFCABA70857D69F2974E6410A585B5EFE64DC);
+    JAM.call(v712.splice, v712, [1, 0, "CLASS"], JAM.policy.p1);
     var v713 = Expr.find;
     v713.CLASS = v263;
     div$$4 = null;
@@ -2397,8 +2397,8 @@ function v269() {
   }
   function v262() {
     function v261(node$$18, expr$$8) {
-      expr$$8 = JAM.call(expr$$8.replace, expr$$8, [/\=\s*([^'"\]]*)\s*\]/g, "='$1']"], JAM.policy.p9C5FFCABA70857D69F2974E6410A585B5EFE64DC);
-      var v2251 = JAM.call(Sizzle$$1.isXML, Sizzle$$1, [node$$18], JAM.policy.p9C5FFCABA70857D69F2974E6410A585B5EFE64DC);
+      expr$$8 = JAM.call(expr$$8.replace, expr$$8, [/\=\s*([^'"\]]*)\s*\]/g, "='$1']"], JAM.policy.p1);
+      var v2251 = JAM.call(Sizzle$$1.isXML, Sizzle$$1, [node$$18], JAM.policy.p1);
       var v716 = !v2251;
       if(v716) {
         try {
@@ -2407,17 +2407,17 @@ function v269() {
           if(v3167) {
             var v3870 = Expr.match;
             var v3805 = v3870.PSEUDO;
-            var v3626 = JAM.call(v3805.test, v3805, [expr$$8], JAM.policy.p9C5FFCABA70857D69F2974E6410A585B5EFE64DC);
+            var v3626 = JAM.call(v3805.test, v3805, [expr$$8], JAM.policy.p1);
             var v3166 = !v3626;
             if(v3166) {
-              var v3627 = JAM.call(/!=/.test, /!=/, [expr$$8], JAM.policy.p9C5FFCABA70857D69F2974E6410A585B5EFE64DC);
+              var v3627 = JAM.call(/!=/.test, /!=/, [expr$$8], JAM.policy.p1);
               v3166 = !v3627
             }
             v2252 = v3166
           }
           var v715 = v2252;
           if(v715) {
-            var ret$$6 = JAM.call(matches.call, matches, [node$$18, expr$$8], JAM.policy.p9C5FFCABA70857D69F2974E6410A585B5EFE64DC);
+            var ret$$6 = JAM.call(matches.call, matches, [node$$18, expr$$8], JAM.policy.p1);
             var v2253 = ret$$6;
             var v3169 = !v2253;
             if(v3169) {
@@ -2443,7 +2443,7 @@ function v269() {
         }
       }
       var v3170 = [node$$18];
-      var v2254 = JAM.call(Sizzle$$1, null, [expr$$8, null, null, v3170], JAM.policy.p9C5FFCABA70857D69F2974E6410A585B5EFE64DC);
+      var v2254 = JAM.call(Sizzle$$1, null, [expr$$8, null, null, v3170], JAM.policy.p1);
       var v717 = v2254.length;
       return v717 > 0
     }
@@ -2465,13 +2465,13 @@ function v269() {
     }
     var matches = v718;
     if(matches) {
-      var v2257 = JAM.call(document.createElement, document, ["div"], JAM.policy.p9C5FFCABA70857D69F2974E6410A585B5EFE64DC);
-      var v719 = JAM.call(matches.call, matches, [v2257, "div"], JAM.policy.p9C5FFCABA70857D69F2974E6410A585B5EFE64DC);
+      var v2257 = JAM.call(document.createElement, document, ["div"], JAM.policy.p1);
+      var v719 = JAM.call(matches.call, matches, [v2257, "div"], JAM.policy.p1);
       var disconnectedMatch = !v719;
       var pseudoWorks = false;
       try {
         var v720 = document.documentElement;
-        JAM.call(matches.call, matches, [v720, "[test!='']:sizzle"], JAM.policy.p9C5FFCABA70857D69F2974E6410A585B5EFE64DC)
+        JAM.call(matches.call, matches, [v720, "[test!='']:sizzle"], JAM.policy.p1)
       }catch(pseudoError$$1) {
         pseudoWorks = true
       }
@@ -2484,12 +2484,12 @@ function v269() {
       context$$36 = context$$36 || document;
       var v2258 = !seed$$1;
       if(v2258) {
-        var v3173 = JAM.call(Sizzle$$1.isXML, Sizzle$$1, [context$$36], JAM.policy.p9C5FFCABA70857D69F2974E6410A585B5EFE64DC);
+        var v3173 = JAM.call(Sizzle$$1.isXML, Sizzle$$1, [context$$36], JAM.policy.p1);
         v2258 = !v3173
       }
       var v741 = v2258;
       if(v741) {
-        var match$$43 = JAM.call(/^(\w+$)|^\.([\w\-]+$)|^#([\w\-]+$)/.exec, /^(\w+$)|^\.([\w\-]+$)|^#([\w\-]+$)/, [query$$2], JAM.policy.p9C5FFCABA70857D69F2974E6410A585B5EFE64DC);
+        var match$$43 = JAM.call(/^(\w+$)|^\.([\w\-]+$)|^#([\w\-]+$)/.exec, /^(\w+$)|^\.([\w\-]+$)|^#([\w\-]+$)/, [query$$2], JAM.policy.p1);
         var v2259 = match$$43;
         if(v2259) {
           var v3631 = context$$36.nodeType;
@@ -2505,8 +2505,8 @@ function v269() {
         if(v725) {
           var v724 = match$$43[1];
           if(v724) {
-            var v721 = JAM.call(context$$36.getElementsByTagName, context$$36, [query$$2], JAM.policy.p9C5FFCABA70857D69F2974E6410A585B5EFE64DC);
-            return JAM.call(makeArray, null, [v721, extra$$1], JAM.policy.p9C5FFCABA70857D69F2974E6410A585B5EFE64DC)
+            var v721 = JAM.call(context$$36.getElementsByTagName, context$$36, [query$$2], JAM.policy.p1);
+            return JAM.call(makeArray, null, [v721, extra$$1], JAM.policy.p1)
           }else {
             var v2260 = match$$43[2];
             if(v2260) {
@@ -2520,8 +2520,8 @@ function v269() {
             var v723 = v2260;
             if(v723) {
               var v2261 = match$$43[2];
-              var v722 = JAM.call(context$$36.getElementsByClassName, context$$36, [v2261], JAM.policy.p9C5FFCABA70857D69F2974E6410A585B5EFE64DC);
-              return JAM.call(makeArray, null, [v722, extra$$1], JAM.policy.p9C5FFCABA70857D69F2974E6410A585B5EFE64DC)
+              var v722 = JAM.call(context$$36.getElementsByClassName, context$$36, [v2261], JAM.policy.p1);
+              return JAM.call(makeArray, null, [v722, extra$$1], JAM.policy.p1)
             }
           }
         }
@@ -2536,7 +2536,7 @@ function v269() {
           if(v732) {
             var v2264 = context$$36.body;
             var v726 = [v2264];
-            return JAM.call(makeArray, null, [v726, extra$$1], JAM.policy.p9C5FFCABA70857D69F2974E6410A585B5EFE64DC)
+            return JAM.call(makeArray, null, [v726, extra$$1], JAM.policy.p1)
           }else {
             var v2265 = match$$43;
             if(v2265) {
@@ -2545,7 +2545,7 @@ function v269() {
             var v731 = v2265;
             if(v731) {
               var v727 = match$$43[3];
-              var elem$$45 = JAM.call(context$$36.getElementById, context$$36, [v727], JAM.policy.p9C5FFCABA70857D69F2974E6410A585B5EFE64DC);
+              var elem$$45 = JAM.call(context$$36.getElementById, context$$36, [v727], JAM.policy.p1);
               var v2266 = elem$$45;
               if(v2266) {
                 v2266 = elem$$45.parentNode
@@ -2557,16 +2557,16 @@ function v269() {
                 var v729 = v2267 === v2268;
                 if(v729) {
                   var v728 = [elem$$45];
-                  return JAM.call(makeArray, null, [v728, extra$$1], JAM.policy.p9C5FFCABA70857D69F2974E6410A585B5EFE64DC)
+                  return JAM.call(makeArray, null, [v728, extra$$1], JAM.policy.p1)
                 }
               }else {
-                return JAM.call(makeArray, null, [[], extra$$1], JAM.policy.p9C5FFCABA70857D69F2974E6410A585B5EFE64DC)
+                return JAM.call(makeArray, null, [[], extra$$1], JAM.policy.p1)
               }
             }
           }
           try {
-            var v733 = JAM.call(context$$36.querySelectorAll, context$$36, [query$$2], JAM.policy.p9C5FFCABA70857D69F2974E6410A585B5EFE64DC);
-            return JAM.call(makeArray, null, [v733, extra$$1], JAM.policy.p9C5FFCABA70857D69F2974E6410A585B5EFE64DC)
+            var v733 = JAM.call(context$$36.querySelectorAll, context$$36, [query$$2], JAM.policy.p1);
+            return JAM.call(makeArray, null, [v733, extra$$1], JAM.policy.p1)
           }catch(qsaError) {
           }
         }else {
@@ -2574,21 +2574,21 @@ function v269() {
           var v2269 = v3176 === 1;
           if(v2269) {
             var v3635 = context$$36.nodeName;
-            var v3177 = JAM.call(v3635.toLowerCase, v3635, [], JAM.policy.p9C5FFCABA70857D69F2974E6410A585B5EFE64DC);
+            var v3177 = JAM.call(v3635.toLowerCase, v3635, [], JAM.policy.p1);
             v2269 = v3177 !== "object"
           }
           var v739 = v2269;
           if(v739) {
             var oldContext = context$$36;
-            var old$$1 = JAM.call(context$$36.getAttribute, context$$36, ["id"], JAM.policy.p9C5FFCABA70857D69F2974E6410A585B5EFE64DC);
+            var old$$1 = JAM.call(context$$36.getAttribute, context$$36, ["id"], JAM.policy.p1);
             var nid = old$$1 || id$$3;
             var hasParent = context$$36.parentNode;
-            var relativeHierarchySelector = JAM.call(/^\s*[+~]/.test, /^\s*[+~]/, [query$$2], JAM.policy.p9C5FFCABA70857D69F2974E6410A585B5EFE64DC);
+            var relativeHierarchySelector = JAM.call(/^\s*[+~]/.test, /^\s*[+~]/, [query$$2], JAM.policy.p1);
             var v734 = !old$$1;
             if(v734) {
-              JAM.call(context$$36.setAttribute, context$$36, ["id", nid], JAM.policy.p9C5FFCABA70857D69F2974E6410A585B5EFE64DC)
+              JAM.call(context$$36.setAttribute, context$$36, ["id", nid], JAM.policy.p1)
             }else {
-              nid = JAM.call(nid.replace, nid, [/'/g, "\\$&"], JAM.policy.p9C5FFCABA70857D69F2974E6410A585B5EFE64DC)
+              nid = JAM.call(nid.replace, nid, [/'/g, "\\$&"], JAM.policy.p1)
             }
             var v735 = relativeHierarchySelector && hasParent;
             if(v735) {
@@ -2605,28 +2605,28 @@ function v269() {
                 var v3636 = "[id='" + nid;
                 var v3179 = v3636 + "'] ";
                 var v2271 = v3179 + query$$2;
-                var v736 = JAM.call(context$$36.querySelectorAll, context$$36, [v2271], JAM.policy.p9C5FFCABA70857D69F2974E6410A585B5EFE64DC);
-                return JAM.call(makeArray, null, [v736, extra$$1], JAM.policy.p9C5FFCABA70857D69F2974E6410A585B5EFE64DC)
+                var v736 = JAM.call(context$$36.querySelectorAll, context$$36, [v2271], JAM.policy.p1);
+                return JAM.call(makeArray, null, [v736, extra$$1], JAM.policy.p1)
               }
             }catch(pseudoError) {
             }finally {
               var v738 = !old$$1;
               if(v738) {
-                JAM.call(oldContext.removeAttribute, oldContext, ["id"], JAM.policy.p9C5FFCABA70857D69F2974E6410A585B5EFE64DC)
+                JAM.call(oldContext.removeAttribute, oldContext, ["id"], JAM.policy.p1)
               }
             }
           }
         }
       }
-      return JAM.call(oldSizzle, null, [query$$2, context$$36, extra$$1, seed$$1], JAM.policy.p9C5FFCABA70857D69F2974E6410A585B5EFE64DC)
+      return JAM.call(oldSizzle, null, [query$$2, context$$36, extra$$1, seed$$1], JAM.policy.p1)
     }
     var oldSizzle = Sizzle$$1;
-    var div$$3 = JAM.call(document.createElement, document, ["div"], JAM.policy.p9C5FFCABA70857D69F2974E6410A585B5EFE64DC);
+    var div$$3 = JAM.call(document.createElement, document, ["div"], JAM.policy.p1);
     var id$$3 = "__sizzle__";
     JAM.set(div$$3, "innerHTML", "<p class='TEST'></p>");
     var v2272 = div$$3.querySelectorAll;
     if(v2272) {
-      var v3637 = JAM.call(div$$3.querySelectorAll, div$$3, [".TEST"], JAM.policy.p9C5FFCABA70857D69F2974E6410A585B5EFE64DC);
+      var v3637 = JAM.call(div$$3.querySelectorAll, div$$3, [".TEST"], JAM.policy.p1);
       var v3180 = v3637.length;
       v2272 = v3180 === 0
     }
@@ -2637,18 +2637,18 @@ function v269() {
     Sizzle$$1 = v259;
     var prop$$4;
     for(prop$$4 in oldSizzle) {
-      JAM.set(Sizzle$$1, prop$$4, oldSizzle[prop$$4], JAM.policy.p425E08A28862414CF7130381FE99A660F52DB811)
+      JAM.set(Sizzle$$1, prop$$4, oldSizzle[prop$$4], JAM.policy.p2)
     }
     div$$3 = null;
     return
   }
   function v258() {
     function v257(elem$$44) {
-      return JAM.call(elem$$44.getAttribute, elem$$44, ["href", 2], JAM.policy.p9C5FFCABA70857D69F2974E6410A585B5EFE64DC)
+      return JAM.call(elem$$44.getAttribute, elem$$44, ["href", 2], JAM.policy.p1)
     }
     function v256(match$$42, context$$35) {
       var v743 = match$$42[1];
-      var results$$18 = JAM.call(context$$35.getElementsByTagName, context$$35, [v743], JAM.policy.p9C5FFCABA70857D69F2974E6410A585B5EFE64DC);
+      var results$$18 = JAM.call(context$$35.getElementsByTagName, context$$35, [v743], JAM.policy.p1);
       var v2273 = match$$42[1];
       var v747 = v2273 === "*";
       if(v747) {
@@ -2661,7 +2661,7 @@ function v269() {
           var v745 = v2274 === 1;
           if(v745) {
             var v744 = results$$18[i$$53];
-            JAM.call(tmp.push, tmp, [v744], JAM.policy.p9C5FFCABA70857D69F2974E6410A585B5EFE64DC)
+            JAM.call(tmp.push, tmp, [v744], JAM.policy.p1)
           }
           i$$53 = i$$53 + 1;
           v746 = results$$18[i$$53]
@@ -2670,10 +2670,10 @@ function v269() {
       }
       return results$$18
     }
-    var div$$2 = JAM.call(document.createElement, document, ["div"], JAM.policy.p9C5FFCABA70857D69F2974E6410A585B5EFE64DC);
-    var v748 = JAM.call(document.createComment, document, [""], JAM.policy.p9C5FFCABA70857D69F2974E6410A585B5EFE64DC);
-    JAM.call(div$$2.appendChild, div$$2, [v748], JAM.policy.p9C5FFCABA70857D69F2974E6410A585B5EFE64DC);
-    var v3182 = JAM.call(div$$2.getElementsByTagName, div$$2, ["*"], JAM.policy.p9C5FFCABA70857D69F2974E6410A585B5EFE64DC);
+    var div$$2 = JAM.call(document.createElement, document, ["div"], JAM.policy.p1);
+    var v748 = JAM.call(document.createComment, document, [""], JAM.policy.p1);
+    JAM.call(div$$2.appendChild, div$$2, [v748], JAM.policy.p1);
+    var v3182 = JAM.call(div$$2.getElementsByTagName, div$$2, ["*"], JAM.policy.p1);
     var v2275 = v3182.length;
     var v750 = v2275 > 0;
     if(v750) {
@@ -2689,7 +2689,7 @@ function v269() {
       var v3183 = v3638 !== "undefined";
       if(v3183) {
         var v3808 = div$$2.firstChild;
-        var v3639 = JAM.call(v3808.getAttribute, v3808, ["href"], JAM.policy.p9C5FFCABA70857D69F2974E6410A585B5EFE64DC);
+        var v3639 = JAM.call(v3808.getAttribute, v3808, ["href"], JAM.policy.p1);
         v3183 = v3639 !== "#"
       }
       v2276 = v3183
@@ -2708,7 +2708,7 @@ function v269() {
       var v2277 = typeof v3184;
       var v753 = v2277 !== "undefined";
       if(v753) {
-        v753 = JAM.call(elem$$43.getAttributeNode, elem$$43, ["id"], JAM.policy.p9C5FFCABA70857D69F2974E6410A585B5EFE64DC)
+        v753 = JAM.call(elem$$43.getAttributeNode, elem$$43, ["id"], JAM.policy.p1)
       }
       var node$$17 = v753;
       var v2278 = elem$$43.nodeType;
@@ -2733,7 +2733,7 @@ function v269() {
       var v757 = v2280;
       if(v757) {
         var v755 = match$$40[1];
-        var m$$4 = JAM.call(context$$34.getElementById, context$$34, [v755], JAM.policy.p9C5FFCABA70857D69F2974E6410A585B5EFE64DC);
+        var m$$4 = JAM.call(context$$34.getElementById, context$$34, [v755], JAM.policy.p1);
         var v756;
         if(m$$4) {
           var v2281;
@@ -2746,7 +2746,7 @@ function v269() {
             var v3873 = typeof v3913;
             var v3811 = v3873 !== "undefined";
             if(v3811) {
-              var v3914 = JAM.call(m$$4.getAttributeNode, m$$4, ["id"], JAM.policy.p9C5FFCABA70857D69F2974E6410A585B5EFE64DC);
+              var v3914 = JAM.call(m$$4.getAttributeNode, m$$4, ["id"], JAM.policy.p1);
               var v3874 = v3914.nodeValue;
               var v3875 = match$$40[1];
               v3811 = v3874 === v3875
@@ -2767,23 +2767,23 @@ function v269() {
       }
       return
     }
-    var form$$1 = JAM.call(document.createElement, document, ["div"], JAM.policy.p9C5FFCABA70857D69F2974E6410A585B5EFE64DC);
+    var form$$1 = JAM.call(document.createElement, document, ["div"], JAM.policy.p1);
     var v2282 = new Date;
-    var v758 = JAM.call(v2282.getTime, v2282, [], JAM.policy.p9C5FFCABA70857D69F2974E6410A585B5EFE64DC);
+    var v758 = JAM.call(v2282.getTime, v2282, [], JAM.policy.p1);
     var id$$2 = "script" + v758;
     var root = document.documentElement;
     var v759 = "<a name='" + id$$2;
     JAM.set(form$$1, "innerHTML", v759 + "'/>");
     var v760 = root.firstChild;
-    JAM.call(root.insertBefore, root, [form$$1, v760], JAM.policy.p9C5FFCABA70857D69F2974E6410A585B5EFE64DC);
-    var v763 = JAM.call(document.getElementById, document, [id$$2], JAM.policy.p9C5FFCABA70857D69F2974E6410A585B5EFE64DC);
+    JAM.call(root.insertBefore, root, [form$$1, v760], JAM.policy.p1);
+    var v763 = JAM.call(document.getElementById, document, [id$$2], JAM.policy.p1);
     if(v763) {
       var v761 = Expr.find;
       v761.ID = v253;
       var v762 = Expr.filter;
       v762.ID = v254
     }
-    JAM.call(root.removeChild, root, [form$$1], JAM.policy.p9C5FFCABA70857D69F2974E6410A585B5EFE64DC);
+    JAM.call(root.removeChild, root, [form$$1], JAM.policy.p1);
     root = form$$1 = null;
     return
   }
@@ -2811,7 +2811,7 @@ function v269() {
         if(v764) {
           var v2286 = ret$$5;
           var v3191 = elem$$42.childNodes;
-          var v2287 = JAM.call(Sizzle$$1.getText, Sizzle$$1, [v3191], JAM.policy.p9C5FFCABA70857D69F2974E6410A585B5EFE64DC);
+          var v2287 = JAM.call(Sizzle$$1.getText, Sizzle$$1, [v3191], JAM.policy.p1);
           ret$$5 = v2286 + v2287
         }
       }
@@ -2861,7 +2861,7 @@ function v269() {
     var cur$$3 = aup;
     var v775 = aup === bup;
     if(v775) {
-      return JAM.call(siblingCheck, null, [a$$8, b$$2], JAM.policy.p9C5FFCABA70857D69F2974E6410A585B5EFE64DC)
+      return JAM.call(siblingCheck, null, [a$$8, b$$2], JAM.policy.p1)
     }else {
       var v774 = !aup;
       if(v774) {
@@ -2874,12 +2874,12 @@ function v269() {
       }
     }
     for(;cur$$3;) {
-      JAM.call(ap.unshift, ap, [cur$$3], JAM.policy.p9C5FFCABA70857D69F2974E6410A585B5EFE64DC);
+      JAM.call(ap.unshift, ap, [cur$$3], JAM.policy.p1);
       cur$$3 = cur$$3.parentNode
     }
     cur$$3 = bup;
     for(;cur$$3;) {
-      JAM.call(bp.unshift, bp, [cur$$3], JAM.policy.p9C5FFCABA70857D69F2974E6410A585B5EFE64DC);
+      JAM.call(bp.unshift, bp, [cur$$3], JAM.policy.p1);
       cur$$3 = cur$$3.parentNode
     }
     al = ap.length;
@@ -2897,7 +2897,7 @@ function v269() {
       if(v778) {
         var v776 = ap[i$$51];
         var v777 = bp[i$$51];
-        return JAM.call(siblingCheck, null, [v776, v777], JAM.policy.p9C5FFCABA70857D69F2974E6410A585B5EFE64DC)
+        return JAM.call(siblingCheck, null, [v776, v777], JAM.policy.p1)
       }
       i$$51 = i$$51 + 1;
       var v2292 = i$$51 < al;
@@ -2910,10 +2910,10 @@ function v269() {
     var v2295 = i$$51 === al;
     if(v2295) {
       var v2293 = bp[i$$51];
-      v780 = JAM.call(siblingCheck, null, [a$$8, v2293, -1], JAM.policy.p9C5FFCABA70857D69F2974E6410A585B5EFE64DC)
+      v780 = JAM.call(siblingCheck, null, [a$$8, v2293, -1], JAM.policy.p1)
     }else {
       var v2294 = ap[i$$51];
-      v780 = JAM.call(siblingCheck, null, [v2294, b$$2, 1], JAM.policy.p9C5FFCABA70857D69F2974E6410A585B5EFE64DC)
+      v780 = JAM.call(siblingCheck, null, [v2294, b$$2, 1], JAM.policy.p1)
     }
     return v780
   }
@@ -2942,7 +2942,7 @@ function v269() {
       return v782
     }
     var v784;
-    var v3195 = JAM.call(a$$7.compareDocumentPosition, a$$7, [b$$1], JAM.policy.p9C5FFCABA70857D69F2974E6410A585B5EFE64DC);
+    var v3195 = JAM.call(a$$7.compareDocumentPosition, a$$7, [b$$1], JAM.policy.p1);
     var v2298 = v3195 & 4;
     if(v2298) {
       v784 = -1
@@ -2954,12 +2954,12 @@ function v269() {
   function v248(array$$22, results$$17) {
     var i$$50 = 0;
     var ret$$3 = results$$17 || [];
-    var v2299 = JAM.call(toString.call, toString, [array$$22], JAM.policy.p9C5FFCABA70857D69F2974E6410A585B5EFE64DC);
+    var v2299 = JAM.call(toString.call, toString, [array$$22], JAM.policy.p1);
     var v791 = v2299 === "[object Array]";
     if(v791) {
       var v2300 = Array.prototype;
       var v785 = v2300.push;
-      JAM.call(v785.apply, v785, [ret$$3, array$$22], JAM.policy.p9C5FFCABA70857D69F2974E6410A585B5EFE64DC)
+      JAM.call(v785.apply, v785, [ret$$3, array$$22], JAM.policy.p1)
     }else {
       var v3196 = array$$22.length;
       var v2301 = typeof v3196;
@@ -2969,7 +2969,7 @@ function v269() {
         var v787 = i$$50 < l$$7;
         for(;v787;) {
           var v786 = array$$22[i$$50];
-          JAM.call(ret$$3.push, ret$$3, [v786], JAM.policy.p9C5FFCABA70857D69F2974E6410A585B5EFE64DC);
+          JAM.call(ret$$3.push, ret$$3, [v786], JAM.policy.p1);
           i$$50 = i$$50 + 1;
           v787 = i$$50 < l$$7
         }
@@ -2977,7 +2977,7 @@ function v269() {
         var v789 = array$$22[i$$50];
         for(;v789;) {
           var v788 = array$$22[i$$50];
-          JAM.call(ret$$3.push, ret$$3, [v788], JAM.policy.p9C5FFCABA70857D69F2974E6410A585B5EFE64DC);
+          JAM.call(ret$$3.push, ret$$3, [v788], JAM.policy.p1);
           i$$50 = i$$50 + 1;
           v789 = array$$22[i$$50]
         }
@@ -2990,7 +2990,7 @@ function v269() {
     var v792 = Expr.setFilters;
     var filter$$8 = v792[name$$44];
     if(filter$$8) {
-      return JAM.call(filter$$8, null, [elem$$41, i$$49, match$$39, array$$20], JAM.policy.p9C5FFCABA70857D69F2974E6410A585B5EFE64DC)
+      return JAM.call(filter$$8, null, [elem$$41, i$$49, match$$39, array$$20], JAM.policy.p1)
     }
     return
   }
@@ -3001,7 +3001,7 @@ function v269() {
     var v2304 = v3197[name$$43];
     if(v2304) {
       var v2302 = Expr.attrHandle;
-      v793 = JAM.call(v2302[name$$43], v2302, [elem$$40], JAM.policy.p9C5FFCABA70857D69F2974E6410A585B5EFE64DC)
+      v793 = JAM.call(v2302[name$$43], v2302, [elem$$40], JAM.policy.p1)
     }else {
       var v2303;
       var v3642 = elem$$40[name$$43];
@@ -3009,7 +3009,7 @@ function v269() {
       if(v3198) {
         v2303 = elem$$40[name$$43]
       }else {
-        v2303 = JAM.call(elem$$40.getAttribute, elem$$40, [name$$43], JAM.policy.p9C5FFCABA70857D69F2974E6410A585B5EFE64DC)
+        v2303 = JAM.call(elem$$40.getAttribute, elem$$40, [name$$43], JAM.policy.p1)
       }
       v793 = v2303
     }
@@ -3030,7 +3030,7 @@ function v269() {
         var v3199;
         var v3645 = type$$32 === "*=";
         if(v3645) {
-          var v3643 = JAM.call(value$$89.indexOf, value$$89, [check], JAM.policy.p9C5FFCABA70857D69F2974E6410A585B5EFE64DC);
+          var v3643 = JAM.call(value$$89.indexOf, value$$89, [check], JAM.policy.p1);
           v3199 = v3643 >= 0
         }else {
           var v3644;
@@ -3038,7 +3038,7 @@ function v269() {
           if(v3815) {
             var v3915 = " " + value$$89;
             var v3876 = v3915 + " ";
-            var v3813 = JAM.call(v3876.indexOf, v3876, [check], JAM.policy.p9C5FFCABA70857D69F2974E6410A585B5EFE64DC);
+            var v3813 = JAM.call(v3876.indexOf, v3876, [check], JAM.policy.p1);
             v3644 = v3813 >= 0
           }else {
             var v3814;
@@ -3058,7 +3058,7 @@ function v269() {
                 var v3916;
                 var v3932 = type$$32 === "^=";
                 if(v3932) {
-                  var v3930 = JAM.call(value$$89.indexOf, value$$89, [check], JAM.policy.p9C5FFCABA70857D69F2974E6410A585B5EFE64DC);
+                  var v3930 = JAM.call(value$$89.indexOf, value$$89, [check], JAM.policy.p1);
                   v3916 = v3930 === 0
                 }else {
                   var v3931;
@@ -3067,7 +3067,7 @@ function v269() {
                     var v3957 = value$$89.length;
                     var v3958 = check.length;
                     var v3951 = v3957 - v3958;
-                    var v3944 = JAM.call(value$$89.substr, value$$89, [v3951], JAM.policy.p9C5FFCABA70857D69F2974E6410A585B5EFE64DC);
+                    var v3944 = JAM.call(value$$89.substr, value$$89, [v3951], JAM.policy.p1);
                     v3931 = v3944 === check
                   }else {
                     var v3945;
@@ -3078,7 +3078,7 @@ function v269() {
                       if(v3961) {
                         var v3966 = check.length;
                         var v3964 = v3966 + 1;
-                        var v3959 = JAM.call(value$$89.substr, value$$89, [0, v3964], JAM.policy.p9C5FFCABA70857D69F2974E6410A585B5EFE64DC);
+                        var v3959 = JAM.call(value$$89.substr, value$$89, [0, v3964], JAM.policy.p1);
                         var v3960 = check + "-";
                         v3952 = v3959 === v3960
                       }
@@ -3108,12 +3108,12 @@ function v269() {
     var v3816 = elem$$39.className;
     var v3880 = !v3816;
     if(v3880) {
-      v3816 = JAM.call(elem$$39.getAttribute, elem$$39, ["class"], JAM.policy.p9C5FFCABA70857D69F2974E6410A585B5EFE64DC)
+      v3816 = JAM.call(elem$$39.getAttribute, elem$$39, ["class"], JAM.policy.p1)
     }
     var v3646 = v3816;
     var v3201 = " " + v3646;
     var v2307 = v3201 + " ";
-    var v795 = JAM.call(v2307.indexOf, v2307, [match$$37], JAM.policy.p9C5FFCABA70857D69F2974E6410A585B5EFE64DC);
+    var v795 = JAM.call(v2307.indexOf, v2307, [match$$37], JAM.policy.p1);
     return v795 > -1
   }
   function v244(elem$$38, match$$36) {
@@ -3126,7 +3126,7 @@ function v269() {
     var v2310 = !v796;
     if(v2310) {
       var v3203 = elem$$38.nodeName;
-      var v2309 = JAM.call(v3203.toLowerCase, v3203, [], JAM.policy.p9C5FFCABA70857D69F2974E6410A585B5EFE64DC);
+      var v2309 = JAM.call(v3203.toLowerCase, v3203, [], JAM.policy.p1);
       v796 = v2309 === match$$36
     }
     return v796
@@ -3135,7 +3135,7 @@ function v269() {
     var v2311 = elem$$37.nodeType;
     var v797 = v2311 === 1;
     if(v797) {
-      var v2312 = JAM.call(elem$$37.getAttribute, elem$$37, ["id"], JAM.policy.p9C5FFCABA70857D69F2974E6410A585B5EFE64DC);
+      var v2312 = JAM.call(elem$$37.getAttribute, elem$$37, ["id"], JAM.policy.p1);
       v797 = v2312 === match$$35
     }
     return v797
@@ -3232,7 +3232,7 @@ function v269() {
     var v809 = Expr.filters;
     var filter$$7 = v809[name$$42];
     if(filter$$7) {
-      return JAM.call(filter$$7, null, [elem$$35, i$$48, match$$33, array$$19], JAM.policy.p9C5FFCABA70857D69F2974E6410A585B5EFE64DC)
+      return JAM.call(filter$$7, null, [elem$$35, i$$48, match$$33, array$$19], JAM.policy.p1)
     }else {
       var v814 = name$$42 === "contains";
       if(v814) {
@@ -3243,7 +3243,7 @@ function v269() {
           var v3818 = !v3650;
           if(v3818) {
             var v3881 = [elem$$35];
-            var v3817 = JAM.call(Sizzle$$1.getText, Sizzle$$1, [v3881], JAM.policy.p9C5FFCABA70857D69F2974E6410A585B5EFE64DC);
+            var v3817 = JAM.call(Sizzle$$1.getText, Sizzle$$1, [v3881], JAM.policy.p1);
             var v3882 = !v3817;
             if(v3882) {
               v3817 = ""
@@ -3254,7 +3254,7 @@ function v269() {
         }
         var v2320 = v3205;
         var v2321 = match$$33[3];
-        var v810 = JAM.call(v2320.indexOf, v2320, [v2321], JAM.policy.p9C5FFCABA70857D69F2974E6410A585B5EFE64DC);
+        var v810 = JAM.call(v2320.indexOf, v2320, [v2321], JAM.policy.p1);
         return v810 >= 0
       }else {
         var v813 = name$$42 === "not";
@@ -3274,7 +3274,7 @@ function v269() {
           }
           return true
         }else {
-          JAM.call(Sizzle$$1.error, Sizzle$$1, [name$$42], JAM.policy.p9C5FFCABA70857D69F2974E6410A585B5EFE64DC)
+          JAM.call(Sizzle$$1.error, Sizzle$$1, [name$$42], JAM.policy.p1)
         }
       }
     }
@@ -3323,11 +3323,11 @@ function v269() {
   }
   function v231(elem$$25) {
     var v823 = elem$$25.nodeName;
-    return JAM.call(/input|select|textarea|button/i.test, /input|select|textarea|button/i, [v823], JAM.policy.p9C5FFCABA70857D69F2974E6410A585B5EFE64DC)
+    return JAM.call(/input|select|textarea|button/i.test, /input|select|textarea|button/i, [v823], JAM.policy.p1)
   }
   function v230(elem$$24) {
     var v824 = elem$$24.nodeName;
-    var name$$41 = JAM.call(v824.toLowerCase, v824, [], JAM.policy.p9C5FFCABA70857D69F2974E6410A585B5EFE64DC);
+    var name$$41 = JAM.call(v824.toLowerCase, v824, [], JAM.policy.p1);
     var v2329 = name$$41 === "input";
     if(v2329) {
       var v3206 = elem$$24.type;
@@ -3342,7 +3342,7 @@ function v269() {
   }
   function v229(elem$$23) {
     var v826 = elem$$23.nodeName;
-    var name$$40 = JAM.call(v826.toLowerCase, v826, [], JAM.policy.p9C5FFCABA70857D69F2974E6410A585B5EFE64DC);
+    var name$$40 = JAM.call(v826.toLowerCase, v826, [], JAM.policy.p1);
     var v2331 = name$$40 === "input";
     var v3207 = !v2331;
     if(v3207) {
@@ -3357,7 +3357,7 @@ function v269() {
   }
   function v228(elem$$22) {
     var v3208 = elem$$22.nodeName;
-    var v2333 = JAM.call(v3208.toLowerCase, v3208, [], JAM.policy.p9C5FFCABA70857D69F2974E6410A585B5EFE64DC);
+    var v2333 = JAM.call(v3208.toLowerCase, v3208, [], JAM.policy.p1);
     var v828 = v2333 === "input";
     if(v828) {
       var v2334 = elem$$22.type;
@@ -3367,7 +3367,7 @@ function v269() {
   }
   function v227(elem$$21) {
     var v829 = elem$$21.nodeName;
-    var name$$39 = JAM.call(v829.toLowerCase, v829, [], JAM.policy.p9C5FFCABA70857D69F2974E6410A585B5EFE64DC);
+    var name$$39 = JAM.call(v829.toLowerCase, v829, [], JAM.policy.p1);
     var v2335 = name$$39 === "input";
     var v3209 = !v2335;
     if(v3209) {
@@ -3382,7 +3382,7 @@ function v269() {
   }
   function v226(elem$$20) {
     var v3210 = elem$$20.nodeName;
-    var v2337 = JAM.call(v3210.toLowerCase, v3210, [], JAM.policy.p9C5FFCABA70857D69F2974E6410A585B5EFE64DC);
+    var v2337 = JAM.call(v3210.toLowerCase, v3210, [], JAM.policy.p1);
     var v831 = v2337 === "input";
     if(v831) {
       var v2338 = elem$$20.type;
@@ -3392,7 +3392,7 @@ function v269() {
   }
   function v225(elem$$19) {
     var v3211 = elem$$19.nodeName;
-    var v2339 = JAM.call(v3211.toLowerCase, v3211, [], JAM.policy.p9C5FFCABA70857D69F2974E6410A585B5EFE64DC);
+    var v2339 = JAM.call(v3211.toLowerCase, v3211, [], JAM.policy.p1);
     var v832 = v2339 === "input";
     if(v832) {
       var v2340 = elem$$19.type;
@@ -3402,7 +3402,7 @@ function v269() {
   }
   function v224(elem$$18) {
     var v3212 = elem$$18.nodeName;
-    var v2341 = JAM.call(v3212.toLowerCase, v3212, [], JAM.policy.p9C5FFCABA70857D69F2974E6410A585B5EFE64DC);
+    var v2341 = JAM.call(v3212.toLowerCase, v3212, [], JAM.policy.p1);
     var v833 = v2341 === "input";
     if(v833) {
       var v2342 = elem$$18.type;
@@ -3412,7 +3412,7 @@ function v269() {
   }
   function v223(elem$$17) {
     var v3213 = elem$$17.nodeName;
-    var v2343 = JAM.call(v3213.toLowerCase, v3213, [], JAM.policy.p9C5FFCABA70857D69F2974E6410A585B5EFE64DC);
+    var v2343 = JAM.call(v3213.toLowerCase, v3213, [], JAM.policy.p1);
     var v834 = v2343 === "input";
     if(v834) {
       var v2344 = elem$$17.type;
@@ -3421,10 +3421,10 @@ function v269() {
     return v834
   }
   function v222(elem$$16) {
-    var attr$$2 = JAM.call(elem$$16.getAttribute, elem$$16, ["type"], JAM.policy.p9C5FFCABA70857D69F2974E6410A585B5EFE64DC);
+    var attr$$2 = JAM.call(elem$$16.getAttribute, elem$$16, ["type"], JAM.policy.p1);
     var type$$30 = elem$$16.type;
     var v3214 = elem$$16.nodeName;
-    var v2345 = JAM.call(v3214.toLowerCase, v3214, [], JAM.policy.p9C5FFCABA70857D69F2974E6410A585B5EFE64DC);
+    var v2345 = JAM.call(v3214.toLowerCase, v3214, [], JAM.policy.p1);
     var v835 = v2345 === "input";
     if(v835) {
       var v2346 = "text" === type$$30;
@@ -3442,11 +3442,11 @@ function v269() {
   }
   function v221(elem$$15) {
     var v836 = elem$$15.nodeName;
-    return JAM.call(/h\d/i.test, /h\d/i, [v836], JAM.policy.p9C5FFCABA70857D69F2974E6410A585B5EFE64DC)
+    return JAM.call(/h\d/i.test, /h\d/i, [v836], JAM.policy.p1)
   }
   function v220(elem$$14, i$$39, match$$27) {
     var v3653 = match$$27[3];
-    var v3216 = JAM.call(Sizzle$$1, null, [v3653, elem$$14], JAM.policy.p9C5FFCABA70857D69F2974E6410A585B5EFE64DC);
+    var v3216 = JAM.call(Sizzle$$1, null, [v3653, elem$$14], JAM.policy.p1);
     var v2347 = v3216.length;
     var v837 = !v2347;
     return!v837
@@ -3482,7 +3482,7 @@ function v269() {
     return v843
   }
   function v213(match$$26) {
-    JAM.call(match$$26.unshift, match$$26, [true], JAM.policy.p9C5FFCABA70857D69F2974E6410A585B5EFE64DC);
+    JAM.call(match$$26.unshift, match$$26, [true], JAM.policy.p1);
     return match$$26
   }
   function v212(match$$25, curLoop$$4, inplace$$3, result$$11, not$$3) {
@@ -3490,7 +3490,7 @@ function v269() {
     var v851 = v2351 === "not";
     if(v851) {
       var v3883 = match$$25[3];
-      var v3819 = JAM.call(chunker.exec, chunker, [v3883], JAM.policy.p9C5FFCABA70857D69F2974E6410A585B5EFE64DC);
+      var v3819 = JAM.call(chunker.exec, chunker, [v3883], JAM.policy.p1);
       var v3884 = !v3819;
       if(v3884) {
         v3819 = ""
@@ -3501,22 +3501,22 @@ function v269() {
       var v3219 = !v2352;
       if(v3219) {
         var v3218 = match$$25[3];
-        v2352 = JAM.call(/^\w/.test, /^\w/, [v3218], JAM.policy.p9C5FFCABA70857D69F2974E6410A585B5EFE64DC)
+        v2352 = JAM.call(/^\w/.test, /^\w/, [v3218], JAM.policy.p1)
       }
       var v849 = v2352;
       if(v849) {
         var v844 = match$$25;
         var v2353 = match$$25[3];
-        var v3983 = JAM.call(Sizzle$$1, null, [v2353, null, null, curLoop$$4], JAM.policy.p9C5FFCABA70857D69F2974E6410A585B5EFE64DC);
+        var v3983 = JAM.call(Sizzle$$1, null, [v2353, null, null, curLoop$$4], JAM.policy.p1);
         v844[3] = v3983
       }else {
         var v845 = match$$25[3];
         var v846 = true ^ not$$3;
-        var ret$$2 = JAM.call(Sizzle$$1.filter, Sizzle$$1, [v845, curLoop$$4, inplace$$3, v846], JAM.policy.p9C5FFCABA70857D69F2974E6410A585B5EFE64DC);
+        var ret$$2 = JAM.call(Sizzle$$1.filter, Sizzle$$1, [v845, curLoop$$4, inplace$$3, v846], JAM.policy.p1);
         var v848 = !inplace$$3;
         if(v848) {
           var v847 = result$$11.push;
-          JAM.call(v847.apply, v847, [result$$11, ret$$2], JAM.policy.p9C5FFCABA70857D69F2974E6410A585B5EFE64DC)
+          JAM.call(v847.apply, v847, [result$$11, ret$$2], JAM.policy.p1)
         }
         return false
       }
@@ -3524,13 +3524,13 @@ function v269() {
       var v3655 = Expr.match;
       var v3220 = v3655.POS;
       var v3221 = match$$25[0];
-      var v2354 = JAM.call(v3220.test, v3220, [v3221], JAM.policy.p9C5FFCABA70857D69F2974E6410A585B5EFE64DC);
+      var v2354 = JAM.call(v3220.test, v3220, [v3221], JAM.policy.p1);
       var v3224 = !v2354;
       if(v3224) {
         var v3656 = Expr.match;
         var v3222 = v3656.CHILD;
         var v3223 = match$$25[0];
-        v2354 = JAM.call(v3222.test, v3222, [v3223], JAM.policy.p9C5FFCABA70857D69F2974E6410A585B5EFE64DC)
+        v2354 = JAM.call(v3222.test, v3222, [v3223], JAM.policy.p1)
       }
       var v850 = v2354;
       if(v850) {
@@ -3542,7 +3542,7 @@ function v269() {
   function v211(match$$24, curLoop$$3, inplace$$2, result$$10, not$$2, isXML$$7) {
     var v852 = match$$24;
     var v2355 = match$$24[1];
-    var v3984 = JAM.call(v2355.replace, v2355, [rBackslash, ""], JAM.policy.p9C5FFCABA70857D69F2974E6410A585B5EFE64DC);
+    var v3984 = JAM.call(v2355.replace, v2355, [rBackslash, ""], JAM.policy.p1);
     var name$$38 = v852[1] = v3984;
     var v2356 = !isXML$$7;
     if(v2356) {
@@ -3566,7 +3566,7 @@ function v269() {
       v3226 = v3657
     }
     var v2357 = v3226;
-    var v3985 = JAM.call(v2357.replace, v2357, [rBackslash, ""], JAM.policy.p9C5FFCABA70857D69F2974E6410A585B5EFE64DC);
+    var v3985 = JAM.call(v2357.replace, v2357, [rBackslash, ""], JAM.policy.p1);
     v855[4] = v3985;
     var v2358 = match$$24[2];
     var v857 = v2358 === "~=";
@@ -3585,11 +3585,11 @@ function v269() {
       var v859 = !v2361;
       if(v859) {
         var v858 = match$$23[0];
-        JAM.call(Sizzle$$1.error, Sizzle$$1, [v858], JAM.policy.p9C5FFCABA70857D69F2974E6410A585B5EFE64DC)
+        JAM.call(Sizzle$$1.error, Sizzle$$1, [v858], JAM.policy.p1)
       }
       var v860 = match$$23;
       var v2362 = match$$23[2];
-      var v3986 = JAM.call(v2362.replace, v2362, [/^\+|\s*/g, ""], JAM.policy.p9C5FFCABA70857D69F2974E6410A585B5EFE64DC);
+      var v3986 = JAM.call(v2362.replace, v2362, [/^\+|\s*/g, ""], JAM.policy.p1);
       v860[2] = v3986;
       var v3659 = match$$23[2];
       var v3227 = v3659 === "even";
@@ -3608,7 +3608,7 @@ function v269() {
         var v3662 = !v3228;
         if(v3662) {
           var v3918 = match$$23[2];
-          var v3885 = JAM.call(/\D/.test, /\D/, [v3918], JAM.policy.p9C5FFCABA70857D69F2974E6410A585B5EFE64DC);
+          var v3885 = JAM.call(/\D/.test, /\D/, [v3918], JAM.policy.p1);
           var v3822 = !v3885;
           if(v3822) {
             var v3886 = match$$23[2];
@@ -3624,7 +3624,7 @@ function v269() {
         v2363 = v3228
       }
       var v861 = v2363;
-      var test = JAM.call(/(-?)(\d*)(?:n([+\-]?\d*))?/.exec, /(-?)(\d*)(?:n([+\-]?\d*))?/, [v861], JAM.policy.p9C5FFCABA70857D69F2974E6410A585B5EFE64DC);
+      var test = JAM.call(/(-?)(\d*)(?:n([+\-]?\d*))?/.exec, /(-?)(\d*)(?:n([+\-]?\d*))?/, [v861], JAM.policy.p1);
       var v2364 = test[1];
       var v3230 = test[2];
       var v3663 = !v3230;
@@ -3640,7 +3640,7 @@ function v269() {
       var v865 = match$$23[2];
       if(v865) {
         var v864 = match$$23[0];
-        JAM.call(Sizzle$$1.error, Sizzle$$1, [v864], JAM.policy.p9C5FFCABA70857D69F2974E6410A585B5EFE64DC)
+        JAM.call(Sizzle$$1.error, Sizzle$$1, [v864], JAM.policy.p1)
       }
     }
     match$$23[0] = done;
@@ -3649,16 +3649,16 @@ function v269() {
   }
   function v209(match$$22, curLoop$$2) {
     var v2366 = match$$22[1];
-    var v867 = JAM.call(v2366.replace, v2366, [rBackslash, ""], JAM.policy.p9C5FFCABA70857D69F2974E6410A585B5EFE64DC);
-    return JAM.call(v867.toLowerCase, v867, [], JAM.policy.p9C5FFCABA70857D69F2974E6410A585B5EFE64DC)
+    var v867 = JAM.call(v2366.replace, v2366, [rBackslash, ""], JAM.policy.p1);
+    return JAM.call(v867.toLowerCase, v867, [], JAM.policy.p1)
   }
   function v208(match$$21) {
     var v868 = match$$21[1];
-    return JAM.call(v868.replace, v868, [rBackslash, ""], JAM.policy.p9C5FFCABA70857D69F2974E6410A585B5EFE64DC)
+    return JAM.call(v868.replace, v868, [rBackslash, ""], JAM.policy.p1)
   }
   function v207(match$$20, curLoop$$1, inplace$$1, result$$9, not$$1, isXML$$6) {
     var v3231 = match$$20[1];
-    var v2367 = JAM.call(v3231.replace, v3231, [rBackslash, ""], JAM.policy.p9C5FFCABA70857D69F2974E6410A585B5EFE64DC);
+    var v2367 = JAM.call(v3231.replace, v3231, [rBackslash, ""], JAM.policy.p1);
     var v869 = " " + v2367;
     match$$20 = v869 + " ";
     if(isXML$$6) {
@@ -3676,8 +3676,8 @@ function v269() {
           var v3933 = elem$$7.className;
           var v3919 = " " + v3933;
           var v3887 = v3919 + " ";
-          var v3824 = JAM.call(v3887.replace, v3887, [/[\t\n\r]/g, " "], JAM.policy.p9C5FFCABA70857D69F2974E6410A585B5EFE64DC);
-          var v3664 = JAM.call(v3824.indexOf, v3824, [match$$20], JAM.policy.p9C5FFCABA70857D69F2974E6410A585B5EFE64DC);
+          var v3824 = JAM.call(v3887.replace, v3887, [/[\t\n\r]/g, " "], JAM.policy.p1);
+          var v3664 = JAM.call(v3824.indexOf, v3824, [match$$20], JAM.policy.p1);
           v3232 = v3664 >= 0
         }
         var v2370 = v3232;
@@ -3685,7 +3685,7 @@ function v269() {
         if(v871) {
           var v870 = !inplace$$1;
           if(v870) {
-            JAM.call(result$$9.push, result$$9, [elem$$7], JAM.policy.p9C5FFCABA70857D69F2974E6410A585B5EFE64DC)
+            JAM.call(result$$9.push, result$$9, [elem$$7], JAM.policy.p1)
           }
         }else {
           if(inplace$$1) {
@@ -3705,7 +3705,7 @@ function v269() {
     var v874 = v2372 !== "undefined";
     if(v874) {
       var v873 = match$$19[1];
-      return JAM.call(context$$33.getElementsByTagName, context$$33, [v873], JAM.policy.p9C5FFCABA70857D69F2974E6410A585B5EFE64DC)
+      return JAM.call(context$$33.getElementsByTagName, context$$33, [v873], JAM.policy.p1)
     }
     return
   }
@@ -3716,18 +3716,18 @@ function v269() {
     if(v880) {
       var ret$$1 = [];
       var v875 = match$$18[1];
-      var results$$15 = JAM.call(context$$32.getElementsByName, context$$32, [v875], JAM.policy.p9C5FFCABA70857D69F2974E6410A585B5EFE64DC);
+      var results$$15 = JAM.call(context$$32.getElementsByName, context$$32, [v875], JAM.policy.p1);
       var i$$37 = 0;
       var l$$5 = results$$15.length;
       var v878 = i$$37 < l$$5;
       for(;v878;) {
         var v3235 = results$$15[i$$37];
-        var v2374 = JAM.call(v3235.getAttribute, v3235, ["name"], JAM.policy.p9C5FFCABA70857D69F2974E6410A585B5EFE64DC);
+        var v2374 = JAM.call(v3235.getAttribute, v3235, ["name"], JAM.policy.p1);
         var v2375 = match$$18[1];
         var v877 = v2374 === v2375;
         if(v877) {
           var v876 = results$$15[i$$37];
-          JAM.call(ret$$1.push, ret$$1, [v876], JAM.policy.p9C5FFCABA70857D69F2974E6410A585B5EFE64DC)
+          JAM.call(ret$$1.push, ret$$1, [v876], JAM.policy.p1)
         }
         i$$37 = i$$37 + 1;
         v878 = i$$37 < l$$5
@@ -3754,7 +3754,7 @@ function v269() {
     var v883 = v2377;
     if(v883) {
       var v881 = match$$17[1];
-      var m$$3 = JAM.call(context$$31.getElementById, context$$31, [v881], JAM.policy.p9C5FFCABA70857D69F2974E6410A585B5EFE64DC);
+      var m$$3 = JAM.call(context$$31.getElementById, context$$31, [v881], JAM.policy.p1);
       var v882;
       var v3238 = m$$3;
       if(v3238) {
@@ -3778,16 +3778,16 @@ function v269() {
     var v3239 = typeof part$$3;
     var v2379 = v3239 === "string";
     if(v2379) {
-      var v3240 = JAM.call(rNonWord.test, rNonWord, [part$$3], JAM.policy.p9C5FFCABA70857D69F2974E6410A585B5EFE64DC);
+      var v3240 = JAM.call(rNonWord.test, rNonWord, [part$$3], JAM.policy.p1);
       v2379 = !v3240
     }
     var v884 = v2379;
     if(v884) {
-      part$$3 = JAM.call(part$$3.toLowerCase, part$$3, [], JAM.policy.p9C5FFCABA70857D69F2974E6410A585B5EFE64DC);
+      part$$3 = JAM.call(part$$3.toLowerCase, part$$3, [], JAM.policy.p1);
       nodeCheck$$3 = part$$3;
       checkFn$$1 = dirNodeCheck
     }
-    JAM.call(checkFn$$1, null, ["previousSibling", part$$3, doneName$$3, checkSet$$6, nodeCheck$$3, isXML$$4], JAM.policy.p9C5FFCABA70857D69F2974E6410A585B5EFE64DC);
+    JAM.call(checkFn$$1, null, ["previousSibling", part$$3, doneName$$3, checkSet$$6, nodeCheck$$3, isXML$$4], JAM.policy.p1);
     return
   }
   function v202(checkSet$$5, part$$2, isXML$$3) {
@@ -3798,16 +3798,16 @@ function v269() {
     var v3241 = typeof part$$2;
     var v2380 = v3241 === "string";
     if(v2380) {
-      var v3242 = JAM.call(rNonWord.test, rNonWord, [part$$2], JAM.policy.p9C5FFCABA70857D69F2974E6410A585B5EFE64DC);
+      var v3242 = JAM.call(rNonWord.test, rNonWord, [part$$2], JAM.policy.p1);
       v2380 = !v3242
     }
     var v885 = v2380;
     if(v885) {
-      part$$2 = JAM.call(part$$2.toLowerCase, part$$2, [], JAM.policy.p9C5FFCABA70857D69F2974E6410A585B5EFE64DC);
+      part$$2 = JAM.call(part$$2.toLowerCase, part$$2, [], JAM.policy.p1);
       nodeCheck$$2 = part$$2;
       checkFn = dirNodeCheck
     }
-    JAM.call(checkFn, null, ["parentNode", part$$2, doneName$$2, checkSet$$5, nodeCheck$$2, isXML$$3], JAM.policy.p9C5FFCABA70857D69F2974E6410A585B5EFE64DC);
+    JAM.call(checkFn, null, ["parentNode", part$$2, doneName$$2, checkSet$$5, nodeCheck$$2, isXML$$3], JAM.policy.p1);
     return
   }
   function v201(checkSet$$4, part$$1) {
@@ -3818,12 +3818,12 @@ function v269() {
     var l$$4 = checkSet$$4.length;
     var v2381 = isPartStr$$1;
     if(v2381) {
-      var v3243 = JAM.call(rNonWord.test, rNonWord, [part$$1], JAM.policy.p9C5FFCABA70857D69F2974E6410A585B5EFE64DC);
+      var v3243 = JAM.call(rNonWord.test, rNonWord, [part$$1], JAM.policy.p1);
       v2381 = !v3243
     }
     var v892 = v2381;
     if(v892) {
-      part$$1 = JAM.call(part$$1.toLowerCase, part$$1, [], JAM.policy.p9C5FFCABA70857D69F2974E6410A585B5EFE64DC);
+      part$$1 = JAM.call(part$$1.toLowerCase, part$$1, [], JAM.policy.p1);
       var v889 = i$$36 < l$$4;
       for(;v889;) {
         elem$$6 = checkSet$$4[i$$36];
@@ -3833,7 +3833,7 @@ function v269() {
           var v888 = i$$36;
           var v2382;
           var v3825 = parent$$8.nodeName;
-          var v3666 = JAM.call(v3825.toLowerCase, v3825, [], JAM.policy.p9C5FFCABA70857D69F2974E6410A585B5EFE64DC);
+          var v3666 = JAM.call(v3825.toLowerCase, v3825, [], JAM.policy.p1);
           var v3244 = v3666 === part$$1;
           if(v3244) {
             v2382 = parent$$8
@@ -3863,7 +3863,7 @@ function v269() {
         v891 = i$$36 < l$$4
       }
       if(isPartStr$$1) {
-        JAM.call(Sizzle$$1.filter, Sizzle$$1, [part$$1, checkSet$$4, true], JAM.policy.p9C5FFCABA70857D69F2974E6410A585B5EFE64DC)
+        JAM.call(Sizzle$$1.filter, Sizzle$$1, [part$$1, checkSet$$4, true], JAM.policy.p1)
       }
     }
     return
@@ -3873,7 +3873,7 @@ function v269() {
     var isPartStr = v893 === "string";
     var v894 = isPartStr;
     if(v894) {
-      var v2384 = JAM.call(rNonWord.test, rNonWord, [part], JAM.policy.p9C5FFCABA70857D69F2974E6410A585B5EFE64DC);
+      var v2384 = JAM.call(rNonWord.test, rNonWord, [part], JAM.policy.p1);
       v894 = !v2384
     }
     var isTag = v894;
@@ -3883,7 +3883,7 @@ function v269() {
     }
     var isPartStrNotTag = v895;
     if(isTag) {
-      part = JAM.call(part.toLowerCase, part, [], JAM.policy.p9C5FFCABA70857D69F2974E6410A585B5EFE64DC)
+      part = JAM.call(part.toLowerCase, part, [], JAM.policy.p1)
     }
     var i$$35 = 0;
     var l$$3 = checkSet$$3.length;
@@ -3915,7 +3915,7 @@ function v269() {
           var v3826 = elem$$5;
           if(v3826) {
             var v3920 = elem$$5.nodeName;
-            var v3888 = JAM.call(v3920.toLowerCase, v3920, [], JAM.policy.p9C5FFCABA70857D69F2974E6410A585B5EFE64DC);
+            var v3888 = JAM.call(v3920.toLowerCase, v3920, [], JAM.policy.p1);
             v3826 = v3888 === part
           }
           v3667 = v3826
@@ -3932,15 +3932,15 @@ function v269() {
       v900 = i$$35 < l$$3
     }
     if(isPartStrNotTag) {
-      JAM.call(Sizzle$$1.filter, Sizzle$$1, [part, checkSet$$3, true], JAM.policy.p9C5FFCABA70857D69F2974E6410A585B5EFE64DC)
+      JAM.call(Sizzle$$1.filter, Sizzle$$1, [part, checkSet$$3, true], JAM.policy.p1)
     }
     return
   }
   function v199(elem$$4) {
-    return JAM.call(elem$$4.getAttribute, elem$$4, ["type"], JAM.policy.p9C5FFCABA70857D69F2974E6410A585B5EFE64DC)
+    return JAM.call(elem$$4.getAttribute, elem$$4, ["type"], JAM.policy.p1)
   }
   function v198(elem$$3) {
-    return JAM.call(elem$$3.getAttribute, elem$$3, ["href"], JAM.policy.p9C5FFCABA70857D69F2974E6410A585B5EFE64DC)
+    return JAM.call(elem$$3.getAttribute, elem$$3, ["href"], JAM.policy.p1)
   }
   function v197(msg) {
     throw"Syntax error, unrecognized expression: " + msg;
@@ -3956,7 +3956,7 @@ function v269() {
       var v2388 = set$$4[0];
       if(v2388) {
         var v3248 = set$$4[0];
-        v2388 = JAM.call(Sizzle$$1.isXML, Sizzle$$1, [v3248], JAM.policy.p9C5FFCABA70857D69F2974E6410A585B5EFE64DC)
+        v2388 = JAM.call(Sizzle$$1.isXML, Sizzle$$1, [v3248], JAM.policy.p1)
       }
       v901 = v2388
     }
@@ -3972,7 +3972,7 @@ function v269() {
       for(type$$29 in v917) {
         var v3828 = Expr.leftMatch;
         var v3668 = v3828[type$$29];
-        var v3249 = match$$16 = JAM.call(v3668.exec, v3668, [expr$$7], JAM.policy.p9C5FFCABA70857D69F2974E6410A585B5EFE64DC);
+        var v3249 = match$$16 = JAM.call(v3668.exec, v3668, [expr$$7], JAM.policy.p1);
         var v2390 = v3249 != null;
         if(v2390) {
           v2390 = match$$16[2]
@@ -3985,10 +3985,10 @@ function v269() {
           var filter$$6 = v902[type$$29];
           var left$$5 = match$$16[1];
           anyFound = false;
-          JAM.call(match$$16.splice, match$$16, [1, 1], JAM.policy.p9C5FFCABA70857D69F2974E6410A585B5EFE64DC);
+          JAM.call(match$$16.splice, match$$16, [1, 1], JAM.policy.p1);
           var v3669 = left$$5.length;
           var v3250 = v3669 - 1;
-          var v2391 = JAM.call(left$$5.substr, left$$5, [v3250], JAM.policy.p9C5FFCABA70857D69F2974E6410A585B5EFE64DC);
+          var v2391 = JAM.call(left$$5.substr, left$$5, [v3250], JAM.policy.p1);
           var v903 = v2391 === "\\";
           if(v903) {
             continue
@@ -4001,7 +4001,7 @@ function v269() {
           var v908 = v2392[type$$29];
           if(v908) {
             var v905 = Expr.preFilter;
-            match$$16 = JAM.call(v905[type$$29], v905, [match$$16, curLoop, inplace, result$$8, not, isXMLFilter], JAM.policy.p9C5FFCABA70857D69F2974E6410A585B5EFE64DC);
+            match$$16 = JAM.call(v905[type$$29], v905, [match$$16, curLoop, inplace, result$$8, not, isXMLFilter], JAM.policy.p1);
             var v907 = !match$$16;
             if(v907) {
               anyFound = found$$1 = true
@@ -4018,7 +4018,7 @@ function v269() {
             var v911 = v2393 != null;
             for(;v911;) {
               if(item$$4) {
-                found$$1 = JAM.call(filter$$6, null, [item$$4, match$$16, i$$34, curLoop], JAM.policy.p9C5FFCABA70857D69F2974E6410A585B5EFE64DC);
+                found$$1 = JAM.call(filter$$6, null, [item$$4, match$$16, i$$34, curLoop], JAM.policy.p1);
                 var v2394 = !found$$1;
                 var v909 = !v2394;
                 var pass = not ^ v909;
@@ -4035,7 +4035,7 @@ function v269() {
                   }
                 }else {
                   if(pass) {
-                    JAM.call(result$$8.push, result$$8, [item$$4], JAM.policy.p9C5FFCABA70857D69F2974E6410A585B5EFE64DC);
+                    JAM.call(result$$8.push, result$$8, [item$$4], JAM.policy.p1);
                     anyFound = true
                   }
                 }
@@ -4053,7 +4053,7 @@ function v269() {
             }
             var v2397 = Expr.match;
             var v913 = v2397[type$$29];
-            expr$$7 = JAM.call(expr$$7.replace, expr$$7, [v913, ""], JAM.policy.p9C5FFCABA70857D69F2974E6410A585B5EFE64DC);
+            expr$$7 = JAM.call(expr$$7.replace, expr$$7, [v913, ""], JAM.policy.p1);
             var v914 = !anyFound;
             if(v914) {
               return[]
@@ -4066,7 +4066,7 @@ function v269() {
       if(v919) {
         var v918 = anyFound == null;
         if(v918) {
-          JAM.call(Sizzle$$1.error, Sizzle$$1, [expr$$7], JAM.policy.p9C5FFCABA70857D69F2974E6410A585B5EFE64DC)
+          JAM.call(Sizzle$$1.error, Sizzle$$1, [expr$$7], JAM.policy.p1)
         }else {
           break
         }
@@ -4096,13 +4096,13 @@ function v269() {
       var type$$28 = v923[i$$33];
       var v3251 = Expr.leftMatch;
       var v2399 = v3251[type$$28];
-      var v929 = match$$15 = JAM.call(v2399.exec, v2399, [expr$$6], JAM.policy.p9C5FFCABA70857D69F2974E6410A585B5EFE64DC);
+      var v929 = match$$15 = JAM.call(v2399.exec, v2399, [expr$$6], JAM.policy.p1);
       if(v929) {
         var left$$4 = match$$15[1];
-        JAM.call(match$$15.splice, match$$15, [1, 1], JAM.policy.p9C5FFCABA70857D69F2974E6410A585B5EFE64DC);
+        JAM.call(match$$15.splice, match$$15, [1, 1], JAM.policy.p1);
         var v3670 = left$$4.length;
         var v3252 = v3670 - 1;
-        var v2400 = JAM.call(left$$4.substr, left$$4, [v3252], JAM.policy.p9C5FFCABA70857D69F2974E6410A585B5EFE64DC);
+        var v2400 = JAM.call(left$$4.substr, left$$4, [v3252], JAM.policy.p1);
         var v928 = v2400 !== "\\";
         if(v928) {
           var v924 = match$$15;
@@ -4112,15 +4112,15 @@ function v269() {
             v3253 = ""
           }
           var v2401 = v3253;
-          var v3987 = JAM.call(v2401.replace, v2401, [rBackslash, ""], JAM.policy.p9C5FFCABA70857D69F2974E6410A585B5EFE64DC);
+          var v3987 = JAM.call(v2401.replace, v2401, [rBackslash, ""], JAM.policy.p1);
           v924[1] = v3987;
           var v925 = Expr.find;
-          set$$3 = JAM.call(v925[type$$28], v925, [match$$15, context$$30, isXML$$2], JAM.policy.p9C5FFCABA70857D69F2974E6410A585B5EFE64DC);
+          set$$3 = JAM.call(v925[type$$28], v925, [match$$15, context$$30, isXML$$2], JAM.policy.p1);
           var v927 = set$$3 != null;
           if(v927) {
             var v2402 = Expr.match;
             var v926 = v2402[type$$28];
-            expr$$6 = JAM.call(expr$$6.replace, expr$$6, [v926, ""], JAM.policy.p9C5FFCABA70857D69F2974E6410A585B5EFE64DC);
+            expr$$6 = JAM.call(expr$$6.replace, expr$$6, [v926, ""], JAM.policy.p1);
             break
           }
         }
@@ -4135,7 +4135,7 @@ function v269() {
       var v3254 = typeof v3672;
       var v2403 = v3254 !== "undefined";
       if(v2403) {
-        v931 = JAM.call(context$$30.getElementsByTagName, context$$30, ["*"], JAM.policy.p9C5FFCABA70857D69F2974E6410A585B5EFE64DC)
+        v931 = JAM.call(context$$30.getElementsByTagName, context$$30, ["*"], JAM.policy.p1)
       }else {
         v931 = []
       }
@@ -4145,17 +4145,17 @@ function v269() {
   }
   function v194(node$$15, expr$$5) {
     var v3255 = [node$$15];
-    var v2404 = JAM.call(Sizzle$$1, null, [expr$$5, null, null, v3255], JAM.policy.p9C5FFCABA70857D69F2974E6410A585B5EFE64DC);
+    var v2404 = JAM.call(Sizzle$$1, null, [expr$$5, null, null, v3255], JAM.policy.p1);
     var v933 = v2404.length;
     return v933 > 0
   }
   function v193(expr$$4, set$$2) {
-    return JAM.call(Sizzle$$1, null, [expr$$4, null, null, set$$2], JAM.policy.p9C5FFCABA70857D69F2974E6410A585B5EFE64DC)
+    return JAM.call(Sizzle$$1, null, [expr$$4, null, null, set$$2], JAM.policy.p1)
   }
   function v192(results$$14) {
     if(sortOrder) {
       hasDuplicate = baseHasDuplicate;
-      JAM.call(results$$14.sort, results$$14, [sortOrder], JAM.policy.p9C5FFCABA70857D69F2974E6410A585B5EFE64DC);
+      JAM.call(results$$14.sort, results$$14, [sortOrder], JAM.policy.p1);
       if(hasDuplicate) {
         var i$$32 = 1;
         var v2405 = results$$14.length;
@@ -4168,7 +4168,7 @@ function v269() {
           if(v935) {
             var v934 = i$$32;
             i$$32 = i$$32 - 1;
-            JAM.call(results$$14.splice, results$$14, [v934, 1], JAM.policy.p9C5FFCABA70857D69F2974E6410A585B5EFE64DC)
+            JAM.call(results$$14.splice, results$$14, [v934, 1], JAM.policy.p1)
           }
           i$$32 = i$$32 + 1;
           var v2408 = results$$14.length;
@@ -4196,16 +4196,16 @@ function v269() {
     var root$$1 = v937;
     var v3257 = Expr.match;
     var v2410 = v3257.PSEUDO;
-    var v939 = match$$45 = JAM.call(v2410.exec, v2410, [selector$$2], JAM.policy.p9C5FFCABA70857D69F2974E6410A585B5EFE64DC);
+    var v939 = match$$45 = JAM.call(v2410.exec, v2410, [selector$$2], JAM.policy.p1);
     for(;v939;) {
       var v2411 = match$$45[0];
       later = later + v2411;
       var v2412 = Expr.match;
       var v938 = v2412.PSEUDO;
-      selector$$2 = JAM.call(selector$$2.replace, selector$$2, [v938, ""], JAM.policy.p9C5FFCABA70857D69F2974E6410A585B5EFE64DC);
+      selector$$2 = JAM.call(selector$$2.replace, selector$$2, [v938, ""], JAM.policy.p1);
       var v3258 = Expr.match;
       var v2413 = v3258.PSEUDO;
-      v939 = match$$45 = JAM.call(v2413.exec, v2413, [selector$$2], JAM.policy.p9C5FFCABA70857D69F2974E6410A585B5EFE64DC)
+      v939 = match$$45 = JAM.call(v2413.exec, v2413, [selector$$2], JAM.policy.p1)
     }
     var v940;
     var v3259 = Expr.relative;
@@ -4221,19 +4221,19 @@ function v269() {
     var v942 = i$$54 < l$$8;
     for(;v942;) {
       var v941 = root$$1[i$$54];
-      JAM.call(Sizzle$$1, null, [selector$$2, v941, tmpSet], JAM.policy.p9C5FFCABA70857D69F2974E6410A585B5EFE64DC);
+      JAM.call(Sizzle$$1, null, [selector$$2, v941, tmpSet], JAM.policy.p1);
       i$$54 = i$$54 + 1;
       v942 = i$$54 < l$$8
     }
-    return JAM.call(Sizzle$$1.filter, Sizzle$$1, [later, tmpSet], JAM.policy.p9C5FFCABA70857D69F2974E6410A585B5EFE64DC)
+    return JAM.call(Sizzle$$1.filter, Sizzle$$1, [later, tmpSet], JAM.policy.p1)
   }
   function makeArray(array$$21, results$$16) {
     var v2415 = Array.prototype;
     var v943 = v2415.slice;
-    array$$21 = JAM.call(v943.call, v943, [array$$21, 0], JAM.policy.p9C5FFCABA70857D69F2974E6410A585B5EFE64DC);
+    array$$21 = JAM.call(v943.call, v943, [array$$21, 0], JAM.policy.p1);
     if(results$$16) {
       var v944 = results$$16.push;
-      JAM.call(v944.apply, v944, [results$$16, array$$21], JAM.policy.p9C5FFCABA70857D69F2974E6410A585B5EFE64DC);
+      JAM.call(v944.apply, v944, [results$$16, array$$21], JAM.policy.p1);
       return results$$16
     }
     return array$$21
@@ -4276,16 +4276,16 @@ function v269() {
     var pop;
     var i$$31;
     var prune = true;
-    var contextXML = JAM.call(Sizzle$$1.isXML, Sizzle$$1, [context$$29], JAM.policy.p9C5FFCABA70857D69F2974E6410A585B5EFE64DC);
+    var contextXML = JAM.call(Sizzle$$1.isXML, Sizzle$$1, [context$$29], JAM.policy.p1);
     var parts = [];
     var soFar = selector$$1;
     do {
-      JAM.call(chunker.exec, chunker, [""], JAM.policy.p9C5FFCABA70857D69F2974E6410A585B5EFE64DC);
-      m$$2 = JAM.call(chunker.exec, chunker, [soFar], JAM.policy.p9C5FFCABA70857D69F2974E6410A585B5EFE64DC);
+      JAM.call(chunker.exec, chunker, [""], JAM.policy.p1);
+      m$$2 = JAM.call(chunker.exec, chunker, [soFar], JAM.policy.p1);
       if(m$$2) {
         soFar = m$$2[3];
         var v948 = m$$2[1];
-        JAM.call(parts.push, parts, [v948], JAM.policy.p9C5FFCABA70857D69F2974E6410A585B5EFE64DC);
+        JAM.call(parts.push, parts, [v948], JAM.policy.p1);
         var v949 = m$$2[2];
         if(v949) {
           extra = m$$2[3];
@@ -4296,7 +4296,7 @@ function v269() {
     var v3264 = parts.length;
     var v2419 = v3264 > 1;
     if(v2419) {
-      v2419 = JAM.call(origPOS.exec, origPOS, [selector$$1], JAM.policy.p9C5FFCABA70857D69F2974E6410A585B5EFE64DC)
+      v2419 = JAM.call(origPOS.exec, origPOS, [selector$$1], JAM.policy.p1)
     }
     var v965 = v2419;
     if(v965) {
@@ -4321,18 +4321,18 @@ function v269() {
         if(v2424) {
           v951 = [context$$29]
         }else {
-          var v2423 = JAM.call(parts.shift, parts, [], JAM.policy.p9C5FFCABA70857D69F2974E6410A585B5EFE64DC);
-          v951 = JAM.call(Sizzle$$1, null, [v2423, context$$29], JAM.policy.p9C5FFCABA70857D69F2974E6410A585B5EFE64DC)
+          var v2423 = JAM.call(parts.shift, parts, [], JAM.policy.p1);
+          v951 = JAM.call(Sizzle$$1, null, [v2423, context$$29], JAM.policy.p1)
         }
         set$$1 = v951;
         var v953 = parts.length;
         for(;v953;) {
-          selector$$1 = JAM.call(parts.shift, parts, [], JAM.policy.p9C5FFCABA70857D69F2974E6410A585B5EFE64DC);
+          selector$$1 = JAM.call(parts.shift, parts, [], JAM.policy.p1);
           var v2425 = Expr.relative;
           var v952 = v2425[selector$$1];
           if(v952) {
             var v2426 = selector$$1;
-            var v2427 = JAM.call(parts.shift, parts, [], JAM.policy.p9C5FFCABA70857D69F2974E6410A585B5EFE64DC);
+            var v2427 = JAM.call(parts.shift, parts, [], JAM.policy.p1);
             selector$$1 = v2426 + v2427
           }
           set$$1 = posProcess(selector$$1, set$$1);
@@ -4353,14 +4353,14 @@ function v269() {
               var v3934 = Expr.match;
               var v3921 = v3934.ID;
               var v3922 = parts[0];
-              var v3889 = JAM.call(v3921.test, v3921, [v3922], JAM.policy.p9C5FFCABA70857D69F2974E6410A585B5EFE64DC);
+              var v3889 = JAM.call(v3921.test, v3921, [v3922], JAM.policy.p1);
               if(v3889) {
                 var v3947 = Expr.match;
                 var v3935 = v3947.ID;
                 var v3954 = parts.length;
                 var v3948 = v3954 - 1;
                 var v3936 = parts[v3948];
-                var v3923 = JAM.call(v3935.test, v3935, [v3936], JAM.policy.p9C5FFCABA70857D69F2974E6410A585B5EFE64DC);
+                var v3923 = JAM.call(v3935.test, v3935, [v3936], JAM.policy.p1);
                 v3889 = !v3923
               }
               v3830 = v3889
@@ -4373,14 +4373,14 @@ function v269() {
       }
       var v957 = v2428;
       if(v957) {
-        var v955 = JAM.call(parts.shift, parts, [], JAM.policy.p9C5FFCABA70857D69F2974E6410A585B5EFE64DC);
-        ret = JAM.call(Sizzle$$1.find, Sizzle$$1, [v955, context$$29, contextXML], JAM.policy.p9C5FFCABA70857D69F2974E6410A585B5EFE64DC);
+        var v955 = JAM.call(parts.shift, parts, [], JAM.policy.p1);
+        ret = JAM.call(Sizzle$$1.find, Sizzle$$1, [v955, context$$29, contextXML], JAM.policy.p1);
         var v956;
         var v2431 = ret.expr;
         if(v2431) {
           var v3271 = ret.expr;
           var v3272 = ret.set;
-          var v2429 = JAM.call(Sizzle$$1.filter, Sizzle$$1, [v3271, v3272], JAM.policy.p9C5FFCABA70857D69F2974E6410A585B5EFE64DC);
+          var v2429 = JAM.call(Sizzle$$1.filter, Sizzle$$1, [v3271, v3272], JAM.policy.p1);
           v956 = v2429[0]
         }else {
           var v2430 = ret.set;
@@ -4391,11 +4391,11 @@ function v269() {
       if(context$$29) {
         var v958;
         if(seed) {
-          var v2432 = JAM.call(parts.pop, parts, [], JAM.policy.p9C5FFCABA70857D69F2974E6410A585B5EFE64DC);
-          var v2433 = JAM.call(makeArray, null, [seed], JAM.policy.p9C5FFCABA70857D69F2974E6410A585B5EFE64DC);
+          var v2432 = JAM.call(parts.pop, parts, [], JAM.policy.p1);
+          var v2433 = JAM.call(makeArray, null, [seed], JAM.policy.p1);
           v958 = {expr:v2432, set:v2433}
         }else {
-          var v2434 = JAM.call(parts.pop, parts, [], JAM.policy.p9C5FFCABA70857D69F2974E6410A585B5EFE64DC);
+          var v2434 = JAM.call(parts.pop, parts, [], JAM.policy.p1);
           var v3273;
           var v3890 = parts.length;
           var v3831 = v3890 === 1;
@@ -4420,7 +4420,7 @@ function v269() {
             v3273 = context$$29
           }
           var v2435 = v3273;
-          v958 = JAM.call(Sizzle$$1.find, Sizzle$$1, [v2434, v2435, contextXML], JAM.policy.p9C5FFCABA70857D69F2974E6410A585B5EFE64DC)
+          v958 = JAM.call(Sizzle$$1.find, Sizzle$$1, [v2434, v2435, contextXML], JAM.policy.p1)
         }
         ret = v958;
         var v959;
@@ -4428,7 +4428,7 @@ function v269() {
         if(v2438) {
           var v2436 = ret.expr;
           var v2437 = ret.set;
-          v959 = JAM.call(Sizzle$$1.filter, Sizzle$$1, [v2436, v2437], JAM.policy.p9C5FFCABA70857D69F2974E6410A585B5EFE64DC)
+          v959 = JAM.call(Sizzle$$1.filter, Sizzle$$1, [v2436, v2437], JAM.policy.p1)
         }else {
           v959 = ret.set
         }
@@ -4436,13 +4436,13 @@ function v269() {
         var v2439 = parts.length;
         var v960 = v2439 > 0;
         if(v960) {
-          checkSet$$2 = JAM.call(makeArray, null, [set$$1], JAM.policy.p9C5FFCABA70857D69F2974E6410A585B5EFE64DC)
+          checkSet$$2 = JAM.call(makeArray, null, [set$$1], JAM.policy.p1)
         }else {
           prune = false
         }
         var v964 = parts.length;
         for(;v964;) {
-          cur$$2 = JAM.call(parts.pop, parts, [], JAM.policy.p9C5FFCABA70857D69F2974E6410A585B5EFE64DC);
+          cur$$2 = JAM.call(parts.pop, parts, [], JAM.policy.p1);
           pop = cur$$2;
           var v3274 = Expr.relative;
           var v2440 = v3274[cur$$2];
@@ -4450,14 +4450,14 @@ function v269() {
           if(v961) {
             cur$$2 = ""
           }else {
-            pop = JAM.call(parts.pop, parts, [], JAM.policy.p9C5FFCABA70857D69F2974E6410A585B5EFE64DC)
+            pop = JAM.call(parts.pop, parts, [], JAM.policy.p1)
           }
           var v962 = pop == null;
           if(v962) {
             pop = context$$29
           }
           var v963 = Expr.relative;
-          JAM.call(v963[cur$$2], v963, [checkSet$$2, pop, contextXML], JAM.policy.p9C5FFCABA70857D69F2974E6410A585B5EFE64DC);
+          JAM.call(v963[cur$$2], v963, [checkSet$$2, pop, contextXML], JAM.policy.p1);
           v964 = parts.length
         }
       }else {
@@ -4471,15 +4471,15 @@ function v269() {
     var v968 = !checkSet$$2;
     if(v968) {
       var v967 = cur$$2 || selector$$1;
-      JAM.call(Sizzle$$1.error, Sizzle$$1, [v967], JAM.policy.p9C5FFCABA70857D69F2974E6410A585B5EFE64DC)
+      JAM.call(Sizzle$$1.error, Sizzle$$1, [v967], JAM.policy.p1)
     }
-    var v2441 = JAM.call(toString.call, toString, [checkSet$$2], JAM.policy.p9C5FFCABA70857D69F2974E6410A585B5EFE64DC);
+    var v2441 = JAM.call(toString.call, toString, [checkSet$$2], JAM.policy.p1);
     var v978 = v2441 === "[object Array]";
     if(v978) {
       var v977 = !prune;
       if(v977) {
         var v969 = results$$13.push;
-        JAM.call(v969.apply, v969, [results$$13, checkSet$$2], JAM.policy.p9C5FFCABA70857D69F2974E6410A585B5EFE64DC)
+        JAM.call(v969.apply, v969, [results$$13, checkSet$$2], JAM.policy.p1)
       }else {
         var v2442 = context$$29;
         if(v2442) {
@@ -4503,7 +4503,7 @@ function v269() {
                 var v3677 = v3832 === 1;
                 if(v3677) {
                   var v3833 = checkSet$$2[i$$31];
-                  v3677 = JAM.call(Sizzle$$1.contains, Sizzle$$1, [context$$29, v3833], JAM.policy.p9C5FFCABA70857D69F2974E6410A585B5EFE64DC)
+                  v3677 = JAM.call(Sizzle$$1.contains, Sizzle$$1, [context$$29, v3833], JAM.policy.p1)
                 }
                 v3276 = v3677
               }
@@ -4512,7 +4512,7 @@ function v269() {
             var v971 = v2444;
             if(v971) {
               var v970 = set$$1[i$$31];
-              JAM.call(results$$13.push, results$$13, [v970], JAM.policy.p9C5FFCABA70857D69F2974E6410A585B5EFE64DC)
+              JAM.call(results$$13.push, results$$13, [v970], JAM.policy.p1)
             }
             i$$31 = i$$31 + 1;
             var v2445 = checkSet$$2[i$$31];
@@ -4532,7 +4532,7 @@ function v269() {
             var v974 = v2447;
             if(v974) {
               var v973 = set$$1[i$$31];
-              JAM.call(results$$13.push, results$$13, [v973], JAM.policy.p9C5FFCABA70857D69F2974E6410A585B5EFE64DC)
+              JAM.call(results$$13.push, results$$13, [v973], JAM.policy.p1)
             }
             i$$31 = i$$31 + 1;
             var v2448 = checkSet$$2[i$$31];
@@ -4541,11 +4541,11 @@ function v269() {
         }
       }
     }else {
-      JAM.call(makeArray, null, [checkSet$$2, results$$13], JAM.policy.p9C5FFCABA70857D69F2974E6410A585B5EFE64DC)
+      JAM.call(makeArray, null, [checkSet$$2, results$$13], JAM.policy.p1)
     }
     if(extra) {
-      JAM.call(Sizzle$$1, null, [extra, origContext, results$$13, seed], JAM.policy.p9C5FFCABA70857D69F2974E6410A585B5EFE64DC);
-      JAM.call(Sizzle$$1.uniqueSort, Sizzle$$1, [results$$13], JAM.policy.p9C5FFCABA70857D69F2974E6410A585B5EFE64DC)
+      JAM.call(Sizzle$$1, null, [extra, origContext, results$$13, seed], JAM.policy.p1);
+      JAM.call(Sizzle$$1.uniqueSort, Sizzle$$1, [results$$13], JAM.policy.p1)
     }
     return results$$13
   }
@@ -4577,7 +4577,7 @@ function v269() {
             elem$$1.sizset = i$$29
           }
           var v3279 = elem$$1.nodeName;
-          var v2451 = JAM.call(v3279.toLowerCase, v3279, [], JAM.policy.p9C5FFCABA70857D69F2974E6410A585B5EFE64DC);
+          var v2451 = JAM.call(v3279.toLowerCase, v3279, [], JAM.policy.p1);
           var v982 = v2451 === cur;
           if(v982) {
             match$$13 = elem$$1;
@@ -4627,7 +4627,7 @@ function v269() {
               }
             }else {
               var v3680 = [elem$$2];
-              var v3280 = JAM.call(Sizzle$$1.filter, Sizzle$$1, [cur$$1, v3680], JAM.policy.p9C5FFCABA70857D69F2974E6410A585B5EFE64DC);
+              var v3280 = JAM.call(Sizzle$$1.filter, Sizzle$$1, [cur$$1, v3680], JAM.policy.p1);
               var v2455 = v3280.length;
               var v988 = v2455 > 0;
               if(v988) {
@@ -4654,7 +4654,7 @@ function v269() {
   var rBackslash = /\\/g;
   var rNonWord = /\W/;
   var v993 = [0, 0];
-  JAM.call(v993.sort, v993, [v191], JAM.policy.p9C5FFCABA70857D69F2974E6410A585B5EFE64DC);
+  JAM.call(v993.sort, v993, [v191], JAM.policy.p1);
   Sizzle$$1.uniqueSort = v192;
   Sizzle$$1.matches = v193;
   Sizzle$$1.matchesSelector = v194;
@@ -4685,24 +4685,24 @@ function v269() {
     var v3282 = /(?![^\[]*\])(?![^\(]*\))/.source;
     var v2456 = v3281 + v3282;
     var v3988 = new RegExp(v2456);
-    JAM.set(v1005, v1006, v3988, JAM.policy.p425E08A28862414CF7130381FE99A660F52DB811);
+    JAM.set(v1005, v1006, v3988, JAM.policy.p2);
     var v1007 = Expr.leftMatch;
     var v1008 = type$$27;
     var v3283 = /(^(?:.|\r|\n)*?)/.source;
     var v3893 = Expr.match;
     var v3835 = v3893[type$$27];
     var v3682 = v3835.source;
-    var v3284 = JAM.call(v3682.replace, v3682, [/\\(\d+)/g, fescape], JAM.policy.p9C5FFCABA70857D69F2974E6410A585B5EFE64DC);
+    var v3284 = JAM.call(v3682.replace, v3682, [/\\(\d+)/g, fescape], JAM.policy.p1);
     var v2457 = v3283 + v3284;
     var v3989 = new RegExp(v2457);
-    JAM.set(v1007, v1008, v3989, JAM.policy.p425E08A28862414CF7130381FE99A660F52DB811)
+    JAM.set(v1007, v1008, v3989, JAM.policy.p2)
   }
   try {
     var v3683 = Array.prototype;
     var v3285 = v3683.slice;
     var v3684 = document.documentElement;
     var v3286 = v3684.childNodes;
-    var v2458 = JAM.call(v3285.call, v3285, [v3286, 0], JAM.policy.p9C5FFCABA70857D69F2974E6410A585B5EFE64DC);
+    var v2458 = JAM.call(v3285.call, v3285, [v3286, 0], JAM.policy.p1);
     var v1010 = v2458[0];
     v1010.nodeType
   }catch(e$$24) {
@@ -4762,7 +4762,7 @@ function v190() {
     var v1018 = i$$27 < length$$29;
     for(;v1018;) {
       var v3287 = elements$$4[i$$27];
-      var v2462 = JAM.call(match$$12, null, [v3287, expression$$6], JAM.policy.p9C5FFCABA70857D69F2974E6410A585B5EFE64DC);
+      var v2462 = JAM.call(match$$12, null, [v3287, expression$$6], JAM.policy.p1);
       if(v2462) {
         var v3288 = matchIndex;
         matchIndex = matchIndex + 1;
@@ -4771,7 +4771,7 @@ function v190() {
       var v1017 = v2462;
       if(v1017) {
         var v1016 = elements$$4[i$$27];
-        return JAM.call(Element.extend, Element, [v1016], JAM.policy.p9C5FFCABA70857D69F2974E6410A585B5EFE64DC)
+        return JAM.call(Element.extend, Element, [v1016], JAM.policy.p1)
       }
       i$$27 = i$$27 + 1;
       v1018 = i$$27 < length$$29
@@ -4784,7 +4784,7 @@ function v190() {
     var v1020 = i$$28 < length$$30;
     for(;v1020;) {
       var v1019 = elements$$5[i$$28];
-      JAM.call(Element.extend, Element, [v1019], JAM.policy.p9C5FFCABA70857D69F2974E6410A585B5EFE64DC);
+      JAM.call(Element.extend, Element, [v1019], JAM.policy.p1);
       i$$28 = i$$28 + 1;
       v1020 = i$$28 < length$$30
     }
@@ -4805,9 +4805,9 @@ function v190() {
 }
 function v189() {
   var v1023 = $A(arguments);
-  var expression$$5 = JAM.call(v1023.join, v1023, [", "], JAM.policy.p9C5FFCABA70857D69F2974E6410A585B5EFE64DC);
+  var expression$$5 = JAM.call(v1023.join, v1023, [", "], JAM.policy.p1);
   var v1024 = Prototype.Selector;
-  return JAM.call(v1024.select, v1024, [expression$$5, document], JAM.policy.p9C5FFCABA70857D69F2974E6410A585B5EFE64DC)
+  return JAM.call(v1024.select, v1024, [expression$$5, document], JAM.policy.p1)
 }
 function v188() {
   function getRootElement() {
@@ -4824,8 +4824,8 @@ function v188() {
     return ROOT
   }
   function getDimensions$$1() {
-    var v1026 = JAM.call(this.getWidth, this, [], JAM.policy.p9C5FFCABA70857D69F2974E6410A585B5EFE64DC);
-    var v1027 = JAM.call(this.getHeight, this, [], JAM.policy.p9C5FFCABA70857D69F2974E6410A585B5EFE64DC);
+    var v1026 = JAM.call(this.getWidth, this, [], JAM.policy.p1);
+    var v1027 = JAM.call(this.getHeight, this, [], JAM.policy.p1);
     return{width:v1026, height:v1027}
   }
   function getWidth$$1() {
@@ -4870,8 +4870,8 @@ function v188() {
   var v1033 = v2468.Opera;
   if(v1033) {
     var v3686 = window.opera;
-    var v3296 = JAM.call(v3686.version, v3686, [], JAM.policy.p9C5FFCABA70857D69F2974E6410A585B5EFE64DC);
-    var v2469 = JAM.call(window.parseFloat, window, [v3296], JAM.policy.p9C5FFCABA70857D69F2974E6410A585B5EFE64DC);
+    var v3296 = JAM.call(v3686.version, v3686, [], JAM.policy.p1);
+    var v2469 = JAM.call(window.parseFloat, window, [v3296], JAM.policy.p1);
     v1033 = v2469 < 9.5
   }
   var IS_OLD_OPERA = v1033;
@@ -4881,13 +4881,13 @@ function v188() {
 }
 function v187() {
   function v186(element$$145) {
-    element$$145 = JAM.call($, null, [element$$145], JAM.policy.p9C5FFCABA70857D69F2974E6410A585B5EFE64DC);
+    element$$145 = JAM.call($, null, [element$$145], JAM.policy.p1);
     var v1035 = isDetached(element$$145);
     if(v1035) {
       var v1034 = Element.Offset;
       return JAM.new(v1034, [0, 0])
     }
-    var rect$$2 = JAM.call(element$$145.getBoundingClientRect, element$$145, [], JAM.policy.p9C5FFCABA70857D69F2974E6410A585B5EFE64DC);
+    var rect$$2 = JAM.call(element$$145.getBoundingClientRect, element$$145, [], JAM.policy.p1);
     var docEl = document.documentElement;
     var v1036 = Element.Offset;
     var v2470 = rect$$2.left;
@@ -4899,7 +4899,7 @@ function v187() {
     return JAM.new(v1036, [v1037, v1038])
   }
   function v185(element$$144) {
-    element$$144 = JAM.call($, null, [element$$144], JAM.policy.p9C5FFCABA70857D69F2974E6410A585B5EFE64DC);
+    element$$144 = JAM.call($, null, [element$$144], JAM.policy.p1);
     var valueT$$4 = 0;
     var valueL$$4 = 0;
     do {
@@ -4921,7 +4921,7 @@ function v187() {
       var v2477 = document.body;
       var v1040 = v2476 == v2477;
       if(v1040) {
-        var v2478 = JAM.call(Element.getStyle, Element, [element$$144, "position"], JAM.policy.p9C5FFCABA70857D69F2974E6410A585B5EFE64DC);
+        var v2478 = JAM.call(Element.getStyle, Element, [element$$144, "position"], JAM.policy.p1);
         var v1039 = v2478 == "absolute";
         if(v1039) {
           break
@@ -4933,37 +4933,37 @@ function v187() {
     return JAM.new(v1041, [valueL$$4, valueT$$4])
   }
   function v184(proceed$$1, element$$143) {
-    element$$143 = JAM.call($, null, [element$$143], JAM.policy.p9C5FFCABA70857D69F2974E6410A585B5EFE64DC);
+    element$$143 = JAM.call($, null, [element$$143], JAM.policy.p1);
     var v2479 = element$$143.parentNode;
     var v1043 = !v2479;
     if(v1043) {
       var v1042 = Element.Offset;
       return JAM.new(v1042, [0, 0])
     }
-    var position$$5 = JAM.call(element$$143.getStyle, element$$143, ["position"], JAM.policy.p9C5FFCABA70857D69F2974E6410A585B5EFE64DC);
+    var position$$5 = JAM.call(element$$143.getStyle, element$$143, ["position"], JAM.policy.p1);
     var v1044 = position$$5 !== "static";
     if(v1044) {
-      return JAM.call(proceed$$1, null, [element$$143], JAM.policy.p9C5FFCABA70857D69F2974E6410A585B5EFE64DC)
+      return JAM.call(proceed$$1, null, [element$$143], JAM.policy.p1)
     }
-    var offsetParent$$1 = JAM.call(element$$143.getOffsetParent, element$$143, [], JAM.policy.p9C5FFCABA70857D69F2974E6410A585B5EFE64DC);
+    var offsetParent$$1 = JAM.call(element$$143.getOffsetParent, element$$143, [], JAM.policy.p1);
     var v2480 = offsetParent$$1;
     if(v2480) {
-      var v3299 = JAM.call(offsetParent$$1.getStyle, offsetParent$$1, ["position"], JAM.policy.p9C5FFCABA70857D69F2974E6410A585B5EFE64DC);
+      var v3299 = JAM.call(offsetParent$$1.getStyle, offsetParent$$1, ["position"], JAM.policy.p1);
       v2480 = v3299 === "fixed"
     }
     var v1045 = v2480;
     if(v1045) {
-      JAM.call(hasLayout, null, [offsetParent$$1], JAM.policy.p9C5FFCABA70857D69F2974E6410A585B5EFE64DC)
+      JAM.call(hasLayout, null, [offsetParent$$1], JAM.policy.p1)
     }
     var v1046 = {position:"relative"};
-    JAM.call(element$$143.setStyle, element$$143, [v1046], JAM.policy.p9C5FFCABA70857D69F2974E6410A585B5EFE64DC);
-    var value$$88 = JAM.call(proceed$$1, null, [element$$143], JAM.policy.p9C5FFCABA70857D69F2974E6410A585B5EFE64DC);
+    JAM.call(element$$143.setStyle, element$$143, [v1046], JAM.policy.p1);
+    var value$$88 = JAM.call(proceed$$1, null, [element$$143], JAM.policy.p1);
     var v1047 = {position:position$$5};
-    JAM.call(element$$143.setStyle, element$$143, [v1047], JAM.policy.p9C5FFCABA70857D69F2974E6410A585B5EFE64DC);
+    JAM.call(element$$143.setStyle, element$$143, [v1047], JAM.policy.p1);
     return value$$88
   }
   function v183(proceed, element$$142) {
-    element$$142 = JAM.call($, null, [element$$142], JAM.policy.p9C5FFCABA70857D69F2974E6410A585B5EFE64DC);
+    element$$142 = JAM.call($, null, [element$$142], JAM.policy.p1);
     var v3300 = element$$142.nodeType;
     var v3301 = Node.DOCUMENT_NODE;
     var v2481 = v3300 === v3301;
@@ -4973,12 +4973,12 @@ function v187() {
       var v3690 = !v3302;
       if(v3690) {
         var v3894 = element$$142.nodeName;
-        var v3836 = JAM.call(v3894.toUpperCase, v3894, [], JAM.policy.p9C5FFCABA70857D69F2974E6410A585B5EFE64DC);
+        var v3836 = JAM.call(v3894.toUpperCase, v3894, [], JAM.policy.p1);
         var v3689 = v3836 === "BODY";
         var v3838 = !v3689;
         if(v3838) {
           var v3895 = element$$142.nodeName;
-          var v3837 = JAM.call(v3895.toUpperCase, v3895, [], JAM.policy.p9C5FFCABA70857D69F2974E6410A585B5EFE64DC);
+          var v3837 = JAM.call(v3895.toUpperCase, v3895, [], JAM.policy.p1);
           v3689 = v3837 === "HTML"
         }
         v3302 = v3689
@@ -4988,18 +4988,18 @@ function v187() {
     var v1049 = v2481;
     if(v1049) {
       var v1048 = document.body;
-      return JAM.call($, null, [v1048], JAM.policy.p9C5FFCABA70857D69F2974E6410A585B5EFE64DC)
+      return JAM.call($, null, [v1048], JAM.policy.p1)
     }
-    var position$$4 = JAM.call(element$$142.getStyle, element$$142, ["position"], JAM.policy.p9C5FFCABA70857D69F2974E6410A585B5EFE64DC);
+    var position$$4 = JAM.call(element$$142.getStyle, element$$142, ["position"], JAM.policy.p1);
     var v1050 = position$$4 !== "static";
     if(v1050) {
-      return JAM.call(proceed, null, [element$$142], JAM.policy.p9C5FFCABA70857D69F2974E6410A585B5EFE64DC)
+      return JAM.call(proceed, null, [element$$142], JAM.policy.p1)
     }
     var v1051 = {position:"relative"};
-    JAM.call(element$$142.setStyle, element$$142, [v1051], JAM.policy.p9C5FFCABA70857D69F2974E6410A585B5EFE64DC);
-    var value$$87 = JAM.call(proceed, null, [element$$142], JAM.policy.p9C5FFCABA70857D69F2974E6410A585B5EFE64DC);
+    JAM.call(element$$142.setStyle, element$$142, [v1051], JAM.policy.p1);
+    var value$$87 = JAM.call(proceed, null, [element$$142], JAM.policy.p1);
     var v1052 = {position:position$$4};
-    JAM.call(element$$142.setStyle, element$$142, [v1052], JAM.policy.p9C5FFCABA70857D69F2974E6410A585B5EFE64DC);
+    JAM.call(element$$142.setStyle, element$$142, [v1052], JAM.policy.p1);
     return value$$87
   }
   function v182() {
@@ -5008,10 +5008,10 @@ function v187() {
     return[v1053, v1054]
   }
   function v181() {
-    return JAM.call("[#{left}, #{top}]".interpolate, "[#{left}, #{top}]", [this], JAM.policy.p9C5FFCABA70857D69F2974E6410A585B5EFE64DC)
+    return JAM.call("[#{left}, #{top}]".interpolate, "[#{left}, #{top}]", [this], JAM.policy.p1)
   }
   function v180() {
-    return JAM.call("#<Element.Offset left: #{left} top: #{top}>".interpolate, "#<Element.Offset left: #{left} top: #{top}>", [this], JAM.policy.p9C5FFCABA70857D69F2974E6410A585B5EFE64DC)
+    return JAM.call("#<Element.Offset left: #{left} top: #{top}>".interpolate, "#<Element.Offset left: #{left} top: #{top}>", [this], JAM.policy.p1)
   }
   function v179(offset$$17) {
     var v1055 = Element.Offset;
@@ -5024,33 +5024,33 @@ function v187() {
     return JAM.new(v1055, [v1056, v1057])
   }
   function v178(left$$3, top$$2) {
-    var v3990 = JAM.call(left$$3.round, left$$3, [], JAM.policy.p9C5FFCABA70857D69F2974E6410A585B5EFE64DC);
+    var v3990 = JAM.call(left$$3.round, left$$3, [], JAM.policy.p1);
     this.left = v3990;
-    var v3991 = JAM.call(top$$2.round, top$$2, [], JAM.policy.p9C5FFCABA70857D69F2974E6410A585B5EFE64DC);
+    var v3991 = JAM.call(top$$2.round, top$$2, [], JAM.policy.p1);
     this.top = v3991;
     this[0] = this.left;
     this[1] = this.top;
     return
   }
   function v177(element$$141) {
-    var v1058 = JAM.call(element$$141.getOffsetParent, element$$141, [], JAM.policy.p9C5FFCABA70857D69F2974E6410A585B5EFE64DC);
-    var parent$$7 = JAM.call(hasLayout, null, [v1058], JAM.policy.p9C5FFCABA70857D69F2974E6410A585B5EFE64DC);
-    var rect$$1 = JAM.call(element$$141.getBoundingClientRect, element$$141, [], JAM.policy.p9C5FFCABA70857D69F2974E6410A585B5EFE64DC);
-    var pRect$$1 = JAM.call(parent$$7.getBoundingClientRect, parent$$7, [], JAM.policy.p9C5FFCABA70857D69F2974E6410A585B5EFE64DC);
+    var v1058 = JAM.call(element$$141.getOffsetParent, element$$141, [], JAM.policy.p1);
+    var parent$$7 = JAM.call(hasLayout, null, [v1058], JAM.policy.p1);
+    var rect$$1 = JAM.call(element$$141.getBoundingClientRect, element$$141, [], JAM.policy.p1);
+    var pRect$$1 = JAM.call(parent$$7.getBoundingClientRect, parent$$7, [], JAM.policy.p1);
     var v2486 = pRect$$1.bottom;
     var v2487 = rect$$1.bottom;
     var v1059 = v2486 - v2487;
-    return JAM.call(v1059.round, v1059, [], JAM.policy.p9C5FFCABA70857D69F2974E6410A585B5EFE64DC)
+    return JAM.call(v1059.round, v1059, [], JAM.policy.p1)
   }
   function v176(element$$140) {
-    var v1060 = JAM.call(element$$140.getOffsetParent, element$$140, [], JAM.policy.p9C5FFCABA70857D69F2974E6410A585B5EFE64DC);
-    var parent$$6 = JAM.call(hasLayout, null, [v1060], JAM.policy.p9C5FFCABA70857D69F2974E6410A585B5EFE64DC);
-    var rect = JAM.call(element$$140.getBoundingClientRect, element$$140, [], JAM.policy.p9C5FFCABA70857D69F2974E6410A585B5EFE64DC);
-    var pRect = JAM.call(parent$$6.getBoundingClientRect, parent$$6, [], JAM.policy.p9C5FFCABA70857D69F2974E6410A585B5EFE64DC);
+    var v1060 = JAM.call(element$$140.getOffsetParent, element$$140, [], JAM.policy.p1);
+    var parent$$6 = JAM.call(hasLayout, null, [v1060], JAM.policy.p1);
+    var rect = JAM.call(element$$140.getBoundingClientRect, element$$140, [], JAM.policy.p1);
+    var pRect = JAM.call(parent$$6.getBoundingClientRect, parent$$6, [], JAM.policy.p1);
     var v2488 = pRect.right;
     var v2489 = rect.right;
     var v1061 = v2488 - v2489;
-    return JAM.call(v1061.round, v1061, [], JAM.policy.p9C5FFCABA70857D69F2974E6410A585B5EFE64DC)
+    return JAM.call(v1061.round, v1061, [], JAM.policy.p1)
   }
   function v175(element$$139) {
     return getPixelValue(element$$139, "marginRight")
@@ -5089,35 +5089,35 @@ function v187() {
     return getPixelValue(element$$128, "paddingTop")
   }
   function v163(element$$127) {
-    var offset$$16 = JAM.call(element$$127.positionedOffset, element$$127, [], JAM.policy.p9C5FFCABA70857D69F2974E6410A585B5EFE64DC);
-    var parent$$5 = JAM.call(element$$127.getOffsetParent, element$$127, [], JAM.policy.p9C5FFCABA70857D69F2974E6410A585B5EFE64DC);
-    var pWidth = JAM.call(parent$$5.measure, parent$$5, ["width"], JAM.policy.p9C5FFCABA70857D69F2974E6410A585B5EFE64DC);
-    var mWidth = JAM.call(this.get, this, ["border-box-width"], JAM.policy.p9C5FFCABA70857D69F2974E6410A585B5EFE64DC);
+    var offset$$16 = JAM.call(element$$127.positionedOffset, element$$127, [], JAM.policy.p1);
+    var parent$$5 = JAM.call(element$$127.getOffsetParent, element$$127, [], JAM.policy.p1);
+    var pWidth = JAM.call(parent$$5.measure, parent$$5, ["width"], JAM.policy.p1);
+    var mWidth = JAM.call(this.get, this, ["border-box-width"], JAM.policy.p1);
     var v1062 = pWidth - mWidth;
     var v1063 = offset$$16.left;
     return v1062 - v1063
   }
   function v162(element$$126) {
-    var offset$$15 = JAM.call(element$$126.positionedOffset, element$$126, [], JAM.policy.p9C5FFCABA70857D69F2974E6410A585B5EFE64DC);
+    var offset$$15 = JAM.call(element$$126.positionedOffset, element$$126, [], JAM.policy.p1);
     return offset$$15.left
   }
   function v161(element$$125) {
-    var offset$$14 = JAM.call(element$$125.positionedOffset, element$$125, [], JAM.policy.p9C5FFCABA70857D69F2974E6410A585B5EFE64DC);
-    var parent$$4 = JAM.call(element$$125.getOffsetParent, element$$125, [], JAM.policy.p9C5FFCABA70857D69F2974E6410A585B5EFE64DC);
-    var pHeight = JAM.call(parent$$4.measure, parent$$4, ["height"], JAM.policy.p9C5FFCABA70857D69F2974E6410A585B5EFE64DC);
-    var mHeight = JAM.call(this.get, this, ["border-box-height"], JAM.policy.p9C5FFCABA70857D69F2974E6410A585B5EFE64DC);
+    var offset$$14 = JAM.call(element$$125.positionedOffset, element$$125, [], JAM.policy.p1);
+    var parent$$4 = JAM.call(element$$125.getOffsetParent, element$$125, [], JAM.policy.p1);
+    var pHeight = JAM.call(parent$$4.measure, parent$$4, ["height"], JAM.policy.p1);
+    var mHeight = JAM.call(this.get, this, ["border-box-height"], JAM.policy.p1);
     var v1064 = pHeight - mHeight;
     var v1065 = offset$$14.top;
     return v1064 - v1065
   }
   function v160(element$$124) {
-    var offset$$13 = JAM.call(element$$124.positionedOffset, element$$124, [], JAM.policy.p9C5FFCABA70857D69F2974E6410A585B5EFE64DC);
+    var offset$$13 = JAM.call(element$$124.positionedOffset, element$$124, [], JAM.policy.p1);
     return offset$$13.top
   }
   function v159(element$$123) {
-    var bWidth$$1 = JAM.call(this.get, this, ["border-box-width"], JAM.policy.p9C5FFCABA70857D69F2974E6410A585B5EFE64DC);
-    var mLeft = JAM.call(this.get, this, ["margin-left"], JAM.policy.p9C5FFCABA70857D69F2974E6410A585B5EFE64DC);
-    var mRight = JAM.call(this.get, this, ["margin-right"], JAM.policy.p9C5FFCABA70857D69F2974E6410A585B5EFE64DC);
+    var bWidth$$1 = JAM.call(this.get, this, ["border-box-width"], JAM.policy.p1);
+    var mLeft = JAM.call(this.get, this, ["margin-left"], JAM.policy.p1);
+    var mRight = JAM.call(this.get, this, ["margin-right"], JAM.policy.p1);
     var v1066 = bWidth$$1 <= 0;
     if(v1066) {
       return 0
@@ -5126,9 +5126,9 @@ function v187() {
     return v1067 + mRight
   }
   function v158(element$$122) {
-    var bHeight$$1 = JAM.call(this.get, this, ["border-box-height"], JAM.policy.p9C5FFCABA70857D69F2974E6410A585B5EFE64DC);
-    var mTop = JAM.call(this.get, this, ["margin-top"], JAM.policy.p9C5FFCABA70857D69F2974E6410A585B5EFE64DC);
-    var mBottom = JAM.call(this.get, this, ["margin-bottom"], JAM.policy.p9C5FFCABA70857D69F2974E6410A585B5EFE64DC);
+    var bHeight$$1 = JAM.call(this.get, this, ["border-box-height"], JAM.policy.p1);
+    var mTop = JAM.call(this.get, this, ["margin-top"], JAM.policy.p1);
+    var mBottom = JAM.call(this.get, this, ["margin-bottom"], JAM.policy.p1);
     var v1068 = bHeight$$1 <= 0;
     if(v1068) {
       return 0
@@ -5140,13 +5140,13 @@ function v187() {
     var v2490 = this._preComputing;
     var v1070 = !v2490;
     if(v1070) {
-      JAM.call(this._begin, this, [], JAM.policy.p9C5FFCABA70857D69F2974E6410A585B5EFE64DC)
+      JAM.call(this._begin, this, [], JAM.policy.p1)
     }
     var width$$11 = element$$121.offsetWidth;
     var v2491 = this._preComputing;
     var v1071 = !v2491;
     if(v1071) {
-      JAM.call(this._end, this, [], JAM.policy.p9C5FFCABA70857D69F2974E6410A585B5EFE64DC)
+      JAM.call(this._end, this, [], JAM.policy.p1)
     }
     return width$$11
   }
@@ -5154,27 +5154,27 @@ function v187() {
     var v2492 = this._preComputing;
     var v1072 = !v2492;
     if(v1072) {
-      JAM.call(this._begin, this, [], JAM.policy.p9C5FFCABA70857D69F2974E6410A585B5EFE64DC)
+      JAM.call(this._begin, this, [], JAM.policy.p1)
     }
     var height$$9 = element$$120.offsetHeight;
     var v2493 = this._preComputing;
     var v1073 = !v2493;
     if(v1073) {
-      JAM.call(this._end, this, [], JAM.policy.p9C5FFCABA70857D69F2974E6410A585B5EFE64DC)
+      JAM.call(this._end, this, [], JAM.policy.p1)
     }
     return height$$9
   }
   function v155(element$$119) {
-    var width$$10 = JAM.call(this.get, this, ["width"], JAM.policy.p9C5FFCABA70857D69F2974E6410A585B5EFE64DC);
-    var pLeft$$1 = JAM.call(this.get, this, ["padding-left"], JAM.policy.p9C5FFCABA70857D69F2974E6410A585B5EFE64DC);
-    var pRight$$1 = JAM.call(this.get, this, ["padding-right"], JAM.policy.p9C5FFCABA70857D69F2974E6410A585B5EFE64DC);
+    var width$$10 = JAM.call(this.get, this, ["width"], JAM.policy.p1);
+    var pLeft$$1 = JAM.call(this.get, this, ["padding-left"], JAM.policy.p1);
+    var pRight$$1 = JAM.call(this.get, this, ["padding-right"], JAM.policy.p1);
     var v1074 = width$$10 + pLeft$$1;
     return v1074 + pRight$$1
   }
   function v154(element$$118) {
-    var height$$8 = JAM.call(this.get, this, ["height"], JAM.policy.p9C5FFCABA70857D69F2974E6410A585B5EFE64DC);
-    var pTop$$1 = JAM.call(this.get, this, ["padding-top"], JAM.policy.p9C5FFCABA70857D69F2974E6410A585B5EFE64DC);
-    var pBottom$$1 = JAM.call(this.get, this, ["padding-bottom"], JAM.policy.p9C5FFCABA70857D69F2974E6410A585B5EFE64DC);
+    var height$$8 = JAM.call(this.get, this, ["height"], JAM.policy.p1);
+    var pTop$$1 = JAM.call(this.get, this, ["padding-top"], JAM.policy.p1);
+    var pBottom$$1 = JAM.call(this.get, this, ["padding-bottom"], JAM.policy.p1);
     var v1075 = height$$8 + pTop$$1;
     return v1075 + pBottom$$1
   }
@@ -5182,26 +5182,26 @@ function v187() {
     var v2494 = this._preComputing;
     var v1076 = !v2494;
     if(v1076) {
-      JAM.call(this._begin, this, [], JAM.policy.p9C5FFCABA70857D69F2974E6410A585B5EFE64DC)
+      JAM.call(this._begin, this, [], JAM.policy.p1)
     }
-    var bWidth = JAM.call(this.get, this, ["border-box-width"], JAM.policy.p9C5FFCABA70857D69F2974E6410A585B5EFE64DC);
+    var bWidth = JAM.call(this.get, this, ["border-box-width"], JAM.policy.p1);
     var v1078 = bWidth <= 0;
     if(v1078) {
       var v2495 = this._preComputing;
       var v1077 = !v2495;
       if(v1077) {
-        JAM.call(this._end, this, [], JAM.policy.p9C5FFCABA70857D69F2974E6410A585B5EFE64DC)
+        JAM.call(this._end, this, [], JAM.policy.p1)
       }
       return 0
     }
-    var bLeft = JAM.call(this.get, this, ["border-left"], JAM.policy.p9C5FFCABA70857D69F2974E6410A585B5EFE64DC);
-    var bRight = JAM.call(this.get, this, ["border-right"], JAM.policy.p9C5FFCABA70857D69F2974E6410A585B5EFE64DC);
-    var pLeft = JAM.call(this.get, this, ["padding-left"], JAM.policy.p9C5FFCABA70857D69F2974E6410A585B5EFE64DC);
-    var pRight = JAM.call(this.get, this, ["padding-right"], JAM.policy.p9C5FFCABA70857D69F2974E6410A585B5EFE64DC);
+    var bLeft = JAM.call(this.get, this, ["border-left"], JAM.policy.p1);
+    var bRight = JAM.call(this.get, this, ["border-right"], JAM.policy.p1);
+    var pLeft = JAM.call(this.get, this, ["padding-left"], JAM.policy.p1);
+    var pRight = JAM.call(this.get, this, ["padding-right"], JAM.policy.p1);
     var v2496 = this._preComputing;
     var v1079 = !v2496;
     if(v1079) {
-      JAM.call(this._end, this, [], JAM.policy.p9C5FFCABA70857D69F2974E6410A585B5EFE64DC)
+      JAM.call(this._end, this, [], JAM.policy.p1)
     }
     var v3304 = bWidth - bLeft;
     var v2497 = v3304 - bRight;
@@ -5212,26 +5212,26 @@ function v187() {
     var v2498 = this._preComputing;
     var v1081 = !v2498;
     if(v1081) {
-      JAM.call(this._begin, this, [], JAM.policy.p9C5FFCABA70857D69F2974E6410A585B5EFE64DC)
+      JAM.call(this._begin, this, [], JAM.policy.p1)
     }
-    var bHeight = JAM.call(this.get, this, ["border-box-height"], JAM.policy.p9C5FFCABA70857D69F2974E6410A585B5EFE64DC);
+    var bHeight = JAM.call(this.get, this, ["border-box-height"], JAM.policy.p1);
     var v1083 = bHeight <= 0;
     if(v1083) {
       var v2499 = this._preComputing;
       var v1082 = !v2499;
       if(v1082) {
-        JAM.call(this._end, this, [], JAM.policy.p9C5FFCABA70857D69F2974E6410A585B5EFE64DC)
+        JAM.call(this._end, this, [], JAM.policy.p1)
       }
       return 0
     }
-    var bTop = JAM.call(this.get, this, ["border-top"], JAM.policy.p9C5FFCABA70857D69F2974E6410A585B5EFE64DC);
-    var bBottom = JAM.call(this.get, this, ["border-bottom"], JAM.policy.p9C5FFCABA70857D69F2974E6410A585B5EFE64DC);
-    var pTop = JAM.call(this.get, this, ["padding-top"], JAM.policy.p9C5FFCABA70857D69F2974E6410A585B5EFE64DC);
-    var pBottom = JAM.call(this.get, this, ["padding-bottom"], JAM.policy.p9C5FFCABA70857D69F2974E6410A585B5EFE64DC);
+    var bTop = JAM.call(this.get, this, ["border-top"], JAM.policy.p1);
+    var bBottom = JAM.call(this.get, this, ["border-bottom"], JAM.policy.p1);
+    var pTop = JAM.call(this.get, this, ["padding-top"], JAM.policy.p1);
+    var pBottom = JAM.call(this.get, this, ["padding-bottom"], JAM.policy.p1);
     var v2500 = this._preComputing;
     var v1084 = !v2500;
     if(v1084) {
-      JAM.call(this._end, this, [], JAM.policy.p9C5FFCABA70857D69F2974E6410A585B5EFE64DC)
+      JAM.call(this._end, this, [], JAM.policy.p1)
     }
     var v3305 = bHeight - bTop;
     var v2501 = v3305 - bBottom;
@@ -5245,29 +5245,29 @@ function v187() {
     function v149(key$$26) {
       var v3691 = Element.Layout;
       var v3306 = v3691.PROPERTIES;
-      var v2502 = JAM.call(v3306.include, v3306, [key$$26], JAM.policy.p9C5FFCABA70857D69F2974E6410A585B5EFE64DC);
+      var v2502 = JAM.call(v3306.include, v3306, [key$$26], JAM.policy.p1);
       var v1086 = !v2502;
       if(v1086) {
         return
       }
       var v3307 = Element.Layout;
       var v2503 = v3307.COMPOSITE_PROPERTIES;
-      var v1087 = JAM.call(v2503.include, v2503, [key$$26], JAM.policy.p9C5FFCABA70857D69F2974E6410A585B5EFE64DC);
+      var v1087 = JAM.call(v2503.include, v2503, [key$$26], JAM.policy.p1);
       if(v1087) {
         return
       }
-      var value$$86 = JAM.call(this.get, this, [key$$26], JAM.policy.p9C5FFCABA70857D69F2974E6410A585B5EFE64DC);
+      var value$$86 = JAM.call(this.get, this, [key$$26], JAM.policy.p1);
       var v1089 = value$$86 != null;
       if(v1089) {
         var JSCompiler_temp_const$$0 = css$$2;
         var JSCompiler_inline_result$$1;
         var key$$inline_32 = key$$26;
-        var v1088 = JAM.call(key$$inline_32.include, key$$inline_32, ["border"], JAM.policy.p9C5FFCABA70857D69F2974E6410A585B5EFE64DC);
+        var v1088 = JAM.call(key$$inline_32.include, key$$inline_32, ["border"], JAM.policy.p1);
         if(v1088) {
           key$$inline_32 = key$$inline_32 + "-width"
         }
-        JSCompiler_inline_result$$1 = JAM.call(key$$inline_32.camelize, key$$inline_32, [], JAM.policy.p9C5FFCABA70857D69F2974E6410A585B5EFE64DC);
-        JAM.set(JSCompiler_temp_const$$0, JSCompiler_inline_result$$1, value$$86 + "px", JAM.policy.p425E08A28862414CF7130381FE99A660F52DB811)
+        JSCompiler_inline_result$$1 = JAM.call(key$$inline_32.camelize, key$$inline_32, [], JAM.policy.p1);
+        JAM.set(JSCompiler_temp_const$$0, JSCompiler_inline_result$$1, value$$86 + "px", JAM.policy.p2)
       }
       return
     }
@@ -5279,32 +5279,32 @@ function v187() {
       var v2504 = Element.Layout;
       v1090 = v2504.PROPERTIES
     }else {
-      var v2505 = JAM.call(args$$11.join, args$$11, [" "], JAM.policy.p9C5FFCABA70857D69F2974E6410A585B5EFE64DC);
-      v1090 = JAM.call(v2505.split, v2505, [" "], JAM.policy.p9C5FFCABA70857D69F2974E6410A585B5EFE64DC)
+      var v2505 = JAM.call(args$$11.join, args$$11, [" "], JAM.policy.p1);
+      v1090 = JAM.call(v2505.split, v2505, [" "], JAM.policy.p1)
     }
     var keys$$4 = v1090;
     var css$$2 = {};
-    JAM.call(keys$$4.each, keys$$4, [v149, this], JAM.policy.p9C5FFCABA70857D69F2974E6410A585B5EFE64DC);
+    JAM.call(keys$$4.each, keys$$4, [v149, this], JAM.policy.p1);
     return css$$2
   }
   function v148() {
     var v1091 = this.toObject;
-    var obj$$17 = JAM.call(v1091.apply, v1091, [this, arguments], JAM.policy.p9C5FFCABA70857D69F2974E6410A585B5EFE64DC);
+    var obj$$17 = JAM.call(v1091.apply, v1091, [this, arguments], JAM.policy.p1);
     return JAM.new(Hash, [obj$$17])
   }
   function v147() {
     function v146(key$$25) {
       var v3692 = Element.Layout;
       var v3309 = v3692.PROPERTIES;
-      var v2507 = JAM.call(v3309.include, v3309, [key$$25], JAM.policy.p9C5FFCABA70857D69F2974E6410A585B5EFE64DC);
+      var v2507 = JAM.call(v3309.include, v3309, [key$$25], JAM.policy.p1);
       var v1092 = !v2507;
       if(v1092) {
         return
       }
-      var value$$85 = JAM.call(this.get, this, [key$$25], JAM.policy.p9C5FFCABA70857D69F2974E6410A585B5EFE64DC);
+      var value$$85 = JAM.call(this.get, this, [key$$25], JAM.policy.p1);
       var v1093 = value$$85 != null;
       if(v1093) {
-        JAM.set(obj$$16, key$$25, value$$85, JAM.policy.p425E08A28862414CF7130381FE99A660F52DB811)
+        JAM.set(obj$$16, key$$25, value$$85, JAM.policy.p2)
       }
       return
     }
@@ -5316,21 +5316,21 @@ function v187() {
       var v2508 = Element.Layout;
       v1094 = v2508.PROPERTIES
     }else {
-      var v2509 = JAM.call(args$$10.join, args$$10, [" "], JAM.policy.p9C5FFCABA70857D69F2974E6410A585B5EFE64DC);
-      v1094 = JAM.call(v2509.split, v2509, [" "], JAM.policy.p9C5FFCABA70857D69F2974E6410A585B5EFE64DC)
+      var v2509 = JAM.call(args$$10.join, args$$10, [" "], JAM.policy.p1);
+      v1094 = JAM.call(v2509.split, v2509, [" "], JAM.policy.p1)
     }
     var keys$$3 = v1094;
     var obj$$16 = {};
-    JAM.call(keys$$3.each, keys$$3, [v146, this], JAM.policy.p9C5FFCABA70857D69F2974E6410A585B5EFE64DC);
+    JAM.call(keys$$3.each, keys$$3, [v146, this], JAM.policy.p1);
     return obj$$16
   }
   function v145(bool$$2) {
     var v1095 = this.element;
-    return JAM.call(v1095.store, v1095, ["prototype_element_layout_prepared", bool$$2], JAM.policy.p9C5FFCABA70857D69F2974E6410A585B5EFE64DC)
+    return JAM.call(v1095.store, v1095, ["prototype_element_layout_prepared", bool$$2], JAM.policy.p1)
   }
   function v144() {
     var v1096 = this.element;
-    return JAM.call(v1096.retrieve, v1096, ["prototype_element_layout_prepared", false], JAM.policy.p9C5FFCABA70857D69F2974E6410A585B5EFE64DC)
+    return JAM.call(v1096.retrieve, v1096, ["prototype_element_layout_prepared", false], JAM.policy.p1)
   }
   function v143(property$$20) {
     var v1097 = Element.Layout;
@@ -5342,19 +5342,19 @@ function v187() {
     }
     var v2512 = COMPUTATIONS[property$$20];
     var v2513 = this.element;
-    var v1099 = JAM.call(v2512.call, v2512, [this, v2513], JAM.policy.p9C5FFCABA70857D69F2974E6410A585B5EFE64DC);
-    return JAM.call(this._set, this, [property$$20, v1099], JAM.policy.p9C5FFCABA70857D69F2974E6410A585B5EFE64DC)
+    var v1099 = JAM.call(v2512.call, v2512, [this, v2513], JAM.policy.p1);
+    return JAM.call(this._set, this, [property$$20, v1099], JAM.policy.p1)
   }
   function v142() {
     var element$$115 = this.element;
-    var originalStyles$$3 = JAM.call(element$$115.retrieve, element$$115, ["prototype_original_styles"], JAM.policy.p9C5FFCABA70857D69F2974E6410A585B5EFE64DC);
-    JAM.call(element$$115.store, element$$115, ["prototype_original_styles", null], JAM.policy.p9C5FFCABA70857D69F2974E6410A585B5EFE64DC);
-    JAM.call(element$$115.setStyle, element$$115, [originalStyles$$3], JAM.policy.p9C5FFCABA70857D69F2974E6410A585B5EFE64DC);
-    JAM.call(this._setPrepared, this, [false], JAM.policy.p9C5FFCABA70857D69F2974E6410A585B5EFE64DC);
+    var originalStyles$$3 = JAM.call(element$$115.retrieve, element$$115, ["prototype_original_styles"], JAM.policy.p1);
+    JAM.call(element$$115.store, element$$115, ["prototype_original_styles", null], JAM.policy.p1);
+    JAM.call(element$$115.setStyle, element$$115, [originalStyles$$3], JAM.policy.p1);
+    JAM.call(this._setPrepared, this, [false], JAM.policy.p1);
     return
   }
   function v141() {
-    var v1100 = JAM.call(this._isPrepared, this, [], JAM.policy.p9C5FFCABA70857D69F2974E6410A585B5EFE64DC);
+    var v1100 = JAM.call(this._isPrepared, this, [], JAM.policy.p1);
     if(v1100) {
       return
     }
@@ -5368,14 +5368,14 @@ function v187() {
       }
       var v1103 = v2514;
       for(;v1103;) {
-        var display$$inline_30 = JAM.call(element$$inline_29.getStyle, element$$inline_29, ["display"], JAM.policy.p9C5FFCABA70857D69F2974E6410A585B5EFE64DC);
+        var display$$inline_30 = JAM.call(element$$inline_29.getStyle, element$$inline_29, ["display"], JAM.policy.p1);
         var v1101 = display$$inline_30 === "none";
         if(v1101) {
           JSCompiler_inline_result$$5 = false;
           break JSCompiler_inline_label_isDisplayed_31
         }
         var v1102 = element$$inline_29.parentNode;
-        element$$inline_29 = JAM.call($, null, [v1102], JAM.policy.p9C5FFCABA70857D69F2974E6410A585B5EFE64DC);
+        element$$inline_29 = JAM.call($, null, [v1102], JAM.policy.p1);
         var v2515 = element$$inline_29;
         if(v2515) {
           v2515 = element$$inline_29.parentNode
@@ -5385,7 +5385,7 @@ function v187() {
       JSCompiler_inline_result$$5 = true
     }
     if(JSCompiler_inline_result$$5) {
-      JAM.call(this._setPrepared, this, [true], JAM.policy.p9C5FFCABA70857D69F2974E6410A585B5EFE64DC);
+      JAM.call(this._setPrepared, this, [true], JAM.policy.p1);
       return
     }
     var v3311 = element$$114.style;
@@ -5417,8 +5417,8 @@ function v187() {
     }
     var v1107 = v2519;
     var originalStyles$$2 = {position:v1104, width:v1105, visibility:v1106, display:v1107};
-    JAM.call(element$$114.store, element$$114, ["prototype_original_styles", originalStyles$$2], JAM.policy.p9C5FFCABA70857D69F2974E6410A585B5EFE64DC);
-    var position$$3 = JAM.call(getRawStyle, null, [element$$114, "position"], JAM.policy.p9C5FFCABA70857D69F2974E6410A585B5EFE64DC);
+    JAM.call(element$$114.store, element$$114, ["prototype_original_styles", originalStyles$$2], JAM.policy.p1);
+    var position$$3 = JAM.call(getRawStyle, null, [element$$114, "position"], JAM.policy.p1);
     var width$$9 = element$$114.offsetWidth;
     var v2520 = width$$9 === 0;
     var v3319 = !v2520;
@@ -5444,7 +5444,7 @@ function v187() {
     if(v1111) {
       tempStyles.position = "absolute"
     }
-    JAM.call(element$$114.setStyle, element$$114, [tempStyles], JAM.policy.p9C5FFCABA70857D69F2974E6410A585B5EFE64DC);
+    JAM.call(element$$114.setStyle, element$$114, [tempStyles], JAM.policy.p1);
     var positionedWidth = element$$114.offsetWidth;
     var newWidth;
     var v2522 = width$$9;
@@ -5465,35 +5465,35 @@ function v187() {
         newWidth = getContentWidth(element$$114, context$$28)
       }else {
         var parent$$3 = element$$114.parentNode;
-        var v1112 = JAM.call($, null, [parent$$3], JAM.policy.p9C5FFCABA70857D69F2974E6410A585B5EFE64DC);
-        var pLayout = JAM.call(v1112.getLayout, v1112, [], JAM.policy.p9C5FFCABA70857D69F2974E6410A585B5EFE64DC);
-        var v3896 = JAM.call(pLayout.get, pLayout, ["width"], JAM.policy.p9C5FFCABA70857D69F2974E6410A585B5EFE64DC);
-        var v3897 = JAM.call(this.get, this, ["margin-left"], JAM.policy.p9C5FFCABA70857D69F2974E6410A585B5EFE64DC);
+        var v1112 = JAM.call($, null, [parent$$3], JAM.policy.p1);
+        var pLayout = JAM.call(v1112.getLayout, v1112, [], JAM.policy.p1);
+        var v3896 = JAM.call(pLayout.get, pLayout, ["width"], JAM.policy.p1);
+        var v3897 = JAM.call(this.get, this, ["margin-left"], JAM.policy.p1);
         var v3839 = v3896 - v3897;
-        var v3840 = JAM.call(this.get, this, ["border-left"], JAM.policy.p9C5FFCABA70857D69F2974E6410A585B5EFE64DC);
+        var v3840 = JAM.call(this.get, this, ["border-left"], JAM.policy.p1);
         var v3693 = v3839 - v3840;
-        var v3694 = JAM.call(this.get, this, ["padding-left"], JAM.policy.p9C5FFCABA70857D69F2974E6410A585B5EFE64DC);
+        var v3694 = JAM.call(this.get, this, ["padding-left"], JAM.policy.p1);
         var v3321 = v3693 - v3694;
-        var v3322 = JAM.call(this.get, this, ["padding-right"], JAM.policy.p9C5FFCABA70857D69F2974E6410A585B5EFE64DC);
+        var v3322 = JAM.call(this.get, this, ["padding-right"], JAM.policy.p1);
         var v2524 = v3321 - v3322;
-        var v2525 = JAM.call(this.get, this, ["border-right"], JAM.policy.p9C5FFCABA70857D69F2974E6410A585B5EFE64DC);
+        var v2525 = JAM.call(this.get, this, ["border-right"], JAM.policy.p1);
         var v1113 = v2524 - v2525;
-        var v1114 = JAM.call(this.get, this, ["margin-right"], JAM.policy.p9C5FFCABA70857D69F2974E6410A585B5EFE64DC);
+        var v1114 = JAM.call(this.get, this, ["margin-right"], JAM.policy.p1);
         newWidth = v1113 - v1114
       }
     }
     var v2526 = newWidth + "px";
     var v1117 = {width:v2526};
-    JAM.call(element$$114.setStyle, element$$114, [v1117], JAM.policy.p9C5FFCABA70857D69F2974E6410A585B5EFE64DC);
-    JAM.call(this._setPrepared, this, [true], JAM.policy.p9C5FFCABA70857D69F2974E6410A585B5EFE64DC);
+    JAM.call(element$$114.setStyle, element$$114, [v1117], JAM.policy.p1);
+    JAM.call(this._setPrepared, this, [true], JAM.policy.p1);
     return
   }
   function v140($super$$4, property$$19) {
-    var value$$84 = JAM.call($super$$4, null, [property$$19], JAM.policy.p9C5FFCABA70857D69F2974E6410A585B5EFE64DC);
+    var value$$84 = JAM.call($super$$4, null, [property$$19], JAM.policy.p1);
     var v1118;
     var v2527 = value$$84 === null;
     if(v2527) {
-      v1118 = JAM.call(this._compute, this, [property$$19], JAM.policy.p9C5FFCABA70857D69F2974E6410A585B5EFE64DC)
+      v1118 = JAM.call(this._compute, this, [property$$19], JAM.policy.p1)
     }else {
       v1118 = value$$84
     }
@@ -5505,27 +5505,27 @@ function v187() {
   function v138(property$$17, value$$82) {
     var v2528 = Hash.prototype;
     var v1119 = v2528.set;
-    return JAM.call(v1119.call, v1119, [this, property$$17, value$$82], JAM.policy.p9C5FFCABA70857D69F2974E6410A585B5EFE64DC)
+    return JAM.call(v1119.call, v1119, [this, property$$17, value$$82], JAM.policy.p1)
   }
   function v137($super$$3, element$$113, preCompute$$1) {
     function v136(property$$16) {
-      JAM.call(this._set, this, [property$$16, null], JAM.policy.p9C5FFCABA70857D69F2974E6410A585B5EFE64DC);
+      JAM.call(this._set, this, [property$$16, null], JAM.policy.p1);
       return
     }
-    JAM.call($super$$3, null, [], JAM.policy.p9C5FFCABA70857D69F2974E6410A585B5EFE64DC);
-    var v3992 = JAM.call($, null, [element$$113], JAM.policy.p9C5FFCABA70857D69F2974E6410A585B5EFE64DC);
+    JAM.call($super$$3, null, [], JAM.policy.p1);
+    var v3992 = JAM.call($, null, [element$$113], JAM.policy.p1);
     this.element = v3992;
     var v2529 = Element.Layout;
     var v1120 = v2529.PROPERTIES;
-    JAM.call(v1120.each, v1120, [v136, this], JAM.policy.p9C5FFCABA70857D69F2974E6410A585B5EFE64DC);
+    JAM.call(v1120.each, v1120, [v136, this], JAM.policy.p1);
     if(preCompute$$1) {
       this._preComputing = true;
-      JAM.call(this._begin, this, [], JAM.policy.p9C5FFCABA70857D69F2974E6410A585B5EFE64DC);
+      JAM.call(this._begin, this, [], JAM.policy.p1);
       var v2530 = Element.Layout;
       var v1121 = v2530.PROPERTIES;
       var v1122 = this._compute;
-      JAM.call(v1121.each, v1121, [v1122, this], JAM.policy.p9C5FFCABA70857D69F2974E6410A585B5EFE64DC);
-      JAM.call(this._end, this, [], JAM.policy.p9C5FFCABA70857D69F2974E6410A585B5EFE64DC);
+      JAM.call(v1121.each, v1121, [v1122, this], JAM.policy.p1);
+      JAM.call(this._end, this, [], JAM.policy.p1);
       this._preComputing = false
     }
     return
@@ -5541,7 +5541,7 @@ function v187() {
     return element$$112
   }
   function getRawStyle(element$$85, style$$6) {
-    element$$85 = JAM.call($, null, [element$$85], JAM.policy.p9C5FFCABA70857D69F2974E6410A585B5EFE64DC);
+    element$$85 = JAM.call($, null, [element$$85], JAM.policy.p1);
     var v1125 = element$$85.style;
     var value$$79 = v1125[style$$6];
     var v2532 = !value$$79;
@@ -5552,7 +5552,7 @@ function v187() {
     var v1128 = v2532;
     if(v1128) {
       var v1126 = document.defaultView;
-      var css$$1 = JAM.call(v1126.getComputedStyle, v1126, [element$$85, null], JAM.policy.p9C5FFCABA70857D69F2974E6410A585B5EFE64DC);
+      var css$$1 = JAM.call(v1126.getComputedStyle, v1126, [element$$85, null], JAM.policy.p1);
       var v1127;
       if(css$$1) {
         v1127 = css$$1[style$$6]
@@ -5627,28 +5627,28 @@ function v187() {
   }
   function getPixelValue(value$$81, property$$14, context$$27) {
     var element$$88 = null;
-    var v1140 = JAM.call(Object.isElement, Object, [value$$81], JAM.policy.p9C5FFCABA70857D69F2974E6410A585B5EFE64DC);
+    var v1140 = JAM.call(Object.isElement, Object, [value$$81], JAM.policy.p1);
     if(v1140) {
       element$$88 = value$$81;
-      value$$81 = JAM.call(getRawStyle, null, [element$$88, property$$14], JAM.policy.p9C5FFCABA70857D69F2974E6410A585B5EFE64DC)
+      value$$81 = JAM.call(getRawStyle, null, [element$$88, property$$14], JAM.policy.p1)
     }
     var v2540 = value$$81 === null;
     var v3326 = !v2540;
     if(v3326) {
-      v2540 = JAM.call(Object.isUndefined, Object, [value$$81], JAM.policy.p9C5FFCABA70857D69F2974E6410A585B5EFE64DC)
+      v2540 = JAM.call(Object.isUndefined, Object, [value$$81], JAM.policy.p1)
     }
     var v1141 = v2540;
     if(v1141) {
       return null
     }
-    var v1142 = JAM.call(/^(?:-)?\d+(\.\d+)?(px)?$/i.test, /^(?:-)?\d+(\.\d+)?(px)?$/i, [value$$81], JAM.policy.p9C5FFCABA70857D69F2974E6410A585B5EFE64DC);
+    var v1142 = JAM.call(/^(?:-)?\d+(\.\d+)?(px)?$/i.test, /^(?:-)?\d+(\.\d+)?(px)?$/i, [value$$81], JAM.policy.p1);
     if(v1142) {
-      return JAM.call(window.parseFloat, window, [value$$81], JAM.policy.p9C5FFCABA70857D69F2974E6410A585B5EFE64DC)
+      return JAM.call(window.parseFloat, window, [value$$81], JAM.policy.p1)
     }
-    var isPercentage = JAM.call(value$$81.include, value$$81, ["%"], JAM.policy.p9C5FFCABA70857D69F2974E6410A585B5EFE64DC);
+    var isPercentage = JAM.call(value$$81.include, value$$81, ["%"], JAM.policy.p1);
     var v1143 = document.viewport;
     var isViewport = context$$27 === v1143;
-    var v2541 = JAM.call(/\d/.test, /\d/, [value$$81], JAM.policy.p9C5FFCABA70857D69F2974E6410A585B5EFE64DC);
+    var v2541 = JAM.call(/\d/.test, /\d/, [value$$81], JAM.policy.p1);
     if(v2541) {
       var v3327 = element$$88;
       if(v3327) {
@@ -5690,7 +5690,7 @@ function v187() {
       context$$27 = v1152;
       var decimal;
       JSCompiler_inline_label_toDecimal_28: {
-        var match$$inline_27 = JAM.call(value$$81.match, value$$81, [/^(\d+)%?$/i], JAM.policy.p9C5FFCABA70857D69F2974E6410A585B5EFE64DC);
+        var match$$inline_27 = JAM.call(value$$81.match, value$$81, [/^(\d+)%?$/i], JAM.policy.p1);
         var v1153 = !match$$inline_27;
         if(v1153) {
           decimal = null;
@@ -5701,24 +5701,24 @@ function v187() {
         decimal = v1154 / 100
       }
       var whole = null;
-      var v1155 = JAM.call(property$$14.include, property$$14, ["left"], JAM.policy.p9C5FFCABA70857D69F2974E6410A585B5EFE64DC);
+      var v1155 = JAM.call(property$$14.include, property$$14, ["left"], JAM.policy.p1);
       var v2546 = !v1155;
       if(v2546) {
-        var v2545 = JAM.call(property$$14.include, property$$14, ["right"], JAM.policy.p9C5FFCABA70857D69F2974E6410A585B5EFE64DC);
+        var v2545 = JAM.call(property$$14.include, property$$14, ["right"], JAM.policy.p1);
         var v3328 = !v2545;
         if(v3328) {
-          v2545 = JAM.call(property$$14.include, property$$14, ["width"], JAM.policy.p9C5FFCABA70857D69F2974E6410A585B5EFE64DC)
+          v2545 = JAM.call(property$$14.include, property$$14, ["width"], JAM.policy.p1)
         }
         v1155 = v2545
       }
       var isHorizontal = v1155;
-      var v1156 = JAM.call(property$$14.include, property$$14, ["top"], JAM.policy.p9C5FFCABA70857D69F2974E6410A585B5EFE64DC);
+      var v1156 = JAM.call(property$$14.include, property$$14, ["top"], JAM.policy.p1);
       var v2548 = !v1156;
       if(v2548) {
-        var v2547 = JAM.call(property$$14.include, property$$14, ["bottom"], JAM.policy.p9C5FFCABA70857D69F2974E6410A585B5EFE64DC);
+        var v2547 = JAM.call(property$$14.include, property$$14, ["bottom"], JAM.policy.p1);
         var v3329 = !v2547;
         if(v3329) {
-          v2547 = JAM.call(property$$14.include, property$$14, ["height"], JAM.policy.p9C5FFCABA70857D69F2974E6410A585B5EFE64DC)
+          v2547 = JAM.call(property$$14.include, property$$14, ["height"], JAM.policy.p1)
         }
         v1156 = v2547
       }
@@ -5728,21 +5728,21 @@ function v187() {
       if(v1161) {
         if(isHorizontal) {
           var v1157 = document.viewport;
-          whole = JAM.call(v1157.getWidth, v1157, [], JAM.policy.p9C5FFCABA70857D69F2974E6410A585B5EFE64DC)
+          whole = JAM.call(v1157.getWidth, v1157, [], JAM.policy.p1)
         }else {
           if(isVertical) {
             var v1158 = document.viewport;
-            whole = JAM.call(v1158.getHeight, v1158, [], JAM.policy.p9C5FFCABA70857D69F2974E6410A585B5EFE64DC)
+            whole = JAM.call(v1158.getHeight, v1158, [], JAM.policy.p1)
           }
         }
       }else {
         if(isHorizontal) {
-          var v1159 = JAM.call($, null, [context$$27], JAM.policy.p9C5FFCABA70857D69F2974E6410A585B5EFE64DC);
-          whole = JAM.call(v1159.measure, v1159, ["width"], JAM.policy.p9C5FFCABA70857D69F2974E6410A585B5EFE64DC)
+          var v1159 = JAM.call($, null, [context$$27], JAM.policy.p1);
+          whole = JAM.call(v1159.measure, v1159, ["width"], JAM.policy.p1)
         }else {
           if(isVertical) {
-            var v1160 = JAM.call($, null, [context$$27], JAM.policy.p9C5FFCABA70857D69F2974E6410A585B5EFE64DC);
-            whole = JAM.call(v1160.measure, v1160, ["height"], JAM.policy.p9C5FFCABA70857D69F2974E6410A585B5EFE64DC)
+            var v1160 = JAM.call($, null, [context$$27], JAM.policy.p1);
+            whole = JAM.call(v1160.measure, v1160, ["height"], JAM.policy.p1)
           }
         }
       }
@@ -5762,21 +5762,21 @@ function v187() {
     return JAM.new(v1164, [element$$90, preCompute])
   }
   function measure(element$$91, property$$15) {
-    var v2551 = JAM.call($, null, [element$$91], JAM.policy.p9C5FFCABA70857D69F2974E6410A585B5EFE64DC);
-    var v1165 = JAM.call(v2551.getLayout, v2551, [], JAM.policy.p9C5FFCABA70857D69F2974E6410A585B5EFE64DC);
-    return JAM.call(v1165.get, v1165, [property$$15], JAM.policy.p9C5FFCABA70857D69F2974E6410A585B5EFE64DC)
+    var v2551 = JAM.call($, null, [element$$91], JAM.policy.p1);
+    var v1165 = JAM.call(v2551.getLayout, v2551, [], JAM.policy.p1);
+    return JAM.call(v1165.get, v1165, [property$$15], JAM.policy.p1)
   }
   function getHeight(element$$92) {
-    var v1166 = JAM.call(Element.getDimensions, Element, [element$$92], JAM.policy.p9C5FFCABA70857D69F2974E6410A585B5EFE64DC);
+    var v1166 = JAM.call(Element.getDimensions, Element, [element$$92], JAM.policy.p1);
     return v1166.height
   }
   function getWidth(element$$93) {
-    var v1167 = JAM.call(Element.getDimensions, Element, [element$$93], JAM.policy.p9C5FFCABA70857D69F2974E6410A585B5EFE64DC);
+    var v1167 = JAM.call(Element.getDimensions, Element, [element$$93], JAM.policy.p1);
     return v1167.width
   }
   function getDimensions(element$$94) {
-    element$$94 = JAM.call($, null, [element$$94], JAM.policy.p9C5FFCABA70857D69F2974E6410A585B5EFE64DC);
-    var display$$1 = JAM.call(Element.getStyle, Element, [element$$94, "display"], JAM.policy.p9C5FFCABA70857D69F2974E6410A585B5EFE64DC);
+    element$$94 = JAM.call($, null, [element$$94], JAM.policy.p1);
+    var display$$1 = JAM.call(Element.getStyle, Element, [element$$94, "display"], JAM.policy.p1);
     var v2552 = display$$1;
     if(v2552) {
       v2552 = display$$1 !== "none"
@@ -5798,15 +5798,15 @@ function v187() {
     if(v1174) {
       newStyles.position = "absolute"
     }
-    JAM.call(Element.setStyle, Element, [element$$94, newStyles], JAM.policy.p9C5FFCABA70857D69F2974E6410A585B5EFE64DC);
+    JAM.call(Element.setStyle, Element, [element$$94, newStyles], JAM.policy.p1);
     var v1175 = element$$94.offsetWidth;
     var v1176 = element$$94.offsetHeight;
     var dimensions = {width:v1175, height:v1176};
-    JAM.call(Element.setStyle, Element, [element$$94, originalStyles], JAM.policy.p9C5FFCABA70857D69F2974E6410A585B5EFE64DC);
+    JAM.call(Element.setStyle, Element, [element$$94, originalStyles], JAM.policy.p1);
     return dimensions
   }
   function getOffsetParent(element$$95) {
-    element$$95 = JAM.call($, null, [element$$95], JAM.policy.p9C5FFCABA70857D69F2974E6410A585B5EFE64DC);
+    element$$95 = JAM.call($, null, [element$$95], JAM.policy.p1);
     var v3330 = element$$95.nodeType;
     var v3331 = Node.DOCUMENT_NODE;
     var v2554 = v3330 === v3331;
@@ -5816,12 +5816,12 @@ function v187() {
       var v3697 = !v3332;
       if(v3697) {
         var v3898 = element$$95.nodeName;
-        var v3842 = JAM.call(v3898.toUpperCase, v3898, [], JAM.policy.p9C5FFCABA70857D69F2974E6410A585B5EFE64DC);
+        var v3842 = JAM.call(v3898.toUpperCase, v3898, [], JAM.policy.p1);
         var v3696 = v3842 === "BODY";
         var v3844 = !v3696;
         if(v3844) {
           var v3899 = element$$95.nodeName;
-          var v3843 = JAM.call(v3899.toUpperCase, v3899, [], JAM.policy.p9C5FFCABA70857D69F2974E6410A585B5EFE64DC);
+          var v3843 = JAM.call(v3899.toUpperCase, v3899, [], JAM.policy.p1);
           v3696 = v3843 === "HTML"
         }
         v3332 = v3696
@@ -5831,9 +5831,9 @@ function v187() {
     var v1178 = v2554;
     if(v1178) {
       var v1177 = document.body;
-      return JAM.call($, null, [v1177], JAM.policy.p9C5FFCABA70857D69F2974E6410A585B5EFE64DC)
+      return JAM.call($, null, [v1177], JAM.policy.p1)
     }
-    var v1179 = JAM.call(Element.getStyle, Element, [element$$95, "display"], JAM.policy.p9C5FFCABA70857D69F2974E6410A585B5EFE64DC);
+    var v1179 = JAM.call(Element.getStyle, Element, [element$$95, "display"], JAM.policy.p1);
     var isInline = v1179 === "inline";
     var v2555 = !isInline;
     if(v2555) {
@@ -5842,7 +5842,7 @@ function v187() {
     var v1181 = v2555;
     if(v1181) {
       var v1180 = element$$95.offsetParent;
-      return JAM.call($, null, [v1180], JAM.policy.p9C5FFCABA70857D69F2974E6410A585B5EFE64DC)
+      return JAM.call($, null, [v1180], JAM.policy.p1)
     }
     var v2556 = element$$95 = element$$95.parentNode;
     if(v2556) {
@@ -5851,18 +5851,18 @@ function v187() {
     }
     var v1184 = v2556;
     for(;v1184;) {
-      var v2557 = JAM.call(Element.getStyle, Element, [element$$95, "position"], JAM.policy.p9C5FFCABA70857D69F2974E6410A585B5EFE64DC);
+      var v2557 = JAM.call(Element.getStyle, Element, [element$$95, "position"], JAM.policy.p1);
       var v1183 = v2557 !== "static";
       if(v1183) {
         var v1182;
         var v3698 = element$$95.nodeName;
-        var v3335 = JAM.call(v3698.toUpperCase, v3698, [], JAM.policy.p9C5FFCABA70857D69F2974E6410A585B5EFE64DC);
+        var v3335 = JAM.call(v3698.toUpperCase, v3698, [], JAM.policy.p1);
         var v2559 = v3335 === "HTML";
         if(v2559) {
           var v2558 = document.body;
-          v1182 = JAM.call($, null, [v2558], JAM.policy.p9C5FFCABA70857D69F2974E6410A585B5EFE64DC)
+          v1182 = JAM.call($, null, [v2558], JAM.policy.p1)
         }else {
-          v1182 = JAM.call($, null, [element$$95], JAM.policy.p9C5FFCABA70857D69F2974E6410A585B5EFE64DC)
+          v1182 = JAM.call($, null, [element$$95], JAM.policy.p1)
         }
         return v1182
       }
@@ -5874,10 +5874,10 @@ function v187() {
       v1184 = v2560
     }
     var v1185 = document.body;
-    return JAM.call($, null, [v1185], JAM.policy.p9C5FFCABA70857D69F2974E6410A585B5EFE64DC)
+    return JAM.call($, null, [v1185], JAM.policy.p1)
   }
   function cumulativeOffset(element$$96) {
-    element$$96 = JAM.call($, null, [element$$96], JAM.policy.p9C5FFCABA70857D69F2974E6410A585B5EFE64DC);
+    element$$96 = JAM.call($, null, [element$$96], JAM.policy.p1);
     var valueT = 0;
     var valueL = 0;
     var v1186 = element$$96.parentNode;
@@ -5904,8 +5904,8 @@ function v187() {
     return JAM.new(v1187, [valueL, valueT])
   }
   function positionedOffset(element$$97) {
-    element$$97 = JAM.call($, null, [element$$97], JAM.policy.p9C5FFCABA70857D69F2974E6410A585B5EFE64DC);
-    var layout = JAM.call(element$$97.getLayout, element$$97, [], JAM.policy.p9C5FFCABA70857D69F2974E6410A585B5EFE64DC);
+    element$$97 = JAM.call($, null, [element$$97], JAM.policy.p1);
+    var layout = JAM.call(element$$97.getLayout, element$$97, [], JAM.policy.p1);
     var valueT$$1 = 0;
     var valueL$$1 = 0;
     do {
@@ -5926,12 +5926,12 @@ function v187() {
       element$$97 = element$$97.offsetParent;
       if(element$$97) {
         var v3341 = element$$97.nodeName;
-        var v2565 = JAM.call(v3341.toUpperCase, v3341, [], JAM.policy.p9C5FFCABA70857D69F2974E6410A585B5EFE64DC);
+        var v2565 = JAM.call(v3341.toUpperCase, v3341, [], JAM.policy.p1);
         var v1188 = v2565 === "BODY";
         if(v1188) {
           break
         }
-        var p$$2 = JAM.call(Element.getStyle, Element, [element$$97, "position"], JAM.policy.p9C5FFCABA70857D69F2974E6410A585B5EFE64DC);
+        var p$$2 = JAM.call(Element.getStyle, Element, [element$$97, "position"], JAM.policy.p1);
         var v1189 = p$$2 !== "static";
         if(v1189) {
           break
@@ -5939,10 +5939,10 @@ function v187() {
       }
     }while(element$$97);
     var v2566 = valueL$$1;
-    var v2567 = JAM.call(layout.get, layout, ["margin-top"], JAM.policy.p9C5FFCABA70857D69F2974E6410A585B5EFE64DC);
+    var v2567 = JAM.call(layout.get, layout, ["margin-top"], JAM.policy.p1);
     valueL$$1 = v2566 - v2567;
     var v2568 = valueT$$1;
-    var v2569 = JAM.call(layout.get, layout, ["margin-left"], JAM.policy.p9C5FFCABA70857D69F2974E6410A585B5EFE64DC);
+    var v2569 = JAM.call(layout.get, layout, ["margin-left"], JAM.policy.p1);
     valueT$$1 = v2568 - v2569;
     var v1190 = Element.Offset;
     return JAM.new(v1190, [valueL$$1, valueT$$1])
@@ -5974,7 +5974,7 @@ function v187() {
     var valueT$$3 = 0;
     var valueL$$3 = 0;
     var docBody = document.body;
-    var element$$99 = JAM.call($, null, [forElement], JAM.policy.p9C5FFCABA70857D69F2974E6410A585B5EFE64DC);
+    var element$$99 = JAM.call($, null, [forElement], JAM.policy.p1);
     var v1193 = element$$99 = element$$99.offsetParent;
     do {
       var v3344 = element$$99.offsetTop;
@@ -5994,7 +5994,7 @@ function v187() {
       var v3346 = element$$99.offsetParent;
       var v2574 = v3346 == docBody;
       if(v2574) {
-        var v3347 = JAM.call(Element.getStyle, Element, [element$$99, "position"], JAM.policy.p9C5FFCABA70857D69F2974E6410A585B5EFE64DC);
+        var v3347 = JAM.call(Element.getStyle, Element, [element$$99, "position"], JAM.policy.p1);
         v2574 = v3347 == "absolute"
       }
       var v1192 = v2574;
@@ -6029,59 +6029,59 @@ function v187() {
     return JAM.new(v1196, [valueL$$3, valueT$$3])
   }
   function absolutize(element$$100) {
-    element$$100 = JAM.call($, null, [element$$100], JAM.policy.p9C5FFCABA70857D69F2974E6410A585B5EFE64DC);
-    var v2577 = JAM.call(Element.getStyle, Element, [element$$100, "position"], JAM.policy.p9C5FFCABA70857D69F2974E6410A585B5EFE64DC);
+    element$$100 = JAM.call($, null, [element$$100], JAM.policy.p1);
+    var v2577 = JAM.call(Element.getStyle, Element, [element$$100, "position"], JAM.policy.p1);
     var v1197 = v2577 === "absolute";
     if(v1197) {
       return element$$100
     }
-    var offsetParent = JAM.call(getOffsetParent, null, [element$$100], JAM.policy.p9C5FFCABA70857D69F2974E6410A585B5EFE64DC);
-    var eOffset = JAM.call(element$$100.viewportOffset, element$$100, [], JAM.policy.p9C5FFCABA70857D69F2974E6410A585B5EFE64DC);
-    var pOffset = JAM.call(offsetParent.viewportOffset, offsetParent, [], JAM.policy.p9C5FFCABA70857D69F2974E6410A585B5EFE64DC);
-    var offset$$12 = JAM.call(eOffset.relativeTo, eOffset, [pOffset], JAM.policy.p9C5FFCABA70857D69F2974E6410A585B5EFE64DC);
-    var layout$$1 = JAM.call(element$$100.getLayout, element$$100, [], JAM.policy.p9C5FFCABA70857D69F2974E6410A585B5EFE64DC);
-    var v2578 = JAM.call(element$$100.getStyle, element$$100, ["left"], JAM.policy.p9C5FFCABA70857D69F2974E6410A585B5EFE64DC);
-    var v2579 = JAM.call(element$$100.getStyle, element$$100, ["top"], JAM.policy.p9C5FFCABA70857D69F2974E6410A585B5EFE64DC);
-    var v2580 = JAM.call(element$$100.getStyle, element$$100, ["width"], JAM.policy.p9C5FFCABA70857D69F2974E6410A585B5EFE64DC);
-    var v2581 = JAM.call(element$$100.getStyle, element$$100, ["height"], JAM.policy.p9C5FFCABA70857D69F2974E6410A585B5EFE64DC);
+    var offsetParent = JAM.call(getOffsetParent, null, [element$$100], JAM.policy.p1);
+    var eOffset = JAM.call(element$$100.viewportOffset, element$$100, [], JAM.policy.p1);
+    var pOffset = JAM.call(offsetParent.viewportOffset, offsetParent, [], JAM.policy.p1);
+    var offset$$12 = JAM.call(eOffset.relativeTo, eOffset, [pOffset], JAM.policy.p1);
+    var layout$$1 = JAM.call(element$$100.getLayout, element$$100, [], JAM.policy.p1);
+    var v2578 = JAM.call(element$$100.getStyle, element$$100, ["left"], JAM.policy.p1);
+    var v2579 = JAM.call(element$$100.getStyle, element$$100, ["top"], JAM.policy.p1);
+    var v2580 = JAM.call(element$$100.getStyle, element$$100, ["width"], JAM.policy.p1);
+    var v2581 = JAM.call(element$$100.getStyle, element$$100, ["height"], JAM.policy.p1);
     var v1198 = {left:v2578, top:v2579, width:v2580, height:v2581};
-    JAM.call(element$$100.store, element$$100, ["prototype_absolutize_original_styles", v1198], JAM.policy.p9C5FFCABA70857D69F2974E6410A585B5EFE64DC);
+    JAM.call(element$$100.store, element$$100, ["prototype_absolutize_original_styles", v1198], JAM.policy.p1);
     var v3350 = offset$$12.top;
     var v2582 = v3350 + "px";
     var v3351 = offset$$12.left;
     var v2583 = v3351 + "px";
-    var v3352 = JAM.call(layout$$1.get, layout$$1, ["width"], JAM.policy.p9C5FFCABA70857D69F2974E6410A585B5EFE64DC);
+    var v3352 = JAM.call(layout$$1.get, layout$$1, ["width"], JAM.policy.p1);
     var v2584 = v3352 + "px";
-    var v3353 = JAM.call(layout$$1.get, layout$$1, ["height"], JAM.policy.p9C5FFCABA70857D69F2974E6410A585B5EFE64DC);
+    var v3353 = JAM.call(layout$$1.get, layout$$1, ["height"], JAM.policy.p1);
     var v2585 = v3353 + "px";
     var v1199 = {position:"absolute", top:v2582, left:v2583, width:v2584, height:v2585};
-    JAM.call(element$$100.setStyle, element$$100, [v1199], JAM.policy.p9C5FFCABA70857D69F2974E6410A585B5EFE64DC);
+    JAM.call(element$$100.setStyle, element$$100, [v1199], JAM.policy.p1);
     return element$$100
   }
   function relativize(element$$101) {
-    element$$101 = JAM.call($, null, [element$$101], JAM.policy.p9C5FFCABA70857D69F2974E6410A585B5EFE64DC);
-    var v2586 = JAM.call(Element.getStyle, Element, [element$$101, "position"], JAM.policy.p9C5FFCABA70857D69F2974E6410A585B5EFE64DC);
+    element$$101 = JAM.call($, null, [element$$101], JAM.policy.p1);
+    var v2586 = JAM.call(Element.getStyle, Element, [element$$101, "position"], JAM.policy.p1);
     var v1200 = v2586 === "relative";
     if(v1200) {
       return element$$101
     }
-    var originalStyles$$1 = JAM.call(element$$101.retrieve, element$$101, ["prototype_absolutize_original_styles"], JAM.policy.p9C5FFCABA70857D69F2974E6410A585B5EFE64DC);
+    var originalStyles$$1 = JAM.call(element$$101.retrieve, element$$101, ["prototype_absolutize_original_styles"], JAM.policy.p1);
     if(originalStyles$$1) {
-      JAM.call(element$$101.setStyle, element$$101, [originalStyles$$1], JAM.policy.p9C5FFCABA70857D69F2974E6410A585B5EFE64DC)
+      JAM.call(element$$101.setStyle, element$$101, [originalStyles$$1], JAM.policy.p1)
     }
     return element$$101
   }
   function scrollTo(element$$102) {
-    element$$102 = JAM.call($, null, [element$$102], JAM.policy.p9C5FFCABA70857D69F2974E6410A585B5EFE64DC);
-    var pos = JAM.call(Element.cumulativeOffset, Element, [element$$102], JAM.policy.p9C5FFCABA70857D69F2974E6410A585B5EFE64DC);
+    element$$102 = JAM.call($, null, [element$$102], JAM.policy.p1);
+    var pos = JAM.call(Element.cumulativeOffset, Element, [element$$102], JAM.policy.p1);
     var v1201 = pos.left;
     var v1202 = pos.top;
-    JAM.call(window.scrollTo, window, [v1201, v1202], JAM.policy.p9C5FFCABA70857D69F2974E6410A585B5EFE64DC);
+    JAM.call(window.scrollTo, window, [v1201, v1202], JAM.policy.p1);
     return element$$102
   }
   function makePositioned(element$$103) {
-    element$$103 = JAM.call($, null, [element$$103], JAM.policy.p9C5FFCABA70857D69F2974E6410A585B5EFE64DC);
-    var position$$2 = JAM.call(Element.getStyle, Element, [element$$103, "position"], JAM.policy.p9C5FFCABA70857D69F2974E6410A585B5EFE64DC);
+    element$$103 = JAM.call($, null, [element$$103], JAM.policy.p1);
+    var position$$2 = JAM.call(Element.getStyle, Element, [element$$103, "position"], JAM.policy.p1);
     var styles$$1 = {};
     var v2587 = position$$2 === "static";
     var v3354 = !v2587;
@@ -6097,30 +6097,30 @@ function v187() {
         styles$$1.top = 0;
         styles$$1.left = 0
       }
-      JAM.call(Element.setStyle, Element, [element$$103, styles$$1], JAM.policy.p9C5FFCABA70857D69F2974E6410A585B5EFE64DC);
-      JAM.call(Element.store, Element, [element$$103, "prototype_made_positioned", true], JAM.policy.p9C5FFCABA70857D69F2974E6410A585B5EFE64DC)
+      JAM.call(Element.setStyle, Element, [element$$103, styles$$1], JAM.policy.p1);
+      JAM.call(Element.store, Element, [element$$103, "prototype_made_positioned", true], JAM.policy.p1)
     }
     return element$$103
   }
   function undoPositioned(element$$104) {
-    element$$104 = JAM.call($, null, [element$$104], JAM.policy.p9C5FFCABA70857D69F2974E6410A585B5EFE64DC);
-    var storage$$2 = JAM.call(Element.getStorage, Element, [element$$104], JAM.policy.p9C5FFCABA70857D69F2974E6410A585B5EFE64DC);
-    var madePositioned = JAM.call(storage$$2.get, storage$$2, ["prototype_made_positioned"], JAM.policy.p9C5FFCABA70857D69F2974E6410A585B5EFE64DC);
+    element$$104 = JAM.call($, null, [element$$104], JAM.policy.p1);
+    var storage$$2 = JAM.call(Element.getStorage, Element, [element$$104], JAM.policy.p1);
+    var madePositioned = JAM.call(storage$$2.get, storage$$2, ["prototype_made_positioned"], JAM.policy.p1);
     if(madePositioned) {
-      JAM.call(storage$$2.unset, storage$$2, ["prototype_made_positioned"], JAM.policy.p9C5FFCABA70857D69F2974E6410A585B5EFE64DC);
+      JAM.call(storage$$2.unset, storage$$2, ["prototype_made_positioned"], JAM.policy.p1);
       var v1205 = {position:"", top:"", bottom:"", left:"", right:""};
-      JAM.call(Element.setStyle, Element, [element$$104, v1205], JAM.policy.p9C5FFCABA70857D69F2974E6410A585B5EFE64DC)
+      JAM.call(Element.setStyle, Element, [element$$104, v1205], JAM.policy.p1)
     }
     return element$$104
   }
   function makeClipping(element$$105) {
-    element$$105 = JAM.call($, null, [element$$105], JAM.policy.p9C5FFCABA70857D69F2974E6410A585B5EFE64DC);
-    var storage$$3 = JAM.call(Element.getStorage, Element, [element$$105], JAM.policy.p9C5FFCABA70857D69F2974E6410A585B5EFE64DC);
-    var madeClipping = JAM.call(storage$$3.get, storage$$3, ["prototype_made_clipping"], JAM.policy.p9C5FFCABA70857D69F2974E6410A585B5EFE64DC);
-    var v1208 = JAM.call(Object.isUndefined, Object, [madeClipping], JAM.policy.p9C5FFCABA70857D69F2974E6410A585B5EFE64DC);
+    element$$105 = JAM.call($, null, [element$$105], JAM.policy.p1);
+    var storage$$3 = JAM.call(Element.getStorage, Element, [element$$105], JAM.policy.p1);
+    var madeClipping = JAM.call(storage$$3.get, storage$$3, ["prototype_made_clipping"], JAM.policy.p1);
+    var v1208 = JAM.call(Object.isUndefined, Object, [madeClipping], JAM.policy.p1);
     if(v1208) {
-      var overflow = JAM.call(Element.getStyle, Element, [element$$105, "overflow"], JAM.policy.p9C5FFCABA70857D69F2974E6410A585B5EFE64DC);
-      JAM.call(storage$$3.set, storage$$3, ["prototype_made_clipping", overflow], JAM.policy.p9C5FFCABA70857D69F2974E6410A585B5EFE64DC);
+      var overflow = JAM.call(Element.getStyle, Element, [element$$105, "overflow"], JAM.policy.p1);
+      JAM.call(storage$$3.set, storage$$3, ["prototype_made_clipping", overflow], JAM.policy.p1);
       var v1207 = overflow !== "hidden";
       if(v1207) {
         var v1206 = element$$105.style;
@@ -6130,13 +6130,13 @@ function v187() {
     return element$$105
   }
   function undoClipping(element$$106) {
-    element$$106 = JAM.call($, null, [element$$106], JAM.policy.p9C5FFCABA70857D69F2974E6410A585B5EFE64DC);
-    var storage$$4 = JAM.call(Element.getStorage, Element, [element$$106], JAM.policy.p9C5FFCABA70857D69F2974E6410A585B5EFE64DC);
-    var overflow$$1 = JAM.call(storage$$4.get, storage$$4, ["prototype_made_clipping"], JAM.policy.p9C5FFCABA70857D69F2974E6410A585B5EFE64DC);
-    var v2589 = JAM.call(Object.isUndefined, Object, [overflow$$1], JAM.policy.p9C5FFCABA70857D69F2974E6410A585B5EFE64DC);
+    element$$106 = JAM.call($, null, [element$$106], JAM.policy.p1);
+    var storage$$4 = JAM.call(Element.getStorage, Element, [element$$106], JAM.policy.p1);
+    var overflow$$1 = JAM.call(storage$$4.get, storage$$4, ["prototype_made_clipping"], JAM.policy.p1);
+    var v2589 = JAM.call(Object.isUndefined, Object, [overflow$$1], JAM.policy.p1);
     var v1210 = !v2589;
     if(v1210) {
-      JAM.call(storage$$4.unset, storage$$4, ["prototype_made_clipping"], JAM.policy.p9C5FFCABA70857D69F2974E6410A585B5EFE64DC);
+      JAM.call(storage$$4.unset, storage$$4, ["prototype_made_clipping"], JAM.policy.p1);
       var v1209 = element$$106.style;
       v1209.overflow = overflow$$1 || ""
     }
@@ -6145,9 +6145,9 @@ function v187() {
   function clonePosition(element$$107, source$$4, options$$7) {
     var v1211 = {setLeft:true, setTop:true, setWidth:true, setHeight:true, offsetTop:0, offsetLeft:0};
     var v1212 = options$$7 || {};
-    options$$7 = JAM.call(Object.extend, Object, [v1211, v1212], JAM.policy.p9C5FFCABA70857D69F2974E6410A585B5EFE64DC);
-    source$$4 = JAM.call($, null, [source$$4], JAM.policy.p9C5FFCABA70857D69F2974E6410A585B5EFE64DC);
-    element$$107 = JAM.call($, null, [element$$107], JAM.policy.p9C5FFCABA70857D69F2974E6410A585B5EFE64DC);
+    options$$7 = JAM.call(Object.extend, Object, [v1211, v1212], JAM.policy.p1);
+    source$$4 = JAM.call($, null, [source$$4], JAM.policy.p1);
+    element$$107 = JAM.call($, null, [element$$107], JAM.policy.p1);
     var p$$3;
     var delta$$1;
     var layout$$2;
@@ -6159,16 +6159,16 @@ function v187() {
     }
     var v1215 = v2590;
     if(v1215) {
-      p$$3 = JAM.call(Element.viewportOffset, Element, [source$$4], JAM.policy.p9C5FFCABA70857D69F2974E6410A585B5EFE64DC);
+      p$$3 = JAM.call(Element.viewportOffset, Element, [source$$4], JAM.policy.p1);
       delta$$1 = [0, 0];
-      var v2591 = JAM.call(Element.getStyle, Element, [element$$107, "position"], JAM.policy.p9C5FFCABA70857D69F2974E6410A585B5EFE64DC);
+      var v2591 = JAM.call(Element.getStyle, Element, [element$$107, "position"], JAM.policy.p1);
       var v1214 = v2591 === "absolute";
       if(v1214) {
-        var parent$$2 = JAM.call(Element.getOffsetParent, Element, [element$$107], JAM.policy.p9C5FFCABA70857D69F2974E6410A585B5EFE64DC);
+        var parent$$2 = JAM.call(Element.getOffsetParent, Element, [element$$107], JAM.policy.p1);
         var v2592 = document.body;
         var v1213 = parent$$2 !== v2592;
         if(v1213) {
-          delta$$1 = JAM.call(Element.viewportOffset, Element, [parent$$2], JAM.policy.p9C5FFCABA70857D69F2974E6410A585B5EFE64DC)
+          delta$$1 = JAM.call(Element.viewportOffset, Element, [parent$$2], JAM.policy.p1)
         }
       }
     }
@@ -6179,7 +6179,7 @@ function v187() {
     }
     var v1216 = v2593;
     if(v1216) {
-      layout$$2 = JAM.call(Element.getLayout, Element, [source$$4], JAM.policy.p9C5FFCABA70857D69F2974E6410A585B5EFE64DC)
+      layout$$2 = JAM.call(Element.getLayout, Element, [source$$4], JAM.policy.p1)
     }
     var v1218 = options$$7.setLeft;
     if(v1218) {
@@ -6202,23 +6202,23 @@ function v187() {
     var v1222 = options$$7.setWidth;
     if(v1222) {
       var v1221 = styles$$2;
-      var v2598 = JAM.call(layout$$2.get, layout$$2, ["border-box-width"], JAM.policy.p9C5FFCABA70857D69F2974E6410A585B5EFE64DC);
+      var v2598 = JAM.call(layout$$2.get, layout$$2, ["border-box-width"], JAM.policy.p1);
       v1221.width = v2598 + "px"
     }
     var v1224 = options$$7.setHeight;
     if(v1224) {
       var v1223 = styles$$2;
-      var v2599 = JAM.call(layout$$2.get, layout$$2, ["border-box-height"], JAM.policy.p9C5FFCABA70857D69F2974E6410A585B5EFE64DC);
+      var v2599 = JAM.call(layout$$2.get, layout$$2, ["border-box-height"], JAM.policy.p1);
       v1223.height = v2599 + "px"
     }
-    return JAM.call(Element.setStyle, Element, [element$$107, styles$$2], JAM.policy.p9C5FFCABA70857D69F2974E6410A585B5EFE64DC)
+    return JAM.call(Element.setStyle, Element, [element$$107, styles$$2], JAM.policy.p1)
   }
   function isDetached(element$$111) {
     var v2600 = document.body;
     var v1225 = element$$111 !== v2600;
     if(v1225) {
       var v3361 = document.body;
-      var v2601 = JAM.call(Element.descendantOf, Element, [element$$111, v3361], JAM.policy.p9C5FFCABA70857D69F2974E6410A585B5EFE64DC);
+      var v2601 = JAM.call(Element.descendantOf, Element, [element$$111, v3361], JAM.policy.p1);
       v1225 = !v2601
     }
     return v1225
@@ -6236,31 +6236,31 @@ function v187() {
   }
   var v1228 = Element;
   var v2604 = {initialize:v137, _set:v138, set:v139, get:v140, _begin:v141, _end:v142, _compute:v143, _isPrepared:v144, _setPrepared:v145, toObject:v147, toHash:v148, toCSS:v150, inspect:v151};
-  var v3993 = JAM.call(Class.create, Class, [Hash, v2604], JAM.policy.p9C5FFCABA70857D69F2974E6410A585B5EFE64DC);
+  var v3993 = JAM.call(Class.create, Class, [Hash, v2604], JAM.policy.p1);
   v1228.Layout = v3993;
   var v1229 = Element.Layout;
   var v2605 = $w("height width top left right bottom border-left border-right border-top border-bottom padding-left padding-right padding-top padding-bottom margin-top margin-bottom margin-left margin-right padding-box-width padding-box-height border-box-width border-box-height margin-box-width margin-box-height");
   var v2606 = $w("padding-box-width padding-box-height margin-box-width margin-box-height border-box-width border-box-height");
   var v2607 = {"height":v152, "width":v153, "padding-box-height":v154, "padding-box-width":v155, "border-box-height":v156, "border-box-width":v157, "margin-box-height":v158, "margin-box-width":v159, "top":v160, "bottom":v161, "left":v162, "right":v163, "padding-top":v164, "padding-bottom":v165, "padding-left":v166, "padding-right":v167, "border-top":v168, "border-bottom":v169, "border-left":v170, "border-right":v171, "margin-top":v172, "margin-bottom":v173, "margin-left":v174, "margin-right":v175};
   var v1230 = {PROPERTIES:v2605, COMPOSITE_PROPERTIES:v2606, COMPUTATIONS:v2607};
-  JAM.call(Object.extend, Object, [v1229, v1230], JAM.policy.p9C5FFCABA70857D69F2974E6410A585B5EFE64DC);
+  JAM.call(Object.extend, Object, [v1229, v1230], JAM.policy.p1);
   var v2608 = document.documentElement;
   var v1233 = "getBoundingClientRect" in v2608;
   if(v1233) {
     var v2609 = Element.Layout;
     var v1231 = v2609.COMPUTATIONS;
     var v1232 = {"right":v176, "bottom":v177};
-    JAM.call(Object.extend, Object, [v1231, v1232], JAM.policy.p9C5FFCABA70857D69F2974E6410A585B5EFE64DC)
+    JAM.call(Object.extend, Object, [v1231, v1232], JAM.policy.p1)
   }
   var v1234 = Element;
   var v2610 = {initialize:v178, relativeTo:v179, inspect:v180, toString:v181, toArray:v182};
-  var v3994 = JAM.call(Class.create, Class, [v2610], JAM.policy.p9C5FFCABA70857D69F2974E6410A585B5EFE64DC);
+  var v3994 = JAM.call(Class.create, Class, [v2610], JAM.policy.p1);
   v1234.Offset = v3994;
   var v2611 = Prototype.Browser;
   var v1236 = v2611.IE;
   if(v1236) {
-    getOffsetParent = JAM.call(getOffsetParent.wrap, getOffsetParent, [v183], JAM.policy.p9C5FFCABA70857D69F2974E6410A585B5EFE64DC);
-    positionedOffset = JAM.call(positionedOffset.wrap, positionedOffset, [v184], JAM.policy.p9C5FFCABA70857D69F2974E6410A585B5EFE64DC)
+    getOffsetParent = JAM.call(getOffsetParent.wrap, getOffsetParent, [v183], JAM.policy.p1);
+    positionedOffset = JAM.call(positionedOffset.wrap, positionedOffset, [v184], JAM.policy.p1)
   }else {
     var v2612 = Prototype.Browser;
     var v1235 = v2612.Webkit;
@@ -6269,12 +6269,12 @@ function v187() {
     }
   }
   var v1237 = {getLayout:getLayout, measure:measure, getWidth:getWidth, getHeight:getHeight, getDimensions:getDimensions, getOffsetParent:getOffsetParent, cumulativeOffset:cumulativeOffset, positionedOffset:positionedOffset, cumulativeScrollOffset:cumulativeScrollOffset, viewportOffset:viewportOffset, absolutize:absolutize, relativize:relativize, scrollTo:scrollTo, makePositioned:makePositioned, undoPositioned:undoPositioned, makeClipping:makeClipping, undoClipping:undoClipping, clonePosition:clonePosition};
-  JAM.call(Element.addMethods, Element, [v1237], JAM.policy.p9C5FFCABA70857D69F2974E6410A585B5EFE64DC);
+  JAM.call(Element.addMethods, Element, [v1237], JAM.policy.p1);
   var v2613 = document.documentElement;
   var v1239 = "getBoundingClientRect" in v2613;
   if(v1239) {
     var v1238 = {viewportOffset:v186};
-    JAM.call(Element.addMethods, Element, [v1238], JAM.policy.p9C5FFCABA70857D69F2974E6410A585B5EFE64DC)
+    JAM.call(Element.addMethods, Element, [v1238], JAM.policy.p1)
   }
   return
 }
@@ -6286,10 +6286,10 @@ function v134(GLOBAL) {
       return
     }
     var v1241 = Element$$1.Methods;
-    JAM.call(Object.extend, Object, [Methods, v1241], JAM.policy.p9C5FFCABA70857D69F2974E6410A585B5EFE64DC);
+    JAM.call(Object.extend, Object, [Methods, v1241], JAM.policy.p1);
     var v2615 = Element$$1.Methods;
     var v1242 = v2615.Simulated;
-    JAM.call(Object.extend, Object, [Methods, v1242], JAM.policy.p9C5FFCABA70857D69F2974E6410A585B5EFE64DC);
+    JAM.call(Object.extend, Object, [Methods, v1242], JAM.policy.p1);
     EXTENDED = {};
     return
   }
@@ -6315,64 +6315,64 @@ function v134(GLOBAL) {
   function v129(element$$81) {
     var v2617 = element$$81.style;
     var v1245 = v2617.cssText;
-    return JAM.call(v1245.toLowerCase, v1245, [], JAM.policy.p9C5FFCABA70857D69F2974E6410A585B5EFE64DC)
+    return JAM.call(v1245.toLowerCase, v1245, [], JAM.policy.p1)
   }
   function v128(element$$80, attribute$$7) {
-    var value$$76 = JAM.call(element$$80.getAttribute, element$$80, [attribute$$7], JAM.policy.p9C5FFCABA70857D69F2974E6410A585B5EFE64DC);
+    var value$$76 = JAM.call(element$$80.getAttribute, element$$80, [attribute$$7], JAM.policy.p1);
     var v1246 = !value$$76;
     if(v1246) {
       return null
     }
-    return JAM.call(value$$76.strip, value$$76, [], JAM.policy.p9C5FFCABA70857D69F2974E6410A585B5EFE64DC)
+    return JAM.call(value$$76.strip, value$$76, [], JAM.policy.p1)
   }
   function v127(element$$79, attribute$$6) {
-    var value$$75 = JAM.call(element$$79.getAttribute, element$$79, [attribute$$6], JAM.policy.p9C5FFCABA70857D69F2974E6410A585B5EFE64DC);
+    var value$$75 = JAM.call(element$$79.getAttribute, element$$79, [attribute$$6], JAM.policy.p1);
     var v1247 = !value$$75;
     if(v1247) {
       return null
     }
-    value$$75 = JAM.call(value$$75.toString, value$$75, [], JAM.policy.p9C5FFCABA70857D69F2974E6410A585B5EFE64DC);
-    var v1248 = JAM.call(value$$75.split, value$$75, ["{"], JAM.policy.p9C5FFCABA70857D69F2974E6410A585B5EFE64DC);
+    value$$75 = JAM.call(value$$75.toString, value$$75, [], JAM.policy.p1);
+    var v1248 = JAM.call(value$$75.split, value$$75, ["{"], JAM.policy.p1);
     value$$75 = v1248[1];
-    var v1249 = JAM.call(value$$75.split, value$$75, ["}"], JAM.policy.p9C5FFCABA70857D69F2974E6410A585B5EFE64DC);
+    var v1249 = JAM.call(value$$75.split, value$$75, ["}"], JAM.policy.p1);
     value$$75 = v1249[0];
-    return JAM.call(value$$75.strip, value$$75, [], JAM.policy.p9C5FFCABA70857D69F2974E6410A585B5EFE64DC)
+    return JAM.call(value$$75.strip, value$$75, [], JAM.policy.p1)
   }
   function v126() {
     var v1250 = Prototype.emptyFunction;
-    JAM.call(DIV.setAttribute, DIV, ["onclick", v1250], JAM.policy.p9C5FFCABA70857D69F2974E6410A585B5EFE64DC);
-    var value$$74 = JAM.call(DIV.getAttribute, DIV, ["onclick"], JAM.policy.p9C5FFCABA70857D69F2974E6410A585B5EFE64DC);
+    JAM.call(DIV.setAttribute, DIV, ["onclick", v1250], JAM.policy.p1);
+    var value$$74 = JAM.call(DIV.getAttribute, DIV, ["onclick"], JAM.policy.p1);
     var v1251 = typeof value$$74;
     var isFunction$$1 = v1251 === "function";
-    JAM.call(DIV.removeAttribute, DIV, ["onclick"], JAM.policy.p9C5FFCABA70857D69F2974E6410A585B5EFE64DC);
+    JAM.call(DIV.removeAttribute, DIV, ["onclick"], JAM.policy.p1);
     return isFunction$$1
   }
   function v125(element$$78, node$$14) {
     var v1252 = element$$78.parentNode;
     var v1253 = element$$78.nextSibling;
-    JAM.call(v1252.insertBefore, v1252, [node$$14, v1253], JAM.policy.p9C5FFCABA70857D69F2974E6410A585B5EFE64DC);
+    JAM.call(v1252.insertBefore, v1252, [node$$14, v1253], JAM.policy.p1);
     return
   }
   function v124(element$$77, node$$13) {
-    JAM.call(element$$77.appendChild, element$$77, [node$$13], JAM.policy.p9C5FFCABA70857D69F2974E6410A585B5EFE64DC);
+    JAM.call(element$$77.appendChild, element$$77, [node$$13], JAM.policy.p1);
     return
   }
   function v123(element$$76, node$$12) {
     var v1254 = element$$76.firstChild;
-    JAM.call(element$$76.insertBefore, element$$76, [node$$12, v1254], JAM.policy.p9C5FFCABA70857D69F2974E6410A585B5EFE64DC);
+    JAM.call(element$$76.insertBefore, element$$76, [node$$12, v1254], JAM.policy.p1);
     return
   }
   function v122(element$$75, node$$11) {
     var v1255 = element$$75.parentNode;
-    JAM.call(v1255.insertBefore, v1255, [node$$11, element$$75], JAM.policy.p9C5FFCABA70857D69F2974E6410A585B5EFE64DC);
+    JAM.call(v1255.insertBefore, v1255, [node$$11, element$$75], JAM.policy.p1);
     return
   }
   function v121() {
-    var s$$2 = JAM.call(document.createElement, document, ["script"], JAM.policy.p9C5FFCABA70857D69F2974E6410A585B5EFE64DC);
+    var s$$2 = JAM.call(document.createElement, document, ["script"], JAM.policy.p1);
     var isBuggy$$4 = false;
     try {
-      var v1256 = JAM.call(document.createTextNode, document, [""], JAM.policy.p9C5FFCABA70857D69F2974E6410A585B5EFE64DC);
-      JAM.call(s$$2.appendChild, s$$2, [v1256], JAM.policy.p9C5FFCABA70857D69F2974E6410A585B5EFE64DC);
+      var v1256 = JAM.call(document.createTextNode, document, [""], JAM.policy.p1);
+      JAM.call(s$$2.appendChild, s$$2, [v1256], JAM.policy.p1);
       var v2618 = s$$2.firstChild;
       var v1257 = !v2618;
       var v2620 = !v1257;
@@ -6394,7 +6394,7 @@ function v134(GLOBAL) {
   }
   function v120() {
     try {
-      var el$$4 = JAM.call(document.createElement, document, ["div"], JAM.policy.p9C5FFCABA70857D69F2974E6410A585B5EFE64DC);
+      var el$$4 = JAM.call(document.createElement, document, ["div"], JAM.policy.p1);
       JAM.set(el$$4, "innerHTML", "<link />");
       var v2621 = el$$4.childNodes;
       var v1258 = v2621.length;
@@ -6408,7 +6408,7 @@ function v134(GLOBAL) {
   }
   function v119() {
     try {
-      var el$$3 = JAM.call(document.createElement, document, ["table"], JAM.policy.p9C5FFCABA70857D69F2974E6410A585B5EFE64DC);
+      var el$$3 = JAM.call(document.createElement, document, ["table"], JAM.policy.p1);
       var v2622 = el$$3;
       if(v2622) {
         v2622 = el$$3.tBodies
@@ -6429,7 +6429,7 @@ function v134(GLOBAL) {
     return
   }
   function v118() {
-    var el$$2 = JAM.call(document.createElement, document, ["select"], JAM.policy.p9C5FFCABA70857D69F2974E6410A585B5EFE64DC);
+    var el$$2 = JAM.call(document.createElement, document, ["select"], JAM.policy.p1);
     var isBuggy$$1 = true;
     JAM.set(el$$2, "innerHTML", '<option value="test">test</option>');
     var v2624 = el$$2.options;
@@ -6442,7 +6442,7 @@ function v134(GLOBAL) {
       var v3710 = el$$2.options;
       var v3365 = v3710[0];
       var v2625 = v3365.nodeName;
-      var v1261 = JAM.call(v2625.toUpperCase, v2625, [], JAM.policy.p9C5FFCABA70857D69F2974E6410A585B5EFE64DC);
+      var v1261 = JAM.call(v2625.toUpperCase, v2625, [], JAM.policy.p1);
       isBuggy$$1 = v1261 !== "OPTION"
     }
     el$$2 = null;
@@ -6450,9 +6450,9 @@ function v134(GLOBAL) {
   }
   function v117() {
     try {
-      var el$$1 = JAM.call(document.createElement, document, ['<input name="x">'], JAM.policy.p9C5FFCABA70857D69F2974E6410A585B5EFE64DC);
+      var el$$1 = JAM.call(document.createElement, document, ['<input name="x">'], JAM.policy.p1);
       var v3366 = el$$1.tagName;
-      var v2626 = JAM.call(v3366.toLowerCase, v3366, [], JAM.policy.p9C5FFCABA70857D69F2974E6410A585B5EFE64DC);
+      var v2626 = JAM.call(v3366.toLowerCase, v3366, [], JAM.policy.p1);
       var v1263 = v2626 === "input";
       if(v1263) {
         var v2627 = el$$1.name;
@@ -6475,21 +6475,21 @@ function v134(GLOBAL) {
       for(;v1265;) {
         var v2629 = arguments[i$$17];
         var v1264 = $$$1(v2629);
-        JAM.call(elements.push, elements, [v1264], JAM.policy.p9C5FFCABA70857D69F2974E6410A585B5EFE64DC);
+        JAM.call(elements.push, elements, [v1264], JAM.policy.p1);
         i$$17 = i$$17 + 1;
         v1265 = i$$17 < length$$28
       }
       return elements
     }
-    var v1267 = JAM.call(Object.isString, Object, [element$$3], JAM.policy.p9C5FFCABA70857D69F2974E6410A585B5EFE64DC);
+    var v1267 = JAM.call(Object.isString, Object, [element$$3], JAM.policy.p1);
     if(v1267) {
-      element$$3 = JAM.call(document.getElementById, document, [element$$3], JAM.policy.p9C5FFCABA70857D69F2974E6410A585B5EFE64DC)
+      element$$3 = JAM.call(document.getElementById, document, [element$$3], JAM.policy.p1)
     }
     return JAM.call(Element$$1.extend, Element$$1, [element$$3])
   }
   function Element$$1(tagName$$2, attributes$$1) {
     attributes$$1 = attributes$$1 || {};
-    tagName$$2 = JAM.call(tagName$$2.toLowerCase, tagName$$2, [], JAM.policy.p9C5FFCABA70857D69F2974E6410A585B5EFE64DC);
+    tagName$$2 = JAM.call(tagName$$2.toLowerCase, tagName$$2, [], JAM.policy.p1);
     var v2630 = HAS_EXTENDED_CREATE_ELEMENT_SYNTAX;
     if(v2630) {
       v2630 = attributes$$1.name
@@ -6502,17 +6502,17 @@ function v134(GLOBAL) {
       var v1268 = v2631 + v2632;
       tagName$$2 = v1268 + '">';
       delete attributes$$1.name;
-      var v1269 = JAM.call(document.createElement, document, [tagName$$2], JAM.policy.p9C5FFCABA70857D69F2974E6410A585B5EFE64DC);
-      return JAM.call(Element$$1.writeAttribute, Element$$1, [v1269, attributes$$1], JAM.policy.p9C5FFCABA70857D69F2974E6410A585B5EFE64DC)
+      var v1269 = JAM.call(document.createElement, document, [tagName$$2], JAM.policy.p1);
+      return JAM.call(Element$$1.writeAttribute, Element$$1, [v1269, attributes$$1], JAM.policy.p1)
     }
     var v2633 = ELEMENT_CACHE[tagName$$2];
     var v1273 = !v2633;
     if(v1273) {
       var v1271 = ELEMENT_CACHE;
       var v1272 = tagName$$2;
-      var v2634 = JAM.call(document.createElement, document, [tagName$$2], JAM.policy.p9C5FFCABA70857D69F2974E6410A585B5EFE64DC);
+      var v2634 = JAM.call(document.createElement, document, [tagName$$2], JAM.policy.p1);
       var v3995 = JAM.call(Element$$1.extend, Element$$1, [v2634]);
-      JAM.set(v1271, v1272, v3995, JAM.policy.p425E08A28862414CF7130381FE99A660F52DB811)
+      JAM.set(v1271, v1272, v3995, JAM.policy.p2)
     }
     var JSCompiler_inline_result$$4;
     JSCompiler_inline_label_shouldUseCreationCache_8: {
@@ -6531,17 +6531,17 @@ function v134(GLOBAL) {
     var v1276;
     if(JSCompiler_inline_result$$4) {
       var v2635 = ELEMENT_CACHE[tagName$$2];
-      v1276 = JAM.call(v2635.cloneNode, v2635, [false], JAM.policy.p9C5FFCABA70857D69F2974E6410A585B5EFE64DC)
+      v1276 = JAM.call(v2635.cloneNode, v2635, [false], JAM.policy.p1)
     }else {
-      v1276 = JAM.call(document.createElement, document, [tagName$$2], JAM.policy.p9C5FFCABA70857D69F2974E6410A585B5EFE64DC)
+      v1276 = JAM.call(document.createElement, document, [tagName$$2], JAM.policy.p1)
     }
     var node$$2 = v1276;
-    return JAM.call(Element$$1.writeAttribute, Element$$1, [node$$2, attributes$$1], JAM.policy.p9C5FFCABA70857D69F2974E6410A585B5EFE64DC)
+    return JAM.call(Element$$1.writeAttribute, Element$$1, [node$$2, attributes$$1], JAM.policy.p1)
   }
   function inspect$$5(element$$4) {
     element$$4 = $$$1(element$$4);
     var v2636 = element$$4.tagName;
-    var v1277 = JAM.call(v2636.toLowerCase, v2636, [], JAM.policy.p9C5FFCABA70857D69F2974E6410A585B5EFE64DC);
+    var v1277 = JAM.call(v2636.toLowerCase, v2636, [], JAM.policy.p1);
     var result$$7 = "<" + v1277;
     var attribute;
     var value$$63;
@@ -6554,12 +6554,12 @@ function v134(GLOBAL) {
         v2637 = ""
       }
       var v1278 = v2637;
-      value$$63 = JAM.call(v1278.toString, v1278, [], JAM.policy.p9C5FFCABA70857D69F2974E6410A585B5EFE64DC);
+      value$$63 = JAM.call(v1278.toString, v1278, [], JAM.policy.p1);
       if(value$$63) {
         var v2638 = result$$7;
         var v3711 = " " + attribute;
         var v3369 = v3711 + "=";
-        var v3370 = JAM.call(value$$63.inspect, value$$63, [true], JAM.policy.p9C5FFCABA70857D69F2974E6410A585B5EFE64DC);
+        var v3370 = JAM.call(value$$63.inspect, value$$63, [true], JAM.policy.p1);
         var v2639 = v3369 + v3370;
         result$$7 = v2638 + v2639
       }
@@ -6574,9 +6574,9 @@ function v134(GLOBAL) {
   }
   function toggle(element$$6, bool) {
     element$$6 = $$$1(element$$6);
-    var v1281 = JAM.call(Object.isUndefined, Object, [bool], JAM.policy.p9C5FFCABA70857D69F2974E6410A585B5EFE64DC);
+    var v1281 = JAM.call(Object.isUndefined, Object, [bool], JAM.policy.p1);
     if(v1281) {
-      var v1280 = JAM.call(Element$$1.visible, Element$$1, [element$$6], JAM.policy.p9C5FFCABA70857D69F2974E6410A585B5EFE64DC);
+      var v1280 = JAM.call(Element$$1.visible, Element$$1, [element$$6], JAM.policy.p1);
       bool = !v1280
     }
     var v2641;
@@ -6586,7 +6586,7 @@ function v134(GLOBAL) {
       v2641 = "hide"
     }
     var v1282 = v2641;
-    JAM.call(Element$$1[v1282], Element$$1, [element$$6], JAM.policy.p9C5FFCABA70857D69F2974E6410A585B5EFE64DC);
+    JAM.call(Element$$1[v1282], Element$$1, [element$$6], JAM.policy.p1);
     return element$$6
   }
   function hide(element$$7) {
@@ -6604,12 +6604,12 @@ function v134(GLOBAL) {
   function remove(element$$9) {
     element$$9 = $$$1(element$$9);
     var v1285 = element$$9.parentNode;
-    JAM.call(v1285.removeChild, v1285, [element$$9], JAM.policy.p9C5FFCABA70857D69F2974E6410A585B5EFE64DC);
+    JAM.call(v1285.removeChild, v1285, [element$$9], JAM.policy.p1);
     return element$$9
   }
   function update$$2(element$$10, content) {
     element$$10 = $$$1(element$$10);
-    var descendants$$1 = JAM.call(element$$10.getElementsByTagName, element$$10, ["*"], JAM.policy.p9C5FFCABA70857D69F2974E6410A585B5EFE64DC);
+    var descendants$$1 = JAM.call(element$$10.getElementsByTagName, element$$10, ["*"], JAM.policy.p1);
     var i$$18 = descendants$$1.length;
     var v1287 = i$$18;
     i$$18 = i$$18 - 1;
@@ -6625,16 +6625,16 @@ function v134(GLOBAL) {
     }
     var v1288 = v2642;
     if(v1288) {
-      content = JAM.call(content.toElement, content, [], JAM.policy.p9C5FFCABA70857D69F2974E6410A585B5EFE64DC)
+      content = JAM.call(content.toElement, content, [], JAM.policy.p1)
     }
-    var v1290 = JAM.call(Object.isElement, Object, [content], JAM.policy.p9C5FFCABA70857D69F2974E6410A585B5EFE64DC);
+    var v1290 = JAM.call(Object.isElement, Object, [content], JAM.policy.p1);
     if(v1290) {
-      var v1289 = JAM.call(element$$10.update, element$$10, [], JAM.policy.p9C5FFCABA70857D69F2974E6410A585B5EFE64DC);
-      return JAM.call(v1289.insert, v1289, [content], JAM.policy.p9C5FFCABA70857D69F2974E6410A585B5EFE64DC)
+      var v1289 = JAM.call(element$$10.update, element$$10, [], JAM.policy.p1);
+      return JAM.call(v1289.insert, v1289, [content], JAM.policy.p1)
     }
-    content = JAM.call(Object.toHTML, Object, [content], JAM.policy.p9C5FFCABA70857D69F2974E6410A585B5EFE64DC);
+    content = JAM.call(Object.toHTML, Object, [content], JAM.policy.p1);
     var v1291 = element$$10.tagName;
-    var tagName$$3 = JAM.call(v1291.toUpperCase, v1291, [], JAM.policy.p9C5FFCABA70857D69F2974E6410A585B5EFE64DC);
+    var tagName$$3 = JAM.call(v1291.toUpperCase, v1291, [], JAM.policy.p1);
     var v2643 = tagName$$3 === "SCRIPT";
     if(v2643) {
       v2643 = SCRIPT_ELEMENT_REJECTS_TEXTNODE_APPENDING
@@ -6651,25 +6651,25 @@ function v134(GLOBAL) {
         var v1294 = element$$10.firstChild;
         for(;v1294;) {
           var v1293 = element$$10.firstChild;
-          JAM.call(element$$10.removeChild, element$$10, [v1293], JAM.policy.p9C5FFCABA70857D69F2974E6410A585B5EFE64DC);
+          JAM.call(element$$10.removeChild, element$$10, [v1293], JAM.policy.p1);
           v1294 = element$$10.firstChild
         }
-        var v1295 = JAM.call(content.stripScripts, content, [], JAM.policy.p9C5FFCABA70857D69F2974E6410A585B5EFE64DC);
+        var v1295 = JAM.call(content.stripScripts, content, [], JAM.policy.p1);
         var nodes = getContentFromAnonymousElement(tagName$$3, v1295);
         i$$18 = 0;
         var node$$3;
         var v1296 = node$$3 = nodes[i$$18];
         for(;v1296;) {
-          JAM.call(element$$10.appendChild, element$$10, [node$$3], JAM.policy.p9C5FFCABA70857D69F2974E6410A585B5EFE64DC);
+          JAM.call(element$$10.appendChild, element$$10, [node$$3], JAM.policy.p1);
           i$$18 = i$$18 + 1;
           v1296 = node$$3 = nodes[i$$18]
         }
       }else {
         var v2645 = LINK_ELEMENT_INNERHTML_BUGGY;
         if(v2645) {
-          var v3372 = JAM.call(Object.isString, Object, [content], JAM.policy.p9C5FFCABA70857D69F2974E6410A585B5EFE64DC);
+          var v3372 = JAM.call(Object.isString, Object, [content], JAM.policy.p1);
           if(v3372) {
-            var v3712 = JAM.call(content.indexOf, content, ["<link"], JAM.policy.p9C5FFCABA70857D69F2974E6410A585B5EFE64DC);
+            var v3712 = JAM.call(content.indexOf, content, ["<link"], JAM.policy.p1);
             v3372 = v3712 > -1
           }
           v2645 = v3372
@@ -6679,32 +6679,32 @@ function v134(GLOBAL) {
           var v1298 = element$$10.firstChild;
           for(;v1298;) {
             var v1297 = element$$10.firstChild;
-            JAM.call(element$$10.removeChild, element$$10, [v1297], JAM.policy.p9C5FFCABA70857D69F2974E6410A585B5EFE64DC);
+            JAM.call(element$$10.removeChild, element$$10, [v1297], JAM.policy.p1);
             v1298 = element$$10.firstChild
           }
-          var v1299 = JAM.call(content.stripScripts, content, [], JAM.policy.p9C5FFCABA70857D69F2974E6410A585B5EFE64DC);
+          var v1299 = JAM.call(content.stripScripts, content, [], JAM.policy.p1);
           nodes = getContentFromAnonymousElement(tagName$$3, v1299, true);
           i$$18 = 0;
           var v1300 = node$$3 = nodes[i$$18];
           for(;v1300;) {
-            JAM.call(element$$10.appendChild, element$$10, [node$$3], JAM.policy.p9C5FFCABA70857D69F2974E6410A585B5EFE64DC);
+            JAM.call(element$$10.appendChild, element$$10, [node$$3], JAM.policy.p1);
             i$$18 = i$$18 + 1;
             v1300 = node$$3 = nodes[i$$18]
           }
         }else {
           var v1301 = element$$10;
-          var v3996 = JAM.call(content.stripScripts, content, [], JAM.policy.p9C5FFCABA70857D69F2974E6410A585B5EFE64DC);
+          var v3996 = JAM.call(content.stripScripts, content, [], JAM.policy.p1);
           JAM.set(v1301, "innerHTML", v3996)
         }
       }
     }else {
       var v1304 = element$$10;
-      var v3997 = JAM.call(content.stripScripts, content, [], JAM.policy.p9C5FFCABA70857D69F2974E6410A585B5EFE64DC);
+      var v3997 = JAM.call(content.stripScripts, content, [], JAM.policy.p1);
       JAM.set(v1304, "innerHTML", v3997)
     }
     var v2646 = content.evalScripts;
-    var v1305 = JAM.call(v2646.bind, v2646, [content], JAM.policy.p9C5FFCABA70857D69F2974E6410A585B5EFE64DC);
-    JAM.call(v1305.defer, v1305, [], JAM.policy.p9C5FFCABA70857D69F2974E6410A585B5EFE64DC);
+    var v1305 = JAM.call(v2646.bind, v2646, [content], JAM.policy.p1);
+    JAM.call(v1305.defer, v1305, [], JAM.policy.p1);
     return element$$10
   }
   function replace(element$$11, content$$1) {
@@ -6715,33 +6715,33 @@ function v134(GLOBAL) {
     }
     var v1310 = v2647;
     if(v1310) {
-      content$$1 = JAM.call(content$$1.toElement, content$$1, [], JAM.policy.p9C5FFCABA70857D69F2974E6410A585B5EFE64DC)
+      content$$1 = JAM.call(content$$1.toElement, content$$1, [], JAM.policy.p1)
     }else {
-      var v2648 = JAM.call(Object.isElement, Object, [content$$1], JAM.policy.p9C5FFCABA70857D69F2974E6410A585B5EFE64DC);
+      var v2648 = JAM.call(Object.isElement, Object, [content$$1], JAM.policy.p1);
       var v1309 = !v2648;
       if(v1309) {
-        content$$1 = JAM.call(Object.toHTML, Object, [content$$1], JAM.policy.p9C5FFCABA70857D69F2974E6410A585B5EFE64DC);
+        content$$1 = JAM.call(Object.toHTML, Object, [content$$1], JAM.policy.p1);
         var v1306 = element$$11.ownerDocument;
-        var range$$5 = JAM.call(v1306.createRange, v1306, [], JAM.policy.p9C5FFCABA70857D69F2974E6410A585B5EFE64DC);
-        JAM.call(range$$5.selectNode, range$$5, [element$$11], JAM.policy.p9C5FFCABA70857D69F2974E6410A585B5EFE64DC);
+        var range$$5 = JAM.call(v1306.createRange, v1306, [], JAM.policy.p1);
+        JAM.call(range$$5.selectNode, range$$5, [element$$11], JAM.policy.p1);
         var v2649 = content$$1.evalScripts;
-        var v1307 = JAM.call(v2649.bind, v2649, [content$$1], JAM.policy.p9C5FFCABA70857D69F2974E6410A585B5EFE64DC);
-        JAM.call(v1307.defer, v1307, [], JAM.policy.p9C5FFCABA70857D69F2974E6410A585B5EFE64DC);
-        var v1308 = JAM.call(content$$1.stripScripts, content$$1, [], JAM.policy.p9C5FFCABA70857D69F2974E6410A585B5EFE64DC);
-        content$$1 = JAM.call(range$$5.createContextualFragment, range$$5, [v1308], JAM.policy.p9C5FFCABA70857D69F2974E6410A585B5EFE64DC)
+        var v1307 = JAM.call(v2649.bind, v2649, [content$$1], JAM.policy.p1);
+        JAM.call(v1307.defer, v1307, [], JAM.policy.p1);
+        var v1308 = JAM.call(content$$1.stripScripts, content$$1, [], JAM.policy.p1);
+        content$$1 = JAM.call(range$$5.createContextualFragment, range$$5, [v1308], JAM.policy.p1)
       }
     }
     var v1311 = element$$11.parentNode;
-    JAM.call(v1311.replaceChild, v1311, [content$$1, element$$11], JAM.policy.p9C5FFCABA70857D69F2974E6410A585B5EFE64DC);
+    JAM.call(v1311.replaceChild, v1311, [content$$1, element$$11], JAM.policy.p1);
     return element$$11
   }
   function replace_IE(element$$12, content$$2) {
     function v116(node$$5) {
-      JAM.call(parent$$1.appendChild, parent$$1, [node$$5], JAM.policy.p9C5FFCABA70857D69F2974E6410A585B5EFE64DC);
+      JAM.call(parent$$1.appendChild, parent$$1, [node$$5], JAM.policy.p1);
       return
     }
     function v115(node$$4) {
-      JAM.call(parent$$1.insertBefore, parent$$1, [node$$4, nextSibling], JAM.policy.p9C5FFCABA70857D69F2974E6410A585B5EFE64DC);
+      JAM.call(parent$$1.insertBefore, parent$$1, [node$$4, nextSibling], JAM.policy.p1);
       return
     }
     element$$12 = $$$1(element$$12);
@@ -6751,44 +6751,44 @@ function v134(GLOBAL) {
     }
     var v1312 = v2650;
     if(v1312) {
-      content$$2 = JAM.call(content$$2.toElement, content$$2, [], JAM.policy.p9C5FFCABA70857D69F2974E6410A585B5EFE64DC)
+      content$$2 = JAM.call(content$$2.toElement, content$$2, [], JAM.policy.p1)
     }
-    var v1314 = JAM.call(Object.isElement, Object, [content$$2], JAM.policy.p9C5FFCABA70857D69F2974E6410A585B5EFE64DC);
+    var v1314 = JAM.call(Object.isElement, Object, [content$$2], JAM.policy.p1);
     if(v1314) {
       var v1313 = element$$12.parentNode;
-      JAM.call(v1313.replaceChild, v1313, [content$$2, element$$12], JAM.policy.p9C5FFCABA70857D69F2974E6410A585B5EFE64DC);
+      JAM.call(v1313.replaceChild, v1313, [content$$2, element$$12], JAM.policy.p1);
       return element$$12
     }
-    content$$2 = JAM.call(Object.toHTML, Object, [content$$2], JAM.policy.p9C5FFCABA70857D69F2974E6410A585B5EFE64DC);
+    content$$2 = JAM.call(Object.toHTML, Object, [content$$2], JAM.policy.p1);
     var parent$$1 = element$$12.parentNode;
     var v1315 = parent$$1.tagName;
-    var tagName$$4 = JAM.call(v1315.toUpperCase, v1315, [], JAM.policy.p9C5FFCABA70857D69F2974E6410A585B5EFE64DC);
+    var tagName$$4 = JAM.call(v1315.toUpperCase, v1315, [], JAM.policy.p1);
     var v2651 = INSERTION_TRANSLATIONS.tags;
     var v1318 = tagName$$4 in v2651;
     if(v1318) {
-      var nextSibling = JAM.call(Element$$1.next, Element$$1, [element$$12], JAM.policy.p9C5FFCABA70857D69F2974E6410A585B5EFE64DC);
-      var v1316 = JAM.call(content$$2.stripScripts, content$$2, [], JAM.policy.p9C5FFCABA70857D69F2974E6410A585B5EFE64DC);
+      var nextSibling = JAM.call(Element$$1.next, Element$$1, [element$$12], JAM.policy.p1);
+      var v1316 = JAM.call(content$$2.stripScripts, content$$2, [], JAM.policy.p1);
       var fragments = getContentFromAnonymousElement(tagName$$4, v1316);
-      JAM.call(parent$$1.removeChild, parent$$1, [element$$12], JAM.policy.p9C5FFCABA70857D69F2974E6410A585B5EFE64DC);
+      JAM.call(parent$$1.removeChild, parent$$1, [element$$12], JAM.policy.p1);
       var iterator$$26;
       if(nextSibling) {
         iterator$$26 = v115
       }else {
         iterator$$26 = v116
       }
-      JAM.call(fragments.each, fragments, [iterator$$26], JAM.policy.p9C5FFCABA70857D69F2974E6410A585B5EFE64DC)
+      JAM.call(fragments.each, fragments, [iterator$$26], JAM.policy.p1)
     }else {
       var v1317 = element$$12;
-      var v3998 = JAM.call(content$$2.stripScripts, content$$2, [], JAM.policy.p9C5FFCABA70857D69F2974E6410A585B5EFE64DC);
+      var v3998 = JAM.call(content$$2.stripScripts, content$$2, [], JAM.policy.p1);
       JAM.set(v1317, "outerHTML", v3998)
     }
     var v2652 = content$$2.evalScripts;
-    var v1319 = JAM.call(v2652.bind, v2652, [content$$2], JAM.policy.p9C5FFCABA70857D69F2974E6410A585B5EFE64DC);
-    JAM.call(v1319.defer, v1319, [], JAM.policy.p9C5FFCABA70857D69F2974E6410A585B5EFE64DC);
+    var v1319 = JAM.call(v2652.bind, v2652, [content$$2], JAM.policy.p1);
+    JAM.call(v1319.defer, v1319, [], JAM.policy.p1);
     return element$$12
   }
   function isContent(content$$3) {
-    var v2653 = JAM.call(Object.isUndefined, Object, [content$$3], JAM.policy.p9C5FFCABA70857D69F2974E6410A585B5EFE64DC);
+    var v2653 = JAM.call(Object.isUndefined, Object, [content$$3], JAM.policy.p1);
     var v3373 = !v2653;
     if(v3373) {
       v2653 = content$$3 === null
@@ -6797,16 +6797,16 @@ function v134(GLOBAL) {
     if(v1320) {
       return false
     }
-    var v2654 = JAM.call(Object.isString, Object, [content$$3], JAM.policy.p9C5FFCABA70857D69F2974E6410A585B5EFE64DC);
+    var v2654 = JAM.call(Object.isString, Object, [content$$3], JAM.policy.p1);
     var v3374 = !v2654;
     if(v3374) {
-      v2654 = JAM.call(Object.isNumber, Object, [content$$3], JAM.policy.p9C5FFCABA70857D69F2974E6410A585B5EFE64DC)
+      v2654 = JAM.call(Object.isNumber, Object, [content$$3], JAM.policy.p1)
     }
     var v1321 = v2654;
     if(v1321) {
       return true
     }
-    var v1322 = JAM.call(Object.isElement, Object, [content$$3], JAM.policy.p9C5FFCABA70857D69F2974E6410A585B5EFE64DC);
+    var v1322 = JAM.call(Object.isElement, Object, [content$$3], JAM.policy.p1);
     if(v1322) {
       return true
     }
@@ -6833,7 +6833,7 @@ function v134(GLOBAL) {
         var element$$inline_9 = element$$14;
         var content$$inline_10 = insertions[position$$1];
         var position$$inline_11 = position$$1;
-        position$$inline_11 = JAM.call(position$$inline_11.toLowerCase, position$$inline_11, [], JAM.policy.p9C5FFCABA70857D69F2974E6410A585B5EFE64DC);
+        position$$inline_11 = JAM.call(position$$inline_11.toLowerCase, position$$inline_11, [], JAM.policy.p1);
         var method$$inline_12 = INSERTION_TRANSLATIONS[position$$inline_11];
         var v2656 = content$$inline_10;
         if(v2656) {
@@ -6841,14 +6841,14 @@ function v134(GLOBAL) {
         }
         var v1325 = v2656;
         if(v1325) {
-          content$$inline_10 = JAM.call(content$$inline_10.toElement, content$$inline_10, [], JAM.policy.p9C5FFCABA70857D69F2974E6410A585B5EFE64DC)
+          content$$inline_10 = JAM.call(content$$inline_10.toElement, content$$inline_10, [], JAM.policy.p1)
         }
-        var v1326 = JAM.call(Object.isElement, Object, [content$$inline_10], JAM.policy.p9C5FFCABA70857D69F2974E6410A585B5EFE64DC);
+        var v1326 = JAM.call(Object.isElement, Object, [content$$inline_10], JAM.policy.p1);
         if(v1326) {
-          JAM.call(method$$inline_12, null, [element$$inline_9, content$$inline_10], JAM.policy.p9C5FFCABA70857D69F2974E6410A585B5EFE64DC);
+          JAM.call(method$$inline_12, null, [element$$inline_9, content$$inline_10], JAM.policy.p1);
           break JSCompiler_inline_label_insertContentAt_17
         }
-        content$$inline_10 = JAM.call(Object.toHTML, Object, [content$$inline_10], JAM.policy.p9C5FFCABA70857D69F2974E6410A585B5EFE64DC);
+        content$$inline_10 = JAM.call(Object.toHTML, Object, [content$$inline_10], JAM.policy.p1);
         var v3376;
         var v3845 = position$$inline_11 === "before";
         var v3900 = !v3845;
@@ -6863,8 +6863,8 @@ function v134(GLOBAL) {
         }
         var v2657 = v3376;
         var v1327 = v2657.tagName;
-        var tagName$$inline_13 = JAM.call(v1327.toUpperCase, v1327, [], JAM.policy.p9C5FFCABA70857D69F2974E6410A585B5EFE64DC);
-        var v1328 = JAM.call(content$$inline_10.stripScripts, content$$inline_10, [], JAM.policy.p9C5FFCABA70857D69F2974E6410A585B5EFE64DC);
+        var tagName$$inline_13 = JAM.call(v1327.toUpperCase, v1327, [], JAM.policy.p1);
+        var v1328 = JAM.call(content$$inline_10.stripScripts, content$$inline_10, [], JAM.policy.p1);
         var childNodes$$inline_14 = getContentFromAnonymousElement(tagName$$inline_13, v1328);
         var v2658 = position$$inline_11 === "top";
         var v3377 = !v2658;
@@ -6873,32 +6873,32 @@ function v134(GLOBAL) {
         }
         var v1329 = v2658;
         if(v1329) {
-          JAM.call(childNodes$$inline_14.reverse, childNodes$$inline_14, [], JAM.policy.p9C5FFCABA70857D69F2974E6410A585B5EFE64DC)
+          JAM.call(childNodes$$inline_14.reverse, childNodes$$inline_14, [], JAM.policy.p1)
         }
         var i$$inline_15 = 0;
         var node$$inline_16 = void 0;
         var v1330 = node$$inline_16 = childNodes$$inline_14[i$$inline_15];
         for(;v1330;) {
-          JAM.call(method$$inline_12, null, [element$$inline_9, node$$inline_16], JAM.policy.p9C5FFCABA70857D69F2974E6410A585B5EFE64DC);
+          JAM.call(method$$inline_12, null, [element$$inline_9, node$$inline_16], JAM.policy.p1);
           i$$inline_15 = i$$inline_15 + 1;
           v1330 = node$$inline_16 = childNodes$$inline_14[i$$inline_15]
         }
         var v2659 = content$$inline_10.evalScripts;
-        var v1331 = JAM.call(v2659.bind, v2659, [content$$inline_10], JAM.policy.p9C5FFCABA70857D69F2974E6410A585B5EFE64DC);
-        JAM.call(v1331.defer, v1331, [], JAM.policy.p9C5FFCABA70857D69F2974E6410A585B5EFE64DC)
+        var v1331 = JAM.call(v2659.bind, v2659, [content$$inline_10], JAM.policy.p1);
+        JAM.call(v1331.defer, v1331, [], JAM.policy.p1)
       }
     }
     return element$$14
   }
   function wrap$$1(element$$15, wrapper$$1, attributes$$2) {
     element$$15 = $$$1(element$$15);
-    var v1335 = JAM.call(Object.isElement, Object, [wrapper$$1], JAM.policy.p9C5FFCABA70857D69F2974E6410A585B5EFE64DC);
+    var v1335 = JAM.call(Object.isElement, Object, [wrapper$$1], JAM.policy.p1);
     if(v1335) {
       var v1332 = $$$1(wrapper$$1);
       var v1333 = attributes$$2 || {};
-      JAM.call(v1332.writeAttribute, v1332, [v1333], JAM.policy.p9C5FFCABA70857D69F2974E6410A585B5EFE64DC)
+      JAM.call(v1332.writeAttribute, v1332, [v1333], JAM.policy.p1)
     }else {
-      var v1334 = JAM.call(Object.isString, Object, [wrapper$$1], JAM.policy.p9C5FFCABA70857D69F2974E6410A585B5EFE64DC);
+      var v1334 = JAM.call(Object.isString, Object, [wrapper$$1], JAM.policy.p1);
       if(v1334) {
         wrapper$$1 = new Element$$1(wrapper$$1, attributes$$2)
       }else {
@@ -6908,9 +6908,9 @@ function v134(GLOBAL) {
     var v1337 = element$$15.parentNode;
     if(v1337) {
       var v1336 = element$$15.parentNode;
-      JAM.call(v1336.replaceChild, v1336, [wrapper$$1, element$$15], JAM.policy.p9C5FFCABA70857D69F2974E6410A585B5EFE64DC)
+      JAM.call(v1336.replaceChild, v1336, [wrapper$$1, element$$15], JAM.policy.p1)
     }
-    JAM.call(wrapper$$1.appendChild, wrapper$$1, [element$$15], JAM.policy.p9C5FFCABA70857D69F2974E6410A585B5EFE64DC);
+    JAM.call(wrapper$$1.appendChild, wrapper$$1, [element$$15], JAM.policy.p1);
     return wrapper$$1
   }
   function cleanWhitespace(element$$16) {
@@ -6923,12 +6923,12 @@ function v134(GLOBAL) {
       var v2660 = v3378 === v3379;
       if(v2660) {
         var v3714 = node$$7.nodeValue;
-        var v3380 = JAM.call(/\S/.test, /\S/, [v3714], JAM.policy.p9C5FFCABA70857D69F2974E6410A585B5EFE64DC);
+        var v3380 = JAM.call(/\S/.test, /\S/, [v3714], JAM.policy.p1);
         v2660 = !v3380
       }
       var v1338 = v2660;
       if(v1338) {
-        JAM.call(element$$16.removeChild, element$$16, [node$$7], JAM.policy.p9C5FFCABA70857D69F2974E6410A585B5EFE64DC)
+        JAM.call(element$$16.removeChild, element$$16, [node$$7], JAM.policy.p1)
       }
       node$$7 = nextNode
     }
@@ -6937,7 +6937,7 @@ function v134(GLOBAL) {
   function empty$$1(element$$17) {
     var v2661 = $$$1(element$$17);
     var v1339 = v2661.innerHTML;
-    return JAM.call(v1339.blank, v1339, [], JAM.policy.p9C5FFCABA70857D69F2974E6410A585B5EFE64DC)
+    return JAM.call(v1339.blank, v1339, [], JAM.policy.p1)
   }
   function getContentFromAnonymousElement(tagName$$6, html, force) {
     var v1340 = INSERTION_TRANSLATIONS.tags;
@@ -6961,7 +6961,7 @@ function v134(GLOBAL) {
       var v1344 = t[1];
       JAM.set(div$$1, "innerHTML", v1343 + v1344);
       var v1345 = div$$1.firstChild;
-      JAM.call(div$$1.removeChild, div$$1, [v1345], JAM.policy.p9C5FFCABA70857D69F2974E6410A585B5EFE64DC);
+      JAM.call(div$$1.removeChild, div$$1, [v1345], JAM.policy.p1);
       var i$$20 = t[2];
       var v1346 = i$$20;
       i$$20 = i$$20 - 1;
@@ -6982,12 +6982,12 @@ function v134(GLOBAL) {
     if(v1348) {
       return
     }
-    var clone$$4 = JAM.call(element$$18.cloneNode, element$$18, [deep$$2], JAM.policy.p9C5FFCABA70857D69F2974E6410A585B5EFE64DC);
+    var clone$$4 = JAM.call(element$$18.cloneNode, element$$18, [deep$$2], JAM.policy.p1);
     var v1351 = !HAS_UNIQUE_ID_PROPERTY;
     if(v1351) {
       clone$$4._prototypeUID = UNDEFINED;
       if(deep$$2) {
-        var descendants$$2 = JAM.call(Element$$1.select, Element$$1, [clone$$4, "*"], JAM.policy.p9C5FFCABA70857D69F2974E6410A585B5EFE64DC);
+        var descendants$$2 = JAM.call(Element$$1.select, Element$$1, [clone$$4, "*"], JAM.policy.p1);
         var i$$21 = descendants$$2.length;
         var v1350 = i$$21;
         i$$21 = i$$21 - 1;
@@ -7002,9 +7002,9 @@ function v134(GLOBAL) {
     return JAM.call(Element$$1.extend, Element$$1, [clone$$4])
   }
   function purgeElement(element$$19) {
-    var uid = JAM.call(getUniqueElementID, null, [element$$19], JAM.policy.p9C5FFCABA70857D69F2974E6410A585B5EFE64DC);
+    var uid = JAM.call(getUniqueElementID, null, [element$$19], JAM.policy.p1);
     if(uid) {
-      JAM.call(Element$$1.stopObserving, Element$$1, [element$$19], JAM.policy.p9C5FFCABA70857D69F2974E6410A585B5EFE64DC);
+      JAM.call(Element$$1.stopObserving, Element$$1, [element$$19], JAM.policy.p1);
       var v1352 = !HAS_UNIQUE_ID_PROPERTY;
       if(v1352) {
         element$$19._prototypeUID = UNDEFINED
@@ -7034,7 +7034,7 @@ function v134(GLOBAL) {
     i$$23 = i$$23 - 1;
     for(;v1358;) {
       element$$20 = elements$$2[i$$23];
-      uid$$1 = JAM.call(getUniqueElementID, null, [element$$20], JAM.policy.p9C5FFCABA70857D69F2974E6410A585B5EFE64DC);
+      uid$$1 = JAM.call(getUniqueElementID, null, [element$$20], JAM.policy.p1);
       var v1356 = Element$$1.Storage;
       delete v1356[uid$$1];
       var v1357 = Event.cache;
@@ -7051,7 +7051,7 @@ function v134(GLOBAL) {
       return
     }
     purgeElement(element$$21);
-    var descendants$$3 = JAM.call(element$$21.getElementsByTagName, element$$21, ["*"], JAM.policy.p9C5FFCABA70857D69F2974E6410A585B5EFE64DC);
+    var descendants$$3 = JAM.call(element$$21.getElementsByTagName, element$$21, ["*"], JAM.policy.p1);
     var i$$24 = descendants$$3.length;
     var v1361 = i$$24;
     i$$24 = i$$24 - 1;
@@ -7074,7 +7074,7 @@ function v134(GLOBAL) {
       var v1363 = v2666 === v2667;
       if(v1363) {
         var v1362 = JAM.call(Element$$1.extend, Element$$1, [element$$22]);
-        JAM.call(elements$$3.push, elements$$3, [v1362], JAM.policy.p9C5FFCABA70857D69F2974E6410A585B5EFE64DC)
+        JAM.call(elements$$3.push, elements$$3, [v1362], JAM.policy.p1)
       }
       var v2668 = elements$$3.length;
       var v1364 = v2668 === maximumLength;
@@ -7089,7 +7089,7 @@ function v134(GLOBAL) {
     return recursivelyCollect(element$$23, "parentNode")
   }
   function descendants(element$$24) {
-    return JAM.call(Element$$1.select, Element$$1, [element$$24, "*"], JAM.policy.p9C5FFCABA70857D69F2974E6410A585B5EFE64DC)
+    return JAM.call(Element$$1.select, Element$$1, [element$$24, "*"], JAM.policy.p1)
   }
   function firstDescendant(element$$25) {
     var v1366 = $$$1(element$$25);
@@ -7123,7 +7123,7 @@ function v134(GLOBAL) {
       var v1370 = v2671 === v2672;
       if(v1370) {
         var v1369 = JAM.call(Element$$1.extend, Element$$1, [child$$1]);
-        JAM.call(results$$11.push, results$$11, [v1369], JAM.policy.p9C5FFCABA70857D69F2974E6410A585B5EFE64DC)
+        JAM.call(results$$11.push, results$$11, [v1369], JAM.policy.p1)
       }
       child$$1 = child$$1.nextSibling
     }
@@ -7139,23 +7139,23 @@ function v134(GLOBAL) {
     element$$29 = $$$1(element$$29);
     var previous$$1 = previousSiblings(element$$29);
     var next$$1 = nextSiblings(element$$29);
-    var v1371 = JAM.call(previous$$1.reverse, previous$$1, [], JAM.policy.p9C5FFCABA70857D69F2974E6410A585B5EFE64DC);
-    return JAM.call(v1371.concat, v1371, [next$$1], JAM.policy.p9C5FFCABA70857D69F2974E6410A585B5EFE64DC)
+    var v1371 = JAM.call(previous$$1.reverse, previous$$1, [], JAM.policy.p1);
+    return JAM.call(v1371.concat, v1371, [next$$1], JAM.policy.p1)
   }
   function match$$7(element$$30, selector) {
     element$$30 = $$$1(element$$30);
-    var v1373 = JAM.call(Object.isString, Object, [selector], JAM.policy.p9C5FFCABA70857D69F2974E6410A585B5EFE64DC);
+    var v1373 = JAM.call(Object.isString, Object, [selector], JAM.policy.p1);
     if(v1373) {
       var v1372 = Prototype.Selector;
-      return JAM.call(v1372.match, v1372, [element$$30, selector], JAM.policy.p9C5FFCABA70857D69F2974E6410A585B5EFE64DC)
+      return JAM.call(v1372.match, v1372, [element$$30, selector], JAM.policy.p1)
     }
-    return JAM.call(selector.match, selector, [element$$30], JAM.policy.p9C5FFCABA70857D69F2974E6410A585B5EFE64DC)
+    return JAM.call(selector.match, selector, [element$$30], JAM.policy.p1)
   }
   function _recursivelyFind(element$$31, property$$10, expression, index$$55) {
     element$$31 = $$$1(element$$31);
     expression = expression || 0;
     index$$55 = index$$55 || 0;
-    var v1374 = JAM.call(Object.isNumber, Object, [expression], JAM.policy.p9C5FFCABA70857D69F2974E6410A585B5EFE64DC);
+    var v1374 = JAM.call(Object.isNumber, Object, [expression], JAM.policy.p1);
     if(v1374) {
       index$$55 = expression;
       expression = null
@@ -7171,7 +7171,7 @@ function v134(GLOBAL) {
       var v2674 = expression;
       if(v2674) {
         var v3715 = Prototype.Selector;
-        var v3386 = JAM.call(v3715.match, v3715, [element$$31, expression], JAM.policy.p9C5FFCABA70857D69F2974E6410A585B5EFE64DC);
+        var v3386 = JAM.call(v3715.match, v3715, [element$$31, expression], JAM.policy.p1);
         v2674 = !v3386
       }
       var v1376 = v2674;
@@ -7203,13 +7203,13 @@ function v134(GLOBAL) {
     element$$33 = $$$1(element$$33);
     expression$$2 = expression$$2 || 0;
     index$$57 = index$$57 || 0;
-    var v1381 = JAM.call(Object.isNumber, Object, [expression$$2], JAM.policy.p9C5FFCABA70857D69F2974E6410A585B5EFE64DC);
+    var v1381 = JAM.call(Object.isNumber, Object, [expression$$2], JAM.policy.p1);
     if(v1381) {
       index$$57 = expression$$2;
       expression$$2 = "*"
     }
     var v2677 = Prototype.Selector;
-    var v1382 = JAM.call(v2677.select, v2677, [expression$$2, element$$33], JAM.policy.p9C5FFCABA70857D69F2974E6410A585B5EFE64DC);
+    var v1382 = JAM.call(v2677.select, v2677, [expression$$2, element$$33], JAM.policy.p1);
     var node$$8 = v1382[index$$57];
     return JAM.call(Element$$1.extend, Element$$1, [node$$8])
   }
@@ -7221,25 +7221,25 @@ function v134(GLOBAL) {
   }
   function select(element$$36) {
     element$$36 = $$$1(element$$36);
-    var v1383 = JAM.call(SLICE.call, SLICE, [arguments, 1], JAM.policy.p9C5FFCABA70857D69F2974E6410A585B5EFE64DC);
-    var expressions = JAM.call(v1383.join, v1383, [", "], JAM.policy.p9C5FFCABA70857D69F2974E6410A585B5EFE64DC);
+    var v1383 = JAM.call(SLICE.call, SLICE, [arguments, 1], JAM.policy.p1);
+    var expressions = JAM.call(v1383.join, v1383, [", "], JAM.policy.p1);
     var v1384 = Prototype.Selector;
-    return JAM.call(v1384.select, v1384, [expressions, element$$36], JAM.policy.p9C5FFCABA70857D69F2974E6410A585B5EFE64DC)
+    return JAM.call(v1384.select, v1384, [expressions, element$$36], JAM.policy.p1)
   }
   function adjacent(element$$37) {
     element$$37 = $$$1(element$$37);
-    var v1385 = JAM.call(SLICE.call, SLICE, [arguments, 1], JAM.policy.p9C5FFCABA70857D69F2974E6410A585B5EFE64DC);
-    var expressions$$1 = JAM.call(v1385.join, v1385, [", "], JAM.policy.p9C5FFCABA70857D69F2974E6410A585B5EFE64DC);
-    var siblings$$1 = JAM.call(Element$$1.siblings, Element$$1, [element$$37], JAM.policy.p9C5FFCABA70857D69F2974E6410A585B5EFE64DC);
+    var v1385 = JAM.call(SLICE.call, SLICE, [arguments, 1], JAM.policy.p1);
+    var expressions$$1 = JAM.call(v1385.join, v1385, [", "], JAM.policy.p1);
+    var siblings$$1 = JAM.call(Element$$1.siblings, Element$$1, [element$$37], JAM.policy.p1);
     var results$$12 = [];
     var i$$25 = 0;
     var sibling;
     var v1387 = sibling = siblings$$1[i$$25];
     for(;v1387;) {
       var v2678 = Prototype.Selector;
-      var v1386 = JAM.call(v2678.match, v2678, [sibling, expressions$$1], JAM.policy.p9C5FFCABA70857D69F2974E6410A585B5EFE64DC);
+      var v1386 = JAM.call(v2678.match, v2678, [sibling, expressions$$1], JAM.policy.p1);
       if(v1386) {
-        JAM.call(results$$12.push, results$$12, [sibling], JAM.policy.p9C5FFCABA70857D69F2974E6410A585B5EFE64DC)
+        JAM.call(results$$12.push, results$$12, [sibling], JAM.policy.p1)
       }
       i$$25 = i$$25 + 1;
       v1387 = sibling = siblings$$1[i$$25]
@@ -7267,7 +7267,7 @@ function v134(GLOBAL) {
     if(v1390) {
       return descendantOf_DOM(element$$39, ancestor$$2)
     }
-    var v1391 = JAM.call(ancestor$$2.contains, ancestor$$2, [element$$39], JAM.policy.p9C5FFCABA70857D69F2974E6410A585B5EFE64DC);
+    var v1391 = JAM.call(ancestor$$2.contains, ancestor$$2, [element$$39], JAM.policy.p1);
     if(v1391) {
       v1391 = ancestor$$2 !== element$$39
     }
@@ -7276,13 +7276,13 @@ function v134(GLOBAL) {
   function descendantOf_compareDocumentPosition(element$$40, ancestor$$3) {
     element$$40 = $$$1(element$$40);
     ancestor$$3 = $$$1(ancestor$$3);
-    var v2680 = JAM.call(element$$40.compareDocumentPosition, element$$40, [ancestor$$3], JAM.policy.p9C5FFCABA70857D69F2974E6410A585B5EFE64DC);
+    var v2680 = JAM.call(element$$40.compareDocumentPosition, element$$40, [ancestor$$3], JAM.policy.p1);
     var v1392 = v2680 & 8;
     return v1392 === 8
   }
   function identify(element$$41) {
     element$$41 = $$$1(element$$41);
-    var id = JAM.call(Element$$1.readAttribute, Element$$1, [element$$41, "id"], JAM.policy.p9C5FFCABA70857D69F2974E6410A585B5EFE64DC);
+    var id = JAM.call(Element$$1.readAttribute, Element$$1, [element$$41, "id"], JAM.policy.p1);
     if(id) {
       return id
     }
@@ -7293,12 +7293,12 @@ function v134(GLOBAL) {
       id = "anonymous_element_" + v1393;
       v1394 = $$$1(id)
     }while(v1394);
-    JAM.call(Element$$1.writeAttribute, Element$$1, [element$$41, "id", id], JAM.policy.p9C5FFCABA70857D69F2974E6410A585B5EFE64DC);
+    JAM.call(Element$$1.writeAttribute, Element$$1, [element$$41, "id", id], JAM.policy.p1);
     return id
   }
   function readAttribute(element$$42, name$$34) {
     var v1395 = $$$1(element$$42);
-    return JAM.call(v1395.getAttribute, v1395, [name$$34], JAM.policy.p9C5FFCABA70857D69F2974E6410A585B5EFE64DC)
+    return JAM.call(v1395.getAttribute, v1395, [name$$34], JAM.policy.p1)
   }
   function readAttribute_IE(element$$43, name$$35) {
     element$$43 = $$$1(element$$43);
@@ -7307,7 +7307,7 @@ function v134(GLOBAL) {
     var v1397 = v2681[name$$35];
     if(v1397) {
       var v1396 = table.values;
-      return JAM.call(v1396[name$$35], v1396, [element$$43, name$$35], JAM.policy.p9C5FFCABA70857D69F2974E6410A585B5EFE64DC)
+      return JAM.call(v1396[name$$35], v1396, [element$$43, name$$35], JAM.policy.p1)
     }
     var v2682 = table.names;
     var v1399 = v2682[name$$35];
@@ -7315,7 +7315,7 @@ function v134(GLOBAL) {
       var v1398 = table.names;
       name$$35 = v1398[name$$35]
     }
-    var v1402 = JAM.call(name$$35.include, name$$35, [":"], JAM.policy.p9C5FFCABA70857D69F2974E6410A585B5EFE64DC);
+    var v1402 = JAM.call(name$$35.include, name$$35, [":"], JAM.policy.p1);
     if(v1402) {
       var v3387 = element$$43.attributes;
       var v2683 = !v3387;
@@ -7333,14 +7333,14 @@ function v134(GLOBAL) {
       var v1401 = v2684[name$$35];
       return v1401.value
     }
-    return JAM.call(element$$43.getAttribute, element$$43, [name$$35], JAM.policy.p9C5FFCABA70857D69F2974E6410A585B5EFE64DC)
+    return JAM.call(element$$43.getAttribute, element$$43, [name$$35], JAM.policy.p1)
   }
   function readAttribute_Opera(element$$44, name$$36) {
     var v1403 = name$$36 === "title";
     if(v1403) {
       return element$$44.title
     }
-    return JAM.call(element$$44.getAttribute, element$$44, [name$$36], JAM.policy.p9C5FFCABA70857D69F2974E6410A585B5EFE64DC)
+    return JAM.call(element$$44.getAttribute, element$$44, [name$$36], JAM.policy.p1)
   }
   function writeAttribute(element$$45, name$$37, value$$64) {
     element$$45 = $$$1(element$$45);
@@ -7354,13 +7354,13 @@ function v134(GLOBAL) {
       var v1404 = attributes$$3;
       var v1405 = name$$37;
       var v2686;
-      var v3390 = JAM.call(Object.isUndefined, Object, [value$$64], JAM.policy.p9C5FFCABA70857D69F2974E6410A585B5EFE64DC);
+      var v3390 = JAM.call(Object.isUndefined, Object, [value$$64], JAM.policy.p1);
       if(v3390) {
         v2686 = true
       }else {
         v2686 = value$$64
       }
-      JAM.set(v1404, v1405, v2686, JAM.policy.p425E08A28862414CF7130381FE99A660F52DB811)
+      JAM.set(v1404, v1405, v2686, JAM.policy.p2)
     }
     var attr$$1;
     for(attr$$1 in attributes$$3) {
@@ -7376,7 +7376,7 @@ function v134(GLOBAL) {
       var v1409 = v2689[attr$$1];
       if(v1409) {
         var v1408 = table$$1.values;
-        name$$37 = JAM.call(v1408[attr$$1], v1408, [element$$45, value$$64], JAM.policy.p9C5FFCABA70857D69F2974E6410A585B5EFE64DC)
+        name$$37 = JAM.call(v1408[attr$$1], v1408, [element$$45, value$$64], JAM.policy.p1)
       }
       var v2690 = value$$64 === false;
       var v3391 = !v2690;
@@ -7385,13 +7385,13 @@ function v134(GLOBAL) {
       }
       var v1411 = v2690;
       if(v1411) {
-        JAM.call(element$$45.removeAttribute, element$$45, [name$$37], JAM.policy.p9C5FFCABA70857D69F2974E6410A585B5EFE64DC)
+        JAM.call(element$$45.removeAttribute, element$$45, [name$$37], JAM.policy.p1)
       }else {
         var v1410 = value$$64 === true;
         if(v1410) {
-          JAM.call(element$$45.setAttribute, element$$45, [name$$37, name$$37], JAM.policy.p9C5FFCABA70857D69F2974E6410A585B5EFE64DC)
+          JAM.call(element$$45.setAttribute, element$$45, [name$$37, name$$37], JAM.policy.p1)
         }else {
-          JAM.call(element$$45.setAttribute, element$$45, [name$$37, value$$64], JAM.policy.p9C5FFCABA70857D69F2974E6410A585B5EFE64DC)
+          JAM.call(element$$45.setAttribute, element$$45, [name$$37, value$$64], JAM.policy.p1)
         }
       }
     }
@@ -7406,7 +7406,7 @@ function v134(GLOBAL) {
     }
     attribute$$1 = v1412;
     var v1413 = $$$1(element$$46);
-    var node$$9 = JAM.call(v1413.getAttributeNode, v1413, [attribute$$1], JAM.policy.p9C5FFCABA70857D69F2974E6410A585B5EFE64DC);
+    var node$$9 = JAM.call(v1413.getAttributeNode, v1413, [attribute$$1], JAM.policy.p1);
     var v3392 = node$$9;
     if(v3392) {
       v3392 = node$$9.specified
@@ -7427,7 +7427,7 @@ function v134(GLOBAL) {
     var v2694 = "(^|\\s+)" + className;
     var v1417 = v2694 + "(\\s+|$)";
     var re = new RegExp(v1417);
-    JAM.set(regExpCache, className, re, JAM.policy.p425E08A28862414CF7130381FE99A660F52DB811);
+    JAM.set(regExpCache, className, re, JAM.policy.p2);
     return re
   }
   function hasClassName(element$$48, className$$1) {
@@ -7447,7 +7447,7 @@ function v134(GLOBAL) {
       return true
     }
     var v1421 = getRegExpForClassName(className$$1);
-    return JAM.call(v1421.test, v1421, [elementClassName], JAM.policy.p9C5FFCABA70857D69F2974E6410A585B5EFE64DC)
+    return JAM.call(v1421.test, v1421, [elementClassName], JAM.policy.p1)
   }
   function addClassName(element$$49, className$$2) {
     var v2697 = element$$49 = $$$1(element$$49);
@@ -7481,8 +7481,8 @@ function v134(GLOBAL) {
     var v1425 = element$$50;
     var v3394 = element$$50.className;
     var v3395 = getRegExpForClassName(className$$3);
-    var v2702 = JAM.call(v3394.replace, v3394, [v3395, " "], JAM.policy.p9C5FFCABA70857D69F2974E6410A585B5EFE64DC);
-    var v3999 = JAM.call(v2702.strip, v2702, [], JAM.policy.p9C5FFCABA70857D69F2974E6410A585B5EFE64DC);
+    var v2702 = JAM.call(v3394.replace, v3394, [v3395, " "], JAM.policy.p1);
+    var v3999 = JAM.call(v2702.strip, v2702, [], JAM.policy.p1);
     v1425.className = v3999;
     return element$$50
   }
@@ -7492,7 +7492,7 @@ function v134(GLOBAL) {
     if(v1426) {
       return
     }
-    var v1428 = JAM.call(Object.isUndefined, Object, [bool$$1], JAM.policy.p9C5FFCABA70857D69F2974E6410A585B5EFE64DC);
+    var v1428 = JAM.call(Object.isUndefined, Object, [bool$$1], JAM.policy.p1);
     if(v1428) {
       var v1427 = hasClassName(element$$51, className$$4);
       bool$$1 = !v1427
@@ -7505,16 +7505,16 @@ function v134(GLOBAL) {
     }
     var v1429 = v2704;
     var method$$7 = Element$$1[v1429];
-    return JAM.call(method$$7, null, [element$$51, className$$4], JAM.policy.p9C5FFCABA70857D69F2974E6410A585B5EFE64DC)
+    return JAM.call(method$$7, null, [element$$51, className$$4], JAM.policy.p1)
   }
   function _getAttr(element$$52, attribute$$2) {
-    return JAM.call(element$$52.getAttribute, element$$52, [attribute$$2], JAM.policy.p9C5FFCABA70857D69F2974E6410A585B5EFE64DC)
+    return JAM.call(element$$52.getAttribute, element$$52, [attribute$$2], JAM.policy.p1)
   }
   function _getAttr2(element$$53, attribute$$3) {
-    return JAM.call(element$$53.getAttribute, element$$53, [attribute$$3, 2], JAM.policy.p9C5FFCABA70857D69F2974E6410A585B5EFE64DC)
+    return JAM.call(element$$53.getAttribute, element$$53, [attribute$$3, 2], JAM.policy.p1)
   }
   function _getAttrNode(element$$54, attribute$$4) {
-    var node$$10 = JAM.call(element$$54.getAttributeNode, element$$54, [attribute$$4], JAM.policy.p9C5FFCABA70857D69F2974E6410A585B5EFE64DC);
+    var node$$10 = JAM.call(element$$54.getAttributeNode, element$$54, [attribute$$4], JAM.policy.p1);
     var v1430;
     if(node$$10) {
       v1430 = node$$10.value
@@ -7526,7 +7526,7 @@ function v134(GLOBAL) {
   function _getFlag(element$$55, attribute$$5) {
     var v1431;
     var v3396 = $$$1(element$$55);
-    var v2705 = JAM.call(v3396.hasAttribute, v3396, [attribute$$5], JAM.policy.p9C5FFCABA70857D69F2974E6410A585B5EFE64DC);
+    var v2705 = JAM.call(v3396.hasAttribute, v3396, [attribute$$5], JAM.policy.p1);
     if(v2705) {
       v1431 = attribute$$5
     }else {
@@ -7538,14 +7538,14 @@ function v134(GLOBAL) {
     element$$56 = $$$1(element$$56);
     var elementStyle = element$$56.style;
     var match$$8;
-    var v1434 = JAM.call(Object.isString, Object, [styles], JAM.policy.p9C5FFCABA70857D69F2974E6410A585B5EFE64DC);
+    var v1434 = JAM.call(Object.isString, Object, [styles], JAM.policy.p1);
     if(v1434) {
       var v2706 = elementStyle.cssText;
       var v2707 = ";" + styles;
       elementStyle.cssText = v2706 + v2707;
-      var v1433 = JAM.call(styles.include, styles, ["opacity"], JAM.policy.p9C5FFCABA70857D69F2974E6410A585B5EFE64DC);
+      var v1433 = JAM.call(styles.include, styles, ["opacity"], JAM.policy.p1);
       if(v1433) {
-        var v1432 = JAM.call(styles.match, styles, [/opacity:\s*(\d?\.?\d*)/], JAM.policy.p9C5FFCABA70857D69F2974E6410A585B5EFE64DC);
+        var v1432 = JAM.call(styles.match, styles, [/opacity:\s*(\d?\.?\d*)/], JAM.policy.p1);
         var opacity = v1432[1];
         JAM.call(Element$$1.setOpacity, Element$$1, [element$$56, opacity])
       }
@@ -7568,7 +7568,7 @@ function v134(GLOBAL) {
         if(v1437) {
           var v1436;
           var v3398 = elementStyle.styleFloat;
-          var v2709 = JAM.call(Object.isUndefined, Object, [v3398], JAM.policy.p9C5FFCABA70857D69F2974E6410A585B5EFE64DC);
+          var v2709 = JAM.call(Object.isUndefined, Object, [v3398], JAM.policy.p1);
           if(v2709) {
             v1436 = "cssFloat"
           }else {
@@ -7576,7 +7576,7 @@ function v134(GLOBAL) {
           }
           property$$11 = v1436
         }
-        JAM.set(elementStyle, property$$11, value$$65, JAM.policy.p425E08A28862414CF7130381FE99A660F52DB811)
+        JAM.set(elementStyle, property$$11, value$$65, JAM.policy.p2)
       }
     }
     return element$$56
@@ -7594,7 +7594,7 @@ function v134(GLOBAL) {
         style$$2 = "cssFloat";
         break JSCompiler_inline_label_normalizeStyleName_19
       }
-      style$$2 = JAM.call(style$$2.camelize, style$$2, [], JAM.policy.p9C5FFCABA70857D69F2974E6410A585B5EFE64DC)
+      style$$2 = JAM.call(style$$2.camelize, style$$2, [], JAM.policy.p1)
     }
     var v1440 = element$$57.style;
     var value$$66 = v1440[style$$2];
@@ -7606,7 +7606,7 @@ function v134(GLOBAL) {
     var v1443 = v2711;
     if(v1443) {
       var v1441 = document.defaultView;
-      var css = JAM.call(v1441.getComputedStyle, v1441, [element$$57, null], JAM.policy.p9C5FFCABA70857D69F2974E6410A585B5EFE64DC);
+      var css = JAM.call(v1441.getComputedStyle, v1441, [element$$57, null], JAM.policy.p1);
       var v1442;
       if(css) {
         v1442 = css[style$$2]
@@ -7647,7 +7647,7 @@ function v134(GLOBAL) {
         style$$4 = "styleFloat";
         break JSCompiler_inline_label_normalizeStyleName_IE_21
       }
-      style$$4 = JAM.call(style$$4.camelize, style$$4, [], JAM.policy.p9C5FFCABA70857D69F2974E6410A585B5EFE64DC)
+      style$$4 = JAM.call(style$$4.camelize, style$$4, [], JAM.policy.p1)
     }
     var v1448 = element$$59.style;
     var value$$67 = v1448[style$$4];
@@ -7677,11 +7677,11 @@ function v134(GLOBAL) {
       }
       var v2716 = v3402;
       if(v2716) {
-        v2716 = JAM.call(Element$$1.visible, Element$$1, [element$$59], JAM.policy.p9C5FFCABA70857D69F2974E6410A585B5EFE64DC)
+        v2716 = JAM.call(Element$$1.visible, Element$$1, [element$$59], JAM.policy.p1)
       }
       var v1453 = v2716;
       if(v1453) {
-        var v1452 = JAM.call(Element$$1.measure, Element$$1, [element$$59, style$$4], JAM.policy.p9C5FFCABA70857D69F2974E6410A585B5EFE64DC);
+        var v1452 = JAM.call(Element$$1.measure, Element$$1, [element$$59, style$$4], JAM.policy.p1);
         return v1452 + "px"
       }
       return null
@@ -7721,7 +7721,7 @@ function v134(GLOBAL) {
       v1458.zoom = 1
     }
     element$$62 = element$$inline_22;
-    var filter$$4 = JAM.call(Element$$1.getStyle, Element$$1, [element$$62, "filter"], JAM.policy.p9C5FFCABA70857D69F2974E6410A585B5EFE64DC);
+    var filter$$4 = JAM.call(Element$$1.getStyle, Element$$1, [element$$62, "filter"], JAM.policy.p1);
     var style$$5 = element$$62.style;
     var v2719 = value$$69 == 1;
     var v3405 = !v2719;
@@ -7731,11 +7731,11 @@ function v134(GLOBAL) {
     var v1461 = v2719;
     if(v1461) {
       var v1460 = filter$$4 || "";
-      filter$$4 = JAM.call(v1460.replace, v1460, [/alpha\([^\)]*\)/gi, ""], JAM.policy.p9C5FFCABA70857D69F2974E6410A585B5EFE64DC);
+      filter$$4 = JAM.call(v1460.replace, v1460, [/alpha\([^\)]*\)/gi, ""], JAM.policy.p1);
       if(filter$$4) {
         style$$5.filter = filter$$4
       }else {
-        JAM.call(style$$5.removeAttribute, style$$5, ["filter"], JAM.policy.p9C5FFCABA70857D69F2974E6410A585B5EFE64DC)
+        JAM.call(style$$5.removeAttribute, style$$5, ["filter"], JAM.policy.p1)
       }
       return element$$62
     }
@@ -7745,7 +7745,7 @@ function v134(GLOBAL) {
     }
     var v1463 = style$$5;
     var v3847 = filter$$4 || "";
-    var v3719 = JAM.call(v3847.replace, v3847, [/alpha\([^\)]*\)/gi, ""], JAM.policy.p9C5FFCABA70857D69F2974E6410A585B5EFE64DC);
+    var v3719 = JAM.call(v3847.replace, v3847, [/alpha\([^\)]*\)/gi, ""], JAM.policy.p1);
     var v3406 = v3719 + "alpha(opacity=";
     var v3407 = value$$69 * 100;
     var v2720 = v3406 + v3407;
@@ -7753,20 +7753,20 @@ function v134(GLOBAL) {
     return element$$62
   }
   function getOpacity(element$$63) {
-    return JAM.call(Element$$1.getStyle, Element$$1, [element$$63, "opacity"], JAM.policy.p9C5FFCABA70857D69F2974E6410A585B5EFE64DC)
+    return JAM.call(Element$$1.getStyle, Element$$1, [element$$63, "opacity"], JAM.policy.p1)
   }
   function getOpacity_IE(element$$64) {
     if(STANDARD_CSS_OPACITY_SUPPORTED) {
       return getOpacity(element$$64)
     }
-    var filter$$5 = JAM.call(Element$$1.getStyle, Element$$1, [element$$64, "filter"], JAM.policy.p9C5FFCABA70857D69F2974E6410A585B5EFE64DC);
+    var filter$$5 = JAM.call(Element$$1.getStyle, Element$$1, [element$$64, "filter"], JAM.policy.p1);
     var v2721 = filter$$5.length;
     var v1464 = v2721 === 0;
     if(v1464) {
       return 1
     }
     var v1465 = filter$$5 || "";
-    var match$$9 = JAM.call(v1465.match, v1465, [/alpha\(opacity=(.*)\)/], JAM.policy.p9C5FFCABA70857D69F2974E6410A585B5EFE64DC);
+    var match$$9 = JAM.call(v1465.match, v1465, [/alpha\(opacity=(.*)\)/], JAM.policy.p1);
     var v1467 = match$$9[1];
     if(v1467) {
       var v2722 = match$$9[1];
@@ -7810,7 +7810,7 @@ function v134(GLOBAL) {
     if(v1472) {
       return
     }
-    var uid$$2 = JAM.call(getUniqueElementID, null, [element$$67], JAM.policy.p9C5FFCABA70857D69F2974E6410A585B5EFE64DC);
+    var uid$$2 = JAM.call(getUniqueElementID, null, [element$$67], JAM.policy.p1);
     var v3410 = Element$$1.Storage;
     var v2727 = v3410[uid$$2];
     var v1475 = !v2727;
@@ -7818,7 +7818,7 @@ function v134(GLOBAL) {
       var v1473 = Element$$1.Storage;
       var v1474 = uid$$2;
       var v4000 = $H();
-      JAM.set(v1473, v1474, v4000, JAM.policy.p425E08A28862414CF7130381FE99A660F52DB811)
+      JAM.set(v1473, v1474, v4000, JAM.policy.p2)
     }
     var v1476 = Element$$1.Storage;
     return v1476[uid$$2]
@@ -7833,9 +7833,9 @@ function v134(GLOBAL) {
     var v2729 = arguments.length;
     var v1478 = v2729 === 2;
     if(v1478) {
-      JAM.call(storage.update, storage, [key$$22], JAM.policy.p9C5FFCABA70857D69F2974E6410A585B5EFE64DC)
+      JAM.call(storage.update, storage, [key$$22], JAM.policy.p1)
     }else {
-      JAM.call(storage.set, storage, [key$$22, value$$70], JAM.policy.p9C5FFCABA70857D69F2974E6410A585B5EFE64DC)
+      JAM.call(storage.set, storage, [key$$22, value$$70], JAM.policy.p1)
     }
     return element$$68
   }
@@ -7846,10 +7846,10 @@ function v134(GLOBAL) {
       return
     }
     var storage$$1 = getStorage(element$$69);
-    var value$$71 = JAM.call(storage$$1.get, storage$$1, [key$$23], JAM.policy.p9C5FFCABA70857D69F2974E6410A585B5EFE64DC);
-    var v1480 = JAM.call(Object.isUndefined, Object, [value$$71], JAM.policy.p9C5FFCABA70857D69F2974E6410A585B5EFE64DC);
+    var value$$71 = JAM.call(storage$$1.get, storage$$1, [key$$23], JAM.policy.p1);
+    var v1480 = JAM.call(Object.isUndefined, Object, [value$$71], JAM.policy.p1);
     if(v1480) {
-      JAM.call(storage$$1.set, storage$$1, [key$$23, defaultValue], JAM.policy.p9C5FFCABA70857D69F2974E6410A585B5EFE64DC);
+      JAM.call(storage$$1.set, storage$$1, [key$$23, defaultValue], JAM.policy.p1);
       value$$71 = defaultValue
     }
     return value$$71
@@ -7864,12 +7864,12 @@ function v134(GLOBAL) {
     var v1482 = window.Element;
     var proto$$2 = v1482.prototype;
     if(proto$$2) {
-      var v3412 = JAM.call(Math.random, Math, [], JAM.policy.p9C5FFCABA70857D69F2974E6410A585B5EFE64DC);
+      var v3412 = JAM.call(Math.random, Math, [], JAM.policy.p1);
       var v2732 = v3412 + "";
-      var v1483 = JAM.call(v2732.slice, v2732, [2], JAM.policy.p9C5FFCABA70857D69F2974E6410A585B5EFE64DC);
+      var v1483 = JAM.call(v2732.slice, v2732, [2], JAM.policy.p1);
       var id$$1 = "_" + v1483;
-      var el = JAM.call(document.createElement, document, [tagName$$7], JAM.policy.p9C5FFCABA70857D69F2974E6410A585B5EFE64DC);
-      JAM.set(proto$$2, id$$1, "x", JAM.policy.p425E08A28862414CF7130381FE99A660F52DB811);
+      var el = JAM.call(document.createElement, document, [tagName$$7], JAM.policy.p1);
+      JAM.set(proto$$2, id$$1, "x", JAM.policy.p2);
       var v1484 = el[id$$1];
       var isBuggy = v1484 !== "x";
       delete proto$$2[id$$1];
@@ -7882,7 +7882,7 @@ function v134(GLOBAL) {
     var property$$12;
     for(property$$12 in methods$$2) {
       var value$$72 = methods$$2[property$$12];
-      var v2733 = JAM.call(Object.isFunction, Object, [value$$72], JAM.policy.p9C5FFCABA70857D69F2974E6410A585B5EFE64DC);
+      var v2733 = JAM.call(Object.isFunction, Object, [value$$72], JAM.policy.p1);
       if(v2733) {
         var v3413 = property$$12 in element$$70;
         v2733 = !v3413
@@ -7891,14 +7891,14 @@ function v134(GLOBAL) {
       if(v1487) {
         var v1485 = element$$70;
         var v1486 = property$$12;
-        var v4001 = JAM.call(value$$72.methodize, value$$72, [], JAM.policy.p9C5FFCABA70857D69F2974E6410A585B5EFE64DC);
-        JAM.set(v1485, v1486, v4001, JAM.policy.p425E08A28862414CF7130381FE99A660F52DB811)
+        var v4001 = JAM.call(value$$72.methodize, value$$72, [], JAM.policy.p1);
+        JAM.set(v1485, v1486, v4001, JAM.policy.p2)
       }
     }
     return
   }
   function elementIsExtended(element$$71) {
-    var uid$$3 = JAM.call(getUniqueElementID, null, [element$$71], JAM.policy.p9C5FFCABA70857D69F2974E6410A585B5EFE64DC);
+    var uid$$3 = JAM.call(getUniqueElementID, null, [element$$71], JAM.policy.p1);
     return uid$$3 in EXTENDED
   }
   function extend$$1(element$$72) {
@@ -7922,17 +7922,17 @@ function v134(GLOBAL) {
     if(v1489) {
       return element$$72
     }
-    var methods$$3 = JAM.call(Object.clone, Object, [Methods], JAM.policy.p9C5FFCABA70857D69F2974E6410A585B5EFE64DC);
+    var methods$$3 = JAM.call(Object.clone, Object, [Methods], JAM.policy.p1);
     var v1490 = element$$72.tagName;
-    var tagName$$8 = JAM.call(v1490.toUpperCase, v1490, [], JAM.policy.p9C5FFCABA70857D69F2974E6410A585B5EFE64DC);
+    var tagName$$8 = JAM.call(v1490.toUpperCase, v1490, [], JAM.policy.p1);
     var v1492 = ByTag[tagName$$8];
     if(v1492) {
       var v1491 = ByTag[tagName$$8];
-      JAM.call(Object.extend, Object, [methods$$3, v1491], JAM.policy.p9C5FFCABA70857D69F2974E6410A585B5EFE64DC)
+      JAM.call(Object.extend, Object, [methods$$3, v1491], JAM.policy.p1)
     }
     extendElementWith(element$$72, methods$$3);
-    var v1493 = JAM.call(getUniqueElementID, null, [element$$72], JAM.policy.p9C5FFCABA70857D69F2974E6410A585B5EFE64DC);
-    JAM.set(EXTENDED, v1493, true, JAM.policy.p425E08A28862414CF7130381FE99A660F52DB811);
+    var v1493 = JAM.call(getUniqueElementID, null, [element$$72], JAM.policy.p1);
+    JAM.set(EXTENDED, v1493, true, JAM.policy.p2);
     return element$$72
   }
   function extend_IE8(element$$73) {
@@ -7948,7 +7948,7 @@ function v134(GLOBAL) {
     var t$$1 = element$$73.tagName;
     var v2737 = t$$1;
     if(v2737) {
-      v2737 = JAM.call(/^(?:object|applet|embed)$/i.test, /^(?:object|applet|embed)$/i, [t$$1], JAM.policy.p9C5FFCABA70857D69F2974E6410A585B5EFE64DC)
+      v2737 = JAM.call(/^(?:object|applet|embed)$/i.test, /^(?:object|applet|embed)$/i, [t$$1], JAM.policy.p1)
     }
     var v1498 = v2737;
     if(v1498) {
@@ -7959,32 +7959,32 @@ function v134(GLOBAL) {
       extendElementWith(element$$73, v1496);
       var v3419 = Element$$1.Methods;
       var v2739 = v3419.ByTag;
-      var v2740 = JAM.call(t$$1.toUpperCase, t$$1, [], JAM.policy.p9C5FFCABA70857D69F2974E6410A585B5EFE64DC);
+      var v2740 = JAM.call(t$$1.toUpperCase, t$$1, [], JAM.policy.p1);
       var v1497 = v2739[v2740];
       extendElementWith(element$$73, v1497)
     }
     return element$$73
   }
   function addMethodsToTagName(tagName$$9, methods$$4) {
-    tagName$$9 = JAM.call(tagName$$9.toUpperCase, tagName$$9, [], JAM.policy.p9C5FFCABA70857D69F2974E6410A585B5EFE64DC);
+    tagName$$9 = JAM.call(tagName$$9.toUpperCase, tagName$$9, [], JAM.policy.p1);
     var v2741 = ByTag[tagName$$9];
     var v1499 = !v2741;
     if(v1499) {
-      JAM.set(ByTag, tagName$$9, {}, JAM.policy.p425E08A28862414CF7130381FE99A660F52DB811)
+      JAM.set(ByTag, tagName$$9, {}, JAM.policy.p2)
     }
     var v1500 = ByTag[tagName$$9];
-    JAM.call(Object.extend, Object, [v1500, methods$$4], JAM.policy.p9C5FFCABA70857D69F2974E6410A585B5EFE64DC);
+    JAM.call(Object.extend, Object, [v1500, methods$$4], JAM.policy.p1);
     return
   }
   function mergeMethods(destination$$1, methods$$5, onlyIfAbsent) {
-    var v1501 = JAM.call(Object.isUndefined, Object, [onlyIfAbsent], JAM.policy.p9C5FFCABA70857D69F2974E6410A585B5EFE64DC);
+    var v1501 = JAM.call(Object.isUndefined, Object, [onlyIfAbsent], JAM.policy.p1);
     if(v1501) {
       onlyIfAbsent = false
     }
     var property$$13;
     for(property$$13 in methods$$5) {
       var value$$73 = methods$$5[property$$13];
-      var v2742 = JAM.call(Object.isFunction, Object, [value$$73], JAM.policy.p9C5FFCABA70857D69F2974E6410A585B5EFE64DC);
+      var v2742 = JAM.call(Object.isFunction, Object, [value$$73], JAM.policy.p1);
       var v1502 = !v2742;
       if(v1502) {
         continue
@@ -7999,8 +7999,8 @@ function v134(GLOBAL) {
       if(v1505) {
         var v1503 = destination$$1;
         var v1504 = property$$13;
-        var v4002 = JAM.call(value$$73.methodize, value$$73, [], JAM.policy.p9C5FFCABA70857D69F2974E6410A585B5EFE64DC);
-        JAM.set(v1503, v1504, v4002, JAM.policy.p425E08A28862414CF7130381FE99A660F52DB811)
+        var v4002 = JAM.call(value$$73.methodize, value$$73, [], JAM.policy.p1);
+        JAM.set(v1503, v1504, v4002, JAM.policy.p2)
       }
     }
     return
@@ -8025,14 +8025,14 @@ function v134(GLOBAL) {
     if(v1510) {
       return window[klass$$1]
     }
-    var v2745 = JAM.call(tagName$$10.capitalize, tagName$$10, [], JAM.policy.p9C5FFCABA70857D69F2974E6410A585B5EFE64DC);
+    var v2745 = JAM.call(tagName$$10.capitalize, tagName$$10, [], JAM.policy.p1);
     var v1511 = "HTML" + v2745;
     klass$$1 = v1511 + "Element";
     var v1512 = window[klass$$1];
     if(v1512) {
       return window[klass$$1]
     }
-    var element$$74 = JAM.call(document.createElement, document, [tagName$$10], JAM.policy.p9C5FFCABA70857D69F2974E6410A585B5EFE64DC);
+    var element$$74 = JAM.call(document.createElement, document, [tagName$$10], JAM.policy.p1);
     var v1513 = element$$74["__proto__"];
     var v2747 = !v1513;
     if(v2747) {
@@ -8048,29 +8048,29 @@ function v134(GLOBAL) {
     var v1519 = v2748 === 0;
     if(v1519) {
       var v1514 = Form.Methods;
-      JAM.call(Object.extend, Object, [Form, v1514], JAM.policy.p9C5FFCABA70857D69F2974E6410A585B5EFE64DC);
+      JAM.call(Object.extend, Object, [Form, v1514], JAM.policy.p1);
       var v1515 = Form.Element;
       var v2749 = Form.Element;
       var v1516 = v2749.Methods;
-      JAM.call(Object.extend, Object, [v1515, v1516], JAM.policy.p9C5FFCABA70857D69F2974E6410A585B5EFE64DC);
+      JAM.call(Object.extend, Object, [v1515, v1516], JAM.policy.p1);
       var v2750 = Element$$1.Methods;
       var v1517 = v2750.ByTag;
       var v3422 = Form.Methods;
-      var v2751 = JAM.call(Object.clone, Object, [v3422], JAM.policy.p9C5FFCABA70857D69F2974E6410A585B5EFE64DC);
+      var v2751 = JAM.call(Object.clone, Object, [v3422], JAM.policy.p1);
       var v3721 = Form.Element;
       var v3423 = v3721.Methods;
-      var v2752 = JAM.call(Object.clone, Object, [v3423], JAM.policy.p9C5FFCABA70857D69F2974E6410A585B5EFE64DC);
+      var v2752 = JAM.call(Object.clone, Object, [v3423], JAM.policy.p1);
       var v3722 = Form.Element;
       var v3424 = v3722.Methods;
-      var v2753 = JAM.call(Object.clone, Object, [v3424], JAM.policy.p9C5FFCABA70857D69F2974E6410A585B5EFE64DC);
+      var v2753 = JAM.call(Object.clone, Object, [v3424], JAM.policy.p1);
       var v3723 = Form.Element;
       var v3425 = v3723.Methods;
-      var v2754 = JAM.call(Object.clone, Object, [v3425], JAM.policy.p9C5FFCABA70857D69F2974E6410A585B5EFE64DC);
+      var v2754 = JAM.call(Object.clone, Object, [v3425], JAM.policy.p1);
       var v3724 = Form.Element;
       var v3426 = v3724.Methods;
-      var v2755 = JAM.call(Object.clone, Object, [v3426], JAM.policy.p9C5FFCABA70857D69F2974E6410A585B5EFE64DC);
+      var v2755 = JAM.call(Object.clone, Object, [v3426], JAM.policy.p1);
       var v1518 = {"FORM":v2751, "INPUT":v2752, "SELECT":v2753, "TEXTAREA":v2754, "BUTTON":v2755};
-      JAM.call(Object.extend, Object, [v1517, v1518], JAM.policy.p9C5FFCABA70857D69F2974E6410A585B5EFE64DC)
+      JAM.call(Object.extend, Object, [v1517, v1518], JAM.policy.p1)
     }
     var v2756 = arguments.length;
     var v1520 = v2756 === 2;
@@ -8082,9 +8082,9 @@ function v134(GLOBAL) {
     if(v1525) {
       var v1521 = Element$$1.Methods;
       var v1522 = methods$$6 || {};
-      JAM.call(Object.extend, Object, [v1521, v1522], JAM.policy.p9C5FFCABA70857D69F2974E6410A585B5EFE64DC)
+      JAM.call(Object.extend, Object, [v1521, v1522], JAM.policy.p1)
     }else {
-      var v1524 = JAM.call(Object.isArray, Object, [tagName$$11], JAM.policy.p9C5FFCABA70857D69F2974E6410A585B5EFE64DC);
+      var v1524 = JAM.call(Object.isArray, Object, [tagName$$11], JAM.policy.p1);
       if(v1524) {
         var i$$26 = 0;
         var tag;
@@ -8120,7 +8120,7 @@ function v134(GLOBAL) {
       var v1533 = v2759.ByTag;
       for(tag in v1533) {
         var klass$$2 = findDOMClass(tag);
-        var v1530 = JAM.call(Object.isUndefined, Object, [klass$$2], JAM.policy.p9C5FFCABA70857D69F2974E6410A585B5EFE64DC);
+        var v1530 = JAM.call(Object.isUndefined, Object, [klass$$2], JAM.policy.p1);
         if(v1530) {
           continue
         }
@@ -8130,21 +8130,21 @@ function v134(GLOBAL) {
       }
     }
     var v1535 = Element$$1.Methods;
-    JAM.call(Object.extend, Object, [Element$$1, v1535], JAM.policy.p9C5FFCABA70857D69F2974E6410A585B5EFE64DC);
+    JAM.call(Object.extend, Object, [Element$$1, v1535], JAM.policy.p1);
     var v2760 = Element$$1.Methods;
     var v1536 = v2760.Simulated;
-    JAM.call(Object.extend, Object, [Element$$1, v1536], JAM.policy.p9C5FFCABA70857D69F2974E6410A585B5EFE64DC);
+    JAM.call(Object.extend, Object, [Element$$1, v1536], JAM.policy.p1);
     delete Element$$1.ByTag;
     delete Element$$1.Simulated;
     var v1537 = Element$$1.extend;
-    JAM.call(v1537.refresh, v1537, [], JAM.policy.p9C5FFCABA70857D69F2974E6410A585B5EFE64DC);
+    JAM.call(v1537.refresh, v1537, [], JAM.policy.p1);
     ELEMENT_CACHE = {};
     return
   }
   var UNDEFINED;
   var v1538 = Array.prototype;
   var SLICE = v1538.slice;
-  var DIV = JAM.call(document.createElement, document, ["div"], JAM.policy.p9C5FFCABA70857D69F2974E6410A585B5EFE64DC);
+  var DIV = JAM.call(document.createElement, document, ["div"], JAM.policy.p1);
   GLOBAL.$ = $$$1;
   var v2761 = GLOBAL.Node;
   var v1539 = !v2761;
@@ -8157,7 +8157,7 @@ function v134(GLOBAL) {
   if(v1542) {
     var v1540 = GLOBAL.Node;
     var v1541 = {ELEMENT_NODE:1, ATTRIBUTE_NODE:2, TEXT_NODE:3, CDATA_SECTION_NODE:4, ENTITY_REFERENCE_NODE:5, ENTITY_NODE:6, PROCESSING_INSTRUCTION_NODE:7, COMMENT_NODE:8, DOCUMENT_NODE:9, DOCUMENT_TYPE_NODE:10, DOCUMENT_FRAGMENT_NODE:11, NOTATION_NODE:12};
-    JAM.call(Object.extend, Object, [v1540, v1541], JAM.policy.p9C5FFCABA70857D69F2974E6410A585B5EFE64DC)
+    JAM.call(Object.extend, Object, [v1540, v1541], JAM.policy.p1)
   }
   var ELEMENT_CACHE = {};
   var HAS_EXTENDED_CREATE_ELEMENT_SYNTAX = v117();
@@ -8165,7 +8165,7 @@ function v134(GLOBAL) {
   GLOBAL.Element = Element$$1;
   var v1543 = GLOBAL.Element;
   var v1544 = oldElement || {};
-  JAM.call(Object.extend, Object, [v1543, v1544], JAM.policy.p9C5FFCABA70857D69F2974E6410A585B5EFE64DC);
+  JAM.call(Object.extend, Object, [v1543, v1544], JAM.policy.p1);
   if(oldElement) {
     var v1545 = GLOBAL.Element;
     v1545.prototype = oldElement.prototype
@@ -8175,7 +8175,7 @@ function v134(GLOBAL) {
   var INSPECT_ATTRIBUTES = {id:"id", className:"class"};
   methods$$1.inspect = inspect$$5;
   var v1546 = {visible:visible, toggle:toggle, hide:hide, show:show};
-  JAM.call(Object.extend, Object, [methods$$1, v1546], JAM.policy.p9C5FFCABA70857D69F2974E6410A585B5EFE64DC);
+  JAM.call(Object.extend, Object, [methods$$1, v1546], JAM.policy.p1);
   var SELECT_ELEMENT_INNERHTML_BUGGY = v118();
   var TABLE_ELEMENT_INNERHTML_BUGGY = v119();
   var LINK_ELEMENT_INNERHTML_BUGGY = v120();
@@ -8198,7 +8198,7 @@ function v134(GLOBAL) {
   var v2770 = tags.TBODY;
   var v2771 = tags.TD;
   var v1549 = {THEAD:v2769, TFOOT:v2770, TH:v2771};
-  JAM.call(Object.extend, Object, [tags, v1549], JAM.policy.p9C5FFCABA70857D69F2974E6410A585B5EFE64DC);
+  JAM.call(Object.extend, Object, [tags, v1549], JAM.policy.p1);
   var v2772 = document.documentElement;
   var v1550 = "outerHTML" in v2772;
   if(v1550) {
@@ -8208,7 +8208,7 @@ function v134(GLOBAL) {
     purgeCollection = purgeCollection_IE
   }
   var v1551 = {remove:remove, update:update$$2, replace:replace, insert:insert, wrap:wrap$$1, cleanWhitespace:cleanWhitespace, empty:empty$$1, clone:clone$$3, purge:purge};
-  JAM.call(Object.extend, Object, [methods$$1, v1551], JAM.policy.p9C5FFCABA70857D69F2974E6410A585B5EFE64DC);
+  JAM.call(Object.extend, Object, [methods$$1, v1551], JAM.policy.p1);
   var descendantOf;
   var v1553 = DIV.compareDocumentPosition;
   if(v1553) {
@@ -8222,7 +8222,7 @@ function v134(GLOBAL) {
     }
   }
   var v1554 = {recursivelyCollect:recursivelyCollect, ancestors:ancestors, descendants:descendants, firstDescendant:firstDescendant, immediateDescendants:immediateDescendants, previousSiblings:previousSiblings, nextSiblings:nextSiblings, siblings:siblings, match:match$$7, up:up, down:down, previous:previous, next:next, select:select, adjacent:adjacent, descendantOf:descendantOf, getElementsBySelector:select, childElements:immediateDescendants};
-  JAM.call(Object.extend, Object, [methods$$1, v1554], JAM.policy.p9C5FFCABA70857D69F2974E6410A585B5EFE64DC);
+  JAM.call(Object.extend, Object, [methods$$1, v1554], JAM.policy.p1);
   var idCounter = 1;
   var PROBLEMATIC_ATTRIBUTE_READING = v126();
   if(PROBLEMATIC_ATTRIBUTE_READING) {
@@ -8242,23 +8242,23 @@ function v134(GLOBAL) {
   var ATTRIBUTE_TRANSLATIONS = {};
   var classProp = "className";
   var forProp = "for";
-  JAM.call(DIV.setAttribute, DIV, [classProp, "x"], JAM.policy.p9C5FFCABA70857D69F2974E6410A585B5EFE64DC);
+  JAM.call(DIV.setAttribute, DIV, [classProp, "x"], JAM.policy.p1);
   var v2775 = DIV.className;
   var v1558 = v2775 !== "x";
   if(v1558) {
-    JAM.call(DIV.setAttribute, DIV, ["class", "x"], JAM.policy.p9C5FFCABA70857D69F2974E6410A585B5EFE64DC);
+    JAM.call(DIV.setAttribute, DIV, ["class", "x"], JAM.policy.p1);
     var v2776 = DIV.className;
     var v1557 = v2776 === "x";
     if(v1557) {
       classProp = "class"
     }
   }
-  var LABEL = JAM.call(document.createElement, document, ["label"], JAM.policy.p9C5FFCABA70857D69F2974E6410A585B5EFE64DC);
-  JAM.call(LABEL.setAttribute, LABEL, [forProp, "x"], JAM.policy.p9C5FFCABA70857D69F2974E6410A585B5EFE64DC);
+  var LABEL = JAM.call(document.createElement, document, ["label"], JAM.policy.p1);
+  JAM.call(LABEL.setAttribute, LABEL, [forProp, "x"], JAM.policy.p1);
   var v2777 = LABEL.htmlFor;
   var v1560 = v2777 !== "x";
   if(v1560) {
-    JAM.call(LABEL.setAttribute, LABEL, ["htmlFor", "x"], JAM.policy.p9C5FFCABA70857D69F2974E6410A585B5EFE64DC);
+    JAM.call(LABEL.setAttribute, LABEL, ["htmlFor", "x"], JAM.policy.p1);
     var v2778 = LABEL.htmlFor;
     var v1559 = v2778 === "x";
     if(v1559) {
@@ -8267,10 +8267,10 @@ function v134(GLOBAL) {
   }
   LABEL = null;
   JAM.set(DIV, "onclick", Prototype.emptyFunction);
-  var onclickValue = JAM.call(DIV.getAttribute, DIV, ["onclick"], JAM.policy.p9C5FFCABA70857D69F2974E6410A585B5EFE64DC);
+  var onclickValue = JAM.call(DIV.getAttribute, DIV, ["onclick"], JAM.policy.p1);
   var _getEv;
   var v3429 = String(onclickValue);
-  var v2779 = JAM.call(v3429.indexOf, v3429, ["{"], JAM.policy.p9C5FFCABA70857D69F2974E6410A585B5EFE64DC);
+  var v2779 = JAM.call(v3429.indexOf, v3429, ["{"], JAM.policy.p1);
   var v1562 = v2779 > -1;
   if(v1562) {
     _getEv = v127
@@ -8291,7 +8291,7 @@ function v134(GLOBAL) {
   var v1567 = v2780.names;
   var v2781 = ATTRIBUTE_TRANSLATIONS.read;
   var v1568 = v2781.names;
-  JAM.call(Object.extend, Object, [v1567, v1568], JAM.policy.p9C5FFCABA70857D69F2974E6410A585B5EFE64DC);
+  JAM.call(Object.extend, Object, [v1567, v1568], JAM.policy.p1);
   var v1569 = "colSpan rowSpan vAlign dateTime " + "accessKey tabIndex encType maxLength readOnly longDesc frameBorder";
   var CAMEL_CASED_ATTRIBUTE_NAMES = $w(v1569);
   var i$$16 = 0;
@@ -8300,29 +8300,29 @@ function v134(GLOBAL) {
   for(;v1574;) {
     var v2782 = ATTRIBUTE_TRANSLATIONS.write;
     var v1570 = v2782.names;
-    var v1571 = JAM.call(attr.toLowerCase, attr, [], JAM.policy.p9C5FFCABA70857D69F2974E6410A585B5EFE64DC);
-    JAM.set(v1570, v1571, attr, JAM.policy.p425E08A28862414CF7130381FE99A660F52DB811);
+    var v1571 = JAM.call(attr.toLowerCase, attr, [], JAM.policy.p1);
+    JAM.set(v1570, v1571, attr, JAM.policy.p2);
     var v2783 = ATTRIBUTE_TRANSLATIONS.has;
     var v1572 = v2783.names;
-    var v1573 = JAM.call(attr.toLowerCase, attr, [], JAM.policy.p9C5FFCABA70857D69F2974E6410A585B5EFE64DC);
-    JAM.set(v1572, v1573, attr, JAM.policy.p425E08A28862414CF7130381FE99A660F52DB811);
+    var v1573 = JAM.call(attr.toLowerCase, attr, [], JAM.policy.p1);
+    JAM.set(v1572, v1573, attr, JAM.policy.p2);
     i$$16 = i$$16 + 1;
     v1574 = attr = CAMEL_CASED_ATTRIBUTE_NAMES[i$$16]
   }
   var v2784 = ATTRIBUTE_TRANSLATIONS.read;
   var v1575 = v2784.values;
   var v1576 = {href:_getAttr2, src:_getAttr2, type:_getAttr, action:_getAttrNode, disabled:_getFlag, checked:_getFlag, readonly:_getFlag, multiple:_getFlag, onload:_getEv, onunload:_getEv, onclick:_getEv, ondblclick:_getEv, onmousedown:_getEv, onmouseup:_getEv, onmouseover:_getEv, onmousemove:_getEv, onmouseout:_getEv, onfocus:_getEv, onblur:_getEv, onkeypress:_getEv, onkeydown:_getEv, onkeyup:_getEv, onsubmit:_getEv, onreset:_getEv, onselect:_getEv, onchange:_getEv};
-  JAM.call(Object.extend, Object, [v1575, v1576], JAM.policy.p9C5FFCABA70857D69F2974E6410A585B5EFE64DC);
+  JAM.call(Object.extend, Object, [v1575, v1576], JAM.policy.p1);
   var v1577 = {identify:identify, readAttribute:readAttribute, writeAttribute:writeAttribute, classNames:classNames$$1, hasClassName:hasClassName, addClassName:addClassName, removeClassName:removeClassName, toggleClassName:toggleClassName};
-  JAM.call(Object.extend, Object, [methods$$1, v1577], JAM.policy.p9C5FFCABA70857D69F2974E6410A585B5EFE64DC);
+  JAM.call(Object.extend, Object, [methods$$1, v1577], JAM.policy.p1);
   var STANDARD_CSS_OPACITY_SUPPORTED;
   var v1578 = DIV.style;
   v1578.cssText = "opacity:.55";
   var v2785 = DIV.style;
   var v1579 = v2785.opacity;
-  STANDARD_CSS_OPACITY_SUPPORTED = JAM.call(/^0.55/.test, /^0.55/, [v1579], JAM.policy.p9C5FFCABA70857D69F2974E6410A585B5EFE64DC);
+  STANDARD_CSS_OPACITY_SUPPORTED = JAM.call(/^0.55/.test, /^0.55/, [v1579], JAM.policy.p1);
   var v1580 = {setStyle:setStyle, getStyle:getStyle, setOpacity:setOpacity, getOpacity:getOpacity};
-  JAM.call(Object.extend, Object, [methods$$1, v1580], JAM.policy.p9C5FFCABA70857D69F2974E6410A585B5EFE64DC);
+  JAM.call(Object.extend, Object, [methods$$1, v1580], JAM.policy.p1);
   var v2786 = DIV.style;
   var v1581 = "styleFloat" in v2786;
   if(v1581) {
@@ -8338,7 +8338,7 @@ function v134(GLOBAL) {
     getUniqueElementID = getUniqueElementID_IE
   }
   var v1583 = {getStorage:getStorage, store:store, retrieve:retrieve};
-  JAM.call(Object.extend, Object, [methods$$1, v1583], JAM.policy.p9C5FFCABA70857D69F2974E6410A585B5EFE64DC);
+  JAM.call(Object.extend, Object, [methods$$1, v1583], JAM.policy.p1);
   var Methods = {};
   var v1584 = Element$$1.Methods;
   var ByTag = v1584.ByTag;
@@ -8369,7 +8369,7 @@ function v134(GLOBAL) {
   }
   var v1589 = GLOBAL.Element;
   var v1590 = {extend:extend$$1, addMethods:addMethods$$1};
-  JAM.call(Object.extend, Object, [v1589, v1590], JAM.policy.p9C5FFCABA70857D69F2974E6410A585B5EFE64DC);
+  JAM.call(Object.extend, Object, [v1589, v1590], JAM.policy.p1);
   var v2788 = Prototype.K;
   var v1593 = extend$$1 === v2788;
   if(v1593) {
@@ -8381,7 +8381,7 @@ function v134(GLOBAL) {
     var v1592 = v2790.extend;
     v1592.refresh = v133
   }
-  JAM.call(Element$$1.addMethods, Element$$1, [methods$$1], JAM.policy.p9C5FFCABA70857D69F2974E6410A585B5EFE64DC);
+  JAM.call(Element$$1.addMethods, Element$$1, [methods$$1], JAM.policy.p1);
   return
 }
 function v114() {
@@ -8413,11 +8413,11 @@ function v113(response$$3) {
     this.lastText = response$$3.responseText
   }
   var v2795 = this.onTimerEvent;
-  var v1600 = JAM.call(v2795.bind, v2795, [this], JAM.policy.p9C5FFCABA70857D69F2974E6410A585B5EFE64DC);
+  var v1600 = JAM.call(v2795.bind, v2795, [this], JAM.policy.p1);
   var v2796 = this.decay;
   var v2797 = this.frequency;
   var v1601 = v2796 * v2797;
-  var v4004 = JAM.call(v1600.delay, v1600, [v1601], JAM.policy.p9C5FFCABA70857D69F2974E6410A585B5EFE64DC);
+  var v4004 = JAM.call(v1600.delay, v1600, [v1601], JAM.policy.p1);
   this.timer = v4004;
   return
 }
@@ -8433,19 +8433,19 @@ function v112() {
     v2799 = Prototype.emptyFunction
   }
   var v1604 = v2799;
-  JAM.call(v1604.apply, v1604, [this, arguments], JAM.policy.p9C5FFCABA70857D69F2974E6410A585B5EFE64DC);
+  JAM.call(v1604.apply, v1604, [this, arguments], JAM.policy.p1);
   return
 }
 function v111() {
   var v1605 = this.options;
   var v2800 = this.updateComplete;
-  var v4005 = JAM.call(v2800.bind, v2800, [this], JAM.policy.p9C5FFCABA70857D69F2974E6410A585B5EFE64DC);
+  var v4005 = JAM.call(v2800.bind, v2800, [this], JAM.policy.p1);
   v1605.onComplete = v4005;
-  JAM.call(this.onTimerEvent, this, [], JAM.policy.p9C5FFCABA70857D69F2974E6410A585B5EFE64DC);
+  JAM.call(this.onTimerEvent, this, [], JAM.policy.p1);
   return
 }
 function v110($super$$2, container$$1, url$$6, options$$6) {
-  JAM.call($super$$2, null, [options$$6], JAM.policy.p9C5FFCABA70857D69F2974E6410A585B5EFE64DC);
+  JAM.call($super$$2, null, [options$$6], JAM.policy.p1);
   var v1606 = this.options;
   this.onComplete = v1606.onComplete;
   var v2801 = this.options;
@@ -8465,13 +8465,13 @@ function v110($super$$2, container$$1, url$$6, options$$6) {
   this.updater = {};
   this.container = container$$1;
   this.url = url$$6;
-  JAM.call(this.start, this, [], JAM.policy.p9C5FFCABA70857D69F2974E6410A585B5EFE64DC);
+  JAM.call(this.start, this, [], JAM.policy.p1);
   return
 }
 function v109(responseText) {
   var v1609 = this.container;
   var v2805;
-  var v3435 = JAM.call(this.success, this, [], JAM.policy.p9C5FFCABA70857D69F2974E6410A585B5EFE64DC);
+  var v3435 = JAM.call(this.success, this, [], JAM.policy.p1);
   if(v3435) {
     v2805 = "success"
   }else {
@@ -8483,24 +8483,24 @@ function v109(responseText) {
   var v2806 = options$$5.evalScripts;
   var v1611 = !v2806;
   if(v1611) {
-    responseText = JAM.call(responseText.stripScripts, responseText, [], JAM.policy.p9C5FFCABA70857D69F2974E6410A585B5EFE64DC)
+    responseText = JAM.call(responseText.stripScripts, responseText, [], JAM.policy.p1)
   }
-  var v1615 = receiver = JAM.call($, null, [receiver], JAM.policy.p9C5FFCABA70857D69F2974E6410A585B5EFE64DC);
+  var v1615 = receiver = JAM.call($, null, [receiver], JAM.policy.p1);
   if(v1615) {
     var v1614 = options$$5.insertion;
     if(v1614) {
       var v2807 = options$$5.insertion;
-      var v1613 = JAM.call(Object.isString, Object, [v2807], JAM.policy.p9C5FFCABA70857D69F2974E6410A585B5EFE64DC);
+      var v1613 = JAM.call(Object.isString, Object, [v2807], JAM.policy.p1);
       if(v1613) {
         var insertion = {};
         var v1612 = options$$5.insertion;
-        JAM.set(insertion, v1612, responseText, JAM.policy.p425E08A28862414CF7130381FE99A660F52DB811);
-        JAM.call(receiver.insert, receiver, [insertion], JAM.policy.p9C5FFCABA70857D69F2974E6410A585B5EFE64DC)
+        JAM.set(insertion, v1612, responseText, JAM.policy.p2);
+        JAM.call(receiver.insert, receiver, [insertion], JAM.policy.p1)
       }else {
-        JAM.call(options$$5.insertion, options$$5, [receiver, responseText], JAM.policy.p9C5FFCABA70857D69F2974E6410A585B5EFE64DC)
+        JAM.call(options$$5.insertion, options$$5, [receiver, responseText], JAM.policy.p1)
       }
     }else {
-      JAM.call(receiver.update, receiver, [responseText], JAM.policy.p9C5FFCABA70857D69F2974E6410A585B5EFE64DC)
+      JAM.call(receiver.update, receiver, [responseText], JAM.policy.p1)
     }
   }
   return
@@ -8508,10 +8508,10 @@ function v109(responseText) {
 function v108($super$$1, container, url$$5, options$$4) {
   function v107(response$$2, json$$4) {
     var v1616 = response$$2.responseText;
-    JAM.call(this.updateContent, this, [v1616], JAM.policy.p9C5FFCABA70857D69F2974E6410A585B5EFE64DC);
-    var v1617 = JAM.call(Object.isFunction, Object, [onComplete], JAM.policy.p9C5FFCABA70857D69F2974E6410A585B5EFE64DC);
+    JAM.call(this.updateContent, this, [v1616], JAM.policy.p1);
+    var v1617 = JAM.call(Object.isFunction, Object, [onComplete], JAM.policy.p1);
     if(v1617) {
-      JAM.call(onComplete, null, [response$$2, json$$4], JAM.policy.p9C5FFCABA70857D69F2974E6410A585B5EFE64DC)
+      JAM.call(onComplete, null, [response$$2, json$$4], JAM.policy.p1)
     }
     return
   }
@@ -8535,12 +8535,12 @@ function v108($super$$1, container, url$$5, options$$4) {
   }
   var v1619 = v2809;
   this.container = {success:v1618, failure:v1619};
-  options$$4 = JAM.call(Object.clone, Object, [options$$4], JAM.policy.p9C5FFCABA70857D69F2974E6410A585B5EFE64DC);
+  options$$4 = JAM.call(Object.clone, Object, [options$$4], JAM.policy.p1);
   var onComplete = options$$4.onComplete;
   var v1620 = options$$4;
-  var v4006 = JAM.call(v107.bind, v107, [this], JAM.policy.p9C5FFCABA70857D69F2974E6410A585B5EFE64DC);
+  var v4006 = JAM.call(v107.bind, v107, [this], JAM.policy.p1);
   v1620.onComplete = v4006;
-  JAM.call($super$$1, null, [url$$5, options$$4], JAM.policy.p9C5FFCABA70857D69F2974E6410A585B5EFE64DC);
+  JAM.call($super$$1, null, [url$$5, options$$4], JAM.policy.p1);
   return
 }
 function v106() {
@@ -8553,20 +8553,20 @@ function v106() {
     var v3848 = options$$3.evalJSON;
     var v3726 = v3848 != "force";
     if(v3726) {
-      var v3925 = JAM.call(this.getHeader, this, ["Content-type"], JAM.policy.p9C5FFCABA70857D69F2974E6410A585B5EFE64DC);
+      var v3925 = JAM.call(this.getHeader, this, ["Content-type"], JAM.policy.p1);
       var v3940 = !v3925;
       if(v3940) {
         v3925 = ""
       }
       var v3901 = v3925;
-      var v3849 = JAM.call(v3901.include, v3901, ["application/json"], JAM.policy.p9C5FFCABA70857D69F2974E6410A585B5EFE64DC);
+      var v3849 = JAM.call(v3901.include, v3901, ["application/json"], JAM.policy.p1);
       v3726 = !v3849
     }
     var v3440 = v3726;
     var v3728 = !v3440;
     if(v3728) {
       var v3727 = this.responseText;
-      v3440 = JAM.call(v3727.blank, v3727, [], JAM.policy.p9C5FFCABA70857D69F2974E6410A585B5EFE64DC)
+      v3440 = JAM.call(v3727.blank, v3727, [], JAM.policy.p1)
     }
     v2810 = v3440
   }
@@ -8580,19 +8580,19 @@ function v106() {
     var v3443 = !v2811;
     if(v3443) {
       var v3729 = this.request;
-      var v3442 = JAM.call(v3729.isSameOrigin, v3729, [], JAM.policy.p9C5FFCABA70857D69F2974E6410A585B5EFE64DC);
+      var v3442 = JAM.call(v3729.isSameOrigin, v3729, [], JAM.policy.p1);
       v2811 = !v3442
     }
     var v1624 = v2811;
-    return JAM.call(v1623.evalJSON, v1623, [v1624], JAM.policy.p9C5FFCABA70857D69F2974E6410A585B5EFE64DC)
+    return JAM.call(v1623.evalJSON, v1623, [v1624], JAM.policy.p1)
   }catch(e$$20) {
     var v1625 = this.request;
-    JAM.call(v1625.dispatchException, v1625, [e$$20], JAM.policy.p9C5FFCABA70857D69F2974E6410A585B5EFE64DC)
+    JAM.call(v1625.dispatchException, v1625, [e$$20], JAM.policy.p1)
   }
   return
 }
 function v105() {
-  var json$$3 = JAM.call(this.getHeader, this, ["X-JSON"], JAM.policy.p9C5FFCABA70857D69F2974E6410A585B5EFE64DC);
+  var json$$3 = JAM.call(this.getHeader, this, ["X-JSON"], JAM.policy.p1);
   var v1626 = !json$$3;
   if(v1626) {
     return null
@@ -8609,28 +8609,28 @@ function v105() {
     var v3446 = !v2812;
     if(v3446) {
       var v3731 = this.request;
-      var v3445 = JAM.call(v3731.isSameOrigin, v3731, [], JAM.policy.p9C5FFCABA70857D69F2974E6410A585B5EFE64DC);
+      var v3445 = JAM.call(v3731.isSameOrigin, v3731, [], JAM.policy.p1);
       v2812 = !v3445
     }
     var v1628 = v2812;
-    return JAM.call(json$$3.evalJSON, json$$3, [v1628], JAM.policy.p9C5FFCABA70857D69F2974E6410A585B5EFE64DC)
+    return JAM.call(json$$3.evalJSON, json$$3, [v1628], JAM.policy.p1)
   }catch(e$$19) {
     var v1629 = this.request;
-    JAM.call(v1629.dispatchException, v1629, [e$$19], JAM.policy.p9C5FFCABA70857D69F2974E6410A585B5EFE64DC)
+    JAM.call(v1629.dispatchException, v1629, [e$$19], JAM.policy.p1)
   }
   return
 }
 function v104() {
   var v1630 = this.transport;
-  return JAM.call(v1630.getAllResponseHeaders, v1630, [], JAM.policy.p9C5FFCABA70857D69F2974E6410A585B5EFE64DC)
+  return JAM.call(v1630.getAllResponseHeaders, v1630, [], JAM.policy.p1)
 }
 function v103(name$$33) {
   var v1631 = this.transport;
-  return JAM.call(v1631.getResponseHeader, v1631, [name$$33], JAM.policy.p9C5FFCABA70857D69F2974E6410A585B5EFE64DC)
+  return JAM.call(v1631.getResponseHeader, v1631, [name$$33], JAM.policy.p1)
 }
 function v102() {
   try {
-    return JAM.call(this.getAllResponseHeaders, this, [], JAM.policy.p9C5FFCABA70857D69F2974E6410A585B5EFE64DC)
+    return JAM.call(this.getAllResponseHeaders, this, [], JAM.policy.p1)
   }catch(e$$17) {
     return null
   }
@@ -8667,28 +8667,28 @@ function v100(request$$1) {
   }
   var v1634 = v2815;
   if(v1634) {
-    var v4007 = JAM.call(this.getStatus, this, [], JAM.policy.p9C5FFCABA70857D69F2974E6410A585B5EFE64DC);
+    var v4007 = JAM.call(this.getStatus, this, [], JAM.policy.p1);
     this.status = v4007;
-    var v4008 = JAM.call(this.getStatusText, this, [], JAM.policy.p9C5FFCABA70857D69F2974E6410A585B5EFE64DC);
+    var v4008 = JAM.call(this.getStatusText, this, [], JAM.policy.p1);
     this.statusText = v4008;
     var v1633 = transport$$1.responseText;
-    var v4009 = JAM.call(String.interpret, String, [v1633], JAM.policy.p9C5FFCABA70857D69F2974E6410A585B5EFE64DC);
+    var v4009 = JAM.call(String.interpret, String, [v1633], JAM.policy.p1);
     this.responseText = v4009;
-    var v4010 = JAM.call(this._getHeaderJSON, this, [], JAM.policy.p9C5FFCABA70857D69F2974E6410A585B5EFE64DC);
+    var v4010 = JAM.call(this._getHeaderJSON, this, [], JAM.policy.p1);
     this.headerJSON = v4010
   }
   var v1636 = readyState$$2 == 4;
   if(v1636) {
     var xml = transport$$1.responseXML;
     var v1635;
-    var v2816 = JAM.call(Object.isUndefined, Object, [xml], JAM.policy.p9C5FFCABA70857D69F2974E6410A585B5EFE64DC);
+    var v2816 = JAM.call(Object.isUndefined, Object, [xml], JAM.policy.p1);
     if(v2816) {
       v1635 = null
     }else {
       v1635 = xml
     }
     this.responseXML = v1635;
-    var v4011 = JAM.call(this._getResponseJSON, this, [], JAM.policy.p9C5FFCABA70857D69F2974E6410A585B5EFE64DC);
+    var v4011 = JAM.call(this._getResponseJSON, this, [], JAM.policy.p1);
     this.responseJSON = v4011
   }
   return
@@ -8701,9 +8701,9 @@ function v99(exception) {
     v2817 = Prototype.emptyFunction
   }
   var v1637 = v2817;
-  JAM.call(v1637, null, [this, exception], JAM.policy.p9C5FFCABA70857D69F2974E6410A585B5EFE64DC);
+  JAM.call(v1637, null, [this, exception], JAM.policy.p1);
   var v1638 = Ajax.Responders;
-  JAM.call(v1638.dispatch, v1638, ["onException", this, exception], JAM.policy.p9C5FFCABA70857D69F2974E6410A585B5EFE64DC);
+  JAM.call(v1638.dispatch, v1638, ["onException", this, exception], JAM.policy.p1);
   return
 }
 function v98() {
@@ -8715,21 +8715,21 @@ function v98() {
       v3451 = ""
     }
     var v2818 = v3451;
-    var v1639 = JAM.call(v2818.unfilterJSON, v2818, [], JAM.policy.p9C5FFCABA70857D69F2974E6410A585B5EFE64DC);
+    var v1639 = JAM.call(v2818.unfilterJSON, v2818, [], JAM.policy.p1);
     if(JAM.isEval(eval)) {
       return eval("introspect(JAM.policy.pFull) { " + v1639 + " }")
     }else {
       return JAM.call(eval, null, [v1639])
     }
   }catch(e$$15) {
-    JAM.call(this.dispatchException, this, [e$$15], JAM.policy.p9C5FFCABA70857D69F2974E6410A585B5EFE64DC)
+    JAM.call(this.dispatchException, this, [e$$15], JAM.policy.p1)
   }
   return
 }
 function v97(name$$32) {
   try {
     var v2819 = this.transport;
-    var v1640 = JAM.call(v2819.getResponseHeader, v2819, [name$$32], JAM.policy.p9C5FFCABA70857D69F2974E6410A585B5EFE64DC);
+    var v1640 = JAM.call(v2819.getResponseHeader, v2819, [name$$32], JAM.policy.p1);
     var v2820 = !v1640;
     if(v2820) {
       v1640 = null
@@ -8742,7 +8742,7 @@ function v97(name$$32) {
 }
 function v96() {
   var v1641 = this.url;
-  var m$$1 = JAM.call(v1641.match, v1641, [/^\s*https?:\/\/[^\/]*/], JAM.policy.p9C5FFCABA70857D69F2974E6410A585B5EFE64DC);
+  var m$$1 = JAM.call(v1641.match, v1641, [/^\s*https?:\/\/[^\/]*/], JAM.policy.p1);
   var v1642 = !m$$1;
   var v2823 = !v1642;
   if(v2823) {
@@ -8759,7 +8759,7 @@ function v96() {
     }
     var v3737 = v3851;
     var v3452 = {protocol:v3735, domain:v3736, port:v3737};
-    var v2822 = JAM.call("#{protocol}//#{domain}#{port}".interpolate, "#{protocol}//#{domain}#{port}", [v3452], JAM.policy.p9C5FFCABA70857D69F2974E6410A585B5EFE64DC);
+    var v2822 = JAM.call("#{protocol}//#{domain}#{port}".interpolate, "#{protocol}//#{domain}#{port}", [v3452], JAM.policy.p1);
     v1642 = v2821 == v2822
   }
   return v1642
@@ -8782,7 +8782,7 @@ function v95(readyState$$1) {
       if(v3456) {
         var v3739 = this.options;
         var v3904;
-        var v3926 = JAM.call(this.success, this, [], JAM.policy.p9C5FFCABA70857D69F2974E6410A585B5EFE64DC);
+        var v3926 = JAM.call(this.success, this, [], JAM.policy.p1);
         if(v3926) {
           v3904 = "Success"
         }else {
@@ -8799,11 +8799,11 @@ function v95(readyState$$1) {
       }
       var v1645 = v2825;
       var v1646 = response$$1.headerJSON;
-      JAM.call(v1645, null, [response$$1, v1646], JAM.policy.p9C5FFCABA70857D69F2974E6410A585B5EFE64DC)
+      JAM.call(v1645, null, [response$$1, v1646], JAM.policy.p1)
     }catch(e$$12) {
-      JAM.call(this.dispatchException, this, [e$$12], JAM.policy.p9C5FFCABA70857D69F2974E6410A585B5EFE64DC)
+      JAM.call(this.dispatchException, this, [e$$12], JAM.policy.p1)
     }
-    var contentType = JAM.call(response$$1.getHeader, response$$1, ["Content-type"], JAM.policy.p9C5FFCABA70857D69F2974E6410A585B5EFE64DC);
+    var contentType = JAM.call(response$$1.getHeader, response$$1, ["Content-type"], JAM.policy.p1);
     var v3742 = this.options;
     var v3457 = v3742.evalJS;
     var v2826 = v3457 == "force";
@@ -8812,11 +8812,11 @@ function v95(readyState$$1) {
       var v3743 = this.options;
       var v3458 = v3743.evalJS;
       if(v3458) {
-        var v3744 = JAM.call(this.isSameOrigin, this, [], JAM.policy.p9C5FFCABA70857D69F2974E6410A585B5EFE64DC);
+        var v3744 = JAM.call(this.isSameOrigin, this, [], JAM.policy.p1);
         if(v3744) {
           var v3853 = contentType;
           if(v3853) {
-            v3853 = JAM.call(contentType.match, contentType, [/^\s*(text|application)\/(x-)?(java|ecma)script(;.*)?\s*$/i], JAM.policy.p9C5FFCABA70857D69F2974E6410A585B5EFE64DC)
+            v3853 = JAM.call(contentType.match, contentType, [/^\s*(text|application)\/(x-)?(java|ecma)script(;.*)?\s*$/i], JAM.policy.p1)
           }
           v3744 = v3853
         }
@@ -8826,7 +8826,7 @@ function v95(readyState$$1) {
     }
     var v1647 = v2826;
     if(v1647) {
-      JAM.call(this.evalResponse, this, [], JAM.policy.p9C5FFCABA70857D69F2974E6410A585B5EFE64DC)
+      JAM.call(this.evalResponse, this, [], JAM.policy.p1)
     }
   }
   try {
@@ -8839,13 +8839,13 @@ function v95(readyState$$1) {
     }
     var v1649 = v2827;
     var v1650 = response$$1.headerJSON;
-    JAM.call(v1649, null, [response$$1, v1650], JAM.policy.p9C5FFCABA70857D69F2974E6410A585B5EFE64DC);
+    JAM.call(v1649, null, [response$$1, v1650], JAM.policy.p1);
     var v1651 = Ajax.Responders;
     var v1652 = "on" + state;
     var v1653 = response$$1.headerJSON;
-    JAM.call(v1651.dispatch, v1651, [v1652, this, response$$1, v1653], JAM.policy.p9C5FFCABA70857D69F2974E6410A585B5EFE64DC)
+    JAM.call(v1651.dispatch, v1651, [v1652, this, response$$1, v1653], JAM.policy.p1)
   }catch(e$$13) {
-    JAM.call(this.dispatchException, this, [e$$13], JAM.policy.p9C5FFCABA70857D69F2974E6410A585B5EFE64DC)
+    JAM.call(this.dispatchException, this, [e$$13], JAM.policy.p1)
   }
   var v1655 = state == "Complete";
   if(v1655) {
@@ -8875,7 +8875,7 @@ function v94() {
   return
 }
 function v93() {
-  var status = JAM.call(this.getStatus, this, [], JAM.policy.p9C5FFCABA70857D69F2974E6410A585B5EFE64DC);
+  var status = JAM.call(this.getStatus, this, [], JAM.policy.p1);
   var v1658 = !status;
   var v2832 = !v1658;
   if(v2832) {
@@ -8895,7 +8895,7 @@ function v93() {
 function v92() {
   function v91(pair$$6) {
     var v1659 = pair$$6.key;
-    JAM.set(headers, v1659, pair$$6.value, JAM.policy.p425E08A28862414CF7130381FE99A660F52DB811);
+    JAM.set(headers, v1659, pair$$6.value, JAM.policy.p2);
     return
   }
   var v1660 = Prototype.Version;
@@ -8921,7 +8921,7 @@ function v92() {
     var v2836 = v3468.overrideMimeType;
     if(v2836) {
       var v3905 = navigator.userAgent;
-      var v3854 = JAM.call(v3905.match, v3905, [/Gecko\/(\d{4})/], JAM.policy.p9C5FFCABA70857D69F2974E6410A585B5EFE64DC);
+      var v3854 = JAM.call(v3905.match, v3905, [/Gecko\/(\d{4})/], JAM.policy.p1);
       var v3906 = !v3854;
       if(v3906) {
         v3854 = [0, 2005]
@@ -8943,7 +8943,7 @@ function v92() {
     var v1665 = this.options;
     var extras = v1665.requestHeaders;
     var v2838 = extras.push;
-    var v1669 = JAM.call(Object.isFunction, Object, [v2838], JAM.policy.p9C5FFCABA70857D69F2974E6410A585B5EFE64DC);
+    var v1669 = JAM.call(Object.isFunction, Object, [v2838], JAM.policy.p1);
     if(v1669) {
       var i$$15 = 0;
       var length$$27 = extras.length;
@@ -8951,20 +8951,20 @@ function v92() {
       for(;v1667;) {
         var v1666 = extras[i$$15];
         var v2839 = i$$15 + 1;
-        JAM.set(headers, v1666, extras[v2839], JAM.policy.p425E08A28862414CF7130381FE99A660F52DB811);
+        JAM.set(headers, v1666, extras[v2839], JAM.policy.p2);
         i$$15 = i$$15 + 2;
         v1667 = i$$15 < length$$27
       }
     }else {
       var v1668 = $H(extras);
-      JAM.call(v1668.each, v1668, [v91], JAM.policy.p9C5FFCABA70857D69F2974E6410A585B5EFE64DC)
+      JAM.call(v1668.each, v1668, [v91], JAM.policy.p1)
     }
   }
   var name$$31;
   for(name$$31 in headers) {
     var v1671 = this.transport;
     var v1672 = headers[name$$31];
-    JAM.call(v1671.setRequestHeader, v1671, [name$$31, v1672], JAM.policy.p9C5FFCABA70857D69F2974E6410A585B5EFE64DC)
+    JAM.call(v1671.setRequestHeader, v1671, [name$$31, v1672], JAM.policy.p1)
   }
   return
 }
@@ -8984,7 +8984,7 @@ function v90() {
   if(v1675) {
     var v2841 = this.transport;
     var v1674 = v2841.readyState;
-    JAM.call(this.respondToReadyState, this, [v1674], JAM.policy.p9C5FFCABA70857D69F2974E6410A585B5EFE64DC)
+    JAM.call(this.respondToReadyState, this, [v1674], JAM.policy.p1)
   }
   return
 }
@@ -8995,19 +8995,19 @@ function v89(url$$4) {
   var v1677;
   var v3750 = this.options;
   var v3472 = v3750.parameters;
-  var v2844 = JAM.call(Object.isString, Object, [v3472], JAM.policy.p9C5FFCABA70857D69F2974E6410A585B5EFE64DC);
+  var v2844 = JAM.call(Object.isString, Object, [v3472], JAM.policy.p1);
   if(v2844) {
     var v2842 = this.options;
     v1677 = v2842.parameters
   }else {
     var v3473 = this.options;
     var v2843 = v3473.parameters;
-    v1677 = JAM.call(Object.toQueryString, Object, [v2843], JAM.policy.p9C5FFCABA70857D69F2974E6410A585B5EFE64DC)
+    v1677 = JAM.call(Object.toQueryString, Object, [v2843], JAM.policy.p1)
   }
   var params = v1677;
   var v3474 = ["get", "post"];
   var v3475 = this.method;
-  var v2845 = JAM.call(v3474.include, v3474, [v3475], JAM.policy.p9C5FFCABA70857D69F2974E6410A585B5EFE64DC);
+  var v2845 = JAM.call(v3474.include, v3474, [v3475], JAM.policy.p1);
   var v1678 = !v2845;
   if(v1678) {
     var v3855;
@@ -9033,7 +9033,7 @@ function v89(url$$4) {
     var v2848 = this.url;
     var v3752;
     var v3907 = this.url;
-    var v3856 = JAM.call(v3907.include, v3907, ["?"], JAM.policy.p9C5FFCABA70857D69F2974E6410A585B5EFE64DC);
+    var v3856 = JAM.call(v3907.include, v3907, ["?"], JAM.policy.p1);
     if(v3856) {
       v3752 = "&"
     }else {
@@ -9043,7 +9043,7 @@ function v89(url$$4) {
     var v2849 = v3479 + params;
     this.url = v2848 + v2849
   }
-  var v4012 = JAM.call(params.toQueryParams, params, [], JAM.policy.p9C5FFCABA70857D69F2974E6410A585B5EFE64DC);
+  var v4012 = JAM.call(params.toQueryParams, params, [], JAM.policy.p1);
   this.parameters = v4012;
   try {
     var v1680 = Ajax.Response;
@@ -9052,29 +9052,29 @@ function v89(url$$4) {
     var v1682 = v2850.onCreate;
     if(v1682) {
       var v1681 = this.options;
-      JAM.call(v1681.onCreate, v1681, [response], JAM.policy.p9C5FFCABA70857D69F2974E6410A585B5EFE64DC)
+      JAM.call(v1681.onCreate, v1681, [response], JAM.policy.p1)
     }
     var v1683 = Ajax.Responders;
-    JAM.call(v1683.dispatch, v1683, ["onCreate", this, response], JAM.policy.p9C5FFCABA70857D69F2974E6410A585B5EFE64DC);
+    JAM.call(v1683.dispatch, v1683, ["onCreate", this, response], JAM.policy.p1);
     var v1684 = this.transport;
     var v2851 = this.method;
-    var v1685 = JAM.call(v2851.toUpperCase, v2851, [], JAM.policy.p9C5FFCABA70857D69F2974E6410A585B5EFE64DC);
+    var v1685 = JAM.call(v2851.toUpperCase, v2851, [], JAM.policy.p1);
     var v1686 = this.url;
     var v2852 = this.options;
     var v1687 = v2852.asynchronous;
-    JAM.call(v1684.open, v1684, [v1685, v1686, v1687], JAM.policy.p9C5FFCABA70857D69F2974E6410A585B5EFE64DC);
+    JAM.call(v1684.open, v1684, [v1685, v1686, v1687], JAM.policy.p1);
     var v2853 = this.options;
     var v1689 = v2853.asynchronous;
     if(v1689) {
       var v2854 = this.respondToReadyState;
-      var v1688 = JAM.call(v2854.bind, v2854, [this], JAM.policy.p9C5FFCABA70857D69F2974E6410A585B5EFE64DC);
-      JAM.call(v1688.defer, v1688, [1], JAM.policy.p9C5FFCABA70857D69F2974E6410A585B5EFE64DC)
+      var v1688 = JAM.call(v2854.bind, v2854, [this], JAM.policy.p1);
+      JAM.call(v1688.defer, v1688, [1], JAM.policy.p1)
     }
     var v1690 = this.transport;
     var v2855 = this.onStateChange;
-    var v4013 = JAM.call(v2855.bind, v2855, [this], JAM.policy.p9C5FFCABA70857D69F2974E6410A585B5EFE64DC);
+    var v4013 = JAM.call(v2855.bind, v2855, [this], JAM.policy.p1);
     JAM.set(v1690, "onreadystatechange", v4013);
-    JAM.call(this.setRequestHeaders, this, [], JAM.policy.p9C5FFCABA70857D69F2974E6410A585B5EFE64DC);
+    JAM.call(this.setRequestHeaders, this, [], JAM.policy.p1);
     var v1691;
     var v3480 = this.method;
     var v2857 = v3480 == "post";
@@ -9092,7 +9092,7 @@ function v89(url$$4) {
     this.body = v1691;
     var v1692 = this.transport;
     var v1693 = this.body;
-    JAM.call(v1692.send, v1692, [v1693], JAM.policy.p9C5FFCABA70857D69F2974E6410A585B5EFE64DC);
+    JAM.call(v1692.send, v1692, [v1693], JAM.policy.p1);
     var v3753 = this.options;
     var v3483 = v3753.asynchronous;
     var v2858 = !v3483;
@@ -9102,38 +9102,38 @@ function v89(url$$4) {
     }
     var v1694 = v2858;
     if(v1694) {
-      JAM.call(this.onStateChange, this, [], JAM.policy.p9C5FFCABA70857D69F2974E6410A585B5EFE64DC)
+      JAM.call(this.onStateChange, this, [], JAM.policy.p1)
     }
   }catch(e$$10) {
-    JAM.call(this.dispatchException, this, [e$$10], JAM.policy.p9C5FFCABA70857D69F2974E6410A585B5EFE64DC)
+    JAM.call(this.dispatchException, this, [e$$10], JAM.policy.p1)
   }
   return
 }
 function v88($super, url$$3, options$$2) {
-  JAM.call($super, null, [options$$2], JAM.policy.p9C5FFCABA70857D69F2974E6410A585B5EFE64DC);
-  var v4014 = JAM.call(Ajax.getTransport, Ajax, [], JAM.policy.p9C5FFCABA70857D69F2974E6410A585B5EFE64DC);
+  JAM.call($super, null, [options$$2], JAM.policy.p1);
+  var v4014 = JAM.call(Ajax.getTransport, Ajax, [], JAM.policy.p1);
   this.transport = v4014;
-  JAM.call(this.request, this, [url$$3], JAM.policy.p9C5FFCABA70857D69F2974E6410A585B5EFE64DC);
+  JAM.call(this.request, this, [url$$3], JAM.policy.p1);
   return
 }
 function v87(options$$1) {
   this.options = {method:"post", asynchronous:true, contentType:"application/x-www-form-urlencoded", encoding:"UTF-8", parameters:"", evalJSON:true, evalJS:true};
   var v1695 = this.options;
   var v1696 = options$$1 || {};
-  JAM.call(Object.extend, Object, [v1695, v1696], JAM.policy.p9C5FFCABA70857D69F2974E6410A585B5EFE64DC);
+  JAM.call(Object.extend, Object, [v1695, v1696], JAM.policy.p1);
   var v1697 = this.options;
   var v3485 = this.options;
   var v2859 = v3485.method;
-  var v4015 = JAM.call(v2859.toLowerCase, v2859, [], JAM.policy.p9C5FFCABA70857D69F2974E6410A585B5EFE64DC);
+  var v4015 = JAM.call(v2859.toLowerCase, v2859, [], JAM.policy.p1);
   v1697.method = v4015;
   var v3486 = this.options;
   var v2860 = v3486.parameters;
-  var v1699 = JAM.call(Object.isHash, Object, [v2860], JAM.policy.p9C5FFCABA70857D69F2974E6410A585B5EFE64DC);
+  var v1699 = JAM.call(Object.isHash, Object, [v2860], JAM.policy.p1);
   if(v1699) {
     var v1698 = this.options;
     var v3487 = this.options;
     var v2861 = v3487.parameters;
-    var v4016 = JAM.call(v2861.toObject, v2861, [], JAM.policy.p9C5FFCABA70857D69F2974E6410A585B5EFE64DC);
+    var v4016 = JAM.call(v2861.toObject, v2861, [], JAM.policy.p1);
     v1698.parameters = v4016
   }
   return
@@ -9151,38 +9151,38 @@ function v85() {
 function v84(callback$$26, request, transport, json$$2) {
   function v83(responder$$2) {
     var v2864 = responder$$2[callback$$26];
-    var v1702 = JAM.call(Object.isFunction, Object, [v2864], JAM.policy.p9C5FFCABA70857D69F2974E6410A585B5EFE64DC);
+    var v1702 = JAM.call(Object.isFunction, Object, [v2864], JAM.policy.p1);
     if(v1702) {
       try {
         var v1700 = responder$$2[callback$$26];
         var v1701 = [request, transport, json$$2];
-        JAM.call(v1700.apply, v1700, [responder$$2, v1701], JAM.policy.p9C5FFCABA70857D69F2974E6410A585B5EFE64DC)
+        JAM.call(v1700.apply, v1700, [responder$$2, v1701], JAM.policy.p1)
       }catch(e$$9) {
       }
     }
     return
   }
-  JAM.call(this.each, this, [v83], JAM.policy.p9C5FFCABA70857D69F2974E6410A585B5EFE64DC);
+  JAM.call(this.each, this, [v83], JAM.policy.p1);
   return
 }
 function v82(responder$$1) {
   var v1703 = this.responders;
-  var v4017 = JAM.call(v1703.without, v1703, [responder$$1], JAM.policy.p9C5FFCABA70857D69F2974E6410A585B5EFE64DC);
+  var v4017 = JAM.call(v1703.without, v1703, [responder$$1], JAM.policy.p1);
   this.responders = v4017;
   return
 }
 function v81(responder) {
-  var v2865 = JAM.call(this.include, this, [responder], JAM.policy.p9C5FFCABA70857D69F2974E6410A585B5EFE64DC);
+  var v2865 = JAM.call(this.include, this, [responder], JAM.policy.p1);
   var v1705 = !v2865;
   if(v1705) {
     var v1704 = this.responders;
-    JAM.call(v1704.push, v1704, [responder], JAM.policy.p9C5FFCABA70857D69F2974E6410A585B5EFE64DC)
+    JAM.call(v1704.push, v1704, [responder], JAM.policy.p1)
   }
   return
 }
 function v80(iterator$$25, context$$25) {
   var v1706 = this.responders;
-  JAM.call(v1706._each, v1706, [iterator$$25, context$$25], JAM.policy.p9C5FFCABA70857D69F2974E6410A585B5EFE64DC);
+  JAM.call(v1706._each, v1706, [iterator$$25, context$$25], JAM.policy.p1);
   return
 }
 function v79() {
@@ -9195,7 +9195,7 @@ function v79() {
   function v76() {
     return new XMLHttpRequest
   }
-  var v1707 = JAM.call(Try.these, Try, [v76, v77, v78], JAM.policy.p9C5FFCABA70857D69F2974E6410A585B5EFE64DC);
+  var v1707 = JAM.call(Try.these, Try, [v76, v77, v78], JAM.policy.p1);
   var v2866 = !v1707;
   if(v2866) {
     v1707 = false
@@ -9210,7 +9210,7 @@ function v75() {
   for(;v1708;) {
     var lambda = arguments[i$$14];
     try {
-      returnValue = JAM.call(lambda, null, [], JAM.policy.p9C5FFCABA70857D69F2974E6410A585B5EFE64DC);
+      returnValue = JAM.call(lambda, null, [], JAM.policy.p1);
       break
     }catch(e$$8) {
     }
@@ -9228,11 +9228,11 @@ function v74() {
   }
   function _each$$2(iterator$$24, context$$24) {
     var value$$61 = this.start;
-    var v1709 = JAM.call(this.include, this, [value$$61], JAM.policy.p9C5FFCABA70857D69F2974E6410A585B5EFE64DC);
+    var v1709 = JAM.call(this.include, this, [value$$61], JAM.policy.p1);
     for(;v1709;) {
-      JAM.call(iterator$$24.call, iterator$$24, [context$$24, value$$61], JAM.policy.p9C5FFCABA70857D69F2974E6410A585B5EFE64DC);
-      value$$61 = JAM.call(value$$61.succ, value$$61, [], JAM.policy.p9C5FFCABA70857D69F2974E6410A585B5EFE64DC);
-      v1709 = JAM.call(this.include, this, [value$$61], JAM.policy.p9C5FFCABA70857D69F2974E6410A585B5EFE64DC)
+      JAM.call(iterator$$24.call, iterator$$24, [context$$24, value$$61], JAM.policy.p1);
+      value$$61 = JAM.call(value$$61.succ, value$$61, [], JAM.policy.p1);
+      v1709 = JAM.call(this.include, this, [value$$61], JAM.policy.p1)
     }
     return
   }
@@ -9254,46 +9254,46 @@ function v74() {
 }
 function v73() {
   function toColorPart() {
-    return JAM.call(this.toPaddedString, this, [2, 16], JAM.policy.p9C5FFCABA70857D69F2974E6410A585B5EFE64DC)
+    return JAM.call(this.toPaddedString, this, [2, 16], JAM.policy.p1)
   }
   function succ$$1() {
     return this + 1
   }
   function times$$1(iterator$$23, context$$23) {
     var v1714 = $R(0, this, true);
-    JAM.call(v1714.each, v1714, [iterator$$23, context$$23], JAM.policy.p9C5FFCABA70857D69F2974E6410A585B5EFE64DC);
+    JAM.call(v1714.each, v1714, [iterator$$23, context$$23], JAM.policy.p1);
     return this
   }
   function toPaddedString(length$$25, radix) {
     var v1715 = radix || 10;
-    var string$$1 = JAM.call(this.toString, this, [v1715], JAM.policy.p9C5FFCABA70857D69F2974E6410A585B5EFE64DC);
+    var string$$1 = JAM.call(this.toString, this, [v1715], JAM.policy.p1);
     var v3488 = string$$1.length;
     var v2868 = length$$25 - v3488;
-    var v1716 = JAM.call("0".times, "0", [v2868], JAM.policy.p9C5FFCABA70857D69F2974E6410A585B5EFE64DC);
+    var v1716 = JAM.call("0".times, "0", [v2868], JAM.policy.p1);
     return v1716 + string$$1
   }
   function abs() {
-    return JAM.call(Math.abs, Math, [this], JAM.policy.p9C5FFCABA70857D69F2974E6410A585B5EFE64DC)
+    return JAM.call(Math.abs, Math, [this], JAM.policy.p1)
   }
   function round() {
-    return JAM.call(Math.round, Math, [this], JAM.policy.p9C5FFCABA70857D69F2974E6410A585B5EFE64DC)
+    return JAM.call(Math.round, Math, [this], JAM.policy.p1)
   }
   function ceil() {
-    return JAM.call(Math.ceil, Math, [this], JAM.policy.p9C5FFCABA70857D69F2974E6410A585B5EFE64DC)
+    return JAM.call(Math.ceil, Math, [this], JAM.policy.p1)
   }
   function floor() {
-    return JAM.call(Math.floor, Math, [this], JAM.policy.p9C5FFCABA70857D69F2974E6410A585B5EFE64DC)
+    return JAM.call(Math.floor, Math, [this], JAM.policy.p1)
   }
   return{toColorPart:toColorPart, succ:succ$$1, times:times$$1, toPaddedString:toPaddedString, abs:abs, round:round, ceil:ceil, floor:floor}
 }
 function v72() {
   function initialize(object$$23) {
     var v1717;
-    var v2869 = JAM.call(Object.isHash, Object, [object$$23], JAM.policy.p9C5FFCABA70857D69F2974E6410A585B5EFE64DC);
+    var v2869 = JAM.call(Object.isHash, Object, [object$$23], JAM.policy.p1);
     if(v2869) {
-      v1717 = JAM.call(object$$23.toObject, object$$23, [], JAM.policy.p9C5FFCABA70857D69F2974E6410A585B5EFE64DC)
+      v1717 = JAM.call(object$$23.toObject, object$$23, [], JAM.policy.p1)
     }else {
-      v1717 = JAM.call(Object.clone, Object, [object$$23], JAM.policy.p9C5FFCABA70857D69F2974E6410A585B5EFE64DC)
+      v1717 = JAM.call(Object.clone, Object, [object$$23], JAM.policy.p1)
     }
     this._object = v1717;
     return
@@ -9307,13 +9307,13 @@ function v72() {
       var pair$$1 = [key$$16, value$$55];
       pair$$1.key = key$$16;
       pair$$1.value = value$$55;
-      JAM.call(iterator$$22.call, iterator$$22, [context$$22, pair$$1], JAM.policy.p9C5FFCABA70857D69F2974E6410A585B5EFE64DC)
+      JAM.call(iterator$$22.call, iterator$$22, [context$$22, pair$$1], JAM.policy.p1)
     }
     return
   }
   function set(key$$17, value$$56) {
     var v1720 = this._object;
-    return JAM.set(v1720, key$$17, value$$56, JAM.policy.p425E08A28862414CF7130381FE99A660F52DB811)
+    return JAM.set(v1720, key$$17, value$$56, JAM.policy.p2)
   }
   function get(key$$18) {
     var v3489 = this._object;
@@ -9336,20 +9336,20 @@ function v72() {
   }
   function toObject() {
     var v1725 = this._object;
-    return JAM.call(Object.clone, Object, [v1725], JAM.policy.p9C5FFCABA70857D69F2974E6410A585B5EFE64DC)
+    return JAM.call(Object.clone, Object, [v1725], JAM.policy.p1)
   }
   function keys$$2() {
-    return JAM.call(this.pluck, this, ["key"], JAM.policy.p9C5FFCABA70857D69F2974E6410A585B5EFE64DC)
+    return JAM.call(this.pluck, this, ["key"], JAM.policy.p1)
   }
   function values$$6() {
-    return JAM.call(this.pluck, this, ["value"], JAM.policy.p9C5FFCABA70857D69F2974E6410A585B5EFE64DC)
+    return JAM.call(this.pluck, this, ["value"], JAM.policy.p1)
   }
   function index$$54(value$$58) {
     function v68(pair$$2) {
       var v1726 = pair$$2.value;
       return v1726 === value$$58
     }
-    var match$$6 = JAM.call(this.detect, this, [v68], JAM.policy.p9C5FFCABA70857D69F2974E6410A585B5EFE64DC);
+    var match$$6 = JAM.call(this.detect, this, [v68], JAM.policy.p1);
     var v1727 = match$$6;
     if(v1727) {
       v1727 = match$$6.key
@@ -9357,28 +9357,28 @@ function v72() {
     return v1727
   }
   function merge$$1(object$$24) {
-    var v1728 = JAM.call(this.clone, this, [], JAM.policy.p9C5FFCABA70857D69F2974E6410A585B5EFE64DC);
-    return JAM.call(v1728.update, v1728, [object$$24], JAM.policy.p9C5FFCABA70857D69F2974E6410A585B5EFE64DC)
+    var v1728 = JAM.call(this.clone, this, [], JAM.policy.p1);
+    return JAM.call(v1728.update, v1728, [object$$24], JAM.policy.p1)
   }
   function update$$1(object$$25) {
     function v69(result$$6, pair$$3) {
       var v1729 = pair$$3.key;
       var v1730 = pair$$3.value;
-      JAM.call(result$$6.set, result$$6, [v1729, v1730], JAM.policy.p9C5FFCABA70857D69F2974E6410A585B5EFE64DC);
+      JAM.call(result$$6.set, result$$6, [v1729, v1730], JAM.policy.p1);
       return result$$6
     }
     var v1731 = JAM.new(Hash, [object$$25]);
-    return JAM.call(v1731.inject, v1731, [this, v69], JAM.policy.p9C5FFCABA70857D69F2974E6410A585B5EFE64DC)
+    return JAM.call(v1731.inject, v1731, [this, v69], JAM.policy.p1)
   }
   function toQueryPair(key$$20, value$$59) {
-    var v1732 = JAM.call(Object.isUndefined, Object, [value$$59], JAM.policy.p9C5FFCABA70857D69F2974E6410A585B5EFE64DC);
+    var v1732 = JAM.call(Object.isUndefined, Object, [value$$59], JAM.policy.p1);
     if(v1732) {
       return key$$20
     }
-    value$$59 = JAM.call(String.interpret, String, [value$$59], JAM.policy.p9C5FFCABA70857D69F2974E6410A585B5EFE64DC);
-    value$$59 = JAM.call(value$$59.gsub, value$$59, [/(\r)?\n/, "\r\n"], JAM.policy.p9C5FFCABA70857D69F2974E6410A585B5EFE64DC);
+    value$$59 = JAM.call(String.interpret, String, [value$$59], JAM.policy.p1);
+    value$$59 = JAM.call(value$$59.gsub, value$$59, [/(\r)?\n/, "\r\n"], JAM.policy.p1);
     value$$59 = encodeURIComponent(value$$59);
-    value$$59 = JAM.call(value$$59.gsub, value$$59, [/%20/, "+"], JAM.policy.p9C5FFCABA70857D69F2974E6410A585B5EFE64DC);
+    value$$59 = JAM.call(value$$59.gsub, value$$59, [/%20/, "+"], JAM.policy.p1);
     var v1733 = key$$20 + "=";
     return v1733 + value$$59
   }
@@ -9394,7 +9394,7 @@ function v72() {
       }
       var v1739 = v2872;
       if(v1739) {
-        var v1737 = JAM.call(Object.isArray, Object, [values$$7], JAM.policy.p9C5FFCABA70857D69F2974E6410A585B5EFE64DC);
+        var v1737 = JAM.call(Object.isArray, Object, [values$$7], JAM.policy.p1);
         if(v1737) {
           var queryValues = [];
           var i$$13 = 0;
@@ -9404,29 +9404,29 @@ function v72() {
           for(;v1736;) {
             value$$60 = values$$7[i$$13];
             var v1735 = toQueryPair(key$$21, value$$60);
-            JAM.call(queryValues.push, queryValues, [v1735], JAM.policy.p9C5FFCABA70857D69F2974E6410A585B5EFE64DC);
+            JAM.call(queryValues.push, queryValues, [v1735], JAM.policy.p1);
             i$$13 = i$$13 + 1;
             v1736 = i$$13 < len
           }
-          return JAM.call(results$$10.concat, results$$10, [queryValues], JAM.policy.p9C5FFCABA70857D69F2974E6410A585B5EFE64DC)
+          return JAM.call(results$$10.concat, results$$10, [queryValues], JAM.policy.p1)
         }
       }else {
         var v1738 = toQueryPair(key$$21, values$$7);
-        JAM.call(results$$10.push, results$$10, [v1738], JAM.policy.p9C5FFCABA70857D69F2974E6410A585B5EFE64DC)
+        JAM.call(results$$10.push, results$$10, [v1738], JAM.policy.p1)
       }
       return results$$10
     }
-    var v1740 = JAM.call(this.inject, this, [[], v70], JAM.policy.p9C5FFCABA70857D69F2974E6410A585B5EFE64DC);
-    return JAM.call(v1740.join, v1740, ["&"], JAM.policy.p9C5FFCABA70857D69F2974E6410A585B5EFE64DC)
+    var v1740 = JAM.call(this.inject, this, [[], v70], JAM.policy.p1);
+    return JAM.call(v1740.join, v1740, ["&"], JAM.policy.p1)
   }
   function inspect$$4() {
     function v71(pair$$5) {
       var v2873 = Object.inspect;
-      var v1741 = JAM.call(pair$$5.map, pair$$5, [v2873], JAM.policy.p9C5FFCABA70857D69F2974E6410A585B5EFE64DC);
-      return JAM.call(v1741.join, v1741, [": "], JAM.policy.p9C5FFCABA70857D69F2974E6410A585B5EFE64DC)
+      var v1741 = JAM.call(pair$$5.map, pair$$5, [v2873], JAM.policy.p1);
+      return JAM.call(v1741.join, v1741, [": "], JAM.policy.p1)
     }
-    var v3492 = JAM.call(this.map, this, [v71], JAM.policy.p9C5FFCABA70857D69F2974E6410A585B5EFE64DC);
-    var v2874 = JAM.call(v3492.join, v3492, [", "], JAM.policy.p9C5FFCABA70857D69F2974E6410A585B5EFE64DC);
+    var v3492 = JAM.call(this.map, this, [v71], JAM.policy.p1);
+    var v2874 = JAM.call(v3492.join, v3492, [", "], JAM.policy.p1);
     var v1742 = "#<Hash:{" + v2874;
     return v1742 + "}>"
   }
@@ -9437,7 +9437,7 @@ function v72() {
 }
 function v67() {
   function v66() {
-    var v3493 = JAM.call([].concat, [], [arguments], JAM.policy.p9C5FFCABA70857D69F2974E6410A585B5EFE64DC);
+    var v3493 = JAM.call([].concat, [], [arguments], JAM.policy.p1);
     var v2875 = v3493[0];
     var v1743 = v2875[0];
     return v1743 !== 1
@@ -9451,7 +9451,7 @@ function v67() {
       var v1746 = i$$5 in this;
       if(v1746) {
         var v1745 = this[i$$5];
-        JAM.call(iterator$$16.call, iterator$$16, [context$$16, v1745, i$$5, this], JAM.policy.p9C5FFCABA70857D69F2974E6410A585B5EFE64DC)
+        JAM.call(iterator$$16.call, iterator$$16, [context$$16, v1745, i$$5, this], JAM.policy.p1)
       }
       i$$5 = i$$5 + 1;
       v1747 = i$$5 < length$$17
@@ -9474,38 +9474,38 @@ function v67() {
     function v60(value$$50) {
       return value$$50 != null
     }
-    return JAM.call(this.select, this, [v60], JAM.policy.p9C5FFCABA70857D69F2974E6410A585B5EFE64DC)
+    return JAM.call(this.select, this, [v60], JAM.policy.p1)
   }
   function flatten() {
     function v61(array$$12, value$$51) {
-      var v1750 = JAM.call(Object.isArray, Object, [value$$51], JAM.policy.p9C5FFCABA70857D69F2974E6410A585B5EFE64DC);
+      var v1750 = JAM.call(Object.isArray, Object, [value$$51], JAM.policy.p1);
       if(v1750) {
-        var v1749 = JAM.call(value$$51.flatten, value$$51, [], JAM.policy.p9C5FFCABA70857D69F2974E6410A585B5EFE64DC);
-        return JAM.call(array$$12.concat, array$$12, [v1749], JAM.policy.p9C5FFCABA70857D69F2974E6410A585B5EFE64DC)
+        var v1749 = JAM.call(value$$51.flatten, value$$51, [], JAM.policy.p1);
+        return JAM.call(array$$12.concat, array$$12, [v1749], JAM.policy.p1)
       }
-      JAM.call(array$$12.push, array$$12, [value$$51], JAM.policy.p9C5FFCABA70857D69F2974E6410A585B5EFE64DC);
+      JAM.call(array$$12.push, array$$12, [value$$51], JAM.policy.p1);
       return array$$12
     }
-    return JAM.call(this.inject, this, [[], v61], JAM.policy.p9C5FFCABA70857D69F2974E6410A585B5EFE64DC)
+    return JAM.call(this.inject, this, [[], v61], JAM.policy.p1)
   }
   function without() {
     function v62(value$$52) {
-      var v1751 = JAM.call(values$$5.include, values$$5, [value$$52], JAM.policy.p9C5FFCABA70857D69F2974E6410A585B5EFE64DC);
+      var v1751 = JAM.call(values$$5.include, values$$5, [value$$52], JAM.policy.p1);
       return!v1751
     }
-    var values$$5 = JAM.call(slice$$2.call, slice$$2, [arguments, 0], JAM.policy.p9C5FFCABA70857D69F2974E6410A585B5EFE64DC);
-    return JAM.call(this.select, this, [v62], JAM.policy.p9C5FFCABA70857D69F2974E6410A585B5EFE64DC)
+    var values$$5 = JAM.call(slice$$2.call, slice$$2, [arguments, 0], JAM.policy.p1);
+    return JAM.call(this.select, this, [v62], JAM.policy.p1)
   }
   function reverse(inline) {
     var v2877;
     var v3494 = inline === false;
     if(v3494) {
-      v2877 = JAM.call(this.toArray, this, [], JAM.policy.p9C5FFCABA70857D69F2974E6410A585B5EFE64DC)
+      v2877 = JAM.call(this.toArray, this, [], JAM.policy.p1)
     }else {
       v2877 = this
     }
     var v1752 = v2877;
-    return JAM.call(v1752._reverse, v1752, [], JAM.policy.p9C5FFCABA70857D69F2974E6410A585B5EFE64DC)
+    return JAM.call(v1752._reverse, v1752, [], JAM.policy.p1)
   }
   function uniq(sorted) {
     function v63(array$$13, value$$53, index$$53) {
@@ -9514,40 +9514,40 @@ function v67() {
       if(v3496) {
         var v3495;
         if(sorted) {
-          var v3754 = JAM.call(array$$13.last, array$$13, [], JAM.policy.p9C5FFCABA70857D69F2974E6410A585B5EFE64DC);
+          var v3754 = JAM.call(array$$13.last, array$$13, [], JAM.policy.p1);
           v3495 = v3754 != value$$53
         }else {
-          var v3755 = JAM.call(array$$13.include, array$$13, [value$$53], JAM.policy.p9C5FFCABA70857D69F2974E6410A585B5EFE64DC);
+          var v3755 = JAM.call(array$$13.include, array$$13, [value$$53], JAM.policy.p1);
           v3495 = !v3755
         }
         v2878 = v3495
       }
       var v1753 = v2878;
       if(v1753) {
-        JAM.call(array$$13.push, array$$13, [value$$53], JAM.policy.p9C5FFCABA70857D69F2974E6410A585B5EFE64DC)
+        JAM.call(array$$13.push, array$$13, [value$$53], JAM.policy.p1)
       }
       return array$$13
     }
-    return JAM.call(this.inject, this, [[], v63], JAM.policy.p9C5FFCABA70857D69F2974E6410A585B5EFE64DC)
+    return JAM.call(this.inject, this, [[], v63], JAM.policy.p1)
   }
   function intersect(array$$14) {
     function v64(item) {
-      var v1754 = JAM.call(array$$14.indexOf, array$$14, [item], JAM.policy.p9C5FFCABA70857D69F2974E6410A585B5EFE64DC);
+      var v1754 = JAM.call(array$$14.indexOf, array$$14, [item], JAM.policy.p1);
       return v1754 !== -1
     }
-    var v1755 = JAM.call(this.uniq, this, [], JAM.policy.p9C5FFCABA70857D69F2974E6410A585B5EFE64DC);
-    return JAM.call(v1755.findAll, v1755, [v64], JAM.policy.p9C5FFCABA70857D69F2974E6410A585B5EFE64DC)
+    var v1755 = JAM.call(this.uniq, this, [], JAM.policy.p1);
+    return JAM.call(v1755.findAll, v1755, [v64], JAM.policy.p1)
   }
   function clone$$1() {
-    return JAM.call(slice$$2.call, slice$$2, [this, 0], JAM.policy.p9C5FFCABA70857D69F2974E6410A585B5EFE64DC)
+    return JAM.call(slice$$2.call, slice$$2, [this, 0], JAM.policy.p1)
   }
   function size$$5() {
     return this.length
   }
   function inspect$$3() {
     var v3756 = Object.inspect;
-    var v3497 = JAM.call(this.map, this, [v3756], JAM.policy.p9C5FFCABA70857D69F2974E6410A585B5EFE64DC);
-    var v2879 = JAM.call(v3497.join, v3497, [", "], JAM.policy.p9C5FFCABA70857D69F2974E6410A585B5EFE64DC);
+    var v3497 = JAM.call(this.map, this, [v3756], JAM.policy.p1);
+    var v2879 = JAM.call(v3497.join, v3497, [", "], JAM.policy.p1);
     var v1756 = "[" + v2879;
     return v1756 + "]"
   }
@@ -9582,8 +9582,8 @@ function v67() {
           v2881 = -1
         }
         var v1760 = v2881;
-        var v2882 = JAM.call(Math.abs, Math, [i$$6], JAM.policy.p9C5FFCABA70857D69F2974E6410A585B5EFE64DC);
-        var v1761 = JAM.call(Math.floor, Math, [v2882], JAM.policy.p9C5FFCABA70857D69F2974E6410A585B5EFE64DC);
+        var v2882 = JAM.call(Math.abs, Math, [i$$6], JAM.policy.p1);
+        var v1761 = JAM.call(Math.floor, Math, [v2882], JAM.policy.p1);
         i$$6 = v1760 * v1761
       }
     }
@@ -9597,9 +9597,9 @@ function v67() {
       v1765 = i$$6
     }else {
       var v3499 = length$$18;
-      var v3500 = JAM.call(Math.abs, Math, [i$$6], JAM.policy.p9C5FFCABA70857D69F2974E6410A585B5EFE64DC);
+      var v3500 = JAM.call(Math.abs, Math, [i$$6], JAM.policy.p1);
       var v2883 = v3499 - v3500;
-      v1765 = JAM.call(Math.max, Math, [v2883, 0], JAM.policy.p9C5FFCABA70857D69F2974E6410A585B5EFE64DC)
+      v1765 = JAM.call(Math.max, Math, [v2883, 0], JAM.policy.p1)
     }
     var k = v1765;
     var v1767 = k < length$$18;
@@ -9630,7 +9630,7 @@ function v67() {
     if(v1770) {
       return-1
     }
-    var v2886 = JAM.call(Object.isUndefined, Object, [i$$7], JAM.policy.p9C5FFCABA70857D69F2974E6410A585B5EFE64DC);
+    var v2886 = JAM.call(Object.isUndefined, Object, [i$$7], JAM.policy.p1);
     var v1775 = !v2886;
     if(v1775) {
       i$$7 = Number(i$$7);
@@ -9652,8 +9652,8 @@ function v67() {
             v2888 = -1
           }
           var v1771 = v2888;
-          var v2889 = JAM.call(Math.abs, Math, [i$$7], JAM.policy.p9C5FFCABA70857D69F2974E6410A585B5EFE64DC);
-          var v1772 = JAM.call(Math.floor, Math, [v2889], JAM.policy.p9C5FFCABA70857D69F2974E6410A585B5EFE64DC);
+          var v2889 = JAM.call(Math.abs, Math, [i$$7], JAM.policy.p1);
+          var v1772 = JAM.call(Math.floor, Math, [v2889], JAM.policy.p1);
           i$$7 = v1771 * v1772
         }
       }
@@ -9664,10 +9664,10 @@ function v67() {
     var v2893 = i$$7 >= 0;
     if(v2893) {
       var v2890 = length$$19 - 1;
-      v1776 = JAM.call(Math.min, Math, [i$$7, v2890], JAM.policy.p9C5FFCABA70857D69F2974E6410A585B5EFE64DC)
+      v1776 = JAM.call(Math.min, Math, [i$$7, v2890], JAM.policy.p1)
     }else {
       var v2891 = length$$19;
-      var v2892 = JAM.call(Math.abs, Math, [i$$7], JAM.policy.p9C5FFCABA70857D69F2974E6410A585B5EFE64DC);
+      var v2892 = JAM.call(Math.abs, Math, [i$$7], JAM.policy.p1);
       v1776 = v2891 - v2892
     }
     var k$$1 = v1776;
@@ -9689,16 +9689,16 @@ function v67() {
   }
   function concat(_) {
     var array$$17 = [];
-    var items = JAM.call(slice$$2.call, slice$$2, [arguments, 0], JAM.policy.p9C5FFCABA70857D69F2974E6410A585B5EFE64DC);
+    var items = JAM.call(slice$$2.call, slice$$2, [arguments, 0], JAM.policy.p1);
     var item$$3;
     var n$$1 = 0;
-    JAM.call(items.unshift, items, [this], JAM.policy.p9C5FFCABA70857D69F2974E6410A585B5EFE64DC);
+    JAM.call(items.unshift, items, [this], JAM.policy.p1);
     var i$$8 = 0;
     var length$$20 = items.length;
     var v1783 = i$$8 < length$$20;
     for(;v1783;) {
       item$$3 = items[i$$8];
-      var v2895 = JAM.call(Object.isArray, Object, [item$$3], JAM.policy.p9C5FFCABA70857D69F2974E6410A585B5EFE64DC);
+      var v2895 = JAM.call(Object.isArray, Object, [item$$3], JAM.policy.p1);
       if(v2895) {
         var v3504 = "callee" in item$$3;
         v2895 = !v3504
@@ -9734,17 +9734,17 @@ function v67() {
       var v1787 = v2896 === 0;
       if(v1787) {
         var v1784 = Prototype.K;
-        return JAM.call(method$$5.call, method$$5, [this, v1784], JAM.policy.p9C5FFCABA70857D69F2974E6410A585B5EFE64DC)
+        return JAM.call(method$$5.call, method$$5, [this, v1784], JAM.policy.p1)
       }else {
         var v2897 = arguments[0];
         var v1786 = v2897 === undefined;
         if(v1786) {
-          var args$$9 = JAM.call(slice$$2.call, slice$$2, [arguments, 1], JAM.policy.p9C5FFCABA70857D69F2974E6410A585B5EFE64DC);
+          var args$$9 = JAM.call(slice$$2.call, slice$$2, [arguments, 1], JAM.policy.p1);
           var v1785 = Prototype.K;
-          JAM.call(args$$9.unshift, args$$9, [v1785], JAM.policy.p9C5FFCABA70857D69F2974E6410A585B5EFE64DC);
-          return JAM.call(method$$5.apply, method$$5, [this, args$$9], JAM.policy.p9C5FFCABA70857D69F2974E6410A585B5EFE64DC)
+          JAM.call(args$$9.unshift, args$$9, [v1785], JAM.policy.p1);
+          return JAM.call(method$$5.apply, method$$5, [this, args$$9], JAM.policy.p1)
         }else {
-          return JAM.call(method$$5.apply, method$$5, [this, arguments], JAM.policy.p9C5FFCABA70857D69F2974E6410A585B5EFE64DC)
+          return JAM.call(method$$5.apply, method$$5, [this, arguments], JAM.policy.p1)
         }
       }
       return
@@ -9776,7 +9776,7 @@ function v67() {
         var v1791 = results$$8;
         var v1792 = n$$2;
         var v2899 = object$$18[i$$9];
-        var v4018 = JAM.call(iterator$$17.call, iterator$$17, [context$$17, v2899, i$$9, object$$18], JAM.policy.p9C5FFCABA70857D69F2974E6410A585B5EFE64DC);
+        var v4018 = JAM.call(iterator$$17.call, iterator$$17, [context$$17, v2899, i$$9, object$$18], JAM.policy.p1);
         v1791[v1792] = v4018
       }
       n$$2 = n$$2 + 1;
@@ -9790,7 +9790,7 @@ function v67() {
     var v2900 = this == null;
     var v3506 = !v2900;
     if(v3506) {
-      var v3505 = JAM.call(Object.isFunction, Object, [iterator$$18], JAM.policy.p9C5FFCABA70857D69F2974E6410A585B5EFE64DC);
+      var v3505 = JAM.call(Object.isFunction, Object, [iterator$$18], JAM.policy.p1);
       v2900 = !v3505
     }
     var v1795 = v2900;
@@ -9809,9 +9809,9 @@ function v67() {
       var v1798 = i$$10 in object$$19;
       if(v1798) {
         value$$54 = object$$19[i$$10];
-        var v1797 = JAM.call(iterator$$18.call, iterator$$18, [context$$18, value$$54, i$$10, object$$19], JAM.policy.p9C5FFCABA70857D69F2974E6410A585B5EFE64DC);
+        var v1797 = JAM.call(iterator$$18.call, iterator$$18, [context$$18, value$$54, i$$10, object$$19], JAM.policy.p1);
         if(v1797) {
-          JAM.call(results$$9.push, results$$9, [value$$54], JAM.policy.p9C5FFCABA70857D69F2974E6410A585B5EFE64DC)
+          JAM.call(results$$9.push, results$$9, [value$$54], JAM.policy.p1)
         }
       }
       i$$10 = i$$10 + 1;
@@ -9840,7 +9840,7 @@ function v67() {
       var v2902 = i$$11 in object$$20;
       if(v2902) {
         var v3507 = object$$20[i$$11];
-        v2902 = JAM.call(iterator$$19.call, iterator$$19, [context$$19, v3507, i$$11, object$$20], JAM.policy.p9C5FFCABA70857D69F2974E6410A585B5EFE64DC)
+        v2902 = JAM.call(iterator$$19.call, iterator$$19, [context$$19, v3507, i$$11, object$$20], JAM.policy.p1)
       }
       var v1803 = v2902;
       if(v1803) {
@@ -9872,7 +9872,7 @@ function v67() {
       var v2904 = i$$12 in object$$21;
       if(v2904) {
         var v3757 = object$$21[i$$12];
-        var v3508 = JAM.call(iterator$$20.call, iterator$$20, [context$$20, v3757, i$$12, object$$21], JAM.policy.p9C5FFCABA70857D69F2974E6410A585B5EFE64DC);
+        var v3508 = JAM.call(iterator$$20.call, iterator$$20, [context$$20, v3757, i$$12, object$$21], JAM.policy.p1);
         v2904 = !v3508
       }
       var v1808 = v2904;
@@ -9892,8 +9892,8 @@ function v67() {
     }
     iterator$$21 = v1810;
     var context$$21 = arguments[2];
-    var v1811 = JAM.call(iterator$$21.bind, iterator$$21, [context$$21], JAM.policy.p9C5FFCABA70857D69F2974E6410A585B5EFE64DC);
-    return JAM.call(_reduce.call, _reduce, [this, v1811, memo$$1], JAM.policy.p9C5FFCABA70857D69F2974E6410A585B5EFE64DC)
+    var v1811 = JAM.call(iterator$$21.bind, iterator$$21, [context$$21], JAM.policy.p1);
+    return JAM.call(_reduce.call, _reduce, [this, v1811, memo$$1], JAM.policy.p1)
   }
   var arrayProto = Array.prototype;
   var slice$$2 = arrayProto.slice;
@@ -9931,14 +9931,14 @@ function v67() {
   if(v1821) {
     inject$$1 = Enumerable.inject
   }
-  JAM.call(Object.extend, Object, [arrayProto, Enumerable], JAM.policy.p9C5FFCABA70857D69F2974E6410A585B5EFE64DC);
+  JAM.call(Object.extend, Object, [arrayProto, Enumerable], JAM.policy.p1);
   var v2910 = arrayProto._reverse;
   var v1822 = !v2910;
   if(v1822) {
     arrayProto._reverse = arrayProto.reverse
   }
   var v1823 = {_each:_each, map:map, collect:map, select:filter$$2, filter:filter$$2, findAll:filter$$2, some:some, any:some, every:every, all:every, inject:inject$$1, clear:clear, first:first$$1, last:last, compact:compact, flatten:flatten, without:without, reverse:reverse, uniq:uniq, intersect:intersect, clone:clone$$1, toArray:clone$$1, size:size$$5, inspect:inspect$$3};
-  JAM.call(Object.extend, Object, [arrayProto, v1823], JAM.policy.p9C5FFCABA70857D69F2974E6410A585B5EFE64DC);
+  JAM.call(Object.extend, Object, [arrayProto, v1823], JAM.policy.p1);
   var CONCAT_ARGUMENTS_BUGGY = v66(1, 2);
   if(CONCAT_ARGUMENTS_BUGGY) {
     arrayProto.concat = concat
@@ -9958,7 +9958,7 @@ function v67() {
 function v59() {
   function each(iterator$$1, context$$2) {
     try {
-      JAM.call(this._each, this, [iterator$$1, context$$2], JAM.policy.p9C5FFCABA70857D69F2974E6410A585B5EFE64DC)
+      JAM.call(this._each, this, [iterator$$1, context$$2], JAM.policy.p1)
     }catch(e$$7) {
       var v1826 = e$$7 != $break;
       if(v1826) {
@@ -9970,7 +9970,7 @@ function v59() {
   function eachSlice(number, iterator$$2, context$$3) {
     var index$$39 = -number;
     var slices = [];
-    var array$$11 = JAM.call(this.toArray, this, [], JAM.policy.p9C5FFCABA70857D69F2974E6410A585B5EFE64DC);
+    var array$$11 = JAM.call(this.toArray, this, [], JAM.policy.p1);
     var v1827 = number < 1;
     if(v1827) {
       return array$$11
@@ -9980,19 +9980,19 @@ function v59() {
     var v1829 = v2913 < v2914;
     for(;v1829;) {
       var v2915 = index$$39 + number;
-      var v1828 = JAM.call(array$$11.slice, array$$11, [index$$39, v2915], JAM.policy.p9C5FFCABA70857D69F2974E6410A585B5EFE64DC);
-      JAM.call(slices.push, slices, [v1828], JAM.policy.p9C5FFCABA70857D69F2974E6410A585B5EFE64DC);
+      var v1828 = JAM.call(array$$11.slice, array$$11, [index$$39, v2915], JAM.policy.p1);
+      JAM.call(slices.push, slices, [v1828], JAM.policy.p1);
       var v2916 = index$$39 = index$$39 + number;
       var v2917 = array$$11.length;
       v1829 = v2916 < v2917
     }
-    return JAM.call(slices.collect, slices, [iterator$$2, context$$3], JAM.policy.p9C5FFCABA70857D69F2974E6410A585B5EFE64DC)
+    return JAM.call(slices.collect, slices, [iterator$$2, context$$3], JAM.policy.p1)
   }
   function all(iterator$$3, context$$4) {
     function v41(value$$34, index$$40) {
       var v1830 = result$$1;
       if(v1830) {
-        var v3509 = JAM.call(iterator$$3.call, iterator$$3, [context$$4, value$$34, index$$40, this], JAM.policy.p9C5FFCABA70857D69F2974E6410A585B5EFE64DC);
+        var v3509 = JAM.call(iterator$$3.call, iterator$$3, [context$$4, value$$34, index$$40, this], JAM.policy.p1);
         var v2918 = !v3509;
         v1830 = !v2918
       }
@@ -10010,12 +10010,12 @@ function v59() {
     }
     iterator$$3 = v1832;
     var result$$1 = true;
-    JAM.call(this.each, this, [v41, this], JAM.policy.p9C5FFCABA70857D69F2974E6410A585B5EFE64DC);
+    JAM.call(this.each, this, [v41, this], JAM.policy.p1);
     return result$$1
   }
   function any(iterator$$4, context$$5) {
     function v42(value$$35, index$$41) {
-      var v3510 = JAM.call(iterator$$4.call, iterator$$4, [context$$5, value$$35, index$$41, this], JAM.policy.p9C5FFCABA70857D69F2974E6410A585B5EFE64DC);
+      var v3510 = JAM.call(iterator$$4.call, iterator$$4, [context$$5, value$$35, index$$41, this], JAM.policy.p1);
       var v2920 = !v3510;
       var v1833 = result$$2 = !v2920;
       if(v1833) {
@@ -10030,13 +10030,13 @@ function v59() {
     }
     iterator$$4 = v1834;
     var result$$2 = false;
-    JAM.call(this.each, this, [v42, this], JAM.policy.p9C5FFCABA70857D69F2974E6410A585B5EFE64DC);
+    JAM.call(this.each, this, [v42, this], JAM.policy.p1);
     return result$$2
   }
   function collect(iterator$$5, context$$6) {
     function v43(value$$36, index$$42) {
-      var v1835 = JAM.call(iterator$$5.call, iterator$$5, [context$$6, value$$36, index$$42, this], JAM.policy.p9C5FFCABA70857D69F2974E6410A585B5EFE64DC);
-      JAM.call(results$$3.push, results$$3, [v1835], JAM.policy.p9C5FFCABA70857D69F2974E6410A585B5EFE64DC);
+      var v1835 = JAM.call(iterator$$5.call, iterator$$5, [context$$6, value$$36, index$$42, this], JAM.policy.p1);
+      JAM.call(results$$3.push, results$$3, [v1835], JAM.policy.p1);
       return
     }
     var v1836 = iterator$$5;
@@ -10046,12 +10046,12 @@ function v59() {
     }
     iterator$$5 = v1836;
     var results$$3 = [];
-    JAM.call(this.each, this, [v43, this], JAM.policy.p9C5FFCABA70857D69F2974E6410A585B5EFE64DC);
+    JAM.call(this.each, this, [v43, this], JAM.policy.p1);
     return results$$3
   }
   function detect(iterator$$6, context$$7) {
     function v44(value$$37, index$$43) {
-      var v1837 = JAM.call(iterator$$6.call, iterator$$6, [context$$7, value$$37, index$$43, this], JAM.policy.p9C5FFCABA70857D69F2974E6410A585B5EFE64DC);
+      var v1837 = JAM.call(iterator$$6.call, iterator$$6, [context$$7, value$$37, index$$43, this], JAM.policy.p1);
       if(v1837) {
         result$$3 = value$$37;
         throw $break;
@@ -10059,27 +10059,27 @@ function v59() {
       return
     }
     var result$$3;
-    JAM.call(this.each, this, [v44, this], JAM.policy.p9C5FFCABA70857D69F2974E6410A585B5EFE64DC);
+    JAM.call(this.each, this, [v44, this], JAM.policy.p1);
     return result$$3
   }
   function findAll(iterator$$7, context$$8) {
     function v45(value$$38, index$$44) {
-      var v1838 = JAM.call(iterator$$7.call, iterator$$7, [context$$8, value$$38, index$$44, this], JAM.policy.p9C5FFCABA70857D69F2974E6410A585B5EFE64DC);
+      var v1838 = JAM.call(iterator$$7.call, iterator$$7, [context$$8, value$$38, index$$44, this], JAM.policy.p1);
       if(v1838) {
-        JAM.call(results$$4.push, results$$4, [value$$38], JAM.policy.p9C5FFCABA70857D69F2974E6410A585B5EFE64DC)
+        JAM.call(results$$4.push, results$$4, [value$$38], JAM.policy.p1)
       }
       return
     }
     var results$$4 = [];
-    JAM.call(this.each, this, [v45, this], JAM.policy.p9C5FFCABA70857D69F2974E6410A585B5EFE64DC);
+    JAM.call(this.each, this, [v45, this], JAM.policy.p1);
     return results$$4
   }
   function grep(filter$$1, iterator$$8, context$$9) {
     function v46(value$$39, index$$45) {
-      var v1840 = JAM.call(filter$$1.match, filter$$1, [value$$39], JAM.policy.p9C5FFCABA70857D69F2974E6410A585B5EFE64DC);
+      var v1840 = JAM.call(filter$$1.match, filter$$1, [value$$39], JAM.policy.p1);
       if(v1840) {
-        var v1839 = JAM.call(iterator$$8.call, iterator$$8, [context$$9, value$$39, index$$45, this], JAM.policy.p9C5FFCABA70857D69F2974E6410A585B5EFE64DC);
-        JAM.call(results$$5.push, results$$5, [v1839], JAM.policy.p9C5FFCABA70857D69F2974E6410A585B5EFE64DC)
+        var v1839 = JAM.call(iterator$$8.call, iterator$$8, [context$$9, value$$39, index$$45, this], JAM.policy.p1);
+        JAM.call(results$$5.push, results$$5, [v1839], JAM.policy.p1)
       }
       return
     }
@@ -10090,12 +10090,12 @@ function v59() {
     }
     iterator$$8 = v1841;
     var results$$5 = [];
-    var v1843 = JAM.call(Object.isString, Object, [filter$$1], JAM.policy.p9C5FFCABA70857D69F2974E6410A585B5EFE64DC);
+    var v1843 = JAM.call(Object.isString, Object, [filter$$1], JAM.policy.p1);
     if(v1843) {
-      var v1842 = JAM.call(RegExp.escape, RegExp, [filter$$1], JAM.policy.p9C5FFCABA70857D69F2974E6410A585B5EFE64DC);
+      var v1842 = JAM.call(RegExp.escape, RegExp, [filter$$1], JAM.policy.p1);
       filter$$1 = new RegExp(v1842)
     }
-    JAM.call(this.each, this, [v46, this], JAM.policy.p9C5FFCABA70857D69F2974E6410A585B5EFE64DC);
+    JAM.call(this.each, this, [v46, this], JAM.policy.p1);
     return results$$5
   }
   function include$$1(object$$17) {
@@ -10108,16 +10108,16 @@ function v59() {
       return
     }
     var v2924 = this.indexOf;
-    var v1846 = JAM.call(Object.isFunction, Object, [v2924], JAM.policy.p9C5FFCABA70857D69F2974E6410A585B5EFE64DC);
+    var v1846 = JAM.call(Object.isFunction, Object, [v2924], JAM.policy.p1);
     if(v1846) {
-      var v2925 = JAM.call(this.indexOf, this, [object$$17], JAM.policy.p9C5FFCABA70857D69F2974E6410A585B5EFE64DC);
+      var v2925 = JAM.call(this.indexOf, this, [object$$17], JAM.policy.p1);
       var v1845 = v2925 != -1;
       if(v1845) {
         return true
       }
     }
     var found = false;
-    JAM.call(this.each, this, [v47], JAM.policy.p9C5FFCABA70857D69F2974E6410A585B5EFE64DC);
+    JAM.call(this.each, this, [v47], JAM.policy.p1);
     return found
   }
   function inGroupsOf(number$$1, fillWith) {
@@ -10125,42 +10125,42 @@ function v59() {
       var v2926 = slice$$1.length;
       var v1847 = v2926 < number$$1;
       for(;v1847;) {
-        JAM.call(slice$$1.push, slice$$1, [fillWith], JAM.policy.p9C5FFCABA70857D69F2974E6410A585B5EFE64DC);
+        JAM.call(slice$$1.push, slice$$1, [fillWith], JAM.policy.p1);
         var v2927 = slice$$1.length;
         v1847 = v2927 < number$$1
       }
       return slice$$1
     }
     var v1848;
-    var v2928 = JAM.call(Object.isUndefined, Object, [fillWith], JAM.policy.p9C5FFCABA70857D69F2974E6410A585B5EFE64DC);
+    var v2928 = JAM.call(Object.isUndefined, Object, [fillWith], JAM.policy.p1);
     if(v2928) {
       v1848 = null
     }else {
       v1848 = fillWith
     }
     fillWith = v1848;
-    return JAM.call(this.eachSlice, this, [number$$1, v48], JAM.policy.p9C5FFCABA70857D69F2974E6410A585B5EFE64DC)
+    return JAM.call(this.eachSlice, this, [number$$1, v48], JAM.policy.p1)
   }
   function inject(memo, iterator$$9, context$$10) {
     function v49(value$$41, index$$46) {
-      memo = JAM.call(iterator$$9.call, iterator$$9, [context$$10, memo, value$$41, index$$46, this], JAM.policy.p9C5FFCABA70857D69F2974E6410A585B5EFE64DC);
+      memo = JAM.call(iterator$$9.call, iterator$$9, [context$$10, memo, value$$41, index$$46, this], JAM.policy.p1);
       return
     }
-    JAM.call(this.each, this, [v49, this], JAM.policy.p9C5FFCABA70857D69F2974E6410A585B5EFE64DC);
+    JAM.call(this.each, this, [v49, this], JAM.policy.p1);
     return memo
   }
   function invoke(method$$4) {
     function v50(value$$42) {
       var v1849 = value$$42[method$$4];
-      return JAM.call(v1849.apply, v1849, [value$$42, args$$7], JAM.policy.p9C5FFCABA70857D69F2974E6410A585B5EFE64DC)
+      return JAM.call(v1849.apply, v1849, [value$$42, args$$7], JAM.policy.p1)
     }
     var v1850 = $A(arguments);
-    var args$$7 = JAM.call(v1850.slice, v1850, [1], JAM.policy.p9C5FFCABA70857D69F2974E6410A585B5EFE64DC);
-    return JAM.call(this.map, this, [v50], JAM.policy.p9C5FFCABA70857D69F2974E6410A585B5EFE64DC)
+    var args$$7 = JAM.call(v1850.slice, v1850, [1], JAM.policy.p1);
+    return JAM.call(this.map, this, [v50], JAM.policy.p1)
   }
   function max(iterator$$10, context$$11) {
     function v51(value$$43, index$$47) {
-      value$$43 = JAM.call(iterator$$10.call, iterator$$10, [context$$11, value$$43, index$$47, this], JAM.policy.p9C5FFCABA70857D69F2974E6410A585B5EFE64DC);
+      value$$43 = JAM.call(iterator$$10.call, iterator$$10, [context$$11, value$$43, index$$47, this], JAM.policy.p1);
       var v2929 = result$$4 == null;
       var v3511 = !v2929;
       if(v3511) {
@@ -10179,12 +10179,12 @@ function v59() {
     }
     iterator$$10 = v1852;
     var result$$4;
-    JAM.call(this.each, this, [v51, this], JAM.policy.p9C5FFCABA70857D69F2974E6410A585B5EFE64DC);
+    JAM.call(this.each, this, [v51, this], JAM.policy.p1);
     return result$$4
   }
   function min(iterator$$11, context$$12) {
     function v52(value$$44, index$$48) {
-      value$$44 = JAM.call(iterator$$11.call, iterator$$11, [context$$12, value$$44, index$$48, this], JAM.policy.p9C5FFCABA70857D69F2974E6410A585B5EFE64DC);
+      value$$44 = JAM.call(iterator$$11.call, iterator$$11, [context$$12, value$$44, index$$48, this], JAM.policy.p1);
       var v2931 = result$$5 == null;
       var v3512 = !v2931;
       if(v3512) {
@@ -10203,20 +10203,20 @@ function v59() {
     }
     iterator$$11 = v1854;
     var result$$5;
-    JAM.call(this.each, this, [v52, this], JAM.policy.p9C5FFCABA70857D69F2974E6410A585B5EFE64DC);
+    JAM.call(this.each, this, [v52, this], JAM.policy.p1);
     return result$$5
   }
   function partition(iterator$$12, context$$13) {
     function v53(value$$45, index$$49) {
       var v2933;
-      var v3513 = JAM.call(iterator$$12.call, iterator$$12, [context$$13, value$$45, index$$49, this], JAM.policy.p9C5FFCABA70857D69F2974E6410A585B5EFE64DC);
+      var v3513 = JAM.call(iterator$$12.call, iterator$$12, [context$$13, value$$45, index$$49, this], JAM.policy.p1);
       if(v3513) {
         v2933 = trues
       }else {
         v2933 = falses
       }
       var v1855 = v2933;
-      JAM.call(v1855.push, v1855, [value$$45], JAM.policy.p9C5FFCABA70857D69F2974E6410A585B5EFE64DC);
+      JAM.call(v1855.push, v1855, [value$$45], JAM.policy.p1);
       return
     }
     var v1856 = iterator$$12;
@@ -10227,30 +10227,30 @@ function v59() {
     iterator$$12 = v1856;
     var trues = [];
     var falses = [];
-    JAM.call(this.each, this, [v53, this], JAM.policy.p9C5FFCABA70857D69F2974E6410A585B5EFE64DC);
+    JAM.call(this.each, this, [v53, this], JAM.policy.p1);
     return[trues, falses]
   }
   function pluck(property$$7) {
     function v54(value$$46) {
       var v1857 = value$$46[property$$7];
-      JAM.call(results$$6.push, results$$6, [v1857], JAM.policy.p9C5FFCABA70857D69F2974E6410A585B5EFE64DC);
+      JAM.call(results$$6.push, results$$6, [v1857], JAM.policy.p1);
       return
     }
     var results$$6 = [];
-    JAM.call(this.each, this, [v54], JAM.policy.p9C5FFCABA70857D69F2974E6410A585B5EFE64DC);
+    JAM.call(this.each, this, [v54], JAM.policy.p1);
     return results$$6
   }
   function reject(iterator$$13, context$$14) {
     function v55(value$$47, index$$50) {
-      var v2935 = JAM.call(iterator$$13.call, iterator$$13, [context$$14, value$$47, index$$50, this], JAM.policy.p9C5FFCABA70857D69F2974E6410A585B5EFE64DC);
+      var v2935 = JAM.call(iterator$$13.call, iterator$$13, [context$$14, value$$47, index$$50, this], JAM.policy.p1);
       var v1858 = !v2935;
       if(v1858) {
-        JAM.call(results$$7.push, results$$7, [value$$47], JAM.policy.p9C5FFCABA70857D69F2974E6410A585B5EFE64DC)
+        JAM.call(results$$7.push, results$$7, [value$$47], JAM.policy.p1)
       }
       return
     }
     var results$$7 = [];
-    JAM.call(this.each, this, [v55, this], JAM.policy.p9C5FFCABA70857D69F2974E6410A585B5EFE64DC);
+    JAM.call(this.each, this, [v55, this], JAM.policy.p1);
     return results$$7
   }
   function sortBy(iterator$$14, context$$15) {
@@ -10274,40 +10274,40 @@ function v59() {
       return v1859
     }
     function v56(value$$48, index$$51) {
-      var v1860 = JAM.call(iterator$$14.call, iterator$$14, [context$$15, value$$48, index$$51, this], JAM.policy.p9C5FFCABA70857D69F2974E6410A585B5EFE64DC);
+      var v1860 = JAM.call(iterator$$14.call, iterator$$14, [context$$15, value$$48, index$$51, this], JAM.policy.p1);
       return{value:value$$48, criteria:v1860}
     }
-    var v2938 = JAM.call(this.map, this, [v56, this], JAM.policy.p9C5FFCABA70857D69F2974E6410A585B5EFE64DC);
-    var v1861 = JAM.call(v2938.sort, v2938, [v57], JAM.policy.p9C5FFCABA70857D69F2974E6410A585B5EFE64DC);
-    return JAM.call(v1861.pluck, v1861, ["value"], JAM.policy.p9C5FFCABA70857D69F2974E6410A585B5EFE64DC)
+    var v2938 = JAM.call(this.map, this, [v56, this], JAM.policy.p1);
+    var v1861 = JAM.call(v2938.sort, v2938, [v57], JAM.policy.p1);
+    return JAM.call(v1861.pluck, v1861, ["value"], JAM.policy.p1)
   }
   function toArray$$1() {
-    return JAM.call(this.map, this, [], JAM.policy.p9C5FFCABA70857D69F2974E6410A585B5EFE64DC)
+    return JAM.call(this.map, this, [], JAM.policy.p1)
   }
   function zip() {
     function v58(value$$49, index$$52) {
-      var v1862 = JAM.call(collections.pluck, collections, [index$$52], JAM.policy.p9C5FFCABA70857D69F2974E6410A585B5EFE64DC);
-      return JAM.call(iterator$$15, null, [v1862], JAM.policy.p9C5FFCABA70857D69F2974E6410A585B5EFE64DC)
+      var v1862 = JAM.call(collections.pluck, collections, [index$$52], JAM.policy.p1);
+      return JAM.call(iterator$$15, null, [v1862], JAM.policy.p1)
     }
     var iterator$$15 = Prototype.K;
     var args$$8 = $A(arguments);
-    var v2939 = JAM.call(args$$8.last, args$$8, [], JAM.policy.p9C5FFCABA70857D69F2974E6410A585B5EFE64DC);
-    var v1863 = JAM.call(Object.isFunction, Object, [v2939], JAM.policy.p9C5FFCABA70857D69F2974E6410A585B5EFE64DC);
+    var v2939 = JAM.call(args$$8.last, args$$8, [], JAM.policy.p1);
+    var v1863 = JAM.call(Object.isFunction, Object, [v2939], JAM.policy.p1);
     if(v1863) {
-      iterator$$15 = JAM.call(args$$8.pop, args$$8, [], JAM.policy.p9C5FFCABA70857D69F2974E6410A585B5EFE64DC)
+      iterator$$15 = JAM.call(args$$8.pop, args$$8, [], JAM.policy.p1)
     }
     var v2940 = [this];
-    var v1864 = JAM.call(v2940.concat, v2940, [args$$8], JAM.policy.p9C5FFCABA70857D69F2974E6410A585B5EFE64DC);
-    var collections = JAM.call(v1864.map, v1864, [$A], JAM.policy.p9C5FFCABA70857D69F2974E6410A585B5EFE64DC);
-    return JAM.call(this.map, this, [v58], JAM.policy.p9C5FFCABA70857D69F2974E6410A585B5EFE64DC)
+    var v1864 = JAM.call(v2940.concat, v2940, [args$$8], JAM.policy.p1);
+    var collections = JAM.call(v1864.map, v1864, [$A], JAM.policy.p1);
+    return JAM.call(this.map, this, [v58], JAM.policy.p1)
   }
   function size$$4() {
-    var v1865 = JAM.call(this.toArray, this, [], JAM.policy.p9C5FFCABA70857D69F2974E6410A585B5EFE64DC);
+    var v1865 = JAM.call(this.toArray, this, [], JAM.policy.p1);
     return v1865.length
   }
   function inspect$$2() {
-    var v3515 = JAM.call(this.toArray, this, [], JAM.policy.p9C5FFCABA70857D69F2974E6410A585B5EFE64DC);
-    var v2941 = JAM.call(v3515.inspect, v3515, [], JAM.policy.p9C5FFCABA70857D69F2974E6410A585B5EFE64DC);
+    var v3515 = JAM.call(this.toArray, this, [], JAM.policy.p1);
+    var v2941 = JAM.call(v3515.inspect, v3515, [], JAM.policy.p1);
     var v1866 = "#<Enumerable:" + v2941;
     return v1866 + ">"
   }
@@ -10333,7 +10333,7 @@ function v40(object$$16) {
     var ctx = object$$16;
     var expr$$3 = match$$5[3];
     var pattern$$9 = /^([^.[]+|\[((?:.*?[^\\])?)\])(\.|\[|$)/;
-    match$$5 = JAM.call(pattern$$9.exec, pattern$$9, [expr$$3], JAM.policy.p9C5FFCABA70857D69F2974E6410A585B5EFE64DC);
+    match$$5 = JAM.call(pattern$$9.exec, pattern$$9, [expr$$3], JAM.policy.p1);
     var v1871 = match$$5 == null;
     if(v1871) {
       return before$$1
@@ -10342,10 +10342,10 @@ function v40(object$$16) {
     for(;v1875;) {
       var v1872;
       var v3516 = match$$5[1];
-      var v2944 = JAM.call(v3516.startsWith, v3516, ["["], JAM.policy.p9C5FFCABA70857D69F2974E6410A585B5EFE64DC);
+      var v2944 = JAM.call(v3516.startsWith, v3516, ["["], JAM.policy.p1);
       if(v2944) {
         var v2943 = match$$5[2];
-        v1872 = JAM.call(v2943.replace, v2943, [/\\\\]/g, "]"], JAM.policy.p9C5FFCABA70857D69F2974E6410A585B5EFE64DC)
+        v1872 = JAM.call(v2943.replace, v2943, [/\\\\]/g, "]"], JAM.policy.p1)
       }else {
         v1872 = match$$5[1]
       }
@@ -10372,29 +10372,29 @@ function v40(object$$16) {
         v2946 = v3520.length
       }
       var v1874 = v2946;
-      expr$$3 = JAM.call(expr$$3.substring, expr$$3, [v1874], JAM.policy.p9C5FFCABA70857D69F2974E6410A585B5EFE64DC);
-      match$$5 = JAM.call(pattern$$9.exec, pattern$$9, [expr$$3], JAM.policy.p9C5FFCABA70857D69F2974E6410A585B5EFE64DC);
+      expr$$3 = JAM.call(expr$$3.substring, expr$$3, [v1874], JAM.policy.p1);
+      match$$5 = JAM.call(pattern$$9.exec, pattern$$9, [expr$$3], JAM.policy.p1);
       v1875 = match$$5 != null
     }
     var v1876 = before$$1;
-    var v1877 = JAM.call(String.interpret, String, [ctx], JAM.policy.p9C5FFCABA70857D69F2974E6410A585B5EFE64DC);
+    var v1877 = JAM.call(String.interpret, String, [ctx], JAM.policy.p1);
     return v1876 + v1877
   }
   var v2947 = object$$16;
   if(v2947) {
     var v3522 = object$$16.toTemplateReplacements;
-    v2947 = JAM.call(Object.isFunction, Object, [v3522], JAM.policy.p9C5FFCABA70857D69F2974E6410A585B5EFE64DC)
+    v2947 = JAM.call(Object.isFunction, Object, [v3522], JAM.policy.p1)
   }
   var v1878 = v2947;
   if(v1878) {
-    object$$16 = JAM.call(object$$16.toTemplateReplacements, object$$16, [], JAM.policy.p9C5FFCABA70857D69F2974E6410A585B5EFE64DC)
+    object$$16 = JAM.call(object$$16.toTemplateReplacements, object$$16, [], JAM.policy.p1)
   }
   var v1879 = this.template;
   var v1880 = this.pattern;
-  return JAM.call(v1879.gsub, v1879, [v1880, v39], JAM.policy.p9C5FFCABA70857D69F2974E6410A585B5EFE64DC)
+  return JAM.call(v1879.gsub, v1879, [v1880, v39], JAM.policy.p1)
 }
 function v38(template$$1, pattern$$8) {
-  var v4019 = JAM.call(template$$1.toString, template$$1, [], JAM.policy.p9C5FFCABA70857D69F2974E6410A585B5EFE64DC);
+  var v4019 = JAM.call(template$$1.toString, template$$1, [], JAM.policy.p1);
   this.template = v4019;
   var v1881 = pattern$$8;
   var v2948 = !v1881;
@@ -10407,9 +10407,9 @@ function v38(template$$1, pattern$$8) {
 function v37() {
   function prepareReplacement(replacement) {
     function v29(match) {
-      return JAM.call(template.evaluate, template, [match], JAM.policy.p9C5FFCABA70857D69F2974E6410A585B5EFE64DC)
+      return JAM.call(template.evaluate, template, [match], JAM.policy.p1)
     }
-    var v1882 = JAM.call(Object.isFunction, Object, [replacement], JAM.policy.p9C5FFCABA70857D69F2974E6410A585B5EFE64DC);
+    var v1882 = JAM.call(Object.isFunction, Object, [replacement], JAM.policy.p1);
     if(v1882) {
       return replacement
     }
@@ -10421,9 +10421,9 @@ function v37() {
     var source$$3 = this;
     var match$$1;
     replacement$$1 = prepareReplacement(replacement$$1);
-    var v1883 = JAM.call(Object.isString, Object, [pattern$$1], JAM.policy.p9C5FFCABA70857D69F2974E6410A585B5EFE64DC);
+    var v1883 = JAM.call(Object.isString, Object, [pattern$$1], JAM.policy.p1);
     if(v1883) {
-      pattern$$1 = JAM.call(RegExp.escape, RegExp, [pattern$$1], JAM.policy.p9C5FFCABA70857D69F2974E6410A585B5EFE64DC)
+      pattern$$1 = JAM.call(RegExp.escape, RegExp, [pattern$$1], JAM.policy.p1)
     }
     var v3523 = pattern$$1.length;
     var v3759 = !v3523;
@@ -10433,31 +10433,31 @@ function v37() {
     var v2949 = v3523;
     var v1885 = !v2949;
     if(v1885) {
-      replacement$$1 = JAM.call(replacement$$1, null, [""], JAM.policy.p9C5FFCABA70857D69F2974E6410A585B5EFE64DC);
+      replacement$$1 = JAM.call(replacement$$1, null, [""], JAM.policy.p1);
       var v2950 = replacement$$1;
-      var v3524 = JAM.call(source$$3.split, source$$3, [""], JAM.policy.p9C5FFCABA70857D69F2974E6410A585B5EFE64DC);
-      var v2951 = JAM.call(v3524.join, v3524, [replacement$$1], JAM.policy.p9C5FFCABA70857D69F2974E6410A585B5EFE64DC);
+      var v3524 = JAM.call(source$$3.split, source$$3, [""], JAM.policy.p1);
+      var v2951 = JAM.call(v3524.join, v3524, [replacement$$1], JAM.policy.p1);
       var v1884 = v2950 + v2951;
       return v1884 + replacement$$1
     }
     var v2952 = source$$3.length;
     var v1888 = v2952 > 0;
     for(;v1888;) {
-      var v1887 = match$$1 = JAM.call(source$$3.match, source$$3, [pattern$$1], JAM.policy.p9C5FFCABA70857D69F2974E6410A585B5EFE64DC);
+      var v1887 = match$$1 = JAM.call(source$$3.match, source$$3, [pattern$$1], JAM.policy.p1);
       if(v1887) {
         var v2953 = result;
         var v3525 = match$$1.index;
-        var v2954 = JAM.call(source$$3.slice, source$$3, [0, v3525], JAM.policy.p9C5FFCABA70857D69F2974E6410A585B5EFE64DC);
+        var v2954 = JAM.call(source$$3.slice, source$$3, [0, v3525], JAM.policy.p1);
         result = v2953 + v2954;
         var v2955 = result;
-        var v3526 = JAM.call(replacement$$1, null, [match$$1], JAM.policy.p9C5FFCABA70857D69F2974E6410A585B5EFE64DC);
-        var v2956 = JAM.call(String.interpret, String, [v3526], JAM.policy.p9C5FFCABA70857D69F2974E6410A585B5EFE64DC);
+        var v3526 = JAM.call(replacement$$1, null, [match$$1], JAM.policy.p1);
+        var v2956 = JAM.call(String.interpret, String, [v3526], JAM.policy.p1);
         result = v2955 + v2956;
         var v2957 = match$$1.index;
         var v3527 = match$$1[0];
         var v2958 = v3527.length;
         var v1886 = v2957 + v2958;
-        source$$3 = JAM.call(source$$3.slice, source$$3, [v1886], JAM.policy.p9C5FFCABA70857D69F2974E6410A585B5EFE64DC)
+        source$$3 = JAM.call(source$$3.slice, source$$3, [v1886], JAM.policy.p1)
       }else {
         result = result + source$$3;
         source$$3 = ""
@@ -10474,27 +10474,27 @@ function v37() {
       if(v1889) {
         return match$$2[0]
       }
-      return JAM.call(replacement$$2, null, [match$$2], JAM.policy.p9C5FFCABA70857D69F2974E6410A585B5EFE64DC)
+      return JAM.call(replacement$$2, null, [match$$2], JAM.policy.p1)
     }
     replacement$$2 = prepareReplacement(replacement$$2);
     var v1890;
-    var v2961 = JAM.call(Object.isUndefined, Object, [count$$6], JAM.policy.p9C5FFCABA70857D69F2974E6410A585B5EFE64DC);
+    var v2961 = JAM.call(Object.isUndefined, Object, [count$$6], JAM.policy.p1);
     if(v2961) {
       v1890 = 1
     }else {
       v1890 = count$$6
     }
     count$$6 = v1890;
-    return JAM.call(this.gsub, this, [pattern$$2, v30], JAM.policy.p9C5FFCABA70857D69F2974E6410A585B5EFE64DC)
+    return JAM.call(this.gsub, this, [pattern$$2, v30], JAM.policy.p1)
   }
   function scan(pattern$$3, iterator) {
-    JAM.call(this.gsub, this, [pattern$$3, iterator], JAM.policy.p9C5FFCABA70857D69F2974E6410A585B5EFE64DC);
+    JAM.call(this.gsub, this, [pattern$$3, iterator], JAM.policy.p1);
     return String(this)
   }
   function truncate(length$$16, truncation) {
     length$$16 = length$$16 || 30;
     var v1891;
-    var v2962 = JAM.call(Object.isUndefined, Object, [truncation], JAM.policy.p9C5FFCABA70857D69F2974E6410A585B5EFE64DC);
+    var v2962 = JAM.call(Object.isUndefined, Object, [truncation], JAM.policy.p1);
     if(v2962) {
       v1891 = "..."
     }else {
@@ -10507,7 +10507,7 @@ function v37() {
     if(v2964) {
       var v3760 = truncation.length;
       var v3529 = length$$16 - v3760;
-      var v2963 = JAM.call(this.slice, this, [0, v3529], JAM.policy.p9C5FFCABA70857D69F2974E6410A585B5EFE64DC);
+      var v2963 = JAM.call(this.slice, this, [0, v3529], JAM.policy.p1);
       v1892 = v2963 + truncation
     }else {
       v1892 = String(this)
@@ -10515,20 +10515,20 @@ function v37() {
     return v1892
   }
   function strip() {
-    var v1893 = JAM.call(this.replace, this, [/^\s+/, ""], JAM.policy.p9C5FFCABA70857D69F2974E6410A585B5EFE64DC);
-    return JAM.call(v1893.replace, v1893, [/\s+$/, ""], JAM.policy.p9C5FFCABA70857D69F2974E6410A585B5EFE64DC)
+    var v1893 = JAM.call(this.replace, this, [/^\s+/, ""], JAM.policy.p1);
+    return JAM.call(v1893.replace, v1893, [/\s+$/, ""], JAM.policy.p1)
   }
   function stripTags() {
-    return JAM.call(this.replace, this, [/<\w+(\s+("[^"]*"|'[^']*'|[^>])+)?>|<\/\w+>/gi, ""], JAM.policy.p9C5FFCABA70857D69F2974E6410A585B5EFE64DC)
+    return JAM.call(this.replace, this, [/<\w+(\s+("[^"]*"|'[^']*'|[^>])+)?>|<\/\w+>/gi, ""], JAM.policy.p1)
   }
   function stripScripts() {
     var v2965 = Prototype.ScriptFragment;
     var v1894 = new RegExp(v2965, "img");
-    return JAM.call(this.replace, this, [v1894, ""], JAM.policy.p9C5FFCABA70857D69F2974E6410A585B5EFE64DC)
+    return JAM.call(this.replace, this, [v1894, ""], JAM.policy.p1)
   }
   function extractScripts() {
     function v31(scriptTag) {
-      var v2966 = JAM.call(scriptTag.match, scriptTag, [matchOne], JAM.policy.p9C5FFCABA70857D69F2974E6410A585B5EFE64DC);
+      var v2966 = JAM.call(scriptTag.match, scriptTag, [matchOne], JAM.policy.p1);
       var v3530 = !v2966;
       if(v3530) {
         v2966 = ["", ""]
@@ -10540,13 +10540,13 @@ function v37() {
     var matchAll = new RegExp(v1896, "img");
     var v1897 = Prototype.ScriptFragment;
     var matchOne = new RegExp(v1897, "im");
-    var v2967 = JAM.call(this.match, this, [matchAll], JAM.policy.p9C5FFCABA70857D69F2974E6410A585B5EFE64DC);
+    var v2967 = JAM.call(this.match, this, [matchAll], JAM.policy.p1);
     var v3531 = !v2967;
     if(v3531) {
       v2967 = []
     }
     var v1898 = v2967;
-    return JAM.call(v1898.map, v1898, [v31], JAM.policy.p9C5FFCABA70857D69F2974E6410A585B5EFE64DC)
+    return JAM.call(v1898.map, v1898, [v31], JAM.policy.p1)
   }
   function evalScripts() {
     function v32(script) {
@@ -10556,32 +10556,32 @@ function v37() {
         return JAM.call(eval, null, [script])
       }
     }
-    var v1899 = JAM.call(this.extractScripts, this, [], JAM.policy.p9C5FFCABA70857D69F2974E6410A585B5EFE64DC);
-    return JAM.call(v1899.map, v1899, [v32], JAM.policy.p9C5FFCABA70857D69F2974E6410A585B5EFE64DC)
+    var v1899 = JAM.call(this.extractScripts, this, [], JAM.policy.p1);
+    return JAM.call(v1899.map, v1899, [v32], JAM.policy.p1)
   }
   function escapeHTML() {
-    var v2968 = JAM.call(this.replace, this, [/&/g, "&amp;"], JAM.policy.p9C5FFCABA70857D69F2974E6410A585B5EFE64DC);
-    var v1900 = JAM.call(v2968.replace, v2968, [/</g, "&lt;"], JAM.policy.p9C5FFCABA70857D69F2974E6410A585B5EFE64DC);
-    return JAM.call(v1900.replace, v1900, [/>/g, "&gt;"], JAM.policy.p9C5FFCABA70857D69F2974E6410A585B5EFE64DC)
+    var v2968 = JAM.call(this.replace, this, [/&/g, "&amp;"], JAM.policy.p1);
+    var v1900 = JAM.call(v2968.replace, v2968, [/</g, "&lt;"], JAM.policy.p1);
+    return JAM.call(v1900.replace, v1900, [/>/g, "&gt;"], JAM.policy.p1)
   }
   function unescapeHTML() {
-    var v3532 = JAM.call(this.stripTags, this, [], JAM.policy.p9C5FFCABA70857D69F2974E6410A585B5EFE64DC);
-    var v2969 = JAM.call(v3532.replace, v3532, [/&lt;/g, "<"], JAM.policy.p9C5FFCABA70857D69F2974E6410A585B5EFE64DC);
-    var v1901 = JAM.call(v2969.replace, v2969, [/&gt;/g, ">"], JAM.policy.p9C5FFCABA70857D69F2974E6410A585B5EFE64DC);
-    return JAM.call(v1901.replace, v1901, [/&amp;/g, "&"], JAM.policy.p9C5FFCABA70857D69F2974E6410A585B5EFE64DC)
+    var v3532 = JAM.call(this.stripTags, this, [], JAM.policy.p1);
+    var v2969 = JAM.call(v3532.replace, v3532, [/&lt;/g, "<"], JAM.policy.p1);
+    var v1901 = JAM.call(v2969.replace, v2969, [/&gt;/g, ">"], JAM.policy.p1);
+    return JAM.call(v1901.replace, v1901, [/&amp;/g, "&"], JAM.policy.p1)
   }
   function toQueryParams(separator) {
     function v33(hash, pair) {
-      var v2970 = pair = JAM.call(pair.split, pair, ["="], JAM.policy.p9C5FFCABA70857D69F2974E6410A585B5EFE64DC);
+      var v2970 = pair = JAM.call(pair.split, pair, ["="], JAM.policy.p1);
       var v1909 = v2970[0];
       if(v1909) {
-        var v1902 = JAM.call(pair.shift, pair, [], JAM.policy.p9C5FFCABA70857D69F2974E6410A585B5EFE64DC);
+        var v1902 = JAM.call(pair.shift, pair, [], JAM.policy.p1);
         var key$$15 = decodeURIComponent(v1902);
         var v1903;
         var v3533 = pair.length;
         var v2971 = v3533 > 1;
         if(v2971) {
-          v1903 = JAM.call(pair.join, pair, ["="], JAM.policy.p9C5FFCABA70857D69F2974E6410A585B5EFE64DC)
+          v1903 = JAM.call(pair.join, pair, ["="], JAM.policy.p1)
         }else {
           v1903 = pair[0]
         }
@@ -10593,43 +10593,43 @@ function v37() {
         var v1908 = key$$15 in hash;
         if(v1908) {
           var v3534 = hash[key$$15];
-          var v2972 = JAM.call(Object.isArray, Object, [v3534], JAM.policy.p9C5FFCABA70857D69F2974E6410A585B5EFE64DC);
+          var v2972 = JAM.call(Object.isArray, Object, [v3534], JAM.policy.p1);
           var v1906 = !v2972;
           if(v1906) {
             var v1905 = hash[key$$15];
-            JAM.set(hash, key$$15, [v1905], JAM.policy.p425E08A28862414CF7130381FE99A660F52DB811)
+            JAM.set(hash, key$$15, [v1905], JAM.policy.p2)
           }
           var v1907 = hash[key$$15];
-          JAM.call(v1907.push, v1907, [value$$33], JAM.policy.p9C5FFCABA70857D69F2974E6410A585B5EFE64DC)
+          JAM.call(v1907.push, v1907, [value$$33], JAM.policy.p1)
         }else {
-          JAM.set(hash, key$$15, value$$33, JAM.policy.p425E08A28862414CF7130381FE99A660F52DB811)
+          JAM.set(hash, key$$15, value$$33, JAM.policy.p2)
         }
       }
       return hash
     }
-    var v1910 = JAM.call(this.strip, this, [], JAM.policy.p9C5FFCABA70857D69F2974E6410A585B5EFE64DC);
-    var match$$3 = JAM.call(v1910.match, v1910, [/([^?#]*)(#.*)?$/], JAM.policy.p9C5FFCABA70857D69F2974E6410A585B5EFE64DC);
+    var v1910 = JAM.call(this.strip, this, [], JAM.policy.p1);
+    var match$$3 = JAM.call(v1910.match, v1910, [/([^?#]*)(#.*)?$/], JAM.policy.p1);
     var v1911 = !match$$3;
     if(v1911) {
       return{}
     }
     var v2973 = match$$3[1];
     var v2974 = separator || "&";
-    var v1912 = JAM.call(v2973.split, v2973, [v2974], JAM.policy.p9C5FFCABA70857D69F2974E6410A585B5EFE64DC);
-    return JAM.call(v1912.inject, v1912, [{}, v33], JAM.policy.p9C5FFCABA70857D69F2974E6410A585B5EFE64DC)
+    var v1912 = JAM.call(v2973.split, v2973, [v2974], JAM.policy.p1);
+    return JAM.call(v1912.inject, v1912, [{}, v33], JAM.policy.p1)
   }
   function toArray() {
-    return JAM.call(this.split, this, [""], JAM.policy.p9C5FFCABA70857D69F2974E6410A585B5EFE64DC)
+    return JAM.call(this.split, this, [""], JAM.policy.p1)
   }
   function succ() {
     var v3535 = this.length;
     var v2975 = v3535 - 1;
-    var v1913 = JAM.call(this.slice, this, [0, v2975], JAM.policy.p9C5FFCABA70857D69F2974E6410A585B5EFE64DC);
+    var v1913 = JAM.call(this.slice, this, [0, v2975], JAM.policy.p1);
     var v3857 = this.length;
     var v3761 = v3857 - 1;
-    var v3536 = JAM.call(this.charCodeAt, this, [v3761], JAM.policy.p9C5FFCABA70857D69F2974E6410A585B5EFE64DC);
+    var v3536 = JAM.call(this.charCodeAt, this, [v3761], JAM.policy.p1);
     var v2976 = v3536 + 1;
-    var v1914 = JAM.call(String.fromCharCode, String, [v2976], JAM.policy.p9C5FFCABA70857D69F2974E6410A585B5EFE64DC);
+    var v1914 = JAM.call(String.fromCharCode, String, [v2976], JAM.policy.p1);
     return v1913 + v1914
   }
   function times(count$$7) {
@@ -10640,7 +10640,7 @@ function v37() {
     }else {
       var v3537 = count$$7 + 1;
       var v2977 = new Array(v3537);
-      v1915 = JAM.call(v2977.join, v2977, [this], JAM.policy.p9C5FFCABA70857D69F2974E6410A585B5EFE64DC)
+      v1915 = JAM.call(v2977.join, v2977, [this], JAM.policy.p1)
     }
     return v1915
   }
@@ -10648,30 +10648,30 @@ function v37() {
     function v34(match$$4, chr) {
       var v1916;
       if(chr) {
-        v1916 = JAM.call(chr.toUpperCase, chr, [], JAM.policy.p9C5FFCABA70857D69F2974E6410A585B5EFE64DC)
+        v1916 = JAM.call(chr.toUpperCase, chr, [], JAM.policy.p1)
       }else {
         v1916 = ""
       }
       return v1916
     }
-    return JAM.call(this.replace, this, [/-+(.)?/g, v34], JAM.policy.p9C5FFCABA70857D69F2974E6410A585B5EFE64DC)
+    return JAM.call(this.replace, this, [/-+(.)?/g, v34], JAM.policy.p1)
   }
   function capitalize() {
-    var v2979 = JAM.call(this.charAt, this, [0], JAM.policy.p9C5FFCABA70857D69F2974E6410A585B5EFE64DC);
-    var v1917 = JAM.call(v2979.toUpperCase, v2979, [], JAM.policy.p9C5FFCABA70857D69F2974E6410A585B5EFE64DC);
-    var v2980 = JAM.call(this.substring, this, [1], JAM.policy.p9C5FFCABA70857D69F2974E6410A585B5EFE64DC);
-    var v1918 = JAM.call(v2980.toLowerCase, v2980, [], JAM.policy.p9C5FFCABA70857D69F2974E6410A585B5EFE64DC);
+    var v2979 = JAM.call(this.charAt, this, [0], JAM.policy.p1);
+    var v1917 = JAM.call(v2979.toUpperCase, v2979, [], JAM.policy.p1);
+    var v2980 = JAM.call(this.substring, this, [1], JAM.policy.p1);
+    var v1918 = JAM.call(v2980.toLowerCase, v2980, [], JAM.policy.p1);
     return v1917 + v1918
   }
   function underscore() {
-    var v3762 = JAM.call(this.replace, this, [/::/g, "/"], JAM.policy.p9C5FFCABA70857D69F2974E6410A585B5EFE64DC);
-    var v3538 = JAM.call(v3762.replace, v3762, [/([A-Z]+)([A-Z][a-z])/g, "$1_$2"], JAM.policy.p9C5FFCABA70857D69F2974E6410A585B5EFE64DC);
-    var v2981 = JAM.call(v3538.replace, v3538, [/([a-z\d])([A-Z])/g, "$1_$2"], JAM.policy.p9C5FFCABA70857D69F2974E6410A585B5EFE64DC);
-    var v1919 = JAM.call(v2981.replace, v2981, [/-/g, "_"], JAM.policy.p9C5FFCABA70857D69F2974E6410A585B5EFE64DC);
-    return JAM.call(v1919.toLowerCase, v1919, [], JAM.policy.p9C5FFCABA70857D69F2974E6410A585B5EFE64DC)
+    var v3762 = JAM.call(this.replace, this, [/::/g, "/"], JAM.policy.p1);
+    var v3538 = JAM.call(v3762.replace, v3762, [/([A-Z]+)([A-Z][a-z])/g, "$1_$2"], JAM.policy.p1);
+    var v2981 = JAM.call(v3538.replace, v3538, [/([a-z\d])([A-Z])/g, "$1_$2"], JAM.policy.p1);
+    var v1919 = JAM.call(v2981.replace, v2981, [/-/g, "_"], JAM.policy.p1);
+    return JAM.call(v1919.toLowerCase, v1919, [], JAM.policy.p1)
   }
   function dasherize() {
-    return JAM.call(this.replace, this, [/_/g, "-"], JAM.policy.p9C5FFCABA70857D69F2974E6410A585B5EFE64DC)
+    return JAM.call(this.replace, this, [/_/g, "-"], JAM.policy.p1)
   }
   function inspect$$1(useDoubleQuotes) {
     function v35(character) {
@@ -10681,17 +10681,17 @@ function v37() {
         var v1920 = String.specialChar;
         return v1920[character]
       }
-      var v2983 = JAM.call(character.charCodeAt, character, [], JAM.policy.p9C5FFCABA70857D69F2974E6410A585B5EFE64DC);
-      var v1922 = JAM.call(v2983.toPaddedString, v2983, [2, 16], JAM.policy.p9C5FFCABA70857D69F2974E6410A585B5EFE64DC);
+      var v2983 = JAM.call(character.charCodeAt, character, [], JAM.policy.p1);
+      var v1922 = JAM.call(v2983.toPaddedString, v2983, [2, 16], JAM.policy.p1);
       return"\\u00" + v1922
     }
-    var escapedString = JAM.call(this.replace, this, [/[\x00-\x1f\\]/g, v35], JAM.policy.p9C5FFCABA70857D69F2974E6410A585B5EFE64DC);
+    var escapedString = JAM.call(this.replace, this, [/[\x00-\x1f\\]/g, v35], JAM.policy.p1);
     if(useDoubleQuotes) {
-      var v2984 = JAM.call(escapedString.replace, escapedString, [/"/g, '\\"'], JAM.policy.p9C5FFCABA70857D69F2974E6410A585B5EFE64DC);
+      var v2984 = JAM.call(escapedString.replace, escapedString, [/"/g, '\\"'], JAM.policy.p1);
       var v1923 = '"' + v2984;
       return v1923 + '"'
     }
-    var v2985 = JAM.call(escapedString.replace, escapedString, [/'/g, "\\'"], JAM.policy.p9C5FFCABA70857D69F2974E6410A585B5EFE64DC);
+    var v2985 = JAM.call(escapedString.replace, escapedString, [/'/g, "\\'"], JAM.policy.p1);
     var v1924 = "'" + v2985;
     return v1924 + "'"
   }
@@ -10702,38 +10702,38 @@ function v37() {
       v2986 = Prototype.JSONFilter
     }
     var v1925 = v2986;
-    return JAM.call(this.replace, this, [v1925, "$1"], JAM.policy.p9C5FFCABA70857D69F2974E6410A585B5EFE64DC)
+    return JAM.call(this.replace, this, [v1925, "$1"], JAM.policy.p1)
   }
   function isJSON() {
     var str$$8 = this;
-    var v1926 = JAM.call(str$$8.blank, str$$8, [], JAM.policy.p9C5FFCABA70857D69F2974E6410A585B5EFE64DC);
+    var v1926 = JAM.call(str$$8.blank, str$$8, [], JAM.policy.p1);
     if(v1926) {
       return false
     }
-    str$$8 = JAM.call(str$$8.replace, str$$8, [/\\(?:["\\\/bfnrt]|u[0-9a-fA-F]{4})/g, "@"], JAM.policy.p9C5FFCABA70857D69F2974E6410A585B5EFE64DC);
-    str$$8 = JAM.call(str$$8.replace, str$$8, [/"[^"\\\n\r]*"|true|false|null|-?\d+(?:\.\d*)?(?:[eE][+\-]?\d+)?/g, "]"], JAM.policy.p9C5FFCABA70857D69F2974E6410A585B5EFE64DC);
-    str$$8 = JAM.call(str$$8.replace, str$$8, [/(?:^|:|,)(?:\s*\[)+/g, ""], JAM.policy.p9C5FFCABA70857D69F2974E6410A585B5EFE64DC);
-    return JAM.call(/^[\],:{}\s]*$/.test, /^[\],:{}\s]*$/, [str$$8], JAM.policy.p9C5FFCABA70857D69F2974E6410A585B5EFE64DC)
+    str$$8 = JAM.call(str$$8.replace, str$$8, [/\\(?:["\\\/bfnrt]|u[0-9a-fA-F]{4})/g, "@"], JAM.policy.p1);
+    str$$8 = JAM.call(str$$8.replace, str$$8, [/"[^"\\\n\r]*"|true|false|null|-?\d+(?:\.\d*)?(?:[eE][+\-]?\d+)?/g, "]"], JAM.policy.p1);
+    str$$8 = JAM.call(str$$8.replace, str$$8, [/(?:^|:|,)(?:\s*\[)+/g, ""], JAM.policy.p1);
+    return JAM.call(/^[\],:{}\s]*$/.test, /^[\],:{}\s]*$/, [str$$8], JAM.policy.p1)
   }
   function evalJSON(sanitize) {
     function v36(a$$5) {
-      var v3763 = JAM.call(a$$5.charCodeAt, a$$5, [0], JAM.policy.p9C5FFCABA70857D69F2974E6410A585B5EFE64DC);
-      var v3540 = JAM.call(v3763.toString, v3763, [16], JAM.policy.p9C5FFCABA70857D69F2974E6410A585B5EFE64DC);
+      var v3763 = JAM.call(a$$5.charCodeAt, a$$5, [0], JAM.policy.p1);
+      var v3540 = JAM.call(v3763.toString, v3763, [16], JAM.policy.p1);
       var v2987 = "0000" + v3540;
-      var v1927 = JAM.call(v2987.slice, v2987, [-4], JAM.policy.p9C5FFCABA70857D69F2974E6410A585B5EFE64DC);
+      var v1927 = JAM.call(v2987.slice, v2987, [-4], JAM.policy.p1);
       return"\\u" + v1927
     }
-    var json = JAM.call(this.unfilterJSON, this, [], JAM.policy.p9C5FFCABA70857D69F2974E6410A585B5EFE64DC);
+    var json = JAM.call(this.unfilterJSON, this, [], JAM.policy.p1);
     var cx = /[\u0000\u00ad\u0600-\u0604\u070f\u17b4\u17b5\u200c-\u200f\u2028-\u202f\u2060-\u206f\ufeff\ufff0-\uffff]/g;
-    var v1928 = JAM.call(cx.test, cx, [json], JAM.policy.p9C5FFCABA70857D69F2974E6410A585B5EFE64DC);
+    var v1928 = JAM.call(cx.test, cx, [json], JAM.policy.p1);
     if(v1928) {
-      json = JAM.call(json.replace, json, [cx, v36], JAM.policy.p9C5FFCABA70857D69F2974E6410A585B5EFE64DC)
+      json = JAM.call(json.replace, json, [cx, v36], JAM.policy.p1)
     }
     try {
       var v2988 = !sanitize;
       var v3541 = !v2988;
       if(v3541) {
-        v2988 = JAM.call(json.isJSON, json, [], JAM.policy.p9C5FFCABA70857D69F2974E6410A585B5EFE64DC)
+        v2988 = JAM.call(json.isJSON, json, [], JAM.policy.p1)
       }
       var v1930 = v2988;
       if(v1930) {
@@ -10747,20 +10747,20 @@ function v37() {
       }
     }catch(e$$6) {
     }
-    var v2990 = JAM.call(this.inspect, this, [], JAM.policy.p9C5FFCABA70857D69F2974E6410A585B5EFE64DC);
+    var v2990 = JAM.call(this.inspect, this, [], JAM.policy.p1);
     var v1931 = "Badly formed JSON string: " + v2990;
     throw new SyntaxError(v1931);
   }
   function parseJSON() {
-    var json$$1 = JAM.call(this.unfilterJSON, this, [], JAM.policy.p9C5FFCABA70857D69F2974E6410A585B5EFE64DC);
-    return JAM.call(JSON.parse, JSON, [json$$1], JAM.policy.p9C5FFCABA70857D69F2974E6410A585B5EFE64DC)
+    var json$$1 = JAM.call(this.unfilterJSON, this, [], JAM.policy.p1);
+    return JAM.call(JSON.parse, JSON, [json$$1], JAM.policy.p1)
   }
   function include(pattern$$4) {
-    var v1932 = JAM.call(this.indexOf, this, [pattern$$4], JAM.policy.p9C5FFCABA70857D69F2974E6410A585B5EFE64DC);
+    var v1932 = JAM.call(this.indexOf, this, [pattern$$4], JAM.policy.p1);
     return v1932 > -1
   }
   function startsWith(pattern$$5) {
-    var v1933 = JAM.call(this.lastIndexOf, this, [pattern$$5, 0], JAM.policy.p9C5FFCABA70857D69F2974E6410A585B5EFE64DC);
+    var v1933 = JAM.call(this.lastIndexOf, this, [pattern$$5, 0], JAM.policy.p1);
     return v1933 === 0
   }
   function endsWith(pattern$$6) {
@@ -10769,7 +10769,7 @@ function v37() {
     var d = v1934 - v1935;
     var v1936 = d >= 0;
     if(v1936) {
-      var v2991 = JAM.call(this.indexOf, this, [pattern$$6, d], JAM.policy.p9C5FFCABA70857D69F2974E6410A585B5EFE64DC);
+      var v2991 = JAM.call(this.indexOf, this, [pattern$$6, d], JAM.policy.p1);
       v1936 = v2991 === d
     }
     return v1936
@@ -10778,11 +10778,11 @@ function v37() {
     return this == ""
   }
   function blank() {
-    return JAM.call(/^\s*$/.test, /^\s*$/, [this], JAM.policy.p9C5FFCABA70857D69F2974E6410A585B5EFE64DC)
+    return JAM.call(/^\s*$/.test, /^\s*$/, [this], JAM.policy.p1)
   }
   function interpolate(object$$15, pattern$$7) {
     var v1937 = JAM.new(Template, [this, pattern$$7]);
-    return JAM.call(v1937.evaluate, v1937, [object$$15], JAM.policy.p9C5FFCABA70857D69F2974E6410A585B5EFE64DC)
+    return JAM.call(v1937.evaluate, v1937, [object$$15], JAM.policy.p1)
   }
   var v1938 = window.JSON;
   if(v1938) {
@@ -10790,7 +10790,7 @@ function v37() {
     var v3542 = typeof v3764;
     var v2992 = v3542 === "function";
     if(v2992) {
-      var v3543 = JAM.call(JSON.parse, JSON, ['{"test": true}'], JAM.policy.p9C5FFCABA70857D69F2974E6410A585B5EFE64DC);
+      var v3543 = JAM.call(JSON.parse, JSON, ['{"test": true}'], JAM.policy.p1);
       v2992 = v3543.test
     }
     v1938 = v2992
@@ -10829,7 +10829,7 @@ function v27() {
   if(v1942) {
     try {
       this.currentlyExecuting = true;
-      JAM.call(this.execute, this, [], JAM.policy.p9C5FFCABA70857D69F2974E6410A585B5EFE64DC);
+      JAM.call(this.execute, this, [], JAM.policy.p1);
       this.currentlyExecuting = false
     }catch(e$$5) {
       this.currentlyExecuting = false;
@@ -10850,12 +10850,12 @@ function v26() {
   return
 }
 function v25() {
-  JAM.call(this.callback, this, [this], JAM.policy.p9C5FFCABA70857D69F2974E6410A585B5EFE64DC);
+  JAM.call(this.callback, this, [this], JAM.policy.p1);
   return
 }
 function v24() {
   var v2998 = this.onTimerEvent;
-  var v1945 = JAM.call(v2998.bind, v2998, [this], JAM.policy.p9C5FFCABA70857D69F2974E6410A585B5EFE64DC);
+  var v1945 = JAM.call(v2998.bind, v2998, [this], JAM.policy.p1);
   var v2999 = this.frequency;
   var v1946 = v2999 * 1E3;
   var v4020 = JAM.call(setInterval, null, [v1945, v1946]);
@@ -10866,41 +10866,41 @@ function v23(callback$$25, frequency) {
   this.callback = callback$$25;
   this.frequency = frequency;
   this.currentlyExecuting = false;
-  JAM.call(this.registerCallback, this, [], JAM.policy.p9C5FFCABA70857D69F2974E6410A585B5EFE64DC);
+  JAM.call(this.registerCallback, this, [], JAM.policy.p1);
   return
 }
 function v22(str$$7) {
   var v1947 = String(str$$7);
-  return JAM.call(v1947.replace, v1947, [/([.*+?^=!:${}()|[\]\/\\])/g, "\\$1"], JAM.policy.p9C5FFCABA70857D69F2974E6410A585B5EFE64DC)
+  return JAM.call(v1947.replace, v1947, [/([.*+?^=!:${}()|[\]\/\\])/g, "\\$1"], JAM.policy.p1)
 }
 function v21(proto$$1) {
   function toISOString() {
-    var v3962 = JAM.call(this.getUTCFullYear, this, [], JAM.policy.p9C5FFCABA70857D69F2974E6410A585B5EFE64DC);
+    var v3962 = JAM.call(this.getUTCFullYear, this, [], JAM.policy.p1);
     var v3955 = v3962 + "-";
-    var v3965 = JAM.call(this.getUTCMonth, this, [], JAM.policy.p9C5FFCABA70857D69F2974E6410A585B5EFE64DC);
+    var v3965 = JAM.call(this.getUTCMonth, this, [], JAM.policy.p1);
     var v3963 = v3965 + 1;
-    var v3956 = JAM.call(v3963.toPaddedString, v3963, [2], JAM.policy.p9C5FFCABA70857D69F2974E6410A585B5EFE64DC);
+    var v3956 = JAM.call(v3963.toPaddedString, v3963, [2], JAM.policy.p1);
     var v3949 = v3955 + v3956;
     var v3941 = v3949 + "-";
-    var v3950 = JAM.call(this.getUTCDate, this, [], JAM.policy.p9C5FFCABA70857D69F2974E6410A585B5EFE64DC);
-    var v3942 = JAM.call(v3950.toPaddedString, v3950, [2], JAM.policy.p9C5FFCABA70857D69F2974E6410A585B5EFE64DC);
+    var v3950 = JAM.call(this.getUTCDate, this, [], JAM.policy.p1);
+    var v3942 = JAM.call(v3950.toPaddedString, v3950, [2], JAM.policy.p1);
     var v3927 = v3941 + v3942;
     var v3908 = v3927 + "T";
-    var v3928 = JAM.call(this.getUTCHours, this, [], JAM.policy.p9C5FFCABA70857D69F2974E6410A585B5EFE64DC);
-    var v3909 = JAM.call(v3928.toPaddedString, v3928, [2], JAM.policy.p9C5FFCABA70857D69F2974E6410A585B5EFE64DC);
+    var v3928 = JAM.call(this.getUTCHours, this, [], JAM.policy.p1);
+    var v3909 = JAM.call(v3928.toPaddedString, v3928, [2], JAM.policy.p1);
     var v3858 = v3908 + v3909;
     var v3765 = v3858 + ":";
-    var v3859 = JAM.call(this.getUTCMinutes, this, [], JAM.policy.p9C5FFCABA70857D69F2974E6410A585B5EFE64DC);
-    var v3766 = JAM.call(v3859.toPaddedString, v3859, [2], JAM.policy.p9C5FFCABA70857D69F2974E6410A585B5EFE64DC);
+    var v3859 = JAM.call(this.getUTCMinutes, this, [], JAM.policy.p1);
+    var v3766 = JAM.call(v3859.toPaddedString, v3859, [2], JAM.policy.p1);
     var v3546 = v3765 + v3766;
     var v3000 = v3546 + ":";
-    var v3547 = JAM.call(this.getUTCSeconds, this, [], JAM.policy.p9C5FFCABA70857D69F2974E6410A585B5EFE64DC);
-    var v3001 = JAM.call(v3547.toPaddedString, v3547, [2], JAM.policy.p9C5FFCABA70857D69F2974E6410A585B5EFE64DC);
+    var v3547 = JAM.call(this.getUTCSeconds, this, [], JAM.policy.p1);
+    var v3001 = JAM.call(v3547.toPaddedString, v3547, [2], JAM.policy.p1);
     var v1948 = v3000 + v3001;
     return v1948 + "Z"
   }
   function toJSON$$1() {
-    return JAM.call(this.toISOString, this, [], JAM.policy.p9C5FFCABA70857D69F2974E6410A585B5EFE64DC)
+    return JAM.call(this.toISOString, this, [], JAM.policy.p1)
   }
   var v3002 = proto$$1.toISOString;
   var v1949 = !v3002;
@@ -10922,23 +10922,23 @@ function v20() {
     length$$15 = length$$15 - 1;
     for(;v1952;) {
       var v1951 = arrayLength + length$$15;
-      JAM.set(array$$9, v1951, args[length$$15], JAM.policy.p425E08A28862414CF7130381FE99A660F52DB811);
+      JAM.set(array$$9, v1951, args[length$$15], JAM.policy.p2);
       v1952 = length$$15;
       length$$15 = length$$15 - 1
     }
     return array$$9
   }
   function merge(array$$10, args$$1) {
-    array$$10 = JAM.call(slice.call, slice, [array$$10, 0], JAM.policy.p9C5FFCABA70857D69F2974E6410A585B5EFE64DC);
+    array$$10 = JAM.call(slice.call, slice, [array$$10, 0], JAM.policy.p1);
     return update(array$$10, args$$1)
   }
   function argumentNames() {
-    var v3860 = JAM.call(this.toString, this, [], JAM.policy.p9C5FFCABA70857D69F2974E6410A585B5EFE64DC);
-    var v3767 = JAM.call(v3860.match, v3860, [/^[\s\(]*function[^(]*\(([^)]*)\)/], JAM.policy.p9C5FFCABA70857D69F2974E6410A585B5EFE64DC);
+    var v3860 = JAM.call(this.toString, this, [], JAM.policy.p1);
+    var v3767 = JAM.call(v3860.match, v3860, [/^[\s\(]*function[^(]*\(([^)]*)\)/], JAM.policy.p1);
     var v3548 = v3767[1];
-    var v3004 = JAM.call(v3548.replace, v3548, [/\/\/.*?[\r\n]|\/\*(?:.|[\r\n])*?\*\//g, ""], JAM.policy.p9C5FFCABA70857D69F2974E6410A585B5EFE64DC);
-    var v1953 = JAM.call(v3004.replace, v3004, [/\s+/g, ""], JAM.policy.p9C5FFCABA70857D69F2974E6410A585B5EFE64DC);
-    var names = JAM.call(v1953.split, v1953, [","], JAM.policy.p9C5FFCABA70857D69F2974E6410A585B5EFE64DC);
+    var v3004 = JAM.call(v3548.replace, v3548, [/\/\/.*?[\r\n]|\/\*(?:.|[\r\n])*?\*\//g, ""], JAM.policy.p1);
+    var v1953 = JAM.call(v3004.replace, v3004, [/\s+/g, ""], JAM.policy.p1);
+    var names = JAM.call(v1953.split, v1953, [","], JAM.policy.p1);
     var v1954;
     var v3768 = names.length;
     var v3549 = v3768 == 1;
@@ -10966,7 +10966,7 @@ function v20() {
         v1955 = context
       }
       c = v1955;
-      return JAM.call(__method.apply, __method, [c, a], JAM.policy.p9C5FFCABA70857D69F2974E6410A585B5EFE64DC)
+      return JAM.call(__method.apply, __method, [c, a], JAM.policy.p1)
     }
     function nop() {
       return
@@ -10975,19 +10975,19 @@ function v20() {
     var v3007 = v3550 < 2;
     if(v3007) {
       var v3551 = arguments[0];
-      v3007 = JAM.call(Object.isUndefined, Object, [v3551], JAM.policy.p9C5FFCABA70857D69F2974E6410A585B5EFE64DC)
+      v3007 = JAM.call(Object.isUndefined, Object, [v3551], JAM.policy.p1)
     }
     var v1956 = v3007;
     if(v1956) {
       return this
     }
-    var v3008 = JAM.call(Object.isFunction, Object, [this], JAM.policy.p9C5FFCABA70857D69F2974E6410A585B5EFE64DC);
+    var v3008 = JAM.call(Object.isFunction, Object, [this], JAM.policy.p1);
     var v1957 = !v3008;
     if(v1957) {
       throw new TypeError("The object is not callable.");
     }
     var __method = this;
-    var args$$2 = JAM.call(slice.call, slice, [arguments, 1], JAM.policy.p9C5FFCABA70857D69F2974E6410A585B5EFE64DC);
+    var args$$2 = JAM.call(slice.call, slice, [arguments, 1], JAM.policy.p1);
     nop.prototype = this.prototype;
     var v1958 = bound$$2;
     var v4021 = new nop;
@@ -11004,16 +11004,16 @@ function v20() {
       var v3009 = v3552;
       var v1959 = [v3009];
       var a$$1 = update(v1959, args$$3);
-      return JAM.call(__method$$1.apply, __method$$1, [context$$1, a$$1], JAM.policy.p9C5FFCABA70857D69F2974E6410A585B5EFE64DC)
+      return JAM.call(__method$$1.apply, __method$$1, [context$$1, a$$1], JAM.policy.p1)
     }
     var __method$$1 = this;
-    var args$$3 = JAM.call(slice.call, slice, [arguments, 1], JAM.policy.p9C5FFCABA70857D69F2974E6410A585B5EFE64DC);
+    var args$$3 = JAM.call(slice.call, slice, [arguments, 1], JAM.policy.p1);
     return v15
   }
   function curry() {
     function v16() {
       var a$$2 = merge(args$$4, arguments);
-      return JAM.call(__method$$2.apply, __method$$2, [this, a$$2], JAM.policy.p9C5FFCABA70857D69F2974E6410A585B5EFE64DC)
+      return JAM.call(__method$$2.apply, __method$$2, [this, a$$2], JAM.policy.p1)
     }
     var v3010 = arguments.length;
     var v1960 = !v3010;
@@ -11021,30 +11021,30 @@ function v20() {
       return this
     }
     var __method$$2 = this;
-    var args$$4 = JAM.call(slice.call, slice, [arguments, 0], JAM.policy.p9C5FFCABA70857D69F2974E6410A585B5EFE64DC);
+    var args$$4 = JAM.call(slice.call, slice, [arguments, 0], JAM.policy.p1);
     return v16
   }
   function delay$$3(timeout) {
     function v17() {
-      return JAM.call(__method$$3.apply, __method$$3, [__method$$3, args$$5], JAM.policy.p9C5FFCABA70857D69F2974E6410A585B5EFE64DC)
+      return JAM.call(__method$$3.apply, __method$$3, [__method$$3, args$$5], JAM.policy.p1)
     }
     var __method$$3 = this;
-    var args$$5 = JAM.call(slice.call, slice, [arguments, 1], JAM.policy.p9C5FFCABA70857D69F2974E6410A585B5EFE64DC);
+    var args$$5 = JAM.call(slice.call, slice, [arguments, 1], JAM.policy.p1);
     timeout = timeout * 1E3;
-    return JAM.call(window.setTimeout, window, [v17, timeout], JAM.policy.p9C5FFCABA70857D69F2974E6410A585B5EFE64DC)
+    return JAM.call(window.setTimeout, window, [v17, timeout], JAM.policy.p1)
   }
   function defer() {
     var v1961 = [0.01];
     var args$$6 = update(v1961, arguments);
     var v1962 = this.delay;
-    return JAM.call(v1962.apply, v1962, [this, args$$6], JAM.policy.p9C5FFCABA70857D69F2974E6410A585B5EFE64DC)
+    return JAM.call(v1962.apply, v1962, [this, args$$6], JAM.policy.p1)
   }
   function wrap(wrapper) {
     function v18() {
-      var v3011 = JAM.call(__method$$4.bind, __method$$4, [this], JAM.policy.p9C5FFCABA70857D69F2974E6410A585B5EFE64DC);
+      var v3011 = JAM.call(__method$$4.bind, __method$$4, [this], JAM.policy.p1);
       var v1963 = [v3011];
       var a$$3 = update(v1963, arguments);
-      return JAM.call(wrapper.apply, wrapper, [this, a$$3], JAM.policy.p9C5FFCABA70857D69F2974E6410A585B5EFE64DC)
+      return JAM.call(wrapper.apply, wrapper, [this, a$$3], JAM.policy.p1)
     }
     var __method$$4 = this;
     return v18
@@ -11053,7 +11053,7 @@ function v20() {
     function v19() {
       var v1964 = [this];
       var a$$4 = update(v1964, arguments);
-      return JAM.call(__method$$5.apply, __method$$5, [null, a$$4], JAM.policy.p9C5FFCABA70857D69F2974E6410A585B5EFE64DC)
+      return JAM.call(__method$$5.apply, __method$$5, [null, a$$4], JAM.policy.p1)
     }
     var v1965 = this._methodized;
     if(v1965) {
@@ -11106,7 +11106,7 @@ function v14() {
   function extend(destination, source$$2) {
     var property$$4;
     for(property$$4 in source$$2) {
-      JAM.set(destination, property$$4, source$$2[property$$4], JAM.policy.p425E08A28862414CF7130381FE99A660F52DB811)
+      JAM.set(destination, property$$4, source$$2[property$$4], JAM.policy.p2)
     }
     return destination
   }
@@ -11123,7 +11123,7 @@ function v14() {
       var v1972;
       var v3013 = object.inspect;
       if(v3013) {
-        v1972 = JAM.call(object.inspect, object, [], JAM.policy.p9C5FFCABA70857D69F2974E6410A585B5EFE64DC)
+        v1972 = JAM.call(object.inspect, object, [], JAM.policy.p1)
       }else {
         v1972 = String(object)
       }
@@ -11152,16 +11152,16 @@ function v14() {
     }
     var v1975 = v3014;
     if(v1975) {
-      value$$31 = JAM.call(value$$31.toJSON, value$$31, [key$$14], JAM.policy.p9C5FFCABA70857D69F2974E6410A585B5EFE64DC)
+      value$$31 = JAM.call(value$$31.toJSON, value$$31, [key$$14], JAM.policy.p1)
     }
-    var _class = JAM.call(_toString.call, _toString, [value$$31], JAM.policy.p9C5FFCABA70857D69F2974E6410A585B5EFE64DC);
+    var _class = JAM.call(_toString.call, _toString, [value$$31], JAM.policy.p1);
     switch(_class) {
       case NUMBER_CLASS:
       ;
       case BOOLEAN_CLASS:
       ;
       case STRING_CLASS:
-        value$$31 = JAM.call(value$$31.valueOf, value$$31, [], JAM.policy.p9C5FFCABA70857D69F2974E6410A585B5EFE64DC)
+        value$$31 = JAM.call(value$$31.valueOf, value$$31, [], JAM.policy.p1)
     }
     switch(value$$31) {
       case null:
@@ -11174,7 +11174,7 @@ function v14() {
     var type$$26 = typeof value$$31;
     switch(type$$26) {
       case "string":
-        return JAM.call(value$$31.inspect, value$$31, [true], JAM.policy.p9C5FFCABA70857D69F2974E6410A585B5EFE64DC);
+        return JAM.call(value$$31.inspect, value$$31, [true], JAM.policy.p1);
       case "number":
         var v1976;
         var v3015 = isFinite(value$$31);
@@ -11199,7 +11199,7 @@ function v14() {
           i$$3 = i$$3 + 1;
           v1979 = i$$3 < length$$14
         }
-        JAM.call(stack.push, stack, [value$$31], JAM.policy.p9C5FFCABA70857D69F2974E6410A585B5EFE64DC);
+        JAM.call(stack.push, stack, [value$$31], JAM.policy.p1);
         var partial = [];
         var v1987 = _class === ARRAY_CLASS;
         if(v1987) {
@@ -11217,15 +11217,15 @@ function v14() {
               v3018 = str$$6
             }
             var v1980 = v3018;
-            JAM.call(partial.push, partial, [v1980], JAM.policy.p9C5FFCABA70857D69F2974E6410A585B5EFE64DC);
+            JAM.call(partial.push, partial, [v1980], JAM.policy.p1);
             i$$3 = i$$3 + 1;
             v1981 = i$$3 < length$$14
           }
-          var v3019 = JAM.call(partial.join, partial, [","], JAM.policy.p9C5FFCABA70857D69F2974E6410A585B5EFE64DC);
+          var v3019 = JAM.call(partial.join, partial, [","], JAM.policy.p1);
           var v1982 = "[" + v3019;
           partial = v1982 + "]"
         }else {
-          var keys$$1 = JAM.call(Object.keys, Object, [value$$31], JAM.policy.p9C5FFCABA70857D69F2974E6410A585B5EFE64DC);
+          var keys$$1 = JAM.call(Object.keys, Object, [value$$31], JAM.policy.p1);
           i$$3 = 0;
           length$$14 = keys$$1.length;
           var v1985 = i$$3 < length$$14;
@@ -11235,29 +11235,29 @@ function v14() {
             var v3020 = typeof str$$6;
             var v1984 = v3020 !== "undefined";
             if(v1984) {
-              var v3557 = JAM.call(key$$14.inspect, key$$14, [true], JAM.policy.p9C5FFCABA70857D69F2974E6410A585B5EFE64DC);
+              var v3557 = JAM.call(key$$14.inspect, key$$14, [true], JAM.policy.p1);
               var v3021 = v3557 + ":";
               var v1983 = v3021 + str$$6;
-              JAM.call(partial.push, partial, [v1983], JAM.policy.p9C5FFCABA70857D69F2974E6410A585B5EFE64DC)
+              JAM.call(partial.push, partial, [v1983], JAM.policy.p1)
             }
             i$$3 = i$$3 + 1;
             v1985 = i$$3 < length$$14
           }
-          var v3022 = JAM.call(partial.join, partial, [","], JAM.policy.p9C5FFCABA70857D69F2974E6410A585B5EFE64DC);
+          var v3022 = JAM.call(partial.join, partial, [","], JAM.policy.p1);
           var v1986 = "{" + v3022;
           partial = v1986 + "}"
         }
-        JAM.call(stack.pop, stack, [], JAM.policy.p9C5FFCABA70857D69F2974E6410A585B5EFE64DC);
+        JAM.call(stack.pop, stack, [], JAM.policy.p1);
         return partial
     }
     return
   }
   function stringify(object$$1) {
-    return JAM.call(JSON.stringify, JSON, [object$$1], JAM.policy.p9C5FFCABA70857D69F2974E6410A585B5EFE64DC)
+    return JAM.call(JSON.stringify, JSON, [object$$1], JAM.policy.p1)
   }
   function toQueryString(object$$2) {
     var v1988 = $H(object$$2);
-    return JAM.call(v1988.toQueryString, v1988, [], JAM.policy.p9C5FFCABA70857D69F2974E6410A585B5EFE64DC)
+    return JAM.call(v1988.toQueryString, v1988, [], JAM.policy.p1)
   }
   function toHTML(object$$3) {
     var v1989;
@@ -11267,9 +11267,9 @@ function v14() {
     }
     var v3023 = v3558;
     if(v3023) {
-      v1989 = JAM.call(object$$3.toHTML, object$$3, [], JAM.policy.p9C5FFCABA70857D69F2974E6410A585B5EFE64DC)
+      v1989 = JAM.call(object$$3.toHTML, object$$3, [], JAM.policy.p1)
     }else {
-      v1989 = JAM.call(String.interpret, String, [object$$3], JAM.policy.p9C5FFCABA70857D69F2974E6410A585B5EFE64DC)
+      v1989 = JAM.call(String.interpret, String, [object$$3], JAM.policy.p1)
     }
     return v1989
   }
@@ -11282,18 +11282,18 @@ function v14() {
     var results$$1 = [];
     var property$$5;
     for(property$$5 in object$$4) {
-      var v1991 = JAM.call(_hasOwnProperty.call, _hasOwnProperty, [object$$4, property$$5], JAM.policy.p9C5FFCABA70857D69F2974E6410A585B5EFE64DC);
+      var v1991 = JAM.call(_hasOwnProperty.call, _hasOwnProperty, [object$$4, property$$5], JAM.policy.p1);
       if(v1991) {
-        JAM.call(results$$1.push, results$$1, [property$$5], JAM.policy.p9C5FFCABA70857D69F2974E6410A585B5EFE64DC)
+        JAM.call(results$$1.push, results$$1, [property$$5], JAM.policy.p1)
       }
     }
     if(IS_DONTENUM_BUGGY$$1) {
       var i$$4 = 0;
       var v1993 = property$$5 = DONT_ENUMS[i$$4];
       for(;v1993;) {
-        var v1992 = JAM.call(_hasOwnProperty.call, _hasOwnProperty, [object$$4, property$$5], JAM.policy.p9C5FFCABA70857D69F2974E6410A585B5EFE64DC);
+        var v1992 = JAM.call(_hasOwnProperty.call, _hasOwnProperty, [object$$4, property$$5], JAM.policy.p1);
         if(v1992) {
-          JAM.call(results$$1.push, results$$1, [property$$5], JAM.policy.p9C5FFCABA70857D69F2974E6410A585B5EFE64DC)
+          JAM.call(results$$1.push, results$$1, [property$$5], JAM.policy.p1)
         }
         i$$4 = i$$4 + 1;
         v1993 = property$$5 = DONT_ENUMS[i$$4]
@@ -11306,7 +11306,7 @@ function v14() {
     var property$$6;
     for(property$$6 in object$$5) {
       var v1994 = object$$5[property$$6];
-      JAM.call(results$$2.push, results$$2, [v1994], JAM.policy.p9C5FFCABA70857D69F2974E6410A585B5EFE64DC)
+      JAM.call(results$$2.push, results$$2, [v1994], JAM.policy.p1)
     }
     return results$$2
   }
@@ -11324,26 +11324,26 @@ function v14() {
     return!v1995
   }
   function isArray(object$$8) {
-    var v1996 = JAM.call(_toString.call, _toString, [object$$8], JAM.policy.p9C5FFCABA70857D69F2974E6410A585B5EFE64DC);
+    var v1996 = JAM.call(_toString.call, _toString, [object$$8], JAM.policy.p1);
     return v1996 === ARRAY_CLASS
   }
   function isHash(object$$9) {
     return object$$9 instanceof Hash
   }
   function isFunction(object$$10) {
-    var v1997 = JAM.call(_toString.call, _toString, [object$$10], JAM.policy.p9C5FFCABA70857D69F2974E6410A585B5EFE64DC);
+    var v1997 = JAM.call(_toString.call, _toString, [object$$10], JAM.policy.p1);
     return v1997 === FUNCTION_CLASS
   }
   function isString(object$$11) {
-    var v1998 = JAM.call(_toString.call, _toString, [object$$11], JAM.policy.p9C5FFCABA70857D69F2974E6410A585B5EFE64DC);
+    var v1998 = JAM.call(_toString.call, _toString, [object$$11], JAM.policy.p1);
     return v1998 === STRING_CLASS
   }
   function isNumber(object$$12) {
-    var v1999 = JAM.call(_toString.call, _toString, [object$$12], JAM.policy.p9C5FFCABA70857D69F2974E6410A585B5EFE64DC);
+    var v1999 = JAM.call(_toString.call, _toString, [object$$12], JAM.policy.p1);
     return v1999 === NUMBER_CLASS
   }
   function isDate(object$$13) {
-    var v2000 = JAM.call(_toString.call, _toString, [object$$13], JAM.policy.p9C5FFCABA70857D69F2974E6410A585B5EFE64DC);
+    var v2000 = JAM.call(_toString.call, _toString, [object$$13], JAM.policy.p1);
     return v2000 === DATE_CLASS
   }
   function isUndefined(object$$14) {
@@ -11372,11 +11372,11 @@ function v14() {
     var v3560 = typeof v3774;
     var v3026 = v3560 === "function";
     if(v3026) {
-      var v3775 = JAM.call(JSON.stringify, JSON, [0], JAM.policy.p9C5FFCABA70857D69F2974E6410A585B5EFE64DC);
+      var v3775 = JAM.call(JSON.stringify, JSON, [0], JAM.policy.p1);
       var v3561 = v3775 === "0";
       if(v3561) {
         var v3910 = Prototype.K;
-        var v3861 = JAM.call(JSON.stringify, JSON, [v3910], JAM.policy.p9C5FFCABA70857D69F2974E6410A585B5EFE64DC);
+        var v3861 = JAM.call(JSON.stringify, JSON, [v3910], JAM.policy.p1);
         var v3776 = typeof v3861;
         v3561 = v3776 === "undefined"
       }
@@ -11391,9 +11391,9 @@ function v14() {
   var v3027 = typeof v3562;
   var v2005 = v3027 == "function";
   if(v2005) {
-    var v3028 = JAM.call(Array.isArray, Array, [[]], JAM.policy.p9C5FFCABA70857D69F2974E6410A585B5EFE64DC);
+    var v3028 = JAM.call(Array.isArray, Array, [[]], JAM.policy.p1);
     if(v3028) {
-      var v3563 = JAM.call(Array.isArray, Array, [{}], JAM.policy.p9C5FFCABA70857D69F2974E6410A585B5EFE64DC);
+      var v3563 = JAM.call(Array.isArray, Array, [{}], JAM.policy.p1);
       v3028 = !v3563
     }
     v2005 = v3028
@@ -11437,18 +11437,18 @@ function v12() {
   function create() {
     function klass() {
       var v2009 = this.initialize;
-      JAM.call(v2009.apply, v2009, [this, arguments], JAM.policy.p9C5FFCABA70857D69F2974E6410A585B5EFE64DC);
+      JAM.call(v2009.apply, v2009, [this, arguments], JAM.policy.p1);
       return
     }
     var parent = null;
     var properties = $A(arguments);
     var v3031 = properties[0];
-    var v2010 = JAM.call(Object.isFunction, Object, [v3031], JAM.policy.p9C5FFCABA70857D69F2974E6410A585B5EFE64DC);
+    var v2010 = JAM.call(Object.isFunction, Object, [v3031], JAM.policy.p1);
     if(v2010) {
-      parent = JAM.call(properties.shift, properties, [], JAM.policy.p9C5FFCABA70857D69F2974E6410A585B5EFE64DC)
+      parent = JAM.call(properties.shift, properties, [], JAM.policy.p1)
     }
     var v2011 = Class.Methods;
-    JAM.call(Object.extend, Object, [klass, v2011], JAM.policy.p9C5FFCABA70857D69F2974E6410A585B5EFE64DC);
+    JAM.call(Object.extend, Object, [klass, v2011], JAM.policy.p1);
     klass.superclass = parent;
     klass.subclasses = [];
     if(parent) {
@@ -11457,14 +11457,14 @@ function v12() {
       var v4022 = new subclass;
       v2012.prototype = v4022;
       var v2013 = parent.subclasses;
-      JAM.call(v2013.push, v2013, [klass], JAM.policy.p9C5FFCABA70857D69F2974E6410A585B5EFE64DC)
+      JAM.call(v2013.push, v2013, [klass], JAM.policy.p1)
     }
     var i$$1 = 0;
     var length$$12 = properties.length;
     var v2015 = i$$1 < length$$12;
     for(;v2015;) {
       var v2014 = properties[i$$1];
-      JAM.call(klass.addMethods, klass, [v2014], JAM.policy.p9C5FFCABA70857D69F2974E6410A585B5EFE64DC);
+      JAM.call(klass.addMethods, klass, [v2014], JAM.policy.p1);
       i$$1 = i$$1 + 1;
       v2015 = i$$1 < length$$12
     }
@@ -11483,21 +11483,21 @@ function v12() {
     function v10(method$$3) {
       function v9() {
         var v2019 = method$$3.toString;
-        return JAM.call(v2019.call, v2019, [method$$3], JAM.policy.p9C5FFCABA70857D69F2974E6410A585B5EFE64DC)
+        return JAM.call(v2019.call, v2019, [method$$3], JAM.policy.p1)
       }
       return v9
     }
     function v8(method$$2) {
       function v7() {
         var v2020 = method$$2.valueOf;
-        return JAM.call(v2020.call, v2020, [method$$2], JAM.policy.p9C5FFCABA70857D69F2974E6410A585B5EFE64DC)
+        return JAM.call(v2020.call, v2020, [method$$2], JAM.policy.p1)
       }
       return v7
     }
     function v6(m) {
       function v5() {
         var v2021 = ancestor[m];
-        return JAM.call(v2021.apply, v2021, [this, arguments], JAM.policy.p9C5FFCABA70857D69F2974E6410A585B5EFE64DC)
+        return JAM.call(v2021.apply, v2021, [this, arguments], JAM.policy.p1)
       }
       return v5
     }
@@ -11507,21 +11507,21 @@ function v12() {
       v2022 = v3033.prototype
     }
     var ancestor = v2022;
-    var properties$$1 = JAM.call(Object.keys, Object, [source$$1], JAM.policy.p9C5FFCABA70857D69F2974E6410A585B5EFE64DC);
+    var properties$$1 = JAM.call(Object.keys, Object, [source$$1], JAM.policy.p1);
     if(IS_DONTENUM_BUGGY) {
       var v3034 = source$$1.toString;
       var v3567 = Object.prototype;
       var v3035 = v3567.toString;
       var v2023 = v3034 != v3035;
       if(v2023) {
-        JAM.call(properties$$1.push, properties$$1, ["toString"], JAM.policy.p9C5FFCABA70857D69F2974E6410A585B5EFE64DC)
+        JAM.call(properties$$1.push, properties$$1, ["toString"], JAM.policy.p1)
       }
       var v3036 = source$$1.valueOf;
       var v3568 = Object.prototype;
       var v3037 = v3568.valueOf;
       var v2024 = v3036 != v3037;
       if(v2024) {
-        JAM.call(properties$$1.push, properties$$1, ["valueOf"], JAM.policy.p9C5FFCABA70857D69F2974E6410A585B5EFE64DC)
+        JAM.call(properties$$1.push, properties$$1, ["valueOf"], JAM.policy.p1)
       }
     }
     var i$$2 = 0;
@@ -11532,9 +11532,9 @@ function v12() {
       var value$$29 = source$$1[property$$3];
       var v3038 = ancestor;
       if(v3038) {
-        var v3569 = JAM.call(Object.isFunction, Object, [value$$29], JAM.policy.p9C5FFCABA70857D69F2974E6410A585B5EFE64DC);
+        var v3569 = JAM.call(Object.isFunction, Object, [value$$29], JAM.policy.p1);
         if(v3569) {
-          var v3862 = JAM.call(value$$29.argumentNames, value$$29, [], JAM.policy.p9C5FFCABA70857D69F2974E6410A585B5EFE64DC);
+          var v3862 = JAM.call(value$$29.argumentNames, value$$29, [], JAM.policy.p1);
           var v3778 = v3862[0];
           v3569 = v3778 == "$super"
         }
@@ -11544,7 +11544,7 @@ function v12() {
       if(v2028) {
         var method$$1 = value$$29;
         var v2025 = v6(property$$3);
-        value$$29 = JAM.call(v2025.wrap, v2025, [method$$1], JAM.policy.p9C5FFCABA70857D69F2974E6410A585B5EFE64DC);
+        value$$29 = JAM.call(v2025.wrap, v2025, [method$$1], JAM.policy.p1);
         var v2026 = value$$29;
         var v4023 = v8(method$$1);
         v2026.valueOf = v4023;
@@ -11553,7 +11553,7 @@ function v12() {
         v2027.toString = v4024
       }
       var v2029 = this.prototype;
-      JAM.set(v2029, property$$3, value$$29, JAM.policy.p425E08A28862414CF7130381FE99A660F52DB811);
+      JAM.set(v2029, property$$3, value$$29, JAM.policy.p2);
       i$$2 = i$$2 + 1;
       v2030 = i$$2 < length$$13
     }
@@ -11576,8 +11576,8 @@ function v2() {
   if(v2032) {
     return true
   }
-  var div = JAM.call(document.createElement, document, ["div"], JAM.policy.p9C5FFCABA70857D69F2974E6410A585B5EFE64DC);
-  var form = JAM.call(document.createElement, document, ["form"], JAM.policy.p9C5FFCABA70857D69F2974E6410A585B5EFE64DC);
+  var div = JAM.call(document.createElement, document, ["div"], JAM.policy.p1);
+  var form = JAM.call(document.createElement, document, ["form"], JAM.policy.p1);
   var isSupported = false;
   var v3040 = div["__proto__"];
   if(v3040) {
@@ -11612,7 +11612,7 @@ function v0() {
   var v3574 = Object.prototype;
   var v3043 = v3574.toString;
   var v3044 = window.opera;
-  var v2036 = JAM.call(v3043.call, v3043, [v3044], JAM.policy.p9C5FFCABA70857D69F2974E6410A585B5EFE64DC);
+  var v2036 = JAM.call(v3043.call, v3043, [v3044], JAM.policy.p1);
   var isOpera = v2036 == "[object Opera]";
   var v3779 = window.attachEvent;
   var v3575 = !v3779;
@@ -11621,16 +11621,16 @@ function v0() {
     v3045 = !isOpera
   }
   var v2037 = v3045;
-  var v3046 = JAM.call(ua.indexOf, ua, ["AppleWebKit/"], JAM.policy.p9C5FFCABA70857D69F2974E6410A585B5EFE64DC);
+  var v3046 = JAM.call(ua.indexOf, ua, ["AppleWebKit/"], JAM.policy.p1);
   var v2038 = v3046 > -1;
-  var v3576 = JAM.call(ua.indexOf, ua, ["Gecko"], JAM.policy.p9C5FFCABA70857D69F2974E6410A585B5EFE64DC);
+  var v3576 = JAM.call(ua.indexOf, ua, ["Gecko"], JAM.policy.p1);
   var v3047 = v3576 > -1;
   if(v3047) {
-    var v3577 = JAM.call(ua.indexOf, ua, ["KHTML"], JAM.policy.p9C5FFCABA70857D69F2974E6410A585B5EFE64DC);
+    var v3577 = JAM.call(ua.indexOf, ua, ["KHTML"], JAM.policy.p1);
     v3047 = v3577 === -1
   }
   var v2039 = v3047;
-  var v2040 = JAM.call(/Apple.*Mobile/.test, /Apple.*Mobile/, [ua], JAM.policy.p9C5FFCABA70857D69F2974E6410A585B5EFE64DC);
+  var v2040 = JAM.call(/Apple.*Mobile/.test, /Apple.*Mobile/, [ua], JAM.policy.p1);
   return{IE:v2037, Opera:isOpera, WebKit:v2038, Gecko:v2039, MobileSafari:v2040}
 }
 function $A(iterable) {
@@ -11641,7 +11641,7 @@ function $A(iterable) {
   var v3048 = Object(iterable);
   var v2042 = "toArray" in v3048;
   if(v2042) {
-    return JAM.call(iterable.toArray, iterable, [], JAM.policy.p9C5FFCABA70857D69F2974E6410A585B5EFE64DC)
+    return JAM.call(iterable.toArray, iterable, [], JAM.policy.p1)
   }
   var v2043 = iterable.length;
   var v3049 = !v2043;
@@ -11653,22 +11653,22 @@ function $A(iterable) {
   var v2044 = length$$11;
   length$$11 = length$$11 - 1;
   for(;v2044;) {
-    JAM.set(results, length$$11, iterable[length$$11], JAM.policy.p425E08A28862414CF7130381FE99A660F52DB811);
+    JAM.set(results, length$$11, iterable[length$$11], JAM.policy.p2);
     v2044 = length$$11;
     length$$11 = length$$11 - 1
   }
   return results
 }
 function $w(string) {
-  var v3050 = JAM.call(Object.isString, Object, [string], JAM.policy.p9C5FFCABA70857D69F2974E6410A585B5EFE64DC);
+  var v3050 = JAM.call(Object.isString, Object, [string], JAM.policy.p1);
   var v2045 = !v3050;
   if(v2045) {
     return[]
   }
-  string = JAM.call(string.strip, string, [], JAM.policy.p9C5FFCABA70857D69F2974E6410A585B5EFE64DC);
+  string = JAM.call(string.strip, string, [], JAM.policy.p1);
   var v2046;
   if(string) {
-    v2046 = JAM.call(string.split, string, [/\s+/], JAM.policy.p9C5FFCABA70857D69F2974E6410A585B5EFE64DC)
+    v2046 = JAM.call(string.split, string, [/\s+/], JAM.policy.p1)
   }else {
     v2046 = []
   }
@@ -11701,7 +11701,7 @@ var Class = v12();
 v14();
 var v2051 = Function.prototype;
 var v2052 = v20();
-JAM.call(Object.extend, Object, [v2051, v2052], JAM.policy.p9C5FFCABA70857D69F2974E6410A585B5EFE64DC);
+JAM.call(Object.extend, Object, [v2051, v2052], JAM.policy.p1);
 var v2053 = Date.prototype;
 v21(v2053);
 var v2054 = RegExp.prototype;
@@ -11709,45 +11709,45 @@ var v3056 = RegExp.prototype;
 v2054.match = v3056.test;
 RegExp.escape = v22;
 var v2055 = {initialize:v23, registerCallback:v24, execute:v25, stop:v26, onTimerEvent:v27};
-var PeriodicalExecuter = JAM.call(Class.create, Class, [v2055], JAM.policy.p9C5FFCABA70857D69F2974E6410A585B5EFE64DC);
+var PeriodicalExecuter = JAM.call(Class.create, Class, [v2055], JAM.policy.p1);
 var v3057 = {"\b":"\\b", "\t":"\\t", "\n":"\\n", "\f":"\\f", "\r":"\\r", "\\":"\\\\"};
 var v2056 = {interpret:v28, specialChar:v3057};
-JAM.call(Object.extend, Object, [String, v2056], JAM.policy.p9C5FFCABA70857D69F2974E6410A585B5EFE64DC);
+JAM.call(Object.extend, Object, [String, v2056], JAM.policy.p1);
 var v2057 = String.prototype;
 var v2058 = v37();
-JAM.call(Object.extend, Object, [v2057, v2058], JAM.policy.p9C5FFCABA70857D69F2974E6410A585B5EFE64DC);
+JAM.call(Object.extend, Object, [v2057, v2058], JAM.policy.p1);
 var v2059 = {initialize:v38, evaluate:v40};
-var Template = JAM.call(Class.create, Class, [v2059], JAM.policy.p9C5FFCABA70857D69F2974E6410A585B5EFE64DC);
+var Template = JAM.call(Class.create, Class, [v2059], JAM.policy.p1);
 Template.Pattern = /(^|.|\r|\n)(#\{(.*?)\})/;
 var $break = {};
 var Enumerable = v59();
 Array.from = $A;
 v67();
 var v2060 = v72();
-var Hash = JAM.call(Class.create, Class, [Enumerable, v2060], JAM.policy.p9C5FFCABA70857D69F2974E6410A585B5EFE64DC);
+var Hash = JAM.call(Class.create, Class, [Enumerable, v2060], JAM.policy.p1);
 Hash.from = $H;
 var v2061 = Number.prototype;
 var v2062 = v73();
-JAM.call(Object.extend, Object, [v2061, v2062], JAM.policy.p9C5FFCABA70857D69F2974E6410A585B5EFE64DC);
+JAM.call(Object.extend, Object, [v2061, v2062], JAM.policy.p1);
 var v2063 = v74();
-var ObjectRange = JAM.call(Class.create, Class, [Enumerable, v2063], JAM.policy.p9C5FFCABA70857D69F2974E6410A585B5EFE64DC);
+var ObjectRange = JAM.call(Class.create, Class, [Enumerable, v2063], JAM.policy.p1);
 var Abstract = {};
 var Try = {these:v75};
 var Ajax = {getTransport:v79, activeRequestCount:0};
 Ajax.Responders = {responders:[], _each:v80, register:v81, unregister:v82, dispatch:v84};
 var v2064 = Ajax.Responders;
-JAM.call(Object.extend, Object, [v2064, Enumerable], JAM.policy.p9C5FFCABA70857D69F2974E6410A585B5EFE64DC);
+JAM.call(Object.extend, Object, [v2064, Enumerable], JAM.policy.p1);
 var v2065 = Ajax.Responders;
 var v2066 = {onCreate:v85, onComplete:v86};
-JAM.call(v2065.register, v2065, [v2066], JAM.policy.p9C5FFCABA70857D69F2974E6410A585B5EFE64DC);
+JAM.call(v2065.register, v2065, [v2066], JAM.policy.p1);
 var v2067 = Ajax;
 var v3058 = {initialize:v87};
-var v4025 = JAM.call(Class.create, Class, [v3058], JAM.policy.p9C5FFCABA70857D69F2974E6410A585B5EFE64DC);
+var v4025 = JAM.call(Class.create, Class, [v3058], JAM.policy.p1);
 v2067.Base = v4025;
 var v2068 = Ajax;
 var v3059 = Ajax.Base;
 var v3060 = {_complete:false, initialize:v88, request:v89, onStateChange:v90, setRequestHeaders:v92, success:v93, getStatus:v94, respondToReadyState:v95, isSameOrigin:v96, getHeader:v97, evalResponse:v98, dispatchException:v99};
-var v4026 = JAM.call(Class.create, Class, [v3059, v3060], JAM.policy.p9C5FFCABA70857D69F2974E6410A585B5EFE64DC);
+var v4026 = JAM.call(Class.create, Class, [v3059, v3060], JAM.policy.p1);
 v2068.Request = v4026;
 var v2069 = Ajax.Request;
 v2069.Events = ["Uninitialized", "Loading", "Loaded", "Interactive", "Complete"];
@@ -11759,17 +11759,17 @@ var v3864 = Ajax.Request;
 var v3783 = v3864.prototype;
 var v3581 = v3783.getHeader;
 var v3061 = {initialize:v100, status:0, statusText:"", getStatus:v3580, getStatusText:v101, getHeader:v3581, getAllHeaders:v102, getResponseHeader:v103, getAllResponseHeaders:v104, _getHeaderJSON:v105, _getResponseJSON:v106};
-var v4027 = JAM.call(Class.create, Class, [v3061], JAM.policy.p9C5FFCABA70857D69F2974E6410A585B5EFE64DC);
+var v4027 = JAM.call(Class.create, Class, [v3061], JAM.policy.p1);
 v2070.Response = v4027;
 var v2071 = Ajax;
 var v3062 = Ajax.Request;
 var v3063 = {initialize:v108, updateContent:v109};
-var v4028 = JAM.call(Class.create, Class, [v3062, v3063], JAM.policy.p9C5FFCABA70857D69F2974E6410A585B5EFE64DC);
+var v4028 = JAM.call(Class.create, Class, [v3062, v3063], JAM.policy.p1);
 v2071.Updater = v4028;
 var v2072 = Ajax;
 var v3064 = Ajax.Base;
 var v3065 = {initialize:v110, start:v111, stop:v112, updateComplete:v113, onTimerEvent:v114};
-var v4029 = JAM.call(Class.create, Class, [v3064, v3065], JAM.policy.p9C5FFCABA70857D69F2974E6410A585B5EFE64DC);
+var v4029 = JAM.call(Class.create, Class, [v3064, v3065], JAM.policy.p1);
 v2072.PeriodicalUpdater = v4029;
 v134(this);
 v187();
@@ -11797,36 +11797,36 @@ var v4031 = v298();
 v2076.Serializers = v4031;
 var v2077 = Abstract;
 var v3067 = {initialize:v299, execute:v300};
-var v4032 = JAM.call(Class.create, Class, [PeriodicalExecuter, v3067], JAM.policy.p9C5FFCABA70857D69F2974E6410A585B5EFE64DC);
+var v4032 = JAM.call(Class.create, Class, [PeriodicalExecuter, v3067], JAM.policy.p1);
 v2077.TimedObserver = v4032;
 var v2078 = Form.Element;
 var v3068 = Abstract.TimedObserver;
 var v3069 = {getValue:v301};
-var v4033 = JAM.call(Class.create, Class, [v3068, v3069], JAM.policy.p9C5FFCABA70857D69F2974E6410A585B5EFE64DC);
+var v4033 = JAM.call(Class.create, Class, [v3068, v3069], JAM.policy.p1);
 v2078.Observer = v4033;
 var v2079 = Form;
 var v3070 = Abstract.TimedObserver;
 var v3071 = {getValue:v302};
-var v4034 = JAM.call(Class.create, Class, [v3070, v3071], JAM.policy.p9C5FFCABA70857D69F2974E6410A585B5EFE64DC);
+var v4034 = JAM.call(Class.create, Class, [v3070, v3071], JAM.policy.p1);
 v2079.Observer = v4034;
 var v2080 = Abstract;
 var v3072 = {initialize:v303, onElementEvent:v304, registerFormCallbacks:v305, registerCallback:v306};
-var v4035 = JAM.call(Class.create, Class, [v3072], JAM.policy.p9C5FFCABA70857D69F2974E6410A585B5EFE64DC);
+var v4035 = JAM.call(Class.create, Class, [v3072], JAM.policy.p1);
 v2080.EventObserver = v4035;
 var v2081 = Form.Element;
 var v3073 = Abstract.EventObserver;
 var v3074 = {getValue:v307};
-var v4036 = JAM.call(Class.create, Class, [v3073, v3074], JAM.policy.p9C5FFCABA70857D69F2974E6410A585B5EFE64DC);
+var v4036 = JAM.call(Class.create, Class, [v3073, v3074], JAM.policy.p1);
 v2081.EventObserver = v4036;
 var v2082 = Form;
 var v3075 = Abstract.EventObserver;
 var v3076 = {getValue:v308};
-var v4037 = JAM.call(Class.create, Class, [v3075, v3076], JAM.policy.p9C5FFCABA70857D69F2974E6410A585B5EFE64DC);
+var v4037 = JAM.call(Class.create, Class, [v3075, v3076], JAM.policy.p1);
 v2082.EventObserver = v4037;
 v322(this);
 v326(this);
 v327(this);
-JAM.call(Element.addMethods, Element, [], JAM.policy.p9C5FFCABA70857D69F2974E6410A585B5EFE64DC);
+JAM.call(Element.addMethods, Element, [], JAM.policy.p1);
 Hash.toQueryString = Object.toQueryString;
 var v2083 = Element.toggle;
 var Toggle = {display:v2083};
@@ -11855,19 +11855,19 @@ if(v2091) {
   v2090.getElementsByClassName = v4038
 }
 var v2092 = Element;
-var v4039 = JAM.call(Class.create, Class, [], JAM.policy.p9C5FFCABA70857D69F2974E6410A585B5EFE64DC);
+var v4039 = JAM.call(Class.create, Class, [], JAM.policy.p1);
 v2092.ClassNames = v4039;
 var v2093 = Element.ClassNames;
 v2093.prototype = {initialize:v344, _each:v346, set:v347, add:v348, remove:v349, toString:v350};
 var v3085 = Element.ClassNames;
 var v2094 = v3085.prototype;
-JAM.call(Object.extend, Object, [v2094, Enumerable], JAM.policy.p9C5FFCABA70857D69F2974E6410A585B5EFE64DC);
+JAM.call(Object.extend, Object, [v2094, Enumerable], JAM.policy.p1);
 v359();
 var cram = v392();
-JAM.call(cram.load, cram, [], JAM.policy.p9C5FFCABA70857D69F2974E6410A585B5EFE64DC);
+JAM.call(cram.load, cram, [], JAM.policy.p1);
 var v2095 = document;
-var v4040 = JAM.call(cram.getel, cram, ["supercookie"], JAM.policy.p9C5FFCABA70857D69F2974E6410A585B5EFE64DC);
-introspect(JAM.policy.p425E08A28862414CF7130381FE99A660F52DB811) {
+var v4040 = JAM.call(cram.getel, cram, ["supercookie"], JAM.policy.p1);
+introspect(JAM.policy.p2) {
   v2095.cookie = v4040
 }
 ;

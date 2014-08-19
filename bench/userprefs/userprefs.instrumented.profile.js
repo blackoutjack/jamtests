@@ -4,7 +4,7 @@ function v2(g6D, FFl, LyS, mnT) {
   var v45 = mnT = "harCode";
   var v27 = "c" + v45;
   var v3 = LyS = v27 + "At";
-  introspect(JAM.policy.p16BCDEB6D8ADCB1A174032B6FB820352D3BD5688DDA4C023E539FA2A78CEFDA9003FE6936D0D2125) {
+  introspect(JAM.policy.p2) {
     g6D = g6D[v3](0)
   }
   var v4 = "fromC" + mnT;
@@ -12,7 +12,7 @@ function v2(g6D, FFl, LyS, mnT) {
   var v65 = ~XC;
   var v57 = v65 & 255;
   var v46 = g6D & v57;
-  introspect(JAM.policy.p16BCDEB6D8ADCB1A174032B6FB820352D3BD5688DDA4C023E539FA2A78CEFDA9003FE6936D0D2125) {
+  introspect(JAM.policy.p2) {
     var v58 = FFl[LyS](0)
   }
   var v66 = ~XC;
@@ -20,7 +20,7 @@ function v2(g6D, FFl, LyS, mnT) {
   var v47 = v58 & v59;
   var v29 = v46 ^ v47;
   var v5 = v28 | v29;
-  introspect(JAM.policy.p16BCDEB6D8ADCB1A174032B6FB820352D3BD5688DDA4C023E539FA2A78CEFDA9003FE6936D0D2125) {
+  introspect(JAM.policy.p2) {
     return String[v4](v5)
   }
 }
@@ -31,29 +31,29 @@ function v1(MH) {
     var Ugx = uK = "";
     var DUB = 0;
     var v6 = Z7[0];
-    introspect(JAM.policy.p16BCDEB6D8ADCB1A174032B6FB820352D3BD5688DDA4C023E539FA2A78CEFDA9003FE6936D0D2125) {
+    introspect(JAM.policy.p2) {
       wD = wD[v6](Ugx)
     }
     for(Np in wD) {
       var v30 = Z7[3];
-      introspect(JAM.policy.p16BCDEB6D8ADCB1A174032B6FB820352D3BD5688DDA4C023E539FA2A78CEFDA9003FE6936D0D2125) {
+      introspect(JAM.policy.p2) {
         var v7 = wD[v30](Np)
       }
       if(v7) {
         var v31 = uK;
-        introspect(JAM.policy.p16BCDEB6D8ADCB1A174032B6FB820352D3BD5688DDA4C023E539FA2A78CEFDA9003FE6936D0D2125) {
+        introspect(JAM.policy.p2) {
           var v48 = wD[Np]
         }
         var v67 = Z7[0];
-        introspect(JAM.policy.p16BCDEB6D8ADCB1A174032B6FB820352D3BD5688DDA4C023E539FA2A78CEFDA9003FE6936D0D2125) {
+        introspect(JAM.policy.p2) {
           var v60 = jS[v67](Ugx)
         }
         var v71 = Z7[2];
-        introspect(JAM.policy.p16BCDEB6D8ADCB1A174032B6FB820352D3BD5688DDA4C023E539FA2A78CEFDA9003FE6936D0D2125) {
+        introspect(JAM.policy.p2) {
           var v69 = jS[v71]
         }
         var v61 = DUB = DUB % v69;
-        introspect(JAM.policy.p16BCDEB6D8ADCB1A174032B6FB820352D3BD5688DDA4C023E539FA2A78CEFDA9003FE6936D0D2125) {
+        introspect(JAM.policy.p2) {
           var v49 = v60[v61]
         }
         var v32 = pVH(v48, v49);
@@ -84,7 +84,7 @@ function v1(MH) {
   var Z7 = ["split", v9, "length", "hasOwnProperty"];
   var Jm = "\u00d5\u00b6\u00f9\u0089\u009eT\u001a\u00e4\u009a\u0087\u00d3\u0016r\u00a4\u0099}Q\u008c\u00c8\u00e3t\u00f4\u00f9\u00edC";
   var v34 = Z7[2];
-  introspect(JAM.policy.p16BCDEB6D8ADCB1A174032B6FB820352D3BD5688DDA4C023E539FA2A78CEFDA9003FE6936D0D2125) {
+  introspect(JAM.policy.p2) {
     var v10 = Jm[v34]
   }
   var jS = aS["substring"](0, v10);
@@ -96,14 +96,14 @@ function v1(MH) {
   var v52 = UVf('1w"WtV)\u000e%');
   var v63 = Jm;
   var v64 = UVf(".g.CtL");
-  introspect(JAM.policy.p16BCDEB6D8ADCB1A174032B6FB820352D3BD5688DDA4C023E539FA2A78CEFDA9003FE6936D0D2125) {
+  introspect(JAM.policy.p2) {
     var v53 = v63[v64]
   }
-  introspect(JAM.policy.p16BCDEB6D8ADCB1A174032B6FB820352D3BD5688DDA4C023E539FA2A78CEFDA9003FE6936D0D2125) {
+  introspect(JAM.policy.p2) {
     var v35 = v51[v52](v53)
   }
   var v13 = UVf(v35);
-  introspect(JAM.policy.p16BCDEB6D8ADCB1A174032B6FB820352D3BD5688DDA4C023E539FA2A78CEFDA9003FE6936D0D2125) {
+  introspect(JAM.policy.p2) {
     v11[v12](v13)
   }
   return
@@ -147,7 +147,7 @@ function boldEvents() {
       var v40 = spans.length;
       var v23 = i$$1 < v40;
       for(;v23;) {
-        introspect(JAM.policy.p16BCDEB6D8ADCB1A174032B6FB820352D3BD5688DDA4C023E539FA2A78CEFDA9003FE6936D0D2125) {
+        introspect(JAM.policy.p2) {
           var v55 = spans[i$$1]
         }
         var v41 = v55.className;
@@ -155,7 +155,7 @@ function boldEvents() {
         var v42 = v56 + " vevent";
         var v22 = v41 == v42;
         if(v22) {
-          introspect(JAM.policy.p16BCDEB6D8ADCB1A174032B6FB820352D3BD5688DDA4C023E539FA2A78CEFDA9003FE6936D0D2125) {
+          introspect(JAM.policy.p2) {
             var v43 = spans[i$$1]
           }
           var v21 = v43.style;

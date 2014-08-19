@@ -8,7 +8,12 @@ $autoindex = (isset($_REQUEST['autoindex']) && is_numeric($_REQUEST['autoindex']
 $autowait = (isset($_REQUEST['autowait']) && is_numeric($_REQUEST['autowait'])) ? $_REQUEST['autowait'] : 1000;
 $autoapp = (isset($_REQUEST['autoapp']) && is_numeric($_REQUEST['autoapp'])) ? $_REQUEST['autoapp'] : 0;
 
+// Default set of variants to go through during automated testing.
 $autotests = array('original', 'collapsed', 'original.modular', 'original.profile', 'collapsed.profile', 'original.modular.profile');
+//$autotests = array('collapsed.profile', 'original.modular.profile');
+
+// Use this for SMS2 "big" variants, since all static files are loaded.
+$bigautotests = array('original.profile', 'collapsed.profile', 'original.modular.profile');
 
 function getSubArray($parent, $idx) {
   $sub = null;
@@ -184,7 +189,12 @@ if ($auto) {
     <script>
       var tests = [
 <?
-      foreach ($autotests as $at) {
+      // Use different test cases for "big" inputs.
+      $applen = strlen($app);
+      $isbig = $applen > 9 && substr($app, 0, 5) == 'sms2-'
+        && substr($app, $applen - 4) == '-big';
+      $ats = $isbig ? $bigautotests : $autotests;
+      foreach ($ats as $at) {
 ?>
         '<?=$at?>',
 <?

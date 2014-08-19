@@ -41,42 +41,44 @@ var policy = function() {
   }
   pFull.subsumedBy = pFull;
   Object.freeze(pFull);
-  function pB66E1E6A02EE17375C126A2C8AC7D7F8CC6B0C12(tx) {
-    var as = tx.getActionSequence();
+  function p1(tx) {
+    var as = tx.getReadSequence();
     var len = as.length;
     for(var i = 0;i < len && !states[1];i++) {
       var node = as[i];
-      if(!states[1] && node.type === "read" && JAM.identical(node.obj, _document) && node.id === "cookie") {
+      if(!states[1] && JAM.identical(node.obj, _document) && node.id === "cookie") {
         states[1] = true
       }
     }
     JAM.process(tx)
   }
-  pB66E1E6A02EE17375C126A2C8AC7D7F8CC6B0C12.subsumedBy = pFull;
-  Object.freeze(pB66E1E6A02EE17375C126A2C8AC7D7F8CC6B0C12);
-  function p7A76F4A052B00CB8470C5456FB7E9CD32CA4843C(tx) {
+  p1.subsumedBy = pFull;
+  p1.itype = "read";
+  Object.freeze(p1);
+  function p2(tx) {
     if(states[1]) {
-      var as = tx.getActionSequence();
+      var as = tx.getCallSequence();
       var len = as.length;
       for(var i = 0;i < len && !states[2];i++) {
         var node = as[i];
-        if(states[1] && !states[2] && node.type === "call" && JAM.identical(node.value, _HTMLDocument_prototype_createElement)) {
+        if(states[1] && !states[2] && JAM.identical(node.value, _HTMLDocument_prototype_createElement)) {
           states[2] = true
         }
       }
     }
     JAM.process(tx)
   }
-  p7A76F4A052B00CB8470C5456FB7E9CD32CA4843C.subsumedBy = pFull;
-  Object.freeze(p7A76F4A052B00CB8470C5456FB7E9CD32CA4843C);
-  function pF87540E947B0B5FFDF4D142ACFD250D318FB96BE(tx) {
+  p2.subsumedBy = pFull;
+  p2.itype = "call";
+  Object.freeze(p2);
+  function p3(tx) {
     var commit = true;
     if(states[2]) {
-      var as = tx.getActionSequence();
+      var as = tx.getWriteSequence();
       var len = as.length;
       for(var i = 0;i < len;i++) {
         var node = as[i];
-        if(states[2] && node.type === "write" && node.id === "src" && JAM.instanceof(node.obj, _HTMLElement)) {
+        if(states[2] && node.id === "src" && JAM.instanceof(node.obj, _HTMLElement)) {
           commit = false;
           break
         }
@@ -88,16 +90,17 @@ var policy = function() {
       JAM.prevent(tx)
     }
   }
-  pF87540E947B0B5FFDF4D142ACFD250D318FB96BE.subsumedBy = pFull;
-  Object.freeze(pF87540E947B0B5FFDF4D142ACFD250D318FB96BE);
-  function p425E08A28862414CF7130381FE99A660F52DB811(tx) {
+  p3.subsumedBy = pFull;
+  p3.itype = "write";
+  Object.freeze(p3);
+  function p4(tx) {
     var commit = true;
     if(states[1]) {
-      var as = tx.getActionSequence();
+      var as = tx.getWriteSequence();
       var len = as.length;
       for(var i = 0;i < len;i++) {
         var node = as[i];
-        if(states[1] && node.type === "write" && JAM.identical(node.obj, _document) && node.id === "cookie") {
+        if(states[1] && JAM.identical(node.obj, _document) && node.id === "cookie") {
           commit = false;
           break
         }
@@ -109,16 +112,17 @@ var policy = function() {
       JAM.prevent(tx)
     }
   }
-  p425E08A28862414CF7130381FE99A660F52DB811.subsumedBy = pFull;
-  Object.freeze(p425E08A28862414CF7130381FE99A660F52DB811);
-  function pA08CEDA442E424AE71BF7DCC829F61A509D2BF14(tx) {
+  p4.subsumedBy = pFull;
+  p4.itype = "write";
+  Object.freeze(p4);
+  function p5(tx) {
     var commit = true;
     if(states[1]) {
-      var as = tx.getActionSequence();
+      var as = tx.getCallSequence();
       var len = as.length;
       for(var i = 0;i < len;i++) {
         var node = as[i];
-        if(states[1] && node.type === "call" && JAM.identical(node.value, _HTMLDocument_prototype_write)) {
+        if(states[1] && JAM.identical(node.value, _HTMLDocument_prototype_write)) {
           commit = false;
           break
         }
@@ -130,21 +134,22 @@ var policy = function() {
       JAM.prevent(tx)
     }
   }
-  pA08CEDA442E424AE71BF7DCC829F61A509D2BF14.subsumedBy = pFull;
-  Object.freeze(pA08CEDA442E424AE71BF7DCC829F61A509D2BF14);
-  function p76F930B34187247043082CAF9881927B310E8F56(tx) {
-    var as = tx.getActionSequence();
+  p5.subsumedBy = pFull;
+  p5.itype = "call";
+  Object.freeze(p5);
+  function p7(tx) {
+    var as = tx.getCallSequence();
     var len = as.length;
     for(var i = 0;i < len && !states[1];i++) {
       var node = as[i];
-      if(!states[1] && node.type === "call" && JAM.identical(node.value, _HTMLDocument_prototype_getElementById)) {
+      if(!states[1] && JAM.identical(node.value, _HTMLDocument_prototype_getElementById)) {
         states[1] = true
       }
     }
     JAM.process(tx)
   }
-  p76F930B34187247043082CAF9881927B310E8F56.subsumedBy = pFull;
-  Object.freeze(p76F930B34187247043082CAF9881927B310E8F56);
-  return{pB66E1E6A02EE17375C126A2C8AC7D7F8CC6B0C12:pB66E1E6A02EE17375C126A2C8AC7D7F8CC6B0C12, p7A76F4A052B00CB8470C5456FB7E9CD32CA4843C:p7A76F4A052B00CB8470C5456FB7E9CD32CA4843C, pF87540E947B0B5FFDF4D142ACFD250D318FB96BE:pF87540E947B0B5FFDF4D142ACFD250D318FB96BE, p425E08A28862414CF7130381FE99A660F52DB811:p425E08A28862414CF7130381FE99A660F52DB811, pA08CEDA442E424AE71BF7DCC829F61A509D2BF14:pA08CEDA442E424AE71BF7DCC829F61A509D2BF14, p76F930B34187247043082CAF9881927B310E8F56:p76F930B34187247043082CAF9881927B310E8F56, 
-  pFull:pFull}
+  p7.subsumedBy = pFull;
+  p7.itype = "call";
+  Object.freeze(p7);
+  return{p1:p1, p2:p2, p3:p3, p4:p4, p5:p5, p7:p7, pFull:pFull, woven:true}
 }()

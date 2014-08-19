@@ -151,7 +151,7 @@ function v107() {
       if(v135) {
         var v133 = midoriTab.selectedTabs;
         var v134 = obj$$25.id;
-        JAM.set(v133, v134, o$$6, JAM.policy.p425E08A28862414CF7130381FE99A660F52DB811);
+        JAM.set(v133, v134, o$$6, JAM.policy.p2);
         JAM.call(midoriTab.select, midoriTab, [o$$6, true])
       }
       JAM.call(midori.addEventListener, midori, [o$$6, "click", v104]);
@@ -187,7 +187,7 @@ function v103(obj$$24, noAnim) {
     v139.display = "none"
   }
   var v141 = this.selectedTabs;
-  JAM.set(v141, tabSet, obj$$24, JAM.policy.p425E08A28862414CF7130381FE99A660F52DB811);
+  JAM.set(v141, tabSet, obj$$24, JAM.policy.p2);
   var v142 = obj$$24.parentNode;
   v142.className = "tab-selected";
   var v143;
@@ -535,7 +535,7 @@ function v90(vars$$3) {
     var v195 = v741.style;
     var v196 = vars$$3.what;
     var v742 = newSize.toString();
-    JAM.set(v195, v196, v742 + "px", JAM.policy.p425E08A28862414CF7130381FE99A660F52DB811);
+    JAM.set(v195, v196, v742 + "px", JAM.policy.p2);
     var v743 = vars$$3.element;
     var v197 = v743.style;
     v197.opacity = newSize / 50
@@ -553,7 +553,7 @@ function v90(vars$$3) {
     var v201 = vars$$3.what;
     var v1120 = vars$$3.elementSize;
     var v747 = v1120.toString();
-    JAM.set(v200, v201, v747 + "px", JAM.policy.p425E08A28862414CF7130381FE99A660F52DB811);
+    JAM.set(v200, v201, v747 + "px", JAM.policy.p2);
     var v748 = vars$$3.element;
     var v202 = v748.style;
     v202.opacity = 1;
@@ -641,7 +641,7 @@ function v87(vars$$1) {
     var v1363 = v1482[v1483];
     var v1127 = v1363.newSize;
     var v758 = v1127.toString();
-    JAM.set(v214, v215, v758 + "px", JAM.policy.p425E08A28862414CF7130381FE99A660F52DB811)
+    JAM.set(v214, v215, v758 + "px", JAM.policy.p2)
   }else {
     var v1128 = this.intervals;
     var v1129 = vars$$1.intervalKey;
@@ -653,7 +653,7 @@ function v87(vars$$1) {
     var v218 = vars$$1.what;
     var v1130 = vars$$1.elementSize;
     var v761 = v1130.toString();
-    JAM.set(v217, v218, v761 + "px", JAM.policy.p425E08A28862414CF7130381FE99A660F52DB811);
+    JAM.set(v217, v218, v761 + "px", JAM.policy.p2);
     var v762 = vars$$1.element;
     var v219 = v762.style;
     v219.overflow = "visible";
@@ -682,7 +682,7 @@ function v86(element$$4, what) {
   var v225 = element$$4.style;
   var v226 = what;
   var v765 = offsetSize.toString();
-  JAM.set(v225, v226, v765 + "px", JAM.policy.p425E08A28862414CF7130381FE99A660F52DB811);
+  JAM.set(v225, v226, v765 + "px", JAM.policy.p2);
   var v766;
   var v1131 = what == "width";
   if(v1131) {
@@ -696,7 +696,7 @@ function v86(element$$4, what) {
   var v229 = what;
   var v1132 = offsetSize - outsideSize;
   var v767 = v1132.toString();
-  JAM.set(v228, v229, v767 + "px", JAM.policy.p425E08A28862414CF7130381FE99A660F52DB811);
+  JAM.set(v228, v229, v767 + "px", JAM.policy.p2);
   return outsideSize
 }
 function v85(obj$$23, highlightClass, removeAll) {
@@ -1148,7 +1148,7 @@ function v69(parentNode$$1, prefix$$2, a$$2) {
   return
 }
 function v68(name$$31, value$$30, expires, path, domain) {
-  introspect(JAM.policy.p3F9F399AB000376076BBFF3A9A9C0103B23A9835) {
+  introspect(JAM.policy.p1) {
     setCookieSentinel = true
   }
   var today = new Date;
@@ -1175,7 +1175,7 @@ function v68(name$$31, value$$30, expires, path, domain) {
     v1164 = ""
   }
   var v813 = v1164;
-  introspect(JAM.policy.p425E08A28862414CF7130381FE99A660F52DB811) {
+  introspect(JAM.policy.p2) {
     v293.cookie = v812 + v813
   }
   return
@@ -1465,7 +1465,7 @@ function v50(obj$$17, styleList) {
       v337 = JAM.call(this.setFloat, this, [obj$$17, v845])
     }else {
       var v846 = obj$$17.style;
-      v337 = JAM.set(v846, i$$7, styleList[i$$7], JAM.policy.p425E08A28862414CF7130381FE99A660F52DB811)
+      v337 = JAM.set(v846, i$$7, styleList[i$$7], JAM.policy.p2)
     }
     v337
   }
@@ -1532,7 +1532,7 @@ function v49(stylesheet, rule$$2, property$$3) {
             if(v344) {
               var v855 = rules[i$$6];
               var v341 = v855.selectorText;
-              JAM.set(values$$4, v341, value, JAM.policy.p425E08A28862414CF7130381FE99A660F52DB811)
+              JAM.set(values$$4, v341, value, JAM.policy.p2)
             }else {
               var v856 = rules[i$$6];
               var v342 = v856.style;
@@ -1552,7 +1552,7 @@ function v49(stylesheet, rule$$2, property$$3) {
               var v346 = v859.selectorText;
               var v1186 = rules[i$$6];
               var v860 = v1186.style;
-              JAM.set(values$$4, v346, v860[j$$1], JAM.policy.p425E08A28862414CF7130381FE99A660F52DB811)
+              JAM.set(values$$4, v346, v860[j$$1], JAM.policy.p2)
             }else {
               var v861 = rules[i$$6];
               var v347 = v861.style;
@@ -2000,7 +2000,7 @@ function v44(match$$1, pSelector, pA, pB) {
       c$$2 = c$$2.nextSibling
     }
     var v413 = this.pCache;
-    JAM.set(v413, nodeKey, {parentChildren:parentChildren, pI:0}, JAM.policy.p425E08A28862414CF7130381FE99A660F52DB811)
+    JAM.set(v413, nodeKey, {parentChildren:parentChildren, pI:0}, JAM.policy.p2)
   }
   var parentNumChildren = parentChildren.length;
   switch(pSelector) {
@@ -2705,7 +2705,7 @@ function midoriDragDrop(containerId$$1, dropCallback) {
         var v512 = v974 == o$$9;
         if(v512) {
           var v511 = thisObj$$1.objs;
-          JAM.set(v511, j$$3, "", JAM.policy.p425E08A28862414CF7130381FE99A660F52DB811);
+          JAM.set(v511, j$$3, "", JAM.policy.p2);
           break
         }
         j$$3 = j$$3 + 1;
@@ -2725,7 +2725,7 @@ function midoriDragDrop(containerId$$1, dropCallback) {
       var v516 = v975 == parentObj$$1;
       if(v516) {
         var v515 = this.objs;
-        JAM.set(v515, j$$3, "", JAM.policy.p425E08A28862414CF7130381FE99A660F52DB811);
+        JAM.set(v515, j$$3, "", JAM.policy.p2);
         break
       }
       j$$3 = j$$3 + 1;
@@ -3086,7 +3086,7 @@ function midoriAjax(callback$$29, params$$1, cache) {
       thisObj$$2.status = v571.status;
       var v572 = thisObj$$2.cache;
       var v573 = thisObj$$2.cacheKey;
-      JAM.set(v572, v573, thisObj$$2.responseText, JAM.policy.p425E08A28862414CF7130381FE99A660F52DB811)
+      JAM.set(v572, v573, thisObj$$2.responseText, JAM.policy.p2)
     }
     JAM.call(thisObj$$2.callback, thisObj$$2, [params$$1]);
     return
@@ -3158,7 +3158,7 @@ function midoriAutoComplete(vars$$7) {
         var response = v577;
         var v578 = thisObj$$3.suggestions;
         var v579 = response["snippet"];
-        JAM.set(v578, v579, response["result"], JAM.policy.p425E08A28862414CF7130381FE99A660F52DB811);
+        JAM.set(v578, v579, response["result"], JAM.policy.p2);
         var v580 = response["snippet"];
         JAM.call(thisObj$$3.showSuggestions, thisObj$$3, [v580])
       }
@@ -3289,7 +3289,7 @@ function midoriAutoComplete(vars$$7) {
         var v601 = suggestions[i$$24];
         for(k$$2 in v601) {
           var v600 = suggestions[i$$24];
-          JAM.set(properties, k$$2, v600[k$$2], JAM.policy.p425E08A28862414CF7130381FE99A660F52DB811)
+          JAM.set(properties, k$$2, v600[k$$2], JAM.policy.p2)
         }
       }
       var v1027 = html;

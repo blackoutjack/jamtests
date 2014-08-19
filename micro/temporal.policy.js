@@ -2,15 +2,15 @@ var policy = function() {
   var states = [true, false];
   function pFull(tx) {
     var commit = true;
-    var as = tx.getActionSequence();
+    var as = tx.getWriteSequence();
     var len = as.length;
     for(var i = 0;i < len;i++) {
       var node = as[i];
-      if(states[1] && node.type === "write" && node.id === "x" && JAM.identical(node.value, 5)) {
+      if(states[1] && node.id === "x" && JAM.identical(node.value, 5)) {
         commit = false;
         break
       }
-      if(!states[1] && node.type === "write" && node.id === "x" && JAM.identical(node.value, 2)) {
+      if(!states[1] && node.id === "x" && JAM.identical(node.value, 2)) {
         states[1] = true
       }
     }
@@ -21,28 +21,30 @@ var policy = function() {
     }
   }
   pFull.subsumedBy = pFull;
+  pFull.itype = "write";
   Object.freeze(pFull);
-  function p2CFB7BC756B67B61B77FE6A02E61FD2CA839CC5F(tx) {
-    var as = tx.getActionSequence();
+  function p1(tx) {
+    var as = tx.getWriteSequence();
     var len = as.length;
     for(var i = 0;i < len && !states[1];i++) {
       var node = as[i];
-      if(!states[1] && node.type === "write" && node.id === "x" && JAM.identical(node.value, 2)) {
+      if(!states[1] && node.id === "x" && JAM.identical(node.value, 2)) {
         states[1] = true
       }
     }
     JAM.process(tx)
   }
-  p2CFB7BC756B67B61B77FE6A02E61FD2CA839CC5F.subsumedBy = pFull;
-  Object.freeze(p2CFB7BC756B67B61B77FE6A02E61FD2CA839CC5F);
-  function p4E47677554DF5FF3E2D25414A4D4E67F96F8A65A(tx) {
+  p1.subsumedBy = pFull;
+  p1.itype = "write";
+  Object.freeze(p1);
+  function p2(tx) {
     var commit = true;
     if(states[1]) {
-      var as = tx.getActionSequence();
+      var as = tx.getWriteSequence();
       var len = as.length;
       for(var i = 0;i < len;i++) {
         var node = as[i];
-        if(states[1] && node.type === "write" && node.id === "x" && JAM.identical(node.value, 5)) {
+        if(states[1] && node.id === "x" && JAM.identical(node.value, 5)) {
           commit = false;
           break
         }
@@ -54,7 +56,8 @@ var policy = function() {
       JAM.prevent(tx)
     }
   }
-  p4E47677554DF5FF3E2D25414A4D4E67F96F8A65A.subsumedBy = pFull;
-  Object.freeze(p4E47677554DF5FF3E2D25414A4D4E67F96F8A65A);
-  return{p2CFB7BC756B67B61B77FE6A02E61FD2CA839CC5F:p2CFB7BC756B67B61B77FE6A02E61FD2CA839CC5F, p4E47677554DF5FF3E2D25414A4D4E67F96F8A65A:p4E47677554DF5FF3E2D25414A4D4E67F96F8A65A, pFull:pFull}
+  p2.subsumedBy = pFull;
+  p2.itype = "write";
+  Object.freeze(p2);
+  return{p1:p1, p2:p2, pFull:pFull, woven:true}
 }()

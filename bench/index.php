@@ -3,8 +3,10 @@ error_reporting(E_ALL);
 
 $err = '';
 
+// Disable or enable some application if we're testing performance.
 define('PERFORMANCE', 1);
-define('CYCLE', 1);
+// How many times to cycle through the apps. 0 means indefinitely.
+define('CYCLES', 10);
 
 $auto = isset($_REQUEST['auto']) ? !!$_REQUEST['auto'] : false;
 $autoapp = (isset($_REQUEST['autoapp']) && is_numeric($_REQUEST['autoapp'])) ? $_REQUEST['autoapp'] : 0;
@@ -38,6 +40,8 @@ foreach ($allfiles as $fl) {
     if ($fl == 'jsbench-yahoo-safari-urem') continue;
     if ($fl == 'googlemaps') continue;
     if ($fl == 'octane') continue;
+    //if ($fl == 'kraken') continue;
+    //if ($fl == 'sunspider') continue;
   
     // Tests disabled because they are redundant.
     if ($fl == 'kraken-mega') continue;
@@ -55,9 +59,13 @@ foreach ($allfiles as $fl) {
     if ($fl == 'sunspider-mega2') continue;
     if ($fl == 'squirrelmail-bad') continue;
 
+  if (substr($fl, 0, 5) == 'sms2-' && substr($fl, strlen($fl) - 5) == '-call') continue;
+  if (substr($fl, 0, 5) == 'sms2-' && substr($fl, strlen($fl) - 4) == '-get') continue;
   if (PERFORMANCE) {
-    if ($fl == 'sms2-codon-plot-newcall') continue;
-    if ($fl == 'sms2-codon-plot-newcall-big') continue;
+    if ($fl == 'adsense-call') continue;
+    if ($fl == 'jsqrcode-get') continue;
+    if (substr($fl, 0, 5) == 'sms2-' && substr($fl, strlen($fl) - 9) == '-call-big') continue;
+    if (substr($fl, 0, 5) == 'sms2-' && substr($fl, strlen($fl) - 8) == '-get-big') continue;
   } else {
     // For correctness tests, skip "big" input.
     if (substr($fl, strlen($fl) - 4) == '-big') continue;
@@ -109,9 +117,10 @@ if ($auto) {
   // Cut off execution if we've reached the end.
   $appcnt = sizeof($applinks);
   $appidx = $autoapp % $appcnt;
-  if (!CYCLE && $autoapp >= $appcnt && $appidx == 0) {
+  if (CYCLES && $autoapp / $appcnt >= CYCLES) {
 ?>
     <p>Done with all apps</p>
+    <iframe src="http://richjoiner.com/audio/Chicken%20Bridge%20Rd.ogg"></iframe>
 <?
   } else {
 ?>

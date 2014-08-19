@@ -4,11 +4,11 @@ var policy = function() {
   var __RegExp_prototype_test_call_bind__RegExp_prototype_test_ = _RegExp_prototype_test.call.bind(_RegExp_prototype_test);
   function pFull(tx) {
     var commit = true;
-    var as = tx.getActionSequence();
+    var as = tx.getCallSequence();
     var len = as.length;
     for(var i = 0;i < len;i++) {
       var node = as[i];
-      if(node.type === "call" && JAM.identical(node.value, _Window_prototype_open) && !(node.argc > 0 && __RegExp_prototype_test_call_bind__RegExp_prototype_test_(/^http:\/\/jamscript.*/i, node.args[0]))) {
+      if(JAM.identical(node.value, _Window_prototype_open) && !(node.argc > 0 && __RegExp_prototype_test_call_bind__RegExp_prototype_test_(/^http:\/\/jamscript.*/i, node.args[0]))) {
         commit = false;
         break
       }
@@ -20,14 +20,15 @@ var policy = function() {
     }
   }
   pFull.subsumedBy = pFull;
+  pFull.itype = "call";
   Object.freeze(pFull);
-  function p68DCD5A3B6F708E10DB2D4E94C3DD418A4DE8ABC(tx) {
+  function p1(tx) {
     var commit = true;
-    var as = tx.getActionSequence();
+    var as = tx.getCallSequence();
     var len = as.length;
     for(var i = 0;i < len;i++) {
       var node = as[i];
-      if(node.type === "call" && JAM.identical(node.value, _Window_prototype_open) && !(node.argc > 0 && __RegExp_prototype_test_call_bind__RegExp_prototype_test_(/^http:\/\/jamscript.*/i, node.args[0]))) {
+      if(JAM.identical(node.value, _Window_prototype_open) && !(node.argc > 0 && __RegExp_prototype_test_call_bind__RegExp_prototype_test_(/^http:\/\/jamscript.*/i, node.args[0]))) {
         commit = false;
         break
       }
@@ -38,7 +39,8 @@ var policy = function() {
       JAM.prevent(tx)
     }
   }
-  p68DCD5A3B6F708E10DB2D4E94C3DD418A4DE8ABC.subsumedBy = pFull;
-  Object.freeze(p68DCD5A3B6F708E10DB2D4E94C3DD418A4DE8ABC);
-  return{p68DCD5A3B6F708E10DB2D4E94C3DD418A4DE8ABC:p68DCD5A3B6F708E10DB2D4E94C3DD418A4DE8ABC, pFull:pFull}
+  p1.subsumedBy = pFull;
+  p1.itype = "call";
+  Object.freeze(p1);
+  return{p1:p1, pFull:pFull, woven:true}
 }()

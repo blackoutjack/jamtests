@@ -2,11 +2,11 @@ var policy = function() {
   var _XMLHttpRequest_prototype_open = XMLHttpRequest.prototype.open;
   function pFull(tx) {
     var commit = true;
-    var as = tx.getActionSequence();
+    var as = tx.getCallSequence();
     var len = as.length;
     for(var i = 0;i < len;i++) {
       var node = as[i];
-      if(node.type === "call" && JAM.identical(node.value, _XMLHttpRequest_prototype_open)) {
+      if(JAM.identical(node.value, _XMLHttpRequest_prototype_open)) {
         commit = false;
         break
       }
@@ -18,14 +18,15 @@ var policy = function() {
     }
   }
   pFull.subsumedBy = pFull;
+  pFull.itype = "call";
   Object.freeze(pFull);
-  function pC6BD08F4643AFC435CEA3BC1F2234D4283B1AEE1(tx) {
+  function p1(tx) {
     var commit = true;
-    var as = tx.getActionSequence();
+    var as = tx.getCallSequence();
     var len = as.length;
     for(var i = 0;i < len;i++) {
       var node = as[i];
-      if(node.type === "call" && JAM.identical(node.value, _XMLHttpRequest_prototype_open)) {
+      if(JAM.identical(node.value, _XMLHttpRequest_prototype_open)) {
         commit = false;
         break
       }
@@ -36,7 +37,8 @@ var policy = function() {
       JAM.prevent(tx)
     }
   }
-  pC6BD08F4643AFC435CEA3BC1F2234D4283B1AEE1.subsumedBy = pFull;
-  Object.freeze(pC6BD08F4643AFC435CEA3BC1F2234D4283B1AEE1);
-  return{pC6BD08F4643AFC435CEA3BC1F2234D4283B1AEE1:pC6BD08F4643AFC435CEA3BC1F2234D4283B1AEE1, pFull:pFull}
+  p1.subsumedBy = pFull;
+  p1.itype = "call";
+  Object.freeze(p1);
+  return{p1:p1, pFull:pFull, woven:true}
 }()

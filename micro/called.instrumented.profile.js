@@ -2,7 +2,7 @@ function runTest() {
 
   JAM.startProfile('load');
   var f = document;
-  introspect(JAM.policy.pD5795DFA086639893C72614AC0D6E60E856B441D) {
+  introspect(JAM.policy.p1) {
     var x = f.getElementsByTagName("ok")
   }
   ;

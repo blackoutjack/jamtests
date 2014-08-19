@@ -60,25 +60,25 @@ function unpacker_filter(source$$1) {
   if(v13) {
     var stripped_source = trim_leading_comments(source$$1);
     var unpacked = "";
-    var v8 = JAM.call(P_A_C_K_E_R.detect, P_A_C_K_E_R, [stripped_source], JAM.policy.p750A7ECA0CEA34F16F7CDD3F0C47CDDFC768D4A5);
+    var v8 = JAM.call(P_A_C_K_E_R.detect, P_A_C_K_E_R, [stripped_source], JAM.policy.p1);
     if(v8) {
-      unpacked = JAM.call(P_A_C_K_E_R.unpack, P_A_C_K_E_R, [stripped_source], JAM.policy.p750A7ECA0CEA34F16F7CDD3F0C47CDDFC768D4A5);
+      unpacked = JAM.call(P_A_C_K_E_R.unpack, P_A_C_K_E_R, [stripped_source], JAM.policy.p1);
       var v7 = unpacked !== stripped_source;
       if(v7) {
         return unpacker_filter(unpacked)
       }
     }
-    var v10 = JAM.call(EscapedBookmarklet.detect, EscapedBookmarklet, [source$$1], JAM.policy.p750A7ECA0CEA34F16F7CDD3F0C47CDDFC768D4A5);
+    var v10 = JAM.call(EscapedBookmarklet.detect, EscapedBookmarklet, [source$$1], JAM.policy.p1);
     if(v10) {
-      unpacked = JAM.call(EscapedBookmarklet.unpack, EscapedBookmarklet, [source$$1], JAM.policy.p750A7ECA0CEA34F16F7CDD3F0C47CDDFC768D4A5);
+      unpacked = JAM.call(EscapedBookmarklet.unpack, EscapedBookmarklet, [source$$1], JAM.policy.p1);
       var v9 = unpacked !== stripped_source;
       if(v9) {
         return unpacker_filter(unpacked)
       }
     }
-    var v12 = JAM.call(JavascriptObfuscator.detect, JavascriptObfuscator, [stripped_source], JAM.policy.p750A7ECA0CEA34F16F7CDD3F0C47CDDFC768D4A5);
+    var v12 = JAM.call(JavascriptObfuscator.detect, JavascriptObfuscator, [stripped_source], JAM.policy.p1);
     if(v12) {
-      unpacked = JAM.call(JavascriptObfuscator.unpack, JavascriptObfuscator, [stripped_source], JAM.policy.p750A7ECA0CEA34F16F7CDD3F0C47CDDFC768D4A5);
+      unpacked = JAM.call(JavascriptObfuscator.unpack, JavascriptObfuscator, [stripped_source], JAM.policy.p1);
       var v11 = unpacked !== stripped_source;
       if(v11) {
         return unpacker_filter(unpacked)
@@ -90,7 +90,7 @@ function unpacker_filter(source$$1) {
 function do_js_beautify() {
   var v14 = document.getElementById("beautify");
   v14.disabled = true;
-  var v34 = JAM.call(document.getElementById, document, ["content"], JAM.policy.p750A7ECA0CEA34F16F7CDD3F0C47CDDFC768D4A5);
+  var v34 = JAM.call(document.getElementById, document, ["content"], JAM.policy.p1);
   var v15 = v34.value;
   var js_source = v15.replace(/^\s+/, "");
   var v16 = document.getElementById("tabsize");
@@ -120,14 +120,14 @@ function do_js_beautify() {
   }
   var v23 = v35;
   if(v23) {
-    var v21 = JAM.call(document.getElementById, document, ["content"], JAM.policy.p750A7ECA0CEA34F16F7CDD3F0C47CDDFC768D4A5);
-    var v46 = JAM.call(style_html, null, [js_source, indent_size, indent_char, 80, brace_style$$1], JAM.policy.p750A7ECA0CEA34F16F7CDD3F0C47CDDFC768D4A5);
+    var v21 = JAM.call(document.getElementById, document, ["content"], JAM.policy.p1);
+    var v46 = JAM.call(style_html, null, [js_source, indent_size, indent_char, 80, brace_style$$1], JAM.policy.p1);
     v21.value = v46
   }else {
-    var v22 = JAM.call(document.getElementById, document, ["content"], JAM.policy.p750A7ECA0CEA34F16F7CDD3F0C47CDDFC768D4A5);
+    var v22 = JAM.call(document.getElementById, document, ["content"], JAM.policy.p1);
     var v36 = unpacker_filter(js_source);
     var v37 = {indent_size:indent_size, indent_char:indent_char, preserve_newlines:preserve_newlines, brace_style:brace_style$$1, keep_array_indentation:keep_array_indentation, space_after_anon_function:true};
-    var v47 = JAM.call(js_beautify, null, [v36, v37], JAM.policy.p750A7ECA0CEA34F16F7CDD3F0C47CDDFC768D4A5);
+    var v47 = JAM.call(js_beautify, null, [v36, v37], JAM.policy.p1);
     v22.value = v47
   }
   var v24 = document.getElementById("beautify");
@@ -140,7 +140,7 @@ function get_var(name$$31) {
   var reg = new RegExp(v25);
   var v39 = window.location;
   var v26 = v39.href;
-  var res = JAM.call(reg.exec, reg, [v26], JAM.policy.p750A7ECA0CEA34F16F7CDD3F0C47CDDFC768D4A5);
+  var res = JAM.call(reg.exec, reg, [v26], JAM.policy.p1);
   var v27;
   if(res) {
     v27 = res[1]
@@ -151,10 +151,10 @@ function get_var(name$$31) {
 }
 function run_tests() {
   var st = new SanityTest;
-  JAM.call(run_beautifier_tests, null, [st], JAM.policy.p750A7ECA0CEA34F16F7CDD3F0C47CDDFC768D4A5);
-  JAM.call(JavascriptObfuscator.run_tests, JavascriptObfuscator, [st], JAM.policy.p750A7ECA0CEA34F16F7CDD3F0C47CDDFC768D4A5);
-  JAM.call(P_A_C_K_E_R.run_tests, P_A_C_K_E_R, [st], JAM.policy.p750A7ECA0CEA34F16F7CDD3F0C47CDDFC768D4A5);
-  JAM.call(EscapedBookmarklet.run_tests, EscapedBookmarklet, [st], JAM.policy.p750A7ECA0CEA34F16F7CDD3F0C47CDDFC768D4A5);
+  JAM.call(run_beautifier_tests, null, [st], JAM.policy.p1);
+  JAM.call(JavascriptObfuscator.run_tests, JavascriptObfuscator, [st], JAM.policy.p1);
+  JAM.call(P_A_C_K_E_R.run_tests, P_A_C_K_E_R, [st], JAM.policy.p1);
+  JAM.call(EscapedBookmarklet.run_tests, EscapedBookmarklet, [st], JAM.policy.p1);
   var v40 = document.getElementById("testresults");
   var v28 = v40.style;
   v28.display = "block";

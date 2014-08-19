@@ -37,21 +37,21 @@ var policy = function() {
   }
   pFull.subsumedBy = pFull;
   Object.freeze(pFull);
-  function p60BC769F7FE69A3D16A7359015C19BE54348D76E510AD27954A2595FF3D635DFFE9522029FA0A17D643B7C49AB8946BE23E67884C2A1A1A95BFE0CBF(tx) {
+  function p8(tx) {
     var commit = true;
-    var as = tx.getActionSequence();
+    var as = tx.getWriteSequence();
     var len = as.length;
     for(var i = 0;i < len;i++) {
       var node = as[i];
-      if(node.type === "write" && node.id === "textContent" && JAM.identical(node.obj["className"], "destructive-read read-only")) {
+      if(node.id === "textContent" && JAM.identical(node.obj["className"], "destructive-read read-only")) {
         commit = false;
         break
       }
-      if(states[2] && node.type === "write" && node.id === "textContent" && JAM.identical(node.obj["className"], "write-only non-editable")) {
+      if(states[2] && node.id === "textContent" && JAM.identical(node.obj["className"], "write-only non-editable")) {
         commit = false;
         break
       }
-      if(!states[2] && node.type === "write" && node.id === "textContent" && JAM.identical(node.obj["className"], "write-only non-editable")) {
+      if(!states[2] && node.id === "textContent" && JAM.identical(node.obj["className"], "write-only non-editable")) {
         states[2] = true
       }
     }
@@ -61,15 +61,16 @@ var policy = function() {
       JAM.prevent(tx)
     }
   }
-  p60BC769F7FE69A3D16A7359015C19BE54348D76E510AD27954A2595FF3D635DFFE9522029FA0A17D643B7C49AB8946BE23E67884C2A1A1A95BFE0CBF.subsumedBy = pFull;
-  Object.freeze(p60BC769F7FE69A3D16A7359015C19BE54348D76E510AD27954A2595FF3D635DFFE9522029FA0A17D643B7C49AB8946BE23E67884C2A1A1A95BFE0CBF);
-  function pC51DDFC22C8571C0FE27B1BC0B7671157BDF992D(tx) {
+  p8.subsumedBy = pFull;
+  p8.itype = "write";
+  Object.freeze(p8);
+  function p2(tx) {
     var commit = true;
-    var as = tx.getActionSequence();
+    var as = tx.getWriteSequence();
     var len = as.length;
     for(var i = 0;i < len;i++) {
       var node = as[i];
-      if(node.type === "write" && node.id === "innerHTML") {
+      if(node.id === "innerHTML") {
         commit = false;
         break
       }
@@ -80,23 +81,24 @@ var policy = function() {
       JAM.prevent(tx)
     }
   }
-  pC51DDFC22C8571C0FE27B1BC0B7671157BDF992D.subsumedBy = pFull;
-  Object.freeze(pC51DDFC22C8571C0FE27B1BC0B7671157BDF992D);
-  function p02BEB9B7B2358FCBE710EE3EF4F98E5DB6FF7E1441323F239D1C8F39E2D0E44249CC80F53BBDDF0D083CCCB7BDF4957FF03A722A119BF94D894180EE(tx) {
+  p2.subsumedBy = pFull;
+  p2.itype = "write";
+  Object.freeze(p2);
+  function p6(tx) {
     var commit = true;
-    var as = tx.getActionSequence();
+    var as = tx.getReadSequence();
     var len = as.length;
     for(var i = 0;i < len;i++) {
       var node = as[i];
-      if(node.type === "read" && node.id === "textContent" && JAM.identical(node.obj["className"], "write-only non-editable")) {
+      if(node.id === "textContent" && JAM.identical(node.obj["className"], "write-only non-editable")) {
         commit = false;
         break
       }
-      if(states[1] && node.type === "read" && node.id === "textContent" && JAM.identical(node.obj["className"], "destructive-read read-only")) {
+      if(states[1] && node.id === "textContent" && JAM.identical(node.obj["className"], "destructive-read read-only")) {
         commit = false;
         break
       }
-      if(!states[1] && node.type === "read" && node.id === "textContent" && JAM.identical(node.obj["className"], "destructive-read read-only")) {
+      if(!states[1] && node.id === "textContent" && JAM.identical(node.obj["className"], "destructive-read read-only")) {
         states[1] = true
       }
     }
@@ -106,15 +108,16 @@ var policy = function() {
       JAM.prevent(tx)
     }
   }
-  p02BEB9B7B2358FCBE710EE3EF4F98E5DB6FF7E1441323F239D1C8F39E2D0E44249CC80F53BBDDF0D083CCCB7BDF4957FF03A722A119BF94D894180EE.subsumedBy = pFull;
-  Object.freeze(p02BEB9B7B2358FCBE710EE3EF4F98E5DB6FF7E1441323F239D1C8F39E2D0E44249CC80F53BBDDF0D083CCCB7BDF4957FF03A722A119BF94D894180EE);
-  function p29142370413EC1F7A49F60B32ADBDF99B2C2500D(tx) {
+  p6.subsumedBy = pFull;
+  p6.itype = "read";
+  Object.freeze(p6);
+  function p4(tx) {
     var commit = true;
-    var as = tx.getActionSequence();
+    var as = tx.getReadSequence();
     var len = as.length;
     for(var i = 0;i < len;i++) {
       var node = as[i];
-      if(node.type === "read" && node.id === "innerHTML") {
+      if(node.id === "innerHTML") {
         commit = false;
         break
       }
@@ -125,8 +128,8 @@ var policy = function() {
       JAM.prevent(tx)
     }
   }
-  p29142370413EC1F7A49F60B32ADBDF99B2C2500D.subsumedBy = pFull;
-  Object.freeze(p29142370413EC1F7A49F60B32ADBDF99B2C2500D);
-  return{p60BC769F7FE69A3D16A7359015C19BE54348D76E510AD27954A2595FF3D635DFFE9522029FA0A17D643B7C49AB8946BE23E67884C2A1A1A95BFE0CBF:p60BC769F7FE69A3D16A7359015C19BE54348D76E510AD27954A2595FF3D635DFFE9522029FA0A17D643B7C49AB8946BE23E67884C2A1A1A95BFE0CBF, pC51DDFC22C8571C0FE27B1BC0B7671157BDF992D:pC51DDFC22C8571C0FE27B1BC0B7671157BDF992D, p02BEB9B7B2358FCBE710EE3EF4F98E5DB6FF7E1441323F239D1C8F39E2D0E44249CC80F53BBDDF0D083CCCB7BDF4957FF03A722A119BF94D894180EE:p02BEB9B7B2358FCBE710EE3EF4F98E5DB6FF7E1441323F239D1C8F39E2D0E44249CC80F53BBDDF0D083CCCB7BDF4957FF03A722A119BF94D894180EE, 
-  p29142370413EC1F7A49F60B32ADBDF99B2C2500D:p29142370413EC1F7A49F60B32ADBDF99B2C2500D, pFull:pFull}
+  p4.subsumedBy = pFull;
+  p4.itype = "read";
+  Object.freeze(p4);
+  return{p8:p8, p2:p2, p6:p6, p4:p4, pFull:pFull, woven:true}
 }()

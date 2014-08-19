@@ -2,11 +2,11 @@ var policy = function() {
   var _HTMLDocument_prototype_getElementById = HTMLDocument.prototype.getElementById;
   function pFull(tx) {
     var commit = true;
-    var as = tx.getActionSequence();
+    var as = tx.getCallSequence();
     var len = as.length;
     for(var i = 0;i < len;i++) {
       var node = as[i];
-      if(node.type === "call" && JAM.identical(node.value, _HTMLDocument_prototype_getElementById)) {
+      if(JAM.identical(node.value, _HTMLDocument_prototype_getElementById)) {
         commit = false;
         break
       }
@@ -18,14 +18,15 @@ var policy = function() {
     }
   }
   pFull.subsumedBy = pFull;
+  pFull.itype = "call";
   Object.freeze(pFull);
-  function pD5795DFA086639893C72614AC0D6E60E856B441D(tx) {
+  function p1(tx) {
     var commit = true;
-    var as = tx.getActionSequence();
+    var as = tx.getCallSequence();
     var len = as.length;
     for(var i = 0;i < len;i++) {
       var node = as[i];
-      if(node.type === "call" && JAM.identical(node.value, _HTMLDocument_prototype_getElementById)) {
+      if(JAM.identical(node.value, _HTMLDocument_prototype_getElementById)) {
         commit = false;
         break
       }
@@ -36,7 +37,8 @@ var policy = function() {
       JAM.prevent(tx)
     }
   }
-  pD5795DFA086639893C72614AC0D6E60E856B441D.subsumedBy = pFull;
-  Object.freeze(pD5795DFA086639893C72614AC0D6E60E856B441D);
-  return{pD5795DFA086639893C72614AC0D6E60E856B441D:pD5795DFA086639893C72614AC0D6E60E856B441D, pFull:pFull}
+  p1.subsumedBy = pFull;
+  p1.itype = "call";
+  Object.freeze(p1);
+  return{p1:p1, pFull:pFull, woven:true}
 }()

@@ -2,15 +2,15 @@ var policy = function() {
   var states = [true, false];
   function pFull(tx) {
     var commit = true;
-    var as = tx.getActionSequence();
+    var as = tx.getWriteSequence();
     var len = as.length;
     for(var i = 0;i < len;i++) {
       var node = as[i];
-      if(states[1] && node.type === "write" && node.id === "x" && JAM.identical(node.value, 2)) {
+      if(states[1] && node.id === "x" && JAM.identical(node.value, 2)) {
         commit = false;
         break
       }
-      if(!states[1] && node.type === "write" && node.id === "x" && JAM.identical(node.value, 2)) {
+      if(!states[1] && node.id === "x" && JAM.identical(node.value, 2)) {
         states[1] = true
       }
     }
@@ -21,18 +21,19 @@ var policy = function() {
     }
   }
   pFull.subsumedBy = pFull;
+  pFull.itype = "write";
   Object.freeze(pFull);
-  function p8DB99BF1222CB7BDCA5A549F4993340663A66BAA2CFB7BC756B67B61B77FE6A02E61FD2CA839CC5F(tx) {
+  function p2(tx) {
     var commit = true;
-    var as = tx.getActionSequence();
+    var as = tx.getWriteSequence();
     var len = as.length;
     for(var i = 0;i < len;i++) {
       var node = as[i];
-      if(states[1] && node.type === "write" && node.id === "x" && JAM.identical(node.value, 2)) {
+      if(states[1] && node.id === "x" && JAM.identical(node.value, 2)) {
         commit = false;
         break
       }
-      if(!states[1] && node.type === "write" && node.id === "x" && JAM.identical(node.value, 2)) {
+      if(!states[1] && node.id === "x" && JAM.identical(node.value, 2)) {
         states[1] = true
       }
     }
@@ -42,7 +43,8 @@ var policy = function() {
       JAM.prevent(tx)
     }
   }
-  p8DB99BF1222CB7BDCA5A549F4993340663A66BAA2CFB7BC756B67B61B77FE6A02E61FD2CA839CC5F.subsumedBy = pFull;
-  Object.freeze(p8DB99BF1222CB7BDCA5A549F4993340663A66BAA2CFB7BC756B67B61B77FE6A02E61FD2CA839CC5F);
-  return{p8DB99BF1222CB7BDCA5A549F4993340663A66BAA2CFB7BC756B67B61B77FE6A02E61FD2CA839CC5F:p8DB99BF1222CB7BDCA5A549F4993340663A66BAA2CFB7BC756B67B61B77FE6A02E61FD2CA839CC5F, pFull:pFull}
+  p2.subsumedBy = pFull;
+  p2.itype = "write";
+  Object.freeze(p2);
+  return{p2:p2, pFull:pFull, woven:true}
 }()

@@ -4,11 +4,11 @@ var policy = function() {
   var __RegExp_prototype_test_call_bind__RegExp_prototype_test_ = _RegExp_prototype_test.call.bind(_RegExp_prototype_test);
   function pFull(tx) {
     var commit = true;
-    var as = tx.getActionSequence();
+    var as = tx.getCallSequence();
     var len = as.length;
     for(var i = 0;i < len;i++) {
       var node = as[i];
-      if(node.type === "call" && JAM.identical(node.value, _HTMLImageElement_prototype_setAttribute) && JAM.identical(node.args[0], "src") && node.argc > 1 && __RegExp_prototype_test_call_bind__RegExp_prototype_test_(/^\s*(http|ftp)/i, node.args[1])) {
+      if(JAM.identical(node.value, _HTMLImageElement_prototype_setAttribute) && JAM.identical(node.args[0], "src") && node.argc > 1 && __RegExp_prototype_test_call_bind__RegExp_prototype_test_(/^\s*(http|ftp)/i, node.args[1])) {
         commit = false;
         break
       }
@@ -20,14 +20,15 @@ var policy = function() {
     }
   }
   pFull.subsumedBy = pFull;
+  pFull.itype = "call";
   Object.freeze(pFull);
-  function p893C21256E1ACD70D57A0BEE1B36844C20B1C751(tx) {
+  function p1(tx) {
     var commit = true;
-    var as = tx.getActionSequence();
+    var as = tx.getCallSequence();
     var len = as.length;
     for(var i = 0;i < len;i++) {
       var node = as[i];
-      if(node.type === "call" && JAM.identical(node.value, _HTMLImageElement_prototype_setAttribute) && JAM.identical(node.args[0], "src") && node.argc > 1 && __RegExp_prototype_test_call_bind__RegExp_prototype_test_(/^\s*(http|ftp)/i, node.args[1])) {
+      if(JAM.identical(node.value, _HTMLImageElement_prototype_setAttribute) && JAM.identical(node.args[0], "src") && node.argc > 1 && __RegExp_prototype_test_call_bind__RegExp_prototype_test_(/^\s*(http|ftp)/i, node.args[1])) {
         commit = false;
         break
       }
@@ -38,7 +39,8 @@ var policy = function() {
       JAM.prevent(tx)
     }
   }
-  p893C21256E1ACD70D57A0BEE1B36844C20B1C751.subsumedBy = pFull;
-  Object.freeze(p893C21256E1ACD70D57A0BEE1B36844C20B1C751);
-  return{p893C21256E1ACD70D57A0BEE1B36844C20B1C751:p893C21256E1ACD70D57A0BEE1B36844C20B1C751, pFull:pFull}
+  p1.subsumedBy = pFull;
+  p1.itype = "call";
+  Object.freeze(p1);
+  return{p1:p1, pFull:pFull, woven:true}
 }()

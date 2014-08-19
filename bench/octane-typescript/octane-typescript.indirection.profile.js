@@ -47,10 +47,10 @@ function v1409() {
       }
       var v1424 = v12378;
       for(;v1424;) {
-        introspect(JAM.policy.pC545F199BE443C5FB0DC91C55134FB746FD8B074) {
+        introspect(JAM.policy.p1) {
           var v1418 = oldFiles[i$$149]
         }
-        introspect(JAM.policy.pC545F199BE443C5FB0DC91C55134FB746FD8B074) {
+        introspect(JAM.policy.p1) {
           var v1419 = newFiles[j$$21]
         }
         var compareResult = v1418.localeCompare(v1419);
@@ -61,13 +61,13 @@ function v1409() {
         }else {
           var v1422 = compareResult < 0;
           if(v1422) {
-            introspect(JAM.policy.pC545F199BE443C5FB0DC91C55134FB746FD8B074) {
+            introspect(JAM.policy.p1) {
               var v1420 = oldFiles[i$$149]
             }
             removeWatcher(v1420);
             i$$149 = i$$149 + 1
           }else {
-            introspect(JAM.policy.pC545F199BE443C5FB0DC91C55134FB746FD8B074) {
+            introspect(JAM.policy.p1) {
               var v1421 = newFiles[j$$21]
             }
             addWatcher(v1421);
@@ -86,7 +86,7 @@ function v1409() {
       var v12380 = oldFiles.length;
       var v1426 = k$$15 < v12380;
       for(;v1426;) {
-        introspect(JAM.policy.pC545F199BE443C5FB0DC91C55134FB746FD8B074) {
+        introspect(JAM.policy.p1) {
           var v1425 = oldFiles[k$$15]
         }
         removeWatcher(v1425);
@@ -98,7 +98,7 @@ function v1409() {
       var v12382 = newFiles.length;
       var v1428 = k$$15 < v12382;
       for(;v1428;) {
-        introspect(JAM.policy.pC545F199BE443C5FB0DC91C55134FB746FD8B074) {
+        introspect(JAM.policy.p1) {
           var v1427 = newFiles[k$$15]
         }
         addWatcher(v1427);
@@ -133,11 +133,11 @@ function v1409() {
       return
     }
     function removeWatcher(filename$$14) {
-      introspect(JAM.policy.pC545F199BE443C5FB0DC91C55134FB746FD8B074) {
+      introspect(JAM.policy.p1) {
         var v1436 = watchers[filename$$14]
       }
       if(v1436) {
-        introspect(JAM.policy.pC545F199BE443C5FB0DC91C55134FB746FD8B074) {
+        introspect(JAM.policy.p1) {
           var v1435 = watchers[filename$$14]
         }
         v1435.close();
@@ -148,7 +148,7 @@ function v1409() {
       return
     }
     function addWatcher(filename$$13) {
-      introspect(JAM.policy.pC545F199BE443C5FB0DC91C55134FB746FD8B074) {
+      introspect(JAM.policy.p1) {
         var v12387 = watchers[filename$$13]
       }
       var v1438 = !v12387;
@@ -462,7 +462,7 @@ function v1409() {
     for(;v1523;) {
       var v1520 = TypeScript.SourceUnit;
       var v12404 = opts$$1.unnamed;
-      introspect(JAM.policy.pC545F199BE443C5FB0DC91C55134FB746FD8B074) {
+      introspect(JAM.policy.p1) {
         var v1521 = v12404[i$$148]
       }
       code$$12 = JAM.new(v1520, [v1521, null]);
@@ -560,7 +560,7 @@ function v1409() {
     for(;v1542;) {
       var v12418 = this.compilationEnvironment;
       var v1536 = v12418.code;
-      introspect(JAM.policy.pC545F199BE443C5FB0DC91C55134FB746FD8B074) {
+      introspect(JAM.policy.p1) {
         var unit = v1536[i$$147]
       }
       var outputFileName = unit.path;
@@ -599,7 +599,7 @@ function v1409() {
       v1544.hasErrors = true;
       var v18844 = _this$$22.resolvedEnvironment;
       var v12421 = v18844.code;
-      introspect(JAM.policy.pC545F199BE443C5FB0DC91C55134FB746FD8B074) {
+      introspect(JAM.policy.p1) {
         var v1545 = v12421[unitIndex$$15]
       }
       var fname$$9 = v1545.path;
@@ -717,7 +717,7 @@ function v1409() {
       if(v1576) {
         var v18851 = this.resolvedEnvironment;
         var v12440 = v18851.code;
-        introspect(JAM.policy.pC545F199BE443C5FB0DC91C55134FB746FD8B074) {
+        introspect(JAM.policy.p1) {
           var v1575 = v12440[iCode]
         }
         consumeUnit(v1575, false)
@@ -775,7 +775,7 @@ function v1409() {
     for(;v1596;) {
       var v25743 = this.compilationEnvironment;
       var v24782 = v25743.code;
-      introspect(JAM.policy.pC545F199BE443C5FB0DC91C55134FB746FD8B074) {
+      introspect(JAM.policy.p1) {
         var v22838 = v24782[i$$146]
       }
       var v18855 = v22838.path;
@@ -785,7 +785,7 @@ function v1409() {
         this.hasResolveErrors = true;
         var v18856 = this.compilationEnvironment;
         var v12449 = v18856.code;
-        introspect(JAM.policy.pC545F199BE443C5FB0DC91C55134FB746FD8B074) {
+        introspect(JAM.policy.p1) {
           var v1589 = v12449[i$$146]
         }
         var path$$45 = v1589.path;
@@ -863,7 +863,7 @@ function v1370() {
     function v1368(path$$44, code$$10) {
       var pathId = JAM.call(_this$$21.getPathIdentifier, _this$$21, [path$$44]);
       var v18860 = _this$$21.resolvedPaths;
-      introspect(JAM.policy.pC545F199BE443C5FB0DC91C55134FB746FD8B074) {
+      introspect(JAM.policy.p1) {
         var v12456 = v18860[pathId]
       }
       var v1609 = !v12456;
@@ -905,7 +905,7 @@ function v1370() {
     for(;v1619;) {
       var v12459 = preEnv.ioHost;
       var v22843 = preEnv.code;
-      introspect(JAM.policy.pC545F199BE443C5FB0DC91C55134FB746FD8B074) {
+      introspect(JAM.policy.p1) {
         var v18863 = v22843[i$$145]
       }
       var v12460 = v18863.path;
@@ -913,7 +913,7 @@ function v1370() {
       path$$43 = JAM.call(TypeScript.switchToForwardSlashes, TypeScript, [v1616]);
       var v1617 = this.pathMap;
       var v18864 = preEnv.code;
-      introspect(JAM.policy.pC545F199BE443C5FB0DC91C55134FB746FD8B074) {
+      introspect(JAM.policy.p1) {
         var v12461 = v18864[i$$145]
       }
       var v1618 = v12461.path;
@@ -927,11 +927,11 @@ function v1370() {
   function v1367(path$$42) {
     var v12462 = this.resolvedPaths;
     var v22844 = this.pathMap;
-    introspect(JAM.policy.pC545F199BE443C5FB0DC91C55134FB746FD8B074) {
+    introspect(JAM.policy.p1) {
       var v18865 = v22844[path$$42]
     }
     var v12463 = JAM.call(this.getPathIdentifier, this, [v18865]);
-    introspect(JAM.policy.pC545F199BE443C5FB0DC91C55134FB746FD8B074) {
+    introspect(JAM.policy.p1) {
       var v1620 = v12462[v12463]
     }
     return v1620 != undefined
@@ -969,7 +969,7 @@ function v1365() {
     for(;v1635;) {
       var v1625 = position$$5;
       position$$5 = position$$5 + 1;
-      introspect(JAM.policy.pC545F199BE443C5FB0DC91C55134FB746FD8B074) {
+      introspect(JAM.policy.p1) {
         var current$$4 = args$$19[v1625]
       }
       var match$$3 = current$$4.match(/^(--?|@)(.*)/);
@@ -1021,7 +1021,7 @@ function v1365() {
     var v12472 = tokens.length;
     var v1645 = position$$4 < v12472;
     for(;v1645;) {
-      introspect(JAM.policy.pC545F199BE443C5FB0DC91C55134FB746FD8B074) {
+      introspect(JAM.policy.p1) {
         var token$$7 = tokens[position$$4]
       }
       var v1644 = token$$7 === '"';
@@ -1032,7 +1032,7 @@ function v1365() {
         var v1636 = position$$4;
         position$$4 = position$$4 + 1;
         tokens[v1636];
-        introspect(JAM.policy.pC545F199BE443C5FB0DC91C55134FB746FD8B074) {
+        introspect(JAM.policy.p1) {
           var token$$inline_37 = tokens[position$$4]
         }
         var v12473 = token$$inline_37;
@@ -1157,7 +1157,7 @@ function v1365() {
     var v1670 = i$$144 < v12478;
     for(;v1670;) {
       var v1663 = this.options;
-      introspect(JAM.policy.pC545F199BE443C5FB0DC91C55134FB746FD8B074) {
+      introspect(JAM.policy.p1) {
         var option = v1663[i$$144]
       }
       var v1664 = option.experimental;
@@ -1218,11 +1218,11 @@ function v1365() {
     var v1674 = i$$144 < v12488;
     for(;v1674;) {
       var v1672 = this.host;
-      introspect(JAM.policy.pC545F199BE443C5FB0DC91C55134FB746FD8B074) {
+      introspect(JAM.policy.p1) {
         var v22848 = output$$1[i$$144]
       }
       var v18873 = v22848[0];
-      introspect(JAM.policy.pC545F199BE443C5FB0DC91C55134FB746FD8B074) {
+      introspect(JAM.policy.p1) {
         var v26620 = output$$1[i$$144]
       }
       var v26509 = v26620[0];
@@ -1232,7 +1232,7 @@ function v1365() {
       var v22849 = new Array(v24787);
       var v18874 = v22849.join(" ");
       var v12489 = v18873 + v18874;
-      introspect(JAM.policy.pC545F199BE443C5FB0DC91C55134FB746FD8B074) {
+      introspect(JAM.policy.p1) {
         var v18875 = output$$1[i$$144]
       }
       var v12490 = v18875[1];
@@ -1251,7 +1251,7 @@ function v1365() {
     var v1677 = i$$143 < v12492;
     for(;v1677;) {
       var v24788 = this.options;
-      introspect(JAM.policy.pC545F199BE443C5FB0DC91C55134FB746FD8B074) {
+      introspect(JAM.policy.p1) {
         var v22850 = v24788[i$$143]
       }
       var v18877 = v22850.short;
@@ -1259,7 +1259,7 @@ function v1365() {
       var v18879 = !v12493;
       if(v18879) {
         var v24789 = this.options;
-        introspect(JAM.policy.pC545F199BE443C5FB0DC91C55134FB746FD8B074) {
+        introspect(JAM.policy.p1) {
           var v22851 = v24789[i$$143]
         }
         var v18878 = v22851.name;
@@ -1268,7 +1268,7 @@ function v1365() {
       var v1676 = v12493;
       if(v1676) {
         var v1675 = this.options;
-        introspect(JAM.policy.pC545F199BE443C5FB0DC91C55134FB746FD8B074) {
+        introspect(JAM.policy.p1) {
           return v1675[i$$143]
         }
       }
@@ -1746,7 +1746,7 @@ function v1357() {
         var v1744 = i$$142 < v12526;
         for(;v1744;) {
           var v12527 = folder$$2 + "/";
-          introspect(JAM.policy.pC545F199BE443C5FB0DC91C55134FB746FD8B074) {
+          introspect(JAM.policy.p1) {
             var v12528 = files[i$$142]
           }
           var v1739 = v12527 + v12528;
@@ -1758,7 +1758,7 @@ function v1357() {
           var v1743 = v12529;
           if(v1743) {
             var v18894 = folder$$2 + "/";
-            introspect(JAM.policy.pC545F199BE443C5FB0DC91C55134FB746FD8B074) {
+            introspect(JAM.policy.p1) {
               var v18895 = files[i$$142]
             }
             var v12530 = v18894 + v18895;
@@ -1770,7 +1770,7 @@ function v1357() {
               var v18896 = !spec$$1;
               var v22859 = !v18896;
               if(v22859) {
-                introspect(JAM.policy.pC545F199BE443C5FB0DC91C55134FB746FD8B074) {
+                introspect(JAM.policy.p1) {
                   var v22858 = files[i$$142]
                 }
                 v18896 = v22858.match(spec$$1)
@@ -1780,7 +1780,7 @@ function v1357() {
             var v1742 = v12531;
             if(v1742) {
               var v12532 = folder$$2 + "/";
-              introspect(JAM.policy.pC545F199BE443C5FB0DC91C55134FB746FD8B074) {
+              introspect(JAM.policy.p1) {
                 var v12533 = files[i$$142]
               }
               var v1741 = v12532 + v12533;
@@ -1867,7 +1867,7 @@ function v1357() {
               var v12540 = buffer$$8.length;
               var v1755 = v12539 < v12540;
               for(;v1755;) {
-                introspect(JAM.policy.pC545F199BE443C5FB0DC91C55134FB746FD8B074) {
+                introspect(JAM.policy.p1) {
                   var temp$$17 = buffer$$8[i$$141]
                 }
                 var v1753 = i$$141 + 1;
@@ -2242,7 +2242,7 @@ function v1288(TypeScript$$32) {
       var v12557 = allNames.length;
       var v1818 = i$$138 < v12557;
       for(;v1818;) {
-        introspect(JAM.policy.pC545F199BE443C5FB0DC91C55134FB746FD8B074) {
+        introspect(JAM.policy.p1) {
           var name$$90 = allNames[i$$138]
         }
         var v1810 = enclosingScopeContext$$5.publicsOnly;
@@ -2328,7 +2328,7 @@ function v1288(TypeScript$$32) {
       var v12565 = allSymbolNames.length;
       var v1823 = i$$137 < v12565;
       for(;v1823;) {
-        introspect(JAM.policy.pC545F199BE443C5FB0DC91C55134FB746FD8B074) {
+        introspect(JAM.policy.p1) {
           var name$$89 = allSymbolNames[i$$137]
         }
         var v18905 = TypeScript$$32.globalId;
@@ -2433,7 +2433,7 @@ function v1288(TypeScript$$32) {
       var len$$68 = scripts.length;
       var v1840 = i$$136 < len$$68;
       for(;v1840;) {
-        introspect(JAM.policy.pC545F199BE443C5FB0DC91C55134FB746FD8B074) {
+        introspect(JAM.policy.p1) {
           var script$$38 = scripts[i$$136]
         }
         var v1839 = JAM.call(this.outputScriptToUTF8, this, [script$$38]);
@@ -2473,7 +2473,7 @@ function v1288(TypeScript$$32) {
       for(;v1856;) {
         var v12579 = this.scripts;
         var v1843 = v12579.members;
-        introspect(JAM.policy.pC545F199BE443C5FB0DC91C55134FB746FD8B074) {
+        introspect(JAM.policy.p1) {
           var script$$36 = v1843[i$$135]
         }
         var v18909 = this.emitSettings;
@@ -2485,7 +2485,7 @@ function v1288(TypeScript$$32) {
         var v1849 = v12580;
         if(v1849) {
           var v12581 = this.units;
-          introspect(JAM.policy.pC545F199BE443C5FB0DC91C55134FB746FD8B074) {
+          introspect(JAM.policy.p1) {
             var v1844 = v12581[i$$135]
           }
           var fname$$8 = v1844.filename;
@@ -2560,7 +2560,7 @@ function v1288(TypeScript$$32) {
       for(;v1871;) {
         var v12588 = this.scripts;
         var v1868 = v12588.members;
-        introspect(JAM.policy.pC545F199BE443C5FB0DC91C55134FB746FD8B074) {
+        introspect(JAM.policy.p1) {
           var script$$35 = v1868[i$$134]
         }
         var v1869 = this.typeChecker;
@@ -2584,7 +2584,7 @@ function v1288(TypeScript$$32) {
       for(;v1876;) {
         var v12591 = this.scripts;
         var v1873 = v12591.members;
-        introspect(JAM.policy.pC545F199BE443C5FB0DC91C55134FB746FD8B074) {
+        introspect(JAM.policy.p1) {
           var script$$34 = v1873[i$$133]
         }
         var v18913 = this.emitSettings;
@@ -2712,7 +2712,7 @@ function v1288(TypeScript$$32) {
       for(;v1902;) {
         var v12610 = this.scripts;
         var v1899 = v12610.members;
-        introspect(JAM.policy.pC545F199BE443C5FB0DC91C55134FB746FD8B074) {
+        introspect(JAM.policy.p1) {
           var script$$32 = v1899[i$$132]
         }
         var v18920 = this.emitSettings;
@@ -2889,7 +2889,7 @@ function v1288(TypeScript$$32) {
       for(;v1941;) {
         var v12629 = this.scripts;
         var v1932 = v12629.members;
-        introspect(JAM.policy.pC545F199BE443C5FB0DC91C55134FB746FD8B074) {
+        introspect(JAM.policy.p1) {
           var script$$28 = v1932[i$$131]
         }
         var v12630 = this.emitSettings;
@@ -2912,10 +2912,10 @@ function v1288(TypeScript$$32) {
             }
             var v1937 = v12631;
             for(;v1937;) {
-              introspect(JAM.policy.pC545F199BE443C5FB0DC91C55134FB746FD8B074) {
+              introspect(JAM.policy.p1) {
                 var v12632 = commonComponents[j$$20]
               }
-              introspect(JAM.policy.pC545F199BE443C5FB0DC91C55134FB746FD8B074) {
+              introspect(JAM.policy.p1) {
                 var v12633 = fileComponents[j$$20]
               }
               var v1936 = v12632 != v12633;
@@ -2980,7 +2980,7 @@ function v1288(TypeScript$$32) {
       for(;v1948;) {
         var v12639 = this.scripts;
         var v1946 = v12639.members;
-        introspect(JAM.policy.pC545F199BE443C5FB0DC91C55134FB746FD8B074) {
+        introspect(JAM.policy.p1) {
           var script$$27 = v1946[i$$130]
         }
         var v18942 = script$$27.isDeclareFile;
@@ -3032,7 +3032,7 @@ function v1288(TypeScript$$32) {
         for(;v1956;) {
           var v12644 = _this$$19.scripts;
           var v1953 = v12644.members;
-          introspect(JAM.policy.pC545F199BE443C5FB0DC91C55134FB746FD8B074) {
+          introspect(JAM.policy.p1) {
             var script$$26 = v1953[i$$129]
           }
           var v1954 = script$$26.isResident;
@@ -3362,7 +3362,7 @@ function v1288(TypeScript$$32) {
         var v2034 = i$$127 < len$$59;
         for(;v2034;) {
           var v22878 = _this$$16.units;
-          introspect(JAM.policy.pC545F199BE443C5FB0DC91C55134FB746FD8B074) {
+          introspect(JAM.policy.p1) {
             var v18960 = v22878[i$$127]
           }
           var v12692 = v18960.filename;
@@ -3370,7 +3370,7 @@ function v1288(TypeScript$$32) {
           if(v2033) {
             var v22879 = _this$$16.scripts;
             var v18961 = v22879.members;
-            introspect(JAM.policy.pC545F199BE443C5FB0DC91C55134FB746FD8B074) {
+            introspect(JAM.policy.p1) {
               var v12693 = v18961[i$$127]
             }
             var v2026 = v12693.isResident;
@@ -3392,7 +3392,7 @@ function v1288(TypeScript$$32) {
             }
             var v12694 = _this$$16.scripts;
             var v2030 = v12694.members;
-            introspect(JAM.policy.pC545F199BE443C5FB0DC91C55134FB746FD8B074) {
+            introspect(JAM.policy.p1) {
               var oldScript = v2030[i$$127]
             }
             var v2031 = _this$$16.parser;
@@ -3436,7 +3436,7 @@ function v1288(TypeScript$$32) {
           var v2049 = i$$126 < len$$58;
           for(;v2049;) {
             var v2042 = updateResult$$2.parseErrors;
-            introspect(JAM.policy.pC545F199BE443C5FB0DC91C55134FB746FD8B074) {
+            introspect(JAM.policy.p1) {
               var e$$10 = v2042[i$$126]
             }
             var v12699 = this.parser;
@@ -3834,7 +3834,7 @@ function v1233(TypeScript$$31) {
           var v2144 = i$$125 < v12731;
           for(;v2144;) {
             var v12732 = script$$22.referencedFiles;
-            introspect(JAM.policy.pC545F199BE443C5FB0DC91C55134FB746FD8B074) {
+            introspect(JAM.policy.p1) {
               var v2137 = v12732[i$$125]
             }
             var referencePath$$1 = v2137.path;
@@ -3847,7 +3847,7 @@ function v1233(TypeScript$$31) {
               declareFileName$$1 = JAM.call(v2138.mapOutputFileName, v2138, [referencePath$$1, v2139])
             }else {
               var v18974 = script$$22.referencedFiles;
-              introspect(JAM.policy.pC545F199BE443C5FB0DC91C55134FB746FD8B074) {
+              introspect(JAM.policy.p1) {
                 var v12734 = v18974[i$$125]
               }
               var v2140 = v12734.path;
@@ -4083,7 +4083,7 @@ function v1233(TypeScript$$31) {
       for(;v2194;) {
         var v12765 = moduleDecl$$8.members;
         var v2188 = v12765.members;
-        introspect(JAM.policy.pC545F199BE443C5FB0DC91C55134FB746FD8B074) {
+        introspect(JAM.policy.p1) {
           var memberDecl$$1 = v2188[j$$19]
         }
         var v12766 = memberDecl$$1.nodeType;
@@ -4240,7 +4240,7 @@ function v1233(TypeScript$$31) {
         for(;v2238;) {
           var v12781 = funcDecl$$37.arguments;
           var v2229 = v12781.members;
-          introspect(JAM.policy.pC545F199BE443C5FB0DC91C55134FB746FD8B074) {
+          introspect(JAM.policy.p1) {
             var argDecl$$4 = v2229[i$$124]
           }
           var v12782 = argDecl$$4.varFlags;
@@ -4330,7 +4330,7 @@ function v1233(TypeScript$$31) {
         var v2254 = i$$123 < basesLen$$3;
         for(;v2254;) {
           var v2250 = bases$$8.members;
-          introspect(JAM.policy.pC545F199BE443C5FB0DC91C55134FB746FD8B074) {
+          introspect(JAM.policy.p1) {
             var baseExpr$$3 = v2250[i$$123]
           }
           var v2251 = baseExpr$$3.type;
@@ -4510,7 +4510,7 @@ function v1233(TypeScript$$31) {
         for(;v2291;) {
           var v12806 = funcDecl$$35.arguments;
           var v2288 = v12806.members;
-          introspect(JAM.policy.pC545F199BE443C5FB0DC91C55134FB746FD8B074) {
+          introspect(JAM.policy.p1) {
             var argDecl$$3 = v2288[i$$122]
           }
           JAM.call(this.emitArgDecl, this, [argDecl$$3, funcDecl$$35]);
@@ -4532,7 +4532,7 @@ function v1233(TypeScript$$31) {
         var v19019 = v22904.members;
         var v12809 = v19019.length;
         var v2294 = v12809 - 1;
-        introspect(JAM.policy.pC545F199BE443C5FB0DC91C55134FB746FD8B074) {
+        introspect(JAM.policy.p1) {
           var lastArg$$2 = v2293[v2294]
         }
         var v22905 = funcDecl$$35.arguments;
@@ -4768,7 +4768,7 @@ function v1233(TypeScript$$31) {
         var v12838 = declComments.length;
         var v2344 = i$$121 < v12838;
         for(;v2344;) {
-          introspect(JAM.policy.pC545F199BE443C5FB0DC91C55134FB746FD8B074) {
+          introspect(JAM.policy.p1) {
             var v2343 = declComments[i$$121]
           }
           JAM.call(this.emitComment, this, [v2343]);
@@ -4820,7 +4820,7 @@ function v1233(TypeScript$$31) {
         JAM.call(v2354.WriteLine, v2354, [""]);
         this.emitIndent();
         var v2355 = this.declFile;
-        introspect(JAM.policy.pC545F199BE443C5FB0DC91C55134FB746FD8B074) {
+        introspect(JAM.policy.p1) {
           var v2356 = text$$26[i$$120]
         }
         JAM.call(v2355.Write, v2355, [v2356]);
@@ -4930,7 +4930,7 @@ function v1233(TypeScript$$31) {
         var v2381 = index$$62 < v12851;
         for(;v2381;) {
           var v12852 = ar$$1.entries;
-          introspect(JAM.policy.pC545F199BE443C5FB0DC91C55134FB746FD8B074) {
+          introspect(JAM.policy.p1) {
             var v2378 = v12852[index$$62]
           }
           JAM.call(this.emitTypeNamesMember, this, [v2378, emitIndent]);
@@ -5213,7 +5213,7 @@ function v1233(TypeScript$$31) {
       var v19057 = this.declarationContainerStack;
       var v12882 = v19057.length;
       var v2426 = v12882 - 1;
-      introspect(JAM.policy.pC545F199BE443C5FB0DC91C55134FB746FD8B074) {
+      introspect(JAM.policy.p1) {
         return v2425[v2426]
       }
     }
@@ -5369,7 +5369,7 @@ function v1195(TypeScript$$30) {
           var v12885 = comments$$13.length;
           var v2471 = i$$119 < v12885;
           for(;v2471;) {
-            introspect(JAM.policy.pC545F199BE443C5FB0DC91C55134FB746FD8B074) {
+            introspect(JAM.policy.p1) {
               var v2470 = comments$$13[i$$119]
             }
             applyDelta(v2470);
@@ -5435,7 +5435,7 @@ function v1195(TypeScript$$30) {
       var len2 = lineMap2.length;
       var v2489 = i1 < len1;
       for(;v2489;) {
-        introspect(JAM.policy.pC545F199BE443C5FB0DC91C55134FB746FD8B074) {
+        introspect(JAM.policy.p1) {
           var v12892 = lineMap1[i1]
         }
         var v12893 = editRange$$3.minChar;
@@ -5443,13 +5443,13 @@ function v1195(TypeScript$$30) {
         if(v2488) {
           i1 = i1 + 1
         }else {
-          introspect(JAM.policy.pC545F199BE443C5FB0DC91C55134FB746FD8B074) {
+          introspect(JAM.policy.p1) {
             var v12894 = lineMap1[i1]
           }
           var v12895 = editRange$$3.limChar;
           var v2487 = v12894 >= v12895;
           if(v2487) {
-            introspect(JAM.policy.pC545F199BE443C5FB0DC91C55134FB746FD8B074) {
+            introspect(JAM.policy.p1) {
               var v12896 = lineMap1[i1]
             }
             var v12897 = editRange$$3.delta;
@@ -5458,7 +5458,7 @@ function v1195(TypeScript$$30) {
           }else {
             var v2486 = i2 < len2;
             if(v2486) {
-              introspect(JAM.policy.pC545F199BE443C5FB0DC91C55134FB746FD8B074) {
+              introspect(JAM.policy.p1) {
                 var v12898 = lineMap2[i2]
               }
               var v12899 = editRange$$3.minChar;
@@ -5478,10 +5478,10 @@ function v1195(TypeScript$$30) {
       var v2496 = i2 < len2;
       if(v2496) {
         var v19065 = len1 - 1;
-        introspect(JAM.policy.pC545F199BE443C5FB0DC91C55134FB746FD8B074) {
+        introspect(JAM.policy.p1) {
           var v12900 = lineMap1[v19065]
         }
-        introspect(JAM.policy.pC545F199BE443C5FB0DC91C55134FB746FD8B074) {
+        introspect(JAM.policy.p1) {
           var v19066 = lineMap2[i2]
         }
         var v19067 = editRange$$3.minChar;
@@ -5495,10 +5495,10 @@ function v1195(TypeScript$$30) {
           }
           var v2492 = v12902;
           for(;v2492;) {
-            introspect(JAM.policy.pC545F199BE443C5FB0DC91C55134FB746FD8B074) {
+            introspect(JAM.policy.p1) {
               var v12903 = lineMap1[i1]
             }
-            introspect(JAM.policy.pC545F199BE443C5FB0DC91C55134FB746FD8B074) {
+            introspect(JAM.policy.p1) {
               var v19068 = lineMap2[i2]
             }
             var v19069 = editRange$$3.minChar;
@@ -5507,7 +5507,7 @@ function v1195(TypeScript$$30) {
             if(v2491) {
               i1 = i1 + 1
             }else {
-              introspect(JAM.policy.pC545F199BE443C5FB0DC91C55134FB746FD8B074) {
+              introspect(JAM.policy.p1) {
                 var v12905 = lineMap2[i2]
               }
               var v12906 = editRange$$3.minChar;
@@ -5526,7 +5526,7 @@ function v1195(TypeScript$$30) {
         }
         var v2495 = i2 < len2;
         for(;v2495;) {
-          introspect(JAM.policy.pC545F199BE443C5FB0DC91C55134FB746FD8B074) {
+          introspect(JAM.policy.p1) {
             var v12908 = lineMap2[i2]
           }
           var v12909 = editRange$$3.minChar;
@@ -5875,7 +5875,7 @@ function v1186(TypeScript$$29) {
       var len$$57 = opts.length;
       var v2589 = i$$118 < len$$57;
       for(;v2589;) {
-        introspect(JAM.policy.pC545F199BE443C5FB0DC91C55134FB746FD8B074) {
+        introspect(JAM.policy.p1) {
           var opt$$1 = opts[i$$118]
         }
         var val$$7 = true;
@@ -5901,7 +5901,7 @@ function v1186(TypeScript$$29) {
       return true
     }
     function v1181(opt, val$$6) {
-      introspect(JAM.policy.pC545F199BE443C5FB0DC91C55134FB746FD8B074) {
+      introspect(JAM.policy.p1) {
         var optExists = this[opt]
       }
       var v2590 = optExists !== undefined;
@@ -5968,7 +5968,7 @@ function v1186(TypeScript$$29) {
         var v12946 = settings$$2.length;
         var v2610 = i$$117 < v12946;
         for(;v2610;) {
-          introspect(JAM.policy.pC545F199BE443C5FB0DC91C55134FB746FD8B074) {
+          introspect(JAM.policy.p1) {
             var v2594 = settings$$2[i$$117]
           }
           var setting = v2594.split("=");
@@ -6288,7 +6288,7 @@ function v1180(TypeScript$$28) {
       }
       var absoluteModuleID = v2645;
       var v19108 = this.visited;
-      introspect(JAM.policy.pC545F199BE443C5FB0DC91C55134FB746FD8B074) {
+      introspect(JAM.policy.p1) {
         var v12980 = v19108[absoluteModuleID]
       }
       var v2690 = !v12980;
@@ -6427,7 +6427,7 @@ function v1180(TypeScript$$28) {
           var v2685 = i$$116 < v12987;
           for(;v2685;) {
             var v2681 = preProcessedFileInfo.referencedFiles;
-            introspect(JAM.policy.pC545F199BE443C5FB0DC91C55134FB746FD8B074) {
+            introspect(JAM.policy.p1) {
               var referencedFile = v2681[i$$116]
             }
             var v2682;
@@ -6464,7 +6464,7 @@ function v1180(TypeScript$$28) {
           var v2687 = i$$116 < v12993;
           for(;v2687;) {
             var v19117 = preProcessedFileInfo.importedFiles;
-            introspect(JAM.policy.pC545F199BE443C5FB0DC91C55134FB746FD8B074) {
+            introspect(JAM.policy.p1) {
               var v12994 = v19117[i$$116]
             }
             var v2686 = v12994.path;
@@ -6728,7 +6728,7 @@ function v1173(TypeScript$$27) {
       if(quote$$1) {
         var v24825 = components.length;
         var v22948 = v24825 - 1;
-        introspect(JAM.policy.pC545F199BE443C5FB0DC91C55134FB746FD8B074) {
+        introspect(JAM.policy.p1) {
           var v19136 = components[v22948]
         }
         v13018 = quoteStr(v19136)
@@ -6759,10 +6759,10 @@ function v1173(TypeScript$$27) {
     }
     var v2717 = v13020;
     for(;v2717;) {
-      introspect(JAM.policy.pC545F199BE443C5FB0DC91C55134FB746FD8B074) {
+      introspect(JAM.policy.p1) {
         var v13021 = fixedModComponents[joinStartIndex]
       }
-      introspect(JAM.policy.pC545F199BE443C5FB0DC91C55134FB746FD8B074) {
+      introspect(JAM.policy.p1) {
         var v13022 = modComponents[joinStartIndex]
       }
       var v2716 = v13021 != v13022;
@@ -6786,7 +6786,7 @@ function v1173(TypeScript$$27) {
       var v13024 = fixedModComponents.length;
       var v2720 = joinStartIndex < v13024;
       for(;v2720;) {
-        introspect(JAM.policy.pC545F199BE443C5FB0DC91C55134FB746FD8B074) {
+        introspect(JAM.policy.p1) {
           var v13025 = fixedModComponents[joinStartIndex]
         }
         var v2719 = v13025 != "";
@@ -6821,7 +6821,7 @@ function v1173(TypeScript$$27) {
         v2725 = 0
       }
       var fileIndex = v2725;
-      introspect(JAM.policy.pC545F199BE443C5FB0DC91C55134FB746FD8B074) {
+      introspect(JAM.policy.p1) {
         var v2726 = components$$1[fileIndex]
       }
       return quoteStr(v2726)
@@ -6924,13 +6924,13 @@ function v1173(TypeScript$$27) {
     var v13036 = parts.length;
     var v2745 = i$$115 < v13036;
     for(;v2745;) {
-      introspect(JAM.policy.pC545F199BE443C5FB0DC91C55134FB746FD8B074) {
+      introspect(JAM.policy.p1) {
         var v19146 = parts[i$$115]
       }
       var v13037 = v19146 === ".";
       var v19148 = !v13037;
       if(v19148) {
-        introspect(JAM.policy.pC545F199BE443C5FB0DC91C55134FB746FD8B074) {
+        introspect(JAM.policy.p1) {
           var v19147 = parts[i$$115]
         }
         v13037 = v19147 === ""
@@ -6942,13 +6942,13 @@ function v1173(TypeScript$$27) {
       }
       var v13038 = i$$115 > 0;
       if(v13038) {
-        introspect(JAM.policy.pC545F199BE443C5FB0DC91C55134FB746FD8B074) {
+        introspect(JAM.policy.p1) {
           var v22953 = parts[i$$115]
         }
         var v19149 = v22953 === "..";
         if(v19149) {
           var v24826 = i$$115 - 1;
-          introspect(JAM.policy.pC545F199BE443C5FB0DC91C55134FB746FD8B074) {
+          introspect(JAM.policy.p1) {
             var v22954 = parts[v24826]
           }
           v19149 = v22954 !== ".."
@@ -7335,7 +7335,7 @@ function v1172(TypeScript$$26) {
           var v2787 = i$$114 < len$$56;
           for(;v2787;) {
             var v19172 = this.extendsList;
-            introspect(JAM.policy.pC545F199BE443C5FB0DC91C55134FB746FD8B074) {
+            introspect(JAM.policy.p1) {
               var v13063 = v19172[i$$114]
             }
             var v2786 = JAM.call(v13063.hasBase, v13063, [baseType]);
@@ -7979,7 +7979,7 @@ function v1172(TypeScript$$26) {
       var v2913 = i$$113 < v13112;
       for(;v2913;) {
         var v2911 = this.entries;
-        introspect(JAM.policy.pC545F199BE443C5FB0DC91C55134FB746FD8B074) {
+        introspect(JAM.policy.p1) {
           var v2912 = entries[i$$113]
         }
         JAM.call(v2911.push, v2911, [v2912]);
@@ -8061,7 +8061,7 @@ function v1172(TypeScript$$26) {
         for(;v2921;) {
           var v13117 = result$$31;
           var v22978 = ar.entries;
-          introspect(JAM.policy.pC545F199BE443C5FB0DC91C55134FB746FD8B074) {
+          introspect(JAM.policy.p1) {
             var v19204 = v22978[index$$61]
           }
           var v13118 = JAM.call(MemberName$$1.memberNameToString, MemberName$$1, [v19204]);
@@ -8568,13 +8568,13 @@ function v1113(TypeScript$$25) {
           var v2994 = i$$112 < nonVarArgActualParamLength;
           for(;v2994;) {
             var v13163 = sig$$4.parameters;
-            introspect(JAM.policy.pC545F199BE443C5FB0DC91C55134FB746FD8B074) {
+            introspect(JAM.policy.p1) {
               var v2988 = v13163[i$$112]
             }
             targetType$$8 = v2988.getType();
             var v23009 = callEx$$4.arguments;
             var v19248 = v23009.members;
-            introspect(JAM.policy.pC545F199BE443C5FB0DC91C55134FB746FD8B074) {
+            introspect(JAM.policy.p1) {
               var v13164 = v19248[i$$112]
             }
             var v2993 = v13164.nodeType;
@@ -8588,7 +8588,7 @@ function v1113(TypeScript$$25) {
                 var v13165 = this.checker;
                 var v2990 = v13165.inProvisionalTypecheckMode();
                 var v24845 = sig$$4.parameters;
-                introspect(JAM.policy.pC545F199BE443C5FB0DC91C55134FB746FD8B074) {
+                introspect(JAM.policy.p1) {
                   var v23010 = v24845[i$$112]
                 }
                 var v19249 = v23010.declAST;
@@ -8596,7 +8596,7 @@ function v1113(TypeScript$$25) {
                 var v2991 = !v13166;
                 var v19250 = callEx$$4.arguments;
                 var v13167 = v19250.members;
-                introspect(JAM.policy.pC545F199BE443C5FB0DC91C55134FB746FD8B074) {
+                introspect(JAM.policy.p1) {
                   var v2992 = v13167[i$$112]
                 }
                 JAM.call(v2989.typeCheckWithContextualType, v2989, [targetType$$8, v2990, v2991, v2992])
@@ -8609,7 +8609,7 @@ function v1113(TypeScript$$25) {
             var v2995 = sig$$4.nonOptionalParameterCount;
             var varArgParamIndex = v2995 - 1;
             var v13168 = sig$$4.parameters;
-            introspect(JAM.policy.pC545F199BE443C5FB0DC91C55134FB746FD8B074) {
+            introspect(JAM.policy.p1) {
               var v2996 = v13168[varArgParamIndex]
             }
             targetType$$8 = v2996.getType();
@@ -8617,7 +8617,7 @@ function v1113(TypeScript$$25) {
               targetType$$8 = targetType$$8.elementType
             }
             var v23011 = sig$$4.parameters;
-            introspect(JAM.policy.pC545F199BE443C5FB0DC91C55134FB746FD8B074) {
+            introspect(JAM.policy.p1) {
               var v19251 = v23011[varArgParamIndex]
             }
             var v13169 = v19251.declAST;
@@ -8631,7 +8631,7 @@ function v1113(TypeScript$$25) {
             for(;v3002;) {
               var v23013 = callEx$$4.arguments;
               var v19253 = v23013.members;
-              introspect(JAM.policy.pC545F199BE443C5FB0DC91C55134FB746FD8B074) {
+              introspect(JAM.policy.p1) {
                 var v13171 = v19253[i$$112]
               }
               var v3001 = v13171.nodeType;
@@ -8646,7 +8646,7 @@ function v1113(TypeScript$$25) {
                   var v2999 = v13172.inProvisionalTypecheckMode();
                   var v19254 = callEx$$4.arguments;
                   var v13173 = v19254.members;
-                  introspect(JAM.policy.pC545F199BE443C5FB0DC91C55134FB746FD8B074) {
+                  introspect(JAM.policy.p1) {
                     var v3000 = v13173[i$$112]
                   }
                   JAM.call(v2998.typeCheckWithContextualType, v2998, [targetType$$8, v2999, isParenthesized, v3000])
@@ -8676,7 +8676,7 @@ function v1113(TypeScript$$25) {
         for(;v3009;) {
           var v23016 = callEx$$4.arguments;
           var v19257 = v23016.members;
-          introspect(JAM.policy.pC545F199BE443C5FB0DC91C55134FB746FD8B074) {
+          introspect(JAM.policy.p1) {
             var v13177 = v19257[i$$112]
           }
           var v3008 = v13177.nodeType;
@@ -8688,7 +8688,7 @@ function v1113(TypeScript$$25) {
             case TypeScript$$25.NodeType.ArrayLit:
               var v19258 = callEx$$4.arguments;
               var v13178 = v19258.members;
-              introspect(JAM.policy.pC545F199BE443C5FB0DC91C55134FB746FD8B074) {
+              introspect(JAM.policy.p1) {
                 var v3007 = v13178[i$$112]
               }
               JAM.call(this.typeCheck, this, [v3007]);
@@ -8714,7 +8714,7 @@ function v1113(TypeScript$$25) {
       var v3014 = i$$111 < v13180;
       for(;v3014;) {
         var v19261 = args$$16.members;
-        introspect(JAM.policy.pC545F199BE443C5FB0DC91C55134FB746FD8B074) {
+        introspect(JAM.policy.p1) {
           var v13181 = v19261[i$$111]
         }
         var v3013 = v13181.nodeType;
@@ -8731,7 +8731,7 @@ function v1113(TypeScript$$25) {
             continue;
           default:
             var v13183 = args$$16.members;
-            introspect(JAM.policy.pC545F199BE443C5FB0DC91C55134FB746FD8B074) {
+            introspect(JAM.policy.p1) {
               var v3012 = v13183[i$$111]
             }
             JAM.call(this.typeCheck, this, [v3012])
@@ -8892,7 +8892,7 @@ function v1113(TypeScript$$25) {
           for(;v3041;) {
             var v19278 = callEx$$2.arguments;
             var v13204 = v19278.members;
-            introspect(JAM.policy.pC545F199BE443C5FB0DC91C55134FB746FD8B074) {
+            introspect(JAM.policy.p1) {
               var v3040 = v13204[i$$110]
             }
             actuals$$1[i$$110] = v3040.type;
@@ -8922,7 +8922,7 @@ function v1113(TypeScript$$25) {
       var v3053 = j$$17 < groupLen;
       for(;v3053;) {
         var v3049 = group$$1.signatures;
-        introspect(JAM.policy.pC545F199BE443C5FB0DC91C55134FB746FD8B074) {
+        introspect(JAM.policy.p1) {
           var signature$$12 = v3049[j$$17]
         }
         var v13207 = hasOverloads;
@@ -9006,7 +9006,7 @@ function v1113(TypeScript$$25) {
           var v13217 = exactCandidates$$1.length;
           var v3064 = i$$110 < v13217;
           for(;v3064;) {
-            introspect(JAM.policy.pC545F199BE443C5FB0DC91C55134FB746FD8B074) {
+            introspect(JAM.policy.p1) {
               var v3063 = exactCandidates$$1[i$$110]
             }
             applicableSigs$$1[i$$110] = {signature:v3063, hadProvisionalErrors:false};
@@ -9073,7 +9073,7 @@ function v1113(TypeScript$$25) {
         if(v3076) {
           formalLen = formalLen - 1;
           var v23029 = signature$$11.parameters;
-          introspect(JAM.policy.pC545F199BE443C5FB0DC91C55134FB746FD8B074) {
+          introspect(JAM.policy.p1) {
             var v19286 = v23029[formalLen]
           }
           var v13224 = v19286.parameter;
@@ -9093,7 +9093,7 @@ function v1113(TypeScript$$25) {
           var v3078 = i$$109 < formalLen;
           if(v3078) {
             var v23030 = signature$$11.parameters;
-            introspect(JAM.policy.pC545F199BE443C5FB0DC91C55134FB746FD8B074) {
+            introspect(JAM.policy.p1) {
               var v19287 = v23030[i$$109]
             }
             var v13225 = v19287.parameter;
@@ -9102,7 +9102,7 @@ function v1113(TypeScript$$25) {
           }else {
             typeA = repeatType
           }
-          introspect(JAM.policy.pC545F199BE443C5FB0DC91C55134FB746FD8B074) {
+          introspect(JAM.policy.p1) {
             var typeB = actuals[i$$109]
           }
           var v13226 = !typeA;
@@ -9490,7 +9490,7 @@ function v1113(TypeScript$$25) {
         for(;v3146;) {
           var v25775 = type$$56.construct;
           var v24866 = v25775.signatures;
-          introspect(JAM.policy.pC545F199BE443C5FB0DC91C55134FB746FD8B074) {
+          introspect(JAM.policy.p1) {
             var v23046 = v24866[i$$108]
           }
           var v19316 = v23046.returnType;
@@ -9516,14 +9516,14 @@ function v1113(TypeScript$$25) {
     function v1095(arrayLit) {
       function v1094(index$$60) {
         var v13273 = elements$$2.members;
-        introspect(JAM.policy.pC545F199BE443C5FB0DC91C55134FB746FD8B074) {
+        introspect(JAM.policy.p1) {
           var v3148 = v13273[index$$60]
         }
         return v3148.type
       }
       function v1093(index$$59, type$$55) {
         var v13274 = elements$$2.members;
-        introspect(JAM.policy.pC545F199BE443C5FB0DC91C55134FB746FD8B074) {
+        introspect(JAM.policy.p1) {
           var v3149 = v13274[index$$59]
         }
         v3149.type = type$$55;
@@ -9695,7 +9695,7 @@ function v1113(TypeScript$$25) {
         var v3211 = i$$107 < len$$52;
         for(;v3211;) {
           var v3182 = memberDecls$$1.members;
-          introspect(JAM.policy.pC545F199BE443C5FB0DC91C55134FB746FD8B074) {
+          introspect(JAM.policy.p1) {
             var binex$$9 = v3182[i$$107]
           }
           var id$$23 = binex$$9.operand1;
@@ -10243,7 +10243,7 @@ function v1113(TypeScript$$25) {
         for(;v3304;) {
           var v24886 = interfaceDecl$$6.extendsList;
           var v23081 = v24886.members;
-          introspect(JAM.policy.pC545F199BE443C5FB0DC91C55134FB746FD8B074) {
+          introspect(JAM.policy.p1) {
             var v19363 = v23081[i$$106]
           }
           var v13371 = v19363.type;
@@ -10259,7 +10259,7 @@ function v1113(TypeScript$$25) {
               var v13374 = v19364.signatures;
               var v26271 = interfaceDecl$$6.extendsList;
               var v25782 = v26271.members;
-              introspect(JAM.policy.pC545F199BE443C5FB0DC91C55134FB746FD8B074) {
+              introspect(JAM.policy.p1) {
                 var v24887 = v25782[i$$106]
               }
               var v23083 = v24887.type;
@@ -10271,7 +10271,7 @@ function v1113(TypeScript$$25) {
               var v3293 = interfaceDecl$$6.type;
               var v24888 = interfaceDecl$$6.extendsList;
               var v23084 = v24888.members;
-              introspect(JAM.policy.pC545F199BE443C5FB0DC91C55134FB746FD8B074) {
+              introspect(JAM.policy.p1) {
                 var v19366 = v23084[i$$106]
               }
               var v13376 = v19366.type;
@@ -10280,7 +10280,7 @@ function v1113(TypeScript$$25) {
           }
           var v24889 = interfaceDecl$$6.extendsList;
           var v23085 = v24889.members;
-          introspect(JAM.policy.pC545F199BE443C5FB0DC91C55134FB746FD8B074) {
+          introspect(JAM.policy.p1) {
             var v19367 = v23085[i$$106]
           }
           var v13377 = v19367.type;
@@ -10296,7 +10296,7 @@ function v1113(TypeScript$$25) {
               var v13380 = v19368.signatures;
               var v26272 = interfaceDecl$$6.extendsList;
               var v25783 = v26272.members;
-              introspect(JAM.policy.pC545F199BE443C5FB0DC91C55134FB746FD8B074) {
+              introspect(JAM.policy.p1) {
                 var v24890 = v25783[i$$106]
               }
               var v23087 = v24890.type;
@@ -10308,7 +10308,7 @@ function v1113(TypeScript$$25) {
               var v3297 = interfaceDecl$$6.type;
               var v24891 = interfaceDecl$$6.extendsList;
               var v23088 = v24891.members;
-              introspect(JAM.policy.pC545F199BE443C5FB0DC91C55134FB746FD8B074) {
+              introspect(JAM.policy.p1) {
                 var v19370 = v23088[i$$106]
               }
               var v13382 = v19370.type;
@@ -10317,7 +10317,7 @@ function v1113(TypeScript$$25) {
           }
           var v24892 = interfaceDecl$$6.extendsList;
           var v23089 = v24892.members;
-          introspect(JAM.policy.pC545F199BE443C5FB0DC91C55134FB746FD8B074) {
+          introspect(JAM.policy.p1) {
             var v19371 = v23089[i$$106]
           }
           var v13383 = v19371.type;
@@ -10333,7 +10333,7 @@ function v1113(TypeScript$$25) {
               var v13386 = v19372.signatures;
               var v26273 = interfaceDecl$$6.extendsList;
               var v25784 = v26273.members;
-              introspect(JAM.policy.pC545F199BE443C5FB0DC91C55134FB746FD8B074) {
+              introspect(JAM.policy.p1) {
                 var v24893 = v25784[i$$106]
               }
               var v23091 = v24893.type;
@@ -10345,7 +10345,7 @@ function v1113(TypeScript$$25) {
               var v3301 = interfaceDecl$$6.type;
               var v24894 = interfaceDecl$$6.extendsList;
               var v23092 = v24894.members;
-              introspect(JAM.policy.pC545F199BE443C5FB0DC91C55134FB746FD8B074) {
+              introspect(JAM.policy.p1) {
                 var v19374 = v23092[i$$106]
               }
               var v13388 = v19374.type;
@@ -10494,7 +10494,7 @@ function v1113(TypeScript$$25) {
         var v3349 = j$$16 < len$$51;
         for(;v3349;) {
           var v3337 = instanceType$$6.extendsList;
-          introspect(JAM.policy.pC545F199BE443C5FB0DC91C55134FB746FD8B074) {
+          introspect(JAM.policy.p1) {
             var base$$3 = v3337[j$$16]
           }
           var v13400 = base$$3.memberScope;
@@ -10575,7 +10575,7 @@ function v1113(TypeScript$$25) {
           var v3355 = i$$105 < len$$51;
           for(;v3355;) {
             var v13410 = instanceType$$6.extendsList;
-            introspect(JAM.policy.pC545F199BE443C5FB0DC91C55134FB746FD8B074) {
+            introspect(JAM.policy.p1) {
               var v3353 = v13410[i$$105]
             }
             var v3354 = i$$105 > 0;
@@ -10640,7 +10640,7 @@ function v1113(TypeScript$$25) {
           var v3369 = i$$104 < len$$50;
           for(;v3369;) {
             var v25790 = type$$53.extendsList;
-            introspect(JAM.policy.pC545F199BE443C5FB0DC91C55134FB746FD8B074) {
+            introspect(JAM.policy.p1) {
               var v24902 = v25790[i$$104]
             }
             var v23104 = v24902.symbol;
@@ -10651,7 +10651,7 @@ function v1113(TypeScript$$25) {
             var v3368 = !v13416;
             if(v3368) {
               var v13417 = type$$53.extendsList;
-              introspect(JAM.policy.pC545F199BE443C5FB0DC91C55134FB746FD8B074) {
+              introspect(JAM.policy.p1) {
                 var v3367 = v13417[i$$104]
               }
               JAM.call(this.assertUniqueNamesInBaseTypes, this, [names, v3367, classDecl$$8, checkUnique])
@@ -10674,7 +10674,7 @@ function v1113(TypeScript$$25) {
       var v3375 = i$$103 < basesLen$$2;
       for(;v3375;) {
         var v3373 = bases$$7.members;
-        introspect(JAM.policy.pC545F199BE443C5FB0DC91C55134FB746FD8B074) {
+        introspect(JAM.policy.p1) {
           var baseExpr$$2 = v3373[i$$103]
         }
         var baseSymbol$$3 = null;
@@ -10700,7 +10700,7 @@ function v1113(TypeScript$$25) {
         var v3387 = i$$102 < len$$49;
         for(;v3387;) {
           var v3377 = instanceType$$5.implementsList;
-          introspect(JAM.policy.pC545F199BE443C5FB0DC91C55134FB746FD8B074) {
+          introspect(JAM.policy.p1) {
             var interfaceType$$3 = v3377[i$$102]
           }
           var v3378 = TypeScript$$25.TypeComparisonInfo;
@@ -10754,14 +10754,14 @@ function v1113(TypeScript$$25) {
         var i$$101 = 0;
         var v3413 = i$$101 < len$$48;
         for(;v3413;) {
-          introspect(JAM.policy.pC545F199BE443C5FB0DC91C55134FB746FD8B074) {
+          introspect(JAM.policy.p1) {
             var v13430 = bases$$6[i$$101]
           }
           var v19397 = this.checker;
           var v13431 = v19397.anyType;
           var v3399 = v13430 == v13431;
           if(v3399) {
-            introspect(JAM.policy.pC545F199BE443C5FB0DC91C55134FB746FD8B074) {
+            introspect(JAM.policy.p1) {
               var v3390 = baseLinks[i$$101]
             }
             v3390.type = null;
@@ -10778,7 +10778,7 @@ function v1113(TypeScript$$25) {
             var v3395 = bases$$6;
             var v3396 = i$$101;
             var v13435 = this.checker;
-            introspect(JAM.policy.pC545F199BE443C5FB0DC91C55134FB746FD8B074) {
+            introspect(JAM.policy.p1) {
               var v13436 = baseLinks[i$$101]
             }
             var v13437 = type$$52.containedScope;
@@ -10791,10 +10791,10 @@ function v1113(TypeScript$$25) {
             var v3398 = v13439.errorReporter;
             v3398.freeCapturedErrors()
           }
-          introspect(JAM.policy.pC545F199BE443C5FB0DC91C55134FB746FD8B074) {
+          introspect(JAM.policy.p1) {
             var base$$2 = bases$$6[i$$101]
           }
-          introspect(JAM.policy.pC545F199BE443C5FB0DC91C55134FB746FD8B074) {
+          introspect(JAM.policy.p1) {
             var v3400 = baseLinks[i$$101]
           }
           var baseRef$$1 = v3400.ast;
@@ -10875,14 +10875,14 @@ function v1113(TypeScript$$25) {
       }
       function v1067(index$$58) {
         var v13450 = funcDecl$$31.returnStatementsWithExpressions;
-        introspect(JAM.policy.pC545F199BE443C5FB0DC91C55134FB746FD8B074) {
+        introspect(JAM.policy.p1) {
           var v3414 = v13450[index$$58]
         }
         return v3414.type
       }
       function v1066(index$$57, type$$51) {
         var v13451 = funcDecl$$31.returnStatementsWithExpressions;
-        introspect(JAM.policy.pC545F199BE443C5FB0DC91C55134FB746FD8B074) {
+        introspect(JAM.policy.p1) {
           var v3415 = v13451[index$$57]
         }
         v3415.type = type$$51;
@@ -10900,7 +10900,7 @@ function v1113(TypeScript$$25) {
       }
       function v1063(typeName$$9, isModuleName$$8) {
         var v13453 = signature$$10.parameters;
-        introspect(JAM.policy.pC545F199BE443C5FB0DC91C55134FB746FD8B074) {
+        introspect(JAM.policy.p1) {
           var v3419 = v13453[p$$1]
         }
         return JAM.call(_this$$10.functionArgumentPrivacyErrorReporter, _this$$10, [funcDecl$$31, p$$1, v3419, typeName$$9, isModuleName$$8])
@@ -11323,7 +11323,7 @@ function v1113(TypeScript$$25) {
           var v19433 = this.checker;
           var v13502 = v19433.units;
           var v13503 = funcDecl$$31.unitIndex;
-          introspect(JAM.policy.pC545F199BE443C5FB0DC91C55134FB746FD8B074) {
+          introspect(JAM.policy.p1) {
             v3469.locationInfo = v13502[v13503]
           }
         }else {
@@ -11461,7 +11461,7 @@ function v1113(TypeScript$$25) {
         var v3506 = p$$1 < paramLen$$4;
         for(;v3506;) {
           var v3494 = signature$$10.parameters;
-          introspect(JAM.policy.pC545F199BE443C5FB0DC91C55134FB746FD8B074) {
+          introspect(JAM.policy.p1) {
             var symbol$$21 = v3494[p$$1]
           }
           var ast$$106 = symbol$$21.declAST;
@@ -11501,13 +11501,13 @@ function v1113(TypeScript$$25) {
             if(v19446) {
               var v25801 = targetParams.length;
               var v24922 = v25801 - 1;
-              introspect(JAM.policy.pC545F199BE443C5FB0DC91C55134FB746FD8B074) {
+              introspect(JAM.policy.p1) {
                 var v23133 = targetParams[v24922]
               }
               var v19444 = v23133.getType();
               v13519 = v19444.elementType
             }else {
-              introspect(JAM.policy.pC545F199BE443C5FB0DC91C55134FB746FD8B074) {
+              introspect(JAM.policy.p1) {
                 var v19445 = targetParams[p$$1]
               }
               v13519 = v19445.getType()
@@ -11544,39 +11544,39 @@ function v1113(TypeScript$$25) {
         var v3513 = p$$1 < paramLen$$4;
         for(;v3513;) {
           var v23134 = signature$$10.parameters;
-          introspect(JAM.policy.pC545F199BE443C5FB0DC91C55134FB746FD8B074) {
+          introspect(JAM.policy.p1) {
             var v19447 = v23134[p$$1]
           }
           var v13521 = v19447.parameter;
           var v3508 = v13521.typeLink;
           var v23135 = funcDecl$$31.arguments;
           var v19448 = v23135.members;
-          introspect(JAM.policy.pC545F199BE443C5FB0DC91C55134FB746FD8B074) {
+          introspect(JAM.policy.p1) {
             var v13522 = v19448[p$$1]
           }
           v3508.type = v13522.type;
           var v19449 = signature$$10.parameters;
-          introspect(JAM.policy.pC545F199BE443C5FB0DC91C55134FB746FD8B074) {
+          introspect(JAM.policy.p1) {
             var v13523 = v19449[p$$1]
           }
           var v3509 = v13523.getType();
           JAM.call(this.checkTypePrivacy, this, [v3509, container$$21, v1063]);
           var v23136 = funcDecl$$31.arguments;
           var v19450 = v23136.members;
-          introspect(JAM.policy.pC545F199BE443C5FB0DC91C55134FB746FD8B074) {
+          introspect(JAM.policy.p1) {
             var v13524 = v19450[p$$1]
           }
           var v3512 = v13524.parameterPropertySym;
           if(v3512) {
             var v23137 = funcDecl$$31.arguments;
             var v19451 = v23137.members;
-            introspect(JAM.policy.pC545F199BE443C5FB0DC91C55134FB746FD8B074) {
+            introspect(JAM.policy.p1) {
               var v13525 = v19451[p$$1]
             }
             var v3510 = v13525.parameterPropertySym;
             var v23138 = funcDecl$$31.arguments;
             var v19452 = v23138.members;
-            introspect(JAM.policy.pC545F199BE443C5FB0DC91C55134FB746FD8B074) {
+            introspect(JAM.policy.p1) {
               var v13526 = v19452[p$$1]
             }
             var v3511 = v13526.type;
@@ -11756,7 +11756,7 @@ function v1113(TypeScript$$25) {
           var v3553 = j$$15 < fnsLen$$1;
           for(;v3553;) {
             var v3549 = fns$$1.members;
-            introspect(JAM.policy.pC545F199BE443C5FB0DC91C55134FB746FD8B074) {
+            introspect(JAM.policy.p1) {
               var fn$$9 = v3549[j$$15]
             }
             var v13555 = fn$$9.isSignature();
@@ -11851,7 +11851,7 @@ function v1113(TypeScript$$25) {
             var v13565 = this.checker;
             var v3570 = v13565.errorReporter;
             var v13566 = funcDecl$$31.returnStatementsWithExpressions;
-            introspect(JAM.policy.pC545F199BE443C5FB0DC91C55134FB746FD8B074) {
+            introspect(JAM.policy.p1) {
               var v3571 = v13566[i$$100]
             }
             JAM.call(v3570.simpleError, v3570, [v3571, "Incompatible return type"]);
@@ -12095,7 +12095,7 @@ function v1113(TypeScript$$25) {
       var v3607 = i$$99 < v13593;
       for(;v3607;) {
         var v23175 = funcDecl$$30.returnStatementsWithExpressions;
-        introspect(JAM.policy.pC545F199BE443C5FB0DC91C55134FB746FD8B074) {
+        introspect(JAM.policy.p1) {
           var v19506 = v23175[i$$99]
         }
         var v13594 = v19506.type;
@@ -12104,7 +12104,7 @@ function v1113(TypeScript$$25) {
         var v3606 = v13594 == v13595;
         if(v3606) {
           var v13596 = funcDecl$$30.returnStatementsWithExpressions;
-          introspect(JAM.policy.pC545F199BE443C5FB0DC91C55134FB746FD8B074) {
+          introspect(JAM.policy.p1) {
             var v3605 = v13596[i$$99]
           }
           JAM.call(this.returnTypePrivacyError, this, [v3605, funcDecl$$30, typeName$$7, isModuleName$$6])
@@ -12275,7 +12275,7 @@ function v1113(TypeScript$$25) {
           var v3641 = v13624.errorReporter;
           var v19517 = funcDecl$$28.arguments;
           var v13625 = v19517.members;
-          introspect(JAM.policy.pC545F199BE443C5FB0DC91C55134FB746FD8B074) {
+          introspect(JAM.policy.p1) {
             var v3642 = v13625[p]
           }
           var v23178 = paramSymbol.name;
@@ -12289,7 +12289,7 @@ function v1113(TypeScript$$25) {
             var v3644 = v13627.errorReporter;
             var v19519 = funcDecl$$28.arguments;
             var v13628 = v19519.members;
-            introspect(JAM.policy.pC545F199BE443C5FB0DC91C55134FB746FD8B074) {
+            introspect(JAM.policy.p1) {
               var v3645 = v13628[p]
             }
             var v25810;
@@ -12312,7 +12312,7 @@ function v1113(TypeScript$$25) {
               var v3647 = v13630.errorReporter;
               var v19521 = funcDecl$$28.arguments;
               var v13631 = v19521.members;
-              introspect(JAM.policy.pC545F199BE443C5FB0DC91C55134FB746FD8B074) {
+              introspect(JAM.policy.p1) {
                 var v3648 = v13631[p]
               }
               var v25811;
@@ -12338,7 +12338,7 @@ function v1113(TypeScript$$25) {
           var v3652 = v13633.errorReporter;
           var v19523 = funcDecl$$28.arguments;
           var v13634 = v19523.members;
-          introspect(JAM.policy.pC545F199BE443C5FB0DC91C55134FB746FD8B074) {
+          introspect(JAM.policy.p1) {
             var v3653 = v13634[p]
           }
           var v23183 = paramSymbol.name;
@@ -12353,7 +12353,7 @@ function v1113(TypeScript$$25) {
             var v3655 = v13636.errorReporter;
             var v19525 = funcDecl$$28.arguments;
             var v13637 = v19525.members;
-            introspect(JAM.policy.pC545F199BE443C5FB0DC91C55134FB746FD8B074) {
+            introspect(JAM.policy.p1) {
               var v3656 = v13637[p]
             }
             var v23184 = paramSymbol.name;
@@ -12369,7 +12369,7 @@ function v1113(TypeScript$$25) {
               var v3658 = v13640.errorReporter;
               var v19527 = funcDecl$$28.arguments;
               var v13641 = v19527.members;
-              introspect(JAM.policy.pC545F199BE443C5FB0DC91C55134FB746FD8B074) {
+              introspect(JAM.policy.p1) {
                 var v3659 = v13641[p]
               }
               var v23185 = paramSymbol.name;
@@ -12393,7 +12393,7 @@ function v1113(TypeScript$$25) {
         var v3674 = i$$98 < v13643;
         for(;v3674;) {
           var v3666 = sgroup.signatures;
-          introspect(JAM.policy.pC545F199BE443C5FB0DC91C55134FB746FD8B074) {
+          introspect(JAM.policy.p1) {
             var signature$$8 = v3666[i$$98]
           }
           var v13644 = len$$47 > 1;
@@ -12421,7 +12421,7 @@ function v1113(TypeScript$$25) {
           var v3673 = j$$14 < paramLen$$3;
           for(;v3673;) {
             var v3671 = signature$$8.parameters;
-            introspect(JAM.policy.pC545F199BE443C5FB0DC91C55134FB746FD8B074) {
+            introspect(JAM.policy.p1) {
               var param$$7 = v3671[j$$14]
             }
             var v3672 = param$$7.getType();
@@ -12537,24 +12537,24 @@ function v1113(TypeScript$$25) {
         var v3692 = typeSymbolLength > 0;
         if(v3692) {
           var v24947 = typeSymbolLength - 1;
-          introspect(JAM.policy.pC545F199BE443C5FB0DC91C55134FB746FD8B074) {
+          introspect(JAM.policy.p1) {
             var v23191 = typeSymbolPath[v24947]
           }
           var v19537 = v23191.getType();
           var v13653 = v19537.isModuleType();
           if(v13653) {
             var v24948 = typeSymbolLength - 1;
-            introspect(JAM.policy.pC545F199BE443C5FB0DC91C55134FB746FD8B074) {
+            introspect(JAM.policy.p1) {
               var v23192 = typeSymbolPath[v24948]
             }
             var v19538 = v23192.isDynamic;
             if(v19538) {
               var v24949 = typeSymbolLength - 1;
-              introspect(JAM.policy.pC545F199BE443C5FB0DC91C55134FB746FD8B074) {
+              introspect(JAM.policy.p1) {
                 var v23193 = typeSymbolPath[v24949]
               }
               var v24950 = declSymbolPathLength - 1;
-              introspect(JAM.policy.pC545F199BE443C5FB0DC91C55134FB746FD8B074) {
+              introspect(JAM.policy.p1) {
                 var v23194 = declSymbolPath[v24950]
               }
               v19538 = v23193 != v23194
@@ -12569,14 +12569,14 @@ function v1113(TypeScript$$25) {
             var v3690 = typeSymbolLength > 1;
             if(v3690) {
               var v24951 = typeSymbolLength - 2;
-              introspect(JAM.policy.pC545F199BE443C5FB0DC91C55134FB746FD8B074) {
+              introspect(JAM.policy.p1) {
                 var v23195 = typeSymbolPath[v24951]
               }
               var v19539 = v23195.getType();
               var v13654 = v19539.isModuleType();
               if(v13654) {
                 var v24952 = typeSymbolLength - 2;
-                introspect(JAM.policy.pC545F199BE443C5FB0DC91C55134FB746FD8B074) {
+                introspect(JAM.policy.p1) {
                   var v23196 = typeSymbolPath[v24952]
                 }
                 var v19540 = v23196.isDynamic;
@@ -12585,11 +12585,11 @@ function v1113(TypeScript$$25) {
                   var v24955 = !v23197;
                   if(v24955) {
                     var v25816 = typeSymbolLength - 2;
-                    introspect(JAM.policy.pC545F199BE443C5FB0DC91C55134FB746FD8B074) {
+                    introspect(JAM.policy.p1) {
                       var v24953 = typeSymbolPath[v25816]
                     }
                     var v25817 = declSymbolPathLength - 2;
-                    introspect(JAM.policy.pC545F199BE443C5FB0DC91C55134FB746FD8B074) {
+                    introspect(JAM.policy.p1) {
                       var v24954 = declSymbolPath[v25817]
                     }
                     v23197 = v24953 != v24954
@@ -12680,7 +12680,7 @@ function v1113(TypeScript$$25) {
         var v3709 = i$$97 < basesLen$$1;
         for(;v3709;) {
           var v24957 = bases$$5.members;
-          introspect(JAM.policy.pC545F199BE443C5FB0DC91C55134FB746FD8B074) {
+          introspect(JAM.policy.p1) {
             var v23200 = v24957[i$$97]
           }
           var v19544 = v23200.type;
@@ -12688,7 +12688,7 @@ function v1113(TypeScript$$25) {
           var v19547 = !v13662;
           if(v19547) {
             var v24958 = bases$$5.members;
-            introspect(JAM.policy.pC545F199BE443C5FB0DC91C55134FB746FD8B074) {
+            introspect(JAM.policy.p1) {
               var v23201 = v24958[i$$97]
             }
             var v19545 = v23201.type;
@@ -12703,7 +12703,7 @@ function v1113(TypeScript$$25) {
             continue
           }
           var v23203 = bases$$5.members;
-          introspect(JAM.policy.pC545F199BE443C5FB0DC91C55134FB746FD8B074) {
+          introspect(JAM.policy.p1) {
             var v19548 = v23203[i$$97]
           }
           var v13663 = v19548.type;
@@ -12717,7 +12717,7 @@ function v1113(TypeScript$$25) {
     }
     function v1052(bases$$4, i$$96, declSymbol, extendsList$$7, typeName$$3, isModuleName$$2) {
       var v19549 = bases$$4.members;
-      introspect(JAM.policy.pC545F199BE443C5FB0DC91C55134FB746FD8B074) {
+      introspect(JAM.policy.p1) {
         var v13664 = v19549[i$$96]
       }
       var v3710 = v13664.type;
@@ -12776,7 +12776,7 @@ function v1113(TypeScript$$25) {
       var v13670 = this.checker;
       var v3717 = v13670.errorReporter;
       var v13671 = bases$$4.members;
-      introspect(JAM.policy.pC545F199BE443C5FB0DC91C55134FB746FD8B074) {
+      introspect(JAM.policy.p1) {
         var v3718 = v13671[i$$96]
       }
       var v25818 = "exported " + declTypeString;
@@ -12864,7 +12864,7 @@ function v1113(TypeScript$$25) {
       var len$$46 = freeVars$$1.length;
       var v3739 = k$$14 < len$$46;
       for(;v3739;) {
-        introspect(JAM.policy.pC545F199BE443C5FB0DC91C55134FB746FD8B074) {
+        introspect(JAM.policy.p1) {
           var sym$$36 = freeVars$$1[k$$14]
         }
         var v19560 = sym$$36.isInstanceProperty();
@@ -12913,7 +12913,7 @@ function v1113(TypeScript$$25) {
         var len$$45 = freeVars.length;
         var v3741 = k$$13 < len$$45;
         for(;v3741;) {
-          introspect(JAM.policy.pC545F199BE443C5FB0DC91C55134FB746FD8B074) {
+          introspect(JAM.policy.p1) {
             var sym$$35 = freeVars[k$$13]
           }
           var v3740 = sym$$35.isInstanceProperty();
@@ -12931,7 +12931,7 @@ function v1113(TypeScript$$25) {
       var v3746 = j$$13 < fnsLen;
       for(;v3746;) {
         var v3744 = fns.members;
-        introspect(JAM.policy.pC545F199BE443C5FB0DC91C55134FB746FD8B074) {
+        introspect(JAM.policy.p1) {
           var fn$$8 = v3744[j$$13]
         }
         var v3745 = JAM.call(this.checkInitSelf, this, [fn$$8]);
@@ -12951,7 +12951,7 @@ function v1113(TypeScript$$25) {
         var v3761 = i$$95 < len$$44;
         for(;v3761;) {
           var v3748 = args$$14.members;
-          introspect(JAM.policy.pC545F199BE443C5FB0DC91C55134FB746FD8B074) {
+          introspect(JAM.policy.p1) {
             var local$$1 = v3748[i$$95]
           }
           var v19565 = local$$1.sym;
@@ -13023,7 +13023,7 @@ function v1113(TypeScript$$25) {
       var v3787 = i$$94 < len$$43;
       for(;v3787;) {
         var v3763 = vars$$3.members;
-        introspect(JAM.policy.pC545F199BE443C5FB0DC91C55134FB746FD8B074) {
+        introspect(JAM.policy.p1) {
           var local = v3763[i$$94]
         }
         var v19570 = local.sym;
@@ -13166,7 +13166,7 @@ function v1113(TypeScript$$25) {
       var v3800 = i$$93 < len$$42;
       for(;v3800;) {
         var v3798 = signature$$7.parameters;
-        introspect(JAM.policy.pC545F199BE443C5FB0DC91C55134FB746FD8B074) {
+        introspect(JAM.policy.p1) {
           var symbol$$20 = v3798[i$$93]
         }
         symbol$$20.container = container$$18;
@@ -13927,7 +13927,7 @@ function v1113(TypeScript$$25) {
         var v3926 = v13785.errorReporter;
         var v19624 = TypeScript$$25.nodeTypeTable;
         var v19625 = binex$$2.nodeType;
-        introspect(JAM.policy.pC545F199BE443C5FB0DC91C55134FB746FD8B074) {
+        introspect(JAM.policy.p1) {
           var v13786 = v19624[v19625]
         }
         var v3927 = "use of " + v13786;
@@ -14127,7 +14127,7 @@ function v1113(TypeScript$$25) {
         var v3962 = v13806.errorReporter;
         var v19653 = TypeScript$$25.nodeTypeTable;
         var v19654 = binex$$1.nodeType;
-        introspect(JAM.policy.pC545F199BE443C5FB0DC91C55134FB746FD8B074) {
+        introspect(JAM.policy.p1) {
           var v13807 = v19653[v19654]
         }
         var v3963 = "use of " + v13807;
@@ -15334,7 +15334,7 @@ function v1113(TypeScript$$25) {
             var v19759 = this.checker;
             var v13953 = v19759.units;
             var v13954 = sym$$34.unitIndex;
-            introspect(JAM.policy.pC545F199BE443C5FB0DC91C55134FB746FD8B074) {
+            introspect(JAM.policy.p1) {
               v4155.locationInfo = v13953[v13954]
             }
           }else {
@@ -15845,7 +15845,7 @@ function v1113(TypeScript$$25) {
       if(v4293) {
         var v4291 = this.rdCache;
         var v4292 = this.nextUp;
-        introspect(JAM.policy.pC545F199BE443C5FB0DC91C55134FB746FD8B074) {
+        introspect(JAM.policy.p1) {
           rd = v4291[v4292]
         }
       }
@@ -15910,7 +15910,7 @@ function v1113(TypeScript$$25) {
       var v4311 = i$$91 < len$$41;
       for(;v4311;) {
         var v4309 = this.statementStack;
-        introspect(JAM.policy.pC545F199BE443C5FB0DC91C55134FB746FD8B074) {
+        introspect(JAM.policy.p1) {
           var targetInfo$$5 = v4309[i$$91]
         }
         var v13982 = targetInfo$$5.stmt;
@@ -16023,7 +16023,7 @@ function v1113(TypeScript$$25) {
         for(;v4329;) {
           JAM.call(outfile$$14.WriteLine, outfile$$14, ["Unreachable basic block ..."]);
           var v13992 = this.unreachable;
-          introspect(JAM.policy.pC545F199BE443C5FB0DC91C55134FB746FD8B074) {
+          introspect(JAM.policy.p1) {
             var v4328 = v13992[i$$90]
           }
           JAM.call(this.printAST, this, [v4328, outfile$$14]);
@@ -16036,7 +16036,7 @@ function v1113(TypeScript$$25) {
     function v999(er$$1, funcSym) {
       function v998(index$$55) {
         var v4331 = useDefContext$$3.uses;
-        introspect(JAM.policy.pC545F199BE443C5FB0DC91C55134FB746FD8B074) {
+        introspect(JAM.policy.p1) {
           var ast$$80 = v4331[index$$55]
         }
         var v19788 = ast$$80.actualText;
@@ -16069,13 +16069,13 @@ function v1113(TypeScript$$25) {
       var v4339 = i$$89 < bbLen;
       for(;v4339;) {
         var v19789 = this.linearBBs;
-        introspect(JAM.policy.pC545F199BE443C5FB0DC91C55134FB746FD8B074) {
+        introspect(JAM.policy.p1) {
           var v13996 = v19789[i$$89]
         }
         var v4337 = v13996.useDef;
         JAM.call(v4337.initializeGen, v4337, [useDefContext$$3]);
         var v19790 = this.linearBBs;
-        introspect(JAM.policy.pC545F199BE443C5FB0DC91C55134FB746FD8B074) {
+        introspect(JAM.policy.p1) {
           var v13997 = v19790[i$$89]
         }
         var v4338 = v13997.useDef;
@@ -16090,7 +16090,7 @@ function v1113(TypeScript$$25) {
         var v4341 = i$$89 < bbLen;
         for(;v4341;) {
           var v23356 = this.linearBBs;
-          introspect(JAM.policy.pC545F199BE443C5FB0DC91C55134FB746FD8B074) {
+          introspect(JAM.policy.p1) {
             var v19791 = v23356[i$$89]
           }
           var v13998 = v19791.useDef;
@@ -16139,7 +16139,7 @@ function v1113(TypeScript$$25) {
             var v4348 = j$$12 >= 0;
             for(;v4348;) {
               var v4345 = bb$$4.successors;
-              introspect(JAM.policy.pC545F199BE443C5FB0DC91C55134FB746FD8B074) {
+              introspect(JAM.policy.p1) {
                 var successor$$1 = v4345[j$$12]
               }
               var v19792 = this.markBase;
@@ -16173,7 +16173,7 @@ function v1113(TypeScript$$25) {
       var v4354 = i$$88 < len$$39;
       for(;v4354;) {
         var v4353 = content$$4.members;
-        introspect(JAM.policy.pC545F199BE443C5FB0DC91C55134FB746FD8B074) {
+        introspect(JAM.policy.p1) {
           var ast$$79 = v4353[i$$88]
         }
         JAM.call(this.printAST, this, [ast$$79, outfile$$13]);
@@ -16208,7 +16208,7 @@ function v1113(TypeScript$$25) {
         var v4362 = i$$87 < len$$38;
         for(;v4362;) {
           var v4360 = this.unreachable;
-          introspect(JAM.policy.pC545F199BE443C5FB0DC91C55134FB746FD8B074) {
+          introspect(JAM.policy.p1) {
             var unreachableAST = v4360[i$$87]
           }
           var v14007 = unreachableAST.nodeType;
@@ -16344,15 +16344,15 @@ function v1113(TypeScript$$25) {
         var v4396 = k$$12 < len$$37;
         for(;v4396;) {
           var v4393 = this.restOfBits;
-          introspect(JAM.policy.pC545F199BE443C5FB0DC91C55134FB746FD8B074) {
+          introspect(JAM.policy.p1) {
             var myBits$$4 = v4393[k$$12]
           }
           var v4394 = b$$13.restOfBits;
-          introspect(JAM.policy.pC545F199BE443C5FB0DC91C55134FB746FD8B074) {
+          introspect(JAM.policy.p1) {
             var bBits$$3 = v4394[k$$12]
           }
           var v4395 = this.restOfBits;
-          introspect(JAM.policy.pC545F199BE443C5FB0DC91C55134FB746FD8B074) {
+          introspect(JAM.policy.p1) {
             var v19796 = v4395[k$$12]
           }
           var v19797 = ~bBits$$3;
@@ -16378,11 +16378,11 @@ function v1113(TypeScript$$25) {
         var v4403 = k$$11 < len$$36;
         for(;v4403;) {
           var v4400 = this.restOfBits;
-          introspect(JAM.policy.pC545F199BE443C5FB0DC91C55134FB746FD8B074) {
+          introspect(JAM.policy.p1) {
             var myBits$$3 = v4400[k$$11]
           }
           var v4401 = b$$12.restOfBits;
-          introspect(JAM.policy.pC545F199BE443C5FB0DC91C55134FB746FD8B074) {
+          introspect(JAM.policy.p1) {
             var bBits$$2 = v4401[k$$11]
           }
           var v4402 = myBits$$3 != bBits$$2;
@@ -16407,11 +16407,11 @@ function v1113(TypeScript$$25) {
         var v4409 = k$$10 < len$$35;
         for(;v4409;) {
           var v4406 = this.restOfBits;
-          introspect(JAM.policy.pC545F199BE443C5FB0DC91C55134FB746FD8B074) {
+          introspect(JAM.policy.p1) {
             var myBits$$2 = v4406[k$$10]
           }
           var v4407 = b$$11.restOfBits;
-          introspect(JAM.policy.pC545F199BE443C5FB0DC91C55134FB746FD8B074) {
+          introspect(JAM.policy.p1) {
             var bBits$$1 = v4407[k$$10]
           }
           var v4408 = this.restOfBits;
@@ -16434,11 +16434,11 @@ function v1113(TypeScript$$25) {
         var v4415 = k$$9 < len$$34;
         for(;v4415;) {
           var v4412 = this.restOfBits;
-          introspect(JAM.policy.pC545F199BE443C5FB0DC91C55134FB746FD8B074) {
+          introspect(JAM.policy.p1) {
             var myBits$$1 = v4412[k$$9]
           }
           var v4413 = b$$10.restOfBits;
-          introspect(JAM.policy.pC545F199BE443C5FB0DC91C55134FB746FD8B074) {
+          introspect(JAM.policy.p1) {
             var bBits = v4413[k$$9]
           }
           var v4414 = this.restOfBits;
@@ -16481,7 +16481,7 @@ function v1113(TypeScript$$25) {
         var v4424 = k$$8 < len$$33;
         for(;v4424;) {
           var v4420 = this.restOfBits;
-          introspect(JAM.policy.pC545F199BE443C5FB0DC91C55134FB746FD8B074) {
+          introspect(JAM.policy.p1) {
             var myBits = v4420[k$$8]
           }
           var j$$11 = 0;
@@ -16533,14 +16533,14 @@ function v1113(TypeScript$$25) {
         var localIndex = bitIndex % v4427;
         if(value$$42) {
           var v4428 = this.restOfBits;
-          introspect(JAM.policy.pC545F199BE443C5FB0DC91C55134FB746FD8B074) {
+          introspect(JAM.policy.p1) {
             var v19803 = v4428[offset$$13]
           }
           var v19804 = 1 << localIndex;
           v4428[offset$$13] = v19803 | v19804
         }else {
           var v4429 = this.restOfBits;
-          introspect(JAM.policy.pC545F199BE443C5FB0DC91C55134FB746FD8B074) {
+          introspect(JAM.policy.p1) {
             var v19805 = v4429[offset$$13]
           }
           var v23358 = 1 << localIndex;
@@ -16596,14 +16596,14 @@ function v1113(TypeScript$$25) {
       var v4442 = sym$$33.name;
       var index$$54 = JAM.call(v4441.lookup, v4441, [v4442]);
       var v4443 = this.useIndexBySymbol;
-      introspect(JAM.policy.pC545F199BE443C5FB0DC91C55134FB746FD8B074) {
+      introspect(JAM.policy.p1) {
         var usesOfSym = v4443[index$$54]
       }
       var k$$7 = 0;
       var len$$31 = usesOfSym.length;
       var v4445 = k$$7 < len$$31;
       for(;v4445;) {
-        introspect(JAM.policy.pC545F199BE443C5FB0DC91C55134FB746FD8B074) {
+        introspect(JAM.policy.p1) {
           var v4444 = usesOfSym[k$$7]
         }
         JAM.call(bbUses.set, bbUses, [v4444, true]);
@@ -16639,7 +16639,7 @@ function v1113(TypeScript$$25) {
     }
     function v975(symIndex$$1, astIndex$$1) {
       var v4450 = this.useIndexBySymbol;
-      introspect(JAM.policy.pC545F199BE443C5FB0DC91C55134FB746FD8B074) {
+      introspect(JAM.policy.p1) {
         var useBySym = v4450[symIndex$$1]
       }
       var v4452 = useBySym == undefined;
@@ -16705,12 +16705,12 @@ function v1113(TypeScript$$25) {
       var v4471 = s$$25 < symbolLen$$1;
       for(;v4471;) {
         var v14044 = this.defsBySymbol;
-        introspect(JAM.policy.pC545F199BE443C5FB0DC91C55134FB746FD8B074) {
+        introspect(JAM.policy.p1) {
           var v4470 = v14044[s$$25]
         }
         if(v4470) {
           var v4466 = useDefContext$$2.useIndexBySymbol;
-          introspect(JAM.policy.pC545F199BE443C5FB0DC91C55134FB746FD8B074) {
+          introspect(JAM.policy.p1) {
             var globalSymUses = v4466[s$$25]
           }
           if(globalSymUses) {
@@ -16719,7 +16719,7 @@ function v1113(TypeScript$$25) {
             var v4469 = u$$1 < useLen;
             for(;v4469;) {
               var v4467 = this.kill;
-              introspect(JAM.policy.pC545F199BE443C5FB0DC91C55134FB746FD8B074) {
+              introspect(JAM.policy.p1) {
                 var v4468 = globalSymUses[u$$1]
               }
               JAM.call(v4467.set, v4467, [v4468, true]);
@@ -16744,7 +16744,7 @@ function v1113(TypeScript$$25) {
       var v4479 = s$$24 < symbolLen;
       for(;v4479;) {
         var v4474 = this.useIndexBySymbol;
-        introspect(JAM.policy.pC545F199BE443C5FB0DC91C55134FB746FD8B074) {
+        introspect(JAM.policy.p1) {
           var symUses$$1 = v4474[s$$24]
         }
         var v14045 = symUses$$1 != undefined;
@@ -16759,7 +16759,7 @@ function v1113(TypeScript$$25) {
           var v4477 = u < uLen;
           for(;v4477;) {
             var v4475 = this.gen;
-            introspect(JAM.policy.pC545F199BE443C5FB0DC91C55134FB746FD8B074) {
+            introspect(JAM.policy.p1) {
               var v4476 = symUses$$1[u]
             }
             JAM.call(v4475.set, v4475, [v4476, true]);
@@ -16853,7 +16853,7 @@ function v1113(TypeScript$$25) {
             if(v4495) {
               var symIndex$$inline_19 = JAM.call(context$$inline_17.getSymbolIndex, context$$inline_17, [sym$$inline_16]);
               var v19819 = _this$$3.useIndexBySymbol;
-              introspect(JAM.policy.pC545F199BE443C5FB0DC91C55134FB746FD8B074) {
+              introspect(JAM.policy.p1) {
                 var v14057 = v19819[symIndex$$inline_19]
               }
               var v4493 = v14057 == undefined;
@@ -16864,7 +16864,7 @@ function v1113(TypeScript$$25) {
                 JAM.set(v4491, v4492, v26915)
               }
               var v4494 = _this$$3.useIndexBySymbol;
-              introspect(JAM.policy.pC545F199BE443C5FB0DC91C55134FB746FD8B074) {
+              introspect(JAM.policy.p1) {
                 var symUses$$inline_20 = v4494[symIndex$$inline_19]
               }
               var astIndex$$inline_21 = JAM.call(context$$inline_17.getUseIndex, context$$inline_17, [ast$$inline_18]);
@@ -16935,7 +16935,7 @@ function v1113(TypeScript$$25) {
       for(;v4511;) {
         var v14065 = this.bb;
         var v4508 = v14065.successors;
-        introspect(JAM.policy.pC545F199BE443C5FB0DC91C55134FB746FD8B074) {
+        introspect(JAM.policy.p1) {
           var succ = v4508[i$$85]
         }
         var v4510 = succ.useDef;
@@ -17022,7 +17022,7 @@ function v967(TypeScript$$24) {
       var v4524 = i$$83 < len$$30;
       for(;v4524;) {
         var v4521 = bases$$3.members;
-        introspect(JAM.policy.pC545F199BE443C5FB0DC91C55134FB746FD8B074) {
+        introspect(JAM.policy.p1) {
           var baseExpr$$1 = v4521[i$$83]
         }
         var name$$83 = baseExpr$$1;
@@ -17089,25 +17089,25 @@ function v967(TypeScript$$24) {
       sig$$1 = new v4534;
       var v19828 = parent$$53.construct;
       var v14076 = v19828.signatures;
-      introspect(JAM.policy.pC545F199BE443C5FB0DC91C55134FB746FD8B074) {
+      introspect(JAM.policy.p1) {
         var v4535 = v14076[i$$84]
       }
       sig$$1.parameters = v4535.parameters;
       var v19829 = parent$$53.construct;
       var v14077 = v19829.signatures;
-      introspect(JAM.policy.pC545F199BE443C5FB0DC91C55134FB746FD8B074) {
+      introspect(JAM.policy.p1) {
         var v4536 = v14077[i$$84]
       }
       sig$$1.nonOptionalParameterCount = v4536.nonOptionalParameterCount;
       var v19830 = parent$$53.construct;
       var v14078 = v19830.signatures;
-      introspect(JAM.policy.pC545F199BE443C5FB0DC91C55134FB746FD8B074) {
+      introspect(JAM.policy.p1) {
         var v4537 = v14078[i$$84]
       }
       sig$$1.typeCheckStatus = v4537.typeCheckStatus;
       var v19831 = parent$$53.construct;
       var v14079 = v19831.signatures;
-      introspect(JAM.policy.pC545F199BE443C5FB0DC91C55134FB746FD8B074) {
+      introspect(JAM.policy.p1) {
         var v4538 = v14079[i$$84]
       }
       sig$$1.declAST = v4538.declAST;
@@ -18940,14 +18940,14 @@ function v964(TypeScript$$23) {
         var v4872 = v14380;
         if(v4872) {
           var v23440 = sourceSig.parameters;
-          introspect(JAM.policy.pC545F199BE443C5FB0DC91C55134FB746FD8B074) {
+          introspect(JAM.policy.p1) {
             var v20001 = v23440[iSource]
           }
           var v14381 = v20001.parameter;
           var v4866 = v14381.typeLink;
           sourceParamType = v4866.type;
           var v23441 = sourceSig.parameters;
-          introspect(JAM.policy.pC545F199BE443C5FB0DC91C55134FB746FD8B074) {
+          introspect(JAM.policy.p1) {
             var v20002 = v23441[iSource]
           }
           var v14382 = v20002.parameter;
@@ -18957,7 +18957,7 @@ function v964(TypeScript$$23) {
           var v4871 = iSource == sourceVarArgCount;
           if(v4871) {
             var v23442 = sourceSig.parameters;
-            introspect(JAM.policy.pC545F199BE443C5FB0DC91C55134FB746FD8B074) {
+            introspect(JAM.policy.p1) {
               var v20003 = v23442[iSource]
             }
             var v14383 = v20003.parameter;
@@ -18968,7 +18968,7 @@ function v964(TypeScript$$23) {
               sourceParamType = sourceParamType.elementType
             }
             var v23443 = sourceSig.parameters;
-            introspect(JAM.policy.pC545F199BE443C5FB0DC91C55134FB746FD8B074) {
+            introspect(JAM.policy.p1) {
               var v20004 = v23443[iSource]
             }
             var v14384 = v20004.parameter;
@@ -18985,14 +18985,14 @@ function v964(TypeScript$$23) {
         var v4879 = v14385;
         if(v4879) {
           var v23445 = targetSig.parameters;
-          introspect(JAM.policy.pC545F199BE443C5FB0DC91C55134FB746FD8B074) {
+          introspect(JAM.policy.p1) {
             var v20006 = v23445[iTarget]
           }
           var v14386 = v20006.parameter;
           var v4873 = v14386.typeLink;
           targetParamType = v4873.type;
           var v23446 = targetSig.parameters;
-          introspect(JAM.policy.pC545F199BE443C5FB0DC91C55134FB746FD8B074) {
+          introspect(JAM.policy.p1) {
             var v20007 = v23446[iTarget]
           }
           var v14387 = v20007.parameter;
@@ -19006,7 +19006,7 @@ function v964(TypeScript$$23) {
           var v4878 = v14388;
           if(v4878) {
             var v23447 = targetSig.parameters;
-            introspect(JAM.policy.pC545F199BE443C5FB0DC91C55134FB746FD8B074) {
+            introspect(JAM.policy.p1) {
               var v20008 = v23447[iTarget]
             }
             var v14389 = v20008.parameter;
@@ -19017,7 +19017,7 @@ function v964(TypeScript$$23) {
               targetParamType = targetParamType.elementType
             }
             var v23448 = targetSig.parameters;
-            introspect(JAM.policy.pC545F199BE443C5FB0DC91C55134FB746FD8B074) {
+            introspect(JAM.policy.p1) {
               var v20009 = v23448[iTarget]
             }
             var v14390 = v20009.parameter;
@@ -19110,7 +19110,7 @@ function v964(TypeScript$$23) {
       var v4891 = v14400 << 16;
       var v4892 = target$$44.typeID;
       var comboId$$1 = v4891 | v4892;
-      introspect(JAM.policy.pC545F199BE443C5FB0DC91C55134FB746FD8B074) {
+      introspect(JAM.policy.p1) {
         var v14401 = comparisonCache[comboId$$1]
       }
       var v4893 = v14401 != undefined;
@@ -19337,12 +19337,12 @@ function v964(TypeScript$$23) {
         var v4945 = iMProp < v14422;
         for(;v4945;) {
           var v4918 = target$$44.memberScope;
-          introspect(JAM.policy.pC545F199BE443C5FB0DC91C55134FB746FD8B074) {
+          introspect(JAM.policy.p1) {
             var v4919 = mPropKeys[iMProp]
           }
           mProp = JAM.call(v4918.find, v4918, [v4919, false, false]);
           var v4920 = source$$3.memberScope;
-          introspect(JAM.policy.pC545F199BE443C5FB0DC91C55134FB746FD8B074) {
+          introspect(JAM.policy.p1) {
             var v4921 = mPropKeys[iMProp]
           }
           nProp = JAM.call(v4920.find, v4920, [v4921, false, false]);
@@ -19407,7 +19407,7 @@ function v964(TypeScript$$23) {
               var v20049 = this.typeFlow;
               var v14428 = v20049.objectInterfaceType;
               var v4927 = v14428.memberScope;
-              introspect(JAM.policy.pC545F199BE443C5FB0DC91C55134FB746FD8B074) {
+              introspect(JAM.policy.p1) {
                 var v4928 = mPropKeys[iMProp]
               }
               nProp = JAM.call(v4927.find, v4927, [v4928, false, false])
@@ -19429,7 +19429,7 @@ function v964(TypeScript$$23) {
                 var v20052 = this.typeFlow;
                 var v14430 = v20052.functionInterfaceType;
                 var v4930 = v14430.memberScope;
-                introspect(JAM.policy.pC545F199BE443C5FB0DC91C55134FB746FD8B074) {
+                introspect(JAM.policy.p1) {
                   var v4931 = mPropKeys[iMProp]
                 }
                 nProp = JAM.call(v4930.find, v4930, [v4931, false, false])
@@ -19451,7 +19451,7 @@ function v964(TypeScript$$23) {
                     var v26334 = source$$3.getTypeName();
                     var v25896 = "Type '" + v26334;
                     var v25072 = v25896 + "' is missing property '";
-                    introspect(JAM.policy.pC545F199BE443C5FB0DC91C55134FB746FD8B074) {
+                    introspect(JAM.policy.p1) {
                       var v25073 = mPropKeys[iMProp]
                     }
                     var v23463 = v25072 + v25073;
@@ -19493,7 +19493,7 @@ function v964(TypeScript$$23) {
               var v25897 = v26335 << 16;
               var v25898 = mPropType.typeID;
               var v25074 = v25897 | v25898;
-              introspect(JAM.policy.pC545F199BE443C5FB0DC91C55134FB746FD8B074) {
+              introspect(JAM.policy.p1) {
                 var v23464 = comparisonCache[v25074]
               }
               v20059 = v23464 != undefined
@@ -19769,14 +19769,14 @@ function v964(TypeScript$$23) {
       var v4977 = iParam < v14478;
       for(;v4977;) {
         var v26337 = s1.parameters;
-        introspect(JAM.policy.pC545F199BE443C5FB0DC91C55134FB746FD8B074) {
+        introspect(JAM.policy.p1) {
           var v25900 = v26337[iParam]
         }
         var v25080 = v25900.parameter;
         var v23477 = v25080.typeLink;
         var v20091 = v23477.type;
         var v26338 = s2.parameters;
-        introspect(JAM.policy.pC545F199BE443C5FB0DC91C55134FB746FD8B074) {
+        introspect(JAM.policy.p1) {
           var v25901 = v26338[iParam]
         }
         var v25081 = v25901.parameter;
@@ -19883,7 +19883,7 @@ function v964(TypeScript$$23) {
       var v4990 = t1$$1.typeID;
       var comboId = v4989 | v4990;
       var v14491 = this.identicalCache;
-      introspect(JAM.policy.pC545F199BE443C5FB0DC91C55134FB746FD8B074) {
+      introspect(JAM.policy.p1) {
         var v4991 = v14491[comboId]
       }
       if(v4991) {
@@ -19970,10 +19970,10 @@ function v964(TypeScript$$23) {
         var v14502 = t1MemberKeys.length;
         var v5017 = iMember$$1 < v14502;
         for(;v5017;) {
-          introspect(JAM.policy.pC545F199BE443C5FB0DC91C55134FB746FD8B074) {
+          introspect(JAM.policy.p1) {
             var v14503 = t1MemberKeys[iMember$$1]
           }
-          introspect(JAM.policy.pC545F199BE443C5FB0DC91C55134FB746FD8B074) {
+          introspect(JAM.policy.p1) {
             var v14504 = t2MemberKeys[iMember$$1]
           }
           var v5007 = v14503 != v14504;
@@ -19983,12 +19983,12 @@ function v964(TypeScript$$23) {
             return false
           }
           var v5008 = t1$$1.memberScope;
-          introspect(JAM.policy.pC545F199BE443C5FB0DC91C55134FB746FD8B074) {
+          introspect(JAM.policy.p1) {
             var v5009 = t1MemberKeys[iMember$$1]
           }
           t1MemberSymbol = JAM.call(v5008.find, v5008, [v5009, false, false]);
           var v5010 = t2$$1.memberScope;
-          introspect(JAM.policy.pC545F199BE443C5FB0DC91C55134FB746FD8B074) {
+          introspect(JAM.policy.p1) {
             var v5011 = t2MemberKeys[iMember$$1]
           }
           t2MemberSymbol = JAM.call(v5010.find, v5010, [v5011, false, false]);
@@ -20017,7 +20017,7 @@ function v964(TypeScript$$23) {
               var v25902 = v26339 << 16;
               var v25903 = t1MemberType.typeID;
               var v25083 = v25902 | v25903;
-              introspect(JAM.policy.pC545F199BE443C5FB0DC91C55134FB746FD8B074) {
+              introspect(JAM.policy.p1) {
                 var v23483 = v25082[v25083]
               }
               v20114 = v23483 != undefined
@@ -20216,7 +20216,7 @@ function v964(TypeScript$$23) {
       var v5047 = i$$81 < v14524;
       for(;v5047;) {
         var v14525 = memberDecls.members;
-        introspect(JAM.policy.pC545F199BE443C5FB0DC91C55134FB746FD8B074) {
+        introspect(JAM.policy.p1) {
           var v5041 = v14525[i$$81]
         }
         id$$19 = v5041.operand1;
@@ -20258,15 +20258,15 @@ function v964(TypeScript$$23) {
       var v14532 = targetMembers.length;
       var v5051 = i$$81 < v14532;
       for(;v5051;) {
-        introspect(JAM.policy.pC545F199BE443C5FB0DC91C55134FB746FD8B074) {
+        introspect(JAM.policy.p1) {
           var memberName$$2 = targetMembers[i$$81]
         }
         var v5049 = targetType$$3.memberScope;
         var memberSym = JAM.call(v5049.find, v5049, [memberName$$2, true, false]);
-        introspect(JAM.policy.pC545F199BE443C5FB0DC91C55134FB746FD8B074) {
+        introspect(JAM.policy.p1) {
           var v23485 = targetMembers[i$$81]
         }
-        introspect(JAM.policy.pC545F199BE443C5FB0DC91C55134FB746FD8B074) {
+        introspect(JAM.policy.p1) {
           var v20135 = foundSyms[v23485]
         }
         var v14533 = !v20135;
@@ -20342,7 +20342,7 @@ function v964(TypeScript$$23) {
       var v5062 = i$$80 < paramLen$$2;
       for(;v5062;) {
         var v5060 = signature$$5.parameters;
-        introspect(JAM.policy.pC545F199BE443C5FB0DC91C55134FB746FD8B074) {
+        introspect(JAM.policy.p1) {
           var param$$6 = v5060[i$$80]
         }
         var symbol$$13 = param$$6;
@@ -20403,7 +20403,7 @@ function v964(TypeScript$$23) {
         var v14546 = v20143.length;
         var v5090 = j$$10 < v14546;
         for(;v5090;) {
-          introspect(JAM.policy.pC545F199BE443C5FB0DC91C55134FB746FD8B074) {
+          introspect(JAM.policy.p1) {
             var v23491 = signatures$$3[i$$79]
           }
           var v20144 = v23491.parameters;
@@ -20416,21 +20416,21 @@ function v964(TypeScript$$23) {
             v5090 = j$$10 < v14548;
             continue
           }
-          introspect(JAM.policy.pC545F199BE443C5FB0DC91C55134FB746FD8B074) {
+          introspect(JAM.policy.p1) {
             var v20146 = signatures$$3[i$$79]
           }
           var v14549 = v20146.parameters;
-          introspect(JAM.policy.pC545F199BE443C5FB0DC91C55134FB746FD8B074) {
+          introspect(JAM.policy.p1) {
             var v5067 = v14549[j$$10]
           }
           memberType = v5067.getType();
-          introspect(JAM.policy.pC545F199BE443C5FB0DC91C55134FB746FD8B074) {
+          introspect(JAM.policy.p1) {
             var v23492 = signatures$$3[i$$79]
           }
           var v20147 = v23492.declAST;
           var v14550 = v20147.variableArgList;
           if(v14550) {
-            introspect(JAM.policy.pC545F199BE443C5FB0DC91C55134FB746FD8B074) {
+            introspect(JAM.policy.p1) {
               var v25904 = signatures$$3[i$$79]
             }
             var v25087 = v25904.nonOptionalParameterCount;
@@ -20450,7 +20450,7 @@ function v964(TypeScript$$23) {
           if(v5089) {
           }else {
             var v23494 = args$$13.members;
-            introspect(JAM.policy.pC545F199BE443C5FB0DC91C55134FB746FD8B074) {
+            introspect(JAM.policy.p1) {
               var v20149 = v23494[j$$10]
             }
             var v14552 = v20149.nodeType;
@@ -20474,26 +20474,26 @@ function v964(TypeScript$$23) {
                 continue
               }
               var v23496 = args$$13.members;
-              introspect(JAM.policy.pC545F199BE443C5FB0DC91C55134FB746FD8B074) {
+              introspect(JAM.policy.p1) {
                 var v20154 = v23496[j$$10]
               }
               var v14556 = JAM.call(this.canContextuallyTypeFunction, this, [memberType, v20154, true]);
               var v5077 = !v14556;
               if(v5077) {
                 var v20155 = args$$13.members;
-                introspect(JAM.policy.pC545F199BE443C5FB0DC91C55134FB746FD8B074) {
+                introspect(JAM.policy.p1) {
                   var v14557 = v20155[j$$10]
                 }
                 var v5073 = JAM.call(this.canContextuallyTypeFunction, this, [memberType, v14557, false]);
                 if(v5073) {
                   var v5070 = this.typeFlow;
                   var v14558 = args$$13.members;
-                  introspect(JAM.policy.pC545F199BE443C5FB0DC91C55134FB746FD8B074) {
+                  introspect(JAM.policy.p1) {
                     var v5071 = v14558[j$$10]
                   }
                   JAM.call(v5070.typeCheck, v5070, [v5071]);
                   var v25088 = args$$13.members;
-                  introspect(JAM.policy.pC545F199BE443C5FB0DC91C55134FB746FD8B074) {
+                  introspect(JAM.policy.p1) {
                     var v23497 = v25088[j$$10]
                   }
                   var v20156 = v23497.type;
@@ -20507,14 +20507,14 @@ function v964(TypeScript$$23) {
                 }
               }else {
                 var v14560 = args$$13.members;
-                introspect(JAM.policy.pC545F199BE443C5FB0DC91C55134FB746FD8B074) {
+                introspect(JAM.policy.p1) {
                   var v5074 = v14560[j$$10]
                 }
                 JAM.call(this.typeCheckWithContextualType, this, [memberType, true, true, v5074]);
                 this.cleanStartedPTO();
                 hadProvisionalErrors = this.hadProvisionalErrors();
                 var v25089 = args$$13.members;
-                introspect(JAM.policy.pC545F199BE443C5FB0DC91C55134FB746FD8B074) {
+                introspect(JAM.policy.p1) {
                   var v23498 = v25089[j$$10]
                 }
                 var v20157 = v23498.type;
@@ -20529,7 +20529,7 @@ function v964(TypeScript$$23) {
                     var v23499 = v25090 + v25091;
                     var v20158 = v23499 + ", which is of type '";
                     var v25906 = args$$13.members;
-                    introspect(JAM.policy.pC545F199BE443C5FB0DC91C55134FB746FD8B074) {
+                    introspect(JAM.policy.p1) {
                       var v25092 = v25906[j$$10]
                     }
                     var v23500 = v25092.type;
@@ -20547,7 +20547,7 @@ function v964(TypeScript$$23) {
               }
             }else {
               var v23501 = args$$13.members;
-              introspect(JAM.policy.pC545F199BE443C5FB0DC91C55134FB746FD8B074) {
+              introspect(JAM.policy.p1) {
                 var v20160 = v23501[j$$10]
               }
               var v14563 = v20160.nodeType;
@@ -20571,14 +20571,14 @@ function v964(TypeScript$$23) {
                   continue
                 }
                 var v14567 = args$$13.members;
-                introspect(JAM.policy.pC545F199BE443C5FB0DC91C55134FB746FD8B074) {
+                introspect(JAM.policy.p1) {
                   var v5079 = v14567[j$$10]
                 }
                 JAM.call(this.typeCheckWithContextualType, this, [memberType, true, true, v5079]);
                 this.cleanStartedPTO();
                 hadProvisionalErrors = this.hadProvisionalErrors();
                 var v25093 = args$$13.members;
-                introspect(JAM.policy.pC545F199BE443C5FB0DC91C55134FB746FD8B074) {
+                introspect(JAM.policy.p1) {
                   var v23503 = v25093[j$$10]
                 }
                 var v20165 = v23503.type;
@@ -20593,7 +20593,7 @@ function v964(TypeScript$$23) {
                     var v23504 = v25094 + v25095;
                     var v20166 = v23504 + ", which is of type '";
                     var v25908 = args$$13.members;
-                    introspect(JAM.policy.pC545F199BE443C5FB0DC91C55134FB746FD8B074) {
+                    introspect(JAM.policy.p1) {
                       var v25096 = v25908[j$$10]
                     }
                     var v23505 = v25096.type;
@@ -20610,7 +20610,7 @@ function v964(TypeScript$$23) {
                 }
               }else {
                 var v23506 = args$$13.members;
-                introspect(JAM.policy.pC545F199BE443C5FB0DC91C55134FB746FD8B074) {
+                introspect(JAM.policy.p1) {
                   var v20168 = v23506[j$$10]
                 }
                 var v14570 = v20168.nodeType;
@@ -20634,14 +20634,14 @@ function v964(TypeScript$$23) {
                     continue
                   }
                   var v14574 = args$$13.members;
-                  introspect(JAM.policy.pC545F199BE443C5FB0DC91C55134FB746FD8B074) {
+                  introspect(JAM.policy.p1) {
                     var v5083 = v14574[j$$10]
                   }
                   JAM.call(this.typeCheckWithContextualType, this, [memberType, true, true, v5083]);
                   this.cleanStartedPTO();
                   hadProvisionalErrors = this.hadProvisionalErrors();
                   var v25097 = args$$13.members;
-                  introspect(JAM.policy.pC545F199BE443C5FB0DC91C55134FB746FD8B074) {
+                  introspect(JAM.policy.p1) {
                     var v23508 = v25097[j$$10]
                   }
                   var v20173 = v23508.type;
@@ -20656,7 +20656,7 @@ function v964(TypeScript$$23) {
                       var v23509 = v25098 + v25099;
                       var v20174 = v23509 + ", which is of type '";
                       var v25910 = args$$13.members;
-                      introspect(JAM.policy.pC545F199BE443C5FB0DC91C55134FB746FD8B074) {
+                      introspect(JAM.policy.p1) {
                         var v25100 = v25910[j$$10]
                       }
                       var v23510 = v25100.type;
@@ -20685,7 +20685,7 @@ function v964(TypeScript$$23) {
         var v5092 = j$$10 == v14578;
         if(v5092) {
           var v5091 = applicableSigs.length;
-          introspect(JAM.policy.pC545F199BE443C5FB0DC91C55134FB746FD8B074) {
+          introspect(JAM.policy.p1) {
             var v14579 = signatures$$3[i$$79]
           }
           applicableSigs[v5091] = {signature:v14579, hadProvisionalErrors:hadProvisionalErrors}
@@ -20746,7 +20746,7 @@ function v964(TypeScript$$23) {
         var v5107 = v14586;
         for(;v5107;) {
           var v14587 = args$$12.members;
-          introspect(JAM.policy.pC545F199BE443C5FB0DC91C55134FB746FD8B074) {
+          introspect(JAM.policy.p1) {
             var v5097 = v14587[i$$78]
           }
           AType = v5097.type;
@@ -20758,7 +20758,7 @@ function v964(TypeScript$$23) {
           if(v14590) {
             var v23513 = best.signature;
             var v20182 = v23513.parameters;
-            introspect(JAM.policy.pC545F199BE443C5FB0DC91C55134FB746FD8B074) {
+            introspect(JAM.policy.p1) {
               var v14588 = v20182[i$$78]
             }
             v5098 = v14588.getType()
@@ -20769,7 +20769,7 @@ function v964(TypeScript$$23) {
             var v25911 = v26343.parameters;
             var v25103 = v25911.length;
             var v23515 = v25103 - 1;
-            introspect(JAM.policy.pC545F199BE443C5FB0DC91C55134FB746FD8B074) {
+            introspect(JAM.policy.p1) {
               var v20183 = v23514[v23515]
             }
             var v14589 = v20183.getType();
@@ -20784,7 +20784,7 @@ function v964(TypeScript$$23) {
           if(v14593) {
             var v23517 = Q.signature;
             var v20185 = v23517.parameters;
-            introspect(JAM.policy.pC545F199BE443C5FB0DC91C55134FB746FD8B074) {
+            introspect(JAM.policy.p1) {
               var v14591 = v20185[i$$78]
             }
             v5099 = v14591.getType()
@@ -20795,7 +20795,7 @@ function v964(TypeScript$$23) {
             var v25912 = v26344.parameters;
             var v25106 = v25912.length;
             var v23519 = v25106 - 1;
-            introspect(JAM.policy.pC545F199BE443C5FB0DC91C55134FB746FD8B074) {
+            introspect(JAM.policy.p1) {
               var v20186 = v23518[v23519]
             }
             var v14592 = v20186.getType();
@@ -20996,7 +20996,7 @@ function v964(TypeScript$$23) {
                 var j$$9 = 0;
                 var v5147 = j$$9 < propsLen;
                 for(;v5147;) {
-                  introspect(JAM.policy.pC545F199BE443C5FB0DC91C55134FB746FD8B074) {
+                  introspect(JAM.policy.p1) {
                     var propDecl = props$$1[j$$9]
                   }
                   var propSym = null;
@@ -21161,7 +21161,7 @@ function v964(TypeScript$$23) {
       }
       var v14632 = signatures$$1.length;
       var v5173 = v14632 - 1;
-      introspect(JAM.policy.pC545F199BE443C5FB0DC91C55134FB746FD8B074) {
+      introspect(JAM.policy.p1) {
         var signature$$4 = signatures$$1[v5173]
       }
       var v5174 = signature$$4.parameters;
@@ -21170,7 +21170,7 @@ function v964(TypeScript$$23) {
       var v5177 = i$$77 < len$$27;
       for(;v5177;) {
         var v5175 = signature$$4.parameters;
-        introspect(JAM.policy.pC545F199BE443C5FB0DC91C55134FB746FD8B074) {
+        introspect(JAM.policy.p1) {
           var paramSym$$2 = v5175[i$$77]
         }
         var v14633 = paramSym$$2.parameter;
@@ -21187,7 +21187,7 @@ function v964(TypeScript$$23) {
       if(v5182) {
         var v26345 = signature$$4.parameters;
         var v26346 = len$$27 - 1;
-        introspect(JAM.policy.pC545F199BE443C5FB0DC91C55134FB746FD8B074) {
+        introspect(JAM.policy.p1) {
           var v25913 = v26345[v26346]
         }
         var v25107 = v25913.parameter;
@@ -21199,7 +21199,7 @@ function v964(TypeScript$$23) {
           var v5178 = this.errorReporter;
           var v23529 = signature$$4.parameters;
           var v23530 = len$$27 - 1;
-          introspect(JAM.policy.pC545F199BE443C5FB0DC91C55134FB746FD8B074) {
+          introspect(JAM.policy.p1) {
             var v20209 = v23529[v23530]
           }
           var v14636 = v20209.parameter;
@@ -21207,14 +21207,14 @@ function v964(TypeScript$$23) {
           JAM.call(v5178.simpleErrorFromSym, v5178, [v5179, "... parameter must have array type"]);
           var v23531 = signature$$4.parameters;
           var v23532 = len$$27 - 1;
-          introspect(JAM.policy.pC545F199BE443C5FB0DC91C55134FB746FD8B074) {
+          introspect(JAM.policy.p1) {
             var v20210 = v23531[v23532]
           }
           var v14637 = v20210.parameter;
           var v5180 = v14637.typeLink;
           var v25914 = signature$$4.parameters;
           var v25915 = len$$27 - 1;
-          introspect(JAM.policy.pC545F199BE443C5FB0DC91C55134FB746FD8B074) {
+          introspect(JAM.policy.p1) {
             var v25108 = v25914[v25915]
           }
           var v23533 = v25108.parameter;
@@ -22215,7 +22215,7 @@ function v964(TypeScript$$23) {
         var v5397 = i$$75 < len$$25;
         for(;v5397;) {
           var v5386 = args$$11.members;
-          introspect(JAM.policy.pC545F199BE443C5FB0DC91C55134FB746FD8B074) {
+          introspect(JAM.policy.p1) {
             var parameter$$1 = v5386[i$$75]
           }
           var v5387 = TypeScript$$23.ValueLocation;
@@ -22301,7 +22301,7 @@ function v964(TypeScript$$23) {
       var v5415 = i$$74 < v14767;
       for(;v5415;) {
         var v23560 = this.provisionalStartedTypecheckObjects;
-        introspect(JAM.policy.pC545F199BE443C5FB0DC91C55134FB746FD8B074) {
+        introspect(JAM.policy.p1) {
           var v20269 = v23560[i$$74]
         }
         var v14768 = v20269.typeCheckStatus;
@@ -22310,7 +22310,7 @@ function v964(TypeScript$$23) {
         var v5414 = v14768 >= v14769;
         if(v5414) {
           var v14770 = this.provisionalStartedTypecheckObjects;
-          introspect(JAM.policy.pC545F199BE443C5FB0DC91C55134FB746FD8B074) {
+          introspect(JAM.policy.p1) {
             var v5413 = v14770[i$$74]
           }
           var v14771 = TypeScript$$23.TypeCheckStatus;
@@ -22609,7 +22609,7 @@ function v964(TypeScript$$23) {
         var v25120 = this.contextStack;
         var v23563 = v25120.length;
         var v20280 = v23563 - 1;
-        introspect(JAM.policy.pC545F199BE443C5FB0DC91C55134FB746FD8B074) {
+        introspect(JAM.policy.p1) {
           var v14780 = v20279[v20280]
         }
         v5499 = v14780.provisional
@@ -22629,7 +22629,7 @@ function v964(TypeScript$$23) {
         var v25121 = this.contextStack;
         var v23565 = v25121.length;
         var v20283 = v23565 - 1;
-        introspect(JAM.policy.pC545F199BE443C5FB0DC91C55134FB746FD8B074) {
+        introspect(JAM.policy.p1) {
           var v14783 = v20282[v20283]
         }
         v5500 = v14783.contextID
@@ -23281,7 +23281,7 @@ function v892(TypeScript$$22) {
     function v871() {
       var v14861 = TypeScript$$22.tokenTable;
       var v14862 = this.tokenId;
-      introspect(JAM.policy.pC545F199BE443C5FB0DC91C55134FB746FD8B074) {
+      introspect(JAM.policy.p1) {
         var v5655 = v14861[v14862]
       }
       return v5655.text
@@ -23302,7 +23302,7 @@ function v892(TypeScript$$22) {
       var v14864 = v20311 + " (";
       var v20312 = TokenID._map;
       var v20313 = this.tokenId;
-      introspect(JAM.policy.pC545F199BE443C5FB0DC91C55134FB746FD8B074) {
+      introspect(JAM.policy.p1) {
         var v14865 = v20312[v20313]
       }
       var v5657 = v14864 + v14865;
@@ -23819,7 +23819,7 @@ function v892(TypeScript$$22) {
   }
   function lookupToken(tokenId$$45) {
     var v5814 = TypeScript$$22.tokenTable;
-    introspect(JAM.policy.pC545F199BE443C5FB0DC91C55134FB746FD8B074) {
+    introspect(JAM.policy.p1) {
       return v5814[tokenId$$45]
     }
   }
@@ -26172,7 +26172,7 @@ function v862(TypeScript$$21) {
         var v6756 = i$$72 < v15291;
         for(;v6756;) {
           var v15292 = this.parents;
-          introspect(JAM.policy.pC545F199BE443C5FB0DC91C55134FB746FD8B074) {
+          introspect(JAM.policy.p1) {
             var v6755 = v15292[i$$72]
           }
           sym$$11 = JAM.call(v6755.findAmbient, v6755, [name$$66, publicOnly$$10, typespace$$9]);
@@ -26261,7 +26261,7 @@ function v862(TypeScript$$21) {
         var v6763 = i$$71 < v15295;
         for(;v6763;) {
           var v15296 = this.parents;
-          introspect(JAM.policy.pC545F199BE443C5FB0DC91C55134FB746FD8B074) {
+          introspect(JAM.policy.p1) {
             var v6762 = v15296[i$$71]
           }
           sym$$10 = JAM.call(v6762.find, v6762, [name$$65, publicOnly$$9, typespace$$8]);
@@ -26350,7 +26350,7 @@ function v862(TypeScript$$21) {
         var v6770 = i$$70 < v15299;
         for(;v6770;) {
           var v15300 = this.parents;
-          introspect(JAM.policy.pC545F199BE443C5FB0DC91C55134FB746FD8B074) {
+          introspect(JAM.policy.p1) {
             var v6769 = v15300[i$$70]
           }
           sym$$9 = JAM.call(v6769.findImplementation, v6769, [name$$64, publicOnly$$8, typespace$$7]);
@@ -26391,7 +26391,7 @@ function v862(TypeScript$$21) {
         var v6776 = i$$69 < v15303;
         for(;v6776;) {
           var v15304 = this.parents;
-          introspect(JAM.policy.pC545F199BE443C5FB0DC91C55134FB746FD8B074) {
+          introspect(JAM.policy.p1) {
             var v6775 = v15304[i$$69]
           }
           JAM.call(v6775.print, v6775, [outfile$$7]);
@@ -26413,7 +26413,7 @@ function v862(TypeScript$$21) {
         var v6779 = i$$68 < v15306;
         for(;v6779;) {
           var v15307 = this.parents;
-          introspect(JAM.policy.pC545F199BE443C5FB0DC91C55134FB746FD8B074) {
+          introspect(JAM.policy.p1) {
             var v6778 = v15307[i$$68]
           }
           var parentResult$$2 = JAM.call(v6778.getAllValueSymbolNames, v6778, [members$$18]);
@@ -26438,7 +26438,7 @@ function v862(TypeScript$$21) {
         var v6782 = i$$67 < v15309;
         for(;v6782;) {
           var v15310 = this.parents;
-          introspect(JAM.policy.pC545F199BE443C5FB0DC91C55134FB746FD8B074) {
+          introspect(JAM.policy.p1) {
             var v6781 = v15310[i$$67]
           }
           var parentResult$$1 = JAM.call(v6781.getAllTypeSymbolNames, v6781, [members$$17]);
@@ -26463,7 +26463,7 @@ function v862(TypeScript$$21) {
         var v6785 = i$$66 < v15312;
         for(;v6785;) {
           var v15313 = this.parents;
-          introspect(JAM.policy.pC545F199BE443C5FB0DC91C55134FB746FD8B074) {
+          introspect(JAM.policy.p1) {
             var v6784 = v15313[i$$66]
           }
           var parentResult = JAM.call(v6784.getAllSymbolNames, v6784, [members$$16]);
@@ -26487,7 +26487,7 @@ function v862(TypeScript$$21) {
         var v6789 = i$$65 < v15315;
         for(;v6789;) {
           var v15316 = this.parents;
-          introspect(JAM.policy.pC545F199BE443C5FB0DC91C55134FB746FD8B074) {
+          introspect(JAM.policy.p1) {
             var v6787 = v15316[i$$65]
           }
           var sym$$8 = JAM.call(v6787.search, v6787, [filter$$1, name$$63, publicOnly$$7, typespace$$6]);
@@ -27088,7 +27088,7 @@ function v794(TypeScript$$20) {
       var v6912 = i$$64 < v15358;
       for(;v6912;) {
         var v20444 = this.expansionsDeclAST;
-        introspect(JAM.policy.pC545F199BE443C5FB0DC91C55134FB746FD8B074) {
+        introspect(JAM.policy.p1) {
           var v15359 = v20444[i$$64]
         }
         var v6911 = v15359.getDocComments();
@@ -27107,14 +27107,14 @@ function v794(TypeScript$$20) {
       var v15361 = v20446 > 0;
       if(v15361) {
         var v25923 = scopeSymbolPathLength - 1;
-        introspect(JAM.policy.pC545F199BE443C5FB0DC91C55134FB746FD8B074) {
+        introspect(JAM.policy.p1) {
           var v25129 = scopeSymbolPath[v25923]
         }
         var v23587 = v25129.getType();
         var v20447 = v23587.isModuleType();
         if(v20447) {
           var v25130 = scopeSymbolPathLength - 1;
-          introspect(JAM.policy.pC545F199BE443C5FB0DC91C55134FB746FD8B074) {
+          introspect(JAM.policy.p1) {
             var v23588 = scopeSymbolPath[v25130]
           }
           v20447 = v23588.isDynamic
@@ -27126,14 +27126,14 @@ function v794(TypeScript$$20) {
         var v15362 = scopeSymbolPathLength > 1;
         if(v15362) {
           var v25924 = scopeSymbolPathLength - 2;
-          introspect(JAM.policy.pC545F199BE443C5FB0DC91C55134FB746FD8B074) {
+          introspect(JAM.policy.p1) {
             var v25131 = scopeSymbolPath[v25924]
           }
           var v23589 = v25131.getType();
           var v20448 = v23589.isModuleType();
           if(v20448) {
             var v25132 = scopeSymbolPathLength - 2;
-            introspect(JAM.policy.pC545F199BE443C5FB0DC91C55134FB746FD8B074) {
+            introspect(JAM.policy.p1) {
               var v23590 = scopeSymbolPath[v25132]
             }
             v20448 = v23590.isDynamic
@@ -27143,7 +27143,7 @@ function v794(TypeScript$$20) {
         var v6915 = v15362;
         if(v6915) {
           var v15363 = scopeSymbolPathLength - 2;
-          introspect(JAM.policy.pC545F199BE443C5FB0DC91C55134FB746FD8B074) {
+          introspect(JAM.policy.p1) {
             var v6913 = scopeSymbolPath[v15363]
           }
           var moduleType = v6913.getType();
@@ -27153,7 +27153,7 @@ function v794(TypeScript$$20) {
         var v6918 = externalSymbol == null;
         if(v6918) {
           var v15364 = scopeSymbolPathLength - 1;
-          introspect(JAM.policy.pC545F199BE443C5FB0DC91C55134FB746FD8B074) {
+          introspect(JAM.policy.p1) {
             var v6916 = scopeSymbolPath[v15364]
           }
           moduleType = v6916.getType();
@@ -27780,7 +27780,7 @@ function v794(TypeScript$$20) {
       var len$$24 = lca.length;
       var v7009 = i$$63 < len$$24;
       for(;v7009;) {
-        introspect(JAM.policy.pC545F199BE443C5FB0DC91C55134FB746FD8B074) {
+        introspect(JAM.policy.p1) {
           var v7006 = lca[i$$63]
         }
         var v15439;
@@ -27836,14 +27836,14 @@ function v794(TypeScript$$20) {
       var aLen = aPath.length;
       var v7015 = i$$62 < aLen;
       for(;v7015;) {
-        introspect(JAM.policy.pC545F199BE443C5FB0DC91C55134FB746FD8B074) {
+        introspect(JAM.policy.p1) {
           var aNode = aPath[i$$62]
         }
         var j$$8 = 0;
         var bLen = bPath.length;
         var v7013 = j$$8 < bLen;
         for(;v7013;) {
-          introspect(JAM.policy.pC545F199BE443C5FB0DC91C55134FB746FD8B074) {
+          introspect(JAM.policy.p1) {
             var bNode = bPath[j$$8]
           }
           var v7012 = aNode == bNode;
@@ -28155,20 +28155,20 @@ function v711(TypeScript$$19) {
             var v20535 = !v23613;
             if(v20535) {
               var v25931 = this.signatures;
-              introspect(JAM.policy.pC545F199BE443C5FB0DC91C55134FB746FD8B074) {
+              introspect(JAM.policy.p1) {
                 var v25142 = v25931[i$$61]
               }
               var v23614 = v25142.declAST;
               if(v23614) {
                 var v26543 = this.signatures;
-                introspect(JAM.policy.pC545F199BE443C5FB0DC91C55134FB746FD8B074) {
+                introspect(JAM.policy.p1) {
                   var v26358 = v26543[i$$61]
                 }
                 var v25932 = v26358.declAST;
                 var v25143 = v25932.isOverload;
                 if(v25143) {
                   var v26708 = this.signatures;
-                  introspect(JAM.policy.pC545F199BE443C5FB0DC91C55134FB746FD8B074) {
+                  introspect(JAM.policy.p1) {
                     var v26646 = v26708[i$$61]
                   }
                   var v26544 = v26646.declAST;
@@ -28188,34 +28188,34 @@ function v711(TypeScript$$19) {
           if(v7067) {
             var v7065 = checker$$7.errorReporter;
             var v20536 = this.signatures;
-            introspect(JAM.policy.pC545F199BE443C5FB0DC91C55134FB746FD8B074) {
+            introspect(JAM.policy.p1) {
               var v15458 = v20536[i$$61]
             }
             var v7066 = v15458.declAST;
             JAM.call(v7065.simpleError, v7065, [v7066, "Overload declaration lacks definition"])
           }
           var v23615 = this.signatures;
-          introspect(JAM.policy.pC545F199BE443C5FB0DC91C55134FB746FD8B074) {
+          introspect(JAM.policy.p1) {
             var v20537 = v23615[i$$61]
           }
           var v15459 = v20537.declAST;
           if(v15459) {
             var v25934 = this.signatures;
-            introspect(JAM.policy.pC545F199BE443C5FB0DC91C55134FB746FD8B074) {
+            introspect(JAM.policy.p1) {
               var v25144 = v25934[i$$61]
             }
             var v23616 = v25144.declAST;
             var v20538 = v23616.isConstructor;
             if(v20538) {
               var v26361 = this.signatures;
-              introspect(JAM.policy.pC545F199BE443C5FB0DC91C55134FB746FD8B074) {
+              introspect(JAM.policy.p1) {
                 var v25935 = v26361[i$$61]
               }
               var v25145 = v25935.declAST;
               var v23617 = v25145.classDecl;
               if(v23617) {
                 var v26741 = this.signatures;
-                introspect(JAM.policy.pC545F199BE443C5FB0DC91C55134FB746FD8B074) {
+                introspect(JAM.policy.p1) {
                   var v26709 = v26741[i$$61]
                 }
                 var v26647 = v26709.declAST;
@@ -28235,7 +28235,7 @@ function v711(TypeScript$$19) {
           if(v7070) {
             var v7068 = checker$$7.typeFlow;
             var v23618 = this.signatures;
-            introspect(JAM.policy.pC545F199BE443C5FB0DC91C55134FB746FD8B074) {
+            introspect(JAM.policy.p1) {
               var v20539 = v23618[i$$61]
             }
             var v15460 = v20539.declAST;
@@ -28244,7 +28244,7 @@ function v711(TypeScript$$19) {
           }
           var v7071 = checker$$7.typeFlow;
           var v20540 = this.signatures;
-          introspect(JAM.policy.pC545F199BE443C5FB0DC91C55134FB746FD8B074) {
+          introspect(JAM.policy.p1) {
             var v15461 = v20540[i$$61]
           }
           var v7072 = v15461.declAST;
@@ -28273,19 +28273,19 @@ function v711(TypeScript$$19) {
           var v7079 = j$$7 < len$$22;
           for(;v7079;) {
             var v23620 = this.signatures;
-            introspect(JAM.policy.pC545F199BE443C5FB0DC91C55134FB746FD8B074) {
+            introspect(JAM.policy.p1) {
               var v20542 = v23620[i$$60]
             }
             var v15463 = v20542.declAST;
             if(v15463) {
               var v25148 = this.signatures;
-              introspect(JAM.policy.pC545F199BE443C5FB0DC91C55134FB746FD8B074) {
+              introspect(JAM.policy.p1) {
                 var v23621 = v25148[j$$7]
               }
               var v20543 = v23621.declAST;
               if(v20543) {
                 var v26710 = this.signatures;
-                introspect(JAM.policy.pC545F199BE443C5FB0DC91C55134FB746FD8B074) {
+                introspect(JAM.policy.p1) {
                   var v26648 = v26710[i$$60]
                 }
                 var v26547 = v26648.declAST;
@@ -28296,7 +28296,7 @@ function v711(TypeScript$$19) {
                 var v25149 = !v25938;
                 if(v25149) {
                   var v26711 = this.signatures;
-                  introspect(JAM.policy.pC545F199BE443C5FB0DC91C55134FB746FD8B074) {
+                  introspect(JAM.policy.p1) {
                     var v26649 = v26711[j$$7]
                   }
                   var v26549 = v26649.declAST;
@@ -28309,11 +28309,11 @@ function v711(TypeScript$$19) {
                 var v23622 = v25149;
                 if(v23622) {
                   var v25940 = this.signatures;
-                  introspect(JAM.policy.pC545F199BE443C5FB0DC91C55134FB746FD8B074) {
+                  introspect(JAM.policy.p1) {
                     var v25150 = v25940[i$$60]
                   }
                   var v25941 = this.signatures;
-                  introspect(JAM.policy.pC545F199BE443C5FB0DC91C55134FB746FD8B074) {
+                  introspect(JAM.policy.p1) {
                     var v25151 = v25941[j$$7]
                   }
                   v23622 = JAM.call(checker$$6.signaturesAreIdentical, checker$$6, [v25150, v25151])
@@ -28326,19 +28326,19 @@ function v711(TypeScript$$19) {
             if(v7078) {
               var v7075 = checker$$6.errorReporter;
               var v20544 = this.signatures;
-              introspect(JAM.policy.pC545F199BE443C5FB0DC91C55134FB746FD8B074) {
+              introspect(JAM.policy.p1) {
                 var v15464 = v20544[i$$60]
               }
               var v7076 = v15464.declAST;
               var v15465;
               var v25942 = this.signatures;
-              introspect(JAM.policy.pC545F199BE443C5FB0DC91C55134FB746FD8B074) {
+              introspect(JAM.policy.p1) {
                 var v25152 = v25942[i$$60]
               }
               var v23623 = v25152.declAST;
               if(v23623) {
                 var v26367 = this.signatures;
-                introspect(JAM.policy.pC545F199BE443C5FB0DC91C55134FB746FD8B074) {
+                introspect(JAM.policy.p1) {
                   var v25943 = v26367[i$$60]
                 }
                 var v25153 = v25943.declAST;
@@ -28347,7 +28347,7 @@ function v711(TypeScript$$19) {
               var v20546 = v23623;
               if(v20546) {
                 var v26551 = this.signatures;
-                introspect(JAM.policy.pC545F199BE443C5FB0DC91C55134FB746FD8B074) {
+                introspect(JAM.policy.p1) {
                   var v26368 = v26551[i$$60]
                 }
                 var v25944 = v26368.declAST;
@@ -28368,7 +28368,7 @@ function v711(TypeScript$$19) {
           if(v7083) {
             var v20547 = this.definitionSignature;
             var v23625 = this.signatures;
-            introspect(JAM.policy.pC545F199BE443C5FB0DC91C55134FB746FD8B074) {
+            introspect(JAM.policy.p1) {
               var v20548 = v23625[i$$60]
             }
             var v15466 = JAM.call(checker$$6.signatureIsAssignableToTarget, checker$$6, [v20547, v20548]);
@@ -28376,7 +28376,7 @@ function v711(TypeScript$$19) {
             if(v7082) {
               var v7080 = checker$$6.errorReporter;
               var v20549 = this.signatures;
-              introspect(JAM.policy.pC545F199BE443C5FB0DC91C55134FB746FD8B074) {
+              introspect(JAM.policy.p1) {
                 var v15467 = v20549[i$$60]
               }
               var v7081 = v15467.declAST;
@@ -28399,7 +28399,7 @@ function v711(TypeScript$$19) {
         var v7088 = i$$59 < len$$21;
         for(;v7088;) {
           var v20550 = this.signatures;
-          introspect(JAM.policy.pC545F199BE443C5FB0DC91C55134FB746FD8B074) {
+          introspect(JAM.policy.p1) {
             var v15468 = v20550[i$$59]
           }
           var v7087 = JAM.call(v15468.specializeType, v15468, [pattern$$3, replacement$$1, checker$$5]);
@@ -28424,7 +28424,7 @@ function v711(TypeScript$$19) {
         var v15469 = len$$20 > 1;
         if(v15469) {
           var v23626 = this.signatures;
-          introspect(JAM.policy.pC545F199BE443C5FB0DC91C55134FB746FD8B074) {
+          introspect(JAM.policy.p1) {
             var v20551 = v23626[i$$58]
           }
           var v20552 = this.definitionSignature;
@@ -28442,14 +28442,14 @@ function v711(TypeScript$$19) {
         var v7095 = v15470 & v15471;
         if(v7095) {
           var v20554 = this.signatures;
-          introspect(JAM.policy.pC545F199BE443C5FB0DC91C55134FB746FD8B074) {
+          introspect(JAM.policy.p1) {
             var v15472 = v20554[i$$58]
           }
           var v7093 = JAM.call(v15472.toStringHelperEx, v15472, [shortform$$2, true, scope$$12]);
           JAM.call(result$$12.push, result$$12, [v7093])
         }else {
           var v20555 = this.signatures;
-          introspect(JAM.policy.pC545F199BE443C5FB0DC91C55134FB746FD8B074) {
+          introspect(JAM.policy.p1) {
             var v15473 = v20555[i$$58]
           }
           var v7094 = JAM.call(v15473.toStringHelperEx, v15473, [shortform$$2, false, scope$$12, prefix$$3]);
@@ -28562,13 +28562,13 @@ function v711(TypeScript$$19) {
       for(;v7117;) {
         var v15479 = TypeScript$$19.MemberName;
         var v25949 = this.parameters;
-        introspect(JAM.policy.pC545F199BE443C5FB0DC91C55134FB746FD8B074) {
+        introspect(JAM.policy.p1) {
           var v25158 = v25949[i$$57]
         }
         var v23629 = v25158.name;
         var v25159;
         var v26554 = this.parameters;
-        introspect(JAM.policy.pC545F199BE443C5FB0DC91C55134FB746FD8B074) {
+        introspect(JAM.policy.p1) {
           var v26373 = v26554[i$$57]
         }
         var v25950 = v26373.isOptional();
@@ -28583,7 +28583,7 @@ function v711(TypeScript$$19) {
         var v7113 = JAM.call(v15479.create, v15479, [v15480]);
         JAM.call(builder$$2.add, builder$$2, [v7113]);
         var v23631 = this.parameters;
-        introspect(JAM.policy.pC545F199BE443C5FB0DC91C55134FB746FD8B074) {
+        introspect(JAM.policy.p1) {
           var v20558 = v23631[i$$57]
         }
         var v15481 = v20558.getType();
@@ -28603,7 +28603,7 @@ function v711(TypeScript$$19) {
       if(v7120) {
         var v15484 = TypeScript$$19.MemberName;
         var v25951 = this.parameters;
-        introspect(JAM.policy.pC545F199BE443C5FB0DC91C55134FB746FD8B074) {
+        introspect(JAM.policy.p1) {
           var v25160 = v25951[i$$57]
         }
         var v23632 = v25160.name;
@@ -28612,7 +28612,7 @@ function v711(TypeScript$$19) {
         var v7118 = JAM.call(v15484.create, v15484, [v15485]);
         JAM.call(builder$$2.add, builder$$2, [v7118]);
         var v23633 = this.parameters;
-        introspect(JAM.policy.pC545F199BE443C5FB0DC91C55134FB746FD8B074) {
+        introspect(JAM.policy.p1) {
           var v20560 = v23633[i$$57]
         }
         var v15486 = v20560.getType();
@@ -28692,7 +28692,7 @@ function v711(TypeScript$$19) {
         var v7146 = i$$56 < len$$18;
         for(;v7146;) {
           var v7135 = this.parameters;
-          introspect(JAM.policy.pC545F199BE443C5FB0DC91C55134FB746FD8B074) {
+          introspect(JAM.policy.p1) {
             var oldSym = v7135[i$$56]
           }
           var v7136 = TypeScript$$19.ValueLocation;
@@ -29761,7 +29761,7 @@ function v680(TypeScript$$17) {
         var v7321 = i$$55 < len$$17;
         for(;v7321;) {
           var v7318 = signature$$1.parameters;
-          introspect(JAM.policy.pC545F199BE443C5FB0DC91C55134FB746FD8B074) {
+          introspect(JAM.policy.p1) {
             var paramSym = v7318[i$$55]
           }
           var v15591 = context$$33.typeFlow;
@@ -30068,7 +30068,7 @@ function v675(TypeScript$$16) {
       var v7528 = v15642 < v15643;
       start:for(;v7528;) {
         var v20655 = this.ch;
-        introspect(JAM.policy.pC545F199BE443C5FB0DC91C55134FB746FD8B074) {
+        introspect(JAM.policy.p1) {
           var v15644 = lexIdStartTable[v20655]
         }
         var v20657 = !v15644;
@@ -30210,14 +30210,14 @@ function v675(TypeScript$$16) {
                       var v7391 = TypeScript$$16.staticTokens;
                       var v15667 = TypeScript$$16.TokenID;
                       var v7392 = v15667.SlashEquals;
-                      introspect(JAM.policy.pC545F199BE443C5FB0DC91C55134FB746FD8B074) {
+                      introspect(JAM.policy.p1) {
                         return v7391[v7392]
                       }
                     }else {
                       var v7393 = TypeScript$$16.staticTokens;
                       var v15668 = TypeScript$$16.TokenID;
                       var v7394 = v15668.Slash;
-                      introspect(JAM.policy.pC545F199BE443C5FB0DC91C55134FB746FD8B074) {
+                      introspect(JAM.policy.p1) {
                         return v7393[v7394]
                       }
                     }
@@ -30233,7 +30233,7 @@ function v675(TypeScript$$16) {
                 var v7398 = TypeScript$$16.staticTokens;
                 var v15671 = TypeScript$$16.TokenID;
                 var v7399 = v15671.Semicolon;
-                introspect(JAM.policy.pC545F199BE443C5FB0DC91C55134FB746FD8B074) {
+                introspect(JAM.policy.p1) {
                   return v7398[v7399]
                 }
               }else {
@@ -30251,12 +30251,12 @@ function v675(TypeScript$$16) {
                   return this.scanStringConstant()
                 }else {
                   var v15673 = this.ch;
-                  introspect(JAM.policy.pC545F199BE443C5FB0DC91C55134FB746FD8B074) {
+                  introspect(JAM.policy.p1) {
                     var v7522 = autoToken[v15673]
                   }
                   if(v7522) {
                     var v7400 = this.ch;
-                    introspect(JAM.policy.pC545F199BE443C5FB0DC91C55134FB746FD8B074) {
+                    introspect(JAM.policy.p1) {
                       var atok = autoToken[v7400]
                     }
                     var v15674 = atok.tokenId;
@@ -30297,7 +30297,7 @@ function v675(TypeScript$$16) {
                         var v7403 = TypeScript$$16.staticTokens;
                         var v15681 = TypeScript$$16.TokenID;
                         var v7404 = v15681.Error;
-                        introspect(JAM.policy.pC545F199BE443C5FB0DC91C55134FB746FD8B074) {
+                        introspect(JAM.policy.p1) {
                           return v7403[v7404]
                         }
                       }
@@ -30378,7 +30378,7 @@ function v675(TypeScript$$16) {
                               var v7413 = TypeScript$$16.staticTokens;
                               var v15692 = TypeScript$$16.TokenID;
                               var v7414 = v15692.EndOfFile;
-                              introspect(JAM.policy.pC545F199BE443C5FB0DC91C55134FB746FD8B074) {
+                              introspect(JAM.policy.p1) {
                                 return v7413[v7414]
                               }
                             }
@@ -30409,7 +30409,7 @@ function v675(TypeScript$$16) {
                               var v7418 = TypeScript$$16.staticTokens;
                               var v15698 = TypeScript$$16.TokenID;
                               var v7419 = v15698.DotDotDot;
-                              introspect(JAM.policy.pC545F199BE443C5FB0DC91C55134FB746FD8B074) {
+                              introspect(JAM.policy.p1) {
                                 return v7418[v7419]
                               }
                             }else {
@@ -30417,7 +30417,7 @@ function v675(TypeScript$$16) {
                               var v7420 = TypeScript$$16.staticTokens;
                               var v15699 = TypeScript$$16.TokenID;
                               var v7421 = v15699.Dot;
-                              introspect(JAM.policy.pC545F199BE443C5FB0DC91C55134FB746FD8B074) {
+                              introspect(JAM.policy.p1) {
                                 return v7420[v7421]
                               }
                             }
@@ -30430,7 +30430,7 @@ function v675(TypeScript$$16) {
                               var v7423 = TypeScript$$16.staticTokens;
                               var v15700 = TypeScript$$16.TokenID;
                               var v7424 = v15700.Dot;
-                              introspect(JAM.policy.pC545F199BE443C5FB0DC91C55134FB746FD8B074) {
+                              introspect(JAM.policy.p1) {
                                 return v7423[v7424]
                               }
                             }
@@ -30453,7 +30453,7 @@ function v675(TypeScript$$16) {
                               var v7426 = TypeScript$$16.staticTokens;
                               var v15705 = TypeScript$$16.TokenID;
                               var v7427 = v15705.EqualsEqualsEquals;
-                              introspect(JAM.policy.pC545F199BE443C5FB0DC91C55134FB746FD8B074) {
+                              introspect(JAM.policy.p1) {
                                 return v7426[v7427]
                               }
                             }else {
@@ -30461,7 +30461,7 @@ function v675(TypeScript$$16) {
                               var v7428 = TypeScript$$16.staticTokens;
                               var v15706 = TypeScript$$16.TokenID;
                               var v7429 = v15706.EqualsEquals;
-                              introspect(JAM.policy.pC545F199BE443C5FB0DC91C55134FB746FD8B074) {
+                              introspect(JAM.policy.p1) {
                                 return v7428[v7429]
                               }
                             }
@@ -30476,7 +30476,7 @@ function v675(TypeScript$$16) {
                               var v7431 = TypeScript$$16.staticTokens;
                               var v15709 = TypeScript$$16.TokenID;
                               var v7432 = v15709.EqualsGreaterThan;
-                              introspect(JAM.policy.pC545F199BE443C5FB0DC91C55134FB746FD8B074) {
+                              introspect(JAM.policy.p1) {
                                 return v7431[v7432]
                               }
                             }else {
@@ -30484,7 +30484,7 @@ function v675(TypeScript$$16) {
                               var v7433 = TypeScript$$16.staticTokens;
                               var v15710 = TypeScript$$16.TokenID;
                               var v7434 = v15710.Equals;
-                              introspect(JAM.policy.pC545F199BE443C5FB0DC91C55134FB746FD8B074) {
+                              introspect(JAM.policy.p1) {
                                 return v7433[v7434]
                               }
                             }
@@ -30507,7 +30507,7 @@ function v675(TypeScript$$16) {
                               var v7437 = TypeScript$$16.staticTokens;
                               var v15715 = TypeScript$$16.TokenID;
                               var v7438 = v15715.ExclamationEqualsEquals;
-                              introspect(JAM.policy.pC545F199BE443C5FB0DC91C55134FB746FD8B074) {
+                              introspect(JAM.policy.p1) {
                                 return v7437[v7438]
                               }
                             }else {
@@ -30515,7 +30515,7 @@ function v675(TypeScript$$16) {
                               var v7439 = TypeScript$$16.staticTokens;
                               var v15716 = TypeScript$$16.TokenID;
                               var v7440 = v15716.ExclamationEquals;
-                              introspect(JAM.policy.pC545F199BE443C5FB0DC91C55134FB746FD8B074) {
+                              introspect(JAM.policy.p1) {
                                 return v7439[v7440]
                               }
                             }
@@ -30524,7 +30524,7 @@ function v675(TypeScript$$16) {
                             var v7442 = TypeScript$$16.staticTokens;
                             var v15717 = TypeScript$$16.TokenID;
                             var v7443 = v15717.Exclamation;
-                            introspect(JAM.policy.pC545F199BE443C5FB0DC91C55134FB746FD8B074) {
+                            introspect(JAM.policy.p1) {
                               return v7442[v7443]
                             }
                           }
@@ -30540,7 +30540,7 @@ function v675(TypeScript$$16) {
                             var v7445 = TypeScript$$16.staticTokens;
                             var v15720 = TypeScript$$16.TokenID;
                             var v7446 = v15720.PlusEquals;
-                            introspect(JAM.policy.pC545F199BE443C5FB0DC91C55134FB746FD8B074) {
+                            introspect(JAM.policy.p1) {
                               return v7445[v7446]
                             }
                           }else {
@@ -30554,7 +30554,7 @@ function v675(TypeScript$$16) {
                               var v7447 = TypeScript$$16.staticTokens;
                               var v15723 = TypeScript$$16.TokenID;
                               var v7448 = v15723.PlusPlus;
-                              introspect(JAM.policy.pC545F199BE443C5FB0DC91C55134FB746FD8B074) {
+                              introspect(JAM.policy.p1) {
                                 return v7447[v7448]
                               }
                             }else {
@@ -30562,7 +30562,7 @@ function v675(TypeScript$$16) {
                               var v7449 = TypeScript$$16.staticTokens;
                               var v15724 = TypeScript$$16.TokenID;
                               var v7450 = v15724.Plus;
-                              introspect(JAM.policy.pC545F199BE443C5FB0DC91C55134FB746FD8B074) {
+                              introspect(JAM.policy.p1) {
                                 return v7449[v7450]
                               }
                             }
@@ -30579,7 +30579,7 @@ function v675(TypeScript$$16) {
                             var v7453 = TypeScript$$16.staticTokens;
                             var v15727 = TypeScript$$16.TokenID;
                             var v7454 = v15727.MinusEquals;
-                            introspect(JAM.policy.pC545F199BE443C5FB0DC91C55134FB746FD8B074) {
+                            introspect(JAM.policy.p1) {
                               return v7453[v7454]
                             }
                           }else {
@@ -30593,7 +30593,7 @@ function v675(TypeScript$$16) {
                               var v7455 = TypeScript$$16.staticTokens;
                               var v15730 = TypeScript$$16.TokenID;
                               var v7456 = v15730.MinusMinus;
-                              introspect(JAM.policy.pC545F199BE443C5FB0DC91C55134FB746FD8B074) {
+                              introspect(JAM.policy.p1) {
                                 return v7455[v7456]
                               }
                             }else {
@@ -30601,7 +30601,7 @@ function v675(TypeScript$$16) {
                               var v7457 = TypeScript$$16.staticTokens;
                               var v15731 = TypeScript$$16.TokenID;
                               var v7458 = v15731.Minus;
-                              introspect(JAM.policy.pC545F199BE443C5FB0DC91C55134FB746FD8B074) {
+                              introspect(JAM.policy.p1) {
                                 return v7457[v7458]
                               }
                             }
@@ -30618,7 +30618,7 @@ function v675(TypeScript$$16) {
                             var v7461 = TypeScript$$16.staticTokens;
                             var v15734 = TypeScript$$16.TokenID;
                             var v7462 = v15734.AsteriskEquals;
-                            introspect(JAM.policy.pC545F199BE443C5FB0DC91C55134FB746FD8B074) {
+                            introspect(JAM.policy.p1) {
                               return v7461[v7462]
                             }
                           }else {
@@ -30626,7 +30626,7 @@ function v675(TypeScript$$16) {
                             var v7463 = TypeScript$$16.staticTokens;
                             var v15735 = TypeScript$$16.TokenID;
                             var v7464 = v15735.Asterisk;
-                            introspect(JAM.policy.pC545F199BE443C5FB0DC91C55134FB746FD8B074) {
+                            introspect(JAM.policy.p1) {
                               return v7463[v7464]
                             }
                           }
@@ -30642,7 +30642,7 @@ function v675(TypeScript$$16) {
                             var v7466 = TypeScript$$16.staticTokens;
                             var v15738 = TypeScript$$16.TokenID;
                             var v7467 = v15738.PercentEquals;
-                            introspect(JAM.policy.pC545F199BE443C5FB0DC91C55134FB746FD8B074) {
+                            introspect(JAM.policy.p1) {
                               return v7466[v7467]
                             }
                           }else {
@@ -30650,7 +30650,7 @@ function v675(TypeScript$$16) {
                             var v7468 = TypeScript$$16.staticTokens;
                             var v15739 = TypeScript$$16.TokenID;
                             var v7469 = v15739.Percent;
-                            introspect(JAM.policy.pC545F199BE443C5FB0DC91C55134FB746FD8B074) {
+                            introspect(JAM.policy.p1) {
                               return v7468[v7469]
                             }
                           }
@@ -30672,7 +30672,7 @@ function v675(TypeScript$$16) {
                               var v7471 = TypeScript$$16.staticTokens;
                               var v15744 = TypeScript$$16.TokenID;
                               var v7472 = v15744.LessThanLessThanEquals;
-                              introspect(JAM.policy.pC545F199BE443C5FB0DC91C55134FB746FD8B074) {
+                              introspect(JAM.policy.p1) {
                                 return v7471[v7472]
                               }
                             }else {
@@ -30680,7 +30680,7 @@ function v675(TypeScript$$16) {
                               var v7473 = TypeScript$$16.staticTokens;
                               var v15745 = TypeScript$$16.TokenID;
                               var v7474 = v15745.LessThanLessThan;
-                              introspect(JAM.policy.pC545F199BE443C5FB0DC91C55134FB746FD8B074) {
+                              introspect(JAM.policy.p1) {
                                 return v7473[v7474]
                               }
                             }
@@ -30695,7 +30695,7 @@ function v675(TypeScript$$16) {
                               var v7476 = TypeScript$$16.staticTokens;
                               var v15748 = TypeScript$$16.TokenID;
                               var v7477 = v15748.LessThanEquals;
-                              introspect(JAM.policy.pC545F199BE443C5FB0DC91C55134FB746FD8B074) {
+                              introspect(JAM.policy.p1) {
                                 return v7476[v7477]
                               }
                             }else {
@@ -30703,7 +30703,7 @@ function v675(TypeScript$$16) {
                               var v7478 = TypeScript$$16.staticTokens;
                               var v15749 = TypeScript$$16.TokenID;
                               var v7479 = v15749.LessThan;
-                              introspect(JAM.policy.pC545F199BE443C5FB0DC91C55134FB746FD8B074) {
+                              introspect(JAM.policy.p1) {
                                 return v7478[v7479]
                               }
                             }
@@ -30726,7 +30726,7 @@ function v675(TypeScript$$16) {
                               var v7482 = TypeScript$$16.staticTokens;
                               var v15754 = TypeScript$$16.TokenID;
                               var v7483 = v15754.GreaterThanGreaterThanEquals;
-                              introspect(JAM.policy.pC545F199BE443C5FB0DC91C55134FB746FD8B074) {
+                              introspect(JAM.policy.p1) {
                                 return v7482[v7483]
                               }
                             }else {
@@ -30746,7 +30746,7 @@ function v675(TypeScript$$16) {
                                   var v7484 = TypeScript$$16.staticTokens;
                                   var v15759 = TypeScript$$16.TokenID;
                                   var v7485 = v15759.GreaterThanGreaterThanGreaterThanEquals;
-                                  introspect(JAM.policy.pC545F199BE443C5FB0DC91C55134FB746FD8B074) {
+                                  introspect(JAM.policy.p1) {
                                     return v7484[v7485]
                                   }
                                 }else {
@@ -30754,7 +30754,7 @@ function v675(TypeScript$$16) {
                                   var v7486 = TypeScript$$16.staticTokens;
                                   var v15760 = TypeScript$$16.TokenID;
                                   var v7487 = v15760.GreaterThanGreaterThanGreaterThan;
-                                  introspect(JAM.policy.pC545F199BE443C5FB0DC91C55134FB746FD8B074) {
+                                  introspect(JAM.policy.p1) {
                                     return v7486[v7487]
                                   }
                                 }
@@ -30763,7 +30763,7 @@ function v675(TypeScript$$16) {
                                 var v7489 = TypeScript$$16.staticTokens;
                                 var v15761 = TypeScript$$16.TokenID;
                                 var v7490 = v15761.GreaterThanGreaterThan;
-                                introspect(JAM.policy.pC545F199BE443C5FB0DC91C55134FB746FD8B074) {
+                                introspect(JAM.policy.p1) {
                                   return v7489[v7490]
                                 }
                               }
@@ -30779,7 +30779,7 @@ function v675(TypeScript$$16) {
                               var v7493 = TypeScript$$16.staticTokens;
                               var v15764 = TypeScript$$16.TokenID;
                               var v7494 = v15764.GreaterThanEquals;
-                              introspect(JAM.policy.pC545F199BE443C5FB0DC91C55134FB746FD8B074) {
+                              introspect(JAM.policy.p1) {
                                 return v7493[v7494]
                               }
                             }else {
@@ -30787,7 +30787,7 @@ function v675(TypeScript$$16) {
                               var v7495 = TypeScript$$16.staticTokens;
                               var v15765 = TypeScript$$16.TokenID;
                               var v7496 = v15765.GreaterThan;
-                              introspect(JAM.policy.pC545F199BE443C5FB0DC91C55134FB746FD8B074) {
+                              introspect(JAM.policy.p1) {
                                 return v7495[v7496]
                               }
                             }
@@ -30804,7 +30804,7 @@ function v675(TypeScript$$16) {
                             var v7499 = TypeScript$$16.staticTokens;
                             var v15768 = TypeScript$$16.TokenID;
                             var v7500 = v15768.CaretEquals;
-                            introspect(JAM.policy.pC545F199BE443C5FB0DC91C55134FB746FD8B074) {
+                            introspect(JAM.policy.p1) {
                               return v7499[v7500]
                             }
                           }else {
@@ -30812,7 +30812,7 @@ function v675(TypeScript$$16) {
                             var v7501 = TypeScript$$16.staticTokens;
                             var v15769 = TypeScript$$16.TokenID;
                             var v7502 = v15769.Caret;
-                            introspect(JAM.policy.pC545F199BE443C5FB0DC91C55134FB746FD8B074) {
+                            introspect(JAM.policy.p1) {
                               return v7501[v7502]
                             }
                           }
@@ -30828,7 +30828,7 @@ function v675(TypeScript$$16) {
                             var v7504 = TypeScript$$16.staticTokens;
                             var v15772 = TypeScript$$16.TokenID;
                             var v7505 = v15772.BarEquals;
-                            introspect(JAM.policy.pC545F199BE443C5FB0DC91C55134FB746FD8B074) {
+                            introspect(JAM.policy.p1) {
                               return v7504[v7505]
                             }
                           }else {
@@ -30842,7 +30842,7 @@ function v675(TypeScript$$16) {
                               var v7506 = TypeScript$$16.staticTokens;
                               var v15775 = TypeScript$$16.TokenID;
                               var v7507 = v15775.BarBar;
-                              introspect(JAM.policy.pC545F199BE443C5FB0DC91C55134FB746FD8B074) {
+                              introspect(JAM.policy.p1) {
                                 return v7506[v7507]
                               }
                             }else {
@@ -30850,7 +30850,7 @@ function v675(TypeScript$$16) {
                               var v7508 = TypeScript$$16.staticTokens;
                               var v15776 = TypeScript$$16.TokenID;
                               var v7509 = v15776.Bar;
-                              introspect(JAM.policy.pC545F199BE443C5FB0DC91C55134FB746FD8B074) {
+                              introspect(JAM.policy.p1) {
                                 return v7508[v7509]
                               }
                             }
@@ -30867,7 +30867,7 @@ function v675(TypeScript$$16) {
                             var v7512 = TypeScript$$16.staticTokens;
                             var v15779 = TypeScript$$16.TokenID;
                             var v7513 = v15779.AmpersandEquals;
-                            introspect(JAM.policy.pC545F199BE443C5FB0DC91C55134FB746FD8B074) {
+                            introspect(JAM.policy.p1) {
                               return v7512[v7513]
                             }
                           }else {
@@ -30881,7 +30881,7 @@ function v675(TypeScript$$16) {
                               var v7514 = TypeScript$$16.staticTokens;
                               var v15782 = TypeScript$$16.TokenID;
                               var v7515 = v15782.AmpersandAmpersand;
-                              introspect(JAM.policy.pC545F199BE443C5FB0DC91C55134FB746FD8B074) {
+                              introspect(JAM.policy.p1) {
                                 return v7514[v7515]
                               }
                             }else {
@@ -30889,7 +30889,7 @@ function v675(TypeScript$$16) {
                               var v7516 = TypeScript$$16.staticTokens;
                               var v15783 = TypeScript$$16.TokenID;
                               var v7517 = v15783.And;
-                              introspect(JAM.policy.pC545F199BE443C5FB0DC91C55134FB746FD8B074) {
+                              introspect(JAM.policy.p1) {
                                 return v7516[v7517]
                               }
                             }
@@ -30913,7 +30913,7 @@ function v675(TypeScript$$16) {
       var v7529 = TypeScript$$16.staticTokens;
       var v15786 = TypeScript$$16.TokenID;
       var v7530 = v15786.EndOfFile;
-      introspect(JAM.policy.pC545F199BE443C5FB0DC91C55134FB746FD8B074) {
+      introspect(JAM.policy.p1) {
         return v7529[v7530]
       }
     }
@@ -30925,7 +30925,7 @@ function v675(TypeScript$$16) {
       var hasUnicode = false;
       for(;;) {
         var v20704 = this.ch;
-        introspect(JAM.policy.pC545F199BE443C5FB0DC91C55134FB746FD8B074) {
+        introspect(JAM.policy.p1) {
           var v15787 = lexIdStartTable[v20704]
         }
         var v20706 = !v15787;
@@ -30948,7 +30948,7 @@ function v675(TypeScript$$16) {
         for(;v7533;) {
           this.nextChar();
           var v20707 = this.ch;
-          introspect(JAM.policy.pC545F199BE443C5FB0DC91C55134FB746FD8B074) {
+          introspect(JAM.policy.p1) {
             var v15788 = lexIdStartTable[v20707]
           }
           var v20709 = !v15788;
@@ -30991,7 +30991,7 @@ function v675(TypeScript$$16) {
                 var v7534 = TypeScript$$16.staticTokens;
                 var v15794 = TypeScript$$16.TokenID;
                 var v7535 = v15794.Error;
-                introspect(JAM.policy.pC545F199BE443C5FB0DC91C55134FB746FD8B074) {
+                introspect(JAM.policy.p1) {
                   return v7534[v7535]
                 }
               }
@@ -31004,7 +31004,7 @@ function v675(TypeScript$$16) {
             var v15797 = this.pos;
             var v7538 = JAM.call(v15795.substring, v15795, [v15796, v15797]);
             var hexChar = parseInt(v7538, 16);
-            introspect(JAM.policy.pC545F199BE443C5FB0DC91C55134FB746FD8B074) {
+            introspect(JAM.policy.p1) {
               var v15798 = lexIdStartTable[hexChar]
             }
             var v20712 = !v15798;
@@ -31041,7 +31041,7 @@ function v675(TypeScript$$16) {
               var v7539 = TypeScript$$16.staticTokens;
               var v15799 = TypeScript$$16.TokenID;
               var v7540 = v15799.Error;
-              introspect(JAM.policy.pC545F199BE443C5FB0DC91C55134FB746FD8B074) {
+              introspect(JAM.policy.p1) {
                 return v7539[v7540]
               }
             }
@@ -31053,7 +31053,7 @@ function v675(TypeScript$$16) {
           var v7543 = TypeScript$$16.staticTokens;
           var v15800 = TypeScript$$16.TokenID;
           var v7544 = v15800.Error;
-          introspect(JAM.policy.pC545F199BE443C5FB0DC91C55134FB746FD8B074) {
+          introspect(JAM.policy.p1) {
             return v7543[v7544]
           }
         }
@@ -31073,7 +31073,7 @@ function v675(TypeScript$$16) {
       var v7551 = v15801;
       if(v7551) {
         var v7549 = TypeScript$$16.staticTokens;
-        introspect(JAM.policy.pC545F199BE443C5FB0DC91C55134FB746FD8B074) {
+        introspect(JAM.policy.p1) {
           return v7549[id$$16]
         }
       }else {
@@ -31266,7 +31266,7 @@ function v675(TypeScript$$16) {
           var v7575 = TypeScript$$16.staticTokens;
           var v15822 = TypeScript$$16.TokenID;
           var v7576 = v15822.EndOfFile;
-          introspect(JAM.policy.pC545F199BE443C5FB0DC91C55134FB746FD8B074) {
+          introspect(JAM.policy.p1) {
             return v7575[v7576]
           }
         }
@@ -31389,7 +31389,7 @@ function v675(TypeScript$$16) {
       var v20732 = TypeScript$$16.noRegexTable;
       var v23717 = this.prevTok;
       var v20733 = v23717.tokenId;
-      introspect(JAM.policy.pC545F199BE443C5FB0DC91C55134FB746FD8B074) {
+      introspect(JAM.policy.p1) {
         var v15832 = v20732[v20733]
       }
       var v7587 = v15832 != undefined;
@@ -32118,7 +32118,7 @@ function v675(TypeScript$$16) {
       var v7675 = TypeScript$$16.staticTokens;
       var v15912 = TypeScript$$16.TokenID;
       var v7676 = v15912.EndOfFile;
-      introspect(JAM.policy.pC545F199BE443C5FB0DC91C55134FB746FD8B074) {
+      introspect(JAM.policy.p1) {
         this.prevTok = v7675[v7676]
       }
       this.startCol = this.col;
@@ -32298,13 +32298,13 @@ function v675(TypeScript$$16) {
       this.currentTokenIndex = 0;
       var v15919 = this.lineMap;
       var v15920 = this.line;
-      introspect(JAM.policy.pC545F199BE443C5FB0DC91C55134FB746FD8B074) {
+      introspect(JAM.policy.p1) {
         var v7729 = v15919[v15920]
       }
       var tmpCol = offset$$12 - v7729;
       var v23743 = this.lexStateByLine;
       var v23744 = this.line;
-      introspect(JAM.policy.pC545F199BE443C5FB0DC91C55134FB746FD8B074) {
+      introspect(JAM.policy.p1) {
         var v20811 = v23743[v23744]
       }
       var v20812 = LexState.InMultilineComment;
@@ -32320,7 +32320,7 @@ function v675(TypeScript$$16) {
         tmpCol = 0;
         var v23745 = this.lexStateByLine;
         var v23746 = this.line;
-        introspect(JAM.policy.pC545F199BE443C5FB0DC91C55134FB746FD8B074) {
+        introspect(JAM.policy.p1) {
           var v20814 = v23745[v23746]
         }
         var v20815 = LexState.InMultilineComment;
@@ -32336,7 +32336,7 @@ function v675(TypeScript$$16) {
       var lenMin1 = v7731 - 1;
       var v7732 = this.tokensByLine;
       var v7733 = this.line;
-      introspect(JAM.policy.pC545F199BE443C5FB0DC91C55134FB746FD8B074) {
+      introspect(JAM.policy.p1) {
         this.currentTokens = v7732[v7733]
       }
       var v23747 = this.currentTokens;
@@ -32352,7 +32352,7 @@ function v675(TypeScript$$16) {
         this.line = v15926 + 1;
         var v7734 = this.tokensByLine;
         var v7735 = this.line;
-        introspect(JAM.policy.pC545F199BE443C5FB0DC91C55134FB746FD8B074) {
+        introspect(JAM.policy.p1) {
           this.currentTokens = v7734[v7735]
         }
         tmpCol = 0;
@@ -32375,7 +32375,7 @@ function v675(TypeScript$$16) {
         if(v15929) {
           var v25191 = this.currentTokens;
           var v25192 = this.currentTokenIndex;
-          introspect(JAM.policy.pC545F199BE443C5FB0DC91C55134FB746FD8B074) {
+          introspect(JAM.policy.p1) {
             var v23750 = v25191[v25192]
           }
           var v20823 = v23750.limChar;
@@ -32392,7 +32392,7 @@ function v675(TypeScript$$16) {
           if(v15931) {
             var v25193 = this.currentTokens;
             var v25194 = this.currentTokenIndex;
-            introspect(JAM.policy.pC545F199BE443C5FB0DC91C55134FB746FD8B074) {
+            introspect(JAM.policy.p1) {
               var v23752 = v25193[v25194]
             }
             var v20826 = v23752.limChar;
@@ -32407,14 +32407,14 @@ function v675(TypeScript$$16) {
         if(v7741) {
           var v15934 = this.currentTokens;
           var v15935 = this.currentTokenIndex;
-          introspect(JAM.policy.pC545F199BE443C5FB0DC91C55134FB746FD8B074) {
+          introspect(JAM.policy.p1) {
             var v7738 = v15934[v15935]
           }
           this.col = v7738.minChar;
           var v7739 = this.col;
           var v15936 = this.lineMap;
           var v15937 = this.line;
-          introspect(JAM.policy.pC545F199BE443C5FB0DC91C55134FB746FD8B074) {
+          introspect(JAM.policy.p1) {
             var v7740 = v15936[v15937]
           }
           return v7739 + v7740
@@ -32441,14 +32441,14 @@ function v675(TypeScript$$16) {
           this.currentTokenIndex = 0;
           var v7743 = this.tokensByLine;
           var v7744 = this.line;
-          introspect(JAM.policy.pC545F199BE443C5FB0DC91C55134FB746FD8B074) {
+          introspect(JAM.policy.p1) {
             this.currentTokens = v7743[v7744]
           }
         }else {
           var v7745 = TypeScript$$16.staticTokens;
           var v15943 = TypeScript$$16.TokenID;
           var v7746 = v15943.EndOfFile;
-          introspect(JAM.policy.pC545F199BE443C5FB0DC91C55134FB746FD8B074) {
+          introspect(JAM.policy.p1) {
             return v7745[v7746]
           }
         }
@@ -32465,7 +32465,7 @@ function v675(TypeScript$$16) {
         var v7751 = this.currentTokenIndex;
         var v20831 = this.currentTokenIndex;
         this.currentTokenIndex = v20831 + 1;
-        introspect(JAM.policy.pC545F199BE443C5FB0DC91C55134FB746FD8B074) {
+        introspect(JAM.policy.p1) {
           this.curSavedToken = v7750[v7751]
         }
         var v7752 = this.curSavedToken;
@@ -32487,7 +32487,7 @@ function v675(TypeScript$$16) {
         var v7755 = TypeScript$$16.staticTokens;
         var v15948 = TypeScript$$16.TokenID;
         var v7756 = v15948.EndOfFile;
-        introspect(JAM.policy.pC545F199BE443C5FB0DC91C55134FB746FD8B074) {
+        introspect(JAM.policy.p1) {
           return v7755[v7756]
         }
       }
@@ -32845,13 +32845,13 @@ function v675(TypeScript$$16) {
       mid = lo + v7832;
       var v15975 = mid % 2;
       mid = mid - v15975;
-      introspect(JAM.policy.pC545F199BE443C5FB0DC91C55134FB746FD8B074) {
+      introspect(JAM.policy.p1) {
         var v20851 = map$$1[mid]
       }
       var v15976 = v20851 <= code$$2;
       if(v15976) {
         var v23765 = mid + 1;
-        introspect(JAM.policy.pC545F199BE443C5FB0DC91C55134FB746FD8B074) {
+        introspect(JAM.policy.p1) {
           var v20852 = map$$1[v23765]
         }
         v15976 = code$$2 <= v20852
@@ -32860,7 +32860,7 @@ function v675(TypeScript$$16) {
       if(v7833) {
         return true
       }
-      introspect(JAM.policy.pC545F199BE443C5FB0DC91C55134FB746FD8B074) {
+      introspect(JAM.policy.p1) {
         var v15977 = map$$1[mid]
       }
       var v7834 = code$$2 < v15977;
@@ -32904,57 +32904,57 @@ function v675(TypeScript$$16) {
     var v15983 = TypeScript$$16.staticTokens;
     var v20855 = TypeScript$$16.TokenID;
     var v15984 = v20855.OpenParen;
-    JAM.set(autoToken, v7838, JAM.get(v15983, v15984, JAM.policy.pC545F199BE443C5FB0DC91C55134FB746FD8B074));
+    JAM.set(autoToken, v7838, JAM.get(v15983, v15984, JAM.policy.p1));
     var v7839 = TypeScript$$16.LexCodeRPR;
     var v15985 = TypeScript$$16.staticTokens;
     var v20856 = TypeScript$$16.TokenID;
     var v15986 = v20856.CloseParen;
-    JAM.set(autoToken, v7839, JAM.get(v15985, v15986, JAM.policy.pC545F199BE443C5FB0DC91C55134FB746FD8B074));
+    JAM.set(autoToken, v7839, JAM.get(v15985, v15986, JAM.policy.p1));
     var v7840 = TypeScript$$16.LexCodeCMA;
     var v15987 = TypeScript$$16.staticTokens;
     var v20857 = TypeScript$$16.TokenID;
     var v15988 = v20857.Comma;
-    JAM.set(autoToken, v7840, JAM.get(v15987, v15988, JAM.policy.pC545F199BE443C5FB0DC91C55134FB746FD8B074));
+    JAM.set(autoToken, v7840, JAM.get(v15987, v15988, JAM.policy.p1));
     var v7841 = TypeScript$$16.LexCodeSMC;
     var v15989 = TypeScript$$16.staticTokens;
     var v20858 = TypeScript$$16.TokenID;
     var v15990 = v20858.Semicolon;
-    JAM.set(autoToken, v7841, JAM.get(v15989, v15990, JAM.policy.pC545F199BE443C5FB0DC91C55134FB746FD8B074));
+    JAM.set(autoToken, v7841, JAM.get(v15989, v15990, JAM.policy.p1));
     var v7842 = TypeScript$$16.LexCodeLBR;
     var v15991 = TypeScript$$16.staticTokens;
     var v20859 = TypeScript$$16.TokenID;
     var v15992 = v20859.OpenBracket;
-    JAM.set(autoToken, v7842, JAM.get(v15991, v15992, JAM.policy.pC545F199BE443C5FB0DC91C55134FB746FD8B074));
+    JAM.set(autoToken, v7842, JAM.get(v15991, v15992, JAM.policy.p1));
     var v7843 = TypeScript$$16.LexCodeRBR;
     var v15993 = TypeScript$$16.staticTokens;
     var v20860 = TypeScript$$16.TokenID;
     var v15994 = v20860.CloseBracket;
-    JAM.set(autoToken, v7843, JAM.get(v15993, v15994, JAM.policy.pC545F199BE443C5FB0DC91C55134FB746FD8B074));
+    JAM.set(autoToken, v7843, JAM.get(v15993, v15994, JAM.policy.p1));
     var v7844 = TypeScript$$16.LexCodeTIL;
     var v15995 = TypeScript$$16.staticTokens;
     var v20861 = TypeScript$$16.TokenID;
     var v15996 = v20861.Tilde;
-    JAM.set(autoToken, v7844, JAM.get(v15995, v15996, JAM.policy.pC545F199BE443C5FB0DC91C55134FB746FD8B074));
+    JAM.set(autoToken, v7844, JAM.get(v15995, v15996, JAM.policy.p1));
     var v7845 = TypeScript$$16.LexCodeQUE;
     var v15997 = TypeScript$$16.staticTokens;
     var v20862 = TypeScript$$16.TokenID;
     var v15998 = v20862.Question;
-    JAM.set(autoToken, v7845, JAM.get(v15997, v15998, JAM.policy.pC545F199BE443C5FB0DC91C55134FB746FD8B074));
+    JAM.set(autoToken, v7845, JAM.get(v15997, v15998, JAM.policy.p1));
     var v7846 = TypeScript$$16.LexCodeLC;
     var v15999 = TypeScript$$16.staticTokens;
     var v20863 = TypeScript$$16.TokenID;
     var v16000 = v20863.OpenBrace;
-    JAM.set(autoToken, v7846, JAM.get(v15999, v16000, JAM.policy.pC545F199BE443C5FB0DC91C55134FB746FD8B074));
+    JAM.set(autoToken, v7846, JAM.get(v15999, v16000, JAM.policy.p1));
     var v7847 = TypeScript$$16.LexCodeRC;
     var v16001 = TypeScript$$16.staticTokens;
     var v20864 = TypeScript$$16.TokenID;
     var v16002 = v20864.CloseBrace;
-    JAM.set(autoToken, v7847, JAM.get(v16001, v16002, JAM.policy.pC545F199BE443C5FB0DC91C55134FB746FD8B074));
+    JAM.set(autoToken, v7847, JAM.get(v16001, v16002, JAM.policy.p1));
     var v7848 = TypeScript$$16.LexCodeCOL;
     var v16003 = TypeScript$$16.staticTokens;
     var v20865 = TypeScript$$16.TokenID;
     var v16004 = v20865.Colon;
-    JAM.set(autoToken, v7848, JAM.get(v16003, v16004, JAM.policy.pC545F199BE443C5FB0DC91C55134FB746FD8B074));
+    JAM.set(autoToken, v7848, JAM.get(v16003, v16004, JAM.policy.p1));
     var v7849 = TypeScript$$16;
     var v16005 = TypeScript$$16.StringHashTable;
     var v27034 = new v16005;
@@ -32970,7 +32970,7 @@ function v675(TypeScript$$16) {
         var v7850 = TypeScript$$16.LexKeywordTable;
         var v23766 = TypeScript$$16.TokenID;
         var v20867 = v23766._map;
-        introspect(JAM.policy.pC545F199BE443C5FB0DC91C55134FB746FD8B074) {
+        introspect(JAM.policy.p1) {
           var v16008 = v20867[i$$53]
         }
         var v7851 = v16008.toLowerCase();
@@ -33069,7 +33069,7 @@ function v675(TypeScript$$16) {
     return v7859
   }
   function LexIsIdentifierChar(code$$8) {
-    introspect(JAM.policy.pC545F199BE443C5FB0DC91C55134FB746FD8B074) {
+    introspect(JAM.policy.p1) {
       var v7860 = lexIdStartTable[code$$8]
     }
     var v16016 = !v7860;
@@ -33157,7 +33157,7 @@ function v675(TypeScript$$16) {
     for(;v7875;) {
       var v7872 = min$$2 + max$$1;
       var med = v7872 >> 1;
-      introspect(JAM.policy.pC545F199BE443C5FB0DC91C55134FB746FD8B074) {
+      introspect(JAM.policy.p1) {
         var v16026 = lineMap$$1[med]
       }
       var v7874 = position$$2 < v16026;
@@ -33165,7 +33165,7 @@ function v675(TypeScript$$16) {
         max$$1 = med - 1
       }else {
         var v20881 = med + 1;
-        introspect(JAM.policy.pC545F199BE443C5FB0DC91C55134FB746FD8B074) {
+        introspect(JAM.policy.p1) {
           var v16027 = lineMap$$1[v20881]
         }
         var v7873 = position$$2 < v16027;
@@ -33184,7 +33184,7 @@ function v675(TypeScript$$16) {
     var v7877 = line$$5 > 0;
     if(v7877) {
       lineCol$$5.line = line$$5;
-      introspect(JAM.policy.pC545F199BE443C5FB0DC91C55134FB746FD8B074) {
+      introspect(JAM.policy.p1) {
         var v7876 = lineMap$$2[line$$5]
       }
       lineCol$$5.col = minChar$$29 - v7876
@@ -33207,7 +33207,7 @@ function v675(TypeScript$$16) {
   function getPositionFromLineColumn(script$$10, line$$6, column) {
     var v20882 = script$$10.locationInfo;
     var v16031 = v20882.lineMap;
-    introspect(JAM.policy.pC545F199BE443C5FB0DC91C55134FB746FD8B074) {
+    introspect(JAM.policy.p1) {
       var v7880 = v16031[line$$6]
     }
     var v7881 = column - 1;
@@ -33517,7 +33517,7 @@ function v599(TypeScript$$15) {
       }
       var v7943 = this.indentStrings;
       var v7944 = this.indentAmt;
-      introspect(JAM.policy.pC545F199BE443C5FB0DC91C55134FB746FD8B074) {
+      introspect(JAM.policy.p1) {
         var indentString$$1 = v7943[v7944]
       }
       var v7948 = indentString$$1 === undefined;
@@ -33657,7 +33657,7 @@ function v592(TypeScript$$14) {
         var v7969 = TypeScript$$14.tokenTable;
         var v16053 = this.currentToken;
         var v7970 = v16053.tokenId;
-        introspect(JAM.policy.pC545F199BE443C5FB0DC91C55134FB746FD8B074) {
+        introspect(JAM.policy.p1) {
           var badToken = v7969[v7970]
         }
         var v20892 = badToken.text;
@@ -36496,7 +36496,7 @@ function v592(TypeScript$$14) {
                 var v23911 = this.currentClassDefinition;
                 var v21216 = v23911.knownMemberNames;
                 var v21217 = op2ID.actualText;
-                introspect(JAM.policy.pC545F199BE443C5FB0DC91C55134FB746FD8B074) {
+                introspect(JAM.policy.p1) {
                   var v16464 = v21216[v21217]
                 }
                 var v8473 = !v16464;
@@ -36832,7 +36832,7 @@ function v592(TypeScript$$14) {
           var v21247 = TypeScript$$14.tokenTable;
           var v23931 = this.currentToken;
           var v21248 = v23931.tokenId;
-          introspect(JAM.policy.pC545F199BE443C5FB0DC91C55134FB746FD8B074) {
+          introspect(JAM.policy.p1) {
             var v16511 = v21247[v21248]
           }
           var v8522 = v16511.text;
@@ -39138,7 +39138,7 @@ function v592(TypeScript$$14) {
           var v21526 = args$$9.members;
           var v16864 = v21526.length;
           var v8927 = v16864 - 1;
-          introspect(JAM.policy.pC545F199BE443C5FB0DC91C55134FB746FD8B074) {
+          introspect(JAM.policy.p1) {
             var lastArg$$1 = v8926[v8927]
           }
         }
@@ -39160,7 +39160,7 @@ function v592(TypeScript$$14) {
         var v8935 = i$$51 < v16868;
         for(;v8935;) {
           var v8931 = args$$9.members;
-          introspect(JAM.policy.pC545F199BE443C5FB0DC91C55134FB746FD8B074) {
+          introspect(JAM.policy.p1) {
             var arg$$11 = v8931[i$$51]
           }
           var v16869 = arg$$11.varFlags;
@@ -41177,7 +41177,7 @@ function v592(TypeScript$$14) {
           var v17127 = TypeScript$$14.tokenTable;
           var v21758 = this.currentToken;
           var v17128 = v21758.tokenId;
-          introspect(JAM.policy.pC545F199BE443C5FB0DC91C55134FB746FD8B074) {
+          introspect(JAM.policy.p1) {
             var v9228 = v17127[v17128]
           }
           var text$$14 = v9228.text;
@@ -41557,7 +41557,7 @@ function v592(TypeScript$$14) {
       if(v9321) {
         var len$$16 = enclosedList$$1.length;
         var v9303 = len$$16 - 1;
-        introspect(JAM.policy.pC545F199BE443C5FB0DC91C55134FB746FD8B074) {
+        introspect(JAM.policy.p1) {
           var innerName = enclosedList$$1[v9303]
         }
         var v9304 = TypeScript$$14.ModuleDeclaration;
@@ -42289,7 +42289,7 @@ function v592(TypeScript$$14) {
         var v17276 = comments$$5.length;
         var v9450 = i$$49 < v17276;
         for(;v9450;) {
-          introspect(JAM.policy.pC545F199BE443C5FB0DC91C55134FB746FD8B074) {
+          introspect(JAM.policy.p1) {
             var v17277 = comments$$5[i$$49]
           }
           var v9449 = JAM.call(this.parseComment, this, [v17277]);
@@ -42361,7 +42361,7 @@ function v592(TypeScript$$14) {
       var v21886 = this.staticsLists;
       var v17282 = v21886.length;
       var v9464 = v17282 - 1;
-      introspect(JAM.policy.pC545F199BE443C5FB0DC91C55134FB746FD8B074) {
+      introspect(JAM.policy.p1) {
         return v9463[v9464]
       }
     }
@@ -42370,7 +42370,7 @@ function v592(TypeScript$$14) {
       var v21887 = this.scopeLists;
       var v17283 = v21887.length;
       var v9466 = v17283 - 1;
-      introspect(JAM.policy.pC545F199BE443C5FB0DC91C55134FB746FD8B074) {
+      introspect(JAM.policy.p1) {
         return v9465[v9466]
       }
     }
@@ -42379,7 +42379,7 @@ function v592(TypeScript$$14) {
       var v21888 = this.varLists;
       var v17284 = v21888.length;
       var v9468 = v17284 - 1;
-      introspect(JAM.policy.pC545F199BE443C5FB0DC91C55134FB746FD8B074) {
+      introspect(JAM.policy.p1) {
         return v9467[v9468]
       }
     }
@@ -42421,7 +42421,7 @@ function v592(TypeScript$$14) {
         var v17291 = errorText$$1 == null;
         if(v17291) {
           var v25352 = TypeScript$$14.tokenTable;
-          introspect(JAM.policy.pC545F199BE443C5FB0DC91C55134FB746FD8B074) {
+          introspect(JAM.policy.p1) {
             var v24199 = v25352[tokenId$$43]
           }
           var v21890 = v24199.text;
@@ -42624,7 +42624,7 @@ function v592(TypeScript$$14) {
       var v9525 = i$$48 >= 0;
       for(;v9525;) {
         var v9513 = this.statementInfoStack;
-        introspect(JAM.policy.pC545F199BE443C5FB0DC91C55134FB746FD8B074) {
+        introspect(JAM.policy.p1) {
           var info$$1 = v9513[i$$48]
         }
         var v9524 = jump.target;
@@ -42646,7 +42646,7 @@ function v592(TypeScript$$14) {
             for(;v9518;) {
               var v17309 = info$$1.labels;
               var v9515 = v17309.members;
-              introspect(JAM.policy.pC545F199BE443C5FB0DC91C55134FB746FD8B074) {
+              introspect(JAM.policy.p1) {
                 var label$$2 = v9515[j$$5]
               }
               var v21907 = label$$2.id;
@@ -42726,7 +42726,7 @@ function v592(TypeScript$$14) {
       var v9533 = j$$4 >= 0;
       for(;v9533;) {
         var v24214 = this.statementInfoStack;
-        introspect(JAM.policy.pC545F199BE443C5FB0DC91C55134FB746FD8B074) {
+        introspect(JAM.policy.p1) {
           var v21913 = v24214[j$$4]
         }
         var v17317 = v21913.stmt;
@@ -43662,7 +43662,7 @@ function v492(TypeScript$$12) {
           var v17375 = members$$6.length;
           var v9739 = i$$47 < v17375;
           for(;v9739;) {
-            introspect(JAM.policy.pC545F199BE443C5FB0DC91C55134FB746FD8B074) {
+            introspect(JAM.policy.p1) {
               var v21959 = members$$6[i$$47]
             }
             var v17376 = v21959.nodeType;
@@ -43670,7 +43670,7 @@ function v492(TypeScript$$12) {
             var v17377 = v21960.VarDecl;
             var v9738 = v17376 == v17377;
             if(v9738) {
-              introspect(JAM.policy.pC545F199BE443C5FB0DC91C55134FB746FD8B074) {
+              introspect(JAM.policy.p1) {
                 var varDecl$$5 = members$$6[i$$47]
               }
               var v24239 = varDecl$$5.varFlags;
@@ -43717,7 +43717,7 @@ function v492(TypeScript$$12) {
         for(;v9758;) {
           var v17382 = classDecl$$3.members;
           var v9743 = v17382.members;
-          introspect(JAM.policy.pC545F199BE443C5FB0DC91C55134FB746FD8B074) {
+          introspect(JAM.policy.p1) {
             var memberDecl = v9743[j$$3]
           }
           var v17383 = memberDecl.nodeType;
@@ -43937,7 +43937,7 @@ function v492(TypeScript$$12) {
         var v9779 = i$$46 < len$$12;
         for(;v9779;) {
           var v17406 = base$$1.extendsList;
-          introspect(JAM.policy.pC545F199BE443C5FB0DC91C55134FB746FD8B074) {
+          introspect(JAM.policy.p1) {
             var v9778 = v17406[i$$46]
           }
           JAM.call(this.emitAddBaseMethods, this, [className$$2, v9778, classDecl$$2]);
@@ -44235,7 +44235,7 @@ function v492(TypeScript$$12) {
                 for(;v9821;) {
                   var v17429 = constructorDecl.arguments;
                   var v9813 = v17429.members;
-                  introspect(JAM.policy.pC545F199BE443C5FB0DC91C55134FB746FD8B074) {
+                  introspect(JAM.policy.p1) {
                     var arg$$7 = v9813[iArg]
                   }
                   var v22005 = arg$$7.varFlags;
@@ -44281,7 +44281,7 @@ function v492(TypeScript$$12) {
                 var v26046 = this.thisClassNode;
                 var v25391 = v26046.members;
                 var v24268 = v25391.members;
-                introspect(JAM.policy.pC545F199BE443C5FB0DC91C55134FB746FD8B074) {
+                introspect(JAM.policy.p1) {
                   var v22010 = v24268[iMember]
                 }
                 var v17435 = v22010.nodeType;
@@ -44292,7 +44292,7 @@ function v492(TypeScript$$12) {
                   var v22012 = this.thisClassNode;
                   var v17437 = v22012.members;
                   var v9824 = v17437.members;
-                  introspect(JAM.policy.pC545F199BE443C5FB0DC91C55134FB746FD8B074) {
+                  introspect(JAM.policy.p1) {
                     var varDecl$$3 = v9824[iMember]
                   }
                   var v24269 = varDecl$$3.varFlags;
@@ -44317,7 +44317,7 @@ function v492(TypeScript$$12) {
               }
             }
             var v9830 = list$$1.members;
-            introspect(JAM.policy.pC545F199BE443C5FB0DC91C55134FB746FD8B074) {
+            introspect(JAM.policy.p1) {
               var emitNode = v9830[i$$45]
             }
             var v22014 = emitNode.nodeType;
@@ -44487,12 +44487,12 @@ function v492(TypeScript$$12) {
         var v22024 = v24278.currentMappings;
         var v17450 = v22024.length;
         var v9846 = v17450 - 1;
-        introspect(JAM.policy.pC545F199BE443C5FB0DC91C55134FB746FD8B074) {
+        introspect(JAM.policy.p1) {
           var siblings$$1 = v9845[v9846]
         }
         var v17451 = siblings$$1.length;
         var v9847 = v17451 - 1;
-        introspect(JAM.policy.pC545F199BE443C5FB0DC91C55134FB746FD8B074) {
+        introspect(JAM.policy.p1) {
           var sourceMapping$$2 = siblings$$1[v9847]
         }
         var v9848 = sourceMapping$$2.end;
@@ -44557,7 +44557,7 @@ function v492(TypeScript$$12) {
         var v22029 = v24281.currentMappings;
         var v17463 = v22029.length;
         var v9866 = v17463 - 1;
-        introspect(JAM.policy.pC545F199BE443C5FB0DC91C55134FB746FD8B074) {
+        introspect(JAM.policy.p1) {
           var siblings = v9865[v9866]
         }
         JAM.call(siblings.push, siblings, [sourceMapping$$1]);
@@ -44596,7 +44596,7 @@ function v492(TypeScript$$12) {
             var v25397 = v26050.currentNameIndex;
             var v24284 = v25397.length;
             var v22032 = v24284 - 1;
-            introspect(JAM.policy.pC545F199BE443C5FB0DC91C55134FB746FD8B074) {
+            introspect(JAM.policy.p1) {
               var v17467 = v22031[v22032]
             }
             var v9872 = v17467 + ".";
@@ -45083,7 +45083,7 @@ function v492(TypeScript$$12) {
       var v9927 = i$$44 < len$$10;
       for(;v9927;) {
         var v22084 = this.moduleDeclList;
-        introspect(JAM.policy.pC545F199BE443C5FB0DC91C55134FB746FD8B074) {
+        introspect(JAM.policy.p1) {
           var v17521 = v22084[i$$44]
         }
         var v9926 = v17521 == moduleDecl$$1;
@@ -45314,7 +45314,7 @@ function v492(TypeScript$$12) {
       var v22105 = this.varListCountStack;
       var v17551 = v22105.length;
       var v9961 = v17551 - 1;
-      introspect(JAM.policy.pC545F199BE443C5FB0DC91C55134FB746FD8B074) {
+      introspect(JAM.policy.p1) {
         return v9960[v9961]
       }
     }
@@ -45716,7 +45716,7 @@ function v492(TypeScript$$12) {
             var v10030 = i$$43 < v17601;
             for(;v10030;) {
               var v25442 = moduleDecl.amdDependencies;
-              introspect(JAM.policy.pC545F199BE443C5FB0DC91C55134FB746FD8B074) {
+              introspect(JAM.policy.p1) {
                 var v24364 = v25442[i$$43]
               }
               var v22140 = ', "' + v24364;
@@ -46285,7 +46285,7 @@ function v492(TypeScript$$12) {
         var v17660 = funcDecl$$1.arguments;
         var v10126 = v17660.members;
         var v10127 = argsLen - 1;
-        introspect(JAM.policy.pC545F199BE443C5FB0DC91C55134FB746FD8B074) {
+        introspect(JAM.policy.p1) {
           var lastArg = v10126[v10127]
         }
         this.emitIndent();
@@ -46358,7 +46358,7 @@ function v492(TypeScript$$12) {
           var v26076 = this.thisClassNode;
           var v25461 = v26076.members;
           var v24391 = v25461.members;
-          introspect(JAM.policy.pC545F199BE443C5FB0DC91C55134FB746FD8B074) {
+          introspect(JAM.policy.p1) {
             var v22196 = v24391[i$$42]
           }
           var v17666 = v22196.nodeType;
@@ -46369,7 +46369,7 @@ function v492(TypeScript$$12) {
             var v22198 = this.thisClassNode;
             var v17668 = v22198.members;
             var v10137 = v17668.members;
-            introspect(JAM.policy.pC545F199BE443C5FB0DC91C55134FB746FD8B074) {
+            introspect(JAM.policy.p1) {
               var varDecl = v10137[i$$42]
             }
             var v24392 = varDecl.varFlags;
@@ -46470,7 +46470,7 @@ function v492(TypeScript$$12) {
       var v10162 = i$$41 < basesLen;
       for(;v10162;) {
         var v10152 = bases.members;
-        introspect(JAM.policy.pC545F199BE443C5FB0DC91C55134FB746FD8B074) {
+        introspect(JAM.policy.p1) {
           var baseExpr = v10152[i$$41]
         }
         var baseSymbol = null;
@@ -46793,7 +46793,7 @@ function v492(TypeScript$$12) {
         var v17712 = comments$$4.length;
         var v10201 = i$$40 < v17712;
         for(;v10201;) {
-          introspect(JAM.policy.pC545F199BE443C5FB0DC91C55134FB746FD8B074) {
+          introspect(JAM.policy.p1) {
             var v10200 = comments$$4[i$$40]
           }
           JAM.call(this.emitCommentInPlace, this, [v10200]);
@@ -46840,7 +46840,7 @@ function v492(TypeScript$$12) {
           var v10207 = i$$39 < v17717;
           for(;v10207;) {
             this.emitIndent();
-            introspect(JAM.policy.pC545F199BE443C5FB0DC91C55134FB746FD8B074) {
+            introspect(JAM.policy.p1) {
               var v10206 = text$$10[i$$39]
             }
             JAM.call(this.writeLineToOutput, this, [v10206]);
@@ -47105,7 +47105,7 @@ function v492(TypeScript$$12) {
     function v440() {
       var v10279 = Indenter$$1.indentStrings;
       var v10280 = this.indentAmt;
-      introspect(JAM.policy.pC545F199BE443C5FB0DC91C55134FB746FD8B074) {
+      introspect(JAM.policy.p1) {
         var indentString = v10279[v10280]
       }
       var v10284 = indentString === undefined;
@@ -47254,7 +47254,7 @@ function v433(TypeScript$$11) {
         var v17737 = sourceMappings.length;
         var v10308 = i$$37 < v17737;
         for(;v10308;) {
-          introspect(JAM.policy.pC545F199BE443C5FB0DC91C55134FB746FD8B074) {
+          introspect(JAM.policy.p1) {
             var sourceMapping = sourceMappings[i$$37]
           }
           var v10303 = sourceMapping.start;
@@ -47475,7 +47475,7 @@ function v427() {
     function walk$$1(holder$$1, key$$31) {
       var k$$6 = null;
       var v$$1;
-      introspect(JAM.policy.pC545F199BE443C5FB0DC91C55134FB746FD8B074) {
+      introspect(JAM.policy.p1) {
         var value$$35 = holder$$1[key$$31]
       }
       var v17761 = value$$35;
@@ -47628,7 +47628,7 @@ function v427() {
   }
   function quote(string) {
     function v421(a$$2) {
-      introspect(JAM.policy.pC545F199BE443C5FB0DC91C55134FB746FD8B074) {
+      introspect(JAM.policy.p1) {
         var c$$3 = meta[a$$2]
       }
       var v10355;
@@ -47665,7 +47665,7 @@ function v427() {
     var length$$14;
     var mind = gap;
     var partial;
-    introspect(JAM.policy.pC545F199BE443C5FB0DC91C55134FB746FD8B074) {
+    introspect(JAM.policy.p1) {
       var value$$33 = holder[key$$28]
     }
     var v17778 = value$$33;
@@ -47769,13 +47769,13 @@ function v427() {
           i$$35 = 0;
           var v10368 = i$$35 < length$$14;
           for(;v10368;) {
-            introspect(JAM.policy.pC545F199BE443C5FB0DC91C55134FB746FD8B074) {
+            introspect(JAM.policy.p1) {
               var v22276 = rep[i$$35]
             }
             var v17786 = typeof v22276;
             var v10367 = v17786 === "string";
             if(v10367) {
-              introspect(JAM.policy.pC545F199BE443C5FB0DC91C55134FB746FD8B074) {
+              introspect(JAM.policy.p1) {
                 k$$5 = rep[i$$35]
               }
               v = str$$6(k$$5, value$$33);
@@ -47889,7 +47889,7 @@ function v420(TypeScript$$10) {
       var v17795 = inString.length;
       var v10387 = i$$34 < v17795;
       for(;v10387;) {
-        introspect(JAM.policy.pC545F199BE443C5FB0DC91C55134FB746FD8B074) {
+        introspect(JAM.policy.p1) {
           var v10379 = inString[i$$34]
         }
         var byte = JAM.call(Base64Format.decodeChar, Base64Format, [v10379]);
@@ -48046,7 +48046,7 @@ function v417(TypeScript$$9) {
           var v22291 = this.checker;
           var v17809 = v22291.units;
           var v17810 = symbol$$2.unitIndex;
-          introspect(JAM.policy.pC545F199BE443C5FB0DC91C55134FB746FD8B074) {
+          introspect(JAM.policy.p1) {
             v10402.locationInfo = v17809[v17810]
           }
         }
@@ -48116,7 +48116,7 @@ function v417(TypeScript$$9) {
                 var v10414 = i$$33 < v17820;
                 for(;v10414;) {
                   var v17821 = typeSymbol.expansions;
-                  introspect(JAM.policy.pC545F199BE443C5FB0DC91C55134FB746FD8B074) {
+                  introspect(JAM.policy.p1) {
                     var v10412 = v17821[i$$33]
                   }
                   var v10413 = typeSymbol.instanceType;
@@ -48234,7 +48234,7 @@ function v417(TypeScript$$9) {
       var v10464 = i$$32 < len$$9;
       for(;v10464;) {
         var v10451 = signatureGroup.signatures;
-        introspect(JAM.policy.pC545F199BE443C5FB0DC91C55134FB746FD8B074) {
+        introspect(JAM.policy.p1) {
           var signature = v10451[i$$32]
         }
         if(instanceType) {
@@ -48251,7 +48251,7 @@ function v417(TypeScript$$9) {
         var v10457 = j$$1 < paramLen;
         for(;v10457;) {
           var v17827 = signature.parameters;
-          introspect(JAM.policy.pC545F199BE443C5FB0DC91C55134FB746FD8B074) {
+          introspect(JAM.policy.p1) {
             var v10456 = v17827[j$$1]
           }
           JAM.call(this.bindSymbol, this, [scope$$2, v10456]);
@@ -48262,7 +48262,7 @@ function v417(TypeScript$$9) {
         if(v10463) {
           var v10458 = signature.parameters;
           var v10459 = paramLen - 1;
-          introspect(JAM.policy.pC545F199BE443C5FB0DC91C55134FB746FD8B074) {
+          introspect(JAM.policy.p1) {
             var lastParam = v10458[v10459]
           }
           lastParam.argsOffset = paramLen - 1;
@@ -48300,12 +48300,12 @@ function v417(TypeScript$$9) {
       var v10475 = i$$31 < len$$8;
       for(;v10475;) {
         var v17834 = type$$25.extendsList;
-        introspect(JAM.policy.pC545F199BE443C5FB0DC91C55134FB746FD8B074) {
+        introspect(JAM.policy.p1) {
           var v10467 = v17834[i$$31]
         }
         var baseIsClass = v10467.isClassInstance();
         var v22302 = type$$25.extendsList;
-        introspect(JAM.policy.pC545F199BE443C5FB0DC91C55134FB746FD8B074) {
+        introspect(JAM.policy.p1) {
           var v17835 = v22302[i$$31]
         }
         var v22303 = this.checker;
@@ -48313,7 +48313,7 @@ function v417(TypeScript$$9) {
         var v10474 = v17835 != v17836;
         if(v10474) {
           var v17837 = type$$25.extendsTypeLinks;
-          introspect(JAM.policy.pC545F199BE443C5FB0DC91C55134FB746FD8B074) {
+          introspect(JAM.policy.p1) {
             var v10468 = v17837[i$$31]
           }
           var baseRef = v10468.ast;
@@ -48323,7 +48323,7 @@ function v417(TypeScript$$9) {
               var v17838 = this.checker;
               var v10469 = v17838.errorReporter;
               var v26088 = type$$25.extendsList;
-              introspect(JAM.policy.pC545F199BE443C5FB0DC91C55134FB746FD8B074) {
+              introspect(JAM.policy.p1) {
                 var v25483 = v26088[i$$31]
               }
               var v24448 = v25483.symbol;
@@ -48337,7 +48337,7 @@ function v417(TypeScript$$9) {
               var v17840 = this.checker;
               var v10472 = v17840.errorReporter;
               var v26089 = type$$25.extendsList;
-              introspect(JAM.policy.pC545F199BE443C5FB0DC91C55134FB746FD8B074) {
+              introspect(JAM.policy.p1) {
                 var v25484 = v26089[i$$31]
               }
               var v24449 = v25484.symbol;
@@ -48363,11 +48363,11 @@ function v417(TypeScript$$9) {
         var v10482 = i$$31 < len$$8;
         for(;v10482;) {
           var v10477 = type$$25.implementsList;
-          introspect(JAM.policy.pC545F199BE443C5FB0DC91C55134FB746FD8B074) {
+          introspect(JAM.policy.p1) {
             var iface = v10477[i$$31]
           }
           var v17844 = type$$25.implementsTypeLinks;
-          introspect(JAM.policy.pC545F199BE443C5FB0DC91C55134FB746FD8B074) {
+          introspect(JAM.policy.p1) {
             var v10478 = v17844[i$$31]
           }
           baseRef = v10478.ast;
@@ -48400,7 +48400,7 @@ function v417(TypeScript$$9) {
           var v10484 = extendsList$$3;
           var v10485 = i$$30;
           var v17847 = this.checker;
-          introspect(JAM.policy.pC545F199BE443C5FB0DC91C55134FB746FD8B074) {
+          introspect(JAM.policy.p1) {
             var v17848 = typeLinks[i$$30]
           }
           var v27333 = JAM.call(v17847.resolveBaseTypeLink, v17847, [v17848, scope]);
@@ -48488,7 +48488,7 @@ function v407(TypeScript$$8) {
         if(v10499) {
           result$$4 = result$$4 + ","
         }
-        introspect(JAM.policy.pC545F199BE443C5FB0DC91C55134FB746FD8B074) {
+        introspect(JAM.policy.p1) {
           var v17856 = linemap[i$$28]
         }
         result$$4 = result$$4 + v17856;
@@ -48511,7 +48511,7 @@ function v407(TypeScript$$8) {
       var v17858 = comments$$3.length;
       var v10505 = i$$27 < v17858;
       for(;v10505;) {
-        introspect(JAM.policy.pC545F199BE443C5FB0DC91C55134FB746FD8B074) {
+        introspect(JAM.policy.p1) {
           var v10504 = comments$$3[i$$27]
         }
         JAM.call(this.logNode, this, [script$$5, v10504, indent$$2]);
@@ -48643,7 +48643,7 @@ function v399(TypeScript$$7) {
         var v25488 = this.asts;
         var v26091 = this.top;
         var v25489 = v26091 - 0;
-        introspect(JAM.policy.pC545F199BE443C5FB0DC91C55134FB746FD8B074) {
+        introspect(JAM.policy.p1) {
           var v24456 = v25488[v25489]
         }
         var v22311 = v24456.nodeType;
@@ -48654,7 +48654,7 @@ function v399(TypeScript$$7) {
           var v25490 = this.asts;
           var v26092 = this.top;
           var v25491 = v26092 - 0;
-          introspect(JAM.policy.pC545F199BE443C5FB0DC91C55134FB746FD8B074) {
+          introspect(JAM.policy.p1) {
             var v24458 = v25490[v25491]
           }
           var v22313 = v24458.isStatementBlock;
@@ -48671,7 +48671,7 @@ function v399(TypeScript$$7) {
         var v25492 = this.asts;
         var v26093 = this.top;
         var v25493 = v26093 - 0;
-        introspect(JAM.policy.pC545F199BE443C5FB0DC91C55134FB746FD8B074) {
+        introspect(JAM.policy.p1) {
           var v24459 = v25492[v25493]
         }
         var v22314 = v24459.nodeType;
@@ -48682,7 +48682,7 @@ function v399(TypeScript$$7) {
           var v26094 = this.asts;
           var v26441 = this.top;
           var v26095 = v26441 - 1;
-          introspect(JAM.policy.pC545F199BE443C5FB0DC91C55134FB746FD8B074) {
+          introspect(JAM.policy.p1) {
             var v25494 = v26094[v26095]
           }
           var v24461 = v25494.nodeType;
@@ -48693,14 +48693,14 @@ function v399(TypeScript$$7) {
             var v26096 = this.asts;
             var v26442 = this.top;
             var v26097 = v26442 - 1;
-            introspect(JAM.policy.pC545F199BE443C5FB0DC91C55134FB746FD8B074) {
+            introspect(JAM.policy.p1) {
               var v25496 = v26096[v26097]
             }
             var v24463 = v25496.arguments;
             var v25497 = this.asts;
             var v26098 = this.top;
             var v25498 = v26098 - 0;
-            introspect(JAM.policy.pC545F199BE443C5FB0DC91C55134FB746FD8B074) {
+            introspect(JAM.policy.p1) {
               var v24464 = v25497[v25498]
             }
             v22316 = v24463 === v24464
@@ -48718,7 +48718,7 @@ function v399(TypeScript$$7) {
         var v25499 = this.asts;
         var v26099 = this.top;
         var v25500 = v26099 - 0;
-        introspect(JAM.policy.pC545F199BE443C5FB0DC91C55134FB746FD8B074) {
+        introspect(JAM.policy.p1) {
           var v24465 = v25499[v25500]
         }
         var v22317 = v24465.nodeType;
@@ -48729,7 +48729,7 @@ function v399(TypeScript$$7) {
           var v26100 = this.asts;
           var v26443 = this.top;
           var v26101 = v26443 - 1;
-          introspect(JAM.policy.pC545F199BE443C5FB0DC91C55134FB746FD8B074) {
+          introspect(JAM.policy.p1) {
             var v25501 = v26100[v26101]
           }
           var v24467 = v25501.nodeType;
@@ -48740,14 +48740,14 @@ function v399(TypeScript$$7) {
             var v26102 = this.asts;
             var v26444 = this.top;
             var v26103 = v26444 - 1;
-            introspect(JAM.policy.pC545F199BE443C5FB0DC91C55134FB746FD8B074) {
+            introspect(JAM.policy.p1) {
               var v25503 = v26102[v26103]
             }
             var v24469 = v25503.arguments;
             var v25504 = this.asts;
             var v26104 = this.top;
             var v25505 = v26104 - 0;
-            introspect(JAM.policy.pC545F199BE443C5FB0DC91C55134FB746FD8B074) {
+            introspect(JAM.policy.p1) {
               var v24470 = v25504[v25505]
             }
             v22319 = v24469 === v24470
@@ -48765,7 +48765,7 @@ function v399(TypeScript$$7) {
         var v25506 = this.asts;
         var v26105 = this.top;
         var v25507 = v26105 - 1;
-        introspect(JAM.policy.pC545F199BE443C5FB0DC91C55134FB746FD8B074) {
+        introspect(JAM.policy.p1) {
           var v24471 = v25506[v25507]
         }
         var v22320 = v24471.nodeType;
@@ -48776,7 +48776,7 @@ function v399(TypeScript$$7) {
           var v26106 = this.asts;
           var v26445 = this.top;
           var v26107 = v26445 - 2;
-          introspect(JAM.policy.pC545F199BE443C5FB0DC91C55134FB746FD8B074) {
+          introspect(JAM.policy.p1) {
             var v25508 = v26106[v26107]
           }
           var v24473 = v25508.nodeType;
@@ -48787,14 +48787,14 @@ function v399(TypeScript$$7) {
             var v26108 = this.asts;
             var v26446 = this.top;
             var v26109 = v26446 - 2;
-            introspect(JAM.policy.pC545F199BE443C5FB0DC91C55134FB746FD8B074) {
+            introspect(JAM.policy.p1) {
               var v25510 = v26108[v26109]
             }
             var v24475 = v25510.arguments;
             var v25511 = this.asts;
             var v26110 = this.top;
             var v25512 = v26110 - 1;
-            introspect(JAM.policy.pC545F199BE443C5FB0DC91C55134FB746FD8B074) {
+            introspect(JAM.policy.p1) {
               var v24476 = v25511[v25512]
             }
             v22322 = v24475 === v24476
@@ -48812,7 +48812,7 @@ function v399(TypeScript$$7) {
         var v25513 = this.asts;
         var v26111 = this.top;
         var v25514 = v26111 - 0;
-        introspect(JAM.policy.pC545F199BE443C5FB0DC91C55134FB746FD8B074) {
+        introspect(JAM.policy.p1) {
           var v24477 = v25513[v25514]
         }
         var v22323 = v24477.nodeType;
@@ -48823,7 +48823,7 @@ function v399(TypeScript$$7) {
           var v26112 = this.asts;
           var v26447 = this.top;
           var v26113 = v26447 - 1;
-          introspect(JAM.policy.pC545F199BE443C5FB0DC91C55134FB746FD8B074) {
+          introspect(JAM.policy.p1) {
             var v25515 = v26112[v26113]
           }
           var v24479 = v25515.nodeType;
@@ -48834,14 +48834,14 @@ function v399(TypeScript$$7) {
             var v26114 = this.asts;
             var v26448 = this.top;
             var v26115 = v26448 - 1;
-            introspect(JAM.policy.pC545F199BE443C5FB0DC91C55134FB746FD8B074) {
+            introspect(JAM.policy.p1) {
               var v25517 = v26114[v26115]
             }
             var v24481 = v25517.arguments;
             var v25518 = this.asts;
             var v26116 = this.top;
             var v25519 = v26116 - 0;
-            introspect(JAM.policy.pC545F199BE443C5FB0DC91C55134FB746FD8B074) {
+            introspect(JAM.policy.p1) {
               var v24482 = v25518[v25519]
             }
             v22325 = v24481 === v24482
@@ -48858,7 +48858,7 @@ function v399(TypeScript$$7) {
       if(v10532) {
         var v25520 = this.asts;
         var v25521 = this.top;
-        introspect(JAM.policy.pC545F199BE443C5FB0DC91C55134FB746FD8B074) {
+        introspect(JAM.policy.p1) {
           var v24483 = v25520[v25521]
         }
         var v22326 = v24483.nodeType;
@@ -48868,7 +48868,7 @@ function v399(TypeScript$$7) {
         if(v17879) {
           var v26117 = this.asts;
           var v26118 = this.top;
-          introspect(JAM.policy.pC545F199BE443C5FB0DC91C55134FB746FD8B074) {
+          introspect(JAM.policy.p1) {
             var v25522 = v26117[v26118]
           }
           var v24485 = v25522.members;
@@ -48889,7 +48889,7 @@ function v399(TypeScript$$7) {
         var v25523 = this.asts;
         var v26119 = this.top;
         var v25524 = v26119 - 1;
-        introspect(JAM.policy.pC545F199BE443C5FB0DC91C55134FB746FD8B074) {
+        introspect(JAM.policy.p1) {
           var v24486 = v25523[v25524]
         }
         var v22329 = v24486.nodeType;
@@ -48900,14 +48900,14 @@ function v399(TypeScript$$7) {
           var v25525 = this.asts;
           var v26120 = this.top;
           var v25526 = v26120 - 1;
-          introspect(JAM.policy.pC545F199BE443C5FB0DC91C55134FB746FD8B074) {
+          introspect(JAM.policy.p1) {
             var v24488 = v25525[v25526]
           }
           var v22331 = v24488.elseBod;
           var v24489 = this.asts;
           var v25527 = this.top;
           var v24490 = v25527 - 0;
-          introspect(JAM.policy.pC545F199BE443C5FB0DC91C55134FB746FD8B074) {
+          introspect(JAM.policy.p1) {
             var v22332 = v24489[v24490]
           }
           v17881 = v22331 == v22332
@@ -48923,7 +48923,7 @@ function v399(TypeScript$$7) {
         var v25528 = this.asts;
         var v26121 = this.top;
         var v25529 = v26121 - 1;
-        introspect(JAM.policy.pC545F199BE443C5FB0DC91C55134FB746FD8B074) {
+        introspect(JAM.policy.p1) {
           var v24491 = v25528[v25529]
         }
         var v22333 = v24491.nodeType;
@@ -48934,14 +48934,14 @@ function v399(TypeScript$$7) {
           var v25530 = this.asts;
           var v26122 = this.top;
           var v25531 = v26122 - 1;
-          introspect(JAM.policy.pC545F199BE443C5FB0DC91C55134FB746FD8B074) {
+          introspect(JAM.policy.p1) {
             var v24493 = v25530[v25531]
           }
           var v22335 = v24493.thenBod;
           var v24494 = this.asts;
           var v25532 = this.top;
           var v24495 = v25532 - 0;
-          introspect(JAM.policy.pC545F199BE443C5FB0DC91C55134FB746FD8B074) {
+          introspect(JAM.policy.p1) {
             var v22336 = v24494[v24495]
           }
           v17883 = v22335 == v22336
@@ -48957,7 +48957,7 @@ function v399(TypeScript$$7) {
         var v24496 = this.asts;
         var v25533 = this.top;
         var v24497 = v25533 - 1;
-        introspect(JAM.policy.pC545F199BE443C5FB0DC91C55134FB746FD8B074) {
+        introspect(JAM.policy.p1) {
           var v22337 = v24496[v24497]
         }
         var v17885 = v22337.nodeType;
@@ -48974,7 +48974,7 @@ function v399(TypeScript$$7) {
         var v25534 = this.asts;
         var v26123 = this.top;
         var v25535 = v26123 - 1;
-        introspect(JAM.policy.pC545F199BE443C5FB0DC91C55134FB746FD8B074) {
+        introspect(JAM.policy.p1) {
           var v24498 = v25534[v25535]
         }
         var v22339 = v24498.nodeType;
@@ -48985,14 +48985,14 @@ function v399(TypeScript$$7) {
           var v25536 = this.asts;
           var v26124 = this.top;
           var v25537 = v26124 - 1;
-          introspect(JAM.policy.pC545F199BE443C5FB0DC91C55134FB746FD8B074) {
+          introspect(JAM.policy.p1) {
             var v24500 = v25536[v25537]
           }
           var v22341 = v24500.operand2;
           var v24501 = this.asts;
           var v25538 = this.top;
           var v24502 = v25538 - 0;
-          introspect(JAM.policy.pC545F199BE443C5FB0DC91C55134FB746FD8B074) {
+          introspect(JAM.policy.p1) {
             var v22342 = v24501[v24502]
           }
           v17888 = v22341 === v22342
@@ -49008,7 +49008,7 @@ function v399(TypeScript$$7) {
         var v25539 = this.asts;
         var v26125 = this.top;
         var v25540 = v26125 - 1;
-        introspect(JAM.policy.pC545F199BE443C5FB0DC91C55134FB746FD8B074) {
+        introspect(JAM.policy.p1) {
           var v24503 = v25539[v25540]
         }
         var v22343 = v24503.nodeType;
@@ -49019,14 +49019,14 @@ function v399(TypeScript$$7) {
           var v25541 = this.asts;
           var v26126 = this.top;
           var v25542 = v26126 - 1;
-          introspect(JAM.policy.pC545F199BE443C5FB0DC91C55134FB746FD8B074) {
+          introspect(JAM.policy.p1) {
             var v24505 = v25541[v25542]
           }
           var v22345 = v24505.operand1;
           var v24506 = this.asts;
           var v25543 = this.top;
           var v24507 = v25543 - 0;
-          introspect(JAM.policy.pC545F199BE443C5FB0DC91C55134FB746FD8B074) {
+          introspect(JAM.policy.p1) {
             var v22346 = v24506[v24507]
           }
           v17890 = v22345 === v22346
@@ -49042,7 +49042,7 @@ function v399(TypeScript$$7) {
         var v25544 = this.asts;
         var v26127 = this.top;
         var v25545 = v26127 - 1;
-        introspect(JAM.policy.pC545F199BE443C5FB0DC91C55134FB746FD8B074) {
+        introspect(JAM.policy.p1) {
           var v24508 = v25544[v25545]
         }
         var v22347 = v24508.nodeType;
@@ -49053,7 +49053,7 @@ function v399(TypeScript$$7) {
           var v26128 = this.asts;
           var v26449 = this.top;
           var v26129 = v26449 - 0;
-          introspect(JAM.policy.pC545F199BE443C5FB0DC91C55134FB746FD8B074) {
+          introspect(JAM.policy.p1) {
             var v25546 = v26128[v26129]
           }
           var v24510 = v25546.nodeType;
@@ -49064,14 +49064,14 @@ function v399(TypeScript$$7) {
             var v26130 = this.asts;
             var v26450 = this.top;
             var v26131 = v26450 - 1;
-            introspect(JAM.policy.pC545F199BE443C5FB0DC91C55134FB746FD8B074) {
+            introspect(JAM.policy.p1) {
               var v25548 = v26130[v26131]
             }
             var v24512 = v25548.operand;
             var v25549 = this.asts;
             var v26132 = this.top;
             var v25550 = v26132 - 0;
-            introspect(JAM.policy.pC545F199BE443C5FB0DC91C55134FB746FD8B074) {
+            introspect(JAM.policy.p1) {
               var v24513 = v25549[v25550]
             }
             v22349 = v24512 == v24513
@@ -49089,7 +49089,7 @@ function v399(TypeScript$$7) {
         var v25551 = this.asts;
         var v26133 = this.top;
         var v25552 = v26133 - 3;
-        introspect(JAM.policy.pC545F199BE443C5FB0DC91C55134FB746FD8B074) {
+        introspect(JAM.policy.p1) {
           var v24514 = v25551[v25552]
         }
         var v22350 = v24514.nodeType;
@@ -49100,7 +49100,7 @@ function v399(TypeScript$$7) {
           var v26134 = this.asts;
           var v26451 = this.top;
           var v26135 = v26451 - 2;
-          introspect(JAM.policy.pC545F199BE443C5FB0DC91C55134FB746FD8B074) {
+          introspect(JAM.policy.p1) {
             var v25553 = v26134[v26135]
           }
           var v24516 = v25553.nodeType;
@@ -49111,7 +49111,7 @@ function v399(TypeScript$$7) {
             var v26452 = this.asts;
             var v26594 = this.top;
             var v26453 = v26594 - 1;
-            introspect(JAM.policy.pC545F199BE443C5FB0DC91C55134FB746FD8B074) {
+            introspect(JAM.policy.p1) {
               var v26136 = v26452[v26453]
             }
             var v25555 = v26136.nodeType;
@@ -49122,7 +49122,7 @@ function v399(TypeScript$$7) {
               var v26595 = this.asts;
               var v26672 = this.top;
               var v26596 = v26672 - 0;
-              introspect(JAM.policy.pC545F199BE443C5FB0DC91C55134FB746FD8B074) {
+              introspect(JAM.policy.p1) {
                 var v26454 = v26595[v26596]
               }
               var v26138 = v26454.nodeType;
@@ -49133,14 +49133,14 @@ function v399(TypeScript$$7) {
                 var v26597 = this.asts;
                 var v26673 = this.top;
                 var v26598 = v26673 - 3;
-                introspect(JAM.policy.pC545F199BE443C5FB0DC91C55134FB746FD8B074) {
+                introspect(JAM.policy.p1) {
                   var v26456 = v26597[v26598]
                 }
                 var v26140 = v26456.operand;
                 var v26457 = this.asts;
                 var v26599 = this.top;
                 var v26458 = v26599 - 2;
-                introspect(JAM.policy.pC545F199BE443C5FB0DC91C55134FB746FD8B074) {
+                introspect(JAM.policy.p1) {
                   var v26141 = v26457[v26458]
                 }
                 v25557 = v26140 == v26141
@@ -49162,7 +49162,7 @@ function v399(TypeScript$$7) {
         var v25558 = this.asts;
         var v26142 = this.top;
         var v25559 = v26142 - 2;
-        introspect(JAM.policy.pC545F199BE443C5FB0DC91C55134FB746FD8B074) {
+        introspect(JAM.policy.p1) {
           var v24519 = v25558[v25559]
         }
         var v22353 = v24519.nodeType;
@@ -49173,7 +49173,7 @@ function v399(TypeScript$$7) {
           var v26143 = this.asts;
           var v26459 = this.top;
           var v26144 = v26459 - 1;
-          introspect(JAM.policy.pC545F199BE443C5FB0DC91C55134FB746FD8B074) {
+          introspect(JAM.policy.p1) {
             var v25560 = v26143[v26144]
           }
           var v24521 = v25560.nodeType;
@@ -49184,7 +49184,7 @@ function v399(TypeScript$$7) {
             var v26460 = this.asts;
             var v26600 = this.top;
             var v26461 = v26600 - 0;
-            introspect(JAM.policy.pC545F199BE443C5FB0DC91C55134FB746FD8B074) {
+            introspect(JAM.policy.p1) {
               var v26145 = v26460[v26461]
             }
             var v25562 = v26145.nodeType;
@@ -49195,14 +49195,14 @@ function v399(TypeScript$$7) {
               var v26462 = this.asts;
               var v26601 = this.top;
               var v26463 = v26601 - 2;
-              introspect(JAM.policy.pC545F199BE443C5FB0DC91C55134FB746FD8B074) {
+              introspect(JAM.policy.p1) {
                 var v26147 = v26462[v26463]
               }
               var v25564 = v26147.operand;
               var v26148 = this.asts;
               var v26464 = this.top;
               var v26149 = v26464 - 1;
-              introspect(JAM.policy.pC545F199BE443C5FB0DC91C55134FB746FD8B074) {
+              introspect(JAM.policy.p1) {
                 var v25565 = v26148[v26149]
               }
               v24523 = v25564 == v25565
@@ -49222,7 +49222,7 @@ function v399(TypeScript$$7) {
         var v25566 = this.asts;
         var v26150 = this.top;
         var v25567 = v26150 - 1;
-        introspect(JAM.policy.pC545F199BE443C5FB0DC91C55134FB746FD8B074) {
+        introspect(JAM.policy.p1) {
           var v24524 = v25566[v25567]
         }
         var v22356 = v24524.nodeType;
@@ -49233,7 +49233,7 @@ function v399(TypeScript$$7) {
           var v26151 = this.asts;
           var v26465 = this.top;
           var v26152 = v26465 - 0;
-          introspect(JAM.policy.pC545F199BE443C5FB0DC91C55134FB746FD8B074) {
+          introspect(JAM.policy.p1) {
             var v25568 = v26151[v26152]
           }
           var v24526 = v25568.nodeType;
@@ -49244,14 +49244,14 @@ function v399(TypeScript$$7) {
             var v26466 = this.asts;
             var v26602 = this.top;
             var v26467 = v26602 - 1;
-            introspect(JAM.policy.pC545F199BE443C5FB0DC91C55134FB746FD8B074) {
+            introspect(JAM.policy.p1) {
               var v26153 = v26466[v26467]
             }
             var v25570 = v26153.operand;
             var v26154 = this.asts;
             var v26468 = this.top;
             var v26155 = v26468 - 0;
-            introspect(JAM.policy.pC545F199BE443C5FB0DC91C55134FB746FD8B074) {
+            introspect(JAM.policy.p1) {
               var v25571 = v26154[v26155]
             }
             var v24528 = v25570 == v25571;
@@ -49259,7 +49259,7 @@ function v399(TypeScript$$7) {
               var v26603 = this.asts;
               var v26674 = this.top;
               var v26604 = v26674 - 0;
-              introspect(JAM.policy.pC545F199BE443C5FB0DC91C55134FB746FD8B074) {
+              introspect(JAM.policy.p1) {
                 var v26469 = v26603[v26604]
               }
               var v26156 = v26469.members;
@@ -49284,7 +49284,7 @@ function v399(TypeScript$$7) {
         var v25573 = this.asts;
         var v26157 = this.top;
         var v25574 = v26157 - 1;
-        introspect(JAM.policy.pC545F199BE443C5FB0DC91C55134FB746FD8B074) {
+        introspect(JAM.policy.p1) {
           var v24529 = v25573[v25574]
         }
         var v22359 = v24529.nodeType;
@@ -49295,7 +49295,7 @@ function v399(TypeScript$$7) {
           var v26158 = this.asts;
           var v26470 = this.top;
           var v26159 = v26470 - 0;
-          introspect(JAM.policy.pC545F199BE443C5FB0DC91C55134FB746FD8B074) {
+          introspect(JAM.policy.p1) {
             var v25575 = v26158[v26159]
           }
           var v24531 = v25575.nodeType;
@@ -49306,14 +49306,14 @@ function v399(TypeScript$$7) {
             var v26160 = this.asts;
             var v26471 = this.top;
             var v26161 = v26471 - 1;
-            introspect(JAM.policy.pC545F199BE443C5FB0DC91C55134FB746FD8B074) {
+            introspect(JAM.policy.p1) {
               var v25577 = v26160[v26161]
             }
             var v24533 = v25577.operand;
             var v25578 = this.asts;
             var v26162 = this.top;
             var v25579 = v26162 - 0;
-            introspect(JAM.policy.pC545F199BE443C5FB0DC91C55134FB746FD8B074) {
+            introspect(JAM.policy.p1) {
               var v24534 = v25578[v25579]
             }
             v22361 = v24533 == v24534
@@ -49331,7 +49331,7 @@ function v399(TypeScript$$7) {
         var v25580 = this.asts;
         var v26163 = this.top;
         var v25581 = v26163 - 2;
-        introspect(JAM.policy.pC545F199BE443C5FB0DC91C55134FB746FD8B074) {
+        introspect(JAM.policy.p1) {
           var v24535 = v25580[v25581]
         }
         var v22362 = v24535.nodeType;
@@ -49342,7 +49342,7 @@ function v399(TypeScript$$7) {
           var v26164 = this.asts;
           var v26472 = this.top;
           var v26165 = v26472 - 1;
-          introspect(JAM.policy.pC545F199BE443C5FB0DC91C55134FB746FD8B074) {
+          introspect(JAM.policy.p1) {
             var v25582 = v26164[v26165]
           }
           var v24537 = v25582.nodeType;
@@ -49353,14 +49353,14 @@ function v399(TypeScript$$7) {
             var v26473 = this.asts;
             var v26605 = this.top;
             var v26474 = v26605 - 2;
-            introspect(JAM.policy.pC545F199BE443C5FB0DC91C55134FB746FD8B074) {
+            introspect(JAM.policy.p1) {
               var v26166 = v26473[v26474]
             }
             var v25584 = v26166.caseList;
             var v26167 = this.asts;
             var v26475 = this.top;
             var v26168 = v26475 - 1;
-            introspect(JAM.policy.pC545F199BE443C5FB0DC91C55134FB746FD8B074) {
+            introspect(JAM.policy.p1) {
               var v25585 = v26167[v26168]
             }
             var v24539 = v25584 == v25585;
@@ -49368,14 +49368,14 @@ function v399(TypeScript$$7) {
               var v26476 = this.asts;
               var v26606 = this.top;
               var v26477 = v26606 - 2;
-              introspect(JAM.policy.pC545F199BE443C5FB0DC91C55134FB746FD8B074) {
+              introspect(JAM.policy.p1) {
                 var v26169 = v26476[v26477]
               }
               var v25586 = v26169.defaultCase;
               var v26170 = this.asts;
               var v26478 = this.top;
               var v26171 = v26478 - 0;
-              introspect(JAM.policy.pC545F199BE443C5FB0DC91C55134FB746FD8B074) {
+              introspect(JAM.policy.p1) {
                 var v25587 = v26170[v26171]
               }
               v24539 = v25586 == v25587
@@ -49395,7 +49395,7 @@ function v399(TypeScript$$7) {
         var v25588 = this.asts;
         var v26172 = this.top;
         var v25589 = v26172 - 2;
-        introspect(JAM.policy.pC545F199BE443C5FB0DC91C55134FB746FD8B074) {
+        introspect(JAM.policy.p1) {
           var v24540 = v25588[v25589]
         }
         var v22365 = v24540.nodeType;
@@ -49406,7 +49406,7 @@ function v399(TypeScript$$7) {
           var v26173 = this.asts;
           var v26479 = this.top;
           var v26174 = v26479 - 1;
-          introspect(JAM.policy.pC545F199BE443C5FB0DC91C55134FB746FD8B074) {
+          introspect(JAM.policy.p1) {
             var v25590 = v26173[v26174]
           }
           var v24542 = v25590.nodeType;
@@ -49417,14 +49417,14 @@ function v399(TypeScript$$7) {
             var v26175 = this.asts;
             var v26480 = this.top;
             var v26176 = v26480 - 2;
-            introspect(JAM.policy.pC545F199BE443C5FB0DC91C55134FB746FD8B074) {
+            introspect(JAM.policy.p1) {
               var v25592 = v26175[v26176]
             }
             var v24544 = v25592.caseList;
             var v25593 = this.asts;
             var v26177 = this.top;
             var v25594 = v26177 - 1;
-            introspect(JAM.policy.pC545F199BE443C5FB0DC91C55134FB746FD8B074) {
+            introspect(JAM.policy.p1) {
               var v24545 = v25593[v25594]
             }
             v22367 = v24544 == v24545
@@ -49442,7 +49442,7 @@ function v399(TypeScript$$7) {
         var v25595 = this.asts;
         var v26178 = this.top;
         var v25596 = v26178 - 1;
-        introspect(JAM.policy.pC545F199BE443C5FB0DC91C55134FB746FD8B074) {
+        introspect(JAM.policy.p1) {
           var v24546 = v25595[v25596]
         }
         var v22368 = v24546.nodeType;
@@ -49453,14 +49453,14 @@ function v399(TypeScript$$7) {
           var v25597 = this.asts;
           var v26179 = this.top;
           var v25598 = v26179 - 1;
-          introspect(JAM.policy.pC545F199BE443C5FB0DC91C55134FB746FD8B074) {
+          introspect(JAM.policy.p1) {
             var v24548 = v25597[v25598]
           }
           var v22370 = v24548.body;
           var v24549 = this.asts;
           var v25599 = this.top;
           var v24550 = v25599 - 0;
-          introspect(JAM.policy.pC545F199BE443C5FB0DC91C55134FB746FD8B074) {
+          introspect(JAM.policy.p1) {
             var v22371 = v24549[v24550]
           }
           v17906 = v22370 == v22371
@@ -49476,7 +49476,7 @@ function v399(TypeScript$$7) {
         var v25600 = this.asts;
         var v26180 = this.top;
         var v25601 = v26180 - 1;
-        introspect(JAM.policy.pC545F199BE443C5FB0DC91C55134FB746FD8B074) {
+        introspect(JAM.policy.p1) {
           var v24551 = v25600[v25601]
         }
         var v22372 = v24551.nodeType;
@@ -49487,14 +49487,14 @@ function v399(TypeScript$$7) {
           var v25602 = this.asts;
           var v26181 = this.top;
           var v25603 = v26181 - 1;
-          introspect(JAM.policy.pC545F199BE443C5FB0DC91C55134FB746FD8B074) {
+          introspect(JAM.policy.p1) {
             var v24553 = v25602[v25603]
           }
           var v22374 = v24553.body;
           var v24554 = this.asts;
           var v25604 = this.top;
           var v24555 = v25604 - 0;
-          introspect(JAM.policy.pC545F199BE443C5FB0DC91C55134FB746FD8B074) {
+          introspect(JAM.policy.p1) {
             var v22375 = v24554[v24555]
           }
           v17908 = v22374 == v22375
@@ -49510,7 +49510,7 @@ function v399(TypeScript$$7) {
         var v25605 = this.asts;
         var v26182 = this.top;
         var v25606 = v26182 - 1;
-        introspect(JAM.policy.pC545F199BE443C5FB0DC91C55134FB746FD8B074) {
+        introspect(JAM.policy.p1) {
           var v24556 = v25605[v25606]
         }
         var v22376 = v24556.nodeType;
@@ -49521,14 +49521,14 @@ function v399(TypeScript$$7) {
           var v25607 = this.asts;
           var v26183 = this.top;
           var v25608 = v26183 - 1;
-          introspect(JAM.policy.pC545F199BE443C5FB0DC91C55134FB746FD8B074) {
+          introspect(JAM.policy.p1) {
             var v24558 = v25607[v25608]
           }
           var v22378 = v24558.body;
           var v24559 = this.asts;
           var v25609 = this.top;
           var v24560 = v25609 - 0;
-          introspect(JAM.policy.pC545F199BE443C5FB0DC91C55134FB746FD8B074) {
+          introspect(JAM.policy.p1) {
             var v22379 = v24559[v24560]
           }
           v17910 = v22378 == v22379
@@ -49544,7 +49544,7 @@ function v399(TypeScript$$7) {
         var v25610 = this.asts;
         var v26184 = this.top;
         var v25611 = v26184 - 1;
-        introspect(JAM.policy.pC545F199BE443C5FB0DC91C55134FB746FD8B074) {
+        introspect(JAM.policy.p1) {
           var v24561 = v25610[v25611]
         }
         var v22380 = v24561.nodeType;
@@ -49555,14 +49555,14 @@ function v399(TypeScript$$7) {
           var v25612 = this.asts;
           var v26185 = this.top;
           var v25613 = v26185 - 1;
-          introspect(JAM.policy.pC545F199BE443C5FB0DC91C55134FB746FD8B074) {
+          introspect(JAM.policy.p1) {
             var v24563 = v25612[v25613]
           }
           var v22382 = v24563.body;
           var v24564 = this.asts;
           var v25614 = this.top;
           var v24565 = v25614 - 0;
-          introspect(JAM.policy.pC545F199BE443C5FB0DC91C55134FB746FD8B074) {
+          introspect(JAM.policy.p1) {
             var v22383 = v24564[v24565]
           }
           v17912 = v22382 == v22383
@@ -49578,7 +49578,7 @@ function v399(TypeScript$$7) {
         var v25615 = this.asts;
         var v26186 = this.top;
         var v25616 = v26186 - 1;
-        introspect(JAM.policy.pC545F199BE443C5FB0DC91C55134FB746FD8B074) {
+        introspect(JAM.policy.p1) {
           var v24566 = v25615[v25616]
         }
         var v22384 = v24566.nodeType;
@@ -49589,14 +49589,14 @@ function v399(TypeScript$$7) {
           var v25617 = this.asts;
           var v26187 = this.top;
           var v25618 = v26187 - 1;
-          introspect(JAM.policy.pC545F199BE443C5FB0DC91C55134FB746FD8B074) {
+          introspect(JAM.policy.p1) {
             var v24568 = v25617[v25618]
           }
           var v22386 = v24568.body;
           var v24569 = this.asts;
           var v25619 = this.top;
           var v24570 = v25619 - 0;
-          introspect(JAM.policy.pC545F199BE443C5FB0DC91C55134FB746FD8B074) {
+          introspect(JAM.policy.p1) {
             var v22387 = v24569[v24570]
           }
           v17914 = v22386 == v22387
@@ -49612,7 +49612,7 @@ function v399(TypeScript$$7) {
         var v25620 = this.asts;
         var v26188 = this.top;
         var v25621 = v26188 - 1;
-        introspect(JAM.policy.pC545F199BE443C5FB0DC91C55134FB746FD8B074) {
+        introspect(JAM.policy.p1) {
           var v24571 = v25620[v25621]
         }
         var v22388 = v24571.nodeType;
@@ -49623,14 +49623,14 @@ function v399(TypeScript$$7) {
           var v25622 = this.asts;
           var v26189 = this.top;
           var v25623 = v26189 - 1;
-          introspect(JAM.policy.pC545F199BE443C5FB0DC91C55134FB746FD8B074) {
+          introspect(JAM.policy.p1) {
             var v24573 = v25622[v25623]
           }
           var v22390 = v24573.body;
           var v24574 = this.asts;
           var v25624 = this.top;
           var v24575 = v25624 - 0;
-          introspect(JAM.policy.pC545F199BE443C5FB0DC91C55134FB746FD8B074) {
+          introspect(JAM.policy.p1) {
             var v22391 = v24574[v24575]
           }
           v17916 = v22390 == v22391
@@ -49646,7 +49646,7 @@ function v399(TypeScript$$7) {
         var v25625 = this.asts;
         var v26190 = this.top;
         var v25626 = v26190 - 1;
-        introspect(JAM.policy.pC545F199BE443C5FB0DC91C55134FB746FD8B074) {
+        introspect(JAM.policy.p1) {
           var v24576 = v25625[v25626]
         }
         var v22392 = v24576.nodeType;
@@ -49657,14 +49657,14 @@ function v399(TypeScript$$7) {
           var v25627 = this.asts;
           var v26191 = this.top;
           var v25628 = v26191 - 1;
-          introspect(JAM.policy.pC545F199BE443C5FB0DC91C55134FB746FD8B074) {
+          introspect(JAM.policy.p1) {
             var v24578 = v25627[v25628]
           }
           var v22394 = v24578.body;
           var v24579 = this.asts;
           var v25629 = this.top;
           var v24580 = v25629 - 0;
-          introspect(JAM.policy.pC545F199BE443C5FB0DC91C55134FB746FD8B074) {
+          introspect(JAM.policy.p1) {
             var v22395 = v24579[v24580]
           }
           v17918 = v22394 == v22395
@@ -49680,7 +49680,7 @@ function v399(TypeScript$$7) {
         var v25630 = this.asts;
         var v26192 = this.top;
         var v25631 = v26192 - 1;
-        introspect(JAM.policy.pC545F199BE443C5FB0DC91C55134FB746FD8B074) {
+        introspect(JAM.policy.p1) {
           var v24581 = v25630[v25631]
         }
         var v22396 = v24581.nodeType;
@@ -49691,14 +49691,14 @@ function v399(TypeScript$$7) {
           var v25632 = this.asts;
           var v26193 = this.top;
           var v25633 = v26193 - 1;
-          introspect(JAM.policy.pC545F199BE443C5FB0DC91C55134FB746FD8B074) {
+          introspect(JAM.policy.p1) {
             var v24583 = v25632[v25633]
           }
           var v22398 = v24583.body;
           var v24584 = this.asts;
           var v25634 = this.top;
           var v24585 = v25634 - 0;
-          introspect(JAM.policy.pC545F199BE443C5FB0DC91C55134FB746FD8B074) {
+          introspect(JAM.policy.p1) {
             var v22399 = v24584[v24585]
           }
           v17920 = v22398 == v22399
@@ -49714,7 +49714,7 @@ function v399(TypeScript$$7) {
         var v25635 = this.asts;
         var v26194 = this.top;
         var v25636 = v26194 - 1;
-        introspect(JAM.policy.pC545F199BE443C5FB0DC91C55134FB746FD8B074) {
+        introspect(JAM.policy.p1) {
           var v24586 = v25635[v25636]
         }
         var v22400 = v24586.nodeType;
@@ -49725,14 +49725,14 @@ function v399(TypeScript$$7) {
           var v25637 = this.asts;
           var v26195 = this.top;
           var v25638 = v26195 - 1;
-          introspect(JAM.policy.pC545F199BE443C5FB0DC91C55134FB746FD8B074) {
+          introspect(JAM.policy.p1) {
             var v24588 = v25637[v25638]
           }
           var v22402 = v24588.body;
           var v24589 = this.asts;
           var v25639 = this.top;
           var v24590 = v25639 - 0;
-          introspect(JAM.policy.pC545F199BE443C5FB0DC91C55134FB746FD8B074) {
+          introspect(JAM.policy.p1) {
             var v22403 = v24589[v24590]
           }
           v17922 = v22402 == v22403
@@ -49748,7 +49748,7 @@ function v399(TypeScript$$7) {
         var v25640 = this.asts;
         var v26196 = this.top;
         var v25641 = v26196 - 1;
-        introspect(JAM.policy.pC545F199BE443C5FB0DC91C55134FB746FD8B074) {
+        introspect(JAM.policy.p1) {
           var v24591 = v25640[v25641]
         }
         var v22404 = v24591.nodeType;
@@ -49759,14 +49759,14 @@ function v399(TypeScript$$7) {
           var v25642 = this.asts;
           var v26197 = this.top;
           var v25643 = v26197 - 1;
-          introspect(JAM.policy.pC545F199BE443C5FB0DC91C55134FB746FD8B074) {
+          introspect(JAM.policy.p1) {
             var v24593 = v25642[v25643]
           }
           var v22406 = v24593.statements;
           var v24594 = this.asts;
           var v25644 = this.top;
           var v24595 = v25644 - 0;
-          introspect(JAM.policy.pC545F199BE443C5FB0DC91C55134FB746FD8B074) {
+          introspect(JAM.policy.p1) {
             var v22407 = v24594[v24595]
           }
           v17924 = v22406 == v22407
@@ -49782,7 +49782,7 @@ function v399(TypeScript$$7) {
         var v25645 = this.asts;
         var v26198 = this.top;
         var v25646 = v26198 - 1;
-        introspect(JAM.policy.pC545F199BE443C5FB0DC91C55134FB746FD8B074) {
+        introspect(JAM.policy.p1) {
           var v24596 = v25645[v25646]
         }
         var v22408 = v24596.nodeType;
@@ -49793,14 +49793,14 @@ function v399(TypeScript$$7) {
           var v25647 = this.asts;
           var v26199 = this.top;
           var v25648 = v26199 - 1;
-          introspect(JAM.policy.pC545F199BE443C5FB0DC91C55134FB746FD8B074) {
+          introspect(JAM.policy.p1) {
             var v24598 = v25647[v25648]
           }
           var v22410 = v24598.members;
           var v24599 = this.asts;
           var v25649 = this.top;
           var v24600 = v25649 - 0;
-          introspect(JAM.policy.pC545F199BE443C5FB0DC91C55134FB746FD8B074) {
+          introspect(JAM.policy.p1) {
             var v22411 = v24599[v24600]
           }
           v17926 = v22410 == v22411
@@ -49816,7 +49816,7 @@ function v399(TypeScript$$7) {
         var v25650 = this.asts;
         var v26200 = this.top;
         var v25651 = v26200 - 1;
-        introspect(JAM.policy.pC545F199BE443C5FB0DC91C55134FB746FD8B074) {
+        introspect(JAM.policy.p1) {
           var v24601 = v25650[v25651]
         }
         var v22412 = v24601.nodeType;
@@ -49827,14 +49827,14 @@ function v399(TypeScript$$7) {
           var v25652 = this.asts;
           var v26201 = this.top;
           var v25653 = v26201 - 1;
-          introspect(JAM.policy.pC545F199BE443C5FB0DC91C55134FB746FD8B074) {
+          introspect(JAM.policy.p1) {
             var v24603 = v25652[v25653]
           }
           var v22414 = v24603.bod;
           var v24604 = this.asts;
           var v25654 = this.top;
           var v24605 = v25654 - 0;
-          introspect(JAM.policy.pC545F199BE443C5FB0DC91C55134FB746FD8B074) {
+          introspect(JAM.policy.p1) {
             var v22415 = v24604[v24605]
           }
           v17928 = v22414 == v22415
@@ -49850,7 +49850,7 @@ function v399(TypeScript$$7) {
         var v25655 = this.asts;
         var v26202 = this.top;
         var v25656 = v26202 - 1;
-        introspect(JAM.policy.pC545F199BE443C5FB0DC91C55134FB746FD8B074) {
+        introspect(JAM.policy.p1) {
           var v24606 = v25655[v25656]
         }
         var v22416 = v24606.nodeType;
@@ -49861,14 +49861,14 @@ function v399(TypeScript$$7) {
           var v25657 = this.asts;
           var v26203 = this.top;
           var v25658 = v26203 - 1;
-          introspect(JAM.policy.pC545F199BE443C5FB0DC91C55134FB746FD8B074) {
+          introspect(JAM.policy.p1) {
             var v24608 = v25657[v25658]
           }
           var v22418 = v24608.members;
           var v24609 = this.asts;
           var v25659 = this.top;
           var v24610 = v25659 - 0;
-          introspect(JAM.policy.pC545F199BE443C5FB0DC91C55134FB746FD8B074) {
+          introspect(JAM.policy.p1) {
             var v22419 = v24609[v24610]
           }
           v17930 = v22418 == v22419
@@ -49884,7 +49884,7 @@ function v399(TypeScript$$7) {
         var v25660 = this.asts;
         var v26204 = this.top;
         var v25661 = v26204 - 1;
-        introspect(JAM.policy.pC545F199BE443C5FB0DC91C55134FB746FD8B074) {
+        introspect(JAM.policy.p1) {
           var v24611 = v25660[v25661]
         }
         var v22420 = v24611.nodeType;
@@ -49895,14 +49895,14 @@ function v399(TypeScript$$7) {
           var v25662 = this.asts;
           var v26205 = this.top;
           var v25663 = v26205 - 1;
-          introspect(JAM.policy.pC545F199BE443C5FB0DC91C55134FB746FD8B074) {
+          introspect(JAM.policy.p1) {
             var v24613 = v25662[v25663]
           }
           var v22422 = v24613.members;
           var v24614 = this.asts;
           var v25664 = this.top;
           var v24615 = v25664 - 0;
-          introspect(JAM.policy.pC545F199BE443C5FB0DC91C55134FB746FD8B074) {
+          introspect(JAM.policy.p1) {
             var v22423 = v24614[v24615]
           }
           v17932 = v22422 == v22423
@@ -49918,7 +49918,7 @@ function v399(TypeScript$$7) {
         var v25665 = this.asts;
         var v26206 = this.top;
         var v25666 = v26206 - 1;
-        introspect(JAM.policy.pC545F199BE443C5FB0DC91C55134FB746FD8B074) {
+        introspect(JAM.policy.p1) {
           var v24616 = v25665[v25666]
         }
         var v22424 = v24616.nodeType;
@@ -49929,14 +49929,14 @@ function v399(TypeScript$$7) {
           var v25667 = this.asts;
           var v26207 = this.top;
           var v25668 = v26207 - 1;
-          introspect(JAM.policy.pC545F199BE443C5FB0DC91C55134FB746FD8B074) {
+          introspect(JAM.policy.p1) {
             var v24618 = v25667[v25668]
           }
           var v22426 = v24618.caseList;
           var v24619 = this.asts;
           var v25669 = this.top;
           var v24620 = v25669 - 0;
-          introspect(JAM.policy.pC545F199BE443C5FB0DC91C55134FB746FD8B074) {
+          introspect(JAM.policy.p1) {
             var v22427 = v24619[v24620]
           }
           v17934 = v22426 == v22427
@@ -49952,7 +49952,7 @@ function v399(TypeScript$$7) {
         var v25670 = this.asts;
         var v26208 = this.top;
         var v25671 = v26208 - 1;
-        introspect(JAM.policy.pC545F199BE443C5FB0DC91C55134FB746FD8B074) {
+        introspect(JAM.policy.p1) {
           var v24621 = v25670[v25671]
         }
         var v22428 = v24621.nodeType;
@@ -49963,14 +49963,14 @@ function v399(TypeScript$$7) {
           var v25672 = this.asts;
           var v26209 = this.top;
           var v25673 = v26209 - 1;
-          introspect(JAM.policy.pC545F199BE443C5FB0DC91C55134FB746FD8B074) {
+          introspect(JAM.policy.p1) {
             var v24623 = v25672[v25673]
           }
           var v22430 = v24623.bod;
           var v24624 = this.asts;
           var v25674 = this.top;
           var v24625 = v25674 - 0;
-          introspect(JAM.policy.pC545F199BE443C5FB0DC91C55134FB746FD8B074) {
+          introspect(JAM.policy.p1) {
             var v22431 = v24624[v24625]
           }
           v17936 = v22430 == v22431
@@ -49986,7 +49986,7 @@ function v399(TypeScript$$7) {
         var v25675 = this.asts;
         var v26210 = this.top;
         var v25676 = v26210 - 0;
-        introspect(JAM.policy.pC545F199BE443C5FB0DC91C55134FB746FD8B074) {
+        introspect(JAM.policy.p1) {
           var v24626 = v25675[v25676]
         }
         var v22432 = v24626.nodeType;
@@ -49997,7 +49997,7 @@ function v399(TypeScript$$7) {
           var v26211 = this.asts;
           var v26481 = this.top;
           var v26212 = v26481 - 1;
-          introspect(JAM.policy.pC545F199BE443C5FB0DC91C55134FB746FD8B074) {
+          introspect(JAM.policy.p1) {
             var v25677 = v26211[v26212]
           }
           var v24628 = v25677.nodeType;
@@ -50008,14 +50008,14 @@ function v399(TypeScript$$7) {
             var v26482 = this.asts;
             var v26607 = this.top;
             var v26483 = v26607 - 1;
-            introspect(JAM.policy.pC545F199BE443C5FB0DC91C55134FB746FD8B074) {
+            introspect(JAM.policy.p1) {
               var v26213 = v26482[v26483]
             }
             var v25679 = v26213.members;
             var v26214 = this.asts;
             var v26484 = this.top;
             var v26215 = v26484 - 0;
-            introspect(JAM.policy.pC545F199BE443C5FB0DC91C55134FB746FD8B074) {
+            introspect(JAM.policy.p1) {
               var v25680 = v26214[v26215]
             }
             var v24630 = v25679 == v25680;
@@ -50023,7 +50023,7 @@ function v399(TypeScript$$7) {
               var v26485 = this.asts;
               var v26608 = this.top;
               var v26486 = v26608 - 1;
-              introspect(JAM.policy.pC545F199BE443C5FB0DC91C55134FB746FD8B074) {
+              introspect(JAM.policy.p1) {
                 var v26216 = v26485[v26486]
               }
               var v25681 = v26216.modFlags;
@@ -50045,7 +50045,7 @@ function v399(TypeScript$$7) {
       if(v10562) {
         var v25683 = this.asts;
         var v25684 = this.top;
-        introspect(JAM.policy.pC545F199BE443C5FB0DC91C55134FB746FD8B074) {
+        introspect(JAM.policy.p1) {
           var v24631 = v25683[v25684]
         }
         var v22435 = v24631.nodeType;
@@ -50055,7 +50055,7 @@ function v399(TypeScript$$7) {
         if(v17940) {
           var v25685 = this.asts;
           var v25686 = this.top;
-          introspect(JAM.policy.pC545F199BE443C5FB0DC91C55134FB746FD8B074) {
+          introspect(JAM.policy.p1) {
             var v24633 = v25685[v25686]
           }
           var v22437 = v24633.modFlags;
@@ -50075,7 +50075,7 @@ function v399(TypeScript$$7) {
       if(v10564) {
         var v24635 = this.asts;
         var v24636 = this.top;
-        introspect(JAM.policy.pC545F199BE443C5FB0DC91C55134FB746FD8B074) {
+        introspect(JAM.policy.p1) {
           var v22439 = v24635[v24636]
         }
         var v17942 = v22439 === ast$$13;
@@ -50083,7 +50083,7 @@ function v399(TypeScript$$7) {
           var v26218 = this.asts;
           var v26487 = this.top;
           var v26219 = v26487 - 1;
-          introspect(JAM.policy.pC545F199BE443C5FB0DC91C55134FB746FD8B074) {
+          introspect(JAM.policy.p1) {
             var v25687 = v26218[v26219]
           }
           var v24637 = v25687.nodeType;
@@ -50094,7 +50094,7 @@ function v399(TypeScript$$7) {
             var v26220 = this.asts;
             var v26488 = this.top;
             var v26221 = v26488 - 2;
-            introspect(JAM.policy.pC545F199BE443C5FB0DC91C55134FB746FD8B074) {
+            introspect(JAM.policy.p1) {
               var v25689 = v26220[v26221]
             }
             var v24639 = v25689.nodeType;
@@ -50116,7 +50116,7 @@ function v399(TypeScript$$7) {
       if(v10566) {
         var v24641 = this.asts;
         var v24642 = this.top;
-        introspect(JAM.policy.pC545F199BE443C5FB0DC91C55134FB746FD8B074) {
+        introspect(JAM.policy.p1) {
           var v22441 = v24641[v24642]
         }
         var v17944 = v22441 === ast$$12;
@@ -50124,7 +50124,7 @@ function v399(TypeScript$$7) {
           var v26222 = this.asts;
           var v26489 = this.top;
           var v26223 = v26489 - 1;
-          introspect(JAM.policy.pC545F199BE443C5FB0DC91C55134FB746FD8B074) {
+          introspect(JAM.policy.p1) {
             var v25691 = v26222[v26223]
           }
           var v24643 = v25691.nodeType;
@@ -50135,7 +50135,7 @@ function v399(TypeScript$$7) {
             var v26490 = this.asts;
             var v26609 = this.top;
             var v26491 = v26609 - 2;
-            introspect(JAM.policy.pC545F199BE443C5FB0DC91C55134FB746FD8B074) {
+            introspect(JAM.policy.p1) {
               var v26224 = v26490[v26491]
             }
             var v25693 = v26224.nodeType;
@@ -50146,7 +50146,7 @@ function v399(TypeScript$$7) {
               var v26610 = this.asts;
               var v26675 = this.top;
               var v26611 = v26675 - 3;
-              introspect(JAM.policy.pC545F199BE443C5FB0DC91C55134FB746FD8B074) {
+              introspect(JAM.policy.p1) {
                 var v26492 = v26610[v26611]
               }
               var v26226 = v26492.nodeType;
@@ -50157,7 +50157,7 @@ function v399(TypeScript$$7) {
                 var v26676 = this.asts;
                 var v26724 = this.top;
                 var v26677 = v26724 - 4;
-                introspect(JAM.policy.pC545F199BE443C5FB0DC91C55134FB746FD8B074) {
+                introspect(JAM.policy.p1) {
                   var v26612 = v26676[v26677]
                 }
                 var v26494 = v26612.nodeType;
@@ -50168,7 +50168,7 @@ function v399(TypeScript$$7) {
                   var v26678 = this.asts;
                   var v26725 = this.top;
                   var v26679 = v26725 - 2;
-                  introspect(JAM.policy.pC545F199BE443C5FB0DC91C55134FB746FD8B074) {
+                  introspect(JAM.policy.p1) {
                     var v26614 = v26678[v26679]
                   }
                   var v26496 = v26614.isConstructor;
@@ -50176,14 +50176,14 @@ function v399(TypeScript$$7) {
                     var v26747 = this.asts;
                     var v26762 = this.top;
                     var v26748 = v26762 - 2;
-                    introspect(JAM.policy.pC545F199BE443C5FB0DC91C55134FB746FD8B074) {
+                    introspect(JAM.policy.p1) {
                       var v26726 = v26747[v26748]
                     }
                     var v26680 = v26726.arguments;
                     var v26727 = this.asts;
                     var v26749 = this.top;
                     var v26728 = v26749 - 1;
-                    introspect(JAM.policy.pC545F199BE443C5FB0DC91C55134FB746FD8B074) {
+                    introspect(JAM.policy.p1) {
                       var v26681 = v26727[v26728]
                     }
                     var v26615 = v26680 === v26681;
@@ -50191,14 +50191,14 @@ function v399(TypeScript$$7) {
                       var v26750 = this.asts;
                       var v26763 = this.top;
                       var v26751 = v26763 - 4;
-                      introspect(JAM.policy.pC545F199BE443C5FB0DC91C55134FB746FD8B074) {
+                      introspect(JAM.policy.p1) {
                         var v26729 = v26750[v26751]
                       }
                       var v26682 = v26729.constructorDecl;
                       var v26730 = this.asts;
                       var v26752 = this.top;
                       var v26731 = v26752 - 2;
-                      introspect(JAM.policy.pC545F199BE443C5FB0DC91C55134FB746FD8B074) {
+                      introspect(JAM.policy.p1) {
                         var v26683 = v26730[v26731]
                       }
                       v26615 = v26682 === v26683
@@ -50227,7 +50227,7 @@ function v399(TypeScript$$7) {
       if(v10568) {
         var v24646 = this.asts;
         var v24647 = this.top;
-        introspect(JAM.policy.pC545F199BE443C5FB0DC91C55134FB746FD8B074) {
+        introspect(JAM.policy.p1) {
           var v22443 = v24646[v24647]
         }
         var v17946 = v22443 === ast$$11;
@@ -50235,7 +50235,7 @@ function v399(TypeScript$$7) {
           var v26229 = this.asts;
           var v26497 = this.top;
           var v26230 = v26497 - 1;
-          introspect(JAM.policy.pC545F199BE443C5FB0DC91C55134FB746FD8B074) {
+          introspect(JAM.policy.p1) {
             var v25696 = v26229[v26230]
           }
           var v24648 = v25696.nodeType;
@@ -50246,7 +50246,7 @@ function v399(TypeScript$$7) {
             var v26231 = this.asts;
             var v26498 = this.top;
             var v26232 = v26498 - 2;
-            introspect(JAM.policy.pC545F199BE443C5FB0DC91C55134FB746FD8B074) {
+            introspect(JAM.policy.p1) {
               var v25698 = v26231[v26232]
             }
             var v24650 = v25698.nodeType;
@@ -50268,7 +50268,7 @@ function v399(TypeScript$$7) {
       if(v10570) {
         var v24652 = this.asts;
         var v24653 = this.top;
-        introspect(JAM.policy.pC545F199BE443C5FB0DC91C55134FB746FD8B074) {
+        introspect(JAM.policy.p1) {
           var v22445 = v24652[v24653]
         }
         var v17948 = v22445 === ast$$10;
@@ -50276,7 +50276,7 @@ function v399(TypeScript$$7) {
           var v26233 = this.asts;
           var v26499 = this.top;
           var v26234 = v26499 - 1;
-          introspect(JAM.policy.pC545F199BE443C5FB0DC91C55134FB746FD8B074) {
+          introspect(JAM.policy.p1) {
             var v25700 = v26233[v26234]
           }
           var v24654 = v25700.nodeType;
@@ -50287,7 +50287,7 @@ function v399(TypeScript$$7) {
             var v26235 = this.asts;
             var v26500 = this.top;
             var v26236 = v26500 - 2;
-            introspect(JAM.policy.pC545F199BE443C5FB0DC91C55134FB746FD8B074) {
+            introspect(JAM.policy.p1) {
               var v25702 = v26235[v26236]
             }
             var v24656 = v25702.nodeType;
@@ -50309,7 +50309,7 @@ function v399(TypeScript$$7) {
       if(v10572) {
         var v24658 = this.asts;
         var v24659 = this.top;
-        introspect(JAM.policy.pC545F199BE443C5FB0DC91C55134FB746FD8B074) {
+        introspect(JAM.policy.p1) {
           var v22447 = v24658[v24659]
         }
         var v17950 = v22447 === ast$$9;
@@ -50317,7 +50317,7 @@ function v399(TypeScript$$7) {
           var v26237 = this.asts;
           var v26501 = this.top;
           var v26238 = v26501 - 1;
-          introspect(JAM.policy.pC545F199BE443C5FB0DC91C55134FB746FD8B074) {
+          introspect(JAM.policy.p1) {
             var v25704 = v26237[v26238]
           }
           var v24660 = v25704.nodeType;
@@ -50328,7 +50328,7 @@ function v399(TypeScript$$7) {
             var v26239 = this.asts;
             var v26502 = this.top;
             var v26240 = v26502 - 2;
-            introspect(JAM.policy.pC545F199BE443C5FB0DC91C55134FB746FD8B074) {
+            introspect(JAM.policy.p1) {
               var v25706 = v26239[v26240]
             }
             var v24662 = v25706.nodeType;
@@ -50542,7 +50542,7 @@ function v399(TypeScript$$7) {
     }
     function v346(index$$43) {
       var v10585 = this.asts;
-      introspect(JAM.policy.pC545F199BE443C5FB0DC91C55134FB746FD8B074) {
+      introspect(JAM.policy.p1) {
         return v10585[index$$43]
       }
     }
@@ -50943,15 +50943,15 @@ function v399(TypeScript$$7) {
         var v18010 = comments$$2.length;
         var v10688 = i$$26 < v18010;
         for(;v10688;) {
-          introspect(JAM.policy.pC545F199BE443C5FB0DC91C55134FB746FD8B074) {
+          introspect(JAM.policy.p1) {
             var v10682 = comments$$2[i$$26]
           }
           var minChar = v10682.minChar;
-          introspect(JAM.policy.pC545F199BE443C5FB0DC91C55134FB746FD8B074) {
+          introspect(JAM.policy.p1) {
             var v10683 = comments$$2[i$$26]
           }
           var limChar = v10683.limChar;
-          introspect(JAM.policy.pC545F199BE443C5FB0DC91C55134FB746FD8B074) {
+          introspect(JAM.policy.p1) {
             var v22526 = comments$$2[i$$26]
           }
           var v18011 = v22526.isBlockComment;
@@ -50966,7 +50966,7 @@ function v399(TypeScript$$7) {
           var v10687 = v18012;
           if(v10687) {
             var v10685 = ctx.path;
-            introspect(JAM.policy.pC545F199BE443C5FB0DC91C55134FB746FD8B074) {
+            introspect(JAM.policy.p1) {
               var v10686 = comments$$2[i$$26]
             }
             JAM.call(v10685.push, v10685, [v10686])
@@ -51078,15 +51078,15 @@ function v335(TypeScript$$6) {
       var nodeType$$12 = ast$$5.nodeType;
       var v22531 = TypeScript$$6.NodeType;
       var v18018 = v22531._map;
-      introspect(JAM.policy.pC545F199BE443C5FB0DC91C55134FB746FD8B074) {
+      introspect(JAM.policy.p1) {
         var v10702 = v18018[nodeType$$12]
       }
       var callbackString = v10702 + "Callback";
-      introspect(JAM.policy.pC545F199BE443C5FB0DC91C55134FB746FD8B074) {
+      introspect(JAM.policy.p1) {
         var v10703 = callback$$26[callbackString]
       }
       if(v10703) {
-        return JAM.call(JAM.get(callback$$26, callbackString, JAM.policy.pC545F199BE443C5FB0DC91C55134FB746FD8B074), callback$$26, [pre$$5, ast$$5])
+        return JAM.call(JAM.get(callback$$26, callbackString, JAM.policy.p1), callback$$26, [pre$$5, ast$$5])
       }
       var v10704 = callback$$26.DefaultCallback;
       if(v10704) {
@@ -51127,7 +51127,7 @@ function v333(TypeScript$$5) {
             var v10707 = preAst$$2.members;
             var v10708 = i$$25;
             var v22533 = preAst$$2.members;
-            introspect(JAM.policy.pC545F199BE443C5FB0DC91C55134FB746FD8B074) {
+            introspect(JAM.policy.p1) {
               var v18022 = v22533[i$$25]
             }
             var v27337 = JAM.call(walker$$3.walk, walker$$3, [v18022, preAst$$2]);
@@ -51146,7 +51146,7 @@ function v333(TypeScript$$5) {
             var v10711 = preAst$$2.members;
             var v10712 = i$$25;
             var v22534 = preAst$$2.members;
-            introspect(JAM.policy.pC545F199BE443C5FB0DC91C55134FB746FD8B074) {
+            introspect(JAM.policy.p1) {
               var v18024 = v22534[i$$25]
             }
             var v27338 = JAM.call(walker$$3.walk, walker$$3, [v18024, preAst$$2]);
@@ -52303,7 +52303,7 @@ function v333(TypeScript$$5) {
       var v11048 = v18226._map;
       for(e$$8 in v11048) {
         var v22566 = this.childrenWalkers;
-        introspect(JAM.policy.pC545F199BE443C5FB0DC91C55134FB746FD8B074) {
+        introspect(JAM.policy.p1) {
           var v18227 = v22566[e$$8]
         }
         var v11047 = v18227 === undefined;
@@ -52359,7 +52359,7 @@ function v333(TypeScript$$5) {
         v11058.goNextSibling = true;
         var v11059 = this.childrenWalkers;
         var v11060 = ast$$3.nodeType;
-        JAM.call(JAM.get(v11059, v11060, JAM.policy.pC545F199BE443C5FB0DC91C55134FB746FD8B074), v11059, [ast$$3, parent$$1, this]);
+        JAM.call(JAM.get(v11059, v11060, JAM.policy.p1), v11059, [ast$$3, parent$$1, this]);
         var v11061 = this.options;
         v11061.goNextSibling = svGoSib
       }else {
@@ -52465,7 +52465,7 @@ function v322(TypeScript$$4) {
       var v11076 = i$$24 < v18232;
       for(;v11076;) {
         var v11073 = TypeScript$$4.Comment;
-        introspect(JAM.policy.pC545F199BE443C5FB0DC91C55134FB746FD8B074) {
+        introspect(JAM.policy.p1) {
           var v22568 = signatures[i$$24]
         }
         var v18233 = v22568.declAST;
@@ -52498,7 +52498,7 @@ function v322(TypeScript$$4) {
       var v18236 = fncDocComments.length;
       var v11101 = i$$23 < v18236;
       for(;v11101;) {
-        introspect(JAM.policy.pC545F199BE443C5FB0DC91C55134FB746FD8B074) {
+        introspect(JAM.policy.p1) {
           var v11078 = fncDocComments[i$$23]
         }
         var commentContents = v11078.content;
@@ -52656,7 +52656,7 @@ function v322(TypeScript$$4) {
       var v18256 = comments.length;
       var v11104 = c$$2 < v18256;
       for(;v11104;) {
-        introspect(JAM.policy.pC545F199BE443C5FB0DC91C55134FB746FD8B074) {
+        introspect(JAM.policy.p1) {
           var v11102 = comments[c$$2]
         }
         var commentText = v11102.getDocCommentText();
@@ -52700,7 +52700,7 @@ function v322(TypeScript$$4) {
       var v18260 = lines.length;
       var v11114 = l < v18260;
       for(;v11114;) {
-        introspect(JAM.policy.pC545F199BE443C5FB0DC91C55134FB746FD8B074) {
+        introspect(JAM.policy.p1) {
           var line$$3 = lines[l]
         }
         var cleanLinePos = JAM.call(Comment$$2.cleanDocCommentLine, Comment$$2, [line$$3, true, spacesToRemove]);
@@ -52896,7 +52896,7 @@ function v322(TypeScript$$4) {
             var v11131 = this.text;
             var v11132 = i$$21;
             var v22593 = this.text;
-            introspect(JAM.policy.pC545F199BE443C5FB0DC91C55134FB746FD8B074) {
+            introspect(JAM.policy.p1) {
               var v18282 = v22593[i$$21]
             }
             var v27402 = v18282.replace(/^\s+|\s+$/g, "");
@@ -53404,7 +53404,7 @@ function v322(TypeScript$$4) {
       var v22601 = context$$21.currentSwitch;
       var v18321 = v22601.length;
       var v11260 = v18321 - 1;
-      introspect(JAM.policy.pC545F199BE443C5FB0DC91C55134FB746FD8B074) {
+      introspect(JAM.policy.p1) {
         var sw$$2 = v11259[v11260]
       }
       var v11263 = this.expr;
@@ -53553,7 +53553,7 @@ function v322(TypeScript$$4) {
         var v11292 = i$$20;
         var v24709 = this.caseList;
         var v22606 = v24709.members;
-        introspect(JAM.policy.pC545F199BE443C5FB0DC91C55134FB746FD8B074) {
+        introspect(JAM.policy.p1) {
           var v18331 = v22606[i$$20]
         }
         var v27416 = JAM.call(typeFlow$$28.typeCheck, typeFlow$$28, [v18331]);
@@ -53592,7 +53592,7 @@ function v322(TypeScript$$4) {
       for(;v11303;) {
         var v18334 = this.caseList;
         var v11301 = v18334.members;
-        introspect(JAM.policy.pC545F199BE443C5FB0DC91C55134FB746FD8B074) {
+        introspect(JAM.policy.p1) {
           var caseExpr = v11301[i$$19]
         }
         var v18335 = TypeScript$$4.TokenID;
@@ -54667,7 +54667,7 @@ function v322(TypeScript$$4) {
         for(;v11516;) {
           var v22652 = this.labels;
           var v18423 = v22652.members;
-          introspect(JAM.policy.pC545F199BE443C5FB0DC91C55134FB746FD8B074) {
+          introspect(JAM.policy.p1) {
             var v11515 = v18423[i$$18]
           }
           JAM.call(v11515.emit, v11515, [emitter$$20, tokenId$$20, startLine$$20]);
@@ -54905,7 +54905,7 @@ function v322(TypeScript$$4) {
       var v11558 = i$$17 < v18438;
       for(;v11558;) {
         var v22658 = this.externallyVisibleImportedSymbols;
-        introspect(JAM.policy.pC545F199BE443C5FB0DC91C55134FB746FD8B074) {
+        introspect(JAM.policy.p1) {
           var v18439 = v22658[i$$17]
         }
         var v11557 = v18439 == symbol$$1;
@@ -54991,7 +54991,7 @@ function v322(TypeScript$$4) {
         for(;v11585;) {
           var v18450 = this.bod;
           var v11575 = v18450.members;
-          introspect(JAM.policy.pC545F199BE443C5FB0DC91C55134FB746FD8B074) {
+          introspect(JAM.policy.p1) {
             var stmt = v11575[i$$16]
           }
           var v18451 = stmt.nodeType;
@@ -55981,7 +55981,7 @@ function v322(TypeScript$$4) {
     function v128(emitter$$7, tokenId$$7, startLine$$7) {
       var v11771 = TypeScript$$4.nodeTypeToTokTable;
       var v11772 = this.nodeType;
-      introspect(JAM.policy.pC545F199BE443C5FB0DC91C55134FB746FD8B074) {
+      introspect(JAM.policy.p1) {
         var binTokenId = v11771[v11772]
       }
       JAM.call(emitter$$7.emitParensAndCommentsInPlace, emitter$$7, [this, true]);
@@ -55991,7 +55991,7 @@ function v322(TypeScript$$4) {
         var v11773 = this.operand1;
         JAM.call(emitter$$7.emitJavascript, emitter$$7, [v11773, binTokenId, false]);
         var v24745 = TypeScript$$4.tokenTable;
-        introspect(JAM.policy.pC545F199BE443C5FB0DC91C55134FB746FD8B074) {
+        introspect(JAM.policy.p1) {
           var v22699 = v24745[binTokenId]
         }
         var v18542 = v22699.text;
@@ -56000,7 +56000,7 @@ function v322(TypeScript$$4) {
           JAM.call(emitter$$7.writeToOutput, emitter$$7, [" instanceof "])
         }else {
           var v24746 = TypeScript$$4.tokenTable;
-          introspect(JAM.policy.pC545F199BE443C5FB0DC91C55134FB746FD8B074) {
+          introspect(JAM.policy.p1) {
             var v22700 = v24746[binTokenId]
           }
           var v18543 = v22700.text;
@@ -56009,7 +56009,7 @@ function v322(TypeScript$$4) {
             JAM.call(emitter$$7.writeToOutput, emitter$$7, [" in "])
           }else {
             var v25729 = TypeScript$$4.tokenTable;
-            introspect(JAM.policy.pC545F199BE443C5FB0DC91C55134FB746FD8B074) {
+            introspect(JAM.policy.p1) {
               var v24747 = v25729[binTokenId]
             }
             var v22701 = v24747.text;
@@ -56139,7 +56139,7 @@ function v322(TypeScript$$4) {
           if(v11809) {
             var v11799 = TypeScript$$4.nodeTypeTable;
             var v11800 = this.nodeType;
-            introspect(JAM.policy.pC545F199BE443C5FB0DC91C55134FB746FD8B074) {
+            introspect(JAM.policy.p1) {
               text$$7 = v11799[v11800]
             }
             var v18557 = typeFlow$$6.checker;
@@ -56153,7 +56153,7 @@ function v322(TypeScript$$4) {
             if(v11808) {
               var v11803 = TypeScript$$4.nodeTypeTable;
               var v11804 = this.nodeType;
-              introspect(JAM.policy.pC545F199BE443C5FB0DC91C55134FB746FD8B074) {
+              introspect(JAM.policy.p1) {
                 text$$7 = v11803[v11804]
               }
               var v22708 = this.operand2;
@@ -56703,14 +56703,14 @@ function v322(TypeScript$$4) {
       var v11905 = i$$15 < len$$3;
       for(;v11905;) {
         var v18596 = this.members;
-        introspect(JAM.policy.pC545F199BE443C5FB0DC91C55134FB746FD8B074) {
+        introspect(JAM.policy.p1) {
           var v11904 = v18596[i$$15]
         }
         if(v11904) {
           var v11902 = this.members;
           var v11903 = i$$15;
           var v22718 = this.members;
-          introspect(JAM.policy.pC545F199BE443C5FB0DC91C55134FB746FD8B074) {
+          introspect(JAM.policy.p1) {
             var v18597 = v22718[i$$15]
           }
           var v27436 = JAM.call(v18597.typeCheck, v18597, [typeFlow$$1]);
@@ -56744,7 +56744,7 @@ function v322(TypeScript$$4) {
         var v11909 = i$$14 < len$$2;
         for(;v11909;) {
           var v18602 = list.members;
-          introspect(JAM.policy.pC545F199BE443C5FB0DC91C55134FB746FD8B074) {
+          introspect(JAM.policy.p1) {
             var v11908 = v18602[i$$14]
           }
           JAM.call(this.append, this, [v11908]);
@@ -56772,7 +56772,7 @@ function v322(TypeScript$$4) {
         var v11917 = context$$8.noContinuation;
         if(v11917) {
           var v18604 = this.members;
-          introspect(JAM.policy.pC545F199BE443C5FB0DC91C55134FB746FD8B074) {
+          introspect(JAM.policy.p1) {
             var v11914 = v18604[i$$13]
           }
           JAM.call(context$$8.addUnreachable, context$$8, [v11914]);
@@ -56781,7 +56781,7 @@ function v322(TypeScript$$4) {
           var v11915 = this.members;
           var v11916 = i$$13;
           var v22720 = this.members;
-          introspect(JAM.policy.pC545F199BE443C5FB0DC91C55134FB746FD8B074) {
+          introspect(JAM.policy.p1) {
             var v18605 = v22720[i$$13]
           }
           var v27437 = JAM.call(context$$8.walk, context$$8, [v18605, this]);
@@ -56859,7 +56859,7 @@ function v322(TypeScript$$4) {
         var v11933 = i$$12 >= 0;
         for(;v11933;) {
           var v22724 = this.preComments;
-          introspect(JAM.policy.pC545F199BE443C5FB0DC91C55134FB746FD8B074) {
+          introspect(JAM.policy.p1) {
             var v18611 = v22724[i$$12]
           }
           var v11932 = v18611.isDocComment();
@@ -56879,7 +56879,7 @@ function v322(TypeScript$$4) {
             var v22728 = !v18614;
             if(v22728) {
               var v26250 = this.preComments;
-              introspect(JAM.policy.pC545F199BE443C5FB0DC91C55134FB746FD8B074) {
+              introspect(JAM.policy.p1) {
                 var v25731 = v26250[i$$12]
               }
               var v24755 = v25731.limLine;
@@ -56888,7 +56888,7 @@ function v322(TypeScript$$4) {
               var v24759 = !v22727;
               if(v24759) {
                 var v26505 = this.preComments;
-                introspect(JAM.policy.pC545F199BE443C5FB0DC91C55134FB746FD8B074) {
+                introspect(JAM.policy.p1) {
                   var v26251 = v26505[i$$12]
                 }
                 var v25732 = v26251.limLine;
@@ -56901,7 +56901,7 @@ function v322(TypeScript$$4) {
             var v11931 = v18614;
             if(v11931) {
               var v18615 = this.preComments;
-              introspect(JAM.policy.pC545F199BE443C5FB0DC91C55134FB746FD8B074) {
+              introspect(JAM.policy.p1) {
                 var v11930 = v18615[i$$12]
               }
               JAM.call(docComments.push, docComments, [v11930]);
@@ -56969,7 +56969,7 @@ function v322(TypeScript$$4) {
       var v18627 = TypeScript$$4.NodeType;
       var v11939 = v18627._map;
       var v11940 = this.nodeType;
-      introspect(JAM.policy.pC545F199BE443C5FB0DC91C55134FB746FD8B074) {
+      introspect(JAM.policy.p1) {
         return v11939[v11940]
       }
     }
@@ -56986,21 +56986,21 @@ function v322(TypeScript$$4) {
     function v89() {
       var v22735 = TypeScript$$4.nodeTypeTable;
       var v22736 = this.nodeType;
-      introspect(JAM.policy.pC545F199BE443C5FB0DC91C55134FB746FD8B074) {
+      introspect(JAM.policy.p1) {
         var v18629 = v22735[v22736]
       }
       var v11946 = v18629 !== undefined;
       if(v11946) {
         var v11942 = TypeScript$$4.nodeTypeTable;
         var v11943 = this.nodeType;
-        introspect(JAM.policy.pC545F199BE443C5FB0DC91C55134FB746FD8B074) {
+        introspect(JAM.policy.p1) {
           return v11942[v11943]
         }
       }else {
         var v18630 = TypeScript$$4.NodeType;
         var v11944 = v18630._map;
         var v11945 = this.nodeType;
-        introspect(JAM.policy.pC545F199BE443C5FB0DC91C55134FB746FD8B074) {
+        introspect(JAM.policy.p1) {
           return v11944[v11945]
         }
       }
@@ -57355,17 +57355,17 @@ function v78(TypeScript$$3) {
       var v18639 = searchArray.length;
       var v11982 = i$$10 < v18639;
       for(;v11982;) {
-        introspect(JAM.policy.pC545F199BE443C5FB0DC91C55134FB746FD8B074) {
+        introspect(JAM.policy.p1) {
           var v18640 = searchArray[i$$10]
         }
         var v11981 = v18640 == key$$25;
         if(v11981) {
           var v18641 = this.keys;
-          introspect(JAM.policy.pC545F199BE443C5FB0DC91C55134FB746FD8B074) {
+          introspect(JAM.policy.p1) {
             var v11979 = v18641[i$$10]
           }
           var v18642 = this.values;
-          introspect(JAM.policy.pC545F199BE443C5FB0DC91C55134FB746FD8B074) {
+          introspect(JAM.policy.p1) {
             var v11980 = v18642[i$$10]
           }
           return{key:v11979, data:v11980}
@@ -57394,7 +57394,7 @@ function v78(TypeScript$$3) {
       var v11985 = this.size;
       val$$3 = val$$3 % v11985;
       var v11986 = this.table;
-      introspect(JAM.policy.pC545F199BE443C5FB0DC91C55134FB746FD8B074) {
+      introspect(JAM.policy.p1) {
         current$$2 = v11986[val$$3]
       }
       var v11988 = current$$2 != null;
@@ -57420,7 +57420,7 @@ function v78(TypeScript$$3) {
       var result$$3 = null;
       var prevEntry = null;
       var v11990 = this.table;
-      introspect(JAM.policy.pC545F199BE443C5FB0DC91C55134FB746FD8B074) {
+      introspect(JAM.policy.p1) {
         current$$1 = v11990[val$$2]
       }
       var v11993 = current$$1 != null;
@@ -57452,7 +57452,7 @@ function v78(TypeScript$$3) {
       var v11994 = this.size;
       val$$1 = val$$1 % v11994;
       var v11995 = this.table;
-      introspect(JAM.policy.pC545F199BE443C5FB0DC91C55134FB746FD8B074) {
+      introspect(JAM.policy.p1) {
         current = v11995[val$$1]
       }
       var v11997 = current != null;
@@ -57466,7 +57466,7 @@ function v78(TypeScript$$3) {
         v11997 = current != null
       }
       var v11998 = this.table;
-      introspect(JAM.policy.pC545F199BE443C5FB0DC91C55134FB746FD8B074) {
+      introspect(JAM.policy.p1) {
         entry.next = v11998[val$$1]
       }
       var v11999 = this.table;
@@ -57614,7 +57614,7 @@ function v78(TypeScript$$3) {
   function v59() {
     function v58(key$$17) {
       var v12031 = this.table;
-      introspect(JAM.policy.pC545F199BE443C5FB0DC91C55134FB746FD8B074) {
+      introspect(JAM.policy.p1) {
         var data$$26 = v12031[key$$17]
       }
       var v12032 = data$$26 != undefined;
@@ -57633,13 +57633,13 @@ function v78(TypeScript$$3) {
       var v12036 = this.table;
       for(k$$4 in v12036) {
         var v12033 = this.table;
-        introspect(JAM.policy.pC545F199BE443C5FB0DC91C55134FB746FD8B074) {
+        introspect(JAM.policy.p1) {
           var data$$25 = v12033[k$$4]
         }
         var v12035 = data$$25 != undefined;
         if(v12035) {
           var v22742 = this.table;
-          introspect(JAM.policy.pC545F199BE443C5FB0DC91C55134FB746FD8B074) {
+          introspect(JAM.policy.p1) {
             var v18660 = v22742[k$$4]
           }
           var v12034 = JAM.call(fn$$2, null, [k$$4, v18660, context$$2]);
@@ -57655,13 +57655,13 @@ function v78(TypeScript$$3) {
       var v12040 = this.table;
       for(k$$3 in v12040) {
         var v12037 = this.table;
-        introspect(JAM.policy.pC545F199BE443C5FB0DC91C55134FB746FD8B074) {
+        introspect(JAM.policy.p1) {
           var data$$24 = v12037[k$$3]
         }
         var v12039 = data$$24 != undefined;
         if(v12039) {
           var v24764 = this.table;
-          introspect(JAM.policy.pC545F199BE443C5FB0DC91C55134FB746FD8B074) {
+          introspect(JAM.policy.p1) {
             var v22743 = v24764[k$$3]
           }
           var v18661 = JAM.call(fn$$1, null, [k$$3, v22743, context$$1]);
@@ -57678,13 +57678,13 @@ function v78(TypeScript$$3) {
       var v12044 = this.table;
       for(k$$2 in v12044) {
         var v12041 = this.table;
-        introspect(JAM.policy.pC545F199BE443C5FB0DC91C55134FB746FD8B074) {
+        introspect(JAM.policy.p1) {
           var data$$23 = v12041[k$$2]
         }
         var v12043 = data$$23 != undefined;
         if(v12043) {
           var v18662 = this.table;
-          introspect(JAM.policy.pC545F199BE443C5FB0DC91C55134FB746FD8B074) {
+          introspect(JAM.policy.p1) {
             var v12042 = v18662[k$$2]
           }
           JAM.call(fn, null, [k$$2, v12042, context])
@@ -57694,7 +57694,7 @@ function v78(TypeScript$$3) {
     }
     function v53(key$$16, data$$22) {
       var v22744 = this.table;
-      introspect(JAM.policy.pC545F199BE443C5FB0DC91C55134FB746FD8B074) {
+      introspect(JAM.policy.p1) {
         var v18663 = v22744[key$$16]
       }
       var v12046 = v18663 != undefined;
@@ -57711,7 +57711,7 @@ function v78(TypeScript$$3) {
     }
     function v52(key$$15, data$$21) {
       var v22745 = this.table;
-      introspect(JAM.policy.pC545F199BE443C5FB0DC91C55134FB746FD8B074) {
+      introspect(JAM.policy.p1) {
         var v18665 = v22745[key$$15]
       }
       var v12048 = v18665 != undefined;
@@ -57730,7 +57730,7 @@ function v78(TypeScript$$3) {
       var v12052 = this.table;
       for(k$$1 in v12052) {
         var v22746 = this.table;
-        introspect(JAM.policy.pC545F199BE443C5FB0DC91C55134FB746FD8B074) {
+        introspect(JAM.policy.p1) {
           var v18667 = v22746[k$$1]
         }
         var v12051 = v18667 != undefined;
@@ -58444,7 +58444,7 @@ function v48(TypeScript$$1) {
       if(v12188) {
         var k;
         for(k in e$$7) {
-          introspect(JAM.policy.pC545F199BE443C5FB0DC91C55134FB746FD8B074) {
+          introspect(JAM.policy.p1) {
             var v18680 = e$$7[k]
           }
           var v12187 = v18680 == i$$8;
@@ -58659,7 +58659,7 @@ function v25(runner$$2) {
     if(v12213) {
       try {
         var v18707 = suite$$1.benchmarks;
-        introspect(JAM.policy.pC545F199BE443C5FB0DC91C55134FB746FD8B074) {
+        introspect(JAM.policy.p1) {
           var v12212 = v18707[index$$40]
         }
         v12212.Setup()
@@ -58675,7 +58675,7 @@ function v25(runner$$2) {
   function RunNextBenchmark() {
     try {
       var v18708 = suite$$1.benchmarks;
-      introspect(JAM.policy.pC545F199BE443C5FB0DC91C55134FB746FD8B074) {
+      introspect(JAM.policy.p1) {
         var v12214 = v18708[index$$40]
       }
       data$$20 = JAM.call(suite$$1.RunSingleBenchmark, suite$$1, [v12214, data$$20])
@@ -58697,7 +58697,7 @@ function v25(runner$$2) {
       var v18710 = suite$$1.benchmarks;
       var v18711 = index$$40;
       index$$40 = index$$40 + 1;
-      introspect(JAM.policy.pC545F199BE443C5FB0DC91C55134FB746FD8B074) {
+      introspect(JAM.policy.p1) {
         var v12216 = v18710[v18711]
       }
       v12216.TearDown()
@@ -58911,14 +58911,14 @@ function v18(measurements$$1) {
   var v18733 = measurements$$1.length;
   var v12261 = i$$4 < v18733;
   for(;v12261;) {
-    introspect(JAM.policy.pC545F199BE443C5FB0DC91C55134FB746FD8B074) {
+    introspect(JAM.policy.p1) {
       var v22773 = measurements$$1[i$$4]
     }
     var v18734 = v22773.latency;
     var v12260 = v18734 != 0;
     if(v12260) {
       var v18735 = log$$2;
-      introspect(JAM.policy.pC545F199BE443C5FB0DC91C55134FB746FD8B074) {
+      introspect(JAM.policy.p1) {
         var v24769 = measurements$$1[i$$4]
       }
       var v22774 = v24769.latency;
@@ -58947,7 +58947,7 @@ function v17(measurements) {
   var v12264 = i$$3 < v18739;
   for(;v12264;) {
     var v18740 = log$$1;
-    introspect(JAM.policy.pC545F199BE443C5FB0DC91C55134FB746FD8B074) {
+    introspect(JAM.policy.p1) {
       var v24770 = measurements[i$$3]
     }
     var v22775 = v24770.time;
@@ -58969,7 +58969,7 @@ function v16(numbers) {
   var v12267 = i$$2 < v18744;
   for(;v12267;) {
     var v18745 = log;
-    introspect(JAM.policy.pC545F199BE443C5FB0DC91C55134FB746FD8B074) {
+    introspect(JAM.policy.p1) {
       var v22776 = numbers[i$$2]
     }
     var v18746 = JAM.call(Math.log, Math, [v22776]);
@@ -58990,7 +58990,7 @@ function v15() {
   var v18749 = suites$$1.length;
   var v12270 = i$$1 < v18749;
   for(;v12270;) {
-    introspect(JAM.policy.pC545F199BE443C5FB0DC91C55134FB746FD8B074) {
+    introspect(JAM.policy.p1) {
       var v24771 = suites$$1[i$$1]
     }
     var v22777 = v24771.benchmarks;
@@ -59016,7 +59016,7 @@ function v14(runner, skipBenchmarks$$1) {
       }else {
         var v12271 = index$$39;
         index$$39 = index$$39 + 1;
-        introspect(JAM.policy.pC545F199BE443C5FB0DC91C55134FB746FD8B074) {
+        introspect(JAM.policy.p1) {
           var suite = suites[v12271]
         }
         var v12273 = runner.NotifyStart;

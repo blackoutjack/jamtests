@@ -24,18 +24,19 @@ var policy = function() {
   }
   pFull.subsumedBy = pFull;
   Object.freeze(pFull);
-  function p750A7ECA0CEA34F16F7CDD3F0C47CDDFC768D4A5(tx) {
-    var as = tx.getActionSequence();
+  function p1(tx) {
+    var as = tx.getCallSequence();
     var len = as.length;
     for(var i = 0;i < len && !states[1];i++) {
       var node = as[i];
-      if(!states[1] && node.type === "call" && JAM.identical(node.value, _HTMLDocument_prototype_getElementById) && JAM.identical(node.args[0], "content")) {
+      if(!states[1] && JAM.identical(node.value, _HTMLDocument_prototype_getElementById) && JAM.identical(node.args[0], "content")) {
         states[1] = true
       }
     }
     JAM.process(tx)
   }
-  p750A7ECA0CEA34F16F7CDD3F0C47CDDFC768D4A5.subsumedBy = pFull;
-  Object.freeze(p750A7ECA0CEA34F16F7CDD3F0C47CDDFC768D4A5);
-  return{p750A7ECA0CEA34F16F7CDD3F0C47CDDFC768D4A5:p750A7ECA0CEA34F16F7CDD3F0C47CDDFC768D4A5, pFull:pFull}
+  p1.subsumedBy = pFull;
+  p1.itype = "call";
+  Object.freeze(p1);
+  return{p1:p1, pFull:pFull, woven:true}
 }()

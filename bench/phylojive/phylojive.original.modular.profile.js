@@ -12777,6 +12777,8 @@ b,c){var d;d=b&&b.hasOwnProperty("constructor")?b.constructor:function(){a.apply
 
 // trees_characters/SimpleParams_PhyloJIVE.js
     function init() {
+        JAM.startProfile('setup');
+
 
         phylogenyExplorer_init({
         
@@ -17450,7 +17452,9 @@ b,c){var d;d=b&&b.hasOwnProperty("constructor")?b.constructor:function(){a.apply
 } 
 
         }); 
-    } 
+    
+        JAM.stopProfile('setup');
+} 
 
 
 // SimpleTemplate_webApp.html

@@ -4,11 +4,11 @@ var policy = function() {
   var __String_prototype_startsWith_call_bind__String_prototype_startsWith_ = _String_prototype_startsWith.call.bind(_String_prototype_startsWith);
   function pFull(tx) {
     var commit = true;
-    var as = tx.getActionSequence();
+    var as = tx.getWriteSequence();
     var len = as.length;
     for(var i = 0;i < len;i++) {
       var node = as[i];
-      if(node.type === "write" && node.id === "src" && JAM.instanceof(node.obj, _HTMLElement) && __String_prototype_startsWith_call_bind__String_prototype_startsWith_(node.value, "http")) {
+      if(node.id === "src" && JAM.instanceof(node.obj, _HTMLElement) && __String_prototype_startsWith_call_bind__String_prototype_startsWith_(node.value, "http")) {
         commit = false;
         break
       }
@@ -20,14 +20,15 @@ var policy = function() {
     }
   }
   pFull.subsumedBy = pFull;
+  pFull.itype = "write";
   Object.freeze(pFull);
-  function p8A9400208C24F3EAF9195E429B8E1C6C4C412B95(tx) {
+  function p1(tx) {
     var commit = true;
-    var as = tx.getActionSequence();
+    var as = tx.getWriteSequence();
     var len = as.length;
     for(var i = 0;i < len;i++) {
       var node = as[i];
-      if(node.type === "write" && node.id === "src" && JAM.instanceof(node.obj, _HTMLElement) && __String_prototype_startsWith_call_bind__String_prototype_startsWith_(node.value, "http")) {
+      if(node.id === "src" && JAM.instanceof(node.obj, _HTMLElement) && __String_prototype_startsWith_call_bind__String_prototype_startsWith_(node.value, "http")) {
         commit = false;
         break
       }
@@ -38,7 +39,8 @@ var policy = function() {
       JAM.prevent(tx)
     }
   }
-  p8A9400208C24F3EAF9195E429B8E1C6C4C412B95.subsumedBy = pFull;
-  Object.freeze(p8A9400208C24F3EAF9195E429B8E1C6C4C412B95);
-  return{p8A9400208C24F3EAF9195E429B8E1C6C4C412B95:p8A9400208C24F3EAF9195E429B8E1C6C4C412B95, pFull:pFull}
+  p1.subsumedBy = pFull;
+  p1.itype = "write";
+  Object.freeze(p1);
+  return{p1:p1, pFull:pFull, woven:true}
 }()

@@ -46,7 +46,7 @@ function v4() {
       }
       JSCompiler_inline_result$$6 = isSubset$$inline_20;
       if(JSCompiler_inline_result$$6) {
-        var v74 = JAM.call(features$$7.join, features$$7, [","], JAM.policy.p4CDAF44D89391C6FE13FBBD6677C6DE0505D675A);
+        var v74 = JAM.call(features$$7.join, features$$7, [","], JAM.policy.p2);
         var v8 = ["Cannot load loaded features [", v74, "]."];
         warn(v8)
       }else {
@@ -68,8 +68,8 @@ function v4() {
               urlToLoad = v11 + ".js";
               break JSCompiler_inline_label_processUrlFromMap_25
             }else {
-              var v77 = JAM.call(features$$inline_23.join, features$$inline_23, [","], JAM.policy.p4CDAF44D89391C6FE13FBBD6677C6DE0505D675A);
-              var v78 = JAM.call(loadedFeatures.join, loadedFeatures, [","], JAM.policy.p4CDAF44D89391C6FE13FBBD6677C6DE0505D675A);
+              var v77 = JAM.call(features$$inline_23.join, features$$inline_23, [","], JAM.policy.p2);
+              var v78 = JAM.call(loadedFeatures.join, loadedFeatures, [","], JAM.policy.p2);
               var v12 = ["Cannot find features [", v77, "], except [", v78, "]."];
               warn(v12)
             }
@@ -103,14 +103,14 @@ function v4() {
               var JSCompiler_inline_result$$40;
               var opt_loadFeatures$$inline_42 = loadedFeatures;
               var v16 = normalize(features$$7);
-              var result$$inline_43 = JAM.call(v16.join, v16, ["__"], JAM.policy.p4CDAF44D89391C6FE13FBBD6677C6DE0505D675A);
+              var result$$inline_43 = JAM.call(v16.join, v16, ["__"], JAM.policy.p2);
               if(opt_loadFeatures$$inline_42) {
                 var v130 = opt_loadFeatures$$inline_42.length;
                 var v82 = v130 > 0;
                 if(v82) {
                   var v152 = result$$inline_43;
                   var v165 = normalize(opt_loadFeatures$$inline_42);
-                  var v160 = JAM.call(v165.join, v165, ["__"], JAM.policy.p4CDAF44D89391C6FE13FBBD6677C6DE0505D675A);
+                  var v160 = JAM.call(v165.join, v165, ["__"], JAM.policy.p2);
                   var v153 = "--" + v160;
                   result$$inline_43 = v152 + v153
                 }
@@ -119,7 +119,7 @@ function v4() {
               var v17 = JSCompiler_temp_const$$39 + JSCompiler_inline_result$$40;
               urlToLoad = v17 + ".js"
             }else {
-              var v83 = JAM.call(features$$7.join, features$$7, [","], JAM.policy.p4CDAF44D89391C6FE13FBBD6677C6DE0505D675A);
+              var v83 = JAM.call(features$$7.join, features$$7, [","], JAM.policy.p2);
               var v18 = ["Cannot respond for features [", v83, "]."];
               warn(v18)
             }
@@ -159,7 +159,7 @@ function v4() {
         }
         var v25 = v85;
         if(v25) {
-          JSCompiler_inline_result$$54 = JAM.call(url$$inline_55.match, url$$inline_55, [VALID_SCS_URL_REGEX], JAM.policy.p0FFB1518291BEE7C5744977B581D549C9B6BD5A04CDAF44D89391C6FE13FBBD6677C6DE0505D675A);
+          JSCompiler_inline_result$$54 = JAM.call(url$$inline_55.match, url$$inline_55, [VALID_SCS_URL_REGEX], JAM.policy.p3);
           break JSCompiler_inline_label_canLoadUrl_58
         }
         var JSCompiler_inline_result$$inline_56;
@@ -178,7 +178,7 @@ function v4() {
         JSCompiler_inline_result$$inline_56 = v26;
         var v27 = JSCompiler_inline_result$$inline_56;
         if(v27) {
-          v27 = JAM.call(url$$inline_55.match, url$$inline_55, [VALID_GOOGLE_URL_REGEX], JAM.policy.p0FFB1518291BEE7C5744977B581D549C9B6BD5A04CDAF44D89391C6FE13FBBD6677C6DE0505D675A)
+          v27 = JAM.call(url$$inline_55.match, url$$inline_55, [VALID_GOOGLE_URL_REGEX], JAM.policy.p3)
         }
         JSCompiler_inline_result$$54 = v27
       }
@@ -191,19 +191,19 @@ function v4() {
       if(v32) {
         var v87 = '<script src="' + url$$inline_49;
         var v30 = v87 + '">\x3c/script>';
-        JAM.call(document.write, document, [v30], JAM.policy.p0FFB1518291BEE7C5744977B581D549C9B6BD5A04CDAF44D89391C6FE13FBBD6677C6DE0505D675A)
+        JAM.call(document.write, document, [v30], JAM.policy.p3)
       }else {
-        var script$$inline_50 = JAM.call(document.createElement, document, ["script"], JAM.policy.p0FFB1518291BEE7C5744977B581D549C9B6BD5A04CDAF44D89391C6FE13FBBD6677C6DE0505D675A);
-        JAM.call(script$$inline_50.setAttribute, script$$inline_50, ["src", url$$inline_49], JAM.policy.p4CDAF44D89391C6FE13FBBD6677C6DE0505D675A);
-        var v88 = JAM.call(document.getElementsByTagName, document, ["head"], JAM.policy.p4CDAF44D89391C6FE13FBBD6677C6DE0505D675A);
+        var script$$inline_50 = JAM.call(document.createElement, document, ["script"], JAM.policy.p3);
+        JAM.call(script$$inline_50.setAttribute, script$$inline_50, ["src", url$$inline_49], JAM.policy.p2);
+        var v88 = JAM.call(document.getElementsByTagName, document, ["head"], JAM.policy.p2);
         var v31 = v88[0];
-        JAM.call(v31.appendChild, v31, [script$$inline_50], JAM.policy.p0FFB1518291BEE7C5744977B581D549C9B6BD5A04CDAF44D89391C6FE13FBBD6677C6DE0505D675A)
+        JAM.call(v31.appendChild, v31, [script$$inline_50], JAM.policy.p3)
       }
       JSCompiler_inline_result$$35 = void 0;
       JSCompiler_temp_const$$34;
       var JSCompiler_temp_const$$36 = JSCompiler_inline_result$$35;
       var JSCompiler_inline_result$$37;
-      var v33 = JAM.call(loadedFeatures.concat, loadedFeatures, [features$$inline_29], JAM.policy.p0FFB1518291BEE7C5744977B581D549C9B6BD5A04CDAF44D89391C6FE13FBBD6677C6DE0505D675A);
+      var v33 = JAM.call(loadedFeatures.concat, loadedFeatures, [features$$inline_29], JAM.policy.p3);
       loadedFeatures = normalize(v33);
       JSCompiler_inline_result$$37 = void 0
     }else {
@@ -215,14 +215,14 @@ function v4() {
   }
   function toKey(reqFeatures, opt_loadFeatures) {
     var v34 = normalize(reqFeatures);
-    var result = JAM.call(v34.join, v34, [":"], JAM.policy.p4CDAF44D89391C6FE13FBBD6677C6DE0505D675A);
+    var result = JAM.call(v34.join, v34, [":"], JAM.policy.p2);
     if(opt_loadFeatures) {
       var v135 = opt_loadFeatures.length;
       var v89 = v135 > 0;
       if(v89) {
         var v154 = result;
         var v166 = normalize(opt_loadFeatures);
-        var v161 = JAM.call(v166.join, v166, [":"], JAM.policy.p4CDAF44D89391C6FE13FBBD6677C6DE0505D675A);
+        var v161 = JAM.call(v166.join, v166, [":"], JAM.policy.p2);
         var v155 = "!" + v161;
         result = v154 + v155
       }
@@ -248,7 +248,7 @@ function v4() {
     var s$$2;
     var v37 = toSet(features$$1);
     for(s$$2 in v37) {
-      JAM.call(result$$3.push, result$$3, [s$$2], JAM.policy.p0FFB1518291BEE7C5744977B581D549C9B6BD5A04CDAF44D89391C6FE13FBBD6677C6DE0505D675A)
+      JAM.call(result$$3.push, result$$3, [s$$2], JAM.policy.p3)
     }
     return result$$3.sort()
   }
@@ -259,17 +259,17 @@ function v4() {
     if(v38) {
       return!0
     }
-    var metas = JAM.call(document.getElementsByTagName, document, ["meta"], JAM.policy.p4CDAF44D89391C6FE13FBBD6677C6DE0505D675A);
+    var metas = JAM.call(document.getElementsByTagName, document, ["meta"], JAM.policy.p2);
     var i$$3 = 0;
     var v94 = metas.length;
     var v40 = i$$3 < v94;
     for(;v40;) {
       var meta = metas[i$$3];
-      var v136 = JAM.call(meta.getAttribute, meta, ["name"], JAM.policy.p4CDAF44D89391C6FE13FBBD6677C6DE0505D675A);
+      var v136 = JAM.call(meta.getAttribute, meta, ["name"], JAM.policy.p2);
       var v95 = "generator" == v136;
       var v138 = !v95;
       if(v138) {
-        var v137 = JAM.call(meta.getAttribute, meta, ["content"], JAM.policy.p4CDAF44D89391C6FE13FBBD6677C6DE0505D675A);
+        var v137 = JAM.call(meta.getAttribute, meta, ["content"], JAM.policy.p2);
         v95 = "blogger" == v137
       }
       var v39 = v95;
@@ -284,8 +284,8 @@ function v4() {
   }
   function warn(values$$4) {
     if(console) {
-      var v97 = JAM.call(values$$4.join, values$$4, [""], JAM.policy.p4CDAF44D89391C6FE13FBBD6677C6DE0505D675A);
-      JAM.call(console.warn, console, [v97], JAM.policy.p0FFB1518291BEE7C5744977B581D549C9B6BD5A04CDAF44D89391C6FE13FBBD6677C6DE0505D675A)
+      var v97 = JAM.call(values$$4.join, values$$4, [""], JAM.policy.p2);
+      JAM.call(console.warn, console, [v97], JAM.policy.p3)
     }
     return
   }
@@ -295,18 +295,18 @@ function v4() {
     var v44 = i$$4 < v98;
     for(;v44;) {
       var value$$29 = values$$5[i$$4];
-      var versionParts = JAM.call(value$$29.split, value$$29, ["@"], JAM.policy.p4CDAF44D89391C6FE13FBBD6677C6DE0505D675A);
+      var versionParts = JAM.call(value$$29.split, value$$29, ["@"], JAM.policy.p2);
       var JSCompiler_temp_const$$7 = descriptors;
       var JSCompiler_inline_result$$8;
       var v41 = versionParts[0];
-      var featureParts$$inline_12 = JAM.call(v41.split, v41, ["!"], JAM.policy.p4CDAF44D89391C6FE13FBBD6677C6DE0505D675A);
+      var featureParts$$inline_12 = JAM.call(v41.split, v41, ["!"], JAM.policy.p2);
       var v99 = featureParts$$inline_12[0];
-      var v42 = JAM.call(v99.split, v99, [":"], JAM.policy.p4CDAF44D89391C6FE13FBBD6677C6DE0505D675A);
+      var v42 = JAM.call(v99.split, v99, [":"], JAM.policy.p2);
       var req$$inline_13 = normalize(v42);
       var v43 = featureParts$$inline_12[1];
       if(v43) {
         var v139 = featureParts$$inline_12[1];
-        var v100 = JAM.call(v139.split, v139, [":"], JAM.policy.p4CDAF44D89391C6FE13FBBD6677C6DE0505D675A);
+        var v100 = JAM.call(v139.split, v139, [":"], JAM.policy.p2);
         v43 = normalize(v100)
       }
       var loaded$$inline_14 = v43;
@@ -319,7 +319,7 @@ function v4() {
     return
   }
   function getLastHint(pattern$$1) {
-    var r = JAM.call(parentUrl.match, parentUrl, [pattern$$1], JAM.policy.p0FFB1518291BEE7C5744977B581D549C9B6BD5A04CDAF44D89391C6FE13FBBD6677C6DE0505D675A);
+    var r = JAM.call(parentUrl.match, parentUrl, [pattern$$1], JAM.policy.p3);
     var v45 = r;
     if(v45) {
       var v140 = r.length;
@@ -362,20 +362,20 @@ function v4() {
     }
     var hint = JSCompiler_temp$$5;
     if(hint) {
-      var parts = JAM.call(hint.split, hint, [";"], JAM.policy.p4CDAF44D89391C6FE13FBBD6677C6DE0505D675A);
+      var parts = JAM.call(hint.split, hint, [";"], JAM.policy.p2);
       type$$25 = parts[0];
       var v49;
       var v107 = type$$25 === "s";
       if(v107) {
         host = "https://ssl.gstatic.com/webclient/js";
-        var v143 = JAM.call(parts.slice, parts, [1], JAM.policy.p4CDAF44D89391C6FE13FBBD6677C6DE0505D675A);
+        var v143 = JAM.call(parts.slice, parts, [1], JAM.policy.p2);
         v49 = initDescriptors(v143)
       }else {
         var v106;
         var v145 = type$$25 === "i";
         if(v145) {
           host = parts[1];
-          var v156 = JAM.call(parts.slice, parts, [2], JAM.policy.p4CDAF44D89391C6FE13FBBD6677C6DE0505D675A);
+          var v156 = JAM.call(parts.slice, parts, [2], JAM.policy.p2);
           v106 = initDescriptors(v156)
         }else {
           var v144;
@@ -436,7 +436,7 @@ function v1() {
   function f(n$$1) {
     function v0() {
       var v51 = window.___gpq;
-      JAM.call(v51.push, v51, [n$$1, arguments], JAM.policy.p0FFB1518291BEE7C5744977B581D549C9B6BD5A04CDAF44D89391C6FE13FBBD6677C6DE0505D675A);
+      JAM.call(v51.push, v51, [n$$1, arguments], JAM.policy.p3);
       return
     }
     return v0
@@ -458,13 +458,13 @@ function __bsld() {
       var v111 = p[f$$1];
       var v146 = window.___gpq;
       var v112 = v146.shift();
-      JAM.call(v111.apply, v111, [p, v112], JAM.policy.p0FFB1518291BEE7C5744977B581D549C9B6BD5A04CDAF44D89391C6FE13FBBD6677C6DE0505D675A)
+      JAM.call(v111.apply, v111, [p, v112], JAM.policy.p3)
     }
     var v113 = window.___gpq;
     v56 = f$$1 = v113.shift()
   }
   var v159 = gadgets.config;
-  var v147 = JAM.call(v159.get, v159, ["gwidget"], JAM.policy.p4CDAF44D89391C6FE13FBBD6677C6DE0505D675A);
+  var v147 = JAM.call(v159.get, v159, ["gwidget"], JAM.policy.p2);
   var v114 = v147["parsetags"];
   var v58 = v114 !== "explicit";
   if(v58) {
@@ -474,7 +474,7 @@ function __bsld() {
   return
 }
 function gapi_load(features$$8, opt_callback$$3) {
-  var v59 = JAM.call(features$$8.split, features$$8, [":"], JAM.policy.p4CDAF44D89391C6FE13FBBD6677C6DE0505D675A);
+  var v59 = JAM.call(features$$8.split, features$$8, [":"], JAM.policy.p2);
   JAM.call(jsloader_load, null, [v59, opt_callback$$3]);
   return
 }

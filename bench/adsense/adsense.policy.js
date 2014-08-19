@@ -24,33 +24,35 @@ var policy = function() {
   }
   pFull.subsumedBy = pFull;
   Object.freeze(pFull);
-  function pD1B26E82C3C7C4AA5A6D93F7A0110D043B1A982F(tx) {
-    var as = tx.getActionSequence();
+  function p1(tx) {
+    var as = tx.getReadSequence();
     var len = as.length;
     for(var i = 0;i < len && !states[1];i++) {
       var node = as[i];
-      if(!states[1] && node.type === "read" && node.id === "getElementById" && JAM.instanceof(node.obj, _HTMLDocument)) {
+      if(!states[1] && node.id === "getElementById" && JAM.instanceof(node.obj, _HTMLDocument)) {
         states[1] = true
       }
     }
     JAM.process(tx)
   }
-  pD1B26E82C3C7C4AA5A6D93F7A0110D043B1A982F.subsumedBy = pFull;
-  Object.freeze(pD1B26E82C3C7C4AA5A6D93F7A0110D043B1A982F);
-  function pD1B26E82C3C7C4AA5A6D93F7A0110D043B1A982FE656B7690429FFEA4A12C73E95B66185D91EBB72(tx) {
-    var as = tx.getActionSequence();
+  p1.subsumedBy = pFull;
+  p1.itype = "read";
+  Object.freeze(p1);
+  function p4(tx) {
+    var as = tx.getReadSequence();
     var len = as.length;
     for(var i = 0;i < len && !states[1];i++) {
       var node = as[i];
-      if(!states[1] && node.type === "read" && (node.id === "getElementById" && JAM.instanceof(node.obj, _HTMLDocument) || node.id === "getElementsByTagName" && JAM.instanceof(node.obj, _HTMLDocument))) {
+      if(!states[1] && (node.id === "getElementById" && JAM.instanceof(node.obj, _HTMLDocument) || node.id === "getElementsByTagName" && JAM.instanceof(node.obj, _HTMLDocument))) {
         states[1] = true
       }
     }
     JAM.process(tx)
   }
-  pD1B26E82C3C7C4AA5A6D93F7A0110D043B1A982FE656B7690429FFEA4A12C73E95B66185D91EBB72.subsumedBy = pFull;
-  Object.freeze(pD1B26E82C3C7C4AA5A6D93F7A0110D043B1A982FE656B7690429FFEA4A12C73E95B66185D91EBB72);
-  function p425E08A28862414CF7130381FE99A660F52DB811D1B26E82C3C7C4AA5A6D93F7A0110D043B1A982FE656B7690429FFEA4A12C73E95B66185D91EBB72(tx) {
+  p4.subsumedBy = pFull;
+  p4.itype = "read";
+  Object.freeze(p4);
+  function p5(tx) {
     var commit = true;
     var as = tx.getActionSequence();
     var len = as.length;
@@ -70,16 +72,16 @@ var policy = function() {
       JAM.prevent(tx)
     }
   }
-  p425E08A28862414CF7130381FE99A660F52DB811D1B26E82C3C7C4AA5A6D93F7A0110D043B1A982FE656B7690429FFEA4A12C73E95B66185D91EBB72.subsumedBy = pFull;
-  Object.freeze(p425E08A28862414CF7130381FE99A660F52DB811D1B26E82C3C7C4AA5A6D93F7A0110D043B1A982FE656B7690429FFEA4A12C73E95B66185D91EBB72);
-  function p425E08A28862414CF7130381FE99A660F52DB811(tx) {
+  p5.subsumedBy = pFull;
+  Object.freeze(p5);
+  function p2(tx) {
     var commit = true;
     if(states[1]) {
-      var as = tx.getActionSequence();
+      var as = tx.getWriteSequence();
       var len = as.length;
       for(var i = 0;i < len;i++) {
         var node = as[i];
-        if(states[1] && node.type === "write" && JAM.identical(node.obj, _document) && node.id === "cookie") {
+        if(states[1] && JAM.identical(node.obj, _document) && node.id === "cookie") {
           commit = false;
           break
         }
@@ -91,21 +93,22 @@ var policy = function() {
       JAM.prevent(tx)
     }
   }
-  p425E08A28862414CF7130381FE99A660F52DB811.subsumedBy = pFull;
-  Object.freeze(p425E08A28862414CF7130381FE99A660F52DB811);
-  function pE656B7690429FFEA4A12C73E95B66185D91EBB72(tx) {
-    var as = tx.getActionSequence();
+  p2.subsumedBy = pFull;
+  p2.itype = "write";
+  Object.freeze(p2);
+  function p6(tx) {
+    var as = tx.getReadSequence();
     var len = as.length;
     for(var i = 0;i < len && !states[1];i++) {
       var node = as[i];
-      if(!states[1] && node.type === "read" && node.id === "getElementsByTagName" && JAM.instanceof(node.obj, _HTMLDocument)) {
+      if(!states[1] && node.id === "getElementsByTagName" && JAM.instanceof(node.obj, _HTMLDocument)) {
         states[1] = true
       }
     }
     JAM.process(tx)
   }
-  pE656B7690429FFEA4A12C73E95B66185D91EBB72.subsumedBy = pFull;
-  Object.freeze(pE656B7690429FFEA4A12C73E95B66185D91EBB72);
-  return{pD1B26E82C3C7C4AA5A6D93F7A0110D043B1A982F:pD1B26E82C3C7C4AA5A6D93F7A0110D043B1A982F, pD1B26E82C3C7C4AA5A6D93F7A0110D043B1A982FE656B7690429FFEA4A12C73E95B66185D91EBB72:pD1B26E82C3C7C4AA5A6D93F7A0110D043B1A982FE656B7690429FFEA4A12C73E95B66185D91EBB72, p425E08A28862414CF7130381FE99A660F52DB811D1B26E82C3C7C4AA5A6D93F7A0110D043B1A982FE656B7690429FFEA4A12C73E95B66185D91EBB72:p425E08A28862414CF7130381FE99A660F52DB811D1B26E82C3C7C4AA5A6D93F7A0110D043B1A982FE656B7690429FFEA4A12C73E95B66185D91EBB72, 
-  p425E08A28862414CF7130381FE99A660F52DB811:p425E08A28862414CF7130381FE99A660F52DB811, pE656B7690429FFEA4A12C73E95B66185D91EBB72:pE656B7690429FFEA4A12C73E95B66185D91EBB72, pFull:pFull}
+  p6.subsumedBy = pFull;
+  p6.itype = "read";
+  Object.freeze(p6);
+  return{p1:p1, p4:p4, p5:p5, p2:p2, p6:p6, pFull:pFull, woven:true}
 }()

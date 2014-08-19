@@ -28,13 +28,13 @@ var policy = function() {
   }
   pFull.subsumedBy = pFull;
   Object.freeze(pFull);
-  function pC545F199BE443C5FB0DC91C55134FB746FD8B0743DEE6A5A275B5D091C2C08764ED6875FB9CEF4A863AC168D7E4E5726382E87A6C5519EBB224F310826AD12417C5C1A4403544617DC12D12B77070FFE01B202FEF2A1FF3D4E691FF617A7A762C66E4CFB(tx) {
+  function p5(tx) {
     var commit = true;
-    var as = tx.getActionSequence();
+    var as = tx.getReadSequence();
     var len = as.length;
     for(var i = 0;i < len;i++) {
       var node = as[i];
-      if(node.type === "read" && (node.id === "open" && JAM.instanceof(node.obj, _XMLHttpRequest) || node.id === "openDialog" && JAM.instanceof(node.obj, _Window) || node.id === "postMessage" && JAM.instanceof(node.obj, _Window) || node.id === "send" && JAM.instanceof(node.obj, _WebSocket) || node.id === "submit" && JAM.instanceof(node.obj, _HTMLFormElement))) {
+      if(node.id === "open" && JAM.instanceof(node.obj, _XMLHttpRequest) || node.id === "openDialog" && JAM.instanceof(node.obj, _Window) || node.id === "postMessage" && JAM.instanceof(node.obj, _Window) || node.id === "send" && JAM.instanceof(node.obj, _WebSocket) || node.id === "submit" && JAM.instanceof(node.obj, _HTMLFormElement)) {
         commit = false;
         break
       }
@@ -45,15 +45,16 @@ var policy = function() {
       JAM.prevent(tx)
     }
   }
-  pC545F199BE443C5FB0DC91C55134FB746FD8B0743DEE6A5A275B5D091C2C08764ED6875FB9CEF4A863AC168D7E4E5726382E87A6C5519EBB224F310826AD12417C5C1A4403544617DC12D12B77070FFE01B202FEF2A1FF3D4E691FF617A7A762C66E4CFB.subsumedBy = pFull;
-  Object.freeze(pC545F199BE443C5FB0DC91C55134FB746FD8B0743DEE6A5A275B5D091C2C08764ED6875FB9CEF4A863AC168D7E4E5726382E87A6C5519EBB224F310826AD12417C5C1A4403544617DC12D12B77070FFE01B202FEF2A1FF3D4E691FF617A7A762C66E4CFB);
-  function pC545F199BE443C5FB0DC91C55134FB746FD8B074(tx) {
+  p5.subsumedBy = pFull;
+  p5.itype = "read";
+  Object.freeze(p5);
+  function p1(tx) {
     var commit = true;
-    var as = tx.getActionSequence();
+    var as = tx.getReadSequence();
     var len = as.length;
     for(var i = 0;i < len;i++) {
       var node = as[i];
-      if(node.type === "read" && node.id === "open" && JAM.instanceof(node.obj, _XMLHttpRequest)) {
+      if(node.id === "open" && JAM.instanceof(node.obj, _XMLHttpRequest)) {
         commit = false;
         break
       }
@@ -64,7 +65,8 @@ var policy = function() {
       JAM.prevent(tx)
     }
   }
-  pC545F199BE443C5FB0DC91C55134FB746FD8B074.subsumedBy = pFull;
-  Object.freeze(pC545F199BE443C5FB0DC91C55134FB746FD8B074);
-  return{pC545F199BE443C5FB0DC91C55134FB746FD8B0743DEE6A5A275B5D091C2C08764ED6875FB9CEF4A863AC168D7E4E5726382E87A6C5519EBB224F310826AD12417C5C1A4403544617DC12D12B77070FFE01B202FEF2A1FF3D4E691FF617A7A762C66E4CFB:pC545F199BE443C5FB0DC91C55134FB746FD8B0743DEE6A5A275B5D091C2C08764ED6875FB9CEF4A863AC168D7E4E5726382E87A6C5519EBB224F310826AD12417C5C1A4403544617DC12D12B77070FFE01B202FEF2A1FF3D4E691FF617A7A762C66E4CFB, pC545F199BE443C5FB0DC91C55134FB746FD8B074:pC545F199BE443C5FB0DC91C55134FB746FD8B074, pFull:pFull}
+  p1.subsumedBy = pFull;
+  p1.itype = "read";
+  Object.freeze(p1);
+  return{p5:p5, p1:p1, pFull:pFull, woven:true}
 }()

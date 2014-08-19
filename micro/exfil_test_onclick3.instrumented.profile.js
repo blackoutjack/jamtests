@@ -2,7 +2,7 @@
 JAM.startProfile('load');
 function v0() {
   xmlhttp = new XMLHttpRequest;
-  introspect(JAM.policy.pC545F199BE443C5FB0DC91C55134FB746FD8B074) {
+  introspect(JAM.policy.p1) {
     xmlhttp.open("GET", "http://AnalyticsInc:8000/submission.html?test=onclick3", true)
   }
   xmlhttp.send(null);

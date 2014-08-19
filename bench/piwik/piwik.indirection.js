@@ -6,7 +6,7 @@ function v70() {
     return new t$$2(i$$24, L$$17)
   }
   function v67(i$$23, L$$16) {
-    JAM.set(a$$1, i$$23, L$$16, JAM.policy.pE96DC1A06663FB021BA567E6C73EA87B0883BB12);
+    JAM.set(a$$1, i$$23, L$$16, JAM.policy.p2);
     return
   }
   function p$$3(i$$2) {
@@ -31,13 +31,13 @@ function v70() {
     var v75 = L < v397;
     for(;v75;) {
       M = arguments[L];
-      N = JAM.call(M.shift, M, [], JAM.policy.p76F930B34187247043082CAF9881927B310E8F564E301A1AA8BF2B7374C3F6541DC9BB72815A4493);
+      N = JAM.call(M.shift, M, [], JAM.policy.p3);
       var v74 = h$$5(N);
       if(v74) {
         var v73 = A[N];
-        JAM.call(v73.apply, v73, [A, M], JAM.policy.p76F930B34187247043082CAF9881927B310E8F564E301A1AA8BF2B7374C3F6541DC9BB72815A4493)
+        JAM.call(v73.apply, v73, [A, M], JAM.policy.p3)
       }else {
-        JAM.call(N.apply, N, [A, M], JAM.policy.p76F930B34187247043082CAF9881927B310E8F564E301A1AA8BF2B7374C3F6541DC9BB72815A4493)
+        JAM.call(N.apply, N, [A, M], JAM.policy.p3)
       }
       L = L + 1;
       var v398 = arguments.length;
@@ -48,16 +48,16 @@ function v70() {
   function J(N$$1, M$$1, L$$1, i$$6) {
     var v76 = N$$1.addEventListener;
     if(v76) {
-      JAM.call(N$$1.addEventListener, N$$1, [M$$1, L$$1, i$$6], JAM.policy.p76F930B34187247043082CAF9881927B310E8F564E301A1AA8BF2B7374C3F6541DC9BB72815A4493);
+      JAM.call(N$$1.addEventListener, N$$1, [M$$1, L$$1, i$$6], JAM.policy.p3);
       return true
     }
     var v78 = N$$1.attachEvent;
     if(v78) {
       var v77 = "on" + M$$1;
-      return JAM.call(N$$1.attachEvent, N$$1, [v77, L$$1], JAM.policy.p76F930B34187247043082CAF9881927B310E8F564E301A1AA8BF2B7374C3F6541DC9BB72815A4493)
+      return JAM.call(N$$1.attachEvent, N$$1, [v77, L$$1], JAM.policy.p3)
     }
     var v79 = "on" + M$$1;
-    JAM.set(N$$1, v79, L$$1, JAM.policy.pE96DC1A06663FB021BA567E6C73EA87B0883BB12);
+    JAM.set(N$$1, v79, L$$1, JAM.policy.p2);
     return
   }
   function E(M$$2, P) {
@@ -67,7 +67,7 @@ function v70() {
     for(O in a$$1) {
       var v671 = Object.prototype;
       var v399 = v671.hasOwnProperty;
-      var v82 = JAM.call(v399.call, v399, [a$$1, O], JAM.policy.p76F930B34187247043082CAF9881927B310E8F564E301A1AA8BF2B7374C3F6541DC9BB72815A4493);
+      var v82 = JAM.call(v399.call, v399, [a$$1, O], JAM.policy.p3);
       if(v82) {
         var v80 = a$$1[O];
         N$$2 = v80[M$$2];
@@ -75,7 +75,7 @@ function v70() {
         var v81 = v400 === "function";
         if(v81) {
           var v401 = L$$2;
-          var v402 = JAM.call(N$$2, null, [P], JAM.policy.p76F930B34187247043082CAF9881927B310E8F564E301A1AA8BF2B7374C3F6541DC9BB72815A4493);
+          var v402 = JAM.call(N$$2, null, [P], JAM.policy.p3);
           L$$2 = v401 + v402
         }
       }
@@ -86,11 +86,11 @@ function v70() {
     var i$$7;
     E("unload");
     if(e$$5) {
-      var v403 = JAM.call(i$$7.getTimeAlias, i$$7, [], JAM.policy.p76F930B34187247043082CAF9881927B310E8F564E301A1AA8BF2B7374C3F6541DC9BB72815A4493);
+      var v403 = JAM.call(i$$7.getTimeAlias, i$$7, [], JAM.policy.p3);
       var v83 = v403 < e$$5;
       do {
         i$$7 = new Date;
-        var v404 = JAM.call(i$$7.getTimeAlias, i$$7, [], JAM.policy.p76F930B34187247043082CAF9881927B310E8F564E301A1AA8BF2B7374C3F6541DC9BB72815A4493);
+        var v404 = JAM.call(i$$7.getTimeAlias, i$$7, [], JAM.policy.p3);
         v83 = v404 < e$$5
       }while(v83)
     }
@@ -106,7 +106,7 @@ function v70() {
       var v405 = u.length;
       var v84 = L$$3 < v405;
       for(;v84;) {
-        JAM.call(u[L$$3], u, [], JAM.policy.p76F930B34187247043082CAF9881927B310E8F564E301A1AA8BF2B7374C3F6541DC9BB72815A4493);
+        JAM.call(u[L$$3], u, [], JAM.policy.p3);
         L$$3 = L$$3 + 1;
         var v406 = u.length;
         v84 = L$$3 < v406
@@ -120,7 +120,7 @@ function v70() {
       var v673 = !v407;
       if(v673) {
         var v672 = n$$6.readyState;
-        v407 = JAM.call(/loaded|complete/.test, /loaded|complete/, [v672], JAM.policy.p76F930B34187247043082CAF9881927B310E8F564E301A1AA8BF2B7374C3F6541DC9BB72815A4493)
+        v407 = JAM.call(/loaded|complete/.test, /loaded|complete/, [v672], JAM.policy.p3)
       }
       var v86 = v407;
       if(v86) {
@@ -134,7 +134,7 @@ function v70() {
       if(v88) {
         try {
           var v87 = n$$6.documentElement;
-          JAM.call(v87.doScroll, v87, ["left"], JAM.policy.p76F930B34187247043082CAF9881927B310E8F564E301A1AA8BF2B7374C3F6541DC9BB72815A4493)
+          JAM.call(v87.doScroll, v87, ["left"], JAM.policy.p3)
         }catch(M$$3) {
           JAM.call(setTimeout, null, [i$$10, 0]);
           return
@@ -147,13 +147,13 @@ function v70() {
       var v408 = n$$6.readyState;
       var v89 = v408 === "complete";
       if(v89) {
-        JAM.call(n$$6.detachEvent, n$$6, ["onreadystatechange", i$$9], JAM.policy.p76F930B34187247043082CAF9881927B310E8F564E301A1AA8BF2B7374C3F6541DC9BB72815A4493);
+        JAM.call(n$$6.detachEvent, n$$6, ["onreadystatechange", i$$9], JAM.policy.p3);
         F()
       }
       return
     }
     function i$$8() {
-      JAM.call(n$$6.removeEventListener, n$$6, ["DOMContentLoaded", i$$8, false], JAM.policy.p76F930B34187247043082CAF9881927B310E8F564E301A1AA8BF2B7374C3F6541DC9BB72815A4493);
+      JAM.call(n$$6.removeEventListener, n$$6, ["DOMContentLoaded", i$$8, false], JAM.policy.p3);
       F();
       return
     }
@@ -164,7 +164,7 @@ function v70() {
     }else {
       var v91 = n$$6.attachEvent;
       if(v91) {
-        JAM.call(n$$6.attachEvent, n$$6, ["onreadystatechange", i$$9], JAM.policy.p76F930B34187247043082CAF9881927B310E8F564E301A1AA8BF2B7374C3F6541DC9BB72815A4493);
+        JAM.call(n$$6.attachEvent, n$$6, ["onreadystatechange", i$$9], JAM.policy.p3);
         var v674 = n$$6.documentElement;
         var v409 = v674.doScroll;
         if(v409) {
@@ -179,7 +179,7 @@ function v70() {
     }
     var v410 = new RegExp("WebKit");
     var v411 = c$$1.userAgent;
-    var v93 = JAM.call(v410.test, v410, [v411], JAM.policy.p76F930B34187247043082CAF9881927B310E8F564E301A1AA8BF2B7374C3F6541DC9BB72815A4493);
+    var v93 = JAM.call(v410.test, v410, [v411], JAM.policy.p3);
     if(v93) {
       L$$4 = JAM.call(setInterval, null, [v6, 10])
     }
@@ -212,7 +212,7 @@ function v70() {
   }
   function f$$6(i$$12) {
     var M$$5 = new RegExp("^([a-z]+):");
-    var L$$6 = JAM.call(M$$5.exec, M$$5, [i$$12], JAM.policy.p76F930B34187247043082CAF9881927B310E8F564E301A1AA8BF2B7374C3F6541DC9BB72815A4493);
+    var L$$6 = JAM.call(M$$5.exec, M$$5, [i$$12], JAM.policy.p3);
     var v98;
     if(L$$6) {
       v98 = L$$6[1]
@@ -223,7 +223,7 @@ function v70() {
   }
   function b$$1(i$$13) {
     var M$$6 = new RegExp("^(?:(?:https?|ftp):)/*(?:[^@]+@)?([^:/#]+)");
-    var L$$7 = JAM.call(M$$6.exec, M$$6, [i$$13], JAM.policy.p76F930B34187247043082CAF9881927B310E8F564E301A1AA8BF2B7374C3F6541DC9BB72815A4493);
+    var L$$7 = JAM.call(M$$6.exec, M$$6, [i$$13], JAM.policy.p3);
     var v99;
     if(L$$7) {
       v99 = L$$7[1]
@@ -234,14 +234,14 @@ function v70() {
   }
   function x$$48(M$$7, L$$8) {
     var P$$1 = new RegExp("^(?:https?|ftp)(?::/*(?:[^?]+)[?])([^#]+)");
-    var O$$1 = JAM.call(P$$1.exec, P$$1, [M$$7], JAM.policy.p76F930B34187247043082CAF9881927B310E8F564E301A1AA8BF2B7374C3F6541DC9BB72815A4493);
+    var O$$1 = JAM.call(P$$1.exec, P$$1, [M$$7], JAM.policy.p3);
     var v414 = "(?:^|&)" + L$$8;
     var v100 = v414 + "=([^&]*)";
     var N$$3 = new RegExp(v100);
     var v101;
     if(O$$1) {
       var v415 = O$$1[1];
-      v101 = JAM.call(N$$3.exec, N$$3, [v415], JAM.policy.p76F930B34187247043082CAF9881927B310E8F564E301A1AA8BF2B7374C3F6541DC9BB72815A4493)
+      v101 = JAM.call(N$$3.exec, N$$3, [v415], JAM.policy.p3)
     }else {
       v101 = 0
     }
@@ -249,7 +249,7 @@ function v70() {
     var v102;
     if(i$$14) {
       var v416 = i$$14[1];
-      v102 = JAM.call(v, null, [v416], JAM.policy.p76F930B34187247043082CAF9881927B310E8F564E301A1AA8BF2B7374C3F6541DC9BB72815A4493)
+      v102 = JAM.call(v, null, [v416], JAM.policy.p3)
     }else {
       v102 = ""
     }
@@ -267,7 +267,7 @@ function v70() {
         var v103 = ai >>> v417;
         W$$1 = v103 & 15;
         var v418 = ah;
-        var v419 = JAM.call(W$$1.toString, W$$1, [16], JAM.policy.p76F930B34187247043082CAF9881927B310E8F564E301A1AA8BF2B7374C3F6541DC9BB72815A4493);
+        var v419 = JAM.call(W$$1.toString, W$$1, [16], JAM.policy.p3);
         ah = v418 + v419;
         ag = ag - 1;
         v104 = ag >= 0
@@ -297,27 +297,27 @@ function v70() {
     var af;
     var L$$9;
     var T = [];
-    var v107 = JAM.call(g$$1, null, [ab], JAM.policy.p76F930B34187247043082CAF9881927B310E8F564E301A1AA8BF2B7374C3F6541DC9BB72815A4493);
-    ab = JAM.call(d$$1, null, [v107], JAM.policy.p76F930B34187247043082CAF9881927B310E8F564E301A1AA8BF2B7374C3F6541DC9BB72815A4493);
+    var v107 = JAM.call(g$$1, null, [ab], JAM.policy.p3);
+    ab = JAM.call(d$$1, null, [v107], JAM.policy.p3);
     L$$9 = ab.length;
     ae = 0;
     var v421 = L$$9 - 3;
     var v110 = ae < v421;
     for(;v110;) {
-      var v851 = JAM.call(ab.charCodeAt, ab, [ae], JAM.policy.p76F930B34187247043082CAF9881927B310E8F564E301A1AA8BF2B7374C3F6541DC9BB72815A4493);
+      var v851 = JAM.call(ab.charCodeAt, ab, [ae], JAM.policy.p3);
       var v676 = v851 << 24;
       var v936 = ae + 1;
-      var v852 = JAM.call(ab.charCodeAt, ab, [v936], JAM.policy.p76F930B34187247043082CAF9881927B310E8F564E301A1AA8BF2B7374C3F6541DC9BB72815A4493);
+      var v852 = JAM.call(ab.charCodeAt, ab, [v936], JAM.policy.p3);
       var v677 = v852 << 16;
       var v422 = v676 | v677;
       var v853 = ae + 2;
-      var v678 = JAM.call(ab.charCodeAt, ab, [v853], JAM.policy.p76F930B34187247043082CAF9881927B310E8F564E301A1AA8BF2B7374C3F6541DC9BB72815A4493);
+      var v678 = JAM.call(ab.charCodeAt, ab, [v853], JAM.policy.p3);
       var v423 = v678 << 8;
       var v108 = v422 | v423;
       var v424 = ae + 3;
-      var v109 = JAM.call(ab.charCodeAt, ab, [v424], JAM.policy.p76F930B34187247043082CAF9881927B310E8F564E301A1AA8BF2B7374C3F6541DC9BB72815A4493);
+      var v109 = JAM.call(ab.charCodeAt, ab, [v424], JAM.policy.p3);
       ad = v108 | v109;
-      JAM.call(T.push, T, [ad], JAM.policy.p76F930B34187247043082CAF9881927B310E8F564E301A1AA8BF2B7374C3F6541DC9BB72815A4493);
+      JAM.call(T.push, T, [ad], JAM.policy.p3);
       ae = ae + 4;
       var v425 = L$$9 - 3;
       v110 = ae < v425
@@ -329,49 +329,49 @@ function v70() {
         break;
       case 1:
         var v679 = L$$9 - 1;
-        var v426 = JAM.call(ab.charCodeAt, ab, [v679], JAM.policy.p76F930B34187247043082CAF9881927B310E8F564E301A1AA8BF2B7374C3F6541DC9BB72815A4493);
+        var v426 = JAM.call(ab.charCodeAt, ab, [v679], JAM.policy.p3);
         var v111 = v426 << 24;
         ae = v111 | 8388608;
         break;
       case 2:
         var v854 = L$$9 - 2;
-        var v680 = JAM.call(ab.charCodeAt, ab, [v854], JAM.policy.p76F930B34187247043082CAF9881927B310E8F564E301A1AA8BF2B7374C3F6541DC9BB72815A4493);
+        var v680 = JAM.call(ab.charCodeAt, ab, [v854], JAM.policy.p3);
         var v427 = v680 << 24;
         var v855 = L$$9 - 1;
-        var v681 = JAM.call(ab.charCodeAt, ab, [v855], JAM.policy.p76F930B34187247043082CAF9881927B310E8F564E301A1AA8BF2B7374C3F6541DC9BB72815A4493);
+        var v681 = JAM.call(ab.charCodeAt, ab, [v855], JAM.policy.p3);
         var v428 = v681 << 16;
         var v112 = v427 | v428;
         ae = v112 | 32768;
         break;
       case 3:
         var v937 = L$$9 - 3;
-        var v856 = JAM.call(ab.charCodeAt, ab, [v937], JAM.policy.p76F930B34187247043082CAF9881927B310E8F564E301A1AA8BF2B7374C3F6541DC9BB72815A4493);
+        var v856 = JAM.call(ab.charCodeAt, ab, [v937], JAM.policy.p3);
         var v682 = v856 << 24;
         var v938 = L$$9 - 2;
-        var v857 = JAM.call(ab.charCodeAt, ab, [v938], JAM.policy.p76F930B34187247043082CAF9881927B310E8F564E301A1AA8BF2B7374C3F6541DC9BB72815A4493);
+        var v857 = JAM.call(ab.charCodeAt, ab, [v938], JAM.policy.p3);
         var v683 = v857 << 16;
         var v429 = v682 | v683;
         var v858 = L$$9 - 1;
-        var v684 = JAM.call(ab.charCodeAt, ab, [v858], JAM.policy.p76F930B34187247043082CAF9881927B310E8F564E301A1AA8BF2B7374C3F6541DC9BB72815A4493);
+        var v684 = JAM.call(ab.charCodeAt, ab, [v858], JAM.policy.p3);
         var v430 = v684 << 8;
         var v113 = v429 | v430;
         ae = v113 | 128
     }
-    JAM.call(T.push, T, [ae], JAM.policy.p76F930B34187247043082CAF9881927B310E8F564E301A1AA8BF2B7374C3F6541DC9BB72815A4493);
+    JAM.call(T.push, T, [ae], JAM.policy.p3);
     var v685 = T.length;
     var v431 = v685 & 15;
     var v115 = v431 !== 14;
     for(;v115;) {
-      JAM.call(T.push, T, [0], JAM.policy.p76F930B34187247043082CAF9881927B310E8F564E301A1AA8BF2B7374C3F6541DC9BB72815A4493);
+      JAM.call(T.push, T, [0], JAM.policy.p3);
       var v686 = T.length;
       var v432 = v686 & 15;
       v115 = v432 !== 14
     }
     var v116 = L$$9 >>> 29;
-    JAM.call(T.push, T, [v116], JAM.policy.p76F930B34187247043082CAF9881927B310E8F564E301A1AA8BF2B7374C3F6541DC9BB72815A4493);
+    JAM.call(T.push, T, [v116], JAM.policy.p3);
     var v433 = L$$9 << 3;
     var v117 = v433 & 4294967295;
-    JAM.call(T.push, T, [v117], JAM.policy.p76F930B34187247043082CAF9881927B310E8F564E301A1AA8BF2B7374C3F6541DC9BB72815A4493);
+    JAM.call(T.push, T, [v117], JAM.policy.p3);
     Q = 0;
     var v434 = T.length;
     var v136 = Q < v434;
@@ -380,7 +380,7 @@ function v70() {
       var v119 = ae < 16;
       for(;v119;) {
         var v118 = Q + ae;
-        JAM.set(M$$8, ae, T[v118], JAM.policy.pE96DC1A06663FB021BA567E6C73EA87B0883BB12);
+        JAM.set(M$$8, ae, T[v118], JAM.policy.p2);
         ae = ae + 1;
         v119 = ae < 16
       }
@@ -518,7 +518,7 @@ function v70() {
     var v137 = v441 + v442;
     var v138 = ac(O$$2);
     af = v137 + v138;
-    return JAM.call(af.toLowerCase, af, [], JAM.policy.p76F930B34187247043082CAF9881927B310E8F564E301A1AA8BF2B7374C3F6541DC9BB72815A4493)
+    return JAM.call(af.toLowerCase, af, [], JAM.policy.p3)
   }
   function C(M$$9, i$$17, L$$10) {
     var v142 = M$$9 === "translate.googleusercontent.com";
@@ -536,7 +536,7 @@ function v70() {
         var v699 = M$$9 === "webcache.googleusercontent.com";
         var v869 = !v699;
         if(v869) {
-          var v868 = JAM.call(M$$9.slice, M$$9, [0, 5], JAM.policy.p76F930B34187247043082CAF9881927B310E8F564E301A1AA8BF2B7374C3F6541DC9BB72815A4493);
+          var v868 = JAM.call(M$$9.slice, M$$9, [0, 5], JAM.policy.p3);
           v699 = v868 === "74.6."
         }
         v443 = v699
@@ -554,15 +554,15 @@ function v70() {
   function r$$2(L$$11) {
     var i$$18 = L$$11.length;
     var v701 = i$$18 = i$$18 - 1;
-    var v445 = JAM.call(L$$11.charAt, L$$11, [v701], JAM.policy.p76F930B34187247043082CAF9881927B310E8F564E301A1AA8BF2B7374C3F6541DC9BB72815A4493);
+    var v445 = JAM.call(L$$11.charAt, L$$11, [v701], JAM.policy.p3);
     var v143 = v445 === ".";
     if(v143) {
-      L$$11 = JAM.call(L$$11.slice, L$$11, [0, i$$18], JAM.policy.p76F930B34187247043082CAF9881927B310E8F564E301A1AA8BF2B7374C3F6541DC9BB72815A4493)
+      L$$11 = JAM.call(L$$11.slice, L$$11, [0, i$$18], JAM.policy.p3)
     }
-    var v446 = JAM.call(L$$11.slice, L$$11, [0, 2], JAM.policy.p76F930B34187247043082CAF9881927B310E8F564E301A1AA8BF2B7374C3F6541DC9BB72815A4493);
+    var v446 = JAM.call(L$$11.slice, L$$11, [0, 2], JAM.policy.p3);
     var v144 = v446 === "*.";
     if(v144) {
-      L$$11 = JAM.call(L$$11.slice, L$$11, [1], JAM.policy.p76F930B34187247043082CAF9881927B310E8F564E301A1AA8BF2B7374C3F6541DC9BB72815A4493)
+      L$$11 = JAM.call(L$$11.slice, L$$11, [1], JAM.policy.p3)
     }
     return L$$11
   }
@@ -576,7 +576,7 @@ function v70() {
         v145 = ""
       }
       L$$12 = v145;
-      var i$$19 = JAM.call(n$$6.getElementsByTagName, n$$6, ["title"], JAM.policy.p76F930B34187247043082CAF9881927B310E8F564E301A1AA8BF2B7374C3F6541DC9BB72815A4493);
+      var i$$19 = JAM.call(n$$6.getElementsByTagName, n$$6, ["title"], JAM.policy.p3);
       var v449 = i$$19;
       if(v449) {
         var v702 = i$$19[0];
@@ -596,9 +596,9 @@ function v70() {
     var i$$20 = O$$3;
     var v450 = i$$20.length;
     var v149 = v450 - 9;
-    i$$20 = JAM.call(i$$20.substring, i$$20, [0, v149], JAM.policy.p76F930B34187247043082CAF9881927B310E8F564E301A1AA8BF2B7374C3F6541DC9BB72815A4493);
+    i$$20 = JAM.call(i$$20.substring, i$$20, [0, v149], JAM.policy.p3);
     var v451;
-    var v870 = JAM.call(i$$20.substring, i$$20, [0, 7], JAM.policy.p76F930B34187247043082CAF9881927B310E8F564E301A1AA8BF2B7374C3F6541DC9BB72815A4493);
+    var v870 = JAM.call(i$$20.substring, i$$20, [0, 7], JAM.policy.p3);
     var v703 = v870 === "http://";
     if(v703) {
       v451 = 7
@@ -607,9 +607,9 @@ function v70() {
     }
     var v150 = v451;
     var v151 = i$$20.length;
-    JAM.call(i$$20.substring, i$$20, [v150, v151], JAM.policy.p76F930B34187247043082CAF9881927B310E8F564E301A1AA8BF2B7374C3F6541DC9BB72815A4493);
+    JAM.call(i$$20.substring, i$$20, [v150, v151], JAM.policy.p3);
     var v452;
-    var v871 = JAM.call(R$$1.substring, R$$1, [0, 7], JAM.policy.p76F930B34187247043082CAF9881927B310E8F564E301A1AA8BF2B7374C3F6541DC9BB72815A4493);
+    var v871 = JAM.call(R$$1.substring, R$$1, [0, 7], JAM.policy.p3);
     var v704 = v871 === "http://";
     if(v704) {
       v452 = 7
@@ -618,15 +618,15 @@ function v70() {
     }
     var v152 = v452;
     var v153 = R$$1.length;
-    JAM.call(R$$1.substring, R$$1, [v152, v153], JAM.policy.p76F930B34187247043082CAF9881927B310E8F564E301A1AA8BF2B7374C3F6541DC9BB72815A4493);
+    JAM.call(R$$1.substring, R$$1, [v152, v153], JAM.policy.p3);
     var v705 = i$$20.length;
-    var v453 = JAM.call(R$$1.substring, R$$1, [0, v705], JAM.policy.p76F930B34187247043082CAF9881927B310E8F564E301A1AA8BF2B7374C3F6541DC9BB72815A4493);
+    var v453 = JAM.call(R$$1.substring, R$$1, [0, v705], JAM.policy.p3);
     var v157 = v453 === i$$20;
     if(v157) {
       var v454 = "^" + i$$20;
       var v154 = v454 + "index\\.php\\?module=Overlay&action=startOverlaySession&idsite=([0-9]+)&period=([^&]+)&date=([^&]+)$";
       var M$$10 = new RegExp(v154);
-      var N$$5 = JAM.call(R$$1.match, R$$1, [M$$10], JAM.policy.p76F930B34187247043082CAF9881927B310E8F564E301A1AA8BF2B7374C3F6541DC9BB72815A4493);
+      var N$$5 = JAM.call(R$$1.match, R$$1, [M$$10], JAM.policy.p3);
       if(N$$5) {
         var P$$3 = N$$5[1];
         var v455 = parseInt(P$$3, 10);
@@ -643,7 +643,7 @@ function v70() {
       }
     }
     var v158 = w$$5.name;
-    var T$$1 = JAM.call(v158.split, v158, ["###"], JAM.policy.p76F930B34187247043082CAF9881927B310E8F564E301A1AA8BF2B7374C3F6541DC9BB72815A4493);
+    var T$$1 = JAM.call(v158.split, v158, ["###"], JAM.policy.p3);
     var v457 = T$$1.length;
     var v159 = v457 === 3;
     if(v159) {
@@ -671,26 +671,26 @@ function v70() {
       var v161 = !L$$14;
       if(v161) {
         L$$14 = true;
-        JAM.call(Piwik_Overlay_Client.initialize, Piwik_Overlay_Client, [R$$2, S$$2, N$$6, i$$21], JAM.policy.p76F930B34187247043082CAF9881927B310E8F564E301A1AA8BF2B7374C3F6541DC9BB72815A4493)
+        JAM.call(Piwik_Overlay_Client.initialize, Piwik_Overlay_Client, [R$$2, S$$2, N$$6, i$$21], JAM.policy.p3)
       }
       return
     }
     var v162 = window.name;
-    var T$$2 = JAM.call(v162.split, v162, ["###"], JAM.policy.p76F930B34187247043082CAF9881927B310E8F564E301A1AA8BF2B7374C3F6541DC9BB72815A4493);
+    var T$$2 = JAM.call(v162.split, v162, ["###"], JAM.policy.p3);
     var v460 = M$$11.length;
     var v163 = v460 - 9;
-    var R$$2 = JAM.call(M$$11.substring, M$$11, [0, v163], JAM.policy.p76F930B34187247043082CAF9881927B310E8F564E301A1AA8BF2B7374C3F6541DC9BB72815A4493);
+    var R$$2 = JAM.call(M$$11.substring, M$$11, [0, v163], JAM.policy.p3);
     var N$$6 = T$$2[1];
     var i$$21 = T$$2[2];
     var L$$14 = false;
-    var Q$$2 = JAM.call(document.createElement, document, ["script"], JAM.policy.p76F930B34187247043082CAF9881927B310E8F564E301A1AA8BF2B7374C3F6541DC9BB72815A4493);
+    var Q$$2 = JAM.call(document.createElement, document, ["script"], JAM.policy.p3);
     Q$$2.type = "text/javascript";
     JAM.set(Q$$2, "onreadystatechange", v7);
     JAM.set(Q$$2, "onload", O$$4);
     Q$$2.src = R$$2 + "plugins/Overlay/client/client.js?v=1";
-    var v164 = JAM.call(document.getElementsByTagName, document, ["head"], JAM.policy.p76F930B34187247043082CAF9881927B310E8F564E301A1AA8BF2B7374C3F6541DC9BB72815A4493);
+    var v164 = JAM.call(document.getElementsByTagName, document, ["head"], JAM.policy.p3);
     var P$$4 = v164[0];
-    JAM.call(P$$4.appendChild, P$$4, [Q$$2], JAM.policy.p76F930B34187247043082CAF9881927B310E8F564E301A1AA8BF2B7374C3F6541DC9BB72815A4493);
+    JAM.call(P$$4.appendChild, P$$4, [Q$$2], JAM.policy.p3);
     return
   }
   function t$$2(af$$1, aE) {
@@ -723,7 +723,7 @@ function v70() {
     function v64(bi$$11, be$$70, bg$$29, bf$$40, bh$$20) {
       var v167 = bi$$11.length;
       if(v167) {
-        JAM.set(aQ, bi$$11, [bi$$11, be$$70, bg$$29, bf$$40, bh$$20], JAM.policy.pE96DC1A06663FB021BA567E6C73EA87B0883BB12)
+        JAM.set(aQ, bi$$11, [bi$$11, be$$70, bg$$29, bf$$40, bh$$20], JAM.policy.p2)
       }
       return
     }
@@ -741,7 +741,7 @@ function v70() {
       }else {
         var v168 = bg$$28 instanceof Array;
         if(v168) {
-          bg$$28 = JAM.call(JSON2.stringify, JSON2, [bg$$28], JAM.policy.p76F930B34187247043082CAF9881927B310E8F564E301A1AA8BF2B7374C3F6541DC9BB72815A4493)
+          bg$$28 = JAM.call(JSON2.stringify, JSON2, [bg$$28], JAM.policy.p3)
         }
       }
       aA[5] = ["_pkc", bg$$28];
@@ -802,11 +802,11 @@ function v70() {
       function v61() {
         var bh$$inline_27 = bg$$27;
         var bf$$inline_28 = bf$$38;
-        var v878 = JAM.call(g$$1, null, [be$$68], JAM.policy.p76F930B34187247043082CAF9881927B310E8F564E301A1AA8BF2B7374C3F6541DC9BB72815A4493);
+        var v878 = JAM.call(g$$1, null, [be$$68], JAM.policy.p3);
         var v720 = "search=" + v878;
         var v879;
         if(bh$$inline_27) {
-          var v950 = JAM.call(g$$1, null, [bh$$inline_27], JAM.policy.p76F930B34187247043082CAF9881927B310E8F564E301A1AA8BF2B7374C3F6541DC9BB72815A4493);
+          var v950 = JAM.call(g$$1, null, [bh$$inline_27], JAM.policy.p3);
           v879 = "&search_cat=" + v950
         }else {
           v879 = ""
@@ -899,7 +899,7 @@ function v70() {
     }
     function v50(bg$$24, bf$$34) {
       var be$$62 = new Date;
-      var v181 = JAM.call(be$$62.getTime, be$$62, [], JAM.policy.p76F930B34187247043082CAF9881927B310E8F564E301A1AA8BF2B7374C3F6541DC9BB72815A4493);
+      var v181 = JAM.call(be$$62.getTime, be$$62, [], JAM.policy.p3);
       var v182 = bg$$24 * 1E3;
       S$$3 = v181 + v182;
       ag$$1 = bf$$34 * 1E3;
@@ -913,7 +913,7 @@ function v70() {
       if(k$$1) {
         ax(be$$61)
       }else {
-        JAM.call(u.push, u, [v48], JAM.policy.p76F930B34187247043082CAF9881927B310E8F564E301A1AA8BF2B7374C3F6541DC9BB72815A4493)
+        JAM.call(u.push, u, [v48], JAM.policy.p3)
       }
       return
     }
@@ -939,13 +939,13 @@ function v70() {
       }
       a4 = v184;
       if(a4) {
-        JAM.call(this.disableCookies, this, [], JAM.policy.p76F930B34187247043082CAF9881927B310E8F564E301A1AA8BF2B7374C3F6541DC9BB72815A4493)
+        JAM.call(this.disableCookies, this, [], JAM.policy.p3)
       }
       return
     }
     function v45() {
       V$$1 = true;
-      introspect(JAM.policy.pE96DC1A06663FB021BA567E6C73EA87B0883BB12) {
+      introspect(JAM.policy.p2) {
         a2.cookie = "0"
       }
       return
@@ -1043,7 +1043,7 @@ function v70() {
           av = be$$inline_17;
           break JSCompiler_inline_label_aW_20
         }
-        var v480 = JAM.call(be$$inline_17.slice, be$$inline_17, [0, 1], JAM.policy.p76F930B34187247043082CAF9881927B310E8F564E301A1AA8BF2B7374C3F6541DC9BB72815A4493);
+        var v480 = JAM.call(be$$inline_17.slice, be$$inline_17, [0, 1], JAM.policy.p3);
         var v190 = v480 === "/";
         if(v190) {
           var v727 = f$$6(bg$$inline_16);
@@ -1054,18 +1054,18 @@ function v70() {
           break JSCompiler_inline_label_aW_20
         }
         bg$$inline_16 = a6(bg$$inline_16);
-        var v483 = bf$$inline_19 = JAM.call(bg$$inline_16.indexOf, bg$$inline_16, ["?"], JAM.policy.p76F930B34187247043082CAF9881927B310E8F564E301A1AA8BF2B7374C3F6541DC9BB72815A4493);
+        var v483 = bf$$inline_19 = JAM.call(bg$$inline_16.indexOf, bg$$inline_16, ["?"], JAM.policy.p3);
         var v191 = v483 >= 0;
         if(v191) {
-          bg$$inline_16 = JAM.call(bg$$inline_16.slice, bg$$inline_16, [0, bf$$inline_19], JAM.policy.p76F930B34187247043082CAF9881927B310E8F564E301A1AA8BF2B7374C3F6541DC9BB72815A4493)
+          bg$$inline_16 = JAM.call(bg$$inline_16.slice, bg$$inline_16, [0, bf$$inline_19], JAM.policy.p3)
         }
-        var v484 = bf$$inline_19 = JAM.call(bg$$inline_16.lastIndexOf, bg$$inline_16, ["/"], JAM.policy.p76F930B34187247043082CAF9881927B310E8F564E301A1AA8BF2B7374C3F6541DC9BB72815A4493);
+        var v484 = bf$$inline_19 = JAM.call(bg$$inline_16.lastIndexOf, bg$$inline_16, ["/"], JAM.policy.p3);
         var v728 = bg$$inline_16.length;
         var v485 = v728 - 1;
         var v193 = v484 !== v485;
         if(v193) {
           var v192 = bf$$inline_19 + 1;
-          bg$$inline_16 = JAM.call(bg$$inline_16.slice, bg$$inline_16, [0, v192], JAM.policy.p76F930B34187247043082CAF9881927B310E8F564E301A1AA8BF2B7374C3F6541DC9BB72815A4493)
+          bg$$inline_16 = JAM.call(bg$$inline_16.slice, bg$$inline_16, [0, v192], JAM.policy.p3)
         }
         av = bg$$inline_16 + be$$inline_17
       }
@@ -1099,7 +1099,7 @@ function v70() {
         v195 = be$$41
       }
       aG = v195;
-      JAM.call(aG.push, aG, [aX], JAM.policy.p76F930B34187247043082CAF9881927B310E8F564E301A1AA8BF2B7374C3F6541DC9BB72815A4493);
+      JAM.call(aG.push, aG, [aX], JAM.policy.p3);
       return
     }
     function v26(be$$40) {
@@ -1116,9 +1116,9 @@ function v70() {
       return
     }
     function v23(be$$37, bf$$31) {
-      var v196 = JAM.call(this.getCustomVariable, this, [be$$37, bf$$31], JAM.policy.p76F930B34187247043082CAF9881927B310E8F564E301A1AA8BF2B7374C3F6541DC9BB72815A4493);
+      var v196 = JAM.call(this.getCustomVariable, this, [be$$37, bf$$31], JAM.policy.p3);
       if(v196) {
-        JAM.call(this.setCustomVariable, this, [be$$37, "", "", bf$$31], JAM.policy.p76F930B34187247043082CAF9881927B310E8F564E301A1AA8BF2B7374C3F6541DC9BB72815A4493)
+        JAM.call(this.setCustomVariable, this, [be$$37, "", "", bf$$31], JAM.policy.p3)
       }
       return
     }
@@ -1204,8 +1204,8 @@ function v70() {
           v204 = bi$$10
         }
         bi$$10 = v204;
-        var v205 = JAM.call(be$$35.slice, be$$35, [0, a5], JAM.policy.p76F930B34187247043082CAF9881927B310E8F564E301A1AA8BF2B7374C3F6541DC9BB72815A4493);
-        var v206 = JAM.call(bi$$10.slice, bi$$10, [0, a5], JAM.policy.p76F930B34187247043082CAF9881927B310E8F564E301A1AA8BF2B7374C3F6541DC9BB72815A4493);
+        var v205 = JAM.call(be$$35.slice, be$$35, [0, a5], JAM.policy.p3);
+        var v206 = JAM.call(bi$$10.slice, bi$$10, [0, a5], JAM.policy.p3);
         bh$$18 = [v205, v206];
         var v496 = bg$$22 === "visit";
         var v736 = !v496;
@@ -1218,7 +1218,7 @@ function v70() {
           if(v207) {
             Q$$3 = Z$$1()
           }
-          JAM.set(Q$$3, bf$$29, bh$$18, JAM.policy.pE96DC1A06663FB021BA567E6C73EA87B0883BB12)
+          JAM.set(Q$$3, bf$$29, bh$$18, JAM.policy.p2)
         }else {
           var v497 = bg$$22 === "page";
           var v737 = !v497;
@@ -1227,7 +1227,7 @@ function v70() {
           }
           var v208 = v497;
           if(v208) {
-            JAM.set(aA, bf$$29, bh$$18, JAM.policy.pE96DC1A06663FB021BA567E6C73EA87B0883BB12)
+            JAM.set(aA, bf$$29, bh$$18, JAM.policy.p2)
           }
         }
       }
@@ -1246,7 +1246,7 @@ function v70() {
         if(v211) {
           U$$2 = []
         }
-        JAM.set(U$$2, be$$34, bf$$28, JAM.policy.pE96DC1A06663FB021BA567E6C73EA87B0883BB12)
+        JAM.set(U$$2, be$$34, bf$$28, JAM.policy.p2)
       }
       return
     }
@@ -1291,17 +1291,17 @@ function v70() {
       var be;
       if(bg) {
         be = new Date;
-        var v499 = JAM.call(be.getTime, be, [], JAM.policy.p76F930B34187247043082CAF9881927B310E8F564E301A1AA8BF2B7374C3F6541DC9BB72815A4493);
+        var v499 = JAM.call(be.getTime, be, [], JAM.policy.p3);
         var v218 = v499 + bg;
-        JAM.call(be.setTime, be, [v218], JAM.policy.p76F930B34187247043082CAF9881927B310E8F564E301A1AA8BF2B7374C3F6541DC9BB72815A4493)
+        JAM.call(be.setTime, be, [v218], JAM.policy.p3)
       }
       var v219 = n$$6;
       var v1012 = bk + "=";
-      var v1013 = JAM.call(g$$1, null, [bh], JAM.policy.p76F930B34187247043082CAF9881927B310E8F564E301A1AA8BF2B7374C3F6541DC9BB72815A4493);
+      var v1013 = JAM.call(g$$1, null, [bh], JAM.policy.p3);
       var v986 = v1012 + v1013;
       var v1014;
       if(bg) {
-        var v1026 = JAM.call(be.toGMTString, be, [], JAM.policy.p76F930B34187247043082CAF9881927B310E8F564E301A1AA8BF2B7374C3F6541DC9BB72815A4493);
+        var v1026 = JAM.call(be.toGMTString, be, [], JAM.policy.p3);
         v1014 = ";expires=" + v1026
       }else {
         v1014 = ""
@@ -1326,7 +1326,7 @@ function v70() {
         v740 = ""
       }
       var v501 = v740;
-      introspect(JAM.policy.pE96DC1A06663FB021BA567E6C73EA87B0883BB12) {
+      introspect(JAM.policy.p2) {
         v219.cookie = v500 + v501
       }
       return
@@ -1339,11 +1339,11 @@ function v70() {
       var v220 = v502 + "=([^;]*)";
       var be$$1 = new RegExp(v220);
       var v221 = n$$6.cookie;
-      var bf$$1 = JAM.call(be$$1.exec, be$$1, [v221], JAM.policy.p76F930B34187247043082CAF9881927B310E8F564E301A1AA8BF2B7374C3F6541DC9BB72815A4493);
+      var bf$$1 = JAM.call(be$$1.exec, be$$1, [v221], JAM.policy.p3);
       var v222;
       if(bf$$1) {
         var v503 = bf$$1[2];
-        v222 = JAM.call(v, null, [v503], JAM.policy.p76F930B34187247043082CAF9881927B310E8F564E301A1AA8BF2B7374C3F6541DC9BB72815A4493)
+        v222 = JAM.call(v, null, [v503], JAM.policy.p3)
       }else {
         v222 = 0
       }
@@ -1353,7 +1353,7 @@ function v70() {
       var bf$$2;
       if(T$$3) {
         bf$$2 = new RegExp("#.*");
-        return JAM.call(be$$2.replace, be$$2, [bf$$2, ""], JAM.policy.p76F930B34187247043082CAF9881927B310E8F564E301A1AA8BF2B7374C3F6541DC9BB72815A4493)
+        return JAM.call(be$$2.replace, be$$2, [bf$$2, ""], JAM.policy.p3)
       }
       return be$$2
     }
@@ -1366,17 +1366,17 @@ function v70() {
       var v230 = bf$$4 < v504;
       for(;v230;) {
         var v505 = aG[bf$$4];
-        var v223 = JAM.call(v505.toLowerCase, v505, [], JAM.policy.p76F930B34187247043082CAF9881927B310E8F564E301A1AA8BF2B7374C3F6541DC9BB72815A4493);
+        var v223 = JAM.call(v505.toLowerCase, v505, [], JAM.policy.p3);
         be$$4 = r$$2(v223);
         var v224 = bh$$2 === be$$4;
         if(v224) {
           return true
         }
-        var v506 = JAM.call(be$$4.slice, be$$4, [0, 1], JAM.policy.p76F930B34187247043082CAF9881927B310E8F564E301A1AA8BF2B7374C3F6541DC9BB72815A4493);
+        var v506 = JAM.call(be$$4.slice, be$$4, [0, 1], JAM.policy.p3);
         var v229 = v506 === ".";
         if(v229) {
           var v507 = bh$$2;
-          var v508 = JAM.call(be$$4.slice, be$$4, [1], JAM.policy.p76F930B34187247043082CAF9881927B310E8F564E301A1AA8BF2B7374C3F6541DC9BB72815A4493);
+          var v508 = JAM.call(be$$4.slice, be$$4, [1], JAM.policy.p3);
           var v225 = v507 === v508;
           if(v225) {
             return true
@@ -1386,7 +1386,7 @@ function v70() {
           bg$$3 = v226 - v227;
           var v509 = bg$$3 > 0;
           if(v509) {
-            var v741 = JAM.call(bh$$2.slice, bh$$2, [bg$$3], JAM.policy.p76F930B34187247043082CAF9881927B310E8F564E301A1AA8BF2B7374C3F6541DC9BB72815A4493);
+            var v741 = JAM.call(bh$$2.slice, bh$$2, [bg$$3], JAM.policy.p3);
             v509 = v741 === be$$4
           }
           var v228 = v509;
@@ -1409,7 +1409,7 @@ function v70() {
       var v231 = bf$$5;
       var v742 = N$$7;
       var v887;
-      var v988 = JAM.call(N$$7.indexOf, N$$7, ["?"], JAM.policy.p76F930B34187247043082CAF9881927B310E8F564E301A1AA8BF2B7374C3F6541DC9BB72815A4493);
+      var v988 = JAM.call(N$$7.indexOf, N$$7, ["?"], JAM.policy.p3);
       var v952 = v988 < 0;
       if(v952) {
         v887 = "?"
@@ -1452,10 +1452,10 @@ function v70() {
           v233 = v514
         }
         var bg$$4 = v233;
-        JAM.call(bg$$4.open, bg$$4, ["POST", N$$7, true], JAM.policy.p76F930B34187247043082CAF9881927B310E8F564E301A1AA8BF2B7374C3F6541DC9BB72815A4493);
+        JAM.call(bg$$4.open, bg$$4, ["POST", N$$7, true], JAM.policy.p3);
         JAM.set(bg$$4, "onreadystatechange", v9);
-        JAM.call(bg$$4.setRequestHeader, bg$$4, ["Content-Type", "application/x-www-form-urlencoded; charset=UTF-8"], JAM.policy.p76F930B34187247043082CAF9881927B310E8F564E301A1AA8BF2B7374C3F6541DC9BB72815A4493);
-        JAM.call(bg$$4.send, bg$$4, [be$$6], JAM.policy.p76F930B34187247043082CAF9881927B310E8F564E301A1AA8BF2B7374C3F6541DC9BB72815A4493)
+        JAM.call(bg$$4.setRequestHeader, bg$$4, ["Content-Type", "application/x-www-form-urlencoded; charset=UTF-8"], JAM.policy.p3);
+        JAM.call(bg$$4.send, bg$$4, [be$$6], JAM.policy.p3)
       }catch(bf$$6) {
         bd(be$$6)
       }
@@ -1471,7 +1471,7 @@ function v70() {
         }else {
           bd(bg$$5)
         }
-        var v235 = JAM.call(be$$7.getTime, be$$7, [], JAM.policy.p76F930B34187247043082CAF9881927B310E8F564E301A1AA8BF2B7374C3F6541DC9BB72815A4493);
+        var v235 = JAM.call(be$$7.getTime, be$$7, [], JAM.policy.p3);
         e$$5 = v235 + bf$$7
       }
       return
@@ -1516,8 +1516,8 @@ function v70() {
       var v750 = X$$1 || aX;
       var v751 = ba || "/";
       var v520 = v750 + v751;
-      var v241 = JAM.call(ao, null, [v520], JAM.policy.p76F930B34187247043082CAF9881927B310E8F564E301A1AA8BF2B7374C3F6541DC9BB72815A4493);
-      aM = JAM.call(v241.slice, v241, [0, 4], JAM.policy.p76F930B34187247043082CAF9881927B310E8F564E301A1AA8BF2B7374C3F6541DC9BB72815A4493);
+      var v241 = JAM.call(ao, null, [v520], JAM.policy.p3);
+      aM = JAM.call(v241.slice, v241, [0, 4], JAM.policy.p3);
       return
     }
     function Z$$1() {
@@ -1525,7 +1525,7 @@ function v70() {
       var be$$10 = ab$$1(bf$$8);
       var v243 = be$$10.length;
       if(v243) {
-        be$$10 = JAM.call(JSON2.parse, JSON2, [be$$10], JAM.policy.p76F930B34187247043082CAF9881927B310E8F564E301A1AA8BF2B7374C3F6541DC9BB72815A4493);
+        be$$10 = JAM.call(JSON2.parse, JSON2, [be$$10], JAM.policy.p3);
         var v521 = typeof be$$10;
         var v242 = v521 === "object";
         if(v242) {
@@ -1536,20 +1536,20 @@ function v70() {
     }
     function a0() {
       var be$$11 = new Date;
-      aJ = JAM.call(be$$11.getTime, be$$11, [], JAM.policy.p76F930B34187247043082CAF9881927B310E8F564E301A1AA8BF2B7374C3F6541DC9BB72815A4493);
+      aJ = JAM.call(be$$11.getTime, be$$11, [], JAM.policy.p3);
       return
     }
     function L$$15() {
       var bf$$10 = new Date;
-      var v522 = JAM.call(bf$$10.getTime, bf$$10, [], JAM.policy.p76F930B34187247043082CAF9881927B310E8F564E301A1AA8BF2B7374C3F6541DC9BB72815A4493);
+      var v522 = JAM.call(bf$$10.getTime, bf$$10, [], JAM.policy.p3);
       var v244 = v522 / 1E3;
-      var be$$13 = JAM.call(Math.round, Math, [v244], JAM.policy.p76F930B34187247043082CAF9881927B310E8F564E301A1AA8BF2B7374C3F6541DC9BB72815A4493);
+      var be$$13 = JAM.call(Math.round, Math, [v244], JAM.policy.p3);
       var v245 = aR("id");
       var bh$$4 = ab$$1(v245);
       var bg$$7;
       if(bh$$4) {
-        bg$$7 = JAM.call(bh$$4.split, bh$$4, ["."], JAM.policy.p76F930B34187247043082CAF9881927B310E8F564E301A1AA8BF2B7374C3F6541DC9BB72815A4493);
-        JAM.call(bg$$7.unshift, bg$$7, ["0"], JAM.policy.p76F930B34187247043082CAF9881927B310E8F564E301A1AA8BF2B7374C3F6541DC9BB72815A4493)
+        bg$$7 = JAM.call(bh$$4.split, bh$$4, ["."], JAM.policy.p3);
+        JAM.call(bg$$7.unshift, bg$$7, ["0"], JAM.policy.p3)
       }else {
         var v247 = !at;
         if(v247) {
@@ -1566,11 +1566,11 @@ function v70() {
           }
           var v954 = v990;
           var v889 = v953 + v954;
-          var v890 = JAM.call(JSON2.stringify, JSON2, [a2], JAM.policy.p76F930B34187247043082CAF9881927B310E8F564E301A1AA8BF2B7374C3F6541DC9BB72815A4493);
+          var v890 = JAM.call(JSON2.stringify, JSON2, [a2], JAM.policy.p3);
           var v752 = v889 + v890;
           var v523 = v752 + be$$13;
-          var v246 = JAM.call(ao, null, [v523], JAM.policy.p76F930B34187247043082CAF9881927B310E8F564E301A1AA8BF2B7374C3F6541DC9BB72815A4493);
-          at = JAM.call(v246.slice, v246, [0, 16], JAM.policy.p76F930B34187247043082CAF9881927B310E8F564E301A1AA8BF2B7374C3F6541DC9BB72815A4493)
+          var v246 = JAM.call(ao, null, [v523], JAM.policy.p3);
+          at = JAM.call(v246.slice, v246, [0, 16], JAM.policy.p3)
         }
         bg$$7 = ["1", at, be$$13, 0, be$$13, "", ""]
       }
@@ -1582,7 +1582,7 @@ function v70() {
       var v250 = be$$14.length;
       if(v250) {
         try {
-          be$$14 = JAM.call(JSON2.parse, JSON2, [be$$14], JAM.policy.p76F930B34187247043082CAF9881927B310E8F564E301A1AA8BF2B7374C3F6541DC9BB72815A4493);
+          be$$14 = JAM.call(JSON2.parse, JSON2, [be$$14], JAM.policy.p3);
           var v524 = typeof be$$14;
           var v249 = v524 === "object";
           if(v249) {
@@ -1596,9 +1596,9 @@ function v70() {
     function am(bg$$8, bF, bG, bi$$2) {
       var bD;
       var bf$$12 = new Date;
-      var v525 = JAM.call(bf$$12.getTime, bf$$12, [], JAM.policy.p76F930B34187247043082CAF9881927B310E8F564E301A1AA8BF2B7374C3F6541DC9BB72815A4493);
+      var v525 = JAM.call(bf$$12.getTime, bf$$12, [], JAM.policy.p3);
       var v251 = v525 / 1E3;
-      var bo = JAM.call(Math.round, Math, [v251], JAM.policy.p76F930B34187247043082CAF9881927B310E8F564E301A1AA8BF2B7374C3F6541DC9BB72815A4493);
+      var bo = JAM.call(Math.round, Math, [v251], JAM.policy.p3);
       var bI;
       var bE;
       var bk$$1;
@@ -1660,7 +1660,7 @@ function v70() {
       var v529 = !bs;
       var v755 = !v529;
       if(v755) {
-        var v754 = JAM.call(bs.toLowerCase, bs, [], JAM.policy.p76F930B34187247043082CAF9881927B310E8F564E301A1AA8BF2B7374C3F6541DC9BB72815A4493);
+        var v754 = JAM.call(bs.toLowerCase, bs, [], JAM.policy.p3);
         v529 = v754 === "utf-8"
       }
       var v255 = v529;
@@ -1686,7 +1686,7 @@ function v70() {
           for(bD in ap) {
             var v758 = Object.prototype;
             var v531 = v758.hasOwnProperty;
-            var v258 = JAM.call(v531.call, v531, [ap, bD], JAM.policy.p76F930B34187247043082CAF9881927B310E8F564E301A1AA8BF2B7374C3F6541DC9BB72815A4493);
+            var v258 = JAM.call(v531.call, v531, [ap, bD], JAM.policy.p3);
             if(v258) {
               var v256 = ap[bD];
               bm = x$$48(bH, v256);
@@ -1699,7 +1699,7 @@ function v70() {
           for(bD in ak) {
             var v759 = Object.prototype;
             var v532 = v759.hasOwnProperty;
-            var v261 = JAM.call(v532.call, v532, [ak, bD], JAM.policy.p76F930B34187247043082CAF9881927B310E8F564E301A1AA8BF2B7374C3F6541DC9BB72815A4493);
+            var v261 = JAM.call(v532.call, v532, [ak, bD], JAM.policy.p3);
             if(v261) {
               var v259 = ak[bD];
               be$$15 = x$$48(bH, v259);
@@ -1751,38 +1751,38 @@ function v70() {
         var v267 = v535;
         if(v267) {
           bl = bo;
-          var v536 = JAM.call(bC.slice, bC, [0, bj$$2], JAM.policy.p76F930B34187247043082CAF9881927B310E8F564E301A1AA8BF2B7374C3F6541DC9BB72815A4493);
+          var v536 = JAM.call(bC.slice, bC, [0, bj$$2], JAM.policy.p3);
           var v265 = a6(v536);
           bB = [bm, be$$15, bl, v265];
-          var v266 = JAM.call(JSON2.stringify, JSON2, [bB], JAM.policy.p76F930B34187247043082CAF9881927B310E8F564E301A1AA8BF2B7374C3F6541DC9BB72815A4493);
+          var v266 = JAM.call(JSON2.stringify, JSON2, [bB], JAM.policy.p3);
           aS(bq, v266, aw, ba, X$$1, aa$$1)
         }
       }
       var v537 = bg$$8;
       var v1084 = "&idsite=" + a1;
       var v1082 = v1084 + "&rec=1&r=";
-      var v1086 = JAM.call(Math.random, Math, [], JAM.policy.p76F930B34187247043082CAF9881927B310E8F564E301A1AA8BF2B7374C3F6541DC9BB72815A4493);
+      var v1086 = JAM.call(Math.random, Math, [], JAM.policy.p3);
       var v1085 = String(v1086);
-      var v1083 = JAM.call(v1085.slice, v1085, [2, 8], JAM.policy.p76F930B34187247043082CAF9881927B310E8F564E301A1AA8BF2B7374C3F6541DC9BB72815A4493);
+      var v1083 = JAM.call(v1085.slice, v1085, [2, 8], JAM.policy.p3);
       var v1081 = v1082 + v1083;
       var v1079 = v1081 + "&h=";
-      var v1080 = JAM.call(bf$$12.getHours, bf$$12, [], JAM.policy.p76F930B34187247043082CAF9881927B310E8F564E301A1AA8BF2B7374C3F6541DC9BB72815A4493);
+      var v1080 = JAM.call(bf$$12.getHours, bf$$12, [], JAM.policy.p3);
       var v1078 = v1079 + v1080;
       var v1076 = v1078 + "&m=";
-      var v1077 = JAM.call(bf$$12.getMinutes, bf$$12, [], JAM.policy.p76F930B34187247043082CAF9881927B310E8F564E301A1AA8BF2B7374C3F6541DC9BB72815A4493);
+      var v1077 = JAM.call(bf$$12.getMinutes, bf$$12, [], JAM.policy.p3);
       var v1075 = v1076 + v1077;
       var v1072 = v1075 + "&s=";
-      var v1073 = JAM.call(bf$$12.getSeconds, bf$$12, [], JAM.policy.p76F930B34187247043082CAF9881927B310E8F564E301A1AA8BF2B7374C3F6541DC9BB72815A4493);
+      var v1073 = JAM.call(bf$$12.getSeconds, bf$$12, [], JAM.policy.p3);
       var v1068 = v1072 + v1073;
       var v1065 = v1068 + "&url=";
       var v1069 = a6(bH);
-      var v1066 = JAM.call(g$$1, null, [v1069], JAM.policy.p76F930B34187247043082CAF9881927B310E8F564E301A1AA8BF2B7374C3F6541DC9BB72815A4493);
+      var v1066 = JAM.call(g$$1, null, [v1069], JAM.policy.p3);
       var v1063 = v1065 + v1066;
       var v1067;
       var v1071 = aK.length;
       if(v1071) {
         var v1074 = a6(aK);
-        var v1070 = JAM.call(g$$1, null, [v1074], JAM.policy.p76F930B34187247043082CAF9881927B310E8F564E301A1AA8BF2B7374C3F6541DC9BB72815A4493);
+        var v1070 = JAM.call(g$$1, null, [v1074], JAM.policy.p3);
         v1067 = "&urlref=" + v1070
       }else {
         v1067 = ""
@@ -1800,7 +1800,7 @@ function v70() {
       var v1048;
       var v1055 = bm.length;
       if(v1055) {
-        var v1054 = JAM.call(g$$1, null, [bm], JAM.policy.p76F930B34187247043082CAF9881927B310E8F564E301A1AA8BF2B7374C3F6541DC9BB72815A4493);
+        var v1054 = JAM.call(g$$1, null, [bm], JAM.policy.p3);
         v1048 = "&_rcn=" + v1054
       }else {
         v1048 = ""
@@ -1810,7 +1810,7 @@ function v70() {
       var v1044;
       var v1050 = be$$15.length;
       if(v1050) {
-        var v1049 = JAM.call(g$$1, null, [be$$15], JAM.policy.p76F930B34187247043082CAF9881927B310E8F564E301A1AA8BF2B7374C3F6541DC9BB72815A4493);
+        var v1049 = JAM.call(g$$1, null, [be$$15], JAM.policy.p3);
         v1044 = "&_rck=" + v1049
       }else {
         v1044 = ""
@@ -1835,9 +1835,9 @@ function v70() {
       var v1019 = String(bC);
       var v996 = v1019.length;
       if(v996) {
-        var v1029 = JAM.call(bC.slice, bC, [0, bj$$2], JAM.policy.p76F930B34187247043082CAF9881927B310E8F564E301A1AA8BF2B7374C3F6541DC9BB72815A4493);
+        var v1029 = JAM.call(bC.slice, bC, [0, bj$$2], JAM.policy.p3);
         var v1020 = a6(v1029);
-        var v995 = JAM.call(g$$1, null, [v1020], JAM.policy.p76F930B34187247043082CAF9881927B310E8F564E301A1AA8BF2B7374C3F6541DC9BB72815A4493);
+        var v995 = JAM.call(g$$1, null, [v1020], JAM.policy.p3);
         v959 = "&_ref=" + v995
       }else {
         v959 = ""
@@ -1846,7 +1846,7 @@ function v70() {
       var v762 = v893 + v894;
       var v895;
       if(bs) {
-        var v960 = JAM.call(g$$1, null, [bs], JAM.policy.p76F930B34187247043082CAF9881927B310E8F564E301A1AA8BF2B7374C3F6541DC9BB72815A4493);
+        var v960 = JAM.call(g$$1, null, [bs], JAM.policy.p3);
         v895 = "&cs=" + v960
       }else {
         v895 = ""
@@ -1854,19 +1854,19 @@ function v70() {
       var v763 = v895;
       var v538 = v762 + v763;
       bg$$8 = v537 + v538;
-      var bh$$5 = JAM.call(JSON2.stringify, JSON2, [aA], JAM.policy.p76F930B34187247043082CAF9881927B310E8F564E301A1AA8BF2B7374C3F6541DC9BB72815A4493);
+      var bh$$5 = JAM.call(JSON2.stringify, JSON2, [aA], JAM.policy.p3);
       var v539 = bh$$5.length;
       var v269 = v539 > 2;
       if(v269) {
         var v540 = bg$$8;
-        var v764 = JAM.call(g$$1, null, [bh$$5], JAM.policy.p76F930B34187247043082CAF9881927B310E8F564E301A1AA8BF2B7374C3F6541DC9BB72815A4493);
+        var v764 = JAM.call(g$$1, null, [bh$$5], JAM.policy.p3);
         var v541 = "&cvar=" + v764;
         bg$$8 = v540 + v541
       }
       for(bD in a2) {
         var v765 = Object.prototype;
         var v542 = v765.hasOwnProperty;
-        var v270 = JAM.call(v542.call, v542, [a2, bD], JAM.policy.p76F930B34187247043082CAF9881927B310E8F564E301A1AA8BF2B7374C3F6541DC9BB72815A4493);
+        var v270 = JAM.call(v542.call, v542, [a2, bD], JAM.policy.p3);
         if(v270) {
           var v896 = "&" + bD;
           var v766 = v896 + "=";
@@ -1877,33 +1877,33 @@ function v70() {
       }
       if(bF) {
         var v544 = bg$$8;
-        var v897 = JAM.call(JSON2.stringify, JSON2, [bF], JAM.policy.p76F930B34187247043082CAF9881927B310E8F564E301A1AA8BF2B7374C3F6541DC9BB72815A4493);
-        var v768 = JAM.call(g$$1, null, [v897], JAM.policy.p76F930B34187247043082CAF9881927B310E8F564E301A1AA8BF2B7374C3F6541DC9BB72815A4493);
+        var v897 = JAM.call(JSON2.stringify, JSON2, [bF], JAM.policy.p3);
+        var v768 = JAM.call(g$$1, null, [v897], JAM.policy.p3);
         var v545 = "&data=" + v768;
         bg$$8 = v544 + v545
       }else {
         if(U$$2) {
           var v546 = bg$$8;
-          var v898 = JAM.call(JSON2.stringify, JSON2, [U$$2], JAM.policy.p76F930B34187247043082CAF9881927B310E8F564E301A1AA8BF2B7374C3F6541DC9BB72815A4493);
-          var v769 = JAM.call(g$$1, null, [v898], JAM.policy.p76F930B34187247043082CAF9881927B310E8F564E301A1AA8BF2B7374C3F6541DC9BB72815A4493);
+          var v898 = JAM.call(JSON2.stringify, JSON2, [U$$2], JAM.policy.p3);
+          var v769 = JAM.call(g$$1, null, [v898], JAM.policy.p3);
           var v547 = "&data=" + v769;
           bg$$8 = v546 + v547
         }
       }
       if(Q$$3) {
-        var bv = JAM.call(JSON2.stringify, JSON2, [Q$$3], JAM.policy.p76F930B34187247043082CAF9881927B310E8F564E301A1AA8BF2B7374C3F6541DC9BB72815A4493);
+        var bv = JAM.call(JSON2.stringify, JSON2, [Q$$3], JAM.policy.p3);
         var v548 = bv.length;
         var v271 = v548 > 2;
         if(v271) {
           var v549 = bg$$8;
-          var v770 = JAM.call(g$$1, null, [bv], JAM.policy.p76F930B34187247043082CAF9881927B310E8F564E301A1AA8BF2B7374C3F6541DC9BB72815A4493);
+          var v770 = JAM.call(g$$1, null, [bv], JAM.policy.p3);
           var v550 = "&_cvar=" + v770;
           bg$$8 = v549 + v550
         }
         for(bD in bz) {
           var v771 = Object.prototype;
           var v551 = v771.hasOwnProperty;
-          var v273 = JAM.call(v551.call, v551, [bz, bD], JAM.policy.p76F930B34187247043082CAF9881927B310E8F564E301A1AA8BF2B7374C3F6541DC9BB72815A4493);
+          var v273 = JAM.call(v551.call, v551, [bz, bD], JAM.policy.p3);
           if(v273) {
             var v899 = Q$$3[bD];
             var v772 = v899[0];
@@ -1920,7 +1920,7 @@ function v70() {
             }
           }
         }
-        var v274 = JAM.call(JSON2.stringify, JSON2, [Q$$3], JAM.policy.p76F930B34187247043082CAF9881927B310E8F564E301A1AA8BF2B7374C3F6541DC9BB72815A4493);
+        var v274 = JAM.call(JSON2.stringify, JSON2, [Q$$3], JAM.policy.p3);
         aS(bK, v274, ad$$1, ba, X$$1, aa$$1)
       }
       var bi$$inline_0 = bE;
@@ -1969,12 +1969,12 @@ function v70() {
       var v279 = v557.length;
       if(v279) {
         var v558 = bj$$3;
-        var v777 = JAM.call(g$$1, null, [bh$$6], JAM.policy.p76F930B34187247043082CAF9881927B310E8F564E301A1AA8BF2B7374C3F6541DC9BB72815A4493);
+        var v777 = JAM.call(g$$1, null, [bh$$6], JAM.policy.p3);
         var v559 = "&ec_id=" + v777;
         bj$$3 = v558 + v559;
-        var v560 = JAM.call(bf$$13.getTime, bf$$13, [], JAM.policy.p76F930B34187247043082CAF9881927B310E8F564E301A1AA8BF2B7374C3F6541DC9BB72815A4493);
+        var v560 = JAM.call(bf$$13.getTime, bf$$13, [], JAM.policy.p3);
         var v278 = v560 / 1E3;
-        bk$$2 = JAM.call(Math.round, Math, [v278], JAM.policy.p76F930B34187247043082CAF9881927B310E8F564E301A1AA8BF2B7374C3F6541DC9BB72815A4493)
+        bk$$2 = JAM.call(Math.round, Math, [v278], JAM.policy.p3)
       }
       var v561 = "&revenue=" + bg$$9;
       bj$$3 = bj$$3 + v561;
@@ -2006,7 +2006,7 @@ function v70() {
         for(bn$$1 in aQ) {
           var v778 = Object.prototype;
           var v570 = v778.hasOwnProperty;
-          var v293 = JAM.call(v570.call, v570, [aQ, bn$$1], JAM.policy.p76F930B34187247043082CAF9881927B310E8F564E301A1AA8BF2B7374C3F6541DC9BB72815A4493);
+          var v293 = JAM.call(v570.call, v570, [aQ, bn$$1], JAM.policy.p3);
           if(v293) {
             var v903 = aQ[bn$$1];
             var v779 = v903[1];
@@ -2059,12 +2059,12 @@ function v70() {
               v290[4] = 1
             }
             var v292 = aQ[bn$$1];
-            JAM.call(bm$$1.push, bm$$1, [v292], JAM.policy.p76F930B34187247043082CAF9881927B310E8F564E301A1AA8BF2B7374C3F6541DC9BB72815A4493)
+            JAM.call(bm$$1.push, bm$$1, [v292], JAM.policy.p3)
           }
         }
         var v575 = bj$$3;
-        var v909 = JAM.call(JSON2.stringify, JSON2, [bm$$1], JAM.policy.p76F930B34187247043082CAF9881927B310E8F564E301A1AA8BF2B7374C3F6541DC9BB72815A4493);
-        var v787 = JAM.call(g$$1, null, [v909], JAM.policy.p76F930B34187247043082CAF9881927B310E8F564E301A1AA8BF2B7374C3F6541DC9BB72815A4493);
+        var v909 = JAM.call(JSON2.stringify, JSON2, [bm$$1], JAM.policy.p3);
+        var v787 = JAM.call(g$$1, null, [v909], JAM.policy.p3);
         var v576 = "&ec_items=" + v787;
         bj$$3 = v575 + v576
       }
@@ -2077,11 +2077,11 @@ function v70() {
         var bj$$5 = new Date;
         var bk$$3;
         var v577 = aJ + ag$$1;
-        var v578 = JAM.call(bj$$5.getTime, bj$$5, [], JAM.policy.p76F930B34187247043082CAF9881927B310E8F564E301A1AA8BF2B7374C3F6541DC9BB72815A4493);
+        var v578 = JAM.call(bj$$5.getTime, bj$$5, [], JAM.policy.p3);
         var v295 = v577 > v578;
         if(v295) {
           var v579 = S$$3;
-          var v580 = JAM.call(bj$$5.getTime, bj$$5, [], JAM.policy.p76F930B34187247043082CAF9881927B310E8F564E301A1AA8BF2B7374C3F6541DC9BB72815A4493);
+          var v580 = JAM.call(bj$$5.getTime, bj$$5, [], JAM.policy.p3);
           var v294 = v579 < v580;
           if(v294) {
             bk$$3 = am("ping=1", bi$$5, "ping");
@@ -2094,7 +2094,7 @@ function v70() {
       var be$$19 = new Date;
       var v910 = bh$$8 || al;
       var v788 = K(v910);
-      var v581 = JAM.call(g$$1, null, [v788], JAM.policy.p76F930B34187247043082CAF9881927B310E8F564E301A1AA8BF2B7374C3F6541DC9BB72815A4493);
+      var v581 = JAM.call(g$$1, null, [v788], JAM.policy.p3);
       var v296 = "action_name=" + v581;
       var bg$$11 = am(v296, bi$$5, "log");
       aq(bg$$11, aF);
@@ -2122,7 +2122,7 @@ function v70() {
         J(w$$5, "resize", a0);
         J(w$$5, "focus", a0);
         J(w$$5, "blur", a0);
-        aJ = JAM.call(be$$19.getTime, be$$19, [], JAM.policy.p76F930B34187247043082CAF9881927B310E8F564E301A1AA8BF2B7374C3F6541DC9BB72815A4493);
+        aJ = JAM.call(be$$19.getTime, be$$19, [], JAM.policy.p3);
         JAM.call(setTimeout, null, [bf$$15, ag$$1])
       }
       return
@@ -2130,7 +2130,7 @@ function v70() {
     function aZ(bf$$18, be$$22, bh$$11) {
       var v583 = be$$22 + "=";
       var v790 = a6(bf$$18);
-      var v584 = JAM.call(g$$1, null, [v790], JAM.policy.p76F930B34187247043082CAF9881927B310E8F564E301A1AA8BF2B7374C3F6541DC9BB72815A4493);
+      var v584 = JAM.call(g$$1, null, [v790], JAM.policy.p3);
       var v298 = v583 + v584;
       var bg$$14 = am(v298, bh$$11, "link");
       aq(bg$$14, aF);
@@ -2140,10 +2140,10 @@ function v70() {
       var v301 = bf$$19 !== "";
       if(v301) {
         var v585 = bf$$19;
-        var v791 = JAM.call(be$$23.charAt, be$$23, [0], JAM.policy.p76F930B34187247043082CAF9881927B310E8F564E301A1AA8BF2B7374C3F6541DC9BB72815A4493);
-        var v586 = JAM.call(v791.toUpperCase, v791, [], JAM.policy.p76F930B34187247043082CAF9881927B310E8F564E301A1AA8BF2B7374C3F6541DC9BB72815A4493);
+        var v791 = JAM.call(be$$23.charAt, be$$23, [0], JAM.policy.p3);
+        var v586 = JAM.call(v791.toUpperCase, v791, [], JAM.policy.p3);
         var v299 = v585 + v586;
-        var v300 = JAM.call(be$$23.slice, be$$23, [1], JAM.policy.p76F930B34187247043082CAF9881927B310E8F564E301A1AA8BF2B7374C3F6541DC9BB72815A4493);
+        var v300 = JAM.call(be$$23.slice, be$$23, [1], JAM.policy.p3);
         return v299 + v300
       }
       return be$$23
@@ -2151,8 +2151,8 @@ function v70() {
     function ai$$1(bj$$6) {
       function bf$$20() {
         var v302 = bg$$15 + "visibilitychange";
-        JAM.call(n$$6.removeEventListener, n$$6, [v302, bf$$20, false], JAM.policy.p76F930B34187247043082CAF9881927B310E8F564E301A1AA8BF2B7374C3F6541DC9BB72815A4493);
-        JAM.call(bj$$6, null, [], JAM.policy.p76F930B34187247043082CAF9881927B310E8F564E301A1AA8BF2B7374C3F6541DC9BB72815A4493);
+        JAM.call(n$$6.removeEventListener, n$$6, [v302, bf$$20, false], JAM.policy.p3);
+        JAM.call(bj$$6, null, [], JAM.policy.p3);
         return
       }
       var bi$$7;
@@ -2169,7 +2169,7 @@ function v70() {
           var v792 = Object.prototype;
           var v588 = v792.hasOwnProperty;
           var v589 = a3(bg$$15, "hidden");
-          var v304 = JAM.call(v588.call, v588, [n$$6, v589], JAM.policy.p76F930B34187247043082CAF9881927B310E8F564E301A1AA8BF2B7374C3F6541DC9BB72815A4493);
+          var v304 = JAM.call(v588.call, v588, [n$$6, v589], JAM.policy.p3);
           if(v304) {
             var v793 = n$$6;
             var v794 = a3(bg$$15, "visibilityState");
@@ -2190,7 +2190,7 @@ function v70() {
         J(n$$6, v307, bf$$20);
         return
       }
-      JAM.call(bj$$6, null, [], JAM.policy.p76F930B34187247043082CAF9881927B310E8F564E301A1AA8BF2B7374C3F6541DC9BB72815A4493);
+      JAM.call(bj$$6, null, [], JAM.policy.p3);
       return
     }
     function ah$$1(bg$$16, bf$$21) {
@@ -2222,7 +2222,7 @@ function v70() {
         var v797 = p$$3(bh$$15);
         if(v797) {
           var v1000 = bj$$8.tagName;
-          var v966 = bf$$23 = JAM.call(v1000.toUpperCase, v1000, [], JAM.policy.p76F930B34187247043082CAF9881927B310E8F564E301A1AA8BF2B7374C3F6541DC9BB72815A4493);
+          var v966 = bf$$23 = JAM.call(v1000.toUpperCase, v1000, [], JAM.policy.p3);
           var v911 = v966 !== "A";
           if(v911) {
             v911 = bf$$23 !== "AREA"
@@ -2240,7 +2240,7 @@ function v70() {
           var v799 = p$$3(bh$$15);
           if(v799) {
             var v1001 = bj$$8.tagName;
-            var v967 = bf$$23 = JAM.call(v1001.toUpperCase, v1001, [], JAM.policy.p76F930B34187247043082CAF9881927B310E8F564E301A1AA8BF2B7374C3F6541DC9BB72815A4493);
+            var v967 = bf$$23 = JAM.call(v1001.toUpperCase, v1001, [], JAM.policy.p3);
             var v912 = v967 !== "A";
             if(v912) {
               v912 = bf$$23 !== "AREA"
@@ -2261,11 +2261,11 @@ function v70() {
           v310 = b$$1(v598)
         }
         var bk$$4 = v310;
-        var bl$$2 = JAM.call(bk$$4.toLowerCase, bk$$4, [], JAM.policy.p76F930B34187247043082CAF9881927B310E8F564E301A1AA8BF2B7374C3F6541DC9BB72815A4493);
+        var bl$$2 = JAM.call(bk$$4.toLowerCase, bk$$4, [], JAM.policy.p3);
         var v311 = bj$$8.href;
-        var bg$$18 = JAM.call(v311.replace, v311, [bk$$4, bl$$2], JAM.policy.p76F930B34187247043082CAF9881927B310E8F564E301A1AA8BF2B7374C3F6541DC9BB72815A4493);
+        var bg$$18 = JAM.call(v311.replace, v311, [bk$$4, bl$$2], JAM.policy.p3);
         var bi$$9 = new RegExp("^(javascript|vbscript|jscript|mocha|livescript|ecmascript|mailto):", "i");
-        var v600 = JAM.call(bi$$9.test, bi$$9, [bg$$18], JAM.policy.p76F930B34187247043082CAF9881927B310E8F564E301A1AA8BF2B7374C3F6541DC9BB72815A4493);
+        var v600 = JAM.call(bi$$9.test, bi$$9, [bg$$18], JAM.policy.p3);
         var v314 = !v600;
         if(v314) {
           var bh$$inline_7 = bj$$8.className;
@@ -2277,15 +2277,15 @@ function v70() {
           var v312 = v601 + ")([?&#]|$)";
           var bj$$inline_12 = new RegExp(v312, "i");
           var v313;
-          var v603 = JAM.call(bf$$inline_11.test, bf$$inline_11, [bh$$inline_7], JAM.policy.p76F930B34187247043082CAF9881927B310E8F564E301A1AA8BF2B7374C3F6541DC9BB72815A4493);
+          var v603 = JAM.call(bf$$inline_11.test, bf$$inline_11, [bh$$inline_7], JAM.policy.p3);
           if(v603) {
             v313 = "link"
           }else {
             var v602;
-            var v913 = JAM.call(bg$$inline_10.test, bg$$inline_10, [bh$$inline_7], JAM.policy.p76F930B34187247043082CAF9881927B310E8F564E301A1AA8BF2B7374C3F6541DC9BB72815A4493);
+            var v913 = JAM.call(bg$$inline_10.test, bg$$inline_10, [bh$$inline_7], JAM.policy.p3);
             var v968 = !v913;
             if(v968) {
-              v913 = JAM.call(bj$$inline_12.test, bj$$inline_12, [be$$inline_8], JAM.policy.p76F930B34187247043082CAF9881927B310E8F564E301A1AA8BF2B7374C3F6541DC9BB72815A4493)
+              v913 = JAM.call(bj$$inline_12.test, bj$$inline_12, [be$$inline_8], JAM.policy.p3)
             }
             var v801 = v913;
             if(v801) {
@@ -2303,7 +2303,7 @@ function v70() {
           }
           be$$27 = v313;
           if(be$$27) {
-            bg$$18 = JAM.call(d$$1, null, [bg$$18], JAM.policy.p76F930B34187247043082CAF9881927B310E8F564E301A1AA8BF2B7374C3F6541DC9BB72815A4493);
+            bg$$18 = JAM.call(d$$1, null, [bg$$18], JAM.policy.p3);
             aZ(bg$$18, be$$27)
           }
         }
@@ -2398,7 +2398,7 @@ function v70() {
           for(;v326;) {
             var v915 = bh$$16[bg$$20];
             var v803 = v915.className;
-            var v613 = JAM.call(be$$30.test, be$$30, [v803], JAM.policy.p76F930B34187247043082CAF9881927B310E8F564E301A1AA8BF2B7374C3F6541DC9BB72815A4493);
+            var v613 = JAM.call(be$$30.test, be$$30, [v803], JAM.policy.p3);
             var v325 = !v613;
             if(v325) {
               var v324 = bh$$16[bg$$20];
@@ -2419,7 +2419,7 @@ function v70() {
       var v328;
       var v804 = new RegExp("Mac OS X.*Safari/");
       var v805 = c$$1.userAgent;
-      var v616 = JAM.call(v804.test, v804, [v805], JAM.policy.p76F930B34187247043082CAF9881927B310E8F564E301A1AA8BF2B7374C3F6541DC9BB72815A4493);
+      var v616 = JAM.call(v804.test, v804, [v805], JAM.policy.p3);
       if(v616) {
         var v615 = w$$5.devicePixelRatio;
         var v806 = !v615;
@@ -2433,7 +2433,7 @@ function v70() {
       var be$$31 = v328;
       var v807 = new RegExp("MSIE");
       var v808 = c$$1.userAgent;
-      var v617 = JAM.call(v807.test, v807, [v808], JAM.policy.p76F930B34187247043082CAF9881927B310E8F564E301A1AA8BF2B7374C3F6541DC9BB72815A4493);
+      var v617 = JAM.call(v807.test, v807, [v808], JAM.policy.p3);
       var v337 = !v617;
       if(v337) {
         var v618 = c$$1.mimeTypes;
@@ -2446,7 +2446,7 @@ function v70() {
           for(bf$$27 in bh$$17) {
             var v810 = Object.prototype;
             var v619 = v810.hasOwnProperty;
-            var v332 = JAM.call(v619.call, v619, [bh$$17, bf$$27], JAM.policy.p76F930B34187247043082CAF9881927B310E8F564E301A1AA8BF2B7374C3F6541DC9BB72815A4493);
+            var v332 = JAM.call(v619.call, v619, [bh$$17, bf$$27], JAM.policy.p3);
             if(v332) {
               var v329 = c$$1.mimeTypes;
               var v330 = bh$$17[bf$$27];
@@ -2462,7 +2462,7 @@ function v70() {
               }else {
                 v331 = "0"
               }
-              JAM.set(a2, bf$$27, v331, JAM.policy.pE96DC1A06663FB021BA567E6C73EA87B0883BB12)
+              JAM.set(a2, bf$$27, v331, JAM.policy.p2)
             }
           }
         }
@@ -2473,7 +2473,7 @@ function v70() {
           var v917 = c$$1.javaEnabled;
           var v813 = p$$3(v917);
           if(v813) {
-            v813 = JAM.call(c$$1.javaEnabled, c$$1, [], JAM.policy.p76F930B34187247043082CAF9881927B310E8F564E301A1AA8BF2B7374C3F6541DC9BB72815A4493)
+            v813 = JAM.call(c$$1.javaEnabled, c$$1, [], JAM.policy.p3)
           }
           v621 = v813
         }
@@ -2489,7 +2489,7 @@ function v70() {
         }
         var v336 = a2;
         var v1088 = P$$5();
-        introspect(JAM.policy.pE96DC1A06663FB021BA567E6C73EA87B0883BB12) {
+        introspect(JAM.policy.p2) {
           v336.cookie = v1088
         }
       }
@@ -2597,10 +2597,10 @@ function v70() {
 function v5() {
   function v4(o$$2, f$$5) {
     function v3(p$$2) {
-      var v918 = JAM.call(p$$2.charCodeAt, p$$2, [0], JAM.policy.p76F930B34187247043082CAF9881927B310E8F564E301A1AA8BF2B7374C3F6541DC9BB72815A4493);
-      var v816 = JAM.call(v918.toString, v918, [16], JAM.policy.p76F930B34187247043082CAF9881927B310E8F564E301A1AA8BF2B7374C3F6541DC9BB72815A4493);
+      var v918 = JAM.call(p$$2.charCodeAt, p$$2, [0], JAM.policy.p3);
+      var v816 = JAM.call(v918.toString, v918, [16], JAM.policy.p3);
       var v630 = "0000" + v816;
-      var v348 = JAM.call(v630.slice, v630, [-4], JAM.policy.p76F930B34187247043082CAF9881927B310E8F564E301A1AA8BF2B7374C3F6541DC9BB72815A4493);
+      var v348 = JAM.call(v630.slice, v630, [-4], JAM.policy.p3);
       return"\\u" + v348
     }
     function m$$4(s$$3, r$$1) {
@@ -2617,35 +2617,35 @@ function v5() {
         for(q$$1 in t$$1) {
           var v818 = Object.prototype;
           var v632 = v818.hasOwnProperty;
-          var v350 = JAM.call(v632.call, v632, [t$$1, q$$1], JAM.policy.p76F930B34187247043082CAF9881927B310E8F564E301A1AA8BF2B7374C3F6541DC9BB72815A4493);
+          var v350 = JAM.call(v632.call, v632, [t$$1, q$$1], JAM.policy.p3);
           if(v350) {
             p$$1 = m$$4(t$$1, q$$1);
             var v349 = p$$1 !== undefined;
             if(v349) {
-              JAM.set(t$$1, q$$1, p$$1, JAM.policy.pE96DC1A06663FB021BA567E6C73EA87B0883BB12)
+              JAM.set(t$$1, q$$1, p$$1, JAM.policy.p2)
             }else {
               delete t$$1[q$$1]
             }
           }
         }
       }
-      return JAM.call(f$$5.call, f$$5, [s$$3, r$$1, t$$1], JAM.policy.p76F930B34187247043082CAF9881927B310E8F564E301A1AA8BF2B7374C3F6541DC9BB72815A4493)
+      return JAM.call(f$$5.call, f$$5, [s$$3, r$$1, t$$1], JAM.policy.p3)
     }
     var n$$5;
     o$$2 = String(o$$2);
     c.lastIndex = 0;
-    var v352 = JAM.call(c.test, c, [o$$2], JAM.policy.p76F930B34187247043082CAF9881927B310E8F564E301A1AA8BF2B7374C3F6541DC9BB72815A4493);
+    var v352 = JAM.call(c.test, c, [o$$2], JAM.policy.p3);
     if(v352) {
-      o$$2 = JAM.call(o$$2.replace, o$$2, [c, v3], JAM.policy.p76F930B34187247043082CAF9881927B310E8F564E301A1AA8BF2B7374C3F6541DC9BB72815A4493)
+      o$$2 = JAM.call(o$$2.replace, o$$2, [c, v3], JAM.policy.p3)
     }
     var v633 = new RegExp("^[\\],:{}\\s]*$");
     var v969 = new RegExp('\\\\(?:["\\\\/bfnrt]|u[0-9a-fA-F]{4})', "g");
-    var v919 = JAM.call(o$$2.replace, o$$2, [v969, "@"], JAM.policy.p76F930B34187247043082CAF9881927B310E8F564E301A1AA8BF2B7374C3F6541DC9BB72815A4493);
+    var v919 = JAM.call(o$$2.replace, o$$2, [v969, "@"], JAM.policy.p3);
     var v920 = new RegExp('"[^"\\\\\n\r]*"|true|false|null|-?\\d+(?:\\.\\d*)?(?:[eE][+\\-]?\\d+)?', "g");
-    var v819 = JAM.call(v919.replace, v919, [v920, "]"], JAM.policy.p76F930B34187247043082CAF9881927B310E8F564E301A1AA8BF2B7374C3F6541DC9BB72815A4493);
+    var v819 = JAM.call(v919.replace, v919, [v920, "]"], JAM.policy.p3);
     var v820 = new RegExp("(?:^|:|,)(?:\\s*\\[)+", "g");
-    var v634 = JAM.call(v819.replace, v819, [v820, ""], JAM.policy.p76F930B34187247043082CAF9881927B310E8F564E301A1AA8BF2B7374C3F6541DC9BB72815A4493);
-    var v355 = JAM.call(v633.test, v633, [v634], JAM.policy.p76F930B34187247043082CAF9881927B310E8F564E301A1AA8BF2B7374C3F6541DC9BB72815A4493);
+    var v634 = JAM.call(v819.replace, v819, [v820, ""], JAM.policy.p3);
+    var v355 = JAM.call(v633.test, v633, [v634], JAM.policy.p3);
     if(v355) {
       var v635 = "(" + o$$2;
       var v353 = v635 + ")";
@@ -2726,33 +2726,33 @@ function v5() {
   function l(n$$1, m) {
     var v642 = Object.prototype;
     var v362 = v642.toString;
-    var f$$1 = JAM.call(v362.apply, v362, [n$$1], JAM.policy.p76F930B34187247043082CAF9881927B310E8F564E301A1AA8BF2B7374C3F6541DC9BB72815A4493);
+    var f$$1 = JAM.call(v362.apply, v362, [n$$1], JAM.policy.p3);
     var v364 = f$$1 === "[object Date]";
     if(v364) {
       var v363;
-      var v823 = JAM.call(n$$1.valueOf, n$$1, [], JAM.policy.p76F930B34187247043082CAF9881927B310E8F564E301A1AA8BF2B7374C3F6541DC9BB72815A4493);
+      var v823 = JAM.call(n$$1.valueOf, n$$1, [], JAM.policy.p3);
       var v644 = isFinite(v823);
       if(v644) {
-        var v1051 = JAM.call(n$$1.getUTCFullYear, n$$1, [], JAM.policy.p76F930B34187247043082CAF9881927B310E8F564E301A1AA8BF2B7374C3F6541DC9BB72815A4493);
+        var v1051 = JAM.call(n$$1.getUTCFullYear, n$$1, [], JAM.policy.p3);
         var v1045 = v1051 + "-";
-        var v1056 = JAM.call(n$$1.getUTCMonth, n$$1, [], JAM.policy.p76F930B34187247043082CAF9881927B310E8F564E301A1AA8BF2B7374C3F6541DC9BB72815A4493);
+        var v1056 = JAM.call(n$$1.getUTCMonth, n$$1, [], JAM.policy.p3);
         var v1052 = v1056 + 1;
         var v1046 = d(v1052);
         var v1040 = v1045 + v1046;
         var v1035 = v1040 + "-";
-        var v1041 = JAM.call(n$$1.getUTCDate, n$$1, [], JAM.policy.p76F930B34187247043082CAF9881927B310E8F564E301A1AA8BF2B7374C3F6541DC9BB72815A4493);
+        var v1041 = JAM.call(n$$1.getUTCDate, n$$1, [], JAM.policy.p3);
         var v1036 = d(v1041);
         var v1031 = v1035 + v1036;
         var v1022 = v1031 + "T";
-        var v1032 = JAM.call(n$$1.getUTCHours, n$$1, [], JAM.policy.p76F930B34187247043082CAF9881927B310E8F564E301A1AA8BF2B7374C3F6541DC9BB72815A4493);
+        var v1032 = JAM.call(n$$1.getUTCHours, n$$1, [], JAM.policy.p3);
         var v1023 = d(v1032);
         var v1003 = v1022 + v1023;
         var v973 = v1003 + ":";
-        var v1004 = JAM.call(n$$1.getUTCMinutes, n$$1, [], JAM.policy.p76F930B34187247043082CAF9881927B310E8F564E301A1AA8BF2B7374C3F6541DC9BB72815A4493);
+        var v1004 = JAM.call(n$$1.getUTCMinutes, n$$1, [], JAM.policy.p3);
         var v974 = d(v1004);
         var v923 = v973 + v974;
         var v824 = v923 + ":";
-        var v924 = JAM.call(n$$1.getUTCSeconds, n$$1, [], JAM.policy.p76F930B34187247043082CAF9881927B310E8F564E301A1AA8BF2B7374C3F6541DC9BB72815A4493);
+        var v924 = JAM.call(n$$1.getUTCSeconds, n$$1, [], JAM.policy.p3);
         var v825 = d(v924);
         var v643 = v824 + v825;
         v363 = v643 + "Z"
@@ -2773,7 +2773,7 @@ function v5() {
     }
     var v365 = v645;
     if(v365) {
-      return JAM.call(n$$1.valueOf, n$$1, [], JAM.policy.p76F930B34187247043082CAF9881927B310E8F564E301A1AA8BF2B7374C3F6541DC9BB72815A4493)
+      return JAM.call(n$$1.valueOf, n$$1, [], JAM.policy.p3)
     }
     var v646 = f$$1 !== "[object Array]";
     if(v646) {
@@ -2783,7 +2783,7 @@ function v5() {
     }
     var v366 = v646;
     if(v366) {
-      return JAM.call(n$$1.toJSON, n$$1, [m], JAM.policy.p76F930B34187247043082CAF9881927B310E8F564E301A1AA8BF2B7374C3F6541DC9BB72815A4493)
+      return JAM.call(n$$1.toJSON, n$$1, [m], JAM.policy.p3)
     }
     return n$$1
   }
@@ -2796,19 +2796,19 @@ function v5() {
       if(v648) {
         v367 = n$$2
       }else {
-        var v975 = JAM.call(m$$1.charCodeAt, m$$1, [0], JAM.policy.p76F930B34187247043082CAF9881927B310E8F564E301A1AA8BF2B7374C3F6541DC9BB72815A4493);
-        var v927 = JAM.call(v975.toString, v975, [16], JAM.policy.p76F930B34187247043082CAF9881927B310E8F564E301A1AA8BF2B7374C3F6541DC9BB72815A4493);
+        var v975 = JAM.call(m$$1.charCodeAt, m$$1, [0], JAM.policy.p3);
+        var v927 = JAM.call(v975.toString, v975, [16], JAM.policy.p3);
         var v830 = "0000" + v927;
-        var v647 = JAM.call(v830.slice, v830, [-4], JAM.policy.p76F930B34187247043082CAF9881927B310E8F564E301A1AA8BF2B7374C3F6541DC9BB72815A4493);
+        var v647 = JAM.call(v830.slice, v830, [-4], JAM.policy.p3);
         v367 = "\\u" + v647
       }
       return v367
     }
     i$$1.lastIndex = 0;
     var v368;
-    var v651 = JAM.call(i$$1.test, i$$1, [f$$2], JAM.policy.p76F930B34187247043082CAF9881927B310E8F564E301A1AA8BF2B7374C3F6541DC9BB72815A4493);
+    var v651 = JAM.call(i$$1.test, i$$1, [f$$2], JAM.policy.p3);
     if(v651) {
-      var v831 = JAM.call(f$$2.replace, f$$2, [i$$1, v1], JAM.policy.p76F930B34187247043082CAF9881927B310E8F564E301A1AA8BF2B7374C3F6541DC9BB72815A4493);
+      var v831 = JAM.call(f$$2.replace, f$$2, [i$$1, v1], JAM.policy.p3);
       var v649 = '"' + v831;
       v368 = v649 + '"'
     }else {
@@ -2837,7 +2837,7 @@ function v5() {
     var v653 = typeof h$$4;
     var v370 = v653 === "function";
     if(v370) {
-      r = JAM.call(h$$4.call, h$$4, [p, s$$2, r], JAM.policy.p76F930B34187247043082CAF9881927B310E8F564E301A1AA8BF2B7374C3F6541DC9BB72815A4493)
+      r = JAM.call(h$$4.call, h$$4, [p, s$$2, r], JAM.policy.p3)
     }
     var v385 = typeof r;
     switch(v385) {
@@ -2865,7 +2865,7 @@ function v5() {
         o = [];
         var v928 = Object.prototype;
         var v833 = v928.toString;
-        var v655 = JAM.call(v833.apply, v833, [r], JAM.policy.p76F930B34187247043082CAF9881927B310E8F564E301A1AA8BF2B7374C3F6541DC9BB72815A4493);
+        var v655 = JAM.call(v833.apply, v833, [r], JAM.policy.p3);
         var v377 = v655 === "[object Array]";
         if(v377) {
           f$$3 = r.length;
@@ -2893,13 +2893,13 @@ function v5() {
             if(j) {
               var v1005 = "[\n" + j;
               var v1024 = ",\n" + j;
-              var v1006 = JAM.call(o.join, o, [v1024], JAM.policy.p76F930B34187247043082CAF9881927B310E8F564E301A1AA8BF2B7374C3F6541DC9BB72815A4493);
+              var v1006 = JAM.call(o.join, o, [v1024], JAM.policy.p3);
               var v976 = v1005 + v1006;
               var v929 = v976 + "\n";
               var v836 = v929 + q;
               v657 = v836 + "]"
             }else {
-              var v930 = JAM.call(o.join, o, [","], JAM.policy.p76F930B34187247043082CAF9881927B310E8F564E301A1AA8BF2B7374C3F6541DC9BB72815A4493);
+              var v930 = JAM.call(o.join, o, [","], JAM.policy.p3);
               var v837 = "[" + v930;
               v657 = v837 + "]"
             }
@@ -2937,7 +2937,7 @@ function v5() {
                 var v841 = v931;
                 var v661 = v840 + v841;
                 var v378 = v661 + t;
-                JAM.call(o.push, o, [v378], JAM.policy.p76F930B34187247043082CAF9881927B310E8F564E301A1AA8BF2B7374C3F6541DC9BB72815A4493)
+                JAM.call(o.push, o, [v378], JAM.policy.p3)
               }
             }
             n$$3 = n$$3 + 1;
@@ -2947,7 +2947,7 @@ function v5() {
           for(m$$2 in r) {
             var v842 = Object.prototype;
             var v662 = v842.hasOwnProperty;
-            var v382 = JAM.call(v662.call, v662, [r, m$$2], JAM.policy.p76F930B34187247043082CAF9881927B310E8F564E301A1AA8BF2B7374C3F6541DC9BB72815A4493);
+            var v382 = JAM.call(v662.call, v662, [r, m$$2], JAM.policy.p3);
             if(v382) {
               t = g(m$$2, r);
               if(t) {
@@ -2961,7 +2961,7 @@ function v5() {
                 var v844 = v932;
                 var v663 = v843 + v844;
                 var v381 = v663 + t;
-                JAM.call(o.push, o, [v381], JAM.policy.p76F930B34187247043082CAF9881927B310E8F564E301A1AA8BF2B7374C3F6541DC9BB72815A4493)
+                JAM.call(o.push, o, [v381], JAM.policy.p3)
               }
             }
           }
@@ -2976,13 +2976,13 @@ function v5() {
           if(j) {
             var v1007 = "{\n" + j;
             var v1025 = ",\n" + j;
-            var v1008 = JAM.call(o.join, o, [v1025], JAM.policy.p76F930B34187247043082CAF9881927B310E8F564E301A1AA8BF2B7374C3F6541DC9BB72815A4493);
+            var v1008 = JAM.call(o.join, o, [v1025], JAM.policy.p3);
             var v977 = v1007 + v1008;
             var v933 = v977 + "\n";
             var v846 = v933 + q;
             v664 = v846 + "}"
           }else {
-            var v934 = JAM.call(o.join, o, [","], JAM.policy.p76F930B34187247043082CAF9881927B310E8F564E301A1AA8BF2B7374C3F6541DC9BB72815A4493);
+            var v934 = JAM.call(o.join, o, [","], JAM.policy.p3);
             var v847 = "{" + v934;
             v664 = v847 + "}"
           }
@@ -3018,9 +3018,9 @@ function v5() {
 }
 function piwik_log(b$$2, f$$7, d$$2, g$$2) {
   function v0(i$$26, k$$2, j$$2, h$$7) {
-    JAM.call(e$$6.setSiteId, e$$6, [k$$2], JAM.policy.p76F930B34187247043082CAF9881927B310E8F564E301A1AA8BF2B7374C3F6541DC9BB72815A4493);
-    JAM.call(e$$6.setTrackerUrl, e$$6, [j$$2], JAM.policy.p76F930B34187247043082CAF9881927B310E8F564E301A1AA8BF2B7374C3F6541DC9BB72815A4493);
-    JAM.call(e$$6.trackLink, e$$6, [i$$26, h$$7], JAM.policy.p76F930B34187247043082CAF9881927B310E8F564E301A1AA8BF2B7374C3F6541DC9BB72815A4493);
+    JAM.call(e$$6.setSiteId, e$$6, [k$$2], JAM.policy.p3);
+    JAM.call(e$$6.setTrackerUrl, e$$6, [j$$2], JAM.policy.p3);
+    JAM.call(e$$6.trackLink, e$$6, [i$$26, h$$7], JAM.policy.p3);
     return
   }
   function a$$2(h$$6) {
@@ -3036,30 +3036,30 @@ function piwik_log(b$$2, f$$7, d$$2, g$$2) {
     return
   }
   var c$$2;
-  var e$$6 = JAM.call(Piwik.getTracker, Piwik, [d$$2, f$$7], JAM.policy.p76F930B34187247043082CAF9881927B310E8F564E301A1AA8BF2B7374C3F6541DC9BB72815A4493);
-  JAM.call(e$$6.setDocumentTitle, e$$6, [b$$2], JAM.policy.p76F930B34187247043082CAF9881927B310E8F564E301A1AA8BF2B7374C3F6541DC9BB72815A4493);
-  JAM.call(e$$6.setCustomData, e$$6, [g$$2], JAM.policy.p76F930B34187247043082CAF9881927B310E8F564E301A1AA8BF2B7374C3F6541DC9BB72815A4493);
+  var e$$6 = JAM.call(Piwik.getTracker, Piwik, [d$$2, f$$7], JAM.policy.p3);
+  JAM.call(e$$6.setDocumentTitle, e$$6, [b$$2], JAM.policy.p3);
+  JAM.call(e$$6.setCustomData, e$$6, [g$$2], JAM.policy.p3);
   c$$2 = a$$2("tracker_pause");
   if(c$$2) {
-    JAM.call(e$$6.setLinkTrackingTimer, e$$6, [c$$2], JAM.policy.p76F930B34187247043082CAF9881927B310E8F564E301A1AA8BF2B7374C3F6541DC9BB72815A4493)
+    JAM.call(e$$6.setLinkTrackingTimer, e$$6, [c$$2], JAM.policy.p3)
   }
   c$$2 = a$$2("download_extensions");
   if(c$$2) {
-    JAM.call(e$$6.setDownloadExtensions, e$$6, [c$$2], JAM.policy.p76F930B34187247043082CAF9881927B310E8F564E301A1AA8BF2B7374C3F6541DC9BB72815A4493)
+    JAM.call(e$$6.setDownloadExtensions, e$$6, [c$$2], JAM.policy.p3)
   }
   c$$2 = a$$2("hosts_alias");
   if(c$$2) {
-    JAM.call(e$$6.setDomains, e$$6, [c$$2], JAM.policy.p76F930B34187247043082CAF9881927B310E8F564E301A1AA8BF2B7374C3F6541DC9BB72815A4493)
+    JAM.call(e$$6.setDomains, e$$6, [c$$2], JAM.policy.p3)
   }
   c$$2 = a$$2("ignore_classes");
   if(c$$2) {
-    JAM.call(e$$6.setIgnoreClasses, e$$6, [c$$2], JAM.policy.p76F930B34187247043082CAF9881927B310E8F564E301A1AA8BF2B7374C3F6541DC9BB72815A4493)
+    JAM.call(e$$6.setIgnoreClasses, e$$6, [c$$2], JAM.policy.p3)
   }
-  JAM.call(e$$6.trackPageView, e$$6, [], JAM.policy.p76F930B34187247043082CAF9881927B310E8F564E301A1AA8BF2B7374C3F6541DC9BB72815A4493);
+  JAM.call(e$$6.trackPageView, e$$6, [], JAM.policy.p3);
   var v390 = a$$2("install_tracker");
   if(v390) {
     piwik_track = v0;
-    JAM.call(e$$6.enableLinkTracking, e$$6, [], JAM.policy.p76F930B34187247043082CAF9881927B310E8F564E301A1AA8BF2B7374C3F6541DC9BB72815A4493)
+    JAM.call(e$$6.enableLinkTracking, e$$6, [], JAM.policy.p3)
   }
   return
 }
@@ -3088,6 +3088,6 @@ if(v670) {
 }
 var pkBaseURL = v393;
 var v394 = pkBaseURL + "piwik.php";
-var piwikTracker = JAM.call(Piwik.getTracker, Piwik, [v394, "crash"], JAM.policy.p76F930B34187247043082CAF9881927B310E8F564E301A1AA8BF2B7374C3F6541DC9BB72815A4493);
-JAM.call(piwikTracker.trackPageView, piwikTracker, [], JAM.policy.p76F930B34187247043082CAF9881927B310E8F564E301A1AA8BF2B7374C3F6541DC9BB72815A4493);
-JAM.call(piwikTracker.enableLinkTracking, piwikTracker, [], JAM.policy.p76F930B34187247043082CAF9881927B310E8F564E301A1AA8BF2B7374C3F6541DC9BB72815A4493);
+var piwikTracker = JAM.call(Piwik.getTracker, Piwik, [v394, "crash"], JAM.policy.p3);
+JAM.call(piwikTracker.trackPageView, piwikTracker, [], JAM.policy.p3);
+JAM.call(piwikTracker.enableLinkTracking, piwikTracker, [], JAM.policy.p3);

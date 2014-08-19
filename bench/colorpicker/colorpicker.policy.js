@@ -25,7 +25,7 @@ var policy = function() {
   }
   pFull.subsumedBy = pFull;
   Object.freeze(pFull);
-  function pD0BBA7FAE07D4CAC3C07091FDFB8C6213A5ACAAB8D73029A35D0B675A79D1B1E133053ADEDD6839E91CD5A17081957B5A666BECDD1ADC94436AACBCB(tx) {
+  function p4(tx) {
     var commit = true;
     var as = tx.getActionSequence();
     var len = as.length;
@@ -46,15 +46,15 @@ var policy = function() {
       JAM.prevent(tx)
     }
   }
-  pD0BBA7FAE07D4CAC3C07091FDFB8C6213A5ACAAB8D73029A35D0B675A79D1B1E133053ADEDD6839E91CD5A17081957B5A666BECDD1ADC94436AACBCB.subsumedBy = pFull;
-  Object.freeze(pD0BBA7FAE07D4CAC3C07091FDFB8C6213A5ACAAB8D73029A35D0B675A79D1B1E133053ADEDD6839E91CD5A17081957B5A666BECDD1ADC94436AACBCB);
-  function pD0BBA7FAE07D4CAC3C07091FDFB8C6213A5ACAAB8D73029A35D0B675A79D1B1E133053ADEDD6839E(tx) {
+  p4.subsumedBy = pFull;
+  Object.freeze(p4);
+  function p2(tx) {
     var commit = true;
-    var as = tx.getActionSequence();
+    var as = tx.getWriteSequence();
     var len = as.length;
     for(var i = 0;i < len;i++) {
       var node = as[i];
-      if(node.type === "write" && (node.id === "src" && JAM.instanceof(node.obj, _HTMLElement) || node.id === "location" && JAM.instanceof(node.obj, _Window))) {
+      if(node.id === "src" && JAM.instanceof(node.obj, _HTMLElement) || node.id === "location" && JAM.instanceof(node.obj, _Window)) {
         commit = false;
         break
       }
@@ -65,15 +65,16 @@ var policy = function() {
       JAM.prevent(tx)
     }
   }
-  pD0BBA7FAE07D4CAC3C07091FDFB8C6213A5ACAAB8D73029A35D0B675A79D1B1E133053ADEDD6839E.subsumedBy = pFull;
-  Object.freeze(pD0BBA7FAE07D4CAC3C07091FDFB8C6213A5ACAAB8D73029A35D0B675A79D1B1E133053ADEDD6839E);
-  function pD0BBA7FAE07D4CAC3C07091FDFB8C6213A5ACAAB(tx) {
+  p2.subsumedBy = pFull;
+  p2.itype = "write";
+  Object.freeze(p2);
+  function p1(tx) {
     var commit = true;
-    var as = tx.getActionSequence();
+    var as = tx.getWriteSequence();
     var len = as.length;
     for(var i = 0;i < len;i++) {
       var node = as[i];
-      if(node.type === "write" && node.id === "src" && JAM.instanceof(node.obj, _HTMLElement)) {
+      if(node.id === "src" && JAM.instanceof(node.obj, _HTMLElement)) {
         commit = false;
         break
       }
@@ -84,15 +85,16 @@ var policy = function() {
       JAM.prevent(tx)
     }
   }
-  pD0BBA7FAE07D4CAC3C07091FDFB8C6213A5ACAAB.subsumedBy = pFull;
-  Object.freeze(pD0BBA7FAE07D4CAC3C07091FDFB8C6213A5ACAAB);
-  function p91CD5A17081957B5A666BECDD1ADC94436AACBCB(tx) {
+  p1.subsumedBy = pFull;
+  p1.itype = "write";
+  Object.freeze(p1);
+  function p3(tx) {
     var commit = true;
-    var as = tx.getActionSequence();
+    var as = tx.getReadSequence();
     var len = as.length;
     for(var i = 0;i < len;i++) {
       var node = as[i];
-      if(node.type === "read" && node.id === "cookie" && JAM.instanceof(node.obj, _HTMLDocument)) {
+      if(node.id === "cookie" && JAM.instanceof(node.obj, _HTMLDocument)) {
         commit = false;
         break
       }
@@ -103,8 +105,8 @@ var policy = function() {
       JAM.prevent(tx)
     }
   }
-  p91CD5A17081957B5A666BECDD1ADC94436AACBCB.subsumedBy = pFull;
-  Object.freeze(p91CD5A17081957B5A666BECDD1ADC94436AACBCB);
-  return{pD0BBA7FAE07D4CAC3C07091FDFB8C6213A5ACAAB8D73029A35D0B675A79D1B1E133053ADEDD6839E91CD5A17081957B5A666BECDD1ADC94436AACBCB:pD0BBA7FAE07D4CAC3C07091FDFB8C6213A5ACAAB8D73029A35D0B675A79D1B1E133053ADEDD6839E91CD5A17081957B5A666BECDD1ADC94436AACBCB, pD0BBA7FAE07D4CAC3C07091FDFB8C6213A5ACAAB8D73029A35D0B675A79D1B1E133053ADEDD6839E:pD0BBA7FAE07D4CAC3C07091FDFB8C6213A5ACAAB8D73029A35D0B675A79D1B1E133053ADEDD6839E, pD0BBA7FAE07D4CAC3C07091FDFB8C6213A5ACAAB:pD0BBA7FAE07D4CAC3C07091FDFB8C6213A5ACAAB, 
-  p91CD5A17081957B5A666BECDD1ADC94436AACBCB:p91CD5A17081957B5A666BECDD1ADC94436AACBCB, pFull:pFull}
+  p3.subsumedBy = pFull;
+  p3.itype = "read";
+  Object.freeze(p3);
+  return{p4:p4, p2:p2, p1:p1, p3:p3, pFull:pFull, woven:true}
 }()

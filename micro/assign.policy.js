@@ -2,11 +2,11 @@ var policy = function() {
   var _document = document;
   function pFull(tx) {
     var commit = true;
-    var as = tx.getActionSequence();
+    var as = tx.getWriteSequence();
     var len = as.length;
     for(var i = 0;i < len;i++) {
       var node = as[i];
-      if(node.type === "write" && JAM.identical(node.obj, _document) && node.id === "cookie") {
+      if(JAM.identical(node.obj, _document) && node.id === "cookie") {
         commit = false;
         break
       }
@@ -18,14 +18,15 @@ var policy = function() {
     }
   }
   pFull.subsumedBy = pFull;
+  pFull.itype = "write";
   Object.freeze(pFull);
-  function p2D796209C6C7E991CECC5A098DDB71DC2DB55178(tx) {
+  function p1(tx) {
     var commit = true;
-    var as = tx.getActionSequence();
+    var as = tx.getWriteSequence();
     var len = as.length;
     for(var i = 0;i < len;i++) {
       var node = as[i];
-      if(node.type === "write" && JAM.identical(node.obj, _document) && node.id === "cookie") {
+      if(JAM.identical(node.obj, _document) && node.id === "cookie") {
         commit = false;
         break
       }
@@ -36,7 +37,8 @@ var policy = function() {
       JAM.prevent(tx)
     }
   }
-  p2D796209C6C7E991CECC5A098DDB71DC2DB55178.subsumedBy = pFull;
-  Object.freeze(p2D796209C6C7E991CECC5A098DDB71DC2DB55178);
-  return{p2D796209C6C7E991CECC5A098DDB71DC2DB55178:p2D796209C6C7E991CECC5A098DDB71DC2DB55178, pFull:pFull}
+  p1.subsumedBy = pFull;
+  p1.itype = "write";
+  Object.freeze(p1);
+  return{p1:p1, pFull:pFull, woven:true}
 }()

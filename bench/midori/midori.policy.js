@@ -3,15 +3,15 @@ var policy = function() {
   var _document = document;
   function pFull(tx) {
     var commit = true;
-    var as = tx.getActionSequence();
+    var as = tx.getWriteSequence();
     var len = as.length;
     for(var i = 0;i < len;i++) {
       var node = as[i];
-      if(states[1] && node.type === "write" && JAM.identical(node.obj, _document) && node.id === "cookie") {
+      if(states[1] && JAM.identical(node.obj, _document) && node.id === "cookie") {
         commit = false;
         break
       }
-      if(!states[1] && node.type === "write" && node.id === "setCookieSentinel" && JAM.identical(node.value, true)) {
+      if(!states[1] && node.id === "setCookieSentinel" && JAM.identical(node.value, true)) {
         states[1] = true
       }
     }
@@ -22,28 +22,30 @@ var policy = function() {
     }
   }
   pFull.subsumedBy = pFull;
+  pFull.itype = "write";
   Object.freeze(pFull);
-  function p3F9F399AB000376076BBFF3A9A9C0103B23A9835(tx) {
-    var as = tx.getActionSequence();
+  function p1(tx) {
+    var as = tx.getWriteSequence();
     var len = as.length;
     for(var i = 0;i < len && !states[1];i++) {
       var node = as[i];
-      if(!states[1] && node.type === "write" && node.id === "setCookieSentinel" && JAM.identical(node.value, true)) {
+      if(!states[1] && node.id === "setCookieSentinel" && JAM.identical(node.value, true)) {
         states[1] = true
       }
     }
     JAM.process(tx)
   }
-  p3F9F399AB000376076BBFF3A9A9C0103B23A9835.subsumedBy = pFull;
-  Object.freeze(p3F9F399AB000376076BBFF3A9A9C0103B23A9835);
-  function p425E08A28862414CF7130381FE99A660F52DB811(tx) {
+  p1.subsumedBy = pFull;
+  p1.itype = "write";
+  Object.freeze(p1);
+  function p2(tx) {
     var commit = true;
     if(states[1]) {
-      var as = tx.getActionSequence();
+      var as = tx.getWriteSequence();
       var len = as.length;
       for(var i = 0;i < len;i++) {
         var node = as[i];
-        if(states[1] && node.type === "write" && JAM.identical(node.obj, _document) && node.id === "cookie") {
+        if(states[1] && JAM.identical(node.obj, _document) && node.id === "cookie") {
           commit = false;
           break
         }
@@ -55,7 +57,8 @@ var policy = function() {
       JAM.prevent(tx)
     }
   }
-  p425E08A28862414CF7130381FE99A660F52DB811.subsumedBy = pFull;
-  Object.freeze(p425E08A28862414CF7130381FE99A660F52DB811);
-  return{p3F9F399AB000376076BBFF3A9A9C0103B23A9835:p3F9F399AB000376076BBFF3A9A9C0103B23A9835, p425E08A28862414CF7130381FE99A660F52DB811:p425E08A28862414CF7130381FE99A660F52DB811, pFull:pFull}
+  p2.subsumedBy = pFull;
+  p2.itype = "write";
+  Object.freeze(p2);
+  return{p1:p1, p2:p2, pFull:pFull, woven:true}
 }()

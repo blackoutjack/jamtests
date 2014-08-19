@@ -3,11 +3,11 @@ var policy = function() {
   var _HTMLDocument_prototype_write = HTMLDocument.prototype.write;
   function pFull(tx) {
     var commit = true;
-    var as = tx.getActionSequence();
+    var as = tx.getCallSequence();
     var len = as.length;
     for(var i = 0;i < len;i++) {
       var node = as[i];
-      if(node.type === "call" && (JAM.identical(node.value, _HTMLDocument_prototype_createElement) && JAM.identical(node.args[0], "script") || JAM.identical(node.value, _HTMLDocument_prototype_write) && !JAM.identical(node.args[0], undefined))) {
+      if(JAM.identical(node.value, _HTMLDocument_prototype_createElement) && JAM.identical(node.args[0], "script") || JAM.identical(node.value, _HTMLDocument_prototype_write) && !JAM.identical(node.args[0], undefined)) {
         commit = false;
         break
       }
@@ -19,14 +19,15 @@ var policy = function() {
     }
   }
   pFull.subsumedBy = pFull;
+  pFull.itype = "call";
   Object.freeze(pFull);
-  function p0FFB1518291BEE7C5744977B581D549C9B6BD5A04CDAF44D89391C6FE13FBBD6677C6DE0505D675A(tx) {
+  function p3(tx) {
     var commit = true;
-    var as = tx.getActionSequence();
+    var as = tx.getCallSequence();
     var len = as.length;
     for(var i = 0;i < len;i++) {
       var node = as[i];
-      if(node.type === "call" && (JAM.identical(node.value, _HTMLDocument_prototype_createElement) && JAM.identical(node.args[0], "script") || JAM.identical(node.value, _HTMLDocument_prototype_write) && !JAM.identical(node.args[0], undefined))) {
+      if(JAM.identical(node.value, _HTMLDocument_prototype_createElement) && JAM.identical(node.args[0], "script") || JAM.identical(node.value, _HTMLDocument_prototype_write) && !JAM.identical(node.args[0], undefined)) {
         commit = false;
         break
       }
@@ -37,15 +38,16 @@ var policy = function() {
       JAM.prevent(tx)
     }
   }
-  p0FFB1518291BEE7C5744977B581D549C9B6BD5A04CDAF44D89391C6FE13FBBD6677C6DE0505D675A.subsumedBy = pFull;
-  Object.freeze(p0FFB1518291BEE7C5744977B581D549C9B6BD5A04CDAF44D89391C6FE13FBBD6677C6DE0505D675A);
-  function p4CDAF44D89391C6FE13FBBD6677C6DE0505D675A(tx) {
+  p3.subsumedBy = pFull;
+  p3.itype = "call";
+  Object.freeze(p3);
+  function p2(tx) {
     var commit = true;
-    var as = tx.getActionSequence();
+    var as = tx.getCallSequence();
     var len = as.length;
     for(var i = 0;i < len;i++) {
       var node = as[i];
-      if(node.type === "call" && JAM.identical(node.value, _HTMLDocument_prototype_write) && !JAM.identical(node.args[0], undefined)) {
+      if(JAM.identical(node.value, _HTMLDocument_prototype_write) && !JAM.identical(node.args[0], undefined)) {
         commit = false;
         break
       }
@@ -56,7 +58,8 @@ var policy = function() {
       JAM.prevent(tx)
     }
   }
-  p4CDAF44D89391C6FE13FBBD6677C6DE0505D675A.subsumedBy = pFull;
-  Object.freeze(p4CDAF44D89391C6FE13FBBD6677C6DE0505D675A);
-  return{p0FFB1518291BEE7C5744977B581D549C9B6BD5A04CDAF44D89391C6FE13FBBD6677C6DE0505D675A:p0FFB1518291BEE7C5744977B581D549C9B6BD5A04CDAF44D89391C6FE13FBBD6677C6DE0505D675A, p4CDAF44D89391C6FE13FBBD6677C6DE0505D675A:p4CDAF44D89391C6FE13FBBD6677C6DE0505D675A, pFull:pFull}
+  p2.subsumedBy = pFull;
+  p2.itype = "call";
+  Object.freeze(p2);
+  return{p3:p3, p2:p2, pFull:pFull, woven:true}
 }()

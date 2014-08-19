@@ -645,6 +645,8 @@ function phylogenyExplorer_init(initial) {
   Backbone.history.start()
 }
 function init() {
+  JAM.startProfile('setup');
+
   phylogenyExplorer_init({codeBase:"../..", width:550, height:800, alignName:true, lateralise:false, levelsToShow:10, branchMultiplier:1, tree:"((Replace:0.007667365048364433,(this:0.005369261896034483,(with:0.011621228506591308,your:2.100100506802205E-6):0.0027929350821030707):0.012281999999150084):0.0400709772514759,(((own:0.0012025949078822151,phylogeny:0.0024332420478173633):0.006421131153429474,(in:0.008984623535641459,(newick:0.0012074724370825796,form:0.004013224017395373):0.003744210327868966):0.00542385295016945):0.023689622298502563,(tree:0.036702751435909745,((take:0.002448206437464337,care:0.0024347868455663196):0.001504447318880206,(to:0.0023787045835393372,(remove:2.100100506802205E-6,quotes_and_other_html_special_characters:0.01728824049672087):0.010690121488212884):6.006911375427831E-4):0.005347250770554118):0.014788598652250115):0.0400709772514759);", 
   character:{"Replace":{"modelled annual mean moisture index":[0.6837124164], "modelled annual mean rad":[17.1466667213], "modelled annual mean temp":[16.0416993341], "modelled annual precipitation":[1039.2849673203], "modelled clpk 1 1000 g clay":[18998.3660130718], "modelled erosional":[85.9191176471], "modelled highest period moisture index":[0.8894836614], "modelled highest period radiation":[25.3393464394], "modelled hydraulic conductivity ksat":[157.4640522876], "modelled isothermality":[0.4932352942], 
   "modelled lowest period moisture index":[0.3231372576], "modelled lowest period radiation":[9.081829987], "modelled max temp warmest period":[28.0827450671], "modelled mean diurnal range":[11.3729411867], "modelled mean moisture index coldest quarter":[0.8600326849], "modelled mean moisture index highest quarter MI":[0.8941764697], "modelled mean moisture index lowest quater MI":[0.3734836587], "modelled mean moisture index warmest quarter":[0.4585424874], "modelled mean temp coldest quarter":[10.5782352927], 
@@ -776,6 +778,8 @@ function init() {
   "raw mean temp wettest quarter":[21.6], "raw min temp coldest period":[5.8], "raw moisture index seasonality":[26.6], "raw precipitation coldets quarter":[177.4], "raw precipitation driest period":[4.6], "raw precipitation driest quarter":[135.6], "raw precipitation seasonality":[52.8], "raw precipitation warmest quarter":[497.4], "raw precipitation wettest period":[52.4], "raw precipitation wettest quarter":[579.6], "raw radiation coldest quarter":[12.2], "raw radiation driest quarter":[15.8], 
   "raw radiation seasonality":[25.8], "raw radiation warmest quarter":[21.2], "raw radiation wettest quarter":[19.2], "raw relief":[81.6], "raw ridgetopflat":[0], "raw rockalklty":[4.6], "raw rockgrainsz":[3], "raw rockhardness":[4.8], "raw rocknutrnt":[5], "raw roughness":[15.4], "raw sapk 1 1000 g sand":[42950], "raw slope":[4.6], "raw soildepth":[0.8], "raw solpawhc":[160.8], "raw temperature annual range":[21.6], "raw temperature seasonality":[1], "raw thpk 1 1000 g thickness":[227.8], "raw twi":[10.4], 
   "raw valleybottom":[13.6]}}})
+  JAM.stopProfile('setup');
+
 }
 var labelType;
 var useGradients;

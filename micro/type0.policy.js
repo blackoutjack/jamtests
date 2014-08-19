@@ -2,11 +2,11 @@ var policy = function() {
   var _String_prototype_indexOf = String.prototype.indexOf;
   function pFull(tx) {
     var commit = true;
-    var as = tx.getActionSequence();
+    var as = tx.getCallSequence();
     var len = as.length;
     for(var i = 0;i < len;i++) {
       var node = as[i];
-      if(node.type === "call" && JAM.identical(node.value, _String_prototype_indexOf) && node.argc > 0 && typeof node.args[0] === "string") {
+      if(JAM.identical(node.value, _String_prototype_indexOf) && node.argc > 0 && typeof node.args[0] === "string") {
         commit = false;
         break
       }
@@ -18,14 +18,15 @@ var policy = function() {
     }
   }
   pFull.subsumedBy = pFull;
+  pFull.itype = "call";
   Object.freeze(pFull);
-  function pF1BA71A55F9319E61520953F6A9F05F1A5D05A94(tx) {
+  function p1(tx) {
     var commit = true;
-    var as = tx.getActionSequence();
+    var as = tx.getCallSequence();
     var len = as.length;
     for(var i = 0;i < len;i++) {
       var node = as[i];
-      if(node.type === "call" && JAM.identical(node.value, _String_prototype_indexOf) && node.argc > 0 && typeof node.args[0] === "string") {
+      if(JAM.identical(node.value, _String_prototype_indexOf) && node.argc > 0 && typeof node.args[0] === "string") {
         commit = false;
         break
       }
@@ -36,7 +37,8 @@ var policy = function() {
       JAM.prevent(tx)
     }
   }
-  pF1BA71A55F9319E61520953F6A9F05F1A5D05A94.subsumedBy = pFull;
-  Object.freeze(pF1BA71A55F9319E61520953F6A9F05F1A5D05A94);
-  return{pF1BA71A55F9319E61520953F6A9F05F1A5D05A94:pF1BA71A55F9319E61520953F6A9F05F1A5D05A94, pFull:pFull}
+  p1.subsumedBy = pFull;
+  p1.itype = "call";
+  Object.freeze(p1);
+  return{p1:p1, pFull:pFull, woven:true}
 }()

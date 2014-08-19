@@ -2,7 +2,7 @@ function runTest() {
 
   JAM.startProfile('load');
   document.getElementsByTagName = document.getElementById;
-  var elt = JAM.call(document.getElementsByTagName, document, ["ok"], JAM.policy.pD5795DFA086639893C72614AC0D6E60E856B441D);
+  var elt = JAM.call(document.getElementsByTagName, document, ["ok"], JAM.policy.p1);
 
   JAM.stopProfile('load');
 

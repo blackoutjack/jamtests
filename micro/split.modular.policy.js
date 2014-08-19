@@ -3,11 +3,11 @@ var policy = function() {
   var _HTMLDocument_prototype_write = HTMLDocument.prototype.write;
   function pFull(tx) {
     var commit = true;
-    var as = tx.getActionSequence();
+    var as = tx.getCallSequence();
     var len = as.length;
     for(var i = 0;i < len;i++) {
       var node = as[i];
-      if(node.type === "call" && (JAM.identical(node.value, _HTMLDocument_prototype_createElement) || JAM.identical(node.value, _HTMLDocument_prototype_write))) {
+      if(JAM.identical(node.value, _HTMLDocument_prototype_createElement) || JAM.identical(node.value, _HTMLDocument_prototype_write)) {
         commit = false;
         break
       }
@@ -19,6 +19,7 @@ var policy = function() {
     }
   }
   pFull.subsumedBy = pFull;
+  pFull.itype = "call";
   Object.freeze(pFull);
   return{pFull:pFull}
 }()

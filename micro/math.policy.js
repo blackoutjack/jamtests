@@ -1,11 +1,11 @@
 var policy = function() {
   function pFull(tx) {
     var commit = true;
-    var as = tx.getActionSequence();
+    var as = tx.getWriteSequence();
     var len = as.length;
     for(var i = 0;i < len;i++) {
       var node = as[i];
-      if(node.type === "write" && node.id === "x" && JAM.identical(node.value, 2)) {
+      if(node.id === "x" && JAM.identical(node.value, 2)) {
         commit = false;
         break
       }
@@ -17,14 +17,15 @@ var policy = function() {
     }
   }
   pFull.subsumedBy = pFull;
+  pFull.itype = "write";
   Object.freeze(pFull);
-  function p6CB626AF3B00A2806871E6DD34E13FD7B9D46DB2(tx) {
+  function p1(tx) {
     var commit = true;
-    var as = tx.getActionSequence();
+    var as = tx.getWriteSequence();
     var len = as.length;
     for(var i = 0;i < len;i++) {
       var node = as[i];
-      if(node.type === "write" && node.id === "x" && JAM.identical(node.value, 2)) {
+      if(node.id === "x" && JAM.identical(node.value, 2)) {
         commit = false;
         break
       }
@@ -35,7 +36,8 @@ var policy = function() {
       JAM.prevent(tx)
     }
   }
-  p6CB626AF3B00A2806871E6DD34E13FD7B9D46DB2.subsumedBy = pFull;
-  Object.freeze(p6CB626AF3B00A2806871E6DD34E13FD7B9D46DB2);
-  return{p6CB626AF3B00A2806871E6DD34E13FD7B9D46DB2:p6CB626AF3B00A2806871E6DD34E13FD7B9D46DB2, pFull:pFull}
+  p1.subsumedBy = pFull;
+  p1.itype = "write";
+  Object.freeze(p1);
+  return{p1:p1, pFull:pFull, woven:true}
 }()
