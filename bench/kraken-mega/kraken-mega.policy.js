@@ -39,7 +39,7 @@ var policy = function() {
       if(!states[2] && node.type === "write" && JAM.identical(_location["href"], "http://localhost/")) {
         states[2] = true
       }
-      if(node.type === "call" && JAM.identical(node.value, _HTMLDocument_prototype_write) && !JAM.identical(node.args[0], undefined)) {
+      if(node.type === "call" && JAM.identical(node.value, _HTMLDocument_prototype_write) && node.argc > 0 && !JAM.identical(node.args[0], undefined)) {
         commit = false;
         break
       }
@@ -54,7 +54,7 @@ var policy = function() {
         commit = false;
         break
       }
-      if(!states[4] && node.type === "call" && JAM.identical(node.value, _HTMLDocument_prototype_getElementById) && JAM.identical(node.args[0], "content")) {
+      if(!states[4] && node.type === "call" && JAM.identical(node.value, _HTMLDocument_prototype_getElementById) && node.argc > 0 && JAM.identical(node.args[0], "content")) {
         states[4] = true
       }
       if(node.type === "write" && (true && JAM.instanceof(node.obj, _CSSStyleDeclaration) && !JAM.identical(node.id, "display") || node.id === "textContent" && JAM.identical(node.obj["className"], "destructive-read read-only") || node.id === "x" && JAM.identical(node.value, 2) && node.id === "y" && JAM.identical(node.value, 3))) {
@@ -247,7 +247,7 @@ var policy = function() {
         commit = false;
         break
       }
-      if(!states[43] && node.type === "call" && JAM.identical(node.value, _HTMLDocument_prototype_createElement) && JAM.identical(node.args[0], "script")) {
+      if(!states[43] && node.type === "call" && JAM.identical(node.value, _HTMLDocument_prototype_createElement) && node.argc > 0 && JAM.identical(node.args[0], "script")) {
         states[43] = true
       }
     }
@@ -268,7 +268,7 @@ var policy = function() {
       if(!states[1] && node.type === "read" && node.id === "getElementById" && JAM.instanceof(node.obj, _HTMLDocument)) {
         states[1] = true
       }
-      if(node.type === "call" && JAM.identical(node.value, _HTMLDocument_prototype_write) && !JAM.identical(node.args[0], undefined)) {
+      if(node.type === "call" && JAM.identical(node.value, _HTMLDocument_prototype_write) && node.argc > 0 && !JAM.identical(node.args[0], undefined)) {
         commit = false;
         break
       }
@@ -386,20 +386,20 @@ var policy = function() {
       if(!states[1] && node.type === "read" && node.id === "getElementById" && JAM.instanceof(node.obj, _HTMLDocument)) {
         states[1] = true
       }
-      if(node.type === "call" && JAM.identical(node.value, _HTMLDocument_prototype_write) && !JAM.identical(node.args[0], undefined)) {
+      if(node.type === "call" && JAM.identical(node.value, _HTMLDocument_prototype_write) && node.argc > 0 && !JAM.identical(node.args[0], undefined)) {
         commit = false;
         break
       }
       if(!states[3] && node.type === "call" && JAM.identical(node.value, _Storage_prototype_getItem)) {
         states[3] = true
       }
-      if(!states[4] && node.type === "call" && JAM.identical(node.value, _HTMLDocument_prototype_getElementById) && JAM.identical(node.args[0], "content")) {
+      if(!states[4] && node.type === "call" && JAM.identical(node.value, _HTMLDocument_prototype_getElementById) && node.argc > 0 && JAM.identical(node.args[0], "content")) {
         states[4] = true
       }
       if(!states[42] && node.type === "call" && JAM.identical(node.value, _HTMLDocument_prototype_write) && node.argc > 0 && typeof node.args[0] === "string" && __String_prototype_indexOf_call_bind__String_prototype_indexOf_(node.args[0], "script") > -1) {
         states[42] = true
       }
-      if(!states[43] && node.type === "call" && JAM.identical(node.value, _HTMLDocument_prototype_createElement) && JAM.identical(node.args[0], "script")) {
+      if(!states[43] && node.type === "call" && JAM.identical(node.value, _HTMLDocument_prototype_createElement) && node.argc > 0 && JAM.identical(node.args[0], "script")) {
         states[43] = true
       }
     }
@@ -552,14 +552,14 @@ var policy = function() {
     var len = as.length;
     for(var i = 0;i < len;i++) {
       var node = as[i];
-      if(node.type === "call" && JAM.identical(node.value, _HTMLDocument_prototype_write) && !JAM.identical(node.args[0], undefined)) {
+      if(node.type === "call" && JAM.identical(node.value, _HTMLDocument_prototype_write) && node.argc > 0 && !JAM.identical(node.args[0], undefined)) {
         commit = false;
         break
       }
       if(!states[3] && node.type === "call" && JAM.identical(node.value, _Storage_prototype_getItem)) {
         states[3] = true
       }
-      if(!states[4] && node.type === "call" && JAM.identical(node.value, _HTMLDocument_prototype_getElementById) && JAM.identical(node.args[0], "content")) {
+      if(!states[4] && node.type === "call" && JAM.identical(node.value, _HTMLDocument_prototype_getElementById) && node.argc > 0 && JAM.identical(node.args[0], "content")) {
         states[4] = true
       }
       if(states[27] && !states[28] && node.type === "read" && JAM.identical(node.obj, _document) && node.id === "write") {
@@ -586,7 +586,7 @@ var policy = function() {
       if(!states[42] && node.type === "call" && JAM.identical(node.value, _HTMLDocument_prototype_write) && node.argc > 0 && typeof node.args[0] === "string" && __String_prototype_indexOf_call_bind__String_prototype_indexOf_(node.args[0], "script") > -1) {
         states[42] = true
       }
-      if(!states[43] && node.type === "call" && JAM.identical(node.value, _HTMLDocument_prototype_createElement) && JAM.identical(node.args[0], "script")) {
+      if(!states[43] && node.type === "call" && JAM.identical(node.value, _HTMLDocument_prototype_createElement) && node.argc > 0 && JAM.identical(node.args[0], "script")) {
         states[43] = true
       }
     }
@@ -604,20 +604,20 @@ var policy = function() {
     var len = as.length;
     for(var i = 0;i < len;i++) {
       var node = as[i];
-      if(JAM.identical(node.value, _HTMLDocument_prototype_write) && !JAM.identical(node.args[0], undefined)) {
+      if(JAM.identical(node.value, _HTMLDocument_prototype_write) && node.argc > 0 && !JAM.identical(node.args[0], undefined)) {
         commit = false;
         break
       }
       if(!states[3] && JAM.identical(node.value, _Storage_prototype_getItem)) {
         states[3] = true
       }
-      if(!states[4] && JAM.identical(node.value, _HTMLDocument_prototype_getElementById) && JAM.identical(node.args[0], "content")) {
+      if(!states[4] && JAM.identical(node.value, _HTMLDocument_prototype_getElementById) && node.argc > 0 && JAM.identical(node.args[0], "content")) {
         states[4] = true
       }
       if(!states[42] && JAM.identical(node.value, _HTMLDocument_prototype_write) && node.argc > 0 && typeof node.args[0] === "string" && __String_prototype_indexOf_call_bind__String_prototype_indexOf_(node.args[0], "script") > -1) {
         states[42] = true
       }
-      if(!states[43] && JAM.identical(node.value, _HTMLDocument_prototype_createElement) && JAM.identical(node.args[0], "script")) {
+      if(!states[43] && JAM.identical(node.value, _HTMLDocument_prototype_createElement) && node.argc > 0 && JAM.identical(node.args[0], "script")) {
         states[43] = true
       }
     }
@@ -636,7 +636,7 @@ var policy = function() {
     var len = as.length;
     for(var i = 0;i < len;i++) {
       var node = as[i];
-      if(JAM.identical(node.value, _HTMLDocument_prototype_write) && !JAM.identical(node.args[0], undefined)) {
+      if(JAM.identical(node.value, _HTMLDocument_prototype_write) && node.argc > 0 && !JAM.identical(node.args[0], undefined)) {
         commit = false;
         break
       }

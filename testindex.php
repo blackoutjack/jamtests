@@ -52,38 +52,51 @@ foreach ($allfiles as $fl) {
   if ($ext == 'jpg') continue;
   if ($ext == 'css') continue;
   if ($ext == 'php') continue;
-
-  $desc = $len > 2 ? $parts[$len-2] : '';
+  if ($ext == 'txt') continue;
 
   $info = getSubArray($fls, $app);
 
+  $desc = $len > 2 ? $parts[$len-2] : 'main';
   if ($ext == 'js') {
-    $key = null;
     if ($desc == 'policy') {
-      if ($len == 3) {
-        $key = 'main';
+      if ($len > 3) {
+        $descparts = array_slice($parts, 1, $len-3);
+        $desc = implode('.', $descparts);
       } else {
-        $keyparts = array_slice($parts, 1, $len-3);
-        $key = implode('.', $keyparts);
+        $desc = 'main';
       }
-      $info[$key] = getSubArray($info, $key);
-      $info[$key]['policy'] = $fl;
+      $info[$desc] = getSubArray($info, $desc);
+      $info[$desc]['policy'] = $fl;
     } else {
-      if ($len == 2) {
-        $key = 'main';
+      if ($len > 2) {
+        $descparts = array_slice($parts, 1, $len-2);
+        $desc = implode('.', $descparts);
       } else {
-        $keyparts = array_slice($parts, 1, $len-2);
-        $key = implode('.', $keyparts);
+        $desc = 'main';
       }
-      $info[$key] = getSubArray($info, $key);
-      $info[$key]['js'] = $fl;
+      $info[$desc] = getSubArray($info, $desc);
+      $info[$desc]['js'] = $fl;
     }
   } else if ($ext == 'html') {
-    // %%% Maybe want to allow per-source HTML also.
-    if ($desc == 'head') {
-      $info['head'] = $fl;
-    } else if ($len == 2) {
-      $info['html'] = $fl;
+    if ($desc == 'head' || $desc == 'body') {
+      $role = $desc;
+      if ($len > 3) {
+        $descparts = array_slice($parts, 1, $len-3);
+        $desc = implode('.', $descparts);
+      } else {
+        $desc = 'main';
+      }
+      $info[$desc] = getSubArray($info, $desc);
+      $info[$desc][$role] = $fl;
+    } else {
+      if ($len > 2) {
+        $descparts = array_slice($parts, 1, $len-2);
+        $desc = implode('.', $descparts);
+      } else {
+        $desc = 'main';
+      }
+      $info[$desc] = getSubArray($info, $desc);
+      $info[$desc]['html'] = $fl;
     }
   }
 
@@ -105,35 +118,35 @@ function getParamText($info, $key, $param, $first=false) {
   return "";
 }
 
-function appendScriptLink($html, $info, $hrefbase, $extra, $name) {
+function getScriptLink($info, $hrefbase, $name, $lib) {
   $jsparam = getParamText($info, 'js', 'script', true);
   $polparam = getParamText($info, 'policy', 'policy', false);
-  $params = $jsparam.$polparam;
-  if ($params) {
-    $href = $hrefbase.$params.$extra;
-    if ($html) $html .= ' | ';
-    $html .= '<a id="'.$name.'" href="'.$href.'">'.$name.'</a>';
+  $headparam = getParamText($info, 'head', 'head', false);
+  $bodyparam = getParamText($info, 'body', 'body', false);
+  $params = $jsparam.$polparam.$headparam.$bodyparam;
+
+  $href = $hrefbase.$params;
+  if (!$lib) {
+    $href .= '&lib=0';
   }
+  $html = '<a id="'.$name.'" href="'.$href.'">'.$name.'</a>';
   return $html;
 }
 
-function findPolicy($info, $key) {
+function findFile($info, $filetype, $key) {
   $sub = $info[$key];
-  if (isset($sub['policy'])) return $sub['policy'];
-  if ($key == 'original' || $key == 'original.profile') {
-    return '0';
-  }
+  if (isset($sub[$filetype])) return $sub[$filetype];
 
   $keyparts = explode('.', $key);
   for ($i=sizeof($keyparts)-1; $i>=0; $i--) {
     $subkey = $keyparts[$i];
-    if (isset($info[$subkey]) and isset($info[$subkey]['policy'])) {
-      return $info[$subkey]['policy'];
+    if (isset($info[$subkey]) and isset($info[$subkey][$filetype])) {
+      return $info[$subkey][$filetype];
     }
   }
 
-  if (isset($info['main']) and isset($info['main']['policy'])) {
-    return $info['main']['policy'];
+  if (isset($info['main']) and isset($info['main'][$filetype])) {
+    return $info['main'][$filetype];
   }
 }
 
@@ -151,24 +164,31 @@ function findPolicy($info, $key) {
 foreach ($fls as $app => $info) { 
   $hrefbase = 'test.php';
 
-  $linksrc = '';
-
-  $htmlparam = getParamText($info, 'html', 'html', false);
-  $headparam = getParamText($info, 'head', 'head', false);
-
-  $extraparams = $htmlparam.$headparam;
-  $linksrc = '';
+  $linksrcs = array();
   foreach ($info as $key => $sub) {
-    if ($key == 'html' or $key == 'head') continue;
-    if (!isset($sub['js'])) continue;
+    if (isset($sub['js'])) {
+      if ($key == 'original' || $key == 'original.profile') {
+        // Only add a policy for these if specified.
+      } else {
+        $sub['policy'] = findFile($info, 'policy', $key);
+      }
+      // Suppress the library if there's no policy.
+      // %%% Will this break some microbenchmarks?
+      $sub['head'] = findFile($info, 'head', $key);
+      $sub['body'] = findFile($info, 'body', $key);
 
-    $sub['policy'] = findPolicy($info, $key);
-
-    $linksrc = appendScriptLink($linksrc, $sub, $hrefbase, $extraparams, $key);
+      $lib = isset($sub['policy']);
+      array_push($linksrcs, getScriptLink($sub, $hrefbase, $key, $lib));
+    }
+    if (isset($sub['html'])) {
+      // Link to the stand-alone HTML file.
+      array_push($linksrcs, '<a href="'.$sub['html'].'">'.$sub['html'].'</a>');
+    }
   }
+  $linksrc = implode(' | ', $linksrcs);
 
   if (!$linksrc) {
-    $err .= "WARNING: $app has no JavaScript source.\n";
+    $err .= "WARNING: $app has no test case.\n";
   } else {
 ?>
     <li><?=$app.': '.$linksrc?></li>

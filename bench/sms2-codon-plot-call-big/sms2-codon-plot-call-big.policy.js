@@ -23,8 +23,8 @@ var policy = function() {
         commit = false;
         break
       }
-      if(node.type === "call" && (JAM.identical(node.value, _XMLHttpRequest_prototype_open) || JAM.identical(node.value, _Window_prototype_open) && !JAM.identical(node.args[0], "") || JAM.identical(node.value, _Window_prototype_openDialog) || JAM.identical(node.value, _Window_prototype_postMessage) || JAM.identical(node.value, _WebSocket_prototype_send) || JAM.identical(node.value, _HTMLFormElement_prototype_submit) || JAM.identical(node.value, _HTMLDocument_prototype_write) && node.argc > 0 && typeof node.args[0] === 
-      "string" && __String_prototype_indexOf_call_bind__String_prototype_indexOf_(node.args[0], "script") > -1 || JAM.identical(node.value, _HTMLDocument_prototype_writeln))) {
+      if(node.type === "call" && (JAM.identical(node.value, _XMLHttpRequest_prototype_open) || JAM.identical(node.value, _Window_prototype_open) && node.argc > 0 && !JAM.identical(node.args[0], "") || JAM.identical(node.value, _Window_prototype_openDialog) || JAM.identical(node.value, _Window_prototype_postMessage) || JAM.identical(node.value, _WebSocket_prototype_send) || JAM.identical(node.value, _HTMLFormElement_prototype_submit) || JAM.identical(node.value, _HTMLDocument_prototype_write) && node.argc > 
+      0 && typeof node.args[0] === "string" && __String_prototype_indexOf_call_bind__String_prototype_indexOf_(node.args[0], "script") > -1 || JAM.identical(node.value, _HTMLDocument_prototype_writeln))) {
         commit = false;
         break
       }
@@ -43,7 +43,7 @@ var policy = function() {
     var len = as.length;
     for(var i = 0;i < len;i++) {
       var node = as[i];
-      if(JAM.identical(node.value, _XMLHttpRequest_prototype_open) || JAM.identical(node.value, _Window_prototype_open) && !JAM.identical(node.args[0], "") || JAM.identical(node.value, _Window_prototype_openDialog) || JAM.identical(node.value, _Window_prototype_postMessage) || JAM.identical(node.value, _WebSocket_prototype_send) || JAM.identical(node.value, _HTMLFormElement_prototype_submit) || JAM.identical(node.value, _HTMLDocument_prototype_writeln)) {
+      if(JAM.identical(node.value, _XMLHttpRequest_prototype_open) || JAM.identical(node.value, _Window_prototype_open) && node.argc > 0 && !JAM.identical(node.args[0], "") || JAM.identical(node.value, _Window_prototype_openDialog) || JAM.identical(node.value, _Window_prototype_postMessage) || JAM.identical(node.value, _WebSocket_prototype_send) || JAM.identical(node.value, _HTMLFormElement_prototype_submit) || JAM.identical(node.value, _HTMLDocument_prototype_writeln)) {
         commit = false;
         break
       }
@@ -83,8 +83,8 @@ var policy = function() {
     var len = as.length;
     for(var i = 0;i < len;i++) {
       var node = as[i];
-      if(JAM.identical(node.value, _XMLHttpRequest_prototype_open) || JAM.identical(node.value, _Window_prototype_open) && !JAM.identical(node.args[0], "") || JAM.identical(node.value, _Window_prototype_openDialog) || JAM.identical(node.value, _Window_prototype_postMessage) || JAM.identical(node.value, _WebSocket_prototype_send) || JAM.identical(node.value, _HTMLFormElement_prototype_submit) || JAM.identical(node.value, _HTMLDocument_prototype_write) && node.argc > 0 && typeof node.args[0] === "string" && 
-      __String_prototype_indexOf_call_bind__String_prototype_indexOf_(node.args[0], "script") > -1 || JAM.identical(node.value, _HTMLDocument_prototype_writeln)) {
+      if(JAM.identical(node.value, _XMLHttpRequest_prototype_open) || JAM.identical(node.value, _Window_prototype_open) && node.argc > 0 && !JAM.identical(node.args[0], "") || JAM.identical(node.value, _Window_prototype_openDialog) || JAM.identical(node.value, _Window_prototype_postMessage) || JAM.identical(node.value, _WebSocket_prototype_send) || JAM.identical(node.value, _HTMLFormElement_prototype_submit) || JAM.identical(node.value, _HTMLDocument_prototype_write) && node.argc > 0 && typeof node.args[0] === 
+      "string" && __String_prototype_indexOf_call_bind__String_prototype_indexOf_(node.args[0], "script") > -1 || JAM.identical(node.value, _HTMLDocument_prototype_writeln)) {
         commit = false;
         break
       }

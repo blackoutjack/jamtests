@@ -8,7 +8,7 @@ var policy = function() {
     var len = as.length;
     for(var i = 0;i < len;i++) {
       var node = as[i];
-      if(JAM.identical(node.value, _HTMLImageElement_prototype_setAttribute) && JAM.identical(node.args[0], "src") && node.argc > 1 && __RegExp_prototype_test_call_bind__RegExp_prototype_test_(/^\s*(http|ftp)/i, node.args[1])) {
+      if(JAM.identical(node.value, _HTMLImageElement_prototype_setAttribute) && node.argc > 0 && JAM.identical(node.args[0], "src") && node.argc > 1 && __RegExp_prototype_test_call_bind__RegExp_prototype_test_(/^\s*(http|ftp)/i, node.args[1])) {
         commit = false;
         break
       }
@@ -28,7 +28,7 @@ var policy = function() {
     var len = as.length;
     for(var i = 0;i < len;i++) {
       var node = as[i];
-      if(JAM.identical(node.value, _HTMLImageElement_prototype_setAttribute) && JAM.identical(node.args[0], "src") && node.argc > 1 && __RegExp_prototype_test_call_bind__RegExp_prototype_test_(/^\s*(http|ftp)/i, node.args[1])) {
+      if(JAM.identical(node.value, _HTMLImageElement_prototype_setAttribute) && node.argc > 0 && JAM.identical(node.args[0], "src") && node.argc > 1 && __RegExp_prototype_test_call_bind__RegExp_prototype_test_(/^\s*(http|ftp)/i, node.args[1])) {
         commit = false;
         break
       }

@@ -39,7 +39,7 @@ var policy = function() {
       if(!states[2] && node.type === "write" && JAM.identical(_location["href"], "http://localhost/")) {
         states[2] = true
       }
-      if(node.type === "call" && JAM.identical(node.value, _HTMLDocument_prototype_write) && !JAM.identical(node.args[0], undefined)) {
+      if(node.type === "call" && JAM.identical(node.value, _HTMLDocument_prototype_write) && node.argc > 0 && !JAM.identical(node.args[0], undefined)) {
         commit = false;
         break
       }
@@ -54,7 +54,7 @@ var policy = function() {
         commit = false;
         break
       }
-      if(!states[4] && node.type === "call" && JAM.identical(node.value, _HTMLDocument_prototype_getElementById) && JAM.identical(node.args[0], "content")) {
+      if(!states[4] && node.type === "call" && JAM.identical(node.value, _HTMLDocument_prototype_getElementById) && node.argc > 0 && JAM.identical(node.args[0], "content")) {
         states[4] = true
       }
       if(node.type === "write" && (true && JAM.instanceof(node.obj, _CSSStyleDeclaration) && !JAM.identical(node.id, "display") || node.id === "textContent" && JAM.identical(node.obj["className"], "destructive-read read-only") || node.id === "x" && JAM.identical(node.value, 2) && node.id === "y" && JAM.identical(node.value, 3))) {
@@ -247,7 +247,7 @@ var policy = function() {
         commit = false;
         break
       }
-      if(!states[43] && node.type === "call" && JAM.identical(node.value, _HTMLDocument_prototype_createElement) && JAM.identical(node.args[0], "script")) {
+      if(!states[43] && node.type === "call" && JAM.identical(node.value, _HTMLDocument_prototype_createElement) && node.argc > 0 && JAM.identical(node.args[0], "script")) {
         states[43] = true
       }
     }

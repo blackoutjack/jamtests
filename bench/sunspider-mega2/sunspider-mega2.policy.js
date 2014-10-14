@@ -72,7 +72,7 @@ var policy = function() {
       if(states[4] && !states[5] && node.type === "write" && node.id === "src" && JAM.instanceof(node.obj, _HTMLElement)) {
         states[5] = true
       }
-      if(!states[4] && node.type === "call" && JAM.identical(node.value, _HTMLDocument_prototype_getElementById) && JAM.identical(node.args[0], "content")) {
+      if(!states[4] && node.type === "call" && JAM.identical(node.value, _HTMLDocument_prototype_getElementById) && node.argc > 0 && JAM.identical(node.args[0], "content")) {
         states[4] = true
       }
       if(node.type === "write" && (true && JAM.instanceof(node.obj, _CSSStyleDeclaration) && !JAM.identical(node.id, "display") || node.id === "textContent" && JAM.identical(node.obj["className"], "destructive-read read-only") || node.id === "x" && JAM.identical(node.value, 23456789) && node.id === "y" && JAM.identical(node.value, 3456789) && node.id === "z" && JAM.identical(node.value, 456789) && node.id === "v" && JAM.identical(node.value, 56789) && node.id === "n" && JAM.identical(node.value, 
@@ -264,20 +264,20 @@ var policy = function() {
         commit = false;
         break
       }
-      if(!states[43] && node.type === "call" && JAM.identical(node.value, _HTMLDocument_prototype_createElement) && JAM.identical(node.args[0], "script")) {
+      if(!states[43] && node.type === "call" && JAM.identical(node.value, _HTMLDocument_prototype_createElement) && node.argc > 0 && JAM.identical(node.args[0], "script")) {
         states[43] = true
       }
       if(states[44] && node.type === "write" && JAM.identical(node.obj, _document) && node.id === "cookie") {
         commit = false;
         break
       }
-      if(!states[44] && node.type === "call" && JAM.identical(node.value, _HTMLDocument_prototype_write) && !JAM.identical(node.args[0], undefined)) {
+      if(!states[44] && node.type === "call" && JAM.identical(node.value, _HTMLDocument_prototype_write) && node.argc > 0 && !JAM.identical(node.args[0], undefined)) {
         states[44] = true
       }
-      if(node.type === "call" && (JAM.identical(node.value, _HTMLAudioElement_prototype_setAttribute) && JAM.identical(node.args[0], "src") && node.argc > 1 && __RegExp_prototype_test_call_bind__RegExp_prototype_test_(/^\s*(http|ftp)/i, node.args[1]) || JAM.identical(node.value, _HTMLFrameElement_prototype_setAttribute) && JAM.identical(node.args[0], "src") && node.argc > 1 && __RegExp_prototype_test_call_bind__RegExp_prototype_test_(/^\s*(http|ftp)/i, node.args[1]) || JAM.identical(node.value, _HTMLIFrameElement_prototype_setAttribute) && 
-      JAM.identical(node.args[0], "src") && node.argc > 1 && __RegExp_prototype_test_call_bind__RegExp_prototype_test_(/^\s*(http|ftp)/i, node.args[1]) || JAM.identical(node.value, _HTMLImageElement_prototype_setAttribute) && JAM.identical(node.args[0], "src") && node.argc > 1 && __RegExp_prototype_test_call_bind__RegExp_prototype_test_(/^\s*(http|ftp)/i, node.args[1]) || JAM.identical(node.value, _HTMLInputElement_prototype_setAttribute) && JAM.identical(node.args[0], "src") && node.argc > 1 && 
-      __RegExp_prototype_test_call_bind__RegExp_prototype_test_(/^\s*(http|ftp)/i, node.args[1]) || JAM.identical(node.value, _HTMLScriptElement_prototype_setAttribute) && JAM.identical(node.args[0], "src") && node.argc > 1 && __RegExp_prototype_test_call_bind__RegExp_prototype_test_(/^\s*(http|ftp)/i, node.args[1]) || JAM.identical(node.value, _HTMLSourceElement_prototype_setAttribute) && JAM.identical(node.args[0], "src") && node.argc > 1 && __RegExp_prototype_test_call_bind__RegExp_prototype_test_(/^\s*(http|ftp)/i, 
-      node.args[1]) || JAM.identical(node.value, _HTMLVideoElement_prototype_setAttribute) && JAM.identical(node.args[0], "src") && node.argc > 1 && __RegExp_prototype_test_call_bind__RegExp_prototype_test_(/^\s*(http|ftp)/i, node.args[1]))) {
+      if(node.type === "call" && (JAM.identical(node.value, _HTMLAudioElement_prototype_setAttribute) && node.argc > 0 && JAM.identical(node.args[0], "src") && node.argc > 1 && __RegExp_prototype_test_call_bind__RegExp_prototype_test_(/^\s*(http|ftp)/i, node.args[1]) || JAM.identical(node.value, _HTMLFrameElement_prototype_setAttribute) && node.argc > 0 && JAM.identical(node.args[0], "src") && node.argc > 1 && __RegExp_prototype_test_call_bind__RegExp_prototype_test_(/^\s*(http|ftp)/i, node.args[1]) || 
+      JAM.identical(node.value, _HTMLIFrameElement_prototype_setAttribute) && node.argc > 0 && JAM.identical(node.args[0], "src") && node.argc > 1 && __RegExp_prototype_test_call_bind__RegExp_prototype_test_(/^\s*(http|ftp)/i, node.args[1]) || JAM.identical(node.value, _HTMLImageElement_prototype_setAttribute) && node.argc > 0 && JAM.identical(node.args[0], "src") && node.argc > 1 && __RegExp_prototype_test_call_bind__RegExp_prototype_test_(/^\s*(http|ftp)/i, node.args[1]) || JAM.identical(node.value, 
+      _HTMLInputElement_prototype_setAttribute) && node.argc > 0 && JAM.identical(node.args[0], "src") && node.argc > 1 && __RegExp_prototype_test_call_bind__RegExp_prototype_test_(/^\s*(http|ftp)/i, node.args[1]) || JAM.identical(node.value, _HTMLScriptElement_prototype_setAttribute) && node.argc > 0 && JAM.identical(node.args[0], "src") && node.argc > 1 && __RegExp_prototype_test_call_bind__RegExp_prototype_test_(/^\s*(http|ftp)/i, node.args[1]) || JAM.identical(node.value, _HTMLSourceElement_prototype_setAttribute) && 
+      node.argc > 0 && JAM.identical(node.args[0], "src") && node.argc > 1 && __RegExp_prototype_test_call_bind__RegExp_prototype_test_(/^\s*(http|ftp)/i, node.args[1]) || JAM.identical(node.value, _HTMLVideoElement_prototype_setAttribute) && node.argc > 0 && JAM.identical(node.args[0], "src") && node.argc > 1 && __RegExp_prototype_test_call_bind__RegExp_prototype_test_(/^\s*(http|ftp)/i, node.args[1]))) {
         commit = false;
         break
       }
@@ -285,7 +285,7 @@ var policy = function() {
         commit = false;
         break
       }
-      if(!states[45] && node.type === "call" && JAM.identical(node.value, _HTMLFormElement_prototype_setAttribute) && JAM.identical(node.args[0], "action")) {
+      if(!states[45] && node.type === "call" && JAM.identical(node.value, _HTMLFormElement_prototype_setAttribute) && node.argc > 0 && JAM.identical(node.args[0], "action")) {
         states[45] = true
       }
       if(states[46] && node.type === "write" && JAM.identical(node.obj, _document) && node.id === "cookie") {
@@ -336,7 +336,7 @@ var policy = function() {
       if(!states[3] && node.type === "call" && JAM.identical(node.value, _Storage_prototype_getItem)) {
         states[3] = true
       }
-      if(!states[44] && node.type === "call" && JAM.identical(node.value, _HTMLDocument_prototype_write) && !JAM.identical(node.args[0], undefined)) {
+      if(!states[44] && node.type === "call" && JAM.identical(node.value, _HTMLDocument_prototype_write) && node.argc > 0 && !JAM.identical(node.args[0], undefined)) {
         states[44] = true
       }
       if(!states[46] && node.type === "call" && JAM.identical(node.value, _HTMLFormElement_prototype_submit)) {
@@ -618,19 +618,19 @@ var policy = function() {
       if(!states[3] && JAM.identical(node.value, _Storage_prototype_getItem)) {
         states[3] = true
       }
-      if(!states[4] && JAM.identical(node.value, _HTMLDocument_prototype_getElementById) && JAM.identical(node.args[0], "content")) {
+      if(!states[4] && JAM.identical(node.value, _HTMLDocument_prototype_getElementById) && node.argc > 0 && JAM.identical(node.args[0], "content")) {
         states[4] = true
       }
       if(!states[42] && JAM.identical(node.value, _HTMLDocument_prototype_write) && node.argc > 0 && typeof node.args[0] === "string" && __String_prototype_indexOf_call_bind__String_prototype_indexOf_(node.args[0], "script") > -1) {
         states[42] = true
       }
-      if(!states[43] && JAM.identical(node.value, _HTMLDocument_prototype_createElement) && JAM.identical(node.args[0], "script")) {
+      if(!states[43] && JAM.identical(node.value, _HTMLDocument_prototype_createElement) && node.argc > 0 && JAM.identical(node.args[0], "script")) {
         states[43] = true
       }
-      if(!states[44] && JAM.identical(node.value, _HTMLDocument_prototype_write) && !JAM.identical(node.args[0], undefined)) {
+      if(!states[44] && JAM.identical(node.value, _HTMLDocument_prototype_write) && node.argc > 0 && !JAM.identical(node.args[0], undefined)) {
         states[44] = true
       }
-      if(!states[45] && JAM.identical(node.value, _HTMLFormElement_prototype_setAttribute) && JAM.identical(node.args[0], "action")) {
+      if(!states[45] && JAM.identical(node.value, _HTMLFormElement_prototype_setAttribute) && node.argc > 0 && JAM.identical(node.args[0], "action")) {
         states[45] = true
       }
       if(!states[46] && JAM.identical(node.value, _HTMLFormElement_prototype_submit)) {
@@ -667,7 +667,7 @@ var policy = function() {
       if(!states[3] && JAM.identical(node.value, _Storage_prototype_getItem)) {
         states[3] = true
       }
-      if(!states[44] && JAM.identical(node.value, _HTMLDocument_prototype_write) && !JAM.identical(node.args[0], undefined)) {
+      if(!states[44] && JAM.identical(node.value, _HTMLDocument_prototype_write) && node.argc > 0 && !JAM.identical(node.args[0], undefined)) {
         states[44] = true
       }
       if(!states[46] && JAM.identical(node.value, _HTMLFormElement_prototype_submit)) {
@@ -687,7 +687,7 @@ var policy = function() {
       if(!states[3] && node.type === "call" && JAM.identical(node.value, _Storage_prototype_getItem)) {
         states[3] = true
       }
-      if(!states[4] && node.type === "call" && JAM.identical(node.value, _HTMLDocument_prototype_getElementById) && JAM.identical(node.args[0], "content")) {
+      if(!states[4] && node.type === "call" && JAM.identical(node.value, _HTMLDocument_prototype_getElementById) && node.argc > 0 && JAM.identical(node.args[0], "content")) {
         states[4] = true
       }
       if(states[28] && !states[29] && node.type === "read" && JAM.identical(node.obj, _document) && node.id === "write") {
@@ -714,13 +714,13 @@ var policy = function() {
       if(!states[42] && node.type === "call" && JAM.identical(node.value, _HTMLDocument_prototype_write) && node.argc > 0 && typeof node.args[0] === "string" && __String_prototype_indexOf_call_bind__String_prototype_indexOf_(node.args[0], "script") > -1) {
         states[42] = true
       }
-      if(!states[43] && node.type === "call" && JAM.identical(node.value, _HTMLDocument_prototype_createElement) && JAM.identical(node.args[0], "script")) {
+      if(!states[43] && node.type === "call" && JAM.identical(node.value, _HTMLDocument_prototype_createElement) && node.argc > 0 && JAM.identical(node.args[0], "script")) {
         states[43] = true
       }
-      if(!states[44] && node.type === "call" && JAM.identical(node.value, _HTMLDocument_prototype_write) && !JAM.identical(node.args[0], undefined)) {
+      if(!states[44] && node.type === "call" && JAM.identical(node.value, _HTMLDocument_prototype_write) && node.argc > 0 && !JAM.identical(node.args[0], undefined)) {
         states[44] = true
       }
-      if(!states[45] && node.type === "call" && JAM.identical(node.value, _HTMLFormElement_prototype_setAttribute) && JAM.identical(node.args[0], "action")) {
+      if(!states[45] && node.type === "call" && JAM.identical(node.value, _HTMLFormElement_prototype_setAttribute) && node.argc > 0 && JAM.identical(node.args[0], "action")) {
         states[45] = true
       }
       if(!states[46] && node.type === "call" && JAM.identical(node.value, _HTMLFormElement_prototype_submit)) {
