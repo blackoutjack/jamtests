@@ -2,7 +2,15 @@
 error_reporting(E_ALL);
 // The |script| parameter is required.
 $script = $_REQUEST['script'];
+$sources = $_REQUEST['sources'];
 if ($script) {
+  if (substr_compare($script, ".js", -3) === 0) {
+    $title = substr($script, 0, strlen($script) - 3);
+  } else {
+    $title = $script;
+  }
+} else if (is_array($sources)) {
+  $script = $sources[0];
   if (substr_compare($script, ".js", -3) === 0) {
     $title = substr($script, 0, strlen($script) - 3);
   } else {
