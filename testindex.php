@@ -35,23 +35,23 @@ $allfiles = scandir(".");
 $sourcefiles = array();
 $sourcedirs = array();
 foreach ($allfiles as $fl) {
-  if ($fl == '.') continue;
-  if ($fl == '..') continue;
-  if ($fl == 'libTx.js') continue;
-  if ($fl == 'auto.js') continue;
-  if ($fl == 'autoextra.js') continue;
-  if ($fl == 'actions.txt') continue;
-  if ($fl == 'index.php') continue;
-  if ($fl == 'test.php') continue;
-  if ($fl == '.svn') continue;
+  if ($fl === '.') continue;
+  if ($fl === '..') continue;
+  if ($fl === 'libTx.js') continue;
+  if ($fl === 'auto.js') continue;
+  if ($fl === 'autoextra.js') continue;
+  if ($fl === 'actions.txt') continue;
+  if ($fl === 'index.php') continue;
+  if ($fl === 'test.php') continue;
+  if ($fl === '.svn') continue;
 
   if (is_dir($fl)) {
-    if (strpos($fl, 'source-') == 0) {
+    if (strpos($fl, 'source-') === 0) {
       // Note each source directory.
       $sourcedirs[] = $fl;
     }
   } else {
-    if (strpos($fl, $appname.'.') == 0) {
+    if (strpos($fl, $appname.'.') === 0) {
       $back = substr($fl, strlen($appname) + 1);
 
       $parts = explode('.', $back);
@@ -59,7 +59,7 @@ foreach ($allfiles as $fl) {
       if ($len < 1) continue; // Shouldn't happen.
       $ext = $parts[$len - 1];
 
-      if ($ext != 'js' && $ext != 'html') continue;
+      if ($ext !== 'js' && $ext !== 'html') continue;
 
       $sourcefiles[] = $fl;
     }
@@ -77,8 +77,8 @@ foreach ($sourcefiles as $fl) {
 
   // Get the 2nd-to-last part (or use "main").
   $desc = $len > 1 ? $parts[$len-2] : 'main';
-  if ($ext == 'js') {
-    if ($desc == 'policy') {
+  if ($ext === 'js') {
+    if ($desc === 'policy') {
       if ($len > 2) {
         $descparts = array_slice($parts, 0, $len - 2);
         $desc = implode('.', $descparts);
@@ -97,8 +97,8 @@ foreach ($sourcefiles as $fl) {
       $info[$desc] = getSubArray($info, $desc);
       $info[$desc]['js'] = $fl;
     }
-  } else if ($ext == 'html') {
-    if ($desc == 'head' || $desc == 'body') {
+  } else if ($ext === 'html') {
+    if ($desc === 'head' || $desc === 'body') {
       $role = $desc;
       if ($len > 2) {
         $descparts = array_slice($parts, 0, $len - 2);
@@ -121,7 +121,7 @@ foreach ($sourcefiles as $fl) {
   }
 }
 
-foreach ($sourcedir as $dir) {
+foreach ($sourcedirs as $sourcedir) {
   $desc = substr($sourcedir, strlen('source-'));
   // %%% Eventually want to go recursive instead of just first-level.
   $srcfiles = scandir($sourcedir);
@@ -130,7 +130,7 @@ foreach ($sourcedir as $dir) {
   foreach ($srcfiles as $src) {
     $srcpath = $sourcedir.'/'.$src;
     if (file_exists($srcpath) && !is_dir($srcpath)) {
-      if (substr($srcpath, strlen($srcpath) - 3) == '.js') {
+      if (substr($srcpath, strlen($srcpath) - 3) === '.js') {
         $subinfo[] = $srcpath;
       }
     }
@@ -154,6 +154,18 @@ function getParamText($info, $key, $param, $first=false) {
   return "";
 }
 
+function maybeBreakLinks() {
+  static $linkcnt = 0;
+  $ret = '';
+  $linkmod = $linkcnt % 20;
+  if ($linkcnt !== 0 && $linkmod === 0) {
+    $ret .= '</div><div class="linkcol">';
+  }
+  $linkcnt++;
+
+  return $ret;
+}
+
 function getScriptLink($info, $hrefbase, $name, $lib) {
   $jsparam = getParamText($info, 'js', 'script', true);
   $polparam = getParamText($info, 'policy', 'policy', false);
@@ -165,7 +177,8 @@ function getScriptLink($info, $hrefbase, $name, $lib) {
   if (!$lib) {
     $href .= '&lib=0';
   }
-  $html = '<a id="'.$name.'" href="'.$href.'">'.$name.'</a>';
+  $html = maybeBreakLinks();
+  $html .= '<a id="'.$name.'" href="'.$href.'">'.$name.'</a>';
   return $html;
 }
 
@@ -186,7 +199,14 @@ function getSourceLink($info, $hrefbase, $name, $lib) {
   if (!$lib) {
     $href .= '&lib=0';
   }
-  $html = '<a id="'.$name.'" href="'.$href.'">'.$name.'</a>';
+  $html = maybeBreakLinks();
+  $html .= '<a id="'.$name.'" href="'.$href.'">'.$name.'</a>';
+  return $html;
+}
+
+function getHTMLLink($info, $name) {
+  $html = maybeBreakLinks();
+  $html .= '<a href="'.$info['html'].'">'.$name.'</a>';
   return $html;
 }
 
@@ -212,10 +232,22 @@ function findFile($info, $filetype, $key) {
   <head>
     <title>JAMScript Test Index</title>
     <meta charset="UTF-8" />
+    <style type="text/css" >
+      .linkcol {
+        padding: 10px;
+        float: left;
+        font-family: courier new;
+      }
+      .linkcol a {
+        text-decoration: none;
+      }
+      .linkcol a:hover {
+        text-decoration: underline;
+      }
+    </style>
   </head>
   <body>
-    <h1>Test cases</h1>
-    <ul>
+    <h1><?=$appname?> test cases</h1>
 <?
 
 $hrefbase = 'test.php';
@@ -223,7 +255,7 @@ $hrefbase = 'test.php';
 $linksrcs = array();
 foreach ($info as $key => $sub) {
   if (isset($sub['js'])) {
-    if ($key == 'original' || $key == 'original.profile') {
+    if ($key === 'original' || $key === 'original.profile') {
       // Only add a policy for these if specified.
     } else {
       $sub['policy'] = findFile($info, 'policy', $key);
@@ -234,11 +266,12 @@ foreach ($info as $key => $sub) {
 
     // Suppress the library if there's no policy.
     $lib = isset($sub['policy']);
-    array_push($linksrcs, getScriptLink($sub, $hrefbase, $key, $lib));
+    $text = "script: ".$key;
+    array_push($linksrcs, getScriptLink($sub, $hrefbase, $text, $lib));
   }
   if (isset($sub['source'])) {
     // %%% Eventually want to do something different here.
-    if ($key == 'original' || $key == 'original.profile') {
+    if ($key === 'original' || $key === 'original.profile') {
       // Only add a policy for these if specified.
     } else {
       $sub['policy'] = findFile($info, 'policy', $key);
@@ -248,30 +281,31 @@ foreach ($info as $key => $sub) {
 
     // Suppress the library if there's no policy.
     $lib = isset($sub['policy']);
-    array_push($linksrcs, getScriptLink($sub, $hrefbase, $key, $lib));
+    $text = "source: ".$key;
+    array_push($linksrcs, getSourceLink($sub, $hrefbase, $text, $lib));
   }
   if (isset($sub['html'])) {
     // Link to the stand-alone HTML file.
-    array_push($linksrcs, '<a href="'.$sub['html'].'">'.$sub['html'].'</a>');
+    $text = "html: ".$sub['html'];
+    array_push($linksrcs, getHTMLLink($sub, $hrefbase, $text));
   }
 }
-$linksrc = implode(' | ', $linksrcs);
+$linksrc = implode('<br/>', $linksrcs);
 
-if (!$linksrc) {
-  $err .= "WARNING: $appname has no test case.\n";
-} else {
-?>
-    <li><?=$appname.': '.$linksrc?></li>
-<?
-}
-?>
-    </ul>
-<?
 if ($err) {
 ?>
     <p class="error"><pre><?=$err?></pre></p>
 <?
 }
+
+if (!$linksrc) {
+  $err .= "WARNING: $appname has no test cases.\n";
+} else {
+?>
+    <div class="linkcol"><?=$linksrc?></div>
+<?
+}
+
 if ($auto) {
 ?>
     <script src="auto.js"></script>
@@ -280,8 +314,8 @@ if ($auto) {
 <?
       // Use different test cases for "big" inputs.
       $applen = strlen($appname);
-      $isbig = $applen > 9 && substr($appname, 0, 5) == 'sms2-'
-        && substr($appname, $applen - 4) == '-big';
+      $isbig = $applen > 9 && substr($appname, 0, 5) === 'sms2-'
+        && substr($appname, $applen - 4) === '.big';
       $ats = $isbig ? $bigautotests : $autotests;
       foreach ($ats as $at) {
 ?>

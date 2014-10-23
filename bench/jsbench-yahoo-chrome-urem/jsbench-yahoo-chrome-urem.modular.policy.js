@@ -1,24 +1,24 @@
 var policy = function() {
-  var _XMLHttpRequest = XMLHttpRequest;
+  var _XMLHttpRequest_prototype_open = XMLHttpRequest.prototype.open;
   function pFull(tx) {
     var commit = true;
-    var as = tx.getReadSequence();
+    var as = tx.getInvokeSequence();
     var len = as.length;
-    for(var i = 0;i < len;i++) {
+    for (var i = 0;i < len;i++) {
       var node = as[i];
-      if(node.id === "open" && JAM.instanceof(node.obj, _XMLHttpRequest)) {
+      if (JAM.identical(node.value, _XMLHttpRequest_prototype_open) && node.argc > 1) {
         commit = false;
-        break
+        break;
       }
     }
-    if(commit) {
-      JAM.process(tx)
-    }else {
-      JAM.prevent(tx)
+    if (commit) {
+      JAM.process(tx);
+    } else {
+      JAM.prevent(tx);
     }
   }
   pFull.subsumedBy = pFull;
-  pFull.itype = "read";
+  pFull.itype = "invoke";
   Object.freeze(pFull);
-  return{pFull:pFull}
+  return{pFull:pFull};
 }()

@@ -10,17 +10,16 @@ var policy = function() {
   var _HTMLSourceElement = HTMLSourceElement;
   var _HTMLVideoElement = HTMLVideoElement;
   var _HTMLFormElement = HTMLFormElement;
+  var _Window = Window;
   var _HTMLDocument = HTMLDocument;
   var _HTMLElement = HTMLElement;
-  var _Window = Window;
   var _HTMLDocument_prototype_write = HTMLDocument.prototype.write;
   var _HTMLDocument_prototype_writeln = HTMLDocument.prototype.writeln;
   var _XMLHttpRequest_prototype_open = XMLHttpRequest.prototype.open;
   var _Window_prototype_open = Window.prototype.open;
+  var _undefined = undefined;
   var _Window_prototype_openDialog = Window.prototype.openDialog;
-  var _Window_prototype_postMessage = Window.prototype.postMessage;
-  var _WebSocket_prototype_send = WebSocket.prototype.send;
-  var _HTMLFormElement_prototype_submit = HTMLFormElement.prototype.submit;
+  var _WebSocket = WebSocket;
   var _HTMLAudioElement_prototype_setAttribute = HTMLAudioElement.prototype.setAttribute;
   var _HTMLFrameElement_prototype_setAttribute = HTMLFrameElement.prototype.setAttribute;
   var _HTMLIFrameElement_prototype_setAttribute = HTMLIFrameElement.prototype.setAttribute;
@@ -34,32 +33,36 @@ var policy = function() {
     var commit = true;
     var as = tx.getActionSequence();
     var len = as.length;
-    for(var i = 0;i < len;i++) {
+    for (var i = 0;i < len;i++) {
       var node = as[i];
-      if(node.type === "write" && (node.id === "src" && JAM.instanceof(node.obj, _HTMLAudioElement) && __RegExp_prototype_test_call_bind__RegExp_prototype_test_(/^\s*(http|ftp)/i, node.value) || node.id === "src" && JAM.instanceof(node.obj, _HTMLFrameElement) && __RegExp_prototype_test_call_bind__RegExp_prototype_test_(/^\s*(http|ftp)/i, node.value) || node.id === "src" && JAM.instanceof(node.obj, _HTMLIFrameElement) && __RegExp_prototype_test_call_bind__RegExp_prototype_test_(/^\s*(http|ftp)/i, 
+      if (node.type === "write" && (node.id === "src" && JAM.instanceof(node.obj, _HTMLAudioElement) && __RegExp_prototype_test_call_bind__RegExp_prototype_test_(/^\s*(http|ftp)/i, node.value) || node.id === "src" && JAM.instanceof(node.obj, _HTMLFrameElement) && __RegExp_prototype_test_call_bind__RegExp_prototype_test_(/^\s*(http|ftp)/i, node.value) || node.id === "src" && JAM.instanceof(node.obj, _HTMLIFrameElement) && __RegExp_prototype_test_call_bind__RegExp_prototype_test_(/^\s*(http|ftp)/i, 
       node.value) || node.id === "src" && JAM.instanceof(node.obj, _HTMLImageElement) && __RegExp_prototype_test_call_bind__RegExp_prototype_test_(/^\s*(http|ftp)/i, node.value) || node.id === "src" && JAM.instanceof(node.obj, _HTMLInputElement) && __RegExp_prototype_test_call_bind__RegExp_prototype_test_(/^\s*(http|ftp)/i, node.value) || node.id === "src" && JAM.instanceof(node.obj, _HTMLScriptElement) && __RegExp_prototype_test_call_bind__RegExp_prototype_test_(/^\s*(http|ftp)/i, node.value) || 
-      node.id === "src" && JAM.instanceof(node.obj, _HTMLSourceElement) && __RegExp_prototype_test_call_bind__RegExp_prototype_test_(/^\s*(http|ftp)/i, node.value) || node.id === "src" && JAM.instanceof(node.obj, _HTMLVideoElement) && __RegExp_prototype_test_call_bind__RegExp_prototype_test_(/^\s*(http|ftp)/i, node.value) || node.id === "action" && JAM.instanceof(node.obj, _HTMLFormElement) || node.id === "cookie" && JAM.instanceof(node.obj, _HTMLDocument) || node.id === "href" && JAM.instanceof(node.obj, 
-      _HTMLElement) || node.id === "innerHTML" && JAM.instanceof(node.obj, _HTMLElement) || node.id === "location" && JAM.instanceof(node.obj, _Window))) {
+      node.id === "src" && JAM.instanceof(node.obj, _HTMLSourceElement) && __RegExp_prototype_test_call_bind__RegExp_prototype_test_(/^\s*(http|ftp)/i, node.value) || node.id === "src" && JAM.instanceof(node.obj, _HTMLVideoElement) && __RegExp_prototype_test_call_bind__RegExp_prototype_test_(/^\s*(http|ftp)/i, node.value) || node.id === "action" && JAM.instanceof(node.obj, _HTMLFormElement) || node.id === "location" && JAM.instanceof(node.obj, _Window) || node.id === "cookie" && JAM.instanceof(node.obj, 
+      _HTMLDocument) || node.id === "href" && JAM.instanceof(node.obj, _HTMLElement) || node.id === "innerHTML" && JAM.instanceof(node.obj, _HTMLElement))) {
         commit = false;
-        break
+        break;
       }
-      if(node.type === "call" && (JAM.identical(node.value, _HTMLDocument_prototype_write) && node.argc > 0 && typeof node.args[0] === "string" || JAM.identical(node.value, _HTMLDocument_prototype_writeln) && node.argc > 0 && typeof node.args[0] === "string" || JAM.identical(node.value, _XMLHttpRequest_prototype_open) || JAM.identical(node.value, _Window_prototype_open) || JAM.identical(node.value, _Window_prototype_openDialog) || JAM.identical(node.value, _Window_prototype_postMessage) || JAM.identical(node.value, 
-      _WebSocket_prototype_send) || JAM.identical(node.value, _HTMLFormElement_prototype_submit) || JAM.identical(node.value, _HTMLAudioElement_prototype_setAttribute) && node.argc > 0 && JAM.identical(node.args[0], "src") && node.argc > 1 && __RegExp_prototype_test_call_bind__RegExp_prototype_test_(/^\s*(http|ftp)/i, node.args[1]) || JAM.identical(node.value, _HTMLFrameElement_prototype_setAttribute) && node.argc > 0 && JAM.identical(node.args[0], "src") && node.argc > 1 && __RegExp_prototype_test_call_bind__RegExp_prototype_test_(/^\s*(http|ftp)/i, 
-      node.args[1]) || JAM.identical(node.value, _HTMLIFrameElement_prototype_setAttribute) && node.argc > 0 && JAM.identical(node.args[0], "src") && node.argc > 1 && __RegExp_prototype_test_call_bind__RegExp_prototype_test_(/^\s*(http|ftp)/i, node.args[1]) || JAM.identical(node.value, _HTMLImageElement_prototype_setAttribute) && node.argc > 0 && JAM.identical(node.args[0], "src") && node.argc > 1 && __RegExp_prototype_test_call_bind__RegExp_prototype_test_(/^\s*(http|ftp)/i, node.args[1]) || JAM.identical(node.value, 
-      _HTMLInputElement_prototype_setAttribute) && node.argc > 0 && JAM.identical(node.args[0], "src") && node.argc > 1 && __RegExp_prototype_test_call_bind__RegExp_prototype_test_(/^\s*(http|ftp)/i, node.args[1]) || JAM.identical(node.value, _HTMLScriptElement_prototype_setAttribute) && node.argc > 0 && JAM.identical(node.args[0], "src") && node.argc > 1 && __RegExp_prototype_test_call_bind__RegExp_prototype_test_(/^\s*(http|ftp)/i, node.args[1]) || JAM.identical(node.value, _HTMLSourceElement_prototype_setAttribute) && 
-      node.argc > 0 && JAM.identical(node.args[0], "src") && node.argc > 1 && __RegExp_prototype_test_call_bind__RegExp_prototype_test_(/^\s*(http|ftp)/i, node.args[1]) || JAM.identical(node.value, _HTMLVideoElement_prototype_setAttribute) && node.argc > 0 && JAM.identical(node.args[0], "src") && node.argc > 1 && __RegExp_prototype_test_call_bind__RegExp_prototype_test_(/^\s*(http|ftp)/i, node.args[1]) || JAM.identical(node.value, _HTMLFormElement_prototype_setAttribute) && node.argc > 0 && JAM.identical(node.args[0], 
-      "action"))) {
+      if (node.type === "invoke" && (JAM.identical(node.value, _HTMLDocument_prototype_write) && (node.argc > 0 && typeof node.args[0] === "string") || JAM.identical(node.value, _HTMLDocument_prototype_writeln) && (node.argc > 0 && typeof node.args[0] === "string") || JAM.identical(node.value, _XMLHttpRequest_prototype_open) && node.argc > 1 || JAM.identical(node.value, _Window_prototype_open) && (node.argc > 0 && !JAM.identical(node.args[0], _undefined)) || JAM.identical(node.value, _Window_prototype_openDialog) && 
+      (node.argc > 0 && !JAM.identical(node.args[0], _undefined)) || JAM.identical(node.value, _WebSocket) && (node.argc > 0 && __RegExp_prototype_test_call_bind__RegExp_prototype_test_(/^ws:\/\//i, node.args[0])) || JAM.identical(node.value, _HTMLAudioElement_prototype_setAttribute) && (node.argc > 0 && JAM.identical(node.args[0], "src")) && (node.argc > 1 && __RegExp_prototype_test_call_bind__RegExp_prototype_test_(/^\s*(http|ftp)/i, node.args[1])) || JAM.identical(node.value, _HTMLFrameElement_prototype_setAttribute) && 
+      (node.argc > 0 && JAM.identical(node.args[0], "src")) && (node.argc > 1 && __RegExp_prototype_test_call_bind__RegExp_prototype_test_(/^\s*(http|ftp)/i, node.args[1])) || JAM.identical(node.value, _HTMLIFrameElement_prototype_setAttribute) && (node.argc > 0 && JAM.identical(node.args[0], "src")) && (node.argc > 1 && __RegExp_prototype_test_call_bind__RegExp_prototype_test_(/^\s*(http|ftp)/i, node.args[1])) || JAM.identical(node.value, _HTMLImageElement_prototype_setAttribute) && (node.argc > 
+      0 && JAM.identical(node.args[0], "src")) && (node.argc > 1 && __RegExp_prototype_test_call_bind__RegExp_prototype_test_(/^\s*(http|ftp)/i, node.args[1])) || JAM.identical(node.value, _HTMLInputElement_prototype_setAttribute) && (node.argc > 0 && JAM.identical(node.args[0], "src")) && (node.argc > 1 && __RegExp_prototype_test_call_bind__RegExp_prototype_test_(/^\s*(http|ftp)/i, node.args[1])) || JAM.identical(node.value, _HTMLScriptElement_prototype_setAttribute) && (node.argc > 0 && JAM.identical(node.args[0], 
+      "src")) && (node.argc > 1 && __RegExp_prototype_test_call_bind__RegExp_prototype_test_(/^\s*(http|ftp)/i, node.args[1])) || JAM.identical(node.value, _HTMLSourceElement_prototype_setAttribute) && (node.argc > 0 && JAM.identical(node.args[0], "src")) && (node.argc > 1 && __RegExp_prototype_test_call_bind__RegExp_prototype_test_(/^\s*(http|ftp)/i, node.args[1])) || JAM.identical(node.value, _HTMLVideoElement_prototype_setAttribute) && (node.argc > 0 && JAM.identical(node.args[0], "src")) && (node.argc > 
+      1 && __RegExp_prototype_test_call_bind__RegExp_prototype_test_(/^\s*(http|ftp)/i, node.args[1])) || JAM.identical(node.value, _HTMLFormElement_prototype_setAttribute) && (node.argc > 0 && JAM.identical(node.args[0], "action")))) {
         commit = false;
-        break
+        break;
+      }
+      if (node.type === "read" && (node.id === "postMessage" && JAM.instanceof(node.obj, _Window))) {
+        commit = false;
+        break;
       }
     }
-    if(commit) {
-      JAM.process(tx)
-    }else {
-      JAM.prevent(tx)
+    if (commit) {
+      JAM.process(tx);
+    } else {
+      JAM.prevent(tx);
     }
   }
   pFull.subsumedBy = pFull;
   Object.freeze(pFull);
-  return{pFull:pFull}
+  return{pFull:pFull};
 }()

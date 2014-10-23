@@ -4,21 +4,21 @@ var policy = function() {
     var commit = true;
     var as = tx.getReadSequence();
     var len = as.length;
-    for(var i = 0;i < len;i++) {
+    for (var i = 0;i < len;i++) {
       var node = as[i];
-      if(JAM.identical(node.obj, _document) && node.id === "write") {
+      if (JAM.identical(node.obj, _document) && node.id === "write") {
         commit = false;
-        break
+        break;
       }
     }
-    if(commit) {
-      JAM.process(tx)
-    }else {
-      JAM.prevent(tx)
+    if (commit) {
+      JAM.process(tx);
+    } else {
+      JAM.prevent(tx);
     }
   }
   pFull.subsumedBy = pFull;
   pFull.itype = "read";
   Object.freeze(pFull);
-  return{pFull:pFull}
+  return{pFull:pFull};
 }()

@@ -4,38 +4,38 @@ var policy = function() {
     var commit = true;
     var as = tx.getActionSequence();
     var len = as.length;
-    for(var i = 0;i < len;i++) {
+    for (var i = 0;i < len;i++) {
       var node = as[i];
-      if(node.type === "write" && (node.id === "textContent" && JAM.identical(node.obj["className"], "destructive-read read-only") || node.id === "innerHTML")) {
+      if (node.type === "write" && (node.id === "textContent" && JAM.identical(node.obj["className"], "destructive-read read-only") || node.id === "innerHTML")) {
         commit = false;
-        break
+        break;
       }
-      if(node.type === "read" && (node.id === "textContent" && JAM.identical(node.obj["className"], "write-only non-editable") || node.id === "innerHTML")) {
+      if (node.type === "read" && (node.id === "textContent" && JAM.identical(node.obj["className"], "write-only non-editable") || node.id === "innerHTML")) {
         commit = false;
-        break
+        break;
       }
-      if(states[1] && node.type === "read" && node.id === "textContent" && JAM.identical(node.obj["className"], "destructive-read read-only")) {
+      if (states[1] && node.type === "read" && (node.id === "textContent" && JAM.identical(node.obj["className"], "destructive-read read-only"))) {
         commit = false;
-        break
+        break;
       }
-      if(!states[1] && node.type === "read" && node.id === "textContent" && JAM.identical(node.obj["className"], "destructive-read read-only")) {
-        states[1] = true
+      if (!states[1] && node.type === "read" && (node.id === "textContent" && JAM.identical(node.obj["className"], "destructive-read read-only"))) {
+        states[1] = true;
       }
-      if(states[2] && node.type === "write" && node.id === "textContent" && JAM.identical(node.obj["className"], "write-only non-editable")) {
+      if (states[2] && node.type === "write" && (node.id === "textContent" && JAM.identical(node.obj["className"], "write-only non-editable"))) {
         commit = false;
-        break
+        break;
       }
-      if(!states[2] && node.type === "write" && node.id === "textContent" && JAM.identical(node.obj["className"], "write-only non-editable")) {
-        states[2] = true
+      if (!states[2] && node.type === "write" && (node.id === "textContent" && JAM.identical(node.obj["className"], "write-only non-editable"))) {
+        states[2] = true;
       }
     }
-    if(commit) {
-      JAM.process(tx)
-    }else {
-      JAM.prevent(tx)
+    if (commit) {
+      JAM.process(tx);
+    } else {
+      JAM.prevent(tx);
     }
   }
   pFull.subsumedBy = pFull;
   Object.freeze(pFull);
-  return{pFull:pFull}
+  return{pFull:pFull};
 }()

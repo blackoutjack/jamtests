@@ -4,43 +4,43 @@ var policy = function() {
   var __String_prototype_indexOf_call_bind__String_prototype_indexOf_ = _String_prototype_indexOf.call.bind(_String_prototype_indexOf);
   function pFull(tx) {
     var commit = true;
-    var as = tx.getCallSequence();
+    var as = tx.getInvokeSequence();
     var len = as.length;
-    for(var i = 0;i < len;i++) {
+    for (var i = 0;i < len;i++) {
       var node = as[i];
-      if(JAM.identical(node.value, _HTMLDocument_prototype_write) && node.argc > 0 && typeof node.args[0] === "string" && __String_prototype_indexOf_call_bind__String_prototype_indexOf_(node.args[0], "script") > -1) {
+      if (JAM.identical(node.value, _HTMLDocument_prototype_write) && (node.argc > 0 && typeof node.args[0] === "string" && __String_prototype_indexOf_call_bind__String_prototype_indexOf_(node.args[0], "script") > -1)) {
         commit = false;
-        break
+        break;
       }
     }
-    if(commit) {
-      JAM.process(tx)
-    }else {
-      JAM.prevent(tx)
+    if (commit) {
+      JAM.process(tx);
+    } else {
+      JAM.prevent(tx);
     }
   }
   pFull.subsumedBy = pFull;
-  pFull.itype = "call";
+  pFull.itype = "invoke";
   Object.freeze(pFull);
   function p1(tx) {
     var commit = true;
-    var as = tx.getCallSequence();
+    var as = tx.getInvokeSequence();
     var len = as.length;
-    for(var i = 0;i < len;i++) {
+    for (var i = 0;i < len;i++) {
       var node = as[i];
-      if(JAM.identical(node.value, _HTMLDocument_prototype_write) && node.argc > 0 && typeof node.args[0] === "string" && __String_prototype_indexOf_call_bind__String_prototype_indexOf_(node.args[0], "script") > -1) {
+      if (JAM.identical(node.value, _HTMLDocument_prototype_write) && (node.argc > 0 && typeof node.args[0] === "string" && __String_prototype_indexOf_call_bind__String_prototype_indexOf_(node.args[0], "script") > -1)) {
         commit = false;
-        break
+        break;
       }
     }
-    if(commit) {
-      JAM.process(tx)
-    }else {
-      JAM.prevent(tx)
+    if (commit) {
+      JAM.process(tx);
+    } else {
+      JAM.prevent(tx);
     }
   }
   p1.subsumedBy = pFull;
-  p1.itype = "call";
+  p1.itype = "invoke";
   Object.freeze(p1);
-  return{p1:p1, pFull:pFull, woven:true}
+  return{p1:p1, pFull:pFull, woven:true};
 }()

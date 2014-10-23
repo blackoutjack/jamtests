@@ -6,20 +6,20 @@ var policy = function() {
     var commit = true;
     var as = tx.getActionSequence();
     var len = as.length;
-    for(var i = 0;i < len;i++) {
+    for (var i = 0;i < len;i++) {
       var node = as[i];
-      if(states[1] && node.type === "write" && JAM.identical(node.obj, _document) && node.id === "cookie") {
+      if (states[1] && node.type === "write" && (JAM.identical(node.obj, _document) && node.id === "cookie")) {
         commit = false;
-        break
+        break;
       }
-      if(!states[1] && node.type === "read" && (node.id === "getElementById" && JAM.instanceof(node.obj, _HTMLDocument) || node.id === "getElementsByTagName" && JAM.instanceof(node.obj, _HTMLDocument))) {
-        states[1] = true
+      if (!states[1] && node.type === "read" && (node.id === "getElementById" && JAM.instanceof(node.obj, _HTMLDocument) || node.id === "getElementsByTagName" && JAM.instanceof(node.obj, _HTMLDocument))) {
+        states[1] = true;
       }
     }
-    if(commit) {
-      JAM.process(tx)
-    }else {
-      JAM.prevent(tx)
+    if (commit) {
+      JAM.process(tx);
+    } else {
+      JAM.prevent(tx);
     }
   }
   pFull.subsumedBy = pFull;
@@ -27,13 +27,13 @@ var policy = function() {
   function p1(tx) {
     var as = tx.getReadSequence();
     var len = as.length;
-    for(var i = 0;i < len && !states[1];i++) {
+    for (var i = 0;i < len && !states[1];i++) {
       var node = as[i];
-      if(!states[1] && node.id === "getElementById" && JAM.instanceof(node.obj, _HTMLDocument)) {
-        states[1] = true
+      if (!states[1] && (node.id === "getElementById" && JAM.instanceof(node.obj, _HTMLDocument))) {
+        states[1] = true;
       }
     }
-    JAM.process(tx)
+    JAM.process(tx);
   }
   p1.subsumedBy = pFull;
   p1.itype = "read";
@@ -41,13 +41,13 @@ var policy = function() {
   function p4(tx) {
     var as = tx.getReadSequence();
     var len = as.length;
-    for(var i = 0;i < len && !states[1];i++) {
+    for (var i = 0;i < len && !states[1];i++) {
       var node = as[i];
-      if(!states[1] && (node.id === "getElementById" && JAM.instanceof(node.obj, _HTMLDocument) || node.id === "getElementsByTagName" && JAM.instanceof(node.obj, _HTMLDocument))) {
-        states[1] = true
+      if (!states[1] && (node.id === "getElementById" && JAM.instanceof(node.obj, _HTMLDocument) || node.id === "getElementsByTagName" && JAM.instanceof(node.obj, _HTMLDocument))) {
+        states[1] = true;
       }
     }
-    JAM.process(tx)
+    JAM.process(tx);
   }
   p4.subsumedBy = pFull;
   p4.itype = "read";
@@ -56,41 +56,41 @@ var policy = function() {
     var commit = true;
     var as = tx.getActionSequence();
     var len = as.length;
-    for(var i = 0;i < len;i++) {
+    for (var i = 0;i < len;i++) {
       var node = as[i];
-      if(states[1] && node.type === "write" && JAM.identical(node.obj, _document) && node.id === "cookie") {
+      if (states[1] && node.type === "write" && (JAM.identical(node.obj, _document) && node.id === "cookie")) {
         commit = false;
-        break
+        break;
       }
-      if(!states[1] && node.type === "read" && (node.id === "getElementById" && JAM.instanceof(node.obj, _HTMLDocument) || node.id === "getElementsByTagName" && JAM.instanceof(node.obj, _HTMLDocument))) {
-        states[1] = true
+      if (!states[1] && node.type === "read" && (node.id === "getElementById" && JAM.instanceof(node.obj, _HTMLDocument) || node.id === "getElementsByTagName" && JAM.instanceof(node.obj, _HTMLDocument))) {
+        states[1] = true;
       }
     }
-    if(commit) {
-      JAM.process(tx)
-    }else {
-      JAM.prevent(tx)
+    if (commit) {
+      JAM.process(tx);
+    } else {
+      JAM.prevent(tx);
     }
   }
   p5.subsumedBy = pFull;
   Object.freeze(p5);
   function p2(tx) {
     var commit = true;
-    if(states[1]) {
+    if (states[1]) {
       var as = tx.getWriteSequence();
       var len = as.length;
-      for(var i = 0;i < len;i++) {
+      for (var i = 0;i < len;i++) {
         var node = as[i];
-        if(states[1] && JAM.identical(node.obj, _document) && node.id === "cookie") {
+        if (states[1] && (JAM.identical(node.obj, _document) && node.id === "cookie")) {
           commit = false;
-          break
+          break;
         }
       }
     }
-    if(commit) {
-      JAM.process(tx)
-    }else {
-      JAM.prevent(tx)
+    if (commit) {
+      JAM.process(tx);
+    } else {
+      JAM.prevent(tx);
     }
   }
   p2.subsumedBy = pFull;
@@ -99,16 +99,16 @@ var policy = function() {
   function p6(tx) {
     var as = tx.getReadSequence();
     var len = as.length;
-    for(var i = 0;i < len && !states[1];i++) {
+    for (var i = 0;i < len && !states[1];i++) {
       var node = as[i];
-      if(!states[1] && node.id === "getElementsByTagName" && JAM.instanceof(node.obj, _HTMLDocument)) {
-        states[1] = true
+      if (!states[1] && (node.id === "getElementsByTagName" && JAM.instanceof(node.obj, _HTMLDocument))) {
+        states[1] = true;
       }
     }
-    JAM.process(tx)
+    JAM.process(tx);
   }
   p6.subsumedBy = pFull;
   p6.itype = "read";
   Object.freeze(p6);
-  return{p1:p1, p4:p4, p5:p5, p2:p2, p6:p6, pFull:pFull, woven:true}
+  return{p1:p1, p4:p4, p5:p5, p2:p2, p6:p6, pFull:pFull, woven:true};
 }()

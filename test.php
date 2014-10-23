@@ -24,7 +24,7 @@ if ($script) {
 $lib = isset($_REQUEST['lib']) ? (!$_REQUEST['lib'] ? false : true) : true;
 // Optional policy and html files
 $policy = isset($_REQUEST['policy']) ? (!$_REQUEST['policy'] ? false : $_REQUEST['policy']) : false;
-$html = isset($_REQUEST['html']) ? $_REQUEST['html'] : false;
+$html = isset($_REQUEST['body']) ? $_REQUEST['body'] : false;
 $head = isset($_REQUEST['head']) ? $_REQUEST['head'] : false;
 $auto = isset($_REQUEST['auto']) ? $_REQUEST['auto'] : false;
 $autoindex = (isset($_REQUEST['autoindex']) && is_numeric($_REQUEST['autoindex'])) ? $_REQUEST['autoindex'] : 0;

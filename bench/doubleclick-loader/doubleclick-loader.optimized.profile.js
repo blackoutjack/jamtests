@@ -1,7 +1,0 @@
-
-JAM.startProfile('load');
-function rtmItURL(){var ifrmURL=window.location.href,msgId=getURLParameter(ifrmURL,";eb_trk=",";"),siteId=getURLParameter(ifrmURL,"i/ebay.","."),cguid=getURLParameter(ifrmURL,";cg=",";"),ifrmURL=getURLParameter(ifrmURL,"ht","://"),rtmItURL="";siteId&&msgId&&(cguid?((rtmItURL=ifrmURL)&&(rtmItURL="tps"==ifrmURL),rtmItURL=rtmItURL?"https://srv."+siteId+".ebayrtm.com/rtm?RtmIt&ite=4&m="+msgId+"&cg="+cguid+"&ord="+Math.random():"http://srx."+siteId+".ebayrtm.com/rtm?RtmIt&ite=4&m="+msgId+"&cg="+cguid+
-"&ord="+Math.random()):((cguid=ifrmURL)&&(cguid="tps"==ifrmURL),rtmItURL=cguid?"https://srv."+siteId+".ebayrtm.com/rtm?RtmIt&ite=4&m="+msgId+"&ord="+Math.random():"http://srx."+siteId+".ebayrtm.com/rtm?RtmIt&ite=4&m="+msgId+"&ord="+Math.random()),document.createElement("img").src=rtmItURL)}
-function getURLParameter(url,name,delimiter){var p=name;name=p.length;var p=url.indexOf(p),v;-1<p&&(v=p+name,delimiter=url.indexOf(delimiter,v),name=url.indexOf("#",v),-1==delimiter&&(delimiter=url.length),(p=-1<name)&&(p=name<delimiter),p&&(delimiter=name),v=url.substring(v,delimiter));"ebaymt"==v?v="ebaymotors":"ebayus"==v&&(v="main");return v}rtmItURL();
-
-JAM.stopProfile('load');

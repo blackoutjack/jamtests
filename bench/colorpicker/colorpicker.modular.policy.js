@@ -6,24 +6,24 @@ var policy = function() {
     var commit = true;
     var as = tx.getActionSequence();
     var len = as.length;
-    for(var i = 0;i < len;i++) {
+    for (var i = 0;i < len;i++) {
       var node = as[i];
-      if(node.type === "write" && (node.id === "src" && JAM.instanceof(node.obj, _HTMLElement) || node.id === "location" && JAM.instanceof(node.obj, _Window))) {
+      if (node.type === "write" && (node.id === "src" && JAM.instanceof(node.obj, _HTMLElement) || node.id === "location" && JAM.instanceof(node.obj, _Window))) {
         commit = false;
-        break
+        break;
       }
-      if(node.type === "read" && node.id === "cookie" && JAM.instanceof(node.obj, _HTMLDocument)) {
+      if (node.type === "read" && (node.id === "cookie" && JAM.instanceof(node.obj, _HTMLDocument))) {
         commit = false;
-        break
+        break;
       }
     }
-    if(commit) {
-      JAM.process(tx)
-    }else {
-      JAM.prevent(tx)
+    if (commit) {
+      JAM.process(tx);
+    } else {
+      JAM.prevent(tx);
     }
   }
   pFull.subsumedBy = pFull;
   Object.freeze(pFull);
-  return{pFull:pFull}
+  return{pFull:pFull};
 }()
