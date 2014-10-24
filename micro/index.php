@@ -1,1 +1,1 @@
-../testindex.php
+../appindex.php
