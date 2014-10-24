@@ -1,0 +1,194 @@
+  <!-- MAIN TABLE -->
+
+  <table border="0" cellspacing="2" cellpadding="2">
+    <tbody>
+      <tr>
+        <td class="links">
+          <a href="index.html"><img src="includes/logo.png" alt="SMS logo" width="144" height="56" border="0" /></a> <!-- INSERT LINKS -->
+
+          <div class="copyright">
+            <br />
+            The Sequence Manipulation Suite Copyright &copy; 2000, 2004 Paul Stothard. Send questions and comments to stothard@ualberta.ca
+          </div>
+        </td><!-- PROGRAM CONTENT -->
+
+        <td class="program">
+          <table border="0" cellspacing="0" cellpadding="2">
+            <tbody>
+              <tr>
+                <td class="sms">Sequence Manipulation Suite:</td>
+              </tr>
+
+              <tr>
+                <td class="title">Codon Usage</td>
+              </tr>
+
+              <tr>
+                <td class="description">
+                  Codon Usage accepts one or more DNA sequences and returns the number and frequency of each codon type. Since the program also compares the frequencies of codons that code for the same amino acid (synonymous codons), you can use it to assess whether a sequence shows a preference for particular synonymous codons.<br />
+                  <br />
+
+                  <form action="" name="main_form" id="main_form">
+                    Paste the raw sequence or one or more FASTA sequences into the text area. Input limit is 500000 characters.<br />
+                    <textarea rows="6" cols="61">
+&gt;sample sequence one
+atgtttcagaaagaggatcttgctacatggatgcaaatttcaatgagtggtcaatttgatgatacagcattagaggaatggagtacaaatggtaaagaacctgagatctgtgagaaatctccaaaagctgatggagttactacgattatggagagagctctatgtccatgggatagcagagtcaactaccaagagagccgagaacctaaattgattgctgaatcagtttgtctatgccgtaagagccgtggttctacaggagctttctgtatgccaattgttcgaaaagttccaattctccgacgtgtctcttgtgatcgttcaacaggtttatggaattatgtaagatcaactgagctaataactgttggatgtcattctgtattgccaagaactcaaagagcagcacgtcttgcccatttatcatcttctcgtattattgtttaa
+
+&gt;sample sequence two
+caggttacaattggagccatttcatcttctgactgaggaaatcaggtccgacagcgtagatgtatacacgctctattcacaaaattggtaacgattctg
+&gt;sample sequence one
+atgtttcagaaagaggatcttgctacatggatgcaaatttcaatgagtggtcaatttgatgatacagcattagaggaatggagtacaaatggtaaagaacctgagatctgtgagaaatctccaaaagctgatggagttactacgattatggagagagctctatgtccatgggatagcagagtcaactaccaagagagccgagaacctaaattgattgctgaatcagtttgtctatgccgtaagagccgtggttctacaggagctttctgtatgccaattgttcgaaaagttccaattctccgacgtgtctcttgtgatcgttcaacaggtttatggaattatgtaagatcaactgagctaataactgttggatgtcattctgtattgccaagaactcaaagagcagcacgtcttgcccatttatcatcttctcgtattattgtttaa
+
+&gt;sample sequence two
+caggttacaattggagccatttcatcttctgactgaggaaatcaggtccgacagcgtagatgtatacacgctctattcacaaaattggtaacgattctg
+&gt;sample sequence one
+atgtttcagaaagaggatcttgctacatggatgcaaatttcaatgagtggtcaatttgatgatacagcattagaggaatggagtacaaatggtaaagaacctgagatctgtgagaaatctccaaaagctgatggagttactacgattatggagagagctctatgtccatgggatagcagagtcaactaccaagagagccgagaacctaaattgattgctgaatcagtttgtctatgccgtaagagccgtggttctacaggagctttctgtatgccaattgttcgaaaagttccaattctccgacgtgtctcttgtgatcgttcaacaggtttatggaattatgtaagatcaactgagctaataactgttggatgtcattctgtattgccaagaactcaaagagcagcacgtcttgcccatttatcatcttctcgtattattgtttaa
+
+&gt;sample sequence two
+caggttacaattggagccatttcatcttctgactgaggaaatcaggtccgacagcgtagatgtatacacgctctattcacaaaattggtaacgattctg
+&gt;sample sequence one
+atgtttcagaaagaggatcttgctacatggatgcaaatttcaatgagtggtcaatttgatgatacagcattagaggaatggagtacaaatggtaaagaacctgagatctgtgagaaatctccaaaagctgatggagttactacgattatggagagagctctatgtccatgggatagcagagtcaactaccaagagagccgagaacctaaattgattgctgaatcagtttgtctatgccgtaagagccgtggttctacaggagctttctgtatgccaattgttcgaaaagttccaattctccgacgtgtctcttgtgatcgttcaacaggtttatggaattatgtaagatcaactgagctaataactgttggatgtcattctgtattgccaagaactcaaagagcagcacgtcttgcccatttatcatcttctcgtattattgtttaa
+
+&gt;sample sequence two
+caggttacaattggagccatttcatcttctgactgaggaaatcaggtccgacagcgtagatgtatacacgctctattcacaaaattggtaacgattctg
+&gt;sample sequence one
+atgtttcagaaagaggatcttgctacatggatgcaaatttcaatgagtggtcaatttgatgatacagcattagaggaatggagtacaaatggtaaagaacctgagatctgtgagaaatctccaaaagctgatggagttactacgattatggagagagctctatgtccatgggatagcagagtcaactaccaagagagccgagaacctaaattgattgctgaatcagtttgtctatgccgtaagagccgtggttctacaggagctttctgtatgccaattgttcgaaaagttccaattctccgacgtgtctcttgtgatcgttcaacaggtttatggaattatgtaagatcaactgagctaataactgttggatgtcattctgtattgccaagaactcaaagagcagcacgtcttgcccatttatcatcttctcgtattattgtttaa
+
+&gt;sample sequence two
+caggttacaattggagccatttcatcttctgactgaggaaatcaggtccgacagcgtagatgtatacacgctctattcacaaaattggtaacgattctg
+&gt;sample sequence one
+atgtttcagaaagaggatcttgctacatggatgcaaatttcaatgagtggtcaatttgatgatacagcattagaggaatggagtacaaatggtaaagaacctgagatctgtgagaaatctccaaaagctgatggagttactacgattatggagagagctctatgtccatgggatagcagagtcaactaccaagagagccgagaacctaaattgattgctgaatcagtttgtctatgccgtaagagccgtggttctacaggagctttctgtatgccaattgttcgaaaagttccaattctccgacgtgtctcttgtgatcgttcaacaggtttatggaattatgtaagatcaactgagctaataactgttggatgtcattctgtattgccaagaactcaaagagcagcacgtcttgcccatttatcatcttctcgtattattgtttaa
+
+&gt;sample sequence two
+caggttacaattggagccatttcatcttctgactgaggaaatcaggtccgacagcgtagatgtatacacgctctattcacaaaattggtaacgattctg
+&gt;sample sequence one
+atgtttcagaaagaggatcttgctacatggatgcaaatttcaatgagtggtcaatttgatgatacagcattagaggaatggagtacaaatggtaaagaacctgagatctgtgagaaatctccaaaagctgatggagttactacgattatggagagagctctatgtccatgggatagcagagtcaactaccaagagagccgagaacctaaattgattgctgaatcagtttgtctatgccgtaagagccgtggttctacaggagctttctgtatgccaattgttcgaaaagttccaattctccgacgtgtctcttgtgatcgttcaacaggtttatggaattatgtaagatcaactgagctaataactgttggatgtcattctgtattgccaagaactcaaagagcagcacgtcttgcccatttatcatcttctcgtattattgtttaa
+
+&gt;sample sequence two
+caggttacaattggagccatttcatcttctgactgaggaaatcaggtccgacagcgtagatgtatacacgctctattcacaaaattggtaacgattctg
+&gt;sample sequence one
+atgtttcagaaagaggatcttgctacatggatgcaaatttcaatgagtggtcaatttgatgatacagcattagaggaatggagtacaaatggtaaagaacctgagatctgtgagaaatctccaaaagctgatggagttactacgattatggagagagctctatgtccatgggatagcagagtcaactaccaagagagccgagaacctaaattgattgctgaatcagtttgtctatgccgtaagagccgtggttctacaggagctttctgtatgccaattgttcgaaaagttccaattctccgacgtgtctcttgtgatcgttcaacaggtttatggaattatgtaagatcaactgagctaataactgttggatgtcattctgtattgccaagaactcaaagagcagcacgtcttgcccatttatcatcttctcgtattattgtttaa
+
+&gt;sample sequence two
+caggttacaattggagccatttcatcttctgactgaggaaatcaggtccgacagcgtagatgtatacacgctctattcacaaaattggtaacgattctg
+&gt;sample sequence one
+atgtttcagaaagaggatcttgctacatggatgcaaatttcaatgagtggtcaatttgatgatacagcattagaggaatggagtacaaatggtaaagaacctgagatctgtgagaaatctccaaaagctgatggagttactacgattatggagagagctctatgtccatgggatagcagagtcaactaccaagagagccgagaacctaaattgattgctgaatcagtttgtctatgccgtaagagccgtggttctacaggagctttctgtatgccaattgttcgaaaagttccaattctccgacgtgtctcttgtgatcgttcaacaggtttatggaattatgtaagatcaactgagctaataactgttggatgtcattctgtattgccaagaactcaaagagcagcacgtcttgcccatttatcatcttctcgtattattgtttaa
+
+&gt;sample sequence two
+caggttacaattggagccatttcatcttctgactgaggaaatcaggtccgacagcgtagatgtatacacgctctattcacaaaattggtaacgattctg
+&gt;sample sequence one
+atgtttcagaaagaggatcttgctacatggatgcaaatttcaatgagtggtcaatttgatgatacagcattagaggaatggagtacaaatggtaaagaacctgagatctgtgagaaatctccaaaagctgatggagttactacgattatggagagagctctatgtccatgggatagcagagtcaactaccaagagagccgagaacctaaattgattgctgaatcagtttgtctatgccgtaagagccgtggttctacaggagctttctgtatgccaattgttcgaaaagttccaattctccgacgtgtctcttgtgatcgttcaacaggtttatggaattatgtaagatcaactgagctaataactgttggatgtcattctgtattgccaagaactcaaagagcagcacgtcttgcccatttatcatcttctcgtattattgtttaa
+
+&gt;sample sequence two
+caggttacaattggagccatttcatcttctgactgaggaaatcaggtccgacagcgtagatgtatacacgctctattcacaaaattggtaacgattctg
+&gt;sample sequence one
+atgtttcagaaagaggatcttgctacatggatgcaaatttcaatgagtggtcaatttgatgatacagcattagaggaatggagtacaaatggtaaagaacctgagatctgtgagaaatctccaaaagctgatggagttactacgattatggagagagctctatgtccatgggatagcagagtcaactaccaagagagccgagaacctaaattgattgctgaatcagtttgtctatgccgtaagagccgtggttctacaggagctttctgtatgccaattgttcgaaaagttccaattctccgacgtgtctcttgtgatcgttcaacaggtttatggaattatgtaagatcaactgagctaataactgttggatgtcattctgtattgccaagaactcaaagagcagcacgtcttgcccatttatcatcttctcgtattattgtttaa
+
+&gt;sample sequence two
+caggttacaattggagccatttcatcttctgactgaggaaatcaggtccgacagcgtagatgtatacacgctctattcacaaaattggtaacgattctg
+&gt;sample sequence one
+atgtttcagaaagaggatcttgctacatggatgcaaatttcaatgagtggtcaatttgatgatacagcattagaggaatggagtacaaatggtaaagaacctgagatctgtgagaaatctccaaaagctgatggagttactacgattatggagagagctctatgtccatgggatagcagagtcaactaccaagagagccgagaacctaaattgattgctgaatcagtttgtctatgccgtaagagccgtggttctacaggagctttctgtatgccaattgttcgaaaagttccaattctccgacgtgtctcttgtgatcgttcaacaggtttatggaattatgtaagatcaactgagctaataactgttggatgtcattctgtattgccaagaactcaaagagcagcacgtcttgcccatttatcatcttctcgtattattgtttaa
+
+&gt;sample sequence two
+caggttacaattggagccatttcatcttctgactgaggaaatcaggtccgacagcgtagatgtatacacgctctattcacaaaattggtaacgattctg
+&gt;sample sequence one
+atgtttcagaaagaggatcttgctacatggatgcaaatttcaatgagtggtcaatttgatgatacagcattagaggaatggagtacaaatggtaaagaacctgagatctgtgagaaatctccaaaagctgatggagttactacgattatggagagagctctatgtccatgggatagcagagtcaactaccaagagagccgagaacctaaattgattgctgaatcagtttgtctatgccgtaagagccgtggttctacaggagctttctgtatgccaattgttcgaaaagttccaattctccgacgtgtctcttgtgatcgttcaacaggtttatggaattatgtaagatcaactgagctaataactgttggatgtcattctgtattgccaagaactcaaagagcagcacgtcttgcccatttatcatcttctcgtattattgtttaa
+
+&gt;sample sequence two
+caggttacaattggagccatttcatcttctgactgaggaaatcaggtccgacagcgtagatgtatacacgctctattcacaaaattggtaacgattctg
+&gt;sample sequence one
+atgtttcagaaagaggatcttgctacatggatgcaaatttcaatgagtggtcaatttgatgatacagcattagaggaatggagtacaaatggtaaagaacctgagatctgtgagaaatctccaaaagctgatggagttactacgattatggagagagctctatgtccatgggatagcagagtcaactaccaagagagccgagaacctaaattgattgctgaatcagtttgtctatgccgtaagagccgtggttctacaggagctttctgtatgccaattgttcgaaaagttccaattctccgacgtgtctcttgtgatcgttcaacaggtttatggaattatgtaagatcaactgagctaataactgttggatgtcattctgtattgccaagaactcaaagagcagcacgtcttgcccatttatcatcttctcgtattattgtttaa
+
+&gt;sample sequence two
+caggttacaattggagccatttcatcttctgactgaggaaatcaggtccgacagcgtagatgtatacacgctctattcacaaaattggtaacgattctg
+&gt;sample sequence one
+atgtttcagaaagaggatcttgctacatggatgcaaatttcaatgagtggtcaatttgatgatacagcattagaggaatggagtacaaatggtaaagaacctgagatctgtgagaaatctccaaaagctgatggagttactacgattatggagagagctctatgtccatgggatagcagagtcaactaccaagagagccgagaacctaaattgattgctgaatcagtttgtctatgccgtaagagccgtggttctacaggagctttctgtatgccaattgttcgaaaagttccaattctccgacgtgtctcttgtgatcgttcaacaggtttatggaattatgtaagatcaactgagctaataactgttggatgtcattctgtattgccaagaactcaaagagcagcacgtcttgcccatttatcatcttctcgtattattgtttaa
+
+&gt;sample sequence two
+caggttacaattggagccatttcatcttctgactgaggaaatcaggtccgacagcgtagatgtatacacgctctattcacaaaattggtaacgattctg
+</textarea><br />
+
+                    <div class="warning">
+                      Please check the <a href="browser_compat.html">browser compatibility</a> page before using this program.
+                    </div><input type="button" value="Submit" name="main_submit" id="submitbtn" /> <input type="button" value="Clear" id="clearbtn" /> <input type="reset" value="Reset" />
+
+                    <ul>
+                      <li>Use the <select>
+                        <option selected="selected" value="transl_table=1">
+                          standard (1)
+                        </option>
+
+                        <option value="transl_table=2">
+                          vertebrate mitochondrial (2)
+                        </option>
+
+                        <option value="transl_table=3">
+                          yeast mitochondrial (3)
+                        </option>
+
+                        <option value="transl_table=4">
+                          mold mitochondrial (4)
+                        </option>
+
+                        <option value="transl_table=5">
+                          invertebrate mitochondrial (5)
+                        </option>
+
+                        <option value="transl_table=6">
+                          ciliate nuclear (6)
+                        </option>
+
+                        <option value="transl_table=9">
+                          echinoderm mitochondrial (9)
+                        </option>
+
+                        <option value="transl_table=10">
+                          euplotid nuclear (10)
+                        </option>
+
+                        <option value="transl_table=11">
+                          bacterial (11)
+                        </option>
+
+                        <option value="transl_table=12">
+                          alternative yeast nuclear (12)
+                        </option>
+
+                        <option value="transl_table=13">
+                          ascidian mitochondrial (13)
+                        </option>
+
+                        <option value="transl_table=14">
+                          flatworm mitochondrial (14)
+                        </option>
+
+                        <option value="transl_table=15">
+                          Blepharisma macronuclear (15)
+                        </option>
+
+                        <option value="transl_table=16">
+                          chlorophycean mitochondrial (16)
+                        </option>
+
+                        <option value="transl_table=21">
+                          trematode mitochondrial (21)
+                        </option>
+
+                        <option value="transl_table=22">
+                          Scenedesmus obliquus mitochondrial (22)
+                        </option>
+
+                        <option value="transl_table=23">
+                          Thraustochytrium mitochondrial (23)
+                        </option>
+                      </select> <a href="genetic_code.html">genetic code</a>.</li>
+                    </ul>
+                  </form>
+                </td>
+              </tr>
+            </tbody>
+          </table><!-- MAIN TABLE END -->
+        </td>
+      </tr>
+    </tbody>
+  </table>
