@@ -1,0 +1,18 @@
+function runTest() {
+  introspect(JAM.policy.pFull) {
+  function hello() {
+    return "hello";
+  }
+  var a = {get ok() {
+    function inner() {
+      var f = eval("hello");
+      return f() + " whatever";
+    }
+    return "ok" + inner();
+  }};
+  alert(a.ok)
+
+  }
+
+  return "RESULT NOT SPECIFIED";
+}

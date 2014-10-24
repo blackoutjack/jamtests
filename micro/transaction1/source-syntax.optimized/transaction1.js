@@ -1,0 +1,5 @@
+function runTest() {
+  function pol(tx){tx.commit()}introspect(JAM.policy.p1)x=void 0;introspect(JAM.policy.p6CB626AF3B00A2806871E6DD34E13FD7B9D46DB2)x=2
+
+  return "RESULT NOT SPECIFIED";
+}

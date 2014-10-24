@@ -1,0 +1,7038 @@
+
+JAM.startProfile('load');
+function v154(patterns) {
+  function distance(pattern1$$1, pattern2$$1) {
+    var v155 = pattern1$$1.X;
+    var v156 = pattern2$$1.X;
+    xDiff = v155 - v156;
+    var v157 = pattern1$$1.Y;
+    var v158 = pattern2$$1.Y;
+    yDiff = v157 - v158;
+    var v1067 = xDiff * xDiff;
+    var v1068 = yDiff * yDiff;
+    var v159 = v1067 + v1068;
+    return JAM.call(Math.sqrt, Math, [v159], JAM.policy.p39);
+  }
+  function crossProductZ(pointA$$1, pointB$$1, pointC$$1) {
+    var bX = pointB$$1.x;
+    var bY = pointB$$1.y;
+    var v1856 = pointC$$1.x;
+    var v1069 = v1856 - bX;
+    var v1857 = pointA$$1.y;
+    var v1070 = v1857 - bY;
+    var v160 = v1069 * v1070;
+    var v1858 = pointC$$1.y;
+    var v1071 = v1858 - bY;
+    var v1859 = pointA$$1.x;
+    var v1072 = v1859 - bX;
+    var v161 = v1071 * v1072;
+    return v160 - v161;
+  }
+  introspect(JAM.policy.p26) {
+    var v162 = patterns[0]
+  }
+  introspect(JAM.policy.p26) {
+    var v163 = patterns[1]
+  }
+  var zeroOneDistance = JAM.call(distance, null, [v162, v163], JAM.policy.p38);
+  introspect(JAM.policy.p26) {
+    var v164 = patterns[1]
+  }
+  introspect(JAM.policy.p26) {
+    var v165 = patterns[2]
+  }
+  var oneTwoDistance = JAM.call(distance, null, [v164, v165], JAM.policy.p38);
+  introspect(JAM.policy.p26) {
+    var v166 = patterns[0]
+  }
+  introspect(JAM.policy.p26) {
+    var v167 = patterns[2]
+  }
+  var zeroTwoDistance = JAM.call(distance, null, [v166, v167], JAM.policy.p38);
+  var pointA;
+  var pointB;
+  var pointC;
+  var v1073 = oneTwoDistance >= zeroOneDistance;
+  if (v1073) {
+    v1073 = oneTwoDistance >= zeroTwoDistance;
+  }
+  var v169 = v1073;
+  if (v169) {
+    introspect(JAM.policy.p26) {
+      pointB = patterns[0];
+    }
+    introspect(JAM.policy.p26) {
+      pointA = patterns[1];
+    }
+    introspect(JAM.policy.p26) {
+      pointC = patterns[2];
+    }
+  } else {
+    var v1074 = zeroTwoDistance >= oneTwoDistance;
+    if (v1074) {
+      v1074 = zeroTwoDistance >= zeroOneDistance;
+    }
+    var v168 = v1074;
+    if (v168) {
+      introspect(JAM.policy.p26) {
+        pointB = patterns[1];
+      }
+      introspect(JAM.policy.p26) {
+        pointA = patterns[0];
+      }
+      introspect(JAM.policy.p26) {
+        pointC = patterns[2];
+      }
+    } else {
+      introspect(JAM.policy.p26) {
+        pointB = patterns[2];
+      }
+      introspect(JAM.policy.p26) {
+        pointA = patterns[0];
+      }
+      introspect(JAM.policy.p26) {
+        pointC = patterns[1];
+      }
+    }
+  }
+  var v1075 = JAM.call(crossProductZ, null, [pointA, pointB, pointC], JAM.policy.p38);
+  var v170 = v1075 < 0;
+  if (v170) {
+    var temp$$5 = pointA;
+    pointA = pointC;
+    pointC = temp$$5;
+  }
+  introspect(JAM.policy.p27) {
+    patterns[0] = pointA;
+  }
+  introspect(JAM.policy.p27) {
+    patterns[1] = pointB;
+  }
+  introspect(JAM.policy.p27) {
+    patterns[2] = pointC;
+  }
+  return;
+}
+function v153(from, to) {
+  var v1860 = to || from;
+  var v1076 = v1860 + 1;
+  var v1861 = !v1076;
+  if (v1861) {
+    v1076 = this.length;
+  }
+  var v171 = v1076;
+  var rest = JAM.call(this.slice, this, [v171], JAM.policy.p39);
+  var v172;
+  var v1078 = from < 0;
+  if (v1078) {
+    var v1077 = this.length;
+    v172 = v1077 + from;
+  } else {
+    v172 = from;
+  }
+  this.length = v172;
+  var v173 = this.push;
+  return JAM.call(v173.apply, v173, [this, rest], JAM.policy.p38);
+}
+function v152() {
+  var v1079 = qrcode.width;
+  var v1080 = qrcode.height;
+  var v174 = v1079 * v1080;
+  var ret$$1 = JAM.new(Array, [v174], JAM.policy.p39);
+  var y$$43 = 0;
+  var v1081 = qrcode.height;
+  var v177 = y$$43 < v1081;
+  for (;v177;) {
+    var x$$61 = 0;
+    var v1082 = qrcode.width;
+    var v176 = x$$61 < v1082;
+    for (;v176;) {
+      var gray$$1 = JAM.call(qrcode.getPixel, qrcode, [x$$61, y$$43], JAM.policy.p38);
+      var v1862 = qrcode.width;
+      var v1083 = y$$43 * v1862;
+      var v175 = x$$61 + v1083;
+      introspect(JAM.policy.p27) {
+        ret$$1[v175] = gray$$1;
+      }
+      x$$61 = x$$61 + 1;
+      var v1084 = qrcode.width;
+      v176 = x$$61 < v1084;
+    }
+    y$$43 = y$$43 + 1;
+    var v1085 = qrcode.height;
+    v177 = y$$43 < v1085;
+  }
+  return ret$$1;
+}
+function v151(grayScale) {
+  var middle$$1 = JAM.call(qrcode.getMiddleBrightnessPerArea, qrcode, [grayScale], JAM.policy.p39);
+  var sqrtNumArea = middle$$1.length;
+  var v1086 = qrcode.width;
+  var v178 = v1086 / sqrtNumArea;
+  var areaWidth$$1 = JAM.call(Math.floor, Math, [v178], JAM.policy.p39);
+  var v1087 = qrcode.height;
+  var v179 = v1087 / sqrtNumArea;
+  var areaHeight$$1 = JAM.call(Math.floor, Math, [v179], JAM.policy.p39);
+  var v1088 = qrcode.height;
+  var v1089 = qrcode.width;
+  var v180 = v1088 * v1089;
+  var bitmap = JAM.new(Array, [v180], JAM.policy.p39);
+  var ay$$1 = 0;
+  var v185 = ay$$1 < sqrtNumArea;
+  for (;v185;) {
+    var ax$$1 = 0;
+    var v184 = ax$$1 < sqrtNumArea;
+    for (;v184;) {
+      var dy$$6 = 0;
+      var v183 = dy$$6 < areaHeight$$1;
+      for (;v183;) {
+        var dx$$6 = 0;
+        var v182 = dx$$6 < areaWidth$$1;
+        for (;v182;) {
+          var v1863 = areaWidth$$1 * ax$$1;
+          var v1090 = v1863 + dx$$6;
+          var v2516 = areaHeight$$1 * ay$$1;
+          var v1864 = v2516 + dy$$6;
+          var v1865 = qrcode.width;
+          var v1091 = v1864 * v1865;
+          var v181 = v1090 + v1091;
+          var v1092;
+          var v2820 = areaWidth$$1 * ax$$1;
+          var v2771 = v2820 + dx$$6;
+          var v2843 = areaHeight$$1 * ay$$1;
+          var v2821 = v2843 + dy$$6;
+          var v2822 = qrcode.width;
+          var v2772 = v2821 * v2822;
+          var v2692 = v2771 + v2772;
+          introspect(JAM.policy.p26) {
+            var v2517 = grayScale[v2692]
+          }
+          introspect(JAM.policy.p26) {
+            var v2693 = middle$$1[ax$$1]
+          }
+          introspect(JAM.policy.p26) {
+            var v2518 = v2693[ay$$1]
+          }
+          var v1866 = v2517 < v2518;
+          if (v1866) {
+            v1092 = true;
+          } else {
+            v1092 = false;
+          }
+          introspect(JAM.policy.p27) {
+            bitmap[v181] = v1092;
+          }
+          dx$$6 = dx$$6 + 1;
+          v182 = dx$$6 < areaWidth$$1;
+        }
+        dy$$6 = dy$$6 + 1;
+        v183 = dy$$6 < areaHeight$$1;
+      }
+      ax$$1 = ax$$1 + 1;
+      v184 = ax$$1 < sqrtNumArea;
+    }
+    ay$$1 = ay$$1 + 1;
+    v185 = ay$$1 < sqrtNumArea;
+  }
+  return bitmap;
+}
+function v150(image$$9) {
+  var numSqrtArea = 4;
+  var v1093 = qrcode.width;
+  var v186 = v1093 / numSqrtArea;
+  var areaWidth = JAM.call(Math.floor, Math, [v186], JAM.policy.p39);
+  var v1094 = qrcode.height;
+  var v187 = v1094 / numSqrtArea;
+  var areaHeight = JAM.call(Math.floor, Math, [v187], JAM.policy.p39);
+  var minmax = JAM.new(Array, [numSqrtArea], JAM.policy.p39);
+  var i$$46 = 0;
+  var v191 = i$$46 < numSqrtArea;
+  for (;v191;) {
+    var v2851 = JAM.new(Array, [numSqrtArea], JAM.policy.p39);
+    introspect(JAM.policy.p27) {
+      minmax[i$$46] = v2851;
+    }
+    var i2 = 0;
+    var v190 = i2 < numSqrtArea;
+    for (;v190;) {
+      introspect(JAM.policy.p26) {
+        var v188 = minmax[i$$46]
+      }
+      var v189 = i2;
+      var v2852 = JAM.new(Array, [0, 0], JAM.policy.p22);
+      introspect(JAM.policy.p27) {
+        v188[v189] = v2852;
+      }
+      i2 = i2 + 1;
+      v190 = i2 < numSqrtArea;
+    }
+    i$$46 = i$$46 + 1;
+    v191 = i$$46 < numSqrtArea;
+  }
+  var ay = 0;
+  var v201 = ay < numSqrtArea;
+  for (;v201;) {
+    var ax = 0;
+    var v200 = ax < numSqrtArea;
+    for (;v200;) {
+      introspect(JAM.policy.p26) {
+        var v1095 = minmax[ax]
+      }
+      introspect(JAM.policy.p26) {
+        var v192 = v1095[ay]
+      }
+      introspect(JAM.policy.p27) {
+        v192[0] = 255;
+      }
+      var dy$$5 = 0;
+      var v199 = dy$$5 < areaHeight;
+      for (;v199;) {
+        var dx$$5 = 0;
+        var v198 = dx$$5 < areaWidth;
+        for (;v198;) {
+          var v1867 = areaWidth * ax;
+          var v1096 = v1867 + dx$$5;
+          var v2519 = areaHeight * ay;
+          var v1868 = v2519 + dy$$5;
+          var v1869 = qrcode.width;
+          var v1097 = v1868 * v1869;
+          var v193 = v1096 + v1097;
+          introspect(JAM.policy.p26) {
+            var target$$26 = image$$9[v193]
+          }
+          introspect(JAM.policy.p26) {
+            var v2520 = minmax[ax]
+          }
+          introspect(JAM.policy.p26) {
+            var v1870 = v2520[ay]
+          }
+          introspect(JAM.policy.p26) {
+            var v1098 = v1870[0]
+          }
+          var v195 = target$$26 < v1098;
+          if (v195) {
+            introspect(JAM.policy.p26) {
+              var v1099 = minmax[ax]
+            }
+            introspect(JAM.policy.p26) {
+              var v194 = v1099[ay]
+            }
+            introspect(JAM.policy.p27) {
+              v194[0] = target$$26;
+            }
+          }
+          introspect(JAM.policy.p26) {
+            var v2521 = minmax[ax]
+          }
+          introspect(JAM.policy.p26) {
+            var v1871 = v2521[ay]
+          }
+          introspect(JAM.policy.p26) {
+            var v1100 = v1871[1]
+          }
+          var v197 = target$$26 > v1100;
+          if (v197) {
+            introspect(JAM.policy.p26) {
+              var v1101 = minmax[ax]
+            }
+            introspect(JAM.policy.p26) {
+              var v196 = v1101[ay]
+            }
+            introspect(JAM.policy.p27) {
+              v196[1] = target$$26;
+            }
+          }
+          dx$$5 = dx$$5 + 1;
+          v198 = dx$$5 < areaWidth;
+        }
+        dy$$5 = dy$$5 + 1;
+        v199 = dy$$5 < areaHeight;
+      }
+      ax = ax + 1;
+      v200 = ax < numSqrtArea;
+    }
+    ay = ay + 1;
+    v201 = ay < numSqrtArea;
+  }
+  var middle = JAM.new(Array, [numSqrtArea], JAM.policy.p39);
+  var i3 = 0;
+  var v202 = i3 < numSqrtArea;
+  for (;v202;) {
+    var v2853 = JAM.new(Array, [numSqrtArea], JAM.policy.p39);
+    introspect(JAM.policy.p27) {
+      middle[i3] = v2853;
+    }
+    i3 = i3 + 1;
+    v202 = i3 < numSqrtArea;
+  }
+  ay = 0;
+  var v206 = ay < numSqrtArea;
+  for (;v206;) {
+    ax = 0;
+    var v205 = ax < numSqrtArea;
+    for (;v205;) {
+      introspect(JAM.policy.p26) {
+        var v203 = middle[ax]
+      }
+      var v204 = ay;
+      introspect(JAM.policy.p26) {
+        var v2773 = minmax[ax]
+      }
+      introspect(JAM.policy.p26) {
+        var v2694 = v2773[ay]
+      }
+      introspect(JAM.policy.p26) {
+        var v2522 = v2694[0]
+      }
+      introspect(JAM.policy.p26) {
+        var v2774 = minmax[ax]
+      }
+      introspect(JAM.policy.p26) {
+        var v2695 = v2774[ay]
+      }
+      introspect(JAM.policy.p26) {
+        var v2523 = v2695[1]
+      }
+      var v1872 = v2522 + v2523;
+      var v1102 = v1872 / 2;
+      var v2854 = JAM.call(Math.floor, Math, [v1102], JAM.policy.p39);
+      introspect(JAM.policy.p27) {
+        v203[v204] = v2854;
+      }
+      ax = ax + 1;
+      v205 = ax < numSqrtArea;
+    }
+    ay = ay + 1;
+    v206 = ay < numSqrtArea;
+  }
+  return middle;
+}
+function v149(th) {
+  var v1103 = qrcode.width;
+  var v1104 = qrcode.height;
+  var v207 = v1103 * v1104;
+  var ret = JAM.new(Array, [v207], JAM.policy.p39);
+  var y$$42 = 0;
+  var v1105 = qrcode.height;
+  var v210 = y$$42 < v1105;
+  for (;v210;) {
+    var x$$60 = 0;
+    var v1106 = qrcode.width;
+    var v209 = x$$60 < v1106;
+    for (;v209;) {
+      var gray = JAM.call(qrcode.getPixel, qrcode, [x$$60, y$$42], JAM.policy.p38);
+      var v1873 = qrcode.width;
+      var v1107 = y$$42 * v1873;
+      var v208 = x$$60 + v1107;
+      var v1108;
+      var v1874 = gray <= th;
+      if (v1874) {
+        v1108 = true;
+      } else {
+        v1108 = false;
+      }
+      introspect(JAM.policy.p27) {
+        ret[v208] = v1108;
+      }
+      x$$60 = x$$60 + 1;
+      var v1109 = qrcode.width;
+      v209 = x$$60 < v1109;
+    }
+    y$$42 = y$$42 + 1;
+    var v1110 = qrcode.height;
+    v210 = y$$42 < v1110;
+  }
+  return ret;
+}
+function v148(x$$59, y$$41) {
+  var v1111 = qrcode.width;
+  var v211 = v1111 < x$$59;
+  if (v211) {
+    throw "point error";
+  }
+  var v1112 = qrcode.height;
+  var v212 = v1112 < y$$41;
+  if (v212) {
+    throw "point error";
+  }
+  var v213 = x$$59 * 4;
+  var v1875 = qrcode.width;
+  var v1113 = y$$41 * v1875;
+  var v214 = v1113 * 4;
+  var point$$1 = v213 + v214;
+  var v2775 = qrcode.imagedata;
+  var v2696 = v2775.data;
+  introspect(JAM.policy.p26) {
+    var v2524 = v2696[point$$1]
+  }
+  var v1876 = v2524 * 33;
+  var v2776 = qrcode.imagedata;
+  var v2697 = v2776.data;
+  var v2698 = point$$1 + 1;
+  introspect(JAM.policy.p26) {
+    var v2525 = v2697[v2698]
+  }
+  var v1877 = v2525 * 34;
+  var v1114 = v1876 + v1877;
+  var v2699 = qrcode.imagedata;
+  var v2526 = v2699.data;
+  var v2527 = point$$1 + 2;
+  introspect(JAM.policy.p26) {
+    var v1878 = v2526[v2527]
+  }
+  var v1115 = v1878 * 33;
+  var v215 = v1114 + v1115;
+  p = v215 / 100;
+  return p;
+}
+function v147(ctx) {
+  var v216 = JAM.new(Date, [], JAM.policy.p40);
+  var start$$4 = JAM.call(v216.getTime, v216, [], JAM.policy.p40);
+  var v217 = JAM.call(qrcode.grayscale, qrcode, [], JAM.policy.p40);
+  var image$$8 = JAM.call(qrcode.grayScaleToBitmap, qrcode, [v217], JAM.policy.p39);
+  var v228 = qrcode.debug;
+  if (v228) {
+    var y$$40 = 0;
+    var v1116 = qrcode.height;
+    var v226 = y$$40 < v1116;
+    for (;v226;) {
+      var x$$58 = 0;
+      var v1117 = qrcode.width;
+      var v225 = x$$58 < v1117;
+      for (;v225;) {
+        var v218 = x$$58 * 4;
+        var v1879 = qrcode.width;
+        var v1118 = y$$40 * v1879;
+        var v219 = v1118 * 4;
+        var point = v218 + v219;
+        var v1119 = qrcode.imagedata;
+        var v220 = v1119.data;
+        var v1120;
+        var v2777 = qrcode.width;
+        var v2700 = y$$40 * v2777;
+        var v2528 = x$$58 + v2700;
+        introspect(JAM.policy.p26) {
+          var v1880 = image$$8[v2528]
+        }
+        if (v1880) {
+          v1120 = 0;
+        } else {
+          v1120 = 0;
+        }
+        introspect(JAM.policy.p27) {
+          v220[point] = v1120;
+        }
+        var v1121 = qrcode.imagedata;
+        var v221 = v1121.data;
+        var v222 = point + 1;
+        var v1122;
+        var v2778 = qrcode.width;
+        var v2701 = y$$40 * v2778;
+        var v2529 = x$$58 + v2701;
+        introspect(JAM.policy.p26) {
+          var v1881 = image$$8[v2529]
+        }
+        if (v1881) {
+          v1122 = 0;
+        } else {
+          v1122 = 0;
+        }
+        introspect(JAM.policy.p27) {
+          v221[v222] = v1122;
+        }
+        var v1123 = qrcode.imagedata;
+        var v223 = v1123.data;
+        var v224 = point + 2;
+        var v1124;
+        var v2779 = qrcode.width;
+        var v2702 = y$$40 * v2779;
+        var v2530 = x$$58 + v2702;
+        introspect(JAM.policy.p26) {
+          var v1882 = image$$8[v2530]
+        }
+        if (v1882) {
+          v1124 = 255;
+        } else {
+          v1124 = 0;
+        }
+        introspect(JAM.policy.p27) {
+          v223[v224] = v1124;
+        }
+        x$$58 = x$$58 + 1;
+        var v1125 = qrcode.width;
+        v225 = x$$58 < v1125;
+      }
+      y$$40 = y$$40 + 1;
+      var v1126 = qrcode.height;
+      v226 = y$$40 < v1126;
+    }
+    var v227 = qrcode.imagedata;
+    JAM.call(ctx.putImageData, ctx, [v227, 0, 0], JAM.policy.p41);
+  }
+  var detector = JAM.new(Detector, [image$$8], JAM.policy.p39);
+  var qRCodeMatrix = JAM.call(detector.detect, detector, [], JAM.policy.p40);
+  var v230 = qrcode.debug;
+  if (v230) {
+    var v229 = qrcode.imagedata;
+    JAM.call(ctx.putImageData, ctx, [v229, 0, 0], JAM.policy.p41);
+  }
+  var v231 = qRCodeMatrix.bits;
+  var reader$$1 = JAM.call(Decoder.decode, Decoder, [v231], JAM.policy.p39);
+  var data$$18 = reader$$1.DataByte;
+  var str$$6 = "";
+  var i$$45 = 0;
+  var v1127 = data$$18.length;
+  var v233 = i$$45 < v1127;
+  for (;v233;) {
+    var j$$24 = 0;
+    introspect(JAM.policy.p26) {
+      var v1883 = data$$18[i$$45]
+    }
+    var v1128 = v1883.length;
+    var v232 = j$$24 < v1128;
+    for (;v232;) {
+      var v1129 = str$$6;
+      introspect(JAM.policy.p26) {
+        var v2531 = data$$18[i$$45]
+      }
+      introspect(JAM.policy.p26) {
+        var v1884 = v2531[j$$24]
+      }
+      var v1130 = JAM.call(String.fromCharCode, String, [v1884], JAM.policy.p39);
+      str$$6 = v1129 + v1130;
+      j$$24 = j$$24 + 1;
+      introspect(JAM.policy.p26) {
+        var v1885 = data$$18[i$$45]
+      }
+      var v1131 = v1885.length;
+      v232 = j$$24 < v1131;
+    }
+    i$$45 = i$$45 + 1;
+    var v1132 = data$$18.length;
+    v233 = i$$45 < v1132;
+  }
+  var v234 = JAM.new(Date, [], JAM.policy.p40);
+  var end$$1 = JAM.call(v234.getTime, v234, [], JAM.policy.p40);
+  var time = end$$1 - start$$4;
+  JAM.call(console.log, console, [time], JAM.policy.p39);
+  return JAM.call(qrcode.decode_utf8, qrcode, [str$$6], JAM.policy.p39);
+}
+function v146(s$$4) {
+  var v235 = JAM.call(escape, null, [s$$4], JAM.policy.p39);
+  return JAM.call(decodeURIComponent, null, [v235], JAM.policy.p39);
+}
+function v145(src$$1) {
+  function v144() {
+    var canvas_qr$$1 = JAM.call(document.createElement, document, ["canvas"], JAM.policy.p24);
+    var context$$1 = JAM.call(canvas_qr$$1.getContext, canvas_qr$$1, ["2d"], JAM.policy.p24);
+    var canvas_out = JAM.call(document.getElementById, document, ["out-canvas"], JAM.policy.p24);
+    var v236 = canvas_out != null;
+    if (v236) {
+      var outctx = JAM.call(canvas_out.getContext, canvas_out, ["2d"], JAM.policy.p24);
+      JAM.call(outctx.clearRect, outctx, [0, 0, 320, 240], JAM.policy.p22);
+      JAM.call(outctx.drawImage, outctx, [image$$7, 0, 0, 320, 240], JAM.policy.p41);
+    }
+    canvas_qr$$1.width = image$$7.width;
+    canvas_qr$$1.height = image$$7.height;
+    JAM.call(context$$1.drawImage, context$$1, [image$$7, 0, 0], JAM.policy.p41);
+    qrcode.width = image$$7.width;
+    qrcode.height = image$$7.height;
+    try {
+      var v237 = qrcode;
+      var v1133 = image$$7.width;
+      var v1134 = image$$7.height;
+      var v2855 = JAM.call(context$$1.getImageData, context$$1, [0, 0, v1133, v1134], JAM.policy.p22);
+      v237.imagedata = v2855;
+    } catch (e$$5) {
+      qrcode.result = "Cross domain image reading not supported in your browser! Save it to your computer then drag and drop the file!";
+      var v1135 = qrcode.callback;
+      var v239 = v1135 != null;
+      if (v239) {
+        var v238 = qrcode.result;
+        JAM.call(qrcode.callback, qrcode, [v238], JAM.policy.p39);
+      }
+      return;
+    }
+    try {
+      var v240 = qrcode;
+      var v2856 = JAM.call(qrcode.process, qrcode, [context$$1], JAM.policy.p39);
+      v240.result = v2856;
+    } catch (e$$6) {
+      JAM.call(console.log, console, [e$$6], JAM.policy.p39);
+      qrcode.result = "error decoding QR Code";
+    }
+    var v1136 = qrcode.callback;
+    var v242 = v1136 != null;
+    if (v242) {
+      var v241 = qrcode.result;
+      JAM.call(qrcode.callback, qrcode, [v241], JAM.policy.p39);
+    }
+    return;
+  }
+  var v1137 = arguments.length;
+  var v247 = v1137 == 0;
+  if (v247) {
+    var canvas_qr = JAM.call(document.getElementById, document, ["qr-canvas"], JAM.policy.p24);
+    var context = JAM.call(canvas_qr.getContext, canvas_qr, ["2d"], JAM.policy.p24);
+    qrcode.width = canvas_qr.width;
+    qrcode.height = canvas_qr.height;
+    var v243 = qrcode;
+    var v1138 = qrcode.width;
+    var v1139 = qrcode.height;
+    var v2857 = JAM.call(context.getImageData, context, [0, 0, v1138, v1139], JAM.policy.p22);
+    v243.imagedata = v2857;
+    var v244 = qrcode;
+    var v2858 = JAM.call(qrcode.process, qrcode, [context], JAM.policy.p39);
+    v244.result = v2858;
+    var v1140 = qrcode.callback;
+    var v246 = v1140 != null;
+    if (v246) {
+      var v245 = qrcode.result;
+      JAM.call(qrcode.callback, qrcode, [v245], JAM.policy.p39);
+    }
+    return qrcode.result;
+  } else {
+    var image$$7 = JAM.new(Image, [], JAM.policy.p40);
+    JAM.set(image$$7, "onload", v144);
+    introspect(JAM.policy.p8) {
+      image$$7.src = src$$1;
+    }
+  }
+  return;
+}
+function v143(bits$$13) {
+  var parser = JAM.new(BitMatrixParser, [bits$$13], JAM.policy.p39);
+  var version$$7 = JAM.call(parser.readVersion, parser, [], JAM.policy.p40);
+  var v248 = JAM.call(parser.readFormatInformation, parser, [], JAM.policy.p40);
+  var ecLevel$$2 = v248.ErrorCorrectionLevel;
+  var codewords$$1 = JAM.call(parser.readCodewords, parser, [], JAM.policy.p40);
+  var dataBlocks = JAM.call(DataBlock.getDataBlocks, DataBlock, [codewords$$1, version$$7, ecLevel$$2], JAM.policy.p38);
+  var totalBytes = 0;
+  var i$$44 = 0;
+  var v1141 = dataBlocks.Length;
+  var v249 = i$$44 < v1141;
+  for (;v249;) {
+    introspect(JAM.policy.p26) {
+      var v1886 = dataBlocks[i$$44]
+    }
+    var v1142 = v1886.NumDataCodewords;
+    totalBytes = totalBytes + v1142;
+    i$$44 = i$$44 + 1;
+    var v1143 = dataBlocks.Length;
+    v249 = i$$44 < v1143;
+  }
+  var resultBytes = JAM.new(Array, [totalBytes], JAM.policy.p39);
+  var resultOffset$$1 = 0;
+  var j$$23 = 0;
+  var v1144 = dataBlocks.length;
+  var v252 = j$$23 < v1144;
+  for (;v252;) {
+    introspect(JAM.policy.p26) {
+      var dataBlock = dataBlocks[j$$23]
+    }
+    var codewordBytes$$1 = dataBlock.Codewords;
+    var numDataCodewords$$3 = dataBlock.NumDataCodewords;
+    JAM.call(Decoder.correctErrors, Decoder, [codewordBytes$$1, numDataCodewords$$3], JAM.policy.p38);
+    i$$44 = 0;
+    var v251 = i$$44 < numDataCodewords$$3;
+    for (;v251;) {
+      var v250 = resultOffset$$1;
+      resultOffset$$1 = resultOffset$$1 + 1;
+      introspect(JAM.policy.p27) {
+        resultBytes[v250] = codewordBytes$$1[i$$44];
+      }
+      i$$44 = i$$44 + 1;
+      v251 = i$$44 < numDataCodewords$$3;
+    }
+    j$$23 = j$$23 + 1;
+    var v1145 = dataBlocks.length;
+    v252 = j$$23 < v1145;
+  }
+  var v253 = version$$7.VersionNumber;
+  var v254 = ecLevel$$2.Bits;
+  var reader = JAM.new(QRCodeDataBlockReader, [resultBytes, v253, v254], JAM.policy.p38);
+  return reader;
+}
+function v142(codewordBytes, numDataCodewords$$2) {
+  var numCodewords$$1 = codewordBytes.length;
+  var codewordsInts = JAM.new(Array, [numCodewords$$1], JAM.policy.p39);
+  var i$$43 = 0;
+  var v256 = i$$43 < numCodewords$$1;
+  for (;v256;) {
+    introspect(JAM.policy.p26) {
+      var v255 = codewordBytes[i$$43]
+    }
+    introspect(JAM.policy.p27) {
+      codewordsInts[i$$43] = v255 & 255;
+    }
+    i$$43 = i$$43 + 1;
+    v256 = i$$43 < numCodewords$$1;
+  }
+  var v257 = codewordBytes.length;
+  var numECCodewords = v257 - numDataCodewords$$2;
+  try {
+    var v258 = Decoder.rsDecoder;
+    JAM.call(v258.decode, v258, [codewordsInts, numECCodewords], JAM.policy.p38);
+  } catch (rse) {
+    throw rse;
+  }
+  i$$43 = 0;
+  var v259 = i$$43 < numDataCodewords$$2;
+  for (;v259;) {
+    introspect(JAM.policy.p27) {
+      codewordBytes[i$$43] = codewordsInts[i$$43];
+    }
+    i$$43 = i$$43 + 1;
+    v259 = i$$43 < numDataCodewords$$2;
+  }
+  return;
+}
+function v141(a$$7, b$$4) {
+  return a$$7 ^ b$$4;
+}
+function v140(reference) {
+  var v1146 = reference < 0;
+  var v1887 = !v1146;
+  if (v1887) {
+    v1146 = reference > 7;
+  }
+  var v260 = v1146;
+  if (v260) {
+    throw "System.ArgumentException";
+  }
+  var v261 = DataMask.DATA_MASKS;
+  introspect(JAM.policy.p26) {
+    return v261[reference];
+  }
+}
+function v139(rawCodewords, version$$5, ecLevel$$1) {
+  var v1147 = rawCodewords.length;
+  var v1148 = version$$5.TotalCodewords;
+  var v262 = v1147 != v1148;
+  if (v262) {
+    throw "ArgumentException";
+  }
+  var ecBlocks = JAM.call(version$$5.getECBlocksForLevel, version$$5, [ecLevel$$1], JAM.policy.p39);
+  var totalBlocks = 0;
+  var ecBlockArray = ecBlocks.ecBlocks;
+  var i$$11 = 0;
+  var v1149 = ecBlockArray.length;
+  var v263 = i$$11 < v1149;
+  for (;v263;) {
+    introspect(JAM.policy.p26) {
+      var v1888 = ecBlockArray[i$$11]
+    }
+    var v1150 = v1888.Count;
+    totalBlocks = totalBlocks + v1150;
+    i$$11 = i$$11 + 1;
+    var v1151 = ecBlockArray.length;
+    v263 = i$$11 < v1151;
+  }
+  var result$$1 = JAM.new(Array, [totalBlocks], JAM.policy.p39);
+  var numResultBlocks = 0;
+  var j = 0;
+  var v1152 = ecBlockArray.length;
+  var v268 = j < v1152;
+  for (;v268;) {
+    introspect(JAM.policy.p26) {
+      var ecBlock$$1 = ecBlockArray[j]
+    }
+    i$$11 = 0;
+    var v1153 = ecBlock$$1.Count;
+    var v267 = i$$11 < v1153;
+    for (;v267;) {
+      var numDataCodewords$$1 = ecBlock$$1.DataCodewords;
+      var v264 = ecBlocks.ECCodewordsPerBlock;
+      var numBlockCodewords = v264 + numDataCodewords$$1;
+      var v265 = result$$1;
+      var v266 = numResultBlocks;
+      numResultBlocks = numResultBlocks + 1;
+      var v1154 = JAM.new(Array, [numBlockCodewords], JAM.policy.p39);
+      var v2859 = JAM.new(DataBlock, [numDataCodewords$$1, v1154], JAM.policy.p38);
+      introspect(JAM.policy.p27) {
+        v265[v266] = v2859;
+      }
+      i$$11 = i$$11 + 1;
+      var v1155 = ecBlock$$1.Count;
+      v267 = i$$11 < v1155;
+    }
+    j = j + 1;
+    var v1156 = ecBlockArray.length;
+    v268 = j < v1156;
+  }
+  introspect(JAM.policy.p26) {
+    var v1157 = result$$1[0]
+  }
+  var v269 = v1157.codewords;
+  var shorterBlocksTotalCodewords = v269.length;
+  var v270 = result$$1.length;
+  var longerBlocksStartAt = v270 - 1;
+  var v273 = longerBlocksStartAt >= 0;
+  for (;v273;) {
+    introspect(JAM.policy.p26) {
+      var v1158 = result$$1[longerBlocksStartAt]
+    }
+    var v271 = v1158.codewords;
+    var numCodewords = v271.length;
+    var v272 = numCodewords == shorterBlocksTotalCodewords;
+    if (v272) {
+      break;
+    }
+    longerBlocksStartAt = longerBlocksStartAt - 1;
+    v273 = longerBlocksStartAt >= 0;
+  }
+  longerBlocksStartAt = longerBlocksStartAt + 1;
+  var v274 = ecBlocks.ECCodewordsPerBlock;
+  var shorterBlocksNumDataCodewords = shorterBlocksTotalCodewords - v274;
+  var rawCodewordsOffset = 0;
+  i$$11 = 0;
+  var v277 = i$$11 < shorterBlocksNumDataCodewords;
+  for (;v277;) {
+    j = 0;
+    var v276 = j < numResultBlocks;
+    for (;v276;) {
+      introspect(JAM.policy.p26) {
+        var v1159 = result$$1[j]
+      }
+      var v275 = v1159.codewords;
+      var v1160 = rawCodewordsOffset;
+      rawCodewordsOffset = rawCodewordsOffset + 1;
+      introspect(JAM.policy.p27) {
+        v275[i$$11] = rawCodewords[v1160];
+      }
+      j = j + 1;
+      v276 = j < numResultBlocks;
+    }
+    i$$11 = i$$11 + 1;
+    v277 = i$$11 < shorterBlocksNumDataCodewords;
+  }
+  j = longerBlocksStartAt;
+  var v279 = j < numResultBlocks;
+  for (;v279;) {
+    introspect(JAM.policy.p26) {
+      var v1161 = result$$1[j]
+    }
+    var v278 = v1161.codewords;
+    var v1162 = rawCodewordsOffset;
+    rawCodewordsOffset = rawCodewordsOffset + 1;
+    introspect(JAM.policy.p27) {
+      v278[shorterBlocksNumDataCodewords] = rawCodewords[v1162];
+    }
+    j = j + 1;
+    v279 = j < numResultBlocks;
+  }
+  introspect(JAM.policy.p26) {
+    var v1163 = result$$1[0]
+  }
+  var v280 = v1163.codewords;
+  var max$$4 = v280.length;
+  i$$11 = shorterBlocksNumDataCodewords;
+  var v284 = i$$11 < max$$4;
+  for (;v284;) {
+    j = 0;
+    var v283 = j < numResultBlocks;
+    for (;v283;) {
+      var v281;
+      var v1164 = j < longerBlocksStartAt;
+      if (v1164) {
+        v281 = i$$11;
+      } else {
+        v281 = i$$11 + 1;
+      }
+      var iOffset = v281;
+      introspect(JAM.policy.p26) {
+        var v1165 = result$$1[j]
+      }
+      var v282 = v1165.codewords;
+      var v1166 = rawCodewordsOffset;
+      rawCodewordsOffset = rawCodewordsOffset + 1;
+      introspect(JAM.policy.p27) {
+        v282[iOffset] = rawCodewords[v1166];
+      }
+      j = j + 1;
+      v283 = j < numResultBlocks;
+    }
+    i$$11 = i$$11 + 1;
+    v284 = i$$11 < max$$4;
+  }
+  return result$$1;
+}
+function v138(bits$$4) {
+  var v1167 = bits$$4 < 0;
+  var v1890 = !v1167;
+  if (v1890) {
+    var v1889 = FOR_BITS.Length;
+    v1167 = bits$$4 >= v1889;
+  }
+  var v285 = v1167;
+  if (v285) {
+    throw "ArgumentException";
+  }
+  introspect(JAM.policy.p26) {
+    return FOR_BITS[bits$$4];
+  }
+}
+function v137(maskedFormatInfo$$1) {
+  var bestDifference$$1 = 4294967295;
+  var bestFormatInfo = 0;
+  var i$$8 = 0;
+  var v1168 = FORMAT_INFO_DECODE_LOOKUP.length;
+  var v289 = i$$8 < v1168;
+  for (;v289;) {
+    introspect(JAM.policy.p26) {
+      var decodeInfo = FORMAT_INFO_DECODE_LOOKUP[i$$8]
+    }
+    introspect(JAM.policy.p26) {
+      var targetInfo = decodeInfo[0]
+    }
+    var v287 = targetInfo == maskedFormatInfo$$1;
+    if (v287) {
+      introspect(JAM.policy.p26) {
+        var v286 = decodeInfo[1]
+      }
+      return JAM.new(FormatInformation, [v286], JAM.policy.p39);
+    }
+    var bitsDifference$$1 = JAM.call(this.numBitsDiffering, this, [maskedFormatInfo$$1, targetInfo], JAM.policy.p38);
+    var v288 = bitsDifference$$1 < bestDifference$$1;
+    if (v288) {
+      introspect(JAM.policy.p26) {
+        bestFormatInfo = decodeInfo[1];
+      }
+      bestDifference$$1 = bitsDifference$$1;
+    }
+    i$$8 = i$$8 + 1;
+    var v1169 = FORMAT_INFO_DECODE_LOOKUP.length;
+    v289 = i$$8 < v1169;
+  }
+  var v290 = bestDifference$$1 <= 3;
+  if (v290) {
+    return JAM.new(FormatInformation, [bestFormatInfo], JAM.policy.p39);
+  }
+  return null;
+}
+function v136(maskedFormatInfo) {
+  var formatInfo$$1 = JAM.call(FormatInformation.doDecodeFormatInformation, FormatInformation, [maskedFormatInfo], JAM.policy.p39);
+  var v291 = formatInfo$$1 != null;
+  if (v291) {
+    return formatInfo$$1;
+  }
+  var v292 = maskedFormatInfo ^ FORMAT_INFO_MASK_QR;
+  return JAM.call(FormatInformation.doDecodeFormatInformation, FormatInformation, [v292], JAM.policy.p39);
+}
+function v135(a, b$$1) {
+  a = a ^ b$$1;
+  var v2844 = a & 15;
+  introspect(JAM.policy.p26) {
+    var v2823 = BITS_SET_IN_HALF_BYTE[v2844]
+  }
+  var v2845 = BITS_SET_IN_HALF_BYTE;
+  var v2850 = JAM.call(URShift, null, [a, 4], JAM.policy.p41);
+  var v2846 = v2850 & 15;
+  introspect(JAM.policy.p26) {
+    var v2824 = v2845[v2846]
+  }
+  var v2780 = v2823 + v2824;
+  var v2825 = BITS_SET_IN_HALF_BYTE;
+  var v2847 = JAM.call(URShift, null, [a, 8], JAM.policy.p41);
+  var v2826 = v2847 & 15;
+  introspect(JAM.policy.p26) {
+    var v2781 = v2825[v2826]
+  }
+  var v2703 = v2780 + v2781;
+  var v2782 = BITS_SET_IN_HALF_BYTE;
+  var v2827 = JAM.call(URShift, null, [a, 12], JAM.policy.p41);
+  var v2783 = v2827 & 15;
+  introspect(JAM.policy.p26) {
+    var v2704 = v2782[v2783]
+  }
+  var v2532 = v2703 + v2704;
+  var v2705 = BITS_SET_IN_HALF_BYTE;
+  var v2784 = JAM.call(URShift, null, [a, 16], JAM.policy.p41);
+  var v2706 = v2784 & 15;
+  introspect(JAM.policy.p26) {
+    var v2533 = v2705[v2706]
+  }
+  var v1891 = v2532 + v2533;
+  var v2534 = BITS_SET_IN_HALF_BYTE;
+  var v2707 = JAM.call(URShift, null, [a, 20], JAM.policy.p41);
+  var v2535 = v2707 & 15;
+  introspect(JAM.policy.p26) {
+    var v1892 = v2534[v2535]
+  }
+  var v1170 = v1891 + v1892;
+  var v1893 = BITS_SET_IN_HALF_BYTE;
+  var v2536 = JAM.call(URShift, null, [a, 24], JAM.policy.p41);
+  var v1894 = v2536 & 15;
+  introspect(JAM.policy.p26) {
+    var v1171 = v1893[v1894]
+  }
+  var v293 = v1170 + v1171;
+  var v1172 = BITS_SET_IN_HALF_BYTE;
+  var v1895 = JAM.call(URShift, null, [a, 28], JAM.policy.p41);
+  var v1173 = v1895 & 15;
+  introspect(JAM.policy.p26) {
+    var v294 = v1172[v1173]
+  }
+  return v293 + v294;
+}
+function v134(x0$$4, y0$$4, x1$$5, y1$$5, x2$$3, y2$$3, x3$$2, y3$$2) {
+  var v295 = JAM.call(this.squareToQuadrilateral, this, [x0$$4, y0$$4, x1$$5, y1$$5, x2$$3, y2$$3, x3$$2, y3$$2], JAM.policy.p38);
+  return JAM.call(v295.buildAdjoint, v295, [], JAM.policy.p40);
+}
+function v133(x0$$3, y0$$3, x1$$4, y1$$4, x2$$2, y2$$2, x3$$1, y3$$1) {
+  dy2 = y3$$1 - y2$$2;
+  var v1174 = y0$$3 - y1$$4;
+  var v296 = v1174 + y2$$2;
+  dy3 = v296 - y3$$1;
+  var v1175 = dy2 == 0;
+  if (v1175) {
+    v1175 = dy3 == 0;
+  }
+  var v310 = v1175;
+  if (v310) {
+    var v297 = x1$$4 - x0$$3;
+    var v298 = x2$$2 - x1$$4;
+    var v299 = y1$$4 - y0$$3;
+    var v300 = y2$$2 - y1$$4;
+    return JAM.new(PerspectiveTransform, [v297, v298, x0$$3, v299, v300, y0$$3, 0, 0, 1], JAM.policy.p38);
+  } else {
+    dx1 = x1$$4 - x2$$2;
+    dx2 = x3$$1 - x2$$2;
+    var v1176 = x0$$3 - x1$$4;
+    var v301 = v1176 + x2$$2;
+    dx3 = v301 - x3$$1;
+    dy1 = y1$$4 - y2$$2;
+    var v302 = dx1 * dy2;
+    var v303 = dx2 * dy1;
+    denominator = v302 - v303;
+    var v1177 = dx3 * dy2;
+    var v1178 = dx2 * dy3;
+    var v304 = v1177 - v1178;
+    a13 = v304 / denominator;
+    var v1179 = dx1 * dy3;
+    var v1180 = dx3 * dy1;
+    var v305 = v1179 - v1180;
+    a23 = v305 / denominator;
+    var v1181 = x1$$4 - x0$$3;
+    var v1182 = a13 * x1$$4;
+    var v306 = v1181 + v1182;
+    var v1183 = x3$$1 - x0$$3;
+    var v1184 = a23 * x3$$1;
+    var v307 = v1183 + v1184;
+    var v1185 = y1$$4 - y0$$3;
+    var v1186 = a13 * y1$$4;
+    var v308 = v1185 + v1186;
+    var v1187 = y3$$1 - y0$$3;
+    var v1188 = a23 * y3$$1;
+    var v309 = v1187 + v1188;
+    return JAM.new(PerspectiveTransform, [v306, v307, x0$$3, v308, v309, y0$$3, a13, a23, 1], JAM.policy.p38);
+  }
+  return;
+}
+function v132(x0$$2, y0$$2, x1$$3, y1$$3, x2$$1, y2$$1, x3, y3, x0p, y0p, x1p, y1p, x2p, y2p, x3p, y3p) {
+  var qToS = JAM.call(this.quadrilateralToSquare, this, [x0$$2, y0$$2, x1$$3, y1$$3, x2$$1, y2$$1, x3, y3], JAM.policy.p38);
+  var sToQ = JAM.call(this.squareToQuadrilateral, this, [x0p, y0p, x1p, y1p, x2p, y2p, x3p, y3p], JAM.policy.p38);
+  return JAM.call(sToQ.times, sToQ, [qToS], JAM.policy.p39);
+}
+function v131(versionBits) {
+  var bestDifference = 4294967295;
+  var bestVersion = 0;
+  var i$$4 = 0;
+  var v1896 = Version.VERSION_DECODE_INFO;
+  var v1189 = v1896.length;
+  var v315 = i$$4 < v1189;
+  for (;v315;) {
+    var v311 = Version.VERSION_DECODE_INFO;
+    introspect(JAM.policy.p26) {
+      var targetVersion = v311[i$$4]
+    }
+    var v313 = targetVersion == versionBits;
+    if (v313) {
+      var v312 = i$$4 + 7;
+      return JAM.call(this.getVersionForNumber, this, [v312], JAM.policy.p39);
+    }
+    var bitsDifference = JAM.call(FormatInformation.numBitsDiffering, FormatInformation, [versionBits, targetVersion], JAM.policy.p38);
+    var v314 = bitsDifference < bestDifference;
+    if (v314) {
+      bestVersion = i$$4 + 7;
+      bestDifference = bitsDifference;
+    }
+    i$$4 = i$$4 + 1;
+    var v1897 = Version.VERSION_DECODE_INFO;
+    var v1190 = v1897.length;
+    v315 = i$$4 < v1190;
+  }
+  var v316 = bestDifference <= 3;
+  if (v316) {
+    return JAM.call(this.getVersionForNumber, this, [bestVersion], JAM.policy.p39);
+  }
+  return null;
+}
+function v130(dimension$$3) {
+  var v1191 = dimension$$3 % 4;
+  var v317 = v1191 != 1;
+  if (v317) {
+    throw "Error getProvisionalVersionForDimension";
+  }
+  try {
+    var v1192 = dimension$$3 - 17;
+    var v318 = v1192 >> 2;
+    return JAM.call(Version.getVersionForNumber, Version, [v318], JAM.policy.p39);
+  } catch (iae) {
+    throw "Error getVersionForNumber";
+  }
+  return;
+}
+function v129(versionNumber$$1) {
+  var v1193 = versionNumber$$1 < 1;
+  var v1898 = !v1193;
+  if (v1898) {
+    v1193 = versionNumber$$1 > 40;
+  }
+  var v319 = v1193;
+  if (v319) {
+    throw "ArgumentException";
+  }
+  var v320 = Version.VERSIONS;
+  var v321 = versionNumber$$1 - 1;
+  introspect(JAM.policy.p26) {
+    return v320[v321];
+  }
+}
+function v128(image$$4, dimension$$1, p1ToX, p1ToY, p2ToX, p2ToY, p3ToX, p3ToY, p4ToX, p4ToY, p1FromX, p1FromY, p2FromX, p2FromY, p3FromX, p3FromY, p4FromX, p4FromY) {
+  var transform$$1 = JAM.call(PerspectiveTransform.quadrilateralToQuadrilateral, PerspectiveTransform, [p1ToX, p1ToY, p2ToX, p2ToY, p3ToX, p3ToY, p4ToX, p4ToY, p1FromX, p1FromY, p2FromX, p2FromY, p3FromX, p3FromY, p4FromX, p4FromY], JAM.policy.p38);
+  return JAM.call(GridSampler.sampleGrid3, GridSampler, [image$$4, dimension$$1, transform$$1], JAM.policy.p38);
+}
+function v127(image$$3, dimension, transform) {
+  var bits = JAM.new(BitMatrix, [dimension], JAM.policy.p39);
+  var v322 = dimension << 1;
+  var points$$1 = JAM.new(Array, [v322], JAM.policy.p39);
+  var y$$31 = 0;
+  var v339 = y$$31 < dimension;
+  for (;v339;) {
+    var max = points$$1.length;
+    var iValue = y$$31 + .5;
+    var x$$48 = 0;
+    var v325 = x$$48 < max;
+    for (;v325;) {
+      var v323 = x$$48 >> 1;
+      introspect(JAM.policy.p27) {
+        points$$1[x$$48] = v323 + .5;
+      }
+      var v324 = x$$48 + 1;
+      introspect(JAM.policy.p27) {
+        points$$1[v324] = iValue;
+      }
+      x$$48 = x$$48 + 2;
+      v325 = x$$48 < max;
+    }
+    JAM.call(transform.transformPoints1, transform, [points$$1], JAM.policy.p39);
+    JAM.call(GridSampler.checkAndNudgePoints, GridSampler, [image$$3, points$$1], JAM.policy.p38);
+    try {
+      x$$48 = 0;
+      var v338 = x$$48 < max;
+      for (;v338;) {
+        introspect(JAM.policy.p26) {
+          var v1899 = points$$1[x$$48]
+        }
+        var v1194 = JAM.call(Math.floor, Math, [v1899], JAM.policy.p39);
+        var v326 = v1194 * 4;
+        var v2708 = x$$48 + 1;
+        introspect(JAM.policy.p26) {
+          var v2537 = points$$1[v2708]
+        }
+        var v1900 = JAM.call(Math.floor, Math, [v2537], JAM.policy.p39);
+        var v1901 = qrcode.width;
+        var v1195 = v1900 * v1901;
+        var v327 = v1195 * 4;
+        var xpoint = v326 + v327;
+        var v328 = image$$3;
+        introspect(JAM.policy.p26) {
+          var v1902 = points$$1[x$$48]
+        }
+        var v1196 = JAM.call(Math.floor, Math, [v1902], JAM.policy.p39);
+        var v1903 = qrcode.width;
+        var v2709 = x$$48 + 1;
+        introspect(JAM.policy.p26) {
+          var v2538 = points$$1[v2709]
+        }
+        var v1904 = JAM.call(Math.floor, Math, [v2538], JAM.policy.p39);
+        var v1197 = v1903 * v1904;
+        var v329 = v1196 + v1197;
+        introspect(JAM.policy.p26) {
+          var bit = v328[v329]
+        }
+        var v1198 = qrcode.imagedata;
+        var v330 = v1198.data;
+        var v1199;
+        if (bit) {
+          v1199 = 255;
+        } else {
+          v1199 = 0;
+        }
+        introspect(JAM.policy.p27) {
+          v330[xpoint] = v1199;
+        }
+        var v1200 = qrcode.imagedata;
+        var v331 = v1200.data;
+        var v332 = xpoint + 1;
+        var v1201;
+        if (bit) {
+          v1201 = 255;
+        } else {
+          v1201 = 0;
+        }
+        introspect(JAM.policy.p27) {
+          v331[v332] = v1201;
+        }
+        var v1202 = qrcode.imagedata;
+        var v333 = v1202.data;
+        var v334 = xpoint + 2;
+        introspect(JAM.policy.p27) {
+          v333[v334] = 0;
+        }
+        var v1203 = qrcode.imagedata;
+        var v335 = v1203.data;
+        var v336 = xpoint + 3;
+        introspect(JAM.policy.p27) {
+          v335[v336] = 255;
+        }
+        if (bit) {
+          var v337 = x$$48 >> 1;
+          JAM.call(bits.set_Renamed, bits, [v337, y$$31], JAM.policy.p38);
+        }
+        x$$48 = x$$48 + 2;
+        v338 = x$$48 < max;
+      }
+    } catch (aioobe) {
+      throw "Error.checkAndNudgePoints";
+    }
+    y$$31 = y$$31 + 1;
+    v339 = y$$31 < dimension;
+  }
+  return bits;
+}
+function v126(image$$2, points) {
+  var width$$9 = qrcode.width;
+  var height$$8 = qrcode.height;
+  var nudged = true;
+  var offset$$8 = 0;
+  var v1905 = points.Length;
+  var v1204 = offset$$8 < v1905;
+  if (v1204) {
+    v1204 = nudged;
+  }
+  var v349 = v1204;
+  for (;v349;) {
+    introspect(JAM.policy.p26) {
+      var v340 = points[offset$$8]
+    }
+    var x$$47 = JAM.call(Math.floor, Math, [v340], JAM.policy.p39);
+    var v1205 = offset$$8 + 1;
+    introspect(JAM.policy.p26) {
+      var v341 = points[v1205]
+    }
+    var y$$30 = JAM.call(Math.floor, Math, [v341], JAM.policy.p39);
+    var v2539 = x$$47 < -1;
+    var v2710 = !v2539;
+    if (v2710) {
+      v2539 = x$$47 > width$$9;
+    }
+    var v1906 = v2539;
+    var v2540 = !v1906;
+    if (v2540) {
+      v1906 = y$$30 < -1;
+    }
+    var v1206 = v1906;
+    var v1907 = !v1206;
+    if (v1907) {
+      v1206 = y$$30 > height$$8;
+    }
+    var v342 = v1206;
+    if (v342) {
+      throw "Error.checkAndNudgePoints ";
+    }
+    nudged = false;
+    var v344 = x$$47 == -1;
+    if (v344) {
+      introspect(JAM.policy.p27) {
+        points[offset$$8] = 0;
+      }
+      nudged = true;
+    } else {
+      var v343 = x$$47 == width$$9;
+      if (v343) {
+        introspect(JAM.policy.p27) {
+          points[offset$$8] = width$$9 - 1;
+        }
+        nudged = true;
+      }
+    }
+    var v348 = y$$30 == -1;
+    if (v348) {
+      var v345 = offset$$8 + 1;
+      introspect(JAM.policy.p27) {
+        points[v345] = 0;
+      }
+      nudged = true;
+    } else {
+      var v347 = y$$30 == height$$8;
+      if (v347) {
+        var v346 = offset$$8 + 1;
+        introspect(JAM.policy.p27) {
+          points[v346] = height$$8 - 1;
+        }
+        nudged = true;
+      }
+    }
+    offset$$8 = offset$$8 + 2;
+    var v1908 = points.Length;
+    var v1207 = offset$$8 < v1908;
+    if (v1207) {
+      v1207 = nudged;
+    }
+    v349 = v1207;
+  }
+  nudged = true;
+  var v350 = points.Length;
+  offset$$8 = v350 - 2;
+  var v1208 = offset$$8 >= 0;
+  if (v1208) {
+    v1208 = nudged;
+  }
+  var v360 = v1208;
+  for (;v360;) {
+    introspect(JAM.policy.p26) {
+      var v351 = points[offset$$8]
+    }
+    x$$47 = JAM.call(Math.floor, Math, [v351], JAM.policy.p39);
+    var v1209 = offset$$8 + 1;
+    introspect(JAM.policy.p26) {
+      var v352 = points[v1209]
+    }
+    y$$30 = JAM.call(Math.floor, Math, [v352], JAM.policy.p39);
+    var v2541 = x$$47 < -1;
+    var v2711 = !v2541;
+    if (v2711) {
+      v2541 = x$$47 > width$$9;
+    }
+    var v1909 = v2541;
+    var v2542 = !v1909;
+    if (v2542) {
+      v1909 = y$$30 < -1;
+    }
+    var v1210 = v1909;
+    var v1910 = !v1210;
+    if (v1910) {
+      v1210 = y$$30 > height$$8;
+    }
+    var v353 = v1210;
+    if (v353) {
+      throw "Error.checkAndNudgePoints ";
+    }
+    nudged = false;
+    var v355 = x$$47 == -1;
+    if (v355) {
+      introspect(JAM.policy.p27) {
+        points[offset$$8] = 0;
+      }
+      nudged = true;
+    } else {
+      var v354 = x$$47 == width$$9;
+      if (v354) {
+        introspect(JAM.policy.p27) {
+          points[offset$$8] = width$$9 - 1;
+        }
+        nudged = true;
+      }
+    }
+    var v359 = y$$30 == -1;
+    if (v359) {
+      var v356 = offset$$8 + 1;
+      introspect(JAM.policy.p27) {
+        points[v356] = 0;
+      }
+      nudged = true;
+    } else {
+      var v358 = y$$30 == height$$8;
+      if (v358) {
+        var v357 = offset$$8 + 1;
+        introspect(JAM.policy.p27) {
+          points[v357] = height$$8 - 1;
+        }
+        nudged = true;
+      }
+    }
+    offset$$8 = offset$$8 - 2;
+    var v1211 = offset$$8 >= 0;
+    if (v1211) {
+      v1211 = nudged;
+    }
+    v360 = v1211;
+  }
+  return;
+}
+function ECB(count$$3, dataCodewords) {
+  function v1() {
+    return this.dataCodewords;
+  }
+  function v0() {
+    return this.count;
+  }
+  this.count = count$$3;
+  this.dataCodewords = dataCodewords;
+  JAM.call(this.__defineGetter__, this, ["Count", v0], JAM.policy.p23);
+  JAM.call(this.__defineGetter__, this, ["DataCodewords", v1], JAM.policy.p23);
+  return;
+}
+function ECBlocks(ecCodewordsPerBlock, ecBlocks1, ecBlocks2) {
+  function v5() {
+    return this.ecBlocks;
+  }
+  function v4() {
+    var total = 0;
+    var i$$1 = 0;
+    var v1911 = this.ecBlocks;
+    var v1212 = v1911.length;
+    var v361 = i$$1 < v1212;
+    for (;v361;) {
+      var v2543 = this.ecBlocks;
+      introspect(JAM.policy.p26) {
+        var v1912 = v2543[i$$1]
+      }
+      var v1213 = v1912.length;
+      total = total + v1213;
+      i$$1 = i$$1 + 1;
+      var v1913 = this.ecBlocks;
+      var v1214 = v1913.length;
+      v361 = i$$1 < v1214;
+    }
+    return total;
+  }
+  function v3() {
+    var v362 = this.ecCodewordsPerBlock;
+    var v363 = this.NumBlocks;
+    return v362 * v363;
+  }
+  function v2() {
+    return this.ecCodewordsPerBlock;
+  }
+  this.ecCodewordsPerBlock = ecCodewordsPerBlock;
+  if (ecBlocks2) {
+    var v2860 = JAM.new(Array, [ecBlocks1, ecBlocks2], JAM.policy.p38);
+    this.ecBlocks = v2860;
+  } else {
+    var v2861 = JAM.new(Array, [ecBlocks1], JAM.policy.p39);
+    this.ecBlocks = v2861;
+  }
+  JAM.call(this.__defineGetter__, this, ["ECCodewordsPerBlock", v2], JAM.policy.p23);
+  JAM.call(this.__defineGetter__, this, ["TotalECCodewords", v3], JAM.policy.p23);
+  JAM.call(this.__defineGetter__, this, ["NumBlocks", v4], JAM.policy.p23);
+  this.getECBlocks = v5;
+  return;
+}
+function Version(versionNumber, alignmentPatternCenters, ecBlocks1$$1, ecBlocks2$$1, ecBlocks3, ecBlocks4) {
+  function v11(ecLevel) {
+    var v364 = this.ecBlocks;
+    var v365 = ecLevel.ordinal_Renamed_Field;
+    introspect(JAM.policy.p26) {
+      return v364[v365];
+    }
+  }
+  function v10() {
+    var dimension$$2 = this.DimensionForVersion;
+    var bitMatrix = JAM.new(BitMatrix, [dimension$$2], JAM.policy.p39);
+    JAM.call(bitMatrix.setRegion, bitMatrix, [0, 0, 9, 9], JAM.policy.p22);
+    var v366 = dimension$$2 - 8;
+    JAM.call(bitMatrix.setRegion, bitMatrix, [v366, 0, 8, 9], JAM.policy.p41);
+    var v367 = dimension$$2 - 8;
+    JAM.call(bitMatrix.setRegion, bitMatrix, [0, v367, 9, 8], JAM.policy.p22);
+    var v368 = this.alignmentPatternCenters;
+    var max$$1 = v368.length;
+    var x$$49 = 0;
+    var v373 = x$$49 < max$$1;
+    for (;v373;) {
+      var v1215 = this.alignmentPatternCenters;
+      introspect(JAM.policy.p26) {
+        var v369 = v1215[x$$49]
+      }
+      var i$$3 = v369 - 2;
+      var y$$32 = 0;
+      var v372 = y$$32 < max$$1;
+      for (;v372;) {
+        var v1914 = x$$49 == 0;
+        if (v1914) {
+          var v2544 = y$$32 == 0;
+          var v2713 = !v2544;
+          if (v2713) {
+            var v2712 = max$$1 - 1;
+            v2544 = y$$32 == v2712;
+          }
+          v1914 = v2544;
+        }
+        var v1216 = v1914;
+        var v1916 = !v1216;
+        if (v1916) {
+          var v2545 = max$$1 - 1;
+          var v1915 = x$$49 == v2545;
+          if (v1915) {
+            v1915 = y$$32 == 0;
+          }
+          v1216 = v1915;
+        }
+        var v370 = v1216;
+        if (v370) {
+          y$$32 = y$$32 + 1;
+          v372 = y$$32 < max$$1;
+          continue;
+        }
+        var v1917 = this.alignmentPatternCenters;
+        introspect(JAM.policy.p26) {
+          var v1217 = v1917[y$$32]
+        }
+        var v371 = v1217 - 2;
+        JAM.call(bitMatrix.setRegion, bitMatrix, [v371, i$$3, 5, 5], JAM.policy.p38);
+        y$$32 = y$$32 + 1;
+        v372 = y$$32 < max$$1;
+      }
+      x$$49 = x$$49 + 1;
+      v373 = x$$49 < max$$1;
+    }
+    var v374 = dimension$$2 - 17;
+    JAM.call(bitMatrix.setRegion, bitMatrix, [6, 9, 1, v374], JAM.policy.p22);
+    var v375 = dimension$$2 - 17;
+    JAM.call(bitMatrix.setRegion, bitMatrix, [9, 6, v375, 1], JAM.policy.p22);
+    var v1218 = this.versionNumber;
+    var v378 = v1218 > 6;
+    if (v378) {
+      var v376 = dimension$$2 - 11;
+      JAM.call(bitMatrix.setRegion, bitMatrix, [v376, 0, 3, 6], JAM.policy.p41);
+      var v377 = dimension$$2 - 11;
+      JAM.call(bitMatrix.setRegion, bitMatrix, [0, v377, 6, 3], JAM.policy.p22);
+    }
+    return bitMatrix;
+  }
+  function v9() {
+    var v1219 = this.versionNumber;
+    var v379 = 4 * v1219;
+    return 17 + v379;
+  }
+  function v8() {
+    return this.totalCodewords;
+  }
+  function v7() {
+    return this.alignmentPatternCenters;
+  }
+  function v6() {
+    return this.versionNumber;
+  }
+  this.versionNumber = versionNumber;
+  this.alignmentPatternCenters = alignmentPatternCenters;
+  var v2862 = JAM.new(Array, [ecBlocks1$$1, ecBlocks2$$1, ecBlocks3, ecBlocks4], JAM.policy.p38);
+  this.ecBlocks = v2862;
+  var total$$1 = 0;
+  var ecCodewords = ecBlocks1$$1.ECCodewordsPerBlock;
+  var ecbArray = ecBlocks1$$1.ecBlocks;
+  var i$$2 = 0;
+  var v1220 = ecbArray.length;
+  var v380 = i$$2 < v1220;
+  for (;v380;) {
+    introspect(JAM.policy.p26) {
+      var ecBlock = ecbArray[i$$2]
+    }
+    var v1918 = ecBlock.Count;
+    var v2546 = ecBlock.DataCodewords;
+    var v1919 = v2546 + ecCodewords;
+    var v1221 = v1918 * v1919;
+    total$$1 = total$$1 + v1221;
+    i$$2 = i$$2 + 1;
+    var v1222 = ecbArray.length;
+    v380 = i$$2 < v1222;
+  }
+  this.totalCodewords = total$$1;
+  JAM.call(this.__defineGetter__, this, ["VersionNumber", v6], JAM.policy.p23);
+  JAM.call(this.__defineGetter__, this, ["AlignmentPatternCenters", v7], JAM.policy.p23);
+  JAM.call(this.__defineGetter__, this, ["TotalCodewords", v8], JAM.policy.p23);
+  JAM.call(this.__defineGetter__, this, ["DimensionForVersion", v9], JAM.policy.p23);
+  this.buildFunctionPattern = v10;
+  this.getECBlocksForLevel = v11;
+  return;
+}
+function buildVersions() {
+  var v1223 = JAM.new(Array, [], JAM.policy.p40);
+  var v1920 = JAM.new(ECB, [1, 19], JAM.policy.p22);
+  var v1224 = JAM.new(ECBlocks, [7, v1920], JAM.policy.p22);
+  var v1921 = JAM.new(ECB, [1, 16], JAM.policy.p22);
+  var v1225 = JAM.new(ECBlocks, [10, v1921], JAM.policy.p22);
+  var v1922 = JAM.new(ECB, [1, 13], JAM.policy.p22);
+  var v1226 = JAM.new(ECBlocks, [13, v1922], JAM.policy.p22);
+  var v1923 = JAM.new(ECB, [1, 9], JAM.policy.p22);
+  var v1227 = JAM.new(ECBlocks, [17, v1923], JAM.policy.p22);
+  var v381 = JAM.new(Version, [1, v1223, v1224, v1225, v1226, v1227], JAM.policy.p22);
+  var v1228 = JAM.new(Array, [6, 18], JAM.policy.p22);
+  var v1924 = JAM.new(ECB, [1, 34], JAM.policy.p22);
+  var v1229 = JAM.new(ECBlocks, [10, v1924], JAM.policy.p22);
+  var v1925 = JAM.new(ECB, [1, 28], JAM.policy.p22);
+  var v1230 = JAM.new(ECBlocks, [16, v1925], JAM.policy.p22);
+  var v1926 = JAM.new(ECB, [1, 22], JAM.policy.p22);
+  var v1231 = JAM.new(ECBlocks, [22, v1926], JAM.policy.p22);
+  var v1927 = JAM.new(ECB, [1, 16], JAM.policy.p22);
+  var v1232 = JAM.new(ECBlocks, [28, v1927], JAM.policy.p22);
+  var v382 = JAM.new(Version, [2, v1228, v1229, v1230, v1231, v1232], JAM.policy.p22);
+  var v1233 = JAM.new(Array, [6, 22], JAM.policy.p22);
+  var v1928 = JAM.new(ECB, [1, 55], JAM.policy.p22);
+  var v1234 = JAM.new(ECBlocks, [15, v1928], JAM.policy.p22);
+  var v1929 = JAM.new(ECB, [1, 44], JAM.policy.p22);
+  var v1235 = JAM.new(ECBlocks, [26, v1929], JAM.policy.p22);
+  var v1930 = JAM.new(ECB, [2, 17], JAM.policy.p22);
+  var v1236 = JAM.new(ECBlocks, [18, v1930], JAM.policy.p22);
+  var v1931 = JAM.new(ECB, [2, 13], JAM.policy.p22);
+  var v1237 = JAM.new(ECBlocks, [22, v1931], JAM.policy.p22);
+  var v383 = JAM.new(Version, [3, v1233, v1234, v1235, v1236, v1237], JAM.policy.p22);
+  var v1238 = JAM.new(Array, [6, 26], JAM.policy.p22);
+  var v1932 = JAM.new(ECB, [1, 80], JAM.policy.p22);
+  var v1239 = JAM.new(ECBlocks, [20, v1932], JAM.policy.p22);
+  var v1933 = JAM.new(ECB, [2, 32], JAM.policy.p22);
+  var v1240 = JAM.new(ECBlocks, [18, v1933], JAM.policy.p22);
+  var v1934 = JAM.new(ECB, [2, 24], JAM.policy.p22);
+  var v1241 = JAM.new(ECBlocks, [26, v1934], JAM.policy.p22);
+  var v1935 = JAM.new(ECB, [4, 9], JAM.policy.p22);
+  var v1242 = JAM.new(ECBlocks, [16, v1935], JAM.policy.p22);
+  var v384 = JAM.new(Version, [4, v1238, v1239, v1240, v1241, v1242], JAM.policy.p22);
+  var v1243 = JAM.new(Array, [6, 30], JAM.policy.p22);
+  var v1936 = JAM.new(ECB, [1, 108], JAM.policy.p22);
+  var v1244 = JAM.new(ECBlocks, [26, v1936], JAM.policy.p22);
+  var v1937 = JAM.new(ECB, [2, 43], JAM.policy.p22);
+  var v1245 = JAM.new(ECBlocks, [24, v1937], JAM.policy.p22);
+  var v1938 = JAM.new(ECB, [2, 15], JAM.policy.p22);
+  var v1939 = JAM.new(ECB, [2, 16], JAM.policy.p22);
+  var v1246 = JAM.new(ECBlocks, [18, v1938, v1939], JAM.policy.p22);
+  var v1940 = JAM.new(ECB, [2, 11], JAM.policy.p22);
+  var v1941 = JAM.new(ECB, [2, 12], JAM.policy.p22);
+  var v1247 = JAM.new(ECBlocks, [22, v1940, v1941], JAM.policy.p22);
+  var v385 = JAM.new(Version, [5, v1243, v1244, v1245, v1246, v1247], JAM.policy.p22);
+  var v1248 = JAM.new(Array, [6, 34], JAM.policy.p22);
+  var v1942 = JAM.new(ECB, [2, 68], JAM.policy.p22);
+  var v1249 = JAM.new(ECBlocks, [18, v1942], JAM.policy.p22);
+  var v1943 = JAM.new(ECB, [4, 27], JAM.policy.p22);
+  var v1250 = JAM.new(ECBlocks, [16, v1943], JAM.policy.p22);
+  var v1944 = JAM.new(ECB, [4, 19], JAM.policy.p22);
+  var v1251 = JAM.new(ECBlocks, [24, v1944], JAM.policy.p22);
+  var v1945 = JAM.new(ECB, [4, 15], JAM.policy.p22);
+  var v1252 = JAM.new(ECBlocks, [28, v1945], JAM.policy.p22);
+  var v386 = JAM.new(Version, [6, v1248, v1249, v1250, v1251, v1252], JAM.policy.p22);
+  var v1253 = JAM.new(Array, [6, 22, 38], JAM.policy.p22);
+  var v1946 = JAM.new(ECB, [2, 78], JAM.policy.p22);
+  var v1254 = JAM.new(ECBlocks, [20, v1946], JAM.policy.p22);
+  var v1947 = JAM.new(ECB, [4, 31], JAM.policy.p22);
+  var v1255 = JAM.new(ECBlocks, [18, v1947], JAM.policy.p22);
+  var v1948 = JAM.new(ECB, [2, 14], JAM.policy.p22);
+  var v1949 = JAM.new(ECB, [4, 15], JAM.policy.p22);
+  var v1256 = JAM.new(ECBlocks, [18, v1948, v1949], JAM.policy.p22);
+  var v1950 = JAM.new(ECB, [4, 13], JAM.policy.p22);
+  var v1951 = JAM.new(ECB, [1, 14], JAM.policy.p22);
+  var v1257 = JAM.new(ECBlocks, [26, v1950, v1951], JAM.policy.p22);
+  var v387 = JAM.new(Version, [7, v1253, v1254, v1255, v1256, v1257], JAM.policy.p22);
+  var v1258 = JAM.new(Array, [6, 24, 42], JAM.policy.p22);
+  var v1952 = JAM.new(ECB, [2, 97], JAM.policy.p22);
+  var v1259 = JAM.new(ECBlocks, [24, v1952], JAM.policy.p22);
+  var v1953 = JAM.new(ECB, [2, 38], JAM.policy.p22);
+  var v1954 = JAM.new(ECB, [2, 39], JAM.policy.p22);
+  var v1260 = JAM.new(ECBlocks, [22, v1953, v1954], JAM.policy.p22);
+  var v1955 = JAM.new(ECB, [4, 18], JAM.policy.p22);
+  var v1956 = JAM.new(ECB, [2, 19], JAM.policy.p22);
+  var v1261 = JAM.new(ECBlocks, [22, v1955, v1956], JAM.policy.p22);
+  var v1957 = JAM.new(ECB, [4, 14], JAM.policy.p22);
+  var v1958 = JAM.new(ECB, [2, 15], JAM.policy.p22);
+  var v1262 = JAM.new(ECBlocks, [26, v1957, v1958], JAM.policy.p22);
+  var v388 = JAM.new(Version, [8, v1258, v1259, v1260, v1261, v1262], JAM.policy.p22);
+  var v1263 = JAM.new(Array, [6, 26, 46], JAM.policy.p22);
+  var v1959 = JAM.new(ECB, [2, 116], JAM.policy.p22);
+  var v1264 = JAM.new(ECBlocks, [30, v1959], JAM.policy.p22);
+  var v1960 = JAM.new(ECB, [3, 36], JAM.policy.p22);
+  var v1961 = JAM.new(ECB, [2, 37], JAM.policy.p22);
+  var v1265 = JAM.new(ECBlocks, [22, v1960, v1961], JAM.policy.p22);
+  var v1962 = JAM.new(ECB, [4, 16], JAM.policy.p22);
+  var v1963 = JAM.new(ECB, [4, 17], JAM.policy.p22);
+  var v1266 = JAM.new(ECBlocks, [20, v1962, v1963], JAM.policy.p22);
+  var v1964 = JAM.new(ECB, [4, 12], JAM.policy.p22);
+  var v1965 = JAM.new(ECB, [4, 13], JAM.policy.p22);
+  var v1267 = JAM.new(ECBlocks, [24, v1964, v1965], JAM.policy.p22);
+  var v389 = JAM.new(Version, [9, v1263, v1264, v1265, v1266, v1267], JAM.policy.p22);
+  var v1268 = JAM.new(Array, [6, 28, 50], JAM.policy.p22);
+  var v1966 = JAM.new(ECB, [2, 68], JAM.policy.p22);
+  var v1967 = JAM.new(ECB, [2, 69], JAM.policy.p22);
+  var v1269 = JAM.new(ECBlocks, [18, v1966, v1967], JAM.policy.p22);
+  var v1968 = JAM.new(ECB, [4, 43], JAM.policy.p22);
+  var v1969 = JAM.new(ECB, [1, 44], JAM.policy.p22);
+  var v1270 = JAM.new(ECBlocks, [26, v1968, v1969], JAM.policy.p22);
+  var v1970 = JAM.new(ECB, [6, 19], JAM.policy.p22);
+  var v1971 = JAM.new(ECB, [2, 20], JAM.policy.p22);
+  var v1271 = JAM.new(ECBlocks, [24, v1970, v1971], JAM.policy.p22);
+  var v1972 = JAM.new(ECB, [6, 15], JAM.policy.p22);
+  var v1973 = JAM.new(ECB, [2, 16], JAM.policy.p22);
+  var v1272 = JAM.new(ECBlocks, [28, v1972, v1973], JAM.policy.p22);
+  var v390 = JAM.new(Version, [10, v1268, v1269, v1270, v1271, v1272], JAM.policy.p22);
+  var v1273 = JAM.new(Array, [6, 30, 54], JAM.policy.p22);
+  var v1974 = JAM.new(ECB, [4, 81], JAM.policy.p22);
+  var v1274 = JAM.new(ECBlocks, [20, v1974], JAM.policy.p22);
+  var v1975 = JAM.new(ECB, [1, 50], JAM.policy.p22);
+  var v1976 = JAM.new(ECB, [4, 51], JAM.policy.p22);
+  var v1275 = JAM.new(ECBlocks, [30, v1975, v1976], JAM.policy.p22);
+  var v1977 = JAM.new(ECB, [4, 22], JAM.policy.p22);
+  var v1978 = JAM.new(ECB, [4, 23], JAM.policy.p22);
+  var v1276 = JAM.new(ECBlocks, [28, v1977, v1978], JAM.policy.p22);
+  var v1979 = JAM.new(ECB, [3, 12], JAM.policy.p22);
+  var v1980 = JAM.new(ECB, [8, 13], JAM.policy.p22);
+  var v1277 = JAM.new(ECBlocks, [24, v1979, v1980], JAM.policy.p22);
+  var v391 = JAM.new(Version, [11, v1273, v1274, v1275, v1276, v1277], JAM.policy.p22);
+  var v1278 = JAM.new(Array, [6, 32, 58], JAM.policy.p22);
+  var v1981 = JAM.new(ECB, [2, 92], JAM.policy.p22);
+  var v1982 = JAM.new(ECB, [2, 93], JAM.policy.p22);
+  var v1279 = JAM.new(ECBlocks, [24, v1981, v1982], JAM.policy.p22);
+  var v1983 = JAM.new(ECB, [6, 36], JAM.policy.p22);
+  var v1984 = JAM.new(ECB, [2, 37], JAM.policy.p22);
+  var v1280 = JAM.new(ECBlocks, [22, v1983, v1984], JAM.policy.p22);
+  var v1985 = JAM.new(ECB, [4, 20], JAM.policy.p22);
+  var v1986 = JAM.new(ECB, [6, 21], JAM.policy.p22);
+  var v1281 = JAM.new(ECBlocks, [26, v1985, v1986], JAM.policy.p22);
+  var v1987 = JAM.new(ECB, [7, 14], JAM.policy.p22);
+  var v1988 = JAM.new(ECB, [4, 15], JAM.policy.p22);
+  var v1282 = JAM.new(ECBlocks, [28, v1987, v1988], JAM.policy.p22);
+  var v392 = JAM.new(Version, [12, v1278, v1279, v1280, v1281, v1282], JAM.policy.p22);
+  var v1283 = JAM.new(Array, [6, 34, 62], JAM.policy.p22);
+  var v1989 = JAM.new(ECB, [4, 107], JAM.policy.p22);
+  var v1284 = JAM.new(ECBlocks, [26, v1989], JAM.policy.p22);
+  var v1990 = JAM.new(ECB, [8, 37], JAM.policy.p22);
+  var v1991 = JAM.new(ECB, [1, 38], JAM.policy.p22);
+  var v1285 = JAM.new(ECBlocks, [22, v1990, v1991], JAM.policy.p22);
+  var v1992 = JAM.new(ECB, [8, 20], JAM.policy.p22);
+  var v1993 = JAM.new(ECB, [4, 21], JAM.policy.p22);
+  var v1286 = JAM.new(ECBlocks, [24, v1992, v1993], JAM.policy.p22);
+  var v1994 = JAM.new(ECB, [12, 11], JAM.policy.p22);
+  var v1995 = JAM.new(ECB, [4, 12], JAM.policy.p22);
+  var v1287 = JAM.new(ECBlocks, [22, v1994, v1995], JAM.policy.p22);
+  var v393 = JAM.new(Version, [13, v1283, v1284, v1285, v1286, v1287], JAM.policy.p22);
+  var v1288 = JAM.new(Array, [6, 26, 46, 66], JAM.policy.p22);
+  var v1996 = JAM.new(ECB, [3, 115], JAM.policy.p22);
+  var v1997 = JAM.new(ECB, [1, 116], JAM.policy.p22);
+  var v1289 = JAM.new(ECBlocks, [30, v1996, v1997], JAM.policy.p22);
+  var v1998 = JAM.new(ECB, [4, 40], JAM.policy.p22);
+  var v1999 = JAM.new(ECB, [5, 41], JAM.policy.p22);
+  var v1290 = JAM.new(ECBlocks, [24, v1998, v1999], JAM.policy.p22);
+  var v2000 = JAM.new(ECB, [11, 16], JAM.policy.p22);
+  var v2001 = JAM.new(ECB, [5, 17], JAM.policy.p22);
+  var v1291 = JAM.new(ECBlocks, [20, v2000, v2001], JAM.policy.p22);
+  var v2002 = JAM.new(ECB, [11, 12], JAM.policy.p22);
+  var v2003 = JAM.new(ECB, [5, 13], JAM.policy.p22);
+  var v1292 = JAM.new(ECBlocks, [24, v2002, v2003], JAM.policy.p22);
+  var v394 = JAM.new(Version, [14, v1288, v1289, v1290, v1291, v1292], JAM.policy.p22);
+  var v1293 = JAM.new(Array, [6, 26, 48, 70], JAM.policy.p22);
+  var v2004 = JAM.new(ECB, [5, 87], JAM.policy.p22);
+  var v2005 = JAM.new(ECB, [1, 88], JAM.policy.p22);
+  var v1294 = JAM.new(ECBlocks, [22, v2004, v2005], JAM.policy.p22);
+  var v2006 = JAM.new(ECB, [5, 41], JAM.policy.p22);
+  var v2007 = JAM.new(ECB, [5, 42], JAM.policy.p22);
+  var v1295 = JAM.new(ECBlocks, [24, v2006, v2007], JAM.policy.p22);
+  var v2008 = JAM.new(ECB, [5, 24], JAM.policy.p22);
+  var v2009 = JAM.new(ECB, [7, 25], JAM.policy.p22);
+  var v1296 = JAM.new(ECBlocks, [30, v2008, v2009], JAM.policy.p22);
+  var v2010 = JAM.new(ECB, [11, 12], JAM.policy.p22);
+  var v2011 = JAM.new(ECB, [7, 13], JAM.policy.p22);
+  var v1297 = JAM.new(ECBlocks, [24, v2010, v2011], JAM.policy.p22);
+  var v395 = JAM.new(Version, [15, v1293, v1294, v1295, v1296, v1297], JAM.policy.p22);
+  var v1298 = JAM.new(Array, [6, 26, 50, 74], JAM.policy.p22);
+  var v2012 = JAM.new(ECB, [5, 98], JAM.policy.p22);
+  var v2013 = JAM.new(ECB, [1, 99], JAM.policy.p22);
+  var v1299 = JAM.new(ECBlocks, [24, v2012, v2013], JAM.policy.p22);
+  var v2014 = JAM.new(ECB, [7, 45], JAM.policy.p22);
+  var v2015 = JAM.new(ECB, [3, 46], JAM.policy.p22);
+  var v1300 = JAM.new(ECBlocks, [28, v2014, v2015], JAM.policy.p22);
+  var v2016 = JAM.new(ECB, [15, 19], JAM.policy.p22);
+  var v2017 = JAM.new(ECB, [2, 20], JAM.policy.p22);
+  var v1301 = JAM.new(ECBlocks, [24, v2016, v2017], JAM.policy.p22);
+  var v2018 = JAM.new(ECB, [3, 15], JAM.policy.p22);
+  var v2019 = JAM.new(ECB, [13, 16], JAM.policy.p22);
+  var v1302 = JAM.new(ECBlocks, [30, v2018, v2019], JAM.policy.p22);
+  var v396 = JAM.new(Version, [16, v1298, v1299, v1300, v1301, v1302], JAM.policy.p22);
+  var v1303 = JAM.new(Array, [6, 30, 54, 78], JAM.policy.p22);
+  var v2020 = JAM.new(ECB, [1, 107], JAM.policy.p22);
+  var v2021 = JAM.new(ECB, [5, 108], JAM.policy.p22);
+  var v1304 = JAM.new(ECBlocks, [28, v2020, v2021], JAM.policy.p22);
+  var v2022 = JAM.new(ECB, [10, 46], JAM.policy.p22);
+  var v2023 = JAM.new(ECB, [1, 47], JAM.policy.p22);
+  var v1305 = JAM.new(ECBlocks, [28, v2022, v2023], JAM.policy.p22);
+  var v2024 = JAM.new(ECB, [1, 22], JAM.policy.p22);
+  var v2025 = JAM.new(ECB, [15, 23], JAM.policy.p22);
+  var v1306 = JAM.new(ECBlocks, [28, v2024, v2025], JAM.policy.p22);
+  var v2026 = JAM.new(ECB, [2, 14], JAM.policy.p22);
+  var v2027 = JAM.new(ECB, [17, 15], JAM.policy.p22);
+  var v1307 = JAM.new(ECBlocks, [28, v2026, v2027], JAM.policy.p22);
+  var v397 = JAM.new(Version, [17, v1303, v1304, v1305, v1306, v1307], JAM.policy.p22);
+  var v1308 = JAM.new(Array, [6, 30, 56, 82], JAM.policy.p22);
+  var v2028 = JAM.new(ECB, [5, 120], JAM.policy.p22);
+  var v2029 = JAM.new(ECB, [1, 121], JAM.policy.p22);
+  var v1309 = JAM.new(ECBlocks, [30, v2028, v2029], JAM.policy.p22);
+  var v2030 = JAM.new(ECB, [9, 43], JAM.policy.p22);
+  var v2031 = JAM.new(ECB, [4, 44], JAM.policy.p22);
+  var v1310 = JAM.new(ECBlocks, [26, v2030, v2031], JAM.policy.p22);
+  var v2032 = JAM.new(ECB, [17, 22], JAM.policy.p22);
+  var v2033 = JAM.new(ECB, [1, 23], JAM.policy.p22);
+  var v1311 = JAM.new(ECBlocks, [28, v2032, v2033], JAM.policy.p22);
+  var v2034 = JAM.new(ECB, [2, 14], JAM.policy.p22);
+  var v2035 = JAM.new(ECB, [19, 15], JAM.policy.p22);
+  var v1312 = JAM.new(ECBlocks, [28, v2034, v2035], JAM.policy.p22);
+  var v398 = JAM.new(Version, [18, v1308, v1309, v1310, v1311, v1312], JAM.policy.p22);
+  var v1313 = JAM.new(Array, [6, 30, 58, 86], JAM.policy.p22);
+  var v2036 = JAM.new(ECB, [3, 113], JAM.policy.p22);
+  var v2037 = JAM.new(ECB, [4, 114], JAM.policy.p22);
+  var v1314 = JAM.new(ECBlocks, [28, v2036, v2037], JAM.policy.p22);
+  var v2038 = JAM.new(ECB, [3, 44], JAM.policy.p22);
+  var v2039 = JAM.new(ECB, [11, 45], JAM.policy.p22);
+  var v1315 = JAM.new(ECBlocks, [26, v2038, v2039], JAM.policy.p22);
+  var v2040 = JAM.new(ECB, [17, 21], JAM.policy.p22);
+  var v2041 = JAM.new(ECB, [4, 22], JAM.policy.p22);
+  var v1316 = JAM.new(ECBlocks, [26, v2040, v2041], JAM.policy.p22);
+  var v2042 = JAM.new(ECB, [9, 13], JAM.policy.p22);
+  var v2043 = JAM.new(ECB, [16, 14], JAM.policy.p22);
+  var v1317 = JAM.new(ECBlocks, [26, v2042, v2043], JAM.policy.p22);
+  var v399 = JAM.new(Version, [19, v1313, v1314, v1315, v1316, v1317], JAM.policy.p22);
+  var v1318 = JAM.new(Array, [6, 34, 62, 90], JAM.policy.p22);
+  var v2044 = JAM.new(ECB, [3, 107], JAM.policy.p22);
+  var v2045 = JAM.new(ECB, [5, 108], JAM.policy.p22);
+  var v1319 = JAM.new(ECBlocks, [28, v2044, v2045], JAM.policy.p22);
+  var v2046 = JAM.new(ECB, [3, 41], JAM.policy.p22);
+  var v2047 = JAM.new(ECB, [13, 42], JAM.policy.p22);
+  var v1320 = JAM.new(ECBlocks, [26, v2046, v2047], JAM.policy.p22);
+  var v2048 = JAM.new(ECB, [15, 24], JAM.policy.p22);
+  var v2049 = JAM.new(ECB, [5, 25], JAM.policy.p22);
+  var v1321 = JAM.new(ECBlocks, [30, v2048, v2049], JAM.policy.p22);
+  var v2050 = JAM.new(ECB, [15, 15], JAM.policy.p22);
+  var v2051 = JAM.new(ECB, [10, 16], JAM.policy.p22);
+  var v1322 = JAM.new(ECBlocks, [28, v2050, v2051], JAM.policy.p22);
+  var v400 = JAM.new(Version, [20, v1318, v1319, v1320, v1321, v1322], JAM.policy.p22);
+  var v1323 = JAM.new(Array, [6, 28, 50, 72, 94], JAM.policy.p22);
+  var v2052 = JAM.new(ECB, [4, 116], JAM.policy.p22);
+  var v2053 = JAM.new(ECB, [4, 117], JAM.policy.p22);
+  var v1324 = JAM.new(ECBlocks, [28, v2052, v2053], JAM.policy.p22);
+  var v2054 = JAM.new(ECB, [17, 42], JAM.policy.p22);
+  var v1325 = JAM.new(ECBlocks, [26, v2054], JAM.policy.p22);
+  var v2055 = JAM.new(ECB, [17, 22], JAM.policy.p22);
+  var v2056 = JAM.new(ECB, [6, 23], JAM.policy.p22);
+  var v1326 = JAM.new(ECBlocks, [28, v2055, v2056], JAM.policy.p22);
+  var v2057 = JAM.new(ECB, [19, 16], JAM.policy.p22);
+  var v2058 = JAM.new(ECB, [6, 17], JAM.policy.p22);
+  var v1327 = JAM.new(ECBlocks, [30, v2057, v2058], JAM.policy.p22);
+  var v401 = JAM.new(Version, [21, v1323, v1324, v1325, v1326, v1327], JAM.policy.p22);
+  var v1328 = JAM.new(Array, [6, 26, 50, 74, 98], JAM.policy.p22);
+  var v2059 = JAM.new(ECB, [2, 111], JAM.policy.p22);
+  var v2060 = JAM.new(ECB, [7, 112], JAM.policy.p22);
+  var v1329 = JAM.new(ECBlocks, [28, v2059, v2060], JAM.policy.p22);
+  var v2061 = JAM.new(ECB, [17, 46], JAM.policy.p22);
+  var v1330 = JAM.new(ECBlocks, [28, v2061], JAM.policy.p22);
+  var v2062 = JAM.new(ECB, [7, 24], JAM.policy.p22);
+  var v2063 = JAM.new(ECB, [16, 25], JAM.policy.p22);
+  var v1331 = JAM.new(ECBlocks, [30, v2062, v2063], JAM.policy.p22);
+  var v2064 = JAM.new(ECB, [34, 13], JAM.policy.p22);
+  var v1332 = JAM.new(ECBlocks, [24, v2064], JAM.policy.p22);
+  var v402 = JAM.new(Version, [22, v1328, v1329, v1330, v1331, v1332], JAM.policy.p22);
+  var v1333 = JAM.new(Array, [6, 30, 54, 74, 102], JAM.policy.p22);
+  var v2065 = JAM.new(ECB, [4, 121], JAM.policy.p22);
+  var v2066 = JAM.new(ECB, [5, 122], JAM.policy.p22);
+  var v1334 = JAM.new(ECBlocks, [30, v2065, v2066], JAM.policy.p22);
+  var v2067 = JAM.new(ECB, [4, 47], JAM.policy.p22);
+  var v2068 = JAM.new(ECB, [14, 48], JAM.policy.p22);
+  var v1335 = JAM.new(ECBlocks, [28, v2067, v2068], JAM.policy.p22);
+  var v2069 = JAM.new(ECB, [11, 24], JAM.policy.p22);
+  var v2070 = JAM.new(ECB, [14, 25], JAM.policy.p22);
+  var v1336 = JAM.new(ECBlocks, [30, v2069, v2070], JAM.policy.p22);
+  var v2071 = JAM.new(ECB, [16, 15], JAM.policy.p22);
+  var v2072 = JAM.new(ECB, [14, 16], JAM.policy.p22);
+  var v1337 = JAM.new(ECBlocks, [30, v2071, v2072], JAM.policy.p22);
+  var v403 = JAM.new(Version, [23, v1333, v1334, v1335, v1336, v1337], JAM.policy.p22);
+  var v1338 = JAM.new(Array, [6, 28, 54, 80, 106], JAM.policy.p22);
+  var v2073 = JAM.new(ECB, [6, 117], JAM.policy.p22);
+  var v2074 = JAM.new(ECB, [4, 118], JAM.policy.p22);
+  var v1339 = JAM.new(ECBlocks, [30, v2073, v2074], JAM.policy.p22);
+  var v2075 = JAM.new(ECB, [6, 45], JAM.policy.p22);
+  var v2076 = JAM.new(ECB, [14, 46], JAM.policy.p22);
+  var v1340 = JAM.new(ECBlocks, [28, v2075, v2076], JAM.policy.p22);
+  var v2077 = JAM.new(ECB, [11, 24], JAM.policy.p22);
+  var v2078 = JAM.new(ECB, [16, 25], JAM.policy.p22);
+  var v1341 = JAM.new(ECBlocks, [30, v2077, v2078], JAM.policy.p22);
+  var v2079 = JAM.new(ECB, [30, 16], JAM.policy.p22);
+  var v2080 = JAM.new(ECB, [2, 17], JAM.policy.p22);
+  var v1342 = JAM.new(ECBlocks, [30, v2079, v2080], JAM.policy.p22);
+  var v404 = JAM.new(Version, [24, v1338, v1339, v1340, v1341, v1342], JAM.policy.p22);
+  var v1343 = JAM.new(Array, [6, 32, 58, 84, 110], JAM.policy.p22);
+  var v2081 = JAM.new(ECB, [8, 106], JAM.policy.p22);
+  var v2082 = JAM.new(ECB, [4, 107], JAM.policy.p22);
+  var v1344 = JAM.new(ECBlocks, [26, v2081, v2082], JAM.policy.p22);
+  var v2083 = JAM.new(ECB, [8, 47], JAM.policy.p22);
+  var v2084 = JAM.new(ECB, [13, 48], JAM.policy.p22);
+  var v1345 = JAM.new(ECBlocks, [28, v2083, v2084], JAM.policy.p22);
+  var v2085 = JAM.new(ECB, [7, 24], JAM.policy.p22);
+  var v2086 = JAM.new(ECB, [22, 25], JAM.policy.p22);
+  var v1346 = JAM.new(ECBlocks, [30, v2085, v2086], JAM.policy.p22);
+  var v2087 = JAM.new(ECB, [22, 15], JAM.policy.p22);
+  var v2088 = JAM.new(ECB, [13, 16], JAM.policy.p22);
+  var v1347 = JAM.new(ECBlocks, [30, v2087, v2088], JAM.policy.p22);
+  var v405 = JAM.new(Version, [25, v1343, v1344, v1345, v1346, v1347], JAM.policy.p22);
+  var v1348 = JAM.new(Array, [6, 30, 58, 86, 114], JAM.policy.p22);
+  var v2089 = JAM.new(ECB, [10, 114], JAM.policy.p22);
+  var v2090 = JAM.new(ECB, [2, 115], JAM.policy.p22);
+  var v1349 = JAM.new(ECBlocks, [28, v2089, v2090], JAM.policy.p22);
+  var v2091 = JAM.new(ECB, [19, 46], JAM.policy.p22);
+  var v2092 = JAM.new(ECB, [4, 47], JAM.policy.p22);
+  var v1350 = JAM.new(ECBlocks, [28, v2091, v2092], JAM.policy.p22);
+  var v2093 = JAM.new(ECB, [28, 22], JAM.policy.p22);
+  var v2094 = JAM.new(ECB, [6, 23], JAM.policy.p22);
+  var v1351 = JAM.new(ECBlocks, [28, v2093, v2094], JAM.policy.p22);
+  var v2095 = JAM.new(ECB, [33, 16], JAM.policy.p22);
+  var v2096 = JAM.new(ECB, [4, 17], JAM.policy.p22);
+  var v1352 = JAM.new(ECBlocks, [30, v2095, v2096], JAM.policy.p22);
+  var v406 = JAM.new(Version, [26, v1348, v1349, v1350, v1351, v1352], JAM.policy.p22);
+  var v1353 = JAM.new(Array, [6, 34, 62, 90, 118], JAM.policy.p22);
+  var v2097 = JAM.new(ECB, [8, 122], JAM.policy.p22);
+  var v2098 = JAM.new(ECB, [4, 123], JAM.policy.p22);
+  var v1354 = JAM.new(ECBlocks, [30, v2097, v2098], JAM.policy.p22);
+  var v2099 = JAM.new(ECB, [22, 45], JAM.policy.p22);
+  var v2100 = JAM.new(ECB, [3, 46], JAM.policy.p22);
+  var v1355 = JAM.new(ECBlocks, [28, v2099, v2100], JAM.policy.p22);
+  var v2101 = JAM.new(ECB, [8, 23], JAM.policy.p22);
+  var v2102 = JAM.new(ECB, [26, 24], JAM.policy.p22);
+  var v1356 = JAM.new(ECBlocks, [30, v2101, v2102], JAM.policy.p22);
+  var v2103 = JAM.new(ECB, [12, 15], JAM.policy.p22);
+  var v2104 = JAM.new(ECB, [28, 16], JAM.policy.p22);
+  var v1357 = JAM.new(ECBlocks, [30, v2103, v2104], JAM.policy.p22);
+  var v407 = JAM.new(Version, [27, v1353, v1354, v1355, v1356, v1357], JAM.policy.p22);
+  var v1358 = JAM.new(Array, [6, 26, 50, 74, 98, 122], JAM.policy.p22);
+  var v2105 = JAM.new(ECB, [3, 117], JAM.policy.p22);
+  var v2106 = JAM.new(ECB, [10, 118], JAM.policy.p22);
+  var v1359 = JAM.new(ECBlocks, [30, v2105, v2106], JAM.policy.p22);
+  var v2107 = JAM.new(ECB, [3, 45], JAM.policy.p22);
+  var v2108 = JAM.new(ECB, [23, 46], JAM.policy.p22);
+  var v1360 = JAM.new(ECBlocks, [28, v2107, v2108], JAM.policy.p22);
+  var v2109 = JAM.new(ECB, [4, 24], JAM.policy.p22);
+  var v2110 = JAM.new(ECB, [31, 25], JAM.policy.p22);
+  var v1361 = JAM.new(ECBlocks, [30, v2109, v2110], JAM.policy.p22);
+  var v2111 = JAM.new(ECB, [11, 15], JAM.policy.p22);
+  var v2112 = JAM.new(ECB, [31, 16], JAM.policy.p22);
+  var v1362 = JAM.new(ECBlocks, [30, v2111, v2112], JAM.policy.p22);
+  var v408 = JAM.new(Version, [28, v1358, v1359, v1360, v1361, v1362], JAM.policy.p22);
+  var v1363 = JAM.new(Array, [6, 30, 54, 78, 102, 126], JAM.policy.p22);
+  var v2113 = JAM.new(ECB, [7, 116], JAM.policy.p22);
+  var v2114 = JAM.new(ECB, [7, 117], JAM.policy.p22);
+  var v1364 = JAM.new(ECBlocks, [30, v2113, v2114], JAM.policy.p22);
+  var v2115 = JAM.new(ECB, [21, 45], JAM.policy.p22);
+  var v2116 = JAM.new(ECB, [7, 46], JAM.policy.p22);
+  var v1365 = JAM.new(ECBlocks, [28, v2115, v2116], JAM.policy.p22);
+  var v2117 = JAM.new(ECB, [1, 23], JAM.policy.p22);
+  var v2118 = JAM.new(ECB, [37, 24], JAM.policy.p22);
+  var v1366 = JAM.new(ECBlocks, [30, v2117, v2118], JAM.policy.p22);
+  var v2119 = JAM.new(ECB, [19, 15], JAM.policy.p22);
+  var v2120 = JAM.new(ECB, [26, 16], JAM.policy.p22);
+  var v1367 = JAM.new(ECBlocks, [30, v2119, v2120], JAM.policy.p22);
+  var v409 = JAM.new(Version, [29, v1363, v1364, v1365, v1366, v1367], JAM.policy.p22);
+  var v1368 = JAM.new(Array, [6, 26, 52, 78, 104, 130], JAM.policy.p22);
+  var v2121 = JAM.new(ECB, [5, 115], JAM.policy.p22);
+  var v2122 = JAM.new(ECB, [10, 116], JAM.policy.p22);
+  var v1369 = JAM.new(ECBlocks, [30, v2121, v2122], JAM.policy.p22);
+  var v2123 = JAM.new(ECB, [19, 47], JAM.policy.p22);
+  var v2124 = JAM.new(ECB, [10, 48], JAM.policy.p22);
+  var v1370 = JAM.new(ECBlocks, [28, v2123, v2124], JAM.policy.p22);
+  var v2125 = JAM.new(ECB, [15, 24], JAM.policy.p22);
+  var v2126 = JAM.new(ECB, [25, 25], JAM.policy.p22);
+  var v1371 = JAM.new(ECBlocks, [30, v2125, v2126], JAM.policy.p22);
+  var v2127 = JAM.new(ECB, [23, 15], JAM.policy.p22);
+  var v2128 = JAM.new(ECB, [25, 16], JAM.policy.p22);
+  var v1372 = JAM.new(ECBlocks, [30, v2127, v2128], JAM.policy.p22);
+  var v410 = JAM.new(Version, [30, v1368, v1369, v1370, v1371, v1372], JAM.policy.p22);
+  var v1373 = JAM.new(Array, [6, 30, 56, 82, 108, 134], JAM.policy.p22);
+  var v2129 = JAM.new(ECB, [13, 115], JAM.policy.p22);
+  var v2130 = JAM.new(ECB, [3, 116], JAM.policy.p22);
+  var v1374 = JAM.new(ECBlocks, [30, v2129, v2130], JAM.policy.p22);
+  var v2131 = JAM.new(ECB, [2, 46], JAM.policy.p22);
+  var v2132 = JAM.new(ECB, [29, 47], JAM.policy.p22);
+  var v1375 = JAM.new(ECBlocks, [28, v2131, v2132], JAM.policy.p22);
+  var v2133 = JAM.new(ECB, [42, 24], JAM.policy.p22);
+  var v2134 = JAM.new(ECB, [1, 25], JAM.policy.p22);
+  var v1376 = JAM.new(ECBlocks, [30, v2133, v2134], JAM.policy.p22);
+  var v2135 = JAM.new(ECB, [23, 15], JAM.policy.p22);
+  var v2136 = JAM.new(ECB, [28, 16], JAM.policy.p22);
+  var v1377 = JAM.new(ECBlocks, [30, v2135, v2136], JAM.policy.p22);
+  var v411 = JAM.new(Version, [31, v1373, v1374, v1375, v1376, v1377], JAM.policy.p22);
+  var v1378 = JAM.new(Array, [6, 34, 60, 86, 112, 138], JAM.policy.p22);
+  var v2137 = JAM.new(ECB, [17, 115], JAM.policy.p22);
+  var v1379 = JAM.new(ECBlocks, [30, v2137], JAM.policy.p22);
+  var v2138 = JAM.new(ECB, [10, 46], JAM.policy.p22);
+  var v2139 = JAM.new(ECB, [23, 47], JAM.policy.p22);
+  var v1380 = JAM.new(ECBlocks, [28, v2138, v2139], JAM.policy.p22);
+  var v2140 = JAM.new(ECB, [10, 24], JAM.policy.p22);
+  var v2141 = JAM.new(ECB, [35, 25], JAM.policy.p22);
+  var v1381 = JAM.new(ECBlocks, [30, v2140, v2141], JAM.policy.p22);
+  var v2142 = JAM.new(ECB, [19, 15], JAM.policy.p22);
+  var v2143 = JAM.new(ECB, [35, 16], JAM.policy.p22);
+  var v1382 = JAM.new(ECBlocks, [30, v2142, v2143], JAM.policy.p22);
+  var v412 = JAM.new(Version, [32, v1378, v1379, v1380, v1381, v1382], JAM.policy.p22);
+  var v1383 = JAM.new(Array, [6, 30, 58, 86, 114, 142], JAM.policy.p22);
+  var v2144 = JAM.new(ECB, [17, 115], JAM.policy.p22);
+  var v2145 = JAM.new(ECB, [1, 116], JAM.policy.p22);
+  var v1384 = JAM.new(ECBlocks, [30, v2144, v2145], JAM.policy.p22);
+  var v2146 = JAM.new(ECB, [14, 46], JAM.policy.p22);
+  var v2147 = JAM.new(ECB, [21, 47], JAM.policy.p22);
+  var v1385 = JAM.new(ECBlocks, [28, v2146, v2147], JAM.policy.p22);
+  var v2148 = JAM.new(ECB, [29, 24], JAM.policy.p22);
+  var v2149 = JAM.new(ECB, [19, 25], JAM.policy.p22);
+  var v1386 = JAM.new(ECBlocks, [30, v2148, v2149], JAM.policy.p22);
+  var v2150 = JAM.new(ECB, [11, 15], JAM.policy.p22);
+  var v2151 = JAM.new(ECB, [46, 16], JAM.policy.p22);
+  var v1387 = JAM.new(ECBlocks, [30, v2150, v2151], JAM.policy.p22);
+  var v413 = JAM.new(Version, [33, v1383, v1384, v1385, v1386, v1387], JAM.policy.p22);
+  var v1388 = JAM.new(Array, [6, 34, 62, 90, 118, 146], JAM.policy.p22);
+  var v2152 = JAM.new(ECB, [13, 115], JAM.policy.p22);
+  var v2153 = JAM.new(ECB, [6, 116], JAM.policy.p22);
+  var v1389 = JAM.new(ECBlocks, [30, v2152, v2153], JAM.policy.p22);
+  var v2154 = JAM.new(ECB, [14, 46], JAM.policy.p22);
+  var v2155 = JAM.new(ECB, [23, 47], JAM.policy.p22);
+  var v1390 = JAM.new(ECBlocks, [28, v2154, v2155], JAM.policy.p22);
+  var v2156 = JAM.new(ECB, [44, 24], JAM.policy.p22);
+  var v2157 = JAM.new(ECB, [7, 25], JAM.policy.p22);
+  var v1391 = JAM.new(ECBlocks, [30, v2156, v2157], JAM.policy.p22);
+  var v2158 = JAM.new(ECB, [59, 16], JAM.policy.p22);
+  var v2159 = JAM.new(ECB, [1, 17], JAM.policy.p22);
+  var v1392 = JAM.new(ECBlocks, [30, v2158, v2159], JAM.policy.p22);
+  var v414 = JAM.new(Version, [34, v1388, v1389, v1390, v1391, v1392], JAM.policy.p22);
+  var v1393 = JAM.new(Array, [6, 30, 54, 78, 102, 126, 150], JAM.policy.p22);
+  var v2160 = JAM.new(ECB, [12, 121], JAM.policy.p22);
+  var v2161 = JAM.new(ECB, [7, 122], JAM.policy.p22);
+  var v1394 = JAM.new(ECBlocks, [30, v2160, v2161], JAM.policy.p22);
+  var v2162 = JAM.new(ECB, [12, 47], JAM.policy.p22);
+  var v2163 = JAM.new(ECB, [26, 48], JAM.policy.p22);
+  var v1395 = JAM.new(ECBlocks, [28, v2162, v2163], JAM.policy.p22);
+  var v2164 = JAM.new(ECB, [39, 24], JAM.policy.p22);
+  var v2165 = JAM.new(ECB, [14, 25], JAM.policy.p22);
+  var v1396 = JAM.new(ECBlocks, [30, v2164, v2165], JAM.policy.p22);
+  var v2166 = JAM.new(ECB, [22, 15], JAM.policy.p22);
+  var v2167 = JAM.new(ECB, [41, 16], JAM.policy.p22);
+  var v1397 = JAM.new(ECBlocks, [30, v2166, v2167], JAM.policy.p22);
+  var v415 = JAM.new(Version, [35, v1393, v1394, v1395, v1396, v1397], JAM.policy.p22);
+  var v1398 = JAM.new(Array, [6, 24, 50, 76, 102, 128, 154], JAM.policy.p22);
+  var v2168 = JAM.new(ECB, [6, 121], JAM.policy.p22);
+  var v2169 = JAM.new(ECB, [14, 122], JAM.policy.p22);
+  var v1399 = JAM.new(ECBlocks, [30, v2168, v2169], JAM.policy.p22);
+  var v2170 = JAM.new(ECB, [6, 47], JAM.policy.p22);
+  var v2171 = JAM.new(ECB, [34, 48], JAM.policy.p22);
+  var v1400 = JAM.new(ECBlocks, [28, v2170, v2171], JAM.policy.p22);
+  var v2172 = JAM.new(ECB, [46, 24], JAM.policy.p22);
+  var v2173 = JAM.new(ECB, [10, 25], JAM.policy.p22);
+  var v1401 = JAM.new(ECBlocks, [30, v2172, v2173], JAM.policy.p22);
+  var v2174 = JAM.new(ECB, [2, 15], JAM.policy.p22);
+  var v2175 = JAM.new(ECB, [64, 16], JAM.policy.p22);
+  var v1402 = JAM.new(ECBlocks, [30, v2174, v2175], JAM.policy.p22);
+  var v416 = JAM.new(Version, [36, v1398, v1399, v1400, v1401, v1402], JAM.policy.p22);
+  var v1403 = JAM.new(Array, [6, 28, 54, 80, 106, 132, 158], JAM.policy.p22);
+  var v2176 = JAM.new(ECB, [17, 122], JAM.policy.p22);
+  var v2177 = JAM.new(ECB, [4, 123], JAM.policy.p22);
+  var v1404 = JAM.new(ECBlocks, [30, v2176, v2177], JAM.policy.p22);
+  var v2178 = JAM.new(ECB, [29, 46], JAM.policy.p22);
+  var v2179 = JAM.new(ECB, [14, 47], JAM.policy.p22);
+  var v1405 = JAM.new(ECBlocks, [28, v2178, v2179], JAM.policy.p22);
+  var v2180 = JAM.new(ECB, [49, 24], JAM.policy.p22);
+  var v2181 = JAM.new(ECB, [10, 25], JAM.policy.p22);
+  var v1406 = JAM.new(ECBlocks, [30, v2180, v2181], JAM.policy.p22);
+  var v2182 = JAM.new(ECB, [24, 15], JAM.policy.p22);
+  var v2183 = JAM.new(ECB, [46, 16], JAM.policy.p22);
+  var v1407 = JAM.new(ECBlocks, [30, v2182, v2183], JAM.policy.p22);
+  var v417 = JAM.new(Version, [37, v1403, v1404, v1405, v1406, v1407], JAM.policy.p22);
+  var v1408 = JAM.new(Array, [6, 32, 58, 84, 110, 136, 162], JAM.policy.p22);
+  var v2184 = JAM.new(ECB, [4, 122], JAM.policy.p22);
+  var v2185 = JAM.new(ECB, [18, 123], JAM.policy.p22);
+  var v1409 = JAM.new(ECBlocks, [30, v2184, v2185], JAM.policy.p22);
+  var v2186 = JAM.new(ECB, [13, 46], JAM.policy.p22);
+  var v2187 = JAM.new(ECB, [32, 47], JAM.policy.p22);
+  var v1410 = JAM.new(ECBlocks, [28, v2186, v2187], JAM.policy.p22);
+  var v2188 = JAM.new(ECB, [48, 24], JAM.policy.p22);
+  var v2189 = JAM.new(ECB, [14, 25], JAM.policy.p22);
+  var v1411 = JAM.new(ECBlocks, [30, v2188, v2189], JAM.policy.p22);
+  var v2190 = JAM.new(ECB, [42, 15], JAM.policy.p22);
+  var v2191 = JAM.new(ECB, [32, 16], JAM.policy.p22);
+  var v1412 = JAM.new(ECBlocks, [30, v2190, v2191], JAM.policy.p22);
+  var v418 = JAM.new(Version, [38, v1408, v1409, v1410, v1411, v1412], JAM.policy.p22);
+  var v1413 = JAM.new(Array, [6, 26, 54, 82, 110, 138, 166], JAM.policy.p22);
+  var v2192 = JAM.new(ECB, [20, 117], JAM.policy.p22);
+  var v2193 = JAM.new(ECB, [4, 118], JAM.policy.p22);
+  var v1414 = JAM.new(ECBlocks, [30, v2192, v2193], JAM.policy.p22);
+  var v2194 = JAM.new(ECB, [40, 47], JAM.policy.p22);
+  var v2195 = JAM.new(ECB, [7, 48], JAM.policy.p22);
+  var v1415 = JAM.new(ECBlocks, [28, v2194, v2195], JAM.policy.p22);
+  var v2196 = JAM.new(ECB, [43, 24], JAM.policy.p22);
+  var v2197 = JAM.new(ECB, [22, 25], JAM.policy.p22);
+  var v1416 = JAM.new(ECBlocks, [30, v2196, v2197], JAM.policy.p22);
+  var v2198 = JAM.new(ECB, [10, 15], JAM.policy.p22);
+  var v2199 = JAM.new(ECB, [67, 16], JAM.policy.p22);
+  var v1417 = JAM.new(ECBlocks, [30, v2198, v2199], JAM.policy.p22);
+  var v419 = JAM.new(Version, [39, v1413, v1414, v1415, v1416, v1417], JAM.policy.p22);
+  var v1418 = JAM.new(Array, [6, 30, 58, 86, 114, 142, 170], JAM.policy.p22);
+  var v2200 = JAM.new(ECB, [19, 118], JAM.policy.p22);
+  var v2201 = JAM.new(ECB, [6, 119], JAM.policy.p22);
+  var v1419 = JAM.new(ECBlocks, [30, v2200, v2201], JAM.policy.p22);
+  var v2202 = JAM.new(ECB, [18, 47], JAM.policy.p22);
+  var v2203 = JAM.new(ECB, [31, 48], JAM.policy.p22);
+  var v1420 = JAM.new(ECBlocks, [28, v2202, v2203], JAM.policy.p22);
+  var v2204 = JAM.new(ECB, [34, 24], JAM.policy.p22);
+  var v2205 = JAM.new(ECB, [34, 25], JAM.policy.p22);
+  var v1421 = JAM.new(ECBlocks, [30, v2204, v2205], JAM.policy.p22);
+  var v2206 = JAM.new(ECB, [20, 15], JAM.policy.p22);
+  var v2207 = JAM.new(ECB, [61, 16], JAM.policy.p22);
+  var v1422 = JAM.new(ECBlocks, [30, v2206, v2207], JAM.policy.p22);
+  var v420 = JAM.new(Version, [40, v1418, v1419, v1420, v1421, v1422], JAM.policy.p22);
+  return JAM.new(Array, [v381, v382, v383, v384, v385, v386, v387, v388, v389, v390, v391, v392, v393, v394, v395, v396, v397, v398, v399, v400, v401, v402, v403, v404, v405, v406, v407, v408, v409, v410, v411, v412, v413, v414, v415, v416, v417, v418, v419, v420], JAM.policy.p38);
+}
+function PerspectiveTransform(a11, a21, a31, a12, a22, a32, a13$$1, a23$$1, a33) {
+  function v15(other$$4) {
+    var v2547 = this.a11;
+    var v2548 = other$$4.a11;
+    var v2208 = v2547 * v2548;
+    var v2549 = this.a21;
+    var v2550 = other$$4.a12;
+    var v2209 = v2549 * v2550;
+    var v1423 = v2208 + v2209;
+    var v2210 = this.a31;
+    var v2211 = other$$4.a13;
+    var v1424 = v2210 * v2211;
+    var v421 = v1423 + v1424;
+    var v2551 = this.a11;
+    var v2552 = other$$4.a21;
+    var v2212 = v2551 * v2552;
+    var v2553 = this.a21;
+    var v2554 = other$$4.a22;
+    var v2213 = v2553 * v2554;
+    var v1425 = v2212 + v2213;
+    var v2214 = this.a31;
+    var v2215 = other$$4.a23;
+    var v1426 = v2214 * v2215;
+    var v422 = v1425 + v1426;
+    var v2555 = this.a11;
+    var v2556 = other$$4.a31;
+    var v2216 = v2555 * v2556;
+    var v2557 = this.a21;
+    var v2558 = other$$4.a32;
+    var v2217 = v2557 * v2558;
+    var v1427 = v2216 + v2217;
+    var v2218 = this.a31;
+    var v2219 = other$$4.a33;
+    var v1428 = v2218 * v2219;
+    var v423 = v1427 + v1428;
+    var v2559 = this.a12;
+    var v2560 = other$$4.a11;
+    var v2220 = v2559 * v2560;
+    var v2561 = this.a22;
+    var v2562 = other$$4.a12;
+    var v2221 = v2561 * v2562;
+    var v1429 = v2220 + v2221;
+    var v2222 = this.a32;
+    var v2223 = other$$4.a13;
+    var v1430 = v2222 * v2223;
+    var v424 = v1429 + v1430;
+    var v2563 = this.a12;
+    var v2564 = other$$4.a21;
+    var v2224 = v2563 * v2564;
+    var v2565 = this.a22;
+    var v2566 = other$$4.a22;
+    var v2225 = v2565 * v2566;
+    var v1431 = v2224 + v2225;
+    var v2226 = this.a32;
+    var v2227 = other$$4.a23;
+    var v1432 = v2226 * v2227;
+    var v425 = v1431 + v1432;
+    var v2567 = this.a12;
+    var v2568 = other$$4.a31;
+    var v2228 = v2567 * v2568;
+    var v2569 = this.a22;
+    var v2570 = other$$4.a32;
+    var v2229 = v2569 * v2570;
+    var v1433 = v2228 + v2229;
+    var v2230 = this.a32;
+    var v2231 = other$$4.a33;
+    var v1434 = v2230 * v2231;
+    var v426 = v1433 + v1434;
+    var v2571 = this.a13;
+    var v2572 = other$$4.a11;
+    var v2232 = v2571 * v2572;
+    var v2573 = this.a23;
+    var v2574 = other$$4.a12;
+    var v2233 = v2573 * v2574;
+    var v1435 = v2232 + v2233;
+    var v2234 = this.a33;
+    var v2235 = other$$4.a13;
+    var v1436 = v2234 * v2235;
+    var v427 = v1435 + v1436;
+    var v2575 = this.a13;
+    var v2576 = other$$4.a21;
+    var v2236 = v2575 * v2576;
+    var v2577 = this.a23;
+    var v2578 = other$$4.a22;
+    var v2237 = v2577 * v2578;
+    var v1437 = v2236 + v2237;
+    var v2238 = this.a33;
+    var v2239 = other$$4.a23;
+    var v1438 = v2238 * v2239;
+    var v428 = v1437 + v1438;
+    var v2579 = this.a13;
+    var v2580 = other$$4.a31;
+    var v2240 = v2579 * v2580;
+    var v2581 = this.a23;
+    var v2582 = other$$4.a32;
+    var v2241 = v2581 * v2582;
+    var v1439 = v2240 + v2241;
+    var v2242 = this.a33;
+    var v2243 = other$$4.a33;
+    var v1440 = v2242 * v2243;
+    var v429 = v1439 + v1440;
+    return JAM.new(PerspectiveTransform, [v421, v422, v423, v424, v425, v426, v427, v428, v429], JAM.policy.p38);
+  }
+  function v14() {
+    var v2244 = this.a22;
+    var v2245 = this.a33;
+    var v1441 = v2244 * v2245;
+    var v2246 = this.a23;
+    var v2247 = this.a32;
+    var v1442 = v2246 * v2247;
+    var v430 = v1441 - v1442;
+    var v2248 = this.a23;
+    var v2249 = this.a31;
+    var v1443 = v2248 * v2249;
+    var v2250 = this.a21;
+    var v2251 = this.a33;
+    var v1444 = v2250 * v2251;
+    var v431 = v1443 - v1444;
+    var v2252 = this.a21;
+    var v2253 = this.a32;
+    var v1445 = v2252 * v2253;
+    var v2254 = this.a22;
+    var v2255 = this.a31;
+    var v1446 = v2254 * v2255;
+    var v432 = v1445 - v1446;
+    var v2256 = this.a13;
+    var v2257 = this.a32;
+    var v1447 = v2256 * v2257;
+    var v2258 = this.a12;
+    var v2259 = this.a33;
+    var v1448 = v2258 * v2259;
+    var v433 = v1447 - v1448;
+    var v2260 = this.a11;
+    var v2261 = this.a33;
+    var v1449 = v2260 * v2261;
+    var v2262 = this.a13;
+    var v2263 = this.a31;
+    var v1450 = v2262 * v2263;
+    var v434 = v1449 - v1450;
+    var v2264 = this.a12;
+    var v2265 = this.a31;
+    var v1451 = v2264 * v2265;
+    var v2266 = this.a11;
+    var v2267 = this.a32;
+    var v1452 = v2266 * v2267;
+    var v435 = v1451 - v1452;
+    var v2268 = this.a12;
+    var v2269 = this.a23;
+    var v1453 = v2268 * v2269;
+    var v2270 = this.a13;
+    var v2271 = this.a22;
+    var v1454 = v2270 * v2271;
+    var v436 = v1453 - v1454;
+    var v2272 = this.a13;
+    var v2273 = this.a21;
+    var v1455 = v2272 * v2273;
+    var v2274 = this.a11;
+    var v2275 = this.a23;
+    var v1456 = v2274 * v2275;
+    var v437 = v1455 - v1456;
+    var v2276 = this.a11;
+    var v2277 = this.a22;
+    var v1457 = v2276 * v2277;
+    var v2278 = this.a12;
+    var v2279 = this.a21;
+    var v1458 = v2278 * v2279;
+    var v438 = v1457 - v1458;
+    return JAM.new(PerspectiveTransform, [v430, v431, v432, v433, v434, v435, v436, v437, v438], JAM.policy.p38);
+  }
+  function v13(xValues, yValues) {
+    var n$$1 = xValues.length;
+    var i$$6 = 0;
+    var v443 = i$$6 < n$$1;
+    for (;v443;) {
+      introspect(JAM.policy.p26) {
+        var x$$51 = xValues[i$$6]
+      }
+      introspect(JAM.policy.p26) {
+        var y$$34 = yValues[i$$6]
+      }
+      var v2280 = this.a13;
+      var v1459 = v2280 * x$$51;
+      var v2281 = this.a23;
+      var v1460 = v2281 * y$$34;
+      var v439 = v1459 + v1460;
+      var v440 = this.a33;
+      var denominator$$2 = v439 + v440;
+      var v2583 = this.a11;
+      var v2282 = v2583 * x$$51;
+      var v2584 = this.a21;
+      var v2283 = v2584 * y$$34;
+      var v1461 = v2282 + v2283;
+      var v1462 = this.a31;
+      var v441 = v1461 + v1462;
+      introspect(JAM.policy.p27) {
+        xValues[i$$6] = v441 / denominator$$2;
+      }
+      var v2585 = this.a12;
+      var v2284 = v2585 * x$$51;
+      var v2586 = this.a22;
+      var v2285 = v2586 * y$$34;
+      var v1463 = v2284 + v2285;
+      var v1464 = this.a32;
+      var v442 = v1463 + v1464;
+      introspect(JAM.policy.p27) {
+        yValues[i$$6] = v442 / denominator$$2;
+      }
+      i$$6 = i$$6 + 1;
+      v443 = i$$6 < n$$1;
+    }
+    return;
+  }
+  function v12(points$$2) {
+    var max$$2 = points$$2.length;
+    var a11$$1 = this.a11;
+    var a12$$1 = this.a12;
+    var a13$$2 = this.a13;
+    var a21$$1 = this.a21;
+    var a22$$1 = this.a22;
+    var a23$$2 = this.a23;
+    var a31$$1 = this.a31;
+    var a32$$1 = this.a32;
+    var a33$$1 = this.a33;
+    var i$$5 = 0;
+    var v448 = i$$5 < max$$2;
+    for (;v448;) {
+      introspect(JAM.policy.p26) {
+        var x$$50 = points$$2[i$$5]
+      }
+      var v444 = i$$5 + 1;
+      introspect(JAM.policy.p26) {
+        var y$$33 = points$$2[v444]
+      }
+      var v1465 = a13$$2 * x$$50;
+      var v1466 = a23$$2 * y$$33;
+      var v445 = v1465 + v1466;
+      var denominator$$1 = v445 + a33$$1;
+      var v2286 = a11$$1 * x$$50;
+      var v2287 = a21$$1 * y$$33;
+      var v1467 = v2286 + v2287;
+      var v446 = v1467 + a31$$1;
+      introspect(JAM.policy.p27) {
+        points$$2[i$$5] = v446 / denominator$$1;
+      }
+      var v447 = i$$5 + 1;
+      var v2587 = a12$$1 * x$$50;
+      var v2588 = a22$$1 * y$$33;
+      var v2288 = v2587 + v2588;
+      var v1468 = v2288 + a32$$1;
+      introspect(JAM.policy.p27) {
+        points$$2[v447] = v1468 / denominator$$1;
+      }
+      i$$5 = i$$5 + 2;
+      v448 = i$$5 < max$$2;
+    }
+    return;
+  }
+  this.a11 = a11;
+  this.a12 = a12;
+  this.a13 = a13$$1;
+  this.a21 = a21;
+  this.a22 = a22;
+  this.a23 = a23$$1;
+  this.a31 = a31;
+  this.a32 = a32;
+  this.a33 = a33;
+  this.transformPoints1 = v12;
+  this.transformPoints2 = v13;
+  this.buildAdjoint = v14;
+  this.times = v15;
+  return;
+}
+function DetectorResult(bits$$1, points$$3) {
+  this.bits = bits$$1;
+  this.points = points$$3;
+  return;
+}
+function Detector(image$$5) {
+  function v26() {
+    var v449 = JAM.new(FinderPatternFinder, [], JAM.policy.p40);
+    var v450 = this.image;
+    var info$$1 = JAM.call(v449.findFinderPattern, v449, [v450], JAM.policy.p39);
+    return JAM.call(this.processFinderPatternInfo, this, [info$$1], JAM.policy.p39);
+  }
+  function v25(info) {
+    var topLeft$$3 = info.TopLeft;
+    var topRight$$3 = info.TopRight;
+    var bottomLeft$$3 = info.BottomLeft;
+    var moduleSize$$1 = JAM.call(this.calculateModuleSize, this, [topLeft$$3, topRight$$3, bottomLeft$$3], JAM.policy.p38);
+    var v451 = moduleSize$$1 < 1;
+    if (v451) {
+      throw "Error";
+    }
+    var dimension$$7 = JAM.call(this.computeDimension, this, [topLeft$$3, topRight$$3, bottomLeft$$3, moduleSize$$1], JAM.policy.p38);
+    var provisionalVersion = JAM.call(Version.getProvisionalVersionForDimension, Version, [dimension$$7], JAM.policy.p39);
+    var v452 = provisionalVersion.DimensionForVersion;
+    var modulesBetweenFPCenters = v452 - 7;
+    var alignmentPattern$$1 = null;
+    var v2289 = provisionalVersion.AlignmentPatternCenters;
+    var v1469 = v2289.length;
+    var v461 = v1469 > 0;
+    if (v461) {
+      var v1470 = topRight$$3.X;
+      var v1471 = topLeft$$3.X;
+      var v453 = v1470 - v1471;
+      var v454 = bottomLeft$$3.X;
+      var bottomRightX$$1 = v453 + v454;
+      var v1472 = topRight$$3.Y;
+      var v1473 = topLeft$$3.Y;
+      var v455 = v1472 - v1473;
+      var v456 = bottomLeft$$3.Y;
+      var bottomRightY$$1 = v455 + v456;
+      var v457 = 3 / modulesBetweenFPCenters;
+      var correctionToTopLeft = 1 - v457;
+      var v1474 = topLeft$$3.X;
+      var v2589 = topLeft$$3.X;
+      var v2290 = bottomRightX$$1 - v2589;
+      var v1475 = correctionToTopLeft * v2290;
+      var v458 = v1474 + v1475;
+      var estAlignmentX$$1 = JAM.call(Math.floor, Math, [v458], JAM.policy.p39);
+      var v1476 = topLeft$$3.Y;
+      var v2590 = topLeft$$3.Y;
+      var v2291 = bottomRightY$$1 - v2590;
+      var v1477 = correctionToTopLeft * v2291;
+      var v459 = v1476 + v1477;
+      var estAlignmentY$$1 = JAM.call(Math.floor, Math, [v459], JAM.policy.p39);
+      var i$$7 = 4;
+      var v460 = i$$7 <= 16;
+      for (;v460;) {
+        alignmentPattern$$1 = JAM.call(this.findAlignmentInRegion, this, [moduleSize$$1, estAlignmentX$$1, estAlignmentY$$1, i$$7], JAM.policy.p38);
+        break;
+      }
+    }
+    var transform$$4 = JAM.call(this.createTransform, this, [topLeft$$3, topRight$$3, bottomLeft$$3, alignmentPattern$$1, dimension$$7], JAM.policy.p38);
+    var v462 = this.image;
+    var bits$$2 = JAM.call(this.sampleGrid, this, [v462, transform$$4, dimension$$7], JAM.policy.p38);
+    var points$$4;
+    var v463 = alignmentPattern$$1 == null;
+    if (v463) {
+      points$$4 = JAM.new(Array, [bottomLeft$$3, topLeft$$3, topRight$$3], JAM.policy.p38);
+    } else {
+      points$$4 = JAM.new(Array, [bottomLeft$$3, topLeft$$3, topRight$$3, alignmentPattern$$1], JAM.policy.p38);
+    }
+    return JAM.new(DetectorResult, [bits$$2, points$$4], JAM.policy.p38);
+  }
+  function v24(image$$6, transform$$3, dimension$$6) {
+    var sampler = GridSampler;
+    return JAM.call(sampler.sampleGrid3, sampler, [image$$6, dimension$$6, transform$$3], JAM.policy.p38);
+  }
+  function v23(topLeft$$2, topRight$$2, bottomLeft$$2, alignmentPattern, dimension$$5) {
+    var dimMinusThree = dimension$$5 - 3.5;
+    var bottomRightX;
+    var bottomRightY;
+    var sourceBottomRightX;
+    var sourceBottomRightY;
+    var v468 = alignmentPattern != null;
+    if (v468) {
+      bottomRightX = alignmentPattern.X;
+      bottomRightY = alignmentPattern.Y;
+      sourceBottomRightX = sourceBottomRightY = dimMinusThree - 3;
+    } else {
+      var v1478 = topRight$$2.X;
+      var v1479 = topLeft$$2.X;
+      var v464 = v1478 - v1479;
+      var v465 = bottomLeft$$2.X;
+      bottomRightX = v464 + v465;
+      var v1480 = topRight$$2.Y;
+      var v1481 = topLeft$$2.Y;
+      var v466 = v1480 - v1481;
+      var v467 = bottomLeft$$2.Y;
+      bottomRightY = v466 + v467;
+      sourceBottomRightX = sourceBottomRightY = dimMinusThree;
+    }
+    var v469 = topLeft$$2.X;
+    var v470 = topLeft$$2.Y;
+    var v471 = topRight$$2.X;
+    var v472 = topRight$$2.Y;
+    var v473 = bottomLeft$$2.X;
+    var v474 = bottomLeft$$2.Y;
+    var transform$$2 = JAM.call(PerspectiveTransform.quadrilateralToQuadrilateral, PerspectiveTransform, [3.5, 3.5, dimMinusThree, 3.5, sourceBottomRightX, sourceBottomRightY, 3.5, dimMinusThree, v469, v470, v471, v472, bottomRightX, bottomRightY, v473, v474], JAM.policy.p22);
+    return transform$$2;
+  }
+  function v22(overallEstModuleSize, estAlignmentX, estAlignmentY, allowanceFactor) {
+    var v475 = allowanceFactor * overallEstModuleSize;
+    var allowance = JAM.call(Math.floor, Math, [v475], JAM.policy.p39);
+    var v476 = estAlignmentX - allowance;
+    var alignmentAreaLeftX = JAM.call(Math.max, Math, [0, v476], JAM.policy.p22);
+    var v1482 = qrcode.width;
+    var v477 = v1482 - 1;
+    var v478 = estAlignmentX + allowance;
+    var alignmentAreaRightX = JAM.call(Math.min, Math, [v477, v478], JAM.policy.p38);
+    var v1483 = alignmentAreaRightX - alignmentAreaLeftX;
+    var v1484 = overallEstModuleSize * 3;
+    var v479 = v1483 < v1484;
+    if (v479) {
+      throw "Error";
+    }
+    var v480 = estAlignmentY - allowance;
+    var alignmentAreaTopY = JAM.call(Math.max, Math, [0, v480], JAM.policy.p22);
+    var v1485 = qrcode.height;
+    var v481 = v1485 - 1;
+    var v482 = estAlignmentY + allowance;
+    var alignmentAreaBottomY = JAM.call(Math.min, Math, [v481, v482], JAM.policy.p38);
+    var v483 = this.image;
+    var v484 = alignmentAreaRightX - alignmentAreaLeftX;
+    var v485 = alignmentAreaBottomY - alignmentAreaTopY;
+    var v486 = this.resultPointCallback;
+    var alignmentFinder = JAM.new(AlignmentPatternFinder, [v483, alignmentAreaLeftX, alignmentAreaTopY, v484, v485, overallEstModuleSize, v486], JAM.policy.p38);
+    return JAM.call(alignmentFinder.find, alignmentFinder, [], JAM.policy.p40);
+  }
+  function v21(topLeft$$1, topRight$$1, bottomLeft$$1, moduleSize) {
+    var v1486 = JAM.call(this.distance, this, [topLeft$$1, topRight$$1], JAM.policy.p38);
+    var v487 = v1486 / moduleSize;
+    var tltrCentersDimension = JAM.call(Math.round, Math, [v487], JAM.policy.p39);
+    var v1487 = JAM.call(this.distance, this, [topLeft$$1, bottomLeft$$1], JAM.policy.p38);
+    var v488 = v1487 / moduleSize;
+    var tlblCentersDimension = JAM.call(Math.round, Math, [v488], JAM.policy.p39);
+    var v1488 = tltrCentersDimension + tlblCentersDimension;
+    var v489 = v1488 >> 1;
+    var dimension$$4 = v489 + 7;
+    var v490 = dimension$$4 & 3;
+    switch(v490) {
+      case 0:
+        dimension$$4 = dimension$$4 + 1;
+        break;
+      case 2:
+        dimension$$4 = dimension$$4 - 1;
+        break;
+      case 3:
+        throw "Error";;
+    }
+    return dimension$$4;
+  }
+  function v20(pattern1, pattern2) {
+    var v491 = pattern1.X;
+    var v492 = pattern2.X;
+    xDiff = v491 - v492;
+    var v493 = pattern1.Y;
+    var v494 = pattern2.Y;
+    yDiff = v493 - v494;
+    var v1489 = xDiff * xDiff;
+    var v1490 = yDiff * yDiff;
+    var v495 = v1489 + v1490;
+    return JAM.call(Math.sqrt, Math, [v495], JAM.policy.p39);
+  }
+  function v19(topLeft, topRight, bottomLeft) {
+    var v1491 = JAM.call(this.calculateModuleSizeOneWay, this, [topLeft, topRight], JAM.policy.p38);
+    var v1492 = JAM.call(this.calculateModuleSizeOneWay, this, [topLeft, bottomLeft], JAM.policy.p38);
+    var v496 = v1491 + v1492;
+    return v496 / 2;
+  }
+  function v18(pattern$$1, otherPattern) {
+    var v1493 = pattern$$1.X;
+    var v497 = JAM.call(Math.floor, Math, [v1493], JAM.policy.p39);
+    var v1494 = pattern$$1.Y;
+    var v498 = JAM.call(Math.floor, Math, [v1494], JAM.policy.p39);
+    var v1495 = otherPattern.X;
+    var v499 = JAM.call(Math.floor, Math, [v1495], JAM.policy.p39);
+    var v1496 = otherPattern.Y;
+    var v500 = JAM.call(Math.floor, Math, [v1496], JAM.policy.p39);
+    var moduleSizeEst1 = JAM.call(this.sizeOfBlackWhiteBlackRunBothWays, this, [v497, v498, v499, v500], JAM.policy.p38);
+    var v1497 = otherPattern.X;
+    var v501 = JAM.call(Math.floor, Math, [v1497], JAM.policy.p39);
+    var v1498 = otherPattern.Y;
+    var v502 = JAM.call(Math.floor, Math, [v1498], JAM.policy.p39);
+    var v1499 = pattern$$1.X;
+    var v503 = JAM.call(Math.floor, Math, [v1499], JAM.policy.p39);
+    var v1500 = pattern$$1.Y;
+    var v504 = JAM.call(Math.floor, Math, [v1500], JAM.policy.p39);
+    var moduleSizeEst2 = JAM.call(this.sizeOfBlackWhiteBlackRunBothWays, this, [v501, v502, v503, v504], JAM.policy.p38);
+    var v505 = JAM.call(isNaN, null, [moduleSizeEst1], JAM.policy.p39);
+    if (v505) {
+      return moduleSizeEst2 / 7;
+    }
+    var v506 = JAM.call(isNaN, null, [moduleSizeEst2], JAM.policy.p39);
+    if (v506) {
+      return moduleSizeEst1 / 7;
+    }
+    var v507 = moduleSizeEst1 + moduleSizeEst2;
+    return v507 / 14;
+  }
+  function v17(fromX$$1, fromY$$1, toX$$1, toY$$1) {
+    var result = JAM.call(this.sizeOfBlackWhiteBlackRun, this, [fromX$$1, fromY$$1, toX$$1, toY$$1], JAM.policy.p38);
+    var scale = 1;
+    var v508 = toX$$1 - fromX$$1;
+    var otherToX = fromX$$1 - v508;
+    var v514 = otherToX < 0;
+    if (v514) {
+      var v509 = fromX$$1 - otherToX;
+      scale = fromX$$1 / v509;
+      otherToX = 0;
+    } else {
+      var v1501 = qrcode.width;
+      var v513 = otherToX >= v1501;
+      if (v513) {
+        var v2292 = qrcode.width;
+        var v1502 = v2292 - 1;
+        var v510 = v1502 - fromX$$1;
+        var v511 = otherToX - fromX$$1;
+        scale = v510 / v511;
+        var v512 = qrcode.width;
+        otherToX = v512 - 1;
+      }
+    }
+    var v2293 = toY$$1 - fromY$$1;
+    var v1503 = v2293 * scale;
+    var v515 = fromY$$1 - v1503;
+    var otherToY = JAM.call(Math.floor, Math, [v515], JAM.policy.p39);
+    scale = 1;
+    var v521 = otherToY < 0;
+    if (v521) {
+      var v516 = fromY$$1 - otherToY;
+      scale = fromY$$1 / v516;
+      otherToY = 0;
+    } else {
+      var v1504 = qrcode.height;
+      var v520 = otherToY >= v1504;
+      if (v520) {
+        var v2294 = qrcode.height;
+        var v1505 = v2294 - 1;
+        var v517 = v1505 - fromY$$1;
+        var v518 = otherToY - fromY$$1;
+        scale = v517 / v518;
+        var v519 = qrcode.height;
+        otherToY = v519 - 1;
+      }
+    }
+    var v2295 = otherToX - fromX$$1;
+    var v1506 = v2295 * scale;
+    var v522 = fromX$$1 + v1506;
+    otherToX = JAM.call(Math.floor, Math, [v522], JAM.policy.p39);
+    var v1507 = result;
+    var v1508 = JAM.call(this.sizeOfBlackWhiteBlackRun, this, [fromX$$1, fromY$$1, otherToX, otherToY], JAM.policy.p38);
+    result = v1507 + v1508;
+    return result - 1;
+  }
+  function v16(fromX, fromY, toX, toY) {
+    var v1509 = toY - fromY;
+    var v523 = JAM.call(Math.abs, Math, [v1509], JAM.policy.p39);
+    var v1510 = toX - fromX;
+    var v524 = JAM.call(Math.abs, Math, [v1510], JAM.policy.p39);
+    var steep = v523 > v524;
+    if (steep) {
+      var temp = fromX;
+      fromX = fromY;
+      fromY = temp;
+      temp = toX;
+      toX = toY;
+      toY = temp;
+    }
+    var v525 = toX - fromX;
+    var dx$$4 = JAM.call(Math.abs, Math, [v525], JAM.policy.p39);
+    var v526 = toY - fromY;
+    var dy$$4 = JAM.call(Math.abs, Math, [v526], JAM.policy.p39);
+    var v527 = -dx$$4;
+    var error$$1 = v527 >> 1;
+    var v528;
+    var v1511 = fromY < toY;
+    if (v1511) {
+      v528 = 1;
+    } else {
+      v528 = -1;
+    }
+    var ystep = v528;
+    var v529;
+    var v1512 = fromX < toX;
+    if (v1512) {
+      v529 = 1;
+    } else {
+      v529 = -1;
+    }
+    var xstep = v529;
+    var state = 0;
+    var x$$52 = fromX;
+    var y$$35 = fromY;
+    var v539 = x$$52 != toX;
+    for (;v539;) {
+      var v530;
+      if (steep) {
+        v530 = y$$35;
+      } else {
+        v530 = x$$52;
+      }
+      var realX = v530;
+      var v531;
+      if (steep) {
+        v531 = x$$52;
+      } else {
+        v531 = y$$35;
+      }
+      var realY = v531;
+      var v534 = state == 1;
+      if (v534) {
+        var v1513 = this.image;
+        var v2591 = qrcode.width;
+        var v2296 = realY * v2591;
+        var v1514 = realX + v2296;
+        introspect(JAM.policy.p26) {
+          var v532 = v1513[v1514]
+        }
+        if (v532) {
+          state = state + 1;
+        }
+      } else {
+        var v2297 = this.image;
+        var v2714 = qrcode.width;
+        var v2592 = realY * v2714;
+        var v2298 = realX + v2592;
+        introspect(JAM.policy.p26) {
+          var v1515 = v2297[v2298]
+        }
+        var v533 = !v1515;
+        if (v533) {
+          state = state + 1;
+        }
+      }
+      var v536 = state == 3;
+      if (v536) {
+        var diffX = x$$52 - fromX;
+        var diffY = y$$35 - fromY;
+        var v1516 = diffX * diffX;
+        var v1517 = diffY * diffY;
+        var v535 = v1516 + v1517;
+        return JAM.call(Math.sqrt, Math, [v535], JAM.policy.p39);
+      }
+      error$$1 = error$$1 + dy$$4;
+      var v538 = error$$1 > 0;
+      if (v538) {
+        var v537 = y$$35 == toY;
+        if (v537) {
+          break;
+        }
+        y$$35 = y$$35 + ystep;
+        error$$1 = error$$1 - dx$$4;
+      }
+      x$$52 = x$$52 + xstep;
+      v539 = x$$52 != toX;
+    }
+    var diffX2 = toX - fromX;
+    var diffY2 = toY - fromY;
+    var v1518 = diffX2 * diffX2;
+    var v1519 = diffY2 * diffY2;
+    var v540 = v1518 + v1519;
+    return JAM.call(Math.sqrt, Math, [v540], JAM.policy.p39);
+  }
+  this.image = image$$5;
+  this.resultPointCallback = null;
+  this.sizeOfBlackWhiteBlackRun = v16;
+  this.sizeOfBlackWhiteBlackRunBothWays = v17;
+  this.calculateModuleSizeOneWay = v18;
+  this.calculateModuleSize = v19;
+  this.distance = v20;
+  this.computeDimension = v21;
+  this.findAlignmentInRegion = v22;
+  this.createTransform = v23;
+  this.sampleGrid = v24;
+  this.processFinderPatternInfo = v25;
+  this.detect = v26;
+  return;
+}
+function FormatInformation(formatInfo) {
+  function v30(o) {
+    var other$$5 = o;
+    var v1520 = this.errorCorrectionLevel;
+    var v1521 = other$$5.errorCorrectionLevel;
+    var v541 = v1520 == v1521;
+    if (v541) {
+      var v1522 = this.dataMask;
+      var v1523 = other$$5.dataMask;
+      v541 = v1522 == v1523;
+    }
+    return v541;
+  }
+  function v29() {
+    var v2299 = this.errorCorrectionLevel;
+    var v1524 = v2299.ordinal_Renamed_Field;
+    var v542 = v1524 << 3;
+    return v542 | dataMask;
+  }
+  function v28() {
+    return this.dataMask;
+  }
+  function v27() {
+    return this.errorCorrectionLevel;
+  }
+  var v1525 = formatInfo >> 3;
+  var v543 = v1525 & 3;
+  var v2863 = JAM.call(ErrorCorrectionLevel.forBits, ErrorCorrectionLevel, [v543], JAM.policy.p39);
+  this.errorCorrectionLevel = v2863;
+  this.dataMask = formatInfo & 7;
+  JAM.call(this.__defineGetter__, this, ["ErrorCorrectionLevel", v27], JAM.policy.p23);
+  JAM.call(this.__defineGetter__, this, ["DataMask", v28], JAM.policy.p23);
+  this.GetHashCode = v29;
+  this.Equals = v30;
+  return;
+}
+function ErrorCorrectionLevel(ordinal, bits$$3, name$$30) {
+  function v33() {
+    return this.ordinal_Renamed_Field;
+  }
+  function v32() {
+    return this.name;
+  }
+  function v31() {
+    return this.bits;
+  }
+  this.ordinal_Renamed_Field = ordinal;
+  this.bits = bits$$3;
+  this.name = name$$30;
+  JAM.call(this.__defineGetter__, this, ["Bits", v31], JAM.policy.p23);
+  JAM.call(this.__defineGetter__, this, ["Name", v32], JAM.policy.p23);
+  this.ordinal = v33;
+  return;
+}
+function BitMatrix(width$$10, height$$9) {
+  function v41(left$$1, top$$1, width$$11, height$$10) {
+    var v1526 = top$$1 < 0;
+    var v2300 = !v1526;
+    if (v2300) {
+      v1526 = left$$1 < 0;
+    }
+    var v544 = v1526;
+    if (v544) {
+      throw "Left and top must be nonnegative";
+    }
+    var v1527 = height$$10 < 1;
+    var v2301 = !v1527;
+    if (v2301) {
+      v1527 = width$$11 < 1;
+    }
+    var v545 = v1527;
+    if (v545) {
+      throw "Height and width must be at least 1";
+    }
+    var right$$1 = left$$1 + width$$11;
+    var bottom = top$$1 + height$$10;
+    var v2302 = this.height;
+    var v1528 = bottom > v2302;
+    var v2304 = !v1528;
+    if (v2304) {
+      var v2303 = this.width;
+      v1528 = right$$1 > v2303;
+    }
+    var v546 = v1528;
+    if (v546) {
+      throw "The region must fit inside the matrix";
+    }
+    var y$$39 = top$$1;
+    var v551 = y$$39 < bottom;
+    for (;v551;) {
+      var v547 = this.rowSize;
+      var offset$$12 = y$$39 * v547;
+      var x$$56 = left$$1;
+      var v550 = x$$56 < right$$1;
+      for (;v550;) {
+        var v548 = this.bits;
+        var v1529 = x$$56 >> 5;
+        var v549 = offset$$12 + v1529;
+        introspect(JAM.policy.p26) {
+          var v2305 = v548[v549]
+        }
+        var v2593 = x$$56 & 31;
+        var v2306 = 1 << v2593;
+        introspect(JAM.policy.p27) {
+          v548[v549] = v2305 | v2306;
+        }
+        x$$56 = x$$56 + 1;
+        v550 = x$$56 < right$$1;
+      }
+      y$$39 = y$$39 + 1;
+      v551 = y$$39 < bottom;
+    }
+    return;
+  }
+  function v40() {
+    var v552 = this.bits;
+    var max$$3 = v552.length;
+    var i$$10 = 0;
+    var v554 = i$$10 < max$$3;
+    for (;v554;) {
+      var v553 = this.bits;
+      introspect(JAM.policy.p27) {
+        v553[i$$10] = 0;
+      }
+      i$$10 = i$$10 + 1;
+      v554 = i$$10 < max$$3;
+    }
+    return;
+  }
+  function v39(x$$55, y$$38) {
+    var v1530 = this.rowSize;
+    var v555 = y$$38 * v1530;
+    var v556 = x$$55 >> 5;
+    var offset$$11 = v555 + v556;
+    var v557 = this.bits;
+    introspect(JAM.policy.p26) {
+      var v2307 = v557[offset$$11]
+    }
+    var v2594 = x$$55 & 31;
+    var v2308 = 1 << v2594;
+    introspect(JAM.policy.p27) {
+      v557[offset$$11] = v2307 ^ v2308;
+    }
+    return;
+  }
+  function v38(x$$54, y$$37) {
+    var v1531 = this.rowSize;
+    var v558 = y$$37 * v1531;
+    var v559 = x$$54 >> 5;
+    var offset$$10 = v558 + v559;
+    var v560 = this.bits;
+    introspect(JAM.policy.p26) {
+      var v2309 = v560[offset$$10]
+    }
+    var v2595 = x$$54 & 31;
+    var v2310 = 1 << v2595;
+    introspect(JAM.policy.p27) {
+      v560[offset$$10] = v2309 | v2310;
+    }
+    return;
+  }
+  function v37(x$$53, y$$36) {
+    var v1532 = this.rowSize;
+    var v561 = y$$36 * v1532;
+    var v562 = x$$53 >> 5;
+    var offset$$9 = v561 + v562;
+    var v2596 = this.bits;
+    introspect(JAM.policy.p26) {
+      var v2311 = v2596[offset$$9]
+    }
+    var v2312 = x$$53 & 31;
+    var v1533 = JAM.call(URShift, null, [v2311, v2312], JAM.policy.p38);
+    var v563 = v1533 & 1;
+    return v563 != 0;
+  }
+  function v36() {
+    var v1534 = this.width;
+    var v1535 = this.height;
+    var v564 = v1534 != v1535;
+    if (v564) {
+      throw "Can't call getDimension() on a non-square matrix";
+    }
+    return this.width;
+  }
+  function v35() {
+    return this.height;
+  }
+  function v34() {
+    return this.width;
+  }
+  var v565 = !height$$9;
+  if (v565) {
+    height$$9 = width$$10;
+  }
+  var v1536 = width$$10 < 1;
+  var v2313 = !v1536;
+  if (v2313) {
+    v1536 = height$$9 < 1;
+  }
+  var v566 = v1536;
+  if (v566) {
+    throw "Both dimensions must be greater than 0";
+  }
+  this.width = width$$10;
+  this.height = height$$9;
+  var rowSize = width$$10 >> 5;
+  var v1537 = width$$10 & 31;
+  var v567 = v1537 != 0;
+  if (v567) {
+    rowSize = rowSize + 1;
+  }
+  this.rowSize = rowSize;
+  var v568 = rowSize * height$$9;
+  var v2864 = JAM.new(Array, [v568], JAM.policy.p39);
+  this.bits = v2864;
+  var i$$9 = 0;
+  var v2314 = this.bits;
+  var v1538 = v2314.length;
+  var v570 = i$$9 < v1538;
+  for (;v570;) {
+    var v569 = this.bits;
+    introspect(JAM.policy.p27) {
+      v569[i$$9] = 0;
+    }
+    i$$9 = i$$9 + 1;
+    var v2315 = this.bits;
+    var v1539 = v2315.length;
+    v570 = i$$9 < v1539;
+  }
+  JAM.call(this.__defineGetter__, this, ["Width", v34], JAM.policy.p23);
+  JAM.call(this.__defineGetter__, this, ["Height", v35], JAM.policy.p23);
+  JAM.call(this.__defineGetter__, this, ["Dimension", v36], JAM.policy.p23);
+  this.get_Renamed = v37;
+  this.set_Renamed = v38;
+  this.flip = v39;
+  this.clear = v40;
+  this.setRegion = v41;
+  return;
+}
+function DataBlock(numDataCodewords, codewords) {
+  function v43() {
+    return this.codewords;
+  }
+  function v42() {
+    return this.numDataCodewords;
+  }
+  this.numDataCodewords = numDataCodewords;
+  this.codewords = codewords;
+  JAM.call(this.__defineGetter__, this, ["NumDataCodewords", v42], JAM.policy.p23);
+  JAM.call(this.__defineGetter__, this, ["Codewords", v43], JAM.policy.p23);
+  return;
+}
+function BitMatrixParser(bitMatrix$$1) {
+  function v47() {
+    var formatInfo$$2 = JAM.call(this.readFormatInformation, this, [], JAM.policy.p40);
+    var version$$6 = JAM.call(this.readVersion, this, [], JAM.policy.p40);
+    var v571 = formatInfo$$2.DataMask;
+    var dataMask$$1 = JAM.call(DataMask.forReference, DataMask, [v571], JAM.policy.p39);
+    var v572 = this.bitMatrix;
+    var dimension$$11 = v572.Dimension;
+    var v573 = this.bitMatrix;
+    JAM.call(dataMask$$1.unmaskBitMatrix, dataMask$$1, [v573, dimension$$11], JAM.policy.p38);
+    var functionPattern = JAM.call(version$$6.buildFunctionPattern, version$$6, [], JAM.policy.p40);
+    var readingUp = true;
+    var v574 = version$$6.TotalCodewords;
+    var result$$2 = JAM.new(Array, [v574], JAM.policy.p39);
+    var resultOffset = 0;
+    var currentByte = 0;
+    var bitsRead = 0;
+    var j$$4 = dimension$$11 - 1;
+    var v583 = j$$4 > 0;
+    for (;v583;) {
+      var v575 = j$$4 == 6;
+      if (v575) {
+        j$$4 = j$$4 - 1;
+      }
+      var count$$4 = 0;
+      var v582 = count$$4 < dimension$$11;
+      for (;v582;) {
+        var v576;
+        if (readingUp) {
+          var v1540 = dimension$$11 - 1;
+          v576 = v1540 - count$$4;
+        } else {
+          v576 = count$$4;
+        }
+        var i$$15 = v576;
+        var col = 0;
+        var v581 = col < 2;
+        for (;v581;) {
+          var v2316 = j$$4 - col;
+          var v1541 = JAM.call(functionPattern.get_Renamed, functionPattern, [v2316, i$$15], JAM.policy.p38);
+          var v580 = !v1541;
+          if (v580) {
+            bitsRead = bitsRead + 1;
+            currentByte = currentByte << 1;
+            var v1542 = this.bitMatrix;
+            var v1543 = j$$4 - col;
+            var v577 = JAM.call(v1542.get_Renamed, v1542, [v1543, i$$15], JAM.policy.p38);
+            if (v577) {
+              currentByte = currentByte | 1;
+            }
+            var v579 = bitsRead == 8;
+            if (v579) {
+              var v578 = resultOffset;
+              resultOffset = resultOffset + 1;
+              introspect(JAM.policy.p27) {
+                result$$2[v578] = currentByte;
+              }
+              bitsRead = 0;
+              currentByte = 0;
+            }
+          }
+          col = col + 1;
+          v581 = col < 2;
+        }
+        count$$4 = count$$4 + 1;
+        v582 = count$$4 < dimension$$11;
+      }
+      readingUp = readingUp ^ true;
+      j$$4 = j$$4 - 2;
+      v583 = j$$4 > 0;
+    }
+    var v1544 = version$$6.TotalCodewords;
+    var v584 = resultOffset != v1544;
+    if (v584) {
+      throw "Error readCodewords";
+    }
+    return result$$2;
+  }
+  function v46() {
+    var v1545 = this.parsedVersion;
+    var v585 = v1545 != null;
+    if (v585) {
+      return this.parsedVersion;
+    }
+    var v586 = this.bitMatrix;
+    var dimension$$10 = v586.Dimension;
+    var v587 = dimension$$10 - 17;
+    var provisionalVersion$$1 = v587 >> 2;
+    var v588 = provisionalVersion$$1 <= 6;
+    if (v588) {
+      return JAM.call(Version.getVersionForNumber, Version, [provisionalVersion$$1], JAM.policy.p39);
+    }
+    var versionBits$$2 = 0;
+    var ijMin = dimension$$10 - 11;
+    var j$$3 = 5;
+    var v590 = j$$3 >= 0;
+    for (;v590;) {
+      var i$$14 = dimension$$10 - 9;
+      var v589 = i$$14 >= ijMin;
+      for (;v589;) {
+        versionBits$$2 = JAM.call(this.copyBit, this, [i$$14, j$$3, versionBits$$2], JAM.policy.p38);
+        i$$14 = i$$14 - 1;
+        v589 = i$$14 >= ijMin;
+      }
+      j$$3 = j$$3 - 1;
+      v590 = j$$3 >= 0;
+    }
+    var v2865 = JAM.call(Version.decodeVersionInformation, Version, [versionBits$$2], JAM.policy.p39);
+    this.parsedVersion = v2865;
+    var v2317 = this.parsedVersion;
+    var v1546 = v2317 != null;
+    if (v1546) {
+      var v2597 = this.parsedVersion;
+      var v2318 = v2597.DimensionForVersion;
+      v1546 = v2318 == dimension$$10;
+    }
+    var v591 = v1546;
+    if (v591) {
+      return this.parsedVersion;
+    }
+    versionBits$$2 = 0;
+    i$$14 = 5;
+    var v593 = i$$14 >= 0;
+    for (;v593;) {
+      j$$3 = dimension$$10 - 9;
+      var v592 = j$$3 >= ijMin;
+      for (;v592;) {
+        versionBits$$2 = JAM.call(this.copyBit, this, [i$$14, j$$3, versionBits$$2], JAM.policy.p38);
+        j$$3 = j$$3 - 1;
+        v592 = j$$3 >= ijMin;
+      }
+      i$$14 = i$$14 - 1;
+      v593 = i$$14 >= 0;
+    }
+    var v2866 = JAM.call(Version.decodeVersionInformation, Version, [versionBits$$2], JAM.policy.p39);
+    this.parsedVersion = v2866;
+    var v2319 = this.parsedVersion;
+    var v1547 = v2319 != null;
+    if (v1547) {
+      var v2598 = this.parsedVersion;
+      var v2320 = v2598.DimensionForVersion;
+      v1547 = v2320 == dimension$$10;
+    }
+    var v594 = v1547;
+    if (v594) {
+      return this.parsedVersion;
+    }
+    throw "Error readVersion";
+  }
+  function v45() {
+    var v1548 = this.parsedFormatInfo;
+    var v595 = v1548 != null;
+    if (v595) {
+      return this.parsedFormatInfo;
+    }
+    var formatInfoBits = 0;
+    var i$$13 = 0;
+    var v596 = i$$13 < 6;
+    for (;v596;) {
+      formatInfoBits = JAM.call(this.copyBit, this, [i$$13, 8, formatInfoBits], JAM.policy.p41);
+      i$$13 = i$$13 + 1;
+      v596 = i$$13 < 6;
+    }
+    formatInfoBits = JAM.call(this.copyBit, this, [7, 8, formatInfoBits], JAM.policy.p22);
+    formatInfoBits = JAM.call(this.copyBit, this, [8, 8, formatInfoBits], JAM.policy.p22);
+    formatInfoBits = JAM.call(this.copyBit, this, [8, 7, formatInfoBits], JAM.policy.p22);
+    var j$$2 = 5;
+    var v597 = j$$2 >= 0;
+    for (;v597;) {
+      formatInfoBits = JAM.call(this.copyBit, this, [8, j$$2, formatInfoBits], JAM.policy.p22);
+      j$$2 = j$$2 - 1;
+      v597 = j$$2 >= 0;
+    }
+    var v2867 = JAM.call(FormatInformation.decodeFormatInformation, FormatInformation, [formatInfoBits], JAM.policy.p39);
+    this.parsedFormatInfo = v2867;
+    var v1549 = this.parsedFormatInfo;
+    var v598 = v1549 != null;
+    if (v598) {
+      return this.parsedFormatInfo;
+    }
+    var v599 = this.bitMatrix;
+    var dimension$$9 = v599.Dimension;
+    formatInfoBits = 0;
+    var iMin = dimension$$9 - 8;
+    i$$13 = dimension$$9 - 1;
+    var v600 = i$$13 >= iMin;
+    for (;v600;) {
+      formatInfoBits = JAM.call(this.copyBit, this, [i$$13, 8, formatInfoBits], JAM.policy.p41);
+      i$$13 = i$$13 - 1;
+      v600 = i$$13 >= iMin;
+    }
+    j$$2 = dimension$$9 - 7;
+    var v601 = j$$2 < dimension$$9;
+    for (;v601;) {
+      formatInfoBits = JAM.call(this.copyBit, this, [8, j$$2, formatInfoBits], JAM.policy.p22);
+      j$$2 = j$$2 + 1;
+      v601 = j$$2 < dimension$$9;
+    }
+    var v2868 = JAM.call(FormatInformation.decodeFormatInformation, FormatInformation, [formatInfoBits], JAM.policy.p39);
+    this.parsedFormatInfo = v2868;
+    var v1550 = this.parsedFormatInfo;
+    var v602 = v1550 != null;
+    if (v602) {
+      return this.parsedFormatInfo;
+    }
+    throw "Error readFormatInformation";
+  }
+  function v44(i$$12, j$$1, versionBits$$1) {
+    var v603;
+    var v2321 = this.bitMatrix;
+    var v1552 = JAM.call(v2321.get_Renamed, v2321, [i$$12, j$$1], JAM.policy.p38);
+    if (v1552) {
+      var v1551 = versionBits$$1 << 1;
+      v603 = v1551 | 1;
+    } else {
+      v603 = versionBits$$1 << 1;
+    }
+    return v603;
+  }
+  var dimension$$8 = bitMatrix$$1.Dimension;
+  var v1553 = dimension$$8 < 21;
+  var v2323 = !v1553;
+  if (v2323) {
+    var v2322 = dimension$$8 & 3;
+    v1553 = v2322 != 1;
+  }
+  var v604 = v1553;
+  if (v604) {
+    throw "Error BitMatrixParser";
+  }
+  this.bitMatrix = bitMatrix$$1;
+  this.parsedVersion = null;
+  this.parsedFormatInfo = null;
+  this.copyBit = v44;
+  this.readFormatInformation = v45;
+  this.readVersion = v46;
+  this.readCodewords = v47;
+  return;
+}
+function DataMask000() {
+  function v49(i$$17, j$$6) {
+    var v1554 = i$$17 + j$$6;
+    var v605 = v1554 & 1;
+    return v605 == 0;
+  }
+  function v48(bits$$5, dimension$$12) {
+    var i$$16 = 0;
+    var v608 = i$$16 < dimension$$12;
+    for (;v608;) {
+      var j$$5 = 0;
+      var v607 = j$$5 < dimension$$12;
+      for (;v607;) {
+        var v606 = JAM.call(this.isMasked, this, [i$$16, j$$5], JAM.policy.p38);
+        if (v606) {
+          JAM.call(bits$$5.flip, bits$$5, [j$$5, i$$16], JAM.policy.p38);
+        }
+        j$$5 = j$$5 + 1;
+        v607 = j$$5 < dimension$$12;
+      }
+      i$$16 = i$$16 + 1;
+      v608 = i$$16 < dimension$$12;
+    }
+    return;
+  }
+  this.unmaskBitMatrix = v48;
+  this.isMasked = v49;
+  return;
+}
+function DataMask001() {
+  function v51(i$$19, j$$8) {
+    var v609 = i$$19 & 1;
+    return v609 == 0;
+  }
+  function v50(bits$$6, dimension$$13) {
+    var i$$18 = 0;
+    var v612 = i$$18 < dimension$$13;
+    for (;v612;) {
+      var j$$7 = 0;
+      var v611 = j$$7 < dimension$$13;
+      for (;v611;) {
+        var v610 = JAM.call(this.isMasked, this, [i$$18, j$$7], JAM.policy.p38);
+        if (v610) {
+          JAM.call(bits$$6.flip, bits$$6, [j$$7, i$$18], JAM.policy.p38);
+        }
+        j$$7 = j$$7 + 1;
+        v611 = j$$7 < dimension$$13;
+      }
+      i$$18 = i$$18 + 1;
+      v612 = i$$18 < dimension$$13;
+    }
+    return;
+  }
+  this.unmaskBitMatrix = v50;
+  this.isMasked = v51;
+  return;
+}
+function DataMask010() {
+  function v53(i$$21, j$$10) {
+    var v613 = j$$10 % 3;
+    return v613 == 0;
+  }
+  function v52(bits$$7, dimension$$14) {
+    var i$$20 = 0;
+    var v616 = i$$20 < dimension$$14;
+    for (;v616;) {
+      var j$$9 = 0;
+      var v615 = j$$9 < dimension$$14;
+      for (;v615;) {
+        var v614 = JAM.call(this.isMasked, this, [i$$20, j$$9], JAM.policy.p38);
+        if (v614) {
+          JAM.call(bits$$7.flip, bits$$7, [j$$9, i$$20], JAM.policy.p38);
+        }
+        j$$9 = j$$9 + 1;
+        v615 = j$$9 < dimension$$14;
+      }
+      i$$20 = i$$20 + 1;
+      v616 = i$$20 < dimension$$14;
+    }
+    return;
+  }
+  this.unmaskBitMatrix = v52;
+  this.isMasked = v53;
+  return;
+}
+function DataMask011() {
+  function v55(i$$23, j$$12) {
+    var v1555 = i$$23 + j$$12;
+    var v617 = v1555 % 3;
+    return v617 == 0;
+  }
+  function v54(bits$$8, dimension$$15) {
+    var i$$22 = 0;
+    var v620 = i$$22 < dimension$$15;
+    for (;v620;) {
+      var j$$11 = 0;
+      var v619 = j$$11 < dimension$$15;
+      for (;v619;) {
+        var v618 = JAM.call(this.isMasked, this, [i$$22, j$$11], JAM.policy.p38);
+        if (v618) {
+          JAM.call(bits$$8.flip, bits$$8, [j$$11, i$$22], JAM.policy.p38);
+        }
+        j$$11 = j$$11 + 1;
+        v619 = j$$11 < dimension$$15;
+      }
+      i$$22 = i$$22 + 1;
+      v620 = i$$22 < dimension$$15;
+    }
+    return;
+  }
+  this.unmaskBitMatrix = v54;
+  this.isMasked = v55;
+  return;
+}
+function DataMask100() {
+  function v57(i$$25, j$$14) {
+    var v2324 = JAM.call(URShift, null, [i$$25, 1], JAM.policy.p41);
+    var v2325 = j$$14 / 3;
+    var v1556 = v2324 + v2325;
+    var v621 = v1556 & 1;
+    return v621 == 0;
+  }
+  function v56(bits$$9, dimension$$16) {
+    var i$$24 = 0;
+    var v624 = i$$24 < dimension$$16;
+    for (;v624;) {
+      var j$$13 = 0;
+      var v623 = j$$13 < dimension$$16;
+      for (;v623;) {
+        var v622 = JAM.call(this.isMasked, this, [i$$24, j$$13], JAM.policy.p38);
+        if (v622) {
+          JAM.call(bits$$9.flip, bits$$9, [j$$13, i$$24], JAM.policy.p38);
+        }
+        j$$13 = j$$13 + 1;
+        v623 = j$$13 < dimension$$16;
+      }
+      i$$24 = i$$24 + 1;
+      v624 = i$$24 < dimension$$16;
+    }
+    return;
+  }
+  this.unmaskBitMatrix = v56;
+  this.isMasked = v57;
+  return;
+}
+function DataMask101() {
+  function v59(i$$27, j$$16) {
+    var temp$$1 = i$$27 * j$$16;
+    var v1557 = temp$$1 & 1;
+    var v1558 = temp$$1 % 3;
+    var v625 = v1557 + v1558;
+    return v625 == 0;
+  }
+  function v58(bits$$10, dimension$$17) {
+    var i$$26 = 0;
+    var v628 = i$$26 < dimension$$17;
+    for (;v628;) {
+      var j$$15 = 0;
+      var v627 = j$$15 < dimension$$17;
+      for (;v627;) {
+        var v626 = JAM.call(this.isMasked, this, [i$$26, j$$15], JAM.policy.p38);
+        if (v626) {
+          JAM.call(bits$$10.flip, bits$$10, [j$$15, i$$26], JAM.policy.p38);
+        }
+        j$$15 = j$$15 + 1;
+        v627 = j$$15 < dimension$$17;
+      }
+      i$$26 = i$$26 + 1;
+      v628 = i$$26 < dimension$$17;
+    }
+    return;
+  }
+  this.unmaskBitMatrix = v58;
+  this.isMasked = v59;
+  return;
+}
+function DataMask110() {
+  function v61(i$$29, j$$18) {
+    var temp$$2 = i$$29 * j$$18;
+    var v2326 = temp$$2 & 1;
+    var v2327 = temp$$2 % 3;
+    var v1559 = v2326 + v2327;
+    var v629 = v1559 & 1;
+    return v629 == 0;
+  }
+  function v60(bits$$11, dimension$$18) {
+    var i$$28 = 0;
+    var v632 = i$$28 < dimension$$18;
+    for (;v632;) {
+      var j$$17 = 0;
+      var v631 = j$$17 < dimension$$18;
+      for (;v631;) {
+        var v630 = JAM.call(this.isMasked, this, [i$$28, j$$17], JAM.policy.p38);
+        if (v630) {
+          JAM.call(bits$$11.flip, bits$$11, [j$$17, i$$28], JAM.policy.p38);
+        }
+        j$$17 = j$$17 + 1;
+        v631 = j$$17 < dimension$$18;
+      }
+      i$$28 = i$$28 + 1;
+      v632 = i$$28 < dimension$$18;
+    }
+    return;
+  }
+  this.unmaskBitMatrix = v60;
+  this.isMasked = v61;
+  return;
+}
+function DataMask111() {
+  function v63(i$$31, j$$20) {
+    var v2599 = i$$31 + j$$20;
+    var v2328 = v2599 & 1;
+    var v2600 = i$$31 * j$$20;
+    var v2329 = v2600 % 3;
+    var v1560 = v2328 + v2329;
+    var v633 = v1560 & 1;
+    return v633 == 0;
+  }
+  function v62(bits$$12, dimension$$19) {
+    var i$$30 = 0;
+    var v636 = i$$30 < dimension$$19;
+    for (;v636;) {
+      var j$$19 = 0;
+      var v635 = j$$19 < dimension$$19;
+      for (;v635;) {
+        var v634 = JAM.call(this.isMasked, this, [i$$30, j$$19], JAM.policy.p38);
+        if (v634) {
+          JAM.call(bits$$12.flip, bits$$12, [j$$19, i$$30], JAM.policy.p38);
+        }
+        j$$19 = j$$19 + 1;
+        v635 = j$$19 < dimension$$19;
+      }
+      i$$30 = i$$30 + 1;
+      v636 = i$$30 < dimension$$19;
+    }
+    return;
+  }
+  this.unmaskBitMatrix = v62;
+  this.isMasked = v63;
+  return;
+}
+function ReedSolomonDecoder(field) {
+  function v67(errorEvaluator, errorLocations$$1, dataMatrix$$1) {
+    var s$$3 = errorLocations$$1.length;
+    var result$$4 = JAM.new(Array, [s$$3], JAM.policy.p39);
+    var i$$34 = 0;
+    var v647 = i$$34 < s$$3;
+    for (;v647;) {
+      var v637 = this.field;
+      introspect(JAM.policy.p26) {
+        var v638 = errorLocations$$1[i$$34]
+      }
+      var xiInverse = JAM.call(v637.inverse, v637, [v638], JAM.policy.p39);
+      var denominator$$3 = 1;
+      var j$$21 = 0;
+      var v642 = j$$21 < s$$3;
+      for (;v642;) {
+        var v641 = i$$34 != j$$21;
+        if (v641) {
+          var v639 = this.field;
+          var v2330 = this.field;
+          introspect(JAM.policy.p26) {
+            var v2331 = errorLocations$$1[j$$21]
+          }
+          var v1561 = JAM.call(v2330.multiply, v2330, [v2331, xiInverse], JAM.policy.p38);
+          var v640 = JAM.call(GF256.addOrSubtract, GF256, [1, v1561], JAM.policy.p22);
+          denominator$$3 = JAM.call(v639.multiply, v639, [denominator$$3, v640], JAM.policy.p38);
+        }
+        j$$21 = j$$21 + 1;
+        v642 = j$$21 < s$$3;
+      }
+      var v643 = result$$4;
+      var v644 = i$$34;
+      var v1562 = this.field;
+      var v1563 = JAM.call(errorEvaluator.evaluateAt, errorEvaluator, [xiInverse], JAM.policy.p39);
+      var v2332 = this.field;
+      var v1564 = JAM.call(v2332.inverse, v2332, [denominator$$3], JAM.policy.p39);
+      var v2869 = JAM.call(v1562.multiply, v1562, [v1563, v1564], JAM.policy.p38);
+      introspect(JAM.policy.p27) {
+        v643[v644] = v2869;
+      }
+      if (dataMatrix$$1) {
+        var v645 = result$$4;
+        var v646 = i$$34;
+        var v1565 = this.field;
+        introspect(JAM.policy.p26) {
+          var v1566 = result$$4[i$$34]
+        }
+        var v2870 = JAM.call(v1565.multiply, v1565, [v1566, xiInverse], JAM.policy.p38);
+        introspect(JAM.policy.p27) {
+          v645[v646] = v2870;
+        }
+      }
+      i$$34 = i$$34 + 1;
+      v647 = i$$34 < s$$3;
+    }
+    return result$$4;
+  }
+  function v66(errorLocator) {
+    var numErrors = errorLocator.Degree;
+    var v649 = numErrors == 1;
+    if (v649) {
+      var v648 = JAM.call(errorLocator.getCoefficient, errorLocator, [1], JAM.policy.p25);
+      return JAM.new(Array, [v648], JAM.policy.p39);
+    }
+    var result$$3 = JAM.new(Array, [numErrors], JAM.policy.p39);
+    var e$$4 = 0;
+    var i$$33 = 1;
+    var v1567 = i$$33 < 256;
+    if (v1567) {
+      v1567 = e$$4 < numErrors;
+    }
+    var v653 = v1567;
+    for (;v653;) {
+      var v1568 = JAM.call(errorLocator.evaluateAt, errorLocator, [i$$33], JAM.policy.p39);
+      var v652 = v1568 == 0;
+      if (v652) {
+        var v650 = result$$3;
+        var v651 = e$$4;
+        var v1569 = this.field;
+        var v2871 = JAM.call(v1569.inverse, v1569, [i$$33], JAM.policy.p39);
+        introspect(JAM.policy.p27) {
+          v650[v651] = v2871;
+        }
+        e$$4 = e$$4 + 1;
+      }
+      i$$33 = i$$33 + 1;
+      var v1570 = i$$33 < 256;
+      if (v1570) {
+        v1570 = e$$4 < numErrors;
+      }
+      v653 = v1570;
+    }
+    var v654 = e$$4 != numErrors;
+    if (v654) {
+      throw "Error locator degree does not match number of roots";
+    }
+    return result$$3;
+  }
+  function v65(a$$1, b$$2, R) {
+    var v1571 = a$$1.Degree;
+    var v1572 = b$$2.Degree;
+    var v655 = v1571 < v1572;
+    if (v655) {
+      var temp$$3 = a$$1;
+      a$$1 = b$$2;
+      b$$2 = temp$$3;
+    }
+    var rLast = a$$1;
+    var r$$1 = b$$2;
+    var v656 = this.field;
+    var sLast = v656.One;
+    var v657 = this.field;
+    var s$$2 = v657.Zero;
+    var v658 = this.field;
+    var tLast = v658.Zero;
+    var v659 = this.field;
+    var t = v659.One;
+    var v1573 = r$$1.Degree;
+    var v2333 = R / 2;
+    var v1574 = JAM.call(Math.floor, Math, [v2333], JAM.policy.p39);
+    var v673 = v1573 >= v1574;
+    for (;v673;) {
+      var rLastLast = rLast;
+      var sLastLast = sLast;
+      var tLastLast = tLast;
+      rLast = r$$1;
+      sLast = s$$2;
+      tLast = t;
+      var v660 = rLast.Zero;
+      if (v660) {
+        throw "r_{i-1} was zero";
+      }
+      r$$1 = rLastLast;
+      var v661 = this.field;
+      var q = v661.Zero;
+      var v662 = rLast.Degree;
+      var denominatorLeadingTerm = JAM.call(rLast.getCoefficient, rLast, [v662], JAM.policy.p39);
+      var v663 = this.field;
+      var dltInverse = JAM.call(v663.inverse, v663, [denominatorLeadingTerm], JAM.policy.p39);
+      var v2334 = r$$1.Degree;
+      var v2335 = rLast.Degree;
+      var v1575 = v2334 >= v2335;
+      if (v1575) {
+        var v2336 = r$$1.Zero;
+        v1575 = !v2336;
+      }
+      var v670 = v1575;
+      for (;v670;) {
+        var v664 = r$$1.Degree;
+        var v665 = rLast.Degree;
+        var degreeDiff = v664 - v665;
+        var v666 = this.field;
+        var v1576 = r$$1.Degree;
+        var v667 = JAM.call(r$$1.getCoefficient, r$$1, [v1576], JAM.policy.p39);
+        var scale$$1 = JAM.call(v666.multiply, v666, [v667, dltInverse], JAM.policy.p38);
+        var v1577 = this.field;
+        var v668 = JAM.call(v1577.buildMonomial, v1577, [degreeDiff, scale$$1], JAM.policy.p38);
+        q = JAM.call(q.addOrSubtract, q, [v668], JAM.policy.p39);
+        var v669 = JAM.call(rLast.multiplyByMonomial, rLast, [degreeDiff, scale$$1], JAM.policy.p38);
+        r$$1 = JAM.call(r$$1.addOrSubtract, r$$1, [v669], JAM.policy.p39);
+        var v2337 = r$$1.Degree;
+        var v2338 = rLast.Degree;
+        var v1578 = v2337 >= v2338;
+        if (v1578) {
+          var v2339 = r$$1.Zero;
+          v1578 = !v2339;
+        }
+        v670 = v1578;
+      }
+      var v671 = JAM.call(q.multiply1, q, [sLast], JAM.policy.p39);
+      s$$2 = JAM.call(v671.addOrSubtract, v671, [sLastLast], JAM.policy.p39);
+      var v672 = JAM.call(q.multiply1, q, [tLast], JAM.policy.p39);
+      t = JAM.call(v672.addOrSubtract, v672, [tLastLast], JAM.policy.p39);
+      var v1579 = r$$1.Degree;
+      var v2340 = R / 2;
+      var v1580 = JAM.call(Math.floor, Math, [v2340], JAM.policy.p39);
+      v673 = v1579 >= v1580;
+    }
+    var sigmaTildeAtZero = JAM.call(t.getCoefficient, t, [0], JAM.policy.p25);
+    var v674 = sigmaTildeAtZero == 0;
+    if (v674) {
+      throw "ReedSolomonException sigmaTilde(0) was zero";
+    }
+    var v675 = this.field;
+    var inverse = JAM.call(v675.inverse, v675, [sigmaTildeAtZero], JAM.policy.p39);
+    var sigma$$1 = JAM.call(t.multiply2, t, [inverse], JAM.policy.p39);
+    var omega$$1 = JAM.call(r$$1.multiply2, r$$1, [inverse], JAM.policy.p39);
+    return JAM.new(Array, [sigma$$1, omega$$1], JAM.policy.p38);
+  }
+  function v64(received, twoS) {
+    var v676 = this.field;
+    var poly = JAM.new(GF256Poly, [v676, received], JAM.policy.p38);
+    var syndromeCoefficients = JAM.new(Array, [twoS], JAM.policy.p39);
+    var i$$32 = 0;
+    var v1581 = syndromeCoefficients.length;
+    var v677 = i$$32 < v1581;
+    for (;v677;) {
+      introspect(JAM.policy.p27) {
+        syndromeCoefficients[i$$32] = 0;
+      }
+      i$$32 = i$$32 + 1;
+      var v1582 = syndromeCoefficients.length;
+      v677 = i$$32 < v1582;
+    }
+    var dataMatrix = false;
+    var noError = true;
+    i$$32 = 0;
+    var v681 = i$$32 < twoS;
+    for (;v681;) {
+      var v1583 = this.field;
+      var v2341;
+      if (dataMatrix) {
+        v2341 = i$$32 + 1;
+      } else {
+        v2341 = i$$32;
+      }
+      var v1584 = v2341;
+      var v678 = JAM.call(v1583.exp, v1583, [v1584], JAM.policy.p39);
+      var eval$$1 = JAM.call(poly.evaluateAt, poly, [v678], JAM.policy.p39);
+      var v2342 = syndromeCoefficients.length;
+      var v1585 = v2342 - 1;
+      var v679 = v1585 - i$$32;
+      introspect(JAM.policy.p27) {
+        syndromeCoefficients[v679] = eval$$1;
+      }
+      var v680 = eval$$1 != 0;
+      if (v680) {
+        noError = false;
+      }
+      i$$32 = i$$32 + 1;
+      v681 = i$$32 < twoS;
+    }
+    if (noError) {
+      return;
+    }
+    var v682 = this.field;
+    var syndrome = JAM.new(GF256Poly, [v682, syndromeCoefficients], JAM.policy.p38);
+    var v1586 = this.field;
+    var v683 = JAM.call(v1586.buildMonomial, v1586, [twoS, 1], JAM.policy.p41);
+    var sigmaOmega = JAM.call(this.runEuclideanAlgorithm, this, [v683, syndrome, twoS], JAM.policy.p38);
+    introspect(JAM.policy.p26) {
+      var sigma = sigmaOmega[0]
+    }
+    introspect(JAM.policy.p26) {
+      var omega = sigmaOmega[1]
+    }
+    var errorLocations = JAM.call(this.findErrorLocations, this, [sigma], JAM.policy.p39);
+    var errorMagnitudes = JAM.call(this.findErrorMagnitudes, this, [omega, errorLocations, dataMatrix], JAM.policy.p38);
+    i$$32 = 0;
+    var v1587 = errorLocations.length;
+    var v689 = i$$32 < v1587;
+    for (;v689;) {
+      var v1588 = received.length;
+      var v684 = v1588 - 1;
+      var v1589 = this.field;
+      introspect(JAM.policy.p26) {
+        var v1590 = errorLocations[i$$32]
+      }
+      var v685 = JAM.call(v1589.log, v1589, [v1590], JAM.policy.p39);
+      var position = v684 - v685;
+      var v686 = position < 0;
+      if (v686) {
+        throw "ReedSolomonException Bad error location";
+      }
+      var v687 = received;
+      var v688 = position;
+      introspect(JAM.policy.p26) {
+        var v1591 = received[position]
+      }
+      introspect(JAM.policy.p26) {
+        var v1592 = errorMagnitudes[i$$32]
+      }
+      var v2872 = JAM.call(GF256.addOrSubtract, GF256, [v1591, v1592], JAM.policy.p38);
+      introspect(JAM.policy.p27) {
+        v687[v688] = v2872;
+      }
+      i$$32 = i$$32 + 1;
+      var v1593 = errorLocations.length;
+      v689 = i$$32 < v1593;
+    }
+    return;
+  }
+  this.field = field;
+  this.decode = v64;
+  this.runEuclideanAlgorithm = v65;
+  this.findErrorLocations = v66;
+  this.findErrorMagnitudes = v67;
+  return;
+}
+function GF256Poly(field$$1, coefficients) {
+  function v77(other$$8) {
+    var v1594 = this.field;
+    var v1595 = other$$8.field;
+    var v690 = v1594 != v1595;
+    if (v690) {
+      throw "GF256Polys do not have same GF256 field";
+    }
+    var v691 = other$$8.Zero;
+    if (v691) {
+      throw "Divide by 0";
+    }
+    var v692 = this.field;
+    var quotient = v692.Zero;
+    var remainder = this;
+    var v693 = other$$8.Degree;
+    var denominatorLeadingTerm$$1 = JAM.call(other$$8.getCoefficient, other$$8, [v693], JAM.policy.p39);
+    var v694 = this.field;
+    var inverseDenominatorLeadingTerm = JAM.call(v694.inverse, v694, [denominatorLeadingTerm$$1], JAM.policy.p39);
+    var v2343 = remainder.Degree;
+    var v2344 = other$$8.Degree;
+    var v1596 = v2343 >= v2344;
+    if (v1596) {
+      var v2345 = remainder.Zero;
+      v1596 = !v2345;
+    }
+    var v700 = v1596;
+    for (;v700;) {
+      var v695 = remainder.Degree;
+      var v696 = other$$8.Degree;
+      var degreeDifference = v695 - v696;
+      var v697 = this.field;
+      var v1597 = remainder.Degree;
+      var v698 = JAM.call(remainder.getCoefficient, remainder, [v1597], JAM.policy.p39);
+      var scale$$2 = JAM.call(v697.multiply, v697, [v698, inverseDenominatorLeadingTerm], JAM.policy.p38);
+      var term = JAM.call(other$$8.multiplyByMonomial, other$$8, [degreeDifference, scale$$2], JAM.policy.p38);
+      var v699 = this.field;
+      var iterationQuotient = JAM.call(v699.buildMonomial, v699, [degreeDifference, scale$$2], JAM.policy.p38);
+      quotient = JAM.call(quotient.addOrSubtract, quotient, [iterationQuotient], JAM.policy.p39);
+      remainder = JAM.call(remainder.addOrSubtract, remainder, [term], JAM.policy.p39);
+      var v2346 = remainder.Degree;
+      var v2347 = other$$8.Degree;
+      var v1598 = v2346 >= v2347;
+      if (v1598) {
+        var v2348 = remainder.Zero;
+        v1598 = !v2348;
+      }
+      v700 = v1598;
+    }
+    return JAM.new(Array, [quotient, remainder], JAM.policy.p38);
+  }
+  function v76(degree$$1, coefficient) {
+    var v701 = degree$$1 < 0;
+    if (v701) {
+      throw "System.ArgumentException";
+    }
+    var v703 = coefficient == 0;
+    if (v703) {
+      var v702 = this.field;
+      return v702.Zero;
+    }
+    var v704 = this.coefficients;
+    var size$$6 = v704.length;
+    var v705 = size$$6 + degree$$1;
+    var product$$2 = JAM.new(Array, [v705], JAM.policy.p39);
+    var i$$40 = 0;
+    var v1599 = product$$2.length;
+    var v706 = i$$40 < v1599;
+    for (;v706;) {
+      introspect(JAM.policy.p27) {
+        product$$2[i$$40] = 0;
+      }
+      i$$40 = i$$40 + 1;
+      var v1600 = product$$2.length;
+      v706 = i$$40 < v1600;
+    }
+    i$$40 = 0;
+    var v709 = i$$40 < size$$6;
+    for (;v709;) {
+      var v707 = product$$2;
+      var v708 = i$$40;
+      var v1601 = this.field;
+      var v2349 = this.coefficients;
+      introspect(JAM.policy.p26) {
+        var v1602 = v2349[i$$40]
+      }
+      var v2873 = JAM.call(v1601.multiply, v1601, [v1602, coefficient], JAM.policy.p38);
+      introspect(JAM.policy.p27) {
+        v707[v708] = v2873;
+      }
+      i$$40 = i$$40 + 1;
+      v709 = i$$40 < size$$6;
+    }
+    var v710 = this.field;
+    return JAM.new(GF256Poly, [v710, product$$2], JAM.policy.p38);
+  }
+  function v75(scalar) {
+    var v712 = scalar == 0;
+    if (v712) {
+      var v711 = this.field;
+      return v711.Zero;
+    }
+    var v713 = scalar == 1;
+    if (v713) {
+      return this;
+    }
+    var v714 = this.coefficients;
+    var size$$5 = v714.length;
+    var product$$1 = JAM.new(Array, [size$$5], JAM.policy.p39);
+    var i$$39 = 0;
+    var v717 = i$$39 < size$$5;
+    for (;v717;) {
+      var v715 = product$$1;
+      var v716 = i$$39;
+      var v1603 = this.field;
+      var v2350 = this.coefficients;
+      introspect(JAM.policy.p26) {
+        var v1604 = v2350[i$$39]
+      }
+      var v2874 = JAM.call(v1603.multiply, v1603, [v1604, scalar], JAM.policy.p38);
+      introspect(JAM.policy.p27) {
+        v715[v716] = v2874;
+      }
+      i$$39 = i$$39 + 1;
+      v717 = i$$39 < size$$5;
+    }
+    var v718 = this.field;
+    return JAM.new(GF256Poly, [v718, product$$1], JAM.policy.p38);
+  }
+  function v74(other$$7) {
+    var v1605 = this.field;
+    var v1606 = other$$7.field;
+    var v719 = v1605 != v1606;
+    if (v719) {
+      throw "GF256Polys do not have same GF256 field";
+    }
+    var v1607 = this.Zero;
+    var v2351 = !v1607;
+    if (v2351) {
+      v1607 = other$$7.Zero;
+    }
+    var v721 = v1607;
+    if (v721) {
+      var v720 = this.field;
+      return v720.Zero;
+    }
+    var aCoefficients = this.coefficients;
+    var aLength = aCoefficients.length;
+    var bCoefficients = other$$7.coefficients;
+    var bLength = bCoefficients.length;
+    var v1608 = aLength + bLength;
+    var v722 = v1608 - 1;
+    var product = JAM.new(Array, [v722], JAM.policy.p39);
+    var i$$38 = 0;
+    var v726 = i$$38 < aLength;
+    for (;v726;) {
+      introspect(JAM.policy.p26) {
+        var aCoeff = aCoefficients[i$$38]
+      }
+      var j$$22 = 0;
+      var v725 = j$$22 < bLength;
+      for (;v725;) {
+        var v723 = product;
+        var v724 = i$$38 + j$$22;
+        var v2352 = i$$38 + j$$22;
+        introspect(JAM.policy.p26) {
+          var v1609 = product[v2352]
+        }
+        var v2353 = this.field;
+        introspect(JAM.policy.p26) {
+          var v2354 = bCoefficients[j$$22]
+        }
+        var v1610 = JAM.call(v2353.multiply, v2353, [aCoeff, v2354], JAM.policy.p38);
+        var v2875 = JAM.call(GF256.addOrSubtract, GF256, [v1609, v1610], JAM.policy.p38);
+        introspect(JAM.policy.p27) {
+          v723[v724] = v2875;
+        }
+        j$$22 = j$$22 + 1;
+        v725 = j$$22 < bLength;
+      }
+      i$$38 = i$$38 + 1;
+      v726 = i$$38 < aLength;
+    }
+    var v727 = this.field;
+    return JAM.new(GF256Poly, [v727, product], JAM.policy.p38);
+  }
+  function v73(other$$6) {
+    var v1611 = this.field;
+    var v1612 = other$$6.field;
+    var v728 = v1611 != v1612;
+    if (v728) {
+      throw "GF256Polys do not have same GF256 field";
+    }
+    var v729 = this.Zero;
+    if (v729) {
+      return other$$6;
+    }
+    var v730 = other$$6.Zero;
+    if (v730) {
+      return this;
+    }
+    var smallerCoefficients = this.coefficients;
+    var largerCoefficients = other$$6.coefficients;
+    var v1613 = smallerCoefficients.length;
+    var v1614 = largerCoefficients.length;
+    var v731 = v1613 > v1614;
+    if (v731) {
+      var temp$$4 = smallerCoefficients;
+      smallerCoefficients = largerCoefficients;
+      largerCoefficients = temp$$4;
+    }
+    var v732 = largerCoefficients.length;
+    var sumDiff = JAM.new(Array, [v732], JAM.policy.p39);
+    var v733 = largerCoefficients.length;
+    var v734 = smallerCoefficients.length;
+    var lengthDiff = v733 - v734;
+    var ci$$1 = 0;
+    var v735 = ci$$1 < lengthDiff;
+    for (;v735;) {
+      introspect(JAM.policy.p27) {
+        sumDiff[ci$$1] = largerCoefficients[ci$$1];
+      }
+      ci$$1 = ci$$1 + 1;
+      v735 = ci$$1 < lengthDiff;
+    }
+    var i$$37 = lengthDiff;
+    var v1615 = largerCoefficients.length;
+    var v738 = i$$37 < v1615;
+    for (;v738;) {
+      var v736 = sumDiff;
+      var v737 = i$$37;
+      var v2355 = i$$37 - lengthDiff;
+      introspect(JAM.policy.p26) {
+        var v1616 = smallerCoefficients[v2355]
+      }
+      introspect(JAM.policy.p26) {
+        var v1617 = largerCoefficients[i$$37]
+      }
+      var v2876 = JAM.call(GF256.addOrSubtract, GF256, [v1616, v1617], JAM.policy.p38);
+      introspect(JAM.policy.p27) {
+        v736[v737] = v2876;
+      }
+      i$$37 = i$$37 + 1;
+      var v1618 = largerCoefficients.length;
+      v738 = i$$37 < v1618;
+    }
+    return JAM.new(GF256Poly, [field$$1, sumDiff], JAM.policy.p38);
+  }
+  function v72(a$$2) {
+    var v739 = a$$2 == 0;
+    if (v739) {
+      return JAM.call(this.getCoefficient, this, [0], JAM.policy.p25);
+    }
+    var v740 = this.coefficients;
+    var size$$4 = v740.length;
+    var v743 = a$$2 == 1;
+    if (v743) {
+      var result$$5 = 0;
+      var i$$36 = 0;
+      var v742 = i$$36 < size$$4;
+      for (;v742;) {
+        var v1619 = this.coefficients;
+        introspect(JAM.policy.p26) {
+          var v741 = v1619[i$$36]
+        }
+        result$$5 = JAM.call(GF256.addOrSubtract, GF256, [result$$5, v741], JAM.policy.p38);
+        i$$36 = i$$36 + 1;
+        v742 = i$$36 < size$$4;
+      }
+      return result$$5;
+    }
+    var v744 = this.coefficients;
+    introspect(JAM.policy.p26) {
+      var result2 = v744[0]
+    }
+    i$$36 = 1;
+    var v747 = i$$36 < size$$4;
+    for (;v747;) {
+      var v1620 = this.field;
+      var v745 = JAM.call(v1620.multiply, v1620, [a$$2, result2], JAM.policy.p38);
+      var v1621 = this.coefficients;
+      introspect(JAM.policy.p26) {
+        var v746 = v1621[i$$36]
+      }
+      result2 = JAM.call(GF256.addOrSubtract, GF256, [v745, v746], JAM.policy.p38);
+      i$$36 = i$$36 + 1;
+      v747 = i$$36 < size$$4;
+    }
+    return result2;
+  }
+  function v71(degree) {
+    var v748 = this.coefficients;
+    var v2601 = this.coefficients;
+    var v2356 = v2601.length;
+    var v1622 = v2356 - 1;
+    var v749 = v1622 - degree;
+    introspect(JAM.policy.p26) {
+      return v748[v749];
+    }
+  }
+  function v70() {
+    return this.coefficients;
+  }
+  function v69() {
+    var v1623 = this.coefficients;
+    var v750 = v1623.length;
+    return v750 - 1;
+  }
+  function v68() {
+    var v1624 = this.coefficients;
+    introspect(JAM.policy.p26) {
+      var v751 = v1624[0]
+    }
+    return v751 == 0;
+  }
+  var v1625 = coefficients == null;
+  var v2358 = !v1625;
+  if (v2358) {
+    var v2357 = coefficients.length;
+    v1625 = v2357 == 0;
+  }
+  var v752 = v1625;
+  if (v752) {
+    throw "System.ArgumentException";
+  }
+  this.field = field$$1;
+  var coefficientsLength = coefficients.length;
+  var v1626 = coefficientsLength > 1;
+  if (v1626) {
+    introspect(JAM.policy.p26) {
+      var v2359 = coefficients[0]
+    }
+    v1626 = v2359 == 0;
+  }
+  var v761 = v1626;
+  if (v761) {
+    var firstNonZero = 1;
+    var v1627 = firstNonZero < coefficientsLength;
+    if (v1627) {
+      introspect(JAM.policy.p26) {
+        var v2360 = coefficients[firstNonZero]
+      }
+      v1627 = v2360 == 0;
+    }
+    var v753 = v1627;
+    for (;v753;) {
+      firstNonZero = firstNonZero + 1;
+      var v1628 = firstNonZero < coefficientsLength;
+      if (v1628) {
+        introspect(JAM.policy.p26) {
+          var v2361 = coefficients[firstNonZero]
+        }
+        v1628 = v2361 == 0;
+      }
+      v753 = v1628;
+    }
+    var v760 = firstNonZero == coefficientsLength;
+    if (v760) {
+      var v754 = field$$1.Zero;
+      this.coefficients = v754.coefficients;
+    } else {
+      var v755 = coefficientsLength - firstNonZero;
+      var v2877 = JAM.new(Array, [v755], JAM.policy.p39);
+      this.coefficients = v2877;
+      var i$$35 = 0;
+      var v2362 = this.coefficients;
+      var v1629 = v2362.length;
+      var v757 = i$$35 < v1629;
+      for (;v757;) {
+        var v756 = this.coefficients;
+        introspect(JAM.policy.p27) {
+          v756[i$$35] = 0;
+        }
+        i$$35 = i$$35 + 1;
+        var v2363 = this.coefficients;
+        var v1630 = v2363.length;
+        v757 = i$$35 < v1630;
+      }
+      var ci = 0;
+      var v2364 = this.coefficients;
+      var v1631 = v2364.length;
+      var v759 = ci < v1631;
+      for (;v759;) {
+        var v758 = this.coefficients;
+        var v1632 = firstNonZero + ci;
+        introspect(JAM.policy.p27) {
+          v758[ci] = coefficients[v1632];
+        }
+        ci = ci + 1;
+        var v2365 = this.coefficients;
+        var v1633 = v2365.length;
+        v759 = ci < v1633;
+      }
+    }
+  } else {
+    this.coefficients = coefficients;
+  }
+  JAM.call(this.__defineGetter__, this, ["Zero", v68], JAM.policy.p23);
+  JAM.call(this.__defineGetter__, this, ["Degree", v69], JAM.policy.p23);
+  JAM.call(this.__defineGetter__, this, ["Coefficients", v70], JAM.policy.p23);
+  this.getCoefficient = v71;
+  this.evaluateAt = v72;
+  this.addOrSubtract = v73;
+  this.multiply1 = v74;
+  this.multiply2 = v75;
+  this.multiplyByMonomial = v76;
+  this.divide = v77;
+  return;
+}
+function GF256(primitive) {
+  function v84(a$$6, b$$3) {
+    var v1634 = a$$6 == 0;
+    var v2366 = !v1634;
+    if (v2366) {
+      v1634 = b$$3 == 0;
+    }
+    var v762 = v1634;
+    if (v762) {
+      return 0;
+    }
+    var v763 = a$$6 == 1;
+    if (v763) {
+      return b$$3;
+    }
+    var v764 = b$$3 == 1;
+    if (v764) {
+      return a$$6;
+    }
+    var v765 = this.expTable;
+    var v2602 = this.logTable;
+    introspect(JAM.policy.p26) {
+      var v2367 = v2602[a$$6]
+    }
+    var v2603 = this.logTable;
+    introspect(JAM.policy.p26) {
+      var v2368 = v2603[b$$3]
+    }
+    var v1635 = v2367 + v2368;
+    var v766 = v1635 % 255;
+    introspect(JAM.policy.p26) {
+      return v765[v766];
+    }
+  }
+  function v83(a$$5) {
+    var v767 = a$$5 == 0;
+    if (v767) {
+      throw "System.ArithmeticException";
+    }
+    var v768 = this.expTable;
+    var v2369 = this.logTable;
+    introspect(JAM.policy.p26) {
+      var v1636 = v2369[a$$5]
+    }
+    var v769 = 255 - v1636;
+    introspect(JAM.policy.p26) {
+      return v768[v769];
+    }
+  }
+  function v82(a$$4) {
+    var v770 = a$$4 == 0;
+    if (v770) {
+      throw "System.ArgumentException";
+    }
+    var v771 = this.logTable;
+    introspect(JAM.policy.p26) {
+      return v771[a$$4];
+    }
+  }
+  function v81(a$$3) {
+    var v772 = this.expTable;
+    introspect(JAM.policy.p26) {
+      return v772[a$$3];
+    }
+  }
+  function v80(degree$$2, coefficient$$1) {
+    var v773 = degree$$2 < 0;
+    if (v773) {
+      throw "System.ArgumentException";
+    }
+    var v774 = coefficient$$1 == 0;
+    if (v774) {
+      return zero;
+    }
+    var v775 = degree$$2 + 1;
+    var coefficients$$1 = JAM.new(Array, [v775], JAM.policy.p39);
+    var i$$42 = 0;
+    var v1637 = coefficients$$1.length;
+    var v776 = i$$42 < v1637;
+    for (;v776;) {
+      introspect(JAM.policy.p27) {
+        coefficients$$1[i$$42] = 0;
+      }
+      i$$42 = i$$42 + 1;
+      var v1638 = coefficients$$1.length;
+      v776 = i$$42 < v1638;
+    }
+    introspect(JAM.policy.p27) {
+      coefficients$$1[0] = coefficient$$1;
+    }
+    return JAM.new(GF256Poly, [this, coefficients$$1], JAM.policy.p38);
+  }
+  function v79() {
+    return this.one;
+  }
+  function v78() {
+    return this.zero;
+  }
+  var v2878 = JAM.new(Array, [256], JAM.policy.p25);
+  this.expTable = v2878;
+  var v2879 = JAM.new(Array, [256], JAM.policy.p25);
+  this.logTable = v2879;
+  var x$$57 = 1;
+  var i$$41 = 0;
+  var v779 = i$$41 < 256;
+  for (;v779;) {
+    var v777 = this.expTable;
+    introspect(JAM.policy.p27) {
+      v777[i$$41] = x$$57;
+    }
+    x$$57 = x$$57 << 1;
+    var v778 = x$$57 >= 256;
+    if (v778) {
+      x$$57 = x$$57 ^ primitive;
+    }
+    i$$41 = i$$41 + 1;
+    v779 = i$$41 < 256;
+  }
+  i$$41 = 0;
+  var v782 = i$$41 < 255;
+  for (;v782;) {
+    var v780 = this.logTable;
+    var v1639 = this.expTable;
+    introspect(JAM.policy.p26) {
+      var v781 = v1639[i$$41]
+    }
+    JAM.set(v780, v781, i$$41, JAM.policy.p27);
+    i$$41 = i$$41 + 1;
+    v782 = i$$41 < 255;
+  }
+  var at0 = JAM.new(Array, [1], JAM.policy.p25);
+  introspect(JAM.policy.p27) {
+    at0[0] = 0;
+  }
+  var v783 = JAM.new(Array, [at0], JAM.policy.p39);
+  var v2880 = JAM.new(GF256Poly, [this, v783], JAM.policy.p38);
+  this.zero = v2880;
+  var at1 = JAM.new(Array, [1], JAM.policy.p25);
+  introspect(JAM.policy.p27) {
+    at1[0] = 1;
+  }
+  var v784 = JAM.new(Array, [at1], JAM.policy.p39);
+  var v2881 = JAM.new(GF256Poly, [this, v784], JAM.policy.p38);
+  this.one = v2881;
+  JAM.call(this.__defineGetter__, this, ["Zero", v78], JAM.policy.p23);
+  JAM.call(this.__defineGetter__, this, ["One", v79], JAM.policy.p23);
+  this.buildMonomial = v80;
+  this.exp = v81;
+  this.log = v82;
+  this.inverse = v83;
+  this.multiply = v84;
+  return;
+}
+function URShift(number, bits$$14) {
+  var v787 = number >= 0;
+  if (v787) {
+    return number >> bits$$14;
+  } else {
+    var v785 = number >> bits$$14;
+    var v1640 = ~bits$$14;
+    var v786 = 2 << v1640;
+    return v785 + v786;
+  }
+  return;
+}
+function FinderPattern(posX, posY, estimatedModuleSize) {
+  function v90(moduleSize$$2, i$$47, j$$25) {
+    var v2715 = this.y;
+    var v2604 = i$$47 - v2715;
+    var v2370 = JAM.call(Math.abs, Math, [v2604], JAM.policy.p39);
+    var v1641 = v2370 <= moduleSize$$2;
+    if (v1641) {
+      var v2716 = this.x;
+      var v2605 = j$$25 - v2716;
+      var v2371 = JAM.call(Math.abs, Math, [v2605], JAM.policy.p39);
+      v1641 = v2371 <= moduleSize$$2;
+    }
+    var v790 = v1641;
+    if (v790) {
+      var v1642 = this.estimatedModuleSize;
+      var v788 = moduleSize$$2 - v1642;
+      var moduleSizeDiff = JAM.call(Math.abs, Math, [v788], JAM.policy.p39);
+      var v789 = moduleSizeDiff <= 1;
+      var v1644 = !v789;
+      if (v1644) {
+        var v2372 = this.estimatedModuleSize;
+        var v1643 = moduleSizeDiff / v2372;
+        v789 = v1643 <= 1;
+      }
+      return v789;
+    }
+    return false;
+  }
+  function v89() {
+    var v1645 = this.count;
+    this.count = v1645 + 1;
+    return;
+  }
+  function v88() {
+    return this.y;
+  }
+  function v87() {
+    return this.x;
+  }
+  function v86() {
+    return this.count;
+  }
+  function v85() {
+    return this.estimatedModuleSize;
+  }
+  this.x = posX;
+  this.y = posY;
+  this.count = 1;
+  this.estimatedModuleSize = estimatedModuleSize;
+  JAM.call(this.__defineGetter__, this, ["EstimatedModuleSize", v85], JAM.policy.p23);
+  JAM.call(this.__defineGetter__, this, ["Count", v86], JAM.policy.p23);
+  JAM.call(this.__defineGetter__, this, ["X", v87], JAM.policy.p23);
+  JAM.call(this.__defineGetter__, this, ["Y", v88], JAM.policy.p23);
+  this.incrementCount = v89;
+  this.aboutEquals = v90;
+  return;
+}
+function FinderPatternInfo(patternCenters) {
+  function v93() {
+    return this.topRight;
+  }
+  function v92() {
+    return this.topLeft;
+  }
+  function v91() {
+    return this.bottomLeft;
+  }
+  introspect(JAM.policy.p26) {
+    this.bottomLeft = patternCenters[0];
+  }
+  introspect(JAM.policy.p26) {
+    this.topLeft = patternCenters[1];
+  }
+  introspect(JAM.policy.p26) {
+    this.topRight = patternCenters[2];
+  }
+  JAM.call(this.__defineGetter__, this, ["BottomLeft", v91], JAM.policy.p23);
+  JAM.call(this.__defineGetter__, this, ["TopLeft", v92], JAM.policy.p23);
+  JAM.call(this.__defineGetter__, this, ["TopRight", v93], JAM.policy.p23);
+  return;
+}
+function FinderPatternFinder() {
+  function v104(image$$12) {
+    var tryHarder = false;
+    this.image = image$$12;
+    var maxI$$1 = qrcode.height;
+    var maxJ$$1 = qrcode.width;
+    var v1646 = 3 * maxI$$1;
+    var v1647 = 4 * MAX_MODULES;
+    var v791 = v1646 / v1647;
+    var iSkip = JAM.call(Math.floor, Math, [v791], JAM.policy.p39);
+    var v1648 = iSkip < MIN_SKIP;
+    var v2373 = !v1648;
+    if (v2373) {
+      v1648 = tryHarder;
+    }
+    var v792 = v1648;
+    if (v792) {
+      iSkip = MIN_SKIP;
+    }
+    var done = false;
+    var stateCount$$5 = JAM.new(Array, [5], JAM.policy.p25);
+    var i$$54 = iSkip - 1;
+    var v1649 = i$$54 < maxI$$1;
+    if (v1649) {
+      v1649 = !done;
+    }
+    var v804 = v1649;
+    for (;v804;) {
+      introspect(JAM.policy.p27) {
+        stateCount$$5[0] = 0;
+      }
+      introspect(JAM.policy.p27) {
+        stateCount$$5[1] = 0;
+      }
+      introspect(JAM.policy.p27) {
+        stateCount$$5[2] = 0;
+      }
+      introspect(JAM.policy.p27) {
+        stateCount$$5[3] = 0;
+      }
+      introspect(JAM.policy.p27) {
+        stateCount$$5[4] = 0;
+      }
+      var currentState = 0;
+      var j$$28 = 0;
+      var v801 = j$$28 < maxJ$$1;
+      for (;v801;) {
+        var v2606 = qrcode.width;
+        var v2374 = i$$54 * v2606;
+        var v1650 = j$$28 + v2374;
+        introspect(JAM.policy.p26) {
+          var v800 = image$$12[v1650]
+        }
+        if (v800) {
+          var v1651 = currentState & 1;
+          var v793 = v1651 == 1;
+          if (v793) {
+            currentState = currentState + 1;
+          }
+          introspect(JAM.policy.p26) {
+            var v1652 = stateCount$$5[currentState]
+          }
+          introspect(JAM.policy.p27) {
+            stateCount$$5[currentState] = v1652 + 1;
+          }
+        } else {
+          var v1653 = currentState & 1;
+          var v799 = v1653 == 0;
+          if (v799) {
+            var v798 = currentState == 4;
+            if (v798) {
+              var v797 = JAM.call(this.foundPatternCross, this, [stateCount$$5], JAM.policy.p39);
+              if (v797) {
+                var confirmed = JAM.call(this.handlePossibleCenter, this, [stateCount$$5, i$$54, j$$28], JAM.policy.p38);
+                if (confirmed) {
+                  iSkip = 2;
+                  var v795 = this.hasSkipped;
+                  if (v795) {
+                    done = JAM.call(this.haveMultiplyConfirmedCenters, this, [], JAM.policy.p40);
+                  } else {
+                    var rowSkip = JAM.call(this.findRowSkip, this, [], JAM.policy.p40);
+                    introspect(JAM.policy.p26) {
+                      var v1654 = stateCount$$5[2]
+                    }
+                    var v794 = rowSkip > v1654;
+                    if (v794) {
+                      introspect(JAM.policy.p26) {
+                        var v2607 = stateCount$$5[2]
+                      }
+                      var v2375 = rowSkip - v2607;
+                      var v1655 = v2375 - iSkip;
+                      i$$54 = i$$54 + v1655;
+                      j$$28 = maxJ$$1 - 1;
+                    }
+                  }
+                } else {
+                  var v1656 = j$$28 < maxJ$$1;
+                  if (v1656) {
+                    var v2785 = qrcode.width;
+                    var v2717 = i$$54 * v2785;
+                    var v2608 = j$$28 + v2717;
+                    introspect(JAM.policy.p26) {
+                      var v2376 = image$$12[v2608]
+                    }
+                    v1656 = !v2376;
+                  }
+                  var v796 = v1656;
+                  do {
+                    j$$28 = j$$28 + 1;
+                    var v1657 = j$$28 < maxJ$$1;
+                    if (v1657) {
+                      var v2786 = qrcode.width;
+                      var v2718 = i$$54 * v2786;
+                      var v2609 = j$$28 + v2718;
+                      introspect(JAM.policy.p26) {
+                        var v2377 = image$$12[v2609]
+                      }
+                      v1657 = !v2377;
+                    }
+                    v796 = v1657;
+                  } while (v796);
+                  j$$28 = j$$28 - 1;
+                }
+                currentState = 0;
+                introspect(JAM.policy.p27) {
+                  stateCount$$5[0] = 0;
+                }
+                introspect(JAM.policy.p27) {
+                  stateCount$$5[1] = 0;
+                }
+                introspect(JAM.policy.p27) {
+                  stateCount$$5[2] = 0;
+                }
+                introspect(JAM.policy.p27) {
+                  stateCount$$5[3] = 0;
+                }
+                introspect(JAM.policy.p27) {
+                  stateCount$$5[4] = 0;
+                }
+              } else {
+                introspect(JAM.policy.p27) {
+                  stateCount$$5[0] = stateCount$$5[2];
+                }
+                introspect(JAM.policy.p27) {
+                  stateCount$$5[1] = stateCount$$5[3];
+                }
+                introspect(JAM.policy.p27) {
+                  stateCount$$5[2] = stateCount$$5[4];
+                }
+                introspect(JAM.policy.p27) {
+                  stateCount$$5[3] = 1;
+                }
+                introspect(JAM.policy.p27) {
+                  stateCount$$5[4] = 0;
+                }
+                currentState = 3;
+              }
+            } else {
+              var v1658 = currentState = currentState + 1;
+              var v2610 = currentState = currentState + 1;
+              introspect(JAM.policy.p26) {
+                var v2378 = stateCount$$5[v2610]
+              }
+              introspect(JAM.policy.p27) {
+                stateCount$$5[v1658] = v2378 + 1;
+              }
+            }
+          } else {
+            introspect(JAM.policy.p26) {
+              var v1659 = stateCount$$5[currentState]
+            }
+            introspect(JAM.policy.p27) {
+              stateCount$$5[currentState] = v1659 + 1;
+            }
+          }
+        }
+        j$$28 = j$$28 + 1;
+        v801 = j$$28 < maxJ$$1;
+      }
+      var v803 = JAM.call(this.foundPatternCross, this, [stateCount$$5], JAM.policy.p39);
+      if (v803) {
+        confirmed = JAM.call(this.handlePossibleCenter, this, [stateCount$$5, i$$54, maxJ$$1], JAM.policy.p38);
+        if (confirmed) {
+          introspect(JAM.policy.p26) {
+            iSkip = stateCount$$5[0];
+          }
+          var v802 = this.hasSkipped;
+          if (v802) {
+            done = JAM.call(haveMultiplyConfirmedCenters, null, [], JAM.policy.p40);
+          }
+        }
+      }
+      i$$54 = i$$54 + iSkip;
+      var v1660 = i$$54 < maxI$$1;
+      if (v1660) {
+        v1660 = !done;
+      }
+      v804 = v1660;
+    }
+    var patternInfo = JAM.call(this.selectBestPatterns, this, [], JAM.policy.p40);
+    JAM.call(qrcode.orderBestPatterns, qrcode, [patternInfo], JAM.policy.p39);
+    return JAM.new(FinderPatternInfo, [patternInfo], JAM.policy.p39);
+  }
+  function v103() {
+    var confirmedCount = 0;
+    var totalModuleSize$$2 = 0;
+    var v805 = this.possibleCenters;
+    var max$$7 = v805.length;
+    var i$$53 = 0;
+    var v808 = i$$53 < max$$7;
+    for (;v808;) {
+      var v806 = this.possibleCenters;
+      introspect(JAM.policy.p26) {
+        var pattern$$3 = v806[i$$53]
+      }
+      var v1661 = pattern$$3.Count;
+      var v807 = v1661 >= CENTER_QUORUM;
+      if (v807) {
+        confirmedCount = confirmedCount + 1;
+        var v1662 = pattern$$3.EstimatedModuleSize;
+        totalModuleSize$$2 = totalModuleSize$$2 + v1662;
+      }
+      i$$53 = i$$53 + 1;
+      v808 = i$$53 < max$$7;
+    }
+    var v809 = confirmedCount < 3;
+    if (v809) {
+      return false;
+    }
+    var average$$1 = totalModuleSize$$2 / max$$7;
+    var totalDeviation = 0;
+    i$$53 = 0;
+    var v811 = i$$53 < max$$7;
+    for (;v811;) {
+      var v810 = this.possibleCenters;
+      introspect(JAM.policy.p26) {
+        pattern$$3 = v810[i$$53];
+      }
+      var v1663 = totalDeviation;
+      var v2611 = pattern$$3.EstimatedModuleSize;
+      var v2379 = v2611 - average$$1;
+      var v1664 = JAM.call(Math.abs, Math, [v2379], JAM.policy.p39);
+      totalDeviation = v1663 + v1664;
+      i$$53 = i$$53 + 1;
+      v811 = i$$53 < max$$7;
+    }
+    var v812 = .05 * totalModuleSize$$2;
+    return totalDeviation <= v812;
+  }
+  function v102() {
+    var v813 = this.possibleCenters;
+    var max$$6 = v813.length;
+    var v814 = max$$6 <= 1;
+    if (v814) {
+      return 0;
+    }
+    var firstConfirmedCenter = null;
+    var i$$52 = 0;
+    var v819 = i$$52 < max$$6;
+    for (;v819;) {
+      var v815 = this.possibleCenters;
+      introspect(JAM.policy.p26) {
+        var center$$1 = v815[i$$52]
+      }
+      var v1665 = center$$1.Count;
+      var v818 = v1665 >= CENTER_QUORUM;
+      if (v818) {
+        var v817 = firstConfirmedCenter == null;
+        if (v817) {
+          firstConfirmedCenter = center$$1;
+        } else {
+          this.hasSkipped = true;
+          var v2719 = firstConfirmedCenter.X;
+          var v2720 = center$$1.X;
+          var v2612 = v2719 - v2720;
+          var v2380 = JAM.call(Math.abs, Math, [v2612], JAM.policy.p39);
+          var v2721 = firstConfirmedCenter.Y;
+          var v2722 = center$$1.Y;
+          var v2613 = v2721 - v2722;
+          var v2381 = JAM.call(Math.abs, Math, [v2613], JAM.policy.p39);
+          var v1666 = v2380 - v2381;
+          var v816 = v1666 / 2;
+          return JAM.call(Math.floor, Math, [v816], JAM.policy.p39);
+        }
+      }
+      i$$52 = i$$52 + 1;
+      v819 = i$$52 < max$$6;
+    }
+    return 0;
+  }
+  function v101() {
+    function v100(a$$8, b$$5) {
+      var v1667 = a$$8.count;
+      var v1668 = b$$5.count;
+      var v820 = v1667 > v1668;
+      if (v820) {
+        return-1;
+      }
+      var v1669 = a$$8.count;
+      var v1670 = b$$5.count;
+      var v821 = v1669 < v1670;
+      if (v821) {
+        return 1;
+      }
+      return 0;
+    }
+    var v822 = this.possibleCenters;
+    var startSize = v822.length;
+    var v823 = startSize < 3;
+    if (v823) {
+      throw "Couldn't find enough finder patterns";
+    }
+    var v829 = startSize > 3;
+    if (v829) {
+      var totalModuleSize$$1 = 0;
+      var i$$51 = 0;
+      var v824 = i$$51 < startSize;
+      for (;v824;) {
+        var v2614 = this.possibleCenters;
+        introspect(JAM.policy.p26) {
+          var v2382 = v2614[i$$51]
+        }
+        var v1671 = v2382.EstimatedModuleSize;
+        totalModuleSize$$1 = totalModuleSize$$1 + v1671;
+        i$$51 = i$$51 + 1;
+        v824 = i$$51 < startSize;
+      }
+      var average = totalModuleSize$$1 / startSize;
+      i$$51 = 0;
+      var v2615 = this.possibleCenters;
+      var v2383 = v2615.length;
+      var v1672 = i$$51 < v2383;
+      if (v1672) {
+        var v2616 = this.possibleCenters;
+        var v2384 = v2616.length;
+        v1672 = v2384 > 3;
+      }
+      var v828 = v1672;
+      for (;v828;) {
+        var v825 = this.possibleCenters;
+        introspect(JAM.policy.p26) {
+          var pattern$$2 = v825[i$$51]
+        }
+        var v2617 = pattern$$2.EstimatedModuleSize;
+        var v2385 = v2617 - average;
+        var v1673 = JAM.call(Math.abs, Math, [v2385], JAM.policy.p39);
+        var v1674 = .2 * average;
+        var v827 = v1673 > v1674;
+        if (v827) {
+          var v826 = this.possibleCenters;
+          JAM.call(v826.remove, v826, [i$$51], JAM.policy.p39);
+          i$$51 = i$$51 - 1;
+        }
+        i$$51 = i$$51 + 1;
+        var v2618 = this.possibleCenters;
+        var v2386 = v2618.length;
+        var v1675 = i$$51 < v2386;
+        if (v1675) {
+          var v2619 = this.possibleCenters;
+          var v2387 = v2619.length;
+          v1675 = v2387 > 3;
+        }
+        v828 = v1675;
+      }
+    }
+    var v2388 = this.possibleCenters;
+    var v1676 = v2388.length;
+    var v831 = v1676 > 3;
+    if (v831) {
+      var v830 = this.possibleCenters;
+      JAM.call(v830.sort, v830, [v100], JAM.policy.p39);
+    }
+    var v1677 = this.possibleCenters;
+    introspect(JAM.policy.p26) {
+      var v832 = v1677[0]
+    }
+    var v1678 = this.possibleCenters;
+    introspect(JAM.policy.p26) {
+      var v833 = v1678[1]
+    }
+    var v1679 = this.possibleCenters;
+    introspect(JAM.policy.p26) {
+      var v834 = v1679[2]
+    }
+    return JAM.new(Array, [v832, v833, v834], JAM.policy.p38);
+  }
+  function v99(stateCount$$4, i$$50, j$$27) {
+    introspect(JAM.policy.p26) {
+      var v2620 = stateCount$$4[0]
+    }
+    introspect(JAM.policy.p26) {
+      var v2621 = stateCount$$4[1]
+    }
+    var v2389 = v2620 + v2621;
+    introspect(JAM.policy.p26) {
+      var v2390 = stateCount$$4[2]
+    }
+    var v1680 = v2389 + v2390;
+    introspect(JAM.policy.p26) {
+      var v1681 = stateCount$$4[3]
+    }
+    var v835 = v1680 + v1681;
+    introspect(JAM.policy.p26) {
+      var v836 = stateCount$$4[4]
+    }
+    var stateCountTotal$$2 = v835 + v836;
+    var centerJ$$1 = JAM.call(this.centerFromEnd, this, [stateCount$$4, j$$27], JAM.policy.p38);
+    var v837 = JAM.call(Math.floor, Math, [centerJ$$1], JAM.policy.p39);
+    introspect(JAM.policy.p26) {
+      var v838 = stateCount$$4[2]
+    }
+    var centerI$$1 = JAM.call(this.crossCheckVertical, this, [i$$50, v837, v838, stateCountTotal$$2], JAM.policy.p38);
+    var v1682 = JAM.call(isNaN, null, [centerI$$1], JAM.policy.p39);
+    var v851 = !v1682;
+    if (v851) {
+      var v839 = JAM.call(Math.floor, Math, [centerJ$$1], JAM.policy.p39);
+      var v840 = JAM.call(Math.floor, Math, [centerI$$1], JAM.policy.p39);
+      introspect(JAM.policy.p26) {
+        var v841 = stateCount$$4[2]
+      }
+      centerJ$$1 = JAM.call(this.crossCheckHorizontal, this, [v839, v840, v841, stateCountTotal$$2], JAM.policy.p38);
+      var v1683 = JAM.call(isNaN, null, [centerJ$$1], JAM.policy.p39);
+      var v850 = !v1683;
+      if (v850) {
+        var estimatedModuleSize$$1 = stateCountTotal$$2 / 7;
+        var found = false;
+        var v842 = this.possibleCenters;
+        var max$$5 = v842.length;
+        var index$$39 = 0;
+        var v845 = index$$39 < max$$5;
+        for (;v845;) {
+          var v843 = this.possibleCenters;
+          introspect(JAM.policy.p26) {
+            var center = v843[index$$39]
+          }
+          var v844 = JAM.call(center.aboutEquals, center, [estimatedModuleSize$$1, centerI$$1, centerJ$$1], JAM.policy.p38);
+          if (v844) {
+            JAM.call(center.incrementCount, center, [], JAM.policy.p40);
+            found = true;
+            break;
+          }
+          index$$39 = index$$39 + 1;
+          v845 = index$$39 < max$$5;
+        }
+        var v849 = !found;
+        if (v849) {
+          var point$$2 = JAM.new(FinderPattern, [centerJ$$1, centerI$$1, estimatedModuleSize$$1], JAM.policy.p38);
+          var v846 = this.possibleCenters;
+          JAM.call(v846.push, v846, [point$$2], JAM.policy.p39);
+          var v1684 = this.resultPointCallback;
+          var v848 = v1684 != null;
+          if (v848) {
+            var v847 = this.resultPointCallback;
+            JAM.call(v847.foundPossibleResultPoint, v847, [point$$2], JAM.policy.p39);
+          }
+        }
+        return true;
+      }
+    }
+    return false;
+  }
+  function v98(startJ, centerI, maxCount$$1, originalStateCountTotal$$1) {
+    var image$$11 = this.image;
+    var maxJ = qrcode.width;
+    var stateCount$$3 = this.CrossCheckStateCount;
+    var j$$26 = startJ;
+    var v1685 = j$$26 >= 0;
+    if (v1685) {
+      var v2723 = qrcode.width;
+      var v2622 = centerI * v2723;
+      var v2391 = j$$26 + v2622;
+      introspect(JAM.policy.p26) {
+        v1685 = image$$11[v2391];
+      }
+    }
+    var v852 = v1685;
+    for (;v852;) {
+      introspect(JAM.policy.p26) {
+        var v1686 = stateCount$$3[2]
+      }
+      introspect(JAM.policy.p27) {
+        stateCount$$3[2] = v1686 + 1;
+      }
+      j$$26 = j$$26 - 1;
+      var v1687 = j$$26 >= 0;
+      if (v1687) {
+        var v2724 = qrcode.width;
+        var v2623 = centerI * v2724;
+        var v2392 = j$$26 + v2623;
+        introspect(JAM.policy.p26) {
+          v1687 = image$$11[v2392];
+        }
+      }
+      v852 = v1687;
+    }
+    var v853 = j$$26 < 0;
+    if (v853) {
+      return NaN;
+    }
+    var v2393 = j$$26 >= 0;
+    if (v2393) {
+      var v2828 = qrcode.width;
+      var v2787 = centerI * v2828;
+      var v2725 = j$$26 + v2787;
+      introspect(JAM.policy.p26) {
+        var v2624 = image$$11[v2725]
+      }
+      v2393 = !v2624;
+    }
+    var v1688 = v2393;
+    if (v1688) {
+      introspect(JAM.policy.p26) {
+        var v2394 = stateCount$$3[1]
+      }
+      v1688 = v2394 <= maxCount$$1;
+    }
+    var v854 = v1688;
+    for (;v854;) {
+      introspect(JAM.policy.p26) {
+        var v1689 = stateCount$$3[1]
+      }
+      introspect(JAM.policy.p27) {
+        stateCount$$3[1] = v1689 + 1;
+      }
+      j$$26 = j$$26 - 1;
+      var v2395 = j$$26 >= 0;
+      if (v2395) {
+        var v2829 = qrcode.width;
+        var v2788 = centerI * v2829;
+        var v2726 = j$$26 + v2788;
+        introspect(JAM.policy.p26) {
+          var v2625 = image$$11[v2726]
+        }
+        v2395 = !v2625;
+      }
+      var v1690 = v2395;
+      if (v1690) {
+        introspect(JAM.policy.p26) {
+          var v2396 = stateCount$$3[1]
+        }
+        v1690 = v2396 <= maxCount$$1;
+      }
+      v854 = v1690;
+    }
+    var v1691 = j$$26 < 0;
+    var v2398 = !v1691;
+    if (v2398) {
+      introspect(JAM.policy.p26) {
+        var v2397 = stateCount$$3[1]
+      }
+      v1691 = v2397 > maxCount$$1;
+    }
+    var v855 = v1691;
+    if (v855) {
+      return NaN;
+    }
+    var v2399 = j$$26 >= 0;
+    if (v2399) {
+      var v2789 = qrcode.width;
+      var v2727 = centerI * v2789;
+      var v2626 = j$$26 + v2727;
+      introspect(JAM.policy.p26) {
+        v2399 = image$$11[v2626];
+      }
+    }
+    var v1692 = v2399;
+    if (v1692) {
+      introspect(JAM.policy.p26) {
+        var v2400 = stateCount$$3[0]
+      }
+      v1692 = v2400 <= maxCount$$1;
+    }
+    var v856 = v1692;
+    for (;v856;) {
+      introspect(JAM.policy.p26) {
+        var v1693 = stateCount$$3[0]
+      }
+      introspect(JAM.policy.p27) {
+        stateCount$$3[0] = v1693 + 1;
+      }
+      j$$26 = j$$26 - 1;
+      var v2401 = j$$26 >= 0;
+      if (v2401) {
+        var v2790 = qrcode.width;
+        var v2728 = centerI * v2790;
+        var v2627 = j$$26 + v2728;
+        introspect(JAM.policy.p26) {
+          v2401 = image$$11[v2627];
+        }
+      }
+      var v1694 = v2401;
+      if (v1694) {
+        introspect(JAM.policy.p26) {
+          var v2402 = stateCount$$3[0]
+        }
+        v1694 = v2402 <= maxCount$$1;
+      }
+      v856 = v1694;
+    }
+    introspect(JAM.policy.p26) {
+      var v1695 = stateCount$$3[0]
+    }
+    var v857 = v1695 > maxCount$$1;
+    if (v857) {
+      return NaN;
+    }
+    j$$26 = startJ + 1;
+    var v1696 = j$$26 < maxJ;
+    if (v1696) {
+      var v2729 = qrcode.width;
+      var v2628 = centerI * v2729;
+      var v2403 = j$$26 + v2628;
+      introspect(JAM.policy.p26) {
+        v1696 = image$$11[v2403];
+      }
+    }
+    var v858 = v1696;
+    for (;v858;) {
+      introspect(JAM.policy.p26) {
+        var v1697 = stateCount$$3[2]
+      }
+      introspect(JAM.policy.p27) {
+        stateCount$$3[2] = v1697 + 1;
+      }
+      j$$26 = j$$26 + 1;
+      var v1698 = j$$26 < maxJ;
+      if (v1698) {
+        var v2730 = qrcode.width;
+        var v2629 = centerI * v2730;
+        var v2404 = j$$26 + v2629;
+        introspect(JAM.policy.p26) {
+          v1698 = image$$11[v2404];
+        }
+      }
+      v858 = v1698;
+    }
+    var v859 = j$$26 == maxJ;
+    if (v859) {
+      return NaN;
+    }
+    var v2405 = j$$26 < maxJ;
+    if (v2405) {
+      var v2830 = qrcode.width;
+      var v2791 = centerI * v2830;
+      var v2731 = j$$26 + v2791;
+      introspect(JAM.policy.p26) {
+        var v2630 = image$$11[v2731]
+      }
+      v2405 = !v2630;
+    }
+    var v1699 = v2405;
+    if (v1699) {
+      introspect(JAM.policy.p26) {
+        var v2406 = stateCount$$3[3]
+      }
+      v1699 = v2406 < maxCount$$1;
+    }
+    var v860 = v1699;
+    for (;v860;) {
+      introspect(JAM.policy.p26) {
+        var v1700 = stateCount$$3[3]
+      }
+      introspect(JAM.policy.p27) {
+        stateCount$$3[3] = v1700 + 1;
+      }
+      j$$26 = j$$26 + 1;
+      var v2407 = j$$26 < maxJ;
+      if (v2407) {
+        var v2831 = qrcode.width;
+        var v2792 = centerI * v2831;
+        var v2732 = j$$26 + v2792;
+        introspect(JAM.policy.p26) {
+          var v2631 = image$$11[v2732]
+        }
+        v2407 = !v2631;
+      }
+      var v1701 = v2407;
+      if (v1701) {
+        introspect(JAM.policy.p26) {
+          var v2408 = stateCount$$3[3]
+        }
+        v1701 = v2408 < maxCount$$1;
+      }
+      v860 = v1701;
+    }
+    var v1702 = j$$26 == maxJ;
+    var v2410 = !v1702;
+    if (v2410) {
+      introspect(JAM.policy.p26) {
+        var v2409 = stateCount$$3[3]
+      }
+      v1702 = v2409 >= maxCount$$1;
+    }
+    var v861 = v1702;
+    if (v861) {
+      return NaN;
+    }
+    var v2411 = j$$26 < maxJ;
+    if (v2411) {
+      var v2793 = qrcode.width;
+      var v2733 = centerI * v2793;
+      var v2632 = j$$26 + v2733;
+      introspect(JAM.policy.p26) {
+        v2411 = image$$11[v2632];
+      }
+    }
+    var v1703 = v2411;
+    if (v1703) {
+      introspect(JAM.policy.p26) {
+        var v2412 = stateCount$$3[4]
+      }
+      v1703 = v2412 < maxCount$$1;
+    }
+    var v862 = v1703;
+    for (;v862;) {
+      introspect(JAM.policy.p26) {
+        var v1704 = stateCount$$3[4]
+      }
+      introspect(JAM.policy.p27) {
+        stateCount$$3[4] = v1704 + 1;
+      }
+      j$$26 = j$$26 + 1;
+      var v2413 = j$$26 < maxJ;
+      if (v2413) {
+        var v2794 = qrcode.width;
+        var v2734 = centerI * v2794;
+        var v2633 = j$$26 + v2734;
+        introspect(JAM.policy.p26) {
+          v2413 = image$$11[v2633];
+        }
+      }
+      var v1705 = v2413;
+      if (v1705) {
+        introspect(JAM.policy.p26) {
+          var v2414 = stateCount$$3[4]
+        }
+        v1705 = v2414 < maxCount$$1;
+      }
+      v862 = v1705;
+    }
+    introspect(JAM.policy.p26) {
+      var v1706 = stateCount$$3[4]
+    }
+    var v863 = v1706 >= maxCount$$1;
+    if (v863) {
+      return NaN;
+    }
+    introspect(JAM.policy.p26) {
+      var v2634 = stateCount$$3[0]
+    }
+    introspect(JAM.policy.p26) {
+      var v2635 = stateCount$$3[1]
+    }
+    var v2415 = v2634 + v2635;
+    introspect(JAM.policy.p26) {
+      var v2416 = stateCount$$3[2]
+    }
+    var v1707 = v2415 + v2416;
+    introspect(JAM.policy.p26) {
+      var v1708 = stateCount$$3[3]
+    }
+    var v864 = v1707 + v1708;
+    introspect(JAM.policy.p26) {
+      var v865 = stateCount$$3[4]
+    }
+    var stateCountTotal$$1 = v864 + v865;
+    var v2636 = stateCountTotal$$1 - originalStateCountTotal$$1;
+    var v2417 = JAM.call(Math.abs, Math, [v2636], JAM.policy.p39);
+    var v1709 = 5 * v2417;
+    var v866 = v1709 >= originalStateCountTotal$$1;
+    if (v866) {
+      return NaN;
+    }
+    var v867;
+    var v1710 = JAM.call(this.foundPatternCross, this, [stateCount$$3], JAM.policy.p39);
+    if (v1710) {
+      v867 = JAM.call(this.centerFromEnd, this, [stateCount$$3, j$$26], JAM.policy.p38);
+    } else {
+      v867 = NaN;
+    }
+    return v867;
+  }
+  function v97(startI, centerJ, maxCount, originalStateCountTotal) {
+    var image$$10 = this.image;
+    var maxI = qrcode.height;
+    var stateCount$$2 = this.CrossCheckStateCount;
+    var i$$49 = startI;
+    var v1711 = i$$49 >= 0;
+    if (v1711) {
+      var v2735 = qrcode.width;
+      var v2637 = i$$49 * v2735;
+      var v2418 = centerJ + v2637;
+      introspect(JAM.policy.p26) {
+        v1711 = image$$10[v2418];
+      }
+    }
+    var v868 = v1711;
+    for (;v868;) {
+      introspect(JAM.policy.p26) {
+        var v1712 = stateCount$$2[2]
+      }
+      introspect(JAM.policy.p27) {
+        stateCount$$2[2] = v1712 + 1;
+      }
+      i$$49 = i$$49 - 1;
+      var v1713 = i$$49 >= 0;
+      if (v1713) {
+        var v2736 = qrcode.width;
+        var v2638 = i$$49 * v2736;
+        var v2419 = centerJ + v2638;
+        introspect(JAM.policy.p26) {
+          v1713 = image$$10[v2419];
+        }
+      }
+      v868 = v1713;
+    }
+    var v869 = i$$49 < 0;
+    if (v869) {
+      return NaN;
+    }
+    var v2420 = i$$49 >= 0;
+    if (v2420) {
+      var v2832 = qrcode.width;
+      var v2795 = i$$49 * v2832;
+      var v2737 = centerJ + v2795;
+      introspect(JAM.policy.p26) {
+        var v2639 = image$$10[v2737]
+      }
+      v2420 = !v2639;
+    }
+    var v1714 = v2420;
+    if (v1714) {
+      introspect(JAM.policy.p26) {
+        var v2421 = stateCount$$2[1]
+      }
+      v1714 = v2421 <= maxCount;
+    }
+    var v870 = v1714;
+    for (;v870;) {
+      introspect(JAM.policy.p26) {
+        var v1715 = stateCount$$2[1]
+      }
+      introspect(JAM.policy.p27) {
+        stateCount$$2[1] = v1715 + 1;
+      }
+      i$$49 = i$$49 - 1;
+      var v2422 = i$$49 >= 0;
+      if (v2422) {
+        var v2833 = qrcode.width;
+        var v2796 = i$$49 * v2833;
+        var v2738 = centerJ + v2796;
+        introspect(JAM.policy.p26) {
+          var v2640 = image$$10[v2738]
+        }
+        v2422 = !v2640;
+      }
+      var v1716 = v2422;
+      if (v1716) {
+        introspect(JAM.policy.p26) {
+          var v2423 = stateCount$$2[1]
+        }
+        v1716 = v2423 <= maxCount;
+      }
+      v870 = v1716;
+    }
+    var v1717 = i$$49 < 0;
+    var v2425 = !v1717;
+    if (v2425) {
+      introspect(JAM.policy.p26) {
+        var v2424 = stateCount$$2[1]
+      }
+      v1717 = v2424 > maxCount;
+    }
+    var v871 = v1717;
+    if (v871) {
+      return NaN;
+    }
+    var v2426 = i$$49 >= 0;
+    if (v2426) {
+      var v2797 = qrcode.width;
+      var v2739 = i$$49 * v2797;
+      var v2641 = centerJ + v2739;
+      introspect(JAM.policy.p26) {
+        v2426 = image$$10[v2641];
+      }
+    }
+    var v1718 = v2426;
+    if (v1718) {
+      introspect(JAM.policy.p26) {
+        var v2427 = stateCount$$2[0]
+      }
+      v1718 = v2427 <= maxCount;
+    }
+    var v872 = v1718;
+    for (;v872;) {
+      introspect(JAM.policy.p26) {
+        var v1719 = stateCount$$2[0]
+      }
+      introspect(JAM.policy.p27) {
+        stateCount$$2[0] = v1719 + 1;
+      }
+      i$$49 = i$$49 - 1;
+      var v2428 = i$$49 >= 0;
+      if (v2428) {
+        var v2798 = qrcode.width;
+        var v2740 = i$$49 * v2798;
+        var v2642 = centerJ + v2740;
+        introspect(JAM.policy.p26) {
+          v2428 = image$$10[v2642];
+        }
+      }
+      var v1720 = v2428;
+      if (v1720) {
+        introspect(JAM.policy.p26) {
+          var v2429 = stateCount$$2[0]
+        }
+        v1720 = v2429 <= maxCount;
+      }
+      v872 = v1720;
+    }
+    introspect(JAM.policy.p26) {
+      var v1721 = stateCount$$2[0]
+    }
+    var v873 = v1721 > maxCount;
+    if (v873) {
+      return NaN;
+    }
+    i$$49 = startI + 1;
+    var v1722 = i$$49 < maxI;
+    if (v1722) {
+      var v2741 = qrcode.width;
+      var v2643 = i$$49 * v2741;
+      var v2430 = centerJ + v2643;
+      introspect(JAM.policy.p26) {
+        v1722 = image$$10[v2430];
+      }
+    }
+    var v874 = v1722;
+    for (;v874;) {
+      introspect(JAM.policy.p26) {
+        var v1723 = stateCount$$2[2]
+      }
+      introspect(JAM.policy.p27) {
+        stateCount$$2[2] = v1723 + 1;
+      }
+      i$$49 = i$$49 + 1;
+      var v1724 = i$$49 < maxI;
+      if (v1724) {
+        var v2742 = qrcode.width;
+        var v2644 = i$$49 * v2742;
+        var v2431 = centerJ + v2644;
+        introspect(JAM.policy.p26) {
+          v1724 = image$$10[v2431];
+        }
+      }
+      v874 = v1724;
+    }
+    var v875 = i$$49 == maxI;
+    if (v875) {
+      return NaN;
+    }
+    var v2432 = i$$49 < maxI;
+    if (v2432) {
+      var v2834 = qrcode.width;
+      var v2799 = i$$49 * v2834;
+      var v2743 = centerJ + v2799;
+      introspect(JAM.policy.p26) {
+        var v2645 = image$$10[v2743]
+      }
+      v2432 = !v2645;
+    }
+    var v1725 = v2432;
+    if (v1725) {
+      introspect(JAM.policy.p26) {
+        var v2433 = stateCount$$2[3]
+      }
+      v1725 = v2433 < maxCount;
+    }
+    var v876 = v1725;
+    for (;v876;) {
+      introspect(JAM.policy.p26) {
+        var v1726 = stateCount$$2[3]
+      }
+      introspect(JAM.policy.p27) {
+        stateCount$$2[3] = v1726 + 1;
+      }
+      i$$49 = i$$49 + 1;
+      var v2434 = i$$49 < maxI;
+      if (v2434) {
+        var v2835 = qrcode.width;
+        var v2800 = i$$49 * v2835;
+        var v2744 = centerJ + v2800;
+        introspect(JAM.policy.p26) {
+          var v2646 = image$$10[v2744]
+        }
+        v2434 = !v2646;
+      }
+      var v1727 = v2434;
+      if (v1727) {
+        introspect(JAM.policy.p26) {
+          var v2435 = stateCount$$2[3]
+        }
+        v1727 = v2435 < maxCount;
+      }
+      v876 = v1727;
+    }
+    var v1728 = i$$49 == maxI;
+    var v2437 = !v1728;
+    if (v2437) {
+      introspect(JAM.policy.p26) {
+        var v2436 = stateCount$$2[3]
+      }
+      v1728 = v2436 >= maxCount;
+    }
+    var v877 = v1728;
+    if (v877) {
+      return NaN;
+    }
+    var v2438 = i$$49 < maxI;
+    if (v2438) {
+      var v2801 = qrcode.width;
+      var v2745 = i$$49 * v2801;
+      var v2647 = centerJ + v2745;
+      introspect(JAM.policy.p26) {
+        v2438 = image$$10[v2647];
+      }
+    }
+    var v1729 = v2438;
+    if (v1729) {
+      introspect(JAM.policy.p26) {
+        var v2439 = stateCount$$2[4]
+      }
+      v1729 = v2439 < maxCount;
+    }
+    var v878 = v1729;
+    for (;v878;) {
+      introspect(JAM.policy.p26) {
+        var v1730 = stateCount$$2[4]
+      }
+      introspect(JAM.policy.p27) {
+        stateCount$$2[4] = v1730 + 1;
+      }
+      i$$49 = i$$49 + 1;
+      var v2440 = i$$49 < maxI;
+      if (v2440) {
+        var v2802 = qrcode.width;
+        var v2746 = i$$49 * v2802;
+        var v2648 = centerJ + v2746;
+        introspect(JAM.policy.p26) {
+          v2440 = image$$10[v2648];
+        }
+      }
+      var v1731 = v2440;
+      if (v1731) {
+        introspect(JAM.policy.p26) {
+          var v2441 = stateCount$$2[4]
+        }
+        v1731 = v2441 < maxCount;
+      }
+      v878 = v1731;
+    }
+    introspect(JAM.policy.p26) {
+      var v1732 = stateCount$$2[4]
+    }
+    var v879 = v1732 >= maxCount;
+    if (v879) {
+      return NaN;
+    }
+    introspect(JAM.policy.p26) {
+      var v2649 = stateCount$$2[0]
+    }
+    introspect(JAM.policy.p26) {
+      var v2650 = stateCount$$2[1]
+    }
+    var v2442 = v2649 + v2650;
+    introspect(JAM.policy.p26) {
+      var v2443 = stateCount$$2[2]
+    }
+    var v1733 = v2442 + v2443;
+    introspect(JAM.policy.p26) {
+      var v1734 = stateCount$$2[3]
+    }
+    var v880 = v1733 + v1734;
+    introspect(JAM.policy.p26) {
+      var v881 = stateCount$$2[4]
+    }
+    var stateCountTotal = v880 + v881;
+    var v2651 = stateCountTotal - originalStateCountTotal;
+    var v2444 = JAM.call(Math.abs, Math, [v2651], JAM.policy.p39);
+    var v1735 = 5 * v2444;
+    var v1736 = 2 * originalStateCountTotal;
+    var v882 = v1735 >= v1736;
+    if (v882) {
+      return NaN;
+    }
+    var v883;
+    var v1737 = JAM.call(this.foundPatternCross, this, [stateCount$$2], JAM.policy.p39);
+    if (v1737) {
+      v883 = JAM.call(this.centerFromEnd, this, [stateCount$$2, i$$49], JAM.policy.p38);
+    } else {
+      v883 = NaN;
+    }
+    return v883;
+  }
+  function v96(stateCount$$1, end$$2) {
+    introspect(JAM.policy.p26) {
+      var v2445 = stateCount$$1[4]
+    }
+    var v1738 = end$$2 - v2445;
+    introspect(JAM.policy.p26) {
+      var v1739 = stateCount$$1[3]
+    }
+    var v884 = v1738 - v1739;
+    introspect(JAM.policy.p26) {
+      var v1740 = stateCount$$1[2]
+    }
+    var v885 = v1740 / 2;
+    return v884 - v885;
+  }
+  function v95(stateCount) {
+    var totalModuleSize = 0;
+    var i$$48 = 0;
+    var v887 = i$$48 < 5;
+    for (;v887;) {
+      introspect(JAM.policy.p26) {
+        var count$$5 = stateCount[i$$48]
+      }
+      var v886 = count$$5 == 0;
+      if (v886) {
+        return false;
+      }
+      totalModuleSize = totalModuleSize + count$$5;
+      i$$48 = i$$48 + 1;
+      v887 = i$$48 < 5;
+    }
+    var v888 = totalModuleSize < 7;
+    if (v888) {
+      return false;
+    }
+    var v1741 = totalModuleSize << INTEGER_MATH_SHIFT;
+    var v889 = v1741 / 7;
+    var moduleSize$$3 = JAM.call(Math.floor, Math, [v889], JAM.policy.p39);
+    var v890 = moduleSize$$3 / 2;
+    var maxVariance = JAM.call(Math.floor, Math, [v890], JAM.policy.p39);
+    introspect(JAM.policy.p26) {
+      var v2848 = stateCount[0]
+    }
+    var v2836 = v2848 << INTEGER_MATH_SHIFT;
+    var v2803 = moduleSize$$3 - v2836;
+    var v2747 = JAM.call(Math.abs, Math, [v2803], JAM.policy.p39);
+    var v2652 = v2747 < maxVariance;
+    if (v2652) {
+      introspect(JAM.policy.p26) {
+        var v2849 = stateCount[1]
+      }
+      var v2837 = v2849 << INTEGER_MATH_SHIFT;
+      var v2804 = moduleSize$$3 - v2837;
+      var v2748 = JAM.call(Math.abs, Math, [v2804], JAM.policy.p39);
+      v2652 = v2748 < maxVariance;
+    }
+    var v2446 = v2652;
+    if (v2446) {
+      var v2805 = 3 * moduleSize$$3;
+      introspect(JAM.policy.p26) {
+        var v2838 = stateCount[2]
+      }
+      var v2806 = v2838 << INTEGER_MATH_SHIFT;
+      var v2749 = v2805 - v2806;
+      var v2653 = JAM.call(Math.abs, Math, [v2749], JAM.policy.p39);
+      var v2654 = 3 * maxVariance;
+      v2446 = v2653 < v2654;
+    }
+    var v1742 = v2446;
+    if (v1742) {
+      introspect(JAM.policy.p26) {
+        var v2807 = stateCount[3]
+      }
+      var v2750 = v2807 << INTEGER_MATH_SHIFT;
+      var v2655 = moduleSize$$3 - v2750;
+      var v2447 = JAM.call(Math.abs, Math, [v2655], JAM.policy.p39);
+      v1742 = v2447 < maxVariance;
+    }
+    var v891 = v1742;
+    if (v891) {
+      introspect(JAM.policy.p26) {
+        var v2751 = stateCount[4]
+      }
+      var v2656 = v2751 << INTEGER_MATH_SHIFT;
+      var v2448 = moduleSize$$3 - v2656;
+      var v1743 = JAM.call(Math.abs, Math, [v2448], JAM.policy.p39);
+      v891 = v1743 < maxVariance;
+    }
+    return v891;
+  }
+  function v94() {
+    var v892 = this.crossCheckStateCount;
+    introspect(JAM.policy.p27) {
+      v892[0] = 0;
+    }
+    var v893 = this.crossCheckStateCount;
+    introspect(JAM.policy.p27) {
+      v893[1] = 0;
+    }
+    var v894 = this.crossCheckStateCount;
+    introspect(JAM.policy.p27) {
+      v894[2] = 0;
+    }
+    var v895 = this.crossCheckStateCount;
+    introspect(JAM.policy.p27) {
+      v895[3] = 0;
+    }
+    var v896 = this.crossCheckStateCount;
+    introspect(JAM.policy.p27) {
+      v896[4] = 0;
+    }
+    return this.crossCheckStateCount;
+  }
+  this.image = null;
+  this.possibleCenters = [];
+  this.hasSkipped = false;
+  var v2882 = JAM.new(Array, [0, 0, 0, 0, 0], JAM.policy.p22);
+  this.crossCheckStateCount = v2882;
+  this.resultPointCallback = null;
+  JAM.call(this.__defineGetter__, this, ["CrossCheckStateCount", v94], JAM.policy.p23);
+  this.foundPatternCross = v95;
+  this.centerFromEnd = v96;
+  this.crossCheckVertical = v97;
+  this.crossCheckHorizontal = v98;
+  this.handlePossibleCenter = v99;
+  this.selectBestPatterns = v101;
+  this.findRowSkip = v102;
+  this.haveMultiplyConfirmedCenters = v103;
+  this.findFinderPattern = v104;
+  return;
+}
+function AlignmentPattern(posX$$1, posY$$1, estimatedModuleSize$$2) {
+  function v110(moduleSize$$4, i$$55, j$$29) {
+    var v2752 = this.y;
+    var v2657 = i$$55 - v2752;
+    var v2449 = JAM.call(Math.abs, Math, [v2657], JAM.policy.p39);
+    var v1744 = v2449 <= moduleSize$$4;
+    if (v1744) {
+      var v2753 = this.x;
+      var v2658 = j$$29 - v2753;
+      var v2450 = JAM.call(Math.abs, Math, [v2658], JAM.policy.p39);
+      v1744 = v2450 <= moduleSize$$4;
+    }
+    var v899 = v1744;
+    if (v899) {
+      var v1745 = this.estimatedModuleSize;
+      var v897 = moduleSize$$4 - v1745;
+      var moduleSizeDiff$$1 = JAM.call(Math.abs, Math, [v897], JAM.policy.p39);
+      var v898 = moduleSizeDiff$$1 <= 1;
+      var v1747 = !v898;
+      if (v1747) {
+        var v2451 = this.estimatedModuleSize;
+        var v1746 = moduleSizeDiff$$1 / v2451;
+        v898 = v1746 <= 1;
+      }
+      return v898;
+    }
+    return false;
+  }
+  function v109() {
+    var v1748 = this.count;
+    this.count = v1748 + 1;
+    return;
+  }
+  function v108() {
+    var v900 = this.y;
+    return JAM.call(Math.floor, Math, [v900], JAM.policy.p39);
+  }
+  function v107() {
+    var v901 = this.x;
+    return JAM.call(Math.floor, Math, [v901], JAM.policy.p39);
+  }
+  function v106() {
+    return this.count;
+  }
+  function v105() {
+    return this.estimatedModuleSize;
+  }
+  this.x = posX$$1;
+  this.y = posY$$1;
+  this.count = 1;
+  this.estimatedModuleSize = estimatedModuleSize$$2;
+  JAM.call(this.__defineGetter__, this, ["EstimatedModuleSize", v105], JAM.policy.p23);
+  JAM.call(this.__defineGetter__, this, ["Count", v106], JAM.policy.p23);
+  JAM.call(this.__defineGetter__, this, ["X", v107], JAM.policy.p23);
+  JAM.call(this.__defineGetter__, this, ["Y", v108], JAM.policy.p23);
+  this.incrementCount = v109;
+  this.aboutEquals = v110;
+  return;
+}
+function AlignmentPatternFinder(image$$13, startX, startY, width$$12, height$$11, moduleSize$$5, resultPointCallback) {
+  function v115() {
+    var startX$$1 = this.startX;
+    var height$$12 = this.height;
+    var maxJ$$2 = startX$$1 + width$$12;
+    var v902 = height$$12 >> 1;
+    var middleI = startY + v902;
+    var stateCount$$10 = JAM.new(Array, [0, 0, 0], JAM.policy.p22);
+    var iGen = 0;
+    var v914 = iGen < height$$12;
+    for (;v914;) {
+      var v1749;
+      var v2659 = iGen & 1;
+      var v2454 = v2659 == 0;
+      if (v2454) {
+        var v2452 = iGen + 1;
+        v1749 = v2452 >> 1;
+      } else {
+        var v2660 = iGen + 1;
+        var v2453 = v2660 >> 1;
+        v1749 = -v2453;
+      }
+      var v903 = v1749;
+      var i$$59 = middleI + v903;
+      introspect(JAM.policy.p27) {
+        stateCount$$10[0] = 0;
+      }
+      introspect(JAM.policy.p27) {
+        stateCount$$10[1] = 0;
+      }
+      introspect(JAM.policy.p27) {
+        stateCount$$10[2] = 0;
+      }
+      var j$$31 = startX$$1;
+      var v1750 = j$$31 < maxJ$$2;
+      if (v1750) {
+        var v2808 = qrcode.width;
+        var v2754 = v2808 * i$$59;
+        var v2661 = j$$31 + v2754;
+        introspect(JAM.policy.p26) {
+          var v2455 = image$$13[v2661]
+        }
+        v1750 = !v2455;
+      }
+      var v904 = v1750;
+      for (;v904;) {
+        j$$31 = j$$31 + 1;
+        var v1751 = j$$31 < maxJ$$2;
+        if (v1751) {
+          var v2809 = qrcode.width;
+          var v2755 = v2809 * i$$59;
+          var v2662 = j$$31 + v2755;
+          introspect(JAM.policy.p26) {
+            var v2456 = image$$13[v2662]
+          }
+          v1751 = !v2456;
+        }
+        v904 = v1751;
+      }
+      var currentState$$1 = 0;
+      var v911 = j$$31 < maxJ$$2;
+      for (;v911;) {
+        var v2663 = qrcode.width;
+        var v2457 = i$$59 * v2663;
+        var v1752 = j$$31 + v2457;
+        introspect(JAM.policy.p26) {
+          var v910 = image$$13[v1752]
+        }
+        if (v910) {
+          var v908 = currentState$$1 == 1;
+          if (v908) {
+            introspect(JAM.policy.p26) {
+              var v1753 = stateCount$$10[currentState$$1]
+            }
+            introspect(JAM.policy.p27) {
+              stateCount$$10[currentState$$1] = v1753 + 1;
+            }
+          } else {
+            var v907 = currentState$$1 == 2;
+            if (v907) {
+              var v906 = JAM.call(this.foundPatternCross, this, [stateCount$$10], JAM.policy.p39);
+              if (v906) {
+                var confirmed$$1 = JAM.call(this.handlePossibleCenter, this, [stateCount$$10, i$$59, j$$31], JAM.policy.p38);
+                var v905 = confirmed$$1 != null;
+                if (v905) {
+                  return confirmed$$1;
+                }
+              }
+              introspect(JAM.policy.p27) {
+                stateCount$$10[0] = stateCount$$10[2];
+              }
+              introspect(JAM.policy.p27) {
+                stateCount$$10[1] = 1;
+              }
+              introspect(JAM.policy.p27) {
+                stateCount$$10[2] = 0;
+              }
+              currentState$$1 = 1;
+            } else {
+              var v1754 = currentState$$1 = currentState$$1 + 1;
+              var v2664 = currentState$$1 = currentState$$1 + 1;
+              introspect(JAM.policy.p26) {
+                var v2458 = stateCount$$10[v2664]
+              }
+              introspect(JAM.policy.p27) {
+                stateCount$$10[v1754] = v2458 + 1;
+              }
+            }
+          }
+        } else {
+          var v909 = currentState$$1 == 1;
+          if (v909) {
+            currentState$$1 = currentState$$1 + 1;
+          }
+          introspect(JAM.policy.p26) {
+            var v1755 = stateCount$$10[currentState$$1]
+          }
+          introspect(JAM.policy.p27) {
+            stateCount$$10[currentState$$1] = v1755 + 1;
+          }
+        }
+        j$$31 = j$$31 + 1;
+        v911 = j$$31 < maxJ$$2;
+      }
+      var v913 = JAM.call(this.foundPatternCross, this, [stateCount$$10], JAM.policy.p39);
+      if (v913) {
+        confirmed$$1 = JAM.call(this.handlePossibleCenter, this, [stateCount$$10, i$$59, maxJ$$2], JAM.policy.p38);
+        var v912 = confirmed$$1 != null;
+        if (v912) {
+          return confirmed$$1;
+        }
+      }
+      iGen = iGen + 1;
+      v914 = iGen < height$$12;
+    }
+    var v2665 = this.possibleCenters;
+    var v2459 = v2665.length;
+    var v1756 = v2459 == 0;
+    var v916 = !v1756;
+    if (v916) {
+      var v915 = this.possibleCenters;
+      introspect(JAM.policy.p26) {
+        return v915[0];
+      }
+    }
+    throw "Couldn't find enough alignment patterns";
+  }
+  function v114(stateCount$$9, i$$58, j$$30) {
+    introspect(JAM.policy.p26) {
+      var v1757 = stateCount$$9[0]
+    }
+    introspect(JAM.policy.p26) {
+      var v1758 = stateCount$$9[1]
+    }
+    var v917 = v1757 + v1758;
+    introspect(JAM.policy.p26) {
+      var v918 = stateCount$$9[2]
+    }
+    var stateCountTotal$$4 = v917 + v918;
+    var centerJ$$3 = JAM.call(this.centerFromEnd, this, [stateCount$$9, j$$30], JAM.policy.p38);
+    var v919 = JAM.call(Math.floor, Math, [centerJ$$3], JAM.policy.p39);
+    introspect(JAM.policy.p26) {
+      var v1759 = stateCount$$9[1]
+    }
+    var v920 = 2 * v1759;
+    var centerI$$2 = JAM.call(this.crossCheckVertical, this, [i$$58, v919, v920, stateCountTotal$$4], JAM.policy.p38);
+    var v1760 = JAM.call(isNaN, null, [centerI$$2], JAM.policy.p39);
+    var v929 = !v1760;
+    if (v929) {
+      introspect(JAM.policy.p26) {
+        var v2460 = stateCount$$9[0]
+      }
+      introspect(JAM.policy.p26) {
+        var v2461 = stateCount$$9[1]
+      }
+      var v1761 = v2460 + v2461;
+      introspect(JAM.policy.p26) {
+        var v1762 = stateCount$$9[2]
+      }
+      var v921 = v1761 + v1762;
+      var estimatedModuleSize$$3 = v921 / 3;
+      var v922 = this.possibleCenters;
+      var max$$8 = v922.length;
+      var index$$40 = 0;
+      var v925 = index$$40 < max$$8;
+      for (;v925;) {
+        var v923 = this.possibleCenters;
+        introspect(JAM.policy.p26) {
+          var center$$2 = v923[index$$40]
+        }
+        var v924 = JAM.call(center$$2.aboutEquals, center$$2, [estimatedModuleSize$$3, centerI$$2, centerJ$$3], JAM.policy.p38);
+        if (v924) {
+          return JAM.new(AlignmentPattern, [centerJ$$3, centerI$$2, estimatedModuleSize$$3], JAM.policy.p38);
+        }
+        index$$40 = index$$40 + 1;
+        v925 = index$$40 < max$$8;
+      }
+      var point$$3 = JAM.new(AlignmentPattern, [centerJ$$3, centerI$$2, estimatedModuleSize$$3], JAM.policy.p38);
+      var v926 = this.possibleCenters;
+      JAM.call(v926.push, v926, [point$$3], JAM.policy.p39);
+      var v1763 = this.resultPointCallback;
+      var v928 = v1763 != null;
+      if (v928) {
+        var v927 = this.resultPointCallback;
+        JAM.call(v927.foundPossibleResultPoint, v927, [point$$3], JAM.policy.p39);
+      }
+    }
+    return null;
+  }
+  function v113(startI$$1, centerJ$$2, maxCount$$2, originalStateCountTotal$$2) {
+    var image$$14 = this.image;
+    var maxI$$2 = qrcode.height;
+    var stateCount$$8 = this.crossCheckStateCount;
+    introspect(JAM.policy.p27) {
+      stateCount$$8[0] = 0;
+    }
+    introspect(JAM.policy.p27) {
+      stateCount$$8[1] = 0;
+    }
+    introspect(JAM.policy.p27) {
+      stateCount$$8[2] = 0;
+    }
+    var i$$57 = startI$$1;
+    var v2462 = i$$57 >= 0;
+    if (v2462) {
+      var v2810 = qrcode.width;
+      var v2756 = i$$57 * v2810;
+      var v2666 = centerJ$$2 + v2756;
+      introspect(JAM.policy.p26) {
+        v2462 = image$$14[v2666];
+      }
+    }
+    var v1764 = v2462;
+    if (v1764) {
+      introspect(JAM.policy.p26) {
+        var v2463 = stateCount$$8[1]
+      }
+      v1764 = v2463 <= maxCount$$2;
+    }
+    var v930 = v1764;
+    for (;v930;) {
+      introspect(JAM.policy.p26) {
+        var v1765 = stateCount$$8[1]
+      }
+      introspect(JAM.policy.p27) {
+        stateCount$$8[1] = v1765 + 1;
+      }
+      i$$57 = i$$57 - 1;
+      var v2464 = i$$57 >= 0;
+      if (v2464) {
+        var v2811 = qrcode.width;
+        var v2757 = i$$57 * v2811;
+        var v2667 = centerJ$$2 + v2757;
+        introspect(JAM.policy.p26) {
+          v2464 = image$$14[v2667];
+        }
+      }
+      var v1766 = v2464;
+      if (v1766) {
+        introspect(JAM.policy.p26) {
+          var v2465 = stateCount$$8[1]
+        }
+        v1766 = v2465 <= maxCount$$2;
+      }
+      v930 = v1766;
+    }
+    var v1767 = i$$57 < 0;
+    var v2467 = !v1767;
+    if (v2467) {
+      introspect(JAM.policy.p26) {
+        var v2466 = stateCount$$8[1]
+      }
+      v1767 = v2466 > maxCount$$2;
+    }
+    var v931 = v1767;
+    if (v931) {
+      return NaN;
+    }
+    var v2468 = i$$57 >= 0;
+    if (v2468) {
+      var v2839 = qrcode.width;
+      var v2812 = i$$57 * v2839;
+      var v2758 = centerJ$$2 + v2812;
+      introspect(JAM.policy.p26) {
+        var v2668 = image$$14[v2758]
+      }
+      v2468 = !v2668;
+    }
+    var v1768 = v2468;
+    if (v1768) {
+      introspect(JAM.policy.p26) {
+        var v2469 = stateCount$$8[0]
+      }
+      v1768 = v2469 <= maxCount$$2;
+    }
+    var v932 = v1768;
+    for (;v932;) {
+      introspect(JAM.policy.p26) {
+        var v1769 = stateCount$$8[0]
+      }
+      introspect(JAM.policy.p27) {
+        stateCount$$8[0] = v1769 + 1;
+      }
+      i$$57 = i$$57 - 1;
+      var v2470 = i$$57 >= 0;
+      if (v2470) {
+        var v2840 = qrcode.width;
+        var v2813 = i$$57 * v2840;
+        var v2759 = centerJ$$2 + v2813;
+        introspect(JAM.policy.p26) {
+          var v2669 = image$$14[v2759]
+        }
+        v2470 = !v2669;
+      }
+      var v1770 = v2470;
+      if (v1770) {
+        introspect(JAM.policy.p26) {
+          var v2471 = stateCount$$8[0]
+        }
+        v1770 = v2471 <= maxCount$$2;
+      }
+      v932 = v1770;
+    }
+    introspect(JAM.policy.p26) {
+      var v1771 = stateCount$$8[0]
+    }
+    var v933 = v1771 > maxCount$$2;
+    if (v933) {
+      return NaN;
+    }
+    i$$57 = startI$$1 + 1;
+    var v2472 = i$$57 < maxI$$2;
+    if (v2472) {
+      var v2814 = qrcode.width;
+      var v2760 = i$$57 * v2814;
+      var v2670 = centerJ$$2 + v2760;
+      introspect(JAM.policy.p26) {
+        v2472 = image$$14[v2670];
+      }
+    }
+    var v1772 = v2472;
+    if (v1772) {
+      introspect(JAM.policy.p26) {
+        var v2473 = stateCount$$8[1]
+      }
+      v1772 = v2473 <= maxCount$$2;
+    }
+    var v934 = v1772;
+    for (;v934;) {
+      introspect(JAM.policy.p26) {
+        var v1773 = stateCount$$8[1]
+      }
+      introspect(JAM.policy.p27) {
+        stateCount$$8[1] = v1773 + 1;
+      }
+      i$$57 = i$$57 + 1;
+      var v2474 = i$$57 < maxI$$2;
+      if (v2474) {
+        var v2815 = qrcode.width;
+        var v2761 = i$$57 * v2815;
+        var v2671 = centerJ$$2 + v2761;
+        introspect(JAM.policy.p26) {
+          v2474 = image$$14[v2671];
+        }
+      }
+      var v1774 = v2474;
+      if (v1774) {
+        introspect(JAM.policy.p26) {
+          var v2475 = stateCount$$8[1]
+        }
+        v1774 = v2475 <= maxCount$$2;
+      }
+      v934 = v1774;
+    }
+    var v1775 = i$$57 == maxI$$2;
+    var v2477 = !v1775;
+    if (v2477) {
+      introspect(JAM.policy.p26) {
+        var v2476 = stateCount$$8[1]
+      }
+      v1775 = v2476 > maxCount$$2;
+    }
+    var v935 = v1775;
+    if (v935) {
+      return NaN;
+    }
+    var v2478 = i$$57 < maxI$$2;
+    if (v2478) {
+      var v2841 = qrcode.width;
+      var v2816 = i$$57 * v2841;
+      var v2762 = centerJ$$2 + v2816;
+      introspect(JAM.policy.p26) {
+        var v2672 = image$$14[v2762]
+      }
+      v2478 = !v2672;
+    }
+    var v1776 = v2478;
+    if (v1776) {
+      introspect(JAM.policy.p26) {
+        var v2479 = stateCount$$8[2]
+      }
+      v1776 = v2479 <= maxCount$$2;
+    }
+    var v936 = v1776;
+    for (;v936;) {
+      introspect(JAM.policy.p26) {
+        var v1777 = stateCount$$8[2]
+      }
+      introspect(JAM.policy.p27) {
+        stateCount$$8[2] = v1777 + 1;
+      }
+      i$$57 = i$$57 + 1;
+      var v2480 = i$$57 < maxI$$2;
+      if (v2480) {
+        var v2842 = qrcode.width;
+        var v2817 = i$$57 * v2842;
+        var v2763 = centerJ$$2 + v2817;
+        introspect(JAM.policy.p26) {
+          var v2673 = image$$14[v2763]
+        }
+        v2480 = !v2673;
+      }
+      var v1778 = v2480;
+      if (v1778) {
+        introspect(JAM.policy.p26) {
+          var v2481 = stateCount$$8[2]
+        }
+        v1778 = v2481 <= maxCount$$2;
+      }
+      v936 = v1778;
+    }
+    introspect(JAM.policy.p26) {
+      var v1779 = stateCount$$8[2]
+    }
+    var v937 = v1779 > maxCount$$2;
+    if (v937) {
+      return NaN;
+    }
+    introspect(JAM.policy.p26) {
+      var v1780 = stateCount$$8[0]
+    }
+    introspect(JAM.policy.p26) {
+      var v1781 = stateCount$$8[1]
+    }
+    var v938 = v1780 + v1781;
+    introspect(JAM.policy.p26) {
+      var v939 = stateCount$$8[2]
+    }
+    var stateCountTotal$$3 = v938 + v939;
+    var v2674 = stateCountTotal$$3 - originalStateCountTotal$$2;
+    var v2482 = JAM.call(Math.abs, Math, [v2674], JAM.policy.p39);
+    var v1782 = 5 * v2482;
+    var v1783 = 2 * originalStateCountTotal$$2;
+    var v940 = v1782 >= v1783;
+    if (v940) {
+      return NaN;
+    }
+    var v941;
+    var v1784 = JAM.call(this.foundPatternCross, this, [stateCount$$8], JAM.policy.p39);
+    if (v1784) {
+      v941 = JAM.call(this.centerFromEnd, this, [stateCount$$8, i$$57], JAM.policy.p38);
+    } else {
+      v941 = NaN;
+    }
+    return v941;
+  }
+  function v112(stateCount$$7) {
+    var moduleSize$$6 = this.moduleSize;
+    var maxVariance$$1 = moduleSize$$6 / 2;
+    var i$$56 = 0;
+    var v943 = i$$56 < 3;
+    for (;v943;) {
+      introspect(JAM.policy.p26) {
+        var v2675 = stateCount$$7[i$$56]
+      }
+      var v2483 = moduleSize$$6 - v2675;
+      var v1785 = JAM.call(Math.abs, Math, [v2483], JAM.policy.p39);
+      var v942 = v1785 >= maxVariance$$1;
+      if (v942) {
+        return false;
+      }
+      i$$56 = i$$56 + 1;
+      v943 = i$$56 < 3;
+    }
+    return true;
+  }
+  function v111(stateCount$$6, end$$3) {
+    introspect(JAM.policy.p26) {
+      var v1786 = stateCount$$6[2]
+    }
+    var v944 = end$$3 - v1786;
+    introspect(JAM.policy.p26) {
+      var v1787 = stateCount$$6[1]
+    }
+    var v945 = v1787 / 2;
+    return v944 - v945;
+  }
+  this.image = image$$13;
+  var v2883 = JAM.new(Array, [], JAM.policy.p40);
+  this.possibleCenters = v2883;
+  this.startX = startX;
+  this.startY = startY;
+  this.width = width$$12;
+  this.height = height$$11;
+  this.moduleSize = moduleSize$$5;
+  var v2884 = JAM.new(Array, [0, 0, 0], JAM.policy.p22);
+  this.crossCheckStateCount = v2884;
+  this.resultPointCallback = resultPointCallback;
+  this.centerFromEnd = v111;
+  this.foundPatternCross = v112;
+  this.crossCheckVertical = v113;
+  this.handlePossibleCenter = v114;
+  this.find = v115;
+  return;
+}
+function QRCodeDataBlockReader(blocks, version$$8, numErrorCorrectionCode) {
+  function v123() {
+    var output$$1 = JAM.new(Array, [], JAM.policy.p40);
+    var MODE_NUMBER = 1;
+    var MODE_ROMAN_AND_NUMBER = 2;
+    var MODE_8BIT_BYTE = 4;
+    var MODE_KANJI = 8;
+    do {
+      var mode$$7 = JAM.call(this.NextMode, this, [], JAM.policy.p40);
+      var v947 = mode$$7 == 0;
+      if (v947) {
+        var v1788 = output$$1.length;
+        var v946 = v1788 > 0;
+        if (v946) {
+          break;
+        } else {
+          throw "Empty data block";
+        }
+      }
+      var v2676 = mode$$7 != MODE_NUMBER;
+      if (v2676) {
+        v2676 = mode$$7 != MODE_ROMAN_AND_NUMBER;
+      }
+      var v2484 = v2676;
+      if (v2484) {
+        v2484 = mode$$7 != MODE_8BIT_BYTE;
+      }
+      var v1789 = v2484;
+      if (v1789) {
+        v1789 = mode$$7 != MODE_KANJI;
+      }
+      var v949 = v1789;
+      if (v949) {
+        var v2764 = "Invalid mode: " + mode$$7;
+        var v2677 = v2764 + " in (block:";
+        var v2678 = this.blockPointer;
+        var v2485 = v2677 + v2678;
+        var v1790 = v2485 + " bit:";
+        var v1791 = this.bitPointer;
+        var v948 = v1790 + v1791;
+        throw v948 + ")";
+      }
+      dataLength = JAM.call(this.getDataLength, this, [mode$$7], JAM.policy.p39);
+      var v950 = dataLength < 1;
+      if (v950) {
+        throw "Invalid data length: " + dataLength;
+      }
+      introspect(JAM.policy.p26) {
+        switch(mode$$7) {
+          case MODE_NUMBER:
+            var temp_str = JAM.call(this.getFigureString, this, [dataLength], JAM.policy.p39);
+            var v951 = temp_str.length;
+            var ta = JAM.new(Array, [v951], JAM.policy.p39);
+            var j$$32 = 0;
+            var v1792 = temp_str.length;
+            var v954 = j$$32 < v1792;
+            for (;v954;) {
+              var v952 = ta;
+              var v953 = j$$32;
+              var v2885 = JAM.call(temp_str.charCodeAt, temp_str, [j$$32], JAM.policy.p39);
+              introspect(JAM.policy.p27) {
+                v952[v953] = v2885;
+              }
+              j$$32 = j$$32 + 1;
+              var v1793 = temp_str.length;
+              v954 = j$$32 < v1793;
+            }
+            JAM.call(output$$1.push, output$$1, [ta], JAM.policy.p39);
+            break;
+          case MODE_ROMAN_AND_NUMBER:
+            temp_str = JAM.call(this.getRomanAndFigureString, this, [dataLength], JAM.policy.p39);
+            var v955 = temp_str.length;
+            ta = JAM.new(Array, [v955], JAM.policy.p39);
+            j$$32 = 0;
+            var v1794 = temp_str.length;
+            var v958 = j$$32 < v1794;
+            for (;v958;) {
+              var v956 = ta;
+              var v957 = j$$32;
+              var v2886 = JAM.call(temp_str.charCodeAt, temp_str, [j$$32], JAM.policy.p39);
+              introspect(JAM.policy.p27) {
+                v956[v957] = v2886;
+              }
+              j$$32 = j$$32 + 1;
+              var v1795 = temp_str.length;
+              v958 = j$$32 < v1795;
+            }
+            JAM.call(output$$1.push, output$$1, [ta], JAM.policy.p39);
+            break;
+          case MODE_8BIT_BYTE:
+            var temp_sbyteArray3 = JAM.call(this.get8bitByteArray, this, [dataLength], JAM.policy.p39);
+            JAM.call(output$$1.push, output$$1, [temp_sbyteArray3], JAM.policy.p39);
+            break;
+          case MODE_KANJI:
+            temp_str = JAM.call(this.getKanjiString, this, [dataLength], JAM.policy.p39);
+            JAM.call(output$$1.push, output$$1, [temp_str], JAM.policy.p39);
+        }
+      }
+    } while (true);
+    return output$$1;
+  }
+  function v122(dataLength$$4) {
+    var length$$14 = dataLength$$4;
+    var intData$$3 = 0;
+    var unicodeString = "";
+    var v961 = length$$14 > 0;
+    do {
+      intData$$3 = JAM.call(getNextBits, null, [13], JAM.policy.p25);
+      var lowerByte = intData$$3 % 192;
+      var higherByte = intData$$3 / 192;
+      var v959 = higherByte << 8;
+      var tempWord = v959 + lowerByte;
+      var shiftjisWord = 0;
+      var v1796 = tempWord + 33088;
+      var v960 = v1796 <= 40956;
+      if (v960) {
+        shiftjisWord = tempWord + 33088;
+      } else {
+        shiftjisWord = tempWord + 49472;
+      }
+      var v1797 = unicodeString;
+      var v1798 = JAM.call(String.fromCharCode, String, [shiftjisWord], JAM.policy.p39);
+      unicodeString = v1797 + v1798;
+      length$$14 = length$$14 - 1;
+      v961 = length$$14 > 0;
+    } while (v961);
+    return unicodeString;
+  }
+  function v121(dataLength$$3) {
+    var length$$13 = dataLength$$3;
+    var intData$$2 = 0;
+    var output = JAM.new(Array, [], JAM.policy.p40);
+    var v962 = length$$13 > 0;
+    do {
+      intData$$2 = JAM.call(this.getNextBits, this, [8], JAM.policy.p25);
+      JAM.call(output.push, output, [intData$$2], JAM.policy.p39);
+      length$$13 = length$$13 - 1;
+      v962 = length$$13 > 0;
+    } while (v962);
+    return output;
+  }
+  function v120(dataLength$$2) {
+    var length$$12 = dataLength$$2;
+    var intData$$1 = 0;
+    var strData$$1 = "";
+    var v969 = length$$12 > 0;
+    do {
+      var v968 = length$$12 >= 3;
+      if (v968) {
+        intData$$1 = JAM.call(this.getNextBits, this, [10], JAM.policy.p25);
+        var v963 = intData$$1 < 100;
+        if (v963) {
+          strData$$1 = strData$$1 + "0";
+        }
+        var v964 = intData$$1 < 10;
+        if (v964) {
+          strData$$1 = strData$$1 + "0";
+        }
+        length$$12 = length$$12 - 3;
+      } else {
+        var v967 = length$$12 == 2;
+        if (v967) {
+          intData$$1 = JAM.call(this.getNextBits, this, [7], JAM.policy.p25);
+          var v965 = intData$$1 < 10;
+          if (v965) {
+            strData$$1 = strData$$1 + "0";
+          }
+          length$$12 = length$$12 - 2;
+        } else {
+          var v966 = length$$12 == 1;
+          if (v966) {
+            intData$$1 = JAM.call(this.getNextBits, this, [4], JAM.policy.p25);
+            length$$12 = length$$12 - 1;
+          }
+        }
+      }
+      strData$$1 = strData$$1 + intData$$1;
+      v969 = length$$12 > 0;
+    } while (v969);
+    return strData$$1;
+  }
+  function v119(dataLength$$1) {
+    var length$$11 = dataLength$$1;
+    var intData = 0;
+    var strData = "";
+    var tableRomanAndFigure = JAM.new(Array, ["0", "1", "2", "3", "4", "5", "6", "7", "8", "9", "A", "B", "C", "D", "E", "F", "G", "H", "I", "J", "K", "L", "M", "N", "O", "P", "Q", "R", "S", "T", "U", "V", "W", "X", "Y", "Z", " ", "$", "%", "*", "+", "-", ".", "/", ":"], JAM.policy.p23);
+    var v973 = length$$11 > 0;
+    do {
+      var v972 = length$$11 > 1;
+      if (v972) {
+        intData = JAM.call(this.getNextBits, this, [11], JAM.policy.p25);
+        var v970 = intData / 45;
+        var firstLetter = JAM.call(Math.floor, Math, [v970], JAM.policy.p39);
+        var secondLetter = intData % 45;
+        introspect(JAM.policy.p26) {
+          var v1799 = tableRomanAndFigure[firstLetter]
+        }
+        strData = strData + v1799;
+        introspect(JAM.policy.p26) {
+          var v1800 = tableRomanAndFigure[secondLetter]
+        }
+        strData = strData + v1800;
+        length$$11 = length$$11 - 2;
+      } else {
+        var v971 = length$$11 == 1;
+        if (v971) {
+          intData = JAM.call(this.getNextBits, this, [6], JAM.policy.p25);
+          introspect(JAM.policy.p26) {
+            var v1801 = tableRomanAndFigure[intData]
+          }
+          strData = strData + v1801;
+          length$$11 = length$$11 - 1;
+        }
+      }
+      v973 = length$$11 > 0;
+    } while (v973);
+    return strData;
+  }
+  function v118(modeIndicator) {
+    var index$$41 = 0;
+    for (;true;) {
+      var v1802 = modeIndicator >> index$$41;
+      var v974 = v1802 == 1;
+      if (v974) {
+        break;
+      }
+      index$$41 = index$$41 + 1;
+    }
+    var v2486 = qrcode.sizeOfDataLengthInfo;
+    var v2487 = this.dataLengthMode;
+    introspect(JAM.policy.p26) {
+      var v1803 = v2486[v2487]
+    }
+    introspect(JAM.policy.p26) {
+      var v975 = v1803[index$$41]
+    }
+    return JAM.call(this.getNextBits, this, [v975], JAM.policy.p39);
+  }
+  function v117() {
+    var v1804 = this.blockPointer;
+    var v2765 = this.blocks;
+    var v2679 = v2765.length;
+    var v2680 = this.numErrorCorrectionCode;
+    var v2488 = v2679 - v2680;
+    var v1805 = v2488 - 2;
+    var v976 = v1804 > v1805;
+    if (v976) {
+      return 0;
+    } else {
+      return JAM.call(this.getNextBits, this, [4], JAM.policy.p25);
+    }
+    return;
+  }
+  function v116(numBits) {
+    var bits$$15 = 0;
+    var v2489 = this.bitPointer;
+    var v1806 = v2489 + 1;
+    var v1002 = numBits < v1806;
+    if (v1002) {
+      var mask$$5 = 0;
+      var i$$60 = 0;
+      var v977 = i$$60 < numBits;
+      for (;v977;) {
+        var v1807 = 1 << i$$60;
+        mask$$5 = mask$$5 + v1807;
+        i$$60 = i$$60 + 1;
+        v977 = i$$60 < numBits;
+      }
+      var v2681 = this.bitPointer;
+      var v2490 = v2681 - numBits;
+      var v1808 = v2490 + 1;
+      mask$$5 = mask$$5 << v1808;
+      var v2491 = this.blocks;
+      var v2492 = this.blockPointer;
+      introspect(JAM.policy.p26) {
+        var v1809 = v2491[v2492]
+      }
+      var v978 = v1809 & mask$$5;
+      var v2493 = this.bitPointer;
+      var v1810 = v2493 - numBits;
+      var v979 = v1810 + 1;
+      bits$$15 = v978 >> v979;
+      var v1811 = this.bitPointer;
+      this.bitPointer = v1811 - numBits;
+      return bits$$15;
+    } else {
+      var v2682 = this.bitPointer;
+      var v2494 = v2682 + 1;
+      var v1812 = v2494 + 8;
+      var v1001 = numBits < v1812;
+      if (v1001) {
+        var mask1 = 0;
+        i$$60 = 0;
+        var v2495 = this.bitPointer;
+        var v1813 = v2495 + 1;
+        var v980 = i$$60 < v1813;
+        for (;v980;) {
+          var v1814 = 1 << i$$60;
+          mask1 = mask1 + v1814;
+          i$$60 = i$$60 + 1;
+          var v2496 = this.bitPointer;
+          var v1815 = v2496 + 1;
+          v980 = i$$60 < v1815;
+        }
+        var v2497 = this.blocks;
+        var v2498 = this.blockPointer;
+        introspect(JAM.policy.p26) {
+          var v1816 = v2497[v2498]
+        }
+        var v981 = v1816 & mask1;
+        var v2499 = this.bitPointer;
+        var v1817 = v2499 + 1;
+        var v982 = numBits - v1817;
+        bits$$15 = v981 << v982;
+        var v1818 = this.blockPointer;
+        this.blockPointer = v1818 + 1;
+        var v2683 = this.blocks;
+        var v2684 = this.blockPointer;
+        introspect(JAM.policy.p26) {
+          var v2500 = v2683[v2684]
+        }
+        var v2818 = this.bitPointer;
+        var v2766 = v2818 + 1;
+        var v2685 = numBits - v2766;
+        var v2501 = 8 - v2685;
+        var v1819 = v2500 >> v2501;
+        bits$$15 = bits$$15 + v1819;
+        var v983 = this.bitPointer;
+        var v984 = numBits % 8;
+        this.bitPointer = v983 - v984;
+        var v1820 = this.bitPointer;
+        var v986 = v1820 < 0;
+        if (v986) {
+          var v985 = this.bitPointer;
+          this.bitPointer = 8 + v985;
+        }
+        return bits$$15;
+      } else {
+        var v2686 = this.bitPointer;
+        var v2502 = v2686 + 1;
+        var v1821 = v2502 + 16;
+        var v1000 = numBits < v1821;
+        if (v1000) {
+          mask1 = 0;
+          var mask3 = 0;
+          i$$60 = 0;
+          var v2503 = this.bitPointer;
+          var v1822 = v2503 + 1;
+          var v987 = i$$60 < v1822;
+          for (;v987;) {
+            var v1823 = 1 << i$$60;
+            mask1 = mask1 + v1823;
+            i$$60 = i$$60 + 1;
+            var v2504 = this.bitPointer;
+            var v1824 = v2504 + 1;
+            v987 = i$$60 < v1824;
+          }
+          var v2505 = this.blocks;
+          var v2506 = this.blockPointer;
+          introspect(JAM.policy.p26) {
+            var v1825 = v2505[v2506]
+          }
+          var v988 = v1825 & mask1;
+          var v2507 = this.bitPointer;
+          var v1826 = v2507 + 1;
+          var v989 = numBits - v1826;
+          var bitsFirstBlock = v988 << v989;
+          var v1827 = this.blockPointer;
+          this.blockPointer = v1827 + 1;
+          var v1828 = this.blocks;
+          var v1829 = this.blockPointer;
+          introspect(JAM.policy.p26) {
+            var v990 = v1828[v1829]
+          }
+          var v2687 = this.bitPointer;
+          var v2508 = v2687 + 1;
+          var v1830 = v2508 + 8;
+          var v991 = numBits - v1830;
+          var bitsSecondBlock = v990 << v991;
+          var v1831 = this.blockPointer;
+          this.blockPointer = v1831 + 1;
+          i$$60 = 0;
+          var v2767 = this.bitPointer;
+          var v2688 = v2767 + 1;
+          var v2509 = v2688 + 8;
+          var v1832 = numBits - v2509;
+          var v992 = i$$60 < v1832;
+          for (;v992;) {
+            var v1833 = 1 << i$$60;
+            mask3 = mask3 + v1833;
+            i$$60 = i$$60 + 1;
+            var v2768 = this.bitPointer;
+            var v2689 = v2768 + 1;
+            var v2510 = v2689 + 8;
+            var v1834 = numBits - v2510;
+            v992 = i$$60 < v1834;
+          }
+          var v2819 = this.bitPointer;
+          var v2769 = v2819 + 1;
+          var v2690 = v2769 + 8;
+          var v2511 = numBits - v2690;
+          var v1835 = 8 - v2511;
+          mask3 = mask3 << v1835;
+          var v2512 = this.blocks;
+          var v2513 = this.blockPointer;
+          introspect(JAM.policy.p26) {
+            var v1836 = v2512[v2513]
+          }
+          var v993 = v1836 & mask3;
+          var v2770 = this.bitPointer;
+          var v2691 = v2770 + 1;
+          var v2514 = v2691 + 8;
+          var v1837 = numBits - v2514;
+          var v994 = 8 - v1837;
+          var bitsThirdBlock = v993 >> v994;
+          var v995 = bitsFirstBlock + bitsSecondBlock;
+          bits$$15 = v995 + bitsThirdBlock;
+          var v996 = this.bitPointer;
+          var v1838 = numBits - 8;
+          var v997 = v1838 % 8;
+          this.bitPointer = v996 - v997;
+          var v1839 = this.bitPointer;
+          var v999 = v1839 < 0;
+          if (v999) {
+            var v998 = this.bitPointer;
+            this.bitPointer = 8 + v998;
+          }
+          return bits$$15;
+        } else {
+          return 0;
+        }
+      }
+    }
+    return;
+  }
+  this.blockPointer = 0;
+  this.bitPointer = 7;
+  this.dataLength = 0;
+  this.blocks = blocks;
+  this.numErrorCorrectionCode = numErrorCorrectionCode;
+  var v1005 = version$$8 <= 9;
+  if (v1005) {
+    this.dataLengthMode = 0;
+  } else {
+    var v1840 = version$$8 >= 10;
+    if (v1840) {
+      v1840 = version$$8 <= 26;
+    }
+    var v1004 = v1840;
+    if (v1004) {
+      this.dataLengthMode = 1;
+    } else {
+      var v1841 = version$$8 >= 27;
+      if (v1841) {
+        v1841 = version$$8 <= 40;
+      }
+      var v1003 = v1841;
+      if (v1003) {
+        this.dataLengthMode = 2;
+      }
+    }
+  }
+  this.getNextBits = v116;
+  this.NextMode = v117;
+  this.getDataLength = v118;
+  this.getRomanAndFigureString = v119;
+  this.getFigureString = v120;
+  this.get8bitByteArray = v121;
+  this.getKanjiString = v122;
+  JAM.call(this.__defineGetter__, this, ["DataByte", v123], JAM.policy.p23);
+  return;
+}
+function dragenter(e$$7) {
+  JAM.call(e$$7.stopPropagation, e$$7, [], JAM.policy.p40);
+  JAM.call(e$$7.preventDefault, e$$7, [], JAM.policy.p40);
+  return;
+}
+function dragover(e$$8) {
+  JAM.call(e$$8.stopPropagation, e$$8, [], JAM.policy.p40);
+  JAM.call(e$$8.preventDefault, e$$8, [], JAM.policy.p40);
+  return;
+}
+function drop(e$$9) {
+  JAM.call(e$$9.stopPropagation, e$$9, [], JAM.policy.p40);
+  JAM.call(e$$9.preventDefault, e$$9, [], JAM.policy.p40);
+  var dt = e$$9.dataTransfer;
+  var files = dt.files;
+  JAM.call(handleFiles, null, [files], JAM.policy.p39);
+  return;
+}
+function handleFiles(f) {
+  function v125(theFile) {
+    function v124(e$$10) {
+      var v1842 = e$$10.target;
+      var v1006 = v1842.result;
+      JAM.call(qrcode.decode, qrcode, [v1006], JAM.policy.p39);
+      return;
+    }
+    return v124;
+  }
+  var o$$1 = [];
+  var i$$61 = 0;
+  var v1843 = f.length;
+  var v1009 = i$$61 < v1843;
+  for (;v1009;) {
+    var reader$$2 = JAM.new(FileReader, [], JAM.policy.p40);
+    var v1007 = reader$$2;
+    introspect(JAM.policy.p26) {
+      var v1844 = f[i$$61]
+    }
+    var v2887 = JAM.call(v125, null, [v1844], JAM.policy.p39);
+    JAM.set(v1007, "onload", v2887);
+    introspect(JAM.policy.p26) {
+      var v1008 = f[i$$61]
+    }
+    JAM.call(reader$$2.readAsDataURL, reader$$2, [v1008], JAM.policy.p39);
+    i$$61 = i$$61 + 1;
+    var v1845 = f.length;
+    v1009 = i$$61 < v1845;
+  }
+  return;
+}
+function read(a$$9) {
+  JAM.call(alert, null, [a$$9], JAM.policy.p39);
+  return;
+}
+function load() {
+  qrcode.callback = read;
+  var v1010 = JAM.call(document.getElementById, document, ["imgpath"], JAM.policy.p24);
+  var img$$2 = v1010.value;
+  JAM.call(qrcode.decode, qrcode, [img$$2], JAM.policy.p39);
+  return;
+}
+function passLine(stringPixels) {
+  var coll = JAM.call(stringPixels.split, stringPixels, ["-"], JAM.policy.p24);
+  var i$$62 = 0;
+  var v1022 = i$$62 < 320;
+  for (;v1022;) {
+    introspect(JAM.policy.p26) {
+      var v1011 = coll[i$$62]
+    }
+    var intVal = JAM.call(parseInt, null, [v1011], JAM.policy.p39);
+    var v1012 = intVal >> 16;
+    r = v1012 & 255;
+    var v1013 = intVal >> 8;
+    g = v1013 & 255;
+    b = intVal & 255;
+    var v1014 = imageData.data;
+    var v1015 = c + 0;
+    JAM.set(v1014, v1015, r, JAM.policy.p27);
+    var v1016 = imageData.data;
+    var v1017 = c + 1;
+    JAM.set(v1016, v1017, g, JAM.policy.p27);
+    var v1018 = imageData.data;
+    var v1019 = c + 2;
+    JAM.set(v1018, v1019, b, JAM.policy.p27);
+    var v1020 = imageData.data;
+    var v1021 = c + 3;
+    JAM.set(v1020, v1021, 255, JAM.policy.p27);
+    c = c + 4;
+    i$$62 = i$$62 + 1;
+    v1022 = i$$62 < 320;
+  }
+  var v2515 = 320 * 240;
+  var v1846 = v2515 * 4;
+  var v1023 = c >= v1846;
+  if (v1023) {
+    c = 0;
+    JAM.call(gCtx.putImageData, gCtx, [imageData, 0, 0], JAM.policy.p41);
+  }
+  return;
+}
+function captureToCanvas() {
+  flash = JAM.call(document.getElementById, document, ["embedflash"], JAM.policy.p24);
+  JAM.call(flash.ccCapture, flash, [], JAM.policy.p40);
+  JAM.call(qrcode.decode, qrcode, [], JAM.policy.p40);
+  return;
+}
+GridSampler = {};
+GridSampler.checkAndNudgePoints = v126;
+GridSampler.sampleGrid3 = v127;
+GridSampler.sampleGridx = v128;
+var v1024 = Version;
+var v2888 = JAM.new(Array, [31892, 34236, 39577, 42195, 48118, 51042, 55367, 58893, 63784, 68472, 70749, 76311, 79154, 84390, 87683, 92361, 96236, 102084, 102881, 110507, 110734, 117786, 119615, 126325, 127568, 133589, 136944, 141498, 145311, 150283, 152622, 158308, 161089, 167017], JAM.policy.p22);
+v1024.VERSION_DECODE_INFO = v2888;
+var v1025 = Version;
+var v2889 = JAM.call(buildVersions, null, [], JAM.policy.p40);
+v1025.VERSIONS = v2889;
+Version.getVersionForNumber = v129;
+Version.getProvisionalVersionForDimension = v130;
+Version.decodeVersionInformation = v131;
+PerspectiveTransform.quadrilateralToQuadrilateral = v132;
+PerspectiveTransform.squareToQuadrilateral = v133;
+PerspectiveTransform.quadrilateralToSquare = v134;
+var FORMAT_INFO_MASK_QR = 21522;
+var v1026 = JAM.new(Array, [21522, 0], JAM.policy.p22);
+var v1027 = JAM.new(Array, [20773, 1], JAM.policy.p22);
+var v1028 = JAM.new(Array, [24188, 2], JAM.policy.p22);
+var v1029 = JAM.new(Array, [23371, 3], JAM.policy.p22);
+var v1030 = JAM.new(Array, [17913, 4], JAM.policy.p22);
+var v1031 = JAM.new(Array, [16590, 5], JAM.policy.p22);
+var v1032 = JAM.new(Array, [20375, 6], JAM.policy.p22);
+var v1033 = JAM.new(Array, [19104, 7], JAM.policy.p22);
+var v1034 = JAM.new(Array, [30660, 8], JAM.policy.p22);
+var v1035 = JAM.new(Array, [29427, 9], JAM.policy.p22);
+var v1036 = JAM.new(Array, [32170, 10], JAM.policy.p22);
+var v1037 = JAM.new(Array, [30877, 11], JAM.policy.p22);
+var v1038 = JAM.new(Array, [26159, 12], JAM.policy.p22);
+var v1039 = JAM.new(Array, [25368, 13], JAM.policy.p22);
+var v1040 = JAM.new(Array, [27713, 14], JAM.policy.p22);
+var v1041 = JAM.new(Array, [26998, 15], JAM.policy.p22);
+var v1042 = JAM.new(Array, [5769, 16], JAM.policy.p22);
+var v1043 = JAM.new(Array, [5054, 17], JAM.policy.p22);
+var v1044 = JAM.new(Array, [7399, 18], JAM.policy.p22);
+var v1045 = JAM.new(Array, [6608, 19], JAM.policy.p22);
+var v1046 = JAM.new(Array, [1890, 20], JAM.policy.p22);
+var v1047 = JAM.new(Array, [597, 21], JAM.policy.p22);
+var v1048 = JAM.new(Array, [3340, 22], JAM.policy.p22);
+var v1049 = JAM.new(Array, [2107, 23], JAM.policy.p22);
+var v1050 = JAM.new(Array, [13663, 24], JAM.policy.p22);
+var v1051 = JAM.new(Array, [12392, 25], JAM.policy.p22);
+var v1052 = JAM.new(Array, [16177, 26], JAM.policy.p22);
+var v1053 = JAM.new(Array, [14854, 27], JAM.policy.p22);
+var v1054 = JAM.new(Array, [9396, 28], JAM.policy.p22);
+var v1055 = JAM.new(Array, [8579, 29], JAM.policy.p22);
+var v1056 = JAM.new(Array, [11994, 30], JAM.policy.p22);
+var v1057 = JAM.new(Array, [11245, 31], JAM.policy.p22);
+var FORMAT_INFO_DECODE_LOOKUP = JAM.new(Array, [v1026, v1027, v1028, v1029, v1030, v1031, v1032, v1033, v1034, v1035, v1036, v1037, v1038, v1039, v1040, v1041, v1042, v1043, v1044, v1045, v1046, v1047, v1048, v1049, v1050, v1051, v1052, v1053, v1054, v1055, v1056, v1057], JAM.policy.p38);
+var BITS_SET_IN_HALF_BYTE = JAM.new(Array, [0, 1, 1, 2, 1, 2, 2, 3, 1, 2, 2, 3, 2, 3, 3, 4], JAM.policy.p22);
+FormatInformation.numBitsDiffering = v135;
+FormatInformation.decodeFormatInformation = v136;
+FormatInformation.doDecodeFormatInformation = v137;
+ErrorCorrectionLevel.forBits = v138;
+var L = JAM.new(ErrorCorrectionLevel, [0, 1, "L"], JAM.policy.p22);
+var M = JAM.new(ErrorCorrectionLevel, [1, 0, "M"], JAM.policy.p22);
+var Q = JAM.new(ErrorCorrectionLevel, [2, 3, "Q"], JAM.policy.p22);
+var H = JAM.new(ErrorCorrectionLevel, [3, 2, "H"], JAM.policy.p22);
+var FOR_BITS = JAM.new(Array, [M, L, H, Q], JAM.policy.p38);
+DataBlock.getDataBlocks = v139;
+DataMask = {};
+DataMask.forReference = v140;
+var v1058 = DataMask;
+var v1847 = JAM.new(DataMask000, [], JAM.policy.p40);
+var v1848 = JAM.new(DataMask001, [], JAM.policy.p40);
+var v1849 = JAM.new(DataMask010, [], JAM.policy.p40);
+var v1850 = JAM.new(DataMask011, [], JAM.policy.p40);
+var v1851 = JAM.new(DataMask100, [], JAM.policy.p40);
+var v1852 = JAM.new(DataMask101, [], JAM.policy.p40);
+var v1853 = JAM.new(DataMask110, [], JAM.policy.p40);
+var v1854 = JAM.new(DataMask111, [], JAM.policy.p40);
+var v2890 = JAM.new(Array, [v1847, v1848, v1849, v1850, v1851, v1852, v1853, v1854], JAM.policy.p38);
+v1058.DATA_MASKS = v2890;
+var v1059 = GF256;
+var v2891 = JAM.new(GF256, [285], JAM.policy.p25);
+v1059.QR_CODE_FIELD = v2891;
+var v1060 = GF256;
+var v2892 = JAM.new(GF256, [301], JAM.policy.p25);
+v1060.DATA_MATRIX_FIELD = v2892;
+GF256.addOrSubtract = v141;
+Decoder = {};
+var v1061 = Decoder;
+var v1855 = GF256.QR_CODE_FIELD;
+var v2893 = JAM.new(ReedSolomonDecoder, [v1855], JAM.policy.p39);
+v1061.rsDecoder = v2893;
+Decoder.correctErrors = v142;
+Decoder.decode = v143;
+qrcode = {};
+qrcode.imagedata = null;
+qrcode.width = 0;
+qrcode.height = 0;
+qrcode.qrCodeSymbol = null;
+qrcode.debug = false;
+var v1062 = [10, 9, 8, 8];
+var v1063 = [12, 11, 16, 10];
+var v1064 = [14, 13, 16, 12];
+qrcode.sizeOfDataLengthInfo = [v1062, v1063, v1064];
+qrcode.callback = null;
+qrcode.decode = v145;
+qrcode.decode_utf8 = v146;
+qrcode.process = v147;
+qrcode.getPixel = v148;
+qrcode.binarize = v149;
+qrcode.getMiddleBrightnessPerArea = v150;
+qrcode.grayScaleToBitmap = v151;
+qrcode.grayscale = v152;
+var v1065 = Array.prototype;
+v1065.remove = v153;
+var MIN_SKIP = 3;
+var MAX_MODULES = 57;
+var INTEGER_MATH_SHIFT = 8;
+var CENTER_QUORUM = 2;
+qrcode.orderBestPatterns = v154;
+var gCtx = null;
+var gCanvas = null;
+var imageData = null;
+var ii = 0;
+var jj = 0;
+var c = 0;
+var v1066 = JAM.call(document.getElementById, document, ["decode"], JAM.policy.p24);
+JAM.set(v1066, "onclick", load)
+
+JAM.stopProfile('load');

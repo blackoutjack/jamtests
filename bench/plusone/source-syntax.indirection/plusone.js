@@ -1,0 +1,538 @@
+function v4() {
+  function v3(url$$6) {
+    JAM.call(initialize, null, [url$$6], JAM.policy.p3);
+    return;
+  }
+  function v2(features$$7, opt_callback$$2) {
+    var urlToLoad;
+    var v72 = !features$$7;
+    var v125 = !v72;
+    if (v125) {
+      var v124 = features$$7.length;
+      v72 = v124 == 0;
+    }
+    var v23 = v72;
+    if (v23) {
+      var v5 = ["Cannot load empty features."];
+      JAM.call(warn, null, [v5], JAM.policy.p3);
+    } else {
+      var JSCompiler_inline_result$$6;
+      var features$$inline_18 = features$$7;
+      var set$$inline_19 = JAM.call(toSet, null, [loadedFeatures], JAM.policy.p3);
+      var isSubset$$inline_20 = !0;
+      var i$$inline_21 = 0;
+      var v73 = isSubset$$inline_20;
+      if (v73) {
+        var v126 = features$$inline_18.length;
+        v73 = i$$inline_21 < v126;
+      }
+      var v7 = v73;
+      for (;v7;) {
+        var v6 = isSubset$$inline_20;
+        if (v6) {
+          var v74 = features$$inline_18[i$$inline_21];
+          v6 = set$$inline_19[v74];
+        }
+        isSubset$$inline_20 = v6;
+        i$$inline_21 = i$$inline_21 + 1;
+        var v75 = isSubset$$inline_20;
+        if (v75) {
+          var v127 = features$$inline_18.length;
+          v75 = i$$inline_21 < v127;
+        }
+        v7 = v75;
+      }
+      JSCompiler_inline_result$$6 = isSubset$$inline_20;
+      if (JSCompiler_inline_result$$6) {
+        var v76 = JAM.call(features$$7.join, features$$7, [","], JAM.policy.p2);
+        var v8 = ["Cannot load loaded features [", v76, "]."];
+        JAM.call(warn, null, [v8], JAM.policy.p3);
+      } else {
+        var v77 = type$$25 === "s";
+        var v128 = !v77;
+        if (v128) {
+          v77 = type$$25 === "i";
+        }
+        var v22 = v77;
+        if (v22) {
+          JSCompiler_inline_label_processUrlFromMap_25: {
+            var features$$inline_23 = features$$7;
+            var v9 = descriptors;
+            var v10 = JAM.call(toKey, null, [features$$inline_23, loadedFeatures], JAM.policy.p3);
+            var version$$inline_24 = v9[v10];
+            if (version$$inline_24) {
+              var v78 = host + "/";
+              var v11 = v78 + version$$inline_24;
+              urlToLoad = v11 + ".js";
+              break JSCompiler_inline_label_processUrlFromMap_25;
+            } else {
+              var v79 = JAM.call(features$$inline_23.join, features$$inline_23, [","], JAM.policy.p2);
+              var v80 = JAM.call(loadedFeatures.join, loadedFeatures, [","], JAM.policy.p2);
+              var v12 = ["Cannot find features [", v79, "], except [", v80, "]."];
+              JAM.call(warn, null, [v12], JAM.policy.p3);
+            }
+            urlToLoad = void 0;
+          }
+        } else {
+          var v21 = type$$25 === "d";
+          if (v21) {
+            var v13 = host + "/";
+            var v14 = JAM.call(toKey, null, [features$$7, loadedFeatures], JAM.policy.p3);
+            var url$$inline_27 = v13 + v14;
+            var v129 = ".js?container=" + container;
+            var v81 = v129 + "&c=2";
+            url$$inline_27 = url$$inline_27 + v81;
+            if (repository) {
+              var v130 = "&r=" + repository;
+              url$$inline_27 = url$$inline_27 + v130;
+            }
+            urlToLoad = url$$inline_27;
+          } else {
+            var v82 = type$$25 === "r";
+            var v131 = !v82;
+            if (v131) {
+              v82 = type$$25 === "f";
+            }
+            var v20 = v82;
+            if (v20) {
+              var v83 = host + "/";
+              var v15 = v83 + repository;
+              var JSCompiler_temp_const$$39 = v15 + "/";
+              var JSCompiler_inline_result$$40;
+              var opt_loadFeatures$$inline_42 = loadedFeatures;
+              var v16 = JAM.call(normalize, null, [features$$7], JAM.policy.p3);
+              var result$$inline_43 = JAM.call(v16.join, v16, ["__"], JAM.policy.p2);
+              var v84 = opt_loadFeatures$$inline_42;
+              if (v84) {
+                var v132 = opt_loadFeatures$$inline_42.length;
+                v84 = v132 > 0;
+              }
+              var v17 = v84;
+              if (v17) {
+                var v133 = result$$inline_43;
+                var v164 = JAM.call(normalize, null, [opt_loadFeatures$$inline_42], JAM.policy.p3);
+                var v158 = JAM.call(v164.join, v164, ["__"], JAM.policy.p2);
+                var v134 = "--" + v158;
+                result$$inline_43 = v133 + v134;
+              }
+              JSCompiler_inline_result$$40 = result$$inline_43;
+              var v18 = JSCompiler_temp_const$$39 + JSCompiler_inline_result$$40;
+              urlToLoad = v18 + ".js";
+            } else {
+              var v85 = JAM.call(features$$7.join, features$$7, [","], JAM.policy.p2);
+              var v19 = ["Cannot respond for features [", v85, "]."];
+              JAM.call(warn, null, [v19], JAM.policy.p3);
+            }
+          }
+        }
+      }
+    }
+    var features$$inline_29 = features$$7;
+    var opt_url$$inline_30 = urlToLoad;
+    var opt_callback$$inline_31 = opt_callback$$2;
+    if (opt_url$$inline_30) {
+      var JSCompiler_temp_const$$34;
+      var jsl$$inline_47 = window["___jsl"];
+      var v86 = jsl$$inline_47 && opt_callback$$inline_31;
+      if (v86) {
+        v86 = 1;
+      }
+      var v25 = v86;
+      if (v25) {
+        var v24 = jsl$$inline_47["c"];
+        if (v24) {
+          throw "Cannot continue until a pending callback completes.";
+        }
+        jsl$$inline_47["c"] = opt_callback$$inline_31;
+        jsl$$inline_47["o"] = 1;
+      }
+      JSCompiler_temp_const$$34 = void 0;
+      var JSCompiler_inline_result$$35;
+      var url$$inline_49 = opt_url$$inline_30;
+      var JSCompiler_inline_result$$54;
+      JSCompiler_inline_label_canLoadUrl_58: {
+        var url$$inline_55 = url$$inline_49;
+        var v87 = type$$25 === "s";
+        var v135 = !v87;
+        if (v135) {
+          v87 = type$$25 === "r";
+        }
+        var v26 = v87;
+        if (v26) {
+          JSCompiler_inline_result$$54 = JAM.call(url$$inline_55.match, url$$inline_55, [VALID_SCS_URL_REGEX], JAM.policy.p3);
+          break JSCompiler_inline_label_canLoadUrl_58;
+        }
+        var JSCompiler_inline_result$$inline_56;
+        var jsl$$inline_57 = window["___jsl"];
+        var v27 = jsl$$inline_57;
+        if (v27) {
+          var v136 = jsl$$inline_57["m"];
+          var v88 = v136 == "dev";
+          var v138 = !v88;
+          if (v138) {
+            var v137 = jsl$$inline_57["m"];
+            v88 = v137 == "google";
+          }
+          v27 = v88;
+        }
+        JSCompiler_inline_result$$inline_56 = v27;
+        var v28 = JSCompiler_inline_result$$inline_56;
+        if (v28) {
+          v28 = JAM.call(url$$inline_55.match, url$$inline_55, [VALID_GOOGLE_URL_REGEX], JAM.policy.p3);
+        }
+        JSCompiler_inline_result$$54 = v28;
+      }
+      var v30 = !JSCompiler_inline_result$$54;
+      if (v30) {
+        var v29 = "Cannot load url " + url$$inline_49;
+        throw v29 + ".";
+      }
+      var v33 = JAM.call(shouldLoadSync, null, [], JAM.policy.p3);
+      if (v33) {
+        var v89 = '<script src="' + url$$inline_49;
+        var v31 = v89 + '">\x3c/script>';
+        JAM.call(document.write, document, [v31], JAM.policy.p3);
+      } else {
+        var script$$inline_50 = JAM.call(document.createElement, document, ["script"], JAM.policy.p3);
+        JAM.call(script$$inline_50.setAttribute, script$$inline_50, ["src", url$$inline_49], JAM.policy.p2);
+        var v90 = JAM.call(document.getElementsByTagName, document, ["head"], JAM.policy.p2);
+        var v32 = v90[0];
+        JAM.call(v32.appendChild, v32, [script$$inline_50], JAM.policy.p3);
+      }
+      JSCompiler_inline_result$$35 = void 0;
+      JSCompiler_temp_const$$34;
+      var JSCompiler_temp_const$$36 = JSCompiler_inline_result$$35;
+      var JSCompiler_inline_result$$37;
+      var v34 = JAM.call(loadedFeatures.concat, loadedFeatures, [features$$inline_29], JAM.policy.p3);
+      loadedFeatures = JAM.call(normalize, null, [v34], JAM.policy.p3);
+      JSCompiler_inline_result$$37 = void 0;
+    } else {
+      if (opt_callback$$inline_31) {
+        JAM.call(opt_callback$$inline_31, null, [], JAM.policy.p3);
+      }
+    }
+    return;
+  }
+  function toKey(reqFeatures, opt_loadFeatures) {
+    var v35 = JAM.call(normalize, null, [reqFeatures], JAM.policy.p3);
+    var result = JAM.call(v35.join, v35, [":"], JAM.policy.p2);
+    var v91 = opt_loadFeatures;
+    if (v91) {
+      var v139 = opt_loadFeatures.length;
+      v91 = v139 > 0;
+    }
+    var v36 = v91;
+    if (v36) {
+      var v140 = result;
+      var v165 = JAM.call(normalize, null, [opt_loadFeatures], JAM.policy.p3);
+      var v159 = JAM.call(v165.join, v165, [":"], JAM.policy.p2);
+      var v141 = "!" + v159;
+      result = v140 + v141;
+    }
+    return result;
+  }
+  function toSet(array$$9) {
+    var result$$2 = {};
+    var i$$1 = 0;
+    var v92 = array$$9.length;
+    var v38 = i$$1 < v92;
+    for (;v38;) {
+      var v37 = array$$9[i$$1];
+      JAM.set(result$$2, v37, !0);
+      i$$1 = i$$1 + 1;
+      var v93 = array$$9.length;
+      v38 = i$$1 < v93;
+    }
+    return result$$2;
+  }
+  function normalize(features$$1) {
+    var result$$3 = [];
+    var s$$2;
+    var v39 = JAM.call(toSet, null, [features$$1], JAM.policy.p3);
+    for (s$$2 in v39) {
+      JAM.call(result$$3.push, result$$3, [s$$2], JAM.policy.p3);
+    }
+    return JAM.call(result$$3.sort, result$$3, [], JAM.policy.p3);
+  }
+  function shouldLoadSync() {
+    var v94 = window["___gapisync"];
+    var v95 = !0;
+    var v40 = v94 === v95;
+    if (v40) {
+      return!0;
+    }
+    var metas = JAM.call(document.getElementsByTagName, document, ["meta"], JAM.policy.p2);
+    var i$$3 = 0;
+    var v96 = metas.length;
+    var v42 = i$$3 < v96;
+    for (;v42;) {
+      var meta = metas[i$$3];
+      var v142 = JAM.call(meta.getAttribute, meta, ["name"], JAM.policy.p2);
+      var v97 = "generator" == v142;
+      var v144 = !v97;
+      if (v144) {
+        var v143 = JAM.call(meta.getAttribute, meta, ["content"], JAM.policy.p2);
+        v97 = "blogger" == v143;
+      }
+      var v41 = v97;
+      if (v41) {
+        return!0;
+      }
+      i$$3 = i$$3 + 1;
+      var v98 = metas.length;
+      v42 = i$$3 < v98;
+    }
+    return!1;
+  }
+  function warn(values$$4) {
+    if (console) {
+      var v99 = JAM.call(values$$4.join, values$$4, [""], JAM.policy.p2);
+      JAM.call(console.warn, console, [v99], JAM.policy.p3);
+    }
+    return;
+  }
+  function initDescriptors(values$$5) {
+    var i$$4 = 0;
+    var v100 = values$$5.length;
+    var v46 = i$$4 < v100;
+    for (;v46;) {
+      var value$$27 = values$$5[i$$4];
+      var versionParts = JAM.call(value$$27.split, value$$27, ["@"], JAM.policy.p2);
+      var JSCompiler_temp_const$$7 = descriptors;
+      var JSCompiler_inline_result$$8;
+      var v43 = versionParts[0];
+      var featureParts$$inline_12 = JAM.call(v43.split, v43, ["!"], JAM.policy.p2);
+      var v101 = featureParts$$inline_12[0];
+      var v44 = JAM.call(v101.split, v101, [":"], JAM.policy.p2);
+      var req$$inline_13 = JAM.call(normalize, null, [v44], JAM.policy.p3);
+      var v45 = featureParts$$inline_12[1];
+      if (v45) {
+        var v145 = featureParts$$inline_12[1];
+        var v102 = JAM.call(v145.split, v145, [":"], JAM.policy.p2);
+        v45 = JAM.call(normalize, null, [v102], JAM.policy.p3);
+      }
+      var loaded$$inline_14 = v45;
+      JSCompiler_inline_result$$8 = JAM.call(toKey, null, [req$$inline_13, loaded$$inline_14], JAM.policy.p3);
+      JAM.set(JSCompiler_temp_const$$7, JSCompiler_inline_result$$8, versionParts[1]);
+      i$$4 = i$$4 + 1;
+      var v103 = values$$5.length;
+      v46 = i$$4 < v103;
+    }
+    return;
+  }
+  function getLastHint(pattern$$1) {
+    var r = JAM.call(parentUrl.match, parentUrl, [pattern$$1], JAM.policy.p3);
+    var v47 = r;
+    if (v47) {
+      var v146 = r.length;
+      var v104 = v146 - 1;
+      v47 = r[v104];
+    }
+    return v47;
+  }
+  function initialize(url$$5) {
+    host = type$$25 = 0;
+    descriptors = {};
+    loadedFeatures = [];
+    var v48 = window.console;
+    var v106 = !v48;
+    if (v106) {
+      var v105 = window.opera;
+      if (v105) {
+        var v147 = window.opera;
+        v105 = v147.postError;
+      }
+      v48 = v105;
+    }
+    console = v48;
+    parentUrl = url$$5;
+    var JSCompiler_temp$$5;
+    var v107 = JAM.call(getLastHint, null, [QUERY_PATTERN], JAM.policy.p3);
+    var v148 = !v107;
+    if (v148) {
+      v107 = JAM.call(getLastHint, null, [FRAGMENT_PATTERN], JAM.policy.p3);
+    }
+    var v50 = JSCompiler_temp$$5 = v107;
+    if (v50) {
+    } else {
+      var jsl$$inline_16 = window["___jsl"];
+      var v49 = jsl$$inline_16;
+      if (v49) {
+        v49 = jsl$$inline_16["h"];
+      }
+      JSCompiler_temp$$5 = v49;
+    }
+    var hint = JSCompiler_temp$$5;
+    if (hint) {
+      var parts = JAM.call(hint.split, hint, [";"], JAM.policy.p2);
+      type$$25 = parts[0];
+      var v51;
+      var v109 = type$$25 === "s";
+      if (v109) {
+        host = "https://ssl.gstatic.com/webclient/js";
+        var v149 = JAM.call(parts.slice, parts, [1], JAM.policy.p2);
+        v51 = JAM.call(initDescriptors, null, [v149], JAM.policy.p3);
+      } else {
+        var v108;
+        var v151 = type$$25 === "i";
+        if (v151) {
+          host = parts[1];
+          var v160 = JAM.call(parts.slice, parts, [2], JAM.policy.p2);
+          v108 = JAM.call(initDescriptors, null, [v160], JAM.policy.p3);
+        } else {
+          var v150;
+          var v162 = type$$25 === "d";
+          if (v162) {
+            host = parts[1];
+            repository = parts[2];
+            var v166 = parts[3];
+            var v169 = !v166;
+            if (v169) {
+              v166 = "gcjs-3p";
+            }
+            v150 = container = v166;
+          } else {
+            var v161;
+            var v168 = type$$25 === "r";
+            if (v168) {
+              host = "https://ssl.gstatic.com/webclient/js";
+              v161 = repository = parts[1];
+            } else {
+              var v167 = type$$25 === "f";
+              if (v167) {
+                host = parts[1];
+                v167 = repository = parts[2];
+              }
+              v161 = v167;
+            }
+            v150 = v161;
+          }
+          v108 = v150;
+        }
+        v51 = v108;
+      }
+      v51;
+    }
+    return;
+  }
+  var QUERY_PATTERN = /\?[&|(\S*=\S*&)]*jsh=(\S*)#?/;
+  var FRAGMENT_PATTERN = /#[&|(\S*=\S*&)]*jsh=(\S*)/;
+  var VALID_SCS_URL_REGEX = /^https:\/\/ssl.gstatic.com\/webclient\/js(\/[a-zA-Z0-9_\-]+)*\/[a-zA-Z0-9_\-\.:!]+\.js$/;
+  var VALID_GOOGLE_URL_REGEX = JAM.call(RegExp, null, ["^(http:|https:)?(\\/\\/)?([a-zA-Z0-9_\\-]+\\.)*google\\.com(:[0-9]+)?(\\/[a-zA-Z0-9_\\-]+)*\\/[a-zA-Z0-9_\\-\\.:!]+\\.js(\\?[a-zA-Z0-9_\\-&=%]*)?$"], JAM.policy.p2);
+  var type$$25;
+  var host;
+  var container;
+  var repository;
+  var descriptors;
+  var loadedFeatures;
+  var console;
+  var parentUrl;
+  var v110 = document.location;
+  var v52 = v110.href;
+  JAM.call(initialize, null, [v52], JAM.policy.p3);
+  jsloader_load = v2;
+  jsloader.reinitialize_ = v3;
+  return;
+}
+function v1() {
+  function f(n$$1) {
+    function v0() {
+      var v53 = window.___gpq;
+      JAM.call(v53.push, v53, [n$$1, arguments], JAM.policy.p3);
+      return;
+    }
+    return v0;
+  }
+  var v54 = JAM.call(f, null, ["go"], JAM.policy.p2);
+  var v55 = JAM.call(f, null, ["render"], JAM.policy.p2);
+  return{go:v54, render:v55};
+}
+function __bsld() {
+  var v56 = window.gapi;
+  var v111 = window.googleapisv0;
+  var p = v56.plusone = v111.plusone;
+  var f$$1;
+  var v112 = window.___gpq;
+  var v58 = f$$1 = JAM.call(v112.shift, v112, [], JAM.policy.p3);
+  for (;v58;) {
+    var v57 = p[f$$1];
+    if (v57) {
+      var v113 = p[f$$1];
+      var v152 = window.___gpq;
+      var v114 = JAM.call(v152.shift, v152, [], JAM.policy.p3);
+      JAM.call(v113.apply, v113, [p, v114], JAM.policy.p3);
+    }
+    var v115 = window.___gpq;
+    v58 = f$$1 = JAM.call(v115.shift, v115, [], JAM.policy.p3);
+  }
+  var v163 = gadgets.config;
+  var v153 = JAM.call(v163.get, v163, ["gwidget"], JAM.policy.p2);
+  var v116 = v153["parsetags"];
+  var v60 = v116 !== "explicit";
+  if (v60) {
+    var v59 = gapi.plusone;
+    JAM.call(v59.go, v59, [], JAM.policy.p3);
+  }
+  return;
+}
+function gapi_load(features$$8, opt_callback$$3) {
+  var v61 = JAM.call(features$$8.split, features$$8, [":"], JAM.policy.p2);
+  JAM.call(jsloader_load, null, [v61, opt_callback$$3], JAM.policy.p3);
+  return;
+}
+var v62 = window.___jsl;
+var v117 = !v62;
+if (v117) {
+  v62 = {};
+}
+window.___jsl = v62;
+var v63 = window.___jsl;
+var v154 = window.___jsl;
+var v118 = v154.h;
+var v155 = !v118;
+if (v155) {
+  v118 = "s;plusone:googleapis.client@21550740_8d71de52/client;googleapis.proxy@21550740_8d71de52/proxy;plusone:googleapis.client:iframes-styles-bubble@21550740_8d71de52/bubble;iframes-styles-bubble!plusone:googleapis.client@21550740_8d71de52/bubble_only;plusone-unsupported@21550740_8d71de52/unsupported";
+}
+v63.h = v118;
+window.___gpq = [];
+var v64 = window.gapi;
+var v119 = !v64;
+if (v119) {
+  v64 = {};
+}
+window.gapi = v64;
+var v65 = window.gapi;
+var v156 = window.gapi;
+var v120 = v156.plusone;
+var v157 = !v120;
+if (v157) {
+  v120 = JAM.call(v1, null, [], JAM.policy.p3);
+}
+v65.plusone = v120;
+var jsloader_load;
+var goog;
+var v66 = window["___jsl"];
+var v121 = !v66;
+if (v121) {
+  v66 = {};
+}
+window["___jsl"] = v66;
+var v67 = window["___jsl"];
+v67["u"] = "https://apis.google.com/js/plusone.js";
+var v68 = window["___jsl"];
+v68["f"] = ["googleapis.client", "plusone"];
+var v69 = window["jsloader"];
+var v122 = !v69;
+if (v122) {
+  v69 = {};
+}
+var jsloader = v69;
+var v70 = window["gapi"];
+var v123 = !v70;
+if (v123) {
+  v70 = {};
+}
+var gapi = v70;
+JAM.call(v4, null, [], JAM.policy.p3);
+var v71 = window["__bsld"];
+JAM.call(gapi_load, null, ["googleapis.client:plusone", v71], JAM.policy.p2)

