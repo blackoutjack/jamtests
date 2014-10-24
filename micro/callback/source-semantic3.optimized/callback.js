@@ -1,0 +1,5 @@
+function runTest() {
+  function f(){introspect(JAM.policy.p1)x=2}JAM.call(setTimeout,null,[f,1E3])
+
+  return "RESULT NOT SPECIFIED";
+}
