@@ -2,6 +2,7 @@
 error_reporting(E_ALL);
 
 $err = '';
+define(COLUMN_HEIGHT, 12);
 
 $auto = isset($_REQUEST['auto']) ? !!$_REQUEST['auto'] : false;
 $autoindex = (isset($_REQUEST['autoindex']) && is_numeric($_REQUEST['autoindex'])) ? $_REQUEST['autoindex'] : 0;
@@ -157,7 +158,7 @@ function getParamText($info, $key, $param, $first=false) {
 function maybeBreakLinks() {
   static $linkcnt = 0;
   $ret = '';
-  $linkmod = $linkcnt % 20;
+  $linkmod = $linkcnt % COLUMN_HEIGHT;
   if ($linkcnt !== 0 && $linkmod === 0) {
     $ret .= '</div><div class="linkcol">';
   }
