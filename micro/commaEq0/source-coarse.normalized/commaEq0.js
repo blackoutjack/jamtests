@@ -11,5 +11,5 @@ function runTest() {
 
   }
 
-  return "RESULT NOT SPECIFIED";
+  return typeof a === "undefined" && b === 10;
 }

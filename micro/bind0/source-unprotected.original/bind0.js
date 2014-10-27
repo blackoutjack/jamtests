@@ -5,5 +5,5 @@ function runTest() {
   var g = f.bind("ok");
   var v = g()
 
-  return "RESULT NOT SPECIFIED";
+  return v === 1;
 }

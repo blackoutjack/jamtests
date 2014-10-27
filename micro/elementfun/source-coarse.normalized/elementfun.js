@@ -5,5 +5,5 @@ function runTest() {
 
   }
 
-  return "RESULT NOT SPECIFIED";
+  return "Textbox should have focus";
 }

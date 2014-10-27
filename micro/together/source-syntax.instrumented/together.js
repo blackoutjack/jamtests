@@ -24,5 +24,5 @@ function runTest() {
     console.error(v2);
   }
 
-  return "RESULT NOT SPECIFIED";
+  return "\"OK1\" and \"OK2\" should be alerted";
 }

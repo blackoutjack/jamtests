@@ -3,5 +3,5 @@ function runTest() {
   eval("String = Boolean");
   var b = new String
 
-  return "RESULT NOT SPECIFIED";
+  return b instanceof Boolean && !(a instanceof Boolean);
 }

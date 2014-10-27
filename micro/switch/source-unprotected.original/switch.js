@@ -18,5 +18,5 @@ function runTest() {
       break;
   }
 
-  return "RESULT NOT SPECIFIED";
+  return x !== 2;
 }

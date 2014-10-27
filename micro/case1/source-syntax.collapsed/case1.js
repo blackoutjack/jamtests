@@ -10,5 +10,5 @@ function runTest() {
       alert(x + 1);
   }
 
-  return "RESULT NOT SPECIFIED";
+  return x === 1 && y === 1;
 }

@@ -36,5 +36,5 @@ function runTest() {
 
   }
 
-  return "RESULT NOT SPECIFIED";
+  return result === "you've been eval'd";
 }

@@ -4,5 +4,5 @@ function runTest() {
   }};
   alert(a.ok)
 
-  return "RESULT NOT SPECIFIED";
+  return a.ok === "ok";
 }

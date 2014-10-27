@@ -8,5 +8,5 @@ function runTest() {
   var o = new c;
   var a = o.m("ok")
 
-  return "RESULT NOT SPECIFIED";
+  return a === undefined;
 }

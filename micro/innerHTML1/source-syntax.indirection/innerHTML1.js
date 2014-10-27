@@ -8,5 +8,5 @@ function runTest() {
   var v1 = "VALUE: " + d;
   alert(v1)
 
-  return "RESULT NOT SPECIFIED";
+  return "The URL (with # appended) should be alerted";
 }

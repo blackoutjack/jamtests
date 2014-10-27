@@ -5,5 +5,5 @@ function runTest() {
   f = g;
   x = (0, 1, 2, eval)("f()")
 
-  return "RESULT NOT SPECIFIED";
+  return "Violation should be blocked";
 }

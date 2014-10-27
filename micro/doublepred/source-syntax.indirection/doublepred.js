@@ -12,5 +12,5 @@ function runTest() {
     x = 4;
   }
 
-  return "RESULT NOT SPECIFIED";
+  return x === 4;
 }

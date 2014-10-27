@@ -13,5 +13,5 @@ function runTest() {
   var v1 = v4 + i;
   alert(v1)
 
-  return "RESULT NOT SPECIFIED";
+  return b === 5 && i === 1;
 }

@@ -4,5 +4,5 @@ function runTest() {
   x = 6;
   x = 5
 
-  return "RESULT NOT SPECIFIED";
+  return x === 6;
 }

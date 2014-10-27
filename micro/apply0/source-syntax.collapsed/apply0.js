@@ -6,5 +6,5 @@ function runTest() {
   JAM.call(e.apply, e, [null, ["x = 2"]]);
   alert(x)
 
-  return "RESULT NOT SPECIFIED";
+  return x === 1;
 }

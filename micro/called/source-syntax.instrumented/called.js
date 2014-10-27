@@ -4,5 +4,5 @@ function runTest() {
     var x = f.getElementsByTagName("ok")
   }
 
-  return "RESULT NOT SPECIFIED";
+  return x instanceof HTMLCollection;
 }

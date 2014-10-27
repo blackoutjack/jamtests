@@ -4,5 +4,5 @@ function runTest() {
     var x = f.getElementById("ok")
   }
 
-  return "RESULT NOT SPECIFIED";
+  return typeof x === "undefined";
 }

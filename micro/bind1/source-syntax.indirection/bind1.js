@@ -5,5 +5,5 @@ function runTest() {
   var e = JAM.call(eval.bind, eval, [null, "x = 2"]);
   e()
 
-  return "RESULT NOT SPECIFIED";
+  return x === 1;
 }

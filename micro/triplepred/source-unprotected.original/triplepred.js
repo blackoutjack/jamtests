@@ -6,5 +6,5 @@ function runTest() {
   x = Math.random() * 3;
   x = 6
 
-  return "RESULT NOT SPECIFIED";
+  return x === 6;
 }

@@ -5,5 +5,5 @@ function runTest() {
 
   JAM.stopProfile('load');
 
-  return "RESULT NOT SPECIFIED";
+  return "'ok1' should be alerted, then 'MID' written to the page, then 'ok2' alerted";
 }

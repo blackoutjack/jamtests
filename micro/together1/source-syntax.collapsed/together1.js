@@ -19,5 +19,5 @@ function runTest() {
     console.error(ex$$1.name + ": " + ex$$1.message);
   }
 
-  return "RESULT NOT SPECIFIED";
+  return typeof x === "undefined";
 }

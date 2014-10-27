@@ -115,5 +115,5 @@ function runTest() {
 
   JAM.stopProfile('load');
 
-  return "RESULT NOT SPECIFIED";
+  return "Target tower should contain all discs, in order.";
 }

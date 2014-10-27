@@ -5,5 +5,5 @@ function runTest() {
     x = Math.floor(v0);
   }
 
-  return "RESULT NOT SPECIFIED";
+  return typeof x === "undefined" || x !== 2;
 }

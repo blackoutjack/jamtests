@@ -9,5 +9,5 @@ function runTest() {
   x = v2 * 3;
   x = 6
 
-  return "RESULT NOT SPECIFIED";
+  return x === 6;
 }

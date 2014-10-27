@@ -7,5 +7,5 @@ function runTest() {
 
   }
 
-  return "RESULT NOT SPECIFIED";
+  return elt === undefined;
 }

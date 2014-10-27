@@ -13,5 +13,5 @@ function runTest() {
 
   JAM.stopProfile('load');
 
-  return "RESULT NOT SPECIFIED";
+  return a === null && b instanceof HTMLElement;
 }

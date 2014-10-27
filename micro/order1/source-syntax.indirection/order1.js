@@ -9,5 +9,5 @@ function runTest() {
   var v1 = g();
   var v = v0[v1]
 
-  return "RESULT NOT SPECIFIED";
+  return v === "got it!";
 }

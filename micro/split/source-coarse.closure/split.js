@@ -6,5 +6,5 @@ function runTest() {
 
   }
 
-  return "RESULT NOT SPECIFIED";
+  return "Expect an exception";
 }

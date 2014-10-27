@@ -9,5 +9,5 @@ function runTest() {
   }
   f()
 
-  return "RESULT NOT SPECIFIED";
+  return "The Tx object should be alerted, followed by 'undefined'";
 }

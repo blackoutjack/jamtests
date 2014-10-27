@@ -28,5 +28,5 @@ function runTest() {
 
   JAM.stopProfile('load');
 
-  return "RESULT NOT SPECIFIED";
+  return "\"OK1\" and \"OK2\" should be alerted";
 }

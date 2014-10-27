@@ -10,5 +10,5 @@ function runTest() {
   b = a[f()] += 1;
   alert("a: " + a + " b: " + b + " i: " + i + " cnt: " + cnt)
 
-  return "RESULT NOT SPECIFIED";
+  return b === 11 && i === 2 && cnt === 11;
 }

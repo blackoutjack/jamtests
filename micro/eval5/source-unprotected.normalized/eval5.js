@@ -33,5 +33,5 @@ function runTest() {
   f3(code);
   var result = "YOU'VE BEEN EVAL'D".indexOf("V")
 
-  return "RESULT NOT SPECIFIED";
+  return result === "you've been eval'd";
 }

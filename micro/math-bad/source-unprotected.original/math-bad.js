@@ -1,5 +1,5 @@
 function runTest() {
   x = Math.floor(Math.random() * 4)
 
-  return "RESULT NOT SPECIFIED";
+  return typeof x === "undefined" || x !== 2;
 }

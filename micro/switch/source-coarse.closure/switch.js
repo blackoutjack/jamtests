@@ -20,5 +20,5 @@ function runTest() {
 
   }
 
-  return "RESULT NOT SPECIFIED";
+  return x !== 2;
 }

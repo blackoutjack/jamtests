@@ -8,5 +8,5 @@ function runTest() {
 
   }
 
-  return "RESULT NOT SPECIFIED";
+  return v === 1;
 }

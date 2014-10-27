@@ -14,5 +14,5 @@ function runTest() {
     console.error(ex$$1.name + ": " + ex$$1.message);
   }
 
-  return "RESULT NOT SPECIFIED";
+  return "\"OK1\" and \"OK2\" should be alerted";
 }

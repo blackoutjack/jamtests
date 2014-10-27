@@ -16,5 +16,5 @@ function runTest() {
     return;
   }
 
-  return "RESULT NOT SPECIFIED";
+  return "No state to inspect";
 }

@@ -13,5 +13,5 @@ function runTest() {
 
   }
 
-  return "RESULT NOT SPECIFIED";
+  return b === 11 && i === 2 && cnt === 11;
 }

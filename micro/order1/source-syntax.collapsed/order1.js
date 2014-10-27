@@ -7,5 +7,5 @@ function runTest() {
   }
   var v = f()[g()]
 
-  return "RESULT NOT SPECIFIED";
+  return v === "got it!";
 }

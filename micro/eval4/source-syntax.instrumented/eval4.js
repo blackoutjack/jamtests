@@ -3,5 +3,5 @@ function runTest() {
   eval('a = "ok"');
   var b = a
 
-  return "RESULT NOT SPECIFIED";
+  return b === "ok";
 }

@@ -6,5 +6,5 @@ function runTest() {
   var e = eval;
   f()
 
-  return "RESULT NOT SPECIFIED";
+  return x === 0;
 }

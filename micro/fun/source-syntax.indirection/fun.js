@@ -7,5 +7,5 @@ function runTest() {
   }
   x = f()
 
-  return "RESULT NOT SPECIFIED";
+  return x === 3;
 }

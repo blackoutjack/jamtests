@@ -1364,6 +1364,8 @@ GoogieSpell.createXMLReq = function(text$$9) {
   return'<?xml version="1.0" encoding="utf-8" ?><spellrequest textalreadyclipped="0" ignoredups="0" ignoredigits="1" ignoreallcaps="1"><text>' + text$$9 + "</text></spellrequest>";
 };
 GoogieSpell.prototype.spellCheck = function(ignore) {
+      JAM.startProfile('submit');
+
   function reqfailed(res_txt$$1, req$$7) {
     if (me$$2.custom_ajax_error) {
       me$$2.custom_ajax_error(req$$7);
@@ -1428,6 +1430,8 @@ GoogieSpell.prototype.spellCheck = function(ignore) {
   reqfailed = null;
   var req_text = GoogieSpell.escapeSepcial(this.orginal_text);
   d$$3.sendReq(GoogieSpell.createXMLReq(req_text));
+
+      JAM.stopProfile('submit');
 };
 GoogieSpell.prototype.parseResult = function(r_text$$1) {
   var re_split_attr_c = /\w+="(\d+|true)"/g;

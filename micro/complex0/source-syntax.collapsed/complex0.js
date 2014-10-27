@@ -13,5 +13,5 @@ function runTest() {
     result = x[v0] = v1 * z;
   }
 
-  return "RESULT NOT SPECIFIED";
+  return result === 153;
 }

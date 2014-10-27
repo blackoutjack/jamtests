@@ -8,5 +8,5 @@ function runTest() {
 
   }
 
-  return "RESULT NOT SPECIFIED";
+  return setTimeout(function() { JAMScript.log(typeof x === "undefined"); }, 3000) && "State will be checked in a couple seconds";
 }

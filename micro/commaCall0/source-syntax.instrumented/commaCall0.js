@@ -11,5 +11,5 @@ function runTest() {
     x = v0("f()");
   }
 
-  return "RESULT NOT SPECIFIED";
+  return "Violation should be blocked";
 }

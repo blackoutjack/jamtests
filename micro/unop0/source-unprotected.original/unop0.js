@@ -10,5 +10,5 @@ function runTest() {
     alert("i: " + i + " b: " + b + " idx: " + idx + " a[idx]: " + a[idx] + " a[i]: " + a[i]);
   }
 
-  return "RESULT NOT SPECIFIED";
+  return i === 7 && b === 7 && idx === 7 && a[idx] === undefined && a[i] === undefined;
 }

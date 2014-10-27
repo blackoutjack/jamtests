@@ -8,5 +8,5 @@ function runTest() {
   2;
   x = JAM.call(eval, null, ["f()"])
 
-  return "RESULT NOT SPECIFIED";
+  return "Violation should be blocked";
 }

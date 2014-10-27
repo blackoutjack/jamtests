@@ -7,5 +7,5 @@ function runTest() {
     x = o[i];
   }
 
-  return "RESULT NOT SPECIFIED";
+  return x === 3;
 }

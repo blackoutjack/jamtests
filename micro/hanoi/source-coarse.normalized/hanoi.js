@@ -114,5 +114,5 @@ function runTest() {
 
   }
 
-  return "RESULT NOT SPECIFIED";
+  return "Target tower should contain all discs, in order.";
 }

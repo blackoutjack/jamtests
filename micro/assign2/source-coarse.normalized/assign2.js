@@ -16,5 +16,5 @@ function runTest() {
 
   }
 
-  return "RESULT NOT SPECIFIED";
+  return b === 5 && i === 1;
 }

@@ -4,5 +4,5 @@ function runTest() {
   e.apply(null, ["x = 2"]);
   alert(x)
 
-  return "RESULT NOT SPECIFIED";
+  return x === 1;
 }

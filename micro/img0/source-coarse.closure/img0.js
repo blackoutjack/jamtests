@@ -10,5 +10,5 @@ function runTest() {
 
   }
 
-  return "RESULT NOT SPECIFIED";
+  return "1st pop-up should print the native function, and the 2nd should print 'false'";
 }

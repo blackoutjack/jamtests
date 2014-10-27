@@ -51,5 +51,5 @@ function runTest() {
   }
   var sorted = mergeSort(vals)
 
-  return "RESULT NOT SPECIFIED";
+  return sorted[1] === sorted.sort()[1];
 }

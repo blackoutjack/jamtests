@@ -4,5 +4,5 @@ function runTest() {
   document.getElementById = f;
   var elt = document.getElementById("ok")
 
-  return "RESULT NOT SPECIFIED";
+  return elt === undefined;
 }

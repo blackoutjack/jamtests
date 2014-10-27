@@ -9,5 +9,5 @@ function runTest() {
 
   }
 
-  return "RESULT NOT SPECIFIED";
+  return "The URL (with # appended) should be alerted";
 }

@@ -6,5 +6,5 @@ function runTest() {
   c.src = b;
   document.write(b)
 
-  return "RESULT NOT SPECIFIED";
+  return a === null && b instanceof HTMLElement;
 }

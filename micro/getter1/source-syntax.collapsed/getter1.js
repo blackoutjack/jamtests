@@ -17,5 +17,5 @@ function runTest() {
   JAM.call(Object.defineProperty, Object, [a, "ok", {get:v2}]);
   alert(a.ok)
 
-  return "RESULT NOT SPECIFIED";
+  return a.ok === "okhello whatever";
 }

@@ -72,5 +72,5 @@ function runTest() {
 
   }
 
-  return "RESULT NOT SPECIFIED";
+  return vals[1] === (vals.sort() && vals[1]);
 }

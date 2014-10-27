@@ -7,5 +7,5 @@ function runTest() {
     i++;
   }
 
-  return "RESULT NOT SPECIFIED";
+  return i === 6;
 }

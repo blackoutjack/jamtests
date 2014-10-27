@@ -30,5 +30,5 @@ function runTest() {
 
   }
 
-  return "RESULT NOT SPECIFIED";
+  return i === 0 && cnt === 5;
 }

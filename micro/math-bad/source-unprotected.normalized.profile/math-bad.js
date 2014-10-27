@@ -7,5 +7,5 @@ function runTest() {
 
   JAM.stopProfile('load');
 
-  return "RESULT NOT SPECIFIED";
+  return typeof x === "undefined" || x !== 2;
 }

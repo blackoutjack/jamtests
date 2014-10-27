@@ -7,5 +7,5 @@ function runTest() {
   }
   var b = a
 
-  return "RESULT NOT SPECIFIED";
+  return b === "ok";
 }

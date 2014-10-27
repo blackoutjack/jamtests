@@ -5,5 +5,5 @@ function runTest() {
 
   JAM.stopProfile('load');
 
-  return "RESULT NOT SPECIFIED";
+  return document.cookie !== "ok";
 }

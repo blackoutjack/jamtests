@@ -12,5 +12,5 @@ function runTest() {
 
   }
 
-  return "RESULT NOT SPECIFIED";
+  return c.fine === 3;
 }

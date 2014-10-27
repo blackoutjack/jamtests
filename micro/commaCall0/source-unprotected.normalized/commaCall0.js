@@ -9,5 +9,5 @@ function runTest() {
   var v0 = eval;
   x = v0("f()")
 
-  return "RESULT NOT SPECIFIED";
+  return "Violation should be blocked";
 }

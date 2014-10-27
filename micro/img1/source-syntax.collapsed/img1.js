@@ -10,5 +10,5 @@ function runTest() {
   alert("indexOf 1: " + String.prototype.indexOf);
   JAM.call(setTimeout, null, [v0, 1E3])
 
-  return "RESULT NOT SPECIFIED";
+  return "1st pop-up should print the native function, and the 2nd should print 'false'";
 }

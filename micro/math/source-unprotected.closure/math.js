@@ -1,5 +1,5 @@
 function runTest() {
   x = Math.floor(Math.random())
 
-  return "RESULT NOT SPECIFIED";
+  return x !== 2;
 }

@@ -5,5 +5,5 @@ function runTest() {
 
   JAM.stopProfile('load');
 
-  return "RESULT NOT SPECIFIED";
+  return i === 0 && cnt === 5;
 }

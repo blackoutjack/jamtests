@@ -8,5 +8,5 @@ function runTest() {
   var v0 = d + 1;
   a = b[v0]
 
-  return "RESULT NOT SPECIFIED";
+  return typeof a === "undefined" && b === 10;
 }

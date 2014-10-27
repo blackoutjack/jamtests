@@ -2,5 +2,5 @@ function runTest() {
   var s = 'is " this " ok' + "?";
   x = 2
 
-  return "RESULT NOT SPECIFIED";
+  return typeof x === "undefined" && s === "is \" this \" ok?";
 }

@@ -15,5 +15,5 @@ function runTest() {
     v2 = i < a.length;
   }
 
-  return "RESULT NOT SPECIFIED";
+  return i === 7 && b === 7 && idx === 7 && a[idx] === undefined && a[i] === undefined;
 }

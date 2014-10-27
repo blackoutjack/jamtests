@@ -4,5 +4,5 @@ function runTest() {
     a.cookie = "ok";
   }
 
-  return "RESULT NOT SPECIFIED";
+  return document.cookie !== "ok";
 }

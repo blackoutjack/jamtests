@@ -19,5 +19,5 @@ function runTest() {
   var v1 = v2 + cnt;
   alert(v1)
 
-  return "RESULT NOT SPECIFIED";
+  return b === 11 && i === 2 && cnt === 11;
 }

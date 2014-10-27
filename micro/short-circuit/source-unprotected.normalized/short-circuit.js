@@ -7,5 +7,5 @@ function runTest() {
   }
   x = v0
 
-  return "RESULT NOT SPECIFIED";
+  return x === 0;
 }

@@ -13,5 +13,5 @@ function runTest() {
   var v1 = g();
   var a = v0 + v1
 
-  return "RESULT NOT SPECIFIED";
+  return a === 8;
 }

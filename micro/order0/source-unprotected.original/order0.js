@@ -8,5 +8,5 @@ function runTest() {
   var v = 5;
   var a = v + (++v, f()) + g()
 
-  return "RESULT NOT SPECIFIED";
+  return a === 8;
 }

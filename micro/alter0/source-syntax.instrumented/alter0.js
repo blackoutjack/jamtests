@@ -38,5 +38,5 @@ function runTest() {
     alert(v4);
   }
 
-  return "RESULT NOT SPECIFIED";
+  return prop === "b" && n["a"] === 2 && n["b"] === 7 && n["c"] === "ok" && o["x"] === "other";
 }

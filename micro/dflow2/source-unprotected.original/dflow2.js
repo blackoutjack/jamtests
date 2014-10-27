@@ -3,5 +3,5 @@ function runTest() {
   y = z;
   x = y
 
-  return "RESULT NOT SPECIFIED";
+  return x === 3;
 }

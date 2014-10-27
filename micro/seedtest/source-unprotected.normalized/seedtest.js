@@ -9,5 +9,5 @@ function runTest() {
   c[d] = 3;
   c[e] = 4
 
-  return "RESULT NOT SPECIFIED";
+  return c.fine === 3;
 }

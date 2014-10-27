@@ -10,5 +10,5 @@ function runTest() {
   var o = new c;
   var a = JAM.call(o.m, o, ["ok"])
 
-  return "RESULT NOT SPECIFIED";
+  return a === undefined;
 }

@@ -12,5 +12,5 @@ function runTest() {
 
   }
 
-  return "RESULT NOT SPECIFIED";
+  return "Violation should be blocked";
 }

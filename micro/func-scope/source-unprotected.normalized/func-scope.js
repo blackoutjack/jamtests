@@ -24,5 +24,5 @@ function runTest() {
     g();
   }
 
-  return "RESULT NOT SPECIFIED";
+  return cnt === 6;
 }

@@ -7,5 +7,5 @@ function runTest() {
   }
   f()
 
-  return "RESULT NOT SPECIFIED";
+  return typeof x === "undefined";
 }

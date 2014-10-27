@@ -6,5 +6,5 @@ function runTest() {
   a[b] = v1 + 1;
   a[c] = 10
 
-  return "RESULT NOT SPECIFIED";
+  return "Expect an exception";
 }

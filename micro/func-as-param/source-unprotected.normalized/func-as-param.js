@@ -9,5 +9,5 @@ function runTest() {
   }
   f(h$$4)
 
-  return "RESULT NOT SPECIFIED";
+  return typeof x === "undefined";
 }
