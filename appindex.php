@@ -24,40 +24,33 @@ foreach ($allfiles as $fl) {
   if ($fl == 'sms2-template') continue;
   if ($fl == 'txjs') continue;
   if ($fl == 'kraken-results') continue;
+  if ($fl == 'kraken-results.mega') continue;
   if ($fl == 'jsbench-yahoo-firefox-urem-eval') continue;
   
   // Tests disabled for lack of good test cases.
   if ($fl == 'jsbeautifier') continue;
   if ($fl == 'jsqrcode-mal') continue;
+  if ($fl == 'jsqrcode.call') continue;
+  if ($fl == 'jsqrcode.get') continue;
   if ($fl == 'jssec') continue;
   if ($fl == 'jssec-bad') continue;
   if ($fl == 'snote-mini') continue;
 
-    // Tests disabled for semantic divergence.
-    if ($fl == 'jsbench-twitter-chrome-urem') continue;
-    if ($fl == 'jsbench-yahoo-chrome-urem') continue;
-    if ($fl == 'jsbench-yahoo-firefox-urem') continue;
-    if ($fl == 'jsbench-yahoo-safari-urem') continue;
-    if ($fl == 'googlemaps') continue;
-    if ($fl == 'octane') continue;
-    //if ($fl == 'kraken') continue;
-    //if ($fl == 'sunspider') continue;
-  
-    // Tests disabled because they are redundant.
-    if ($fl == 'kraken-mega') continue;
-    if ($fl == 'kraken-mega2') continue;
-    if ($fl == 'octane-codeload') continue;
-    if ($fl == 'octane-crypto') continue;
-    if ($fl == 'octane-eb') continue;
-    if ($fl == 'octane-gb') continue;
-    if ($fl == 'octane-mandreel') continue;
-    if ($fl == 'octane-pdf') continue;
-    if ($fl == 'octane-typescript') continue;
-    if ($fl == 'octane-zlib') continue;
-    if ($fl == 'octane-zlib-eval') continue;
-    if ($fl == 'sunspider-mega') continue;
-    if ($fl == 'sunspider-mega2') continue;
-    if ($fl == 'squirrelmail-bad') continue;
+  // Tests disabled for semantic divergence.
+  if ($fl == 'jsbench-twitter-chrome-urem') continue;
+  if ($fl == 'jsbench-yahoo-chrome-urem') continue;
+  if ($fl == 'jsbench-yahoo-firefox-urem') continue;
+  if ($fl == 'jsbench-yahoo-safari-urem') continue;
+  if ($fl == 'googlemaps') continue;
+  if ($fl == 'octane') continue;
+  //if ($fl == 'kraken') continue;
+  //if ($fl == 'sunspider') continue;
+
+  // Tests disabled because they are redundant.
+  if ($fl == 'kraken.mega') continue;
+  if (substr($fl, 0, 7) == 'octane-') continue;
+  if ($fl == 'sunspider.mega') continue;
+  if ($fl == 'squirrelmail-bad') continue;
 
   if (substr($fl, 0, 5) == 'sms2-' && substr($fl, strlen($fl) - 5) == '-call') continue;
   if (substr($fl, 0, 5) == 'sms2-' && substr($fl, strlen($fl) - 4) == '-get') continue;

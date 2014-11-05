@@ -9,15 +9,12 @@ $autoindex = (isset($_REQUEST['autoindex']) && is_numeric($_REQUEST['autoindex']
 $autowait = (isset($_REQUEST['autowait']) && is_numeric($_REQUEST['autowait'])) ? $_REQUEST['autowait'] : 1000;
 $autoapp = (isset($_REQUEST['autoapp']) && is_numeric($_REQUEST['autoapp'])) ? $_REQUEST['autoapp'] : 0;
 
-// Descriptors for various source versions.
-$sourceversions = array('original', 'closure', 'normalized', 'instrumented', 'indirection', 'collapsed', 'optimized', 'full');
-
 // Default set of variants to go through during automated testing.
-$autotests = array('original', 'collapsed', 'original.modular', 'original.profile', 'collapsed.profile', 'original.modular.profile');
+$autotests = array('unprotected.original', 'semantic0.collapsed', 'coarse.original', 'unprotected.original.profile', 'semantic0.collapsed.profile', 'coarse.original.profile');
 //$autotests = array('collapsed.profile', 'original.modular.profile');
 
 // Use this for SMS2 "big" variants, since all static files are loaded.
-$bigautotests = array('original.profile', 'collapsed.profile', 'original.modular.profile');
+$bigautotests = array('unprotected.original.profile', 'semantic0.collapsed.profile', 'coarse.original.profile');
 
 function getSubArray($parent, $idx) {
   $sub = null;
@@ -168,6 +165,7 @@ function maybeBreakLinks() {
 }
 
 function getScriptLink($info, $hrefbase, $name, $lib) {
+  $text = "script: ".$name;
   $jsparam = getParamText($info, 'js', 'script', true);
   $polparam = getParamText($info, 'policy', 'policy', false);
   $headparam = getParamText($info, 'head', 'head', false);
@@ -179,11 +177,12 @@ function getScriptLink($info, $hrefbase, $name, $lib) {
     $href .= '&lib=0';
   }
   $html = maybeBreakLinks();
-  $html .= '<a id="'.$name.'" href="'.$href.'">'.$name.'</a>';
+  $html .= '<a id="'.$name.'" href="'.$href.'">'.$text.'</a>';
   return $html;
 }
 
 function getSourceLink($info, $hrefbase, $name, $lib) {
+  $text = "source: ".$name;
   $first = true;
   $srcparam = '';
   foreach ($info['source'] as $src) {
@@ -201,7 +200,7 @@ function getSourceLink($info, $hrefbase, $name, $lib) {
     $href .= '&lib=0';
   }
   $html = maybeBreakLinks();
-  $html .= '<a id="'.$name.'" href="'.$href.'">'.$name.'</a>';
+  $html .= '<a id="'.$name.'" href="'.$href.'">'.$text.'</a>';
   return $html;
 }
 
@@ -266,9 +265,8 @@ foreach ($info as $key => $sub) {
     $sub['body'] = findFile($info, 'body', $key);
 
     // Suppress the library if there's no policy.
-    $lib = isset($sub['policy']);
-    $text = "script: ".$key;
-    array_push($linksrcs, getScriptLink($sub, $hrefbase, $text, $lib));
+    $lib = true;//isset($sub['policy']);
+    array_push($linksrcs, getScriptLink($sub, $hrefbase, $key, $lib));
   }
   if (isset($sub['source'])) {
     // %%% Eventually want to do something different here.
@@ -281,9 +279,8 @@ foreach ($info as $key => $sub) {
     $sub['body'] = findFile($info, 'body', $key);
 
     // Suppress the library if there's no policy.
-    $lib = isset($sub['policy']);
-    $text = "source: ".$key;
-    array_push($linksrcs, getSourceLink($sub, $hrefbase, $text, $lib));
+    $lib = true;//isset($sub['policy']);
+    array_push($linksrcs, getSourceLink($sub, $hrefbase, $key, $lib));
   }
   if (isset($sub['html'])) {
     // Link to the stand-alone HTML file.
