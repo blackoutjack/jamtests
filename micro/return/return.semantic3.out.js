@@ -1,15 +1,11 @@
-function runTest() {
-  // return.js
-  function f() {
-    introspect(JAM.policy.p2) {
-      x = 2;
-    }
-    return;
-  }
-  f();
+// return.js
+function f() {
   introspect(JAM.policy.p2) {
     x = 2;
   }
-
-  return typeof x === "undefined";
+  return;
+}
+f();
+introspect(JAM.policy.p2) {
+  x = 2;
 }

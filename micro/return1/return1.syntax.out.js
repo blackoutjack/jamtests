@@ -1,29 +1,25 @@
-function runTest() {
-  // return1.js
-  function g() {
-    try {
-      if (x) {
-        return;
-      } else {
-        introspect(JAM.policy.p1) {
-          x = 4;
-        }
-      }
-    } finally {
+// return1.js
+function g() {
+  try {
+    if (x) {
+      return;
+    } else {
       introspect(JAM.policy.p1) {
-        x = 2;
+        x = 4;
       }
     }
+  } finally {
     introspect(JAM.policy.p1) {
-      x = 1;
+      x = 2;
     }
-    return;
   }
   introspect(JAM.policy.p1) {
-    x = 3;
+    x = 1;
   }
-  g();
-  print(x)
-
-  return "RESULT NOT SPECIFIED";
+  return;
 }
+introspect(JAM.policy.p1) {
+  x = 3;
+}
+g();
+print(x)

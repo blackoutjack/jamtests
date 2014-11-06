@@ -1,17 +1,13 @@
-function runTest() {
-  // transaction0.js
-  function pol(tx) {
-    tx.commit();
-    return;
-  }
+// transaction0.js
+function pol(tx) {
+  tx.commit();
+  return;
+}
+introspect(JAM.policy.p1) {
+  x = undefined;
+}
+introspect(pol) {
   introspect(JAM.policy.p1) {
-    x = undefined;
+    x = 2;
   }
-  introspect(pol) {
-    introspect(JAM.policy.p1) {
-      x = 2;
-    }
-  }
-
-  return x === undefined;
 }

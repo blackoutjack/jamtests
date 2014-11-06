@@ -1,14 +1,10 @@
-function runTest() {
-  // try.js
-  try {
-    introspect(JAM.policy.p1) {
-      x = 1;
-    }
-  } catch (e$$4) {
-    introspect(JAM.policy.p1) {
-      x = 2;
-    }
+// try.js
+try {
+  introspect(JAM.policy.p1) {
+    x = 1;
   }
-
-  return x === 1;
+} catch (e$$4) {
+  introspect(JAM.policy.p1) {
+    x = 2;
+  }
 }

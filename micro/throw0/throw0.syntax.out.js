@@ -1,6 +1,2 @@
-function runTest() {
-  // throw0.js
-  throw "exception!"
-
-  return "Exception thrown";
-}
+// throw0.js
+throw "exception!"

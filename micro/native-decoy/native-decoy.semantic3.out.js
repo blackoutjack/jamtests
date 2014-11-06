@@ -1,10 +1,6 @@
-function runTest() {
-  // native-decoy.js
-  function f() {
-    return;
-  }
-  document.getElementById = f;
-  var elt = JAM.call(document.getElementById, document, ["ok"])
-
-  return elt === undefined;
+// native-decoy.js
+function f() {
+  return;
 }
+document.getElementById = f;
+var elt = JAM.call(document.getElementById, document, ["ok"])

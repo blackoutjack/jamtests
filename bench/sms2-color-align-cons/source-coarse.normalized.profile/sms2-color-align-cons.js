@@ -1714,6 +1714,8 @@ function writeShuffledSequence(sequence$$17) {
   return true;
 }
 function colorAlignCons(theDocument) {
+  JAM.startProfile('compute');
+
   var maxInput$$3 = 2E4;
   var v522 = testScript();
   var v275 = v522 == false;
@@ -1906,6 +1908,8 @@ function colorAlignCons(theDocument) {
   colorAlign(titleArray, sequenceArray$$1, v302, v303, arrayOfGroups, v304, longestTitle);
   closePre();
   closeWindow();
+
+  JAM.stopProfile('compute');
   return true;
 }
 function colorAlign(arrayOfTitles$$1, arrayOfSequences$$1, basePerLine$$4, consensus, arrayOfGroups$$1, definedStarts, longestTitle$$1) {

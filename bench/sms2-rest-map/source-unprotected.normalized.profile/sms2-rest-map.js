@@ -2327,6 +2327,8 @@ function getGeneticCodeString(type$$26) {
   return true;
 }
 function restMap(theDocument) {
+  JAM.startProfile('compute');
+
   var newDna = "";
   var title$$9 = "";
   var maxInput$$3 = 1E5;
@@ -2505,6 +2507,8 @@ function restMap(theDocument) {
     v368 = i$$11 < v693;
   }
   closeWindow();
+
+  JAM.stopProfile('compute');
   return true;
 }
 function layoutRestTrans(dnaSequence$$3, geneticCode$$1, restrictionSiteCollection$$1, basesPerLine, readingFrame) {

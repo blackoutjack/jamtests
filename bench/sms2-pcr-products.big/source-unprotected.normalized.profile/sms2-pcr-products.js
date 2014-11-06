@@ -1733,6 +1733,8 @@ function writeShuffledSequence(sequence$$17) {
   return true;
 }
 function pcrProducts(theDocument) {
+  JAM.startProfile('compute');
+
   var newDna = "";
   var maxInput$$3 = 2E5;
   var v516 = testScript();
@@ -1976,6 +1978,8 @@ function pcrProducts(theDocument) {
   }
   closePre();
   closeWindow();
+
+  JAM.stopProfile('compute');
   return true;
 }
 function findMatches(primers$$1, sequence$$18, topology$$1) {

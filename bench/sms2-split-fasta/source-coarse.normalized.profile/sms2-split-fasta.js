@@ -1714,6 +1714,8 @@ function writeShuffledSequence(sequence$$17) {
   return true;
 }
 function splitFasta(theDocument) {
+  JAM.startProfile('compute');
+
   var maxInput$$3 = 5E5;
   var sequences = new Array;
   var v469 = testScript();
@@ -1826,6 +1828,8 @@ function splitFasta(theDocument) {
   }
   closePre();
   closeWindow();
+
+  JAM.stopProfile('compute');
   return true;
 }
 document.onload = v2;

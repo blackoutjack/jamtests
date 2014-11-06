@@ -1718,6 +1718,8 @@ function writeShuffledSequence(sequence$$17) {
   return true;
 }
 function fuzzySearchDna(theDocument) {
+  JAM.startProfile('compute');
+
   var targetSequence = "";
   var targetTitle = "";
   var querySequence = "";
@@ -1873,6 +1875,8 @@ function fuzzySearchDna(theDocument) {
   _fuzzySearchDna(queryTitle, querySequence, targetTitle, targetSequence, MATCH_SCORE, MISMATCH_SCORE, GAP_PENALTY, HITS);
   closePre();
   closeWindow();
+
+  JAM.stopProfile('compute');
   return true;
 }
 function _fuzzySearchDna(queryTitle$$1, querySequence$$1, targetTitle$$1, targetSequence$$1, matchScore, mismatchScore, gapPenalty, hits) {

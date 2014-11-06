@@ -1714,6 +1714,8 @@ function writeShuffledSequence(sequence$$17) {
   return true;
 }
 function genbankFeat(theDocument) {
+  JAM.startProfile('compute');
+
   var maxInput$$3 = 1E6;
   var v509 = testScript();
   var v275 = v509 == false;
@@ -1773,6 +1775,8 @@ function genbankFeat(theDocument) {
   genBankFeatExtract(v277, v278);
   closePre();
   closeWindow();
+
+  JAM.stopProfile('compute');
   return true;
 }
 function genBankFeatExtract(genBankFile$$2, outputType) {

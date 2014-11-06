@@ -1714,6 +1714,8 @@ function writeShuffledSequence(sequence$$17) {
   return true;
 }
 function emblTrans(theDocument) {
+  JAM.startProfile('compute');
+
   var maxInput$$3 = 2E5;
   var v482 = testScript();
   var v275 = v482 == false;
@@ -1761,6 +1763,8 @@ function emblTrans(theDocument) {
   emblTransExtract(v277);
   closePre();
   closeWindow();
+
+  JAM.stopProfile('compute');
   return true;
 }
 function emblTransExtract(emblFile$$2) {

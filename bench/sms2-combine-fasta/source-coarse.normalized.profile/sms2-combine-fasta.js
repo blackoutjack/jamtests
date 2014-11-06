@@ -1714,6 +1714,8 @@ function writeShuffledSequence(sequence$$17) {
   return true;
 }
 function combineFasta(theDocument) {
+  JAM.startProfile('compute');
+
   var maxInput$$3 = 5E5;
   var sequenceCount = 0;
   var sequences = new Array;
@@ -1803,6 +1805,8 @@ function combineFasta(theDocument) {
   v287.write(v288);
   closePre();
   closeWindow();
+
+  JAM.stopProfile('compute');
   return true;
 }
 document.onload = v2;

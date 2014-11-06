@@ -1,12 +1,8 @@
-function runTest() {
-  // for1.js
-  var i = 0;
-  for (;;) {
-    if (i > 5) {
-      break;
-    }
-    i = i + 1;
+// for1.js
+var i = 0;
+for (;;) {
+  if (i > 5) {
+    break;
   }
-
-  return i === 6;
+  i = i + 1;
 }

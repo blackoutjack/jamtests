@@ -1713,6 +1713,8 @@ function writeShuffledSequence(sequence$$17) {
   return true;
 }
 function proteinMw(theDocument) {
+  JAM.startProfile('compute');
+
   var newProtein = "";
   var maxInput$$3 = 2E5;
   var v478 = testScript();
@@ -1792,6 +1794,8 @@ function proteinMw(theDocument) {
     v285 = i$$11 < v484;
   }
   closeWindow();
+
+  JAM.stopProfile('compute');
   return true;
 }
 function writeProtMw(proteinSequence$$1, arrayOfMw$$1, copies, fusion) {
