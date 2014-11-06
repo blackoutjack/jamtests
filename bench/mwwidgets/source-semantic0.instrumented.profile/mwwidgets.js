@@ -2487,6 +2487,8 @@ function SNote(serverPath, divParent) {
   }
   function createUnlockDialogOkHandler(strNoteId$$40) {
     function v5() {
+      JAM.startProfile('read');
+
       var JSCompiler_inline_result$$0;
       var v643 = strNoteId$$40 + "_";
       var v423 = v643 + "pre_cipher_text";
@@ -2524,6 +2526,8 @@ function SNote(serverPath, divParent) {
       var buttonDelete$$inline_97 = document.getElementById(v429);
       var v430 = buttonDelete$$inline_97.style;
       v430.display = "inline";
+
+      JAM.stopProfile('read');
       return;
     }
     return v5;
@@ -2548,6 +2552,8 @@ function SNote(serverPath, divParent) {
   }
   function createEditDialogOkHandler(strServerPath$$5, strNoteId$$43) {
     function v8() {
+      JAM.startProfile('edit');
+
       var v648 = strNoteId$$43 + "_";
       var v433 = v648 + "input_new_password";
       var inputNewPassword$$inline_54 = document.getElementById(v433);
@@ -2600,6 +2606,8 @@ function SNote(serverPath, divParent) {
         }
       }
       return;
+
+      JAM.stopProfile('edit');
     }
     return v8;
   }

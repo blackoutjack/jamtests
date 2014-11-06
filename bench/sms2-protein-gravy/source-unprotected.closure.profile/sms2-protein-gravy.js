@@ -868,6 +868,8 @@ function writeShuffledSequence(sequence$$17) {
   return true;
 }
 function proteinGravy(theDocument) {
+  JAM.startProfile('compute');
+
   var newProtein = "";
   var title$$9 = "";
   var maxInput$$3 = 5E5;
@@ -889,6 +891,8 @@ function proteinGravy(theDocument) {
     outputWindow.document.write("<br />\n<br />\n");
   }
   closeWindow();
+
+  JAM.stopProfile('compute');
   return true;
 }
 function getProteinGravy(sequence$$18) {

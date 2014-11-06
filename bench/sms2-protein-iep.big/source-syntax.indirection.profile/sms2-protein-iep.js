@@ -1815,6 +1815,8 @@ function writeShuffledSequence(sequence$$17) {
   return true;
 }
 function proteinIep(theDocument) {
+  JAM.startProfile('compute');
+
   var newProtein = "";
   var maxInput$$3 = 2E5;
   var v491 = JAM.call(testScript, null, [], JAM.policy.p39);
@@ -1951,6 +1953,8 @@ function proteinIep(theDocument) {
     v286 = i$$11 < v498;
   }
   JAM.call(closeWindow, null, [], JAM.policy.p39);
+
+  JAM.stopProfile('compute');
   return true;
 }
 function writeProtIep(proteinSequence$$1, copies, fusion, pKSet) {

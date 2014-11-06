@@ -2501,6 +2501,8 @@ function writeShuffledSequence(sequence$$17) {
   return true;
 }
 function groupProtein(theDocument) {
+  JAM.startProfile('compute');
+
   var newProtein = "";
   var title$$9 = "";
   var maxInput$$3 = 1E5;
@@ -2670,6 +2672,8 @@ function groupProtein(theDocument) {
   }
   introspect(JAM.policy.p39) {
     closeWindow();
+
+  JAM.stopProfile('compute');
   }
   return true;
 }

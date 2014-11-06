@@ -869,6 +869,8 @@ function writeShuffledSequence(sequence$$17) {
   return true;
 }
 function proteinIep(theDocument) {
+  JAM.startProfile('compute');
+
   var newProtein = "";
   var maxInput$$3 = 2E5;
   if (testScript() == false) {
@@ -889,6 +891,8 @@ function proteinIep(theDocument) {
     outputWindow.document.write("<br />\n<br />\n");
   }
   closeWindow();
+
+  JAM.stopProfile('compute');
   return true;
 }
 function writeProtIep(proteinSequence$$1, copies, fusion, pKSet) {

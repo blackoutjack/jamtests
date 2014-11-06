@@ -1815,6 +1815,8 @@ function writeShuffledSequence(sequence$$17) {
   return true;
 }
 function genbankFasta(theDocument) {
+  JAM.startProfile('compute');
+
   var newDna = "";
   var maxInput$$3 = 2E5;
   var v467 = JAM.call(testScript, null, [], JAM.policy.p39);
@@ -1879,6 +1881,8 @@ function genbankFasta(theDocument) {
   JAM.call(genbankToFasta, null, [v277], JAM.policy.p38);
   JAM.call(closePre, null, [], JAM.policy.p39);
   JAM.call(closeWindow, null, [], JAM.policy.p39);
+
+  JAM.stopProfile('compute');
   return true;
 }
 function genbankToFasta(genBankFile$$2) {

@@ -1324,6 +1324,8 @@ function writeShuffledSequence(sequence$$17) {
   return true;
 }
 function emblFasta(theDocument) {
+  JAM.startProfile('compute');
+
   var newDna = "";
   var maxInput$$3 = 2E5;
   if (JAM.call(testScript, null, [], JAM.policy.p39) == false) {
@@ -1377,6 +1379,8 @@ function emblFasta(theDocument) {
   JAM.call(emblToFasta, null, [v471.value], JAM.policy.p38);
   JAM.call(closePre, null, [], JAM.policy.p39);
   JAM.call(closeWindow, null, [], JAM.policy.p39);
+
+  JAM.stopProfile('compute');
   return true;
 }
 function emblToFasta(emblFile$$2) {

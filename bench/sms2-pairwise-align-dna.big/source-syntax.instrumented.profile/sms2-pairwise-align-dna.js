@@ -2510,6 +2510,8 @@ function writeShuffledSequence(sequence$$17) {
   return true;
 }
 function pairwiseAlignDna(theDocument) {
+  JAM.startProfile('compute');
+
   var newDnaOne = "";
   var titleOne = "";
   var newDnaTwo = "";
@@ -2806,6 +2808,8 @@ function pairwiseAlignDna(theDocument) {
   introspect(JAM.policy.p39) {
     closeWindow();
   }
+
+  JAM.stopProfile('compute');
   return true;
 }
 function pairwiseDna(titleOne$$1, newDnaOne$$1, titleTwo$$1, newDnaTwo$$1, matchScore, mismatchScore, gapPenalty, beginGapPenalty, endGapPenalty) {

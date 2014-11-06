@@ -1803,6 +1803,8 @@ function writeShuffledSequence(sequence$$17) {
   return true;
 }
 function filterDna(theDocument) {
+  JAM.startProfile('compute');
+
   var newDna = "";
   var maxInput$$3 = 5E5;
   var v467 = testScript();
@@ -1916,6 +1918,8 @@ function filterDna(theDocument) {
   JAM.call(v286.write, v286, ["\n"], JAM.policy.p23);
   closePre();
   closeWindow();
+
+  JAM.stopProfile('compute');
   return true;
 }
 JAM.set(document, "onload", v2);

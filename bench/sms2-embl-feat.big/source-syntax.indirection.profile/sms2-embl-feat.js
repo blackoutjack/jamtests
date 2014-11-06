@@ -1815,6 +1815,8 @@ function writeShuffledSequence(sequence$$17) {
   return true;
 }
 function emblFeat(theDocument) {
+  JAM.startProfile('compute');
+
   var maxInput$$3 = 2E5;
   var v511 = JAM.call(testScript, null, [], JAM.policy.p39);
   var v275 = v511 == false;
@@ -1900,6 +1902,8 @@ function emblFeat(theDocument) {
   JAM.call(emblFeatExtract, null, [v277, v278], JAM.policy.p40);
   JAM.call(closePre, null, [], JAM.policy.p39);
   JAM.call(closeWindow, null, [], JAM.policy.p39);
+
+  JAM.stopProfile('compute');
   return true;
 }
 function emblFeatExtract(emblFile$$2, outputType) {

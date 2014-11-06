@@ -869,6 +869,8 @@ function writeShuffledSequence(sequence$$17) {
   return true;
 }
 function genbankFeat(theDocument) {
+  JAM.startProfile('compute');
+
   var maxInput$$3 = 1E6;
   if (testScript() == false) {
     return false;
@@ -881,6 +883,8 @@ function genbankFeat(theDocument) {
   genBankFeatExtract(theDocument.forms[0].elements[0].value, theDocument.forms[0].elements[4].options[theDocument.forms[0].elements[4].selectedIndex].value);
   closePre();
   closeWindow();
+
+  JAM.stopProfile('compute');
   return true;
 }
 function genBankFeatExtract(genBankFile$$2, outputType) {

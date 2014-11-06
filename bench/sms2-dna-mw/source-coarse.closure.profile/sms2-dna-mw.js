@@ -869,6 +869,8 @@ function writeShuffledSequence(sequence$$17) {
   return true;
 }
 function dnaMw(theDocument) {
+  JAM.startProfile('compute');
+
   var newDna = "";
   var maxInput$$3 = 2E5;
   if (testScript() == false) {
@@ -889,6 +891,8 @@ function dnaMw(theDocument) {
     outputWindow.document.write("<br />\n<br />\n");
   }
   closeWindow();
+
+  JAM.stopProfile('compute');
   return true;
 }
 function writeDnaMw(sequence$$18, strandType, topology$$1) {

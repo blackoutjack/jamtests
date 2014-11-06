@@ -1324,6 +1324,8 @@ function writeShuffledSequence(sequence$$17) {
   return true;
 }
 function threeToOne(theDocument) {
+  JAM.startProfile('compute');
+
   var newProtein = "";
   var maxInput$$3 = 1E5;
   if (JAM.call(testScript, null, [], JAM.policy.p39) == false) {
@@ -1385,6 +1387,8 @@ function threeToOne(theDocument) {
   }
   JAM.call(closePre, null, [], JAM.policy.p39);
   JAM.call(closeWindow, null, [], JAM.policy.p39);
+
+  JAM.stopProfile('compute');
   return true;
 }
 function writeThreeToOne(proteinSequence$$1) {

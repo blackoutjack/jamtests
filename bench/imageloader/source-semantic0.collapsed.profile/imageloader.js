@@ -1185,8 +1185,12 @@ function v0() {
   return o;
 }
 function doLoad() {
+
+    JAM.startProfile('fetch');
   var img$$2 = JAM.new(YAHOO.util.ImageLoader.srcImgObj, ["image", "http://www.blackoutjack.com/pics/TweekGhost.jpg"]);
   img$$2.fetch();
+
+    JAM.stopProfile('fetch');
   return;
 }
 var v455 = typeof YAHOO == "undefined";

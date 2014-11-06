@@ -1851,6 +1851,8 @@ function writeShuffledSequence(sequence$$17) {
   return true;
 }
 function pcrProducts(theDocument) {
+  JAM.startProfile('compute');
+
   var newDna = "";
   var maxInput$$3 = 2E5;
   var v516 = JAM.call(testScript, null, [], JAM.policy.p39);
@@ -2208,6 +2210,8 @@ function pcrProducts(theDocument) {
   }
   JAM.call(closePre, null, [], JAM.policy.p39);
   JAM.call(closeWindow, null, [], JAM.policy.p39);
+
+  JAM.stopProfile('compute');
   return true;
 }
 function findMatches(primers$$1, sequence$$18, topology$$1) {

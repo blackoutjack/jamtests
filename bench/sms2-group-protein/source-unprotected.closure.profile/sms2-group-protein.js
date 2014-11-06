@@ -868,6 +868,8 @@ function writeShuffledSequence(sequence$$17) {
   return true;
 }
 function groupProtein(theDocument) {
+  JAM.startProfile('compute');
+
   var newProtein = "";
   var title$$9 = "";
   var maxInput$$3 = 1E5;
@@ -891,6 +893,8 @@ function groupProtein(theDocument) {
   }
   closePre();
   closeWindow();
+
+  JAM.stopProfile('compute');
   return true;
 }
 document.onload = function() {

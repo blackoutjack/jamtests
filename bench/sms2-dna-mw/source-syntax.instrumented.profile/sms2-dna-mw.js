@@ -2510,6 +2510,8 @@ function writeShuffledSequence(sequence$$17) {
   return true;
 }
 function dnaMw(theDocument) {
+  JAM.startProfile('compute');
+
   var newDna = "";
   var maxInput$$3 = 2E5;
   introspect(JAM.policy.p39) {
@@ -2650,6 +2652,8 @@ function dnaMw(theDocument) {
   introspect(JAM.policy.p39) {
     closeWindow();
   }
+
+  JAM.stopProfile('compute');
   return true;
 }
 function writeDnaMw(sequence$$18, strandType, topology$$1) {

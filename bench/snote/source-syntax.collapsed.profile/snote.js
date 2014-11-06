@@ -1835,6 +1835,8 @@ function SNote(serverPath, divParent) {
     return;
   }
   function handleUnlockDialogOk() {
+    JAM.startProfile('read');
+
     var JSCompiler_inline_result$$0;
     JSCompiler_inline_label_decryptText_16: {
       var strPasswd$$inline_15 = destructiveRead(m_inputPassword);
@@ -1854,6 +1856,8 @@ function SNote(serverPath, divParent) {
     m_imageEdit.style.display = "none";
     m_imageView.style.display = "none";
     m_imageDelete.style.display = "inline";
+
+    JAM.stopProfile('read');
     return;
   }
   function handleUnlockDialogCancel() {
@@ -1866,6 +1870,8 @@ function SNote(serverPath, divParent) {
     return;
   }
   function handleEditDialogOk() {
+    JAM.startProfile('edit');
+
     function v2(strId$$1) {
       if (strId$$1 != "") {
         switchToLockedViewMode();
@@ -1886,6 +1892,8 @@ function SNote(serverPath, divParent) {
         encryptAndSave(destructiveRead(m_inputNote), strNewPass, v2);
       }
     }
+
+    JAM.stopProfile('edit');
     return;
   }
   function handleEditDialogCancel() {

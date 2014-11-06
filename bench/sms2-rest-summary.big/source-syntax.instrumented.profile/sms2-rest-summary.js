@@ -2622,6 +2622,8 @@ function getRestrictionSiteString(type$$25) {
   return true;
 }
 function restSummary(theDocument) {
+  JAM.startProfile('compute');
+
   var newDna = "";
   var title$$9 = "";
   var maxInput$$3 = 1E5;
@@ -2784,6 +2786,8 @@ function restSummary(theDocument) {
   }
   introspect(JAM.policy.p39) {
     closeWindow();
+
+  JAM.stopProfile('compute');
   }
   return true;
 }

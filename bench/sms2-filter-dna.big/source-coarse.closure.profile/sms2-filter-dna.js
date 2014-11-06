@@ -869,6 +869,8 @@ function writeShuffledSequence(sequence$$17) {
   return true;
 }
 function filterDna(theDocument) {
+  JAM.startProfile('compute');
+
   var newDna = "";
   var maxInput$$3 = 5E5;
   if (testScript() == false) {
@@ -893,6 +895,8 @@ function filterDna(theDocument) {
   outputWindow.document.write("\n");
   closePre();
   closeWindow();
+
+  JAM.stopProfile('compute');
   return true;
 }
 document.onload = function() {

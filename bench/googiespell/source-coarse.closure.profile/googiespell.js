@@ -1435,6 +1435,8 @@ GoogieSpell.prototype.spellCheck = function(ignore) {
       JAM.stopProfile('submit');
 };
 GoogieSpell.prototype.parseResult = function(r_text$$1) {
+  JAM.startProfile('parse');
+
   var re_split_attr_c = /\w+="(\d+|true)"/g;
   var re_split_text = /\t/g;
   var matched_c = r_text$$1.match(/<c[^>]*>[^<]*<\/c>/g);
@@ -1469,6 +1471,8 @@ GoogieSpell.prototype.parseResult = function(r_text$$1) {
     }
     results.push(item);
   }
+
+  JAM.stopProfile('parse');
   return results;
 };
 GoogieSpell.prototype.errorFixed = function() {

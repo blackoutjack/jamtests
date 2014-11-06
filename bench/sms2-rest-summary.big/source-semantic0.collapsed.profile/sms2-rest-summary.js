@@ -1309,6 +1309,8 @@ function getRestrictionSiteString(type$$25) {
   return true;
 }
 function restSummary(theDocument) {
+  JAM.startProfile('compute');
+
   var newDna = "";
   var title$$9 = "";
   var maxInput$$3 = 1E5;
@@ -1363,6 +1365,8 @@ function restSummary(theDocument) {
     v291 = i$$11 < arrayOfFasta$$1.length;
   }
   closeWindow();
+
+  JAM.stopProfile('compute');
   return true;
 }
 JAM.set(document, "onload", v2);

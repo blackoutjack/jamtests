@@ -868,6 +868,8 @@ function writeShuffledSequence(sequence$$17) {
   return true;
 }
 function groupDna(theDocument) {
+  JAM.startProfile('compute');
+
   var newDna = "";
   var title$$9 = "";
   var maxInput$$3 = 1E5;
@@ -897,6 +899,8 @@ function groupDna(theDocument) {
   }
   closePre();
   closeWindow();
+
+  JAM.stopProfile('compute');
   return true;
 }
 document.onload = function() {

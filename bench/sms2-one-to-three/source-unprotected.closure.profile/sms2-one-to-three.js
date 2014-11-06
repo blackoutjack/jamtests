@@ -868,6 +868,8 @@ function writeShuffledSequence(sequence$$17) {
   return true;
 }
 function oneToThree(theDocument) {
+  JAM.startProfile('compute');
+
   var newProtein = "";
   var maxInput$$3 = 1E5;
   if (testScript() == false) {
@@ -890,6 +892,8 @@ function oneToThree(theDocument) {
   }
   closePre();
   closeWindow();
+
+  JAM.stopProfile('compute');
   return true;
 }
 function writeOneToThree(proteinSequence$$1) {

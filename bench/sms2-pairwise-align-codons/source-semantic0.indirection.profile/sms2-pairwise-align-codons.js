@@ -1808,6 +1808,8 @@ function writeShuffledSequence(sequence$$17) {
   return true;
 }
 function pairwiseAlignCodons(theDocument) {
+  JAM.startProfile('compute');
+
   var newCodonsOne = "";
   var titleOne = "";
   var newCodonsTwo = "";
@@ -1972,6 +1974,8 @@ function pairwiseAlignCodons(theDocument) {
   pairwiseCodon(titleOne, newCodonsOne, titleTwo, newCodonsTwo, MATRIX, GAP_PENALTY, BEGIN_GAP_PENALTY, END_GAP_PENALTY);
   closePre();
   closeWindow();
+
+  JAM.stopProfile('compute');
   return true;
 }
 function pairwiseCodon(titleOne$$1, newCodonsOne$$1, titleTwo$$1, newCodonsTwo$$1, matrix, gapPenalty, beginGapPenalty, endGapPenalty) {

@@ -1803,6 +1803,8 @@ function writeShuffledSequence(sequence$$17) {
   return true;
 }
 function emblFasta(theDocument) {
+  JAM.startProfile('compute');
+
   var newDna = "";
   var maxInput$$3 = 2E5;
   var v469 = testScript();
@@ -1851,6 +1853,8 @@ function emblFasta(theDocument) {
   emblToFasta(v277);
   closePre();
   closeWindow();
+
+  JAM.stopProfile('compute');
   return true;
 }
 function emblToFasta(emblFile$$2) {

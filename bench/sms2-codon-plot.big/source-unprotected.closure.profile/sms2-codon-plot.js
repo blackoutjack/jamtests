@@ -876,6 +876,8 @@ function fillCodon(aminoAcid, number, perThou, fraction) {
 function Codon() {
 }
 function codonPlot(theDocument) {
+  JAM.startProfile('compute');
+
   var newDna = "";
   var maxInput$$3 = 5E4;
   var codonTable$$1;
@@ -900,6 +902,8 @@ function codonPlot(theDocument) {
   writeCodonPlot(codonTable$$1, newDna);
   closePre();
   closeWindow();
+
+  JAM.stopProfile('compute');
   return true;
 }
 function writeCodonPlot(codonTable$$2, sequence$$18) {

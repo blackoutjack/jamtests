@@ -2520,6 +2520,8 @@ function Codon() {
   return;
 }
 function codonPlot(theDocument) {
+  JAM.startProfile('compute');
+
   var newDna = "";
   var maxInput$$3 = 5E4;
   var codonTable$$1;
@@ -2648,6 +2650,8 @@ function codonPlot(theDocument) {
   introspect(JAM.policy.p39) {
     closeWindow();
   }
+
+  JAM.stopProfile('compute');
   return true;
 }
 function writeCodonPlot(codonTable$$2, sequence$$18) {

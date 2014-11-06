@@ -1297,6 +1297,8 @@ function writeShuffledSequence(sequence$$17) {
   return true;
 }
 function filterProtein(theDocument) {
+  JAM.startProfile('compute');
+
   var newProtein = "";
   var maxInput$$3 = 5E5;
   if (testScript() == false) {
@@ -1349,6 +1351,8 @@ function filterProtein(theDocument) {
   JAM.call(v286.write, v286, ["\n"], JAM.policy.p23);
   closePre();
   closeWindow();
+
+  JAM.stopProfile('compute');
   return true;
 }
 JAM.set(document, "onload", v2);

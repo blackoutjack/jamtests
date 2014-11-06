@@ -1485,11 +1485,15 @@ function v0() {
   return o;
 }
 function doLoad() {
+
+    JAM.startProfile('fetch');
   var v555 = YAHOO.util;
   var v454 = v555.ImageLoader;
   var v269 = v454.srcImgObj;
   var img$$2 = JAM.new(v269, ["image", "http://www.blackoutjack.com/pics/TweekGhost.jpg"]);
   img$$2.fetch();
+
+    JAM.stopProfile('fetch');
   return;
 }
 var v556 = typeof YAHOO;

@@ -944,6 +944,8 @@ function translateDna(theDocument) {
   return true;
 }
 function translate(theDocument$$1) {
+  JAM.startProfile('compute');
+
   var newDna = "";
   var title$$9 = "";
   var maxInput$$3 = 2E5;
@@ -978,6 +980,8 @@ function translate(theDocument$$1) {
   }
   closePre();
   closeWindow();
+
+  JAM.stopProfile('compute');
   return true;
 }
 function writeTranslation(dnaSequence$$3, geneticCode$$1, startPos, strand) {

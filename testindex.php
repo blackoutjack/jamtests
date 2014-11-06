@@ -10,11 +10,11 @@ $autowait = (isset($_REQUEST['autowait']) && is_numeric($_REQUEST['autowait'])) 
 $autoapp = (isset($_REQUEST['autoapp']) && is_numeric($_REQUEST['autoapp'])) ? $_REQUEST['autoapp'] : 0;
 
 // Default set of variants to go through during automated testing.
-$autotests = array('unprotected.original', 'semantic0.collapsed', 'coarse.original', 'unprotected.original.profile', 'semantic0.collapsed.profile', 'coarse.original.profile');
+$autotests = array('input', 'semantic0.collapsed', 'coarse.input', 'input.profile', 'semantic0.collapsed.profile', 'coarse.input.profile');
 //$autotests = array('collapsed.profile', 'original.modular.profile');
 
 // Use this for SMS2 "big" variants, since all static files are loaded.
-$bigautotests = array('unprotected.original.profile', 'semantic0.collapsed.profile', 'coarse.original.profile');
+$bigautotests = array('input.profile', 'semantic0.collapsed.profile', 'coarse.input.profile');
 
 function getSubArray($parent, $idx) {
   $sub = null;

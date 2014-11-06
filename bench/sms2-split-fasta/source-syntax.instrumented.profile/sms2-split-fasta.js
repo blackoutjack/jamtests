@@ -2501,6 +2501,8 @@ function writeShuffledSequence(sequence$$17) {
   return true;
 }
 function splitFasta(theDocument) {
+  JAM.startProfile('compute');
+
   var maxInput$$3 = 5E5;
   introspect(JAM.policy.p39) {
     var sequences = new Array
@@ -2678,6 +2680,8 @@ function splitFasta(theDocument) {
   }
   introspect(JAM.policy.p39) {
     closeWindow();
+
+  JAM.stopProfile('compute');
   }
   return true;
 }

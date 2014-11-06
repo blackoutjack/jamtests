@@ -2279,6 +2279,8 @@ function writeShuffledSequence(sequence$$17) {
   return true;
 }
 function restDigest(theDocument) {
+  JAM.startProfile('compute');
+
   var newDna = "";
   var maxInput$$3 = 1E5;
   var v539 = testScript();
@@ -2435,6 +2437,8 @@ function restDigest(theDocument) {
   }
   closePre();
   closeWindow();
+
+  JAM.stopProfile('compute');
   return true;
 }
 function digest(arrayOfRestrictionFragments, enzyme) {

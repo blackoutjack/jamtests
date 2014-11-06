@@ -1418,6 +1418,8 @@ function getGeneticCodeString(type$$25) {
   return true;
 }
 function mutateForDigest(theDocument) {
+  JAM.startProfile('compute');
+
   var newDna = "";
   var mutatedDna = "";
   var title$$9 = "";
@@ -1504,6 +1506,8 @@ function mutateForDigest(theDocument) {
   }
   closePre();
   closeWindow();
+
+  JAM.stopProfile('compute');
   return true;
 }
 function layoutRestTrans(dnaSequence$$3, mutatedDnaSequence, geneticCode$$1, restrictionSiteCollection$$1, mutatedRestrictionSiteCollection$$1, basesPerLine, readingFrame) {

@@ -869,6 +869,8 @@ function writeShuffledSequence(sequence$$17) {
   return true;
 }
 function emblFeat(theDocument) {
+  JAM.startProfile('compute');
+
   var maxInput$$3 = 2E5;
   if (testScript() == false) {
     return false;
@@ -881,6 +883,8 @@ function emblFeat(theDocument) {
   emblFeatExtract(theDocument.forms[0].elements[0].value, theDocument.forms[0].elements[4].options[theDocument.forms[0].elements[4].selectedIndex].value);
   closePre();
   closeWindow();
+
+  JAM.stopProfile('compute');
   return true;
 }
 function emblFeatExtract(emblFile$$2, outputType) {

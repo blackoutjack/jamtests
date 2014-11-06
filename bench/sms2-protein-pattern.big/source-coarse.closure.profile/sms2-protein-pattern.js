@@ -869,6 +869,8 @@ function writeShuffledSequence(sequence$$17) {
   return true;
 }
 function proteinPattern(theDocument) {
+  JAM.startProfile('compute');
+
   var newProtein = "";
   var maxInput$$3 = 5E5;
   if (testScript() == false) {
@@ -903,6 +905,8 @@ function proteinPattern(theDocument) {
   }
   closePre();
   closeWindow();
+
+  JAM.stopProfile('compute');
   return true;
 }
 function writeProteinPattern(proteinSequence$$1, re$$4) {

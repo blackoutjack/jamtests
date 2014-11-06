@@ -1815,6 +1815,8 @@ function writeShuffledSequence(sequence$$17) {
   return true;
 }
 function genbankTrans(theDocument) {
+  JAM.startProfile('compute');
+
   var maxInput$$3 = 2E5;
   var v481 = JAM.call(testScript, null, [], JAM.policy.p39);
   var v275 = v481 == false;
@@ -1878,6 +1880,8 @@ function genbankTrans(theDocument) {
   JAM.call(genBankTransExtract, null, [v277], JAM.policy.p38);
   JAM.call(closePre, null, [], JAM.policy.p39);
   JAM.call(closeWindow, null, [], JAM.policy.p39);
+
+  JAM.stopProfile('compute');
   return true;
 }
 function genBankTransExtract(genBankFile$$2) {

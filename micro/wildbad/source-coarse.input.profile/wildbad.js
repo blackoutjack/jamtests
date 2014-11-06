@@ -1,0 +1,12 @@
+var a = document.getElementById("ok");
+
+  JAM.startProfile('load');
+  introspect(JAM.policy.pFull) {
+  
+
+  }
+
+  JAM.stopProfile('load');
+
+var a = document.getElementById("ok");
+a.innerHTML = 1;

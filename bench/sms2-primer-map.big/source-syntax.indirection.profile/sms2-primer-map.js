@@ -2438,6 +2438,8 @@ function getGeneticCodeString(type$$26) {
   return true;
 }
 function primerMap(theDocument) {
+  JAM.startProfile('compute');
+
   var newDna = "";
   var title$$9 = "";
   var maxInput$$3 = 2E5;
@@ -3070,6 +3072,8 @@ function primerMap(theDocument) {
     v404 = i$$11 < v831;
   }
   JAM.call(closeWindow, null, [], JAM.policy.p39);
+
+  JAM.stopProfile('compute');
   return true;
 }
 function writePrimerSites(primers$$1) {

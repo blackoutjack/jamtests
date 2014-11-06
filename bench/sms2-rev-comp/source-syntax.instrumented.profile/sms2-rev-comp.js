@@ -2501,6 +2501,8 @@ function writeShuffledSequence(sequence$$17) {
   return true;
 }
 function revComp(theDocument) {
+  JAM.startProfile('compute');
+
   var newDna = "";
   var title$$9 = "";
   var maxInput$$3 = 1E5;
@@ -2704,6 +2706,8 @@ function revComp(theDocument) {
   }
   introspect(JAM.policy.p39) {
     closeWindow();
+
+  JAM.stopProfile('compute');
   }
   return true;
 }

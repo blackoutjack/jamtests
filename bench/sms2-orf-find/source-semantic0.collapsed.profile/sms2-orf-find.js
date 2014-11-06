@@ -1373,6 +1373,8 @@ function getGeneticCodeString(type$$25) {
   return true;
 }
 function orfFind(theDocument) {
+  JAM.startProfile('compute');
+
   var newDna = "";
   var title$$9 = "";
   var maxInput$$3 = 1E5;
@@ -1478,6 +1480,8 @@ function orfFind(theDocument) {
   }
   closePre();
   closeWindow();
+
+  JAM.stopProfile('compute');
   return true;
 }
 function writeOrfs(dnaSequence$$3, geneticCode$$1, startCodons, startPos, strand, theLength) {

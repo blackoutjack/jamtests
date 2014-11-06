@@ -869,6 +869,8 @@ function writeShuffledSequence(sequence$$17) {
   return true;
 }
 function colorAlignCons(theDocument) {
+  JAM.startProfile('compute');
+
   var maxInput$$3 = 2E4;
   if (testScript() == false) {
     return false;
@@ -929,6 +931,8 @@ function colorAlignCons(theDocument) {
   colorAlign(titleArray, sequenceArray$$1, theDocument.forms[0].elements[4].options[theDocument.forms[0].elements[4].selectedIndex].value, theDocument.forms[0].elements[5].options[theDocument.forms[0].elements[5].selectedIndex].value, arrayOfGroups, theDocument.forms[0].elements[8].value, longestTitle);
   closePre();
   closeWindow();
+
+  JAM.stopProfile('compute');
   return true;
 }
 function colorAlign(arrayOfTitles$$1, arrayOfSequences$$1, basePerLine$$4, consensus, arrayOfGroups$$1, definedStarts, longestTitle$$1) {

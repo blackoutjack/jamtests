@@ -2510,6 +2510,8 @@ function writeShuffledSequence(sequence$$17) {
   return true;
 }
 function dnaStats(theDocument) {
+  JAM.startProfile('compute');
+
   var newDna = "";
   var title$$9 = "";
   var maxInput$$3 = 5E5;
@@ -2608,6 +2610,8 @@ function dnaStats(theDocument) {
   }
   introspect(JAM.policy.p39) {
     closeWindow();
+
+  JAM.stopProfile('compute');
   }
   return true;
 }

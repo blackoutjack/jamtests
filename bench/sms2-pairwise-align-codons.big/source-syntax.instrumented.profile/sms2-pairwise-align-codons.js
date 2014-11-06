@@ -2510,6 +2510,8 @@ function writeShuffledSequence(sequence$$17) {
   return true;
 }
 function pairwiseAlignCodons(theDocument) {
+  JAM.startProfile('compute');
+
   var newCodonsOne = "";
   var titleOne = "";
   var newCodonsTwo = "";
@@ -2798,6 +2800,8 @@ function pairwiseAlignCodons(theDocument) {
   introspect(JAM.policy.p40) {
     closeWindow();
   }
+
+  JAM.stopProfile('compute');
   return true;
 }
 function pairwiseCodon(titleOne$$1, newCodonsOne$$1, titleTwo$$1, newCodonsTwo$$1, matrix, gapPenalty, beginGapPenalty, endGapPenalty) {

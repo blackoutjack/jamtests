@@ -1808,6 +1808,8 @@ function writeShuffledSequence(sequence$$17) {
   return true;
 }
 function cpgIslands(theDocument) {
+  JAM.startProfile('compute');
+
   var newDna = "";
   var title$$9 = "";
   var maxInput$$3 = 1E5;
@@ -1867,6 +1869,8 @@ function cpgIslands(theDocument) {
   }
   closePre();
   closeWindow();
+
+  JAM.stopProfile('compute');
   return true;
 }
 function cpgIslandRegions(dnaSequence$$3, windowSize, cutOff) {

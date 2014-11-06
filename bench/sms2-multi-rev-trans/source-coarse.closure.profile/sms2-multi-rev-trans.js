@@ -869,6 +869,8 @@ function writeShuffledSequence(sequence$$17) {
   return true;
 }
 function multiRevTrans(theDocument) {
+  JAM.startProfile('compute');
+
   var newProtein = "";
   var maxInput$$3 = 2E4;
   var codonTable$$1;
@@ -919,6 +921,8 @@ function multiRevTrans(theDocument) {
   writeMultiRevTrans(sequenceArray$$1, codonTable$$1);
   closePre();
   closeWindow();
+
+  JAM.stopProfile('compute');
   return true;
 }
 function writeConsensusSeq(sequenceArray$$2, codonTable$$2) {

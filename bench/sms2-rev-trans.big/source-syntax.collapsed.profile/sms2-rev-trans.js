@@ -1333,6 +1333,8 @@ function writeShuffledSequence(sequence$$17) {
   return true;
 }
 function revTrans(theDocument) {
+  JAM.startProfile('compute');
+
   var newProtein = "";
   var maxInput$$3 = 2E4;
   if (JAM.call(testScript, null, [], JAM.policy.p39) == false) {
@@ -1427,6 +1429,8 @@ function revTrans(theDocument) {
   }
   JAM.call(closePre, null, [], JAM.policy.p39);
   JAM.call(closeWindow, null, [], JAM.policy.p39);
+
+  JAM.stopProfile('compute');
   return true;
 }
 function writeRevTransSeqNoDegen(protein, title$$10, codonTable$$2) {

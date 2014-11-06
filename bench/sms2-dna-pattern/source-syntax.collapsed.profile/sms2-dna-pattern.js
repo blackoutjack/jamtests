@@ -1333,6 +1333,8 @@ function writeShuffledSequence(sequence$$17) {
   return true;
 }
 function dnaPattern(theDocument) {
+  JAM.startProfile('compute');
+
   var newDna = "";
   var maxInput$$3 = 5E5;
   var matches = JAM.new(Array, [], JAM.policy.p39);
@@ -1430,6 +1432,8 @@ function dnaPattern(theDocument) {
   }
   JAM.call(closePre, null, [], JAM.policy.p39);
   JAM.call(closeWindow, null, [], JAM.policy.p39);
+
+  JAM.stopProfile('compute');
   return true;
 }
 function writeDnaPattern(dnaSequence$$3, re$$4) {

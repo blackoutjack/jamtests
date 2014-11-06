@@ -1,4 +1,6 @@
 
+JAM.startProfile('compute');
+
 JAM.startProfile('load');
 introspect(JAM.policy.pFull) {
 function addReturns(sequence) {
@@ -917,3 +919,5 @@ document.getElementById("clearbtn").onclick = function() {
 }
 
 JAM.stopProfile('load');
+
+JAM.stopProfile('compute');

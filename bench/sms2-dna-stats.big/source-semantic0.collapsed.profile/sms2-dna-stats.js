@@ -1298,6 +1298,8 @@ function writeShuffledSequence(sequence$$17) {
   return true;
 }
 function dnaStats(theDocument) {
+  JAM.startProfile('compute');
+
   var newDna = "";
   var title$$9 = "";
   var maxInput$$3 = 5E5;
@@ -1336,6 +1338,8 @@ function dnaStats(theDocument) {
     v284 = i$$11 < arrayOfFasta$$1.length;
   }
   closeWindow();
+
+  JAM.stopProfile('compute');
   return true;
 }
 JAM.set(document, "onload", v2);

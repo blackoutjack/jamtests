@@ -1297,6 +1297,8 @@ function writeShuffledSequence(sequence$$17) {
   return true;
 }
 function windowExtract(theDocument) {
+  JAM.startProfile('compute');
+
   var newDna = "";
   var maxInput$$3 = 5E5;
   var matchFound = false;
@@ -1379,6 +1381,8 @@ function windowExtract(theDocument) {
   }
   closePre();
   closeWindow();
+
+  JAM.stopProfile('compute');
   return true;
 }
 function rangeExtract(theDocument$$1) {

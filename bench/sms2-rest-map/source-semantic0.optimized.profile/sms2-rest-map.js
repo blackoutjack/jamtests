@@ -1,6 +1,6 @@
 
 JAM.startProfile('load');
-function v13(){document.forms[0].elements[0].value=" "}function v12(){try{restMap()}catch(e){alert("The following error was encountered: "+e)}}function v11(){document.main_form.main_submit.focus()}
+function v13(){document.forms[0].elements[0].value=" "}function v12(){try{JAM.startProfile('compute');restMap();JAM.stopProfile('compute');}catch(e){alert("The following error was encountered: "+e)}}function v11(){document.main_form.main_submit.focus()}
 function v10(start,stop){function v9(str,p1,offset,s){return JAM.call(p1.replace,p1,[/./g," "],JAM.policy.p28)}function v8(str,p1,offset,s){return JAM.call(p1.replace,p1,[/./g," "],JAM.policy.p28)}var v17=outputWindow.document;JAM.call(v17.write,v17,[rightNum(this.positionLabel,"",8,"")],JAM.policy.p39);var v17=this.characters,v17=JAM.call(v17.slice,v17,[start,stop],JAM.policy.p40),v17=JAM.call(v17.join,v17,[""],JAM.policy.p23),v17=JAM.call(v17.replace,v17,[/^(\d+)/g,v8],JAM.policy.p28),v17=JAM.call(v17.replace,
 v17,[/(\d+)$/g,v9],JAM.policy.p28),v20=outputWindow.document;JAM.call(v20.write,v20,[v17+"\n"],JAM.policy.p39);this.positionLabel+=stop-start}
 function v7(start,stop){var v24=outputWindow.document;JAM.call(v24.write,v24,[rightNum(this.positionLabel,"",8,"")],JAM.policy.p39);var v24=outputWindow.document,v884=this.characters,v884=JAM.call(v884.slice,v884,[start,stop],JAM.policy.p40);JAM.call(v24.write,v24,[JAM.call(v884.join,v884,[""],JAM.policy.p23)+"\n"],JAM.policy.p39);this.positionLabel+=stop-start}

@@ -2279,6 +2279,8 @@ function writeShuffledSequence(sequence$$17) {
   return true;
 }
 function splitCodons(theDocument) {
+  JAM.startProfile('compute');
+
   var maxInput$$3 = 5E5;
   var sequences = new Array;
   var v476 = testScript();
@@ -2389,6 +2391,8 @@ function splitCodons(theDocument) {
   }
   closePre();
   closeWindow();
+
+  JAM.stopProfile('compute');
   return true;
 }
 function getBasesBasedOnCodonPosition(sequence$$19, position) {

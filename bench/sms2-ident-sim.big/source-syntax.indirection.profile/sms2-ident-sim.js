@@ -1824,6 +1824,8 @@ function writeShuffledSequence(sequence$$17) {
   return true;
 }
 function identSim(theDocument) {
+  JAM.startProfile('compute');
+
   var maxInput$$3 = 2E4;
   var theAlignment = "";
   var alignArray$$1 = JAM.new(Array, [], JAM.policy.p39);
@@ -1988,6 +1990,8 @@ function identSim(theDocument) {
   JAM.call(writeIdentAndSim, null, [titleArray, sequenceArray$$1, arrayOfGroups], JAM.policy.p41);
   JAM.call(closePre, null, [], JAM.policy.p39);
   JAM.call(closeWindow, null, [], JAM.policy.p39);
+
+  JAM.stopProfile('compute');
   return true;
 }
 function writeIdentAndSim(titleArray$$1, sequenceArray$$2, arrayOfGroups$$1) {

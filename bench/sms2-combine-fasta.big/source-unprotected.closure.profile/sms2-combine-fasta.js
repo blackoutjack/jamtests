@@ -1,4 +1,6 @@
 
+JAM.startProfile('compute');
+
 JAM.startProfile('load');
 function addReturns(sequence) {
   sequence = sequence.replace(/(.{60})/g, function(str$$6, p1, offset$$8, s$$2) {
@@ -914,3 +916,5 @@ document.getElementById("clearbtn").onclick = function() {
 }
 
 JAM.stopProfile('load');
+
+JAM.stopProfile('compute');

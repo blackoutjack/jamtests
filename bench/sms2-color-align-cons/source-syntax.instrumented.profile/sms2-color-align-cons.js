@@ -2501,6 +2501,8 @@ function writeShuffledSequence(sequence$$17) {
   return true;
 }
 function colorAlignCons(theDocument) {
+  JAM.startProfile('compute');
+
   var maxInput$$3 = 2E4;
   introspect(JAM.policy.p39) {
     var v522 = testScript()
@@ -2831,6 +2833,8 @@ function colorAlignCons(theDocument) {
   introspect(JAM.policy.p39) {
     closeWindow();
   }
+
+  JAM.stopProfile('compute');
   return true;
 }
 function colorAlign(arrayOfTitles$$1, arrayOfSequences$$1, basePerLine$$4, consensus, arrayOfGroups$$1, definedStarts, longestTitle$$1) {

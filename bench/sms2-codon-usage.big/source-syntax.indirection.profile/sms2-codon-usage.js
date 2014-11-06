@@ -2241,6 +2241,8 @@ function getGeneticCodeString(type$$25) {
   return true;
 }
 function codonUsage(theDocument) {
+  JAM.startProfile('compute');
+
   var newDna = "";
   var maxInput$$3 = 5E5;
   var codonTable$$1;
@@ -2352,6 +2354,8 @@ function codonUsage(theDocument) {
   }
   JAM.call(closePre, null, [], JAM.policy.p39);
   JAM.call(closeWindow, null, [], JAM.policy.p39);
+
+  JAM.stopProfile('compute');
   return true;
 }
 function writeCodonTable(codonTable$$2) {

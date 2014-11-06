@@ -32,7 +32,7 @@ $autowait = (isset($_REQUEST['autowait']) && is_numeric($_REQUEST['autowait'])) 
 $autoactions = array();
 
 $profile = false;
-if (substr_compare($script, ".profile.js", -11) === 0) {
+if (strpos($script, '.profile') > 0) {
   $profile = true;
 }
 

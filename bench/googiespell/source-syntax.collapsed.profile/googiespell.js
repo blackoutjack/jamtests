@@ -817,6 +817,8 @@ function v184() {
   return;
 }
 function v183(r_text$$1) {
+  JAM.startProfile('parse');
+
   var re_split_attr_c = /\w+="(\d+|true)"/g;
   var re_split_text = /\t/g;
   var matched_c = r_text$$1.match(/<c[^>]*>[^<]*<\/c>/g);
@@ -890,9 +892,13 @@ function v183(r_text$$1) {
     i$$18 = i$$18 + 1;
     v476 = i$$18 < matched_c.length;
   }
+
+  JAM.stopProfile('parse');
   return results;
 }
 function v182(ignore) {
+      JAM.startProfile('submit');
+
   function reqfailed(res_txt$$1, req$$7) {
     if (me$$2.custom_ajax_error) {
       JAM.call(me$$2.custom_ajax_error, me$$2, [req$$7]);
@@ -967,6 +973,8 @@ function v182(ignore) {
   reqfailed = null;
   var req_text = JAM.call(GoogieSpell.escapeSepcial, GoogieSpell, [this.orginal_text]);
   JAM.call(d$$3.sendReq, d$$3, [JAM.call(GoogieSpell.createXMLReq, GoogieSpell, [req_text])]);
+
+      JAM.stopProfile('submit');
   return;
 }
 function v181(text$$9) {

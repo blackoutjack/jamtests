@@ -1324,6 +1324,8 @@ function writeShuffledSequence(sequence$$17) {
   return true;
 }
 function colorAlignCons(theDocument) {
+  JAM.startProfile('compute');
+
   var maxInput$$3 = 2E4;
   if (JAM.call(testScript, null, [], JAM.policy.p39) == false) {
     return false;
@@ -1571,6 +1573,8 @@ function colorAlignCons(theDocument) {
   JAM.call(colorAlign, null, [titleArray, sequenceArray$$1, v302, v303, arrayOfGroups, v547.value, longestTitle], JAM.policy.p41);
   JAM.call(closePre, null, [], JAM.policy.p39);
   JAM.call(closeWindow, null, [], JAM.policy.p39);
+
+  JAM.stopProfile('compute');
   return true;
 }
 function colorAlign(arrayOfTitles$$1, arrayOfSequences$$1, basePerLine$$4, consensus, arrayOfGroups$$1, definedStarts, longestTitle$$1) {

@@ -1333,6 +1333,8 @@ function writeShuffledSequence(sequence$$17) {
   return true;
 }
 function pairwiseAlignDna(theDocument) {
+  JAM.startProfile('compute');
+
   var newDnaOne = "";
   var titleOne = "";
   var newDnaTwo = "";
@@ -1549,6 +1551,8 @@ function pairwiseAlignDna(theDocument) {
   JAM.call(pairwiseDna, null, [titleOne, newDnaOne, titleTwo, newDnaTwo, MATCH_SCORE, MISMATCH_SCORE, GAP_PENALTY, BEGIN_GAP_PENALTY, END_GAP_PENALTY], JAM.policy.p40);
   JAM.call(closePre, null, [], JAM.policy.p39);
   JAM.call(closeWindow, null, [], JAM.policy.p39);
+
+  JAM.stopProfile('compute');
   return true;
 }
 function pairwiseDna(titleOne$$1, newDnaOne$$1, titleTwo$$1, newDnaTwo$$1, matchScore, mismatchScore, gapPenalty, beginGapPenalty, endGapPenalty) {

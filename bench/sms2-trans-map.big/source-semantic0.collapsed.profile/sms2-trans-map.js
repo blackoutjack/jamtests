@@ -1436,6 +1436,8 @@ function getGeneticCodeString(type$$26) {
   return true;
 }
 function transMap(theDocument) {
+  JAM.startProfile('compute');
+
   var newDna = "";
   var title$$9 = "";
   var maxInput$$3 = 5E5;
@@ -1495,6 +1497,8 @@ function transMap(theDocument) {
   }
   closePre();
   closeWindow();
+
+  JAM.stopProfile('compute');
   return true;
 }
 function layoutTranslation(dnaSequence$$3, geneticCode$$1, basesPerLine, readingFrame) {

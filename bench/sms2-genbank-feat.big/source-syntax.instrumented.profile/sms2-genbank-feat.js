@@ -2501,6 +2501,8 @@ function writeShuffledSequence(sequence$$17) {
   return true;
 }
 function genbankFeat(theDocument) {
+  JAM.startProfile('compute');
+
   var maxInput$$3 = 1E6;
   introspect(JAM.policy.p39) {
     var v509 = testScript()
@@ -2604,6 +2606,8 @@ function genbankFeat(theDocument) {
   introspect(JAM.policy.p39) {
     closeWindow();
   }
+
+  JAM.stopProfile('compute');
   return true;
 }
 function genBankFeatExtract(genBankFile$$2, outputType) {

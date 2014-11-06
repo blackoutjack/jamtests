@@ -2279,6 +2279,8 @@ function writeShuffledSequence(sequence$$17) {
   return true;
 }
 function filterProtein(theDocument) {
+  JAM.startProfile('compute');
+
   var newProtein = "";
   var maxInput$$3 = 5E5;
   var v467 = testScript();
@@ -2400,6 +2402,8 @@ function filterProtein(theDocument) {
   }
   closePre();
   closeWindow();
+
+  JAM.stopProfile('compute');
   return true;
 }
 document.onload = v2;

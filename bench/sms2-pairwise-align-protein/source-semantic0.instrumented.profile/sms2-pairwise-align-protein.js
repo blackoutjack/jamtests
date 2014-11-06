@@ -2284,6 +2284,8 @@ function writeShuffledSequence(sequence$$17) {
   return true;
 }
 function pairwiseAlignProtein(theDocument) {
+  JAM.startProfile('compute');
+
   var newProteinOne = "";
   var titleOne = "";
   var newProteinTwo = "";
@@ -2448,6 +2450,8 @@ function pairwiseAlignProtein(theDocument) {
   pairwiseProtein(titleOne, newProteinOne, titleTwo, newProteinTwo, MATRIX, GAP_PENALTY, BEGIN_GAP_PENALTY, END_GAP_PENALTY);
   closePre();
   closeWindow();
+
+  JAM.stopProfile('compute');
   return true;
 }
 function pairwiseProtein(titleOne$$1, newProteinOne$$1, titleTwo$$1, newProteinTwo$$1, matrix, gapPenalty, beginGapPenalty, endGapPenalty) {

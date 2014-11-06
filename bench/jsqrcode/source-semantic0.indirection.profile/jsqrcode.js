@@ -573,6 +573,8 @@ function v146(s$$4) {
 }
 function v145(src$$1) {
   function v144() {
+    JAM.startProfile('decode');
+
     var canvas_qr$$1 = JAM.call(document.createElement, document, ["canvas"], JAM.policy.p24);
     var context$$1 = JAM.call(canvas_qr$$1.getContext, canvas_qr$$1, ["2d"], JAM.policy.p24);
     var canvas_out = JAM.call(document.getElementById, document, ["out-canvas"], JAM.policy.p24);
@@ -597,7 +599,9 @@ function v145(src$$1) {
       qrcode.result = "Cross domain image reading not supported in your browser! Save it to your computer then drag and drop the file!";
       var v1135 = qrcode.callback;
       var v239 = v1135 != null;
-      if (v239) {
+      
+    JAM.stopProfile('decode');
+if (v239) {
         var v238 = qrcode.result;
         JAM.call(qrcode.callback, qrcode, [v238], JAM.policy.p41);
       }
@@ -613,7 +617,9 @@ function v145(src$$1) {
     }
     var v1136 = qrcode.callback;
     var v242 = v1136 != null;
-    if (v242) {
+    
+    JAM.stopProfile('decode');
+if (v242) {
       var v241 = qrcode.result;
       JAM.call(qrcode.callback, qrcode, [v241], JAM.policy.p41);
     }

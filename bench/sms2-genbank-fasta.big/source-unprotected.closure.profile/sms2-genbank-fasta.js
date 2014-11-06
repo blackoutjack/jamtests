@@ -868,6 +868,8 @@ function writeShuffledSequence(sequence$$17) {
   return true;
 }
 function genbankFasta(theDocument) {
+  JAM.startProfile('compute');
+
   var newDna = "";
   var maxInput$$3 = 2E5;
   if (testScript() == false) {
@@ -881,6 +883,8 @@ function genbankFasta(theDocument) {
   genbankToFasta(theDocument.forms[0].elements[0].value);
   closePre();
   closeWindow();
+
+  JAM.stopProfile('compute');
   return true;
 }
 function genbankToFasta(genBankFile$$2) {
