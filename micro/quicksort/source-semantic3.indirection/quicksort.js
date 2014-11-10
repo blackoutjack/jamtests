@@ -69,5 +69,5 @@ function runTest() {
   var v10 = v20 - 1;
   quickSort(vals, 0, v10)
 
-  return "RESULT NOT SPECIFIED";
+  return vals[1] === (vals.sort() && vals[1]);
 }

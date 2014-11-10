@@ -7,5 +7,5 @@ function runTest() {
     v0 = i < 5;
   }
 
-  return "RESULT NOT SPECIFIED";
+  return x === 4;
 }

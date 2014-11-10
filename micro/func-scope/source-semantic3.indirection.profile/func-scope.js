@@ -28,5 +28,5 @@ function runTest() {
 
   JAM.stopProfile('load');
 
-  return "RESULT NOT SPECIFIED";
+  return cnt === 6;
 }

@@ -6,5 +6,5 @@ function runTest() {
   var z = 3;
   x = a()
 
-  return "RESULT NOT SPECIFIED";
+  return typeof x === "undefined";
 }

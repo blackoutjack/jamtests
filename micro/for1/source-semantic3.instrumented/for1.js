@@ -8,5 +8,5 @@ function runTest() {
     i = i + 1;
   }
 
-  return "RESULT NOT SPECIFIED";
+  return i === 6;
 }

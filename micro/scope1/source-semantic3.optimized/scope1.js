@@ -1,5 +1,5 @@
 function runTest() {
   function a(){var z=2;return z}var z=3;x=a()
 
-  return "RESULT NOT SPECIFIED";
+  return typeof x === "undefined";
 }

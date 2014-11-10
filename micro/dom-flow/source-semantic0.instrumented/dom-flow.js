@@ -4,5 +4,5 @@ function runTest() {
     label.textContent = "Are you sure you want to delete?";
   }
 
-  return "RESULT NOT SPECIFIED";
+  return label.textContent === "Are you sure you want to delete?";
 }

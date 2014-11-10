@@ -2,5 +2,5 @@ function runTest() {
   var f = JAM.new(Function, ["var x = new XMLHttpRequest(); x.open('http://www.blackoutjack.com/home', true); x.send(null);"]);
   f()
 
-  return "RESULT NOT SPECIFIED";
+  return typeof x === "undefined";
 }

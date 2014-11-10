@@ -9,5 +9,5 @@ function runTest() {
     var c = document.write("fine")
   }
 
-  return "RESULT NOT SPECIFIED";
+  return "Expect an exception";
 }

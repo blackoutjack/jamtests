@@ -4,5 +4,5 @@ function runTest() {
     var b = a.cookie
   }
 
-  return "RESULT NOT SPECIFIED";
+  return b === undefined;
 }

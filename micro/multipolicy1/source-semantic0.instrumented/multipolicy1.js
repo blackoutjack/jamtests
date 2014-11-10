@@ -14,5 +14,5 @@ function runTest() {
     a[c] = 10;
   }
 
-  return "RESULT NOT SPECIFIED";
+  return "Expect an exception";
 }

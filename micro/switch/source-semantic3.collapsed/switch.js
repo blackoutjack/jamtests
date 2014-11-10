@@ -25,5 +25,5 @@ function runTest() {
       alert("ERROR");
   }
 
-  return "RESULT NOT SPECIFIED";
+  return x !== 2;
 }

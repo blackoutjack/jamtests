@@ -9,5 +9,5 @@ function runTest() {
   var nextRow = 2;
   result = x[currentRow] = (y[currentRow] + a * (result + x[currentRow = currentRow + 1] + x[lastRow = lastRow + 1] + x[nextRow = nextRow + 1])) * z
 
-  return "RESULT NOT SPECIFIED";
+  return result === 153;
 }

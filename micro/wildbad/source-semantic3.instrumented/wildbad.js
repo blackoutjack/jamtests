@@ -4,5 +4,5 @@ function runTest() {
     a.innerHTML = 1;
   }
 
-  return "RESULT NOT SPECIFIED";
+  return a.innerHTML === "THIS SHOULD REMAIN";
 }

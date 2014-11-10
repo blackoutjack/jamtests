@@ -5,5 +5,5 @@ function runTest() {
   document.getElementById = f;
   var elt = JAM.call(document.getElementById, document, ["ok"])
 
-  return "RESULT NOT SPECIFIED";
+  return elt === undefined;
 }

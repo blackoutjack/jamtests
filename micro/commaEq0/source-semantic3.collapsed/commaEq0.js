@@ -7,5 +7,5 @@ function runTest() {
   b = c[e];
   a = b[d + 1]
 
-  return "RESULT NOT SPECIFIED";
+  return typeof a === "undefined" && b === 10;
 }

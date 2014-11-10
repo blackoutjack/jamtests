@@ -14,5 +14,5 @@ function runTest() {
     v1 = i < 4;
   }
 
-  return "RESULT NOT SPECIFIED";
+  return x === 1;
 }

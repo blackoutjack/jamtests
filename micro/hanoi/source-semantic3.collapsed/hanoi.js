@@ -78,5 +78,5 @@ function runTest() {
   alert("Aux: " + auxStack);
   alert("Target: " + targetStack)
 
-  return "RESULT NOT SPECIFIED";
+  return "Target tower should contain all discs, in order.";
 }

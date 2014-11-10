@@ -18,5 +18,5 @@ function runTest() {
     document.write(b);
   }
 
-  return "RESULT NOT SPECIFIED";
+  return a === null && b instanceof HTMLElement;
 }

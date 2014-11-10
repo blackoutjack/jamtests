@@ -4,5 +4,5 @@ function runTest() {
   }
   throw f()
 
-  return "RESULT NOT SPECIFIED";
+  return "Exception thrown";
 }

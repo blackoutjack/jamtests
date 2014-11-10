@@ -16,5 +16,5 @@ function runTest() {
   alert(v2);
   JAM.call(setTimeout, null, [v0, 1E3])
 
-  return "RESULT NOT SPECIFIED";
+  return "1st pop-up should print the native function, and the 2nd should print 'false'";
 }

@@ -6,5 +6,5 @@ function runTest() {
     document.close();
   }
 
-  return "RESULT NOT SPECIFIED";
+  return "'BOY HOWDY' should be written on the page";
 }

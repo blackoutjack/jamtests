@@ -17,5 +17,5 @@ function runTest() {
 
   JAM.stopProfile('load');
 
-  return "RESULT NOT SPECIFIED";
+  return b === 5 && i === 1;
 }

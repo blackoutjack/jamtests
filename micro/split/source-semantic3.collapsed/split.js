@@ -3,5 +3,5 @@ function runTest() {
   var b = JAM.call(document.createElement, document, ["script"], JAM.policy.p1);
   var c = JAM.call(document.write, document, ["fine"], JAM.policy.p2)
 
-  return "RESULT NOT SPECIFIED";
+  return "Expect an exception";
 }

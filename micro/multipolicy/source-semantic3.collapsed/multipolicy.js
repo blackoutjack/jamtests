@@ -12,5 +12,5 @@ function runTest() {
   }
   JAM.call(document.write, document, [b], JAM.policy.p5)
 
-  return "RESULT NOT SPECIFIED";
+  return a === null && b instanceof HTMLElement;
 }

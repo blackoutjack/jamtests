@@ -17,5 +17,5 @@ function runTest() {
   var v3 = a.ok;
   alert(v3)
 
-  return "RESULT NOT SPECIFIED";
+  return a.ok === "okhello whatever";
 }

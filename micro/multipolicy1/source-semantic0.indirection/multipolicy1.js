@@ -12,5 +12,5 @@ function runTest() {
   }
   JAM.set(a, c, 10, JAM.policy.p4)
 
-  return "RESULT NOT SPECIFIED";
+  return "Expect an exception";
 }

@@ -11,5 +11,5 @@ function runTest() {
   var v0 = v2 + c;
   alert(v0)
 
-  return "RESULT NOT SPECIFIED";
+  return a === 32 && b === 32 && c === 22;
 }

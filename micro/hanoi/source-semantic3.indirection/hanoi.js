@@ -111,5 +111,5 @@ function runTest() {
   var v22 = "Target: " + targetStack;
   alert(v22)
 
-  return "RESULT NOT SPECIFIED";
+  return "Target tower should contain all discs, in order.";
 }

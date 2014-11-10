@@ -5,5 +5,5 @@ function runTest() {
   b = a[i] = a[i] + (i = i + 1);
   alert("a: " + a + " b: " + b + " i: " + i)
 
-  return "RESULT NOT SPECIFIED";
+  return b === 5 && i === 1;
 }

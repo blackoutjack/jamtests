@@ -8,5 +8,5 @@ function runTest() {
     x = a();
   }
 
-  return "RESULT NOT SPECIFIED";
+  return typeof x === "undefined";
 }

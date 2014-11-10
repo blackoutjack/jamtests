@@ -3,5 +3,5 @@ function runTest() {
     x = 2;
   }
 
-  return "RESULT NOT SPECIFIED";
+  return typeof x === "undefined";
 }

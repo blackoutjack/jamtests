@@ -16,5 +16,5 @@ function runTest() {
 
   JAM.stopProfile('load');
 
-  return "RESULT NOT SPECIFIED";
+  return "The Tx object should be alerted, followed by 'undefined'";
 }

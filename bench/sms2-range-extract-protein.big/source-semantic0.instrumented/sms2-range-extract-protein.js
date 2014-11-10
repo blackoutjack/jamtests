@@ -30,7 +30,7 @@ function addReturns(sequence) {
   function v0(str$$6, p1, offset$$8, s$$2) {
     return p1 + "\n";
   }
-  introspect(JAM.policy.p27) {
+  introspect(JAM.policy.p28) {
     sequence = sequence.replace(/(.{60})/g, v0);
   }
   return sequence;
@@ -48,19 +48,15 @@ function checkAlign(arrayOfTitles, arrayOfSequences) {
   var v409 = arrayOfTitles.length;
   var v20 = i$$1 < v409;
   for (;v20;) {
-    introspect(JAM.policy.p26) {
-      var v937 = arrayOfTitles[i$$1]
-    }
-    introspect(JAM.policy.p29) {
+    var v937 = arrayOfTitles[i$$1];
+    introspect(JAM.policy.p30) {
       var v841 = v937.search(/\S/)
     }
     var v702 = v841 == -1;
     var v843 = !v702;
     if (v843) {
-      introspect(JAM.policy.p26) {
-        var v938 = arrayOfSequences[i$$1]
-      }
-      introspect(JAM.policy.p29) {
+      var v938 = arrayOfSequences[i$$1];
+      introspect(JAM.policy.p30) {
         var v842 = v938.search(/\S/)
       }
       v702 = v842 == -1;
@@ -68,9 +64,7 @@ function checkAlign(arrayOfTitles, arrayOfSequences) {
     var v410 = v702;
     var v704 = !v410;
     if (v704) {
-      introspect(JAM.policy.p26) {
-        var v844 = arrayOfSequences[i$$1]
-      }
+      var v844 = arrayOfSequences[i$$1];
       var v703 = v844.length;
       v410 = v703 != lengthOfAlign;
     }
@@ -86,13 +80,13 @@ function checkAlign(arrayOfTitles, arrayOfSequences) {
   return true;
 }
 function checkCodonTable(codonTable) {
-  introspect(JAM.policy.p29) {
+  introspect(JAM.policy.p30) {
     var v995 = codonTable.search(/AmAcid/)
   }
   var v939 = v995 == -1;
   var v997 = !v939;
   if (v997) {
-    introspect(JAM.policy.p29) {
+    introspect(JAM.policy.p30) {
       var v996 = codonTable.search(/Codon/)
     }
     v939 = v996 == -1;
@@ -100,7 +94,7 @@ function checkCodonTable(codonTable) {
   var v845 = v939;
   var v941 = !v845;
   if (v941) {
-    introspect(JAM.policy.p29) {
+    introspect(JAM.policy.p30) {
       var v940 = codonTable.search(/Number/)
     }
     v845 = v940 == -1;
@@ -108,7 +102,7 @@ function checkCodonTable(codonTable) {
   var v705 = v845;
   var v847 = !v705;
   if (v847) {
-    introspect(JAM.policy.p29) {
+    introspect(JAM.policy.p30) {
       var v846 = codonTable.search(/\/1000/)
     }
     v705 = v846 == -1;
@@ -116,7 +110,7 @@ function checkCodonTable(codonTable) {
   var v412 = v705;
   var v707 = !v412;
   if (v707) {
-    introspect(JAM.policy.p29) {
+    introspect(JAM.policy.p30) {
       var v706 = codonTable.search(/Fraction\s*\.\./)
     }
     v412 = v706 == -1;
@@ -130,7 +124,7 @@ function checkCodonTable(codonTable) {
 }
 function checkFormElement(formElement) {
   var v708 = formElement.value;
-  introspect(JAM.policy.p29) {
+  introspect(JAM.policy.p30) {
     var v413 = v708.search(/\S/)
   }
   var v22 = v413 == -1;
@@ -148,10 +142,8 @@ function checkGeneticCode(arrayOfPatterns) {
   var v414 = arrayOfPatterns.length;
   var v25 = z$$2 < v414;
   for (;v25;) {
-    introspect(JAM.policy.p26) {
-      var v709 = arrayOfPatterns[z$$2]
-    }
-    introspect(JAM.policy.p29) {
+    var v709 = arrayOfPatterns[z$$2];
+    introspect(JAM.policy.p30) {
       var v415 = v709.search(/^\s*\/[a-zA-Z\|\[\]]+\/=[a-zA-Z\*]/)
     }
     var v23 = v415 == -1;
@@ -159,9 +151,7 @@ function checkGeneticCode(arrayOfPatterns) {
       alert("Genetic code error: one or more patterns have been entered incorrectly.");
       return false;
     }
-    introspect(JAM.policy.p26) {
-      var v710 = arrayOfPatterns[z$$2]
-    }
+    var v710 = arrayOfPatterns[z$$2];
     var v416 = moreExpressionCheck(v710);
     var v24 = v416 == false;
     if (v24) {
@@ -182,10 +172,8 @@ function checkGeneticCode(arrayOfPatterns) {
   for (;v34;) {
     var v28 = geneticCodeMatchExp;
     var v29 = j;
-    introspect(JAM.policy.p26) {
-      var v848 = arrayOfPatterns[j]
-    }
-    introspect(JAM.policy.p29) {
+    var v848 = arrayOfPatterns[j];
+    introspect(JAM.policy.p30) {
       var v711 = v848.match(/\/.+\//)
     }
     var v419 = v711 + "gi";
@@ -195,10 +183,8 @@ function checkGeneticCode(arrayOfPatterns) {
     }
     var v30 = geneticCodeMatchResult;
     var v31 = j;
-    introspect(JAM.policy.p26) {
-      var v712 = arrayOfPatterns[j]
-    }
-    introspect(JAM.policy.p29) {
+    var v712 = arrayOfPatterns[j];
+    introspect(JAM.policy.p30) {
       var v420 = v712.match(/=[a-zA-Z\*]/)
     }
     var v1113 = v420.toString();
@@ -207,10 +193,8 @@ function checkGeneticCode(arrayOfPatterns) {
     }
     var v32 = geneticCodeMatchResult;
     var v33 = j;
-    introspect(JAM.policy.p26) {
-      var v421 = geneticCodeMatchResult[j]
-    }
-    introspect(JAM.policy.p27) {
+    var v421 = geneticCodeMatchResult[j];
+    introspect(JAM.policy.p28) {
       var v1114 = v421.replace(/=/g, "")
     }
     introspect(JAM.policy.p13) {
@@ -226,17 +210,15 @@ function checkGeneticCode(arrayOfPatterns) {
   var v41 = i$$2 <= v423;
   for (;v41;) {
     var v35 = i$$2 + 3;
-    introspect(JAM.policy.p27) {
+    introspect(JAM.policy.p28) {
       codon = testSequence.substring(i$$2, v35);
     }
     j = 0;
     var v424 = geneticCodeMatchExp.length;
     var v39 = j < v424;
     for (;v39;) {
-      introspect(JAM.policy.p26) {
-        var v714 = geneticCodeMatchExp[j]
-      }
-      introspect(JAM.policy.p39) {
+      var v714 = geneticCodeMatchExp[j];
+      introspect(JAM.policy.p40) {
         var v425 = codon.search(v714)
       }
       var v38 = v425 != -1;
@@ -272,10 +254,8 @@ function checkGroupInput(arrayOfPatterns$$1) {
   var v429 = arrayOfPatterns$$1.length;
   var v43 = z$$3 < v429;
   for (;v43;) {
-    introspect(JAM.policy.p26) {
-      var v716 = arrayOfPatterns$$1[z$$3]
-    }
-    introspect(JAM.policy.p29) {
+    var v716 = arrayOfPatterns$$1[z$$3];
+    introspect(JAM.policy.p30) {
       var v430 = v716.search(/[^acdefghiklmnpqrstvwyz]/i)
     }
     var v42 = v430 != -1;
@@ -291,9 +271,7 @@ function checkGroupInput(arrayOfPatterns$$1) {
   var v432 = arrayOfPatterns$$1.length;
   var v47 = i$$3 < v432;
   for (;v47;) {
-    introspect(JAM.policy.p26) {
-      var v717 = arrayOfPatterns$$1[i$$3]
-    }
+    var v717 = arrayOfPatterns$$1[i$$3];
     var v433 = "[" + v717;
     var v44 = v433 + "]";
     var re = new RegExp(v44, "gi");
@@ -301,10 +279,8 @@ function checkGroupInput(arrayOfPatterns$$1) {
     var v434 = arrayOfPatterns$$1.length;
     var v46 = j$$1 < v434;
     for (;v46;) {
-      introspect(JAM.policy.p26) {
-        var v718 = arrayOfPatterns$$1[j$$1]
-      }
-      introspect(JAM.policy.p39) {
+      var v718 = arrayOfPatterns$$1[j$$1];
+      introspect(JAM.policy.p40) {
         var v435 = v718.search(re)
       }
       var v45 = v435 != -1;
@@ -327,10 +303,8 @@ function checkRestPatterns(arrayOfPatterns$$2) {
   var v438 = arrayOfPatterns$$2.length;
   var v50 = z$$4 < v438;
   for (;v50;) {
-    introspect(JAM.policy.p26) {
-      var v719 = arrayOfPatterns$$2[z$$4]
-    }
-    introspect(JAM.policy.p29) {
+    var v719 = arrayOfPatterns$$2[z$$4];
+    introspect(JAM.policy.p30) {
       var v439 = v719.search(/^\s*\/[acgturyswkmbdhvn\[\]]+\/\s+\([^\/]+\)\d+/i)
     }
     var v48 = v439 == -1;
@@ -338,9 +312,7 @@ function checkRestPatterns(arrayOfPatterns$$2) {
       alert("One or more patterns have been entered incorrectly.");
       return false;
     }
-    introspect(JAM.policy.p26) {
-      var v720 = arrayOfPatterns$$2[z$$4]
-    }
+    var v720 = arrayOfPatterns$$2[z$$4];
     var v440 = moreExpressionCheck(v720);
     var v49 = v440 == false;
     if (v49) {
@@ -355,7 +327,7 @@ function checkRestPatterns(arrayOfPatterns$$2) {
 }
 function checkSequenceLength(text$$7, maxInput) {
   var v849 = getSequenceFromFasta(text$$7);
-  introspect(JAM.policy.p27) {
+  introspect(JAM.policy.p28) {
     var v721 = v849.replace(/[^A-Za-z]/g, "")
   }
   var v442 = v721.length;
@@ -384,154 +356,154 @@ function checkTextLength(text$$8, maxInput$$1) {
   return;
 }
 function complement(dnaSequence) {
-  introspect(JAM.policy.p27) {
+  introspect(JAM.policy.p28) {
     dnaSequence = dnaSequence.replace(/g/g, "1");
   }
-  introspect(JAM.policy.p27) {
+  introspect(JAM.policy.p28) {
     dnaSequence = dnaSequence.replace(/c/g, "2");
   }
-  introspect(JAM.policy.p27) {
+  introspect(JAM.policy.p28) {
     dnaSequence = dnaSequence.replace(/1/g, "c");
   }
-  introspect(JAM.policy.p27) {
+  introspect(JAM.policy.p28) {
     dnaSequence = dnaSequence.replace(/2/g, "g");
   }
-  introspect(JAM.policy.p27) {
+  introspect(JAM.policy.p28) {
     dnaSequence = dnaSequence.replace(/G/g, "1");
   }
-  introspect(JAM.policy.p27) {
+  introspect(JAM.policy.p28) {
     dnaSequence = dnaSequence.replace(/C/g, "2");
   }
-  introspect(JAM.policy.p27) {
+  introspect(JAM.policy.p28) {
     dnaSequence = dnaSequence.replace(/1/g, "C");
   }
-  introspect(JAM.policy.p27) {
+  introspect(JAM.policy.p28) {
     dnaSequence = dnaSequence.replace(/2/g, "G");
   }
-  introspect(JAM.policy.p27) {
+  introspect(JAM.policy.p28) {
     dnaSequence = dnaSequence.replace(/a/g, "1");
   }
-  introspect(JAM.policy.p27) {
+  introspect(JAM.policy.p28) {
     dnaSequence = dnaSequence.replace(/t/g, "2");
   }
-  introspect(JAM.policy.p27) {
+  introspect(JAM.policy.p28) {
     dnaSequence = dnaSequence.replace(/1/g, "t");
   }
-  introspect(JAM.policy.p27) {
+  introspect(JAM.policy.p28) {
     dnaSequence = dnaSequence.replace(/2/g, "a");
   }
-  introspect(JAM.policy.p27) {
+  introspect(JAM.policy.p28) {
     dnaSequence = dnaSequence.replace(/A/g, "1");
   }
-  introspect(JAM.policy.p27) {
+  introspect(JAM.policy.p28) {
     dnaSequence = dnaSequence.replace(/T/g, "2");
   }
-  introspect(JAM.policy.p27) {
+  introspect(JAM.policy.p28) {
     dnaSequence = dnaSequence.replace(/1/g, "T");
   }
-  introspect(JAM.policy.p27) {
+  introspect(JAM.policy.p28) {
     dnaSequence = dnaSequence.replace(/2/g, "A");
   }
-  introspect(JAM.policy.p27) {
+  introspect(JAM.policy.p28) {
     dnaSequence = dnaSequence.replace(/u/g, "a");
   }
-  introspect(JAM.policy.p27) {
+  introspect(JAM.policy.p28) {
     dnaSequence = dnaSequence.replace(/U/g, "A");
   }
-  introspect(JAM.policy.p27) {
+  introspect(JAM.policy.p28) {
     dnaSequence = dnaSequence.replace(/r/g, "1");
   }
-  introspect(JAM.policy.p27) {
+  introspect(JAM.policy.p28) {
     dnaSequence = dnaSequence.replace(/y/g, "2");
   }
-  introspect(JAM.policy.p27) {
+  introspect(JAM.policy.p28) {
     dnaSequence = dnaSequence.replace(/1/g, "y");
   }
-  introspect(JAM.policy.p27) {
+  introspect(JAM.policy.p28) {
     dnaSequence = dnaSequence.replace(/2/g, "r");
   }
-  introspect(JAM.policy.p27) {
+  introspect(JAM.policy.p28) {
     dnaSequence = dnaSequence.replace(/R/g, "1");
   }
-  introspect(JAM.policy.p27) {
+  introspect(JAM.policy.p28) {
     dnaSequence = dnaSequence.replace(/Y/g, "2");
   }
-  introspect(JAM.policy.p27) {
+  introspect(JAM.policy.p28) {
     dnaSequence = dnaSequence.replace(/1/g, "Y");
   }
-  introspect(JAM.policy.p27) {
+  introspect(JAM.policy.p28) {
     dnaSequence = dnaSequence.replace(/2/g, "R");
   }
-  introspect(JAM.policy.p27) {
+  introspect(JAM.policy.p28) {
     dnaSequence = dnaSequence.replace(/k/g, "1");
   }
-  introspect(JAM.policy.p27) {
+  introspect(JAM.policy.p28) {
     dnaSequence = dnaSequence.replace(/m/g, "2");
   }
-  introspect(JAM.policy.p27) {
+  introspect(JAM.policy.p28) {
     dnaSequence = dnaSequence.replace(/1/g, "m");
   }
-  introspect(JAM.policy.p27) {
+  introspect(JAM.policy.p28) {
     dnaSequence = dnaSequence.replace(/2/g, "k");
   }
-  introspect(JAM.policy.p27) {
+  introspect(JAM.policy.p28) {
     dnaSequence = dnaSequence.replace(/K/g, "1");
   }
-  introspect(JAM.policy.p27) {
+  introspect(JAM.policy.p28) {
     dnaSequence = dnaSequence.replace(/M/g, "2");
   }
-  introspect(JAM.policy.p27) {
+  introspect(JAM.policy.p28) {
     dnaSequence = dnaSequence.replace(/1/g, "M");
   }
-  introspect(JAM.policy.p27) {
+  introspect(JAM.policy.p28) {
     dnaSequence = dnaSequence.replace(/2/g, "K");
   }
-  introspect(JAM.policy.p27) {
+  introspect(JAM.policy.p28) {
     dnaSequence = dnaSequence.replace(/b/g, "1");
   }
-  introspect(JAM.policy.p27) {
+  introspect(JAM.policy.p28) {
     dnaSequence = dnaSequence.replace(/v/g, "2");
   }
-  introspect(JAM.policy.p27) {
+  introspect(JAM.policy.p28) {
     dnaSequence = dnaSequence.replace(/1/g, "v");
   }
-  introspect(JAM.policy.p27) {
+  introspect(JAM.policy.p28) {
     dnaSequence = dnaSequence.replace(/2/g, "b");
   }
-  introspect(JAM.policy.p27) {
+  introspect(JAM.policy.p28) {
     dnaSequence = dnaSequence.replace(/B/g, "1");
   }
-  introspect(JAM.policy.p27) {
+  introspect(JAM.policy.p28) {
     dnaSequence = dnaSequence.replace(/V/g, "2");
   }
-  introspect(JAM.policy.p27) {
+  introspect(JAM.policy.p28) {
     dnaSequence = dnaSequence.replace(/1/g, "V");
   }
-  introspect(JAM.policy.p27) {
+  introspect(JAM.policy.p28) {
     dnaSequence = dnaSequence.replace(/2/g, "B");
   }
-  introspect(JAM.policy.p27) {
+  introspect(JAM.policy.p28) {
     dnaSequence = dnaSequence.replace(/d/g, "1");
   }
-  introspect(JAM.policy.p27) {
+  introspect(JAM.policy.p28) {
     dnaSequence = dnaSequence.replace(/h/g, "2");
   }
-  introspect(JAM.policy.p27) {
+  introspect(JAM.policy.p28) {
     dnaSequence = dnaSequence.replace(/1/g, "h");
   }
-  introspect(JAM.policy.p27) {
+  introspect(JAM.policy.p28) {
     dnaSequence = dnaSequence.replace(/2/g, "d");
   }
-  introspect(JAM.policy.p27) {
+  introspect(JAM.policy.p28) {
     dnaSequence = dnaSequence.replace(/D/g, "1");
   }
-  introspect(JAM.policy.p27) {
+  introspect(JAM.policy.p28) {
     dnaSequence = dnaSequence.replace(/H/g, "2");
   }
-  introspect(JAM.policy.p27) {
+  introspect(JAM.policy.p28) {
     dnaSequence = dnaSequence.replace(/1/g, "H");
   }
-  introspect(JAM.policy.p27) {
+  introspect(JAM.policy.p28) {
     dnaSequence = dnaSequence.replace(/2/g, "D");
   }
   return dnaSequence;
@@ -573,40 +545,40 @@ function closeWindow() {
 }
 function convertDegenerates(sequence$$1) {
   sequence$$1 = sequence$$1.toLowerCase();
-  introspect(JAM.policy.p27) {
+  introspect(JAM.policy.p28) {
     sequence$$1 = sequence$$1.replace(/t/g, "[TU]");
   }
-  introspect(JAM.policy.p27) {
+  introspect(JAM.policy.p28) {
     sequence$$1 = sequence$$1.replace(/r/g, "[AGR]");
   }
-  introspect(JAM.policy.p27) {
+  introspect(JAM.policy.p28) {
     sequence$$1 = sequence$$1.replace(/y/g, "[CTUY]");
   }
-  introspect(JAM.policy.p27) {
+  introspect(JAM.policy.p28) {
     sequence$$1 = sequence$$1.replace(/s/g, "[GCS]");
   }
-  introspect(JAM.policy.p27) {
+  introspect(JAM.policy.p28) {
     sequence$$1 = sequence$$1.replace(/w/g, "[ATUW]");
   }
-  introspect(JAM.policy.p27) {
+  introspect(JAM.policy.p28) {
     sequence$$1 = sequence$$1.replace(/k/g, "[GTUK]");
   }
-  introspect(JAM.policy.p27) {
+  introspect(JAM.policy.p28) {
     sequence$$1 = sequence$$1.replace(/m/g, "[ACM]");
   }
-  introspect(JAM.policy.p27) {
+  introspect(JAM.policy.p28) {
     sequence$$1 = sequence$$1.replace(/b/g, "[CGTUBSKY]");
   }
-  introspect(JAM.policy.p27) {
+  introspect(JAM.policy.p28) {
     sequence$$1 = sequence$$1.replace(/d/g, "[AGTUDRKW]");
   }
-  introspect(JAM.policy.p27) {
+  introspect(JAM.policy.p28) {
     sequence$$1 = sequence$$1.replace(/h/g, "[ACTUHMYW]");
   }
-  introspect(JAM.policy.p27) {
+  introspect(JAM.policy.p28) {
     sequence$$1 = sequence$$1.replace(/v/g, "[ACGVSMR]");
   }
-  introspect(JAM.policy.p27) {
+  introspect(JAM.policy.p28) {
     sequence$$1 = sequence$$1.replace(/n/g, "[ACGTURYSWKMBDHVN]");
   }
   return sequence$$1;
@@ -622,10 +594,8 @@ function earlyCheckAlign(alignArray) {
   var v447 = alignArray.length;
   var v63 = i$$4 < v447;
   for (;v63;) {
-    introspect(JAM.policy.p26) {
-      var v722 = alignArray[i$$4]
-    }
-    introspect(JAM.policy.p29) {
+    var v722 = alignArray[i$$4];
+    introspect(JAM.policy.p30) {
       var v448 = v722.search(/[^\s]+\s/)
     }
     var v62 = v448 == -1;
@@ -640,22 +610,22 @@ function earlyCheckAlign(alignArray) {
   return true;
 }
 function filterAlignSeq(alignSeq) {
-  introspect(JAM.policy.p27) {
+  introspect(JAM.policy.p28) {
     alignSeq = alignSeq.replace(/[^abcdefghiklmnpqrstvwxyz\.\-]/gi, "");
   }
   return alignSeq;
 }
 function filterFastaTitle(sequenceTitle) {
-  introspect(JAM.policy.p27) {
+  introspect(JAM.policy.p28) {
     sequenceTitle = sequenceTitle.replace(/\s{2,}/g, " ");
   }
-  introspect(JAM.policy.p27) {
+  introspect(JAM.policy.p28) {
     sequenceTitle = sequenceTitle.replace(/^\s*/g, "");
   }
-  introspect(JAM.policy.p27) {
+  introspect(JAM.policy.p28) {
     sequenceTitle = sequenceTitle.replace(/[\f\n\r\t]+$/g, "\n");
   }
-  introspect(JAM.policy.p27) {
+  introspect(JAM.policy.p28) {
     return sequenceTitle.replace(/[\<\>]\n/gi, "");
   }
 }
@@ -663,20 +633,20 @@ function getArrayOfFasta(sequenceData) {
   var arrayOfFasta = new Array;
   var matchArray;
   var re$$1 = /\>[^\>]+/g;
-  introspect(JAM.policy.p29) {
+  introspect(JAM.policy.p30) {
     var v450 = sequenceData.search(/\>[^\f\n\r]+[\f\n\r]/)
   }
   var v66 = v450 != -1;
   if (v66) {
-    introspect(JAM.policy.p39) {
+    introspect(JAM.policy.p40) {
       var v65 = matchArray = re$$1.exec(sequenceData)
     }
     for (;v65;) {
       var v64 = matchArray[0];
-      introspect(JAM.policy.p39) {
+      introspect(JAM.policy.p40) {
         arrayOfFasta.push(v64);
       }
-      introspect(JAM.policy.p39) {
+      introspect(JAM.policy.p40) {
         v65 = matchArray = re$$1.exec(sequenceData);
       }
     }
@@ -689,7 +659,7 @@ function getFastaTitleFromTitleAndSequence(fastaSequenceTitle, sequence$$2) {
   var v451 = sequence$$2.length;
   var v67 = "&gt;results for " + v451;
   var stringToReturn = v67 + " residue sequence ";
-  introspect(JAM.policy.p29) {
+  introspect(JAM.policy.p30) {
     var v452 = fastaSequenceTitle.search(/[^\s]/)
   }
   var v69 = v452 != -1;
@@ -699,7 +669,7 @@ function getFastaTitleFromTitleAndSequence(fastaSequenceTitle, sequence$$2) {
     stringToReturn = v68 + '"';
   }
   var v454 = stringToReturn + ' starting "';
-  introspect(JAM.policy.p22) {
+  introspect(JAM.policy.p26) {
     var v455 = sequence$$2.substring(0, 10)
   }
   var v70 = v454 + v455;
@@ -710,7 +680,7 @@ function getFuzzySearchTitle(fastaSequenceTitleOne, sequenceOne, fastaSequenceTi
   var v456 = sequenceOne.length;
   var v71 = "Search results for " + v456;
   var stringToReturn$$1 = v71 + " residue sequence ";
-  introspect(JAM.policy.p29) {
+  introspect(JAM.policy.p30) {
     var v457 = fastaSequenceTitleOne.search(/[^\s]/)
   }
   var v73 = v457 != -1;
@@ -720,7 +690,7 @@ function getFuzzySearchTitle(fastaSequenceTitleOne, sequenceOne, fastaSequenceTi
     stringToReturn$$1 = v72 + '"';
   }
   var v459 = stringToReturn$$1 + ' starting "';
-  introspect(JAM.policy.p22) {
+  introspect(JAM.policy.p26) {
     var v460 = sequenceOne.substring(0, 10)
   }
   var v74 = v459 + v460;
@@ -729,7 +699,7 @@ function getFuzzySearchTitle(fastaSequenceTitleOne, sequenceOne, fastaSequenceTi
   var v462 = sequenceTwo.length;
   var v75 = v461 + v462;
   stringToReturn$$1 = v75 + " residue sequence ";
-  introspect(JAM.policy.p29) {
+  introspect(JAM.policy.p30) {
     var v463 = fastaSequenceTitleTwo.search(/[^\s]/)
   }
   var v77 = v463 != -1;
@@ -739,7 +709,7 @@ function getFuzzySearchTitle(fastaSequenceTitleOne, sequenceOne, fastaSequenceTi
     stringToReturn$$1 = v76 + '"';
   }
   var v465 = stringToReturn$$1 + ' starting "';
-  introspect(JAM.policy.p22) {
+  introspect(JAM.policy.p26) {
     var v466 = sequenceTwo.substring(0, 10)
   }
   var v78 = v465 + v466;
@@ -756,10 +726,8 @@ function getGeneticCodeMatchExp(arrayOfPatterns$$3) {
   for (;v83;) {
     var v81 = geneticCodeMatchExp$$1;
     var v82 = j$$2;
-    introspect(JAM.policy.p26) {
-      var v850 = arrayOfPatterns$$3[j$$2]
-    }
-    introspect(JAM.policy.p29) {
+    var v850 = arrayOfPatterns$$3[j$$2];
+    introspect(JAM.policy.p30) {
       var v723 = v850.match(/\/.+\//)
     }
     var v468 = v723 + "gi";
@@ -782,10 +750,8 @@ function getGeneticCodeMatchResult(arrayOfPatterns$$4) {
   for (;v89;) {
     var v85 = geneticCodeMatchResult$$1;
     var v86 = j$$3;
-    introspect(JAM.policy.p26) {
-      var v724 = arrayOfPatterns$$4[j$$3]
-    }
-    introspect(JAM.policy.p29) {
+    var v724 = arrayOfPatterns$$4[j$$3];
+    introspect(JAM.policy.p30) {
       var v471 = v724.match(/=[a-zA-Z\*]/)
     }
     var v1116 = v471.toString();
@@ -794,10 +760,8 @@ function getGeneticCodeMatchResult(arrayOfPatterns$$4) {
     }
     var v87 = geneticCodeMatchResult$$1;
     var v88 = j$$3;
-    introspect(JAM.policy.p26) {
-      var v472 = geneticCodeMatchResult$$1[j$$3]
-    }
-    introspect(JAM.policy.p27) {
+    var v472 = geneticCodeMatchResult$$1[j$$3];
+    introspect(JAM.policy.p28) {
       var v1117 = v472.replace(/=/g, "")
     }
     introspect(JAM.policy.p13) {
@@ -813,7 +777,7 @@ function getInfoFromTitleAndSequence(fastaSequenceTitle$$1, sequence$$3) {
   var v474 = sequence$$3.length;
   var v90 = "Results for " + v474;
   var stringToReturn$$2 = v90 + " residue sequence ";
-  introspect(JAM.policy.p29) {
+  introspect(JAM.policy.p30) {
     var v475 = fastaSequenceTitle$$1.search(/[^\s]/)
   }
   var v92 = v475 != -1;
@@ -823,7 +787,7 @@ function getInfoFromTitleAndSequence(fastaSequenceTitle$$1, sequence$$3) {
     stringToReturn$$2 = v91 + '"';
   }
   var v477 = stringToReturn$$2 + ' starting "';
-  introspect(JAM.policy.p22) {
+  introspect(JAM.policy.p26) {
     var v478 = sequence$$3.substring(0, 10)
   }
   var v93 = v477 + v478;
@@ -837,7 +801,7 @@ function getInfoFromTitleAndSequenceAndTopology(fastaSequenceTitle$$2, sequence$
   var v480 = sequence$$4.length;
   var v95 = v479 + v480;
   var stringToReturn$$3 = v95 + " residue sequence ";
-  introspect(JAM.policy.p29) {
+  introspect(JAM.policy.p30) {
     var v481 = fastaSequenceTitle$$2.search(/[^\s]/)
   }
   var v97 = v481 != -1;
@@ -847,7 +811,7 @@ function getInfoFromTitleAndSequenceAndTopology(fastaSequenceTitle$$2, sequence$
     stringToReturn$$3 = v96 + '"';
   }
   var v483 = stringToReturn$$3 + ' starting "';
-  introspect(JAM.policy.p22) {
+  introspect(JAM.policy.p26) {
     var v484 = sequence$$4.substring(0, 10)
   }
   var v98 = v483 + v484;
@@ -859,7 +823,7 @@ function getPairwiseAlignTitle(fastaSequenceTitleOne$$1, sequenceOne$$1, fastaSe
   var v485 = sequenceOne$$1.length;
   var v100 = "Alignment results for " + v485;
   var stringToReturn$$4 = v100 + " residue sequence ";
-  introspect(JAM.policy.p29) {
+  introspect(JAM.policy.p30) {
     var v486 = fastaSequenceTitleOne$$1.search(/[^\s]/)
   }
   var v102 = v486 != -1;
@@ -869,7 +833,7 @@ function getPairwiseAlignTitle(fastaSequenceTitleOne$$1, sequenceOne$$1, fastaSe
     stringToReturn$$4 = v101 + '"';
   }
   var v488 = stringToReturn$$4 + ' starting "';
-  introspect(JAM.policy.p22) {
+  introspect(JAM.policy.p26) {
     var v489 = sequenceOne$$1.substring(0, 10)
   }
   var v103 = v488 + v489;
@@ -878,7 +842,7 @@ function getPairwiseAlignTitle(fastaSequenceTitleOne$$1, sequenceOne$$1, fastaSe
   var v491 = sequenceTwo$$1.length;
   var v104 = v490 + v491;
   stringToReturn$$4 = v104 + " residue sequence ";
-  introspect(JAM.policy.p29) {
+  introspect(JAM.policy.p30) {
     var v492 = fastaSequenceTitleTwo$$1.search(/[^\s]/)
   }
   var v106 = v492 != -1;
@@ -888,7 +852,7 @@ function getPairwiseAlignTitle(fastaSequenceTitleOne$$1, sequenceOne$$1, fastaSe
     stringToReturn$$4 = v105 + '"';
   }
   var v494 = stringToReturn$$4 + ' starting "';
-  introspect(JAM.policy.p22) {
+  introspect(JAM.policy.p26) {
     var v495 = sequenceTwo$$1.substring(0, 10)
   }
   var v107 = v494 + v495;
@@ -906,13 +870,11 @@ function getRandomSequence(components, lengthOut) {
     var v496 = Math.random();
     var v497 = components.length;
     var v109 = v496 * v497;
-    introspect(JAM.policy.p29) {
+    introspect(JAM.policy.p30) {
       tempNum = Math.floor(v109);
     }
-    introspect(JAM.policy.p26) {
-      tempChar = components[tempNum];
-    }
-    introspect(JAM.policy.p39) {
+    tempChar = components[tempNum];
+    introspect(JAM.policy.p40) {
       sequenceArray.push(tempChar);
     }
     j$$4 = j$$4 + 1;
@@ -923,12 +885,12 @@ function getRandomSequence(components, lengthOut) {
   }
 }
 function getSequenceFromFasta(sequenceRecord) {
-  introspect(JAM.policy.p29) {
+  introspect(JAM.policy.p30) {
     var v498 = sequenceRecord.search(/\>[^\f\n\r]+[\f\n\r]/)
   }
   var v111 = v498 != -1;
   if (v111) {
-    introspect(JAM.policy.p27) {
+    introspect(JAM.policy.p28) {
       sequenceRecord = sequenceRecord.replace(/\>[^\f\n\r]+[\f\n\r]/, "");
     }
   }
@@ -936,35 +898,35 @@ function getSequenceFromFasta(sequenceRecord) {
 }
 function getTitleFromFasta(sequenceRecord$$1) {
   var fastaTitle = "Untitled";
-  introspect(JAM.policy.p29) {
+  introspect(JAM.policy.p30) {
     var v499 = sequenceRecord$$1.search(/\>[^\f\n\r]+[\f\n\r]/)
   }
   var v113 = v499 != -1;
   if (v113) {
-    introspect(JAM.policy.p27) {
+    introspect(JAM.policy.p28) {
       var v112 = sequenceRecord$$1.match(/\>[^\f\n\r]+[\f\n\r]/, "")
     }
     fastaTitle = v112.toString();
-    introspect(JAM.policy.p27) {
+    introspect(JAM.policy.p28) {
       fastaTitle = fastaTitle.replace(/\>|[\f\n\r]/g, "");
     }
-    introspect(JAM.policy.p27) {
+    introspect(JAM.policy.p28) {
       fastaTitle = fastaTitle.replace(/\s{2,}/g, " ");
     }
-    introspect(JAM.policy.p27) {
+    introspect(JAM.policy.p28) {
       fastaTitle = fastaTitle.replace(/[\<\>]/gi, "");
     }
   }
   return fastaTitle;
 }
 function moreExpressionCheck(expressionToCheck) {
-  introspect(JAM.policy.p29) {
+  introspect(JAM.policy.p30) {
     var v1090 = expressionToCheck.search(/\[[A-Za-z\|]*\[/)
   }
   var v1083 = v1090 != -1;
   var v1092 = !v1083;
   if (v1092) {
-    introspect(JAM.policy.p29) {
+    introspect(JAM.policy.p30) {
       var v1091 = expressionToCheck.search(/\][A-Za-z\|]*\]/)
     }
     v1083 = v1091 != -1;
@@ -972,7 +934,7 @@ function moreExpressionCheck(expressionToCheck) {
   var v1074 = v1083;
   var v1085 = !v1074;
   if (v1085) {
-    introspect(JAM.policy.p29) {
+    introspect(JAM.policy.p30) {
       var v1084 = expressionToCheck.search(/\[\]/)
     }
     v1074 = v1084 != -1;
@@ -980,7 +942,7 @@ function moreExpressionCheck(expressionToCheck) {
   var v1064 = v1074;
   var v1076 = !v1064;
   if (v1076) {
-    introspect(JAM.policy.p29) {
+    introspect(JAM.policy.p30) {
       var v1075 = expressionToCheck.search(/\/[A-Za-z\|]*\]/)
     }
     v1064 = v1075 != -1;
@@ -988,7 +950,7 @@ function moreExpressionCheck(expressionToCheck) {
   var v1052 = v1064;
   var v1066 = !v1052;
   if (v1066) {
-    introspect(JAM.policy.p29) {
+    introspect(JAM.policy.p30) {
       var v1065 = expressionToCheck.search(/\[[A-Za-z\|]*\//)
     }
     v1052 = v1065 != -1;
@@ -996,7 +958,7 @@ function moreExpressionCheck(expressionToCheck) {
   var v1033 = v1052;
   var v1054 = !v1033;
   if (v1054) {
-    introspect(JAM.policy.p29) {
+    introspect(JAM.policy.p30) {
       var v1053 = expressionToCheck.search(/\|\|/)
     }
     v1033 = v1053 != -1;
@@ -1004,7 +966,7 @@ function moreExpressionCheck(expressionToCheck) {
   var v998 = v1033;
   var v1035 = !v998;
   if (v1035) {
-    introspect(JAM.policy.p29) {
+    introspect(JAM.policy.p30) {
       var v1034 = expressionToCheck.search(/\/\|/)
     }
     v998 = v1034 != -1;
@@ -1012,7 +974,7 @@ function moreExpressionCheck(expressionToCheck) {
   var v942 = v998;
   var v1000 = !v942;
   if (v1000) {
-    introspect(JAM.policy.p29) {
+    introspect(JAM.policy.p30) {
       var v999 = expressionToCheck.search(/\|\//)
     }
     v942 = v999 != -1;
@@ -1020,7 +982,7 @@ function moreExpressionCheck(expressionToCheck) {
   var v851 = v942;
   var v944 = !v851;
   if (v944) {
-    introspect(JAM.policy.p29) {
+    introspect(JAM.policy.p30) {
       var v943 = expressionToCheck.search(/\[.\]/)
     }
     v851 = v943 != -1;
@@ -1028,7 +990,7 @@ function moreExpressionCheck(expressionToCheck) {
   var v726 = v851;
   var v853 = !v726;
   if (v853) {
-    introspect(JAM.policy.p29) {
+    introspect(JAM.policy.p30) {
       var v852 = expressionToCheck.search(/\</)
     }
     v726 = v852 != -1;
@@ -1036,7 +998,7 @@ function moreExpressionCheck(expressionToCheck) {
   var v500 = v726;
   var v728 = !v500;
   if (v728) {
-    introspect(JAM.policy.p29) {
+    introspect(JAM.policy.p30) {
       var v727 = expressionToCheck.search(/\>/)
     }
     v500 = v727 != -1;
@@ -1077,7 +1039,7 @@ function openWindow(title$$6) {
   return;
 }
 function _openWindow(title$$7, isColor) {
-  introspect(JAM.policy.p25) {
+  introspect(JAM.policy.p27) {
     outputWindow = window.open("", "my_new_window", "toolbar=no, location=no, directories=no, status=yes, menubar=yes, scrollbars=yes, resizable=yes, copyhistory=no, width=800, height=400");
   }
   outputWindow.focus();
@@ -1086,7 +1048,7 @@ function _openWindow(title$$7, isColor) {
   var v729 = v854 + "<head>\n";
   var v501 = v729 + "<title>Sequence Manipulation Suite</title>\n";
   var v120 = v501 + '<meta http-equiv="Content-Type" content="text/html; charset=ISO-8859-1" />\n';
-  introspect(JAM.policy.p39) {
+  introspect(JAM.policy.p40) {
     v119.write(v120);
   }
   if (isColor) {
@@ -1106,7 +1068,7 @@ function _openWindow(title$$7, isColor) {
     var v730 = v855 + "td.many {color: #000000}\n";
     var v502 = v730 + "td.title {font-weight: bold; color: #000000; background-color: #FFFFFF}\n";
     var v122 = v502 + "</style>\n";
-    introspect(JAM.policy.p39) {
+    introspect(JAM.policy.p40) {
       v121.write(v122);
     }
   } else {
@@ -1127,7 +1089,7 @@ function _openWindow(title$$7, isColor) {
     var v731 = v856 + "td.title {font-weight: bold; color: #000000; background-color: #FFFFFF}\n";
     var v503 = v731 + "img {display: none}\n";
     var v124 = v503 + "</style>\n";
-    introspect(JAM.policy.p39) {
+    introspect(JAM.policy.p40) {
       v123.write(v124);
     }
   }
@@ -1136,7 +1098,7 @@ function _openWindow(title$$7, isColor) {
   var v732 = v857 + '<div class="title">';
   var v504 = v732 + title$$7;
   var v126 = v504 + " results</div>\n";
-  introspect(JAM.policy.p39) {
+  introspect(JAM.policy.p40) {
     v125.write(v126);
   }
   outputWindow.status = "Please Wait.";
@@ -1147,7 +1109,7 @@ function openWindowAlign(title$$8) {
   return;
 }
 function _openWindowAlign(title$$9, isBackground) {
-  introspect(JAM.policy.p25) {
+  introspect(JAM.policy.p27) {
     outputWindow = window.open("", "my_new_window", "toolbar=no, location=no, directories=no, status=yes, menubar=yes, scrollbars=yes, resizable=yes, copyhistory=no, width=800, height=400");
   }
   outputWindow.focus();
@@ -1156,7 +1118,7 @@ function _openWindowAlign(title$$9, isBackground) {
   var v733 = v858 + "<head>\n";
   var v505 = v733 + "<title>Sequence Manipulation Suite</title>\n";
   var v128 = v505 + '<meta http-equiv="Content-Type" content="text/html; charset=ISO-8859-1" />\n';
-  introspect(JAM.policy.p39) {
+  introspect(JAM.policy.p40) {
     v127.write(v128);
   }
   if (isBackground) {
@@ -1176,7 +1138,7 @@ function _openWindowAlign(title$$9, isBackground) {
     var v734 = v859 + "span.n, span.q {color: #000000; background-color: #996633}\n";
     var v506 = v734 + "span.p {color: #000000; background-color: #FF99FF}\n";
     var v130 = v506 + "</style>\n";
-    introspect(JAM.policy.p39) {
+    introspect(JAM.policy.p40) {
       v129.write(v130);
     }
   } else {
@@ -1198,7 +1160,7 @@ function _openWindowAlign(title$$9, isBackground) {
     var v735 = v860 + "span.p {color: #00FFCC; background-color: #FFFFFF}\n";
     var v507 = v735 + "img {display: none}\n";
     var v132 = v507 + "</style>\n";
-    introspect(JAM.policy.p39) {
+    introspect(JAM.policy.p40) {
       v131.write(v132);
     }
   }
@@ -1207,65 +1169,65 @@ function _openWindowAlign(title$$9, isBackground) {
   var v736 = v861 + '<div class="title">';
   var v508 = v736 + title$$9;
   var v134 = v508 + " results</div>\n";
-  introspect(JAM.policy.p39) {
+  introspect(JAM.policy.p40) {
     v133.write(v134);
   }
   outputWindow.status = "Please Wait.";
   return true;
 }
 function removeFormatting(sequence$$5) {
-  introspect(JAM.policy.p27) {
+  introspect(JAM.policy.p28) {
     return sequence$$5.replace(/[\d\s]/g, "");
   }
 }
 function removeNonDna(sequence$$6) {
-  introspect(JAM.policy.p27) {
+  introspect(JAM.policy.p28) {
     return sequence$$6.replace(/[^gatucryswkmbdhvnxGATUCRYSWKMBDHVNX]/g, "");
   }
 }
 function removeNonDnaStrict(sequence$$7) {
-  introspect(JAM.policy.p27) {
+  introspect(JAM.policy.p28) {
     return sequence$$7.replace(/[^gatucGATUC]/g, "");
   }
 }
 function removeNonProtein(sequence$$8) {
-  introspect(JAM.policy.p27) {
+  introspect(JAM.policy.p28) {
     return sequence$$8.replace(/[^ACDEFGHIKLMNPQRSTVWYZacdefghiklmnpqrstvwyz\*]/g, "");
   }
 }
 function removeNonProteinStrict(sequence$$9) {
-  introspect(JAM.policy.p27) {
+  introspect(JAM.policy.p28) {
     return sequence$$9.replace(/[^ACDEFGHIKLMNPQRSTVWYZacdefghiklmnpqrstvwyz\*]/g, "");
   }
 }
 function removeNonProteinAllowDegen(sequence$$10) {
-  introspect(JAM.policy.p27) {
+  introspect(JAM.policy.p28) {
     return sequence$$10.replace(/[^ABCDEFGHIKLMNPQRSTVWYXZabcdefghiklmnpqrstvwyxz\*]/g, "");
   }
 }
 function removeNonProteinAllowX(sequence$$11) {
-  introspect(JAM.policy.p27) {
+  introspect(JAM.policy.p28) {
     return sequence$$11.replace(/[^ACDEFGHIKLMNPQRSTVWYZXacdefghiklmnpqrstvwyzx\*]/g, "");
   }
 }
 function removeWhiteSpace(text$$9) {
-  introspect(JAM.policy.p27) {
+  introspect(JAM.policy.p28) {
     return text$$9.replace(/\s/g, "");
   }
 }
 function removeNonLetters(sequence$$12) {
-  introspect(JAM.policy.p27) {
+  introspect(JAM.policy.p28) {
     return sequence$$12.replace(/[^A-Z]/gi, "");
   }
 }
 function reverse(dnaSequence$$1) {
   var tempDnaArray = new Array;
-  introspect(JAM.policy.p29) {
+  introspect(JAM.policy.p30) {
     var v509 = dnaSequence$$1.search(/./)
   }
   var v135 = v509 != -1;
   if (v135) {
-    introspect(JAM.policy.p29) {
+    introspect(JAM.policy.p30) {
       tempDnaArray = dnaSequence$$1.match(/./g);
     }
     tempDnaArray = tempDnaArray.reverse();
@@ -1298,7 +1260,7 @@ function testScript() {
   }
   var testArray = new Array;
   var testString = "1234567890";
-  introspect(JAM.policy.p39) {
+  introspect(JAM.policy.p40) {
     testArray.push(testString);
   }
   var v510 = testArray[0];
@@ -1309,7 +1271,7 @@ function testScript() {
   }
   testString = "1\n2\n3";
   var re$$2 = /^2$/m;
-  introspect(JAM.policy.p39) {
+  introspect(JAM.policy.p40) {
     var v511 = testString.search(re$$2)
   }
   var v140 = v511 == -1;
@@ -1328,7 +1290,7 @@ function testScript() {
     alert("Exception handling not supported. See browser compatibility page.");
   }
   testString = "123";
-  introspect(JAM.policy.p27) {
+  introspect(JAM.policy.p28) {
     testString = testString.replace(/(\d)/g, v1);
   }
   var v142 = testString != "1X2X3X";
@@ -1356,7 +1318,7 @@ function testScript() {
   return true;
 }
 function verifyDigits(theNumber$$1) {
-  introspect(JAM.policy.p29) {
+  introspect(JAM.policy.p30) {
     var v514 = theNumber$$1.search(/\d/)
   }
   var v145 = v514 == -1;
@@ -1367,13 +1329,13 @@ function verifyDigits(theNumber$$1) {
   return;
 }
 function verifyEmbl(emblFile) {
-  introspect(JAM.policy.p29) {
+  introspect(JAM.policy.p30) {
     var v949 = emblFile.search(/ID/)
   }
   var v862 = v949 == -1;
   var v951 = !v862;
   if (v951) {
-    introspect(JAM.policy.p29) {
+    introspect(JAM.policy.p30) {
       var v950 = emblFile.search(/AC/)
     }
     v862 = v950 == -1;
@@ -1381,7 +1343,7 @@ function verifyEmbl(emblFile) {
   var v737 = v862;
   var v864 = !v737;
   if (v864) {
-    introspect(JAM.policy.p29) {
+    introspect(JAM.policy.p30) {
       var v863 = emblFile.search(/DE/)
     }
     v737 = v863 == -1;
@@ -1389,7 +1351,7 @@ function verifyEmbl(emblFile) {
   var v515 = v737;
   var v739 = !v515;
   if (v739) {
-    introspect(JAM.policy.p29) {
+    introspect(JAM.policy.p30) {
       var v738 = emblFile.search(/SQ/)
     }
     v515 = v738 == -1;
@@ -1402,7 +1364,7 @@ function verifyEmbl(emblFile) {
   return true;
 }
 function verifyMaxDigits(theNumber$$2, maxInput$$2) {
-  introspect(JAM.policy.p29) {
+  introspect(JAM.policy.p30) {
     var v516 = theNumber$$2.search(/\d/)
   }
   var v147 = v516 == -1;
@@ -1420,7 +1382,7 @@ function verifyMaxDigits(theNumber$$2, maxInput$$2) {
   return;
 }
 function verifyDna(dnaSequence$$2) {
-  introspect(JAM.policy.p29) {
+  introspect(JAM.policy.p30) {
     var v518 = dnaSequence$$2.search(/[^gatucryswkmbdhvnx\s]/i)
   }
   var v150 = v518 != -1;
@@ -1430,7 +1392,7 @@ function verifyDna(dnaSequence$$2) {
   return true;
 }
 function verifyProtein(proteinSequence) {
-  introspect(JAM.policy.p29) {
+  introspect(JAM.policy.p30) {
     var v519 = proteinSequence.search(/[^acdefghiklmnpqrstvwyz\*\s]/i)
   }
   var v151 = v519 != -1;
@@ -1440,13 +1402,13 @@ function verifyProtein(proteinSequence) {
   return true;
 }
 function verifyGenBank(genBankFile) {
-  introspect(JAM.policy.p29) {
+  introspect(JAM.policy.p30) {
     var v952 = genBankFile.search(/LOCUS/)
   }
   var v865 = v952 == -1;
   var v954 = !v865;
   if (v954) {
-    introspect(JAM.policy.p29) {
+    introspect(JAM.policy.p30) {
       var v953 = genBankFile.search(/DEFINITION/)
     }
     v865 = v953 == -1;
@@ -1454,7 +1416,7 @@ function verifyGenBank(genBankFile) {
   var v740 = v865;
   var v867 = !v740;
   if (v867) {
-    introspect(JAM.policy.p29) {
+    introspect(JAM.policy.p30) {
       var v866 = genBankFile.search(/ACCESSION/)
     }
     v740 = v866 == -1;
@@ -1462,7 +1424,7 @@ function verifyGenBank(genBankFile) {
   var v520 = v740;
   var v742 = !v520;
   if (v742) {
-    introspect(JAM.policy.p29) {
+    introspect(JAM.policy.p30) {
       var v741 = genBankFile.search(/ORIGIN/)
     }
     v520 = v741 == -1;
@@ -1475,13 +1437,13 @@ function verifyGenBank(genBankFile) {
   return true;
 }
 function verifyGenBankFeat(genBankFile$$1) {
-  introspect(JAM.policy.p29) {
+  introspect(JAM.policy.p30) {
     var v955 = genBankFile$$1.search(/LOCUS/)
   }
   var v868 = v955 == -1;
   var v957 = !v868;
   if (v957) {
-    introspect(JAM.policy.p29) {
+    introspect(JAM.policy.p30) {
       var v956 = genBankFile$$1.search(/DEFINITION/)
     }
     v868 = v956 == -1;
@@ -1489,7 +1451,7 @@ function verifyGenBankFeat(genBankFile$$1) {
   var v743 = v868;
   var v870 = !v743;
   if (v870) {
-    introspect(JAM.policy.p29) {
+    introspect(JAM.policy.p30) {
       var v869 = genBankFile$$1.search(/ACCESSION/)
     }
     v743 = v869 == -1;
@@ -1497,7 +1459,7 @@ function verifyGenBankFeat(genBankFile$$1) {
   var v521 = v743;
   var v745 = !v521;
   if (v745) {
-    introspect(JAM.policy.p29) {
+    introspect(JAM.policy.p30) {
       var v744 = genBankFile$$1.search(/ORIGIN/)
     }
     v521 = v744 == -1;
@@ -1507,7 +1469,7 @@ function verifyGenBankFeat(genBankFile$$1) {
     alert("Please enter the contents of a GenBank file.");
     return false;
   }
-  introspect(JAM.policy.p29) {
+  introspect(JAM.policy.p30) {
     var v522 = genBankFile$$1.search(/FEATURES {13}/)
   }
   var v154 = v522 == -1;
@@ -1518,13 +1480,13 @@ function verifyGenBankFeat(genBankFile$$1) {
   return true;
 }
 function verifyEmblFeat(emblFile$$1) {
-  introspect(JAM.policy.p29) {
+  introspect(JAM.policy.p30) {
     var v958 = emblFile$$1.search(/ID/)
   }
   var v871 = v958 == -1;
   var v960 = !v871;
   if (v960) {
-    introspect(JAM.policy.p29) {
+    introspect(JAM.policy.p30) {
       var v959 = emblFile$$1.search(/AC/)
     }
     v871 = v959 == -1;
@@ -1532,7 +1494,7 @@ function verifyEmblFeat(emblFile$$1) {
   var v746 = v871;
   var v873 = !v746;
   if (v873) {
-    introspect(JAM.policy.p29) {
+    introspect(JAM.policy.p30) {
       var v872 = emblFile$$1.search(/DE/)
     }
     v746 = v872 == -1;
@@ -1540,7 +1502,7 @@ function verifyEmblFeat(emblFile$$1) {
   var v523 = v746;
   var v748 = !v523;
   if (v748) {
-    introspect(JAM.policy.p29) {
+    introspect(JAM.policy.p30) {
       var v747 = emblFile$$1.search(/SQ/)
     }
     v523 = v747 == -1;
@@ -1550,7 +1512,7 @@ function verifyEmblFeat(emblFile$$1) {
     alert("Please enter the contents of an EMBL file.");
     return false;
   }
-  introspect(JAM.policy.p29) {
+  introspect(JAM.policy.p30) {
     var v524 = emblFile$$1.search(/^FT/m)
   }
   var v156 = v524 == -1;
@@ -1579,7 +1541,7 @@ function writeGroupNum(text$$10, tabIn$$1, groupSize, basePerLine, startBase, st
       for (;v160;) {
         var v158 = lineOfText;
         var v526 = k + i$$5;
-        introspect(JAM.policy.p39) {
+        introspect(JAM.policy.p40) {
           var v159 = text$$10.charAt(v526)
         }
         lineOfText = v158 + v159;
@@ -1595,7 +1557,7 @@ function writeGroupNum(text$$10, tabIn$$1, groupSize, basePerLine, startBase, st
     }
     var v162 = outputWindow.document;
     var v163 = lineOfText + "\n";
-    introspect(JAM.policy.p39) {
+    introspect(JAM.policy.p40) {
       v162.write(v163);
     }
     lineOfText = "";
@@ -1645,7 +1607,7 @@ function writeGroupNumDnaSetStart(text$$12, tabIn$$3, groupSize$$2, basePerLine$
         }
         var v167 = lineOfText$$1;
         var v531 = k$$1 + i$$6;
-        introspect(JAM.policy.p39) {
+        introspect(JAM.policy.p40) {
           var v168 = text$$12.charAt(v531)
         }
         lineOfText$$1 = v167 + v168;
@@ -1677,7 +1639,7 @@ function writeGroupNumDnaSetStart(text$$12, tabIn$$3, groupSize$$2, basePerLine$
       var v749 = rightNum(v874, "", 8, tabIn$$3);
       var v534 = v749 + lineOfText$$1;
       var v176 = v534 + "\n";
-      introspect(JAM.policy.p39) {
+      introspect(JAM.policy.p40) {
         v175.write(v176);
       }
       var v180 = strands$$1 == "two";
@@ -1688,7 +1650,7 @@ function writeGroupNumDnaSetStart(text$$12, tabIn$$3, groupSize$$2, basePerLine$
         var v751 = complement(lineOfText$$1);
         var v535 = v750 + v751;
         var v178 = v535 + "\n";
-        introspect(JAM.policy.p39) {
+        introspect(JAM.policy.p40) {
           v177.write(v178);
         }
         var v179 = outputWindow.document;
@@ -1704,7 +1666,7 @@ function writeGroupNumDnaSetStart(text$$12, tabIn$$3, groupSize$$2, basePerLine$
         var v753 = adjustNumbering(i$$6, numberingAdjustment);
         var v536 = v752 + v753;
         var v182 = v536 + "\n";
-        introspect(JAM.policy.p39) {
+        introspect(JAM.policy.p40) {
           v181.write(v182);
         }
         var v186 = strands$$1 == "two";
@@ -1714,7 +1676,7 @@ function writeGroupNumDnaSetStart(text$$12, tabIn$$3, groupSize$$2, basePerLine$
           var v755 = adjustNumbering(i$$6, numberingAdjustment);
           var v537 = v754 + v755;
           var v184 = v537 + "\n";
-          introspect(JAM.policy.p39) {
+          introspect(JAM.policy.p40) {
             v183.write(v184);
           }
           var v185 = outputWindow.document;
@@ -1727,12 +1689,12 @@ function writeGroupNumDnaSetStart(text$$12, tabIn$$3, groupSize$$2, basePerLine$
         if (v195) {
           var v187 = outputWindow.document;
           var v188 = aboveNum + "\n";
-          introspect(JAM.policy.p39) {
+          introspect(JAM.policy.p40) {
             v187.write(v188);
           }
           var v189 = outputWindow.document;
           var v190 = lineOfText$$1 + "\n";
-          introspect(JAM.policy.p39) {
+          introspect(JAM.policy.p40) {
             v189.write(v190);
           }
           var v194 = strands$$1 == "two";
@@ -1740,7 +1702,7 @@ function writeGroupNumDnaSetStart(text$$12, tabIn$$3, groupSize$$2, basePerLine$
             var v191 = outputWindow.document;
             var v538 = complement(lineOfText$$1);
             var v192 = v538 + "\n";
-            introspect(JAM.policy.p39) {
+            introspect(JAM.policy.p40) {
               v191.write(v192);
             }
             var v193 = outputWindow.document;
@@ -1782,7 +1744,7 @@ function writeGroupNumProtein(text$$13, tabIn$$4, groupSize$$3, basePerLine$$3, 
         }
         var v200 = lineOfText$$2;
         var v541 = k$$2 + i$$7;
-        introspect(JAM.policy.p39) {
+        introspect(JAM.policy.p40) {
           var v201 = text$$13.charAt(v541)
         }
         lineOfText$$2 = v200 + v201;
@@ -1812,7 +1774,7 @@ function writeGroupNumProtein(text$$13, tabIn$$4, groupSize$$3, basePerLine$$3, 
       var v756 = rightNum(lineNum$$1, "", 8, tabIn$$4);
       var v543 = v756 + lineOfText$$2;
       var v209 = v543 + "\n";
-      introspect(JAM.policy.p39) {
+      introspect(JAM.policy.p40) {
         v208.write(v209);
       }
     } else {
@@ -1821,7 +1783,7 @@ function writeGroupNumProtein(text$$13, tabIn$$4, groupSize$$3, basePerLine$$3, 
         var v210 = outputWindow.document;
         var v544 = lineOfText$$2 + i$$7;
         var v211 = v544 + "\n";
-        introspect(JAM.policy.p39) {
+        introspect(JAM.policy.p40) {
           v210.write(v211);
         }
       } else {
@@ -1829,12 +1791,12 @@ function writeGroupNumProtein(text$$13, tabIn$$4, groupSize$$3, basePerLine$$3, 
         if (v216) {
           var v212 = outputWindow.document;
           var v213 = aboveNum$$1 + "\n";
-          introspect(JAM.policy.p39) {
+          introspect(JAM.policy.p40) {
             v212.write(v213);
           }
           var v214 = outputWindow.document;
           var v215 = lineOfText$$2 + "\n";
-          introspect(JAM.policy.p39) {
+          introspect(JAM.policy.p40) {
             v214.write(v215);
           }
         }
@@ -1876,7 +1838,7 @@ function writeMutatedSequence(sequence$$13, components$$1, numMut, firstIndexToM
     maxNum = sequence$$13.length;
     var v546 = Math.random();
     var v221 = v546 * maxNum;
-    introspect(JAM.policy.p29) {
+    introspect(JAM.policy.p30) {
       randNum = Math.floor(v221);
     }
     var v547 = randNum < firstIndexToMutate;
@@ -1891,7 +1853,7 @@ function writeMutatedSequence(sequence$$13, components$$1, numMut, firstIndexToM
       v228 = i$$8 < numMut;
       continue;
     }
-    introspect(JAM.policy.p29) {
+    introspect(JAM.policy.p30) {
       currentChar = sequence$$13.charAt(randNum);
     }
     needNewChar = true;
@@ -1899,7 +1861,7 @@ function writeMutatedSequence(sequence$$13, components$$1, numMut, firstIndexToM
       var v548 = Math.random();
       var v549 = components$$1.length;
       var v223 = v548 * v549;
-      introspect(JAM.policy.p29) {
+      introspect(JAM.policy.p30) {
         componentsIndex = Math.round(v223);
       }
       var v550 = components$$1.length;
@@ -1907,24 +1869,20 @@ function writeMutatedSequence(sequence$$13, components$$1, numMut, firstIndexToM
       if (v224) {
         componentsIndex = 0;
       }
-      introspect(JAM.policy.p26) {
-        var v551 = components$$1[componentsIndex]
-      }
+      var v551 = components$$1[componentsIndex];
       var v225 = v551 != currentChar;
       if (v225) {
         needNewChar = false;
       }
     }
-    introspect(JAM.policy.p22) {
+    introspect(JAM.policy.p26) {
       var v552 = sequence$$13.substring(0, randNum)
     }
-    introspect(JAM.policy.p26) {
-      var v553 = components$$1[componentsIndex]
-    }
+    var v553 = components$$1[componentsIndex];
     var v226 = v552 + v553;
     var v554 = randNum + 1;
     var v555 = sequence$$13.length;
-    introspect(JAM.policy.p40) {
+    introspect(JAM.policy.p41) {
       var v227 = sequence$$13.substring(v554, v555)
     }
     sequence$$13 = v226 + v227;
@@ -1933,7 +1891,7 @@ function writeMutatedSequence(sequence$$13, components$$1, numMut, firstIndexToM
   }
   var v229 = outputWindow.document;
   var v230 = addReturns(sequence$$13);
-  introspect(JAM.policy.p39) {
+  introspect(JAM.policy.p40) {
     v229.write(v230);
   }
   return true;
@@ -1948,19 +1906,17 @@ function writeRandomSequence(components$$2, lengthOut$$1) {
     var v556 = Math.random();
     var v557 = components$$2.length;
     var v231 = v556 * v557;
-    introspect(JAM.policy.p29) {
+    introspect(JAM.policy.p30) {
       tempNum$$1 = Math.floor(v231);
     }
-    introspect(JAM.policy.p26) {
-      tempChar$$1 = components$$2[tempNum$$1];
-    }
+    tempChar$$1 = components$$2[tempNum$$1];
     sequence$$14 = sequence$$14 + tempChar$$1;
     var v558 = sequence$$14.length;
     var v234 = v558 == 60;
     if (v234) {
       var v232 = outputWindow.document;
       var v233 = sequence$$14 + "\n";
-      introspect(JAM.policy.p39) {
+      introspect(JAM.policy.p40) {
         v232.write(v233);
       }
       sequence$$14 = "";
@@ -1970,7 +1926,7 @@ function writeRandomSequence(components$$2, lengthOut$$1) {
   }
   var v236 = outputWindow.document;
   var v237 = sequence$$14 + "\n";
-  introspect(JAM.policy.p39) {
+  introspect(JAM.policy.p40) {
     v236.write(v237);
   }
   return true;
@@ -1990,18 +1946,18 @@ function writeRestrictionSites(sequence$$15, arrayOfItems, dnaConformation) {
   var timesFound = 0;
   var v241 = dnaConformation == "circular";
   if (v241) {
-    introspect(JAM.policy.p22) {
+    introspect(JAM.policy.p26) {
       var v238 = sequence$$15.substring(0, lookAhead)
     }
     shiftValue = v238.length;
     var v878 = sequence$$15.length;
     var v760 = v878 - lookAhead;
     var v761 = sequence$$15.length;
-    introspect(JAM.policy.p40) {
+    introspect(JAM.policy.p41) {
       var v559 = sequence$$15.substring(v760, v761)
     }
     var v239 = v559 + sequence$$15;
-    introspect(JAM.policy.p22) {
+    introspect(JAM.policy.p26) {
       var v240 = sequence$$15.substring(0, lookAhead)
     }
     sequence$$15 = v239 + v240;
@@ -2017,7 +1973,7 @@ function writeRestrictionSites(sequence$$15, arrayOfItems, dnaConformation) {
   var v762 = v879 + '</td><td class="title">';
   var v560 = v762 + "Positions:";
   var v244 = v560 + "</td></tr>\n";
-  introspect(JAM.policy.p39) {
+  introspect(JAM.policy.p40) {
     v243.write(v244);
   }
   var i$$9 = 0;
@@ -2026,27 +1982,23 @@ function writeRestrictionSites(sequence$$15, arrayOfItems, dnaConformation) {
   for (;v260;) {
     tempString$$1 = "none";
     backGroundClass = "many";
-    introspect(JAM.policy.p26) {
-      var v562 = arrayOfItems[i$$9]
-    }
-    introspect(JAM.policy.p29) {
+    var v562 = arrayOfItems[i$$9];
+    introspect(JAM.policy.p30) {
       var v245 = v562.match(/\/.+\//)
     }
     matchExp = v245 + "gi";
     matchPosition = 0;
     matchExp = eval(matchExp);
-    introspect(JAM.policy.p26) {
-      var v880 = arrayOfItems[i$$9]
-    }
-    introspect(JAM.policy.p29) {
+    var v880 = arrayOfItems[i$$9];
+    introspect(JAM.policy.p30) {
       var v763 = v880.match(/\)\D*\d+/)
     }
     var v563 = v763.toString();
-    introspect(JAM.policy.p27) {
+    introspect(JAM.policy.p28) {
       var v246 = v563.replace(/\)\D*/, "")
     }
     cutDistance = parseFloat(v246);
-    introspect(JAM.policy.p39) {
+    introspect(JAM.policy.p40) {
       var v252 = matchArray$$1 = matchExp.exec(sequence$$15)
     }
     for (;v252;) {
@@ -2069,16 +2021,16 @@ function writeRestrictionSites(sequence$$15, arrayOfItems, dnaConformation) {
       var v567 = v764.length;
       var v251 = v566 - v567;
       matchExp.lastIndex = v251 + 1;
-      introspect(JAM.policy.p39) {
+      introspect(JAM.policy.p40) {
         v252 = matchArray$$1 = matchExp.exec(sequence$$15);
       }
     }
-    introspect(JAM.policy.p29) {
+    introspect(JAM.policy.p30) {
       var v568 = tempString$$1.search(/\d/)
     }
     var v253 = v568 != -1;
     if (v253) {
-      introspect(JAM.policy.p27) {
+      introspect(JAM.policy.p28) {
         tempString$$1 = tempString$$1.replace(/none,\s*/, "");
       }
     }
@@ -2106,14 +2058,12 @@ function writeRestrictionSites(sequence$$15, arrayOfItems, dnaConformation) {
     var v258 = outputWindow.document;
     var v1059 = '<tr><td class="' + backGroundClass;
     var v1040 = v1059 + '">';
-    introspect(JAM.policy.p26) {
-      var v1081 = arrayOfItems[i$$9]
-    }
-    introspect(JAM.policy.p29) {
+    var v1081 = arrayOfItems[i$$9];
+    introspect(JAM.policy.p30) {
       var v1071 = v1081.match(/\([^\(]+\)/)
     }
     var v1060 = v1071.toString();
-    introspect(JAM.policy.p27) {
+    introspect(JAM.policy.p28) {
       var v1041 = v1060.replace(/\(|\)/g, "")
     }
     var v1005 = v1040 + v1041;
@@ -2122,7 +2072,7 @@ function writeRestrictionSites(sequence$$15, arrayOfItems, dnaConformation) {
     var v765 = v881 + '">';
     var v569 = v765 + tempString$$1;
     var v259 = v569 + "</td></tr>\n";
-    introspect(JAM.policy.p39) {
+    introspect(JAM.policy.p40) {
       v258.write(v259);
     }
     timesFound = 0;
@@ -2149,7 +2099,7 @@ function writeSequenceStats(sequence$$16, arrayOfItems$$1) {
   var v766 = v882 + '</td><td class="title">';
   var v571 = v766 + "Percentage:";
   var v264 = v571 + "</td></tr>\n";
-  introspect(JAM.policy.p39) {
+  introspect(JAM.policy.p40) {
     v263.write(v264);
   }
   var i$$10 = 0;
@@ -2157,30 +2107,26 @@ function writeSequenceStats(sequence$$16, arrayOfItems$$1) {
   var v273 = i$$10 < v572;
   for (;v273;) {
     var tempNumber = 0;
-    introspect(JAM.policy.p26) {
-      var v573 = arrayOfItems$$1[i$$10]
-    }
-    introspect(JAM.policy.p29) {
+    var v573 = arrayOfItems$$1[i$$10];
+    introspect(JAM.policy.p30) {
       var v265 = v573.match(/\/[^\/]+\//)
     }
     var matchExp$$1 = v265 + "gi";
     matchExp$$1 = eval(matchExp$$1);
-    introspect(JAM.policy.p39) {
+    introspect(JAM.policy.p40) {
       var v574 = sequence$$16.search(matchExp$$1)
     }
     var v267 = v574 != -1;
     if (v267) {
-      introspect(JAM.policy.p39) {
+      introspect(JAM.policy.p40) {
         var v266 = sequence$$16.match(matchExp$$1)
       }
       tempNumber = v266.length;
     }
     var percentage = 0;
     var v767 = originalLength + 1;
-    introspect(JAM.policy.p26) {
-      var v963 = arrayOfItems$$1[i$$10]
-    }
-    introspect(JAM.policy.p29) {
+    var v963 = arrayOfItems$$1[i$$10];
+    introspect(JAM.policy.p30) {
       var v883 = v963.match(/\d+/)
     }
     var v768 = parseFloat(v883);
@@ -2189,10 +2135,8 @@ function writeSequenceStats(sequence$$16, arrayOfItems$$1) {
     if (v270) {
       var v268 = 100 * tempNumber;
       var v576 = originalLength + 1;
-      introspect(JAM.policy.p26) {
-        var v884 = arrayOfItems$$1[i$$10]
-      }
-      introspect(JAM.policy.p29) {
+      var v884 = arrayOfItems$$1[i$$10];
+      introspect(JAM.policy.p30) {
         var v769 = v884.match(/\d+/)
       }
       var v577 = parseFloat(v769);
@@ -2200,14 +2144,12 @@ function writeSequenceStats(sequence$$16, arrayOfItems$$1) {
       percentage = v268 / v269;
     }
     var v271 = outputWindow.document;
-    introspect(JAM.policy.p26) {
-      var v1082 = arrayOfItems$$1[i$$10]
-    }
-    introspect(JAM.policy.p29) {
+    var v1082 = arrayOfItems$$1[i$$10];
+    introspect(JAM.policy.p30) {
       var v1072 = v1082.match(/\([^\(]+\)\b/)
     }
     var v1061 = v1072.toString();
-    introspect(JAM.policy.p27) {
+    introspect(JAM.policy.p28) {
       var v1042 = v1061.replace(/\(|\)/g, "")
     }
     var v1007 = "<tr><td>" + v1042;
@@ -2219,7 +2161,7 @@ function writeSequenceStats(sequence$$16, arrayOfItems$$1) {
     }
     var v578 = v770 + v771;
     var v272 = v578 + "</td></tr>\n";
-    introspect(JAM.policy.p39) {
+    introspect(JAM.policy.p40) {
       v271.write(v272);
     }
     i$$10 = i$$10 + 1;
@@ -2245,19 +2187,19 @@ function writeShuffledSequence(sequence$$17) {
     maxNum$$1 = sequence$$17.length;
     var v581 = Math.random();
     var v275 = v581 * maxNum$$1;
-    introspect(JAM.policy.p29) {
+    introspect(JAM.policy.p30) {
       randNum$$1 = Math.floor(v275);
     }
-    introspect(JAM.policy.p29) {
+    introspect(JAM.policy.p30) {
       tempChar$$2 = sequence$$17.charAt(randNum$$1);
     }
     tempSeq = tempSeq + tempChar$$2;
-    introspect(JAM.policy.p22) {
+    introspect(JAM.policy.p26) {
       tempString1 = sequence$$17.substring(0, randNum$$1);
     }
     var v276 = randNum$$1 + 1;
     var v277 = sequence$$17.length;
-    introspect(JAM.policy.p27) {
+    introspect(JAM.policy.p28) {
       tempString2 = sequence$$17.substring(v276, v277);
     }
     sequence$$17 = tempString1 + tempString2;
@@ -2266,7 +2208,7 @@ function writeShuffledSequence(sequence$$17) {
     if (v280) {
       var v278 = outputWindow.document;
       var v279 = tempSeq + "\n";
-      introspect(JAM.policy.p39) {
+      introspect(JAM.policy.p40) {
         v278.write(v279);
       }
       tempSeq = "";
@@ -2276,7 +2218,7 @@ function writeShuffledSequence(sequence$$17) {
   }
   var v282 = outputWindow.document;
   var v283 = tempSeq + "\n";
-  introspect(JAM.policy.p39) {
+  introspect(JAM.policy.p40) {
     v282.write(v283);
   }
   return true;
@@ -2326,7 +2268,7 @@ function rangeExtract(theDocument) {
   var v775 = v890.elements;
   var v586 = v775[1];
   var v286 = v586.value;
-  introspect(JAM.policy.p29) {
+  introspect(JAM.policy.p30) {
     var arrayOfRanges = v286.split(/,/)
   }
   var arrayOfStartAndEnd;
@@ -2334,10 +2276,8 @@ function rangeExtract(theDocument) {
   var v587 = arrayOfRanges.length;
   var v292 = i$$11 < v587;
   for (;v292;) {
-    introspect(JAM.policy.p26) {
-      var v287 = arrayOfRanges[i$$11]
-    }
-    introspect(JAM.policy.p29) {
+    var v287 = arrayOfRanges[i$$11];
+    introspect(JAM.policy.p30) {
       arrayOfStartAndEnd = v287.split(/\.\./);
     }
     var v588 = arrayOfStartAndEnd.length;
@@ -2347,7 +2287,7 @@ function rangeExtract(theDocument) {
       var v589 = arrayOfStartAndEnd[0];
       var v590 = arrayOfStartAndEnd[0];
       var v288 = new Range(v589, v590);
-      introspect(JAM.policy.p39) {
+      introspect(JAM.policy.p40) {
         ranges.push(v288);
       }
     } else {
@@ -2358,7 +2298,7 @@ function rangeExtract(theDocument) {
         var v592 = arrayOfStartAndEnd[0];
         var v593 = arrayOfStartAndEnd[1];
         var v289 = new Range(v592, v593);
-        introspect(JAM.policy.p39) {
+        introspect(JAM.policy.p40) {
           ranges.push(v289);
         }
       }
@@ -2384,18 +2324,14 @@ function rangeExtract(theDocument) {
   var v596 = arrayOfFasta$$1.length;
   var v300 = i$$11 < v596;
   for (;v300;) {
-    introspect(JAM.policy.p26) {
-      var v295 = arrayOfFasta$$1[i$$11]
-    }
+    var v295 = arrayOfFasta$$1[i$$11];
     newProtein = getSequenceFromFasta(v295);
-    introspect(JAM.policy.p26) {
-      var v296 = arrayOfFasta$$1[i$$11]
-    }
+    var v296 = arrayOfFasta$$1[i$$11];
     title = getTitleFromFasta(v296);
     newProtein = removeNonProteinAllowDegen(newProtein);
     var v297 = outputWindow.document;
     var v298 = getFastaTitleFromTitleAndSequence(title, newProtein);
-    introspect(JAM.policy.p39) {
+    introspect(JAM.policy.p40) {
       v297.write(v298);
     }
     var v1046 = theDocument.forms;
@@ -2408,9 +2344,7 @@ function rangeExtract(theDocument) {
     var v971 = v1012.elements;
     var v893 = v971[5];
     var v778 = v893.selectedIndex;
-    introspect(JAM.policy.p26) {
-      var v597 = v777[v778]
-    }
+    var v597 = v777[v778];
     var v299 = v597.value;
     writeSequenceRanges(newProtein, ranges, v299);
     i$$11 = i$$11 + 1;
@@ -2425,166 +2359,120 @@ function writeSequenceRanges(sequence$$18, ranges$$1, segmentType) {
   var rangeGroup = new RangeGroup(segmentType);
   var v599 = sequence$$18.length;
   var v301 = v599 / 2;
-  introspect(JAM.policy.p39) {
+  introspect(JAM.policy.p40) {
     var center_base = Math.round(v301)
   }
   var i$$12 = 0;
   var v600 = ranges$$1.length;
   var v315 = i$$12 < v600;
   for (;v315;) {
-    introspect(JAM.policy.p26) {
-      var v302 = ranges$$1[i$$12]
-    }
-    introspect(JAM.policy.p26) {
-      var v894 = ranges$$1[i$$12]
-    }
+    var v302 = ranges$$1[i$$12];
+    var v894 = ranges$$1[i$$12];
     var v779 = v894.start;
     var v601 = v779.toString();
-    introspect(JAM.policy.p27) {
+    introspect(JAM.policy.p28) {
       var v1118 = v601.replace(/start|begin/gi, 1)
     }
     v302.start = v1118;
-    introspect(JAM.policy.p26) {
-      var v303 = ranges$$1[i$$12]
-    }
-    introspect(JAM.policy.p26) {
-      var v895 = ranges$$1[i$$12]
-    }
+    var v303 = ranges$$1[i$$12];
+    var v895 = ranges$$1[i$$12];
     var v780 = v895.start;
     var v602 = v780.toString();
     var v603 = sequence$$18.length;
-    introspect(JAM.policy.p27) {
+    introspect(JAM.policy.p28) {
       var v1119 = v602.replace(/stop|end/gi, v603)
     }
     v303.start = v1119;
-    introspect(JAM.policy.p26) {
-      var v304 = ranges$$1[i$$12]
-    }
-    introspect(JAM.policy.p26) {
-      var v896 = ranges$$1[i$$12]
-    }
+    var v304 = ranges$$1[i$$12];
+    var v896 = ranges$$1[i$$12];
     var v781 = v896.start;
     var v604 = v781.toString();
     var v605 = sequence$$18.length;
-    introspect(JAM.policy.p27) {
+    introspect(JAM.policy.p28) {
       var v1120 = v604.replace(/length/gi, v605)
     }
     v304.start = v1120;
-    introspect(JAM.policy.p26) {
-      var v305 = ranges$$1[i$$12]
-    }
-    introspect(JAM.policy.p26) {
-      var v897 = ranges$$1[i$$12]
-    }
+    var v305 = ranges$$1[i$$12];
+    var v897 = ranges$$1[i$$12];
     var v782 = v897.start;
     var v606 = v782.toString();
-    introspect(JAM.policy.p27) {
+    introspect(JAM.policy.p28) {
       var v1121 = v606.replace(/middle|center|centre/gi, center_base)
     }
     v305.start = v1121;
-    introspect(JAM.policy.p26) {
-      var v306 = ranges$$1[i$$12]
-    }
-    introspect(JAM.policy.p26) {
-      var v898 = ranges$$1[i$$12]
-    }
+    var v306 = ranges$$1[i$$12];
+    var v898 = ranges$$1[i$$12];
     var v783 = v898.stop;
     var v607 = v783.toString();
-    introspect(JAM.policy.p27) {
+    introspect(JAM.policy.p28) {
       var v1122 = v607.replace(/start|begin/gi, 1)
     }
     v306.stop = v1122;
-    introspect(JAM.policy.p26) {
-      var v307 = ranges$$1[i$$12]
-    }
-    introspect(JAM.policy.p26) {
-      var v899 = ranges$$1[i$$12]
-    }
+    var v307 = ranges$$1[i$$12];
+    var v899 = ranges$$1[i$$12];
     var v784 = v899.stop;
     var v608 = v784.toString();
     var v609 = sequence$$18.length;
-    introspect(JAM.policy.p27) {
+    introspect(JAM.policy.p28) {
       var v1123 = v608.replace(/stop|end/gi, v609)
     }
     v307.stop = v1123;
-    introspect(JAM.policy.p26) {
-      var v308 = ranges$$1[i$$12]
-    }
-    introspect(JAM.policy.p26) {
-      var v900 = ranges$$1[i$$12]
-    }
+    var v308 = ranges$$1[i$$12];
+    var v900 = ranges$$1[i$$12];
     var v785 = v900.stop;
     var v610 = v785.toString();
     var v611 = sequence$$18.length;
-    introspect(JAM.policy.p27) {
+    introspect(JAM.policy.p28) {
       var v1124 = v610.replace(/length/gi, v611)
     }
     v308.stop = v1124;
-    introspect(JAM.policy.p26) {
-      var v309 = ranges$$1[i$$12]
-    }
-    introspect(JAM.policy.p26) {
-      var v901 = ranges$$1[i$$12]
-    }
+    var v309 = ranges$$1[i$$12];
+    var v901 = ranges$$1[i$$12];
     var v786 = v901.stop;
     var v612 = v786.toString();
-    introspect(JAM.policy.p27) {
+    introspect(JAM.policy.p28) {
       var v1125 = v612.replace(/middle|center|centre/gi, center_base)
     }
     v309.stop = v1125;
     try {
-      introspect(JAM.policy.p26) {
-        var v310 = ranges$$1[i$$12]
-      }
-      introspect(JAM.policy.p26) {
-        var v972 = ranges$$1[i$$12]
-      }
+      var v310 = ranges$$1[i$$12];
+      var v972 = ranges$$1[i$$12];
       var v902 = v972.start;
       var v787 = v902.toString();
       var v613 = eval(v787);
       var v1126 = parseInt(v613);
       v310.start = v1126;
     } catch (e$$5) {
-      introspect(JAM.policy.p26) {
-        var v788 = ranges$$1[i$$12]
-      }
+      var v788 = ranges$$1[i$$12];
       var v614 = v788.start;
       var v311 = "Could not evaluate the following expression: " + v614;
       alert(v311);
       return false;
     }
     try {
-      introspect(JAM.policy.p26) {
-        var v312 = ranges$$1[i$$12]
-      }
-      introspect(JAM.policy.p26) {
-        var v973 = ranges$$1[i$$12]
-      }
+      var v312 = ranges$$1[i$$12];
+      var v973 = ranges$$1[i$$12];
       var v903 = v973.stop;
       var v789 = v903.toString();
       var v615 = eval(v789);
       var v1127 = parseInt(v615);
       v312.stop = v1127;
     } catch (e$$6) {
-      introspect(JAM.policy.p26) {
-        var v790 = ranges$$1[i$$12]
-      }
+      var v790 = ranges$$1[i$$12];
       var v616 = v790.stop;
       var v313 = "Could not evaluate the following expression: " + v616;
       alert(v313);
       return false;
     }
-    introspect(JAM.policy.p26) {
-      var v314 = ranges$$1[i$$12]
-    }
-    introspect(JAM.policy.p39) {
+    var v314 = ranges$$1[i$$12];
+    introspect(JAM.policy.p40) {
       rangeGroup.addRange(v314);
     }
     i$$12 = i$$12 + 1;
     var v617 = ranges$$1.length;
     v315 = i$$12 < v617;
   }
-  introspect(JAM.policy.p39) {
+  introspect(JAM.policy.p40) {
     rangeGroup.writeRanges(sequence$$18);
   }
   return;
@@ -2603,7 +2491,7 @@ function getSequence(sequence$$19) {
       var v791 = this.start;
       var v621 = "position value of " + v791;
       var v316 = v621 + " is less than 1";
-      introspect(JAM.policy.p39) {
+      introspect(JAM.policy.p40) {
         warnings.push(v316);
       }
     }
@@ -2615,7 +2503,7 @@ function getSequence(sequence$$19) {
       var v792 = this.start;
       var v624 = "position value of " + v792;
       var v318 = v624 + " is greater than the sequence length";
-      introspect(JAM.policy.p39) {
+      introspect(JAM.policy.p40) {
         warnings.push(v318);
       }
     }
@@ -2627,7 +2515,7 @@ function getSequence(sequence$$19) {
       var v793 = this.start;
       var v626 = "position value of " + v793;
       var v320 = v626 + " is less than 1";
-      introspect(JAM.policy.p39) {
+      introspect(JAM.policy.p40) {
         warnings.push(v320);
       }
     }
@@ -2638,7 +2526,7 @@ function getSequence(sequence$$19) {
       var v794 = this.stop;
       var v628 = "position value of " + v794;
       var v322 = v628 + " is less than 1";
-      introspect(JAM.policy.p39) {
+      introspect(JAM.policy.p40) {
         warnings.push(v322);
       }
     }
@@ -2650,7 +2538,7 @@ function getSequence(sequence$$19) {
       var v795 = this.start;
       var v631 = "position value of " + v795;
       var v324 = v631 + " is greater than the sequence length";
-      introspect(JAM.policy.p39) {
+      introspect(JAM.policy.p40) {
         warnings.push(v324);
       }
     }
@@ -2662,7 +2550,7 @@ function getSequence(sequence$$19) {
       var v796 = this.stop;
       var v634 = "position value of " + v796;
       var v326 = v634 + " is greater than the sequence length";
-      introspect(JAM.policy.p39) {
+      introspect(JAM.policy.p40) {
         warnings.push(v326);
       }
     }
@@ -2676,7 +2564,7 @@ function getSequence(sequence$$19) {
       var v637 = v797 + " to ";
       var v638 = this.stop;
       var v328 = v637 + v638;
-      introspect(JAM.policy.p39) {
+      introspect(JAM.policy.p40) {
         warnings.push(v328);
       }
     }
@@ -2695,14 +2583,14 @@ function getSequence(sequence$$19) {
     if (v335) {
       var v642 = this.start;
       var v332 = v642 - 1;
-      introspect(JAM.policy.p39) {
+      introspect(JAM.policy.p40) {
         return sequence$$19.charAt(v332);
       }
     } else {
       var v643 = this.start;
       var v333 = v643 - 1;
       var v334 = this.stop;
-      introspect(JAM.policy.p40) {
+      introspect(JAM.policy.p41) {
         return sequence$$19.substring(v333, v334);
       }
     }
@@ -2732,7 +2620,7 @@ function Range(start$$4, stop) {
 }
 function addRange(range$$5) {
   var v340 = this.ranges;
-  introspect(JAM.policy.p39) {
+  introspect(JAM.policy.p40) {
     v340.push(range$$5);
   }
   return;
@@ -2741,7 +2629,7 @@ function writeRanges(sequence$$20) {
   function v9(str$$15, p1$$9, offset$$17, s$$11) {
     var v647 = p1$$9.length;
     var v341 = offset$$17 + v647;
-    introspect(JAM.policy.p40) {
+    introspect(JAM.policy.p41) {
       return sequence$$20.substring(offset$$17, v341);
     }
   }
@@ -2751,7 +2639,7 @@ function writeRanges(sequence$$20) {
     var v799 = p1$$8.length;
     var v800 = p2$$3.length;
     var v649 = v799 + v800;
-    introspect(JAM.policy.p40) {
+    introspect(JAM.policy.p41) {
       var v343 = sequence$$20.substring(v648, v649)
     }
     return v342 + v343;
@@ -2794,22 +2682,18 @@ function writeRanges(sequence$$20) {
     var v354 = i$$13 < v653;
     for (;v354;) {
       var v905 = this.ranges;
-      introspect(JAM.policy.p26) {
-        var v802 = v905[i$$13]
-      }
-      introspect(JAM.policy.p39) {
+      var v802 = v905[i$$13];
+      introspect(JAM.policy.p40) {
         var v654 = v802.getSequence(sequence$$20)
       }
       var v353 = v654 != "";
       if (v353) {
         var v803 = this.ranges;
-        introspect(JAM.policy.p26) {
-          var v655 = v803[i$$13]
-        }
-        introspect(JAM.policy.p39) {
+        var v655 = v803[i$$13];
+        introspect(JAM.policy.p40) {
           var v352 = v655.getSequence(sequence$$20)
         }
-        introspect(JAM.policy.p39) {
+        introspect(JAM.policy.p40) {
           sequenceArray$$1.push(v352);
         }
       }
@@ -2824,7 +2708,7 @@ function writeRanges(sequence$$20) {
     }
     var v657 = addReturns(v805);
     var v356 = v657 + "\n\n";
-    introspect(JAM.policy.p39) {
+    introspect(JAM.policy.p40) {
       v355.write(v356);
     }
     return true;
@@ -2838,35 +2722,29 @@ function writeRanges(sequence$$20) {
     var v363 = i$$13 < v659;
     for (;v363;) {
       var v906 = this.ranges;
-      introspect(JAM.policy.p26) {
-        var v807 = v906[i$$13]
-      }
-      introspect(JAM.policy.p39) {
+      var v807 = v906[i$$13];
+      introspect(JAM.policy.p40) {
         var v660 = v807.getSequence(sequence$$20)
       }
       var v362 = v660 != "";
       if (v362) {
         var v358 = outputWindow.document;
         var v907 = this.ranges;
-        introspect(JAM.policy.p26) {
-          var v808 = v907[i$$13]
-        }
+        var v808 = v907[i$$13];
         var v661 = v808.getTitle();
         var v359 = v661 + "\n";
-        introspect(JAM.policy.p39) {
+        introspect(JAM.policy.p40) {
           v358.write(v359);
         }
         var v360 = outputWindow.document;
         var v974 = this.ranges;
-        introspect(JAM.policy.p26) {
-          var v908 = v974[i$$13]
-        }
-        introspect(JAM.policy.p39) {
+        var v908 = v974[i$$13];
+        introspect(JAM.policy.p40) {
           var v809 = v908.getSequence(sequence$$20)
         }
         var v662 = addReturns(v809);
         var v361 = v662 + "\n\n";
-        introspect(JAM.policy.p39) {
+        introspect(JAM.policy.p40) {
           v360.write(v361);
         }
       }
@@ -2888,64 +2766,50 @@ function writeRanges(sequence$$20) {
     var v369 = i$$13 < v665;
     for (;v369;) {
       var v909 = this.ranges;
-      introspect(JAM.policy.p26) {
-        var v812 = v909[i$$13]
-      }
-      introspect(JAM.policy.p39) {
+      var v812 = v909[i$$13];
+      introspect(JAM.policy.p40) {
         var v666 = v812.getSequence(sequence$$20)
       }
       var v368 = v666 != "";
       if (v368) {
         var v910 = this.ranges;
-        introspect(JAM.policy.p26) {
-          var v813 = v910[i$$13]
-        }
+        var v813 = v910[i$$13];
         var v667 = v813.start;
         var v367 = v667 > 1;
         if (v367) {
           var v1048 = this.ranges;
-          introspect(JAM.policy.p26) {
-            var v1013 = v1048[i$$13]
-          }
+          var v1013 = v1048[i$$13];
           var v975 = v1013.start;
           var v911 = v975 - 1;
           var v814 = "(.{" + v911;
           var v668 = v814 + "})\\B(.{";
           var v1014 = this.ranges;
-          introspect(JAM.policy.p26) {
-            var v976 = v1014[i$$13]
-          }
+          var v976 = v1014[i$$13];
           var v912 = v976.stop;
           var v1015 = this.ranges;
-          introspect(JAM.policy.p26) {
-            var v977 = v1015[i$$13]
-          }
+          var v977 = v1015[i$$13];
           var v913 = v977.start;
           var v815 = v912 - v913;
           var v669 = v815 + 1;
           var v365 = v668 + v669;
           re$$3 = v365 + "})";
           re$$3 = new RegExp(re$$3);
-          introspect(JAM.policy.p40) {
+          introspect(JAM.policy.p41) {
             sequence$$20 = sequence$$20.replace(re$$3, v2);
           }
         } else {
           var v1016 = this.ranges;
-          introspect(JAM.policy.p26) {
-            var v978 = v1016[i$$13]
-          }
+          var v978 = v1016[i$$13];
           var v914 = v978.stop;
           var v1017 = this.ranges;
-          introspect(JAM.policy.p26) {
-            var v979 = v1017[i$$13]
-          }
+          var v979 = v1017[i$$13];
           var v915 = v979.start;
           var v816 = v914 - v915;
           var v670 = v816 + 1;
           var v366 = "(.{" + v670;
           re$$3 = v366 + "})";
           re$$3 = new RegExp(re$$3);
-          introspect(JAM.policy.p40) {
+          introspect(JAM.policy.p41) {
             sequence$$20 = sequence$$20.replace(re$$3, v3);
           }
         }
@@ -2958,7 +2822,7 @@ function writeRanges(sequence$$20) {
     var v370 = outputWindow.document;
     var v672 = addReturns(sequence$$20);
     var v371 = v672 + "\n\n";
-    introspect(JAM.policy.p39) {
+    introspect(JAM.policy.p40) {
       v370.write(v371);
     }
     return true;
@@ -2973,64 +2837,50 @@ function writeRanges(sequence$$20) {
     var v377 = i$$13 < v674;
     for (;v377;) {
       var v916 = this.ranges;
-      introspect(JAM.policy.p26) {
-        var v819 = v916[i$$13]
-      }
-      introspect(JAM.policy.p39) {
+      var v819 = v916[i$$13];
+      introspect(JAM.policy.p40) {
         var v675 = v819.getSequence(sequence$$20)
       }
       var v376 = v675 != "";
       if (v376) {
         var v917 = this.ranges;
-        introspect(JAM.policy.p26) {
-          var v820 = v917[i$$13]
-        }
+        var v820 = v917[i$$13];
         var v676 = v820.start;
         var v375 = v676 > 1;
         if (v375) {
           var v1049 = this.ranges;
-          introspect(JAM.policy.p26) {
-            var v1018 = v1049[i$$13]
-          }
+          var v1018 = v1049[i$$13];
           var v980 = v1018.start;
           var v918 = v980 - 1;
           var v821 = "(.{" + v918;
           var v677 = v821 + "})\\B(.{";
           var v1019 = this.ranges;
-          introspect(JAM.policy.p26) {
-            var v981 = v1019[i$$13]
-          }
+          var v981 = v1019[i$$13];
           var v919 = v981.stop;
           var v1020 = this.ranges;
-          introspect(JAM.policy.p26) {
-            var v982 = v1020[i$$13]
-          }
+          var v982 = v1020[i$$13];
           var v920 = v982.start;
           var v822 = v919 - v920;
           var v678 = v822 + 1;
           var v373 = v677 + v678;
           re$$3 = v373 + "})";
           re$$3 = new RegExp(re$$3);
-          introspect(JAM.policy.p40) {
+          introspect(JAM.policy.p41) {
             sequence$$20 = sequence$$20.replace(re$$3, v4);
           }
         } else {
           var v1021 = this.ranges;
-          introspect(JAM.policy.p26) {
-            var v983 = v1021[i$$13]
-          }
+          var v983 = v1021[i$$13];
           var v921 = v983.stop;
           var v1022 = this.ranges;
-          introspect(JAM.policy.p26) {
-            var v984 = v1022[i$$13]
-          }
+          var v984 = v1022[i$$13];
           var v922 = v984.start;
           var v823 = v921 - v922;
           var v679 = v823 + 1;
           var v374 = "(.{" + v679;
           re$$3 = v374 + "})";
           re$$3 = new RegExp(re$$3);
-          introspect(JAM.policy.p40) {
+          introspect(JAM.policy.p41) {
             sequence$$20 = sequence$$20.replace(re$$3, v5);
           }
         }
@@ -3043,7 +2893,7 @@ function writeRanges(sequence$$20) {
     var v378 = outputWindow.document;
     var v681 = addReturns(sequence$$20);
     var v379 = v681 + "\n\n";
-    introspect(JAM.policy.p39) {
+    introspect(JAM.policy.p40) {
       v378.write(v379);
     }
     return true;
@@ -3057,64 +2907,50 @@ function writeRanges(sequence$$20) {
     var v385 = i$$13 < v683;
     for (;v385;) {
       var v923 = this.ranges;
-      introspect(JAM.policy.p26) {
-        var v826 = v923[i$$13]
-      }
-      introspect(JAM.policy.p39) {
+      var v826 = v923[i$$13];
+      introspect(JAM.policy.p40) {
         var v684 = v826.getSequence(sequence$$20)
       }
       var v384 = v684 != "";
       if (v384) {
         var v924 = this.ranges;
-        introspect(JAM.policy.p26) {
-          var v827 = v924[i$$13]
-        }
+        var v827 = v924[i$$13];
         var v685 = v827.start;
         var v383 = v685 > 1;
         if (v383) {
           var v1050 = this.ranges;
-          introspect(JAM.policy.p26) {
-            var v1023 = v1050[i$$13]
-          }
+          var v1023 = v1050[i$$13];
           var v985 = v1023.start;
           var v925 = v985 - 1;
           var v828 = "(.{" + v925;
           var v686 = v828 + "})\\B(.{";
           var v1024 = this.ranges;
-          introspect(JAM.policy.p26) {
-            var v986 = v1024[i$$13]
-          }
+          var v986 = v1024[i$$13];
           var v926 = v986.stop;
           var v1025 = this.ranges;
-          introspect(JAM.policy.p26) {
-            var v987 = v1025[i$$13]
-          }
+          var v987 = v1025[i$$13];
           var v927 = v987.start;
           var v829 = v926 - v927;
           var v687 = v829 + 1;
           var v381 = v686 + v687;
           re$$3 = v381 + "})";
           re$$3 = new RegExp(re$$3);
-          introspect(JAM.policy.p40) {
+          introspect(JAM.policy.p41) {
             sequence$$20 = sequence$$20.replace(re$$3, v6);
           }
         } else {
           var v1026 = this.ranges;
-          introspect(JAM.policy.p26) {
-            var v988 = v1026[i$$13]
-          }
+          var v988 = v1026[i$$13];
           var v928 = v988.stop;
           var v1027 = this.ranges;
-          introspect(JAM.policy.p26) {
-            var v989 = v1027[i$$13]
-          }
+          var v989 = v1027[i$$13];
           var v929 = v989.start;
           var v830 = v928 - v929;
           var v688 = v830 + 1;
           var v382 = "(.{" + v688;
           re$$3 = v382 + "})";
           re$$3 = new RegExp(re$$3);
-          introspect(JAM.policy.p40) {
+          introspect(JAM.policy.p41) {
             sequence$$20 = sequence$$20.replace(re$$3, v7);
           }
         }
@@ -3127,7 +2963,7 @@ function writeRanges(sequence$$20) {
     var v386 = outputWindow.document;
     var v690 = addReturns(sequence$$20);
     var v387 = v690 + "\n\n";
-    introspect(JAM.policy.p39) {
+    introspect(JAM.policy.p40) {
       v386.write(v387);
     }
     return true;
@@ -3144,64 +2980,50 @@ function writeRanges(sequence$$20) {
     var v395 = i$$13 < v692;
     for (;v395;) {
       var v930 = this.ranges;
-      introspect(JAM.policy.p26) {
-        var v833 = v930[i$$13]
-      }
-      introspect(JAM.policy.p39) {
+      var v833 = v930[i$$13];
+      introspect(JAM.policy.p40) {
         var v693 = v833.getSequence(sequence$$20)
       }
       var v394 = v693 != "";
       if (v394) {
         var v931 = this.ranges;
-        introspect(JAM.policy.p26) {
-          var v834 = v931[i$$13]
-        }
+        var v834 = v931[i$$13];
         var v694 = v834.start;
         var v393 = v694 > 1;
         if (v393) {
           var v1051 = this.ranges;
-          introspect(JAM.policy.p26) {
-            var v1028 = v1051[i$$13]
-          }
+          var v1028 = v1051[i$$13];
           var v990 = v1028.start;
           var v932 = v990 - 1;
           var v835 = "(.{" + v932;
           var v695 = v835 + "})\\B(.{";
           var v1029 = this.ranges;
-          introspect(JAM.policy.p26) {
-            var v991 = v1029[i$$13]
-          }
+          var v991 = v1029[i$$13];
           var v933 = v991.stop;
           var v1030 = this.ranges;
-          introspect(JAM.policy.p26) {
-            var v992 = v1030[i$$13]
-          }
+          var v992 = v1030[i$$13];
           var v934 = v992.start;
           var v836 = v933 - v934;
           var v696 = v836 + 1;
           var v391 = v695 + v696;
           re$$3 = v391 + "})";
           re$$3 = new RegExp(re$$3);
-          introspect(JAM.policy.p40) {
+          introspect(JAM.policy.p41) {
             randomSequence = randomSequence.replace(re$$3, v8);
           }
         } else {
           var v1031 = this.ranges;
-          introspect(JAM.policy.p26) {
-            var v993 = v1031[i$$13]
-          }
+          var v993 = v1031[i$$13];
           var v935 = v993.stop;
           var v1032 = this.ranges;
-          introspect(JAM.policy.p26) {
-            var v994 = v1032[i$$13]
-          }
+          var v994 = v1032[i$$13];
           var v936 = v994.start;
           var v837 = v935 - v936;
           var v697 = v837 + 1;
           var v392 = "(.{" + v697;
           re$$3 = v392 + "})";
           re$$3 = new RegExp(re$$3);
-          introspect(JAM.policy.p40) {
+          introspect(JAM.policy.p41) {
             randomSequence = randomSequence.replace(re$$3, v9);
           }
         }
@@ -3214,7 +3036,7 @@ function writeRanges(sequence$$20) {
     var v396 = outputWindow.document;
     var v699 = addReturns(randomSequence);
     var v397 = v699 + "\n\n";
-    introspect(JAM.policy.p39) {
+    introspect(JAM.policy.p40) {
       v396.write(v397);
     }
     return true;

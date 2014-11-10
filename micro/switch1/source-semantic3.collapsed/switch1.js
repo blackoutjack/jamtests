@@ -26,5 +26,5 @@ function runTest() {
     i = i * 2;
   }
 
-  return "RESULT NOT SPECIFIED";
+  return i === 0 && cnt === 5;
 }
