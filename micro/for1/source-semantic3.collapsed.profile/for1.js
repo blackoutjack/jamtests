@@ -6,7 +6,7 @@ function runTest() {
     if (i > 5) {
       break;
     }
-    i = i + 1;
+    i++;
   }
 
   JAM.stopProfile('load');

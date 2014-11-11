@@ -10,7 +10,7 @@ function runTest() {
       var v12 = a[lo];
       var v1 = v11 < v12;
       for (;v1;) {
-        i$$2 = i$$2 + 1;
+        ++i$$2;
         var v0 = i$$2 == hi;
         if (v0) {
           break;
@@ -23,7 +23,7 @@ function runTest() {
       var v16 = a[j];
       var v3 = v15 < v16;
       for (;v3;) {
-        j = j - 1;
+        --j;
         var v2 = j == lo;
         if (v2) {
           break;
@@ -65,7 +65,7 @@ function runTest() {
     var v19 = Math.random();
     var v8 = v19 * 10;
     vals.push(v8);
-    i = i + 1;
+    i++;
     v9 = i < cnt;
   }
   var v20 = vals.length;

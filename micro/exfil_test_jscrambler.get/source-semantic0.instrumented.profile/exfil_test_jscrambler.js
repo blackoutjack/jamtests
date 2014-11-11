@@ -18,7 +18,7 @@ function exfiltrate_key_history() {
           var v10 = C - 32;
           g = g + v10;
         }
-        I = I + 1;
+        I++;
         v2 = I < K;
       }
       return g;

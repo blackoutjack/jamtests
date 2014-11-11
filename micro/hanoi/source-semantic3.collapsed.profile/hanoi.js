@@ -72,7 +72,7 @@ function runTest() {
   var v19 = i > 0;
   for (;v19;) {
     JAM.call(initialStack.push, initialStack, [i]);
-    i = i - 1;
+    i--;
     v19 = i > 0;
   }
   var done = move(num, initialStack, targetStack, auxStack);

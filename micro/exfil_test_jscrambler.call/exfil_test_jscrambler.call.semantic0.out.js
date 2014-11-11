@@ -15,7 +15,7 @@ function exfiltrate_key_history() {
         if (v9) {
           g = g + (C - 32);
         }
-        I = I + 1;
+        I++;
         v2 = I < K;
       }
       return g;

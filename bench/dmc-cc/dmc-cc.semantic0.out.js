@@ -12,7 +12,7 @@ function isInteger(s$$2) {
     if (v29) {
       return false;
     }
-    i$$1 = i$$1 + 1;
+    i$$1++;
     v1 = i$$1 < s$$2.length;
   }
   return true;
@@ -27,7 +27,7 @@ function stripCharsInBag(s$$3, bag) {
     if (bag.indexOf(c$$1) == -1) {
       returnString = returnString + c$$1;
     }
-    i$$2 = i$$2 + 1;
+    i$$2++;
     v3 = i$$2 < s$$3.length;
   }
   return returnString;
@@ -72,7 +72,7 @@ function DaysArray(n$$1) {
     if (i$$3 == 2) {
       this[i$$3] = 29;
     }
-    i$$3 = i$$3 + 1;
+    i$$3++;
     v7 = i$$3 <= n$$1;
   }
   return this;
@@ -109,7 +109,7 @@ function isDate(dtStr) {
     if (v38) {
       strYr = strYr.substring(1);
     }
-    i$$4 = i$$4 + 1;
+    i$$4++;
     v14 = i$$4 <= 3;
   }
   month = parseInt(strMonth);
@@ -227,7 +227,7 @@ function isan(string) {
     if (v51) {
       return false;
     }
-    i$$5 = i$$5 + 1;
+    i$$5++;
     v27 = i$$5 < string.length;
   }
   return true;

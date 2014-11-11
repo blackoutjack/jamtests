@@ -9,6 +9,6 @@ for (;v2;) {
   a[v0] = idx = idx + 1;
   b = a[v0];
   alert("i: " + i + " b: " + b + " idx: " + idx + " a[idx]: " + a[idx] + " a[i]: " + a[i]);
-  i = i + 1;
+  i++;
   v2 = i < a.length;
 }

@@ -34,7 +34,7 @@ function v4() {
           v6 = set$$inline_19[v74];
         }
         isSubset$$inline_20 = v6;
-        i$$inline_21 = i$$inline_21 + 1;
+        i$$inline_21++;
         var v75 = isSubset$$inline_20;
         if (v75) {
           var v127 = features$$inline_18.length;
@@ -117,13 +117,12 @@ function v4() {
               }
               var v17 = v84;
               if (v17) {
-                var v133 = result$$inline_43;
-                var v164 = normalize(opt_loadFeatures$$inline_42);
+                var v162 = normalize(opt_loadFeatures$$inline_42);
                 introspect(JAM.policy.p2) {
-                  var v158 = v164.join("__")
+                  var v156 = v162.join("__")
                 }
-                var v134 = "--" + v158;
-                result$$inline_43 = v133 + v134;
+                var v133 = "--" + v156;
+                result$$inline_43 = result$$inline_43 + v133;
               }
               JSCompiler_inline_result$$40 = result$$inline_43;
               var v18 = JSCompiler_temp_const$$39 + JSCompiler_inline_result$$40;
@@ -165,8 +164,8 @@ function v4() {
       JSCompiler_inline_label_canLoadUrl_58: {
         var url$$inline_55 = url$$inline_49;
         var v87 = type$$25 === "s";
-        var v135 = !v87;
-        if (v135) {
+        var v134 = !v87;
+        if (v134) {
           v87 = type$$25 === "r";
         }
         var v26 = v87;
@@ -180,12 +179,12 @@ function v4() {
         var jsl$$inline_57 = window["___jsl"];
         var v27 = jsl$$inline_57;
         if (v27) {
-          var v136 = jsl$$inline_57["m"];
-          var v88 = v136 == "dev";
-          var v138 = !v88;
-          if (v138) {
-            var v137 = jsl$$inline_57["m"];
-            v88 = v137 == "google";
+          var v135 = jsl$$inline_57["m"];
+          var v88 = v135 == "dev";
+          var v137 = !v88;
+          if (v137) {
+            var v136 = jsl$$inline_57["m"];
+            v88 = v136 == "google";
           }
           v27 = v88;
         }
@@ -248,18 +247,17 @@ function v4() {
     }
     var v91 = opt_loadFeatures;
     if (v91) {
-      var v139 = opt_loadFeatures.length;
-      v91 = v139 > 0;
+      var v138 = opt_loadFeatures.length;
+      v91 = v138 > 0;
     }
     var v36 = v91;
     if (v36) {
-      var v140 = result;
-      var v165 = normalize(opt_loadFeatures);
+      var v163 = normalize(opt_loadFeatures);
       introspect(JAM.policy.p2) {
-        var v159 = v165.join(":")
+        var v157 = v163.join(":")
       }
-      var v141 = "!" + v159;
-      result = v140 + v141;
+      var v139 = "!" + v157;
+      result = result + v139;
     }
     return result;
   }
@@ -271,7 +269,7 @@ function v4() {
     for (;v38;) {
       var v37 = array$$9[i$$1];
       result$$2[v37] = !0;
-      i$$1 = i$$1 + 1;
+      i$$1++;
       var v93 = array$$9.length;
       v38 = i$$1 < v93;
     }
@@ -304,21 +302,21 @@ function v4() {
     for (;v42;) {
       var meta = metas[i$$3];
       introspect(JAM.policy.p2) {
-        var v142 = meta.getAttribute("name")
+        var v140 = meta.getAttribute("name")
       }
-      var v97 = "generator" == v142;
-      var v144 = !v97;
-      if (v144) {
+      var v97 = "generator" == v140;
+      var v142 = !v97;
+      if (v142) {
         introspect(JAM.policy.p2) {
-          var v143 = meta.getAttribute("content")
+          var v141 = meta.getAttribute("content")
         }
-        v97 = "blogger" == v143;
+        v97 = "blogger" == v141;
       }
       var v41 = v97;
       if (v41) {
         return!0;
       }
-      i$$3 = i$$3 + 1;
+      ++i$$3;
       var v98 = metas.length;
       v42 = i$$3 < v98;
     }
@@ -357,16 +355,16 @@ function v4() {
       var req$$inline_13 = normalize(v44);
       var v45 = featureParts$$inline_12[1];
       if (v45) {
-        var v145 = featureParts$$inline_12[1];
+        var v143 = featureParts$$inline_12[1];
         introspect(JAM.policy.p2) {
-          var v102 = v145.split(":")
+          var v102 = v143.split(":")
         }
         v45 = normalize(v102);
       }
       var loaded$$inline_14 = v45;
       JSCompiler_inline_result$$8 = toKey(req$$inline_13, loaded$$inline_14);
       JSCompiler_temp_const$$7[JSCompiler_inline_result$$8] = versionParts[1];
-      i$$4 = i$$4 + 1;
+      i$$4++;
       var v103 = values$$5.length;
       v46 = i$$4 < v103;
     }
@@ -378,8 +376,8 @@ function v4() {
     }
     var v47 = r;
     if (v47) {
-      var v146 = r.length;
-      var v104 = v146 - 1;
+      var v144 = r.length;
+      var v104 = v144 - 1;
       v47 = r[v104];
     }
     return v47;
@@ -393,8 +391,8 @@ function v4() {
     if (v106) {
       var v105 = window.opera;
       if (v105) {
-        var v147 = window.opera;
-        v105 = v147.postError;
+        var v145 = window.opera;
+        v105 = v145.postError;
       }
       v48 = v105;
     }
@@ -402,8 +400,8 @@ function v4() {
     parentUrl = url$$5;
     var JSCompiler_temp$$5;
     var v107 = getLastHint(QUERY_PATTERN);
-    var v148 = !v107;
-    if (v148) {
+    var v146 = !v107;
+    if (v146) {
       v107 = getLastHint(FRAGMENT_PATTERN);
     }
     var v50 = JSCompiler_temp$$5 = v107;
@@ -427,47 +425,47 @@ function v4() {
       if (v109) {
         host = "https://ssl.gstatic.com/webclient/js";
         introspect(JAM.policy.p2) {
-          var v149 = parts.slice(1)
+          var v147 = parts.slice(1)
         }
-        v51 = initDescriptors(v149);
+        v51 = initDescriptors(v147);
       } else {
         var v108;
-        var v151 = type$$25 === "i";
-        if (v151) {
+        var v149 = type$$25 === "i";
+        if (v149) {
           host = parts[1];
           introspect(JAM.policy.p2) {
-            var v160 = parts.slice(2)
+            var v158 = parts.slice(2)
           }
-          v108 = initDescriptors(v160);
+          v108 = initDescriptors(v158);
         } else {
-          var v150;
-          var v162 = type$$25 === "d";
-          if (v162) {
+          var v148;
+          var v160 = type$$25 === "d";
+          if (v160) {
             host = parts[1];
             repository = parts[2];
-            var v166 = parts[3];
-            var v169 = !v166;
-            if (v169) {
-              v166 = "gcjs-3p";
+            var v164 = parts[3];
+            var v167 = !v164;
+            if (v167) {
+              v164 = "gcjs-3p";
             }
-            v150 = container = v166;
+            v148 = container = v164;
           } else {
-            var v161;
-            var v168 = type$$25 === "r";
-            if (v168) {
+            var v159;
+            var v166 = type$$25 === "r";
+            if (v166) {
               host = "https://ssl.gstatic.com/webclient/js";
-              v161 = repository = parts[1];
+              v159 = repository = parts[1];
             } else {
-              var v167 = type$$25 === "f";
-              if (v167) {
+              var v165 = type$$25 === "f";
+              if (v165) {
                 host = parts[1];
-                v167 = repository = parts[2];
+                v165 = repository = parts[2];
               }
-              v161 = v167;
+              v159 = v165;
             }
-            v150 = v161;
+            v148 = v159;
           }
-          v108 = v150;
+          v108 = v148;
         }
         v51 = v108;
       }
@@ -520,8 +518,8 @@ function __bsld() {
     var v57 = p[f$$1];
     if (v57) {
       var v113 = p[f$$1];
-      var v152 = window.___gpq;
-      var v114 = v152.shift();
+      var v150 = window.___gpq;
+      var v114 = v150.shift();
       introspect(JAM.policy.p3) {
         v113.apply(p, v114);
       }
@@ -529,11 +527,11 @@ function __bsld() {
     var v115 = window.___gpq;
     v58 = f$$1 = v115.shift();
   }
-  var v163 = gadgets.config;
+  var v161 = gadgets.config;
   introspect(JAM.policy.p2) {
-    var v153 = v163.get("gwidget")
+    var v151 = v161.get("gwidget")
   }
-  var v116 = v153["parsetags"];
+  var v116 = v151["parsetags"];
   var v60 = v116 !== "explicit";
   if (v60) {
     var v59 = gapi.plusone;
@@ -555,10 +553,10 @@ if (v117) {
 }
 window.___jsl = v62;
 var v63 = window.___jsl;
-var v154 = window.___jsl;
-var v118 = v154.h;
-var v155 = !v118;
-if (v155) {
+var v152 = window.___jsl;
+var v118 = v152.h;
+var v153 = !v118;
+if (v153) {
   v118 = "s;plusone:googleapis.client@21550740_8d71de52/client;googleapis.proxy@21550740_8d71de52/proxy;plusone:googleapis.client:iframes-styles-bubble@21550740_8d71de52/bubble;iframes-styles-bubble!plusone:googleapis.client@21550740_8d71de52/bubble_only;plusone-unsupported@21550740_8d71de52/unsupported";
 }
 v63.h = v118;
@@ -570,10 +568,10 @@ if (v119) {
 }
 window.gapi = v64;
 var v65 = window.gapi;
-var v156 = window.gapi;
-var v120 = v156.plusone;
-var v157 = !v120;
-if (v157) {
+var v154 = window.gapi;
+var v120 = v154.plusone;
+var v155 = !v120;
+if (v155) {
   v120 = v1();
 }
 v65.plusone = v120;

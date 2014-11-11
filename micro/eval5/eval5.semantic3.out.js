@@ -4,7 +4,7 @@ function f1(a) {
   var v1 = i$$1 < 2;
   for (;v1;) {
     a[i$$1] = letters[i$$1 * 2];
-    i$$1 = i$$1 + 1;
+    i$$1++;
     v1 = i$$1 < 2;
   }
   return;
@@ -14,7 +14,7 @@ function f2(a$$1) {
   var v3 = i$$2 < 2;
   for (;v3;) {
     a$$1[i$$2 + 2] = letters[i$$2 * 2 + 1];
-    i$$2 = i$$2 + 1;
+    i$$2++;
     v3 = i$$2 < 2;
   }
   return;

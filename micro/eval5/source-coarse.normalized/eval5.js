@@ -6,7 +6,7 @@ function runTest() {
     for (;v1;) {
       var v0 = i$$1 * 2;
       a[i$$1] = letters[v0];
-      i$$1 = i$$1 + 1;
+      i$$1++;
       v1 = i$$1 < 2;
     }
     return;
@@ -19,7 +19,7 @@ function runTest() {
       var v5 = i$$2 * 2;
       var v4 = v5 + 1;
       a$$1[v2] = letters[v4];
-      i$$2 = i$$2 + 1;
+      i$$2++;
       v3 = i$$2 < 2;
     }
     return;

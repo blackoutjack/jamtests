@@ -16,7 +16,7 @@ function isInteger(s$$2) {
     if (v0) {
       return false;
     }
-    i$$1 = i$$1 + 1;
+    i$$1++;
     var v30 = s$$2.length;
     v1 = i$$1 < v30;
   }
@@ -35,7 +35,7 @@ function stripCharsInBag(s$$3, bag) {
     if (v2) {
       returnString = returnString + c$$1;
     }
-    i$$2 = i$$2 + 1;
+    i$$2++;
     var v33 = s$$3.length;
     v3 = i$$2 < v33;
   }
@@ -92,7 +92,7 @@ function DaysArray(n$$1) {
     if (v6) {
       this[i$$3] = 29;
     }
-    i$$3 = i$$3 + 1;
+    i$$3++;
     v7 = i$$3 <= n$$1;
   }
   return this;
@@ -147,7 +147,7 @@ function isDate(dtStr) {
     if (v13) {
       strYr = strYr.substring(1);
     }
-    i$$4 = i$$4 + 1;
+    i$$4++;
     v14 = i$$4 <= 3;
   }
   month = parseInt(strMonth);
@@ -329,7 +329,7 @@ function isan(string) {
     if (v26) {
       return false;
     }
-    i$$5 = i$$5 + 1;
+    i$$5++;
     var v52 = string.length;
     v27 = i$$5 < v52;
   }

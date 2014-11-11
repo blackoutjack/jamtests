@@ -100,7 +100,7 @@ function runTest() {
   var v19 = i > 0;
   for (;v19;) {
     initialStack.push(i);
-    i = i - 1;
+    i--;
     v19 = i > 0;
   }
   var done = move(num, initialStack, targetStack, auxStack);

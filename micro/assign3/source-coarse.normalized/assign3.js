@@ -1,7 +1,7 @@
 function runTest() {
   introspect(JAM.policy.pFull) {
   function f() {
-    cnt = cnt + 1;
+    cnt++;
     return 3;
   }
   var cnt = 10;

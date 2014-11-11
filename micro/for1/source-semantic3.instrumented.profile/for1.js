@@ -7,7 +7,7 @@ function runTest() {
     if (v0) {
       break;
     }
-    i = i + 1;
+    i++;
   }
 
   JAM.stopProfile('load');

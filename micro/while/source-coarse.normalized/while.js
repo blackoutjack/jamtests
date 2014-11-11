@@ -4,7 +4,7 @@ function runTest() {
   var v0 = i < 5;
   for (;v0;) {
     x = i;
-    i = i + 1;
+    i++;
     v0 = i < 5;
   }
 

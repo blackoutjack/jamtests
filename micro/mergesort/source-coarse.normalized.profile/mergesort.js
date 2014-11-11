@@ -72,7 +72,7 @@ function runTest() {
     for (;v10;) {
       var v9 = a[i$$2];
       left$$2.push(v9);
-      i$$2 = i$$2 + 1;
+      i$$2++;
       v10 = i$$2 < mid;
     }
     var j = mid;
@@ -81,7 +81,7 @@ function runTest() {
     for (;v12;) {
       var v11 = a[j];
       right$$2.push(v11);
-      j = j + 1;
+      j++;
       var v22 = a.length;
       v12 = j < v22;
     }
@@ -97,7 +97,7 @@ function runTest() {
     var v23 = Math.random();
     var v13 = v23 * 10;
     vals.push(v13);
-    i = i + 1;
+    i++;
     v14 = i < cnt;
   }
   var sorted = mergeSort(vals)

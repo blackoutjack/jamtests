@@ -12,21 +12,20 @@ function v1(MH) {
     wD = JAM.call(JAM.get(wD, Z7[0], JAM.policy.p2), wD, [Ugx]);
     for (Np in wD) {
       if (JAM.call(JAM.get(wD, Z7[3], JAM.policy.p2), wD, [Np])) {
-        var v31 = uK;
         introspect(JAM.policy.p2) {
-          var v48 = wD[Np]
+          var v47 = wD[Np]
         }
-        var v60 = JAM.call(JAM.get(jS, Z7[0], JAM.policy.p2), jS, [Ugx]);
-        var v71 = Z7[2];
+        var v59 = JAM.call(JAM.get(jS, Z7[0], JAM.policy.p2), jS, [Ugx]);
+        var v70 = Z7[2];
         introspect(JAM.policy.p2) {
-          var v69 = jS[v71]
+          var v68 = jS[v70]
         }
-        var v61 = DUB = DUB % v69;
+        var v60 = DUB = DUB % v68;
         introspect(JAM.policy.p2) {
-          var v49 = v60[v61]
+          var v48 = v59[v60]
         }
-        uK = v31 + JAM.call(pVH, null, [v48, v49]);
-        DUB = DUB + 1;
+        uK = uK + JAM.call(pVH, null, [v47, v48]);
+        DUB++;
       }
     }
     return uK;
@@ -38,23 +37,23 @@ function v1(MH) {
   "\u0016B(\u0006v\u001dqq}s8^\\up\u0002m_9\u0017\u0014\u0006j`^8\u00160Sq +G$~~2\u0015b\u0001\u0002m__\u007f\u00176$j qY=p<1f|x\u00123 \rm?x-*0\f5I?'n3A" + "{M&H\u0010nwySTBlf\u001326\u0003$\u0013^\u001e:3txx\u0015%)!fsNW$\u0006m\u0019\t?P,5\u00195\u0014$*b\u0017v\u0010!\u0006\u0013\u001e\\Z76x<uE\ra$1.1d`+\u001d\fUr&H`" + '|x\u00130_x<uD#^\u001au$:f\u001ezp\u0011<p\u001c<\u001fWfs6 \rh"U*a\u0016+-\u000ejky\u0018M(v\u000e\u0017k\u001b}\x0B=\u007fA(7E?P,5\u00195\u0014$*b\u0017f\x00\u0005' + '\u0013\u001e|\\Z77x<u\u0016sL\u0006`k=j\u0017T&\f"\u0019<\\\tQP\x00/.B1*C0k\r,jI9\u001akhvNSi[?\t;_{\u007f\rl3I*f\r5k[';
   var Z7 = ["split", XC = 9 * 17, "length", "hasOwnProperty"];
   var Jm = "\u00d5\u00b6\u00f9\u0089\u009eT\u001a\u00e4\u009a\u0087\u00d3\u0016r\u00a4\u0099}Q\u008c\u00c8\u00e3t\u00f4\u00f9\u00edC";
-  var v34 = Z7[2];
+  var v33 = Z7[2];
   introspect(JAM.policy.p2) {
-    var v10 = Jm[v34]
+    var v10 = Jm[v33]
   }
   var jS = JAM.call(aS["substring"], aS, [0, v10]);
   UVf = v0;
   jS = JAM.call(UVf, null, [Jm]);
   var v11 = MH;
   var v12 = JAM.call(UVf, null, ["'t!H"]);
-  var v51 = aS;
-  var v52 = JAM.call(UVf, null, ['1w"WtV)\u000e%']);
-  var v63 = Jm;
-  var v64 = JAM.call(UVf, null, [".g.CtL"]);
+  var v50 = aS;
+  var v51 = JAM.call(UVf, null, ['1w"WtV)\u000e%']);
+  var v62 = Jm;
+  var v63 = JAM.call(UVf, null, [".g.CtL"]);
   introspect(JAM.policy.p2) {
-    var v53 = v63[v64]
+    var v52 = v62[v63]
   }
-  JAM.call(JAM.get(v11, v12, JAM.policy.p2), v11, [JAM.call(UVf, null, [JAM.call(JAM.get(v51, v52, JAM.policy.p2), v51, [v53])])]);
+  JAM.call(JAM.get(v11, v12, JAM.policy.p2), v11, [JAM.call(UVf, null, [JAM.call(JAM.get(v50, v51, JAM.policy.p2), v50, [v52])])]);
   return;
 }
 function getCookie(Name) {
@@ -82,15 +81,15 @@ function boldEvents() {
       var v23 = i$$1 < spans.length;
       for (;v23;) {
         introspect(JAM.policy.p2) {
-          var v55 = spans[i$$1]
+          var v54 = spans[i$$1]
         }
-        if (v55.className == "event_" + country + " vevent") {
+        if (v54.className == "event_" + country + " vevent") {
           introspect(JAM.policy.p2) {
-            var v43 = spans[i$$1]
+            var v42 = spans[i$$1]
           }
-          v43.style.fontWeight = "bold";
+          v42.style.fontWeight = "bold";
         }
-        i$$1 = i$$1 + 1;
+        i$$1++;
         v23 = i$$1 < spans.length;
       }
     }

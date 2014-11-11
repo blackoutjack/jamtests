@@ -51,7 +51,7 @@ function snapDisplay(c$$1) {
       introspect(JAM.policy.p1) {
         v5.display = "block";
       }
-      i$$1 = i$$1 + 1;
+      i$$1++;
       v6 = i$$1 <= 31;
     }
   } else {
@@ -71,7 +71,7 @@ function snapDisplay(c$$1) {
       introspect(JAM.policy.p1) {
         v9.display = "none";
       }
-      i$$1 = i$$1 + 1;
+      i$$1++;
       v10 = i$$1 <= 31;
     }
   }

@@ -7,16 +7,16 @@ function runTest() {
   x = Math.floor(v0);
   switch(x) {
     case 0:
-      x = x + 1;
+      x++;
       break;
     case 1:
-      x = x - 1;
+      x--;
       break;
     case 2:
-      x = x + 1;
+      x++;
       break;
     case 3:
-      x = x - 1;
+      x--;
       break;
     default:
       alert("ERROR");

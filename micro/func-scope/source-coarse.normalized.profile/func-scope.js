@@ -5,7 +5,7 @@ function runTest() {
   function v1() {
     var v2 = cnt < 6;
     if (v2) {
-      cnt = cnt + 1;
+      cnt++;
       g();
     }
     return;
@@ -13,7 +13,7 @@ function runTest() {
   function v0() {
     var v3 = cnt < 3;
     if (v3) {
-      cnt = cnt + 1;
+      cnt++;
       f();
     }
     return;

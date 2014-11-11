@@ -9,7 +9,7 @@ function warmup() {
       if (Math.atan(Math.acos(Math.asin(Math.random()))) > 4) {
         return;
       }
-      i$$2 = i$$2 + 1;
+      ++i$$2;
       v1 = i$$2 < 100;
     }
     v2 = new Date - start$$5 < warmupMS;
@@ -77,7 +77,7 @@ function finish() {
         time$$1 = '"NaN"';
       }
       outputString = outputString + (time$$1 + ",");
-      i$$3 = i$$3 + 1;
+      i$$3++;
       v17 = i$$3 < output.length;
     }
     outputString = outputString.substring(0, outputString.length - 1);
@@ -293,7 +293,7 @@ var i = 0;
 var v22 = i < output.length;
 for (;v22;) {
   output[i] = {};
-  i = i + 1;
+  i++;
   v22 = i < output.length;
 }
 start()

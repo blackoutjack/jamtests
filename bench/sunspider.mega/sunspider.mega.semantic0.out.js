@@ -9,7 +9,7 @@ function warmup() {
       if (JAM.call(Math.atan, Math, [JAM.call(Math.acos, Math, [JAM.call(Math.asin, Math, [JAM.call(Math.random, Math, [], JAM.policy.p95)], JAM.policy.p98)], JAM.policy.p98)], JAM.policy.p98) > 4) {
         return;
       }
-      i$$2 = i$$2 + 1;
+      ++i$$2;
       v1 = i$$2 < 100;
     }
     v2 = new Date - start$$5 < warmupMS;
@@ -78,7 +78,7 @@ function finish() {
         time$$1 = '"NaN"';
       }
       outputString = outputString + (time$$1 + ",");
-      i$$3 = i$$3 + 1;
+      i$$3++;
       v17 = i$$3 < output.length;
     }
     outputString = JAM.call(outputString.substring, outputString, [0, outputString.length - 1], JAM.policy.p96);
@@ -298,7 +298,7 @@ for (;v22;) {
   introspect(JAM.policy.p106) {
     output[i] = {};
   }
-  i = i + 1;
+  i++;
   v22 = i < output.length;
 }
 start()

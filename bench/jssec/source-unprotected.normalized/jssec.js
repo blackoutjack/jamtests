@@ -43,7 +43,7 @@ function snapDisplay(c$$1) {
       var v18 = document.getElementById(v25);
       var v5 = v18.style;
       v5.display = "block";
-      i$$1 = i$$1 + 1;
+      i$$1++;
       v6 = i$$1 <= 31;
     }
   } else {
@@ -59,7 +59,7 @@ function snapDisplay(c$$1) {
       var v20 = document.getElementById(v26);
       var v9 = v20.style;
       v9.display = "none";
-      i$$1 = i$$1 + 1;
+      i$$1++;
       v10 = i$$1 <= 31;
     }
   }

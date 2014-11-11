@@ -5,6 +5,6 @@ for (;v0;) {
   introspect(JAM.policy.p1) {
     x = i;
   }
-  i = i + 1;
+  i++;
   v0 = i < 5;
 }

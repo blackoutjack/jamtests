@@ -5,7 +5,7 @@ function runTest() {
     for (;true;) {
       var v1 = a[i$$2] < a[lo];
       for (;v1;) {
-        i$$2 = i$$2 + 1;
+        ++i$$2;
         if (i$$2 == hi) {
           break;
         }
@@ -13,7 +13,7 @@ function runTest() {
       }
       var v3 = a[lo] < a[j];
       for (;v3;) {
-        j = j - 1;
+        --j;
         if (j == lo) {
           break;
         }
@@ -46,7 +46,7 @@ function runTest() {
   var v9 = i < cnt;
   for (;v9;) {
     vals.push(Math.random() * 10);
-    i = i + 1;
+    i++;
     v9 = i < cnt;
   }
   quickSort(vals, 0, vals.length - 1)

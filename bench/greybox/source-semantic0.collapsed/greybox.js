@@ -4,7 +4,7 @@ function v247() {
 }
 function v246() {
   if (this.current_index != this.current_set.length - 1) {
-    this.current_index = this.current_index + 1;
+    this.current_index++;
     this.updateFrame();
     this.updateStatus();
   }
@@ -12,7 +12,7 @@ function v246() {
 }
 function v245() {
   if (this.current_index != 0) {
-    this.current_index = this.current_index - 1;
+    this.current_index--;
     this.updateFrame();
     this.updateStatus();
   }
@@ -48,10 +48,10 @@ function v241(start_index$$4) {
   var item$$2 = this.current_set[this.current_index];
   JAM.call(this.show, this, [item$$2.url], JAM.policy.p1);
   JAM.call(this._setCaption, this, [item$$2.caption], JAM.policy.p1);
-  var v1246 = JAM.call(AJS.IMG, AJS, [{"class":"left", src:this.img_prev}], JAM.policy.p1);
-  this.btn_prev = v1246;
-  var v1247 = JAM.call(AJS.IMG, AJS, [{"class":"right", src:this.img_next}], JAM.policy.p1);
-  this.btn_next = v1247;
+  var v1236 = JAM.call(AJS.IMG, AJS, [{"class":"left", src:this.img_prev}], JAM.policy.p1);
+  this.btn_prev = v1236;
+  var v1237 = JAM.call(AJS.IMG, AJS, [{"class":"right", src:this.img_next}], JAM.policy.p1);
+  this.btn_next = v1237;
   JAM.call(AJS.AEV, AJS, [this.btn_prev, "click", JAM.call(AJS.$b, AJS, [this.switchPrev, this], JAM.policy.p1)], JAM.policy.p1);
   JAM.call(AJS.AEV, AJS, [this.btn_next, "click", JAM.call(AJS.$b, AJS, [this.switchNext, this], JAM.policy.p1)], JAM.policy.p1);
   GB_STATUS = JAM.call(AJS.SPAN, AJS, [{"class":"GB_navStatus"}], JAM.policy.p1);
@@ -102,10 +102,10 @@ function v236() {
   if (this.fullscreen) {
     var page_size$$3 = AJS.getWindowSize();
     overlay_h = page_size$$3.h;
-    var v1248 = JAM.call(Math.round, Math, [this.overlay.offsetWidth - this.overlay.offsetWidth / 100 * 10], JAM.policy.p1);
-    this.width = v1248;
-    var v1249 = JAM.call(Math.round, Math, [overlay_h - overlay_h / 100 * 10], JAM.policy.p1);
-    this.height = v1249;
+    var v1238 = JAM.call(Math.round, Math, [this.overlay.offsetWidth - this.overlay.offsetWidth / 100 * 10], JAM.policy.p1);
+    this.width = v1238;
+    var v1239 = JAM.call(Math.round, Math, [overlay_h - overlay_h / 100 * 10], JAM.policy.p1);
+    this.height = v1239;
   }
   JAM.call(AJS.setWidth, AJS, [this.header, this.width + 6], JAM.policy.p1);
   JAM.call(AJS.setWidth, AJS, [this.iframe, this.width], JAM.policy.p1);
@@ -130,8 +130,8 @@ function v235() {
     return;
   }
   JAM.call(AJS.addClass, AJS, [this.g_window, "GB_Window"], JAM.policy.p1);
-  var v1250 = JAM.call(AJS.TABLE, AJS, [{"class":"header"}], JAM.policy.p1);
-  this.header = v1250;
+  var v1240 = JAM.call(AJS.TABLE, AJS, [{"class":"header"}], JAM.policy.p1);
+  this.header = v1240;
   this.header.style.backgroundImage = "url(" + this.img_header + ")";
   var td_caption$$1 = JAM.call(AJS.TD, AJS, [{"class":"caption"}, this.caption], JAM.policy.p1);
   var td_close$$1 = JAM.call(AJS.TD, AJS, [{"class":"close"}], JAM.policy.p1);
@@ -232,8 +232,8 @@ function v222() {
 function v221() {
   JAM.call(AJS.addClass, AJS, [this.g_window, "GB_Gallery"], JAM.policy.p1);
   var inner = JAM.call(AJS.DIV, AJS, [{"class":"inner"}], JAM.policy.p1);
-  var v1251 = JAM.call(AJS.DIV, AJS, [{"class":"GB_header"}, inner], JAM.policy.p1);
-  this.header = v1251;
+  var v1241 = JAM.call(AJS.DIV, AJS, [{"class":"GB_header"}, inner], JAM.policy.p1);
+  this.header = v1241;
   JAM.call(AJS.setOpacity, AJS, [this.header, 0], JAM.policy.p1);
   var v359 = AJS.getBody();
   JAM.call(v359.insertBefore, v359, [this.header, this.overlay.nextSibling], JAM.policy.p1);
@@ -302,21 +302,21 @@ function v210() {
     if (AJS.isIe()) {
       d$$5.src = 'javascript:false;document.write("");';
     }
-    var v1252 = JAM.call(AJS.IFRAME, AJS, [d$$5], JAM.policy.p1);
-    this.iframe = v1252;
-    var v1253 = JAM.call(AJS.DIV, AJS, [{"class":"content"}, this.iframe], JAM.policy.p1);
-    this.middle_cnt = v1253;
-    var v1254 = AJS.DIV();
-    this.top_cnt = v1254;
-    var v1255 = AJS.DIV();
-    this.bottom_cnt = v1255;
+    var v1242 = JAM.call(AJS.IFRAME, AJS, [d$$5], JAM.policy.p1);
+    this.iframe = v1242;
+    var v1243 = JAM.call(AJS.DIV, AJS, [{"class":"content"}, this.iframe], JAM.policy.p1);
+    this.middle_cnt = v1243;
+    var v1244 = AJS.DIV();
+    this.top_cnt = v1244;
+    var v1245 = AJS.DIV();
+    this.bottom_cnt = v1245;
     JAM.call(AJS.ACN, AJS, [this.g_window, this.top_cnt, this.middle_cnt, this.bottom_cnt], JAM.policy.p1);
   }
   return;
 }
 function v209() {
-  var v1256 = JAM.call(AJS.DIV, AJS, [{"id":"GB_overlay"}], JAM.policy.p1);
-  this.overlay = v1256;
+  var v1246 = JAM.call(AJS.DIV, AJS, [{"id":"GB_overlay"}], JAM.policy.p1);
+  this.overlay = v1246;
   if (this.overlay_click_close) {
     JAM.call(AJS.AEV, AJS, [this.overlay, "click", GB_hide], JAM.policy.p1);
   }
@@ -327,11 +327,11 @@ function v209() {
 }
 function v208() {
   var page_size = AJS.getWindowSize();
-  var v871 = AJS.isMozilla();
-  if (!v871) {
-    v871 = AJS.isOpera();
+  var v866 = AJS.isMozilla();
+  if (!v866) {
+    v866 = AJS.isOpera();
   }
-  if (v871) {
+  if (v866) {
     JAM.call(AJS.setWidth, AJS, [this.overlay, "100%"], JAM.policy.p1);
   } else {
     JAM.call(AJS.setWidth, AJS, [this.overlay, page_size.w], JAM.policy.p1);
@@ -346,10 +346,10 @@ function v208() {
 }
 function v207() {
   var v399 = this.iframe;
-  var v880 = this.src_loader + "?s=";
-  var v881 = this.salt;
+  var v874 = this.src_loader + "?s=";
+  var v875 = this.salt;
   this.salt = this.salt + 1;
-  v399.src = v880 + v881;
+  v399.src = v874 + v875;
   JAM.call(AJS.showElement, AJS, [this.iframe], JAM.policy.p1);
   return;
 }
@@ -369,8 +369,8 @@ function v205() {
     return;
   }
   this.initOverlay();
-  var v1257 = JAM.call(AJS.DIV, AJS, [{"id":"GB_window"}], JAM.policy.p1);
-  this.g_window = v1257;
+  var v1247 = JAM.call(AJS.DIV, AJS, [{"id":"GB_window"}], JAM.policy.p1);
+  this.g_window = v1247;
   JAM.call(AJS.hideElement, AJS, [this.g_window], JAM.policy.p1);
   var v405 = AJS.getBody();
   JAM.call(v405.insertBefore, v405, [this.g_window, this.overlay.nextSibling], JAM.policy.p1);
@@ -473,21 +473,21 @@ function v194(options$$10) {
   this.src_loader = this.root_dir + "loader_frame.html";
   var h_www = window.location.hostname.indexOf("www");
   var src_www = this.src_loader.indexOf("www");
-  var v884 = h_www != -1;
-  if (v884) {
-    v884 = src_www == -1;
+  var v878 = h_www != -1;
+  if (v878) {
+    v878 = src_www == -1;
   }
-  if (v884) {
-    var v1258 = this.src_loader.replace("://", "://www.");
-    this.src_loader = v1258;
+  if (v878) {
+    var v1248 = this.src_loader.replace("://", "://www.");
+    this.src_loader = v1248;
   }
-  var v885 = h_www == -1;
-  if (v885) {
-    v885 = src_www != -1;
+  var v879 = h_www == -1;
+  if (v879) {
+    v879 = src_www != -1;
   }
-  if (v885) {
-    var v1259 = this.src_loader.replace("://www.", "://");
-    this.src_loader = v1259;
+  if (v879) {
+    var v1249 = this.src_loader.replace("://www.", "://");
+    this.src_loader = v1249;
   }
   this.show_loading = true;
   JAM.call(AJS.update, AJS, [this, options$$10], JAM.policy.p1);
@@ -511,11 +511,11 @@ function v190() {
   return;
 }
 function v189(obj$$23) {
-  var v890 = this.timer;
-  if (v890) {
-    v890 = this.options.wait;
+  var v884 = this.timer;
+  if (v884) {
+    v884 = this.options.wait;
   }
-  if (v890) {
+  if (v884) {
     return;
   }
   var from$$3 = {};
@@ -530,15 +530,15 @@ function v188() {
   for (p in this.from) {
     var v449 = this.now;
     var v450 = p;
-    var v1260 = JAM.call(this.compute, this, [this.from[p], this.to[p]], JAM.policy.p1);
-    JAM.set(v449, v450, v1260);
+    var v1250 = JAM.call(this.compute, this, [this.from[p], this.to[p]], JAM.policy.p1);
+    JAM.set(v449, v450, v1250);
   }
   return;
 }
 function v187(elm$$46, options$$9) {
   this.parent();
-  var v1261 = JAM.call(AJS.$, AJS, [elm$$46], JAM.policy.p1);
-  this.elm = v1261;
+  var v1251 = JAM.call(AJS.$, AJS, [elm$$46], JAM.policy.p1);
+  this.elm = v1251;
   JAM.call(this.setOptions, this, [options$$9], JAM.policy.p1);
   this.now = {};
   return;
@@ -580,10 +580,10 @@ function v181(from$$1, to$$1) {
   JAM.call(setTimeout, null, [JAM.call(AJS.$p, AJS, [this.options.onStart, this.elm], JAM.policy.p1), 10]);
   this.from = from$$1;
   this.to = to$$1;
-  var v1262 = (new Date).getTime();
-  this.time = v1262;
-  var v1263 = JAM.call(setInterval, null, [this.step, JAM.call(Math.round, Math, [1E3 / this.options.fps], JAM.policy.p1)]);
-  this.timer = v1263;
+  var v1252 = (new Date).getTime();
+  this.time = v1252;
+  var v1253 = JAM.call(setInterval, null, [this.step, JAM.call(Math.round, Math, [1E3 / this.options.fps], JAM.policy.p1)]);
+  this.timer = v1253;
   return this;
 }
 function v180() {
@@ -597,8 +597,8 @@ function v179(from, to) {
   return JAM.call(v463.transition, v463, [this.cTime, from, change, this.options.duration], JAM.policy.p1);
 }
 function v178() {
-  var v1264 = JAM.call(this.compute, this, [this.from, this.to], JAM.policy.p1);
-  this.now = v1264;
+  var v1254 = JAM.call(this.compute, this, [this.from, this.to], JAM.policy.p1);
+  this.now = v1254;
   return;
 }
 function v177() {
@@ -673,8 +673,8 @@ function v168(elm$$39, options$$1) {
   }
   var base$$1 = new AJS.fx.Base;
   var v495 = base$$1;
-  var v1265 = JAM.call(AJS.$, AJS, [elm$$39], JAM.policy.p1);
-  v495.elm = v1265;
+  var v1255 = JAM.call(AJS.$, AJS, [elm$$39], JAM.policy.p1);
+  v495.elm = v1255;
   base$$1.options.duration = 600;
   JAM.call(base$$1.setOptions, base$$1, [options$$1], JAM.policy.p1);
   JAM.call(AJS.update, AJS, [base$$1, {increase:v167}], JAM.policy.p1);
@@ -686,9 +686,8 @@ function v166(data$$21) {
   var http_url = this.http_url;
   if (http_method == "POST") {
     JAM.call(req$$6.open, req$$6, [http_method, http_url, true], JAM.policy.p1);
-    var v498 = req$$6;
-    var v1266 = JAM.call(AJS.$b, AJS, [this._onreadystatechange, this], JAM.policy.p1);
-    JAM.set(v498, "onreadystatechange", v1266);
+    var v1256 = JAM.call(AJS.$b, AJS, [this._onreadystatechange, this], JAM.policy.p1);
+    JAM.set(req$$6, "onreadystatechange", v1256);
     req$$6.setRequestHeader("Content-type", "application/x-www-form-urlencoded");
     if (JAM.call(AJS.isObject, AJS, [data$$21], JAM.policy.p1)) {
       JAM.call(req$$6.send, req$$6, [JAM.call(AJS.encodeArguments, AJS, [data$$21], JAM.policy.p1)], JAM.policy.p1);
@@ -701,9 +700,8 @@ function v166(data$$21) {
     }
   } else {
     req$$6.open("GET", http_url, true);
-    var v502 = req$$6;
-    var v1267 = JAM.call(AJS.$b, AJS, [this._onreadystatechange, this], JAM.policy.p1);
-    JAM.set(v502, "onreadystatechange", v1267);
+    var v1257 = JAM.call(AJS.$b, AJS, [this._onreadystatechange, this], JAM.policy.p1);
+    JAM.set(req$$6, "onreadystatechange", v1257);
     req$$6.send(null);
   }
   return;
@@ -717,15 +715,15 @@ function v165() {
       status = req$$5.status;
     } catch (e$$16) {
     }
-    var v1115 = status == 200;
-    if (!v1115) {
-      v1115 = status == 304;
+    var v1106 = status == 200;
+    if (!v1106) {
+      v1106 = status == 304;
     }
-    var v917 = v1115;
-    if (!v917) {
-      v917 = req$$5.responseText == null;
+    var v909 = v1106;
+    if (!v909) {
+      v909 = req$$5.responseText == null;
     }
-    if (v917) {
+    if (v909) {
       this.callback();
     } else {
       this.errback();
@@ -758,11 +756,11 @@ function v160() {
       JAM.call(AJS.ajaxErrorHandler, AJS, [req.responseText, req], JAM.policy.p1);
     } else {
       var txt$$1 = this.req.responseText.substring(0, 200);
-      var v920 = JAM.call(AJS.strip, AJS, [txt$$1], JAM.policy.p1);
-      if (v920) {
-        v920 = txt$$1.indexOf("<html") == -1;
+      var v912 = JAM.call(AJS.strip, AJS, [txt$$1], JAM.policy.p1);
+      if (v912) {
+        v912 = txt$$1.indexOf("<html") == -1;
       }
-      if (v920) {
+      if (v912) {
         alert("Error encountered:\n" + txt$$1);
       }
     }
@@ -827,15 +825,15 @@ function v153(members$$1) {
   for (k in members$$1) {
     var prev = parent$$2[k];
     var cur = members$$1[k];
-    var v1120 = prev;
-    if (v1120) {
-      v1120 = prev != cur;
+    var v1111 = prev;
+    if (v1111) {
+      v1111 = prev != cur;
     }
-    var v923 = v1120;
-    if (v923) {
-      v923 = typeof cur == "function";
+    var v915 = v1111;
+    if (v915) {
+      v915 = typeof cur == "function";
     }
-    if (v923) {
+    if (v915) {
       cur = JAM.call(this._parentize, this, [cur, prev], JAM.policy.p1);
     }
     JAM.set(parent$$2, k, cur);
@@ -922,27 +920,27 @@ function v140(o$$5) {
   return v545;
 }
 function v139(str$$7) {
-  var v1122 = JAM.call(AJS.isDefined, AJS, [str$$7], JAM.policy.p1);
-  if (v1122) {
-    v1122 = str$$7.toString();
+  var v1113 = JAM.call(AJS.isDefined, AJS, [str$$7], JAM.policy.p1);
+  if (v1113) {
+    v1113 = str$$7.toString();
   }
-  var v927 = v1122;
-  if (!v927) {
-    v927 = "";
+  var v919 = v1113;
+  if (!v919) {
+    v919 = "";
   }
-  var result = decodeURIComponent(v927);
+  var result = decodeURIComponent(v919);
   return result.replace(/\+/g, " ");
 }
 function v138(str$$6) {
-  var v1124 = JAM.call(AJS.isDefined, AJS, [str$$6], JAM.policy.p1);
-  if (v1124) {
-    v1124 = str$$6.toString();
+  var v1115 = JAM.call(AJS.isDefined, AJS, [str$$6], JAM.policy.p1);
+  if (v1115) {
+    v1115 = str$$6.toString();
   }
-  var v928 = v1124;
-  if (!v928) {
-    v928 = "";
+  var v920 = v1115;
+  if (!v920) {
+    v920 = "";
   }
-  return encodeURIComponent(v928);
+  return encodeURIComponent(v920);
 }
 function v137(obj$$17) {
   var rval$$1 = [];
@@ -966,27 +964,26 @@ function v135(name$$32, fn$$10, interval) {
     clearTimeout(current);
   }
   var v550 = AJS._reccruing_tos;
-  var v551 = name$$32;
-  var v1268 = JAM.call(setTimeout, null, [fn$$10, interval]);
-  JAM.set(v550, v551, v1268);
+  var v1258 = JAM.call(setTimeout, null, [fn$$10, interval]);
+  JAM.set(v550, name$$32, v1258);
   return;
 }
 function v134(fn$$9, extra_args$$1) {
   function v133() {
     try {
-      var v552 = JAM.call(AJS.$FA, AJS, [arguments]);
-      var args$$14 = JAM.call(v552.concat, v552, [extra_args$$1], JAM.policy.p1);
+      var v551 = JAM.call(AJS.$FA, AJS, [arguments]);
+      var args$$14 = JAM.call(v551.concat, v551, [extra_args$$1], JAM.policy.p1);
       return JAM.call(fn$$9.apply, fn$$9, [scope$$2, args$$14], JAM.policy.p1);
     } catch (e$$13) {
     }
     return;
   }
   extra_args$$1 = JAM.call(AJS.$A, AJS, [extra_args$$1], JAM.policy.p1);
-  var v553 = fn$$9._cscope;
-  if (!v553) {
-    v553 = window;
+  var v552 = fn$$9._cscope;
+  if (!v552) {
+    v552 = window;
   }
-  var scope$$2 = v553;
+  var scope$$2 = v552;
   return v133;
 }
 function v132(elm$$38, type$$30, fn$$8) {
@@ -1010,10 +1007,8 @@ function v130(self$$1) {
   for (k$$2 in self$$1) {
     var func$$4 = self$$1[k$$2];
     if (typeof func$$4 == "function") {
-      var v556 = self$$1;
-      var v557 = k$$2;
-      var v1269 = JAM.call(AJS.$b, AJS, [func$$4, self$$1], JAM.policy.p1);
-      JAM.set(v556, v557, v1269);
+      var v1259 = JAM.call(AJS.$b, AJS, [func$$4, self$$1], JAM.policy.p1);
+      JAM.set(self$$1, k$$2, v1259);
     }
   }
   return;
@@ -1024,11 +1019,11 @@ function v129(fn$$7, scope$$1, extra_args) {
 }
 function v128(elms$$4, type$$29, handler$$7) {
   function v127(elm$$37) {
-    var v931 = elm$$37.events;
-    if (v931) {
-      v931 = elm$$37.events[type$$29];
+    var v923 = elm$$37.events;
+    if (v923) {
+      v923 = elm$$37.events[type$$29];
     }
-    if (v931) {
+    if (v923) {
       delete elm$$37.events[type$$29][handler$$7.$f_guid];
     }
     return;
@@ -1043,19 +1038,19 @@ function v126(event$$1) {
     return;
   }
   var me$$1 = this;
-  var v564 = event$$1;
-  if (!v564) {
-    v564 = window.event;
+  var v561 = event$$1;
+  if (!v561) {
+    v561 = window.event;
   }
-  event$$1 = v564;
+  event$$1 = v561;
   if (!event$$1) {
     return;
   }
-  var v936 = !event$$1.ctrl;
-  if (v936) {
-    v936 = event$$1.type.indexOf("key") != -1;
+  var v928 = !event$$1.ctrl;
+  if (v928) {
+    v928 = event$$1.type.indexOf("key") != -1;
   }
-  if (v936) {
+  if (v928) {
     JAM.call(AJS.setEventKey, AJS, [event$$1], JAM.policy.p1);
   }
   var handlers$$1 = this.events[event$$1.type];
@@ -1081,13 +1076,13 @@ function v124(elms$$3, types, handler$$4, listen_once$$1) {
   function v123(elm$$36) {
     function v122(type$$28) {
       var handlers = elm$$36.events[type$$28];
-      var v939 = elm$$36 == window;
-      if (v939) {
-        v939 = type$$28 == "load";
+      var v931 = elm$$36 == window;
+      if (v931) {
+        v931 = type$$28 == "load";
       }
-      if (v939) {
-        var v573 = AJS.ready_list;
-        JAM.call(v573.push, v573, [handler$$4], JAM.policy.p1);
+      if (v931) {
+        var v570 = AJS.ready_list;
+        JAM.call(v570.push, v570, [handler$$4], JAM.policy.p1);
       } else {
         if (type$$28 == "lazy_load") {
           type$$28 = "load";
@@ -1146,8 +1141,8 @@ function v119() {
       return;
     }
     try {
-      var v587 = document.documentElement;
-      JAM.call(v587.doScroll, v587, ["left"]);
+      var v584 = document.documentElement;
+      JAM.call(v584.doScroll, v584, ["left"]);
     } catch (error$$1) {
       JAM.call(setTimeout, null, [arguments.callee, 0]);
       return;
@@ -1176,11 +1171,11 @@ function v119() {
   } else {
     if (document.attachEvent) {
       JAM.call(document.attachEvent, document, ["onreadystatechange", v117]);
-      var v947 = document.documentElement.doScroll;
-      if (v947) {
-        v947 = window == window.top;
+      var v939 = document.documentElement.doScroll;
+      if (v939) {
+        v939 = window == window.top;
       }
-      if (v947) {
+      if (v939) {
         v118();
       }
     }
@@ -1203,13 +1198,13 @@ function v113(e$$11) {
   if (!e$$11) {
     e$$11 = window.event;
   }
-  var v600;
+  var v597;
   if (e$$11.keyCode) {
-    v600 = e$$11.keyCode;
+    v597 = e$$11.keyCode;
   } else {
-    v600 = e$$11.charCode;
+    v597 = e$$11.charCode;
   }
-  e$$11.key = v600;
+  e$$11.key = v597;
   e$$11.ctrl = e$$11.ctrlKey;
   e$$11.alt = e$$11.altKey;
   e$$11.meta = e$$11.metaKey;
@@ -1217,15 +1212,15 @@ function v113(e$$11) {
   return;
 }
 function v112(e$$10) {
-  var v1131 = e$$10;
-  if (v1131) {
-    v1131 = !e$$10.type;
+  var v1122 = e$$10;
+  if (v1122) {
+    v1122 = !e$$10.type;
   }
-  var v949 = v1131;
-  if (v949) {
-    v949 = !e$$10.keyCode;
+  var v941 = v1122;
+  if (v941) {
+    v941 = !e$$10.keyCode;
   }
-  if (v949) {
+  if (v941) {
     return e$$10;
   }
   var targ;
@@ -1239,11 +1234,11 @@ function v112(e$$10) {
       targ = e$$10.srcElement;
     }
   }
-  var v950 = targ;
-  if (v950) {
-    v950 = targ.nodeType == 3;
+  var v942 = targ;
+  if (v942) {
+    v942 = targ.nodeType == 3;
   }
-  if (v950) {
+  if (v942) {
     targ = targ.parentNode;
   }
   return targ;
@@ -1271,11 +1266,11 @@ function v111(elm1, elm2) {
   var left2 = pos_elm2.x;
   var right2 = left2 + elm2.offsetWidth;
   var bottom2 = top2 + elm2.offsetHeight;
-  var v951 = getSign(top1 - bottom2) != getSign(bottom1 - top2);
-  if (v951) {
-    v951 = getSign(left1 - right2) != getSign(right1 - left2);
+  var v943 = getSign(top1 - bottom2) != getSign(bottom1 - top2);
+  if (v943) {
+    v943 = getSign(left1 - right2) != getSign(right1 - left2);
   }
-  if (v951) {
+  if (v943) {
     return true;
   }
   return false;
@@ -1288,11 +1283,11 @@ function v110(doc) {
     win_w = self.innerWidth;
     win_h = self.innerHeight;
   } else {
-    var v952 = doc.documentElement;
-    if (v952) {
-      v952 = doc.documentElement.clientHeight;
+    var v944 = doc.documentElement;
+    if (v944) {
+      v944 = doc.documentElement.clientHeight;
     }
-    if (v952) {
+    if (v944) {
       win_w = doc.documentElement.clientWidth;
       win_h = doc.documentElement.clientHeight;
     } else {
@@ -1324,11 +1319,11 @@ function v109(elm$$34) {
       next = next.offsetParent;
     }
   }
-  var v957 = AJS.isSafari();
-  if (v957) {
-    v957 = elm$$34.style.position == "absolute";
+  var v949 = AJS.isSafari();
+  if (v949) {
+    v949 = elm$$34.style.position == "absolute";
   }
-  if (v957) {
+  if (v949) {
     posObj.x = posObj.x - document.body.offsetLeft;
     posObj.y = posObj.y - document.body.offsetTop;
   }
@@ -1336,11 +1331,11 @@ function v109(elm$$34) {
 }
 function v108() {
   var t;
-  var v962 = document.documentElement;
-  if (v962) {
-    v962 = document.documentElement.scrollTop;
+  var v954 = document.documentElement;
+  if (v954) {
+    v954 = document.documentElement.scrollTop;
   }
-  if (v962) {
+  if (v954) {
     t = document.documentElement.scrollTop;
   } else {
     if (document.body) {
@@ -1355,19 +1350,19 @@ function v107(e$$9) {
   if (!e$$9) {
     e$$9 = window.event;
   }
-  var v963 = e$$9.pageX;
-  if (!v963) {
-    v963 = e$$9.pageY;
+  var v955 = e$$9.pageX;
+  if (!v955) {
+    v955 = e$$9.pageY;
   }
-  if (v963) {
+  if (v955) {
     posx = e$$9.pageX;
     posy = e$$9.pageY;
   } else {
-    var v964 = e$$9.clientX;
-    if (!v964) {
-      v964 = e$$9.clientY;
+    var v956 = e$$9.clientX;
+    if (!v956) {
+      v956 = e$$9.clientY;
     }
-    if (v964) {
+    if (v956) {
       posx = e$$9.clientX + document.body.scrollLeft + document.documentElement.scrollLeft;
       posy = e$$9.clientY + document.body.scrollTop + document.documentElement.scrollTop;
     }
@@ -1400,8 +1395,8 @@ function v103(html$$2) {
   var script_data = html$$2.match(/<script.*?>((\n|\r|.)*?)<\/script>/g);
   if (script_data != null) {
     var i$$15 = 0;
-    var v648 = i$$15 < script_data.length;
-    for (;v648;) {
+    var v645 = i$$15 < script_data.length;
+    for (;v645;) {
       var script_only = script_data[i$$15].replace(/<script.*?>/g, "");
       script_only = script_only.replace(/<\/script>/g, "");
       if (JAM.isEval(eval)) {
@@ -1409,19 +1404,19 @@ function v103(html$$2) {
       } else {
         JAM.call(eval, null, [script_only]);
       }
-      i$$15 = i$$15 + 1;
-      v648 = i$$15 < script_data.length;
+      i$$15++;
+      v645 = i$$15 < script_data.length;
     }
   }
   return;
 }
 function v102(txt) {
   try {
-    var v650 = "(" + txt + ")";
+    var v647 = "(" + txt + ")";
     if (JAM.isEval(eval)) {
-      return eval("introspect(JAM.policy.pFull) { " + v650 + " }");
+      return eval("introspect(JAM.policy.pFull) { " + v647 + " }");
     } else {
-      return JAM.call(eval, null, [v650]);
+      return JAM.call(eval, null, [v647]);
     }
   } catch (e$$8) {
     if (JAM.isEval(eval)) {
@@ -1451,11 +1446,11 @@ function v100(o$$3) {
   if (objtype == "undefined") {
     return "null";
   } else {
-    var v979 = objtype == "number";
-    if (!v979) {
-      v979 = objtype == "boolean";
+    var v971 = objtype == "number";
+    if (!v971) {
+      v971 = objtype == "boolean";
     }
-    if (v979) {
+    if (v971) {
       return o$$3 + "";
     } else {
       if (o$$3 === null) {
@@ -1466,30 +1461,30 @@ function v100(o$$3) {
   if (objtype == "string") {
     return JAM.call(AJS._reprString, AJS, [o$$3], JAM.policy.p1);
   }
-  var v980 = objtype == "object";
-  if (v980) {
-    v980 = o$$3.getFullYear;
+  var v972 = objtype == "object";
+  if (v972) {
+    v972 = o$$3.getFullYear;
   }
-  if (v980) {
+  if (v972) {
     return JAM.call(AJS._reprDate, AJS, [o$$3], JAM.policy.p1);
   }
   var me = arguments.callee;
-  var v981 = objtype != "function";
-  if (v981) {
-    v981 = typeof o$$3.length == "number";
+  var v973 = objtype != "function";
+  if (v973) {
+    v973 = typeof o$$3.length == "number";
   }
-  if (v981) {
+  if (v973) {
     var res = [];
     var i$$14 = 0;
-    var v659 = i$$14 < o$$3.length;
-    for (;v659;) {
+    var v656 = i$$14 < o$$3.length;
+    for (;v656;) {
       var val$$3 = JAM.call(me, null, [o$$3[i$$14]], JAM.policy.p1);
       if (typeof val$$3 != "string") {
         val$$3 = "undefined";
       }
       JAM.call(res.push, res, [val$$3], JAM.policy.p1);
-      i$$14 = i$$14 + 1;
-      v659 = i$$14 < o$$3.length;
+      i$$14++;
+      v656 = i$$14 < o$$3.length;
     }
     return "[" + JAM.call(res.join, res, [","]) + "]";
   }
@@ -1550,16 +1545,16 @@ function v98() {
   }
   var try_these = [v93, v94, v95, v96, v97];
   var i$$13 = 0;
-  var v675 = i$$13 < try_these.length;
-  for (;v675;) {
+  var v672 = i$$13 < try_these.length;
+  for (;v672;) {
     var func$$3 = try_these[i$$13];
     try {
       return func$$3();
     } catch (e$$7) {
       JAM.call(AJS.log, AJS, [e$$7], JAM.policy.p1);
     }
-    i$$13 = i$$13 + 1;
-    v675 = i$$13 < try_these.length;
+    i$$13++;
+    v672 = i$$13 < try_these.length;
   }
   return;
 }
@@ -1568,20 +1563,20 @@ function v92(tmpl, ns, scope) {
     g = g.split("|");
     var cnt = ns[g[0]];
     var i$$12 = 1;
-    var v678 = i$$12 < g.length;
-    for (;v678;) {
+    var v675 = i$$12 < g.length;
+    for (;v675;) {
       cnt = JAM.call(scope[g[i$$12]], scope, [cnt], JAM.policy.p1);
-      i$$12 = i$$12 + 1;
-      v678 = i$$12 < g.length;
+      i$$12++;
+      v675 = i$$12 < g.length;
     }
     if (cnt == "") {
       return "";
     }
-    var v1000 = cnt == 0;
-    if (!v1000) {
-      v1000 = cnt == -1;
+    var v992 = cnt == 0;
+    if (!v992) {
+      v992 = cnt == -1;
     }
-    if (v1000) {
+    if (v992) {
       cnt = cnt + "";
     }
     return cnt || w$$5;
@@ -1625,10 +1620,9 @@ function v87(elm$$33, p$$5) {
 }
 function v86() {
   function v85(elm$$32) {
-    var v687 = elm$$32;
-    var v1002 = elm$$32.className;
-    var v1270 = JAM.call(v1002.replace, v1002, [new RegExp("(^|\\s)" + cls$$2, "g"), ""], JAM.policy.p1);
-    v687.className = v1270;
+    var v684 = elm$$32.className;
+    var v1260 = JAM.call(v684.replace, v684, [new RegExp("(^|\\s)" + cls$$2, "g"), ""], JAM.policy.p1);
+    elm$$32.className = v1260;
     return;
   }
   var args$$12 = JAM.call(AJS.flattenElmArguments, AJS, [arguments]);
@@ -1637,38 +1631,38 @@ function v86() {
   return;
 }
 function v84(elm$$31, cls$$1) {
-  var v1004 = !elm$$31;
-  if (!v1004) {
-    v1004 = !elm$$31.className;
+  var v995 = !elm$$31;
+  if (!v995) {
+    v995 = !elm$$31.className;
   }
-  if (v1004) {
+  if (v995) {
     return false;
   }
   var e_cls = elm$$31.className;
-  var v689 = e_cls.length > 0;
-  if (v689) {
-    var v1006 = e_cls == cls$$1;
-    if (!v1006) {
-      var v1160 = new RegExp("(^|\\s)" + cls$$1 + "(\\s|$)");
-      v1006 = JAM.call(v1160.test, v1160, [e_cls], JAM.policy.p1);
+  var v687 = e_cls.length > 0;
+  if (v687) {
+    var v997 = e_cls == cls$$1;
+    if (!v997) {
+      var v1150 = new RegExp("(^|\\s)" + cls$$1 + "(\\s|$)");
+      v997 = JAM.call(v1150.test, v1150, [e_cls], JAM.policy.p1);
     }
-    v689 = v1006;
+    v687 = v997;
   }
-  return v689;
+  return v687;
 }
 function v83() {
   function v82(elm$$30) {
     var o$$inline_0 = elm$$30;
-    var v1162 = new RegExp("(^|\\s)" + cls + "(\\s|$)");
-    if (!JAM.call(v1162.test, v1162, [o$$inline_0.className], JAM.policy.p1)) {
-      var v1008 = o$$inline_0.className;
-      var v1222;
+    var v1152 = new RegExp("(^|\\s)" + cls + "(\\s|$)");
+    if (!JAM.call(v1152.test, v1152, [o$$inline_0.className], JAM.policy.p1)) {
+      var v999 = o$$inline_0.className;
+      var v1212;
       if (o$$inline_0.className) {
-        v1222 = " ";
+        v1212 = " ";
       } else {
-        v1222 = "";
+        v1212 = "";
       }
-      o$$inline_0.className = v1008 + (v1222 + cls);
+      o$$inline_0.className = v999 + (v1212 + cls);
     }
     return;
   }
@@ -1705,22 +1699,22 @@ function v75() {
 function v74(args$$9, property$$1) {
   args$$9 = JAM.call(AJS.$FA, AJS, [args$$9], JAM.policy.p1);
   args$$9.splice(args$$9.length - 1, 0, property$$1);
-  var v692 = AJS.setStyle;
-  JAM.call(v692.apply, v692, [null, args$$9]);
+  var v690 = AJS.setStyle;
+  JAM.call(v690.apply, v690, [null, args$$9]);
   return;
 }
 function v73() {
   function v72(elm$$28) {
     if (JAM.call(AJS.isIn, AJS, [property, num_styles], JAM.policy.p1)) {
-      var v1011 = JAM.call(AJS.isString, AJS, [value$$27], JAM.policy.p1);
-      if (v1011) {
-        v1011 = value$$27;
+      var v1002 = JAM.call(AJS.isString, AJS, [value$$27], JAM.policy.p1);
+      if (v1002) {
+        v1002 = value$$27;
       }
-      var v693 = v1011;
-      if (!v693) {
-        v693 = value$$27 + "px";
+      var v691 = v1002;
+      if (!v691) {
+        v691 = value$$27 + "px";
       }
-      value$$27 = v693;
+      value$$27 = v691;
     }
     JAM.set(elm$$28.style, property, value$$27);
     return;
@@ -1729,15 +1723,15 @@ function v73() {
     function v70(prop$$4) {
       var css_dim = value$$27[prop$$4];
       if (JAM.call(AJS.isIn, AJS, [prop$$4, num_styles], JAM.policy.p1)) {
-        var v1013 = JAM.call(AJS.isString, AJS, [css_dim], JAM.policy.p1);
-        if (v1013) {
-          v1013 = css_dim;
+        var v1004 = JAM.call(AJS.isString, AJS, [css_dim], JAM.policy.p1);
+        if (v1004) {
+          v1004 = css_dim;
         }
-        var v696 = v1013;
-        if (!v696) {
-          v696 = css_dim + "px";
+        var v694 = v1004;
+        if (!v694) {
+          v694 = css_dim + "px";
         }
-        css_dim = v696;
+        css_dim = v694;
       }
       JAM.set(elm$$27.style, prop$$4, css_dim);
       return;
@@ -1760,11 +1754,11 @@ function v69(elm$$26) {
   return!JAM.call(AJS.isElementHidden, AJS, [elm$$26], JAM.policy.p1);
 }
 function v68(elm$$25) {
-  var v702 = elm$$25.style.display == "none";
-  if (!v702) {
-    v702 = elm$$25.style.visibility == "hidden";
+  var v700 = elm$$25.style.display == "none";
+  if (!v700) {
+    v700 = elm$$25.style.visibility == "hidden";
   }
-  return v702;
+  return v700;
 }
 function v67(elm$$24) {
   JAM.call(AJS.setStyle, AJS, [JAM.call(AJS.flattenElmArguments, AJS, [arguments]), "display", "none"], JAM.policy.p1);
@@ -1776,15 +1770,15 @@ function v66() {
 }
 function v65() {
   var args$$7 = JAM.call(AJS.flattenElmArguments, AJS, [arguments]);
-  var v1018 = args$$7.pop();
-  if (v1018) {
-    v1018 = "visible";
+  var v1009 = args$$7.pop();
+  if (v1009) {
+    v1009 = "visible";
   }
-  var v705 = v1018;
-  if (!v705) {
-    v705 = "hidden";
+  var v703 = v1009;
+  if (!v703) {
+    v703 = "hidden";
   }
-  var val$$2 = v705;
+  var val$$2 = v703;
   JAM.call(AJS.setStyle, AJS, [args$$7, "visibility", val$$2], JAM.policy.p1);
   return;
 }
@@ -1806,8 +1800,8 @@ function v62() {
   }
   function extends_ajs(elm$$22) {
     function v60() {
-      var v706 = AJS.createDOM;
-      return JAM.call(v706.apply, v706, [null, [elm$$22, arguments]]);
+      var v704 = AJS.createDOM;
+      return JAM.call(v704.apply, v704, [null, [elm$$22, arguments]]);
     }
     JAM.set(AJS, elm$$22.toUpperCase(), v60);
     return;
@@ -1825,50 +1819,50 @@ function v59(name$$31, attrs) {
   if (JAM.call(AJS.isDict, AJS, [attrs[i$$11]], JAM.policy.p1)) {
     for (k in first_attr) {
       attr = first_attr[k];
-      var v1021 = k == "style";
-      if (!v1021) {
-        v1021 = k == "s";
+      var v1012 = k == "style";
+      if (!v1012) {
+        v1012 = k == "s";
       }
-      if (v1021) {
+      if (v1012) {
         elm$$21.style.cssText = attr;
       } else {
-        var v1168 = k == "c";
-        if (!v1168) {
-          v1168 = k == "class";
+        var v1158 = k == "c";
+        if (!v1158) {
+          v1158 = k == "class";
         }
-        var v1022 = v1168;
-        if (!v1022) {
-          v1022 = k == "className";
+        var v1013 = v1158;
+        if (!v1013) {
+          v1013 = k == "className";
         }
-        if (v1022) {
+        if (v1013) {
           elm$$21.className = attr;
         } else {
           JAM.call(elm$$21.setAttribute, elm$$21, [k, attr], JAM.policy.p1);
         }
       }
     }
-    i$$11 = i$$11 + 1;
+    i$$11++;
   }
   if (first_attr == null) {
     i$$11 = 1;
   }
   var j$$1 = i$$11;
-  var v715 = j$$1 < attrs.length;
-  for (;v715;) {
+  var v713 = j$$1 < attrs.length;
+  for (;v713;) {
     attr = attrs[j$$1];
     if (attr) {
       var type$$25 = typeof attr;
-      var v1024 = type$$25 == "string";
-      if (!v1024) {
-        v1024 = type$$25 == "number";
+      var v1015 = type$$25 == "string";
+      if (!v1015) {
+        v1015 = type$$25 == "number";
       }
-      if (v1024) {
+      if (v1015) {
         attr = JAM.call(AJS.TN, AJS, [attr], JAM.policy.p1);
       }
       JAM.call(elm$$21.appendChild, elm$$21, [attr], JAM.policy.p1);
     }
-    j$$1 = j$$1 + 1;
-    v715 = j$$1 < attrs.length;
+    j$$1++;
+    v713 = j$$1 < attrs.length;
   }
   return elm$$21;
 }
@@ -1898,27 +1892,27 @@ function v56(dest, src$$1) {
   return src$$1;
 }
 function v55(elm$$19, reference_elm$$1) {
-  var v717 = reference_elm$$1.parentNode;
-  JAM.call(v717.insertBefore, v717, [elm$$19, reference_elm$$1], JAM.policy.p1);
+  var v715 = reference_elm$$1.parentNode;
+  JAM.call(v715.insertBefore, v715, [elm$$19, reference_elm$$1], JAM.policy.p1);
   return elm$$19;
 }
 function v54(elm$$18, reference_elm) {
-  var v718 = reference_elm.parentNode;
-  JAM.call(v718.insertBefore, v718, [elm$$18, reference_elm.nextSibling], JAM.policy.p1);
+  var v716 = reference_elm.parentNode;
+  JAM.call(v716.insertBefore, v716, [elm$$18, reference_elm.nextSibling], JAM.policy.p1);
   return elm$$18;
 }
 function v53(elm$$17) {
   var child$$1;
-  var v720 = child$$1 = elm$$17.firstChild;
-  for (;v720;) {
+  var v718 = child$$1 = elm$$17.firstChild;
+  for (;v718;) {
     JAM.call(AJS.swapDOM, AJS, [child$$1, null], JAM.policy.p1);
-    v720 = child$$1 = elm$$17.firstChild;
+    v718 = child$$1 = elm$$17.firstChild;
   }
   if (arguments.length < 2) {
     return elm$$17;
   } else {
-    var v721 = AJS.appendChildNodes;
-    return JAM.call(v721.apply, v721, [null, arguments]);
+    var v719 = AJS.appendChildNodes;
+    return JAM.call(v719.apply, v719, [null, arguments]);
   }
   return;
 }
@@ -1936,8 +1930,8 @@ function v52(elm$$16) {
         }
       }
     } else {
-      var v724 = AJS.ACN;
-      JAM.call(v724.apply, v724, [null, arguments]);
+      var v722 = AJS.ACN;
+      JAM.call(v722.apply, v722, [null, arguments]);
     }
   }
   return elm$$16;
@@ -1971,21 +1965,21 @@ function v48(select) {
 }
 function v47(form, name$$30) {
   function v46(elm$$13) {
-    var v1032 = elm$$13.name;
-    if (v1032) {
-      v1032 = elm$$13.name == name$$30;
+    var v1023 = elm$$13.name;
+    if (v1023) {
+      v1023 = elm$$13.name == name$$30;
     }
-    if (v1032) {
+    if (v1023) {
       r$$5 = elm$$13;
     }
     return;
   }
   function v45(elm$$12) {
-    var v1033 = elm$$12.name;
-    if (v1033) {
-      v1033 = elm$$12.name == name$$30;
+    var v1024 = elm$$12.name;
+    if (v1024) {
+      v1024 = elm$$12.name == name$$30;
     }
-    if (v1033) {
+    if (v1024) {
       r$$5 = elm$$12;
     }
     return;
@@ -2049,11 +2043,11 @@ function v35(elm$$6, tag_name$$1, class_name$$1, fn_next_elm) {
     return JAM.call(AJS.nodeName, AJS, [p$$3], JAM.policy.p1) == tag_name$$1;
   }
   function v32(p$$2) {
-    var v743 = JAM.call(AJS.nodeName, AJS, [p$$2], JAM.policy.p1) == tag_name$$1;
-    if (v743) {
-      v743 = JAM.call(AJS.hasClass, AJS, [p$$2, class_name$$1], JAM.policy.p1);
+    var v741 = JAM.call(AJS.nodeName, AJS, [p$$2], JAM.policy.p1) == tag_name$$1;
+    if (v741) {
+      v741 = JAM.call(AJS.hasClass, AJS, [p$$2, class_name$$1], JAM.policy.p1);
     }
-    return v743;
+    return v741;
   }
   var p$$1 = JAM.call(fn_next_elm, null, [elm$$6], JAM.policy.p1);
   var checkFn;
@@ -2090,24 +2084,24 @@ function v30(tag_name, class_name, parent, first_match) {
   }
   var i$$10;
   var j;
-  var v1038 = class_name;
-  if (v1038) {
-    v1038 = document.getElementsByClassName;
+  var v1029 = class_name;
+  if (v1029) {
+    v1029 = document.getElementsByClassName;
   }
-  if (v1038) {
+  if (v1029) {
     var els = JAM.call(parent.getElementsByClassName, parent, [class_name], JAM.policy.p1);
     if (tag_name == "*") {
       class_elements = JAM.call(AJS.forceArray, AJS, [els], JAM.policy.p1);
     } else {
       var els_len = els.length;
       i$$10 = 0;
-      var v752 = i$$10 < els_len;
-      for (;v752;) {
+      var v750 = i$$10 < els_len;
+      for (;v750;) {
         if (els[i$$10].nodeName.toLowerCase() == tag_name) {
           JAM.call(class_elements.push, class_elements, [els[i$$10]], JAM.policy.p1);
         }
-        i$$10 = i$$10 + 1;
-        v752 = i$$10 < els_len;
+        i$$10++;
+        v750 = i$$10 < els_len;
       }
     }
   } else {
@@ -2118,17 +2112,17 @@ function v30(tag_name, class_name, parent, first_match) {
       els_len = els.length;
       var pattern$$1 = new RegExp("(^|\\s)" + class_name + "(\\s|$)");
       i$$10 = 0;
-      var v757 = i$$10 < els_len;
-      for (;v757;) {
-        var v1041 = JAM.call(pattern$$1.test, pattern$$1, [els[i$$10].className], JAM.policy.p1);
-        if (!v1041) {
-          v1041 = !class_name;
+      var v755 = i$$10 < els_len;
+      for (;v755;) {
+        var v1032 = JAM.call(pattern$$1.test, pattern$$1, [els[i$$10].className], JAM.policy.p1);
+        if (!v1032) {
+          v1032 = !class_name;
         }
-        if (v1041) {
+        if (v1032) {
           JAM.call(class_elements.push, class_elements, [els[i$$10]], JAM.policy.p1);
         }
-        i$$10 = i$$10 + 1;
-        v757 = i$$10 < els_len;
+        i$$10++;
+        v755 = i$$10 < els_len;
       }
     }
   }
@@ -2143,21 +2137,21 @@ function v29() {
   var args$$3 = JAM.call(AJS.flattenElmArguments, AJS, [arguments]);
   var elements = new Array;
   var i$$9 = 0;
-  var v761 = i$$9 < args$$3.length;
-  for (;v761;) {
+  var v759 = i$$9 < args$$3.length;
+  for (;v759;) {
     var element$$2 = JAM.call(AJS.getElement, AJS, [args$$3[i$$9]], JAM.policy.p1);
     JAM.call(elements.push, elements, [element$$2], JAM.policy.p1);
-    i$$9 = i$$9 + 1;
-    v761 = i$$9 < args$$3.length;
+    i$$9++;
+    v759 = i$$9 < args$$3.length;
   }
   return elements;
 }
 function v28(id) {
-  var v1044 = JAM.call(AJS.isString, AJS, [id], JAM.policy.p1);
-  if (!v1044) {
-    v1044 = JAM.call(AJS.isNumber, AJS, [id], JAM.policy.p1);
+  var v1035 = JAM.call(AJS.isString, AJS, [id], JAM.policy.p1);
+  if (!v1035) {
+    v1035 = JAM.call(AJS.isNumber, AJS, [id], JAM.policy.p1);
   }
-  if (v1044) {
+  if (v1035) {
     return JAM.call(document.getElementById, document, [id], JAM.policy.p1);
   } else {
     return id;
@@ -2187,14 +2181,14 @@ function v25(list$$9, fn$$2, start_index$$1, end_index$$1) {
 function v23(list$$8, fn$$1) {
   var i$$8 = list$$8.length - 1;
   var l$$2 = 0;
-  var v768 = i$$8 >= l$$2;
-  for (;v768;) {
+  var v766 = i$$8 >= l$$2;
+  for (;v766;) {
     var val$$1 = JAM.call(fn$$1.apply, fn$$1, [null, [list$$8[i$$8], i$$8]]);
     if (val$$1 != undefined) {
       return val$$1;
     }
-    i$$8 = i$$8 - 1;
-    v768 = i$$8 >= l$$2;
+    i$$8--;
+    v766 = i$$8 >= l$$2;
   }
   return;
 }
@@ -2207,14 +2201,14 @@ function v22(list$$7, fn, start_index, end_index) {
   if (end_index) {
     l$$1 = end_index;
   }
-  var v771 = i$$7 < l$$1;
-  for (;v771;) {
+  var v769 = i$$7 < l$$1;
+  for (;v769;) {
     var val = JAM.call(fn, null, [list$$7[i$$7], i$$7], JAM.policy.p1);
     if (val != undefined) {
       return val;
     }
-    i$$7 = i$$7 + 1;
-    v771 = i$$7 < l$$1;
+    i$$7++;
+    v769 = i$$7 < l$$1;
   }
   return;
 }
@@ -2241,8 +2235,8 @@ function v20(list$$6) {
   var has_list = false;
   var new_list = [];
   var i$$6 = 0;
-  var v776 = i$$6 < list$$6.length;
-  for (;v776;) {
+  var v774 = i$$6 < list$$6.length;
+  for (;v774;) {
     var elm$$3 = list$$6[i$$6];
     if (JAM.call(AJS.isArray, AJS, [elm$$3], JAM.policy.p1)) {
       has_list = true;
@@ -2251,8 +2245,8 @@ function v20(list$$6) {
     if (elm$$3 != null) {
       JAM.call(new_list.push, new_list, [elm$$3], JAM.policy.p1);
     }
-    i$$6 = i$$6 + 1;
-    v776 = i$$6 < list$$6.length;
+    i$$6++;
+    v774 = i$$6 < list$$6.length;
   }
   if (!has_list) {
     return new_list;
@@ -2289,21 +2283,21 @@ function v15(list$$3) {
 }
 function v14(elm$$2, list$$2, eval_fn) {
   var i$$4 = 0;
-  var v784 = i$$4 < list$$2.length;
-  for (;v784;) {
-    var v1179 = eval_fn;
-    if (v1179) {
-      v1179 = JAM.call(eval_fn, null, [list$$2[i$$4]], JAM.policy.p1);
+  var v781 = i$$4 < list$$2.length;
+  for (;v781;) {
+    var v1169 = eval_fn;
+    if (v1169) {
+      v1169 = JAM.call(eval_fn, null, [list$$2[i$$4]], JAM.policy.p1);
     }
-    var v1053 = v1179;
-    if (!v1053) {
-      v1053 = elm$$2 == list$$2[i$$4];
+    var v1044 = v1169;
+    if (!v1044) {
+      v1044 = elm$$2 == list$$2[i$$4];
     }
-    if (v1053) {
+    if (v1044) {
       return i$$4;
     }
-    i$$4 = i$$4 + 1;
-    v784 = i$$4 < list$$2.length;
+    i$$4++;
+    v781 = i$$4 < list$$2.length;
   }
   return-1;
 }
@@ -2324,11 +2318,11 @@ function v12(delim, list) {
   try {
     return JAM.call(list.join, list, [delim], JAM.policy.p1);
   } catch (e$$5) {
-    var v786 = list[0];
-    if (!v786) {
-      v786 = "";
+    var v783 = list[0];
+    if (!v783) {
+      v783 = "";
     }
-    var r$$1 = v786;
+    var r$$1 = v783;
     JAM.call(AJS.map, AJS, [list, v11, 1], JAM.policy.p1);
     return r$$1 + "";
   }
@@ -2337,20 +2331,20 @@ function v12(delim, list) {
 function v10(args) {
   var r = [];
   var i$$2 = 0;
-  var v788 = i$$2 < args.length;
-  for (;v788;) {
+  var v785 = i$$2 < args.length;
+  for (;v785;) {
     JAM.call(r.push, r, [args[i$$2]], JAM.policy.p1);
-    i$$2 = i$$2 + 1;
-    v788 = i$$2 < args.length;
+    i$$2++;
+    v785 = i$$2 < args.length;
   }
   return r;
 }
 function v9(v) {
-  var v1059 = JAM.call(AJS.isArray, AJS, [v], JAM.policy.p1);
-  if (v1059) {
-    v1059 = !JAM.call(AJS.isString, AJS, [v], JAM.policy.p1);
+  var v1050 = JAM.call(AJS.isArray, AJS, [v], JAM.policy.p1);
+  if (v1050) {
+    v1050 = !JAM.call(AJS.isString, AJS, [v], JAM.policy.p1);
   }
-  if (v1059) {
+  if (v1050) {
     return v;
   } else {
     if (!v) {
@@ -2368,11 +2362,11 @@ function v7() {
   return AJS._agent.indexOf("macintosh") != -1;
 }
 function v6() {
-  var v793 = AJS._agent.indexOf("gecko") != -1;
-  if (v793) {
-    v793 = AJS._agent_version >= 20030210;
+  var v790 = AJS._agent.indexOf("gecko") != -1;
+  if (v790) {
+    v790 = AJS._agent_version >= 20030210;
   }
-  return v793;
+  return v790;
 }
 function v5() {
   return AJS._agent.indexOf("opera") != -1;
@@ -2381,34 +2375,34 @@ function v4(all) {
   if (all) {
     return AJS._agent.indexOf("khtml");
   }
-  var v796 = AJS._agent.indexOf("khtml") != -1;
-  if (v796) {
-    v796 = AJS._agent.match(/3\.\d\.\d safari/) == null;
+  var v793 = AJS._agent.indexOf("khtml") != -1;
+  if (v793) {
+    v793 = AJS._agent.match(/3\.\d\.\d safari/) == null;
   }
-  return v796;
+  return v793;
 }
 function v3() {
   return AJS._agent.indexOf("msie 8") != -1;
 }
 function v2() {
-  var v798 = AJS._agent.indexOf("msie") != -1;
-  if (v798) {
-    v798 = AJS._agent.indexOf("opera") == -1;
+  var v795 = AJS._agent.indexOf("msie") != -1;
+  if (v795) {
+    v795 = AJS._agent.indexOf("opera") == -1;
   }
-  return v798;
+  return v795;
 }
 function v1(var_name) {
   var query$$2 = window.location.search.substring(1);
   var vars = query$$2.split("&");
   var i$$1 = 0;
-  var v802 = i$$1 < vars.length;
-  for (;v802;) {
+  var v799 = i$$1 < vars.length;
+  for (;v799;) {
     var pair = vars[i$$1].split("=");
     if (pair[0] == var_name) {
       return pair[1];
     }
-    i$$1 = i$$1 + 1;
-    v802 = i$$1 < vars.length;
+    i$$1++;
+    v799 = i$$1 < vars.length;
   }
   return null;
 }
@@ -2482,17 +2476,17 @@ script_loaded = true;
 AJS.exportToGlobalScope();
 AJS.bindReady();
 AJS.fx = {_shades:{0:"ffffff", 1:"ffffee", 2:"ffffdd", 3:"ffffcc", 4:"ffffbb", 5:"ffffaa", 6:"ffff99"}, highlight:v168, fadeIn:v169, fadeOut:v170, setWidth:v171, setHeight:v172};
-var v820 = AJS.fx;
-var v1271 = JAM.new(AJS.Class, [{init:v175, setOptions:v176, step:v177, setNow:v178, compute:v179, clearTimer:v180, _start:v181, custom:v182, set:v183, setStyle:v184}]);
-v820.Base = v1271;
-var v821 = AJS.fx;
-var v1081 = AJS.fx.Base;
-var v1272 = JAM.call(v1081.extend, v1081, [{init:v185, increase:v186}], JAM.policy.p1);
-v821.Style = v1272;
-var v822 = AJS.fx;
-var v1083 = AJS.fx.Base;
-var v1273 = JAM.call(v1083.extend, v1083, [{init:v187, setNow:v188, custom:v189, increase:v190}], JAM.policy.p1);
-v822.Styles = v1273;
+var v817 = AJS.fx;
+var v1261 = JAM.new(AJS.Class, [{init:v175, setOptions:v176, step:v177, setNow:v178, compute:v179, clearTimer:v180, _start:v181, custom:v182, set:v183, setStyle:v184}]);
+v817.Base = v1261;
+var v818 = AJS.fx;
+var v1072 = AJS.fx.Base;
+var v1262 = JAM.call(v1072.extend, v1072, [{init:v185, increase:v186}], JAM.policy.p1);
+v818.Style = v1262;
+var v819 = AJS.fx;
+var v1074 = AJS.fx.Base;
+var v1263 = JAM.call(v1074.extend, v1074, [{init:v187, setNow:v188, custom:v189, increase:v190}], JAM.policy.p1);
+v819.Styles = v1263;
 AJS.fx.Transitions = {linear:v191, sineInOut:v192};
 script_loaded = true;
 var tmpl_header = JAM.call(AJS.join, AJS, ["", ['<div id="top"> <img src="logo.gif" alt="" /> <br />', '<span style="font-weight: bold; color: #333">A pop-up window that doesn\'t suck.</span>', "</div>"]]);

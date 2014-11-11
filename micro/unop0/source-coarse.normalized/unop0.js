@@ -22,7 +22,7 @@ function runTest() {
     var v5 = a[i];
     var v1 = v4 + v5;
     alert(v1);
-    i = i + 1;
+    i++;
     var v6 = a.length;
     v2 = i < v6;
   }

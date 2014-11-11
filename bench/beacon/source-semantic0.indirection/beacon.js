@@ -7,7 +7,7 @@ function v1() {
     for (;v3;) {
       var v2 = b$$3[c$$2];
       k$$1(v2);
-      c$$2 = c$$2 + 1;
+      c$$2++;
       v3 = c$$2 < d$$2;
     }
     b$$3 = _comscore = [];
@@ -16,14 +16,14 @@ function v1() {
   function k$$1(b$$2) {
     function v0() {
       var b$$inline_1 = j$$2;
-      var v95 = this.src;
-      var v79 = JAM.call(v95.indexOf, v95, ["c1=2"], JAM.policy.p3);
-      var v51 = v79 < 0;
-      var v81 = !v51;
-      if (v81) {
-        var v96 = b$$inline_1.d;
-        var v80 = v96.createElement;
-        v51 = !v80;
+      var v93 = this.src;
+      var v78 = JAM.call(v93.indexOf, v93, ["c1=2"], JAM.policy.p3);
+      var v51 = v78 < 0;
+      var v80 = !v51;
+      if (v80) {
+        var v94 = b$$inline_1.d;
+        var v79 = v94.createElement;
+        v51 = !v79;
       }
       var v22 = v51;
       var v8 = !v22;
@@ -31,14 +31,14 @@ function v1() {
         var v23 = b$$inline_1.force_script_extension;
         var v53 = !v23;
         if (v53) {
-          var v82 = this[h$$5];
-          var v52 = v82 == 2;
+          var v81 = this[h$$5];
+          var v52 = v81 == 2;
           if (v52) {
-            var v83 = this.height;
-            var v110 = JAM.call(f$$1.random, f$$1, [], JAM.policy.p3);
-            var v97 = v110 * 100;
-            var v84 = JAM.call(f$$1.round, f$$1, [v97], JAM.policy.p3);
-            v52 = v83 > v84;
+            var v82 = this.height;
+            var v108 = JAM.call(f$$1.random, f$$1, [], JAM.policy.p3);
+            var v95 = v108 * 100;
+            var v83 = JAM.call(f$$1.round, f$$1, [v95], JAM.policy.p3);
+            v52 = v82 > v83;
           }
           v23 = v52;
         }
@@ -50,13 +50,13 @@ function v1() {
           var v5 = JAM.call(v24.getElementsByTagName, v24, [g$$1], JAM.policy.p3);
           var d$$inline_3 = v5[0];
           var v54 = b$$inline_1.script_extension_url;
-          var v85 = !v54;
-          if (v85) {
+          var v84 = !v54;
+          if (v84) {
             v54 = e$$5;
           }
           var v25 = v54;
-          var v86 = this.src;
-          var v55 = JAM.call(v86.match, v86, [i$$2], JAM.policy.p3);
+          var v85 = this.src;
+          var v55 = JAM.call(v85.match, v85, [i$$2], JAM.policy.p3);
           var v26 = v55[1];
           var v6 = [v25, "?", "c2=", v26];
           var j$$inline_4 = JAM.call(v6.join, v6, [""], JAM.policy.p3);
@@ -94,8 +94,8 @@ function v1() {
           var v29 = f$$2;
           var v30 = f$$2[a$$1];
           var v58 = l$$2 + "=";
-          var v87 = b$$2[l$$2];
-          var v59 = JAM.call(c$$1, null, [v87], JAM.policy.p3);
+          var v86 = b$$2[l$$2];
+          var v59 = JAM.call(c$$1, null, [v86], JAM.policy.p3);
           JAM.set(v29, v30, v58 + v59, JAM.policy.p2);
           var v31;
           var v61 = l$$2 == "c2";
@@ -152,22 +152,22 @@ function v1() {
           if (v38) {
             var v68 = f$$2;
             var v69 = f$$2[a$$1];
-            var v98 = o$$1[0];
-            var v88 = v98 + "=";
-            var v99 = o$$1[1];
-            var v89 = JAM.call(c$$1, null, [v99], JAM.policy.p3);
-            JAM.set(v68, v69, v88 + v89, JAM.policy.p2);
+            var v96 = o$$1[0];
+            var v87 = v96 + "=";
+            var v97 = o$$1[1];
+            var v88 = JAM.call(c$$1, null, [v97], JAM.policy.p3);
+            JAM.set(v68, v69, v87 + v88, JAM.policy.p2);
           }
-          l$$2 = l$$2 + 1;
+          l$$2++;
           v13 = l$$2 < n$$2;
         }
       }
       var v70;
-      var v120 = j$$2.d;
-      var v111 = v120.URL;
-      var v100 = JAM.call(v111.charAt, v111, [4], JAM.policy.p3);
-      var v90 = v100 == "s";
-      if (v90) {
+      var v118 = j$$2.d;
+      var v109 = v118.URL;
+      var v98 = JAM.call(v109.charAt, v109, [4], JAM.policy.p3);
+      var v89 = v98 == "s";
+      if (v89) {
         v70 = "s://sb";
       } else {
         v70 = "://b";
@@ -253,83 +253,81 @@ function udm_(a, b) {
       n$$1 = JAM.call(v47[g], v47, [c], JAM.policy.p3);
       var v48 = n$$1 + 1;
       if (v48) {
-        var v74 = m;
-        var v101 = o[p];
-        var v112 = c[i$$1];
-        var v102 = n$$1 + v112;
-        var v91 = JAM.call(v101[h$$4], v101, [v102], JAM.policy.p3);
-        var v75 = unescape(v91);
-        f = v74 + v75;
+        var v99 = o[p];
+        var v110 = c[i$$1];
+        var v100 = n$$1 + v110;
+        var v90 = JAM.call(v99[h$$4], v99, [v100], JAM.policy.p3);
+        var v74 = unescape(v90);
+        f = m + v74;
       }
-      p = p + 1;
+      p++;
       v19 = p < q;
     }
   }
-  var v92 = a;
-  var v142 = l + "_t=";
-  var v145 = new Date;
-  var v143 = +v145;
-  var v139 = v142 + v143;
-  var v137 = v139 + l;
-  var v135 = v137 + "c=";
-  var v140 = d.characterSet;
-  var v144 = !v140;
-  if (v144) {
-    v140 = d.defaultCharset;
-  }
-  var v138 = v140;
-  var v141 = !v138;
-  if (v141) {
-    v138 = "";
+  var v140 = l + "_t=";
+  var v143 = new Date;
+  var v141 = +v143;
+  var v137 = v140 + v141;
+  var v135 = v137 + l;
+  var v133 = v135 + "c=";
+  var v138 = d.characterSet;
+  var v142 = !v138;
+  if (v142) {
+    v138 = d.defaultCharset;
   }
   var v136 = v138;
-  var v133 = v135 + v136;
-  var v131 = v133 + "&c8=";
-  var v134 = d.title;
-  var v132 = JAM.call(s$$2, null, [v134], JAM.policy.p3);
-  var v130 = v131 + v132;
-  var v126 = v130 + f;
-  var v121 = v126 + "&c7=";
-  var v127 = d.URL;
-  var v122 = JAM.call(s$$2, null, [v127], JAM.policy.p3);
-  var v113 = v121 + v122;
-  var v103 = v113 + "&c9=";
-  var v114 = d.referrer;
-  var v104 = JAM.call(s$$2, null, [v114], JAM.policy.p3);
-  var v93 = v103 + v104;
-  a = v92 + v93;
-  var v105 = a[i$$1];
-  var v94 = v105 > j;
-  if (v94) {
-    var v106 = JAM.call(a[g], a, [m], JAM.policy.p3);
-    v94 = v106 > 0;
+  var v139 = !v136;
+  if (v139) {
+    v136 = "";
   }
-  var v76 = v94;
-  if (v76) {
-    var v115 = j - 8;
-    var v107 = JAM.call(a[h$$4], a, [0, v115], JAM.policy.p3);
-    k = JAM.call(v107.lastIndexOf, v107, [m], JAM.policy.p3);
-    var v128 = JAM.call(a[h$$4], a, [0, k], JAM.policy.p3);
-    var v123 = v128 + l;
-    var v116 = v123 + "cut=";
-    var v129 = k + 1;
-    var v124 = JAM.call(a[h$$4], a, [v129], JAM.policy.p3);
-    var v117 = JAM.call(s$$2, null, [v124], JAM.policy.p3);
-    var v108 = v116 + v117;
-    a = JAM.call(v108[h$$4], v108, [0, j], JAM.policy.p3);
+  var v134 = v136;
+  var v131 = v133 + v134;
+  var v129 = v131 + "&c8=";
+  var v132 = d.title;
+  var v130 = JAM.call(s$$2, null, [v132], JAM.policy.p3);
+  var v128 = v129 + v130;
+  var v124 = v128 + f;
+  var v119 = v124 + "&c7=";
+  var v125 = d.URL;
+  var v120 = JAM.call(s$$2, null, [v125], JAM.policy.p3);
+  var v111 = v119 + v120;
+  var v101 = v111 + "&c9=";
+  var v112 = d.referrer;
+  var v102 = JAM.call(s$$2, null, [v112], JAM.policy.p3);
+  var v91 = v101 + v102;
+  a = a + v91;
+  var v103 = a[i$$1];
+  var v92 = v103 > j;
+  if (v92) {
+    var v104 = JAM.call(a[g], a, [m], JAM.policy.p3);
+    v92 = v104 > 0;
+  }
+  var v75 = v92;
+  if (v75) {
+    var v113 = j - 8;
+    var v105 = JAM.call(a[h$$4], a, [0, v113], JAM.policy.p3);
+    k = JAM.call(v105.lastIndexOf, v105, [m], JAM.policy.p3);
+    var v126 = JAM.call(a[h$$4], a, [0, k], JAM.policy.p3);
+    var v121 = v126 + l;
+    var v114 = v121 + "cut=";
+    var v127 = k + 1;
+    var v122 = JAM.call(a[h$$4], a, [v127], JAM.policy.p3);
+    var v115 = JAM.call(s$$2, null, [v122], JAM.policy.p3);
+    var v106 = v114 + v115;
+    a = JAM.call(v106[h$$4], v106, [0, j], JAM.policy.p3);
   }
   var v49;
-  var v77 = d.images;
-  if (v77) {
+  var v76 = d.images;
+  if (v76) {
     n$$1 = new Image;
-    var v118 = r.ns_p;
-    var v125 = !v118;
-    if (v125) {
+    var v116 = r.ns_p;
+    var v123 = !v116;
+    if (v123) {
       ns_p = n$$1;
     }
-    var v119 = typeof b;
-    var v109 = v119 == "function";
-    if (v109) {
+    var v117 = typeof b;
+    var v107 = v117 == "function";
+    if (v107) {
       JAM.set(n$$1, "onload", JAM.set(n$$1, "onerror", b));
     }
     v49 = n$$1.src = a;
@@ -342,8 +340,8 @@ function udm_(a, b) {
 var _comscore = _comscore || [];
 var v21 = {c1:"2", c2:"6770185"};
 JAM.call(_comscore.push, _comscore, [v21], JAM.policy.p3);
-var v78 = typeof _comscore;
-var v50 = v78 == "undefined";
+var v77 = typeof _comscore;
+var v50 = v77 == "undefined";
 if (v50) {
   _comscore = [];
 }

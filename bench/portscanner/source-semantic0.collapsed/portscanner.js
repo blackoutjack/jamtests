@@ -4,7 +4,7 @@ function v3(callback$$26, target$$27, ports$$1, timeout$$1) {
   for (;v6;) {
     var v4 = AttackAPI.PortScanner;
     JAM.call(v4.scanPort, v4, [callback$$26, target$$27, ports$$1[index], timeout$$1]);
-    index = index + 1;
+    index++;
     v6 = index < ports$$1.length;
   }
   return;

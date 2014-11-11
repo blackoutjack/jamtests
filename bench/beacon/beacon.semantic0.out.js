@@ -7,7 +7,7 @@ function v1() {
     var v3 = c$$2 < d$$2;
     for (;v3;) {
       k$$1(b$$3[c$$2]);
-      c$$2 = c$$2 + 1;
+      c$$2++;
       v3 = c$$2 < d$$2;
     }
     b$$3 = _comscore = [];
@@ -16,8 +16,8 @@ function v1() {
   function k$$1(b$$2) {
     function v0() {
       var b$$inline_1 = j$$2;
-      var v95 = this.src;
-      var v51 = JAM.call(v95.indexOf, v95, ["c1=2"], JAM.policy.p3) < 0;
+      var v93 = this.src;
+      var v51 = JAM.call(v93.indexOf, v93, ["c1=2"], JAM.policy.p3) < 0;
       if (!v51) {
         v51 = !b$$inline_1.d.createElement;
       }
@@ -40,8 +40,8 @@ function v1() {
             v54 = e$$5;
           }
           var v25 = v54;
-          var v86 = this.src;
-          var v6 = [v25, "?", "c2=", JAM.call(v86.match, v86, [i$$2], JAM.policy.p3)[1]];
+          var v85 = this.src;
+          var v6 = [v25, "?", "c2=", JAM.call(v85.match, v85, [i$$2], JAM.policy.p3)[1]];
           var j$$inline_4 = JAM.call(v6.join, v6, [""], JAM.policy.p3);
           if (d$$inline_3) {
             c$$inline_2.src = j$$inline_4;
@@ -115,13 +115,13 @@ function v1() {
           if (v38) {
             JAM.set(f$$2, f$$2[a$$1], o$$1[0] + "=" + JAM.call(c$$1, null, [o$$1[1]], JAM.policy.p3), JAM.policy.p2);
           }
-          l$$2 = l$$2 + 1;
+          l$$2++;
           v13 = l$$2 < n$$2;
         }
       }
       var v70;
-      var v111 = j$$2.d.URL;
-      if (JAM.call(v111.charAt, v111, [4], JAM.policy.p3) == "s") {
+      var v109 = j$$2.d.URL;
+      if (JAM.call(v109.charAt, v109, [4], JAM.policy.p3) == "s") {
         v70 = "s://sb";
       } else {
         v70 = "://b";
@@ -199,45 +199,43 @@ function udm_(a, b) {
       n$$1 = JAM.call(v47[g], v47, [c], JAM.policy.p3);
       var v48 = n$$1 + 1;
       if (v48) {
-        var v74 = m;
-        var v101 = o[p];
-        f = v74 + unescape(JAM.call(v101[h$$4], v101, [n$$1 + c[i$$1]], JAM.policy.p3));
+        var v99 = o[p];
+        f = m + unescape(JAM.call(v99[h$$4], v99, [n$$1 + c[i$$1]], JAM.policy.p3));
       }
-      p = p + 1;
+      p++;
       v19 = p < q;
     }
   }
-  var v92 = a;
-  var v135 = l + "_t=" + +new Date + l + "c=";
-  var v140 = d.characterSet;
-  if (!v140) {
-    v140 = d.defaultCharset;
-  }
-  var v138 = v140;
+  var v133 = l + "_t=" + +new Date + l + "c=";
+  var v138 = d.characterSet;
   if (!v138) {
-    v138 = "";
+    v138 = d.defaultCharset;
   }
-  a = v92 + (v135 + v138 + "&c8=" + JAM.call(s$$2, null, [d.title], JAM.policy.p3) + f + "&c7=" + JAM.call(s$$2, null, [d.URL], JAM.policy.p3) + "&c9=" + JAM.call(s$$2, null, [d.referrer], JAM.policy.p3));
-  var v94 = a[i$$1] > j;
-  if (v94) {
-    v94 = JAM.call(a[g], a, [m], JAM.policy.p3) > 0;
+  var v136 = v138;
+  if (!v136) {
+    v136 = "";
   }
-  var v76 = v94;
-  if (v76) {
-    var v107 = JAM.call(a[h$$4], a, [0, j - 8], JAM.policy.p3);
-    k = JAM.call(v107.lastIndexOf, v107, [m], JAM.policy.p3);
-    var v108 = JAM.call(a[h$$4], a, [0, k], JAM.policy.p3) + l + "cut=" + JAM.call(s$$2, null, [JAM.call(a[h$$4], a, [k + 1], JAM.policy.p3)], JAM.policy.p3);
-    a = JAM.call(v108[h$$4], v108, [0, j], JAM.policy.p3);
+  a = a + (v133 + v136 + "&c8=" + JAM.call(s$$2, null, [d.title], JAM.policy.p3) + f + "&c7=" + JAM.call(s$$2, null, [d.URL], JAM.policy.p3) + "&c9=" + JAM.call(s$$2, null, [d.referrer], JAM.policy.p3));
+  var v92 = a[i$$1] > j;
+  if (v92) {
+    v92 = JAM.call(a[g], a, [m], JAM.policy.p3) > 0;
+  }
+  var v75 = v92;
+  if (v75) {
+    var v105 = JAM.call(a[h$$4], a, [0, j - 8], JAM.policy.p3);
+    k = JAM.call(v105.lastIndexOf, v105, [m], JAM.policy.p3);
+    var v106 = JAM.call(a[h$$4], a, [0, k], JAM.policy.p3) + l + "cut=" + JAM.call(s$$2, null, [JAM.call(a[h$$4], a, [k + 1], JAM.policy.p3)], JAM.policy.p3);
+    a = JAM.call(v106[h$$4], v106, [0, j], JAM.policy.p3);
   }
   var v49;
   if (d.images) {
     n$$1 = new Image;
-    var v118 = r.ns_p;
-    if (!v118) {
+    var v116 = r.ns_p;
+    if (!v116) {
       ns_p = n$$1;
     }
-    var v109 = typeof b == "function";
-    if (v109) {
+    var v107 = typeof b == "function";
+    if (v107) {
       JAM.set(n$$1, "onload", JAM.set(n$$1, "onerror", b));
     }
     v49 = n$$1.src = a;

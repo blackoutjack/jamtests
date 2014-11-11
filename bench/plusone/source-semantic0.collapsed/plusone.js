@@ -28,7 +28,7 @@ function v4() {
           v6 = set$$inline_19[features$$inline_18[i$$inline_21]];
         }
         isSubset$$inline_20 = v6;
-        i$$inline_21 = i$$inline_21 + 1;
+        i$$inline_21++;
         var v75 = isSubset$$inline_20;
         if (v75) {
           v75 = i$$inline_21 < features$$inline_18.length;
@@ -80,9 +80,8 @@ function v4() {
               }
               var v17 = v84;
               if (v17) {
-                var v133 = result$$inline_43;
-                var v164 = normalize(opt_loadFeatures$$inline_42);
-                result$$inline_43 = v133 + ("--" + JAM.call(v164.join, v164, ["__"], JAM.policy.p2));
+                var v162 = normalize(opt_loadFeatures$$inline_42);
+                result$$inline_43 = result$$inline_43 + ("--" + JAM.call(v162.join, v162, ["__"], JAM.policy.p2));
               }
               JSCompiler_inline_result$$40 = result$$inline_43;
               urlToLoad = JSCompiler_temp_const$$39 + JSCompiler_inline_result$$40 + ".js";
@@ -174,9 +173,8 @@ function v4() {
     }
     var v36 = v91;
     if (v36) {
-      var v140 = result;
-      var v165 = normalize(opt_loadFeatures);
-      result = v140 + ("!" + JAM.call(v165.join, v165, [":"], JAM.policy.p2));
+      var v163 = normalize(opt_loadFeatures);
+      result = result + ("!" + JAM.call(v163.join, v163, [":"], JAM.policy.p2));
     }
     return result;
   }
@@ -186,7 +184,7 @@ function v4() {
     var v38 = i$$1 < array$$9.length;
     for (;v38;) {
       JAM.set(result$$2, array$$9[i$$1], !0);
-      i$$1 = i$$1 + 1;
+      i$$1++;
       v38 = i$$1 < array$$9.length;
     }
     return result$$2;
@@ -215,7 +213,7 @@ function v4() {
       if (v97) {
         return!0;
       }
-      i$$3 = i$$3 + 1;
+      ++i$$3;
       v42 = i$$3 < metas.length;
     }
     return!1;
@@ -240,13 +238,13 @@ function v4() {
       var req$$inline_13 = normalize(JAM.call(v101.split, v101, [":"], JAM.policy.p2));
       var v45 = featureParts$$inline_12[1];
       if (v45) {
-        var v145 = featureParts$$inline_12[1];
-        v45 = normalize(JAM.call(v145.split, v145, [":"], JAM.policy.p2));
+        var v143 = featureParts$$inline_12[1];
+        v45 = normalize(JAM.call(v143.split, v143, [":"], JAM.policy.p2));
       }
       var loaded$$inline_14 = v45;
       JSCompiler_inline_result$$8 = toKey(req$$inline_13, loaded$$inline_14);
       JAM.set(JSCompiler_temp_const$$7, JSCompiler_inline_result$$8, versionParts[1]);
-      i$$4 = i$$4 + 1;
+      i$$4++;
       v46 = i$$4 < values$$5.length;
     }
     return;
@@ -301,31 +299,31 @@ function v4() {
           host = parts[1];
           v108 = initDescriptors(JAM.call(parts.slice, parts, [2], JAM.policy.p2));
         } else {
-          var v150;
+          var v148;
           if (type$$25 === "d") {
             host = parts[1];
             repository = parts[2];
-            var v166 = parts[3];
-            if (!v166) {
-              v166 = "gcjs-3p";
+            var v164 = parts[3];
+            if (!v164) {
+              v164 = "gcjs-3p";
             }
-            v150 = container = v166;
+            v148 = container = v164;
           } else {
-            var v161;
+            var v159;
             if (type$$25 === "r") {
               host = "https://ssl.gstatic.com/webclient/js";
-              v161 = repository = parts[1];
+              v159 = repository = parts[1];
             } else {
-              var v167 = type$$25 === "f";
-              if (v167) {
+              var v165 = type$$25 === "f";
+              if (v165) {
                 host = parts[1];
-                v167 = repository = parts[2];
+                v165 = repository = parts[2];
               }
-              v161 = v167;
+              v159 = v165;
             }
-            v150 = v161;
+            v148 = v159;
           }
-          v108 = v150;
+          v108 = v148;
         }
         v51 = v108;
       }
@@ -373,8 +371,8 @@ function __bsld() {
     }
     v58 = f$$1 = window.___gpq.shift();
   }
-  var v163 = gadgets.config;
-  if (JAM.call(v163.get, v163, ["gwidget"], JAM.policy.p2)["parsetags"] !== "explicit") {
+  var v161 = gadgets.config;
+  if (JAM.call(v161.get, v161, ["gwidget"], JAM.policy.p2)["parsetags"] !== "explicit") {
     gapi.plusone.go();
   }
   return;
