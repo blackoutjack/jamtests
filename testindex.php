@@ -14,7 +14,7 @@ $autotests = array('input', 'semantic0.collapsed', 'coarse.input', 'input.profil
 //$autotests = array('collapsed.profile', 'original.modular.profile');
 
 // Use this for SMS2 "big" variants, since all static files are loaded.
-$bigautotests = array('input.profile', 'semantic0.collapsed.profile', 'coarse.input.profile');
+$bigautotests = array('big.input.profile', 'big.semantic0.collapsed.profile', 'big.coarse.input.profile');
 
 function getSubArray($parent, $idx) {
   $sub = null;
@@ -65,8 +65,8 @@ foreach ($allfiles as $fl) {
 }
 
 // Collect the source information into a structured array.
-$info = array();
-
+$htmlinfo = array();
+$htmlsolo = array();
 foreach ($sourcefiles as $fl) {
   $back = substr($fl, strlen($appname) + 1);
   $parts = explode('.', $back);
@@ -75,27 +75,7 @@ foreach ($sourcefiles as $fl) {
 
   // Get the 2nd-to-last part (or use "main").
   $desc = $len > 1 ? $parts[$len-2] : 'main';
-  if ($ext === 'js') {
-    if ($desc === 'policy') {
-      if ($len > 2) {
-        $descparts = array_slice($parts, 0, $len - 2);
-        $desc = implode('.', $descparts);
-      } else {
-        $desc = 'main';
-      }
-      $info[$desc] = getSubArray($info, $desc);
-      $info[$desc]['policy'] = $fl;
-    } else {
-      if ($len > 1) {
-        $descparts = array_slice($parts, 0, $len - 1);
-        $desc = implode('.', $descparts);
-      } else {
-        $desc = 'main';
-      }
-      $info[$desc] = getSubArray($info, $desc);
-      $info[$desc]['js'] = $fl;
-    }
-  } else if ($ext === 'html') {
+  if ($ext === 'html') {
     if ($desc === 'head' || $desc === 'body') {
       $role = $desc;
       if ($len > 2) {
@@ -104,8 +84,8 @@ foreach ($sourcefiles as $fl) {
       } else {
         $desc = 'main';
       }
-      $info[$desc] = getSubArray($info, $desc);
-      $info[$desc][$role] = $fl;
+      $htmlinfo[$desc] = getSubArray($htmlinfo, $desc);
+      $htmlinfo[$desc][$role] = $fl;
     } else {
       if ($len > 1) {
         $descparts = array_slice($parts, 0, $len - 1);
@@ -113,12 +93,13 @@ foreach ($sourcefiles as $fl) {
       } else {
         $desc = 'main';
       }
-      $info[$desc] = getSubArray($info, $desc);
-      $info[$desc]['html'] = $fl;
+      $htmlsolo[$desc] = getSubArray($htmlsolo, $desc);
+      $htmlsolo[$desc]['html'] = $fl;
     }
   }
 }
 
+$srcinfo = array();
 foreach ($sourcedirs as $sourcedir) {
   $desc = substr($sourcedir, strlen('source-'));
   // %%% Eventually want to go recursive instead of just first-level.
@@ -134,8 +115,8 @@ foreach ($sourcedirs as $sourcedir) {
     }
   }
 
-  $info[$desc] = getSubArray($info, $desc);
-  $info[$desc]['source'] = $subinfo;
+  $srcinfo[$desc] = getSubArray($srcinfo, $desc);
+  $srcinfo[$desc]['source'] = $subinfo;
 }
 
 function getParamText($info, $key, $param, $first=false) {
@@ -253,41 +234,36 @@ function findFile($info, $filetype, $key) {
 $hrefbase = 'test.php';
 
 $linksrcs = array();
-foreach ($info as $key => $sub) {
-  if (isset($sub['js'])) {
-    if ($key === 'original' || $key === 'original.profile') {
-      // Only add a policy for these if specified.
-    } else {
-      $sub['policy'] = findFile($info, 'policy', $key);
-    }
-    // %%% Will this break some microbenchmarks?
-    $sub['head'] = findFile($info, 'head', $key);
-    $sub['body'] = findFile($info, 'body', $key);
-
-    // Suppress the library if there's no policy.
-    $lib = true;//isset($sub['policy']);
-    array_push($linksrcs, getScriptLink($sub, $hrefbase, $key, $lib));
-  }
+foreach ($srcinfo as $key => $sub) {
   if (isset($sub['source'])) {
     // %%% Eventually want to do something different here.
     if ($key === 'original' || $key === 'original.profile') {
       // Only add a policy for these if specified.
     } else {
-      $sub['policy'] = findFile($info, 'policy', $key);
+      $sub['policy'] = findFile($srcinfo, 'policy', $key);
     }
-    $sub['head'] = findFile($info, 'head', $key);
-    $sub['body'] = findFile($info, 'body', $key);
+    foreach ($htmlinfo as $hkey => $hsub) {
+      $sub['head'] = findFile($htmlinfo, 'head', $hkey);
+      $sub['body'] = findFile($htmlinfo, 'body', $hkey);
+      if ($hkey == 'main') {
+        $dkey = $key;
+      } else {
+        $dkey = $hkey.'.'.$key;
+      }
 
-    // Suppress the library if there's no policy.
-    $lib = true;//isset($sub['policy']);
-    array_push($linksrcs, getSourceLink($sub, $hrefbase, $key, $lib));
-  }
-  if (isset($sub['html'])) {
-    // Link to the stand-alone HTML file.
-    $text = "html: ".$sub['html'];
-    array_push($linksrcs, getHTMLLink($sub, $hrefbase, $text));
+      // Suppress the library if there's no policy.
+      $lib = true;//isset($sub['policy']);
+      array_push($linksrcs, getSourceLink($sub, $hrefbase, $dkey, $lib));
+    }
   }
 }
+
+foreach ($htmlsolo as $key => $sub) {
+  // Link to the stand-alone HTML file.
+  $text = "html: ".$sub['html'];
+  array_push($linksrcs, getHTMLLink($sub, $text));
+}
+
 $linksrc = implode('<br/>', $linksrcs);
 
 if ($err) {
@@ -312,9 +288,8 @@ if ($auto) {
 <?
       // Use different test cases for "big" inputs.
       $applen = strlen($appname);
-      $isbig = $applen > 9 && substr($appname, 0, 5) === 'sms2-'
-        && substr($appname, $applen - 4) === '.big';
-      $ats = $isbig ? $bigautotests : $autotests;
+      $sms2 = $applen > 9 && substr($appname, 0, 5) === 'sms2-';
+      $ats = $sms2 ? array_merge($autotests, $bigautotests) : $autotests;
       foreach ($ats as $at) {
 ?>
         '<?=$at?>',

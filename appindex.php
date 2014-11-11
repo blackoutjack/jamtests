@@ -55,13 +55,7 @@ foreach ($allfiles as $fl) {
   if (substr($fl, 0, 5) == 'sms2-' && substr($fl, strlen($fl) - 5) == '-call') continue;
   if (substr($fl, 0, 5) == 'sms2-' && substr($fl, strlen($fl) - 4) == '-get') continue;
   if (PERFORMANCE) {
-    if ($fl == 'adsense-call') continue;
-    if ($fl == 'jsqrcode-get') continue;
-    if (substr($fl, 0, 5) == 'sms2-' && substr($fl, strlen($fl) - 9) == '-call-big') continue;
-    if (substr($fl, 0, 5) == 'sms2-' && substr($fl, strlen($fl) - 8) == '-get-big') continue;
-  } else {
-    // For correctness tests, skip "big" input.
-    if (substr($fl, strlen($fl) - 4) == '-big') continue;
+    if ($fl == 'adsense.call') continue;
   }
 
   $apps[] = $fl;
