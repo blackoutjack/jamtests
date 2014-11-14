@@ -1450,7 +1450,9 @@ function v2226() {
     var v2387 = this._silent;
     for (c$$658 in v2387) {
       var v2386 = this._pending;
-      JAM.set(v2386, c$$658, !0, JAM.policy.p2);
+      introspect(JAM.policy.p2) {
+        v2386[c$$658] = !0;
+      }
     }
     var v2388 = a$$892.changes;
     var v2389 = this._silent;
@@ -1839,7 +1841,9 @@ function v2226() {
           v14966 = b$$790;
         }
         var v9112 = v14966;
-        JAM.set(v9112, e$$413, !0, JAM.policy.p2);
+        introspect(JAM.policy.p2) {
+          v9112[e$$413] = !0;
+        }
       }
       var v2439;
       var v9113 = c$$654.unset;
@@ -1867,7 +1871,9 @@ function v2226() {
         var v19379 = !v14969;
         if (v19379) {
           var v19378 = this._pending;
-          v14969 = JAM.set(v19378, e$$413, !0, JAM.policy.p2);
+          introspect(JAM.policy.p2) {
+            v14969 = v19378[e$$413] = !0;
+          }
         }
         v2440 = v14969;
       } else {
@@ -2692,9 +2698,7 @@ function v2127() {
       var v2545 = JAM.call(b$$743.has, b$$743, [a$$828, d$$478], JAM.policy.p3);
       if (v2545) {
         var v9166 = c$$641.length;
-        introspect(JAM.policy.p2) {
-          c$$641[v9166] = d$$478;
-        }
+        c$$641[v9166] = d$$478;
       }
     }
     return c$$641;
@@ -2942,9 +2946,7 @@ function v2127() {
     for (;v2571;) {
       var v2570 = f$$229;
       f$$229 = f$$229 + 1;
-      introspect(JAM.policy.p2) {
-        g$$228[v2570] = a$$816;
-      }
+      g$$228[v2570] = a$$816;
       a$$816 = a$$816 + d$$469;
       v2571 = f$$229 < e$$402;
     }
@@ -3037,9 +3039,7 @@ function v2127() {
     for (;v2583;) {
       var v2582 = "" + e$$400;
       var v30935 = JAM.call(b$$743.pluck, b$$743, [a$$813, v2582], JAM.policy.p3);
-      introspect(JAM.policy.p2) {
-        d$$466[e$$400] = v30935;
-      }
+      d$$466[e$$400] = v30935;
       e$$400++;
       v2583 = e$$400 < c$$634;
     }
@@ -3367,9 +3367,7 @@ function v2127() {
       var v2613 = v9216 * v9217;
       d$$455 = JAM.call(Math.floor, Math, [v2613], JAM.policy.p3);
       JAM.set(b$$754, f$$227, b$$754[d$$455], JAM.policy.p2);
-      introspect(JAM.policy.p2) {
-        b$$754[d$$455] = a$$788;
-      }
+      b$$754[d$$455] = a$$788;
       return;
     }
     var b$$754 = [];
@@ -3580,9 +3578,7 @@ function v2127() {
       var v9232 = !v2637;
       if (v9232) {
         var v9231 = e$$390.length;
-        introspect(JAM.policy.p2) {
-          e$$390[v9231] = a$$772;
-        }
+        e$$390[v9231] = a$$772;
       }
       return;
     }
@@ -3599,9 +3595,7 @@ function v2127() {
       var v2639 = JAM.call(c$$614.call, c$$614, [b$$747, a$$770, g$$223, h$$184], JAM.policy.p3);
       if (v2639) {
         var v9233 = e$$389.length;
-        introspect(JAM.policy.p2) {
-          e$$389[v9233] = a$$770;
-        }
+        e$$389[v9233] = a$$770;
       }
       return;
     }
@@ -3724,9 +3718,7 @@ function v2127() {
       var v2655 = e$$385;
       var v2656 = e$$385.length;
       var v30936 = JAM.call(c$$610.call, c$$610, [b$$744, a$$763, g$$220, h$$182], JAM.policy.p3);
-      introspect(JAM.policy.p2) {
-        v2655[v2656] = v30936;
-      }
+      v2655[v2656] = v30936;
       return;
     }
     var e$$385 = [];
@@ -7270,20 +7262,26 @@ function v1936(a$$722, c$$572, b$$699) {
       if (v19632) {
         var v19630 = this.Circular;
         var v30939 = parseFloat(c$$572);
-        v15348 = JAM.set(v19630, a$$722, v30939, JAM.policy.p2);
+        introspect(JAM.policy.p2) {
+          v15348 = v19630[a$$722] = v30939;
+        }
       } else {
         var v19631 = b$$699 == "rectangular";
         if (v19631) {
           var v24197 = this.Rectangular;
           var v30940 = parseFloat(c$$572);
-          v19631 = JAM.set(v24197, a$$722, v30940, JAM.policy.p2);
+          introspect(JAM.policy.p2) {
+            v19631 = v24197[a$$722] = v30940;
+          }
         }
         v15348 = v19631;
       }
       v9603 = v15348;
     } else {
       var v30941 = parseFloat(c$$572);
-      v9603 = JAM.set(this, a$$722, v30941, JAM.policy.p2);
+      introspect(JAM.policy.p2) {
+        v9603 = this[a$$722] = v30941;
+      }
     }
     v9603;
   }
@@ -9789,7 +9787,9 @@ function v1885(e$$347, t$$15, i$$210) {
           n$$101 = v29997[0];
           var v29998 = u$$16 in n$$101;
           if (v29998) {
-            JAM.set(n$$101, u$$16, 0, JAM.policy.p2);
+            introspect(JAM.policy.p2) {
+              n$$101[u$$16] = 0;
+            }
           }
           var v29744 = f$$186 in n$$101;
           if (v29744) {
@@ -32666,7 +32666,9 @@ function v1235(a$$430, b$$315) {
         var v28353 = f$$72._out;
         JAM.call(v28353.call, v28353, [f$$72, c$$271], JAM.policy.p3);
       }
-      JAM.set(this, e$$200, 1, JAM.policy.p2);
+      introspect(JAM.policy.p2) {
+        this[e$$200] = 1;
+      }
       var v25355;
       var v27173 = e$$200 == "isout";
       if (v27173) {
@@ -32675,7 +32677,9 @@ function v1235(a$$430, b$$315) {
         v25355 = "isout";
       }
       var v21174 = v25355;
-      JAM.set(this, v21174, 0, JAM.policy.p2);
+      introspect(JAM.policy.p2) {
+        this[v21174] = 0;
+      }
       var v25356;
       var v27174 = e$$200 == "isover";
       if (v27174) {
@@ -36821,10 +36825,14 @@ function v1120(a$$405, b$$248) {
     if (v11951) {
       v4999 = !0;
     } else {
-      JAM.set(b$$263, d$$171, 1, JAM.policy.p2);
+      introspect(JAM.policy.p2) {
+        b$$263[d$$171] = 1;
+      }
       var v25632 = b$$263[d$$171];
       e$$174 = v25632 > 0;
-      JAM.set(b$$263, d$$171, 0, JAM.policy.p2);
+      introspect(JAM.policy.p2) {
+        b$$263[d$$171] = 0;
+      }
       v4999 = e$$174;
     }
     return v4999;
@@ -38193,7 +38201,9 @@ function v1090(a$$13, b$$9) {
       JAM.call(this.update, this, [], JAM.policy.p3);
       var v12077 = i$$143.animatedProperties;
       var v12078 = this.prop;
-      JAM.set(v12077, v12078, !0, JAM.policy.p2);
+      introspect(JAM.policy.p2) {
+        v12077[v12078] = !0;
+      }
       var v5104 = i$$143.animatedProperties;
       for (b$$236 in v5104) {
         var v17677 = i$$143.animatedProperties;
@@ -39732,9 +39742,7 @@ function v1090(a$$13, b$$9) {
       var v21680 = encodeURIComponent(a$$355);
       var v17793 = v21680 + "=";
       var v17794 = encodeURIComponent(b$$221);
-      introspect(JAM.policy.p2) {
-        v12187[v12188] = v17793 + v17794;
-      }
+      v12187[v12188] = v17793 + v17794;
       return;
     }
     var d$$140 = [];
@@ -44509,9 +44517,7 @@ function v1090(a$$13, b$$9) {
           } else {
             var v18072 = c$$108;
             if (v18072) {
-              introspect(JAM.policy.p2) {
-                v18072 = b$$134[g$$56] = !1;
-              }
+              v18072 = b$$134[g$$56] = !1;
             }
             v12558 = v18072;
           }
@@ -44662,9 +44668,7 @@ function v1090(a$$13, b$$9) {
             } else {
               v5599 = !1;
             }
-            introspect(JAM.policy.p2) {
-              a$$198[e$$109] = v5599;
-            }
+            a$$198[e$$109] = v5599;
           }
           e$$109++;
           v5600 = e$$109 < f$$27;
@@ -44681,9 +44685,7 @@ function v1090(a$$13, b$$9) {
               var v21874 = c$$103.parentNode;
               v18084 = v21874 === b$$128;
             }
-            introspect(JAM.policy.p2) {
-              a$$198[e$$109] = v18084;
-            }
+            a$$198[e$$109] = v18084;
           }
           e$$109++;
           v5601 = e$$109 < f$$27;
@@ -44756,9 +44758,7 @@ function v1090(a$$13, b$$9) {
           } else {
             v5607 = h$$53 === b$$127;
           }
-          introspect(JAM.policy.p2) {
-            a$$197[f$$26] = v5607;
-          }
+          a$$197[f$$26] = v5607;
         }
         f$$26++;
         v5609 = f$$26 < g$$52;
@@ -44934,7 +44934,9 @@ function v1090(a$$13, b$$9) {
                     if (p$$32) {
                       v21881 = g$$51 = !0;
                     } else {
-                      v21881 = JAM.set(s$$23, n$$70, !1, JAM.policy.p2);
+                      introspect(JAM.policy.p2) {
+                        v21881 = s$$23[n$$70] = !1;
+                      }
                     }
                     v18097 = v21881;
                   } else {
@@ -45508,9 +45510,7 @@ function v1090(a$$13, b$$9) {
             }
             j$$42 = j$$42[a$$186];
           }
-          introspect(JAM.policy.p2) {
-            e$$102[h$$48] = k$$23;
-          }
+          e$$102[h$$48] = k$$23;
         }
         h$$48++;
         v5675 = h$$48 < i$$120;
@@ -45553,9 +45553,7 @@ function v1090(a$$13, b$$9) {
             }
             j$$43 = j$$43[a$$187];
           }
-          introspect(JAM.policy.p2) {
-            e$$103[h$$49] = k$$24;
-          }
+          e$$103[h$$49] = k$$24;
         }
         h$$49++;
         v5680 = h$$49 < i$$121;
@@ -45707,7 +45705,9 @@ function v1090(a$$13, b$$9) {
     var v21920 = f$$4.attrFn;
     if (v21920) {
       var v25890 = f$$4.attrFn;
-      JAM.set(v25890, b$$118, !0, JAM.policy.p2);
+      introspect(JAM.policy.p2) {
+        v25890[b$$118] = !0;
+      }
     }
     var v18146 = JAM.call(C.test, C, [b$$118], JAM.policy.p3);
     if (v18146) {
@@ -46333,7 +46333,9 @@ function v1090(a$$13, b$$9) {
     }
     this.timeStamp = v18189;
     var v12706 = f$$4.expando;
-    JAM.set(this, v12706, !0, JAM.policy.p2);
+    introspect(JAM.policy.p2) {
+      this[v12706] = !0;
+    }
     return;
   }
   function v786(a$$153, b$$101, c$$84) {
@@ -47715,7 +47717,9 @@ function v1090(a$$13, b$$9) {
         v18283;
         var v18284 = f$$4.event;
         var v12800 = v18284.global;
-        JAM.set(v12800, m$$15, !0, JAM.policy.p2);
+        introspect(JAM.policy.p2) {
+          v12800[m$$15] = !0;
+        }
         k$$18++;
         var v12801 = c$$77.length;
         v5826 = k$$18 < v12801;
@@ -47874,7 +47878,9 @@ function v1090(a$$13, b$$9) {
       d$$67 = v22024;
       var v22025 = d$$67 in a$$127;
       if (v22025) {
-        JAM.set(a$$127, d$$67, !0, JAM.policy.p2);
+        introspect(JAM.policy.p2) {
+          a$$127[d$$67] = !0;
+        }
       }
       var v18293 = JAM.call(c$$71.toLowerCase, c$$71, [], JAM.policy.p3);
       v5842 = JAM.call(a$$127.setAttribute, a$$127, [c$$71, v18293], JAM.policy.p3);
@@ -48135,7 +48141,9 @@ function v1090(a$$13, b$$9) {
           }
           var v22036 = v25974;
           if (v22036) {
-            JAM.set(a$$120, c$$65, !1, JAM.policy.p2);
+            introspect(JAM.policy.p2) {
+              a$$120[c$$65] = !1;
+            }
           }
         }
         i$$110++;
@@ -49843,7 +49851,9 @@ function v1090(a$$13, b$$9) {
           o$$4 = v26014 == "function";
         }
         var v12941 = n$$61 + "Bubbles";
-        JAM.set(b$$60, v12941, o$$4, JAM.policy.p2);
+        introspect(JAM.policy.p2) {
+          b$$60[v12941] = o$$4;
+        }
       }
     }
     JAM.call(j$$27.removeChild, j$$27, [p$$26], JAM.policy.p3);
@@ -50656,9 +50666,7 @@ function v1090(a$$13, b$$9) {
           var v13006 = f$$14 != null;
           if (v13006) {
             var v18448 = h$$20.length;
-            introspect(JAM.policy.p2) {
-              h$$20[v18448] = f$$14;
-            }
+            h$$20[v18448] = f$$14;
           }
           i$$94++;
           v6023 = i$$94 < j$$22;
@@ -50670,9 +50678,7 @@ function v1090(a$$13, b$$9) {
           var v13008 = f$$14 != null;
           if (v13008) {
             var v18449 = h$$20.length;
-            introspect(JAM.policy.p2) {
-              h$$20[v18449] = f$$14;
-            }
+            h$$20[v18449] = f$$14;
           }
         }
       }
@@ -51741,7 +51747,9 @@ function v1090(a$$13, b$$9) {
     if (v27625) {
       var v29281 = e$$61.browser;
       var v29282 = z$$3.browser;
-      JAM.set(v29281, v29282, !0, JAM.policy.p2);
+      introspect(JAM.policy.p2) {
+        v29281[v29282] = !0;
+      }
       var v29283 = e$$61.browser;
       v29283.version = z$$3.version;
     }
@@ -52017,7 +52025,9 @@ function v1090(a$$13, b$$9) {
     }
     f$$6 = v18526;
     g$$4 = g$$4 || {};
-    JAM.set(g$$4, f$$6, !0, JAM.policy.p2);
+    introspect(JAM.policy.p2) {
+      g$$4[f$$6] = !0;
+    }
     var h$$12 = a$$21[f$$6];
     var i$$88 = 0;
     var v6127;
@@ -52702,7 +52712,9 @@ function v1090(a$$13, b$$9) {
     var v6177 = c$$20 < d$$22;
     for (;v6177;) {
       var v6176 = a$$41[c$$20];
-      JAM.set(b$$27, v6176, !0, JAM.policy.p2);
+      introspect(JAM.policy.p2) {
+        b$$27[v6176] = !0;
+      }
       c$$20++;
       v6177 = c$$20 < d$$22;
     }
@@ -56680,7 +56692,9 @@ function v614() {
             var v13640 = v18734[key$$26];
             var v6892 = JAM.call(that$$24.characterType, that$$24, [v13640, "quali"], JAM.policy.p3);
             if (v6892) {
-              JAM.set(quali, key$$26, true, JAM.policy.p2);
+              introspect(JAM.policy.p2) {
+                quali[key$$26] = true;
+              }
               var v13641 = that$$24.config;
               var v6889 = v13641.typeEnum;
               JAM.set(charTypeMapping$$1, key$$26, v6889.quali, JAM.policy.p2);
@@ -56690,7 +56704,9 @@ function v614() {
               var v13642 = v18735[key$$26];
               var v6891 = JAM.call(that$$24.characterType, that$$24, [v13642, "quant"], JAM.policy.p3);
               if (v6891) {
-                JAM.set(quant, key$$26, true, JAM.policy.p2);
+                introspect(JAM.policy.p2) {
+                  quant[key$$26] = true;
+                }
                 var v13643 = that$$24.config;
                 var v6890 = v13643.typeEnum;
                 JAM.set(charTypeMapping$$1, key$$26, v6890.quant, JAM.policy.p2);
@@ -57824,7 +57840,9 @@ function v614() {
       var v7079 = i$$60 < v13810;
       for (;v7079;) {
         var v7078 = setA[i$$60];
-        JAM.set(hashA, v7078, true, JAM.policy.p2);
+        introspect(JAM.policy.p2) {
+          hashA[v7078] = true;
+        }
         i$$60 = i$$60 + 1;
         var v13811 = setA.length;
         v7079 = i$$60 < v13811;
@@ -64673,7 +64691,9 @@ function v614() {
       for (id$$6 in v8327) {
         var v8323 = graph.edges;
         var edgeFrom = v8323[id$$6];
-        JAM.set(hashset, id$$6, true, JAM.policy.p2);
+        introspect(JAM.policy.p2) {
+          hashset[id$$6] = true;
+        }
         var edgeId;
         for (edgeId in edgeFrom) {
           var v8324 = edgeId in hashset;
@@ -65804,9 +65824,7 @@ function v614() {
         for (;v8485;) {
           var v8484 = object$$1[i$$15];
           var v31222 = JAM.call($$$1.unlink, $$$1, [v8484], JAM.policy.p3);
-          introspect(JAM.policy.p2) {
-            unlinked[i$$15] = v31222;
-          }
+          unlinked[i$$15] = v31222;
           i$$15++;
           v8485 = i$$15 < l$$4;
         }

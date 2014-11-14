@@ -1387,7 +1387,7 @@ function v135(name$$32, fn$$10, interval) {
   }
   var v550 = AJS._reccruing_tos;
   var v1258 = JAM.call(setTimeout, null, [fn$$10, interval]);
-  JAM.set(v550, name$$32, v1258);
+  v550[name$$32] = v1258;
   return;
 }
 function v134(fn$$9, extra_args$$1) {

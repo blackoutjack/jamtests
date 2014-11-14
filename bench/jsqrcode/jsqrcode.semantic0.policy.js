@@ -1,18 +1,10 @@
 var policy = function() {
-  var _HTMLAudioElement = HTMLAudioElement;
+  var _HTMLElement = HTMLElement;
   var _RegExp_prototype_test = RegExp.prototype.test;
   var __RegExp_prototype_test_call_bind__RegExp_prototype_test_ = _RegExp_prototype_test.call.bind(_RegExp_prototype_test);
-  var _HTMLFrameElement = HTMLFrameElement;
-  var _HTMLIFrameElement = HTMLIFrameElement;
-  var _HTMLImageElement = HTMLImageElement;
-  var _HTMLInputElement = HTMLInputElement;
-  var _HTMLScriptElement = HTMLScriptElement;
-  var _HTMLSourceElement = HTMLSourceElement;
-  var _HTMLVideoElement = HTMLVideoElement;
   var _HTMLFormElement = HTMLFormElement;
   var _Window = Window;
   var _HTMLDocument = HTMLDocument;
-  var _HTMLElement = HTMLElement;
   var _HTMLDocument_prototype_write = HTMLDocument.prototype.write;
   var _HTMLDocument_prototype_writeln = HTMLDocument.prototype.writeln;
   var _XMLHttpRequest_prototype_open = XMLHttpRequest.prototype.open;
@@ -21,14 +13,6 @@ var policy = function() {
   var _Window_prototype_openDialog = Window.prototype.openDialog;
   var _Window_prototype_postMessage = Window.prototype.postMessage;
   var _WebSocket = WebSocket;
-  var _HTMLAudioElement_prototype_setAttribute = HTMLAudioElement.prototype.setAttribute;
-  var _HTMLFrameElement_prototype_setAttribute = HTMLFrameElement.prototype.setAttribute;
-  var _HTMLIFrameElement_prototype_setAttribute = HTMLIFrameElement.prototype.setAttribute;
-  var _HTMLImageElement_prototype_setAttribute = HTMLImageElement.prototype.setAttribute;
-  var _HTMLInputElement_prototype_setAttribute = HTMLInputElement.prototype.setAttribute;
-  var _HTMLScriptElement_prototype_setAttribute = HTMLScriptElement.prototype.setAttribute;
-  var _HTMLSourceElement_prototype_setAttribute = HTMLSourceElement.prototype.setAttribute;
-  var _HTMLVideoElement_prototype_setAttribute = HTMLVideoElement.prototype.setAttribute;
   var _HTMLFormElement_prototype_setAttribute = HTMLFormElement.prototype.setAttribute;
   function pFull(tx) {
     var commit = true;
@@ -36,19 +20,14 @@ var policy = function() {
     var len = as.length;
     for (var i = 0;i < len;i++) {
       var node = as[i];
-      if (node.type === "write" && (node.id === "src" && JAM.instanceof(node.obj, _HTMLAudioElement) && __RegExp_prototype_test_call_bind__RegExp_prototype_test_(/^\s*(http|ftp)/i, node.value) || node.id === "src" && JAM.instanceof(node.obj, _HTMLFrameElement) && __RegExp_prototype_test_call_bind__RegExp_prototype_test_(/^\s*(http|ftp)/i, node.value) || node.id === "src" && JAM.instanceof(node.obj, _HTMLIFrameElement) && __RegExp_prototype_test_call_bind__RegExp_prototype_test_(/^\s*(http|ftp)/i, 
-      node.value) || node.id === "src" && JAM.instanceof(node.obj, _HTMLImageElement) && __RegExp_prototype_test_call_bind__RegExp_prototype_test_(/^\s*(http|ftp)/i, node.value) || node.id === "src" && JAM.instanceof(node.obj, _HTMLInputElement) && __RegExp_prototype_test_call_bind__RegExp_prototype_test_(/^\s*(http|ftp)/i, node.value) || node.id === "src" && JAM.instanceof(node.obj, _HTMLScriptElement) && __RegExp_prototype_test_call_bind__RegExp_prototype_test_(/^\s*(http|ftp)/i, node.value) || 
-      node.id === "src" && JAM.instanceof(node.obj, _HTMLSourceElement) && __RegExp_prototype_test_call_bind__RegExp_prototype_test_(/^\s*(http|ftp)/i, node.value) || node.id === "src" && JAM.instanceof(node.obj, _HTMLVideoElement) && __RegExp_prototype_test_call_bind__RegExp_prototype_test_(/^\s*(http|ftp)/i, node.value) || node.id === "action" && JAM.instanceof(node.obj, _HTMLFormElement) || node.id === "location" && JAM.instanceof(node.obj, _Window) || node.id === "cookie" && JAM.instanceof(node.obj, 
-      _HTMLDocument) || node.id === "href" && JAM.instanceof(node.obj, _HTMLElement) || node.id === "innerHTML" && JAM.instanceof(node.obj, _HTMLElement))) {
+      if (node.type === "write" && (node.id === "src" && JAM.instanceof(node.obj, _HTMLElement) && __RegExp_prototype_test_call_bind__RegExp_prototype_test_(/^\s*(http|ftp)/i, node.value) || node.id === "action" && JAM.instanceof(node.obj, _HTMLFormElement) || node.id === "location" && JAM.instanceof(node.obj, _Window) || node.id === "cookie" && JAM.instanceof(node.obj, _HTMLDocument) || node.id === "href" && JAM.instanceof(node.obj, _HTMLElement) || node.id === "innerHTML" && JAM.instanceof(node.obj, 
+      _HTMLElement))) {
         commit = false;
         break;
       }
-      if (node.type === "invoke" && (JAM.identical(node.value, _HTMLDocument_prototype_write) && (node.argc > 0 && typeof node.args[0] === "string") || JAM.identical(node.value, _HTMLDocument_prototype_writeln) && (node.argc > 0 && typeof node.args[0] === "string") || JAM.identical(node.value, _XMLHttpRequest_prototype_open) && node.argc > 1 || JAM.identical(node.value, _Window_prototype_open) && (node.argc > 0 && !JAM.identical(node.args[0], _undefined)) || JAM.identical(node.value, _Window_prototype_openDialog) && 
-      (node.argc > 0 && !JAM.identical(node.args[0], _undefined)) || JAM.identical(node.value, _Window_prototype_postMessage) && node.argc > 1 || JAM.identical(node.value, _WebSocket) && (node.argc > 0 && __RegExp_prototype_test_call_bind__RegExp_prototype_test_(/^ws:\/\//i, node.args[0])) || JAM.identical(node.value, _HTMLAudioElement_prototype_setAttribute) && (node.argc > 0 && JAM.identical(node.args[0], "src")) && (node.argc > 1 && __RegExp_prototype_test_call_bind__RegExp_prototype_test_(/^\s*(http|ftp)/i, 
-      node.args[1])) || JAM.identical(node.value, _HTMLFrameElement_prototype_setAttribute) && (node.argc > 0 && JAM.identical(node.args[0], "src")) && (node.argc > 1 && __RegExp_prototype_test_call_bind__RegExp_prototype_test_(/^\s*(http|ftp)/i, node.args[1])) || JAM.identical(node.value, _HTMLIFrameElement_prototype_setAttribute) && (node.argc > 0 && JAM.identical(node.args[0], "src")) && (node.argc > 1 && __RegExp_prototype_test_call_bind__RegExp_prototype_test_(/^\s*(http|ftp)/i, node.args[1])) || 
-      JAM.identical(node.value, _HTMLImageElement_prototype_setAttribute) && (node.argc > 0 && JAM.identical(node.args[0], "src")) && (node.argc > 1 && __RegExp_prototype_test_call_bind__RegExp_prototype_test_(/^\s*(http|ftp)/i, node.args[1])) || JAM.identical(node.value, _HTMLInputElement_prototype_setAttribute) && (node.argc > 0 && JAM.identical(node.args[0], "src")) && (node.argc > 1 && __RegExp_prototype_test_call_bind__RegExp_prototype_test_(/^\s*(http|ftp)/i, node.args[1])) || JAM.identical(node.value, 
-      _HTMLScriptElement_prototype_setAttribute) && (node.argc > 0 && JAM.identical(node.args[0], "src")) && (node.argc > 1 && __RegExp_prototype_test_call_bind__RegExp_prototype_test_(/^\s*(http|ftp)/i, node.args[1])) || JAM.identical(node.value, _HTMLSourceElement_prototype_setAttribute) && (node.argc > 0 && JAM.identical(node.args[0], "src")) && (node.argc > 1 && __RegExp_prototype_test_call_bind__RegExp_prototype_test_(/^\s*(http|ftp)/i, node.args[1])) || JAM.identical(node.value, _HTMLVideoElement_prototype_setAttribute) && 
-      (node.argc > 0 && JAM.identical(node.args[0], "src")) && (node.argc > 1 && __RegExp_prototype_test_call_bind__RegExp_prototype_test_(/^\s*(http|ftp)/i, node.args[1])) || JAM.identical(node.value, _HTMLFormElement_prototype_setAttribute) && (node.argc > 0 && JAM.identical(node.args[0], "action")))) {
+      if (node.type === "invoke" && (JAM.identical(node.value, _HTMLDocument_prototype_write) && (node.argc > 0 && typeof node.args[0] === "string") || JAM.identical(node.value, _HTMLDocument_prototype_writeln) && (node.argc > 0 && typeof node.args[0] === "string") || JAM.identical(node.value, _XMLHttpRequest_prototype_open) && node.argc > 1 || JAM.identical(node.value, _Window_prototype_open) && (node.argc > 0 && node.args[0] !== _undefined) || JAM.identical(node.value, _Window_prototype_openDialog) && 
+      (node.argc > 0 && node.args[0] !== _undefined) || JAM.identical(node.value, _Window_prototype_postMessage) && node.argc > 1 || JAM.identical(node.value, _WebSocket) && (node.argc > 0 && __RegExp_prototype_test_call_bind__RegExp_prototype_test_(/^ws:\/\//i, node.args[0])) || true && node.value["name"] === "setAttribute" && (node.argc > 0 && node.args[0] === "src") && (node.argc > 1 && __RegExp_prototype_test_call_bind__RegExp_prototype_test_(/^\s*(http|ftp)/i, node.args[1])) || JAM.identical(node.value, 
+      _HTMLFormElement_prototype_setAttribute) && (node.argc > 0 && node.args[0] === "action") && node.argc > 1)) {
         commit = false;
         break;
       }
@@ -61,16 +40,13 @@ var policy = function() {
   }
   pFull.subsumedBy = pFull;
   Object.freeze(pFull);
-  function p13(tx) {
+  function p6(tx) {
     var commit = true;
     var as = tx.getWriteSequence();
     var len = as.length;
     for (var i = 0;i < len;i++) {
       var node = as[i];
-      if (node.id === "src" && JAM.instanceof(node.obj, _HTMLAudioElement) && __RegExp_prototype_test_call_bind__RegExp_prototype_test_(/^\s*(http|ftp)/i, node.value) || node.id === "src" && JAM.instanceof(node.obj, _HTMLFrameElement) && __RegExp_prototype_test_call_bind__RegExp_prototype_test_(/^\s*(http|ftp)/i, node.value) || node.id === "src" && JAM.instanceof(node.obj, _HTMLIFrameElement) && __RegExp_prototype_test_call_bind__RegExp_prototype_test_(/^\s*(http|ftp)/i, node.value) || node.id === 
-      "src" && JAM.instanceof(node.obj, _HTMLImageElement) && __RegExp_prototype_test_call_bind__RegExp_prototype_test_(/^\s*(http|ftp)/i, node.value) || node.id === "src" && JAM.instanceof(node.obj, _HTMLInputElement) && __RegExp_prototype_test_call_bind__RegExp_prototype_test_(/^\s*(http|ftp)/i, node.value) || node.id === "src" && JAM.instanceof(node.obj, _HTMLScriptElement) && __RegExp_prototype_test_call_bind__RegExp_prototype_test_(/^\s*(http|ftp)/i, node.value) || node.id === "src" && JAM.instanceof(node.obj, 
-      _HTMLSourceElement) && __RegExp_prototype_test_call_bind__RegExp_prototype_test_(/^\s*(http|ftp)/i, node.value) || node.id === "src" && JAM.instanceof(node.obj, _HTMLVideoElement) && __RegExp_prototype_test_call_bind__RegExp_prototype_test_(/^\s*(http|ftp)/i, node.value) || node.id === "action" && JAM.instanceof(node.obj, _HTMLFormElement) || node.id === "location" && JAM.instanceof(node.obj, _Window) || node.id === "cookie" && JAM.instanceof(node.obj, _HTMLDocument) || node.id === "href" && 
-      JAM.instanceof(node.obj, _HTMLElement) || node.id === "innerHTML" && JAM.instanceof(node.obj, _HTMLElement)) {
+      if (node.id === "src" && JAM.instanceof(node.obj, _HTMLElement) && __RegExp_prototype_test_call_bind__RegExp_prototype_test_(/^\s*(http|ftp)/i, node.value) || node.id === "action" && JAM.instanceof(node.obj, _HTMLFormElement) || node.id === "location" && JAM.instanceof(node.obj, _Window) || node.id === "cookie" && JAM.instanceof(node.obj, _HTMLDocument) || node.id === "href" && JAM.instanceof(node.obj, _HTMLElement) || node.id === "innerHTML" && JAM.instanceof(node.obj, _HTMLElement)) {
         commit = false;
         break;
       }
@@ -81,18 +57,16 @@ var policy = function() {
       JAM.prevent(tx);
     }
   }
-  p13.subsumedBy = pFull;
-  p13.itype = "write";
-  Object.freeze(p13);
-  function p8(tx) {
+  p6.subsumedBy = pFull;
+  p6.itype = "write";
+  Object.freeze(p6);
+  function p1(tx) {
     var commit = true;
     var as = tx.getWriteSequence();
     var len = as.length;
     for (var i = 0;i < len;i++) {
       var node = as[i];
-      if (node.id === "src" && JAM.instanceof(node.obj, _HTMLAudioElement) && __RegExp_prototype_test_call_bind__RegExp_prototype_test_(/^\s*(http|ftp)/i, node.value) || node.id === "src" && JAM.instanceof(node.obj, _HTMLFrameElement) && __RegExp_prototype_test_call_bind__RegExp_prototype_test_(/^\s*(http|ftp)/i, node.value) || node.id === "src" && JAM.instanceof(node.obj, _HTMLIFrameElement) && __RegExp_prototype_test_call_bind__RegExp_prototype_test_(/^\s*(http|ftp)/i, node.value) || node.id === 
-      "src" && JAM.instanceof(node.obj, _HTMLImageElement) && __RegExp_prototype_test_call_bind__RegExp_prototype_test_(/^\s*(http|ftp)/i, node.value) || node.id === "src" && JAM.instanceof(node.obj, _HTMLInputElement) && __RegExp_prototype_test_call_bind__RegExp_prototype_test_(/^\s*(http|ftp)/i, node.value) || node.id === "src" && JAM.instanceof(node.obj, _HTMLScriptElement) && __RegExp_prototype_test_call_bind__RegExp_prototype_test_(/^\s*(http|ftp)/i, node.value) || node.id === "src" && JAM.instanceof(node.obj, 
-      _HTMLSourceElement) && __RegExp_prototype_test_call_bind__RegExp_prototype_test_(/^\s*(http|ftp)/i, node.value) || node.id === "src" && JAM.instanceof(node.obj, _HTMLVideoElement) && __RegExp_prototype_test_call_bind__RegExp_prototype_test_(/^\s*(http|ftp)/i, node.value)) {
+      if (node.id === "src" && JAM.instanceof(node.obj, _HTMLElement) && __RegExp_prototype_test_call_bind__RegExp_prototype_test_(/^\s*(http|ftp)/i, node.value)) {
         commit = false;
         break;
       }
@@ -103,17 +77,17 @@ var policy = function() {
       JAM.prevent(tx);
     }
   }
-  p8.subsumedBy = pFull;
-  p8.itype = "write";
-  Object.freeze(p8);
-  function p41(tx) {
+  p1.subsumedBy = pFull;
+  p1.itype = "write";
+  Object.freeze(p1);
+  function p21(tx) {
     var commit = true;
     var as = tx.getCallSequence();
     var len = as.length;
     for (var i = 0;i < len;i++) {
       var node = as[i];
-      if (JAM.identical(node.value, _HTMLDocument_prototype_write) && (node.argc > 0 && typeof node.args[0] === "string") || JAM.identical(node.value, _HTMLDocument_prototype_writeln) && (node.argc > 0 && typeof node.args[0] === "string") || JAM.identical(node.value, _Window_prototype_open) && (node.argc > 0 && !JAM.identical(node.args[0], _undefined)) || JAM.identical(node.value, _Window_prototype_openDialog) && (node.argc > 0 && !JAM.identical(node.args[0], _undefined)) || JAM.identical(node.value, 
-      _WebSocket) && (node.argc > 0 && __RegExp_prototype_test_call_bind__RegExp_prototype_test_(/^ws:\/\//i, node.args[0])) || JAM.identical(node.value, _HTMLFormElement_prototype_setAttribute) && (node.argc > 0 && JAM.identical(node.args[0], "action"))) {
+      if (JAM.identical(node.value, _HTMLDocument_prototype_write) && (node.argc > 0 && typeof node.args[0] === "string") || JAM.identical(node.value, _HTMLDocument_prototype_writeln) && (node.argc > 0 && typeof node.args[0] === "string") || JAM.identical(node.value, _Window_prototype_open) && (node.argc > 0 && node.args[0] !== _undefined) || JAM.identical(node.value, _Window_prototype_openDialog) && (node.argc > 0 && node.args[0] !== _undefined) || JAM.identical(node.value, _WebSocket) && (node.argc > 
+      0 && __RegExp_prototype_test_call_bind__RegExp_prototype_test_(/^ws:\/\//i, node.args[0]))) {
         commit = false;
         break;
       }
@@ -124,17 +98,17 @@ var policy = function() {
       JAM.prevent(tx);
     }
   }
-  p41.subsumedBy = pFull;
-  p41.itype = "invoke";
-  Object.freeze(p41);
-  function p26(tx) {
+  p21.subsumedBy = pFull;
+  p21.itype = "invoke";
+  Object.freeze(p21);
+  function p19(tx) {
     var commit = true;
     var as = tx.getCallSequence();
     var len = as.length;
     for (var i = 0;i < len;i++) {
       var node = as[i];
-      if (JAM.identical(node.value, _HTMLDocument_prototype_write) && (node.argc > 0 && typeof node.args[0] === "string") || JAM.identical(node.value, _HTMLDocument_prototype_writeln) && (node.argc > 0 && typeof node.args[0] === "string") || JAM.identical(node.value, _XMLHttpRequest_prototype_open) && node.argc > 1 || JAM.identical(node.value, _Window_prototype_open) && (node.argc > 0 && !JAM.identical(node.args[0], _undefined)) || JAM.identical(node.value, _Window_prototype_openDialog) && (node.argc > 
-      0 && !JAM.identical(node.args[0], _undefined)) || JAM.identical(node.value, _Window_prototype_postMessage) && node.argc > 1) {
+      if (JAM.identical(node.value, _HTMLDocument_prototype_write) && (node.argc > 0 && typeof node.args[0] === "string") || JAM.identical(node.value, _HTMLDocument_prototype_writeln) && (node.argc > 0 && typeof node.args[0] === "string") || JAM.identical(node.value, _XMLHttpRequest_prototype_open) && node.argc > 1 || JAM.identical(node.value, _Window_prototype_open) && (node.argc > 0 && node.args[0] !== _undefined) || JAM.identical(node.value, _Window_prototype_openDialog) && (node.argc > 0 && node.args[0] !== 
+      _undefined) || JAM.identical(node.value, _Window_prototype_postMessage) && node.argc > 1) {
         commit = false;
         break;
       }
@@ -145,103 +119,18 @@ var policy = function() {
       JAM.prevent(tx);
     }
   }
-  p26.subsumedBy = pFull;
-  p26.itype = "invoke";
-  Object.freeze(p26);
-  function p40(tx) {
-    var commit = true;
-    var as = tx.getCallSequence();
-    var len = as.length;
-    for (var i = 0;i < len;i++) {
-      var node = as[i];
-      if (JAM.identical(node.value, _HTMLDocument_prototype_write) && (node.argc > 0 && typeof node.args[0] === "string") || JAM.identical(node.value, _HTMLDocument_prototype_writeln) && (node.argc > 0 && typeof node.args[0] === "string") || JAM.identical(node.value, _XMLHttpRequest_prototype_open) && node.argc > 1 || JAM.identical(node.value, _Window_prototype_open) && (node.argc > 0 && !JAM.identical(node.args[0], _undefined)) || JAM.identical(node.value, _Window_prototype_openDialog) && (node.argc > 
-      0 && !JAM.identical(node.args[0], _undefined)) || JAM.identical(node.value, _Window_prototype_postMessage) && node.argc > 1 || JAM.identical(node.value, _WebSocket) && (node.argc > 0 && __RegExp_prototype_test_call_bind__RegExp_prototype_test_(/^ws:\/\//i, node.args[0])) || JAM.identical(node.value, _HTMLAudioElement_prototype_setAttribute) && (node.argc > 0 && JAM.identical(node.args[0], "src")) && (node.argc > 1 && __RegExp_prototype_test_call_bind__RegExp_prototype_test_(/^\s*(http|ftp)/i, 
-      node.args[1])) || JAM.identical(node.value, _HTMLFrameElement_prototype_setAttribute) && (node.argc > 0 && JAM.identical(node.args[0], "src")) && (node.argc > 1 && __RegExp_prototype_test_call_bind__RegExp_prototype_test_(/^\s*(http|ftp)/i, node.args[1])) || JAM.identical(node.value, _HTMLIFrameElement_prototype_setAttribute) && (node.argc > 0 && JAM.identical(node.args[0], "src")) && (node.argc > 1 && __RegExp_prototype_test_call_bind__RegExp_prototype_test_(/^\s*(http|ftp)/i, node.args[1])) || 
-      JAM.identical(node.value, _HTMLImageElement_prototype_setAttribute) && (node.argc > 0 && JAM.identical(node.args[0], "src")) && (node.argc > 1 && __RegExp_prototype_test_call_bind__RegExp_prototype_test_(/^\s*(http|ftp)/i, node.args[1])) || JAM.identical(node.value, _HTMLInputElement_prototype_setAttribute) && (node.argc > 0 && JAM.identical(node.args[0], "src")) && (node.argc > 1 && __RegExp_prototype_test_call_bind__RegExp_prototype_test_(/^\s*(http|ftp)/i, node.args[1])) || JAM.identical(node.value, 
-      _HTMLScriptElement_prototype_setAttribute) && (node.argc > 0 && JAM.identical(node.args[0], "src")) && (node.argc > 1 && __RegExp_prototype_test_call_bind__RegExp_prototype_test_(/^\s*(http|ftp)/i, node.args[1])) || JAM.identical(node.value, _HTMLSourceElement_prototype_setAttribute) && (node.argc > 0 && JAM.identical(node.args[0], "src")) && (node.argc > 1 && __RegExp_prototype_test_call_bind__RegExp_prototype_test_(/^\s*(http|ftp)/i, node.args[1])) || JAM.identical(node.value, _HTMLVideoElement_prototype_setAttribute) && 
-      (node.argc > 0 && JAM.identical(node.args[0], "src")) && (node.argc > 1 && __RegExp_prototype_test_call_bind__RegExp_prototype_test_(/^\s*(http|ftp)/i, node.args[1])) || JAM.identical(node.value, _HTMLFormElement_prototype_setAttribute) && (node.argc > 0 && JAM.identical(node.args[0], "action"))) {
-        commit = false;
-        break;
-      }
-    }
-    if (commit) {
-      JAM.process(tx);
-    } else {
-      JAM.prevent(tx);
-    }
-  }
-  p40.subsumedBy = pFull;
-  p40.itype = "invoke";
-  Object.freeze(p40);
-  function p42(tx) {
-    var commit = true;
-    var as = tx.getCallSequence();
-    var len = as.length;
-    for (var i = 0;i < len;i++) {
-      var node = as[i];
-      if (JAM.identical(node.value, _HTMLDocument_prototype_write) && (node.argc > 0 && typeof node.args[0] === "string") || JAM.identical(node.value, _HTMLDocument_prototype_writeln) && (node.argc > 0 && typeof node.args[0] === "string") || JAM.identical(node.value, _XMLHttpRequest_prototype_open) && node.argc > 1 || JAM.identical(node.value, _Window_prototype_open) && (node.argc > 0 && !JAM.identical(node.args[0], _undefined)) || JAM.identical(node.value, _Window_prototype_openDialog) && (node.argc > 
-      0 && !JAM.identical(node.args[0], _undefined)) || JAM.identical(node.value, _Window_prototype_postMessage) && node.argc > 1 || JAM.identical(node.value, _WebSocket) && (node.argc > 0 && __RegExp_prototype_test_call_bind__RegExp_prototype_test_(/^ws:\/\//i, node.args[0])) || JAM.identical(node.value, _HTMLFormElement_prototype_setAttribute) && (node.argc > 0 && JAM.identical(node.args[0], "action"))) {
-        commit = false;
-        break;
-      }
-    }
-    if (commit) {
-      JAM.process(tx);
-    } else {
-      JAM.prevent(tx);
-    }
-  }
-  p42.subsumedBy = pFull;
-  p42.itype = "invoke";
-  Object.freeze(p42);
-  function p24(tx) {
-    var commit = true;
-    var as = tx.getCallSequence();
-    var len = as.length;
-    for (var i = 0;i < len;i++) {
-      var node = as[i];
-      if (JAM.identical(node.value, _HTMLDocument_prototype_write) && (node.argc > 0 && typeof node.args[0] === "string") || JAM.identical(node.value, _HTMLDocument_prototype_writeln) && (node.argc > 0 && typeof node.args[0] === "string") || JAM.identical(node.value, _Window_prototype_open) && (node.argc > 0 && !JAM.identical(node.args[0], _undefined)) || JAM.identical(node.value, _Window_prototype_openDialog) && (node.argc > 0 && !JAM.identical(node.args[0], _undefined))) {
-        commit = false;
-        break;
-      }
-    }
-    if (commit) {
-      JAM.process(tx);
-    } else {
-      JAM.prevent(tx);
-    }
-  }
-  p24.subsumedBy = pFull;
-  p24.itype = "invoke";
-  Object.freeze(p24);
-  function p30(tx) {
-    var commit = true;
-    var as = tx.getCallSequence();
-    var len = as.length;
-    for (var i = 0;i < len;i++) {
-      var node = as[i];
-      if (JAM.identical(node.value, _XMLHttpRequest_prototype_open) && node.argc > 1 || JAM.identical(node.value, _Window_prototype_open) && (node.argc > 0 && !JAM.identical(node.args[0], _undefined)) || JAM.identical(node.value, _Window_prototype_openDialog) && (node.argc > 0 && !JAM.identical(node.args[0], _undefined)) || JAM.identical(node.value, _Window_prototype_postMessage) && node.argc > 1 || JAM.identical(node.value, _WebSocket) && (node.argc > 0 && __RegExp_prototype_test_call_bind__RegExp_prototype_test_(/^ws:\/\//i, 
-      node.args[0]))) {
-        commit = false;
-        break;
-      }
-    }
-    if (commit) {
-      JAM.process(tx);
-    } else {
-      JAM.prevent(tx);
-    }
-  }
-  p30.subsumedBy = pFull;
-  p30.itype = "invoke";
-  Object.freeze(p30);
+  p19.subsumedBy = pFull;
+  p19.itype = "invoke";
+  Object.freeze(p19);
   function p27(tx) {
     var commit = true;
     var as = tx.getCallSequence();
     var len = as.length;
     for (var i = 0;i < len;i++) {
       var node = as[i];
-      if (JAM.identical(node.value, _XMLHttpRequest_prototype_open) && node.argc > 1 || JAM.identical(node.value, _Window_prototype_open) && (node.argc > 0 && !JAM.identical(node.args[0], _undefined)) || JAM.identical(node.value, _Window_prototype_openDialog) && (node.argc > 0 && !JAM.identical(node.args[0], _undefined)) || JAM.identical(node.value, _Window_prototype_postMessage) && node.argc > 1) {
+      if (JAM.identical(node.value, _HTMLDocument_prototype_write) && (node.argc > 0 && typeof node.args[0] === "string") || JAM.identical(node.value, _HTMLDocument_prototype_writeln) && (node.argc > 0 && typeof node.args[0] === "string") || JAM.identical(node.value, _XMLHttpRequest_prototype_open) && node.argc > 1 || JAM.identical(node.value, _Window_prototype_open) && (node.argc > 0 && node.args[0] !== _undefined) || JAM.identical(node.value, _Window_prototype_openDialog) && (node.argc > 0 && node.args[0] !== 
+      _undefined) || JAM.identical(node.value, _Window_prototype_postMessage) && node.argc > 1 || JAM.identical(node.value, _WebSocket) && (node.argc > 0 && __RegExp_prototype_test_call_bind__RegExp_prototype_test_(/^ws:\/\//i, node.args[0])) || true && node.value["name"] === "setAttribute" && (node.argc > 0 && node.args[0] === "src") && (node.argc > 1 && __RegExp_prototype_test_call_bind__RegExp_prototype_test_(/^\s*(http|ftp)/i, node.args[1])) || JAM.identical(node.value, _HTMLFormElement_prototype_setAttribute) && 
+      (node.argc > 0 && node.args[0] === "action") && node.argc > 1) {
         commit = false;
         break;
       }
@@ -255,13 +144,55 @@ var policy = function() {
   p27.subsumedBy = pFull;
   p27.itype = "invoke";
   Object.freeze(p27);
+  function p17(tx) {
+    var commit = true;
+    var as = tx.getCallSequence();
+    var len = as.length;
+    for (var i = 0;i < len;i++) {
+      var node = as[i];
+      if (JAM.identical(node.value, _HTMLDocument_prototype_write) && (node.argc > 0 && typeof node.args[0] === "string") || JAM.identical(node.value, _HTMLDocument_prototype_writeln) && (node.argc > 0 && typeof node.args[0] === "string") || JAM.identical(node.value, _Window_prototype_open) && (node.argc > 0 && node.args[0] !== _undefined) || JAM.identical(node.value, _Window_prototype_openDialog) && (node.argc > 0 && node.args[0] !== _undefined)) {
+        commit = false;
+        break;
+      }
+    }
+    if (commit) {
+      JAM.process(tx);
+    } else {
+      JAM.prevent(tx);
+    }
+  }
+  p17.subsumedBy = pFull;
+  p17.itype = "invoke";
+  Object.freeze(p17);
+  function p28(tx) {
+    var commit = true;
+    var as = tx.getCallSequence();
+    var len = as.length;
+    for (var i = 0;i < len;i++) {
+      var node = as[i];
+      if (JAM.identical(node.value, _HTMLDocument_prototype_write) && (node.argc > 0 && typeof node.args[0] === "string") || JAM.identical(node.value, _HTMLDocument_prototype_writeln) && (node.argc > 0 && typeof node.args[0] === "string") || JAM.identical(node.value, _XMLHttpRequest_prototype_open) && node.argc > 1 || JAM.identical(node.value, _Window_prototype_open) && (node.argc > 0 && node.args[0] !== _undefined) || JAM.identical(node.value, _Window_prototype_openDialog) && (node.argc > 0 && node.args[0] !== 
+      _undefined) || JAM.identical(node.value, _Window_prototype_postMessage) && node.argc > 1 || JAM.identical(node.value, _WebSocket) && (node.argc > 0 && __RegExp_prototype_test_call_bind__RegExp_prototype_test_(/^ws:\/\//i, node.args[0])) || JAM.identical(node.value, _HTMLFormElement_prototype_setAttribute) && (node.argc > 0 && node.args[0] === "action") && node.argc > 1) {
+        commit = false;
+        break;
+      }
+    }
+    if (commit) {
+      JAM.process(tx);
+    } else {
+      JAM.prevent(tx);
+    }
+  }
+  p28.subsumedBy = pFull;
+  p28.itype = "invoke";
+  Object.freeze(p28);
   function p23(tx) {
     var commit = true;
     var as = tx.getCallSequence();
     var len = as.length;
     for (var i = 0;i < len;i++) {
       var node = as[i];
-      if (JAM.identical(node.value, _Window_prototype_open) && (node.argc > 0 && !JAM.identical(node.args[0], _undefined)) || JAM.identical(node.value, _Window_prototype_openDialog) && (node.argc > 0 && !JAM.identical(node.args[0], _undefined))) {
+      if (JAM.identical(node.value, _XMLHttpRequest_prototype_open) && node.argc > 1 || JAM.identical(node.value, _Window_prototype_open) && (node.argc > 0 && node.args[0] !== _undefined) || JAM.identical(node.value, _Window_prototype_openDialog) && (node.argc > 0 && node.args[0] !== _undefined) || JAM.identical(node.value, _Window_prototype_postMessage) && node.argc > 1 || JAM.identical(node.value, _WebSocket) && (node.argc > 0 && __RegExp_prototype_test_call_bind__RegExp_prototype_test_(/^ws:\/\//i, 
+      node.args[0]))) {
         commit = false;
         break;
       }
@@ -275,13 +206,13 @@ var policy = function() {
   p23.subsumedBy = pFull;
   p23.itype = "invoke";
   Object.freeze(p23);
-  function p31(tx) {
+  function p20(tx) {
     var commit = true;
     var as = tx.getCallSequence();
     var len = as.length;
     for (var i = 0;i < len;i++) {
       var node = as[i];
-      if (JAM.identical(node.value, _Window_prototype_open) && (node.argc > 0 && !JAM.identical(node.args[0], _undefined)) || JAM.identical(node.value, _Window_prototype_openDialog) && (node.argc > 0 && !JAM.identical(node.args[0], _undefined)) || JAM.identical(node.value, _WebSocket) && (node.argc > 0 && __RegExp_prototype_test_call_bind__RegExp_prototype_test_(/^ws:\/\//i, node.args[0]))) {
+      if (JAM.identical(node.value, _XMLHttpRequest_prototype_open) && node.argc > 1 || JAM.identical(node.value, _Window_prototype_open) && (node.argc > 0 && node.args[0] !== _undefined) || JAM.identical(node.value, _Window_prototype_openDialog) && (node.argc > 0 && node.args[0] !== _undefined) || JAM.identical(node.value, _Window_prototype_postMessage) && node.argc > 1) {
         commit = false;
         break;
       }
@@ -292,8 +223,68 @@ var policy = function() {
       JAM.prevent(tx);
     }
   }
-  p31.subsumedBy = pFull;
-  p31.itype = "invoke";
-  Object.freeze(p31);
-  return{p13:p13, p8:p8, p41:p41, p26:p26, p40:p40, p42:p42, p24:p24, p30:p30, p27:p27, p23:p23, p31:p31, pFull:pFull, woven:true};
+  p20.subsumedBy = pFull;
+  p20.itype = "invoke";
+  Object.freeze(p20);
+  function p16(tx) {
+    var commit = true;
+    var as = tx.getCallSequence();
+    var len = as.length;
+    for (var i = 0;i < len;i++) {
+      var node = as[i];
+      if (JAM.identical(node.value, _Window_prototype_open) && (node.argc > 0 && node.args[0] !== _undefined) || JAM.identical(node.value, _Window_prototype_openDialog) && (node.argc > 0 && node.args[0] !== _undefined)) {
+        commit = false;
+        break;
+      }
+    }
+    if (commit) {
+      JAM.process(tx);
+    } else {
+      JAM.prevent(tx);
+    }
+  }
+  p16.subsumedBy = pFull;
+  p16.itype = "invoke";
+  Object.freeze(p16);
+  function p24(tx) {
+    var commit = true;
+    var as = tx.getCallSequence();
+    var len = as.length;
+    for (var i = 0;i < len;i++) {
+      var node = as[i];
+      if (JAM.identical(node.value, _Window_prototype_open) && (node.argc > 0 && node.args[0] !== _undefined) || JAM.identical(node.value, _Window_prototype_openDialog) && (node.argc > 0 && node.args[0] !== _undefined) || JAM.identical(node.value, _WebSocket) && (node.argc > 0 && __RegExp_prototype_test_call_bind__RegExp_prototype_test_(/^ws:\/\//i, node.args[0]))) {
+        commit = false;
+        break;
+      }
+    }
+    if (commit) {
+      JAM.process(tx);
+    } else {
+      JAM.prevent(tx);
+    }
+  }
+  p24.subsumedBy = pFull;
+  p24.itype = "invoke";
+  Object.freeze(p24);
+  function p26(tx) {
+    var commit = true;
+    var as = tx.getCallSequence();
+    var len = as.length;
+    for (var i = 0;i < len;i++) {
+      var node = as[i];
+      if (true && node.value["name"] === "setAttribute" && (node.argc > 0 && node.args[0] === "src") && (node.argc > 1 && __RegExp_prototype_test_call_bind__RegExp_prototype_test_(/^\s*(http|ftp)/i, node.args[1]))) {
+        commit = false;
+        break;
+      }
+    }
+    if (commit) {
+      JAM.process(tx);
+    } else {
+      JAM.prevent(tx);
+    }
+  }
+  p26.subsumedBy = pFull;
+  p26.itype = "invoke";
+  Object.freeze(p26);
+  return{p6:p6, p1:p1, p21:p21, p19:p19, p27:p27, p17:p17, p28:p28, p23:p23, p20:p20, p16:p16, p24:p24, p26:p26, pFull:pFull, woven:true};
 }()

@@ -5,7 +5,7 @@ var policy = function() {
     var len = as.length;
     for (var i = 0;i < len;i++) {
       var node = as[i];
-      if (node.id === "x" && JAM.identical(node.value, 2)) {
+      if (node.id === "x" && node.value === 2) {
         commit = false;
         break;
       }
@@ -25,7 +25,7 @@ var policy = function() {
     var len = as.length;
     for (var i = 0;i < len;i++) {
       var node = as[i];
-      if (node.id === "x" && JAM.identical(node.value, 2)) {
+      if (node.id === "x" && node.value === 2) {
         commit = false;
         break;
       }

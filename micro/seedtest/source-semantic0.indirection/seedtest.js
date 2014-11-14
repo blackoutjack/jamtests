@@ -6,7 +6,7 @@ function runTest() {
   var c = [];
   c[a] = 0;
   c[b] = 1;
-  JAM.set(c, d, 3);
+  c[d] = 3;
   c[e] = 4
 
   return c.fine === 3;

@@ -4303,7 +4303,7 @@ function v583() {
     var d$$66 = 0;
     var v1213 = d$$66 < b$$266;
     for (;v1213;) {
-      JAM.set(c$$134, arguments[d$$66], !0);
+      c$$134[arguments[d$$66]] = !0;
       d$$66++;
       v1213 = d$$66 < b$$266;
     }
@@ -4399,7 +4399,7 @@ function v583() {
         }
         v1227 = v3958;
       }
-      JAM.set(hc$$1, a$$529, 0 <= b$$267);
+      hc$$1[a$$529] = 0 <= b$$267;
     }
     return;
   }
@@ -5831,7 +5831,7 @@ function v583() {
         zf$$1[a$$664] = v7600;
         var v7601 = JAM.call("ABCDEFGHIJKLMNOPQRSTUVWXYZabcdefghijklmnopqrstuvwxyz0123456789-_."[C$$1], "ABCDEFGHIJKLMNOPQRSTUVWXYZabcdefghijklmnopqrstuvwxyz0123456789-_.", [a$$664], JAM.policy.p1);
         Af$$1[a$$664] = v7601;
-        JAM.set(Bf$$1, Af$$1[a$$664], a$$664);
+        Bf$$1[Af$$1[a$$664]] = a$$664;
         a$$664++;
         v1466 = 65 > a$$664;
       }
@@ -7361,7 +7361,7 @@ function v583() {
           var v7044 = c$$193;
           c$$193 = c$$193 + 1;
           v7043[v7044] = d$$105;
-          JAM.set(e$$65, d$$105, 1);
+          e$$65[d$$105] = 1;
         }
         b$$354++;
         v1685 = b$$354 < a$$726.b[P$$1];
@@ -9290,7 +9290,7 @@ function v583() {
       var v1933 = m$$6 < q$$6;
       for (;v1933;) {
         JAM.set(a$$789.b, e$$81, c$$227[m$$6]);
-        JAM.set(a$$789.b, f$$47, m$$6);
+        a$$789.b[f$$47] = m$$6;
         var r$$5 = Ch$$1(a$$789, k$$13, n$$9);
         JAM.call(d$$127[L$$1], d$$127, [JAM.call(v$$1, null, [r$$5], JAM.policy.p1)], JAM.policy.p1);
         ++m$$6;
@@ -9813,7 +9813,7 @@ function v583() {
         d$$139 = e$$90[b$$421];
         var v4546 = d$$139 in c$$244.f;
         if (!v4546) {
-          JAM.set(c$$244.f, d$$139, !0);
+          c$$244.f[d$$139] = !0;
           var v7327 = c$$244.n;
           var v6704 = -1 == JAM.call(v7327[O$$1], v7327, [d$$139], JAM.policy.p1);
           if (v6704) {
@@ -11516,7 +11516,7 @@ function v583() {
     var d$$167 = me$$1(b$$468);
     var e$$111 = a$$893.Aa;
     if (!e$$111[d$$167]) {
-      JAM.set(e$$111, d$$167, !0);
+      e$$111[d$$167] = !0;
       var f$$64 = v405;
       var g$$45 = JAM.call(h$$8[Na$$1], h$$8, [f$$64, 1E4], JAM.policy.p1);
       Ol$$1(a$$893.ya, b$$468, c$$277, JAM.call(Cb$$1, null, [v406, a$$893], JAM.policy.p1));
@@ -12792,7 +12792,7 @@ function v352() {
     var d$$61 = 0;
     var v2571 = d$$61 < Bg(hl.B, 8);
     for (;v2571;) {
-      JAM.set(wl, vl(d$$61), !0);
+      wl[vl(d$$61)] = !0;
       ++d$$61;
       v2571 = d$$61 < Bg(hl.B, 8);
     }
@@ -16006,7 +16006,7 @@ function v352() {
     }
     var v3025 = a$$125.F[b$$95];
     if (!v3025) {
-      JAM.set(a$$125.F, b$$95, !0);
+      a$$125.F[b$$95] = !0;
       var v6307 = a$$125.A;
       JAM.call(v6307.lf, v6307, [v30], JAM.policy.p1);
     }

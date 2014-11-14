@@ -5,7 +5,7 @@ function runTest() {
   var o = {a:1, b:2, c:v0, d:"z"};
   with(o) {
     var x = c[d];
-    JAM.set(c, d, 9);
+    c[d] = 9;
     b = 3;
     var a = 21;
     var e = 22;

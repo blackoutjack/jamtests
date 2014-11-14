@@ -1,7 +1,7 @@
 predicate-limit:3
 syntax-only:false
 func-scope.original.js:51
-func-scope.normalized.js:67
+func-scope.normalized.js:61
 policy.aut:6
 allFunctions:2
 allCallsites:4
@@ -15,8 +15,8 @@ callbacks-added-edges:63
 callbacks-added-states:43
 concrete-query-cache:concrete-1290948723.bin
 symbolic-query-cache:symbolic-1290948723.bin
-modular.policy.js:100
-policy.js:102
+modular.policy.js:97
+policy.js:99
 transactions:0
 checks:0
 callsites-indirected:0

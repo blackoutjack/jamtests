@@ -5,7 +5,7 @@ var policy = function() {
     var len = as.length;
     for (var i = 0;i < len;i++) {
       var node = as[i];
-      if (node.id === "textContent" && JAM.identical(node.obj["className"], "read-only")) {
+      if (node.id === "textContent" && node.obj["className"] === "read-only") {
         commit = false;
         break;
       }
@@ -25,7 +25,7 @@ var policy = function() {
     var len = as.length;
     for (var i = 0;i < len;i++) {
       var node = as[i];
-      if (node.id === "textContent" && JAM.identical(node.obj["className"], "read-only")) {
+      if (node.id === "textContent" && node.obj["className"] === "read-only") {
         commit = false;
         break;
       }

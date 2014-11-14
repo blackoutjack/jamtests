@@ -37,7 +37,7 @@ function next() {
     window.setTimeout(next, 0);
   } else {
     if ((currentRepeat = currentRepeat + 1) < repeatCount) {
-      JAM.set(document.getElementById("countdown"), "innerHTML", repeatCount - currentRepeat);
+      document.getElementById("countdown").innerHTML = repeatCount - currentRepeat;
       testIndex = -1;
       window.setTimeout(next, 128);
     } else {

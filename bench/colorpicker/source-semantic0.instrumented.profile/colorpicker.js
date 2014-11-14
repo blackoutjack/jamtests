@@ -5047,9 +5047,7 @@ function v363(window$$1, undefined$$1) {
       var v4106 = encodeURIComponent(key$$20);
       var v2999 = v4106 + "=";
       var v3000 = encodeURIComponent(value$$44);
-      introspect(JAM.policy.p2) {
-        v1184[v1185] = v2999 + v3000;
-      }
+      v1184[v1185] = v2999 + v3000;
       return;
     }
     var s$$5 = [];
@@ -9160,9 +9158,7 @@ function v363(window$$1, undefined$$1) {
             }
           } else {
             if (inplace$$1) {
-              introspect(JAM.policy.p2) {
-                curLoop$$1[i$$44] = false;
-              }
+              curLoop$$1[i$$44] = false;
             }
           }
         }
@@ -9303,9 +9299,7 @@ function v363(window$$1, undefined$$1) {
             } else {
               v1695 = false;
             }
-            introspect(JAM.policy.p2) {
-              checkSet$$4[i$$42] = v1695;
-            }
+            checkSet$$4[i$$42] = v1695;
           }
           i$$42++;
           v1696 = i$$42 < l$$12;
@@ -9326,9 +9320,7 @@ function v363(window$$1, undefined$$1) {
               var v3320 = elem$$38.parentNode;
               v1697 = v3320 === part$$1;
             }
-            introspect(JAM.policy.p2) {
-              checkSet$$4[i$$42] = v1697;
-            }
+            checkSet$$4[i$$42] = v1697;
           }
           i$$42++;
           v1698 = i$$42 < l$$12;
@@ -9397,9 +9389,7 @@ function v363(window$$1, undefined$$1) {
           } else {
             v1704 = elem$$37 === part;
           }
-          introspect(JAM.policy.p2) {
-            checkSet$$3[i$$41] = v1704;
-          }
+          checkSet$$3[i$$41] = v1704;
         }
         i$$41++;
         v1706 = i$$41 < l$$11;
@@ -9511,9 +9501,7 @@ function v363(window$$1, undefined$$1) {
                     if (pass$$2) {
                       anyFound = true;
                     } else {
-                      introspect(JAM.policy.p2) {
-                        curLoop[i$$40] = false;
-                      }
+                      curLoop[i$$40] = false;
                     }
                   } else {
                     if (pass$$2) {
@@ -10167,9 +10155,7 @@ function v363(window$$1, undefined$$1) {
               elem$$34 = elem$$34[dir];
             }
           }
-          introspect(JAM.policy.p2) {
-            checkSet[i$$35] = match$$4;
-          }
+          checkSet[i$$35] = match$$4;
         }
         i$$35++;
         v1792 = i$$35 < l$$8;
@@ -10230,9 +10216,7 @@ function v363(window$$1, undefined$$1) {
               elem$$35 = elem$$35[dir$$1];
             }
           }
-          introspect(JAM.policy.p2) {
-            checkSet$$1[i$$36] = match$$5;
-          }
+          checkSet$$1[i$$36] = match$$5;
         }
         i$$36++;
         v1800 = i$$36 < l$$9;
@@ -13306,9 +13290,7 @@ function v363(window$$1, undefined$$1) {
       var v2200 = value$$29 != null;
       if (v2200) {
         var v2199 = ret$$5.length;
-        introspect(JAM.policy.p2) {
-          ret$$5[v2199] = value$$29;
-        }
+        ret$$5[v2199] = value$$29;
       }
       i$$13++;
       v2201 = i$$13 < length$$16;

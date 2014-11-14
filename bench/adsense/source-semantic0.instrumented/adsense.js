@@ -132,14 +132,10 @@ function v254() {
       for (;v271;) {
         var v2101 = Qh;
         var v5040 = "ABCDEFGHIJKLMNOPQRSTUVWXYZabcdefghijklmnopqrstuvwxyz0123456789+/=".charAt(a$$inline_643);
-        introspect(JAM.policy.p2) {
-          v2101[a$$inline_643] = v5040;
-        }
+        v2101[a$$inline_643] = v5040;
         var v2102 = Rh;
         var v5041 = "ABCDEFGHIJKLMNOPQRSTUVWXYZabcdefghijklmnopqrstuvwxyz0123456789-_.".charAt(a$$inline_643);
-        introspect(JAM.policy.p2) {
-          v2102[a$$inline_643] = v5041;
-        }
+        v2102[a$$inline_643] = v5041;
         a$$inline_643++;
         v271 = 65 > a$$inline_643;
       }
@@ -4135,9 +4131,7 @@ function v254() {
           }
           var v2424 = !v746;
           if (v2424) {
-            introspect(JAM.policy.p2) {
-              b$$inline_796[f$$inline_800] = {};
-            }
+            b$$inline_796[f$$inline_800] = {};
           }
           var h$$inline_802 = "";
           var k$$inline_803 = 0;
@@ -4174,9 +4168,7 @@ function v254() {
             v748 = k$$inline_803 < v2427;
           }
           h$$inline_802 = h$$inline_802.slice(1);
-          introspect(JAM.policy.p2) {
-            e$$inline_799[f$$inline_800] = h$$inline_802;
-          }
+          e$$inline_799[f$$inline_800] = h$$inline_802;
           var v749 = "" != h$$inline_802;
           if (v749) {
             d$$inline_798 = f$$inline_800;
@@ -10803,7 +10795,7 @@ function v254() {
       var d$$67 = 0;
       var v1359 = d$$67 < b$$146;
       for (;v1359;) {
-        introspect(JAM.policy.p5) {
+        introspect(JAM.policy.p4) {
           c$$103[d$$67] = a$$183[d$$67];
         }
         d$$67++;
@@ -11534,9 +11526,7 @@ function v254() {
         }
         JSCompiler_temp$$25 = JSCompiler_temp$$26;
       }
-      introspect(JAM.policy.p2) {
-        b$$104[JSCompiler_temp_const$$24] = JSCompiler_temp$$25;
-      }
+      b$$104[JSCompiler_temp_const$$24] = JSCompiler_temp$$25;
       c$$69++;
       var v3035 = a$$131.length;
       v1433 = c$$69 < v3035;
@@ -14737,9 +14727,7 @@ function v22() {
                 }
                 u = r;
               }
-              introspect(JAM.policy.p2) {
-                x$$48[B] = u;
-              }
+              x$$48[B] = u;
               k$$1++;
               var v3308 = f$$5.length;
               v1930 = k$$1 < v3308;

@@ -384,9 +384,7 @@ function v98(containerId, targetId, correction$$1) {
   }
   var v718 = v1104;
   var v719 = JAM.call(setInterval, null, [v97, 15]);
-  introspect(JAM.policy.p2) {
-    v168[v169] = {targetPos:currentPos, direction:v718, intervalId:v719};
-  }
+  v168[v169] = {targetPos:currentPos, direction:v718, intervalId:v719};
   var v720 = this.intervals;
   var v170 = v720[intervalKey$$3];
   this.lastIntervalId = v170.intervalId;
@@ -438,9 +436,7 @@ function v95(id$$2, correction) {
   var v179 = intervalKey$$1;
   var v727 = dims.scrollTop;
   var v728 = JAM.call(setInterval, null, [v94, 15]);
-  introspect(JAM.policy.p2) {
-    v178[v179] = {scrollPos:v727, intervalId:v728};
-  }
+  v178[v179] = {scrollPos:v727, intervalId:v728};
   return;
 }
 function v93(intervalKey, targetPos) {
@@ -503,9 +499,7 @@ function v92(id$$1, callback$$27, constantSpeed, horiz$$1) {
   var v189 = this.intervals;
   var v190 = vars$$4.intervalKey;
   var v734 = JAM.call(setInterval, null, [v91, 40]);
-  introspect(JAM.policy.p2) {
-    v189[v190] = {intervalId:v734};
-  }
+  v189[v190] = {intervalId:v734};
   return;
 }
 function v90(vars$$3) {
@@ -601,9 +595,7 @@ function v89(id, callback$$26, horiz) {
   var v209 = this.intervals;
   var v210 = vars$$2.intervalKey;
   var v749 = JAM.call(setInterval, null, [v88, 40]);
-  introspect(JAM.policy.p2) {
-    v209[v210] = {newSize:0, intervalId:v749};
-  }
+  v209[v210] = {newSize:0, intervalId:v749};
   return;
 }
 function v87(vars$$1) {
@@ -896,7 +888,7 @@ function v80(element$$2, cb, callback$$25) {
   } else {
     var v787;
     var v1556 = element$$2.innerHTML;
-    var v1371 = JAM.set(element$$2, "innerHTML", v1556 - 1);
+    var v1371 = element$$2.innerHTML = v1556 - 1;
     var v1144 = v1371 == 0;
     if (v1144) {
       v787 = JAM.set(element$$2, "innerHTML", "");
@@ -969,9 +961,7 @@ function v77(obj$$20, maxLen) {
         var v796 = chunks$$1[i$$15];
         var v797 = startPos + diffLen;
         var v266 = v796.substr(v797);
-        introspect(JAM.policy.p2) {
-          chunks$$1[i$$15] = v265 + v266;
-        }
+        chunks$$1[i$$15] = v265 + v266;
         shortened = true;
       }
       i$$15++;
@@ -1735,9 +1725,7 @@ function v46(target$$26, s$$2, a$$1, oneLevelOnly) {
   for (;v384;) {
     var v372 = a$$1[i$$3];
     chunks = v372.match(/([a-z0-9_-]+)\s*([=^$*|!]{0,2})\s*"?([^"]*)"?$/i);
-    introspect(JAM.policy.p2) {
-      a$$1[i$$3] = chunks[1];
-    }
+    a$$1[i$$3] = chunks[1];
     var v383 = chunks[2];
     switch(v383) {
       case "=":
@@ -1747,9 +1735,7 @@ function v46(target$$26, s$$2, a$$1, oneLevelOnly) {
         var v1192 = "^" + v1385;
         var v881 = v1192 + "$";
         var v1631 = new RegExp(v881, "i");
-        introspect(JAM.policy.p2) {
-          v373[v374] = v1631;
-        }
+        v373[v374] = v1631;
         break;
       case "^=":
         var v375 = exprs$$1;
@@ -1757,9 +1743,7 @@ function v46(target$$26, s$$2, a$$1, oneLevelOnly) {
         var v1193 = chunks[3];
         var v882 = "^" + v1193;
         var v1632 = new RegExp(v882, "i");
-        introspect(JAM.policy.p2) {
-          v375[v376] = v1632;
-        }
+        v375[v376] = v1632;
         break;
       case "$=":
         var v377 = exprs$$1;
@@ -1767,18 +1751,14 @@ function v46(target$$26, s$$2, a$$1, oneLevelOnly) {
         var v1194 = chunks[3];
         var v883 = v1194 + "$";
         var v1633 = new RegExp(v883, "i");
-        introspect(JAM.policy.p2) {
-          v377[v378] = v1633;
-        }
+        v377[v378] = v1633;
         break;
       case "*=":
         var v379 = exprs$$1;
         var v380 = i$$3;
         var v884 = chunks[3];
         var v1634 = new RegExp(v884, "i");
-        introspect(JAM.policy.p2) {
-          v379[v380] = v1634;
-        }
+        v379[v380] = v1634;
         break;
       case "&=":
         var v381 = exprs$$1;
@@ -1796,15 +1776,10 @@ function v46(target$$26, s$$2, a$$1, oneLevelOnly) {
         var v1195 = v1386 + v1387;
         var v885 = v1195 + "$";
         var v1635 = new RegExp(v885, "i");
-        introspect(JAM.policy.p2) {
-          v381[v382] = v1635;
-        }
+        v381[v382] = v1635;
         break;
       case "!=":
-        introspect(JAM.policy.p2) {
-          exprs$$1[i$$3] = chunks[3];
-        }
-      ;
+        exprs$$1[i$$3] = chunks[3];
     }
     i$$3++;
     v384 = i$$3 < numA$$1;
@@ -2192,25 +2167,18 @@ function v42(selectorText) {
           ;
           case ",":
             inSelector = false;
-            introspect(JAM.policy.p2) {
-              separators[sI] = c$$1[i$$1];
-            }
+            separators[sI] = c$$1[i$$1];
             break;
           case "\\":
             var v918 = elements[sI];
             var v1219 = i$$1 = i$$1 + 1;
             var v919 = c$$1[v1219];
-            introspect(JAM.policy.p2) {
-              elements[sI] = v918 + v919;
-            }
+            elements[sI] = v918 + v919;
             break;
           default:
             var v920 = elements[sI];
             var v921 = c$$1[i$$1];
-            introspect(JAM.policy.p2) {
-              elements[sI] = v920 + v921;
-            }
-          ;
+            elements[sI] = v920 + v921;
         }
       }
     } else {
@@ -2223,20 +2191,13 @@ function v42(selectorText) {
         case ",":
           var v922 = separators[sI];
           var v923 = c$$1[i$$1];
-          introspect(JAM.policy.p2) {
-            separators[sI] = v922 + v923;
-          }
+          separators[sI] = v922 + v923;
           break;
         default:
           inSelector = true;
           var v431 = sI = sI + 1;
-          introspect(JAM.policy.p2) {
-            elements[v431] = c$$1[i$$1];
-          }
-          introspect(JAM.policy.p2) {
-            attrs[sI] = [];
-          }
-        ;
+          elements[v431] = c$$1[i$$1];
+          attrs[sI] = [];
       }
     }
     i$$1++;
@@ -2735,9 +2696,7 @@ function midoriDragDrop(containerId$$1, dropCallback) {
         var v508 = v974 == o$$9;
         if (v508) {
           var v507 = thisObj$$1.objs;
-          introspect(JAM.policy.p2) {
-            v507[j$$3] = "";
-          }
+          v507[j$$3] = "";
           break;
         }
         j$$3++;
@@ -2757,9 +2716,7 @@ function midoriDragDrop(containerId$$1, dropCallback) {
       var v512 = v975 == parentObj$$1;
       if (v512) {
         var v511 = this.objs;
-        introspect(JAM.policy.p2) {
-          v511[j$$3] = "";
-        }
+        v511[j$$3] = "";
         break;
       }
       j$$3++;

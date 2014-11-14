@@ -1,7 +1,7 @@
 predicate-limit:3
 syntax-only:false
 hanoi.original.js:297
-hanoi.normalized.js:438
+hanoi.normalized.js:435
 policy.aut:6
 allFunctions:5
 allCallsites:20
@@ -15,8 +15,8 @@ callbacks-added-edges:241
 callbacks-added-states:161
 concrete-query-cache:concrete-1722033318.bin
 symbolic-query-cache:symbolic-1722033318.bin
-modular.policy.js:100
-policy.js:102
+modular.policy.js:97
+policy.js:99
 transactions:0
 checks:0
 callsites-indirected:4

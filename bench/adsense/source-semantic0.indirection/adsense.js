@@ -130,14 +130,10 @@ function v254() {
       for (;v271;) {
         var v2101 = Qh;
         var v5040 = "ABCDEFGHIJKLMNOPQRSTUVWXYZabcdefghijklmnopqrstuvwxyz0123456789+/=".charAt(a$$inline_643);
-        introspect(JAM.policy.p2) {
-          v2101[a$$inline_643] = v5040;
-        }
+        v2101[a$$inline_643] = v5040;
         var v2102 = Rh;
         var v5041 = "ABCDEFGHIJKLMNOPQRSTUVWXYZabcdefghijklmnopqrstuvwxyz0123456789-_.".charAt(a$$inline_643);
-        introspect(JAM.policy.p2) {
-          v2102[a$$inline_643] = v5041;
-        }
+        v2102[a$$inline_643] = v5041;
         a$$inline_643++;
         v271 = 65 > a$$inline_643;
       }
@@ -1371,7 +1367,9 @@ function v254() {
           var v452 = v2215;
           if (v452) {
             var v3474 = d$$151.wasReactiveAdConfigReceived;
-            JAM.set(v3474, a$$456, !0, JAM.policy.p2);
+            introspect(JAM.policy.p2) {
+              v3474[a$$456] = !0;
+            }
             var v3475 = this.lc;
             JAM.call(e$$89.D, e$$89, [v3475]);
           }
@@ -4061,7 +4059,9 @@ function v254() {
             var v3592 = g$$inline_794 + "+";
             v741 = d$$inline_791 = d$$inline_791 + v3592;
           } else {
-            v741 = JAM.set(c$$inline_783, g$$inline_794, !0, JAM.policy.p2);
+            introspect(JAM.policy.p2) {
+              v741 = c$$inline_783[g$$inline_794] = !0;
+            }
           }
           v741;
           f$$inline_793++;
@@ -4091,9 +4091,7 @@ function v254() {
           }
           var v2424 = !v746;
           if (v2424) {
-            introspect(JAM.policy.p2) {
-              b$$inline_796[f$$inline_800] = {};
-            }
+            b$$inline_796[f$$inline_800] = {};
           }
           var h$$inline_802 = "";
           var k$$inline_803 = 0;
@@ -4119,7 +4117,9 @@ function v254() {
                 introspect(JAM.policy.p4) {
                   var v3593 = b$$inline_796[f$$inline_800]
                 }
-                v2426 = JAM.set(v3593, l$$inline_804, !0, JAM.policy.p2);
+                introspect(JAM.policy.p2) {
+                  v2426 = v3593[l$$inline_804] = !0;
+                }
               }
               v2426;
             }
@@ -4128,9 +4128,7 @@ function v254() {
             v748 = k$$inline_803 < v2427;
           }
           h$$inline_802 = h$$inline_802.slice(1);
-          introspect(JAM.policy.p2) {
-            e$$inline_799[f$$inline_800] = h$$inline_802;
-          }
+          e$$inline_799[f$$inline_800] = h$$inline_802;
           var v749 = "" != h$$inline_802;
           if (v749) {
             d$$inline_798 = f$$inline_800;
@@ -5429,7 +5427,9 @@ function v254() {
                 var e$$inline_906 = v883[c$$inline_901]
               }
               var v884 = d$$inline_905.wasReactiveAdCreated;
-              JAM.set(v884, c$$inline_901, !0, JAM.policy.p2);
+              introspect(JAM.policy.p2) {
+                v884[c$$inline_901] = !0;
+              }
               JSCompiler_inline_result$$inline_898 = !e$$inline_906;
             }
             if (JSCompiler_inline_result$$inline_898) {
@@ -7208,7 +7208,9 @@ function v254() {
         if (f$$50) {
           var v2687 = f$$50[1];
           var v5113 = JAM.call(Math.round, Math, [v2687]);
-          JAM.set(b$$329, e$$81, v5113, JAM.policy.p2);
+          introspect(JAM.policy.p2) {
+            b$$329[e$$81] = v5113;
+          }
         }
       }
       d$$138++;
@@ -7302,7 +7304,9 @@ function v254() {
     return;
   }
   function Xf(a$$388) {
-    JAM.set(Wf, a$$388, !0, JAM.policy.p2);
+    introspect(JAM.policy.p2) {
+      Wf[a$$388] = !0;
+    }
     return a$$388;
   }
   function V$$1(a$$387, b$$306, c$$204, d$$130) {
@@ -10072,7 +10076,9 @@ function v254() {
         v1308 = v2929;
       }
       JSCompiler_inline_result$$73 = c$$inline_115;
-      JSCompiler_temp$$72 = JAM.set(Tc, a$$223, 0 <= JSCompiler_inline_result$$73, JAM.policy.p2);
+      introspect(JAM.policy.p2) {
+        JSCompiler_temp$$72 = Tc[a$$223] = 0 <= JSCompiler_inline_result$$73;
+      }
     }
     return JSCompiler_temp$$72;
   }
@@ -10687,7 +10693,7 @@ function v254() {
       var d$$67 = 0;
       var v1359 = d$$67 < b$$146;
       for (;v1359;) {
-        introspect(JAM.policy.p5) {
+        introspect(JAM.policy.p4) {
           c$$103[d$$67] = a$$183[d$$67];
         }
         d$$67++;
@@ -11045,7 +11051,9 @@ function v254() {
       }
       v1397 = JAM.set(a$$153, b$$122, v3959 + 1, JAM.policy.p2);
     } else {
-      v1397 = JAM.set(a$$153, b$$122, 1, JAM.policy.p2);
+      introspect(JAM.policy.p2) {
+        v1397 = a$$153[b$$122] = 1;
+      }
     }
     v1397;
     introspect(JAM.policy.p4) {
@@ -11410,9 +11418,7 @@ function v254() {
         }
         JSCompiler_temp$$25 = JSCompiler_temp$$26;
       }
-      introspect(JAM.policy.p2) {
-        b$$104[JSCompiler_temp_const$$24] = JSCompiler_temp$$25;
-      }
+      b$$104[JSCompiler_temp_const$$24] = JSCompiler_temp$$25;
       c$$69++;
       var v3035 = a$$131.length;
       v1433 = c$$69 < v3035;
@@ -11942,7 +11948,9 @@ function v254() {
       var v4817 = navigator.userAgent;
       var v4555 = v4817.toLowerCase();
       var v4002 = v4555.indexOf(a$$inline_78);
-      v1484 = JAM.set(v3077, a$$inline_78, -1 != v4002, JAM.policy.p2);
+      introspect(JAM.policy.p2) {
+        v1484 = v3077[a$$inline_78] = -1 != v4002;
+      }
     }
     JSCompiler_inline_result$$74 = v1484;
     var v1485 = JSCompiler_inline_result$$74;
@@ -13868,7 +13876,9 @@ function v22() {
         if (f$$8) {
           var v3243 = f$$8[1];
           var v5133 = JAM.call(Math.round, Math, [v3243]);
-          JAM.set(b$$48, e$$17, v5133, JAM.policy.p2);
+          introspect(JAM.policy.p2) {
+            b$$48[e$$17] = v5133;
+          }
         }
       }
       d$$20++;
@@ -14567,9 +14577,7 @@ function v22() {
                 }
                 u = r;
               }
-              introspect(JAM.policy.p2) {
-                x$$48[B] = u;
-              }
+              x$$48[B] = u;
               k$$1++;
               var v3308 = f$$5.length;
               v1930 = k$$1 < v3308;

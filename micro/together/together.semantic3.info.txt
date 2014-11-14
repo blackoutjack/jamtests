@@ -15,8 +15,8 @@ callbacks-added-edges:40
 callbacks-added-states:35
 concrete-query-cache:concrete1417094288.bin
 symbolic-query-cache:symbolic1417094288.bin
-modular.policy.js:100
-policy.js:102
+modular.policy.js:97
+policy.js:99
 transactions:0
 checks:0
 callsites-indirected:0

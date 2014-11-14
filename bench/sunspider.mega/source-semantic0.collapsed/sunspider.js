@@ -8,7 +8,7 @@ function warmup() {
       if (JAM.call(Math.atan, Math, [JAM.call(Math.acos, Math, [JAM.call(Math.asin, Math, [JAM.call(Math.random, Math, [], JAM.policy.p95)], JAM.policy.p98)], JAM.policy.p98)], JAM.policy.p98) > 4) {
         return;
       }
-      i$$2 = i$$2 + 1;
+      ++i$$2;
       v1 = i$$2 < 100;
     }
     v2 = new Date - start$$5 < warmupMS;
@@ -37,7 +37,10 @@ function next() {
     JAM.call(window.setTimeout, window, [next, 0], JAM.policy.p98);
   } else {
     if ((currentRepeat = currentRepeat + 1) < repeatCount) {
-      JAM.set(JAM.call(JAM.get(document, "getElementById", JAM.policy.p97), document, ["countdown"], JAM.policy.p97), "innerHTML", repeatCount - currentRepeat, JAM.policy.p54);
+      var v9 = JAM.call(JAM.get(document, "getElementById", JAM.policy.p97), document, ["countdown"], JAM.policy.p97);
+      introspect(JAM.policy.p54) {
+        v9.innerHTML = repeatCount - currentRepeat;
+      }
       testIndex = -1;
       JAM.call(window.setTimeout, window, [next, 128], JAM.policy.p98);
     } else {
@@ -77,7 +80,7 @@ function finish() {
         time$$1 = '"NaN"';
       }
       outputString = outputString + (time$$1 + ",");
-      i$$3 = i$$3 + 1;
+      i$$3++;
       v17 = i$$3 < output.length;
     }
     outputString = JAM.call(outputString.substring, outputString, [0, outputString.length - 1], JAM.policy.p96);
@@ -294,10 +297,10 @@ introspect(JAM.policy.p11) {
 var i = 0;
 var v22 = i < output.length;
 for (;v22;) {
-  introspect(JAM.policy.p106) {
+  introspect(JAM.policy.p11) {
     output[i] = {};
   }
-  i = i + 1;
+  i++;
   v22 = i < output.length;
 }
 start()

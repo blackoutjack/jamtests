@@ -6,11 +6,11 @@ var policy = function() {
     var len = as.length;
     for (var i = 0;i < len;i++) {
       var node = as[i];
-      if (states[1] && (node.id === "x" && JAM.identical(node.value, 3))) {
+      if (states[1] && (node.id === "x" && node.value === 3)) {
         commit = false;
         break;
       }
-      if (!states[1] && (node.id === "x" && JAM.identical(node.value, 3))) {
+      if (!states[1] && (node.id === "x" && node.value === 3)) {
         states[1] = true;
       }
     }

@@ -935,7 +935,7 @@ function stackMenuBody(queue, bPopup, bLevel, bLeft, bTop, bWidth, bHeight) {
   var v115 = window.bodyCells;
   var v352 = window.bodyCells;
   var v116 = v352.length;
-  JAM.set(v115, v116, 0);
+  v115[v116] = 0;
   return;
 }
 function addMenuDivider() {

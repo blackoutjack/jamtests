@@ -15,17 +15,17 @@ function v117() {
   var v121 = sc_tmp$$1 >= 0;
   for (;v121;) {
     args$$6 = sc_cons(arguments[sc_tmp$$1], args$$6);
-    sc_tmp$$1 = sc_tmp$$1 - 1;
+    sc_tmp$$1--;
     v121 = sc_tmp$$1 >= 0;
   }
   var k$$10;
-  var v1102;
+  var v1096;
   if (args$$6 === null) {
-    v1102 = 7;
+    v1096 = 7;
   } else {
-    v1102 = args$$6.car;
+    v1096 = args$$6.car;
   }
-  k$$10 = v1102;
+  k$$10 = v1096;
   return JAM.call(BgL_runzd2benchmarkzd2, null, ["earley", 1, v115, v116]);
 }
 function v114(k$$9) {
@@ -39,10 +39,9 @@ function v114(k$$9) {
     L1130 = l$$31;
     var v123 = !(L1130 === null);
     for (;v123;) {
-      var v122 = tail1134;
       sc_x_134 = L1130.car;
-      var v3727 = new sc_Pair(sc_list(sc_x_134, sc_x_134), null);
-      v122.cdr = v3727;
+      var v3687 = new sc_Pair(sc_list(sc_x_134, sc_x_134), null);
+      tail1134.cdr = v3687;
       tail1134 = tail1134.cdr;
       L1130 = L1130.cdr;
       v123 = !(L1130 === null);
@@ -157,11 +156,11 @@ function v109(grammar, lexer) {
           sc_states_129 = states;
           BgL_sc_statesza2_128za2 = BgL_sc_statesza2_27za2;
           prev$$2 = sc_conf_131 - 1;
-          var v1109 = sc_conf_131 >= BgL_sc_nbzd2nts_24zd2;
-          if (v1109) {
-            v1109 = sc_steps_25[prev$$2] >= 0;
+          var v1102 = sc_conf_131 >= BgL_sc_nbzd2nts_24zd2;
+          if (v1102) {
+            v1102 = sc_steps_25[prev$$2] >= 0;
           }
-          if (v1109) {
+          if (v1102) {
             sc_loop1_127 = v106;
             JAM.call(sc_loop1_127, null, [sc_enders_26[sc_steps_25[prev$$2]]]);
           }
@@ -192,13 +191,13 @@ function v109(grammar, lexer) {
           sc_conf_124 = l$$29.car;
           state$$10 = sc_states_123[j$$7];
           conf_set$$11 = state$$10[sc_conf_124 + 1];
-          var v2131;
+          var v2091;
           if (conf_set$$11 !== false) {
-            v2131 = conf_set$$11[i$$67 + 5];
+            v2091 = conf_set$$11[i$$67 + 5];
           } else {
-            v2131 = false;
+            v2091 = false;
           }
-          if (v2131 !== false) {
+          if (v2091 !== false) {
             l$$29 = l$$29.cdr;
             nb_trees = JAM.call(nb_deriv_trees, null, [sc_conf_124, i$$67, j$$7, sc_enders_120, sc_steps_121, sc_toks_122, sc_states_123, BgL_sc_nbzd2nts_125zd2], JAM.policy.p1) + nb_trees;
           } else {
@@ -233,19 +232,19 @@ function v109(grammar, lexer) {
               n$$13 = sc_n_118;
               var v144 = k$$7 >= 0;
               for (;v144;) {
-                var v1113 = k$$7 >= i$$66;
-                if (v1113) {
+                var v1106 = k$$7 >= i$$66;
+                if (v1106) {
                   state$$9 = sc_states_114[k$$7];
                   conf_set$$10 = state$$9[prev$$1 + 1];
-                  var v2440;
+                  var v2400;
                   if (conf_set$$10 !== false) {
-                    v2440 = conf_set$$10[i$$66 + 5];
+                    v2400 = conf_set$$10[i$$66 + 5];
                   } else {
-                    v2440 = false;
+                    v2400 = false;
                   }
-                  v1113 = v2440 !== false;
+                  v1106 = v2400 !== false;
                 }
-                if (v1113) {
+                if (v1106) {
                   nb_prev_trees = JAM.call(nb_deriv_trees, null, [prev$$1, i$$66, k$$7, sc_enders_111, sc_steps_112, sc_toks_113, sc_states_114, BgL_sc_nbzd2nts_115zd2], JAM.policy.p1);
                   nb_ender_trees = JAM.call(nb_deriv_trees, null, [ender$$2, k$$7, j$$6, sc_enders_111, sc_steps_112, sc_toks_113, sc_states_114, BgL_sc_nbzd2nts_115zd2], JAM.policy.p1);
                   k$$7 = ender_set$$1[k$$7 + 5];
@@ -269,21 +268,21 @@ function v109(grammar, lexer) {
       var tmp1124;
       var prev$$1;
       prev$$1 = sc_conf_110 - 1;
-      var v1115;
+      var v1108;
       tmp1124 = sc_conf_110 < BgL_sc_nbzd2nts_115zd2;
-      var v2768;
+      var v2728;
       if (tmp1124 !== false) {
-        v2768 = tmp1124;
+        v2728 = tmp1124;
       } else {
-        v2768 = sc_steps_112[prev$$1] < 0;
+        v2728 = sc_steps_112[prev$$1] < 0;
       }
-      if (v2768 !== false) {
-        v1115 = 1;
+      if (v2728 !== false) {
+        v1108 = 1;
       } else {
         sc_loop1_116 = v103;
-        v1115 = JAM.call(sc_loop1_116, null, [sc_enders_111[sc_steps_112[prev$$1]], 0], JAM.policy.p1);
+        v1108 = JAM.call(sc_loop1_116, null, [sc_enders_111[sc_steps_112[prev$$1]], 0], JAM.policy.p1);
       }
-      return v1115;
+      return v1108;
     }
     function v102(nt$$5, i$$65, j$$5, sc_nts_101, sc_enders_102, sc_steps_103, sc_names_104, sc_toks_105, sc_states_106) {
       var conf_set$$9;
@@ -303,13 +302,13 @@ function v109(grammar, lexer) {
           sc_conf_107 = l$$27.car;
           state$$8 = sc_states_106[j$$5];
           conf_set$$9 = state$$8[sc_conf_107 + 1];
-          var v2134;
+          var v2094;
           if (conf_set$$9 !== false) {
-            v2134 = conf_set$$9[i$$65 + 5];
+            v2094 = conf_set$$9[i$$65 + 5];
           } else {
-            v2134 = false;
+            v2094 = false;
           }
-          if (v2134 !== false) {
+          if (v2094 !== false) {
             l$$27 = l$$27.cdr;
             trees = sc_append(JAM.call(deriv_trees, null, [sc_conf_107, i$$65, j$$5, sc_enders_102, sc_steps_103, sc_names_104, sc_toks_105, sc_states_106, BgL_sc_nbzd2nts_108zd2], JAM.policy.p1), trees);
           } else {
@@ -353,19 +352,19 @@ function v109(grammar, lexer) {
           var sc_state_99;
           for (;true;) {
             if (k$$6 >= 0) {
-              var v1119 = k$$6 >= i$$64;
-              if (v1119) {
+              var v1112 = k$$6 >= i$$64;
+              if (v1112) {
                 sc_state_99 = sc_states_96[k$$6];
                 conf_set$$8 = sc_state_99[prev + 1];
-                var v2445;
+                var v2405;
                 if (conf_set$$8 !== false) {
-                  v2445 = conf_set$$8[i$$64 + 5];
+                  v2405 = conf_set$$8[i$$64 + 5];
                 } else {
-                  v2445 = false;
+                  v2405 = false;
                 }
-                v1119 = v2445 !== false;
+                v1112 = v2405 !== false;
               }
-              if (v1119) {
+              if (v1112) {
                 prev_trees = JAM.call(deriv_trees, null, [prev, i$$64, k$$6, sc_enders_92, sc_steps_93, sc_names_94, sc_toks_95, sc_states_96, BgL_sc_nbzd2nts_97zd2], JAM.policy.p1);
                 ender_trees = JAM.call(deriv_trees, null, [ender$$1, k$$6, j$$4, sc_enders_92, sc_steps_93, sc_names_94, sc_toks_95, sc_states_96, BgL_sc_nbzd2nts_97zd2], JAM.policy.p1);
                 loop3 = v98;
@@ -404,21 +403,21 @@ function v109(grammar, lexer) {
       var prev;
       var name$$37;
       name$$37 = sc_names_94[sc_conf_91];
-      var v1121;
+      var v1114;
       if (name$$37 !== false) {
-        var v1744;
+        var v1705;
         if (sc_conf_91 < BgL_sc_nbzd2nts_97zd2) {
-          v1744 = sc_list(sc_list(name$$37, sc_toks_95[i$$64].car));
+          v1705 = sc_list(sc_list(name$$37, sc_toks_95[i$$64].car));
         } else {
-          v1744 = sc_list(sc_list(name$$37));
+          v1705 = sc_list(sc_list(name$$37));
         }
-        v1121 = v1744;
+        v1114 = v1705;
       } else {
         prev = sc_conf_91 - 1;
         sc_loop1_98 = v100;
-        v1121 = JAM.call(sc_loop1_98, null, [sc_enders_92[sc_steps_93[prev]], null], JAM.policy.p1);
+        v1114 = JAM.call(sc_loop1_98, null, [sc_enders_92[sc_steps_93[prev]], null], JAM.policy.p1);
       }
-      return v1121;
+      return v1114;
     }
     function v97(nt$$4, i$$63, j$$3, sc_nts_86, sc_enders_87, sc_states_88) {
       var conf_set$$7;
@@ -434,13 +433,13 @@ function v109(grammar, lexer) {
             sc_conf_89 = l$$26.car;
             state$$6 = sc_states_88[j$$3];
             conf_set$$7 = state$$6[sc_conf_89 + 1];
-            var v2139;
+            var v2099;
             if (conf_set$$7 !== false) {
-              v2139 = conf_set$$7[i$$63 + 5];
+              v2099 = conf_set$$7[i$$63 + 5];
             } else {
-              v2139 = false;
+              v2099 = false;
             }
-            if (v2139 !== false) {
+            if (v2099 !== false) {
               return true;
             } else {
               l$$26 = l$$26.cdr;
@@ -532,13 +531,13 @@ function v109(grammar, lexer) {
             for (;v177;) {
               ender = l$$24.car;
               conf_set$$6 = sc_state_82[ender + 1];
-              var v2141;
+              var v2101;
               if (conf_set$$6 !== false) {
-                v2141 = conf_set$$6[BgL_sc_statezd2num_68zd2 + 5];
+                v2101 = conf_set$$6[BgL_sc_statezd2num_68zd2 + 5];
               } else {
-                v2141 = false;
+                v2101 = false;
               }
-              if (v2141 !== false) {
+              if (v2101 !== false) {
                 next$$1 = sc_conf_80 + 1;
                 next_set = JAM.call(BgL_sc_confzd2setzd2getza2_44za2, null, [sc_state_82, BgL_sc_statezd2num_68zd2, next$$1], JAM.policy.p1);
                 JAM.call(conf_set_union, null, [sc_state_82, next_set, next$$1, BgL_sc_confzd2set_79zd2], JAM.policy.p1);
@@ -584,29 +583,29 @@ function v109(grammar, lexer) {
       var conf_set$$4;
       var state$$3;
       state$$3 = sc_states_60[BgL_sc_statezd2num_62zd2];
-      var v1127;
+      var v1120;
       conf_set$$4 = state$$3[sc_conf_63 + 1];
-      var v2774;
+      var v2734;
       if (conf_set$$4 !== false) {
-        v2774 = conf_set$$4[i$$60 + 5];
+        v2734 = conf_set$$4[i$$60 + 5];
       } else {
-        v2774 = false;
+        v2734 = false;
       }
-      if (v2774 !== false) {
+      if (v2734 !== false) {
         BgL_sc_stateza2_65za2 = BgL_sc_statesza2_61za2[BgL_sc_statezd2num_62zd2];
         BgL_sc_confzd2setza2_64z70 = JAM.call(BgL_sc_confzd2setzd2getza2_44za2, null, [BgL_sc_stateza2_65za2, BgL_sc_statezd2num_62zd2, sc_conf_63], JAM.policy.p1);
-        var v2453;
+        var v2413;
         if (BgL_sc_confzd2setza2_64z70[i$$60 + 5] === false) {
-          v2453 = JAM.call(conf_set_adjoin, null, [BgL_sc_stateza2_65za2, BgL_sc_confzd2setza2_64z70, sc_conf_63, i$$60], JAM.policy.p1);
+          v2413 = JAM.call(conf_set_adjoin, null, [BgL_sc_stateza2_65za2, BgL_sc_confzd2setza2_64z70, sc_conf_63, i$$60], JAM.policy.p1);
         } else {
-          v2453 = undefined;
+          v2413 = undefined;
         }
-        v2453;
-        v1127 = true;
+        v2413;
+        v1120 = true;
       } else {
-        v1127 = false;
+        v1120 = false;
       }
-      return v1127;
+      return v1120;
     }
     function v92(sc_states_57, BgL_sc_statezd2num_58zd2, l$$23, i$$59) {
       var conf_set$$3;
@@ -632,17 +631,17 @@ function v109(grammar, lexer) {
     function v91(state$$1, conf_set$$2, sc_conf_56, i$$58) {
       var tail$$5;
       tail$$5 = conf_set$$2[3];
-      JAM.set(conf_set$$2, i$$58 + 5, -1);
+      conf_set$$2[i$$58 + 5] = -1;
       JAM.set(conf_set$$2, tail$$5 + 5, i$$58);
       conf_set$$2[3] = i$$58;
-      var v1129;
+      var v1122;
       if (tail$$5 < 0) {
         conf_set$$2[0] = state$$1[0];
-        v1129 = state$$1[0] = sc_conf_56;
+        v1122 = state$$1[0] = sc_conf_56;
       } else {
-        v1129 = undefined;
+        v1122 = undefined;
       }
-      return v1129;
+      return v1122;
     }
     function v90(conf_set$$1) {
       JAM.set(conf_set$$1, conf_set$$1[1] + 5, conf_set$$1[4]);
@@ -654,9 +653,9 @@ function v109(grammar, lexer) {
       var conf_set;
       var BgL_sc_confzd2set_55zd2;
       BgL_sc_confzd2set_55zd2 = state[sc_conf_54 + 1];
-      var v1131;
+      var v1124;
       if (BgL_sc_confzd2set_55zd2 !== false) {
-        v1131 = BgL_sc_confzd2set_55zd2;
+        v1124 = BgL_sc_confzd2set_55zd2;
       } else {
         conf_set = sc_makeVector(BgL_sc_statezd2num_53zd2 + 6, false);
         conf_set[1] = -3;
@@ -664,9 +663,9 @@ function v109(grammar, lexer) {
         conf_set[3] = -1;
         conf_set[4] = -1;
         JAM.set(state, sc_conf_54 + 1, conf_set);
-        v1131 = conf_set;
+        v1124 = conf_set;
       }
-      return v1131;
+      return v1124;
     }
     function v88(BgL_sc_nbzd2toks_50zd2, BgL_sc_nbzd2confs_51zd2) {
       var v$$5;
@@ -679,7 +678,7 @@ function v109(grammar, lexer) {
         v$$5 = sc_makeVector(BgL_sc_nbzd2confs_51zd2 + 1, false);
         v$$5[0] = -1;
         JAM.set(sc_states_52, i$$57, v$$5);
-        i$$57 = i$$57 - 1;
+        --i$$57;
         v189 = i$$57 >= 0;
       }
       return sc_states_52;
@@ -692,7 +691,7 @@ function v109(grammar, lexer) {
           if (sc_isEqual(sc_nts_49[i$$56], nt$$3)) {
             return i$$56;
           } else {
-            i$$56 = i$$56 - 1;
+            --i$$56;
           }
         } else {
           return false;
@@ -817,7 +816,7 @@ function v109(grammar, lexer) {
       tok_nts = sc_toks_36[sc_i_28].cdr;
       JAM.call(BgL_sc_confzd2setzd2adjoinza2_45za2, null, [sc_states_33, sc_i_28 + 1, tok_nts, sc_i_28], JAM.policy.p1);
       JAM.call(forw, null, [sc_states_33, sc_i_28 + 1, sc_starters_41, sc_enders_40, sc_predictors_39, sc_steps_38, sc_nts_42], JAM.policy.p1);
-      sc_i_28 = sc_i_28 + 1;
+      ++sc_i_28;
       v202 = sc_i_28 < BgL_sc_nbzd2toks_35zd2;
     }
     nb_toks = sc_toks_36.length;
@@ -846,7 +845,7 @@ function v109(grammar, lexer) {
       BgL_sc_stateza2_23za2 = BgL_sc_statesza2_30za2[i$$55];
       loop1 = v107;
       loop1();
-      i$$55 = i$$55 - 1;
+      --i$$55;
       v204 = i$$55 >= 0;
     }
     optrOpnd$$2 = BgL_sc_statesza2_30za2;
@@ -863,35 +862,32 @@ function v109(grammar, lexer) {
       var rule$$4;
       if (rules$$2 instanceof sc_Pair) {
         rule$$4 = rules$$2.car;
-        var v3728 = sc_list(head$$2, rule_num);
-        JAM.set(names, conf$$1, v3728);
+        var v3688 = sc_list(head$$2, rule_num);
+        JAM.set(names, conf$$1, v3688);
         sc_i_19 = JAM.call(ind, null, [head$$2, nts], JAM.policy.p1);
         var v205 = starters;
-        var v206 = sc_i_19;
-        var v3729 = new sc_Pair(conf$$1, starters[sc_i_19]);
-        JAM.set(v205, v206, v3729);
+        var v3689 = new sc_Pair(conf$$1, starters[sc_i_19]);
+        JAM.set(v205, sc_i_19, v3689);
         l$$21 = rule$$4;
         sc_conf_18 = conf$$1;
-        var v209 = l$$21 instanceof sc_Pair;
-        for (;v209;) {
+        var v207 = l$$21 instanceof sc_Pair;
+        for (;v207;) {
           nt$$2 = l$$21.car;
-          var v3730 = JAM.call(ind, null, [nt$$2, nts], JAM.policy.p1);
-          JAM.set(steps, sc_conf_18, v3730);
+          var v3690 = JAM.call(ind, null, [nt$$2, nts], JAM.policy.p1);
+          JAM.set(steps, sc_conf_18, v3690);
           sc_i_17 = JAM.call(ind, null, [nt$$2, nts], JAM.policy.p1);
-          var v207 = predictors;
-          var v208 = sc_i_17;
-          var v3731 = new sc_Pair(sc_conf_18, predictors[sc_i_17]);
-          JAM.set(v207, v208, v3731);
+          var v206 = predictors;
+          var v3691 = new sc_Pair(sc_conf_18, predictors[sc_i_17]);
+          JAM.set(v206, sc_i_17, v3691);
           l$$21 = l$$21.cdr;
-          sc_conf_18 = sc_conf_18 + 1;
-          v209 = l$$21 instanceof sc_Pair;
+          ++sc_conf_18;
+          v207 = l$$21 instanceof sc_Pair;
         }
-        JAM.set(steps, sc_conf_18, JAM.call(ind, null, [head$$2, nts], JAM.policy.p1) - nb_nts);
+        steps[sc_conf_18] = JAM.call(ind, null, [head$$2, nts], JAM.policy.p1) - nb_nts;
         i$$54 = JAM.call(ind, null, [head$$2, nts], JAM.policy.p1);
-        var v212 = enders;
-        var v213 = i$$54;
-        var v3732 = new sc_Pair(sc_conf_18, enders[i$$54]);
-        JAM.set(v212, v213, v3732);
+        var v209 = enders;
+        var v3692 = new sc_Pair(sc_conf_18, enders[i$$54]);
+        JAM.set(v209, i$$54, v3692);
         return JAM.call(rule_loop$$2, null, [rules$$2.cdr, sc_conf_18 + 1, rule_num + 1], JAM.policy.p1);
       } else {
         return JAM.call(def_loop, null, [defs$$2.cdr, conf$$1], JAM.policy.p1);
@@ -901,16 +897,16 @@ function v109(grammar, lexer) {
     var rule_loop$$2;
     var head$$2;
     var def$$2;
-    var v219;
+    var v215;
     if (defs$$2 instanceof sc_Pair) {
       def$$2 = defs$$2.car;
       head$$2 = def$$2.car;
       rule_loop$$2 = v85;
-      v219 = JAM.call(rule_loop$$2, null, [def$$2.cdr, conf, 1], JAM.policy.p1);
+      v215 = JAM.call(rule_loop$$2, null, [def$$2.cdr, conf, 1], JAM.policy.p1);
     } else {
-      v219 = undefined;
+      v215 = undefined;
     }
-    return v219;
+    return v215;
   }
   function v84(defs$$1, BgL_sc_nbzd2confs_14zd2) {
     function v83(rules$$1, BgL_sc_nbzd2confs_15zd2) {
@@ -921,11 +917,11 @@ function v109(grammar, lexer) {
         rule$$3 = rules$$1.car;
         l$$20 = rule$$3;
         BgL_sc_nbzd2confs_16zd2 = BgL_sc_nbzd2confs_15zd2;
-        var v220 = l$$20 instanceof sc_Pair;
-        for (;v220;) {
+        var v216 = l$$20 instanceof sc_Pair;
+        for (;v216;) {
           l$$20 = l$$20.cdr;
-          BgL_sc_nbzd2confs_16zd2 = BgL_sc_nbzd2confs_16zd2 + 1;
-          v220 = l$$20 instanceof sc_Pair;
+          ++BgL_sc_nbzd2confs_16zd2;
+          v216 = l$$20 instanceof sc_Pair;
         }
         return JAM.call(rule_loop$$1, null, [rules$$1.cdr, BgL_sc_nbzd2confs_16zd2 + 1], JAM.policy.p1);
       } else {
@@ -935,15 +931,15 @@ function v109(grammar, lexer) {
     }
     var rule_loop$$1;
     var def$$1;
-    var v225;
+    var v221;
     if (defs$$1 instanceof sc_Pair) {
       def$$1 = defs$$1.car;
       rule_loop$$1 = v83;
-      v225 = JAM.call(rule_loop$$1, null, [def$$1.cdr, BgL_sc_nbzd2confs_14zd2], JAM.policy.p1);
+      v221 = JAM.call(rule_loop$$1, null, [def$$1.cdr, BgL_sc_nbzd2confs_14zd2], JAM.policy.p1);
     } else {
-      v225 = BgL_sc_nbzd2confs_14zd2;
+      v221 = BgL_sc_nbzd2confs_14zd2;
     }
-    return v225;
+    return v221;
   }
   function v82(defs, sc_nts_11) {
     function v81(rules, sc_nts_12) {
@@ -955,18 +951,18 @@ function v109(grammar, lexer) {
         rule$$2 = rules.car;
         l$$19 = rule$$2;
         sc_nts_13 = sc_nts_12;
-        var v227 = l$$19 instanceof sc_Pair;
-        for (;v227;) {
+        var v223 = l$$19 instanceof sc_Pair;
+        for (;v223;) {
           nt$$1 = l$$19.car;
           l$$19 = l$$19.cdr;
-          var v226;
+          var v222;
           if (sc_member(nt$$1, sc_nts_13) !== false) {
-            v226 = sc_nts_13;
+            v222 = sc_nts_13;
           } else {
-            v226 = new sc_Pair(nt$$1, sc_nts_13);
+            v222 = new sc_Pair(nt$$1, sc_nts_13);
           }
-          sc_nts_13 = v226;
-          v227 = l$$19 instanceof sc_Pair;
+          sc_nts_13 = v222;
+          v223 = l$$19 instanceof sc_Pair;
         }
         return JAM.call(rule_loop, null, [rules.cdr, sc_nts_13], JAM.policy.p1);
       } else {
@@ -977,23 +973,23 @@ function v109(grammar, lexer) {
     var rule_loop;
     var head$$1;
     var def;
-    var v231;
+    var v227;
     if (defs instanceof sc_Pair) {
       def = defs.car;
       head$$1 = def.car;
       rule_loop = v81;
-      var v1755 = def.cdr;
-      var v2145;
+      var v1716 = def.cdr;
+      var v2105;
       if (sc_member(head$$1, sc_nts_11) !== false) {
-        v2145 = sc_nts_11;
+        v2105 = sc_nts_11;
       } else {
-        v2145 = new sc_Pair(head$$1, sc_nts_11);
+        v2105 = new sc_Pair(head$$1, sc_nts_11);
       }
-      v231 = JAM.call(rule_loop, null, [v1755, v2145], JAM.policy.p1);
+      v227 = JAM.call(rule_loop, null, [v1716, v2105], JAM.policy.p1);
     } else {
-      v231 = sc_list2vector(sc_reverse(sc_nts_11));
+      v227 = sc_list2vector(sc_reverse(sc_nts_11));
     }
-    return v231;
+    return v227;
   }
   function v80(nt, sc_nts_10) {
     var i$$53;
@@ -1003,7 +999,7 @@ function v109(grammar, lexer) {
         if (sc_isEqual(sc_nts_10[i$$53], nt)) {
           return i$$53;
         } else {
-          i$$53 = i$$53 - 1;
+          --i$$53;
         }
       } else {
         return false;
@@ -1051,17 +1047,17 @@ function v109(grammar, lexer) {
   names = sc_names_1;
   nb_nts = sc_nts_8.length;
   i$$52 = nb_nts - 1;
-  var v238 = i$$52 >= 0;
-  for (;v238;) {
-    JAM.set(sc_steps_2, i$$52, i$$52 - nb_nts);
-    var v236 = sc_names_1;
-    var v237 = i$$52;
-    var v3733 = sc_list(sc_nts_8[i$$52], 0);
-    v236[v237] = v3733;
-    var v3734 = sc_list(i$$52);
-    JAM.set(sc_enders_4, i$$52, v3734);
-    i$$52 = i$$52 - 1;
-    v238 = i$$52 >= 0;
+  var v234 = i$$52 >= 0;
+  for (;v234;) {
+    sc_steps_2[i$$52] = i$$52 - nb_nts;
+    var v232 = sc_names_1;
+    var v233 = i$$52;
+    var v3693 = sc_list(sc_nts_8[i$$52], 0);
+    v232[v233] = v3693;
+    var v3694 = sc_list(i$$52);
+    JAM.set(sc_enders_4, i$$52, v3694);
+    --i$$52;
+    v234 = i$$52 >= 0;
   }
   def_loop = v86;
   JAM.call(def_loop, null, [grammar, sc_nts_8.length], JAM.policy.p1);
@@ -1078,11 +1074,11 @@ function v79(n$$12) {
   rewrite_count_nboyer = 0;
   term$$7 = sc_const_4_nboyer;
   sc_n_20 = n$$12;
-  var v241 = !(sc_n_20 === 0);
-  for (;v241;) {
+  var v237 = !(sc_n_20 === 0);
+  for (;v237;) {
     term$$7 = sc_list("\u1e9cor", term$$7, new sc_Pair("\u1e9cf", null));
-    sc_n_20 = sc_n_20 - 1;
-    v241 = !(sc_n_20 === 0);
+    --sc_n_20;
+    v237 = !(sc_n_20 === 0);
   }
   sc_term_22 = term$$7;
   if (!(sc_term_22 instanceof sc_Pair)) {
@@ -1090,13 +1086,13 @@ function v79(n$$12) {
   } else {
     optrOpnd$$1 = new sc_Pair(JAM.call(BgL_sc_symbolzd2ze3symbolzd2record_1ze3_nboyer, null, [sc_term_22.car]), JAM.call(translate_args_nboyer, null, [sc_term_22.cdr]));
   }
-  var v1151;
+  var v1144;
   if (const_nboyer === null) {
-    v1151 = null;
+    v1144 = null;
   } else {
-    v1151 = new sc_Pair(new sc_Pair(const_nboyer.car.car, JAM.call(translate_term_nboyer, null, [const_nboyer.car.cdr])), JAM.call(translate_alist_nboyer, null, [const_nboyer.cdr]));
+    v1144 = new sc_Pair(new sc_Pair(const_nboyer.car.car, JAM.call(translate_term_nboyer, null, [const_nboyer.car.cdr])), JAM.call(translate_alist_nboyer, null, [const_nboyer.cdr]));
   }
-  sc_term_21 = JAM.call(apply_subst_nboyer, null, [v1151, optrOpnd$$1]);
+  sc_term_21 = JAM.call(apply_subst_nboyer, null, [v1144, optrOpnd$$1]);
   answer = JAM.call(tautologyp_nboyer, null, [JAM.call(rewrite_nboyer, null, [sc_term_21]), null, null]);
   sc_write(rewrite_count_nboyer);
   sc_display(" rewrites");
@@ -1121,52 +1117,52 @@ function v78() {
   BgL_sc_za2symbolzd2recordszd2alistza2_2z00_nboyer = null;
   if_constructor_nboyer = JAM.call(BgL_sc_symbolzd2ze3symbolzd2record_1ze3_nboyer, null, ["\u1e9cif"]);
   sc_term_19 = new sc_Pair("\u1e9cf", null);
-  var v1152;
+  var v1145;
   if (!(sc_term_19 instanceof sc_Pair)) {
-    v1152 = sc_term_19;
+    v1145 = sc_term_19;
   } else {
-    v1152 = new sc_Pair(JAM.call(BgL_sc_symbolzd2ze3symbolzd2record_1ze3_nboyer, null, [sc_term_19.car]), JAM.call(translate_args_nboyer, null, [sc_term_19.cdr]));
+    v1145 = new sc_Pair(JAM.call(BgL_sc_symbolzd2ze3symbolzd2record_1ze3_nboyer, null, [sc_term_19.car]), JAM.call(translate_args_nboyer, null, [sc_term_19.cdr]));
   }
-  false_term_nboyer = v1152;
+  false_term_nboyer = v1145;
   sc_term_18 = new sc_Pair("\u1e9ct", null);
-  var v1153;
+  var v1146;
   if (!(sc_term_18 instanceof sc_Pair)) {
-    v1153 = sc_term_18;
+    v1146 = sc_term_18;
   } else {
-    v1153 = new sc_Pair(JAM.call(BgL_sc_symbolzd2ze3symbolzd2record_1ze3_nboyer, null, [sc_term_18.car]), JAM.call(translate_args_nboyer, null, [sc_term_18.cdr]));
+    v1146 = new sc_Pair(JAM.call(BgL_sc_symbolzd2ze3symbolzd2record_1ze3_nboyer, null, [sc_term_18.car]), JAM.call(translate_args_nboyer, null, [sc_term_18.cdr]));
   }
-  true_term_nboyer = v1153;
+  true_term_nboyer = v1146;
   lst$$7 = sc_const_3_nboyer;
-  var v252 = !(lst$$7 === null);
-  for (;v252;) {
+  var v248 = !(lst$$7 === null);
+  for (;v248;) {
     term$$6 = lst$$7.car;
-    var v1155 = term$$6 instanceof sc_Pair;
-    if (v1155) {
-      var v1766 = term$$6.car === "\u1e9cequal";
-      if (v1766) {
-        v1766 = term$$6.cdr.car instanceof sc_Pair;
+    var v1148 = term$$6 instanceof sc_Pair;
+    if (v1148) {
+      var v1727 = term$$6.car === "\u1e9cequal";
+      if (v1727) {
+        v1727 = term$$6.cdr.car instanceof sc_Pair;
       }
-      v1155 = v1766;
+      v1148 = v1727;
     }
-    if (v1155) {
+    if (v1148) {
       sc_sym_17 = term$$6.cdr.car.car;
-      var v1157;
+      var v1150;
       if (!(term$$6 instanceof sc_Pair)) {
-        v1157 = term$$6;
+        v1150 = term$$6;
       } else {
-        v1157 = new sc_Pair(JAM.call(BgL_sc_symbolzd2ze3symbolzd2record_1ze3_nboyer, null, [term$$6.car]), JAM.call(translate_args_nboyer, null, [term$$6.cdr]));
+        v1150 = new sc_Pair(JAM.call(BgL_sc_symbolzd2ze3symbolzd2record_1ze3_nboyer, null, [term$$6.car]), JAM.call(translate_args_nboyer, null, [term$$6.cdr]));
       }
-      var v249 = v1157;
+      var v245 = v1150;
       sym$$5 = term$$6.cdr.car.car;
       BgL_sc_symbolzd2record_16zd2 = JAM.call(BgL_sc_symbolzd2ze3symbolzd2record_1ze3_nboyer, null, [sym$$5]);
-      value$$28 = new sc_Pair(v249, BgL_sc_symbolzd2record_16zd2[1]);
+      value$$28 = new sc_Pair(v245, BgL_sc_symbolzd2record_16zd2[1]);
       symbol_record$$2 = JAM.call(BgL_sc_symbolzd2ze3symbolzd2record_1ze3_nboyer, null, [sc_sym_17]);
       symbol_record$$2[1] = value$$28;
     } else {
       sc_error("ADD-LEMMA did not like term:  ", term$$6);
     }
     lst$$7 = lst$$7.cdr;
-    v252 = !(lst$$7 === null);
+    v248 = !(lst$$7 === null);
   }
   return true;
 }
@@ -1225,21 +1221,21 @@ function v76(x$$76, y$$42) {
 }
 function v75(n$$11) {
   var sc_n_15;
-  var v261;
+  var v257;
   if (sc_isEqual(n$$11, 1)) {
-    v261 = sc_list("\u1e9cimplies", 0, 1);
+    v257 = sc_list("\u1e9cimplies", 0, 1);
   } else {
-    var v1162 = sc_list("\u1e9cimplies", n$$11 - 1, n$$11);
+    var v1155 = sc_list("\u1e9cimplies", n$$11 - 1, n$$11);
     sc_n_15 = n$$11 - 1;
-    var v2161;
+    var v2121;
     if (sc_isEqual(sc_n_15, 1)) {
-      v2161 = sc_list("\u1e9cimplies", 0, 1);
+      v2121 = sc_list("\u1e9cimplies", 0, 1);
     } else {
-      v2161 = sc_list("\u1e9cand", sc_list("\u1e9cimplies", sc_n_15 - 1, sc_n_15), JAM.call(trans_of_implies1_nboyer, null, [sc_n_15 - 1]));
+      v2121 = sc_list("\u1e9cand", sc_list("\u1e9cimplies", sc_n_15 - 1, sc_n_15), JAM.call(trans_of_implies1_nboyer, null, [sc_n_15 - 1]));
     }
-    v261 = sc_list("\u1e9cand", v1162, v2161);
+    v257 = sc_list("\u1e9cand", v1155, v2121);
   }
-  return v261;
+  return v257;
 }
 function v74(term1, term2$$1) {
   var lst1;
@@ -1289,21 +1285,21 @@ function v74(term1, term2$$1) {
 }
 function v73(lst$$5) {
   var sc_lst_14;
-  var v272;
+  var v268;
   if (lst$$5 === null) {
-    v272 = null;
+    v268 = null;
   } else {
-    var v1170 = JAM.call(rewrite_nboyer, null, [lst$$5.car]);
+    var v1163 = JAM.call(rewrite_nboyer, null, [lst$$5.car]);
     sc_lst_14 = lst$$5.cdr;
-    var v2162;
+    var v2122;
     if (sc_lst_14 === null) {
-      v2162 = null;
+      v2122 = null;
     } else {
-      v2162 = new sc_Pair(JAM.call(rewrite_nboyer, null, [sc_lst_14.car]), JAM.call(rewrite_args_nboyer, null, [sc_lst_14.cdr]));
+      v2122 = new sc_Pair(JAM.call(rewrite_nboyer, null, [sc_lst_14.car]), JAM.call(rewrite_args_nboyer, null, [sc_lst_14.cdr]));
     }
-    v272 = new sc_Pair(v1170, v2162);
+    v268 = new sc_Pair(v1163, v2122);
   }
-  return v272;
+  return v268;
 }
 function v72(term$$5) {
   var term2;
@@ -1311,19 +1307,19 @@ function v72(term$$5) {
   var lst$$4;
   var symbol_record$$1;
   var sc_lst_13;
-  rewrite_count_nboyer = rewrite_count_nboyer + 1;
+  ++rewrite_count_nboyer;
   if (!(term$$5 instanceof sc_Pair)) {
     return term$$5;
   } else {
-    var v273 = term$$5.car;
+    var v269 = term$$5.car;
     sc_lst_13 = term$$5.cdr;
-    var v1777;
+    var v1738;
     if (sc_lst_13 === null) {
-      v1777 = null;
+      v1738 = null;
     } else {
-      v1777 = new sc_Pair(JAM.call(rewrite_nboyer, null, [sc_lst_13.car]), JAM.call(rewrite_args_nboyer, null, [sc_lst_13.cdr]));
+      v1738 = new sc_Pair(JAM.call(rewrite_nboyer, null, [sc_lst_13.car]), JAM.call(rewrite_args_nboyer, null, [sc_lst_13.cdr]));
     }
-    sc_term_12 = new sc_Pair(v273, v1777);
+    sc_term_12 = new sc_Pair(v269, v1738);
     symbol_record$$1 = term$$5.car;
     lst$$4 = symbol_record$$1[1];
     for (;true;) {
@@ -1351,23 +1347,23 @@ function v71(sc_x_11, true_lst, false_lst) {
   var sc_tmp1126_10;
   for (;true;) {
     sc_tmp1126_10 = JAM.call(is_term_equal_nboyer, null, [sc_x_11, true_term_nboyer]);
-    var v2167;
+    var v2127;
     if (sc_tmp1126_10 !== false) {
-      v2167 = sc_tmp1126_10;
+      v2127 = sc_tmp1126_10;
     } else {
-      v2167 = JAM.call(is_term_member_nboyer, null, [sc_x_11, true_lst]);
+      v2127 = JAM.call(is_term_member_nboyer, null, [sc_x_11, true_lst]);
     }
-    if (v2167 !== false) {
+    if (v2127 !== false) {
       return true;
     } else {
       sc_tmp1125_9 = JAM.call(is_term_equal_nboyer, null, [sc_x_11, false_term_nboyer]);
-      var v2168;
+      var v2128;
       if (sc_tmp1125_9 !== false) {
-        v2168 = sc_tmp1125_9;
+        v2128 = sc_tmp1125_9;
       } else {
-        v2168 = JAM.call(is_term_member_nboyer, null, [sc_x_11, false_lst]);
+        v2128 = JAM.call(is_term_member_nboyer, null, [sc_x_11, false_lst]);
       }
-      if (v2168 !== false) {
+      if (v2128 !== false) {
         return false;
       } else {
         if (!(sc_x_11 instanceof sc_Pair)) {
@@ -1376,24 +1372,24 @@ function v71(sc_x_11, true_lst, false_lst) {
           if (sc_x_11.car === if_constructor_nboyer) {
             sc_x_8 = sc_x_11.cdr.car;
             tmp1126 = JAM.call(is_term_equal_nboyer, null, [sc_x_8, true_term_nboyer]);
-            var v2169;
+            var v2129;
             if (tmp1126 !== false) {
-              v2169 = tmp1126;
+              v2129 = tmp1126;
             } else {
-              v2169 = JAM.call(is_term_member_nboyer, null, [sc_x_8, true_lst]);
+              v2129 = JAM.call(is_term_member_nboyer, null, [sc_x_8, true_lst]);
             }
-            if (v2169 !== false) {
+            if (v2129 !== false) {
               sc_x_11 = sc_x_11.cdr.cdr.car;
             } else {
               x$$75 = sc_x_11.cdr.car;
               tmp1125 = JAM.call(is_term_equal_nboyer, null, [x$$75, false_term_nboyer]);
-              var v2170;
+              var v2130;
               if (tmp1125 !== false) {
-                v2170 = tmp1125;
+                v2130 = tmp1125;
               } else {
-                v2170 = JAM.call(is_term_member_nboyer, null, [x$$75, false_lst]);
+                v2130 = JAM.call(is_term_member_nboyer, null, [x$$75, false_lst]);
               }
-              if (v2170 !== false) {
+              if (v2130 !== false) {
                 sc_x_11 = sc_x_11.cdr.cdr.cdr.car;
               } else {
                 if (JAM.call(tautologyp_nboyer, null, [sc_x_11.cdr.cdr.car, new sc_Pair(sc_x_11.cdr.car, true_lst), false_lst]) !== false) {
@@ -1415,88 +1411,88 @@ function v71(sc_x_11, true_lst, false_lst) {
 }
 function v70(alist$$2, lst$$3) {
   var sc_lst_7;
-  var v290;
+  var v286;
   if (lst$$3 === null) {
-    v290 = null;
+    v286 = null;
   } else {
-    var v1187 = JAM.call(apply_subst_nboyer, null, [alist$$2, lst$$3.car]);
+    var v1180 = JAM.call(apply_subst_nboyer, null, [alist$$2, lst$$3.car]);
     sc_lst_7 = lst$$3.cdr;
-    var v2173;
+    var v2133;
     if (sc_lst_7 === null) {
-      v2173 = null;
+      v2133 = null;
     } else {
-      v2173 = new sc_Pair(JAM.call(apply_subst_nboyer, null, [alist$$2, sc_lst_7.car]), JAM.call(apply_subst_lst_nboyer, null, [alist$$2, sc_lst_7.cdr]));
+      v2133 = new sc_Pair(JAM.call(apply_subst_nboyer, null, [alist$$2, sc_lst_7.car]), JAM.call(apply_subst_lst_nboyer, null, [alist$$2, sc_lst_7.cdr]));
     }
-    v290 = new sc_Pair(v1187, v2173);
+    v286 = new sc_Pair(v1180, v2133);
   }
-  return v290;
+  return v286;
 }
 function v69(alist$$1, term$$4) {
   var lst$$2;
   var temp_temp;
-  var v291;
+  var v287;
   if (!(term$$4 instanceof sc_Pair)) {
     temp_temp = sc_assq(term$$4, alist$$1);
-    var v1785;
+    var v1746;
     if (temp_temp !== false) {
-      v1785 = temp_temp.cdr;
+      v1746 = temp_temp.cdr;
     } else {
-      v1785 = term$$4;
+      v1746 = term$$4;
     }
-    v291 = v1785;
+    v287 = v1746;
   } else {
-    var v1190 = term$$4.car;
+    var v1183 = term$$4.car;
     lst$$2 = term$$4.cdr;
-    var v2175;
+    var v2135;
     if (lst$$2 === null) {
-      v2175 = null;
+      v2135 = null;
     } else {
-      v2175 = new sc_Pair(JAM.call(apply_subst_nboyer, null, [alist$$1, lst$$2.car]), JAM.call(apply_subst_lst_nboyer, null, [alist$$1, lst$$2.cdr]));
+      v2135 = new sc_Pair(JAM.call(apply_subst_nboyer, null, [alist$$1, lst$$2.car]), JAM.call(apply_subst_lst_nboyer, null, [alist$$1, lst$$2.cdr]));
     }
-    v291 = new sc_Pair(v1190, v2175);
+    v287 = new sc_Pair(v1183, v2135);
   }
-  return v291;
+  return v287;
 }
 function v68(alist) {
   var sc_alist_6;
   var term$$3;
-  var v292;
+  var v288;
   if (alist === null) {
-    v292 = null;
+    v288 = null;
   } else {
-    var v1786 = alist.car.car;
+    var v1747 = alist.car.car;
     term$$3 = alist.car.cdr;
-    var v2487;
+    var v2447;
     if (!(term$$3 instanceof sc_Pair)) {
-      v2487 = term$$3;
+      v2447 = term$$3;
     } else {
-      v2487 = new sc_Pair(JAM.call(BgL_sc_symbolzd2ze3symbolzd2record_1ze3_nboyer, null, [term$$3.car]), JAM.call(translate_args_nboyer, null, [term$$3.cdr]));
+      v2447 = new sc_Pair(JAM.call(BgL_sc_symbolzd2ze3symbolzd2record_1ze3_nboyer, null, [term$$3.car]), JAM.call(translate_args_nboyer, null, [term$$3.cdr]));
     }
-    var v1193 = new sc_Pair(v1786, v2487);
+    var v1186 = new sc_Pair(v1747, v2447);
     sc_alist_6 = alist.cdr;
-    var v2177;
+    var v2137;
     if (sc_alist_6 === null) {
-      v2177 = null;
+      v2137 = null;
     } else {
-      v2177 = new sc_Pair(new sc_Pair(sc_alist_6.car.car, JAM.call(translate_term_nboyer, null, [sc_alist_6.car.cdr])), JAM.call(translate_alist_nboyer, null, [sc_alist_6.cdr]));
+      v2137 = new sc_Pair(new sc_Pair(sc_alist_6.car.car, JAM.call(translate_term_nboyer, null, [sc_alist_6.car.cdr])), JAM.call(translate_alist_nboyer, null, [sc_alist_6.cdr]));
     }
-    v292 = new sc_Pair(v1193, v2177);
+    v288 = new sc_Pair(v1186, v2137);
   }
-  return v292;
+  return v288;
 }
 function v67(sym$$4) {
   var r;
   var x$$74;
   x$$74 = sc_assq(sym$$4, BgL_sc_za2symbolzd2recordszd2alistza2_2z00_nboyer);
-  var v1196;
+  var v1189;
   if (x$$74 !== false) {
-    v1196 = x$$74.cdr;
+    v1189 = x$$74.cdr;
   } else {
     r = [sym$$4, null];
     BgL_sc_za2symbolzd2recordszd2alistza2_2z00_nboyer = new sc_Pair(new sc_Pair(sym$$4, r), BgL_sc_za2symbolzd2recordszd2alistza2_2z00_nboyer);
-    v1196 = r;
+    v1189 = r;
   }
-  return v1196;
+  return v1189;
 }
 function v66(term$$2) {
   var optrOpnd;
@@ -1510,14 +1506,13 @@ function v66(term$$2) {
     falseHead1130 = new sc_Pair(null, null);
     L1127 = term$$2.cdr;
     tail1131 = falseHead1130;
-    var v294 = !(L1127 === null);
-    for (;v294;) {
-      var v293 = tail1131;
-      var v3735 = new sc_Pair(JAM.call(untranslate_term_nboyer, null, [L1127.car]), null);
-      v293.cdr = v3735;
+    var v290 = !(L1127 === null);
+    for (;v290;) {
+      var v3695 = new sc_Pair(JAM.call(untranslate_term_nboyer, null, [L1127.car]), null);
+      tail1131.cdr = v3695;
       tail1131 = tail1131.cdr;
       L1127 = L1127.cdr;
-      v294 = !(L1127 === null);
+      v290 = !(L1127 === null);
     }
     optrOpnd = falseHead1130.cdr;
     symbol_record = term$$2.car;
@@ -1528,46 +1523,46 @@ function v66(term$$2) {
 function v65(lst$$1) {
   var sc_lst_5;
   var term$$1;
-  var v297;
+  var v293;
   if (lst$$1 === null) {
-    v297 = null;
+    v293 = null;
   } else {
     term$$1 = lst$$1.car;
-    var v2178;
+    var v2138;
     if (!(term$$1 instanceof sc_Pair)) {
-      v2178 = term$$1;
+      v2138 = term$$1;
     } else {
-      v2178 = new sc_Pair(JAM.call(BgL_sc_symbolzd2ze3symbolzd2record_1ze3_nboyer, null, [term$$1.car]), JAM.call(translate_args_nboyer, null, [term$$1.cdr]));
+      v2138 = new sc_Pair(JAM.call(BgL_sc_symbolzd2ze3symbolzd2record_1ze3_nboyer, null, [term$$1.car]), JAM.call(translate_args_nboyer, null, [term$$1.cdr]));
     }
-    var v1201 = v2178;
+    var v1194 = v2138;
     sc_lst_5 = lst$$1.cdr;
-    var v2179;
+    var v2139;
     if (sc_lst_5 === null) {
-      v2179 = null;
+      v2139 = null;
     } else {
-      v2179 = new sc_Pair(JAM.call(translate_term_nboyer, null, [sc_lst_5.car]), JAM.call(translate_args_nboyer, null, [sc_lst_5.cdr]));
+      v2139 = new sc_Pair(JAM.call(translate_term_nboyer, null, [sc_lst_5.car]), JAM.call(translate_args_nboyer, null, [sc_lst_5.cdr]));
     }
-    v297 = new sc_Pair(v1201, v2179);
+    v293 = new sc_Pair(v1194, v2139);
   }
-  return v297;
+  return v293;
 }
 function v64(term) {
   var lst;
-  var v298;
+  var v294;
   if (!(term instanceof sc_Pair)) {
-    v298 = term;
+    v294 = term;
   } else {
-    var v1204 = JAM.call(BgL_sc_symbolzd2ze3symbolzd2record_1ze3_nboyer, null, [term.car]);
+    var v1197 = JAM.call(BgL_sc_symbolzd2ze3symbolzd2record_1ze3_nboyer, null, [term.car]);
     lst = term.cdr;
-    var v2180;
+    var v2140;
     if (lst === null) {
-      v2180 = null;
+      v2140 = null;
     } else {
-      v2180 = new sc_Pair(JAM.call(translate_term_nboyer, null, [lst.car]), JAM.call(translate_args_nboyer, null, [lst.cdr]));
+      v2140 = new sc_Pair(JAM.call(translate_term_nboyer, null, [lst.car]), JAM.call(translate_args_nboyer, null, [lst.cdr]));
     }
-    v298 = new sc_Pair(v1204, v2180);
+    v294 = new sc_Pair(v1197, v2140);
   }
-  return v298;
+  return v294;
 }
 function v63() {
   return true;
@@ -1604,20 +1599,20 @@ function v61() {
   }
   var args$$5 = null;
   var sc_tmp = arguments.length - 1;
-  var v302 = sc_tmp >= 0;
-  for (;v302;) {
+  var v298 = sc_tmp >= 0;
+  for (;v298;) {
     args$$5 = sc_cons(arguments[sc_tmp], args$$5);
-    sc_tmp = sc_tmp - 1;
-    v302 = sc_tmp >= 0;
+    sc_tmp--;
+    v298 = sc_tmp >= 0;
   }
   var n$$10;
-  var v1792;
+  var v1752;
   if (args$$5 === null) {
-    v1792 = 0;
+    v1752 = 0;
   } else {
-    v1792 = args$$5.car;
+    v1752 = args$$5.car;
   }
-  n$$10 = v1792;
+  n$$10 = v1752;
   BgL_setupzd2boyerzd2();
   return JAM.call(BgL_runzd2benchmarkzd2, null, ["nboyer" + JAM.call(sc_number2string, null, [n$$10]), 1, v59, v60]);
 }
@@ -1647,7 +1642,7 @@ function v57() {
 }
 function v56() {
   function v55(sym$$3) {
-    counter = counter + 1;
+    counter++;
     if (!sym$$3) {
       sym$$3 = sc_SYMBOL_PREFIX;
     }
@@ -1659,37 +1654,37 @@ function v56() {
 function v54(symb$$4) {
   if (this[symb$$4 + "use"]) {
     var nb$$5 = this[symb$$4 + "nb"];
-    var v1215 = this[symb$$4];
-    JAM.set(this, symb$$4, this[symb$$4] - 1);
-    if (v1215 === 0) {
+    var v1208 = this[symb$$4];
+    this[symb$$4] = this[symb$$4] - 1;
+    if (v1208 === 0) {
       delete this[symb$$4];
       delete this[symb$$4 + "nb"];
       delete this[symb$$4 + "use"];
     }
     return "#" + nb$$5 + "#";
   }
-  var v1216 = this[symb$$4];
-  JAM.set(this, symb$$4, this[symb$$4] - 1);
-  if (v1216 === 0) {
+  var v1209 = this[symb$$4];
+  this[symb$$4] = this[symb$$4] - 1;
+  if (v1209 === 0) {
     delete this[symb$$4];
     delete this[symb$$4 + "nb"];
     delete this[symb$$4 + "use"];
   }
   var res$$28 = "";
   if (this[symb$$4] !== undefined) {
-    JAM.set(this, symb$$4 + "use", true);
+    this[symb$$4 + "use"] = true;
     res$$28 = res$$28 + ("#" + this[symb$$4 + "nb"] + "=");
   }
   res$$28 = res$$28 + "#(";
   var i$$46 = 0;
-  var v324 = i$$46 < this.length;
-  for (;v324;) {
+  var v320 = i$$46 < this.length;
+  for (;v320;) {
     res$$28 = res$$28 + sc_genToWriteCircleString(this[i$$46], symb$$4);
     if (i$$46 < this.length - 1) {
       res$$28 = res$$28 + " ";
     }
-    i$$46 = i$$46 + 1;
-    v324 = i$$46 < this.length;
+    i$$46++;
+    v320 = i$$46 < this.length;
   }
   res$$28 = res$$28 + ")";
   return res$$28;
@@ -1697,9 +1692,9 @@ function v54(symb$$4) {
 function v53(symb$$3, inList) {
   if (this[symb$$3 + "use"]) {
     var nb$$4 = this[symb$$3 + "nb"];
-    var v1225 = this[symb$$3];
-    JAM.set(this, symb$$3, this[symb$$3] - 1);
-    if (v1225 === 0) {
+    var v1217 = this[symb$$3];
+    this[symb$$3] = this[symb$$3] - 1;
+    if (v1217 === 0) {
       delete this[symb$$3];
       delete this[symb$$3 + "nb"];
       delete this[symb$$3 + "use"];
@@ -1710,16 +1705,16 @@ function v53(symb$$3, inList) {
       return "#" + nb$$4 + "#";
     }
   }
-  var v1226 = this[symb$$3];
-  JAM.set(this, symb$$3, this[symb$$3] - 1);
-  if (v1226 === 0) {
+  var v1218 = this[symb$$3];
+  this[symb$$3] = this[symb$$3] - 1;
+  if (v1218 === 0) {
     delete this[symb$$3];
     delete this[symb$$3 + "nb"];
     delete this[symb$$3 + "use"];
   }
   var res$$27 = "";
   if (this[symb$$3] !== undefined) {
-    JAM.set(this, symb$$3 + "use", true);
+    this[symb$$3 + "use"] = true;
     if (inList) {
       res$$27 = res$$27 + (". #" + this[symb$$3 + "nb"] + "=");
     } else {
@@ -1732,9 +1727,8 @@ function v53(symb$$3, inList) {
   }
   res$$27 = res$$27 + sc_genToWriteCircleString(this.car, symb$$3);
   if (sc_isPair(this.cdr)) {
-    var v1233 = res$$27;
-    var v2189 = this.cdr;
-    res$$27 = v1233 + (" " + JAM.call(v2189.sc_toWriteCircleString, v2189, [symb$$3, true], JAM.policy.p1));
+    var v2149 = this.cdr;
+    res$$27 = res$$27 + (" " + JAM.call(v2149.sc_toWriteCircleString, v2149, [symb$$3, true], JAM.policy.p1));
   } else {
     if (this.cdr !== null) {
       res$$27 = res$$27 + (" . " + sc_genToWriteCircleString(this.cdr, symb$$3));
@@ -1767,27 +1761,27 @@ function v47(obj$$17) {
 function v46() {
   function readList(listBeginType) {
     function matchesPeer(open$$2, close) {
-      var v1803 = open$$2 === 1;
-      if (v1803) {
-        v1803 = close === 2;
+      var v1763 = open$$2 === 1;
+      if (v1763) {
+        v1763 = close === 2;
       }
-      var v1239 = v1803;
-      if (!v1239) {
-        var v1804 = open$$2 === 3;
-        if (v1804) {
-          v1804 = close === 4;
+      var v1228 = v1763;
+      if (!v1228) {
+        var v1764 = open$$2 === 3;
+        if (v1764) {
+          v1764 = close === 4;
         }
-        v1239 = v1804;
+        v1228 = v1764;
       }
-      var v342 = v1239;
-      if (!v342) {
-        var v1240 = open$$2 === 5;
-        if (v1240) {
-          v1240 = close === 6;
+      var v338 = v1228;
+      if (!v338) {
+        var v1229 = open$$2 === 5;
+        if (v1229) {
+          v1229 = close === 6;
         }
-        v342 = v1240;
+        v338 = v1229;
       }
-      return v342;
+      return v338;
     }
     var res$$25 = null;
     for (;true;) {
@@ -1893,48 +1887,48 @@ function v46() {
 }
 function v45() {
   function isNumberChar(c$$15) {
-    var v366 = c$$15 >= "0";
-    if (v366) {
-      v366 = c$$15 <= "9";
+    var v362 = c$$15 >= "0";
+    if (v362) {
+      v362 = c$$15 <= "9";
     }
-    return v366;
+    return v362;
   }
   function isIdOrNumberChar(c$$16) {
-    var v367 = SC_ID_CLASS.indexOf(c$$16) != -1;
-    if (!v367) {
-      var v1251 = c$$16 >= "0";
-      if (v1251) {
-        v1251 = c$$16 <= "9";
+    var v363 = SC_ID_CLASS.indexOf(c$$16) != -1;
+    if (!v363) {
+      var v1240 = c$$16 >= "0";
+      if (v1240) {
+        v1240 = c$$16 <= "9";
       }
-      v367 = v1251;
+      v363 = v1240;
     }
-    return v367;
+    return v363;
   }
   function isWhitespace(c$$17) {
-    var v2191 = c$$17 === " ";
-    if (!v2191) {
-      v2191 = c$$17 === "\r";
+    var v2151 = c$$17 === " ";
+    if (!v2151) {
+      v2151 = c$$17 === "\r";
     }
-    var v1808 = v2191;
-    if (!v1808) {
-      v1808 = c$$17 === "\n";
+    var v1768 = v2151;
+    if (!v1768) {
+      v1768 = c$$17 === "\n";
     }
-    var v1253 = v1808;
-    if (!v1253) {
-      v1253 = c$$17 === "\t";
+    var v1242 = v1768;
+    if (!v1242) {
+      v1242 = c$$17 === "\t";
     }
-    var v368 = v1253;
-    if (!v368) {
-      v368 = c$$17 === "\f";
+    var v364 = v1242;
+    if (!v364) {
+      v364 = c$$17 === "\f";
     }
-    return v368;
+    return v364;
   }
   function isWhitespaceOrEOF(c$$18) {
-    var v369 = isWhitespace(c$$18);
-    if (!v369) {
-      v369 = c$$18 === SC_EOF_OBJECT;
+    var v365 = isWhitespace(c$$18);
+    if (!v365) {
+      v365 = c$$18 === SC_EOF_OBJECT;
     }
-    return v369;
+    return v365;
   }
   function readString() {
     res = "";
@@ -1980,27 +1974,27 @@ function v45() {
               var nb = 0;
               for (;true;) {
                 var hexC = port$$1.peekChar();
-                var v1256 = hexC >= "0";
-                if (v1256) {
-                  v1256 = hexC <= "9";
+                var v1245 = hexC >= "0";
+                if (v1245) {
+                  v1245 = hexC <= "9";
                 }
-                if (v1256) {
+                if (v1245) {
                   port$$1.readChar();
                   nb = nb * 16 + hexC.charCodeAt(0) - "0".charCodeAt(0);
                 } else {
-                  var v1259 = hexC >= "a";
-                  if (v1259) {
-                    v1259 = hexC <= "f";
+                  var v1248 = hexC >= "a";
+                  if (v1248) {
+                    v1248 = hexC <= "f";
                   }
-                  if (v1259) {
+                  if (v1248) {
                     port$$1.readChar();
                     nb = nb * 16 + hexC.charCodeAt(0) - "a".charCodeAt(0);
                   } else {
-                    var v1262 = hexC >= "A";
-                    if (v1262) {
-                      v1262 = hexC <= "F";
+                    var v1251 = hexC >= "A";
+                    if (v1251) {
+                      v1251 = hexC <= "F";
                     }
-                    if (v1262) {
+                    if (v1251) {
                       port$$1.readChar();
                       nb = nb * 16 + hexC.charCodeAt(0) - "A".charCodeAt(0);
                     } else {
@@ -2029,10 +2023,10 @@ function v45() {
   }
   function readIdOrNumber(firstChar) {
     var res$$23 = firstChar;
-    var v383 = isIdOrNumberChar(port$$1.peekChar());
-    for (;v383;) {
+    var v379 = isIdOrNumberChar(port$$1.peekChar());
+    for (;v379;) {
       res$$23 = res$$23 + port$$1.readChar();
-      v383 = isIdOrNumberChar(port$$1.peekChar());
+      v379 = isIdOrNumberChar(port$$1.peekChar());
     }
     if (isNaN(res$$23)) {
       return new sc_Token(9, res$$23);
@@ -2043,29 +2037,29 @@ function v45() {
   }
   function skipWhitespaceAndComments() {
     var done = false;
-    var v389 = !done;
-    for (;v389;) {
+    var v385 = !done;
+    for (;v385;) {
       done = true;
-      var v386 = isWhitespace(port$$1.peekChar());
-      for (;v386;) {
+      var v382 = isWhitespace(port$$1.peekChar());
+      for (;v382;) {
         port$$1.readChar();
-        v386 = isWhitespace(port$$1.peekChar());
+        v382 = isWhitespace(port$$1.peekChar());
       }
       if (port$$1.peekChar() === ";") {
         port$$1.readChar();
         done = false;
         for (;true;) {
           curChar = port$$1.readChar();
-          var v1274 = curChar === SC_EOF_OBJECT;
-          if (!v1274) {
-            v1274 = curChar === "\n";
+          var v1262 = curChar === SC_EOF_OBJECT;
+          if (!v1262) {
+            v1262 = curChar === "\n";
           }
-          if (v1274) {
+          if (v1262) {
             break;
           }
         }
       }
-      v389 = !done;
+      v385 = !done;
     }
     return;
   }
@@ -2076,10 +2070,10 @@ function v45() {
     }
     if (isNumberChar(c$$20)) {
       var nb$$1 = c$$20 - 0;
-      var v393 = isNumberChar(port$$1.peekChar());
-      for (;v393;) {
+      var v389 = isNumberChar(port$$1.peekChar());
+      for (;v389;) {
         nb$$1 = nb$$1 * 10 + (port$$1.readChar() - 0);
-        v393 = isNumberChar(port$$1.peekChar());
+        v389 = isNumberChar(port$$1.peekChar());
       }
       switch(port$$1.readChar()) {
         case "#":
@@ -2095,10 +2089,10 @@ function v45() {
     }
     if (c$$20 === "\\") {
       var tmp$$17 = "";
-      var v398 = !isWhitespaceOrEOF(port$$1.peekChar());
-      for (;v398;) {
+      var v394 = !isWhitespaceOrEOF(port$$1.peekChar());
+      for (;v394;) {
         tmp$$17 = tmp$$17 + port$$1.readChar();
-        v398 = !isWhitespaceOrEOF(port$$1.peekChar());
+        v394 = !isWhitespaceOrEOF(port$$1.peekChar());
       }
       switch(tmp$$17.length) {
         case 0:
@@ -2140,22 +2134,22 @@ function v45() {
     }
     for (;true;) {
       c$$20 = port$$1.peekChar();
-      var v1813 = isWhitespaceOrEOF(c$$20);
-      if (!v1813) {
-        v1813 = c$$20 === ")";
+      var v1773 = isWhitespaceOrEOF(c$$20);
+      if (!v1773) {
+        v1773 = c$$20 === ")";
       }
-      var v1283 = v1813;
-      if (v1283) {
-        v1283 = needing == "";
+      var v1270 = v1773;
+      if (v1270) {
+        v1270 = needing == "";
       }
-      if (v1283) {
+      if (v1270) {
         return res$$24;
       } else {
-        var v1284 = isWhitespace(c$$20);
-        if (!v1284) {
-          v1284 = needing == "";
+        var v1271 = isWhitespace(c$$20);
+        if (!v1271) {
+          v1271 = needing == "";
         }
-        if (v1284) {
+        if (v1271) {
           return new sc_Token(13, "bad #-pattern4 " + c$$20 + " " + needing);
         } else {
           if (needing.charAt(0) == c$$20) {
@@ -2235,10 +2229,10 @@ function v42() {
   if (this.pos >= this.str.length) {
     return SC_EOF_OBJECT;
   }
-  var v416 = this.str;
-  var v417 = this.pos;
+  var v412 = this.str;
+  var v413 = this.pos;
   this.pos = this.pos + 1;
-  return v416.charAt(v417);
+  return v412.charAt(v413);
 }
 function v41() {
   return false;
@@ -2259,8 +2253,8 @@ function v37() {
 }
 function v36() {
   if (!("peeked" in this)) {
-    var v3736 = this.getNextChar();
-    this.peeked = v3736;
+    var v3696 = this.getNextChar();
+    this.peeked = v3696;
   }
   return this.peeked;
 }
@@ -2296,11 +2290,11 @@ function v30(writeOrDisplay$$1) {
   }
   var res$$17 = "#(" + JAM.call(writeOrDisplay$$1, null, [this[0]]);
   var i$$28 = 1;
-  var v426 = i$$28 < this.length;
-  for (;v426;) {
+  var v422 = i$$28 < this.length;
+  for (;v422;) {
     res$$17 = res$$17 + (" " + JAM.call(writeOrDisplay$$1, null, [this[i$$28]]));
-    i$$28 = i$$28 + 1;
-    v426 = i$$28 < this.length;
+    i$$28++;
+    v422 = i$$28 < this.length;
   }
   res$$17 = res$$17 + ")";
   return res$$17;
@@ -2375,20 +2369,20 @@ function v21(runner$$2) {
       JAM.call(suite$$1.NotifyError, suite$$1, [e$$5]);
       return null;
     }
-    var v435;
+    var v431;
     if (data$$20 == null) {
-      v435 = RunNextTearDown;
+      v431 = RunNextTearDown;
     } else {
-      v435 = RunNextBenchmark();
+      v431 = RunNextBenchmark();
     }
-    return v435;
+    return v431;
   }
   function RunNextTearDown() {
     try {
-      var v1307 = suite$$1.benchmarks;
-      var v1308 = index$$40;
+      var v1291 = suite$$1.benchmarks;
+      var v1292 = index$$40;
       index$$40 = index$$40 + 1;
-      v1307[v1308].TearDown();
+      v1291[v1292].TearDown();
     } catch (e$$6) {
       JAM.call(suite$$1.NotifyError, suite$$1, [e$$6]);
       return null;
@@ -2409,24 +2403,24 @@ function v20(benchmark$$1, data$$18) {
     var elapsed = 0;
     var start$$4 = new Date;
     var i$$6 = 0;
-    var v1309;
+    var v1293;
     if (doDeterministic$$1) {
-      v1309 = i$$6 < benchmark$$1.deterministicIterations;
+      v1293 = i$$6 < benchmark$$1.deterministicIterations;
     } else {
-      v1309 = elapsed < 1E3;
+      v1293 = elapsed < 1E3;
     }
-    var v439 = v1309;
-    for (;v439;) {
+    var v435 = v1293;
+    for (;v435;) {
       benchmark$$1.run();
       elapsed = new Date - start$$4;
-      i$$6 = i$$6 + 1;
-      var v1310;
+      i$$6++;
+      var v1294;
       if (doDeterministic$$1) {
-        v1310 = i$$6 < benchmark$$1.deterministicIterations;
+        v1294 = i$$6 < benchmark$$1.deterministicIterations;
       } else {
-        v1310 = elapsed < 1E3;
+        v1294 = elapsed < 1E3;
       }
-      v439 = v1310;
+      v435 = v1294;
     }
     if (data$$19 != null) {
       data$$19.runs = data$$19.runs + i$$6;
@@ -2435,25 +2429,25 @@ function v20(benchmark$$1, data$$18) {
     return;
   }
   var config = BenchmarkSuite.config;
-  var v441;
+  var v437;
   if (config.doWarmup !== undefined) {
-    v441 = config.doWarmup;
+    v437 = config.doWarmup;
   } else {
-    v441 = benchmark$$1.doWarmup;
+    v437 = benchmark$$1.doWarmup;
   }
-  var doWarmup$$1 = v441;
-  var v442;
+  var doWarmup$$1 = v437;
+  var v438;
   if (config.doDeterministic !== undefined) {
-    v442 = config.doDeterministic;
+    v438 = config.doDeterministic;
   } else {
-    v442 = benchmark$$1.doDeterministic;
+    v438 = benchmark$$1.doDeterministic;
   }
-  var doDeterministic$$1 = v442;
-  var v1315 = !doWarmup$$1;
-  if (v1315) {
-    v1315 = data$$18 == null;
+  var doDeterministic$$1 = v438;
+  var v1299 = !doWarmup$$1;
+  if (v1299) {
+    v1299 = data$$18 == null;
   }
-  if (v1315) {
+  if (v1299) {
     data$$18 = {runs:0, elapsed:0};
   }
   if (data$$18 == null) {
@@ -2465,13 +2459,13 @@ function v20(benchmark$$1, data$$18) {
       return data$$18;
     }
     var usec = data$$18.elapsed * 1E3 / data$$18.runs;
-    var v447;
+    var v443;
     if (benchmark$$1.rmsResult != null) {
-      v447 = benchmark$$1.rmsResult();
+      v443 = benchmark$$1.rmsResult();
     } else {
-      v447 = 0;
+      v443 = 0;
     }
-    var rms = v447;
+    var rms = v443;
     JAM.call(this.NotifyStep, this, [new BenchmarkResult(benchmark$$1, usec, rms)]);
     return null;
   }
@@ -2479,12 +2473,12 @@ function v20(benchmark$$1, data$$18) {
 }
 function v19(error$$1) {
   if (this.runner.NotifyError) {
-    var v450 = this.runner;
-    JAM.call(v450.NotifyError, v450, [this.name, error$$1], JAM.policy.p1);
+    var v446 = this.runner;
+    JAM.call(v446.NotifyError, v446, [this.name, error$$1], JAM.policy.p1);
   }
   if (this.runner.NotifyStep) {
-    var v453 = this.runner;
-    JAM.call(v453.NotifyStep, v453, [this.name]);
+    var v449 = this.runner;
+    JAM.call(v449.NotifyStep, v449, [this.name]);
   }
   return;
 }
@@ -2501,8 +2495,8 @@ function v17() {
   BenchmarkSuite.scores.push(score$$1);
   if (this.runner.NotifyResult) {
     var formatted$$1 = JAM.call(BenchmarkSuite.FormatScore, BenchmarkSuite, [100 * score$$1]);
-    var v463 = this.runner;
-    JAM.call(v463.NotifyResult, v463, [this.name, formatted$$1], JAM.policy.p1);
+    var v459 = this.runner;
+    JAM.call(v459.NotifyResult, v459, [this.name, formatted$$1], JAM.policy.p1);
   }
   if (this.reference.length == 2) {
     var meanLatency = JAM.call(BenchmarkSuite.GeometricMeanLatency, BenchmarkSuite, [this.results]);
@@ -2511,8 +2505,8 @@ function v17() {
       BenchmarkSuite.scores.push(scoreLatency);
       if (this.runner.NotifyResult) {
         var formattedLatency = JAM.call(BenchmarkSuite.FormatScore, BenchmarkSuite, [100 * scoreLatency]);
-        var v470 = this.runner;
-        JAM.call(v470.NotifyResult, v470, [this.name + "Latency", formattedLatency], JAM.policy.p1);
+        var v466 = this.runner;
+        JAM.call(v466.NotifyResult, v466, [this.name + "Latency", formattedLatency], JAM.policy.p1);
       }
     }
   }
@@ -2521,8 +2515,8 @@ function v17() {
 function v16(result$$2) {
   this.results.push(result$$2);
   if (this.runner.NotifyStep) {
-    var v476 = this.runner;
-    JAM.call(v476.NotifyStep, v476, [result$$2.benchmark.name]);
+    var v472 = this.runner;
+    JAM.call(v472.NotifyStep, v472, [result$$2.benchmark.name]);
   }
   return;
 }
@@ -2538,14 +2532,14 @@ function v14(measurements$$1) {
   var log$$2 = 0;
   var hasLatencyResult = false;
   var i$$5 = 0;
-  var v481 = i$$5 < measurements$$1.length;
-  for (;v481;) {
+  var v477 = i$$5 < measurements$$1.length;
+  for (;v477;) {
     if (measurements$$1[i$$5].latency != 0) {
       log$$2 = log$$2 + Math.log(measurements$$1[i$$5].latency);
       hasLatencyResult = true;
     }
-    i$$5 = i$$5 + 1;
-    v481 = i$$5 < measurements$$1.length;
+    i$$5++;
+    v477 = i$$5 < measurements$$1.length;
   }
   if (hasLatencyResult) {
     return JAM.call(Math.pow, Math, [Math.E, log$$2 / measurements$$1.length], JAM.policy.p1);
@@ -2557,22 +2551,22 @@ function v14(measurements$$1) {
 function v13(measurements) {
   var log$$1 = 0;
   var i$$4 = 0;
-  var v484 = i$$4 < measurements.length;
-  for (;v484;) {
+  var v480 = i$$4 < measurements.length;
+  for (;v480;) {
     log$$1 = log$$1 + Math.log(measurements[i$$4].time);
-    i$$4 = i$$4 + 1;
-    v484 = i$$4 < measurements.length;
+    i$$4++;
+    v480 = i$$4 < measurements.length;
   }
   return JAM.call(Math.pow, Math, [Math.E, log$$1 / measurements.length], JAM.policy.p1);
 }
 function v12(numbers) {
   var log = 0;
   var i$$3 = 0;
-  var v487 = i$$3 < numbers.length;
-  for (;v487;) {
+  var v483 = i$$3 < numbers.length;
+  for (;v483;) {
     log = log + Math.log(numbers[i$$3]);
-    i$$3 = i$$3 + 1;
-    v487 = i$$3 < numbers.length;
+    i$$3++;
+    v483 = i$$3 < numbers.length;
   }
   return JAM.call(Math.pow, Math, [Math.E, log / numbers.length], JAM.policy.p1);
 }
@@ -2580,28 +2574,28 @@ function v11() {
   var result$$1 = 0;
   var suites$$1 = BenchmarkSuite.suites;
   var i$$2 = 0;
-  var v490 = i$$2 < suites$$1.length;
-  for (;v490;) {
+  var v486 = i$$2 < suites$$1.length;
+  for (;v486;) {
     result$$1 = result$$1 + suites$$1[i$$2].benchmarks.length;
-    i$$2 = i$$2 + 1;
-    v490 = i$$2 < suites$$1.length;
+    i$$2++;
+    v486 = i$$2 < suites$$1.length;
   }
   return result$$1;
 }
 function v10(runner, skipBenchmarks$$1) {
   function RunStep() {
-    var v1349 = continuation;
-    if (!v1349) {
-      v1349 = index$$39 < length$$11;
+    var v1330 = continuation;
+    if (!v1330) {
+      v1330 = index$$39 < length$$11;
     }
-    var v496 = v1349;
-    for (;v496;) {
+    var v492 = v1330;
+    for (;v492;) {
       if (continuation) {
         continuation = continuation();
       } else {
-        var v491 = index$$39;
+        var v487 = index$$39;
         index$$39 = index$$39 + 1;
-        var suite = suites[v491];
+        var suite = suites[v487];
         if (runner.NotifyStart) {
           JAM.call(runner.NotifyStart, runner, [suite.name]);
         }
@@ -2611,23 +2605,23 @@ function v10(runner, skipBenchmarks$$1) {
           continuation = JAM.call(suite.RunStep, suite, [runner]);
         }
       }
-      var v1834 = continuation;
-      if (v1834) {
-        v1834 = typeof window != "undefined";
+      var v1794 = continuation;
+      if (v1794) {
+        v1794 = typeof window != "undefined";
       }
-      var v1351 = v1834;
-      if (v1351) {
-        v1351 = window.setTimeout;
+      var v1332 = v1794;
+      if (v1332) {
+        v1332 = window.setTimeout;
       }
-      if (v1351) {
+      if (v1332) {
         JAM.call(window.setTimeout, window, [RunStep, 25], JAM.policy.p1);
         return;
       }
-      var v1352 = continuation;
-      if (!v1352) {
-        v1352 = index$$39 < length$$11;
+      var v1333 = continuation;
+      if (!v1333) {
+        v1333 = index$$39 < length$$11;
       }
-      v496 = v1352;
+      v492 = v1333;
     }
     if (runner.NotifyScore) {
       var score = JAM.call(BenchmarkSuite.GeometricMean, BenchmarkSuite, [BenchmarkSuite.scores]);
@@ -2636,13 +2630,13 @@ function v10(runner, skipBenchmarks$$1) {
     }
     return;
   }
-  var v500;
+  var v496;
   if (typeof skipBenchmarks$$1 === "undefined") {
-    v500 = [];
+    v496 = [];
   } else {
-    v500 = skipBenchmarks$$1;
+    v496 = skipBenchmarks$$1;
   }
-  skipBenchmarks$$1 = v500;
+  skipBenchmarks$$1 = v496;
   var continuation = null;
   var suites = BenchmarkSuite.suites;
   var length$$11 = suites.length;
@@ -2665,9 +2659,9 @@ function v9() {
     var seed = 49734321;
     return v7;
   }
-  var v508 = Math;
-  var v3737 = v8();
-  v508.random = v3737;
+  var v504 = Math;
+  var v3697 = v8();
+  v504.random = v3697;
   return;
 }
 function v6(s$$2) {
@@ -2677,27 +2671,27 @@ function v5() {
   return this.time;
 }
 function v4() {
-  var v2505 = performance.now;
-  if (!v2505) {
-    v2505 = performance.mozNow;
+  var v2465 = performance.now;
+  if (!v2465) {
+    v2465 = performance.mozNow;
   }
-  var v2200 = v2505;
-  if (!v2200) {
-    v2200 = performance.msNow;
+  var v2160 = v2465;
+  if (!v2160) {
+    v2160 = performance.msNow;
   }
-  var v1837 = v2200;
-  if (!v1837) {
-    v1837 = performance.oNow;
+  var v1797 = v2160;
+  if (!v1797) {
+    v1797 = performance.oNow;
   }
-  var v1366 = v1837;
-  if (!v1366) {
-    v1366 = performance.webkitNow;
+  var v1347 = v1797;
+  if (!v1347) {
+    v1347 = performance.webkitNow;
   }
-  var v509 = v1366;
-  if (!v509) {
-    v509 = Date.now;
+  var v505 = v1347;
+  if (!v505) {
+    v505 = Date.now;
   }
-  return v509;
+  return v505;
 }
 function Benchmark(name$$30, doWarmup, doDeterministic, deterministicIterations, run, setup, tearDown, rmsResult, minIterations) {
   function v1() {
@@ -2711,34 +2705,34 @@ function Benchmark(name$$30, doWarmup, doDeterministic, deterministicIterations,
   this.doDeterministic = doDeterministic;
   this.deterministicIterations = deterministicIterations;
   this.run = run;
-  var v510;
+  var v506;
   if (setup) {
-    v510 = setup;
+    v506 = setup;
   } else {
-    v510 = v0;
+    v506 = v0;
   }
-  this.Setup = v510;
-  var v511;
+  this.Setup = v506;
+  var v507;
   if (tearDown) {
-    v511 = tearDown;
+    v507 = tearDown;
   } else {
-    v511 = v1;
+    v507 = v1;
   }
-  this.TearDown = v511;
-  var v512;
+  this.TearDown = v507;
+  var v508;
   if (rmsResult) {
-    v512 = rmsResult;
+    v508 = rmsResult;
   } else {
-    v512 = null;
+    v508 = null;
   }
-  this.rmsResult = v512;
-  var v513;
+  this.rmsResult = v508;
+  var v509;
   if (minIterations) {
-    v513 = minIterations;
+    v509 = minIterations;
   } else {
-    v513 = 32;
+    v509 = 32;
   }
-  this.minIterations = v513;
+  this.minIterations = v509;
   return;
 }
 function BenchmarkResult(benchmark, time, latency) {
@@ -2763,11 +2757,11 @@ function sc_alert() {
   var s$$3 = "";
   var i$$7;
   i$$7 = 0;
-  var v515 = i$$7 < len;
-  for (;v515;) {
+  var v511 = i$$7 < len;
+  for (;v511;) {
     s$$3 = s$$3 + sc_toDisplayString(arguments[i$$7]);
-    i$$7 = i$$7 + 1;
-    v515 = i$$7 < len;
+    i$$7++;
+    v511 = i$$7 < len;
   }
   return JAM.call(alert, null, [s$$3]);
 }
@@ -2777,11 +2771,11 @@ function sc_typeof(x$$47) {
 function sc_error() {
   var a = [sc_jsstring2symbol("*error*")];
   var i$$8 = 0;
-  var v518 = i$$8 < arguments.length;
-  for (;v518;) {
+  var v514 = i$$8 < arguments.length;
+  for (;v514;) {
     a[i$$8 + 1] = arguments[i$$8];
-    i$$8 = i$$8 + 1;
-    v518 = i$$8 < arguments.length;
+    i$$8++;
+    v514 = i$$8 < arguments.length;
   }
   throw a;
 }
@@ -2861,65 +2855,65 @@ function sc_isInexact(n$$7) {
 }
 function sc_equal(x$$48) {
   var i$$9 = 1;
-  var v526 = i$$9 < arguments.length;
-  for (;v526;) {
+  var v522 = i$$9 < arguments.length;
+  for (;v522;) {
     if (x$$48 !== arguments[i$$9]) {
       return false;
     }
-    i$$9 = i$$9 + 1;
-    v526 = i$$9 < arguments.length;
+    i$$9++;
+    v522 = i$$9 < arguments.length;
   }
   return true;
 }
 function sc_less(x$$49) {
   var i$$10 = 1;
-  var v528 = i$$10 < arguments.length;
-  for (;v528;) {
+  var v524 = i$$10 < arguments.length;
+  for (;v524;) {
     if (x$$49 >= arguments[i$$10]) {
       return false;
     }
     x$$49 = arguments[i$$10];
-    i$$10 = i$$10 + 1;
-    v528 = i$$10 < arguments.length;
+    i$$10++;
+    v524 = i$$10 < arguments.length;
   }
   return true;
 }
 function sc_greater(x$$50, y$$30) {
   var i$$11 = 1;
-  var v530 = i$$11 < arguments.length;
-  for (;v530;) {
+  var v526 = i$$11 < arguments.length;
+  for (;v526;) {
     if (x$$50 <= arguments[i$$11]) {
       return false;
     }
     x$$50 = arguments[i$$11];
-    i$$11 = i$$11 + 1;
-    v530 = i$$11 < arguments.length;
+    i$$11++;
+    v526 = i$$11 < arguments.length;
   }
   return true;
 }
 function sc_lessEqual(x$$51, y$$31) {
   var i$$12 = 1;
-  var v532 = i$$12 < arguments.length;
-  for (;v532;) {
+  var v528 = i$$12 < arguments.length;
+  for (;v528;) {
     if (x$$51 > arguments[i$$12]) {
       return false;
     }
     x$$51 = arguments[i$$12];
-    i$$12 = i$$12 + 1;
-    v532 = i$$12 < arguments.length;
+    i$$12++;
+    v528 = i$$12 < arguments.length;
   }
   return true;
 }
 function sc_greaterEqual(x$$52, y$$32) {
   var i$$13 = 1;
-  var v534 = i$$13 < arguments.length;
-  for (;v534;) {
+  var v530 = i$$13 < arguments.length;
+  for (;v530;) {
     if (x$$52 < arguments[i$$13]) {
       return false;
     }
     x$$52 = arguments[i$$13];
-    i$$13 = i$$13 + 1;
-    v534 = i$$13 < arguments.length;
+    i$$13++;
+    v530 = i$$13 < arguments.length;
   }
   return true;
 }
@@ -2941,22 +2935,22 @@ function sc_isEven(x$$57) {
 function sc_plus() {
   var sum = 0;
   var i$$14 = 0;
-  var v537 = i$$14 < arguments.length;
-  for (;v537;) {
+  var v533 = i$$14 < arguments.length;
+  for (;v533;) {
     sum = sum + arguments[i$$14];
-    i$$14 = i$$14 + 1;
-    v537 = i$$14 < arguments.length;
+    i$$14++;
+    v533 = i$$14 < arguments.length;
   }
   return sum;
 }
 function sc_multi() {
   var product = 1;
   var i$$15 = 0;
-  var v538 = i$$15 < arguments.length;
-  for (;v538;) {
+  var v534 = i$$15 < arguments.length;
+  for (;v534;) {
     product = product * arguments[i$$15];
-    i$$15 = i$$15 + 1;
-    v538 = i$$15 < arguments.length;
+    i$$15++;
+    v534 = i$$15 < arguments.length;
   }
   return product;
 }
@@ -2966,11 +2960,11 @@ function sc_minus(x$$58) {
   } else {
     var res$$1 = x$$58;
     var i$$16 = 1;
-    var v539 = i$$16 < arguments.length;
-    for (;v539;) {
+    var v535 = i$$16 < arguments.length;
+    for (;v535;) {
       res$$1 = res$$1 - arguments[i$$16];
-      i$$16 = i$$16 + 1;
-      v539 = i$$16 < arguments.length;
+      i$$16++;
+      v535 = i$$16 < arguments.length;
     }
     return res$$1;
   }
@@ -2982,11 +2976,11 @@ function sc_div(x$$59) {
   } else {
     var res$$2 = x$$59;
     var i$$17 = 1;
-    var v541 = i$$17 < arguments.length;
-    for (;v541;) {
+    var v537 = i$$17 < arguments.length;
+    for (;v537;) {
       res$$2 = res$$2 / arguments[i$$17];
-      i$$17 = i$$17 + 1;
-      v541 = i$$17 < arguments.length;
+      i$$17++;
+      v537 = i$$17 < arguments.length;
     }
     return res$$2;
   }
@@ -3041,23 +3035,23 @@ function sc_euclid_gcd(a$$1, b) {
 function sc_gcd() {
   var gcd = 0;
   var i$$18 = 0;
-  var v553 = i$$18 < arguments.length;
-  for (;v553;) {
+  var v549 = i$$18 < arguments.length;
+  for (;v549;) {
     gcd = sc_euclid_gcd(gcd, arguments[i$$18]);
-    i$$18 = i$$18 + 1;
-    v553 = i$$18 < arguments.length;
+    i$$18++;
+    v549 = i$$18 < arguments.length;
   }
   return gcd;
 }
 function sc_lcm() {
   var lcm = 1;
   var i$$19 = 0;
-  var v555 = i$$19 < arguments.length;
-  for (;v555;) {
+  var v551 = i$$19 < arguments.length;
+  for (;v551;) {
     var f = Math.round(arguments[i$$19] / sc_euclid_gcd(arguments[i$$19], lcm));
     lcm = lcm * Math.abs(f);
-    i$$19 = i$$19 + 1;
-    v555 = i$$19 < arguments.length;
+    i$$19++;
+    v551 = i$$19 < arguments.length;
   }
   return lcm;
 }
@@ -3081,11 +3075,11 @@ function sc_jsstring2number(s$$4, radix$$1) {
   }
   if (radix$$1) {
     var t = parseInt(s$$4, radix$$1);
-    var v1411 = !t;
-    if (v1411) {
-      v1411 = t !== 0;
+    var v1390 = !t;
+    if (v1390) {
+      v1390 = t !== 0;
     }
-    if (v1411) {
+    if (v1390) {
       return false;
     }
     var allowedChars = JAM.call("01234567890abcdefghijklmnopqrstuvwxyz".substring, "01234567890abcdefghijklmnopqrstuvwxyz", [0, radix$$1 + 1], JAM.policy.p1);
@@ -3096,19 +3090,19 @@ function sc_jsstring2number(s$$4, radix$$1) {
     }
   } else {
     t = +s$$4;
-    var v1413 = !t;
-    if (v1413) {
-      v1413 = t !== 0;
+    var v1392 = !t;
+    if (v1392) {
+      v1392 = t !== 0;
     }
-    if (v1413) {
+    if (v1392) {
       return false;
     }
     var c = s$$4.charAt(0);
-    var v1414 = +c === 0;
-    if (v1414) {
-      v1414 = c !== "0";
+    var v1393 = +c === 0;
+    if (v1393) {
+      v1393 = c !== "0";
     }
-    if (v1414) {
+    if (v1393) {
       return false;
     }
     return t;
@@ -3119,11 +3113,11 @@ function sc_not(b$$1) {
   return b$$1 === false;
 }
 function sc_isBoolean(b$$2) {
-  var v562 = b$$2 === true;
-  if (!v562) {
-    v562 = b$$2 === false;
+  var v558 = b$$2 === true;
+  if (!v558) {
+    v558 = b$$2 === false;
   }
-  return v562;
+  return v558;
 }
 function sc_Pair(car, cdr) {
   this.car = car;
@@ -3134,11 +3128,11 @@ function sc_isPair(p) {
   return p instanceof sc_Pair;
 }
 function sc_isPairEqual(p1, p2, comp) {
-  var v563 = JAM.call(comp, null, [p1.car, p2.car], JAM.policy.p1);
-  if (v563) {
-    v563 = JAM.call(comp, null, [p1.cdr, p2.cdr], JAM.policy.p1);
+  var v559 = JAM.call(comp, null, [p1.car, p2.car], JAM.policy.p1);
+  if (v559) {
+    v559 = JAM.call(comp, null, [p1.cdr, p2.cdr], JAM.policy.p1);
   }
-  return v563;
+  return v559;
 }
 function sc_cons(car$$1, cdr$$1) {
   return new sc_Pair(car$$1, cdr$$1);
@@ -3146,11 +3140,11 @@ function sc_cons(car$$1, cdr$$1) {
 function sc_consStar() {
   var res$$4 = arguments[arguments.length - 1];
   var i$$20 = arguments.length - 2;
-  var v567 = i$$20 >= 0;
-  for (;v567;) {
+  var v563 = i$$20 >= 0;
+  for (;v563;) {
     res$$4 = new sc_Pair(arguments[i$$20], res$$4);
-    i$$20 = i$$20 - 1;
-    v567 = i$$20 >= 0;
+    i$$20--;
+    v563 = i$$20 >= 0;
   }
   return res$$4;
 }
@@ -3258,11 +3252,11 @@ function sc_lastPair(l) {
   }
   var res$$5 = l;
   var cdr$$2 = l.cdr;
-  var v597 = sc_isPair(cdr$$2);
-  for (;v597;) {
+  var v593 = sc_isPair(cdr$$2);
+  for (;v593;) {
     res$$5 = cdr$$2;
     cdr$$2 = res$$5.cdr;
-    v597 = sc_isPair(cdr$$2);
+    v593 = sc_isPair(cdr$$2);
   }
   return res$$5;
 }
@@ -3275,22 +3269,22 @@ function sc_isList(o$$2) {
   rabbit = o$$2;
   turtle = o$$2;
   for (;true;) {
-    var v1446 = rabbit === null;
-    if (!v1446) {
-      var v1859 = rabbit instanceof sc_Pair;
-      if (v1859) {
-        v1859 = rabbit.cdr === null;
+    var v1425 = rabbit === null;
+    if (!v1425) {
+      var v1819 = rabbit instanceof sc_Pair;
+      if (v1819) {
+        v1819 = rabbit.cdr === null;
       }
-      v1446 = v1859;
+      v1425 = v1819;
     }
-    if (v1446) {
+    if (v1425) {
       return true;
     } else {
-      var v1447 = rabbit instanceof sc_Pair;
-      if (v1447) {
-        v1447 = rabbit.cdr instanceof sc_Pair;
+      var v1426 = rabbit instanceof sc_Pair;
+      if (v1426) {
+        v1426 = rabbit.cdr instanceof sc_Pair;
       }
-      if (v1447) {
+      if (v1426) {
         rabbit = rabbit.cdr.cdr;
         turtle = turtle.cdr;
         if (rabbit === turtle) {
@@ -3307,11 +3301,11 @@ function sc_list() {
   var res$$6 = null;
   var a$$2 = arguments;
   var i$$21 = a$$2.length - 1;
-  var v604 = i$$21 >= 0;
-  for (;v604;) {
+  var v600 = i$$21 >= 0;
+  for (;v600;) {
     res$$6 = new sc_Pair(a$$2[i$$21], res$$6);
-    i$$21 = i$$21 - 1;
-    v604 = i$$21 >= 0;
+    i$$21--;
+    v600 = i$$21 >= 0;
   }
   return res$$6;
 }
@@ -3321,48 +3315,47 @@ function sc_iota(num$$4, init) {
     init = 0;
   }
   var i$$22 = num$$4 - 1;
-  var v607 = i$$22 >= 0;
-  for (;v607;) {
+  var v603 = i$$22 >= 0;
+  for (;v603;) {
     res$$7 = new sc_Pair(i$$22 + init, res$$7);
-    i$$22 = i$$22 - 1;
-    v607 = i$$22 >= 0;
+    i$$22--;
+    v603 = i$$22 >= 0;
   }
   return res$$7;
 }
 function sc_makeList(nbEls, fill) {
   var res$$8 = null;
   var i$$23 = 0;
-  var v608 = i$$23 < nbEls;
-  for (;v608;) {
+  var v604 = i$$23 < nbEls;
+  for (;v604;) {
     res$$8 = new sc_Pair(fill, res$$8);
-    i$$23 = i$$23 + 1;
-    v608 = i$$23 < nbEls;
+    i$$23++;
+    v604 = i$$23 < nbEls;
   }
   return res$$8;
 }
 function sc_length(l$$1) {
   var res$$9 = 0;
-  var v609 = l$$1 !== null;
-  for (;v609;) {
-    res$$9 = res$$9 + 1;
+  var v605 = l$$1 !== null;
+  for (;v605;) {
+    res$$9++;
     l$$1 = l$$1.cdr;
-    v609 = l$$1 !== null;
+    v605 = l$$1 !== null;
   }
   return res$$9;
 }
 function sc_remq(o$$3, l$$2) {
   var dummy = {cdr:null};
   var tail = dummy;
-  var v612 = l$$2 !== null;
-  for (;v612;) {
+  var v608 = l$$2 !== null;
+  for (;v608;) {
     if (l$$2.car !== o$$3) {
-      var v610 = tail;
-      var v3738 = sc_cons(l$$2.car, null);
-      v610.cdr = v3738;
+      var v3698 = sc_cons(l$$2.car, null);
+      tail.cdr = v3698;
       tail = tail.cdr;
     }
     l$$2 = l$$2.cdr;
-    v612 = l$$2 !== null;
+    v608 = l$$2 !== null;
   }
   return dummy.cdr;
 }
@@ -3370,8 +3363,8 @@ function sc_remqBang(o$$4, l$$3) {
   var dummy$$1 = {cdr:null};
   var tail$$1 = dummy$$1;
   var needsAssig = true;
-  var v614 = l$$3 !== null;
-  for (;v614;) {
+  var v610 = l$$3 !== null;
+  for (;v610;) {
     if (l$$3.car === o$$4) {
       needsAssig = true;
     } else {
@@ -3382,7 +3375,7 @@ function sc_remqBang(o$$4, l$$3) {
       tail$$1 = l$$3;
     }
     l$$3 = l$$3.cdr;
-    v614 = l$$3 !== null;
+    v610 = l$$3 !== null;
   }
   tail$$1.cdr = null;
   return dummy$$1.cdr;
@@ -3390,16 +3383,15 @@ function sc_remqBang(o$$4, l$$3) {
 function sc_delete(o$$5, l$$4) {
   var dummy$$2 = {cdr:null};
   var tail$$2 = dummy$$2;
-  var v617 = l$$4 !== null;
-  for (;v617;) {
+  var v613 = l$$4 !== null;
+  for (;v613;) {
     if (!sc_isEqual(l$$4.car, o$$5)) {
-      var v615 = tail$$2;
-      var v3739 = sc_cons(l$$4.car, null);
-      v615.cdr = v3739;
+      var v3699 = sc_cons(l$$4.car, null);
+      tail$$2.cdr = v3699;
       tail$$2 = tail$$2.cdr;
     }
     l$$4 = l$$4.cdr;
-    v617 = l$$4 !== null;
+    v613 = l$$4 !== null;
   }
   return dummy$$2.cdr;
 }
@@ -3407,8 +3399,8 @@ function sc_deleteBang(o$$6, l$$5) {
   var dummy$$3 = {cdr:null};
   var tail$$3 = dummy$$3;
   var needsAssig$$1 = true;
-  var v619 = l$$5 !== null;
-  for (;v619;) {
+  var v615 = l$$5 !== null;
+  for (;v615;) {
     if (sc_isEqual(l$$5.car, o$$6)) {
       needsAssig$$1 = true;
     } else {
@@ -3419,20 +3411,20 @@ function sc_deleteBang(o$$6, l$$5) {
       tail$$3 = l$$5;
     }
     l$$5 = l$$5.cdr;
-    v619 = l$$5 !== null;
+    v615 = l$$5 !== null;
   }
   tail$$3.cdr = null;
   return dummy$$3.cdr;
 }
 function sc_reverseAppendBang(l1, l2) {
   var res$$10 = l2;
-  var v620 = l1 !== null;
-  for (;v620;) {
+  var v616 = l1 !== null;
+  for (;v616;) {
     var tmp = res$$10;
     res$$10 = l1;
     l1 = l1.cdr;
     res$$10.cdr = tmp;
-    v620 = l1 !== null;
+    v616 = l1 !== null;
   }
   return res$$10;
 }
@@ -3452,11 +3444,11 @@ function sc_append() {
   }
   var res$$11 = arguments[arguments.length - 1];
   var i$$24 = arguments.length - 2;
-  var v627 = i$$24 >= 0;
-  for (;v627;) {
+  var v623 = i$$24 >= 0;
+  for (;v623;) {
     res$$11 = sc_dualAppend(arguments[i$$24], res$$11);
-    i$$24 = i$$24 - 1;
-    v627 = i$$24 >= 0;
+    i$$24--;
+    v623 = i$$24 >= 0;
   }
   return res$$11;
 }
@@ -3468,10 +3460,10 @@ function sc_dualAppendBang(l1$$2, l2$$2) {
     return l1$$2;
   }
   var tmp$$1 = l1$$2;
-  var v630 = tmp$$1.cdr !== null;
-  for (;v630;) {
+  var v626 = tmp$$1.cdr !== null;
+  for (;v626;) {
     tmp$$1 = tmp$$1.cdr;
-    v630 = tmp$$1.cdr !== null;
+    v626 = tmp$$1.cdr !== null;
   }
   tmp$$1.cdr = l2$$2;
   return l1$$2;
@@ -3479,21 +3471,21 @@ function sc_dualAppendBang(l1$$2, l2$$2) {
 function sc_appendBang() {
   var res$$12 = null;
   var i$$25 = 0;
-  var v632 = i$$25 < arguments.length;
-  for (;v632;) {
+  var v628 = i$$25 < arguments.length;
+  for (;v628;) {
     res$$12 = sc_dualAppendBang(res$$12, arguments[i$$25]);
-    i$$25 = i$$25 + 1;
-    v632 = i$$25 < arguments.length;
+    i$$25++;
+    v628 = i$$25 < arguments.length;
   }
   return res$$12;
 }
 function sc_reverse(l1$$3) {
   var res$$13 = null;
-  var v634 = l1$$3 !== null;
-  for (;v634;) {
+  var v630 = l1$$3 !== null;
+  for (;v630;) {
     res$$13 = sc_cons(l1$$3.car, res$$13);
     l1$$3 = l1$$3.cdr;
-    v634 = l1$$3 !== null;
+    v630 = l1$$3 !== null;
   }
   return res$$13;
 }
@@ -3503,11 +3495,11 @@ function sc_reverseBang(l$$6) {
 function sc_listTail(l$$7, k) {
   var res$$14 = l$$7;
   var i$$26 = 0;
-  var v635 = i$$26 < k;
-  for (;v635;) {
+  var v631 = i$$26 < k;
+  for (;v631;) {
     res$$14 = res$$14.cdr;
-    i$$26 = i$$26 + 1;
-    v635 = i$$26 < k;
+    i$$26++;
+    v631 = i$$26 < k;
   }
   return res$$14;
 }
@@ -3515,68 +3507,68 @@ function sc_listRef(l$$8, k$$1) {
   return sc_listTail(l$$8, k$$1).car;
 }
 function sc_memq(o$$7, l$$9) {
-  var v638 = l$$9 !== null;
-  for (;v638;) {
+  var v634 = l$$9 !== null;
+  for (;v634;) {
     if (l$$9.car === o$$7) {
       return l$$9;
     }
     l$$9 = l$$9.cdr;
-    v638 = l$$9 !== null;
+    v634 = l$$9 !== null;
   }
   return false;
 }
 function sc_memv(o$$8, l$$10) {
-  var v640 = l$$10 !== null;
-  for (;v640;) {
+  var v636 = l$$10 !== null;
+  for (;v636;) {
     if (l$$10.car === o$$8) {
       return l$$10;
     }
     l$$10 = l$$10.cdr;
-    v640 = l$$10 !== null;
+    v636 = l$$10 !== null;
   }
   return false;
 }
 function sc_member(o$$9, l$$11) {
-  var v642 = l$$11 !== null;
-  for (;v642;) {
+  var v638 = l$$11 !== null;
+  for (;v638;) {
     if (sc_isEqual(l$$11.car, o$$9)) {
       return l$$11;
     }
     l$$11 = l$$11.cdr;
-    v642 = l$$11 !== null;
+    v638 = l$$11 !== null;
   }
   return false;
 }
 function sc_assq(o$$10, al) {
-  var v644 = al !== null;
-  for (;v644;) {
+  var v640 = al !== null;
+  for (;v640;) {
     if (al.car.car === o$$10) {
       return al.car;
     }
     al = al.cdr;
-    v644 = al !== null;
+    v640 = al !== null;
   }
   return false;
 }
 function sc_assv(o$$11, al$$1) {
-  var v646 = al$$1 !== null;
-  for (;v646;) {
+  var v642 = al$$1 !== null;
+  for (;v642;) {
     if (al$$1.car.car === o$$11) {
       return al$$1.car;
     }
     al$$1 = al$$1.cdr;
-    v646 = al$$1 !== null;
+    v642 = al$$1 !== null;
   }
   return false;
 }
 function sc_assoc(o$$12, al$$2) {
-  var v648 = al$$2 !== null;
-  for (;v648;) {
+  var v644 = al$$2 !== null;
+  for (;v644;) {
     if (sc_isEqual(al$$2.car.car, o$$12)) {
       return al$$2.car;
     }
     al$$2 = al$$2.cdr;
-    v648 = al$$2 !== null;
+    v644 = al$$2 !== null;
   }
   return false;
 }
@@ -3626,34 +3618,34 @@ function sc_isCharOfClass(c$$3, cl) {
   return cl.indexOf(c$$3) != -1;
 }
 function sc_isCharAlphabetic(c$$4) {
-  var v672 = sc_isCharOfClass(c$$4.val, SC_LOWER_CLASS);
-  if (!v672) {
-    v672 = sc_isCharOfClass(c$$4.val, SC_UPPER_CLASS);
+  var v668 = sc_isCharOfClass(c$$4.val, SC_LOWER_CLASS);
+  if (!v668) {
+    v668 = sc_isCharOfClass(c$$4.val, SC_UPPER_CLASS);
   }
-  return v672;
+  return v668;
 }
 function sc_isCharNumeric(c$$5) {
   return sc_isCharOfClass(c$$5.val, SC_NUMBER_CLASS);
 }
 function sc_isCharWhitespace(c$$6) {
   var tmp$$2 = c$$6.val;
-  var v2204 = tmp$$2 === " ";
-  if (!v2204) {
-    v2204 = tmp$$2 === "\r";
+  var v2164 = tmp$$2 === " ";
+  if (!v2164) {
+    v2164 = tmp$$2 === "\r";
   }
-  var v1866 = v2204;
-  if (!v1866) {
-    v1866 = tmp$$2 === "\n";
+  var v1826 = v2164;
+  if (!v1826) {
+    v1826 = tmp$$2 === "\n";
   }
-  var v1479 = v1866;
-  if (!v1479) {
-    v1479 = tmp$$2 === "\t";
+  var v1456 = v1826;
+  if (!v1456) {
+    v1456 = tmp$$2 === "\t";
   }
-  var v674 = v1479;
-  if (!v674) {
-    v674 = tmp$$2 === "\f";
+  var v670 = v1456;
+  if (!v670) {
+    v670 = tmp$$2 === "\f";
   }
-  return v674;
+  return v670;
 }
 function sc_isCharUpperCase(c$$7) {
   return sc_isCharOfClass(c$$7.val, SC_UPPER_CLASS);
@@ -3682,14 +3674,14 @@ function sc_makeJSStringOfLength(k$$2, c$$12) {
   }
   var res$$15 = "";
   var len$$1 = 1;
-  var v683 = k$$2 >= len$$1;
-  for (;v683;) {
+  var v679 = k$$2 >= len$$1;
+  for (;v679;) {
     if (k$$2 & len$$1) {
       res$$15 = res$$15.concat(fill$$1);
     }
     fill$$1 = fill$$1.concat(fill$$1);
     len$$1 = len$$1 * 2;
-    v683 = k$$2 >= len$$1;
+    v679 = k$$2 >= len$$1;
   }
   return res$$15;
 }
@@ -3705,24 +3697,24 @@ function sc_makejsString(k$$3, c$$13) {
 function sc_jsstring2list(s$$5) {
   var res$$16 = null;
   var i$$27 = s$$5.length - 1;
-  var v686 = i$$27 >= 0;
-  for (;v686;) {
+  var v682 = i$$27 >= 0;
+  for (;v682;) {
     res$$16 = sc_cons(new sc_Char(s$$5.charAt(i$$27)), res$$16);
-    i$$27 = i$$27 - 1;
-    v686 = i$$27 >= 0;
+    i$$27--;
+    v682 = i$$27 >= 0;
   }
   return res$$16;
 }
 function sc_list2jsstring(l$$12) {
   var a$$3 = new Array;
-  var v688 = l$$12 !== null;
-  for (;v688;) {
+  var v684 = l$$12 !== null;
+  for (;v684;) {
     a$$3.push(l$$12.car.val);
     l$$12 = l$$12.cdr;
-    v688 = l$$12 !== null;
+    v684 = l$$12 !== null;
   }
-  var v689 = "".concat;
-  return JAM.call(v689.apply, v689, ["", a$$3], JAM.policy.p1);
+  var v685 = "".concat;
+  return JAM.call(v685.apply, v685, ["", a$$3], JAM.policy.p1);
 }
 function sc_isVector(v) {
   return v instanceof sc_Vector;
@@ -3732,13 +3724,13 @@ function sc_isVectorEqual(v1$$1, v2, comp$$1) {
     return false;
   }
   var i$$29 = 0;
-  var v692 = i$$29 < v1$$1.length;
-  for (;v692;) {
+  var v688 = i$$29 < v1$$1.length;
+  for (;v688;) {
     if (!JAM.call(comp$$1, null, [v1$$1[i$$29], v2[i$$29]], JAM.policy.p1)) {
       return false;
     }
-    i$$29 = i$$29 + 1;
-    v692 = i$$29 < v1$$1.length;
+    i$$29++;
+    v688 = i$$29 < v1$$1.length;
   }
   return true;
 }
@@ -3752,11 +3744,11 @@ function sc_makeVector(size$$4, fill$$3) {
 function sc_vector() {
   var a$$5 = new sc_Vector;
   var i$$30 = 0;
-  var v695 = i$$30 < arguments.length;
-  for (;v695;) {
+  var v691 = i$$30 < arguments.length;
+  for (;v691;) {
     a$$5.push(arguments[i$$30]);
-    i$$30 = i$$30 + 1;
-    v695 = i$$30 < arguments.length;
+    i$$30++;
+    v691 = i$$30 < arguments.length;
   }
   return a$$5;
 }
@@ -3773,31 +3765,31 @@ function sc_vectorSetBang(v$$3, pos$$1, val$$3) {
 function sc_vector2list(a$$6) {
   var res$$18 = null;
   var i$$31 = a$$6.length - 1;
-  var v698 = i$$31 >= 0;
-  for (;v698;) {
+  var v694 = i$$31 >= 0;
+  for (;v694;) {
     res$$18 = sc_cons(a$$6[i$$31], res$$18);
-    i$$31 = i$$31 - 1;
-    v698 = i$$31 >= 0;
+    i$$31--;
+    v694 = i$$31 >= 0;
   }
   return res$$18;
 }
 function sc_list2vector(l$$13) {
   var a$$7 = new sc_Vector;
-  var v700 = l$$13 !== null;
-  for (;v700;) {
+  var v696 = l$$13 !== null;
+  for (;v696;) {
     a$$7.push(l$$13.car);
     l$$13 = l$$13.cdr;
-    v700 = l$$13 !== null;
+    v696 = l$$13 !== null;
   }
   return a$$7;
 }
 function sc_vectorFillBang(a$$8, fill$$4) {
   var i$$32 = 0;
-  var v701 = i$$32 < a$$8.length;
-  for (;v701;) {
+  var v697 = i$$32 < a$$8.length;
+  for (;v697;) {
     a$$8[i$$32] = fill$$4;
-    i$$32 = i$$32 + 1;
-    v701 = i$$32 < a$$8.length;
+    i$$32++;
+    v697 = i$$32 < a$$8.length;
   }
   return;
 }
@@ -3824,23 +3816,23 @@ function sc_vectorCopyBang(target$$26, tstart, source$$1, sstart, send) {
   if (tstart <= sstart) {
     var i$$33 = tstart;
     var j = sstart;
-    var v705 = j < send;
-    for (;v705;) {
+    var v701 = j < send;
+    for (;v701;) {
       JAM.set(target$$26, i$$33, source$$1[j]);
-      i$$33 = i$$33 + 1;
-      j = j + 1;
-      v705 = j < send;
+      i$$33++;
+      j++;
+      v701 = j < send;
     }
   } else {
     var diff = send - sstart;
     i$$33 = tstart + diff - 1;
     j = send - 1;
-    var v707 = j >= sstart;
-    for (;v707;) {
+    var v703 = j >= sstart;
+    for (;v703;) {
       JAM.set(target$$26, i$$33, source$$1[j]);
-      i$$33 = i$$33 - 1;
-      j = j - 1;
-      v707 = j >= sstart;
+      i$$33--;
+      j--;
+      v703 = j >= sstart;
     }
   }
   return target$$26;
@@ -3851,18 +3843,18 @@ function sc_isProcedure(o$$13) {
 function sc_apply(proc) {
   var args = new Array;
   var i$$34 = 1;
-  var v711 = i$$34 < arguments.length - 1;
-  for (;v711;) {
+  var v707 = i$$34 < arguments.length - 1;
+  for (;v707;) {
     args.push(arguments[i$$34]);
-    i$$34 = i$$34 + 1;
-    v711 = i$$34 < arguments.length - 1;
+    i$$34++;
+    v707 = i$$34 < arguments.length - 1;
   }
   var l$$14 = arguments[arguments.length - 1];
-  var v714 = l$$14 !== null;
-  for (;v714;) {
+  var v710 = l$$14 !== null;
+  for (;v710;) {
     args.push(l$$14.car);
     l$$14 = l$$14.cdr;
-    v714 = l$$14 !== null;
+    v710 = l$$14 !== null;
   }
   return JAM.call(proc.apply, proc, [null, args], JAM.policy.p1);
 }
@@ -3873,18 +3865,18 @@ function sc_map(proc$$1, l1$$4) {
   var nbApplyArgs = arguments.length - 1;
   var applyArgs = new Array(nbApplyArgs);
   var revres = null;
-  var v721 = l1$$4 !== null;
-  for (;v721;) {
+  var v717 = l1$$4 !== null;
+  for (;v717;) {
     var i$$35 = 0;
-    var v719 = i$$35 < nbApplyArgs;
-    for (;v719;) {
+    var v715 = i$$35 < nbApplyArgs;
+    for (;v715;) {
       applyArgs[i$$35] = arguments[i$$35 + 1].car;
       arguments[i$$35 + 1] = arguments[i$$35 + 1].cdr;
-      i$$35 = i$$35 + 1;
-      v719 = i$$35 < nbApplyArgs;
+      i$$35++;
+      v715 = i$$35 < nbApplyArgs;
     }
     revres = sc_cons(JAM.call(proc$$1.apply, proc$$1, [null, applyArgs], JAM.policy.p1), revres);
-    v721 = l1$$4 !== null;
+    v717 = l1$$4 !== null;
   }
   return sc_reverseAppendBang(revres, null);
 }
@@ -3895,21 +3887,20 @@ function sc_mapBang(proc$$2, l1$$5) {
   var l1_orig = l1$$5;
   var nbApplyArgs$$1 = arguments.length - 1;
   var applyArgs$$1 = new Array(nbApplyArgs$$1);
-  var v728 = l1$$5 !== null;
-  for (;v728;) {
+  var v723 = l1$$5 !== null;
+  for (;v723;) {
     var tmp$$4 = l1$$5;
     var i$$36 = 0;
-    var v726 = i$$36 < nbApplyArgs$$1;
-    for (;v726;) {
+    var v722 = i$$36 < nbApplyArgs$$1;
+    for (;v722;) {
       applyArgs$$1[i$$36] = arguments[i$$36 + 1].car;
       arguments[i$$36 + 1] = arguments[i$$36 + 1].cdr;
-      i$$36 = i$$36 + 1;
-      v726 = i$$36 < nbApplyArgs$$1;
+      i$$36++;
+      v722 = i$$36 < nbApplyArgs$$1;
     }
-    var v727 = tmp$$4;
-    var v3740 = JAM.call(proc$$2.apply, proc$$2, [null, applyArgs$$1], JAM.policy.p1);
-    v727.car = v3740;
-    v728 = l1$$5 !== null;
+    var v3700 = JAM.call(proc$$2.apply, proc$$2, [null, applyArgs$$1], JAM.policy.p1);
+    tmp$$4.car = v3700;
+    v723 = l1$$5 !== null;
   }
   return l1_orig;
 }
@@ -3919,34 +3910,33 @@ function sc_forEach(proc$$3, l1$$6) {
   }
   var nbApplyArgs$$2 = arguments.length - 1;
   var applyArgs$$2 = new Array(nbApplyArgs$$2);
-  var v734 = l1$$6 !== null;
-  for (;v734;) {
+  var v729 = l1$$6 !== null;
+  for (;v729;) {
     var i$$37 = 0;
-    var v733 = i$$37 < nbApplyArgs$$2;
-    for (;v733;) {
+    var v728 = i$$37 < nbApplyArgs$$2;
+    for (;v728;) {
       applyArgs$$2[i$$37] = arguments[i$$37 + 1].car;
       arguments[i$$37 + 1] = arguments[i$$37 + 1].cdr;
-      i$$37 = i$$37 + 1;
-      v733 = i$$37 < nbApplyArgs$$2;
+      i$$37++;
+      v728 = i$$37 < nbApplyArgs$$2;
     }
     JAM.call(proc$$3.apply, proc$$3, [null, applyArgs$$2], JAM.policy.p1);
-    v734 = l1$$6 !== null;
+    v729 = l1$$6 !== null;
   }
   return undefined;
 }
 function sc_filter(proc$$4, l1$$7) {
   var dummy$$4 = {cdr:null};
   var tail$$4 = dummy$$4;
-  var v737 = l1$$7 !== null;
-  for (;v737;) {
+  var v732 = l1$$7 !== null;
+  for (;v732;) {
     if (JAM.call(proc$$4, null, [l1$$7.car]) !== false) {
-      var v735 = tail$$4;
-      var v3741 = sc_cons(l1$$7.car, null);
-      v735.cdr = v3741;
+      var v3701 = sc_cons(l1$$7.car, null);
+      tail$$4.cdr = v3701;
       tail$$4 = tail$$4.cdr;
     }
     l1$$7 = l1$$7.cdr;
-    v737 = l1$$7 !== null;
+    v732 = l1$$7 !== null;
   }
   return dummy$$4.cdr;
 }
@@ -3954,42 +3944,42 @@ function sc_filterBang(proc$$5, l1$$8) {
   var head = sc_cons("dummy", l1$$8);
   var it = head;
   var next = l1$$8;
-  var v739 = next !== null;
-  for (;v739;) {
+  var v734 = next !== null;
+  for (;v734;) {
     if (JAM.call(proc$$5, null, [next.car]) !== false) {
       it.cdr = next;
       it = next;
     }
     next = next.cdr;
-    v739 = next !== null;
+    v734 = next !== null;
   }
   it.cdr = null;
   return head.cdr;
 }
 function sc_filterMap1(proc$$6, l1$$9) {
   var revres$$1 = null;
-  var v742 = l1$$9 !== null;
-  for (;v742;) {
+  var v737 = l1$$9 !== null;
+  for (;v737;) {
     var tmp$$5 = JAM.call(proc$$6, null, [l1$$9.car]);
     if (tmp$$5 !== false) {
       revres$$1 = sc_cons(tmp$$5, revres$$1);
     }
     l1$$9 = l1$$9.cdr;
-    v742 = l1$$9 !== null;
+    v737 = l1$$9 !== null;
   }
   return sc_reverseAppendBang(revres$$1, null);
 }
 function sc_filterMap2(proc$$7, l1$$10, l2$$3) {
   var revres$$2 = null;
-  var v746 = l1$$10 !== null;
-  for (;v746;) {
+  var v741 = l1$$10 !== null;
+  for (;v741;) {
     var tmp$$6 = JAM.call(proc$$7, null, [l1$$10.car, l2$$3.car], JAM.policy.p1);
     if (tmp$$6 !== false) {
       revres$$2 = sc_cons(tmp$$6, revres$$2);
     }
     l1$$10 = l1$$10.cdr;
     l2$$3 = l2$$3.cdr;
-    v746 = l1$$10 !== null;
+    v741 = l1$$10 !== null;
   }
   return sc_reverseAppendBang(revres$$2, null);
 }
@@ -4004,34 +3994,34 @@ function sc_filterMap(proc$$8, l1$$11, l2$$4, l3) {
   var nbApplyArgs$$3 = arguments.length - 1;
   var applyArgs$$3 = new Array(nbApplyArgs$$3);
   var revres$$3 = null;
-  var v754 = l1$$11 !== null;
-  for (;v754;) {
+  var v749 = l1$$11 !== null;
+  for (;v749;) {
     var i$$38 = 0;
-    var v752 = i$$38 < nbApplyArgs$$3;
-    for (;v752;) {
+    var v747 = i$$38 < nbApplyArgs$$3;
+    for (;v747;) {
       applyArgs$$3[i$$38] = arguments[i$$38 + 1].car;
       arguments[i$$38 + 1] = arguments[i$$38 + 1].cdr;
-      i$$38 = i$$38 + 1;
-      v752 = i$$38 < nbApplyArgs$$3;
+      i$$38++;
+      v747 = i$$38 < nbApplyArgs$$3;
     }
     var tmp$$7 = JAM.call(proc$$8.apply, proc$$8, [null, applyArgs$$3], JAM.policy.p1);
     if (tmp$$7 !== false) {
       revres$$3 = sc_cons(tmp$$7, revres$$3);
     }
-    v754 = l1$$11 !== null;
+    v749 = l1$$11 !== null;
   }
   return sc_reverseAppendBang(revres$$3, null);
 }
 function sc_any(proc$$9, l$$15) {
   var revres$$4 = null;
-  var v757 = l$$15 !== null;
-  for (;v757;) {
+  var v752 = l$$15 !== null;
+  for (;v752;) {
     var tmp$$8 = JAM.call(proc$$9, null, [l$$15.car]);
     if (tmp$$8 !== false) {
       return tmp$$8;
     }
     l$$15 = l$$15.cdr;
-    v757 = l$$15 !== null;
+    v752 = l$$15 !== null;
   }
   return false;
 }
@@ -4041,14 +4031,14 @@ function sc_anyPred(proc$$10, l$$16) {
 function sc_every(proc$$11, l$$17) {
   var revres$$5 = null;
   var tmp$$9 = true;
-  var v761 = l$$17 !== null;
-  for (;v761;) {
+  var v756 = l$$17 !== null;
+  for (;v756;) {
     tmp$$9 = JAM.call(proc$$11, null, [l$$17.car]);
     if (tmp$$9 === false) {
       return false;
     }
     l$$17 = l$$17.cdr;
-    v761 = l$$17 !== null;
+    v756 = l$$17 !== null;
   }
   return tmp$$9;
 }
@@ -4119,11 +4109,11 @@ function sc_isStruct(o$$15) {
   return o$$15 instanceof sc_Struct;
 }
 function sc_isStructNamed(name$$34, s$$6) {
-  var v768 = s$$6 instanceof sc_Struct;
-  if (v768) {
-    v768 = s$$6.name === name$$34;
+  var v763 = s$$6 instanceof sc_Struct;
+  if (v763) {
+    v763 = s$$6.name === name$$34;
   }
-  return v768;
+  return v763;
 }
 function sc_getStructField(s$$7, name$$35, field) {
   return s$$7[field];
@@ -4166,41 +4156,41 @@ function sc_deleteJsFieldBang(o$$18, field$$4) {
 function sc_jsCall(o$$19, fun$$3) {
   var args$$1 = new Array;
   var i$$39 = 2;
-  var v770 = i$$39 < arguments.length;
-  for (;v770;) {
+  var v765 = i$$39 < arguments.length;
+  for (;v765;) {
     args$$1[i$$39 - 2] = arguments[i$$39];
-    i$$39 = i$$39 + 1;
-    v770 = i$$39 < arguments.length;
+    i$$39++;
+    v765 = i$$39 < arguments.length;
   }
   return JAM.call(fun$$3.apply, fun$$3, [o$$19, args$$1], JAM.policy.p1);
 }
 function sc_jsMethodCall(o$$20, field$$5) {
   var args$$2 = new Array;
   var i$$40 = 2;
-  var v772 = i$$40 < arguments.length;
-  for (;v772;) {
+  var v767 = i$$40 < arguments.length;
+  for (;v767;) {
     args$$2[i$$40 - 2] = arguments[i$$40];
-    i$$40 = i$$40 + 1;
-    v772 = i$$40 < arguments.length;
+    i$$40++;
+    v767 = i$$40 < arguments.length;
   }
-  var v773 = o$$20[field$$5];
-  return JAM.call(v773.apply, v773, [o$$20, args$$2], JAM.policy.p1);
+  var v768 = o$$20[field$$5];
+  return JAM.call(v768.apply, v768, [o$$20, args$$2], JAM.policy.p1);
 }
 function sc_jsNew(c$$14) {
   var evalStr = "new c(";
-  var v1878;
+  var v1838;
   if (arguments.length > 1) {
-    v1878 = "arguments[1]";
+    v1838 = "arguments[1]";
   } else {
-    v1878 = "";
+    v1838 = "";
   }
-  evalStr = evalStr + v1878;
+  evalStr = evalStr + v1838;
   var i$$41 = 2;
-  var v774 = i$$41 < arguments.length;
-  for (;v774;) {
+  var v769 = i$$41 < arguments.length;
+  for (;v769;) {
     evalStr = evalStr + (", arguments[" + i$$41 + "]");
-    i$$41 = i$$41 + 1;
-    v774 = i$$41 < arguments.length;
+    i$$41++;
+    v769 = i$$41 < arguments.length;
   }
   evalStr = evalStr + ")";
   if (JAM.isEval(eval)) {
@@ -4213,28 +4203,28 @@ function sc_pregexp(re) {
   return new RegExp(sc_string2jsstring(re));
 }
 function sc_pregexpMatch(re$$1, s$$9) {
-  var v776;
+  var v771;
   if (re$$1 instanceof RegExp) {
-    v776 = re$$1;
+    v771 = re$$1;
   } else {
-    v776 = sc_pregexp(re$$1);
+    v771 = sc_pregexp(re$$1);
   }
-  var reg = v776;
+  var reg = v771;
   var tmp$$12 = reg.exec(sc_string2jsstring(s$$9));
   if (tmp$$12 == null) {
     return false;
   }
   var res$$20 = null;
   var i$$42 = tmp$$12.length - 1;
-  var v782 = i$$42 >= 0;
-  for (;v782;) {
+  var v777 = i$$42 >= 0;
+  for (;v777;) {
     if (tmp$$12[i$$42] !== null) {
       res$$20 = sc_cons(sc_jsstring2string(tmp$$12[i$$42]), res$$20);
     } else {
       res$$20 = sc_cons(false, res$$20);
     }
-    i$$42 = i$$42 - 1;
-    v782 = i$$42 >= 0;
+    i$$42--;
+    v777 = i$$42 >= 0;
   }
   return res$$20;
 }
@@ -4269,13 +4259,13 @@ function sc_pregexpReplaceAll(re$$3, s1$$1, s2$$1) {
   return JAM.call(jss1$$1.replace, jss1$$1, [reg$$2, jss2$$1], JAM.policy.p1);
 }
 function sc_pregexpSplit(re$$4, s$$10) {
-  var v791;
+  var v786;
   if (re$$4 instanceof RegExp) {
-    v791 = re$$4;
+    v786 = re$$4;
   } else {
-    v791 = new RegExp(sc_string2jsstring(re$$4));
+    v786 = new RegExp(sc_string2jsstring(re$$4));
   }
-  var reg$$3 = v791;
+  var reg$$3 = v786;
   var jss = sc_string2jsstring(s$$10);
   var tmp$$13 = jss.split(reg$$3);
   if (tmp$$13 == null) {
@@ -4302,8 +4292,8 @@ function sc_makeHashtable() {
 }
 function sc_hashtablePutBang(ht$$3, key$$18, val$$7) {
   var hash = sc_hash(key$$18);
-  var v3742 = new sc_HashtableElement(key$$18, val$$7);
-  JAM.set(ht$$3, hash, v3742);
+  var v3702 = new sc_HashtableElement(key$$18, val$$7);
+  JAM.set(ht$$3, hash, v3702);
   return;
 }
 function sc_hashtableGet(ht$$4, key$$19) {
@@ -4368,7 +4358,7 @@ function sc_hash(o$$21) {
 function sc_counterHash() {
   if (!this.sc_hash) {
     this.sc_hash = "hash-" + SC_HASH_COUNTER;
-    SC_HASH_COUNTER = SC_HASH_COUNTER + 1;
+    SC_HASH_COUNTER++;
   }
   return this.sc_hash;
 }
@@ -4411,8 +4401,8 @@ function sc_ErrorInputPort() {
   return;
 }
 function sc_StringInputPort(jsStr) {
-  var v3743 = new String(jsStr);
-  this.str = v3743;
+  var v3703 = new String(jsStr);
+  this.str = v3703;
   this.pos = 0;
   return;
 }
@@ -4428,8 +4418,8 @@ function sc_Tokenizer(port) {
 }
 function sc_Reader(tokenizer) {
   this.tokenizer = tokenizer;
-  var v3744 = new Array;
-  this.backref = v3744;
+  var v3704 = new Array;
+  this.backref = v3704;
   return;
 }
 function sc_read(port$$2) {
@@ -4444,26 +4434,26 @@ function sc_readChar(port$$3) {
     port$$3 = SC_DEFAULT_IN;
   }
   var t$$1 = port$$3.readChar();
-  var v812;
+  var v807;
   if (t$$1 === SC_EOF_OBJECT) {
-    v812 = t$$1;
+    v807 = t$$1;
   } else {
-    v812 = new sc_Char(t$$1);
+    v807 = new sc_Char(t$$1);
   }
-  return v812;
+  return v807;
 }
 function sc_peekChar(port$$4) {
   if (port$$4 === undefined) {
     port$$4 = SC_DEFAULT_IN;
   }
   var t$$2 = port$$4.peekChar();
-  var v814;
+  var v809;
   if (t$$2 === SC_EOF_OBJECT) {
-    v814 = t$$2;
+    v809 = t$$2;
   } else {
-    v814 = new sc_Char(t$$2);
+    v809 = new sc_Char(t$$2);
   }
-  return v814;
+  return v809;
 }
 function sc_isCharReady(port$$5) {
   if (port$$5 === undefined) {
@@ -4625,8 +4615,8 @@ function sc_escapeWriteString(s$$21) {
   var res$$26 = "";
   var j$$1 = 0;
   i = 0;
-  var v838 = i < s$$21.length;
-  for (;v838;) {
+  var v833 = i < s$$21.length;
+  for (;v833;) {
     switch(s$$21.charAt(i)) {
       case "\x00":
         res$$26 = res$$26 + (JAM.call(s$$21.substring, s$$21, [j$$1, i], JAM.policy.p1) + "\\0");
@@ -4666,39 +4656,38 @@ function sc_escapeWriteString(s$$21) {
         break;
       default:
         var c$$21 = s$$21.charAt(i);
-        var v1555 = "a" !== "a";
-        if (v1555) {
-          v1555 = c$$21 == "a";
+        var v1522 = "a" !== "a";
+        if (v1522) {
+          v1522 = c$$21 == "a";
         }
-        if (v1555) {
+        if (v1522) {
           res$$26 = res$$26 + (JAM.call(s$$21.substring, s$$21, [j$$1, i], JAM.policy.p1) + "\\a");
           j$$1 = i + 1;
-          i = i + 1;
-          v838 = i < s$$21.length;
+          i++;
+          v833 = i < s$$21.length;
           continue;
         }
-        var v1559 = "\v" !== "v";
-        if (v1559) {
-          v1559 = c$$21 == "\v";
+        var v1525 = "\v" !== "v";
+        if (v1525) {
+          v1525 = c$$21 == "\v";
         }
-        if (v1559) {
+        if (v1525) {
           res$$26 = res$$26 + (JAM.call(s$$21.substring, s$$21, [j$$1, i], JAM.policy.p1) + "\\v");
           j$$1 = i + 1;
-          i = i + 1;
-          v838 = i < s$$21.length;
+          i++;
+          v833 = i < s$$21.length;
           continue;
         }
         if (s$$21.charAt(i) < " ") {
-          var v1564 = res$$26;
-          var v1891 = JAM.call(s$$21.substring, s$$21, [j$$1, i], JAM.policy.p1) + "\\x";
-          var v2208 = s$$21.charCodeAt(i);
-          res$$26 = v1564 + (v1891 + JAM.call(v2208.toString, v2208, [16]));
+          var v1851 = JAM.call(s$$21.substring, s$$21, [j$$1, i], JAM.policy.p1) + "\\x";
+          var v2168 = s$$21.charCodeAt(i);
+          res$$26 = res$$26 + (v1851 + JAM.call(v2168.toString, v2168, [16]));
           j$$1 = i + 1;
         }
       ;
     }
-    i = i + 1;
-    v838 = i < s$$21.length;
+    i++;
+    v833 = i < s$$21.length;
   }
   res$$26 = res$$26 + JAM.call(s$$21.substring, s$$21, [j$$1, i], JAM.policy.p1);
   return res$$26;
@@ -4767,11 +4756,11 @@ function sc_toWriteCircleString(o$$31) {
   return sc_genToWriteCircleString(o$$31, symb);
 }
 function sc_prepWriteCircle(o$$32, symb$$1, nbPointer$$1) {
-  var v1571 = o$$32 instanceof sc_Pair;
-  if (!v1571) {
-    v1571 = o$$32 instanceof sc_Vector;
+  var v1534 = o$$32 instanceof sc_Pair;
+  if (!v1534) {
+    v1534 = o$$32 instanceof sc_Vector;
   }
-  if (v1571) {
+  if (v1534) {
     if (o$$32[symb$$1] !== undefined) {
       JAM.set(o$$32, symb$$1, o$$32[symb$$1] + 1);
       if (!o$$32[symb$$1 + "nb"]) {
@@ -4780,28 +4769,28 @@ function sc_prepWriteCircle(o$$32, symb$$1, nbPointer$$1) {
       }
       return;
     }
-    JAM.set(o$$32, symb$$1, 0);
+    o$$32[symb$$1] = 0;
     if (o$$32 instanceof sc_Pair) {
       sc_prepWriteCircle(o$$32.car, symb$$1, nbPointer$$1);
       sc_prepWriteCircle(o$$32.cdr, symb$$1, nbPointer$$1);
     } else {
       var i$$45 = 0;
-      var v859 = i$$45 < o$$32.length;
-      for (;v859;) {
+      var v854 = i$$45 < o$$32.length;
+      for (;v854;) {
         sc_prepWriteCircle(o$$32[i$$45], symb$$1, nbPointer$$1);
-        i$$45 = i$$45 + 1;
-        v859 = i$$45 < o$$32.length;
+        i$$45++;
+        v854 = i$$45 < o$$32.length;
       }
     }
   }
   return;
 }
 function sc_genToWriteCircleString(o$$33, symb$$2) {
-  var v1896 = o$$33 instanceof sc_Pair;
-  if (!v1896) {
-    v1896 = o$$33 instanceof sc_Vector;
+  var v1856 = o$$33 instanceof sc_Pair;
+  if (!v1856) {
+    v1856 = o$$33 instanceof sc_Vector;
   }
-  if (!v1896) {
+  if (!v1856) {
     return sc_toWriteString(o$$33);
   }
   return JAM.call(o$$33.sc_toWriteCircleString, o$$33, [symb$$2]);
@@ -4812,11 +4801,11 @@ function sc_print(s$$22) {
     sc_newline();
   } else {
     var i$$47 = 0;
-    var v864 = i$$47 < arguments.length;
-    for (;v864;) {
+    var v859 = i$$47 < arguments.length;
+    for (;v859;) {
       sc_display(arguments[i$$47]);
-      i$$47 = i$$47 + 1;
-      v864 = i$$47 < arguments.length;
+      i$$47++;
+      v859 = i$$47 < arguments.length;
     }
     sc_newline();
   }
@@ -4827,8 +4816,8 @@ function sc_format(s$$23, args$$4) {
   var p$$45 = new sc_StringOutputPort;
   var i$$48 = 0;
   var j$$2 = 1;
-  var v881 = i$$48 < len$$3;
-  for (;v881;) {
+  var v876 = i$$48 < len$$3;
+  for (;v876;) {
     var i2 = JAM.call(s$$23.indexOf, s$$23, ["~", i$$48], JAM.policy.p1);
     if (i2 == -1) {
       JAM.call(p$$45.appendJSString, p$$45, [JAM.call(s$$23.substring, s$$23, [i$$48, len$$3], JAM.policy.p1)]);
@@ -4849,14 +4838,14 @@ function sc_format(s$$23, args$$4) {
         case 97:
           sc_display(arguments[j$$2], p$$45);
           i$$48 = i$$48 + 2;
-          j$$2 = j$$2 + 1;
+          j$$2++;
           break;
         case 83:
         ;
         case 115:
           sc_write(arguments[j$$2], p$$45);
           i$$48 = i$$48 + 2;
-          j$$2 = j$$2 + 1;
+          j$$2++;
           break;
         case 86:
         ;
@@ -4864,38 +4853,38 @@ function sc_format(s$$23, args$$4) {
           sc_display(arguments[j$$2], p$$45);
           JAM.call(p$$45.appendJSString, p$$45, ["\n"]);
           i$$48 = i$$48 + 2;
-          j$$2 = j$$2 + 1;
+          j$$2++;
           break;
         case 67:
         ;
         case 99:
           JAM.call(p$$45.appendJSString, p$$45, [String.fromCharCode(arguments[j$$2])]);
           i$$48 = i$$48 + 2;
-          j$$2 = j$$2 + 1;
+          j$$2++;
           break;
         case 88:
         ;
         case 120:
-          var v1584 = arguments[j$$2];
-          JAM.call(p$$45.appendJSString, p$$45, [JAM.call(v1584.toString, v1584, [6])]);
+          var v1546 = arguments[j$$2];
+          JAM.call(p$$45.appendJSString, p$$45, [JAM.call(v1546.toString, v1546, [6])]);
           i$$48 = i$$48 + 2;
-          j$$2 = j$$2 + 1;
+          j$$2++;
           break;
         case 79:
         ;
         case 111:
-          var v1585 = arguments[j$$2];
-          JAM.call(p$$45.appendJSString, p$$45, [JAM.call(v1585.toString, v1585, [8])]);
+          var v1547 = arguments[j$$2];
+          JAM.call(p$$45.appendJSString, p$$45, [JAM.call(v1547.toString, v1547, [8])]);
           i$$48 = i$$48 + 2;
-          j$$2 = j$$2 + 1;
+          j$$2++;
           break;
         case 66:
         ;
         case 98:
-          var v1586 = arguments[j$$2];
-          JAM.call(p$$45.appendJSString, p$$45, [JAM.call(v1586.toString, v1586, [2])]);
+          var v1548 = arguments[j$$2];
+          JAM.call(p$$45.appendJSString, p$$45, [JAM.call(v1548.toString, v1548, [2])]);
           i$$48 = i$$48 + 2;
-          j$$2 = j$$2 + 1;
+          j$$2++;
           break;
         case 37:
         ;
@@ -4916,7 +4905,7 @@ function sc_format(s$$23, args$$4) {
           return "";
       }
     }
-    v881 = i$$48 < len$$3;
+    v876 = i$$48 < len$$3;
   }
   return p$$45.close();
 }
@@ -4939,38 +4928,38 @@ function sc_jsstring2keyword(s$$28) {
   return sc_KEYWORD_PREFIX + s$$28;
 }
 function sc_isKeyword(s$$29) {
-  var v882 = typeof s$$29 === "string";
-  if (v882) {
-    v882 = s$$29.charAt(0) === sc_KEYWORD_PREFIX;
+  var v877 = typeof s$$29 === "string";
+  if (v877) {
+    v877 = s$$29.charAt(0) === sc_KEYWORD_PREFIX;
   }
-  return v882;
+  return v877;
 }
 function sc_isEqual(o1$$2, o2$$2) {
-  var v1590 = o1$$2 === o2$$2;
-  if (!v1590) {
-    var v2211 = sc_isPair(o1$$2);
-    if (v2211) {
-      v2211 = sc_isPair(o2$$2);
+  var v1552 = o1$$2 === o2$$2;
+  if (!v1552) {
+    var v2171 = sc_isPair(o1$$2);
+    if (v2171) {
+      v2171 = sc_isPair(o2$$2);
     }
-    var v1898 = v2211;
-    if (v1898) {
-      v1898 = sc_isPairEqual(o1$$2, o2$$2, sc_isEqual);
+    var v1858 = v2171;
+    if (v1858) {
+      v1858 = sc_isPairEqual(o1$$2, o2$$2, sc_isEqual);
     }
-    v1590 = v1898;
+    v1552 = v1858;
   }
-  var v883 = v1590;
-  if (!v883) {
-    var v1900 = sc_isVector(o1$$2);
-    if (v1900) {
-      v1900 = sc_isVector(o2$$2);
+  var v878 = v1552;
+  if (!v878) {
+    var v1860 = sc_isVector(o1$$2);
+    if (v1860) {
+      v1860 = sc_isVector(o2$$2);
     }
-    var v1591 = v1900;
-    if (v1591) {
-      v1591 = sc_isVectorEqual(o1$$2, o2$$2, sc_isEqual);
+    var v1553 = v1860;
+    if (v1553) {
+      v1553 = sc_isVectorEqual(o1$$2, o2$$2, sc_isEqual);
     }
-    v883 = v1591;
+    v878 = v1553;
   }
-  return v883;
+  return v878;
 }
 function sc_number2symbol(x$$73, radix$$2) {
   return sc_SYMBOL_PREFIX + sc_number2jsstring(x$$73, radix$$2);
@@ -4988,11 +4977,11 @@ function sc_string2real(s$$32) {
   return+s$$32;
 }
 function sc_isSymbol(s$$33) {
-  var v888 = typeof s$$33 === "string";
-  if (v888) {
-    v888 = s$$33.charAt(0) === sc_SYMBOL_PREFIX;
+  var v883 = typeof s$$33 === "string";
+  if (v883) {
+    v883 = s$$33.charAt(0) === sc_SYMBOL_PREFIX;
   }
-  return v888;
+  return v883;
 }
 function sc_symbol2string(s$$34) {
   return s$$34.slice(1);
@@ -5003,11 +4992,11 @@ function sc_string2symbol(s$$35) {
 function sc_symbolAppend() {
   var res$$29 = sc_SYMBOL_PREFIX;
   var i$$49 = 0;
-  var v889 = i$$49 < arguments.length;
-  for (;v889;) {
+  var v884 = i$$49 < arguments.length;
+  for (;v884;) {
     res$$29 = res$$29 + arguments[i$$49].slice(1);
-    i$$49 = i$$49 + 1;
-    v889 = i$$49 < arguments.length;
+    i$$49++;
+    v884 = i$$49 < arguments.length;
   }
   return res$$29;
 }
@@ -5018,22 +5007,22 @@ function sc_char2symbol(c$$24) {
   return sc_SYMBOL_PREFIX + c$$24.val;
 }
 function sc_isString(s$$36) {
-  var v891 = typeof s$$36 === "string";
-  if (v891) {
-    v891 = s$$36.charAt(0) !== sc_SYMBOL_PREFIX;
+  var v886 = typeof s$$36 === "string";
+  if (v886) {
+    v886 = s$$36.charAt(0) !== sc_SYMBOL_PREFIX;
   }
-  return v891;
+  return v886;
 }
 function sc_string() {
   var i$$50 = 0;
-  var v893 = i$$50 < arguments.length;
-  for (;v893;) {
+  var v888 = i$$50 < arguments.length;
+  for (;v888;) {
     arguments[i$$50] = arguments[i$$50].val;
-    i$$50 = i$$50 + 1;
-    v893 = i$$50 < arguments.length;
+    i$$50++;
+    v888 = i$$50 < arguments.length;
   }
-  var v894 = "".concat;
-  return JAM.call(v894.apply, v894, ["", arguments], JAM.policy.p1);
+  var v889 = "".concat;
+  return JAM.call(v889.apply, v889, ["", arguments], JAM.policy.p1);
 }
 function sc_stringLength(s$$37) {
   return s$$37.length;
@@ -5078,8 +5067,8 @@ function sc_isSubstring_at(s1$$12, s2$$12, i$$51) {
   return s2$$12 == JAM.call(s1$$12.substring, s1$$12, [i$$51, i$$51 + s2$$12.length], JAM.policy.p1);
 }
 function sc_stringAppend() {
-  var v908 = "".concat;
-  return JAM.call(v908.apply, v908, ["", arguments], JAM.policy.p1);
+  var v902 = "".concat;
+  return JAM.call(v902.apply, v902, ["", arguments], JAM.policy.p1);
 }
 function sc_stringCopy(s$$40) {
   return s$$40;
@@ -5092,14 +5081,14 @@ function sc_string2keyword(o$$35) {
 }
 function RunBenchmark(name$$38, count$$3, run$$1, warn) {
   var n$$14 = 0;
-  var v910 = n$$14 < count$$3;
-  for (;v910;) {
+  var v904 = n$$14 < count$$3;
+  for (;v904;) {
     result = run$$1();
     if (!JAM.call(warn, null, [result])) {
       throw new Error("Earley or Boyer did incorrect number of rewrites");
     }
-    n$$14 = n$$14 + 1;
-    v910 = n$$14 < count$$3;
+    ++n$$14;
+    v904 = n$$14 < count$$3;
   }
   return;
 }
@@ -5163,15 +5152,15 @@ function Run() {
   return;
 }
 function CheckCompatibility() {
-  var v1617 = typeof Uint8Array != "undefined";
-  if (v1617) {
-    v1617 = typeof Float64Array != "undefined";
+  var v1578 = typeof Uint8Array != "undefined";
+  if (v1578) {
+    v1578 = typeof Float64Array != "undefined";
   }
-  var v933 = v1617;
-  if (v933) {
-    v933 = typeof(new Uint8Array(0)).subarray != "undefined";
+  var v927 = v1578;
+  if (v927) {
+    v927 = typeof(new Uint8Array(0)).subarray != "undefined";
   }
-  var hasTypedArrays = v933;
+  var hasTypedArrays = v927;
   if (!hasTypedArrays) {
     console.log("Typed Arrays not supported");
     document.getElementById("alertbox").style.display = "block";
@@ -5189,9 +5178,9 @@ function Load() {
   return;
 }
 var performance = performance || {};
-var v938 = performance;
-var v3745 = v4();
-v938.now = v3745;
+var v932 = performance;
+var v3705 = v4();
+v932.now = v3705;
 BenchmarkResult.prototype.valueOf = v5;
 BenchmarkSuite.suites = [];
 BenchmarkSuite.version = "9";
@@ -5236,9 +5225,9 @@ sc_Pair.prototype.toString = v24;
 sc_Pair.prototype.sc_toWriteOrDisplayString = v25;
 sc_Pair.prototype.sc_toDisplayString = v26;
 sc_Pair.prototype.sc_toWriteString = v27;
-var v952 = sc_Char;
-var v3746 = new Object;
-v952.lazy = v3746;
+var v946 = sc_Char;
+var v3706 = new Object;
+v946.lazy = v3706;
 sc_Char.char2readable = {"\x00":"#\\null", "\u0007":"#\\bell", "\b":"#\\backspace", "\t":"#\\tab", "\n":"#\\newline", "\f":"#\\page", "\r":"#\\return", "\u001b":"#\\escape", " ":"#\\space", "\u007f":"#\\delete", "\u0001":"#\\soh", "\u0002":"#\\stx", "\u0003":"#\\etx", "\u0004":"#\\eot", "\u0005":"#\\enq", "\u0006":"#\\ack", "\x0B":"#\\vt", "\u000e":"#\\so", "\u000f":"#\\si", "\u0010":"#\\dle", "\u0011":"#\\dc1", "\u0012":"#\\dc2", "\u0013":"#\\dc3", "\u0014":"#\\dc4", "\u0015":"#\\nak", "\u0016":"#\\syn", 
 "\u0017":"#\\etb", "\u0018":"#\\can", "\u0019":"#\\em", "\u001a":"#\\sub", "\u001b":"#\\esc", "\u001c":"#\\fs", "\u001d":"#\\gs", "\u001e":"#\\rs", "\u001f":"#\\us"};
 sc_Char.readable2char = {"null":"\x00", "bell":"\u0007", "backspace":"\b", "tab":"\t", "newline":"\n", "page":"\f", "return":"\r", "escape":"\u001b", "space":" ", "delete":"\x00", "soh":"\u0001", "stx":"\u0002", "etx":"\u0003", "eot":"\u0004", "enq":"\u0005", "ack":"\u0006", "bel":"\u0007", "bs":"\b", "ht":"\t", "nl":"\n", "vt":"\x0B", "np":"\f", "cr":"\r", "so":"\u000e", "si":"\u000f", "dle":"\u0010", "dc1":"\u0011", "dc2":"\u0012", "dc3":"\u0013", "dc4":"\u0014", "nak":"\u0015", "syn":"\u0016", 
@@ -5272,21 +5261,21 @@ var SC_SCM2JS_GLOBALS = new Object;
 var SC_TAIL_OBJECT = new Object;
 SC_SCM2JS_GLOBALS.TAIL_OBJECT = SC_TAIL_OBJECT;
 var SC_EOF_OBJECT = new sc_EOF;
-var v962 = sc_InputPort;
-var v3747 = new sc_Port;
-v962.prototype = v3747;
+var v956 = sc_InputPort;
+var v3707 = new sc_Port;
+v956.prototype = v3707;
 sc_InputPort.prototype.peekChar = v36;
 sc_InputPort.prototype.readChar = v37;
 sc_InputPort.prototype.isCharReady = v38;
 sc_InputPort.prototype.close = v39;
-var v967 = sc_ErrorInputPort;
-var v3748 = new sc_InputPort;
-v967.prototype = v3748;
+var v961 = sc_ErrorInputPort;
+var v3708 = new sc_InputPort;
+v961.prototype = v3708;
 sc_ErrorInputPort.prototype.getNextChar = v40;
 sc_ErrorInputPort.prototype.isCharReady = v41;
-var v970 = sc_StringInputPort;
-var v3749 = new sc_InputPort;
-v970.prototype = v3749;
+var v964 = sc_StringInputPort;
+var v3709 = new sc_InputPort;
+v964.prototype = v3709;
 sc_StringInputPort.prototype.getNextChar = v42;
 sc_Token.EOF = 0;
 sc_Token.OPEN_PAR = 1;
@@ -5314,24 +5303,24 @@ sc_Tokenizer.prototype.peekToken = v43;
 sc_Tokenizer.prototype.readToken = v44;
 sc_Tokenizer.prototype.nextToken = v45;
 sc_Reader.prototype.read = v46;
-var v977 = sc_OutputPort;
-var v3750 = new sc_Port;
-v977.prototype = v3750;
+var v971 = sc_OutputPort;
+var v3710 = new sc_Port;
+v971.prototype = v3710;
 sc_OutputPort.prototype.appendJSString = v47;
 sc_OutputPort.prototype.close = v48;
-var v980 = sc_StringOutputPort;
-var v3751 = new sc_OutputPort;
-v980.prototype = v3751;
+var v974 = sc_StringOutputPort;
+var v3711 = new sc_OutputPort;
+v974.prototype = v3711;
 sc_StringOutputPort.prototype.appendJSString = v49;
 sc_StringOutputPort.prototype.close = v50;
-var v983 = sc_ErrorOutputPort;
-var v3752 = new sc_OutputPort;
-v983.prototype = v3752;
+var v977 = sc_ErrorOutputPort;
+var v3712 = new sc_OutputPort;
+v977.prototype = v3712;
 sc_ErrorOutputPort.prototype.appendJSString = v51;
 sc_ErrorOutputPort.prototype.close = v52;
-var v986 = sc_GenericOutputPort;
-var v3753 = new sc_OutputPort;
-v986.prototype = v3753;
+var v980 = sc_GenericOutputPort;
+var v3713 = new sc_OutputPort;
+v980.prototype = v3713;
 sc_Pair.prototype.sc_toWriteCircleString = v53;
 sc_Vector.prototype.sc_toWriteCircleString = v54;
 var SC_DEFAULT_IN = new sc_ErrorInputPort;
@@ -5507,10 +5496,10 @@ var completed = 0;
 var benchmarks = BenchmarkSuite.CountBenchmarks();
 var success = true;
 var latencyBenchmarks = ["Splay", "Mandreel"];
-var v1101;
+var v1095;
 if (typeof skipBenchmarks === "undefined") {
-  v1101 = [];
+  v1095 = [];
 } else {
-  v1101 = skipBenchmarks;
+  v1095 = skipBenchmarks;
 }
-var skipBenchmarks = v1101
+var skipBenchmarks = v1095

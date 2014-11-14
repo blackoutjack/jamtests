@@ -11,10 +11,11 @@ $autoapp = (isset($_REQUEST['autoapp']) && is_numeric($_REQUEST['autoapp'])) ? $
 
 // Default set of variants to go through during automated testing.
 $autotests = array('input', 'semantic0.collapsed', 'coarse.input', 'input.profile', 'semantic0.collapsed.profile', 'coarse.input.profile');
-//$autotests = array('collapsed.profile', 'original.modular.profile');
+//$autotests = array('input', 'semantic0.instrumented', 'input.profile', 'semantic0.instrumented.profile');
 
 // Use this for SMS2 "big" variants, since all static files are loaded.
 $bigautotests = array('big.input.profile', 'big.semantic0.collapsed.profile', 'big.coarse.input.profile');
+//$bigautotests = array('big.input.profile', 'big.semantic0.instrumented.profile');
 
 function getSubArray($parent, $idx) {
   $sub = null;
@@ -65,7 +66,8 @@ foreach ($allfiles as $fl) {
 }
 
 // Collect the source information into a structured array.
-$htmlinfo = array();
+$polinfo = array();
+$htmlinfo = array('main' => array());
 $htmlsolo = array();
 foreach ($sourcefiles as $fl) {
   $back = substr($fl, strlen($appname) + 1);
@@ -96,6 +98,11 @@ foreach ($sourcefiles as $fl) {
       $htmlsolo[$desc] = getSubArray($htmlsolo, $desc);
       $htmlsolo[$desc]['html'] = $fl;
     }
+  }
+  if ($ext == 'js' && $desc == 'policy') {
+    $desc = $len > 2 ? $parts[$len-3] : 'main';
+    $polinfo[$desc] = getSubArray($polinfo, $desc);
+    $polinfo[$desc]['policy'] = $fl;
   }
 }
 
@@ -143,23 +150,6 @@ function maybeBreakLinks() {
   $linkcnt++;
 
   return $ret;
-}
-
-function getScriptLink($info, $hrefbase, $name, $lib) {
-  $text = "script: ".$name;
-  $jsparam = getParamText($info, 'js', 'script', true);
-  $polparam = getParamText($info, 'policy', 'policy', false);
-  $headparam = getParamText($info, 'head', 'head', false);
-  $bodyparam = getParamText($info, 'body', 'body', false);
-  $params = $jsparam.$polparam.$headparam.$bodyparam;
-
-  $href = $hrefbase.$params;
-  if (!$lib) {
-    $href .= '&lib=0';
-  }
-  $html = maybeBreakLinks();
-  $html .= '<a id="'.$name.'" href="'.$href.'">'.$text.'</a>';
-  return $html;
 }
 
 function getSourceLink($info, $hrefbase, $name, $lib) {
@@ -237,10 +227,10 @@ $linksrcs = array();
 foreach ($srcinfo as $key => $sub) {
   if (isset($sub['source'])) {
     // %%% Eventually want to do something different here.
-    if ($key === 'original' || $key === 'original.profile') {
+    if ($key === 'input' || $key === 'input.profile') {
       // Only add a policy for these if specified.
     } else {
-      $sub['policy'] = findFile($srcinfo, 'policy', $key);
+      $sub['policy'] = findFile($polinfo, 'policy', $key);
     }
     foreach ($htmlinfo as $hkey => $hsub) {
       $sub['head'] = findFile($htmlinfo, 'head', $hkey);
@@ -252,7 +242,7 @@ foreach ($srcinfo as $key => $sub) {
       }
 
       // Suppress the library if there's no policy.
-      $lib = true;//isset($sub['policy']);
+      $lib = isset($sub['policy']);
       array_push($linksrcs, getSourceLink($sub, $hrefbase, $dkey, $lib));
     }
   }

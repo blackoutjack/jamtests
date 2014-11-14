@@ -1,7 +1,7 @@
 predicate-limit:3
 syntax-only:false
 switch.original.js:52
-switch.normalized.js:69
+switch.normalized.js:57
 policy.aut:6
 allFunctions:0
 allCallsites:3
@@ -15,8 +15,8 @@ callbacks-added-edges:42
 callbacks-added-states:39
 concrete-query-cache:concrete-1931942870.bin
 symbolic-query-cache:symbolic-1931942870.bin
-modular.policy.js:100
-policy.js:193
+modular.policy.js:97
+policy.js:187
 transactions:5
 checks:5
 callsites-indirected:1

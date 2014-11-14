@@ -1,7 +1,7 @@
 predicate-limit:3
 syntax-only:false
 for1.original.js:19
-for1.normalized.js:25
+for1.normalized.js:22
 policy.aut:6
 allFunctions:0
 allCallsites:0
@@ -15,8 +15,8 @@ callbacks-added-edges:17
 callbacks-added-states:17
 concrete-query-cache:concrete953060420.bin
 symbolic-query-cache:symbolic953060420.bin
-modular.policy.js:100
-policy.js:102
+modular.policy.js:97
+policy.js:99
 transactions:0
 checks:0
 callsites-indirected:0

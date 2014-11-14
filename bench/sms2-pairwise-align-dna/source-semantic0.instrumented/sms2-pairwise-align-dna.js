@@ -1,13 +1,13 @@
 function v4() {
-  var v1228 = document.forms;
-  var v972 = v1228[0];
-  var v561 = v972.elements;
-  var v5 = v561[0];
+  var v1205 = document.forms;
+  var v959 = v1205[0];
+  var v550 = v959.elements;
+  var v5 = v550[0];
   v5.value = " ";
-  var v1229 = document.forms;
-  var v973 = v1229[0];
-  var v562 = v973.elements;
-  var v6 = v562[4];
+  var v1206 = document.forms;
+  var v960 = v1206[0];
+  var v551 = v960.elements;
+  var v6 = v551[4];
   v6.value = " ";
   return;
 }
@@ -21,8 +21,8 @@ function v3() {
   return;
 }
 function v2() {
-  var v563 = document.main_form;
-  var v8 = v563.main_submit;
+  var v552 = document.main_form;
+  var v8 = v552.main_submit;
   v8.focus();
   return;
 }
@@ -30,7 +30,7 @@ function addReturns(sequence) {
   function v0(str$$6, p1, offset$$8, s$$2) {
     return p1 + "\n";
   }
-  introspect(JAM.policy.p28) {
+  introspect(JAM.policy.p22) {
     sequence = sequence.replace(/(.{60})/g, v0);
   }
   return sequence;
@@ -38,84 +38,84 @@ function addReturns(sequence) {
 function checkAlign(arrayOfTitles, arrayOfSequences) {
   var v9 = arrayOfSequences[0];
   var lengthOfAlign = v9.length;
-  var v564 = arrayOfSequences.length;
-  var v10 = v564 < 2;
+  var v553 = arrayOfSequences.length;
+  var v10 = v553 < 2;
   if (v10) {
     alert("Please enter an alignment consisting of at least two sequences.");
     return false;
   }
   var i$$1 = 0;
-  var v565 = arrayOfTitles.length;
-  var v12 = i$$1 < v565;
+  var v554 = arrayOfTitles.length;
+  var v12 = i$$1 < v554;
   for (;v12;) {
-    var v1378 = arrayOfTitles[i$$1];
-    introspect(JAM.policy.p31) {
-      var v1230 = v1378.search(/\S/)
+    var v1353 = arrayOfTitles[i$$1];
+    introspect(JAM.policy.p24) {
+      var v1207 = v1353.search(/\S/)
     }
-    var v974 = v1230 == -1;
-    var v1232 = !v974;
-    if (v1232) {
-      var v1379 = arrayOfSequences[i$$1];
-      introspect(JAM.policy.p31) {
-        var v1231 = v1379.search(/\S/)
+    var v961 = v1207 == -1;
+    var v1209 = !v961;
+    if (v1209) {
+      var v1354 = arrayOfSequences[i$$1];
+      introspect(JAM.policy.p24) {
+        var v1208 = v1354.search(/\S/)
       }
-      v974 = v1231 == -1;
+      v961 = v1208 == -1;
     }
-    var v566 = v974;
-    var v976 = !v566;
-    if (v976) {
-      var v1233 = arrayOfSequences[i$$1];
-      var v975 = v1233.length;
-      v566 = v975 != lengthOfAlign;
+    var v555 = v961;
+    var v963 = !v555;
+    if (v963) {
+      var v1210 = arrayOfSequences[i$$1];
+      var v962 = v1210.length;
+      v555 = v962 != lengthOfAlign;
     }
-    var v11 = v566;
+    var v11 = v555;
     if (v11) {
       alert("There is a problem with the alignment format.");
       return false;
     }
-    i$$1 = i$$1 + 1;
-    var v567 = arrayOfTitles.length;
-    v12 = i$$1 < v567;
+    i$$1++;
+    var v556 = arrayOfTitles.length;
+    v12 = i$$1 < v556;
   }
   return true;
 }
 function checkCodonTable(codonTable) {
-  introspect(JAM.policy.p31) {
-    var v1470 = codonTable.search(/AmAcid/)
+  introspect(JAM.policy.p24) {
+    var v1445 = codonTable.search(/AmAcid/)
   }
-  var v1380 = v1470 == -1;
-  var v1472 = !v1380;
-  if (v1472) {
-    introspect(JAM.policy.p31) {
-      var v1471 = codonTable.search(/Codon/)
+  var v1355 = v1445 == -1;
+  var v1447 = !v1355;
+  if (v1447) {
+    introspect(JAM.policy.p24) {
+      var v1446 = codonTable.search(/Codon/)
     }
-    v1380 = v1471 == -1;
+    v1355 = v1446 == -1;
   }
-  var v1234 = v1380;
-  var v1382 = !v1234;
-  if (v1382) {
-    introspect(JAM.policy.p31) {
-      var v1381 = codonTable.search(/Number/)
+  var v1211 = v1355;
+  var v1357 = !v1211;
+  if (v1357) {
+    introspect(JAM.policy.p24) {
+      var v1356 = codonTable.search(/Number/)
     }
-    v1234 = v1381 == -1;
+    v1211 = v1356 == -1;
   }
-  var v977 = v1234;
-  var v1236 = !v977;
-  if (v1236) {
-    introspect(JAM.policy.p31) {
-      var v1235 = codonTable.search(/\/1000/)
+  var v964 = v1211;
+  var v1213 = !v964;
+  if (v1213) {
+    introspect(JAM.policy.p24) {
+      var v1212 = codonTable.search(/\/1000/)
     }
-    v977 = v1235 == -1;
+    v964 = v1212 == -1;
   }
-  var v568 = v977;
-  var v979 = !v568;
-  if (v979) {
-    introspect(JAM.policy.p31) {
-      var v978 = codonTable.search(/Fraction\s*\.\./)
+  var v557 = v964;
+  var v966 = !v557;
+  if (v966) {
+    introspect(JAM.policy.p24) {
+      var v965 = codonTable.search(/Fraction\s*\.\./)
     }
-    v568 = v978 == -1;
+    v557 = v965 == -1;
   }
-  var v13 = v568;
+  var v13 = v557;
   if (v13) {
     alert("The codon table has been entered incorrectly.");
     return false;
@@ -123,11 +123,11 @@ function checkCodonTable(codonTable) {
   return true;
 }
 function checkFormElement(formElement) {
-  var v980 = formElement.value;
-  introspect(JAM.policy.p31) {
-    var v569 = v980.search(/\S/)
+  var v967 = formElement.value;
+  introspect(JAM.policy.p24) {
+    var v558 = v967.search(/\S/)
   }
-  var v14 = v569 == -1;
+  var v14 = v558 == -1;
   if (v14) {
     alert("Please enter some text.");
     return false;
@@ -139,203 +139,191 @@ function checkGeneticCode(arrayOfPatterns) {
   var codon = "";
   var oneMatch = false;
   var testSequence = "gggggaggtggcgaggaagatgacgtggtagttgtcgcggcagctgccaggagaagtagcaagaaaaataacatgataattatcacgacaactacctggtgatgttgctagtaatattacttgttatttttctcgtcatcttcccggcgacgtcgccagcaacatcacctgctacttctcccgccacctccc";
-  var v570 = arrayOfPatterns.length;
-  var v17 = z$$2 < v570;
+  var v559 = arrayOfPatterns.length;
+  var v17 = z$$2 < v559;
   for (;v17;) {
-    var v981 = arrayOfPatterns[z$$2];
-    introspect(JAM.policy.p31) {
-      var v571 = v981.search(/^\s*\/[a-zA-Z\|\[\]]+\/=[a-zA-Z\*]/)
+    var v968 = arrayOfPatterns[z$$2];
+    introspect(JAM.policy.p24) {
+      var v560 = v968.search(/^\s*\/[a-zA-Z\|\[\]]+\/=[a-zA-Z\*]/)
     }
-    var v15 = v571 == -1;
+    var v15 = v560 == -1;
     if (v15) {
       alert("Genetic code error: one or more patterns have been entered incorrectly.");
       return false;
     }
-    var v982 = arrayOfPatterns[z$$2];
-    var v572 = moreExpressionCheck(v982);
-    var v16 = v572 == false;
+    var v969 = arrayOfPatterns[z$$2];
+    var v561 = moreExpressionCheck(v969);
+    var v16 = v561 == false;
     if (v16) {
       alert("Genetic code error: one or more patterns have been entered incorrectly.");
       return false;
     }
     z$$2 = z$$2 + 1;
-    var v573 = arrayOfPatterns.length;
-    v17 = z$$2 < v573;
+    var v562 = arrayOfPatterns.length;
+    v17 = z$$2 < v562;
   }
   var v18 = arrayOfPatterns.length;
   var geneticCodeMatchResult = new Array(v18);
   var v19 = arrayOfPatterns.length;
   var geneticCodeMatchExp = new Array(v19);
   var j = 0;
-  var v574 = arrayOfPatterns.length;
-  var v26 = j < v574;
-  for (;v26;) {
-    var v20 = geneticCodeMatchExp;
-    var v21 = j;
-    var v1237 = arrayOfPatterns[j];
-    introspect(JAM.policy.p31) {
-      var v983 = v1237.match(/\/.+\//)
+  var v563 = arrayOfPatterns.length;
+  var v23 = j < v563;
+  for (;v23;) {
+    var v970 = arrayOfPatterns[j];
+    introspect(JAM.policy.p24) {
+      var v564 = v970.match(/\/.+\//)
     }
-    var v575 = v983 + "gi";
-    var v1597 = eval(v575);
-    introspect(JAM.policy.p13) {
-      v20[v21] = v1597;
+    var v20 = v564 + "gi";
+    var v1572 = eval(v20);
+    geneticCodeMatchExp[j] = v1572;
+    var v565 = arrayOfPatterns[j];
+    introspect(JAM.policy.p24) {
+      var v21 = v565.match(/=[a-zA-Z\*]/)
     }
-    var v22 = geneticCodeMatchResult;
-    var v23 = j;
-    var v984 = arrayOfPatterns[j];
-    introspect(JAM.policy.p31) {
-      var v576 = v984.match(/=[a-zA-Z\*]/)
+    var v1573 = v21.toString();
+    geneticCodeMatchResult[j] = v1573;
+    var v22 = geneticCodeMatchResult[j];
+    introspect(JAM.policy.p22) {
+      var v1574 = v22.replace(/=/g, "")
     }
-    var v1598 = v576.toString();
-    introspect(JAM.policy.p13) {
-      v22[v23] = v1598;
-    }
-    var v24 = geneticCodeMatchResult;
-    var v25 = j;
-    var v577 = geneticCodeMatchResult[j];
-    introspect(JAM.policy.p28) {
-      var v1599 = v577.replace(/=/g, "")
-    }
-    introspect(JAM.policy.p13) {
-      v24[v25] = v1599;
-    }
-    j = j + 1;
-    var v578 = arrayOfPatterns.length;
-    v26 = j < v578;
+    geneticCodeMatchResult[j] = v1574;
+    j++;
+    var v566 = arrayOfPatterns.length;
+    v23 = j < v566;
   }
   var i$$2 = 0;
-  var v985 = testSequence.length;
-  var v579 = v985 - 3;
-  var v33 = i$$2 <= v579;
-  for (;v33;) {
-    var v27 = i$$2 + 3;
-    introspect(JAM.policy.p28) {
-      codon = testSequence.substring(i$$2, v27);
+  var v971 = testSequence.length;
+  var v567 = v971 - 3;
+  var v30 = i$$2 <= v567;
+  for (;v30;) {
+    var v24 = i$$2 + 3;
+    introspect(JAM.policy.p22) {
+      codon = testSequence.substring(i$$2, v24);
     }
     j = 0;
-    var v580 = geneticCodeMatchExp.length;
-    var v31 = j < v580;
-    for (;v31;) {
-      var v986 = geneticCodeMatchExp[j];
-      introspect(JAM.policy.p40) {
-        var v581 = codon.search(v986)
+    var v568 = geneticCodeMatchExp.length;
+    var v28 = j < v568;
+    for (;v28;) {
+      var v972 = geneticCodeMatchExp[j];
+      introspect(JAM.policy.p21) {
+        var v569 = codon.search(v972)
       }
-      var v30 = v581 != -1;
-      if (v30) {
-        var v29 = oneMatch == true;
-        if (v29) {
-          var v582 = "Genetic code error: more than one amino acid is coded by the codon: " + codon;
-          var v28 = v582 + ".";
-          alert(v28);
+      var v27 = v569 != -1;
+      if (v27) {
+        var v26 = oneMatch == true;
+        if (v26) {
+          var v570 = "Genetic code error: more than one amino acid is coded by the codon: " + codon;
+          var v25 = v570 + ".";
+          alert(v25);
           return false;
         }
         oneMatch = true;
       }
-      j = j + 1;
-      var v583 = geneticCodeMatchExp.length;
-      v31 = j < v583;
+      j++;
+      var v571 = geneticCodeMatchExp.length;
+      v28 = j < v571;
     }
-    var v32 = oneMatch == false;
-    if (v32) {
+    var v29 = oneMatch == false;
+    if (v29) {
       alert("The genetic code expressions are missing a codon.");
       return false;
     }
     oneMatch = false;
     i$$2 = i$$2 + 3;
-    var v987 = testSequence.length;
-    var v584 = v987 - 3;
-    v33 = i$$2 <= v584;
+    var v973 = testSequence.length;
+    var v572 = v973 - 3;
+    v30 = i$$2 <= v572;
   }
   return true;
 }
 function checkGroupInput(arrayOfPatterns$$1) {
   var z$$3 = 0;
-  var v585 = arrayOfPatterns$$1.length;
-  var v35 = z$$3 < v585;
-  for (;v35;) {
-    var v988 = arrayOfPatterns$$1[z$$3];
-    introspect(JAM.policy.p31) {
-      var v586 = v988.search(/[^acdefghiklmnpqrstvwyz]/i)
+  var v573 = arrayOfPatterns$$1.length;
+  var v32 = z$$3 < v573;
+  for (;v32;) {
+    var v974 = arrayOfPatterns$$1[z$$3];
+    introspect(JAM.policy.p24) {
+      var v574 = v974.search(/[^acdefghiklmnpqrstvwyz]/i)
     }
-    var v34 = v586 != -1;
-    if (v34) {
+    var v31 = v574 != -1;
+    if (v31) {
       alert("One or more groups have been entered incorrectly.");
       return false;
     }
     z$$3 = z$$3 + 1;
-    var v587 = arrayOfPatterns$$1.length;
-    v35 = z$$3 < v587;
+    var v575 = arrayOfPatterns$$1.length;
+    v32 = z$$3 < v575;
   }
   var i$$3 = 0;
-  var v588 = arrayOfPatterns$$1.length;
-  var v39 = i$$3 < v588;
-  for (;v39;) {
-    var v989 = arrayOfPatterns$$1[i$$3];
-    var v589 = "[" + v989;
-    var v36 = v589 + "]";
-    var re = new RegExp(v36, "gi");
+  var v576 = arrayOfPatterns$$1.length;
+  var v36 = i$$3 < v576;
+  for (;v36;) {
+    var v975 = arrayOfPatterns$$1[i$$3];
+    var v577 = "[" + v975;
+    var v33 = v577 + "]";
+    var re = new RegExp(v33, "gi");
     var j$$1 = i$$3 + 1;
-    var v590 = arrayOfPatterns$$1.length;
-    var v38 = j$$1 < v590;
-    for (;v38;) {
-      var v990 = arrayOfPatterns$$1[j$$1];
-      introspect(JAM.policy.p40) {
-        var v591 = v990.search(re)
+    var v578 = arrayOfPatterns$$1.length;
+    var v35 = j$$1 < v578;
+    for (;v35;) {
+      var v976 = arrayOfPatterns$$1[j$$1];
+      introspect(JAM.policy.p21) {
+        var v579 = v976.search(re)
       }
-      var v37 = v591 != -1;
-      if (v37) {
+      var v34 = v579 != -1;
+      if (v34) {
         alert("The same amino acid is in more than one similarity group.");
         return false;
       }
-      j$$1 = j$$1 + 1;
-      var v592 = arrayOfPatterns$$1.length;
-      v38 = j$$1 < v592;
+      j$$1++;
+      var v580 = arrayOfPatterns$$1.length;
+      v35 = j$$1 < v580;
     }
-    i$$3 = i$$3 + 1;
-    var v593 = arrayOfPatterns$$1.length;
-    v39 = i$$3 < v593;
+    i$$3++;
+    var v581 = arrayOfPatterns$$1.length;
+    v36 = i$$3 < v581;
   }
   return true;
 }
 function checkRestPatterns(arrayOfPatterns$$2) {
   var z$$4 = 0;
-  var v594 = arrayOfPatterns$$2.length;
-  var v42 = z$$4 < v594;
-  for (;v42;) {
-    var v991 = arrayOfPatterns$$2[z$$4];
-    introspect(JAM.policy.p31) {
-      var v595 = v991.search(/^\s*\/[acgturyswkmbdhvn\[\]]+\/\s+\([^\/]+\)\d+/i)
+  var v582 = arrayOfPatterns$$2.length;
+  var v39 = z$$4 < v582;
+  for (;v39;) {
+    var v977 = arrayOfPatterns$$2[z$$4];
+    introspect(JAM.policy.p24) {
+      var v583 = v977.search(/^\s*\/[acgturyswkmbdhvn\[\]]+\/\s+\([^\/]+\)\d+/i)
     }
-    var v40 = v595 == -1;
-    if (v40) {
+    var v37 = v583 == -1;
+    if (v37) {
       alert("One or more patterns have been entered incorrectly.");
       return false;
     }
-    var v992 = arrayOfPatterns$$2[z$$4];
-    var v596 = moreExpressionCheck(v992);
-    var v41 = v596 == false;
-    if (v41) {
+    var v978 = arrayOfPatterns$$2[z$$4];
+    var v584 = moreExpressionCheck(v978);
+    var v38 = v584 == false;
+    if (v38) {
       alert("One or more patterns have been entered incorrectly.");
       return false;
     }
     z$$4 = z$$4 + 1;
-    var v597 = arrayOfPatterns$$2.length;
-    v42 = z$$4 < v597;
+    var v585 = arrayOfPatterns$$2.length;
+    v39 = z$$4 < v585;
   }
   return true;
 }
 function checkSequenceLength(text$$7, maxInput) {
-  var v1238 = getSequenceFromFasta(text$$7);
-  introspect(JAM.policy.p28) {
-    var v993 = v1238.replace(/[^A-Za-z]/g, "")
+  var v1214 = getSequenceFromFasta(text$$7);
+  introspect(JAM.policy.p22) {
+    var v979 = v1214.replace(/[^A-Za-z]/g, "")
   }
-  var v598 = v993.length;
-  var v44 = v598 > maxInput;
-  if (v44) {
-    var v599 = "Please enter a sequence consisting of less than or equal to " + maxInput;
-    var v43 = v599 + " characters.";
-    alert(v43);
+  var v586 = v979.length;
+  var v41 = v586 > maxInput;
+  if (v41) {
+    var v587 = "Please enter a sequence consisting of less than or equal to " + maxInput;
+    var v40 = v587 + " characters.";
+    alert(v40);
     return false;
   } else {
     return true;
@@ -343,12 +331,12 @@ function checkSequenceLength(text$$7, maxInput) {
   return;
 }
 function checkTextLength(text$$8, maxInput$$1) {
-  var v600 = text$$8.length;
-  var v46 = v600 > maxInput$$1;
-  if (v46) {
-    var v601 = "Please enter text consisting of less than or equal to " + maxInput$$1;
-    var v45 = v601 + " characters.";
-    alert(v45);
+  var v588 = text$$8.length;
+  var v43 = v588 > maxInput$$1;
+  if (v43) {
+    var v589 = "Please enter text consisting of less than or equal to " + maxInput$$1;
+    var v42 = v589 + " characters.";
+    alert(v42);
     return false;
   } else {
     return true;
@@ -356,276 +344,276 @@ function checkTextLength(text$$8, maxInput$$1) {
   return;
 }
 function complement(dnaSequence) {
-  introspect(JAM.policy.p28) {
+  introspect(JAM.policy.p22) {
     dnaSequence = dnaSequence.replace(/g/g, "1");
   }
-  introspect(JAM.policy.p28) {
+  introspect(JAM.policy.p22) {
     dnaSequence = dnaSequence.replace(/c/g, "2");
   }
-  introspect(JAM.policy.p28) {
+  introspect(JAM.policy.p22) {
     dnaSequence = dnaSequence.replace(/1/g, "c");
   }
-  introspect(JAM.policy.p28) {
+  introspect(JAM.policy.p22) {
     dnaSequence = dnaSequence.replace(/2/g, "g");
   }
-  introspect(JAM.policy.p28) {
+  introspect(JAM.policy.p22) {
     dnaSequence = dnaSequence.replace(/G/g, "1");
   }
-  introspect(JAM.policy.p28) {
+  introspect(JAM.policy.p22) {
     dnaSequence = dnaSequence.replace(/C/g, "2");
   }
-  introspect(JAM.policy.p28) {
+  introspect(JAM.policy.p22) {
     dnaSequence = dnaSequence.replace(/1/g, "C");
   }
-  introspect(JAM.policy.p28) {
+  introspect(JAM.policy.p22) {
     dnaSequence = dnaSequence.replace(/2/g, "G");
   }
-  introspect(JAM.policy.p28) {
+  introspect(JAM.policy.p22) {
     dnaSequence = dnaSequence.replace(/a/g, "1");
   }
-  introspect(JAM.policy.p28) {
+  introspect(JAM.policy.p22) {
     dnaSequence = dnaSequence.replace(/t/g, "2");
   }
-  introspect(JAM.policy.p28) {
+  introspect(JAM.policy.p22) {
     dnaSequence = dnaSequence.replace(/1/g, "t");
   }
-  introspect(JAM.policy.p28) {
+  introspect(JAM.policy.p22) {
     dnaSequence = dnaSequence.replace(/2/g, "a");
   }
-  introspect(JAM.policy.p28) {
+  introspect(JAM.policy.p22) {
     dnaSequence = dnaSequence.replace(/A/g, "1");
   }
-  introspect(JAM.policy.p28) {
+  introspect(JAM.policy.p22) {
     dnaSequence = dnaSequence.replace(/T/g, "2");
   }
-  introspect(JAM.policy.p28) {
+  introspect(JAM.policy.p22) {
     dnaSequence = dnaSequence.replace(/1/g, "T");
   }
-  introspect(JAM.policy.p28) {
+  introspect(JAM.policy.p22) {
     dnaSequence = dnaSequence.replace(/2/g, "A");
   }
-  introspect(JAM.policy.p28) {
+  introspect(JAM.policy.p22) {
     dnaSequence = dnaSequence.replace(/u/g, "a");
   }
-  introspect(JAM.policy.p28) {
+  introspect(JAM.policy.p22) {
     dnaSequence = dnaSequence.replace(/U/g, "A");
   }
-  introspect(JAM.policy.p28) {
+  introspect(JAM.policy.p22) {
     dnaSequence = dnaSequence.replace(/r/g, "1");
   }
-  introspect(JAM.policy.p28) {
+  introspect(JAM.policy.p22) {
     dnaSequence = dnaSequence.replace(/y/g, "2");
   }
-  introspect(JAM.policy.p28) {
+  introspect(JAM.policy.p22) {
     dnaSequence = dnaSequence.replace(/1/g, "y");
   }
-  introspect(JAM.policy.p28) {
+  introspect(JAM.policy.p22) {
     dnaSequence = dnaSequence.replace(/2/g, "r");
   }
-  introspect(JAM.policy.p28) {
+  introspect(JAM.policy.p22) {
     dnaSequence = dnaSequence.replace(/R/g, "1");
   }
-  introspect(JAM.policy.p28) {
+  introspect(JAM.policy.p22) {
     dnaSequence = dnaSequence.replace(/Y/g, "2");
   }
-  introspect(JAM.policy.p28) {
+  introspect(JAM.policy.p22) {
     dnaSequence = dnaSequence.replace(/1/g, "Y");
   }
-  introspect(JAM.policy.p28) {
+  introspect(JAM.policy.p22) {
     dnaSequence = dnaSequence.replace(/2/g, "R");
   }
-  introspect(JAM.policy.p28) {
+  introspect(JAM.policy.p22) {
     dnaSequence = dnaSequence.replace(/k/g, "1");
   }
-  introspect(JAM.policy.p28) {
+  introspect(JAM.policy.p22) {
     dnaSequence = dnaSequence.replace(/m/g, "2");
   }
-  introspect(JAM.policy.p28) {
+  introspect(JAM.policy.p22) {
     dnaSequence = dnaSequence.replace(/1/g, "m");
   }
-  introspect(JAM.policy.p28) {
+  introspect(JAM.policy.p22) {
     dnaSequence = dnaSequence.replace(/2/g, "k");
   }
-  introspect(JAM.policy.p28) {
+  introspect(JAM.policy.p22) {
     dnaSequence = dnaSequence.replace(/K/g, "1");
   }
-  introspect(JAM.policy.p28) {
+  introspect(JAM.policy.p22) {
     dnaSequence = dnaSequence.replace(/M/g, "2");
   }
-  introspect(JAM.policy.p28) {
+  introspect(JAM.policy.p22) {
     dnaSequence = dnaSequence.replace(/1/g, "M");
   }
-  introspect(JAM.policy.p28) {
+  introspect(JAM.policy.p22) {
     dnaSequence = dnaSequence.replace(/2/g, "K");
   }
-  introspect(JAM.policy.p28) {
+  introspect(JAM.policy.p22) {
     dnaSequence = dnaSequence.replace(/b/g, "1");
   }
-  introspect(JAM.policy.p28) {
+  introspect(JAM.policy.p22) {
     dnaSequence = dnaSequence.replace(/v/g, "2");
   }
-  introspect(JAM.policy.p28) {
+  introspect(JAM.policy.p22) {
     dnaSequence = dnaSequence.replace(/1/g, "v");
   }
-  introspect(JAM.policy.p28) {
+  introspect(JAM.policy.p22) {
     dnaSequence = dnaSequence.replace(/2/g, "b");
   }
-  introspect(JAM.policy.p28) {
+  introspect(JAM.policy.p22) {
     dnaSequence = dnaSequence.replace(/B/g, "1");
   }
-  introspect(JAM.policy.p28) {
+  introspect(JAM.policy.p22) {
     dnaSequence = dnaSequence.replace(/V/g, "2");
   }
-  introspect(JAM.policy.p28) {
+  introspect(JAM.policy.p22) {
     dnaSequence = dnaSequence.replace(/1/g, "V");
   }
-  introspect(JAM.policy.p28) {
+  introspect(JAM.policy.p22) {
     dnaSequence = dnaSequence.replace(/2/g, "B");
   }
-  introspect(JAM.policy.p28) {
+  introspect(JAM.policy.p22) {
     dnaSequence = dnaSequence.replace(/d/g, "1");
   }
-  introspect(JAM.policy.p28) {
+  introspect(JAM.policy.p22) {
     dnaSequence = dnaSequence.replace(/h/g, "2");
   }
-  introspect(JAM.policy.p28) {
+  introspect(JAM.policy.p22) {
     dnaSequence = dnaSequence.replace(/1/g, "h");
   }
-  introspect(JAM.policy.p28) {
+  introspect(JAM.policy.p22) {
     dnaSequence = dnaSequence.replace(/2/g, "d");
   }
-  introspect(JAM.policy.p28) {
+  introspect(JAM.policy.p22) {
     dnaSequence = dnaSequence.replace(/D/g, "1");
   }
-  introspect(JAM.policy.p28) {
+  introspect(JAM.policy.p22) {
     dnaSequence = dnaSequence.replace(/H/g, "2");
   }
-  introspect(JAM.policy.p28) {
+  introspect(JAM.policy.p22) {
     dnaSequence = dnaSequence.replace(/1/g, "H");
   }
-  introspect(JAM.policy.p28) {
+  introspect(JAM.policy.p22) {
     dnaSequence = dnaSequence.replace(/2/g, "D");
   }
   return dnaSequence;
 }
 function closeForm() {
-  var v47 = outputWindow.document;
-  introspect(JAM.policy.p25) {
-    v47.write("</form>");
+  var v44 = outputWindow.document;
+  introspect(JAM.policy.p15) {
+    v44.write("</form>");
   }
   return true;
 }
 function closePre() {
-  var v48 = outputWindow.document;
-  introspect(JAM.policy.p25) {
-    v48.write("</div>");
+  var v45 = outputWindow.document;
+  introspect(JAM.policy.p15) {
+    v45.write("</div>");
   }
-  var v49 = outputWindow.document;
-  introspect(JAM.policy.p25) {
-    v49.write("</pre>\n");
+  var v46 = outputWindow.document;
+  introspect(JAM.policy.p15) {
+    v46.write("</pre>\n");
   }
   return;
 }
 function closeTextArea() {
-  var v50 = outputWindow.document;
-  introspect(JAM.policy.p25) {
-    v50.write("</textarea>");
+  var v47 = outputWindow.document;
+  introspect(JAM.policy.p15) {
+    v47.write("</textarea>");
   }
   return true;
 }
 function closeWindow() {
-  var v51 = outputWindow.document;
-  introspect(JAM.policy.p25) {
-    v51.write("</body>\n</html>\n");
+  var v48 = outputWindow.document;
+  introspect(JAM.policy.p15) {
+    v48.write("</body>\n</html>\n");
   }
   outputWindow.status = "Done.";
-  var v52 = outputWindow.document;
-  v52.close();
+  var v49 = outputWindow.document;
+  v49.close();
   return true;
 }
 function convertDegenerates(sequence$$1) {
   sequence$$1 = sequence$$1.toLowerCase();
-  introspect(JAM.policy.p28) {
+  introspect(JAM.policy.p22) {
     sequence$$1 = sequence$$1.replace(/t/g, "[TU]");
   }
-  introspect(JAM.policy.p28) {
+  introspect(JAM.policy.p22) {
     sequence$$1 = sequence$$1.replace(/r/g, "[AGR]");
   }
-  introspect(JAM.policy.p28) {
+  introspect(JAM.policy.p22) {
     sequence$$1 = sequence$$1.replace(/y/g, "[CTUY]");
   }
-  introspect(JAM.policy.p28) {
+  introspect(JAM.policy.p22) {
     sequence$$1 = sequence$$1.replace(/s/g, "[GCS]");
   }
-  introspect(JAM.policy.p28) {
+  introspect(JAM.policy.p22) {
     sequence$$1 = sequence$$1.replace(/w/g, "[ATUW]");
   }
-  introspect(JAM.policy.p28) {
+  introspect(JAM.policy.p22) {
     sequence$$1 = sequence$$1.replace(/k/g, "[GTUK]");
   }
-  introspect(JAM.policy.p28) {
+  introspect(JAM.policy.p22) {
     sequence$$1 = sequence$$1.replace(/m/g, "[ACM]");
   }
-  introspect(JAM.policy.p28) {
+  introspect(JAM.policy.p22) {
     sequence$$1 = sequence$$1.replace(/b/g, "[CGTUBSKY]");
   }
-  introspect(JAM.policy.p28) {
+  introspect(JAM.policy.p22) {
     sequence$$1 = sequence$$1.replace(/d/g, "[AGTUDRKW]");
   }
-  introspect(JAM.policy.p28) {
+  introspect(JAM.policy.p22) {
     sequence$$1 = sequence$$1.replace(/h/g, "[ACTUHMYW]");
   }
-  introspect(JAM.policy.p28) {
+  introspect(JAM.policy.p22) {
     sequence$$1 = sequence$$1.replace(/v/g, "[ACGVSMR]");
   }
-  introspect(JAM.policy.p28) {
+  introspect(JAM.policy.p22) {
     sequence$$1 = sequence$$1.replace(/n/g, "[ACGTURYSWKMBDHVN]");
   }
   return sequence$$1;
 }
 function earlyCheckAlign(alignArray) {
-  var v602 = alignArray.length;
-  var v53 = v602 < 3;
-  if (v53) {
+  var v590 = alignArray.length;
+  var v50 = v590 < 3;
+  if (v50) {
     alert("There is a problem with the alignment format.");
     return false;
   }
   var i$$4 = 1;
-  var v603 = alignArray.length;
-  var v55 = i$$4 < v603;
-  for (;v55;) {
-    var v994 = alignArray[i$$4];
-    introspect(JAM.policy.p31) {
-      var v604 = v994.search(/[^\s]+\s/)
+  var v591 = alignArray.length;
+  var v52 = i$$4 < v591;
+  for (;v52;) {
+    var v980 = alignArray[i$$4];
+    introspect(JAM.policy.p24) {
+      var v592 = v980.search(/[^\s]+\s/)
     }
-    var v54 = v604 == -1;
-    if (v54) {
+    var v51 = v592 == -1;
+    if (v51) {
       alert("There is a problem with the alignment format.");
       return false;
     }
-    i$$4 = i$$4 + 1;
-    var v605 = alignArray.length;
-    v55 = i$$4 < v605;
+    i$$4++;
+    var v593 = alignArray.length;
+    v52 = i$$4 < v593;
   }
   return true;
 }
 function filterAlignSeq(alignSeq) {
-  introspect(JAM.policy.p28) {
+  introspect(JAM.policy.p22) {
     alignSeq = alignSeq.replace(/[^abcdefghiklmnpqrstvwxyz\.\-]/gi, "");
   }
   return alignSeq;
 }
 function filterFastaTitle(sequenceTitle) {
-  introspect(JAM.policy.p28) {
+  introspect(JAM.policy.p22) {
     sequenceTitle = sequenceTitle.replace(/\s{2,}/g, " ");
   }
-  introspect(JAM.policy.p28) {
+  introspect(JAM.policy.p22) {
     sequenceTitle = sequenceTitle.replace(/^\s*/g, "");
   }
-  introspect(JAM.policy.p28) {
+  introspect(JAM.policy.p22) {
     sequenceTitle = sequenceTitle.replace(/[\f\n\r\t]+$/g, "\n");
   }
-  introspect(JAM.policy.p28) {
+  introspect(JAM.policy.p22) {
     return sequenceTitle.replace(/[\<\>]\n/gi, "");
   }
 }
@@ -633,21 +621,21 @@ function getArrayOfFasta(sequenceData) {
   var arrayOfFasta = new Array;
   var matchArray;
   var re$$1 = /\>[^\>]+/g;
-  introspect(JAM.policy.p31) {
-    var v606 = sequenceData.search(/\>[^\f\n\r]+[\f\n\r]/)
+  introspect(JAM.policy.p24) {
+    var v594 = sequenceData.search(/\>[^\f\n\r]+[\f\n\r]/)
   }
-  var v58 = v606 != -1;
-  if (v58) {
-    introspect(JAM.policy.p40) {
-      var v57 = matchArray = re$$1.exec(sequenceData)
+  var v55 = v594 != -1;
+  if (v55) {
+    introspect(JAM.policy.p21) {
+      var v54 = matchArray = re$$1.exec(sequenceData)
     }
-    for (;v57;) {
-      var v56 = matchArray[0];
-      introspect(JAM.policy.p40) {
-        arrayOfFasta.push(v56);
+    for (;v54;) {
+      var v53 = matchArray[0];
+      introspect(JAM.policy.p21) {
+        arrayOfFasta.push(v53);
       }
-      introspect(JAM.policy.p40) {
-        v57 = matchArray = re$$1.exec(sequenceData);
+      introspect(JAM.policy.p21) {
+        v54 = matchArray = re$$1.exec(sequenceData);
       }
     }
   } else {
@@ -656,241 +644,229 @@ function getArrayOfFasta(sequenceData) {
   return arrayOfFasta;
 }
 function getFastaTitleFromTitleAndSequence(fastaSequenceTitle, sequence$$2) {
-  var v607 = sequence$$2.length;
-  var v59 = "&gt;results for " + v607;
-  var stringToReturn = v59 + " residue sequence ";
-  introspect(JAM.policy.p31) {
-    var v608 = fastaSequenceTitle.search(/[^\s]/)
+  var v595 = sequence$$2.length;
+  var v56 = "&gt;results for " + v595;
+  var stringToReturn = v56 + " residue sequence ";
+  introspect(JAM.policy.p24) {
+    var v596 = fastaSequenceTitle.search(/[^\s]/)
   }
-  var v61 = v608 != -1;
-  if (v61) {
-    var v609 = stringToReturn + '"';
-    var v60 = v609 + fastaSequenceTitle;
-    stringToReturn = v60 + '"';
+  var v58 = v596 != -1;
+  if (v58) {
+    var v597 = stringToReturn + '"';
+    var v57 = v597 + fastaSequenceTitle;
+    stringToReturn = v57 + '"';
   }
-  var v610 = stringToReturn + ' starting "';
-  introspect(JAM.policy.p26) {
-    var v611 = sequence$$2.substring(0, 10)
+  var v598 = stringToReturn + ' starting "';
+  introspect(JAM.policy.p19) {
+    var v599 = sequence$$2.substring(0, 10)
   }
-  var v62 = v610 + v611;
-  stringToReturn = v62 + '"';
+  var v59 = v598 + v599;
+  stringToReturn = v59 + '"';
   return stringToReturn + "\n";
 }
 function getFuzzySearchTitle(fastaSequenceTitleOne, sequenceOne, fastaSequenceTitleTwo, sequenceTwo) {
-  var v612 = sequenceOne.length;
-  var v63 = "Search results for " + v612;
-  var stringToReturn$$1 = v63 + " residue sequence ";
-  introspect(JAM.policy.p31) {
-    var v613 = fastaSequenceTitleOne.search(/[^\s]/)
+  var v600 = sequenceOne.length;
+  var v60 = "Search results for " + v600;
+  var stringToReturn$$1 = v60 + " residue sequence ";
+  introspect(JAM.policy.p24) {
+    var v601 = fastaSequenceTitleOne.search(/[^\s]/)
   }
-  var v65 = v613 != -1;
-  if (v65) {
-    var v614 = stringToReturn$$1 + '"';
-    var v64 = v614 + fastaSequenceTitleOne;
-    stringToReturn$$1 = v64 + '"';
+  var v62 = v601 != -1;
+  if (v62) {
+    var v602 = stringToReturn$$1 + '"';
+    var v61 = v602 + fastaSequenceTitleOne;
+    stringToReturn$$1 = v61 + '"';
   }
-  var v615 = stringToReturn$$1 + ' starting "';
-  introspect(JAM.policy.p26) {
-    var v616 = sequenceOne.substring(0, 10)
+  var v603 = stringToReturn$$1 + ' starting "';
+  introspect(JAM.policy.p19) {
+    var v604 = sequenceOne.substring(0, 10)
   }
-  var v66 = v615 + v616;
-  stringToReturn$$1 = v66 + '"\n';
-  var v617 = stringToReturn$$1 + "and ";
-  var v618 = sequenceTwo.length;
-  var v67 = v617 + v618;
-  stringToReturn$$1 = v67 + " residue sequence ";
-  introspect(JAM.policy.p31) {
-    var v619 = fastaSequenceTitleTwo.search(/[^\s]/)
+  var v63 = v603 + v604;
+  stringToReturn$$1 = v63 + '"\n';
+  var v605 = stringToReturn$$1 + "and ";
+  var v606 = sequenceTwo.length;
+  var v64 = v605 + v606;
+  stringToReturn$$1 = v64 + " residue sequence ";
+  introspect(JAM.policy.p24) {
+    var v607 = fastaSequenceTitleTwo.search(/[^\s]/)
   }
-  var v69 = v619 != -1;
-  if (v69) {
-    var v620 = stringToReturn$$1 + '"';
-    var v68 = v620 + fastaSequenceTitleTwo;
-    stringToReturn$$1 = v68 + '"';
+  var v66 = v607 != -1;
+  if (v66) {
+    var v608 = stringToReturn$$1 + '"';
+    var v65 = v608 + fastaSequenceTitleTwo;
+    stringToReturn$$1 = v65 + '"';
   }
-  var v621 = stringToReturn$$1 + ' starting "';
-  introspect(JAM.policy.p26) {
-    var v622 = sequenceTwo.substring(0, 10)
+  var v609 = stringToReturn$$1 + ' starting "';
+  introspect(JAM.policy.p19) {
+    var v610 = sequenceTwo.substring(0, 10)
   }
-  var v70 = v621 + v622;
-  stringToReturn$$1 = v70 + '"';
-  var v71 = '<div class="info">' + stringToReturn$$1;
-  return v71 + "</div>\n";
+  var v67 = v609 + v610;
+  stringToReturn$$1 = v67 + '"';
+  var v68 = '<div class="info">' + stringToReturn$$1;
+  return v68 + "</div>\n";
 }
 function getGeneticCodeMatchExp(arrayOfPatterns$$3) {
-  var v72 = arrayOfPatterns$$3.length;
-  var geneticCodeMatchExp$$1 = new Array(v72);
+  var v69 = arrayOfPatterns$$3.length;
+  var geneticCodeMatchExp$$1 = new Array(v69);
   var j$$2 = 0;
-  var v623 = arrayOfPatterns$$3.length;
-  var v75 = j$$2 < v623;
-  for (;v75;) {
-    var v73 = geneticCodeMatchExp$$1;
-    var v74 = j$$2;
-    var v1239 = arrayOfPatterns$$3[j$$2];
-    introspect(JAM.policy.p31) {
-      var v995 = v1239.match(/\/.+\//)
+  var v611 = arrayOfPatterns$$3.length;
+  var v71 = j$$2 < v611;
+  for (;v71;) {
+    var v981 = arrayOfPatterns$$3[j$$2];
+    introspect(JAM.policy.p24) {
+      var v612 = v981.match(/\/.+\//)
     }
-    var v624 = v995 + "gi";
-    var v1600 = eval(v624);
-    introspect(JAM.policy.p13) {
-      v73[v74] = v1600;
-    }
-    j$$2 = j$$2 + 1;
-    var v625 = arrayOfPatterns$$3.length;
-    v75 = j$$2 < v625;
+    var v70 = v612 + "gi";
+    var v1575 = eval(v70);
+    geneticCodeMatchExp$$1[j$$2] = v1575;
+    j$$2++;
+    var v613 = arrayOfPatterns$$3.length;
+    v71 = j$$2 < v613;
   }
   return geneticCodeMatchExp$$1;
 }
 function getGeneticCodeMatchResult(arrayOfPatterns$$4) {
-  var v76 = arrayOfPatterns$$4.length;
-  var geneticCodeMatchResult$$1 = new Array(v76);
+  var v72 = arrayOfPatterns$$4.length;
+  var geneticCodeMatchResult$$1 = new Array(v72);
   var j$$3 = 0;
-  var v626 = arrayOfPatterns$$4.length;
-  var v81 = j$$3 < v626;
-  for (;v81;) {
-    var v77 = geneticCodeMatchResult$$1;
-    var v78 = j$$3;
-    var v996 = arrayOfPatterns$$4[j$$3];
-    introspect(JAM.policy.p31) {
-      var v627 = v996.match(/=[a-zA-Z\*]/)
+  var v614 = arrayOfPatterns$$4.length;
+  var v75 = j$$3 < v614;
+  for (;v75;) {
+    var v615 = arrayOfPatterns$$4[j$$3];
+    introspect(JAM.policy.p24) {
+      var v73 = v615.match(/=[a-zA-Z\*]/)
     }
-    var v1601 = v627.toString();
-    introspect(JAM.policy.p13) {
-      v77[v78] = v1601;
+    var v1576 = v73.toString();
+    geneticCodeMatchResult$$1[j$$3] = v1576;
+    var v74 = geneticCodeMatchResult$$1[j$$3];
+    introspect(JAM.policy.p22) {
+      var v1577 = v74.replace(/=/g, "")
     }
-    var v79 = geneticCodeMatchResult$$1;
-    var v80 = j$$3;
-    var v628 = geneticCodeMatchResult$$1[j$$3];
-    introspect(JAM.policy.p28) {
-      var v1602 = v628.replace(/=/g, "")
-    }
-    introspect(JAM.policy.p13) {
-      v79[v80] = v1602;
-    }
-    j$$3 = j$$3 + 1;
-    var v629 = arrayOfPatterns$$4.length;
-    v81 = j$$3 < v629;
+    geneticCodeMatchResult$$1[j$$3] = v1577;
+    j$$3++;
+    var v616 = arrayOfPatterns$$4.length;
+    v75 = j$$3 < v616;
   }
   return geneticCodeMatchResult$$1;
 }
 function getInfoFromTitleAndSequence(fastaSequenceTitle$$1, sequence$$3) {
-  var v630 = sequence$$3.length;
-  var v82 = "Results for " + v630;
-  var stringToReturn$$2 = v82 + " residue sequence ";
-  introspect(JAM.policy.p31) {
-    var v631 = fastaSequenceTitle$$1.search(/[^\s]/)
+  var v617 = sequence$$3.length;
+  var v76 = "Results for " + v617;
+  var stringToReturn$$2 = v76 + " residue sequence ";
+  introspect(JAM.policy.p24) {
+    var v618 = fastaSequenceTitle$$1.search(/[^\s]/)
   }
-  var v84 = v631 != -1;
-  if (v84) {
-    var v632 = stringToReturn$$2 + '"';
-    var v83 = v632 + fastaSequenceTitle$$1;
-    stringToReturn$$2 = v83 + '"';
+  var v78 = v618 != -1;
+  if (v78) {
+    var v619 = stringToReturn$$2 + '"';
+    var v77 = v619 + fastaSequenceTitle$$1;
+    stringToReturn$$2 = v77 + '"';
   }
-  var v633 = stringToReturn$$2 + ' starting "';
-  introspect(JAM.policy.p26) {
-    var v634 = sequence$$3.substring(0, 10)
+  var v620 = stringToReturn$$2 + ' starting "';
+  introspect(JAM.policy.p19) {
+    var v621 = sequence$$3.substring(0, 10)
   }
-  var v85 = v633 + v634;
-  stringToReturn$$2 = v85 + '"';
-  var v86 = '<div class="info">' + stringToReturn$$2;
-  return v86 + "</div>\n";
+  var v79 = v620 + v621;
+  stringToReturn$$2 = v79 + '"';
+  var v80 = '<div class="info">' + stringToReturn$$2;
+  return v80 + "</div>\n";
 }
 function getInfoFromTitleAndSequenceAndTopology(fastaSequenceTitle$$2, sequence$$4, topology) {
-  var v997 = "Results for " + topology;
-  var v635 = v997 + " ";
-  var v636 = sequence$$4.length;
-  var v87 = v635 + v636;
-  var stringToReturn$$3 = v87 + " residue sequence ";
-  introspect(JAM.policy.p31) {
-    var v637 = fastaSequenceTitle$$2.search(/[^\s]/)
+  var v982 = "Results for " + topology;
+  var v622 = v982 + " ";
+  var v623 = sequence$$4.length;
+  var v81 = v622 + v623;
+  var stringToReturn$$3 = v81 + " residue sequence ";
+  introspect(JAM.policy.p24) {
+    var v624 = fastaSequenceTitle$$2.search(/[^\s]/)
   }
-  var v89 = v637 != -1;
-  if (v89) {
-    var v638 = stringToReturn$$3 + '"';
-    var v88 = v638 + fastaSequenceTitle$$2;
-    stringToReturn$$3 = v88 + '"';
+  var v83 = v624 != -1;
+  if (v83) {
+    var v625 = stringToReturn$$3 + '"';
+    var v82 = v625 + fastaSequenceTitle$$2;
+    stringToReturn$$3 = v82 + '"';
   }
-  var v639 = stringToReturn$$3 + ' starting "';
-  introspect(JAM.policy.p26) {
-    var v640 = sequence$$4.substring(0, 10)
+  var v626 = stringToReturn$$3 + ' starting "';
+  introspect(JAM.policy.p19) {
+    var v627 = sequence$$4.substring(0, 10)
   }
-  var v90 = v639 + v640;
-  stringToReturn$$3 = v90 + '"';
-  var v91 = '<div class="info">' + stringToReturn$$3;
-  return v91 + "</div>\n";
+  var v84 = v626 + v627;
+  stringToReturn$$3 = v84 + '"';
+  var v85 = '<div class="info">' + stringToReturn$$3;
+  return v85 + "</div>\n";
 }
 function getPairwiseAlignTitle(fastaSequenceTitleOne$$1, sequenceOne$$1, fastaSequenceTitleTwo$$1, sequenceTwo$$1) {
-  var v641 = sequenceOne$$1.length;
-  var v92 = "Alignment results for " + v641;
-  var stringToReturn$$4 = v92 + " residue sequence ";
-  introspect(JAM.policy.p31) {
-    var v642 = fastaSequenceTitleOne$$1.search(/[^\s]/)
+  var v628 = sequenceOne$$1.length;
+  var v86 = "Alignment results for " + v628;
+  var stringToReturn$$4 = v86 + " residue sequence ";
+  introspect(JAM.policy.p24) {
+    var v629 = fastaSequenceTitleOne$$1.search(/[^\s]/)
   }
-  var v94 = v642 != -1;
-  if (v94) {
-    var v643 = stringToReturn$$4 + '"';
-    var v93 = v643 + fastaSequenceTitleOne$$1;
-    stringToReturn$$4 = v93 + '"';
+  var v88 = v629 != -1;
+  if (v88) {
+    var v630 = stringToReturn$$4 + '"';
+    var v87 = v630 + fastaSequenceTitleOne$$1;
+    stringToReturn$$4 = v87 + '"';
   }
-  var v644 = stringToReturn$$4 + ' starting "';
-  introspect(JAM.policy.p26) {
-    var v645 = sequenceOne$$1.substring(0, 10)
+  var v631 = stringToReturn$$4 + ' starting "';
+  introspect(JAM.policy.p19) {
+    var v632 = sequenceOne$$1.substring(0, 10)
   }
-  var v95 = v644 + v645;
-  stringToReturn$$4 = v95 + '"\n';
-  var v646 = stringToReturn$$4 + "and ";
-  var v647 = sequenceTwo$$1.length;
-  var v96 = v646 + v647;
-  stringToReturn$$4 = v96 + " residue sequence ";
-  introspect(JAM.policy.p31) {
-    var v648 = fastaSequenceTitleTwo$$1.search(/[^\s]/)
+  var v89 = v631 + v632;
+  stringToReturn$$4 = v89 + '"\n';
+  var v633 = stringToReturn$$4 + "and ";
+  var v634 = sequenceTwo$$1.length;
+  var v90 = v633 + v634;
+  stringToReturn$$4 = v90 + " residue sequence ";
+  introspect(JAM.policy.p24) {
+    var v635 = fastaSequenceTitleTwo$$1.search(/[^\s]/)
   }
-  var v98 = v648 != -1;
-  if (v98) {
-    var v649 = stringToReturn$$4 + '"';
-    var v97 = v649 + fastaSequenceTitleTwo$$1;
-    stringToReturn$$4 = v97 + '"';
+  var v92 = v635 != -1;
+  if (v92) {
+    var v636 = stringToReturn$$4 + '"';
+    var v91 = v636 + fastaSequenceTitleTwo$$1;
+    stringToReturn$$4 = v91 + '"';
   }
-  var v650 = stringToReturn$$4 + ' starting "';
-  introspect(JAM.policy.p26) {
-    var v651 = sequenceTwo$$1.substring(0, 10)
+  var v637 = stringToReturn$$4 + ' starting "';
+  introspect(JAM.policy.p19) {
+    var v638 = sequenceTwo$$1.substring(0, 10)
   }
-  var v99 = v650 + v651;
-  stringToReturn$$4 = v99 + '"';
-  var v100 = '<div class="info">' + stringToReturn$$4;
-  return v100 + "</div>\n";
+  var v93 = v637 + v638;
+  stringToReturn$$4 = v93 + '"';
+  var v94 = '<div class="info">' + stringToReturn$$4;
+  return v94 + "</div>\n";
 }
 function getRandomSequence(components, lengthOut) {
   var sequenceArray = new Array;
   var tempNum = 0;
   var tempChar = "";
   var j$$4 = 0;
-  var v102 = j$$4 < lengthOut;
-  for (;v102;) {
-    var v652 = Math.random();
-    var v653 = components.length;
-    var v101 = v652 * v653;
-    introspect(JAM.policy.p31) {
-      tempNum = Math.floor(v101);
+  var v96 = j$$4 < lengthOut;
+  for (;v96;) {
+    var v639 = Math.random();
+    var v640 = components.length;
+    var v95 = v639 * v640;
+    introspect(JAM.policy.p24) {
+      tempNum = Math.floor(v95);
     }
     tempChar = components[tempNum];
-    introspect(JAM.policy.p40) {
+    introspect(JAM.policy.p21) {
       sequenceArray.push(tempChar);
     }
-    j$$4 = j$$4 + 1;
-    v102 = j$$4 < lengthOut;
+    j$$4++;
+    v96 = j$$4 < lengthOut;
   }
-  introspect(JAM.policy.p25) {
+  introspect(JAM.policy.p15) {
     return sequenceArray.join("");
   }
 }
 function getSequenceFromFasta(sequenceRecord) {
-  introspect(JAM.policy.p31) {
-    var v654 = sequenceRecord.search(/\>[^\f\n\r]+[\f\n\r]/)
+  introspect(JAM.policy.p24) {
+    var v641 = sequenceRecord.search(/\>[^\f\n\r]+[\f\n\r]/)
   }
-  var v103 = v654 != -1;
-  if (v103) {
-    introspect(JAM.policy.p28) {
+  var v97 = v641 != -1;
+  if (v97) {
+    introspect(JAM.policy.p22) {
       sequenceRecord = sequenceRecord.replace(/\>[^\f\n\r]+[\f\n\r]/, "");
     }
   }
@@ -898,139 +874,139 @@ function getSequenceFromFasta(sequenceRecord) {
 }
 function getTitleFromFasta(sequenceRecord$$1) {
   var fastaTitle = "Untitled";
-  introspect(JAM.policy.p31) {
-    var v655 = sequenceRecord$$1.search(/\>[^\f\n\r]+[\f\n\r]/)
+  introspect(JAM.policy.p24) {
+    var v642 = sequenceRecord$$1.search(/\>[^\f\n\r]+[\f\n\r]/)
   }
-  var v105 = v655 != -1;
-  if (v105) {
-    introspect(JAM.policy.p28) {
-      var v104 = sequenceRecord$$1.match(/\>[^\f\n\r]+[\f\n\r]/, "")
+  var v99 = v642 != -1;
+  if (v99) {
+    introspect(JAM.policy.p22) {
+      var v98 = sequenceRecord$$1.match(/\>[^\f\n\r]+[\f\n\r]/, "")
     }
-    fastaTitle = v104.toString();
-    introspect(JAM.policy.p28) {
+    fastaTitle = v98.toString();
+    introspect(JAM.policy.p22) {
       fastaTitle = fastaTitle.replace(/\>|[\f\n\r]/g, "");
     }
-    introspect(JAM.policy.p28) {
+    introspect(JAM.policy.p22) {
       fastaTitle = fastaTitle.replace(/\s{2,}/g, " ");
     }
-    introspect(JAM.policy.p28) {
+    introspect(JAM.policy.p22) {
       fastaTitle = fastaTitle.replace(/[\<\>]/gi, "");
     }
   }
   return fastaTitle;
 }
 function moreExpressionCheck(expressionToCheck) {
-  introspect(JAM.policy.p31) {
-    var v1575 = expressionToCheck.search(/\[[A-Za-z\|]*\[/)
+  introspect(JAM.policy.p24) {
+    var v1550 = expressionToCheck.search(/\[[A-Za-z\|]*\[/)
   }
-  var v1568 = v1575 != -1;
-  var v1577 = !v1568;
-  if (v1577) {
-    introspect(JAM.policy.p31) {
-      var v1576 = expressionToCheck.search(/\][A-Za-z\|]*\]/)
+  var v1543 = v1550 != -1;
+  var v1552 = !v1543;
+  if (v1552) {
+    introspect(JAM.policy.p24) {
+      var v1551 = expressionToCheck.search(/\][A-Za-z\|]*\]/)
     }
-    v1568 = v1576 != -1;
+    v1543 = v1551 != -1;
   }
-  var v1558 = v1568;
-  var v1570 = !v1558;
-  if (v1570) {
-    introspect(JAM.policy.p31) {
-      var v1569 = expressionToCheck.search(/\[\]/)
+  var v1533 = v1543;
+  var v1545 = !v1533;
+  if (v1545) {
+    introspect(JAM.policy.p24) {
+      var v1544 = expressionToCheck.search(/\[\]/)
     }
-    v1558 = v1569 != -1;
+    v1533 = v1544 != -1;
   }
-  var v1547 = v1558;
-  var v1560 = !v1547;
-  if (v1560) {
-    introspect(JAM.policy.p31) {
-      var v1559 = expressionToCheck.search(/\/[A-Za-z\|]*\]/)
+  var v1522 = v1533;
+  var v1535 = !v1522;
+  if (v1535) {
+    introspect(JAM.policy.p24) {
+      var v1534 = expressionToCheck.search(/\/[A-Za-z\|]*\]/)
     }
-    v1547 = v1559 != -1;
+    v1522 = v1534 != -1;
   }
-  var v1532 = v1547;
-  var v1549 = !v1532;
-  if (v1549) {
-    introspect(JAM.policy.p31) {
-      var v1548 = expressionToCheck.search(/\[[A-Za-z\|]*\//)
+  var v1507 = v1522;
+  var v1524 = !v1507;
+  if (v1524) {
+    introspect(JAM.policy.p24) {
+      var v1523 = expressionToCheck.search(/\[[A-Za-z\|]*\//)
     }
-    v1532 = v1548 != -1;
+    v1507 = v1523 != -1;
   }
-  var v1507 = v1532;
-  var v1534 = !v1507;
-  if (v1534) {
-    introspect(JAM.policy.p31) {
-      var v1533 = expressionToCheck.search(/\|\|/)
-    }
-    v1507 = v1533 != -1;
-  }
-  var v1473 = v1507;
-  var v1509 = !v1473;
+  var v1482 = v1507;
+  var v1509 = !v1482;
   if (v1509) {
-    introspect(JAM.policy.p31) {
-      var v1508 = expressionToCheck.search(/\/\|/)
+    introspect(JAM.policy.p24) {
+      var v1508 = expressionToCheck.search(/\|\|/)
     }
-    v1473 = v1508 != -1;
+    v1482 = v1508 != -1;
   }
-  var v1383 = v1473;
-  var v1475 = !v1383;
-  if (v1475) {
-    introspect(JAM.policy.p31) {
-      var v1474 = expressionToCheck.search(/\|\//)
+  var v1448 = v1482;
+  var v1484 = !v1448;
+  if (v1484) {
+    introspect(JAM.policy.p24) {
+      var v1483 = expressionToCheck.search(/\/\|/)
     }
-    v1383 = v1474 != -1;
+    v1448 = v1483 != -1;
   }
-  var v1240 = v1383;
-  var v1385 = !v1240;
-  if (v1385) {
-    introspect(JAM.policy.p31) {
-      var v1384 = expressionToCheck.search(/\[.\]/)
+  var v1358 = v1448;
+  var v1450 = !v1358;
+  if (v1450) {
+    introspect(JAM.policy.p24) {
+      var v1449 = expressionToCheck.search(/\|\//)
     }
-    v1240 = v1384 != -1;
+    v1358 = v1449 != -1;
   }
-  var v998 = v1240;
-  var v1242 = !v998;
-  if (v1242) {
-    introspect(JAM.policy.p31) {
-      var v1241 = expressionToCheck.search(/\</)
+  var v1215 = v1358;
+  var v1360 = !v1215;
+  if (v1360) {
+    introspect(JAM.policy.p24) {
+      var v1359 = expressionToCheck.search(/\[.\]/)
     }
-    v998 = v1241 != -1;
+    v1215 = v1359 != -1;
   }
-  var v656 = v998;
-  var v1000 = !v656;
-  if (v1000) {
-    introspect(JAM.policy.p31) {
-      var v999 = expressionToCheck.search(/\>/)
+  var v983 = v1215;
+  var v1217 = !v983;
+  if (v1217) {
+    introspect(JAM.policy.p24) {
+      var v1216 = expressionToCheck.search(/\</)
     }
-    v656 = v999 != -1;
+    v983 = v1216 != -1;
   }
-  var v106 = v656;
-  if (v106) {
+  var v643 = v983;
+  var v985 = !v643;
+  if (v985) {
+    introspect(JAM.policy.p24) {
+      var v984 = expressionToCheck.search(/\>/)
+    }
+    v643 = v984 != -1;
+  }
+  var v100 = v643;
+  if (v100) {
     return false;
   }
   return true;
 }
 function openForm() {
-  var v107 = outputWindow.document;
-  introspect(JAM.policy.p25) {
-    v107.write('<form action="">\n');
+  var v101 = outputWindow.document;
+  introspect(JAM.policy.p15) {
+    v101.write('<form action="">\n');
   }
   return true;
 }
 function openPre() {
-  var v108 = outputWindow.document;
-  introspect(JAM.policy.p25) {
-    v108.write("<pre>");
+  var v102 = outputWindow.document;
+  introspect(JAM.policy.p15) {
+    v102.write("<pre>");
   }
-  var v109 = outputWindow.document;
-  introspect(JAM.policy.p25) {
-    v109.write('<div class="pre">');
+  var v103 = outputWindow.document;
+  introspect(JAM.policy.p15) {
+    v103.write('<div class="pre">');
   }
   return;
 }
 function openTextArea() {
-  var v110 = outputWindow.document;
-  introspect(JAM.policy.p25) {
-    v110.write('<br /><textarea rows="6" cols="61">\n');
+  var v104 = outputWindow.document;
+  introspect(JAM.policy.p15) {
+    v104.write('<br /><textarea rows="6" cols="61">\n');
   }
   return true;
 }
@@ -1039,67 +1015,67 @@ function openWindow(title$$5) {
   return;
 }
 function _openWindow(title$$6, isColor) {
-  introspect(JAM.policy.p27) {
+  introspect(JAM.policy.p20) {
     outputWindow = window.open("", "my_new_window", "toolbar=no, location=no, directories=no, status=yes, menubar=yes, scrollbars=yes, resizable=yes, copyhistory=no, width=800, height=400");
   }
   outputWindow.focus();
-  var v111 = outputWindow.document;
-  var v1243 = '<!DOCTYPE html PUBLIC "-//W3C//DTD XHTML 1.0 Transitional//EN" "http://www.w3.org/TR/xhtml1/DTD/xhtml1-transitional.dtd">\n' + '<html lang="en">\n';
-  var v1001 = v1243 + "<head>\n";
-  var v657 = v1001 + "<title>Sequence Manipulation Suite</title>\n";
-  var v112 = v657 + '<meta http-equiv="Content-Type" content="text/html; charset=ISO-8859-1" />\n';
-  introspect(JAM.policy.p40) {
-    v111.write(v112);
+  var v105 = outputWindow.document;
+  var v1218 = '<!DOCTYPE html PUBLIC "-//W3C//DTD XHTML 1.0 Transitional//EN" "http://www.w3.org/TR/xhtml1/DTD/xhtml1-transitional.dtd">\n' + '<html lang="en">\n';
+  var v986 = v1218 + "<head>\n";
+  var v644 = v986 + "<title>Sequence Manipulation Suite</title>\n";
+  var v106 = v644 + '<meta http-equiv="Content-Type" content="text/html; charset=ISO-8859-1" />\n';
+  introspect(JAM.policy.p21) {
+    v105.write(v106);
   }
   if (isColor) {
-    var v113 = outputWindow.document;
-    var v1590 = '<style type="text/css">\n' + "body.main {font-size: medium; font-family: arial, sans-serif; color: #000000; background-color: #FFFFFF}\n";
-    var v1586 = v1590 + "div.pre {font-size: medium; color: #000000; font-family: courier, sans-serif; white-space: pre}\n";
-    var v1582 = v1586 + "div.title {font-size: x-large; color: #000000; text-align: left; background-color: #FFFFFF}\n";
-    var v1578 = v1582 + "div.info {font-weight: bold}\n";
-    var v1571 = v1578 + "span.none, td.none {color: #000000; background-color: #FFFFFF}\n";
-    var v1561 = v1571 + "span.one, td.one {color: #000000; background-color: #66FF00}\n";
-    var v1550 = v1561 + "span.two, td.two {color: #000000; background-color: #FFFF66}\n";
-    var v1535 = v1550 + "span.three, td.three {color: #000000; background-color: #FFFFFF}\n";
-    var v1510 = v1535 + "span.forward_primer, td.forward_primer {color: #000000; background-color: #FF66FF}\n";
-    var v1476 = v1510 + "span.reverse_primer, td.reverse_primer {color: #000000; background-color: #FF9933}\n";
-    var v1386 = v1476 + "span.current_sequence {color: #000000; background-color: #FFFFFF}\n";
-    var v1244 = v1386 + "span.mutated_sequence {color: #990066; background-color: #FFFFFF}\n";
-    var v1002 = v1244 + "td.many {color: #000000}\n";
-    var v658 = v1002 + "td.title {font-weight: bold; color: #000000; background-color: #FFFFFF}\n";
-    var v114 = v658 + "</style>\n";
-    introspect(JAM.policy.p40) {
-      v113.write(v114);
+    var v107 = outputWindow.document;
+    var v1565 = '<style type="text/css">\n' + "body.main {font-size: medium; font-family: arial, sans-serif; color: #000000; background-color: #FFFFFF}\n";
+    var v1561 = v1565 + "div.pre {font-size: medium; color: #000000; font-family: courier, sans-serif; white-space: pre}\n";
+    var v1557 = v1561 + "div.title {font-size: x-large; color: #000000; text-align: left; background-color: #FFFFFF}\n";
+    var v1553 = v1557 + "div.info {font-weight: bold}\n";
+    var v1546 = v1553 + "span.none, td.none {color: #000000; background-color: #FFFFFF}\n";
+    var v1536 = v1546 + "span.one, td.one {color: #000000; background-color: #66FF00}\n";
+    var v1525 = v1536 + "span.two, td.two {color: #000000; background-color: #FFFF66}\n";
+    var v1510 = v1525 + "span.three, td.three {color: #000000; background-color: #FFFFFF}\n";
+    var v1485 = v1510 + "span.forward_primer, td.forward_primer {color: #000000; background-color: #FF66FF}\n";
+    var v1451 = v1485 + "span.reverse_primer, td.reverse_primer {color: #000000; background-color: #FF9933}\n";
+    var v1361 = v1451 + "span.current_sequence {color: #000000; background-color: #FFFFFF}\n";
+    var v1219 = v1361 + "span.mutated_sequence {color: #990066; background-color: #FFFFFF}\n";
+    var v987 = v1219 + "td.many {color: #000000}\n";
+    var v645 = v987 + "td.title {font-weight: bold; color: #000000; background-color: #FFFFFF}\n";
+    var v108 = v645 + "</style>\n";
+    introspect(JAM.policy.p21) {
+      v107.write(v108);
     }
   } else {
-    var v115 = outputWindow.document;
-    var v1594 = '<style type="text/css">\n' + "body.main {font-size: medium; font-family: arial, sans-serif; color: #000000; background-color: #FFFFFF; margin: 0 auto; padding: 0}\n";
-    var v1591 = v1594 + "div.pre {font-size: medium; color: #000000; background-color: #FFFFFF; font-family: courier, sans-serif; white-space: pre}\n";
-    var v1587 = v1591 + "div.title {display: none}\n";
-    var v1583 = v1587 + "div.info {font-weight: bold}\n";
-    var v1579 = v1583 + "span.none, td.none {color: #000000; background-color: #FFFFFF}\n";
-    var v1572 = v1579 + "span.one, td.one {color: #000000; text-decoration: underline; background-color: #FFFFFF}\n";
-    var v1562 = v1572 + "span.two, td.two {color: #000000; font-style: italic; background-color: #FFFFFF}\n";
-    var v1551 = v1562 + "span.three, td.three {color: #000000; background-color: #FFFFFF}\n";
-    var v1536 = v1551 + "span.forward_primer, td.forward_primer {color: #000000; background-color: #FFFFFF}\n";
-    var v1511 = v1536 + "span.reverse_primer, td.reverse_primer {color: #000000; background-color: #FFFFFF}\n";
-    var v1477 = v1511 + "span.current_sequence {color: #000000; background-color: #FFFFFF}\n";
-    var v1387 = v1477 + "span.mutated_sequence {color: #000000; text-decoration: underline; background-color: #FFFFFF}\n";
-    var v1245 = v1387 + "td.many {color: #000000; background-color: #FFFFFF}\n";
-    var v1003 = v1245 + "td.title {font-weight: bold; color: #000000; background-color: #FFFFFF}\n";
-    var v659 = v1003 + "img {display: none}\n";
-    var v116 = v659 + "</style>\n";
-    introspect(JAM.policy.p40) {
-      v115.write(v116);
+    var v109 = outputWindow.document;
+    var v1569 = '<style type="text/css">\n' + "body.main {font-size: medium; font-family: arial, sans-serif; color: #000000; background-color: #FFFFFF; margin: 0 auto; padding: 0}\n";
+    var v1566 = v1569 + "div.pre {font-size: medium; color: #000000; background-color: #FFFFFF; font-family: courier, sans-serif; white-space: pre}\n";
+    var v1562 = v1566 + "div.title {display: none}\n";
+    var v1558 = v1562 + "div.info {font-weight: bold}\n";
+    var v1554 = v1558 + "span.none, td.none {color: #000000; background-color: #FFFFFF}\n";
+    var v1547 = v1554 + "span.one, td.one {color: #000000; text-decoration: underline; background-color: #FFFFFF}\n";
+    var v1537 = v1547 + "span.two, td.two {color: #000000; font-style: italic; background-color: #FFFFFF}\n";
+    var v1526 = v1537 + "span.three, td.three {color: #000000; background-color: #FFFFFF}\n";
+    var v1511 = v1526 + "span.forward_primer, td.forward_primer {color: #000000; background-color: #FFFFFF}\n";
+    var v1486 = v1511 + "span.reverse_primer, td.reverse_primer {color: #000000; background-color: #FFFFFF}\n";
+    var v1452 = v1486 + "span.current_sequence {color: #000000; background-color: #FFFFFF}\n";
+    var v1362 = v1452 + "span.mutated_sequence {color: #000000; text-decoration: underline; background-color: #FFFFFF}\n";
+    var v1220 = v1362 + "td.many {color: #000000; background-color: #FFFFFF}\n";
+    var v988 = v1220 + "td.title {font-weight: bold; color: #000000; background-color: #FFFFFF}\n";
+    var v646 = v988 + "img {display: none}\n";
+    var v110 = v646 + "</style>\n";
+    introspect(JAM.policy.p21) {
+      v109.write(v110);
     }
   }
-  var v117 = outputWindow.document;
-  var v1246 = "</head>\n" + '<body class="main">\n';
-  var v1004 = v1246 + '<div class="title">';
-  var v660 = v1004 + title$$6;
-  var v118 = v660 + " results</div>\n";
-  introspect(JAM.policy.p40) {
-    v117.write(v118);
+  var v111 = outputWindow.document;
+  var v1221 = "</head>\n" + '<body class="main">\n';
+  var v989 = v1221 + '<div class="title">';
+  var v647 = v989 + title$$6;
+  var v112 = v647 + " results</div>\n";
+  introspect(JAM.policy.p21) {
+    v111.write(v112);
   }
   outputWindow.status = "Please Wait.";
   return true;
@@ -1109,129 +1085,129 @@ function openWindowAlign(title$$7) {
   return;
 }
 function _openWindowAlign(title$$8, isBackground) {
-  introspect(JAM.policy.p27) {
+  introspect(JAM.policy.p20) {
     outputWindow = window.open("", "my_new_window", "toolbar=no, location=no, directories=no, status=yes, menubar=yes, scrollbars=yes, resizable=yes, copyhistory=no, width=800, height=400");
   }
   outputWindow.focus();
-  var v119 = outputWindow.document;
-  var v1247 = '<!DOCTYPE html PUBLIC "-//W3C//DTD XHTML 1.0 Transitional//EN" "http://www.w3.org/TR/xhtml1/DTD/xhtml1-transitional.dtd">\n' + '<html lang="en">\n';
-  var v1005 = v1247 + "<head>\n";
-  var v661 = v1005 + "<title>Sequence Manipulation Suite</title>\n";
-  var v120 = v661 + '<meta http-equiv="Content-Type" content="text/html; charset=ISO-8859-1" />\n';
-  introspect(JAM.policy.p40) {
-    v119.write(v120);
+  var v113 = outputWindow.document;
+  var v1222 = '<!DOCTYPE html PUBLIC "-//W3C//DTD XHTML 1.0 Transitional//EN" "http://www.w3.org/TR/xhtml1/DTD/xhtml1-transitional.dtd">\n' + '<html lang="en">\n';
+  var v990 = v1222 + "<head>\n";
+  var v648 = v990 + "<title>Sequence Manipulation Suite</title>\n";
+  var v114 = v648 + '<meta http-equiv="Content-Type" content="text/html; charset=ISO-8859-1" />\n';
+  introspect(JAM.policy.p21) {
+    v113.write(v114);
   }
   if (isBackground) {
-    var v121 = outputWindow.document;
-    var v1592 = '<style type="text/css">\n' + "body.main {font-family: arial, sans-serif; color: #000000; background-color: #FFFFFF}\n";
-    var v1588 = v1592 + "div.pre {font-size: medium; color: #000000; font-family: courier, sans-serif; white-space: pre}\n";
-    var v1584 = v1588 + "div.title {font-size: x-large; color: #000000; text-align: left; background-color: #FFFFFF}\n";
-    var v1580 = v1584 + "div.info {font-weight: bold}\n";
-    var v1573 = v1580 + "span.ident {color: #FFFFFF; background-color: #000000}\n";
-    var v1563 = v1573 + "span.sim {color: #FFFFFF; background-color: #666666}\n";
-    var v1552 = v1563 + "span.g, span.a, span.v, span.l, span.i {color: #000000; background-color: #C0C0C0}\n";
-    var v1537 = v1552 + "span.f, span.y, span.w {color: #000000; background-color: #FF6600}\n";
-    var v1512 = v1537 + "span.c, span.m {color: #000000; background-color: #FFFF00}\n";
-    var v1478 = v1512 + "span.s, span.t {color: #000000; background-color: #66FF00}\n";
-    var v1388 = v1478 + "span.k, span.r, span.h {color: #000000; background-color: #FF0000}\n";
-    var v1248 = v1388 + "span.d, span.e {color: #000000; background-color: #0066FF}\n";
-    var v1006 = v1248 + "span.n, span.q {color: #000000; background-color: #996633}\n";
-    var v662 = v1006 + "span.p {color: #000000; background-color: #FF99FF}\n";
-    var v122 = v662 + "</style>\n";
-    introspect(JAM.policy.p40) {
-      v121.write(v122);
+    var v115 = outputWindow.document;
+    var v1567 = '<style type="text/css">\n' + "body.main {font-family: arial, sans-serif; color: #000000; background-color: #FFFFFF}\n";
+    var v1563 = v1567 + "div.pre {font-size: medium; color: #000000; font-family: courier, sans-serif; white-space: pre}\n";
+    var v1559 = v1563 + "div.title {font-size: x-large; color: #000000; text-align: left; background-color: #FFFFFF}\n";
+    var v1555 = v1559 + "div.info {font-weight: bold}\n";
+    var v1548 = v1555 + "span.ident {color: #FFFFFF; background-color: #000000}\n";
+    var v1538 = v1548 + "span.sim {color: #FFFFFF; background-color: #666666}\n";
+    var v1527 = v1538 + "span.g, span.a, span.v, span.l, span.i {color: #000000; background-color: #C0C0C0}\n";
+    var v1512 = v1527 + "span.f, span.y, span.w {color: #000000; background-color: #FF6600}\n";
+    var v1487 = v1512 + "span.c, span.m {color: #000000; background-color: #FFFF00}\n";
+    var v1453 = v1487 + "span.s, span.t {color: #000000; background-color: #66FF00}\n";
+    var v1363 = v1453 + "span.k, span.r, span.h {color: #000000; background-color: #FF0000}\n";
+    var v1223 = v1363 + "span.d, span.e {color: #000000; background-color: #0066FF}\n";
+    var v991 = v1223 + "span.n, span.q {color: #000000; background-color: #996633}\n";
+    var v649 = v991 + "span.p {color: #000000; background-color: #FF99FF}\n";
+    var v116 = v649 + "</style>\n";
+    introspect(JAM.policy.p21) {
+      v115.write(v116);
     }
   } else {
-    var v123 = outputWindow.document;
-    var v1596 = '<style type="text/css">\n' + "body.main {font-family: arial, sans-serif; color: #000000; background-color: #FFFFFF}\n";
-    var v1595 = v1596 + "div.pre {font-size: medium; color: #000000; font-family: courier, sans-serif; white-space: pre}\n";
-    var v1593 = v1595 + "div.title {display: none}\n";
-    var v1589 = v1593 + "div.info {font-weight: bold}\n";
-    var v1585 = v1589 + "span.ident {color: #000000; font-weight: bold; text-decoration: underline; background-color: #FFFFFF}\n";
-    var v1581 = v1585 + "span.sim {color: #000000; font-weight: bold; background-color: #FFFFFF}\n";
-    var v1574 = v1581 + "span.diff {color: #999999; background-color: #FFFFFF}\n";
-    var v1564 = v1574 + "span.g, span.a, span.v, span.l, span.i {color: #CC33CC; background-color: #FFFFFF}\n";
-    var v1553 = v1564 + "span.f, span.y, span.w {color: #FF6600; background-color: #FFFFFF}\n";
-    var v1538 = v1553 + "span.c, span.m {color: #FFCC00; background-color: #FFFFFF}\n";
-    var v1513 = v1538 + "span.s, span.t {color: #CCFF00; background-color: #FFFFFF}\n";
-    var v1479 = v1513 + "span.k, span.r, span.h {color: #FF0000; background-color: #FFFFFF}\n";
-    var v1389 = v1479 + "span.d, span.e {color: #0000FF; background-color: #FFFFFF}\n";
-    var v1249 = v1389 + "span.n, span.q {color: #996633; background-color: #FFFFFF}\n";
-    var v1007 = v1249 + "span.p {color: #00FFCC; background-color: #FFFFFF}\n";
-    var v663 = v1007 + "img {display: none}\n";
-    var v124 = v663 + "</style>\n";
-    introspect(JAM.policy.p40) {
-      v123.write(v124);
+    var v117 = outputWindow.document;
+    var v1571 = '<style type="text/css">\n' + "body.main {font-family: arial, sans-serif; color: #000000; background-color: #FFFFFF}\n";
+    var v1570 = v1571 + "div.pre {font-size: medium; color: #000000; font-family: courier, sans-serif; white-space: pre}\n";
+    var v1568 = v1570 + "div.title {display: none}\n";
+    var v1564 = v1568 + "div.info {font-weight: bold}\n";
+    var v1560 = v1564 + "span.ident {color: #000000; font-weight: bold; text-decoration: underline; background-color: #FFFFFF}\n";
+    var v1556 = v1560 + "span.sim {color: #000000; font-weight: bold; background-color: #FFFFFF}\n";
+    var v1549 = v1556 + "span.diff {color: #999999; background-color: #FFFFFF}\n";
+    var v1539 = v1549 + "span.g, span.a, span.v, span.l, span.i {color: #CC33CC; background-color: #FFFFFF}\n";
+    var v1528 = v1539 + "span.f, span.y, span.w {color: #FF6600; background-color: #FFFFFF}\n";
+    var v1513 = v1528 + "span.c, span.m {color: #FFCC00; background-color: #FFFFFF}\n";
+    var v1488 = v1513 + "span.s, span.t {color: #CCFF00; background-color: #FFFFFF}\n";
+    var v1454 = v1488 + "span.k, span.r, span.h {color: #FF0000; background-color: #FFFFFF}\n";
+    var v1364 = v1454 + "span.d, span.e {color: #0000FF; background-color: #FFFFFF}\n";
+    var v1224 = v1364 + "span.n, span.q {color: #996633; background-color: #FFFFFF}\n";
+    var v992 = v1224 + "span.p {color: #00FFCC; background-color: #FFFFFF}\n";
+    var v650 = v992 + "img {display: none}\n";
+    var v118 = v650 + "</style>\n";
+    introspect(JAM.policy.p21) {
+      v117.write(v118);
     }
   }
-  var v125 = outputWindow.document;
-  var v1250 = "</head>\n" + '<body class="main">\n';
-  var v1008 = v1250 + '<div class="title">';
-  var v664 = v1008 + title$$8;
-  var v126 = v664 + " results</div>\n";
-  introspect(JAM.policy.p40) {
-    v125.write(v126);
+  var v119 = outputWindow.document;
+  var v1225 = "</head>\n" + '<body class="main">\n';
+  var v993 = v1225 + '<div class="title">';
+  var v651 = v993 + title$$8;
+  var v120 = v651 + " results</div>\n";
+  introspect(JAM.policy.p21) {
+    v119.write(v120);
   }
   outputWindow.status = "Please Wait.";
   return true;
 }
 function removeFormatting(sequence$$5) {
-  introspect(JAM.policy.p28) {
+  introspect(JAM.policy.p22) {
     return sequence$$5.replace(/[\d\s]/g, "");
   }
 }
 function removeNonDna(sequence$$6) {
-  introspect(JAM.policy.p28) {
+  introspect(JAM.policy.p22) {
     return sequence$$6.replace(/[^gatucryswkmbdhvnxGATUCRYSWKMBDHVNX]/g, "");
   }
 }
 function removeNonDnaStrict(sequence$$7) {
-  introspect(JAM.policy.p28) {
+  introspect(JAM.policy.p22) {
     return sequence$$7.replace(/[^gatucGATUC]/g, "");
   }
 }
 function removeNonProtein(sequence$$8) {
-  introspect(JAM.policy.p28) {
+  introspect(JAM.policy.p22) {
     return sequence$$8.replace(/[^ACDEFGHIKLMNPQRSTVWYZacdefghiklmnpqrstvwyz\*]/g, "");
   }
 }
 function removeNonProteinStrict(sequence$$9) {
-  introspect(JAM.policy.p28) {
+  introspect(JAM.policy.p22) {
     return sequence$$9.replace(/[^ACDEFGHIKLMNPQRSTVWYZacdefghiklmnpqrstvwyz\*]/g, "");
   }
 }
 function removeNonProteinAllowDegen(sequence$$10) {
-  introspect(JAM.policy.p28) {
+  introspect(JAM.policy.p22) {
     return sequence$$10.replace(/[^ABCDEFGHIKLMNPQRSTVWYXZabcdefghiklmnpqrstvwyxz\*]/g, "");
   }
 }
 function removeNonProteinAllowX(sequence$$11) {
-  introspect(JAM.policy.p28) {
+  introspect(JAM.policy.p22) {
     return sequence$$11.replace(/[^ACDEFGHIKLMNPQRSTVWYZXacdefghiklmnpqrstvwyzx\*]/g, "");
   }
 }
 function removeWhiteSpace(text$$9) {
-  introspect(JAM.policy.p28) {
+  introspect(JAM.policy.p22) {
     return text$$9.replace(/\s/g, "");
   }
 }
 function removeNonLetters(sequence$$12) {
-  introspect(JAM.policy.p28) {
+  introspect(JAM.policy.p22) {
     return sequence$$12.replace(/[^A-Z]/gi, "");
   }
 }
 function reverse(dnaSequence$$1) {
   var tempDnaArray = new Array;
-  introspect(JAM.policy.p31) {
-    var v665 = dnaSequence$$1.search(/./)
+  introspect(JAM.policy.p24) {
+    var v652 = dnaSequence$$1.search(/./)
   }
-  var v127 = v665 != -1;
-  if (v127) {
-    introspect(JAM.policy.p31) {
+  var v121 = v652 != -1;
+  if (v121) {
+    introspect(JAM.policy.p24) {
       tempDnaArray = dnaSequence$$1.match(/./g);
     }
     tempDnaArray = tempDnaArray.reverse();
-    introspect(JAM.policy.p25) {
+    introspect(JAM.policy.p15) {
       dnaSequence$$1 = tempDnaArray.join("");
     }
   }
@@ -1242,16 +1218,16 @@ function rightNum(theNumber, sequenceToAppend, lengthOfColumn, tabIn) {
   var tempString = "";
   theNumber = theNumber.toString();
   j$$5 = theNumber.length;
-  var v128 = j$$5 < lengthOfColumn;
-  for (;v128;) {
+  var v122 = j$$5 < lengthOfColumn;
+  for (;v122;) {
     tempString = tempString + " ";
-    j$$5 = j$$5 + 1;
-    v128 = j$$5 < lengthOfColumn;
+    j$$5++;
+    v122 = j$$5 < lengthOfColumn;
   }
-  var v129 = tempString + theNumber;
-  theNumber = v129 + " ";
-  var v130 = sequenceToAppend + theNumber;
-  sequenceToAppend = v130 + tabIn;
+  var v123 = tempString + theNumber;
+  theNumber = v123 + " ";
+  var v124 = sequenceToAppend + theNumber;
+  sequenceToAppend = v124 + tabIn;
   return sequenceToAppend;
 }
 function testScript() {
@@ -1260,22 +1236,22 @@ function testScript() {
   }
   var testArray = new Array;
   var testString = "1234567890";
-  introspect(JAM.policy.p40) {
+  introspect(JAM.policy.p21) {
     testArray.push(testString);
   }
-  var v666 = testArray[0];
-  var v131 = v666 != testString;
-  if (v131) {
+  var v653 = testArray[0];
+  var v125 = v653 != testString;
+  if (v125) {
     alert("Array object push method not supported. See browser compatibility page.");
     return false;
   }
   testString = "1\n2\n3";
   var re$$2 = /^2$/m;
-  introspect(JAM.policy.p40) {
-    var v667 = testString.search(re$$2)
+  introspect(JAM.policy.p21) {
+    var v654 = testString.search(re$$2)
   }
-  var v132 = v667 == -1;
-  if (v132) {
+  var v126 = v654 == -1;
+  if (v126) {
     alert("Regular expression 'm' flag not supported. See browser compatibility page.");
     return false;
   }
@@ -1285,238 +1261,238 @@ function testScript() {
   } catch (e$$4) {
     caughtException = true;
   }
-  var v133 = !caughtException;
-  if (v133) {
+  var v127 = !caughtException;
+  if (v127) {
     alert("Exception handling not supported. See browser compatibility page.");
   }
   testString = "123";
-  introspect(JAM.policy.p28) {
+  introspect(JAM.policy.p22) {
     testString = testString.replace(/(\d)/g, v1);
   }
-  var v134 = testString != "1X2X3X";
-  if (v134) {
+  var v128 = testString != "1X2X3X";
+  if (v128) {
     alert("Nested function in String replace method not supported. See browser compatibility page.");
     return false;
   }
   var testNum = 2489.8237;
-  introspect(JAM.policy.p22) {
-    var v668 = testNum.toFixed(3)
+  introspect(JAM.policy.p17) {
+    var v655 = testNum.toFixed(3)
   }
-  var v135 = v668 != 2489.824;
-  if (v135) {
+  var v129 = v655 != 2489.824;
+  if (v129) {
     alert("Number toFixed() method not supported. See browser compatibility page.");
     return false;
   }
-  introspect(JAM.policy.p22) {
-    var v669 = testNum.toPrecision(5)
+  introspect(JAM.policy.p17) {
+    var v656 = testNum.toPrecision(5)
   }
-  var v136 = v669 != 2489.8;
-  if (v136) {
+  var v130 = v656 != 2489.8;
+  if (v130) {
     alert("Number toPrecision() method not supported. See browser compatibility page.");
     return false;
   }
   return true;
 }
 function verifyDigits(theNumber$$1) {
-  introspect(JAM.policy.p31) {
-    var v670 = theNumber$$1.search(/\d/)
+  introspect(JAM.policy.p24) {
+    var v657 = theNumber$$1.search(/\d/)
   }
-  var v137 = v670 == -1;
-  if (v137) {
+  var v131 = v657 == -1;
+  if (v131) {
     alert("Please enter a number");
     return false;
   }
   return;
 }
 function verifyEmbl(emblFile) {
-  introspect(JAM.policy.p31) {
-    var v1390 = emblFile.search(/ID/)
+  introspect(JAM.policy.p24) {
+    var v1365 = emblFile.search(/ID/)
   }
-  var v1251 = v1390 == -1;
-  var v1392 = !v1251;
-  if (v1392) {
-    introspect(JAM.policy.p31) {
-      var v1391 = emblFile.search(/AC/)
+  var v1226 = v1365 == -1;
+  var v1367 = !v1226;
+  if (v1367) {
+    introspect(JAM.policy.p24) {
+      var v1366 = emblFile.search(/AC/)
     }
-    v1251 = v1391 == -1;
+    v1226 = v1366 == -1;
   }
-  var v1009 = v1251;
-  var v1253 = !v1009;
-  if (v1253) {
-    introspect(JAM.policy.p31) {
-      var v1252 = emblFile.search(/DE/)
+  var v994 = v1226;
+  var v1228 = !v994;
+  if (v1228) {
+    introspect(JAM.policy.p24) {
+      var v1227 = emblFile.search(/DE/)
     }
-    v1009 = v1252 == -1;
+    v994 = v1227 == -1;
   }
-  var v671 = v1009;
-  var v1011 = !v671;
-  if (v1011) {
-    introspect(JAM.policy.p31) {
-      var v1010 = emblFile.search(/SQ/)
+  var v658 = v994;
+  var v996 = !v658;
+  if (v996) {
+    introspect(JAM.policy.p24) {
+      var v995 = emblFile.search(/SQ/)
     }
-    v671 = v1010 == -1;
+    v658 = v995 == -1;
   }
-  var v138 = v671;
-  if (v138) {
+  var v132 = v658;
+  if (v132) {
     alert("Please enter the contents of an EMBL file.");
     return false;
   }
   return true;
 }
 function verifyMaxDigits(theNumber$$2, maxInput$$2) {
-  introspect(JAM.policy.p31) {
-    var v672 = theNumber$$2.search(/\d/)
+  introspect(JAM.policy.p24) {
+    var v659 = theNumber$$2.search(/\d/)
   }
-  var v139 = v672 == -1;
-  if (v139) {
+  var v133 = v659 == -1;
+  if (v133) {
     alert("Please enter a number.");
     return false;
   }
-  var v141 = theNumber$$2 > maxInput$$2;
-  if (v141) {
-    var v673 = "Please enter a number less than or equal to " + maxInput$$2;
-    var v140 = v673 + ".";
-    alert(v140);
+  var v135 = theNumber$$2 > maxInput$$2;
+  if (v135) {
+    var v660 = "Please enter a number less than or equal to " + maxInput$$2;
+    var v134 = v660 + ".";
+    alert(v134);
     return false;
   }
   return;
 }
 function verifyDna(dnaSequence$$2) {
-  introspect(JAM.policy.p31) {
-    var v674 = dnaSequence$$2.search(/[^gatucryswkmbdhvnx\s]/i)
+  introspect(JAM.policy.p24) {
+    var v661 = dnaSequence$$2.search(/[^gatucryswkmbdhvnx\s]/i)
   }
-  var v142 = v674 != -1;
-  if (v142) {
+  var v136 = v661 != -1;
+  if (v136) {
     alert("The sequence contains non-DNA characters, which will be omitted.");
   }
   return true;
 }
 function verifyProtein(proteinSequence) {
-  introspect(JAM.policy.p31) {
-    var v675 = proteinSequence.search(/[^acdefghiklmnpqrstvwyz\*\s]/i)
+  introspect(JAM.policy.p24) {
+    var v662 = proteinSequence.search(/[^acdefghiklmnpqrstvwyz\*\s]/i)
   }
-  var v143 = v675 != -1;
-  if (v143) {
+  var v137 = v662 != -1;
+  if (v137) {
     alert("The sequence contains non-protein characters, which will be omitted.");
   }
   return true;
 }
 function verifyGenBank(genBankFile) {
-  introspect(JAM.policy.p31) {
-    var v1393 = genBankFile.search(/LOCUS/)
+  introspect(JAM.policy.p24) {
+    var v1368 = genBankFile.search(/LOCUS/)
   }
-  var v1254 = v1393 == -1;
-  var v1395 = !v1254;
-  if (v1395) {
-    introspect(JAM.policy.p31) {
-      var v1394 = genBankFile.search(/DEFINITION/)
+  var v1229 = v1368 == -1;
+  var v1370 = !v1229;
+  if (v1370) {
+    introspect(JAM.policy.p24) {
+      var v1369 = genBankFile.search(/DEFINITION/)
     }
-    v1254 = v1394 == -1;
+    v1229 = v1369 == -1;
   }
-  var v1012 = v1254;
-  var v1256 = !v1012;
-  if (v1256) {
-    introspect(JAM.policy.p31) {
-      var v1255 = genBankFile.search(/ACCESSION/)
+  var v997 = v1229;
+  var v1231 = !v997;
+  if (v1231) {
+    introspect(JAM.policy.p24) {
+      var v1230 = genBankFile.search(/ACCESSION/)
     }
-    v1012 = v1255 == -1;
+    v997 = v1230 == -1;
   }
-  var v676 = v1012;
-  var v1014 = !v676;
-  if (v1014) {
-    introspect(JAM.policy.p31) {
-      var v1013 = genBankFile.search(/ORIGIN/)
+  var v663 = v997;
+  var v999 = !v663;
+  if (v999) {
+    introspect(JAM.policy.p24) {
+      var v998 = genBankFile.search(/ORIGIN/)
     }
-    v676 = v1013 == -1;
+    v663 = v998 == -1;
   }
-  var v144 = v676;
-  if (v144) {
+  var v138 = v663;
+  if (v138) {
     alert("Please enter the contents of a GenBank file.");
     return false;
   }
   return true;
 }
 function verifyGenBankFeat(genBankFile$$1) {
-  introspect(JAM.policy.p31) {
-    var v1396 = genBankFile$$1.search(/LOCUS/)
+  introspect(JAM.policy.p24) {
+    var v1371 = genBankFile$$1.search(/LOCUS/)
   }
-  var v1257 = v1396 == -1;
-  var v1398 = !v1257;
-  if (v1398) {
-    introspect(JAM.policy.p31) {
-      var v1397 = genBankFile$$1.search(/DEFINITION/)
+  var v1232 = v1371 == -1;
+  var v1373 = !v1232;
+  if (v1373) {
+    introspect(JAM.policy.p24) {
+      var v1372 = genBankFile$$1.search(/DEFINITION/)
     }
-    v1257 = v1397 == -1;
+    v1232 = v1372 == -1;
   }
-  var v1015 = v1257;
-  var v1259 = !v1015;
-  if (v1259) {
-    introspect(JAM.policy.p31) {
-      var v1258 = genBankFile$$1.search(/ACCESSION/)
+  var v1000 = v1232;
+  var v1234 = !v1000;
+  if (v1234) {
+    introspect(JAM.policy.p24) {
+      var v1233 = genBankFile$$1.search(/ACCESSION/)
     }
-    v1015 = v1258 == -1;
+    v1000 = v1233 == -1;
   }
-  var v677 = v1015;
-  var v1017 = !v677;
-  if (v1017) {
-    introspect(JAM.policy.p31) {
-      var v1016 = genBankFile$$1.search(/ORIGIN/)
+  var v664 = v1000;
+  var v1002 = !v664;
+  if (v1002) {
+    introspect(JAM.policy.p24) {
+      var v1001 = genBankFile$$1.search(/ORIGIN/)
     }
-    v677 = v1016 == -1;
+    v664 = v1001 == -1;
   }
-  var v145 = v677;
-  if (v145) {
+  var v139 = v664;
+  if (v139) {
     alert("Please enter the contents of a GenBank file.");
     return false;
   }
-  introspect(JAM.policy.p31) {
-    var v678 = genBankFile$$1.search(/FEATURES {13}/)
+  introspect(JAM.policy.p24) {
+    var v665 = genBankFile$$1.search(/FEATURES {13}/)
   }
-  var v146 = v678 == -1;
-  if (v146) {
+  var v140 = v665 == -1;
+  if (v140) {
     alert("The file has no defined features.");
     return false;
   }
   return true;
 }
 function verifyEmblFeat(emblFile$$1) {
-  introspect(JAM.policy.p31) {
-    var v1399 = emblFile$$1.search(/ID/)
+  introspect(JAM.policy.p24) {
+    var v1374 = emblFile$$1.search(/ID/)
   }
-  var v1260 = v1399 == -1;
-  var v1401 = !v1260;
-  if (v1401) {
-    introspect(JAM.policy.p31) {
-      var v1400 = emblFile$$1.search(/AC/)
+  var v1235 = v1374 == -1;
+  var v1376 = !v1235;
+  if (v1376) {
+    introspect(JAM.policy.p24) {
+      var v1375 = emblFile$$1.search(/AC/)
     }
-    v1260 = v1400 == -1;
+    v1235 = v1375 == -1;
   }
-  var v1018 = v1260;
-  var v1262 = !v1018;
-  if (v1262) {
-    introspect(JAM.policy.p31) {
-      var v1261 = emblFile$$1.search(/DE/)
+  var v1003 = v1235;
+  var v1237 = !v1003;
+  if (v1237) {
+    introspect(JAM.policy.p24) {
+      var v1236 = emblFile$$1.search(/DE/)
     }
-    v1018 = v1261 == -1;
+    v1003 = v1236 == -1;
   }
-  var v679 = v1018;
-  var v1020 = !v679;
-  if (v1020) {
-    introspect(JAM.policy.p31) {
-      var v1019 = emblFile$$1.search(/SQ/)
+  var v666 = v1003;
+  var v1005 = !v666;
+  if (v1005) {
+    introspect(JAM.policy.p24) {
+      var v1004 = emblFile$$1.search(/SQ/)
     }
-    v679 = v1019 == -1;
+    v666 = v1004 == -1;
   }
-  var v147 = v679;
-  if (v147) {
+  var v141 = v666;
+  if (v141) {
     alert("Please enter the contents of an EMBL file.");
     return false;
   }
-  introspect(JAM.policy.p31) {
-    var v680 = emblFile$$1.search(/^FT/m)
+  introspect(JAM.policy.p24) {
+    var v667 = emblFile$$1.search(/^FT/m)
   }
-  var v148 = v680 == -1;
-  if (v148) {
+  var v142 = v667 == -1;
+  if (v142) {
     alert("The file has no defined features.");
     return false;
   }
@@ -1529,56 +1505,57 @@ function writeGroupNum(text$$10, tabIn$$1, groupSize, basePerLine, startBase, st
   var sepChar = " ";
   groupSize = parseInt(groupSize);
   basePerLine = parseInt(basePerLine);
-  var v156 = i$$5 < stopBase;
-  for (;v156;) {
-    var v149 = i$$5 + 1;
-    lineOfText = rightNum(v149, lineOfText, 8, tabIn$$1);
+  var v149 = i$$5 < stopBase;
+  for (;v149;) {
+    var v143 = i$$5 + 1;
+    lineOfText = rightNum(v143, lineOfText, 8, tabIn$$1);
     var j$$6 = 1;
-    var v681 = basePerLine / groupSize;
-    var v153 = j$$6 <= v681;
-    for (;v153;) {
-      var v152 = k < groupSize;
-      for (;v152;) {
-        var v150 = lineOfText;
-        var v682 = k + i$$5;
-        introspect(JAM.policy.p40) {
-          var v151 = text$$10.charAt(v682)
+    var v668 = basePerLine / groupSize;
+    var v146 = j$$6 <= v668;
+    for (;v146;) {
+      var v145 = k < groupSize;
+      for (;v145;) {
+        var v669 = k + i$$5;
+        introspect(JAM.policy.p21) {
+          var v144 = text$$10.charAt(v669)
         }
-        lineOfText = v150 + v151;
+        lineOfText = lineOfText + v144;
         k = k + 1;
-        v152 = k < groupSize;
+        v145 = k < groupSize;
       }
       i$$5 = i$$5 + groupSize;
       k = 0;
       lineOfText = lineOfText + sepChar;
-      j$$6 = j$$6 + 1;
-      var v683 = basePerLine / groupSize;
-      v153 = j$$6 <= v683;
+      j$$6++;
+      var v670 = basePerLine / groupSize;
+      v146 = j$$6 <= v670;
     }
-    var v154 = outputWindow.document;
-    var v155 = lineOfText + "\n";
-    introspect(JAM.policy.p40) {
-      v154.write(v155);
+    var v147 = outputWindow.document;
+    var v148 = lineOfText + "\n";
+    introspect(JAM.policy.p21) {
+      v147.write(v148);
     }
     lineOfText = "";
-    v156 = i$$5 < stopBase;
+    v149 = i$$5 < stopBase;
   }
   return true;
 }
 function writeGroupNumDna(text$$11, tabIn$$2, groupSize$$1, basePerLine$$1, startBase$$1, stopBase$$1, strands, numberPosition) {
-  writeGroupNumDnaSetStart(text$$11, tabIn$$2, groupSize$$1, basePerLine$$1, startBase$$1, stopBase$$1, strands, numberPosition, 0);
+  introspect(JAM.policy.p25) {
+    writeGroupNumDnaSetStart(text$$11, tabIn$$2, groupSize$$1, basePerLine$$1, startBase$$1, stopBase$$1, strands, numberPosition, 0);
+  }
   return true;
 }
 function writeGroupNumDnaSetStart(text$$12, tabIn$$3, groupSize$$2, basePerLine$$2, startBase$$2, stopBase$$2, strands$$1, numberPosition$$1, numberingAdjustment) {
   function adjustNumbering(original, adjustment) {
     var adjusted = original + adjustment;
-    var v684 = adjustment < 0;
-    if (v684) {
-      v684 = adjusted >= 0;
+    var v671 = adjustment < 0;
+    if (v671) {
+      v671 = adjusted >= 0;
     }
-    var v157 = v684;
-    if (v157) {
-      adjusted = adjusted + 1;
+    var v150 = v671;
+    if (v150) {
+      adjusted++;
     }
     return adjusted;
   }
@@ -1591,123 +1568,133 @@ function writeGroupNumDnaSetStart(text$$12, tabIn$$3, groupSize$$2, basePerLine$
   groupSize$$2 = parseInt(groupSize$$2);
   basePerLine$$2 = parseInt(basePerLine$$2);
   numberingAdjustment = parseInt(numberingAdjustment);
-  var v190 = i$$6 < stopBase$$2;
-  for (;v190;) {
+  var v183 = i$$6 < stopBase$$2;
+  for (;v183;) {
     lineNum = i$$6 + 1;
     var j$$7 = 1;
-    var v685 = basePerLine$$2 / groupSize$$2;
-    var v166 = j$$7 <= v685;
-    for (;v166;) {
-      var v161 = k$$1 < groupSize$$2;
-      for (;v161;) {
-        var v686 = i$$6 + k$$1;
-        var v158 = v686 >= stopBase$$2;
-        if (v158) {
+    var v672 = basePerLine$$2 / groupSize$$2;
+    var v159 = j$$7 <= v672;
+    for (;v159;) {
+      var v154 = k$$1 < groupSize$$2;
+      for (;v154;) {
+        var v673 = i$$6 + k$$1;
+        var v151 = v673 >= stopBase$$2;
+        if (v151) {
           break;
         }
-        var v159 = lineOfText$$1;
-        var v687 = k$$1 + i$$6;
-        introspect(JAM.policy.p40) {
-          var v160 = text$$12.charAt(v687)
+        var v152 = lineOfText$$1;
+        var v674 = k$$1 + i$$6;
+        introspect(JAM.policy.p21) {
+          var v153 = text$$12.charAt(v674)
         }
-        lineOfText$$1 = v159 + v160;
+        lineOfText$$1 = v152 + v153;
         k$$1 = k$$1 + 1;
-        v161 = k$$1 < groupSize$$2;
+        v154 = k$$1 < groupSize$$2;
       }
       lineOfText$$1 = lineOfText$$1 + sepChar$$1;
       i$$6 = i$$6 + k$$1;
-      var v164 = numberPosition$$1 == "above";
-      if (v164) {
-        var v162 = aboveNum;
-        var v688 = adjustNumbering(i$$6, numberingAdjustment);
-        var v163 = rightNum(v688, "", groupSize$$2, tabIn$$3);
-        aboveNum = v162 + v163;
+      var v157 = numberPosition$$1 == "above";
+      if (v157) {
+        var v155 = aboveNum;
+        introspect(JAM.policy.p25) {
+          var v675 = adjustNumbering(i$$6, numberingAdjustment)
+        }
+        var v156 = rightNum(v675, "", groupSize$$2, tabIn$$3);
+        aboveNum = v155 + v156;
       }
-      var v165 = i$$6 >= stopBase$$2;
-      if (v165) {
+      var v158 = i$$6 >= stopBase$$2;
+      if (v158) {
         break;
       }
       k$$1 = 0;
-      j$$7 = j$$7 + 1;
-      var v689 = basePerLine$$2 / groupSize$$2;
-      v166 = j$$7 <= v689;
+      j$$7++;
+      var v676 = basePerLine$$2 / groupSize$$2;
+      v159 = j$$7 <= v676;
     }
-    var v189 = numberPosition$$1 == "left";
-    if (v189) {
-      var v167 = outputWindow.document;
-      var v1263 = adjustNumbering(lineNum, numberingAdjustment);
-      var v1021 = rightNum(v1263, "", 8, tabIn$$3);
-      var v690 = v1021 + lineOfText$$1;
-      var v168 = v690 + "\n";
-      introspect(JAM.policy.p40) {
-        v167.write(v168);
+    var v182 = numberPosition$$1 == "left";
+    if (v182) {
+      var v160 = outputWindow.document;
+      introspect(JAM.policy.p25) {
+        var v1238 = adjustNumbering(lineNum, numberingAdjustment)
       }
-      var v172 = strands$$1 == "two";
-      if (v172) {
-        var v169 = outputWindow.document;
-        var v1264 = adjustNumbering(lineNum, numberingAdjustment);
-        var v1022 = rightNum(v1264, "", 8, tabIn$$3);
-        var v1023 = complement(lineOfText$$1);
-        var v691 = v1022 + v1023;
-        var v170 = v691 + "\n";
-        introspect(JAM.policy.p40) {
-          v169.write(v170);
-        }
-        var v171 = outputWindow.document;
+      var v1006 = rightNum(v1238, "", 8, tabIn$$3);
+      var v677 = v1006 + lineOfText$$1;
+      var v161 = v677 + "\n";
+      introspect(JAM.policy.p21) {
+        v160.write(v161);
+      }
+      var v165 = strands$$1 == "two";
+      if (v165) {
+        var v162 = outputWindow.document;
         introspect(JAM.policy.p25) {
-          v171.write("\n");
+          var v1239 = adjustNumbering(lineNum, numberingAdjustment)
+        }
+        var v1007 = rightNum(v1239, "", 8, tabIn$$3);
+        var v1008 = complement(lineOfText$$1);
+        var v678 = v1007 + v1008;
+        var v163 = v678 + "\n";
+        introspect(JAM.policy.p21) {
+          v162.write(v163);
+        }
+        var v164 = outputWindow.document;
+        introspect(JAM.policy.p15) {
+          v164.write("\n");
         }
       }
     } else {
-      var v188 = numberPosition$$1 == "right";
-      if (v188) {
-        var v173 = outputWindow.document;
-        var v1024 = lineOfText$$1;
-        var v1025 = adjustNumbering(i$$6, numberingAdjustment);
-        var v692 = v1024 + v1025;
-        var v174 = v692 + "\n";
-        introspect(JAM.policy.p40) {
-          v173.write(v174);
+      var v181 = numberPosition$$1 == "right";
+      if (v181) {
+        var v166 = outputWindow.document;
+        var v1009 = lineOfText$$1;
+        introspect(JAM.policy.p25) {
+          var v1010 = adjustNumbering(i$$6, numberingAdjustment)
         }
-        var v178 = strands$$1 == "two";
-        if (v178) {
-          var v175 = outputWindow.document;
-          var v1026 = complement(lineOfText$$1);
-          var v1027 = adjustNumbering(i$$6, numberingAdjustment);
-          var v693 = v1026 + v1027;
-          var v176 = v693 + "\n";
-          introspect(JAM.policy.p40) {
-            v175.write(v176);
-          }
-          var v177 = outputWindow.document;
+        var v679 = v1009 + v1010;
+        var v167 = v679 + "\n";
+        introspect(JAM.policy.p21) {
+          v166.write(v167);
+        }
+        var v171 = strands$$1 == "two";
+        if (v171) {
+          var v168 = outputWindow.document;
+          var v1011 = complement(lineOfText$$1);
           introspect(JAM.policy.p25) {
-            v177.write("\n");
+            var v1012 = adjustNumbering(i$$6, numberingAdjustment)
+          }
+          var v680 = v1011 + v1012;
+          var v169 = v680 + "\n";
+          introspect(JAM.policy.p21) {
+            v168.write(v169);
+          }
+          var v170 = outputWindow.document;
+          introspect(JAM.policy.p15) {
+            v170.write("\n");
           }
         }
       } else {
-        var v187 = numberPosition$$1 == "above";
-        if (v187) {
-          var v179 = outputWindow.document;
-          var v180 = aboveNum + "\n";
-          introspect(JAM.policy.p40) {
-            v179.write(v180);
+        var v180 = numberPosition$$1 == "above";
+        if (v180) {
+          var v172 = outputWindow.document;
+          var v173 = aboveNum + "\n";
+          introspect(JAM.policy.p21) {
+            v172.write(v173);
           }
-          var v181 = outputWindow.document;
-          var v182 = lineOfText$$1 + "\n";
-          introspect(JAM.policy.p40) {
-            v181.write(v182);
+          var v174 = outputWindow.document;
+          var v175 = lineOfText$$1 + "\n";
+          introspect(JAM.policy.p21) {
+            v174.write(v175);
           }
-          var v186 = strands$$1 == "two";
-          if (v186) {
-            var v183 = outputWindow.document;
-            var v694 = complement(lineOfText$$1);
-            var v184 = v694 + "\n";
-            introspect(JAM.policy.p40) {
-              v183.write(v184);
+          var v179 = strands$$1 == "two";
+          if (v179) {
+            var v176 = outputWindow.document;
+            var v681 = complement(lineOfText$$1);
+            var v177 = v681 + "\n";
+            introspect(JAM.policy.p21) {
+              v176.write(v177);
             }
-            var v185 = outputWindow.document;
-            introspect(JAM.policy.p25) {
-              v185.write("\n");
+            var v178 = outputWindow.document;
+            introspect(JAM.policy.p15) {
+              v178.write("\n");
             }
           }
         }
@@ -1715,7 +1702,7 @@ function writeGroupNumDnaSetStart(text$$12, tabIn$$3, groupSize$$2, basePerLine$
     }
     aboveNum = "";
     lineOfText$$1 = "";
-    v190 = i$$6 < stopBase$$2;
+    v183 = i$$6 < stopBase$$2;
   }
   return true;
 }
@@ -1728,83 +1715,81 @@ function writeGroupNumProtein(text$$13, tabIn$$4, groupSize$$3, basePerLine$$3, 
   var aboveNum$$1 = "";
   groupSize$$3 = parseInt(groupSize$$3);
   basePerLine$$3 = parseInt(basePerLine$$3);
-  var v211 = i$$7 < stopBase$$3;
-  for (;v211;) {
+  var v202 = i$$7 < stopBase$$3;
+  for (;v202;) {
     lineNum$$1 = i$$7 + 1;
     var j$$8 = 1;
-    var v695 = basePerLine$$3 / groupSize$$3;
-    var v199 = j$$8 <= v695;
-    for (;v199;) {
-      var v194 = k$$2 < groupSize$$3;
-      for (;v194;) {
-        var v696 = i$$7 + k$$2;
-        var v191 = v696 >= stopBase$$3;
-        if (v191) {
+    var v682 = basePerLine$$3 / groupSize$$3;
+    var v190 = j$$8 <= v682;
+    for (;v190;) {
+      var v186 = k$$2 < groupSize$$3;
+      for (;v186;) {
+        var v683 = i$$7 + k$$2;
+        var v184 = v683 >= stopBase$$3;
+        if (v184) {
           break;
         }
-        var v192 = lineOfText$$2;
-        var v697 = k$$2 + i$$7;
-        introspect(JAM.policy.p40) {
-          var v193 = text$$13.charAt(v697)
+        var v684 = k$$2 + i$$7;
+        introspect(JAM.policy.p21) {
+          var v185 = text$$13.charAt(v684)
         }
-        lineOfText$$2 = v192 + v193;
+        lineOfText$$2 = lineOfText$$2 + v185;
         k$$2 = k$$2 + 1;
-        v194 = k$$2 < groupSize$$3;
+        v186 = k$$2 < groupSize$$3;
       }
       lineOfText$$2 = lineOfText$$2 + sepChar$$2;
       i$$7 = i$$7 + k$$2;
-      var v197 = numberPosition$$2 == "above";
-      if (v197) {
-        var v195 = aboveNum$$1;
-        var v196 = rightNum(i$$7, "", groupSize$$3, tabIn$$4);
-        aboveNum$$1 = v195 + v196;
+      var v188 = numberPosition$$2 == "above";
+      if (v188) {
+        var v187 = rightNum(i$$7, "", groupSize$$3, tabIn$$4);
+        aboveNum$$1 = aboveNum$$1 + v187;
       }
-      var v198 = i$$7 >= stopBase$$3;
-      if (v198) {
+      var v189 = i$$7 >= stopBase$$3;
+      if (v189) {
         break;
       }
       k$$2 = 0;
-      j$$8 = j$$8 + 1;
-      var v698 = basePerLine$$3 / groupSize$$3;
-      v199 = j$$8 <= v698;
+      j$$8++;
+      var v685 = basePerLine$$3 / groupSize$$3;
+      v190 = j$$8 <= v685;
     }
-    var v210 = numberPosition$$2 == "left";
-    if (v210) {
-      var v200 = outputWindow.document;
-      var v1028 = rightNum(lineNum$$1, "", 8, tabIn$$4);
-      var v699 = v1028 + lineOfText$$2;
-      var v201 = v699 + "\n";
-      introspect(JAM.policy.p40) {
-        v200.write(v201);
+    var v201 = numberPosition$$2 == "left";
+    if (v201) {
+      var v191 = outputWindow.document;
+      var v1013 = rightNum(lineNum$$1, "", 8, tabIn$$4);
+      var v686 = v1013 + lineOfText$$2;
+      var v192 = v686 + "\n";
+      introspect(JAM.policy.p21) {
+        v191.write(v192);
       }
     } else {
-      var v209 = numberPosition$$2 == "right";
-      if (v209) {
-        var v202 = outputWindow.document;
-        var v700 = lineOfText$$2 + i$$7;
-        var v203 = v700 + "\n";
-        introspect(JAM.policy.p40) {
-          v202.write(v203);
+      var v200 = numberPosition$$2 == "right";
+      if (v200) {
+        var v193 = outputWindow.document;
+        var v687 = lineOfText$$2 + i$$7;
+        var v194 = v687 + "\n";
+        introspect(JAM.policy.p21) {
+          v193.write(v194);
         }
       } else {
-        var v208 = numberPosition$$2 == "above";
-        if (v208) {
-          var v204 = outputWindow.document;
-          var v205 = aboveNum$$1 + "\n";
-          introspect(JAM.policy.p40) {
-            v204.write(v205);
+        var v199 = numberPosition$$2 == "above";
+        if (v199) {
+          var v195 = outputWindow.document;
+          var v196 = aboveNum$$1 + "\n";
+          introspect(JAM.policy.p21) {
+            v195.write(v196);
           }
-          var v206 = outputWindow.document;
-          var v207 = lineOfText$$2 + "\n";
-          introspect(JAM.policy.p40) {
-            v206.write(v207);
+          var v197 = outputWindow.document;
+          var v198 = lineOfText$$2 + "\n";
+          introspect(JAM.policy.p21) {
+            v197.write(v198);
           }
         }
       }
     }
     aboveNum$$1 = "";
     lineOfText$$2 = "";
-    v211 = i$$7 < stopBase$$3;
+    v202 = i$$7 < stopBase$$3;
   }
   return true;
 }
@@ -1817,82 +1802,82 @@ function writeMutatedSequence(sequence$$13, components$$1, numMut, firstIndexToM
   numMut = parseInt(numMut);
   firstIndexToMutate = parseInt(firstIndexToMutate);
   lastIndexToMutate = parseInt(lastIndexToMutate);
-  var v1265 = sequence$$13.length;
-  var v1029 = v1265 <= firstIndexToMutate;
-  var v1266 = !v1029;
-  if (v1266) {
-    v1029 = lastIndexToMutate < 0;
+  var v1240 = sequence$$13.length;
+  var v1014 = v1240 <= firstIndexToMutate;
+  var v1241 = !v1014;
+  if (v1241) {
+    v1014 = lastIndexToMutate < 0;
   }
-  var v701 = v1029;
-  var v1030 = !v701;
-  if (v1030) {
-    v701 = lastIndexToMutate <= firstIndexToMutate;
+  var v688 = v1014;
+  var v1015 = !v688;
+  if (v1015) {
+    v688 = lastIndexToMutate <= firstIndexToMutate;
   }
-  var v212 = v701;
-  if (v212) {
+  var v203 = v688;
+  if (v203) {
     numMut = 0;
   }
   var i$$8 = 0;
-  var v220 = i$$8 < numMut;
-  for (;v220;) {
+  var v211 = i$$8 < numMut;
+  for (;v211;) {
     maxNum = sequence$$13.length;
-    var v702 = Math.random();
-    var v213 = v702 * maxNum;
-    introspect(JAM.policy.p31) {
-      randNum = Math.floor(v213);
+    var v689 = Math.random();
+    var v204 = v689 * maxNum;
+    introspect(JAM.policy.p24) {
+      randNum = Math.floor(v204);
     }
-    var v703 = randNum < firstIndexToMutate;
-    var v1031 = !v703;
-    if (v1031) {
-      v703 = randNum > lastIndexToMutate;
+    var v690 = randNum < firstIndexToMutate;
+    var v1016 = !v690;
+    if (v1016) {
+      v690 = randNum > lastIndexToMutate;
     }
-    var v214 = v703;
-    if (v214) {
-      numMut = numMut + 1;
-      i$$8 = i$$8 + 1;
-      v220 = i$$8 < numMut;
+    var v205 = v690;
+    if (v205) {
+      numMut++;
+      i$$8++;
+      v211 = i$$8 < numMut;
       continue;
     }
-    introspect(JAM.policy.p31) {
+    introspect(JAM.policy.p24) {
       currentChar = sequence$$13.charAt(randNum);
     }
     needNewChar = true;
     for (;needNewChar;) {
-      var v704 = Math.random();
-      var v705 = components$$1.length;
-      var v215 = v704 * v705;
-      introspect(JAM.policy.p31) {
-        componentsIndex = Math.round(v215);
+      var v691 = Math.random();
+      var v692 = components$$1.length;
+      var v206 = v691 * v692;
+      introspect(JAM.policy.p24) {
+        componentsIndex = Math.round(v206);
       }
-      var v706 = components$$1.length;
-      var v216 = componentsIndex == v706;
-      if (v216) {
+      var v693 = components$$1.length;
+      var v207 = componentsIndex == v693;
+      if (v207) {
         componentsIndex = 0;
       }
-      var v707 = components$$1[componentsIndex];
-      var v217 = v707 != currentChar;
-      if (v217) {
+      var v694 = components$$1[componentsIndex];
+      var v208 = v694 != currentChar;
+      if (v208) {
         needNewChar = false;
       }
     }
-    introspect(JAM.policy.p26) {
-      var v708 = sequence$$13.substring(0, randNum)
+    introspect(JAM.policy.p19) {
+      var v695 = sequence$$13.substring(0, randNum)
     }
-    var v709 = components$$1[componentsIndex];
-    var v218 = v708 + v709;
-    var v710 = randNum + 1;
-    var v711 = sequence$$13.length;
-    introspect(JAM.policy.p41) {
-      var v219 = sequence$$13.substring(v710, v711)
+    var v696 = components$$1[componentsIndex];
+    var v209 = v695 + v696;
+    var v697 = randNum + 1;
+    var v698 = sequence$$13.length;
+    introspect(JAM.policy.p27) {
+      var v210 = sequence$$13.substring(v697, v698)
     }
-    sequence$$13 = v218 + v219;
-    i$$8 = i$$8 + 1;
-    v220 = i$$8 < numMut;
+    sequence$$13 = v209 + v210;
+    i$$8++;
+    v211 = i$$8 < numMut;
   }
-  var v221 = outputWindow.document;
-  var v222 = addReturns(sequence$$13);
-  introspect(JAM.policy.p40) {
-    v221.write(v222);
+  var v212 = outputWindow.document;
+  var v213 = addReturns(sequence$$13);
+  introspect(JAM.policy.p21) {
+    v212.write(v213);
   }
   return true;
 }
@@ -1901,33 +1886,33 @@ function writeRandomSequence(components$$2, lengthOut$$1) {
   var tempNum$$1 = 0;
   var tempChar$$1 = "";
   var j$$9 = 0;
-  var v227 = j$$9 < lengthOut$$1;
-  for (;v227;) {
-    var v712 = Math.random();
-    var v713 = components$$2.length;
-    var v223 = v712 * v713;
-    introspect(JAM.policy.p31) {
-      tempNum$$1 = Math.floor(v223);
+  var v218 = j$$9 < lengthOut$$1;
+  for (;v218;) {
+    var v699 = Math.random();
+    var v700 = components$$2.length;
+    var v214 = v699 * v700;
+    introspect(JAM.policy.p24) {
+      tempNum$$1 = Math.floor(v214);
     }
     tempChar$$1 = components$$2[tempNum$$1];
     sequence$$14 = sequence$$14 + tempChar$$1;
-    var v714 = sequence$$14.length;
-    var v226 = v714 == 60;
-    if (v226) {
-      var v224 = outputWindow.document;
-      var v225 = sequence$$14 + "\n";
-      introspect(JAM.policy.p40) {
-        v224.write(v225);
+    var v701 = sequence$$14.length;
+    var v217 = v701 == 60;
+    if (v217) {
+      var v215 = outputWindow.document;
+      var v216 = sequence$$14 + "\n";
+      introspect(JAM.policy.p21) {
+        v215.write(v216);
       }
       sequence$$14 = "";
     }
-    j$$9 = j$$9 + 1;
-    v227 = j$$9 < lengthOut$$1;
+    j$$9++;
+    v218 = j$$9 < lengthOut$$1;
   }
-  var v228 = outputWindow.document;
-  var v229 = sequence$$14 + "\n";
-  introspect(JAM.policy.p40) {
-    v228.write(v229);
+  var v219 = outputWindow.document;
+  var v220 = sequence$$14 + "\n";
+  introspect(JAM.policy.p21) {
+    v219.write(v220);
   }
   return true;
 }
@@ -1944,110 +1929,110 @@ function writeRestrictionSites(sequence$$15, arrayOfItems, dnaConformation) {
   var backGroundClass;
   var matchArray$$1;
   var timesFound = 0;
-  var v233 = dnaConformation == "circular";
-  if (v233) {
-    introspect(JAM.policy.p26) {
-      var v230 = sequence$$15.substring(0, lookAhead)
+  var v224 = dnaConformation == "circular";
+  if (v224) {
+    introspect(JAM.policy.p19) {
+      var v221 = sequence$$15.substring(0, lookAhead)
     }
-    shiftValue = v230.length;
-    var v1267 = sequence$$15.length;
-    var v1032 = v1267 - lookAhead;
-    var v1033 = sequence$$15.length;
-    introspect(JAM.policy.p41) {
-      var v715 = sequence$$15.substring(v1032, v1033)
+    shiftValue = v221.length;
+    var v1242 = sequence$$15.length;
+    var v1017 = v1242 - lookAhead;
+    var v1018 = sequence$$15.length;
+    introspect(JAM.policy.p27) {
+      var v702 = sequence$$15.substring(v1017, v1018)
     }
-    var v231 = v715 + sequence$$15;
-    introspect(JAM.policy.p26) {
-      var v232 = sequence$$15.substring(0, lookAhead)
+    var v222 = v702 + sequence$$15;
+    introspect(JAM.policy.p19) {
+      var v223 = sequence$$15.substring(0, lookAhead)
     }
-    sequence$$15 = v231 + v232;
+    sequence$$15 = v222 + v223;
     lowerLimit = 0 + shiftValue;
     upperLimit = upperLimit + shiftValue;
   }
-  var v234 = outputWindow.document;
-  introspect(JAM.policy.p25) {
-    v234.write('<table border="1" width="100%" cellspacing="0" cellpadding="2"><tbody>\n');
+  var v225 = outputWindow.document;
+  introspect(JAM.policy.p15) {
+    v225.write('<table border="1" width="100%" cellspacing="0" cellpadding="2"><tbody>\n');
   }
-  var v235 = outputWindow.document;
-  var v1268 = '<tr><td class="title" width="200px">' + "Site:";
-  var v1034 = v1268 + '</td><td class="title">';
-  var v716 = v1034 + "Positions:";
-  var v236 = v716 + "</td></tr>\n";
-  introspect(JAM.policy.p40) {
-    v235.write(v236);
+  var v226 = outputWindow.document;
+  var v1243 = '<tr><td class="title" width="200px">' + "Site:";
+  var v1019 = v1243 + '</td><td class="title">';
+  var v703 = v1019 + "Positions:";
+  var v227 = v703 + "</td></tr>\n";
+  introspect(JAM.policy.p21) {
+    v226.write(v227);
   }
   var i$$9 = 0;
-  var v717 = arrayOfItems.length;
-  var v252 = i$$9 < v717;
-  for (;v252;) {
+  var v704 = arrayOfItems.length;
+  var v243 = i$$9 < v704;
+  for (;v243;) {
     tempString$$1 = "none";
     backGroundClass = "many";
-    var v718 = arrayOfItems[i$$9];
-    introspect(JAM.policy.p31) {
-      var v237 = v718.match(/\/.+\//)
+    var v705 = arrayOfItems[i$$9];
+    introspect(JAM.policy.p24) {
+      var v228 = v705.match(/\/.+\//)
     }
-    matchExp = v237 + "gi";
+    matchExp = v228 + "gi";
     matchPosition = 0;
     matchExp = eval(matchExp);
-    var v1269 = arrayOfItems[i$$9];
-    introspect(JAM.policy.p31) {
-      var v1035 = v1269.match(/\)\D*\d+/)
+    var v1244 = arrayOfItems[i$$9];
+    introspect(JAM.policy.p24) {
+      var v1020 = v1244.match(/\)\D*\d+/)
     }
-    var v719 = v1035.toString();
-    introspect(JAM.policy.p28) {
-      var v238 = v719.replace(/\)\D*/, "")
+    var v706 = v1020.toString();
+    introspect(JAM.policy.p22) {
+      var v229 = v706.replace(/\)\D*/, "")
     }
-    cutDistance = parseFloat(v238);
-    introspect(JAM.policy.p40) {
-      var v244 = matchArray$$1 = matchExp.exec(sequence$$15)
+    cutDistance = parseFloat(v229);
+    introspect(JAM.policy.p21) {
+      var v235 = matchArray$$1 = matchExp.exec(sequence$$15)
     }
-    for (;v244;) {
-      var v239 = matchExp.lastIndex;
-      matchPosition = v239 - cutDistance;
-      var v720 = matchPosition >= lowerLimit;
-      if (v720) {
-        v720 = matchPosition < upperLimit;
+    for (;v235;) {
+      var v230 = matchExp.lastIndex;
+      matchPosition = v230 - cutDistance;
+      var v707 = matchPosition >= lowerLimit;
+      if (v707) {
+        v707 = matchPosition < upperLimit;
       }
-      var v242 = v720;
-      if (v242) {
-        timesFound = timesFound + 1;
-        var v240 = tempString$$1 + ", ";
-        var v721 = matchPosition - shiftValue;
-        var v241 = v721 + 1;
-        tempString$$1 = v240 + v241;
+      var v233 = v707;
+      if (v233) {
+        timesFound++;
+        var v231 = tempString$$1 + ", ";
+        var v708 = matchPosition - shiftValue;
+        var v232 = v708 + 1;
+        tempString$$1 = v231 + v232;
       }
-      var v722 = matchExp.lastIndex;
-      var v1036 = RegExp.lastMatch;
-      var v723 = v1036.length;
-      var v243 = v722 - v723;
-      matchExp.lastIndex = v243 + 1;
-      introspect(JAM.policy.p40) {
-        v244 = matchArray$$1 = matchExp.exec(sequence$$15);
+      var v709 = matchExp.lastIndex;
+      var v1021 = RegExp.lastMatch;
+      var v710 = v1021.length;
+      var v234 = v709 - v710;
+      matchExp.lastIndex = v234 + 1;
+      introspect(JAM.policy.p21) {
+        v235 = matchArray$$1 = matchExp.exec(sequence$$15);
       }
     }
-    introspect(JAM.policy.p31) {
-      var v724 = tempString$$1.search(/\d/)
+    introspect(JAM.policy.p24) {
+      var v711 = tempString$$1.search(/\d/)
     }
-    var v245 = v724 != -1;
-    if (v245) {
-      introspect(JAM.policy.p28) {
+    var v236 = v711 != -1;
+    if (v236) {
+      introspect(JAM.policy.p22) {
         tempString$$1 = tempString$$1.replace(/none,\s*/, "");
       }
     }
-    var v249 = timesFound == 0;
-    if (v249) {
+    var v240 = timesFound == 0;
+    if (v240) {
       backGroundClass = "none";
     } else {
-      var v248 = timesFound == 1;
-      if (v248) {
+      var v239 = timesFound == 1;
+      if (v239) {
         backGroundClass = "one";
       } else {
-        var v247 = timesFound == 2;
-        if (v247) {
+        var v238 = timesFound == 2;
+        if (v238) {
           backGroundClass = "two";
         } else {
-          var v246 = timesFound == 3;
-          if (v246) {
+          var v237 = timesFound == 3;
+          if (v237) {
             backGroundClass = "three";
           } else {
             backGroundClass = "many";
@@ -2055,122 +2040,122 @@ function writeRestrictionSites(sequence$$15, arrayOfItems, dnaConformation) {
         }
       }
     }
-    var v250 = outputWindow.document;
-    var v1539 = '<tr><td class="' + backGroundClass;
-    var v1514 = v1539 + '">';
-    var v1565 = arrayOfItems[i$$9];
-    introspect(JAM.policy.p31) {
-      var v1554 = v1565.match(/\([^\(]+\)/)
+    var v241 = outputWindow.document;
+    var v1514 = '<tr><td class="' + backGroundClass;
+    var v1489 = v1514 + '">';
+    var v1540 = arrayOfItems[i$$9];
+    introspect(JAM.policy.p24) {
+      var v1529 = v1540.match(/\([^\(]+\)/)
     }
-    var v1540 = v1554.toString();
-    introspect(JAM.policy.p28) {
-      var v1515 = v1540.replace(/\(|\)/g, "")
+    var v1515 = v1529.toString();
+    introspect(JAM.policy.p22) {
+      var v1490 = v1515.replace(/\(|\)/g, "")
     }
-    var v1480 = v1514 + v1515;
-    var v1402 = v1480 + '</td><td class="';
-    var v1270 = v1402 + backGroundClass;
-    var v1037 = v1270 + '">';
-    var v725 = v1037 + tempString$$1;
-    var v251 = v725 + "</td></tr>\n";
-    introspect(JAM.policy.p40) {
-      v250.write(v251);
+    var v1455 = v1489 + v1490;
+    var v1377 = v1455 + '</td><td class="';
+    var v1245 = v1377 + backGroundClass;
+    var v1022 = v1245 + '">';
+    var v712 = v1022 + tempString$$1;
+    var v242 = v712 + "</td></tr>\n";
+    introspect(JAM.policy.p21) {
+      v241.write(v242);
     }
     timesFound = 0;
-    i$$9 = i$$9 + 1;
-    var v726 = arrayOfItems.length;
-    v252 = i$$9 < v726;
+    i$$9++;
+    var v713 = arrayOfItems.length;
+    v243 = i$$9 < v713;
   }
-  var v253 = outputWindow.document;
-  introspect(JAM.policy.p25) {
-    v253.write("</tbody></table>\n");
+  var v244 = outputWindow.document;
+  introspect(JAM.policy.p15) {
+    v244.write("</tbody></table>\n");
   }
   return true;
 }
 function writeSequenceStats(sequence$$16, arrayOfItems$$1) {
   var originalLength = sequence$$16.length;
-  var v254 = outputWindow.document;
-  introspect(JAM.policy.p25) {
-    v254.write('<table border="1" width="100%" cellspacing="0" cellpadding="2"><tbody>\n');
+  var v245 = outputWindow.document;
+  introspect(JAM.policy.p15) {
+    v245.write('<table border="1" width="100%" cellspacing="0" cellpadding="2"><tbody>\n');
   }
-  var v255 = outputWindow.document;
-  var v1481 = '<tr><td class="title">' + "Pattern:";
-  var v1403 = v1481 + '</td><td class="title">';
-  var v1271 = v1403 + "Times found:";
-  var v1038 = v1271 + '</td><td class="title">';
-  var v727 = v1038 + "Percentage:";
-  var v256 = v727 + "</td></tr>\n";
-  introspect(JAM.policy.p40) {
-    v255.write(v256);
+  var v246 = outputWindow.document;
+  var v1456 = '<tr><td class="title">' + "Pattern:";
+  var v1378 = v1456 + '</td><td class="title">';
+  var v1246 = v1378 + "Times found:";
+  var v1023 = v1246 + '</td><td class="title">';
+  var v714 = v1023 + "Percentage:";
+  var v247 = v714 + "</td></tr>\n";
+  introspect(JAM.policy.p21) {
+    v246.write(v247);
   }
   var i$$10 = 0;
-  var v728 = arrayOfItems$$1.length;
-  var v265 = i$$10 < v728;
-  for (;v265;) {
+  var v715 = arrayOfItems$$1.length;
+  var v256 = i$$10 < v715;
+  for (;v256;) {
     var tempNumber = 0;
-    var v729 = arrayOfItems$$1[i$$10];
-    introspect(JAM.policy.p31) {
-      var v257 = v729.match(/\/[^\/]+\//)
+    var v716 = arrayOfItems$$1[i$$10];
+    introspect(JAM.policy.p24) {
+      var v248 = v716.match(/\/[^\/]+\//)
     }
-    var matchExp$$1 = v257 + "gi";
+    var matchExp$$1 = v248 + "gi";
     matchExp$$1 = eval(matchExp$$1);
-    introspect(JAM.policy.p40) {
-      var v730 = sequence$$16.search(matchExp$$1)
+    introspect(JAM.policy.p21) {
+      var v717 = sequence$$16.search(matchExp$$1)
     }
-    var v259 = v730 != -1;
-    if (v259) {
-      introspect(JAM.policy.p40) {
-        var v258 = sequence$$16.match(matchExp$$1)
+    var v250 = v717 != -1;
+    if (v250) {
+      introspect(JAM.policy.p21) {
+        var v249 = sequence$$16.match(matchExp$$1)
       }
-      tempNumber = v258.length;
+      tempNumber = v249.length;
     }
     var percentage = 0;
-    var v1039 = originalLength + 1;
-    var v1404 = arrayOfItems$$1[i$$10];
-    introspect(JAM.policy.p31) {
-      var v1272 = v1404.match(/\d+/)
+    var v1024 = originalLength + 1;
+    var v1379 = arrayOfItems$$1[i$$10];
+    introspect(JAM.policy.p24) {
+      var v1247 = v1379.match(/\d+/)
     }
-    var v1040 = parseFloat(v1272);
-    var v731 = v1039 - v1040;
-    var v262 = v731 > 0;
-    if (v262) {
-      var v260 = 100 * tempNumber;
-      var v732 = originalLength + 1;
-      var v1273 = arrayOfItems$$1[i$$10];
-      introspect(JAM.policy.p31) {
-        var v1041 = v1273.match(/\d+/)
+    var v1025 = parseFloat(v1247);
+    var v718 = v1024 - v1025;
+    var v253 = v718 > 0;
+    if (v253) {
+      var v251 = 100 * tempNumber;
+      var v719 = originalLength + 1;
+      var v1248 = arrayOfItems$$1[i$$10];
+      introspect(JAM.policy.p24) {
+        var v1026 = v1248.match(/\d+/)
       }
-      var v733 = parseFloat(v1041);
-      var v261 = v732 - v733;
-      percentage = v260 / v261;
+      var v720 = parseFloat(v1026);
+      var v252 = v719 - v720;
+      percentage = v251 / v252;
     }
-    var v263 = outputWindow.document;
-    var v1566 = arrayOfItems$$1[i$$10];
-    introspect(JAM.policy.p31) {
-      var v1555 = v1566.match(/\([^\(]+\)\b/)
+    var v254 = outputWindow.document;
+    var v1541 = arrayOfItems$$1[i$$10];
+    introspect(JAM.policy.p24) {
+      var v1530 = v1541.match(/\([^\(]+\)\b/)
     }
-    var v1541 = v1555.toString();
-    introspect(JAM.policy.p28) {
-      var v1516 = v1541.replace(/\(|\)/g, "")
-    }
-    var v1482 = "<tr><td>" + v1516;
-    var v1405 = v1482 + "</td><td>";
-    var v1274 = v1405 + tempNumber;
-    var v1042 = v1274 + "</td><td>";
+    var v1516 = v1530.toString();
     introspect(JAM.policy.p22) {
-      var v1043 = percentage.toFixed(2)
+      var v1491 = v1516.replace(/\(|\)/g, "")
     }
-    var v734 = v1042 + v1043;
-    var v264 = v734 + "</td></tr>\n";
-    introspect(JAM.policy.p40) {
-      v263.write(v264);
+    var v1457 = "<tr><td>" + v1491;
+    var v1380 = v1457 + "</td><td>";
+    var v1249 = v1380 + tempNumber;
+    var v1027 = v1249 + "</td><td>";
+    introspect(JAM.policy.p17) {
+      var v1028 = percentage.toFixed(2)
     }
-    i$$10 = i$$10 + 1;
-    var v735 = arrayOfItems$$1.length;
-    v265 = i$$10 < v735;
+    var v721 = v1027 + v1028;
+    var v255 = v721 + "</td></tr>\n";
+    introspect(JAM.policy.p21) {
+      v254.write(v255);
+    }
+    i$$10++;
+    var v722 = arrayOfItems$$1.length;
+    v256 = i$$10 < v722;
   }
-  var v266 = outputWindow.document;
-  introspect(JAM.policy.p25) {
-    v266.write("</tbody></table>\n");
+  var v257 = outputWindow.document;
+  introspect(JAM.policy.p15) {
+    v257.write("</tbody></table>\n");
   }
   return true;
 }
@@ -2181,45 +2166,45 @@ function writeShuffledSequence(sequence$$17) {
   var tempString2 = "";
   var randNum$$1 = 0;
   var maxNum$$1 = 0;
-  var v736 = sequence$$17.length;
-  var v273 = v736 > 0;
-  for (;v273;) {
+  var v723 = sequence$$17.length;
+  var v264 = v723 > 0;
+  for (;v264;) {
     maxNum$$1 = sequence$$17.length;
-    var v737 = Math.random();
-    var v267 = v737 * maxNum$$1;
-    introspect(JAM.policy.p31) {
-      randNum$$1 = Math.floor(v267);
+    var v724 = Math.random();
+    var v258 = v724 * maxNum$$1;
+    introspect(JAM.policy.p24) {
+      randNum$$1 = Math.floor(v258);
     }
-    introspect(JAM.policy.p31) {
+    introspect(JAM.policy.p24) {
       tempChar$$2 = sequence$$17.charAt(randNum$$1);
     }
     tempSeq = tempSeq + tempChar$$2;
-    introspect(JAM.policy.p26) {
+    introspect(JAM.policy.p19) {
       tempString1 = sequence$$17.substring(0, randNum$$1);
     }
-    var v268 = randNum$$1 + 1;
-    var v269 = sequence$$17.length;
-    introspect(JAM.policy.p28) {
-      tempString2 = sequence$$17.substring(v268, v269);
+    var v259 = randNum$$1 + 1;
+    var v260 = sequence$$17.length;
+    introspect(JAM.policy.p22) {
+      tempString2 = sequence$$17.substring(v259, v260);
     }
     sequence$$17 = tempString1 + tempString2;
-    var v738 = tempSeq.length;
-    var v272 = v738 == 60;
-    if (v272) {
-      var v270 = outputWindow.document;
-      var v271 = tempSeq + "\n";
-      introspect(JAM.policy.p40) {
-        v270.write(v271);
+    var v725 = tempSeq.length;
+    var v263 = v725 == 60;
+    if (v263) {
+      var v261 = outputWindow.document;
+      var v262 = tempSeq + "\n";
+      introspect(JAM.policy.p21) {
+        v261.write(v262);
       }
       tempSeq = "";
     }
-    var v739 = sequence$$17.length;
-    v273 = v739 > 0;
+    var v726 = sequence$$17.length;
+    v264 = v726 > 0;
   }
-  var v274 = outputWindow.document;
-  var v275 = tempSeq + "\n";
-  introspect(JAM.policy.p40) {
-    v274.write(v275);
+  var v265 = outputWindow.document;
+  var v266 = tempSeq + "\n";
+  introspect(JAM.policy.p21) {
+    v265.write(v266);
   }
   return true;
 }
@@ -2229,169 +2214,177 @@ function pairwiseAlignDna(theDocument) {
   var newDnaTwo = "";
   var titleTwo = "";
   var maxInput$$3 = 2E3;
-  var v740 = testScript();
-  var v276 = v740 == false;
-  if (v276) {
+  var v727 = testScript();
+  var v267 = v727 == false;
+  if (v267) {
     return false;
   }
-  var v1556 = theDocument.forms;
-  var v1542 = v1556[0];
-  var v1517 = v1542.elements;
-  var v1483 = v1517[0];
-  var v1406 = checkFormElement(v1483);
-  var v1275 = v1406 == false;
-  var v1408 = !v1275;
-  if (v1408) {
-    var v1567 = theDocument.forms;
-    var v1557 = v1567[0];
-    var v1543 = v1557.elements;
-    var v1518 = v1543[0];
-    var v1484 = v1518.value;
-    var v1407 = checkSequenceLength(v1484, maxInput$$3);
-    v1275 = v1407 == false;
+  var v1531 = theDocument.forms;
+  var v1517 = v1531[0];
+  var v1492 = v1517.elements;
+  var v1458 = v1492[0];
+  var v1381 = checkFormElement(v1458);
+  var v1250 = v1381 == false;
+  var v1383 = !v1250;
+  if (v1383) {
+    var v1542 = theDocument.forms;
+    var v1532 = v1542[0];
+    var v1518 = v1532.elements;
+    var v1493 = v1518[0];
+    var v1459 = v1493.value;
+    introspect(JAM.policy.p25) {
+      var v1382 = checkSequenceLength(v1459, maxInput$$3)
+    }
+    v1250 = v1382 == false;
   }
-  var v1044 = v1275;
-  var v1277 = !v1044;
-  if (v1277) {
-    var v1544 = theDocument.forms;
-    var v1519 = v1544[0];
-    var v1485 = v1519.elements;
-    var v1409 = v1485[1];
-    var v1276 = checkFormElement(v1409);
-    v1044 = v1276 == false;
+  var v1029 = v1250;
+  var v1252 = !v1029;
+  if (v1252) {
+    var v1519 = theDocument.forms;
+    var v1494 = v1519[0];
+    var v1460 = v1494.elements;
+    var v1384 = v1460[1];
+    var v1251 = checkFormElement(v1384);
+    v1029 = v1251 == false;
   }
-  var v741 = v1044;
-  var v1046 = !v741;
-  if (v1046) {
-    var v1545 = theDocument.forms;
-    var v1520 = v1545[0];
-    var v1486 = v1520.elements;
-    var v1410 = v1486[1];
-    var v1278 = v1410.value;
-    var v1045 = checkSequenceLength(v1278, maxInput$$3);
-    v741 = v1045 == false;
+  var v728 = v1029;
+  var v1031 = !v728;
+  if (v1031) {
+    var v1520 = theDocument.forms;
+    var v1495 = v1520[0];
+    var v1461 = v1495.elements;
+    var v1385 = v1461[1];
+    var v1253 = v1385.value;
+    introspect(JAM.policy.p25) {
+      var v1030 = checkSequenceLength(v1253, maxInput$$3)
+    }
+    v728 = v1030 == false;
   }
-  var v277 = v741;
-  if (v277) {
+  var v268 = v728;
+  if (v268) {
     return false;
   }
-  var v1521 = theDocument.forms;
-  var v1487 = v1521[0];
-  var v1411 = v1487.elements;
-  var v1279 = v1411[5];
-  var v1047 = v1279.options;
-  var v1522 = theDocument.forms;
-  var v1488 = v1522[0];
-  var v1412 = v1488.elements;
-  var v1280 = v1412[5];
-  var v1048 = v1280.selectedIndex;
-  var v742 = v1047[v1048];
-  var v278 = v742.value;
-  var MATCH_SCORE = parseInt(v278);
-  var v1523 = theDocument.forms;
-  var v1489 = v1523[0];
-  var v1413 = v1489.elements;
-  var v1281 = v1413[6];
-  var v1049 = v1281.options;
-  var v1524 = theDocument.forms;
-  var v1490 = v1524[0];
-  var v1414 = v1490.elements;
-  var v1282 = v1414[6];
-  var v1050 = v1282.selectedIndex;
-  var v743 = v1049[v1050];
-  var v279 = v743.value;
-  var MISMATCH_SCORE = parseInt(v279);
-  var v1525 = theDocument.forms;
-  var v1491 = v1525[0];
-  var v1415 = v1491.elements;
-  var v1283 = v1415[7];
-  var v1051 = v1283.options;
-  var v1526 = theDocument.forms;
-  var v1492 = v1526[0];
-  var v1416 = v1492.elements;
-  var v1284 = v1416[7];
-  var v1052 = v1284.selectedIndex;
-  var v744 = v1051[v1052];
-  var v280 = v744.value;
-  var BEGIN_GAP_PENALTY = parseInt(v280);
-  var v1527 = theDocument.forms;
-  var v1493 = v1527[0];
-  var v1417 = v1493.elements;
-  var v1285 = v1417[8];
-  var v1053 = v1285.options;
-  var v1528 = theDocument.forms;
-  var v1494 = v1528[0];
-  var v1418 = v1494.elements;
-  var v1286 = v1418[8];
-  var v1054 = v1286.selectedIndex;
-  var v745 = v1053[v1054];
-  var v281 = v745.value;
-  var GAP_PENALTY = parseInt(v281);
-  var v1529 = theDocument.forms;
-  var v1495 = v1529[0];
-  var v1419 = v1495.elements;
-  var v1287 = v1419[9];
-  var v1055 = v1287.options;
-  var v1530 = theDocument.forms;
-  var v1496 = v1530[0];
-  var v1420 = v1496.elements;
-  var v1288 = v1420[9];
-  var v1056 = v1288.selectedIndex;
-  var v746 = v1055[v1056];
-  var v282 = v746.value;
-  var END_GAP_PENALTY = parseInt(v282);
+  var v1496 = theDocument.forms;
+  var v1462 = v1496[0];
+  var v1386 = v1462.elements;
+  var v1254 = v1386[5];
+  var v1032 = v1254.options;
+  var v1497 = theDocument.forms;
+  var v1463 = v1497[0];
+  var v1387 = v1463.elements;
+  var v1255 = v1387[5];
+  var v1033 = v1255.selectedIndex;
+  var v729 = v1032[v1033];
+  var v269 = v729.value;
+  var MATCH_SCORE = parseInt(v269);
+  var v1498 = theDocument.forms;
+  var v1464 = v1498[0];
+  var v1388 = v1464.elements;
+  var v1256 = v1388[6];
+  var v1034 = v1256.options;
+  var v1499 = theDocument.forms;
+  var v1465 = v1499[0];
+  var v1389 = v1465.elements;
+  var v1257 = v1389[6];
+  var v1035 = v1257.selectedIndex;
+  var v730 = v1034[v1035];
+  var v270 = v730.value;
+  var MISMATCH_SCORE = parseInt(v270);
+  var v1500 = theDocument.forms;
+  var v1466 = v1500[0];
+  var v1390 = v1466.elements;
+  var v1258 = v1390[7];
+  var v1036 = v1258.options;
+  var v1501 = theDocument.forms;
+  var v1467 = v1501[0];
+  var v1391 = v1467.elements;
+  var v1259 = v1391[7];
+  var v1037 = v1259.selectedIndex;
+  var v731 = v1036[v1037];
+  var v271 = v731.value;
+  var BEGIN_GAP_PENALTY = parseInt(v271);
+  var v1502 = theDocument.forms;
+  var v1468 = v1502[0];
+  var v1392 = v1468.elements;
+  var v1260 = v1392[8];
+  var v1038 = v1260.options;
+  var v1503 = theDocument.forms;
+  var v1469 = v1503[0];
+  var v1393 = v1469.elements;
+  var v1261 = v1393[8];
+  var v1039 = v1261.selectedIndex;
+  var v732 = v1038[v1039];
+  var v272 = v732.value;
+  var GAP_PENALTY = parseInt(v272);
+  var v1504 = theDocument.forms;
+  var v1470 = v1504[0];
+  var v1394 = v1470.elements;
+  var v1262 = v1394[9];
+  var v1040 = v1262.options;
+  var v1505 = theDocument.forms;
+  var v1471 = v1505[0];
+  var v1395 = v1471.elements;
+  var v1263 = v1395[9];
+  var v1041 = v1263.selectedIndex;
+  var v733 = v1040[v1041];
+  var v273 = v733.value;
+  var END_GAP_PENALTY = parseInt(v273);
   openWindow("Pairwise Align DNA");
   openPre();
-  var v1421 = theDocument.forms;
-  var v1289 = v1421[0];
-  var v1057 = v1289.elements;
-  var v747 = v1057[0];
-  var v283 = v747.value;
-  newDnaOne = getSequenceFromFasta(v283);
+  var v1396 = theDocument.forms;
+  var v1264 = v1396[0];
+  var v1042 = v1264.elements;
+  var v734 = v1042[0];
+  var v274 = v734.value;
+  newDnaOne = getSequenceFromFasta(v274);
   newDnaOne = removeNonDna(newDnaOne);
-  var v1422 = theDocument.forms;
-  var v1290 = v1422[0];
-  var v1058 = v1290.elements;
-  var v748 = v1058[0];
-  var v284 = v748.value;
-  titleOne = getTitleFromFasta(v284);
-  var v1423 = theDocument.forms;
-  var v1291 = v1423[0];
-  var v1059 = v1291.elements;
-  var v749 = v1059[1];
-  var v285 = v749.value;
-  newDnaTwo = getSequenceFromFasta(v285);
+  var v1397 = theDocument.forms;
+  var v1265 = v1397[0];
+  var v1043 = v1265.elements;
+  var v735 = v1043[0];
+  var v275 = v735.value;
+  titleOne = getTitleFromFasta(v275);
+  var v1398 = theDocument.forms;
+  var v1266 = v1398[0];
+  var v1044 = v1266.elements;
+  var v736 = v1044[1];
+  var v276 = v736.value;
+  newDnaTwo = getSequenceFromFasta(v276);
   newDnaTwo = removeNonDna(newDnaTwo);
-  var v1424 = theDocument.forms;
-  var v1292 = v1424[0];
-  var v1060 = v1292.elements;
-  var v750 = v1060[1];
-  var v286 = v750.value;
-  titleTwo = getTitleFromFasta(v286);
-  var v287 = outputWindow.document;
-  var v288 = getPairwiseAlignTitle(titleOne, newDnaOne, titleTwo, newDnaTwo);
-  introspect(JAM.policy.p40) {
-    v287.write(v288);
+  var v1399 = theDocument.forms;
+  var v1267 = v1399[0];
+  var v1045 = v1267.elements;
+  var v737 = v1045[1];
+  var v277 = v737.value;
+  titleTwo = getTitleFromFasta(v277);
+  var v278 = outputWindow.document;
+  introspect(JAM.policy.p25) {
+    var v279 = getPairwiseAlignTitle(titleOne, newDnaOne, titleTwo, newDnaTwo)
   }
-  introspect(JAM.policy.p31) {
-    var v751 = newDnaOne.search(/./)
+  introspect(JAM.policy.p21) {
+    v278.write(v279);
   }
-  var v289 = v751 != -1;
-  if (v289) {
-    introspect(JAM.policy.p31) {
+  introspect(JAM.policy.p24) {
+    var v738 = newDnaOne.search(/./)
+  }
+  var v280 = v738 != -1;
+  if (v280) {
+    introspect(JAM.policy.p24) {
       newDnaOne = newDnaOne.match(/./g);
     }
   }
-  introspect(JAM.policy.p31) {
-    var v752 = newDnaTwo.search(/./)
+  introspect(JAM.policy.p24) {
+    var v739 = newDnaTwo.search(/./)
   }
-  var v290 = v752 != -1;
-  if (v290) {
-    introspect(JAM.policy.p31) {
+  var v281 = v739 != -1;
+  if (v281) {
+    introspect(JAM.policy.p24) {
       newDnaTwo = newDnaTwo.match(/./g);
     }
   }
-  pairwiseDna(titleOne, newDnaOne, titleTwo, newDnaTwo, MATCH_SCORE, MISMATCH_SCORE, GAP_PENALTY, BEGIN_GAP_PENALTY, END_GAP_PENALTY);
+  introspect(JAM.policy.p25) {
+    pairwiseDna(titleOne, newDnaOne, titleTwo, newDnaTwo, MATCH_SCORE, MISMATCH_SCORE, GAP_PENALTY, BEGIN_GAP_PENALTY, END_GAP_PENALTY);
+  }
   closePre();
   closeWindow();
   return true;
@@ -2400,124 +2393,124 @@ function pairwiseDna(titleOne$$1, newDnaOne$$1, titleTwo$$1, newDnaTwo$$1, match
   var useLinearSpace = true;
   var useQuadraticSpace = false;
   var matrix = new Identity;
-  introspect(JAM.policy.p40) {
+  introspect(JAM.policy.p21) {
     matrix.setMatch(matchScore);
   }
-  introspect(JAM.policy.p40) {
+  introspect(JAM.policy.p21) {
     matrix.setMismatch(mismatchScore);
   }
   var scoreSet = new ScoreSet;
-  introspect(JAM.policy.p41) {
+  introspect(JAM.policy.p27) {
     scoreSet.setScoreSetParam(matrix, gapPenalty, beginGapPenalty, endGapPenalty);
   }
   var alignment;
   if (useLinearSpace) {
     alignment = new AlignPairLinear;
-    introspect(JAM.policy.p41) {
+    introspect(JAM.policy.p27) {
       alignment.setAlignParam(newDnaOne$$1, newDnaTwo$$1, scoreSet);
     }
     alignment.align();
-    var v291 = outputWindow.document;
-    var v753 = ">" + titleOne$$1;
-    var v292 = v753 + "\n";
-    introspect(JAM.policy.p40) {
-      v291.write(v292);
+    var v282 = outputWindow.document;
+    var v740 = ">" + titleOne$$1;
+    var v283 = v740 + "\n";
+    introspect(JAM.policy.p21) {
+      v282.write(v283);
+    }
+    var v284 = outputWindow.document;
+    var v741 = alignment.getAlignedM();
+    var v285 = addReturns(v741);
+    introspect(JAM.policy.p21) {
+      v284.write(v285);
+    }
+    var v286 = outputWindow.document;
+    introspect(JAM.policy.p15) {
+      v286.write("\n");
+    }
+    var v287 = outputWindow.document;
+    introspect(JAM.policy.p15) {
+      v287.write("\n");
+    }
+    var v288 = outputWindow.document;
+    var v742 = ">" + titleTwo$$1;
+    var v289 = v742 + "\n";
+    introspect(JAM.policy.p21) {
+      v288.write(v289);
+    }
+    var v290 = outputWindow.document;
+    var v743 = alignment.getAlignedN();
+    var v291 = addReturns(v743);
+    introspect(JAM.policy.p21) {
+      v290.write(v291);
+    }
+    var v292 = outputWindow.document;
+    introspect(JAM.policy.p15) {
+      v292.write("\n\n");
     }
     var v293 = outputWindow.document;
-    var v754 = alignment.getAlignedM();
-    var v294 = addReturns(v754);
-    introspect(JAM.policy.p40) {
+    var v1046 = alignment.score;
+    var v744 = "Alignment score: " + v1046;
+    var v294 = v744 + "\n\n";
+    introspect(JAM.policy.p21) {
       v293.write(v294);
-    }
-    var v295 = outputWindow.document;
-    introspect(JAM.policy.p25) {
-      v295.write("\n");
-    }
-    var v296 = outputWindow.document;
-    introspect(JAM.policy.p25) {
-      v296.write("\n");
-    }
-    var v297 = outputWindow.document;
-    var v755 = ">" + titleTwo$$1;
-    var v298 = v755 + "\n";
-    introspect(JAM.policy.p40) {
-      v297.write(v298);
-    }
-    var v299 = outputWindow.document;
-    var v756 = alignment.getAlignedN();
-    var v300 = addReturns(v756);
-    introspect(JAM.policy.p40) {
-      v299.write(v300);
-    }
-    var v301 = outputWindow.document;
-    introspect(JAM.policy.p25) {
-      v301.write("\n\n");
-    }
-    var v302 = outputWindow.document;
-    var v1061 = alignment.score;
-    var v757 = "Alignment score: " + v1061;
-    var v303 = v757 + "\n\n";
-    introspect(JAM.policy.p40) {
-      v302.write(v303);
     }
   }
   if (useQuadraticSpace) {
     alignment = new AlignPairQuad;
-    introspect(JAM.policy.p41) {
+    introspect(JAM.policy.p27) {
       alignment.initializeMatrix(newDnaOne$$1, newDnaTwo$$1, scoreSet);
     }
     alignment.fillMatrix();
     alignment.align();
-    var v304 = outputWindow.document;
-    var v758 = ">" + titleOne$$1;
-    var v305 = v758 + "\n";
-    introspect(JAM.policy.p40) {
-      v304.write(v305);
+    var v295 = outputWindow.document;
+    var v745 = ">" + titleOne$$1;
+    var v296 = v745 + "\n";
+    introspect(JAM.policy.p21) {
+      v295.write(v296);
+    }
+    var v297 = outputWindow.document;
+    var v746 = alignment.getAlignedM();
+    var v298 = addReturns(v746);
+    introspect(JAM.policy.p21) {
+      v297.write(v298);
+    }
+    var v299 = outputWindow.document;
+    introspect(JAM.policy.p15) {
+      v299.write("\n");
+    }
+    var v300 = outputWindow.document;
+    introspect(JAM.policy.p15) {
+      v300.write("\n");
+    }
+    var v301 = outputWindow.document;
+    var v747 = ">" + titleTwo$$1;
+    var v302 = v747 + "\n";
+    introspect(JAM.policy.p21) {
+      v301.write(v302);
+    }
+    var v303 = outputWindow.document;
+    var v748 = alignment.getAlignedN();
+    var v304 = addReturns(v748);
+    introspect(JAM.policy.p21) {
+      v303.write(v304);
+    }
+    var v305 = outputWindow.document;
+    introspect(JAM.policy.p15) {
+      v305.write("\n\n");
     }
     var v306 = outputWindow.document;
-    var v759 = alignment.getAlignedM();
-    var v307 = addReturns(v759);
-    introspect(JAM.policy.p40) {
+    var v1047 = alignment.score;
+    var v749 = "Alignment score: " + v1047;
+    var v307 = v749 + "\n\n";
+    introspect(JAM.policy.p21) {
       v306.write(v307);
-    }
-    var v308 = outputWindow.document;
-    introspect(JAM.policy.p25) {
-      v308.write("\n");
-    }
-    var v309 = outputWindow.document;
-    introspect(JAM.policy.p25) {
-      v309.write("\n");
-    }
-    var v310 = outputWindow.document;
-    var v760 = ">" + titleTwo$$1;
-    var v311 = v760 + "\n";
-    introspect(JAM.policy.p40) {
-      v310.write(v311);
-    }
-    var v312 = outputWindow.document;
-    var v761 = alignment.getAlignedN();
-    var v313 = addReturns(v761);
-    introspect(JAM.policy.p40) {
-      v312.write(v313);
-    }
-    var v314 = outputWindow.document;
-    introspect(JAM.policy.p25) {
-      v314.write("\n\n");
-    }
-    var v315 = outputWindow.document;
-    var v1062 = alignment.score;
-    var v762 = "Alignment score: " + v1062;
-    var v316 = v762 + "\n\n";
-    introspect(JAM.policy.p40) {
-      v315.write(v316);
     }
   }
   return;
 }
 function getScore(r1$$1, r2) {
-  var v317 = this.scoringMatrix;
-  introspect(JAM.policy.p41) {
-    return v317.scoringMatrix_getScore(r1$$1, r2);
+  var v308 = this.scoringMatrix;
+  introspect(JAM.policy.p27) {
+    return v308.scoringMatrix_getScore(r1$$1, r2);
   }
 }
 function setScoreSetParam(scoringMatrix, gapPenalty$$1, beginGapPenalty$$1, endGapPenalty$$1) {
@@ -2537,8 +2530,8 @@ function ScoreSet() {
 function scoringMatrix_getScore(r1$$2, r2$$1) {
   r1$$2 = r1$$2.toLowerCase();
   r2$$1 = r2$$1.toLowerCase();
-  var v318 = r1$$2 == r2$$1;
-  if (v318) {
+  var v309 = r1$$2 == r2$$1;
+  if (v309) {
     return this.match;
   } else {
     return this.mismatch;
@@ -2560,83 +2553,83 @@ function Identity() {
   return;
 }
 function align() {
-  var v1063 = this.M;
-  var v763 = v1063.length;
-  var v335 = v763 == 0;
-  if (v335) {
+  var v1048 = this.M;
+  var v750 = v1048.length;
+  var v326 = v750 == 0;
+  if (v326) {
     var j$$10 = 1;
-    var v1064 = this.N;
-    var v764 = v1064.length;
-    var v324 = j$$10 <= v764;
-    for (;v324;) {
-      var v319 = this.alignedM;
-      introspect(JAM.policy.p25) {
-        v319.push("-");
+    var v1049 = this.N;
+    var v751 = v1049.length;
+    var v315 = j$$10 <= v751;
+    for (;v315;) {
+      var v310 = this.alignedM;
+      introspect(JAM.policy.p15) {
+        v310.push("-");
       }
-      var v320 = this.alignedN;
-      var v765 = this.N;
-      var v766 = j$$10 - 1;
-      var v321 = v765[v766];
-      introspect(JAM.policy.p40) {
-        v320.push(v321);
+      var v311 = this.alignedN;
+      var v752 = this.N;
+      var v753 = j$$10 - 1;
+      var v312 = v752[v753];
+      introspect(JAM.policy.p21) {
+        v311.push(v312);
       }
-      var v322 = this.score;
-      var v767 = this.scoreSet;
-      var v323 = v767.gap;
-      this.score = v322 + v323;
-      j$$10 = j$$10 + 1;
-      var v1065 = this.N;
-      var v768 = v1065.length;
-      v324 = j$$10 <= v768;
+      var v313 = this.score;
+      var v754 = this.scoreSet;
+      var v314 = v754.gap;
+      this.score = v313 + v314;
+      j$$10++;
+      var v1050 = this.N;
+      var v755 = v1050.length;
+      v315 = j$$10 <= v755;
     }
   } else {
-    var v1066 = this.N;
-    var v769 = v1066.length;
-    var v334 = v769 == 0;
-    if (v334) {
+    var v1051 = this.N;
+    var v756 = v1051.length;
+    var v325 = v756 == 0;
+    if (v325) {
       j$$10 = 1;
-      var v1067 = this.M;
-      var v770 = v1067.length;
-      var v330 = j$$10 <= v770;
-      for (;v330;) {
-        var v325 = this.alignedN;
-        introspect(JAM.policy.p25) {
-          v325.push("-");
+      var v1052 = this.M;
+      var v757 = v1052.length;
+      var v321 = j$$10 <= v757;
+      for (;v321;) {
+        var v316 = this.alignedN;
+        introspect(JAM.policy.p15) {
+          v316.push("-");
         }
-        var v326 = this.alignedM;
-        var v771 = this.M;
-        var v772 = j$$10 - 1;
-        var v327 = v771[v772];
-        introspect(JAM.policy.p40) {
-          v326.push(v327);
+        var v317 = this.alignedM;
+        var v758 = this.M;
+        var v759 = j$$10 - 1;
+        var v318 = v758[v759];
+        introspect(JAM.policy.p21) {
+          v317.push(v318);
         }
-        var v328 = this.score;
-        var v773 = this.scoreSet;
-        var v329 = v773.gap;
-        this.score = v328 + v329;
-        j$$10 = j$$10 + 1;
-        var v1068 = this.M;
-        var v774 = v1068.length;
-        v330 = j$$10 <= v774;
+        var v319 = this.score;
+        var v760 = this.scoreSet;
+        var v320 = v760.gap;
+        this.score = v319 + v320;
+        j$$10++;
+        var v1053 = this.M;
+        var v761 = v1053.length;
+        v321 = j$$10 <= v761;
       }
     } else {
-      var v1293 = this.M;
-      var v1069 = v1293.length;
-      var v775 = v1069 == 0;
-      if (v775) {
-        var v1294 = this.N;
-        var v1070 = v1294.length;
-        v775 = v1070 == 0;
+      var v1268 = this.M;
+      var v1054 = v1268.length;
+      var v762 = v1054 == 0;
+      if (v762) {
+        var v1269 = this.N;
+        var v1055 = v1269.length;
+        v762 = v1055 == 0;
       }
-      var v333 = v775;
-      if (v333) {
+      var v324 = v762;
+      if (v324) {
       } else {
-        var v776 = this.M;
-        var v331 = v776.length;
-        var v777 = this.N;
-        var v332 = v777.length;
-        introspect(JAM.policy.p26) {
-          this.path(0, 0, v331, v332);
+        var v763 = this.M;
+        var v322 = v763.length;
+        var v764 = this.N;
+        var v323 = v764.length;
+        introspect(JAM.policy.p19) {
+          this.path(0, 0, v322, v323);
         }
       }
     }
@@ -2644,626 +2637,618 @@ function align() {
   return;
 }
 function path(i1, j1, i2, j2) {
-  var v1071 = i1 + 1;
-  var v778 = v1071 == i2;
-  var v1072 = !v778;
-  if (v1072) {
-    v778 = j1 == j2;
+  var v1056 = i1 + 1;
+  var v765 = v1056 == i2;
+  var v1057 = !v765;
+  if (v1057) {
+    v765 = j1 == j2;
   }
-  var v432 = v778;
-  if (v432) {
+  var v423 = v765;
+  if (v423) {
     var subM = new Array;
     var subN = new Array;
     var i$$11 = i1 + 1;
-    var v337 = i$$11 <= i2;
-    for (;v337;) {
-      var v779 = this.M;
-      var v780 = i$$11 - 1;
-      var v336 = v779[v780];
-      introspect(JAM.policy.p40) {
-        subM.push(v336);
+    var v328 = i$$11 <= i2;
+    for (;v328;) {
+      var v766 = this.M;
+      var v767 = i$$11 - 1;
+      var v327 = v766[v767];
+      introspect(JAM.policy.p21) {
+        subM.push(v327);
       }
-      i$$11 = i$$11 + 1;
-      v337 = i$$11 <= i2;
+      i$$11++;
+      v328 = i$$11 <= i2;
     }
     var j$$11 = j1 + 1;
-    var v339 = j$$11 <= j2;
-    for (;v339;) {
-      var v781 = this.N;
-      var v782 = j$$11 - 1;
-      var v338 = v781[v782];
-      introspect(JAM.policy.p40) {
-        subN.push(v338);
+    var v330 = j$$11 <= j2;
+    for (;v330;) {
+      var v768 = this.N;
+      var v769 = j$$11 - 1;
+      var v329 = v768[v769];
+      introspect(JAM.policy.p21) {
+        subN.push(v329);
       }
-      j$$11 = j$$11 + 1;
-      v339 = j$$11 <= j2;
+      j$$11++;
+      v330 = j$$11 <= j2;
     }
     var alignment$$1 = new AlignPairQuad;
     subScoreSet = new ScoreSet;
-    var v362 = j1 == j2;
-    if (v362) {
-      var v353 = j1 == 0;
-      if (v353) {
-        var v783 = this.scoreSet;
-        var v340 = v783.scoringMatrix;
-        var v784 = this.scoreSet;
-        var v341 = v784.beginGap;
-        var v785 = this.scoreSet;
-        var v342 = v785.beginGap;
-        var v786 = this.scoreSet;
-        var v343 = v786.beginGap;
-        introspect(JAM.policy.p41) {
-          subScoreSet.setScoreSetParam(v340, v341, v342, v343);
+    var v353 = j1 == j2;
+    if (v353) {
+      var v344 = j1 == 0;
+      if (v344) {
+        var v770 = this.scoreSet;
+        var v331 = v770.scoringMatrix;
+        var v771 = this.scoreSet;
+        var v332 = v771.beginGap;
+        var v772 = this.scoreSet;
+        var v333 = v772.beginGap;
+        var v773 = this.scoreSet;
+        var v334 = v773.beginGap;
+        introspect(JAM.policy.p27) {
+          subScoreSet.setScoreSetParam(v331, v332, v333, v334);
         }
       } else {
-        var v1073 = this.N;
-        var v787 = v1073.length;
-        var v352 = j1 == v787;
-        if (v352) {
-          var v788 = this.scoreSet;
-          var v344 = v788.scoringMatrix;
-          var v789 = this.scoreSet;
-          var v345 = v789.endGap;
-          var v790 = this.scoreSet;
-          var v346 = v790.endGap;
-          var v791 = this.scoreSet;
-          var v347 = v791.endGap;
-          introspect(JAM.policy.p41) {
-            subScoreSet.setScoreSetParam(v344, v345, v346, v347);
+        var v1058 = this.N;
+        var v774 = v1058.length;
+        var v343 = j1 == v774;
+        if (v343) {
+          var v775 = this.scoreSet;
+          var v335 = v775.scoringMatrix;
+          var v776 = this.scoreSet;
+          var v336 = v776.endGap;
+          var v777 = this.scoreSet;
+          var v337 = v777.endGap;
+          var v778 = this.scoreSet;
+          var v338 = v778.endGap;
+          introspect(JAM.policy.p27) {
+            subScoreSet.setScoreSetParam(v335, v336, v337, v338);
           }
         } else {
-          var v792 = this.scoreSet;
-          var v348 = v792.scoringMatrix;
-          var v793 = this.scoreSet;
-          var v349 = v793.gap;
-          var v794 = this.scoreSet;
-          var v350 = v794.gap;
-          var v795 = this.scoreSet;
-          var v351 = v795.gap;
-          introspect(JAM.policy.p41) {
-            subScoreSet.setScoreSetParam(v348, v349, v350, v351);
+          var v779 = this.scoreSet;
+          var v339 = v779.scoringMatrix;
+          var v780 = this.scoreSet;
+          var v340 = v780.gap;
+          var v781 = this.scoreSet;
+          var v341 = v781.gap;
+          var v782 = this.scoreSet;
+          var v342 = v782.gap;
+          introspect(JAM.policy.p27) {
+            subScoreSet.setScoreSetParam(v339, v340, v341, v342);
           }
         }
       }
     } else {
-      var v796 = this.scoreSet;
-      var v354 = v796.scoringMatrix;
-      var v797 = this.scoreSet;
-      var v355 = v797.gap;
-      var v798 = this.scoreSet;
-      var v356 = v798.beginGap;
-      var v799 = this.scoreSet;
-      var v357 = v799.endGap;
-      introspect(JAM.policy.p41) {
-        subScoreSet.setScoreSetParam(v354, v355, v356, v357);
+      var v783 = this.scoreSet;
+      var v345 = v783.scoringMatrix;
+      var v784 = this.scoreSet;
+      var v346 = v784.gap;
+      var v785 = this.scoreSet;
+      var v347 = v785.beginGap;
+      var v786 = this.scoreSet;
+      var v348 = v786.endGap;
+      introspect(JAM.policy.p27) {
+        subScoreSet.setScoreSetParam(v345, v346, v347, v348);
       }
       subScoreSet.useBeginGapTop = false;
       subScoreSet.useBeginGapLeft = false;
       subScoreSet.useEndGapBottom = false;
       subScoreSet.useEndGapRight = false;
-      var v358 = i1 == 0;
-      if (v358) {
+      var v349 = i1 == 0;
+      if (v349) {
         subScoreSet.useBeginGapTop = true;
       }
-      var v359 = j1 == 0;
-      if (v359) {
+      var v350 = j1 == 0;
+      if (v350) {
         subScoreSet.useBeginGapLeft = true;
       }
-      var v1074 = this.N;
-      var v800 = v1074.length;
-      var v360 = j2 == v800;
-      if (v360) {
+      var v1059 = this.N;
+      var v787 = v1059.length;
+      var v351 = j2 == v787;
+      if (v351) {
         subScoreSet.useEndGapRight = true;
       }
-      var v1075 = this.M;
-      var v801 = v1075.length;
-      var v361 = i2 == v801;
-      if (v361) {
+      var v1060 = this.M;
+      var v788 = v1060.length;
+      var v352 = i2 == v788;
+      if (v352) {
         subScoreSet.useEndGapBottom = true;
       }
     }
-    introspect(JAM.policy.p41) {
+    introspect(JAM.policy.p27) {
       alignment$$1.initializeMatrix(subM, subN, subScoreSet);
     }
     alignment$$1.fillMatrix();
     alignment$$1.align();
-    var v363 = this.alignedM;
-    var v364 = alignment$$1.getAlignedM();
-    introspect(JAM.policy.p40) {
-      v363.push(v364);
+    var v354 = this.alignedM;
+    var v355 = alignment$$1.getAlignedM();
+    introspect(JAM.policy.p21) {
+      v354.push(v355);
     }
-    var v365 = this.alignedN;
-    var v366 = alignment$$1.getAlignedN();
-    introspect(JAM.policy.p40) {
-      v365.push(v366);
+    var v356 = this.alignedN;
+    var v357 = alignment$$1.getAlignedN();
+    introspect(JAM.policy.p21) {
+      v356.push(v357);
     }
-    var v367 = this.score;
-    var v368 = alignment$$1.score;
-    this.score = v367 + v368;
+    var v358 = this.score;
+    var v359 = alignment$$1.score;
+    this.score = v358 + v359;
   } else {
-    var v802 = i1 + i2;
-    var v369 = v802 / 2;
-    introspect(JAM.policy.p40) {
-      var middle = Math.floor(v369)
+    var v789 = i1 + i2;
+    var v360 = v789 / 2;
+    introspect(JAM.policy.p21) {
+      var middle = Math.floor(v360)
     }
-    var v370 = this.Sn;
-    introspect(JAM.policy.p13) {
-      v370[j1] = 0;
+    var v361 = this.Sn;
+    introspect(JAM.policy.p6) {
+      v361[j1] = 0;
     }
-    var v375 = i1 == 0;
-    if (v375) {
+    var v366 = i1 == 0;
+    if (v366) {
       j$$11 = j1 + 1;
-      var v372 = j$$11 <= j2;
-      for (;v372;) {
-        var v371 = this.Sn;
-        var v1076 = this.Sn;
-        var v1077 = j$$11 - 1;
-        var v803 = v1076[v1077];
-        var v1078 = this.scoreSet;
-        var v804 = v1078.beginGap;
-        introspect(JAM.policy.p13) {
-          v371[j$$11] = v803 - v804;
+      var v363 = j$$11 <= j2;
+      for (;v363;) {
+        var v362 = this.Sn;
+        var v1061 = this.Sn;
+        var v1062 = j$$11 - 1;
+        var v790 = v1061[v1062];
+        var v1063 = this.scoreSet;
+        var v791 = v1063.beginGap;
+        introspect(JAM.policy.p6) {
+          v362[j$$11] = v790 - v791;
         }
-        j$$11 = j$$11 + 1;
-        v372 = j$$11 <= j2;
+        j$$11++;
+        v363 = j$$11 <= j2;
       }
     } else {
       j$$11 = j1 + 1;
-      var v374 = j$$11 <= j2;
-      for (;v374;) {
-        var v373 = this.Sn;
-        var v1079 = this.Sn;
-        var v1080 = j$$11 - 1;
-        var v805 = v1079[v1080];
-        var v1081 = this.scoreSet;
-        var v806 = v1081.gap;
-        introspect(JAM.policy.p13) {
-          v373[j$$11] = v805 - v806;
+      var v365 = j$$11 <= j2;
+      for (;v365;) {
+        var v364 = this.Sn;
+        var v1064 = this.Sn;
+        var v1065 = j$$11 - 1;
+        var v792 = v1064[v1065];
+        var v1066 = this.scoreSet;
+        var v793 = v1066.gap;
+        introspect(JAM.policy.p6) {
+          v364[j$$11] = v792 - v793;
         }
-        j$$11 = j$$11 + 1;
-        v374 = j$$11 <= j2;
+        j$$11++;
+        v365 = j$$11 <= j2;
       }
     }
     var diag;
     var left$$1;
     i$$11 = i1 + 1;
-    var v397 = i$$11 <= middle;
-    for (;v397;) {
-      var v376 = this.Sn;
-      diag = v376[j1];
-      var v381 = j1 == 0;
-      if (v381) {
-        var v807 = this.Sn;
-        var v377 = v807[j1];
-        var v808 = this.scoreSet;
-        var v378 = v808.beginGap;
-        left$$1 = v377 - v378;
+    var v388 = i$$11 <= middle;
+    for (;v388;) {
+      var v367 = this.Sn;
+      diag = v367[j1];
+      var v372 = j1 == 0;
+      if (v372) {
+        var v794 = this.Sn;
+        var v368 = v794[j1];
+        var v795 = this.scoreSet;
+        var v369 = v795.beginGap;
+        left$$1 = v368 - v369;
       } else {
-        var v809 = this.Sn;
-        var v379 = v809[j1];
-        var v810 = this.scoreSet;
-        var v380 = v810.gap;
-        left$$1 = v379 - v380;
+        var v796 = this.Sn;
+        var v370 = v796[j1];
+        var v797 = this.scoreSet;
+        var v371 = v797.gap;
+        left$$1 = v370 - v371;
       }
-      var v382 = this.Sn;
-      introspect(JAM.policy.p13) {
-        v382[j1] = left$$1;
+      var v373 = this.Sn;
+      introspect(JAM.policy.p6) {
+        v373[j1] = left$$1;
       }
       j$$11 = j1 + 1;
-      var v396 = j$$11 <= j2;
-      for (;v396;) {
-        var v1295 = this.N;
-        var v1082 = v1295.length;
-        var v811 = j$$11 == v1082;
-        if (v811) {
-          var v1296 = this.M;
-          var v1083 = v1296.length;
-          v811 = i$$11 == v1083;
+      var v387 = j$$11 <= j2;
+      for (;v387;) {
+        var v1270 = this.N;
+        var v1067 = v1270.length;
+        var v798 = j$$11 == v1067;
+        if (v798) {
+          var v1271 = this.M;
+          var v1068 = v1271.length;
+          v798 = i$$11 == v1068;
         }
-        var v393 = v811;
-        if (v393) {
-          var v1084 = this.Sn;
-          var v812 = v1084[j$$11];
-          var v1085 = this.scoreSet;
-          var v813 = v1085.endGap;
-          var v383 = v812 - v813;
-          var v1297 = this.scoreSet;
-          var v1086 = v1297.endGap;
-          var v814 = left$$1 - v1086;
-          var v1087 = diag;
-          var v1298 = this.scoreSet;
-          var v1425 = this.M;
-          var v1426 = i$$11 - 1;
-          var v1299 = v1425[v1426];
-          var v1427 = this.N;
-          var v1428 = j$$11 - 1;
-          var v1300 = v1427[v1428];
-          introspect(JAM.policy.p41) {
-            var v1088 = v1298.getScore(v1299, v1300)
+        var v384 = v798;
+        if (v384) {
+          var v1069 = this.Sn;
+          var v799 = v1069[j$$11];
+          var v1070 = this.scoreSet;
+          var v800 = v1070.endGap;
+          var v374 = v799 - v800;
+          var v1272 = this.scoreSet;
+          var v1071 = v1272.endGap;
+          var v801 = left$$1 - v1071;
+          var v1273 = this.scoreSet;
+          var v1400 = this.M;
+          var v1401 = i$$11 - 1;
+          var v1274 = v1400[v1401];
+          var v1402 = this.N;
+          var v1403 = j$$11 - 1;
+          var v1275 = v1402[v1403];
+          introspect(JAM.policy.p27) {
+            var v1072 = v1273.getScore(v1274, v1275)
           }
-          var v815 = v1087 + v1088;
-          introspect(JAM.policy.p41) {
-            var v384 = Math.max(v814, v815)
+          var v802 = diag + v1072;
+          introspect(JAM.policy.p27) {
+            var v375 = Math.max(v801, v802)
           }
-          introspect(JAM.policy.p28) {
-            left$$1 = Math.max(v383, v384);
+          introspect(JAM.policy.p22) {
+            left$$1 = Math.max(v374, v375);
           }
         } else {
-          var v1089 = this.M;
-          var v816 = v1089.length;
-          var v392 = i$$11 == v816;
-          if (v392) {
-            var v1090 = this.Sn;
-            var v817 = v1090[j$$11];
-            var v1091 = this.scoreSet;
-            var v818 = v1091.gap;
-            var v385 = v817 - v818;
-            var v1301 = this.scoreSet;
-            var v1092 = v1301.endGap;
-            var v819 = left$$1 - v1092;
-            var v1093 = diag;
-            var v1302 = this.scoreSet;
-            var v1429 = this.M;
-            var v1430 = i$$11 - 1;
-            var v1303 = v1429[v1430];
-            var v1431 = this.N;
-            var v1432 = j$$11 - 1;
-            var v1304 = v1431[v1432];
-            introspect(JAM.policy.p41) {
-              var v1094 = v1302.getScore(v1303, v1304)
+          var v1073 = this.M;
+          var v803 = v1073.length;
+          var v383 = i$$11 == v803;
+          if (v383) {
+            var v1074 = this.Sn;
+            var v804 = v1074[j$$11];
+            var v1075 = this.scoreSet;
+            var v805 = v1075.gap;
+            var v376 = v804 - v805;
+            var v1276 = this.scoreSet;
+            var v1076 = v1276.endGap;
+            var v806 = left$$1 - v1076;
+            var v1277 = this.scoreSet;
+            var v1404 = this.M;
+            var v1405 = i$$11 - 1;
+            var v1278 = v1404[v1405];
+            var v1406 = this.N;
+            var v1407 = j$$11 - 1;
+            var v1279 = v1406[v1407];
+            introspect(JAM.policy.p27) {
+              var v1077 = v1277.getScore(v1278, v1279)
             }
-            var v820 = v1093 + v1094;
-            introspect(JAM.policy.p41) {
-              var v386 = Math.max(v819, v820)
+            var v807 = diag + v1077;
+            introspect(JAM.policy.p27) {
+              var v377 = Math.max(v806, v807)
             }
-            introspect(JAM.policy.p28) {
-              left$$1 = Math.max(v385, v386);
+            introspect(JAM.policy.p22) {
+              left$$1 = Math.max(v376, v377);
             }
           } else {
-            var v1095 = this.N;
-            var v821 = v1095.length;
-            var v391 = j$$11 == v821;
-            if (v391) {
-              var v1096 = this.Sn;
-              var v822 = v1096[j$$11];
-              var v1097 = this.scoreSet;
-              var v823 = v1097.endGap;
-              var v387 = v822 - v823;
-              var v1305 = this.scoreSet;
-              var v1098 = v1305.gap;
-              var v824 = left$$1 - v1098;
-              var v1099 = diag;
-              var v1306 = this.scoreSet;
-              var v1433 = this.M;
-              var v1434 = i$$11 - 1;
-              var v1307 = v1433[v1434];
-              var v1435 = this.N;
-              var v1436 = j$$11 - 1;
-              var v1308 = v1435[v1436];
-              introspect(JAM.policy.p41) {
-                var v1100 = v1306.getScore(v1307, v1308)
+            var v1078 = this.N;
+            var v808 = v1078.length;
+            var v382 = j$$11 == v808;
+            if (v382) {
+              var v1079 = this.Sn;
+              var v809 = v1079[j$$11];
+              var v1080 = this.scoreSet;
+              var v810 = v1080.endGap;
+              var v378 = v809 - v810;
+              var v1280 = this.scoreSet;
+              var v1081 = v1280.gap;
+              var v811 = left$$1 - v1081;
+              var v1281 = this.scoreSet;
+              var v1408 = this.M;
+              var v1409 = i$$11 - 1;
+              var v1282 = v1408[v1409];
+              var v1410 = this.N;
+              var v1411 = j$$11 - 1;
+              var v1283 = v1410[v1411];
+              introspect(JAM.policy.p27) {
+                var v1082 = v1281.getScore(v1282, v1283)
               }
-              var v825 = v1099 + v1100;
-              introspect(JAM.policy.p41) {
-                var v388 = Math.max(v824, v825)
+              var v812 = diag + v1082;
+              introspect(JAM.policy.p27) {
+                var v379 = Math.max(v811, v812)
               }
-              introspect(JAM.policy.p28) {
-                left$$1 = Math.max(v387, v388);
+              introspect(JAM.policy.p22) {
+                left$$1 = Math.max(v378, v379);
               }
             } else {
-              var v1101 = this.Sn;
-              var v826 = v1101[j$$11];
-              var v1102 = this.scoreSet;
-              var v827 = v1102.gap;
-              var v389 = v826 - v827;
-              var v1309 = this.scoreSet;
-              var v1103 = v1309.gap;
-              var v828 = left$$1 - v1103;
-              var v1104 = diag;
-              var v1310 = this.scoreSet;
-              var v1437 = this.M;
-              var v1438 = i$$11 - 1;
-              var v1311 = v1437[v1438];
-              var v1439 = this.N;
-              var v1440 = j$$11 - 1;
-              var v1312 = v1439[v1440];
-              introspect(JAM.policy.p41) {
-                var v1105 = v1310.getScore(v1311, v1312)
+              var v1083 = this.Sn;
+              var v813 = v1083[j$$11];
+              var v1084 = this.scoreSet;
+              var v814 = v1084.gap;
+              var v380 = v813 - v814;
+              var v1284 = this.scoreSet;
+              var v1085 = v1284.gap;
+              var v815 = left$$1 - v1085;
+              var v1285 = this.scoreSet;
+              var v1412 = this.M;
+              var v1413 = i$$11 - 1;
+              var v1286 = v1412[v1413];
+              var v1414 = this.N;
+              var v1415 = j$$11 - 1;
+              var v1287 = v1414[v1415];
+              introspect(JAM.policy.p27) {
+                var v1086 = v1285.getScore(v1286, v1287)
               }
-              var v829 = v1104 + v1105;
-              introspect(JAM.policy.p41) {
-                var v390 = Math.max(v828, v829)
+              var v816 = diag + v1086;
+              introspect(JAM.policy.p27) {
+                var v381 = Math.max(v815, v816)
               }
-              introspect(JAM.policy.p28) {
-                left$$1 = Math.max(v389, v390);
+              introspect(JAM.policy.p22) {
+                left$$1 = Math.max(v380, v381);
               }
             }
           }
         }
-        var v394 = this.Sn;
-        diag = v394[j$$11];
-        var v395 = this.Sn;
-        introspect(JAM.policy.p13) {
-          v395[j$$11] = left$$1;
+        var v385 = this.Sn;
+        diag = v385[j$$11];
+        var v386 = this.Sn;
+        introspect(JAM.policy.p6) {
+          v386[j$$11] = left$$1;
         }
-        j$$11 = j$$11 + 1;
-        v396 = j$$11 <= j2;
+        j$$11++;
+        v387 = j$$11 <= j2;
       }
-      i$$11 = i$$11 + 1;
-      v397 = i$$11 <= middle;
+      i$$11++;
+      v388 = i$$11 <= middle;
     }
-    var v398 = this.Sp;
-    introspect(JAM.policy.p13) {
-      v398[j2] = 0;
+    var v389 = this.Sp;
+    introspect(JAM.policy.p6) {
+      v389[j2] = 0;
     }
-    var v1106 = this.M;
-    var v830 = v1106.length;
-    var v403 = i2 == v830;
-    if (v403) {
+    var v1087 = this.M;
+    var v817 = v1087.length;
+    var v394 = i2 == v817;
+    if (v394) {
       j$$11 = j2 - 1;
-      var v400 = j$$11 >= j1;
-      for (;v400;) {
-        var v399 = this.Sp;
-        var v1107 = this.Sp;
-        var v1108 = j$$11 + 1;
-        var v831 = v1107[v1108];
-        var v1109 = this.scoreSet;
-        var v832 = v1109.endGap;
-        introspect(JAM.policy.p13) {
-          v399[j$$11] = v831 - v832;
+      var v391 = j$$11 >= j1;
+      for (;v391;) {
+        var v390 = this.Sp;
+        var v1088 = this.Sp;
+        var v1089 = j$$11 + 1;
+        var v818 = v1088[v1089];
+        var v1090 = this.scoreSet;
+        var v819 = v1090.endGap;
+        introspect(JAM.policy.p6) {
+          v390[j$$11] = v818 - v819;
         }
-        j$$11 = j$$11 - 1;
-        v400 = j$$11 >= j1;
+        j$$11--;
+        v391 = j$$11 >= j1;
       }
     } else {
       j$$11 = j2 - 1;
-      var v402 = j$$11 >= j1;
-      for (;v402;) {
-        var v401 = this.Sp;
-        var v1110 = this.Sp;
-        var v1111 = j$$11 + 1;
-        var v833 = v1110[v1111];
-        var v1112 = this.scoreSet;
-        var v834 = v1112.gap;
-        introspect(JAM.policy.p13) {
-          v401[j$$11] = v833 - v834;
+      var v393 = j$$11 >= j1;
+      for (;v393;) {
+        var v392 = this.Sp;
+        var v1091 = this.Sp;
+        var v1092 = j$$11 + 1;
+        var v820 = v1091[v1092];
+        var v1093 = this.scoreSet;
+        var v821 = v1093.gap;
+        introspect(JAM.policy.p6) {
+          v392[j$$11] = v820 - v821;
         }
-        j$$11 = j$$11 - 1;
-        v402 = j$$11 >= j1;
+        j$$11--;
+        v393 = j$$11 >= j1;
       }
     }
     var right$$1;
     i$$11 = i2 - 1;
-    var v425 = i$$11 >= middle;
-    for (;v425;) {
-      var v404 = this.Sp;
-      diag = v404[j2];
-      var v1113 = this.N;
-      var v835 = v1113.length;
-      var v409 = j2 == v835;
-      if (v409) {
-        var v836 = this.Sp;
-        var v405 = v836[j2];
-        var v837 = this.scoreSet;
-        var v406 = v837.endGap;
-        right$$1 = v405 - v406;
+    var v416 = i$$11 >= middle;
+    for (;v416;) {
+      var v395 = this.Sp;
+      diag = v395[j2];
+      var v1094 = this.N;
+      var v822 = v1094.length;
+      var v400 = j2 == v822;
+      if (v400) {
+        var v823 = this.Sp;
+        var v396 = v823[j2];
+        var v824 = this.scoreSet;
+        var v397 = v824.endGap;
+        right$$1 = v396 - v397;
       } else {
-        var v838 = this.Sp;
-        var v407 = v838[j2];
-        var v839 = this.scoreSet;
-        var v408 = v839.gap;
-        right$$1 = v407 - v408;
+        var v825 = this.Sp;
+        var v398 = v825[j2];
+        var v826 = this.scoreSet;
+        var v399 = v826.gap;
+        right$$1 = v398 - v399;
       }
-      var v410 = this.Sp;
-      introspect(JAM.policy.p13) {
-        v410[j2] = right$$1;
+      var v401 = this.Sp;
+      introspect(JAM.policy.p6) {
+        v401[j2] = right$$1;
       }
       j$$11 = j2 - 1;
-      var v424 = j$$11 >= j1;
-      for (;v424;) {
-        var v840 = j$$11 == 0;
-        if (v840) {
-          v840 = i$$11 == 0;
+      var v415 = j$$11 >= j1;
+      for (;v415;) {
+        var v827 = j$$11 == 0;
+        if (v827) {
+          v827 = i$$11 == 0;
         }
-        var v421 = v840;
-        if (v421) {
-          var v1114 = this.Sp;
-          var v841 = v1114[j$$11];
-          var v1115 = this.scoreSet;
-          var v842 = v1115.beginGap;
-          var v411 = v841 - v842;
-          var v1313 = this.scoreSet;
-          var v1116 = v1313.beginGap;
-          var v843 = right$$1 - v1116;
-          var v1117 = diag;
-          var v1314 = this.scoreSet;
-          var v1441 = this.M;
-          var v1497 = i$$11 + 1;
-          var v1442 = v1497 - 1;
-          var v1315 = v1441[v1442];
-          var v1443 = this.N;
-          var v1498 = j$$11 + 1;
-          var v1444 = v1498 - 1;
-          var v1316 = v1443[v1444];
-          introspect(JAM.policy.p41) {
-            var v1118 = v1314.getScore(v1315, v1316)
+        var v412 = v827;
+        if (v412) {
+          var v1095 = this.Sp;
+          var v828 = v1095[j$$11];
+          var v1096 = this.scoreSet;
+          var v829 = v1096.beginGap;
+          var v402 = v828 - v829;
+          var v1288 = this.scoreSet;
+          var v1097 = v1288.beginGap;
+          var v830 = right$$1 - v1097;
+          var v1289 = this.scoreSet;
+          var v1416 = this.M;
+          var v1472 = i$$11 + 1;
+          var v1417 = v1472 - 1;
+          var v1290 = v1416[v1417];
+          var v1418 = this.N;
+          var v1473 = j$$11 + 1;
+          var v1419 = v1473 - 1;
+          var v1291 = v1418[v1419];
+          introspect(JAM.policy.p27) {
+            var v1098 = v1289.getScore(v1290, v1291)
           }
-          var v844 = v1117 + v1118;
-          introspect(JAM.policy.p41) {
-            var v412 = Math.max(v843, v844)
+          var v831 = diag + v1098;
+          introspect(JAM.policy.p27) {
+            var v403 = Math.max(v830, v831)
           }
-          introspect(JAM.policy.p28) {
-            right$$1 = Math.max(v411, v412);
+          introspect(JAM.policy.p22) {
+            right$$1 = Math.max(v402, v403);
           }
         } else {
-          var v420 = j$$11 == 0;
-          if (v420) {
-            var v1119 = this.Sp;
-            var v845 = v1119[j$$11];
-            var v1120 = this.scoreSet;
-            var v846 = v1120.beginGap;
-            var v413 = v845 - v846;
-            var v1317 = this.scoreSet;
-            var v1121 = v1317.gap;
-            var v847 = right$$1 - v1121;
-            var v1122 = diag;
-            var v1318 = this.scoreSet;
-            var v1445 = this.M;
-            var v1499 = i$$11 + 1;
-            var v1446 = v1499 - 1;
-            var v1319 = v1445[v1446];
-            var v1447 = this.N;
-            var v1500 = j$$11 + 1;
-            var v1448 = v1500 - 1;
-            var v1320 = v1447[v1448];
-            introspect(JAM.policy.p41) {
-              var v1123 = v1318.getScore(v1319, v1320)
+          var v411 = j$$11 == 0;
+          if (v411) {
+            var v1099 = this.Sp;
+            var v832 = v1099[j$$11];
+            var v1100 = this.scoreSet;
+            var v833 = v1100.beginGap;
+            var v404 = v832 - v833;
+            var v1292 = this.scoreSet;
+            var v1101 = v1292.gap;
+            var v834 = right$$1 - v1101;
+            var v1293 = this.scoreSet;
+            var v1420 = this.M;
+            var v1474 = i$$11 + 1;
+            var v1421 = v1474 - 1;
+            var v1294 = v1420[v1421];
+            var v1422 = this.N;
+            var v1475 = j$$11 + 1;
+            var v1423 = v1475 - 1;
+            var v1295 = v1422[v1423];
+            introspect(JAM.policy.p27) {
+              var v1102 = v1293.getScore(v1294, v1295)
             }
-            var v848 = v1122 + v1123;
-            introspect(JAM.policy.p41) {
-              var v414 = Math.max(v847, v848)
+            var v835 = diag + v1102;
+            introspect(JAM.policy.p27) {
+              var v405 = Math.max(v834, v835)
             }
-            introspect(JAM.policy.p28) {
-              right$$1 = Math.max(v413, v414);
+            introspect(JAM.policy.p22) {
+              right$$1 = Math.max(v404, v405);
             }
           } else {
-            var v419 = i$$11 == 0;
-            if (v419) {
-              var v1124 = this.Sp;
-              var v849 = v1124[j$$11];
-              var v1125 = this.scoreSet;
-              var v850 = v1125.gap;
-              var v415 = v849 - v850;
-              var v1321 = this.scoreSet;
-              var v1126 = v1321.beginGap;
-              var v851 = right$$1 - v1126;
-              var v1127 = diag;
-              var v1322 = this.scoreSet;
-              var v1449 = this.M;
-              var v1501 = i$$11 + 1;
-              var v1450 = v1501 - 1;
-              var v1323 = v1449[v1450];
-              var v1451 = this.N;
-              var v1502 = j$$11 + 1;
-              var v1452 = v1502 - 1;
-              var v1324 = v1451[v1452];
-              introspect(JAM.policy.p41) {
-                var v1128 = v1322.getScore(v1323, v1324)
+            var v410 = i$$11 == 0;
+            if (v410) {
+              var v1103 = this.Sp;
+              var v836 = v1103[j$$11];
+              var v1104 = this.scoreSet;
+              var v837 = v1104.gap;
+              var v406 = v836 - v837;
+              var v1296 = this.scoreSet;
+              var v1105 = v1296.beginGap;
+              var v838 = right$$1 - v1105;
+              var v1297 = this.scoreSet;
+              var v1424 = this.M;
+              var v1476 = i$$11 + 1;
+              var v1425 = v1476 - 1;
+              var v1298 = v1424[v1425];
+              var v1426 = this.N;
+              var v1477 = j$$11 + 1;
+              var v1427 = v1477 - 1;
+              var v1299 = v1426[v1427];
+              introspect(JAM.policy.p27) {
+                var v1106 = v1297.getScore(v1298, v1299)
               }
-              var v852 = v1127 + v1128;
-              introspect(JAM.policy.p41) {
-                var v416 = Math.max(v851, v852)
+              var v839 = diag + v1106;
+              introspect(JAM.policy.p27) {
+                var v407 = Math.max(v838, v839)
               }
-              introspect(JAM.policy.p28) {
-                right$$1 = Math.max(v415, v416);
+              introspect(JAM.policy.p22) {
+                right$$1 = Math.max(v406, v407);
               }
             } else {
-              var v1129 = this.Sp;
-              var v853 = v1129[j$$11];
-              var v1130 = this.scoreSet;
-              var v854 = v1130.gap;
-              var v417 = v853 - v854;
-              var v1325 = this.scoreSet;
-              var v1131 = v1325.gap;
-              var v855 = right$$1 - v1131;
-              var v1132 = diag;
-              var v1326 = this.scoreSet;
-              var v1453 = this.M;
-              var v1503 = i$$11 + 1;
-              var v1454 = v1503 - 1;
-              var v1327 = v1453[v1454];
-              var v1455 = this.N;
-              var v1504 = j$$11 + 1;
-              var v1456 = v1504 - 1;
-              var v1328 = v1455[v1456];
-              introspect(JAM.policy.p41) {
-                var v1133 = v1326.getScore(v1327, v1328)
+              var v1107 = this.Sp;
+              var v840 = v1107[j$$11];
+              var v1108 = this.scoreSet;
+              var v841 = v1108.gap;
+              var v408 = v840 - v841;
+              var v1300 = this.scoreSet;
+              var v1109 = v1300.gap;
+              var v842 = right$$1 - v1109;
+              var v1301 = this.scoreSet;
+              var v1428 = this.M;
+              var v1478 = i$$11 + 1;
+              var v1429 = v1478 - 1;
+              var v1302 = v1428[v1429];
+              var v1430 = this.N;
+              var v1479 = j$$11 + 1;
+              var v1431 = v1479 - 1;
+              var v1303 = v1430[v1431];
+              introspect(JAM.policy.p27) {
+                var v1110 = v1301.getScore(v1302, v1303)
               }
-              var v856 = v1132 + v1133;
-              introspect(JAM.policy.p41) {
-                var v418 = Math.max(v855, v856)
+              var v843 = diag + v1110;
+              introspect(JAM.policy.p27) {
+                var v409 = Math.max(v842, v843)
               }
-              introspect(JAM.policy.p28) {
-                right$$1 = Math.max(v417, v418);
+              introspect(JAM.policy.p22) {
+                right$$1 = Math.max(v408, v409);
               }
             }
           }
         }
-        var v422 = this.Sp;
-        diag = v422[j$$11];
-        var v423 = this.Sp;
-        introspect(JAM.policy.p13) {
-          v423[j$$11] = right$$1;
+        var v413 = this.Sp;
+        diag = v413[j$$11];
+        var v414 = this.Sp;
+        introspect(JAM.policy.p6) {
+          v414[j$$11] = right$$1;
         }
-        j$$11 = j$$11 - 1;
-        v424 = j$$11 >= j1;
+        j$$11--;
+        v415 = j$$11 >= j1;
       }
-      i$$11 = i$$11 - 1;
-      v425 = i$$11 >= middle;
+      i$$11--;
+      v416 = i$$11 >= middle;
     }
-    var v857 = this.Sn;
-    var v426 = v857[j1];
-    var v858 = this.Sp;
-    var v427 = v858[j1];
-    var maxValue = v426 + v427;
+    var v844 = this.Sn;
+    var v417 = v844[j1];
+    var v845 = this.Sp;
+    var v418 = v845[j1];
+    var maxValue = v417 + v418;
     var maxJ = j1;
     j$$11 = j1 + 1;
-    var v431 = j$$11 <= j2;
-    for (;v431;) {
-      var v1329 = this.Sn;
-      var v1134 = v1329[j$$11];
-      var v1330 = this.Sp;
-      var v1135 = v1330[j$$11];
-      var v859 = v1134 + v1135;
-      var v430 = v859 >= maxValue;
-      if (v430) {
-        var v860 = this.Sn;
-        var v428 = v860[j$$11];
-        var v861 = this.Sp;
-        var v429 = v861[j$$11];
-        maxValue = v428 + v429;
+    var v422 = j$$11 <= j2;
+    for (;v422;) {
+      var v1304 = this.Sn;
+      var v1111 = v1304[j$$11];
+      var v1305 = this.Sp;
+      var v1112 = v1305[j$$11];
+      var v846 = v1111 + v1112;
+      var v421 = v846 >= maxValue;
+      if (v421) {
+        var v847 = this.Sn;
+        var v419 = v847[j$$11];
+        var v848 = this.Sp;
+        var v420 = v848[j$$11];
+        maxValue = v419 + v420;
         maxJ = j$$11;
       }
-      j$$11 = j$$11 + 1;
-      v431 = j$$11 <= j2;
+      j$$11++;
+      v422 = j$$11 <= j2;
     }
-    introspect(JAM.policy.p41) {
+    introspect(JAM.policy.p27) {
       this.path(i1, j1, middle, maxJ);
     }
-    introspect(JAM.policy.p28) {
+    introspect(JAM.policy.p22) {
       this.path(middle, maxJ, i2, j2);
     }
   }
   return;
 }
 function getAlignedM() {
-  var v433 = this.alignedM;
-  introspect(JAM.policy.p25) {
-    return v433.join("");
+  var v424 = this.alignedM;
+  introspect(JAM.policy.p15) {
+    return v424.join("");
   }
 }
 function getAlignedN() {
-  var v434 = this.alignedN;
-  introspect(JAM.policy.p25) {
-    return v434.join("");
+  var v425 = this.alignedN;
+  introspect(JAM.policy.p15) {
+    return v425.join("");
   }
 }
 function setAlignParam(M, N, scoreSet$$1) {
   this.M = M;
   this.N = N;
-  var v1603 = new Array;
-  this.alignedM = v1603;
-  var v1604 = new Array;
-  this.alignedN = v1604;
+  var v1578 = new Array;
+  this.alignedM = v1578;
+  var v1579 = new Array;
+  this.alignedN = v1579;
   this.scoreSet = scoreSet$$1;
-  var v862 = this.N;
-  var v435 = v862.length;
-  var v1605 = new Array(v435);
-  this.Sn = v1605;
-  var v863 = this.N;
-  var v436 = v863.length;
-  var v1606 = new Array(v436);
-  this.Sp = v1606;
+  var v849 = this.N;
+  var v426 = v849.length;
+  var v1580 = new Array(v426);
+  this.Sn = v1580;
+  var v850 = this.N;
+  var v427 = v850.length;
+  var v1581 = new Array(v427);
+  this.Sp = v1581;
   this.score = 0;
   return;
 }
@@ -3278,647 +3263,641 @@ function initializeMatrix(sequenceOne$$2, sequenceTwo$$2, scoreSet$$2) {
   this.M = sequenceOne$$2;
   this.N = sequenceTwo$$2;
   this.score = 0;
-  var v1136 = this.M;
-  var v864 = v1136.length;
-  var v437 = v864 + 1;
-  var v1607 = new Array(v437);
-  this.nodes = v1607;
+  var v1113 = this.M;
+  var v851 = v1113.length;
+  var v428 = v851 + 1;
+  var v1582 = new Array(v428);
+  this.nodes = v1582;
   var i$$12 = 0;
-  var v1137 = this.nodes;
-  var v865 = v1137.length;
-  var v443 = i$$12 < v865;
-  for (;v443;) {
-    var v438 = this.nodes;
-    var v439 = i$$12;
-    var v1331 = this.N;
-    var v1138 = v1331.length;
-    var v866 = v1138 + 1;
-    var v1608 = new Array(v866);
-    introspect(JAM.policy.p13) {
-      v438[v439] = v1608;
-    }
+  var v1114 = this.nodes;
+  var v852 = v1114.length;
+  var v432 = i$$12 < v852;
+  for (;v432;) {
+    var v429 = this.nodes;
+    var v1306 = this.N;
+    var v1115 = v1306.length;
+    var v853 = v1115 + 1;
+    var v1583 = new Array(v853);
+    v429[i$$12] = v1583;
     var j$$12 = 0;
-    var v1332 = this.nodes;
-    var v1139 = v1332[i$$12];
-    var v867 = v1139.length;
-    var v442 = j$$12 < v867;
-    for (;v442;) {
-      var v868 = this.nodes;
-      var v440 = v868[i$$12];
-      var v441 = j$$12;
-      var v1609 = new Node;
-      introspect(JAM.policy.p13) {
-        v440[v441] = v1609;
-      }
-      j$$12 = j$$12 + 1;
-      var v1333 = this.nodes;
-      var v1140 = v1333[i$$12];
-      var v869 = v1140.length;
-      v442 = j$$12 < v869;
+    var v1307 = this.nodes;
+    var v1116 = v1307[i$$12];
+    var v854 = v1116.length;
+    var v431 = j$$12 < v854;
+    for (;v431;) {
+      var v855 = this.nodes;
+      var v430 = v855[i$$12];
+      var v1584 = new Node;
+      v430[j$$12] = v1584;
+      j$$12++;
+      var v1308 = this.nodes;
+      var v1117 = v1308[i$$12];
+      var v856 = v1117.length;
+      v431 = j$$12 < v856;
     }
-    i$$12 = i$$12 + 1;
-    var v1141 = this.nodes;
-    var v870 = v1141.length;
-    v443 = i$$12 < v870;
+    i$$12++;
+    var v1118 = this.nodes;
+    var v857 = v1118.length;
+    v432 = i$$12 < v857;
   }
-  var v1142 = this.nodes;
-  var v871 = v1142[0];
-  var v444 = v871[0];
-  v444.value = 0;
+  var v1119 = this.nodes;
+  var v858 = v1119[0];
+  var v433 = v858[0];
+  v433.value = 0;
   i$$12 = 1;
-  var v1143 = this.nodes;
-  var v872 = v1143.length;
-  var v450 = i$$12 < v872;
-  for (;v450;) {
-    var v873 = this.scoreSet;
-    var v447 = v873.useBeginGapLeft;
-    if (v447) {
-      var v1144 = this.nodes;
-      var v874 = v1144[i$$12];
-      var v445 = v874[0];
-      var v1457 = this.nodes;
-      var v1458 = i$$12 - 1;
-      var v1334 = v1457[v1458];
-      var v1145 = v1334[0];
-      var v875 = v1145.value;
-      var v1146 = this.scoreSet;
-      var v876 = v1146.beginGap;
-      v445.value = v875 - v876;
+  var v1120 = this.nodes;
+  var v859 = v1120.length;
+  var v439 = i$$12 < v859;
+  for (;v439;) {
+    var v860 = this.scoreSet;
+    var v436 = v860.useBeginGapLeft;
+    if (v436) {
+      var v1121 = this.nodes;
+      var v861 = v1121[i$$12];
+      var v434 = v861[0];
+      var v1432 = this.nodes;
+      var v1433 = i$$12 - 1;
+      var v1309 = v1432[v1433];
+      var v1122 = v1309[0];
+      var v862 = v1122.value;
+      var v1123 = this.scoreSet;
+      var v863 = v1123.beginGap;
+      v434.value = v862 - v863;
     } else {
-      var v1147 = this.nodes;
-      var v877 = v1147[i$$12];
-      var v446 = v877[0];
-      var v1459 = this.nodes;
-      var v1460 = i$$12 - 1;
-      var v1335 = v1459[v1460];
-      var v1148 = v1335[0];
-      var v878 = v1148.value;
-      var v1149 = this.scoreSet;
-      var v879 = v1149.gap;
-      v446.value = v878 - v879;
+      var v1124 = this.nodes;
+      var v864 = v1124[i$$12];
+      var v435 = v864[0];
+      var v1434 = this.nodes;
+      var v1435 = i$$12 - 1;
+      var v1310 = v1434[v1435];
+      var v1125 = v1310[0];
+      var v865 = v1125.value;
+      var v1126 = this.scoreSet;
+      var v866 = v1126.gap;
+      v435.value = v865 - v866;
     }
-    var v1150 = this.nodes;
-    var v880 = v1150[i$$12];
-    var v448 = v880[0];
-    v448.tracebackI = i$$12 - 1;
-    var v1151 = this.nodes;
-    var v881 = v1151[i$$12];
-    var v449 = v881[0];
-    v449.tracebackJ = 0;
-    i$$12 = i$$12 + 1;
-    var v1152 = this.nodes;
-    var v882 = v1152.length;
-    v450 = i$$12 < v882;
+    var v1127 = this.nodes;
+    var v867 = v1127[i$$12];
+    var v437 = v867[0];
+    v437.tracebackI = i$$12 - 1;
+    var v1128 = this.nodes;
+    var v868 = v1128[i$$12];
+    var v438 = v868[0];
+    v438.tracebackJ = 0;
+    i$$12++;
+    var v1129 = this.nodes;
+    var v869 = v1129.length;
+    v439 = i$$12 < v869;
   }
   j$$12 = 1;
-  var v1336 = this.nodes;
-  var v1153 = v1336[0];
-  var v883 = v1153.length;
-  var v456 = j$$12 < v883;
-  for (;v456;) {
-    var v884 = this.scoreSet;
-    var v453 = v884.useBeginGapTop;
-    if (v453) {
-      var v1154 = this.nodes;
-      var v885 = v1154[0];
-      var v451 = v885[j$$12];
-      var v1461 = this.nodes;
-      var v1337 = v1461[0];
-      var v1338 = j$$12 - 1;
-      var v1155 = v1337[v1338];
-      var v886 = v1155.value;
-      var v1156 = this.scoreSet;
-      var v887 = v1156.beginGap;
-      v451.value = v886 - v887;
+  var v1311 = this.nodes;
+  var v1130 = v1311[0];
+  var v870 = v1130.length;
+  var v445 = j$$12 < v870;
+  for (;v445;) {
+    var v871 = this.scoreSet;
+    var v442 = v871.useBeginGapTop;
+    if (v442) {
+      var v1131 = this.nodes;
+      var v872 = v1131[0];
+      var v440 = v872[j$$12];
+      var v1436 = this.nodes;
+      var v1312 = v1436[0];
+      var v1313 = j$$12 - 1;
+      var v1132 = v1312[v1313];
+      var v873 = v1132.value;
+      var v1133 = this.scoreSet;
+      var v874 = v1133.beginGap;
+      v440.value = v873 - v874;
     } else {
-      var v1157 = this.nodes;
-      var v888 = v1157[0];
-      var v452 = v888[j$$12];
-      var v1462 = this.nodes;
-      var v1339 = v1462[0];
-      var v1340 = j$$12 - 1;
-      var v1158 = v1339[v1340];
-      var v889 = v1158.value;
-      var v1159 = this.scoreSet;
-      var v890 = v1159.gap;
-      v452.value = v889 - v890;
+      var v1134 = this.nodes;
+      var v875 = v1134[0];
+      var v441 = v875[j$$12];
+      var v1437 = this.nodes;
+      var v1314 = v1437[0];
+      var v1315 = j$$12 - 1;
+      var v1135 = v1314[v1315];
+      var v876 = v1135.value;
+      var v1136 = this.scoreSet;
+      var v877 = v1136.gap;
+      v441.value = v876 - v877;
     }
-    var v1160 = this.nodes;
-    var v891 = v1160[0];
-    var v454 = v891[j$$12];
-    v454.tracebackI = 0;
-    var v1161 = this.nodes;
-    var v892 = v1161[0];
-    var v455 = v892[j$$12];
-    v455.tracebackJ = j$$12 - 1;
-    j$$12 = j$$12 + 1;
-    var v1341 = this.nodes;
-    var v1162 = v1341[0];
-    var v893 = v1162.length;
-    v456 = j$$12 < v893;
+    var v1137 = this.nodes;
+    var v878 = v1137[0];
+    var v443 = v878[j$$12];
+    v443.tracebackI = 0;
+    var v1138 = this.nodes;
+    var v879 = v1138[0];
+    var v444 = v879[j$$12];
+    v444.tracebackJ = j$$12 - 1;
+    j$$12++;
+    var v1316 = this.nodes;
+    var v1139 = v1316[0];
+    var v880 = v1139.length;
+    v445 = j$$12 < v880;
   }
   return;
 }
 function dumpMatrix() {
-  var v457 = outputWindow.document;
-  var v1463 = this.nodes;
-  var v1342 = v1463.length;
-  var v1163 = "Dynamic programming matrix i=" + v1342;
-  var v894 = v1163 + " and j=";
-  var v1343 = this.nodes;
-  var v1164 = v1343[0];
-  var v895 = v1164.length;
-  var v458 = v894 + v895;
-  introspect(JAM.policy.p40) {
-    v457.write(v458);
+  var v446 = outputWindow.document;
+  var v1438 = this.nodes;
+  var v1317 = v1438.length;
+  var v1140 = "Dynamic programming matrix i=" + v1317;
+  var v881 = v1140 + " and j=";
+  var v1318 = this.nodes;
+  var v1141 = v1318[0];
+  var v882 = v1141.length;
+  var v447 = v881 + v882;
+  introspect(JAM.policy.p21) {
+    v446.write(v447);
   }
-  var v459 = outputWindow.document;
-  introspect(JAM.policy.p25) {
-    v459.write("\n");
+  var v448 = outputWindow.document;
+  introspect(JAM.policy.p15) {
+    v448.write("\n");
   }
   var i$$13 = 0;
-  var v1165 = this.nodes;
-  var v896 = v1165.length;
-  var v470 = i$$13 < v896;
-  for (;v470;) {
+  var v1142 = this.nodes;
+  var v883 = v1142.length;
+  var v459 = i$$13 < v883;
+  for (;v459;) {
     var j$$13 = 0;
-    var v1344 = this.nodes;
-    var v1166 = v1344[i$$13];
-    var v897 = v1166.length;
-    var v468 = j$$13 < v897;
-    for (;v468;) {
-      var v1167 = this.nodes;
-      var v898 = v1167[i$$13];
-      var v460 = v898[j$$13];
-      var traceI = v460.tracebackI;
-      var v1168 = this.nodes;
-      var v899 = v1168[i$$13];
-      var v461 = v899[j$$13];
-      var traceJ = v461.tracebackJ;
-      var v462 = traceI == undefined;
-      if (v462) {
+    var v1319 = this.nodes;
+    var v1143 = v1319[i$$13];
+    var v884 = v1143.length;
+    var v457 = j$$13 < v884;
+    for (;v457;) {
+      var v1144 = this.nodes;
+      var v885 = v1144[i$$13];
+      var v449 = v885[j$$13];
+      var traceI = v449.tracebackI;
+      var v1145 = this.nodes;
+      var v886 = v1145[i$$13];
+      var v450 = v886[j$$13];
+      var traceJ = v450.tracebackJ;
+      var v451 = traceI == undefined;
+      if (v451) {
         traceI = "u";
       }
-      var v463 = traceJ == undefined;
-      if (v463) {
+      var v452 = traceJ == undefined;
+      if (v452) {
         traceJ = "u";
       }
-      var v1546 = "(" + i$$13;
-      var v1531 = v1546 + ",";
-      var v1505 = v1531 + j$$13;
-      var v1464 = v1505 + ")[";
-      var v1345 = v1464 + traceI;
-      var v1169 = v1345 + ",";
-      var v900 = v1169 + traceJ;
-      var v464 = v900 + "]=";
-      var v1346 = this.nodes;
-      var v1170 = v1346[i$$13];
-      var v901 = v1170[j$$13];
-      var v465 = v901.value;
-      var output = v464 + v465;
-      var v466 = outputWindow.document;
-      var v467 = rightNum(output, "", 20, " ");
-      introspect(JAM.policy.p40) {
-        v466.write(v467);
+      var v1521 = "(" + i$$13;
+      var v1506 = v1521 + ",";
+      var v1480 = v1506 + j$$13;
+      var v1439 = v1480 + ")[";
+      var v1320 = v1439 + traceI;
+      var v1146 = v1320 + ",";
+      var v887 = v1146 + traceJ;
+      var v453 = v887 + "]=";
+      var v1321 = this.nodes;
+      var v1147 = v1321[i$$13];
+      var v888 = v1147[j$$13];
+      var v454 = v888.value;
+      var output = v453 + v454;
+      var v455 = outputWindow.document;
+      var v456 = rightNum(output, "", 20, " ");
+      introspect(JAM.policy.p21) {
+        v455.write(v456);
       }
-      j$$13 = j$$13 + 1;
-      var v1347 = this.nodes;
-      var v1171 = v1347[i$$13];
-      var v902 = v1171.length;
-      v468 = j$$13 < v902;
+      j$$13++;
+      var v1322 = this.nodes;
+      var v1148 = v1322[i$$13];
+      var v889 = v1148.length;
+      v457 = j$$13 < v889;
     }
-    var v469 = outputWindow.document;
-    introspect(JAM.policy.p25) {
-      v469.write("\n");
+    var v458 = outputWindow.document;
+    introspect(JAM.policy.p15) {
+      v458.write("\n");
     }
-    i$$13 = i$$13 + 1;
-    var v1172 = this.nodes;
-    var v903 = v1172.length;
-    v470 = i$$13 < v903;
+    i$$13++;
+    var v1149 = this.nodes;
+    var v890 = v1149.length;
+    v459 = i$$13 < v890;
   }
-  var v471 = outputWindow.document;
-  introspect(JAM.policy.p25) {
-    v471.write("\n");
+  var v460 = outputWindow.document;
+  introspect(JAM.policy.p15) {
+    v460.write("\n");
   }
   return;
 }
 function fillMatrix() {
   var i$$14 = 1;
-  var v1173 = this.nodes;
-  var v904 = v1173.length;
-  var v517 = i$$14 < v904;
-  for (;v517;) {
+  var v1150 = this.nodes;
+  var v891 = v1150.length;
+  var v506 = i$$14 < v891;
+  for (;v506;) {
     var j$$14 = 1;
-    var v1348 = this.nodes;
-    var v1174 = v1348[0];
-    var v905 = v1174.length;
-    var v516 = j$$14 < v905;
-    for (;v516;) {
+    var v1323 = this.nodes;
+    var v1151 = v1323[0];
+    var v892 = v1151.length;
+    var v505 = j$$14 < v892;
+    for (;v505;) {
       var a;
       var b;
       var c;
-      var v1465 = this.nodes;
-      var v1349 = v1465.length;
-      var v1175 = v1349 - 1;
-      var v906 = i$$14 == v1175;
-      if (v906) {
-        var v1506 = this.nodes;
-        var v1466 = v1506[0];
-        var v1350 = v1466.length;
-        var v1176 = v1350 - 1;
-        v906 = j$$14 == v1176;
+      var v1440 = this.nodes;
+      var v1324 = v1440.length;
+      var v1152 = v1324 - 1;
+      var v893 = i$$14 == v1152;
+      if (v893) {
+        var v1481 = this.nodes;
+        var v1441 = v1481[0];
+        var v1325 = v1441.length;
+        var v1153 = v1325 - 1;
+        v893 = j$$14 == v1153;
       }
-      var v502 = v906;
-      if (v502) {
-        var v907 = this.scoreSet;
-        var v476 = v907.useEndGapRight;
-        if (v476) {
-          var v1351 = this.nodes;
-          var v1352 = i$$14 - 1;
-          var v1177 = v1351[v1352];
-          var v908 = v1177[j$$14];
-          var v472 = v908.value;
-          var v909 = this.scoreSet;
-          var v473 = v909.endGap;
-          a = v472 - v473;
+      var v491 = v893;
+      if (v491) {
+        var v894 = this.scoreSet;
+        var v465 = v894.useEndGapRight;
+        if (v465) {
+          var v1326 = this.nodes;
+          var v1327 = i$$14 - 1;
+          var v1154 = v1326[v1327];
+          var v895 = v1154[j$$14];
+          var v461 = v895.value;
+          var v896 = this.scoreSet;
+          var v462 = v896.endGap;
+          a = v461 - v462;
         } else {
-          var v1353 = this.nodes;
-          var v1354 = i$$14 - 1;
-          var v1178 = v1353[v1354];
-          var v910 = v1178[j$$14];
-          var v474 = v910.value;
-          var v911 = this.scoreSet;
-          var v475 = v911.gap;
-          a = v474 - v475;
+          var v1328 = this.nodes;
+          var v1329 = i$$14 - 1;
+          var v1155 = v1328[v1329];
+          var v897 = v1155[j$$14];
+          var v463 = v897.value;
+          var v898 = this.scoreSet;
+          var v464 = v898.gap;
+          a = v463 - v464;
         }
-        var v912 = this.scoreSet;
-        var v481 = v912.useEndGapBottom;
-        if (v481) {
-          var v1355 = this.nodes;
-          var v1179 = v1355[i$$14];
-          var v1180 = j$$14 - 1;
-          var v913 = v1179[v1180];
-          var v477 = v913.value;
-          var v914 = this.scoreSet;
-          var v478 = v914.endGap;
-          b = v477 - v478;
+        var v899 = this.scoreSet;
+        var v470 = v899.useEndGapBottom;
+        if (v470) {
+          var v1330 = this.nodes;
+          var v1156 = v1330[i$$14];
+          var v1157 = j$$14 - 1;
+          var v900 = v1156[v1157];
+          var v466 = v900.value;
+          var v901 = this.scoreSet;
+          var v467 = v901.endGap;
+          b = v466 - v467;
         } else {
-          var v1356 = this.nodes;
-          var v1181 = v1356[i$$14];
-          var v1182 = j$$14 - 1;
-          var v915 = v1181[v1182];
-          var v479 = v915.value;
-          var v916 = this.scoreSet;
-          var v480 = v916.gap;
-          b = v479 - v480;
+          var v1331 = this.nodes;
+          var v1158 = v1331[i$$14];
+          var v1159 = j$$14 - 1;
+          var v902 = v1158[v1159];
+          var v468 = v902.value;
+          var v903 = this.scoreSet;
+          var v469 = v903.gap;
+          b = v468 - v469;
         }
       } else {
-        var v1357 = this.nodes;
-        var v1183 = v1357.length;
-        var v917 = v1183 - 1;
-        var v501 = i$$14 == v917;
-        if (v501) {
-          var v1358 = this.nodes;
-          var v1359 = i$$14 - 1;
-          var v1184 = v1358[v1359];
-          var v918 = v1184[j$$14];
-          var v482 = v918.value;
-          var v919 = this.scoreSet;
-          var v483 = v919.gap;
-          a = v482 - v483;
-          var v920 = this.scoreSet;
-          var v488 = v920.useEndGapBottom;
-          if (v488) {
-            var v1360 = this.nodes;
-            var v1185 = v1360[i$$14];
-            var v1186 = j$$14 - 1;
-            var v921 = v1185[v1186];
-            var v484 = v921.value;
-            var v922 = this.scoreSet;
-            var v485 = v922.endGap;
-            b = v484 - v485;
+        var v1332 = this.nodes;
+        var v1160 = v1332.length;
+        var v904 = v1160 - 1;
+        var v490 = i$$14 == v904;
+        if (v490) {
+          var v1333 = this.nodes;
+          var v1334 = i$$14 - 1;
+          var v1161 = v1333[v1334];
+          var v905 = v1161[j$$14];
+          var v471 = v905.value;
+          var v906 = this.scoreSet;
+          var v472 = v906.gap;
+          a = v471 - v472;
+          var v907 = this.scoreSet;
+          var v477 = v907.useEndGapBottom;
+          if (v477) {
+            var v1335 = this.nodes;
+            var v1162 = v1335[i$$14];
+            var v1163 = j$$14 - 1;
+            var v908 = v1162[v1163];
+            var v473 = v908.value;
+            var v909 = this.scoreSet;
+            var v474 = v909.endGap;
+            b = v473 - v474;
           } else {
-            var v1361 = this.nodes;
-            var v1187 = v1361[i$$14];
-            var v1188 = j$$14 - 1;
-            var v923 = v1187[v1188];
-            var v486 = v923.value;
-            var v924 = this.scoreSet;
-            var v487 = v924.gap;
-            b = v486 - v487;
+            var v1336 = this.nodes;
+            var v1164 = v1336[i$$14];
+            var v1165 = j$$14 - 1;
+            var v910 = v1164[v1165];
+            var v475 = v910.value;
+            var v911 = this.scoreSet;
+            var v476 = v911.gap;
+            b = v475 - v476;
           }
         } else {
-          var v1467 = this.nodes;
-          var v1362 = v1467[0];
-          var v1189 = v1362.length;
-          var v925 = v1189 - 1;
-          var v500 = j$$14 == v925;
-          if (v500) {
-            var v926 = this.scoreSet;
-            var v493 = v926.useEndGapRight;
-            if (v493) {
-              var v1363 = this.nodes;
-              var v1364 = i$$14 - 1;
-              var v1190 = v1363[v1364];
-              var v927 = v1190[j$$14];
-              var v489 = v927.value;
-              var v928 = this.scoreSet;
-              var v490 = v928.endGap;
-              a = v489 - v490;
+          var v1442 = this.nodes;
+          var v1337 = v1442[0];
+          var v1166 = v1337.length;
+          var v912 = v1166 - 1;
+          var v489 = j$$14 == v912;
+          if (v489) {
+            var v913 = this.scoreSet;
+            var v482 = v913.useEndGapRight;
+            if (v482) {
+              var v1338 = this.nodes;
+              var v1339 = i$$14 - 1;
+              var v1167 = v1338[v1339];
+              var v914 = v1167[j$$14];
+              var v478 = v914.value;
+              var v915 = this.scoreSet;
+              var v479 = v915.endGap;
+              a = v478 - v479;
             } else {
-              var v1365 = this.nodes;
-              var v1366 = i$$14 - 1;
-              var v1191 = v1365[v1366];
-              var v929 = v1191[j$$14];
-              var v491 = v929.value;
-              var v930 = this.scoreSet;
-              var v492 = v930.gap;
-              a = v491 - v492;
+              var v1340 = this.nodes;
+              var v1341 = i$$14 - 1;
+              var v1168 = v1340[v1341];
+              var v916 = v1168[j$$14];
+              var v480 = v916.value;
+              var v917 = this.scoreSet;
+              var v481 = v917.gap;
+              a = v480 - v481;
             }
-            var v1367 = this.nodes;
-            var v1192 = v1367[i$$14];
-            var v1193 = j$$14 - 1;
-            var v931 = v1192[v1193];
-            var v494 = v931.value;
-            var v932 = this.scoreSet;
-            var v495 = v932.gap;
-            b = v494 - v495;
+            var v1342 = this.nodes;
+            var v1169 = v1342[i$$14];
+            var v1170 = j$$14 - 1;
+            var v918 = v1169[v1170];
+            var v483 = v918.value;
+            var v919 = this.scoreSet;
+            var v484 = v919.gap;
+            b = v483 - v484;
           } else {
-            var v1368 = this.nodes;
-            var v1369 = i$$14 - 1;
-            var v1194 = v1368[v1369];
-            var v933 = v1194[j$$14];
-            var v496 = v933.value;
-            var v934 = this.scoreSet;
-            var v497 = v934.gap;
-            a = v496 - v497;
-            var v1370 = this.nodes;
-            var v1195 = v1370[i$$14];
-            var v1196 = j$$14 - 1;
-            var v935 = v1195[v1196];
-            var v498 = v935.value;
-            var v936 = this.scoreSet;
-            var v499 = v936.gap;
-            b = v498 - v499;
+            var v1343 = this.nodes;
+            var v1344 = i$$14 - 1;
+            var v1171 = v1343[v1344];
+            var v920 = v1171[j$$14];
+            var v485 = v920.value;
+            var v921 = this.scoreSet;
+            var v486 = v921.gap;
+            a = v485 - v486;
+            var v1345 = this.nodes;
+            var v1172 = v1345[i$$14];
+            var v1173 = j$$14 - 1;
+            var v922 = v1172[v1173];
+            var v487 = v922.value;
+            var v923 = this.scoreSet;
+            var v488 = v923.gap;
+            b = v487 - v488;
           }
         }
       }
-      var v1371 = this.nodes;
-      var v1372 = i$$14 - 1;
-      var v1197 = v1371[v1372];
-      var v1198 = j$$14 - 1;
-      var v937 = v1197[v1198];
-      var v503 = v937.value;
-      var v938 = this.scoreSet;
-      var v1199 = this.M;
-      var v1200 = i$$14 - 1;
-      var v939 = v1199[v1200];
-      var v1201 = this.N;
-      var v1202 = j$$14 - 1;
-      var v940 = v1201[v1202];
-      introspect(JAM.policy.p41) {
-        var v504 = v938.getScore(v939, v940)
+      var v1346 = this.nodes;
+      var v1347 = i$$14 - 1;
+      var v1174 = v1346[v1347];
+      var v1175 = j$$14 - 1;
+      var v924 = v1174[v1175];
+      var v492 = v924.value;
+      var v925 = this.scoreSet;
+      var v1176 = this.M;
+      var v1177 = i$$14 - 1;
+      var v926 = v1176[v1177];
+      var v1178 = this.N;
+      var v1179 = j$$14 - 1;
+      var v927 = v1178[v1179];
+      introspect(JAM.policy.p27) {
+        var v493 = v925.getScore(v926, v927)
       }
-      c = v503 + v504;
-      var v941 = a >= b;
-      if (v941) {
-        v941 = a >= c;
+      c = v492 + v493;
+      var v928 = a >= b;
+      if (v928) {
+        v928 = a >= c;
       }
-      var v515 = v941;
-      if (v515) {
-        var v1203 = this.nodes;
-        var v942 = v1203[i$$14];
-        var v505 = v942[j$$14];
-        v505.value = a;
-        var v1204 = this.nodes;
-        var v943 = v1204[i$$14];
-        var v506 = v943[j$$14];
-        v506.tracebackI = i$$14 - 1;
-        var v1205 = this.nodes;
-        var v944 = v1205[i$$14];
-        var v507 = v944[j$$14];
-        v507.tracebackJ = j$$14;
+      var v504 = v928;
+      if (v504) {
+        var v1180 = this.nodes;
+        var v929 = v1180[i$$14];
+        var v494 = v929[j$$14];
+        v494.value = a;
+        var v1181 = this.nodes;
+        var v930 = v1181[i$$14];
+        var v495 = v930[j$$14];
+        v495.tracebackI = i$$14 - 1;
+        var v1182 = this.nodes;
+        var v931 = v1182[i$$14];
+        var v496 = v931[j$$14];
+        v496.tracebackJ = j$$14;
       } else {
-        var v945 = b >= c;
-        if (v945) {
-          v945 = b >= a;
+        var v932 = b >= c;
+        if (v932) {
+          v932 = b >= a;
         }
-        var v514 = v945;
-        if (v514) {
-          var v1206 = this.nodes;
-          var v946 = v1206[i$$14];
-          var v508 = v946[j$$14];
-          v508.value = b;
-          var v1207 = this.nodes;
-          var v947 = v1207[i$$14];
-          var v509 = v947[j$$14];
-          v509.tracebackI = i$$14;
-          var v1208 = this.nodes;
-          var v948 = v1208[i$$14];
-          var v510 = v948[j$$14];
-          v510.tracebackJ = j$$14 - 1;
+        var v503 = v932;
+        if (v503) {
+          var v1183 = this.nodes;
+          var v933 = v1183[i$$14];
+          var v497 = v933[j$$14];
+          v497.value = b;
+          var v1184 = this.nodes;
+          var v934 = v1184[i$$14];
+          var v498 = v934[j$$14];
+          v498.tracebackI = i$$14;
+          var v1185 = this.nodes;
+          var v935 = v1185[i$$14];
+          var v499 = v935[j$$14];
+          v499.tracebackJ = j$$14 - 1;
         } else {
-          var v1209 = this.nodes;
-          var v949 = v1209[i$$14];
-          var v511 = v949[j$$14];
-          v511.value = c;
-          var v1210 = this.nodes;
-          var v950 = v1210[i$$14];
-          var v512 = v950[j$$14];
-          v512.tracebackI = i$$14 - 1;
-          var v1211 = this.nodes;
-          var v951 = v1211[i$$14];
-          var v513 = v951[j$$14];
-          v513.tracebackJ = j$$14 - 1;
+          var v1186 = this.nodes;
+          var v936 = v1186[i$$14];
+          var v500 = v936[j$$14];
+          v500.value = c;
+          var v1187 = this.nodes;
+          var v937 = v1187[i$$14];
+          var v501 = v937[j$$14];
+          v501.tracebackI = i$$14 - 1;
+          var v1188 = this.nodes;
+          var v938 = v1188[i$$14];
+          var v502 = v938[j$$14];
+          v502.tracebackJ = j$$14 - 1;
         }
       }
-      j$$14 = j$$14 + 1;
-      var v1373 = this.nodes;
-      var v1212 = v1373[0];
-      var v952 = v1212.length;
-      v516 = j$$14 < v952;
+      j$$14++;
+      var v1348 = this.nodes;
+      var v1189 = v1348[0];
+      var v939 = v1189.length;
+      v505 = j$$14 < v939;
     }
-    i$$14 = i$$14 + 1;
-    var v1213 = this.nodes;
-    var v953 = v1213.length;
-    v517 = i$$14 < v953;
+    i$$14++;
+    var v1190 = this.nodes;
+    var v940 = v1190.length;
+    v506 = i$$14 < v940;
   }
-  var v1214 = this.nodes;
-  var v1468 = this.nodes;
-  var v1374 = v1468.length;
-  var v1215 = v1374 - 1;
-  var v954 = v1214[v1215];
-  var v1469 = this.nodes;
-  var v1375 = v1469[0];
-  var v1216 = v1375.length;
-  var v955 = v1216 - 1;
-  var v518 = v954[v955];
-  this.score = v518.value;
+  var v1191 = this.nodes;
+  var v1443 = this.nodes;
+  var v1349 = v1443.length;
+  var v1192 = v1349 - 1;
+  var v941 = v1191[v1192];
+  var v1444 = this.nodes;
+  var v1350 = v1444[0];
+  var v1193 = v1350.length;
+  var v942 = v1193 - 1;
+  var v507 = v941[v942];
+  this.score = v507.value;
   return;
 }
 function alignQuad() {
-  var v1610 = new Array;
-  this.alignedM = v1610;
-  var v1611 = new Array;
-  this.alignedN = v1611;
-  var v956 = this.nodes;
-  var v519 = v956.length;
-  var currentI = v519 - 1;
-  var v1217 = this.nodes;
-  var v957 = v1217[0];
-  var v520 = v957.length;
-  var currentJ = v520 - 1;
-  var v958 = this.nodes;
-  var v1376 = this.nodes;
-  var v1218 = v1376.length;
-  var v959 = v1218 - 1;
-  var v521 = v958[v959];
-  var v1377 = this.nodes;
-  var v1219 = v1377[0];
-  var v960 = v1219.length;
-  var v522 = v960 - 1;
-  var currentNode = v521[v522];
-  var v1220 = currentNode.tracebackI;
-  var v961 = v1220 != undefined;
-  if (v961) {
-    var v1221 = currentNode.tracebackJ;
-    v961 = v1221 != undefined;
+  var v1585 = new Array;
+  this.alignedM = v1585;
+  var v1586 = new Array;
+  this.alignedN = v1586;
+  var v943 = this.nodes;
+  var v508 = v943.length;
+  var currentI = v508 - 1;
+  var v1194 = this.nodes;
+  var v944 = v1194[0];
+  var v509 = v944.length;
+  var currentJ = v509 - 1;
+  var v945 = this.nodes;
+  var v1351 = this.nodes;
+  var v1195 = v1351.length;
+  var v946 = v1195 - 1;
+  var v510 = v945[v946];
+  var v1352 = this.nodes;
+  var v1196 = v1352[0];
+  var v947 = v1196.length;
+  var v511 = v947 - 1;
+  var currentNode = v510[v511];
+  var v1197 = currentNode.tracebackI;
+  var v948 = v1197 != undefined;
+  if (v948) {
+    var v1198 = currentNode.tracebackJ;
+    v948 = v1198 != undefined;
   }
-  var v537 = v961;
-  for (;v537;) {
-    var v1222 = currentNode.tracebackI;
-    var v1223 = currentI - 1;
-    var v962 = v1222 == v1223;
-    if (v962) {
-      var v1224 = currentNode.tracebackJ;
-      var v1225 = currentJ - 1;
-      v962 = v1224 == v1225;
+  var v526 = v948;
+  for (;v526;) {
+    var v1199 = currentNode.tracebackI;
+    var v1200 = currentI - 1;
+    var v949 = v1199 == v1200;
+    if (v949) {
+      var v1201 = currentNode.tracebackJ;
+      var v1202 = currentJ - 1;
+      v949 = v1201 == v1202;
     }
-    var v534 = v962;
-    if (v534) {
-      var v523 = this.alignedM;
-      var v963 = this.M;
-      var v524 = v963.pop();
-      introspect(JAM.policy.p40) {
-        v523.push(v524);
+    var v523 = v949;
+    if (v523) {
+      var v512 = this.alignedM;
+      var v950 = this.M;
+      var v513 = v950.pop();
+      introspect(JAM.policy.p21) {
+        v512.push(v513);
       }
-      var v525 = this.alignedN;
-      var v964 = this.N;
-      var v526 = v964.pop();
-      introspect(JAM.policy.p40) {
-        v525.push(v526);
+      var v514 = this.alignedN;
+      var v951 = this.N;
+      var v515 = v951.pop();
+      introspect(JAM.policy.p21) {
+        v514.push(v515);
       }
     } else {
-      var v965 = currentNode.tracebackJ;
-      var v966 = currentJ - 1;
-      var v533 = v965 == v966;
-      if (v533) {
-        var v527 = this.alignedM;
-        introspect(JAM.policy.p25) {
-          v527.push("-");
+      var v952 = currentNode.tracebackJ;
+      var v953 = currentJ - 1;
+      var v522 = v952 == v953;
+      if (v522) {
+        var v516 = this.alignedM;
+        introspect(JAM.policy.p15) {
+          v516.push("-");
         }
-        var v528 = this.alignedN;
-        var v967 = this.N;
-        var v529 = v967.pop();
-        introspect(JAM.policy.p40) {
-          v528.push(v529);
+        var v517 = this.alignedN;
+        var v954 = this.N;
+        var v518 = v954.pop();
+        introspect(JAM.policy.p21) {
+          v517.push(v518);
         }
       } else {
-        var v530 = this.alignedM;
-        var v968 = this.M;
-        var v531 = v968.pop();
-        introspect(JAM.policy.p40) {
-          v530.push(v531);
+        var v519 = this.alignedM;
+        var v955 = this.M;
+        var v520 = v955.pop();
+        introspect(JAM.policy.p21) {
+          v519.push(v520);
         }
-        var v532 = this.alignedN;
-        introspect(JAM.policy.p25) {
-          v532.push("-");
+        var v521 = this.alignedN;
+        introspect(JAM.policy.p15) {
+          v521.push("-");
         }
       }
     }
     currentI = currentNode.tracebackI;
     currentJ = currentNode.tracebackJ;
-    var v969 = this.nodes;
-    var v970 = currentNode.tracebackI;
-    var v535 = v969[v970];
-    var v536 = currentNode.tracebackJ;
-    currentNode = v535[v536];
-    var v1226 = currentNode.tracebackI;
-    var v971 = v1226 != undefined;
-    if (v971) {
-      var v1227 = currentNode.tracebackJ;
-      v971 = v1227 != undefined;
+    var v956 = this.nodes;
+    var v957 = currentNode.tracebackI;
+    var v524 = v956[v957];
+    var v525 = currentNode.tracebackJ;
+    currentNode = v524[v525];
+    var v1203 = currentNode.tracebackI;
+    var v958 = v1203 != undefined;
+    if (v958) {
+      var v1204 = currentNode.tracebackJ;
+      v958 = v1204 != undefined;
     }
-    v537 = v971;
+    v526 = v958;
   }
-  var v538 = this.alignedM;
-  var v1612 = v538.reverse();
-  this.alignedM = v1612;
-  var v539 = this.alignedN;
-  var v1613 = v539.reverse();
-  this.alignedN = v1613;
+  var v527 = this.alignedM;
+  var v1587 = v527.reverse();
+  this.alignedM = v1587;
+  var v528 = this.alignedN;
+  var v1588 = v528.reverse();
+  this.alignedN = v1588;
   return;
 }
 function getAlignedM() {
-  var v540 = this.alignedM;
-  introspect(JAM.policy.p25) {
-    return v540.join("");
+  var v529 = this.alignedM;
+  introspect(JAM.policy.p15) {
+    return v529.join("");
   }
 }
 function getAlignedN() {
-  var v541 = this.alignedN;
-  introspect(JAM.policy.p25) {
-    return v541.join("");
+  var v530 = this.alignedN;
+  introspect(JAM.policy.p15) {
+    return v530.join("");
   }
 }
 function AlignPairQuad() {
   return;
 }
 new ScoreSet;
-var v542 = ScoreSet.prototype;
-v542.getScore = getScore;
-var v543 = ScoreSet.prototype;
-v543.setScoreSetParam = setScoreSetParam;
+var v531 = ScoreSet.prototype;
+v531.getScore = getScore;
+var v532 = ScoreSet.prototype;
+v532.setScoreSetParam = setScoreSetParam;
 new ScoringMatrix;
-var v544 = ScoringMatrix.prototype;
-v544.scoringMatrix_getScore = scoringMatrix_getScore;
-var v545 = Identity;
-var v1614 = new ScoringMatrix;
-v545.prototype = v1614;
-var v546 = Identity.prototype;
-v546.setMismatch = setMismatch;
-var v547 = Identity.prototype;
-v547.setMatch = setMatch;
+var v533 = ScoringMatrix.prototype;
+v533.scoringMatrix_getScore = scoringMatrix_getScore;
+var v534 = Identity;
+var v1589 = new ScoringMatrix;
+v534.prototype = v1589;
+var v535 = Identity.prototype;
+v535.setMismatch = setMismatch;
+var v536 = Identity.prototype;
+v536.setMatch = setMatch;
 new AlignPairLinear;
-var v548 = AlignPairLinear.prototype;
-v548.align = align;
-var v549 = AlignPairLinear.prototype;
-v549.path = path;
-var v550 = AlignPairLinear.prototype;
-v550.setAlignParam = setAlignParam;
-var v551 = AlignPairLinear.prototype;
-v551.getAlignedM = getAlignedM;
-var v552 = AlignPairLinear.prototype;
-v552.getAlignedN = getAlignedN;
+var v537 = AlignPairLinear.prototype;
+v537.align = align;
+var v538 = AlignPairLinear.prototype;
+v538.path = path;
+var v539 = AlignPairLinear.prototype;
+v539.setAlignParam = setAlignParam;
+var v540 = AlignPairLinear.prototype;
+v540.getAlignedM = getAlignedM;
+var v541 = AlignPairLinear.prototype;
+v541.getAlignedN = getAlignedN;
 new AlignPairQuad;
-var v553 = AlignPairQuad.prototype;
-v553.initializeMatrix = initializeMatrix;
-var v554 = AlignPairQuad.prototype;
-v554.fillMatrix = fillMatrix;
-var v555 = AlignPairQuad.prototype;
-v555.align = alignQuad;
-var v556 = AlignPairQuad.prototype;
-v556.getAlignedM = getAlignedM;
-var v557 = AlignPairQuad.prototype;
-v557.getAlignedN = getAlignedN;
-var v558 = AlignPairQuad.prototype;
-v558.dumpMatrix = dumpMatrix;
+var v542 = AlignPairQuad.prototype;
+v542.initializeMatrix = initializeMatrix;
+var v543 = AlignPairQuad.prototype;
+v543.fillMatrix = fillMatrix;
+var v544 = AlignPairQuad.prototype;
+v544.align = alignQuad;
+var v545 = AlignPairQuad.prototype;
+v545.getAlignedM = getAlignedM;
+var v546 = AlignPairQuad.prototype;
+v546.getAlignedN = getAlignedN;
+var v547 = AlignPairQuad.prototype;
+v547.dumpMatrix = dumpMatrix;
 document.onload = v2;
-introspect(JAM.policy.p25) {
-  var v559 = document.getElementById("submitbtn")
+introspect(JAM.policy.p15) {
+  var v548 = document.getElementById("submitbtn")
 }
-v559.onclick = v3;
-introspect(JAM.policy.p25) {
-  var v560 = document.getElementById("clearbtn")
+v548.onclick = v3;
+introspect(JAM.policy.p15) {
+  var v549 = document.getElementById("clearbtn")
 }
-v560.onclick = v4
+v549.onclick = v4

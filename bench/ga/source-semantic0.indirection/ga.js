@@ -5190,7 +5190,7 @@ function v209() {
       return v765 + "`";
     }
     function v194(b$$1) {
-      JAM.set(f, b$$1, !0);
+      f[b$$1] = !0;
       return;
     }
     var d$$2 = this;

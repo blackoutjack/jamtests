@@ -848,7 +848,7 @@ function v309() {
             var v1398 = v2688 / innerHeight;
             var v446 = JAM.call(Math.ceil, Math, [v1398], JAM.policy.p1);
             thisMinHeight = JAM.call(Math.max, Math, [1, v446], JAM.policy.p1);
-            JAM.set(frameHeights, i$$101, thisMinHeight * innerHeight);
+            frameHeights[i$$101] = thisMinHeight * innerHeight;
             var v1399 = frameHeights[i$$101];
             var v447 = v1399 + "px";
             JAM.call(frame.setStyle, frame, ["minHeight", v447], JAM.policy.p1);
@@ -4446,7 +4446,7 @@ function v233(e$$151, t$$148) {
             v681 = t$$149 < v2028;
           }
           if (s$$71) {
-            JAM.set(i$$90, e$$152, !0);
+            i$$90[e$$152] = !0;
             u$$32 = !0;
             JAM.call(this.getRequires, this, [n$$116], JAM.policy.p1);
           }
@@ -5119,7 +5119,7 @@ function v231(e$$114, t$$103) {
           var v3280 = t$$142.data;
           var v2065 = v3280[r$$95];
           var v721 = v2065.name;
-          JAM.set(v720, v721, !0);
+          v720[v721] = !0;
           var v4267 = t$$142.data;
           var v3281 = v4267[r$$95];
           var v2066 = v3281.lang;
@@ -5208,7 +5208,7 @@ function v231(e$$114, t$$103) {
                 var v2085 = JAM.call(o$$45.isCSSLoaded, o$$45, [a$$27], JAM.policy.p1);
                 if (v2085) {
                   var v4273 = o$$45.inserted;
-                  JAM.set(v4273, a$$27, !0);
+                  v4273[a$$27] = !0;
                   var v4274 = o$$45.required;
                   delete v4274[a$$27];
                 }
@@ -5358,7 +5358,7 @@ function v231(e$$114, t$$103) {
             s$$65 = JAM.call(e$$137.splice, e$$137, [u$$30, 1], JAM.policy.p1);
             var v4290 = s$$65[0];
             JAM.call(e$$137.splice, e$$137, [o$$44, 0, v4290], JAM.policy.p1);
-            JAM.set(t$$140, f$$22, !0);
+            t$$140[f$$22] = !0;
             a$$26 = !0;
             break;
           }
@@ -5736,7 +5736,7 @@ function v231(e$$114, t$$103) {
         var v2117 = i$$80[o$$40];
         var v3325 = !v2117;
         if (v3325) {
-          JAM.set(i$$80, o$$40, !0);
+          i$$80[o$$40] = !0;
           n$$102 = JAM.call(s$$61.getModule, s$$61, [o$$40], JAM.policy.p1);
           if (n$$102) {
             u$$28 = n$$102.expound;
@@ -5894,7 +5894,7 @@ function v231(e$$114, t$$103) {
         var v5589 = e$$114.Env;
         var v5454 = v5589.lang;
         var v5294 = v5454[t$$128];
-        JAM.set(v5294, i$$78, !0);
+        v5294[i$$78] = !0;
       }
     }
     var v2126 = this.moduleInfo;
@@ -5953,7 +5953,7 @@ function v231(e$$114, t$$103) {
         if (s$$59) {
           JAM.call(v$$5.each, v$$5, [s$$59, v194, this], JAM.policy.p1);
         }
-        JAM.set(i$$77, t$$125, !0);
+        i$$77[t$$125] = !0;
         r$$85.provides = i$$77;
       }
       v777 = r$$85.provides;
@@ -6015,7 +6015,7 @@ function v231(e$$114, t$$103) {
       r$$84.className = "";
       var v5082 = YUI.Env;
       var v4312 = v5082._cssLoaded;
-      JAM.set(v4312, t$$124, i$$76);
+      v4312[t$$124] = i$$76;
       v781 = i$$76;
     }
     return v781;
@@ -6041,7 +6041,7 @@ function v231(e$$114, t$$103) {
       }
       var v783 = v2131;
       if (v783) {
-        JAM.set(_$$1, n$$98, !0);
+        _$$1[n$$98] = !0;
         JAM.call(y$$36.push, y$$36, [n$$98], JAM.policy.p1);
       }
       return;
@@ -6164,7 +6164,7 @@ function v231(e$$114, t$$103) {
         var v3346 = S$$4[n$$97];
         JAM.call(y$$36.push, y$$36, [v3346], JAM.policy.p1);
         var v3347 = S$$4[n$$97];
-        JAM.set(_$$1, v3347, !0);
+        _$$1[v3347] = !0;
         var v2142 = S$$4[n$$97];
         i$$75 = JAM.call(this.getModule, this, [v2142], JAM.policy.p1);
         if (i$$75) {
@@ -6213,7 +6213,7 @@ function v231(e$$114, t$$103) {
             JAM.call(y$$36.push, y$$36, [v4319], JAM.policy.p1);
           }
           var v3352 = S$$4[n$$97];
-          JAM.set(_$$1, v3352, !0);
+          _$$1[v3352] = !0;
           var v2149 = S$$4[n$$97];
           i$$75 = JAM.call(this.getModule, this, [v2149], JAM.policy.p1);
           if (i$$75) {
@@ -6263,7 +6263,7 @@ function v231(e$$114, t$$103) {
           var v3356 = T$$3[n$$97];
           JAM.call(y$$36.push, y$$36, [v3356], JAM.policy.p1);
           var v3357 = T$$3[n$$97];
-          JAM.set(_$$1, v3357, !0);
+          _$$1[v3357] = !0;
           var v2157 = T$$3[n$$97];
           i$$75 = O$$1[v2157];
           if (i$$75) {
@@ -6345,7 +6345,7 @@ function v231(e$$114, t$$103) {
             }
             b$$6 = v2163;
             if (b$$6) {
-              JAM.set(_$$1, n$$97, !0);
+              _$$1[n$$97] = !0;
               JAM.call(y$$36.push, y$$36, [n$$97], JAM.policy.p1);
               i$$75 = JAM.call(this.getModule, this, [n$$97], JAM.policy.p1);
               if (i$$75) {
@@ -6597,14 +6597,14 @@ function v231(e$$114, t$$103) {
                 for (;v825;) {
                   var v2188 = n$$95.use;
                   var v824 = v2188[s$$55];
-                  JAM.set(a$$23, v824, !0);
+                  a$$23[v824] = !0;
                   s$$55++;
                   v825 = s$$55 < u$$24;
                 }
               } else {
                 var v2189 = t$$120.use;
                 var v826 = v2189[i$$73];
-                JAM.set(a$$23, v826, !0);
+                a$$23[v826] = !0;
               }
               i$$73++;
               v828 = i$$73 < o$$34;
@@ -7649,7 +7649,7 @@ function v231(e$$114, t$$103) {
         var v3446 = v4379;
         if (v3446) {
           var v4380 = e$$120.loaded;
-          JAM.set(v4380, s$$50, !0);
+          v4380[s$$50] = !0;
         }
       }
     }
@@ -11226,7 +11226,7 @@ function v113(e$$36, t$$24) {
       var v2473 = JAM.call(v$$3.call, v$$3, [t$$32, i$$26], JAM.policy.p1);
       var v3603 = !v2473;
       if (v3603) {
-        JAM.set(t$$32, i$$26, 1);
+        t$$32[i$$26] = 1;
         JAM.call(n$$27.push, n$$27, [i$$26], JAM.policy.p1);
       }
       ++r$$26;
@@ -11248,7 +11248,7 @@ function v113(e$$36, t$$24) {
       var v2474 = t$$31[i$$25];
       var v3604 = !v2474;
       if (v3604) {
-        JAM.set(t$$31, i$$25, 1);
+        t$$31[i$$25] = 1;
         JAM.call(n$$26.push, n$$26, [i$$25], JAM.policy.p1);
       }
       ++r$$25;
@@ -12076,7 +12076,7 @@ function v53() {
         p$$3 = null;
         var v4507;
         if (f$$5) {
-          JAM.set(l$$3, s$$13, !0);
+          l$$3[s$$13] = !0;
           var v5533 = f$$5.details;
           h$$7 = v5533.requires;
           var v5393 = f$$5.details;
@@ -12087,7 +12087,7 @@ function v53() {
           var v5534 = v5663[n$$4];
           var v5394 = v5534[s$$13];
           if (v5394) {
-            v5209 = JAM.set(l$$3, s$$13, !0);
+            v5209 = l$$3[s$$13] = !0;
           } else {
             v5209 = JAM.call(g$$2.push, g$$2, [s$$13], JAM.policy.p1);
           }
@@ -12581,7 +12581,7 @@ function v53() {
             JAM.call(c$$2.message, c$$2, [v4527, "warn", "yui"], JAM.policy.p1);
           }
         } else {
-          JAM.set(v$$1, r$$11, !0);
+          v$$1[r$$11] = !0;
           h$$5 = 0;
           var v4528 = c$$2.Env;
           var v3703 = v4528._missed;
@@ -12758,7 +12758,7 @@ function v53() {
         var v4536 = !v3718;
         if (v4536) {
           var v5408 = a$$4.id;
-          JAM.set(o$$5, v5408, !0);
+          o$$5[v5408] = !0;
           var v5409 = a$$4.Env;
           u$$2 = v5409._loader;
           var v5410 = u$$2;
@@ -13397,12 +13397,12 @@ function v25() {
   }
   function v23(node$$4) {
     var v1240 = stamp(node$$4);
-    JAM.set(imgs, v1240, false);
+    imgs[v1240] = false;
     return;
   }
   function v22(node$$3) {
     var v1241 = stamp(node$$3);
-    JAM.set(imgs, v1241, true);
+    imgs[v1241] = true;
     return;
   }
   function stamp(node$$2) {
@@ -14041,7 +14041,7 @@ function v11(F$$1) {
     var v1322 = !v2644;
     if (v1322) {
       var v6088 = JAM.call(setInterval, null, [checkElementAndCallback, interval]);
-      JAM.set(pollers, pollerId, v6088);
+      pollers[pollerId] = v6088;
     }
     return;
   }

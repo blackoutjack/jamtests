@@ -2512,12 +2512,16 @@ function v396($$$1, undefined$$2) {
     if (v881) {
       return true;
     }
-    JAM.set(el$$1, scroll, 1, JAM.policy.p2);
+    introspect(JAM.policy.p2) {
+      el$$1[scroll] = 1;
+    }
     introspect(JAM.policy.p3) {
       var v882 = el$$1[scroll]
     }
     has = v882 > 0;
-    JAM.set(el$$1, scroll, 0, JAM.policy.p2);
+    introspect(JAM.policy.p2) {
+      el$$1[scroll] = 0;
+    }
     return has;
   }
   function v394(instance, name$$61, args$$8) {
@@ -3980,7 +3984,9 @@ function v363(window$$1, undefined$$1) {
       var v2905 = this.options;
       var v1048 = v2905.curAnim;
       var v1049 = this.prop;
-      JAM.set(v1048, v1049, true, JAM.policy.p2);
+      introspect(JAM.policy.p2) {
+        v1048[v1049] = true;
+      }
       var i$$89;
       var v2906 = this.options;
       var v1051 = v2906.curAnim;
@@ -4917,9 +4923,7 @@ function v363(window$$1, undefined$$1) {
       var v4106 = encodeURIComponent(key$$20);
       var v2999 = v4106 + "=";
       var v3000 = encodeURIComponent(value$$44);
-      introspect(JAM.policy.p2) {
-        v1184[v1185] = v2999 + v3000;
-      }
+      v1184[v1185] = v2999 + v3000;
       return;
     }
     var s$$5 = [];
@@ -9000,9 +9004,7 @@ function v363(window$$1, undefined$$1) {
             }
           } else {
             if (inplace$$1) {
-              introspect(JAM.policy.p2) {
-                curLoop$$1[i$$44] = false;
-              }
+              curLoop$$1[i$$44] = false;
             }
           }
         }
@@ -9143,9 +9145,7 @@ function v363(window$$1, undefined$$1) {
             } else {
               v1695 = false;
             }
-            introspect(JAM.policy.p2) {
-              checkSet$$4[i$$42] = v1695;
-            }
+            checkSet$$4[i$$42] = v1695;
           }
           i$$42++;
           v1696 = i$$42 < l$$12;
@@ -9166,9 +9166,7 @@ function v363(window$$1, undefined$$1) {
               var v3320 = elem$$38.parentNode;
               v1697 = v3320 === part$$1;
             }
-            introspect(JAM.policy.p2) {
-              checkSet$$4[i$$42] = v1697;
-            }
+            checkSet$$4[i$$42] = v1697;
           }
           i$$42++;
           v1698 = i$$42 < l$$12;
@@ -9237,9 +9235,7 @@ function v363(window$$1, undefined$$1) {
           } else {
             v1704 = elem$$37 === part;
           }
-          introspect(JAM.policy.p2) {
-            checkSet$$3[i$$41] = v1704;
-          }
+          checkSet$$3[i$$41] = v1704;
         }
         i$$41++;
         v1706 = i$$41 < l$$11;
@@ -9349,9 +9345,7 @@ function v363(window$$1, undefined$$1) {
                     if (pass$$2) {
                       anyFound = true;
                     } else {
-                      introspect(JAM.policy.p2) {
-                        curLoop[i$$40] = false;
-                      }
+                      curLoop[i$$40] = false;
                     }
                   } else {
                     if (pass$$2) {
@@ -10001,9 +9995,7 @@ function v363(window$$1, undefined$$1) {
               elem$$34 = elem$$34[dir];
             }
           }
-          introspect(JAM.policy.p2) {
-            checkSet[i$$35] = match$$4;
-          }
+          checkSet[i$$35] = match$$4;
         }
         i$$35++;
         v1792 = i$$35 < l$$8;
@@ -10064,9 +10056,7 @@ function v363(window$$1, undefined$$1) {
               elem$$35 = elem$$35[dir$$1];
             }
           }
-          introspect(JAM.policy.p2) {
-            checkSet$$1[i$$36] = match$$5;
-          }
+          checkSet$$1[i$$36] = match$$5;
         }
         i$$36++;
         v1800 = i$$36 < l$$9;
@@ -10220,7 +10210,9 @@ function v363(window$$1, undefined$$1) {
     var v1833 = jQuery$$1.attrFn;
     if (v1833) {
       var v1832 = jQuery$$1.attrFn;
-      JAM.set(v1832, name$$42, true, JAM.policy.p2);
+      introspect(JAM.policy.p2) {
+        v1832[name$$42] = true;
+      }
     }
     return;
   }
@@ -10859,7 +10851,9 @@ function v363(window$$1, undefined$$1) {
     }
     var v5548 = now();
     this.timeStamp = v5548;
-    JAM.set(this, expando, true, JAM.policy.p2);
+    introspect(JAM.policy.p2) {
+      this[expando] = true;
+    }
     return;
   }
   function v96(elem$$24, type$$41, handle$$15) {
@@ -11857,7 +11851,9 @@ function v363(window$$1, undefined$$1) {
       JAM.call(handlers.push, handlers, [handleObj$$1]);
       var v3529 = jQuery$$1.event;
       var v2045 = v3529.global;
-      JAM.set(v2045, type$$36, true, JAM.policy.p2);
+      introspect(JAM.policy.p2) {
+        v2045[type$$36] = true;
+      }
       var v3530 = i$$24;
       i$$24 = i$$24 + 1;
       introspect(JAM.policy.p3) {
@@ -13092,9 +13088,7 @@ function v363(window$$1, undefined$$1) {
       var v2200 = value$$29 != null;
       if (v2200) {
         var v2199 = ret$$5.length;
-        introspect(JAM.policy.p2) {
-          ret$$5[v2199] = value$$29;
-        }
+        ret$$5[v2199] = value$$29;
       }
       i$$13++;
       v2201 = i$$13 < length$$16;
@@ -14545,7 +14539,9 @@ function v363(window$$1, undefined$$1) {
   if (v2380) {
     var v2377 = jQuery$$1.browser;
     var v2378 = browserMatch.browser;
-    JAM.set(v2377, v2378, true, JAM.policy.p2);
+    introspect(JAM.policy.p2) {
+      v2377[v2378] = true;
+    }
     var v2379 = jQuery$$1.browser;
     v2379.version = browserMatch.version;
   }

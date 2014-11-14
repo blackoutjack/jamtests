@@ -11,7 +11,7 @@ var policy = function() {
         commit = false;
         break;
       }
-      if (!states[1] && (node.id === "setCookieSentinel" && JAM.identical(node.value, true))) {
+      if (!states[1] && (node.id === "setCookieSentinel" && node.value === true)) {
         states[1] = true;
       }
     }
@@ -29,7 +29,7 @@ var policy = function() {
     var len = as.length;
     for (var i = 0;i < len && !states[1];i++) {
       var node = as[i];
-      if (!states[1] && (node.id === "setCookieSentinel" && JAM.identical(node.value, true))) {
+      if (!states[1] && (node.id === "setCookieSentinel" && node.value === true)) {
         states[1] = true;
       }
     }

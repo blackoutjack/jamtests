@@ -38,7 +38,10 @@ function next() {
     JAM.call(window.setTimeout, window, [next, 0], JAM.policy.p98);
   } else {
     if ((currentRepeat = currentRepeat + 1) < repeatCount) {
-      JAM.set(JAM.call(JAM.get(document, "getElementById", JAM.policy.p97), document, ["countdown"], JAM.policy.p97), "innerHTML", repeatCount - currentRepeat, JAM.policy.p54);
+      var v9 = JAM.call(JAM.get(document, "getElementById", JAM.policy.p97), document, ["countdown"], JAM.policy.p97);
+      introspect(JAM.policy.p54) {
+        v9.innerHTML = repeatCount - currentRepeat;
+      }
       testIndex = -1;
       JAM.call(window.setTimeout, window, [next, 128], JAM.policy.p98);
     } else {
@@ -295,7 +298,7 @@ introspect(JAM.policy.p11) {
 var i = 0;
 var v22 = i < output.length;
 for (;v22;) {
-  introspect(JAM.policy.p106) {
+  introspect(JAM.policy.p11) {
     output[i] = {};
   }
   i++;

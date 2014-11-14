@@ -12,7 +12,7 @@ var policy = function() {
         commit = false;
         break;
       }
-      if (!states[1] && node.type === "invoke" && (JAM.identical(node.value, _HTMLDocument_prototype_getElementById) && (node.argc > 0 && JAM.identical(node.args[0], "content")))) {
+      if (!states[1] && node.type === "invoke" && (JAM.identical(node.value, _HTMLDocument_prototype_getElementById) && (node.argc > 0 && node.args[0] === "content"))) {
         states[1] = true;
       }
     }
@@ -29,7 +29,7 @@ var policy = function() {
     var len = as.length;
     for (var i = 0;i < len && !states[1];i++) {
       var node = as[i];
-      if (!states[1] && (JAM.identical(node.value, _HTMLDocument_prototype_getElementById) && (node.argc > 0 && JAM.identical(node.args[0], "content")))) {
+      if (!states[1] && (JAM.identical(node.value, _HTMLDocument_prototype_getElementById) && (node.argc > 0 && node.args[0] === "content"))) {
         states[1] = true;
       }
     }

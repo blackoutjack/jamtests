@@ -52,6 +52,26 @@ if (file_exists('actions.txt')) {
     <title>JAMScript - <?=$title?></title>
     <meta charset="UTF-8" />
 <?
+if ($auto) {
+?>
+    <script>
+    // Don't want any dialogs during automated testing.
+    alert = console.log;
+    // This is here for auto.js to use.
+    var AutoLib = (function() {
+      var _bind = Function.prototype.bind;
+      var _apply = Function.prototype.apply;
+      var _bind_apply = _apply.bind(_bind);
+      return {
+        bind: function(f, args) {
+          return _bind_apply(f, args);
+        }
+      }
+    })();
+    Object.freeze(AutoLib);
+    </script>
+<?
+}
 if ($profile) {
 ?>
     <script>JAM.startProfile('init');</script>
@@ -121,9 +141,9 @@ if ($auto) {
 <?
     }
 ?>
-      // JAM.bind is used here because a jsbench app seems to
+      // AutoLib.bind is used here because a jsbench app seems to
       // clobber Function.prototype.bind.
-      JAM.bind(goToPage, [null, document.referrer, 'autoindex', <?=$autoindex + 1?>])
+      AutoLib.bind(goToPage, [null, document.referrer, 'autoindex', <?=$autoindex + 1?>])
     ];
     for (var i=0; i<actions.length; i++) {
       var action = actions[i];

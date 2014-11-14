@@ -3679,9 +3679,7 @@ function v269() {
           }
         } else {
           if (inplace$$1) {
-            introspect(JAM.policy.p2) {
-              curLoop$$1[i$$38] = false;
-            }
+            curLoop$$1[i$$38] = false;
           }
         }
       }
@@ -3830,9 +3828,7 @@ function v269() {
           } else {
             v884 = false;
           }
-          introspect(JAM.policy.p2) {
-            checkSet$$4[i$$36] = v884;
-          }
+          checkSet$$4[i$$36] = v884;
         }
         i$$36++;
         v885 = i$$36 < l$$4;
@@ -3849,9 +3845,7 @@ function v269() {
             var v2361 = elem$$6.parentNode;
             v886 = v2361 === part$$1;
           }
-          introspect(JAM.policy.p2) {
-            checkSet$$4[i$$36] = v886;
-          }
+          checkSet$$4[i$$36] = v886;
         }
         i$$36++;
         v887 = i$$36 < l$$4;
@@ -3918,9 +3912,7 @@ function v269() {
         } else {
           v893 = elem$$5 === part;
         }
-        introspect(JAM.policy.p2) {
-          checkSet$$3[i$$35] = v893;
-        }
+        checkSet$$3[i$$35] = v893;
       }
       i$$35++;
       v895 = i$$35 < l$$3;
@@ -4025,9 +4017,7 @@ function v269() {
                   if (pass) {
                     anyFound = true;
                   } else {
-                    introspect(JAM.policy.p2) {
-                      curLoop[i$$34] = false;
-                    }
+                    curLoop[i$$34] = false;
                   }
                 } else {
                   if (pass) {
@@ -4579,9 +4569,7 @@ function v269() {
           }
           elem$$1 = elem$$1[dir];
         }
-        introspect(JAM.policy.p2) {
-          checkSet[i$$29] = match$$13;
-        }
+        checkSet[i$$29] = match$$13;
       }
       i$$29++;
       v978 = i$$29 < l;
@@ -4634,9 +4622,7 @@ function v269() {
           }
           elem$$2 = elem$$2[dir$$1];
         }
-        introspect(JAM.policy.p2) {
-          checkSet$$1[i$$30] = match$$14;
-        }
+        checkSet$$1[i$$30] = match$$14;
       }
       i$$30++;
       v986 = i$$30 < l$$1;
@@ -7914,7 +7900,9 @@ function v134(GLOBAL) {
     }
     extendElementWith(element$$71, methods$$3);
     var v1481 = JAM.call(getUniqueElementID, null, [element$$71], JAM.policy.p1);
-    JAM.set(EXTENDED, v1481, true, JAM.policy.p2);
+    introspect(JAM.policy.p2) {
+      EXTENDED[v1481] = true;
+    }
     return element$$71;
   }
   function extend_IE8(element$$72) {
@@ -9687,9 +9675,7 @@ function v67() {
         for (;v1766;) {
           var v1765 = j in item$$3;
           if (v1765) {
-            introspect(JAM.policy.p2) {
-              array$$17[n$$1] = item$$3[j];
-            }
+            array$$17[n$$1] = item$$3[j];
           }
           n$$1++;
           j++;
@@ -9698,9 +9684,7 @@ function v67() {
       } else {
         var v1767 = n$$1;
         n$$1 = n$$1 + 1;
-        introspect(JAM.policy.p2) {
-          array$$17[v1767] = item$$3;
-        }
+        array$$17[v1767] = item$$3;
       }
       i$$8++;
       v1769 = i$$8 < length$$20;
@@ -9755,9 +9739,7 @@ function v67() {
       if (v1778) {
         var v1777 = object$$18[i$$9];
         var v3974 = JAM.call(iterator$$17.call, iterator$$17, [context$$17, v1777, i$$9, object$$18], JAM.policy.p1);
-        introspect(JAM.policy.p2) {
-          results$$8[n$$2] = v3974;
-        }
+        results$$8[n$$2] = v3974;
       }
       n$$2++;
       i$$9++;

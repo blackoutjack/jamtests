@@ -401,9 +401,7 @@ function v70() {
         var v675 = M$$8[v848];
         var v432 = v674 ^ v675;
         var v1072 = N$$4(v432, 1);
-        introspect(JAM.policy.p2) {
-          v120[v121] = v1072;
-        }
+        v120[v121] = v1072;
         ae++;
         v122 = ae <= 79;
       }

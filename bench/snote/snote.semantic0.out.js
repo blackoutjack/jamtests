@@ -235,10 +235,21 @@ function v88() {
       var v113 = d$$20[v417]
     }
     n$$8 = v112 ^ v113;
-    JAM.set(a$$54, b$$34, s$$8, JAM.policy.p18);
-    JAM.set(a$$54, b$$34 + 1, u, JAM.policy.p18);
-    JAM.set(a$$54, b$$34 + 2, v, JAM.policy.p18);
-    JAM.set(a$$54, b$$34 + 3, n$$8, JAM.policy.p18);
+    introspect(JAM.policy.p19) {
+      a$$54[b$$34] = s$$8;
+    }
+    var v114 = b$$34 + 1;
+    introspect(JAM.policy.p19) {
+      a$$54[v114] = u;
+    }
+    var v115 = b$$34 + 2;
+    introspect(JAM.policy.p19) {
+      a$$54[v115] = v;
+    }
+    var v116 = b$$34 + 3;
+    introspect(JAM.policy.p19) {
+      a$$54[v116] = n$$8;
+    }
     return;
   }
   function v86(c$$31, b$$33) {
@@ -247,14 +258,14 @@ function v88() {
       var d$$19 = c$$31[v117]
     }
     JAM.set(c$$31, b$$33 + 1, JAM.get(c$$31, b$$33 + 3, JAM.policy.p20), JAM.policy.p20);
-    JAM.set(c$$31, b$$33 + 3, d$$19, JAM.policy.p18);
+    JAM.set(c$$31, b$$33 + 3, d$$19, JAM.policy.p19);
     JAM.call(this._doCryptBlock, this, [c$$31, b$$33, this._invKeySchedule, k$$5, f$$17, g$$10, a$$52, r$$5]);
     var v121 = b$$33 + 1;
     introspect(JAM.policy.p14) {
       d$$19 = c$$31[v121];
     }
     JAM.set(c$$31, b$$33 + 1, JAM.get(c$$31, b$$33 + 3, JAM.policy.p20), JAM.policy.p20);
-    JAM.set(c$$31, b$$33 + 3, d$$19, JAM.policy.p18);
+    JAM.set(c$$31, b$$33 + 3, d$$19, JAM.policy.p19);
     return;
   }
   function v85(a$$53, b$$32) {
@@ -271,7 +282,7 @@ function v88() {
     var v131 = j$$6 < c$$30;
     for (;v131;) {
       if (j$$6 < d$$18) {
-        introspect(JAM.policy.p20) {
+        introspect(JAM.policy.p14) {
           i$$12[j$$6] = b$$31[j$$6];
         }
       } else {
@@ -342,9 +353,7 @@ function v88() {
         introspect(JAM.policy.p14) {
           var v129 = i$$12[v423]
         }
-        introspect(JAM.policy.p18) {
-          i$$12[j$$6] = v129 ^ h$$14;
-        }
+        i$$12[j$$6] = v129 ^ h$$14;
       }
       j$$6++;
       v131 = j$$6 < c$$30;
@@ -406,9 +415,7 @@ function v88() {
         }
         v424 = v577 ^ v578;
       }
-      introspect(JAM.policy.p18) {
-        b$$31[d$$18] = v424;
-      }
+      b$$31[d$$18] = v424;
       d$$18++;
       v132 = d$$18 < c$$30;
     }
@@ -425,9 +432,7 @@ function v88() {
       } else {
         v133 = b$$30 << 1 ^ 283;
       }
-      introspect(JAM.policy.p18) {
-        c$$29[b$$30] = v133;
-      }
+      c$$29[b$$30] = v133;
       b$$30++;
       v134 = 256 > b$$30;
     }
@@ -438,12 +443,8 @@ function v88() {
     for (;v155;) {
       var j$$5 = e$$33 ^ e$$33 << 1 ^ e$$33 << 2 ^ e$$33 << 3 ^ e$$33 << 4;
       j$$5 = j$$5 >>> 8 ^ j$$5 & 255 ^ 99;
-      introspect(JAM.policy.p18) {
-        l$$7[d$$17] = j$$5;
-      }
-      introspect(JAM.policy.p18) {
-        r$$5[j$$5] = d$$17;
-      }
+      l$$7[d$$17] = j$$5;
+      r$$5[j$$5] = d$$17;
       introspect(JAM.policy.p14) {
         var i$$11 = c$$29[d$$17]
       }
@@ -457,43 +458,15 @@ function v88() {
         var v431 = c$$29[j$$5]
       }
       var t = 257 * v431 ^ 16843008 * j$$5;
-      var v140 = t << 24;
-      var v141 = t >>> 8;
-      introspect(JAM.policy.p18) {
-        o$$5[d$$17] = v140 | v141;
-      }
-      var v142 = t << 16;
-      var v143 = t >>> 16;
-      introspect(JAM.policy.p18) {
-        m$$6[d$$17] = v142 | v143;
-      }
-      var v144 = t << 8;
-      var v145 = t >>> 24;
-      introspect(JAM.policy.p18) {
-        s$$7[d$$17] = v144 | v145;
-      }
-      introspect(JAM.policy.p18) {
-        n$$7[d$$17] = t;
-      }
+      o$$5[d$$17] = t << 24 | t >>> 8;
+      m$$6[d$$17] = t << 16 | t >>> 16;
+      s$$7[d$$17] = t << 8 | t >>> 24;
+      n$$7[d$$17] = t;
       t = 16843009 * p$$6 ^ 65537 * h$$13 ^ 257 * i$$11 ^ 16843008 * d$$17;
-      var v148 = t << 24;
-      var v149 = t >>> 8;
-      introspect(JAM.policy.p18) {
-        k$$5[j$$5] = v148 | v149;
-      }
-      var v150 = t << 16;
-      var v151 = t >>> 16;
-      introspect(JAM.policy.p18) {
-        f$$17[j$$5] = v150 | v151;
-      }
-      var v152 = t << 8;
-      var v153 = t >>> 24;
-      introspect(JAM.policy.p18) {
-        g$$10[j$$5] = v152 | v153;
-      }
-      introspect(JAM.policy.p18) {
-        a$$52[j$$5] = t;
-      }
+      k$$5[j$$5] = t << 24 | t >>> 8;
+      f$$17[j$$5] = t << 16 | t >>> 16;
+      g$$10[j$$5] = t << 8 | t >>> 24;
+      a$$52[j$$5] = t;
       var v154;
       if (d$$17) {
         var v860 = p$$6 ^ i$$11;
@@ -743,7 +716,9 @@ function v82(p$$4) {
         introspect(JAM.policy.p14) {
           var v595 = c$$17[e$$25]
         }
-        JAM.set(b$$21, v204, v594 ^ v595, JAM.policy.p18);
+        introspect(JAM.policy.p19) {
+          b$$21[v204] = v594 ^ v595;
+        }
         e$$25++;
         v205 = e$$25 < d$$11;
       }
@@ -931,16 +906,8 @@ function v45(p$$2) {
     introspect(JAM.policy.p14) {
       var v604 = g$$6[v239]
     }
-    var v605 = 128 << 24 - e$$22 % 32;
-    introspect(JAM.policy.p18) {
-      g$$6[v239] = v604 | v605;
-    }
-    var v240 = (e$$22 + 64 >>> 9 << 4) + 14;
-    var v474 = (a$$28 << 8 | a$$28 >>> 24) & 16711935;
-    var v475 = (a$$28 << 24 | a$$28 >>> 8) & 4278255360;
-    introspect(JAM.policy.p18) {
-      g$$6[v240] = v474 | v475;
-    }
+    g$$6[v239] = v604 | 128 << 24 - e$$22 % 32;
+    g$$6[(e$$22 + 64 >>> 9 << 4) + 14] = (a$$28 << 8 | a$$28 >>> 24) & 16711935 | (a$$28 << 24 | a$$28 >>> 8) & 4278255360;
     f$$7.sigBytes = 4 * (g$$6.length + 1);
     this._process();
     f$$7 = this._hash.words;
@@ -950,7 +917,11 @@ function v45(p$$2) {
       introspect(JAM.policy.p14) {
         a$$28 = f$$7[g$$6];
       }
-      JAM.set(f$$7, g$$6, (a$$28 << 8 | a$$28 >>> 24) & 16711935 | (a$$28 << 24 | a$$28 >>> 8) & 4278255360, JAM.policy.p18);
+      var v477 = (a$$28 << 8 | a$$28 >>> 24) & 16711935;
+      var v478 = (a$$28 << 24 | a$$28 >>> 8) & 4278255360;
+      introspect(JAM.policy.p19) {
+        f$$7[g$$6] = v477 | v478;
+      }
       g$$6++;
       v243 = 4 > g$$6;
     }
@@ -964,7 +935,11 @@ function v45(p$$2) {
       introspect(JAM.policy.p14) {
         var c$$15 = f$$6[e$$21]
       }
-      JAM.set(f$$6, e$$21, (c$$15 << 8 | c$$15 >>> 24) & 16711935 | (c$$15 << 24 | c$$15 >>> 8) & 4278255360, JAM.policy.p18);
+      var v244 = (c$$15 << 8 | c$$15 >>> 24) & 16711935;
+      var v245 = (c$$15 << 24 | c$$15 >>> 8) & 4278255360;
+      introspect(JAM.policy.p19) {
+        f$$6[e$$21] = v244 | v245;
+      }
       a$$27++;
       v246 = 16 > a$$27;
     }
@@ -1149,11 +1124,7 @@ function v45(p$$2) {
     var f$$5 = 0;
     var v256 = 64 > f$$5;
     for (;v256;) {
-      var v255 = k$$2;
-      var v487 = 4294967296 * p$$2.abs(p$$2.sin(f$$5 + 1));
-      introspect(JAM.policy.p18) {
-        v255[f$$5] = v487 | 0;
-      }
+      k$$2[f$$5] = 4294967296 * p$$2.abs(p$$2.sin(f$$5 + 1)) | 0;
       f$$5++;
       v256 = 64 > f$$5;
     }
@@ -1218,10 +1189,7 @@ function v40() {
         introspect(JAM.policy.p14) {
           var v631 = o$$2[v272]
         }
-        var v632 = (n$$3 | k$$1) << 24 - 8 * (m$$2 % 4);
-        introspect(JAM.policy.p18) {
-          o$$2[v272] = v631 | v632;
-        }
+        o$$2[v272] = v631 | (n$$3 | k$$1) << 24 - 8 * (m$$2 % 4);
         m$$2++;
       }
       s$$4++;
@@ -1402,10 +1370,7 @@ function v37(p, h$$4) {
       introspect(JAM.policy.p14) {
         var v642 = c$$7[v299]
       }
-      var v643 = (a$$12.charCodeAt(b$$4) & 255) << 24 - 8 * (b$$4 % 4);
-      introspect(JAM.policy.p18) {
-        c$$7[v299] = v642 | v643;
-      }
+      c$$7[v299] = v642 | (a$$12.charCodeAt(b$$4) & 255) << 24 - 8 * (b$$4 % 4);
       b$$4++;
       v300 = b$$4 < e$$12;
     }
@@ -1438,10 +1403,7 @@ function v37(p, h$$4) {
       introspect(JAM.policy.p14) {
         var v645 = c$$5[v303]
       }
-      var v646 = parseInt(a$$10.substr(b$$2, 2), 16) << 24 - 4 * (b$$2 % 8);
-      introspect(JAM.policy.p18) {
-        c$$5[v303] = v645 | v646;
-      }
+      c$$5[v303] = v645 | parseInt(a$$10.substr(b$$2, 2), 16) << 24 - 4 * (b$$2 % 8);
       b$$2 = b$$2 + 2;
       v304 = b$$2 < e$$10;
     }
@@ -1493,10 +1455,7 @@ function v37(p, h$$4) {
     introspect(JAM.policy.p14) {
       var v650 = a$$6[v314]
     }
-    var v651 = 4294967295 << 32 - 8 * (e$$7 % 4);
-    introspect(JAM.policy.p18) {
-      a$$6[v314] = v650 & v651;
-    }
+    a$$6[v314] = v650 & 4294967295 << 32 - 8 * (e$$7 % 4);
     var v998 = p.ceil(e$$7 / 4);
     a$$6.length = v998;
     return;
@@ -1519,10 +1478,7 @@ function v37(p, h$$4) {
         introspect(JAM.policy.p14) {
           var v891 = c$$2[v930]
         }
-        var v653 = (v891 >>> 24 - 8 * (d % 4) & 255) << 24 - 8 * ((b + d) % 4);
-        introspect(JAM.policy.p18) {
-          e$$6[v316] = v652 | v653;
-        }
+        e$$6[v316] = v652 | (v891 >>> 24 - 8 * (d % 4) & 255) << 24 - 8 * ((b + d) % 4);
         d++;
         v317 = d < a$$5;
       }
@@ -1533,7 +1489,7 @@ function v37(p, h$$4) {
         for (;v319;) {
           var v318 = b + d >>> 2;
           var v530 = d >>> 2;
-          introspect(JAM.policy.p20) {
+          introspect(JAM.policy.p14) {
             e$$6[v318] = c$$2[v530];
           }
           d = d + 4;
@@ -1661,7 +1617,7 @@ function SNote(serverPath, divParent) {
     m_divDeleteDialog = createPopupDialog("delete_dialog", m_divInternal$$1);
     var parent$$inline_33 = m_divDeleteDialog;
     label = document.createElement("label");
-    JAM.set(label, "textContent", "Are you sure you want to delete?", JAM.policy.p19);
+    JAM.set(label, "textContent", "Are you sure you want to delete?", JAM.policy.p18);
     JAM.call(parent$$inline_33.appendChild, parent$$inline_33, [label]);
     createDialogButtonPanel(handleDeleteDialogOk, handleDeleteDialogCancel, m_divDeleteDialog);
     m_divDeleteDialog.style.display = "none";
@@ -1680,7 +1636,7 @@ function SNote(serverPath, divParent) {
     divPassword = document.createElement("div");
     JAM.call(parent$$1.appendChild, parent$$1, [divPassword]);
     labelPassword = document.createElement("label");
-    JAM.set(labelPassword, "textContent", strPrompt, JAM.policy.p19);
+    JAM.set(labelPassword, "textContent", strPrompt, JAM.policy.p18);
     JAM.call(divPassword.appendChild, divPassword, [labelPassword]);
     inputPassword = document.createElement("input");
     inputPassword.type = "password";
@@ -1700,12 +1656,12 @@ function SNote(serverPath, divParent) {
     divButtons = document.createElement("div");
     buttonOk = document.createElement("button");
     buttonOk.type = "input";
-    JAM.set(buttonOk, "textContent", "ok", JAM.policy.p19);
+    JAM.set(buttonOk, "textContent", "ok", JAM.policy.p18);
     JAM.set(buttonOk, "onclick", funcHandleOk);
     JAM.call(divButtons.appendChild, divButtons, [buttonOk]);
     buttonCancel = document.createElement("button");
     buttonCancel.type = "input";
-    JAM.set(buttonCancel, "textContent", "cancel", JAM.policy.p19);
+    JAM.set(buttonCancel, "textContent", "cancel", JAM.policy.p18);
     JAM.set(buttonCancel, "onclick", funcHandleCancel);
     JAM.call(divButtons.appendChild, divButtons, [buttonCancel]);
     JAM.call(parent$$4.appendChild, parent$$4, [divButtons]);
@@ -1764,7 +1720,7 @@ function SNote(serverPath, divParent) {
       return;
     }
     function v0(strId) {
-      JAM.set(m_preNote, "textContent", "", JAM.policy.p19);
+      JAM.set(m_preNote, "textContent", "", JAM.policy.p18);
       fetch(m_strId, handleSuccessfulFetch, handleFailedFetch);
       return;
     }
@@ -1791,7 +1747,7 @@ function SNote(serverPath, divParent) {
         break JSCompiler_inline_label_decryptText_16;
       }
     }
-    JAM.set(m_preNote, "textContent", JSCompiler_inline_result$$0, JAM.policy.p19);
+    JAM.set(m_preNote, "textContent", JSCompiler_inline_result$$0, JAM.policy.p18);
     closeDialogsBoxes();
     m_imageEdit.style.display = "none";
     m_imageView.style.display = "none";
@@ -1948,14 +1904,14 @@ function SNoteSwindler(serverPath$$4, divParent$$2, strNoteId) {
   function createButton(strLabel$$1, strFunc, parent$$5) {
     button = document.createElement("button");
     button.type = "input";
-    JAM.set(button, "textContent", strLabel$$1, JAM.policy.p19);
+    JAM.set(button, "textContent", strLabel$$1, JAM.policy.p18);
     JAM.set(button, "onclick", strFunc);
     JAM.call(parent$$5.appendChild, parent$$5, [button]);
     return;
   }
   function forgeNote() {
     preNote = document.getElementById("note");
-    JAM.set(preNote, "textContent", "Forged note", JAM.policy.p19);
+    JAM.set(preNote, "textContent", "Forged note", JAM.policy.p18);
     return;
   }
   function forgeNoteInnerHTML() {

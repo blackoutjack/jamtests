@@ -1,7 +1,7 @@
 predicate-limit:0
 syntax-only:false
 jssec-bad.original.js:193
-jssec-bad.normalized.js:309
+jssec-bad.normalized.js:303
 policy.aut:15
 allFunctions:4
 allCallsites:15
@@ -15,8 +15,8 @@ callbacks-added-edges:109
 callbacks-added-states:92
 concrete-query-cache:concrete2029010803.bin
 symbolic-query-cache:symbolic2029010803.bin
-modular.policy.js:109
-policy.js:208
+modular.policy.js:105
+policy.js:200
 transactions:9
 checks:9
 callsites-indirected:0

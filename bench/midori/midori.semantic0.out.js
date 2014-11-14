@@ -232,11 +232,7 @@ function v98(containerId, targetId, correction$$1) {
   } else {
     v1104 = 1;
   }
-  var v718 = v1104;
-  var v719 = JAM.call(setInterval, null, [v97, 15]);
-  introspect(JAM.policy.p2) {
-    v168[v169] = {targetPos:currentPos, direction:v718, intervalId:v719};
-  }
+  v168[v169] = {targetPos:currentPos, direction:v1104, intervalId:JAM.call(setInterval, null, [v97, 15])};
   this.lastIntervalId = this.intervals[intervalKey$$3].intervalId;
   return;
 }
@@ -265,13 +261,7 @@ function v95(id$$2, correction) {
   var targetPos$$1 = v176 + v726;
   var intervalKey$$1 = Math.random();
   var dims = midori.getWindowDims();
-  var v178 = this.intervals;
-  var v179 = intervalKey$$1;
-  var v727 = dims.scrollTop;
-  var v728 = JAM.call(setInterval, null, [v94, 15]);
-  introspect(JAM.policy.p2) {
-    v178[v179] = {scrollPos:v727, intervalId:v728};
-  }
+  this.intervals[intervalKey$$1] = {scrollPos:dims.scrollTop, intervalId:JAM.call(setInterval, null, [v94, 15])};
   return;
 }
 function v93(intervalKey, targetPos) {
@@ -307,12 +297,7 @@ function v92(id$$1, callback$$27, constantSpeed, horiz$$1) {
   }
   var vars$$4 = {intervalKey:v186, element:element$$5, outsideSize:outsideSize$$1, elementSize:v1114 - outsideSize$$1, callback:callback$$27, constantSpeed:constantSpeed, what:what$$2};
   element$$5.style.overflow = "hidden";
-  var v189 = this.intervals;
-  var v190 = vars$$4.intervalKey;
-  var v734 = JAM.call(setInterval, null, [v91, 40]);
-  introspect(JAM.policy.p2) {
-    v189[v190] = {intervalId:v734};
-  }
+  this.intervals[vars$$4.intervalKey] = {intervalId:JAM.call(setInterval, null, [v91, 40])};
   return;
 }
 function v90(vars$$3) {
@@ -368,12 +353,7 @@ function v89(id, callback$$26, horiz) {
   }
   v747.elementSize = v1354 - JAM.call(this.getOutsideSize, this, [element$$4, what$$1]);
   JAM.call(midori.setStyles, midori, [element$$4, {display:"none", visibility:"visible"}]);
-  var v209 = this.intervals;
-  var v210 = vars$$2.intervalKey;
-  var v749 = JAM.call(setInterval, null, [v88, 40]);
-  introspect(JAM.policy.p2) {
-    v209[v210] = {newSize:0, intervalId:v749};
-  }
+  this.intervals[vars$$2.intervalKey] = {newSize:0, intervalId:JAM.call(setInterval, null, [v88, 40])};
   return;
 }
 function v87(vars$$1) {
@@ -553,7 +533,7 @@ function v80(element$$2, cb, callback$$25) {
     JAM.set(element$$2, "innerHTML", element$$2.innerHTML + 1);
   } else {
     var v787;
-    if (JAM.set(element$$2, "innerHTML", element$$2.innerHTML - 1) == 0) {
+    if ((element$$2.innerHTML = element$$2.innerHTML - 1) == 0) {
       v787 = JAM.set(element$$2, "innerHTML", "");
     } else {
       v787 = {};
@@ -602,11 +582,7 @@ function v77(obj$$20, maxLen) {
       if ((stLen = chunks$$1[i$$15].length) > maxLen) {
         var diffLen = Math.floor(stLen - maxLen);
         var startPos = Math.floor(stLen / 2 - diffLen / 2);
-        var v265 = chunks$$1[i$$15].substr(0, startPos) + "...";
-        var v266 = chunks$$1[i$$15].substr(startPos + diffLen);
-        introspect(JAM.policy.p2) {
-          chunks$$1[i$$15] = v265 + v266;
-        }
+        chunks$$1[i$$15] = chunks$$1[i$$15].substr(0, startPos) + "..." + chunks$$1[i$$15].substr(startPos + diffLen);
         shortened = true;
       }
       i$$15++;
@@ -1158,55 +1134,40 @@ function v46(target$$26, s$$2, a$$1, oneLevelOnly) {
   var v384 = i$$3 < numA$$1;
   for (;v384;) {
     chunks = a$$1[i$$3].match(/([a-z0-9_-]+)\s*([=^$*|!]{0,2})\s*"?([^"]*)"?$/i);
-    introspect(JAM.policy.p2) {
-      a$$1[i$$3] = chunks[1];
-    }
+    a$$1[i$$3] = chunks[1];
     switch(chunks[2]) {
       case "=":
         var v373 = exprs$$1;
         var v374 = i$$3;
         var v1631 = new RegExp("^" + chunks[3] + "$", "i");
-        introspect(JAM.policy.p2) {
-          v373[v374] = v1631;
-        }
+        v373[v374] = v1631;
         break;
       case "^=":
         var v375 = exprs$$1;
         var v376 = i$$3;
         var v1632 = new RegExp("^" + chunks[3], "i");
-        introspect(JAM.policy.p2) {
-          v375[v376] = v1632;
-        }
+        v375[v376] = v1632;
         break;
       case "$=":
         var v377 = exprs$$1;
         var v378 = i$$3;
         var v1633 = new RegExp(chunks[3] + "$", "i");
-        introspect(JAM.policy.p2) {
-          v377[v378] = v1633;
-        }
+        v377[v378] = v1633;
         break;
       case "*=":
         var v379 = exprs$$1;
         var v380 = i$$3;
         var v1634 = new RegExp(chunks[3], "i");
-        introspect(JAM.policy.p2) {
-          v379[v380] = v1634;
-        }
+        v379[v380] = v1634;
         break;
       case "&=":
         var v381 = exprs$$1;
         var v382 = i$$3;
         var v1635 = new RegExp("^" + chunks[3] + "$|^" + chunks[3] + "\\s|\\s" + chunks[3] + "\\s|\\s" + chunks[3] + "$", "i");
-        introspect(JAM.policy.p2) {
-          v381[v382] = v1635;
-        }
+        v381[v382] = v1635;
         break;
       case "!=":
-        introspect(JAM.policy.p2) {
-          exprs$$1[i$$3] = chunks[3];
-        }
-      ;
+        exprs$$1[i$$3] = chunks[3];
     }
     i$$3++;
     v384 = i$$3 < numA$$1;
@@ -1496,24 +1457,13 @@ function v42(selectorText) {
           ;
           case ",":
             inSelector = false;
-            introspect(JAM.policy.p2) {
-              separators[sI] = c$$1[i$$1];
-            }
+            separators[sI] = c$$1[i$$1];
             break;
           case "\\":
-            var v918 = elements[sI];
-            var v919 = c$$1[i$$1 = i$$1 + 1];
-            introspect(JAM.policy.p2) {
-              elements[sI] = v918 + v919;
-            }
+            elements[sI] = elements[sI] + c$$1[i$$1 = i$$1 + 1];
             break;
           default:
-            var v920 = elements[sI];
-            var v921 = c$$1[i$$1];
-            introspect(JAM.policy.p2) {
-              elements[sI] = v920 + v921;
-            }
-          ;
+            elements[sI] = elements[sI] + c$$1[i$$1];
         }
       }
     } else {
@@ -1523,22 +1473,12 @@ function v42(selectorText) {
         case ">":
         ;
         case ",":
-          var v922 = separators[sI];
-          var v923 = c$$1[i$$1];
-          introspect(JAM.policy.p2) {
-            separators[sI] = v922 + v923;
-          }
+          separators[sI] = separators[sI] + c$$1[i$$1];
           break;
         default:
           inSelector = true;
-          var v431 = sI = sI + 1;
-          introspect(JAM.policy.p2) {
-            elements[v431] = c$$1[i$$1];
-          }
-          introspect(JAM.policy.p2) {
-            attrs[sI] = [];
-          }
-        ;
+          elements[sI = sI + 1] = c$$1[i$$1];
+          attrs[sI] = [];
       }
     }
     i$$1++;
@@ -1842,10 +1782,7 @@ function midoriDragDrop(containerId$$1, dropCallback) {
       var v509 = j$$3 < numObjs$$4;
       for (;v509;) {
         if (thisObj$$1.objs[j$$3] == o$$9) {
-          var v507 = thisObj$$1.objs;
-          introspect(JAM.policy.p2) {
-            v507[j$$3] = "";
-          }
+          thisObj$$1.objs[j$$3] = "";
           break;
         }
         j$$3++;
@@ -1860,10 +1797,7 @@ function midoriDragDrop(containerId$$1, dropCallback) {
     var v513 = j$$3 < numObjs$$4;
     for (;v513;) {
       if (this.objs[j$$3] == parentObj$$1) {
-        var v511 = this.objs;
-        introspect(JAM.policy.p2) {
-          v511[j$$3] = "";
-        }
+        this.objs[j$$3] = "";
         break;
       }
       j$$3++;

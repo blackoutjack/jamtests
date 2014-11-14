@@ -238,7 +238,7 @@ function v4() {
     var v38 = i$$1 < v92;
     for (;v38;) {
       var v37 = array$$9[i$$1];
-      JAM.set(result$$2, v37, !0);
+      result$$2[v37] = !0;
       i$$1++;
       var v93 = array$$9.length;
       v38 = i$$1 < v93;

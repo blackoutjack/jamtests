@@ -1,7 +1,7 @@
 predicate-limit:0
 syntax-only:false
 jsbench-yahoo-safari-urem.original.js:50078
-jsbench-yahoo-safari-urem.normalized.js:62380
+jsbench-yahoo-safari-urem.normalized.js:62377
 policy.aut:11
 allFunctions:110
 allCallsites:2338

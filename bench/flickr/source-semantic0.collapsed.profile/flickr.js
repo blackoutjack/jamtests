@@ -700,7 +700,7 @@ function v309() {
             JAM.call(frame.setStyle, frame, ["minHeight", "1px"], JAM.policy.p1);
             JAM.call(frame.setStyle, frame, ["height", "auto"], JAM.policy.p1);
             thisMinHeight = JAM.call(Math.max, Math, [1, JAM.call(Math.ceil, Math, [JAM.call(frame.getAttribute, frame, ["offsetHeight"], JAM.policy.p1) / innerHeight], JAM.policy.p1)], JAM.policy.p1);
-            JAM.set(frameHeights, i$$101, thisMinHeight * innerHeight);
+            frameHeights[i$$101] = thisMinHeight * innerHeight;
             JAM.call(frame.setStyle, frame, ["minHeight", frameHeights[i$$101] + "px"], JAM.policy.p1);
             if (isOldIE) {
               JAM.call(frame.setStyle, frame, ["height", frameHeights[i$$101] + "px"], JAM.policy.p1);
@@ -2305,7 +2305,7 @@ function v233(e$$151, t$$148) {
             v681 = t$$149 < r$$99.length;
           }
           if (s$$71) {
-            JAM.set(i$$90, e$$152, !0);
+            i$$90[e$$152] = !0;
             u$$32 = !0;
             JAM.call(this.getRequires, this, [n$$116], JAM.policy.p1);
           }
@@ -2832,7 +2832,7 @@ function v231(e$$114, t$$103) {
         r$$95 = 0;
         var v723 = r$$95 < t$$142.data.length;
         for (;v723;) {
-          JAM.set(o$$45.inserted, t$$142.data[r$$95].name, !0);
+          o$$45.inserted[t$$142.data[r$$95].name] = !0;
           var v2066 = t$$142.data[r$$95].lang;
           if (!v2066) {
             v2066 = t$$142.data[r$$95].skinnable;
@@ -2879,7 +2879,7 @@ function v231(e$$114, t$$103) {
                 delete YUI.Env._cssLoaded[a$$27];
                 var v2085 = JAM.call(o$$45.isCSSLoaded, o$$45, [a$$27], JAM.policy.p1);
                 if (v2085) {
-                  JAM.set(o$$45.inserted, a$$27, !0);
+                  o$$45.inserted[a$$27] = !0;
                   delete o$$45.required[a$$27];
                 }
                 r$$95++;
@@ -2989,7 +2989,7 @@ function v231(e$$114, t$$103) {
           if (v2092) {
             s$$65 = JAM.call(e$$137.splice, e$$137, [u$$30, 1], JAM.policy.p1);
             JAM.call(e$$137.splice, e$$137, [o$$44, 0, s$$65[0]], JAM.policy.p1);
-            JAM.set(t$$140, f$$22, !0);
+            t$$140[f$$22] = !0;
             a$$26 = !0;
             break;
           }
@@ -3293,7 +3293,7 @@ function v231(e$$114, t$$103) {
       if (v766) {
         var v2117 = i$$80[o$$40];
         if (!v2117) {
-          JAM.set(i$$80, o$$40, !0);
+          i$$80[o$$40] = !0;
           n$$102 = JAM.call(s$$61.getModule, s$$61, [o$$40], JAM.policy.p1);
           if (n$$102) {
             u$$28 = n$$102.expound;
@@ -3413,7 +3413,7 @@ function v231(e$$114, t$$103) {
           v5588 = {};
         }
         JAM.set(v5453, t$$128, v5588);
-        JAM.set(e$$114.Env.lang[t$$128], i$$78, !0);
+        e$$114.Env.lang[t$$128][i$$78] = !0;
       }
     }
     return this.moduleInfo[r$$86];
@@ -3465,7 +3465,7 @@ function v231(e$$114, t$$103) {
         if (s$$59) {
           JAM.call(v$$5.each, v$$5, [s$$59, v194, this], JAM.policy.p1);
         }
-        JAM.set(i$$77, t$$125, !0);
+        i$$77[t$$125] = !0;
         r$$85.provides = i$$77;
       }
       v777 = r$$85.provides;
@@ -3512,7 +3512,7 @@ function v231(e$$114, t$$103) {
         i$$76 = !0;
       }
       r$$84.className = "";
-      JAM.set(YUI.Env._cssLoaded, t$$124, i$$76);
+      YUI.Env._cssLoaded[t$$124] = i$$76;
       v781 = i$$76;
     }
     return v781;
@@ -3534,7 +3534,7 @@ function v231(e$$114, t$$103) {
       }
       var v783 = v2131;
       if (v783) {
-        JAM.set(_$$1, n$$98, !0);
+        _$$1[n$$98] = !0;
         JAM.call(y$$36.push, y$$36, [n$$98], JAM.policy.p1);
       }
       return;
@@ -3632,7 +3632,7 @@ function v231(e$$114, t$$103) {
     for (;v794;) {
       if (!_$$1[S$$4[n$$97]]) {
         JAM.call(y$$36.push, y$$36, [S$$4[n$$97]], JAM.policy.p1);
-        JAM.set(_$$1, S$$4[n$$97], !0);
+        _$$1[S$$4[n$$97]] = !0;
         i$$75 = JAM.call(this.getModule, this, [S$$4[n$$97]], JAM.policy.p1);
         if (i$$75) {
           o$$36 = JAM.call(this.getRequires, this, [i$$75], JAM.policy.p1);
@@ -3667,7 +3667,7 @@ function v231(e$$114, t$$103) {
           if (v3351) {
             JAM.call(y$$36.push, y$$36, [S$$4[n$$97]], JAM.policy.p1);
           }
-          JAM.set(_$$1, S$$4[n$$97], !0);
+          _$$1[S$$4[n$$97]] = !0;
           i$$75 = JAM.call(this.getModule, this, [S$$4[n$$97]], JAM.policy.p1);
           if (i$$75) {
             o$$36 = JAM.call(this.getRequires, this, [i$$75], JAM.policy.p1);
@@ -3703,7 +3703,7 @@ function v231(e$$114, t$$103) {
       for (;v803;) {
         if (!_$$1[T$$3[n$$97]]) {
           JAM.call(y$$36.push, y$$36, [T$$3[n$$97]], JAM.policy.p1);
-          JAM.set(_$$1, T$$3[n$$97], !0);
+          _$$1[T$$3[n$$97]] = !0;
           i$$75 = O$$1[T$$3[n$$97]];
           if (i$$75) {
             o$$36 = JAM.call(this.getRequires, this, [i$$75], JAM.policy.p1);
@@ -3768,7 +3768,7 @@ function v231(e$$114, t$$103) {
             }
             b$$6 = v2163;
             if (b$$6) {
-              JAM.set(_$$1, n$$97, !0);
+              _$$1[n$$97] = !0;
               JAM.call(y$$36.push, y$$36, [n$$97], JAM.policy.p1);
               i$$75 = JAM.call(this.getModule, this, [n$$97], JAM.policy.p1);
               if (i$$75) {
@@ -3958,12 +3958,12 @@ function v231(e$$114, t$$103) {
                 s$$55 = 0;
                 var v825 = s$$55 < u$$24;
                 for (;v825;) {
-                  JAM.set(a$$23, n$$95.use[s$$55], !0);
+                  a$$23[n$$95.use[s$$55]] = !0;
                   s$$55++;
                   v825 = s$$55 < u$$24;
                 }
               } else {
-                JAM.set(a$$23, t$$120.use[i$$73], !0);
+                a$$23[t$$120.use[i$$73]] = !0;
               }
               i$$73++;
               v828 = i$$73 < o$$34;
@@ -4778,7 +4778,7 @@ function v231(e$$114, t$$103) {
         }
         var v3446 = v4379;
         if (v3446) {
-          JAM.set(e$$120.loaded, s$$50, !0);
+          e$$120.loaded[s$$50] = !0;
         }
       }
     }
@@ -7698,7 +7698,7 @@ function v113(e$$36, t$$24) {
       i$$26 = e$$58[r$$26];
       var v2473 = JAM.call(v$$3.call, v$$3, [t$$32, i$$26], JAM.policy.p1);
       if (!v2473) {
-        JAM.set(t$$32, i$$26, 1);
+        t$$32[i$$26] = 1;
         JAM.call(n$$27.push, n$$27, [i$$26], JAM.policy.p1);
       }
       ++r$$26;
@@ -7719,7 +7719,7 @@ function v113(e$$36, t$$24) {
       i$$25 = e$$57[r$$25];
       var v2474 = t$$31[i$$25];
       if (!v2474) {
-        JAM.set(t$$31, i$$25, 1);
+        t$$31[i$$25] = 1;
         JAM.call(n$$26.push, n$$26, [i$$25], JAM.policy.p1);
       }
       ++r$$25;
@@ -8383,13 +8383,13 @@ function v53() {
         p$$3 = null;
         var v4507;
         if (f$$5) {
-          JAM.set(l$$3, s$$13, !0);
+          l$$3[s$$13] = !0;
           h$$7 = f$$5.details.requires;
           v4507 = p$$3 = f$$5.details.use;
         } else {
           var v5209;
           if (u$$4._loaded[n$$4][s$$13]) {
-            v5209 = JAM.set(l$$3, s$$13, !0);
+            v5209 = l$$3[s$$13] = !0;
           } else {
             v5209 = JAM.call(g$$2.push, g$$2, [s$$13], JAM.policy.p1);
           }
@@ -8802,7 +8802,7 @@ function v53() {
             JAM.call(c$$2.message, c$$2, ["NOT loaded: " + r$$11, "warn", "yui"], JAM.policy.p1);
           }
         } else {
-          JAM.set(v$$1, r$$11, !0);
+          v$$1[r$$11] = !0;
           h$$5 = 0;
           var v1187 = h$$5 < c$$2.Env._missed.length;
           for (;v1187;) {
@@ -8927,7 +8927,7 @@ function v53() {
         a$$4 = v[f$$2];
         var v3718 = o$$5[a$$4.id];
         if (!v3718) {
-          JAM.set(o$$5, a$$4.id, !0);
+          o$$5[a$$4.id] = !0;
           u$$2 = a$$4.Env._loader;
           var v5410 = u$$2;
           if (v5410) {
@@ -9448,11 +9448,11 @@ function v25() {
     return imgs[stamp(node$$5)];
   }
   function v23(node$$4) {
-    JAM.set(imgs, stamp(node$$4), false);
+    imgs[stamp(node$$4)] = false;
     return;
   }
   function v22(node$$3) {
-    JAM.set(imgs, stamp(node$$3), true);
+    imgs[stamp(node$$3)] = true;
     return;
   }
   function stamp(node$$2) {
@@ -9967,7 +9967,7 @@ function v11(F$$1) {
     interval = interval || 10;
     if (!checkElementAndCallback()) {
       var v6088 = JAM.call(setInterval, null, [checkElementAndCallback, interval]);
-      JAM.set(pollers, pollerId, v6088);
+      pollers[pollerId] = v6088;
     }
     return;
   }

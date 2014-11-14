@@ -1,7 +1,7 @@
 predicate-limit:0
 syntax-only:false
 dmc-cc.original.js:617
-dmc-cc.normalized.js:1171
+dmc-cc.normalized.js:1156
 policy.aut:11
 allFunctions:8
 allCallsites:35

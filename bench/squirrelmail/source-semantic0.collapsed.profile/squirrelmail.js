@@ -24,14 +24,14 @@ for (;v4;) {
     if (v10) {
       pos = j;
     }
-    j = j + 1;
+    j++;
     var v11 = pos == -1;
     if (v11) {
       v11 = j < e;
     }
     v3 = v11;
   }
-  i = i + 1;
+  i++;
   var v12 = pos == -1;
   if (v12) {
     v12 = i < f;

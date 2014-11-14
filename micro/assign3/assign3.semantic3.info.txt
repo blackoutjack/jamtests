@@ -1,7 +1,7 @@
 predicate-limit:3
 syntax-only:false
 assign3.original.js:54
-assign3.normalized.js:88
+assign3.normalized.js:85
 policy.aut:6
 allFunctions:1
 allCallsites:2
@@ -15,8 +15,8 @@ callbacks-added-edges:26
 callbacks-added-states:25
 concrete-query-cache:concrete1808965873.bin
 symbolic-query-cache:symbolic1808965873.bin
-modular.policy.js:100
-policy.js:102
+modular.policy.js:97
+policy.js:99
 transactions:0
 checks:0
 callsites-indirected:0

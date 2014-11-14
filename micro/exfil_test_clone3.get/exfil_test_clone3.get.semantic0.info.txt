@@ -21,5 +21,5 @@ transactions:3
 checks:3
 callsites-indirected:2
 property-write-indirection:2
-property-read-indirection:0
+property-read-indirection:1
 temporary-variables-collapsed:2

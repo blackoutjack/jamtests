@@ -1,7 +1,7 @@
 predicate-limit:3
 syntax-only:false
 quicksort.original.js:182
-quicksort.normalized.js:283
+quicksort.normalized.js:274
 policy.aut:6
 allFunctions:2
 allCallsites:6
@@ -15,8 +15,8 @@ callbacks-added-edges:118
 callbacks-added-states:105
 concrete-query-cache:concrete-1573338672.bin
 symbolic-query-cache:symbolic-1573338672.bin
-modular.policy.js:100
-policy.js:102
+modular.policy.js:97
+policy.js:99
 transactions:0
 checks:0
 callsites-indirected:0

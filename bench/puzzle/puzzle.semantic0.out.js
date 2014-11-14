@@ -455,7 +455,7 @@ function v150(name$$32, fn$$10, interval) {
   }
   var v302 = AJS._reccruing_tos;
   var v15392 = JAM.call(setTimeout, null, [fn$$10, interval]);
-  JAM.set(v302, name$$32, v15392);
+  v302[name$$32] = v15392;
   return;
 }
 function v149(fn$$9, extra_args$$1) {
@@ -13446,7 +13446,7 @@ function v15() {
           CWi(e$$77, yxg + nUi(b$$199) + Bxg);
         } else {
           if (e$$77.e == bmi) {
-            b$$199 = JAM.set(a$$293, d$$91, 32);
+            b$$199 = a$$293[d$$91] = 32;
           }
           yxg + nUi(b$$199) + Bxg;
         }
@@ -13484,7 +13484,7 @@ function v15() {
                 CWi(e$$77, Cxg + nUi(b$$199) + Dxg);
                 break;
               case 2:
-                b$$199 = JAM.set(a$$293, d$$91, 65533);
+                b$$199 = a$$293[d$$91] = 65533;
               case 0:
                 Cxg + nUi(b$$199) + Dxg;
             }

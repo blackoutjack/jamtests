@@ -11,7 +11,7 @@ var policy = function() {
         commit = false;
         break;
       }
-      if (!states[1] && (node.id === "setCookieSentinel" && JAM.identical(node.value, true))) {
+      if (!states[1] && (node.id === "setCookieSentinel" && node.value === true)) {
         states[1] = true;
       }
     }

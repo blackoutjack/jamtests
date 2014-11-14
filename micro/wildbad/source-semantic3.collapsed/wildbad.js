@@ -1,6 +1,8 @@
 function runTest() {
   var a = document.getElementById("ok");
-  JAM.set(a, "innerHTML", 1, JAM.policy.p1)
+  introspect(JAM.policy.p1) {
+    a.innerHTML = 1;
+  }
 
   return a.innerHTML === "THIS SHOULD REMAIN";
 }

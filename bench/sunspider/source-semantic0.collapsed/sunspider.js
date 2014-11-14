@@ -8,7 +8,7 @@ function warmup() {
       if (Math.atan(Math.acos(Math.asin(Math.random()))) > 4) {
         return;
       }
-      i$$2 = i$$2 + 1;
+      ++i$$2;
       v1 = i$$2 < 100;
     }
     v2 = new Date - start$$5 < warmupMS;
@@ -36,7 +36,7 @@ function next() {
     window.setTimeout(next, 0);
   } else {
     if ((currentRepeat = currentRepeat + 1) < repeatCount) {
-      JAM.set(document.getElementById("countdown"), "innerHTML", repeatCount - currentRepeat);
+      document.getElementById("countdown").innerHTML = repeatCount - currentRepeat;
       testIndex = -1;
       window.setTimeout(next, 128);
     } else {
@@ -76,7 +76,7 @@ function finish() {
         time$$1 = '"NaN"';
       }
       outputString = outputString + (time$$1 + ",");
-      i$$3 = i$$3 + 1;
+      i$$3++;
       v17 = i$$3 < output.length;
     }
     outputString = outputString.substring(0, outputString.length - 1);
@@ -292,7 +292,7 @@ var i = 0;
 var v22 = i < output.length;
 for (;v22;) {
   output[i] = {};
-  i = i + 1;
+  i++;
   v22 = i < output.length;
 }
 start()

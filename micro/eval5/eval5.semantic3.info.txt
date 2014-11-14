@@ -1,7 +1,7 @@
 predicate-limit:3
 syntax-only:false
 eval5.original.js:103
-eval5.normalized.js:145
+eval5.normalized.js:139
 policy.aut:6
 allFunctions:2
 allCallsites:5
@@ -15,8 +15,8 @@ callbacks-added-edges:60
 callbacks-added-states:51
 concrete-query-cache:concrete-1834519819.bin
 symbolic-query-cache:symbolic-1834519819.bin
-modular.policy.js:100
-policy.js:102
+modular.policy.js:97
+policy.js:99
 transactions:0
 checks:0
 callsites-indirected:1

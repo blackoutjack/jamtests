@@ -6,7 +6,7 @@ var policy = function() {
     var len = as.length;
     for (var i = 0;i < len;i++) {
       var node = as[i];
-      if (true && JAM.instanceof(node.obj, _CSSStyleDeclaration) && !JAM.identical(node.id, "display")) {
+      if (true && JAM.instanceof(node.obj, _CSSStyleDeclaration) && node.id !== "display") {
         commit = false;
         break;
       }
@@ -26,7 +26,7 @@ var policy = function() {
     var len = as.length;
     for (var i = 0;i < len;i++) {
       var node = as[i];
-      if (true && JAM.instanceof(node.obj, _CSSStyleDeclaration) && !JAM.identical(node.id, "display")) {
+      if (true && JAM.instanceof(node.obj, _CSSStyleDeclaration) && node.id !== "display") {
         commit = false;
         break;
       }

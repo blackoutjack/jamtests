@@ -843,7 +843,7 @@ function v183(r_text$$1) {
         var v465 = item["attrs"];
         var v466 = c_attr[0];
         var v1372 = parseInt(val$$5);
-        JAM.set(v465, v466, v1372);
+        v465[v466] = v1372;
       } else {
         JAM.set(item["attrs"], c_attr[0], val$$5);
       }
@@ -1374,7 +1374,7 @@ function v134(name$$32, fn$$10, interval) {
   }
   var v569 = AJS._reccruing_tos;
   var v1381 = JAM.call(setTimeout, null, [fn$$10, interval]);
-  JAM.set(v569, name$$32, v1381);
+  v569[name$$32] = v1381;
   return;
 }
 function v133(fn$$9, extra_args$$1) {

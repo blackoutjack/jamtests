@@ -183,7 +183,7 @@ function v4() {
     var i$$1 = 0;
     var v38 = i$$1 < array$$9.length;
     for (;v38;) {
-      JAM.set(result$$2, array$$9[i$$1], !0);
+      result$$2[array$$9[i$$1]] = !0;
       i$$1++;
       v38 = i$$1 < array$$9.length;
     }

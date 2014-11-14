@@ -1,7 +1,7 @@
 predicate-limit:3
 syntax-only:false
 mergesort.original.js:230
-mergesort.normalized.js:392
+mergesort.normalized.js:383
 policy.aut:6
 allFunctions:2
 allCallsites:16
@@ -15,8 +15,8 @@ callbacks-added-edges:160
 callbacks-added-states:143
 concrete-query-cache:concrete-167693702.bin
 symbolic-query-cache:symbolic-167693702.bin
-modular.policy.js:100
-policy.js:102
+modular.policy.js:97
+policy.js:99
 transactions:0
 checks:0
 callsites-indirected:0

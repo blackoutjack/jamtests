@@ -294,9 +294,7 @@ function v70() {
         var v120 = M$$8;
         var v121 = ae;
         var v1072 = N$$4(M$$8[ae - 3] ^ M$$8[ae - 8] ^ M$$8[ae - 14] ^ M$$8[ae - 16], 1);
-        introspect(JAM.policy.p2) {
-          v120[v121] = v1072;
-        }
+        v120[v121] = v1072;
         ae++;
         v122 = ae <= 79;
       }

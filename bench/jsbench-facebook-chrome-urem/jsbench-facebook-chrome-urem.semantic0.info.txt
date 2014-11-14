@@ -1,7 +1,7 @@
 predicate-limit:0
 syntax-only:false
 jsbench-facebook-chrome-urem.original.js:112823
-jsbench-facebook-chrome-urem.normalized.js:139598
+jsbench-facebook-chrome-urem.normalized.js:139595
 policy.aut:11
 allFunctions:169
 allCallsites:5809

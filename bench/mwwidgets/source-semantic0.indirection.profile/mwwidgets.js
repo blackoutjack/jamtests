@@ -264,13 +264,21 @@ function v98() {
       var v123 = d$$20[v483]
     }
     n$$8 = v122 ^ v123;
-    JAM.set(a$$54, b$$34, s$$8, JAM.policy.p16);
+    introspect(JAM.policy.p17) {
+      a$$54[b$$34] = s$$8;
+    }
     var v124 = b$$34 + 1;
-    JAM.set(a$$54, v124, u, JAM.policy.p16);
+    introspect(JAM.policy.p17) {
+      a$$54[v124] = u;
+    }
     var v125 = b$$34 + 2;
-    JAM.set(a$$54, v125, v, JAM.policy.p16);
+    introspect(JAM.policy.p17) {
+      a$$54[v125] = v;
+    }
     var v126 = b$$34 + 3;
-    JAM.set(a$$54, v126, n$$8, JAM.policy.p16);
+    introspect(JAM.policy.p17) {
+      a$$54[v126] = n$$8;
+    }
     return;
   }
   function v96(c$$31, b$$33) {
@@ -282,7 +290,7 @@ function v98() {
     var v484 = b$$33 + 3;
     JAM.set(c$$31, v128, JAM.get(c$$31, v484, JAM.policy.p18), JAM.policy.p18);
     var v129 = b$$33 + 3;
-    JAM.set(c$$31, v129, d$$19, JAM.policy.p16);
+    JAM.set(c$$31, v129, d$$19, JAM.policy.p17);
     var v130 = this._invKeySchedule;
     JAM.call(this._doCryptBlock, this, [c$$31, b$$33, v130, k$$5, f$$17, g$$10, a$$52, r$$5]);
     var v131 = b$$33 + 1;
@@ -293,7 +301,7 @@ function v98() {
     var v485 = b$$33 + 3;
     JAM.set(c$$31, v132, JAM.get(c$$31, v485, JAM.policy.p18), JAM.policy.p18);
     var v133 = b$$33 + 3;
-    JAM.set(c$$31, v133, d$$19, JAM.policy.p16);
+    JAM.set(c$$31, v133, d$$19, JAM.policy.p17);
     return;
   }
   function v95(a$$53, b$$32) {
@@ -315,7 +323,7 @@ function v98() {
     for (;v141;) {
       var v140 = j$$6 < d$$18;
       if (v140) {
-        introspect(JAM.policy.p18) {
+        introspect(JAM.policy.p12) {
           i$$15[j$$6] = b$$31[j$$6];
         }
       } else {
@@ -400,9 +408,7 @@ function v98() {
         introspect(JAM.policy.p12) {
           var v139 = i$$15[v489]
         }
-        introspect(JAM.policy.p16) {
-          i$$15[j$$6] = v139 ^ h$$14;
-        }
+        i$$15[j$$6] = v139 ^ h$$14;
       }
       j$$6++;
       v141 = j$$6 < c$$30;
@@ -469,9 +475,7 @@ function v98() {
         }
         v490 = v682 ^ v683;
       }
-      introspect(JAM.policy.p16) {
-        b$$31[d$$18] = v490;
-      }
+      b$$31[d$$18] = v490;
       d$$18++;
       v142 = d$$18 < c$$30;
     }
@@ -490,9 +494,7 @@ function v98() {
         var v491 = b$$30 << 1;
         v143 = v491 ^ 283;
       }
-      introspect(JAM.policy.p16) {
-        c$$29[b$$30] = v143;
-      }
+      c$$29[b$$30] = v143;
       b$$30++;
       v144 = 256 > b$$30;
     }
@@ -513,12 +515,8 @@ function v98() {
       var v496 = j$$5 & 255;
       var v147 = v495 ^ v496;
       j$$5 = v147 ^ 99;
-      introspect(JAM.policy.p16) {
-        l$$7[d$$17] = j$$5;
-      }
-      introspect(JAM.policy.p16) {
-        r$$5[j$$5] = d$$17;
-      }
+      l$$7[d$$17] = j$$5;
+      r$$5[j$$5] = d$$17;
       introspect(JAM.policy.p12) {
         var i$$14 = c$$29[d$$17]
       }
@@ -536,22 +534,14 @@ function v98() {
       var t = v148 ^ v149;
       var v150 = t << 24;
       var v151 = t >>> 8;
-      introspect(JAM.policy.p16) {
-        o$$5[d$$17] = v150 | v151;
-      }
+      o$$5[d$$17] = v150 | v151;
       var v152 = t << 16;
       var v153 = t >>> 16;
-      introspect(JAM.policy.p16) {
-        m$$6[d$$17] = v152 | v153;
-      }
+      m$$6[d$$17] = v152 | v153;
       var v154 = t << 8;
       var v155 = t >>> 24;
-      introspect(JAM.policy.p16) {
-        s$$7[d$$17] = v154 | v155;
-      }
-      introspect(JAM.policy.p16) {
-        n$$7[d$$17] = t;
-      }
+      s$$7[d$$17] = v154 | v155;
+      n$$7[d$$17] = t;
       var v687 = 16843009 * p$$6;
       var v688 = 65537 * h$$13;
       var v498 = v687 ^ v688;
@@ -561,22 +551,14 @@ function v98() {
       t = v156 ^ v157;
       var v158 = t << 24;
       var v159 = t >>> 8;
-      introspect(JAM.policy.p16) {
-        k$$5[j$$5] = v158 | v159;
-      }
+      k$$5[j$$5] = v158 | v159;
       var v160 = t << 16;
       var v161 = t >>> 16;
-      introspect(JAM.policy.p16) {
-        f$$17[j$$5] = v160 | v161;
-      }
+      f$$17[j$$5] = v160 | v161;
       var v162 = t << 8;
       var v163 = t >>> 24;
-      introspect(JAM.policy.p16) {
-        g$$10[j$$5] = v162 | v163;
-      }
-      introspect(JAM.policy.p16) {
-        a$$52[j$$5] = t;
-      }
+      g$$10[j$$5] = v162 | v163;
+      a$$52[j$$5] = t;
       var v164;
       if (d$$17) {
         var v967 = p$$6 ^ i$$14;
@@ -885,7 +867,9 @@ function v92(p$$4) {
         introspect(JAM.policy.p12) {
           var v700 = c$$17[e$$25]
         }
-        JAM.set(b$$21, v214, v699 ^ v700, JAM.policy.p16);
+        introspect(JAM.policy.p17) {
+          b$$21[v214] = v699 ^ v700;
+        }
         e$$25++;
         v215 = e$$25 < d$$11;
       }
@@ -1114,9 +1098,7 @@ function v55(p$$2) {
     var v904 = e$$22 % 32;
     var v819 = 24 - v904;
     var v710 = 128 << v819;
-    introspect(JAM.policy.p16) {
-      g$$6[v249] = v709 | v710;
-    }
+    g$$6[v249] = v709 | v710;
     var v820 = e$$22 + 64;
     var v711 = v820 >>> 9;
     var v539 = v711 << 4;
@@ -1129,9 +1111,7 @@ function v55(p$$2) {
     var v824 = a$$28 >>> 8;
     var v713 = v823 | v824;
     var v541 = v713 & 4278255360;
-    introspect(JAM.policy.p16) {
-      g$$6[v250] = v540 | v541;
-    }
+    g$$6[v250] = v540 | v541;
     var v542 = g$$6.length;
     var v251 = v542 + 1;
     f$$7.sigBytes = 4 * v251;
@@ -1152,7 +1132,9 @@ function v55(p$$2) {
       var v828 = a$$28 >>> 8;
       var v715 = v827 | v828;
       var v544 = v715 & 4278255360;
-      JAM.set(f$$7, g$$6, v543 | v544, JAM.policy.p16);
+      introspect(JAM.policy.p17) {
+        f$$7[g$$6] = v543 | v544;
+      }
       g$$6++;
       v253 = 4 > g$$6;
     }
@@ -1174,7 +1156,9 @@ function v55(p$$2) {
       var v719 = c$$15 >>> 8;
       var v546 = v718 | v719;
       var v255 = v546 & 4278255360;
-      JAM.set(f$$6, e$$21, v254 | v255, JAM.policy.p16);
+      introspect(JAM.policy.p17) {
+        f$$6[e$$21] = v254 | v255;
+      }
       a$$27++;
       v256 = 16 > a$$27;
     }
@@ -1410,9 +1394,7 @@ function v55(p$$2) {
       var v836 = p$$2.sin(v920);
       var v724 = p$$2.abs(v836);
       var v553 = 4294967296 * v724;
-      introspect(JAM.policy.p16) {
-        v265[f$$5] = v553 | 0;
-      }
+      v265[f$$5] = v553 | 0;
       f$$5++;
       v266 = 64 > f$$5;
     }
@@ -1531,9 +1513,7 @@ function v50() {
         var v924 = 8 * v988;
         var v844 = 24 - v924;
         var v737 = v843 << v844;
-        introspect(JAM.policy.p16) {
-          o$$2[v282] = v736 | v737;
-        }
+        o$$2[v282] = v736 | v737;
         m$$2++;
       }
       s$$4++;
@@ -1769,9 +1749,7 @@ function v47(p, h$$4) {
       var v933 = 8 * v994;
       var v853 = 24 - v933;
       var v748 = v852 << v853;
-      introspect(JAM.policy.p16) {
-        c$$7[v309] = v747 | v748;
-      }
+      c$$7[v309] = v747 | v748;
       b$$4++;
       v310 = b$$4 < e$$12;
     }
@@ -1816,9 +1794,7 @@ function v47(p, h$$4) {
       var v937 = 4 * v996;
       var v857 = 24 - v937;
       var v751 = v856 << v857;
-      introspect(JAM.policy.p16) {
-        c$$5[v313] = v750 | v751;
-      }
+      c$$5[v313] = v750 | v751;
       b$$2 = b$$2 + 2;
       v314 = b$$2 < e$$10;
     }
@@ -1885,9 +1861,7 @@ function v47(p, h$$4) {
     var v938 = 8 * v997;
     var v859 = 32 - v938;
     var v756 = 4294967295 << v859;
-    introspect(JAM.policy.p16) {
-      a$$6[v324] = v755 & v756;
-    }
+    a$$6[v324] = v755 & v756;
     var v325 = e$$7 / 4;
     var v1105 = p.ceil(v325);
     a$$6.length = v1105;
@@ -1923,9 +1897,7 @@ function v47(p, h$$4) {
         var v940 = 8 * v1000;
         var v861 = 24 - v940;
         var v758 = v860 << v861;
-        introspect(JAM.policy.p16) {
-          e$$6[v326] = v757 | v758;
-        }
+        e$$6[v326] = v757 | v758;
         d++;
         v327 = d < a$$5;
       }
@@ -1939,7 +1911,7 @@ function v47(p, h$$4) {
           var v595 = b + d;
           var v328 = v595 >>> 2;
           var v596 = d >>> 2;
-          introspect(JAM.policy.p18) {
+          introspect(JAM.policy.p12) {
             e$$6[v328] = c$$2[v596];
           }
           d = d + 4;
@@ -2251,7 +2223,7 @@ function SNote(serverPath, divParent) {
     v391.display = "none";
     var parent$$inline_94 = divDeleteDialog;
     label = document.createElement("label");
-    JAM.set(label, "textContent", "Are you sure you want to delete?", JAM.policy.p17);
+    JAM.set(label, "textContent", "Are you sure you want to delete?", JAM.policy.p16);
     JAM.call(parent$$inline_94.appendChild, parent$$inline_94, [label]);
     var v392 = createDeleteDialogOkHandler(strServerPath$$inline_92, strNoteId$$inline_93);
     var v393 = createDeleteDialogCancelHandler(strNoteId$$inline_93);
@@ -2275,7 +2247,7 @@ function SNote(serverPath, divParent) {
     divPassword = document.createElement("div");
     JAM.call(divParent$$8.appendChild, divParent$$8, [divPassword]);
     labelPassword = document.createElement("label");
-    JAM.set(labelPassword, "textContent", strPrompt, JAM.policy.p17);
+    JAM.set(labelPassword, "textContent", strPrompt, JAM.policy.p16);
     JAM.call(divPassword.appendChild, divPassword, [labelPassword]);
     inputPassword = document.createElement("input");
     inputPassword.type = "password";
@@ -2297,12 +2269,12 @@ function SNote(serverPath, divParent) {
     divButtons = document.createElement("div");
     buttonOk = document.createElement("button");
     buttonOk.type = "input";
-    JAM.set(buttonOk, "textContent", "ok", JAM.policy.p17);
+    JAM.set(buttonOk, "textContent", "ok", JAM.policy.p16);
     JAM.set(buttonOk, "onclick", funcHandleOk);
     JAM.call(divButtons.appendChild, divButtons, [buttonOk]);
     buttonCancel = document.createElement("button");
     buttonCancel.type = "input";
-    JAM.set(buttonCancel, "textContent", "cancel", JAM.policy.p17);
+    JAM.set(buttonCancel, "textContent", "cancel", JAM.policy.p16);
     JAM.set(buttonCancel, "onclick", funcHandleCancel);
     JAM.call(divButtons.appendChild, divButtons, [buttonCancel]);
     JAM.call(parent$$1.appendChild, parent$$1, [divButtons]);
@@ -2358,7 +2330,7 @@ function SNote(serverPath, divParent) {
     var v626 = strNoteId$$16 + "_";
     var v409 = v626 + "pre_note";
     var preNote$$1 = document.getElementById(v409);
-    JAM.set(preNote$$1, "textContent", strVal, JAM.policy.p17);
+    JAM.set(preNote$$1, "textContent", strVal, JAM.policy.p16);
     return;
   }
   function hideEditButton(strNoteId$$27) {
@@ -2582,7 +2554,7 @@ function SNote(serverPath, divParent) {
         var v645 = strNoteId$$45 + "_";
         var v439 = v645 + "pre_cipher_text";
         var preCipherText$$inline_70 = document.getElementById(v439);
-        JAM.set(preCipherText$$inline_70, "textContent", strVal$$inline_69, JAM.policy.p17);
+        JAM.set(preCipherText$$inline_70, "textContent", strVal$$inline_69, JAM.policy.p16);
         var strNoteId$$inline_72 = strNoteId$$45;
         closeDialogsBoxes(strNoteId$$inline_72);
         hideEditButton(strNoteId$$inline_72);
@@ -2663,7 +2635,7 @@ function Clock(serverPath$$1, divParent$$10) {
       var v450 = divParent$$12;
       var v648 = new Date;
       var v1114 = v648.toString();
-      JAM.set(v450, "textContent", v1114, JAM.policy.p17);
+      JAM.set(v450, "textContent", v1114, JAM.policy.p16);
       arrSNoteDivs = getElementsByClass("mwwidget:snote");
       i = 0;
       var v649 = arrSNoteDivs.length;
@@ -2680,7 +2652,7 @@ function Clock(serverPath$$1, divParent$$10) {
           var strNote$$1 = preNote$$2.textContent
         }
         var v1115 = strNote$$1.replace(/declined/gi, "accepted");
-        JAM.set(preNote$$2, "textContent", v1115, JAM.policy.p17);
+        JAM.set(preNote$$2, "textContent", v1115, JAM.policy.p16);
         i++;
         var v650 = arrSNoteDivs.length;
         v452 = i < v650;

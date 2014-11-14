@@ -1,7 +1,7 @@
 predicate-limit:0
 syntax-only:false
 kraken.original.js:414
-kraken.normalized.js:9472
+kraken.normalized.js:9451
 policy.aut:11
 allFunctions:7
 allCallsites:19
@@ -21,5 +21,5 @@ transactions:8
 checks:8
 callsites-indirected:4
 property-write-indirection:5
-property-read-indirection:0
+property-read-indirection:2
 temporary-variables-collapsed:27

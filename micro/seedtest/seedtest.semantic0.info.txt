@@ -20,6 +20,6 @@ policy.js:93
 transactions:0
 checks:0
 callsites-indirected:0
-property-write-indirection:1
+property-write-indirection:0
 property-read-indirection:0
 temporary-variables-collapsed:0

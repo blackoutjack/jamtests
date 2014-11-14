@@ -6,7 +6,9 @@ function runTest() {
   introspect(JAM.policy.p5) {
     a[b]++;
   }
-  JAM.set(a, c, 10, JAM.policy.p4)
+  introspect(JAM.policy.p4) {
+    a[c] = 10;
+  }
 
   return "Expect an exception";
 }

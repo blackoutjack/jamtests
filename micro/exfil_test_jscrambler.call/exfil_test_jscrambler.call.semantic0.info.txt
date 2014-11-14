@@ -1,7 +1,7 @@
 predicate-limit:0
 syntax-only:false
 exfil_test_jscrambler.call.original.js:175
-exfil_test_jscrambler.call.normalized.js:302
+exfil_test_jscrambler.call.normalized.js:299
 policy.aut:11
 allFunctions:3
 allCallsites:12

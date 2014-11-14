@@ -1,7 +1,7 @@
 predicate-limit:0
 syntax-only:false
 sunspider.original.js:407
-sunspider.normalized.js:1453
+sunspider.normalized.js:1444
 policy.aut:11
 allFunctions:5
 allCallsites:23
@@ -20,6 +20,6 @@ policy.js:196
 transactions:6
 checks:6
 callsites-indirected:2
-property-write-indirection:4
-property-read-indirection:0
+property-write-indirection:3
+property-read-indirection:1
 temporary-variables-collapsed:33

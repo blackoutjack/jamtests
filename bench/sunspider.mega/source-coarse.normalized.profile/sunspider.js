@@ -18,7 +18,7 @@ function warmup() {
       if (v0) {
         return;
       }
-      i$$2 = i$$2 + 1;
+      ++i$$2;
       v1 = i$$2 < 100;
     }
     var v39 = new Date;
@@ -94,7 +94,7 @@ function finish() {
       }
       var v31 = time$$1 + ",";
       outputString = outputString + v31;
-      i$$3 = i$$3 + 1;
+      i$$3++;
       var v32 = output.length;
       v17 = i$$3 < v32;
     }
@@ -317,7 +317,7 @@ var v35 = output.length;
 var v22 = i < v35;
 for (;v22;) {
   output[i] = {};
-  i = i + 1;
+  i++;
   var v36 = output.length;
   v22 = i < v36;
 }

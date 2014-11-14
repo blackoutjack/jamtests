@@ -7,11 +7,11 @@ var policy = function() {
     var len = as.length;
     for (var i = 0;i < len;i++) {
       var node = as[i];
-      if (states[1] && !JAM.identical(_location["href"], "http://localhost/")) {
+      if (states[1] && _location["href"] !== "http://localhost/") {
         commit = false;
         break;
       }
-      if (!states[1] && JAM.identical(_location["href"], "http://localhost/")) {
+      if (!states[1] && _location["href"] === "http://localhost/") {
         states[1] = true;
       }
     }

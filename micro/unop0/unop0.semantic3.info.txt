@@ -1,7 +1,7 @@
 predicate-limit:3
 syntax-only:false
 unop0.original.js:72
-unop0.normalized.js:130
+unop0.normalized.js:127
 policy.aut:6
 allFunctions:0
 allCallsites:1
@@ -15,8 +15,8 @@ callbacks-added-edges:34
 callbacks-added-states:34
 concrete-query-cache:concrete-730257546.bin
 symbolic-query-cache:symbolic-730257546.bin
-modular.policy.js:100
-policy.js:102
+modular.policy.js:97
+policy.js:99
 transactions:0
 checks:0
 callsites-indirected:0
