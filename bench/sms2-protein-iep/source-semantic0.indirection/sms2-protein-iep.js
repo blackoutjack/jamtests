@@ -1170,7 +1170,7 @@ function writeGroupNum(text$$10, tabIn$$1, groupSize, basePerLine, startBase, st
   return true;
 }
 function writeGroupNumDna(text$$11, tabIn$$2, groupSize$$1, basePerLine$$1, startBase$$1, stopBase$$1, strands, numberPosition) {
-  JAM.call(writeGroupNumDnaSetStart, null, [text$$11, tabIn$$2, groupSize$$1, basePerLine$$1, startBase$$1, stopBase$$1, strands, numberPosition, 0], JAM.policy.p19);
+  writeGroupNumDnaSetStart(text$$11, tabIn$$2, groupSize$$1, basePerLine$$1, startBase$$1, stopBase$$1, strands, numberPosition, 0);
   return true;
 }
 function writeGroupNumDnaSetStart(text$$12, tabIn$$3, groupSize$$2, basePerLine$$2, startBase$$2, stopBase$$2, strands$$1, numberPosition$$1, numberingAdjustment) {
@@ -1221,7 +1221,7 @@ function writeGroupNumDnaSetStart(text$$12, tabIn$$3, groupSize$$2, basePerLine$
       var v156 = numberPosition$$1 == "above";
       if (v156) {
         var v154 = aboveNum;
-        var v428 = JAM.call(adjustNumbering, null, [i$$6, numberingAdjustment], JAM.policy.p19);
+        var v428 = adjustNumbering(i$$6, numberingAdjustment);
         var v155 = rightNum(v428, "", groupSize$$2, tabIn$$3);
         aboveNum = v154 + v155;
       }
@@ -1237,7 +1237,7 @@ function writeGroupNumDnaSetStart(text$$12, tabIn$$3, groupSize$$2, basePerLine$
     var v181 = numberPosition$$1 == "left";
     if (v181) {
       var v159 = outputWindow.document;
-      var v615 = JAM.call(adjustNumbering, null, [lineNum, numberingAdjustment], JAM.policy.p19);
+      var v615 = adjustNumbering(lineNum, numberingAdjustment);
       var v546 = rightNum(v615, "", 8, tabIn$$3);
       var v430 = v546 + lineOfText$$1;
       var v160 = v430 + "\n";
@@ -1245,7 +1245,7 @@ function writeGroupNumDnaSetStart(text$$12, tabIn$$3, groupSize$$2, basePerLine$
       var v164 = strands$$1 == "two";
       if (v164) {
         var v161 = outputWindow.document;
-        var v616 = JAM.call(adjustNumbering, null, [lineNum, numberingAdjustment], JAM.policy.p19);
+        var v616 = adjustNumbering(lineNum, numberingAdjustment);
         var v547 = rightNum(v616, "", 8, tabIn$$3);
         var v548 = complement(lineOfText$$1);
         var v431 = v547 + v548;
@@ -1259,7 +1259,7 @@ function writeGroupNumDnaSetStart(text$$12, tabIn$$3, groupSize$$2, basePerLine$
       if (v180) {
         var v165 = outputWindow.document;
         var v549 = lineOfText$$1;
-        var v550 = JAM.call(adjustNumbering, null, [i$$6, numberingAdjustment], JAM.policy.p19);
+        var v550 = adjustNumbering(i$$6, numberingAdjustment);
         var v432 = v549 + v550;
         var v166 = v432 + "\n";
         JAM.call(v165.write, v165, [v166], JAM.policy.p17);
@@ -1267,7 +1267,7 @@ function writeGroupNumDnaSetStart(text$$12, tabIn$$3, groupSize$$2, basePerLine$
         if (v170) {
           var v167 = outputWindow.document;
           var v551 = complement(lineOfText$$1);
-          var v552 = JAM.call(adjustNumbering, null, [i$$6, numberingAdjustment], JAM.policy.p19);
+          var v552 = adjustNumbering(i$$6, numberingAdjustment);
           var v433 = v551 + v552;
           var v168 = v433 + "\n";
           JAM.call(v167.write, v167, [v168], JAM.policy.p17);
@@ -1444,7 +1444,7 @@ function writeMutatedSequence(sequence$$13, components$$1, numMut, firstIndexToM
     var v208 = v448 + v449;
     var v450 = randNum + 1;
     var v451 = sequence$$13.length;
-    var v209 = JAM.call(sequence$$13.substring, sequence$$13, [v450, v451], JAM.policy.p21);
+    var v209 = JAM.call(sequence$$13.substring, sequence$$13, [v450, v451], JAM.policy.p27);
     sequence$$13 = v208 + v209;
     i$$8++;
     v210 = i$$8 < numMut;
@@ -1503,7 +1503,7 @@ function writeRestrictionSites(sequence$$15, arrayOfItems, dnaConformation) {
     var v619 = sequence$$15.length;
     var v557 = v619 - lookAhead;
     var v558 = sequence$$15.length;
-    var v455 = JAM.call(sequence$$15.substring, sequence$$15, [v557, v558], JAM.policy.p21);
+    var v455 = JAM.call(sequence$$15.substring, sequence$$15, [v557, v558], JAM.policy.p27);
     var v221 = v455 + sequence$$15;
     var v222 = JAM.call(sequence$$15.substring, sequence$$15, [0, lookAhead], JAM.policy.p13);
     sequence$$15 = v221 + v222;
@@ -1736,7 +1736,7 @@ function proteinIep(theDocument) {
     var v693 = v714.elements;
     var v668 = v693[0];
     var v628 = v668.value;
-    var v570 = JAM.call(checkSequenceLength, null, [v628, maxInput$$3], JAM.policy.p19);
+    var v570 = checkSequenceLength(v628, maxInput$$3);
     v481 = v570 == false;
   }
   var v267 = v481;
@@ -1760,7 +1760,7 @@ function proteinIep(theDocument) {
     title = getTitleFromFasta(v270);
     newProtein = removeNonProteinStrict(newProtein);
     var v271 = outputWindow.document;
-    var v272 = JAM.call(getInfoFromTitleAndSequence, null, [title, newProtein], JAM.policy.p19);
+    var v272 = getInfoFromTitleAndSequence(title, newProtein);
     JAM.call(v271.write, v271, [v272], JAM.policy.p17);
     var v715 = theDocument.forms;
     var v694 = v715[0];
@@ -1798,7 +1798,7 @@ function proteinIep(theDocument) {
     var v578 = v635.selectedIndex;
     var v486 = v577[v578];
     var v275 = v486.value;
-    JAM.call(writeProtIep, null, [newProtein, v273, v274, v275], JAM.policy.p19);
+    writeProtIep(newProtein, v273, v274, v275);
     var v276 = outputWindow.document;
     JAM.call(v276.write, v276, ["<br />\n<br />\n"], JAM.policy.p9);
     i$$11++;
@@ -1903,29 +1903,29 @@ function writeProtIep(proteinSequence$$1, copies, fusion, pKSet) {
     Y_count = v292.length;
   }
   for (;1;) {
-    var v735 = JAM.call(partial_charge, null, [N_term_pK, pH], JAM.policy.p19);
-    var v747 = JAM.call(partial_charge, null, [K_pK, pH], JAM.policy.p19);
+    var v735 = partial_charge(N_term_pK, pH);
+    var v747 = partial_charge(K_pK, pH);
     var v736 = K_count * v747;
     var v721 = v735 + v736;
-    var v737 = JAM.call(partial_charge, null, [R_pK, pH], JAM.policy.p19);
+    var v737 = partial_charge(R_pK, pH);
     var v722 = R_count * v737;
     var v700 = v721 + v722;
-    var v723 = JAM.call(partial_charge, null, [H_pK, pH], JAM.policy.p19);
+    var v723 = partial_charge(H_pK, pH);
     var v701 = H_count * v723;
     var v676 = v700 + v701;
-    var v702 = JAM.call(partial_charge, null, [pH, D_pK], JAM.policy.p19);
+    var v702 = partial_charge(pH, D_pK);
     var v677 = D_count * v702;
     var v636 = v676 - v677;
-    var v678 = JAM.call(partial_charge, null, [pH, E_pK], JAM.policy.p19);
+    var v678 = partial_charge(pH, E_pK);
     var v637 = E_count * v678;
     var v579 = v636 - v637;
-    var v638 = JAM.call(partial_charge, null, [pH, C_pK], JAM.policy.p19);
+    var v638 = partial_charge(pH, C_pK);
     var v580 = C_count * v638;
     var v496 = v579 - v580;
-    var v581 = JAM.call(partial_charge, null, [pH, Y_pK], JAM.policy.p19);
+    var v581 = partial_charge(pH, Y_pK);
     var v497 = Y_count * v581;
     var v294 = v496 - v497;
-    var v295 = JAM.call(partial_charge, null, [pH, C_term_pK], JAM.policy.p19);
+    var v295 = partial_charge(pH, C_term_pK);
     charge = v294 - v295;
     var v498 = JAM.call(charge.toFixed, charge, [2], JAM.policy.p11);
     var v582 = last_charge * 100;

@@ -1172,7 +1172,7 @@ function writeGroupNum(text$$10, tabIn$$1, groupSize, basePerLine, startBase, st
   return true;
 }
 function writeGroupNumDna(text$$11, tabIn$$2, groupSize$$1, basePerLine$$1, startBase$$1, stopBase$$1, strands, numberPosition) {
-  JAM.call(writeGroupNumDnaSetStart, null, [text$$11, tabIn$$2, groupSize$$1, basePerLine$$1, startBase$$1, stopBase$$1, strands, numberPosition, 0], JAM.policy.p19);
+  writeGroupNumDnaSetStart(text$$11, tabIn$$2, groupSize$$1, basePerLine$$1, startBase$$1, stopBase$$1, strands, numberPosition, 0);
   return true;
 }
 function writeGroupNumDnaSetStart(text$$12, tabIn$$3, groupSize$$2, basePerLine$$2, startBase$$2, stopBase$$2, strands$$1, numberPosition$$1, numberingAdjustment) {
@@ -1223,7 +1223,7 @@ function writeGroupNumDnaSetStart(text$$12, tabIn$$3, groupSize$$2, basePerLine$
       var v156 = numberPosition$$1 == "above";
       if (v156) {
         var v154 = aboveNum;
-        var v476 = JAM.call(adjustNumbering, null, [i$$6, numberingAdjustment], JAM.policy.p19);
+        var v476 = adjustNumbering(i$$6, numberingAdjustment);
         var v155 = rightNum(v476, "", groupSize$$2, tabIn$$3);
         aboveNum = v154 + v155;
       }
@@ -1239,7 +1239,7 @@ function writeGroupNumDnaSetStart(text$$12, tabIn$$3, groupSize$$2, basePerLine$
     var v181 = numberPosition$$1 == "left";
     if (v181) {
       var v159 = outputWindow.document;
-      var v756 = JAM.call(adjustNumbering, null, [lineNum, numberingAdjustment], JAM.policy.p19);
+      var v756 = adjustNumbering(lineNum, numberingAdjustment);
       var v650 = rightNum(v756, "", 8, tabIn$$3);
       var v478 = v650 + lineOfText$$1;
       var v160 = v478 + "\n";
@@ -1247,7 +1247,7 @@ function writeGroupNumDnaSetStart(text$$12, tabIn$$3, groupSize$$2, basePerLine$
       var v164 = strands$$1 == "two";
       if (v164) {
         var v161 = outputWindow.document;
-        var v757 = JAM.call(adjustNumbering, null, [lineNum, numberingAdjustment], JAM.policy.p19);
+        var v757 = adjustNumbering(lineNum, numberingAdjustment);
         var v651 = rightNum(v757, "", 8, tabIn$$3);
         var v652 = complement(lineOfText$$1);
         var v479 = v651 + v652;
@@ -1261,7 +1261,7 @@ function writeGroupNumDnaSetStart(text$$12, tabIn$$3, groupSize$$2, basePerLine$
       if (v180) {
         var v165 = outputWindow.document;
         var v653 = lineOfText$$1;
-        var v654 = JAM.call(adjustNumbering, null, [i$$6, numberingAdjustment], JAM.policy.p19);
+        var v654 = adjustNumbering(i$$6, numberingAdjustment);
         var v480 = v653 + v654;
         var v166 = v480 + "\n";
         JAM.call(v165.write, v165, [v166], JAM.policy.p18);
@@ -1269,7 +1269,7 @@ function writeGroupNumDnaSetStart(text$$12, tabIn$$3, groupSize$$2, basePerLine$
         if (v170) {
           var v167 = outputWindow.document;
           var v655 = complement(lineOfText$$1);
-          var v656 = JAM.call(adjustNumbering, null, [i$$6, numberingAdjustment], JAM.policy.p19);
+          var v656 = adjustNumbering(i$$6, numberingAdjustment);
           var v481 = v655 + v656;
           var v168 = v481 + "\n";
           JAM.call(v167.write, v167, [v168], JAM.policy.p18);
@@ -1446,7 +1446,7 @@ function writeMutatedSequence(sequence$$13, components$$1, numMut, firstIndexToM
     var v208 = v496 + v497;
     var v498 = randNum + 1;
     var v499 = sequence$$13.length;
-    var v209 = JAM.call(sequence$$13.substring, sequence$$13, [v498, v499], JAM.policy.p21);
+    var v209 = JAM.call(sequence$$13.substring, sequence$$13, [v498, v499], JAM.policy.p27);
     sequence$$13 = v208 + v209;
     i$$8++;
     v210 = i$$8 < numMut;
@@ -1505,7 +1505,7 @@ function writeRestrictionSites(sequence$$15, arrayOfItems, dnaConformation) {
     var v760 = sequence$$15.length;
     var v661 = v760 - lookAhead;
     var v662 = sequence$$15.length;
-    var v503 = JAM.call(sequence$$15.substring, sequence$$15, [v661, v662], JAM.policy.p21);
+    var v503 = JAM.call(sequence$$15.substring, sequence$$15, [v661, v662], JAM.policy.p27);
     var v221 = v503 + sequence$$15;
     var v222 = JAM.call(sequence$$15.substring, sequence$$15, [0, lookAhead], JAM.policy.p13);
     sequence$$15 = v221 + v222;
@@ -1742,7 +1742,7 @@ function restDigest(theDocument) {
     var v862 = v889.elements;
     var v824 = v862[0];
     var v769 = v824.value;
-    var v674 = JAM.call(checkSequenceLength, null, [v769, maxInput$$3], JAM.policy.p19);
+    var v674 = checkSequenceLength(v769, maxInput$$3);
     v529 = v674 == false;
   }
   var v267 = v529;
@@ -1778,7 +1778,7 @@ function restDigest(theDocument) {
     var v271 = v532.value;
     var v272 = newDna.length;
     var v273 = newDna.length;
-    restrictionFragment = JAM.new(RestrictionFragment, [v271, title, newDna, 1, v272, "sequence start", "sequence end", v273], JAM.policy.p19);
+    restrictionFragment = new RestrictionFragment(v271, title, newDna, 1, v272, "sequence start", "sequence end", v273);
     JAM.call(restrictionFragments.push, restrictionFragments, [restrictionFragment], JAM.policy.p18);
     i$$11++;
     var v533 = arrayOfFasta$$1.length;
@@ -1796,7 +1796,7 @@ function restDigest(theDocument) {
   var v680 = v774.selectedIndex;
   var v534 = v679[v680];
   var v275 = v534.value;
-  restrictionFragments = JAM.call(digest, null, [restrictionFragments, v275], JAM.policy.p19);
+  restrictionFragments = digest(restrictionFragments, v275);
   var v894 = theDocument.forms;
   var v867 = v894[0];
   var v830 = v867.elements;
@@ -1809,7 +1809,7 @@ function restDigest(theDocument) {
   var v682 = v776.selectedIndex;
   var v535 = v681[v682];
   var v276 = v535.value;
-  restrictionFragments = JAM.call(digest, null, [restrictionFragments, v276], JAM.policy.p19);
+  restrictionFragments = digest(restrictionFragments, v276);
   var v896 = theDocument.forms;
   var v869 = v896[0];
   var v832 = v869.elements;
@@ -1822,7 +1822,7 @@ function restDigest(theDocument) {
   var v684 = v778.selectedIndex;
   var v536 = v683[v684];
   var v277 = v536.value;
-  restrictionFragments = JAM.call(digest, null, [restrictionFragments, v277], JAM.policy.p19);
+  restrictionFragments = digest(restrictionFragments, v277);
   JAM.call(restrictionFragments.sort, restrictionFragments, [restrictionFragmentSorter], JAM.policy.p18);
   openWindow("Restriction Digest");
   openPre();
@@ -1908,7 +1908,7 @@ function digest(arrayOfRestrictionFragments, enzyme) {
       var v837 = arrayOfRestrictionFragments[i$$12];
       var v783 = v837.sequence;
       var v692 = v783.length;
-      var v545 = JAM.call(v690.substring, v690, [v691, v692], JAM.policy.p21);
+      var v545 = JAM.call(v690.substring, v690, [v691, v692], JAM.policy.p27);
       var v693 = arrayOfRestrictionFragments[i$$12];
       var v546 = v693.sequence;
       var v287 = v545 + v546;
@@ -1987,11 +1987,11 @@ function digest(arrayOfRestrictionFragments, enzyme) {
           var v701 = arrayOfRestrictionFragments[i$$12];
           var v559 = v701.sequence;
           var v560 = positions[j$$10];
-          var v302 = JAM.call(v559.substring, v559, [previousCutPosition, v560], JAM.policy.p21);
+          var v302 = JAM.call(v559.substring, v559, [previousCutPosition, v560], JAM.policy.p27);
           var v874 = arrayOfRestrictionFragments[i$$12];
           var v838 = v874.sequence;
           var v839 = positions[j$$10];
-          var v784 = JAM.call(v838.substring, v838, [previousCutPosition, v839], JAM.policy.p21);
+          var v784 = JAM.call(v838.substring, v838, [previousCutPosition, v839], JAM.policy.p27);
           var v702 = v784.length;
           var v561 = previousStartPosition + v702;
           var v303 = v561 - 1;
@@ -2004,11 +2004,11 @@ function digest(arrayOfRestrictionFragments, enzyme) {
           var v703 = arrayOfRestrictionFragments[i$$12];
           var v564 = v703.sequence;
           var v565 = positions[j$$10];
-          var v306 = JAM.call(v564.substring, v564, [previousCutPosition, v565], JAM.policy.p21);
+          var v306 = JAM.call(v564.substring, v564, [previousCutPosition, v565], JAM.policy.p27);
           var v875 = arrayOfRestrictionFragments[i$$12];
           var v840 = v875.sequence;
           var v841 = positions[j$$10];
-          var v785 = JAM.call(v840.substring, v840, [previousCutPosition, v841], JAM.policy.p21);
+          var v785 = JAM.call(v840.substring, v840, [previousCutPosition, v841], JAM.policy.p27);
           var v704 = v785.length;
           var v566 = previousStartPosition + v704;
           var v307 = v566 - 1;
@@ -2031,11 +2031,11 @@ function digest(arrayOfRestrictionFragments, enzyme) {
             var v786 = arrayOfRestrictionFragments[i$$12];
             var v707 = v786.sequence;
             var v572 = v707.length;
-            var v311 = JAM.call(v570.substring, v570, [v571, v572], JAM.policy.p21);
+            var v311 = JAM.call(v570.substring, v570, [v571, v572], JAM.policy.p27);
             var v842 = arrayOfRestrictionFragments[i$$12];
             var v787 = v842.sequence;
             var v788 = positions[j$$10];
-            var v708 = JAM.call(v787.substring, v787, [previousCutPosition, v788], JAM.policy.p21);
+            var v708 = JAM.call(v787.substring, v787, [previousCutPosition, v788], JAM.policy.p27);
             var v573 = v708.length;
             var v312 = previousStartPosition + v573;
             var v574 = arrayOfRestrictionFragments[i$$12];
@@ -2055,13 +2055,13 @@ function digest(arrayOfRestrictionFragments, enzyme) {
             var v843 = arrayOfRestrictionFragments[i$$12];
             var v790 = v843.sequence;
             var v711 = v790.length;
-            var v578 = JAM.call(v709.substring, v709, [v710, v711], JAM.policy.p21);
+            var v578 = JAM.call(v709.substring, v709, [v710, v711], JAM.policy.p27);
             var v579 = startRestrictionFragment.sequence;
             var v317 = v578 + v579;
             var v844 = arrayOfRestrictionFragments[i$$12];
             var v791 = v844.sequence;
             var v792 = positions[j$$10];
-            var v712 = JAM.call(v791.substring, v791, [previousCutPosition, v792], JAM.policy.p21);
+            var v712 = JAM.call(v791.substring, v791, [previousCutPosition, v792], JAM.policy.p27);
             var v580 = v712.length;
             var v318 = previousStartPosition + v580;
             var v319 = startRestrictionFragment.stop;

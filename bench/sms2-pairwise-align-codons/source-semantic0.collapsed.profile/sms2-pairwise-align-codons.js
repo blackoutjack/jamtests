@@ -829,7 +829,7 @@ function writeGroupNum(text$$10, tabIn$$1, groupSize, basePerLine, startBase, st
   return true;
 }
 function writeGroupNumDna(text$$11, tabIn$$2, groupSize$$1, basePerLine$$1, startBase$$1, stopBase$$1, strands, numberPosition) {
-  JAM.call(writeGroupNumDnaSetStart, null, [text$$11, tabIn$$2, groupSize$$1, basePerLine$$1, startBase$$1, stopBase$$1, strands, numberPosition, 0], JAM.policy.p25);
+  writeGroupNumDnaSetStart(text$$11, tabIn$$2, groupSize$$1, basePerLine$$1, startBase$$1, stopBase$$1, strands, numberPosition, 0);
   return true;
 }
 function writeGroupNumDnaSetStart(text$$12, tabIn$$3, groupSize$$2, basePerLine$$2, startBase$$2, stopBase$$2, strands$$1, numberPosition$$1, numberingAdjustment) {
@@ -871,7 +871,7 @@ function writeGroupNumDnaSetStart(text$$12, tabIn$$3, groupSize$$2, basePerLine$
       lineOfText$$1 = lineOfText$$1 + sepChar$$1;
       i$$6 = i$$6 + k$$1;
       if (numberPosition$$1 == "above") {
-        aboveNum = aboveNum + rightNum(JAM.call(adjustNumbering, null, [i$$6, numberingAdjustment], JAM.policy.p25), "", groupSize$$2, tabIn$$3);
+        aboveNum = aboveNum + rightNum(adjustNumbering(i$$6, numberingAdjustment), "", groupSize$$2, tabIn$$3);
       }
       if (i$$6 >= stopBase$$2) {
         break;
@@ -882,20 +882,20 @@ function writeGroupNumDnaSetStart(text$$12, tabIn$$3, groupSize$$2, basePerLine$
     }
     if (numberPosition$$1 == "left") {
       var v160 = outputWindow.document;
-      JAM.call(v160.write, v160, [rightNum(JAM.call(adjustNumbering, null, [lineNum, numberingAdjustment], JAM.policy.p25), "", 8, tabIn$$3) + lineOfText$$1 + "\n"], JAM.policy.p21);
+      JAM.call(v160.write, v160, [rightNum(adjustNumbering(lineNum, numberingAdjustment), "", 8, tabIn$$3) + lineOfText$$1 + "\n"], JAM.policy.p21);
       if (strands$$1 == "two") {
         var v162 = outputWindow.document;
-        JAM.call(v162.write, v162, [rightNum(JAM.call(adjustNumbering, null, [lineNum, numberingAdjustment], JAM.policy.p25), "", 8, tabIn$$3) + complement(lineOfText$$1) + "\n"], JAM.policy.p21);
+        JAM.call(v162.write, v162, [rightNum(adjustNumbering(lineNum, numberingAdjustment), "", 8, tabIn$$3) + complement(lineOfText$$1) + "\n"], JAM.policy.p21);
         var v164 = outputWindow.document;
         JAM.call(v164.write, v164, ["\n"], JAM.policy.p15);
       }
     } else {
       if (numberPosition$$1 == "right") {
         var v166 = outputWindow.document;
-        JAM.call(v166.write, v166, [lineOfText$$1 + JAM.call(adjustNumbering, null, [i$$6, numberingAdjustment], JAM.policy.p25) + "\n"], JAM.policy.p21);
+        JAM.call(v166.write, v166, [lineOfText$$1 + adjustNumbering(i$$6, numberingAdjustment) + "\n"], JAM.policy.p21);
         if (strands$$1 == "two") {
           var v168 = outputWindow.document;
-          JAM.call(v168.write, v168, [complement(lineOfText$$1) + JAM.call(adjustNumbering, null, [i$$6, numberingAdjustment], JAM.policy.p25) + "\n"], JAM.policy.p21);
+          JAM.call(v168.write, v168, [complement(lineOfText$$1) + adjustNumbering(i$$6, numberingAdjustment) + "\n"], JAM.policy.p21);
           var v170 = outputWindow.document;
           JAM.call(v170.write, v170, ["\n"], JAM.policy.p15);
         }
@@ -1024,7 +1024,7 @@ function writeMutatedSequence(sequence$$13, components$$1, numMut, firstIndexToM
         needNewChar = false;
       }
     }
-    sequence$$13 = JAM.call(sequence$$13.substring, sequence$$13, [0, randNum], JAM.policy.p19) + components$$1[componentsIndex] + JAM.call(sequence$$13.substring, sequence$$13, [randNum + 1, sequence$$13.length], JAM.policy.p27);
+    sequence$$13 = JAM.call(sequence$$13.substring, sequence$$13, [0, randNum], JAM.policy.p19) + components$$1[componentsIndex] + JAM.call(sequence$$13.substring, sequence$$13, [randNum + 1, sequence$$13.length], JAM.policy.p33);
     i$$8++;
     v211 = i$$8 < numMut;
   }
@@ -1069,7 +1069,7 @@ function writeRestrictionSites(sequence$$15, arrayOfItems, dnaConformation) {
   var timesFound = 0;
   if (dnaConformation == "circular") {
     shiftValue = JAM.call(sequence$$15.substring, sequence$$15, [0, lookAhead], JAM.policy.p19).length;
-    sequence$$15 = JAM.call(sequence$$15.substring, sequence$$15, [sequence$$15.length - lookAhead, sequence$$15.length], JAM.policy.p27) + sequence$$15 + JAM.call(sequence$$15.substring, sequence$$15, [0, lookAhead], JAM.policy.p19);
+    sequence$$15 = JAM.call(sequence$$15.substring, sequence$$15, [sequence$$15.length - lookAhead, sequence$$15.length], JAM.policy.p33) + sequence$$15 + JAM.call(sequence$$15.substring, sequence$$15, [0, lookAhead], JAM.policy.p19);
     lowerLimit = 0 + shiftValue;
     upperLimit = upperLimit + shiftValue;
   }
@@ -1220,7 +1220,7 @@ function pairwiseAlignCodons(theDocument) {
   }
   var v1272 = checkFormElement(theDocument.forms[0].elements[0]) == false;
   if (!v1272) {
-    v1272 = JAM.call(checkSequenceLength, null, [theDocument.forms[0].elements[0].value, maxInput$$3], JAM.policy.p25) == false;
+    v1272 = checkSequenceLength(theDocument.forms[0].elements[0].value, maxInput$$3) == false;
   }
   var v1045 = v1272;
   if (!v1045) {
@@ -1228,7 +1228,7 @@ function pairwiseAlignCodons(theDocument) {
   }
   var v736 = v1045;
   if (!v736) {
-    v736 = JAM.call(checkSequenceLength, null, [theDocument.forms[0].elements[1].value, maxInput$$3], JAM.policy.p25) == false;
+    v736 = checkSequenceLength(theDocument.forms[0].elements[1].value, maxInput$$3) == false;
   }
   if (v736) {
     return false;
@@ -1262,14 +1262,14 @@ function pairwiseAlignCodons(theDocument) {
   openWindow("Pairwise Align Codons");
   openPre();
   var v278 = outputWindow.document;
-  JAM.call(v278.write, v278, [JAM.call(getPairwiseAlignTitle, null, [titleOne, newCodonsOne, titleTwo, newCodonsTwo], JAM.policy.p25)], JAM.policy.p21);
+  JAM.call(v278.write, v278, [getPairwiseAlignTitle(titleOne, newCodonsOne, titleTwo, newCodonsTwo)], JAM.policy.p21);
   if (JAM.call(newCodonsOne.search, newCodonsOne, [/.../], JAM.policy.p23) != -1) {
     newCodonsOne = JAM.call(newCodonsOne.match, newCodonsOne, [/.../g], JAM.policy.p23);
   }
   if (JAM.call(newCodonsTwo.search, newCodonsTwo, [/.../], JAM.policy.p23) != -1) {
     newCodonsTwo = JAM.call(newCodonsTwo.match, newCodonsTwo, [/.../g], JAM.policy.p23);
   }
-  JAM.call(pairwiseCodon, null, [titleOne, newCodonsOne, titleTwo, newCodonsTwo, MATRIX, GAP_PENALTY, BEGIN_GAP_PENALTY, END_GAP_PENALTY], JAM.policy.p25);
+  pairwiseCodon(titleOne, newCodonsOne, titleTwo, newCodonsTwo, MATRIX, GAP_PENALTY, BEGIN_GAP_PENALTY, END_GAP_PENALTY);
   closePre();
   closeWindow();
 
@@ -1282,11 +1282,11 @@ function pairwiseCodon(titleOne$$1, newCodonsOne$$1, titleTwo$$1, newCodonsTwo$$
   var scoringMatrix;
   scoringMatrix = new Codon;
   var scoreSet = new ScoreSet;
-  JAM.call(scoreSet.setScoreSetParam, scoreSet, [scoringMatrix, gapPenalty, beginGapPenalty, endGapPenalty], JAM.policy.p27);
+  JAM.call(scoreSet.setScoreSetParam, scoreSet, [scoringMatrix, gapPenalty, beginGapPenalty, endGapPenalty], JAM.policy.p33);
   var alignment;
   if (useLinearSpace) {
     alignment = new AlignPairLinear;
-    JAM.call(alignment.setAlignParam, alignment, [newCodonsOne$$1, newCodonsTwo$$1, scoreSet], JAM.policy.p27);
+    JAM.call(alignment.setAlignParam, alignment, [newCodonsOne$$1, newCodonsTwo$$1, scoreSet], JAM.policy.p33);
     alignment.align();
     var v282 = outputWindow.document;
     JAM.call(v282.write, v282, [">" + titleOne$$1 + "\n"], JAM.policy.p21);
@@ -1307,7 +1307,7 @@ function pairwiseCodon(titleOne$$1, newCodonsOne$$1, titleTwo$$1, newCodonsTwo$$
   }
   if (useQuadraticSpace) {
     alignment = new AlignPairQuad;
-    JAM.call(alignment.initializeMatrix, alignment, [newCodonsOne$$1, newCodonsTwo$$1, scoreSet], JAM.policy.p27);
+    JAM.call(alignment.initializeMatrix, alignment, [newCodonsOne$$1, newCodonsTwo$$1, scoreSet], JAM.policy.p33);
     alignment.fillMatrix();
     alignment.align();
     var v295 = outputWindow.document;
@@ -1331,7 +1331,7 @@ function pairwiseCodon(titleOne$$1, newCodonsOne$$1, titleTwo$$1, newCodonsTwo$$
 }
 function getScore(r1$$1, r2) {
   var v308 = this.scoringMatrix;
-  return JAM.call(v308.scoringMatrix_getScore, v308, [r1$$1, r2], JAM.policy.p27);
+  return JAM.call(v308.scoringMatrix_getScore, v308, [r1$$1, r2], JAM.policy.p33);
 }
 function setScoreSetParam(scoringMatrix$$1, gapPenalty$$1, beginGapPenalty$$1, endGapPenalty$$1) {
   this.scoringMatrix = scoringMatrix$$1;
@@ -1489,16 +1489,16 @@ function path(i1, j1, i2, j2) {
     subScoreSet = new ScoreSet;
     if (j1 == j2) {
       if (j1 == 0) {
-        JAM.call(subScoreSet.setScoreSetParam, subScoreSet, [this.scoreSet.scoringMatrix, this.scoreSet.beginGap, this.scoreSet.beginGap, this.scoreSet.beginGap], JAM.policy.p27);
+        JAM.call(subScoreSet.setScoreSetParam, subScoreSet, [this.scoreSet.scoringMatrix, this.scoreSet.beginGap, this.scoreSet.beginGap, this.scoreSet.beginGap], JAM.policy.p33);
       } else {
         if (j1 == this.N.length) {
-          JAM.call(subScoreSet.setScoreSetParam, subScoreSet, [this.scoreSet.scoringMatrix, this.scoreSet.endGap, this.scoreSet.endGap, this.scoreSet.endGap], JAM.policy.p27);
+          JAM.call(subScoreSet.setScoreSetParam, subScoreSet, [this.scoreSet.scoringMatrix, this.scoreSet.endGap, this.scoreSet.endGap, this.scoreSet.endGap], JAM.policy.p33);
         } else {
-          JAM.call(subScoreSet.setScoreSetParam, subScoreSet, [this.scoreSet.scoringMatrix, this.scoreSet.gap, this.scoreSet.gap, this.scoreSet.gap], JAM.policy.p27);
+          JAM.call(subScoreSet.setScoreSetParam, subScoreSet, [this.scoreSet.scoringMatrix, this.scoreSet.gap, this.scoreSet.gap, this.scoreSet.gap], JAM.policy.p33);
         }
       }
     } else {
-      JAM.call(subScoreSet.setScoreSetParam, subScoreSet, [this.scoreSet.scoringMatrix, this.scoreSet.gap, this.scoreSet.beginGap, this.scoreSet.endGap], JAM.policy.p27);
+      JAM.call(subScoreSet.setScoreSetParam, subScoreSet, [this.scoreSet.scoringMatrix, this.scoreSet.gap, this.scoreSet.beginGap, this.scoreSet.endGap], JAM.policy.p33);
       subScoreSet.useBeginGapTop = false;
       subScoreSet.useBeginGapLeft = false;
       subScoreSet.useEndGapBottom = false;
@@ -1516,7 +1516,7 @@ function path(i1, j1, i2, j2) {
         subScoreSet.useEndGapBottom = true;
       }
     }
-    JAM.call(alignment$$1.initializeMatrix, alignment$$1, [subM, subN, subScoreSet], JAM.policy.p27);
+    JAM.call(alignment$$1.initializeMatrix, alignment$$1, [subM, subN, subScoreSet], JAM.policy.p33);
     alignment$$1.fillMatrix();
     alignment$$1.align();
     var v363 = this.alignedM;
@@ -1580,24 +1580,24 @@ function path(i1, j1, i2, j2) {
           var v383 = this.Sn[j$$12] - this.scoreSet.endGap;
           var v817 = left$$1 - this.scoreSet.endGap;
           var v1294 = this.scoreSet;
-          left$$1 = JAM.call(Math.max, Math, [v383, JAM.call(Math.max, Math, [v817, diag + JAM.call(v1294.getScore, v1294, [this.M[i$$12 - 1], this.N[j$$12 - 1]], JAM.policy.p27)], JAM.policy.p27)], JAM.policy.p22);
+          left$$1 = JAM.call(Math.max, Math, [v383, JAM.call(Math.max, Math, [v817, diag + JAM.call(v1294.getScore, v1294, [this.M[i$$12 - 1], this.N[j$$12 - 1]], JAM.policy.p33)], JAM.policy.p33)], JAM.policy.p22);
         } else {
           if (i$$12 == this.M.length) {
             var v385 = this.Sn[j$$12] - this.scoreSet.gap;
             var v822 = left$$1 - this.scoreSet.endGap;
             var v1298 = this.scoreSet;
-            left$$1 = JAM.call(Math.max, Math, [v385, JAM.call(Math.max, Math, [v822, diag + JAM.call(v1298.getScore, v1298, [this.M[i$$12 - 1], this.N[j$$12 - 1]], JAM.policy.p27)], JAM.policy.p27)], JAM.policy.p22);
+            left$$1 = JAM.call(Math.max, Math, [v385, JAM.call(Math.max, Math, [v822, diag + JAM.call(v1298.getScore, v1298, [this.M[i$$12 - 1], this.N[j$$12 - 1]], JAM.policy.p33)], JAM.policy.p33)], JAM.policy.p22);
           } else {
             if (j$$12 == this.N.length) {
               var v387 = this.Sn[j$$12] - this.scoreSet.endGap;
               var v827 = left$$1 - this.scoreSet.gap;
               var v1302 = this.scoreSet;
-              left$$1 = JAM.call(Math.max, Math, [v387, JAM.call(Math.max, Math, [v827, diag + JAM.call(v1302.getScore, v1302, [this.M[i$$12 - 1], this.N[j$$12 - 1]], JAM.policy.p27)], JAM.policy.p27)], JAM.policy.p22);
+              left$$1 = JAM.call(Math.max, Math, [v387, JAM.call(Math.max, Math, [v827, diag + JAM.call(v1302.getScore, v1302, [this.M[i$$12 - 1], this.N[j$$12 - 1]], JAM.policy.p33)], JAM.policy.p33)], JAM.policy.p22);
             } else {
               var v389 = this.Sn[j$$12] - this.scoreSet.gap;
               var v831 = left$$1 - this.scoreSet.gap;
               var v1306 = this.scoreSet;
-              left$$1 = JAM.call(Math.max, Math, [v389, JAM.call(Math.max, Math, [v831, diag + JAM.call(v1306.getScore, v1306, [this.M[i$$12 - 1], this.N[j$$12 - 1]], JAM.policy.p27)], JAM.policy.p27)], JAM.policy.p22);
+              left$$1 = JAM.call(Math.max, Math, [v389, JAM.call(Math.max, Math, [v831, diag + JAM.call(v1306.getScore, v1306, [this.M[i$$12 - 1], this.N[j$$12 - 1]], JAM.policy.p33)], JAM.policy.p33)], JAM.policy.p22);
             }
           }
         }
@@ -1662,24 +1662,24 @@ function path(i1, j1, i2, j2) {
           var v411 = this.Sp[j$$12] - this.scoreSet.beginGap;
           var v846 = right$$1 - this.scoreSet.beginGap;
           var v1310 = this.scoreSet;
-          right$$1 = JAM.call(Math.max, Math, [v411, JAM.call(Math.max, Math, [v846, diag + JAM.call(v1310.getScore, v1310, [this.M[i$$12 + 1 - 1], this.N[j$$12 + 1 - 1]], JAM.policy.p27)], JAM.policy.p27)], JAM.policy.p22);
+          right$$1 = JAM.call(Math.max, Math, [v411, JAM.call(Math.max, Math, [v846, diag + JAM.call(v1310.getScore, v1310, [this.M[i$$12 + 1 - 1], this.N[j$$12 + 1 - 1]], JAM.policy.p33)], JAM.policy.p33)], JAM.policy.p22);
         } else {
           if (j$$12 == 0) {
             var v413 = this.Sp[j$$12] - this.scoreSet.beginGap;
             var v850 = right$$1 - this.scoreSet.gap;
             var v1314 = this.scoreSet;
-            right$$1 = JAM.call(Math.max, Math, [v413, JAM.call(Math.max, Math, [v850, diag + JAM.call(v1314.getScore, v1314, [this.M[i$$12 + 1 - 1], this.N[j$$12 + 1 - 1]], JAM.policy.p27)], JAM.policy.p27)], JAM.policy.p22);
+            right$$1 = JAM.call(Math.max, Math, [v413, JAM.call(Math.max, Math, [v850, diag + JAM.call(v1314.getScore, v1314, [this.M[i$$12 + 1 - 1], this.N[j$$12 + 1 - 1]], JAM.policy.p33)], JAM.policy.p33)], JAM.policy.p22);
           } else {
             if (i$$12 == 0) {
               var v415 = this.Sp[j$$12] - this.scoreSet.gap;
               var v854 = right$$1 - this.scoreSet.beginGap;
               var v1318 = this.scoreSet;
-              right$$1 = JAM.call(Math.max, Math, [v415, JAM.call(Math.max, Math, [v854, diag + JAM.call(v1318.getScore, v1318, [this.M[i$$12 + 1 - 1], this.N[j$$12 + 1 - 1]], JAM.policy.p27)], JAM.policy.p27)], JAM.policy.p22);
+              right$$1 = JAM.call(Math.max, Math, [v415, JAM.call(Math.max, Math, [v854, diag + JAM.call(v1318.getScore, v1318, [this.M[i$$12 + 1 - 1], this.N[j$$12 + 1 - 1]], JAM.policy.p33)], JAM.policy.p33)], JAM.policy.p22);
             } else {
               var v417 = this.Sp[j$$12] - this.scoreSet.gap;
               var v858 = right$$1 - this.scoreSet.gap;
               var v1322 = this.scoreSet;
-              right$$1 = JAM.call(Math.max, Math, [v417, JAM.call(Math.max, Math, [v858, diag + JAM.call(v1322.getScore, v1322, [this.M[i$$12 + 1 - 1], this.N[j$$12 + 1 - 1]], JAM.policy.p27)], JAM.policy.p27)], JAM.policy.p22);
+              right$$1 = JAM.call(Math.max, Math, [v417, JAM.call(Math.max, Math, [v858, diag + JAM.call(v1322.getScore, v1322, [this.M[i$$12 + 1 - 1], this.N[j$$12 + 1 - 1]], JAM.policy.p33)], JAM.policy.p33)], JAM.policy.p22);
             }
           }
         }
@@ -1703,7 +1703,7 @@ function path(i1, j1, i2, j2) {
       j$$12++;
       v431 = j$$12 <= j2;
     }
-    JAM.call(this.path, this, [i1, j1, middle, maxJ], JAM.policy.p27);
+    JAM.call(this.path, this, [i1, j1, middle, maxJ], JAM.policy.p33);
     JAM.call(this.path, this, [middle, maxJ, i2, j2], JAM.policy.p22);
   }
   return;
@@ -1874,7 +1874,7 @@ function fillMatrix() {
       }
       var v501 = this.nodes[i$$15 - 1][j$$15 - 1].value;
       var v941 = this.scoreSet;
-      c = v501 + JAM.call(v941.getScore, v941, [this.M[i$$15 - 1], this.N[j$$15 - 1]], JAM.policy.p27);
+      c = v501 + JAM.call(v941.getScore, v941, [this.M[i$$15 - 1], this.N[j$$15 - 1]], JAM.policy.p33);
       var v944 = a >= b;
       if (v944) {
         v944 = a >= c;

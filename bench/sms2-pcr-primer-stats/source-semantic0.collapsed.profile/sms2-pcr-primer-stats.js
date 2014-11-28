@@ -829,7 +829,7 @@ function writeGroupNum(text$$10, tabIn$$1, groupSize, basePerLine, startBase, st
   return true;
 }
 function writeGroupNumDna(text$$11, tabIn$$2, groupSize$$1, basePerLine$$1, startBase$$1, stopBase$$1, strands, numberPosition) {
-  JAM.call(writeGroupNumDnaSetStart, null, [text$$11, tabIn$$2, groupSize$$1, basePerLine$$1, startBase$$1, stopBase$$1, strands, numberPosition, 0], JAM.policy.p19);
+  writeGroupNumDnaSetStart(text$$11, tabIn$$2, groupSize$$1, basePerLine$$1, startBase$$1, stopBase$$1, strands, numberPosition, 0);
   return true;
 }
 function writeGroupNumDnaSetStart(text$$12, tabIn$$3, groupSize$$2, basePerLine$$2, startBase$$2, stopBase$$2, strands$$1, numberPosition$$1, numberingAdjustment) {
@@ -871,7 +871,7 @@ function writeGroupNumDnaSetStart(text$$12, tabIn$$3, groupSize$$2, basePerLine$
       lineOfText$$1 = lineOfText$$1 + sepChar$$1;
       i$$6 = i$$6 + k$$1;
       if (numberPosition$$1 == "above") {
-        aboveNum = aboveNum + rightNum(JAM.call(adjustNumbering, null, [i$$6, numberingAdjustment], JAM.policy.p19), "", groupSize$$2, tabIn$$3);
+        aboveNum = aboveNum + rightNum(adjustNumbering(i$$6, numberingAdjustment), "", groupSize$$2, tabIn$$3);
       }
       if (i$$6 >= stopBase$$2) {
         break;
@@ -882,20 +882,20 @@ function writeGroupNumDnaSetStart(text$$12, tabIn$$3, groupSize$$2, basePerLine$
     }
     if (numberPosition$$1 == "left") {
       var v160 = outputWindow.document;
-      JAM.call(v160.write, v160, [rightNum(JAM.call(adjustNumbering, null, [lineNum, numberingAdjustment], JAM.policy.p19), "", 8, tabIn$$3) + lineOfText$$1 + "\n"], JAM.policy.p15);
+      JAM.call(v160.write, v160, [rightNum(adjustNumbering(lineNum, numberingAdjustment), "", 8, tabIn$$3) + lineOfText$$1 + "\n"], JAM.policy.p15);
       if (strands$$1 == "two") {
         var v162 = outputWindow.document;
-        JAM.call(v162.write, v162, [rightNum(JAM.call(adjustNumbering, null, [lineNum, numberingAdjustment], JAM.policy.p19), "", 8, tabIn$$3) + complement(lineOfText$$1) + "\n"], JAM.policy.p15);
+        JAM.call(v162.write, v162, [rightNum(adjustNumbering(lineNum, numberingAdjustment), "", 8, tabIn$$3) + complement(lineOfText$$1) + "\n"], JAM.policy.p15);
         var v164 = outputWindow.document;
         JAM.call(v164.write, v164, ["\n"], JAM.policy.p9);
       }
     } else {
       if (numberPosition$$1 == "right") {
         var v166 = outputWindow.document;
-        JAM.call(v166.write, v166, [lineOfText$$1 + JAM.call(adjustNumbering, null, [i$$6, numberingAdjustment], JAM.policy.p19) + "\n"], JAM.policy.p15);
+        JAM.call(v166.write, v166, [lineOfText$$1 + adjustNumbering(i$$6, numberingAdjustment) + "\n"], JAM.policy.p15);
         if (strands$$1 == "two") {
           var v168 = outputWindow.document;
-          JAM.call(v168.write, v168, [complement(lineOfText$$1) + JAM.call(adjustNumbering, null, [i$$6, numberingAdjustment], JAM.policy.p19) + "\n"], JAM.policy.p15);
+          JAM.call(v168.write, v168, [complement(lineOfText$$1) + adjustNumbering(i$$6, numberingAdjustment) + "\n"], JAM.policy.p15);
           var v170 = outputWindow.document;
           JAM.call(v170.write, v170, ["\n"], JAM.policy.p9);
         }
@@ -1024,7 +1024,7 @@ function writeMutatedSequence(sequence$$13, components$$1, numMut, firstIndexToM
         needNewChar = false;
       }
     }
-    sequence$$13 = JAM.call(sequence$$13.substring, sequence$$13, [0, randNum], JAM.policy.p13) + components$$1[componentsIndex] + JAM.call(sequence$$13.substring, sequence$$13, [randNum + 1, sequence$$13.length], JAM.policy.p21);
+    sequence$$13 = JAM.call(sequence$$13.substring, sequence$$13, [0, randNum], JAM.policy.p13) + components$$1[componentsIndex] + JAM.call(sequence$$13.substring, sequence$$13, [randNum + 1, sequence$$13.length], JAM.policy.p27);
     i$$8++;
     v211 = i$$8 < numMut;
   }
@@ -1069,7 +1069,7 @@ function writeRestrictionSites(sequence$$15, arrayOfItems, dnaConformation) {
   var timesFound = 0;
   if (dnaConformation == "circular") {
     shiftValue = JAM.call(sequence$$15.substring, sequence$$15, [0, lookAhead], JAM.policy.p13).length;
-    sequence$$15 = JAM.call(sequence$$15.substring, sequence$$15, [sequence$$15.length - lookAhead, sequence$$15.length], JAM.policy.p21) + sequence$$15 + JAM.call(sequence$$15.substring, sequence$$15, [0, lookAhead], JAM.policy.p13);
+    sequence$$15 = JAM.call(sequence$$15.substring, sequence$$15, [sequence$$15.length - lookAhead, sequence$$15.length], JAM.policy.p27) + sequence$$15 + JAM.call(sequence$$15.substring, sequence$$15, [0, lookAhead], JAM.policy.p13);
     lowerLimit = 0 + shiftValue;
     upperLimit = upperLimit + shiftValue;
   }
@@ -1223,7 +1223,7 @@ function pcrPrimerStats(theDocument) {
   }
   var v766 = checkFormElement(theDocument.forms[0].elements[0]) == false;
   if (!v766) {
-    v766 = JAM.call(checkSequenceLength, null, [theDocument.forms[0].elements[0].value, maxInput$$3], JAM.policy.p19) == false;
+    v766 = checkSequenceLength(theDocument.forms[0].elements[0].value, maxInput$$3) == false;
   }
   if (v766) {
     return false;
@@ -1271,7 +1271,7 @@ function pcrPrimerStats(theDocument) {
       continue;
     }
     var percentGC = _percentGC(newDna);
-    var nearestNeighborTm = JAM.call(_nearestNeighborTm, null, [newDna, molarSalt, molarPrimerTotal, molarMagnesium], JAM.policy.p19);
+    var nearestNeighborTm = _nearestNeighborTm(newDna, molarSalt, molarPrimerTotal, molarMagnesium);
     var selfCompHash = _getSelfComplementarityReport(newDna, 3, 50);
     var hairpinHash = _getHairpinReport(newDna, 3, 50);
     var v285 = outputWindow.document;
@@ -1291,15 +1291,15 @@ function pcrPrimerStats(theDocument) {
     var v296 = outputWindow.document;
     JAM.call(v296.write, v296, [rightNum("GC content (%):", "", 32, "") + percentGC + "\n"], JAM.policy.p15);
     var v298 = outputWindow.document;
-    JAM.call(v298.write, v298, [rightNum("Molecular weight (Daltons):", "", 32, "") + JAM.call(_molecularWeight, null, [newDna, isPhosphorylated], JAM.policy.p19) + "\n"], JAM.policy.p15);
+    JAM.call(v298.write, v298, [rightNum("Molecular weight (Daltons):", "", 32, "") + _molecularWeight(newDna, isPhosphorylated) + "\n"], JAM.policy.p15);
     var v300 = outputWindow.document;
     JAM.call(v300.write, v300, [rightNum("nmol/A260:", "", 32, "") + _nmolPerA260(newDna) + "\n"], JAM.policy.p15);
     var v302 = outputWindow.document;
-    JAM.call(v302.write, v302, [rightNum("micrograms/A260:", "", 32, "") + JAM.call(_microgramsPerA260, null, [newDna, isPhosphorylated], JAM.policy.p19) + "\n"], JAM.policy.p15);
+    JAM.call(v302.write, v302, [rightNum("micrograms/A260:", "", 32, "") + _microgramsPerA260(newDna, isPhosphorylated) + "\n"], JAM.policy.p15);
     var v304 = outputWindow.document;
     JAM.call(v304.write, v304, [rightNum("Basic Tm (degrees C):", "", 32, "") + _basicTm(newDna) + "\n"], JAM.policy.p15);
     var v306 = outputWindow.document;
-    JAM.call(v306.write, v306, [rightNum("Salt adjusted Tm (degrees C):", "", 32, "") + JAM.call(_molarSaltAdjustedTm, null, [newDna, molarSalt], JAM.policy.p19) + "\n"], JAM.policy.p15);
+    JAM.call(v306.write, v306, [rightNum("Salt adjusted Tm (degrees C):", "", 32, "") + _molarSaltAdjustedTm(newDna, molarSalt) + "\n"], JAM.policy.p15);
     var v308 = outputWindow.document;
     JAM.call(v308.write, v308, [rightNum("Nearest neighbor Tm (degrees C):", "", 32, "") + nearestNeighborTm + "\n"], JAM.policy.p15);
     var v310 = outputWindow.document;
@@ -1315,9 +1315,9 @@ function pcrPrimerStats(theDocument) {
     var v317 = outputWindow.document;
     JAM.call(v317.write, v317, [rightNum("Length:", "", 32, "") + _getSuitableLengthReport(newDna, 14, 30) + "\n"], JAM.policy.p15);
     var v319 = outputWindow.document;
-    JAM.call(v319.write, v319, [rightNum("Percent GC:", "", 32, "") + JAM.call(_getSuitableGCReport, null, [newDna, percentGC, 40, 60], JAM.policy.p19) + "\n"], JAM.policy.p15);
+    JAM.call(v319.write, v319, [rightNum("Percent GC:", "", 32, "") + _getSuitableGCReport(newDna, percentGC, 40, 60) + "\n"], JAM.policy.p15);
     var v321 = outputWindow.document;
-    JAM.call(v321.write, v321, [rightNum("Tm (Nearest neighbor):", "", 32, "") + JAM.call(_getSuitableTmReport, null, [newDna, nearestNeighborTm, 50, 58], JAM.policy.p19) + "\n"], JAM.policy.p15);
+    JAM.call(v321.write, v321, [rightNum("Tm (Nearest neighbor):", "", 32, "") + _getSuitableTmReport(newDna, nearestNeighborTm, 50, 58) + "\n"], JAM.policy.p15);
     var v323 = outputWindow.document;
     JAM.call(v323.write, v323, [rightNum("GC clamp:", "", 32, "") + _getSuitableThreePrimeGC(newDna, 1, 3) + "\n"], JAM.policy.p15);
     var v325 = outputWindow.document;
@@ -1374,14 +1374,14 @@ function _baseCounts(sequence$$20) {
 }
 function _microgramsPerA260(sequence$$21, isPhosphorylated$$1) {
   if (_containsOnlyNonDegenerates(sequence$$21)) {
-    return JAM.call(_microgramsPerA260NonDegen, null, [sequence$$21, isPhosphorylated$$1], JAM.policy.p19);
+    return _microgramsPerA260NonDegen(sequence$$21, isPhosphorylated$$1);
   } else {
-    return JAM.call(_microgramsPerA260Degen, null, [sequence$$21, isPhosphorylated$$1], JAM.policy.p19);
+    return _microgramsPerA260Degen(sequence$$21, isPhosphorylated$$1);
   }
   return;
 }
 function _microgramsPerA260NonDegen(sequence$$22, isPhosphorylated$$2) {
-  var mw = JAM.call(_mw, null, [sequence$$22, isPhosphorylated$$2], JAM.policy.p19);
+  var mw = _mw(sequence$$22, isPhosphorylated$$2);
   var result = mw / _getExtinctionCoefficient(sequence$$22);
   return JAM.call(result.toFixed, result, [2], JAM.policy.p11);
 }
@@ -1410,7 +1410,7 @@ function _microgramsPerA260Degen(sequence$$23, isPhosphorylated$$3) {
   upperBoundsSequence = JAM.call(upperBoundsSequence.replace, upperBoundsSequence, [/h/gi, "a"], JAM.policy.p16);
   upperBoundsSequence = JAM.call(upperBoundsSequence.replace, upperBoundsSequence, [/v/gi, "a"], JAM.policy.p16);
   upperBoundsSequence = JAM.call(upperBoundsSequence.replace, upperBoundsSequence, [/n/gi, "a"], JAM.policy.p16);
-  return JAM.call(_microgramsPerA260NonDegen, null, [upperBoundsSequence, isPhosphorylated$$3], JAM.policy.p19) + " to " + JAM.call(_microgramsPerA260NonDegen, null, [lowerBoundsSequence, isPhosphorylated$$3], JAM.policy.p19);
+  return _microgramsPerA260NonDegen(upperBoundsSequence, isPhosphorylated$$3) + " to " + _microgramsPerA260NonDegen(lowerBoundsSequence, isPhosphorylated$$3);
 }
 function _nmolPerA260(sequence$$24) {
   if (_containsOnlyNonDegenerates(sequence$$24)) {
@@ -1516,14 +1516,14 @@ function _percentGCDegen(sequence$$30) {
 }
 function _molecularWeight(sequence$$31, isPhosphorylated$$4) {
   if (_containsOnlyNonDegenerates(sequence$$31)) {
-    return JAM.call(_molecularWeightNonDegen, null, [sequence$$31, isPhosphorylated$$4], JAM.policy.p19);
+    return _molecularWeightNonDegen(sequence$$31, isPhosphorylated$$4);
   } else {
-    return JAM.call(_molecularWeightDegen, null, [sequence$$31, isPhosphorylated$$4], JAM.policy.p19);
+    return _molecularWeightDegen(sequence$$31, isPhosphorylated$$4);
   }
   return;
 }
 function _molecularWeightNonDegen(sequence$$32, isPhosphorylated$$5) {
-  var v370 = JAM.call(_mw, null, [sequence$$32, isPhosphorylated$$5], JAM.policy.p19);
+  var v370 = _mw(sequence$$32, isPhosphorylated$$5);
   return JAM.call(v370.toFixed, v370, [2], JAM.policy.p11);
 }
 function _mw(sequence$$33, isPhosphorylated$$6) {
@@ -1562,7 +1562,7 @@ function _molecularWeightDegen(sequence$$34, isPhosphorylated$$7) {
   upperBoundsSequence$$3 = JAM.call(upperBoundsSequence$$3.replace, upperBoundsSequence$$3, [/h/gi, "a"], JAM.policy.p16);
   upperBoundsSequence$$3 = JAM.call(upperBoundsSequence$$3.replace, upperBoundsSequence$$3, [/v/gi, "g"], JAM.policy.p16);
   upperBoundsSequence$$3 = JAM.call(upperBoundsSequence$$3.replace, upperBoundsSequence$$3, [/n/gi, "g"], JAM.policy.p16);
-  return JAM.call(_molecularWeightNonDegen, null, [lowerBoundsSequence$$3, isPhosphorylated$$7], JAM.policy.p19) + " to " + JAM.call(_molecularWeightNonDegen, null, [upperBoundsSequence$$3, isPhosphorylated$$7], JAM.policy.p19);
+  return _molecularWeightNonDegen(lowerBoundsSequence$$3, isPhosphorylated$$7) + " to " + _molecularWeightNonDegen(upperBoundsSequence$$3, isPhosphorylated$$7);
 }
 function _basicTm(sequence$$35) {
   if (_containsOnlyNonDegenerates(sequence$$35)) {
@@ -1617,9 +1617,9 @@ function _basicTmDegen(sequence$$37) {
 }
 function _molarSaltAdjustedTm(sequence$$38, molarSalt$$1) {
   if (_containsOnlyNonDegenerates(sequence$$38)) {
-    return JAM.call(_molarSaltAdjustedTmNonDegen, null, [sequence$$38, molarSalt$$1], JAM.policy.p19);
+    return _molarSaltAdjustedTmNonDegen(sequence$$38, molarSalt$$1);
   } else {
-    return JAM.call(_molarSaltAdjustedTmDegen, null, [sequence$$38, molarSalt$$1], JAM.policy.p19);
+    return _molarSaltAdjustedTmDegen(sequence$$38, molarSalt$$1);
   }
   return;
 }
@@ -1654,13 +1654,13 @@ function _molarSaltAdjustedTmDegen(sequence$$40, molarSalt$$3) {
   upperBoundsSequence$$5 = JAM.call(upperBoundsSequence$$5.replace, upperBoundsSequence$$5, [/h/gi, "c"], JAM.policy.p16);
   upperBoundsSequence$$5 = JAM.call(upperBoundsSequence$$5.replace, upperBoundsSequence$$5, [/v/gi, "g"], JAM.policy.p16);
   upperBoundsSequence$$5 = JAM.call(upperBoundsSequence$$5.replace, upperBoundsSequence$$5, [/n/gi, "g"], JAM.policy.p16);
-  return JAM.call(_molarSaltAdjustedTmNonDegen, null, [lowerBoundsSequence$$5, molarSalt$$3], JAM.policy.p19) + " to " + JAM.call(_molarSaltAdjustedTmNonDegen, null, [upperBoundsSequence$$5, molarSalt$$3], JAM.policy.p19);
+  return _molarSaltAdjustedTmNonDegen(lowerBoundsSequence$$5, molarSalt$$3) + " to " + _molarSaltAdjustedTmNonDegen(upperBoundsSequence$$5, molarSalt$$3);
 }
 function _nearestNeighborTm(sequence$$41, molarSalt$$4, molarPrimerTotal$$1, molarMagnesium$$1) {
   if (_containsOnlyNonDegenerates(sequence$$41)) {
-    return JAM.call(_nearestNeighborTmNonDegen, null, [sequence$$41, molarSalt$$4, molarPrimerTotal$$1, molarMagnesium$$1], JAM.policy.p19);
+    return _nearestNeighborTmNonDegen(sequence$$41, molarSalt$$4, molarPrimerTotal$$1, molarMagnesium$$1);
   } else {
-    return JAM.call(_nearestNeighborTmDegen, null, [sequence$$41, molarSalt$$4, molarPrimerTotal$$1, molarMagnesium$$1], JAM.policy.p19);
+    return _nearestNeighborTmDegen(sequence$$41, molarSalt$$4, molarPrimerTotal$$1, molarMagnesium$$1);
   }
   return;
 }
@@ -1715,7 +1715,7 @@ function _nearestNeighborTmDegen(sequence$$43, molarSalt$$6, molarPrimerTotal$$3
   upperBoundsSequence$$6 = JAM.call(upperBoundsSequence$$6.replace, upperBoundsSequence$$6, [/h/gi, "c"], JAM.policy.p16);
   upperBoundsSequence$$6 = JAM.call(upperBoundsSequence$$6.replace, upperBoundsSequence$$6, [/v/gi, "g"], JAM.policy.p16);
   upperBoundsSequence$$6 = JAM.call(upperBoundsSequence$$6.replace, upperBoundsSequence$$6, [/n/gi, "g"], JAM.policy.p16);
-  return JAM.call(_nearestNeighborTmNonDegen, null, [lowerBoundsSequence$$6, molarSalt$$6, molarPrimerTotal$$3, molarMagnesium$$3], JAM.policy.p19) + " to " + JAM.call(_nearestNeighborTmNonDegen, null, [upperBoundsSequence$$6, molarSalt$$6, molarPrimerTotal$$3, molarMagnesium$$3], JAM.policy.p19);
+  return _nearestNeighborTmNonDegen(lowerBoundsSequence$$6, molarSalt$$6, molarPrimerTotal$$3, molarMagnesium$$3) + " to " + _nearestNeighborTmNonDegen(upperBoundsSequence$$6, molarSalt$$6, molarPrimerTotal$$3, molarMagnesium$$3);
 }
 function _getBaseCount(sequence$$44, base$$1) {
   var basePattern = new RegExp(base$$1, "gi");
@@ -1817,7 +1817,7 @@ function _getBaseRunsReport(sequence$$45, minRunLength) {
   var i$$14 = 0;
   var v404 = i$$14 < nucleotides.length;
   for (;v404;) {
-    if (JAM.call(_hasRunOfBases, null, [sequence$$45, nucleotides[i$$14], minRunLength], JAM.policy.p19)) {
+    if (_hasRunOfBases(sequence$$45, nucleotides[i$$14], minRunLength)) {
       hasRun = true;
       report = report + "Contains run of " + nucleotides[i$$14] + "'s; ";
     }
@@ -1838,7 +1838,7 @@ function _getDiNucleotideRunsReport(sequence$$46, minRunLength$$1) {
   var i$$15 = 0;
   var v407 = i$$15 < diNucleotides.length;
   for (;v407;) {
-    if (JAM.call(_hasRunOfBases, null, [sequence$$46, diNucleotides[i$$15], minRunLength$$1], JAM.policy.p19)) {
+    if (_hasRunOfBases(sequence$$46, diNucleotides[i$$15], minRunLength$$1)) {
       hasRun$$1 = true;
       report$$1 = report$$1 + "Contains run of " + diNucleotides[i$$15] + "'s; ";
     }
@@ -1998,12 +1998,12 @@ function _getSelfComplementarityReport(sequence$$53, maxContig, maxPercentIdent)
   JAM.call(matrix.setMatch, matrix, [matchScore], JAM.policy.p17);
   JAM.call(matrix.setMismatch, matrix, [mismatchScore], JAM.policy.p17);
   var scoreSet = new ScoreSet;
-  JAM.call(scoreSet.setScoreSetParam, scoreSet, [matrix, gapPenalty, beginGapPenalty, endGapPenalty], JAM.policy.p21);
+  JAM.call(scoreSet.setScoreSetParam, scoreSet, [matrix, gapPenalty, beginGapPenalty, endGapPenalty], JAM.policy.p27);
   var rev = reverse(sequence$$53);
   sequence$$53 = JAM.call(sequence$$53.match, sequence$$53, [/./g], JAM.policy.p17);
   rev = JAM.call(rev.match, rev, [/./g], JAM.policy.p17);
   alignment = new AlignPairQuad;
-  JAM.call(alignment.initializeMatrix, alignment, [sequence$$53, rev, scoreSet], JAM.policy.p21);
+  JAM.call(alignment.initializeMatrix, alignment, [sequence$$53, rev, scoreSet], JAM.policy.p27);
   alignment.fillMatrix();
   alignment.align();
   var v437 = alignment.getAlignedM();
@@ -2018,7 +2018,7 @@ function _getSelfComplementarityReport(sequence$$53, maxContig, maxPercentIdent)
   var i$$16 = 0;
   var v441 = i$$16 < seqAligned.length;
   for (;v441;) {
-    if (JAM.call(scoreSet.getScore, scoreSet, [JAM.call(seqAligned.charAt, seqAligned, [i$$16], JAM.policy.p15), JAM.call(revAligned.charAt, revAligned, [i$$16], JAM.policy.p15)], JAM.policy.p21) == matchScore) {
+    if (JAM.call(scoreSet.getScore, scoreSet, [JAM.call(seqAligned.charAt, seqAligned, [i$$16], JAM.policy.p15), JAM.call(revAligned.charAt, revAligned, [i$$16], JAM.policy.p15)], JAM.policy.p27) == matchScore) {
       JAM.call(divider.push, divider, ["|"], JAM.policy.p9);
       contiguous++;
       totalMatches++;
@@ -2081,7 +2081,7 @@ function _getHairpinReport(sequence$$54, maxContig$$1, maxPercentIdent$$1) {
   JAM.call(matrix$$1.setMatch, matrix$$1, [matchScore$$1], JAM.policy.p17);
   JAM.call(matrix$$1.setMismatch, matrix$$1, [mismatchScore$$1], JAM.policy.p17);
   var scoreSet$$1 = new ScoreSet;
-  JAM.call(scoreSet$$1.setScoreSetParam, scoreSet$$1, [matrix$$1, gapPenalty$$1, beginGapPenalty$$1, endGapPenalty$$1], JAM.policy.p21);
+  JAM.call(scoreSet$$1.setScoreSetParam, scoreSet$$1, [matrix$$1, gapPenalty$$1, beginGapPenalty$$1, endGapPenalty$$1], JAM.policy.p27);
   var v452 = upper.length > 0;
   for (;v452;) {
     score$$1 = 0;
@@ -2099,7 +2099,7 @@ function _getHairpinReport(sequence$$54, maxContig$$1, maxPercentIdent$$1) {
     }
     var v450 = v880;
     for (;v450;) {
-      score$$1 = score$$1 + JAM.call(scoreSet$$1.getScore, scoreSet$$1, [upper[u], lower[l]], JAM.policy.p21);
+      score$$1 = score$$1 + JAM.call(scoreSet$$1.getScore, scoreSet$$1, [upper[u], lower[l]], JAM.policy.p27);
       u--;
       l--;
       var v883 = u >= 0;
@@ -2143,7 +2143,7 @@ function _getHairpinReport(sequence$$54, maxContig$$1, maxPercentIdent$$1) {
   i$$17 = 0;
   var v461 = i$$17 < topScoreUpper.length;
   for (;v461;) {
-    if (JAM.call(scoreSet$$1.getScore, scoreSet$$1, [JAM.call(topScoreUpper.charAt, topScoreUpper, [i$$17], JAM.policy.p15), JAM.call(topScoreLower.charAt, topScoreLower, [i$$17], JAM.policy.p15)], JAM.policy.p21) == matchScore$$1) {
+    if (JAM.call(scoreSet$$1.getScore, scoreSet$$1, [JAM.call(topScoreUpper.charAt, topScoreUpper, [i$$17], JAM.policy.p15), JAM.call(topScoreLower.charAt, topScoreLower, [i$$17], JAM.policy.p15)], JAM.policy.p27) == matchScore$$1) {
       JAM.call(divider$$1.push, divider$$1, ["|"], JAM.policy.p9);
       contiguous$$1++;
       totalMatches$$1++;
@@ -2181,7 +2181,7 @@ function _getHairpinReport(sequence$$54, maxContig$$1, maxPercentIdent$$1) {
 }
 function getScore(r1$$1, r2) {
   var v468 = this.scoringMatrix;
-  return JAM.call(v468.scoringMatrix_getScore, v468, [r1$$1, r2], JAM.policy.p21);
+  return JAM.call(v468.scoringMatrix_getScore, v468, [r1$$1, r2], JAM.policy.p27);
 }
 function setScoreSetParam(scoringMatrix, gapPenalty$$2, beginGapPenalty$$2, endGapPenalty$$2) {
   this.scoringMatrix = scoringMatrix;
@@ -2389,7 +2389,7 @@ function fillMatrix() {
       }
       var v535 = this.nodes[i$$20 - 1][j$$12 - 1].value;
       var v967 = this.scoreSet;
-      c$$1 = v535 + JAM.call(v967.getScore, v967, [this.M[i$$20 - 1], this.N[j$$12 - 1]], JAM.policy.p21);
+      c$$1 = v535 + JAM.call(v967.getScore, v967, [this.M[i$$20 - 1], this.N[j$$12 - 1]], JAM.policy.p27);
       var v970 = a$$1 >= b;
       if (v970) {
         v970 = a$$1 >= c$$1;

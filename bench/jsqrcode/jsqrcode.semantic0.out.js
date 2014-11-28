@@ -10,9 +10,9 @@ function v154(patterns) {
     var bY = pointB$$1.y;
     return(pointC$$1.x - bX) * (pointA$$1.y - bY) - (pointC$$1.y - bY) * (pointA$$1.x - bX);
   }
-  var zeroOneDistance = JAM.call(distance, null, [patterns[0], patterns[1]], JAM.policy.p26);
-  var oneTwoDistance = JAM.call(distance, null, [patterns[1], patterns[2]], JAM.policy.p26);
-  var zeroTwoDistance = JAM.call(distance, null, [patterns[0], patterns[2]], JAM.policy.p26);
+  var zeroOneDistance = distance(patterns[0], patterns[1]);
+  var oneTwoDistance = distance(patterns[1], patterns[2]);
+  var zeroTwoDistance = distance(patterns[0], patterns[2]);
   var pointA;
   var pointB;
   var pointC;
@@ -39,7 +39,7 @@ function v154(patterns) {
       pointC = patterns[1];
     }
   }
-  if (JAM.call(crossProductZ, null, [pointA, pointB, pointC], JAM.policy.p26) < 0) {
+  if (crossProductZ(pointA, pointB, pointC) < 0) {
     var temp$$5 = pointA;
     pointA = pointC;
     pointC = temp$$5;
@@ -63,7 +63,7 @@ function v153(from, to) {
   }
   this.length = v172;
   var v173 = this.push;
-  return JAM.call(v173.apply, v173, [this, rest], JAM.policy.p27);
+  return JAM.call(v173.apply, v173, [this, rest], JAM.policy.p33);
 }
 function v152() {
   var ret$$1 = new Array(qrcode.width * qrcode.height);
@@ -73,7 +73,7 @@ function v152() {
     var x$$61 = 0;
     var v176 = x$$61 < qrcode.width;
     for (;v176;) {
-      var gray$$1 = JAM.call(qrcode.getPixel, qrcode, [x$$61, y$$43], JAM.policy.p27);
+      var gray$$1 = JAM.call(qrcode.getPixel, qrcode, [x$$61, y$$43], JAM.policy.p33);
       ret$$1[x$$61 + y$$43 * qrcode.width] = gray$$1;
       x$$61++;
       v176 = x$$61 < qrcode.width;
@@ -211,7 +211,7 @@ function v149(th) {
     var x$$60 = 0;
     var v207 = x$$60 < qrcode.width;
     for (;v207;) {
-      var gray = JAM.call(qrcode.getPixel, qrcode, [x$$60, y$$42], JAM.policy.p27);
+      var gray = JAM.call(qrcode.getPixel, qrcode, [x$$60, y$$42], JAM.policy.p33);
       var v206 = x$$60 + y$$42 * qrcode.width;
       var v1099;
       if (gray <= th) {
@@ -282,12 +282,12 @@ function v147(ctx) {
       y$$40++;
       v224 = y$$40 < qrcode.height;
     }
-    JAM.call(ctx.putImageData, ctx, [qrcode.imagedata, 0, 0], JAM.policy.p28);
+    JAM.call(ctx.putImageData, ctx, [qrcode.imagedata, 0, 0], JAM.policy.p25);
   }
   var detector = new Detector(image$$8);
   var qRCodeMatrix = detector.detect();
   if (qrcode.debug) {
-    JAM.call(ctx.putImageData, ctx, [qrcode.imagedata, 0, 0], JAM.policy.p28);
+    JAM.call(ctx.putImageData, ctx, [qrcode.imagedata, 0, 0], JAM.policy.p25);
   }
   var reader$$1 = JAM.call(Decoder.decode, Decoder, [qRCodeMatrix.bits], JAM.policy.p21);
   var data$$18 = reader$$1.DataByte;
@@ -321,11 +321,11 @@ function v145(src$$1) {
     if (canvas_out != null) {
       var outctx = JAM.call(canvas_out.getContext, canvas_out, ["2d"], JAM.policy.p17);
       JAM.call(outctx.clearRect, outctx, [0, 0, 320, 240], JAM.policy.p20);
-      JAM.call(outctx.drawImage, outctx, [image$$7, 0, 0, 320, 240], JAM.policy.p28);
+      JAM.call(outctx.drawImage, outctx, [image$$7, 0, 0, 320, 240], JAM.policy.p25);
     }
     canvas_qr$$1.width = image$$7.width;
     canvas_qr$$1.height = image$$7.height;
-    JAM.call(context$$1.drawImage, context$$1, [image$$7, 0, 0], JAM.policy.p28);
+    JAM.call(context$$1.drawImage, context$$1, [image$$7, 0, 0], JAM.policy.p25);
     qrcode.width = image$$7.width;
     qrcode.height = image$$7.height;
     try {
@@ -381,7 +381,7 @@ function v143(bits$$13) {
   var version$$7 = parser.readVersion();
   var ecLevel$$2 = parser.readFormatInformation().ErrorCorrectionLevel;
   var codewords$$1 = parser.readCodewords();
-  var dataBlocks = JAM.call(DataBlock.getDataBlocks, DataBlock, [codewords$$1, version$$7, ecLevel$$2], JAM.policy.p27);
+  var dataBlocks = JAM.call(DataBlock.getDataBlocks, DataBlock, [codewords$$1, version$$7, ecLevel$$2], JAM.policy.p33);
   var totalBytes = 0;
   var i$$44 = 0;
   var v247 = i$$44 < dataBlocks.Length;
@@ -398,7 +398,7 @@ function v143(bits$$13) {
     var dataBlock = dataBlocks[j$$23];
     var codewordBytes$$1 = dataBlock.Codewords;
     var numDataCodewords$$3 = dataBlock.NumDataCodewords;
-    JAM.call(Decoder.correctErrors, Decoder, [codewordBytes$$1, numDataCodewords$$3], JAM.policy.p27);
+    JAM.call(Decoder.correctErrors, Decoder, [codewordBytes$$1, numDataCodewords$$3], JAM.policy.p33);
     i$$44 = 0;
     var v249 = i$$44 < numDataCodewords$$3;
     for (;v249;) {
@@ -411,7 +411,7 @@ function v143(bits$$13) {
     j$$23++;
     v250 = j$$23 < dataBlocks.length;
   }
-  var reader = JAM.new(QRCodeDataBlockReader, [resultBytes, version$$7.VersionNumber, ecLevel$$2.Bits], JAM.policy.p26);
+  var reader = new QRCodeDataBlockReader(resultBytes, version$$7.VersionNumber, ecLevel$$2.Bits);
   return reader;
 }
 function v142(codewordBytes, numDataCodewords$$2) {
@@ -427,7 +427,7 @@ function v142(codewordBytes, numDataCodewords$$2) {
   var numECCodewords = codewordBytes.length - numDataCodewords$$2;
   try {
     var v256 = Decoder.rsDecoder;
-    JAM.call(v256.decode, v256, [codewordsInts, numECCodewords], JAM.policy.p27);
+    JAM.call(v256.decode, v256, [codewordsInts, numECCodewords], JAM.policy.p33);
   } catch (rse) {
     throw rse;
   }
@@ -480,7 +480,7 @@ function v139(rawCodewords, version$$5, ecLevel$$1) {
       var numBlockCodewords = ecBlocks.ECCodewordsPerBlock + numDataCodewords$$1;
       var v263 = numResultBlocks;
       numResultBlocks = numResultBlocks + 1;
-      var v2801 = JAM.new(DataBlock, [numDataCodewords$$1, new Array(numBlockCodewords)], JAM.policy.p26);
+      var v2801 = new DataBlock(numDataCodewords$$1, new Array(numBlockCodewords));
       result$$1[v263] = v2801;
       i$$11++;
       v264 = i$$11 < ecBlock$$1.Count;
@@ -575,7 +575,7 @@ function v137(maskedFormatInfo$$1) {
     if (targetInfo == maskedFormatInfo$$1) {
       return new FormatInformation(decodeInfo[1]);
     }
-    var bitsDifference$$1 = JAM.call(this.numBitsDiffering, this, [maskedFormatInfo$$1, targetInfo], JAM.policy.p27);
+    var bitsDifference$$1 = JAM.call(this.numBitsDiffering, this, [maskedFormatInfo$$1, targetInfo], JAM.policy.p33);
     if (bitsDifference$$1 < bestDifference$$1) {
       bestFormatInfo = decodeInfo[1];
       bestDifference$$1 = bitsDifference$$1;
@@ -600,7 +600,7 @@ function v135(a, b$$1) {
   return BITS_SET_IN_HALF_BYTE[a & 15] + BITS_SET_IN_HALF_BYTE[URShift(a, 4) & 15] + BITS_SET_IN_HALF_BYTE[URShift(a, 8) & 15] + BITS_SET_IN_HALF_BYTE[URShift(a, 12) & 15] + BITS_SET_IN_HALF_BYTE[URShift(a, 16) & 15] + BITS_SET_IN_HALF_BYTE[URShift(a, 20) & 15] + BITS_SET_IN_HALF_BYTE[URShift(a, 24) & 15] + BITS_SET_IN_HALF_BYTE[URShift(a, 28) & 15];
 }
 function v134(x0$$4, y0$$4, x1$$5, y1$$5, x2$$3, y2$$3, x3$$2, y3$$2) {
-  return JAM.call(this.squareToQuadrilateral, this, [x0$$4, y0$$4, x1$$5, y1$$5, x2$$3, y2$$3, x3$$2, y3$$2], JAM.policy.p27).buildAdjoint();
+  return JAM.call(this.squareToQuadrilateral, this, [x0$$4, y0$$4, x1$$5, y1$$5, x2$$3, y2$$3, x3$$2, y3$$2], JAM.policy.p33).buildAdjoint();
 }
 function v133(x0$$3, y0$$3, x1$$4, y1$$4, x2$$2, y2$$2, x3$$1, y3$$1) {
   dy2 = y3$$1 - y2$$2;
@@ -610,7 +610,7 @@ function v133(x0$$3, y0$$3, x1$$4, y1$$4, x2$$2, y2$$2, x3$$1, y3$$1) {
     v1165 = dy3 == 0;
   }
   if (v1165) {
-    return JAM.new(PerspectiveTransform, [x1$$4 - x0$$3, x2$$2 - x1$$4, x0$$3, y1$$4 - y0$$3, y2$$2 - y1$$4, y0$$3, 0, 0, 1], JAM.policy.p26);
+    return new PerspectiveTransform(x1$$4 - x0$$3, x2$$2 - x1$$4, x0$$3, y1$$4 - y0$$3, y2$$2 - y1$$4, y0$$3, 0, 0, 1);
   } else {
     dx1 = x1$$4 - x2$$2;
     dx2 = x3$$1 - x2$$2;
@@ -619,13 +619,13 @@ function v133(x0$$3, y0$$3, x1$$4, y1$$4, x2$$2, y2$$2, x3$$1, y3$$1) {
     denominator = dx1 * dy2 - dx2 * dy1;
     a13 = (dx3 * dy2 - dx2 * dy3) / denominator;
     a23 = (dx1 * dy3 - dx3 * dy1) / denominator;
-    return JAM.new(PerspectiveTransform, [x1$$4 - x0$$3 + a13 * x1$$4, x3$$1 - x0$$3 + a23 * x3$$1, x0$$3, y1$$4 - y0$$3 + a13 * y1$$4, y3$$1 - y0$$3 + a23 * y3$$1, y0$$3, a13, a23, 1], JAM.policy.p26);
+    return new PerspectiveTransform(x1$$4 - x0$$3 + a13 * x1$$4, x3$$1 - x0$$3 + a23 * x3$$1, x0$$3, y1$$4 - y0$$3 + a13 * y1$$4, y3$$1 - y0$$3 + a23 * y3$$1, y0$$3, a13, a23, 1);
   }
   return;
 }
 function v132(x0$$2, y0$$2, x1$$3, y1$$3, x2$$1, y2$$1, x3, y3, x0p, y0p, x1p, y1p, x2p, y2p, x3p, y3p) {
-  var qToS = JAM.call(this.quadrilateralToSquare, this, [x0$$2, y0$$2, x1$$3, y1$$3, x2$$1, y2$$1, x3, y3], JAM.policy.p27);
-  var sToQ = JAM.call(this.squareToQuadrilateral, this, [x0p, y0p, x1p, y1p, x2p, y2p, x3p, y3p], JAM.policy.p27);
+  var qToS = JAM.call(this.quadrilateralToSquare, this, [x0$$2, y0$$2, x1$$3, y1$$3, x2$$1, y2$$1, x3, y3], JAM.policy.p33);
+  var sToQ = JAM.call(this.squareToQuadrilateral, this, [x0p, y0p, x1p, y1p, x2p, y2p, x3p, y3p], JAM.policy.p33);
   return JAM.call(sToQ.times, sToQ, [qToS], JAM.policy.p21);
 }
 function v131(versionBits) {
@@ -638,7 +638,7 @@ function v131(versionBits) {
     if (targetVersion == versionBits) {
       return JAM.call(this.getVersionForNumber, this, [i$$4 + 7], JAM.policy.p21);
     }
-    var bitsDifference = JAM.call(FormatInformation.numBitsDiffering, FormatInformation, [versionBits, targetVersion], JAM.policy.p27);
+    var bitsDifference = JAM.call(FormatInformation.numBitsDiffering, FormatInformation, [versionBits, targetVersion], JAM.policy.p33);
     if (bitsDifference < bestDifference) {
       bestVersion = i$$4 + 7;
       bestDifference = bitsDifference;
@@ -673,8 +673,8 @@ function v129(versionNumber$$1) {
   return Version.VERSIONS[versionNumber$$1 - 1];
 }
 function v128(image$$4, dimension$$1, p1ToX, p1ToY, p2ToX, p2ToY, p3ToX, p3ToY, p4ToX, p4ToY, p1FromX, p1FromY, p2FromX, p2FromY, p3FromX, p3FromY, p4FromX, p4FromY) {
-  var transform$$1 = JAM.call(PerspectiveTransform.quadrilateralToQuadrilateral, PerspectiveTransform, [p1ToX, p1ToY, p2ToX, p2ToY, p3ToX, p3ToY, p4ToX, p4ToY, p1FromX, p1FromY, p2FromX, p2FromY, p3FromX, p3FromY, p4FromX, p4FromY], JAM.policy.p27);
-  return JAM.call(GridSampler.sampleGrid3, GridSampler, [image$$4, dimension$$1, transform$$1], JAM.policy.p27);
+  var transform$$1 = JAM.call(PerspectiveTransform.quadrilateralToQuadrilateral, PerspectiveTransform, [p1ToX, p1ToY, p2ToX, p2ToY, p3ToX, p3ToY, p4ToX, p4ToY, p1FromX, p1FromY, p2FromX, p2FromY, p3FromX, p3FromY, p4FromX, p4FromY], JAM.policy.p33);
+  return JAM.call(GridSampler.sampleGrid3, GridSampler, [image$$4, dimension$$1, transform$$1], JAM.policy.p33);
 }
 function v127(image$$3, dimension, transform) {
   var bits = new BitMatrix(dimension);
@@ -693,7 +693,7 @@ function v127(image$$3, dimension, transform) {
       v322 = x$$48 < max;
     }
     JAM.call(transform.transformPoints1, transform, [points$$1], JAM.policy.p21);
-    JAM.call(GridSampler.checkAndNudgePoints, GridSampler, [image$$3, points$$1], JAM.policy.p27);
+    JAM.call(GridSampler.checkAndNudgePoints, GridSampler, [image$$3, points$$1], JAM.policy.p33);
     try {
       x$$48 = 0;
       var v334 = x$$48 < max;
@@ -876,7 +876,7 @@ function ECBlocks(ecCodewordsPerBlock, ecBlocks1, ecBlocks2) {
   }
   this.ecCodewordsPerBlock = ecCodewordsPerBlock;
   if (ecBlocks2) {
-    var v2802 = JAM.new(Array, [ecBlocks1, ecBlocks2], JAM.policy.p26);
+    var v2802 = new Array(ecBlocks1, ecBlocks2);
     this.ecBlocks = v2802;
   } else {
     var v2803 = new Array(ecBlocks1);
@@ -956,7 +956,7 @@ function Version(versionNumber, alignmentPatternCenters, ecBlocks1$$1, ecBlocks2
   }
   this.versionNumber = versionNumber;
   this.alignmentPatternCenters = alignmentPatternCenters;
-  var v2804 = JAM.new(Array, [ecBlocks1$$1, ecBlocks2$$1, ecBlocks3, ecBlocks4], JAM.policy.p26);
+  var v2804 = new Array(ecBlocks1$$1, ecBlocks2$$1, ecBlocks3, ecBlocks4);
   this.ecBlocks = v2804;
   var total$$1 = 0;
   var ecCodewords = ecBlocks1$$1.ECCodewordsPerBlock;
@@ -979,7 +979,7 @@ function Version(versionNumber, alignmentPatternCenters, ecBlocks1$$1, ecBlocks2
   return;
 }
 function buildVersions() {
-  return JAM.new(Array, [new Version(1, new Array, new ECBlocks(7, new ECB(1, 19)), new ECBlocks(10, new ECB(1, 16)), new ECBlocks(13, new ECB(1, 13)), new ECBlocks(17, new ECB(1, 9))), new Version(2, new Array(6, 18), new ECBlocks(10, new ECB(1, 34)), new ECBlocks(16, new ECB(1, 28)), new ECBlocks(22, new ECB(1, 22)), new ECBlocks(28, new ECB(1, 16))), new Version(3, new Array(6, 22), new ECBlocks(15, new ECB(1, 55)), new ECBlocks(26, new ECB(1, 44)), new ECBlocks(18, new ECB(2, 17)), new ECBlocks(22, 
+  return new Array(new Version(1, new Array, new ECBlocks(7, new ECB(1, 19)), new ECBlocks(10, new ECB(1, 16)), new ECBlocks(13, new ECB(1, 13)), new ECBlocks(17, new ECB(1, 9))), new Version(2, new Array(6, 18), new ECBlocks(10, new ECB(1, 34)), new ECBlocks(16, new ECB(1, 28)), new ECBlocks(22, new ECB(1, 22)), new ECBlocks(28, new ECB(1, 16))), new Version(3, new Array(6, 22), new ECBlocks(15, new ECB(1, 55)), new ECBlocks(26, new ECB(1, 44)), new ECBlocks(18, new ECB(2, 17)), new ECBlocks(22, 
   new ECB(2, 13))), new Version(4, new Array(6, 26), new ECBlocks(20, new ECB(1, 80)), new ECBlocks(18, new ECB(2, 32)), new ECBlocks(26, new ECB(2, 24)), new ECBlocks(16, new ECB(4, 9))), new Version(5, new Array(6, 30), new ECBlocks(26, new ECB(1, 108)), new ECBlocks(24, new ECB(2, 43)), new ECBlocks(18, new ECB(2, 15), new ECB(2, 16)), new ECBlocks(22, new ECB(2, 11), new ECB(2, 12))), new Version(6, new Array(6, 34), new ECBlocks(18, new ECB(2, 68)), new ECBlocks(16, new ECB(4, 27)), new ECBlocks(24, 
   new ECB(4, 19)), new ECBlocks(28, new ECB(4, 15))), new Version(7, new Array(6, 22, 38), new ECBlocks(20, new ECB(2, 78)), new ECBlocks(18, new ECB(4, 31)), new ECBlocks(18, new ECB(2, 14), new ECB(4, 15)), new ECBlocks(26, new ECB(4, 13), new ECB(1, 14))), new Version(8, new Array(6, 24, 42), new ECBlocks(24, new ECB(2, 97)), new ECBlocks(22, new ECB(2, 38), new ECB(2, 39)), new ECBlocks(22, new ECB(4, 18), new ECB(2, 19)), new ECBlocks(26, new ECB(4, 14), new ECB(2, 15))), new Version(9, new Array(6, 
   26, 46), new ECBlocks(30, new ECB(2, 116)), new ECBlocks(22, new ECB(3, 36), new ECB(2, 37)), new ECBlocks(20, new ECB(4, 16), new ECB(4, 17)), new ECBlocks(24, new ECB(4, 12), new ECB(4, 13))), new Version(10, new Array(6, 28, 50), new ECBlocks(18, new ECB(2, 68), new ECB(2, 69)), new ECBlocks(26, new ECB(4, 43), new ECB(1, 44)), new ECBlocks(24, new ECB(6, 19), new ECB(2, 20)), new ECBlocks(28, new ECB(6, 15), new ECB(2, 16))), new Version(11, new Array(6, 30, 54), new ECBlocks(20, new ECB(4, 
@@ -997,15 +997,15 @@ function buildVersions() {
   25)), new ECBlocks(30, new ECB(11, 15), new ECB(46, 16))), new Version(34, new Array(6, 34, 62, 90, 118, 146), new ECBlocks(30, new ECB(13, 115), new ECB(6, 116)), new ECBlocks(28, new ECB(14, 46), new ECB(23, 47)), new ECBlocks(30, new ECB(44, 24), new ECB(7, 25)), new ECBlocks(30, new ECB(59, 16), new ECB(1, 17))), new Version(35, new Array(6, 30, 54, 78, 102, 126, 150), new ECBlocks(30, new ECB(12, 121), new ECB(7, 122)), new ECBlocks(28, new ECB(12, 47), new ECB(26, 48)), new ECBlocks(30, new ECB(39, 
   24), new ECB(14, 25)), new ECBlocks(30, new ECB(22, 15), new ECB(41, 16))), new Version(36, new Array(6, 24, 50, 76, 102, 128, 154), new ECBlocks(30, new ECB(6, 121), new ECB(14, 122)), new ECBlocks(28, new ECB(6, 47), new ECB(34, 48)), new ECBlocks(30, new ECB(46, 24), new ECB(10, 25)), new ECBlocks(30, new ECB(2, 15), new ECB(64, 16))), new Version(37, new Array(6, 28, 54, 80, 106, 132, 158), new ECBlocks(30, new ECB(17, 122), new ECB(4, 123)), new ECBlocks(28, new ECB(29, 46), new ECB(14, 47)), 
   new ECBlocks(30, new ECB(49, 24), new ECB(10, 25)), new ECBlocks(30, new ECB(24, 15), new ECB(46, 16))), new Version(38, new Array(6, 32, 58, 84, 110, 136, 162), new ECBlocks(30, new ECB(4, 122), new ECB(18, 123)), new ECBlocks(28, new ECB(13, 46), new ECB(32, 47)), new ECBlocks(30, new ECB(48, 24), new ECB(14, 25)), new ECBlocks(30, new ECB(42, 15), new ECB(32, 16))), new Version(39, new Array(6, 26, 54, 82, 110, 138, 166), new ECBlocks(30, new ECB(20, 117), new ECB(4, 118)), new ECBlocks(28, 
-  new ECB(40, 47), new ECB(7, 48)), new ECBlocks(30, new ECB(43, 24), new ECB(22, 25)), new ECBlocks(30, new ECB(10, 15), new ECB(67, 16))), new Version(40, new Array(6, 30, 58, 86, 114, 142, 170), new ECBlocks(30, new ECB(19, 118), new ECB(6, 119)), new ECBlocks(28, new ECB(18, 47), new ECB(31, 48)), new ECBlocks(30, new ECB(34, 24), new ECB(34, 25)), new ECBlocks(30, new ECB(20, 15), new ECB(61, 16)))], JAM.policy.p26);
+  new ECB(40, 47), new ECB(7, 48)), new ECBlocks(30, new ECB(43, 24), new ECB(22, 25)), new ECBlocks(30, new ECB(10, 15), new ECB(67, 16))), new Version(40, new Array(6, 30, 58, 86, 114, 142, 170), new ECBlocks(30, new ECB(19, 118), new ECB(6, 119)), new ECBlocks(28, new ECB(18, 47), new ECB(31, 48)), new ECBlocks(30, new ECB(34, 24), new ECB(34, 25)), new ECBlocks(30, new ECB(20, 15), new ECB(61, 16))));
 }
 function PerspectiveTransform(a11, a21, a31, a12, a22, a32, a13$$1, a23$$1, a33) {
   function v15(other$$4) {
-    return JAM.new(PerspectiveTransform, [this.a11 * other$$4.a11 + this.a21 * other$$4.a12 + this.a31 * other$$4.a13, this.a11 * other$$4.a21 + this.a21 * other$$4.a22 + this.a31 * other$$4.a23, this.a11 * other$$4.a31 + this.a21 * other$$4.a32 + this.a31 * other$$4.a33, this.a12 * other$$4.a11 + this.a22 * other$$4.a12 + this.a32 * other$$4.a13, this.a12 * other$$4.a21 + this.a22 * other$$4.a22 + this.a32 * other$$4.a23, this.a12 * other$$4.a31 + this.a22 * other$$4.a32 + this.a32 * other$$4.a33, 
-    this.a13 * other$$4.a11 + this.a23 * other$$4.a12 + this.a33 * other$$4.a13, this.a13 * other$$4.a21 + this.a23 * other$$4.a22 + this.a33 * other$$4.a23, this.a13 * other$$4.a31 + this.a23 * other$$4.a32 + this.a33 * other$$4.a33], JAM.policy.p26);
+    return new PerspectiveTransform(this.a11 * other$$4.a11 + this.a21 * other$$4.a12 + this.a31 * other$$4.a13, this.a11 * other$$4.a21 + this.a21 * other$$4.a22 + this.a31 * other$$4.a23, this.a11 * other$$4.a31 + this.a21 * other$$4.a32 + this.a31 * other$$4.a33, this.a12 * other$$4.a11 + this.a22 * other$$4.a12 + this.a32 * other$$4.a13, this.a12 * other$$4.a21 + this.a22 * other$$4.a22 + this.a32 * other$$4.a23, this.a12 * other$$4.a31 + this.a22 * other$$4.a32 + this.a32 * other$$4.a33, this.a13 * 
+    other$$4.a11 + this.a23 * other$$4.a12 + this.a33 * other$$4.a13, this.a13 * other$$4.a21 + this.a23 * other$$4.a22 + this.a33 * other$$4.a23, this.a13 * other$$4.a31 + this.a23 * other$$4.a32 + this.a33 * other$$4.a33);
   }
   function v14() {
-    return JAM.new(PerspectiveTransform, [this.a22 * this.a33 - this.a23 * this.a32, this.a23 * this.a31 - this.a21 * this.a33, this.a21 * this.a32 - this.a22 * this.a31, this.a13 * this.a32 - this.a12 * this.a33, this.a11 * this.a33 - this.a13 * this.a31, this.a12 * this.a31 - this.a11 * this.a32, this.a12 * this.a23 - this.a13 * this.a22, this.a13 * this.a21 - this.a11 * this.a23, this.a11 * this.a22 - this.a12 * this.a21], JAM.policy.p26);
+    return new PerspectiveTransform(this.a22 * this.a33 - this.a23 * this.a32, this.a23 * this.a31 - this.a21 * this.a33, this.a21 * this.a32 - this.a22 * this.a31, this.a13 * this.a32 - this.a12 * this.a33, this.a11 * this.a33 - this.a13 * this.a31, this.a12 * this.a31 - this.a11 * this.a32, this.a12 * this.a23 - this.a13 * this.a22, this.a13 * this.a21 - this.a11 * this.a23, this.a11 * this.a22 - this.a12 * this.a21);
   }
   function v13(xValues, yValues) {
     var n$$1 = xValues.length;
@@ -1076,11 +1076,11 @@ function Detector(image$$5) {
     var topLeft$$3 = info.TopLeft;
     var topRight$$3 = info.TopRight;
     var bottomLeft$$3 = info.BottomLeft;
-    var moduleSize$$1 = JAM.call(this.calculateModuleSize, this, [topLeft$$3, topRight$$3, bottomLeft$$3], JAM.policy.p27);
+    var moduleSize$$1 = JAM.call(this.calculateModuleSize, this, [topLeft$$3, topRight$$3, bottomLeft$$3], JAM.policy.p33);
     if (moduleSize$$1 < 1) {
       throw "Error";
     }
-    var dimension$$7 = JAM.call(this.computeDimension, this, [topLeft$$3, topRight$$3, bottomLeft$$3, moduleSize$$1], JAM.policy.p27);
+    var dimension$$7 = JAM.call(this.computeDimension, this, [topLeft$$3, topRight$$3, bottomLeft$$3, moduleSize$$1], JAM.policy.p33);
     var provisionalVersion = JAM.call(Version.getProvisionalVersionForDimension, Version, [dimension$$7], JAM.policy.p21);
     var modulesBetweenFPCenters = provisionalVersion.DimensionForVersion - 7;
     var alignmentPattern$$1 = null;
@@ -1093,23 +1093,23 @@ function Detector(image$$5) {
       var i$$7 = 4;
       var v456 = i$$7 <= 16;
       for (;v456;) {
-        alignmentPattern$$1 = JAM.call(this.findAlignmentInRegion, this, [moduleSize$$1, estAlignmentX$$1, estAlignmentY$$1, i$$7], JAM.policy.p27);
+        alignmentPattern$$1 = JAM.call(this.findAlignmentInRegion, this, [moduleSize$$1, estAlignmentX$$1, estAlignmentY$$1, i$$7], JAM.policy.p33);
         break;
       }
     }
-    var transform$$4 = JAM.call(this.createTransform, this, [topLeft$$3, topRight$$3, bottomLeft$$3, alignmentPattern$$1, dimension$$7], JAM.policy.p27);
-    var bits$$2 = JAM.call(this.sampleGrid, this, [this.image, transform$$4, dimension$$7], JAM.policy.p27);
+    var transform$$4 = JAM.call(this.createTransform, this, [topLeft$$3, topRight$$3, bottomLeft$$3, alignmentPattern$$1, dimension$$7], JAM.policy.p33);
+    var bits$$2 = JAM.call(this.sampleGrid, this, [this.image, transform$$4, dimension$$7], JAM.policy.p33);
     var points$$4;
     if (alignmentPattern$$1 == null) {
-      points$$4 = JAM.new(Array, [bottomLeft$$3, topLeft$$3, topRight$$3], JAM.policy.p26);
+      points$$4 = new Array(bottomLeft$$3, topLeft$$3, topRight$$3);
     } else {
-      points$$4 = JAM.new(Array, [bottomLeft$$3, topLeft$$3, topRight$$3, alignmentPattern$$1], JAM.policy.p26);
+      points$$4 = new Array(bottomLeft$$3, topLeft$$3, topRight$$3, alignmentPattern$$1);
     }
-    return JAM.new(DetectorResult, [bits$$2, points$$4], JAM.policy.p26);
+    return new DetectorResult(bits$$2, points$$4);
   }
   function v24(image$$6, transform$$3, dimension$$6) {
     var sampler = GridSampler;
-    return JAM.call(sampler.sampleGrid3, sampler, [image$$6, dimension$$6, transform$$3], JAM.policy.p27);
+    return JAM.call(sampler.sampleGrid3, sampler, [image$$6, dimension$$6, transform$$3], JAM.policy.p33);
   }
   function v23(topLeft$$2, topRight$$2, bottomLeft$$2, alignmentPattern, dimension$$5) {
     var dimMinusThree = dimension$$5 - 3.5;
@@ -1132,18 +1132,18 @@ function Detector(image$$5) {
   function v22(overallEstModuleSize, estAlignmentX, estAlignmentY, allowanceFactor) {
     var allowance = JAM.call(Math.floor, Math, [allowanceFactor * overallEstModuleSize], JAM.policy.p21);
     var alignmentAreaLeftX = JAM.call(Math.max, Math, [0, estAlignmentX - allowance], JAM.policy.p20);
-    var alignmentAreaRightX = JAM.call(Math.min, Math, [qrcode.width - 1, estAlignmentX + allowance], JAM.policy.p27);
+    var alignmentAreaRightX = JAM.call(Math.min, Math, [qrcode.width - 1, estAlignmentX + allowance], JAM.policy.p33);
     if (alignmentAreaRightX - alignmentAreaLeftX < overallEstModuleSize * 3) {
       throw "Error";
     }
     var alignmentAreaTopY = JAM.call(Math.max, Math, [0, estAlignmentY - allowance], JAM.policy.p20);
-    var alignmentAreaBottomY = JAM.call(Math.min, Math, [qrcode.height - 1, estAlignmentY + allowance], JAM.policy.p27);
-    var alignmentFinder = JAM.new(AlignmentPatternFinder, [this.image, alignmentAreaLeftX, alignmentAreaTopY, alignmentAreaRightX - alignmentAreaLeftX, alignmentAreaBottomY - alignmentAreaTopY, overallEstModuleSize, this.resultPointCallback], JAM.policy.p26);
+    var alignmentAreaBottomY = JAM.call(Math.min, Math, [qrcode.height - 1, estAlignmentY + allowance], JAM.policy.p33);
+    var alignmentFinder = new AlignmentPatternFinder(this.image, alignmentAreaLeftX, alignmentAreaTopY, alignmentAreaRightX - alignmentAreaLeftX, alignmentAreaBottomY - alignmentAreaTopY, overallEstModuleSize, this.resultPointCallback);
     return alignmentFinder.find();
   }
   function v21(topLeft$$1, topRight$$1, bottomLeft$$1, moduleSize) {
-    var tltrCentersDimension = JAM.call(Math.round, Math, [JAM.call(this.distance, this, [topLeft$$1, topRight$$1], JAM.policy.p27) / moduleSize], JAM.policy.p21);
-    var tlblCentersDimension = JAM.call(Math.round, Math, [JAM.call(this.distance, this, [topLeft$$1, bottomLeft$$1], JAM.policy.p27) / moduleSize], JAM.policy.p21);
+    var tltrCentersDimension = JAM.call(Math.round, Math, [JAM.call(this.distance, this, [topLeft$$1, topRight$$1], JAM.policy.p33) / moduleSize], JAM.policy.p21);
+    var tlblCentersDimension = JAM.call(Math.round, Math, [JAM.call(this.distance, this, [topLeft$$1, bottomLeft$$1], JAM.policy.p33) / moduleSize], JAM.policy.p21);
     var dimension$$4 = (tltrCentersDimension + tlblCentersDimension >> 1) + 7;
     switch(dimension$$4 & 3) {
       case 0:
@@ -1163,11 +1163,11 @@ function Detector(image$$5) {
     return JAM.call(Math.sqrt, Math, [xDiff * xDiff + yDiff * yDiff], JAM.policy.p21);
   }
   function v19(topLeft, topRight, bottomLeft) {
-    return(JAM.call(this.calculateModuleSizeOneWay, this, [topLeft, topRight], JAM.policy.p27) + JAM.call(this.calculateModuleSizeOneWay, this, [topLeft, bottomLeft], JAM.policy.p27)) / 2;
+    return(JAM.call(this.calculateModuleSizeOneWay, this, [topLeft, topRight], JAM.policy.p33) + JAM.call(this.calculateModuleSizeOneWay, this, [topLeft, bottomLeft], JAM.policy.p33)) / 2;
   }
   function v18(pattern$$1, otherPattern) {
-    var moduleSizeEst1 = JAM.call(this.sizeOfBlackWhiteBlackRunBothWays, this, [JAM.call(Math.floor, Math, [pattern$$1.X], JAM.policy.p21), JAM.call(Math.floor, Math, [pattern$$1.Y], JAM.policy.p21), JAM.call(Math.floor, Math, [otherPattern.X], JAM.policy.p21), JAM.call(Math.floor, Math, [otherPattern.Y], JAM.policy.p21)], JAM.policy.p27);
-    var moduleSizeEst2 = JAM.call(this.sizeOfBlackWhiteBlackRunBothWays, this, [JAM.call(Math.floor, Math, [otherPattern.X], JAM.policy.p21), JAM.call(Math.floor, Math, [otherPattern.Y], JAM.policy.p21), JAM.call(Math.floor, Math, [pattern$$1.X], JAM.policy.p21), JAM.call(Math.floor, Math, [pattern$$1.Y], JAM.policy.p21)], JAM.policy.p27);
+    var moduleSizeEst1 = JAM.call(this.sizeOfBlackWhiteBlackRunBothWays, this, [JAM.call(Math.floor, Math, [pattern$$1.X], JAM.policy.p21), JAM.call(Math.floor, Math, [pattern$$1.Y], JAM.policy.p21), JAM.call(Math.floor, Math, [otherPattern.X], JAM.policy.p21), JAM.call(Math.floor, Math, [otherPattern.Y], JAM.policy.p21)], JAM.policy.p33);
+    var moduleSizeEst2 = JAM.call(this.sizeOfBlackWhiteBlackRunBothWays, this, [JAM.call(Math.floor, Math, [otherPattern.X], JAM.policy.p21), JAM.call(Math.floor, Math, [otherPattern.Y], JAM.policy.p21), JAM.call(Math.floor, Math, [pattern$$1.X], JAM.policy.p21), JAM.call(Math.floor, Math, [pattern$$1.Y], JAM.policy.p21)], JAM.policy.p33);
     if (isNaN(moduleSizeEst1)) {
       return moduleSizeEst2 / 7;
     }
@@ -1177,7 +1177,7 @@ function Detector(image$$5) {
     return(moduleSizeEst1 + moduleSizeEst2) / 14;
   }
   function v17(fromX$$1, fromY$$1, toX$$1, toY$$1) {
-    var result = JAM.call(this.sizeOfBlackWhiteBlackRun, this, [fromX$$1, fromY$$1, toX$$1, toY$$1], JAM.policy.p27);
+    var result = JAM.call(this.sizeOfBlackWhiteBlackRun, this, [fromX$$1, fromY$$1, toX$$1, toY$$1], JAM.policy.p33);
     var scale = 1;
     var otherToX = fromX$$1 - (toX$$1 - fromX$$1);
     if (otherToX < 0) {
@@ -1201,7 +1201,7 @@ function Detector(image$$5) {
       }
     }
     otherToX = JAM.call(Math.floor, Math, [fromX$$1 + (otherToX - fromX$$1) * scale], JAM.policy.p21);
-    result = result + JAM.call(this.sizeOfBlackWhiteBlackRun, this, [fromX$$1, fromY$$1, otherToX, otherToY], JAM.policy.p27);
+    result = result + JAM.call(this.sizeOfBlackWhiteBlackRun, this, [fromX$$1, fromY$$1, otherToX, otherToY], JAM.policy.p33);
     return result - 1;
   }
   function v16(fromX, fromY, toX, toY) {
@@ -1407,7 +1407,7 @@ function BitMatrix(width$$10, height$$9) {
   }
   function v37(x$$53, y$$36) {
     var offset$$9 = y$$36 * this.rowSize + (x$$53 >> 5);
-    return(JAM.call(URShift, null, [this.bits[offset$$9], x$$53 & 31], JAM.policy.p26) & 1) != 0;
+    return(URShift(this.bits[offset$$9], x$$53 & 31) & 1) != 0;
   }
   function v36() {
     if (this.width != this.height) {
@@ -1476,7 +1476,7 @@ function BitMatrixParser(bitMatrix$$1) {
     var version$$6 = this.readVersion();
     var dataMask$$1 = JAM.call(DataMask.forReference, DataMask, [formatInfo$$2.DataMask], JAM.policy.p21);
     var dimension$$11 = this.bitMatrix.Dimension;
-    JAM.call(dataMask$$1.unmaskBitMatrix, dataMask$$1, [this.bitMatrix, dimension$$11], JAM.policy.p27);
+    JAM.call(dataMask$$1.unmaskBitMatrix, dataMask$$1, [this.bitMatrix, dimension$$11], JAM.policy.p33);
     var functionPattern = version$$6.buildFunctionPattern();
     var readingUp = true;
     var result$$2 = new Array(version$$6.TotalCodewords);
@@ -1502,11 +1502,11 @@ function BitMatrixParser(bitMatrix$$1) {
         var col = 0;
         var v577 = col < 2;
         for (;v577;) {
-          if (!JAM.call(functionPattern.get_Renamed, functionPattern, [j$$4 - col, i$$15], JAM.policy.p27)) {
+          if (!JAM.call(functionPattern.get_Renamed, functionPattern, [j$$4 - col, i$$15], JAM.policy.p33)) {
             bitsRead++;
             currentByte = currentByte << 1;
             var v1531 = this.bitMatrix;
-            if (JAM.call(v1531.get_Renamed, v1531, [j$$4 - col, i$$15], JAM.policy.p27)) {
+            if (JAM.call(v1531.get_Renamed, v1531, [j$$4 - col, i$$15], JAM.policy.p33)) {
               currentByte = currentByte | 1;
             }
             if (bitsRead == 8) {
@@ -1644,7 +1644,7 @@ function BitMatrixParser(bitMatrix$$1) {
   function v44(i$$12, j$$1, versionBits$$1) {
     var v599;
     var v2271 = this.bitMatrix;
-    if (JAM.call(v2271.get_Renamed, v2271, [i$$12, j$$1], JAM.policy.p27)) {
+    if (JAM.call(v2271.get_Renamed, v2271, [i$$12, j$$1], JAM.policy.p33)) {
       v599 = versionBits$$1 << 1 | 1;
     } else {
       v599 = versionBits$$1 << 1;
@@ -1679,7 +1679,7 @@ function DataMask000() {
       var j$$5 = 0;
       var v603 = j$$5 < dimension$$12;
       for (;v603;) {
-        if (JAM.call(this.isMasked, this, [i$$16, j$$5], JAM.policy.p27)) {
+        if (JAM.call(this.isMasked, this, [i$$16, j$$5], JAM.policy.p33)) {
           JAM.call(bits$$5.flip, bits$$5, [j$$5, i$$16], JAM.policy.p23);
         }
         j$$5++;
@@ -1705,7 +1705,7 @@ function DataMask001() {
       var j$$7 = 0;
       var v607 = j$$7 < dimension$$13;
       for (;v607;) {
-        if (JAM.call(this.isMasked, this, [i$$18, j$$7], JAM.policy.p27)) {
+        if (JAM.call(this.isMasked, this, [i$$18, j$$7], JAM.policy.p33)) {
           JAM.call(bits$$6.flip, bits$$6, [j$$7, i$$18], JAM.policy.p23);
         }
         j$$7++;
@@ -1731,7 +1731,7 @@ function DataMask010() {
       var j$$9 = 0;
       var v611 = j$$9 < dimension$$14;
       for (;v611;) {
-        if (JAM.call(this.isMasked, this, [i$$20, j$$9], JAM.policy.p27)) {
+        if (JAM.call(this.isMasked, this, [i$$20, j$$9], JAM.policy.p33)) {
           JAM.call(bits$$7.flip, bits$$7, [j$$9, i$$20], JAM.policy.p23);
         }
         j$$9++;
@@ -1757,7 +1757,7 @@ function DataMask011() {
       var j$$11 = 0;
       var v615 = j$$11 < dimension$$15;
       for (;v615;) {
-        if (JAM.call(this.isMasked, this, [i$$22, j$$11], JAM.policy.p27)) {
+        if (JAM.call(this.isMasked, this, [i$$22, j$$11], JAM.policy.p33)) {
           JAM.call(bits$$8.flip, bits$$8, [j$$11, i$$22], JAM.policy.p23);
         }
         j$$11++;
@@ -1783,7 +1783,7 @@ function DataMask100() {
       var j$$13 = 0;
       var v619 = j$$13 < dimension$$16;
       for (;v619;) {
-        if (JAM.call(this.isMasked, this, [i$$24, j$$13], JAM.policy.p27)) {
+        if (JAM.call(this.isMasked, this, [i$$24, j$$13], JAM.policy.p33)) {
           JAM.call(bits$$9.flip, bits$$9, [j$$13, i$$24], JAM.policy.p23);
         }
         j$$13++;
@@ -1810,7 +1810,7 @@ function DataMask101() {
       var j$$15 = 0;
       var v623 = j$$15 < dimension$$17;
       for (;v623;) {
-        if (JAM.call(this.isMasked, this, [i$$26, j$$15], JAM.policy.p27)) {
+        if (JAM.call(this.isMasked, this, [i$$26, j$$15], JAM.policy.p33)) {
           JAM.call(bits$$10.flip, bits$$10, [j$$15, i$$26], JAM.policy.p23);
         }
         j$$15++;
@@ -1837,7 +1837,7 @@ function DataMask110() {
       var j$$17 = 0;
       var v627 = j$$17 < dimension$$18;
       for (;v627;) {
-        if (JAM.call(this.isMasked, this, [i$$28, j$$17], JAM.policy.p27)) {
+        if (JAM.call(this.isMasked, this, [i$$28, j$$17], JAM.policy.p33)) {
           JAM.call(bits$$11.flip, bits$$11, [j$$17, i$$28], JAM.policy.p23);
         }
         j$$17++;
@@ -1863,7 +1863,7 @@ function DataMask111() {
       var j$$19 = 0;
       var v631 = j$$19 < dimension$$19;
       for (;v631;) {
-        if (JAM.call(this.isMasked, this, [i$$30, j$$19], JAM.policy.p27)) {
+        if (JAM.call(this.isMasked, this, [i$$30, j$$19], JAM.policy.p33)) {
           JAM.call(bits$$12.flip, bits$$12, [j$$19, i$$30], JAM.policy.p23);
         }
         j$$19++;
@@ -1894,7 +1894,7 @@ function ReedSolomonDecoder(field) {
         if (i$$34 != j$$21) {
           var v635 = this.field;
           var v2280 = this.field;
-          denominator$$3 = JAM.call(v635.multiply, v635, [denominator$$3, JAM.call(GF256.addOrSubtract, GF256, [1, JAM.call(v2280.multiply, v2280, [errorLocations$$1[j$$21], xiInverse], JAM.policy.p27)], JAM.policy.p20)], JAM.policy.p27);
+          denominator$$3 = JAM.call(v635.multiply, v635, [denominator$$3, JAM.call(GF256.addOrSubtract, GF256, [1, JAM.call(v2280.multiply, v2280, [errorLocations$$1[j$$21], xiInverse], JAM.policy.p33)], JAM.policy.p20)], JAM.policy.p33);
         }
         j$$21++;
         v638 = j$$21 < s$$3;
@@ -1902,11 +1902,11 @@ function ReedSolomonDecoder(field) {
       var v639 = this.field;
       var v640 = JAM.call(errorEvaluator.evaluateAt, errorEvaluator, [xiInverse], JAM.policy.p21);
       var v1551 = this.field;
-      var v2811 = JAM.call(v639.multiply, v639, [v640, JAM.call(v1551.inverse, v1551, [denominator$$3], JAM.policy.p21)], JAM.policy.p27);
+      var v2811 = JAM.call(v639.multiply, v639, [v640, JAM.call(v1551.inverse, v1551, [denominator$$3], JAM.policy.p21)], JAM.policy.p33);
       result$$4[i$$34] = v2811;
       if (dataMatrix$$1) {
         var v642 = this.field;
-        var v2812 = JAM.call(v642.multiply, v642, [result$$4[i$$34], xiInverse], JAM.policy.p27);
+        var v2812 = JAM.call(v642.multiply, v642, [result$$4[i$$34], xiInverse], JAM.policy.p33);
         result$$4[i$$34] = v2812;
       }
       i$$34++;
@@ -1982,10 +1982,10 @@ function ReedSolomonDecoder(field) {
       for (;v666;) {
         var degreeDiff = r$$1.Degree - rLast.Degree;
         var v662 = this.field;
-        var scale$$1 = JAM.call(v662.multiply, v662, [JAM.call(r$$1.getCoefficient, r$$1, [r$$1.Degree], JAM.policy.p21), dltInverse], JAM.policy.p27);
+        var scale$$1 = JAM.call(v662.multiply, v662, [JAM.call(r$$1.getCoefficient, r$$1, [r$$1.Degree], JAM.policy.p21), dltInverse], JAM.policy.p33);
         var v1561 = this.field;
-        q = JAM.call(q.addOrSubtract, q, [JAM.call(v1561.buildMonomial, v1561, [degreeDiff, scale$$1], JAM.policy.p27)], JAM.policy.p21);
-        r$$1 = JAM.call(r$$1.addOrSubtract, r$$1, [JAM.call(rLast.multiplyByMonomial, rLast, [degreeDiff, scale$$1], JAM.policy.p27)], JAM.policy.p21);
+        q = JAM.call(q.addOrSubtract, q, [JAM.call(v1561.buildMonomial, v1561, [degreeDiff, scale$$1], JAM.policy.p33)], JAM.policy.p21);
+        r$$1 = JAM.call(r$$1.addOrSubtract, r$$1, [JAM.call(rLast.multiplyByMonomial, rLast, [degreeDiff, scale$$1], JAM.policy.p33)], JAM.policy.p21);
         var v1562 = r$$1.Degree >= rLast.Degree;
         if (v1562) {
           v1562 = !r$$1.Zero;
@@ -2006,10 +2006,10 @@ function ReedSolomonDecoder(field) {
     var inverse = JAM.call(v671.inverse, v671, [sigmaTildeAtZero], JAM.policy.p21);
     var sigma$$1 = JAM.call(t.multiply2, t, [inverse], JAM.policy.p21);
     var omega$$1 = JAM.call(r$$1.multiply2, r$$1, [inverse], JAM.policy.p21);
-    return JAM.new(Array, [sigma$$1, omega$$1], JAM.policy.p26);
+    return new Array(sigma$$1, omega$$1);
   }
   function v64(received, twoS) {
-    var poly = JAM.new(GF256Poly, [this.field, received], JAM.policy.p26);
+    var poly = new GF256Poly(this.field, received);
     var syndromeCoefficients = new Array(twoS);
     var i$$32 = 0;
     var v673 = i$$32 < syndromeCoefficients.length;
@@ -2041,13 +2041,13 @@ function ReedSolomonDecoder(field) {
     if (noError) {
       return;
     }
-    var syndrome = JAM.new(GF256Poly, [this.field, syndromeCoefficients], JAM.policy.p26);
+    var syndrome = new GF256Poly(this.field, syndromeCoefficients);
     var v1570 = this.field;
-    var sigmaOmega = JAM.call(this.runEuclideanAlgorithm, this, [JAM.call(v1570.buildMonomial, v1570, [twoS, 1], JAM.policy.p28), syndrome, twoS], JAM.policy.p27);
+    var sigmaOmega = JAM.call(this.runEuclideanAlgorithm, this, [JAM.call(v1570.buildMonomial, v1570, [twoS, 1], JAM.policy.p25), syndrome, twoS], JAM.policy.p33);
     var sigma = sigmaOmega[0];
     var omega = sigmaOmega[1];
     var errorLocations = JAM.call(this.findErrorLocations, this, [sigma], JAM.policy.p21);
-    var errorMagnitudes = JAM.call(this.findErrorMagnitudes, this, [omega, errorLocations, dataMatrix], JAM.policy.p27);
+    var errorMagnitudes = JAM.call(this.findErrorMagnitudes, this, [omega, errorLocations, dataMatrix], JAM.policy.p33);
     i$$32 = 0;
     var v685 = i$$32 < errorLocations.length;
     for (;v685;) {
@@ -2057,7 +2057,7 @@ function ReedSolomonDecoder(field) {
       if (position < 0) {
         throw "ReedSolomonException Bad error location";
       }
-      var v2814 = JAM.call(GF256.addOrSubtract, GF256, [received[position], errorMagnitudes[i$$32]], JAM.policy.p27);
+      var v2814 = JAM.call(GF256.addOrSubtract, GF256, [received[position], errorMagnitudes[i$$32]], JAM.policy.p33);
       received[position] = v2814;
       i$$32++;
       v685 = i$$32 < errorLocations.length;
@@ -2092,10 +2092,10 @@ function GF256Poly(field$$1, coefficients) {
     for (;v696;) {
       var degreeDifference = remainder.Degree - other$$8.Degree;
       var v693 = this.field;
-      var scale$$2 = JAM.call(v693.multiply, v693, [JAM.call(remainder.getCoefficient, remainder, [remainder.Degree], JAM.policy.p21), inverseDenominatorLeadingTerm], JAM.policy.p27);
-      var term = JAM.call(other$$8.multiplyByMonomial, other$$8, [degreeDifference, scale$$2], JAM.policy.p27);
+      var scale$$2 = JAM.call(v693.multiply, v693, [JAM.call(remainder.getCoefficient, remainder, [remainder.Degree], JAM.policy.p21), inverseDenominatorLeadingTerm], JAM.policy.p33);
+      var term = JAM.call(other$$8.multiplyByMonomial, other$$8, [degreeDifference, scale$$2], JAM.policy.p33);
       var v695 = this.field;
-      var iterationQuotient = JAM.call(v695.buildMonomial, v695, [degreeDifference, scale$$2], JAM.policy.p27);
+      var iterationQuotient = JAM.call(v695.buildMonomial, v695, [degreeDifference, scale$$2], JAM.policy.p33);
       quotient = JAM.call(quotient.addOrSubtract, quotient, [iterationQuotient], JAM.policy.p21);
       remainder = JAM.call(remainder.addOrSubtract, remainder, [term], JAM.policy.p21);
       var v1580 = remainder.Degree >= other$$8.Degree;
@@ -2104,7 +2104,7 @@ function GF256Poly(field$$1, coefficients) {
       }
       v696 = v1580;
     }
-    return JAM.new(Array, [quotient, remainder], JAM.policy.p26);
+    return new Array(quotient, remainder);
   }
   function v76(degree$$1, coefficient) {
     if (degree$$1 < 0) {
@@ -2126,12 +2126,12 @@ function GF256Poly(field$$1, coefficients) {
     var v705 = i$$40 < size$$6;
     for (;v705;) {
       var v703 = this.field;
-      var v2815 = JAM.call(v703.multiply, v703, [this.coefficients[i$$40], coefficient], JAM.policy.p27);
+      var v2815 = JAM.call(v703.multiply, v703, [this.coefficients[i$$40], coefficient], JAM.policy.p33);
       product$$2[i$$40] = v2815;
       i$$40++;
       v705 = i$$40 < size$$6;
     }
-    return JAM.new(GF256Poly, [this.field, product$$2], JAM.policy.p26);
+    return new GF256Poly(this.field, product$$2);
   }
   function v75(scalar) {
     if (scalar == 0) {
@@ -2146,12 +2146,12 @@ function GF256Poly(field$$1, coefficients) {
     var v713 = i$$39 < size$$5;
     for (;v713;) {
       var v711 = this.field;
-      var v2816 = JAM.call(v711.multiply, v711, [this.coefficients[i$$39], scalar], JAM.policy.p27);
+      var v2816 = JAM.call(v711.multiply, v711, [this.coefficients[i$$39], scalar], JAM.policy.p33);
       product$$1[i$$39] = v2816;
       i$$39++;
       v713 = i$$39 < size$$5;
     }
-    return JAM.new(GF256Poly, [this.field, product$$1], JAM.policy.p26);
+    return new GF256Poly(this.field, product$$1);
   }
   function v74(other$$7) {
     if (this.field != other$$7.field) {
@@ -2179,7 +2179,7 @@ function GF256Poly(field$$1, coefficients) {
         var v719 = i$$38 + j$$22;
         var v1589 = product[i$$38 + j$$22];
         var v2300 = this.field;
-        var v2817 = JAM.call(GF256.addOrSubtract, GF256, [v1589, JAM.call(v2300.multiply, v2300, [aCoeff, bCoefficients[j$$22]], JAM.policy.p27)], JAM.policy.p27);
+        var v2817 = JAM.call(GF256.addOrSubtract, GF256, [v1589, JAM.call(v2300.multiply, v2300, [aCoeff, bCoefficients[j$$22]], JAM.policy.p33)], JAM.policy.p33);
         product[v719] = v2817;
         j$$22++;
         v720 = j$$22 < bLength;
@@ -2187,7 +2187,7 @@ function GF256Poly(field$$1, coefficients) {
       i$$38++;
       v721 = i$$38 < aLength;
     }
-    return JAM.new(GF256Poly, [this.field, product], JAM.policy.p26);
+    return new GF256Poly(this.field, product);
   }
   function v73(other$$6) {
     if (this.field != other$$6.field) {
@@ -2218,12 +2218,12 @@ function GF256Poly(field$$1, coefficients) {
     var i$$37 = lengthDiff;
     var v733 = i$$37 < largerCoefficients.length;
     for (;v733;) {
-      var v2818 = JAM.call(GF256.addOrSubtract, GF256, [smallerCoefficients[i$$37 - lengthDiff], largerCoefficients[i$$37]], JAM.policy.p27);
+      var v2818 = JAM.call(GF256.addOrSubtract, GF256, [smallerCoefficients[i$$37 - lengthDiff], largerCoefficients[i$$37]], JAM.policy.p33);
       sumDiff[i$$37] = v2818;
       i$$37++;
       v733 = i$$37 < largerCoefficients.length;
     }
-    return JAM.new(GF256Poly, [field$$1, sumDiff], JAM.policy.p26);
+    return new GF256Poly(field$$1, sumDiff);
   }
   function v72(a$$2) {
     if (a$$2 == 0) {
@@ -2235,7 +2235,7 @@ function GF256Poly(field$$1, coefficients) {
       var i$$36 = 0;
       var v737 = i$$36 < size$$4;
       for (;v737;) {
-        result$$5 = JAM.call(GF256.addOrSubtract, GF256, [result$$5, this.coefficients[i$$36]], JAM.policy.p27);
+        result$$5 = JAM.call(GF256.addOrSubtract, GF256, [result$$5, this.coefficients[i$$36]], JAM.policy.p33);
         i$$36++;
         v737 = i$$36 < size$$4;
       }
@@ -2246,7 +2246,7 @@ function GF256Poly(field$$1, coefficients) {
     var v742 = i$$36 < size$$4;
     for (;v742;) {
       var v1599 = this.field;
-      result2 = JAM.call(GF256.addOrSubtract, GF256, [JAM.call(v1599.multiply, v1599, [a$$2, result2], JAM.policy.p27), this.coefficients[i$$36]], JAM.policy.p27);
+      result2 = JAM.call(GF256.addOrSubtract, GF256, [JAM.call(v1599.multiply, v1599, [a$$2, result2], JAM.policy.p33), this.coefficients[i$$36]], JAM.policy.p33);
       i$$36++;
       v742 = i$$36 < size$$4;
     }
@@ -2375,7 +2375,7 @@ function GF256(primitive) {
       v771 = i$$42 < coefficients$$1.length;
     }
     coefficients$$1[0] = coefficient$$1;
-    return JAM.new(GF256Poly, [this, coefficients$$1], JAM.policy.p26);
+    return new GF256Poly(this, coefficients$$1);
   }
   function v79() {
     return this.one;
@@ -2412,11 +2412,11 @@ function GF256(primitive) {
   }
   var at0 = new Array(1);
   at0[0] = 0;
-  var v2822 = JAM.new(GF256Poly, [this, new Array(at0)], JAM.policy.p26);
+  var v2822 = new GF256Poly(this, new Array(at0));
   this.zero = v2822;
   var at1 = new Array(1);
   at1[0] = 1;
-  var v2823 = JAM.new(GF256Poly, [this, new Array(at1)], JAM.policy.p26);
+  var v2823 = new GF256Poly(this, new Array(at1));
   this.one = v2823;
   JAM.call(this.__defineGetter__, this, ["Zero", v78], JAM.policy.p19);
   JAM.call(this.__defineGetter__, this, ["One", v79], JAM.policy.p19);
@@ -2538,7 +2538,7 @@ function FinderPatternFinder() {
           if ((currentState & 1) == 0) {
             if (currentState == 4) {
               if (JAM.call(this.foundPatternCross, this, [stateCount$$5], JAM.policy.p21)) {
-                var confirmed = JAM.call(this.handlePossibleCenter, this, [stateCount$$5, i$$54, j$$28], JAM.policy.p27);
+                var confirmed = JAM.call(this.handlePossibleCenter, this, [stateCount$$5, i$$54, j$$28], JAM.policy.p33);
                 if (confirmed) {
                   iSkip = 2;
                   if (this.hasSkipped) {
@@ -2593,7 +2593,7 @@ function FinderPatternFinder() {
         v796 = j$$28 < maxJ$$1;
       }
       if (JAM.call(this.foundPatternCross, this, [stateCount$$5], JAM.policy.p21)) {
-        confirmed = JAM.call(this.handlePossibleCenter, this, [stateCount$$5, i$$54, maxJ$$1], JAM.policy.p27);
+        confirmed = JAM.call(this.handlePossibleCenter, this, [stateCount$$5, i$$54, maxJ$$1], JAM.policy.p33);
         if (confirmed) {
           iSkip = stateCount$$5[0];
           if (this.hasSkipped) {
@@ -2714,12 +2714,12 @@ function FinderPatternFinder() {
       var v825 = this.possibleCenters;
       JAM.call(v825.sort, v825, [v100], JAM.policy.p21);
     }
-    return JAM.new(Array, [this.possibleCenters[0], this.possibleCenters[1], this.possibleCenters[2]], JAM.policy.p26);
+    return new Array(this.possibleCenters[0], this.possibleCenters[1], this.possibleCenters[2]);
   }
   function v99(stateCount$$4, i$$50, j$$27) {
     var stateCountTotal$$2 = stateCount$$4[0] + stateCount$$4[1] + stateCount$$4[2] + stateCount$$4[3] + stateCount$$4[4];
-    var centerJ$$1 = JAM.call(this.centerFromEnd, this, [stateCount$$4, j$$27], JAM.policy.p27);
-    var centerI$$1 = JAM.call(this.crossCheckVertical, this, [i$$50, JAM.call(Math.floor, Math, [centerJ$$1], JAM.policy.p21), stateCount$$4[2], stateCountTotal$$2], JAM.policy.p27);
+    var centerJ$$1 = JAM.call(this.centerFromEnd, this, [stateCount$$4, j$$27], JAM.policy.p33);
+    var centerI$$1 = JAM.call(this.crossCheckVertical, this, [i$$50, JAM.call(Math.floor, Math, [centerJ$$1], JAM.policy.p21), stateCount$$4[2], stateCountTotal$$2], JAM.policy.p33);
     if (!isNaN(centerI$$1)) {
       centerJ$$1 = JAM.call(this.crossCheckHorizontal, this, [JAM.call(Math.floor, Math, [centerJ$$1], JAM.policy.p21), JAM.call(Math.floor, Math, [centerI$$1], JAM.policy.p21), stateCount$$4[2], stateCountTotal$$2], JAM.policy.p23);
       if (!isNaN(centerJ$$1)) {
@@ -2730,7 +2730,7 @@ function FinderPatternFinder() {
         var v840 = index$$39 < max$$5;
         for (;v840;) {
           var center = this.possibleCenters[index$$39];
-          if (JAM.call(center.aboutEquals, center, [estimatedModuleSize$$1, centerI$$1, centerJ$$1], JAM.policy.p27)) {
+          if (JAM.call(center.aboutEquals, center, [estimatedModuleSize$$1, centerI$$1, centerJ$$1], JAM.policy.p33)) {
             center.incrementCount();
             found = true;
             break;
@@ -2739,7 +2739,7 @@ function FinderPatternFinder() {
           v840 = index$$39 < max$$5;
         }
         if (!found) {
-          var point$$2 = JAM.new(FinderPattern, [centerJ$$1, centerI$$1, estimatedModuleSize$$1], JAM.policy.p26);
+          var point$$2 = new FinderPattern(centerJ$$1, centerI$$1, estimatedModuleSize$$1);
           var v841 = this.possibleCenters;
           JAM.call(v841.push, v841, [point$$2], JAM.policy.p21);
           if (this.resultPointCallback != null) {
@@ -2906,7 +2906,7 @@ function FinderPatternFinder() {
     }
     var v862;
     if (JAM.call(this.foundPatternCross, this, [stateCount$$3], JAM.policy.p21)) {
-      v862 = JAM.call(this.centerFromEnd, this, [stateCount$$3, j$$26], JAM.policy.p27);
+      v862 = JAM.call(this.centerFromEnd, this, [stateCount$$3, j$$26], JAM.policy.p33);
     } else {
       v862 = NaN;
     }
@@ -3066,7 +3066,7 @@ function FinderPatternFinder() {
     }
     var v878;
     if (JAM.call(this.foundPatternCross, this, [stateCount$$2], JAM.policy.p21)) {
-      v878 = JAM.call(this.centerFromEnd, this, [stateCount$$2, i$$49], JAM.policy.p27);
+      v878 = JAM.call(this.centerFromEnd, this, [stateCount$$2, i$$49], JAM.policy.p33);
     } else {
       v878 = NaN;
     }
@@ -3224,7 +3224,7 @@ function AlignmentPatternFinder(image$$13, startX, startY, width$$12, height$$11
           } else {
             if (currentState$$1 == 2) {
               if (JAM.call(this.foundPatternCross, this, [stateCount$$10], JAM.policy.p21)) {
-                var confirmed$$1 = JAM.call(this.handlePossibleCenter, this, [stateCount$$10, i$$59, j$$31], JAM.policy.p27);
+                var confirmed$$1 = JAM.call(this.handlePossibleCenter, this, [stateCount$$10, i$$59, j$$31], JAM.policy.p33);
                 if (confirmed$$1 != null) {
                   return confirmed$$1;
                 }
@@ -3249,7 +3249,7 @@ function AlignmentPatternFinder(image$$13, startX, startY, width$$12, height$$11
         v906 = j$$31 < maxJ$$2;
       }
       if (JAM.call(this.foundPatternCross, this, [stateCount$$10], JAM.policy.p21)) {
-        confirmed$$1 = JAM.call(this.handlePossibleCenter, this, [stateCount$$10, i$$59, maxJ$$2], JAM.policy.p27);
+        confirmed$$1 = JAM.call(this.handlePossibleCenter, this, [stateCount$$10, i$$59, maxJ$$2], JAM.policy.p33);
         if (confirmed$$1 != null) {
           return confirmed$$1;
         }
@@ -3264,8 +3264,8 @@ function AlignmentPatternFinder(image$$13, startX, startY, width$$12, height$$11
   }
   function v114(stateCount$$9, i$$58, j$$30) {
     var stateCountTotal$$4 = stateCount$$9[0] + stateCount$$9[1] + stateCount$$9[2];
-    var centerJ$$3 = JAM.call(this.centerFromEnd, this, [stateCount$$9, j$$30], JAM.policy.p27);
-    var centerI$$2 = JAM.call(this.crossCheckVertical, this, [i$$58, JAM.call(Math.floor, Math, [centerJ$$3], JAM.policy.p21), 2 * stateCount$$9[1], stateCountTotal$$4], JAM.policy.p27);
+    var centerJ$$3 = JAM.call(this.centerFromEnd, this, [stateCount$$9, j$$30], JAM.policy.p33);
+    var centerI$$2 = JAM.call(this.crossCheckVertical, this, [i$$58, JAM.call(Math.floor, Math, [centerJ$$3], JAM.policy.p21), 2 * stateCount$$9[1], stateCountTotal$$4], JAM.policy.p33);
     if (!isNaN(centerI$$2)) {
       var estimatedModuleSize$$3 = (stateCount$$9[0] + stateCount$$9[1] + stateCount$$9[2]) / 3;
       var max$$8 = this.possibleCenters.length;
@@ -3273,13 +3273,13 @@ function AlignmentPatternFinder(image$$13, startX, startY, width$$12, height$$11
       var v920 = index$$40 < max$$8;
       for (;v920;) {
         var center$$2 = this.possibleCenters[index$$40];
-        if (JAM.call(center$$2.aboutEquals, center$$2, [estimatedModuleSize$$3, centerI$$2, centerJ$$3], JAM.policy.p27)) {
-          return JAM.new(AlignmentPattern, [centerJ$$3, centerI$$2, estimatedModuleSize$$3], JAM.policy.p26);
+        if (JAM.call(center$$2.aboutEquals, center$$2, [estimatedModuleSize$$3, centerI$$2, centerJ$$3], JAM.policy.p33)) {
+          return new AlignmentPattern(centerJ$$3, centerI$$2, estimatedModuleSize$$3);
         }
         index$$40++;
         v920 = index$$40 < max$$8;
       }
-      var point$$3 = JAM.new(AlignmentPattern, [centerJ$$3, centerI$$2, estimatedModuleSize$$3], JAM.policy.p26);
+      var point$$3 = new AlignmentPattern(centerJ$$3, centerI$$2, estimatedModuleSize$$3);
       var v921 = this.possibleCenters;
       JAM.call(v921.push, v921, [point$$3], JAM.policy.p21);
       if (this.resultPointCallback != null) {
@@ -3412,7 +3412,7 @@ function AlignmentPatternFinder(image$$13, startX, startY, width$$12, height$$11
     }
     var v936;
     if (JAM.call(this.foundPatternCross, this, [stateCount$$8], JAM.policy.p21)) {
-      v936 = JAM.call(this.centerFromEnd, this, [stateCount$$8, i$$57], JAM.policy.p27);
+      v936 = JAM.call(this.centerFromEnd, this, [stateCount$$8, i$$57], JAM.policy.p33);
     } else {
       v936 = NaN;
     }
@@ -3827,7 +3827,7 @@ function passLine(stringPixels) {
   }
   if (c >= 320 * 240 * 4) {
     c = 0;
-    JAM.call(gCtx.putImageData, gCtx, [imageData, 0, 0], JAM.policy.p28);
+    JAM.call(gCtx.putImageData, gCtx, [imageData, 0, 0], JAM.policy.p25);
   }
   return;
 }
@@ -3854,8 +3854,8 @@ PerspectiveTransform.quadrilateralToQuadrilateral = v132;
 PerspectiveTransform.squareToQuadrilateral = v133;
 PerspectiveTransform.quadrilateralToSquare = v134;
 var FORMAT_INFO_MASK_QR = 21522;
-var FORMAT_INFO_DECODE_LOOKUP = JAM.new(Array, [new Array(21522, 0), new Array(20773, 1), new Array(24188, 2), new Array(23371, 3), new Array(17913, 4), new Array(16590, 5), new Array(20375, 6), new Array(19104, 7), new Array(30660, 8), new Array(29427, 9), new Array(32170, 10), new Array(30877, 11), new Array(26159, 12), new Array(25368, 13), new Array(27713, 14), new Array(26998, 15), new Array(5769, 16), new Array(5054, 17), new Array(7399, 18), new Array(6608, 19), new Array(1890, 20), new Array(597, 
-21), new Array(3340, 22), new Array(2107, 23), new Array(13663, 24), new Array(12392, 25), new Array(16177, 26), new Array(14854, 27), new Array(9396, 28), new Array(8579, 29), new Array(11994, 30), new Array(11245, 31)], JAM.policy.p26);
+var FORMAT_INFO_DECODE_LOOKUP = new Array(new Array(21522, 0), new Array(20773, 1), new Array(24188, 2), new Array(23371, 3), new Array(17913, 4), new Array(16590, 5), new Array(20375, 6), new Array(19104, 7), new Array(30660, 8), new Array(29427, 9), new Array(32170, 10), new Array(30877, 11), new Array(26159, 12), new Array(25368, 13), new Array(27713, 14), new Array(26998, 15), new Array(5769, 16), new Array(5054, 17), new Array(7399, 18), new Array(6608, 19), new Array(1890, 20), new Array(597, 
+21), new Array(3340, 22), new Array(2107, 23), new Array(13663, 24), new Array(12392, 25), new Array(16177, 26), new Array(14854, 27), new Array(9396, 28), new Array(8579, 29), new Array(11994, 30), new Array(11245, 31));
 var BITS_SET_IN_HALF_BYTE = new Array(0, 1, 1, 2, 1, 2, 2, 3, 1, 2, 2, 3, 2, 3, 3, 4);
 FormatInformation.numBitsDiffering = v135;
 FormatInformation.decodeFormatInformation = v136;
@@ -3865,12 +3865,12 @@ var L = new ErrorCorrectionLevel(0, 1, "L");
 var M = new ErrorCorrectionLevel(1, 0, "M");
 var Q = new ErrorCorrectionLevel(2, 3, "Q");
 var H = new ErrorCorrectionLevel(3, 2, "H");
-var FOR_BITS = JAM.new(Array, [M, L, H, Q], JAM.policy.p26);
+var FOR_BITS = new Array(M, L, H, Q);
 DataBlock.getDataBlocks = v139;
 DataMask = {};
 DataMask.forReference = v140;
 var v1049 = DataMask;
-var v2832 = JAM.new(Array, [new DataMask000, new DataMask001, new DataMask010, new DataMask011, new DataMask100, new DataMask101, new DataMask110, new DataMask111], JAM.policy.p26);
+var v2832 = new Array(new DataMask000, new DataMask001, new DataMask010, new DataMask011, new DataMask100, new DataMask101, new DataMask110, new DataMask111);
 v1049.DATA_MASKS = v2832;
 var v1050 = GF256;
 var v2833 = new GF256(285);

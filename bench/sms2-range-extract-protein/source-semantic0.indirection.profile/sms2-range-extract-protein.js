@@ -1177,7 +1177,7 @@ function writeGroupNum(text$$10, tabIn$$1, groupSize, basePerLine, startBase, st
   return true;
 }
 function writeGroupNumDna(text$$11, tabIn$$2, groupSize$$1, basePerLine$$1, startBase$$1, stopBase$$1, strands, numberPosition) {
-  JAM.call(writeGroupNumDnaSetStart, null, [text$$11, tabIn$$2, groupSize$$1, basePerLine$$1, startBase$$1, stopBase$$1, strands, numberPosition, 0], JAM.policy.p19);
+  writeGroupNumDnaSetStart(text$$11, tabIn$$2, groupSize$$1, basePerLine$$1, startBase$$1, stopBase$$1, strands, numberPosition, 0);
   return true;
 }
 function writeGroupNumDnaSetStart(text$$12, tabIn$$3, groupSize$$2, basePerLine$$2, startBase$$2, stopBase$$2, strands$$1, numberPosition$$1, numberingAdjustment) {
@@ -1228,7 +1228,7 @@ function writeGroupNumDnaSetStart(text$$12, tabIn$$3, groupSize$$2, basePerLine$
       var v165 = numberPosition$$1 == "above";
       if (v165) {
         var v163 = aboveNum;
-        var v517 = JAM.call(adjustNumbering, null, [i$$6, numberingAdjustment], JAM.policy.p19);
+        var v517 = adjustNumbering(i$$6, numberingAdjustment);
         var v164 = rightNum(v517, "", groupSize$$2, tabIn$$3);
         aboveNum = v163 + v164;
       }
@@ -1244,7 +1244,7 @@ function writeGroupNumDnaSetStart(text$$12, tabIn$$3, groupSize$$2, basePerLine$
     var v190 = numberPosition$$1 == "left";
     if (v190) {
       var v168 = outputWindow.document;
-      var v855 = JAM.call(adjustNumbering, null, [lineNum, numberingAdjustment], JAM.policy.p19);
+      var v855 = adjustNumbering(lineNum, numberingAdjustment);
       var v732 = rightNum(v855, "", 8, tabIn$$3);
       var v519 = v732 + lineOfText$$1;
       var v169 = v519 + "\n";
@@ -1252,7 +1252,7 @@ function writeGroupNumDnaSetStart(text$$12, tabIn$$3, groupSize$$2, basePerLine$
       var v173 = strands$$1 == "two";
       if (v173) {
         var v170 = outputWindow.document;
-        var v856 = JAM.call(adjustNumbering, null, [lineNum, numberingAdjustment], JAM.policy.p19);
+        var v856 = adjustNumbering(lineNum, numberingAdjustment);
         var v733 = rightNum(v856, "", 8, tabIn$$3);
         var v734 = complement(lineOfText$$1);
         var v520 = v733 + v734;
@@ -1266,7 +1266,7 @@ function writeGroupNumDnaSetStart(text$$12, tabIn$$3, groupSize$$2, basePerLine$
       if (v189) {
         var v174 = outputWindow.document;
         var v735 = lineOfText$$1;
-        var v736 = JAM.call(adjustNumbering, null, [i$$6, numberingAdjustment], JAM.policy.p19);
+        var v736 = adjustNumbering(i$$6, numberingAdjustment);
         var v521 = v735 + v736;
         var v175 = v521 + "\n";
         JAM.call(v174.write, v174, [v175], JAM.policy.p16);
@@ -1274,7 +1274,7 @@ function writeGroupNumDnaSetStart(text$$12, tabIn$$3, groupSize$$2, basePerLine$
         if (v179) {
           var v176 = outputWindow.document;
           var v737 = complement(lineOfText$$1);
-          var v738 = JAM.call(adjustNumbering, null, [i$$6, numberingAdjustment], JAM.policy.p19);
+          var v738 = adjustNumbering(i$$6, numberingAdjustment);
           var v522 = v737 + v738;
           var v177 = v522 + "\n";
           JAM.call(v176.write, v176, [v177], JAM.policy.p16);
@@ -1451,7 +1451,7 @@ function writeMutatedSequence(sequence$$13, components$$1, numMut, firstIndexToM
     var v217 = v537 + v538;
     var v539 = randNum + 1;
     var v540 = sequence$$13.length;
-    var v218 = JAM.call(sequence$$13.substring, sequence$$13, [v539, v540], JAM.policy.p21);
+    var v218 = JAM.call(sequence$$13.substring, sequence$$13, [v539, v540], JAM.policy.p27);
     sequence$$13 = v217 + v218;
     i$$8++;
     v219 = i$$8 < numMut;
@@ -1510,7 +1510,7 @@ function writeRestrictionSites(sequence$$15, arrayOfItems, dnaConformation) {
     var v859 = sequence$$15.length;
     var v743 = v859 - lookAhead;
     var v744 = sequence$$15.length;
-    var v544 = JAM.call(sequence$$15.substring, sequence$$15, [v743, v744], JAM.policy.p21);
+    var v544 = JAM.call(sequence$$15.substring, sequence$$15, [v743, v744], JAM.policy.p27);
     var v230 = v544 + sequence$$15;
     var v231 = JAM.call(sequence$$15.substring, sequence$$15, [0, lookAhead], JAM.policy.p13);
     sequence$$15 = v230 + v231;
@@ -1747,7 +1747,7 @@ function rangeExtract(theDocument) {
     var v1025 = v1044.elements;
     var v990 = v1025[0];
     var v947 = v990.value;
-    var v868 = JAM.call(checkSequenceLength, null, [v947, maxInput$$3], JAM.policy.p19);
+    var v868 = checkSequenceLength(v947, maxInput$$3);
     v755 = v868 == false;
   }
   var v570 = v755;
@@ -1783,7 +1783,7 @@ function rangeExtract(theDocument) {
       matchFound = true;
       var v574 = arrayOfStartAndEnd[0];
       var v575 = arrayOfStartAndEnd[0];
-      var v279 = JAM.new(Range, [v574, v575], JAM.policy.p19);
+      var v279 = new Range(v574, v575);
       JAM.call(ranges.push, ranges, [v279], JAM.policy.p16);
     } else {
       var v576 = arrayOfStartAndEnd.length;
@@ -1792,7 +1792,7 @@ function rangeExtract(theDocument) {
         matchFound = true;
         var v577 = arrayOfStartAndEnd[0];
         var v578 = arrayOfStartAndEnd[1];
-        var v280 = JAM.new(Range, [v577, v578], JAM.policy.p19);
+        var v280 = new Range(v577, v578);
         JAM.call(ranges.push, ranges, [v280], JAM.policy.p16);
       }
     }
@@ -1823,7 +1823,7 @@ function rangeExtract(theDocument) {
     title = getTitleFromFasta(v287);
     newProtein = removeNonProteinAllowDegen(newProtein);
     var v288 = outputWindow.document;
-    var v289 = JAM.call(getFastaTitleFromTitleAndSequence, null, [title, newProtein], JAM.policy.p19);
+    var v289 = getFastaTitleFromTitleAndSequence(title, newProtein);
     JAM.call(v288.write, v288, [v289], JAM.policy.p16);
     var v1027 = theDocument.forms;
     var v992 = v1027[0];
@@ -1837,7 +1837,7 @@ function rangeExtract(theDocument) {
     var v761 = v874.selectedIndex;
     var v582 = v760[v761];
     var v290 = v582.value;
-    JAM.call(writeSequenceRanges, null, [newProtein, ranges, v290], JAM.policy.p19);
+    writeSequenceRanges(newProtein, ranges, v290);
     i$$11++;
     var v583 = arrayOfFasta$$1.length;
     v291 = i$$11 < v583;
@@ -2051,7 +2051,7 @@ function getSequence(sequence$$19) {
       var v628 = this.start;
       var v324 = v628 - 1;
       var v325 = this.stop;
-      return JAM.call(sequence$$19.substring, sequence$$19, [v324, v325], JAM.policy.p21);
+      return JAM.call(sequence$$19.substring, sequence$$19, [v324, v325], JAM.policy.p27);
     }
   }
   return;
@@ -2086,25 +2086,25 @@ function writeRanges(sequence$$20) {
   function v9(str$$15, p1$$9, offset$$17, s$$11) {
     var v632 = p1$$9.length;
     var v332 = offset$$17 + v632;
-    return JAM.call(sequence$$20.substring, sequence$$20, [offset$$17, v332], JAM.policy.p21);
+    return JAM.call(sequence$$20.substring, sequence$$20, [offset$$17, v332], JAM.policy.p27);
   }
   function v8(str$$14, p1$$8, p2$$3, offset$$16, s$$10) {
     var v633 = p1$$8.length;
     var v782 = p1$$8.length;
     var v783 = p2$$3.length;
     var v634 = v782 + v783;
-    var v333 = JAM.call(sequence$$20.substring, sequence$$20, [v633, v634], JAM.policy.p21);
+    var v333 = JAM.call(sequence$$20.substring, sequence$$20, [v633, v634], JAM.policy.p27);
     return p1$$8 + v333;
   }
   function v7(str$$13, p1$$7, offset$$15, s$$9) {
     var v334 = ["A", "C", "D", "E", "F", "G", "H", "I", "K", "L", "M", "N", "P", "Q", "R", "S", "T", "V", "W", "Y"];
     var v335 = p1$$7.length;
-    return JAM.call(getRandomSequence, null, [v334, v335], JAM.policy.p19);
+    return getRandomSequence(v334, v335);
   }
   function v6(str$$12, p1$$6, p2$$2, offset$$14, s$$8) {
     var v635 = ["A", "C", "D", "E", "F", "G", "H", "I", "K", "L", "M", "N", "P", "Q", "R", "S", "T", "V", "W", "Y"];
     var v636 = p2$$2.length;
-    var v336 = JAM.call(getRandomSequence, null, [v635, v636], JAM.policy.p19);
+    var v336 = getRandomSequence(v635, v636);
     return p1$$6 + v336;
   }
   function v5(str$$11, p1$$5, offset$$13, s$$7) {
@@ -2223,7 +2223,7 @@ function writeRanges(sequence$$20) {
           var v352 = v653 + v654;
           re$$3 = v352 + "})";
           re$$3 = new RegExp(re$$3);
-          sequence$$20 = JAM.call(sequence$$20.replace, sequence$$20, [re$$3, v2], JAM.policy.p21);
+          sequence$$20 = JAM.call(sequence$$20.replace, sequence$$20, [re$$3, v2], JAM.policy.p27);
         } else {
           var v997 = this.ranges;
           var v959 = v997[i$$13];
@@ -2236,7 +2236,7 @@ function writeRanges(sequence$$20) {
           var v353 = "(.{" + v655;
           re$$3 = v353 + "})";
           re$$3 = new RegExp(re$$3);
-          sequence$$20 = JAM.call(sequence$$20.replace, sequence$$20, [re$$3, v3], JAM.policy.p21);
+          sequence$$20 = JAM.call(sequence$$20.replace, sequence$$20, [re$$3, v3], JAM.policy.p27);
         }
       }
       i$$13++;
@@ -2286,7 +2286,7 @@ function writeRanges(sequence$$20) {
           var v360 = v662 + v663;
           re$$3 = v360 + "})";
           re$$3 = new RegExp(re$$3);
-          sequence$$20 = JAM.call(sequence$$20.replace, sequence$$20, [re$$3, v4], JAM.policy.p21);
+          sequence$$20 = JAM.call(sequence$$20.replace, sequence$$20, [re$$3, v4], JAM.policy.p27);
         } else {
           var v1002 = this.ranges;
           var v964 = v1002[i$$13];
@@ -2299,7 +2299,7 @@ function writeRanges(sequence$$20) {
           var v361 = "(.{" + v664;
           re$$3 = v361 + "})";
           re$$3 = new RegExp(re$$3);
-          sequence$$20 = JAM.call(sequence$$20.replace, sequence$$20, [re$$3, v5], JAM.policy.p21);
+          sequence$$20 = JAM.call(sequence$$20.replace, sequence$$20, [re$$3, v5], JAM.policy.p27);
         }
       }
       i$$13++;
@@ -2348,7 +2348,7 @@ function writeRanges(sequence$$20) {
           var v368 = v671 + v672;
           re$$3 = v368 + "})";
           re$$3 = new RegExp(re$$3);
-          sequence$$20 = JAM.call(sequence$$20.replace, sequence$$20, [re$$3, v6], JAM.policy.p21);
+          sequence$$20 = JAM.call(sequence$$20.replace, sequence$$20, [re$$3, v6], JAM.policy.p27);
         } else {
           var v1007 = this.ranges;
           var v969 = v1007[i$$13];
@@ -2361,7 +2361,7 @@ function writeRanges(sequence$$20) {
           var v369 = "(.{" + v673;
           re$$3 = v369 + "})";
           re$$3 = new RegExp(re$$3);
-          sequence$$20 = JAM.call(sequence$$20.replace, sequence$$20, [re$$3, v7], JAM.policy.p21);
+          sequence$$20 = JAM.call(sequence$$20.replace, sequence$$20, [re$$3, v7], JAM.policy.p27);
         }
       }
       i$$13++;
@@ -2380,7 +2380,7 @@ function writeRanges(sequence$$20) {
   if (v385) {
     var v376 = ["A", "C", "D", "E", "F", "G", "H", "I", "K", "L", "M", "N", "P", "Q", "R", "S", "T", "V", "W", "Y"];
     var v377 = sequence$$20.length;
-    var randomSequence = JAM.call(getRandomSequence, null, [v376, v377], JAM.policy.p19);
+    var randomSequence = getRandomSequence(v376, v377);
     i$$13 = 0;
     var v815 = this.ranges;
     var v677 = v815.length;
@@ -2413,7 +2413,7 @@ function writeRanges(sequence$$20) {
           var v378 = v680 + v681;
           re$$3 = v378 + "})";
           re$$3 = new RegExp(re$$3);
-          randomSequence = JAM.call(randomSequence.replace, randomSequence, [re$$3, v8], JAM.policy.p21);
+          randomSequence = JAM.call(randomSequence.replace, randomSequence, [re$$3, v8], JAM.policy.p27);
         } else {
           var v1012 = this.ranges;
           var v974 = v1012[i$$13];
@@ -2426,7 +2426,7 @@ function writeRanges(sequence$$20) {
           var v379 = "(.{" + v682;
           re$$3 = v379 + "})";
           re$$3 = new RegExp(re$$3);
-          randomSequence = JAM.call(randomSequence.replace, randomSequence, [re$$3, v9], JAM.policy.p21);
+          randomSequence = JAM.call(randomSequence.replace, randomSequence, [re$$3, v9], JAM.policy.p27);
         }
       }
       i$$13++;

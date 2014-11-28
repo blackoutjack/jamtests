@@ -1541,9 +1541,7 @@ function writeGroupNum(text$$10, tabIn$$1, groupSize, basePerLine, startBase, st
   return true;
 }
 function writeGroupNumDna(text$$11, tabIn$$2, groupSize$$1, basePerLine$$1, startBase$$1, stopBase$$1, strands, numberPosition) {
-  introspect(JAM.policy.p19) {
-    writeGroupNumDnaSetStart(text$$11, tabIn$$2, groupSize$$1, basePerLine$$1, startBase$$1, stopBase$$1, strands, numberPosition, 0);
-  }
+  writeGroupNumDnaSetStart(text$$11, tabIn$$2, groupSize$$1, basePerLine$$1, startBase$$1, stopBase$$1, strands, numberPosition, 0);
   return true;
 }
 function writeGroupNumDnaSetStart(text$$12, tabIn$$3, groupSize$$2, basePerLine$$2, startBase$$2, stopBase$$2, strands$$1, numberPosition$$1, numberingAdjustment) {
@@ -1596,9 +1594,7 @@ function writeGroupNumDnaSetStart(text$$12, tabIn$$3, groupSize$$2, basePerLine$
       var v157 = numberPosition$$1 == "above";
       if (v157) {
         var v155 = aboveNum;
-        introspect(JAM.policy.p19) {
-          var v713 = adjustNumbering(i$$6, numberingAdjustment)
-        }
+        var v713 = adjustNumbering(i$$6, numberingAdjustment);
         var v156 = rightNum(v713, "", groupSize$$2, tabIn$$3);
         aboveNum = v155 + v156;
       }
@@ -1614,9 +1610,7 @@ function writeGroupNumDnaSetStart(text$$12, tabIn$$3, groupSize$$2, basePerLine$
     var v182 = numberPosition$$1 == "left";
     if (v182) {
       var v160 = outputWindow.document;
-      introspect(JAM.policy.p19) {
-        var v1290 = adjustNumbering(lineNum, numberingAdjustment)
-      }
+      var v1290 = adjustNumbering(lineNum, numberingAdjustment);
       var v1048 = rightNum(v1290, "", 8, tabIn$$3);
       var v715 = v1048 + lineOfText$$1;
       var v161 = v715 + "\n";
@@ -1626,9 +1620,7 @@ function writeGroupNumDnaSetStart(text$$12, tabIn$$3, groupSize$$2, basePerLine$
       var v165 = strands$$1 == "two";
       if (v165) {
         var v162 = outputWindow.document;
-        introspect(JAM.policy.p19) {
-          var v1291 = adjustNumbering(lineNum, numberingAdjustment)
-        }
+        var v1291 = adjustNumbering(lineNum, numberingAdjustment);
         var v1049 = rightNum(v1291, "", 8, tabIn$$3);
         var v1050 = complement(lineOfText$$1);
         var v716 = v1049 + v1050;
@@ -1646,9 +1638,7 @@ function writeGroupNumDnaSetStart(text$$12, tabIn$$3, groupSize$$2, basePerLine$
       if (v181) {
         var v166 = outputWindow.document;
         var v1051 = lineOfText$$1;
-        introspect(JAM.policy.p19) {
-          var v1052 = adjustNumbering(i$$6, numberingAdjustment)
-        }
+        var v1052 = adjustNumbering(i$$6, numberingAdjustment);
         var v717 = v1051 + v1052;
         var v167 = v717 + "\n";
         introspect(JAM.policy.p15) {
@@ -1658,9 +1648,7 @@ function writeGroupNumDnaSetStart(text$$12, tabIn$$3, groupSize$$2, basePerLine$
         if (v171) {
           var v168 = outputWindow.document;
           var v1053 = complement(lineOfText$$1);
-          introspect(JAM.policy.p19) {
-            var v1054 = adjustNumbering(i$$6, numberingAdjustment)
-          }
+          var v1054 = adjustNumbering(i$$6, numberingAdjustment);
           var v718 = v1053 + v1054;
           var v169 = v718 + "\n";
           introspect(JAM.policy.p15) {
@@ -1867,7 +1855,7 @@ function writeMutatedSequence(sequence$$13, components$$1, numMut, firstIndexToM
     var v209 = v733 + v734;
     var v735 = randNum + 1;
     var v736 = sequence$$13.length;
-    introspect(JAM.policy.p21) {
+    introspect(JAM.policy.p27) {
       var v210 = sequence$$13.substring(v735, v736)
     }
     sequence$$13 = v209 + v210;
@@ -1938,7 +1926,7 @@ function writeRestrictionSites(sequence$$15, arrayOfItems, dnaConformation) {
     var v1294 = sequence$$15.length;
     var v1059 = v1294 - lookAhead;
     var v1060 = sequence$$15.length;
-    introspect(JAM.policy.p21) {
+    introspect(JAM.policy.p27) {
       var v740 = sequence$$15.substring(v1059, v1060)
     }
     var v222 = v740 + sequence$$15;
@@ -2235,9 +2223,7 @@ function pcrPrimerStats(theDocument) {
     var v1431 = v1447.elements;
     var v1396 = v1431[0];
     var v1303 = v1396.value;
-    introspect(JAM.policy.p19) {
-      var v1072 = checkSequenceLength(v1303, maxInput$$3)
-    }
+    var v1072 = checkSequenceLength(v1303, maxInput$$3);
     v766 = v1072 == false;
   }
   var v268 = v766;
@@ -2323,9 +2309,7 @@ function pcrPrimerStats(theDocument) {
       continue;
     }
     var percentGC = _percentGC(newDna);
-    introspect(JAM.policy.p19) {
-      var nearestNeighborTm = _nearestNeighborTm(newDna, molarSalt, molarPrimerTotal, molarMagnesium)
-    }
+    var nearestNeighborTm = _nearestNeighborTm(newDna, molarSalt, molarPrimerTotal, molarMagnesium);
     var selfCompHash = _getSelfComplementarityReport(newDna, 3, 50);
     var hairpinHash = _getHairpinReport(newDna, 3, 50);
     var v285 = outputWindow.document;
@@ -2379,9 +2363,7 @@ function pcrPrimerStats(theDocument) {
     }
     var v298 = outputWindow.document;
     var v1082 = rightNum("Molecular weight (Daltons):", "", 32, "");
-    introspect(JAM.policy.p19) {
-      var v1083 = _molecularWeight(newDna, isPhosphorylated)
-    }
+    var v1083 = _molecularWeight(newDna, isPhosphorylated);
     var v781 = v1082 + v1083;
     var v299 = v781 + "\n";
     introspect(JAM.policy.p15) {
@@ -2397,9 +2379,7 @@ function pcrPrimerStats(theDocument) {
     }
     var v302 = outputWindow.document;
     var v1086 = rightNum("micrograms/A260:", "", 32, "");
-    introspect(JAM.policy.p19) {
-      var v1087 = _microgramsPerA260(newDna, isPhosphorylated)
-    }
+    var v1087 = _microgramsPerA260(newDna, isPhosphorylated);
     var v783 = v1086 + v1087;
     var v303 = v783 + "\n";
     introspect(JAM.policy.p15) {
@@ -2415,9 +2395,7 @@ function pcrPrimerStats(theDocument) {
     }
     var v306 = outputWindow.document;
     var v1090 = rightNum("Salt adjusted Tm (degrees C):", "", 32, "");
-    introspect(JAM.policy.p19) {
-      var v1091 = _molarSaltAdjustedTm(newDna, molarSalt)
-    }
+    var v1091 = _molarSaltAdjustedTm(newDna, molarSalt);
     var v785 = v1090 + v1091;
     var v307 = v785 + "\n";
     introspect(JAM.policy.p15) {
@@ -2468,9 +2446,7 @@ function pcrPrimerStats(theDocument) {
     }
     var v319 = outputWindow.document;
     var v1099 = rightNum("Percent GC:", "", 32, "");
-    introspect(JAM.policy.p19) {
-      var v1100 = _getSuitableGCReport(newDna, percentGC, 40, 60)
-    }
+    var v1100 = _getSuitableGCReport(newDna, percentGC, 40, 60);
     var v790 = v1099 + v1100;
     var v320 = v790 + "\n";
     introspect(JAM.policy.p15) {
@@ -2478,9 +2454,7 @@ function pcrPrimerStats(theDocument) {
     }
     var v321 = outputWindow.document;
     var v1101 = rightNum("Tm (Nearest neighbor):", "", 32, "");
-    introspect(JAM.policy.p19) {
-      var v1102 = _getSuitableTmReport(newDna, nearestNeighborTm, 50, 58)
-    }
+    var v1102 = _getSuitableTmReport(newDna, nearestNeighborTm, 50, 58);
     var v791 = v1101 + v1102;
     var v322 = v791 + "\n";
     introspect(JAM.policy.p15) {
@@ -2627,20 +2601,14 @@ function _baseCounts(sequence$$20) {
 function _microgramsPerA260(sequence$$21, isPhosphorylated$$1) {
   var v350 = _containsOnlyNonDegenerates(sequence$$21);
   if (v350) {
-    introspect(JAM.policy.p19) {
-      return _microgramsPerA260NonDegen(sequence$$21, isPhosphorylated$$1);
-    }
+    return _microgramsPerA260NonDegen(sequence$$21, isPhosphorylated$$1);
   } else {
-    introspect(JAM.policy.p19) {
-      return _microgramsPerA260Degen(sequence$$21, isPhosphorylated$$1);
-    }
+    return _microgramsPerA260Degen(sequence$$21, isPhosphorylated$$1);
   }
   return;
 }
 function _microgramsPerA260NonDegen(sequence$$22, isPhosphorylated$$2) {
-  introspect(JAM.policy.p19) {
-    var mw = _mw(sequence$$22, isPhosphorylated$$2)
-  }
+  var mw = _mw(sequence$$22, isPhosphorylated$$2);
   var v351 = _getExtinctionCoefficient(sequence$$22);
   var result = mw / v351;
   introspect(JAM.policy.p11) {
@@ -2716,13 +2684,9 @@ function _microgramsPerA260Degen(sequence$$23, isPhosphorylated$$3) {
   introspect(JAM.policy.p16) {
     upperBoundsSequence = upperBoundsSequence.replace(/n/gi, "a");
   }
-  introspect(JAM.policy.p19) {
-    var v807 = _microgramsPerA260NonDegen(upperBoundsSequence, isPhosphorylated$$3)
-  }
+  var v807 = _microgramsPerA260NonDegen(upperBoundsSequence, isPhosphorylated$$3);
   var v352 = v807 + " to ";
-  introspect(JAM.policy.p19) {
-    var v353 = _microgramsPerA260NonDegen(lowerBoundsSequence, isPhosphorylated$$3)
-  }
+  var v353 = _microgramsPerA260NonDegen(lowerBoundsSequence, isPhosphorylated$$3);
   return v352 + v353;
 }
 function _nmolPerA260(sequence$$24) {
@@ -2957,20 +2921,14 @@ function _percentGCDegen(sequence$$30) {
 function _molecularWeight(sequence$$31, isPhosphorylated$$4) {
   var v369 = _containsOnlyNonDegenerates(sequence$$31);
   if (v369) {
-    introspect(JAM.policy.p19) {
-      return _molecularWeightNonDegen(sequence$$31, isPhosphorylated$$4);
-    }
+    return _molecularWeightNonDegen(sequence$$31, isPhosphorylated$$4);
   } else {
-    introspect(JAM.policy.p19) {
-      return _molecularWeightDegen(sequence$$31, isPhosphorylated$$4);
-    }
+    return _molecularWeightDegen(sequence$$31, isPhosphorylated$$4);
   }
   return;
 }
 function _molecularWeightNonDegen(sequence$$32, isPhosphorylated$$5) {
-  introspect(JAM.policy.p19) {
-    var v370 = _mw(sequence$$32, isPhosphorylated$$5)
-  }
+  var v370 = _mw(sequence$$32, isPhosphorylated$$5);
   introspect(JAM.policy.p11) {
     return v370.toFixed(2);
   }
@@ -3063,13 +3021,9 @@ function _molecularWeightDegen(sequence$$34, isPhosphorylated$$7) {
   introspect(JAM.policy.p16) {
     upperBoundsSequence$$3 = upperBoundsSequence$$3.replace(/n/gi, "g");
   }
-  introspect(JAM.policy.p19) {
-    var v818 = _molecularWeightNonDegen(lowerBoundsSequence$$3, isPhosphorylated$$7)
-  }
+  var v818 = _molecularWeightNonDegen(lowerBoundsSequence$$3, isPhosphorylated$$7);
   var v372 = v818 + " to ";
-  introspect(JAM.policy.p19) {
-    var v373 = _molecularWeightNonDegen(upperBoundsSequence$$3, isPhosphorylated$$7)
-  }
+  var v373 = _molecularWeightNonDegen(upperBoundsSequence$$3, isPhosphorylated$$7);
   return v372 + v373;
 }
 function _basicTm(sequence$$35) {
@@ -3189,13 +3143,9 @@ function _basicTmDegen(sequence$$37) {
 function _molarSaltAdjustedTm(sequence$$38, molarSalt$$1) {
   var v380 = _containsOnlyNonDegenerates(sequence$$38);
   if (v380) {
-    introspect(JAM.policy.p19) {
-      return _molarSaltAdjustedTmNonDegen(sequence$$38, molarSalt$$1);
-    }
+    return _molarSaltAdjustedTmNonDegen(sequence$$38, molarSalt$$1);
   } else {
-    introspect(JAM.policy.p19) {
-      return _molarSaltAdjustedTmDegen(sequence$$38, molarSalt$$1);
-    }
+    return _molarSaltAdjustedTmDegen(sequence$$38, molarSalt$$1);
   }
   return;
 }
@@ -3289,25 +3239,17 @@ function _molarSaltAdjustedTmDegen(sequence$$40, molarSalt$$3) {
   introspect(JAM.policy.p16) {
     upperBoundsSequence$$5 = upperBoundsSequence$$5.replace(/n/gi, "g");
   }
-  introspect(JAM.policy.p19) {
-    var v827 = _molarSaltAdjustedTmNonDegen(lowerBoundsSequence$$5, molarSalt$$3)
-  }
+  var v827 = _molarSaltAdjustedTmNonDegen(lowerBoundsSequence$$5, molarSalt$$3);
   var v385 = v827 + " to ";
-  introspect(JAM.policy.p19) {
-    var v386 = _molarSaltAdjustedTmNonDegen(upperBoundsSequence$$5, molarSalt$$3)
-  }
+  var v386 = _molarSaltAdjustedTmNonDegen(upperBoundsSequence$$5, molarSalt$$3);
   return v385 + v386;
 }
 function _nearestNeighborTm(sequence$$41, molarSalt$$4, molarPrimerTotal$$1, molarMagnesium$$1) {
   var v387 = _containsOnlyNonDegenerates(sequence$$41);
   if (v387) {
-    introspect(JAM.policy.p19) {
-      return _nearestNeighborTmNonDegen(sequence$$41, molarSalt$$4, molarPrimerTotal$$1, molarMagnesium$$1);
-    }
+    return _nearestNeighborTmNonDegen(sequence$$41, molarSalt$$4, molarPrimerTotal$$1, molarMagnesium$$1);
   } else {
-    introspect(JAM.policy.p19) {
-      return _nearestNeighborTmDegen(sequence$$41, molarSalt$$4, molarPrimerTotal$$1, molarMagnesium$$1);
-    }
+    return _nearestNeighborTmDegen(sequence$$41, molarSalt$$4, molarPrimerTotal$$1, molarMagnesium$$1);
   }
   return;
 }
@@ -3466,13 +3408,9 @@ function _nearestNeighborTmDegen(sequence$$43, molarSalt$$6, molarPrimerTotal$$3
   introspect(JAM.policy.p16) {
     upperBoundsSequence$$6 = upperBoundsSequence$$6.replace(/n/gi, "g");
   }
-  introspect(JAM.policy.p19) {
-    var v839 = _nearestNeighborTmNonDegen(lowerBoundsSequence$$6, molarSalt$$6, molarPrimerTotal$$3, molarMagnesium$$3)
-  }
+  var v839 = _nearestNeighborTmNonDegen(lowerBoundsSequence$$6, molarSalt$$6, molarPrimerTotal$$3, molarMagnesium$$3);
   var v398 = v839 + " to ";
-  introspect(JAM.policy.p19) {
-    var v399 = _nearestNeighborTmNonDegen(upperBoundsSequence$$6, molarSalt$$6, molarPrimerTotal$$3, molarMagnesium$$3)
-  }
+  var v399 = _nearestNeighborTmNonDegen(upperBoundsSequence$$6, molarSalt$$6, molarPrimerTotal$$3, molarMagnesium$$3);
   return v398 + v399;
 }
 function _getBaseCount(sequence$$44, base$$1) {
@@ -3584,9 +3522,7 @@ function _getBaseRunsReport(sequence$$45, minRunLength) {
   var v404 = i$$14 < v841;
   for (;v404;) {
     var v842 = nucleotides[i$$14];
-    introspect(JAM.policy.p19) {
-      var v403 = _hasRunOfBases(sequence$$45, v842, minRunLength)
-    }
+    var v403 = _hasRunOfBases(sequence$$45, v842, minRunLength);
     if (v403) {
       hasRun = true;
       var v843 = report + "Contains run of ";
@@ -3614,9 +3550,7 @@ function _getDiNucleotideRunsReport(sequence$$46, minRunLength$$1) {
   var v407 = i$$15 < v846;
   for (;v407;) {
     var v847 = diNucleotides[i$$15];
-    introspect(JAM.policy.p19) {
-      var v406 = _hasRunOfBases(sequence$$46, v847, minRunLength$$1)
-    }
+    var v406 = _hasRunOfBases(sequence$$46, v847, minRunLength$$1);
     if (v406) {
       hasRun$$1 = true;
       var v848 = report$$1 + "Contains run of ";
@@ -3852,7 +3786,7 @@ function _getSelfComplementarityReport(sequence$$53, maxContig, maxPercentIdent)
     matrix.setMismatch(mismatchScore);
   }
   var scoreSet = new ScoreSet;
-  introspect(JAM.policy.p21) {
+  introspect(JAM.policy.p27) {
     scoreSet.setScoreSetParam(matrix, gapPenalty, beginGapPenalty, endGapPenalty);
   }
   var rev = reverse(sequence$$53);
@@ -3863,7 +3797,7 @@ function _getSelfComplementarityReport(sequence$$53, maxContig, maxPercentIdent)
     rev = rev.match(/./g);
   }
   alignment = new AlignPairQuad;
-  introspect(JAM.policy.p21) {
+  introspect(JAM.policy.p27) {
     alignment.initializeMatrix(sequence$$53, rev, scoreSet);
   }
   alignment.fillMatrix();
@@ -3891,7 +3825,7 @@ function _getSelfComplementarityReport(sequence$$53, maxContig, maxPercentIdent)
     introspect(JAM.policy.p15) {
       var v1154 = revAligned.charAt(i$$16)
     }
-    introspect(JAM.policy.p21) {
+    introspect(JAM.policy.p27) {
       var v874 = scoreSet.getScore(v1153, v1154)
     }
     var v439 = v874 == matchScore;
@@ -3980,7 +3914,7 @@ function _getHairpinReport(sequence$$54, maxContig$$1, maxPercentIdent$$1) {
     matrix$$1.setMismatch(mismatchScore$$1);
   }
   var scoreSet$$1 = new ScoreSet;
-  introspect(JAM.policy.p21) {
+  introspect(JAM.policy.p27) {
     scoreSet$$1.setScoreSetParam(matrix$$1, gapPenalty$$1, beginGapPenalty$$1, endGapPenalty$$1);
   }
   var v879 = upper.length;
@@ -4008,7 +3942,7 @@ function _getHairpinReport(sequence$$54, maxContig$$1, maxPercentIdent$$1) {
     for (;v450;) {
       var v881 = upper[u];
       var v882 = lower[l];
-      introspect(JAM.policy.p21) {
+      introspect(JAM.policy.p27) {
         var v449 = scoreSet$$1.getScore(v881, v882)
       }
       score$$1 = score$$1 + v449;
@@ -4072,7 +4006,7 @@ function _getHairpinReport(sequence$$54, maxContig$$1, maxPercentIdent$$1) {
     introspect(JAM.policy.p15) {
       var v1157 = topScoreLower.charAt(i$$17)
     }
-    introspect(JAM.policy.p21) {
+    introspect(JAM.policy.p27) {
       var v886 = scoreSet$$1.getScore(v1156, v1157)
     }
     var v459 = v886 == matchScore$$1;
@@ -4132,7 +4066,7 @@ function _getHairpinReport(sequence$$54, maxContig$$1, maxPercentIdent$$1) {
 }
 function getScore(r1$$1, r2) {
   var v468 = this.scoringMatrix;
-  introspect(JAM.policy.p21) {
+  introspect(JAM.policy.p27) {
     return v468.scoringMatrix_getScore(r1$$1, r2);
   }
 }
@@ -4606,7 +4540,7 @@ function fillMatrix() {
       var v1230 = this.N;
       var v1231 = j$$12 - 1;
       var v969 = v1230[v1231];
-      introspect(JAM.policy.p21) {
+      introspect(JAM.policy.p27) {
         var v536 = v967.getScore(v968, v969)
       }
       c$$1 = v535 + v536;

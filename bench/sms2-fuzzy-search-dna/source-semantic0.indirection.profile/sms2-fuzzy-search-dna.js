@@ -1177,7 +1177,7 @@ function writeGroupNum(text$$10, tabIn$$1, groupSize, basePerLine, startBase, st
   return true;
 }
 function writeGroupNumDna(text$$11, tabIn$$2, groupSize$$1, basePerLine$$1, startBase$$1, stopBase$$1, strands, numberPosition) {
-  JAM.call(writeGroupNumDnaSetStart, null, [text$$11, tabIn$$2, groupSize$$1, basePerLine$$1, startBase$$1, stopBase$$1, strands, numberPosition, 0], JAM.policy.p19);
+  writeGroupNumDnaSetStart(text$$11, tabIn$$2, groupSize$$1, basePerLine$$1, startBase$$1, stopBase$$1, strands, numberPosition, 0);
   return true;
 }
 function writeGroupNumDnaSetStart(text$$12, tabIn$$3, groupSize$$2, basePerLine$$2, startBase$$2, stopBase$$2, strands$$1, numberPosition$$1, numberingAdjustment) {
@@ -1228,7 +1228,7 @@ function writeGroupNumDnaSetStart(text$$12, tabIn$$3, groupSize$$2, basePerLine$
       var v157 = numberPosition$$1 == "above";
       if (v157) {
         var v155 = aboveNum;
-        var v530 = JAM.call(adjustNumbering, null, [i$$6, numberingAdjustment], JAM.policy.p19);
+        var v530 = adjustNumbering(i$$6, numberingAdjustment);
         var v156 = rightNum(v530, "", groupSize$$2, tabIn$$3);
         aboveNum = v155 + v156;
       }
@@ -1244,7 +1244,7 @@ function writeGroupNumDnaSetStart(text$$12, tabIn$$3, groupSize$$2, basePerLine$
     var v182 = numberPosition$$1 == "left";
     if (v182) {
       var v160 = outputWindow.document;
-      var v953 = JAM.call(adjustNumbering, null, [lineNum, numberingAdjustment], JAM.policy.p19);
+      var v953 = adjustNumbering(lineNum, numberingAdjustment);
       var v766 = rightNum(v953, "", 8, tabIn$$3);
       var v532 = v766 + lineOfText$$1;
       var v161 = v532 + "\n";
@@ -1252,7 +1252,7 @@ function writeGroupNumDnaSetStart(text$$12, tabIn$$3, groupSize$$2, basePerLine$
       var v165 = strands$$1 == "two";
       if (v165) {
         var v162 = outputWindow.document;
-        var v954 = JAM.call(adjustNumbering, null, [lineNum, numberingAdjustment], JAM.policy.p19);
+        var v954 = adjustNumbering(lineNum, numberingAdjustment);
         var v767 = rightNum(v954, "", 8, tabIn$$3);
         var v768 = complement(lineOfText$$1);
         var v533 = v767 + v768;
@@ -1266,7 +1266,7 @@ function writeGroupNumDnaSetStart(text$$12, tabIn$$3, groupSize$$2, basePerLine$
       if (v181) {
         var v166 = outputWindow.document;
         var v769 = lineOfText$$1;
-        var v770 = JAM.call(adjustNumbering, null, [i$$6, numberingAdjustment], JAM.policy.p19);
+        var v770 = adjustNumbering(i$$6, numberingAdjustment);
         var v534 = v769 + v770;
         var v167 = v534 + "\n";
         JAM.call(v166.write, v166, [v167], JAM.policy.p18);
@@ -1274,7 +1274,7 @@ function writeGroupNumDnaSetStart(text$$12, tabIn$$3, groupSize$$2, basePerLine$
         if (v171) {
           var v168 = outputWindow.document;
           var v771 = complement(lineOfText$$1);
-          var v772 = JAM.call(adjustNumbering, null, [i$$6, numberingAdjustment], JAM.policy.p19);
+          var v772 = adjustNumbering(i$$6, numberingAdjustment);
           var v535 = v771 + v772;
           var v169 = v535 + "\n";
           JAM.call(v168.write, v168, [v169], JAM.policy.p18);
@@ -1451,7 +1451,7 @@ function writeMutatedSequence(sequence$$13, components$$1, numMut, firstIndexToM
     var v209 = v550 + v551;
     var v552 = randNum + 1;
     var v553 = sequence$$13.length;
-    var v210 = JAM.call(sequence$$13.substring, sequence$$13, [v552, v553], JAM.policy.p21);
+    var v210 = JAM.call(sequence$$13.substring, sequence$$13, [v552, v553], JAM.policy.p27);
     sequence$$13 = v209 + v210;
     i$$8++;
     v211 = i$$8 < numMut;
@@ -1510,7 +1510,7 @@ function writeRestrictionSites(sequence$$15, arrayOfItems, dnaConformation) {
     var v957 = sequence$$15.length;
     var v777 = v957 - lookAhead;
     var v778 = sequence$$15.length;
-    var v557 = JAM.call(sequence$$15.substring, sequence$$15, [v777, v778], JAM.policy.p21);
+    var v557 = JAM.call(sequence$$15.substring, sequence$$15, [v777, v778], JAM.policy.p27);
     var v222 = v557 + sequence$$15;
     var v223 = JAM.call(sequence$$15.substring, sequence$$15, [0, lookAhead], JAM.policy.p13);
     sequence$$15 = v222 + v223;
@@ -1749,7 +1749,7 @@ function fuzzySearchDna(theDocument) {
     var v1148 = v1162.elements;
     var v1125 = v1148[0];
     var v1097 = v1125.value;
-    var v1055 = JAM.call(checkSequenceLength, null, [v1097, maxTarget], JAM.policy.p19);
+    var v1055 = checkSequenceLength(v1097, maxTarget);
     v965 = v1055 == false;
   }
   var v789 = v965;
@@ -1770,7 +1770,7 @@ function fuzzySearchDna(theDocument) {
     var v1099 = v1127.elements;
     var v1058 = v1099[1];
     var v968 = v1058.value;
-    var v790 = JAM.call(checkSequenceLength, null, [v968, maxQuery], JAM.policy.p19);
+    var v790 = checkSequenceLength(v968, maxQuery);
     v583 = v790 == false;
   }
   var v268 = v583;
@@ -1853,7 +1853,7 @@ function fuzzySearchDna(theDocument) {
   querySequence = removeNonDna(querySequence);
   queryTitle = "query";
   var v276 = outputWindow.document;
-  var v277 = JAM.call(getFuzzySearchTitle, null, [targetTitle, targetSequence, queryTitle, querySequence], JAM.policy.p19);
+  var v277 = getFuzzySearchTitle(targetTitle, targetSequence, queryTitle, querySequence);
   JAM.call(v276.write, v276, [v277], JAM.policy.p18);
   var v591 = JAM.call(targetSequence.search, targetSequence, [/./], JAM.policy.p17);
   var v278 = v591 != -1;
@@ -1877,7 +1877,7 @@ function fuzzySearchDna(theDocument) {
     alert("The query sequence contains no DNA bases.");
     return false;
   }
-  JAM.call(_fuzzySearchDna, null, [queryTitle, querySequence, targetTitle, targetSequence, MATCH_SCORE, MISMATCH_SCORE, GAP_PENALTY, HITS], JAM.policy.p19);
+  _fuzzySearchDna(queryTitle, querySequence, targetTitle, targetSequence, MATCH_SCORE, MISMATCH_SCORE, GAP_PENALTY, HITS);
   closePre();
   closeWindow();
 
@@ -1889,9 +1889,9 @@ function _fuzzySearchDna(queryTitle$$1, querySequence$$1, targetTitle$$1, target
   JAM.call(matrix.setMatch, matrix, [matchScore], JAM.policy.p18);
   JAM.call(matrix.setMismatch, matrix, [mismatchScore], JAM.policy.p18);
   var scoreSet = new ScoreSet;
-  JAM.call(scoreSet.setScoreSetParam, scoreSet, [matrix, gapPenalty, hits], JAM.policy.p21);
+  JAM.call(scoreSet.setScoreSetParam, scoreSet, [matrix, gapPenalty, hits], JAM.policy.p27);
   var fuzzySearch = new FuzzySearch;
-  JAM.call(fuzzySearch.initializeMatrix, fuzzySearch, [querySequence$$1, targetSequence$$1, scoreSet], JAM.policy.p21);
+  JAM.call(fuzzySearch.initializeMatrix, fuzzySearch, [querySequence$$1, targetSequence$$1, scoreSet], JAM.policy.p27);
   fuzzySearch.search();
   hits = fuzzySearch.getHits();
   var v595 = hits.length;
@@ -1953,7 +1953,7 @@ function _fuzzySearchDna(queryTitle$$1, querySequence$$1, targetTitle$$1, target
 }
 function getScore(r1$$1, r2) {
   var v295 = this.scoringMatrix;
-  return JAM.call(v295.scoringMatrix_getScore, v295, [r1$$1, r2], JAM.policy.p21);
+  return JAM.call(v295.scoringMatrix_getScore, v295, [r1$$1, r2], JAM.policy.p27);
 }
 function setScoreSetParam(scoringMatrix, gapPenalty$$1, hits$$1) {
   this.scoringMatrix = scoringMatrix;
@@ -2228,7 +2228,7 @@ function updateMatrix() {
           var v852 = this.N;
           var v853 = j$$12 - 1;
           var v643 = v852[v853];
-          var v329 = JAM.call(v641.getScore, v641, [v642, v643], JAM.policy.p21);
+          var v329 = JAM.call(v641.getScore, v641, [v642, v643], JAM.policy.p27);
           c = v328 + v329;
         } else {
           var v1005 = this.nodes;
@@ -2262,7 +2262,7 @@ function updateMatrix() {
             var v861 = this.N;
             var v862 = j$$12 - 1;
             var v652 = v861[v862];
-            var v334 = JAM.call(v650.getScore, v650, [v651, v652], JAM.policy.p21);
+            var v334 = JAM.call(v650.getScore, v650, [v651, v652], JAM.policy.p27);
             c = v333 + v334;
           } else {
             var v1078 = this.nodes;
@@ -2297,7 +2297,7 @@ function updateMatrix() {
               var v872 = this.N;
               var v873 = j$$12 - 1;
               var v660 = v872[v873];
-              var v339 = JAM.call(v658.getScore, v658, [v659, v660], JAM.policy.p21);
+              var v339 = JAM.call(v658.getScore, v658, [v659, v660], JAM.policy.p27);
               c = v338 + v339;
             } else {
               var v1014 = this.nodes;
@@ -2329,7 +2329,7 @@ function updateMatrix() {
               var v881 = this.N;
               var v882 = j$$12 - 1;
               var v668 = v881[v882];
-              var v345 = JAM.call(v666.getScore, v666, [v667, v668], JAM.policy.p21);
+              var v345 = JAM.call(v666.getScore, v666, [v667, v668], JAM.policy.p27);
               c = v344 + v345;
             }
           }
@@ -2585,7 +2585,7 @@ function search() {
     var v715 = JAM.call(alignedN.join, alignedN, [""], JAM.policy.p9);
     var v716 = currentI + 1;
     var v717 = currentJ + 1;
-    var v390 = JAM.new(Hit, [v714, v715, score, v716, endM, v717, endN], JAM.policy.p19);
+    var v390 = new Hit(v714, v715, score, v716, endM, v717, endN);
     JAM.call(v389.push, v389, [v390], JAM.policy.p18);
     hitCount++;
     var v919 = this.scoreSet;

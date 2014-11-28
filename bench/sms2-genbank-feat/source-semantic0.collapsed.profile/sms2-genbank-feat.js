@@ -828,7 +828,7 @@ function writeGroupNum(text$$10, tabIn$$1, groupSize, basePerLine, startBase, st
   return true;
 }
 function writeGroupNumDna(text$$11, tabIn$$2, groupSize$$1, basePerLine$$1, startBase$$1, stopBase$$1, strands, numberPosition) {
-  JAM.call(writeGroupNumDnaSetStart, null, [text$$11, tabIn$$2, groupSize$$1, basePerLine$$1, startBase$$1, stopBase$$1, strands, numberPosition, 0], JAM.policy.p20);
+  writeGroupNumDnaSetStart(text$$11, tabIn$$2, groupSize$$1, basePerLine$$1, startBase$$1, stopBase$$1, strands, numberPosition, 0);
   return true;
 }
 function writeGroupNumDnaSetStart(text$$12, tabIn$$3, groupSize$$2, basePerLine$$2, startBase$$2, stopBase$$2, strands$$1, numberPosition$$1, numberingAdjustment) {
@@ -870,7 +870,7 @@ function writeGroupNumDnaSetStart(text$$12, tabIn$$3, groupSize$$2, basePerLine$
       lineOfText$$1 = lineOfText$$1 + sepChar$$1;
       i$$6 = i$$6 + k$$1;
       if (numberPosition$$1 == "above") {
-        aboveNum = aboveNum + rightNum(JAM.call(adjustNumbering, null, [i$$6, numberingAdjustment], JAM.policy.p20), "", groupSize$$2, tabIn$$3);
+        aboveNum = aboveNum + rightNum(adjustNumbering(i$$6, numberingAdjustment), "", groupSize$$2, tabIn$$3);
       }
       if (i$$6 >= stopBase$$2) {
         break;
@@ -881,20 +881,20 @@ function writeGroupNumDnaSetStart(text$$12, tabIn$$3, groupSize$$2, basePerLine$
     }
     if (numberPosition$$1 == "left") {
       var v159 = outputWindow.document;
-      JAM.call(v159.write, v159, [rightNum(JAM.call(adjustNumbering, null, [lineNum, numberingAdjustment], JAM.policy.p20), "", 8, tabIn$$3) + lineOfText$$1 + "\n"], JAM.policy.p16);
+      JAM.call(v159.write, v159, [rightNum(adjustNumbering(lineNum, numberingAdjustment), "", 8, tabIn$$3) + lineOfText$$1 + "\n"], JAM.policy.p16);
       if (strands$$1 == "two") {
         var v161 = outputWindow.document;
-        JAM.call(v161.write, v161, [rightNum(JAM.call(adjustNumbering, null, [lineNum, numberingAdjustment], JAM.policy.p20), "", 8, tabIn$$3) + complement(lineOfText$$1) + "\n"], JAM.policy.p16);
+        JAM.call(v161.write, v161, [rightNum(adjustNumbering(lineNum, numberingAdjustment), "", 8, tabIn$$3) + complement(lineOfText$$1) + "\n"], JAM.policy.p16);
         var v163 = outputWindow.document;
         JAM.call(v163.write, v163, ["\n"], JAM.policy.p9);
       }
     } else {
       if (numberPosition$$1 == "right") {
         var v165 = outputWindow.document;
-        JAM.call(v165.write, v165, [lineOfText$$1 + JAM.call(adjustNumbering, null, [i$$6, numberingAdjustment], JAM.policy.p20) + "\n"], JAM.policy.p16);
+        JAM.call(v165.write, v165, [lineOfText$$1 + adjustNumbering(i$$6, numberingAdjustment) + "\n"], JAM.policy.p16);
         if (strands$$1 == "two") {
           var v167 = outputWindow.document;
-          JAM.call(v167.write, v167, [complement(lineOfText$$1) + JAM.call(adjustNumbering, null, [i$$6, numberingAdjustment], JAM.policy.p20) + "\n"], JAM.policy.p16);
+          JAM.call(v167.write, v167, [complement(lineOfText$$1) + adjustNumbering(i$$6, numberingAdjustment) + "\n"], JAM.policy.p16);
           var v169 = outputWindow.document;
           JAM.call(v169.write, v169, ["\n"], JAM.policy.p9);
         }
@@ -1023,7 +1023,7 @@ function writeMutatedSequence(sequence$$13, components$$1, numMut, firstIndexToM
         needNewChar = false;
       }
     }
-    sequence$$13 = JAM.call(sequence$$13.substring, sequence$$13, [0, randNum], JAM.policy.p13) + components$$1[componentsIndex] + JAM.call(sequence$$13.substring, sequence$$13, [randNum + 1, sequence$$13.length], JAM.policy.p22);
+    sequence$$13 = JAM.call(sequence$$13.substring, sequence$$13, [0, randNum], JAM.policy.p13) + components$$1[componentsIndex] + JAM.call(sequence$$13.substring, sequence$$13, [randNum + 1, sequence$$13.length], JAM.policy.p27);
     i$$8++;
     v210 = i$$8 < numMut;
   }
@@ -1068,7 +1068,7 @@ function writeRestrictionSites(sequence$$15, arrayOfItems, dnaConformation) {
   var timesFound = 0;
   if (dnaConformation == "circular") {
     shiftValue = JAM.call(sequence$$15.substring, sequence$$15, [0, lookAhead], JAM.policy.p13).length;
-    sequence$$15 = JAM.call(sequence$$15.substring, sequence$$15, [sequence$$15.length - lookAhead, sequence$$15.length], JAM.policy.p22) + sequence$$15 + JAM.call(sequence$$15.substring, sequence$$15, [0, lookAhead], JAM.policy.p13);
+    sequence$$15 = JAM.call(sequence$$15.substring, sequence$$15, [sequence$$15.length - lookAhead, sequence$$15.length], JAM.policy.p27) + sequence$$15 + JAM.call(sequence$$15.substring, sequence$$15, [0, lookAhead], JAM.policy.p13);
     lowerLimit = 0 + shiftValue;
     upperLimit = upperLimit + shiftValue;
   }
@@ -1219,14 +1219,14 @@ function genbankFeat(theDocument) {
   }
   var v498 = v592;
   if (!v498) {
-    v498 = JAM.call(checkTextLength, null, [theDocument.forms[0].elements[0].value, maxInput$$3], JAM.policy.p20) == false;
+    v498 = checkTextLength(theDocument.forms[0].elements[0].value, maxInput$$3) == false;
   }
   if (v498) {
     return false;
   }
   openWindow("GenBank Feature Extractor");
   openPre();
-  JAM.call(genBankFeatExtract, null, [theDocument.forms[0].elements[0].value, theDocument.forms[0].elements[4].options[theDocument.forms[0].elements[4].selectedIndex].value], JAM.policy.p20);
+  genBankFeatExtract(theDocument.forms[0].elements[0].value, theDocument.forms[0].elements[4].options[theDocument.forms[0].elements[4].selectedIndex].value);
   closePre();
   closeWindow();
 
@@ -1254,7 +1254,7 @@ function genBankFeatExtract(genBankFile$$2, outputType) {
     var dnaSequence$$3 = removeNonDna(dnaSequenceArray[0]);
     var v278 = mainArray[3];
     var featureArray = JAM.call(v278.split, v278, [/[\f\n\r] {5,12}\b/], JAM.policy.p17);
-    JAM.call(prepareFeatures, null, [featureArray, dnaSequence$$3, outputType], JAM.policy.p20);
+    prepareFeatures(featureArray, dnaSequence$$3, outputType);
     i$$11++;
     v279 = i$$11 < recordArray.length;
   }
@@ -1278,7 +1278,7 @@ function prepareFeatures(arrayOfFeatures, dnaSequence$$4, outputType$$1) {
     featureTitle = JAM.call(v506.match, v506, [/[^ \f\n\r\t\v]+ /], JAM.policy.p17).toString();
     theTitle = new RegExp(featureTitle);
     var v282 = arrayOfFeatures[i$$12];
-    removedTitle = JAM.call(v282.replace, v282, [theTitle, ""], JAM.policy.p21);
+    removedTitle = JAM.call(v282.replace, v282, [theTitle, ""], JAM.policy.p19);
     var v599 = arrayOfFeatures[i$$12];
     if (JAM.call(v599.search, v599, [/\/[^\f\n\r]+/], JAM.policy.p17) != -1) {
       var v508 = arrayOfFeatures[i$$12];
@@ -1291,7 +1291,7 @@ function prepareFeatures(arrayOfFeatures, dnaSequence$$4, outputType$$1) {
     positionNoSpace = JAM.call(v285.replace, v285, [/\s{2,}/g, " "], JAM.policy.p15);
     var v286 = outputWindow.document;
     JAM.call(v286.write, v286, ["&gt;" + filterFastaTitle(featureTitle) + filterFastaTitle(firstQualifier) + "\n"], JAM.policy.p16);
-    JAM.call(printFeature, null, [positionNoSpace, dnaSequence$$4, outputType$$1], JAM.policy.p20);
+    printFeature(positionNoSpace, dnaSequence$$4, outputType$$1);
     featureFound = true;
     var v288 = outputWindow.document;
     JAM.call(v288.write, v288, ["\n\n"], JAM.policy.p9);
@@ -1372,10 +1372,10 @@ function printFeature(featurePos, dnaSequence$$5, outputType$$2) {
         return true;
       } else {
         if (outputType$$2 == "separated") {
-          JAM.call(feature$$4.addFragment, feature$$4, [JAM.call(dnaSequence$$5.substring, dnaSequence$$5, [realStart, realStop], JAM.policy.p22)], JAM.policy.p16);
+          JAM.call(feature$$4.addFragment, feature$$4, [JAM.call(dnaSequence$$5.substring, dnaSequence$$5, [realStart, realStop], JAM.policy.p27)], JAM.policy.p16);
         } else {
-          JAM.call(feature$$4.addFragment, feature$$4, [JAM.call(dnaSequence$$5.substring, dnaSequence$$5, [feature$$4.lastAdded, realStart], JAM.policy.p22)], JAM.policy.p16);
-          JAM.call(feature$$4.addFragment, feature$$4, [JAM.call(dnaSequence$$5.substring, dnaSequence$$5, [realStart, realStop], JAM.policy.p22).toUpperCase()], JAM.policy.p16);
+          JAM.call(feature$$4.addFragment, feature$$4, [JAM.call(dnaSequence$$5.substring, dnaSequence$$5, [feature$$4.lastAdded, realStart], JAM.policy.p27)], JAM.policy.p16);
+          JAM.call(feature$$4.addFragment, feature$$4, [JAM.call(dnaSequence$$5.substring, dnaSequence$$5, [realStart, realStop], JAM.policy.p27).toUpperCase()], JAM.policy.p16);
           feature$$4.lastAdded = realStop;
         }
       }

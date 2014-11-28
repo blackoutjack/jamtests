@@ -828,7 +828,7 @@ function writeGroupNum(text$$10, tabIn$$1, groupSize, basePerLine, startBase, st
   return true;
 }
 function writeGroupNumDna(text$$11, tabIn$$2, groupSize$$1, basePerLine$$1, startBase$$1, stopBase$$1, strands, numberPosition) {
-  JAM.call(writeGroupNumDnaSetStart, null, [text$$11, tabIn$$2, groupSize$$1, basePerLine$$1, startBase$$1, stopBase$$1, strands, numberPosition, 0], JAM.policy.p19);
+  writeGroupNumDnaSetStart(text$$11, tabIn$$2, groupSize$$1, basePerLine$$1, startBase$$1, stopBase$$1, strands, numberPosition, 0);
   return true;
 }
 function writeGroupNumDnaSetStart(text$$12, tabIn$$3, groupSize$$2, basePerLine$$2, startBase$$2, stopBase$$2, strands$$1, numberPosition$$1, numberingAdjustment) {
@@ -870,7 +870,7 @@ function writeGroupNumDnaSetStart(text$$12, tabIn$$3, groupSize$$2, basePerLine$
       lineOfText$$1 = lineOfText$$1 + sepChar$$1;
       i$$6 = i$$6 + k$$1;
       if (numberPosition$$1 == "above") {
-        aboveNum = aboveNum + rightNum(JAM.call(adjustNumbering, null, [i$$6, numberingAdjustment], JAM.policy.p19), "", groupSize$$2, tabIn$$3);
+        aboveNum = aboveNum + rightNum(adjustNumbering(i$$6, numberingAdjustment), "", groupSize$$2, tabIn$$3);
       }
       if (i$$6 >= stopBase$$2) {
         break;
@@ -881,20 +881,20 @@ function writeGroupNumDnaSetStart(text$$12, tabIn$$3, groupSize$$2, basePerLine$
     }
     if (numberPosition$$1 == "left") {
       var v159 = outputWindow.document;
-      JAM.call(v159.write, v159, [rightNum(JAM.call(adjustNumbering, null, [lineNum, numberingAdjustment], JAM.policy.p19), "", 8, tabIn$$3) + lineOfText$$1 + "\n"], JAM.policy.p17);
+      JAM.call(v159.write, v159, [rightNum(adjustNumbering(lineNum, numberingAdjustment), "", 8, tabIn$$3) + lineOfText$$1 + "\n"], JAM.policy.p17);
       if (strands$$1 == "two") {
         var v161 = outputWindow.document;
-        JAM.call(v161.write, v161, [rightNum(JAM.call(adjustNumbering, null, [lineNum, numberingAdjustment], JAM.policy.p19), "", 8, tabIn$$3) + complement(lineOfText$$1) + "\n"], JAM.policy.p17);
+        JAM.call(v161.write, v161, [rightNum(adjustNumbering(lineNum, numberingAdjustment), "", 8, tabIn$$3) + complement(lineOfText$$1) + "\n"], JAM.policy.p17);
         var v163 = outputWindow.document;
         JAM.call(v163.write, v163, ["\n"], JAM.policy.p9);
       }
     } else {
       if (numberPosition$$1 == "right") {
         var v165 = outputWindow.document;
-        JAM.call(v165.write, v165, [lineOfText$$1 + JAM.call(adjustNumbering, null, [i$$6, numberingAdjustment], JAM.policy.p19) + "\n"], JAM.policy.p17);
+        JAM.call(v165.write, v165, [lineOfText$$1 + adjustNumbering(i$$6, numberingAdjustment) + "\n"], JAM.policy.p17);
         if (strands$$1 == "two") {
           var v167 = outputWindow.document;
-          JAM.call(v167.write, v167, [complement(lineOfText$$1) + JAM.call(adjustNumbering, null, [i$$6, numberingAdjustment], JAM.policy.p19) + "\n"], JAM.policy.p17);
+          JAM.call(v167.write, v167, [complement(lineOfText$$1) + adjustNumbering(i$$6, numberingAdjustment) + "\n"], JAM.policy.p17);
           var v169 = outputWindow.document;
           JAM.call(v169.write, v169, ["\n"], JAM.policy.p9);
         }
@@ -1023,7 +1023,7 @@ function writeMutatedSequence(sequence$$13, components$$1, numMut, firstIndexToM
         needNewChar = false;
       }
     }
-    sequence$$13 = JAM.call(sequence$$13.substring, sequence$$13, [0, randNum], JAM.policy.p13) + components$$1[componentsIndex] + JAM.call(sequence$$13.substring, sequence$$13, [randNum + 1, sequence$$13.length], JAM.policy.p21);
+    sequence$$13 = JAM.call(sequence$$13.substring, sequence$$13, [0, randNum], JAM.policy.p13) + components$$1[componentsIndex] + JAM.call(sequence$$13.substring, sequence$$13, [randNum + 1, sequence$$13.length], JAM.policy.p27);
     i$$8++;
     v210 = i$$8 < numMut;
   }
@@ -1068,7 +1068,7 @@ function writeRestrictionSites(sequence$$15, arrayOfItems, dnaConformation) {
   var timesFound = 0;
   if (dnaConformation == "circular") {
     shiftValue = JAM.call(sequence$$15.substring, sequence$$15, [0, lookAhead], JAM.policy.p13).length;
-    sequence$$15 = JAM.call(sequence$$15.substring, sequence$$15, [sequence$$15.length - lookAhead, sequence$$15.length], JAM.policy.p21) + sequence$$15 + JAM.call(sequence$$15.substring, sequence$$15, [0, lookAhead], JAM.policy.p13);
+    sequence$$15 = JAM.call(sequence$$15.substring, sequence$$15, [sequence$$15.length - lookAhead, sequence$$15.length], JAM.policy.p27) + sequence$$15 + JAM.call(sequence$$15.substring, sequence$$15, [0, lookAhead], JAM.policy.p13);
     lowerLimit = 0 + shiftValue;
     upperLimit = upperLimit + shiftValue;
   }
@@ -1216,7 +1216,7 @@ function proteinIep(theDocument) {
   }
   var v481 = checkFormElement(theDocument.forms[0].elements[0]) == false;
   if (!v481) {
-    v481 = JAM.call(checkSequenceLength, null, [theDocument.forms[0].elements[0].value, maxInput$$3], JAM.policy.p19) == false;
+    v481 = checkSequenceLength(theDocument.forms[0].elements[0].value, maxInput$$3) == false;
   }
   if (v481) {
     return false;
@@ -1230,8 +1230,8 @@ function proteinIep(theDocument) {
     title = getTitleFromFasta(arrayOfFasta$$1[i$$11]);
     newProtein = removeNonProteinStrict(newProtein);
     var v271 = outputWindow.document;
-    JAM.call(v271.write, v271, [JAM.call(getInfoFromTitleAndSequence, null, [title, newProtein], JAM.policy.p19)], JAM.policy.p17);
-    JAM.call(writeProtIep, null, [newProtein, theDocument.forms[0].elements[4].options[theDocument.forms[0].elements[4].selectedIndex].value, theDocument.forms[0].elements[5].options[theDocument.forms[0].elements[5].selectedIndex].value, theDocument.forms[0].elements[6].options[theDocument.forms[0].elements[6].selectedIndex].value], JAM.policy.p19);
+    JAM.call(v271.write, v271, [getInfoFromTitleAndSequence(title, newProtein)], JAM.policy.p17);
+    writeProtIep(newProtein, theDocument.forms[0].elements[4].options[theDocument.forms[0].elements[4].selectedIndex].value, theDocument.forms[0].elements[5].options[theDocument.forms[0].elements[5].selectedIndex].value, theDocument.forms[0].elements[6].options[theDocument.forms[0].elements[6].selectedIndex].value);
     var v276 = outputWindow.document;
     JAM.call(v276.write, v276, ["<br />\n<br />\n"], JAM.policy.p9);
     i$$11++;
@@ -1314,8 +1314,7 @@ function writeProtIep(proteinSequence$$1, copies, fusion, pKSet) {
     Y_count = JAM.call(proteinSequence$$1.match, proteinSequence$$1, [/y/gi], JAM.policy.p16).length;
   }
   for (;1;) {
-    charge = JAM.call(partial_charge, null, [N_term_pK, pH], JAM.policy.p19) + K_count * JAM.call(partial_charge, null, [K_pK, pH], JAM.policy.p19) + R_count * JAM.call(partial_charge, null, [R_pK, pH], JAM.policy.p19) + H_count * JAM.call(partial_charge, null, [H_pK, pH], JAM.policy.p19) - D_count * JAM.call(partial_charge, null, [pH, D_pK], JAM.policy.p19) - E_count * JAM.call(partial_charge, null, [pH, E_pK], JAM.policy.p19) - C_count * JAM.call(partial_charge, null, [pH, C_pK], JAM.policy.p19) - 
-    Y_count * JAM.call(partial_charge, null, [pH, Y_pK], JAM.policy.p19) - JAM.call(partial_charge, null, [pH, C_term_pK], JAM.policy.p19);
+    charge = partial_charge(N_term_pK, pH) + K_count * partial_charge(K_pK, pH) + R_count * partial_charge(R_pK, pH) + H_count * partial_charge(H_pK, pH) - D_count * partial_charge(pH, D_pK) - E_count * partial_charge(pH, E_pK) - C_count * partial_charge(pH, C_pK) - Y_count * partial_charge(pH, Y_pK) - partial_charge(pH, C_term_pK);
     var v498 = JAM.call(charge.toFixed, charge, [2], JAM.policy.p11);
     var v582 = last_charge * 100;
     if (v498 == JAM.call(v582.toFixed, v582, [2], JAM.policy.p11)) {

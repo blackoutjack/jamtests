@@ -1541,9 +1541,7 @@ function writeGroupNum(text$$10, tabIn$$1, groupSize, basePerLine, startBase, st
   return true;
 }
 function writeGroupNumDna(text$$11, tabIn$$2, groupSize$$1, basePerLine$$1, startBase$$1, stopBase$$1, strands, numberPosition) {
-  introspect(JAM.policy.p25) {
-    writeGroupNumDnaSetStart(text$$11, tabIn$$2, groupSize$$1, basePerLine$$1, startBase$$1, stopBase$$1, strands, numberPosition, 0);
-  }
+  writeGroupNumDnaSetStart(text$$11, tabIn$$2, groupSize$$1, basePerLine$$1, startBase$$1, stopBase$$1, strands, numberPosition, 0);
   return true;
 }
 function writeGroupNumDnaSetStart(text$$12, tabIn$$3, groupSize$$2, basePerLine$$2, startBase$$2, stopBase$$2, strands$$1, numberPosition$$1, numberingAdjustment) {
@@ -1596,9 +1594,7 @@ function writeGroupNumDnaSetStart(text$$12, tabIn$$3, groupSize$$2, basePerLine$
       var v157 = numberPosition$$1 == "above";
       if (v157) {
         var v155 = aboveNum;
-        introspect(JAM.policy.p25) {
-          var v675 = adjustNumbering(i$$6, numberingAdjustment)
-        }
+        var v675 = adjustNumbering(i$$6, numberingAdjustment);
         var v156 = rightNum(v675, "", groupSize$$2, tabIn$$3);
         aboveNum = v155 + v156;
       }
@@ -1614,9 +1610,7 @@ function writeGroupNumDnaSetStart(text$$12, tabIn$$3, groupSize$$2, basePerLine$
     var v182 = numberPosition$$1 == "left";
     if (v182) {
       var v160 = outputWindow.document;
-      introspect(JAM.policy.p25) {
-        var v1238 = adjustNumbering(lineNum, numberingAdjustment)
-      }
+      var v1238 = adjustNumbering(lineNum, numberingAdjustment);
       var v1006 = rightNum(v1238, "", 8, tabIn$$3);
       var v677 = v1006 + lineOfText$$1;
       var v161 = v677 + "\n";
@@ -1626,9 +1620,7 @@ function writeGroupNumDnaSetStart(text$$12, tabIn$$3, groupSize$$2, basePerLine$
       var v165 = strands$$1 == "two";
       if (v165) {
         var v162 = outputWindow.document;
-        introspect(JAM.policy.p25) {
-          var v1239 = adjustNumbering(lineNum, numberingAdjustment)
-        }
+        var v1239 = adjustNumbering(lineNum, numberingAdjustment);
         var v1007 = rightNum(v1239, "", 8, tabIn$$3);
         var v1008 = complement(lineOfText$$1);
         var v678 = v1007 + v1008;
@@ -1646,9 +1638,7 @@ function writeGroupNumDnaSetStart(text$$12, tabIn$$3, groupSize$$2, basePerLine$
       if (v181) {
         var v166 = outputWindow.document;
         var v1009 = lineOfText$$1;
-        introspect(JAM.policy.p25) {
-          var v1010 = adjustNumbering(i$$6, numberingAdjustment)
-        }
+        var v1010 = adjustNumbering(i$$6, numberingAdjustment);
         var v679 = v1009 + v1010;
         var v167 = v679 + "\n";
         introspect(JAM.policy.p21) {
@@ -1658,9 +1648,7 @@ function writeGroupNumDnaSetStart(text$$12, tabIn$$3, groupSize$$2, basePerLine$
         if (v171) {
           var v168 = outputWindow.document;
           var v1011 = complement(lineOfText$$1);
-          introspect(JAM.policy.p25) {
-            var v1012 = adjustNumbering(i$$6, numberingAdjustment)
-          }
+          var v1012 = adjustNumbering(i$$6, numberingAdjustment);
           var v680 = v1011 + v1012;
           var v169 = v680 + "\n";
           introspect(JAM.policy.p21) {
@@ -1867,7 +1855,7 @@ function writeMutatedSequence(sequence$$13, components$$1, numMut, firstIndexToM
     var v209 = v695 + v696;
     var v697 = randNum + 1;
     var v698 = sequence$$13.length;
-    introspect(JAM.policy.p27) {
+    introspect(JAM.policy.p33) {
       var v210 = sequence$$13.substring(v697, v698)
     }
     sequence$$13 = v209 + v210;
@@ -1938,7 +1926,7 @@ function writeRestrictionSites(sequence$$15, arrayOfItems, dnaConformation) {
     var v1242 = sequence$$15.length;
     var v1017 = v1242 - lookAhead;
     var v1018 = sequence$$15.length;
-    introspect(JAM.policy.p27) {
+    introspect(JAM.policy.p33) {
       var v702 = sequence$$15.substring(v1017, v1018)
     }
     var v222 = v702 + sequence$$15;
@@ -2232,9 +2220,7 @@ function pairwiseAlignDna(theDocument) {
     var v1518 = v1532.elements;
     var v1493 = v1518[0];
     var v1459 = v1493.value;
-    introspect(JAM.policy.p25) {
-      var v1382 = checkSequenceLength(v1459, maxInput$$3)
-    }
+    var v1382 = checkSequenceLength(v1459, maxInput$$3);
     v1250 = v1382 == false;
   }
   var v1029 = v1250;
@@ -2255,9 +2241,7 @@ function pairwiseAlignDna(theDocument) {
     var v1461 = v1495.elements;
     var v1385 = v1461[1];
     var v1253 = v1385.value;
-    introspect(JAM.policy.p25) {
-      var v1030 = checkSequenceLength(v1253, maxInput$$3)
-    }
+    var v1030 = checkSequenceLength(v1253, maxInput$$3);
     v728 = v1030 == false;
   }
   var v268 = v728;
@@ -2358,9 +2342,7 @@ function pairwiseAlignDna(theDocument) {
   var v277 = v737.value;
   titleTwo = getTitleFromFasta(v277);
   var v278 = outputWindow.document;
-  introspect(JAM.policy.p25) {
-    var v279 = getPairwiseAlignTitle(titleOne, newDnaOne, titleTwo, newDnaTwo)
-  }
+  var v279 = getPairwiseAlignTitle(titleOne, newDnaOne, titleTwo, newDnaTwo);
   introspect(JAM.policy.p21) {
     v278.write(v279);
   }
@@ -2382,9 +2364,7 @@ function pairwiseAlignDna(theDocument) {
       newDnaTwo = newDnaTwo.match(/./g);
     }
   }
-  introspect(JAM.policy.p25) {
-    pairwiseDna(titleOne, newDnaOne, titleTwo, newDnaTwo, MATCH_SCORE, MISMATCH_SCORE, GAP_PENALTY, BEGIN_GAP_PENALTY, END_GAP_PENALTY);
-  }
+  pairwiseDna(titleOne, newDnaOne, titleTwo, newDnaTwo, MATCH_SCORE, MISMATCH_SCORE, GAP_PENALTY, BEGIN_GAP_PENALTY, END_GAP_PENALTY);
   closePre();
   closeWindow();
   return true;
@@ -2400,13 +2380,13 @@ function pairwiseDna(titleOne$$1, newDnaOne$$1, titleTwo$$1, newDnaTwo$$1, match
     matrix.setMismatch(mismatchScore);
   }
   var scoreSet = new ScoreSet;
-  introspect(JAM.policy.p27) {
+  introspect(JAM.policy.p33) {
     scoreSet.setScoreSetParam(matrix, gapPenalty, beginGapPenalty, endGapPenalty);
   }
   var alignment;
   if (useLinearSpace) {
     alignment = new AlignPairLinear;
-    introspect(JAM.policy.p27) {
+    introspect(JAM.policy.p33) {
       alignment.setAlignParam(newDnaOne$$1, newDnaTwo$$1, scoreSet);
     }
     alignment.align();
@@ -2456,7 +2436,7 @@ function pairwiseDna(titleOne$$1, newDnaOne$$1, titleTwo$$1, newDnaTwo$$1, match
   }
   if (useQuadraticSpace) {
     alignment = new AlignPairQuad;
-    introspect(JAM.policy.p27) {
+    introspect(JAM.policy.p33) {
       alignment.initializeMatrix(newDnaOne$$1, newDnaTwo$$1, scoreSet);
     }
     alignment.fillMatrix();
@@ -2509,7 +2489,7 @@ function pairwiseDna(titleOne$$1, newDnaOne$$1, titleTwo$$1, newDnaTwo$$1, match
 }
 function getScore(r1$$1, r2) {
   var v308 = this.scoringMatrix;
-  introspect(JAM.policy.p27) {
+  introspect(JAM.policy.p33) {
     return v308.scoringMatrix_getScore(r1$$1, r2);
   }
 }
@@ -2685,7 +2665,7 @@ function path(i1, j1, i2, j2) {
         var v333 = v772.beginGap;
         var v773 = this.scoreSet;
         var v334 = v773.beginGap;
-        introspect(JAM.policy.p27) {
+        introspect(JAM.policy.p33) {
           subScoreSet.setScoreSetParam(v331, v332, v333, v334);
         }
       } else {
@@ -2701,7 +2681,7 @@ function path(i1, j1, i2, j2) {
           var v337 = v777.endGap;
           var v778 = this.scoreSet;
           var v338 = v778.endGap;
-          introspect(JAM.policy.p27) {
+          introspect(JAM.policy.p33) {
             subScoreSet.setScoreSetParam(v335, v336, v337, v338);
           }
         } else {
@@ -2713,7 +2693,7 @@ function path(i1, j1, i2, j2) {
           var v341 = v781.gap;
           var v782 = this.scoreSet;
           var v342 = v782.gap;
-          introspect(JAM.policy.p27) {
+          introspect(JAM.policy.p33) {
             subScoreSet.setScoreSetParam(v339, v340, v341, v342);
           }
         }
@@ -2727,7 +2707,7 @@ function path(i1, j1, i2, j2) {
       var v347 = v785.beginGap;
       var v786 = this.scoreSet;
       var v348 = v786.endGap;
-      introspect(JAM.policy.p27) {
+      introspect(JAM.policy.p33) {
         subScoreSet.setScoreSetParam(v345, v346, v347, v348);
       }
       subScoreSet.useBeginGapTop = false;
@@ -2755,7 +2735,7 @@ function path(i1, j1, i2, j2) {
         subScoreSet.useEndGapBottom = true;
       }
     }
-    introspect(JAM.policy.p27) {
+    introspect(JAM.policy.p33) {
       alignment$$1.initializeMatrix(subM, subN, subScoreSet);
     }
     alignment$$1.fillMatrix();
@@ -2870,11 +2850,11 @@ function path(i1, j1, i2, j2) {
           var v1402 = this.N;
           var v1403 = j$$11 - 1;
           var v1275 = v1402[v1403];
-          introspect(JAM.policy.p27) {
+          introspect(JAM.policy.p33) {
             var v1072 = v1273.getScore(v1274, v1275)
           }
           var v802 = diag + v1072;
-          introspect(JAM.policy.p27) {
+          introspect(JAM.policy.p33) {
             var v375 = Math.max(v801, v802)
           }
           introspect(JAM.policy.p22) {
@@ -2900,11 +2880,11 @@ function path(i1, j1, i2, j2) {
             var v1406 = this.N;
             var v1407 = j$$11 - 1;
             var v1279 = v1406[v1407];
-            introspect(JAM.policy.p27) {
+            introspect(JAM.policy.p33) {
               var v1077 = v1277.getScore(v1278, v1279)
             }
             var v807 = diag + v1077;
-            introspect(JAM.policy.p27) {
+            introspect(JAM.policy.p33) {
               var v377 = Math.max(v806, v807)
             }
             introspect(JAM.policy.p22) {
@@ -2930,11 +2910,11 @@ function path(i1, j1, i2, j2) {
               var v1410 = this.N;
               var v1411 = j$$11 - 1;
               var v1283 = v1410[v1411];
-              introspect(JAM.policy.p27) {
+              introspect(JAM.policy.p33) {
                 var v1082 = v1281.getScore(v1282, v1283)
               }
               var v812 = diag + v1082;
-              introspect(JAM.policy.p27) {
+              introspect(JAM.policy.p33) {
                 var v379 = Math.max(v811, v812)
               }
               introspect(JAM.policy.p22) {
@@ -2956,11 +2936,11 @@ function path(i1, j1, i2, j2) {
               var v1414 = this.N;
               var v1415 = j$$11 - 1;
               var v1287 = v1414[v1415];
-              introspect(JAM.policy.p27) {
+              introspect(JAM.policy.p33) {
                 var v1086 = v1285.getScore(v1286, v1287)
               }
               var v816 = diag + v1086;
-              introspect(JAM.policy.p27) {
+              introspect(JAM.policy.p33) {
                 var v381 = Math.max(v815, v816)
               }
               introspect(JAM.policy.p22) {
@@ -3073,11 +3053,11 @@ function path(i1, j1, i2, j2) {
           var v1473 = j$$11 + 1;
           var v1419 = v1473 - 1;
           var v1291 = v1418[v1419];
-          introspect(JAM.policy.p27) {
+          introspect(JAM.policy.p33) {
             var v1098 = v1289.getScore(v1290, v1291)
           }
           var v831 = diag + v1098;
-          introspect(JAM.policy.p27) {
+          introspect(JAM.policy.p33) {
             var v403 = Math.max(v830, v831)
           }
           introspect(JAM.policy.p22) {
@@ -3103,11 +3083,11 @@ function path(i1, j1, i2, j2) {
             var v1475 = j$$11 + 1;
             var v1423 = v1475 - 1;
             var v1295 = v1422[v1423];
-            introspect(JAM.policy.p27) {
+            introspect(JAM.policy.p33) {
               var v1102 = v1293.getScore(v1294, v1295)
             }
             var v835 = diag + v1102;
-            introspect(JAM.policy.p27) {
+            introspect(JAM.policy.p33) {
               var v405 = Math.max(v834, v835)
             }
             introspect(JAM.policy.p22) {
@@ -3133,11 +3113,11 @@ function path(i1, j1, i2, j2) {
               var v1477 = j$$11 + 1;
               var v1427 = v1477 - 1;
               var v1299 = v1426[v1427];
-              introspect(JAM.policy.p27) {
+              introspect(JAM.policy.p33) {
                 var v1106 = v1297.getScore(v1298, v1299)
               }
               var v839 = diag + v1106;
-              introspect(JAM.policy.p27) {
+              introspect(JAM.policy.p33) {
                 var v407 = Math.max(v838, v839)
               }
               introspect(JAM.policy.p22) {
@@ -3161,11 +3141,11 @@ function path(i1, j1, i2, j2) {
               var v1479 = j$$11 + 1;
               var v1431 = v1479 - 1;
               var v1303 = v1430[v1431];
-              introspect(JAM.policy.p27) {
+              introspect(JAM.policy.p33) {
                 var v1110 = v1301.getScore(v1302, v1303)
               }
               var v843 = diag + v1110;
-              introspect(JAM.policy.p27) {
+              introspect(JAM.policy.p33) {
                 var v409 = Math.max(v842, v843)
               }
               introspect(JAM.policy.p22) {
@@ -3212,7 +3192,7 @@ function path(i1, j1, i2, j2) {
       j$$11++;
       v422 = j$$11 <= j2;
     }
-    introspect(JAM.policy.p27) {
+    introspect(JAM.policy.p33) {
       this.path(i1, j1, middle, maxJ);
     }
     introspect(JAM.policy.p22) {
@@ -3655,7 +3635,7 @@ function fillMatrix() {
       var v1178 = this.N;
       var v1179 = j$$14 - 1;
       var v927 = v1178[v1179];
-      introspect(JAM.policy.p27) {
+      introspect(JAM.policy.p33) {
         var v493 = v925.getScore(v926, v927)
       }
       c = v492 + v493;

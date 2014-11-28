@@ -1177,7 +1177,7 @@ function writeGroupNum(text$$10, tabIn$$1, groupSize, basePerLine, startBase, st
   return true;
 }
 function writeGroupNumDna(text$$11, tabIn$$2, groupSize$$1, basePerLine$$1, startBase$$1, stopBase$$1, strands, numberPosition) {
-  JAM.call(writeGroupNumDnaSetStart, null, [text$$11, tabIn$$2, groupSize$$1, basePerLine$$1, startBase$$1, stopBase$$1, strands, numberPosition, 0], JAM.policy.p19);
+  writeGroupNumDnaSetStart(text$$11, tabIn$$2, groupSize$$1, basePerLine$$1, startBase$$1, stopBase$$1, strands, numberPosition, 0);
   return true;
 }
 function writeGroupNumDnaSetStart(text$$12, tabIn$$3, groupSize$$2, basePerLine$$2, startBase$$2, stopBase$$2, strands$$1, numberPosition$$1, numberingAdjustment) {
@@ -1228,7 +1228,7 @@ function writeGroupNumDnaSetStart(text$$12, tabIn$$3, groupSize$$2, basePerLine$
       var v158 = numberPosition$$1 == "above";
       if (v158) {
         var v156 = aboveNum;
-        var v475 = JAM.call(adjustNumbering, null, [i$$6, numberingAdjustment], JAM.policy.p19);
+        var v475 = adjustNumbering(i$$6, numberingAdjustment);
         var v157 = rightNum(v475, "", groupSize$$2, tabIn$$3);
         aboveNum = v156 + v157;
       }
@@ -1244,7 +1244,7 @@ function writeGroupNumDnaSetStart(text$$12, tabIn$$3, groupSize$$2, basePerLine$
     var v183 = numberPosition$$1 == "left";
     if (v183) {
       var v161 = outputWindow.document;
-      var v758 = JAM.call(adjustNumbering, null, [lineNum, numberingAdjustment], JAM.policy.p19);
+      var v758 = adjustNumbering(lineNum, numberingAdjustment);
       var v643 = rightNum(v758, "", 8, tabIn$$3);
       var v477 = v643 + lineOfText$$1;
       var v162 = v477 + "\n";
@@ -1252,7 +1252,7 @@ function writeGroupNumDnaSetStart(text$$12, tabIn$$3, groupSize$$2, basePerLine$
       var v166 = strands$$1 == "two";
       if (v166) {
         var v163 = outputWindow.document;
-        var v759 = JAM.call(adjustNumbering, null, [lineNum, numberingAdjustment], JAM.policy.p19);
+        var v759 = adjustNumbering(lineNum, numberingAdjustment);
         var v644 = rightNum(v759, "", 8, tabIn$$3);
         var v645 = complement(lineOfText$$1);
         var v478 = v644 + v645;
@@ -1266,7 +1266,7 @@ function writeGroupNumDnaSetStart(text$$12, tabIn$$3, groupSize$$2, basePerLine$
       if (v182) {
         var v167 = outputWindow.document;
         var v646 = lineOfText$$1;
-        var v647 = JAM.call(adjustNumbering, null, [i$$6, numberingAdjustment], JAM.policy.p19);
+        var v647 = adjustNumbering(i$$6, numberingAdjustment);
         var v479 = v646 + v647;
         var v168 = v479 + "\n";
         JAM.call(v167.write, v167, [v168], JAM.policy.p15);
@@ -1274,7 +1274,7 @@ function writeGroupNumDnaSetStart(text$$12, tabIn$$3, groupSize$$2, basePerLine$
         if (v172) {
           var v169 = outputWindow.document;
           var v648 = complement(lineOfText$$1);
-          var v649 = JAM.call(adjustNumbering, null, [i$$6, numberingAdjustment], JAM.policy.p19);
+          var v649 = adjustNumbering(i$$6, numberingAdjustment);
           var v480 = v648 + v649;
           var v170 = v480 + "\n";
           JAM.call(v169.write, v169, [v170], JAM.policy.p15);
@@ -1451,7 +1451,7 @@ function writeMutatedSequence(sequence$$13, components$$1, numMut, firstIndexToM
     var v210 = v495 + v496;
     var v497 = randNum + 1;
     var v498 = sequence$$13.length;
-    var v211 = JAM.call(sequence$$13.substring, sequence$$13, [v497, v498], JAM.policy.p21);
+    var v211 = JAM.call(sequence$$13.substring, sequence$$13, [v497, v498], JAM.policy.p27);
     sequence$$13 = v210 + v211;
     i$$8++;
     v212 = i$$8 < numMut;
@@ -1510,7 +1510,7 @@ function writeRestrictionSites(sequence$$15, arrayOfItems, dnaConformation) {
     var v762 = sequence$$15.length;
     var v654 = v762 - lookAhead;
     var v655 = sequence$$15.length;
-    var v502 = JAM.call(sequence$$15.substring, sequence$$15, [v654, v655], JAM.policy.p21);
+    var v502 = JAM.call(sequence$$15.substring, sequence$$15, [v654, v655], JAM.policy.p27);
     var v223 = v502 + sequence$$15;
     var v224 = JAM.call(sequence$$15.substring, sequence$$15, [0, lookAhead], JAM.policy.p13);
     sequence$$15 = v223 + v224;
@@ -2199,7 +2199,7 @@ function orfFind(theDocument) {
     var v931 = v985.elements;
     var v870 = v931[0];
     var v793 = v870.value;
-    var v690 = JAM.call(checkSequenceLength, null, [v793, maxInput$$3], JAM.policy.p19);
+    var v690 = checkSequenceLength(v793, maxInput$$3);
     v564 = v690 == false;
   }
   var v305 = v564;
@@ -2227,7 +2227,7 @@ function orfFind(theDocument) {
   newDna = removeNonDna(newDna);
   openWindow("ORF Finder");
   var v309 = outputWindow.document;
-  var v310 = JAM.call(getInfoFromTitleAndSequence, null, [title$$9, newDna], JAM.policy.p19);
+  var v310 = getInfoFromTitleAndSequence(title$$9, newDna);
   JAM.call(v309.write, v309, [v310], JAM.policy.p15);
   openPre();
   var v1038 = theDocument.forms;
@@ -2268,7 +2268,7 @@ function orfFind(theDocument) {
     var v698 = v801.selectedIndex;
     var v570 = v697[v698];
     var v312 = v570.value;
-    JAM.call(writeOrfs, null, [newDna, geneticCode, v311, 0, v312, enteredNumber], JAM.policy.p19);
+    writeOrfs(newDna, geneticCode, v311, 0, v312, enteredNumber);
     var v992 = theDocument.forms;
     var v938 = v992[0];
     var v879 = v938.elements;
@@ -2293,7 +2293,7 @@ function orfFind(theDocument) {
     var v702 = v805.selectedIndex;
     var v572 = v701[v702];
     var v314 = v572.value;
-    JAM.call(writeOrfs, null, [newDna, geneticCode, v313, 1, v314, enteredNumber], JAM.policy.p19);
+    writeOrfs(newDna, geneticCode, v313, 1, v314, enteredNumber);
     var v996 = theDocument.forms;
     var v942 = v996[0];
     var v883 = v942.elements;
@@ -2318,7 +2318,7 @@ function orfFind(theDocument) {
     var v706 = v809.selectedIndex;
     var v574 = v705[v706];
     var v316 = v574.value;
-    JAM.call(writeOrfs, null, [newDna, geneticCode, v315, 2, v316, enteredNumber], JAM.policy.p19);
+    writeOrfs(newDna, geneticCode, v315, 2, v316, enteredNumber);
   } else {
     var v1000 = theDocument.forms;
     var v946 = v1000[0];
@@ -2356,7 +2356,7 @@ function orfFind(theDocument) {
     var v712 = v815.selectedIndex;
     var v577 = v711[v712];
     var v319 = v577.value;
-    JAM.call(writeOrfs, null, [newDna, geneticCode, v317, v318, v319, enteredNumber], JAM.policy.p19);
+    writeOrfs(newDna, geneticCode, v317, v318, v319, enteredNumber);
   }
   closePre();
   closeWindow();
@@ -2459,7 +2459,7 @@ function writeOrfs(dnaSequence$$3, geneticCode$$1, startCodons, startPos, strand
       var v342 = v586;
       if (v342) {
         var v330 = i$$11 + 3;
-        sequenceToTranslate = JAM.call(dnaSequence$$3.substring, dnaSequence$$3, [startPos, v330], JAM.policy.p21);
+        sequenceToTranslate = JAM.call(dnaSequence$$3.substring, dnaSequence$$3, [startPos, v330], JAM.policy.p27);
         var v331 = outputWindow.document;
         var v1121 = k$$3 + 1;
         var v1096 = "&gt;ORF number " + v1121;
@@ -2495,7 +2495,7 @@ function writeOrfs(dnaSequence$$3, geneticCode$$1, startCodons, startPos, strand
         for (;v339;) {
           var v337 = geneticCodeMatchExp$$2[m];
           var v338 = geneticCodeMatchResult$$2[m];
-          sequenceToTranslate = JAM.call(sequenceToTranslate.replace, sequenceToTranslate, [v337, v338], JAM.policy.p21);
+          sequenceToTranslate = JAM.call(sequenceToTranslate.replace, sequenceToTranslate, [v337, v338], JAM.policy.p27);
           m++;
           var v591 = geneticCodeMatchExp$$2.length;
           v339 = m < v591;

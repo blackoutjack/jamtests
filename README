@@ -114,9 +114,10 @@ auto.js: Contains JavaScript utility functions that control automated
 libTx.js: This file is currently not included in this repository, but
   the jamscript repository (https://github.com/blackoutjack/jamscript).
   Assuming that the jamtests repository is situated as a subdirectory
-  of tests/ in the jamscript repo, a symbolic link within each test
-  case directory will point to this file. (This is clearly a brittle
-  setup and should be changed soon.)
+  tests/, and the jamscripts repo is located as a subdirectory
+  jamscript/, both within the jamweaver repo, a symbolic link within
+  each test case directory will point to this file. (This is clearly a
+  brittle setup and should be changed soon.)
 
 ##### Automation #####
 

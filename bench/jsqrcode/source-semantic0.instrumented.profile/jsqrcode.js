@@ -32,19 +32,13 @@ function v154(patterns) {
   }
   var v162 = patterns[0];
   var v163 = patterns[1];
-  introspect(JAM.policy.p26) {
-    var zeroOneDistance = distance(v162, v163)
-  }
+  var zeroOneDistance = distance(v162, v163);
   var v164 = patterns[1];
   var v165 = patterns[2];
-  introspect(JAM.policy.p26) {
-    var oneTwoDistance = distance(v164, v165)
-  }
+  var oneTwoDistance = distance(v164, v165);
   var v166 = patterns[0];
   var v167 = patterns[2];
-  introspect(JAM.policy.p26) {
-    var zeroTwoDistance = distance(v166, v167)
-  }
+  var zeroTwoDistance = distance(v166, v167);
   var pointA;
   var pointB;
   var pointC;
@@ -73,9 +67,7 @@ function v154(patterns) {
       pointC = patterns[1];
     }
   }
-  introspect(JAM.policy.p26) {
-    var v1066 = crossProductZ(pointA, pointB, pointC)
-  }
+  var v1066 = crossProductZ(pointA, pointB, pointC);
   var v170 = v1066 < 0;
   if (v170) {
     var temp$$5 = pointA;
@@ -108,7 +100,7 @@ function v153(from, to) {
   }
   this.length = v172;
   var v173 = this.push;
-  introspect(JAM.policy.p27) {
+  introspect(JAM.policy.p33) {
     return v173.apply(this, rest);
   }
 }
@@ -125,7 +117,7 @@ function v152() {
     var v1073 = qrcode.width;
     var v176 = x$$61 < v1073;
     for (;v176;) {
-      introspect(JAM.policy.p27) {
+      introspect(JAM.policy.p33) {
         var gray$$1 = qrcode.getPixel(x$$61, y$$43)
       }
       var v1812 = qrcode.width;
@@ -344,7 +336,7 @@ function v149(th) {
     var v1097 = qrcode.width;
     var v207 = x$$60 < v1097;
     for (;v207;) {
-      introspect(JAM.policy.p27) {
+      introspect(JAM.policy.p33) {
         var gray = qrcode.getPixel(x$$60, y$$42)
       }
       var v1823 = qrcode.width;
@@ -475,7 +467,7 @@ function v147(ctx) {
       v224 = y$$40 < v1117;
     }
     var v225 = qrcode.imagedata;
-    introspect(JAM.policy.p28) {
+    introspect(JAM.policy.p25) {
       ctx.putImageData(v225, 0, 0);
     }
   }
@@ -484,7 +476,7 @@ function v147(ctx) {
   var v228 = qrcode.debug;
   if (v228) {
     var v227 = qrcode.imagedata;
-    introspect(JAM.policy.p28) {
+    introspect(JAM.policy.p25) {
       ctx.putImageData(v227, 0, 0);
     }
   }
@@ -551,13 +543,13 @@ function v145(src$$1) {
       introspect(JAM.policy.p20) {
         outctx.clearRect(0, 0, 320, 240);
       }
-      introspect(JAM.policy.p28) {
+      introspect(JAM.policy.p25) {
         outctx.drawImage(image$$7, 0, 0, 320, 240);
       }
     }
     canvas_qr$$1.width = image$$7.width;
     canvas_qr$$1.height = image$$7.height;
-    introspect(JAM.policy.p28) {
+    introspect(JAM.policy.p25) {
       context$$1.drawImage(image$$7, 0, 0);
     }
     qrcode.width = image$$7.width;
@@ -651,7 +643,7 @@ function v143(bits$$13) {
   var v246 = parser.readFormatInformation();
   var ecLevel$$2 = v246.ErrorCorrectionLevel;
   var codewords$$1 = parser.readCodewords();
-  introspect(JAM.policy.p27) {
+  introspect(JAM.policy.p33) {
     var dataBlocks = DataBlock.getDataBlocks(codewords$$1, version$$7, ecLevel$$2)
   }
   var totalBytes = 0;
@@ -675,7 +667,7 @@ function v143(bits$$13) {
     var dataBlock = dataBlocks[j$$23];
     var codewordBytes$$1 = dataBlock.Codewords;
     var numDataCodewords$$3 = dataBlock.NumDataCodewords;
-    introspect(JAM.policy.p27) {
+    introspect(JAM.policy.p33) {
       Decoder.correctErrors(codewordBytes$$1, numDataCodewords$$3);
     }
     i$$44 = 0;
@@ -693,9 +685,7 @@ function v143(bits$$13) {
   }
   var v251 = version$$7.VersionNumber;
   var v252 = ecLevel$$2.Bits;
-  introspect(JAM.policy.p26) {
-    var reader = new QRCodeDataBlockReader(resultBytes, v251, v252)
-  }
+  var reader = new QRCodeDataBlockReader(resultBytes, v251, v252);
   return reader;
 }
 function v142(codewordBytes, numDataCodewords$$2) {
@@ -713,7 +703,7 @@ function v142(codewordBytes, numDataCodewords$$2) {
   var numECCodewords = v255 - numDataCodewords$$2;
   try {
     var v256 = Decoder.rsDecoder;
-    introspect(JAM.policy.p27) {
+    introspect(JAM.policy.p33) {
       v256.decode(codewordsInts, numECCodewords);
     }
   } catch (rse) {
@@ -784,9 +774,7 @@ function v139(rawCodewords, version$$5, ecLevel$$1) {
       var v263 = numResultBlocks;
       numResultBlocks = numResultBlocks + 1;
       var v1144 = new Array(numBlockCodewords);
-      introspect(JAM.policy.p26) {
-        var v2801 = new DataBlock(numDataCodewords$$1, v1144)
-      }
+      var v2801 = new DataBlock(numDataCodewords$$1, v1144);
       result$$1[v263] = v2801;
       i$$11++;
       var v1145 = ecBlock$$1.Count;
@@ -902,7 +890,7 @@ function v137(maskedFormatInfo$$1) {
       var v283 = decodeInfo[1];
       return new FormatInformation(v283);
     }
-    introspect(JAM.policy.p27) {
+    introspect(JAM.policy.p33) {
       var bitsDifference$$1 = this.numBitsDiffering(maskedFormatInfo$$1, targetInfo)
     }
     var v285 = bitsDifference$$1 < bestDifference$$1;
@@ -974,7 +962,7 @@ function v135(a, b$$1) {
   return v290 + v291;
 }
 function v134(x0$$4, y0$$4, x1$$5, y1$$5, x2$$3, y2$$3, x3$$2, y3$$2) {
-  introspect(JAM.policy.p27) {
+  introspect(JAM.policy.p33) {
     var v292 = this.squareToQuadrilateral(x0$$4, y0$$4, x1$$5, y1$$5, x2$$3, y2$$3, x3$$2, y3$$2)
   }
   return v292.buildAdjoint();
@@ -994,9 +982,7 @@ function v133(x0$$3, y0$$3, x1$$4, y1$$4, x2$$2, y2$$2, x3$$1, y3$$1) {
     var v295 = x2$$2 - x1$$4;
     var v296 = y1$$4 - y0$$3;
     var v297 = y2$$2 - y1$$4;
-    introspect(JAM.policy.p26) {
-      return new PerspectiveTransform(v294, v295, x0$$3, v296, v297, y0$$3, 0, 0, 1);
-    }
+    return new PerspectiveTransform(v294, v295, x0$$3, v296, v297, y0$$3, 0, 0, 1);
   } else {
     dx1 = x1$$4 - x2$$2;
     dx2 = x3$$1 - x2$$2;
@@ -1027,17 +1013,15 @@ function v133(x0$$3, y0$$3, x1$$4, y1$$4, x2$$2, y2$$2, x3$$1, y3$$1) {
     var v1177 = y3$$1 - y0$$3;
     var v1178 = a23 * y3$$1;
     var v306 = v1177 + v1178;
-    introspect(JAM.policy.p26) {
-      return new PerspectiveTransform(v303, v304, x0$$3, v305, v306, y0$$3, a13, a23, 1);
-    }
+    return new PerspectiveTransform(v303, v304, x0$$3, v305, v306, y0$$3, a13, a23, 1);
   }
   return;
 }
 function v132(x0$$2, y0$$2, x1$$3, y1$$3, x2$$1, y2$$1, x3, y3, x0p, y0p, x1p, y1p, x2p, y2p, x3p, y3p) {
-  introspect(JAM.policy.p27) {
+  introspect(JAM.policy.p33) {
     var qToS = this.quadrilateralToSquare(x0$$2, y0$$2, x1$$3, y1$$3, x2$$1, y2$$1, x3, y3)
   }
-  introspect(JAM.policy.p27) {
+  introspect(JAM.policy.p33) {
     var sToQ = this.squareToQuadrilateral(x0p, y0p, x1p, y1p, x2p, y2p, x3p, y3p)
   }
   introspect(JAM.policy.p21) {
@@ -1061,7 +1045,7 @@ function v131(versionBits) {
         return this.getVersionForNumber(v309);
       }
     }
-    introspect(JAM.policy.p27) {
+    introspect(JAM.policy.p33) {
       var bitsDifference = FormatInformation.numBitsDiffering(versionBits, targetVersion)
     }
     var v311 = bitsDifference < bestDifference;
@@ -1114,10 +1098,10 @@ function v129(versionNumber$$1) {
   return v317[v318];
 }
 function v128(image$$4, dimension$$1, p1ToX, p1ToY, p2ToX, p2ToY, p3ToX, p3ToY, p4ToX, p4ToY, p1FromX, p1FromY, p2FromX, p2FromY, p3FromX, p3FromY, p4FromX, p4FromY) {
-  introspect(JAM.policy.p27) {
+  introspect(JAM.policy.p33) {
     var transform$$1 = PerspectiveTransform.quadrilateralToQuadrilateral(p1ToX, p1ToY, p2ToX, p2ToY, p3ToX, p3ToY, p4ToX, p4ToY, p1FromX, p1FromY, p2FromX, p2FromY, p3FromX, p3FromY, p4FromX, p4FromY)
   }
-  introspect(JAM.policy.p27) {
+  introspect(JAM.policy.p33) {
     return GridSampler.sampleGrid3(image$$4, dimension$$1, transform$$1);
   }
 }
@@ -1143,7 +1127,7 @@ function v127(image$$3, dimension, transform) {
     introspect(JAM.policy.p21) {
       transform.transformPoints1(points$$1);
     }
-    introspect(JAM.policy.p27) {
+    introspect(JAM.policy.p33) {
       GridSampler.checkAndNudgePoints(image$$3, points$$1);
     }
     try {
@@ -1414,9 +1398,7 @@ function ECBlocks(ecCodewordsPerBlock, ecBlocks1, ecBlocks2) {
   }
   this.ecCodewordsPerBlock = ecCodewordsPerBlock;
   if (ecBlocks2) {
-    introspect(JAM.policy.p26) {
-      var v2802 = new Array(ecBlocks1, ecBlocks2)
-    }
+    var v2802 = new Array(ecBlocks1, ecBlocks2);
     this.ecBlocks = v2802;
   } else {
     var v2803 = new Array(ecBlocks1);
@@ -1541,9 +1523,7 @@ function Version(versionNumber, alignmentPatternCenters, ecBlocks1$$1, ecBlocks2
   }
   this.versionNumber = versionNumber;
   this.alignmentPatternCenters = alignmentPatternCenters;
-  introspect(JAM.policy.p26) {
-    var v2804 = new Array(ecBlocks1$$1, ecBlocks2$$1, ecBlocks3, ecBlocks4)
-  }
+  var v2804 = new Array(ecBlocks1$$1, ecBlocks2$$1, ecBlocks3, ecBlocks4);
   this.ecBlocks = v2804;
   var total$$1 = 0;
   var ecCodewords = ecBlocks1$$1.ECCodewordsPerBlock;
@@ -2108,9 +2088,7 @@ function buildVersions() {
   var v2157 = new ECB(61, 16);
   var v1412 = new ECBlocks(30, v2156, v2157);
   var v416 = new Version(40, v1408, v1409, v1410, v1411, v1412);
-  introspect(JAM.policy.p26) {
-    return new Array(v377, v378, v379, v380, v381, v382, v383, v384, v385, v386, v387, v388, v389, v390, v391, v392, v393, v394, v395, v396, v397, v398, v399, v400, v401, v402, v403, v404, v405, v406, v407, v408, v409, v410, v411, v412, v413, v414, v415, v416);
-  }
+  return new Array(v377, v378, v379, v380, v381, v382, v383, v384, v385, v386, v387, v388, v389, v390, v391, v392, v393, v394, v395, v396, v397, v398, v399, v400, v401, v402, v403, v404, v405, v406, v407, v408, v409, v410, v411, v412, v413, v414, v415, v416);
 }
 function PerspectiveTransform(a11, a21, a31, a12, a22, a32, a13$$1, a23$$1, a33) {
   function v15(other$$4) {
@@ -2213,9 +2191,7 @@ function PerspectiveTransform(a11, a21, a31, a12, a22, a32, a13$$1, a23$$1, a33)
     var v2193 = other$$4.a33;
     var v1430 = v2192 * v2193;
     var v425 = v1429 + v1430;
-    introspect(JAM.policy.p26) {
-      return new PerspectiveTransform(v417, v418, v419, v420, v421, v422, v423, v424, v425);
-    }
+    return new PerspectiveTransform(v417, v418, v419, v420, v421, v422, v423, v424, v425);
   }
   function v14() {
     var v2194 = this.a22;
@@ -2281,9 +2257,7 @@ function PerspectiveTransform(a11, a21, a31, a12, a22, a32, a13$$1, a23$$1, a33)
     var v2229 = this.a21;
     var v1448 = v2228 * v2229;
     var v434 = v1447 - v1448;
-    introspect(JAM.policy.p26) {
-      return new PerspectiveTransform(v426, v427, v428, v429, v430, v431, v432, v433, v434);
-    }
+    return new PerspectiveTransform(v426, v427, v428, v429, v430, v431, v432, v433, v434);
   }
   function v13(xValues, yValues) {
     var n$$1 = xValues.length;
@@ -2392,14 +2366,14 @@ function Detector(image$$5) {
     var topLeft$$3 = info.TopLeft;
     var topRight$$3 = info.TopRight;
     var bottomLeft$$3 = info.BottomLeft;
-    introspect(JAM.policy.p27) {
+    introspect(JAM.policy.p33) {
       var moduleSize$$1 = this.calculateModuleSize(topLeft$$3, topRight$$3, bottomLeft$$3)
     }
     var v447 = moduleSize$$1 < 1;
     if (v447) {
       throw "Error";
     }
-    introspect(JAM.policy.p27) {
+    introspect(JAM.policy.p33) {
       var dimension$$7 = this.computeDimension(topLeft$$3, topRight$$3, bottomLeft$$3, moduleSize$$1)
     }
     introspect(JAM.policy.p21) {
@@ -2443,37 +2417,31 @@ function Detector(image$$5) {
       var i$$7 = 4;
       var v456 = i$$7 <= 16;
       for (;v456;) {
-        introspect(JAM.policy.p27) {
+        introspect(JAM.policy.p33) {
           alignmentPattern$$1 = this.findAlignmentInRegion(moduleSize$$1, estAlignmentX$$1, estAlignmentY$$1, i$$7);
         }
         break;
       }
     }
-    introspect(JAM.policy.p27) {
+    introspect(JAM.policy.p33) {
       var transform$$4 = this.createTransform(topLeft$$3, topRight$$3, bottomLeft$$3, alignmentPattern$$1, dimension$$7)
     }
     var v458 = this.image;
-    introspect(JAM.policy.p27) {
+    introspect(JAM.policy.p33) {
       var bits$$2 = this.sampleGrid(v458, transform$$4, dimension$$7)
     }
     var points$$4;
     var v459 = alignmentPattern$$1 == null;
     if (v459) {
-      introspect(JAM.policy.p26) {
-        points$$4 = new Array(bottomLeft$$3, topLeft$$3, topRight$$3);
-      }
+      points$$4 = new Array(bottomLeft$$3, topLeft$$3, topRight$$3);
     } else {
-      introspect(JAM.policy.p26) {
-        points$$4 = new Array(bottomLeft$$3, topLeft$$3, topRight$$3, alignmentPattern$$1);
-      }
+      points$$4 = new Array(bottomLeft$$3, topLeft$$3, topRight$$3, alignmentPattern$$1);
     }
-    introspect(JAM.policy.p26) {
-      return new DetectorResult(bits$$2, points$$4);
-    }
+    return new DetectorResult(bits$$2, points$$4);
   }
   function v24(image$$6, transform$$3, dimension$$6) {
     var sampler = GridSampler;
-    introspect(JAM.policy.p27) {
+    introspect(JAM.policy.p33) {
       return sampler.sampleGrid3(image$$6, dimension$$6, transform$$3);
     }
   }
@@ -2524,7 +2492,7 @@ function Detector(image$$5) {
     var v1472 = qrcode.width;
     var v473 = v1472 - 1;
     var v474 = estAlignmentX + allowance;
-    introspect(JAM.policy.p27) {
+    introspect(JAM.policy.p33) {
       var alignmentAreaRightX = Math.min(v473, v474)
     }
     var v1473 = alignmentAreaRightX - alignmentAreaLeftX;
@@ -2540,27 +2508,25 @@ function Detector(image$$5) {
     var v1475 = qrcode.height;
     var v477 = v1475 - 1;
     var v478 = estAlignmentY + allowance;
-    introspect(JAM.policy.p27) {
+    introspect(JAM.policy.p33) {
       var alignmentAreaBottomY = Math.min(v477, v478)
     }
     var v479 = this.image;
     var v480 = alignmentAreaRightX - alignmentAreaLeftX;
     var v481 = alignmentAreaBottomY - alignmentAreaTopY;
     var v482 = this.resultPointCallback;
-    introspect(JAM.policy.p26) {
-      var alignmentFinder = new AlignmentPatternFinder(v479, alignmentAreaLeftX, alignmentAreaTopY, v480, v481, overallEstModuleSize, v482)
-    }
+    var alignmentFinder = new AlignmentPatternFinder(v479, alignmentAreaLeftX, alignmentAreaTopY, v480, v481, overallEstModuleSize, v482);
     return alignmentFinder.find();
   }
   function v21(topLeft$$1, topRight$$1, bottomLeft$$1, moduleSize) {
-    introspect(JAM.policy.p27) {
+    introspect(JAM.policy.p33) {
       var v1476 = this.distance(topLeft$$1, topRight$$1)
     }
     var v483 = v1476 / moduleSize;
     introspect(JAM.policy.p21) {
       var tltrCentersDimension = Math.round(v483)
     }
-    introspect(JAM.policy.p27) {
+    introspect(JAM.policy.p33) {
       var v1477 = this.distance(topLeft$$1, bottomLeft$$1)
     }
     var v484 = v1477 / moduleSize;
@@ -2598,10 +2564,10 @@ function Detector(image$$5) {
     }
   }
   function v19(topLeft, topRight, bottomLeft) {
-    introspect(JAM.policy.p27) {
+    introspect(JAM.policy.p33) {
       var v1481 = this.calculateModuleSizeOneWay(topLeft, topRight)
     }
-    introspect(JAM.policy.p27) {
+    introspect(JAM.policy.p33) {
       var v1482 = this.calculateModuleSizeOneWay(topLeft, bottomLeft)
     }
     var v492 = v1481 + v1482;
@@ -2624,7 +2590,7 @@ function Detector(image$$5) {
     introspect(JAM.policy.p21) {
       var v496 = Math.floor(v1486)
     }
-    introspect(JAM.policy.p27) {
+    introspect(JAM.policy.p33) {
       var moduleSizeEst1 = this.sizeOfBlackWhiteBlackRunBothWays(v493, v494, v495, v496)
     }
     var v1487 = otherPattern.X;
@@ -2643,7 +2609,7 @@ function Detector(image$$5) {
     introspect(JAM.policy.p21) {
       var v500 = Math.floor(v1490)
     }
-    introspect(JAM.policy.p27) {
+    introspect(JAM.policy.p33) {
       var moduleSizeEst2 = this.sizeOfBlackWhiteBlackRunBothWays(v497, v498, v499, v500)
     }
     var v501 = isNaN(moduleSizeEst1);
@@ -2658,7 +2624,7 @@ function Detector(image$$5) {
     return v503 / 14;
   }
   function v17(fromX$$1, fromY$$1, toX$$1, toY$$1) {
-    introspect(JAM.policy.p27) {
+    introspect(JAM.policy.p33) {
       var result = this.sizeOfBlackWhiteBlackRun(fromX$$1, fromY$$1, toX$$1, toY$$1)
     }
     var scale = 1;
@@ -2713,7 +2679,7 @@ function Detector(image$$5) {
     introspect(JAM.policy.p21) {
       otherToX = Math.floor(v518);
     }
-    introspect(JAM.policy.p27) {
+    introspect(JAM.policy.p33) {
       var v1497 = this.sizeOfBlackWhiteBlackRun(fromX$$1, fromY$$1, otherToX, otherToY)
     }
     result = result + v1497;
@@ -3016,9 +2982,7 @@ function BitMatrix(width$$10, height$$9) {
     var v2540 = this.bits;
     var v2261 = v2540[offset$$9];
     var v2262 = x$$53 & 31;
-    introspect(JAM.policy.p26) {
-      var v1522 = URShift(v2261, v2262)
-    }
+    var v1522 = URShift(v2261, v2262);
     var v559 = v1522 & 1;
     return v559 != 0;
   }
@@ -3118,7 +3082,7 @@ function BitMatrixParser(bitMatrix$$1) {
     var v568 = this.bitMatrix;
     var dimension$$11 = v568.Dimension;
     var v569 = this.bitMatrix;
-    introspect(JAM.policy.p27) {
+    introspect(JAM.policy.p33) {
       dataMask$$1.unmaskBitMatrix(v569, dimension$$11);
     }
     var functionPattern = version$$6.buildFunctionPattern();
@@ -3150,7 +3114,7 @@ function BitMatrixParser(bitMatrix$$1) {
         var v577 = col < 2;
         for (;v577;) {
           var v2266 = j$$4 - col;
-          introspect(JAM.policy.p27) {
+          introspect(JAM.policy.p33) {
             var v1530 = functionPattern.get_Renamed(v2266, i$$15)
           }
           var v576 = !v1530;
@@ -3159,7 +3123,7 @@ function BitMatrixParser(bitMatrix$$1) {
             currentByte = currentByte << 1;
             var v1531 = this.bitMatrix;
             var v1532 = j$$4 - col;
-            introspect(JAM.policy.p27) {
+            introspect(JAM.policy.p33) {
               var v573 = v1531.get_Renamed(v1532, i$$15)
             }
             if (v573) {
@@ -3351,7 +3315,7 @@ function BitMatrixParser(bitMatrix$$1) {
   function v44(i$$12, j$$1, versionBits$$1) {
     var v599;
     var v2271 = this.bitMatrix;
-    introspect(JAM.policy.p27) {
+    introspect(JAM.policy.p33) {
       var v1541 = v2271.get_Renamed(i$$12, j$$1)
     }
     if (v1541) {
@@ -3395,7 +3359,7 @@ function DataMask000() {
       var j$$5 = 0;
       var v603 = j$$5 < dimension$$12;
       for (;v603;) {
-        introspect(JAM.policy.p27) {
+        introspect(JAM.policy.p33) {
           var v602 = this.isMasked(i$$16, j$$5)
         }
         if (v602) {
@@ -3427,7 +3391,7 @@ function DataMask001() {
       var j$$7 = 0;
       var v607 = j$$7 < dimension$$13;
       for (;v607;) {
-        introspect(JAM.policy.p27) {
+        introspect(JAM.policy.p33) {
           var v606 = this.isMasked(i$$18, j$$7)
         }
         if (v606) {
@@ -3459,7 +3423,7 @@ function DataMask010() {
       var j$$9 = 0;
       var v611 = j$$9 < dimension$$14;
       for (;v611;) {
-        introspect(JAM.policy.p27) {
+        introspect(JAM.policy.p33) {
           var v610 = this.isMasked(i$$20, j$$9)
         }
         if (v610) {
@@ -3492,7 +3456,7 @@ function DataMask011() {
       var j$$11 = 0;
       var v615 = j$$11 < dimension$$15;
       for (;v615;) {
-        introspect(JAM.policy.p27) {
+        introspect(JAM.policy.p33) {
           var v614 = this.isMasked(i$$22, j$$11)
         }
         if (v614) {
@@ -3527,7 +3491,7 @@ function DataMask100() {
       var j$$13 = 0;
       var v619 = j$$13 < dimension$$16;
       for (;v619;) {
-        introspect(JAM.policy.p27) {
+        introspect(JAM.policy.p33) {
           var v618 = this.isMasked(i$$24, j$$13)
         }
         if (v618) {
@@ -3562,7 +3526,7 @@ function DataMask101() {
       var j$$15 = 0;
       var v623 = j$$15 < dimension$$17;
       for (;v623;) {
-        introspect(JAM.policy.p27) {
+        introspect(JAM.policy.p33) {
           var v622 = this.isMasked(i$$26, j$$15)
         }
         if (v622) {
@@ -3598,7 +3562,7 @@ function DataMask110() {
       var j$$17 = 0;
       var v627 = j$$17 < dimension$$18;
       for (;v627;) {
-        introspect(JAM.policy.p27) {
+        introspect(JAM.policy.p33) {
           var v626 = this.isMasked(i$$28, j$$17)
         }
         if (v626) {
@@ -3635,7 +3599,7 @@ function DataMask111() {
       var j$$19 = 0;
       var v631 = j$$19 < dimension$$19;
       for (;v631;) {
-        introspect(JAM.policy.p27) {
+        introspect(JAM.policy.p33) {
           var v630 = this.isMasked(i$$30, j$$19)
         }
         if (v630) {
@@ -3676,13 +3640,13 @@ function ReedSolomonDecoder(field) {
           var v635 = this.field;
           var v2280 = this.field;
           var v2281 = errorLocations$$1[j$$21];
-          introspect(JAM.policy.p27) {
+          introspect(JAM.policy.p33) {
             var v1550 = v2280.multiply(v2281, xiInverse)
           }
           introspect(JAM.policy.p20) {
             var v636 = GF256.addOrSubtract(1, v1550)
           }
-          introspect(JAM.policy.p27) {
+          introspect(JAM.policy.p33) {
             denominator$$3 = v635.multiply(denominator$$3, v636);
           }
         }
@@ -3697,14 +3661,14 @@ function ReedSolomonDecoder(field) {
       introspect(JAM.policy.p21) {
         var v641 = v1551.inverse(denominator$$3)
       }
-      introspect(JAM.policy.p27) {
+      introspect(JAM.policy.p33) {
         var v2811 = v639.multiply(v640, v641)
       }
       result$$4[i$$34] = v2811;
       if (dataMatrix$$1) {
         var v642 = this.field;
         var v643 = result$$4[i$$34];
-        introspect(JAM.policy.p27) {
+        introspect(JAM.policy.p33) {
           var v2812 = v642.multiply(v643, xiInverse)
         }
         result$$4[i$$34] = v2812;
@@ -3821,17 +3785,17 @@ function ReedSolomonDecoder(field) {
         introspect(JAM.policy.p21) {
           var v663 = r$$1.getCoefficient(v1560)
         }
-        introspect(JAM.policy.p27) {
+        introspect(JAM.policy.p33) {
           var scale$$1 = v662.multiply(v663, dltInverse)
         }
         var v1561 = this.field;
-        introspect(JAM.policy.p27) {
+        introspect(JAM.policy.p33) {
           var v664 = v1561.buildMonomial(degreeDiff, scale$$1)
         }
         introspect(JAM.policy.p21) {
           q = q.addOrSubtract(v664);
         }
-        introspect(JAM.policy.p27) {
+        introspect(JAM.policy.p33) {
           var v665 = rLast.multiplyByMonomial(degreeDiff, scale$$1)
         }
         introspect(JAM.policy.p21) {
@@ -3882,15 +3846,11 @@ function ReedSolomonDecoder(field) {
     introspect(JAM.policy.p21) {
       var omega$$1 = r$$1.multiply2(inverse)
     }
-    introspect(JAM.policy.p26) {
-      return new Array(sigma$$1, omega$$1);
-    }
+    return new Array(sigma$$1, omega$$1);
   }
   function v64(received, twoS) {
     var v672 = this.field;
-    introspect(JAM.policy.p26) {
-      var poly = new GF256Poly(v672, received)
-    }
+    var poly = new GF256Poly(v672, received);
     var syndromeCoefficients = new Array(twoS);
     var i$$32 = 0;
     var v1565 = syndromeCoefficients.length;
@@ -3935,14 +3895,12 @@ function ReedSolomonDecoder(field) {
       return;
     }
     var v678 = this.field;
-    introspect(JAM.policy.p26) {
-      var syndrome = new GF256Poly(v678, syndromeCoefficients)
-    }
+    var syndrome = new GF256Poly(v678, syndromeCoefficients);
     var v1570 = this.field;
-    introspect(JAM.policy.p28) {
+    introspect(JAM.policy.p25) {
       var v679 = v1570.buildMonomial(twoS, 1)
     }
-    introspect(JAM.policy.p27) {
+    introspect(JAM.policy.p33) {
       var sigmaOmega = this.runEuclideanAlgorithm(v679, syndrome, twoS)
     }
     var sigma = sigmaOmega[0];
@@ -3950,7 +3908,7 @@ function ReedSolomonDecoder(field) {
     introspect(JAM.policy.p21) {
       var errorLocations = this.findErrorLocations(sigma)
     }
-    introspect(JAM.policy.p27) {
+    introspect(JAM.policy.p33) {
       var errorMagnitudes = this.findErrorMagnitudes(omega, errorLocations, dataMatrix)
     }
     i$$32 = 0;
@@ -3971,7 +3929,7 @@ function ReedSolomonDecoder(field) {
       }
       var v683 = received[position];
       var v684 = errorMagnitudes[i$$32];
-      introspect(JAM.policy.p27) {
+      introspect(JAM.policy.p33) {
         var v2814 = GF256.addOrSubtract(v683, v684)
       }
       received[position] = v2814;
@@ -4028,14 +3986,14 @@ function GF256Poly(field$$1, coefficients) {
       introspect(JAM.policy.p21) {
         var v694 = remainder.getCoefficient(v1579)
       }
-      introspect(JAM.policy.p27) {
+      introspect(JAM.policy.p33) {
         var scale$$2 = v693.multiply(v694, inverseDenominatorLeadingTerm)
       }
-      introspect(JAM.policy.p27) {
+      introspect(JAM.policy.p33) {
         var term = other$$8.multiplyByMonomial(degreeDifference, scale$$2)
       }
       var v695 = this.field;
-      introspect(JAM.policy.p27) {
+      introspect(JAM.policy.p33) {
         var iterationQuotient = v695.buildMonomial(degreeDifference, scale$$2)
       }
       introspect(JAM.policy.p21) {
@@ -4053,9 +4011,7 @@ function GF256Poly(field$$1, coefficients) {
       }
       v696 = v1580;
     }
-    introspect(JAM.policy.p26) {
-      return new Array(quotient, remainder);
-    }
+    return new Array(quotient, remainder);
   }
   function v76(degree$$1, coefficient) {
     var v697 = degree$$1 < 0;
@@ -4086,7 +4042,7 @@ function GF256Poly(field$$1, coefficients) {
       var v703 = this.field;
       var v1583 = this.coefficients;
       var v704 = v1583[i$$40];
-      introspect(JAM.policy.p27) {
+      introspect(JAM.policy.p33) {
         var v2815 = v703.multiply(v704, coefficient)
       }
       product$$2[i$$40] = v2815;
@@ -4094,9 +4050,7 @@ function GF256Poly(field$$1, coefficients) {
       v705 = i$$40 < size$$6;
     }
     var v706 = this.field;
-    introspect(JAM.policy.p26) {
-      return new GF256Poly(v706, product$$2);
-    }
+    return new GF256Poly(v706, product$$2);
   }
   function v75(scalar) {
     var v708 = scalar == 0;
@@ -4117,7 +4071,7 @@ function GF256Poly(field$$1, coefficients) {
       var v711 = this.field;
       var v1584 = this.coefficients;
       var v712 = v1584[i$$39];
-      introspect(JAM.policy.p27) {
+      introspect(JAM.policy.p33) {
         var v2816 = v711.multiply(v712, scalar)
       }
       product$$1[i$$39] = v2816;
@@ -4125,9 +4079,7 @@ function GF256Poly(field$$1, coefficients) {
       v713 = i$$39 < size$$5;
     }
     var v714 = this.field;
-    introspect(JAM.policy.p26) {
-      return new GF256Poly(v714, product$$1);
-    }
+    return new GF256Poly(v714, product$$1);
   }
   function v74(other$$7) {
     var v1585 = this.field;
@@ -4165,10 +4117,10 @@ function GF256Poly(field$$1, coefficients) {
         var v1589 = product[v2299];
         var v2300 = this.field;
         var v2301 = bCoefficients[j$$22];
-        introspect(JAM.policy.p27) {
+        introspect(JAM.policy.p33) {
           var v1590 = v2300.multiply(aCoeff, v2301)
         }
-        introspect(JAM.policy.p27) {
+        introspect(JAM.policy.p33) {
           var v2817 = GF256.addOrSubtract(v1589, v1590)
         }
         product[v719] = v2817;
@@ -4179,9 +4131,7 @@ function GF256Poly(field$$1, coefficients) {
       v721 = i$$38 < aLength;
     }
     var v722 = this.field;
-    introspect(JAM.policy.p26) {
-      return new GF256Poly(v722, product);
-    }
+    return new GF256Poly(v722, product);
   }
   function v73(other$$6) {
     var v1591 = this.field;
@@ -4227,7 +4177,7 @@ function GF256Poly(field$$1, coefficients) {
       var v1596 = i$$37 - lengthDiff;
       var v731 = smallerCoefficients[v1596];
       var v732 = largerCoefficients[i$$37];
-      introspect(JAM.policy.p27) {
+      introspect(JAM.policy.p33) {
         var v2818 = GF256.addOrSubtract(v731, v732)
       }
       sumDiff[i$$37] = v2818;
@@ -4235,9 +4185,7 @@ function GF256Poly(field$$1, coefficients) {
       var v1597 = largerCoefficients.length;
       v733 = i$$37 < v1597;
     }
-    introspect(JAM.policy.p26) {
-      return new GF256Poly(field$$1, sumDiff);
-    }
+    return new GF256Poly(field$$1, sumDiff);
   }
   function v72(a$$2) {
     var v734 = a$$2 == 0;
@@ -4256,7 +4204,7 @@ function GF256Poly(field$$1, coefficients) {
       for (;v737;) {
         var v1598 = this.coefficients;
         var v736 = v1598[i$$36];
-        introspect(JAM.policy.p27) {
+        introspect(JAM.policy.p33) {
           result$$5 = GF256.addOrSubtract(result$$5, v736);
         }
         i$$36++;
@@ -4270,12 +4218,12 @@ function GF256Poly(field$$1, coefficients) {
     var v742 = i$$36 < size$$4;
     for (;v742;) {
       var v1599 = this.field;
-      introspect(JAM.policy.p27) {
+      introspect(JAM.policy.p33) {
         var v740 = v1599.multiply(a$$2, result2)
       }
       var v1600 = this.coefficients;
       var v741 = v1600[i$$36];
-      introspect(JAM.policy.p27) {
+      introspect(JAM.policy.p33) {
         result2 = GF256.addOrSubtract(v740, v741);
       }
       i$$36++;
@@ -4466,9 +4414,7 @@ function GF256(primitive) {
       v771 = i$$42 < v1617;
     }
     coefficients$$1[0] = coefficient$$1;
-    introspect(JAM.policy.p26) {
-      return new GF256Poly(this, coefficients$$1);
-    }
+    return new GF256Poly(this, coefficients$$1);
   }
   function v79() {
     return this.one;
@@ -4509,16 +4455,12 @@ function GF256(primitive) {
   var at0 = new Array(1);
   at0[0] = 0;
   var v778 = new Array(at0);
-  introspect(JAM.policy.p26) {
-    var v2822 = new GF256Poly(this, v778)
-  }
+  var v2822 = new GF256Poly(this, v778);
   this.zero = v2822;
   var at1 = new Array(1);
   at1[0] = 1;
   var v779 = new Array(at1);
-  introspect(JAM.policy.p26) {
-    var v2823 = new GF256Poly(this, v779)
-  }
+  var v2823 = new GF256Poly(this, v779);
   this.one = v2823;
   introspect(JAM.policy.p19) {
     this.__defineGetter__("Zero", v78);
@@ -4699,7 +4641,7 @@ function FinderPatternFinder() {
                 var v792 = this.foundPatternCross(stateCount$$5)
               }
               if (v792) {
-                introspect(JAM.policy.p27) {
+                introspect(JAM.policy.p33) {
                   var confirmed = this.handlePossibleCenter(stateCount$$5, i$$54, j$$28)
                 }
                 if (confirmed) {
@@ -4773,7 +4715,7 @@ function FinderPatternFinder() {
         var v798 = this.foundPatternCross(stateCount$$5)
       }
       if (v798) {
-        introspect(JAM.policy.p27) {
+        introspect(JAM.policy.p33) {
           confirmed = this.handlePossibleCenter(stateCount$$5, i$$54, maxJ$$1);
         }
         if (confirmed) {
@@ -4975,9 +4917,7 @@ function FinderPatternFinder() {
     var v828 = v1652[1];
     var v1653 = this.possibleCenters;
     var v829 = v1653[2];
-    introspect(JAM.policy.p26) {
-      return new Array(v827, v828, v829);
-    }
+    return new Array(v827, v828, v829);
   }
   function v99(stateCount$$4, i$$50, j$$27) {
     var v2563 = stateCount$$4[0];
@@ -4989,14 +4929,14 @@ function FinderPatternFinder() {
     var v830 = v1654 + v1655;
     var v831 = stateCount$$4[4];
     var stateCountTotal$$2 = v830 + v831;
-    introspect(JAM.policy.p27) {
+    introspect(JAM.policy.p33) {
       var centerJ$$1 = this.centerFromEnd(stateCount$$4, j$$27)
     }
     introspect(JAM.policy.p21) {
       var v832 = Math.floor(centerJ$$1)
     }
     var v833 = stateCount$$4[2];
-    introspect(JAM.policy.p27) {
+    introspect(JAM.policy.p33) {
       var centerI$$1 = this.crossCheckVertical(i$$50, v832, v833, stateCountTotal$$2)
     }
     var v1656 = isNaN(centerI$$1);
@@ -5024,7 +4964,7 @@ function FinderPatternFinder() {
         for (;v840;) {
           var v838 = this.possibleCenters;
           var center = v838[index$$39];
-          introspect(JAM.policy.p27) {
+          introspect(JAM.policy.p33) {
             var v839 = center.aboutEquals(estimatedModuleSize$$1, centerI$$1, centerJ$$1)
           }
           if (v839) {
@@ -5037,9 +4977,7 @@ function FinderPatternFinder() {
         }
         var v844 = !found;
         if (v844) {
-          introspect(JAM.policy.p26) {
-            var point$$2 = new FinderPattern(centerJ$$1, centerI$$1, estimatedModuleSize$$1)
-          }
+          var point$$2 = new FinderPattern(centerJ$$1, centerI$$1, estimatedModuleSize$$1);
           var v841 = this.possibleCenters;
           introspect(JAM.policy.p21) {
             v841.push(point$$2);
@@ -5289,7 +5227,7 @@ function FinderPatternFinder() {
       var v1678 = this.foundPatternCross(stateCount$$3)
     }
     if (v1678) {
-      introspect(JAM.policy.p27) {
+      introspect(JAM.policy.p33) {
         v862 = this.centerFromEnd(stateCount$$3, j$$26);
       }
     } else {
@@ -5529,7 +5467,7 @@ function FinderPatternFinder() {
       var v1699 = this.foundPatternCross(stateCount$$2)
     }
     if (v1699) {
-      introspect(JAM.policy.p27) {
+      introspect(JAM.policy.p33) {
         v878 = this.centerFromEnd(stateCount$$2, i$$49);
       }
     } else {
@@ -5799,7 +5737,7 @@ function AlignmentPatternFinder(image$$13, startX, startY, width$$12, height$$11
                 var v901 = this.foundPatternCross(stateCount$$10)
               }
               if (v901) {
-                introspect(JAM.policy.p27) {
+                introspect(JAM.policy.p33) {
                   var confirmed$$1 = this.handlePossibleCenter(stateCount$$10, i$$59, j$$31)
                 }
                 var v900 = confirmed$$1 != null;
@@ -5831,7 +5769,7 @@ function AlignmentPatternFinder(image$$13, startX, startY, width$$12, height$$11
         var v908 = this.foundPatternCross(stateCount$$10)
       }
       if (v908) {
-        introspect(JAM.policy.p27) {
+        introspect(JAM.policy.p33) {
           confirmed$$1 = this.handlePossibleCenter(stateCount$$10, i$$59, maxJ$$2);
         }
         var v907 = confirmed$$1 != null;
@@ -5858,7 +5796,7 @@ function AlignmentPatternFinder(image$$13, startX, startY, width$$12, height$$11
     var v912 = v1715 + v1716;
     var v913 = stateCount$$9[2];
     var stateCountTotal$$4 = v912 + v913;
-    introspect(JAM.policy.p27) {
+    introspect(JAM.policy.p33) {
       var centerJ$$3 = this.centerFromEnd(stateCount$$9, j$$30)
     }
     introspect(JAM.policy.p21) {
@@ -5866,7 +5804,7 @@ function AlignmentPatternFinder(image$$13, startX, startY, width$$12, height$$11
     }
     var v1717 = stateCount$$9[1];
     var v915 = 2 * v1717;
-    introspect(JAM.policy.p27) {
+    introspect(JAM.policy.p33) {
       var centerI$$2 = this.crossCheckVertical(i$$58, v914, v915, stateCountTotal$$4)
     }
     var v1718 = isNaN(centerI$$2);
@@ -5885,20 +5823,16 @@ function AlignmentPatternFinder(image$$13, startX, startY, width$$12, height$$11
       for (;v920;) {
         var v918 = this.possibleCenters;
         var center$$2 = v918[index$$40];
-        introspect(JAM.policy.p27) {
+        introspect(JAM.policy.p33) {
           var v919 = center$$2.aboutEquals(estimatedModuleSize$$3, centerI$$2, centerJ$$3)
         }
         if (v919) {
-          introspect(JAM.policy.p26) {
-            return new AlignmentPattern(centerJ$$3, centerI$$2, estimatedModuleSize$$3);
-          }
+          return new AlignmentPattern(centerJ$$3, centerI$$2, estimatedModuleSize$$3);
         }
         index$$40++;
         v920 = index$$40 < max$$8;
       }
-      introspect(JAM.policy.p26) {
-        var point$$3 = new AlignmentPattern(centerJ$$3, centerI$$2, estimatedModuleSize$$3)
-      }
+      var point$$3 = new AlignmentPattern(centerJ$$3, centerI$$2, estimatedModuleSize$$3);
       var v921 = this.possibleCenters;
       introspect(JAM.policy.p21) {
         v921.push(point$$3);
@@ -6097,7 +6031,7 @@ function AlignmentPatternFinder(image$$13, startX, startY, width$$12, height$$11
       var v1738 = this.foundPatternCross(stateCount$$8)
     }
     if (v1738) {
-      introspect(JAM.policy.p27) {
+      introspect(JAM.policy.p33) {
         v936 = this.centerFromEnd(stateCount$$8, i$$57);
       }
     } else {
@@ -6743,7 +6677,7 @@ function passLine(stringPixels) {
   var v1014 = c >= v1796;
   if (v1014) {
     c = 0;
-    introspect(JAM.policy.p28) {
+    introspect(JAM.policy.p25) {
       gCtx.putImageData(imageData, 0, 0);
     }
   }
@@ -6806,9 +6740,7 @@ var v1045 = new Array(9396, 28);
 var v1046 = new Array(8579, 29);
 var v1047 = new Array(11994, 30);
 var v1048 = new Array(11245, 31);
-introspect(JAM.policy.p26) {
-  var FORMAT_INFO_DECODE_LOOKUP = new Array(v1017, v1018, v1019, v1020, v1021, v1022, v1023, v1024, v1025, v1026, v1027, v1028, v1029, v1030, v1031, v1032, v1033, v1034, v1035, v1036, v1037, v1038, v1039, v1040, v1041, v1042, v1043, v1044, v1045, v1046, v1047, v1048)
-}
+var FORMAT_INFO_DECODE_LOOKUP = new Array(v1017, v1018, v1019, v1020, v1021, v1022, v1023, v1024, v1025, v1026, v1027, v1028, v1029, v1030, v1031, v1032, v1033, v1034, v1035, v1036, v1037, v1038, v1039, v1040, v1041, v1042, v1043, v1044, v1045, v1046, v1047, v1048);
 var BITS_SET_IN_HALF_BYTE = new Array(0, 1, 1, 2, 1, 2, 2, 3, 1, 2, 2, 3, 2, 3, 3, 4);
 FormatInformation.numBitsDiffering = v135;
 FormatInformation.decodeFormatInformation = v136;
@@ -6818,9 +6750,7 @@ var L = new ErrorCorrectionLevel(0, 1, "L");
 var M = new ErrorCorrectionLevel(1, 0, "M");
 var Q = new ErrorCorrectionLevel(2, 3, "Q");
 var H = new ErrorCorrectionLevel(3, 2, "H");
-introspect(JAM.policy.p26) {
-  var FOR_BITS = new Array(M, L, H, Q)
-}
+var FOR_BITS = new Array(M, L, H, Q);
 DataBlock.getDataBlocks = v139;
 DataMask = {};
 DataMask.forReference = v140;
@@ -6833,9 +6763,7 @@ var v1801 = new DataMask100;
 var v1802 = new DataMask101;
 var v1803 = new DataMask110;
 var v1804 = new DataMask111;
-introspect(JAM.policy.p26) {
-  var v2832 = new Array(v1797, v1798, v1799, v1800, v1801, v1802, v1803, v1804)
-}
+var v2832 = new Array(v1797, v1798, v1799, v1800, v1801, v1802, v1803, v1804);
 v1049.DATA_MASKS = v2832;
 var v1050 = GF256;
 var v2833 = new GF256(285);

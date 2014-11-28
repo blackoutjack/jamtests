@@ -1536,9 +1536,7 @@ function writeGroupNum(text$$10, tabIn$$1, groupSize, basePerLine, startBase, st
   return true;
 }
 function writeGroupNumDna(text$$11, tabIn$$2, groupSize$$1, basePerLine$$1, startBase$$1, stopBase$$1, strands, numberPosition) {
-  introspect(JAM.policy.p19) {
-    writeGroupNumDnaSetStart(text$$11, tabIn$$2, groupSize$$1, basePerLine$$1, startBase$$1, stopBase$$1, strands, numberPosition, 0);
-  }
+  writeGroupNumDnaSetStart(text$$11, tabIn$$2, groupSize$$1, basePerLine$$1, startBase$$1, stopBase$$1, strands, numberPosition, 0);
   return true;
 }
 function writeGroupNumDnaSetStart(text$$12, tabIn$$3, groupSize$$2, basePerLine$$2, startBase$$2, stopBase$$2, strands$$1, numberPosition$$1, numberingAdjustment) {
@@ -1591,9 +1589,7 @@ function writeGroupNumDnaSetStart(text$$12, tabIn$$3, groupSize$$2, basePerLine$
       var v156 = numberPosition$$1 == "above";
       if (v156) {
         var v154 = aboveNum;
-        introspect(JAM.policy.p19) {
-          var v406 = adjustNumbering(i$$6, numberingAdjustment)
-        }
+        var v406 = adjustNumbering(i$$6, numberingAdjustment);
         var v155 = rightNum(v406, "", groupSize$$2, tabIn$$3);
         aboveNum = v154 + v155;
       }
@@ -1609,9 +1605,7 @@ function writeGroupNumDnaSetStart(text$$12, tabIn$$3, groupSize$$2, basePerLine$
     var v181 = numberPosition$$1 == "left";
     if (v181) {
       var v159 = outputWindow.document;
-      introspect(JAM.policy.p19) {
-        var v575 = adjustNumbering(lineNum, numberingAdjustment)
-      }
+      var v575 = adjustNumbering(lineNum, numberingAdjustment);
       var v512 = rightNum(v575, "", 8, tabIn$$3);
       var v408 = v512 + lineOfText$$1;
       var v160 = v408 + "\n";
@@ -1621,9 +1615,7 @@ function writeGroupNumDnaSetStart(text$$12, tabIn$$3, groupSize$$2, basePerLine$
       var v164 = strands$$1 == "two";
       if (v164) {
         var v161 = outputWindow.document;
-        introspect(JAM.policy.p19) {
-          var v576 = adjustNumbering(lineNum, numberingAdjustment)
-        }
+        var v576 = adjustNumbering(lineNum, numberingAdjustment);
         var v513 = rightNum(v576, "", 8, tabIn$$3);
         var v514 = complement(lineOfText$$1);
         var v409 = v513 + v514;
@@ -1641,9 +1633,7 @@ function writeGroupNumDnaSetStart(text$$12, tabIn$$3, groupSize$$2, basePerLine$
       if (v180) {
         var v165 = outputWindow.document;
         var v515 = lineOfText$$1;
-        introspect(JAM.policy.p19) {
-          var v516 = adjustNumbering(i$$6, numberingAdjustment)
-        }
+        var v516 = adjustNumbering(i$$6, numberingAdjustment);
         var v410 = v515 + v516;
         var v166 = v410 + "\n";
         introspect(JAM.policy.p17) {
@@ -1653,9 +1643,7 @@ function writeGroupNumDnaSetStart(text$$12, tabIn$$3, groupSize$$2, basePerLine$
         if (v170) {
           var v167 = outputWindow.document;
           var v517 = complement(lineOfText$$1);
-          introspect(JAM.policy.p19) {
-            var v518 = adjustNumbering(i$$6, numberingAdjustment)
-          }
+          var v518 = adjustNumbering(i$$6, numberingAdjustment);
           var v411 = v517 + v518;
           var v168 = v411 + "\n";
           introspect(JAM.policy.p17) {
@@ -1862,7 +1850,7 @@ function writeMutatedSequence(sequence$$13, components$$1, numMut, firstIndexToM
     var v208 = v426 + v427;
     var v428 = randNum + 1;
     var v429 = sequence$$13.length;
-    introspect(JAM.policy.p21) {
+    introspect(JAM.policy.p27) {
       var v209 = sequence$$13.substring(v428, v429)
     }
     sequence$$13 = v208 + v209;
@@ -1933,7 +1921,7 @@ function writeRestrictionSites(sequence$$15, arrayOfItems, dnaConformation) {
     var v579 = sequence$$15.length;
     var v523 = v579 - lookAhead;
     var v524 = sequence$$15.length;
-    introspect(JAM.policy.p21) {
+    introspect(JAM.policy.p27) {
       var v433 = sequence$$15.substring(v523, v524)
     }
     var v221 = v433 + sequence$$15;
@@ -2240,25 +2228,19 @@ function splitFasta(theDocument) {
     var v669 = v681.elements;
     var v656 = v669[0];
     var v643 = v656.value;
-    introspect(JAM.policy.p19) {
-      var v625 = checkTextLength(v643, maxInput$$3)
-    }
+    var v625 = checkTextLength(v643, maxInput$$3);
     v589 = v625 == false;
   }
   var v537 = v589;
   var v591 = !v537;
   if (v591) {
-    introspect(JAM.policy.p19) {
-      var v590 = verifyMaxDigits(newLength, maxInput$$3)
-    }
+    var v590 = verifyMaxDigits(newLength, maxInput$$3);
     v537 = v590 == false;
   }
   var v461 = v537;
   var v539 = !v461;
   if (v539) {
-    introspect(JAM.policy.p19) {
-      var v538 = verifyMaxDigits(overlap, maxInput$$3)
-    }
+    var v538 = verifyMaxDigits(overlap, maxInput$$3);
     v461 = v538 == false;
   }
   var v269 = v461;
@@ -2294,7 +2276,7 @@ function splitFasta(theDocument) {
         j$$10 = j$$10 - overlap;
       }
       var v274 = j$$10 + newLength;
-      introspect(JAM.policy.p21) {
+      introspect(JAM.policy.p27) {
         var subseq = sequence$$18.substring(j$$10, v274)
       }
       var subseq_length = subseq.length;

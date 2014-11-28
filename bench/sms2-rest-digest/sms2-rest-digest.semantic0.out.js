@@ -827,7 +827,7 @@ function writeGroupNum(text$$10, tabIn$$1, groupSize, basePerLine, startBase, st
   return true;
 }
 function writeGroupNumDna(text$$11, tabIn$$2, groupSize$$1, basePerLine$$1, startBase$$1, stopBase$$1, strands, numberPosition) {
-  JAM.call(writeGroupNumDnaSetStart, null, [text$$11, tabIn$$2, groupSize$$1, basePerLine$$1, startBase$$1, stopBase$$1, strands, numberPosition, 0], JAM.policy.p19);
+  writeGroupNumDnaSetStart(text$$11, tabIn$$2, groupSize$$1, basePerLine$$1, startBase$$1, stopBase$$1, strands, numberPosition, 0);
   return true;
 }
 function writeGroupNumDnaSetStart(text$$12, tabIn$$3, groupSize$$2, basePerLine$$2, startBase$$2, stopBase$$2, strands$$1, numberPosition$$1, numberingAdjustment) {
@@ -869,7 +869,7 @@ function writeGroupNumDnaSetStart(text$$12, tabIn$$3, groupSize$$2, basePerLine$
       lineOfText$$1 = lineOfText$$1 + sepChar$$1;
       i$$6 = i$$6 + k$$1;
       if (numberPosition$$1 == "above") {
-        aboveNum = aboveNum + rightNum(JAM.call(adjustNumbering, null, [i$$6, numberingAdjustment], JAM.policy.p19), "", groupSize$$2, tabIn$$3);
+        aboveNum = aboveNum + rightNum(adjustNumbering(i$$6, numberingAdjustment), "", groupSize$$2, tabIn$$3);
       }
       if (i$$6 >= stopBase$$2) {
         break;
@@ -880,20 +880,20 @@ function writeGroupNumDnaSetStart(text$$12, tabIn$$3, groupSize$$2, basePerLine$
     }
     if (numberPosition$$1 == "left") {
       var v159 = outputWindow.document;
-      JAM.call(v159.write, v159, [rightNum(JAM.call(adjustNumbering, null, [lineNum, numberingAdjustment], JAM.policy.p19), "", 8, tabIn$$3) + lineOfText$$1 + "\n"], JAM.policy.p18);
+      JAM.call(v159.write, v159, [rightNum(adjustNumbering(lineNum, numberingAdjustment), "", 8, tabIn$$3) + lineOfText$$1 + "\n"], JAM.policy.p18);
       if (strands$$1 == "two") {
         var v161 = outputWindow.document;
-        JAM.call(v161.write, v161, [rightNum(JAM.call(adjustNumbering, null, [lineNum, numberingAdjustment], JAM.policy.p19), "", 8, tabIn$$3) + complement(lineOfText$$1) + "\n"], JAM.policy.p18);
+        JAM.call(v161.write, v161, [rightNum(adjustNumbering(lineNum, numberingAdjustment), "", 8, tabIn$$3) + complement(lineOfText$$1) + "\n"], JAM.policy.p18);
         var v163 = outputWindow.document;
         JAM.call(v163.write, v163, ["\n"], JAM.policy.p9);
       }
     } else {
       if (numberPosition$$1 == "right") {
         var v165 = outputWindow.document;
-        JAM.call(v165.write, v165, [lineOfText$$1 + JAM.call(adjustNumbering, null, [i$$6, numberingAdjustment], JAM.policy.p19) + "\n"], JAM.policy.p18);
+        JAM.call(v165.write, v165, [lineOfText$$1 + adjustNumbering(i$$6, numberingAdjustment) + "\n"], JAM.policy.p18);
         if (strands$$1 == "two") {
           var v167 = outputWindow.document;
-          JAM.call(v167.write, v167, [complement(lineOfText$$1) + JAM.call(adjustNumbering, null, [i$$6, numberingAdjustment], JAM.policy.p19) + "\n"], JAM.policy.p18);
+          JAM.call(v167.write, v167, [complement(lineOfText$$1) + adjustNumbering(i$$6, numberingAdjustment) + "\n"], JAM.policy.p18);
           var v169 = outputWindow.document;
           JAM.call(v169.write, v169, ["\n"], JAM.policy.p9);
         }
@@ -1022,7 +1022,7 @@ function writeMutatedSequence(sequence$$13, components$$1, numMut, firstIndexToM
         needNewChar = false;
       }
     }
-    sequence$$13 = JAM.call(sequence$$13.substring, sequence$$13, [0, randNum], JAM.policy.p13) + components$$1[componentsIndex] + JAM.call(sequence$$13.substring, sequence$$13, [randNum + 1, sequence$$13.length], JAM.policy.p21);
+    sequence$$13 = JAM.call(sequence$$13.substring, sequence$$13, [0, randNum], JAM.policy.p13) + components$$1[componentsIndex] + JAM.call(sequence$$13.substring, sequence$$13, [randNum + 1, sequence$$13.length], JAM.policy.p27);
     i$$8++;
     v210 = i$$8 < numMut;
   }
@@ -1067,7 +1067,7 @@ function writeRestrictionSites(sequence$$15, arrayOfItems, dnaConformation) {
   var timesFound = 0;
   if (dnaConformation == "circular") {
     shiftValue = JAM.call(sequence$$15.substring, sequence$$15, [0, lookAhead], JAM.policy.p13).length;
-    sequence$$15 = JAM.call(sequence$$15.substring, sequence$$15, [sequence$$15.length - lookAhead, sequence$$15.length], JAM.policy.p21) + sequence$$15 + JAM.call(sequence$$15.substring, sequence$$15, [0, lookAhead], JAM.policy.p13);
+    sequence$$15 = JAM.call(sequence$$15.substring, sequence$$15, [sequence$$15.length - lookAhead, sequence$$15.length], JAM.policy.p27) + sequence$$15 + JAM.call(sequence$$15.substring, sequence$$15, [0, lookAhead], JAM.policy.p13);
     lowerLimit = 0 + shiftValue;
     upperLimit = upperLimit + shiftValue;
   }
@@ -1215,7 +1215,7 @@ function restDigest(theDocument) {
   var restrictionFragment;
   var v529 = checkFormElement(theDocument.forms[0].elements[0]) == false;
   if (!v529) {
-    v529 = JAM.call(checkSequenceLength, null, [theDocument.forms[0].elements[0].value, maxInput$$3], JAM.policy.p19) == false;
+    v529 = checkSequenceLength(theDocument.forms[0].elements[0].value, maxInput$$3) == false;
   }
   if (v529) {
     return false;
@@ -1227,14 +1227,14 @@ function restDigest(theDocument) {
     newDna = getSequenceFromFasta(arrayOfFasta$$1[i$$11]);
     title = getTitleFromFasta(arrayOfFasta$$1[i$$11]);
     newDna = removeNonDna(newDna);
-    restrictionFragment = JAM.new(RestrictionFragment, [theDocument.forms[0].elements[4].options[theDocument.forms[0].elements[4].selectedIndex].value, title, newDna, 1, newDna.length, "sequence start", "sequence end", newDna.length], JAM.policy.p19);
+    restrictionFragment = new RestrictionFragment(theDocument.forms[0].elements[4].options[theDocument.forms[0].elements[4].selectedIndex].value, title, newDna, 1, newDna.length, "sequence start", "sequence end", newDna.length);
     JAM.call(restrictionFragments.push, restrictionFragments, [restrictionFragment], JAM.policy.p18);
     i$$11++;
     v274 = i$$11 < arrayOfFasta$$1.length;
   }
-  restrictionFragments = JAM.call(digest, null, [restrictionFragments, theDocument.forms[0].elements[5].options[theDocument.forms[0].elements[5].selectedIndex].value], JAM.policy.p19);
-  restrictionFragments = JAM.call(digest, null, [restrictionFragments, theDocument.forms[0].elements[6].options[theDocument.forms[0].elements[6].selectedIndex].value], JAM.policy.p19);
-  restrictionFragments = JAM.call(digest, null, [restrictionFragments, theDocument.forms[0].elements[7].options[theDocument.forms[0].elements[7].selectedIndex].value], JAM.policy.p19);
+  restrictionFragments = digest(restrictionFragments, theDocument.forms[0].elements[5].options[theDocument.forms[0].elements[5].selectedIndex].value);
+  restrictionFragments = digest(restrictionFragments, theDocument.forms[0].elements[6].options[theDocument.forms[0].elements[6].selectedIndex].value);
+  restrictionFragments = digest(restrictionFragments, theDocument.forms[0].elements[7].options[theDocument.forms[0].elements[7].selectedIndex].value);
   JAM.call(restrictionFragments.sort, restrictionFragments, [restrictionFragmentSorter], JAM.policy.p18);
   openWindow("Restriction Digest");
   openPre();
@@ -1284,7 +1284,7 @@ function digest(arrayOfRestrictionFragments, enzyme) {
       var v544 = arrayOfRestrictionFragments[i$$12].sequence;
       shiftValue$$1 = JAM.call(v544.substring, v544, [0, lookAhead$$1], JAM.policy.p13).length;
       var v690 = arrayOfRestrictionFragments[i$$12].sequence;
-      var v287 = JAM.call(v690.substring, v690, [arrayOfRestrictionFragments[i$$12].sequence.length - lookAhead$$1, arrayOfRestrictionFragments[i$$12].sequence.length], JAM.policy.p21) + arrayOfRestrictionFragments[i$$12].sequence;
+      var v287 = JAM.call(v690.substring, v690, [arrayOfRestrictionFragments[i$$12].sequence.length - lookAhead$$1, arrayOfRestrictionFragments[i$$12].sequence.length], JAM.policy.p27) + arrayOfRestrictionFragments[i$$12].sequence;
       var v547 = arrayOfRestrictionFragments[i$$12].sequence;
       var extendedSequence = v287 + JAM.call(v547.substring, v547, [0, lookAhead$$1], JAM.policy.p13);
       lowerLimit$$1 = 0 + shiftValue$$1;
@@ -1329,31 +1329,31 @@ function digest(arrayOfRestrictionFragments, enzyme) {
           arrayOfRestrictionFragments[i$$12].topology = "linear";
           var v301 = arrayOfRestrictionFragments[i$$12].sourceName;
           var v559 = arrayOfRestrictionFragments[i$$12].sequence;
-          var v302 = JAM.call(v559.substring, v559, [previousCutPosition, positions[j$$10]], JAM.policy.p21);
+          var v302 = JAM.call(v559.substring, v559, [previousCutPosition, positions[j$$10]], JAM.policy.p27);
           var v838 = arrayOfRestrictionFragments[i$$12].sequence;
-          startRestrictionFragment = new RestrictionFragment("linear", v301, v302, previousStartPosition, previousStartPosition + JAM.call(v838.substring, v838, [previousCutPosition, positions[j$$10]], JAM.policy.p21).length - 1, previousEnzyme, enzymeName, arrayOfRestrictionFragments[i$$12].originalLength);
+          startRestrictionFragment = new RestrictionFragment("linear", v301, v302, previousStartPosition, previousStartPosition + JAM.call(v838.substring, v838, [previousCutPosition, positions[j$$10]], JAM.policy.p27).length - 1, previousEnzyme, enzymeName, arrayOfRestrictionFragments[i$$12].originalLength);
         } else {
           var v305 = arrayOfRestrictionFragments[i$$12].sourceName;
           var v564 = arrayOfRestrictionFragments[i$$12].sequence;
-          var v306 = JAM.call(v564.substring, v564, [previousCutPosition, positions[j$$10]], JAM.policy.p21);
+          var v306 = JAM.call(v564.substring, v564, [previousCutPosition, positions[j$$10]], JAM.policy.p27);
           var v840 = arrayOfRestrictionFragments[i$$12].sequence;
-          restrictionFragmentOne = new RestrictionFragment("linear", v305, v306, previousStartPosition, previousStartPosition + JAM.call(v840.substring, v840, [previousCutPosition, positions[j$$10]], JAM.policy.p21).length - 1, previousEnzyme, enzymeName, arrayOfRestrictionFragments[i$$12].originalLength);
+          restrictionFragmentOne = new RestrictionFragment("linear", v305, v306, previousStartPosition, previousStartPosition + JAM.call(v840.substring, v840, [previousCutPosition, positions[j$$10]], JAM.policy.p27).length - 1, previousEnzyme, enzymeName, arrayOfRestrictionFragments[i$$12].originalLength);
           JAM.call(newFragments.push, newFragments, [restrictionFragmentOne], JAM.policy.p18);
         }
         if (j$$10 == positions.length - 1) {
           if (startRestrictionFragment == null) {
             var v310 = arrayOfRestrictionFragments[i$$12].sourceName;
             var v570 = arrayOfRestrictionFragments[i$$12].sequence;
-            var v311 = JAM.call(v570.substring, v570, [positions[j$$10], arrayOfRestrictionFragments[i$$12].sequence.length], JAM.policy.p21);
+            var v311 = JAM.call(v570.substring, v570, [positions[j$$10], arrayOfRestrictionFragments[i$$12].sequence.length], JAM.policy.p27);
             var v787 = arrayOfRestrictionFragments[i$$12].sequence;
-            restrictionFragmentTwo = new RestrictionFragment("linear", v310, v311, previousStartPosition + JAM.call(v787.substring, v787, [previousCutPosition, positions[j$$10]], JAM.policy.p21).length, arrayOfRestrictionFragments[i$$12].stop, enzymeName, arrayOfRestrictionFragments[i$$12].stopEnzyme, arrayOfRestrictionFragments[i$$12].originalLength);
+            restrictionFragmentTwo = new RestrictionFragment("linear", v310, v311, previousStartPosition + JAM.call(v787.substring, v787, [previousCutPosition, positions[j$$10]], JAM.policy.p27).length, arrayOfRestrictionFragments[i$$12].stop, enzymeName, arrayOfRestrictionFragments[i$$12].stopEnzyme, arrayOfRestrictionFragments[i$$12].originalLength);
             JAM.call(newFragments.push, newFragments, [restrictionFragmentTwo], JAM.policy.p18);
           } else {
             var v316 = arrayOfRestrictionFragments[i$$12].sourceName;
             var v709 = arrayOfRestrictionFragments[i$$12].sequence;
-            var v317 = JAM.call(v709.substring, v709, [positions[j$$10], arrayOfRestrictionFragments[i$$12].sequence.length], JAM.policy.p21) + startRestrictionFragment.sequence;
+            var v317 = JAM.call(v709.substring, v709, [positions[j$$10], arrayOfRestrictionFragments[i$$12].sequence.length], JAM.policy.p27) + startRestrictionFragment.sequence;
             var v791 = arrayOfRestrictionFragments[i$$12].sequence;
-            restrictionFragmentTwo = new RestrictionFragment("linear", v316, v317, previousStartPosition + JAM.call(v791.substring, v791, [previousCutPosition, positions[j$$10]], JAM.policy.p21).length, startRestrictionFragment.stop, enzymeName, startRestrictionFragment.stopEnzyme, arrayOfRestrictionFragments[i$$12].originalLength);
+            restrictionFragmentTwo = new RestrictionFragment("linear", v316, v317, previousStartPosition + JAM.call(v791.substring, v791, [previousCutPosition, positions[j$$10]], JAM.policy.p27).length, startRestrictionFragment.stop, enzymeName, startRestrictionFragment.stopEnzyme, arrayOfRestrictionFragments[i$$12].originalLength);
             JAM.call(newFragments.push, newFragments, [restrictionFragmentTwo], JAM.policy.p18);
           }
         }

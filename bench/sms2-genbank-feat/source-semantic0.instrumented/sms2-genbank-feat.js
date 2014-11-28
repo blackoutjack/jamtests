@@ -1536,9 +1536,7 @@ function writeGroupNum(text$$10, tabIn$$1, groupSize, basePerLine, startBase, st
   return true;
 }
 function writeGroupNumDna(text$$11, tabIn$$2, groupSize$$1, basePerLine$$1, startBase$$1, stopBase$$1, strands, numberPosition) {
-  introspect(JAM.policy.p20) {
-    writeGroupNumDnaSetStart(text$$11, tabIn$$2, groupSize$$1, basePerLine$$1, startBase$$1, stopBase$$1, strands, numberPosition, 0);
-  }
+  writeGroupNumDnaSetStart(text$$11, tabIn$$2, groupSize$$1, basePerLine$$1, startBase$$1, stopBase$$1, strands, numberPosition, 0);
   return true;
 }
 function writeGroupNumDnaSetStart(text$$12, tabIn$$3, groupSize$$2, basePerLine$$2, startBase$$2, stopBase$$2, strands$$1, numberPosition$$1, numberingAdjustment) {
@@ -1591,9 +1589,7 @@ function writeGroupNumDnaSetStart(text$$12, tabIn$$3, groupSize$$2, basePerLine$
       var v156 = numberPosition$$1 == "above";
       if (v156) {
         var v154 = aboveNum;
-        introspect(JAM.policy.p20) {
-          var v445 = adjustNumbering(i$$6, numberingAdjustment)
-        }
+        var v445 = adjustNumbering(i$$6, numberingAdjustment);
         var v155 = rightNum(v445, "", groupSize$$2, tabIn$$3);
         aboveNum = v154 + v155;
       }
@@ -1609,9 +1605,7 @@ function writeGroupNumDnaSetStart(text$$12, tabIn$$3, groupSize$$2, basePerLine$
     var v181 = numberPosition$$1 == "left";
     if (v181) {
       var v159 = outputWindow.document;
-      introspect(JAM.policy.p20) {
-        var v645 = adjustNumbering(lineNum, numberingAdjustment)
-      }
+      var v645 = adjustNumbering(lineNum, numberingAdjustment);
       var v569 = rightNum(v645, "", 8, tabIn$$3);
       var v447 = v569 + lineOfText$$1;
       var v160 = v447 + "\n";
@@ -1621,9 +1615,7 @@ function writeGroupNumDnaSetStart(text$$12, tabIn$$3, groupSize$$2, basePerLine$
       var v164 = strands$$1 == "two";
       if (v164) {
         var v161 = outputWindow.document;
-        introspect(JAM.policy.p20) {
-          var v646 = adjustNumbering(lineNum, numberingAdjustment)
-        }
+        var v646 = adjustNumbering(lineNum, numberingAdjustment);
         var v570 = rightNum(v646, "", 8, tabIn$$3);
         var v571 = complement(lineOfText$$1);
         var v448 = v570 + v571;
@@ -1641,9 +1633,7 @@ function writeGroupNumDnaSetStart(text$$12, tabIn$$3, groupSize$$2, basePerLine$
       if (v180) {
         var v165 = outputWindow.document;
         var v572 = lineOfText$$1;
-        introspect(JAM.policy.p20) {
-          var v573 = adjustNumbering(i$$6, numberingAdjustment)
-        }
+        var v573 = adjustNumbering(i$$6, numberingAdjustment);
         var v449 = v572 + v573;
         var v166 = v449 + "\n";
         introspect(JAM.policy.p16) {
@@ -1653,9 +1643,7 @@ function writeGroupNumDnaSetStart(text$$12, tabIn$$3, groupSize$$2, basePerLine$
         if (v170) {
           var v167 = outputWindow.document;
           var v574 = complement(lineOfText$$1);
-          introspect(JAM.policy.p20) {
-            var v575 = adjustNumbering(i$$6, numberingAdjustment)
-          }
+          var v575 = adjustNumbering(i$$6, numberingAdjustment);
           var v450 = v574 + v575;
           var v168 = v450 + "\n";
           introspect(JAM.policy.p16) {
@@ -1862,7 +1850,7 @@ function writeMutatedSequence(sequence$$13, components$$1, numMut, firstIndexToM
     var v208 = v465 + v466;
     var v467 = randNum + 1;
     var v468 = sequence$$13.length;
-    introspect(JAM.policy.p22) {
+    introspect(JAM.policy.p27) {
       var v209 = sequence$$13.substring(v467, v468)
     }
     sequence$$13 = v208 + v209;
@@ -1933,7 +1921,7 @@ function writeRestrictionSites(sequence$$15, arrayOfItems, dnaConformation) {
     var v649 = sequence$$15.length;
     var v580 = v649 - lookAhead;
     var v581 = sequence$$15.length;
-    introspect(JAM.policy.p22) {
+    introspect(JAM.policy.p27) {
       var v472 = sequence$$15.substring(v580, v581)
     }
     var v221 = v472 + sequence$$15;
@@ -2234,9 +2222,7 @@ function genbankFeat(theDocument) {
     var v719 = v734.elements;
     var v699 = v719[0];
     var v660 = v699.value;
-    introspect(JAM.policy.p20) {
-      var v593 = checkTextLength(v660, maxInput$$3)
-    }
+    var v593 = checkTextLength(v660, maxInput$$3);
     v498 = v593 == false;
   }
   var v267 = v498;
@@ -2262,9 +2248,7 @@ function genbankFeat(theDocument) {
   var v597 = v663.selectedIndex;
   var v500 = v596[v597];
   var v269 = v500.value;
-  introspect(JAM.policy.p20) {
-    genBankFeatExtract(v268, v269);
-  }
+  genBankFeatExtract(v268, v269);
   closePre();
   closeWindow();
   return true;
@@ -2310,9 +2294,7 @@ function genBankFeatExtract(genBankFile$$2, outputType) {
     introspect(JAM.policy.p17) {
       var featureArray = v278.split(/[\f\n\r] {5,12}\b/)
     }
-    introspect(JAM.policy.p20) {
-      prepareFeatures(featureArray, dnaSequence$$3, outputType);
-    }
+    prepareFeatures(featureArray, dnaSequence$$3, outputType);
     i$$11++;
     var v504 = recordArray.length;
     v279 = i$$11 < v504;
@@ -2343,7 +2325,7 @@ function prepareFeatures(arrayOfFeatures, dnaSequence$$4, outputType$$1) {
     featureTitle = v281.toString();
     theTitle = new RegExp(featureTitle);
     var v282 = arrayOfFeatures[i$$12];
-    introspect(JAM.policy.p21) {
+    introspect(JAM.policy.p19) {
       removedTitle = v282.replace(theTitle, "");
     }
     var v599 = arrayOfFeatures[i$$12];
@@ -2376,9 +2358,7 @@ function prepareFeatures(arrayOfFeatures, dnaSequence$$4, outputType$$1) {
     introspect(JAM.policy.p16) {
       v286.write(v287);
     }
-    introspect(JAM.policy.p20) {
-      printFeature(positionNoSpace, dnaSequence$$4, outputType$$1);
-    }
+    printFeature(positionNoSpace, dnaSequence$$4, outputType$$1);
     featureFound = true;
     var v288 = outputWindow.document;
     introspect(JAM.policy.p9) {
@@ -2524,7 +2504,7 @@ function printFeature(featurePos, dnaSequence$$5, outputType$$2) {
       } else {
         var v307 = outputType$$2 == "separated";
         if (v307) {
-          introspect(JAM.policy.p22) {
+          introspect(JAM.policy.p27) {
             var v304 = dnaSequence$$5.substring(realStart, realStop)
           }
           introspect(JAM.policy.p16) {
@@ -2532,13 +2512,13 @@ function printFeature(featurePos, dnaSequence$$5, outputType$$2) {
           }
         } else {
           var v517 = feature$$4.lastAdded;
-          introspect(JAM.policy.p22) {
+          introspect(JAM.policy.p27) {
             var v305 = dnaSequence$$5.substring(v517, realStart)
           }
           introspect(JAM.policy.p16) {
             feature$$4.addFragment(v305);
           }
-          introspect(JAM.policy.p22) {
+          introspect(JAM.policy.p27) {
             var v518 = dnaSequence$$5.substring(realStart, realStop)
           }
           var v306 = v518.toUpperCase();

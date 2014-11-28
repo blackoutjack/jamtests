@@ -1543,9 +1543,7 @@ function writeGroupNum(text$$10, tabIn$$1, groupSize, basePerLine, startBase, st
   return true;
 }
 function writeGroupNumDna(text$$11, tabIn$$2, groupSize$$1, basePerLine$$1, startBase$$1, stopBase$$1, strands, numberPosition) {
-  introspect(JAM.policy.p19) {
-    writeGroupNumDnaSetStart(text$$11, tabIn$$2, groupSize$$1, basePerLine$$1, startBase$$1, stopBase$$1, strands, numberPosition, 0);
-  }
+  writeGroupNumDnaSetStart(text$$11, tabIn$$2, groupSize$$1, basePerLine$$1, startBase$$1, stopBase$$1, strands, numberPosition, 0);
   return true;
 }
 function writeGroupNumDnaSetStart(text$$12, tabIn$$3, groupSize$$2, basePerLine$$2, startBase$$2, stopBase$$2, strands$$1, numberPosition$$1, numberingAdjustment) {
@@ -1598,9 +1596,7 @@ function writeGroupNumDnaSetStart(text$$12, tabIn$$3, groupSize$$2, basePerLine$
       var v158 = numberPosition$$1 == "above";
       if (v158) {
         var v156 = aboveNum;
-        introspect(JAM.policy.p19) {
-          var v475 = adjustNumbering(i$$6, numberingAdjustment)
-        }
+        var v475 = adjustNumbering(i$$6, numberingAdjustment);
         var v157 = rightNum(v475, "", groupSize$$2, tabIn$$3);
         aboveNum = v156 + v157;
       }
@@ -1616,9 +1612,7 @@ function writeGroupNumDnaSetStart(text$$12, tabIn$$3, groupSize$$2, basePerLine$
     var v183 = numberPosition$$1 == "left";
     if (v183) {
       var v161 = outputWindow.document;
-      introspect(JAM.policy.p19) {
-        var v758 = adjustNumbering(lineNum, numberingAdjustment)
-      }
+      var v758 = adjustNumbering(lineNum, numberingAdjustment);
       var v643 = rightNum(v758, "", 8, tabIn$$3);
       var v477 = v643 + lineOfText$$1;
       var v162 = v477 + "\n";
@@ -1628,9 +1622,7 @@ function writeGroupNumDnaSetStart(text$$12, tabIn$$3, groupSize$$2, basePerLine$
       var v166 = strands$$1 == "two";
       if (v166) {
         var v163 = outputWindow.document;
-        introspect(JAM.policy.p19) {
-          var v759 = adjustNumbering(lineNum, numberingAdjustment)
-        }
+        var v759 = adjustNumbering(lineNum, numberingAdjustment);
         var v644 = rightNum(v759, "", 8, tabIn$$3);
         var v645 = complement(lineOfText$$1);
         var v478 = v644 + v645;
@@ -1648,9 +1640,7 @@ function writeGroupNumDnaSetStart(text$$12, tabIn$$3, groupSize$$2, basePerLine$
       if (v182) {
         var v167 = outputWindow.document;
         var v646 = lineOfText$$1;
-        introspect(JAM.policy.p19) {
-          var v647 = adjustNumbering(i$$6, numberingAdjustment)
-        }
+        var v647 = adjustNumbering(i$$6, numberingAdjustment);
         var v479 = v646 + v647;
         var v168 = v479 + "\n";
         introspect(JAM.policy.p15) {
@@ -1660,9 +1650,7 @@ function writeGroupNumDnaSetStart(text$$12, tabIn$$3, groupSize$$2, basePerLine$
         if (v172) {
           var v169 = outputWindow.document;
           var v648 = complement(lineOfText$$1);
-          introspect(JAM.policy.p19) {
-            var v649 = adjustNumbering(i$$6, numberingAdjustment)
-          }
+          var v649 = adjustNumbering(i$$6, numberingAdjustment);
           var v480 = v648 + v649;
           var v170 = v480 + "\n";
           introspect(JAM.policy.p15) {
@@ -1869,7 +1857,7 @@ function writeMutatedSequence(sequence$$13, components$$1, numMut, firstIndexToM
     var v210 = v495 + v496;
     var v497 = randNum + 1;
     var v498 = sequence$$13.length;
-    introspect(JAM.policy.p21) {
+    introspect(JAM.policy.p27) {
       var v211 = sequence$$13.substring(v497, v498)
     }
     sequence$$13 = v210 + v211;
@@ -1940,7 +1928,7 @@ function writeRestrictionSites(sequence$$15, arrayOfItems, dnaConformation) {
     var v762 = sequence$$15.length;
     var v654 = v762 - lookAhead;
     var v655 = sequence$$15.length;
-    introspect(JAM.policy.p21) {
+    introspect(JAM.policy.p27) {
       var v502 = sequence$$15.substring(v654, v655)
     }
     var v223 = v502 + sequence$$15;
@@ -2691,9 +2679,7 @@ function orfFind(theDocument) {
     var v931 = v985.elements;
     var v870 = v931[0];
     var v793 = v870.value;
-    introspect(JAM.policy.p19) {
-      var v690 = checkSequenceLength(v793, maxInput$$3)
-    }
+    var v690 = checkSequenceLength(v793, maxInput$$3);
     v564 = v690 == false;
   }
   var v305 = v564;
@@ -2721,9 +2707,7 @@ function orfFind(theDocument) {
   newDna = removeNonDna(newDna);
   openWindow("ORF Finder");
   var v309 = outputWindow.document;
-  introspect(JAM.policy.p19) {
-    var v310 = getInfoFromTitleAndSequence(title$$9, newDna)
-  }
+  var v310 = getInfoFromTitleAndSequence(title$$9, newDna);
   introspect(JAM.policy.p15) {
     v309.write(v310);
   }
@@ -2766,9 +2750,7 @@ function orfFind(theDocument) {
     var v698 = v801.selectedIndex;
     var v570 = v697[v698];
     var v312 = v570.value;
-    introspect(JAM.policy.p19) {
-      writeOrfs(newDna, geneticCode, v311, 0, v312, enteredNumber);
-    }
+    writeOrfs(newDna, geneticCode, v311, 0, v312, enteredNumber);
     var v992 = theDocument.forms;
     var v938 = v992[0];
     var v879 = v938.elements;
@@ -2793,9 +2775,7 @@ function orfFind(theDocument) {
     var v702 = v805.selectedIndex;
     var v572 = v701[v702];
     var v314 = v572.value;
-    introspect(JAM.policy.p19) {
-      writeOrfs(newDna, geneticCode, v313, 1, v314, enteredNumber);
-    }
+    writeOrfs(newDna, geneticCode, v313, 1, v314, enteredNumber);
     var v996 = theDocument.forms;
     var v942 = v996[0];
     var v883 = v942.elements;
@@ -2820,9 +2800,7 @@ function orfFind(theDocument) {
     var v706 = v809.selectedIndex;
     var v574 = v705[v706];
     var v316 = v574.value;
-    introspect(JAM.policy.p19) {
-      writeOrfs(newDna, geneticCode, v315, 2, v316, enteredNumber);
-    }
+    writeOrfs(newDna, geneticCode, v315, 2, v316, enteredNumber);
   } else {
     var v1000 = theDocument.forms;
     var v946 = v1000[0];
@@ -2860,9 +2838,7 @@ function orfFind(theDocument) {
     var v712 = v815.selectedIndex;
     var v577 = v711[v712];
     var v319 = v577.value;
-    introspect(JAM.policy.p19) {
-      writeOrfs(newDna, geneticCode, v317, v318, v319, enteredNumber);
-    }
+    writeOrfs(newDna, geneticCode, v317, v318, v319, enteredNumber);
   }
   closePre();
   closeWindow();
@@ -2971,7 +2947,7 @@ function writeOrfs(dnaSequence$$3, geneticCode$$1, startCodons, startPos, strand
       var v342 = v586;
       if (v342) {
         var v330 = i$$11 + 3;
-        introspect(JAM.policy.p21) {
+        introspect(JAM.policy.p27) {
           sequenceToTranslate = dnaSequence$$3.substring(startPos, v330);
         }
         var v331 = outputWindow.document;
@@ -3017,7 +2993,7 @@ function writeOrfs(dnaSequence$$3, geneticCode$$1, startCodons, startPos, strand
         for (;v339;) {
           var v337 = geneticCodeMatchExp$$2[m];
           var v338 = geneticCodeMatchResult$$2[m];
-          introspect(JAM.policy.p21) {
+          introspect(JAM.policy.p27) {
             sequenceToTranslate = sequenceToTranslate.replace(v337, v338);
           }
           m++;
