@@ -1501,7 +1501,10 @@ function path(i1, j1, i2, j2) {
       } else {
         left$$1 = this.Sn[j1] - this.scoreSet.gap;
       }
-      JAM.set(this.Sn, j1, left$$1, JAM.policy.p6);
+      var v373 = this.Sn;
+      introspect(JAM.policy.p6) {
+        v373[j1] = left$$1;
+      }
       j$$11 = j1 + 1;
       var v387 = j$$11 <= j2;
       for (;v387;) {
@@ -1535,7 +1538,10 @@ function path(i1, j1, i2, j2) {
           }
         }
         diag = this.Sn[j$$11];
-        JAM.set(this.Sn, j$$11, left$$1, JAM.policy.p6);
+        var v386 = this.Sn;
+        introspect(JAM.policy.p6) {
+          v386[j$$11] = left$$1;
+        }
         j$$11++;
         v387 = j$$11 <= j2;
       }
@@ -1583,7 +1589,10 @@ function path(i1, j1, i2, j2) {
       } else {
         right$$1 = this.Sp[j2] - this.scoreSet.gap;
       }
-      JAM.set(this.Sp, j2, right$$1, JAM.policy.p6);
+      var v401 = this.Sp;
+      introspect(JAM.policy.p6) {
+        v401[j2] = right$$1;
+      }
       j$$11 = j2 - 1;
       var v415 = j$$11 >= j1;
       for (;v415;) {
@@ -1617,7 +1626,10 @@ function path(i1, j1, i2, j2) {
           }
         }
         diag = this.Sp[j$$11];
-        JAM.set(this.Sp, j$$11, right$$1, JAM.policy.p6);
+        var v414 = this.Sp;
+        introspect(JAM.policy.p6) {
+          v414[j$$11] = right$$1;
+        }
         j$$11--;
         v415 = j$$11 >= j1;
       }

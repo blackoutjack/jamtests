@@ -20,8 +20,14 @@ function start() {
   return;
 }
 function next() {
-  JAM.set(JAM.call(JAM.get(document, "getElementById", JAM.policy.p97), document, ["frameparent"], JAM.policy.p97), "innerHTML", "", JAM.policy.p54);
-  JAM.set(JAM.call(JAM.get(document, "getElementById", JAM.policy.p97), document, ["frameparent"], JAM.policy.p97), "innerHTML", "<iframe id='testframe'>", JAM.policy.p54);
+  var v3 = JAM.call(JAM.get(document, "getElementById", JAM.policy.p97), document, ["frameparent"], JAM.policy.p97);
+  introspect(JAM.policy.p54) {
+    v3.innerHTML = "";
+  }
+  var v4 = JAM.call(JAM.get(document, "getElementById", JAM.policy.p97), document, ["frameparent"], JAM.policy.p97);
+  introspect(JAM.policy.p54) {
+    v4.innerHTML = "<iframe id='testframe'>";
+  }
   var testFrame = JAM.call(JAM.get(document, "getElementById", JAM.policy.p97), document, ["testframe"], JAM.policy.p97);
   if ((testIndex = testIndex + 1) < tests.length) {
     warmup();
@@ -57,7 +63,9 @@ function recordResult(time) {
     introspect(JAM.policy.p105) {
       var v13 = tests[testIndex]
     }
-    JAM.set(v12, v13, time, JAM.policy.p106);
+    introspect(JAM.policy.p106) {
+      v12[v13] = time;
+    }
   }
   return;
 }

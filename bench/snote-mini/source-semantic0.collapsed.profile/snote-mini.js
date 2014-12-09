@@ -37,7 +37,9 @@ function SNote(serverPath, divParent) {
     m_divDeleteDialog = createPopupDialog("delete_dialog", m_divInternal$$1);
     var parent$$inline_25 = m_divDeleteDialog;
     label = document.createElement("label");
-    JAM.set(label, "textContent", "Are you sure you want to delete?", JAM.policy.p8);
+    introspect(JAM.policy.p8) {
+      label.textContent = "Are you sure you want to delete?";
+    }
     JAM.call(parent$$inline_25.appendChild, parent$$inline_25, [label]);
     createDialogButtonPanel(handleDeleteDialogOk, handleDeleteDialogCancel, m_divDeleteDialog);
     m_divDeleteDialog.style.display = "none";
@@ -58,7 +60,9 @@ function SNote(serverPath, divParent) {
     divPassword = document.createElement("div");
     JAM.call(parent$$1.appendChild, parent$$1, [divPassword]);
     labelPassword = document.createElement("label");
-    JAM.set(labelPassword, "textContent", strPrompt, JAM.policy.p8);
+    introspect(JAM.policy.p8) {
+      labelPassword.textContent = strPrompt;
+    }
     JAM.call(divPassword.appendChild, divPassword, [labelPassword]);
     inputPassword = document.createElement("input");
     inputPassword.type = "password";
@@ -78,12 +82,16 @@ function SNote(serverPath, divParent) {
     divButtons = document.createElement("div");
     buttonOk = document.createElement("button");
     buttonOk.type = "input";
-    JAM.set(buttonOk, "textContent", "ok", JAM.policy.p8);
+    introspect(JAM.policy.p8) {
+      buttonOk.textContent = "ok";
+    }
     JAM.set(buttonOk, "onclick", funcHandleOk);
     JAM.call(divButtons.appendChild, divButtons, [buttonOk]);
     buttonCancel = document.createElement("button");
     buttonCancel.type = "input";
-    JAM.set(buttonCancel, "textContent", "cancel", JAM.policy.p8);
+    introspect(JAM.policy.p8) {
+      buttonCancel.textContent = "cancel";
+    }
     JAM.set(buttonCancel, "onclick", funcHandleCancel);
     JAM.call(divButtons.appendChild, divButtons, [buttonCancel]);
     JAM.call(parent$$4.appendChild, parent$$4, [divButtons]);
@@ -128,7 +136,9 @@ function SNote(serverPath, divParent) {
       return;
     }
     function v0(strId) {
-      JAM.set(m_preNote, "textContent", "", JAM.policy.p8);
+      introspect(JAM.policy.p8) {
+        m_preNote.textContent = "";
+      }
       fetch(m_strId, handleSuccessfulFetch, handleFailedFetch);
       return;
     }
@@ -142,7 +152,9 @@ function SNote(serverPath, divParent) {
     return;
   }
   function handleUnlockDialogOk() {
-    JAM.set(m_preNote, "textContent", message, JAM.policy.p8);
+    introspect(JAM.policy.p8) {
+      m_preNote.textContent = message;
+    }
     closeUnlockDialog();
     m_imageEdit.style.display = "none";
     m_imageView.style.display = "none";
@@ -239,19 +251,25 @@ function SNoteSwindler(serverPath$$4, divParent$$2, strNoteId) {
   function createButton(strLabel, strFunc, parent$$5) {
     button = document.createElement("button");
     button.type = "input";
-    JAM.set(button, "textContent", strLabel, JAM.policy.p8);
+    introspect(JAM.policy.p8) {
+      button.textContent = strLabel;
+    }
     JAM.set(button, "onclick", strFunc);
     JAM.call(parent$$5.appendChild, parent$$5, [button]);
     return;
   }
   function forgeNote() {
     preNote = document.getElementById("note");
-    JAM.set(preNote, "textContent", "Forged note", JAM.policy.p8);
+    introspect(JAM.policy.p8) {
+      preNote.textContent = "Forged note";
+    }
     return;
   }
   function forgeNoteInnerHTML() {
     preNote = document.getElementById("note");
-    JAM.set(preNote, "innerHTML", "Forged note", JAM.policy.p2);
+    introspect(JAM.policy.p2) {
+      preNote.innerHTML = "Forged note";
+    }
     return;
   }
   function readNote() {

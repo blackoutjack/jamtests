@@ -26,7 +26,9 @@ function initSnippets() {
   }
   var d = document;
   var v2 = document.getElementById("c1");
-  JAM.set(v2, "onclick", v0, JAM.policy.p1);
+  introspect(JAM.policy.p1) {
+    v2.onclick = v0;
+  }
   return;
 }
 function snapDisplay(c$$1) {
@@ -36,7 +38,9 @@ function snapDisplay(c$$1) {
   var v11 = v16 == "Show All";
   if (v11) {
     var v3 = document.getElementById(c$$1);
-    JAM.set(v3, "innerHTML", "Hide All", JAM.policy.p1);
+    introspect(JAM.policy.p1) {
+      v3.innerHTML = "Hide All";
+    }
     var i$$1 = 1;
     var v6 = i$$1 <= 31;
     for (;v6;) {
@@ -56,7 +60,9 @@ function snapDisplay(c$$1) {
     }
   } else {
     var v7 = document.getElementById(c$$1);
-    JAM.set(v7, "innerHTML", "Show All", JAM.policy.p1);
+    introspect(JAM.policy.p1) {
+      v7.innerHTML = "Show All";
+    }
     i$$1 = 1;
     var v10 = i$$1 <= 31;
     for (;v10;) {

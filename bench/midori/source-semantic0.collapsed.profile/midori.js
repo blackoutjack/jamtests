@@ -103,7 +103,11 @@ function v107() {
       }
       JAM.call(o$$6.setAttribute, o$$6, ["tabset", obj$$25.id]);
       if (o$$6.parentNode.className == "tab-selected") {
-        JAM.set(midoriTab.selectedTabs, obj$$25.id, o$$6, JAM.policy.p2);
+        var v133 = midoriTab.selectedTabs;
+        var v134 = obj$$25.id;
+        introspect(JAM.policy.p2) {
+          v133[v134] = o$$6;
+        }
         JAM.call(midoriTab.select, midoriTab, [o$$6, true]);
       }
       JAM.call(midori.addEventListener, midori, [o$$6, "click", v104]);
@@ -123,7 +127,10 @@ function v103(obj$$24, noAnim) {
     this.selectedTabs[tabSet].parentNode.className = "";
     JAM.call(midori.get, midori, ["#" + this.selectedTabs[tabSet].hash.substr(1)]).style.display = "none";
   }
-  JAM.set(this.selectedTabs, tabSet, obj$$24, JAM.policy.p2);
+  var v141 = this.selectedTabs;
+  introspect(JAM.policy.p2) {
+    v141[tabSet] = obj$$24;
+  }
   obj$$24.parentNode.className = "tab-selected";
   var v143;
   if (noAnim) {
@@ -317,12 +324,22 @@ function v90(vars$$3) {
   }
   var newSize = v193;
   if (newSize > 2) {
-    JAM.set(vars$$3.element.style, vars$$3.what, newSize.toString() + "px", JAM.policy.p2);
+    var v194 = vars$$3.element.style;
+    var v195 = vars$$3.what;
+    var v740 = newSize.toString();
+    introspect(JAM.policy.p2) {
+      v194[v195] = v740 + "px";
+    }
     vars$$3.element.style.opacity = newSize / 50;
   } else {
     clearInterval(this.intervals[vars$$3.intervalKey].intervalId);
     vars$$3.element.style.display = "none";
-    JAM.set(vars$$3.element.style, vars$$3.what, vars$$3.elementSize.toString() + "px", JAM.policy.p2);
+    var v199 = vars$$3.element.style;
+    var v200 = vars$$3.what;
+    var v745 = vars$$3.elementSize.toString();
+    introspect(JAM.policy.p2) {
+      v199[v200] = v745 + "px";
+    }
     vars$$3.element.style.opacity = 1;
     if (vars$$3.callback) {
       JAM.call(vars$$3.callback, vars$$3, [vars$$3.element]);
@@ -368,10 +385,20 @@ function v87(vars$$1) {
   var v212 = this.intervals[vars$$1.intervalKey];
   v212.newSize = v212.newSize + Math.round((vars$$1.elementSize - this.intervals[vars$$1.intervalKey].newSize) / 2);
   if (this.intervals[vars$$1.intervalKey].newSize < vars$$1.elementSize) {
-    JAM.set(vars$$1.element.style, vars$$1.what, this.intervals[vars$$1.intervalKey].newSize.toString() + "px", JAM.policy.p2);
+    var v213 = vars$$1.element.style;
+    var v214 = vars$$1.what;
+    var v756 = this.intervals[vars$$1.intervalKey].newSize.toString();
+    introspect(JAM.policy.p2) {
+      v213[v214] = v756 + "px";
+    }
   } else {
     clearInterval(this.intervals[vars$$1.intervalKey].intervalId);
-    JAM.set(vars$$1.element.style, vars$$1.what, vars$$1.elementSize.toString() + "px", JAM.policy.p2);
+    var v216 = vars$$1.element.style;
+    var v217 = vars$$1.what;
+    var v759 = vars$$1.elementSize.toString();
+    introspect(JAM.policy.p2) {
+      v216[v217] = v759 + "px";
+    }
     vars$$1.element.style.overflow = "visible";
     if (vars$$1.callback) {
       JAM.call(vars$$1.callback, vars$$1, [vars$$1.element]);
@@ -390,7 +417,11 @@ function v86(element$$3, what) {
     v223 = element$$3.offsetHeight;
   }
   var offsetSize = v223;
-  JAM.set(element$$3.style, what, offsetSize.toString() + "px", JAM.policy.p2);
+  var v224 = element$$3.style;
+  var v763 = offsetSize.toString();
+  introspect(JAM.policy.p2) {
+    v224[what] = v763 + "px";
+  }
   var v764;
   if (what == "width") {
     v764 = element$$3.offsetWidth;
@@ -398,7 +429,11 @@ function v86(element$$3, what) {
     v764 = element$$3.offsetHeight;
   }
   var outsideSize = v764 - offsetSize;
-  JAM.set(element$$3.style, what, (offsetSize - outsideSize).toString() + "px", JAM.policy.p2);
+  var v226 = element$$3.style;
+  var v765 = (offsetSize - outsideSize).toString();
+  introspect(JAM.policy.p2) {
+    v226[what] = v765 + "px";
+  }
   return outsideSize;
 }
 function v85(obj$$23, highlightClass, removeAll) {
@@ -944,7 +979,10 @@ function v50(obj$$17, styleList) {
     if (i$$7 == "float") {
       v333 = JAM.call(this.setFloat, this, [obj$$17, styleList[i$$7]]);
     } else {
-      v333 = JAM.set(obj$$17.style, i$$7, styleList[i$$7], JAM.policy.p2);
+      var v846 = obj$$17.style;
+      introspect(JAM.policy.p2) {
+        v333 = v846[i$$7] = styleList[i$$7];
+      }
     }
     v333;
   }
@@ -986,7 +1024,10 @@ function v49(stylesheet, rule$$2, property) {
           }
           if (v854) {
             if (rule$$2 == "*") {
-              JAM.set(values$$4, rules[i$$6].selectorText, value, JAM.policy.p2);
+              var v337 = rules[i$$6].selectorText;
+              introspect(JAM.policy.p2) {
+                values$$4[v337] = value;
+              }
             } else {
               return rules[i$$6].style[rules[i$$6].style[j$$1]];
             }
@@ -994,7 +1035,11 @@ function v49(stylesheet, rule$$2, property) {
         } else {
           if (j$$1.toLowerCase() == property) {
             if (rule$$2 == "*") {
-              JAM.set(values$$4, rules[i$$6].selectorText, rules[i$$6].style[j$$1], JAM.policy.p2);
+              var v342 = rules[i$$6].selectorText;
+              var v860 = rules[i$$6].style;
+              introspect(JAM.policy.p2) {
+                values$$4[v342] = v860[j$$1];
+              }
             } else {
               return rules[i$$6].style[j$$1];
             }
@@ -1314,7 +1359,10 @@ function v44(match$$1, pSelector, pA, pB) {
       }
       c$$2 = c$$2.nextSibling;
     }
-    JAM.set(this.pCache, nodeKey, {parentChildren:parentChildren, pI:0}, JAM.policy.p2);
+    var v409 = this.pCache;
+    introspect(JAM.policy.p2) {
+      v409[nodeKey] = {parentChildren:parentChildren, pI:0};
+    }
   }
   var parentNumChildren = parentChildren.length;
   switch(pSelector) {
@@ -2039,7 +2087,11 @@ function midoriAjax(callback$$29, params$$1, cache) {
       thisObj$$2.responseText = thisObj$$2.request.responseText;
       thisObj$$2.responseXML = thisObj$$2.request.responseXML;
       thisObj$$2.status = thisObj$$2.request.status;
-      JAM.set(thisObj$$2.cache, thisObj$$2.cacheKey, thisObj$$2.responseText, JAM.policy.p2);
+      var v568 = thisObj$$2.cache;
+      var v569 = thisObj$$2.cacheKey;
+      introspect(JAM.policy.p2) {
+        v568[v569] = thisObj$$2.responseText;
+      }
     }
     JAM.call(thisObj$$2.callback, thisObj$$2, [params$$1]);
     return;
@@ -2095,7 +2147,11 @@ function midoriAutoComplete(vars$$7) {
           v573 = thisObj$$3.ajax.responseText;
         }
         var response = v573;
-        JAM.set(thisObj$$3.suggestions, response["snippet"], response["result"], JAM.policy.p2);
+        var v574 = thisObj$$3.suggestions;
+        var v575 = response["snippet"];
+        introspect(JAM.policy.p2) {
+          v574[v575] = response["result"];
+        }
         JAM.call(thisObj$$3.showSuggestions, thisObj$$3, [response["snippet"]]);
       }
       return;
@@ -2177,7 +2233,10 @@ function midoriAutoComplete(vars$$7) {
     for (i$$24 in suggestions) {
       if (vars$$7.htmlTemplate) {
         for (k$$2 in suggestions[i$$24]) {
-          JAM.set(properties, k$$2, suggestions[i$$24][k$$2], JAM.policy.p2);
+          var v596 = suggestions[i$$24];
+          introspect(JAM.policy.p2) {
+            properties[k$$2] = v596[k$$2];
+          }
         }
       }
       var v1453 = '<a id="midori_suggestion' + this.uniqid + "_" + (j$$5 = j$$5 + 1) + '" class="' + vars$$7.suggestionClass + '" href="#">';

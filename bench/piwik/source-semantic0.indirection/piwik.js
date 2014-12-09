@@ -6,7 +6,9 @@ function v70() {
     return new t$$2(i$$24, L$$17);
   }
   function v67(i$$23, L$$16) {
-    JAM.set(a$$1, i$$23, L$$16, JAM.policy.p2);
+    introspect(JAM.policy.p2) {
+      a$$1[i$$23] = L$$16;
+    }
     return;
   }
   function p$$3(i$$2) {
@@ -57,7 +59,9 @@ function v70() {
       return JAM.call(N$$1.attachEvent, N$$1, [v77, L$$1], JAM.policy.p3);
     }
     var v79 = "on" + M$$1;
-    JAM.set(N$$1, v79, L$$1, JAM.policy.p2);
+    introspect(JAM.policy.p2) {
+      N$$1[v79] = L$$1;
+    }
     return;
   }
   function E(M$$2, P) {
@@ -378,7 +382,9 @@ function v70() {
       var v119 = ae < 16;
       for (;v119;) {
         var v118 = Q + ae;
-        JAM.set(M$$8, ae, T[v118], JAM.policy.p2);
+        introspect(JAM.policy.p2) {
+          M$$8[ae] = T[v118];
+        }
         ae++;
         v119 = ae < 16;
       }
@@ -721,7 +727,9 @@ function v70() {
     function v64(bi$$11, be$$70, bg$$29, bf$$40, bh$$20) {
       var v167 = bi$$11.length;
       if (v167) {
-        JAM.set(aQ, bi$$11, [bi$$11, be$$70, bg$$29, bf$$40, bh$$20], JAM.policy.p2);
+        introspect(JAM.policy.p2) {
+          aQ[bi$$11] = [bi$$11, be$$70, bg$$29, bf$$40, bh$$20];
+        }
       }
       return;
     }
@@ -1216,7 +1224,9 @@ function v70() {
           if (v207) {
             Q$$3 = Z$$1();
           }
-          JAM.set(Q$$3, bf$$29, bh$$18, JAM.policy.p2);
+          introspect(JAM.policy.p2) {
+            Q$$3[bf$$29] = bh$$18;
+          }
         } else {
           var v494 = bg$$22 === "page";
           var v725 = !v494;
@@ -1225,7 +1235,9 @@ function v70() {
           }
           var v208 = v494;
           if (v208) {
-            JAM.set(aA, bf$$29, bh$$18, JAM.policy.p2);
+            introspect(JAM.policy.p2) {
+              aA[bf$$29] = bh$$18;
+            }
           }
         }
       }
@@ -1244,7 +1256,9 @@ function v70() {
         if (v211) {
           U$$2 = [];
         }
-        JAM.set(U$$2, be$$34, bf$$28, JAM.policy.p2);
+        introspect(JAM.policy.p2) {
+          U$$2[be$$34] = bf$$28;
+        }
       }
       return;
     }
@@ -2446,7 +2460,9 @@ function v70() {
               } else {
                 v331 = "0";
               }
-              JAM.set(a2, bf$$27, v331, JAM.policy.p2);
+              introspect(JAM.policy.p2) {
+                a2[bf$$27] = v331;
+              }
             }
           }
         }
@@ -2606,7 +2622,9 @@ function v5() {
             p$$1 = m$$4(t$$1, q$$1);
             var v349 = p$$1 !== undefined;
             if (v349) {
-              JAM.set(t$$1, q$$1, p$$1, JAM.policy.p2);
+              introspect(JAM.policy.p2) {
+                t$$1[q$$1] = p$$1;
+              }
             } else {
               delete t$$1[q$$1];
             }
@@ -2861,7 +2879,9 @@ function v5() {
             if (v643) {
               v373 = "null";
             }
-            JAM.set(o, n$$3, v373, JAM.policy.p2);
+            introspect(JAM.policy.p2) {
+              o[n$$3] = v373;
+            }
             n$$3 = n$$3 + 1;
             v374 = n$$3 < f$$3;
           }

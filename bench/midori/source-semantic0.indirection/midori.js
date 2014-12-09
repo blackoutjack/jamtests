@@ -149,7 +149,9 @@ function v107() {
       if (v135) {
         var v133 = midoriTab.selectedTabs;
         var v134 = obj$$25.id;
-        JAM.set(v133, v134, o$$6, JAM.policy.p2);
+        introspect(JAM.policy.p2) {
+          v133[v134] = o$$6;
+        }
         JAM.call(midoriTab.select, midoriTab, [o$$6, true]);
       }
       JAM.call(midori.addEventListener, midori, [o$$6, "click", v104]);
@@ -185,7 +187,9 @@ function v103(obj$$24, noAnim) {
     v139.display = "none";
   }
   var v141 = this.selectedTabs;
-  JAM.set(v141, tabSet, obj$$24, JAM.policy.p2);
+  introspect(JAM.policy.p2) {
+    v141[tabSet] = obj$$24;
+  }
   var v142 = obj$$24.parentNode;
   v142.className = "tab-selected";
   var v143;
@@ -532,7 +536,9 @@ function v90(vars$$3) {
     var v194 = v739.style;
     var v195 = vars$$3.what;
     var v740 = newSize.toString();
-    JAM.set(v194, v195, v740 + "px", JAM.policy.p2);
+    introspect(JAM.policy.p2) {
+      v194[v195] = v740 + "px";
+    }
     var v741 = vars$$3.element;
     var v196 = v741.style;
     v196.opacity = newSize / 50;
@@ -550,7 +556,9 @@ function v90(vars$$3) {
     var v200 = vars$$3.what;
     var v1120 = vars$$3.elementSize;
     var v745 = v1120.toString();
-    JAM.set(v199, v200, v745 + "px", JAM.policy.p2);
+    introspect(JAM.policy.p2) {
+      v199[v200] = v745 + "px";
+    }
     var v746 = vars$$3.element;
     var v201 = v746.style;
     v201.opacity = 1;
@@ -638,7 +646,9 @@ function v87(vars$$1) {
     var v1360 = v1482[v1483];
     var v1127 = v1360.newSize;
     var v756 = v1127.toString();
-    JAM.set(v213, v214, v756 + "px", JAM.policy.p2);
+    introspect(JAM.policy.p2) {
+      v213[v214] = v756 + "px";
+    }
   } else {
     var v1128 = this.intervals;
     var v1129 = vars$$1.intervalKey;
@@ -650,7 +660,9 @@ function v87(vars$$1) {
     var v217 = vars$$1.what;
     var v1130 = vars$$1.elementSize;
     var v759 = v1130.toString();
-    JAM.set(v216, v217, v759 + "px", JAM.policy.p2);
+    introspect(JAM.policy.p2) {
+      v216[v217] = v759 + "px";
+    }
     var v760 = vars$$1.element;
     var v218 = v760.style;
     v218.overflow = "visible";
@@ -678,7 +690,9 @@ function v86(element$$3, what) {
   var offsetSize = v223;
   var v224 = element$$3.style;
   var v763 = offsetSize.toString();
-  JAM.set(v224, what, v763 + "px", JAM.policy.p2);
+  introspect(JAM.policy.p2) {
+    v224[what] = v763 + "px";
+  }
   var v764;
   var v1131 = what == "width";
   if (v1131) {
@@ -691,7 +705,9 @@ function v86(element$$3, what) {
   var v226 = element$$3.style;
   var v1132 = offsetSize - outsideSize;
   var v765 = v1132.toString();
-  JAM.set(v226, what, v765 + "px", JAM.policy.p2);
+  introspect(JAM.policy.p2) {
+    v226[what] = v765 + "px";
+  }
   return outsideSize;
 }
 function v85(obj$$23, highlightClass, removeAll) {
@@ -1454,7 +1470,9 @@ function v50(obj$$17, styleList) {
       v333 = JAM.call(this.setFloat, this, [obj$$17, v845]);
     } else {
       var v846 = obj$$17.style;
-      v333 = JAM.set(v846, i$$7, styleList[i$$7], JAM.policy.p2);
+      introspect(JAM.policy.p2) {
+        v333 = v846[i$$7] = styleList[i$$7];
+      }
     }
     v333;
   }
@@ -1521,7 +1539,9 @@ function v49(stylesheet, rule$$2, property) {
             if (v340) {
               var v855 = rules[i$$6];
               var v337 = v855.selectorText;
-              JAM.set(values$$4, v337, value, JAM.policy.p2);
+              introspect(JAM.policy.p2) {
+                values$$4[v337] = value;
+              }
             } else {
               var v856 = rules[i$$6];
               var v338 = v856.style;
@@ -1541,7 +1561,9 @@ function v49(stylesheet, rule$$2, property) {
               var v342 = v859.selectorText;
               var v1183 = rules[i$$6];
               var v860 = v1183.style;
-              JAM.set(values$$4, v342, v860[j$$1], JAM.policy.p2);
+              introspect(JAM.policy.p2) {
+                values$$4[v342] = v860[j$$1];
+              }
             } else {
               var v861 = rules[i$$6];
               var v343 = v861.style;
@@ -1989,7 +2011,9 @@ function v44(match$$1, pSelector, pA, pB) {
       c$$2 = c$$2.nextSibling;
     }
     var v409 = this.pCache;
-    JAM.set(v409, nodeKey, {parentChildren:parentChildren, pI:0}, JAM.policy.p2);
+    introspect(JAM.policy.p2) {
+      v409[nodeKey] = {parentChildren:parentChildren, pI:0};
+    }
   }
   var parentNumChildren = parentChildren.length;
   switch(pSelector) {
@@ -3076,7 +3100,9 @@ function midoriAjax(callback$$29, params$$1, cache) {
       thisObj$$2.status = v567.status;
       var v568 = thisObj$$2.cache;
       var v569 = thisObj$$2.cacheKey;
-      JAM.set(v568, v569, thisObj$$2.responseText, JAM.policy.p2);
+      introspect(JAM.policy.p2) {
+        v568[v569] = thisObj$$2.responseText;
+      }
     }
     JAM.call(thisObj$$2.callback, thisObj$$2, [params$$1]);
     return;
@@ -3148,7 +3174,9 @@ function midoriAutoComplete(vars$$7) {
         var response = v573;
         var v574 = thisObj$$3.suggestions;
         var v575 = response["snippet"];
-        JAM.set(v574, v575, response["result"], JAM.policy.p2);
+        introspect(JAM.policy.p2) {
+          v574[v575] = response["result"];
+        }
         var v576 = response["snippet"];
         JAM.call(thisObj$$3.showSuggestions, thisObj$$3, [v576]);
       }
@@ -3279,7 +3307,9 @@ function midoriAutoComplete(vars$$7) {
         var v597 = suggestions[i$$24];
         for (k$$2 in v597) {
           var v596 = suggestions[i$$24];
-          JAM.set(properties, k$$2, v596[k$$2], JAM.policy.p2);
+          introspect(JAM.policy.p2) {
+            properties[k$$2] = v596[k$$2];
+          }
         }
       }
       var v1627 = this.uniqid;

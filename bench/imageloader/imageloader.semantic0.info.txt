@@ -20,6 +20,6 @@ policy.js:196
 transactions:47
 checks:47
 callsites-indirected:68
-property-write-indirection:10
-property-read-indirection:4
-temporary-variables-collapsed:408
+property-write-indirection:7
+property-read-indirection:1
+temporary-variables-collapsed:407

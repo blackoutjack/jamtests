@@ -3,4 +3,7 @@ function f() {
   return 2;
 }
 x = 3;
-x = f()
+var v0 = f();
+introspect(JAM.policy.p1) {
+  x = v0
+}

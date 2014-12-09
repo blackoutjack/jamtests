@@ -21,13 +21,19 @@ function initSnippets() {
     return;
   }
   var d = document;
-  JAM.set(document.getElementById("c1"), "onclick", v0, JAM.policy.p1);
+  var v2 = document.getElementById("c1");
+  introspect(JAM.policy.p1) {
+    v2.onclick = v0;
+  }
   return;
 }
 function snapDisplay(c$$1) {
   var d$$1 = document;
   if (document.getElementById(c$$1).innerHTML == "Show All") {
-    JAM.set(document.getElementById(c$$1), "innerHTML", "Hide All", JAM.policy.p1);
+    var v3 = document.getElementById(c$$1);
+    introspect(JAM.policy.p1) {
+      v3.innerHTML = "Hide All";
+    }
     var i$$1 = 1;
     var v6 = i$$1 <= 31;
     for (;v6;) {
@@ -43,7 +49,10 @@ function snapDisplay(c$$1) {
       v6 = i$$1 <= 31;
     }
   } else {
-    JAM.set(document.getElementById(c$$1), "innerHTML", "Show All", JAM.policy.p1);
+    var v7 = document.getElementById(c$$1);
+    introspect(JAM.policy.p1) {
+      v7.innerHTML = "Show All";
+    }
     i$$1 = 1;
     var v10 = i$$1 <= 31;
     for (;v10;) {

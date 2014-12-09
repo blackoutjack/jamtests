@@ -1,5 +1,9 @@
 // switch.js
-x = JAM.call(Math.floor, Math, [Math.random() * 4]);
+var v0 = Math.random() * 4;
+var v2 = JAM.call(Math.floor, Math, [v0]);
+introspect(JAM.policy.p1) {
+  x = v2
+}
 switch(x) {
   case 0:
     introspect(JAM.policy.p1) {

@@ -68,7 +68,13 @@ function v1() {
           v28 = g$$2 == "number";
         }
         if (v28) {
-          JAM.set(f$$2, f$$2[a$$1], l$$2 + "=" + JAM.call(c$$1, null, [b$$2[l$$2]], JAM.policy.p3), JAM.policy.p2);
+          var v29 = f$$2;
+          var v30 = f$$2[a$$1];
+          var v58 = l$$2 + "=";
+          var v59 = JAM.call(c$$1, null, [b$$2[l$$2]], JAM.policy.p3);
+          introspect(JAM.policy.p2) {
+            v29[v30] = v58 + v59;
+          }
           var v31;
           if (l$$2 == "c2") {
             v31 = k$$2 = b$$2[l$$2];
@@ -112,7 +118,13 @@ function v1() {
           o$$1 = JAM.call(v37.split, v37, ["="], JAM.policy.p3);
           var v38 = o$$1[a$$1] == 2;
           if (v38) {
-            JAM.set(f$$2, f$$2[a$$1], o$$1[0] + "=" + JAM.call(c$$1, null, [o$$1[1]], JAM.policy.p3), JAM.policy.p2);
+            var v68 = f$$2;
+            var v69 = f$$2[a$$1];
+            var v87 = o$$1[0] + "=";
+            var v88 = JAM.call(c$$1, null, [o$$1[1]], JAM.policy.p3);
+            introspect(JAM.policy.p2) {
+              v68[v69] = v87 + v88;
+            }
           }
           l$$2++;
           v13 = l$$2 < n$$2;

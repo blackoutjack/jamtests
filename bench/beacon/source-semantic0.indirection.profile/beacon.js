@@ -98,7 +98,9 @@ function v1() {
           var v58 = l$$2 + "=";
           var v86 = b$$2[l$$2];
           var v59 = JAM.call(c$$1, null, [v86], JAM.policy.p3);
-          JAM.set(v29, v30, v58 + v59, JAM.policy.p2);
+          introspect(JAM.policy.p2) {
+            v29[v30] = v58 + v59;
+          }
           var v31;
           var v61 = l$$2 == "c2";
           if (v61) {
@@ -158,7 +160,9 @@ function v1() {
             var v87 = v96 + "=";
             var v97 = o$$1[1];
             var v88 = JAM.call(c$$1, null, [v97], JAM.policy.p3);
-            JAM.set(v68, v69, v87 + v88, JAM.policy.p2);
+            introspect(JAM.policy.p2) {
+              v68[v69] = v87 + v88;
+            }
           }
           l$$2++;
           v13 = l$$2 < n$$2;

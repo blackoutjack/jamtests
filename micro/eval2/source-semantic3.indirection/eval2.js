@@ -8,7 +8,10 @@ function runTest() {
     var v = "OK".indexOf("K");
     return v;
   }
-  x = f()
+  var v0 = f();
+  introspect(JAM.policy.p1) {
+    x = v0
+  }
 
   return x === "ok";
 }

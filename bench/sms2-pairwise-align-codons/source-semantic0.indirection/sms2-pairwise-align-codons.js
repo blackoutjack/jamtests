@@ -2329,7 +2329,9 @@ function path(i1, j1, i2, j2) {
         left$$1 = v379 - v380;
       }
       var v382 = this.Sn;
-      JAM.set(v382, j1, left$$1, JAM.policy.p6);
+      introspect(JAM.policy.p6) {
+        v382[j1] = left$$1;
+      }
       j$$12 = j1 + 1;
       var v396 = j$$12 <= j2;
       for (;v396;) {
@@ -2436,7 +2438,9 @@ function path(i1, j1, i2, j2) {
         var v394 = this.Sn;
         diag = v394[j$$12];
         var v395 = this.Sn;
-        JAM.set(v395, j$$12, left$$1, JAM.policy.p6);
+        introspect(JAM.policy.p6) {
+          v395[j$$12] = left$$1;
+        }
         j$$12++;
         v396 = j$$12 <= j2;
       }
@@ -2506,7 +2510,9 @@ function path(i1, j1, i2, j2) {
         right$$1 = v407 - v408;
       }
       var v410 = this.Sp;
-      JAM.set(v410, j2, right$$1, JAM.policy.p6);
+      introspect(JAM.policy.p6) {
+        v410[j2] = right$$1;
+      }
       j$$12 = j2 - 1;
       var v424 = j$$12 >= j1;
       for (;v424;) {
@@ -2613,7 +2619,9 @@ function path(i1, j1, i2, j2) {
         var v422 = this.Sp;
         diag = v422[j$$12];
         var v423 = this.Sp;
-        JAM.set(v423, j$$12, right$$1, JAM.policy.p6);
+        introspect(JAM.policy.p6) {
+          v423[j$$12] = right$$1;
+        }
         j$$12--;
         v424 = j$$12 >= j1;
       }

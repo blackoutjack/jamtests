@@ -881,7 +881,9 @@ function v32() {
         introspect(JAM.policy.p1) {
           var v390 = a$$1[i$$6]
         }
-        JAM.set(r$$1, v186, JAM.get(s$$4, v390, JAM.policy.p1));
+        introspect(JAM.policy.p1) {
+          r$$1[v186] = s$$4[v390];
+        }
         i$$6 = i$$6 + 1;
         var v391 = a$$1.length;
         v187 = i$$6 < v391;
@@ -896,7 +898,9 @@ function v32() {
         }
         var v188 = v392;
         if (v188) {
-          JAM.set(r$$1, p, JAM.get(s$$4, p, JAM.policy.p1));
+          introspect(JAM.policy.p1) {
+            r$$1[p] = s$$4[p];
+          }
         }
       }
       JAM.call(L._IEEnumFix, L, [r$$1, s$$4]);
@@ -938,7 +942,9 @@ function v32() {
         var v197 = JAM.call(L.hasOwnProperty, L, [overrides, i$$5]);
         if (v197) {
           var v196 = subc.prototype;
-          JAM.set(v196, i$$5, JAM.get(overrides, i$$5, JAM.policy.p1));
+          introspect(JAM.policy.p1) {
+            v196[i$$5] = overrides[i$$5];
+          }
         }
       }
       var v198 = subc.prototype;

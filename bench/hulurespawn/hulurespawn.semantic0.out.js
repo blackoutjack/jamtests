@@ -235,7 +235,10 @@ function v392() {
       return;
     }
     function v361(key$$31, value$$99) {
-      JAM.set(this.store, key$$31, value$$99, JAM.policy.p2);
+      var v418 = this.store;
+      introspect(JAM.policy.p2) {
+        v418[key$$31] = value$$99;
+      }
       return;
     }
     function v360(key$$30) {
@@ -813,7 +816,9 @@ function v322(GLOBAL$$1) {
   function v312(m$$5, name$$45) {
     var v516 = Event$$1.Methods[name$$45];
     var v3931 = JAM.call(v516.methodize, v516, [], JAM.policy.p1);
-    JAM.set(m$$5, name$$45, v3931, JAM.policy.p2);
+    introspect(JAM.policy.p2) {
+      m$$5[name$$45] = v3931;
+    }
     return m$$5;
   }
   function v311(event$$21, code$$5) {
@@ -1028,7 +1033,9 @@ function v322(GLOBAL$$1) {
       uid$$4 = JAM.call(getUniqueElementID$$1, null, [element$$176], JAM.policy.p1);
     }
     if (!CACHE[uid$$4]) {
-      JAM.set(CACHE, uid$$4, {element:element$$176}, JAM.policy.p2);
+      introspect(JAM.policy.p2) {
+        CACHE[uid$$4] = {element:element$$176};
+      }
     }
     return CACHE[uid$$4];
   }
@@ -1041,7 +1048,9 @@ function v322(GLOBAL$$1) {
       var handler$$inline_35 = handler$$5;
       var registry$$inline_36 = getRegistryForElement(element$$inline_33);
       if (!registry$$inline_36[eventName$$inline_34]) {
-        JAM.set(registry$$inline_36, eventName$$inline_34, [], JAM.policy.p2);
+        introspect(JAM.policy.p2) {
+          registry$$inline_36[eventName$$inline_34] = [];
+        }
       }
       var entries$$inline_37 = registry$$inline_36[eventName$$inline_34];
       var i$$inline_38 = entries$$inline_37.length;
@@ -1604,7 +1613,10 @@ function v290(element$$155) {
     var value$$91 = JAM.call(element$$155.getValue, element$$155, [], JAM.policy.p1);
     if (value$$91 != undefined) {
       var pair$$7 = {};
-      JAM.set(pair$$7, element$$155.name, value$$91, JAM.policy.p2);
+      var v650 = element$$155.name;
+      introspect(JAM.policy.p2) {
+        pair$$7[v650] = value$$91;
+      }
       return JAM.call(Object.toQueryString, Object, [pair$$7], JAM.policy.p1);
     }
   }
@@ -1824,12 +1836,17 @@ function v275(elements$$6, options$$8) {
   function v272(result$$13, key$$28, value$$89) {
     if (key$$28 in result$$13) {
       if (!JAM.call(Object.isArray, Object, [result$$13[key$$28]], JAM.policy.p1)) {
-        JAM.set(result$$13, key$$28, [result$$13[key$$28]], JAM.policy.p2);
+        var v686 = result$$13[key$$28];
+        introspect(JAM.policy.p2) {
+          result$$13[key$$28] = [v686];
+        }
       }
       var v688 = result$$13[key$$28];
       JAM.call(v688.push, v688, [value$$89], JAM.policy.p1);
     } else {
-      JAM.set(result$$13, key$$28, value$$89, JAM.policy.p2);
+      introspect(JAM.policy.p2) {
+        result$$13[key$$28] = value$$89;
+      }
     }
     return result$$13;
   }
@@ -2124,7 +2141,9 @@ function v269() {
     Sizzle$$1 = v259;
     var prop$$4;
     for (prop$$4 in oldSizzle) {
-      JAM.set(Sizzle$$1, prop$$4, oldSizzle[prop$$4], JAM.policy.p2);
+      introspect(JAM.policy.p2) {
+        Sizzle$$1[prop$$4] = oldSizzle[prop$$4];
+      }
     }
     div$$3 = null;
     return;
@@ -3691,13 +3710,17 @@ function v269() {
     var v1000 = Expr.match;
     var v1001 = type$$27;
     var v3944 = new RegExp(Expr.match[type$$27].source + /(?![^\[]*\])(?![^\(]*\))/.source);
-    JAM.set(v1000, v1001, v3944, JAM.policy.p2);
+    introspect(JAM.policy.p2) {
+      v1000[v1001] = v3944;
+    }
     var v1002 = Expr.leftMatch;
     var v1003 = type$$27;
     var v3261 = /(^(?:.|\r|\n)*?)/.source;
     var v3656 = Expr.match[type$$27].source;
     var v3945 = new RegExp(v3261 + JAM.call(v3656.replace, v3656, [/\\(\d+)/g, fescape], JAM.policy.p1));
-    JAM.set(v1002, v1003, v3945, JAM.policy.p2);
+    introspect(JAM.policy.p2) {
+      v1002[v1003] = v3945;
+    }
   }
   try {
     var v3263 = Array.prototype.slice;
@@ -4132,7 +4155,9 @@ function v187() {
           key$$inline_31 = key$$inline_31 + "-width";
         }
         JSCompiler_inline_result$$0 = JAM.call(key$$inline_31.camelize, key$$inline_31, [], JAM.policy.p1);
-        JAM.set(css$$2, JSCompiler_inline_result$$0, value$$84 + "px", JAM.policy.p2);
+        introspect(JAM.policy.p2) {
+          css$$2[JSCompiler_inline_result$$0] = value$$84 + "px";
+        }
       }
       return;
     }
@@ -4162,7 +4187,9 @@ function v187() {
       }
       var value$$83 = JAM.call(this.get, this, [key$$25], JAM.policy.p1);
       if (value$$83 != null) {
-        JAM.set(obj$$16, key$$25, value$$83, JAM.policy.p2);
+        introspect(JAM.policy.p2) {
+          obj$$16[key$$25] = value$$83;
+        }
       }
       return;
     }
@@ -5077,7 +5104,9 @@ function v134(GLOBAL) {
     if (!ELEMENT_CACHE[tagName$$2]) {
       var v1266 = ELEMENT_CACHE;
       var v3951 = JAM.call(Element$$1.extend, Element$$1, [JAM.call(document.createElement, document, [tagName$$2], JAM.policy.p1)]);
-      JAM.set(v1266, tagName$$2, v3951, JAM.policy.p2);
+      introspect(JAM.policy.p2) {
+        v1266[tagName$$2] = v3951;
+      }
     }
     var JSCompiler_inline_result$$3;
     JSCompiler_inline_label_shouldUseCreationCache_7: {
@@ -5784,7 +5813,9 @@ function v134(GLOBAL) {
       } else {
         v1396 = value$$62;
       }
-      JAM.set(attributes$$3, name$$36, v1396, JAM.policy.p2);
+      introspect(JAM.policy.p2) {
+        attributes$$3[name$$36] = v1396;
+      }
     }
     var attr$$1;
     for (attr$$1 in attributes$$3) {
@@ -5836,7 +5867,9 @@ function v134(GLOBAL) {
       return regExpCache[className];
     }
     var re = new RegExp("(^|\\s+)" + className + "(\\s+|$)");
-    JAM.set(regExpCache, className, re, JAM.policy.p2);
+    introspect(JAM.policy.p2) {
+      regExpCache[className] = re;
+    }
     return re;
   }
   function hasClassName(element$$47, className$$1) {
@@ -5952,7 +5985,9 @@ function v134(GLOBAL) {
           }
           property$$8 = v1427;
         }
-        JAM.set(elementStyle, property$$8, value$$63, JAM.policy.p2);
+        introspect(JAM.policy.p2) {
+          elementStyle[property$$8] = value$$63;
+        }
       }
     }
     return element$$55;
@@ -6140,7 +6175,9 @@ function v134(GLOBAL) {
     if (!Element$$1.Storage[uid$$2]) {
       var v1464 = Element$$1.Storage;
       var v3956 = $H();
-      JAM.set(v1464, uid$$2, v3956, JAM.policy.p2);
+      introspect(JAM.policy.p2) {
+        v1464[uid$$2] = v3956;
+      }
     }
     return Element$$1.Storage[uid$$2];
   }
@@ -6177,7 +6214,9 @@ function v134(GLOBAL) {
       var v2709 = JAM.call(Math.random, Math, [], JAM.policy.p1) + "";
       var id$$1 = "_" + JAM.call(v2709.slice, v2709, [2], JAM.policy.p1);
       var el = JAM.call(document.createElement, document, [tagName$$7], JAM.policy.p1);
-      JAM.set(proto$$2, id$$1, "x", JAM.policy.p2);
+      introspect(JAM.policy.p2) {
+        proto$$2[id$$1] = "x";
+      }
       var isBuggy = el[id$$1] !== "x";
       delete proto$$2[id$$1];
       el = null;
@@ -6195,7 +6234,9 @@ function v134(GLOBAL) {
       }
       if (v2710) {
         var v3957 = JAM.call(value$$70.methodize, value$$70, [], JAM.policy.p1);
-        JAM.set(element$$69, property$$9, v3957, JAM.policy.p2);
+        introspect(JAM.policy.p2) {
+          element$$69[property$$9] = v3957;
+        }
       }
     }
     return;
@@ -6255,7 +6296,9 @@ function v134(GLOBAL) {
   function addMethodsToTagName(tagName$$9, methods$$4) {
     tagName$$9 = JAM.call(tagName$$9.toUpperCase, tagName$$9, [], JAM.policy.p1);
     if (!ByTag[tagName$$9]) {
-      JAM.set(ByTag, tagName$$9, {}, JAM.policy.p2);
+      introspect(JAM.policy.p2) {
+        ByTag[tagName$$9] = {};
+      }
     }
     JAM.call(Object.extend, Object, [ByTag[tagName$$9], methods$$4], JAM.policy.p1);
     return;
@@ -6276,7 +6319,9 @@ function v134(GLOBAL) {
       }
       if (v2720) {
         var v3958 = JAM.call(value$$71.methodize, value$$71, [], JAM.policy.p1);
-        JAM.set(destination$$1, property$$10, v3958, JAM.policy.p2);
+        introspect(JAM.policy.p2) {
+          destination$$1[property$$10] = v3958;
+        }
       }
     }
     return;
@@ -6466,8 +6511,16 @@ function v134(GLOBAL) {
   var attr;
   var v1560 = attr = CAMEL_CASED_ATTRIBUTE_NAMES[i$$16];
   for (;v1560;) {
-    JAM.set(ATTRIBUTE_TRANSLATIONS.write.names, JAM.call(attr.toLowerCase, attr, [], JAM.policy.p1), attr, JAM.policy.p2);
-    JAM.set(ATTRIBUTE_TRANSLATIONS.has.names, JAM.call(attr.toLowerCase, attr, [], JAM.policy.p1), attr, JAM.policy.p2);
+    var v1556 = ATTRIBUTE_TRANSLATIONS.write.names;
+    var v1557 = JAM.call(attr.toLowerCase, attr, [], JAM.policy.p1);
+    introspect(JAM.policy.p2) {
+      v1556[v1557] = attr;
+    }
+    var v1558 = ATTRIBUTE_TRANSLATIONS.has.names;
+    var v1559 = JAM.call(attr.toLowerCase, attr, [], JAM.policy.p1);
+    introspect(JAM.policy.p2) {
+      v1558[v1559] = attr;
+    }
     i$$16++;
     v1560 = attr = CAMEL_CASED_ATTRIBUTE_NAMES[i$$16];
   }
@@ -6599,7 +6652,10 @@ function v109(responseText) {
     if (options$$5.insertion) {
       if (JAM.call(Object.isString, Object, [options$$5.insertion], JAM.policy.p1)) {
         var insertion = {};
-        JAM.set(insertion, options$$5.insertion, responseText, JAM.policy.p2);
+        var v1598 = options$$5.insertion;
+        introspect(JAM.policy.p2) {
+          insertion[v1598] = responseText;
+        }
         JAM.call(receiver.insert, receiver, [insertion], JAM.policy.p1);
       } else {
         JAM.call(options$$5.insertion, options$$5, [receiver, responseText], JAM.policy.p1);
@@ -6919,7 +6975,10 @@ function v93() {
 }
 function v92() {
   function v91(pair$$6) {
-    JAM.set(headers, pair$$6.key, pair$$6.value, JAM.policy.p2);
+    var v1645 = pair$$6.key;
+    introspect(JAM.policy.p2) {
+      headers[v1645] = pair$$6.value;
+    }
     return;
   }
   var headers = {"X-Requested-With":"XMLHttpRequest", "X-Prototype-Version":Prototype.Version, "Accept":"text/javascript, text/html, application/xml, text/xml, */*"};
@@ -6952,7 +7011,11 @@ function v92() {
       var length$$27 = extras.length;
       var v1653 = i$$15 < length$$27;
       for (;v1653;) {
-        JAM.set(headers, extras[i$$15], extras[i$$15 + 1], JAM.policy.p2);
+        var v1652 = extras[i$$15];
+        var v2816 = i$$15 + 1;
+        introspect(JAM.policy.p2) {
+          headers[v1652] = extras[v2816];
+        }
         i$$15 = i$$15 + 2;
         v1653 = i$$15 < length$$27;
       }
@@ -7243,7 +7306,10 @@ function v72() {
     return;
   }
   function set(key$$17, value$$54) {
-    return JAM.set(this._object, key$$17, value$$54, JAM.policy.p2);
+    var v1706 = this._object;
+    introspect(JAM.policy.p2) {
+      return v1706[key$$17] = value$$54;
+    }
   }
   function get(key$$18) {
     if (this._object[key$$18] !== Object.prototype[key$$18]) {
@@ -8274,12 +8340,17 @@ function v37() {
         }
         if (key$$15 in hash) {
           if (!JAM.call(Object.isArray, Object, [hash[key$$15]], JAM.policy.p1)) {
-            JAM.set(hash, key$$15, [hash[key$$15]], JAM.policy.p2);
+            var v1889 = hash[key$$15];
+            introspect(JAM.policy.p2) {
+              hash[key$$15] = [v1889];
+            }
           }
           var v1891 = hash[key$$15];
           JAM.call(v1891.push, v1891, [value$$31], JAM.policy.p1);
         } else {
-          JAM.set(hash, key$$15, value$$31, JAM.policy.p2);
+          introspect(JAM.policy.p2) {
+            hash[key$$15] = value$$31;
+          }
         }
       }
       return hash;
@@ -8530,7 +8601,10 @@ function v20() {
     var v1936 = length$$15;
     length$$15 = length$$15 - 1;
     for (;v1936;) {
-      JAM.set(array$$9, arrayLength + length$$15, args[length$$15], JAM.policy.p2);
+      var v1935 = arrayLength + length$$15;
+      introspect(JAM.policy.p2) {
+        array$$9[v1935] = args[length$$15];
+      }
       v1936 = length$$15;
       length$$15 = length$$15 - 1;
     }
@@ -8688,7 +8762,9 @@ function v14() {
   function extend(destination, source$$2) {
     var property$$1;
     for (property$$1 in source$$2) {
-      JAM.set(destination, property$$1, source$$2[property$$1], JAM.policy.p2);
+      introspect(JAM.policy.p2) {
+        destination[property$$1] = source$$2[property$$1];
+      }
     }
     return destination;
   }
@@ -9055,7 +9131,10 @@ function v12() {
         var v3980 = v10(method$$1);
         v2011.toString = v3980;
       }
-      JAM.set(this.prototype, property, value$$27, JAM.policy.p2);
+      var v2013 = this.prototype;
+      introspect(JAM.policy.p2) {
+        v2013[property] = value$$27;
+      }
       i$$2++;
       v2014 = i$$2 < length$$13;
     }
@@ -9131,7 +9210,9 @@ function $A(iterable) {
   var v2028 = length$$11;
   length$$11 = length$$11 - 1;
   for (;v2028;) {
-    JAM.set(results, length$$11, iterable[length$$11], JAM.policy.p2);
+    introspect(JAM.policy.p2) {
+      results[length$$11] = iterable[length$$11];
+    }
     v2028 = length$$11;
     length$$11 = length$$11 - 1;
   }

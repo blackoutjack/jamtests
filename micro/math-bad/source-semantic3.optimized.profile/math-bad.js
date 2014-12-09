@@ -1,7 +1,7 @@
 function runTest() {
 
   JAM.startProfile('load');
-  x=JAM.call(Math.floor,Math,[4*Math.random()])
+  var v0=4*Math.random(),v2=JAM.call(Math.floor,Math,[v0]);introspect(JAM.policy.p1)x=v2
 
   JAM.stopProfile('load');
 

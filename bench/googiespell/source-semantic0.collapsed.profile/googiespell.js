@@ -315,7 +315,9 @@ function v210() {
     introspect(JAM.policy.p1) {
       var v310 = v918[i]
     }
-    JAM.set(lang_span, "innerHTML", JAM.get(v309, v310, JAM.policy.p1));
+    introspect(JAM.policy.p1) {
+      lang_span.innerHTML = v309[v310];
+    }
     JAM.call(item$$2.appendChild, item$$2, [JAM.call(AJS.TN, AJS, [lang_span.innerHTML])]);
     var fn$$20 = v207;
     JAM.call(AJS.AEV, AJS, [item$$2, "click", JAM.call(AJS.$b, AJS, [fn$$20, this])]);
@@ -614,7 +616,9 @@ function v198(elm$$43, id$$4) {
       row = AJS.TR();
       item$$1 = AJS.TD();
       dummy = AJS.SPAN();
-      JAM.set(dummy, "innerHTML", JAM.get(suggestions, i, JAM.policy.p1));
+      introspect(JAM.policy.p1) {
+        dummy.innerHTML = suggestions[i];
+      }
       var tre = JAM.call(AJS.TN, AJS, [dummy.innerHTML]);
       JAM.call(item$$1.appendChild, item$$1, [tre]);
       var fn$$17 = v193;
@@ -1286,7 +1290,9 @@ function v146(scope$$3) {
   scope$$3 = scope$$3 || window;
   for (e in AJS) {
     if (e != "addEventListener") {
-      JAM.set(scope$$3, e, JAM.get(AJS, e, JAM.policy.p1));
+      introspect(JAM.policy.p1) {
+        scope$$3[e] = AJS[e];
+      }
     }
   }
   return;
@@ -2748,7 +2754,9 @@ function v19(list$$6) {
 function v17(l1, l2) {
   var i$$6;
   for (i$$6 in l2) {
-    JAM.set(l1, i$$6, JAM.get(l2, i$$6, JAM.policy.p1));
+    introspect(JAM.policy.p1) {
+      l1[i$$6] = l2[i$$6];
+    }
   }
   return l1;
 }

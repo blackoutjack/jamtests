@@ -32,9 +32,13 @@ function start() {
 }
 function next() {
   var v3 = JAM.call(JAM.get(document, "getElementById", JAM.policy.p97), document, ["frameparent"], JAM.policy.p97);
-  JAM.set(v3, "innerHTML", "", JAM.policy.p54);
+  introspect(JAM.policy.p54) {
+    v3.innerHTML = "";
+  }
   var v4 = JAM.call(JAM.get(document, "getElementById", JAM.policy.p97), document, ["frameparent"], JAM.policy.p97);
-  JAM.set(v4, "innerHTML", "<iframe id='testframe'>", JAM.policy.p54);
+  introspect(JAM.policy.p54) {
+    v4.innerHTML = "<iframe id='testframe'>";
+  }
   var testFrame = JAM.call(JAM.get(document, "getElementById", JAM.policy.p97), document, ["testframe"], JAM.policy.p97);
   var v26 = testIndex = testIndex + 1;
   var v27 = tests.length;
@@ -76,7 +80,9 @@ function recordResult(time) {
     introspect(JAM.policy.p105) {
       var v13 = tests[testIndex]
     }
-    JAM.set(v12, v13, time, JAM.policy.p106);
+    introspect(JAM.policy.p106) {
+      v12[v13] = time;
+    }
   }
   return;
 }

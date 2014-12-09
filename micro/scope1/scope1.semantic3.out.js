@@ -4,4 +4,7 @@ function a() {
   return z$$3;
 }
 var z = 3;
-x = a()
+var v0 = a();
+introspect(JAM.policy.p1) {
+  x = v0
+}

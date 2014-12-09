@@ -286,9 +286,13 @@ function v98() {
     }
     var v128 = b$$33 + 1;
     var v484 = b$$33 + 3;
-    JAM.set(c$$31, v128, JAM.get(c$$31, v484, JAM.policy.p18), JAM.policy.p18);
+    introspect(JAM.policy.p18) {
+      c$$31[v128] = c$$31[v484];
+    }
     var v129 = b$$33 + 3;
-    JAM.set(c$$31, v129, d$$19, JAM.policy.p17);
+    introspect(JAM.policy.p17) {
+      c$$31[v129] = d$$19;
+    }
     var v130 = this._invKeySchedule;
     JAM.call(this._doCryptBlock, this, [c$$31, b$$33, v130, k$$5, f$$17, g$$10, a$$52, r$$5]);
     var v131 = b$$33 + 1;
@@ -297,9 +301,13 @@ function v98() {
     }
     var v132 = b$$33 + 1;
     var v485 = b$$33 + 3;
-    JAM.set(c$$31, v132, JAM.get(c$$31, v485, JAM.policy.p18), JAM.policy.p18);
+    introspect(JAM.policy.p18) {
+      c$$31[v132] = c$$31[v485];
+    }
     var v133 = b$$33 + 3;
-    JAM.set(c$$31, v133, d$$19, JAM.policy.p17);
+    introspect(JAM.policy.p17) {
+      c$$31[v133] = d$$19;
+    }
     return;
   }
   function v95(a$$53, b$$32) {
@@ -1951,7 +1959,9 @@ function v47(p, h$$4) {
       for (c$$1 in a$$2) {
         var v336 = a$$2.hasOwnProperty(c$$1);
         if (v336) {
-          JAM.set(this, c$$1, JAM.get(a$$2, c$$1, JAM.policy.p18), JAM.policy.p18);
+          introspect(JAM.policy.p18) {
+            this[c$$1] = a$$2[c$$1];
+          }
         }
       }
       var v337 = a$$2.hasOwnProperty("toString");
@@ -2221,7 +2231,9 @@ function SNote(serverPath, divParent) {
     v391.display = "none";
     var parent$$inline_94 = divDeleteDialog;
     label = document.createElement("label");
-    JAM.set(label, "textContent", "Are you sure you want to delete?", JAM.policy.p16);
+    introspect(JAM.policy.p16) {
+      label.textContent = "Are you sure you want to delete?";
+    }
     JAM.call(parent$$inline_94.appendChild, parent$$inline_94, [label]);
     var v392 = createDeleteDialogOkHandler(strServerPath$$inline_92, strNoteId$$inline_93);
     var v393 = createDeleteDialogCancelHandler(strNoteId$$inline_93);
@@ -2245,7 +2257,9 @@ function SNote(serverPath, divParent) {
     divPassword = document.createElement("div");
     JAM.call(divParent$$8.appendChild, divParent$$8, [divPassword]);
     labelPassword = document.createElement("label");
-    JAM.set(labelPassword, "textContent", strPrompt, JAM.policy.p16);
+    introspect(JAM.policy.p16) {
+      labelPassword.textContent = strPrompt;
+    }
     JAM.call(divPassword.appendChild, divPassword, [labelPassword]);
     inputPassword = document.createElement("input");
     inputPassword.type = "password";
@@ -2267,12 +2281,16 @@ function SNote(serverPath, divParent) {
     divButtons = document.createElement("div");
     buttonOk = document.createElement("button");
     buttonOk.type = "input";
-    JAM.set(buttonOk, "textContent", "ok", JAM.policy.p16);
+    introspect(JAM.policy.p16) {
+      buttonOk.textContent = "ok";
+    }
     JAM.set(buttonOk, "onclick", funcHandleOk);
     JAM.call(divButtons.appendChild, divButtons, [buttonOk]);
     buttonCancel = document.createElement("button");
     buttonCancel.type = "input";
-    JAM.set(buttonCancel, "textContent", "cancel", JAM.policy.p16);
+    introspect(JAM.policy.p16) {
+      buttonCancel.textContent = "cancel";
+    }
     JAM.set(buttonCancel, "onclick", funcHandleCancel);
     JAM.call(divButtons.appendChild, divButtons, [buttonCancel]);
     JAM.call(parent$$1.appendChild, parent$$1, [divButtons]);
@@ -2328,7 +2346,9 @@ function SNote(serverPath, divParent) {
     var v626 = strNoteId$$16 + "_";
     var v409 = v626 + "pre_note";
     var preNote$$1 = document.getElementById(v409);
-    JAM.set(preNote$$1, "textContent", strVal, JAM.policy.p16);
+    introspect(JAM.policy.p16) {
+      preNote$$1.textContent = strVal;
+    }
     return;
   }
   function hideEditButton(strNoteId$$27) {
@@ -2544,7 +2564,9 @@ function SNote(serverPath, divParent) {
         var v645 = strNoteId$$45 + "_";
         var v439 = v645 + "pre_cipher_text";
         var preCipherText$$inline_70 = document.getElementById(v439);
-        JAM.set(preCipherText$$inline_70, "textContent", strVal$$inline_69, JAM.policy.p16);
+        introspect(JAM.policy.p16) {
+          preCipherText$$inline_70.textContent = strVal$$inline_69;
+        }
         var strNoteId$$inline_72 = strNoteId$$45;
         closeDialogsBoxes(strNoteId$$inline_72);
         hideEditButton(strNoteId$$inline_72);
@@ -2625,7 +2647,9 @@ function Clock(serverPath$$1, divParent$$10) {
       var v450 = divParent$$12;
       var v648 = new Date;
       var v1114 = v648.toString();
-      JAM.set(v450, "textContent", v1114, JAM.policy.p16);
+      introspect(JAM.policy.p16) {
+        v450.textContent = v1114;
+      }
       arrSNoteDivs = getElementsByClass("mwwidget:snote");
       i = 0;
       var v649 = arrSNoteDivs.length;
@@ -2642,7 +2666,9 @@ function Clock(serverPath$$1, divParent$$10) {
           var strNote$$1 = preNote$$2.textContent
         }
         var v1115 = strNote$$1.replace(/declined/gi, "accepted");
-        JAM.set(preNote$$2, "textContent", v1115, JAM.policy.p16);
+        introspect(JAM.policy.p16) {
+          preNote$$2.textContent = v1115;
+        }
         i++;
         var v650 = arrSNoteDivs.length;
         v452 = i < v650;

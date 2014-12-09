@@ -114,7 +114,10 @@ function v484($$$4, undefined$$5) {
       } else {
         v2483 = "bottom";
       }
-      JAM.set(_set, v2483, valPercent + "%", JAM.policy.p2);
+      var v511 = v2483;
+      introspect(JAM.policy.p2) {
+        _set[v511] = valPercent + "%";
+      }
       var v2484 = JAM.call($$$4, null, [this]);
       var v512 = JAM.call(v2484.stop, v2484, [1, 1]);
       var v2485;
@@ -214,7 +217,10 @@ function v484($$$4, undefined$$5) {
       } else {
         v2504 = "bottom";
       }
-      JAM.set(_set, v2504, valPercent + "%", JAM.policy.p2);
+      var v543 = v2504;
+      introspect(JAM.policy.p2) {
+        _set[v543] = valPercent + "%";
+      }
       var v2505 = this.handle;
       var v544 = JAM.call(v2505.stop, v2505, [1, 1]);
       var v2506;
@@ -343,7 +349,9 @@ function v484($$$4, undefined$$5) {
             var v580 = vals$$1[i$$109]
           }
           var v5499 = JAM.call(this._trimAlignValue, this, [v580]);
-          JAM.set(vals$$1, i$$109, v5499, JAM.policy.p2);
+          introspect(JAM.policy.p2) {
+            vals$$1[i$$109] = v5499;
+          }
           i$$109 = i$$109 + 1;
           v581 = i$$109 < vals$$1.length;
         }
@@ -433,7 +441,9 @@ function v484($$$4, undefined$$5) {
     if (arguments.length > 1) {
       var v598 = this.options.values;
       var v5502 = JAM.call(this._trimAlignValue, this, [newValue$$1]);
-      JAM.set(v598, index$$45, v5502, JAM.policy.p2);
+      introspect(JAM.policy.p2) {
+        v598[index$$45] = v5502;
+      }
       this._refreshValue();
       JAM.call(this._change, this, [null, index$$45]);
       return;
@@ -449,7 +459,9 @@ function v484($$$4, undefined$$5) {
             var v601 = newValues$$1[i$$107]
           }
           var v5503 = JAM.call(this._trimAlignValue, this, [v601]);
-          JAM.set(vals, i$$107, v5503, JAM.policy.p2);
+          introspect(JAM.policy.p2) {
+            vals[i$$107] = v5503;
+          }
           JAM.call(this._change, this, [null, i$$107]);
           i$$107 = i$$107 + 1;
           v602 = i$$107 < vals.length;
@@ -568,7 +580,9 @@ function v484($$$4, undefined$$5) {
       }
       if (newVal !== JAM.call(this.values, this, [index$$42])) {
         newValues = this.values();
-        JAM.set(newValues, index$$42, newVal, JAM.policy.p2);
+        introspect(JAM.policy.p2) {
+          newValues[index$$42] = newVal;
+        }
         var v3837 = this.handles;
         introspect(JAM.policy.p3) {
           var v2557 = v3837[index$$42]
@@ -1167,7 +1181,11 @@ function v434($$$2, undefined$$3) {
       }
       return;
     }
-    JAM.set($$$2.Widget.prototype, "_" + method$$2, v432, JAM.policy.p2);
+    var v757 = $$$2.Widget.prototype;
+    var v758 = "_" + method$$2;
+    introspect(JAM.policy.p2) {
+      v757[v758] = v432;
+    }
     return;
   }
   function v430(type$$67, event$$17, data$$44) {
@@ -1192,7 +1210,9 @@ function v434($$$2, undefined$$3) {
     if (orig$$4) {
       for (prop$$9 in orig$$4) {
         if (!(prop$$9 in event$$17)) {
-          JAM.set(event$$17, prop$$9, JAM.get(orig$$4, prop$$9, JAM.policy.p4), JAM.policy.p4);
+          introspect(JAM.policy.p4) {
+            event$$17[prop$$9] = orig$$4[prop$$9];
+          }
         }
       }
     }
@@ -1339,7 +1359,10 @@ function v434($$$2, undefined$$3) {
     return JAM.call(this._setOption, this, ["disabled", false]);
   }
   function v417(key$$25, value$$49) {
-    JAM.set(this.options, key$$25, value$$49, JAM.policy.p2);
+    var v787 = this.options;
+    introspect(JAM.policy.p2) {
+      v787[key$$25] = value$$49;
+    }
     if (key$$25 === "disabled") {
       var v2673 = this.widget();
       var v788 = JAM.call(v2673.toggleClass, v2673, [this.widgetFullName + "-disabled ui-state-disabled", !!value$$49]);
@@ -1381,7 +1404,9 @@ function v434($$$2, undefined$$3) {
           var v797 = v2678[key$$23]
         }
         var v5522 = JAM.call(v796.extend, v796, [{}, v797]);
-        curOption = JAM.set(options$$11, key$$23, v5522, JAM.policy.p2);
+        introspect(JAM.policy.p2) {
+          curOption = options$$11[key$$23] = v5522;
+        }
         i$$103 = 0;
         var v800 = i$$103 < parts$$4.length - 1;
         for (;v800;) {
@@ -1397,7 +1422,9 @@ function v434($$$2, undefined$$3) {
           if (!v2680) {
             v2680 = {};
           }
-          JAM.set(curOption, v798, v2680, JAM.policy.p2);
+          introspect(JAM.policy.p2) {
+            curOption[v798] = v2680;
+          }
           introspect(JAM.policy.p3) {
             var v799 = parts$$4[i$$103]
           }
@@ -1422,7 +1449,9 @@ function v434($$$2, undefined$$3) {
           }
           return v801;
         }
-        JAM.set(curOption, key$$23, value$$48, JAM.policy.p2);
+        introspect(JAM.policy.p2) {
+          curOption[key$$23] = value$$48;
+        }
       } else {
         if (value$$48 === undefined$$3) {
           var v803;
@@ -1440,7 +1469,9 @@ function v434($$$2, undefined$$3) {
           }
           return v803;
         }
-        JAM.set(options$$11, key$$23, value$$48, JAM.policy.p2);
+        introspect(JAM.policy.p2) {
+          options$$11[key$$23] = value$$48;
+        }
       }
     }
     JAM.call(this._setOptions, this, [options$$11]);
@@ -1606,7 +1637,10 @@ function v434($$$2, undefined$$3) {
       v840 = name$$63;
     }
     var fullName$$1 = v840;
-    JAM.set($$$2.fn, name$$63, v408, JAM.policy.p2);
+    var v841 = $$$2.fn;
+    introspect(JAM.policy.p2) {
+      v841[name$$63] = v408;
+    }
     return;
   }
   function v405(target$$29) {
@@ -1650,9 +1684,13 @@ function v434($$$2, undefined$$3) {
               var v2710 = $$$2.widget;
               v843 = JAM.call(v2710.extend, v2710, [{}, value$$47]);
             }
-            JAM.set(target$$29, key$$22, v843, JAM.policy.p2);
+            introspect(JAM.policy.p2) {
+              target$$29[key$$22] = v843;
+            }
           } else {
-            JAM.set(target$$29, key$$22, value$$47, JAM.policy.p2);
+            introspect(JAM.policy.p2) {
+              target$$29[key$$22] = value$$47;
+            }
           }
         }
       }
@@ -1697,11 +1735,15 @@ function v434($$$2, undefined$$3) {
         return v400;
       }
       if (!JAM.call($$$2.isFunction, $$$2, [value$$46])) {
-        JAM.set(proxiedPrototype, prop$$8, value$$46, JAM.policy.p2);
+        introspect(JAM.policy.p2) {
+          proxiedPrototype[prop$$8] = value$$46;
+        }
         return;
       }
       var v5530 = v401();
-      JAM.set(proxiedPrototype, prop$$8, v5530, JAM.policy.p2);
+      introspect(JAM.policy.p2) {
+        proxiedPrototype[prop$$8] = v5530;
+      }
       return;
     }
     function v399(options$$8, element$$6) {
@@ -1728,14 +1770,20 @@ function v434($$$2, undefined$$3) {
       prototype = base$$1;
       base$$1 = $$$2.Widget;
     }
-    JAM.set($$$2.expr[":"], fullName.toLowerCase(), v398, JAM.policy.p2);
+    var v860 = $$$2.expr[":"];
+    var v861 = fullName.toLowerCase();
+    introspect(JAM.policy.p2) {
+      v860[v861] = v398;
+    }
     introspect(JAM.policy.p3) {
       var v862 = $$$2[namespace$$3]
     }
     if (!v862) {
       v862 = {};
     }
-    JAM.set($$$2, namespace$$3, v862, JAM.policy.p2);
+    introspect(JAM.policy.p2) {
+      $$$2[namespace$$3] = v862;
+    }
     introspect(JAM.policy.p3) {
       var v863 = $$$2[namespace$$3]
     }
@@ -1745,7 +1793,9 @@ function v434($$$2, undefined$$3) {
     introspect(JAM.policy.p3) {
       var v864 = $$$2[namespace$$3]
     }
-    constructor = JAM.set(v864, name$$62, v399, JAM.policy.p2);
+    introspect(JAM.policy.p2) {
+      constructor = v864[name$$62] = v399;
+    }
     JAM.call($$$2.extend, $$$2, [constructor, existingConstructor, {version:prototype.version, _proto:JAM.call($$$2.extend, $$$2, [{}, prototype]), _childConstructors:[]}]);
     basePrototype = new base$$1;
     var v866 = basePrototype;
@@ -1901,7 +1951,9 @@ function v396($$$1, undefined$$2) {
       if (!v2746) {
         v2746 = [];
       }
-      JAM.set(v890, i$$99, v2746, JAM.policy.p2);
+      introspect(JAM.policy.p2) {
+        v890[i$$99] = v2746;
+      }
       var v2747 = proto$$1.plugins;
       introspect(JAM.policy.p3) {
         var v891 = v2747[i$$99]
@@ -2019,8 +2071,16 @@ function v396($$$1, undefined$$2) {
     var side = v905;
     var type$$66 = name$$60.toLowerCase();
     var orig$$3 = {innerWidth:$$$1.fn.innerWidth, innerHeight:$$$1.fn.innerHeight, outerWidth:$$$1.fn.outerWidth, outerHeight:$$$1.fn.outerHeight};
-    JAM.set($$$1.fn, "inner" + name$$60, v383, JAM.policy.p2);
-    JAM.set($$$1.fn, "outer" + name$$60, v385, JAM.policy.p2);
+    var v910 = $$$1.fn;
+    var v911 = "inner" + name$$60;
+    introspect(JAM.policy.p2) {
+      v910[v911] = v383;
+    }
+    var v912 = $$$1.fn;
+    var v913 = "outer" + name$$60;
+    introspect(JAM.policy.p2) {
+      v912[v913] = v385;
+    }
     return;
   }
   function v380(element$$5) {
@@ -2395,9 +2455,20 @@ function v363(window$$1, undefined$$1) {
       return v971;
     }
     var type$$65 = name$$59.toLowerCase();
-    JAM.set(jQuery$$1.fn, "inner" + name$$59, v358, JAM.policy.p2);
-    JAM.set(jQuery$$1.fn, "outer" + name$$59, v359, JAM.policy.p2);
-    JAM.set(jQuery$$1.fn, type$$65, v361, JAM.policy.p2);
+    var v972 = jQuery$$1.fn;
+    var v973 = "inner" + name$$59;
+    introspect(JAM.policy.p2) {
+      v972[v973] = v358;
+    }
+    var v974 = jQuery$$1.fn;
+    var v975 = "outer" + name$$59;
+    introspect(JAM.policy.p2) {
+      v974[v975] = v359;
+    }
+    var v976 = jQuery$$1.fn;
+    introspect(JAM.policy.p2) {
+      v976[type$$65] = v361;
+    }
     return;
   }
   function v357(i$$94, name$$58) {
@@ -2420,7 +2491,9 @@ function v363(window$$1, undefined$$1) {
           }
           win.scrollTo(v977, v2818);
         } else {
-          JAM.set(this, method$$1, val$$7, JAM.policy.p2);
+          introspect(JAM.policy.p2) {
+            this[method$$1] = val$$7;
+          }
         }
         return;
       }
@@ -2475,7 +2548,10 @@ function v363(window$$1, undefined$$1) {
       return;
     }
     var method$$1 = "scroll" + name$$58;
-    JAM.set(jQuery$$1.fn, method$$1, v356, JAM.policy.p2);
+    var v982 = jQuery$$1.fn;
+    introspect(JAM.policy.p2) {
+      v982[method$$1] = v356;
+    }
     return;
   }
   function v354() {
@@ -2875,9 +2951,17 @@ function v363(window$$1, undefined$$1) {
       } else {
         v4046 = fx$$1.now;
       }
-      JAM.set(v1036, v1037, v4046 + fx$$1.unit, JAM.policy.p2);
+      var v2898 = v4046;
+      var v2899 = fx$$1.unit;
+      introspect(JAM.policy.p2) {
+        v1036[v1037] = v2898 + v2899;
+      }
     } else {
-      JAM.set(fx$$1.elem, fx$$1.prop, fx$$1.now, JAM.policy.p2);
+      var v1038 = fx$$1.elem;
+      var v1039 = fx$$1.prop;
+      introspect(JAM.policy.p2) {
+        v1038[v1039] = fx$$1.now;
+      }
     }
     return;
   }
@@ -3007,7 +3091,9 @@ function v363(window$$1, undefined$$1) {
     var v1077 = this.options.orig;
     var v1078 = this.prop;
     var v5535 = JAM.call(jQuery$$1.style, jQuery$$1, [this.elem, this.prop]);
-    JAM.set(v1077, v1078, v5535, JAM.policy.p2);
+    introspect(JAM.policy.p2) {
+      v1077[v1078] = v5535;
+    }
     this.options.hide = true;
     JAM.call(this.custom, this, [this.cur(), 0]);
     return;
@@ -3016,7 +3102,9 @@ function v363(window$$1, undefined$$1) {
     var v1081 = this.options.orig;
     var v1082 = this.prop;
     var v5536 = JAM.call(jQuery$$1.style, jQuery$$1, [this.elem, this.prop]);
-    JAM.set(v1081, v1082, v5536, JAM.policy.p2);
+    introspect(JAM.policy.p2) {
+      v1081[v1082] = v5536;
+    }
     this.options.show = true;
     var v2937;
     var v4828 = this.prop === "width";
@@ -3232,7 +3320,10 @@ function v363(window$$1, undefined$$1) {
     function v326(speed$$4, callback$$41) {
       return JAM.call(this.animate, this, [props$$2, speed$$4, callback$$41]);
     }
-    JAM.set(jQuery$$1.fn, name$$57, v326, JAM.policy.p2);
+    var v1111 = jQuery$$1.fn;
+    introspect(JAM.policy.p2) {
+      v1111[name$$57] = v326;
+    }
     return;
   }
   function v325(clearQueue, gotoEnd) {
@@ -3297,9 +3388,16 @@ function v363(window$$1, undefined$$1) {
             }
             var unit = v1120;
             if (unit !== "px") {
-              JAM.set(self$$12.style, name$$56, (end$$1 || 1) + unit, JAM.policy.p2);
+              var v1121 = self$$12.style;
+              var v2966 = end$$1 || 1;
+              introspect(JAM.policy.p2) {
+                v1121[name$$56] = v2966 + unit;
+              }
               start$$4 = (end$$1 || 1) / JAM.call(e$$30.cur, e$$30, [true]) * start$$4;
-              JAM.set(self$$12.style, name$$56, start$$4 + unit, JAM.policy.p2);
+              var v1123 = self$$12.style;
+              introspect(JAM.policy.p2) {
+                v1123[name$$56] = start$$4 + unit;
+              }
             }
             if (parts$$3[1]) {
               var v4085;
@@ -3329,7 +3427,9 @@ function v363(window$$1, undefined$$1) {
       for (p in prop$$6) {
         var name$$55 = p.replace(rdashAlpha, fcamelCase);
         if (p !== name$$55) {
-          JAM.set(prop$$6, name$$55, JAM.get(prop$$6, p, JAM.policy.p4), JAM.policy.p4);
+          introspect(JAM.policy.p4) {
+            prop$$6[name$$55] = prop$$6[p];
+          }
           delete prop$$6[p];
           p = name$$55;
         }
@@ -3381,11 +3481,15 @@ function v363(window$$1, undefined$$1) {
           introspect(JAM.policy.p3) {
             var v2976 = prop$$6[p]
           }
-          JAM.set(v1135, p, v2976[1], JAM.policy.p2);
+          introspect(JAM.policy.p2) {
+            v1135[p] = v2976[1];
+          }
           introspect(JAM.policy.p3) {
             var v1136 = prop$$6[p]
           }
-          JAM.set(prop$$6, p, v1136[0], JAM.policy.p2);
+          introspect(JAM.policy.p2) {
+            prop$$6[p] = v1136[0];
+          }
         }
       }
       if (opt.overflow != null) {
@@ -3546,7 +3650,9 @@ function v363(window$$1, undefined$$1) {
               display = "block";
             }
             elem$$114.remove();
-            JAM.set(elemdisplay, nodeName, display, JAM.policy.p2);
+            introspect(JAM.policy.p2) {
+              elemdisplay[nodeName] = display;
+            }
           }
           introspect(JAM.policy.p3) {
             var v1170 = this[i$$86]
@@ -3730,10 +3836,16 @@ function v363(window$$1, undefined$$1) {
     var lastModified = xhr$$3.getResponseHeader("Last-Modified");
     var etag = xhr$$3.getResponseHeader("Etag");
     if (lastModified) {
-      JAM.set(jQuery$$1.lastModified, url$$7, lastModified, JAM.policy.p2);
+      var v1199 = jQuery$$1.lastModified;
+      introspect(JAM.policy.p2) {
+        v1199[url$$7] = lastModified;
+      }
     }
     if (etag) {
-      JAM.set(jQuery$$1.etag, url$$7, etag, JAM.policy.p2);
+      var v1200 = jQuery$$1.etag;
+      introspect(JAM.policy.p2) {
+        v1200[url$$7] = etag;
+      }
     }
     var v1201 = xhr$$3.status === 304;
     if (!v1201) {
@@ -3930,7 +4042,9 @@ function v363(window$$1, undefined$$1) {
       data$$42 = tmp$$1;
       success();
       complete();
-      JAM.set(window$$1, jsonp, undefined$$1, JAM.policy.p2);
+      introspect(JAM.policy.p2) {
+        window$$1[jsonp] = undefined$$1;
+      }
       try {
         delete window$$1[jsonp];
       } catch (e$$24) {
@@ -4081,7 +4195,9 @@ function v363(window$$1, undefined$$1) {
       if (!v1248) {
         v1248 = v302;
       }
-      JAM.set(window$$1, jsonp, v1248, JAM.policy.p2);
+      introspect(JAM.policy.p2) {
+        window$$1[jsonp] = v1248;
+      }
     }
     var v3046 = s$$2.dataType === "script";
     if (v3046) {
@@ -4353,7 +4469,10 @@ function v363(window$$1, undefined$$1) {
     function v293(f) {
       return JAM.call(this.bind, this, [o, f]);
     }
-    JAM.set(jQuery$$1.fn, o, v293, JAM.policy.p2);
+    var v1299 = jQuery$$1.fn;
+    introspect(JAM.policy.p2) {
+      v1299[o] = v293;
+    }
     return;
   }
   function v292() {
@@ -4503,12 +4622,21 @@ function v363(window$$1, undefined$$1) {
     var old$$4 = {};
     var name$$54;
     for (name$$54 in options$$3) {
-      JAM.set(old$$4, name$$54, JAM.get(elem$$110.style, name$$54, JAM.policy.p4), JAM.policy.p4);
-      JAM.set(elem$$110.style, name$$54, JAM.get(options$$3, name$$54, JAM.policy.p4), JAM.policy.p4);
+      var v1321 = elem$$110.style;
+      introspect(JAM.policy.p4) {
+        old$$4[name$$54] = v1321[name$$54];
+      }
+      var v1322 = elem$$110.style;
+      introspect(JAM.policy.p4) {
+        v1322[name$$54] = options$$3[name$$54];
+      }
     }
     JAM.call(callback$$31.call, callback$$31, [elem$$110]);
     for (name$$54 in options$$3) {
-      JAM.set(elem$$110.style, name$$54, JAM.get(old$$4, name$$54, JAM.policy.p4), JAM.policy.p4);
+      var v1323 = elem$$110.style;
+      introspect(JAM.policy.p4) {
+        v1323[name$$54] = old$$4[name$$54];
+      }
     }
     return;
   }
@@ -4762,7 +4890,9 @@ function v363(window$$1, undefined$$1) {
     }
     name$$51 = name$$51.replace(rdashAlpha, fcamelCase);
     if (set$$8) {
-      JAM.set(style, name$$51, value$$43, JAM.policy.p2);
+      introspect(JAM.policy.p2) {
+        style[name$$51] = value$$43;
+      }
     }
     introspect(JAM.policy.p3) {
       return style[name$$51];
@@ -5103,7 +5233,10 @@ function v363(window$$1, undefined$$1) {
       }
       return;
     }
-    JAM.set(jQuery$$1.fn, name$$48, v271, JAM.policy.p2);
+    var v1411 = jQuery$$1.fn;
+    introspect(JAM.policy.p2) {
+      v1411[name$$48] = v271;
+    }
     return;
   }
   function v270(args$$6, table, callback$$30) {
@@ -5745,7 +5878,10 @@ function v363(window$$1, undefined$$1) {
       }
       return JAM.call(this.pushStack, this, [ret$$18, name$$47, JAM.call(slice.call, slice, [arguments]).join(",")]);
     }
-    JAM.set(jQuery$$1.fn, name$$47, v231, JAM.policy.p2);
+    var v1514 = jQuery$$1.fn;
+    introspect(JAM.policy.p2) {
+      v1514[name$$47] = v231;
+    }
     return;
   }
   function v230(elem$$92) {
@@ -5925,7 +6061,9 @@ function v363(window$$1, undefined$$1) {
             } else {
               v3222 = selector$$14;
             }
-            JAM.set(v1529, v1530, v3222, JAM.policy.p2);
+            introspect(JAM.policy.p2) {
+              v1529[v1530] = v3222;
+            }
           }
           i$$64++;
           v1532 = i$$64 < l$$19;
@@ -6138,7 +6276,9 @@ function v363(window$$1, undefined$$1) {
       Sizzle = v201;
       var prop$$5;
       for (prop$$5 in oldSizzle) {
-        JAM.set(Sizzle, prop$$5, JAM.get(oldSizzle, prop$$5, JAM.policy.p4), JAM.policy.p4);
+        introspect(JAM.policy.p4) {
+          Sizzle[prop$$5] = oldSizzle[prop$$5];
+        }
       }
       div$$3 = null;
       return;
@@ -7753,7 +7893,9 @@ function v363(window$$1, undefined$$1) {
         var v5017 = v5305[type$$53]
       }
       var v5546 = new RegExp(v5017.source + /(?![^\[]*\])(?![^\(]*\))/.source);
-      JAM.set(v1814, v1815, v5546, JAM.policy.p2);
+      introspect(JAM.policy.p2) {
+        v1814[v1815] = v5546;
+      }
       var v1816 = Expr.leftMatch;
       var v1817 = type$$53;
       var v4399 = /(^(?:.|\r|\n)*?)/.source;
@@ -7762,7 +7904,9 @@ function v363(window$$1, undefined$$1) {
         var v5306 = v5428[type$$53]
       }
       var v5547 = new RegExp(v4399 + v5306.source.replace(/\\(\d+)/g, v190));
-      JAM.set(v1816, v1817, v5547, JAM.policy.p2);
+      introspect(JAM.policy.p2) {
+        v1816[v1817] = v5547;
+      }
     }
     try {
       var v4401 = Array.prototype.slice;
@@ -7835,7 +7979,10 @@ function v363(window$$1, undefined$$1) {
       }
       return v1830;
     }
-    JAM.set(jQuery$$1.fn, name$$42, v133, JAM.policy.p2);
+    var v1831 = jQuery$$1.fn;
+    introspect(JAM.policy.p2) {
+      v1831[name$$42] = v133;
+    }
     if (jQuery$$1.attrFn) {
       var v1832 = jQuery$$1.attrFn;
       introspect(JAM.policy.p2) {
@@ -7930,7 +8077,10 @@ function v363(window$$1, undefined$$1) {
       }
       return this;
     }
-    JAM.set(jQuery$$1.fn, name$$41, v131, JAM.policy.p2);
+    var v1850 = jQuery$$1.fn;
+    introspect(JAM.policy.p2) {
+      v1850[name$$41] = v131;
+    }
     return;
   }
   function v129(fnOver, fnOut) {
@@ -8078,7 +8228,10 @@ function v363(window$$1, undefined$$1) {
       }
       return this;
     }
-    JAM.set(jQuery$$1.fn, name$$40, v119, JAM.policy.p2);
+    var v1879 = jQuery$$1.fn;
+    introspect(JAM.policy.p2) {
+      v1879[name$$40] = v119;
+    }
     return;
   }
   function v117(orig$$2, fix$$1) {
@@ -8097,7 +8250,10 @@ function v363(window$$1, undefined$$1) {
       var v1881 = jQuery$$1.event.handle;
       return JAM.call(v1881.call, v1881, [this, e$$18]);
     }
-    JAM.set(jQuery$$1.event.special, fix$$1, {setup:v115, teardown:v116}, JAM.policy.p2);
+    var v1882 = jQuery$$1.event.special;
+    introspect(JAM.policy.p2) {
+      v1882[fix$$1] = {setup:v115, teardown:v116};
+    }
     return;
   }
   function v114(namespaces$$8) {
@@ -8321,7 +8477,10 @@ function v363(window$$1, undefined$$1) {
       JAM.call(v1911.add, v1911, [this, fix, v3444, orig$$1]);
       return;
     }
-    JAM.set(jQuery$$1.event.special, orig$$1, {setup:v101, teardown:v102}, JAM.policy.p2);
+    var v1913 = jQuery$$1.event.special;
+    introspect(JAM.policy.p2) {
+      v1913[orig$$1] = {setup:v101, teardown:v102};
+    }
     return;
   }
   function v100() {
@@ -8437,7 +8596,9 @@ function v363(window$$1, undefined$$1) {
       introspect(JAM.policy.p3) {
         prop$$4 = v1934[v1935];
       }
-      JAM.set(event$$4, prop$$4, JAM.get(originalEvent, prop$$4, JAM.policy.p4), JAM.policy.p4);
+      introspect(JAM.policy.p4) {
+        event$$4[prop$$4] = originalEvent[prop$$4];
+      }
     }
     if (!event$$4.target) {
       var v1936 = event$$4.srcElement;
@@ -8831,7 +8992,10 @@ function v363(window$$1, undefined$$1) {
                 old = target$$27[v1983];
               }
               if (old) {
-                JAM.set(target$$27, "on" + type$$38, null, JAM.policy.p2);
+                var v1984 = "on" + type$$38;
+                introspect(JAM.policy.p2) {
+                  target$$27[v1984] = null;
+                }
               }
               jQuery$$1.event.triggered = true;
               JAM.call(JAM.get(target$$27, type$$38, JAM.policy.p3), target$$27, []);
@@ -8839,7 +9003,10 @@ function v363(window$$1, undefined$$1) {
           } catch (e$$8) {
           }
           if (old) {
-            JAM.set(target$$27, "on" + type$$38, old, JAM.policy.p2);
+            var v1987 = "on" + type$$38;
+            introspect(JAM.policy.p2) {
+              target$$27[v1987] = old;
+            }
           }
           jQuery$$1.event.triggered = false;
         }
@@ -9132,7 +9299,9 @@ function v363(window$$1, undefined$$1) {
       }
       var special$$1 = v2035;
       if (!handlers) {
-        handlers = JAM.set(events$$2, type$$36, [], JAM.policy.p2);
+        introspect(JAM.policy.p2) {
+          handlers = events$$2[type$$36] = [];
+        }
         var v3527 = !special$$1.setup;
         if (!v3527) {
           var v5066 = special$$1.setup;
@@ -9237,7 +9406,9 @@ function v363(window$$1, undefined$$1) {
           if (v3541) {
             JAM.call(jQuery$$1.error, jQuery$$1, ["type property can't be changed"]);
           }
-          JAM.set(elem$$19, name$$39, value$$36, JAM.policy.p2);
+          introspect(JAM.policy.p2) {
+            elem$$19[name$$39] = value$$36;
+          }
         }
         var v3542 = JAM.call(jQuery$$1.nodeName, jQuery$$1, [elem$$19, "form"]);
         if (v3542) {
@@ -9894,23 +10065,33 @@ function v363(window$$1, undefined$$1) {
       id$$1 = uuid = uuid + 1;
     }
     if (typeof name$$35 === "object") {
-      JAM.set(elem$$10, expando, id$$1, JAM.policy.p2);
+      introspect(JAM.policy.p2) {
+        elem$$10[expando] = id$$1;
+      }
       var v5554 = JAM.call(jQuery$$1.extend, jQuery$$1, [true, {}, name$$35]);
-      thisCache = JAM.set(cache, id$$1, v5554, JAM.policy.p2);
+      introspect(JAM.policy.p2) {
+        thisCache = cache[id$$1] = v5554;
+      }
     } else {
       introspect(JAM.policy.p3) {
         var v3603 = cache[id$$1]
       }
       if (!v3603) {
-        JAM.set(elem$$10, expando, id$$1, JAM.policy.p2);
-        JAM.set(cache, id$$1, {}, JAM.policy.p2);
+        introspect(JAM.policy.p2) {
+          elem$$10[expando] = id$$1;
+        }
+        introspect(JAM.policy.p2) {
+          cache[id$$1] = {};
+        }
       }
     }
     introspect(JAM.policy.p3) {
       thisCache = cache[id$$1];
     }
     if (data$$21 !== undefined$$1) {
-      JAM.set(thisCache, name$$35, data$$21, JAM.policy.p2);
+      introspect(JAM.policy.p2) {
+        thisCache[name$$35] = data$$21;
+      }
     }
     var v2164;
     if (typeof name$$35 === "string") {
@@ -10168,7 +10349,9 @@ function v363(window$$1, undefined$$1) {
       for (;v2207;) {
         var v2206 = i$$11;
         i$$11 = i$$11 + 1;
-        JAM.set(first$$1, v2206, JAM.get(second, j$$1, JAM.policy.p4), JAM.policy.p4);
+        introspect(JAM.policy.p4) {
+          first$$1[v2206] = second[j$$1];
+        }
         j$$1++;
         v2207 = j$$1 < l$$1;
       }
@@ -10182,7 +10365,9 @@ function v363(window$$1, undefined$$1) {
         i$$11 = i$$11 + 1;
         var v3638 = j$$1;
         j$$1 = j$$1 + 1;
-        JAM.set(first$$1, v2208, JAM.get(second, v3638, JAM.policy.p4), JAM.policy.p4);
+        introspect(JAM.policy.p4) {
+          first$$1[v2208] = second[v3638];
+        }
         introspect(JAM.policy.p3) {
           var v3639 = second[j$$1]
         }
@@ -10569,10 +10754,14 @@ function v363(window$$1, undefined$$1) {
             }
             var clone = v2257;
             var v5557 = JAM.call(jQuery$$1.extend, jQuery$$1, [deep$$2, clone, copy]);
-            JAM.set(target$$26, name$$31, v5557, JAM.policy.p2);
+            introspect(JAM.policy.p2) {
+              target$$26[name$$31] = v5557;
+            }
           } else {
             if (copy !== undefined$$1) {
-              JAM.set(target$$26, name$$31, copy, JAM.policy.p2);
+              introspect(JAM.policy.p2) {
+                target$$26[name$$31] = copy;
+              }
             }
           }
         }
@@ -11246,13 +11435,17 @@ function v363(window$$1, undefined$$1) {
       } else {
         v3746 = 1;
       }
-      JAM.set(v2363, v2364, v3746, JAM.policy.p2);
+      introspect(JAM.policy.p2) {
+        v2363[v2364] = v3746;
+      }
     }
     return{fragment:fragment, cacheable:cacheable};
   }
   function genFx(type$$28, num$$4) {
     function v7() {
-      JAM.set(obj$$16, this, type$$28, JAM.policy.p2);
+      introspect(JAM.policy.p2) {
+        obj$$16[this] = type$$28;
+      }
       return;
     }
     var obj$$16 = {};
@@ -11518,7 +11711,9 @@ function v363(window$$1, undefined$$1) {
 function hexFromRGB(r$$3, g, b$$5) {
   function v0(nr, val$$11) {
     if (val$$11.length == 1) {
-      JAM.set(hex, nr, "0" + val$$11, JAM.policy.p2);
+      introspect(JAM.policy.p2) {
+        hex[nr] = "0" + val$$11;
+      }
     }
     return;
   }
