@@ -9,3 +9,11 @@ intraprocedural-edges:570602
 intraprocedural-states:555467
 concrete-query-cache:concrete435814980.bin
 symbolic-query-cache:symbolic435814980.bin
+modular.policy.js:107
+policy.js:200
+transactions:5546
+checks:5546
+callsites-indirected:11978
+property-write-indirection:3076
+property-read-indirection:0
+temporary-variables-collapsed:111104

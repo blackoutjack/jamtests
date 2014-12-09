@@ -1,0 +1,17 @@
+0,-1: jam#set(`x,"innerHTML") && `x instanceof #HTMLElement
+0,-1: jam#invoke(#Global#eval)
+0,-1: jam#invoke(#Function)
+0,-1: jam#invoke(#Window#prototype#setTimeout)
+0,-1: jam#invoke(#Window#prototype#setInterval)
+0,-1: jam#invoke(#Window#prototype#setTimeout)
+0,-1: jam#invoke(#Element#prototype#setAttributeNodeNS)
+0,-1: jam#invoke(#Element#prototype#setAttributeNode)
+0,-1: jam#invoke(#Element#prototype#setAttributeNS)
+0,-1: jam#invoke(#Element#prototype#setAttribute)
+# Specify these more precisely
+0,-1: jam#invoke(#Object#prototype#__defineGetter__)
+0,-1: jam#invoke(#Object#prototype#__defineSetter__)
+0,-1: jam#invoke(#Object#defineProperty)
+0,-1: jam#invoke(#Function#prototype#bind)
+0,-1: jam#invoke(#Function#prototype#call)
+0,-1: jam#invoke(#Function#prototype#apply)

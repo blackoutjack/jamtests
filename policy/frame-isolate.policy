@@ -1,0 +1,6 @@
+0,-1: jam#invoke(#Window#prototype#open)
+0,-1: jam#invoke(#Window#prototype#openDialog)
+0,-1: jam#invoke(#Window#prototype#alert)
+0,-1: jam#invoke(#Window#prototype#confirm)
+0,-1: jam#invoke(#HTMLDocument#prototype#createElement) && jam#regextest(/^iframe$/i,jam#arg(0))
+0,-1: jam#invoke(#HTMLDocument#prototype#createElementNS) && jam#regextest(/^iframe$/i,jam#arg(0))
