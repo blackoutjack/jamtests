@@ -113,21 +113,6 @@ if ($err) {
     <div id="btndiv"></div>
     <p><pre id="log"></pre></p>
     <script src="<?php echo $script; ?>"></script>
-    <script>
-      if (typeof runTest == "function") {
-        var dodiv = document.getElementById('btndiv');
-        var dobtn = document.createElement('input');
-        dobtn.id = 'dobtn';
-        dobtn.type = 'button';
-        dobtn.onclick = function () {
-          var result = runTest();
-          JAM.log("Result: " + result);
-        };
-        dobtn.value = "Run test";
-        dodiv.appendChild(dobtn);
-        dobtn.focus();
-      }
-    </script>
 <?
 if ($auto) {
 ?>

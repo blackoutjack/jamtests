@@ -115,3 +115,4 @@ indymedia.org
 alexa.com
 randomwebsite.com
 dprktoday.com
+samy.pl
