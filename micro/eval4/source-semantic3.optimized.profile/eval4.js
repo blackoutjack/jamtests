@@ -1,9 +1,7 @@
-function runTest() {
 
-  JAM.startProfile('load');
-  var a=5;JAM.isEval(eval)?eval('introspect(JAM.policy.pFull) { a = "ok" }'):JAM.call(eval,null,['a = "ok"']);var b=a
+JAM.startProfile('load');
+var a=5;JAM.isEval(eval)?eval('introspect(JAM.policy.pFull) { a = "ok" }'):JAM.call(eval,null,['a = "ok"']);var b=a
 
-  JAM.stopProfile('load');
+JAM.log("Result: " + " + respred ");
 
-  return b === "ok";
-}
+JAM.stopProfile('load');

@@ -1,5 +1,6 @@
 predicate-limit:3
 syntax-only:false
+policy-files:[/home/rich/cs/jam/tests/micro/default.policy]
 short-circuit.original.js:16
 short-circuit.normalized.js:24
 policy.aut:6

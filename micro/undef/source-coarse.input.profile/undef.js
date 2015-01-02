@@ -1,12 +1,8 @@
+
+JAM.startProfile('load');
+introspect(JAM.policy.pFull) {
 x = y;
 
-  JAM.startProfile('load');
-  introspect(JAM.policy.pFull) {
-  
+}
 
-  }
-
-  JAM.stopProfile('load');
-
-
-x = y;
+JAM.stopProfile('load');

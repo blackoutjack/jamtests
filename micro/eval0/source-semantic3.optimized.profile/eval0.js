@@ -1,9 +1,7 @@
-function runTest() {
 
-  JAM.startProfile('load');
-  function f(){JAM.call(e,null,["x = 2"])}x=0;var e=eval;f()
+JAM.startProfile('load');
+function f(){JAM.call(e,null,["x = 2"])}x=0;var e=eval;f()
 
-  JAM.stopProfile('load');
+JAM.log("Result: " + " + respred ");
 
-  return x === 0;
-}
+JAM.stopProfile('load');

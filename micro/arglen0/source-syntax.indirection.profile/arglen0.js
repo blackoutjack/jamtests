@@ -1,10 +1,10 @@
-function runTest() {
 
-  JAM.startProfile('load');
+JAM.startProfile('load');
+function runTest() {
   var x = XMLHttpRequest();
   JAM.call(x.open, x, ["GET", "http://www.blackoutjack.com?secret=1"], JAM.policy.p1)
 
-  JAM.stopProfile('load');
-
   return "RESULT NOT SPECIFIED";
 }
+
+JAM.stopProfile('load');

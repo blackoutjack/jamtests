@@ -1,12 +1,12 @@
-function runTest() {
 
-  JAM.startProfile('load');
+JAM.startProfile('load');
+function runTest() {
   var f = document;
   introspect(JAM.policy.p1) {
     var x = f.getElementById("ok")
   }
 
-  JAM.stopProfile('load');
-
   return typeof x === "undefined";
 }
+
+JAM.stopProfile('load');

@@ -1,9 +1,7 @@
-function runTest() {
 
-  JAM.startProfile('load');
-  var f=document,x=JAM.call(f.getElementById,f,["ok"],JAM.policy.p1)
+JAM.startProfile('load');
+var f=document,x=JAM.call(f.getElementById,f,["ok"],JAM.policy.p1)
 
-  JAM.stopProfile('load');
+JAM.log("Result: " + " + respred ");
 
-  return typeof x === "undefined";
-}
+JAM.stopProfile('load');

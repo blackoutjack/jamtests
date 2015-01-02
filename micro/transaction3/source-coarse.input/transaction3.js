@@ -1,8 +1,7 @@
+introspect(JAM.policy.pFull) {
 alert('0');
-  introspect(JAM.policy.pFull) {
-  introspect(p) {
-
-  }
-
+introspect(p) {
   alert('1');
+}
+
 }

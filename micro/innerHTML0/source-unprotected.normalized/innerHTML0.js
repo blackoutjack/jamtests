@@ -1,7 +1,5 @@
-function runTest() {
-  x = 1;
-  var elt = document.getElementById("test");
-  elt.innerHTML = "<script>x = 2\x3c/script>"
+x = 1;
+var elt = document.getElementById("test");
+elt.innerHTML = "<script>x = 2\x3c/script>"
 
-  return x === 1;
-}
+JAM.log("Result: " + " + respred ");

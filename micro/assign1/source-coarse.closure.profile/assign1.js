@@ -1,16 +1,14 @@
-function runTest() {
 
-  JAM.startProfile('load');
-  introspect(JAM.policy.pFull) {
-  var a = 0;
-  var b = 10;
-  var c = 20;
-  a = b += c += 2;
-  alert("a: " + a + " b: " + b + " c: " + c)
+JAM.startProfile('load');
+introspect(JAM.policy.pFull) {
+var a = 0;
+var b = 10;
+var c = 20;
+a = b += c += 2;
+alert("a: " + a + " b: " + b + " c: " + c)
 
-  }
+JAM.log("Result: " + " + respred ");
 
-  JAM.stopProfile('load');
-
-  return a === 32 && b === 32 && c === 22;
 }
+
+JAM.stopProfile('load');

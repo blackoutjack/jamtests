@@ -1,6 +1,6 @@
-function runTest() {
 
-  JAM.startProfile('load');
+JAM.startProfile('load');
+function runTest() {
   function v0() {
     notanid();
     return;
@@ -21,7 +21,7 @@ function runTest() {
     console.error(ex$$1.name + ": " + ex$$1.message);
   }
 
-  JAM.stopProfile('load');
-
   return typeof x === "undefined";
 }
+
+JAM.stopProfile('load');

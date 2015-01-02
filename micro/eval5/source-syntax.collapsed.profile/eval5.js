@@ -1,6 +1,6 @@
-function runTest() {
 
-  JAM.startProfile('load');
+JAM.startProfile('load');
+function runTest() {
   function f1(a) {
     var i$$1 = 0;
     var v1 = i$$1 < 2;
@@ -38,7 +38,7 @@ function runTest() {
   JAM.call(f3, null, [code]);
   var result = "YOU'VE BEEN EVAL'D".indexOf("V")
 
-  JAM.stopProfile('load');
-
   return result === "you've been eval'd";
 }
+
+JAM.stopProfile('load');

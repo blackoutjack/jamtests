@@ -1,8 +1,7 @@
+introspect(JAM.policy.pFull) {
 var s = "ok";
-  introspect(JAM.policy.pFull) {
-  if (!s.indexOf("k")) {
-
-  }
-
+if (!s.indexOf("k")) {
   x = 2
+}
+
 }

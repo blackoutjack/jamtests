@@ -1,14 +1,13 @@
-function transformed() {
 
-  JAM.startProfile('load');
-  introspect(JAM.policy.pFull) {
+JAM.startProfile('load');
+introspect(JAM.policy.pFull) {
+function transformed() {
   xxx = undefined;
   xxx = 5;
 }
-
-  }
-
-  JAM.stopProfile('load');
-
 transformed();
 alert(xxx);
+
+}
+
+JAM.stopProfile('load');

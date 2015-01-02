@@ -1,5 +1,5 @@
+introspect(JAM.policy.pFull) {
 function f() {
-  introspect(JAM.policy.pFull) {
   prop = "b";
   return 2;
 }
@@ -20,8 +20,7 @@ for (var q in n) {
   alert("n[" + q + "]: " + n[q]);
 }
 for (var p in o) {
-
-  }
-
   alert("o[" + p + "]: " + o[p]);
+}
+
 }

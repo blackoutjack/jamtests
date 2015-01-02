@@ -1,6 +1,4 @@
-function runTest() {
-  document.getElementById = document.getElementsByTagName;
-  var elt = document.getElementById("ok")
+document.getElementById = document.getElementsByTagName;
+var elt = document.getElementById("ok")
 
-  return elt instanceof HTMLCollection;
-}
+JAM.log("Result: " + " + respred ");

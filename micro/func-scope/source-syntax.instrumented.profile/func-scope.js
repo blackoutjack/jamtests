@@ -1,6 +1,6 @@
-function runTest() {
 
-  JAM.startProfile('load');
+JAM.startProfile('load');
+function runTest() {
   function v1() {
     var v2 = cnt < 6;
     if (v2) {
@@ -26,7 +26,7 @@ function runTest() {
     g();
   }
 
-  JAM.stopProfile('load');
-
   return cnt === 6;
 }
+
+JAM.stopProfile('load');

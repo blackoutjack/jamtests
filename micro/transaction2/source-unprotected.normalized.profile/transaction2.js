@@ -1,18 +1,16 @@
-function runTest() {
 
-  JAM.startProfile('load');
-  function f() {
-    var v111 = 1;
-    x = undefined;
-    introspect(p.alert) {
-      x = 2;
-    }
-    alert(x);
-    return;
+JAM.startProfile('load');
+function f() {
+  var v111 = 1;
+  x = undefined;
+  introspect(p.alert) {
+    x = 2;
   }
-  f()
-
-  JAM.stopProfile('load');
-
-  return "The Tx object should be alerted, followed by 'undefined'";
+  alert(x);
+  return;
 }
+f()
+
+JAM.log("Result: " + " + respred ");
+
+JAM.stopProfile('load');

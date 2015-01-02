@@ -1,13 +1,12 @@
-function f() {
 
-  JAM.startProfile('load');
+JAM.startProfile('load');
+function f() {
   if (typeof x === "undefined") {
     //do nothing
   } else {
     x = 2;
   }
-
-  JAM.stopProfile('load');
-
 }
 f();
+
+JAM.stopProfile('load');

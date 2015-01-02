@@ -1,6 +1,6 @@
+introspect(JAM.policy.pFull) {
 var cnt = 10;
-  introspect(JAM.policy.pFull) {
-  function f() {
+function f() {
   cnt++;
   return 3;
 }
@@ -9,8 +9,7 @@ var i = 2;
 var b;
 //b = ++(a[f()]);
 b = a[f()] += 1;
-
-  }
-
 //b = a[f()] = a[f()] + 1;
 alert("a: " + a + " b: " + b + " i: " + i + " cnt: " + cnt);
+
+}

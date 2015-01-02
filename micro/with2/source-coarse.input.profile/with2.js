@@ -1,8 +1,8 @@
-var p = { c: 3 };
 
-  JAM.startProfile('load');
-  introspect(JAM.policy.pFull) {
-  function O() {
+JAM.startProfile('load');
+introspect(JAM.policy.pFull) {
+var p = { c: 3 };
+function O() {
   this.a = 1;
   this.b = 2;
 }
@@ -13,10 +13,9 @@ with (o) {
   var d = a;
   var e = c;
   var f = x;
-
-  }
-
-  JAM.stopProfile('load');
-
 }
 print("d: " + d + " e: " + e + " f: " + f);
+
+}
+
+JAM.stopProfile('load');

@@ -1,6 +1,4 @@
-function runTest() {
-  var f = new Function("var x = new XMLHttpRequest(); x.open('http://www.blackoutjack.com/home', true); x.send(null);");
-  f()
+var f = new Function("var x = new XMLHttpRequest(); x.open('http://www.blackoutjack.com/home', true); x.send(null);");
+f()
 
-  return typeof x === "undefined";
-}
+JAM.log("Result: " + " + respred ");

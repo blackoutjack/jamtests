@@ -1,12 +1,9 @@
-var s = 'is " this " ok' + '?';
 
-  JAM.startProfile('load');
-  introspect(JAM.policy.pFull) {
-  
-
-  }
-
-  JAM.stopProfile('load');
-
+JAM.startProfile('load');
+introspect(JAM.policy.pFull) {
 var s = 'is " this " ok' + '?';
 x = 2;
+
+}
+
+JAM.stopProfile('load');

@@ -1,11 +1,10 @@
-x = 4; 
 
-  JAM.startProfile('load');
-  if (x == 4) {
+JAM.startProfile('load');
+x = 4; 
+if (x == 4) {
   x = 3;
 } else {
-
-  JAM.stopProfile('load');
-
   x = 2;
 }
+
+JAM.stopProfile('load');

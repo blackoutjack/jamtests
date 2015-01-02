@@ -1,6 +1,6 @@
-function runTest() {
 
-  JAM.startProfile('load');
+JAM.startProfile('load');
+function runTest() {
   function f() {
     return;
   }
@@ -9,7 +9,7 @@ function runTest() {
     var elt = document.getElementById("ok")
   }
 
-  JAM.stopProfile('load');
-
   return elt === undefined;
 }
+
+JAM.stopProfile('load');

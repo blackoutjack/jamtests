@@ -1,9 +1,7 @@
-function runTest() {
 
-  JAM.startProfile('load');
-  var a=document;introspect(JAM.policy.p1)a.cookie="ok"
+JAM.startProfile('load');
+var a=document;introspect(JAM.policy.p1)a.cookie="ok"
 
-  JAM.stopProfile('load');
+JAM.log("Result: " + " + respred ");
 
-  return document.cookie !== "ok";
-}
+JAM.stopProfile('load');

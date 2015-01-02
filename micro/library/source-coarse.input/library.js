@@ -1,5 +1,5 @@
+introspect(JAM.policy.pFull) {
 function f() {
-  introspect(JAM.policy.pFull) {
   this.setter = function() {
     x = 2;
   }
@@ -7,8 +7,7 @@ function f() {
 function g() {
   this.setter = function() {
     x = 2;
-
   }
+}
 
-  }
 }

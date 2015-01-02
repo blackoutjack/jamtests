@@ -1,10 +1,10 @@
-function runTest() {
 
-  JAM.startProfile('load');
+JAM.startProfile('load');
+function runTest() {
   eval("var xxx = 5;");
   alert(xxx)
 
-  JAM.stopProfile('load');
-
   return "RESULT NOT SPECIFIED";
 }
+
+JAM.stopProfile('load');

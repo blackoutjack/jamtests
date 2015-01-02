@@ -1,13 +1,11 @@
-function runTest() {
-  introspect(JAM.policy.pFull) {
-  var a = document.getElementById("ok");
-  var b = document.cookie;
-  document.cookie = "other";
-  var c = document.createElement("img");
-  c.src = b;
-  document.write(b)
+introspect(JAM.policy.pFull) {
+var a = document.getElementById("ok");
+var b = document.cookie;
+document.cookie = "other";
+var c = document.createElement("img");
+c.src = b;
+document.write(b)
 
-  }
+JAM.log("Result: " + " + respred ");
 
-  return a === null && b instanceof HTMLElement;
 }

@@ -1,9 +1,7 @@
-function runTest() {
 
-  JAM.startProfile('load');
-  function f(){return 4}x=3;x=f()
+JAM.startProfile('load');
+function f(){return 4}x=3;x=f()
 
-  JAM.stopProfile('load');
+JAM.log("Result: " + " + respred ");
 
-  return x === 4;
-}
+JAM.stopProfile('load');

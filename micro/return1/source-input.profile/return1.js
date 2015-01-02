@@ -1,6 +1,6 @@
-function g() {
 
-  JAM.startProfile('load');
+JAM.startProfile('load');
+function g() {
   try {
     if (x) {
       return;
@@ -14,8 +14,7 @@ function g() {
   return
 }
 x = 3;
-
-  JAM.stopProfile('load');
-
 g();
 print(x);
+
+JAM.stopProfile('load');

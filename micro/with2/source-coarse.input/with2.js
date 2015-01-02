@@ -1,6 +1,6 @@
+introspect(JAM.policy.pFull) {
 var p = { c: 3 };
-  introspect(JAM.policy.pFull) {
-  function O() {
+function O() {
   this.a = 1;
   this.b = 2;
 }
@@ -11,8 +11,7 @@ with (o) {
   var d = a;
   var e = c;
   var f = x;
-
-  }
-
 }
 print("d: " + d + " e: " + e + " f: " + f);
+
+}

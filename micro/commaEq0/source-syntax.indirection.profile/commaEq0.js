@@ -1,6 +1,6 @@
-function runTest() {
 
-  JAM.startProfile('load');
+JAM.startProfile('load');
+function runTest() {
   var a;
   var b = [5, 6, 7, 8];
   var c = [9, 10];
@@ -10,7 +10,7 @@ function runTest() {
   var v0 = d + 1;
   a = b[v0]
 
-  JAM.stopProfile('load');
-
   return typeof a === "undefined" && b === 10;
 }
+
+JAM.stopProfile('load');

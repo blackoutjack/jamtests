@@ -1,6 +1,6 @@
-function runTest() {
 
-  JAM.startProfile('load');
+JAM.startProfile('load');
+function runTest() {
   function f() {
     prop = "b";
     return 2;
@@ -40,7 +40,7 @@ function runTest() {
     alert(v4);
   }
 
-  JAM.stopProfile('load');
-
   return prop === "b" && n["a"] === 2 && n["b"] === 7 && n["c"] === "ok" && o["x"] === "other";
 }
+
+JAM.stopProfile('load');

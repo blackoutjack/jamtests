@@ -1,9 +1,7 @@
-function runTest() {
 
-  JAM.startProfile('load');
-  var x=XMLHttpRequest();x.open("GET")
+JAM.startProfile('load');
+var x=XMLHttpRequest();x.open("GET")
 
-  JAM.stopProfile('load');
+JAM.log("Result: " + " + respred ");
 
-  return "RESULT NOT SPECIFIED";
-}
+JAM.stopProfile('load');

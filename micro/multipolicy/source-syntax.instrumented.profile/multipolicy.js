@@ -1,6 +1,6 @@
-function runTest() {
 
-  JAM.startProfile('load');
+JAM.startProfile('load');
+function runTest() {
   introspect(JAM.policy.p6) {
     var a = document.getElementById("ok")
   }
@@ -20,7 +20,7 @@ function runTest() {
     document.write(b);
   }
 
-  JAM.stopProfile('load');
-
   return a === null && b instanceof HTMLElement;
 }
+
+JAM.stopProfile('load');

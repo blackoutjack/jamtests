@@ -1,13 +1,13 @@
-function runTest() {
 
-  JAM.startProfile('load');
+JAM.startProfile('load');
+function runTest() {
   function f() {
     return;
   }
   document.getElementById = f;
   var elt = JAM.call(document.getElementById, document, ["ok"], JAM.policy.p1)
 
-  JAM.stopProfile('load');
-
   return elt === undefined;
 }
+
+JAM.stopProfile('load');

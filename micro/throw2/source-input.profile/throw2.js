@@ -1,9 +1,8 @@
+
+JAM.startProfile('load');
 function f() {
-
-  JAM.startProfile('load');
   return "exception!";
-
-  JAM.stopProfile('load');
-
 }
 throw f();
+
+JAM.stopProfile('load');

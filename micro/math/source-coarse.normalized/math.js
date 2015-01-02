@@ -1,9 +1,7 @@
-function runTest() {
-  introspect(JAM.policy.pFull) {
-  var v0 = Math.random();
-  x = Math.floor(v0)
+introspect(JAM.policy.pFull) {
+var v0 = Math.random();
+x = Math.floor(v0)
 
-  }
+JAM.log("Result: " + " + respred ");
 
-  return x !== 2;
 }

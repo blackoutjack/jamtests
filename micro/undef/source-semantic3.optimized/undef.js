@@ -1,5 +1,3 @@
-function runTest() {
-  introspect(JAM.policy.p1)x=y
+introspect(JAM.policy.p1)x=y
 
-  return "Expect an exception";
-}
+JAM.log("Result: " + " + respred ");

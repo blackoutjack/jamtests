@@ -1,9 +1,7 @@
-function runTest() {
-  introspect(JAM.policy.pFull) {
-  var f = document;
-  var x = f.getElementsByTagName("ok")
+introspect(JAM.policy.pFull) {
+var f = document;
+var x = f.getElementsByTagName("ok")
 
-  }
+JAM.log("Result: " + " + respred ");
 
-  return x instanceof HTMLCollection;
 }

@@ -1,8 +1,5 @@
-var a = document.getElementById("ok");
-  introspect(JAM.policy.pFull) {
-  
-
-  }
-
+introspect(JAM.policy.pFull) {
 var a = document.getElementById("ok");
 a.focus();
+
+}

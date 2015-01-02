@@ -1,6 +1,6 @@
-function runTest() {
 
-  JAM.startProfile('load');
+JAM.startProfile('load');
+function runTest() {
   var elt = document.createElement("img");
   introspect(JAM.policy.p1) {
     elt.setAttribute("src", " HTTP://www.blackoutjack.com/pics/TweekGhost.jpg");
@@ -8,7 +8,7 @@ function runTest() {
   var v0 = document.body;
   v0.appendChild(elt)
 
-  JAM.stopProfile('load');
-
   return "RESULT NOT SPECIFIED";
 }
+
+JAM.stopProfile('load');

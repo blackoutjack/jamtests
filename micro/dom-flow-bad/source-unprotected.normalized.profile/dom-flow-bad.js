@@ -1,11 +1,9 @@
-function runTest() {
 
-  JAM.startProfile('load');
-  var label = document.createElement("label");
-  label.className = "read-only";
-  label.textContent = "Are you sure you want to delete?"
+JAM.startProfile('load');
+var label = document.createElement("label");
+label.className = "read-only";
+label.textContent = "Are you sure you want to delete?"
 
-  JAM.stopProfile('load');
+JAM.log("Result: " + " + respred ");
 
-  return "RESULT NOT SPECIFIED";
-}
+JAM.stopProfile('load');

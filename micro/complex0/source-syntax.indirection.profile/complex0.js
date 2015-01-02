@@ -1,6 +1,6 @@
-function runTest() {
 
-  JAM.startProfile('load');
+JAM.startProfile('load');
+function runTest() {
   var result = 4;
   var a = 2;
   var x = [3, 4, 5, 6, 7];
@@ -26,7 +26,7 @@ function runTest() {
     result = x[v0] = v1 * z;
   }
 
-  JAM.stopProfile('load');
-
   return result === 153;
 }
+
+JAM.stopProfile('load');

@@ -1,9 +1,9 @@
+
+JAM.startProfile('load');
 function runTest() {
-
-  JAM.startProfile('load');
   var o={a:1,b:2,c:3};introspect(JAM.policy.p1)x=9;with(o)JAM.isEval(eval)?eval("introspect(JAM.policy.pFull) { x = a }"):JAM.call(eval,null,["x = a"]);print("x: "+x)
-
-  JAM.stopProfile('load');
 
   return "RESULT NOT SPECIFIED";
 }
+
+JAM.stopProfile('load');

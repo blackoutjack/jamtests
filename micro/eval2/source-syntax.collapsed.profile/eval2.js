@@ -1,6 +1,6 @@
-function runTest() {
 
-  JAM.startProfile('load');
+JAM.startProfile('load');
+function runTest() {
   function f() {
     if (JAM.isEval(eval)) {
       eval("introspect(JAM.policy.pFull) { " + "String.prototype.indexOf = String.prototype.toLowerCase;" + " }");
@@ -12,7 +12,7 @@ function runTest() {
   }
   x = f()
 
-  JAM.stopProfile('load');
-
   return x === "ok";
 }
+
+JAM.stopProfile('load');

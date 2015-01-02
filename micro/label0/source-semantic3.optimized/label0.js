@@ -1,5 +1,3 @@
-function runTest() {
-  var i=x=0,v1=4>i;lbl:for(;v1;){introspect(JAM.policy.p1)x++;if(1==i)break lbl;i++;v1=4>i}
+var i=x=0,v1=4>i;lbl:for(;v1;){introspect(JAM.policy.p1)x++;if(1==i)break lbl;i++;v1=4>i}
 
-  return x === 1;
-}
+JAM.log("Result: " + " + respred ");

@@ -1,6 +1,6 @@
-function runTest() {
 
-  JAM.startProfile('load');
+JAM.startProfile('load');
+function runTest() {
   function hello() {
     return "hello";
   }
@@ -23,7 +23,7 @@ function runTest() {
   var v3 = a.ok;
   alert(v3)
 
-  JAM.stopProfile('load');
-
   return a.ok === "okhello whatever";
 }
+
+JAM.stopProfile('load');

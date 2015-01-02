@@ -1,5 +1,3 @@
-function runTest() {
-  for(var i=0;!(5<i);)i++
+for(var i=0;!(5<i);)i++
 
-  return i === 6;
-}
+JAM.log("Result: " + " + respred ");

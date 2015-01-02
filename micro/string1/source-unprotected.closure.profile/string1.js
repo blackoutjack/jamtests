@@ -1,11 +1,9 @@
-function runTest() {
 
-  JAM.startProfile('load');
-  var o = {};
-  o.src = "http://something";
-  alert(o.src)
+JAM.startProfile('load');
+var o = {};
+o.src = "http://something";
+alert(o.src)
 
-  JAM.stopProfile('load');
+JAM.log("Result: " + " + respred ");
 
-  return "RESULT NOT SPECIFIED";
-}
+JAM.stopProfile('load');

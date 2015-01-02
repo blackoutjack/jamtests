@@ -1,14 +1,12 @@
-function runTest() {
-  function f() {
-    return 2;
-  }
-  function g() {
-    return 1;
-  }
-  var v = 5;
-  var v2 = v;
-  ++v;
-  var a = v2 + f() + g()
-
-  return a === 8;
+function f() {
+  return 2;
 }
+function g() {
+  return 1;
+}
+var v = 5;
+var v2 = v;
+++v;
+var a = v2 + f() + g()
+
+JAM.log("Result: " + " + respred ");

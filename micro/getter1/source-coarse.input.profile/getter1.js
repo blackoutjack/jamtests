@@ -1,7 +1,7 @@
-function hello() {
 
-  JAM.startProfile('load');
-  introspect(JAM.policy.pFull) {
+JAM.startProfile('load');
+introspect(JAM.policy.pFull) {
+function hello() {
   return "hello";
 }
 var a = {
@@ -12,10 +12,9 @@ var a = {
     }
     return "ok" + inner();
   }
-
-  }
-
-  JAM.stopProfile('load');
-
 }
 alert(a.ok);
+
+}
+
+JAM.stopProfile('load');

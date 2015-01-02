@@ -1,8 +1,6 @@
-function runTest() {
-  var P = false;
-  if (P) {
-    x = 2;
-  }
-
-  return typeof x === "undefined";
+var P = false;
+if (P) {
+  x = 2;
 }
+
+JAM.log("Result: " + " + respred ");

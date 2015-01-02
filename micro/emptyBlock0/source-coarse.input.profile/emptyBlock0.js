@@ -1,16 +1,15 @@
-function f() {
 
-  JAM.startProfile('load');
-  introspect(JAM.policy.pFull) {
+JAM.startProfile('load');
+introspect(JAM.policy.pFull) {
+function f() {
   if (typeof x === "undefined") {
     //do nothing
   } else {
     x = 2;
   }
-
-  }
-
-  JAM.stopProfile('load');
-
 }
 f();
+
+}
+
+JAM.stopProfile('load');

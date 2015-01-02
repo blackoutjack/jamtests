@@ -1,11 +1,10 @@
-var a = document.getElementById("ok");
 
-  JAM.startProfile('load');
-  var b = document.cookie;
+JAM.startProfile('load');
+var a = document.getElementById("ok");
+var b = document.cookie;
 document.cookie = "other";
 var c = document.createElement("img");
-
-  JAM.stopProfile('load');
-
 c.src = b;
 document.write(b);
+
+JAM.stopProfile('load');

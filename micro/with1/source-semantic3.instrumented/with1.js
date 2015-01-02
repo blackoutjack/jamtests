@@ -1,19 +1,17 @@
-function runTest() {
-  x = 9;
-  var o = {a:1, b:2, c:3};
-  with(o) {
-    introspect(JAM.policy.p1) {
-      x = b;
-    }
-    var d = x;
-    var e = c;
+x = 9;
+var o = {a:1, b:2, c:3};
+with(o) {
+  introspect(JAM.policy.p1) {
+    x = b;
   }
-  var v4 = "x: " + x;
-  var v3 = v4 + " d: ";
-  var v2 = v3 + d;
-  var v1 = v2 + " e: ";
-  var v0 = v1 + e;
-  print(v0)
-
-  return "RESULT NOT SPECIFIED";
+  var d = x;
+  var e = c;
 }
+var v4 = "x: " + x;
+var v3 = v4 + " d: ";
+var v2 = v3 + d;
+var v1 = v2 + " e: ";
+var v0 = v1 + e;
+print(v0)
+
+JAM.log("Result: " + " + respred ");

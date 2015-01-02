@@ -1,9 +1,7 @@
-function runTest() {
 
-  JAM.startProfile('load');
-  var label=document.createElement("label");introspect(JAM.policy.p1)label.textContent="Are you sure you want to delete?"
+JAM.startProfile('load');
+var label=document.createElement("label");introspect(JAM.policy.p1)label.textContent="Are you sure you want to delete?"
 
-  JAM.stopProfile('load');
+JAM.log("Result: " + " + respred ");
 
-  return label.textContent === "Are you sure you want to delete?";
-}
+JAM.stopProfile('load');

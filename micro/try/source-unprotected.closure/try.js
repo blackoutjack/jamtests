@@ -1,9 +1,7 @@
-function runTest() {
-  try {
-    x = 1;
-  } catch (e$$4) {
-    x = 2;
-  }
-
-  return x === 1;
+try {
+  x = 1;
+} catch (e$$4) {
+  x = 2;
 }
+
+JAM.log("Result: " + " + respred ");

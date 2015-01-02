@@ -1,6 +1,6 @@
+introspect(JAM.policy.pFull) {
 function merge(left, right) {
-  introspect(JAM.policy.pFull) {
-  // receive the left and right sublist as arguments.
+    // receive the left and right sublist as arguments.
     // 'result' variable for the merged result of two sublists.
     var result = [];
     // assign the element of the sublists to 'result' variable until there is no element to merge. 
@@ -71,8 +71,6 @@ for (var i=0; i<cnt; i++) {
 //print("BEFORE: " + vals);
 
 // Sort the array.
-
-  }
-
 var sorted = mergeSort(vals);
 
+}

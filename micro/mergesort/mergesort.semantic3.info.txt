@@ -1,5 +1,6 @@
 predicate-limit:3
 syntax-only:false
+policy-files:[/home/rich/cs/jam/tests/micro/default.policy]
 mergesort.original.js:230
 mergesort.normalized.js:383
 policy.aut:6

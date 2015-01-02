@@ -1,8 +1,6 @@
-function runTest() {
-  introspect(JAM.policy.pFull) {
-  x = 2
+introspect(JAM.policy.pFull) {
+x = 2
 
-  }
+JAM.log("Result: " + " + respred ");
 
-  return typeof x === "undefined";
 }

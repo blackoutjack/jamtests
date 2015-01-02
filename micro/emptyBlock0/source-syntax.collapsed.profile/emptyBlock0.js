@@ -1,6 +1,6 @@
-function runTest() {
 
-  JAM.startProfile('load');
+JAM.startProfile('load');
+function runTest() {
   function f() {
     if (typeof x === "undefined") {
     } else {
@@ -12,7 +12,7 @@ function runTest() {
   }
   f()
 
-  JAM.stopProfile('load');
-
   return typeof x === "undefined";
 }
+
+JAM.stopProfile('load');

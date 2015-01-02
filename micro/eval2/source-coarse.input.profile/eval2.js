@@ -1,14 +1,13 @@
-function f() {
 
-  JAM.startProfile('load');
-  introspect(JAM.policy.pFull) {
+JAM.startProfile('load');
+introspect(JAM.policy.pFull) {
+function f() {
   eval("String.prototype.indexOf = String.prototype.toLowerCase;");
   var v = "OK".indexOf("K");
   return v;
-
-  }
-
-  JAM.stopProfile('load');
-
 }
 x = f();
+
+}
+
+JAM.stopProfile('load');

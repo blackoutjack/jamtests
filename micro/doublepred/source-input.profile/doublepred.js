@@ -1,9 +1,8 @@
+
+JAM.startProfile('load');
 x = 2;
-
-  JAM.startProfile('load');
-  x = 3;
-
-  JAM.stopProfile('load');
-
+x = 3;
 x = 2;
 x = 4;
+
+JAM.stopProfile('load');

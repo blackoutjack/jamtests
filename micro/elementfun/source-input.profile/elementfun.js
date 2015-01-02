@@ -1,9 +1,6 @@
-var a = document.getElementById("ok");
 
-  JAM.startProfile('load');
-  
-
-  JAM.stopProfile('load');
-
+JAM.startProfile('load');
 var a = document.getElementById("ok");
 a.focus();
+
+JAM.stopProfile('load');

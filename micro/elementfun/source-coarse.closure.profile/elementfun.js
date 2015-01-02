@@ -1,13 +1,11 @@
-function runTest() {
 
-  JAM.startProfile('load');
-  introspect(JAM.policy.pFull) {
-  var a = document.getElementById("ok");
-  a.focus()
+JAM.startProfile('load');
+introspect(JAM.policy.pFull) {
+var a = document.getElementById("ok");
+a.focus()
 
-  }
+JAM.log("Result: " + " + respred ");
 
-  JAM.stopProfile('load');
-
-  return "Textbox should have focus";
 }
+
+JAM.stopProfile('load');

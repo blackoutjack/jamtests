@@ -1,16 +1,14 @@
-function runTest() {
-  x = 0;
-  var i = 0;
-  var v1 = i < 4;
-  lbl: for (;v1;) {
-    x++;
-    var v0 = i == 1;
-    if (v0) {
-      break lbl;
-    }
-    i++;
-    v1 = i < 4;
+x = 0;
+var i = 0;
+var v1 = i < 4;
+lbl: for (;v1;) {
+  x++;
+  var v0 = i == 1;
+  if (v0) {
+    break lbl;
   }
-
-  return x === 1;
+  i++;
+  v1 = i < 4;
 }
+
+JAM.log("Result: " + " + respred ");

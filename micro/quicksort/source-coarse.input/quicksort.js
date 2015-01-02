@@ -1,5 +1,5 @@
+introspect(JAM.policy.pFull) {
 function partition(a, lo, hi) {
-  introspect(JAM.policy.pFull) {
   var i = lo + 1;
   var j = hi;
   while (true) {
@@ -41,7 +41,7 @@ for (var i=0; i<cnt; i++) {
 }
 //print("BEFORE: " + vals);
 
-  }
-
 // Sort the array.
 quickSort(vals, 0, vals.length-1);
+
+}

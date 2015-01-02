@@ -1,10 +1,8 @@
-function runTest() {
-  introspect(JAM.policy.pFull) {
-  var a = new String;
-  eval("String = Boolean");
-  var b = new String
+introspect(JAM.policy.pFull) {
+var a = new String;
+eval("String = Boolean");
+var b = new String
 
-  }
+JAM.log("Result: " + " + respred ");
 
-  return b instanceof Boolean && !(a instanceof Boolean);
 }

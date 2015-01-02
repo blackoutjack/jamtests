@@ -1,6 +1,4 @@
-function runTest() {
-  var a = document;
-  var b = a.cookie
+var a = document;
+var b = a.cookie
 
-  return b === undefined;
-}
+JAM.log("Result: " + " + respred ");

@@ -1,9 +1,8 @@
+introspect(JAM.policy.pFull) {
 var i = 0;
-  introspect(JAM.policy.pFull) {
-  for (;;) {
+for (;;) {
   if (i > 5) break;
-
-  }
-
   i++;
+}
+
 }

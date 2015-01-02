@@ -1,9 +1,7 @@
-function runTest() {
 
-  JAM.startProfile('load');
-  x = Math.floor(Math.random())
+JAM.startProfile('load');
+x = Math.floor(Math.random())
 
-  JAM.stopProfile('load');
+JAM.log("Result: " + " + respred ");
 
-  return x !== 2;
-}
+JAM.stopProfile('load');

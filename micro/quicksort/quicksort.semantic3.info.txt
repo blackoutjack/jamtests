@@ -1,5 +1,6 @@
 predicate-limit:3
 syntax-only:false
+policy-files:[/home/rich/cs/jam/tests/micro/default.policy]
 quicksort.original.js:182
 quicksort.normalized.js:274
 policy.aut:6

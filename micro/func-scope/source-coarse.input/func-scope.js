@@ -1,6 +1,6 @@
+introspect(JAM.policy.pFull) {
 var x = true;
-  introspect(JAM.policy.pFull) {
-  if (x) {
+if (x) {
   var cnt = 0;
   function f() {
     if (cnt < 3) {
@@ -15,8 +15,7 @@ var x = true;
     }
   }
   f();
-
-  }
-
   g();
+}
+
 }

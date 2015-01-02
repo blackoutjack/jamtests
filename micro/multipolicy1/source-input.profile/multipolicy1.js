@@ -1,9 +1,8 @@
+
+JAM.startProfile('load');
 var b = 1;
-
-  JAM.startProfile('load');
-  document.cookie++;
-
-  JAM.stopProfile('load');
-
+document.cookie++;
 a[b]++;
 a[c] = 10;
+
+JAM.stopProfile('load');

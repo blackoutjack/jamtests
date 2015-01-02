@@ -1,12 +1,11 @@
+
+JAM.startProfile('load');
+introspect(JAM.policy.pFull) {
 var a = "ok";
-
-  JAM.startProfile('load');
-  introspect(JAM.policy.pFull) {
-  var b = "k";
-
-  }
-
-  JAM.stopProfile('load');
-
+var b = "k";
 var c = a.indexOf(b);
 alert(c);
+
+}
+
+JAM.stopProfile('load');

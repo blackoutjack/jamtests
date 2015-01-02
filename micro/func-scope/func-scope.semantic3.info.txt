@@ -1,5 +1,6 @@
 predicate-limit:3
 syntax-only:false
+policy-files:[/home/rich/cs/jam/tests/micro/default.policy]
 func-scope.original.js:51
 func-scope.normalized.js:61
 policy.aut:6

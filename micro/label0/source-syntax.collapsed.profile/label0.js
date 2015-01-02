@@ -1,6 +1,6 @@
-function runTest() {
 
-  JAM.startProfile('load');
+JAM.startProfile('load');
+function runTest() {
   introspect(JAM.policy.p1) {
     x = 0;
   }
@@ -17,7 +17,7 @@ function runTest() {
     v1 = i < 4;
   }
 
-  JAM.stopProfile('load');
-
   return x === 1;
 }
+
+JAM.stopProfile('load');

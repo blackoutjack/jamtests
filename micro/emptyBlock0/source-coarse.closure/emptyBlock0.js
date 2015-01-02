@@ -1,14 +1,12 @@
-function runTest() {
-  introspect(JAM.policy.pFull) {
-  function f() {
-    if (typeof x === "undefined") {
-    } else {
-      x = 2;
-    }
+introspect(JAM.policy.pFull) {
+function f() {
+  if (typeof x === "undefined") {
+  } else {
+    x = 2;
   }
-  f()
+}
+f()
 
-  }
+JAM.log("Result: " + " + respred ");
 
-  return typeof x === "undefined";
 }

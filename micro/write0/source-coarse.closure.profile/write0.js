@@ -1,17 +1,15 @@
-function runTest() {
 
-  JAM.startProfile('load');
-  introspect(JAM.policy.pFull) {
-  introspect(JAM.policy.pFull) {
-    document.write("<script>document.write(");
-    document.write("'BOY HOWDY'");
-    document.write(");\x3c/script>");
-    document.close();
-  }
-
-  }
-
-  JAM.stopProfile('load');
-
-  return "'BOY HOWDY' should be written on the page";
+JAM.startProfile('load');
+introspect(JAM.policy.pFull) {
+introspect(JAM.policy.pFull) {
+  document.write("<script>document.write(");
+  document.write("'BOY HOWDY'");
+  document.write(");\x3c/script>");
+  document.close();
 }
+
+JAM.log("Result: " + " + respred ");
+
+}
+
+JAM.stopProfile('load');

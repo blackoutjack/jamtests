@@ -1,15 +1,13 @@
-function runTest() {
 
-  JAM.startProfile('load');
-  introspect(JAM.policy.pFull) {
-  function f() {
-    throw "exception!";
-  }
-  f()
-
-  }
-
-  JAM.stopProfile('load');
-
-  return "Exception thrown";
+JAM.startProfile('load');
+introspect(JAM.policy.pFull) {
+function f() {
+  throw "exception!";
 }
+f()
+
+JAM.log("Result: " + " + respred ");
+
+}
+
+JAM.stopProfile('load');

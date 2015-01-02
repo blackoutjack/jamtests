@@ -1,5 +1,3 @@
-function runTest() {
-  function g(){try{if(x)return;x=4}finally{introspect(JAM.policy.p1)x=2}x=1}x=3;g();print(x)
+function g(){try{if(x)return;x=4}finally{introspect(JAM.policy.p1)x=2}x=1}x=3;g();print(x)
 
-  return "RESULT NOT SPECIFIED";
-}
+JAM.log("Result: " + " + respred ");

@@ -1,13 +1,11 @@
-function runTest() {
 
-  JAM.startProfile('load');
-  introspect(JAM.policy.pFull) {
-  var f = new Function("var x = new XMLHttpRequest(); x.open('http://www.blackoutjack.com/home', true); x.send(null);");
-  f()
+JAM.startProfile('load');
+introspect(JAM.policy.pFull) {
+var f = new Function("var x = new XMLHttpRequest(); x.open('http://www.blackoutjack.com/home', true); x.send(null);");
+f()
 
-  }
+JAM.log("Result: " + " + respred ");
 
-  JAM.stopProfile('load');
-
-  return typeof x === "undefined";
 }
+
+JAM.stopProfile('load');

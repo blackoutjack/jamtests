@@ -1,5 +1,5 @@
+introspect(JAM.policy.pFull) {
 function hello() {
-  introspect(JAM.policy.pFull) {
   return "hello";
 }
 var a = {
@@ -10,8 +10,7 @@ var a = {
     }
     return "ok" + inner();
   }
-
-  }
-
 }
 alert(a.ok);
+
+}

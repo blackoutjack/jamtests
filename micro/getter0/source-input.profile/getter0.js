@@ -1,11 +1,10 @@
-var a = {
 
-  JAM.startProfile('load');
+JAM.startProfile('load');
+var a = {
   get ok() {
     return "ok";
   }
-
-  JAM.stopProfile('load');
-
 }
 alert(a.ok);
+
+JAM.stopProfile('load');

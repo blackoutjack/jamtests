@@ -1,15 +1,14 @@
-function pol(tx) {
 
-  JAM.startProfile('load');
-  introspect(JAM.policy.pFull) {
+JAM.startProfile('load');
+introspect(JAM.policy.pFull) {
+function pol(tx) {
   tx.commit();
 }
 x = undefined;
 introspect(pol) {
-
-  }
-
-  JAM.stopProfile('load');
-
   x = 2;
 }
+
+}
+
+JAM.stopProfile('load');

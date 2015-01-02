@@ -1,5 +1,6 @@
 predicate-limit:3
 syntax-only:false
+policy-files:[/home/rich/cs/jam/tests/micro/default.policy]
 commaCall0.original.js:24
 commaCall0.normalized.js:27
 policy.aut:6

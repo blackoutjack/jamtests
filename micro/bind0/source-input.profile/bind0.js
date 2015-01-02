@@ -1,10 +1,9 @@
-function f() {
 
-  JAM.startProfile('load');
+JAM.startProfile('load');
+function f() {
   return this.indexOf("k");
 }
-
-  JAM.stopProfile('load');
-
 var g = f.bind("ok");
 var v = g();
+
+JAM.stopProfile('load');

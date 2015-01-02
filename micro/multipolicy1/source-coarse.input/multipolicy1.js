@@ -1,8 +1,7 @@
+introspect(JAM.policy.pFull) {
 var b = 1;
-  introspect(JAM.policy.pFull) {
-  document.cookie++;
-
-  }
-
+document.cookie++;
 a[b]++;
 a[c] = 10;
+
+}

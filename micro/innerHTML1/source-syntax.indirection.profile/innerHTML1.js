@@ -1,6 +1,6 @@
-function runTest() {
 
-  JAM.startProfile('load');
+JAM.startProfile('load');
+function runTest() {
   var div = document.createElement("div");
   introspect(JAM.process) {
     JAM.set(div, "innerHTML", "<a href='#'></a>");
@@ -10,7 +10,7 @@ function runTest() {
   var v1 = "VALUE: " + d;
   alert(v1)
 
-  JAM.stopProfile('load');
-
   return "The URL (with # appended) should be alerted";
 }
+
+JAM.stopProfile('load');

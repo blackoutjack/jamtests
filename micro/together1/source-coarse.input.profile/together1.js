@@ -1,8 +1,8 @@
-try {
 
-  JAM.startProfile('load');
-  introspect(JAM.policy.pFull) {
-  alert("OK1");
+JAM.startProfile('load');
+introspect(JAM.policy.pFull) {
+try {
+alert("OK1");
 function f() {
   notanid();
 }
@@ -15,10 +15,9 @@ f();
 try {
 alert("OK2");
 } catch (ex) {
-
-  }
-
-  JAM.stopProfile('load');
-
   console.error(ex.name + ": " + ex.message);
 }
+
+}
+
+JAM.stopProfile('load');

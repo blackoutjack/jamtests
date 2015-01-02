@@ -1,12 +1,11 @@
-function f() {
 
-  JAM.startProfile('load');
+JAM.startProfile('load');
+function f() {
   return { ok: "got it!" };
 }
 function g() {
   return "ok";
-
-  JAM.stopProfile('load');
-
 }
 var v = f()[g()];
+
+JAM.stopProfile('load');

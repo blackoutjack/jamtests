@@ -1,13 +1,11 @@
-function runTest() {
-  introspect(JAM.policy.pFull) {
-  var o = {a:1, b:2, c:3};
-  x = 9;
-  with(o) {
-    eval("x = a");
-  }
-  print("x: " + x)
+introspect(JAM.policy.pFull) {
+var o = {a:1, b:2, c:3};
+x = 9;
+with(o) {
+  eval("x = a");
+}
+print("x: " + x)
 
-  }
+JAM.log("Result: " + " + respred ");
 
-  return "RESULT NOT SPECIFIED";
 }

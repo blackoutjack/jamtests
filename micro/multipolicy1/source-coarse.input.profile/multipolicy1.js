@@ -1,12 +1,11 @@
+
+JAM.startProfile('load');
+introspect(JAM.policy.pFull) {
 var b = 1;
-
-  JAM.startProfile('load');
-  introspect(JAM.policy.pFull) {
-  document.cookie++;
-
-  }
-
-  JAM.stopProfile('load');
-
+document.cookie++;
 a[b]++;
 a[c] = 10;
+
+}
+
+JAM.stopProfile('load');

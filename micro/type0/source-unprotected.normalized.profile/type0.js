@@ -1,12 +1,10 @@
-function runTest() {
 
-  JAM.startProfile('load');
-  var a = "ok";
-  var b = "k";
-  var c = a.indexOf(b);
-  alert(c)
+JAM.startProfile('load');
+var a = "ok";
+var b = "k";
+var c = a.indexOf(b);
+alert(c)
 
-  JAM.stopProfile('load');
+JAM.log("Result: " + " + respred ");
 
-  return "RESULT NOT SPECIFIED";
-}
+JAM.stopProfile('load');

@@ -1,9 +1,8 @@
+
+JAM.startProfile('load');
 var P = false
-
-  JAM.startProfile('load');
-  if (P) {
-
-  JAM.stopProfile('load');
-
+if (P) {
 	x = 2
 }
+
+JAM.stopProfile('load');

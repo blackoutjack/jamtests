@@ -1,11 +1,9 @@
-function runTest() {
 
-  JAM.startProfile('load');
-  var a = 0;
-  var b = 1;
-  x = a && b + 1
+JAM.startProfile('load');
+var a = 0;
+var b = 1;
+x = a && b + 1
 
-  JAM.stopProfile('load');
+JAM.log("Result: " + " + respred ");
 
-  return x === 0;
-}
+JAM.stopProfile('load');

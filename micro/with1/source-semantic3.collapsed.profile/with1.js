@@ -1,18 +1,16 @@
-function runTest() {
 
-  JAM.startProfile('load');
-  x = 9;
-  var o = {a:1, b:2, c:3};
-  with(o) {
-    introspect(JAM.policy.p1) {
-      x = b;
-    }
-    var d = x;
-    var e = c;
+JAM.startProfile('load');
+x = 9;
+var o = {a:1, b:2, c:3};
+with(o) {
+  introspect(JAM.policy.p1) {
+    x = b;
   }
-  print("x: " + x + " d: " + d + " e: " + e)
-
-  JAM.stopProfile('load');
-
-  return "RESULT NOT SPECIFIED";
+  var d = x;
+  var e = c;
 }
+print("x: " + x + " d: " + d + " e: " + e)
+
+JAM.log("Result: " + " + respred ");
+
+JAM.stopProfile('load');

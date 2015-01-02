@@ -1,5 +1,3 @@
-function runTest() {
-  x=y=z=3
+x=y=z=3
 
-  return x === 3;
-}
+JAM.log("Result: " + " + respred ");

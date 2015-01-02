@@ -1,11 +1,11 @@
-function runTest() {
 
-  JAM.startProfile('load');
+JAM.startProfile('load');
+function runTest() {
   introspect(JAM.policy.p1) {
     x = y;
   }
 
-  JAM.stopProfile('load');
-
   return "Expect an exception";
 }
+
+JAM.stopProfile('load');

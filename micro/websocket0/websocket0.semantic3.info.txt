@@ -1,5 +1,6 @@
 predicate-limit:3
 syntax-only:false
+policy-files:[/home/rich/cs/jam/tests/micro/websocket0/websocket0.policy]
 websocket0.original.js:14
 websocket0.normalized.js:15
 policy.aut:15

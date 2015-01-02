@@ -1,6 +1,4 @@
-function runTest() {
-  var x = XMLHttpRequest();
-  x.open("GET")
+var x = XMLHttpRequest();
+x.open("GET")
 
-  return "RESULT NOT SPECIFIED";
-}
+JAM.log("Result: " + " + respred ");

@@ -1,10 +1,8 @@
-function runTest() {
 
-  JAM.startProfile('load');
-  y = 3;
-  x = y
+JAM.startProfile('load');
+y = 3;
+x = y
 
-  JAM.stopProfile('load');
+JAM.log("Result: " + " + respred ");
 
-  return x === 3;
-}
+JAM.stopProfile('load');

@@ -1,9 +1,6 @@
-var f = new Function("var x = new XMLHttpRequest(); x.open('http://www.blackoutjack.com/home', true); x.send(null);");
 
-  JAM.startProfile('load');
-  
-
-  JAM.stopProfile('load');
-
+JAM.startProfile('load');
 var f = new Function("var x = new XMLHttpRequest(); x.open('http://www.blackoutjack.com/home', true); x.send(null);");
 f();
+
+JAM.stopProfile('load');

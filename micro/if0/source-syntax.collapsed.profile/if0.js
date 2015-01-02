@@ -1,6 +1,6 @@
-function runTest() {
 
-  JAM.startProfile('load');
+JAM.startProfile('load');
+function runTest() {
   var s = "ok";
   if (!s.indexOf("k")) {
     introspect(JAM.policy.p1) {
@@ -8,7 +8,7 @@ function runTest() {
     }
   }
 
-  JAM.stopProfile('load');
-
   return typeof x === "undefined";
 }
+
+JAM.stopProfile('load');

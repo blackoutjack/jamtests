@@ -1,9 +1,7 @@
-function runTest() {
 
-  JAM.startProfile('load');
-  var a="ok",b="k",c=JAM.call(a.indexOf,a,[b],JAM.policy.p1);alert(c)
+JAM.startProfile('load');
+var a="ok",b="k",c=JAM.call(a.indexOf,a,[b],JAM.policy.p1);alert(c)
 
-  JAM.stopProfile('load');
+JAM.log("Result: " + " + respred ");
 
-  return "RESULT NOT SPECIFIED";
-}
+JAM.stopProfile('load');

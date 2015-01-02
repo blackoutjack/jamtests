@@ -1,9 +1,7 @@
-function runTest() {
-  introspect(JAM.policy.pFull) {
-  var a = document;
-  var b = a.cookie
+introspect(JAM.policy.pFull) {
+var a = document;
+var b = a.cookie
 
-  }
+JAM.log("Result: " + " + respred ");
 
-  return b === undefined;
 }

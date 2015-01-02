@@ -1,6 +1,6 @@
+introspect(JAM.policy.pFull) {
 x = 3;
-  introspect(JAM.policy.pFull) {
-  y = 4;
+y = 4;
 switch (y) {
   case x = 1: 
     print("1st case");
@@ -13,8 +13,7 @@ switch (y) {
     break;
   default:
     x = 2;
-
-  }
-
 }
 print("x: " + x);
+
+}

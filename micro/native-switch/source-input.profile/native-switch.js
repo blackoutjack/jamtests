@@ -1,9 +1,6 @@
-document.getElementById = document.getElementsByTagName;
 
-  JAM.startProfile('load');
-  
-
-  JAM.stopProfile('load');
-
+JAM.startProfile('load');
 document.getElementById = document.getElementsByTagName;
 var elt = document.getElementById("ok");
+
+JAM.stopProfile('load');

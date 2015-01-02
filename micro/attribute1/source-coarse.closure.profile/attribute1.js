@@ -1,17 +1,15 @@
-function runTest() {
 
-  JAM.startProfile('load');
-  introspect(JAM.policy.pFull) {
-  var elt = document.createElement("script");
-  var node = document.createAttribute("dummy");
-  node.value = "exfil.js";
-  node.nodeName = "src";
-  elt.setAttributeNode(node);
-  document.body.appendChild(elt)
+JAM.startProfile('load');
+introspect(JAM.policy.pFull) {
+var elt = document.createElement("script");
+var node = document.createAttribute("dummy");
+node.value = "exfil.js";
+node.nodeName = "src";
+elt.setAttributeNode(node);
+document.body.appendChild(elt)
 
-  }
+JAM.log("Result: " + " + respred ");
 
-  JAM.stopProfile('load');
-
-  return "RESULT NOT SPECIFIED";
 }
+
+JAM.stopProfile('load');

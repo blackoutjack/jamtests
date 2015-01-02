@@ -1,8 +1,5 @@
+
+JAM.startProfile('load');
 throw "exception!";
 
-  JAM.startProfile('load');
-  
-
-  JAM.stopProfile('load');
-
-throw "exception!";
+JAM.stopProfile('load');

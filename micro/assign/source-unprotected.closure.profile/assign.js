@@ -1,10 +1,8 @@
-function runTest() {
 
-  JAM.startProfile('load');
-  var a = document;
-  a.cookie = "ok"
+JAM.startProfile('load');
+var a = document;
+a.cookie = "ok"
 
-  JAM.stopProfile('load');
+JAM.log("Result: " + " + respred ");
 
-  return document.cookie !== "ok";
-}
+JAM.stopProfile('load');

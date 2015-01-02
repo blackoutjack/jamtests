@@ -1,14 +1,12 @@
-function runTest() {
-  introspect(JAM.policy.pFull) {
-  o = new Object;
-  o.y = 2;
-  o.z = 3;
-  var i;
-  for (i in o) {
-    x = o[i];
-  }
+introspect(JAM.policy.pFull) {
+o = new Object;
+o.y = 2;
+o.z = 3;
+var i;
+for (i in o) {
+  x = o[i];
+}
 
-  }
+JAM.log("Result: " + " + respred ");
 
-  return x === 3;
 }

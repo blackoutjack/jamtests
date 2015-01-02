@@ -1,6 +1,6 @@
-function runTest() {
 
-  JAM.startProfile('load');
+JAM.startProfile('load');
+function runTest() {
   function f() {
     var v111 = 1;
     introspect(JAM.policy.p1) {
@@ -16,7 +16,7 @@ function runTest() {
   }
   f()
 
-  JAM.stopProfile('load');
-
   return "The Tx object should be alerted, followed by 'undefined'";
 }
+
+JAM.stopProfile('load');

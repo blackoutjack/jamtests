@@ -1,16 +1,14 @@
-function runTest() {
-  introspect(JAM.policy.pFull) {
-  function f() {
-    var v111 = 1;
-    x = undefined;
-    introspect(p.alert) {
-      x = 2;
-    }
-    alert(x);
+introspect(JAM.policy.pFull) {
+function f() {
+  var v111 = 1;
+  x = undefined;
+  introspect(p.alert) {
+    x = 2;
   }
-  f()
+  alert(x);
+}
+f()
 
-  }
+JAM.log("Result: " + " + respred ");
 
-  return "The Tx object should be alerted, followed by 'undefined'";
 }

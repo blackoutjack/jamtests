@@ -1,10 +1,9 @@
-function f() {
 
-  JAM.startProfile('load');
+JAM.startProfile('load');
+function f() {
   x = 3;
 }
-
-  JAM.stopProfile('load');
-
 f();
 x = 2;
+
+JAM.stopProfile('load');

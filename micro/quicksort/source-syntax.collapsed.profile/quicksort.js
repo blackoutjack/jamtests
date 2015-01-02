@@ -1,6 +1,6 @@
-function runTest() {
 
-  JAM.startProfile('load');
+JAM.startProfile('load');
+function runTest() {
   function partition(a, lo, hi) {
     var i$$2 = lo + 1;
     var j = hi;
@@ -53,7 +53,7 @@ function runTest() {
   }
   quickSort(vals, 0, vals.length - 1)
 
-  JAM.stopProfile('load');
-
   return vals[1] === (vals.sort() && vals[1]);
 }
+
+JAM.stopProfile('load');

@@ -1,5 +1,3 @@
-function runTest() {
-  function f(){return"exception!"}throw f()
+function f(){return"exception!"}throw f()
 
-  return "Exception thrown";
-}
+JAM.log("Result: " + " + respred ");

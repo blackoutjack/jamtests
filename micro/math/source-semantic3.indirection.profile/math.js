@@ -1,13 +1,11 @@
-function runTest() {
 
-  JAM.startProfile('load');
-  var v0 = Math.random();
-  var v1 = JAM.call(Math.floor, Math, [v0]);
-  introspect(JAM.policy.p1) {
-    x = v1
-  }
-
-  JAM.stopProfile('load');
-
-  return x !== 2;
+JAM.startProfile('load');
+var v0 = Math.random();
+var v1 = JAM.call(Math.floor, Math, [v0]);
+introspect(JAM.policy.p1) {
+  x = v1
 }
+
+JAM.log("Result: " + " + respred ");
+
+JAM.stopProfile('load');

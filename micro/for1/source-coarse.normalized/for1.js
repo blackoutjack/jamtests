@@ -1,15 +1,13 @@
-function runTest() {
-  introspect(JAM.policy.pFull) {
-  var i = 0;
-  for (;;) {
-    var v0 = i > 5;
-    if (v0) {
-      break;
-    }
-    i++;
+introspect(JAM.policy.pFull) {
+var i = 0;
+for (;;) {
+  var v0 = i > 5;
+  if (v0) {
+    break;
   }
+  i++;
+}
 
-  }
+JAM.log("Result: " + " + respred ");
 
-  return i === 6;
 }

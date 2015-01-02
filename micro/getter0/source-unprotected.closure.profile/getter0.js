@@ -1,12 +1,10 @@
-function runTest() {
 
-  JAM.startProfile('load');
-  var a = {get ok() {
-    return "ok";
-  }};
-  alert(a.ok)
+JAM.startProfile('load');
+var a = {get ok() {
+  return "ok";
+}};
+alert(a.ok)
 
-  JAM.stopProfile('load');
+JAM.log("Result: " + " + respred ");
 
-  return a.ok === "ok";
-}
+JAM.stopProfile('load');

@@ -1,6 +1,6 @@
-function runTest() {
 
-  JAM.startProfile('load');
+JAM.startProfile('load');
+function runTest() {
   function f() {
     alert("CNT: " + cnt);
     return cnt++;
@@ -28,7 +28,7 @@ function runTest() {
     i = i * 2;
   }
 
-  JAM.stopProfile('load');
-
   return i === 0 && cnt === 5;
 }
+
+JAM.stopProfile('load');

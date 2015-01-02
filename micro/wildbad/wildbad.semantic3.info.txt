@@ -1,5 +1,6 @@
 predicate-limit:3
 syntax-only:false
+policy-files:[/home/rich/cs/jam/tests/micro/wildbad/wildbad.policy]
 wildbad.original.js:15
 wildbad.normalized.js:15
 policy.aut:11

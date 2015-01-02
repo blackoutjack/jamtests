@@ -1,5 +1,3 @@
-function runTest() {
-  function f(){introspect(JAM.policy.p1)x=2}JAM.call(setTimeout,null,[f,1E3])
+function f(){introspect(JAM.policy.p1)x=2}JAM.call(setTimeout,null,[f,1E3])
 
-  return setTimeout(function() { JAMScript.log(typeof x === "undefined"); }, 3000) && "State will be checked in a couple seconds";
-}
+JAM.log("Result: " + " + respred ");

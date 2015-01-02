@@ -1,6 +1,4 @@
-function runTest() {
-  var a = "ok";
-  a.innerHTML = 1
+var a = "ok";
+a.innerHTML = 1
 
-  return a.innerHTML === undefined;
-}
+JAM.log("Result: " + " + respred ");

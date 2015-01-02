@@ -1,1 +1,1 @@
-../../../txjs/libTx.js
+../libTx.js

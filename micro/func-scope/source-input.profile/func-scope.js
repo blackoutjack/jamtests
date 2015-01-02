@@ -1,7 +1,7 @@
-var x = true;
 
-  JAM.startProfile('load');
-  if (x) {
+JAM.startProfile('load');
+var x = true;
+if (x) {
   var cnt = 0;
   function f() {
     if (cnt < 3) {
@@ -16,8 +16,7 @@ var x = true;
     }
   }
   f();
-
-  JAM.stopProfile('load');
-
   g();
 }
+
+JAM.stopProfile('load');

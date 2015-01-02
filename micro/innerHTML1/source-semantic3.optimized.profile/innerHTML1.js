@@ -1,9 +1,7 @@
-function runTest() {
 
-  JAM.startProfile('load');
-  var div=document.createElement("div");introspect(JAM.process){div.innerHTML="<a href='#'></a>";var v0=div.childNodes,d=v0[0]}alert("VALUE: "+d)
+JAM.startProfile('load');
+var div=document.createElement("div");introspect(JAM.process){div.innerHTML="<a href='#'></a>";var v0=div.childNodes,d=v0[0]}alert("VALUE: "+d)
 
-  JAM.stopProfile('load');
+JAM.log("Result: " + " + respred ");
 
-  return "The URL (with # appended) should be alerted";
-}
+JAM.stopProfile('load');

@@ -1,9 +1,7 @@
-function runTest() {
 
-  JAM.startProfile('load');
-  x=1;switch(x){case 1:y=x,alert(x);default:alert(x+1)}
+JAM.startProfile('load');
+x=1;switch(x){case 1:y=x,alert(x);default:alert(x+1)}
 
-  JAM.stopProfile('load');
+JAM.log("Result: " + " + respred ");
 
-  return x === 1 && y === 1;
-}
+JAM.stopProfile('load');

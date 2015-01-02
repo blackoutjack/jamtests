@@ -1,9 +1,6 @@
-document.write("<script>alert('ok1');</script><p>MID</p><script>alert('ok2');</script>");
 
-  JAM.startProfile('load');
-  
-
-  JAM.stopProfile('load');
-
+JAM.startProfile('load');
 document.write("<script>alert('ok1');</script><p>MID</p><script>alert('ok2');</script>");
 document.close();
+
+JAM.stopProfile('load');

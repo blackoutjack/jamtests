@@ -1,8 +1,7 @@
+introspect(JAM.policy.pFull) {
 var P = false
-  introspect(JAM.policy.pFull) {
-  if (P) {
-
-  }
-
+if (P) {
 	x = 2
+}
+
 }

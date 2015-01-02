@@ -1,6 +1,6 @@
-function runTest() {
 
-  JAM.startProfile('load');
+JAM.startProfile('load');
+function runTest() {
   var a = [0, 1, 2, 3, 4, 5, 6];
   var b;
   var i = 0;
@@ -17,7 +17,7 @@ function runTest() {
     v2 = i < a.length;
   }
 
-  JAM.stopProfile('load');
-
   return i === 7 && b === 7 && idx === 7 && a[idx] === undefined && a[i] === undefined;
 }
+
+JAM.stopProfile('load');

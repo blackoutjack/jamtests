@@ -1,9 +1,7 @@
-function runTest() {
 
-  JAM.startProfile('load');
-  for(var i=0;!(5<i);)i++
+JAM.startProfile('load');
+for(var i=0;!(5<i);)i++
 
-  JAM.stopProfile('load');
+JAM.log("Result: " + " + respred ");
 
-  return i === 6;
-}
+JAM.stopProfile('load');

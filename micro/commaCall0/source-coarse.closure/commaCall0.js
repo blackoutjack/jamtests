@@ -1,12 +1,10 @@
-function runTest() {
-  introspect(JAM.policy.pFull) {
-  function g() {
-    return 2;
-  }
-  f = g;
-  x = (0, 1, 2, eval)("f()")
+introspect(JAM.policy.pFull) {
+function g() {
+  return 2;
+}
+f = g;
+x = (0, 1, 2, eval)("f()")
 
-  }
+JAM.log("Result: " + " + respred ");
 
-  return "Violation should be blocked";
 }

@@ -1,13 +1,13 @@
-function runTest() {
 
-  JAM.startProfile('load');
+JAM.startProfile('load');
+function runTest() {
   var a = 0;
   var b = 10;
   var c = 20;
   a = b = b + (c = c + 2);
   alert("a: " + a + " b: " + b + " c: " + c)
 
-  JAM.stopProfile('load');
-
   return a === 32 && b === 32 && c === 22;
 }
+
+JAM.stopProfile('load');

@@ -1,17 +1,16 @@
-x = 4;
 
-  JAM.startProfile('load');
-  introspect(JAM.policy.pFull) {
-  function f() {
+JAM.startProfile('load');
+introspect(JAM.policy.pFull) {
+x = 4;
+function f() {
   var y = x;
   eval("eval(\"var x;\");");
   return y;
 }
 var z = f();
-
-  }
-
-  JAM.stopProfile('load');
-
 // |z| should be 4, not undefined, which would be the case if the
 // eval'd string is doubly unwrapped. It is safe to unwrap once though.
+
+}
+
+JAM.stopProfile('load');

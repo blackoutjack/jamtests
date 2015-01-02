@@ -1,6 +1,6 @@
+introspect(JAM.policy.pFull) {
 var cnt = 0;
-  introspect(JAM.policy.pFull) {
-  function f() {
+function f() {
   alert("CNT: " + cnt);
   return cnt++;
 }
@@ -23,8 +23,7 @@ out: while (true) {
       alert("GOT DEFAULT");
       break out;
   }
-
-  }
-
   i *= 2;
+}
+
 }

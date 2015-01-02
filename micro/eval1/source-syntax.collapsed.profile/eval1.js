@@ -1,6 +1,6 @@
-function runTest() {
 
-  JAM.startProfile('load');
+JAM.startProfile('load');
+function runTest() {
   function f() {
     if (JAM.isEval(eval)) {
       eval("introspect(JAM.policy.pFull) { " + "x = 2" + " }");
@@ -14,7 +14,7 @@ function runTest() {
   }
   f()
 
-  JAM.stopProfile('load');
-
   return x === 0;
 }
+
+JAM.stopProfile('load');

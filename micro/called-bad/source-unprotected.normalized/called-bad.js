@@ -1,6 +1,4 @@
-function runTest() {
-  var f = document;
-  var x = f.getElementById("ok")
+var f = document;
+var x = f.getElementById("ok")
 
-  return typeof x === "undefined";
-}
+JAM.log("Result: " + " + respred ");

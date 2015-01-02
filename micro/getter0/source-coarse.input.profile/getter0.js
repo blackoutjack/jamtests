@@ -1,14 +1,13 @@
-var a = {
 
-  JAM.startProfile('load');
-  introspect(JAM.policy.pFull) {
+JAM.startProfile('load');
+introspect(JAM.policy.pFull) {
+var a = {
   get ok() {
     return "ok";
   }
-
-  }
-
-  JAM.stopProfile('load');
-
 }
 alert(a.ok);
+
+}
+
+JAM.stopProfile('load');

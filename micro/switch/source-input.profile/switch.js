@@ -1,7 +1,7 @@
-x = Math.floor(Math.random() * 4);
 
-  JAM.startProfile('load');
-  switch (x) {
+JAM.startProfile('load');
+x = Math.floor(Math.random() * 4);
+switch (x) {
   case 0:
     x++;
     break;
@@ -17,8 +17,6 @@ x = Math.floor(Math.random() * 4);
   default:
     alert("ERROR");
     break;
-
-  JAM.stopProfile('load');
-
 }
 
+JAM.stopProfile('load');

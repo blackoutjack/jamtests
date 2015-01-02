@@ -1,9 +1,7 @@
-function runTest() {
 
-  JAM.startProfile('load');
-  introspect(JAM.policy.p1)x=y
+JAM.startProfile('load');
+introspect(JAM.policy.p1)x=y
 
-  JAM.stopProfile('load');
+JAM.log("Result: " + " + respred ");
 
-  return "Expect an exception";
-}
+JAM.stopProfile('load');

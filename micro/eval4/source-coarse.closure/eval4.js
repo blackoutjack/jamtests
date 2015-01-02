@@ -1,10 +1,8 @@
-function runTest() {
-  introspect(JAM.policy.pFull) {
-  var a = 5;
-  eval('a = "ok"');
-  var b = a
+introspect(JAM.policy.pFull) {
+var a = 5;
+eval('a = "ok"');
+var b = a
 
-  }
+JAM.log("Result: " + " + respred ");
 
-  return b === "ok";
 }

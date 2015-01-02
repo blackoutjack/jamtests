@@ -1,6 +1,6 @@
-function runTest() {
 
-  JAM.startProfile('load');
+JAM.startProfile('load');
+function runTest() {
   var s = "ok";
   var v1 = s.indexOf("k");
   var v0 = !v1;
@@ -10,7 +10,7 @@ function runTest() {
     }
   }
 
-  JAM.stopProfile('load');
-
   return typeof x === "undefined";
 }
+
+JAM.stopProfile('load');

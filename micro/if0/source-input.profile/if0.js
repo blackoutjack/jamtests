@@ -1,9 +1,8 @@
+
+JAM.startProfile('load');
 var s = "ok";
-
-  JAM.startProfile('load');
-  if (!s.indexOf("k")) {
-
-  JAM.stopProfile('load');
-
+if (!s.indexOf("k")) {
   x = 2
 }
+
+JAM.stopProfile('load');

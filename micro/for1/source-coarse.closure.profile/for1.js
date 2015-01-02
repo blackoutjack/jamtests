@@ -1,18 +1,16 @@
-function runTest() {
 
-  JAM.startProfile('load');
-  introspect(JAM.policy.pFull) {
-  var i = 0;
-  for (;;) {
-    if (i > 5) {
-      break;
-    }
-    i++;
+JAM.startProfile('load');
+introspect(JAM.policy.pFull) {
+var i = 0;
+for (;;) {
+  if (i > 5) {
+    break;
   }
-
-  }
-
-  JAM.stopProfile('load');
-
-  return i === 6;
+  i++;
 }
+
+JAM.log("Result: " + " + respred ");
+
+}
+
+JAM.stopProfile('load');

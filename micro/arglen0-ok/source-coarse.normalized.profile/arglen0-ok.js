@@ -1,13 +1,11 @@
-function runTest() {
 
-  JAM.startProfile('load');
-  introspect(JAM.policy.pFull) {
-  var x = XMLHttpRequest();
-  x.open("GET")
+JAM.startProfile('load');
+introspect(JAM.policy.pFull) {
+var x = XMLHttpRequest();
+x.open("GET")
 
-  }
+JAM.log("Result: " + " + respred ");
 
-  JAM.stopProfile('load');
-
-  return "RESULT NOT SPECIFIED";
 }
+
+JAM.stopProfile('load');

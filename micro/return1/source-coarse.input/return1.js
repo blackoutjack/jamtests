@@ -1,5 +1,5 @@
+introspect(JAM.policy.pFull) {
 function g() {
-  introspect(JAM.policy.pFull) {
   try {
     if (x) {
       return;
@@ -13,8 +13,7 @@ function g() {
   return
 }
 x = 3;
-
-  }
-
 g();
 print(x);
+
+}

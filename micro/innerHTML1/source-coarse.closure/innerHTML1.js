@@ -1,13 +1,11 @@
-function runTest() {
-  introspect(JAM.policy.pFull) {
-  var div = document.createElement("div");
-  introspect(JAM.process) {
-    div.innerHTML = "<a href='#'></a>";
-    var d = div.childNodes[0];
-  }
-  alert("VALUE: " + d)
+introspect(JAM.policy.pFull) {
+var div = document.createElement("div");
+introspect(JAM.process) {
+  div.innerHTML = "<a href='#'></a>";
+  var d = div.childNodes[0];
+}
+alert("VALUE: " + d)
 
-  }
+JAM.log("Result: " + " + respred ");
 
-  return "The URL (with # appended) should be alerted";
 }

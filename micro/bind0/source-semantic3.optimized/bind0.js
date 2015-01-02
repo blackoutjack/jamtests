@@ -1,5 +1,3 @@
-function runTest() {
-  function f(){return this.indexOf("k")}var g=JAM.call(f.bind,f,["ok"]),v=g()
+function f(){return this.indexOf("k")}var g=JAM.call(f.bind,f,["ok"]),v=g()
 
-  return v === 1;
-}
+JAM.log("Result: " + " + respred ");

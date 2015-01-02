@@ -1,5 +1,3 @@
-function runTest() {
-  function a(){var z=2;return z}var z=3,v0=a();introspect(JAM.policy.p1)x=v0
+function a(){var z=2;return z}var z=3,v0=a();introspect(JAM.policy.p1)x=v0
 
-  return typeof x === "undefined";
-}
+JAM.log("Result: " + " + respred ");

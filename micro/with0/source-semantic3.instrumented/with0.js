@@ -1,10 +1,8 @@
-function runTest() {
-  with(document) {
-    introspect(JAM.policy.p1) {
-      var elt = getElementById("note")
-    }
+with(document) {
+  introspect(JAM.policy.p1) {
+    var elt = getElementById("note")
   }
-  elt.innerHTML = "ok"
-
-  return "RESULT NOT SPECIFIED";
 }
+elt.innerHTML = "ok"
+
+JAM.log("Result: " + " + respred ");

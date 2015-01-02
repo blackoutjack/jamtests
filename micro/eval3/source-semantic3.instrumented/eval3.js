@@ -1,7 +1,5 @@
-function runTest() {
-  var a = new String;
-  eval("String = Boolean");
-  var b = new String
+var a = new String;
+eval("String = Boolean");
+var b = new String
 
-  return b instanceof Boolean && !(a instanceof Boolean);
-}
+JAM.log("Result: " + " + respred ");

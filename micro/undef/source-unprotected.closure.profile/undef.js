@@ -1,9 +1,7 @@
-function runTest() {
 
-  JAM.startProfile('load');
-  x = y
+JAM.startProfile('load');
+x = y
 
-  JAM.stopProfile('load');
+JAM.log("Result: " + " + respred ");
 
-  return "Expect an exception";
-}
+JAM.stopProfile('load');

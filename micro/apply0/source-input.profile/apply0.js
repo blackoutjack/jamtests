@@ -1,9 +1,8 @@
+
+JAM.startProfile('load');
 x = 1;
-
-  JAM.startProfile('load');
-  var e = eval;
-
-  JAM.stopProfile('load');
-
+var e = eval;
 e.apply(null, ["x = 2"]);
 alert(x);
+
+JAM.stopProfile('load');

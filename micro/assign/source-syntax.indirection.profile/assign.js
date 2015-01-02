@@ -1,12 +1,12 @@
-function runTest() {
 
-  JAM.startProfile('load');
+JAM.startProfile('load');
+function runTest() {
   var a = document;
   introspect(JAM.policy.p1) {
     a.cookie = "ok";
   }
 
-  JAM.stopProfile('load');
-
   return document.cookie !== "ok";
 }
+
+JAM.stopProfile('load');

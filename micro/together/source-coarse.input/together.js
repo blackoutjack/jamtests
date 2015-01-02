@@ -1,6 +1,6 @@
+introspect(JAM.policy.pFull) {
 try {
-  introspect(JAM.policy.pFull) {
-  alert("OK1");
+alert("OK1");
 function f() {
   notanid();
 }
@@ -12,8 +12,7 @@ f();
 try {
 alert("OK2");
 } catch (ex) {
-
-  }
-
   console.error(ex.name + ": " + ex.message);
+}
+
 }

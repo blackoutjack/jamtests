@@ -1,11 +1,10 @@
-function f(g) {
 
-  JAM.startProfile('load');
+JAM.startProfile('load');
+function f(g) {
   g();
 }
 f(function h() {
-
-  JAM.stopProfile('load');
-
   x = 2;
 });
+
+JAM.stopProfile('load');

@@ -1,16 +1,14 @@
-function runTest() {
 
-  JAM.startProfile('load');
-  introspect(JAM.policy.pFull) {
-  function f() {
-    return;
-  }
-  document.getElementById = f;
-  var elt = document.getElementById("ok")
-
-  }
-
-  JAM.stopProfile('load');
-
-  return elt === undefined;
+JAM.startProfile('load');
+introspect(JAM.policy.pFull) {
+function f() {
+  return;
 }
+document.getElementById = f;
+var elt = document.getElementById("ok")
+
+JAM.log("Result: " + " + respred ");
+
+}
+
+JAM.stopProfile('load');

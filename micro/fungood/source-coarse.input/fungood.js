@@ -1,10 +1,10 @@
+introspect(JAM.policy.pFull) {
 x = 3;
-  introspect(JAM.policy.pFull) {
-  function f() {
+
+function f() {
     return 4;
 }
 
-  }
+x = f();
 
-
-x = f(); 
+}

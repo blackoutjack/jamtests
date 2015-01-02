@@ -1,12 +1,10 @@
-function runTest() {
-  var i = 0;
-  for (;;) {
-    var v0 = i > 5;
-    if (v0) {
-      break;
-    }
-    i++;
+var i = 0;
+for (;;) {
+  var v0 = i > 5;
+  if (v0) {
+    break;
   }
-
-  return i === 6;
+  i++;
 }
+
+JAM.log("Result: " + " + respred ");

@@ -1,11 +1,9 @@
-function runTest() {
-  introspect(JAM.policy.pFull) {
-  var b = 1;
-  document.cookie++;
-  a[b]++;
-  a[c] = 10
+introspect(JAM.policy.pFull) {
+var b = 1;
+document.cookie++;
+a[b]++;
+a[c] = 10
 
-  }
+JAM.log("Result: " + " + respred ");
 
-  return "Expect an exception";
 }

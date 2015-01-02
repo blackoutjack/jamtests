@@ -1,9 +1,7 @@
-function runTest() {
 
-  JAM.startProfile('load');
-  function f(){JAM.call(WebSocket,null,["ws://www.blackoutjack.com"],JAM.policy.p1)}f()
+JAM.startProfile('load');
+function f(){JAM.call(WebSocket,null,["ws://www.blackoutjack.com"],JAM.policy.p1)}f()
 
-  JAM.stopProfile('load');
+JAM.log("Result: " + " + respred ");
 
-  return "RESULT NOT SPECIFIED";
-}
+JAM.stopProfile('load');

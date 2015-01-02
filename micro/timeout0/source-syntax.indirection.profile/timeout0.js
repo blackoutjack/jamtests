@@ -1,6 +1,6 @@
-function runTest() {
 
-  JAM.startProfile('load');
+JAM.startProfile('load');
+function runTest() {
   var x = 5;
   var GlyphsUnicode = {A:65, AE:198, AEacute:508, AEmacron:482, AEsmall:63462, Aacute:193, Aacutesmall:63457, Abreve:258, Abreveacute:7854, Abrevecyrillic:1232, Abrevedotbelow:7862, Abrevegrave:7856, Abrevehookabove:7858, Abrevetilde:7860, Acaron:461, Acircle:9398, Acircumflex:194, Acircumflexacute:7844, Acircumflexdotbelow:7852, Acircumflexgrave:7846, Acircumflexhookabove:7848, Acircumflexsmall:63458, Acircumflextilde:7850, Acute:63177, Acutesmall:63412, Acyrillic:1040, Adblgrave:512, Adieresis:196, 
   Adieresiscyrillic:1234, Adieresismacron:478, Adieresissmall:63460, Adotbelow:7840, Adotmacron:480, Agrave:192, Agravesmall:63456, Ahookabove:7842, Aiecyrillic:1236, Ainvertedbreve:514, Alpha:913, Alphatonos:902, Amacron:256, Amonospace:65313, Aogonek:260, Aring:197, Aringacute:506, Aringbelow:7680, Aringsmall:63461, Asmall:63329, Atilde:195, Atildesmall:63459, Aybarmenian:1329, B:66, Bcircle:9399, Bdotaccent:7682, Bdotbelow:7684, Becyrillic:1041, Benarmenian:1330, Beta:914, Bhook:385, Blinebelow:7686, 
@@ -167,7 +167,7 @@ function runTest() {
   var f = JAM.new(Function, ["x = 2"]);
   f()
 
-  JAM.stopProfile('load');
-
   return "RESULT NOT SPECIFIED";
 }
+
+JAM.stopProfile('load');

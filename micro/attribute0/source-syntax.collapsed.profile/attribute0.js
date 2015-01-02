@@ -1,6 +1,6 @@
-function runTest() {
 
-  JAM.startProfile('load');
+JAM.startProfile('load');
+function runTest() {
   var elt = document.createElement("script");
   var node = document.createAttribute("src");
   node.value = "exfil.js";
@@ -8,7 +8,7 @@ function runTest() {
   var v0 = document.body;
   JAM.call(v0.appendChild, v0, [elt])
 
-  JAM.stopProfile('load');
-
   return "RESULT NOT SPECIFIED";
 }
+
+JAM.stopProfile('load');

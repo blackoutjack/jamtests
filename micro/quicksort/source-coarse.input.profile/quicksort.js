@@ -1,7 +1,7 @@
-function partition(a, lo, hi) {
 
-  JAM.startProfile('load');
-  introspect(JAM.policy.pFull) {
+JAM.startProfile('load');
+introspect(JAM.policy.pFull) {
+function partition(a, lo, hi) {
   var i = lo + 1;
   var j = hi;
   while (true) {
@@ -43,9 +43,9 @@ for (var i=0; i<cnt; i++) {
 }
 //print("BEFORE: " + vals);
 
-  }
-
-  JAM.stopProfile('load');
-
 // Sort the array.
 quickSort(vals, 0, vals.length-1);
+
+}
+
+JAM.stopProfile('load');

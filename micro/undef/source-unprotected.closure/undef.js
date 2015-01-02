@@ -1,5 +1,3 @@
-function runTest() {
-  x = y
+x = y
 
-  return "Expect an exception";
-}
+JAM.log("Result: " + " + respred ");

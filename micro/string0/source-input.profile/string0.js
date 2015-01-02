@@ -1,9 +1,6 @@
-var s = 'is " this " ok' + '?';
 
-  JAM.startProfile('load');
-  
-
-  JAM.stopProfile('load');
-
+JAM.startProfile('load');
 var s = 'is " this " ok' + '?';
 x = 2;
+
+JAM.stopProfile('load');

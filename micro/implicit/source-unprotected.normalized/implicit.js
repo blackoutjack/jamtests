@@ -1,10 +1,8 @@
-function runTest() {
-  function f() {
-    x = 3;
-    return;
-  }
-  f();
-  x = 2
-
-  return x === 3;
+function f() {
+  x = 3;
+  return;
 }
+f();
+x = 2
+
+JAM.log("Result: " + " + respred ");

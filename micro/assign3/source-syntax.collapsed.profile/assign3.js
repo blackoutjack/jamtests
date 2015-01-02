@@ -1,6 +1,6 @@
-function runTest() {
 
-  JAM.startProfile('load');
+JAM.startProfile('load');
+function runTest() {
   function f() {
     cnt = cnt + 1;
     return 3;
@@ -13,7 +13,7 @@ function runTest() {
   b = JAM.set(a, v0, a[v0] + 1, JAM.policy.p1);
   alert("a: " + a + " b: " + b + " i: " + i + " cnt: " + cnt)
 
-  JAM.stopProfile('load');
-
   return b === 11 && i === 2 && cnt === 11;
 }
+
+JAM.stopProfile('load');

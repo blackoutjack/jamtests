@@ -1,6 +1,6 @@
-function hello() {
 
-  JAM.startProfile('load');
+JAM.startProfile('load');
+function hello() {
   return "hello";
 }
 var a = {
@@ -11,8 +11,7 @@ var a = {
     }
     return "ok" + inner();
   }
-
-  JAM.stopProfile('load');
-
 }
 alert(a.ok);
+
+JAM.stopProfile('load');

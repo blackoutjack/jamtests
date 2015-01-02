@@ -1,8 +1,6 @@
-function runTest() {
-  var a = "ok";
-  var b = "k";
-  var c = JAM.call(a.indexOf, a, [b], JAM.policy.p1);
-  alert(c)
+var a = "ok";
+var b = "k";
+var c = JAM.call(a.indexOf, a, [b], JAM.policy.p1);
+alert(c)
 
-  return "RESULT NOT SPECIFIED";
-}
+JAM.log("Result: " + " + respred ");

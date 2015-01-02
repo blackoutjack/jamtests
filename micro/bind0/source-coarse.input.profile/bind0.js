@@ -1,13 +1,12 @@
-function f() {
 
-  JAM.startProfile('load');
-  introspect(JAM.policy.pFull) {
+JAM.startProfile('load');
+introspect(JAM.policy.pFull) {
+function f() {
   return this.indexOf("k");
 }
-
-  }
-
-  JAM.stopProfile('load');
-
 var g = f.bind("ok");
 var v = g();
+
+}
+
+JAM.stopProfile('load');

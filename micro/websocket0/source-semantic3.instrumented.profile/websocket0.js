@@ -1,15 +1,13 @@
-function runTest() {
 
-  JAM.startProfile('load');
-  function f() {
-    introspect(JAM.policy.p1) {
-      var w$$5 = WebSocket("ws://www.blackoutjack.com")
-    }
-    return;
+JAM.startProfile('load');
+function f() {
+  introspect(JAM.policy.p1) {
+    var w$$5 = WebSocket("ws://www.blackoutjack.com")
   }
-  f()
-
-  JAM.stopProfile('load');
-
-  return "RESULT NOT SPECIFIED";
+  return;
 }
+f()
+
+JAM.log("Result: " + " + respred ");
+
+JAM.stopProfile('load');

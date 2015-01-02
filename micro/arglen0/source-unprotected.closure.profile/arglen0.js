@@ -1,10 +1,8 @@
-function runTest() {
 
-  JAM.startProfile('load');
-  var x = XMLHttpRequest();
-  x.open("GET", "http://www.blackoutjack.com?secret=1")
+JAM.startProfile('load');
+var x = XMLHttpRequest();
+x.open("GET", "http://www.blackoutjack.com?secret=1")
 
-  JAM.stopProfile('load');
+JAM.log("Result: " + " + respred ");
 
-  return "RESULT NOT SPECIFIED";
-}
+JAM.stopProfile('load');

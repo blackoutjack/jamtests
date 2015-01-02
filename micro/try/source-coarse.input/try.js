@@ -1,9 +1,8 @@
+introspect(JAM.policy.pFull) {
 try {
-  introspect(JAM.policy.pFull) {
-  x = 1;
+    x = 1;
 } catch(e) {
-
-  }
-
     x = 2;
+}
+
 }

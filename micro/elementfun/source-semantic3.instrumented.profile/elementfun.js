@@ -1,10 +1,8 @@
-function runTest() {
 
-  JAM.startProfile('load');
-  var a = document.getElementById("ok");
-  a.focus()
+JAM.startProfile('load');
+var a = document.getElementById("ok");
+a.focus()
 
-  JAM.stopProfile('load');
+JAM.log("Result: " + " + respred ");
 
-  return "Textbox should have focus";
-}
+JAM.stopProfile('load');

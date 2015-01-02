@@ -1,5 +1,3 @@
-function runTest() {
-  function f(p){alert(p)}function c(){this.m=f}var o=new c,a=JAM.call(o.m,o,["ok"])
+function f(p){alert(p)}function c(){this.m=f}var o=new c,a=JAM.call(o.m,o,["ok"])
 
-  return a === undefined;
-}
+JAM.log("Result: " + " + respred ");

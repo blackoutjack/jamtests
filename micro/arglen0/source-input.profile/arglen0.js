@@ -1,9 +1,6 @@
-var x = XMLHttpRequest();
 
-  JAM.startProfile('load');
-  
-
-  JAM.stopProfile('load');
-
+JAM.startProfile('load');
 var x = XMLHttpRequest();
 x.open('GET', 'http://www.blackoutjack.com?secret=1');
+
+JAM.stopProfile('load');

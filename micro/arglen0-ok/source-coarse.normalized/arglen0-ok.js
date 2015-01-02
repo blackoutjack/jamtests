@@ -1,9 +1,7 @@
-function runTest() {
-  introspect(JAM.policy.pFull) {
-  var x = XMLHttpRequest();
-  x.open("GET")
+introspect(JAM.policy.pFull) {
+var x = XMLHttpRequest();
+x.open("GET")
 
-  }
+JAM.log("Result: " + " + respred ");
 
-  return "RESULT NOT SPECIFIED";
 }

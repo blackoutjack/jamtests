@@ -1,14 +1,13 @@
-x = 0;
 
-  JAM.startProfile('load');
-  introspect(JAM.policy.pFull) {
-  var e = eval;
+JAM.startProfile('load');
+introspect(JAM.policy.pFull) {
+x = 0;
+var e = eval;
 function f() {
   e("x = 2");
-
-  }
-
-  JAM.stopProfile('load');
-
 }
 f();
+
+}
+
+JAM.stopProfile('load');

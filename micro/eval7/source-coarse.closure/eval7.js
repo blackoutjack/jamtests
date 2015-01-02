@@ -1,13 +1,11 @@
-function runTest() {
-  introspect(JAM.policy.pFull) {
-  function transformed() {
-    xxx = undefined;
-    xxx = 5;
-  }
-  transformed();
-  alert(xxx)
+introspect(JAM.policy.pFull) {
+function transformed() {
+  xxx = undefined;
+  xxx = 5;
+}
+transformed();
+alert(xxx)
 
-  }
+JAM.log("Result: " + " + respred ");
 
-  return "RESULT NOT SPECIFIED";
 }

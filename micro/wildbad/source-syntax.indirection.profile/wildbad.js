@@ -1,10 +1,10 @@
-function runTest() {
 
-  JAM.startProfile('load');
+JAM.startProfile('load');
+function runTest() {
   var a = document.getElementById("ok");
   JAM.set(a, "innerHTML", 1, JAM.policy.p1)
 
-  JAM.stopProfile('load');
-
   return a.innerHTML === "THIS SHOULD REMAIN";
 }
+
+JAM.stopProfile('load');

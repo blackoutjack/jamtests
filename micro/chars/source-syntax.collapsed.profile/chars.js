@@ -1,10 +1,10 @@
-function runTest() {
 
-  JAM.startProfile('load');
+JAM.startProfile('load');
+function runTest() {
   var y = "tab|\u0019|tab";
   var x = y
 
-  JAM.stopProfile('load');
-
   return x === "tab|\u0019|tab";
 }
+
+JAM.stopProfile('load');

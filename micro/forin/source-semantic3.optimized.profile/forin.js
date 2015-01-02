@@ -1,9 +1,7 @@
-function runTest() {
 
-  JAM.startProfile('load');
-  o={y:2,z:3};for(var i in o)introspect(JAM.policy.p1)x=o[i]
+JAM.startProfile('load');
+o={y:2,z:3};for(var i in o)introspect(JAM.policy.p1)x=o[i]
 
-  JAM.stopProfile('load');
+JAM.log("Result: " + " + respred ");
 
-  return x === 3;
-}
+JAM.stopProfile('load');

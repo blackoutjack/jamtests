@@ -1,8 +1,6 @@
-function runTest() {
-  var o = {};
-  o.src = "http://something";
-  var v0 = o.src;
-  alert(v0)
+var o = {};
+o.src = "http://something";
+var v0 = o.src;
+alert(v0)
 
-  return "RESULT NOT SPECIFIED";
-}
+JAM.log("Result: " + " + respred ");

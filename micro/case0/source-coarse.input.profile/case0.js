@@ -1,8 +1,8 @@
-x = 3;
 
-  JAM.startProfile('load');
-  introspect(JAM.policy.pFull) {
-  y = 4;
+JAM.startProfile('load');
+introspect(JAM.policy.pFull) {
+x = 3;
+y = 4;
 switch (y) {
   case x = 1: 
     print("1st case");
@@ -15,10 +15,9 @@ switch (y) {
     break;
   default:
     x = 2;
-
-  }
-
-  JAM.stopProfile('load');
-
 }
 print("x: " + x);
+
+}
+
+JAM.stopProfile('load');

@@ -1,8 +1,5 @@
+
+JAM.startProfile('load');
 x = y;
 
-  JAM.startProfile('load');
-  
-
-  JAM.stopProfile('load');
-
-x = y;
+JAM.stopProfile('load');

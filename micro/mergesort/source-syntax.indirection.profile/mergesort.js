@@ -1,6 +1,6 @@
-function runTest() {
 
-  JAM.startProfile('load');
+JAM.startProfile('load');
+function runTest() {
   function merge(left$$1, right$$1) {
     var result = [];
     var v24 = left$$1.length;
@@ -101,7 +101,7 @@ function runTest() {
   }
   var sorted = mergeSort(vals)
 
-  JAM.stopProfile('load');
-
   return sorted[1] === sorted.sort()[1];
 }
+
+JAM.stopProfile('load');

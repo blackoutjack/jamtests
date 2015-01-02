@@ -1,6 +1,6 @@
-function runTest() {
 
-  JAM.startProfile('load');
+JAM.startProfile('load');
+function runTest() {
   i = 3;
   var v0 = i < 5;
   for (;v0;) {
@@ -11,7 +11,7 @@ function runTest() {
     v0 = i < 5;
   }
 
-  JAM.stopProfile('load');
-
   return x === 4;
 }
+
+JAM.stopProfile('load');

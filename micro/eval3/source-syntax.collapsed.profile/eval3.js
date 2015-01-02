@@ -1,6 +1,6 @@
-function runTest() {
 
-  JAM.startProfile('load');
+JAM.startProfile('load');
+function runTest() {
   var a = new String;
   if (JAM.isEval(eval)) {
     eval("introspect(JAM.policy.pFull) { " + "String = Boolean" + " }");
@@ -9,7 +9,7 @@ function runTest() {
   }
   var b = new String
 
-  JAM.stopProfile('load');
-
   return b instanceof Boolean && !(a instanceof Boolean);
 }
+
+JAM.stopProfile('load');

@@ -1,9 +1,7 @@
-function runTest() {
-  i = 3;
-  for (;i < 5;) {
-    x = i;
-    i++;
-  }
-
-  return x === 4;
+i = 3;
+for (;i < 5;) {
+  x = i;
+  i++;
 }
+
+JAM.log("Result: " + " + respred ");

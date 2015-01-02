@@ -1,6 +1,6 @@
-function runTest() {
 
-  JAM.startProfile('load');
+JAM.startProfile('load');
+function runTest() {
   function f() {
     introspect(JAM.policy.p1) {
       var w$$5 = WebSocket("ws://www.blackoutjack.com")
@@ -9,7 +9,7 @@ function runTest() {
   }
   f()
 
-  JAM.stopProfile('load');
-
   return "RESULT NOT SPECIFIED";
 }
+
+JAM.stopProfile('load');

@@ -1,8 +1,8 @@
-var x = 5;
 
-  JAM.startProfile('load');
-  introspect(JAM.policy.pFull) {
-  var GlyphsUnicode = {A:65, AE:198, AEacute:508, AEmacron:482, AEsmall:63462, Aacute:193, Aacutesmall:63457, Abreve:258, Abreveacute:7854, Abrevecyrillic:1232, Abrevedotbelow:7862, Abrevegrave:7856, Abrevehookabove:7858, Abrevetilde:7860, Acaron:461, Acircle:9398, Acircumflex:194, Acircumflexacute:7844, Acircumflexdotbelow:7852, Acircumflexgrave:7846, Acircumflexhookabove:7848, Acircumflexsmall:63458, Acircumflextilde:7850, Acute:63177, Acutesmall:63412, Acyrillic:1040, Adblgrave:512, Adieresis:196, 
+JAM.startProfile('load');
+introspect(JAM.policy.pFull) {
+var x = 5;
+var GlyphsUnicode = {A:65, AE:198, AEacute:508, AEmacron:482, AEsmall:63462, Aacute:193, Aacutesmall:63457, Abreve:258, Abreveacute:7854, Abrevecyrillic:1232, Abrevedotbelow:7862, Abrevegrave:7856, Abrevehookabove:7858, Abrevetilde:7860, Acaron:461, Acircle:9398, Acircumflex:194, Acircumflexacute:7844, Acircumflexdotbelow:7852, Acircumflexgrave:7846, Acircumflexhookabove:7848, Acircumflexsmall:63458, Acircumflextilde:7850, Acute:63177, Acutesmall:63412, Acyrillic:1040, Adblgrave:512, Adieresis:196, 
 Adieresiscyrillic:1234, Adieresismacron:478, Adieresissmall:63460, Adotbelow:7840, Adotmacron:480, Agrave:192, Agravesmall:63456, Ahookabove:7842, Aiecyrillic:1236, Ainvertedbreve:514, Alpha:913, Alphatonos:902, Amacron:256, Amonospace:65313, Aogonek:260, Aring:197, Aringacute:506, Aringbelow:7680, Aringsmall:63461, Asmall:63329, Atilde:195, Atildesmall:63459, Aybarmenian:1329, B:66, Bcircle:9399, Bdotaccent:7682, Bdotbelow:7684, Becyrillic:1041, Benarmenian:1330, Beta:914, Bhook:385, Blinebelow:7686, 
 Bmonospace:65314, Brevesmall:63220, Bsmall:63330, Btopbar:386, C:67, Caarmenian:1342, Cacute:262, Caron:63178, Caronsmall:63221, Ccaron:268, Ccedilla:199, Ccedillaacute:7688, Ccedillasmall:63463, Ccircle:9400, Ccircumflex:264, Cdot:266, Cdotaccent:266, Cedillasmall:63416, Chaarmenian:1353, Cheabkhasiancyrillic:1212, Checyrillic:1063, Chedescenderabkhasiancyrillic:1214, Chedescendercyrillic:1206, Chedieresiscyrillic:1268, Cheharmenian:1347, Chekhakassiancyrillic:1227, Cheverticalstrokecyrillic:1208, 
 Chi:935, Chook:391, Circumflexsmall:63222, Cmonospace:65315, Coarmenian:1361, Csmall:63331, D:68, DZ:497, DZcaron:452, Daarmenian:1332, Dafrican:393, Dcaron:270, Dcedilla:7696, Dcircle:9401, Dcircumflexbelow:7698, Dcroat:272, Ddotaccent:7690, Ddotbelow:7692, Decyrillic:1044, Deicoptic:1006, Delta:8710, Deltagreek:916, Dhook:394, Dieresis:63179, DieresisAcute:63180, DieresisGrave:63181, Dieresissmall:63400, Digammagreek:988, Djecyrillic:1026, Dlinebelow:7694, Dmonospace:65316, Dotaccentsmall:63223, 
@@ -164,10 +164,9 @@ document.cookie = "other";
 var c = document.createElement("img");
 c.src = b;
 document.write(b);
-
-  }
-
-  JAM.stopProfile('load');
-
 var f = new Function("x = 2");
 f();
+
+}
+
+JAM.stopProfile('load');

@@ -1,6 +1,6 @@
-function runTest() {
 
-  JAM.startProfile('load');
+JAM.startProfile('load');
+function runTest() {
   introspect(JAM.policy.p2) {
     var a = document.write("ok")
   }
@@ -11,7 +11,7 @@ function runTest() {
     var c = document.write("fine")
   }
 
-  JAM.stopProfile('load');
-
   return "Expect an exception";
 }
+
+JAM.stopProfile('load');

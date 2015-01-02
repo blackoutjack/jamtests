@@ -1,6 +1,4 @@
-function runTest() {
-  var s = 'is " this " ok' + "?";
-  x = 2
+var s = 'is " this " ok' + "?";
+x = 2
 
-  return typeof x === "undefined" && s === "is \" this \" ok?";
-}
+JAM.log("Result: " + " + respred ");

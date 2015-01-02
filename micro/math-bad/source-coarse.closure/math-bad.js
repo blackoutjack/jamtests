@@ -1,8 +1,6 @@
-function runTest() {
-  introspect(JAM.policy.pFull) {
-  x = Math.floor(Math.random() * 4)
+introspect(JAM.policy.pFull) {
+x = Math.floor(Math.random() * 4)
 
-  }
+JAM.log("Result: " + " + respred ");
 
-  return typeof x === "undefined" || x !== 2;
 }

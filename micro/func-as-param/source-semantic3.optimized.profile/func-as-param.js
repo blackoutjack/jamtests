@@ -1,9 +1,7 @@
-function runTest() {
 
-  JAM.startProfile('load');
-  function h$$4(){introspect(JAM.policy.p1)x=2}function f(){var g=h$$4;g()}f()
+JAM.startProfile('load');
+function h$$4(){introspect(JAM.policy.p1)x=2}function f(){var g=h$$4;g()}f()
 
-  JAM.stopProfile('load');
+JAM.log("Result: " + " + respred ");
 
-  return typeof x === "undefined";
-}
+JAM.stopProfile('load');

@@ -1,11 +1,9 @@
-function runTest() {
-  introspect(JAM.policy.pFull) {
-  function f() {
-    throw "exception!";
-  }
-  f()
+introspect(JAM.policy.pFull) {
+function f() {
+  throw "exception!";
+}
+f()
 
-  }
+JAM.log("Result: " + " + respred ");
 
-  return "Exception thrown";
 }

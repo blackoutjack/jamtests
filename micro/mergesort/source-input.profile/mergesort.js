@@ -1,7 +1,7 @@
-function merge(left, right) {
 
-  JAM.startProfile('load');
-  // receive the left and right sublist as arguments.
+JAM.startProfile('load');
+function merge(left, right) {
+    // receive the left and right sublist as arguments.
     // 'result' variable for the merged result of two sublists.
     var result = [];
     // assign the element of the sublists to 'result' variable until there is no element to merge. 
@@ -72,8 +72,6 @@ for (var i=0; i<cnt; i++) {
 //print("BEFORE: " + vals);
 
 // Sort the array.
-
-  JAM.stopProfile('load');
-
 var sorted = mergeSort(vals);
 
+JAM.stopProfile('load');

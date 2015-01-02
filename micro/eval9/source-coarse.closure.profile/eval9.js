@@ -1,18 +1,16 @@
-function runTest() {
 
-  JAM.startProfile('load');
-  introspect(JAM.policy.pFull) {
-  function f() {
-    var y$$30 = x;
-    eval("var x;");
-    return y$$30;
-  }
-  x = 4;
-  var z = f()
-
-  }
-
-  JAM.stopProfile('load');
-
-  return "RESULT NOT SPECIFIED";
+JAM.startProfile('load');
+introspect(JAM.policy.pFull) {
+function f() {
+  var y$$30 = x;
+  eval("var x;");
+  return y$$30;
 }
+x = 4;
+var z = f()
+
+JAM.log("Result: " + " + respred ");
+
+}
+
+JAM.stopProfile('load');

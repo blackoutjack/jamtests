@@ -1,6 +1,6 @@
-function runTest() {
 
-  JAM.startProfile('load');
+JAM.startProfile('load');
+function runTest() {
   var a = JAM.call(document.getElementById, document, ["ok"], JAM.policy.p6);
   introspect(JAM.policy.p1) {
     var b = document.cookie
@@ -14,7 +14,7 @@ function runTest() {
   }
   JAM.call(document.write, document, [b], JAM.policy.p6)
 
-  JAM.stopProfile('load');
-
   return a === null && b instanceof HTMLElement;
 }
+
+JAM.stopProfile('load');

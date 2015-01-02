@@ -1,6 +1,6 @@
-function runTest() {
 
-  JAM.startProfile('load');
+JAM.startProfile('load');
+function runTest() {
   var b = 1;
   var v0 = document.cookie;
   introspect(JAM.policy.p4) {
@@ -14,7 +14,7 @@ function runTest() {
   }
   JAM.set(a, c, 10, JAM.policy.p5)
 
-  JAM.stopProfile('load');
-
   return "Expect an exception";
 }
+
+JAM.stopProfile('load');

@@ -1,5 +1,6 @@
 predicate-limit:3
 syntax-only:false
+policy-files:[/home/rich/cs/jam/tests/micro/default.policy]
 eval1.original.js:17
 eval1.normalized.js:18
 policy.aut:6

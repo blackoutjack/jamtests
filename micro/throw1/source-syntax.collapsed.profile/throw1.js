@@ -1,12 +1,12 @@
-function runTest() {
 
-  JAM.startProfile('load');
+JAM.startProfile('load');
+function runTest() {
   function f() {
     throw "exception!";
   }
   f()
 
-  JAM.stopProfile('load');
-
   return "Exception thrown";
 }
+
+JAM.stopProfile('load');

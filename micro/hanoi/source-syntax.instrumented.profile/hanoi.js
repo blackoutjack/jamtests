@@ -1,6 +1,6 @@
-function runTest() {
 
-  JAM.startProfile('load');
+JAM.startProfile('load');
+function runTest() {
   function Stack() {
     function v2() {
       var v3 = this.discs;
@@ -113,7 +113,7 @@ function runTest() {
   var v22 = "Target: " + targetStack;
   alert(v22)
 
-  JAM.stopProfile('load');
-
   return "Target tower should contain all discs, in order.";
 }
+
+JAM.stopProfile('load');

@@ -1,11 +1,9 @@
-function runTest() {
 
-  JAM.startProfile('load');
-  var a = document.write("ok");
-  var b = document.createElement("script");
-  var c = document.write("fine")
+JAM.startProfile('load');
+var a = document.write("ok");
+var b = document.createElement("script");
+var c = document.write("fine")
 
-  JAM.stopProfile('load');
+JAM.log("Result: " + " + respred ");
 
-  return "Expect an exception";
-}
+JAM.stopProfile('load');

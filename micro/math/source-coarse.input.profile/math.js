@@ -1,12 +1,8 @@
+
+JAM.startProfile('load');
+introspect(JAM.policy.pFull) {
 x = Math.floor(Math.random());
 
-  JAM.startProfile('load');
-  introspect(JAM.policy.pFull) {
-  
+}
 
-  }
-
-  JAM.stopProfile('load');
-
-
-x = Math.floor(Math.random());
+JAM.stopProfile('load');

@@ -1,10 +1,8 @@
-function runTest() {
 
-  JAM.startProfile('load');
-  document.getElementById = document.getElementsByTagName;
-  var elt = document.getElementById("ok")
+JAM.startProfile('load');
+document.getElementById = document.getElementsByTagName;
+var elt = document.getElementById("ok")
 
-  JAM.stopProfile('load');
+JAM.log("Result: " + " + respred ");
 
-  return elt instanceof HTMLCollection;
-}
+JAM.stopProfile('load');

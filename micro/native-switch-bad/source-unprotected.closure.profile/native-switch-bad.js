@@ -1,10 +1,8 @@
-function runTest() {
 
-  JAM.startProfile('load');
-  document.getElementsByTagName = document.getElementById;
-  var elt = document.getElementsByTagName("ok")
+JAM.startProfile('load');
+document.getElementsByTagName = document.getElementById;
+var elt = document.getElementsByTagName("ok")
 
-  JAM.stopProfile('load');
+JAM.log("Result: " + " + respred ");
 
-  return "Expect an exception";
-}
+JAM.stopProfile('load');

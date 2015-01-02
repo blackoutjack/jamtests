@@ -1,10 +1,10 @@
-function runTest() {
 
-  JAM.startProfile('load');
+JAM.startProfile('load');
+function runTest() {
   document.getElementById = document.getElementsByTagName;
   var elt = JAM.call(document.getElementById, document, ["ok"], JAM.policy.p1)
 
-  JAM.stopProfile('load');
-
   return elt instanceof HTMLCollection;
 }
+
+JAM.stopProfile('load');

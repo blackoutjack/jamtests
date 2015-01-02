@@ -1,6 +1,6 @@
-function runTest() {
 
-  JAM.startProfile('load');
+JAM.startProfile('load');
+function runTest() {
   introspect(JAM.policy.pFull) {
     document.write("<script>document.write(");
     document.write("'BOY HOWDY'");
@@ -8,7 +8,7 @@ function runTest() {
     document.close();
   }
 
-  JAM.stopProfile('load');
-
   return "'BOY HOWDY' should be written on the page";
 }
+
+JAM.stopProfile('load');

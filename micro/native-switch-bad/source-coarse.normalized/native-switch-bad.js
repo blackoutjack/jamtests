@@ -1,9 +1,7 @@
-function runTest() {
-  introspect(JAM.policy.pFull) {
-  document.getElementsByTagName = document.getElementById;
-  var elt = document.getElementsByTagName("ok")
+introspect(JAM.policy.pFull) {
+document.getElementsByTagName = document.getElementById;
+var elt = document.getElementsByTagName("ok")
 
-  }
+JAM.log("Result: " + " + respred ");
 
-  return "Expect an exception";
 }

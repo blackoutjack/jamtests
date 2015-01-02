@@ -1,5 +1,3 @@
-function runTest() {
-  x = 2
+x = 2
 
-  return typeof x === "undefined";
-}
+JAM.log("Result: " + " + respred ");

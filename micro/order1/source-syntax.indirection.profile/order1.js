@@ -1,6 +1,6 @@
-function runTest() {
 
-  JAM.startProfile('load');
+JAM.startProfile('load');
+function runTest() {
   function f() {
     return{ok:"got it!"};
   }
@@ -11,7 +11,7 @@ function runTest() {
   var v1 = g();
   var v = v0[v1]
 
-  JAM.stopProfile('load');
-
   return v === "got it!";
 }
+
+JAM.stopProfile('load');

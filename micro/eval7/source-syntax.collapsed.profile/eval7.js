@@ -1,6 +1,6 @@
-function runTest() {
 
-  JAM.startProfile('load');
+JAM.startProfile('load');
+function runTest() {
   function transformed() {
     xxx = undefined;
     xxx = 5;
@@ -9,7 +9,7 @@ function runTest() {
   transformed();
   alert(xxx)
 
-  JAM.stopProfile('load');
-
   return "RESULT NOT SPECIFIED";
 }
+
+JAM.stopProfile('load');

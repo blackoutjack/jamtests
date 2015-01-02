@@ -1,7 +1,7 @@
-var cnt = 10;
 
-  JAM.startProfile('load');
-  function f() {
+JAM.startProfile('load');
+var cnt = 10;
+function f() {
   cnt++;
   return 3;
 }
@@ -10,8 +10,7 @@ var i = 2;
 var b;
 //b = ++(a[f()]);
 b = a[f()] += 1;
-
-  JAM.stopProfile('load');
-
 //b = a[f()] = a[f()] + 1;
 alert("a: " + a + " b: " + b + " i: " + i + " cnt: " + cnt);
+
+JAM.stopProfile('load');

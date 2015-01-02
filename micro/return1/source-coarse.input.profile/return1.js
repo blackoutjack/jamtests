@@ -1,7 +1,7 @@
-function g() {
 
-  JAM.startProfile('load');
-  introspect(JAM.policy.pFull) {
+JAM.startProfile('load');
+introspect(JAM.policy.pFull) {
+function g() {
   try {
     if (x) {
       return;
@@ -15,10 +15,9 @@ function g() {
   return
 }
 x = 3;
-
-  }
-
-  JAM.stopProfile('load');
-
 g();
 print(x);
+
+}
+
+JAM.stopProfile('load');

@@ -1,5 +1,6 @@
 predicate-limit:0
 syntax-only:false
+policy-files:[/home/rich/cs/jam/tests/micro/seedtest/seedtest.policy]
 seedtest.original.js:41
 seedtest.normalized.js:41
 policy.aut:7

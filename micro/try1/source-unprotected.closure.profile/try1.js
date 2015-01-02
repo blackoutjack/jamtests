@@ -1,13 +1,11 @@
-function runTest() {
 
-  JAM.startProfile('load');
-  try {
-    x = 2;
-  } finally {
-    x = 3;
-  }
-
-  JAM.stopProfile('load');
-
-  return x === 3;
+JAM.startProfile('load');
+try {
+  x = 2;
+} finally {
+  x = 3;
 }
+
+JAM.log("Result: " + " + respred ");
+
+JAM.stopProfile('load');

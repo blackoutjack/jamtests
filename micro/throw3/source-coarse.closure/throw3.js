@@ -1,11 +1,9 @@
-function runTest() {
-  introspect(JAM.policy.pFull) {
-  function f() {
-    throw x = 2;
-  }
-  f()
+introspect(JAM.policy.pFull) {
+function f() {
+  throw x = 2;
+}
+f()
 
-  }
+JAM.log("Result: " + " + respred ");
 
-  return "RESULT NOT SPECIFIED";
 }

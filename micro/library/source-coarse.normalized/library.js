@@ -1,23 +1,21 @@
-function runTest() {
-  introspect(JAM.policy.pFull) {
-  function f() {
-    function v0() {
-      x = 2;
-      return;
-    }
-    this.setter = v0;
+introspect(JAM.policy.pFull) {
+function f() {
+  function v0() {
+    x = 2;
     return;
   }
-  function g() {
-    function v1() {
-      x = 2;
-      return;
-    }
-    this.setter = v1;
+  this.setter = v0;
+  return;
+}
+function g() {
+  function v1() {
+    x = 2;
     return;
   }
+  this.setter = v1;
+  return;
+}
 
-  }
+JAM.log("Result: " + " + respred ");
 
-  return "No state to inspect";
 }

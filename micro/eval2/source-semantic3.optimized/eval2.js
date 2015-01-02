@@ -1,5 +1,3 @@
-function runTest() {
-  function f(){JAM.isEval(eval)?eval("introspect(JAM.policy.pFull) { String.prototype.indexOf = String.prototype.toLowerCase; }"):JAM.call(eval,null,["String.prototype.indexOf = String.prototype.toLowerCase;"]);var v=1;return v}var v0=f();introspect(JAM.policy.p1)x=v0
+function f(){JAM.isEval(eval)?eval("introspect(JAM.policy.pFull) { String.prototype.indexOf = String.prototype.toLowerCase; }"):JAM.call(eval,null,["String.prototype.indexOf = String.prototype.toLowerCase;"]);var v=1;return v}var v0=f();introspect(JAM.policy.p1)x=v0
 
-  return x === "ok";
-}
+JAM.log("Result: " + " + respred ");

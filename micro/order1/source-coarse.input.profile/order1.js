@@ -1,15 +1,14 @@
-function f() {
 
-  JAM.startProfile('load');
-  introspect(JAM.policy.pFull) {
+JAM.startProfile('load');
+introspect(JAM.policy.pFull) {
+function f() {
   return { ok: "got it!" };
 }
 function g() {
   return "ok";
-
-  }
-
-  JAM.stopProfile('load');
-
 }
 var v = f()[g()];
+
+}
+
+JAM.stopProfile('load');

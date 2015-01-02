@@ -1,11 +1,10 @@
-function transformed() {
 
-  JAM.startProfile('load');
+JAM.startProfile('load');
+function transformed() {
   xxx = undefined;
   xxx = 5;
 }
-
-  JAM.stopProfile('load');
-
 transformed();
 alert(xxx);
+
+JAM.stopProfile('load');

@@ -1,8 +1,6 @@
-function runTest() {
-  introspect(JAM.policy.pFull) {
-  x = 3
+introspect(JAM.policy.pFull) {
+x = 3
 
-  }
+JAM.log("Result: " + " + respred ");
 
-  return x === 3;
 }

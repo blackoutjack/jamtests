@@ -1,8 +1,6 @@
-function runTest() {
-  x = 1;
-  var e = eval;
-  JAM.call(e.apply, e, [null, ["x = 2"]]);
-  alert(x)
+x = 1;
+var e = eval;
+JAM.call(e.apply, e, [null, ["x = 2"]]);
+alert(x)
 
-  return x === 1;
-}
+JAM.log("Result: " + " + respred ");

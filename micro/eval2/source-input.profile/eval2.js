@@ -1,11 +1,10 @@
-function f() {
 
-  JAM.startProfile('load');
+JAM.startProfile('load');
+function f() {
   eval("String.prototype.indexOf = String.prototype.toLowerCase;");
   var v = "OK".indexOf("K");
   return v;
-
-  JAM.stopProfile('load');
-
 }
 x = f();
+
+JAM.stopProfile('load');

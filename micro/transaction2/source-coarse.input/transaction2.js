@@ -1,13 +1,12 @@
+introspect(JAM.policy.pFull) {
 function f() {
-  introspect(JAM.policy.pFull) {
   var v111 = 1;
   x = undefined;
   introspect(p.alert) {
     x = 2
   }
   alert(x);
-
-  }
-
 }
 f();
+
+}

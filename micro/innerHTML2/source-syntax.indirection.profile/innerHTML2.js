@@ -1,12 +1,12 @@
-function runTest() {
 
-  JAM.startProfile('load');
+JAM.startProfile('load');
+function runTest() {
   var elt = document.createElement("script");
   JAM.set(elt, "innerHTML", "x = 2; alert('gotcha');");
   var v0 = document.body;
   JAM.call(v0.appendChild, v0, [elt])
 
-  JAM.stopProfile('load');
-
   return "RESULT NOT SPECIFIED";
 }
+
+JAM.stopProfile('load');

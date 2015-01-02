@@ -1,7 +1,5 @@
-function runTest() {
-  introspect(JAM.policy.pFull) {
-    document.write("<script>x = 2;\x3c/script>");
-  }
-
-  return "RESULT NOT SPECIFIED";
+introspect(JAM.policy.pFull) {
+  document.write("<script>x = 2;\x3c/script>");
 }
+
+JAM.log("Result: " + " + respred ");

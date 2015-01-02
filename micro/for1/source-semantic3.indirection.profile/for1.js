@@ -1,16 +1,14 @@
-function runTest() {
 
-  JAM.startProfile('load');
-  var i = 0;
-  for (;;) {
-    var v0 = i > 5;
-    if (v0) {
-      break;
-    }
-    i++;
+JAM.startProfile('load');
+var i = 0;
+for (;;) {
+  var v0 = i > 5;
+  if (v0) {
+    break;
   }
-
-  JAM.stopProfile('load');
-
-  return i === 6;
+  i++;
 }
+
+JAM.log("Result: " + " + respred ");
+
+JAM.stopProfile('load');

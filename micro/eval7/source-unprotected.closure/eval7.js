@@ -1,10 +1,8 @@
-function runTest() {
-  function transformed() {
-    xxx = undefined;
-    xxx = 5;
-  }
-  transformed();
-  alert(xxx)
-
-  return "RESULT NOT SPECIFIED";
+function transformed() {
+  xxx = undefined;
+  xxx = 5;
 }
+transformed();
+alert(xxx)
+
+JAM.log("Result: " + " + respred ");

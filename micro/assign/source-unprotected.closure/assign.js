@@ -1,6 +1,4 @@
-function runTest() {
-  var a = document;
-  a.cookie = "ok"
+var a = document;
+a.cookie = "ok"
 
-  return document.cookie !== "ok";
-}
+JAM.log("Result: " + " + respred ");

@@ -1,14 +1,12 @@
-function runTest() {
-  introspect(JAM.policy.pFull) {
-  function pol(tx) {
-    tx.commit();
-  }
-  x = undefined;
-  introspect(pol) {
-    x = 2;
-  }
+introspect(JAM.policy.pFull) {
+function pol(tx) {
+  tx.commit();
+}
+x = undefined;
+introspect(pol) {
+  x = 2;
+}
 
-  }
+JAM.log("Result: " + " + respred ");
 
-  return x === undefined;
 }

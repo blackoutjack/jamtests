@@ -1,6 +1,6 @@
-function runTest() {
 
-  JAM.startProfile('load');
+JAM.startProfile('load');
+function runTest() {
   function g() {
     return 2;
   }
@@ -10,7 +10,7 @@ function runTest() {
   2;
   x = JAM.call(eval, null, ["f()"])
 
-  JAM.stopProfile('load');
-
   return "Violation should be blocked";
 }
+
+JAM.stopProfile('load');

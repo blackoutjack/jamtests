@@ -1,5 +1,3 @@
-function runTest() {
-  x=1;var e=JAM.call(eval.bind,eval,[null,"x = 2"]);e()
+x=1;var e=JAM.call(eval.bind,eval,[null,"x = 2"]);e()
 
-  return x === 1;
-}
+JAM.log("Result: " + " + respred ");

@@ -1,6 +1,6 @@
-function runTest() {
 
-  JAM.startProfile('load');
+JAM.startProfile('load');
+function runTest() {
   function v0() {
     return "ok";
   }
@@ -10,7 +10,7 @@ function runTest() {
   var v1 = a.ok;
   alert(v1)
 
-  JAM.stopProfile('load');
-
   return a.ok === "ok";
 }
+
+JAM.stopProfile('load');

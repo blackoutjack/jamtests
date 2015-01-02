@@ -1,8 +1,8 @@
-var x = true;
 
-  JAM.startProfile('load');
-  introspect(JAM.policy.pFull) {
-  if (x) {
+JAM.startProfile('load');
+introspect(JAM.policy.pFull) {
+var x = true;
+if (x) {
   var cnt = 0;
   function f() {
     if (cnt < 3) {
@@ -17,10 +17,9 @@ var x = true;
     }
   }
   f();
-
-  }
-
-  JAM.stopProfile('load');
-
   g();
 }
+
+}
+
+JAM.stopProfile('load');

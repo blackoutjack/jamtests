@@ -1,9 +1,6 @@
-var x = XMLHttpRequest();
 
-  JAM.startProfile('load');
-  
-
-  JAM.stopProfile('load');
-
+JAM.startProfile('load');
 var x = XMLHttpRequest();
 x.open('GET');
+
+JAM.stopProfile('load');

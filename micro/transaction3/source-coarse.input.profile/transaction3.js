@@ -1,12 +1,11 @@
+
+JAM.startProfile('load');
+introspect(JAM.policy.pFull) {
 alert('0');
-
-  JAM.startProfile('load');
-  introspect(JAM.policy.pFull) {
-  introspect(p) {
-
-  }
-
-  JAM.stopProfile('load');
-
+introspect(p) {
   alert('1');
 }
+
+}
+
+JAM.stopProfile('load');

@@ -1,6 +1,6 @@
-function runTest() {
 
-  JAM.startProfile('load');
+JAM.startProfile('load');
+function runTest() {
   function v0() {
     alert("indexOf 2: " + String.prototype.indexOf);
     return;
@@ -11,7 +11,7 @@ function runTest() {
   alert("indexOf 1: " + String.prototype.indexOf);
   JAM.call(setTimeout, null, [v0, 1E3])
 
-  JAM.stopProfile('load');
-
   return "1st pop-up should print the native function, and the 2nd should print 'false'";
 }
+
+JAM.stopProfile('load');

@@ -1,6 +1,6 @@
-function f() {
 
-  JAM.startProfile('load');
+JAM.startProfile('load');
+function f() {
   prop = "b";
   return 2;
 }
@@ -21,8 +21,7 @@ for (var q in n) {
   alert("n[" + q + "]: " + n[q]);
 }
 for (var p in o) {
-
-  JAM.stopProfile('load');
-
   alert("o[" + p + "]: " + o[p]);
 }
+
+JAM.stopProfile('load');

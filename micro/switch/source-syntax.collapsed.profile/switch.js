@@ -1,6 +1,6 @@
-function runTest() {
 
-  JAM.startProfile('load');
+JAM.startProfile('load');
+function runTest() {
   x = JAM.call(Math.floor, Math, [Math.random() * 4]);
   switch(x) {
     case 0:
@@ -27,7 +27,7 @@ function runTest() {
       alert("ERROR");
   }
 
-  JAM.stopProfile('load');
-
   return x !== 2;
 }
+
+JAM.stopProfile('load');

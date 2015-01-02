@@ -1,11 +1,9 @@
-try {
 
-  JAM.startProfile('load');
+JAM.startProfile('load');
+try {
   x = 2;
 } finally {
   x = 3;
-
-  JAM.stopProfile('load');
-
 }
 
+JAM.stopProfile('load');

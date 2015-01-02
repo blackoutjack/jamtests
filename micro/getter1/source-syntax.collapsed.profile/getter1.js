@@ -1,6 +1,6 @@
-function runTest() {
 
-  JAM.startProfile('load');
+JAM.startProfile('load');
+function runTest() {
   function hello() {
     return "hello";
   }
@@ -19,7 +19,7 @@ function runTest() {
   JAM.call(Object.defineProperty, Object, [a, "ok", {get:v2}]);
   alert(a.ok)
 
-  JAM.stopProfile('load');
-
   return a.ok === "okhello whatever";
 }
+
+JAM.stopProfile('load');

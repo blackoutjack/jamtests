@@ -1,9 +1,7 @@
-function runTest() {
-  introspect(JAM.policy.pFull) {
-  var label = document.createElement("label");
-  label.textContent = "Are you sure you want to delete?"
+introspect(JAM.policy.pFull) {
+var label = document.createElement("label");
+label.textContent = "Are you sure you want to delete?"
 
-  }
+JAM.log("Result: " + " + respred ");
 
-  return label.textContent === "Are you sure you want to delete?";
 }

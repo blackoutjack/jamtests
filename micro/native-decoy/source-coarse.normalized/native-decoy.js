@@ -1,12 +1,10 @@
-function runTest() {
-  introspect(JAM.policy.pFull) {
-  function f() {
-    return;
-  }
-  document.getElementById = f;
-  var elt = document.getElementById("ok")
+introspect(JAM.policy.pFull) {
+function f() {
+  return;
+}
+document.getElementById = f;
+var elt = document.getElementById("ok")
 
-  }
+JAM.log("Result: " + " + respred ");
 
-  return elt === undefined;
 }

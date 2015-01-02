@@ -1,6 +1,6 @@
-function runTest() {
 
-  JAM.startProfile('load');
+JAM.startProfile('load');
+function runTest() {
   with(document) {
     introspect(JAM.policy.p1) {
       var elt = getElementById("note")
@@ -8,7 +8,7 @@ function runTest() {
   }
   elt.innerHTML = "ok"
 
-  JAM.stopProfile('load');
-
   return "RESULT NOT SPECIFIED";
 }
+
+JAM.stopProfile('load');

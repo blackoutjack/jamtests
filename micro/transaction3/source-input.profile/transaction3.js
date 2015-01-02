@@ -1,9 +1,8 @@
+
+JAM.startProfile('load');
 alert('0');
-
-  JAM.startProfile('load');
-  introspect(p) {
-
-  JAM.stopProfile('load');
-
+introspect(p) {
   alert('1');
 }
+
+JAM.stopProfile('load');

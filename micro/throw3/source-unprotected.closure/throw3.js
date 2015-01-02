@@ -1,8 +1,6 @@
-function runTest() {
-  function f() {
-    throw x = 2;
-  }
-  f()
-
-  return "RESULT NOT SPECIFIED";
+function f() {
+  throw x = 2;
 }
+f()
+
+JAM.log("Result: " + " + respred ");

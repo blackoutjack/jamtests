@@ -1,6 +1,6 @@
-function runTest() {
 
-  JAM.startProfile('load');
+JAM.startProfile('load');
+function runTest() {
   o = new Object;
   o.y = 2;
   o.z = 3;
@@ -11,7 +11,7 @@ function runTest() {
     }
   }
 
-  JAM.stopProfile('load');
-
   return x === 3;
 }
+
+JAM.stopProfile('load');

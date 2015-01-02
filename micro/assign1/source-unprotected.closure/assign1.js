@@ -1,9 +1,7 @@
-function runTest() {
-  var a = 0;
-  var b = 10;
-  var c = 20;
-  a = b += c += 2;
-  alert("a: " + a + " b: " + b + " c: " + c)
+var a = 0;
+var b = 10;
+var c = 20;
+a = b += c += 2;
+alert("a: " + a + " b: " + b + " c: " + c)
 
-  return a === 32 && b === 32 && c === 22;
-}
+JAM.log("Result: " + " + respred ");

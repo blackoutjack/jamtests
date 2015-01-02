@@ -1,13 +1,11 @@
-function runTest() {
-  introspect(JAM.policy.pFull) {
-  var elt = document.createElement("script");
-  var node = document.createAttribute("dummy");
-  node.value = "exfil.js";
-  node.nodeName = "src";
-  elt.setAttributeNode(node);
-  document.body.appendChild(elt)
+introspect(JAM.policy.pFull) {
+var elt = document.createElement("script");
+var node = document.createAttribute("dummy");
+node.value = "exfil.js";
+node.nodeName = "src";
+elt.setAttributeNode(node);
+document.body.appendChild(elt)
 
-  }
+JAM.log("Result: " + " + respred ");
 
-  return "RESULT NOT SPECIFIED";
 }

@@ -1,7 +1,7 @@
-var cnt = 0;
 
-  JAM.startProfile('load');
-  function f() {
+JAM.startProfile('load');
+var cnt = 0;
+function f() {
   alert("CNT: " + cnt);
   return cnt++;
 }
@@ -24,8 +24,7 @@ out: while (true) {
       alert("GOT DEFAULT");
       break out;
   }
-
-  JAM.stopProfile('load');
-
   i *= 2;
 }
+
+JAM.stopProfile('load');

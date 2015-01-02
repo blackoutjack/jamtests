@@ -1,26 +1,24 @@
-function runTest() {
 
-  JAM.startProfile('load');
-  introspect(JAM.policy.pFull) {
-  function g() {
-    try {
-      if (x) {
-        return;
-      } else {
-        x = 4;
-      }
-    } finally {
-      x = 2;
+JAM.startProfile('load');
+introspect(JAM.policy.pFull) {
+function g() {
+  try {
+    if (x) {
+      return;
+    } else {
+      x = 4;
     }
-    x = 1;
+  } finally {
+    x = 2;
   }
-  x = 3;
-  g();
-  print(x)
-
-  }
-
-  JAM.stopProfile('load');
-
-  return "RESULT NOT SPECIFIED";
+  x = 1;
 }
+x = 3;
+g();
+print(x)
+
+JAM.log("Result: " + " + respred ");
+
+}
+
+JAM.stopProfile('load');

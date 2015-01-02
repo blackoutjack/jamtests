@@ -1,18 +1,16 @@
-function runTest() {
 
-  JAM.startProfile('load');
-  introspect(JAM.policy.pFull) {
-  function f() {
-    return{ok:"got it!"};
-  }
-  function g() {
-    return "ok";
-  }
-  var v = f()[g()]
-
-  }
-
-  JAM.stopProfile('load');
-
-  return v === "got it!";
+JAM.startProfile('load');
+introspect(JAM.policy.pFull) {
+function f() {
+  return{ok:"got it!"};
 }
+function g() {
+  return "ok";
+}
+var v = f()[g()]
+
+JAM.log("Result: " + " + respred ");
+
+}
+
+JAM.stopProfile('load');

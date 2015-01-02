@@ -1,9 +1,7 @@
-function runTest() {
 
-  JAM.startProfile('load');
-  var f=document,x=f.getElementsByTagName("ok")
+JAM.startProfile('load');
+var f=document,x=f.getElementsByTagName("ok")
 
-  JAM.stopProfile('load');
+JAM.log("Result: " + " + respred ");
 
-  return x instanceof HTMLCollection;
-}
+JAM.stopProfile('load');

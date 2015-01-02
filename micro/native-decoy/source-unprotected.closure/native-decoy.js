@@ -1,8 +1,6 @@
-function runTest() {
-  function f() {
-  }
-  document.getElementById = f;
-  var elt = document.getElementById("ok")
-
-  return elt === undefined;
+function f() {
 }
+document.getElementById = f;
+var elt = document.getElementById("ok")
+
+JAM.log("Result: " + " + respred ");

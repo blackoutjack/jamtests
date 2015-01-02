@@ -1,12 +1,11 @@
-function pol(tx) {
 
-  JAM.startProfile('load');
+JAM.startProfile('load');
+function pol(tx) {
   tx.commit();
 }
 x = undefined;
 introspect(pol) {
-
-  JAM.stopProfile('load');
-
   x = 2;
 }
+
+JAM.stopProfile('load');

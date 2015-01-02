@@ -1,5 +1,6 @@
 predicate-limit:3
 syntax-only:false
+policy-files:[/home/rich/cs/jam/tests/micro/called/called.policy]
 called.original.js:12
 called.normalized.js:12
 policy.aut:6

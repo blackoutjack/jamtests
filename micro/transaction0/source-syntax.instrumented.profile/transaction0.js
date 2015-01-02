@@ -1,6 +1,6 @@
-function runTest() {
 
-  JAM.startProfile('load');
+JAM.startProfile('load');
+function runTest() {
   function pol(tx) {
     tx.commit();
     return;
@@ -14,7 +14,7 @@ function runTest() {
     }
   }
 
-  JAM.stopProfile('load');
-
   return x === undefined;
 }
+
+JAM.stopProfile('load');

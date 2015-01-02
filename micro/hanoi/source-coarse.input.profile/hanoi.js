@@ -1,8 +1,7 @@
 
-
-  JAM.startProfile('load');
-  introspect(JAM.policy.pFull) {
-  function Stack() {
+JAM.startProfile('load');
+introspect(JAM.policy.pFull) {
+function Stack() {
 
   this.discs = [Infinity]; 
   
@@ -71,9 +70,6 @@ alert("Initial: " + initialStack);
 alert("Aux: " + auxStack);
 alert("Target: " + targetStack);
 
-  }
+}
 
-  JAM.stopProfile('load');
-
-
-
+JAM.stopProfile('load');

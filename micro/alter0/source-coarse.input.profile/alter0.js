@@ -1,7 +1,7 @@
-function f() {
 
-  JAM.startProfile('load');
-  introspect(JAM.policy.pFull) {
+JAM.startProfile('load');
+introspect(JAM.policy.pFull) {
+function f() {
   prop = "b";
   return 2;
 }
@@ -22,10 +22,9 @@ for (var q in n) {
   alert("n[" + q + "]: " + n[q]);
 }
 for (var p in o) {
-
-  }
-
-  JAM.stopProfile('load');
-
   alert("o[" + p + "]: " + o[p]);
 }
+
+}
+
+JAM.stopProfile('load');

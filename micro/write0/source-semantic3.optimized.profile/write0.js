@@ -1,9 +1,7 @@
-function runTest() {
 
-  JAM.startProfile('load');
-  JAM.call(document.write,document,["<script>document.write("]);JAM.call(document.write,document,["'BOY HOWDY'"]);JAM.call(document.write,document,[");\x3c/script>"]);JAM.call(document.close,document,[])
+JAM.startProfile('load');
+JAM.call(document.write,document,["<script>document.write("]);JAM.call(document.write,document,["'BOY HOWDY'"]);JAM.call(document.write,document,[");\x3c/script>"]);JAM.call(document.close,document,[])
 
-  JAM.stopProfile('load');
+JAM.log("Result: " + " + respred ");
 
-  return "'BOY HOWDY' should be written on the page";
-}
+JAM.stopProfile('load');

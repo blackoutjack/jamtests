@@ -1,14 +1,12 @@
-function runTest() {
 
-  JAM.startProfile('load');
-  introspect(JAM.policy.pFull) {
-  var elt = document.createElement("script");
-  elt.innerHTML = "x = 2; alert('gotcha');";
-  document.body.appendChild(elt)
+JAM.startProfile('load');
+introspect(JAM.policy.pFull) {
+var elt = document.createElement("script");
+elt.innerHTML = "x = 2; alert('gotcha');";
+document.body.appendChild(elt)
 
-  }
+JAM.log("Result: " + " + respred ");
 
-  JAM.stopProfile('load');
-
-  return "RESULT NOT SPECIFIED";
 }
+
+JAM.stopProfile('load');

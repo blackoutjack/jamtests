@@ -1,6 +1,6 @@
-function runTest() {
 
-  JAM.startProfile('load');
+JAM.startProfile('load');
+function runTest() {
   function f() {
     function v0() {
       introspect(JAM.policy.p2) {
@@ -22,7 +22,7 @@ function runTest() {
     return;
   }
 
-  JAM.stopProfile('load');
-
   return "No state to inspect";
 }
+
+JAM.stopProfile('load');

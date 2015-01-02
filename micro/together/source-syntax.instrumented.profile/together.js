@@ -1,6 +1,6 @@
-function runTest() {
 
-  JAM.startProfile('load');
+JAM.startProfile('load');
+function runTest() {
   function v0() {
     notanid();
     return;
@@ -26,7 +26,7 @@ function runTest() {
     console.error(v2);
   }
 
-  JAM.stopProfile('load');
-
   return "\"OK1\" and \"OK2\" should be alerted";
 }
+
+JAM.stopProfile('load');

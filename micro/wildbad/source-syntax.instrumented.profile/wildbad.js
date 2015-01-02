@@ -1,12 +1,12 @@
-function runTest() {
 
-  JAM.startProfile('load');
+JAM.startProfile('load');
+function runTest() {
   var a = document.getElementById("ok");
   introspect(JAM.policy.p1) {
     a.innerHTML = 1;
   }
 
-  JAM.stopProfile('load');
-
   return a.innerHTML === "THIS SHOULD REMAIN";
 }
+
+JAM.stopProfile('load');

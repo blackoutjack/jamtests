@@ -1,7 +1,7 @@
-try {
 
-  JAM.startProfile('load');
-  alert("OK1");
+JAM.startProfile('load');
+try {
+alert("OK1");
 function f() {
   notanid();
 }
@@ -13,8 +13,7 @@ f();
 try {
 alert("OK2");
 } catch (ex) {
-
-  JAM.stopProfile('load');
-
   console.error(ex.name + ": " + ex.message);
 }
+
+JAM.stopProfile('load');

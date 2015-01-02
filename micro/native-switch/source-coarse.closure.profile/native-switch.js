@@ -1,13 +1,11 @@
-function runTest() {
 
-  JAM.startProfile('load');
-  introspect(JAM.policy.pFull) {
-  document.getElementById = document.getElementsByTagName;
-  var elt = document.getElementById("ok")
+JAM.startProfile('load');
+introspect(JAM.policy.pFull) {
+document.getElementById = document.getElementsByTagName;
+var elt = document.getElementById("ok")
 
-  }
+JAM.log("Result: " + " + respred ");
 
-  JAM.stopProfile('load');
-
-  return elt instanceof HTMLCollection;
 }
+
+JAM.stopProfile('load');

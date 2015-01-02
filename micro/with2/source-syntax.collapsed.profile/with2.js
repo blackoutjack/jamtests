@@ -1,6 +1,6 @@
-function runTest() {
 
-  JAM.startProfile('load');
+JAM.startProfile('load');
+function runTest() {
   function O() {
     this.a = 1;
     this.b = 2;
@@ -17,7 +17,7 @@ function runTest() {
   }
   print("d: " + d + " e: " + e + " f: " + f)
 
-  JAM.stopProfile('load');
-
   return "RESULT NOT SPECIFIED";
 }
+
+JAM.stopProfile('load');

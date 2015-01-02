@@ -1,6 +1,6 @@
-function runTest() {
 
-  JAM.startProfile('load');
+JAM.startProfile('load');
+function runTest() {
   function f() {
     eval("String.prototype.indexOf = String.prototype.toLowerCase;");
     var v = "OK".indexOf("K");
@@ -10,7 +10,7 @@ function runTest() {
     x = f();
   }
 
-  JAM.stopProfile('load');
-
   return x === "ok";
 }
+
+JAM.stopProfile('load');

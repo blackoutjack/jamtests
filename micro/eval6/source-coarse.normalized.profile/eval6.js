@@ -1,13 +1,11 @@
-function runTest() {
 
-  JAM.startProfile('load');
-  introspect(JAM.policy.pFull) {
-  eval("var xxx = 5;");
-  alert(xxx)
+JAM.startProfile('load');
+introspect(JAM.policy.pFull) {
+eval("var xxx = 5;");
+alert(xxx)
 
-  }
+JAM.log("Result: " + " + respred ");
 
-  JAM.stopProfile('load');
-
-  return "RESULT NOT SPECIFIED";
 }
+
+JAM.stopProfile('load');

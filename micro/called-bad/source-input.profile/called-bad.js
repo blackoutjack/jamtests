@@ -1,9 +1,6 @@
-var f = document;
 
-  JAM.startProfile('load');
-  
-
-  JAM.stopProfile('load');
-
+JAM.startProfile('load');
 var f = document;
 var x = f.getElementById("ok");
+
+JAM.stopProfile('load');

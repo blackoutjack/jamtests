@@ -1,9 +1,7 @@
-function runTest() {
-  introspect(JAM.policy.pFull) {
-  document.getElementById = document.getElementsByTagName;
-  var elt = document.getElementById("ok")
+introspect(JAM.policy.pFull) {
+document.getElementById = document.getElementsByTagName;
+var elt = document.getElementById("ok")
 
-  }
+JAM.log("Result: " + " + respred ");
 
-  return elt instanceof HTMLCollection;
 }
