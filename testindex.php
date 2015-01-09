@@ -4,18 +4,8 @@ error_reporting(E_ALL);
 $err = '';
 define(COLUMN_HEIGHT, 12);
 
-$auto = isset($_REQUEST['auto']) ? !!$_REQUEST['auto'] : false;
-$autoindex = (isset($_REQUEST['autoindex']) && is_numeric($_REQUEST['autoindex'])) ? $_REQUEST['autoindex'] : 0;
-$autowait = (isset($_REQUEST['autowait']) && is_numeric($_REQUEST['autowait'])) ? $_REQUEST['autowait'] : 1000;
-$autoapp = (isset($_REQUEST['autoapp']) && is_numeric($_REQUEST['autoapp'])) ? $_REQUEST['autoapp'] : 0;
-
-// Default set of variants to go through during automated testing.
-$autotests = array('input', 'semantic0.collapsed', 'coarse.input', 'input.profile', 'semantic0.collapsed.profile', 'coarse.input.profile');
-//$autotests = array('input', 'semantic0.instrumented', 'input.profile', 'semantic0.instrumented.profile');
-
-// Use this for SMS2 "big" variants, since all static files are loaded.
-$bigautotests = array('big.input.profile', 'big.semantic0.collapsed.profile', 'big.coarse.input.profile');
-//$bigautotests = array('big.input.profile', 'big.semantic0.instrumented.profile');
+$appname = basename(getcwd());
+include "auto.php";
 
 function getSubArray($parent, $idx) {
   $sub = null;
@@ -27,22 +17,17 @@ function getSubArray($parent, $idx) {
   return $sub; 
 }
 
-$appname = basename(getcwd());
+$IGNORE_FILES = array(
+  '.', '..', 'libTx.js', 'auto.js', 'auto.php', 'autoextra.js',
+  'actions.txt', 'index.php', 'test.php', '.svn'
+);
 
 // Filter out ancillary files.
 $allfiles = scandir(".");
 $sourcefiles = array();
 $sourcedirs = array();
 foreach ($allfiles as $fl) {
-  if ($fl === '.') continue;
-  if ($fl === '..') continue;
-  if ($fl === 'libTx.js') continue;
-  if ($fl === 'auto.js') continue;
-  if ($fl === 'autoextra.js') continue;
-  if ($fl === 'actions.txt') continue;
-  if ($fl === 'index.php') continue;
-  if ($fl === 'test.php') continue;
-  if ($fl === '.svn') continue;
+  if (array_search($fl, $IGNORE_FILES) !== false) continue;
 
   if (is_dir($fl)) {
     if (strpos($fl, 'source-') === 0) {
@@ -100,9 +85,14 @@ foreach ($sourcefiles as $fl) {
     }
   }
   if ($ext == 'js' && $desc == 'policy') {
-    $desc = $len > 2 ? $parts[$len-3] : 'main';
-    $polinfo[$desc] = getSubArray($polinfo, $desc);
-    $polinfo[$desc]['policy'] = $fl;
+    if ($len > 2) {
+      // Slice off 'policy' and 'js'.
+      $descparts = array_slice($parts, 0, $len - 2);
+      $desc = implode('.', $descparts);
+    } else {
+      $desc = 'main';
+    }
+    $polinfo[$desc] = $fl;
   }
 }
 
@@ -198,6 +188,36 @@ function findFile($info, $filetype, $key) {
   }
 }
 
+function findPolicies($info, $key) {
+  $ret = array();
+
+  $keyparts = explode('.', $key);
+  $keylen = sizeof($keyparts);
+  if ($keyparts[$keylen - 1] == 'profile') {
+    $keyparts = array_slice($keyparts, 0, $keylen - 2);
+  } else {
+    $keyparts = array_slice($keyparts, 0, $keylen - 1);
+  }
+  $key = implode('.', $keyparts);
+
+  foreach ($info as $pkey => $pol) {
+    if (strpos($pkey, $key) > -1) {
+      $pnub = str_replace($key, '', $pkey);
+      $pnub = trim($pnub, '.');
+      $ret[$pnub] = $info[$pkey];
+    }
+  }
+
+  if (sizeof($ret) == 0) {
+    if (isset($info['main'])) {
+      $ret['main'] = $info['main'];
+    } else {
+      $ret['main'] = null;
+    }
+  }
+  return $ret;
+}
+
 ?>
 <html lang="en">
   <head>
@@ -224,26 +244,34 @@ function findFile($info, $filetype, $key) {
 $hrefbase = 'test.php';
 
 $linksrcs = array();
-foreach ($srcinfo as $key => $sub) {
+foreach ($srcinfo as $okey => $sub) {
   if (isset($sub['source'])) {
-    // %%% Eventually want to do something different here.
-    if ($key === 'input' || $key === 'input.profile') {
-      // Only add a policy for these if specified.
-    } else {
-      $sub['policy'] = findFile($polinfo, 'policy', $key);
-    }
-    foreach ($htmlinfo as $hkey => $hsub) {
-      $sub['head'] = findFile($htmlinfo, 'head', $hkey);
-      $sub['body'] = findFile($htmlinfo, 'body', $hkey);
-      if ($hkey == 'main') {
-        $dkey = $key;
+    $policies = findPolicies($polinfo, $okey);
+
+    foreach ($policies as $pkey => $pol) {
+      $key = $okey;
+      if ($pol == null) {
+        unset($sub['policy']);
       } else {
-        $dkey = $hkey.'.'.$key;
+        $sub['policy'] = $pol;
+        if ($pkey != 'main' && $pkey != '') {
+          $key = $pkey.'.'.$okey;
+        }
       }
 
-      // Suppress the library if there's no policy.
-      $lib = isset($sub['policy']);
-      array_push($linksrcs, getSourceLink($sub, $hrefbase, $dkey, $lib));
+      foreach ($htmlinfo as $hkey => $hsub) {
+        $sub['head'] = findFile($htmlinfo, 'head', $okey);
+        $sub['body'] = findFile($htmlinfo, 'body', $okey);
+        if ($hkey == 'main') {
+          $dkey = $key;
+        } else {
+          $dkey = $hkey.'.'.$key;
+        }
+
+        // Suppress the library if there's no policy.
+        $lib = isset($sub['policy']);
+        array_push($linksrcs, getSourceLink($sub, $hrefbase, $dkey, $lib));
+      }
     }
   }
 }
@@ -270,29 +298,9 @@ if (!$linksrc) {
 <?
 }
 
-if ($auto) {
+if (isset($autoscript)) {
 ?>
-    <script src="auto.js"></script>
-    <script>
-      var tests = [
-<?
-      // Use different test cases for "big" inputs.
-      $applen = strlen($appname);
-      $sms2 = $applen > 9 && substr($appname, 0, 5) === 'sms2-';
-      $ats = $sms2 ? array_merge($autotests, $bigautotests) : $autotests;
-      foreach ($ats as $at) {
-?>
-        '<?=$at?>',
-<?
-      }
-?>
-      ];
-      if (<?=$autoindex?> >= tests.length) {
-        goBackUp(<?=$autoapp?> + 1, <?=$autowait?>);
-      } else {
-        doTestCase(tests[<?=$autoindex?>], <?=$autoindex?>, <?=$autoapp?>, <?=$autowait?>);
-      }
-    </script>
+    <?=$autoscript?>
 <?
 }
 ?>

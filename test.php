@@ -1,40 +1,57 @@
 <?php
 error_reporting(E_ALL);
-// The |script| parameter is required.
-$script = $_REQUEST['script'];
-$sources = $_REQUEST['sources'];
+// Collect a list of script files and generate a title from the |script|
+// and |sources[]| parameters.
+$scripts = array();
+$title = null;
+$profile = false;
+
+$script = isset($_REQUEST['script']) ? $_REQUEST['script'] : null;
 if ($script) {
+  $scripts[] = $script;
   if (substr_compare($script, ".js", -3) === 0) {
     $title = substr($script, 0, strlen($script) - 3);
   } else {
     $title = $script;
   }
-} else if (is_array($sources)) {
-  $script = $sources[0];
-  if (substr_compare($script, ".js", -3) === 0) {
-    $title = substr($script, 0, strlen($script) - 3);
-  } else {
-    $title = $script;
+  if (strpos($script, '.profile') > 0) {
+    $profile = true;
   }
-} else {
-  $err = "Please specify a 'script' parameter.";
+}
+
+$sources = $_REQUEST['sources'];
+if (is_array($sources)) {
+  for ($i=0; $i<sizeof($sources); $i++) {
+    $s = $sources[$i];
+    $scripts[] = $s;
+    if (is_null($title)) {
+      if (substr_compare($s, ".js", -3) === 0) {
+        $title = substr($s, 0, strlen($s) - 3);
+      } else {
+        $title = $s;
+      }
+    }
+    if (strpos($s, '.profile') > 0) {
+      $profile = true;
+    }
+  }
+}
+
+$err = null;
+if (sizeof($scripts) == 0) {
+  $err = "No 'script' or 'sources[]' parameter specified.";
 }
 
 // Pass a falsy |lib| parameter to suppress libTx.js.
 $lib = isset($_REQUEST['lib']) ? (!$_REQUEST['lib'] ? false : true) : true;
 // Optional policy and html files
 $policy = isset($_REQUEST['policy']) ? (!$_REQUEST['policy'] ? false : $_REQUEST['policy']) : false;
-$html = isset($_REQUEST['body']) ? $_REQUEST['body'] : false;
+$body = isset($_REQUEST['body']) ? $_REQUEST['body'] : false;
 $head = isset($_REQUEST['head']) ? $_REQUEST['head'] : false;
 $auto = isset($_REQUEST['auto']) ? $_REQUEST['auto'] : false;
 $autoindex = (isset($_REQUEST['autoindex']) && is_numeric($_REQUEST['autoindex'])) ? $_REQUEST['autoindex'] : 0;
 $autowait = (isset($_REQUEST['autowait']) && is_numeric($_REQUEST['autowait'])) ? $_REQUEST['autowait'] : 1000;
 $autoactions = array();
-
-$profile = false;
-if (strpos($script, '.profile') > 0) {
-  $profile = true;
-}
 
 if (file_exists('actions.txt')) {
   $actiontxt = file_get_contents('actions.txt');
@@ -105,16 +122,21 @@ if ($err) {
     <p class="error"><?=$err?></p>
 <?
 } else {
-  if ($html) {
+  if ($body) {
     // Include the given HTML snippet.
-    include $html;
+    include $body;
   }
 ?>
     <div id="btndiv"></div>
     <p><pre id="log"></pre></p>
-    <script src="<?php echo $script; ?>"></script>
 <?
-if ($auto) {
+  for ($i=0; $i<sizeof($scripts); $i++) {
+    $s = $scripts[$i];
+?>
+    <script src="<?=$s?>"></script>
+<?
+  }
+  if ($auto) {
 ?>
   <script src="auto.js"></script>
   <script>
@@ -142,7 +164,7 @@ if ($auto) {
     }
   </script>
 <?
-}
+  }
 ?>
   </body>
 </html>
