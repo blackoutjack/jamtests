@@ -1,0 +1,1 @@
+0,-1:jam#invoke(#Window#prototype#postMessage) && jam#arglen() > 0

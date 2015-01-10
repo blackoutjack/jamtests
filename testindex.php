@@ -3,6 +3,7 @@ error_reporting(E_ALL);
 
 $err = '';
 define(COLUMN_HEIGHT, 12);
+define(SCRIPT_INDEX_NAME, 'scripts.txt');
 
 $appname = basename(getcwd());
 include "auto.php";
@@ -24,6 +25,7 @@ $IGNORE_FILES = array(
 
 // Filter out ancillary files.
 $allfiles = scandir(".");
+$scriptindex = null;
 $sourcefiles = array();
 $sourcedirs = array();
 foreach ($allfiles as $fl) {
@@ -35,7 +37,23 @@ foreach ($allfiles as $fl) {
       $sourcedirs[] = $fl;
     }
   } else {
-    if (strpos($fl, $appname.'.') === 0) {
+    if ($fl === SCRIPT_INDEX_NAME) {
+      $scriptindex = array();
+      $indexlines = file($fl);
+      foreach ($indexlines as $ln) {
+        $ln = trim($ln);
+        if (substr($ln, 0, 1) == '#' || $ln == '') {
+          // Skip comments
+          continue;
+        }
+        $parts = explode(':', $ln);
+        if (sizeof($parts) == 3) {
+          $scriptindex[] = $parts;
+        } else {
+          $err .= "Invalid script index line: $ln\n";
+        }
+      }
+    } else if (strpos($fl, $appname.'.') === 0) {
       $back = substr($fl, strlen($appname) + 1);
 
       $parts = explode('.', $back);
@@ -99,19 +117,31 @@ foreach ($sourcefiles as $fl) {
 $srcinfo = array();
 foreach ($sourcedirs as $sourcedir) {
   $desc = substr($sourcedir, strlen('source-'));
-  // %%% Eventually want to go recursive instead of just first-level.
-  $srcfiles = scandir($sourcedir);
-
+  
   $subinfo = array();
-  foreach ($srcfiles as $src) {
-    $srcpath = $sourcedir.'/'.$src;
-    if (file_exists($srcpath) && !is_dir($srcpath)) {
-      if (substr($srcpath, strlen($srcpath) - 3) === '.js') {
+  if ($scriptindex == null) {
+    // %%% May want to go recursive instead of just first-level.
+    $srcfiles = scandir($sourcedir);
+    foreach ($srcfiles as $src) {
+      $srcpath = $sourcedir.'/'.$src;
+      if (file_exists($srcpath) && !is_dir($srcpath)) {
+        if (substr($srcpath, strlen($srcpath) - 3) === '.js') {
+          $subinfo[] = $srcpath;
+        }
+      }
+    }
+  } else {
+    $subinfo = array();
+    foreach ($scriptindex as $srcparts) {
+      $src = $srcparts[2];
+      $srcpath = $sourcedir.'/'.$src;
+      if (file_exists($srcpath) && !is_dir($srcpath)) {
         $subinfo[] = $srcpath;
+      } else {
+        $err .= "Source file is inaccessible: $srcpath";
       }
     }
   }
-
   $srcinfo[$desc] = getSubArray($srcinfo, $desc);
   $srcinfo[$desc]['source'] = $subinfo;
 }
@@ -119,7 +149,7 @@ foreach ($sourcedirs as $sourcedir) {
 function getParamText($info, $key, $param, $first=false) {
   if (!is_array($info)) echo "NOT ARRAY: ".$info.'<br/>';
   if (array_key_exists($key, $info)) {
-    $param .= '='.$info[$key];
+    $param .= '='.urlencode($info[$key]);
     if ($first) {
       $param = '?'.$param;
     } else {
@@ -284,15 +314,17 @@ foreach ($htmlsolo as $key => $sub) {
 
 $linksrc = implode('<br/>', $linksrcs);
 
+if (!$linksrc) {
+  $err .= "WARNING: $appname has no test cases.\n";
+}
+
 if ($err) {
 ?>
     <p class="error"><pre><?=$err?></pre></p>
 <?
 }
 
-if (!$linksrc) {
-  $err .= "WARNING: $appname has no test cases.\n";
-} else {
+if ($linksrc) {
 ?>
     <div class="linkcol"><?=$linksrc?></div>
 <?

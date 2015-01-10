@@ -1,0 +1,2 @@
+# Allow a very specific value.
+0,-1:jam#invoke(#HTMLElement#prototype#appendChild) && !jam#regextest(/^HERE I AM$/,arg(0).innerHTML)
