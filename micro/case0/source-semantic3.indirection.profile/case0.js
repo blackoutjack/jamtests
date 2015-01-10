@@ -8,8 +8,7 @@ switch(y) {
     break;
   case introspect(JAM.policy.p1) {
     x = 2;
-  }
-  :
+  }:
     print("2nd case");
     break;
   case x = 3:

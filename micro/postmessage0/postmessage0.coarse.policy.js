@@ -1,0 +1,24 @@
+var policy = function() {
+  var _Window_prototype_postMessage = Window.prototype.postMessage;
+  function pFull(tx) {
+    var commit = true;
+    var as = tx.getCallSequence();
+    var len = as.length;
+    for (var i = 0;i < len;i++) {
+      var node = as[i];
+      if (JAM.identical(node.value, _Window_prototype_postMessage) && node.argc > 0) {
+        commit = false;
+        break;
+      }
+    }
+    if (commit) {
+      JAM.process(tx);
+    } else {
+      JAM.prevent(tx);
+    }
+  }
+  pFull.subsumedBy = pFull;
+  pFull.itype = "invoke";
+  Object.freeze(pFull);
+  return{pFull:pFull};
+}()
