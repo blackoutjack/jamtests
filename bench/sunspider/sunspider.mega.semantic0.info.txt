@@ -1,7 +1,8 @@
 predicate-limit:0
 syntax-only:false
-sunspider.mega.original.js:407
-sunspider.mega.normalized.js:1444
+policy-files:[/home/rich/cs/jam/tests/bench/sunspider/sunspider.mega.policy]
+sunspider.original.js:407
+sunspider.normalized.js:1444
 policy.aut:1106
 allFunctions:5
 allCallsites:23

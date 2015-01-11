@@ -1,5 +1,6 @@
 predicate-limit:0
 syntax-only:false
+policy-files:[/home/rich/cs/jam/tests/bench/flickr/flickr.policy]
 flickr.original.js:38018
 flickr.normalized.js:61748
 policy.aut:16

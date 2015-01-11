@@ -1,5 +1,6 @@
 predicate-limit:0
 syntax-only:false
+policy-files:[/home/rich/cs/jam/tests/bench/octane-typescript/octane.policy]
 octane-typescript.original.js:156283
 octane-typescript.normalized.js:250662
 policy.aut:11

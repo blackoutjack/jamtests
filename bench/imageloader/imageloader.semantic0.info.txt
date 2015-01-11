@@ -1,5 +1,6 @@
 predicate-limit:0
 syntax-only:false
+policy-files:[/home/rich/cs/jam/tests/bench/imageloader/imageloader.policy]
 imageloader.original.js:3991
 imageloader.normalized.js:6311
 policy.aut:7

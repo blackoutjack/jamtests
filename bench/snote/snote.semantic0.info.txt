@@ -1,5 +1,6 @@
 predicate-limit:0
 syntax-only:false
+policy-files:[/home/rich/cs/jam/tests/bench/snote/snote.policy]
 snote.original.js:6852
 snote.normalized.js:10130
 policy.aut:92

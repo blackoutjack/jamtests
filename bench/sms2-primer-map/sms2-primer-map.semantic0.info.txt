@@ -1,5 +1,6 @@
 predicate-limit:0
 syntax-only:false
+policy-files:[/home/rich/cs/jam/tests/bench/sms2-primer-map/sms2.policy]
 sms2-primer-map.original.js:9970
 sms2-primer-map.normalized.js:16314
 policy.aut:347

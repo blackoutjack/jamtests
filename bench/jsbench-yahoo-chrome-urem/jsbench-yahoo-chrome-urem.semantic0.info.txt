@@ -1,5 +1,6 @@
 predicate-limit:0
 syntax-only:false
+policy-files:[/home/rich/cs/jam/tests/bench/jsbench-yahoo-chrome-urem/jsbench.policy]
 jsbench-yahoo-chrome-urem.original.js:52044
 jsbench-yahoo-chrome-urem.normalized.js:64901
 policy.aut:11

@@ -1,5 +1,6 @@
 predicate-limit:0
 syntax-only:false
+policy-files:[/home/rich/cs/jam/tests/bench/sms2-pairwise-align-codons/sms2.policy]
 sms2-pairwise-align-codons.original.js:9231
 sms2-pairwise-align-codons.normalized.js:14753
 policy.aut:347

@@ -1,5 +1,6 @@
 predicate-limit:0
 syntax-only:false
+policy-files:[/home/rich/cs/jam/tests/bench/jswidgets-menu/jswidgets-menu.policy]
 jswidgets-menu.original.js:6288
 jswidgets-menu.normalized.js:9111
 policy.aut:13

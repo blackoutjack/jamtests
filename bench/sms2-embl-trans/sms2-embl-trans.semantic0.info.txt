@@ -1,5 +1,6 @@
 predicate-limit:0
 syntax-only:false
+policy-files:[/home/rich/cs/jam/tests/bench/sms2-embl-trans/sms2.policy]
 sms2-embl-trans.original.js:5606
 sms2-embl-trans.normalized.js:8332
 policy.aut:347

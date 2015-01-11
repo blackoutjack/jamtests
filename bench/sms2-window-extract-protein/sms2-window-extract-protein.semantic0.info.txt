@@ -1,5 +1,6 @@
 predicate-limit:0
 syntax-only:false
+policy-files:[/home/rich/cs/jam/tests/bench/sms2-window-extract-protein/sms2.policy]
 sms2-window-extract-protein.original.js:7457
 sms2-window-extract-protein.normalized.js:11682
 policy.aut:347

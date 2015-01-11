@@ -1,5 +1,6 @@
 predicate-limit:0
 syntax-only:false
+policy-files:[/home/rich/cs/jam/tests/bench/sms2-protein-stats/sms2.policy]
 sms2-protein-stats.original.js:5324
 sms2-protein-stats.normalized.js:7908
 policy.aut:347

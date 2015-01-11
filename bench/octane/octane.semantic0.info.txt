@@ -1,5 +1,6 @@
 predicate-limit:0
 syntax-only:false
+policy-files:[/home/rich/cs/jam/tests/bench/octane/octane.policy]
 octane.original.js:1826961
 octane.normalized.js:2306675
 policy.aut:11
@@ -11,9 +12,9 @@ concrete-query-cache:concrete435814980.bin
 symbolic-query-cache:symbolic435814980.bin
 modular.policy.js:107
 policy.js:200
-transactions:5546
-checks:5546
-callsites-indirected:11978
+transactions:5545
+checks:5545
+callsites-indirected:11950
 property-write-indirection:3076
 property-read-indirection:0
 temporary-variables-collapsed:111104

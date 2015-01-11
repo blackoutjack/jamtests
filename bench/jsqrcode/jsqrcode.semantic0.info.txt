@@ -1,5 +1,6 @@
 predicate-limit:0
 syntax-only:false
+policy-files:[/home/rich/cs/jam/tests/bench/jsqrcode/jsqrcode.policy]
 jsqrcode.original.js:16407
 jsqrcode.normalized.js:27151
 policy.aut:347

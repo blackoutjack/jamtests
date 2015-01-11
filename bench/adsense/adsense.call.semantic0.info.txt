@@ -1,7 +1,8 @@
 predicate-limit:0
 syntax-only:false
-adsense.call.original.js:37709
-adsense.call.normalized.js:59464
+policy-files:[/home/rich/cs/jam/tests/bench/adsense/adsense.call.policy]
+adsense.original.js:37709
+adsense.normalized.js:59464
 policy.aut:19
 allFunctions:549
 allCallsites:1948

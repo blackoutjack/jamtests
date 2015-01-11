@@ -1,5 +1,6 @@
 predicate-limit:0
 syntax-only:false
+policy-files:[/home/rich/cs/jam/tests/bench/hulurespawn/hulurespawn.policy]
 hulurespawn.original.js:30269
 hulurespawn.normalized.js:45633
 policy.aut:13

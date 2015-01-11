@@ -1,5 +1,6 @@
 predicate-limit:0
 syntax-only:false
+policy-files:[/home/rich/cs/jam/tests/bench/googiespell/googiespell.policy]
 googiespell.original.js:11603
 googiespell.normalized.js:16124
 policy.aut:7

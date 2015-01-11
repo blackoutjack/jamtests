@@ -1,5 +1,6 @@
 predicate-limit:0
 syntax-only:false
+policy-files:[/home/rich/cs/jam/tests/bench/squirrelmail/squirrelmail.policy]
 squirrelmail.original.js:110
 squirrelmail.normalized.js:243
 policy.aut:11

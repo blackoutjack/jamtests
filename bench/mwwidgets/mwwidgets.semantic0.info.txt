@@ -1,5 +1,6 @@
 predicate-limit:0
 syntax-only:false
+policy-files:[/home/rich/cs/jam/tests/bench/mwwidgets/mwwidgets.policy]
 mwwidgets.original.js:7504
 mwwidgets.normalized.js:11114
 policy.aut:92

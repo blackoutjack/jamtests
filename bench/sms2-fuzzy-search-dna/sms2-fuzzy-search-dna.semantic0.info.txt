@@ -1,5 +1,6 @@
 predicate-limit:0
 syntax-only:false
+policy-files:[/home/rich/cs/jam/tests/bench/sms2-fuzzy-search-dna/sms2.policy]
 sms2-fuzzy-search-dna.original.js:7466
 sms2-fuzzy-search-dna.normalized.js:11758
 policy.aut:347

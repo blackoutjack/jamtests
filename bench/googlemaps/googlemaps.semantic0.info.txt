@@ -1,5 +1,6 @@
 predicate-limit:0
 syntax-only:false
+policy-files:[/home/rich/cs/jam/tests/bench/googlemaps/googlemaps.policy]
 googlemaps.original.js:60906
 googlemaps.normalized.js:92510
 policy.aut:13

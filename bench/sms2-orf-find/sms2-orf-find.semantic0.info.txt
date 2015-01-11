@@ -1,5 +1,6 @@
 predicate-limit:0
 syntax-only:false
+policy-files:[/home/rich/cs/jam/tests/bench/sms2-orf-find/sms2.policy]
 sms2-orf-find.original.js:6955
 sms2-orf-find.normalized.js:11376
 policy.aut:347
