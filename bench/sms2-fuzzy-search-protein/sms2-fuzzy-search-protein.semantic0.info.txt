@@ -3,7 +3,7 @@ syntax-only:false
 policy-files:[/home/rich/cs/jam/tests/bench/sms2-fuzzy-search-protein/sms2.policy]
 sms2-fuzzy-search-protein.original.js:7735
 sms2-fuzzy-search-protein.normalized.js:12128
-policy.aut:347
+policy.aut:346
 allFunctions:93
 allCallsites:451
 intraprocedural-edges:3289

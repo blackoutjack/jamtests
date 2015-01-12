@@ -3,7 +3,7 @@ syntax-only:false
 policy-files:[/home/rich/cs/jam/tests/bench/sms2-protein-stats/sms2.policy]
 sms2-protein-stats.original.js:5324
 sms2-protein-stats.normalized.js:7908
-policy.aut:347
+policy.aut:346
 allFunctions:73
 allCallsites:368
 intraprocedural-edges:2199

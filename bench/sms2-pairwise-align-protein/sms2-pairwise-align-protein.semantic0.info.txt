@@ -3,7 +3,7 @@ syntax-only:false
 policy-files:[/home/rich/cs/jam/tests/bench/sms2-pairwise-align-protein/sms2.policy]
 sms2-pairwise-align-protein.original.js:9339
 sms2-pairwise-align-protein.normalized.js:14907
-policy.aut:347
+policy.aut:346
 allFunctions:99
 allCallsites:526
 intraprocedural-edges:3975

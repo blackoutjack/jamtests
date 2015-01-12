@@ -3,7 +3,7 @@ syntax-only:false
 policy-files:[/home/rich/cs/jam/tests/bench/sms2-pairwise-align-dna/sms2.policy]
 sms2-pairwise-align-dna.original.js:9067
 sms2-pairwise-align-dna.normalized.js:14524
-policy.aut:347
+policy.aut:346
 allFunctions:96
 allCallsites:507
 intraprocedural-edges:3876

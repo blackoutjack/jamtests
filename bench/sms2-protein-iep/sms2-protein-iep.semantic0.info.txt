@@ -3,7 +3,7 @@ syntax-only:false
 policy-files:[/home/rich/cs/jam/tests/bench/sms2-protein-iep/sms2.policy]
 sms2-protein-iep.original.js:5837
 sms2-protein-iep.normalized.js:8705
-policy.aut:347
+policy.aut:346
 allFunctions:75
 allCallsites:398
 intraprocedural-edges:2418

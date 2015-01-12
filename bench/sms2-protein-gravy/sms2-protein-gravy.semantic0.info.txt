@@ -3,7 +3,7 @@ syntax-only:false
 policy-files:[/home/rich/cs/jam/tests/bench/sms2-protein-gravy/sms2.policy]
 sms2-protein-gravy.original.js:5492
 sms2-protein-gravy.normalized.js:8116
-policy.aut:347
+policy.aut:346
 allFunctions:75
 allCallsites:373
 intraprocedural-edges:2255

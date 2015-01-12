@@ -1,4 +1,4 @@
-0,-1: jam#set(`x,"src") && `x instanceof #HTMLElement && jam#regextest(/^\s*(http|ftp)/i,`x.src)
+0,-1: jam#set(`x,"src",`z) && `x instanceof #HTMLElement && jam#regextest(/^\s*(http|ftp)/i,`z)
 0,-1: jam#set(`x,"action") && `x instanceof #HTMLFormElement
 0,-1: jam#set(`x,"location") && `x instanceof #Window
 # These next 3 are questionably needed.

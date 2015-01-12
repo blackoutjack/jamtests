@@ -51,26 +51,6 @@ var policy = function() {
   }
   pFull.subsumedBy = pFull;
   Object.freeze(pFull);
-  function p6(tx) {
-    var commit = true;
-    var as = tx.getWriteSequence();
-    var len = as.length;
-    for (var i = 0;i < len;i++) {
-      var node = as[i];
-      if (node.id === "src" && JAM.instanceof(node.obj, _HTMLElement) && __RegExp_prototype_test_call_bind__RegExp_prototype_test_(/^\s*(http|ftp)/i, node.value) || node.id === "action" && JAM.instanceof(node.obj, _HTMLFormElement) || node.id === "location" && JAM.instanceof(node.obj, _Window) || node.id === "cookie" && JAM.instanceof(node.obj, _HTMLDocument) || node.id === "href" && JAM.instanceof(node.obj, _HTMLElement) || node.id === "innerHTML" && JAM.instanceof(node.obj, _HTMLElement)) {
-        commit = false;
-        break;
-      }
-    }
-    if (commit) {
-      JAM.process(tx);
-    } else {
-      JAM.prevent(tx);
-    }
-  }
-  p6.subsumedBy = pFull;
-  p6.itype = "write";
-  Object.freeze(p6);
   function p1(tx) {
     var commit = true;
     var as = tx.getWriteSequence();
@@ -91,6 +71,26 @@ var policy = function() {
   p1.subsumedBy = pFull;
   p1.itype = "write";
   Object.freeze(p1);
+  function p6(tx) {
+    var commit = true;
+    var as = tx.getWriteSequence();
+    var len = as.length;
+    for (var i = 0;i < len;i++) {
+      var node = as[i];
+      if (node.id === "src" && JAM.instanceof(node.obj, _HTMLElement) && __RegExp_prototype_test_call_bind__RegExp_prototype_test_(/^\s*(http|ftp)/i, node.value) || node.id === "action" && JAM.instanceof(node.obj, _HTMLFormElement) || node.id === "location" && JAM.instanceof(node.obj, _Window) || node.id === "cookie" && JAM.instanceof(node.obj, _HTMLDocument) || node.id === "href" && JAM.instanceof(node.obj, _HTMLElement) || node.id === "innerHTML" && JAM.instanceof(node.obj, _HTMLElement)) {
+        commit = false;
+        break;
+      }
+    }
+    if (commit) {
+      JAM.process(tx);
+    } else {
+      JAM.prevent(tx);
+    }
+  }
+  p6.subsumedBy = pFull;
+  p6.itype = "write";
+  Object.freeze(p6);
   function p21(tx) {
     var commit = true;
     var as = tx.getCallSequence();
@@ -280,5 +280,5 @@ var policy = function() {
   p24.subsumedBy = pFull;
   p24.itype = "invoke";
   Object.freeze(p24);
-  return{p6:p6, p1:p1, p21:p21, p19:p19, p33:p33, p17:p17, p25:p25, p23:p23, p20:p20, p16:p16, p24:p24, pFull:pFull, woven:true};
+  return{p1:p1, p6:p6, p21:p21, p19:p19, p33:p33, p17:p17, p25:p25, p23:p23, p20:p20, p16:p16, p24:p24, pFull:pFull, woven:true};
 }()

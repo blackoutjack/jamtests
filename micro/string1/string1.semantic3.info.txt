@@ -3,7 +3,7 @@ syntax-only:false
 policy-files:[/home/rich/cs/jam/tests/micro/string1/string1.policy]
 string1.original.js:17
 string1.normalized.js:20
-policy.aut:14
+policy.aut:13
 allFunctions:0
 allCallsites:1
 intraprocedural-edges:6

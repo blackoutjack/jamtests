@@ -24,7 +24,7 @@ var policy = function() {
   }
   pFull.subsumedBy = pFull;
   Object.freeze(pFull);
-  function p4(tx) {
+  function p3(tx) {
     var commit = true;
     var as = tx.getWriteSequence();
     var len = as.length;
@@ -41,10 +41,10 @@ var policy = function() {
       JAM.prevent(tx);
     }
   }
-  p4.subsumedBy = pFull;
-  p4.itype = "write";
-  Object.freeze(p4);
-  function p3(tx) {
+  p3.subsumedBy = pFull;
+  p3.itype = "write";
+  Object.freeze(p3);
+  function p4(tx) {
     var commit = true;
     var as = tx.getWriteSequence();
     var len = as.length;
@@ -61,9 +61,9 @@ var policy = function() {
       JAM.prevent(tx);
     }
   }
-  p3.subsumedBy = pFull;
-  p3.itype = "write";
-  Object.freeze(p3);
+  p4.subsumedBy = pFull;
+  p4.itype = "write";
+  Object.freeze(p4);
   function p5(tx) {
     var commit = true;
     var as = tx.getReadSequence();
@@ -84,5 +84,5 @@ var policy = function() {
   p5.subsumedBy = pFull;
   p5.itype = "read";
   Object.freeze(p5);
-  return{p4:p4, p3:p3, p5:p5, pFull:pFull, woven:true};
+  return{p3:p3, p4:p4, p5:p5, pFull:pFull, woven:true};
 }()

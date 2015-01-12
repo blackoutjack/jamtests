@@ -1,6 +1,6 @@
-0,-1: jam#set(`x,`y) && `x instanceof #HTMLElement
-0,-1: jam#set(`x,`y) && `x instanceof #HTMLDocument
-0,-1: jam#set(`x,`y) && `x instanceof #Window
+0,-1: jam#set(`x) && `x instanceof #HTMLElement
+0,-1: jam#set(`x) && `x instanceof #HTMLDocument
+0,-1: jam#set(`x) && `x instanceof #Window
 0,-1: jam#invoke(#HTMLElement#prototype#appendChild)
 0,-1: jam#invoke(#HTMLElement#prototype#insertAdjacentHTML)
 0,-1: jam#invoke(#HTMLElement#prototype#insertBefore)

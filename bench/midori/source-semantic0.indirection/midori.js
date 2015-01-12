@@ -149,7 +149,7 @@ function v107() {
       if (v135) {
         var v133 = midoriTab.selectedTabs;
         var v134 = obj$$25.id;
-        introspect(JAM.policy.p2) {
+        introspect(JAM.policy.p1) {
           v133[v134] = o$$6;
         }
         JAM.call(midoriTab.select, midoriTab, [o$$6, true]);
@@ -187,7 +187,7 @@ function v103(obj$$24, noAnim) {
     v139.display = "none";
   }
   var v141 = this.selectedTabs;
-  introspect(JAM.policy.p2) {
+  introspect(JAM.policy.p1) {
     v141[tabSet] = obj$$24;
   }
   var v142 = obj$$24.parentNode;
@@ -536,7 +536,7 @@ function v90(vars$$3) {
     var v194 = v739.style;
     var v195 = vars$$3.what;
     var v740 = newSize.toString();
-    introspect(JAM.policy.p2) {
+    introspect(JAM.policy.p1) {
       v194[v195] = v740 + "px";
     }
     var v741 = vars$$3.element;
@@ -556,7 +556,7 @@ function v90(vars$$3) {
     var v200 = vars$$3.what;
     var v1120 = vars$$3.elementSize;
     var v745 = v1120.toString();
-    introspect(JAM.policy.p2) {
+    introspect(JAM.policy.p1) {
       v199[v200] = v745 + "px";
     }
     var v746 = vars$$3.element;
@@ -646,7 +646,7 @@ function v87(vars$$1) {
     var v1360 = v1482[v1483];
     var v1127 = v1360.newSize;
     var v756 = v1127.toString();
-    introspect(JAM.policy.p2) {
+    introspect(JAM.policy.p1) {
       v213[v214] = v756 + "px";
     }
   } else {
@@ -660,7 +660,7 @@ function v87(vars$$1) {
     var v217 = vars$$1.what;
     var v1130 = vars$$1.elementSize;
     var v759 = v1130.toString();
-    introspect(JAM.policy.p2) {
+    introspect(JAM.policy.p1) {
       v216[v217] = v759 + "px";
     }
     var v760 = vars$$1.element;
@@ -690,7 +690,7 @@ function v86(element$$3, what) {
   var offsetSize = v223;
   var v224 = element$$3.style;
   var v763 = offsetSize.toString();
-  introspect(JAM.policy.p2) {
+  introspect(JAM.policy.p1) {
     v224[what] = v763 + "px";
   }
   var v764;
@@ -705,7 +705,7 @@ function v86(element$$3, what) {
   var v226 = element$$3.style;
   var v1132 = offsetSize - outsideSize;
   var v765 = v1132.toString();
-  introspect(JAM.policy.p2) {
+  introspect(JAM.policy.p1) {
     v226[what] = v765 + "px";
   }
   return outsideSize;
@@ -1153,9 +1153,7 @@ function v69(parentNode$$1, prefix$$2, a$$2) {
   return;
 }
 function v68(name$$30, value$$28, expires, path, domain) {
-  introspect(JAM.policy.p1) {
-    setCookieSentinel = true;
-  }
+  setCookieSentinel = true;
   var today = new Date;
   var v289 = document;
   var v1558 = name$$30 + "=";
@@ -1180,7 +1178,7 @@ function v68(name$$30, value$$28, expires, path, domain) {
     v1161 = "";
   }
   var v813 = v1161;
-  introspect(JAM.policy.p2) {
+  introspect(JAM.policy.p1) {
     v289.cookie = v812 + v813;
   }
   return;
@@ -1470,7 +1468,7 @@ function v50(obj$$17, styleList) {
       v333 = JAM.call(this.setFloat, this, [obj$$17, v845]);
     } else {
       var v846 = obj$$17.style;
-      introspect(JAM.policy.p2) {
+      introspect(JAM.policy.p1) {
         v333 = v846[i$$7] = styleList[i$$7];
       }
     }
@@ -1539,7 +1537,7 @@ function v49(stylesheet, rule$$2, property) {
             if (v340) {
               var v855 = rules[i$$6];
               var v337 = v855.selectorText;
-              introspect(JAM.policy.p2) {
+              introspect(JAM.policy.p1) {
                 values$$4[v337] = value;
               }
             } else {
@@ -1561,7 +1559,7 @@ function v49(stylesheet, rule$$2, property) {
               var v342 = v859.selectorText;
               var v1183 = rules[i$$6];
               var v860 = v1183.style;
-              introspect(JAM.policy.p2) {
+              introspect(JAM.policy.p1) {
                 values$$4[v342] = v860[j$$1];
               }
             } else {
@@ -2011,7 +2009,7 @@ function v44(match$$1, pSelector, pA, pB) {
       c$$2 = c$$2.nextSibling;
     }
     var v409 = this.pCache;
-    introspect(JAM.policy.p2) {
+    introspect(JAM.policy.p1) {
       v409[nodeKey] = {parentChildren:parentChildren, pI:0};
     }
   }
@@ -3100,7 +3098,7 @@ function midoriAjax(callback$$29, params$$1, cache) {
       thisObj$$2.status = v567.status;
       var v568 = thisObj$$2.cache;
       var v569 = thisObj$$2.cacheKey;
-      introspect(JAM.policy.p2) {
+      introspect(JAM.policy.p1) {
         v568[v569] = thisObj$$2.responseText;
       }
     }
@@ -3174,7 +3172,7 @@ function midoriAutoComplete(vars$$7) {
         var response = v573;
         var v574 = thisObj$$3.suggestions;
         var v575 = response["snippet"];
-        introspect(JAM.policy.p2) {
+        introspect(JAM.policy.p1) {
           v574[v575] = response["result"];
         }
         var v576 = response["snippet"];
@@ -3307,7 +3305,7 @@ function midoriAutoComplete(vars$$7) {
         var v597 = suggestions[i$$24];
         for (k$$2 in v597) {
           var v596 = suggestions[i$$24];
-          introspect(JAM.policy.p2) {
+          introspect(JAM.policy.p1) {
             properties[k$$2] = v596[k$$2];
           }
         }

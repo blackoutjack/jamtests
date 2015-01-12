@@ -3,7 +3,7 @@ syntax-only:false
 policy-files:[/home/rich/cs/jam/tests/bench/sms2-rest-map/sms2.policy]
 sms2-rest-map.original.js:8527
 sms2-rest-map.normalized.js:13721
-policy.aut:347
+policy.aut:346
 allFunctions:106
 allCallsites:537
 intraprocedural-edges:3597

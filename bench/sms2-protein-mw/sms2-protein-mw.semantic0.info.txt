@@ -3,7 +3,7 @@ syntax-only:false
 policy-files:[/home/rich/cs/jam/tests/bench/sms2-protein-mw/sms2.policy]
 sms2-protein-mw.original.js:5519
 sms2-protein-mw.normalized.js:8250
-policy.aut:347
+policy.aut:346
 allFunctions:74
 allCallsites:379
 intraprocedural-edges:2288

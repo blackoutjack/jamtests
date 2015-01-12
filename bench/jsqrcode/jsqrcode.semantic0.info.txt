@@ -3,7 +3,7 @@ syntax-only:false
 policy-files:[/home/rich/cs/jam/tests/bench/jsqrcode/jsqrcode.policy]
 jsqrcode.original.js:16407
 jsqrcode.normalized.js:27151
-policy.aut:347
+policy.aut:346
 allFunctions:195
 allCallsites:1042
 intraprocedural-edges:7829

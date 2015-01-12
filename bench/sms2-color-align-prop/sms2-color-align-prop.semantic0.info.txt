@@ -3,7 +3,7 @@ syntax-only:false
 policy-files:[/home/rich/cs/jam/tests/bench/sms2-color-align-prop/sms2.policy]
 sms2-color-align-prop.original.js:6294
 sms2-color-align-prop.normalized.js:9730
-policy.aut:347
+policy.aut:346
 allFunctions:74
 allCallsites:427
 intraprocedural-edges:2703

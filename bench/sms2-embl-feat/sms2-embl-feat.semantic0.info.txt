@@ -3,7 +3,7 @@ syntax-only:false
 policy-files:[/home/rich/cs/jam/tests/bench/sms2-embl-feat/sms2.policy]
 sms2-embl-feat.original.js:6086
 sms2-embl-feat.normalized.js:9059
-policy.aut:347
+policy.aut:346
 allFunctions:79
 allCallsites:439
 intraprocedural-edges:2515

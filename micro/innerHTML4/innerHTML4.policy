@@ -1,1 +1,1 @@
-0,-1:jam#set(`x,"innerHTML") && `x instanceof #HTMLElement && jam#regextest(/<\w*img[^>]*src\w*=\w*.*>/i,`x.innerHTML)
+0,-1:jam#set(`x,"innerHTML",`z) && `x instanceof #HTMLElement && jam#regextest(/<\w*img[^>]*src\w*=\w*.*>/i,`z)

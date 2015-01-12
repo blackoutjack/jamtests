@@ -3,7 +3,7 @@ syntax-only:false
 policy-files:[/home/rich/cs/jam/tests/bench/sms2-cpg-islands/sms2.policy]
 sms2-cpg-islands.original.js:5773
 sms2-cpg-islands.normalized.js:8587
-policy.aut:347
+policy.aut:346
 allFunctions:74
 allCallsites:389
 intraprocedural-edges:2433

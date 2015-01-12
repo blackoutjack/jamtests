@@ -3,7 +3,7 @@ syntax-only:false
 policy-files:[/home/rich/cs/jam/tests/micro/innerHTML4/innerHTML4.policy]
 innerHTML4.original.js:15
 innerHTML4.normalized.js:15
-policy.aut:20
+policy.aut:19
 allFunctions:0
 allCallsites:1
 intraprocedural-edges:4

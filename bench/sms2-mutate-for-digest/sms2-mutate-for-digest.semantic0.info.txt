@@ -3,7 +3,7 @@ syntax-only:false
 policy-files:[/home/rich/cs/jam/tests/bench/sms2-mutate-for-digest/sms2.policy]
 sms2-mutate-for-digest.original.js:9174
 sms2-mutate-for-digest.normalized.js:14504
-policy.aut:347
+policy.aut:346
 allFunctions:104
 allCallsites:600
 intraprocedural-edges:3886

@@ -3,7 +3,7 @@ syntax-only:false
 policy-files:[/home/rich/cs/jam/tests/bench/sms2-fuzzy-search-dna/sms2.policy]
 sms2-fuzzy-search-dna.original.js:7466
 sms2-fuzzy-search-dna.normalized.js:11758
-policy.aut:347
+policy.aut:346
 allFunctions:90
 allCallsites:433
 intraprocedural-edges:3193

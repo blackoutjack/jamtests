@@ -3,7 +3,7 @@ syntax-only:false
 policy-files:[/home/rich/cs/jam/tests/bench/sms2-split-codons/sms2.policy]
 sms2-split-codons.original.js:5477
 sms2-split-codons.normalized.js:8191
-policy.aut:347
+policy.aut:346
 allFunctions:75
 allCallsites:381
 intraprocedural-edges:2281

@@ -3,7 +3,7 @@ syntax-only:false
 policy-files:[/home/rich/cs/jam/tests/bench/sms2-embl-fasta/sms2.policy]
 sms2-embl-fasta.original.js:5400
 sms2-embl-fasta.normalized.js:8056
-policy.aut:347
+policy.aut:346
 allFunctions:74
 allCallsites:378
 intraprocedural-edges:2246

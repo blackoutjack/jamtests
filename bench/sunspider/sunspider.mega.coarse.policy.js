@@ -26,6 +26,13 @@ var policy = function() {
   var _HTMLScriptElement = HTMLScriptElement;
   var _HTMLSourceElement = HTMLSourceElement;
   var _HTMLVideoElement = HTMLVideoElement;
+  var _HTMLDocument_prototype_writeln = HTMLDocument.prototype.writeln;
+  var _XMLHttpRequest_prototype_open = XMLHttpRequest.prototype.open;
+  var _Window_prototype_open = Window.prototype.open;
+  var _Window_prototype_openDialog = Window.prototype.openDialog;
+  var _Window_prototype_postMessage = Window.prototype.postMessage;
+  var _WebSocket_prototype_send = WebSocket.prototype.send;
+  var _HTMLFormElement_prototype_submit = HTMLFormElement.prototype.submit;
   var _HTMLAudioElement_prototype_setAttribute = HTMLAudioElement.prototype.setAttribute;
   var _HTMLFrameElement_prototype_setAttribute = HTMLFrameElement.prototype.setAttribute;
   var _HTMLIFrameElement_prototype_setAttribute = HTMLIFrameElement.prototype.setAttribute;
@@ -35,7 +42,6 @@ var policy = function() {
   var _HTMLSourceElement_prototype_setAttribute = HTMLSourceElement.prototype.setAttribute;
   var _HTMLVideoElement_prototype_setAttribute = HTMLVideoElement.prototype.setAttribute;
   var _HTMLFormElement_prototype_setAttribute = HTMLFormElement.prototype.setAttribute;
-  var _HTMLFormElement_prototype_submit = HTMLFormElement.prototype.submit;
   function pFull(tx) {
     var commit = true;
     var as = tx.getActionSequence();
@@ -77,14 +83,14 @@ var policy = function() {
         states[4] = true;
       }
       if (node.type === "write" && (true && JAM.instanceof(node.obj, _CSSStyleDeclaration) && node.id !== "display" || node.id === "textContent" && node.obj["className"] === "destructive-read read-only" || node.id === "x" && node.value === 23456789 && (node.id === "y" && node.value === 3456789) && (node.id === "z" && node.value === 456789) && (node.id === "v" && node.value === 56789) && (node.id === "n" && node.value === 6789) && (node.id === "u" && node.value === 789) && (node.id === "f" && node.value === 
-      89) && (node.id === "a" && node.value === 9) || node.id === "src" && JAM.instanceof(node.obj, _HTMLAudioElement) && (node.argc > 1 && __RegExp_prototype_test_call_bind__RegExp_prototype_test_(/^\s*(http|ftp)/i, node.args[1])) || node.id === "src" && JAM.instanceof(node.obj, _HTMLFrameElement) && (node.argc > 1 && __RegExp_prototype_test_call_bind__RegExp_prototype_test_(/^\s*(http|ftp)/i, node.args[1])) || node.id === "src" && JAM.instanceof(node.obj, _HTMLIFrameElement) && (node.argc > 1 && 
-      __RegExp_prototype_test_call_bind__RegExp_prototype_test_(/^\s*(http|ftp)/i, node.args[1])) || node.id === "src" && JAM.instanceof(node.obj, _HTMLImageElement) && (node.argc > 1 && __RegExp_prototype_test_call_bind__RegExp_prototype_test_(/^\s*(http|ftp)/i, node.args[1])) || node.id === "src" && JAM.instanceof(node.obj, _HTMLInputElement) && (node.argc > 1 && __RegExp_prototype_test_call_bind__RegExp_prototype_test_(/^\s*(http|ftp)/i, node.args[1])) || node.id === "src" && JAM.instanceof(node.obj, 
-      _HTMLScriptElement) && (node.argc > 1 && __RegExp_prototype_test_call_bind__RegExp_prototype_test_(/^\s*(http|ftp)/i, node.args[1])) || node.id === "src" && JAM.instanceof(node.obj, _HTMLSourceElement) && (node.argc > 1 && __RegExp_prototype_test_call_bind__RegExp_prototype_test_(/^\s*(http|ftp)/i, node.args[1])) || node.id === "src" && JAM.instanceof(node.obj, _HTMLVideoElement) && (node.argc > 1 && __RegExp_prototype_test_call_bind__RegExp_prototype_test_(/^\s*(http|ftp)/i, node.args[1])) || 
-      node.id === "src" && JAM.instanceof(node.obj, _HTMLElement) && node.value !== "plaintext-test.png")) {
+      89) && (node.id === "a" && node.value === 9) || node.id === "src" && JAM.instanceof(node.obj, _HTMLAudioElement) && __RegExp_prototype_test_call_bind__RegExp_prototype_test_(/^\s*(http|ftp)/i, node.value) || node.id === "src" && JAM.instanceof(node.obj, _HTMLFrameElement) && __RegExp_prototype_test_call_bind__RegExp_prototype_test_(/^\s*(http|ftp)/i, node.value) || node.id === "src" && JAM.instanceof(node.obj, _HTMLIFrameElement) && __RegExp_prototype_test_call_bind__RegExp_prototype_test_(/^\s*(http|ftp)/i, 
+      node.value) || node.id === "src" && JAM.instanceof(node.obj, _HTMLImageElement) && __RegExp_prototype_test_call_bind__RegExp_prototype_test_(/^\s*(http|ftp)/i, node.value) || node.id === "src" && JAM.instanceof(node.obj, _HTMLInputElement) && __RegExp_prototype_test_call_bind__RegExp_prototype_test_(/^\s*(http|ftp)/i, node.value) || node.id === "src" && JAM.instanceof(node.obj, _HTMLScriptElement) && __RegExp_prototype_test_call_bind__RegExp_prototype_test_(/^\s*(http|ftp)/i, node.value) || 
+      node.id === "src" && JAM.instanceof(node.obj, _HTMLSourceElement) && __RegExp_prototype_test_call_bind__RegExp_prototype_test_(/^\s*(http|ftp)/i, node.value) || node.id === "src" && JAM.instanceof(node.obj, _HTMLVideoElement) && __RegExp_prototype_test_call_bind__RegExp_prototype_test_(/^\s*(http|ftp)/i, node.value) || node.id === "action" && JAM.instanceof(node.obj, _HTMLFormElement) || node.id === "cookie" && JAM.instanceof(node.obj, _HTMLDocument) || node.id === "href" && JAM.instanceof(node.obj, 
+      _HTMLElement) || node.id === "innerHTML" && JAM.instanceof(node.obj, _HTMLElement) || node.id === "location" && JAM.instanceof(node.obj, _Window) || node.id === "src" && JAM.instanceof(node.obj, _HTMLElement) && node.value !== "plaintext-test.png")) {
         commit = false;
         break;
       }
-      if (!states[5] && node.type === "write" && (node.id === "jam#setCookieSentinel" && node.value === true)) {
+      if (!states[5] && node.type === "write" && (node.id === "cookieSentinel" && node.value === true)) {
         states[5] = true;
       }
       if (states[6] && node.type === "read" && (node.id === "textContent" && node.obj["className"] === "destructive-read read-only")) {
@@ -275,10 +281,11 @@ var policy = function() {
       if (!states[44] && node.type === "invoke" && (JAM.identical(node.value, _HTMLDocument_prototype_write) && (node.argc > 0 && node.args[0] !== _undefined))) {
         states[44] = true;
       }
-      if (node.type === "invoke" && (JAM.identical(node.value, _HTMLAudioElement_prototype_setAttribute) && (node.argc > 0 && node.args[0] === "src") && (node.argc > 1 && __RegExp_prototype_test_call_bind__RegExp_prototype_test_(/^\s*(http|ftp)/i, node.args[1])) || JAM.identical(node.value, _HTMLFrameElement_prototype_setAttribute) && (node.argc > 0 && node.args[0] === "src") && (node.argc > 1 && __RegExp_prototype_test_call_bind__RegExp_prototype_test_(/^\s*(http|ftp)/i, node.args[1])) || JAM.identical(node.value, 
-      _HTMLIFrameElement_prototype_setAttribute) && (node.argc > 0 && node.args[0] === "src") && (node.argc > 1 && __RegExp_prototype_test_call_bind__RegExp_prototype_test_(/^\s*(http|ftp)/i, node.args[1])) || JAM.identical(node.value, _HTMLImageElement_prototype_setAttribute) && (node.argc > 0 && node.args[0] === "src") && (node.argc > 1 && __RegExp_prototype_test_call_bind__RegExp_prototype_test_(/^\s*(http|ftp)/i, node.args[1])) || JAM.identical(node.value, _HTMLInputElement_prototype_setAttribute) && 
-      (node.argc > 0 && node.args[0] === "src") && (node.argc > 1 && __RegExp_prototype_test_call_bind__RegExp_prototype_test_(/^\s*(http|ftp)/i, node.args[1])) || JAM.identical(node.value, _HTMLScriptElement_prototype_setAttribute) && (node.argc > 0 && node.args[0] === "src") && (node.argc > 1 && __RegExp_prototype_test_call_bind__RegExp_prototype_test_(/^\s*(http|ftp)/i, node.args[1])) || JAM.identical(node.value, _HTMLSourceElement_prototype_setAttribute) && (node.argc > 0 && node.args[0] === 
-      "src") && (node.argc > 1 && __RegExp_prototype_test_call_bind__RegExp_prototype_test_(/^\s*(http|ftp)/i, node.args[1])) || JAM.identical(node.value, _HTMLVideoElement_prototype_setAttribute) && (node.argc > 0 && node.args[0] === "src") && (node.argc > 1 && __RegExp_prototype_test_call_bind__RegExp_prototype_test_(/^\s*(http|ftp)/i, node.args[1])))) {
+      if (node.type === "invoke" && (JAM.identical(node.value, _HTMLDocument_prototype_write) && (node.argc > 0 && typeof node.args[0] === "string") || JAM.identical(node.value, _HTMLDocument_prototype_writeln) && (node.argc > 0 && typeof node.args[0] === "string") || JAM.identical(node.value, _XMLHttpRequest_prototype_open) || JAM.identical(node.value, _Window_prototype_open) || JAM.identical(node.value, _Window_prototype_openDialog) || JAM.identical(node.value, _Window_prototype_postMessage) || 
+      JAM.identical(node.value, _WebSocket_prototype_send) || JAM.identical(node.value, _HTMLFormElement_prototype_submit) || JAM.identical(node.value, _HTMLAudioElement_prototype_setAttribute) && (node.argc > 0 && node.args[0] === "src") && (node.argc > 1 && __RegExp_prototype_test_call_bind__RegExp_prototype_test_(/^\s*(http|ftp)/i, node.args[1])) || JAM.identical(node.value, _HTMLFrameElement_prototype_setAttribute) && (node.argc > 0 && node.args[0] === "src") && (node.argc > 1 && __RegExp_prototype_test_call_bind__RegExp_prototype_test_(/^\s*(http|ftp)/i, 
+      node.args[1])) || JAM.identical(node.value, _HTMLIFrameElement_prototype_setAttribute) && (node.argc > 0 && node.args[0] === "src") && (node.argc > 1 && __RegExp_prototype_test_call_bind__RegExp_prototype_test_(/^\s*(http|ftp)/i, node.args[1])) || JAM.identical(node.value, _HTMLImageElement_prototype_setAttribute) && (node.argc > 0 && node.args[0] === "src") && (node.argc > 1 && __RegExp_prototype_test_call_bind__RegExp_prototype_test_(/^\s*(http|ftp)/i, node.args[1])) || JAM.identical(node.value, 
+      _HTMLInputElement_prototype_setAttribute) && (node.argc > 0 && node.args[0] === "src") && (node.argc > 1 && __RegExp_prototype_test_call_bind__RegExp_prototype_test_(/^\s*(http|ftp)/i, node.args[1])) || JAM.identical(node.value, _HTMLScriptElement_prototype_setAttribute) && (node.argc > 0 && node.args[0] === "src") && (node.argc > 1 && __RegExp_prototype_test_call_bind__RegExp_prototype_test_(/^\s*(http|ftp)/i, node.args[1])) || JAM.identical(node.value, _HTMLSourceElement_prototype_setAttribute) && 
+      (node.argc > 0 && node.args[0] === "src") && (node.argc > 1 && __RegExp_prototype_test_call_bind__RegExp_prototype_test_(/^\s*(http|ftp)/i, node.args[1])) || JAM.identical(node.value, _HTMLVideoElement_prototype_setAttribute) && (node.argc > 0 && node.args[0] === "src") && (node.argc > 1 && __RegExp_prototype_test_call_bind__RegExp_prototype_test_(/^\s*(http|ftp)/i, node.args[1])) || JAM.identical(node.value, _HTMLFormElement_prototype_setAttribute) && (node.argc > 0 && node.args[0] === "action"))) {
         commit = false;
         break;
       }

@@ -3,7 +3,7 @@ syntax-only:false
 policy-files:[/home/rich/cs/jam/tests/bench/kraken/kraken.mega.policy]
 kraken.original.js:414
 kraken.normalized.js:9451
-policy.aut:1106
+policy.aut:1226
 allFunctions:7
 allCallsites:19
 intraprocedural-edges:1942
@@ -14,12 +14,12 @@ returns-added-edges:1957
 returns-added-states:1951
 callbacks-added-edges:1972
 callbacks-added-states:1952
-concrete-query-cache:concrete-347728865.bin
-symbolic-query-cache:symbolic-347728865.bin
-modular.policy.js:3582
-policy.js:7701
+concrete-query-cache:concrete1683051645.bin
+symbolic-query-cache:symbolic1683051645.bin
+modular.policy.js:3760
+policy.js:8689
 transactions:27
-checks:334
+checks:452
 callsites-indirected:13
 property-write-indirection:0
 property-read-indirection:9

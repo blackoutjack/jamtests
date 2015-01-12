@@ -3,7 +3,7 @@ syntax-only:false
 policy-files:[/home/rich/cs/jam/tests/bench/sms2-translate/sms2.policy]
 sms2-translate.original.js:6553
 sms2-translate.normalized.js:10528
-policy.aut:347
+policy.aut:346
 allFunctions:77
 allCallsites:407
 intraprocedural-edges:2831

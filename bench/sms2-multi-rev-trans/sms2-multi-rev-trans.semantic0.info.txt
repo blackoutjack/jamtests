@@ -3,7 +3,7 @@ syntax-only:false
 policy-files:[/home/rich/cs/jam/tests/bench/sms2-multi-rev-trans/sms2.policy]
 sms2-multi-rev-trans.original.js:8313
 sms2-multi-rev-trans.normalized.js:12811
-policy.aut:347
+policy.aut:346
 allFunctions:83
 allCallsites:526
 intraprocedural-edges:3501

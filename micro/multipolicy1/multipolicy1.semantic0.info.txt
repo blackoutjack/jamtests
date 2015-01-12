@@ -3,7 +3,7 @@ syntax-only:false
 policy-files:[/home/rich/cs/jam/tests/micro/multipolicy1/multipolicy1.policy]
 multipolicy1.original.js:21
 multipolicy1.normalized.js:21
-policy.aut:46
+policy.aut:45
 allFunctions:0
 allCallsites:0
 intraprocedural-edges:6
@@ -14,8 +14,8 @@ returns-added-edges:6
 returns-added-states:7
 callbacks-added-edges:7
 callbacks-added-states:8
-concrete-query-cache:concrete90721936.bin
-symbolic-query-cache:symbolic90721936.bin
+concrete-query-cache:concrete-771672973.bin
+symbolic-query-cache:symbolic-771672973.bin
 modular.policy.js:160
 policy.js:462
 transactions:3

@@ -3,7 +3,7 @@ syntax-only:false
 policy-files:[/home/rich/cs/jam/tests/bench/portscanner/portscanner.policy]
 portscanner.original.js:195
 portscanner.normalized.js:279
-policy.aut:18
+policy.aut:17
 allFunctions:5
 allCallsites:7
 intraprocedural-edges:78

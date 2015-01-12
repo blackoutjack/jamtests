@@ -3,7 +3,7 @@ syntax-only:false
 policy-files:[/home/rich/cs/jam/tests/bench/sms2-rest-digest/sms2.policy]
 sms2-rest-digest.original.js:6481
 sms2-rest-digest.normalized.js:9965
-policy.aut:347
+policy.aut:346
 allFunctions:78
 allCallsites:419
 intraprocedural-edges:2708

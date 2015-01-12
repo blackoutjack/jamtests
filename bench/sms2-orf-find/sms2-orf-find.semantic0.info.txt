@@ -3,7 +3,7 @@ syntax-only:false
 policy-files:[/home/rich/cs/jam/tests/bench/sms2-orf-find/sms2.policy]
 sms2-orf-find.original.js:6955
 sms2-orf-find.normalized.js:11376
-policy.aut:347
+policy.aut:346
 allFunctions:76
 allCallsites:419
 intraprocedural-edges:3069

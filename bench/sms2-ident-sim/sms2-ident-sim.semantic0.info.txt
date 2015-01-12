@@ -3,7 +3,7 @@ syntax-only:false
 policy-files:[/home/rich/cs/jam/tests/bench/sms2-ident-sim/sms2.policy]
 sms2-ident-sim.original.js:5837
 sms2-ident-sim.normalized.js:8849
-policy.aut:347
+policy.aut:346
 allFunctions:74
 allCallsites:406
 intraprocedural-edges:2477

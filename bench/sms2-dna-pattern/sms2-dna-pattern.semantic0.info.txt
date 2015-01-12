@@ -3,7 +3,7 @@ syntax-only:false
 policy-files:[/home/rich/cs/jam/tests/bench/sms2-dna-pattern/sms2.policy]
 sms2-dna-pattern.original.js:5608
 sms2-dna-pattern.normalized.js:8417
-policy.aut:347
+policy.aut:346
 allFunctions:74
 allCallsites:390
 intraprocedural-edges:2328

@@ -3,7 +3,7 @@ syntax-only:false
 policy-files:[/home/rich/cs/jam/tests/bench/sms2-genbank-feat/sms2.policy]
 sms2-genbank-feat.original.js:6037
 sms2-genbank-feat.normalized.js:8992
-policy.aut:347
+policy.aut:346
 allFunctions:79
 allCallsites:433
 intraprocedural-edges:2494
