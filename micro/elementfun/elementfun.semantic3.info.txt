@@ -1,6 +1,6 @@
 predicate-limit:3
 syntax-only:false
-policy-files:[/home/rich/cs/jam/tests/micro/elementfun/elementfun.policy]
+policy-files:[tests/micro/elementfun/elementfun.policy]
 elementfun.original.js:14
 elementfun.normalized.js:14
 policy.aut:11

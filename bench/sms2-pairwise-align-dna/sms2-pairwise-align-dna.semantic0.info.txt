@@ -1,6 +1,6 @@
 predicate-limit:0
 syntax-only:false
-policy-files:[/home/rich/cs/jam/tests/bench/sms2-pairwise-align-dna/sms2.policy]
+policy-files:[tests/bench/sms2-pairwise-align-dna/sms2.policy]
 sms2-pairwise-align-dna.original.js:9067
 sms2-pairwise-align-dna.normalized.js:14524
 policy.aut:346

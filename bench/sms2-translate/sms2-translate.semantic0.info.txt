@@ -1,6 +1,6 @@
 predicate-limit:0
 syntax-only:false
-policy-files:[/home/rich/cs/jam/tests/bench/sms2-translate/sms2.policy]
+policy-files:[tests/bench/sms2-translate/sms2.policy]
 sms2-translate.original.js:6553
 sms2-translate.normalized.js:10528
 policy.aut:346

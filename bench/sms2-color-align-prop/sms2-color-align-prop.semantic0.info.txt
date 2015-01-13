@@ -1,6 +1,6 @@
 predicate-limit:0
 syntax-only:false
-policy-files:[/home/rich/cs/jam/tests/bench/sms2-color-align-prop/sms2.policy]
+policy-files:[tests/bench/sms2-color-align-prop/sms2.policy]
 sms2-color-align-prop.original.js:6294
 sms2-color-align-prop.normalized.js:9730
 policy.aut:346

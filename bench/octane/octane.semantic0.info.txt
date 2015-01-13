@@ -1,6 +1,6 @@
 predicate-limit:0
 syntax-only:false
-policy-files:[/home/rich/cs/jam/tests/bench/octane/octane.policy]
+policy-files:[tests/bench/octane/octane.policy]
 octane.original.js:1826961
 octane.normalized.js:2306675
 policy.aut:11

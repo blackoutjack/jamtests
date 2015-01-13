@@ -1,6 +1,6 @@
 predicate-limit:0
 syntax-only:false
-policy-files:[/home/rich/cs/jam/tests/micro/multipolicy1/multipolicy1.policy]
+policy-files:[tests/micro/multipolicy1/multipolicy1.policy]
 multipolicy1.original.js:21
 multipolicy1.normalized.js:21
 policy.aut:45

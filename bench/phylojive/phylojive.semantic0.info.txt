@@ -1,6 +1,6 @@
 predicate-limit:0
 syntax-only:false
-policy-files:[/home/rich/cs/jam/tests/bench/phylojive/phylojive.policy]
+policy-files:[tests/bench/phylojive/phylojive.policy]
 phylojive.original.js:166473
 phylojive.normalized.js:285766
 policy.aut:19

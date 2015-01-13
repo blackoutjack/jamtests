@@ -1,6 +1,6 @@
 predicate-limit:0
 syntax-only:false
-policy-files:[/home/rich/cs/jam/tests/bench/sms2-rest-map/sms2.policy]
+policy-files:[tests/bench/sms2-rest-map/sms2.policy]
 sms2-rest-map.original.js:8527
 sms2-rest-map.normalized.js:13721
 policy.aut:346

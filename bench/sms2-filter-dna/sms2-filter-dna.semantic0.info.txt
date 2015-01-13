@@ -1,6 +1,6 @@
 predicate-limit:0
 syntax-only:false
-policy-files:[/home/rich/cs/jam/tests/bench/sms2-filter-dna/sms2.policy]
+policy-files:[tests/bench/sms2-filter-dna/sms2.policy]
 sms2-filter-dna.original.js:5397
 sms2-filter-dna.normalized.js:8118
 policy.aut:346

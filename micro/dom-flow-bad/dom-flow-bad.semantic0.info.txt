@@ -1,6 +1,6 @@
 predicate-limit:0
 syntax-only:false
-policy-files:[/home/rich/cs/jam/tests/micro/dom-flow-bad/dom-flow.policy]
+policy-files:[tests/micro/dom-flow-bad/dom-flow.policy]
 dom-flow-bad.original.js:21
 dom-flow-bad.normalized.js:21
 policy.aut:13

@@ -1,6 +1,6 @@
 predicate-limit:0
 syntax-only:false
-policy-files:[/home/rich/cs/jam/tests/bench/puzzle/puzzle.policy]
+policy-files:[tests/bench/puzzle/puzzle.policy]
 puzzle.original.js:104486
 puzzle.normalized.js:165371
 policy.aut:13

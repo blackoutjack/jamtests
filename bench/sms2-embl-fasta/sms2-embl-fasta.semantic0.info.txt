@@ -1,6 +1,6 @@
 predicate-limit:0
 syntax-only:false
-policy-files:[/home/rich/cs/jam/tests/bench/sms2-embl-fasta/sms2.policy]
+policy-files:[tests/bench/sms2-embl-fasta/sms2.policy]
 sms2-embl-fasta.original.js:5400
 sms2-embl-fasta.normalized.js:8056
 policy.aut:346

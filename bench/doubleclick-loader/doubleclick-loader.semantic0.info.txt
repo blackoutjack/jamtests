@@ -1,6 +1,6 @@
 predicate-limit:0
 syntax-only:false
-policy-files:[/home/rich/cs/jam/tests/bench/doubleclick-loader/doubleclick-loader.policy]
+policy-files:[tests/bench/doubleclick-loader/doubleclick-loader.policy]
 doubleclick-loader.original.js:271
 doubleclick-loader.normalized.js:398
 policy.aut:16

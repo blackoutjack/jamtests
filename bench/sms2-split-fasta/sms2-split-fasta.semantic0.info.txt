@@ -1,6 +1,6 @@
 predicate-limit:0
 syntax-only:false
-policy-files:[/home/rich/cs/jam/tests/bench/sms2-split-fasta/sms2.policy]
+policy-files:[tests/bench/sms2-split-fasta/sms2.policy]
 sms2-split-fasta.original.js:5435
 sms2-split-fasta.normalized.js:8138
 policy.aut:346

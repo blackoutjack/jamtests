@@ -1,6 +1,6 @@
 predicate-limit:3
 syntax-only:false
-policy-files:[/home/rich/cs/jam/tests/micro/native-switch-bad/native-switch.policy]
+policy-files:[tests/micro/native-switch-bad/native-switch.policy]
 native-switch-bad.original.js:17
 native-switch-bad.normalized.js:17
 policy.aut:6

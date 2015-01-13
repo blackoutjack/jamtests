@@ -1,6 +1,6 @@
 predicate-limit:0
 syntax-only:false
-policy-files:[/home/rich/cs/jam/tests/bench/plusone/plusone.policy]
+policy-files:[tests/bench/plusone/plusone.policy]
 plusone.original.js:1195
 plusone.normalized.js:1972
 policy.aut:24

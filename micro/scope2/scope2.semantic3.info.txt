@@ -1,6 +1,6 @@
 predicate-limit:3
 syntax-only:false
-policy-files:[/home/rich/cs/jam/tests/micro/scope2/scope2.policy]
+policy-files:[tests/micro/scope2/scope2.policy]
 scope2.original.js:32
 scope2.normalized.js:34
 policy.aut:7

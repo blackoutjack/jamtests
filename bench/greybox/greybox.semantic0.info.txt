@@ -1,6 +1,6 @@
 predicate-limit:0
 syntax-only:false
-policy-files:[/home/rich/cs/jam/tests/bench/greybox/greybox.policy]
+policy-files:[tests/bench/greybox/greybox.policy]
 greybox.original.js:9914
 greybox.normalized.js:13864
 policy.aut:13

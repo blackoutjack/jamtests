@@ -1,6 +1,6 @@
 predicate-limit:0
 syntax-only:false
-policy-files:[/home/rich/cs/jam/tests/bench/sms2-group-protein/sms2.policy]
+policy-files:[tests/bench/sms2-group-protein/sms2.policy]
 sms2-group-protein.original.js:5375
 sms2-group-protein.normalized.js:8070
 policy.aut:346

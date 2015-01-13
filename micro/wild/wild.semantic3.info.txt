@@ -1,6 +1,6 @@
 predicate-limit:3
 syntax-only:false
-policy-files:[/home/rich/cs/jam/tests/micro/wild/wild.policy]
+policy-files:[tests/micro/wild/wild.policy]
 wild.original.js:11
 wild.normalized.js:11
 policy.aut:11

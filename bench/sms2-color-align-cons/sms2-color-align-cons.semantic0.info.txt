@@ -1,6 +1,6 @@
 predicate-limit:0
 syntax-only:false
-policy-files:[/home/rich/cs/jam/tests/bench/sms2-color-align-cons/sms2.policy]
+policy-files:[tests/bench/sms2-color-align-cons/sms2.policy]
 sms2-color-align-cons.original.js:6176
 sms2-color-align-cons.normalized.js:9528
 policy.aut:346

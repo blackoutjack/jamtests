@@ -1,6 +1,6 @@
 predicate-limit:0
 syntax-only:false
-policy-files:[/home/rich/cs/jam/tests/bench/sunspider/sunspider.mega.policy]
+policy-files:[tests/bench/sunspider/sunspider.mega.policy]
 sunspider.original.js:407
 sunspider.normalized.js:1444
 policy.aut:1226

@@ -1,6 +1,6 @@
 predicate-limit:0
 syntax-only:false
-policy-files:[/home/rich/cs/jam/tests/bench/kraken/kraken.mega.policy]
+policy-files:[tests/bench/kraken/kraken.mega.policy]
 kraken.original.js:414
 kraken.normalized.js:9451
 policy.aut:1226

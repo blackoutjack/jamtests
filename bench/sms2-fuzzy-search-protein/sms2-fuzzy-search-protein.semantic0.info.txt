@@ -1,6 +1,6 @@
 predicate-limit:0
 syntax-only:false
-policy-files:[/home/rich/cs/jam/tests/bench/sms2-fuzzy-search-protein/sms2.policy]
+policy-files:[tests/bench/sms2-fuzzy-search-protein/sms2.policy]
 sms2-fuzzy-search-protein.original.js:7735
 sms2-fuzzy-search-protein.normalized.js:12128
 policy.aut:346

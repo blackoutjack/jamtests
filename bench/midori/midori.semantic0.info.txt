@@ -1,6 +1,6 @@
 predicate-limit:0
 syntax-only:false
-policy-files:[/home/rich/cs/jam/tests/bench/midori/midori.policy]
+policy-files:[tests/bench/midori/midori.policy]
 midori.original.js:9018
 midori.normalized.js:15228
 policy.aut:13

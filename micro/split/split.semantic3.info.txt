@@ -1,6 +1,6 @@
 predicate-limit:3
 syntax-only:false
-policy-files:[/home/rich/cs/jam/tests/micro/split/split.policy]
+policy-files:[tests/micro/split/split.policy]
 split.original.js:23
 split.normalized.js:23
 policy.aut:12

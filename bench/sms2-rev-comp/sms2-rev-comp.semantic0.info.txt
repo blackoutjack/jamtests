@@ -1,6 +1,6 @@
 predicate-limit:0
 syntax-only:false
-policy-files:[/home/rich/cs/jam/tests/bench/sms2-rev-comp/sms2.policy]
+policy-files:[tests/bench/sms2-rev-comp/sms2.policy]
 sms2-rev-comp.original.js:5429
 sms2-rev-comp.normalized.js:8160
 policy.aut:346

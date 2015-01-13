@@ -1,6 +1,6 @@
 predicate-limit:3
 syntax-only:false
-policy-files:[/home/rich/cs/jam/tests/micro/write3/write3.policy]
+policy-files:[tests/micro/write3/write3.policy]
 write3.original.js:8
 write3.normalized.js:8
 policy.aut:11

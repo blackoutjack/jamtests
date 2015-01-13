@@ -1,6 +1,6 @@
 predicate-limit:3
 syntax-only:false
-policy-files:[/home/rich/cs/jam/tests/micro/read/read.policy]
+policy-files:[tests/micro/read/read.policy]
 read.original.js:10
 read.normalized.js:10
 policy.aut:7

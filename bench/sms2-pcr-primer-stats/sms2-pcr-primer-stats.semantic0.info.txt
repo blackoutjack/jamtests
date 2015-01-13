@@ -1,6 +1,6 @@
 predicate-limit:0
 syntax-only:false
-policy-files:[/home/rich/cs/jam/tests/bench/sms2-pcr-primer-stats/sms2.policy]
+policy-files:[tests/bench/sms2-pcr-primer-stats/sms2.policy]
 sms2-pcr-primer-stats.original.js:12253
 sms2-pcr-primer-stats.normalized.js:17603
 policy.aut:346

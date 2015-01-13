@@ -1,6 +1,6 @@
 predicate-limit:0
 syntax-only:false
-policy-files:[/home/rich/cs/jam/tests/bench/jssec/jssec.policy]
+policy-files:[tests/bench/jssec/jssec.policy]
 jssec.original.js:193
 jssec.normalized.js:303
 policy.aut:15

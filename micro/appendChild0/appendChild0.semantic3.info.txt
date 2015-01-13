@@ -1,6 +1,6 @@
 predicate-limit:3
 syntax-only:false
-policy-files:[/home/rich/cs/jam/tests/micro/appendChild0/appendChild0.policy]
+policy-files:[tests/micro/appendChild0/appendChild0.policy]
 appendChild0.original.js:28
 appendChild0.normalized.js:28
 policy.aut:17

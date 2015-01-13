@@ -1,6 +1,6 @@
 predicate-limit:0
 syntax-only:false
-policy-files:[/home/rich/cs/jam/tests/bench/sms2-ident-sim/sms2.policy]
+policy-files:[tests/bench/sms2-ident-sim/sms2.policy]
 sms2-ident-sim.original.js:5837
 sms2-ident-sim.normalized.js:8849
 policy.aut:346

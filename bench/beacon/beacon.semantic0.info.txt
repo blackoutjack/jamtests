@@ -1,6 +1,6 @@
 predicate-limit:0
 syntax-only:false
-policy-files:[/home/rich/cs/jam/tests/bench/beacon/beacon.policy]
+policy-files:[tests/bench/beacon/beacon.policy]
 beacon.original.js:787
 beacon.normalized.js:1364
 policy.aut:19

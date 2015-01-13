@@ -1,6 +1,6 @@
 predicate-limit:3
 syntax-only:false
-policy-files:[/home/rich/cs/jam/tests/micro/postmessage0/postmessage0.policy]
+policy-files:[tests/micro/postmessage0/postmessage0.policy]
 postmessage0.original.js:8
 postmessage0.normalized.js:8
 policy.aut:11

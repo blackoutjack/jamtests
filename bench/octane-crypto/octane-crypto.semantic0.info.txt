@@ -1,6 +1,6 @@
 predicate-limit:0
 syntax-only:false
-policy-files:[/home/rich/cs/jam/tests/bench/octane-crypto/octane.policy]
+policy-files:[tests/bench/octane-crypto/octane.policy]
 octane-crypto.original.js:12219
 octane-crypto.normalized.js:19331
 policy.aut:11

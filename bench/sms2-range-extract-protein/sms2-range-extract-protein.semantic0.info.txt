@@ -1,6 +1,6 @@
 predicate-limit:0
 syntax-only:false
-policy-files:[/home/rich/cs/jam/tests/bench/sms2-range-extract-protein/sms2.policy]
+policy-files:[tests/bench/sms2-range-extract-protein/sms2.policy]
 sms2-range-extract-protein.original.js:7096
 sms2-range-extract-protein.normalized.js:10999
 policy.aut:346

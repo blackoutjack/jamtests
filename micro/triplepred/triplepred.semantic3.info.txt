@@ -1,6 +1,6 @@
 predicate-limit:3
 syntax-only:false
-policy-files:[/home/rich/cs/jam/tests/micro/triplepred/triplepred.policy]
+policy-files:[tests/micro/triplepred/triplepred.policy]
 triplepred.original.js:41
 triplepred.normalized.js:50
 policy.aut:12

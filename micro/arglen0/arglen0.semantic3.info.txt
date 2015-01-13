@@ -1,6 +1,6 @@
 predicate-limit:3
 syntax-only:false
-policy-files:[/home/rich/cs/jam/tests/micro/arglen0/arglen0.policy]
+policy-files:[tests/micro/arglen0/arglen0.policy]
 arglen0.original.js:13
 arglen0.normalized.js:13
 policy.aut:11

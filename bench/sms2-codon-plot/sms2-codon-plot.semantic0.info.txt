@@ -1,6 +1,6 @@
 predicate-limit:0
 syntax-only:false
-policy-files:[/home/rich/cs/jam/tests/bench/sms2-codon-plot/sms2.policy]
+policy-files:[tests/bench/sms2-codon-plot/sms2.policy]
 sms2-codon-plot.original.js:6262
 sms2-codon-plot.normalized.js:9383
 policy.aut:346

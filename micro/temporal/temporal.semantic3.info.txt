@@ -1,6 +1,6 @@
 predicate-limit:3
 syntax-only:false
-policy-files:[/home/rich/cs/jam/tests/micro/temporal/temporal.policy]
+policy-files:[tests/micro/temporal/temporal.policy]
 temporal.original.js:18
 temporal.normalized.js:18
 policy.aut:12
