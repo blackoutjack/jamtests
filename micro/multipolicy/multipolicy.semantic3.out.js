@@ -1,5 +1,5 @@
 // multipolicy.js
-var a = JAM.call(document.getElementById, document, ["ok"], JAM.policy.p8);
+var a = JAM.call(document.getElementById, document, ["ok"], JAM.policy.p9);
 introspect(JAM.policy.p1) {
   var b = document.cookie
 }
@@ -10,4 +10,4 @@ var c = JAM.call(document.createElement, document, ["img"], JAM.policy.p2);
 introspect(JAM.policy.p3) {
   c.src = b;
 }
-JAM.call(document.write, document, [b], JAM.policy.p5)
+JAM.call(document.write, document, [b], JAM.policy.p6)

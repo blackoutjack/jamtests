@@ -15,21 +15,21 @@ var policy = function() {
         commit = false;
         break;
       }
-      if (states[1] && !states[2] && node.type === "invoke" && JAM.identical(node.value, _HTMLDocument_prototype_createElement)) {
+      if (states[1] && !states[2] && node.type === "call" && JAM.identical(node.value, _HTMLDocument_prototype_createElement)) {
         states[2] = true;
       }
       if (states[1] && node.type === "write" && (JAM.identical(node.obj, _document) && node.id === "cookie")) {
         commit = false;
         break;
       }
-      if (states[1] && node.type === "invoke" && JAM.identical(node.value, _HTMLDocument_prototype_write)) {
+      if (states[1] && node.type === "call" && JAM.identical(node.value, _HTMLDocument_prototype_write)) {
         commit = false;
         break;
       }
       if (!states[1] && node.type === "read" && (JAM.identical(node.obj, _document) && node.id === "cookie")) {
         states[1] = true;
       }
-      if (!states[1] && node.type === "invoke" && JAM.identical(node.value, _HTMLDocument_prototype_getElementById)) {
+      if (!states[1] && node.type === "call" && JAM.identical(node.value, _HTMLDocument_prototype_getElementById)) {
         states[1] = true;
       }
     }

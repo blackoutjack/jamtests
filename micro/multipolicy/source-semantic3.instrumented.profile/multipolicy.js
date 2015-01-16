@@ -1,6 +1,6 @@
 
 JAM.startProfile('load');
-introspect(JAM.policy.p8) {
+introspect(JAM.policy.p9) {
   var a = document.getElementById("ok")
 }
 introspect(JAM.policy.p1) {
@@ -15,7 +15,7 @@ introspect(JAM.policy.p2) {
 introspect(JAM.policy.p3) {
   c.src = b;
 }
-introspect(JAM.policy.p5) {
+introspect(JAM.policy.p6) {
   document.write(b);
 }
 

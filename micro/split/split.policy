@@ -1,2 +1,2 @@
-0,-1: jam#invoke(#HTMLDocument#prototype#createElement)
-0,-1: jam#invoke(#HTMLDocument#prototype#write)
+0,-1: jam#call(#HTMLDocument#prototype#createElement)
+0,-1: jam#call(#HTMLDocument#prototype#write)

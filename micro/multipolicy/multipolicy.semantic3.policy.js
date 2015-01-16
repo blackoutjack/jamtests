@@ -15,21 +15,21 @@ var policy = function() {
         commit = false;
         break;
       }
-      if (states[1] && !states[2] && node.type === "invoke" && JAM.identical(node.value, _HTMLDocument_prototype_createElement)) {
+      if (states[1] && !states[2] && node.type === "call" && JAM.identical(node.value, _HTMLDocument_prototype_createElement)) {
         states[2] = true;
       }
       if (states[1] && node.type === "write" && (JAM.identical(node.obj, _document) && node.id === "cookie")) {
         commit = false;
         break;
       }
-      if (states[1] && node.type === "invoke" && JAM.identical(node.value, _HTMLDocument_prototype_write)) {
+      if (states[1] && node.type === "call" && JAM.identical(node.value, _HTMLDocument_prototype_write)) {
         commit = false;
         break;
       }
       if (!states[1] && node.type === "read" && (JAM.identical(node.obj, _document) && node.id === "cookie")) {
         states[1] = true;
       }
-      if (!states[1] && node.type === "invoke" && JAM.identical(node.value, _HTMLDocument_prototype_getElementById)) {
+      if (!states[1] && node.type === "call" && JAM.identical(node.value, _HTMLDocument_prototype_getElementById)) {
         states[1] = true;
       }
     }
@@ -69,7 +69,7 @@ var policy = function() {
     JAM.process(tx);
   }
   p2.subsumedBy = pFull;
-  p2.itype = "invoke";
+  p2.itype = "call";
   Object.freeze(p2);
   function p3(tx) {
     var commit = true;
@@ -115,7 +115,7 @@ var policy = function() {
   p4.subsumedBy = pFull;
   p4.itype = "write";
   Object.freeze(p4);
-  function p5(tx) {
+  function p6(tx) {
     var commit = true;
     if (states[1]) {
       var as = tx.getCallSequence();
@@ -134,10 +134,10 @@ var policy = function() {
       JAM.prevent(tx);
     }
   }
-  p5.subsumedBy = pFull;
-  p5.itype = "invoke";
-  Object.freeze(p5);
-  function p8(tx) {
+  p6.subsumedBy = pFull;
+  p6.itype = "call";
+  Object.freeze(p6);
+  function p9(tx) {
     var as = tx.getCallSequence();
     var len = as.length;
     for (var i = 0;i < len && !states[1];i++) {
@@ -148,8 +148,8 @@ var policy = function() {
     }
     JAM.process(tx);
   }
-  p8.subsumedBy = pFull;
-  p8.itype = "invoke";
-  Object.freeze(p8);
-  return{p1:p1, p2:p2, p3:p3, p4:p4, p5:p5, p8:p8, pFull:pFull, woven:true};
+  p9.subsumedBy = pFull;
+  p9.itype = "call";
+  Object.freeze(p9);
+  return{p1:p1, p2:p2, p3:p3, p4:p4, p6:p6, p9:p9, pFull:pFull, woven:true};
 }()

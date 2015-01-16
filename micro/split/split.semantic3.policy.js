@@ -19,7 +19,7 @@ var policy = function() {
     }
   }
   pFull.subsumedBy = pFull;
-  pFull.itype = "invoke";
+  pFull.itype = "call";
   Object.freeze(pFull);
   function p1(tx) {
     var commit = true;
@@ -39,7 +39,7 @@ var policy = function() {
     }
   }
   p1.subsumedBy = pFull;
-  p1.itype = "invoke";
+  p1.itype = "call";
   Object.freeze(p1);
   function p2(tx) {
     var commit = true;
@@ -59,7 +59,7 @@ var policy = function() {
     }
   }
   p2.subsumedBy = pFull;
-  p2.itype = "invoke";
+  p2.itype = "call";
   Object.freeze(p2);
   return{p1:p1, p2:p2, pFull:pFull, woven:true};
 }()

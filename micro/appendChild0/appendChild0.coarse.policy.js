@@ -21,7 +21,7 @@ var policy = function() {
     }
   }
   pFull.subsumedBy = pFull;
-  pFull.itype = "invoke";
+  pFull.itype = "call";
   Object.freeze(pFull);
   return{pFull:pFull};
 }()
