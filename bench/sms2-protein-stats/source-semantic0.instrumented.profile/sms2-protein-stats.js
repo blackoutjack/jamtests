@@ -1272,7 +1272,7 @@ function testScript() {
     return false;
   }
   var testNum = 2489.8237;
-  introspect(JAM.policy.p11) {
+  introspect(JAM.policy.p10) {
     var v381 = testNum.toFixed(3)
   }
   var v128 = v381 != 2489.824;
@@ -1280,7 +1280,7 @@ function testScript() {
     alert("Number toFixed() method not supported. See browser compatibility page.");
     return false;
   }
-  introspect(JAM.policy.p11) {
+  introspect(JAM.policy.p10) {
     var v382 = testNum.toPrecision(5)
   }
   var v129 = v382 != 2489.8;
@@ -2126,7 +2126,7 @@ function writeSequenceStats(sequence$$16, arrayOfItems$$1) {
     var v605 = v621 + "</td><td>";
     var v574 = v605 + tempNumber;
     var v525 = v574 + "</td><td>";
-    introspect(JAM.policy.p11) {
+    introspect(JAM.policy.p10) {
       var v526 = percentage.toFixed(2)
     }
     var v447 = v525 + v526;

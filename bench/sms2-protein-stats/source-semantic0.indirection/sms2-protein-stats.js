@@ -956,13 +956,13 @@ function testScript() {
     return false;
   }
   var testNum = 2489.8237;
-  var v381 = JAM.call(testNum.toFixed, testNum, [3], JAM.policy.p11);
+  var v381 = JAM.call(testNum.toFixed, testNum, [3], JAM.policy.p10);
   var v128 = v381 != 2489.824;
   if (v128) {
     alert("Number toFixed() method not supported. See browser compatibility page.");
     return false;
   }
-  var v382 = JAM.call(testNum.toPrecision, testNum, [5], JAM.policy.p11);
+  var v382 = JAM.call(testNum.toPrecision, testNum, [5], JAM.policy.p10);
   var v129 = v382 != 2489.8;
   if (v129) {
     alert("Number toPrecision() method not supported. See browser compatibility page.");
@@ -1666,7 +1666,7 @@ function writeSequenceStats(sequence$$16, arrayOfItems$$1) {
     var v605 = v621 + "</td><td>";
     var v574 = v605 + tempNumber;
     var v525 = v574 + "</td><td>";
-    var v526 = JAM.call(percentage.toFixed, percentage, [2], JAM.policy.p11);
+    var v526 = JAM.call(percentage.toFixed, percentage, [2], JAM.policy.p10);
     var v447 = v525 + v526;
     var v254 = v447 + "</td></tr>\n";
     JAM.call(v253.write, v253, [v254], JAM.policy.p16);

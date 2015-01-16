@@ -498,32 +498,32 @@ function complement(dnaSequence) {
 }
 function closeForm() {
   var v47 = outputWindow.document;
-  introspect(JAM.policy.p11) {
+  introspect(JAM.policy.p9) {
     v47.write("</form>");
   }
   return true;
 }
 function closePre() {
   var v48 = outputWindow.document;
-  introspect(JAM.policy.p11) {
+  introspect(JAM.policy.p9) {
     v48.write("</div>");
   }
   var v49 = outputWindow.document;
-  introspect(JAM.policy.p11) {
+  introspect(JAM.policy.p9) {
     v49.write("</pre>\n");
   }
   return;
 }
 function closeTextArea() {
   var v50 = outputWindow.document;
-  introspect(JAM.policy.p11) {
+  introspect(JAM.policy.p9) {
     v50.write("</textarea>");
   }
   return true;
 }
 function closeWindow() {
   var v51 = outputWindow.document;
-  introspect(JAM.policy.p11) {
+  introspect(JAM.policy.p9) {
     v51.write("</body>\n</html>\n");
   }
   outputWindow.status = "Done.";
@@ -856,7 +856,7 @@ function getRandomSequence(components, lengthOut) {
     j$$4++;
     v99 = j$$4 < lengthOut;
   }
-  introspect(JAM.policy.p11) {
+  introspect(JAM.policy.p9) {
     return sequenceArray.join("");
   }
 }
@@ -987,25 +987,25 @@ function moreExpressionCheck(expressionToCheck) {
 }
 function openForm() {
   var v104 = outputWindow.document;
-  introspect(JAM.policy.p11) {
+  introspect(JAM.policy.p9) {
     v104.write('<form action="">\n');
   }
   return true;
 }
 function openPre() {
   var v105 = outputWindow.document;
-  introspect(JAM.policy.p11) {
+  introspect(JAM.policy.p9) {
     v105.write("<pre>");
   }
   var v106 = outputWindow.document;
-  introspect(JAM.policy.p11) {
+  introspect(JAM.policy.p9) {
     v106.write('<div class="pre">');
   }
   return;
 }
 function openTextArea() {
   var v107 = outputWindow.document;
-  introspect(JAM.policy.p11) {
+  introspect(JAM.policy.p9) {
     v107.write('<br /><textarea rows="6" cols="61">\n');
   }
   return true;
@@ -1207,7 +1207,7 @@ function reverse(dnaSequence$$1) {
       tempDnaArray = dnaSequence$$1.match(/./g);
     }
     tempDnaArray = tempDnaArray.reverse();
-    introspect(JAM.policy.p11) {
+    introspect(JAM.policy.p9) {
       dnaSequence$$1 = tempDnaArray.join("");
     }
   }
@@ -1275,7 +1275,7 @@ function testScript() {
     return false;
   }
   var testNum = 2489.8237;
-  introspect(JAM.policy.p9) {
+  introspect(JAM.policy.p12) {
     var v528 = testNum.toFixed(3)
   }
   var v132 = v528 != 2489.824;
@@ -1283,7 +1283,7 @@ function testScript() {
     alert("Number toFixed() method not supported. See browser compatibility page.");
     return false;
   }
-  introspect(JAM.policy.p9) {
+  introspect(JAM.policy.p12) {
     var v529 = testNum.toPrecision(5)
   }
   var v133 = v529 != 2489.8;
@@ -1629,7 +1629,7 @@ function writeGroupNumDnaSetStart(text$$12, tabIn$$3, groupSize$$2, basePerLine$
           v165.write(v166);
         }
         var v167 = outputWindow.document;
-        introspect(JAM.policy.p11) {
+        introspect(JAM.policy.p9) {
           v167.write("\n");
         }
       }
@@ -1655,7 +1655,7 @@ function writeGroupNumDnaSetStart(text$$12, tabIn$$3, groupSize$$2, basePerLine$
             v171.write(v172);
           }
           var v173 = outputWindow.document;
-          introspect(JAM.policy.p11) {
+          introspect(JAM.policy.p9) {
             v173.write("\n");
           }
         }
@@ -1681,7 +1681,7 @@ function writeGroupNumDnaSetStart(text$$12, tabIn$$3, groupSize$$2, basePerLine$
               v179.write(v180);
             }
             var v181 = outputWindow.document;
-            introspect(JAM.policy.p11) {
+            introspect(JAM.policy.p9) {
               v181.write("\n");
             }
           }
@@ -1938,7 +1938,7 @@ function writeRestrictionSites(sequence$$15, arrayOfItems, dnaConformation) {
     upperLimit = upperLimit + shiftValue;
   }
   var v228 = outputWindow.document;
-  introspect(JAM.policy.p11) {
+  introspect(JAM.policy.p9) {
     v228.write('<table border="1" width="100%" cellspacing="0" cellpadding="2"><tbody>\n');
   }
   var v229 = outputWindow.document;
@@ -2054,7 +2054,7 @@ function writeRestrictionSites(sequence$$15, arrayOfItems, dnaConformation) {
     v246 = i$$9 < v586;
   }
   var v247 = outputWindow.document;
-  introspect(JAM.policy.p11) {
+  introspect(JAM.policy.p9) {
     v247.write("</tbody></table>\n");
   }
   return true;
@@ -2062,7 +2062,7 @@ function writeRestrictionSites(sequence$$15, arrayOfItems, dnaConformation) {
 function writeSequenceStats(sequence$$16, arrayOfItems$$1) {
   var originalLength = sequence$$16.length;
   var v248 = outputWindow.document;
-  introspect(JAM.policy.p11) {
+  introspect(JAM.policy.p9) {
     v248.write('<table border="1" width="100%" cellspacing="0" cellpadding="2"><tbody>\n');
   }
   var v249 = outputWindow.document;
@@ -2129,7 +2129,7 @@ function writeSequenceStats(sequence$$16, arrayOfItems$$1) {
     var v967 = v1008 + "</td><td>";
     var v890 = v967 + tempNumber;
     var v765 = v890 + "</td><td>";
-    introspect(JAM.policy.p9) {
+    introspect(JAM.policy.p12) {
       var v766 = percentage.toFixed(2)
     }
     var v594 = v765 + v766;
@@ -2142,7 +2142,7 @@ function writeSequenceStats(sequence$$16, arrayOfItems$$1) {
     v259 = i$$10 < v595;
   }
   var v260 = outputWindow.document;
-  introspect(JAM.policy.p11) {
+  introspect(JAM.policy.p9) {
     v260.write("</tbody></table>\n");
   }
   return true;
@@ -2270,21 +2270,21 @@ function revTrans(theDocument) {
     }
     writeRevTransSeqNoDegen(newProtein, title, codonTable$$1);
     var v279 = outputWindow.document;
-    introspect(JAM.policy.p11) {
+    introspect(JAM.policy.p9) {
       v279.write("\n");
     }
     writeRevTransSeqDegen(newProtein, title, codonTable$$1);
     var v280 = outputWindow.document;
-    introspect(JAM.policy.p11) {
+    introspect(JAM.policy.p9) {
       v280.write("\n");
     }
     var v281 = outputWindow.document;
-    introspect(JAM.policy.p11) {
+    introspect(JAM.policy.p9) {
       v281.write("Graph of base probabilities:\n");
     }
     writeRevTransGraph(newProtein, codonTable$$1);
     var v282 = outputWindow.document;
-    introspect(JAM.policy.p11) {
+    introspect(JAM.policy.p9) {
       v282.write("\n\n");
     }
     i$$11++;
@@ -2326,7 +2326,7 @@ function writeRevTransSeqNoDegen(protein, title$$10, codonTable$$2) {
     v288.write(v289);
   }
   var v290 = outputWindow.document;
-  introspect(JAM.policy.p11) {
+  introspect(JAM.policy.p9) {
     v290.write("\n");
   }
   return true;
@@ -2362,7 +2362,7 @@ function writeRevTransSeqDegen(protein$$1, title$$11, codonTable$$3) {
     v295.write(v296);
   }
   var v297 = outputWindow.document;
-  introspect(JAM.policy.p11) {
+  introspect(JAM.policy.p9) {
     v297.write("\n");
   }
   return true;
@@ -2733,7 +2733,7 @@ function getRuler(freq, mark) {
   }
   var v794 = v911 + v912;
   var v633 = v794 + " ";
-  introspect(JAM.policy.p9) {
+  introspect(JAM.policy.p12) {
     var v634 = freq.toFixed(2)
   }
   var v360 = v633 + v634;
@@ -2756,7 +2756,7 @@ function determineBaseFreq() {
     var v984 = this.codons;
     var v913 = v984[i$$13];
     var v796 = v913.sequence;
-    introspect(JAM.policy.p9) {
+    introspect(JAM.policy.p12) {
       var v636 = v796.charAt(0)
     }
     var v369 = v636 == "g";
@@ -2772,7 +2772,7 @@ function determineBaseFreq() {
       var v985 = this.codons;
       var v915 = v985[i$$13];
       var v799 = v915.sequence;
-      introspect(JAM.policy.p9) {
+      introspect(JAM.policy.p12) {
         var v639 = v799.charAt(0)
       }
       var v368 = v639 == "a";
@@ -2788,7 +2788,7 @@ function determineBaseFreq() {
         var v986 = this.codons;
         var v917 = v986[i$$13];
         var v802 = v917.sequence;
-        introspect(JAM.policy.p9) {
+        introspect(JAM.policy.p12) {
           var v642 = v802.charAt(0)
         }
         var v367 = v642 == "t";
@@ -2804,7 +2804,7 @@ function determineBaseFreq() {
           var v987 = this.codons;
           var v919 = v987[i$$13];
           var v805 = v919.sequence;
-          introspect(JAM.policy.p9) {
+          introspect(JAM.policy.p12) {
             var v645 = v805.charAt(0)
           }
           var v366 = v645 == "c";
@@ -2823,7 +2823,7 @@ function determineBaseFreq() {
     var v988 = this.codons;
     var v921 = v988[i$$13];
     var v808 = v921.sequence;
-    introspect(JAM.policy.p9) {
+    introspect(JAM.policy.p12) {
       var v648 = v808.charAt(1)
     }
     var v377 = v648 == "g";
@@ -2839,7 +2839,7 @@ function determineBaseFreq() {
       var v989 = this.codons;
       var v923 = v989[i$$13];
       var v811 = v923.sequence;
-      introspect(JAM.policy.p9) {
+      introspect(JAM.policy.p12) {
         var v651 = v811.charAt(1)
       }
       var v376 = v651 == "a";
@@ -2855,7 +2855,7 @@ function determineBaseFreq() {
         var v990 = this.codons;
         var v925 = v990[i$$13];
         var v814 = v925.sequence;
-        introspect(JAM.policy.p9) {
+        introspect(JAM.policy.p12) {
           var v654 = v814.charAt(1)
         }
         var v375 = v654 == "t";
@@ -2871,7 +2871,7 @@ function determineBaseFreq() {
           var v991 = this.codons;
           var v927 = v991[i$$13];
           var v817 = v927.sequence;
-          introspect(JAM.policy.p9) {
+          introspect(JAM.policy.p12) {
             var v657 = v817.charAt(1)
           }
           var v374 = v657 == "c";
@@ -2890,7 +2890,7 @@ function determineBaseFreq() {
     var v992 = this.codons;
     var v929 = v992[i$$13];
     var v820 = v929.sequence;
-    introspect(JAM.policy.p9) {
+    introspect(JAM.policy.p12) {
       var v660 = v820.charAt(2)
     }
     var v385 = v660 == "g";
@@ -2906,7 +2906,7 @@ function determineBaseFreq() {
       var v993 = this.codons;
       var v931 = v993[i$$13];
       var v823 = v931.sequence;
-      introspect(JAM.policy.p9) {
+      introspect(JAM.policy.p12) {
         var v663 = v823.charAt(2)
       }
       var v384 = v663 == "a";
@@ -2922,7 +2922,7 @@ function determineBaseFreq() {
         var v994 = this.codons;
         var v933 = v994[i$$13];
         var v826 = v933.sequence;
-        introspect(JAM.policy.p9) {
+        introspect(JAM.policy.p12) {
           var v666 = v826.charAt(2)
         }
         var v383 = v666 == "t";
@@ -2938,7 +2938,7 @@ function determineBaseFreq() {
           var v995 = this.codons;
           var v935 = v995[i$$13];
           var v829 = v935.sequence;
-          introspect(JAM.policy.p9) {
+          introspect(JAM.policy.p12) {
             var v669 = v829.charAt(2)
           }
           var v382 = v669 == "c";
@@ -3203,11 +3203,11 @@ v419.setDegenCodon = setDegenCodon;
 var v420 = AminoAcid.prototype;
 v420.getConsensusBase = getConsensusBase;
 document.onload = v5;
-introspect(JAM.policy.p11) {
+introspect(JAM.policy.p9) {
   var v421 = document.getElementById("submitbtn")
 }
 v421.onclick = v6;
-introspect(JAM.policy.p11) {
+introspect(JAM.policy.p9) {
   var v422 = document.getElementById("clearbtn")
 }
 v422.onclick = v7

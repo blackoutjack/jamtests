@@ -1,6 +1,6 @@
 predicate-limit:0
 syntax-only:false
-policy-files:[tests/bench/sms2-pairwise-align-dna/sms2.policy]
+policy-files:[/home/rich/cs/jam/tests/bench/sms2-pairwise-align-dna/sms2.policy]
 sms2-pairwise-align-dna.original.js:9067
 sms2-pairwise-align-dna.normalized.js:14524
 policy.aut:346
@@ -16,8 +16,8 @@ callbacks-added-edges:13938
 callbacks-added-states:3962
 concrete-query-cache:concrete662400808.bin
 symbolic-query-cache:symbolic662400808.bin
-modular.policy.js:834
-policy.js:2752
+modular.policy.js:852
+policy.js:2842
 transactions:344
 checks:1833
 callsites-indirected:339

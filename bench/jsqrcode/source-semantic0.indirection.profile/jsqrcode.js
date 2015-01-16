@@ -490,12 +490,12 @@ function v146(s$$4) {
 }
 function v145(src$$1) {
   function v144() {
-    var canvas_qr$$1 = JAM.call(document.createElement, document, ["canvas"], JAM.policy.p17);
-    var context$$1 = JAM.call(canvas_qr$$1.getContext, canvas_qr$$1, ["2d"], JAM.policy.p17);
-    var canvas_out = JAM.call(document.getElementById, document, ["out-canvas"], JAM.policy.p17);
+    var canvas_qr$$1 = JAM.call(document.createElement, document, ["canvas"], JAM.policy.p15);
+    var context$$1 = JAM.call(canvas_qr$$1.getContext, canvas_qr$$1, ["2d"], JAM.policy.p15);
+    var canvas_out = JAM.call(document.getElementById, document, ["out-canvas"], JAM.policy.p15);
     var v234 = canvas_out != null;
     if (v234) {
-      var outctx = JAM.call(canvas_out.getContext, canvas_out, ["2d"], JAM.policy.p17);
+      var outctx = JAM.call(canvas_out.getContext, canvas_out, ["2d"], JAM.policy.p15);
       JAM.call(outctx.clearRect, outctx, [0, 0, 320, 240], JAM.policy.p20);
       JAM.call(outctx.drawImage, outctx, [image$$7, 0, 0, 320, 240], JAM.policy.p25);
     }
@@ -539,8 +539,8 @@ function v145(src$$1) {
   var v1127 = arguments.length;
   var v245 = v1127 == 0;
   if (v245) {
-    var canvas_qr = JAM.call(document.getElementById, document, ["qr-canvas"], JAM.policy.p17);
-    var context = JAM.call(canvas_qr.getContext, canvas_qr, ["2d"], JAM.policy.p17);
+    var canvas_qr = JAM.call(document.getElementById, document, ["qr-canvas"], JAM.policy.p15);
+    var context = JAM.call(canvas_qr.getContext, canvas_qr, ["2d"], JAM.policy.p15);
     qrcode.width = canvas_qr.width;
     qrcode.height = canvas_qr.height;
     var v241 = qrcode;
@@ -3328,7 +3328,7 @@ function ReedSolomonDecoder(field) {
     var numErrors = errorLocator.Degree;
     var v646 = numErrors == 1;
     if (v646) {
-      var v645 = JAM.call(errorLocator.getCoefficient, errorLocator, [1], JAM.policy.p16);
+      var v645 = JAM.call(errorLocator.getCoefficient, errorLocator, [1], JAM.policy.p18);
       return new Array(v645);
     }
     var result$$3 = new Array(numErrors);
@@ -3441,7 +3441,7 @@ function ReedSolomonDecoder(field) {
       var v1564 = JAM.call(Math.floor, Math, [v2289], JAM.policy.p21);
       v669 = v1563 >= v1564;
     }
-    var sigmaTildeAtZero = JAM.call(t.getCoefficient, t, [0], JAM.policy.p16);
+    var sigmaTildeAtZero = JAM.call(t.getCoefficient, t, [0], JAM.policy.p18);
     var v670 = sigmaTildeAtZero == 0;
     if (v670) {
       throw "ReedSolomonException sigmaTilde(0) was zero";
@@ -3752,7 +3752,7 @@ function GF256Poly(field$$1, coefficients) {
   function v72(a$$2) {
     var v734 = a$$2 == 0;
     if (v734) {
-      return JAM.call(this.getCoefficient, this, [0], JAM.policy.p16);
+      return JAM.call(this.getCoefficient, this, [0], JAM.policy.p18);
     }
     var v735 = this.coefficients;
     var size$$4 = v735.length;
@@ -5587,7 +5587,7 @@ function QRCodeDataBlockReader(blocks, version$$8, numErrorCorrectionCode) {
     var unicodeString = "";
     var v952 = length$$14 > 0;
     do {
-      intData$$3 = JAM.call(getNextBits, null, [13], JAM.policy.p16);
+      intData$$3 = JAM.call(getNextBits, null, [13], JAM.policy.p18);
       var lowerByte = intData$$3 % 192;
       var higherByte = intData$$3 / 192;
       var v950 = higherByte << 8;
@@ -5613,7 +5613,7 @@ function QRCodeDataBlockReader(blocks, version$$8, numErrorCorrectionCode) {
     var output = new Array;
     var v953 = length$$13 > 0;
     do {
-      intData$$2 = JAM.call(this.getNextBits, this, [8], JAM.policy.p16);
+      intData$$2 = JAM.call(this.getNextBits, this, [8], JAM.policy.p18);
       JAM.call(output.push, output, [intData$$2], JAM.policy.p21);
       length$$13--;
       v953 = length$$13 > 0;
@@ -5628,7 +5628,7 @@ function QRCodeDataBlockReader(blocks, version$$8, numErrorCorrectionCode) {
     do {
       var v959 = length$$12 >= 3;
       if (v959) {
-        intData$$1 = JAM.call(this.getNextBits, this, [10], JAM.policy.p16);
+        intData$$1 = JAM.call(this.getNextBits, this, [10], JAM.policy.p18);
         var v954 = intData$$1 < 100;
         if (v954) {
           strData$$1 = strData$$1 + "0";
@@ -5641,7 +5641,7 @@ function QRCodeDataBlockReader(blocks, version$$8, numErrorCorrectionCode) {
       } else {
         var v958 = length$$12 == 2;
         if (v958) {
-          intData$$1 = JAM.call(this.getNextBits, this, [7], JAM.policy.p16);
+          intData$$1 = JAM.call(this.getNextBits, this, [7], JAM.policy.p18);
           var v956 = intData$$1 < 10;
           if (v956) {
             strData$$1 = strData$$1 + "0";
@@ -5650,7 +5650,7 @@ function QRCodeDataBlockReader(blocks, version$$8, numErrorCorrectionCode) {
         } else {
           var v957 = length$$12 == 1;
           if (v957) {
-            intData$$1 = JAM.call(this.getNextBits, this, [4], JAM.policy.p16);
+            intData$$1 = JAM.call(this.getNextBits, this, [4], JAM.policy.p18);
             length$$12 = length$$12 - 1;
           }
         }
@@ -5669,7 +5669,7 @@ function QRCodeDataBlockReader(blocks, version$$8, numErrorCorrectionCode) {
     do {
       var v963 = length$$11 > 1;
       if (v963) {
-        intData = JAM.call(this.getNextBits, this, [11], JAM.policy.p16);
+        intData = JAM.call(this.getNextBits, this, [11], JAM.policy.p18);
         var v961 = intData / 45;
         var firstLetter = JAM.call(Math.floor, Math, [v961], JAM.policy.p21);
         var secondLetter = intData % 45;
@@ -5681,7 +5681,7 @@ function QRCodeDataBlockReader(blocks, version$$8, numErrorCorrectionCode) {
       } else {
         var v962 = length$$11 == 1;
         if (v962) {
-          intData = JAM.call(this.getNextBits, this, [6], JAM.policy.p16);
+          intData = JAM.call(this.getNextBits, this, [6], JAM.policy.p18);
           var v1754 = tableRomanAndFigure[intData];
           strData = strData + v1754;
           length$$11 = length$$11 - 1;
@@ -5718,7 +5718,7 @@ function QRCodeDataBlockReader(blocks, version$$8, numErrorCorrectionCode) {
     if (v967) {
       return 0;
     } else {
-      return JAM.call(this.getNextBits, this, [4], JAM.policy.p16);
+      return JAM.call(this.getNextBits, this, [4], JAM.policy.p18);
     }
     return;
   }
@@ -5978,13 +5978,13 @@ function read(a$$9) {
 }
 function load() {
   qrcode.callback = read;
-  var v1001 = JAM.call(document.getElementById, document, ["imgpath"], JAM.policy.p17);
+  var v1001 = JAM.call(document.getElementById, document, ["imgpath"], JAM.policy.p15);
   var img$$2 = v1001.value;
   JAM.call(qrcode.decode, qrcode, [img$$2], JAM.policy.p21);
   return;
 }
 function passLine(stringPixels) {
-  var coll = JAM.call(stringPixels.split, stringPixels, ["-"], JAM.policy.p17);
+  var coll = JAM.call(stringPixels.split, stringPixels, ["-"], JAM.policy.p15);
   var i$$62 = 0;
   var v1013 = i$$62 < 320;
   for (;v1013;) {
@@ -6029,7 +6029,7 @@ function passLine(stringPixels) {
   return;
 }
 function captureToCanvas() {
-  flash = JAM.call(document.getElementById, document, ["embedflash"], JAM.policy.p17);
+  flash = JAM.call(document.getElementById, document, ["embedflash"], JAM.policy.p15);
   flash.ccCapture();
   qrcode.decode();
   return;
@@ -6154,7 +6154,7 @@ var imageData = null;
 var ii = 0;
 var jj = 0;
 var c = 0;
-var v1057 = JAM.call(document.getElementById, document, ["decode"], JAM.policy.p17);
+var v1057 = JAM.call(document.getElementById, document, ["decode"], JAM.policy.p15);
 JAM.set(v1057, "onclick", load)
 
 JAM.stopProfile('load');

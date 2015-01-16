@@ -671,11 +671,11 @@ function testScript() {
     return false;
   }
   var testNum = 2489.8237;
-  if (JAM.call(testNum.toFixed, testNum, [3], JAM.policy.p11) != 2489.824) {
+  if (JAM.call(testNum.toFixed, testNum, [3], JAM.policy.p10) != 2489.824) {
     alert("Number toFixed() method not supported. See browser compatibility page.");
     return false;
   }
-  if (JAM.call(testNum.toPrecision, testNum, [5], JAM.policy.p11) != 2489.8) {
+  if (JAM.call(testNum.toPrecision, testNum, [5], JAM.policy.p10) != 2489.8) {
     alert("Number toPrecision() method not supported. See browser compatibility page.");
     return false;
   }
@@ -1171,7 +1171,7 @@ function writeSequenceStats(sequence$$16, arrayOfItems$$1) {
     var v254 = outputWindow.document;
     var v1165 = arrayOfItems$$1[i$$10];
     var v1128 = JAM.call(v1165.match, v1165, [/\([^\(]+\)\b/], JAM.policy.p15).toString();
-    JAM.call(v254.write, v254, ["<tr><td>" + JAM.call(v1128.replace, v1128, [/\(|\)/g, ""], JAM.policy.p16) + "</td><td>" + tempNumber + "</td><td>" + JAM.call(percentage.toFixed, percentage, [2], JAM.policy.p11) + "</td></tr>\n"], JAM.policy.p17);
+    JAM.call(v254.write, v254, ["<tr><td>" + JAM.call(v1128.replace, v1128, [/\(|\)/g, ""], JAM.policy.p16) + "</td><td>" + tempNumber + "</td><td>" + JAM.call(percentage.toFixed, percentage, [2], JAM.policy.p10) + "</td></tr>\n"], JAM.policy.p17);
     i$$10++;
     v256 = i$$10 < arrayOfItems$$1.length;
   }
@@ -1483,37 +1483,37 @@ function writeMultiRevTrans(sequenceArray$$3, codonTable$$3) {
     var v345 = outputWindow.document;
     var v1232 = "g" + JAM.call(markG.substring, markG, [0, firstG$$1], JAM.policy.p13) + " ";
     var v1239 = firstG$$1 / markLength;
-    var v1197 = v1232 + JAM.call(v1239.toFixed, v1239, [2], JAM.policy.p11) + "\n" + "a" + JAM.call(markA.substring, markA, [0, firstA$$1], JAM.policy.p13) + " ";
+    var v1197 = v1232 + JAM.call(v1239.toFixed, v1239, [2], JAM.policy.p10) + "\n" + "a" + JAM.call(markA.substring, markA, [0, firstA$$1], JAM.policy.p13) + " ";
     var v1208 = firstA$$1 / markLength;
-    var v1132 = v1197 + JAM.call(v1208.toFixed, v1208, [2], JAM.policy.p11) + "\n" + "T" + JAM.call(markT.substring, markT, [0, firstT$$1], JAM.policy.p13) + " ";
+    var v1132 = v1197 + JAM.call(v1208.toFixed, v1208, [2], JAM.policy.p10) + "\n" + "T" + JAM.call(markT.substring, markT, [0, firstT$$1], JAM.policy.p13) + " ";
     var v1151 = firstT$$1 / markLength;
-    var v866 = v1132 + JAM.call(v1151.toFixed, v1151, [2], JAM.policy.p11) + "\n" + "C" + JAM.call(markC.substring, markC, [0, firstC$$1], JAM.policy.p13) + " ";
+    var v866 = v1132 + JAM.call(v1151.toFixed, v1151, [2], JAM.policy.p10) + "\n" + "C" + JAM.call(markC.substring, markC, [0, firstC$$1], JAM.policy.p13) + " ";
     var v987 = firstC$$1 / markLength;
-    JAM.call(v345.write, v345, [v866 + JAM.call(v987.toFixed, v987, [2], JAM.policy.p11) + "\n"], JAM.policy.p17);
+    JAM.call(v345.write, v345, [v866 + JAM.call(v987.toFixed, v987, [2], JAM.policy.p10) + "\n"], JAM.policy.p17);
     var v347 = outputWindow.document;
     JAM.call(v347.write, v347, ["<b>" + (i$$13 + 1) + "_" + columnSeq + "_" + "second</b>\n"], JAM.policy.p17);
     var v349 = outputWindow.document;
     var v1234 = "g" + JAM.call(markG.substring, markG, [0, secondG$$1], JAM.policy.p13) + " ";
     var v1241 = secondG$$1 / markLength;
-    var v1199 = v1234 + JAM.call(v1241.toFixed, v1241, [2], JAM.policy.p11) + "\n" + "a" + JAM.call(markA.substring, markA, [0, secondA$$1], JAM.policy.p13) + " ";
+    var v1199 = v1234 + JAM.call(v1241.toFixed, v1241, [2], JAM.policy.p10) + "\n" + "a" + JAM.call(markA.substring, markA, [0, secondA$$1], JAM.policy.p13) + " ";
     var v1210 = secondA$$1 / markLength;
-    var v1134 = v1199 + JAM.call(v1210.toFixed, v1210, [2], JAM.policy.p11) + "\n" + "T" + JAM.call(markT.substring, markT, [0, secondT$$1], JAM.policy.p13) + " ";
+    var v1134 = v1199 + JAM.call(v1210.toFixed, v1210, [2], JAM.policy.p10) + "\n" + "T" + JAM.call(markT.substring, markT, [0, secondT$$1], JAM.policy.p13) + " ";
     var v1153 = secondT$$1 / markLength;
-    var v869 = v1134 + JAM.call(v1153.toFixed, v1153, [2], JAM.policy.p11) + "\n" + "C" + JAM.call(markC.substring, markC, [0, secondC$$1], JAM.policy.p13) + " ";
+    var v869 = v1134 + JAM.call(v1153.toFixed, v1153, [2], JAM.policy.p10) + "\n" + "C" + JAM.call(markC.substring, markC, [0, secondC$$1], JAM.policy.p13) + " ";
     var v990 = secondC$$1 / markLength;
-    JAM.call(v349.write, v349, [v869 + JAM.call(v990.toFixed, v990, [2], JAM.policy.p11) + "\n"], JAM.policy.p17);
+    JAM.call(v349.write, v349, [v869 + JAM.call(v990.toFixed, v990, [2], JAM.policy.p10) + "\n"], JAM.policy.p17);
     var v351 = outputWindow.document;
     JAM.call(v351.write, v351, ["<b>" + (i$$13 + 1) + "_" + columnSeq + "_" + "third</b>\n"], JAM.policy.p17);
     var v353 = outputWindow.document;
     var v1236 = "g" + JAM.call(markG.substring, markG, [0, thirdG$$1], JAM.policy.p13) + " ";
     var v1243 = thirdG$$1 / markLength;
-    var v1201 = v1236 + JAM.call(v1243.toFixed, v1243, [2], JAM.policy.p11) + "\n" + "a" + JAM.call(markA.substring, markA, [0, thirdA$$1], JAM.policy.p13) + " ";
+    var v1201 = v1236 + JAM.call(v1243.toFixed, v1243, [2], JAM.policy.p10) + "\n" + "a" + JAM.call(markA.substring, markA, [0, thirdA$$1], JAM.policy.p13) + " ";
     var v1212 = thirdA$$1 / markLength;
-    var v1136 = v1201 + JAM.call(v1212.toFixed, v1212, [2], JAM.policy.p11) + "\n" + "T" + JAM.call(markT.substring, markT, [0, thirdT$$1], JAM.policy.p13) + " ";
+    var v1136 = v1201 + JAM.call(v1212.toFixed, v1212, [2], JAM.policy.p10) + "\n" + "T" + JAM.call(markT.substring, markT, [0, thirdT$$1], JAM.policy.p13) + " ";
     var v1155 = thirdT$$1 / markLength;
-    var v872 = v1136 + JAM.call(v1155.toFixed, v1155, [2], JAM.policy.p11) + "\n" + "C" + JAM.call(markC.substring, markC, [0, thirdC$$1], JAM.policy.p13) + " ";
+    var v872 = v1136 + JAM.call(v1155.toFixed, v1155, [2], JAM.policy.p10) + "\n" + "C" + JAM.call(markC.substring, markC, [0, thirdC$$1], JAM.policy.p13) + " ";
     var v993 = thirdC$$1 / markLength;
-    JAM.call(v353.write, v353, [v872 + JAM.call(v993.toFixed, v993, [2], JAM.policy.p11) + "\n"], JAM.policy.p17);
+    JAM.call(v353.write, v353, [v872 + JAM.call(v993.toFixed, v993, [2], JAM.policy.p10) + "\n"], JAM.policy.p17);
     var v355 = outputWindow.document;
     JAM.call(v355.write, v355, ["\n"], JAM.policy.p9);
     i$$13++;
@@ -1644,57 +1644,57 @@ function determineBaseFreq() {
   var v408 = i$$15 < this.codons.length;
   for (;v408;) {
     var v881 = this.codons[i$$15].sequence;
-    if (JAM.call(v881.charAt, v881, [0], JAM.policy.p11) == "g") {
+    if (JAM.call(v881.charAt, v881, [0], JAM.policy.p10) == "g") {
       this.baseFreqPosOne[0] = this.baseFreqPosOne[0] + this.codons[i$$15].fraction;
     } else {
       var v884 = this.codons[i$$15].sequence;
-      if (JAM.call(v884.charAt, v884, [0], JAM.policy.p11) == "a") {
+      if (JAM.call(v884.charAt, v884, [0], JAM.policy.p10) == "a") {
         this.baseFreqPosOne[1] = this.baseFreqPosOne[1] + this.codons[i$$15].fraction;
       } else {
         var v887 = this.codons[i$$15].sequence;
-        if (JAM.call(v887.charAt, v887, [0], JAM.policy.p11) == "t") {
+        if (JAM.call(v887.charAt, v887, [0], JAM.policy.p10) == "t") {
           this.baseFreqPosOne[2] = this.baseFreqPosOne[2] + this.codons[i$$15].fraction;
         } else {
           var v890 = this.codons[i$$15].sequence;
-          if (JAM.call(v890.charAt, v890, [0], JAM.policy.p11) == "c") {
+          if (JAM.call(v890.charAt, v890, [0], JAM.policy.p10) == "c") {
             this.baseFreqPosOne[3] = this.baseFreqPosOne[3] + this.codons[i$$15].fraction;
           }
         }
       }
     }
     var v893 = this.codons[i$$15].sequence;
-    if (JAM.call(v893.charAt, v893, [1], JAM.policy.p11) == "g") {
+    if (JAM.call(v893.charAt, v893, [1], JAM.policy.p10) == "g") {
       this.baseFreqPosTwo[0] = this.baseFreqPosTwo[0] + this.codons[i$$15].fraction;
     } else {
       var v896 = this.codons[i$$15].sequence;
-      if (JAM.call(v896.charAt, v896, [1], JAM.policy.p11) == "a") {
+      if (JAM.call(v896.charAt, v896, [1], JAM.policy.p10) == "a") {
         this.baseFreqPosTwo[1] = this.baseFreqPosTwo[1] + this.codons[i$$15].fraction;
       } else {
         var v899 = this.codons[i$$15].sequence;
-        if (JAM.call(v899.charAt, v899, [1], JAM.policy.p11) == "t") {
+        if (JAM.call(v899.charAt, v899, [1], JAM.policy.p10) == "t") {
           this.baseFreqPosTwo[2] = this.baseFreqPosTwo[2] + this.codons[i$$15].fraction;
         } else {
           var v902 = this.codons[i$$15].sequence;
-          if (JAM.call(v902.charAt, v902, [1], JAM.policy.p11) == "c") {
+          if (JAM.call(v902.charAt, v902, [1], JAM.policy.p10) == "c") {
             this.baseFreqPosTwo[3] = this.baseFreqPosTwo[3] + this.codons[i$$15].fraction;
           }
         }
       }
     }
     var v905 = this.codons[i$$15].sequence;
-    if (JAM.call(v905.charAt, v905, [2], JAM.policy.p11) == "g") {
+    if (JAM.call(v905.charAt, v905, [2], JAM.policy.p10) == "g") {
       this.baseFreqPosThree[0] = this.baseFreqPosThree[0] + this.codons[i$$15].fraction;
     } else {
       var v908 = this.codons[i$$15].sequence;
-      if (JAM.call(v908.charAt, v908, [2], JAM.policy.p11) == "a") {
+      if (JAM.call(v908.charAt, v908, [2], JAM.policy.p10) == "a") {
         this.baseFreqPosThree[1] = this.baseFreqPosThree[1] + this.codons[i$$15].fraction;
       } else {
         var v911 = this.codons[i$$15].sequence;
-        if (JAM.call(v911.charAt, v911, [2], JAM.policy.p11) == "t") {
+        if (JAM.call(v911.charAt, v911, [2], JAM.policy.p10) == "t") {
           this.baseFreqPosThree[2] = this.baseFreqPosThree[2] + this.codons[i$$15].fraction;
         } else {
           var v914 = this.codons[i$$15].sequence;
-          if (JAM.call(v914.charAt, v914, [2], JAM.policy.p11) == "c") {
+          if (JAM.call(v914.charAt, v914, [2], JAM.policy.p10) == "c") {
             this.baseFreqPosThree[3] = this.baseFreqPosThree[3] + this.codons[i$$15].fraction;
           }
         }

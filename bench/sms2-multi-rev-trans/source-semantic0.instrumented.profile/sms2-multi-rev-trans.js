@@ -1277,7 +1277,7 @@ function testScript() {
     return false;
   }
   var testNum = 2489.8237;
-  introspect(JAM.policy.p11) {
+  introspect(JAM.policy.p10) {
     var v539 = testNum.toFixed(3)
   }
   var v129 = v539 != 2489.824;
@@ -1285,7 +1285,7 @@ function testScript() {
     alert("Number toFixed() method not supported. See browser compatibility page.");
     return false;
   }
-  introspect(JAM.policy.p11) {
+  introspect(JAM.policy.p10) {
     var v540 = testNum.toPrecision(5)
   }
   var v130 = v540 != 2489.8;
@@ -2131,7 +2131,7 @@ function writeSequenceStats(sequence$$16, arrayOfItems$$1) {
     var v1049 = v1090 + "</td><td>";
     var v970 = v1049 + tempNumber;
     var v838 = v970 + "</td><td>";
-    introspect(JAM.policy.p11) {
+    introspect(JAM.policy.p10) {
       var v839 = percentage.toFixed(2)
     }
     var v605 = v838 + v839;
@@ -2748,7 +2748,7 @@ function writeMultiRevTrans(sequenceArray$$3, codonTable$$3) {
     var v1238 = "g" + v1244;
     var v1232 = v1238 + " ";
     var v1239 = firstG$$1 / markLength;
-    introspect(JAM.policy.p11) {
+    introspect(JAM.policy.p10) {
       var v1233 = v1239.toFixed(2)
     }
     var v1229 = v1232 + v1233;
@@ -2760,7 +2760,7 @@ function writeMultiRevTrans(sequenceArray$$3, codonTable$$3) {
     var v1207 = v1217 + v1218;
     var v1197 = v1207 + " ";
     var v1208 = firstA$$1 / markLength;
-    introspect(JAM.policy.p11) {
+    introspect(JAM.policy.p10) {
       var v1198 = v1208.toFixed(2)
     }
     var v1190 = v1197 + v1198;
@@ -2772,7 +2772,7 @@ function writeMultiRevTrans(sequenceArray$$3, codonTable$$3) {
     var v1150 = v1166 + v1167;
     var v1132 = v1150 + " ";
     var v1151 = firstT$$1 / markLength;
-    introspect(JAM.policy.p11) {
+    introspect(JAM.policy.p10) {
       var v1133 = v1151.toFixed(2)
     }
     var v1115 = v1132 + v1133;
@@ -2784,7 +2784,7 @@ function writeMultiRevTrans(sequenceArray$$3, codonTable$$3) {
     var v986 = v1057 + v1058;
     var v866 = v986 + " ";
     var v987 = firstC$$1 / markLength;
-    introspect(JAM.policy.p11) {
+    introspect(JAM.policy.p10) {
       var v867 = v987.toFixed(2)
     }
     var v699 = v866 + v867;
@@ -2809,7 +2809,7 @@ function writeMultiRevTrans(sequenceArray$$3, codonTable$$3) {
     var v1240 = "g" + v1245;
     var v1234 = v1240 + " ";
     var v1241 = secondG$$1 / markLength;
-    introspect(JAM.policy.p11) {
+    introspect(JAM.policy.p10) {
       var v1235 = v1241.toFixed(2)
     }
     var v1230 = v1234 + v1235;
@@ -2821,7 +2821,7 @@ function writeMultiRevTrans(sequenceArray$$3, codonTable$$3) {
     var v1209 = v1219 + v1220;
     var v1199 = v1209 + " ";
     var v1210 = secondA$$1 / markLength;
-    introspect(JAM.policy.p11) {
+    introspect(JAM.policy.p10) {
       var v1200 = v1210.toFixed(2)
     }
     var v1191 = v1199 + v1200;
@@ -2833,7 +2833,7 @@ function writeMultiRevTrans(sequenceArray$$3, codonTable$$3) {
     var v1152 = v1168 + v1169;
     var v1134 = v1152 + " ";
     var v1153 = secondT$$1 / markLength;
-    introspect(JAM.policy.p11) {
+    introspect(JAM.policy.p10) {
       var v1135 = v1153.toFixed(2)
     }
     var v1116 = v1134 + v1135;
@@ -2845,7 +2845,7 @@ function writeMultiRevTrans(sequenceArray$$3, codonTable$$3) {
     var v989 = v1060 + v1061;
     var v869 = v989 + " ";
     var v990 = secondC$$1 / markLength;
-    introspect(JAM.policy.p11) {
+    introspect(JAM.policy.p10) {
       var v870 = v990.toFixed(2)
     }
     var v701 = v869 + v870;
@@ -2870,7 +2870,7 @@ function writeMultiRevTrans(sequenceArray$$3, codonTable$$3) {
     var v1242 = "g" + v1246;
     var v1236 = v1242 + " ";
     var v1243 = thirdG$$1 / markLength;
-    introspect(JAM.policy.p11) {
+    introspect(JAM.policy.p10) {
       var v1237 = v1243.toFixed(2)
     }
     var v1231 = v1236 + v1237;
@@ -2882,7 +2882,7 @@ function writeMultiRevTrans(sequenceArray$$3, codonTable$$3) {
     var v1211 = v1221 + v1222;
     var v1201 = v1211 + " ";
     var v1212 = thirdA$$1 / markLength;
-    introspect(JAM.policy.p11) {
+    introspect(JAM.policy.p10) {
       var v1202 = v1212.toFixed(2)
     }
     var v1192 = v1201 + v1202;
@@ -2894,7 +2894,7 @@ function writeMultiRevTrans(sequenceArray$$3, codonTable$$3) {
     var v1154 = v1170 + v1171;
     var v1136 = v1154 + " ";
     var v1155 = thirdT$$1 / markLength;
-    introspect(JAM.policy.p11) {
+    introspect(JAM.policy.p10) {
       var v1137 = v1155.toFixed(2)
     }
     var v1117 = v1136 + v1137;
@@ -2906,7 +2906,7 @@ function writeMultiRevTrans(sequenceArray$$3, codonTable$$3) {
     var v992 = v1063 + v1064;
     var v872 = v992 + " ";
     var v993 = thirdC$$1 / markLength;
-    introspect(JAM.policy.p11) {
+    introspect(JAM.policy.p10) {
       var v873 = v993.toFixed(2)
     }
     var v703 = v872 + v873;
@@ -3113,7 +3113,7 @@ function determineBaseFreq() {
     var v1066 = this.codons;
     var v996 = v1066[i$$15];
     var v881 = v996.sequence;
-    introspect(JAM.policy.p11) {
+    introspect(JAM.policy.p10) {
       var v717 = v881.charAt(0)
     }
     var v391 = v717 == "g";
@@ -3129,7 +3129,7 @@ function determineBaseFreq() {
       var v1067 = this.codons;
       var v998 = v1067[i$$15];
       var v884 = v998.sequence;
-      introspect(JAM.policy.p11) {
+      introspect(JAM.policy.p10) {
         var v720 = v884.charAt(0)
       }
       var v390 = v720 == "a";
@@ -3145,7 +3145,7 @@ function determineBaseFreq() {
         var v1068 = this.codons;
         var v1000 = v1068[i$$15];
         var v887 = v1000.sequence;
-        introspect(JAM.policy.p11) {
+        introspect(JAM.policy.p10) {
           var v723 = v887.charAt(0)
         }
         var v389 = v723 == "t";
@@ -3161,7 +3161,7 @@ function determineBaseFreq() {
           var v1069 = this.codons;
           var v1002 = v1069[i$$15];
           var v890 = v1002.sequence;
-          introspect(JAM.policy.p11) {
+          introspect(JAM.policy.p10) {
             var v726 = v890.charAt(0)
           }
           var v388 = v726 == "c";
@@ -3180,7 +3180,7 @@ function determineBaseFreq() {
     var v1070 = this.codons;
     var v1004 = v1070[i$$15];
     var v893 = v1004.sequence;
-    introspect(JAM.policy.p11) {
+    introspect(JAM.policy.p10) {
       var v729 = v893.charAt(1)
     }
     var v399 = v729 == "g";
@@ -3196,7 +3196,7 @@ function determineBaseFreq() {
       var v1071 = this.codons;
       var v1006 = v1071[i$$15];
       var v896 = v1006.sequence;
-      introspect(JAM.policy.p11) {
+      introspect(JAM.policy.p10) {
         var v732 = v896.charAt(1)
       }
       var v398 = v732 == "a";
@@ -3212,7 +3212,7 @@ function determineBaseFreq() {
         var v1072 = this.codons;
         var v1008 = v1072[i$$15];
         var v899 = v1008.sequence;
-        introspect(JAM.policy.p11) {
+        introspect(JAM.policy.p10) {
           var v735 = v899.charAt(1)
         }
         var v397 = v735 == "t";
@@ -3228,7 +3228,7 @@ function determineBaseFreq() {
           var v1073 = this.codons;
           var v1010 = v1073[i$$15];
           var v902 = v1010.sequence;
-          introspect(JAM.policy.p11) {
+          introspect(JAM.policy.p10) {
             var v738 = v902.charAt(1)
           }
           var v396 = v738 == "c";
@@ -3247,7 +3247,7 @@ function determineBaseFreq() {
     var v1074 = this.codons;
     var v1012 = v1074[i$$15];
     var v905 = v1012.sequence;
-    introspect(JAM.policy.p11) {
+    introspect(JAM.policy.p10) {
       var v741 = v905.charAt(2)
     }
     var v407 = v741 == "g";
@@ -3263,7 +3263,7 @@ function determineBaseFreq() {
       var v1075 = this.codons;
       var v1014 = v1075[i$$15];
       var v908 = v1014.sequence;
-      introspect(JAM.policy.p11) {
+      introspect(JAM.policy.p10) {
         var v744 = v908.charAt(2)
       }
       var v406 = v744 == "a";
@@ -3279,7 +3279,7 @@ function determineBaseFreq() {
         var v1076 = this.codons;
         var v1016 = v1076[i$$15];
         var v911 = v1016.sequence;
-        introspect(JAM.policy.p11) {
+        introspect(JAM.policy.p10) {
           var v747 = v911.charAt(2)
         }
         var v405 = v747 == "t";
@@ -3295,7 +3295,7 @@ function determineBaseFreq() {
           var v1077 = this.codons;
           var v1018 = v1077[i$$15];
           var v914 = v1018.sequence;
-          introspect(JAM.policy.p11) {
+          introspect(JAM.policy.p10) {
             var v750 = v914.charAt(2)
           }
           var v404 = v750 == "c";

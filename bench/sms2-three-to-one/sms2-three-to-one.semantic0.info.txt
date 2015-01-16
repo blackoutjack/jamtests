@@ -1,6 +1,6 @@
 predicate-limit:0
 syntax-only:false
-policy-files:[tests/bench/sms2-three-to-one/sms2.policy]
+policy-files:[/home/rich/cs/jam/tests/bench/sms2-three-to-one/sms2.policy]
 sms2-three-to-one.original.js:5763
 sms2-three-to-one.normalized.js:8402
 policy.aut:346
@@ -16,8 +16,8 @@ callbacks-added-edges:2550
 callbacks-added-states:2283
 concrete-query-cache:concrete1789032614.bin
 symbolic-query-cache:symbolic1789032614.bin
-modular.policy.js:834
-policy.js:2577
+modular.policy.js:852
+policy.js:2667
 transactions:287
 checks:1259
 callsites-indirected:292

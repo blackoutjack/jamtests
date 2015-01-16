@@ -1,6 +1,6 @@
 predicate-limit:0
 syntax-only:false
-policy-files:[tests/bench/kraken/kraken.mega.policy]
+policy-files:[/home/rich/cs/jam/tests/bench/kraken/kraken.mega.policy]
 kraken.original.js:414
 kraken.normalized.js:9451
 policy.aut:1226
@@ -16,8 +16,8 @@ callbacks-added-edges:1972
 callbacks-added-states:1952
 concrete-query-cache:concrete1683051645.bin
 symbolic-query-cache:symbolic1683051645.bin
-modular.policy.js:3760
-policy.js:8689
+modular.policy.js:3808
+policy.js:8875
 transactions:27
 checks:452
 callsites-indirected:13

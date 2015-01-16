@@ -963,13 +963,13 @@ function testScript() {
     return false;
   }
   var testNum = 2489.8237;
-  var v539 = JAM.call(testNum.toFixed, testNum, [3], JAM.policy.p11);
+  var v539 = JAM.call(testNum.toFixed, testNum, [3], JAM.policy.p10);
   var v129 = v539 != 2489.824;
   if (v129) {
     alert("Number toFixed() method not supported. See browser compatibility page.");
     return false;
   }
-  var v540 = JAM.call(testNum.toPrecision, testNum, [5], JAM.policy.p11);
+  var v540 = JAM.call(testNum.toPrecision, testNum, [5], JAM.policy.p10);
   var v130 = v540 != 2489.8;
   if (v130) {
     alert("Number toPrecision() method not supported. See browser compatibility page.");
@@ -1673,7 +1673,7 @@ function writeSequenceStats(sequence$$16, arrayOfItems$$1) {
     var v1049 = v1090 + "</td><td>";
     var v970 = v1049 + tempNumber;
     var v838 = v970 + "</td><td>";
-    var v839 = JAM.call(percentage.toFixed, percentage, [2], JAM.policy.p11);
+    var v839 = JAM.call(percentage.toFixed, percentage, [2], JAM.policy.p10);
     var v605 = v838 + v839;
     var v255 = v605 + "</td></tr>\n";
     JAM.call(v254.write, v254, [v255], JAM.policy.p17);
@@ -2196,7 +2196,7 @@ function writeMultiRevTrans(sequenceArray$$3, codonTable$$3) {
     var v1238 = "g" + v1244;
     var v1232 = v1238 + " ";
     var v1239 = firstG$$1 / markLength;
-    var v1233 = JAM.call(v1239.toFixed, v1239, [2], JAM.policy.p11);
+    var v1233 = JAM.call(v1239.toFixed, v1239, [2], JAM.policy.p10);
     var v1229 = v1232 + v1233;
     var v1225 = v1229 + "\n";
     var v1217 = v1225 + "a";
@@ -2204,7 +2204,7 @@ function writeMultiRevTrans(sequenceArray$$3, codonTable$$3) {
     var v1207 = v1217 + v1218;
     var v1197 = v1207 + " ";
     var v1208 = firstA$$1 / markLength;
-    var v1198 = JAM.call(v1208.toFixed, v1208, [2], JAM.policy.p11);
+    var v1198 = JAM.call(v1208.toFixed, v1208, [2], JAM.policy.p10);
     var v1190 = v1197 + v1198;
     var v1180 = v1190 + "\n";
     var v1166 = v1180 + "T";
@@ -2212,7 +2212,7 @@ function writeMultiRevTrans(sequenceArray$$3, codonTable$$3) {
     var v1150 = v1166 + v1167;
     var v1132 = v1150 + " ";
     var v1151 = firstT$$1 / markLength;
-    var v1133 = JAM.call(v1151.toFixed, v1151, [2], JAM.policy.p11);
+    var v1133 = JAM.call(v1151.toFixed, v1151, [2], JAM.policy.p10);
     var v1115 = v1132 + v1133;
     var v1095 = v1115 + "\n";
     var v1057 = v1095 + "C";
@@ -2220,7 +2220,7 @@ function writeMultiRevTrans(sequenceArray$$3, codonTable$$3) {
     var v986 = v1057 + v1058;
     var v866 = v986 + " ";
     var v987 = firstC$$1 / markLength;
-    var v867 = JAM.call(v987.toFixed, v987, [2], JAM.policy.p11);
+    var v867 = JAM.call(v987.toFixed, v987, [2], JAM.policy.p10);
     var v699 = v866 + v867;
     var v346 = v699 + "\n";
     JAM.call(v345.write, v345, [v346], JAM.policy.p17);
@@ -2237,7 +2237,7 @@ function writeMultiRevTrans(sequenceArray$$3, codonTable$$3) {
     var v1240 = "g" + v1245;
     var v1234 = v1240 + " ";
     var v1241 = secondG$$1 / markLength;
-    var v1235 = JAM.call(v1241.toFixed, v1241, [2], JAM.policy.p11);
+    var v1235 = JAM.call(v1241.toFixed, v1241, [2], JAM.policy.p10);
     var v1230 = v1234 + v1235;
     var v1226 = v1230 + "\n";
     var v1219 = v1226 + "a";
@@ -2245,7 +2245,7 @@ function writeMultiRevTrans(sequenceArray$$3, codonTable$$3) {
     var v1209 = v1219 + v1220;
     var v1199 = v1209 + " ";
     var v1210 = secondA$$1 / markLength;
-    var v1200 = JAM.call(v1210.toFixed, v1210, [2], JAM.policy.p11);
+    var v1200 = JAM.call(v1210.toFixed, v1210, [2], JAM.policy.p10);
     var v1191 = v1199 + v1200;
     var v1181 = v1191 + "\n";
     var v1168 = v1181 + "T";
@@ -2253,7 +2253,7 @@ function writeMultiRevTrans(sequenceArray$$3, codonTable$$3) {
     var v1152 = v1168 + v1169;
     var v1134 = v1152 + " ";
     var v1153 = secondT$$1 / markLength;
-    var v1135 = JAM.call(v1153.toFixed, v1153, [2], JAM.policy.p11);
+    var v1135 = JAM.call(v1153.toFixed, v1153, [2], JAM.policy.p10);
     var v1116 = v1134 + v1135;
     var v1097 = v1116 + "\n";
     var v1060 = v1097 + "C";
@@ -2261,7 +2261,7 @@ function writeMultiRevTrans(sequenceArray$$3, codonTable$$3) {
     var v989 = v1060 + v1061;
     var v869 = v989 + " ";
     var v990 = secondC$$1 / markLength;
-    var v870 = JAM.call(v990.toFixed, v990, [2], JAM.policy.p11);
+    var v870 = JAM.call(v990.toFixed, v990, [2], JAM.policy.p10);
     var v701 = v869 + v870;
     var v350 = v701 + "\n";
     JAM.call(v349.write, v349, [v350], JAM.policy.p17);
@@ -2278,7 +2278,7 @@ function writeMultiRevTrans(sequenceArray$$3, codonTable$$3) {
     var v1242 = "g" + v1246;
     var v1236 = v1242 + " ";
     var v1243 = thirdG$$1 / markLength;
-    var v1237 = JAM.call(v1243.toFixed, v1243, [2], JAM.policy.p11);
+    var v1237 = JAM.call(v1243.toFixed, v1243, [2], JAM.policy.p10);
     var v1231 = v1236 + v1237;
     var v1227 = v1231 + "\n";
     var v1221 = v1227 + "a";
@@ -2286,7 +2286,7 @@ function writeMultiRevTrans(sequenceArray$$3, codonTable$$3) {
     var v1211 = v1221 + v1222;
     var v1201 = v1211 + " ";
     var v1212 = thirdA$$1 / markLength;
-    var v1202 = JAM.call(v1212.toFixed, v1212, [2], JAM.policy.p11);
+    var v1202 = JAM.call(v1212.toFixed, v1212, [2], JAM.policy.p10);
     var v1192 = v1201 + v1202;
     var v1182 = v1192 + "\n";
     var v1170 = v1182 + "T";
@@ -2294,7 +2294,7 @@ function writeMultiRevTrans(sequenceArray$$3, codonTable$$3) {
     var v1154 = v1170 + v1171;
     var v1136 = v1154 + " ";
     var v1155 = thirdT$$1 / markLength;
-    var v1137 = JAM.call(v1155.toFixed, v1155, [2], JAM.policy.p11);
+    var v1137 = JAM.call(v1155.toFixed, v1155, [2], JAM.policy.p10);
     var v1117 = v1136 + v1137;
     var v1099 = v1117 + "\n";
     var v1063 = v1099 + "C";
@@ -2302,7 +2302,7 @@ function writeMultiRevTrans(sequenceArray$$3, codonTable$$3) {
     var v992 = v1063 + v1064;
     var v872 = v992 + " ";
     var v993 = thirdC$$1 / markLength;
-    var v873 = JAM.call(v993.toFixed, v993, [2], JAM.policy.p11);
+    var v873 = JAM.call(v993.toFixed, v993, [2], JAM.policy.p10);
     var v703 = v872 + v873;
     var v354 = v703 + "\n";
     JAM.call(v353.write, v353, [v354], JAM.policy.p17);
@@ -2491,7 +2491,7 @@ function determineBaseFreq() {
     var v1066 = this.codons;
     var v996 = v1066[i$$15];
     var v881 = v996.sequence;
-    var v717 = JAM.call(v881.charAt, v881, [0], JAM.policy.p11);
+    var v717 = JAM.call(v881.charAt, v881, [0], JAM.policy.p10);
     var v391 = v717 == "g";
     if (v391) {
       var v384 = this.baseFreqPosOne;
@@ -2505,7 +2505,7 @@ function determineBaseFreq() {
       var v1067 = this.codons;
       var v998 = v1067[i$$15];
       var v884 = v998.sequence;
-      var v720 = JAM.call(v884.charAt, v884, [0], JAM.policy.p11);
+      var v720 = JAM.call(v884.charAt, v884, [0], JAM.policy.p10);
       var v390 = v720 == "a";
       if (v390) {
         var v385 = this.baseFreqPosOne;
@@ -2519,7 +2519,7 @@ function determineBaseFreq() {
         var v1068 = this.codons;
         var v1000 = v1068[i$$15];
         var v887 = v1000.sequence;
-        var v723 = JAM.call(v887.charAt, v887, [0], JAM.policy.p11);
+        var v723 = JAM.call(v887.charAt, v887, [0], JAM.policy.p10);
         var v389 = v723 == "t";
         if (v389) {
           var v386 = this.baseFreqPosOne;
@@ -2533,7 +2533,7 @@ function determineBaseFreq() {
           var v1069 = this.codons;
           var v1002 = v1069[i$$15];
           var v890 = v1002.sequence;
-          var v726 = JAM.call(v890.charAt, v890, [0], JAM.policy.p11);
+          var v726 = JAM.call(v890.charAt, v890, [0], JAM.policy.p10);
           var v388 = v726 == "c";
           if (v388) {
             var v387 = this.baseFreqPosOne;
@@ -2550,7 +2550,7 @@ function determineBaseFreq() {
     var v1070 = this.codons;
     var v1004 = v1070[i$$15];
     var v893 = v1004.sequence;
-    var v729 = JAM.call(v893.charAt, v893, [1], JAM.policy.p11);
+    var v729 = JAM.call(v893.charAt, v893, [1], JAM.policy.p10);
     var v399 = v729 == "g";
     if (v399) {
       var v392 = this.baseFreqPosTwo;
@@ -2564,7 +2564,7 @@ function determineBaseFreq() {
       var v1071 = this.codons;
       var v1006 = v1071[i$$15];
       var v896 = v1006.sequence;
-      var v732 = JAM.call(v896.charAt, v896, [1], JAM.policy.p11);
+      var v732 = JAM.call(v896.charAt, v896, [1], JAM.policy.p10);
       var v398 = v732 == "a";
       if (v398) {
         var v393 = this.baseFreqPosTwo;
@@ -2578,7 +2578,7 @@ function determineBaseFreq() {
         var v1072 = this.codons;
         var v1008 = v1072[i$$15];
         var v899 = v1008.sequence;
-        var v735 = JAM.call(v899.charAt, v899, [1], JAM.policy.p11);
+        var v735 = JAM.call(v899.charAt, v899, [1], JAM.policy.p10);
         var v397 = v735 == "t";
         if (v397) {
           var v394 = this.baseFreqPosTwo;
@@ -2592,7 +2592,7 @@ function determineBaseFreq() {
           var v1073 = this.codons;
           var v1010 = v1073[i$$15];
           var v902 = v1010.sequence;
-          var v738 = JAM.call(v902.charAt, v902, [1], JAM.policy.p11);
+          var v738 = JAM.call(v902.charAt, v902, [1], JAM.policy.p10);
           var v396 = v738 == "c";
           if (v396) {
             var v395 = this.baseFreqPosTwo;
@@ -2609,7 +2609,7 @@ function determineBaseFreq() {
     var v1074 = this.codons;
     var v1012 = v1074[i$$15];
     var v905 = v1012.sequence;
-    var v741 = JAM.call(v905.charAt, v905, [2], JAM.policy.p11);
+    var v741 = JAM.call(v905.charAt, v905, [2], JAM.policy.p10);
     var v407 = v741 == "g";
     if (v407) {
       var v400 = this.baseFreqPosThree;
@@ -2623,7 +2623,7 @@ function determineBaseFreq() {
       var v1075 = this.codons;
       var v1014 = v1075[i$$15];
       var v908 = v1014.sequence;
-      var v744 = JAM.call(v908.charAt, v908, [2], JAM.policy.p11);
+      var v744 = JAM.call(v908.charAt, v908, [2], JAM.policy.p10);
       var v406 = v744 == "a";
       if (v406) {
         var v401 = this.baseFreqPosThree;
@@ -2637,7 +2637,7 @@ function determineBaseFreq() {
         var v1076 = this.codons;
         var v1016 = v1076[i$$15];
         var v911 = v1016.sequence;
-        var v747 = JAM.call(v911.charAt, v911, [2], JAM.policy.p11);
+        var v747 = JAM.call(v911.charAt, v911, [2], JAM.policy.p10);
         var v405 = v747 == "t";
         if (v405) {
           var v402 = this.baseFreqPosThree;
@@ -2651,7 +2651,7 @@ function determineBaseFreq() {
           var v1077 = this.codons;
           var v1018 = v1077[i$$15];
           var v914 = v1018.sequence;
-          var v750 = JAM.call(v914.charAt, v914, [2], JAM.policy.p11);
+          var v750 = JAM.call(v914.charAt, v914, [2], JAM.policy.p10);
           var v404 = v750 == "c";
           if (v404) {
             var v403 = this.baseFreqPosThree;

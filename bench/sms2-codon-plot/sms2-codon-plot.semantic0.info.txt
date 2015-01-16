@@ -1,6 +1,6 @@
 predicate-limit:0
 syntax-only:false
-policy-files:[tests/bench/sms2-codon-plot/sms2.policy]
+policy-files:[/home/rich/cs/jam/tests/bench/sms2-codon-plot/sms2.policy]
 sms2-codon-plot.original.js:6262
 sms2-codon-plot.normalized.js:9383
 policy.aut:346
@@ -16,8 +16,8 @@ callbacks-added-edges:3361
 callbacks-added-states:2680
 concrete-query-cache:concrete200075320.bin
 symbolic-query-cache:symbolic200075320.bin
-modular.policy.js:834
-policy.js:2577
+modular.policy.js:852
+policy.js:2667
 transactions:263
 checks:1152
 callsites-indirected:268

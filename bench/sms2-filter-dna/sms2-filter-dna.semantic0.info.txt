@@ -1,6 +1,6 @@
 predicate-limit:0
 syntax-only:false
-policy-files:[tests/bench/sms2-filter-dna/sms2.policy]
+policy-files:[/home/rich/cs/jam/tests/bench/sms2-filter-dna/sms2.policy]
 sms2-filter-dna.original.js:5397
 sms2-filter-dna.normalized.js:8118
 policy.aut:346
@@ -16,8 +16,8 @@ callbacks-added-edges:2486
 callbacks-added-states:2234
 concrete-query-cache:concrete32668264.bin
 symbolic-query-cache:symbolic32668264.bin
-modular.policy.js:834
-policy.js:2577
+modular.policy.js:852
+policy.js:2667
 transactions:254
 checks:1112
 callsites-indirected:259

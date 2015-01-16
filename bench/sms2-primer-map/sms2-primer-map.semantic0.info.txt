@@ -1,6 +1,6 @@
 predicate-limit:0
 syntax-only:false
-policy-files:[tests/bench/sms2-primer-map/sms2.policy]
+policy-files:[/home/rich/cs/jam/tests/bench/sms2-primer-map/sms2.policy]
 sms2-primer-map.original.js:9970
 sms2-primer-map.normalized.js:16314
 policy.aut:346
@@ -16,8 +16,8 @@ callbacks-added-edges:10799
 callbacks-added-states:4385
 concrete-query-cache:concrete1068023826.bin
 symbolic-query-cache:symbolic1068023826.bin
-modular.policy.js:834
-policy.js:2577
+modular.policy.js:852
+policy.js:2667
 transactions:374
 checks:1762
 callsites-indirected:381

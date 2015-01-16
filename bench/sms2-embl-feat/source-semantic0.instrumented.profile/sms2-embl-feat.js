@@ -495,32 +495,32 @@ function complement(dnaSequence) {
 }
 function closeForm() {
   var v43 = outputWindow.document;
-  introspect(JAM.policy.p9) {
+  introspect(JAM.policy.p12) {
     v43.write("</form>");
   }
   return true;
 }
 function closePre() {
   var v44 = outputWindow.document;
-  introspect(JAM.policy.p9) {
+  introspect(JAM.policy.p12) {
     v44.write("</div>");
   }
   var v45 = outputWindow.document;
-  introspect(JAM.policy.p9) {
+  introspect(JAM.policy.p12) {
     v45.write("</pre>\n");
   }
   return;
 }
 function closeTextArea() {
   var v46 = outputWindow.document;
-  introspect(JAM.policy.p9) {
+  introspect(JAM.policy.p12) {
     v46.write("</textarea>");
   }
   return true;
 }
 function closeWindow() {
   var v47 = outputWindow.document;
-  introspect(JAM.policy.p9) {
+  introspect(JAM.policy.p12) {
     v47.write("</body>\n</html>\n");
   }
   outputWindow.status = "Done.";
@@ -853,7 +853,7 @@ function getRandomSequence(components, lengthOut) {
     j$$4++;
     v95 = j$$4 < lengthOut;
   }
-  introspect(JAM.policy.p9) {
+  introspect(JAM.policy.p12) {
     return sequenceArray.join("");
   }
 }
@@ -984,25 +984,25 @@ function moreExpressionCheck(expressionToCheck) {
 }
 function openForm() {
   var v100 = outputWindow.document;
-  introspect(JAM.policy.p9) {
+  introspect(JAM.policy.p12) {
     v100.write('<form action="">\n');
   }
   return true;
 }
 function openPre() {
   var v101 = outputWindow.document;
-  introspect(JAM.policy.p9) {
+  introspect(JAM.policy.p12) {
     v101.write("<pre>");
   }
   var v102 = outputWindow.document;
-  introspect(JAM.policy.p9) {
+  introspect(JAM.policy.p12) {
     v102.write('<div class="pre">');
   }
   return;
 }
 function openTextArea() {
   var v103 = outputWindow.document;
-  introspect(JAM.policy.p9) {
+  introspect(JAM.policy.p12) {
     v103.write('<br /><textarea rows="6" cols="61">\n');
   }
   return true;
@@ -1204,7 +1204,7 @@ function reverse(dnaSequence$$1) {
       tempDnaArray = dnaSequence$$1.match(/./g);
     }
     tempDnaArray = tempDnaArray.reverse();
-    introspect(JAM.policy.p9) {
+    introspect(JAM.policy.p12) {
       dnaSequence$$1 = tempDnaArray.join("");
     }
   }
@@ -1272,7 +1272,7 @@ function testScript() {
     return false;
   }
   var testNum = 2489.8237;
-  introspect(JAM.policy.p10) {
+  introspect(JAM.policy.p9) {
     var v427 = testNum.toFixed(3)
   }
   var v128 = v427 != 2489.824;
@@ -1280,7 +1280,7 @@ function testScript() {
     alert("Number toFixed() method not supported. See browser compatibility page.");
     return false;
   }
-  introspect(JAM.policy.p10) {
+  introspect(JAM.policy.p9) {
     var v428 = testNum.toPrecision(5)
   }
   var v129 = v428 != 2489.8;
@@ -1626,7 +1626,7 @@ function writeGroupNumDnaSetStart(text$$12, tabIn$$3, groupSize$$2, basePerLine$
           v161.write(v162);
         }
         var v163 = outputWindow.document;
-        introspect(JAM.policy.p9) {
+        introspect(JAM.policy.p12) {
           v163.write("\n");
         }
       }
@@ -1652,7 +1652,7 @@ function writeGroupNumDnaSetStart(text$$12, tabIn$$3, groupSize$$2, basePerLine$
             v167.write(v168);
           }
           var v169 = outputWindow.document;
-          introspect(JAM.policy.p9) {
+          introspect(JAM.policy.p12) {
             v169.write("\n");
           }
         }
@@ -1678,7 +1678,7 @@ function writeGroupNumDnaSetStart(text$$12, tabIn$$3, groupSize$$2, basePerLine$
               v175.write(v176);
             }
             var v177 = outputWindow.document;
-            introspect(JAM.policy.p9) {
+            introspect(JAM.policy.p12) {
               v177.write("\n");
             }
           }
@@ -1935,7 +1935,7 @@ function writeRestrictionSites(sequence$$15, arrayOfItems, dnaConformation) {
     upperLimit = upperLimit + shiftValue;
   }
   var v224 = outputWindow.document;
-  introspect(JAM.policy.p9) {
+  introspect(JAM.policy.p12) {
     v224.write('<table border="1" width="100%" cellspacing="0" cellpadding="2"><tbody>\n');
   }
   var v225 = outputWindow.document;
@@ -2051,7 +2051,7 @@ function writeRestrictionSites(sequence$$15, arrayOfItems, dnaConformation) {
     v242 = i$$9 < v485;
   }
   var v243 = outputWindow.document;
-  introspect(JAM.policy.p9) {
+  introspect(JAM.policy.p12) {
     v243.write("</tbody></table>\n");
   }
   return true;
@@ -2059,7 +2059,7 @@ function writeRestrictionSites(sequence$$15, arrayOfItems, dnaConformation) {
 function writeSequenceStats(sequence$$16, arrayOfItems$$1) {
   var originalLength = sequence$$16.length;
   var v244 = outputWindow.document;
-  introspect(JAM.policy.p9) {
+  introspect(JAM.policy.p12) {
     v244.write('<table border="1" width="100%" cellspacing="0" cellpadding="2"><tbody>\n');
   }
   var v245 = outputWindow.document;
@@ -2126,7 +2126,7 @@ function writeSequenceStats(sequence$$16, arrayOfItems$$1) {
     var v702 = v722 + "</td><td>";
     var v662 = v702 + tempNumber;
     var v595 = v662 + "</td><td>";
-    introspect(JAM.policy.p10) {
+    introspect(JAM.policy.p9) {
       var v596 = percentage.toFixed(2)
     }
     var v493 = v595 + v596;
@@ -2139,7 +2139,7 @@ function writeSequenceStats(sequence$$16, arrayOfItems$$1) {
     v255 = i$$10 < v494;
   }
   var v256 = outputWindow.document;
-  introspect(JAM.policy.p9) {
+  introspect(JAM.policy.p12) {
     v256.write("</tbody></table>\n");
   }
   return true;
@@ -2384,7 +2384,7 @@ function prepareFeatures(arrayOfFeatures, dnaSequence$$4, outputType$$1) {
     printFeature(positionNoSpace, dnaSequence$$4, outputType$$1);
     featureFound = true;
     var v290 = outputWindow.document;
-    introspect(JAM.policy.p9) {
+    introspect(JAM.policy.p12) {
       v290.write("\n\n");
     }
     i$$12++;
@@ -2394,7 +2394,7 @@ function prepareFeatures(arrayOfFeatures, dnaSequence$$4, outputType$$1) {
   var v293 = featureFound == false;
   if (v293) {
     var v292 = outputWindow.document;
-    introspect(JAM.policy.p9) {
+    introspect(JAM.policy.p12) {
       v292.write("There were no features found or there was a problem reading the feature information.");
     }
   }
@@ -2430,7 +2430,7 @@ function printFeature(featurePos, dnaSequence$$5, outputType$$2) {
   var v312 = v515;
   if (v312) {
     var v294 = outputWindow.document;
-    introspect(JAM.policy.p9) {
+    introspect(JAM.policy.p12) {
       v294.write("This feature specifies a sequence that cannot be represented:\n");
     }
     var v295 = outputWindow.document;
@@ -2500,7 +2500,7 @@ function printFeature(featurePos, dnaSequence$$5, outputType$$2) {
       var v301 = v520;
       if (v301) {
         var v300 = outputWindow.document;
-        introspect(JAM.policy.p9) {
+        introspect(JAM.policy.p12) {
           v300.write("There was a problem with this feature (one of the range values was missing).");
         }
         return true;
@@ -2511,7 +2511,7 @@ function printFeature(featurePos, dnaSequence$$5, outputType$$2) {
       var v304 = realStart > realStop;
       if (v304) {
         var v303 = outputWindow.document;
-        introspect(JAM.policy.p9) {
+        introspect(JAM.policy.p12) {
           v303.write("There was a problem with this feature (the end position was before the start position).");
         }
         return true;
@@ -2526,7 +2526,7 @@ function printFeature(featurePos, dnaSequence$$5, outputType$$2) {
       var v310 = v521;
       if (v310) {
         var v305 = outputWindow.document;
-        introspect(JAM.policy.p9) {
+        introspect(JAM.policy.p12) {
           v305.write("The entire EMBL file was not processed, so this feature cannot be properly shown.");
         }
         return true;
@@ -2571,7 +2571,7 @@ function writeFeature() {
   if (v317) {
     var v313 = outputWindow.document;
     var v709 = this.fragments;
-    introspect(JAM.policy.p9) {
+    introspect(JAM.policy.p12) {
       var v674 = v709.join("")
     }
     var v617 = complement(v674);
@@ -2583,7 +2583,7 @@ function writeFeature() {
   } else {
     var v315 = outputWindow.document;
     var v618 = this.fragments;
-    introspect(JAM.policy.p9) {
+    introspect(JAM.policy.p12) {
       var v527 = v618.join("")
     }
     var v316 = addReturns(v527);
@@ -2613,11 +2613,11 @@ v319.writeFeature = writeFeature;
 var v320 = Feature.prototype;
 v320.addFragment = addFragment;
 document.onload = v2;
-introspect(JAM.policy.p9) {
+introspect(JAM.policy.p12) {
   var v321 = document.getElementById("submitbtn")
 }
 v321.onclick = v3;
-introspect(JAM.policy.p9) {
+introspect(JAM.policy.p12) {
   var v322 = document.getElementById("clearbtn")
 }
 v322.onclick = v4

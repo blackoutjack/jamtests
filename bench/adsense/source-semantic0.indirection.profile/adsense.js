@@ -3,15 +3,15 @@ JAM.startProfile('load');
 function v254() {
   function v253() {
     var a$$530 = v$$1;
-    var b$$402 = JAM.call(a$$530.createElement, a$$530, ["script"]);
+    var b$$402 = JAM.call(a$$530.createElement, a$$530, ["script"], JAM.policy.p3);
     b$$402.async = !0;
     b$$402.type = "text/javascript";
     var v5039 = di();
     b$$402.src = v5039;
-    var v255 = JAM.call(JAM.get(a$$530, "getElementsByTagName", JAM.policy.p6), a$$530, ["script"]);
+    var v255 = JAM.call(a$$530.getElementsByTagName, a$$530, ["script"], JAM.policy.p3);
     a$$530 = v255[0];
     var v256 = a$$530.parentNode;
-    JAM.call(v256.insertBefore, v256, [b$$402, a$$530]);
+    JAM.call(v256.insertBefore, v256, [b$$402, a$$530], JAM.policy.p3);
     return;
   }
   function v252(a$$527) {
@@ -24,13 +24,13 @@ function v254() {
       }
       var v2089 = v3408;
       if (v2089) {
-        var v4196 = Math.max(a$$528, -30);
-        a$$528 = Math.min(v4196, 30);
+        var v4196 = JAM.call(Math.max, Math, [a$$528, -30], JAM.policy.p3);
+        a$$528 = JAM.call(Math.min, Math, [v4196, 30], JAM.policy.p3);
         var v4646 = a$$528 + 30;
         var v4197 = 546 * v4646;
-        a$$528 = JAM.call(Math.round, Math, [v4197]);
+        a$$528 = JAM.call(Math.round, Math, [v4197], JAM.policy.p3);
         var v4198 = a$$528 / 256;
-        var v3409 = JAM.call(Math.floor, Math, [v4198]);
+        var v3409 = JAM.call(Math.floor, Math, [v4198], JAM.policy.p3);
         var v3410 = a$$528 % 256;
         v257 = [v3409, v3410];
       } else {
@@ -44,16 +44,16 @@ function v254() {
       var v2090 = b$$401(v3411);
       var v3412 = a$$527.y;
       var v2091 = b$$401(v3412);
-      var v258 = v2090.concat(v2091);
+      var v258 = JAM.call(v2090.concat, v2090, [v2091], JAM.policy.p3);
       var v2092 = a$$527.z;
       var v259 = b$$401(v2092);
-      c$$270 = v258.concat(v259);
+      c$$270 = JAM.call(v258.concat, v258, [v259], JAM.policy.p3);
     } else {
       a$$527 = 0;
       var v261 = 3 > a$$527;
       for (;v261;) {
         var v260 = [128, 0];
-        c$$270 = c$$270.concat(v260);
+        c$$270 = JAM.call(c$$270.concat, c$$270, [v260], JAM.policy.p3);
         ++a$$527;
         v261 = 3 > a$$527;
       }
@@ -72,7 +72,7 @@ function v254() {
       if (v2093) {
         a$$526 = a$$526 + 360;
         var v4200 = a$$526 / 256;
-        var v3414 = JAM.call(Math.floor, Math, [v4200]);
+        var v3414 = JAM.call(Math.floor, Math, [v4200], JAM.policy.p3);
         var v3415 = a$$526 % 256;
         v262 = [v3414, v3415];
       } else {
@@ -86,16 +86,16 @@ function v254() {
       var v2094 = b$$400(v3416);
       var v3417 = a$$525.gamma;
       var v2095 = b$$400(v3417);
-      var v263 = v2094.concat(v2095);
+      var v263 = JAM.call(v2094.concat, v2094, [v2095], JAM.policy.p3);
       var v2096 = a$$525.alpha;
       var v264 = b$$400(v2096);
-      c$$269 = v263.concat(v264);
+      c$$269 = JAM.call(v263.concat, v263, [v264], JAM.policy.p3);
     } else {
       a$$525 = 0;
       var v266 = 3 > a$$525;
       for (;v266;) {
         var v265 = [128, 0];
-        c$$269 = c$$269.concat(v265);
+        c$$269 = JAM.call(c$$269.concat, c$$269, [v265], JAM.policy.p3);
         ++a$$525;
         v266 = 3 > a$$525;
       }
@@ -106,16 +106,16 @@ function v254() {
     var v3418 = this.t;
     var v2097 = v3418.j;
     var v267 = v2097.deviceOrientation;
-    var a$$524 = JAM.call(this.Eb, this, [v267]);
+    var a$$524 = JAM.call(this.Eb, this, [v267], JAM.policy.p3);
     var v3419 = this.t;
     var v2098 = v3419.j;
     var v268 = v2098.deviceAccelerationWithoutGravity;
-    var b$$399 = JAM.call(this.Ea, this, [v268]);
+    var b$$399 = JAM.call(this.Ea, this, [v268], JAM.policy.p3);
     var v3420 = this.t;
     var v2099 = v3420.j;
     var v269 = v2099.deviceAccelerationWithGravity;
-    var c$$268 = JAM.call(this.Ea, this, [v269]);
-    a$$524 = a$$524.concat(b$$399, c$$268);
+    var c$$268 = JAM.call(this.Ea, this, [v269], JAM.policy.p3);
+    a$$524 = JAM.call(a$$524.concat, a$$524, [b$$399, c$$268], JAM.policy.p3);
     var JSCompiler_inline_result$$53;
     var a$$inline_399 = a$$524;
     var v2100 = ca$$1(a$$inline_399);
@@ -131,10 +131,10 @@ function v254() {
       var v271 = 65 > a$$inline_643;
       for (;v271;) {
         var v2101 = Qh;
-        var v5040 = "ABCDEFGHIJKLMNOPQRSTUVWXYZabcdefghijklmnopqrstuvwxyz0123456789+/=".charAt(a$$inline_643);
+        var v5040 = JAM.call("ABCDEFGHIJKLMNOPQRSTUVWXYZabcdefghijklmnopqrstuvwxyz0123456789+/=".charAt, "ABCDEFGHIJKLMNOPQRSTUVWXYZabcdefghijklmnopqrstuvwxyz0123456789+/=", [a$$inline_643], JAM.policy.p3);
         v2101[a$$inline_643] = v5040;
         var v2102 = Rh;
-        var v5041 = "ABCDEFGHIJKLMNOPQRSTUVWXYZabcdefghijklmnopqrstuvwxyz0123456789-_.".charAt(a$$inline_643);
+        var v5041 = JAM.call("ABCDEFGHIJKLMNOPQRSTUVWXYZabcdefghijklmnopqrstuvwxyz0123456789-_.".charAt, "ABCDEFGHIJKLMNOPQRSTUVWXYZabcdefghijklmnopqrstuvwxyz0123456789-_.", [a$$inline_643], JAM.policy.p3);
         v2102[a$$inline_643] = v5041;
         a$$inline_643++;
         v271 = 65 > a$$inline_643;
@@ -153,18 +153,14 @@ function v254() {
     var v2104 = a$$inline_399.length;
     var v288 = e$$inline_403 < v2104;
     for (;v288;) {
-      introspect(JAM.policy.p4) {
-        var f$$inline_404 = a$$inline_399[e$$inline_403]
-      }
+      var f$$inline_404 = a$$inline_399[e$$inline_403];
       var v274 = e$$inline_403 + 1;
       var v275 = a$$inline_399.length;
       var g$$inline_405 = v274 < v275;
       var v276;
       if (g$$inline_405) {
         var v2105 = e$$inline_403 + 1;
-        introspect(JAM.policy.p4) {
-          v276 = a$$inline_399[v2105];
-        }
+        v276 = a$$inline_399[v2105];
       } else {
         v276 = 0;
       }
@@ -175,9 +171,7 @@ function v254() {
       var v279;
       if (k$$inline_407) {
         var v2106 = e$$inline_403 + 2;
-        introspect(JAM.policy.p4) {
-          v279 = a$$inline_399[v2106];
-        }
+        v279 = a$$inline_399[v2106];
       } else {
         v279 = 0;
       }
@@ -200,24 +194,16 @@ function v254() {
           h$$inline_406 = 64;
         }
       }
-      introspect(JAM.policy.p4) {
-        var v284 = c$$inline_401[z$$inline_409]
-      }
-      introspect(JAM.policy.p4) {
-        var v285 = c$$inline_401[f$$inline_404]
-      }
-      introspect(JAM.policy.p4) {
-        var v286 = c$$inline_401[h$$inline_406]
-      }
-      introspect(JAM.policy.p4) {
-        var v287 = c$$inline_401[l$$inline_408]
-      }
-      JAM.call(d$$inline_402.push, d$$inline_402, [v284, v285, v286, v287]);
+      var v284 = c$$inline_401[z$$inline_409];
+      var v285 = c$$inline_401[f$$inline_404];
+      var v286 = c$$inline_401[h$$inline_406];
+      var v287 = c$$inline_401[l$$inline_408];
+      JAM.call(d$$inline_402.push, d$$inline_402, [v284, v285, v286, v287], JAM.policy.p3);
       e$$inline_403 = e$$inline_403 + 3;
       var v2110 = a$$inline_399.length;
       v288 = e$$inline_403 < v2110;
     }
-    JSCompiler_inline_result$$53 = d$$inline_402.join("");
+    JSCompiler_inline_result$$53 = JAM.call(d$$inline_402.join, d$$inline_402, [""], JAM.policy.p3);
     return JSCompiler_inline_result$$53;
   }
   function v249() {
@@ -248,14 +234,14 @@ function v254() {
   function v248() {
     var v290 = this.j;
     var v2114 = new Date;
-    var v5042 = v2114.getTime();
+    var v5042 = JAM.call(v2114.getTime, v2114, [], JAM.policy.p3);
     v290.stopTimeStamp = v5042;
     return;
   }
   function v247() {
     var v291 = this.j;
     var v2115 = new Date;
-    var v5043 = v2115.getTime();
+    var v5043 = JAM.call(v2115.getTime, v2115, [], JAM.policy.p3);
     v291.startTimeStamp = v5043;
     return;
   }
@@ -298,10 +284,10 @@ function v254() {
     return v293;
   }
   function v244() {
-    var v294 = this.O();
+    var v294 = JAM.call(this.O, this, [], JAM.policy.p3);
     var v2120 = !v294;
     if (v2120) {
-      v294 = this.P();
+      v294 = JAM.call(this.P, this, [], JAM.policy.p3);
     }
     return v294;
   }
@@ -381,13 +367,13 @@ function v254() {
   function v232() {
     try {
       var a$$501 = {msg_type:"i-prepare"};
-      JAM.call(this.Bc, this, [a$$501]);
+      JAM.call(this.Bc, this, [a$$501], JAM.policy.p3);
       var v2124 = this.s;
       var v305 = v2124.contentWindow;
       var v3434 = void 0;
       var v2125 = new hg(v3434);
-      var v306 = JAM.call(v2125.serialize, v2125, [a$$501]);
-      v305.postMessage(v306, "http://doubleclick");
+      var v306 = JAM.call(v2125.serialize, v2125, [a$$501], JAM.policy.p3);
+      JAM.call(v305.postMessage, v305, [v306, "http://doubleclick"], JAM.policy.p3);
       return!0;
     } catch (b$$380) {
     }
@@ -395,7 +381,7 @@ function v254() {
   }
   function v231(a$$500) {
     var v307 = this.G;
-    var v5044 = a$$500.getAttribute("href");
+    var v5044 = JAM.call(a$$500.getAttribute, a$$500, ["href"], JAM.policy.p3);
     v307.iclk_url = v5044;
     var JSCompiler_temp_const$$57 = this.G;
     var JSCompiler_inline_result$$58;
@@ -407,27 +393,27 @@ function v254() {
     var v310 = v2126;
     if (v310) {
       var v308 = a$$inline_379.innerText;
-      a$$inline_379 = v308.replace(/(\r\n|\r|\n)/g, "\n");
+      a$$inline_379 = JAM.call(v308.replace, v308, [/(\r\n|\r|\n)/g, "\n"], JAM.policy.p3);
     } else {
       var b$$inline_380 = [];
       var v309 = !0;
       ud(a$$inline_379, b$$inline_380, v309);
-      a$$inline_379 = b$$inline_380.join("");
+      a$$inline_379 = JAM.call(b$$inline_380.join, b$$inline_380, [""], JAM.policy.p3);
     }
-    var v311 = a$$inline_379.replace(/ \xAD /g, " ");
-    a$$inline_379 = v311.replace(/\xAD/g, "");
-    a$$inline_379 = a$$inline_379.replace(/\u200B/g, "");
+    var v311 = JAM.call(a$$inline_379.replace, a$$inline_379, [/ \xAD /g, " "], JAM.policy.p3);
+    a$$inline_379 = JAM.call(v311.replace, v311, [/\xAD/g, ""], JAM.policy.p3);
+    a$$inline_379 = JAM.call(a$$inline_379.replace, a$$inline_379, [/\u200B/g, ""], JAM.policy.p3);
     var v2127 = !Xc;
     if (v2127) {
-      a$$inline_379 = a$$inline_379.replace(/ +/g, " ");
+      a$$inline_379 = JAM.call(a$$inline_379.replace, a$$inline_379, [/ +/g, " "], JAM.policy.p3);
     }
     var v312 = " " != a$$inline_379;
     if (v312) {
-      a$$inline_379 = a$$inline_379.replace(/^\s*/, "");
+      a$$inline_379 = JAM.call(a$$inline_379.replace, a$$inline_379, [/^\s*/, ""], JAM.policy.p3);
     }
     JSCompiler_inline_result$$58 = a$$inline_379;
     JSCompiler_temp_const$$57.iclk_ltx = JSCompiler_inline_result$$58;
-    var v313 = a$$500 = a$$500.getAttribute("title");
+    var v313 = a$$500 = JAM.call(a$$500.getAttribute, a$$500, ["title"], JAM.policy.p3);
     if (v313) {
       var v2128 = this.G;
       v2128.iclk_ltl = a$$500;
@@ -436,17 +422,17 @@ function v254() {
   }
   function v230() {
     var v2129 = this.Va;
-    var v314 = JAM.call(r$$2, null, [v2129, this]);
+    var v314 = JAM.call(r$$2, null, [v2129, this], JAM.policy.p3);
     var a$$499 = xe("ias::nav", v314);
     var v315 = this.i;
-    var v5045 = v315.setTimeout(a$$499, 1E3);
+    var v5045 = JAM.call(v315.setTimeout, v315, [a$$499, 1E3], JAM.policy.p3);
     this.Jc = v5045;
     return;
   }
   function v229(a$$498) {
-    var v316 = this.T();
+    var v316 = JAM.call(this.T, this, [], JAM.policy.p3);
     if (v316) {
-      a$$498.preventDefault();
+      JAM.call(a$$498.preventDefault, a$$498, [], JAM.policy.p3);
       return!1;
     }
     var v2130 = a$$498;
@@ -471,20 +457,20 @@ function v254() {
       return!0;
     }
     var v320 = a$$498.target;
-    JAM.call(this.uc, this, [v320]);
-    var v2133 = this.wc();
+    JAM.call(this.uc, this, [v320], JAM.policy.p3);
+    var v2133 = JAM.call(this.wc, this, [], JAM.policy.p3);
     var v321 = !v2133;
     if (v321) {
       return!0;
     }
-    this.qc();
-    a$$498.preventDefault();
+    JAM.call(this.qc, this, [], JAM.policy.p3);
+    JAM.call(a$$498.preventDefault, a$$498, [], JAM.policy.p3);
     return!1;
   }
   function v228() {
     var v2134 = this.i;
     var v322 = v2134.location;
-    var v5046 = this.T();
+    var v5046 = JAM.call(this.T, this, [], JAM.policy.p3);
     v322.href = v5046;
     return;
   }
@@ -495,8 +481,8 @@ function v254() {
       this.Z = !0;
       var v4211 = this.i;
       var v4212 = this.Jc;
-      v4211.clearTimeout(v4212);
-      this.Va();
+      JAM.call(v4211.clearTimeout, v4211, [v4212], JAM.policy.p3);
+      JAM.call(this.Va, this, [], JAM.policy.p3);
     }
     return;
   }
@@ -507,17 +493,17 @@ function v254() {
       this.Z = !0;
       var v324 = this.i;
       var v325 = this.Jc;
-      v324.clearTimeout(v325);
+      JAM.call(v324.clearTimeout, v324, [v325], JAM.policy.p3);
       var v326 = this.Zb;
-      var v327 = this.T();
-      JAM.call(v326.A, v326, [v327]);
+      var v327 = JAM.call(this.T, this, [], JAM.policy.p3);
+      JAM.call(v326.A, v326, [v327], JAM.policy.p3);
       var a$$497 = {msg_type:"i-view"};
       var v2137 = this.s;
       var v328 = v2137.contentWindow;
       var v3436 = void 0;
       var v2138 = new hg(v3436);
-      var v329 = JAM.call(v2138.serialize, v2138, [a$$497]);
-      v328.postMessage(v329, "http://doubleclick");
+      var v329 = JAM.call(v2138.serialize, v2138, [a$$497], JAM.policy.p3);
+      JAM.call(v328.postMessage, v328, [v329, "http://doubleclick"], JAM.policy.p3);
     }
     return;
   }
@@ -527,10 +513,10 @@ function v254() {
     if (v333) {
       this.H = !0;
       var v2140 = this.dc;
-      var v331 = JAM.call(r$$2, null, [v2140, this]);
+      var v331 = JAM.call(r$$2, null, [v2140, this], JAM.policy.p3);
       var a$$496 = ye("ias::chdlr", v331);
       var v332 = this.Zb;
-      JAM.call(v332.mb, v332, [a$$496]);
+      JAM.call(v332.mb, v332, [a$$496], JAM.policy.p3);
     }
     return;
   }
@@ -550,7 +536,7 @@ function v254() {
     return;
   }
   function v222(a$$493) {
-    var b$$377 = this.u();
+    var b$$377 = JAM.call(this.u, this, [], JAM.policy.p3);
     if (b$$377) {
       var v2143 = b$$377.style;
       var v3437;
@@ -564,7 +550,7 @@ function v254() {
     return;
   }
   function v221() {
-    var a$$492 = this.ba();
+    var a$$492 = JAM.call(this.ba, this, [], JAM.policy.p3);
     var v2144 = a$$492;
     if (v2144) {
       var v4213 = a$$492.length;
@@ -575,17 +561,13 @@ function v254() {
     if (v343) {
       var v2145 = a$$492.length;
       var v335 = v2145 - 1;
-      introspect(JAM.policy.p4) {
-        var b$$376 = a$$492[v335]
-      }
+      var b$$376 = a$$492[v335];
       if (b$$376) {
         var c$$251 = 0;
         var v2146 = a$$492.length;
         var v337 = c$$251 < v2146;
         for (;v337;) {
-          introspect(JAM.policy.p4) {
-            var v336 = a$$492[c$$251]
-          }
+          var v336 = a$$492[c$$251];
           Q$$1(v336, mh);
           ++c$$251;
           var v2147 = a$$492.length;
@@ -602,7 +584,7 @@ function v254() {
         Q$$1(v341, nh);
         Q$$1(b$$376, lh);
         var v342 = !1;
-        JAM.call(this.N, this, [v342]);
+        JAM.call(this.N, this, [v342], JAM.policy.p3);
       }
     }
     return;
@@ -612,20 +594,20 @@ function v254() {
     var v2149 = v3439.document;
     var v344 = v2149.body;
     var v345 = this.kc;
-    v344.removeChild(v345);
+    JAM.call(v344.removeChild, v344, [v345], JAM.policy.p3);
     var v3440 = this.i;
     var v2150 = v3440.document;
     var v346 = v2150.body;
     var v347 = this.ic;
-    v346.removeChild(v347);
+    JAM.call(v346.removeChild, v346, [v347], JAM.policy.p3);
     return;
   }
   function v219(a$$491) {
     var v348 = this.ea;
-    JAM.call(v348.push, v348, [a$$491]);
+    JAM.call(v348.push, v348, [a$$491], JAM.policy.p3);
     var v349 = this.rc;
     y$$31(a$$491, "click", v349);
-    JAM.call(a$$491.setAttribute, a$$491, ["data-google-reveal-ad", "true"]);
+    JAM.call(a$$491.setAttribute, a$$491, ["data-google-reveal-ad", "true"], JAM.policy.p3);
     return;
   }
   function v218() {
@@ -636,12 +618,10 @@ function v254() {
     var v2152 = a$$490.length;
     var v352 = b$$375 < v2152;
     for (;v352;) {
-      introspect(JAM.policy.p4) {
-        var c$$250 = a$$490[b$$375]
-      }
-      var v351 = JAM.call(this.rb, this, [c$$250]);
+      var c$$250 = a$$490[b$$375];
+      var v351 = JAM.call(this.rb, this, [c$$250], JAM.policy.p3);
       if (v351) {
-        JAM.call(this.Xb, this, [c$$250]);
+        JAM.call(this.Xb, this, [c$$250], JAM.policy.p3);
       }
       ++b$$375;
       var v2153 = a$$490.length;
@@ -656,12 +636,10 @@ function v254() {
     var v355 = a$$489 < v2154;
     for (;v355;) {
       var v353 = this.ea;
-      introspect(JAM.policy.p4) {
-        var b$$374 = v353[a$$489]
-      }
+      var b$$374 = v353[a$$489];
       var v354 = this.rc;
       A$$1(b$$374, "click", v354);
-      b$$374.removeAttribute("data-google-reveal-ad");
+      JAM.call(b$$374.removeAttribute, b$$374, ["data-google-reveal-ad"], JAM.policy.p3);
       ++a$$489;
       var v3442 = this.ea;
       var v2155 = v3442.length;
@@ -671,35 +649,35 @@ function v254() {
     return;
   }
   function v216(a$$488) {
-    var v5047 = JAM.call(this.Ba, this, [a$$488, "prerender"]);
+    var v5047 = JAM.call(this.Ba, this, [a$$488, "prerender"], JAM.policy.p3);
     this.kc = v5047;
-    var v5048 = JAM.call(this.Ba, this, [a$$488, "prefetch"]);
+    var v5048 = JAM.call(this.Ba, this, [a$$488, "prefetch"], JAM.policy.p3);
     this.ic = v5048;
     var v3443 = this.i;
     var v2156 = v3443.document;
     var v356 = v2156.body;
     var v357 = this.kc;
-    JAM.call(v356.appendChild, v356, [v357]);
+    JAM.call(v356.appendChild, v356, [v357], JAM.policy.p3);
     var v3444 = this.i;
     var v2157 = v3444.document;
     var v358 = v2157.body;
     var v359 = this.ic;
-    JAM.call(v358.appendChild, v358, [v359]);
+    JAM.call(v358.appendChild, v358, [v359], JAM.policy.p3);
     return;
   }
   function v215(a$$487, b$$373) {
     var v2158 = this.i;
     var v360 = v2158.document;
-    var c$$249 = JAM.call(v360.createElement, v360, ["link"]);
-    JAM.call(c$$249.setAttribute, c$$249, ["rel", b$$373]);
-    JAM.call(c$$249.setAttribute, c$$249, ["href", a$$487]);
+    var c$$249 = JAM.call(v360.createElement, v360, ["link"], JAM.policy.p3);
+    JAM.call(c$$249.setAttribute, c$$249, ["rel", b$$373], JAM.policy.p3);
+    JAM.call(c$$249.setAttribute, c$$249, ["href", a$$487], JAM.policy.p3);
     return c$$249;
   }
   function v214() {
     var v361 = !1;
-    JAM.call(this.N, this, [v361]);
-    this.xb();
-    this.sc();
+    JAM.call(this.N, this, [v361], JAM.policy.p3);
+    JAM.call(this.xb, this, [], JAM.policy.p3);
+    JAM.call(this.sc, this, [], JAM.policy.p3);
     return;
   }
   function v213(a$$486) {
@@ -746,13 +724,13 @@ function v254() {
   }
   function v212(a$$485) {
     var v366 = !0;
-    JAM.call(this.N, this, [v366]);
+    JAM.call(this.N, this, [v366], JAM.policy.p3);
     var v2161 = this.tb;
-    var v367 = JAM.call(r$$2, null, [v2161, this]);
+    var v367 = JAM.call(r$$2, null, [v2161, this], JAM.policy.p3);
     var b$$371 = ye("ifr::hide", v367);
     var v368 = this.i;
     y$$31(v368, "pagehide", b$$371);
-    JAM.call(this.vb, this, [a$$485]);
+    JAM.call(this.vb, this, [a$$485], JAM.policy.p3);
     return;
   }
   function v211(a$$484) {
@@ -761,7 +739,7 @@ function v254() {
     if (v2162) {
       this.ob = !0;
       this.rc = a$$484;
-      this.Yb();
+      JAM.call(this.Yb, this, [], JAM.policy.p3);
     }
     return;
   }
@@ -776,7 +754,7 @@ function v254() {
     if (v2163) {
       this.H = !0;
       var v3448 = this.Kb;
-      v3448.A();
+      JAM.call(v3448.A, v3448, [], JAM.policy.p3);
     }
     return;
   }
@@ -786,7 +764,7 @@ function v254() {
     if (v2164) {
       this.Cb = !0;
       var v3449 = this.Kb;
-      v3449.dismiss();
+      JAM.call(v3449.dismiss, v3449, [], JAM.policy.p3);
     }
     return;
   }
@@ -798,9 +776,7 @@ function v254() {
     var v2165 = v3450;
     if (v2165) {
       var v3451 = a$$479.origin;
-      introspect(JAM.policy.p4) {
-        v2165 = mg[v3451];
-      }
+      v2165 = mg[v3451];
     }
     var v375 = v2165;
     if (v375) {
@@ -827,11 +803,9 @@ function v254() {
           ;
         }
         var v373 = this.cc;
-        introspect(JAM.policy.p4) {
-          var f$$52 = v373[c$$246]
-        }
+        var f$$52 = v373[c$$246];
         if (f$$52) {
-          JAM.call(f$$52.call, f$$52, [this, d$$154]);
+          JAM.call(f$$52.call, f$$52, [this, d$$154], JAM.policy.p3);
           break;
         }
         b$$367++;
@@ -842,9 +816,9 @@ function v254() {
   }
   function v206() {
     var v376 = this.cc;
-    JAM.call(this.pa, this, [v376]);
+    JAM.call(this.pa, this, [v376], JAM.policy.p3);
     var v2167 = this.gc;
-    var v377 = JAM.call(r$$2, null, [v2167, this]);
+    var v377 = JAM.call(r$$2, null, [v2167, this], JAM.policy.p3);
     var a$$478 = ye("ras::hdlr", v377);
     var v378 = this.i;
     y$$31(v378, "message", a$$478);
@@ -852,7 +826,7 @@ function v254() {
   }
   function v205() {
     var v379;
-    var v4977 = this.Sa();
+    var v4977 = JAM.call(this.Sa, this, [], JAM.policy.p3);
     var v4873 = !v4977;
     var v4979 = !v4873;
     if (v4979) {
@@ -883,10 +857,10 @@ function v254() {
     }
     var v2168 = v3452;
     if (v2168) {
-      v379 = this.hide();
+      v379 = JAM.call(this.hide, this, [], JAM.policy.p3);
     } else {
-      this.A();
-      v379 = this.show();
+      JAM.call(this.A, this, [], JAM.policy.p3);
+      v379 = JAM.call(this.show, this, [], JAM.policy.p3);
     }
     v379;
     return;
@@ -909,7 +883,7 @@ function v254() {
     var v2173 = v3457.document;
     var v381 = v2173.body;
     var v382 = this.Vc;
-    JAM.call(this.cb, this, [v381, v382]);
+    JAM.call(this.cb, this, [v381, v382], JAM.policy.p3);
     return;
   }
   function v202(a$$475) {
@@ -917,7 +891,7 @@ function v254() {
     var v383 = a$$475.touches;
     this.B = v383.length;
     this.I = !1;
-    this.o();
+    JAM.call(this.o, this, [], JAM.policy.p3);
     return;
   }
   function v201(a$$474) {
@@ -925,7 +899,7 @@ function v254() {
     var v384 = a$$474.touches;
     this.B = v384.length;
     this.I = !0;
-    this.o();
+    JAM.call(this.o, this, [], JAM.policy.p3);
     return;
   }
   function v200(a$$473) {
@@ -935,7 +909,7 @@ function v254() {
       if (v385) {
         this.B = b$$365;
         this.I = !1;
-        this.o();
+        JAM.call(this.o, this, [], JAM.policy.p3);
       }
       return;
     }
@@ -946,11 +920,11 @@ function v254() {
     var v2177 = 2 > b$$365;
     if (v2177) {
       var v2175 = this.i;
-      var v2176 = JAM.call(r$$2, null, [v199, this]);
-      v387 = v2175.setTimeout(v2176, 1E3);
+      var v2176 = JAM.call(r$$2, null, [v199, this], JAM.policy.p3);
+      v387 = JAM.call(v2175.setTimeout, v2175, [v2176, 1E3], JAM.policy.p3);
     } else {
       this.B = b$$365;
-      v387 = this.o();
+      v387 = JAM.call(this.o, this, [], JAM.policy.p3);
     }
     v387;
     return;
@@ -962,26 +936,26 @@ function v254() {
       if (v388) {
         this.B = 0;
         this.I = !1;
-        this.o();
+        JAM.call(this.o, this, [], JAM.policy.p3);
       }
       return;
     }
     this.w = "touchcancel";
     var v389 = this.i;
-    var v390 = JAM.call(r$$2, null, [v197, this]);
-    v389.setTimeout(v390, 1E3);
+    var v390 = JAM.call(r$$2, null, [v197, this], JAM.policy.p3);
+    JAM.call(v389.setTimeout, v389, [v390, 1E3], JAM.policy.p3);
     return;
   }
   function v196() {
-    this.o();
+    JAM.call(this.o, this, [], JAM.policy.p3);
     return;
   }
   function v195() {
-    this.o();
+    JAM.call(this.o, this, [], JAM.policy.p3);
     return;
   }
   function v194() {
-    this.o();
+    JAM.call(this.o, this, [], JAM.policy.p3);
     return;
   }
   function v193() {
@@ -1029,7 +1003,7 @@ function v254() {
     return b$$362;
   }
   function v189() {
-    var a$$469 = this.ba();
+    var a$$469 = JAM.call(this.ba, this, [], JAM.policy.p3);
     var v2185 = a$$469;
     if (v2185) {
       var v4220 = a$$469.length;
@@ -1040,24 +1014,20 @@ function v254() {
     if (v404) {
       var v2186 = a$$469.length;
       var v396 = v2186 - 1;
-      introspect(JAM.policy.p4) {
-        var b$$361 = a$$469[v396]
-      }
+      var b$$361 = a$$469[v396];
       var c$$243 = a$$469[0];
       var v403 = b$$361 && c$$243;
       if (v403) {
         var v397 = this.ua;
-        c$$243 = JAM.call(this.Ma, this, [v397]);
+        c$$243 = JAM.call(this.Ma, this, [v397], JAM.policy.p3);
         var v398 = this.ua;
-        var d$$153 = JAM.call(this.Qb, this, [v398, c$$243]);
+        var d$$153 = JAM.call(this.Qb, this, [v398, c$$243], JAM.policy.p3);
         Q$$1(b$$361, d$$153);
         var v399 = a$$469.length;
         b$$361 = v399 - 1;
         var v401 = 0 <= b$$361;
         for (;v401;) {
-          introspect(JAM.policy.p4) {
-            var v400 = a$$469[b$$361]
-          }
+          var v400 = a$$469[b$$361];
           Id(v400, c$$243);
           --b$$361;
           v401 = 0 <= b$$361;
@@ -1070,21 +1040,21 @@ function v254() {
   }
   function v188() {
     var v405 = this.ua;
-    var a$$468 = JAM.call(this.Ma, this, [v405]);
+    var a$$468 = JAM.call(this.Ma, this, [v405], JAM.policy.p3);
     var v406 = this.ua;
-    a$$468 = JAM.call(this.Rb, this, [v406, a$$468]);
+    a$$468 = JAM.call(this.Rb, this, [v406, a$$468], JAM.policy.p3);
     var v3460 = this.i;
     var v2187 = v3460.document;
     var v407 = v2187.body;
-    JAM.call(this.cb, this, [v407, a$$468]);
+    JAM.call(this.cb, this, [v407, a$$468], JAM.policy.p3);
     return;
   }
   function v187() {
     var v408 = this.ga;
     var v2188 = !v408;
     if (v2188) {
-      this.pb();
-      var v4221 = this.u();
+      JAM.call(this.pb, this, [], JAM.policy.p3);
+      var v4221 = JAM.call(this.u, this, [], JAM.policy.p3);
       var v4876;
       var v4981 = this.Ra;
       if (v4981) {
@@ -1101,7 +1071,7 @@ function v254() {
   }
   function v186() {
     this.Ib = !0;
-    var v3461 = this.Sa();
+    var v3461 = JAM.call(this.Sa, this, [], JAM.policy.p3);
     if (v3461) {
       var v4223 = this.i;
       v3461 = og(v4223);
@@ -1113,14 +1083,14 @@ function v254() {
     }
     var v409 = v2189;
     if (v409) {
-      var a$$467 = this.u();
+      var a$$467 = JAM.call(this.u, this, [], JAM.policy.p3);
       if (a$$467) {
-        this.show();
+        JAM.call(this.show, this, [], JAM.policy.p3);
         var v4982 = {position:"fixed", background:"rgba(0,0,0,0.65)", boxShadow:"0 -5px 5px -5px rgba(0,0,0,0.5)", zIndex:999999};
         Q$$1(a$$467, v4982);
-        this.qb();
+        JAM.call(this.qb, this, [], JAM.policy.p3);
         a$$467 = new fh(a$$467, 350);
-        a$$467.play();
+        JAM.call(a$$467.play, a$$467, [], JAM.policy.p3);
         this.Ra = !0;
       }
     }
@@ -1129,9 +1099,9 @@ function v254() {
   function v185() {
     var v410 = this.ga;
     if (v410) {
-      var v4224 = this.u();
+      var v4224 = JAM.call(this.u, this, [], JAM.policy.p3);
       Q$$1(v4224, "display", "none");
-      this.$a();
+      JAM.call(this.$a, this, [], JAM.policy.p3);
       this.ga = !1;
     }
     return;
@@ -1162,11 +1132,11 @@ function v254() {
       var v423 = this.i;
       var v424 = this.ed;
       A$$1(v423, "touchstart", v424);
-      var v425 = this.u();
+      var v425 = JAM.call(this.u, this, [], JAM.policy.p3);
       var v2191 = this.$a;
-      var v426 = JAM.call(r$$2, null, [v2191, this]);
+      var v426 = JAM.call(r$$2, null, [v2191, this], JAM.policy.p3);
       var a$$466 = new gh(v425, 250, v426);
-      a$$466.play();
+      JAM.call(a$$466.play, a$$466, [], JAM.policy.p3);
     }
     return;
   }
@@ -1174,7 +1144,7 @@ function v254() {
     var v2192 = this.Ub;
     var v430 = !v2192;
     if (v430) {
-      var a$$464 = this.ba();
+      var a$$464 = JAM.call(this.ba, this, [], JAM.policy.p3);
       var v2193 = !a$$464;
       var v3464 = !v2193;
       if (v3464) {
@@ -1187,9 +1157,7 @@ function v254() {
       }
       var v2194 = a$$464.length;
       var v429 = v2194 - 1;
-      introspect(JAM.policy.p4) {
-        this.Ub = a$$464[v429];
-      }
+      this.Ub = a$$464[v429];
     }
     return this.Ub;
   }
@@ -1211,7 +1179,7 @@ function v254() {
       var v431 = v2196;
       for (;v431;) {
         var v2197 = this.X;
-        JAM.call(v2197.push, v2197, [a$$463]);
+        JAM.call(v2197.push, v2197, [a$$463], JAM.policy.p3);
         a$$463 = a$$463.parentNode;
         var v2198 = a$$463;
         if (v2198) {
@@ -1223,7 +1191,7 @@ function v254() {
       }
       if (a$$463) {
         var v2199 = this.X;
-        JAM.call(v2199.push, v2199, [a$$463]);
+        JAM.call(v2199.push, v2199, [a$$463], JAM.policy.p3);
       }
     }
     return this.X;
@@ -1240,7 +1208,7 @@ function v254() {
     qd(v435);
     var v436 = this.onEndCallback;
     if (v436) {
-      this.onEndCallback();
+      JAM.call(this.onEndCallback, this, [], JAM.policy.p3);
     }
     return;
   }
@@ -1256,12 +1224,12 @@ function v254() {
     return;
   }
   function v176() {
-    var v5049 = ha$$1();
+    var v5049 = JAM.call(ha$$1, null, [], JAM.policy.p3);
     this.hb = v5049;
     var v439 = this.hb;
     var v440 = this.jd;
     this.Sc = v439 + v440;
-    this.Ca();
+    JAM.call(this.Ca, this, [], JAM.policy.p3);
     return;
   }
   function v175(a$$459) {
@@ -1273,21 +1241,15 @@ function v254() {
     for (;v443;) {
       var v441 = this.current;
       var v4658 = this.Tc;
-      introspect(JAM.policy.p4) {
-        var v4227 = v4658[b$$356]
-      }
+      var v4227 = v4658[b$$356];
       var v4659 = this.ib;
-      introspect(JAM.policy.p4) {
-        var v4228 = v4659[b$$356]
-      }
+      var v4228 = v4659[b$$356];
       var v3468 = v4227 - v4228;
       var v2203 = v3468 * a$$459;
       var v3469 = this.ib;
-      introspect(JAM.policy.p4) {
-        var v2204 = v3469[b$$356]
-      }
+      var v2204 = v3469[b$$356];
       var v442 = v2203 + v2204;
-      JAM.call(v441.push, v441, [v442]);
+      JAM.call(v441.push, v441, [v442], JAM.policy.p3);
       b$$356++;
       var v3470 = this.ib;
       var v2205 = v3470.length;
@@ -1305,7 +1267,7 @@ function v254() {
     var v2206 = this.Ic;
     var v448 = !v2206;
     if (v448) {
-      var a$$458 = ha$$1();
+      var a$$458 = JAM.call(ha$$1, null, [], JAM.policy.p3);
       var v2207 = this.hb;
       var v444 = a$$458 - v2207;
       var v2208 = this.Sc;
@@ -1316,16 +1278,16 @@ function v254() {
       if (v446) {
         a$$458 = 1;
       }
-      JAM.call(this.Pc, this, [a$$458]);
-      this.C();
+      JAM.call(this.Pc, this, [a$$458], JAM.policy.p3);
+      JAM.call(this.C, this, [], JAM.policy.p3);
       var v447;
       var v2211 = 1 == a$$458;
       if (v2211) {
-        v447 = this.ka();
+        v447 = JAM.call(this.ka, this, [], JAM.policy.p3);
       } else {
         var v3471 = this.Ca;
-        var v2210 = JAM.call(r$$2, null, [v3471, this]);
-        v447 = w$$6.setTimeout(v2210, 20);
+        var v2210 = JAM.call(r$$2, null, [v3471, this], JAM.policy.p3);
+        v447 = JAM.call(w$$6.setTimeout, w$$6, [v2210, 20], JAM.policy.p3);
       }
       v447;
     }
@@ -1335,9 +1297,7 @@ function v254() {
     var v2212 = a$$456;
     if (v2212) {
       var v3472 = a$$456.origin;
-      introspect(JAM.policy.p4) {
-        v2212 = mg[v3472];
-      }
+      v2212 = mg[v3472];
     }
     var v454 = v2212;
     if (v454) {
@@ -1356,15 +1316,13 @@ function v254() {
         var v451 = this.lc;
         var d$$151 = rg(v451);
         var v3473 = d$$151.wasReactiveAdConfigReceived;
-        introspect(JAM.policy.p4) {
-          var v2214 = v3473[a$$456]
-        }
+        var v2214 = v3473[a$$456];
         var v453 = !v2214;
         if (v453) {
           var e$$89 = Yg(a$$456);
           var v2215 = e$$89;
           if (v2215) {
-            v2215 = JAM.call(e$$89.ia, e$$89, [b$$354]);
+            v2215 = JAM.call(e$$89.ia, e$$89, [b$$354], JAM.policy.p3);
           }
           var v452 = v2215;
           if (v452) {
@@ -1373,7 +1331,7 @@ function v254() {
               v3474[a$$456] = !0;
             }
             var v3475 = this.lc;
-            JAM.call(e$$89.D, e$$89, [v3475]);
+            JAM.call(e$$89.D, e$$89, [v3475], JAM.policy.p3);
           }
         }
       }
@@ -1385,13 +1343,13 @@ function v254() {
     if (v462) {
       var b$$343 = this.l;
       var v455 = a$$441.document;
-      var c$$227 = JAM.call(v455.createElement, v455, ["ins"]);
+      var c$$227 = JAM.call(v455.createElement, v455, ["ins"], JAM.policy.p3);
       c$$227.className = "adsbygoogle";
       var v456 = c$$227.style;
       v456.display = "none";
       var v2216 = a$$441.document;
       var v457 = v2216.body;
-      JAM.call(v457.appendChild, v457, [c$$227]);
+      JAM.call(v457.appendChild, v457, [c$$227], JAM.policy.p3);
       var v2217 = a$$441.document;
       var v458 = v2217.documentElement;
       var d$$144 = v458.clientHeight;
@@ -1458,7 +1416,7 @@ function v254() {
     v468.adClient = b$$342;
     var v469 = this.l;
     v469.adTest = "on";
-    JAM.call(this.D, this, [a$$439]);
+    JAM.call(this.D, this, [a$$439], JAM.policy.p3);
     return;
   }
   function v167(a$$436) {
@@ -1466,14 +1424,14 @@ function v254() {
     if (v480) {
       var b$$339 = this.l;
       var v470 = a$$436.document;
-      var c$$225 = JAM.call(v470.createElement, v470, ["ins"]);
+      var c$$225 = JAM.call(v470.createElement, v470, ["ins"], JAM.policy.p3);
       c$$225.className = "adsbygoogle";
       var v2221 = a$$436.document;
       var v471 = v2221.body;
-      JAM.call(v471.appendChild, v471, [c$$225]);
-      var v472 = Math.random();
+      JAM.call(v471.appendChild, v471, [c$$225], JAM.policy.p3);
+      var v472 = JAM.call(Math.random, Math, [], JAM.policy.p3);
       var d$$143 = String(v472);
-      d$$143 = d$$143.slice(-3);
+      d$$143 = JAM.call(d$$143.slice, d$$143, [-3], JAM.policy.p3);
       var v473 = b$$339.adClient;
       var v474 = b$$339.adWidth;
       var v475 = b$$339.adHeight;
@@ -1592,71 +1550,67 @@ function v254() {
     b$$inline_349.adTest = "on";
     JSCompiler_inline_result$$34 = b$$inline_349;
     this.l = JSCompiler_inline_result$$34;
-    JAM.call(this.D, this, [a$$434]);
+    JAM.call(this.D, this, [a$$434], JAM.policy.p3);
     return;
   }
   function v164(a$$412, b$$326) {
-    JAM.call(b$$326.push, b$$326, ["{"]);
+    JAM.call(b$$326.push, b$$326, ["{"], JAM.policy.p3);
     var c$$215 = "";
     var d$$137;
     for (d$$137 in a$$412) {
       var v3481 = Object.prototype;
       var v2227 = v3481.hasOwnProperty;
-      var v491 = JAM.call(v2227.call, v2227, [a$$412, d$$137]);
+      var v491 = JAM.call(v2227.call, v2227, [a$$412, d$$137], JAM.policy.p3);
       if (v491) {
-        introspect(JAM.policy.p4) {
-          var e$$80 = a$$412[d$$137]
-        }
+        var e$$80 = a$$412[d$$137];
         var v2228 = typeof e$$80;
         var v490 = "function" != v2228;
         if (v490) {
-          JAM.call(b$$326.push, b$$326, [c$$215]);
-          JAM.call(this.r, this, [d$$137, b$$326]);
-          JAM.call(b$$326.push, b$$326, [":"]);
+          JAM.call(b$$326.push, b$$326, [c$$215], JAM.policy.p3);
+          JAM.call(this.r, this, [d$$137, b$$326], JAM.policy.p3);
+          JAM.call(b$$326.push, b$$326, [":"], JAM.policy.p3);
           var v4660;
           var v4878 = this.qa;
           if (v4878) {
             var v4877 = this.qa;
-            v4660 = JAM.call(v4877.call, v4877, [a$$412, d$$137, e$$80]);
+            v4660 = JAM.call(v4877.call, v4877, [a$$412, d$$137, e$$80], JAM.policy.p3);
           } else {
             v4660 = e$$80;
           }
           var v4232 = v4660;
-          JAM.call(this.n, this, [v4232, b$$326]);
+          JAM.call(this.n, this, [v4232, b$$326], JAM.policy.p3);
           c$$215 = ",";
         }
       }
     }
-    JAM.call(b$$326.push, b$$326, ["}"]);
+    JAM.call(b$$326.push, b$$326, ["}"], JAM.policy.p3);
     return;
   }
   function v163(a$$411, b$$325) {
     var c$$214 = a$$411.length;
-    JAM.call(b$$325.push, b$$325, ["["]);
+    JAM.call(b$$325.push, b$$325, ["["], JAM.policy.p3);
     var d$$136 = "";
     var e$$79 = 0;
     var v492 = e$$79 < c$$214;
     for (;v492;) {
-      JAM.call(b$$325.push, b$$325, [d$$136]);
-      introspect(JAM.policy.p4) {
-        d$$136 = a$$411[e$$79];
-      }
+      JAM.call(b$$325.push, b$$325, [d$$136], JAM.policy.p3);
+      d$$136 = a$$411[e$$79];
       var v4233;
       var v4663 = this.qa;
       if (v4663) {
         var v4661 = this.qa;
         var v4662 = String(e$$79);
-        v4233 = JAM.call(v4661.call, v4661, [a$$411, v4662, d$$136]);
+        v4233 = JAM.call(v4661.call, v4661, [a$$411, v4662, d$$136], JAM.policy.p3);
       } else {
         v4233 = d$$136;
       }
       var v3482 = v4233;
-      JAM.call(this.n, this, [v3482, b$$325]);
+      JAM.call(this.n, this, [v3482, b$$325], JAM.policy.p3);
       d$$136 = ",";
       e$$79++;
       v492 = e$$79 < c$$214;
     }
-    JAM.call(b$$325.push, b$$325, ["]"]);
+    JAM.call(b$$325.push, b$$325, ["]"], JAM.policy.p3);
     return;
   }
   function v162(a$$410, b$$324) {
@@ -1673,18 +1627,16 @@ function v254() {
       v2229 = "null";
     }
     var v493 = v2229;
-    JAM.call(b$$324.push, b$$324, [v493]);
+    JAM.call(b$$324.push, b$$324, [v493], JAM.policy.p3);
     return;
   }
   function v161(a$$408, b$$322) {
     function v160(a$$409) {
       var v494 = a$$409 in ig;
       if (v494) {
-        introspect(JAM.policy.p4) {
-          return ig[a$$409];
-        }
+        return ig[a$$409];
       }
-      var b$$323 = a$$409.charCodeAt(0);
+      var b$$323 = JAM.call(a$$409.charCodeAt, a$$409, [0], JAM.policy.p3);
       var e$$78 = "\\u";
       var v495;
       var v2231 = 16 > b$$323;
@@ -1706,42 +1658,42 @@ function v254() {
       }
       v495;
       var v496 = ig;
-      var v2232 = b$$323.toString(16);
+      var v2232 = JAM.call(b$$323.toString, b$$323, [16], JAM.policy.p3);
       introspect(JAM.policy.p2) {
         return v496[a$$409] = e$$78 + v2232;
       }
     }
-    var v497 = a$$408.replace(jg, v160);
-    JAM.call(b$$322.push, b$$322, ['"', v497, '"']);
+    var v497 = JAM.call(a$$408.replace, a$$408, [jg, v160], JAM.policy.p3);
+    JAM.call(b$$322.push, b$$322, ['"', v497, '"'], JAM.policy.p3);
     return;
   }
   function v159(a$$407, b$$321) {
     var v501 = typeof a$$407;
     switch(v501) {
       case "string":
-        JAM.call(this.r, this, [a$$407, b$$321]);
+        JAM.call(this.r, this, [a$$407, b$$321], JAM.policy.p3);
         break;
       case "number":
-        JAM.call(this.L, this, [a$$407, b$$321]);
+        JAM.call(this.L, this, [a$$407, b$$321], JAM.policy.p3);
         break;
       case "boolean":
-        JAM.call(b$$321.push, b$$321, [a$$407]);
+        JAM.call(b$$321.push, b$$321, [a$$407], JAM.policy.p3);
         break;
       case "undefined":
-        JAM.call(b$$321.push, b$$321, ["null"]);
+        JAM.call(b$$321.push, b$$321, ["null"], JAM.policy.p3);
         break;
       case "object":
         var v498 = null == a$$407;
         if (v498) {
-          JAM.call(b$$321.push, b$$321, ["null"]);
+          JAM.call(b$$321.push, b$$321, ["null"], JAM.policy.p3);
           break;
         }
         var v499 = n$$2(a$$407);
         if (v499) {
-          JAM.call(this.xc, this, [a$$407, b$$321]);
+          JAM.call(this.xc, this, [a$$407, b$$321], JAM.policy.p3);
           break;
         }
-        JAM.call(this.M, this, [a$$407, b$$321]);
+        JAM.call(this.M, this, [a$$407, b$$321], JAM.policy.p3);
         break;
       case "function":
         break;
@@ -1754,30 +1706,30 @@ function v254() {
   }
   function v158(a$$406) {
     var b$$320 = [];
-    JAM.call(this.n, this, [a$$406, b$$320]);
-    return b$$320.join("");
+    JAM.call(this.n, this, [a$$406, b$$320], JAM.policy.p3);
+    return JAM.call(b$$320.join, b$$320, [""], JAM.policy.p3);
   }
   function v157() {
     function v156(b$$317) {
       var v2234 = !e$$76;
       if (v2234) {
-        v2234 = JAM.call(c$$212, null, [b$$317]);
+        v2234 = JAM.call(c$$212, null, [b$$317], JAM.policy.p3);
       }
       var v502 = v2234;
       if (v502) {
-        JAM.call(d$$134, null, [b$$317, a$$402, f$$49]);
+        JAM.call(d$$134, null, [b$$317, a$$402, f$$49], JAM.policy.p3);
         e$$76 = !0;
       }
       return;
     }
-    var v2235 = this.Rc();
+    var v2235 = JAM.call(this.Rc, this, [], JAM.policy.p3);
     if (v2235) {
       var v3486 = this.Pa;
       v2235 = !v3486;
     }
     var v505 = v2235;
     if (v505) {
-      var a$$402 = this.J();
+      var a$$402 = JAM.call(this.J, this, [], JAM.policy.p3);
       var v503 = a$$402;
       if (v503) {
         v503 = a$$402.contentWindow;
@@ -1787,7 +1739,7 @@ function v254() {
         var c$$212 = ga$$1(eg, b$$316);
         var v2236 = V$$1.prototype;
         var v504 = v2236.da;
-        var d$$134 = JAM.call(r$$2, null, [v504, this]);
+        var d$$134 = JAM.call(r$$2, null, [v504, this], JAM.policy.p3);
         b$$316 = ag;
         var e$$76 = !1;
         var f$$49 = !1;
@@ -1797,12 +1749,12 @@ function v254() {
     return;
   }
   function v155(a$$400) {
-    JAM.call(this.eb, this, [a$$400]);
+    JAM.call(this.eb, this, [a$$400], JAM.policy.p3);
     this.hc = !0;
     return;
   }
   function v154(a$$399, b$$314) {
-    JAM.call(this.eb, this, [a$$399]);
+    JAM.call(this.eb, this, [a$$399], JAM.policy.p3);
     this.ma = !0;
     switch(b$$314) {
       case Zf:
@@ -1832,7 +1784,7 @@ function v254() {
     var v2239 = !v507;
     if (v2239) {
       var v4235 = this.F;
-      JAM.call(this.ta, this, [a$$397, v4235]);
+      JAM.call(this.ta, this, [a$$397, v4235], JAM.policy.p3);
       this.va = !0;
       var v3487 = a$$397.style;
       v3487.display = "";
@@ -1848,7 +1800,7 @@ function v254() {
     if (v508) {
       var v2241 = a$$396.contentWindow;
       var v2242 = this.Fb;
-      v2241.postMessage(b$$313, v2242);
+      JAM.call(v2241.postMessage, v2241, [b$$313, v2242], JAM.policy.p3);
     }
     return;
   }
@@ -1858,10 +1810,10 @@ function v254() {
     var v3488 = this.Q;
     var v2244 = v3488.google_unique_id;
     var v510 = "zrt_ads_frame" + v2244;
-    return JAM.call(JAM.get(v509, "getElementById", JAM.policy.p1), v509, [v510]);
+    return JAM.call(v509.getElementById, v509, [v510], JAM.policy.p3);
   }
   function v149(a$$395) {
-    var b$$312 = this.J();
+    var b$$312 = JAM.call(this.J, this, [], JAM.policy.p3);
     var v4236 = this.Fb;
     var v4237 = a$$395.origin;
     var v3489 = v4236 == v4237;
@@ -1878,22 +1830,22 @@ function v254() {
     if (v512) {
       a$$395 = a$$395.data;
       var c$$210 = !0;
-      var v511 = JAM.call(this.da, this, [a$$395, b$$312, c$$210]);
+      var v511 = JAM.call(this.da, this, [a$$395, b$$312, c$$210], JAM.policy.p3);
       if (v511) {
         var v4238 = this.Q;
         var v4239 = this.K;
         A$$1(v4238, "message", v4239);
-        this.R();
+        JAM.call(this.R, this, [], JAM.policy.p3);
         var v3492 = this.ma;
         if (v3492) {
-          JAM.call(this.ta, this, [b$$312, Yf]);
+          JAM.call(this.ta, this, [b$$312, Yf], JAM.policy.p3);
           b$$312 = this.U;
           this.U = null;
           if (b$$312) {
-            var v4879 = this.v();
+            var v4879 = JAM.call(this.v, this, [], JAM.policy.p3);
             var v4880 = this.za;
             var v4881 = !0;
-            JAM.call(b$$312, null, [v4879, v4880, v4881]);
+            JAM.call(b$$312, null, [v4879, v4880, v4881], JAM.policy.p3);
           }
         }
       }
@@ -1902,20 +1854,18 @@ function v254() {
   }
   function v148(a$$394, b$$311, c$$209) {
     var v513;
-    introspect(JAM.policy.p4) {
-      var v2247 = Wf[a$$394]
-    }
+    var v2247 = Wf[a$$394];
     if (v2247) {
-      JAM.call(this.Ac, this, [c$$209, a$$394]);
+      JAM.call(this.Ac, this, [c$$209, a$$394], JAM.policy.p3);
       v513 = !0;
     } else {
       var v2246;
       var v3493 = "zr" == a$$394;
       if (v3493) {
-        JAM.call(this.Dc, this, [c$$209]);
+        JAM.call(this.Dc, this, [c$$209], JAM.policy.p3);
         var v4665 = this.F;
         if (v4665) {
-          JAM.call(this.gb, this, [b$$311]);
+          JAM.call(this.gb, this, [b$$311], JAM.policy.p3);
         }
         v2246 = !0;
       } else {
@@ -1982,7 +1932,7 @@ function v254() {
       var v2249 = this.Q;
       var v521 = v2249.document;
       var v522 = Cf(d$$132);
-      JAM.call(v521.write, v521, [v522]);
+      JAM.call(v521.write, v521, [v522], JAM.policy.p3);
       this.va = !0;
     }
     return;
@@ -1996,19 +1946,19 @@ function v254() {
       var v525 = this.hc;
       if (v525) {
         try {
-          var v523 = this.J();
-          JAM.call(this.gb, this, [v523]);
+          var v523 = JAM.call(this.J, this, [], JAM.policy.p3);
+          JAM.call(this.gb, this, [v523], JAM.policy.p3);
         } catch (c$$206) {
           this.Sb = !0;
-          var v2251 = this.v();
+          var v2251 = JAM.call(this.v, this, [], JAM.policy.p3);
           var v2252 = !1;
-          JAM.call(b$$308, null, [v2251, null, v2252]);
+          JAM.call(b$$308, null, [v2251, null, v2252], JAM.policy.p3);
         }
       } else {
         var v2253 = this.Za;
         var v524 = "AZ" == v2253;
         if (v524) {
-          this.wb();
+          JAM.call(this.wb, this, [], JAM.policy.p3);
         }
       }
     }
@@ -2023,8 +1973,8 @@ function v254() {
       var v3494 = this.Q;
       var v3495 = this.K;
       A$$1(v3494, "message", v3495);
-      var v3496 = this.J();
-      JAM.call(this.ta, this, [v3496, Yf]);
+      var v3496 = JAM.call(this.J, this, [], JAM.policy.p3);
+      JAM.call(this.ta, this, [v3496, Yf], JAM.policy.p3);
     }
     return;
   }
@@ -2063,7 +2013,7 @@ function v254() {
   }
   function v136(a$$355) {
     this.j = 0;
-    a$$355.fn();
+    JAM.call(a$$355.fn, a$$355, [], JAM.policy.p3);
     return;
   }
   function v135() {
@@ -2076,23 +2026,23 @@ function v254() {
     var v533 = v2260;
     if (v533) {
       var v530 = this.oa;
-      var a$$354 = v530.shift();
+      var a$$354 = JAM.call(v530.shift, v530, [], JAM.policy.p3);
       this.j = 2;
       var v2261 = this.ab;
-      var v531 = JAM.call(r$$2, null, [v2261, this, a$$354]);
+      var v531 = JAM.call(r$$2, null, [v2261, this, a$$354], JAM.policy.p3);
       var b$$282 = xe("sjr::run", v531);
       var v532 = a$$354.win;
-      v532.setTimeout(b$$282, 0);
-      this.sa();
+      JAM.call(v532.setTimeout, v532, [b$$282, 0], JAM.policy.p3);
+      JAM.call(this.sa, this, [], JAM.policy.p3);
     }
     return;
   }
   function v134() {
     var v2262 = this.Oc;
-    var v534 = JAM.call(r$$2, null, [v2262, this]);
+    var v534 = JAM.call(r$$2, null, [v2262, this], JAM.policy.p3);
     var a$$353 = xe("sjr::tryrun", v534);
     var v535 = this.p;
-    v535.setTimeout(a$$353, 0);
+    JAM.call(v535.setTimeout, v535, [a$$353, 0], JAM.policy.p3);
     return;
   }
   function v133() {
@@ -2113,22 +2063,22 @@ function v254() {
       if (v3500) {
         var v4666 = this.p;
         var v4667 = this.na;
-        v4666.clearTimeout(v4667);
+        JAM.call(v4666.clearTimeout, v4666, [v4667], JAM.policy.p3);
         this.na = null;
       }
       this.j = 0;
     }
-    this.sa();
+    JAM.call(this.sa, this, [], JAM.policy.p3);
     return;
   }
   function v131(a$$352) {
     this.j = 1;
     if (a$$352) {
       var v2265 = this.ra;
-      var v538 = JAM.call(r$$2, null, [v2265, this]);
+      var v538 = JAM.call(r$$2, null, [v2265, this], JAM.policy.p3);
       var b$$281 = xe("sjr::timeout", v538);
       var v539 = this.p;
-      var v5051 = v539.setTimeout(b$$281, a$$352);
+      var v5051 = JAM.call(v539.setTimeout, v539, [b$$281, a$$352], JAM.policy.p3);
       this.na = v5051;
     }
     return;
@@ -2142,8 +2092,8 @@ function v254() {
     }
     var v2266 = v3501;
     var v541 = new nf(a$$351, v2266);
-    JAM.call(v540.push, v540, [v541]);
-    this.sa();
+    JAM.call(v540.push, v540, [v541], JAM.policy.p3);
+    JAM.call(this.sa, this, [], JAM.policy.p3);
     return;
   }
   function v129(a$$350, b$$279) {
@@ -2167,11 +2117,11 @@ function v254() {
     }
     var v2267 = v3502;
     if (v2267) {
-      v542 = JAM.call(this.Y, this, [a$$350, b$$279]);
+      v542 = JAM.call(this.Y, this, [a$$350, b$$279], JAM.policy.p3);
     } else {
       this.j = 2;
       var v3503 = new nf(a$$350, window);
-      v542 = JAM.call(this.ab, this, [v3503]);
+      v542 = JAM.call(this.ab, this, [v3503], JAM.policy.p3);
     }
     v542;
     return;
@@ -2186,9 +2136,7 @@ function v254() {
     }
     try {
       var v544 = T$$1.NAME_FIRST_GOOGLE_WINDOW;
-      introspect(JAM.policy.p4) {
-        d$$116 = a$$342[v544];
-      }
+      d$$116 = a$$342[v544];
     } catch (f$$43) {
     }
     if (d$$116) {
@@ -2206,13 +2154,11 @@ function v254() {
     var v2269 = a$$342.length;
     var v546 = g$$27 < v2269;
     for (;v546;) {
-      introspect(JAM.policy.p4) {
-        var h$$19 = a$$342[g$$27]
-      }
+      var h$$19 = a$$342[g$$27];
       var v545 = h$$19 != d$$116;
       if (v545) {
         var v4246 = c$$185 + 1;
-        h$$19 = JAM.call(T$$1.Ha, T$$1, [h$$19, b$$273, v4246]);
+        h$$19 = JAM.call(T$$1.Ha, T$$1, [h$$19, b$$273, v4246], JAM.policy.p3);
         var v4671 = e$$71.adFrames;
         var v4672 = h$$19.adFrames;
         e$$71.adFrames = v4671 + v4672;
@@ -2238,9 +2184,9 @@ function v254() {
   }
   function v127(a$$341, b$$272, c$$184, d$$115, e$$70) {
     var v547 = a$$341.top;
-    a$$341 = JAM.call(T$$1.Ha, T$$1, [v547, a$$341, 0]);
+    a$$341 = JAM.call(T$$1.Ha, T$$1, [v547, a$$341, 0], JAM.policy.p3);
     var v548 = a$$341.signature;
-    var f$$42 = v548.substring(0, 1800);
+    var f$$42 = JAM.call(v548.substring, v548, [0, 1800], JAM.policy.p3);
     var v549 = a$$341.adFrames;
     b$$272 = {frmn:v549, frms:f$$42, adk:b$$272, correlator:c$$184, frm:d$$115, frmn0:e$$70};
     var v550 = La$$1();
@@ -2250,9 +2196,7 @@ function v254() {
     var b$$inline_257 = b$$272;
     var c$$inline_258;
     for (c$$inline_258 in b$$inline_257) {
-      introspect(JAM.policy.p4) {
-        var v551 = b$$inline_257[c$$inline_258]
-      }
+      var v551 = b$$inline_257[c$$inline_258];
       Ve(c$$inline_258, v551, a$$inline_256);
     }
     JSCompiler_inline_result$$56 = a$$inline_256;
@@ -2260,14 +2204,14 @@ function v254() {
     var v554 = a$$inline_260[1];
     if (v554) {
       var b$$inline_261 = a$$inline_260[0];
-      var c$$inline_262 = b$$inline_261.indexOf("#");
+      var c$$inline_262 = JAM.call(b$$inline_261.indexOf, b$$inline_261, ["#"], JAM.policy.p3);
       var v552 = 0 <= c$$inline_262;
       if (v552) {
-        var v3506 = b$$inline_261.substr(c$$inline_262);
-        JAM.call(a$$inline_260.push, a$$inline_260, [v3506]);
-        a$$inline_260[0] = b$$inline_261 = b$$inline_261.substr(0, c$$inline_262);
+        var v3506 = JAM.call(b$$inline_261.substr, b$$inline_261, [c$$inline_262], JAM.policy.p3);
+        JAM.call(a$$inline_260.push, a$$inline_260, [v3506], JAM.policy.p3);
+        a$$inline_260[0] = b$$inline_261 = JAM.call(b$$inline_261.substr, b$$inline_261, [0, c$$inline_262], JAM.policy.p3);
       }
-      c$$inline_262 = b$$inline_261.indexOf("?");
+      c$$inline_262 = JAM.call(b$$inline_261.indexOf, b$$inline_261, ["?"], JAM.policy.p3);
       var v553;
       var v2272 = 0 > c$$inline_262;
       if (v2272) {
@@ -2283,18 +2227,18 @@ function v254() {
       }
       v553;
     }
-    c$$184 = a$$inline_260.join("");
+    c$$184 = JAM.call(a$$inline_260.join, a$$inline_260, [""], JAM.policy.p3);
     nb$$1(w$$6, c$$184);
     return;
   }
   function v126(a$$340, b$$271, c$$183, d$$114) {
     var v555 = a$$340.top;
-    var e$$69 = JAM.call(T$$1.Ha, T$$1, [v555, a$$340, 0]);
+    var e$$69 = JAM.call(T$$1.Ha, T$$1, [v555, a$$340, 0], JAM.policy.p3);
     var v2273 = T$$1.Uc;
     var v2274 = e$$69.adFrames;
     var v556 = ga$$1(v2273, a$$340, b$$271, c$$183, d$$114, v2274);
     var v557 = T$$1.IFRAME_COUNTS_DELAY;
-    window.setTimeout(v556, v557);
+    JAM.call(window.setTimeout, window, [v556, v557], JAM.policy.p3);
     return e$$69.adFrames;
   }
   function v125(a$$339, b$$270) {
@@ -2311,9 +2255,7 @@ function v254() {
         var v560;
         var v4674 = d$$113.length;
         var v4252 = v4674 - 1;
-        introspect(JAM.policy.p4) {
-          var v3508 = d$$113[v4252]
-        }
+        var v3508 = d$$113[v4252];
         var v4253 = a$$339.location;
         var v3509 = v4253.origin;
         var v2276 = v3508 == v3509;
@@ -2340,14 +2282,14 @@ function v254() {
     var d$$110 = ce(a$$331, "dt");
     var v2278 = Hb(d$$110);
     var v562 = "&dtd=" + v2278;
-    c$$177 = c$$177.replace(/&dtd=(\d+|M)/, v562);
-    JAM.call(this.set, this, [b$$264, c$$177]);
+    c$$177 = JAM.call(c$$177.replace, c$$177, [/&dtd=(\d+|M)/, v562], JAM.policy.p3);
+    JAM.call(this.set, this, [b$$264, c$$177], JAM.policy.p3);
     return c$$177;
   }
   function v123(a$$330) {
     var v2279 = this.p;
     var v563 = v2279.document;
-    a$$330 = JAM.call(JAM.get(v563, "getElementById", JAM.policy.p1), v563, [a$$330]);
+    a$$330 = JAM.call(v563.getElementById, v563, [a$$330], JAM.policy.p3);
     var v564 = a$$330.contentWindow;
     var b$$263 = v564.document;
     var v3511 = a$$330.onload;
@@ -2368,7 +2310,7 @@ function v254() {
     }
     var v565 = v2280;
     if (v565) {
-      a$$330.onload();
+      JAM.call(a$$330.onload, a$$330, [], JAM.policy.p3);
     }
     return;
   }
@@ -2383,53 +2325,49 @@ function v254() {
     if (v567) {
       var v2283 = this.p;
       var v3513 = this.Jb;
-      var v2284 = JAM.call(r$$2, null, [v3513, this, a$$329]);
+      var v2284 = JAM.call(r$$2, null, [v3513, this, a$$329], JAM.policy.p3);
       var v2285 = !1;
-      v2283.addEventListener("load", v2284, v2285);
+      JAM.call(v2283.addEventListener, v2283, ["load", v2284, v2285], JAM.policy.p3);
     }
     return;
   }
   function v121(a$$322, b$$256) {
-    JAM.call(b$$256.push, b$$256, ["{"]);
+    JAM.call(b$$256.push, b$$256, ["{"], JAM.policy.p3);
     var c$$173 = "";
     var d$$109;
     for (d$$109 in a$$322) {
-      var v569 = a$$322.hasOwnProperty(d$$109);
+      var v569 = JAM.call(a$$322.hasOwnProperty, a$$322, [d$$109], JAM.policy.p3);
       if (v569) {
-        introspect(JAM.policy.p4) {
-          var e$$68 = a$$322[d$$109]
-        }
+        var e$$68 = a$$322[d$$109];
         var v2286 = typeof e$$68;
         var v568 = "function" != v2286;
         if (v568) {
-          JAM.call(b$$256.push, b$$256, [c$$173]);
-          JAM.call(this.r, this, [d$$109, b$$256]);
-          JAM.call(b$$256.push, b$$256, [":"]);
-          JAM.call(this.n, this, [e$$68, b$$256]);
+          JAM.call(b$$256.push, b$$256, [c$$173], JAM.policy.p3);
+          JAM.call(this.r, this, [d$$109, b$$256], JAM.policy.p3);
+          JAM.call(b$$256.push, b$$256, [":"], JAM.policy.p3);
+          JAM.call(this.n, this, [e$$68, b$$256], JAM.policy.p3);
           c$$173 = ",";
         }
       }
     }
-    JAM.call(b$$256.push, b$$256, ["}"]);
+    JAM.call(b$$256.push, b$$256, ["}"], JAM.policy.p3);
     return;
   }
   function v120(a$$321, b$$255) {
     var c$$172 = a$$321.length;
-    JAM.call(b$$255.push, b$$255, ["["]);
+    JAM.call(b$$255.push, b$$255, ["["], JAM.policy.p3);
     var d$$108 = "";
     var e$$67 = 0;
     var v570 = e$$67 < c$$172;
     for (;v570;) {
-      JAM.call(b$$255.push, b$$255, [d$$108]);
-      introspect(JAM.policy.p4) {
-        var v3514 = a$$321[e$$67]
-      }
-      JAM.call(this.n, this, [v3514, b$$255]);
+      JAM.call(b$$255.push, b$$255, [d$$108], JAM.policy.p3);
+      var v3514 = a$$321[e$$67];
+      JAM.call(this.n, this, [v3514, b$$255], JAM.policy.p3);
       d$$108 = ",";
       e$$67++;
       v570 = e$$67 < c$$172;
     }
-    JAM.call(b$$255.push, b$$255, ["]"]);
+    JAM.call(b$$255.push, b$$255, ["]"], JAM.policy.p3);
     return;
   }
   function v119(a$$320, b$$254) {
@@ -2446,18 +2384,16 @@ function v254() {
       v2287 = "null";
     }
     var v571 = v2287;
-    JAM.call(b$$254.push, b$$254, [v571]);
+    JAM.call(b$$254.push, b$$254, [v571], JAM.policy.p3);
     return;
   }
   function v118(a$$318, b$$252) {
     function v117(a$$319) {
       var v572 = a$$319 in Ce;
       if (v572) {
-        introspect(JAM.policy.p4) {
-          return Ce[a$$319];
-        }
+        return Ce[a$$319];
       }
-      var b$$253 = a$$319.charCodeAt(0);
+      var b$$253 = JAM.call(a$$319.charCodeAt, a$$319, [0], JAM.policy.p3);
       var e$$66 = "\\u";
       var v573;
       var v2289 = 16 > b$$253;
@@ -2479,44 +2415,44 @@ function v254() {
       }
       v573;
       var v574 = Ce;
-      var v2290 = b$$253.toString(16);
+      var v2290 = JAM.call(b$$253.toString, b$$253, [16], JAM.policy.p3);
       introspect(JAM.policy.p2) {
         return v574[a$$319] = e$$66 + v2290;
       }
     }
-    JAM.call(b$$252.push, b$$252, ['"']);
-    var v575 = a$$318.replace(De, v117);
-    JAM.call(b$$252.push, b$$252, [v575]);
-    JAM.call(b$$252.push, b$$252, ['"']);
+    JAM.call(b$$252.push, b$$252, ['"'], JAM.policy.p3);
+    var v575 = JAM.call(a$$318.replace, a$$318, [De, v117], JAM.policy.p3);
+    JAM.call(b$$252.push, b$$252, [v575], JAM.policy.p3);
+    JAM.call(b$$252.push, b$$252, ['"'], JAM.policy.p3);
     return;
   }
   function v116(a$$317, b$$251) {
     var v579 = typeof a$$317;
     switch(v579) {
       case "string":
-        JAM.call(this.r, this, [a$$317, b$$251]);
+        JAM.call(this.r, this, [a$$317, b$$251], JAM.policy.p3);
         break;
       case "number":
-        JAM.call(this.L, this, [a$$317, b$$251]);
+        JAM.call(this.L, this, [a$$317, b$$251], JAM.policy.p3);
         break;
       case "boolean":
-        JAM.call(b$$251.push, b$$251, [a$$317]);
+        JAM.call(b$$251.push, b$$251, [a$$317], JAM.policy.p3);
         break;
       case "undefined":
-        JAM.call(b$$251.push, b$$251, ["null"]);
+        JAM.call(b$$251.push, b$$251, ["null"], JAM.policy.p3);
         break;
       case "object":
         var v576 = null == a$$317;
         if (v576) {
-          JAM.call(b$$251.push, b$$251, ["null"]);
+          JAM.call(b$$251.push, b$$251, ["null"], JAM.policy.p3);
           break;
         }
         var v577 = a$$317 instanceof Array;
         if (v577) {
-          JAM.call(this.yc, this, [a$$317, b$$251]);
+          JAM.call(this.yc, this, [a$$317, b$$251], JAM.policy.p3);
           break;
         }
-        JAM.call(this.M, this, [a$$317, b$$251]);
+        JAM.call(this.M, this, [a$$317, b$$251], JAM.policy.p3);
         break;
       case "function":
         break;
@@ -2529,8 +2465,8 @@ function v254() {
   }
   function v115(a$$316) {
     var b$$250 = [];
-    JAM.call(this.n, this, [a$$316, b$$250]);
-    return b$$250.join("");
+    JAM.call(this.n, this, [a$$316, b$$250], JAM.policy.p3);
+    return JAM.call(b$$250.join, b$$250, [""], JAM.policy.p3);
   }
   function v114() {
     return this.Lb;
@@ -2559,21 +2495,21 @@ function v254() {
     var v585 = v2292;
     if (v585) {
       var v582 = !0;
-      JAM.call(this.xa, this, [d$$98, a$$299, b$$236, v582, "", g$$24, ""]);
+      JAM.call(this.xa, this, [d$$98, a$$299, b$$236, v582, "", g$$24, ""], JAM.policy.p3);
     } else {
       var v584 = "js" == c$$162;
       if (v584) {
-        JAM.call(this.oc, this, [a$$299, "google_ad_request_done"]);
+        JAM.call(this.oc, this, [a$$299, "google_ad_request_done"], JAM.policy.p3);
       } else {
         var h$$17 = new le(a$$299, b$$236, c$$162, d$$98, g$$24);
         var v583 = this.q;
-        JAM.call(v583.push, v583, [h$$17]);
+        JAM.call(v583.push, v583, [h$$17], JAM.policy.p3);
         if (d$$98) {
           a$$299 = v111;
           fe(d$$98, a$$299);
         }
       }
-      this.bc();
+      JAM.call(this.bc, this, [], JAM.policy.p3);
     }
     return;
   }
@@ -2603,9 +2539,9 @@ function v254() {
     return "";
   }
   function v105(a$$298) {
-    var v589 = this.getOseId();
+    var v589 = JAM.call(this.getOseId, this, [], JAM.policy.p3);
     if (v589) {
-      return this.getOseId();
+      return JAM.call(this.getOseId, this, [], JAM.policy.p3);
     }
     var b$$235 = window.google_enable_ose;
     var c$$161;
@@ -2638,7 +2574,7 @@ function v254() {
     var v592 = a$$298 || 0;
     var v5052 = String(v592);
     this.Aa = v5052;
-    return this.getOseId();
+    return JAM.call(this.getOseId, this, [], JAM.policy.p3);
   }
   function v104() {
     var a$$297 = [];
@@ -2648,11 +2584,9 @@ function v254() {
     var v596 = c$$160 < b$$234;
     for (;v596;) {
       var v594 = this.q;
-      introspect(JAM.policy.p4) {
-        var d$$97 = v594[c$$160]
-      }
+      var d$$97 = v594[c$$160];
       var v595 = d$$97.nb;
-      JAM.call(a$$297.push, a$$297, [v595]);
+      JAM.call(a$$297.push, a$$297, [v595], JAM.policy.p3);
       c$$160++;
       v596 = c$$160 < b$$234;
     }
@@ -2661,7 +2595,7 @@ function v254() {
   function v103(a$$296, b$$233) {
     if (b$$233) {
       var v2297 = this.wa;
-      JAM.call(this.Fa, this, [v2297, a$$296, 1]);
+      JAM.call(this.Fa, this, [v2297, a$$296, 1], JAM.policy.p3);
     }
     var v597 = this.q;
     var c$$159 = v597.length;
@@ -2669,9 +2603,7 @@ function v254() {
     var v600 = d$$96 < c$$159;
     for (;v600;) {
       var v598 = this.q;
-      introspect(JAM.policy.p4) {
-        var e$$59 = v598[d$$96]
-      }
+      var e$$59 = v598[d$$96];
       var v3521 = e$$59.Vb;
       var v2298 = !v3521;
       if (v2298) {
@@ -2684,7 +2616,7 @@ function v254() {
         var v3524 = e$$59.fd;
         var v3525 = e$$59.lb;
         var v3526 = e$$59.Yc;
-        JAM.call(a$$296, null, [v3522, v3523, v3524, v3525, "", v3526, ""]);
+        JAM.call(a$$296, null, [v3522, v3523, v3524, v3525, "", v3526, ""], JAM.policy.p3);
         e$$59.Vb = !0;
       }
       d$$96++;
@@ -2701,7 +2633,7 @@ function v254() {
     var v615 = 0 < v2299;
     if (v615) {
       var v601 = a$$295.document;
-      var e$$58 = JAM.call(JAM.get(v601, "getElementsByTagName", JAM.policy.p6), v601, ["a"]);
+      var e$$58 = JAM.call(v601.getElementsByTagName, v601, ["a"], JAM.policy.p3);
       var f$$35 = 0;
       var v2300 = e$$58.length;
       var v614 = f$$35 < v2300;
@@ -2710,24 +2642,16 @@ function v254() {
         var v2301 = d$$95.length;
         var v613 = g$$23 < v2301;
         for (;v613;) {
-          introspect(JAM.policy.p4) {
-            var v602 = d$$95[g$$23]
-          }
+          var v602 = d$$95[g$$23];
           var h$$16 = v602[1];
-          introspect(JAM.policy.p4) {
-            var v4261 = e$$58[f$$35]
-          }
+          var v4261 = e$$58[f$$35];
           var v3527 = v4261.href;
-          var v2302 = v3527.indexOf(h$$16);
+          var v2302 = JAM.call(v3527.indexOf, v3527, [h$$16], JAM.policy.p3);
           var v612 = 0 <= v2302;
           if (v612) {
-            introspect(JAM.policy.p4) {
-              var v603 = e$$58[f$$35]
-            }
+            var v603 = e$$58[f$$35];
             h$$16 = v603.parentNode;
-            introspect(JAM.policy.p4) {
-              var v2303 = d$$95[g$$23]
-            }
+            var v2303 = d$$95[g$$23];
             var v606 = v2303[2];
             if (v606) {
               var k$$6 = h$$16;
@@ -2735,11 +2659,9 @@ function v254() {
               var v605 = 4 > l$$9;
               for (;v605;) {
                 var v3528 = k$$6.innerHTML;
-                introspect(JAM.policy.p4) {
-                  var v4262 = d$$95[g$$23]
-                }
+                var v4262 = d$$95[g$$23];
                 var v3529 = v4262[2];
-                var v2304 = v3528.indexOf(v3529);
+                var v2304 = JAM.call(v3528.indexOf, v3528, [v3529], JAM.policy.p3);
                 var v604 = 0 <= v2304;
                 if (v604) {
                   h$$16 = k$$6;
@@ -2751,22 +2673,16 @@ function v254() {
               }
             }
             k$$6 = !0;
-            introspect(JAM.policy.p4) {
-              var v607 = d$$95[g$$23]
-            }
+            var v607 = d$$95[g$$23];
             l$$9 = v607[3];
-            introspect(JAM.policy.p4) {
-              var v608 = d$$95[g$$23]
-            }
+            var v608 = d$$95[g$$23];
             var z$$4 = v608[5];
-            introspect(JAM.policy.p4) {
-              var v2305 = d$$95[g$$23]
-            }
+            var v2305 = d$$95[g$$23];
             var v609 = v2305[0];
             var v610 = c$$158 || 0;
             var v611 = void 0;
-            JAM.call(b$$232, null, [h$$16, v609, v610, k$$6, l$$9, v611, z$$4]);
-            d$$95.splice(g$$23, 1);
+            JAM.call(b$$232, null, [h$$16, v609, v610, k$$6, l$$9, v611, z$$4], JAM.policy.p3);
+            JAM.call(d$$95.splice, d$$95, [g$$23, 1], JAM.policy.p3);
             break;
           }
           g$$23++;
@@ -2788,7 +2704,7 @@ function v254() {
     if (v617) {
       try {
         var v616 = a$$295.parent;
-        JAM.call(this.Fa, this, [v616, b$$232, c$$158]);
+        JAM.call(this.Fa, this, [v616, b$$232, c$$158], JAM.policy.p3);
       } catch (C$$2) {
       }
     }
@@ -2842,16 +2758,14 @@ function v254() {
         var v3534 = v4264.url;
         var v2317 = Va$$1(v3534);
         var v622 = [a$$294, v2317, f$$34, g$$22, null, h$$15];
-        JAM.call(c$$157.push, c$$157, [v622]);
+        JAM.call(c$$157.push, c$$157, [v622], JAM.policy.p3);
       }
-      JAM.call(d$$94, null, [b$$231]);
+      JAM.call(d$$94, null, [b$$231], JAM.policy.p3);
       return;
     }
     var c$$157 = this.ha;
     var v624 = this.wa;
-    introspect(JAM.policy.p4) {
-      var d$$94 = v624[b$$230]
-    }
+    var d$$94 = v624[b$$230];
     if (d$$94) {
       var v4265 = d$$94.orig_callback;
       var v4677 = !v4265;
@@ -2864,9 +2778,7 @@ function v254() {
         v4266[b$$230] = v99;
       }
       var v4267 = this.wa;
-      introspect(JAM.policy.p4) {
-        var v3535 = v4267[b$$230]
-      }
+      var v3535 = v4267[b$$230];
       v3535.orig_callback = d$$94;
     }
     return;
@@ -2925,46 +2837,46 @@ function v254() {
   }
   function v96() {
     var v627 = this.top;
-    var v5053 = JAM.call(Math.round, Math, [v627]);
+    var v5053 = JAM.call(Math.round, Math, [v627], JAM.policy.p3);
     this.top = v5053;
     var v628 = this.right;
-    var v5054 = JAM.call(Math.round, Math, [v628]);
+    var v5054 = JAM.call(Math.round, Math, [v628], JAM.policy.p3);
     this.right = v5054;
     var v629 = this.bottom;
-    var v5055 = JAM.call(Math.round, Math, [v629]);
+    var v5055 = JAM.call(Math.round, Math, [v629], JAM.policy.p3);
     this.bottom = v5055;
     var v630 = this.left;
-    var v5056 = JAM.call(Math.round, Math, [v630]);
+    var v5056 = JAM.call(Math.round, Math, [v630], JAM.policy.p3);
     this.left = v5056;
     return this;
   }
   function v95() {
     var v631 = this.top;
-    var v5057 = JAM.call(Math.floor, Math, [v631]);
+    var v5057 = JAM.call(Math.floor, Math, [v631], JAM.policy.p3);
     this.top = v5057;
     var v632 = this.right;
-    var v5058 = JAM.call(Math.floor, Math, [v632]);
+    var v5058 = JAM.call(Math.floor, Math, [v632], JAM.policy.p3);
     this.right = v5058;
     var v633 = this.bottom;
-    var v5059 = JAM.call(Math.floor, Math, [v633]);
+    var v5059 = JAM.call(Math.floor, Math, [v633], JAM.policy.p3);
     this.bottom = v5059;
     var v634 = this.left;
-    var v5060 = JAM.call(Math.floor, Math, [v634]);
+    var v5060 = JAM.call(Math.floor, Math, [v634], JAM.policy.p3);
     this.left = v5060;
     return this;
   }
   function v94() {
     var v635 = this.top;
-    var v5061 = JAM.call(Math.ceil, Math, [v635]);
+    var v5061 = JAM.call(Math.ceil, Math, [v635], JAM.policy.p3);
     this.top = v5061;
     var v636 = this.right;
-    var v5062 = JAM.call(Math.ceil, Math, [v636]);
+    var v5062 = JAM.call(Math.ceil, Math, [v636], JAM.policy.p3);
     this.right = v5062;
     var v637 = this.bottom;
-    var v5063 = JAM.call(Math.ceil, Math, [v637]);
+    var v5063 = JAM.call(Math.ceil, Math, [v637], JAM.policy.p3);
     this.bottom = v5063;
     var v638 = this.left;
-    var v5064 = JAM.call(Math.ceil, Math, [v638]);
+    var v5064 = JAM.call(Math.ceil, Math, [v638], JAM.policy.p3);
     this.left = v5064;
     return this;
   }
@@ -3124,11 +3036,11 @@ function v254() {
   function v89(a$$249) {
     var v645 = this.V;
     var v646 = String(a$$249);
-    return JAM.call(v645.createTextNode, v645, [v646]);
+    return JAM.call(v645.createTextNode, v645, [v646], JAM.policy.p3);
   }
   function v88(a$$248) {
     var v647 = this.V;
-    return JAM.call(v647.createElement, v647, [a$$248]);
+    return JAM.call(v647.createElement, v647, [a$$248], JAM.policy.p3);
   }
   function v87() {
     var a$$224 = m$$3.document;
@@ -3192,28 +3104,28 @@ function v254() {
   }
   function v84() {
     var v652 = this.x;
-    var v5065 = JAM.call(Math.round, Math, [v652]);
+    var v5065 = JAM.call(Math.round, Math, [v652], JAM.policy.p3);
     this.x = v5065;
     var v653 = this.y;
-    var v5066 = JAM.call(Math.round, Math, [v653]);
+    var v5066 = JAM.call(Math.round, Math, [v653], JAM.policy.p3);
     this.y = v5066;
     return this;
   }
   function v83() {
     var v654 = this.x;
-    var v5067 = JAM.call(Math.floor, Math, [v654]);
+    var v5067 = JAM.call(Math.floor, Math, [v654], JAM.policy.p3);
     this.x = v5067;
     var v655 = this.y;
-    var v5068 = JAM.call(Math.floor, Math, [v655]);
+    var v5068 = JAM.call(Math.floor, Math, [v655], JAM.policy.p3);
     this.y = v5068;
     return this;
   }
   function v82() {
     var v656 = this.x;
-    var v5069 = JAM.call(Math.ceil, Math, [v656]);
+    var v5069 = JAM.call(Math.ceil, Math, [v656], JAM.policy.p3);
     this.x = v5069;
     var v657 = this.y;
-    var v5070 = JAM.call(Math.ceil, Math, [v657]);
+    var v5070 = JAM.call(Math.ceil, Math, [v657], JAM.policy.p3);
     this.y = v5070;
     return this;
   }
@@ -3221,7 +3133,7 @@ function v254() {
     function b$$153(b$$154) {
       var v658 = "" != b$$154;
       if (v658) {
-        JAM.call(a$$192.push, a$$192, [b$$154]);
+        JAM.call(a$$192.push, a$$192, [b$$154], JAM.policy.p3);
       }
       return;
     }
@@ -3239,14 +3151,14 @@ function v254() {
     var v2346 = v3547;
     if (v2346) {
       var v4294 = this.defaultBucket;
-      var v3548 = v4294.join(",");
+      var v3548 = JAM.call(v4294.join, v4294, [","], JAM.policy.p3);
       var v2342 = v3548 + ",";
-      var v2343 = a$$192.join(",");
+      var v2343 = JAM.call(a$$192.join, a$$192, [","], JAM.policy.p3);
       v660 = v2342 + v2343;
     } else {
       var v3549 = this.defaultBucket;
-      var v2344 = v3549.join(",");
-      var v2345 = a$$192.join(",");
+      var v2344 = JAM.call(v3549.join, v3549, [","], JAM.policy.p3);
+      var v2345 = JAM.call(a$$192.join, a$$192, [","], JAM.policy.p3);
       v660 = v2344 + v2345;
     }
     return v660;
@@ -3254,12 +3166,10 @@ function v254() {
   function v80(a$$191) {
     var v661;
     var v3550 = this.layers;
-    var v2348 = v3550.hasOwnProperty(a$$191);
+    var v2348 = JAM.call(v3550.hasOwnProperty, v3550, [a$$191], JAM.policy.p3);
     if (v2348) {
       var v2347 = this.layers;
-      introspect(JAM.policy.p4) {
-        v661 = v2347[a$$191];
-      }
+      v661 = v2347[a$$191];
     } else {
       v661 = "";
     }
@@ -3269,12 +3179,10 @@ function v254() {
     var v662;
     if (a$$190) {
       var v3551 = this.layers;
-      var v2349 = v3551.hasOwnProperty(a$$190);
+      var v2349 = JAM.call(v3551.hasOwnProperty, v3551, [a$$190], JAM.policy.p3);
       if (v2349) {
         var v4295 = this.layers;
-        introspect(JAM.policy.p4) {
-          var v3552 = v4295[a$$190]
-        }
+        var v3552 = v4295[a$$190];
         v2349 = "" == v3552;
       }
       v662 = v2349;
@@ -3285,13 +3193,13 @@ function v254() {
   }
   function v78(a$$189, b$$152, c$$107) {
     var v663;
-    var v3553 = JAM.call(this.ac, this, [c$$107]);
+    var v3553 = JAM.call(this.ac, this, [c$$107], JAM.policy.p3);
     if (v3553) {
       v3553 = a$$189 = vb(a$$189, b$$152);
     }
     var v2350 = v3553;
     if (v2350) {
-      v663 = JAM.call(this.bb, this, [a$$189, c$$107]);
+      v663 = JAM.call(this.bb, this, [a$$189, c$$107], JAM.policy.p3);
     } else {
       v663 = "";
     }
@@ -3307,7 +3215,7 @@ function v254() {
       if (b$$151) {
         var v3554;
         var v4693 = this.layers;
-        var v4297 = v4693.hasOwnProperty(b$$151);
+        var v4297 = JAM.call(v4693.hasOwnProperty, v4693, [b$$151], JAM.policy.p3);
         if (v4297) {
           var v4296 = this.layers;
           introspect(JAM.policy.p2) {
@@ -3319,7 +3227,7 @@ function v254() {
         v2351 = v3554;
       } else {
         var v4298 = this.defaultBucket;
-        JAM.call(v4298.push, v4298, [a$$188]);
+        JAM.call(v4298.push, v4298, [a$$188], JAM.policy.p3);
         v2351 = a$$188;
       }
       v664 = v2351;
@@ -3341,7 +3249,7 @@ function v254() {
     var v666;
     var v2353 = p$$1(a$$181);
     if (v2353) {
-      v666 = a$$181.split("");
+      v666 = JAM.call(a$$181.split, a$$181, [""], JAM.policy.p3);
     } else {
       v666 = a$$181;
     }
@@ -3351,10 +3259,8 @@ function v254() {
     for (;v668;) {
       var v667 = f$$25 in e$$45;
       if (v667) {
-        introspect(JAM.policy.p4) {
-          var v2354 = e$$45[f$$25]
-        }
-        JAM.call(b$$144.call, b$$144, [c$$102, v2354, f$$25, a$$181]);
+        var v2354 = e$$45[f$$25];
+        JAM.call(b$$144.call, b$$144, [c$$102, v2354, f$$25, a$$181], JAM.policy.p3);
       }
       f$$25++;
       v668 = f$$25 < d$$66;
@@ -3363,7 +3269,7 @@ function v254() {
   }
   function v73(a$$180, b$$143, c$$101) {
     var v669 = Xb.forEach;
-    JAM.call(v669.call, v669, [a$$180, b$$143, c$$101]);
+    JAM.call(v669.call, v669, [a$$180, b$$143, c$$101], JAM.policy.p3);
     return;
   }
   function v72(a$$179, b$$142, c$$100) {
@@ -3377,7 +3283,7 @@ function v254() {
       if (v3556) {
         var v4299 = a$$179.length;
         var v3555 = v4299 + c$$100;
-        v2355 = Math.max(0, v3555);
+        v2355 = JAM.call(Math.max, Math, [0, v3555], JAM.policy.p3);
       } else {
         v2355 = c$$100;
       }
@@ -3394,7 +3300,7 @@ function v254() {
       }
       var v2357 = v3557;
       if (v2357) {
-        v671 = a$$179.indexOf(b$$142, c$$100);
+        v671 = JAM.call(a$$179.indexOf, a$$179, [b$$142, c$$100], JAM.policy.p3);
       } else {
         v671 = -1;
       }
@@ -3405,9 +3311,7 @@ function v254() {
     for (;v674;) {
       var v2359 = c$$100 in a$$179;
       if (v2359) {
-        introspect(JAM.policy.p4) {
-          var v3558 = a$$179[c$$100]
-        }
+        var v3558 = a$$179[c$$100];
         v2359 = v3558 === b$$142;
       }
       var v673 = v2359;
@@ -3422,7 +3326,7 @@ function v254() {
   }
   function v71(a$$178, b$$141, c$$99) {
     var v675 = Xb.indexOf;
-    return JAM.call(v675.call, v675, [a$$178, b$$141, c$$99]);
+    return JAM.call(v675.call, v675, [a$$178, b$$141, c$$99], JAM.policy.p3);
   }
   function v70(a$$140, b$$111) {
     var v676;
@@ -3441,28 +3345,28 @@ function v254() {
   }
   function v69() {
     var v677 = this.width;
-    var v5071 = JAM.call(Math.round, Math, [v677]);
+    var v5071 = JAM.call(Math.round, Math, [v677], JAM.policy.p3);
     this.width = v5071;
     var v678 = this.height;
-    var v5072 = JAM.call(Math.round, Math, [v678]);
+    var v5072 = JAM.call(Math.round, Math, [v678], JAM.policy.p3);
     this.height = v5072;
     return this;
   }
   function v68() {
     var v679 = this.width;
-    var v5073 = JAM.call(Math.floor, Math, [v679]);
+    var v5073 = JAM.call(Math.floor, Math, [v679], JAM.policy.p3);
     this.width = v5073;
     var v680 = this.height;
-    var v5074 = JAM.call(Math.floor, Math, [v680]);
+    var v5074 = JAM.call(Math.floor, Math, [v680], JAM.policy.p3);
     this.height = v5074;
     return this;
   }
   function v67() {
     var v681 = this.width;
-    var v5075 = JAM.call(Math.ceil, Math, [v681]);
+    var v5075 = JAM.call(Math.ceil, Math, [v681], JAM.policy.p3);
     this.width = v5075;
     var v682 = this.height;
-    var v5076 = JAM.call(Math.ceil, Math, [v682]);
+    var v5076 = JAM.call(Math.ceil, Math, [v682], JAM.policy.p3);
     this.height = v5076;
     return this;
   }
@@ -3472,7 +3376,7 @@ function v254() {
   }
   function gi() {
     var v2364 = H$$1();
-    var v684 = JAM.call(v2364.m, v2364, [18]);
+    var v684 = JAM.call(v2364.m, v2364, [18], JAM.policy.p3);
     var v2365 = K$$1.ASYNC_EXPANSION_EMBED;
     var v685 = v2365.EXPERIMENT;
     return v684 == v685;
@@ -3487,12 +3391,12 @@ function v254() {
     var b$$440 = window.google_container_id;
     var v2367 = b$$440;
     if (v2367) {
-      v2367 = JAM.call(JAM.get(document, "getElementById", JAM.policy.p1), document, [b$$440]);
+      v2367 = JAM.call(document.getElementById, document, [b$$440], JAM.policy.p3);
     }
     var v687 = v2367;
     var v2368 = !v687;
     if (v2368) {
-      v687 = JAM.call(JAM.get(document, "getElementById", JAM.policy.p1), document, [a$$567]);
+      v687 = JAM.call(document.getElementById, document, [a$$567], JAM.policy.p3);
     }
     var c$$299 = v687;
     var v2369 = c$$299 || b$$440;
@@ -3505,8 +3409,8 @@ function v254() {
     if (v2370) {
       var v4301 = "<span id=" + a$$567;
       var v3560 = v4301 + "></span>";
-      JAM.call(document.write, document, [v3560]);
-      c$$299 = JAM.call(JAM.get(document, "getElementById", JAM.policy.p1), document, [a$$567]);
+      JAM.call(document.write, document, [v3560], JAM.policy.p3);
+      c$$299 = JAM.call(document.getElementById, document, [a$$567], JAM.policy.p3);
     }
     return c$$299;
   }
@@ -3549,7 +3453,7 @@ function v254() {
         if (v692) {
         } else {
           var v3562 = new Date;
-          var v2373 = v3562.getTime();
+          var v2373 = JAM.call(v3562.getTime, v3562, [], JAM.policy.p3);
           var v2374 = window.google_num_slots_to_rotate;
           var v691 = v2373 % v2374;
           var b$$inline_551 = v691 + 1;
@@ -3585,7 +3489,7 @@ function v254() {
     var a$$inline_518 = c$$295;
     var b$$inline_519 = "/pagead/blank.gif#?";
     var c$$inline_520 = a$$561;
-    var d$$inline_521 = a$$inline_518.indexOf(b$$inline_519);
+    var d$$inline_521 = JAM.call(a$$inline_518.indexOf, a$$inline_518, [b$$inline_519], JAM.policy.p3);
     var v697;
     var v2377 = -1 == d$$inline_521;
     if (v2377) {
@@ -3593,7 +3497,7 @@ function v254() {
     } else {
       var v4303 = b$$inline_519.length;
       var v3565 = d$$inline_521 + v4303;
-      var v2376 = a$$inline_518.substr(v3565);
+      var v2376 = JAM.call(a$$inline_518.substr, a$$inline_518, [v3565], JAM.policy.p3);
       v697 = c$$inline_520 + v2376;
     }
     d$$180 = v697;
@@ -3605,19 +3509,19 @@ function v254() {
   }
   function $i(a$$558) {
     function v25(b$$431, c$$292) {
-      introspect(JAM.policy.p5) {
+      introspect(JAM.policy.p2) {
         a$$558[b$$431] = window[c$$292];
       }
       return;
     }
     function v24(b$$430, c$$291) {
-      introspect(JAM.policy.p5) {
+      introspect(JAM.policy.p2) {
         a$$558[b$$430] = window[c$$291];
       }
       return;
     }
     function v23(b$$429, c$$290) {
-      introspect(JAM.policy.p5) {
+      introspect(JAM.policy.p2) {
         a$$558[b$$429] = window[c$$290];
       }
       return;
@@ -3633,10 +3537,8 @@ function v254() {
       var v2378 = d$$178.length;
       var v700 = e$$105 < v2378;
       for (;v700;) {
-        introspect(JAM.policy.p4) {
-          var f$$63 = d$$178[e$$105]
-        }
-        var v2379 = f$$63();
+        var f$$63 = d$$178[e$$105];
+        var v2379 = JAM.call(f$$63, null, [], JAM.policy.p3);
         var v699 = !v2379;
         if (v699) {
           return;
@@ -3648,16 +3550,16 @@ function v254() {
     }
     if (Xi) {
       var v3566 = new Date;
-      var v2381 = v3566.getTime();
+      var v2381 = JAM.call(v3566.getTime, v3566, [], JAM.policy.p3);
       Xi = v2381 - Xi;
     }
     var v2382 = c$$289;
     if (v2382) {
-      v2382 = c$$289.fb();
+      v2382 = JAM.call(c$$289.fb, c$$289, [], JAM.policy.p3);
     }
     var v701 = v2382;
     if (v701) {
-      c$$289.Hc();
+      JAM.call(c$$289.Hc, c$$289, [], JAM.policy.p3);
     }
     JSCompiler_inline_label_Ki_503: {
       var a$$inline_500 = a$$557;
@@ -3682,7 +3584,7 @@ function v254() {
       var b$$inline_945 = f$$inline_774;
       var c$$inline_946 = e$$inline_773.isTopUrl;
       var v707 = D$$1();
-      var d$$inline_947 = JAM.call(T$$1.getIframingState, T$$1, [v707]);
+      var d$$inline_947 = JAM.call(T$$1.getIframingState, T$$1, [v707], JAM.policy.p3);
       var e$$inline_948 = 4;
       var v708;
       var v3567 = b$$inline_945;
@@ -3757,9 +3659,9 @@ function v254() {
       if (v713) {
         var v710 = b$$inline_770.URL;
         var v2389 = b$$inline_770.URL;
-        var v711 = v2389.lastIndexOf("http");
-        e$$inline_773 = v710.substring(v711);
-        var v2390 = e$$inline_773.indexOf("%");
+        var v711 = JAM.call(v2389.lastIndexOf, v2389, ["http"], JAM.policy.p3);
+        e$$inline_773 = JAM.call(v710.substring, v710, [v711], JAM.policy.p3);
+        var v2390 = JAM.call(e$$inline_773.indexOf, e$$inline_773, ["%"], JAM.policy.p3);
         var v712 = -1 < v2390;
         for (;v712;) {
           try {
@@ -3767,7 +3669,7 @@ function v254() {
           } catch (g$$inline_775) {
             break;
           }
-          var v2391 = e$$inline_773.indexOf("%");
+          var v2391 = JAM.call(e$$inline_773.indexOf, e$$inline_773, ["%"], JAM.policy.p3);
           v712 = -1 < v2391;
         }
         a$$inline_769.google_page_url = e$$inline_773;
@@ -3805,7 +3707,7 @@ function v254() {
       var v2395 = v3574 == v3575;
       if (v2395) {
         var v3576 = b$$inline_770.lastModified;
-        var v2394 = Date.parse(v3576);
+        var v2394 = JAM.call(Date.parse, Date, [v3576], JAM.policy.p3);
         v716 = v2394 / 1E3;
       } else {
         v716 = null;
@@ -3886,7 +3788,7 @@ function v254() {
         var v3584 = a$$inline_701.TOP_URL_REPLACES_MISSING_URL;
         var v2402 = v3584.EXPERIMENT;
         var v721 = [v2401, v2402];
-        JAM.call(v720.k, v720, [v721, wa$$1, 4]);
+        JAM.call(v720.k, v720, [v721, wa$$1, 4], JAM.policy.p3);
       }
       var v3585 = !1;
       var v2403 = Gi(v3585);
@@ -3933,8 +3835,8 @@ function v254() {
         if (v729) {
           var v2407 = c$$inline_781.timing;
           var v726 = v2407.navigationStart;
-          var v2408 = c$$inline_781.now();
-          var v727 = JAM.call(Math.round, Math, [v2408]);
+          var v2408 = JAM.call(c$$inline_781.now, c$$inline_781, [], JAM.policy.p3);
+          var v727 = JAM.call(Math.round, Math, [v2408], JAM.policy.p3);
           var d$$inline_782 = v726 + v727;
           var v2409 = c$$inline_781.timing;
           var v728 = v2409.domLoading;
@@ -3947,7 +3849,7 @@ function v254() {
         }
         a$$inline_779 = a$$inline_779 || vf;
         var v2410 = b$$inline_780.Date;
-        var v731 = v2410.now();
+        var v731 = JAM.call(v2410.now, v2410, [], JAM.policy.p3);
         b$$inline_780 = v731 - a$$inline_779;
         b$$inline_780 = d$$inline_782 - b$$inline_780;
         var v732;
@@ -3986,10 +3888,10 @@ function v254() {
         }
         a$$inline_777.tsi = v2415;
       }
-      var v5079 = "/r20130906".replace("/", "");
+      var v5079 = JAM.call("/r20130906".replace, "/r20130906", ["/", ""], JAM.policy.p3);
       a$$inline_777.cbv = v5079;
       var v2416 = window.google_loader_used;
-      var v735 = /^\w{1,3}$/.test(v2416);
+      var v735 = JAM.call(/^\w{1,3}$/.test, /^\w{1,3}$/, [v2416], JAM.policy.p3);
       if (v735) {
         a$$inline_777.saldr = window.google_loader_used;
       }
@@ -4003,35 +3905,23 @@ function v254() {
         var d$$inline_787 = window.google_ad_section;
         var e$$inline_788 = window.google_ad_format;
         var f$$inline_789 = window.google_ad_slot;
-        introspect(JAM.policy.p4) {
-          var v736 = c$$inline_786[d$$inline_787]
-        }
+        var v736 = c$$inline_786[d$$inline_787];
         if (v736) {
-          introspect(JAM.policy.p4) {
-            b$$inline_785.prev_fmts = c$$inline_786[d$$inline_787];
-          }
+          b$$inline_785.prev_fmts = c$$inline_786[d$$inline_787];
         }
         var g$$inline_790 = G$$1(a$$inline_784, 9);
-        introspect(JAM.policy.p4) {
-          var v737 = g$$inline_790[d$$inline_787]
-        }
+        var v737 = g$$inline_790[d$$inline_787];
         if (v737) {
-          introspect(JAM.policy.p4) {
-            var v2417 = g$$inline_790[d$$inline_787]
-          }
-          var v5080 = v2417.toLowerCase();
+          var v2417 = g$$inline_790[d$$inline_787];
+          var v5080 = JAM.call(v2417.toLowerCase, v2417, [], JAM.policy.p3);
           b$$inline_785.prev_slotnames = v5080;
         }
         var v738;
         if (e$$inline_788) {
           var v2418;
-          introspect(JAM.policy.p4) {
-            var v3590 = c$$inline_786[d$$inline_787]
-          }
+          var v3590 = c$$inline_786[d$$inline_787];
           if (v3590) {
-            introspect(JAM.policy.p4) {
-              var v3588 = c$$inline_786[d$$inline_787]
-            }
+            var v3588 = c$$inline_786[d$$inline_787];
             var v3589 = "," + e$$inline_788;
             v2418 = v3588 + v3589;
           } else {
@@ -4044,13 +3934,9 @@ function v254() {
           var v2419 = f$$inline_789;
           if (v2419) {
             var v3591;
-            introspect(JAM.policy.p4) {
-              var v4313 = g$$inline_790[d$$inline_787]
-            }
+            var v4313 = g$$inline_790[d$$inline_787];
             if (v4313) {
-              introspect(JAM.policy.p4) {
-                var v4311 = g$$inline_790[d$$inline_787]
-              }
+              var v4311 = g$$inline_790[d$$inline_787];
               var v4312 = "," + f$$inline_789;
               v3591 = v4311 + v4312;
             } else {
@@ -4071,18 +3957,14 @@ function v254() {
         c$$inline_783 = G$$1(b$$inline_778, 10);
         var d$$inline_791 = "";
         var v740 = window.google_ad_channel;
-        var e$$inline_792 = v740.split(Ni);
+        var e$$inline_792 = JAM.call(v740.split, v740, [Ni], JAM.policy.p3);
         var f$$inline_793 = 0;
         var v2420 = e$$inline_792.length;
         var v742 = f$$inline_793 < v2420;
         for (;v742;) {
-          introspect(JAM.policy.p4) {
-            var g$$inline_794 = e$$inline_792[f$$inline_793]
-          }
+          var g$$inline_794 = e$$inline_792[f$$inline_793];
           var v741;
-          introspect(JAM.policy.p4) {
-            var v2421 = c$$inline_783[g$$inline_794]
-          }
+          var v2421 = c$$inline_783[g$$inline_794];
           if (v2421) {
             var v3592 = g$$inline_794 + "+";
             v741 = d$$inline_791 = d$$inline_791 + v3592;
@@ -4103,20 +3985,16 @@ function v254() {
         var JSCompiler_inline_result$$inline_795;
         var b$$inline_796 = G$$1(b$$inline_778, 11);
         var v744 = window.google_ad_host_channel;
-        var c$$inline_797 = v744.split("|");
+        var c$$inline_797 = JAM.call(v744.split, v744, ["|"], JAM.policy.p3);
         var d$$inline_798 = -1;
         var e$$inline_799 = [];
         var f$$inline_800 = 0;
         var v2423 = c$$inline_797.length;
         var v750 = f$$inline_800 < v2423;
         for (;v750;) {
-          introspect(JAM.policy.p4) {
-            var v745 = c$$inline_797[f$$inline_800]
-          }
-          var g$$inline_801 = v745.split(Ni);
-          introspect(JAM.policy.p4) {
-            var v746 = b$$inline_796[f$$inline_800]
-          }
+          var v745 = c$$inline_797[f$$inline_800];
+          var g$$inline_801 = JAM.call(v745.split, v745, [Ni], JAM.policy.p3);
+          var v746 = b$$inline_796[f$$inline_800];
           var v2424 = !v746;
           if (v2424) {
             b$$inline_796[f$$inline_800] = {};
@@ -4126,25 +4004,17 @@ function v254() {
           var v2425 = g$$inline_801.length;
           var v748 = k$$inline_803 < v2425;
           for (;v748;) {
-            introspect(JAM.policy.p4) {
-              var l$$inline_804 = g$$inline_801[k$$inline_803]
-            }
+            var l$$inline_804 = g$$inline_801[k$$inline_803];
             var v747 = "" != l$$inline_804;
             if (v747) {
               var v2426;
-              introspect(JAM.policy.p4) {
-                var v4314 = b$$inline_796[f$$inline_800]
-              }
-              introspect(JAM.policy.p4) {
-                var v3594 = v4314[l$$inline_804]
-              }
+              var v4314 = b$$inline_796[f$$inline_800];
+              var v3594 = v4314[l$$inline_804];
               if (v3594) {
                 var v4315 = "+" + l$$inline_804;
                 v2426 = h$$inline_802 = h$$inline_802 + v4315;
               } else {
-                introspect(JAM.policy.p4) {
-                  var v3593 = b$$inline_796[f$$inline_800]
-                }
+                var v3593 = b$$inline_796[f$$inline_800];
                 introspect(JAM.policy.p2) {
                   v2426 = v3593[l$$inline_804] = !0;
                 }
@@ -4155,7 +4025,7 @@ function v254() {
             var v2427 = g$$inline_801.length;
             v748 = k$$inline_803 < v2427;
           }
-          h$$inline_802 = h$$inline_802.slice(1);
+          h$$inline_802 = JAM.call(h$$inline_802.slice, h$$inline_802, [1], JAM.policy.p3);
           e$$inline_799[f$$inline_800] = h$$inline_802;
           var v749 = "" != h$$inline_802;
           if (v749) {
@@ -4171,17 +4041,13 @@ function v254() {
           f$$inline_800 = 0;
           var v751 = f$$inline_800 < d$$inline_798;
           for (;v751;) {
-            introspect(JAM.policy.p4) {
-              var v3595 = e$$inline_799[f$$inline_800]
-            }
+            var v3595 = e$$inline_799[f$$inline_800];
             var v2429 = v3595 + "|";
             c$$inline_797 = c$$inline_797 + v2429;
             f$$inline_800++;
             v751 = f$$inline_800 < d$$inline_798;
           }
-          introspect(JAM.policy.p4) {
-            var v2430 = e$$inline_799[d$$inline_798]
-          }
+          var v2430 = e$$inline_799[d$$inline_798];
           c$$inline_797 = c$$inline_797 + v2430;
         }
         JSCompiler_inline_result$$inline_795 = c$$inline_797;
@@ -4208,9 +4074,9 @@ function v254() {
       var d$$inline_808 = window.screen;
       var e$$inline_809 = b$$inline_778.referrer;
       var v3596 = new Date;
-      var v2431 = v3596.getTime();
+      var v2431 = JAM.call(v3596.getTime, v3596, [], JAM.policy.p3);
       var v755 = v2431 / 1E3;
-      var f$$inline_810 = JAM.call(Math.round, Math, [v755]);
+      var f$$inline_810 = JAM.call(Math.round, Math, [v755], JAM.policy.p3);
       var g$$inline_811 = window.google_analytics_domain_name;
       var v756;
       var v3597 = typeof g$$inline_811;
@@ -4223,10 +4089,10 @@ function v254() {
       a$$inline_805 = v756;
       var v3598 = "__utma=" + a$$inline_805;
       var v2433 = v3598 + ".";
-      var v757 = b$$inline_806.indexOf(v2433);
+      var v757 = JAM.call(b$$inline_806.indexOf, b$$inline_806, [v2433], JAM.policy.p3);
       var h$$inline_812 = -1 < v757;
       var v2434 = "__utmb=" + a$$inline_805;
-      var v758 = b$$inline_806.indexOf(v2434);
+      var v758 = JAM.call(b$$inline_806.indexOf, b$$inline_806, [v2434], JAM.policy.p3);
       g$$inline_811 = -1 < v758;
       var k$$inline_813 = mc("google_persistent_state");
       var JSCompiler_temp$$929;
@@ -4241,11 +4107,11 @@ function v254() {
       if (h$$inline_812) {
         var v5038 = "__utma=" + a$$inline_805;
         var v5016 = v5038 + ".";
-        var v4983 = b$$inline_806.split(v5016);
+        var v4983 = JAM.call(b$$inline_806.split, b$$inline_806, [v5016], JAM.policy.p3);
         var v4906 = v4983[1];
-        var v4700 = v4906.split(";");
+        var v4700 = JAM.call(v4906.split, v4906, [";"], JAM.policy.p3);
         var v4316 = v4700[0];
-        c$$inline_807 = v4316.split(".");
+        c$$inline_807 = JAM.call(v4316.split, v4316, ["."], JAM.policy.p3);
         var v4317;
         if (g$$inline_811) {
           var v4701 = c$$inline_807[3];
@@ -4282,9 +4148,9 @@ function v254() {
           var b$$inline_973 = c$$inline_807;
           var c$$inline_974 = d$$inline_808;
           var d$$inline_975 = e$$inline_809;
-          var v2436 = Math.random();
+          var v2436 = JAM.call(Math.random, Math, [], JAM.policy.p3);
           var v761 = 2147483647 * v2436;
-          var JSCompiler_temp_const$$inline_976 = JAM.call(Math.round, Math, [v761]);
+          var JSCompiler_temp_const$$inline_976 = JAM.call(Math.round, Math, [v761], JAM.policy.p3);
           var JSCompiler_inline_result$$inline_977;
           var a$$inline_978 = a$$inline_972;
           var b$$inline_979 = b$$inline_973;
@@ -4303,7 +4169,7 @@ function v254() {
           var v2440 = Dh.platform;
           var v2441 = Dh.userAgent;
           var v3602;
-          var v4320 = Dh.javaEnabled();
+          var v4320 = JAM.call(Dh.javaEnabled, Dh, [], JAM.policy.p3);
           if (v4320) {
             v3602 = 1;
           } else {
@@ -4311,7 +4177,7 @@ function v254() {
           }
           var v2442 = v3602;
           var v762 = [v2437, v2438, v2439, v2440, v2441, v2442];
-          var e$$inline_982 = v762.join("");
+          var e$$inline_982 = JAM.call(v762.join, v762, [""], JAM.policy.p3);
           var v763;
           if (c$$inline_980) {
             var v4908 = c$$inline_980.width;
@@ -4326,8 +4192,8 @@ function v254() {
             if (v2443) {
               var v4909 = java.awt;
               var v4705 = v4909.Toolkit;
-              var v4323 = v4705.getDefaultToolkit();
-              c$$inline_980 = v4323.getScreenSize();
+              var v4323 = JAM.call(v4705.getDefaultToolkit, v4705, [], JAM.policy.p3);
+              c$$inline_980 = JAM.call(v4323.getScreenSize, v4323, [], JAM.policy.p3);
               var v5017 = c$$inline_980.screen;
               var v4984 = v5017.width;
               var v4910 = v4984 + "x";
@@ -4374,35 +4240,31 @@ function v254() {
           var c$$inline_986 = window.google_analytics_domain_name;
           if (c$$inline_986) {
             var v3606;
-            var v4707 = c$$inline_986.indexOf(".");
+            var v4707 = JAM.call(c$$inline_986.indexOf, c$$inline_986, ["."], JAM.policy.p3);
             var v4324 = 0 == v4707;
             if (v4324) {
-              v3606 = c$$inline_986.substr(1);
+              v3606 = JAM.call(c$$inline_986.substr, c$$inline_986, [1], JAM.policy.p3);
             } else {
               v3606 = c$$inline_986;
             }
             c$$inline_986 = v3606;
             var v4325 = "" + c$$inline_986;
-            var v3607 = v4325.split(".");
+            var v3607 = JAM.call(v4325.split, v4325, ["."], JAM.policy.p3);
             b$$inline_985 = v3607.length;
           }
           var d$$inline_987;
           c$$inline_986 = 999;
-          a$$inline_984 = a$$inline_984.split(";");
+          a$$inline_984 = JAM.call(a$$inline_984.split, a$$inline_984, [";"], JAM.policy.p3);
           var e$$inline_988 = 0;
           var v2447 = a$$inline_984.length;
           var v770 = e$$inline_988 < v2447;
           for (;v770;) {
-            introspect(JAM.policy.p4) {
-              var v2448 = a$$inline_984[e$$inline_988]
-            }
-            var v767 = Kh.exec(v2448);
+            var v2448 = a$$inline_984[e$$inline_988];
+            var v767 = JAM.call(Kh.exec, Kh, [v2448], JAM.policy.p3);
             var v2450 = !v767;
             if (v2450) {
-              introspect(JAM.policy.p4) {
-                var v2449 = a$$inline_984[e$$inline_988]
-              }
-              v767 = Lh.exec(v2449);
+              var v2449 = a$$inline_984[e$$inline_988];
+              v767 = JAM.call(Lh.exec, Lh, [v2449], JAM.policy.p3);
             }
             var f$$inline_989 = v767;
             if (f$$inline_989) {
@@ -4429,7 +4291,7 @@ function v254() {
         var v2454;
         var v4326 = l$$inline_814 && b$$inline_806;
         if (v4326) {
-          var v4708 = b$$inline_806.search(/^\d+\.\d+$/);
+          var v4708 = JAM.call(b$$inline_806.search, b$$inline_806, [/^\d+\.\d+$/], JAM.policy.p3);
           v4326 = -1 != v4708;
         }
         var v3609 = v4326;
@@ -4449,9 +4311,9 @@ function v254() {
       var v772 = k$$inline_813.hid;
       var v2456 = !v772;
       if (v2456) {
-        var v3610 = Math.random();
+        var v3610 = JAM.call(Math.random, Math, [], JAM.policy.p3);
         var v2455 = 2147483647 * v3610;
-        var v5082 = JAM.call(Math.round, Math, [v2455]);
+        var v5082 = JAM.call(Math.round, Math, [v2455], JAM.policy.p3);
         k$$inline_813.hid = v5082;
       }
       b$$inline_778 = k$$inline_813;
@@ -4463,11 +4325,11 @@ function v254() {
       a$$inline_777.ga_wpids = window.google_analytics_uacct;
       var a$$inline_818 = b$$inline_704;
       var v2457 = new Date;
-      var v773 = v2457.getTimezoneOffset();
+      var v773 = JAM.call(v2457.getTimezoneOffset, v2457, [], JAM.policy.p3);
       a$$inline_818.u_tz = -v773;
       var v5083 = ob$$1();
       a$$inline_818.u_his = v5083;
-      var v5084 = navigator.javaEnabled();
+      var v5084 = JAM.call(navigator.javaEnabled, navigator, [], JAM.policy.p3);
       a$$inline_818.u_java = v5084;
       var v774 = window.screen;
       if (v774) {
@@ -4505,10 +4367,10 @@ function v254() {
         var v778 = v2460.createTextRange;
         if (v778) {
           var v777 = b$$inline_992.body;
-          b$$inline_992 = v777.createTextRange();
-          JAM.call(b$$inline_992.moveToElementText, b$$inline_992, [a$$inline_991]);
+          b$$inline_992 = JAM.call(v777.createTextRange, v777, [], JAM.policy.p3);
+          JAM.call(b$$inline_992.moveToElementText, b$$inline_992, [a$$inline_991], JAM.policy.p3);
           try {
-            c$$inline_993 = b$$inline_992.queryCommandValue("FontName");
+            c$$inline_993 = JAM.call(b$$inline_992.queryCommandValue, b$$inline_992, ["FontName"], JAM.policy.p3);
           } catch (d$$inline_1000) {
             c$$inline_993 = "";
           }
@@ -4517,7 +4379,7 @@ function v254() {
         if (v2461) {
           c$$inline_993 = R$$1(a$$inline_991, "fontFamily");
         }
-        a$$inline_991 = c$$inline_993.split(",");
+        a$$inline_991 = JAM.call(c$$inline_993.split, c$$inline_993, [","], JAM.policy.p3);
         var v2462 = a$$inline_991.length;
         var v779 = 1 < v2462;
         if (v779) {
@@ -4536,22 +4398,22 @@ function v254() {
             if (v2463) {
               v780 = b$$inline_996;
             } else {
-              v780 = b$$inline_996.charAt(d$$inline_998);
+              v780 = JAM.call(b$$inline_996.charAt, b$$inline_996, [d$$inline_998], JAM.policy.p3);
             }
             var e$$inline_999 = v780;
-            var v3612 = a$$inline_995.charAt(0);
+            var v3612 = JAM.call(a$$inline_995.charAt, a$$inline_995, [0], JAM.policy.p3);
             var v2464 = v3612 == e$$inline_999;
             if (v2464) {
               var v4710 = a$$inline_995.length;
               var v4329 = v4710 - 1;
-              var v3613 = a$$inline_995.charAt(v4329);
+              var v3613 = JAM.call(a$$inline_995.charAt, a$$inline_995, [v4329], JAM.policy.p3);
               v2464 = v3613 == e$$inline_999;
             }
             var v782 = v2464;
             if (v782) {
               var v2465 = a$$inline_995.length;
               var v781 = v2465 - 1;
-              JSCompiler_inline_result$$inline_994 = a$$inline_995.substring(1, v781);
+              JSCompiler_inline_result$$inline_994 = JAM.call(a$$inline_995.substring, a$$inline_995, [1, v781], JAM.policy.p3);
               break JSCompiler_inline_label_1001;
             }
             d$$inline_998++;
@@ -4560,7 +4422,7 @@ function v254() {
           JSCompiler_inline_result$$inline_994 = a$$inline_995;
         }
         JSCompiler_inline_result$$931 = JSCompiler_inline_result$$inline_994;
-        var v5085 = JSCompiler_inline_result$$931.toLowerCase();
+        var v5085 = JAM.call(JSCompiler_inline_result$$931.toLowerCase, JSCompiler_inline_result$$931, [], JAM.policy.p3);
         JSCompiler_temp_const$$930.dff = v5085;
         var v5086 = Wd(a$$inline_820);
         b$$inline_821.dfs = v5086;
@@ -4602,9 +4464,9 @@ function v254() {
             var v3614 = v4330;
             if (v3614) {
               var v4915 = f$$inline_1008 - b$$inline_1004;
-              b$$inline_1004 = Math.abs(v4915);
+              b$$inline_1004 = JAM.call(Math.abs, Math, [v4915], JAM.policy.p3);
               var v4916 = a$$inline_1003 - c$$inline_1005;
-              c$$inline_1005 = Math.abs(v4916);
+              c$$inline_1005 = JAM.call(Math.abs, Math, [v4916], JAM.policy.p3);
               var v4712 = b$$inline_1004 + c$$inline_1005;
               v3614 = 10 >= v4712;
             }
@@ -4616,10 +4478,10 @@ function v254() {
             }
             d$$inline_826 = v788;
             var v789 = d$$inline_826.x;
-            var v5087 = JAM.call(Math.round, Math, [v789]);
+            var v5087 = JAM.call(Math.round, Math, [v789], JAM.policy.p3);
             b$$inline_824.adx = v5087;
             var v790 = d$$inline_826.y;
-            var v5088 = JAM.call(Math.round, Math, [v790]);
+            var v5088 = JAM.call(Math.round, Math, [v790], JAM.policy.p3);
             b$$inline_824.ady = v5088;
           }
           var v4713 = b$$inline_824.adx;
@@ -4692,7 +4554,7 @@ function v254() {
                     b$$inline_1018 = new M$$1(v2471, v2472);
                   } else {
                     var v793 = dd(a$$inline_1017);
-                    b$$inline_1018 = v793.Ja();
+                    b$$inline_1018 = JAM.call(v793.Ja, v793, [], JAM.policy.p3);
                     var c$$inline_1019 = Cd(a$$inline_1017);
                     var v2473 = c$$inline_1019.x;
                     var v2474 = b$$inline_1018.x;
@@ -4748,7 +4610,7 @@ function v254() {
                     var v798;
                     if (c$$inline_1025) {
                       var v2480;
-                      var v3624 = a$$inline_1023 = c$$inline_1025.match(Xd);
+                      var v3624 = a$$inline_1023 = JAM.call(c$$inline_1025.match, c$$inline_1025, [Xd], JAM.policy.p3);
                       if (v3624) {
                         var v4336 = a$$inline_1023[1];
                         var v3622 = parseFloat(v4336);
@@ -4799,10 +4661,10 @@ function v254() {
               JSCompiler_inline_result$$926 = c$$inline_1012;
               d$$inline_826 = JSCompiler_inline_result$$926;
               var v3626 = d$$inline_826.x;
-              var v5089 = JAM.call(Math.round, Math, [v3626]);
+              var v5089 = JAM.call(Math.round, Math, [v3626], JAM.policy.p3);
               b$$inline_824.adx = v5089;
               var v2490 = d$$inline_826.y;
-              var v5090 = JAM.call(Math.round, Math, [v2490]);
+              var v5090 = JAM.call(Math.round, Math, [v2490], JAM.policy.p3);
               b$$inline_824.ady = v5090;
             } catch (e$$inline_827) {
               b$$inline_824.adx = -12245933;
@@ -4873,27 +4735,27 @@ function v254() {
         var b$$inline_841 = [];
         var v2495 = a$$inline_840.document;
         var v813 = v2495.URL;
-        JAM.call(b$$inline_841.push, b$$inline_841, [v813]);
+        JAM.call(b$$inline_841.push, b$$inline_841, [v813], JAM.policy.p3);
         var v814 = a$$inline_840.name;
         if (v814) {
           var v2496 = a$$inline_840.name;
-          JAM.call(b$$inline_841.push, b$$inline_841, [v2496]);
+          JAM.call(b$$inline_841.push, b$$inline_841, [v2496], JAM.policy.p3);
         }
         var c$$inline_842 = !0;
         var v815 = !c$$inline_842;
         a$$inline_840 = de(v815, a$$inline_840);
         var v2497 = a$$inline_840.width;
-        var v816 = v2497.toString();
-        JAM.call(b$$inline_841.push, b$$inline_841, [v816]);
+        var v816 = JAM.call(v2497.toString, v2497, [], JAM.policy.p3);
+        JAM.call(b$$inline_841.push, b$$inline_841, [v816], JAM.policy.p3);
         var v2498 = a$$inline_840.height;
-        var v817 = v2498.toString();
-        JAM.call(b$$inline_841.push, b$$inline_841, [v817]);
-        var v818 = b$$inline_841.join("");
+        var v817 = JAM.call(v2498.toString, v2498, [], JAM.policy.p3);
+        JAM.call(b$$inline_841.push, b$$inline_841, [v817], JAM.policy.p3);
+        var v818 = JAM.call(b$$inline_841.join, b$$inline_841, [""], JAM.policy.p3);
         b$$inline_839 = Ab(v818);
       }
       var v819 = 0 != b$$inline_839;
       if (v819) {
-        var v5091 = b$$inline_839.toString();
+        var v5091 = JAM.call(b$$inline_839.toString, b$$inline_839, [], JAM.policy.p3);
         a$$inline_838.ifk = v5091;
       }
       var a$$inline_845 = b$$inline_704;
@@ -4914,16 +4776,12 @@ function v254() {
         var v821 = c$$inline_847 < v2500;
         for (;v821;) {
           var v3633 = window.google_eids;
-          introspect(JAM.policy.p4) {
-            var v2501 = v3633[c$$inline_847]
-          }
+          var v2501 = v3633[c$$inline_847];
           var v820 = p$$1(v2501);
           if (v820) {
             var v3634 = window.google_eids;
-            introspect(JAM.policy.p4) {
-              var v2502 = v3634[c$$inline_847]
-            }
-            JAM.call(b$$inline_846.bb, b$$inline_846, [v2502]);
+            var v2502 = v3634[c$$inline_847];
+            JAM.call(b$$inline_846.bb, b$$inline_846, [v2502], JAM.policy.p3);
           }
           c$$inline_847++;
           var v3635 = window.google_eids;
@@ -4931,11 +4789,11 @@ function v254() {
           v821 = c$$inline_847 < v2503;
         }
       }
-      var v5092 = b$$inline_846.Ka();
+      var v5092 = JAM.call(b$$inline_846.Ka, b$$inline_846, [], JAM.policy.p3);
       a$$inline_845.eid = v5092;
       var a$$inline_849 = b$$inline_704;
       var b$$inline_850 = me();
-      var v823 = b$$inline_850 = b$$inline_850.getOseId();
+      var v823 = b$$inline_850 = JAM.call(b$$inline_850.getOseId, b$$inline_850, [], JAM.policy.p3);
       if (v823) {
         a$$inline_849.oid = b$$inline_850;
       }
@@ -4950,7 +4808,7 @@ function v254() {
       var f$$inline_857 = J$$1();
       var v824 = d$$inline_855.TOP_URL_REPLACES_MISSING_URL;
       var g$$inline_858 = v824.EXPERIMENT;
-      var v2504 = JAM.call(f$$inline_857.m, f$$inline_857, [e$$inline_856]);
+      var v2504 = JAM.call(f$$inline_857.m, f$$inline_857, [e$$inline_856], JAM.policy.p3);
       var v826 = v2504 == g$$inline_858;
       if (v826) {
         var b$$inline_859 = c$$inline_854.url;
@@ -4977,7 +4835,7 @@ function v254() {
       }
       var v827 = d$$inline_855.ALWAYS_USE_DELAYED_IMPRESSIONS;
       d$$inline_855 = v827.EXPERIMENT;
-      var v2507 = JAM.call(f$$inline_857.m, f$$inline_857, [e$$inline_856]);
+      var v2507 = JAM.call(f$$inline_857.m, f$$inline_857, [e$$inline_856], JAM.policy.p3);
       var v828 = v2507 == d$$inline_855;
       if (v828) {
         a$$inline_852.unviewed_position_start = "1";
@@ -5022,14 +4880,14 @@ function v254() {
       var v834 = c$$inline_854 = Mh(b$$inline_853);
       if (v834) {
         e$$inline_856 = new Uh(c$$inline_854);
-        var v3640 = e$$inline_856.yb();
+        var v3640 = JAM.call(e$$inline_856.yb, e$$inline_856, [], JAM.policy.p3);
         if (v3640) {
-          var v5093 = e$$inline_856.Ob();
+          var v5093 = JAM.call(e$$inline_856.Ob, e$$inline_856, [], JAM.policy.p3);
           a$$inline_852.dss = v5093;
         }
-        var v2514 = c$$inline_854.Oa();
+        var v2514 = JAM.call(c$$inline_854.Oa, c$$inline_854, [], JAM.policy.p3);
         if (v2514) {
-          var v5094 = c$$inline_854.Oa();
+          var v5094 = JAM.call(c$$inline_854.Oa, c$$inline_854, [], JAM.policy.p3);
           a$$inline_852.dsd = v5094;
         }
       }
@@ -5054,7 +4912,7 @@ function v254() {
             break JSCompiler_inline_label_882;
           }
           var d$$inline_865;
-          var v2516 = c$$inline_864.indexOf("google_anchor_debug");
+          var v2516 = JAM.call(c$$inline_864.indexOf, c$$inline_864, ["google_anchor_debug"], JAM.policy.p3);
           var v837 = -1 != v2516;
           if (v837) {
             d$$inline_865 = Yg(1);
@@ -5064,7 +4922,7 @@ function v254() {
             c$$inline_861 = !1;
             break JSCompiler_inline_label_882;
           }
-          JAM.call(d$$inline_865.ja, d$$inline_865, [a$$inline_862, b$$inline_863]);
+          JAM.call(d$$inline_865.ja, d$$inline_865, [a$$inline_862, b$$inline_863], JAM.policy.p3);
           c$$inline_861 = !0;
         }
         var v2517 = !c$$inline_861;
@@ -5085,7 +4943,7 @@ function v254() {
         var a$$inline_867 = "";
         var v848 = document.documentMode;
         if (v848) {
-          var b$$inline_868 = JAM.call(document.createElement, document, ["IFRAME"]);
+          var b$$inline_868 = JAM.call(document.createElement, document, ["IFRAME"], JAM.policy.p3);
           b$$inline_868.frameBorder = 0;
           var v841 = b$$inline_868.style;
           v841.height = 0;
@@ -5096,19 +4954,19 @@ function v254() {
           var v847 = document.body;
           if (v847) {
             var v844 = document.body;
-            JAM.call(v844.appendChild, v844, [b$$inline_868]);
+            JAM.call(v844.appendChild, v844, [b$$inline_868], JAM.policy.p3);
             try {
               var v845 = b$$inline_868.contentWindow;
               var c$$inline_869 = v845.document;
-              c$$inline_869.open();
-              JAM.call(c$$inline_869.write, c$$inline_869, ["<!DOCTYPE html>"]);
-              c$$inline_869.close();
+              JAM.call(c$$inline_869.open, c$$inline_869, [], JAM.policy.p3);
+              JAM.call(c$$inline_869.write, c$$inline_869, ["<!DOCTYPE html>"], JAM.policy.p3);
+              JAM.call(c$$inline_869.close, c$$inline_869, [], JAM.policy.p3);
               var v2518 = c$$inline_869.documentMode;
               a$$inline_867 = a$$inline_867 + v2518;
             } catch (d$$inline_878) {
             }
             var v846 = document.body;
-            v846.removeChild(b$$inline_868);
+            JAM.call(v846.removeChild, v846, [b$$inline_868], JAM.policy.p3);
           }
         }
         JSCompiler_inline_result$$inline_866 = a$$inline_867;
@@ -5116,14 +4974,14 @@ function v254() {
       }
       c$$inline_854 = K$$1.SS;
       var v850 = J$$1();
-      e$$inline_856 = JAM.call(v850.m, v850, [14]);
+      e$$inline_856 = JAM.call(v850.m, v850, [14], JAM.policy.p3);
       var v2519 = c$$inline_854.COUNT_AD_FRAMES_ON_PAGE_EXPERIMENT;
       var v851 = e$$inline_856 == v2519;
       if (v851) {
         var v2520 = a$$inline_852.adk;
         var v2521 = a$$inline_852.correlator;
         var v2522 = a$$inline_852.frm;
-        var v5096 = JAM.call(T$$1.frameCountsWithDelayedPingback, T$$1, [b$$inline_853, v2520, v2521, v2522]);
+        var v5096 = JAM.call(T$$1.frameCountsWithDelayedPingback, T$$1, [b$$inline_853, v2520, v2521, v2522], JAM.policy.p3);
         a$$inline_852.frmn = v5096;
       }
       var v2523 = c$$inline_854.BROWSER_DIMENSIONS_EXPERIMENT;
@@ -5167,7 +5025,7 @@ function v254() {
         var v855 = v2525;
         JSCompiler_inline_result$$inline_870 = [v852, v853, b$$inline_871, c$$inline_872, v854, v855, e$$inline_873, f$$inline_874, h$$inline_875, k$$inline_876];
         b$$inline_853 = JSCompiler_inline_result$$inline_870;
-        var v5097 = b$$inline_853.join(",");
+        var v5097 = JAM.call(b$$inline_853.join, b$$inline_853, [","], JAM.policy.p3);
         a$$inline_852.brdim = v5097;
       }
       var a$$inline_877 = 0;
@@ -5189,7 +5047,7 @@ function v254() {
       var c$$inline_502 = L$$1(b$$inline_501, "/pagead/ads?");
       var JSCompiler_inline_result$$575;
       var v859 = J$$1();
-      var a$$inline_706 = JAM.call(v859.m, v859, [19]);
+      var a$$inline_706 = JAM.call(v859.m, v859, [19], JAM.policy.p3);
       var b$$inline_707 = K$$1.PRERENDERING_DELAYED_IMPRESSION;
       var v2528 = b$$inline_707.EXPERIMENT;
       var v860 = a$$inline_706 == v2528;
@@ -5259,13 +5117,13 @@ function v254() {
       var v3650 = c$$inline_506.length;
       var v2536 = 1991 < v3650;
       if (v2536) {
-        var v2535 = c$$inline_506.substring(0, 1983);
+        var v2535 = JAM.call(c$$inline_506.substring, c$$inline_506, [0, 1983], JAM.policy.p3);
         v865 = v2535 + "&trunc=1";
       } else {
         v865 = c$$inline_506;
       }
       c$$inline_506 = v865;
-      c$$inline_506 = c$$inline_506.replace(/%\w?$/, "");
+      c$$inline_506 = JAM.call(c$$inline_506.replace, c$$inline_506, [/%\w?$/, ""], JAM.policy.p3);
       var f$$inline_509 = "script";
       var g$$inline_510 = Lb(e$$inline_508);
       H$$1();
@@ -5298,7 +5156,7 @@ function v254() {
           var f$$inline_716 = void 0;
           var v866;
           if (e$$inline_715) {
-            var v2539 = c$$inline_713.replace(/&ea=[^&]*/, "");
+            var v2539 = JAM.call(c$$inline_713.replace, c$$inline_713, [/&ea=[^&]*/, ""], JAM.policy.p3);
             v866 = v2539 + "&ea=0";
           } else {
             v866 = c$$inline_713;
@@ -5353,10 +5211,10 @@ function v254() {
               a$$inline_884 = a$$inline_884 - 1;
               var v874 = 0 < v2544;
               for (;v874;) {
-                var v4719 = Math.random();
+                var v4719 = JAM.call(Math.random, Math, [], JAM.policy.p3);
                 var v4349 = v4719 * d$$inline_887;
-                var v3656 = JAM.call(Math.floor, Math, [v4349]);
-                var v2545 = c$$inline_886.charAt(v3656);
+                var v3656 = JAM.call(Math.floor, Math, [v4349], JAM.policy.p3);
+                var v2545 = JAM.call(c$$inline_886.charAt, c$$inline_886, [v3656], JAM.policy.p3);
                 e$$inline_888 = e$$inline_888 + v2545;
                 var v2546 = a$$inline_884;
                 a$$inline_884 = a$$inline_884 - 1;
@@ -5371,11 +5229,11 @@ function v254() {
               var v2547 = !a$$inline_890;
               var v875 = !v2547;
               if (v875) {
-                var v3657 = a$$inline_890.indexOf("?google_debug");
+                var v3657 = JAM.call(a$$inline_890.indexOf, a$$inline_890, ["?google_debug"], JAM.policy.p3);
                 var v2548 = 0 < v3657;
                 var v3659 = !v2548;
                 if (v3659) {
-                  var v3658 = a$$inline_890.indexOf("&google_debug");
+                  var v3658 = JAM.call(a$$inline_890.indexOf, a$$inline_890, ["&google_debug"], JAM.policy.p3);
                   v2548 = 0 < v3658;
                 }
                 v875 = v2548;
@@ -5405,9 +5263,7 @@ function v254() {
                 JSCompiler_inline_result$$inline_898 = !1;
                 break JSCompiler_inline_label_908;
               }
-              introspect(JAM.policy.p4) {
-                var v878 = Ug[c$$inline_901]
-              }
+              var v878 = Ug[c$$inline_901];
               var v2550 = !v878;
               if (v2550) {
                 v878 = null;
@@ -5451,9 +5307,7 @@ function v254() {
               }
               var d$$inline_905 = rg(a$$inline_899);
               var v883 = d$$inline_905.wasReactiveAdCreated;
-              introspect(JAM.policy.p4) {
-                var e$$inline_906 = v883[c$$inline_901]
-              }
+              var e$$inline_906 = v883[c$$inline_901];
               var v884 = d$$inline_905.wasReactiveAdCreated;
               introspect(JAM.policy.p2) {
                 v884[c$$inline_901] = !0;
@@ -5469,7 +5323,7 @@ function v254() {
               d$$inline_895.src = v5100;
               c$$inline_894 = Bf(document, d$$inline_895);
               var v885 = document.body;
-              JAM.call(v885.appendChild, v885, [c$$inline_894]);
+              JAM.call(v885.appendChild, v885, [c$$inline_894], JAM.policy.p3);
               var v886 = D$$1();
               qh(a$$inline_892, e$$inline_896, c$$inline_894, v886);
             }
@@ -5498,7 +5352,7 @@ function v254() {
                 Ff(e$$inline_915, c$$inline_913, d$$inline_914, v887, v888);
                 var v889 = a$$inline_911.document;
                 var v890 = Cf(e$$inline_915);
-                JAM.call(v889.write, v889, [v890]);
+                JAM.call(v889.write, v889, [v890], JAM.policy.p3);
               } else {
                 var v891 = a$$inline_711.google_ad_width;
                 var v892 = a$$inline_711.google_ad_height;
@@ -5530,19 +5384,19 @@ function v254() {
             var v4355 = v4720;
             var v4356 = "google_expandable_ad_slot" + d$$inline_714;
             var v3665 = Yd(h$$inline_718, c$$inline_713, v4352, v4353, I$$inline_723, v4354, v4355, v4356);
-            JAM.call(v3664.push, v3664, [v3665]);
+            JAM.call(v3664.push, v3664, [v3665], JAM.policy.p3);
           }
           if (B$$2) {
             var a$$inline_918 = a$$inline_711.google_async_iframe_id;
             var v3666 = ["<!DOCTYPE html><html><body>", l$$inline_720, "</body></html>"];
-            var v2554 = v3666.join("");
+            var v2554 = JAM.call(v3666.join, v3666, [""], JAM.policy.p3);
             var v897 = ab$$1(v2554);
             var c$$inline_920 = "javascript:" + v897;
             var d$$inline_921 = D$$1();
             var v898 = new Me(d$$inline_921);
-            JAM.call(v898.set, v898, [a$$inline_918, c$$inline_920]);
+            JAM.call(v898.set, v898, [a$$inline_918, c$$inline_920], JAM.policy.p3);
           }
-          a$$inline_711 = JAM.call(JAM.get(document, "getElementById", JAM.policy.p1), document, [h$$inline_718]);
+          a$$inline_711 = JAM.call(document.getElementById, document, [h$$inline_718], JAM.policy.p3);
           var v899 = zi && a$$inline_711;
           if (v899) {
             Ai(a$$inline_711, document);
@@ -5557,7 +5411,7 @@ function v254() {
         var v3667 = v4357 + "></";
         var v2555 = v3667 + f$$inline_509;
         var v901 = v2555 + ">";
-        JAM.call(document.write, document, [v901]);
+        JAM.call(document.write, document, [v901], JAM.policy.p3);
       }
       var v903 = a$$inline_504.google_ad_output;
       var v904 = a$$inline_504.google_ad_width;
@@ -5573,14 +5427,14 @@ function v254() {
       var JSCompiler_temp$$33;
       var v2556 = a$$557 = bg;
       if (v2556) {
-        var v3668 = a$$557.Ta();
+        var v3668 = JAM.call(a$$557.Ta, a$$557, [], JAM.policy.p3);
         v2556 = !v3668;
       }
       var v906 = JSCompiler_temp$$33 = v2556;
       if (v906) {
       } else {
         if (sc) {
-          sc();
+          JAM.call(sc, null, [], JAM.policy.p3);
         }
         JSCompiler_temp$$33 = void 0;
       }
@@ -5607,7 +5461,7 @@ function v254() {
       var v4358 = K$$1.SEND_LOAD_TIME_PINGBACKS;
       var v3671 = v4358.EXPERIMENT;
       var v2559 = [v3671];
-      JAM.call(v2558.k, v2558, [v2559, ra$$1, 16]);
+      JAM.call(v2558.k, v2558, [v2559, ra$$1, 16], JAM.policy.p3);
     }
     return;
   }
@@ -5629,18 +5483,18 @@ function v254() {
     return;
   }
   function wi(a$$540, b$$412, c$$277, d$$169, e$$100) {
-    a$$540 = JAM.call(JAM.get(document, "getElementById", JAM.policy.p1), document, [a$$540]);
+    a$$540 = JAM.call(document.getElementById, document, [a$$540], JAM.policy.p3);
     var a$$inline_442 = b$$412;
     var b$$inline_443 = a$$540;
     var c$$inline_444 = c$$277;
     var d$$inline_445 = d$$169;
     var e$$inline_446 = e$$100;
     var f$$inline_447 = me();
-    var v909 = f$$inline_447.getOseId();
+    var v909 = JAM.call(f$$inline_447.getOseId, f$$inline_447, [], JAM.policy.p3);
     if (v909) {
       var v3672 = c$$inline_444 || "";
       var v2562 = String(v3672);
-      JAM.call(f$$inline_447.registerAdBlock, f$$inline_447, [a$$inline_442, 1, v2562, b$$inline_443, d$$inline_445, e$$inline_446]);
+      JAM.call(f$$inline_447.registerAdBlock, f$$inline_447, [a$$inline_442, 1, v2562, b$$inline_443, d$$inline_445, e$$inline_446], JAM.policy.p3);
     }
     if (B$$2) {
       uf();
@@ -5665,7 +5519,7 @@ function v254() {
         var c$$inline_434 = a$$537;
         var v4359 = a$$inline_432;
         if (v4359) {
-          v4359 = a$$inline_432 = JAM.call(JAM.get(b$$409, "getElementById", JAM.policy.p1), b$$409, [a$$inline_432]);
+          v4359 = a$$inline_432 = JAM.call(b$$409.getElementById, b$$409, [a$$inline_432], JAM.policy.p3);
         }
         var v3674 = v4359;
         if (v3674) {
@@ -5684,7 +5538,7 @@ function v254() {
         }
         JSCompiler_temp$$65 = void 0;
       } else {
-        JSCompiler_temp$$65 = JAM.call(b$$409.write, b$$409, [a$$537]);
+        JSCompiler_temp$$65 = JAM.call(b$$409.write, b$$409, [a$$537], JAM.policy.p3);
       }
     } else {
       b$$409 = yb(a$$537);
@@ -5703,7 +5557,7 @@ function v254() {
         v4361 = void 0;
       }
       var v3680 = v4361;
-      var v5102 = JAM.call(ExpandableAdSlotFactory.createIframe, ExpandableAdSlotFactory, [e$$97, v3677, g$$34, h$$26, v3678, v3679, v3680]);
+      var v5102 = JAM.call(ExpandableAdSlotFactory.createIframe, ExpandableAdSlotFactory, [e$$97, v3677, g$$34, h$$26, v3678, v3679, v3680], JAM.policy.p3);
       introspect(JAM.policy.p2) {
         a$$537[v2565] = v5102;
       }
@@ -5743,28 +5597,28 @@ function v254() {
     }
     var v914 = v2566;
     if (v914) {
-      d$$165 = d$$165.replace(/&(adx|ady|oid|jp|top)=[^&]*/g, "");
+      d$$165 = JAM.call(d$$165.replace, d$$165, [/&(adx|ady|oid|jp|top)=[^&]*/g, ""], JAM.policy.p3);
       d$$165 = d$$165 + "&ea=0";
       c$$273 = !1;
     }
     oi(a$$536, b$$408, c$$273, d$$165, e$$96, f$$55, g$$33, h$$25, k$$12, l$$14, z$$7);
     if (xb$$1) {
       if (sc) {
-        sc();
+        JAM.call(sc, null, [], JAM.policy.p3);
       }
     }
     return;
   }
   function ni(a$$535, b$$407, c$$272) {
     function v27() {
-      d$$164.R();
-      var v915 = d$$164.Ta();
+      JAM.call(d$$164.R, d$$164, [], JAM.policy.p3);
+      var v915 = JAM.call(d$$164.Ta, d$$164, [], JAM.policy.p3);
       var v2567 = !v915;
       if (v2567) {
-        d$$164.ya();
-        var v3683 = d$$164.v();
+        JAM.call(d$$164.ya, d$$164, [], JAM.policy.p3);
+        var v3683 = JAM.call(d$$164.v, d$$164, [], JAM.policy.p3);
         var v3684 = !0;
-        JAM.call(c$$272, null, [v3683, null, v3684]);
+        JAM.call(c$$272, null, [v3683, null, v3684], JAM.policy.p3);
       }
       return;
     }
@@ -5772,35 +5626,35 @@ function v254() {
     var v2569 = !d$$164;
     if (v2569) {
       var v2568 = !1;
-      JAM.call(c$$272, null, [-1, null, v2568]);
+      JAM.call(c$$272, null, [-1, null, v2568], JAM.policy.p3);
     }
-    d$$164.R();
+    JAM.call(d$$164.R, d$$164, [], JAM.policy.p3);
     var v916;
     var v2573 = d$$164.ma;
     if (v2573) {
-      var v2570 = d$$164.v();
+      var v2570 = JAM.call(d$$164.v, d$$164, [], JAM.policy.p3);
       var v2571 = d$$164.za;
       var v2572 = !1;
-      v916 = JAM.call(c$$272, null, [v2570, v2571, v2572]);
+      v916 = JAM.call(c$$272, null, [v2570, v2571, v2572], JAM.policy.p3);
     } else {
       var v3685 = mi(b$$407);
-      JAM.call(d$$164.zc, d$$164, [v3685, c$$272]);
+      JAM.call(d$$164.zc, d$$164, [v3685, c$$272], JAM.policy.p3);
       var v3686 = d$$164.va;
       var v4365 = !v3686;
       if (v4365) {
         b$$407 = Fe;
         var v4727;
         var v4986 = navigator.userAgent;
-        var v4921 = b$$407.test(v4986);
+        var v4921 = JAM.call(b$$407.test, b$$407, [v4986], JAM.policy.p3);
         if (v4921) {
-          d$$164.Ec();
+          JAM.call(d$$164.Ec, d$$164, [], JAM.policy.p3);
           b$$407 = v27;
-          v4727 = a$$535.setTimeout(b$$407, Wh);
+          v4727 = JAM.call(a$$535.setTimeout, a$$535, [b$$407, Wh], JAM.policy.p3);
         } else {
-          d$$164.ya();
-          var v4987 = d$$164.v();
+          JAM.call(d$$164.ya, d$$164, [], JAM.policy.p3);
+          var v4987 = JAM.call(d$$164.v, d$$164, [], JAM.policy.p3);
           var v4988 = !1;
-          v4727 = JAM.call(c$$272, null, [v4987, null, v4988]);
+          v4727 = JAM.call(c$$272, null, [v4987, null, v4988], JAM.policy.p3);
         }
         v3686 = v4727;
       }
@@ -5830,10 +5684,10 @@ function v254() {
     var b$$405 = mc();
     var v918 = a$$533.setUpForcePeriscope;
     if (v918) {
-      a$$533.setUpForcePeriscope();
+      JAM.call(a$$533.setUpForcePeriscope, a$$533, [], JAM.policy.p3);
     }
     var v919 = G$$1(b$$405, 7);
-    return JAM.call(a$$533.setupOse, a$$533, [v919]);
+    return JAM.call(a$$533.setupOse, a$$533, [v919], JAM.policy.p3);
   }
   function ki(a$$531, b$$403) {
     function v28(a$$532, b$$404) {
@@ -5875,7 +5729,7 @@ function v254() {
       }
       return;
     }
-    var c$$271 = b$$403.slice(-1);
+    var c$$271 = JAM.call(b$$403.slice, b$$403, [-1], JAM.policy.p3);
     var v921;
     var v3694 = "?" == c$$271;
     var v4370 = !v3694;
@@ -5892,14 +5746,14 @@ function v254() {
     var e$$95 = [b$$403];
     c$$271 = v28;
     x$$50(a$$531, c$$271);
-    return e$$95.join("");
+    return JAM.call(e$$95.join, e$$95, [""], JAM.policy.p3);
   }
   function di() {
     return L$$1(Vh, "/pagead/expansion_embed.js");
   }
   function bi() {
     var v3695 = window.google_ad_format;
-    var v2577 = /_sdo/.test(v3695);
+    var v2577 = JAM.call(/_sdo/.test, /_sdo/, [v3695], JAM.policy.p3);
     var v974 = !v2577;
     if (v974) {
       var v2578 = wc();
@@ -5927,7 +5781,7 @@ function v254() {
             if (c$$inline_647) {
               var v2579 = H$$1();
               var v2580 = [c$$inline_647];
-              JAM.call(v2579.k, v2579, [v2580, 1, 10]);
+              JAM.call(v2579.k, v2579, [v2580, 1, 10], JAM.policy.p3);
             }
           }
         }
@@ -5951,7 +5805,7 @@ function v254() {
           if (c$$inline_651) {
             var v2581 = H$$1();
             var v2582 = [c$$inline_651];
-            JAM.call(v2581.k, v2581, [v2582, 1, 10]);
+            JAM.call(v2581.k, v2581, [v2582, 1, 10], JAM.policy.p3);
           }
         }
         var v2583 = K$$1.EXPANDABLE_MOBILE_REVERSE;
@@ -5959,7 +5813,7 @@ function v254() {
         var v2584 = K$$1.EXPANDABLE_MOBILE_REVERSE;
         var v928 = v2584.EXPERIMENT;
         var b$$inline_412 = [v927, v928];
-        JAM.call(a$$inline_411.k, a$$inline_411, [b$$inline_412, na$$1, 13]);
+        JAM.call(a$$inline_411.k, a$$inline_411, [b$$inline_412, na$$1, 13], JAM.policy.p3);
         var b$$inline_654 = Ge;
         var c$$inline_655 = K$$1.PREFETCH_AD_HANDLING;
         var d$$inline_656;
@@ -5977,22 +5831,22 @@ function v254() {
         if (d$$inline_656) {
           var v2585 = H$$1();
           var v2586 = [d$$inline_656];
-          JAM.call(v2585.k, v2585, [v2586, 1, 4]);
+          JAM.call(v2585.k, v2585, [v2586, 1, 4], JAM.policy.p3);
         }
         var c$$inline_413 = K$$1.SS;
         var v930 = c$$inline_413.COUNT_AD_FRAMES_ON_PAGE_CONTROL;
         var v931 = c$$inline_413.COUNT_AD_FRAMES_ON_PAGE_EXPERIMENT;
         b$$inline_412 = [v930, v931];
-        JAM.call(a$$inline_411.k, a$$inline_411, [b$$inline_412, va$$1, 14]);
+        JAM.call(a$$inline_411.k, a$$inline_411, [b$$inline_412, va$$1, 14], JAM.policy.p3);
         var v932 = c$$inline_413.BROWSER_DIMENSIONS_CONTROL;
         var v933 = c$$inline_413.BROWSER_DIMENSIONS_EXPERIMENT;
         b$$inline_412 = [v932, v933];
-        JAM.call(a$$inline_411.k, a$$inline_411, [b$$inline_412, Ca$$1, 14]);
+        JAM.call(a$$inline_411.k, a$$inline_411, [b$$inline_412, Ca$$1, 14], JAM.policy.p3);
         b$$inline_412 = K$$1.PERISCOPE_FOR_TARGETING;
         var v934 = b$$inline_412.CONTROL_REFERER_CLEANUP;
         var v935 = b$$inline_412.EXPERIMENT_REFERER_CLEANUP;
         b$$inline_412 = [v934, v935];
-        JAM.call(a$$inline_411.k, a$$inline_411, [b$$inline_412, qa$$1, 10]);
+        JAM.call(a$$inline_411.k, a$$inline_411, [b$$inline_412, qa$$1, 10], JAM.policy.p3);
         var v937 = window.google_ad_unit_key_2;
         if (v937) {
           var a$$inline_658;
@@ -6004,7 +5858,7 @@ function v254() {
             v936 = a$$inline_658 = v2587.CONTROL;
           } else {
             var v3697 = window.google_ad_unit_key_2;
-            var v2588 = /[0-9]+/.test(v3697);
+            var v2588 = JAM.call(/[0-9]+/.test, /[0-9]+/, [v3697], JAM.policy.p3);
             if (v2588) {
               var v3698 = K$$1.ADD_ADK2;
               v2588 = a$$inline_658 = v3698.EXPERIMENT;
@@ -6015,7 +5869,7 @@ function v254() {
           if (a$$inline_658) {
             var v2590 = H$$1();
             var v2591 = [a$$inline_658];
-            JAM.call(v2590.k, v2590, [v2591, 1, 4]);
+            JAM.call(v2590.k, v2590, [v2591, 1, 4], JAM.policy.p3);
           }
         }
         var v2592 = K$$1.ASYNC_EXPANSION_EMBED;
@@ -6023,7 +5877,7 @@ function v254() {
         var v2593 = K$$1.ASYNC_EXPANSION_EMBED;
         var v939 = v2593.CONTROL;
         b$$inline_412 = [v938, v939];
-        JAM.call(a$$inline_411.k, a$$inline_411, [b$$inline_412, ya$$1, 18]);
+        JAM.call(a$$inline_411.k, a$$inline_411, [b$$inline_412, ya$$1, 18], JAM.policy.p3);
         var a$$inline_660 = void 0;
         var b$$inline_661 = Pb;
         var c$$inline_662 = K$$1.ASYNC_FOR_OPERA_ANDROID;
@@ -6036,7 +5890,7 @@ function v254() {
         var v942 = window.google_async_for_oa_experiment;
         if (v942) {
           var d$$inline_663;
-          a$$inline_660 = /Chrome/.test(a$$inline_660);
+          a$$inline_660 = JAM.call(/Chrome/.test, /Chrome/, [a$$inline_660], JAM.policy.p3);
           var v941;
           var v3699 = window.google_async_for_oa_experiment;
           var v3700 = b$$inline_661.CONTROL;
@@ -6068,7 +5922,7 @@ function v254() {
           if (d$$inline_663) {
             var v2598 = H$$1();
             var v2599 = [d$$inline_663];
-            JAM.call(v2598.k, v2598, [v2599, 1, 4]);
+            JAM.call(v2598.k, v2598, [v2599, 1, 4], JAM.policy.p3);
           }
         }
         var v2600 = K$$1.JS_RNG;
@@ -6076,7 +5930,7 @@ function v254() {
         var v2601 = K$$1.JS_RNG;
         var v944 = v2601.EXPERIMENT;
         b$$inline_412 = [v943, v944];
-        JAM.call(a$$inline_411.k, a$$inline_411, [b$$inline_412, za$$1, 17]);
+        JAM.call(a$$inline_411.k, a$$inline_411, [b$$inline_412, za$$1, 17], JAM.policy.p3);
         var a$$inline_665 = v$$1;
         a$$inline_665 = Xe(a$$inline_665);
         var v946 = 3 == a$$inline_665;
@@ -6086,7 +5940,7 @@ function v254() {
           var v2602 = a$$inline_665.CONTROL;
           var v2603 = a$$inline_665.EXPERIMENT;
           var v945 = [v2602, v2603];
-          JAM.call(b$$inline_666.k, b$$inline_666, [v945, ua$$1, 19]);
+          JAM.call(b$$inline_666.k, b$$inline_666, [v945, ua$$1, 19], JAM.policy.p3);
         }
       }
       JSCompiler_inline_label_Vf_671: {
@@ -6105,7 +5959,7 @@ function v254() {
           a$$inline_668 = v2604;
           var v2605 = J$$1();
           var v2606 = [a$$inline_668];
-          JAM.call(v2605.k, v2605, [v2606, 1, 15]);
+          JAM.call(v2605.k, v2605, [v2606, 1, 15], JAM.policy.p3);
           break JSCompiler_inline_label_Vf_671;
         }
       }
@@ -6136,7 +5990,7 @@ function v254() {
           a$$inline_672 = v2608;
           var v2609 = J$$1();
           var v2610 = [a$$inline_672];
-          JAM.call(v2609.k, v2609, [v2610, 1, 4]);
+          JAM.call(v2609.k, v2609, [v2610, 1, 4], JAM.policy.p3);
           break JSCompiler_inline_label_Tf_676;
         }
       }
@@ -6144,26 +5998,22 @@ function v254() {
       var b$$inline_417;
       var a$$inline_677 = document.URL;
       var b$$inline_678 = {};
-      a$$inline_677 = a$$inline_677.split("?");
+      a$$inline_677 = JAM.call(a$$inline_677.split, a$$inline_677, ["?"], JAM.policy.p3);
       var v3707 = a$$inline_677.length;
       var v2611 = v3707 - 1;
-      introspect(JAM.policy.p4) {
-        var v949 = a$$inline_677[v2611]
-      }
-      a$$inline_677 = v949.split("&");
+      var v949 = a$$inline_677[v2611];
+      a$$inline_677 = JAM.call(v949.split, v949, ["&"], JAM.policy.p3);
       var c$$inline_679 = 0;
       var v2612 = a$$inline_677.length;
       var v955 = c$$inline_679 < v2612;
       for (;v955;) {
-        introspect(JAM.policy.p4) {
-          var v950 = a$$inline_677[c$$inline_679]
-        }
-        var d$$inline_680 = v950.split("=");
+        var v950 = a$$inline_677[c$$inline_679];
+        var d$$inline_680 = JAM.call(v950.split, v950, ["="], JAM.policy.p3);
         var v954 = d$$inline_680[0];
         if (v954) {
           try {
             var v951 = d$$inline_680[0];
-            var JSCompiler_temp_const$$741 = v951.toLowerCase();
+            var JSCompiler_temp_const$$741 = JAM.call(v951.toLowerCase, v951, [], JAM.policy.p3);
             var JSCompiler_temp$$742;
             var v2613 = d$$inline_680.length;
             var v953 = 1 < v2613;
@@ -6172,7 +6022,7 @@ function v254() {
               var v952;
               var v2615 = window.decodeURIComponent;
               if (v2615) {
-                var v2614 = a$$inline_755.replace(/\+/g, " ");
+                var v2614 = JAM.call(a$$inline_755.replace, a$$inline_755, [/\+/g, " "], JAM.policy.p3);
                 v952 = decodeURIComponent(v2614);
               } else {
                 v952 = unescape(a$$inline_755);
@@ -6259,7 +6109,7 @@ function v254() {
           if (v3710) {
             var v4733 = b$$inline_758.location;
             var v4378 = v4733.protocol;
-            var v3709 = /^http/.test(v4378);
+            var v3709 = JAM.call(/^http/.test, /^http/, [v4378], JAM.policy.p3);
             v2617 = !v3709;
           }
           var v963 = JSCompiler_temp$$inline_759 = v2617;
@@ -6270,7 +6120,7 @@ function v254() {
               var b$$inline_761 = b$$inline_758;
               var v958;
               var v4379 = J$$1();
-              var v3711 = JAM.call(v4379.m, v4379, [13]);
+              var v3711 = JAM.call(v4379.m, v4379, [13], JAM.policy.p3);
               var v4380 = K$$1.EXPANDABLE_MOBILE_REVERSE;
               var v3712 = v4380.EXPERIMENT;
               var v2618 = v3711 == v3712;
@@ -6283,30 +6133,30 @@ function v254() {
               var d$$inline_763 = navigator.userAgent;
               var e$$inline_764 = navigator.platform;
               c$$inline_762 = c$$inline_762 || /Win|Mac|Linux|iPad|iPod|iPhone/;
-              var v2619 = c$$inline_762.test(e$$inline_764);
+              var v2619 = JAM.call(c$$inline_762.test, c$$inline_762, [e$$inline_764], JAM.policy.p3);
               if (v2619) {
-                var v3713 = /^Opera/.test(d$$inline_763);
+                var v3713 = JAM.call(/^Opera/.test, /^Opera/, [d$$inline_763], JAM.policy.p3);
                 v2619 = !v3713;
               }
               var v962 = v2619;
               if (v962) {
-                var v2620 = /WebKit\/(\d+)/.exec(d$$inline_763);
+                var v2620 = JAM.call(/WebKit\/(\d+)/.exec, /WebKit\/(\d+)/, [d$$inline_763], JAM.policy.p3);
                 var v3714 = !v2620;
                 if (v3714) {
                   v2620 = [0, 0];
                 }
                 var v959 = v2620;
                 c$$inline_762 = v959[1];
-                var v2621 = /rv\:(\d+\.\d+)/.exec(d$$inline_763);
+                var v2621 = JAM.call(/rv\:(\d+\.\d+)/.exec, /rv\:(\d+\.\d+)/, [d$$inline_763], JAM.policy.p3);
                 var v3715 = !v2621;
                 if (v3715) {
                   v2621 = [0, 0];
                 }
                 var v960 = v2621;
                 var f$$inline_765 = v960[1];
-                var v4734 = /Win/.test(e$$inline_764);
+                var v4734 = JAM.call(/Win/.test, /Win/, [e$$inline_764], JAM.policy.p3);
                 if (v4734) {
-                  v4734 = /MSIE.*Trident/.test(d$$inline_763);
+                  v4734 = JAM.call(/MSIE.*Trident/.test, /MSIE.*Trident/, [d$$inline_763], JAM.policy.p3);
                 }
                 var v4381 = v4734;
                 if (v4381) {
@@ -6327,7 +6177,7 @@ function v254() {
                   }
                   var v4382 = v4736;
                   if (v4382) {
-                    var v4737 = /rv\:1\.8([^.]|\.0)/.test(d$$inline_763);
+                    var v4737 = JAM.call(/rv\:1\.8([^.]|\.0)/.test, /rv\:1\.8([^.]|\.0)/, [d$$inline_763], JAM.policy.p3);
                     v4382 = !v4737;
                   }
                   v3716 = v4382;
@@ -6385,7 +6235,7 @@ function v254() {
         var v3720 = K$$1.DIRECT_CALL_RENDER_AD;
         var v2625 = v3720.EXPERIMENT;
         var v966 = [v2624, v2625];
-        var e$$inline_423 = JAM.call(v965.k, v965, [v966, Aa$$1, 4]);
+        var e$$inline_423 = JAM.call(v965.k, v965, [v966, Aa$$1, 4], JAM.policy.p3);
       }
       var v968 = ci;
       if (v968) {
@@ -6405,7 +6255,7 @@ function v254() {
         var v4386 = v4740 + '"></';
         var v3721 = v4386 + d$$inline_422;
         var v2627 = v3721 + ">";
-        JAM.call(document.write, document, [v2627]);
+        JAM.call(document.write, document, [v2627], JAM.policy.p3);
       }
       var v972 = hi(a$$inline_419);
       if (v972) {
@@ -6433,7 +6283,7 @@ function v254() {
         var v4388 = v4742 + '"></';
         var v3723 = v4388 + d$$inline_422;
         var v2628 = v3723 + ">";
-        v973 = JAM.call(document.write, document, [v2628]);
+        v973 = JAM.call(document.write, document, [v2628], JAM.policy.p3);
       } else {
         var v2629;
         var v4389 = a$$inline_419;
@@ -6449,7 +6299,7 @@ function v254() {
           var v4745 = v4932 + '>google_protectAndRun("ads_core.google_render_ad", google_handleError, google_render_ad);</';
           var v4390 = v4745 + d$$inline_422;
           var v3724 = v4390 + ">";
-          v2629 = JAM.call(document.write, document, [v3724]);
+          v2629 = JAM.call(document.write, document, [v3724], JAM.policy.p3);
         } else {
           v2629 = ii();
         }
@@ -6472,14 +6322,14 @@ function v254() {
       }
       var v975 = v2631;
       if (v975) {
-        d$$161();
+        JAM.call(d$$161, null, [], JAM.policy.p3);
       }
       var a$$inline_396 = a$$518;
       var b$$inline_397 = 0;
       var v2632 = a$$inline_396.length;
       var v976 = b$$inline_397 < v2632;
       for (;v976;) {
-        JAM.call(JAM.get(a$$inline_396, b$$inline_397, JAM.policy.p4), a$$inline_396, []);
+        JAM.call(a$$inline_396[b$$inline_397], a$$inline_396, [], JAM.policy.p3);
         ++b$$inline_397;
         var v2633 = a$$inline_396.length;
         v976 = b$$inline_397 < v2633;
@@ -6487,9 +6337,9 @@ function v254() {
       a$$inline_396.length = 0;
       return;
     }
-    JAM.call(a$$518.push, a$$518, [b$$395]);
+    JAM.call(a$$518.push, a$$518, [b$$395], JAM.policy.p3);
     if (c$$265) {
-      window.setTimeout(v29, c$$265);
+      JAM.call(window.setTimeout, window, [v29, c$$265], JAM.policy.p3);
     }
     return;
   }
@@ -6512,9 +6362,7 @@ function v254() {
     ze = ze | 2;
     var v2635 = a$$511.length;
     var v978 = b$$391 % v2635;
-    introspect(JAM.policy.p4) {
-      return a$$511[v978];
-    }
+    return a$$511[v978];
   }
   function Bh(a$$510) {
     function v32(b$$390, c$$262) {
@@ -6566,15 +6414,13 @@ function v254() {
       return null;
     }
     var v980 = d$$155.document;
-    b$$382 = JAM.call(JAM.get(v980, "getElementById", JAM.policy.p1), v980, [b$$382]);
+    b$$382 = JAM.call(v980.getElementById, v980, [b$$382], JAM.policy.p3);
     var v981 = !b$$382;
     if (v981) {
       return null;
     }
     var v2637 = a$$503.google_reactive_ad_format;
-    introspect(JAM.policy.p4) {
-      var v982 = Ug[v2637]
-    }
+    var v982 = Ug[v2637];
     var v2638 = !v982;
     if (v2638) {
       v982 = null;
@@ -6611,7 +6457,7 @@ function v254() {
     return null;
   }
   function Z$$1(a$$494, b$$378, c$$252) {
-    ih.call(this, a$$494);
+    JAM.call(ih.call, ih, [this, a$$494], JAM.policy.p3);
     this.s = b$$378;
     this.Zb = c$$252;
     this.G = {};
@@ -6637,7 +6483,7 @@ function v254() {
     return a$$483 + v985;
   }
   function Y$$1(a$$482, b$$369, c$$247) {
-    hh.call(this, a$$482, b$$369, c$$247);
+    JAM.call(hh.call, hh, [this, a$$482, b$$369, c$$247], JAM.policy.p3);
     var v986 = c$$247.location;
     this.Wc = v986.hostname;
     var v2641 = c$$247.location;
@@ -6647,12 +6493,12 @@ function v254() {
     this.ea = [];
     this.ob = this.kd = !1;
     var v988 = !1;
-    JAM.call(this.N, this, [v988]);
-    this.Cc();
+    JAM.call(this.N, this, [v988], JAM.policy.p3);
+    JAM.call(this.Cc, this, [], JAM.policy.p3);
     return;
   }
   function jh(a$$480, b$$368) {
-    ih.call(this, a$$480);
+    JAM.call(ih.call, ih, [this, a$$480], JAM.policy.p3);
     this.Kb = b$$368;
     this.H = this.Cb = !1;
     return;
@@ -6660,11 +6506,11 @@ function v254() {
   function ih(a$$477) {
     this.i = a$$477;
     this.cc = {};
-    this.Wb();
+    JAM.call(this.Wb, this, [], JAM.policy.p3);
     return;
   }
   function X$$1(a$$465, b$$360, c$$242, d$$152) {
-    hh.call(this, a$$465, b$$360, c$$242);
+    JAM.call(hh.call, hh, [this, a$$465, b$$360, c$$242], JAM.policy.p3);
     this.I = this.Ib = this.Da = !1;
     this.w = null;
     var v2642 = c$$242.document;
@@ -6681,7 +6527,7 @@ function v254() {
       var v2643 = R$$1(b$$inline_372, "display");
       var v990 = "none" != v2643;
       if (v990) {
-        JSCompiler_inline_result$$49 = JAM.call(a$$inline_371, null, [b$$inline_372]);
+        JSCompiler_inline_result$$49 = JAM.call(a$$inline_371, null, [b$$inline_372], JAM.policy.p3);
         break JSCompiler_inline_label_Kd_378;
       }
       var c$$inline_373 = b$$inline_372.style;
@@ -6691,7 +6537,7 @@ function v254() {
       c$$inline_373.visibility = "hidden";
       c$$inline_373.position = "absolute";
       c$$inline_373.display = "inline";
-      var g$$inline_377 = JAM.call(a$$inline_371, null, [b$$inline_372]);
+      var g$$inline_377 = JAM.call(a$$inline_371, null, [b$$inline_372], JAM.policy.p3);
       c$$inline_373.display = d$$inline_374;
       c$$inline_373.position = f$$inline_376;
       c$$inline_373.visibility = e$$inline_375;
@@ -6699,7 +6545,7 @@ function v254() {
     }
     this.gd = JSCompiler_inline_result$$49;
     this.ua = d$$152;
-    this.hide();
+    JAM.call(this.hide, this, [], JAM.policy.p3);
     var v991 = this.i;
     var v992 = this.ec;
     var v5105 = lb$$1(v991, "orientationchange", this, v992);
@@ -6749,7 +6595,7 @@ function v254() {
     var v2644 = Number(v3728);
     var v1006 = [v2644];
     var v1007 = [0];
-    W$$1.call(this, v1006, v1007, b$$358);
+    JAM.call(W$$1.call, W$$1, [this, v1006, v1007, b$$358], JAM.policy.p3);
     return;
   }
   function fh(a$$460, b$$357) {
@@ -6758,7 +6604,7 @@ function v254() {
     var v2645 = Number(v3729);
     var v1008 = [v2645];
     var v1009 = [1];
-    W$$1.call(this, v1008, v1009, b$$357);
+    JAM.call(W$$1.call, W$$1, [this, v1008, v1009, b$$357], JAM.policy.p3);
     return;
   }
   function W$$1(a$$457, b$$355, c$$239) {
@@ -6772,7 +6618,7 @@ function v254() {
   function dh(a$$454) {
     this.lc = a$$454;
     var v2646 = this.ub;
-    var v1010 = JAM.call(r$$2, null, [v2646, this]);
+    var v1010 = JAM.call(r$$2, null, [v2646, this], JAM.policy.p3);
     var v5112 = ye("rach::hdlr", v1010);
     this.K = v5112;
     var v1011 = this.K;
@@ -6782,9 +6628,7 @@ function v254() {
   function $g(a$$453, b$$352, c$$236) {
     var d$$150 = rg(b$$352);
     var v2647 = a$$453.google_reactive_ad_format;
-    introspect(JAM.policy.p4) {
-      var v1012 = Ug[v2647]
-    }
+    var v1012 = Ug[v2647];
     var v2648 = !v1012;
     if (v2648) {
       v1012 = null;
@@ -6811,9 +6655,7 @@ function v254() {
     var v1013 = v2649;
     if (v1013) {
       var v3730 = d$$150.wasReactiveAdCreated;
-      introspect(JAM.policy.p4) {
-        var v2650 = v3730[c$$236]
-      }
+      var v2650 = v3730[c$$236];
       v1013 = !v2650;
     }
     return v1013;
@@ -6935,21 +6777,21 @@ function v254() {
         var JSCompiler_inline_result$$41;
         var v1020 = a$$429.navigator;
         var a$$inline_346 = v1020.userAgent;
-        var v4393 = /(Android|iPhone OS|Windows Phone)/.test(a$$inline_346);
+        var v4393 = JAM.call(/(Android|iPhone OS|Windows Phone)/.test, /(Android|iPhone OS|Windows Phone)/, [a$$inline_346], JAM.policy.p3);
         var v3734 = !v4393;
         var v4394 = !v3734;
         if (v4394) {
-          v3734 = /Android 2/.test(a$$inline_346);
+          v3734 = JAM.call(/Android 2/.test, /Android 2/, [a$$inline_346], JAM.policy.p3);
         }
         var v2655 = v3734;
         var v3735 = !v2655;
         if (v3735) {
-          v2655 = /iPhone OS [34]_/.test(a$$inline_346);
+          v2655 = JAM.call(/iPhone OS [34]_/.test, /iPhone OS [34]_/, [a$$inline_346], JAM.policy.p3);
         }
         var v1021 = v2655;
         var v2656 = !v1021;
         if (v2656) {
-          v1021 = /Windows Phone (?:OS )?[67]/.test(a$$inline_346);
+          v1021 = JAM.call(/Windows Phone (?:OS )?[67]/.test, /Windows Phone (?:OS )?[67]/, [a$$inline_346], JAM.policy.p3);
         }
         JSCompiler_inline_result$$41 = v1021;
         JSCompiler_temp$$40 = !JSCompiler_inline_result$$41;
@@ -6985,16 +6827,14 @@ function v254() {
     var f$$51 = 0;
     var v1027 = f$$51 < e$$84;
     for (;v1027;) {
-      introspect(JAM.policy.p4) {
-        var g$$30 = d$$142[f$$51]
-      }
+      var g$$30 = d$$142[f$$51];
       var v2658 = g$$30.nodeName;
-      var v1026 = /data-/.test(v2658);
+      var v1026 = JAM.call(/data-/.test, /data-/, [v2658], JAM.policy.p3);
       if (v1026) {
         var v2659 = g$$30.nodeName;
-        var v1024 = v2659.replace("data", "google");
-        var h$$22 = v1024.replace(/-/g, "_");
-        var v1025 = b$$335.hasOwnProperty(h$$22);
+        var v1024 = JAM.call(v2659.replace, v2659, ["data", "google"], JAM.policy.p3);
+        var h$$22 = JAM.call(v1024.replace, v1024, [/-/g, "_"], JAM.policy.p3);
+        var v1025 = JAM.call(b$$335.hasOwnProperty, b$$335, [h$$22], JAM.policy.p3);
         var v2660 = !v1025;
         if (v2660) {
           introspect(JAM.policy.p2) {
@@ -7010,7 +6850,7 @@ function v254() {
     var v1028 = "auto" == a$$inline_332;
     var v2661 = !v1028;
     if (v2661) {
-      v1028 = /^((^|,)(horizontal|vertical|rectangle))+$/.test(a$$inline_332);
+      v1028 = JAM.call(/^((^|,)(horizontal|vertical|rectangle))+$/.test, /^((^|,)(horizontal|vertical|rectangle))+$/, [a$$inline_332], JAM.policy.p3);
     }
     JSCompiler_inline_result$$59 = v1028;
     if (JSCompiler_inline_result$$59) {
@@ -7044,7 +6884,7 @@ function v254() {
         if (v3739) {
           v2663 = 1200;
         } else {
-          v2663 = JAM.call(Math.round, Math, [d$$inline_337]);
+          v2663 = JAM.call(Math.round, Math, [d$$inline_337], JAM.policy.p3);
         }
         v1031 = v2663;
       }
@@ -7061,13 +6901,13 @@ function v254() {
       var a$$inline_340 = a$$428;
       var v4399 = a$$inline_340.style;
       var v3740 = v4399.width;
-      var v2666 = sg.test(v3740);
+      var v2666 = JAM.call(sg.test, sg, [v3740], JAM.policy.p3);
       var v1033 = !v2666;
       var v2668 = !v1033;
       if (v2668) {
         var v4400 = a$$inline_340.style;
         var v3741 = v4400.height;
-        var v2667 = sg.test(v3741);
+        var v2667 = JAM.call(sg.test, sg, [v3741], JAM.policy.p3);
         v1033 = !v2667;
       }
       JSCompiler_inline_result$$54 = v1033;
@@ -7078,7 +6918,7 @@ function v254() {
         var v1034;
         var v2669 = c$$inline_344.getComputedStyle;
         if (v2669) {
-          v1034 = c$$inline_344.getComputedStyle(a$$inline_342, null);
+          v1034 = JAM.call(c$$inline_344.getComputedStyle, c$$inline_344, [a$$inline_342, null], JAM.policy.p3);
         } else {
           v1034 = a$$inline_342.currentStyle;
         }
@@ -7117,23 +6957,13 @@ function v254() {
     var v2671 = d$$141.length;
     var v1040 = e$$83 < v2671;
     for (;v1040;) {
-      introspect(JAM.policy.p4) {
-        var v1039 = d$$141[e$$83]
-      }
-      introspect(JAM.policy.p4) {
-        var v3743 = d$$141[e$$83]
-      }
-      introspect(JAM.policy.p4) {
-        var v2672 = b$$334[v3743]
-      }
+      var v1039 = d$$141[e$$83];
+      var v3743 = d$$141[e$$83];
+      var v2672 = b$$334[v3743];
       var v3745 = !v2672;
       if (v3745) {
-        introspect(JAM.policy.p4) {
-          var v3744 = d$$141[e$$83]
-        }
-        introspect(JAM.policy.p4) {
-          v2672 = c$$221[v3744];
-        }
+        var v3744 = d$$141[e$$83];
+        v2672 = c$$221[v3744];
       }
       introspect(JAM.policy.p2) {
         b$$334[v1039] = v2672;
@@ -7156,7 +6986,7 @@ function v254() {
     return;
   }
   function Cg(a$$426) {
-    JAM.call(a$$426.setAttribute, a$$426, ["data-adsbygoogle-status", "done"]);
+    JAM.call(a$$426.setAttribute, a$$426, ["data-adsbygoogle-status", "done"], JAM.policy.p3);
     return;
   }
   function Ag(a$$424) {
@@ -7184,7 +7014,7 @@ function v254() {
       return v1044;
     }
     var d$$140 = tg;
-    d$$140.sort(v36);
+    JAM.call(d$$140.sort, d$$140, [v36], JAM.policy.p3);
     var v1045 = "auto" == b$$331;
     if (v1045) {
       var v3746 = a$$422;
@@ -7203,24 +7033,18 @@ function v254() {
     var v1047 = c$$219;
     c$$219 = c$$219 - 1;
     for (;v1047;) {
-      introspect(JAM.policy.p4) {
-        var v4403 = d$$140[c$$219]
-      }
+      var v4403 = d$$140[c$$219];
       var v3749 = v4403.width;
       var v2683 = v3749 <= a$$422;
       if (v2683) {
-        introspect(JAM.policy.p4) {
-          var v4748 = d$$140[c$$219]
-        }
+        var v4748 = d$$140[c$$219];
         var v4404 = v4748.format;
-        var v3750 = b$$331.indexOf(v4404);
+        var v3750 = JAM.call(b$$331.indexOf, b$$331, [v4404], JAM.policy.p3);
         v2683 = -1 != v3750;
       }
       var v1046 = v2683;
       if (v1046) {
-        introspect(JAM.policy.p4) {
-          return d$$140[c$$219];
-        }
+        return d$$140[c$$219];
       }
       v1047 = c$$219;
       c$$219 = c$$219 - 1;
@@ -7233,23 +7057,17 @@ function v254() {
     var v2684 = c$$217.length;
     var v1051 = d$$138 < v2684;
     for (;v1051;) {
-      introspect(JAM.policy.p4) {
-        var v1048 = c$$217[d$$138]
-      }
+      var v1048 = c$$217[d$$138];
       var e$$81 = "google_ad_" + v1048;
-      var v2685 = b$$329.hasOwnProperty(e$$81);
+      var v2685 = JAM.call(b$$329.hasOwnProperty, b$$329, [e$$81], JAM.policy.p3);
       var v1050 = !v2685;
       if (v1050) {
-        introspect(JAM.policy.p4) {
-          var v2686 = c$$217[d$$138]
-        }
-        introspect(JAM.policy.p4) {
-          var v1049 = a$$420[v2686]
-        }
-        var f$$50 = sg.exec(v1049);
+        var v2686 = c$$217[d$$138];
+        var v1049 = a$$420[v2686];
+        var f$$50 = JAM.call(sg.exec, sg, [v1049], JAM.policy.p3);
         if (f$$50) {
           var v2687 = f$$50[1];
-          var v5113 = JAM.call(Math.round, Math, [v2687]);
+          var v5113 = JAM.call(Math.round, Math, [v2687], JAM.policy.p3);
           introspect(JAM.policy.p2) {
             b$$329[e$$81] = v5113;
           }
@@ -7283,7 +7101,7 @@ function v254() {
     a$$414 = a$$414.innerWidth;
     var v3751 = b$$327 / a$$414;
     var v2691 = v3751 - 1;
-    var v1054 = Math.abs(v2691);
+    var v1054 = JAM.call(Math.abs, Math, [v2691], JAM.policy.p3);
     return.05 > v1054;
   }
   function ng(a$$413) {
@@ -7319,7 +7137,7 @@ function v254() {
     throw Error(v1059);
   }
   function fg(a$$403) {
-    var v1060 = /^\s*$/.test(a$$403);
+    var v1060 = JAM.call(/^\s*$/.test, /^\s*$/, [a$$403], JAM.policy.p3);
     if (v1060) {
       return!1;
     }
@@ -7327,18 +7145,16 @@ function v254() {
     var c$$213 = /"[^"\\\n\r\u2028\u2029\x00-\x08\x0a-\x1f]*"|true|false|null|-?\d+(?:\.\d*)?(?:[eE][+\-]?\d+)?/g;
     var d$$135 = /(?:^|:|,)(?:[\s\u2028\u2029]*\[)+/g;
     var e$$77 = /^[\],:{}\s\u2028\u2029]*$/;
-    var v3752 = a$$403.replace(b$$318, "@");
-    var v2694 = v3752.replace(c$$213, "]");
-    var v1061 = v2694.replace(d$$135, "");
-    return e$$77.test(v1061);
+    var v3752 = JAM.call(a$$403.replace, a$$403, [b$$318, "@"], JAM.policy.p3);
+    var v2694 = JAM.call(v3752.replace, v3752, [c$$213, "]"], JAM.policy.p3);
+    var v1061 = JAM.call(v2694.replace, v2694, [d$$135, ""], JAM.policy.p3);
+    return JAM.call(e$$77.test, e$$77, [v1061], JAM.policy.p3);
   }
   function eg(a$$401, b$$315) {
     try {
       var v1062 = void 0;
       var v2695 = a$$401.frames;
-      introspect(JAM.policy.p4) {
-        var v1063 = v2695[b$$315]
-      }
+      var v1063 = v2695[b$$315];
       return v1062 != v1063;
     } catch (c$$211) {
       return!1;
@@ -7361,7 +7177,7 @@ function v254() {
     this.Sb = this.Fc = this.Pa = this.Tb = this.jc = this.ma = this.va = !1;
     var v3753 = V$$1.prototype;
     var v2696 = v3753.Qa;
-    var v1064 = JAM.call(r$$2, null, [v2696, this]);
+    var v1064 = JAM.call(r$$2, null, [v2696, this], JAM.policy.p3);
     var v5115 = ye("zrt_mh::handler", v1064, d$$130);
     this.K = v5115;
     var v1065 = this.K;
@@ -7377,7 +7193,7 @@ function v254() {
     Ff(k$$9, g$$29, h$$21, v1066);
     var v1067 = '"' + Ne;
     JAM.set(k$$9, "onload", v1067 + '"');
-    e$$75 = JAM.call(e$$75, null, [a$$378, k$$9, b$$299]);
+    e$$75 = JAM.call(e$$75, null, [a$$378, k$$9, b$$299], JAM.policy.p3);
     JSCompiler_inline_label_Lf_304: {
       var v2697 = window.google_override_format;
       var v3755 = !v2697;
@@ -7386,9 +7202,7 @@ function v254() {
         var v4936 = v4996 + "x";
         var v4937 = window.google_ad_height;
         var v4749 = v4936 + v4937;
-        introspect(JAM.policy.p4) {
-          var v4405 = wf[v4749]
-        }
+        var v4405 = wf[v4749];
         var v3754 = !v4405;
         if (v3754) {
           var v4406 = window.google_loader_used;
@@ -7447,9 +7261,7 @@ function v254() {
       var v4750 = v4938 + "x";
       var v4751 = a$$inline_623.google_ad_height;
       var v4408 = v4750 + v4751;
-      introspect(JAM.policy.p4) {
-        var v3763 = wf[v4408]
-      }
+      var v3763 = wf[v4408];
       var v2703 = !v3763;
       if (v2703) {
         var v3764 = a$$inline_623.google_loader_used;
@@ -7461,7 +7273,7 @@ function v254() {
     var v1072;
     var v2705 = d$$inline_626 && c$$inline_625;
     if (v2705) {
-      v1072 = d$$inline_626.toLowerCase();
+      v1072 = JAM.call(d$$inline_626.toLowerCase, d$$inline_626, [], JAM.policy.p3);
     } else {
       v1072 = "";
     }
@@ -7632,7 +7444,7 @@ function v254() {
     }
     g$$29 = vf;
     var v1086 = new Date;
-    h$$21 = v1086.getTime();
+    h$$21 = JAM.call(v1086.getTime, v1086, [], JAM.policy.p3);
     var l$$11 = a$$378.google_top_experiment;
     var z$$5 = a$$378.google_async_for_oa_experiment;
     var C$$3 = a$$378.google_always_use_delayed_impressions_experiment;
@@ -7687,10 +7499,10 @@ function v254() {
     var v2725 = v3784;
     var v2726 = xf();
     var v1087 = ["<!doctype html><html><body>", b$$299, "<", f$$48, ">", c$$197, "google_show_ads_impl=true;google_unique_id=", v2719, ';google_async_iframe_id="', e$$75, '";google_start_time=', g$$29, ";", v2720, v2721, v2722, v2723, v2724, "google_bpp=", v2725, ";google_async_rrc=0;</", f$$48, ">", v2726, "</body></html>"];
-    k$$9 = v1087.join("");
+    k$$9 = JAM.call(v1087.join, v1087, [""], JAM.policy.p3);
     var v1088;
     var v3785 = a$$378.document;
-    var v2727 = JAM.call(JAM.get(v3785, "getElementById", JAM.policy.p1), v3785, [e$$75]);
+    var v2727 = JAM.call(v3785.getElementById, v3785, [e$$75], JAM.policy.p3);
     if (v2727) {
       v1088 = rf;
     } else {
@@ -7699,7 +7511,7 @@ function v254() {
     c$$197 = v1088;
     var v2728 = !0;
     var v1089 = Af(a$$378, e$$75, k$$9, v2728);
-    JAM.call(c$$197, null, [v1089]);
+    JAM.call(c$$197, null, [v1089], JAM.policy.p3);
     return;
   }
   function Kf(a$$376, b$$297, c$$196) {
@@ -7717,7 +7529,7 @@ function v254() {
       var v2729 = !c$$inline_614;
       var v3786 = !v2729;
       if (v3786) {
-        v2729 = JAM.call(JAM.get(a$$inline_612, "getElementById", JAM.policy.p1), a$$inline_612, [c$$inline_614]);
+        v2729 = JAM.call(a$$inline_612.getElementById, a$$inline_612, [c$$inline_614], JAM.policy.p3);
       }
       var v1091 = v2729;
       for (;v1091;) {
@@ -7727,7 +7539,7 @@ function v254() {
         var v2730 = !c$$inline_614;
         var v3787 = !v2730;
         if (v3787) {
-          v2730 = JAM.call(JAM.get(a$$inline_612, "getElementById", JAM.policy.p1), a$$inline_612, [c$$inline_614]);
+          v2730 = JAM.call(a$$inline_612.getElementById, a$$inline_612, [c$$inline_614], JAM.policy.p3);
         }
         v1091 = v2730;
       }
@@ -7745,19 +7557,17 @@ function v254() {
       var d$$inline_620 = ["<iframe"];
       var e$$inline_621;
       for (e$$inline_621 in a$$inline_617) {
-        var v1094 = a$$inline_617.hasOwnProperty(e$$inline_621);
+        var v1094 = JAM.call(a$$inline_617.hasOwnProperty, a$$inline_617, [e$$inline_621], JAM.policy.p3);
         if (v1094) {
           var v3788 = e$$inline_621 + "=";
-          introspect(JAM.policy.p4) {
-            var v3789 = a$$inline_617[e$$inline_621]
-          }
+          var v3789 = a$$inline_617[e$$inline_621];
           var v2731 = v3788 + v3789;
           ib$$1(d$$inline_620, v2731);
         }
       }
-      JAM.call(d$$inline_620.push, d$$inline_620, ['style="left:0;position:absolute;top:0;"']);
-      JAM.call(d$$inline_620.push, d$$inline_620, ["></iframe>"]);
-      d$$inline_620 = d$$inline_620.join(" ");
+      JAM.call(d$$inline_620.push, d$$inline_620, ['style="left:0;position:absolute;top:0;"'], JAM.policy.p3);
+      JAM.call(d$$inline_620.push, d$$inline_620, ["></iframe>"], JAM.policy.p3);
+      d$$inline_620 = JAM.call(d$$inline_620.join, d$$inline_620, [" "], JAM.policy.p3);
       var JSCompiler_inline_result$$744;
       var v1095 = a$$inline_617.id;
       var a$$inline_750 = v1095 + "_anchor";
@@ -7767,7 +7577,7 @@ function v254() {
       var v1096 = v2732 + b$$inline_751;
       b$$inline_751 = v1096 + "px;background-color:transparent";
       a$$inline_750 = ['<ins style="display:inline-table;', b$$inline_751, '">', '<ins id="', a$$inline_750, '" style="display:block;', b$$inline_751, '">', d$$inline_620, "</ins></ins>"];
-      JSCompiler_inline_result$$744 = a$$inline_750.join("");
+      JSCompiler_inline_result$$744 = JAM.call(a$$inline_750.join, a$$inline_750, [""], JAM.policy.p3);
       JSCompiler_inline_result$$569 = a$$inline_617 = JSCompiler_inline_result$$744;
       JAM.set(JSCompiler_temp_const$$568, "innerHTML", JSCompiler_inline_result$$569);
       JSCompiler_inline_result$$68 = b$$inline_299.id;
@@ -7818,7 +7628,7 @@ function v254() {
     }
     var v3792 = v4426;
     var v2734 = ["/pagead/html/", v3791, "/r20130906/zrt_lookup.html", v3792];
-    var v1105 = v2734.join("");
+    var v1105 = JAM.call(v2734.join, v2734, [""], JAM.policy.p3);
     return L$$1(v1104, v1105);
   }
   function Cf(a$$368) {
@@ -7829,24 +7639,24 @@ function v254() {
         var v4427 = v4754 + '="';
         var v3793 = v4427 + a$$369;
         var v2735 = v3793 + '"';
-        JAM.call(b$$291.push, b$$291, [v2735]);
+        JAM.call(b$$291.push, b$$291, [v2735], JAM.policy.p3);
       }
       return;
     }
     var b$$291 = ["<iframe"];
     x$$50(a$$368, v38);
-    JAM.call(b$$291.push, b$$291, ["></iframe>"]);
-    return b$$291.join("");
+    JAM.call(b$$291.push, b$$291, ["></iframe>"], JAM.policy.p3);
+    return JAM.call(b$$291.join, b$$291, [""], JAM.policy.p3);
   }
   function Bf(a$$366, b$$289, c$$190) {
     function v39(a$$367, b$$290) {
       var v1107 = null != a$$367;
       if (v1107) {
-        JAM.call(d$$119.setAttribute, d$$119, [b$$290, a$$367]);
+        JAM.call(d$$119.setAttribute, d$$119, [b$$290, a$$367], JAM.policy.p3);
       }
       return;
     }
-    var d$$119 = JAM.call(a$$366.createElement, a$$366, ["iframe"]);
+    var d$$119 = JAM.call(a$$366.createElement, a$$366, ["iframe"], JAM.policy.p3);
     x$$50(b$$289, v39);
     if (c$$190) {
       var v2736 = d$$119.style;
@@ -7859,7 +7669,7 @@ function v254() {
       var e$$72 = !1;
       if (d$$118) {
         var v1108 = qf();
-        JAM.call(v1108.al, v1108, [3E4]);
+        JAM.call(v1108.al, v1108, [3E4], JAM.policy.p3);
       }
       try {
         var JSCompiler_inline_result$$60;
@@ -7867,7 +7677,7 @@ function v254() {
         var b$$inline_294 = b$$288;
         var c$$inline_295 = c$$189;
         var v1109 = a$$inline_293.document;
-        var d$$inline_296 = JAM.call(JAM.get(v1109, "getElementById", JAM.policy.p1), v1109, [b$$inline_294]);
+        var d$$inline_296 = JAM.call(v1109.getElementById, v1109, [b$$inline_294], JAM.policy.p3);
         d$$inline_296 = d$$inline_296.contentWindow;
         var v1115 = Kb(d$$inline_296);
         if (v1115) {
@@ -7875,7 +7685,7 @@ function v254() {
           var b$$inline_605 = b$$inline_294;
           var c$$inline_606 = c$$inline_295;
           var v2737 = a$$inline_604.document;
-          var v1110 = JAM.call(JAM.get(v2737, "getElementById", JAM.policy.p1), v2737, [b$$inline_605]);
+          var v1110 = JAM.call(v2737.getElementById, v2737, [b$$inline_605], JAM.policy.p3);
           a$$inline_604 = v1110.contentWindow;
           b$$inline_605 = a$$inline_604.document;
           var v2738 = b$$inline_605.body;
@@ -7886,20 +7696,20 @@ function v254() {
           var v1111 = v2738;
           var v2739 = !v1111;
           if (v2739) {
-            b$$inline_605.open();
+            JAM.call(b$$inline_605.open, b$$inline_605, [], JAM.policy.p3);
             a$$inline_604.google_async_iframe_close = !0;
-            JAM.call(b$$inline_605.write, b$$inline_605, [c$$inline_606]);
+            JAM.call(b$$inline_605.write, b$$inline_605, [c$$inline_606], JAM.policy.p3);
           }
         } else {
           var a$$inline_608 = a$$inline_293;
           var c$$inline_610 = c$$inline_295;
           var v2740 = a$$inline_608.document;
-          var v1112 = JAM.call(JAM.get(v2740, "getElementById", JAM.policy.p1), v2740, [b$$inline_294]);
+          var v1112 = JAM.call(v2740.getElementById, v2740, [b$$inline_294], JAM.policy.p3);
           a$$inline_608 = v1112.contentWindow;
           var v1113 = ab$$1(c$$inline_610);
           c$$inline_610 = "javascript:" + v1113;
           var v1114 = a$$inline_608.location;
-          v1114.replace(c$$inline_610);
+          JAM.call(v1114.replace, v1114, [c$$inline_610], JAM.policy.p3);
         }
         JSCompiler_inline_result$$60 = void 0;
         JSCompiler_inline_result$$60;
@@ -7912,7 +7722,7 @@ function v254() {
         var v3795 = new Me(a$$365);
         var v4428 = !1;
         var v3796 = Af(a$$365, b$$288, e$$72, v4428);
-        JAM.call(v3795.set, v3795, [b$$288, v3796]);
+        JAM.call(v3795.set, v3795, [b$$288, v3796], JAM.policy.p3);
       }
       return;
     }
@@ -7935,28 +7745,28 @@ function v254() {
     var v3799 = La$$1();
     var v4755 = Da$$1();
     var v4430 = ["/pagead/js/", v4755, "/r20130906/show_ads_impl.js"];
-    var v3800 = v4430.join("");
+    var v3800 = JAM.call(v4430.join, v4430, [""], JAM.policy.p3);
     var v2743 = L$$1(v3799, v3800, "");
     var v1117 = ["<", a$$363, ' src="', v2743, '"></', a$$363, ">"];
-    return v1117.join("");
+    return JAM.call(v1117.join, v1117, [""], JAM.policy.p3);
   }
   function uf() {
     var v1118 = hc();
     var a$$362 = v1118.google_jobrunner;
     var v1119 = pf(a$$362);
     if (v1119) {
-      a$$362.rl();
+      JAM.call(a$$362.rl, a$$362, [], JAM.policy.p3);
     }
     return;
   }
   function sf(a$$360, b$$286) {
     var v1120 = qf();
-    JAM.call(v1120.nqa, v1120, [a$$360, b$$286]);
+    JAM.call(v1120.nqa, v1120, [a$$360, b$$286], JAM.policy.p3);
     return;
   }
   function rf(a$$359, b$$285) {
     var v1121 = qf();
-    JAM.call(v1121.nq, v1121, [a$$359, b$$285]);
+    JAM.call(v1121.nq, v1121, [a$$359, b$$285], JAM.policy.p3);
     return;
   }
   function qf() {
@@ -8008,7 +7818,7 @@ function v254() {
   }
   function of(a$$356) {
     try {
-      return a$$356.sz();
+      return JAM.call(a$$356.sz, a$$356, [], JAM.policy.p3);
     } catch (b$$283) {
       return!1;
     }
@@ -8061,13 +7871,11 @@ function v254() {
     if (v3804) {
       var v4758 = a$$346.length;
       var v4436 = v4758 - 1;
-      introspect(JAM.policy.p4) {
-        v3804 = a$$346 = a$$346[v4436];
-      }
+      v3804 = a$$346 = a$$346[v4436];
     }
     var v2750 = v3804;
     if (v2750) {
-      var v3805 = b$$277.indexOf(a$$346);
+      var v3805 = JAM.call(b$$277.indexOf, b$$277, [a$$346], JAM.policy.p3);
       v2750 = -1 == v3805;
     }
     var v1130 = v2750;
@@ -8093,7 +7901,7 @@ function v254() {
   }
   function Ye() {
     var v1132 = H$$1();
-    var a$$344 = JAM.call(v1132.m, v1132, [10]);
+    var a$$344 = JAM.call(v1132.m, v1132, [10], JAM.policy.p3);
     var b$$275 = K$$1.PERISCOPE_FOR_TARGETING;
     var v1133 = b$$275.EXPERIMENT_REFERER_CLEANUP;
     return a$$344 === v1133;
@@ -8116,9 +7924,7 @@ function v254() {
     }
     a$$343 = v1134;
     var b$$274 = {visible:1, hidden:2, prerender:3, preview:4};
-    introspect(JAM.policy.p4) {
-      var v1135 = b$$274[a$$343]
-    }
+    var v1135 = b$$274[a$$343];
     var v2753 = !v1135;
     if (v2753) {
       v1135 = 0;
@@ -8132,9 +7938,7 @@ function v254() {
       var v2754 = b$$268.length;
       var v1137 = d$$112 < v2754;
       for (;v1137;) {
-        introspect(JAM.policy.p4) {
-          var v2755 = b$$268[d$$112]
-        }
+        var v2755 = b$$268[d$$112];
         var v1136 = String(v2755);
         Ve(a$$337, v1136, c$$180);
         d$$112++;
@@ -8154,7 +7958,7 @@ function v254() {
         var v2757 = v3808;
         var v3809 = String(b$$268);
         var v2758 = encodeURIComponent(v3809);
-        JAM.call(c$$180.push, c$$180, ["&", a$$337, v2757, v2758]);
+        JAM.call(c$$180.push, c$$180, ["&", a$$337, v2757, v2758], JAM.policy.p3);
       }
     }
     return;
@@ -8195,13 +7999,13 @@ function v254() {
         }
       }
     }
-    return a$$333.match(Pe);
+    return JAM.call(a$$333.match, a$$333, [Pe], JAM.policy.p3);
   }
   function Oe(a$$332, b$$265) {
     var v2762 = "\\b" + a$$332;
     var v1144 = v2762 + "=(\\d+)";
     var c$$178 = RegExp(v1144);
-    var d$$111 = c$$178.exec(b$$265);
+    var d$$111 = JAM.call(c$$178.exec, c$$178, [b$$265], JAM.policy.p3);
     if (d$$111) {
       var v4759 = d$$111[1];
       var v4439 = +v4759;
@@ -8213,7 +8017,7 @@ function v254() {
       d$$111 = v3811;
       var v4441 = a$$332 + "=";
       var v3812 = v4441 + d$$111;
-      b$$265 = b$$265.replace(c$$178, v3812);
+      b$$265 = JAM.call(b$$265.replace, b$$265, [c$$178, v3812], JAM.policy.p3);
     }
     return b$$265;
   }
@@ -8223,7 +8027,7 @@ function v254() {
     var v2764 = !v1145;
     if (v2764) {
       var v3813 = this.Qc;
-      var v2763 = JAM.call(r$$2, null, [v3813, this]);
+      var v2763 = JAM.call(r$$2, null, [v3813, this], JAM.policy.p3);
       a$$328.google_iframe_oncopy = {handlers:{}, upd:v2763};
     }
     this.hd = a$$328.google_iframe_oncopy;
@@ -8250,7 +8054,7 @@ function v254() {
     try {
       var v2768 = a$$326.location;
       var v1147 = v2768.host;
-      var b$$260 = Ie.test(v1147);
+      var b$$260 = JAM.call(Ie.test, Ie, [v1147], JAM.policy.p3);
       var v4760 = a$$326.postMessage;
       var v4442 = !v4760;
       var v4762 = !v4442;
@@ -8283,7 +8087,7 @@ function v254() {
         var f$$41;
         try {
           var v1149 = new Be;
-          f$$41 = JAM.call(v1149.serialize, v1149, [a$$324]);
+          f$$41 = JAM.call(v1149.serialize, v1149, [a$$324], JAM.policy.p3);
         } catch (g$$26) {
         }
         if (f$$41) {
@@ -8293,15 +8097,11 @@ function v254() {
       return;
     }
     var b$$257 = "google_page_url";
-    introspect(JAM.policy.p4) {
-      var v1151 = a$$323[b$$257]
-    }
+    var v1151 = a$$323[b$$257];
     if (v1151) {
       var v2770 = a$$323;
       var v2771 = b$$257;
-      introspect(JAM.policy.p4) {
-        var v3819 = a$$323[b$$257]
-      }
+      var v3819 = a$$323[b$$257];
       var v5118 = String(v3819);
       introspect(JAM.policy.p2) {
         v2770[v2771] = v5118;
@@ -8309,7 +8109,7 @@ function v254() {
     }
     var c$$174 = [];
     x$$50(a$$323, v41);
-    return c$$174.join("");
+    return JAM.call(c$$174.join, c$$174, [""], JAM.policy.p3);
   }
   function Be() {
     return;
@@ -8359,7 +8159,7 @@ function v254() {
   }
   function ue(a$$307) {
     function v44(a$$308, d$$103) {
-      introspect(JAM.policy.p5) {
+      introspect(JAM.policy.p2) {
         b$$244[d$$103] = w$$6[a$$308];
       }
       return;
@@ -8370,7 +8170,7 @@ function v254() {
   }
   function se(a$$306, b$$243, c$$168) {
     c$$168 = c$$168 || .01;
-    var v2775 = Math.random();
+    var v2775 = JAM.call(Math.random, Math, [], JAM.policy.p3);
     var v1154 = v2775 < c$$168;
     if (v1154) {
       var v4764 = "/pagead/gen_204?id=" + a$$306;
@@ -8378,7 +8178,7 @@ function v254() {
       a$$306 = v4764 + v4765;
       var v4766 = ma$$1("", "googlesyndication");
       a$$306 = L$$1(v4766, a$$306);
-      a$$306 = a$$306.substring(0, 2E3);
+      a$$306 = JAM.call(a$$306.substring, a$$306, [0, 2E3], JAM.policy.p3);
       nb$$1(w$$6, a$$306);
     }
     return;
@@ -8399,17 +8199,17 @@ function v254() {
       v2777 = 0;
     }
     var v1156 = v2777;
-    var v1157 = b$$242.substring(0, 512);
+    var v1157 = JAM.call(b$$242.substring, b$$242, [0, 512], JAM.policy.p3);
     var v2778 = e$$64;
     if (v2778) {
-      v2778 = e$$64.substring(0, 40);
+      v2778 = JAM.call(e$$64.substring, e$$64, [0, 40], JAM.policy.p3);
     }
     var v1158 = v2778;
-    var v1159 = d$$102.toString();
+    var v1159 = JAM.call(d$$102.toString, d$$102, [], JAM.policy.p3);
     var v2779 = f$$39.URL;
-    var v1160 = v2779.substring(0, 512);
+    var v1160 = JAM.call(v2779.substring, v2779, [0, 512], JAM.policy.p3);
     var v2780 = f$$39.referrer;
-    var v1161 = v2780.substring(0, 512);
+    var v1161 = JAM.call(v2780.substring, v2780, [0, 512], JAM.policy.p3);
     a$$305 = {jscb:v1155, jscd:v1156, context:a$$305, msg:v1157, eid:v1158, file:c$$167, line:v1159, url:v1160, ref:v1161};
     ue(a$$305);
     se("jserror", a$$305);
@@ -8417,15 +8217,15 @@ function v254() {
   }
   function te(a$$304, b$$241, c$$166, d$$101) {
     try {
-      c$$166();
+      JAM.call(c$$166, null, [], JAM.policy.p3);
     } catch (e$$63) {
       c$$166 = !Ga$$1;
       try {
-        var f$$38 = e$$63.toString();
+        var f$$38 = JAM.call(e$$63.toString, e$$63, [], JAM.policy.p3);
         var v2781 = e$$63.name;
         if (v2781) {
           var v4447 = e$$63.name;
-          var v3823 = f$$38.indexOf(v4447);
+          var v3823 = JAM.call(f$$38.indexOf, f$$38, [v4447], JAM.policy.p3);
           v2781 = -1 == v3823;
         }
         var v1162 = v2781;
@@ -8437,7 +8237,7 @@ function v254() {
         var v2782 = e$$63.message;
         if (v2782) {
           var v4449 = e$$63.message;
-          var v3825 = f$$38.indexOf(v4449);
+          var v3825 = JAM.call(f$$38.indexOf, f$$38, [v4449], JAM.policy.p3);
           v2782 = -1 == v3825;
         }
         var v1163 = v2782;
@@ -8452,7 +8252,7 @@ function v254() {
             var a$$inline_237 = e$$63.stack;
             var b$$inline_238 = f$$38;
             try {
-              var v2783 = a$$inline_237.indexOf(b$$inline_238);
+              var v2783 = JAM.call(a$$inline_237.indexOf, a$$inline_237, [b$$inline_238], JAM.policy.p3);
               var v1164 = -1 == v2783;
               if (v1164) {
                 var v2784 = b$$inline_238 + "\n";
@@ -8462,10 +8262,10 @@ function v254() {
               var v1165 = a$$inline_237 != c$$inline_239;
               for (;v1165;) {
                 c$$inline_239 = a$$inline_237;
-                a$$inline_237 = a$$inline_237.replace(/((https?:\/..*\/)[^\/:]*:\d+(?:.|\n)*)\2/, "$1");
+                a$$inline_237 = JAM.call(a$$inline_237.replace, a$$inline_237, [/((https?:\/..*\/)[^\/:]*:\d+(?:.|\n)*)\2/, "$1"], JAM.policy.p3);
                 v1165 = a$$inline_237 != c$$inline_239;
               }
-              f$$38 = a$$inline_237.replace(/\n */g, "\n");
+              f$$38 = JAM.call(a$$inline_237.replace, a$$inline_237, [/\n */g, "\n"], JAM.policy.p3);
             } catch (d$$inline_240) {
               f$$38 = b$$inline_238;
             }
@@ -8486,7 +8286,7 @@ function v254() {
           try {
             var v1169;
             if (d$$101) {
-              v1169 = d$$101();
+              v1169 = JAM.call(d$$101, null, [], JAM.policy.p3);
             } else {
               v1169 = "";
             }
@@ -8496,9 +8296,9 @@ function v254() {
           }
           k$$7 = "";
         }
-        c$$166 = JAM.call(b$$241, null, [a$$304, f$$38, g$$25, h$$18, k$$7]);
+        c$$166 = JAM.call(b$$241, null, [a$$304, f$$38, g$$25, h$$18, k$$7], JAM.policy.p3);
       } catch (l$$10) {
-        var v4451 = l$$10.toString();
+        var v4451 = JAM.call(l$$10.toString, l$$10, [], JAM.policy.p3);
         var v3827 = v4451 + "\n";
         var v4452 = l$$10.stack;
         var v4767 = !v4452;
@@ -8535,7 +8335,7 @@ function v254() {
       return a$$300.__google_ad_urls = v5119;
     }
     try {
-      var v1173 = b$$237.getOseId();
+      var v1173 = JAM.call(b$$237.getOseId, b$$237, [], JAM.policy.p3);
       if (v1173) {
         return b$$237;
       }
@@ -8610,7 +8410,7 @@ function v254() {
       var v2787 = a$$290.readyState;
       var v1181 = "complete" == v2787;
       if (v1181) {
-        b$$227();
+        JAM.call(b$$227, null, [], JAM.policy.p3);
       }
       return;
     }
@@ -8670,7 +8470,7 @@ function v254() {
   function ce(a$$287, b$$224) {
     if (a$$287) {
       var v1188 = b$$224 + "=([^&]+)";
-      var c$$152 = a$$287.match(v1188);
+      var c$$152 = JAM.call(a$$287.match, a$$287, [v1188], JAM.policy.p3);
       var v2791 = c$$152;
       if (v2791) {
         var v3832 = c$$152.length;
@@ -8697,7 +8497,7 @@ function v254() {
       var c$$inline_180 = c$$151;
       var v1191 = "&" + b$$inline_179;
       var d$$inline_181 = v1191 + "=";
-      b$$inline_179 = a$$inline_178.indexOf(d$$inline_181);
+      b$$inline_179 = JAM.call(a$$inline_178.indexOf, a$$inline_178, [d$$inline_181], JAM.policy.p3);
       var v1192;
       var v2794 = 0 > b$$inline_179;
       if (v2794) {
@@ -8706,16 +8506,16 @@ function v254() {
       } else {
         var v4768 = d$$inline_181.length;
         b$$inline_179 = b$$inline_179 + v4768;
-        d$$inline_181 = a$$inline_178.indexOf("&", b$$inline_179);
+        d$$inline_181 = JAM.call(a$$inline_178.indexOf, a$$inline_178, ["&", b$$inline_179], JAM.policy.p3);
         var v3833;
         var v4457 = 0 <= d$$inline_181;
         if (v4457) {
-          var v4769 = a$$inline_178.substring(0, b$$inline_179);
+          var v4769 = JAM.call(a$$inline_178.substring, a$$inline_178, [0, b$$inline_179], JAM.policy.p3);
           var v4454 = v4769 + c$$inline_180;
-          var v4455 = a$$inline_178.substring(d$$inline_181);
+          var v4455 = JAM.call(a$$inline_178.substring, a$$inline_178, [d$$inline_181], JAM.policy.p3);
           v3833 = v4454 + v4455;
         } else {
-          var v4456 = a$$inline_178.substring(0, b$$inline_179);
+          var v4456 = JAM.call(a$$inline_178.substring, a$$inline_178, [0, b$$inline_179], JAM.policy.p3);
           v3833 = v4456 + c$$inline_180;
         }
         v1192 = a$$inline_178 = v3833;
@@ -8761,7 +8561,7 @@ function v254() {
     var v3839 = v4460.host;
     var v2799 = encodeURIComponent(v3839);
     var v1194 = [v2797, "xpc=", b$$220, "&p=", v2798, "//", v2799];
-    b$$220 = v1194.join("");
+    b$$220 = JAM.call(v1194.join, v1194, [""], JAM.policy.p3);
     var v1195;
     if (d$$89) {
       v1195 = encodeURIComponent;
@@ -8771,17 +8571,17 @@ function v254() {
     d$$89 = v1195;
     var v2800 = a$$282;
     var v3840;
-    var v4940 = JAM.call(d$$89, null, ["?"]);
-    var v4770 = a$$282.indexOf(v4940);
+    var v4940 = JAM.call(d$$89, null, ["?"], JAM.policy.p3);
+    var v4770 = JAM.call(a$$282.indexOf, a$$282, [v4940], JAM.policy.p3);
     var v4461 = -1 == v4770;
     if (v4461) {
-      v3840 = JAM.call(d$$89, null, ["?"]);
+      v3840 = JAM.call(d$$89, null, ["?"], JAM.policy.p3);
     } else {
-      v3840 = JAM.call(d$$89, null, ["&"]);
+      v3840 = JAM.call(d$$89, null, ["&"], JAM.policy.p3);
     }
     var v2801 = v3840;
     var v1196 = v2800 + v2801;
-    var v1197 = JAM.call(d$$89, null, [b$$220]);
+    var v1197 = JAM.call(d$$89, null, [b$$220], JAM.policy.p3);
     return v1196 + v1197;
   }
   function Yd(a$$281, b$$219, c$$147, d$$88, e$$56, f$$33, g$$21, h$$14) {
@@ -8791,7 +8591,7 @@ function v254() {
     var b$$217 = R$$1(a$$279, "fontSize");
     var c$$145;
     var a$$inline_169 = b$$217;
-    var v2802 = a$$inline_169 = a$$inline_169.match(Sd);
+    var v2802 = a$$inline_169 = JAM.call(a$$inline_169.match, a$$inline_169, [Sd], JAM.policy.p3);
     if (v2802) {
       v2802 = a$$inline_169[0];
     }
@@ -8841,7 +8641,7 @@ function v254() {
     }
     var v1202 = {style:"visibility:hidden;position:absolute;line-height:0;padding:0;margin:0;border:0;height:1em;"};
     c$$145 = kd("span", v1202);
-    JAM.call(a$$279.appendChild, a$$279, [c$$145]);
+    JAM.call(a$$279.appendChild, a$$279, [c$$145], JAM.policy.p3);
     b$$217 = c$$145.offsetHeight;
     qd(c$$145);
     return b$$217;
@@ -8877,9 +8677,7 @@ function v254() {
     var v2808 = a$$275.currentStyle;
     if (v2808) {
       var v2807 = a$$275.currentStyle;
-      introspect(JAM.policy.p4) {
-        v1215 = v2807[b$$214];
-      }
+      v1215 = v2807[b$$214];
     } else {
       v1215 = null;
     }
@@ -8893,21 +8691,17 @@ function v254() {
     return v1216;
   }
   function Od(a$$274, b$$213, c$$141, d$$85) {
-    var v1217 = /^\d+px?$/.test(b$$213);
+    var v1217 = JAM.call(/^\d+px?$/.test, /^\d+px?$/, [b$$213], JAM.policy.p3);
     if (v1217) {
       return parseInt(b$$213, 10);
     }
     var v1218 = a$$274.style;
-    introspect(JAM.policy.p4) {
-      var e$$54 = v1218[c$$141]
-    }
+    var e$$54 = v1218[c$$141];
     var v1219 = a$$274.runtimeStyle;
-    introspect(JAM.policy.p4) {
-      var f$$31 = v1219[c$$141]
-    }
+    var f$$31 = v1219[c$$141];
     var v1220 = a$$274.runtimeStyle;
     var v2809 = a$$274.currentStyle;
-    introspect(JAM.policy.p5) {
+    introspect(JAM.policy.p2) {
       v1220[c$$141] = v2809[c$$141];
     }
     var v1221 = a$$274.style;
@@ -8915,9 +8709,7 @@ function v254() {
       v1221[c$$141] = b$$213;
     }
     var v1222 = a$$274.style;
-    introspect(JAM.policy.p4) {
-      b$$213 = v1222[d$$85];
-    }
+    b$$213 = v1222[d$$85];
     var v1223 = a$$274.style;
     introspect(JAM.policy.p2) {
       v1223[c$$141] = e$$54;
@@ -8976,7 +8768,7 @@ function v254() {
         var v4465 = "filter" in b$$211;
         if (v4465) {
           var v4774 = b$$211.filter;
-          v4465 = b$$211 = v4774.match(/alpha\(opacity=([\d.]+)\)/);
+          v4465 = b$$211 = JAM.call(v4774.match, v4774, [/alpha\(opacity=([\d.]+)\)/], JAM.policy.p3);
         }
         var v3845 = v4465;
         if (v3845) {
@@ -9042,7 +8834,7 @@ function v254() {
     if (v1230) {
       var v3850;
       if (b$$206) {
-        v3850 = JAM.call(Math.round, Math, [a$$267]);
+        v3850 = JAM.call(Math.round, Math, [a$$267], JAM.policy.p3);
       } else {
         v3850 = a$$267;
       }
@@ -9092,7 +8884,7 @@ function v254() {
     }
     var v2822 = v3851;
     if (v2822) {
-      v2822 = b$$202 = JAM.call(c$$134.getBoxObjectFor, c$$134, [a$$263]);
+      v2822 = b$$202 = JAM.call(c$$134.getBoxObjectFor, c$$134, [a$$263], JAM.policy.p3);
     }
     var v1235 = v2822;
     if (v1235) {
@@ -9130,7 +8922,7 @@ function v254() {
     var v4475 = !v3855;
     if (v4475) {
       var v4474 = dd(a$$inline_149);
-      v3855 = v4474.$b();
+      v3855 = JAM.call(v4474.$b, v4474, [], JAM.policy.p3);
     }
     var v2824 = v3855;
     if (v2824) {
@@ -9147,7 +8939,7 @@ function v254() {
     if (v1245) {
       b$$202 = Ad(a$$263);
       var v4476 = dd(c$$134);
-      a$$263 = v4476.Ja();
+      a$$263 = JAM.call(v4476.Ja, v4476, [], JAM.policy.p3);
       var v3856 = b$$202.left;
       var v3857 = a$$263.x;
       f$$28.x = v3856 + v3857;
@@ -9161,8 +8953,8 @@ function v254() {
       }
       var v1244 = v2827;
       if (v1244) {
-        b$$202 = JAM.call(c$$134.getBoxObjectFor, c$$134, [a$$263]);
-        a$$263 = JAM.call(c$$134.getBoxObjectFor, c$$134, [g$$19]);
+        b$$202 = JAM.call(c$$134.getBoxObjectFor, c$$134, [a$$263], JAM.policy.p3);
+        a$$263 = JAM.call(c$$134.getBoxObjectFor, c$$134, [g$$19], JAM.policy.p3);
         var v3858 = b$$202.screenX;
         var v3859 = a$$263.screenX;
         f$$28.x = v3858 - v3859;
@@ -9373,7 +9165,7 @@ function v254() {
   function Ad(a$$261) {
     var b$$200;
     try {
-      b$$200 = a$$261.getBoundingClientRect();
+      b$$200 = JAM.call(a$$261.getBoundingClientRect, a$$261, [], JAM.policy.p3);
     } catch (c$$132) {
       return{left:0, top:0, right:0, bottom:0};
     }
@@ -9410,9 +9202,7 @@ function v254() {
       var v4492 = a$$259.currentStyle;
       if (v4492) {
         var v4491 = a$$259.currentStyle;
-        introspect(JAM.policy.p4) {
-          v3875 = v4491[b$$199];
-        }
+        v3875 = v4491[b$$199];
       } else {
         v3875 = null;
       }
@@ -9424,9 +9214,7 @@ function v254() {
       var v2853 = a$$259.style;
       if (v2853) {
         var v3877 = a$$259.style;
-        introspect(JAM.policy.p4) {
-          v2853 = v3877[b$$199];
-        }
+        v2853 = v3877[b$$199];
       }
       v1251 = v2853;
     }
@@ -9443,16 +9231,14 @@ function v254() {
     var v3878 = v4493;
     if (v3878) {
       var v4494 = c$$131.defaultView;
-      v3878 = c$$131 = v4494.getComputedStyle(a$$258, null);
+      v3878 = c$$131 = JAM.call(v4494.getComputedStyle, v4494, [a$$258, null], JAM.policy.p3);
     }
     var v2856 = v3878;
     if (v2856) {
-      introspect(JAM.policy.p4) {
-        var v3879 = c$$131[b$$198]
-      }
+      var v3879 = c$$131[b$$198];
       var v4495 = !v3879;
       if (v4495) {
-        v3879 = c$$131.getPropertyValue(b$$198);
+        v3879 = JAM.call(c$$131.getPropertyValue, c$$131, [b$$198], JAM.policy.p3);
       }
       var v2855 = v3879;
       var v3880 = !v2855;
@@ -9473,9 +9259,7 @@ function v254() {
       var c$$inline_146 = db$$1(b$$inline_145);
       var v2857 = void 0;
       var v3881 = a$$inline_144.style;
-      introspect(JAM.policy.p4) {
-        var v2858 = v3881[c$$inline_146]
-      }
+      var v2858 = v3881[c$$inline_146];
       var v1256 = v2857 === v2858;
       if (v1256) {
         var v2859;
@@ -9507,9 +9291,7 @@ function v254() {
         var d$$inline_147 = v1253 + v1254;
         var v2860 = void 0;
         var v3883 = a$$inline_144.style;
-        introspect(JAM.policy.p4) {
-          var v2861 = v3883[d$$inline_147]
-        }
+        var v2861 = v3883[d$$inline_147];
         var v1255 = v2860 !== v2861;
         if (v1255) {
           JSCompiler_inline_result$$52 = d$$inline_147;
@@ -9604,11 +9386,11 @@ function v254() {
         if (c$$124) {
           var v4498 = a$$245.nodeValue;
           var v3889 = String(v4498);
-          var v2875 = v3889.replace(/(\r\n|\r|\n)/g, "");
-          v1265 = JAM.call(b$$190.push, b$$190, [v2875]);
+          var v2875 = JAM.call(v3889.replace, v3889, [/(\r\n|\r|\n)/g, ""], JAM.policy.p3);
+          v1265 = JAM.call(b$$190.push, b$$190, [v2875], JAM.policy.p3);
         } else {
           var v2876 = a$$245.nodeValue;
-          v1265 = JAM.call(b$$190.push, b$$190, [v2876]);
+          v1265 = JAM.call(b$$190.push, b$$190, [v2876], JAM.policy.p3);
         }
         v1265;
       } else {
@@ -9616,10 +9398,8 @@ function v254() {
         var v1267 = v2877 in td;
         if (v1267) {
           var v2878 = a$$245.nodeName;
-          introspect(JAM.policy.p4) {
-            var v1266 = td[v2878]
-          }
-          JAM.call(b$$190.push, b$$190, [v1266]);
+          var v1266 = td[v2878];
+          JAM.call(b$$190.push, b$$190, [v1266], JAM.policy.p3);
         } else {
           a$$245 = a$$245.firstChild;
           for (;a$$245;) {
@@ -9658,7 +9438,7 @@ function v254() {
       var v1271 = a$$242 == b$$188;
       var v2882 = !v1271;
       if (v2882) {
-        v1271 = JAM.call(a$$242.contains, a$$242, [b$$188]);
+        v1271 = JAM.call(a$$242.contains, a$$242, [b$$188], JAM.policy.p3);
       }
       return v1271;
     }
@@ -9669,7 +9449,7 @@ function v254() {
       var v1273 = a$$242 == b$$188;
       var v2885 = !v1273;
       if (v2885) {
-        var v3894 = a$$242.compareDocumentPosition(b$$188);
+        var v3894 = JAM.call(a$$242.compareDocumentPosition, a$$242, [b$$188], JAM.policy.p3);
         var v2884 = v3894 & 16;
         v1273 = Boolean(v2884);
       }
@@ -9699,7 +9479,7 @@ function v254() {
     var v2889 = v3895;
     if (v2889) {
       var v2888 = a$$241.parentNode;
-      v1276 = v2888.removeChild(a$$241);
+      v1276 = JAM.call(v2888.removeChild, v2888, [a$$241], JAM.policy.p3);
     } else {
       v1276 = null;
     }
@@ -9711,7 +9491,7 @@ function v254() {
     return;
   }
   function od(a$$239, b$$186) {
-    JAM.call(a$$239.appendChild, a$$239, [b$$186]);
+    JAM.call(a$$239.appendChild, a$$239, [b$$186], JAM.policy.p3);
     return;
   }
   function nd(a$$238) {
@@ -9781,21 +9561,19 @@ function v254() {
         var v3896;
         var v4499 = p$$1(c$$123);
         if (v4499) {
-          v3896 = JAM.call(a$$237.createTextNode, a$$237, [c$$123]);
+          v3896 = JAM.call(a$$237.createTextNode, a$$237, [c$$123], JAM.policy.p3);
         } else {
           v3896 = c$$123;
         }
         var v2891 = v3896;
-        JAM.call(b$$185.appendChild, b$$185, [v2891]);
+        JAM.call(b$$185.appendChild, b$$185, [v2891], JAM.policy.p3);
       }
       return;
     }
     var v2892 = c$$122.length;
     var v1281 = d$$76 < v2892;
     for (;v1281;) {
-      introspect(JAM.policy.p4) {
-        var f$$27 = c$$122[d$$76]
-      }
+      var f$$27 = c$$122[d$$76];
       var v1280;
       var v4500 = ca$$1(f$$27);
       var v3897 = !v4500;
@@ -9820,7 +9598,7 @@ function v254() {
           v3898 = f$$27;
         }
         var v2893 = v3898;
-        v1280 = JAM.call(Zb, null, [v2893, e$$50]);
+        v1280 = JAM.call(Zb, null, [v2893, e$$50], JAM.policy.p3);
       }
       v1280;
       d$$76++;
@@ -9854,22 +9632,22 @@ function v254() {
       if (v1282) {
         var v3901 = d$$inline_138.name;
         var v2897 = Sa$$1(v3901);
-        JAM.call(c$$inline_137.push, c$$inline_137, [' name="', v2897, '"']);
+        JAM.call(c$$inline_137.push, c$$inline_137, [' name="', v2897, '"'], JAM.policy.p3);
       }
       var v1284 = d$$inline_138.type;
       if (v1284) {
         var v2898 = d$$inline_138.type;
         var v1283 = Sa$$1(v2898);
-        JAM.call(c$$inline_137.push, c$$inline_137, [' type="', v1283, '"']);
+        JAM.call(c$$inline_137.push, c$$inline_137, [' type="', v1283, '"'], JAM.policy.p3);
         var e$$inline_139 = {};
         Gc(e$$inline_139, d$$inline_138);
         delete e$$inline_139.type;
         d$$inline_138 = e$$inline_139;
       }
-      JAM.call(c$$inline_137.push, c$$inline_137, [">"]);
-      c$$inline_137 = c$$inline_137.join("");
+      JAM.call(c$$inline_137.push, c$$inline_137, [">"], JAM.policy.p3);
+      c$$inline_137 = JAM.call(c$$inline_137.join, c$$inline_137, [""], JAM.policy.p3);
     }
-    c$$inline_137 = JAM.call(document.createElement, document, [c$$inline_137]);
+    c$$inline_137 = JAM.call(document.createElement, document, [c$$inline_137], JAM.policy.p3);
     if (d$$inline_138) {
       var v2899;
       var v3903 = p$$1(d$$inline_138);
@@ -9880,8 +9658,8 @@ function v254() {
         var v4506 = n$$2(d$$inline_138);
         if (v4506) {
           var v4795 = [c$$inline_137];
-          var v4505 = v4795.concat(d$$inline_138);
-          v3902 = ad.apply(null, v4505);
+          var v4505 = JAM.call(v4795.concat, v4795, [d$$inline_138], JAM.policy.p3);
+          v3902 = JAM.call(ad.apply, ad, [null, v4505], JAM.policy.p3);
         } else {
           v3902 = fd(c$$inline_137, d$$inline_138);
         }
@@ -9918,22 +9696,20 @@ function v254() {
             var v4507;
             var v4798 = d$$74 in ed;
             if (v4798) {
-              introspect(JAM.policy.p4) {
-                var v4796 = ed[d$$74]
-              }
-              v4507 = JAM.call(a$$231.setAttribute, a$$231, [v4796, b$$181]);
+              var v4796 = ed[d$$74];
+              v4507 = JAM.call(a$$231.setAttribute, a$$231, [v4796, b$$181], JAM.policy.p3);
             } else {
               var v4797;
-              var v5028 = d$$74.lastIndexOf("aria-", 0);
+              var v5028 = JAM.call(d$$74.lastIndexOf, d$$74, ["aria-", 0], JAM.policy.p3);
               var v5001 = 0 == v5028;
               var v5030 = !v5001;
               if (v5030) {
-                var v5029 = d$$74.lastIndexOf("data-", 0);
+                var v5029 = JAM.call(d$$74.lastIndexOf, d$$74, ["data-", 0], JAM.policy.p3);
                 v5001 = 0 == v5029;
               }
               var v4952 = v5001;
               if (v4952) {
-                v4797 = JAM.call(a$$231.setAttribute, a$$231, [d$$74, b$$181]);
+                v4797 = JAM.call(a$$231.setAttribute, a$$231, [d$$74, b$$181], JAM.policy.p3);
               } else {
                 introspect(JAM.policy.p2) {
                   v4797 = a$$231[d$$74] = b$$181;
@@ -9980,22 +9756,18 @@ function v254() {
     var v2906 = b$$inline_129.length;
     var v1292 = c$$inline_130 < v2906;
     for (;v1292;) {
-      introspect(JAM.policy.p4) {
-        var v2907 = b$$inline_129[c$$inline_130]
-      }
+      var v2907 = b$$inline_129[c$$inline_130];
       var v1291 = $b(a$$inline_128, v2907);
       var v2909 = !v1291;
       if (v2909) {
-        introspect(JAM.policy.p4) {
-          var v2908 = b$$inline_129[c$$inline_130]
-        }
-        JAM.call(a$$inline_128.push, a$$inline_128, [v2908]);
+        var v2908 = b$$inline_129[c$$inline_130];
+        JAM.call(a$$inline_128.push, a$$inline_128, [v2908], JAM.policy.p3);
       }
       c$$inline_130++;
       var v2910 = b$$inline_129.length;
       v1292 = c$$inline_130 < v2910;
     }
-    var b$$inline_133 = c$$118.join(" ");
+    var b$$inline_133 = JAM.call(c$$118.join, c$$118, [" "], JAM.policy.p3);
     a$$227.className = b$$inline_133;
     var v1293 = c$$118.length;
     return v1293 == e$$48;
@@ -10004,7 +9776,7 @@ function v254() {
     a$$226 = a$$226.className;
     var v2911 = p$$1(a$$226);
     if (v2911) {
-      v2911 = a$$226.match(/\S+/g);
+      v2911 = JAM.call(a$$226.match, a$$226, [/\S+/g], JAM.policy.p3);
     }
     var v1294 = v2911;
     var v2912 = !v1294;
@@ -10015,23 +9787,21 @@ function v254() {
   }
   function Uc(a$$223) {
     var JSCompiler_temp$$72;
-    introspect(JAM.policy.p4) {
-      var v1309 = JSCompiler_temp$$72 = Tc[a$$223]
-    }
+    var v1309 = JSCompiler_temp$$72 = Tc[a$$223];
     if (v1309) {
     } else {
       var JSCompiler_inline_result$$73;
       var b$$inline_114 = a$$223;
       var c$$inline_115 = 0;
       var v2913 = String(Sc);
-      var v1295 = v2913.replace(/^[\s\xa0]+|[\s\xa0]+$/g, "");
-      var d$$inline_116 = v1295.split(".");
+      var v1295 = JAM.call(v2913.replace, v2913, [/^[\s\xa0]+|[\s\xa0]+$/g, ""], JAM.policy.p3);
+      var d$$inline_116 = JAM.call(v1295.split, v1295, ["."], JAM.policy.p3);
       var v2914 = String(b$$inline_114);
-      var v1296 = v2914.replace(/^[\s\xa0]+|[\s\xa0]+$/g, "");
-      var e$$inline_117 = v1296.split(".");
+      var v1296 = JAM.call(v2914.replace, v2914, [/^[\s\xa0]+|[\s\xa0]+$/g, ""], JAM.policy.p3);
+      var e$$inline_117 = JAM.call(v1296.split, v1296, ["."], JAM.policy.p3);
       var v1297 = d$$inline_116.length;
       var v1298 = e$$inline_117.length;
-      var f$$inline_118 = Math.max(v1297, v1298);
+      var f$$inline_118 = JAM.call(Math.max, Math, [v1297, v1298], JAM.policy.p3);
       var g$$inline_119 = 0;
       var v2915 = 0 == c$$inline_115;
       if (v2915) {
@@ -10039,17 +9809,13 @@ function v254() {
       }
       var v1308 = v2915;
       for (;v1308;) {
-        introspect(JAM.policy.p4) {
-          var v1299 = d$$inline_116[g$$inline_119]
-        }
+        var v1299 = d$$inline_116[g$$inline_119];
         var v2916 = !v1299;
         if (v2916) {
           v1299 = "";
         }
         var h$$inline_120 = v1299;
-        introspect(JAM.policy.p4) {
-          var v1300 = e$$inline_117[g$$inline_119]
-        }
+        var v1300 = e$$inline_117[g$$inline_119];
         var v2917 = !v1300;
         if (v2917) {
           v1300 = "";
@@ -10059,13 +9825,13 @@ function v254() {
         var z$$inline_123 = RegExp("(\\d*)(\\D*)", "g");
         var v1307 = 0 == c$$inline_115;
         do {
-          var v1301 = l$$inline_122.exec(h$$inline_120);
+          var v1301 = JAM.call(l$$inline_122.exec, l$$inline_122, [h$$inline_120], JAM.policy.p3);
           var v2918 = !v1301;
           if (v2918) {
             v1301 = ["", "", ""];
           }
           var C$$inline_124 = v1301;
-          var v1302 = z$$inline_123.exec(k$$inline_121);
+          var v1302 = JAM.call(z$$inline_123.exec, z$$inline_123, [k$$inline_121], JAM.policy.p3);
           var v2919 = !v1302;
           if (v2919) {
             v1302 = ["", "", ""];
@@ -10166,7 +9932,7 @@ function v254() {
       var v4801 = typeof a$$221;
       var v4515 = "function" == v4801;
       if (v4515) {
-        v3916 = a$$221();
+        v3916 = JAM.call(a$$221, null, [], JAM.policy.p3);
       } else {
         v3916 = a$$221;
       }
@@ -10201,7 +9967,7 @@ function v254() {
           v5002 = null;
         }
         var v4953 = v5002;
-        var v4803 = a$$221 = b$$174.exec(v4953);
+        var v4803 = a$$221 = JAM.call(b$$174.exec, b$$174, [v4953], JAM.policy.p3);
         if (v4803) {
           v4517 = a$$221[1];
         } else {
@@ -10241,15 +10007,15 @@ function v254() {
     var v1317 = a$$220 = v2932;
     if (v1317) {
       var b$$173 = m$$3.navigator;
-      var v1313 = a$$220.lastIndexOf("Opera", 0);
+      var v1313 = JAM.call(a$$220.lastIndexOf, a$$220, ["Opera", 0], JAM.policy.p3);
       Hc = 0 == v1313;
       var v1314 = !Hc;
       if (v1314) {
-        var v3922 = a$$220.indexOf("MSIE");
+        var v3922 = JAM.call(a$$220.indexOf, a$$220, ["MSIE"], JAM.policy.p3);
         var v2933 = -1 != v3922;
         var v3924 = !v2933;
         if (v3924) {
-          var v3923 = a$$220.indexOf("Trident");
+          var v3923 = JAM.call(a$$220.indexOf, a$$220, ["Trident"], JAM.policy.p3);
           v2933 = -1 != v3923;
         }
         v1314 = v2933;
@@ -10257,7 +10023,7 @@ function v254() {
       Ic = v1314;
       var v1315 = !Hc;
       if (v1315) {
-        var v2934 = a$$220.indexOf("WebKit");
+        var v2934 = JAM.call(a$$220.indexOf, a$$220, ["WebKit"], JAM.policy.p3);
         v1315 = -1 != v2934;
       }
       Jc = v1315;
@@ -10285,11 +10051,9 @@ function v254() {
     var v2937 = arguments.length;
     var v1319 = e$$47 < v2937;
     for (;v1319;) {
-      introspect(JAM.policy.p4) {
-        d$$72 = arguments[e$$47];
-      }
+      d$$72 = arguments[e$$47];
       for (c$$117 in d$$72) {
-        introspect(JAM.policy.p5) {
+        introspect(JAM.policy.p2) {
           a$$219[c$$117] = d$$72[c$$117];
         }
       }
@@ -10297,14 +10061,12 @@ function v254() {
       var v2938 = Fc.length;
       var v1318 = f$$26 < v2938;
       for (;v1318;) {
-        introspect(JAM.policy.p4) {
-          c$$117 = Fc[f$$26];
-        }
+        c$$117 = Fc[f$$26];
         var v4518 = Object.prototype;
         var v3926 = v4518.hasOwnProperty;
-        var v2939 = JAM.call(v3926.call, v3926, [d$$72, c$$117]);
+        var v2939 = JAM.call(v3926.call, v3926, [d$$72, c$$117], JAM.policy.p3);
         if (v2939) {
-          introspect(JAM.policy.p5) {
+          introspect(JAM.policy.p2) {
             a$$219[c$$117] = d$$72[c$$117];
           }
         }
@@ -10321,9 +10083,7 @@ function v254() {
   function Ec(a$$218, b$$171) {
     var c$$116;
     for (c$$116 in a$$218) {
-      introspect(JAM.policy.p4) {
-        var v2942 = a$$218[c$$116]
-      }
+      var v2942 = a$$218[c$$116];
       var v1320 = v2942 == b$$171;
       if (v1320) {
         return!0;
@@ -10334,10 +10094,8 @@ function v254() {
   function Dc(a$$217, b$$170, c$$115) {
     var d$$71;
     for (d$$71 in a$$217) {
-      introspect(JAM.policy.p4) {
-        var v1321 = a$$217[d$$71]
-      }
-      JAM.call(b$$170.call, b$$170, [c$$115, v1321, d$$71, a$$217]);
+      var v1321 = a$$217[d$$71];
+      JAM.call(b$$170.call, b$$170, [c$$115, v1321, d$$71, a$$217], JAM.policy.p3);
     }
     return;
   }
@@ -10374,7 +10132,7 @@ function v254() {
       c$$113 = v2945;
     }
     var v1324 = [c$$113, "://", a$$212, b$$165];
-    return v1324.join("");
+    return JAM.call(v1324.join, v1324, [""], JAM.policy.p3);
   }
   function Bc(a$$211) {
     var v1325 = a$$211.google_page_location;
@@ -10391,7 +10149,7 @@ function v254() {
     var a$$inline_111 = a$$211;
     a$$inline_111 = a$$inline_111.google_ad_channel;
     var v1327;
-    var v2948 = zc.test(a$$inline_111);
+    var v2948 = JAM.call(zc.test, zc, [a$$inline_111], JAM.policy.p3);
     if (v2948) {
       v1327 = !0;
     } else {
@@ -10410,39 +10168,37 @@ function v254() {
     if (v1328) {
       return!1;
     }
-    b$$164 = b$$164.toString();
+    b$$164 = JAM.call(b$$164.toString, b$$164, [], JAM.policy.p3);
     var v1329;
-    var v3930 = b$$164.indexOf("http://");
+    var v3930 = JAM.call(b$$164.indexOf, b$$164, ["http://"], JAM.policy.p3);
     var v2952 = 0 == v3930;
     if (v2952) {
       var v2950 = b$$164.length;
-      v1329 = b$$164 = b$$164.substring(7, v2950);
+      v1329 = b$$164 = JAM.call(b$$164.substring, b$$164, [7, v2950], JAM.policy.p3);
     } else {
-      var v3931 = b$$164.indexOf("https://");
+      var v3931 = JAM.call(b$$164.indexOf, b$$164, ["https://"], JAM.policy.p3);
       var v2951 = 0 == v3931;
       if (v2951) {
         var v3932 = b$$164.length;
-        v2951 = b$$164 = b$$164.substring(8, v3932);
+        v2951 = b$$164 = JAM.call(b$$164.substring, b$$164, [8, v3932], JAM.policy.p3);
       }
       v1329 = v2951;
     }
     v1329;
-    a$$211 = b$$164.indexOf("/");
+    a$$211 = JAM.call(b$$164.indexOf, b$$164, ["/"], JAM.policy.p3);
     var v1330 = -1 == a$$211;
     if (v1330) {
       a$$211 = b$$164.length;
     }
-    b$$164 = b$$164.substring(0, a$$211);
-    b$$164 = b$$164.split(".");
+    b$$164 = JAM.call(b$$164.substring, b$$164, [0, a$$211], JAM.policy.p3);
+    b$$164 = JAM.call(b$$164.split, b$$164, ["."], JAM.policy.p3);
     a$$211 = !1;
     var v2953 = b$$164.length;
     var v1331 = 3 <= v2953;
     if (v1331) {
       var v4519 = b$$164.length;
       var v3933 = v4519 - 3;
-      introspect(JAM.policy.p4) {
-        var v2954 = b$$164[v3933]
-      }
+      var v2954 = b$$164[v3933];
       a$$211 = v2954 in yc;
     }
     var v2955 = b$$164.length;
@@ -10453,9 +10209,7 @@ function v254() {
       if (v3935) {
         var v4805 = b$$164.length;
         var v4520 = v4805 - 2;
-        introspect(JAM.policy.p4) {
-          var v3934 = b$$164[v4520]
-        }
+        var v3934 = b$$164[v4520];
         v2956 = v3934 in yc;
       }
       a$$211 = v2956;
@@ -10466,7 +10220,7 @@ function v254() {
     var a$$209 = J$$1();
     var v1333;
     if (a$$209) {
-      v1333 = a$$209.Ka();
+      v1333 = JAM.call(a$$209.Ka, a$$209, [], JAM.policy.p3);
     } else {
       v1333 = "";
     }
@@ -10484,17 +10238,15 @@ function v254() {
       for (;v1337;) {
         var v1335 = b$$inline_107.defaultBucket;
         var v2957 = a$$inline_106.defaultBucket;
-        introspect(JAM.policy.p4) {
-          var v1336 = v2957[c$$inline_108]
-        }
-        JAM.call(v1335.push, v1335, [v1336]);
+        var v1336 = v2957[c$$inline_108];
+        JAM.call(v1335.push, v1335, [v1336], JAM.policy.p3);
         ++c$$inline_108;
         v1337 = c$$inline_108 < d$$inline_109;
       }
       var v1338 = a$$inline_106.layers;
       var v3936 = E$$1.prototype;
       var v2958 = v3936.Ga;
-      var v1339 = JAM.call(r$$2, null, [v2958, b$$inline_107]);
+      var v1339 = JAM.call(r$$2, null, [v2958, b$$inline_107], JAM.policy.p3);
       x$$50(v1338, v1339);
       uc = b$$inline_107;
     }
@@ -10547,7 +10299,7 @@ function v254() {
   }
   function vc(a$$206) {
     try {
-      return a$$206.statusz();
+      return JAM.call(a$$206.statusz, a$$206, [], JAM.policy.p3);
     } catch (b$$163) {
       return!1;
     }
@@ -10558,18 +10310,14 @@ function v254() {
     b$$159 = nc(b$$159);
     var v1343;
     var v3938 = void 0;
-    introspect(JAM.policy.p4) {
-      var v3939 = a$$202[b$$159]
-    }
+    var v3939 = a$$202[b$$159];
     var v2961 = v3938 === v3939;
     if (v2961) {
       introspect(JAM.policy.p2) {
         v1343 = a$$202[b$$159] = c$$112;
       }
     } else {
-      introspect(JAM.policy.p4) {
-        v1343 = a$$202[b$$159];
-      }
+      v1343 = a$$202[b$$159];
     }
     return v1343;
   }
@@ -10583,9 +10331,7 @@ function v254() {
   function G$$1(a$$200, b$$157) {
     var c$$110 = nc(b$$157);
     var v1346 = a$$200.S;
-    introspect(JAM.policy.p4) {
-      return c$$110 = v1346[c$$110];
-    }
+    return c$$110 = v1346[c$$110];
   }
   function nc(a$$199) {
     switch(a$$199) {
@@ -10618,9 +10364,7 @@ function v254() {
     var v1347;
     var v3940 = a$$197;
     if (v3940) {
-      introspect(JAM.policy.p4) {
-        v3940 = kc[a$$197];
-      }
+      v3940 = kc[a$$197];
     }
     var v2963 = v3940;
     if (v2963) {
@@ -10635,13 +10379,9 @@ function v254() {
       v1347 = v2962;
     }
     a$$197 = v1347;
-    introspect(JAM.policy.p4) {
-      var v1348 = lc[a$$197]
-    }
+    var v1348 = lc[a$$197];
     if (v1348) {
-      introspect(JAM.policy.p4) {
-        return lc[a$$197];
-      }
+      return lc[a$$197];
     }
     var v1349 = "google_persistent_state_async" == a$$197;
     if (v1349) {
@@ -10650,9 +10390,7 @@ function v254() {
     } else {
       c$$109 = b$$156 = D$$1();
     }
-    introspect(JAM.policy.p4) {
-      var d$$70 = b$$156[a$$197]
-    }
+    var d$$70 = b$$156[a$$197];
     var v1350;
     var v4522 = typeof d$$70;
     var v3941 = "object" != v4522;
@@ -10682,7 +10420,7 @@ function v254() {
     F$$1(this, 5, 0);
     F$$1(this, 6, 0);
     var v2965 = new Date;
-    var v1351 = v2965.getTime();
+    var v1351 = JAM.call(v2965.getTime, v2965, [], JAM.policy.p3);
     F$$1(this, 7, v1351);
     F$$1(this, 8, {});
     F$$1(this, 9, {});
@@ -10733,9 +10471,7 @@ function v254() {
     var v1357 = b$$148 < c$$105;
     for (;v1357;) {
       var v1355 = this.layers;
-      introspect(JAM.policy.p4) {
-        var v1356 = arguments[b$$148]
-      }
+      var v1356 = arguments[b$$148];
       introspect(JAM.policy.p2) {
         v1355[v1356] = "";
       }
@@ -10750,10 +10486,10 @@ function v254() {
     var v2970 = 2 >= v3942;
     if (v2970) {
       var v2968 = Xb.slice;
-      v1358 = JAM.call(v2968.call, v2968, [a$$184, b$$147]);
+      v1358 = JAM.call(v2968.call, v2968, [a$$184, b$$147], JAM.policy.p3);
     } else {
       var v2969 = Xb.slice;
-      v1358 = JAM.call(v2969.call, v2969, [a$$184, b$$147, c$$104]);
+      v1358 = JAM.call(v2969.call, v2969, [a$$184, b$$147, c$$104], JAM.policy.p3);
     }
     return v1358;
   }
@@ -10765,9 +10501,7 @@ function v254() {
       var d$$67 = 0;
       var v1359 = d$$67 < b$$146;
       for (;v1359;) {
-        introspect(JAM.policy.p4) {
-          c$$103[d$$67] = a$$183[d$$67];
-        }
+        c$$103[d$$67] = a$$183[d$$67];
         d$$67++;
         v1359 = d$$67 < b$$146;
       }
@@ -10776,13 +10510,13 @@ function v254() {
     return[];
   }
   function $b(a$$182, b$$145) {
-    var v1361 = JAM.call(Yb, null, [a$$182, b$$145]);
+    var v1361 = JAM.call(Yb, null, [a$$182, b$$145], JAM.policy.p3);
     return 0 <= v1361;
   }
   function Wb(a$$177) {
     function v48() {
       var v1362 = a$$177.document;
-      v1362.close();
+      JAM.call(v1362.close, v1362, [], JAM.policy.p3);
       return;
     }
     var v3943 = B$$2;
@@ -10796,7 +10530,7 @@ function v254() {
     }
     var v1363 = v2971;
     if (v1363) {
-      a$$177.setTimeout(v48, 0);
+      JAM.call(a$$177.setTimeout, a$$177, [v48, 0], JAM.policy.p3);
     }
     return;
   }
@@ -10810,7 +10544,7 @@ function v254() {
     if (v1367) {
       var v1364 = v$$1.domain;
       var a$$170 = "." + v1364;
-      var v4526 = a$$170.split(".");
+      var v4526 = JAM.call(a$$170.split, a$$170, ["."], JAM.policy.p3);
       var v3945 = v4526.length;
       var v2973 = 2 < v3945;
       if (v2973) {
@@ -10820,11 +10554,11 @@ function v254() {
       var v1365 = v2973;
       for (;v1365;) {
         var v2974 = v$$1;
-        var v4527 = a$$170.indexOf(".");
+        var v4527 = JAM.call(a$$170.indexOf, a$$170, ["."], JAM.policy.p3);
         var v3947 = v4527 + 1;
-        v2974.domain = a$$170 = a$$170.substr(v3947);
+        v2974.domain = a$$170 = JAM.call(a$$170.substr, a$$170, [v3947], JAM.policy.p3);
         Ob = window.parent;
-        var v4528 = a$$170.split(".");
+        var v4528 = JAM.call(a$$170.split, a$$170, ["."], JAM.policy.p3);
         var v3948 = v4528.length;
         var v2975 = 2 < v3948;
         if (v2975) {
@@ -10846,7 +10580,7 @@ function v254() {
       if (a$$168) {
         var b$$133 = a$$168;
         a$$168 = null;
-        JAM.call(b$$133.apply, b$$133, [null, arguments]);
+        JAM.call(b$$133.apply, b$$133, [null, arguments], JAM.policy.p3);
       }
       return;
     }
@@ -10875,7 +10609,7 @@ function v254() {
   }
   function Hb(a$$163) {
     var v2980 = new Date;
-    var v1369 = v2980.getTime();
+    var v1369 = JAM.call(v2980.getTime, v2980, [], JAM.policy.p3);
     a$$163 = v1369 - a$$163;
     var v1370;
     var v2981 = 1E4 > a$$163;
@@ -10915,7 +10649,7 @@ function v254() {
           v2983 = "";
         }
         var v1376 = v2983;
-        JAM.call(b$$inline_96.push, b$$inline_96, [v1376]);
+        JAM.call(b$$inline_96.push, b$$inline_96, [v1376], JAM.policy.p3);
         a$$inline_95 = a$$inline_95.parentNode;
         ++c$$inline_97;
         var v2984 = a$$inline_95;
@@ -10924,20 +10658,20 @@ function v254() {
         }
         v1377 = v2984;
       }
-      JSCompiler_inline_result$$22 = b$$inline_96.join();
+      JSCompiler_inline_result$$22 = JAM.call(b$$inline_96.join, b$$inline_96, [], JAM.policy.p3);
       var v1378 = a$$162 = JSCompiler_inline_result$$22;
       if (v1378) {
-        JAM.call(b$$130.push, b$$130, [a$$162]);
+        JAM.call(b$$130.push, b$$130, [a$$162], JAM.policy.p3);
       }
     } else {
       var v2985 = Db(a$$162);
-      JAM.call(b$$130.push, b$$130, [v2985]);
+      JAM.call(b$$130.push, b$$130, [v2985], JAM.policy.p3);
       var v2986 = Eb(w$$6);
-      JAM.call(b$$130.push, b$$130, [v2986]);
+      JAM.call(b$$130.push, b$$130, [v2986], JAM.policy.p3);
     }
-    var v2987 = b$$130.join(":");
+    var v2987 = JAM.call(b$$130.join, b$$130, [":"], JAM.policy.p3);
     var v1379 = Ab(v2987);
-    return v1379.toString();
+    return JAM.call(v1379.toString, v1379, [], JAM.policy.p3);
   }
   function Eb(a$$160) {
     var b$$128 = [];
@@ -10960,12 +10694,10 @@ function v254() {
           var v2989 = e$$42.length;
           var v1381 = f$$23 < v2989;
           for (;v1381;) {
-            introspect(JAM.policy.p4) {
-              var v2990 = e$$42[f$$23]
-            }
+            var v2990 = e$$42[f$$23];
             var v1380 = a$$160 == v2990;
             if (v1380) {
-              JAM.call(b$$128.push, b$$128, [f$$23]);
+              JAM.call(b$$128.push, b$$128, [f$$23], JAM.policy.p3);
               break;
             }
             ++f$$23;
@@ -10988,7 +10720,7 @@ function v254() {
       } catch (g$$18) {
       }
     }
-    return b$$128.join();
+    return JAM.call(b$$128.join, b$$128, [], JAM.policy.p3);
   }
   function Db(a$$159) {
     var b$$127 = [];
@@ -11015,13 +10747,13 @@ function v254() {
       var v1385 = a$$159.nodeName;
       if (v1385) {
         var v2995 = a$$159.nodeName;
-        v1385 = v2995.toLowerCase();
+        v1385 = JAM.call(v2995.toLowerCase, v2995, [], JAM.policy.p3);
       }
       var e$$41 = v1385;
       var v2996 = e$$41 + d$$58;
       var v2997 = Cb(a$$159);
       var v1386 = v2996 + v2997;
-      JAM.call(b$$127.push, b$$127, [v1386]);
+      JAM.call(b$$127.push, b$$127, [v1386], JAM.policy.p3);
       a$$159 = a$$159.parentElement;
       ++c$$87;
       var v2998 = a$$159;
@@ -11030,12 +10762,12 @@ function v254() {
       }
       v1387 = v2998;
     }
-    return b$$127.join();
+    return JAM.call(b$$127.join, b$$127, [], JAM.policy.p3);
   }
   function Cb(a$$158) {
     var b$$126 = a$$158.parentElement;
     var v1388 = a$$158.nodeName;
-    var c$$86 = v1388.toLowerCase();
+    var c$$86 = JAM.call(v1388.toLowerCase, v1388, [], JAM.policy.p3);
     if (b$$126) {
       b$$126 = b$$126.childNodes;
       var d$$57 = 0;
@@ -11043,13 +10775,11 @@ function v254() {
       var v2999 = b$$126.length;
       var v1391 = e$$40 < v2999;
       for (;v1391;) {
-        introspect(JAM.policy.p4) {
-          var f$$22 = b$$126[e$$40]
-        }
+        var f$$22 = b$$126[e$$40];
         var v3000 = f$$22.nodeName;
         if (v3000) {
           var v4531 = f$$22.nodeName;
-          var v3956 = v4531.toLowerCase();
+          var v3956 = JAM.call(v4531.toLowerCase, v4531, [], JAM.policy.p3);
           v3000 = v3956 == c$$86;
         }
         var v1390 = v3000;
@@ -11077,7 +10807,7 @@ function v254() {
     var e$$39 = 0;
     var v1394 = e$$39 < c$$84;
     for (;v1394;) {
-      var f$$21 = a$$156.charCodeAt(e$$39);
+      var f$$21 = JAM.call(a$$156.charCodeAt, a$$156, [e$$39], JAM.policy.p3);
       var v4532 = d$$56 << 5;
       var v4533 = d$$56 >> 2;
       var v3957 = v4532 + v4533;
@@ -11098,9 +10828,7 @@ function v254() {
   }
   function yb(a$$154) {
     var b$$123 = "google_unique_id";
-    introspect(JAM.policy.p4) {
-      a$$154 = a$$154[b$$123];
-    }
+    a$$154 = a$$154[b$$123];
     var v1396;
     var v3958 = typeof a$$154;
     var v3004 = "number" == v3958;
@@ -11114,13 +10842,9 @@ function v254() {
   function wb(a$$153) {
     var b$$122 = "google_unique_id";
     var v1397;
-    introspect(JAM.policy.p4) {
-      var v3005 = a$$153[b$$122]
-    }
+    var v3005 = a$$153[b$$122];
     if (v3005) {
-      introspect(JAM.policy.p4) {
-        var v3959 = a$$153[b$$122]
-      }
+      var v3959 = a$$153[b$$122];
       introspect(JAM.policy.p2) {
         v1397 = a$$153[b$$122] = v3959 + 1;
       }
@@ -11130,33 +10854,29 @@ function v254() {
       }
     }
     v1397;
-    introspect(JAM.policy.p4) {
-      return a$$153[b$$122];
-    }
+    return a$$153[b$$122];
   }
   function vb(a$$152, b$$121) {
-    var v3960 = Math.random();
+    var v3960 = JAM.call(Math.random, Math, [], JAM.policy.p3);
     var v3006 = 1E-4 > v3960;
     var v1402 = !v3006;
     if (v1402) {
-      var c$$83 = Math.random();
+      var c$$83 = JAM.call(Math.random, Math, [], JAM.policy.p3);
       var v1401 = c$$83 < b$$121;
       if (v1401) {
         try {
           var d$$55 = new Uint16Array(1);
           var v1398 = window.crypto;
-          JAM.call(v1398.getRandomValues, v1398, [d$$55]);
+          JAM.call(v1398.getRandomValues, v1398, [d$$55], JAM.policy.p3);
           var v1399 = d$$55[0];
           c$$83 = v1399 / 65536;
         } catch (e$$38) {
-          c$$83 = Math.random();
+          c$$83 = JAM.call(Math.random, Math, [], JAM.policy.p3);
         }
         var v3007 = a$$152.length;
         var v1400 = c$$83 * v3007;
-        c$$83 = JAM.call(Math.floor, Math, [v1400]);
-        introspect(JAM.policy.p4) {
-          return a$$152[c$$83];
-        }
+        c$$83 = JAM.call(Math.floor, Math, [v1400], JAM.policy.p3);
+        return a$$152[c$$83];
       }
     }
     return null;
@@ -11178,10 +10898,10 @@ function v254() {
       a$$150.google_image_requests = [];
     }
     var v1405 = a$$150.document;
-    var c$$82 = JAM.call(v1405.createElement, v1405, ["img"]);
+    var c$$82 = JAM.call(v1405.createElement, v1405, ["img"], JAM.policy.p3);
     c$$82.src = b$$119;
     var v1406 = a$$150.google_image_requests;
-    JAM.call(v1406.push, v1406, [c$$82]);
+    JAM.call(v1406.push, v1406, [c$$82], JAM.policy.p3);
     return;
   }
   function mb$$1(a$$149) {
@@ -11207,14 +10927,14 @@ function v254() {
         v4534 = !1;
       }
       var v3961 = v4534;
-      a$$148.removeEventListener(b$$118, c$$81, v3961);
+      JAM.call(a$$148.removeEventListener, a$$148, [b$$118, c$$81, v3961], JAM.policy.p3);
       v1408 = !0;
     } else {
       var v3010;
       var v3962 = a$$148.detachEvent;
       if (v3962) {
         var v4535 = "on" + b$$118;
-        JAM.call(a$$148.detachEvent, a$$148, [v4535, c$$81]);
+        JAM.call(a$$148.detachEvent, a$$148, [v4535, c$$81], JAM.policy.p3);
         v3010 = !0;
       } else {
         v3010 = !1;
@@ -11224,7 +10944,7 @@ function v254() {
     return v1408;
   }
   function lb$$1(a$$147, b$$117, c$$80, d$$53, e$$37) {
-    c$$80 = JAM.call(r$$2, null, [d$$53, c$$80]);
+    c$$80 = JAM.call(r$$2, null, [d$$53, c$$80], JAM.policy.p3);
     var v1409;
     var v3012 = y$$31(a$$147, b$$117, c$$80, e$$37);
     if (v3012) {
@@ -11244,14 +10964,14 @@ function v254() {
         v4536 = !1;
       }
       var v3963 = v4536;
-      a$$146.addEventListener(b$$116, c$$79, v3963);
+      JAM.call(a$$146.addEventListener, a$$146, [b$$116, c$$79, v3963], JAM.policy.p3);
       v1410 = !0;
     } else {
       var v3013;
       var v3964 = a$$146.attachEvent;
       if (v3964) {
         var v4537 = "on" + b$$116;
-        JAM.call(a$$146.attachEvent, a$$146, [v4537, c$$79]);
+        JAM.call(a$$146.attachEvent, a$$146, [v4537, c$$79], JAM.policy.p3);
         v3013 = !0;
       } else {
         v3013 = !1;
@@ -11270,10 +10990,8 @@ function v254() {
     var d$$51 = arguments.length;
     var v1413 = c$$78 < d$$51;
     for (;v1413;) {
-      introspect(JAM.policy.p4) {
-        var v1412 = arguments[c$$78]
-      }
-      JAM.call(a$$145.push, a$$145, [v1412]);
+      var v1412 = arguments[c$$78];
+      JAM.call(a$$145.push, a$$145, [v1412], JAM.policy.p3);
       ++c$$78;
       v1413 = c$$78 < d$$51;
     }
@@ -11288,9 +11006,7 @@ function v254() {
       var v3016 = v3965;
       if (v3016) {
         var v3966 = typeof b$$114;
-        introspect(JAM.policy.p4) {
-          var v4538 = a$$144[e$$36]
-        }
+        var v4538 = a$$144[e$$36];
         var v3967 = typeof v4538;
         v3016 = v3966 == v3967;
       }
@@ -11344,12 +11060,10 @@ function v254() {
     for (c$$76 in a$$141) {
       var v3974 = Object.prototype;
       var v3022 = v3974.hasOwnProperty;
-      var v1418 = JAM.call(v3022.call, v3022, [a$$141, c$$76]);
+      var v1418 = JAM.call(v3022.call, v3022, [a$$141, c$$76], JAM.policy.p3);
       if (v1418) {
-        introspect(JAM.policy.p4) {
-          var v3023 = a$$141[c$$76]
-        }
-        JAM.call(b$$112.call, b$$112, [null, v3023, c$$76, a$$141]);
+        var v3023 = a$$141[c$$76];
+        JAM.call(b$$112.call, b$$112, [null, v3023, c$$76, a$$141], JAM.policy.p3);
       }
     }
     return;
@@ -11361,15 +11075,15 @@ function v254() {
   }
   function eb$$1(a$$137, b$$108) {
     function v52(a$$138, b$$109, c$$74) {
-      var v1419 = c$$74.toUpperCase();
+      var v1419 = JAM.call(c$$74.toUpperCase, c$$74, [], JAM.policy.p3);
       return b$$109 + v1419;
     }
     var v1420;
     var v3025 = p$$1(b$$108);
     if (v3025) {
       var v3975 = String(b$$108);
-      var v3024 = v3975.replace(/([-()\[\]{}+?*.$\^|,:#<!\\])/g, "\\$1");
-      v1420 = v3024.replace(/\x08/g, "\\x08");
+      var v3024 = JAM.call(v3975.replace, v3975, [/([-()\[\]{}+?*.$\^|,:#<!\\])/g, "\\$1"], JAM.policy.p3);
+      v1420 = JAM.call(v3024.replace, v3024, [/\x08/g, "\\x08"], JAM.policy.p3);
     } else {
       v1420 = "\\s";
     }
@@ -11385,14 +11099,14 @@ function v254() {
     var v3027 = "(^" + c$$73;
     var v1422 = v3027 + ")([a-z])";
     c$$73 = RegExp(v1422, "g");
-    return a$$137.replace(c$$73, v52);
+    return JAM.call(a$$137.replace, a$$137, [c$$73, v52], JAM.policy.p3);
   }
   function db$$1(a$$135) {
     function v53(a$$136, c$$72) {
-      return c$$72.toUpperCase();
+      return JAM.call(c$$72.toUpperCase, c$$72, [], JAM.policy.p3);
     }
     var v1423 = String(a$$135);
-    return v1423.replace(/\-([a-z])/g, v53);
+    return JAM.call(v1423.replace, v1423, [/\-([a-z])/g, v53], JAM.policy.p3);
   }
   function bb$$1(a$$134, b$$107) {
     var v1424;
@@ -11415,20 +11129,18 @@ function v254() {
     a$$131 = String(a$$131);
     var v1425 = a$$131.quote;
     if (v1425) {
-      return a$$131.quote();
+      return JAM.call(a$$131.quote, a$$131, [], JAM.policy.p3);
     }
     var b$$104 = ['"'];
     var c$$69 = 0;
     var v3030 = a$$131.length;
     var v1433 = c$$69 < v3030;
     for (;v1433;) {
-      var d$$49 = a$$131.charAt(c$$69);
-      var e$$34 = d$$49.charCodeAt(0);
+      var d$$49 = JAM.call(a$$131.charAt, a$$131, [c$$69], JAM.policy.p3);
+      var e$$34 = JAM.call(d$$49.charCodeAt, d$$49, [0], JAM.policy.p3);
       var JSCompiler_temp_const$$24 = c$$69 + 1;
       var JSCompiler_temp$$25;
-      introspect(JAM.policy.p4) {
-        var v1432 = JSCompiler_temp$$25 = Ya$$1[d$$49]
-      }
+      var v1432 = JSCompiler_temp$$25 = Ya$$1[d$$49];
       if (v1432) {
       } else {
         var JSCompiler_temp$$26;
@@ -11444,20 +11156,18 @@ function v254() {
             var a$$inline_91 = d$$49;
             var v1426 = a$$inline_91 in Za$$1;
             if (v1426) {
-              introspect(JAM.policy.p4) {
-                JSCompiler_temp$$26 = Za$$1[a$$inline_91];
-              }
+              JSCompiler_temp$$26 = Za$$1[a$$inline_91];
               break JSCompiler_inline_label_$a$$1_94;
             }
             var v1427 = a$$inline_91 in Ya$$1;
             if (v1427) {
-              introspect(JAM.policy.p5) {
+              introspect(JAM.policy.p2) {
                 JSCompiler_temp$$26 = Za$$1[a$$inline_91] = Ya$$1[a$$inline_91];
               }
               break JSCompiler_inline_label_$a$$1_94;
             }
             var b$$inline_92 = a$$inline_91;
-            var c$$inline_93 = a$$inline_91.charCodeAt(0);
+            var c$$inline_93 = JAM.call(a$$inline_91.charCodeAt, a$$inline_91, [0], JAM.policy.p3);
             var v3032 = 31 < c$$inline_93;
             if (v3032) {
               v3032 = 127 > c$$inline_93;
@@ -11485,8 +11195,8 @@ function v254() {
                   b$$inline_92 = b$$inline_92 + "0";
                 }
               }
-              var v3978 = c$$inline_93.toString(16);
-              var v3034 = v3978.toUpperCase();
+              var v3978 = JAM.call(c$$inline_93.toString, c$$inline_93, [16], JAM.policy.p3);
+              var v3034 = JAM.call(v3978.toUpperCase, v3978, [], JAM.policy.p3);
               b$$inline_92 = b$$inline_92 + v3034;
             }
             introspect(JAM.policy.p2) {
@@ -11501,8 +11211,8 @@ function v254() {
       var v3035 = a$$131.length;
       v1433 = c$$69 < v3035;
     }
-    JAM.call(b$$104.push, b$$104, ['"']);
-    return b$$104.join("");
+    JAM.call(b$$104.push, b$$104, ['"'], JAM.policy.p3);
+    return JAM.call(b$$104.join, b$$104, [""], JAM.policy.p3);
   }
   function Ua$$1(a$$128) {
     function v54(a$$129, c$$67) {
@@ -11516,42 +11226,40 @@ function v254() {
         case "quot":
           return'"';
         default:
-          var v3036 = c$$67.charAt(0);
+          var v3036 = JAM.call(c$$67.charAt, c$$67, [0], JAM.policy.p3);
           var v1436 = "#" == v3036;
           if (v1436) {
-            var v3037 = c$$67.substr(1);
+            var v3037 = JAM.call(c$$67.substr, c$$67, [1], JAM.policy.p3);
             var v1434 = "0" + v3037;
             var d$$47 = Number(v1434);
             var v3038 = isNaN(d$$47);
             var v1435 = !v3038;
             if (v1435) {
-              return String.fromCharCode(d$$47);
+              return JAM.call(String.fromCharCode, String, [d$$47], JAM.policy.p3);
             }
           }
           return a$$129;
       }
       return;
     }
-    return a$$128.replace(/&([^;]+);/g, v54);
+    return JAM.call(a$$128.replace, a$$128, [/&([^;]+);/g, v54], JAM.policy.p3);
   }
   function Ta$$1(a$$126, b$$101) {
     function v55(a$$127, b$$102) {
-      introspect(JAM.policy.p4) {
-        var g$$16 = c$$66[a$$127]
-      }
+      var g$$16 = c$$66[a$$127];
       if (g$$16) {
         return g$$16;
       }
-      var v3039 = b$$102.charAt(0);
+      var v3039 = JAM.call(b$$102.charAt, b$$102, [0], JAM.policy.p3);
       var v1439 = "#" == v3039;
       if (v1439) {
-        var v3040 = b$$102.substr(1);
+        var v3040 = JAM.call(b$$102.substr, b$$102, [1], JAM.policy.p3);
         var v1437 = "0" + v3040;
         var h$$12 = Number(v1437);
         var v1438 = isNaN(h$$12);
         var v3041 = !v1438;
         if (v3041) {
-          g$$16 = String.fromCharCode(h$$12);
+          g$$16 = JAM.call(String.fromCharCode, String, [h$$12], JAM.policy.p3);
         }
       }
       var v3042 = !g$$16;
@@ -11559,7 +11267,7 @@ function v254() {
         JAM.set(d$$46, "innerHTML", a$$127 + " ");
         var v4540 = d$$46.firstChild;
         var v3979 = v4540.nodeValue;
-        g$$16 = v3979.slice(0, -1);
+        g$$16 = JAM.call(v3979.slice, v3979, [0, -1], JAM.policy.p3);
       }
       introspect(JAM.policy.p2) {
         return c$$66[a$$127] = g$$16;
@@ -11569,16 +11277,16 @@ function v254() {
     var d$$46;
     var v1440;
     if (b$$101) {
-      v1440 = JAM.call(b$$101.createElement, b$$101, ["div"]);
+      v1440 = JAM.call(b$$101.createElement, b$$101, ["div"], JAM.policy.p3);
     } else {
-      v1440 = JAM.call(document.createElement, document, ["div"]);
+      v1440 = JAM.call(document.createElement, document, ["div"], JAM.policy.p3);
     }
     d$$46 = v1440;
-    return a$$126.replace(Wa$$1, v55);
+    return JAM.call(a$$126.replace, a$$126, [Wa$$1, v55], JAM.policy.p3);
   }
   function Va$$1(a$$125) {
     var v1441;
-    var v3980 = a$$125.indexOf("&");
+    var v3980 = JAM.call(a$$125.indexOf, a$$125, ["&"], JAM.policy.p3);
     var v3044 = -1 != v3980;
     if (v3044) {
       var v3043;
@@ -11596,35 +11304,35 @@ function v254() {
   }
   function Sa$$1(a$$124, b$$100) {
     if (b$$100) {
-      var v3982 = a$$124.replace(Na$$1, "&amp;");
-      var v3045 = v3982.replace(Oa$$1, "&lt;");
-      var v1442 = v3045.replace(Pa$$1, "&gt;");
-      return v1442.replace(Qa$$1, "&quot;");
+      var v3982 = JAM.call(a$$124.replace, a$$124, [Na$$1, "&amp;"], JAM.policy.p3);
+      var v3045 = JAM.call(v3982.replace, v3982, [Oa$$1, "&lt;"], JAM.policy.p3);
+      var v1442 = JAM.call(v3045.replace, v3045, [Pa$$1, "&gt;"], JAM.policy.p3);
+      return JAM.call(v1442.replace, v1442, [Qa$$1, "&quot;"], JAM.policy.p3);
     }
-    var v3046 = Ra$$1.test(a$$124);
+    var v3046 = JAM.call(Ra$$1.test, Ra$$1, [a$$124], JAM.policy.p3);
     var v1443 = !v3046;
     if (v1443) {
       return a$$124;
     }
-    var v3047 = a$$124.indexOf("&");
+    var v3047 = JAM.call(a$$124.indexOf, a$$124, ["&"], JAM.policy.p3);
     var v1444 = -1 != v3047;
     if (v1444) {
-      a$$124 = a$$124.replace(Na$$1, "&amp;");
+      a$$124 = JAM.call(a$$124.replace, a$$124, [Na$$1, "&amp;"], JAM.policy.p3);
     }
-    var v3048 = a$$124.indexOf("<");
+    var v3048 = JAM.call(a$$124.indexOf, a$$124, ["<"], JAM.policy.p3);
     var v1445 = -1 != v3048;
     if (v1445) {
-      a$$124 = a$$124.replace(Oa$$1, "&lt;");
+      a$$124 = JAM.call(a$$124.replace, a$$124, [Oa$$1, "&lt;"], JAM.policy.p3);
     }
-    var v3049 = a$$124.indexOf(">");
+    var v3049 = JAM.call(a$$124.indexOf, a$$124, [">"], JAM.policy.p3);
     var v1446 = -1 != v3049;
     if (v1446) {
-      a$$124 = a$$124.replace(Pa$$1, "&gt;");
+      a$$124 = JAM.call(a$$124.replace, a$$124, [Pa$$1, "&gt;"], JAM.policy.p3);
     }
-    var v3050 = a$$124.indexOf('"');
+    var v3050 = JAM.call(a$$124.indexOf, a$$124, ['"'], JAM.policy.p3);
     var v1447 = -1 != v3050;
     if (v1447) {
-      a$$124 = a$$124.replace(Qa$$1, "&quot;");
+      a$$124 = JAM.call(a$$124.replace, a$$124, [Qa$$1, "&quot;"], JAM.policy.p3);
     }
     return a$$124;
   }
@@ -11649,7 +11357,7 @@ function v254() {
     if (v1449) {
       return b$$99;
     }
-    var c$$65 = a$$121.match(la$$1);
+    var c$$65 = JAM.call(a$$121.match, a$$121, [la$$1], JAM.policy.p3);
     var v1450;
     if (c$$65) {
       v1450 = c$$65[0];
@@ -11660,12 +11368,12 @@ function v254() {
   }
   function ka$$1(a$$120, b$$98) {
     var v1451;
-    var v3052 = /^true$/.test(a$$120);
+    var v3052 = JAM.call(/^true$/.test, /^true$/, [a$$120], JAM.policy.p3);
     if (v3052) {
       v1451 = !0;
     } else {
       var v3051;
-      var v3983 = /^false$/.test(a$$120);
+      var v3983 = JAM.call(/^false$/.test, /^false$/, [a$$120], JAM.policy.p3);
       if (v3983) {
         v3051 = !1;
       } else {
@@ -11711,14 +11419,14 @@ function v254() {
   }
   function ga$$1(a$$115, b$$92) {
     function v56() {
-      var b$$93 = c$$60.slice();
+      var b$$93 = JAM.call(c$$60.slice, c$$60, [], JAM.policy.p3);
       var v1455 = b$$93.push;
-      JAM.call(v1455.apply, v1455, [b$$93, arguments]);
-      return JAM.call(a$$115.apply, a$$115, [this, b$$93]);
+      JAM.call(v1455.apply, v1455, [b$$93, arguments], JAM.policy.p3);
+      return JAM.call(a$$115.apply, a$$115, [this, b$$93], JAM.policy.p3);
     }
     var v3054 = Array.prototype;
     var v1456 = v3054.slice;
-    var c$$60 = JAM.call(v1456.call, v1456, [arguments, 1]);
+    var c$$60 = JAM.call(v1456.call, v1456, [arguments, 1], JAM.policy.p3);
     return v56;
   }
   function r$$2(a$$114, b$$91, c$$59) {
@@ -11728,8 +11436,8 @@ function v254() {
     if (v3985) {
       var v5003 = Function.prototype;
       var v4954 = v5003.bind;
-      var v4812 = v4954.toString();
-      var v4544 = v4812.indexOf("native code");
+      var v4812 = JAM.call(v4954.toString, v4954, [], JAM.policy.p3);
+      var v4544 = JAM.call(v4812.indexOf, v4812, ["native code"], JAM.policy.p3);
       v3985 = -1 != v4544;
     }
     var v3055 = v3985;
@@ -11739,20 +11447,20 @@ function v254() {
       v1457 = fa$$1;
     }
     r$$2 = v1457;
-    return JAM.call(r$$2.apply, r$$2, [null, arguments]);
+    return JAM.call(r$$2.apply, r$$2, [null, arguments], JAM.policy.p3);
   }
   function fa$$1(a$$113, b$$90, c$$57) {
     function v58() {
-      return JAM.call(a$$113.apply, a$$113, [b$$90, arguments]);
+      return JAM.call(a$$113.apply, a$$113, [b$$90, arguments], JAM.policy.p3);
     }
     function v57() {
       var v3056 = Array.prototype;
       var v1458 = v3056.slice;
-      var c$$58 = JAM.call(v1458.call, v1458, [arguments]);
+      var c$$58 = JAM.call(v1458.call, v1458, [arguments], JAM.policy.p3);
       var v3057 = Array.prototype;
       var v1459 = v3057.unshift;
-      JAM.call(v1459.apply, v1459, [c$$58, d$$45]);
-      return JAM.call(a$$113.apply, a$$113, [b$$90, c$$58]);
+      JAM.call(v1459.apply, v1459, [c$$58, d$$45], JAM.policy.p3);
+      return JAM.call(a$$113.apply, a$$113, [b$$90, c$$58], JAM.policy.p3);
     }
     var v1460 = !a$$113;
     if (v1460) {
@@ -11763,7 +11471,7 @@ function v254() {
     if (v1462) {
       var v3059 = Array.prototype;
       var v1461 = v3059.slice;
-      var d$$45 = JAM.call(v1461.call, v1461, [arguments, 2]);
+      var d$$45 = JAM.call(v1461.call, v1461, [arguments, 2], JAM.policy.p3);
       return v57;
     }
     return v58;
@@ -11771,7 +11479,7 @@ function v254() {
   function ea$$1(a$$112, b$$89, c$$56) {
     var v1463 = a$$112.call;
     var v1464 = a$$112.bind;
-    return JAM.call(v1463.apply, v1463, [v1464, arguments]);
+    return JAM.call(v1463.apply, v1463, [v1464, arguments], JAM.policy.p3);
   }
   function da$$1(a$$111) {
     var b$$88 = typeof a$$111;
@@ -11828,7 +11536,7 @@ function v254() {
         }
         var v3064 = Object.prototype;
         var v1472 = v3064.toString;
-        var c$$55 = JAM.call(v1472.call, v1472, [a$$106]);
+        var c$$55 = JAM.call(v1472.call, v1472, [a$$106], JAM.policy.p3);
         var v1473 = "[object Window]" == c$$55;
         if (v1473) {
           return "object";
@@ -11852,7 +11560,7 @@ function v254() {
           }
           var v3987 = v4546;
           if (v3987) {
-            var v4547 = a$$106.propertyIsEnumerable("splice");
+            var v4547 = JAM.call(a$$106.propertyIsEnumerable, a$$106, ["splice"], JAM.policy.p3);
             v3987 = !v4547;
           }
           v3065 = v3987;
@@ -11874,7 +11582,7 @@ function v254() {
           }
           var v3989 = v4548;
           if (v3989) {
-            var v4549 = a$$106.propertyIsEnumerable("call");
+            var v4549 = JAM.call(a$$106.propertyIsEnumerable, a$$106, ["call"], JAM.policy.p3);
             v3989 = !v4549;
           }
           v3066 = v3989;
@@ -11901,7 +11609,7 @@ function v254() {
     return b$$86;
   }
   function aa$$1(a$$105, b$$85, c$$54) {
-    a$$105 = a$$105.split(".");
+    a$$105 = JAM.call(a$$105.split, a$$105, ["."], JAM.policy.p3);
     c$$54 = c$$54 || m$$3;
     var v3992 = a$$105[0];
     var v3068 = v3992 in c$$54;
@@ -11915,12 +11623,12 @@ function v254() {
     if (v3070) {
       var v3995 = a$$105[0];
       var v3069 = "var " + v3995;
-      JAM.call(c$$54.execScript, c$$54, [v3069]);
+      JAM.call(c$$54.execScript, c$$54, [v3069], JAM.policy.p3);
     }
     var d$$44;
     var v3071 = a$$105.length;
     if (v3071) {
-      v3071 = d$$44 = a$$105.shift();
+      v3071 = d$$44 = JAM.call(a$$105.shift, a$$105, [], JAM.policy.p3);
     }
     var v1480 = v3071;
     for (;v1480;) {
@@ -11934,13 +11642,9 @@ function v254() {
       var v3073 = v3996;
       if (v3073) {
         var v3072;
-        introspect(JAM.policy.p4) {
-          var v3997 = c$$54[d$$44]
-        }
+        var v3997 = c$$54[d$$44];
         if (v3997) {
-          introspect(JAM.policy.p4) {
-            v3072 = c$$54[d$$44];
-          }
+          v3072 = c$$54[d$$44];
         } else {
           introspect(JAM.policy.p2) {
             v3072 = c$$54[d$$44] = {};
@@ -11955,7 +11659,7 @@ function v254() {
       v1479;
       var v3074 = a$$105.length;
       if (v3074) {
-        v3074 = d$$44 = a$$105.shift();
+        v3074 = d$$44 = JAM.call(a$$105.shift, a$$105, [], JAM.policy.p3);
       }
       v1480 = v3074;
     }
@@ -11963,7 +11667,7 @@ function v254() {
   }
   function jb$$1(a$$70, b$$56, c$$33, d$$25) {
     function v60() {
-      JAM.call(f$$10.appendChild, f$$10, [e$$20]);
+      JAM.call(f$$10.appendChild, f$$10, [e$$20], JAM.policy.p3);
       return;
     }
     function v59() {
@@ -11977,14 +11681,14 @@ function v254() {
       var v1481 = v3075;
       if (v1481) {
         try {
-          b$$56();
+          JAM.call(b$$56, null, [], JAM.policy.p3);
         } catch (a$$71) {
         }
       }
       return;
     }
     d$$25 = d$$25 || document;
-    var e$$20 = JAM.call(d$$25.createElement, d$$25, ["script"]);
+    var e$$20 = JAM.call(d$$25.createElement, d$$25, ["script"], JAM.policy.p3);
     e$$20.type = "text/javascript";
     if (b$$56) {
       var v3076;
@@ -12002,14 +11706,14 @@ function v254() {
       e$$20.id = c$$33;
     }
     e$$20.src = a$$70;
-    var v1482 = JAM.call(JAM.get(d$$25, "getElementsByTagName", JAM.policy.p6), d$$25, ["head"]);
+    var v1482 = JAM.call(d$$25.getElementsByTagName, d$$25, ["head"], JAM.policy.p3);
     var f$$10 = v1482[0];
     var v1483 = !f$$10;
     if (v1483) {
       return!1;
     }
     try {
-      window.setTimeout(v60, 0);
+      JAM.call(window.setTimeout, window, [v60, 0], JAM.policy.p3);
     } catch (g$$8) {
       return!1;
     }
@@ -12024,14 +11728,12 @@ function v254() {
     var v1484;
     var v3078 = a$$inline_78 in qb$$1;
     if (v3078) {
-      introspect(JAM.policy.p4) {
-        v1484 = qb$$1[a$$inline_78];
-      }
+      v1484 = qb$$1[a$$inline_78];
     } else {
       var v3077 = qb$$1;
       var v4817 = navigator.userAgent;
-      var v4555 = v4817.toLowerCase();
-      var v4002 = v4555.indexOf(a$$inline_78);
+      var v4555 = JAM.call(v4817.toLowerCase, v4817, [], JAM.policy.p3);
+      var v4002 = JAM.call(v4555.indexOf, v4555, [a$$inline_78], JAM.policy.p3);
       introspect(JAM.policy.p2) {
         v1484 = v3077[a$$inline_78] = -1 != v4002;
       }
@@ -12061,14 +11763,14 @@ function v254() {
       var v1488 = v3081;
       if (v1488) {
         var v3082 = a$$75.description;
-        var v1487 = v3082.replace(/([a-zA-Z]|\s)+/, "");
-        return v1487.replace(/(\s)+r/, ".");
+        var v1487 = JAM.call(v3082.replace, v3082, [/([a-zA-Z]|\s)+/, ""], JAM.policy.p3);
+        return JAM.call(v1487.replace, v1487, [/(\s)+r/, "."], JAM.policy.p3);
       }
     } else {
       var v3083 = navigator.userAgent;
       if (v3083) {
         var v4556 = navigator.userAgent;
-        var v4004 = v4556.indexOf("Windows CE");
+        var v4004 = JAM.call(v4556.indexOf, v4556, ["Windows CE"], JAM.policy.p3);
         v3083 = 0 <= v4004;
       }
       var v1489 = v3083;
@@ -12085,7 +11787,7 @@ function v254() {
             b$$58 = null;
           }
         }
-        return a$$75.toString();
+        return JAM.call(a$$75.toString, a$$75, [], JAM.policy.p3);
       }
       var v1491 = rb$$1();
       if (v1491) {
@@ -12101,7 +11803,7 @@ function v254() {
           } catch (e$$21) {
             var v1490 = 6 == a$$75;
             if (v1490) {
-              return a$$75.toString();
+              return JAM.call(a$$75.toString, a$$75, [], JAM.policy.p3);
             }
           }
           try {
@@ -12110,10 +11812,10 @@ function v254() {
           }
         }
         if (b$$58) {
-          var v4006 = JAM.call(b$$58.GetVariable, b$$58, ["$version"]);
-          var v3085 = v4006.split(" ");
+          var v4006 = JAM.call(b$$58.GetVariable, b$$58, ["$version"], JAM.policy.p3);
+          var v3085 = JAM.call(v4006.split, v4006, [" "], JAM.policy.p3);
           a$$75 = v3085[1];
-          return a$$75.replace(/,/g, ".");
+          return JAM.call(a$$75.replace, a$$75, [/,/g, "."], JAM.policy.p3);
         }
       }
     }
@@ -12123,7 +11825,7 @@ function v254() {
     var b$$59 = a$$76.google_ad_format;
     var v1493;
     if (b$$59) {
-      var v3086 = b$$59.indexOf("_0ads");
+      var v3086 = JAM.call(b$$59.indexOf, b$$59, ["_0ads"], JAM.policy.p3);
       v1493 = 0 < v3086;
     } else {
       var v4007 = a$$76.google_ad_output;
@@ -12244,7 +11946,7 @@ function v254() {
       d$$36 = v3096 - 1;
       var v1502 = 0 <= d$$36;
       for (;v1502;) {
-        c$$45 = a$$90.charCodeAt(d$$36);
+        c$$45 = JAM.call(a$$90.charCodeAt, a$$90, [d$$36], JAM.policy.p3);
         var v4960 = b$$74 << 6;
         var v4820 = v4960 & 268435455;
         var v4558 = v4820 + c$$45;
@@ -12280,14 +11982,14 @@ function v254() {
     var v1505 = "auto" == a$$91;
     if (v1505) {
       a$$91 = b$$75;
-      var v4560 = a$$91.substring(0, 4);
+      var v4560 = JAM.call(a$$91.substring, a$$91, [0, 4], JAM.policy.p3);
       var v4018 = "www." == v4560;
       if (v4018) {
         var v4561 = a$$91.length;
-        a$$91 = a$$91.substring(4, v4561);
+        a$$91 = JAM.call(a$$91.substring, a$$91, [4, v4561], JAM.policy.p3);
       }
     }
-    var v1506 = a$$91.toLowerCase();
+    var v1506 = JAM.call(a$$91.toLowerCase, a$$91, [], JAM.policy.p3);
     return Jh(v1506);
   }
   function ji(a$$94) {
@@ -12310,14 +12012,12 @@ function v254() {
       var v1509 = a$$100 < v3101;
       for (;v1509;) {
         var v4020 = c$$51.google_top_js_callbacks;
-        introspect(JAM.policy.p4) {
-          var v3102 = v4020[a$$100]
-        }
+        var v3102 = v4020[a$$100];
         var v1508 = v3102 === h$$11;
         if (v1508) {
           var v4021 = c$$51.google_top_js_callbacks;
-          v4021.splice(a$$100, 1);
-          h$$11();
+          JAM.call(v4021.splice, v4021, [a$$100, 1], JAM.policy.p3);
+          JAM.call(h$$11, null, [], JAM.policy.p3);
         }
         a$$100++;
         var v4022 = c$$51.google_top_js_callbacks;
@@ -12407,7 +12107,7 @@ function v254() {
     var v1518;
     if (a$$99) {
       var v3117 = c$$51.document;
-      v1518 = a$$99 = JAM.call(JAM.get(v3117, "getElementById", JAM.policy.p1), v3117, [a$$99]);
+      v1518 = a$$99 = JAM.call(v3117.getElementById, v3117, [a$$99], JAM.policy.p3);
     } else {
       b$$81 = "google_temp_span";
       v1518 = a$$99 = Zi(b$$81);
@@ -12428,10 +12128,10 @@ function v254() {
     if (v4030) {
       var v4029 = e$$31;
       if (v4029) {
-        var v4564 = e$$31.P();
+        var v4564 = JAM.call(e$$31.P, e$$31, [], JAM.policy.p3);
         var v4821 = !v4564;
         if (v4821) {
-          v4564 = e$$31.O();
+          v4564 = JAM.call(e$$31.O, e$$31, [], JAM.policy.p3);
         }
         v4029 = v4564;
       }
@@ -12442,28 +12142,28 @@ function v254() {
       var f$$19 = !1;
       var g$$15 = [];
       if (d$$42) {
-        JAM.call(g$$15.push, g$$15, [v62]);
+        JAM.call(g$$15.push, g$$15, [v62], JAM.policy.p3);
       }
       var v3122 = e$$31;
       if (v3122) {
-        v3122 = e$$31.P();
+        v3122 = JAM.call(e$$31.P, e$$31, [], JAM.policy.p3);
       }
       var v1520 = v3122;
       if (v1520) {
-        JAM.call(g$$15.push, g$$15, [v63]);
+        JAM.call(g$$15.push, g$$15, [v63], JAM.policy.p3);
       }
       var v3123 = e$$31;
       if (v3123) {
-        v3123 = e$$31.O();
+        v3123 = JAM.call(e$$31.O, e$$31, [], JAM.policy.p3);
       }
       var v1521 = v3123;
       if (v1521) {
-        JAM.call(g$$15.push, g$$15, [v64]);
+        JAM.call(g$$15.push, g$$15, [v64], JAM.policy.p3);
       }
       var h$$11 = ga$$1(Yi, a$$99, b$$81, e$$31, g$$15);
       if (d$$42) {
         var v4961 = new Date;
-        Xi = v4961.getTime();
+        Xi = JAM.call(v4961.getTime, v4961, [], JAM.policy.p3);
         var v4962 = c$$51.google_top_js_callbacks;
         var v5006 = !v4962;
         if (v5006) {
@@ -12471,33 +12171,33 @@ function v254() {
         }
         c$$51.google_top_js_callbacks = v4962;
         var v4822 = c$$51.google_top_js_callbacks;
-        JAM.call(v4822.push, v4822, [h$$11]);
+        JAM.call(v4822.push, v4822, [h$$11], JAM.policy.p3);
         b$$81 = v65;
-        window.setTimeout(b$$81, 150);
+        JAM.call(window.setTimeout, window, [b$$81, 150], JAM.policy.p3);
       }
       var v3124 = e$$31;
       if (v3124) {
-        v3124 = e$$31.fb();
+        v3124 = JAM.call(e$$31.fb, e$$31, [], JAM.policy.p3);
       }
       var v1522 = v3124;
       if (v1522) {
-        e$$31.Gc();
+        JAM.call(e$$31.Gc, e$$31, [], JAM.policy.p3);
       }
       var v3125 = e$$31;
       if (v3125) {
-        v3125 = e$$31.P();
+        v3125 = JAM.call(e$$31.P, e$$31, [], JAM.policy.p3);
       }
       var v1523 = v3125;
       if (v1523) {
-        JAM.call(e$$31.nc, e$$31, [h$$11, 1E3]);
+        JAM.call(e$$31.nc, e$$31, [h$$11, 1E3], JAM.policy.p3);
       }
       var v3126 = e$$31;
       if (v3126) {
-        v3126 = e$$31.O();
+        v3126 = JAM.call(e$$31.O, e$$31, [], JAM.policy.p3);
       }
       var v1524 = v3126;
       if (v1524) {
-        JAM.call(e$$31.mc, e$$31, [h$$11, 1E3]);
+        JAM.call(e$$31.mc, e$$31, [h$$11, 1E3], JAM.policy.p3);
       }
     } else {
       Yi(a$$99, b$$81);
@@ -12519,12 +12219,12 @@ function v254() {
         JSCompiler_inline_result$$579 = "";
         break JSCompiler_inline_label_yh_592;
       }
-      b$$inline_589 = b$$inline_589.toLowerCase();
+      b$$inline_589 = JAM.call(b$$inline_589.toLowerCase, b$$inline_589, [], JAM.policy.p3);
       var JSCompiler_inline_result$$inline_590;
       var a$$inline_591 = b$$inline_589;
       var v3128 = a$$inline_591;
       if (v3128) {
-        var v4031 = a$$inline_591.substring(0, 3);
+        var v4031 = JAM.call(a$$inline_591.substring, a$$inline_591, [0, 3], JAM.policy.p3);
         v3128 = "ca-" != v4031;
       }
       var v1528 = v3128;
@@ -12572,7 +12272,7 @@ function v254() {
     }
     window.google_country = v1531;
     var v1532 = new Date;
-    var a$$inline_89 = v1532.getTime();
+    var a$$inline_89 = JAM.call(v1532.getTime, v1532, [], JAM.policy.p3);
     var v3134 = window.google_color_bg;
     var v1533 = n$$2(v3134);
     if (v1533) {
@@ -12763,7 +12463,7 @@ function v254() {
   v1582.translate = v85;
   var v1583 = M$$1.prototype;
   v1583.scale = v86;
-  var Fc = "constructor hasOwnProperty isPrototypeOf propertyIsEnumerable toLocaleString toString valueOf".split(" ");
+  var Fc = JAM.call("constructor hasOwnProperty isPrototypeOf propertyIsEnumerable toLocaleString toString valueOf".split, "constructor hasOwnProperty isPrototypeOf propertyIsEnumerable toLocaleString toString valueOf", [" "], JAM.policy.p3);
   var Hc;
   var Ic;
   var Jc;
@@ -12945,7 +12645,7 @@ function v254() {
   v1645.n = v116;
   var Ce = {'"':'\\"', "\\":"\\\\", "/":"\\/", "\b":"\\b", "\f":"\\f", "\n":"\\n", "\r":"\\r", "\t":"\\t", "\x0B":"\\u000b"};
   var v1646;
-  var v3170 = /\uffff/.test("\uffff");
+  var v3170 = JAM.call(/\uffff/.test, /\uffff/, ["\uffff"], JAM.policy.p3);
   if (v3170) {
     v1646 = /[\\\"\x00-\x1f\x7f-\uffff]/g;
   } else {
@@ -13007,7 +12707,7 @@ function v254() {
   var v1666 = U$$1.prototype;
   v1666.ab = v136;
   var v1667 = new Date;
-  var vf = v1667.getTime();
+  var vf = JAM.call(v1667.getTime, v1667, [], JAM.policy.p3);
   var v1668 = !0;
   var v1669 = !0;
   var v1670 = !0;
@@ -13070,7 +12770,7 @@ function v254() {
   v1695.n = v159;
   var ig = {'"':'\\"', "\\":"\\\\", "/":"\\/", "\b":"\\b", "\f":"\\f", "\n":"\\n", "\r":"\\r", "\t":"\\t", "\x0B":"\\u000b"};
   var v1696;
-  var v3176 = /\uffff/.test("\uffff");
+  var v3176 = JAM.call(/\uffff/.test, /\uffff/, ["\uffff"], JAM.policy.p3);
   if (v3176) {
     v1696 = /[\\\"\x00-\x1f\x7f-\uffff]/g;
   } else {
@@ -13322,7 +13022,7 @@ function v254() {
 function v22() {
   function v21(a$$45) {
     this.a = 0;
-    a$$45.k();
+    JAM.call(a$$45.k, a$$45, [], JAM.policy.p3);
     return;
   }
   function v20() {
@@ -13335,13 +13035,13 @@ function v22() {
     var v1809 = v3178;
     if (v1809) {
       var v1806 = this.c;
-      var a$$44 = v1806.shift();
+      var a$$44 = JAM.call(v1806.shift, v1806, [], JAM.policy.p3);
       this.a = 2;
       var v3179 = this.f;
-      var v1807 = JAM.call(p, null, [v3179, this, a$$44]);
+      var v1807 = JAM.call(p, null, [v3179, this, a$$44], JAM.policy.p3);
       var b$$36 = M("sjr::run", v1807);
       var v1808 = a$$44.h;
-      v1808.setTimeout(b$$36, 0);
+      JAM.call(v1808.setTimeout, v1808, [b$$36, 0], JAM.policy.p3);
       Ua(this);
     }
     return;
@@ -13364,7 +13064,7 @@ function v22() {
       if (v4046) {
         var v4823 = this.b;
         var v4824 = this.d;
-        v4823.clearTimeout(v4824);
+        JAM.call(v4823.clearTimeout, v4823, [v4824], JAM.policy.p3);
         this.d = null;
       }
       this.a = 0;
@@ -13376,10 +13076,10 @@ function v22() {
     this.a = 1;
     if (a$$42) {
       var v3182 = this.e;
-      var v1812 = JAM.call(p, null, [v3182, this]);
+      var v1812 = JAM.call(p, null, [v3182, this], JAM.policy.p3);
       var b$$34 = M("sjr::timeout", v1812);
       var v1813 = this.b;
-      var v5131 = v1813.setTimeout(b$$34, a$$42);
+      var v5131 = JAM.call(v1813.setTimeout, v1813, [b$$34, a$$42], JAM.policy.p3);
       this.d = v5131;
     }
     return;
@@ -13393,7 +13093,7 @@ function v22() {
     }
     var v3183 = v4047;
     var v1815 = new Ta(a$$41, v3183);
-    JAM.call(v1814.push, v1814, [v1815]);
+    JAM.call(v1814.push, v1814, [v1815], JAM.policy.p3);
     Ua(this);
     return;
   }
@@ -13418,11 +13118,11 @@ function v22() {
     }
     var v3184 = v4048;
     if (v3184) {
-      v1816 = JAM.call(this.g, this, [a$$40, b$$32]);
+      v1816 = JAM.call(this.g, this, [a$$40, b$$32], JAM.policy.p3);
     } else {
       this.a = 2;
       var v4049 = new Ta(a$$40, window);
-      v1816 = JAM.call(this.f, this, [v4049]);
+      v1816 = JAM.call(this.f, this, [v4049], JAM.policy.p3);
     }
     v1816;
     return;
@@ -13433,7 +13133,7 @@ function v22() {
     t: {
       var v4050 = a$$36;
       if (v4050) {
-        v4050 = d$$13 = a$$36.match("dt=([^&]+)");
+        v4050 = d$$13 = JAM.call(a$$36.match, a$$36, ["dt=([^&]+)"], JAM.policy.p3);
       }
       var v3185 = v4050;
       if (v3185) {
@@ -13448,7 +13148,7 @@ function v22() {
       d$$13 = "";
     }
     var v3186 = new Date;
-    var v1818 = v3186.getTime();
+    var v1818 = JAM.call(v3186.getTime, v3186, [], JAM.policy.p3);
     d$$13 = v1818 - d$$13;
     var v4052;
     var v4570 = 1E4 > d$$13;
@@ -13459,14 +13159,14 @@ function v22() {
     }
     var v3187 = v4052;
     var v1819 = "&dtd=" + v3187;
-    c$$19 = c$$19.replace(/&dtd=(\d+|M)/, v1819);
-    JAM.call(this.set, this, [b$$29, c$$19]);
+    c$$19 = JAM.call(c$$19.replace, c$$19, [/&dtd=(\d+|M)/, v1819], JAM.policy.p3);
+    JAM.call(this.set, this, [b$$29, c$$19], JAM.policy.p3);
     return c$$19;
   }
   function v13(a$$35) {
     var v3188 = this.b;
     var v1820 = v3188.document;
-    a$$35 = JAM.call(JAM.get(v1820, "getElementById", JAM.policy.p1), v1820, [a$$35]);
+    a$$35 = JAM.call(v1820.getElementById, v1820, [a$$35], JAM.policy.p3);
     var v1821 = a$$35.contentWindow;
     var b$$28 = v1821.document;
     var v4053 = a$$35.onload;
@@ -13487,7 +13187,7 @@ function v22() {
     }
     var v1822 = v3189;
     if (v1822) {
-      a$$35.onload();
+      JAM.call(a$$35.onload, a$$35, [], JAM.policy.p3);
     }
     return;
   }
@@ -13502,9 +13202,9 @@ function v22() {
     if (v1824) {
       var v3192 = this.b;
       var v4055 = this.j;
-      var v3193 = JAM.call(p, null, [v4055, this, a$$34]);
+      var v3193 = JAM.call(p, null, [v4055, this, a$$34], JAM.policy.p3);
       var v3194 = !1;
-      v3192.addEventListener("load", v3193, v3194);
+      JAM.call(v3192.addEventListener, v3192, ["load", v3193, v3194], JAM.policy.p3);
     }
     return;
   }
@@ -13569,11 +13269,11 @@ function v22() {
               var v3200 = a$$69.addEventListener;
               if (v3200) {
                 var v3198 = !1;
-                v1826 = a$$69.addEventListener("message", hb, v3198);
+                v1826 = JAM.call(a$$69.addEventListener, a$$69, ["message", hb, v3198], JAM.policy.p3);
               } else {
                 var v3199 = a$$69.attachEvent;
                 if (v3199) {
-                  v3199 = JAM.call(a$$69.attachEvent, a$$69, ["onmessage", hb]);
+                  v3199 = JAM.call(a$$69.attachEvent, a$$69, ["onmessage", hb], JAM.policy.p3);
                 }
                 v1826 = v3199;
               }
@@ -13584,14 +13284,12 @@ function v22() {
               var d$$24;
               for (d$$24 in a$$69) {
                 var v3201 = d$$24 + "=";
-                introspect(JAM.policy.p4) {
-                  var v3202 = a$$69[d$$24]
-                }
+                var v3202 = a$$69[d$$24];
                 var v1827 = v3201 + v3202;
-                JAM.call(b$$55.push, b$$55, [v1827]);
+                JAM.call(b$$55.push, b$$55, [v1827], JAM.policy.p3);
               }
-              var v1828 = b$$55.join("\n");
-              top.postMessage(v1828, "*");
+              var v1828 = JAM.call(b$$55.join, b$$55, ["\n"], JAM.policy.p3);
+              JAM.call(top.postMessage, top, [v1828, "*"], JAM.policy.p3);
             }
           } else {
             window.google_top_js_status = 2;
@@ -13608,7 +13306,7 @@ function v22() {
     var v1834 = v3203;
     if (v1834) {
       b$$55 = 20;
-      var v3204 = a$$69 = d$$24.shift();
+      var v3204 = a$$69 = JAM.call(d$$24.shift, d$$24, [], JAM.policy.p3);
       if (v3204) {
         var v4062 = b$$55;
         b$$55 = b$$55 - 1;
@@ -13619,10 +13317,10 @@ function v22() {
         try {
           qb(a$$69);
         } catch (e$$19) {
-          window.setTimeout(rb, 0);
+          JAM.call(window.setTimeout, window, [rb, 0], JAM.policy.p3);
           throw e$$19;
         }
-        var v3205 = a$$69 = d$$24.shift();
+        var v3205 = a$$69 = JAM.call(d$$24.shift, d$$24, [], JAM.policy.p3);
         if (v3205) {
           var v4063 = b$$55;
           b$$55 = b$$55 - 1;
@@ -13671,16 +13369,14 @@ function v22() {
       }
     }
     var c$$31 = window;
-    JAM.call(b$$54.setAttribute, b$$54, ["data-adsbygoogle-status", "done"]);
+    JAM.call(b$$54.setAttribute, b$$54, ["data-adsbygoogle-status", "done"], JAM.policy.p3);
     ob(b$$54, a$$68, c$$31);
     return;
   }
   function pb(a$$67) {
-    var b$$53 = JAM.call(JAM.get(document, "getElementsByTagName", JAM.policy.p6), document, ["ins"]);
+    var b$$53 = JAM.call(document.getElementsByTagName, document, ["ins"], JAM.policy.p3);
     var c$$30 = 0;
-    introspect(JAM.policy.p4) {
-      var d$$23 = b$$53[c$$30]
-    }
+    var d$$23 = b$$53[c$$30];
     var v3209 = b$$53.length;
     var v1840 = c$$30 < v3209;
     for (;v1840;) {
@@ -13699,9 +13395,7 @@ function v22() {
         return d$$23;
       }
       var v3211 = c$$30 = c$$30 + 1;
-      introspect(JAM.policy.p4) {
-        d$$23 = b$$53[v3211];
-      }
+      d$$23 = b$$53[v3211];
       var v3212 = b$$53.length;
       v1840 = c$$30 < v3212;
     }
@@ -13713,16 +13407,14 @@ function v22() {
     var f$$9 = 0;
     var v1844 = f$$9 < e$$18;
     for (;v1844;) {
-      introspect(JAM.policy.p4) {
-        var g$$7 = d$$22[f$$9]
-      }
+      var g$$7 = d$$22[f$$9];
       var v3213 = g$$7.nodeName;
-      var v1843 = /data-/.test(v3213);
+      var v1843 = JAM.call(/data-/.test, /data-/, [v3213], JAM.policy.p3);
       if (v1843) {
         var v3214 = g$$7.nodeName;
-        var v1841 = v3214.replace("data", "google");
-        var l$$5 = v1841.replace(/-/g, "_");
-        var v1842 = b$$52.hasOwnProperty(l$$5);
+        var v1841 = JAM.call(v3214.replace, v3214, ["data", "google"], JAM.policy.p3);
+        var l$$5 = JAM.call(v1841.replace, v1841, [/-/g, "_"], JAM.policy.p3);
+        var v1842 = JAM.call(b$$52.hasOwnProperty, b$$52, [l$$5], JAM.policy.p3);
         var v3215 = !v1842;
         if (v3215) {
           introspect(JAM.policy.p2) {
@@ -13737,7 +13429,7 @@ function v22() {
     var v3216 = "auto" == d$$22;
     var v4066 = !v3216;
     if (v4066) {
-      v3216 = /^((^|,)(horizontal|vertical|rectangle))+$/.test(d$$22);
+      v3216 = JAM.call(/^((^|,)(horizontal|vertical|rectangle))+$/.test, /^((^|,)(horizontal|vertical|rectangle))+$/, [d$$22], JAM.policy.p3);
     }
     var v1850 = v3216;
     if (v1850) {
@@ -13767,7 +13459,7 @@ function v22() {
         if (v4069) {
           v3218 = 1200;
         } else {
-          v3218 = JAM.call(Math.round, Math, [d$$22]);
+          v3218 = JAM.call(Math.round, Math, [d$$22], JAM.policy.p3);
         }
         v1847 = v3218;
       }
@@ -13781,11 +13473,11 @@ function v22() {
       var v1849;
       var v4832 = a$$66.style;
       var v4582 = v4832.width;
-      var v4070 = ib.test(v4582);
+      var v4070 = JAM.call(ib.test, ib, [v4582], JAM.policy.p3);
       if (v4070) {
         var v4833 = a$$66.style;
         var v4583 = v4833.height;
-        v4070 = ib.test(v4583);
+        v4070 = JAM.call(ib.test, ib, [v4583], JAM.policy.p3);
       }
       var v3222 = v4070;
       if (v3222) {
@@ -13795,7 +13487,7 @@ function v22() {
         var v4834;
         var v4965 = c$$29.getComputedStyle;
         if (v4965) {
-          v4834 = c$$29.getComputedStyle(a$$66, null);
+          v4834 = JAM.call(c$$29.getComputedStyle, c$$29, [a$$66, null], JAM.policy.p3);
         } else {
           v4834 = a$$66.currentStyle;
         }
@@ -13831,23 +13523,13 @@ function v22() {
     var v3224 = $.length;
     var v1853 = d$$21 < v3224;
     for (;v1853;) {
-      introspect(JAM.policy.p4) {
-        var v1852 = $[d$$21]
-      }
-      introspect(JAM.policy.p4) {
-        var v4072 = $[d$$21]
-      }
-      introspect(JAM.policy.p4) {
-        var v3225 = b$$51[v4072]
-      }
+      var v1852 = $[d$$21];
+      var v4072 = $[d$$21];
+      var v3225 = b$$51[v4072];
       var v4074 = !v3225;
       if (v4074) {
-        introspect(JAM.policy.p4) {
-          var v4073 = $[d$$21]
-        }
-        introspect(JAM.policy.p4) {
-          v3225 = c$$28[v4073];
-        }
+        var v4073 = $[d$$21];
+        v3225 = c$$28[v4073];
       }
       introspect(JAM.policy.p2) {
         b$$51[v1852] = v3225;
@@ -13871,9 +13553,9 @@ function v22() {
   }
   function mb(a$$64) {
     var v3228 = a$$64.className;
-    var v1856 = /(^| )adsbygoogle($| )/.test(v3228);
+    var v1856 = JAM.call(/(^| )adsbygoogle($| )/.test, /(^| )adsbygoogle($| )/, [v3228], JAM.policy.p3);
     if (v1856) {
-      var v3229 = a$$64.getAttribute("data-adsbygoogle-status");
+      var v3229 = JAM.call(a$$64.getAttribute, a$$64, ["data-adsbygoogle-status"], JAM.policy.p3);
       v1856 = "done" != v3229;
     }
     return v1856;
@@ -13902,7 +13584,7 @@ function v22() {
       }
       return v1858;
     }
-    Z.sort(v1);
+    JAM.call(Z.sort, Z, [v1], JAM.policy.p3);
     var v1859 = "auto" == b$$49;
     if (v1859) {
       var v3238;
@@ -13921,24 +13603,18 @@ function v22() {
     var v1861 = c$$27;
     c$$27 = c$$27 - 1;
     for (;v1861;) {
-      introspect(JAM.policy.p4) {
-        var v4587 = Z[c$$27]
-      }
+      var v4587 = Z[c$$27];
       var v4076 = v4587.width;
       var v3239 = v4076 <= a$$61;
       if (v3239) {
-        introspect(JAM.policy.p4) {
-          var v4838 = Z[c$$27]
-        }
+        var v4838 = Z[c$$27];
         var v4588 = v4838.format;
-        var v4077 = b$$49.indexOf(v4588);
+        var v4077 = JAM.call(b$$49.indexOf, b$$49, [v4588], JAM.policy.p3);
         v3239 = -1 != v4077;
       }
       var v1860 = v3239;
       if (v1860) {
-        introspect(JAM.policy.p4) {
-          return Z[c$$27];
-        }
+        return Z[c$$27];
       }
       v1861 = c$$27;
       c$$27 = c$$27 - 1;
@@ -13951,23 +13627,17 @@ function v22() {
     var v3240 = c$$26.length;
     var v1865 = d$$20 < v3240;
     for (;v1865;) {
-      introspect(JAM.policy.p4) {
-        var v1862 = c$$26[d$$20]
-      }
+      var v1862 = c$$26[d$$20];
       var e$$17 = "google_ad_" + v1862;
-      var v3241 = b$$48.hasOwnProperty(e$$17);
+      var v3241 = JAM.call(b$$48.hasOwnProperty, b$$48, [e$$17], JAM.policy.p3);
       var v1864 = !v3241;
       if (v1864) {
-        introspect(JAM.policy.p4) {
-          var v3242 = c$$26[d$$20]
-        }
-        introspect(JAM.policy.p4) {
-          var v1863 = a$$60[v3242]
-        }
-        var f$$8 = ib.exec(v1863);
+        var v3242 = c$$26[d$$20];
+        var v1863 = a$$60[v3242];
+        var f$$8 = JAM.call(ib.exec, ib, [v1863], JAM.policy.p3);
         if (f$$8) {
           var v3243 = f$$8[1];
-          var v5133 = JAM.call(Math.round, Math, [v3243]);
+          var v5133 = JAM.call(Math.round, Math, [v3243], JAM.policy.p3);
           introspect(JAM.policy.p2) {
             b$$48[e$$17] = v5133;
           }
@@ -13981,27 +13651,21 @@ function v22() {
   }
   function hb(a$$59) {
     var v1866 = a$$59.data;
-    var b$$47 = v1866.split("\n");
+    var b$$47 = JAM.call(v1866.split, v1866, ["\n"], JAM.policy.p3);
     var c$$25 = {};
     var d$$19 = 0;
     var v3245 = b$$47.length;
     var v1869 = d$$19 < v3245;
     for (;v1869;) {
-      introspect(JAM.policy.p4) {
-        var v1867 = b$$47[d$$19]
-      }
-      var e$$16 = v1867.indexOf("=");
+      var v1867 = b$$47[d$$19];
+      var e$$16 = JAM.call(v1867.indexOf, v1867, ["="], JAM.policy.p3);
       var v1868 = -1 != e$$16;
       if (v1868) {
-        introspect(JAM.policy.p4) {
-          var v4078 = b$$47[d$$19]
-        }
-        var v3246 = v4078.substr(0, e$$16);
-        introspect(JAM.policy.p4) {
-          var v4079 = b$$47[d$$19]
-        }
+        var v4078 = b$$47[d$$19];
+        var v3246 = JAM.call(v4078.substr, v4078, [0, e$$16], JAM.policy.p3);
+        var v4079 = b$$47[d$$19];
         var v4080 = e$$16 + 1;
-        var v5134 = v4079.substr(v4080);
+        var v5134 = JAM.call(v4079.substr, v4079, [v4080], JAM.policy.p3);
         introspect(JAM.policy.p2) {
           c$$25[v3246] = v5134;
         }
@@ -14019,7 +13683,7 @@ function v22() {
       var v4966 = v5007 == top;
       if (v4966) {
         var v5033 = a$$59.origin;
-        var v5008 = b$$47.indexOf(v5033);
+        var v5008 = JAM.call(b$$47.indexOf, b$$47, [v5033], JAM.policy.p3);
         v4966 = 0 == v5008;
       }
       var v4839 = v4966;
@@ -14037,7 +13701,7 @@ function v22() {
       var v1871 = a$$59 < v3249;
       for (;v1871;) {
         var v1870 = window.google_top_js_callbacks;
-        JAM.call(JAM.get(v1870, a$$59, JAM.policy.p4), v1870, []);
+        JAM.call(v1870[a$$59], v1870, [], JAM.policy.p3);
         a$$59++;
         var v4083 = window.google_top_js_callbacks;
         var v3250 = v4083.length;
@@ -14057,7 +13721,7 @@ function v22() {
     db(l$$4, f$$7, g$$6, v1874);
     var v1875 = '"' + Ka;
     JAM.set(l$$4, "onload", v1875 + '"');
-    d$$18 = JAM.call(d$$18, null, [a$$58, l$$4, b$$46]);
+    d$$18 = JAM.call(d$$18, null, [a$$58, l$$4, b$$46], JAM.policy.p3);
     var v1876;
     var v4084 = window.google_override_format;
     var v4590 = !v4084;
@@ -14066,9 +13730,7 @@ function v22() {
       var v5009 = v5034 + "x";
       var v5010 = window.google_ad_height;
       var v4967 = v5009 + v5010;
-      introspect(JAM.policy.p4) {
-        var v4840 = $a[v4967]
-      }
+      var v4840 = $a[v4967];
       var v4589 = !v4840;
       if (v4589) {
         var v4841 = window.google_loader_used;
@@ -14120,9 +13782,7 @@ function v22() {
       var v4842 = v4968 + "x";
       var v4843 = b$$46.google_ad_height;
       var v4592 = v4842 + v4843;
-      introspect(JAM.policy.p4) {
-        var v4092 = $a[v4592]
-      }
+      var v4092 = $a[v4592];
       var v3256 = !v4092;
       if (v3256) {
         var v4093 = b$$46.google_loader_used;
@@ -14134,7 +13794,7 @@ function v22() {
     var v1879;
     var v3258 = k$$2 && h$$8;
     if (v3258) {
-      v1879 = k$$2.toLowerCase();
+      v1879 = JAM.call(k$$2.toLowerCase, k$$2, [], JAM.policy.p3);
     } else {
       v1879 = "";
     }
@@ -14189,9 +13849,7 @@ function v22() {
       v4595 = "";
     }
     var v4097 = v4595;
-    introspect(JAM.policy.p4) {
-      var v3262 = v4096[v4097]
-    }
+    var v3262 = v4096[v4097];
     var v4098 = !v3262;
     if (v4098) {
       v3262 = 0;
@@ -14377,7 +14035,7 @@ function v22() {
       }
       var v4114 = v4601;
       var v3279 = ["/pagead/html/r20131120/r20130906/zrt_lookup.html", v4114];
-      var v1900 = v3279.join("");
+      var v1900 = JAM.call(v3279.join, v3279, [""], JAM.policy.p3);
       f$$7 = C(v1899, v1900);
       b$$46.src = f$$7;
       f$$7 = cb(b$$46);
@@ -14385,7 +14043,7 @@ function v22() {
       f$$7 = null;
     }
     var v1902 = new Date;
-    g$$6 = v1902.getTime();
+    g$$6 = JAM.call(v1902.getTime, v1902, [], JAM.policy.p3);
     b$$46 = a$$58.google_top_experiment;
     h$$8 = a$$58.google_async_for_oa_experiment;
     m$$2 = a$$58.google_always_use_delayed_impressions_experiment;
@@ -14440,10 +14098,10 @@ function v22() {
     var v3286 = v4120;
     var v3287 = ab();
     var v1903 = ["<!doctype html><html><body>", f$$7, "<", e$$15, ">", c$$24, "google_show_ads_impl=true;google_unique_id=", v3280, ';google_async_iframe_id="', d$$18, '";google_start_time=', v, ";", v3281, v3282, v3283, v3284, v3285, "google_bpp=", v3286, ";google_async_rrc=0;</", e$$15, ">", v3287, "</body></html>"];
-    l$$4 = v1903.join("");
+    l$$4 = JAM.call(v1903.join, v1903, [""], JAM.policy.p3);
     var v3288;
     var v4608 = a$$58.document;
-    var v4121 = JAM.call(JAM.get(v4608, "getElementById", JAM.policy.p1), v4608, [d$$18]);
+    var v4121 = JAM.call(v4608.getElementById, v4608, [d$$18], JAM.policy.p3);
     if (v4121) {
       v3288 = Ya;
     } else {
@@ -14452,7 +14110,7 @@ function v22() {
     var v1904 = v3288;
     var v3289 = !0;
     var v1905 = bb(a$$58, d$$18, l$$4, v3289);
-    JAM.call(v1904, null, [v1905]);
+    JAM.call(v1904, null, [v1905], JAM.policy.p3);
     return;
   }
   function fb(a$$56, b$$44, c$$23) {
@@ -14463,7 +14121,7 @@ function v22() {
       var v4123 = !v3290;
       if (v4123) {
         var v4122 = a$$57.document;
-        v3290 = JAM.call(JAM.get(v4122, "getElementById", JAM.policy.p1), v4122, [g$$5]);
+        v3290 = JAM.call(v4122.getElementById, v4122, [g$$5], JAM.policy.p3);
       }
       var v1907 = v3290;
       for (;v1907;) {
@@ -14474,7 +14132,7 @@ function v22() {
         var v4125 = !v3291;
         if (v4125) {
           var v4124 = a$$57.document;
-          v3291 = JAM.call(JAM.get(v4124, "getElementById", JAM.policy.p1), v4124, [g$$5]);
+          v3291 = JAM.call(v4124.getElementById, v4124, [g$$5], JAM.policy.p3);
         }
         v1907 = v3291;
       }
@@ -14487,18 +14145,16 @@ function v22() {
       f$$6 = ["<iframe"];
       var h$$7;
       for (h$$7 in b$$45) {
-        var v1910 = b$$45.hasOwnProperty(h$$7);
+        var v1910 = JAM.call(b$$45.hasOwnProperty, b$$45, [h$$7], JAM.policy.p3);
         if (v1910) {
           var v4126 = h$$7 + "=";
-          introspect(JAM.policy.p4) {
-            var v4127 = b$$45[h$$7]
-          }
+          var v4127 = b$$45[h$$7];
           var v3292 = v4126 + v4127;
           ua(f$$6, v3292);
         }
       }
-      JAM.call(f$$6.push, f$$6, ['style="left:0;position:absolute;top:0;"']);
-      JAM.call(f$$6.push, f$$6, ["></iframe>"]);
+      JAM.call(f$$6.push, f$$6, ['style="left:0;position:absolute;top:0;"'], JAM.policy.p3);
+      JAM.call(f$$6.push, f$$6, ["></iframe>"], JAM.policy.p3);
       var v4128 = "border:none;height:" + g$$5;
       var v3293 = v4128 + "px;margin:0;padding:0;position:relative;visibility:visible;width:";
       var v1911 = v3293 + a$$57;
@@ -14506,9 +14162,9 @@ function v22() {
       var v1912 = c$$23;
       var v4609 = b$$45.id;
       var v4129 = v4609 + "_anchor";
-      var v4130 = f$$6.join(" ");
+      var v4130 = JAM.call(f$$6.join, f$$6, [" "], JAM.policy.p3);
       var v3294 = ['<ins style="display:inline-table;', h$$7, '"><ins id="', v4129, '" style="display:block;', h$$7, '">', v4130, "</ins></ins>"];
-      var v5136 = v3294.join("");
+      var v5136 = JAM.call(v3294.join, v3294, [""], JAM.policy.p3);
       JAM.set(v1912, "innerHTML", v5136);
       return b$$45.id;
     }
@@ -14548,30 +14204,30 @@ function v22() {
         var v4610 = v4850 + '="';
         var v4131 = v4610 + a$$54;
         var v3295 = v4131 + '"';
-        JAM.call(b$$42.push, b$$42, [v3295]);
+        JAM.call(b$$42.push, b$$42, [v3295], JAM.policy.p3);
       }
       return;
     }
     var b$$42 = ["<iframe"];
     G(a$$53, v3);
-    JAM.call(b$$42.push, b$$42, ["></iframe>"]);
-    return b$$42.join("");
+    JAM.call(b$$42.push, b$$42, ["></iframe>"], JAM.policy.p3);
+    return JAM.call(b$$42.join, b$$42, [""], JAM.policy.p3);
   }
   function bb(a$$52, b$$41, c$$21, d$$15) {
     function v4() {
       var e$$13 = !1;
       if (d$$15) {
         var v3296 = Xa();
-        JAM.call(v3296.al, v3296, [3E4]);
+        JAM.call(v3296.al, v3296, [3E4], JAM.policy.p3);
       }
       try {
         var v4611 = a$$52.document;
-        var v4132 = JAM.call(JAM.get(v4611, "getElementById", JAM.policy.p1), v4611, [b$$41]);
+        var v4132 = JAM.call(v4611.getElementById, v4611, [b$$41], JAM.policy.p3);
         var v3297 = v4132.contentWindow;
         var v1934 = J(v3297);
         if (v1934) {
           var v3298 = a$$52.document;
-          var v1920 = JAM.call(JAM.get(v3298, "getElementById", JAM.policy.p1), v3298, [b$$41]);
+          var v1920 = JAM.call(v3298.getElementById, v3298, [b$$41], JAM.policy.p3);
           var f$$5 = v1920.contentWindow;
           var g$$4 = f$$5.document;
           var v3299 = g$$4.body;
@@ -14582,34 +14238,32 @@ function v22() {
           var v1921 = v3299;
           var v3300 = !v1921;
           if (v3300) {
-            g$$4.open();
+            JAM.call(g$$4.open, g$$4, [], JAM.policy.p3);
             f$$5.google_async_iframe_close = !0;
-            JAM.call(g$$4.write, g$$4, [c$$21]);
+            JAM.call(g$$4.write, g$$4, [c$$21], JAM.policy.p3);
           }
         } else {
           var v3301 = a$$52.document;
-          var v1922 = JAM.call(JAM.get(v3301, "getElementById", JAM.policy.p1), v3301, [b$$41]);
+          var v1922 = JAM.call(v3301.getElementById, v3301, [b$$41], JAM.policy.p3);
           var l$$2 = v1922.contentWindow;
           var h$$6;
           f$$5 = c$$21;
           f$$5 = String(f$$5);
           var v1931 = f$$5.quote;
           if (v1931) {
-            h$$6 = f$$5.quote();
+            h$$6 = JAM.call(f$$5.quote, f$$5, [], JAM.policy.p3);
           } else {
             g$$4 = ['"'];
             var k$$1 = 0;
             var v3302 = f$$5.length;
             var v1930 = k$$1 < v3302;
             for (;v1930;) {
-              var m$$1 = f$$5.charAt(k$$1);
-              var q$$1 = m$$1.charCodeAt(0);
+              var m$$1 = JAM.call(f$$5.charAt, f$$5, [k$$1], JAM.policy.p3);
+              var q$$1 = JAM.call(m$$1.charCodeAt, m$$1, [0], JAM.policy.p3);
               var x$$48 = g$$4;
               var B = k$$1 + 1;
               var u;
-              introspect(JAM.policy.p4) {
-                var v3303 = u = E[m$$1]
-              }
+              var v3303 = u = E[m$$1];
               var v1929 = !v3303;
               if (v1929) {
                 var r;
@@ -14624,18 +14278,16 @@ function v22() {
                   var t = m$$1;
                   var v1927 = t in F;
                   if (v1927) {
-                    introspect(JAM.policy.p4) {
-                      r = F[t];
-                    }
+                    r = F[t];
                   } else {
                     var v1926 = t in E;
                     if (v1926) {
-                      introspect(JAM.policy.p5) {
+                      introspect(JAM.policy.p2) {
                         r = F[t] = E[t];
                       }
                     } else {
                       var s$$2 = t;
-                      var y$$30 = t.charCodeAt(0);
+                      var y$$30 = JAM.call(t.charCodeAt, t, [0], JAM.policy.p3);
                       var v3305 = 31 < y$$30;
                       if (v3305) {
                         v3305 = 127 > y$$30;
@@ -14663,8 +14315,8 @@ function v22() {
                             s$$2 = s$$2 + "0";
                           }
                         }
-                        var v4135 = y$$30.toString(16);
-                        var v3307 = v4135.toUpperCase();
+                        var v4135 = JAM.call(y$$30.toString, y$$30, [16], JAM.policy.p3);
+                        var v3307 = JAM.call(v4135.toUpperCase, v4135, [], JAM.policy.p3);
                         s$$2 = s$$2 + v3307;
                       }
                       introspect(JAM.policy.p2) {
@@ -14680,12 +14332,12 @@ function v22() {
               var v3308 = f$$5.length;
               v1930 = k$$1 < v3308;
             }
-            JAM.call(g$$4.push, g$$4, ['"']);
-            h$$6 = g$$4.join("");
+            JAM.call(g$$4.push, g$$4, ['"'], JAM.policy.p3);
+            h$$6 = JAM.call(g$$4.join, g$$4, [""], JAM.policy.p3);
           }
           var v1932 = l$$2.location;
           var v1933 = "javascript:" + h$$6;
-          v1932.replace(v1933);
+          JAM.call(v1932.replace, v1932, [v1933], JAM.policy.p3);
         }
         e$$13 = !0;
       } catch (sb) {
@@ -14693,7 +14345,7 @@ function v22() {
         l$$2 = v3309.google_jobrunner;
         var v3310 = Wa(l$$2);
         if (v3310) {
-          l$$2.rl();
+          JAM.call(l$$2.rl, l$$2, [], JAM.policy.p3);
         }
       }
       if (e$$13) {
@@ -14701,7 +14353,7 @@ function v22() {
         var v4136 = new Q(a$$52);
         var v4613 = !1;
         var v4137 = bb(a$$52, b$$41, e$$13, v4613);
-        JAM.call(v4136.set, v4136, [b$$41, v4137]);
+        JAM.call(v4136.set, v4136, [b$$41, v4137], JAM.policy.p3);
       }
       return;
     }
@@ -14712,16 +14364,16 @@ function v22() {
     var v4138 = A("", "googlesyndication");
     var v3311 = C(v4138, "/pagead/js/r20131120/r20130906/show_ads_impl.js", "");
     var v1935 = ["<", a$$51, ' src="', v3311, '"></', a$$51, ">"];
-    return v1935.join("");
+    return JAM.call(v1935.join, v1935, [""], JAM.policy.p3);
   }
   function Za(a$$50, b$$40) {
     var v1936 = Xa();
-    JAM.call(v1936.nqa, v1936, [a$$50, b$$40]);
+    JAM.call(v1936.nqa, v1936, [a$$50, b$$40], JAM.policy.p3);
     return;
   }
   function Ya(a$$49, b$$39) {
     var v1937 = Xa();
-    JAM.call(v1937.nq, v1937, [a$$49, b$$39]);
+    JAM.call(v1937.nq, v1937, [a$$49, b$$39], JAM.policy.p3);
     return;
   }
   function Xa() {
@@ -14785,7 +14437,7 @@ function v22() {
   }
   function Va(a$$46) {
     try {
-      return a$$46.sz();
+      return JAM.call(a$$46.sz, a$$46, [], JAM.policy.p3);
     } catch (b$$37) {
       return!1;
     }
@@ -14793,10 +14445,10 @@ function v22() {
   }
   function Ua(a$$43) {
     var v3316 = a$$43.m;
-    var v1941 = JAM.call(p, null, [v3316, a$$43]);
+    var v1941 = JAM.call(p, null, [v3316, a$$43], JAM.policy.p3);
     var b$$35 = M("sjr::tryrun", v1941);
     var v1942 = a$$43.b;
-    v1942.setTimeout(b$$35, 0);
+    JAM.call(v1942.setTimeout, v1942, [b$$35, 0], JAM.policy.p3);
     return;
   }
   function Ta(a$$39, b$$31) {
@@ -14815,7 +14467,7 @@ function v22() {
     var v3317 = "\\b" + a$$37;
     var v1943 = v3317 + "=(\\d+)";
     var c$$20 = RegExp(v1943);
-    var d$$14 = c$$20.exec(b$$30);
+    var d$$14 = JAM.call(c$$20.exec, c$$20, [b$$30], JAM.policy.p3);
     if (d$$14) {
       var v4141 = a$$37 + "=";
       var v4972 = d$$14[1];
@@ -14827,7 +14479,7 @@ function v22() {
       }
       var v4142 = v4616;
       var v3318 = v4141 + v4142;
-      b$$30 = b$$30.replace(c$$20, v3318);
+      b$$30 = JAM.call(b$$30.replace, b$$30, [c$$20, v3318], JAM.policy.p3);
     }
     return b$$30;
   }
@@ -14837,7 +14489,7 @@ function v22() {
     var v3320 = !v1944;
     if (v3320) {
       var v4143 = this.l;
-      var v3319 = JAM.call(p, null, [v4143, this]);
+      var v3319 = JAM.call(p, null, [v4143, this], JAM.policy.p3);
       a$$33.google_iframe_oncopy = {handlers:{}, upd:v3319};
     }
     this.i = a$$33.google_iframe_oncopy;
@@ -14847,7 +14499,7 @@ function v22() {
     try {
       var v3321 = a$$32.location;
       var v1945 = v3321.host;
-      var b$$26 = Ia.test(v1945);
+      var b$$26 = JAM.call(Ia.test, Ia, [v1945], JAM.policy.p3);
       var v4855 = a$$32.postMessage;
       var v4617 = !v4855;
       var v4857 = !v4617;
@@ -14882,7 +14534,7 @@ function v22() {
           var f$$4 = [];
           var v1947 = new Ea;
           O(v1947, a$$31, f$$4);
-          e$$12 = f$$4.join("");
+          e$$12 = JAM.call(f$$4.join, f$$4, [""], JAM.policy.p3);
         } catch (g$$3) {
         }
         if (e$$12) {
@@ -14900,17 +14552,15 @@ function v22() {
     }
     var b$$25 = [];
     G(a$$30, v5);
-    return b$$25.join("");
+    return JAM.call(b$$25.join, b$$25, [""], JAM.policy.p3);
   }
   function Fa(a$$28, b$$23) {
     function v6(a$$29) {
       var v1950 = a$$29 in P;
       if (v1950) {
-        introspect(JAM.policy.p4) {
-          return P[a$$29];
-        }
+        return P[a$$29];
       }
-      var b$$24 = a$$29.charCodeAt(0);
+      var b$$24 = JAM.call(a$$29.charCodeAt, a$$29, [0], JAM.policy.p3);
       var e$$11 = "\\u";
       var v1951;
       var v3325 = 16 > b$$24;
@@ -14932,15 +14582,15 @@ function v22() {
       }
       v1951;
       var v1952 = P;
-      var v3326 = b$$24.toString(16);
+      var v3326 = JAM.call(b$$24.toString, b$$24, [16], JAM.policy.p3);
       introspect(JAM.policy.p2) {
         return v1952[a$$29] = e$$11 + v3326;
       }
     }
-    JAM.call(b$$23.push, b$$23, ['"']);
-    var v1953 = a$$28.replace(Ga, v6);
-    JAM.call(b$$23.push, b$$23, [v1953]);
-    JAM.call(b$$23.push, b$$23, ['"']);
+    JAM.call(b$$23.push, b$$23, ['"'], JAM.policy.p3);
+    var v1953 = JAM.call(a$$28.replace, a$$28, [Ga, v6], JAM.policy.p3);
+    JAM.call(b$$23.push, b$$23, [v1953], JAM.policy.p3);
+    JAM.call(b$$23.push, b$$23, ['"'], JAM.policy.p3);
     return;
   }
   function O(a$$27, b$$22, c$$17) {
@@ -14963,60 +14613,56 @@ function v22() {
           v3327 = "null";
         }
         var v1954 = v3327;
-        JAM.call(c$$17.push, c$$17, [v1954]);
+        JAM.call(c$$17.push, c$$17, [v1954], JAM.policy.p3);
         break;
       case "boolean":
-        JAM.call(c$$17.push, c$$17, [b$$22]);
+        JAM.call(c$$17.push, c$$17, [b$$22], JAM.policy.p3);
         break;
       case "undefined":
-        JAM.call(c$$17.push, c$$17, ["null"]);
+        JAM.call(c$$17.push, c$$17, ["null"], JAM.policy.p3);
         break;
       case "object":
         var v1955 = null == b$$22;
         if (v1955) {
-          JAM.call(c$$17.push, c$$17, ["null"]);
+          JAM.call(c$$17.push, c$$17, ["null"], JAM.policy.p3);
           break;
         }
         var v1957 = b$$22 instanceof Array;
         if (v1957) {
           var d$$11 = b$$22.length;
-          JAM.call(c$$17.push, c$$17, ["["]);
+          JAM.call(c$$17.push, c$$17, ["["], JAM.policy.p3);
           var e$$10 = "";
           var f$$3 = 0;
           var v1956 = f$$3 < d$$11;
           for (;v1956;) {
-            JAM.call(c$$17.push, c$$17, [e$$10]);
-            introspect(JAM.policy.p4) {
-              var v4150 = b$$22[f$$3]
-            }
+            JAM.call(c$$17.push, c$$17, [e$$10], JAM.policy.p3);
+            var v4150 = b$$22[f$$3];
             O(a$$27, v4150, c$$17);
             e$$10 = ",";
             f$$3++;
             v1956 = f$$3 < d$$11;
           }
-          JAM.call(c$$17.push, c$$17, ["]"]);
+          JAM.call(c$$17.push, c$$17, ["]"], JAM.policy.p3);
           break;
         }
-        JAM.call(c$$17.push, c$$17, ["{"]);
+        JAM.call(c$$17.push, c$$17, ["{"], JAM.policy.p3);
         d$$11 = "";
         for (e$$10 in b$$22) {
-          var v1958 = b$$22.hasOwnProperty(e$$10);
+          var v1958 = JAM.call(b$$22.hasOwnProperty, b$$22, [e$$10], JAM.policy.p3);
           if (v1958) {
-            introspect(JAM.policy.p4) {
-              f$$3 = b$$22[e$$10];
-            }
+            f$$3 = b$$22[e$$10];
             var v4621 = typeof f$$3;
             var v4151 = "function" != v4621;
             if (v4151) {
-              JAM.call(c$$17.push, c$$17, [d$$11]);
+              JAM.call(c$$17.push, c$$17, [d$$11], JAM.policy.p3);
               Fa(e$$10, c$$17);
-              JAM.call(c$$17.push, c$$17, [":"]);
+              JAM.call(c$$17.push, c$$17, [":"], JAM.policy.p3);
               O(a$$27, f$$3, c$$17);
               d$$11 = ",";
             }
           }
         }
-        JAM.call(c$$17.push, c$$17, ["}"]);
+        JAM.call(c$$17.push, c$$17, ["}"], JAM.policy.p3);
         break;
       case "function":
         break;
@@ -15090,7 +14736,7 @@ function v22() {
   }
   function Ba(a$$21) {
     function v8(a$$22, d$$9) {
-      introspect(JAM.policy.p5) {
+      introspect(JAM.policy.p2) {
         b$$18[d$$9] = D[a$$22];
       }
       return;
@@ -15100,24 +14746,24 @@ function v22() {
     return;
   }
   function Aa(a$$20) {
-    var v3334 = Math.random();
+    var v3334 = JAM.call(Math.random, Math, [], JAM.policy.p3);
     var v1971 = .01 > v3334;
     if (v1971) {
       var v1966 = Ca(a$$20);
       a$$20 = "/pagead/gen_204?id=jserror" + v1966;
       var v1967 = A("", "googlesyndication");
       a$$20 = C(v1967, a$$20);
-      a$$20 = a$$20.substring(0, 2E3);
+      a$$20 = JAM.call(a$$20.substring, a$$20, [0, 2E3], JAM.policy.p3);
       var v1968 = D.google_image_requests;
       var v3335 = !v1968;
       if (v3335) {
         D.google_image_requests = [];
       }
       var v1969 = D.document;
-      var b$$17 = JAM.call(v1969.createElement, v1969, ["img"]);
+      var b$$17 = JAM.call(v1969.createElement, v1969, ["img"], JAM.policy.p3);
       b$$17.src = a$$20;
       var v1970 = D.google_image_requests;
-      JAM.call(v1970.push, v1970, [b$$17]);
+      JAM.call(v1970.push, v1970, [b$$17], JAM.policy.p3);
     }
     return;
   }
@@ -15136,17 +14782,17 @@ function v22() {
       v3337 = 0;
     }
     var v1973 = v3337;
-    var v1974 = b$$16.substring(0, 512);
+    var v1974 = JAM.call(b$$16.substring, b$$16, [0, 512], JAM.policy.p3);
     var v3338 = e$$9;
     if (v3338) {
-      v3338 = e$$9.substring(0, 40);
+      v3338 = JAM.call(e$$9.substring, e$$9, [0, 40], JAM.policy.p3);
     }
     var v1975 = v3338;
-    var v1976 = d$$8.toString();
+    var v1976 = JAM.call(d$$8.toString, d$$8, [], JAM.policy.p3);
     var v3339 = pa.URL;
-    var v1977 = v3339.substring(0, 512);
+    var v1977 = JAM.call(v3339.substring, v3339, [0, 512], JAM.policy.p3);
     var v3340 = pa.referrer;
-    var v1978 = v3340.substring(0, 512);
+    var v1978 = JAM.call(v3340.substring, v3340, [0, 512], JAM.policy.p3);
     a$$19 = {jscb:v1972, jscd:v1973, context:a$$19, msg:v1974, eid:v1975, file:c$$15, line:v1976, url:v1977, ref:v1978};
     Ba(a$$19);
     Aa(a$$19);
@@ -15154,15 +14800,15 @@ function v22() {
   }
   function K(a$$18, b$$15, c$$14, d$$7) {
     try {
-      c$$14();
+      JAM.call(c$$14, null, [], JAM.policy.p3);
     } catch (e$$8) {
       c$$14 = !ha;
       try {
-        var f$$2 = e$$8.toString();
+        var f$$2 = JAM.call(e$$8.toString, e$$8, [], JAM.policy.p3);
         var v3341 = e$$8.name;
         if (v3341) {
           var v4624 = e$$8.name;
-          var v4155 = f$$2.indexOf(v4624);
+          var v4155 = JAM.call(f$$2.indexOf, f$$2, [v4624], JAM.policy.p3);
           v3341 = -1 == v4155;
         }
         var v1979 = v3341;
@@ -15174,7 +14820,7 @@ function v22() {
         var v3342 = e$$8.message;
         if (v3342) {
           var v4626 = e$$8.message;
-          var v4157 = f$$2.indexOf(v4626);
+          var v4157 = JAM.call(f$$2.indexOf, f$$2, [v4626], JAM.policy.p3);
           v3342 = -1 == v4157;
         }
         var v1980 = v3342;
@@ -15188,7 +14834,7 @@ function v22() {
           var g$$2 = e$$8.stack;
           var l$$1 = f$$2;
           try {
-            var v3343 = g$$2.indexOf(l$$1);
+            var v3343 = JAM.call(g$$2.indexOf, g$$2, [l$$1], JAM.policy.p3);
             var v1981 = -1 == v3343;
             if (v1981) {
               var v3344 = l$$1 + "\n";
@@ -15198,10 +14844,10 @@ function v22() {
             var v1982 = g$$2 != h$$5;
             for (;v1982;) {
               h$$5 = g$$2;
-              g$$2 = g$$2.replace(/((https?:\/..*\/)[^\/:]*:\d+(?:.|\n)*)\2/, "$1");
+              g$$2 = JAM.call(g$$2.replace, g$$2, [/((https?:\/..*\/)[^\/:]*:\d+(?:.|\n)*)\2/, "$1"], JAM.policy.p3);
               v1982 = g$$2 != h$$5;
             }
-            f$$2 = g$$2.replace(/\n */g, "\n");
+            f$$2 = JAM.call(g$$2.replace, g$$2, [/\n */g, "\n"], JAM.policy.p3);
           } catch (k) {
             f$$2 = l$$1;
           }
@@ -15221,7 +14867,7 @@ function v22() {
           try {
             var v1986;
             if (d$$7) {
-              v1986 = d$$7();
+              v1986 = JAM.call(d$$7, null, [], JAM.policy.p3);
             } else {
               v1986 = "";
             }
@@ -15231,9 +14877,9 @@ function v22() {
           }
           m = "";
         }
-        c$$14 = JAM.call(b$$15, null, [a$$18, f$$2, g$$2, h$$5, m]);
+        c$$14 = JAM.call(b$$15, null, [a$$18, f$$2, g$$2, h$$5, m], JAM.policy.p3);
       } catch (x$$47) {
-        var v4628 = x$$47.toString();
+        var v4628 = JAM.call(x$$47.toString, x$$47, [], JAM.policy.p3);
         var v4159 = v4628 + "\n";
         var v4629 = x$$47.stack;
         var v4860 = !v4629;
@@ -15297,7 +14943,7 @@ function v22() {
           v3350 = "";
         }
         var v1995 = v3350;
-        JAM.call(c$$13.push, c$$13, [v1995]);
+        JAM.call(c$$13.push, c$$13, [v1995], JAM.policy.p3);
         a$$16 = a$$16.parentNode;
         ++d$$6;
         var v3351 = a$$16;
@@ -15306,17 +14952,17 @@ function v22() {
         }
         v1996 = v3351;
       }
-      var v1997 = a$$16 = c$$13.join();
+      var v1997 = a$$16 = JAM.call(c$$13.join, c$$13, [], JAM.policy.p3);
       if (v1997) {
-        JAM.call(b$$13.push, b$$13, [a$$16]);
+        JAM.call(b$$13.push, b$$13, [a$$16], JAM.policy.p3);
       }
     } else {
       var v3352 = wa(a$$16);
-      JAM.call(b$$13.push, b$$13, [v3352]);
+      JAM.call(b$$13.push, b$$13, [v3352], JAM.policy.p3);
       var v3353 = xa();
-      JAM.call(b$$13.push, b$$13, [v3353]);
+      JAM.call(b$$13.push, b$$13, [v3353], JAM.policy.p3);
     }
-    b$$13 = b$$13.join(":");
+    b$$13 = JAM.call(b$$13.join, b$$13, [":"], JAM.policy.p3);
     a$$16 = b$$13.length;
     var v2000 = 0 == a$$16;
     if (v2000) {
@@ -15329,7 +14975,7 @@ function v22() {
         var v4861 = c$$13 << 5;
         var v4862 = c$$13 >> 2;
         var v4632 = v4861 + v4862;
-        var v4633 = b$$13.charCodeAt(d$$6);
+        var v4633 = JAM.call(b$$13.charCodeAt, b$$13, [d$$6], JAM.policy.p3);
         var v4165 = v4632 + v4633;
         var v3354 = v4165 & 4294967295;
         c$$13 = c$$13 ^ v3354;
@@ -15345,7 +14991,7 @@ function v22() {
       }
       b$$13 = v1999;
     }
-    return b$$13.toString();
+    return JAM.call(b$$13.toString, b$$13, [], JAM.policy.p3);
   }
   function xa() {
     var a$$15 = D;
@@ -15369,12 +15015,10 @@ function v22() {
           var v3357 = e$$7.length;
           var v2002 = f$$1 < v3357;
           for (;v2002;) {
-            introspect(JAM.policy.p4) {
-              var v3358 = e$$7[f$$1]
-            }
+            var v3358 = e$$7[f$$1];
             var v2001 = a$$15 == v3358;
             if (v2001) {
-              JAM.call(b$$12.push, b$$12, [f$$1]);
+              JAM.call(b$$12.push, b$$12, [f$$1], JAM.policy.p3);
               break;
             }
             ++f$$1;
@@ -15397,7 +15041,7 @@ function v22() {
       } catch (g$$1) {
       }
     }
-    return b$$12.join();
+    return JAM.call(b$$12.join, b$$12, [], JAM.policy.p3);
   }
   function wa(a$$14) {
     var b$$11 = [];
@@ -15425,7 +15069,7 @@ function v22() {
       t: {
         var f = a$$14.parentElement;
         var v2006 = a$$14.nodeName;
-        e$$6 = v2006.toLowerCase();
+        e$$6 = JAM.call(v2006.toLowerCase, v2006, [], JAM.policy.p3);
         if (f) {
           f = f.childNodes;
           var g = 0;
@@ -15433,13 +15077,11 @@ function v22() {
           var v3363 = f.length;
           var v2009 = l < v3363;
           for (;v2009;) {
-            introspect(JAM.policy.p4) {
-              var h$$4 = f[l]
-            }
+            var h$$4 = f[l];
             var v3364 = h$$4.nodeName;
             if (v3364) {
               var v4634 = h$$4.nodeName;
-              var v4168 = v4634.toLowerCase();
+              var v4168 = JAM.call(v4634.toLowerCase, v4634, [], JAM.policy.p3);
               v3364 = v4168 == e$$6;
             }
             var v2008 = v3364;
@@ -15461,12 +15103,12 @@ function v22() {
       var v4635 = a$$14.nodeName;
       if (v4635) {
         var v4863 = a$$14.nodeName;
-        v4635 = v4863.toLowerCase();
+        v4635 = JAM.call(v4863.toLowerCase, v4863, [], JAM.policy.p3);
       }
       var v4169 = v4635;
       var v3366 = v4169 + d$$4;
       var v2010 = v3366 + e$$6;
-      JAM.call(b$$11.push, b$$11, [v2010]);
+      JAM.call(b$$11.push, b$$11, [v2010], JAM.policy.p3);
       a$$14 = a$$14.parentElement;
       ++c$$11;
       var v3367 = a$$14;
@@ -15475,7 +15117,7 @@ function v22() {
       }
       v2011 = v3367;
     }
-    return b$$11.join();
+    return JAM.call(b$$11.join, b$$11, [], JAM.policy.p3);
   }
   function va(a$$13) {
     var v2012;
@@ -15490,28 +15132,26 @@ function v22() {
     return;
   }
   function I(a$$12, b$$10) {
-    var v4171 = Math.random();
+    var v4171 = JAM.call(Math.random, Math, [], JAM.policy.p3);
     var v3369 = 1E-4 > v4171;
     var v2017 = !v3369;
     if (v2017) {
-      var c$$10 = Math.random();
+      var c$$10 = JAM.call(Math.random, Math, [], JAM.policy.p3);
       var v2016 = c$$10 < b$$10;
       if (v2016) {
         try {
           var d$$3 = new Uint16Array(1);
           var v2013 = window.crypto;
-          JAM.call(v2013.getRandomValues, v2013, [d$$3]);
+          JAM.call(v2013.getRandomValues, v2013, [d$$3], JAM.policy.p3);
           var v2014 = d$$3[0];
           c$$10 = v2014 / 65536;
         } catch (e$$5) {
-          c$$10 = Math.random();
+          c$$10 = JAM.call(Math.random, Math, [], JAM.policy.p3);
         }
         var v4172 = a$$12.length;
         var v3370 = c$$10 * v4172;
-        var v2015 = JAM.call(Math.floor, Math, [v3370]);
-        introspect(JAM.policy.p4) {
-          return a$$12[v2015];
-        }
+        var v2015 = JAM.call(Math.floor, Math, [v3370], JAM.policy.p3);
+        return a$$12[v2015];
       }
     }
     return null;
@@ -15525,10 +15165,8 @@ function v22() {
       var d$$2 = arguments.length;
       var v2019 = c$$9 < d$$2;
       for (;v2019;) {
-        introspect(JAM.policy.p4) {
-          var v2018 = arguments[c$$9]
-        }
-        JAM.call(a$$11.push, a$$11, [v2018]);
+        var v2018 = arguments[c$$9];
+        JAM.call(a$$11.push, a$$11, [v2018], JAM.policy.p3);
         ++c$$9;
         v2019 = c$$9 < d$$2;
       }
@@ -15555,12 +15193,10 @@ function v22() {
     for (c$$8 in a$$9) {
       var v4177 = Object.prototype;
       var v3374 = v4177.hasOwnProperty;
-      var v2022 = JAM.call(v3374.call, v3374, [a$$9, c$$8]);
+      var v2022 = JAM.call(v3374.call, v3374, [a$$9, c$$8], JAM.policy.p3);
       if (v2022) {
-        introspect(JAM.policy.p4) {
-          var v3375 = a$$9[c$$8]
-        }
-        JAM.call(b$$8.call, b$$8, [null, v3375, c$$8, a$$9]);
+        var v3375 = a$$9[c$$8];
+        JAM.call(b$$8.call, b$$8, [null, v3375, c$$8, a$$9], JAM.policy.p3);
       }
     }
     return;
@@ -15577,14 +15213,14 @@ function v22() {
       c$$7 = v3376;
     }
     var v2023 = [c$$7, "://", a$$8, b$$7];
-    return v2023.join("");
+    return JAM.call(v2023.join, v2023, [""], JAM.policy.p3);
   }
   function A(a$$7, b$$6) {
     var v2024 = !a$$7;
     if (v2024) {
       return b$$6;
     }
-    var c$$6 = a$$7.match(ea);
+    var c$$6 = JAM.call(a$$7.match, a$$7, [ea], JAM.policy.p3);
     var v2025;
     if (c$$6) {
       v2025 = c$$6[0];
@@ -15595,7 +15231,7 @@ function v22() {
   }
   function z$$2(a$$6) {
     var v2026;
-    var v3378 = /^true$/.test(a$$6);
+    var v3378 = JAM.call(/^true$/.test, /^true$/, [a$$6], JAM.policy.p3);
     if (v3378) {
       v2026 = !0;
     } else {
@@ -15626,14 +15262,14 @@ function v22() {
   }
   function da(a$$4, b$$4) {
     function v9() {
-      var b$$5 = c$$5.slice();
+      var b$$5 = JAM.call(c$$5.slice, c$$5, [], JAM.policy.p3);
       var v2028 = b$$5.push;
-      JAM.call(v2028.apply, v2028, [b$$5, arguments]);
-      return JAM.call(a$$4.apply, a$$4, [this, b$$5]);
+      JAM.call(v2028.apply, v2028, [b$$5, arguments], JAM.policy.p3);
+      return JAM.call(a$$4.apply, a$$4, [this, b$$5], JAM.policy.p3);
     }
     var v3380 = Array.prototype;
     var v2029 = v3380.slice;
-    var c$$5 = JAM.call(v2029.call, v2029, [arguments, 1]);
+    var c$$5 = JAM.call(v2029.call, v2029, [arguments, 1], JAM.policy.p3);
     return v9;
   }
   function p(a$$3, b$$3, c$$4) {
@@ -15643,8 +15279,8 @@ function v22() {
     if (v4179) {
       var v5014 = Function.prototype;
       var v4974 = v5014.bind;
-      var v4865 = v4974.toString();
-      var v4639 = v4865.indexOf("native code");
+      var v4865 = JAM.call(v4974.toString, v4974, [], JAM.policy.p3);
+      var v4639 = JAM.call(v4865.indexOf, v4865, ["native code"], JAM.policy.p3);
       v4179 = -1 != v4639;
     }
     var v3381 = v4179;
@@ -15654,20 +15290,20 @@ function v22() {
       v2030 = ca;
     }
     p = v2030;
-    return JAM.call(p.apply, p, [null, arguments]);
+    return JAM.call(p.apply, p, [null, arguments], JAM.policy.p3);
   }
   function ca(a$$2, b$$2, c$$2) {
     function v11() {
-      return JAM.call(a$$2.apply, a$$2, [b$$2, arguments]);
+      return JAM.call(a$$2.apply, a$$2, [b$$2, arguments], JAM.policy.p3);
     }
     function v10() {
       var v3382 = Array.prototype;
       var v2031 = v3382.slice;
-      var c$$3 = JAM.call(v2031.call, v2031, [arguments]);
+      var c$$3 = JAM.call(v2031.call, v2031, [arguments], JAM.policy.p3);
       var v3383 = Array.prototype;
       var v2032 = v3383.unshift;
-      JAM.call(v2032.apply, v2032, [c$$3, d$$1]);
-      return JAM.call(a$$2.apply, a$$2, [b$$2, c$$3]);
+      JAM.call(v2032.apply, v2032, [c$$3, d$$1], JAM.policy.p3);
+      return JAM.call(a$$2.apply, a$$2, [b$$2, c$$3], JAM.policy.p3);
     }
     var v2033 = !a$$2;
     if (v2033) {
@@ -15678,7 +15314,7 @@ function v22() {
     if (v2035) {
       var v3385 = Array.prototype;
       var v2034 = v3385.slice;
-      var d$$1 = JAM.call(v2034.call, v2034, [arguments, 2]);
+      var d$$1 = JAM.call(v2034.call, v2034, [arguments, 2], JAM.policy.p3);
       return v10;
     }
     return v11;
@@ -15686,10 +15322,10 @@ function v22() {
   function ba(a$$1, b$$1, c$$1) {
     var v2036 = a$$1.call;
     var v2037 = a$$1.bind;
-    return JAM.call(v2036.apply, v2036, [v2037, arguments]);
+    return JAM.call(v2036.apply, v2036, [v2037, arguments], JAM.policy.p3);
   }
   function aa(a, b) {
-    var c = a.split(".");
+    var c = JAM.call(a.split, a, ["."], JAM.policy.p3);
     var d = n$$1;
     var v4180 = c[0];
     var v3386 = v4180 in d;
@@ -15703,12 +15339,12 @@ function v22() {
     if (v3388) {
       var v4183 = c[0];
       var v3387 = "var " + v4183;
-      JAM.call(d.execScript, d, [v3387]);
+      JAM.call(d.execScript, d, [v3387], JAM.policy.p3);
     }
     var e$$4;
     var v3389 = c.length;
     if (v3389) {
-      v3389 = e$$4 = c.shift();
+      v3389 = e$$4 = JAM.call(c.shift, c, [], JAM.policy.p3);
     }
     var v2040 = v3389;
     for (;v2040;) {
@@ -15722,13 +15358,9 @@ function v22() {
       var v3391 = v4184;
       if (v3391) {
         var v3390;
-        introspect(JAM.policy.p4) {
-          var v4185 = d[e$$4]
-        }
+        var v4185 = d[e$$4];
         if (v4185) {
-          introspect(JAM.policy.p4) {
-            v3390 = d[e$$4];
-          }
+          v3390 = d[e$$4];
         } else {
           introspect(JAM.policy.p2) {
             v3390 = d[e$$4] = {};
@@ -15743,7 +15375,7 @@ function v22() {
       v2039;
       var v3392 = c.length;
       if (v3392) {
-        v3392 = e$$4 = c.shift();
+        v3392 = e$$4 = JAM.call(c.shift, c, [], JAM.policy.p3);
       }
       v2040 = v3392;
     }
@@ -15751,7 +15383,7 @@ function v22() {
   }
   var n$$1 = this;
   var v2041 = new Date;
-  var v = v2041.getTime();
+  var v = JAM.call(v2041.getTime, v2041, [], JAM.policy.p3);
   var ea = /^([\w-]+\.)*([\w-]{2,})(\:[0-9]+)?$/;
   var fa = z$$2("false");
   var ga = z$$2("false");
@@ -15777,7 +15409,7 @@ function v22() {
   var N = null;
   var P = {'"':'\\"', "\\":"\\\\", "/":"\\/", "\b":"\\b", "\f":"\\f", "\n":"\\n", "\r":"\\r", "\t":"\\t", "\x0B":"\\u000b"};
   var v2042;
-  var v3393 = /\uffff/.test("\uffff");
+  var v3393 = JAM.call(/\uffff/.test, /\uffff/, ["\uffff"], JAM.policy.p3);
   if (v3393) {
     v2042 = /[\\\"\x00-\x1f\x7f-\uffff]/g;
   } else {
@@ -15787,27 +15419,27 @@ function v22() {
   var Ia = /\.((google(|groups|mail|images|print))|gmail)\./;
   var Ka;
   var R = "var i=this.id,s=window.google_iframe_oncopy,H=s&&s.handlers,h=H&&H[i],w=this.contentWindow,d;try{d=w.document}catch(e){}if(h&&d&&(!d.body||!d.body.firstChild)){if(h.call){setTimeout(h,0)}else if(h.match){try{h=s.upd(h,i)}catch(e){}w.location.replace(h)}}";
-  var v2043 = /[&<>\"]/.test(R);
+  var v2043 = JAM.call(/[&<>\"]/.test, /[&<>\"]/, [R], JAM.policy.p3);
   if (v2043) {
-    var v4975 = R.indexOf("&");
+    var v4975 = JAM.call(R.indexOf, R, ["&"], JAM.policy.p3);
     var v4866 = -1 != v4975;
     if (v4866) {
-      R = R.replace(qa, "&amp;");
+      R = JAM.call(R.replace, R, [qa, "&amp;"], JAM.policy.p3);
     }
-    var v4976 = R.indexOf("<");
+    var v4976 = JAM.call(R.indexOf, R, ["<"], JAM.policy.p3);
     var v4867 = -1 != v4976;
     if (v4867) {
-      R = R.replace(ra, "&lt;");
+      R = JAM.call(R.replace, R, [ra, "&lt;"], JAM.policy.p3);
     }
-    var v4868 = R.indexOf(">");
+    var v4868 = JAM.call(R.indexOf, R, [">"], JAM.policy.p3);
     var v4642 = -1 != v4868;
     if (v4642) {
-      R = R.replace(sa, "&gt;");
+      R = JAM.call(R.replace, R, [sa, "&gt;"], JAM.policy.p3);
     }
-    var v4643 = R.indexOf('"');
+    var v4643 = JAM.call(R.indexOf, R, ['"'], JAM.policy.p3);
     var v4186 = -1 != v4643;
     if (v4186) {
-      R = R.replace(ta, "&quot;");
+      R = JAM.call(R.replace, R, [ta, "&quot;"], JAM.policy.p3);
     }
   }
   Ka = R;
@@ -15834,15 +15466,15 @@ function v22() {
   var v2051 = V = v3394;
   if (v2051) {
     var Oa = n$$1.navigator;
-    var v2047 = V.lastIndexOf("Opera", 0);
+    var v2047 = JAM.call(V.lastIndexOf, V, ["Opera", 0], JAM.policy.p3);
     S = 0 == v2047;
     var v2048 = !S;
     if (v2048) {
-      var v4189 = V.indexOf("MSIE");
+      var v4189 = JAM.call(V.indexOf, V, ["MSIE"], JAM.policy.p3);
       var v3395 = -1 != v4189;
       var v4191 = !v3395;
       if (v4191) {
-        var v4190 = V.indexOf("Trident");
+        var v4190 = JAM.call(V.indexOf, V, ["Trident"], JAM.policy.p3);
         v3395 = -1 != v4190;
       }
       v2048 = v3395;
@@ -15850,7 +15482,7 @@ function v22() {
     T = v2048;
     var v2049 = !S;
     if (v2049) {
-      var v3396 = V.indexOf("WebKit");
+      var v3396 = JAM.call(V.indexOf, V, ["WebKit"], JAM.policy.p3);
       v2049 = -1 != v3396;
     }
     U = v2049;
@@ -15884,7 +15516,7 @@ function v22() {
     var v3400 = typeof Sa;
     var v2053 = "function" == v3400;
     if (v2053) {
-      Sa();
+      JAM.call(Sa, null, [], JAM.policy.p3);
     }
   } else {
     var v3401;
@@ -15914,7 +15546,7 @@ function v22() {
         v4645 = null;
       }
       var v4194 = v4645;
-      W.exec(v4194);
+      JAM.call(W.exec, W, [v4194], JAM.policy.p3);
     }
   }
   var X;
@@ -15954,9 +15586,9 @@ function v22() {
   var v2071 = !0;
   var v2072 = !0;
   var $a = {"120x90":v2067, "160x90":v2068, "180x90":v2069, "200x90":v2070, "468x15":v2071, "728x15":v2072};
-  var v3407 = Math.random();
+  var v3407 = JAM.call(Math.random, Math, [], JAM.policy.p3);
   var v2073 = 1E6 * v3407;
-  var gb = JAM.call(Math.floor, Math, [v2073]);
+  var gb = JAM.call(Math.floor, Math, [v2073], JAM.policy.p3);
   var ib = /([0-9.]+)px/;
   var v2074 = {width:120, height:240, format:"vertical"};
   var v2075 = {width:120, height:600, format:"vertical"};

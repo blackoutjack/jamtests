@@ -1,6 +1,6 @@
 predicate-limit:0
 syntax-only:false
-policy-files:[tests/bench/sms2-protein-iep/sms2.policy]
+policy-files:[/home/rich/cs/jam/tests/bench/sms2-protein-iep/sms2.policy]
 sms2-protein-iep.original.js:5837
 sms2-protein-iep.normalized.js:8705
 policy.aut:346
@@ -16,8 +16,8 @@ callbacks-added-edges:2695
 callbacks-added-states:2418
 concrete-query-cache:concrete-2023588788.bin
 symbolic-query-cache:symbolic-2023588788.bin
-modular.policy.js:834
-policy.js:2577
+modular.policy.js:852
+policy.js:2667
 transactions:271
 checks:1148
 callsites-indirected:276

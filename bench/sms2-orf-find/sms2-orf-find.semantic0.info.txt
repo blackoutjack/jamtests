@@ -1,6 +1,6 @@
 predicate-limit:0
 syntax-only:false
-policy-files:[tests/bench/sms2-orf-find/sms2.policy]
+policy-files:[/home/rich/cs/jam/tests/bench/sms2-orf-find/sms2.policy]
 sms2-orf-find.original.js:6955
 sms2-orf-find.normalized.js:11376
 policy.aut:346
@@ -16,8 +16,8 @@ callbacks-added-edges:3366
 callbacks-added-states:3056
 concrete-query-cache:concrete-884067659.bin
 symbolic-query-cache:symbolic-884067659.bin
-modular.policy.js:834
-policy.js:2577
+modular.policy.js:852
+policy.js:2667
 transactions:267
 checks:1187
 callsites-indirected:272

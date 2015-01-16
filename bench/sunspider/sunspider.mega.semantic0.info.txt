@@ -1,6 +1,6 @@
 predicate-limit:0
 syntax-only:false
-policy-files:[tests/bench/sunspider/sunspider.mega.policy]
+policy-files:[/home/rich/cs/jam/tests/bench/sunspider/sunspider.mega.policy]
 sunspider.original.js:407
 sunspider.normalized.js:1444
 policy.aut:1226
@@ -16,8 +16,8 @@ callbacks-added-edges:355
 callbacks-added-states:338
 concrete-query-cache:concrete-268668935.bin
 symbolic-query-cache:symbolic-268668935.bin
-modular.policy.js:3760
-policy.js:8356
+modular.policy.js:3808
+policy.js:8494
 transactions:27
 checks:443
 callsites-indirected:16

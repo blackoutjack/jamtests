@@ -359,24 +359,24 @@ function complement(dnaSequence) {
 }
 function closeForm() {
   var v43 = outputWindow.document;
-  JAM.call(v43.write, v43, ["</form>"], JAM.policy.p9);
+  JAM.call(v43.write, v43, ["</form>"], JAM.policy.p11);
   return true;
 }
 function closePre() {
   var v44 = outputWindow.document;
-  JAM.call(v44.write, v44, ["</div>"], JAM.policy.p9);
+  JAM.call(v44.write, v44, ["</div>"], JAM.policy.p11);
   var v45 = outputWindow.document;
-  JAM.call(v45.write, v45, ["</pre>\n"], JAM.policy.p9);
+  JAM.call(v45.write, v45, ["</pre>\n"], JAM.policy.p11);
   return;
 }
 function closeTextArea() {
   var v46 = outputWindow.document;
-  JAM.call(v46.write, v46, ["</textarea>"], JAM.policy.p9);
+  JAM.call(v46.write, v46, ["</textarea>"], JAM.policy.p11);
   return true;
 }
 function closeWindow() {
   var v47 = outputWindow.document;
-  JAM.call(v47.write, v47, ["</body>\n</html>\n"], JAM.policy.p9);
+  JAM.call(v47.write, v47, ["</body>\n</html>\n"], JAM.policy.p11);
   outputWindow.status = "Done.";
   var v48 = outputWindow.document;
   v48.close();
@@ -629,7 +629,7 @@ function getRandomSequence(components, lengthOut) {
     j$$4++;
     v95 = j$$4 < lengthOut;
   }
-  return JAM.call(sequenceArray.join, sequenceArray, [""], JAM.policy.p9);
+  return JAM.call(sequenceArray.join, sequenceArray, [""], JAM.policy.p11);
 }
 function getSequenceFromFasta(sequenceRecord) {
   var v373 = JAM.call(sequenceRecord.search, sequenceRecord, [/\>[^\f\n\r]+[\f\n\r]/], JAM.policy.p16);
@@ -722,19 +722,19 @@ function moreExpressionCheck(expressionToCheck) {
 }
 function openForm() {
   var v100 = outputWindow.document;
-  JAM.call(v100.write, v100, ['<form action="">\n'], JAM.policy.p9);
+  JAM.call(v100.write, v100, ['<form action="">\n'], JAM.policy.p11);
   return true;
 }
 function openPre() {
   var v101 = outputWindow.document;
-  JAM.call(v101.write, v101, ["<pre>"], JAM.policy.p9);
+  JAM.call(v101.write, v101, ["<pre>"], JAM.policy.p11);
   var v102 = outputWindow.document;
-  JAM.call(v102.write, v102, ['<div class="pre">'], JAM.policy.p9);
+  JAM.call(v102.write, v102, ['<div class="pre">'], JAM.policy.p11);
   return;
 }
 function openTextArea() {
   var v103 = outputWindow.document;
-  JAM.call(v103.write, v103, ['<br /><textarea rows="6" cols="61">\n'], JAM.policy.p9);
+  JAM.call(v103.write, v103, ['<br /><textarea rows="6" cols="61">\n'], JAM.policy.p11);
   return true;
 }
 function openWindow(title$$5) {
@@ -892,7 +892,7 @@ function reverse(dnaSequence$$1) {
   if (v120) {
     tempDnaArray = JAM.call(dnaSequence$$1.match, dnaSequence$$1, [/./g], JAM.policy.p16);
     tempDnaArray = tempDnaArray.reverse();
-    dnaSequence$$1 = JAM.call(tempDnaArray.join, tempDnaArray, [""], JAM.policy.p9);
+    dnaSequence$$1 = JAM.call(tempDnaArray.join, tempDnaArray, [""], JAM.policy.p11);
   }
   return dnaSequence$$1;
 }
@@ -956,13 +956,13 @@ function testScript() {
     return false;
   }
   var testNum = 2489.8237;
-  var v387 = JAM.call(testNum.toFixed, testNum, [3], JAM.policy.p11);
+  var v387 = JAM.call(testNum.toFixed, testNum, [3], JAM.policy.p9);
   var v128 = v387 != 2489.824;
   if (v128) {
     alert("Number toFixed() method not supported. See browser compatibility page.");
     return false;
   }
-  var v388 = JAM.call(testNum.toPrecision, testNum, [5], JAM.policy.p11);
+  var v388 = JAM.call(testNum.toPrecision, testNum, [5], JAM.policy.p9);
   var v129 = v388 != 2489.8;
   if (v129) {
     alert("Number toPrecision() method not supported. See browser compatibility page.");
@@ -1252,7 +1252,7 @@ function writeGroupNumDnaSetStart(text$$12, tabIn$$3, groupSize$$2, basePerLine$
         var v162 = v410 + "\n";
         JAM.call(v161.write, v161, [v162], JAM.policy.p17);
         var v163 = outputWindow.document;
-        JAM.call(v163.write, v163, ["\n"], JAM.policy.p9);
+        JAM.call(v163.write, v163, ["\n"], JAM.policy.p11);
       }
     } else {
       var v180 = numberPosition$$1 == "right";
@@ -1272,7 +1272,7 @@ function writeGroupNumDnaSetStart(text$$12, tabIn$$3, groupSize$$2, basePerLine$
           var v168 = v412 + "\n";
           JAM.call(v167.write, v167, [v168], JAM.policy.p17);
           var v169 = outputWindow.document;
-          JAM.call(v169.write, v169, ["\n"], JAM.policy.p9);
+          JAM.call(v169.write, v169, ["\n"], JAM.policy.p11);
         }
       } else {
         var v179 = numberPosition$$1 == "above";
@@ -1290,7 +1290,7 @@ function writeGroupNumDnaSetStart(text$$12, tabIn$$3, groupSize$$2, basePerLine$
             var v176 = v413 + "\n";
             JAM.call(v175.write, v175, [v176], JAM.policy.p17);
             var v177 = outputWindow.document;
-            JAM.call(v177.write, v177, ["\n"], JAM.policy.p9);
+            JAM.call(v177.write, v177, ["\n"], JAM.policy.p11);
           }
         }
       }
@@ -1511,7 +1511,7 @@ function writeRestrictionSites(sequence$$15, arrayOfItems, dnaConformation) {
     upperLimit = upperLimit + shiftValue;
   }
   var v224 = outputWindow.document;
-  JAM.call(v224.write, v224, ['<table border="1" width="100%" cellspacing="0" cellpadding="2"><tbody>\n'], JAM.policy.p9);
+  JAM.call(v224.write, v224, ['<table border="1" width="100%" cellspacing="0" cellpadding="2"><tbody>\n'], JAM.policy.p11);
   var v225 = outputWindow.document;
   var v578 = '<tr><td class="title" width="200px">' + "Site:";
   var v527 = v578 + '</td><td class="title">';
@@ -1607,13 +1607,13 @@ function writeRestrictionSites(sequence$$15, arrayOfItems, dnaConformation) {
     v242 = i$$9 < v445;
   }
   var v243 = outputWindow.document;
-  JAM.call(v243.write, v243, ["</tbody></table>\n"], JAM.policy.p9);
+  JAM.call(v243.write, v243, ["</tbody></table>\n"], JAM.policy.p11);
   return true;
 }
 function writeSequenceStats(sequence$$16, arrayOfItems$$1) {
   var originalLength = sequence$$16.length;
   var v244 = outputWindow.document;
-  JAM.call(v244.write, v244, ['<table border="1" width="100%" cellspacing="0" cellpadding="2"><tbody>\n'], JAM.policy.p9);
+  JAM.call(v244.write, v244, ['<table border="1" width="100%" cellspacing="0" cellpadding="2"><tbody>\n'], JAM.policy.p11);
   var v245 = outputWindow.document;
   var v630 = '<tr><td class="title">' + "Pattern:";
   var v613 = v630 + '</td><td class="title">';
@@ -1666,7 +1666,7 @@ function writeSequenceStats(sequence$$16, arrayOfItems$$1) {
     var v615 = v631 + "</td><td>";
     var v584 = v615 + tempNumber;
     var v535 = v584 + "</td><td>";
-    var v536 = JAM.call(percentage.toFixed, percentage, [2], JAM.policy.p11);
+    var v536 = JAM.call(percentage.toFixed, percentage, [2], JAM.policy.p9);
     var v453 = v535 + v536;
     var v254 = v453 + "</td></tr>\n";
     JAM.call(v253.write, v253, [v254], JAM.policy.p17);
@@ -1675,7 +1675,7 @@ function writeSequenceStats(sequence$$16, arrayOfItems$$1) {
     v255 = i$$10 < v454;
   }
   var v256 = outputWindow.document;
-  JAM.call(v256.write, v256, ["</tbody></table>\n"], JAM.policy.p9);
+  JAM.call(v256.write, v256, ["</tbody></table>\n"], JAM.policy.p11);
   return true;
 }
 function writeShuffledSequence(sequence$$17) {
@@ -1767,7 +1767,7 @@ function proteinGravy(theDocument) {
     var v274 = getProteinGravy(newProtein);
     JAM.call(v273.write, v273, [v274], JAM.policy.p17);
     var v275 = outputWindow.document;
-    JAM.call(v275.write, v275, ["<br />\n<br />\n"], JAM.policy.p9);
+    JAM.call(v275.write, v275, ["<br />\n<br />\n"], JAM.policy.p11);
     i$$11++;
     var v463 = arrayOfFasta$$1.length;
     v276 = i$$11 < v463;
@@ -1798,7 +1798,7 @@ function getProteinGravy(sequence$$18) {
   } else {
     return "The sequence is too short";
   }
-  return JAM.call(gravyResult.toFixed, gravyResult, [3], JAM.policy.p11);
+  return JAM.call(gravyResult.toFixed, gravyResult, [3], JAM.policy.p9);
 }
 function _getGravyHash() {
   var hash = {};
@@ -1825,7 +1825,7 @@ function _getGravyHash() {
   return hash;
 }
 JAM.set(document, "onload", v2);
-var v281 = JAM.call(document.getElementById, document, ["submitbtn"], JAM.policy.p9);
+var v281 = JAM.call(document.getElementById, document, ["submitbtn"], JAM.policy.p11);
 JAM.set(v281, "onclick", v3);
-var v282 = JAM.call(document.getElementById, document, ["clearbtn"], JAM.policy.p9);
+var v282 = JAM.call(document.getElementById, document, ["clearbtn"], JAM.policy.p11);
 JAM.set(v282, "onclick", v4)

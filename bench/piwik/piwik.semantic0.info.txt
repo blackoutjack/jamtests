@@ -1,6 +1,6 @@
 predicate-limit:0
 syntax-only:false
-policy-files:[tests/bench/piwik/piwik.policy]
+policy-files:[/home/rich/cs/jam/tests/bench/piwik/piwik.policy]
 piwik.original.js:7132
 piwik.normalized.js:11356
 policy.aut:19
@@ -16,8 +16,8 @@ callbacks-added-edges:29122
 callbacks-added-states:4402
 concrete-query-cache:concrete226028503.bin
 symbolic-query-cache:symbolic226028503.bin
-modular.policy.js:162
-policy.js:356
+modular.policy.js:168
+policy.js:362
 transactions:230
 checks:447
 callsites-indirected:223

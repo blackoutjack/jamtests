@@ -495,32 +495,32 @@ function complement(dnaSequence) {
 }
 function closeForm() {
   var v51 = outputWindow.document;
-  introspect(JAM.policy.p11) {
+  introspect(JAM.policy.p10) {
     v51.write("</form>");
   }
   return true;
 }
 function closePre() {
   var v52 = outputWindow.document;
-  introspect(JAM.policy.p11) {
+  introspect(JAM.policy.p10) {
     v52.write("</div>");
   }
   var v53 = outputWindow.document;
-  introspect(JAM.policy.p11) {
+  introspect(JAM.policy.p10) {
     v53.write("</pre>\n");
   }
   return;
 }
 function closeTextArea() {
   var v54 = outputWindow.document;
-  introspect(JAM.policy.p11) {
+  introspect(JAM.policy.p10) {
     v54.write("</textarea>");
   }
   return true;
 }
 function closeWindow() {
   var v55 = outputWindow.document;
-  introspect(JAM.policy.p11) {
+  introspect(JAM.policy.p10) {
     v55.write("</body>\n</html>\n");
   }
   outputWindow.status = "Done.";
@@ -853,7 +853,7 @@ function getRandomSequence(components, lengthOut) {
     j$$4++;
     v103 = j$$4 < lengthOut;
   }
-  introspect(JAM.policy.p11) {
+  introspect(JAM.policy.p10) {
     return sequenceArray.join("");
   }
 }
@@ -984,25 +984,25 @@ function moreExpressionCheck(expressionToCheck) {
 }
 function openForm() {
   var v108 = outputWindow.document;
-  introspect(JAM.policy.p11) {
+  introspect(JAM.policy.p10) {
     v108.write('<form action="">\n');
   }
   return true;
 }
 function openPre() {
   var v109 = outputWindow.document;
-  introspect(JAM.policy.p11) {
+  introspect(JAM.policy.p10) {
     v109.write("<pre>");
   }
   var v110 = outputWindow.document;
-  introspect(JAM.policy.p11) {
+  introspect(JAM.policy.p10) {
     v110.write('<div class="pre">');
   }
   return;
 }
 function openTextArea() {
   var v111 = outputWindow.document;
-  introspect(JAM.policy.p11) {
+  introspect(JAM.policy.p10) {
     v111.write('<br /><textarea rows="6" cols="61">\n');
   }
   return true;
@@ -1204,7 +1204,7 @@ function reverse(dnaSequence$$1) {
       tempDnaArray = dnaSequence$$1.match(/./g);
     }
     tempDnaArray = tempDnaArray.reverse();
-    introspect(JAM.policy.p11) {
+    introspect(JAM.policy.p10) {
       dnaSequence$$1 = tempDnaArray.join("");
     }
   }
@@ -1272,7 +1272,7 @@ function testScript() {
     return false;
   }
   var testNum = 2489.8237;
-  introspect(JAM.policy.p12) {
+  introspect(JAM.policy.p9) {
     var v536 = testNum.toFixed(3)
   }
   var v136 = v536 != 2489.824;
@@ -1280,7 +1280,7 @@ function testScript() {
     alert("Number toFixed() method not supported. See browser compatibility page.");
     return false;
   }
-  introspect(JAM.policy.p12) {
+  introspect(JAM.policy.p9) {
     var v537 = testNum.toPrecision(5)
   }
   var v137 = v537 != 2489.8;
@@ -1626,7 +1626,7 @@ function writeGroupNumDnaSetStart(text$$12, tabIn$$3, groupSize$$2, basePerLine$
           v169.write(v170);
         }
         var v171 = outputWindow.document;
-        introspect(JAM.policy.p11) {
+        introspect(JAM.policy.p10) {
           v171.write("\n");
         }
       }
@@ -1652,7 +1652,7 @@ function writeGroupNumDnaSetStart(text$$12, tabIn$$3, groupSize$$2, basePerLine$
             v175.write(v176);
           }
           var v177 = outputWindow.document;
-          introspect(JAM.policy.p11) {
+          introspect(JAM.policy.p10) {
             v177.write("\n");
           }
         }
@@ -1678,7 +1678,7 @@ function writeGroupNumDnaSetStart(text$$12, tabIn$$3, groupSize$$2, basePerLine$
               v183.write(v184);
             }
             var v185 = outputWindow.document;
-            introspect(JAM.policy.p11) {
+            introspect(JAM.policy.p10) {
               v185.write("\n");
             }
           }
@@ -1935,7 +1935,7 @@ function writeRestrictionSites(sequence$$15, arrayOfItems, dnaConformation) {
     upperLimit = upperLimit + shiftValue;
   }
   var v232 = outputWindow.document;
-  introspect(JAM.policy.p11) {
+  introspect(JAM.policy.p10) {
     v232.write('<table border="1" width="100%" cellspacing="0" cellpadding="2"><tbody>\n');
   }
   var v233 = outputWindow.document;
@@ -2051,7 +2051,7 @@ function writeRestrictionSites(sequence$$15, arrayOfItems, dnaConformation) {
     v250 = i$$9 < v594;
   }
   var v251 = outputWindow.document;
-  introspect(JAM.policy.p11) {
+  introspect(JAM.policy.p10) {
     v251.write("</tbody></table>\n");
   }
   return true;
@@ -2059,7 +2059,7 @@ function writeRestrictionSites(sequence$$15, arrayOfItems, dnaConformation) {
 function writeSequenceStats(sequence$$16, arrayOfItems$$1) {
   var originalLength = sequence$$16.length;
   var v252 = outputWindow.document;
-  introspect(JAM.policy.p11) {
+  introspect(JAM.policy.p10) {
     v252.write('<table border="1" width="100%" cellspacing="0" cellpadding="2"><tbody>\n');
   }
   var v253 = outputWindow.document;
@@ -2126,7 +2126,7 @@ function writeSequenceStats(sequence$$16, arrayOfItems$$1) {
     var v1047 = v1106 + "</td><td>";
     var v948 = v1047 + tempNumber;
     var v816 = v948 + "</td><td>";
-    introspect(JAM.policy.p12) {
+    introspect(JAM.policy.p9) {
       var v817 = percentage.toFixed(2)
     }
     var v602 = v816 + v817;
@@ -2139,7 +2139,7 @@ function writeSequenceStats(sequence$$16, arrayOfItems$$1) {
     v263 = i$$10 < v603;
   }
   var v264 = outputWindow.document;
-  introspect(JAM.policy.p11) {
+  introspect(JAM.policy.p10) {
     v264.write("</tbody></table>\n");
   }
   return true;
@@ -2749,7 +2749,7 @@ function getSequence(sequence$$19) {
     }
   }
   if (problem) {
-    introspect(JAM.policy.p11) {
+    introspect(JAM.policy.p10) {
       var v676 = warnings.join(",\n")
     }
     var v344 = "An entry was skipped because of the following:\n" + v676;
@@ -2881,7 +2881,7 @@ function writeRanges(sequence$$20) {
     var v368 = v694 == "reverse";
     if (v368) {
       var v364 = outputWindow.document;
-      introspect(JAM.policy.p11) {
+      introspect(JAM.policy.p10) {
         var v1071 = sequenceArray$$1.join("")
       }
       var v983 = complement(v1071);
@@ -2893,7 +2893,7 @@ function writeRanges(sequence$$20) {
       }
     } else {
       var v366 = outputWindow.document;
-      introspect(JAM.policy.p11) {
+      introspect(JAM.policy.p10) {
         var v866 = sequenceArray$$1.join("")
       }
       var v696 = addReturns(v866);
@@ -3322,11 +3322,11 @@ v428.addRange = addRange;
 var v429 = RangeGroup.prototype;
 v429.writeRanges = writeRanges;
 document.onload = v10;
-introspect(JAM.policy.p11) {
+introspect(JAM.policy.p10) {
   var v430 = document.getElementById("submitbtn")
 }
 v430.onclick = v11;
-introspect(JAM.policy.p11) {
+introspect(JAM.policy.p10) {
   var v431 = document.getElementById("clearbtn")
 }
 v431.onclick = v12

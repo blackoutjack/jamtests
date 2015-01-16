@@ -13,7 +13,7 @@ var policy = function() {
         commit = false;
         break;
       }
-      if (!states[1] && node.type === "invoke" && (JAM.identical(node.value, _HTMLDocument_prototype_getElementById) || JAM.identical(node.value, _HTMLDocument_prototype_getElementsByTagName))) {
+      if (!states[1] && (node.type === "call" || node.type === "construct") && (JAM.identical(node.value, _HTMLDocument_prototype_getElementById) || JAM.identical(node.value, _HTMLDocument_prototype_getElementsByTagName))) {
         states[1] = true;
       }
     }

@@ -526,18 +526,18 @@ function v146(s$$4) {
 }
 function v145(src$$1) {
   function v144() {
-    introspect(JAM.policy.p17) {
+    introspect(JAM.policy.p15) {
       var canvas_qr$$1 = document.createElement("canvas")
     }
-    introspect(JAM.policy.p17) {
+    introspect(JAM.policy.p15) {
       var context$$1 = canvas_qr$$1.getContext("2d")
     }
-    introspect(JAM.policy.p17) {
+    introspect(JAM.policy.p15) {
       var canvas_out = document.getElementById("out-canvas")
     }
     var v234 = canvas_out != null;
     if (v234) {
-      introspect(JAM.policy.p17) {
+      introspect(JAM.policy.p15) {
         var outctx = canvas_out.getContext("2d")
       }
       introspect(JAM.policy.p20) {
@@ -599,10 +599,10 @@ function v145(src$$1) {
   var v1127 = arguments.length;
   var v245 = v1127 == 0;
   if (v245) {
-    introspect(JAM.policy.p17) {
+    introspect(JAM.policy.p15) {
       var canvas_qr = document.getElementById("qr-canvas")
     }
-    introspect(JAM.policy.p17) {
+    introspect(JAM.policy.p15) {
       var context = canvas_qr.getContext("2d")
     }
     qrcode.width = canvas_qr.width;
@@ -3682,7 +3682,7 @@ function ReedSolomonDecoder(field) {
     var numErrors = errorLocator.Degree;
     var v646 = numErrors == 1;
     if (v646) {
-      introspect(JAM.policy.p16) {
+      introspect(JAM.policy.p18) {
         var v645 = errorLocator.getCoefficient(1)
       }
       return new Array(v645);
@@ -3829,7 +3829,7 @@ function ReedSolomonDecoder(field) {
       }
       v669 = v1563 >= v1564;
     }
-    introspect(JAM.policy.p16) {
+    introspect(JAM.policy.p18) {
       var sigmaTildeAtZero = t.getCoefficient(0)
     }
     var v670 = sigmaTildeAtZero == 0;
@@ -4190,7 +4190,7 @@ function GF256Poly(field$$1, coefficients) {
   function v72(a$$2) {
     var v734 = a$$2 == 0;
     if (v734) {
-      introspect(JAM.policy.p16) {
+      introspect(JAM.policy.p18) {
         return this.getCoefficient(0);
       }
     }
@@ -6204,7 +6204,7 @@ function QRCodeDataBlockReader(blocks, version$$8, numErrorCorrectionCode) {
     var unicodeString = "";
     var v952 = length$$14 > 0;
     do {
-      introspect(JAM.policy.p16) {
+      introspect(JAM.policy.p18) {
         intData$$3 = getNextBits(13);
       }
       var lowerByte = intData$$3 % 192;
@@ -6234,7 +6234,7 @@ function QRCodeDataBlockReader(blocks, version$$8, numErrorCorrectionCode) {
     var output = new Array;
     var v953 = length$$13 > 0;
     do {
-      introspect(JAM.policy.p16) {
+      introspect(JAM.policy.p18) {
         intData$$2 = this.getNextBits(8);
       }
       introspect(JAM.policy.p21) {
@@ -6253,7 +6253,7 @@ function QRCodeDataBlockReader(blocks, version$$8, numErrorCorrectionCode) {
     do {
       var v959 = length$$12 >= 3;
       if (v959) {
-        introspect(JAM.policy.p16) {
+        introspect(JAM.policy.p18) {
           intData$$1 = this.getNextBits(10);
         }
         var v954 = intData$$1 < 100;
@@ -6268,7 +6268,7 @@ function QRCodeDataBlockReader(blocks, version$$8, numErrorCorrectionCode) {
       } else {
         var v958 = length$$12 == 2;
         if (v958) {
-          introspect(JAM.policy.p16) {
+          introspect(JAM.policy.p18) {
             intData$$1 = this.getNextBits(7);
           }
           var v956 = intData$$1 < 10;
@@ -6279,7 +6279,7 @@ function QRCodeDataBlockReader(blocks, version$$8, numErrorCorrectionCode) {
         } else {
           var v957 = length$$12 == 1;
           if (v957) {
-            introspect(JAM.policy.p16) {
+            introspect(JAM.policy.p18) {
               intData$$1 = this.getNextBits(4);
             }
             length$$12 = length$$12 - 1;
@@ -6300,7 +6300,7 @@ function QRCodeDataBlockReader(blocks, version$$8, numErrorCorrectionCode) {
     do {
       var v963 = length$$11 > 1;
       if (v963) {
-        introspect(JAM.policy.p16) {
+        introspect(JAM.policy.p18) {
           intData = this.getNextBits(11);
         }
         var v961 = intData / 45;
@@ -6316,7 +6316,7 @@ function QRCodeDataBlockReader(blocks, version$$8, numErrorCorrectionCode) {
       } else {
         var v962 = length$$11 == 1;
         if (v962) {
-          introspect(JAM.policy.p16) {
+          introspect(JAM.policy.p18) {
             intData = this.getNextBits(6);
           }
           var v1754 = tableRomanAndFigure[intData];
@@ -6357,7 +6357,7 @@ function QRCodeDataBlockReader(blocks, version$$8, numErrorCorrectionCode) {
     if (v967) {
       return 0;
     } else {
-      introspect(JAM.policy.p16) {
+      introspect(JAM.policy.p18) {
         return this.getNextBits(4);
       }
     }
@@ -6625,7 +6625,7 @@ function read(a$$9) {
 }
 function load() {
   qrcode.callback = read;
-  introspect(JAM.policy.p17) {
+  introspect(JAM.policy.p15) {
     var v1001 = document.getElementById("imgpath")
   }
   var img$$2 = v1001.value;
@@ -6635,7 +6635,7 @@ function load() {
   return;
 }
 function passLine(stringPixels) {
-  introspect(JAM.policy.p17) {
+  introspect(JAM.policy.p15) {
     var coll = stringPixels.split("-")
   }
   var i$$62 = 0;
@@ -6684,7 +6684,7 @@ function passLine(stringPixels) {
   return;
 }
 function captureToCanvas() {
-  introspect(JAM.policy.p17) {
+  introspect(JAM.policy.p15) {
     flash = document.getElementById("embedflash");
   }
   flash.ccCapture();
@@ -6811,7 +6811,7 @@ var imageData = null;
 var ii = 0;
 var jj = 0;
 var c = 0;
-introspect(JAM.policy.p17) {
+introspect(JAM.policy.p15) {
   var v1057 = document.getElementById("decode")
 }
 v1057.onclick = load

@@ -1,6 +1,6 @@
 predicate-limit:0
 syntax-only:false
-policy-files:[tests/bench/sms2-window-extract-dna/sms2.policy]
+policy-files:[/home/rich/cs/jam/tests/bench/sms2-window-extract-dna/sms2.policy]
 sms2-window-extract-dna.original.js:7641
 sms2-window-extract-dna.normalized.js:12082
 policy.aut:346
@@ -16,8 +16,8 @@ callbacks-added-edges:5919
 callbacks-added-states:3384
 concrete-query-cache:concrete-1915390778.bin
 symbolic-query-cache:symbolic-1915390778.bin
-modular.policy.js:834
-policy.js:2577
+modular.policy.js:852
+policy.js:2667
 transactions:319
 checks:1541
 callsites-indirected:326

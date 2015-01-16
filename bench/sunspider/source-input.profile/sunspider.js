@@ -2215,11 +2215,11 @@ var _sunSpiderStartDate = new Date();\n\
  *\n\
  *   returns byte-array encrypted value (16 bytes)\n\
  */\n\
-function Cipher(input, w) {    // main Cipher function [5.1]\n\
+function Cipher(input, w) {    // main Cipher function [§5.1]\n\
   var Nb = 4;               // block size (in words): no of columns in state (fixed at 4 for AES)\n\
   var Nr = w.length/Nb - 1; // no of rounds: 10/12/14 for 128/192/256-bit keys\n\
 \n\
-  var state = [[],[],[],[]];  // initialise 4xNb byte-array 'state' with input [3.4]\n\
+  var state = [[],[],[],[]];  // initialise 4xNb byte-array 'state' with input [§3.4]\n\
   for (var i=0; i<4*Nb; i++) state[i%4][Math.floor(i/4)] = input[i];\n\
 \n\
   state = AddRoundKey(state, w, 0, Nb);\n\
@@ -2235,13 +2235,13 @@ function Cipher(input, w) {    // main Cipher function [5.1]\n\
   state = ShiftRows(state, Nb);\n\
   state = AddRoundKey(state, w, Nr, Nb);\n\
 \n\
-  var output = new Array(4*Nb);  // convert state to 1-d array before returning [3.4]\n\
+  var output = new Array(4*Nb);  // convert state to 1-d array before returning [§3.4]\n\
   for (var i=0; i<4*Nb; i++) output[i] = state[i%4][Math.floor(i/4)];\n\
   return output;\n\
 }\n\
 \n\
 \n\
-function SubBytes(s, Nb) {    // apply SBox to state S [5.1.1]\n\
+function SubBytes(s, Nb) {    // apply SBox to state S [§5.1.1]\n\
   for (var r=0; r<4; r++) {\n\
     for (var c=0; c<Nb; c++) s[r][c] = Sbox[s[r][c]];\n\
   }\n\
@@ -2249,7 +2249,7 @@ function SubBytes(s, Nb) {    // apply SBox to state S [5.1.1]\n\
 }\n\
 \n\
 \n\
-function ShiftRows(s, Nb) {    // shift row r of state S left by r bytes [5.1.2]\n\
+function ShiftRows(s, Nb) {    // shift row r of state S left by r bytes [§5.1.2]\n\
   var t = new Array(4);\n\
   for (var r=1; r<4; r++) {\n\
     for (var c=0; c<4; c++) t[c] = s[r][(c+r)%Nb];  // shift into temp copy\n\
@@ -2259,15 +2259,15 @@ function ShiftRows(s, Nb) {    // shift row r of state S left by r bytes [5.1.2]
 }\n\
 \n\
 \n\
-function MixColumns(s, Nb) {   // combine bytes of each col of state S [5.1.3]\n\
+function MixColumns(s, Nb) {   // combine bytes of each col of state S [§5.1.3]\n\
   for (var c=0; c<4; c++) {\n\
     var a = new Array(4);  // 'a' is a copy of the current column from 's'\n\
-    var b = new Array(4);  // 'b' is a{02} in GF(2^8)\n\
+    var b = new Array(4);  // 'b' is a•{02} in GF(2^8)\n\
     for (var i=0; i<4; i++) {\n\
       a[i] = s[i][c];\n\
       b[i] = s[i][c]&0x80 ? s[i][c]<<1 ^ 0x011b : s[i][c]<<1;\n\
     }\n\
-    // a[n] ^ b[n] is a{03} in GF(2^8)\n\
+    // a[n] ^ b[n] is a•{03} in GF(2^8)\n\
     s[0][c] = b[0] ^ a[1] ^ b[1] ^ a[2] ^ a[3]; // 2*a0 + 3*a1 + a2 + a3\n\
     s[1][c] = a[0] ^ b[1] ^ a[2] ^ b[2] ^ a[3]; // a0 * 2*a1 + 3*a2 + a3\n\
     s[2][c] = a[0] ^ a[1] ^ b[2] ^ a[3] ^ b[3]; // a0 + a1 + 2*a2 + 3*a3\n\
@@ -2277,7 +2277,7 @@ function MixColumns(s, Nb) {   // combine bytes of each col of state S [5.1.3]\n
 }\n\
 \n\
 \n\
-function AddRoundKey(state, w, rnd, Nb) {  // xor Round Key into state S [5.1.4]\n\
+function AddRoundKey(state, w, rnd, Nb) {  // xor Round Key into state S [§5.1.4]\n\
   for (var r=0; r<4; r++) {\n\
     for (var c=0; c<Nb; c++) state[r][c] ^= w[rnd*4+c][r];\n\
   }\n\
@@ -2285,7 +2285,7 @@ function AddRoundKey(state, w, rnd, Nb) {  // xor Round Key into state S [5.1.4]
 }\n\
 \n\
 \n\
-function KeyExpansion(key) {  // generate Key Schedule (byte-array Nr+1 x Nb) from Key [5.2]\n\
+function KeyExpansion(key) {  // generate Key Schedule (byte-array Nr+1 x Nb) from Key [§5.2]\n\
   var Nb = 4;            // block size (in words): no of columns in state (fixed at 4 for AES)\n\
   var Nk = key.length/4  // key length (in words): 4/6/8 for 128/192/256-bit keys\n\
   var Nr = Nk + 6;       // no of rounds: 10/12/14 for 128/192/256-bit keys\n\
@@ -2325,7 +2325,7 @@ function RotWord(w) {    // rotate 4-byte word w left by one byte\n\
 }\n\
 \n\
 \n\
-// Sbox is pre-computed multiplicative inverse in GF(2^8) used in SubBytes and KeyExpansion [5.1.1]\n\
+// Sbox is pre-computed multiplicative inverse in GF(2^8) used in SubBytes and KeyExpansion [§5.1.1]\n\
 var Sbox =  [0x63,0x7c,0x77,0x7b,0xf2,0x6b,0x6f,0xc5,0x30,0x01,0x67,0x2b,0xfe,0xd7,0xab,0x76,\n\
              0xca,0x82,0xc9,0x7d,0xfa,0x59,0x47,0xf0,0xad,0xd4,0xa2,0xaf,0x9c,0xa4,0x72,0xc0,\n\
              0xb7,0xfd,0x93,0x26,0x36,0x3f,0xf7,0xcc,0x34,0xa5,0xe5,0xf1,0x71,0xd8,0x31,0x15,\n\
@@ -2343,7 +2343,7 @@ var Sbox =  [0x63,0x7c,0x77,0x7b,0xf2,0x6b,0x6f,0xc5,0x30,0x01,0x67,0x2b,0xfe,0x
              0xe1,0xf8,0x98,0x11,0x69,0xd9,0x8e,0x94,0x9b,0x1e,0x87,0xe9,0xce,0x55,0x28,0xdf,\n\
              0x8c,0xa1,0x89,0x0d,0xbf,0xe6,0x42,0x68,0x41,0x99,0x2d,0x0f,0xb0,0x54,0xbb,0x16];\n\
 \n\
-// Rcon is Round Constant used for the Key Expansion [1st col is 2^(r-1) in GF(2^8)] [5.2]\n\
+// Rcon is Round Constant used for the Key Expansion [1st col is 2^(r-1) in GF(2^8)] [§5.2]\n\
 var Rcon = [ [0x00, 0x00, 0x00, 0x00],\n\
              [0x01, 0x00, 0x00, 0x00],\n\
              [0x02, 0x00, 0x00, 0x00],\n\
@@ -2377,7 +2377,7 @@ function AESEncryptCtr(plaintext, password, nBits) {\n\
   var key = Cipher(pwBytes, KeyExpansion(pwBytes));\n\
   key = key.concat(key.slice(0, nBytes-16));  // key is now 16/24/32 bytes long\n\
 \n\
-  // initialise counter block (NIST SP800-38A B.2): millisecond time-stamp for nonce in 1st 8 bytes,\n\
+  // initialise counter block (NIST SP800-38A §B.2): millisecond time-stamp for nonce in 1st 8 bytes,\n\
   // block counter in 2nd 8 bytes\n\
   var blockSize = 16;  // block size fixed at 16 bytes / 128 bits (Nb=4) for AES\n\
   var counterBlock = new Array(blockSize);  // block size fixed at 16 bytes / 128 bits (Nb=4) for AES\n\

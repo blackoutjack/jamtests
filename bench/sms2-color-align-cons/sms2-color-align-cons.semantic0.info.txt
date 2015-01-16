@@ -1,6 +1,6 @@
 predicate-limit:0
 syntax-only:false
-policy-files:[tests/bench/sms2-color-align-cons/sms2.policy]
+policy-files:[/home/rich/cs/jam/tests/bench/sms2-color-align-cons/sms2.policy]
 sms2-color-align-cons.original.js:6176
 sms2-color-align-cons.normalized.js:9528
 policy.aut:346
@@ -16,8 +16,8 @@ callbacks-added-edges:2920
 callbacks-added-states:2634
 concrete-query-cache:concrete-677873523.bin
 symbolic-query-cache:symbolic-677873523.bin
-modular.policy.js:834
-policy.js:2577
+modular.policy.js:852
+policy.js:2667
 transactions:278
 checks:1217
 callsites-indirected:283

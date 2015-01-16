@@ -1,6 +1,6 @@
 predicate-limit:0
 syntax-only:false
-policy-files:[tests/bench/sms2-genbank-fasta/sms2.policy]
+policy-files:[/home/rich/cs/jam/tests/bench/sms2-genbank-fasta/sms2.policy]
 sms2-genbank-fasta.original.js:5361
 sms2-genbank-fasta.normalized.js:8002
 policy.aut:346
@@ -16,8 +16,8 @@ callbacks-added-edges:2483
 callbacks-added-states:2225
 concrete-query-cache:concrete1945267147.bin
 symbolic-query-cache:symbolic1945267147.bin
-modular.policy.js:834
-policy.js:2577
+modular.policy.js:852
+policy.js:2667
 transactions:255
 checks:1101
 callsites-indirected:260

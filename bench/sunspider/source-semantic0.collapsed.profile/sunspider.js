@@ -7,7 +7,7 @@ function warmup() {
     var i$$2 = 0;
     var v1 = i$$2 < 100;
     for (;v1;) {
-      if (Math.atan(Math.acos(Math.asin(Math.random()))) > 4) {
+      if (JAM.call(Math.atan, Math, [JAM.call(Math.acos, Math, [JAM.call(Math.asin, Math, [JAM.call(Math.random, Math, [], JAM.policy.p153)], JAM.policy.p156)], JAM.policy.p156)], JAM.policy.p156) > 4) {
         return;
       }
       ++i$$2;
@@ -18,29 +18,39 @@ function warmup() {
   return;
 }
 function start() {
-  window.setTimeout(next, 128);
+  JAM.call(window.setTimeout, window, [next, 128], JAM.policy.p156);
   return;
 }
 function next() {
-  JAM.set(document.getElementById("frameparent"), "innerHTML", "");
-  JAM.set(document.getElementById("frameparent"), "innerHTML", "<iframe id='testframe'>");
-  var testFrame = document.getElementById("testframe");
+  var v3 = JAM.call(JAM.get(document, "getElementById", JAM.policy.p155), document, ["frameparent"], JAM.policy.p155);
+  introspect(JAM.policy.p101) {
+    v3.innerHTML = "";
+  }
+  var v4 = JAM.call(JAM.get(document, "getElementById", JAM.policy.p155), document, ["frameparent"], JAM.policy.p155);
+  introspect(JAM.policy.p101) {
+    v4.innerHTML = "<iframe id='testframe'>";
+  }
+  var testFrame = JAM.call(JAM.get(document, "getElementById", JAM.policy.p155), document, ["testframe"], JAM.policy.p155);
   if ((testIndex = testIndex + 1) < tests.length) {
     warmup();
     var v5 = testFrame.contentDocument;
-    JAM.call(JAM.get(v5, "open", JAM.policy.p1), v5, []);
+    JAM.call(JAM.get(v5, "open", JAM.policy.p157), v5, [], JAM.policy.p157);
     var v6 = testFrame.contentDocument;
-    introspect(JAM.policy.p1) {
+    introspect(JAM.policy.p163) {
       var v7 = testContents[testIndex]
     }
-    JAM.call(v6.write, v6, [v7]);
-    testFrame.contentDocument.close();
-    window.setTimeout(next, 0);
+    JAM.call(JAM.get(v6, "write", JAM.policy.p152), v6, [v7], JAM.policy.p152);
+    var v8 = testFrame.contentDocument;
+    JAM.call(v8.close, v8, [], JAM.policy.p153);
+    JAM.call(window.setTimeout, window, [next, 0], JAM.policy.p156);
   } else {
     if ((currentRepeat = currentRepeat + 1) < repeatCount) {
-      document.getElementById("countdown").innerHTML = repeatCount - currentRepeat;
+      var v9 = JAM.call(JAM.get(document, "getElementById", JAM.policy.p155), document, ["countdown"], JAM.policy.p155);
+      introspect(JAM.policy.p101) {
+        v9.innerHTML = repeatCount - currentRepeat;
+      }
       testIndex = -1;
-      window.setTimeout(next, 128);
+      JAM.call(window.setTimeout, window, [next, 128], JAM.policy.p156);
     } else {
       finish();
     }
@@ -49,13 +59,15 @@ function next() {
 }
 function recordResult(time) {
   if (currentRepeat >= 0) {
-    introspect(JAM.policy.p1) {
+    introspect(JAM.policy.p163) {
       var v12 = output[currentRepeat]
     }
-    introspect(JAM.policy.p1) {
+    introspect(JAM.policy.p163) {
       var v13 = tests[testIndex]
     }
-    JAM.set(v12, v13, time);
+    introspect(JAM.policy.p164) {
+      v12[v13] = time;
+    }
   }
   return;
 }
@@ -68,10 +80,10 @@ function finish() {
     var i$$3 = 0;
     var v17 = i$$3 < output.length;
     for (;v17;) {
-      introspect(JAM.policy.p1) {
+      introspect(JAM.policy.p163) {
         var v15 = output[i$$3]
       }
-      introspect(JAM.policy.p1) {
+      introspect(JAM.policy.p163) {
         var time$$1 = v15[test]
       }
       if (time$$1 != time$$1) {
@@ -81,10 +93,10 @@ function finish() {
       i$$3++;
       v17 = i$$3 < output.length;
     }
-    outputString = outputString.substring(0, outputString.length - 1);
+    outputString = JAM.call(outputString.substring, outputString, [0, outputString.length - 1], JAM.policy.p154);
     outputString = outputString + "],";
   }
-  outputString = outputString.substring(0, outputString.length - 1);
+  outputString = JAM.call(outputString.substring, outputString, [0, outputString.length - 1], JAM.policy.p154);
   outputString = outputString + "}";
   location = "results.html?" + encodeURI(outputString);
   return;
@@ -289,11 +301,15 @@ var currentRepeat = -1;
 var repeatCount = 10;
 var warmupMS = 8;
 var output = [];
-output.length = repeatCount;
+introspect(JAM.policy.p12) {
+  output.length = repeatCount;
+}
 var i = 0;
 var v22 = i < output.length;
 for (;v22;) {
-  output[i] = {};
+  introspect(JAM.policy.p12) {
+    output[i] = {};
+  }
   i++;
   v22 = i < output.length;
 }

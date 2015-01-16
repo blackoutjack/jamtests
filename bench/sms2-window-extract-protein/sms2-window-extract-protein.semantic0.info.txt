@@ -1,6 +1,6 @@
 predicate-limit:0
 syntax-only:false
-policy-files:[tests/bench/sms2-window-extract-protein/sms2.policy]
+policy-files:[/home/rich/cs/jam/tests/bench/sms2-window-extract-protein/sms2.policy]
 sms2-window-extract-protein.original.js:7457
 sms2-window-extract-protein.normalized.js:11682
 policy.aut:346
@@ -16,8 +16,8 @@ callbacks-added-edges:5560
 callbacks-added-states:3229
 concrete-query-cache:concrete-1596160620.bin
 symbolic-query-cache:symbolic-1596160620.bin
-modular.policy.js:834
-policy.js:2577
+modular.policy.js:852
+policy.js:2667
 transactions:311
 checks:1502
 callsites-indirected:318

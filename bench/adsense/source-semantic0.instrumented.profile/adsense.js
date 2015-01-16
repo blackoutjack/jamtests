@@ -3,17 +3,21 @@ JAM.startProfile('load');
 function v254() {
   function v253() {
     var a$$530 = v$$1;
-    var b$$402 = a$$530.createElement("script");
+    introspect(JAM.policy.p3) {
+      var b$$402 = a$$530.createElement("script")
+    }
     b$$402.async = !0;
     b$$402.type = "text/javascript";
     var v5039 = di();
     b$$402.src = v5039;
-    introspect(JAM.policy.p6) {
+    introspect(JAM.policy.p3) {
       var v255 = a$$530.getElementsByTagName("script")
     }
     a$$530 = v255[0];
     var v256 = a$$530.parentNode;
-    v256.insertBefore(b$$402, a$$530);
+    introspect(JAM.policy.p3) {
+      v256.insertBefore(b$$402, a$$530);
+    }
     return;
   }
   function v252(a$$527) {
@@ -26,13 +30,21 @@ function v254() {
       }
       var v2089 = v3408;
       if (v2089) {
-        var v4196 = Math.max(a$$528, -30);
-        a$$528 = Math.min(v4196, 30);
+        introspect(JAM.policy.p3) {
+          var v4196 = Math.max(a$$528, -30)
+        }
+        introspect(JAM.policy.p3) {
+          a$$528 = Math.min(v4196, 30);
+        }
         var v4646 = a$$528 + 30;
         var v4197 = 546 * v4646;
-        a$$528 = Math.round(v4197);
+        introspect(JAM.policy.p3) {
+          a$$528 = Math.round(v4197);
+        }
         var v4198 = a$$528 / 256;
-        var v3409 = Math.floor(v4198);
+        introspect(JAM.policy.p3) {
+          var v3409 = Math.floor(v4198)
+        }
         var v3410 = a$$528 % 256;
         v257 = [v3409, v3410];
       } else {
@@ -46,16 +58,22 @@ function v254() {
       var v2090 = b$$401(v3411);
       var v3412 = a$$527.y;
       var v2091 = b$$401(v3412);
-      var v258 = v2090.concat(v2091);
+      introspect(JAM.policy.p3) {
+        var v258 = v2090.concat(v2091)
+      }
       var v2092 = a$$527.z;
       var v259 = b$$401(v2092);
-      c$$270 = v258.concat(v259);
+      introspect(JAM.policy.p3) {
+        c$$270 = v258.concat(v259);
+      }
     } else {
       a$$527 = 0;
       var v261 = 3 > a$$527;
       for (;v261;) {
         var v260 = [128, 0];
-        c$$270 = c$$270.concat(v260);
+        introspect(JAM.policy.p3) {
+          c$$270 = c$$270.concat(v260);
+        }
         ++a$$527;
         v261 = 3 > a$$527;
       }
@@ -74,7 +92,9 @@ function v254() {
       if (v2093) {
         a$$526 = a$$526 + 360;
         var v4200 = a$$526 / 256;
-        var v3414 = Math.floor(v4200);
+        introspect(JAM.policy.p3) {
+          var v3414 = Math.floor(v4200)
+        }
         var v3415 = a$$526 % 256;
         v262 = [v3414, v3415];
       } else {
@@ -88,16 +108,22 @@ function v254() {
       var v2094 = b$$400(v3416);
       var v3417 = a$$525.gamma;
       var v2095 = b$$400(v3417);
-      var v263 = v2094.concat(v2095);
+      introspect(JAM.policy.p3) {
+        var v263 = v2094.concat(v2095)
+      }
       var v2096 = a$$525.alpha;
       var v264 = b$$400(v2096);
-      c$$269 = v263.concat(v264);
+      introspect(JAM.policy.p3) {
+        c$$269 = v263.concat(v264);
+      }
     } else {
       a$$525 = 0;
       var v266 = 3 > a$$525;
       for (;v266;) {
         var v265 = [128, 0];
-        c$$269 = c$$269.concat(v265);
+        introspect(JAM.policy.p3) {
+          c$$269 = c$$269.concat(v265);
+        }
         ++a$$525;
         v266 = 3 > a$$525;
       }
@@ -108,16 +134,24 @@ function v254() {
     var v3418 = this.t;
     var v2097 = v3418.j;
     var v267 = v2097.deviceOrientation;
-    var a$$524 = this.Eb(v267);
+    introspect(JAM.policy.p3) {
+      var a$$524 = this.Eb(v267)
+    }
     var v3419 = this.t;
     var v2098 = v3419.j;
     var v268 = v2098.deviceAccelerationWithoutGravity;
-    var b$$399 = this.Ea(v268);
+    introspect(JAM.policy.p3) {
+      var b$$399 = this.Ea(v268)
+    }
     var v3420 = this.t;
     var v2099 = v3420.j;
     var v269 = v2099.deviceAccelerationWithGravity;
-    var c$$268 = this.Ea(v269);
-    a$$524 = a$$524.concat(b$$399, c$$268);
+    introspect(JAM.policy.p3) {
+      var c$$268 = this.Ea(v269)
+    }
+    introspect(JAM.policy.p3) {
+      a$$524 = a$$524.concat(b$$399, c$$268);
+    }
     var JSCompiler_inline_result$$53;
     var a$$inline_399 = a$$524;
     var v2100 = ca$$1(a$$inline_399);
@@ -133,10 +167,14 @@ function v254() {
       var v271 = 65 > a$$inline_643;
       for (;v271;) {
         var v2101 = Qh;
-        var v5040 = "ABCDEFGHIJKLMNOPQRSTUVWXYZabcdefghijklmnopqrstuvwxyz0123456789+/=".charAt(a$$inline_643);
+        introspect(JAM.policy.p3) {
+          var v5040 = "ABCDEFGHIJKLMNOPQRSTUVWXYZabcdefghijklmnopqrstuvwxyz0123456789+/=".charAt(a$$inline_643)
+        }
         v2101[a$$inline_643] = v5040;
         var v2102 = Rh;
-        var v5041 = "ABCDEFGHIJKLMNOPQRSTUVWXYZabcdefghijklmnopqrstuvwxyz0123456789-_.".charAt(a$$inline_643);
+        introspect(JAM.policy.p3) {
+          var v5041 = "ABCDEFGHIJKLMNOPQRSTUVWXYZabcdefghijklmnopqrstuvwxyz0123456789-_.".charAt(a$$inline_643)
+        }
         v2102[a$$inline_643] = v5041;
         a$$inline_643++;
         v271 = 65 > a$$inline_643;
@@ -155,18 +193,14 @@ function v254() {
     var v2104 = a$$inline_399.length;
     var v288 = e$$inline_403 < v2104;
     for (;v288;) {
-      introspect(JAM.policy.p4) {
-        var f$$inline_404 = a$$inline_399[e$$inline_403]
-      }
+      var f$$inline_404 = a$$inline_399[e$$inline_403];
       var v274 = e$$inline_403 + 1;
       var v275 = a$$inline_399.length;
       var g$$inline_405 = v274 < v275;
       var v276;
       if (g$$inline_405) {
         var v2105 = e$$inline_403 + 1;
-        introspect(JAM.policy.p4) {
-          v276 = a$$inline_399[v2105];
-        }
+        v276 = a$$inline_399[v2105];
       } else {
         v276 = 0;
       }
@@ -177,9 +211,7 @@ function v254() {
       var v279;
       if (k$$inline_407) {
         var v2106 = e$$inline_403 + 2;
-        introspect(JAM.policy.p4) {
-          v279 = a$$inline_399[v2106];
-        }
+        v279 = a$$inline_399[v2106];
       } else {
         v279 = 0;
       }
@@ -202,24 +234,20 @@ function v254() {
           h$$inline_406 = 64;
         }
       }
-      introspect(JAM.policy.p4) {
-        var v284 = c$$inline_401[z$$inline_409]
+      var v284 = c$$inline_401[z$$inline_409];
+      var v285 = c$$inline_401[f$$inline_404];
+      var v286 = c$$inline_401[h$$inline_406];
+      var v287 = c$$inline_401[l$$inline_408];
+      introspect(JAM.policy.p3) {
+        d$$inline_402.push(v284, v285, v286, v287);
       }
-      introspect(JAM.policy.p4) {
-        var v285 = c$$inline_401[f$$inline_404]
-      }
-      introspect(JAM.policy.p4) {
-        var v286 = c$$inline_401[h$$inline_406]
-      }
-      introspect(JAM.policy.p4) {
-        var v287 = c$$inline_401[l$$inline_408]
-      }
-      d$$inline_402.push(v284, v285, v286, v287);
       e$$inline_403 = e$$inline_403 + 3;
       var v2110 = a$$inline_399.length;
       v288 = e$$inline_403 < v2110;
     }
-    JSCompiler_inline_result$$53 = d$$inline_402.join("");
+    introspect(JAM.policy.p3) {
+      JSCompiler_inline_result$$53 = d$$inline_402.join("");
+    }
     return JSCompiler_inline_result$$53;
   }
   function v249() {
@@ -250,14 +278,18 @@ function v254() {
   function v248() {
     var v290 = this.j;
     var v2114 = new Date;
-    var v5042 = v2114.getTime();
+    introspect(JAM.policy.p3) {
+      var v5042 = v2114.getTime()
+    }
     v290.stopTimeStamp = v5042;
     return;
   }
   function v247() {
     var v291 = this.j;
     var v2115 = new Date;
-    var v5043 = v2115.getTime();
+    introspect(JAM.policy.p3) {
+      var v5043 = v2115.getTime()
+    }
     v291.startTimeStamp = v5043;
     return;
   }
@@ -300,10 +332,14 @@ function v254() {
     return v293;
   }
   function v244() {
-    var v294 = this.O();
+    introspect(JAM.policy.p3) {
+      var v294 = this.O()
+    }
     var v2120 = !v294;
     if (v2120) {
-      v294 = this.P();
+      introspect(JAM.policy.p3) {
+        v294 = this.P();
+      }
     }
     return v294;
   }
@@ -383,13 +419,19 @@ function v254() {
   function v232() {
     try {
       var a$$501 = {msg_type:"i-prepare"};
-      this.Bc(a$$501);
+      introspect(JAM.policy.p3) {
+        this.Bc(a$$501);
+      }
       var v2124 = this.s;
       var v305 = v2124.contentWindow;
       var v3434 = void 0;
       var v2125 = new hg(v3434);
-      var v306 = v2125.serialize(a$$501);
-      v305.postMessage(v306, "http://doubleclick");
+      introspect(JAM.policy.p3) {
+        var v306 = v2125.serialize(a$$501)
+      }
+      introspect(JAM.policy.p3) {
+        v305.postMessage(v306, "http://doubleclick");
+      }
       return!0;
     } catch (b$$380) {
     }
@@ -397,7 +439,9 @@ function v254() {
   }
   function v231(a$$500) {
     var v307 = this.G;
-    var v5044 = a$$500.getAttribute("href");
+    introspect(JAM.policy.p3) {
+      var v5044 = a$$500.getAttribute("href")
+    }
     v307.iclk_url = v5044;
     var JSCompiler_temp_const$$57 = this.G;
     var JSCompiler_inline_result$$58;
@@ -409,27 +453,43 @@ function v254() {
     var v310 = v2126;
     if (v310) {
       var v308 = a$$inline_379.innerText;
-      a$$inline_379 = v308.replace(/(\r\n|\r|\n)/g, "\n");
+      introspect(JAM.policy.p3) {
+        a$$inline_379 = v308.replace(/(\r\n|\r|\n)/g, "\n");
+      }
     } else {
       var b$$inline_380 = [];
       var v309 = !0;
       ud(a$$inline_379, b$$inline_380, v309);
-      a$$inline_379 = b$$inline_380.join("");
+      introspect(JAM.policy.p3) {
+        a$$inline_379 = b$$inline_380.join("");
+      }
     }
-    var v311 = a$$inline_379.replace(/ \xAD /g, " ");
-    a$$inline_379 = v311.replace(/\xAD/g, "");
-    a$$inline_379 = a$$inline_379.replace(/\u200B/g, "");
+    introspect(JAM.policy.p3) {
+      var v311 = a$$inline_379.replace(/ \xAD /g, " ")
+    }
+    introspect(JAM.policy.p3) {
+      a$$inline_379 = v311.replace(/\xAD/g, "");
+    }
+    introspect(JAM.policy.p3) {
+      a$$inline_379 = a$$inline_379.replace(/\u200B/g, "");
+    }
     var v2127 = !Xc;
     if (v2127) {
-      a$$inline_379 = a$$inline_379.replace(/ +/g, " ");
+      introspect(JAM.policy.p3) {
+        a$$inline_379 = a$$inline_379.replace(/ +/g, " ");
+      }
     }
     var v312 = " " != a$$inline_379;
     if (v312) {
-      a$$inline_379 = a$$inline_379.replace(/^\s*/, "");
+      introspect(JAM.policy.p3) {
+        a$$inline_379 = a$$inline_379.replace(/^\s*/, "");
+      }
     }
     JSCompiler_inline_result$$58 = a$$inline_379;
     JSCompiler_temp_const$$57.iclk_ltx = JSCompiler_inline_result$$58;
-    var v313 = a$$500 = a$$500.getAttribute("title");
+    introspect(JAM.policy.p3) {
+      var v313 = a$$500 = a$$500.getAttribute("title")
+    }
     if (v313) {
       var v2128 = this.G;
       v2128.iclk_ltl = a$$500;
@@ -438,17 +498,25 @@ function v254() {
   }
   function v230() {
     var v2129 = this.Va;
-    var v314 = r$$2(v2129, this);
+    introspect(JAM.policy.p3) {
+      var v314 = r$$2(v2129, this)
+    }
     var a$$499 = xe("ias::nav", v314);
     var v315 = this.i;
-    var v5045 = v315.setTimeout(a$$499, 1E3);
+    introspect(JAM.policy.p3) {
+      var v5045 = v315.setTimeout(a$$499, 1E3)
+    }
     this.Jc = v5045;
     return;
   }
   function v229(a$$498) {
-    var v316 = this.T();
+    introspect(JAM.policy.p3) {
+      var v316 = this.T()
+    }
     if (v316) {
-      a$$498.preventDefault();
+      introspect(JAM.policy.p3) {
+        a$$498.preventDefault();
+      }
       return!1;
     }
     var v2130 = a$$498;
@@ -473,20 +541,30 @@ function v254() {
       return!0;
     }
     var v320 = a$$498.target;
-    this.uc(v320);
-    var v2133 = this.wc();
+    introspect(JAM.policy.p3) {
+      this.uc(v320);
+    }
+    introspect(JAM.policy.p3) {
+      var v2133 = this.wc()
+    }
     var v321 = !v2133;
     if (v321) {
       return!0;
     }
-    this.qc();
-    a$$498.preventDefault();
+    introspect(JAM.policy.p3) {
+      this.qc();
+    }
+    introspect(JAM.policy.p3) {
+      a$$498.preventDefault();
+    }
     return!1;
   }
   function v228() {
     var v2134 = this.i;
     var v322 = v2134.location;
-    var v5046 = this.T();
+    introspect(JAM.policy.p3) {
+      var v5046 = this.T()
+    }
     v322.href = v5046;
     return;
   }
@@ -497,8 +575,12 @@ function v254() {
       this.Z = !0;
       var v4211 = this.i;
       var v4212 = this.Jc;
-      v4211.clearTimeout(v4212);
-      this.Va();
+      introspect(JAM.policy.p3) {
+        v4211.clearTimeout(v4212);
+      }
+      introspect(JAM.policy.p3) {
+        this.Va();
+      }
     }
     return;
   }
@@ -509,17 +591,27 @@ function v254() {
       this.Z = !0;
       var v324 = this.i;
       var v325 = this.Jc;
-      v324.clearTimeout(v325);
+      introspect(JAM.policy.p3) {
+        v324.clearTimeout(v325);
+      }
       var v326 = this.Zb;
-      var v327 = this.T();
-      v326.A(v327);
+      introspect(JAM.policy.p3) {
+        var v327 = this.T()
+      }
+      introspect(JAM.policy.p3) {
+        v326.A(v327);
+      }
       var a$$497 = {msg_type:"i-view"};
       var v2137 = this.s;
       var v328 = v2137.contentWindow;
       var v3436 = void 0;
       var v2138 = new hg(v3436);
-      var v329 = v2138.serialize(a$$497);
-      v328.postMessage(v329, "http://doubleclick");
+      introspect(JAM.policy.p3) {
+        var v329 = v2138.serialize(a$$497)
+      }
+      introspect(JAM.policy.p3) {
+        v328.postMessage(v329, "http://doubleclick");
+      }
     }
     return;
   }
@@ -529,10 +621,14 @@ function v254() {
     if (v333) {
       this.H = !0;
       var v2140 = this.dc;
-      var v331 = r$$2(v2140, this);
+      introspect(JAM.policy.p3) {
+        var v331 = r$$2(v2140, this)
+      }
       var a$$496 = ye("ias::chdlr", v331);
       var v332 = this.Zb;
-      v332.mb(a$$496);
+      introspect(JAM.policy.p3) {
+        v332.mb(a$$496);
+      }
     }
     return;
   }
@@ -552,7 +648,9 @@ function v254() {
     return;
   }
   function v222(a$$493) {
-    var b$$377 = this.u();
+    introspect(JAM.policy.p3) {
+      var b$$377 = this.u()
+    }
     if (b$$377) {
       var v2143 = b$$377.style;
       var v3437;
@@ -566,7 +664,9 @@ function v254() {
     return;
   }
   function v221() {
-    var a$$492 = this.ba();
+    introspect(JAM.policy.p3) {
+      var a$$492 = this.ba()
+    }
     var v2144 = a$$492;
     if (v2144) {
       var v4213 = a$$492.length;
@@ -577,17 +677,13 @@ function v254() {
     if (v343) {
       var v2145 = a$$492.length;
       var v335 = v2145 - 1;
-      introspect(JAM.policy.p4) {
-        var b$$376 = a$$492[v335]
-      }
+      var b$$376 = a$$492[v335];
       if (b$$376) {
         var c$$251 = 0;
         var v2146 = a$$492.length;
         var v337 = c$$251 < v2146;
         for (;v337;) {
-          introspect(JAM.policy.p4) {
-            var v336 = a$$492[c$$251]
-          }
+          var v336 = a$$492[c$$251];
           Q$$1(v336, mh);
           ++c$$251;
           var v2147 = a$$492.length;
@@ -604,7 +700,9 @@ function v254() {
         Q$$1(v341, nh);
         Q$$1(b$$376, lh);
         var v342 = !1;
-        this.N(v342);
+        introspect(JAM.policy.p3) {
+          this.N(v342);
+        }
       }
     }
     return;
@@ -614,20 +712,28 @@ function v254() {
     var v2149 = v3439.document;
     var v344 = v2149.body;
     var v345 = this.kc;
-    v344.removeChild(v345);
+    introspect(JAM.policy.p3) {
+      v344.removeChild(v345);
+    }
     var v3440 = this.i;
     var v2150 = v3440.document;
     var v346 = v2150.body;
     var v347 = this.ic;
-    v346.removeChild(v347);
+    introspect(JAM.policy.p3) {
+      v346.removeChild(v347);
+    }
     return;
   }
   function v219(a$$491) {
     var v348 = this.ea;
-    v348.push(a$$491);
+    introspect(JAM.policy.p3) {
+      v348.push(a$$491);
+    }
     var v349 = this.rc;
     y$$31(a$$491, "click", v349);
-    a$$491.setAttribute("data-google-reveal-ad", "true");
+    introspect(JAM.policy.p3) {
+      a$$491.setAttribute("data-google-reveal-ad", "true");
+    }
     return;
   }
   function v218() {
@@ -638,12 +744,14 @@ function v254() {
     var v2152 = a$$490.length;
     var v352 = b$$375 < v2152;
     for (;v352;) {
-      introspect(JAM.policy.p4) {
-        var c$$250 = a$$490[b$$375]
+      var c$$250 = a$$490[b$$375];
+      introspect(JAM.policy.p3) {
+        var v351 = this.rb(c$$250)
       }
-      var v351 = this.rb(c$$250);
       if (v351) {
-        this.Xb(c$$250);
+        introspect(JAM.policy.p3) {
+          this.Xb(c$$250);
+        }
       }
       ++b$$375;
       var v2153 = a$$490.length;
@@ -658,12 +766,12 @@ function v254() {
     var v355 = a$$489 < v2154;
     for (;v355;) {
       var v353 = this.ea;
-      introspect(JAM.policy.p4) {
-        var b$$374 = v353[a$$489]
-      }
+      var b$$374 = v353[a$$489];
       var v354 = this.rc;
       A$$1(b$$374, "click", v354);
-      b$$374.removeAttribute("data-google-reveal-ad");
+      introspect(JAM.policy.p3) {
+        b$$374.removeAttribute("data-google-reveal-ad");
+      }
       ++a$$489;
       var v3442 = this.ea;
       var v2155 = v3442.length;
@@ -673,35 +781,55 @@ function v254() {
     return;
   }
   function v216(a$$488) {
-    var v5047 = this.Ba(a$$488, "prerender");
+    introspect(JAM.policy.p3) {
+      var v5047 = this.Ba(a$$488, "prerender")
+    }
     this.kc = v5047;
-    var v5048 = this.Ba(a$$488, "prefetch");
+    introspect(JAM.policy.p3) {
+      var v5048 = this.Ba(a$$488, "prefetch")
+    }
     this.ic = v5048;
     var v3443 = this.i;
     var v2156 = v3443.document;
     var v356 = v2156.body;
     var v357 = this.kc;
-    v356.appendChild(v357);
+    introspect(JAM.policy.p3) {
+      v356.appendChild(v357);
+    }
     var v3444 = this.i;
     var v2157 = v3444.document;
     var v358 = v2157.body;
     var v359 = this.ic;
-    v358.appendChild(v359);
+    introspect(JAM.policy.p3) {
+      v358.appendChild(v359);
+    }
     return;
   }
   function v215(a$$487, b$$373) {
     var v2158 = this.i;
     var v360 = v2158.document;
-    var c$$249 = v360.createElement("link");
-    c$$249.setAttribute("rel", b$$373);
-    c$$249.setAttribute("href", a$$487);
+    introspect(JAM.policy.p3) {
+      var c$$249 = v360.createElement("link")
+    }
+    introspect(JAM.policy.p3) {
+      c$$249.setAttribute("rel", b$$373);
+    }
+    introspect(JAM.policy.p3) {
+      c$$249.setAttribute("href", a$$487);
+    }
     return c$$249;
   }
   function v214() {
     var v361 = !1;
-    this.N(v361);
-    this.xb();
-    this.sc();
+    introspect(JAM.policy.p3) {
+      this.N(v361);
+    }
+    introspect(JAM.policy.p3) {
+      this.xb();
+    }
+    introspect(JAM.policy.p3) {
+      this.sc();
+    }
     return;
   }
   function v213(a$$486) {
@@ -748,13 +876,19 @@ function v254() {
   }
   function v212(a$$485) {
     var v366 = !0;
-    this.N(v366);
+    introspect(JAM.policy.p3) {
+      this.N(v366);
+    }
     var v2161 = this.tb;
-    var v367 = r$$2(v2161, this);
+    introspect(JAM.policy.p3) {
+      var v367 = r$$2(v2161, this)
+    }
     var b$$371 = ye("ifr::hide", v367);
     var v368 = this.i;
     y$$31(v368, "pagehide", b$$371);
-    this.vb(a$$485);
+    introspect(JAM.policy.p3) {
+      this.vb(a$$485);
+    }
     return;
   }
   function v211(a$$484) {
@@ -763,7 +897,9 @@ function v254() {
     if (v2162) {
       this.ob = !0;
       this.rc = a$$484;
-      this.Yb();
+      introspect(JAM.policy.p3) {
+        this.Yb();
+      }
     }
     return;
   }
@@ -778,7 +914,9 @@ function v254() {
     if (v2163) {
       this.H = !0;
       var v3448 = this.Kb;
-      v3448.A();
+      introspect(JAM.policy.p3) {
+        v3448.A();
+      }
     }
     return;
   }
@@ -788,7 +926,9 @@ function v254() {
     if (v2164) {
       this.Cb = !0;
       var v3449 = this.Kb;
-      v3449.dismiss();
+      introspect(JAM.policy.p3) {
+        v3449.dismiss();
+      }
     }
     return;
   }
@@ -800,9 +940,7 @@ function v254() {
     var v2165 = v3450;
     if (v2165) {
       var v3451 = a$$479.origin;
-      introspect(JAM.policy.p4) {
-        v2165 = mg[v3451];
-      }
+      v2165 = mg[v3451];
     }
     var v375 = v2165;
     if (v375) {
@@ -829,11 +967,11 @@ function v254() {
           ;
         }
         var v373 = this.cc;
-        introspect(JAM.policy.p4) {
-          var f$$52 = v373[c$$246]
-        }
+        var f$$52 = v373[c$$246];
         if (f$$52) {
-          f$$52.call(this, d$$154);
+          introspect(JAM.policy.p3) {
+            f$$52.call(this, d$$154);
+          }
           break;
         }
         b$$367++;
@@ -844,9 +982,13 @@ function v254() {
   }
   function v206() {
     var v376 = this.cc;
-    this.pa(v376);
+    introspect(JAM.policy.p3) {
+      this.pa(v376);
+    }
     var v2167 = this.gc;
-    var v377 = r$$2(v2167, this);
+    introspect(JAM.policy.p3) {
+      var v377 = r$$2(v2167, this)
+    }
     var a$$478 = ye("ras::hdlr", v377);
     var v378 = this.i;
     y$$31(v378, "message", a$$478);
@@ -854,7 +996,9 @@ function v254() {
   }
   function v205() {
     var v379;
-    var v4977 = this.Sa();
+    introspect(JAM.policy.p3) {
+      var v4977 = this.Sa()
+    }
     var v4873 = !v4977;
     var v4979 = !v4873;
     if (v4979) {
@@ -885,10 +1029,16 @@ function v254() {
     }
     var v2168 = v3452;
     if (v2168) {
-      v379 = this.hide();
+      introspect(JAM.policy.p3) {
+        v379 = this.hide();
+      }
     } else {
-      this.A();
-      v379 = this.show();
+      introspect(JAM.policy.p3) {
+        this.A();
+      }
+      introspect(JAM.policy.p3) {
+        v379 = this.show();
+      }
     }
     v379;
     return;
@@ -911,7 +1061,9 @@ function v254() {
     var v2173 = v3457.document;
     var v381 = v2173.body;
     var v382 = this.Vc;
-    this.cb(v381, v382);
+    introspect(JAM.policy.p3) {
+      this.cb(v381, v382);
+    }
     return;
   }
   function v202(a$$475) {
@@ -919,7 +1071,9 @@ function v254() {
     var v383 = a$$475.touches;
     this.B = v383.length;
     this.I = !1;
-    this.o();
+    introspect(JAM.policy.p3) {
+      this.o();
+    }
     return;
   }
   function v201(a$$474) {
@@ -927,7 +1081,9 @@ function v254() {
     var v384 = a$$474.touches;
     this.B = v384.length;
     this.I = !0;
-    this.o();
+    introspect(JAM.policy.p3) {
+      this.o();
+    }
     return;
   }
   function v200(a$$473) {
@@ -937,7 +1093,9 @@ function v254() {
       if (v385) {
         this.B = b$$365;
         this.I = !1;
-        this.o();
+        introspect(JAM.policy.p3) {
+          this.o();
+        }
       }
       return;
     }
@@ -948,11 +1106,17 @@ function v254() {
     var v2177 = 2 > b$$365;
     if (v2177) {
       var v2175 = this.i;
-      var v2176 = r$$2(v199, this);
-      v387 = v2175.setTimeout(v2176, 1E3);
+      introspect(JAM.policy.p3) {
+        var v2176 = r$$2(v199, this)
+      }
+      introspect(JAM.policy.p3) {
+        v387 = v2175.setTimeout(v2176, 1E3);
+      }
     } else {
       this.B = b$$365;
-      v387 = this.o();
+      introspect(JAM.policy.p3) {
+        v387 = this.o();
+      }
     }
     v387;
     return;
@@ -964,26 +1128,38 @@ function v254() {
       if (v388) {
         this.B = 0;
         this.I = !1;
-        this.o();
+        introspect(JAM.policy.p3) {
+          this.o();
+        }
       }
       return;
     }
     this.w = "touchcancel";
     var v389 = this.i;
-    var v390 = r$$2(v197, this);
-    v389.setTimeout(v390, 1E3);
+    introspect(JAM.policy.p3) {
+      var v390 = r$$2(v197, this)
+    }
+    introspect(JAM.policy.p3) {
+      v389.setTimeout(v390, 1E3);
+    }
     return;
   }
   function v196() {
-    this.o();
+    introspect(JAM.policy.p3) {
+      this.o();
+    }
     return;
   }
   function v195() {
-    this.o();
+    introspect(JAM.policy.p3) {
+      this.o();
+    }
     return;
   }
   function v194() {
-    this.o();
+    introspect(JAM.policy.p3) {
+      this.o();
+    }
     return;
   }
   function v193() {
@@ -1031,7 +1207,9 @@ function v254() {
     return b$$362;
   }
   function v189() {
-    var a$$469 = this.ba();
+    introspect(JAM.policy.p3) {
+      var a$$469 = this.ba()
+    }
     var v2185 = a$$469;
     if (v2185) {
       var v4220 = a$$469.length;
@@ -1042,24 +1220,24 @@ function v254() {
     if (v404) {
       var v2186 = a$$469.length;
       var v396 = v2186 - 1;
-      introspect(JAM.policy.p4) {
-        var b$$361 = a$$469[v396]
-      }
+      var b$$361 = a$$469[v396];
       var c$$243 = a$$469[0];
       var v403 = b$$361 && c$$243;
       if (v403) {
         var v397 = this.ua;
-        c$$243 = this.Ma(v397);
+        introspect(JAM.policy.p3) {
+          c$$243 = this.Ma(v397);
+        }
         var v398 = this.ua;
-        var d$$153 = this.Qb(v398, c$$243);
+        introspect(JAM.policy.p3) {
+          var d$$153 = this.Qb(v398, c$$243)
+        }
         Q$$1(b$$361, d$$153);
         var v399 = a$$469.length;
         b$$361 = v399 - 1;
         var v401 = 0 <= b$$361;
         for (;v401;) {
-          introspect(JAM.policy.p4) {
-            var v400 = a$$469[b$$361]
-          }
+          var v400 = a$$469[b$$361];
           Id(v400, c$$243);
           --b$$361;
           v401 = 0 <= b$$361;
@@ -1072,21 +1250,31 @@ function v254() {
   }
   function v188() {
     var v405 = this.ua;
-    var a$$468 = this.Ma(v405);
+    introspect(JAM.policy.p3) {
+      var a$$468 = this.Ma(v405)
+    }
     var v406 = this.ua;
-    a$$468 = this.Rb(v406, a$$468);
+    introspect(JAM.policy.p3) {
+      a$$468 = this.Rb(v406, a$$468);
+    }
     var v3460 = this.i;
     var v2187 = v3460.document;
     var v407 = v2187.body;
-    this.cb(v407, a$$468);
+    introspect(JAM.policy.p3) {
+      this.cb(v407, a$$468);
+    }
     return;
   }
   function v187() {
     var v408 = this.ga;
     var v2188 = !v408;
     if (v2188) {
-      this.pb();
-      var v4221 = this.u();
+      introspect(JAM.policy.p3) {
+        this.pb();
+      }
+      introspect(JAM.policy.p3) {
+        var v4221 = this.u()
+      }
       var v4876;
       var v4981 = this.Ra;
       if (v4981) {
@@ -1103,7 +1291,9 @@ function v254() {
   }
   function v186() {
     this.Ib = !0;
-    var v3461 = this.Sa();
+    introspect(JAM.policy.p3) {
+      var v3461 = this.Sa()
+    }
     if (v3461) {
       var v4223 = this.i;
       v3461 = og(v4223);
@@ -1115,14 +1305,22 @@ function v254() {
     }
     var v409 = v2189;
     if (v409) {
-      var a$$467 = this.u();
+      introspect(JAM.policy.p3) {
+        var a$$467 = this.u()
+      }
       if (a$$467) {
-        this.show();
+        introspect(JAM.policy.p3) {
+          this.show();
+        }
         var v4982 = {position:"fixed", background:"rgba(0,0,0,0.65)", boxShadow:"0 -5px 5px -5px rgba(0,0,0,0.5)", zIndex:999999};
         Q$$1(a$$467, v4982);
-        this.qb();
+        introspect(JAM.policy.p3) {
+          this.qb();
+        }
         a$$467 = new fh(a$$467, 350);
-        a$$467.play();
+        introspect(JAM.policy.p3) {
+          a$$467.play();
+        }
         this.Ra = !0;
       }
     }
@@ -1131,9 +1329,13 @@ function v254() {
   function v185() {
     var v410 = this.ga;
     if (v410) {
-      var v4224 = this.u();
+      introspect(JAM.policy.p3) {
+        var v4224 = this.u()
+      }
       Q$$1(v4224, "display", "none");
-      this.$a();
+      introspect(JAM.policy.p3) {
+        this.$a();
+      }
       this.ga = !1;
     }
     return;
@@ -1164,11 +1366,17 @@ function v254() {
       var v423 = this.i;
       var v424 = this.ed;
       A$$1(v423, "touchstart", v424);
-      var v425 = this.u();
+      introspect(JAM.policy.p3) {
+        var v425 = this.u()
+      }
       var v2191 = this.$a;
-      var v426 = r$$2(v2191, this);
+      introspect(JAM.policy.p3) {
+        var v426 = r$$2(v2191, this)
+      }
       var a$$466 = new gh(v425, 250, v426);
-      a$$466.play();
+      introspect(JAM.policy.p3) {
+        a$$466.play();
+      }
     }
     return;
   }
@@ -1176,7 +1384,9 @@ function v254() {
     var v2192 = this.Ub;
     var v430 = !v2192;
     if (v430) {
-      var a$$464 = this.ba();
+      introspect(JAM.policy.p3) {
+        var a$$464 = this.ba()
+      }
       var v2193 = !a$$464;
       var v3464 = !v2193;
       if (v3464) {
@@ -1189,9 +1399,7 @@ function v254() {
       }
       var v2194 = a$$464.length;
       var v429 = v2194 - 1;
-      introspect(JAM.policy.p4) {
-        this.Ub = a$$464[v429];
-      }
+      this.Ub = a$$464[v429];
     }
     return this.Ub;
   }
@@ -1213,7 +1421,9 @@ function v254() {
       var v431 = v2196;
       for (;v431;) {
         var v2197 = this.X;
-        v2197.push(a$$463);
+        introspect(JAM.policy.p3) {
+          v2197.push(a$$463);
+        }
         a$$463 = a$$463.parentNode;
         var v2198 = a$$463;
         if (v2198) {
@@ -1225,7 +1435,9 @@ function v254() {
       }
       if (a$$463) {
         var v2199 = this.X;
-        v2199.push(a$$463);
+        introspect(JAM.policy.p3) {
+          v2199.push(a$$463);
+        }
       }
     }
     return this.X;
@@ -1242,7 +1454,9 @@ function v254() {
     qd(v435);
     var v436 = this.onEndCallback;
     if (v436) {
-      this.onEndCallback();
+      introspect(JAM.policy.p3) {
+        this.onEndCallback();
+      }
     }
     return;
   }
@@ -1258,12 +1472,16 @@ function v254() {
     return;
   }
   function v176() {
-    var v5049 = ha$$1();
+    introspect(JAM.policy.p3) {
+      var v5049 = ha$$1()
+    }
     this.hb = v5049;
     var v439 = this.hb;
     var v440 = this.jd;
     this.Sc = v439 + v440;
-    this.Ca();
+    introspect(JAM.policy.p3) {
+      this.Ca();
+    }
     return;
   }
   function v175(a$$459) {
@@ -1275,21 +1493,17 @@ function v254() {
     for (;v443;) {
       var v441 = this.current;
       var v4658 = this.Tc;
-      introspect(JAM.policy.p4) {
-        var v4227 = v4658[b$$356]
-      }
+      var v4227 = v4658[b$$356];
       var v4659 = this.ib;
-      introspect(JAM.policy.p4) {
-        var v4228 = v4659[b$$356]
-      }
+      var v4228 = v4659[b$$356];
       var v3468 = v4227 - v4228;
       var v2203 = v3468 * a$$459;
       var v3469 = this.ib;
-      introspect(JAM.policy.p4) {
-        var v2204 = v3469[b$$356]
-      }
+      var v2204 = v3469[b$$356];
       var v442 = v2203 + v2204;
-      v441.push(v442);
+      introspect(JAM.policy.p3) {
+        v441.push(v442);
+      }
       b$$356++;
       var v3470 = this.ib;
       var v2205 = v3470.length;
@@ -1307,7 +1521,9 @@ function v254() {
     var v2206 = this.Ic;
     var v448 = !v2206;
     if (v448) {
-      var a$$458 = ha$$1();
+      introspect(JAM.policy.p3) {
+        var a$$458 = ha$$1()
+      }
       var v2207 = this.hb;
       var v444 = a$$458 - v2207;
       var v2208 = this.Sc;
@@ -1318,16 +1534,26 @@ function v254() {
       if (v446) {
         a$$458 = 1;
       }
-      this.Pc(a$$458);
-      this.C();
+      introspect(JAM.policy.p3) {
+        this.Pc(a$$458);
+      }
+      introspect(JAM.policy.p3) {
+        this.C();
+      }
       var v447;
       var v2211 = 1 == a$$458;
       if (v2211) {
-        v447 = this.ka();
+        introspect(JAM.policy.p3) {
+          v447 = this.ka();
+        }
       } else {
         var v3471 = this.Ca;
-        var v2210 = r$$2(v3471, this);
-        v447 = w$$6.setTimeout(v2210, 20);
+        introspect(JAM.policy.p3) {
+          var v2210 = r$$2(v3471, this)
+        }
+        introspect(JAM.policy.p3) {
+          v447 = w$$6.setTimeout(v2210, 20);
+        }
       }
       v447;
     }
@@ -1337,9 +1563,7 @@ function v254() {
     var v2212 = a$$456;
     if (v2212) {
       var v3472 = a$$456.origin;
-      introspect(JAM.policy.p4) {
-        v2212 = mg[v3472];
-      }
+      v2212 = mg[v3472];
     }
     var v454 = v2212;
     if (v454) {
@@ -1358,15 +1582,15 @@ function v254() {
         var v451 = this.lc;
         var d$$151 = rg(v451);
         var v3473 = d$$151.wasReactiveAdConfigReceived;
-        introspect(JAM.policy.p4) {
-          var v2214 = v3473[a$$456]
-        }
+        var v2214 = v3473[a$$456];
         var v453 = !v2214;
         if (v453) {
           var e$$89 = Yg(a$$456);
           var v2215 = e$$89;
           if (v2215) {
-            v2215 = e$$89.ia(b$$354);
+            introspect(JAM.policy.p3) {
+              v2215 = e$$89.ia(b$$354);
+            }
           }
           var v452 = v2215;
           if (v452) {
@@ -1375,7 +1599,9 @@ function v254() {
               v3474[a$$456] = !0;
             }
             var v3475 = this.lc;
-            e$$89.D(v3475);
+            introspect(JAM.policy.p3) {
+              e$$89.D(v3475);
+            }
           }
         }
       }
@@ -1387,13 +1613,17 @@ function v254() {
     if (v462) {
       var b$$343 = this.l;
       var v455 = a$$441.document;
-      var c$$227 = v455.createElement("ins");
+      introspect(JAM.policy.p3) {
+        var c$$227 = v455.createElement("ins")
+      }
       c$$227.className = "adsbygoogle";
       var v456 = c$$227.style;
       v456.display = "none";
       var v2216 = a$$441.document;
       var v457 = v2216.body;
-      v457.appendChild(c$$227);
+      introspect(JAM.policy.p3) {
+        v457.appendChild(c$$227);
+      }
       var v2217 = a$$441.document;
       var v458 = v2217.documentElement;
       var d$$144 = v458.clientHeight;
@@ -1460,7 +1690,9 @@ function v254() {
     v468.adClient = b$$342;
     var v469 = this.l;
     v469.adTest = "on";
-    this.D(a$$439);
+    introspect(JAM.policy.p3) {
+      this.D(a$$439);
+    }
     return;
   }
   function v167(a$$436) {
@@ -1468,14 +1700,22 @@ function v254() {
     if (v480) {
       var b$$339 = this.l;
       var v470 = a$$436.document;
-      var c$$225 = v470.createElement("ins");
+      introspect(JAM.policy.p3) {
+        var c$$225 = v470.createElement("ins")
+      }
       c$$225.className = "adsbygoogle";
       var v2221 = a$$436.document;
       var v471 = v2221.body;
-      v471.appendChild(c$$225);
-      var v472 = Math.random();
+      introspect(JAM.policy.p3) {
+        v471.appendChild(c$$225);
+      }
+      introspect(JAM.policy.p3) {
+        var v472 = Math.random()
+      }
       var d$$143 = String(v472);
-      d$$143 = d$$143.slice(-3);
+      introspect(JAM.policy.p3) {
+        d$$143 = d$$143.slice(-3);
+      }
       var v473 = b$$339.adClient;
       var v474 = b$$339.adWidth;
       var v475 = b$$339.adHeight;
@@ -1594,71 +1834,95 @@ function v254() {
     b$$inline_349.adTest = "on";
     JSCompiler_inline_result$$34 = b$$inline_349;
     this.l = JSCompiler_inline_result$$34;
-    this.D(a$$434);
+    introspect(JAM.policy.p3) {
+      this.D(a$$434);
+    }
     return;
   }
   function v164(a$$412, b$$326) {
-    b$$326.push("{");
+    introspect(JAM.policy.p3) {
+      b$$326.push("{");
+    }
     var c$$215 = "";
     var d$$137;
     for (d$$137 in a$$412) {
       var v3481 = Object.prototype;
       var v2227 = v3481.hasOwnProperty;
-      var v491 = v2227.call(a$$412, d$$137);
+      introspect(JAM.policy.p3) {
+        var v491 = v2227.call(a$$412, d$$137)
+      }
       if (v491) {
-        introspect(JAM.policy.p4) {
-          var e$$80 = a$$412[d$$137]
-        }
+        var e$$80 = a$$412[d$$137];
         var v2228 = typeof e$$80;
         var v490 = "function" != v2228;
         if (v490) {
-          b$$326.push(c$$215);
-          this.r(d$$137, b$$326);
-          b$$326.push(":");
+          introspect(JAM.policy.p3) {
+            b$$326.push(c$$215);
+          }
+          introspect(JAM.policy.p3) {
+            this.r(d$$137, b$$326);
+          }
+          introspect(JAM.policy.p3) {
+            b$$326.push(":");
+          }
           var v4660;
           var v4878 = this.qa;
           if (v4878) {
             var v4877 = this.qa;
-            v4660 = v4877.call(a$$412, d$$137, e$$80);
+            introspect(JAM.policy.p3) {
+              v4660 = v4877.call(a$$412, d$$137, e$$80);
+            }
           } else {
             v4660 = e$$80;
           }
           var v4232 = v4660;
-          this.n(v4232, b$$326);
+          introspect(JAM.policy.p3) {
+            this.n(v4232, b$$326);
+          }
           c$$215 = ",";
         }
       }
     }
-    b$$326.push("}");
+    introspect(JAM.policy.p3) {
+      b$$326.push("}");
+    }
     return;
   }
   function v163(a$$411, b$$325) {
     var c$$214 = a$$411.length;
-    b$$325.push("[");
+    introspect(JAM.policy.p3) {
+      b$$325.push("[");
+    }
     var d$$136 = "";
     var e$$79 = 0;
     var v492 = e$$79 < c$$214;
     for (;v492;) {
-      b$$325.push(d$$136);
-      introspect(JAM.policy.p4) {
-        d$$136 = a$$411[e$$79];
+      introspect(JAM.policy.p3) {
+        b$$325.push(d$$136);
       }
+      d$$136 = a$$411[e$$79];
       var v4233;
       var v4663 = this.qa;
       if (v4663) {
         var v4661 = this.qa;
         var v4662 = String(e$$79);
-        v4233 = v4661.call(a$$411, v4662, d$$136);
+        introspect(JAM.policy.p3) {
+          v4233 = v4661.call(a$$411, v4662, d$$136);
+        }
       } else {
         v4233 = d$$136;
       }
       var v3482 = v4233;
-      this.n(v3482, b$$325);
+      introspect(JAM.policy.p3) {
+        this.n(v3482, b$$325);
+      }
       d$$136 = ",";
       e$$79++;
       v492 = e$$79 < c$$214;
     }
-    b$$325.push("]");
+    introspect(JAM.policy.p3) {
+      b$$325.push("]");
+    }
     return;
   }
   function v162(a$$410, b$$324) {
@@ -1675,18 +1939,20 @@ function v254() {
       v2229 = "null";
     }
     var v493 = v2229;
-    b$$324.push(v493);
+    introspect(JAM.policy.p3) {
+      b$$324.push(v493);
+    }
     return;
   }
   function v161(a$$408, b$$322) {
     function v160(a$$409) {
       var v494 = a$$409 in ig;
       if (v494) {
-        introspect(JAM.policy.p4) {
-          return ig[a$$409];
-        }
+        return ig[a$$409];
       }
-      var b$$323 = a$$409.charCodeAt(0);
+      introspect(JAM.policy.p3) {
+        var b$$323 = a$$409.charCodeAt(0)
+      }
       var e$$78 = "\\u";
       var v495;
       var v2231 = 16 > b$$323;
@@ -1708,42 +1974,62 @@ function v254() {
       }
       v495;
       var v496 = ig;
-      var v2232 = b$$323.toString(16);
+      introspect(JAM.policy.p3) {
+        var v2232 = b$$323.toString(16)
+      }
       introspect(JAM.policy.p2) {
         return v496[a$$409] = e$$78 + v2232;
       }
     }
-    var v497 = a$$408.replace(jg, v160);
-    b$$322.push('"', v497, '"');
+    introspect(JAM.policy.p3) {
+      var v497 = a$$408.replace(jg, v160)
+    }
+    introspect(JAM.policy.p3) {
+      b$$322.push('"', v497, '"');
+    }
     return;
   }
   function v159(a$$407, b$$321) {
     var v501 = typeof a$$407;
     switch(v501) {
       case "string":
-        this.r(a$$407, b$$321);
+        introspect(JAM.policy.p3) {
+          this.r(a$$407, b$$321);
+        }
         break;
       case "number":
-        this.L(a$$407, b$$321);
+        introspect(JAM.policy.p3) {
+          this.L(a$$407, b$$321);
+        }
         break;
       case "boolean":
-        b$$321.push(a$$407);
+        introspect(JAM.policy.p3) {
+          b$$321.push(a$$407);
+        }
         break;
       case "undefined":
-        b$$321.push("null");
+        introspect(JAM.policy.p3) {
+          b$$321.push("null");
+        }
         break;
       case "object":
         var v498 = null == a$$407;
         if (v498) {
-          b$$321.push("null");
+          introspect(JAM.policy.p3) {
+            b$$321.push("null");
+          }
           break;
         }
         var v499 = n$$2(a$$407);
         if (v499) {
-          this.xc(a$$407, b$$321);
+          introspect(JAM.policy.p3) {
+            this.xc(a$$407, b$$321);
+          }
           break;
         }
-        this.M(a$$407, b$$321);
+        introspect(JAM.policy.p3) {
+          this.M(a$$407, b$$321);
+        }
         break;
       case "function":
         break;
@@ -1756,30 +2042,42 @@ function v254() {
   }
   function v158(a$$406) {
     var b$$320 = [];
-    this.n(a$$406, b$$320);
-    return b$$320.join("");
+    introspect(JAM.policy.p3) {
+      this.n(a$$406, b$$320);
+    }
+    introspect(JAM.policy.p3) {
+      return b$$320.join("");
+    }
   }
   function v157() {
     function v156(b$$317) {
       var v2234 = !e$$76;
       if (v2234) {
-        v2234 = c$$212(b$$317);
+        introspect(JAM.policy.p3) {
+          v2234 = c$$212(b$$317);
+        }
       }
       var v502 = v2234;
       if (v502) {
-        d$$134(b$$317, a$$402, f$$49);
+        introspect(JAM.policy.p3) {
+          d$$134(b$$317, a$$402, f$$49);
+        }
         e$$76 = !0;
       }
       return;
     }
-    var v2235 = this.Rc();
+    introspect(JAM.policy.p3) {
+      var v2235 = this.Rc()
+    }
     if (v2235) {
       var v3486 = this.Pa;
       v2235 = !v3486;
     }
     var v505 = v2235;
     if (v505) {
-      var a$$402 = this.J();
+      introspect(JAM.policy.p3) {
+        var a$$402 = this.J()
+      }
       var v503 = a$$402;
       if (v503) {
         v503 = a$$402.contentWindow;
@@ -1789,7 +2087,9 @@ function v254() {
         var c$$212 = ga$$1(eg, b$$316);
         var v2236 = V$$1.prototype;
         var v504 = v2236.da;
-        var d$$134 = r$$2(v504, this);
+        introspect(JAM.policy.p3) {
+          var d$$134 = r$$2(v504, this)
+        }
         b$$316 = ag;
         var e$$76 = !1;
         var f$$49 = !1;
@@ -1799,12 +2099,16 @@ function v254() {
     return;
   }
   function v155(a$$400) {
-    this.eb(a$$400);
+    introspect(JAM.policy.p3) {
+      this.eb(a$$400);
+    }
     this.hc = !0;
     return;
   }
   function v154(a$$399, b$$314) {
-    this.eb(a$$399);
+    introspect(JAM.policy.p3) {
+      this.eb(a$$399);
+    }
     this.ma = !0;
     switch(b$$314) {
       case Zf:
@@ -1834,7 +2138,9 @@ function v254() {
     var v2239 = !v507;
     if (v2239) {
       var v4235 = this.F;
-      this.ta(a$$397, v4235);
+      introspect(JAM.policy.p3) {
+        this.ta(a$$397, v4235);
+      }
       this.va = !0;
       var v3487 = a$$397.style;
       v3487.display = "";
@@ -1850,7 +2156,9 @@ function v254() {
     if (v508) {
       var v2241 = a$$396.contentWindow;
       var v2242 = this.Fb;
-      v2241.postMessage(b$$313, v2242);
+      introspect(JAM.policy.p3) {
+        v2241.postMessage(b$$313, v2242);
+      }
     }
     return;
   }
@@ -1860,12 +2168,14 @@ function v254() {
     var v3488 = this.Q;
     var v2244 = v3488.google_unique_id;
     var v510 = "zrt_ads_frame" + v2244;
-    introspect(JAM.policy.p1) {
+    introspect(JAM.policy.p3) {
       return v509.getElementById(v510);
     }
   }
   function v149(a$$395) {
-    var b$$312 = this.J();
+    introspect(JAM.policy.p3) {
+      var b$$312 = this.J()
+    }
     var v4236 = this.Fb;
     var v4237 = a$$395.origin;
     var v3489 = v4236 == v4237;
@@ -1882,22 +2192,32 @@ function v254() {
     if (v512) {
       a$$395 = a$$395.data;
       var c$$210 = !0;
-      var v511 = this.da(a$$395, b$$312, c$$210);
+      introspect(JAM.policy.p3) {
+        var v511 = this.da(a$$395, b$$312, c$$210)
+      }
       if (v511) {
         var v4238 = this.Q;
         var v4239 = this.K;
         A$$1(v4238, "message", v4239);
-        this.R();
+        introspect(JAM.policy.p3) {
+          this.R();
+        }
         var v3492 = this.ma;
         if (v3492) {
-          this.ta(b$$312, Yf);
+          introspect(JAM.policy.p3) {
+            this.ta(b$$312, Yf);
+          }
           b$$312 = this.U;
           this.U = null;
           if (b$$312) {
-            var v4879 = this.v();
+            introspect(JAM.policy.p3) {
+              var v4879 = this.v()
+            }
             var v4880 = this.za;
             var v4881 = !0;
-            b$$312(v4879, v4880, v4881);
+            introspect(JAM.policy.p3) {
+              b$$312(v4879, v4880, v4881);
+            }
           }
         }
       }
@@ -1906,20 +2226,24 @@ function v254() {
   }
   function v148(a$$394, b$$311, c$$209) {
     var v513;
-    introspect(JAM.policy.p4) {
-      var v2247 = Wf[a$$394]
-    }
+    var v2247 = Wf[a$$394];
     if (v2247) {
-      this.Ac(c$$209, a$$394);
+      introspect(JAM.policy.p3) {
+        this.Ac(c$$209, a$$394);
+      }
       v513 = !0;
     } else {
       var v2246;
       var v3493 = "zr" == a$$394;
       if (v3493) {
-        this.Dc(c$$209);
+        introspect(JAM.policy.p3) {
+          this.Dc(c$$209);
+        }
         var v4665 = this.F;
         if (v4665) {
-          this.gb(b$$311);
+          introspect(JAM.policy.p3) {
+            this.gb(b$$311);
+          }
         }
         v2246 = !0;
       } else {
@@ -1986,7 +2310,9 @@ function v254() {
       var v2249 = this.Q;
       var v521 = v2249.document;
       var v522 = Cf(d$$132);
-      v521.write(v522);
+      introspect(JAM.policy.p3) {
+        v521.write(v522);
+      }
       this.va = !0;
     }
     return;
@@ -2000,19 +2326,29 @@ function v254() {
       var v525 = this.hc;
       if (v525) {
         try {
-          var v523 = this.J();
-          this.gb(v523);
+          introspect(JAM.policy.p3) {
+            var v523 = this.J()
+          }
+          introspect(JAM.policy.p3) {
+            this.gb(v523);
+          }
         } catch (c$$206) {
           this.Sb = !0;
-          var v2251 = this.v();
+          introspect(JAM.policy.p3) {
+            var v2251 = this.v()
+          }
           var v2252 = !1;
-          b$$308(v2251, null, v2252);
+          introspect(JAM.policy.p3) {
+            b$$308(v2251, null, v2252);
+          }
         }
       } else {
         var v2253 = this.Za;
         var v524 = "AZ" == v2253;
         if (v524) {
-          this.wb();
+          introspect(JAM.policy.p3) {
+            this.wb();
+          }
         }
       }
     }
@@ -2027,8 +2363,12 @@ function v254() {
       var v3494 = this.Q;
       var v3495 = this.K;
       A$$1(v3494, "message", v3495);
-      var v3496 = this.J();
-      this.ta(v3496, Yf);
+      introspect(JAM.policy.p3) {
+        var v3496 = this.J()
+      }
+      introspect(JAM.policy.p3) {
+        this.ta(v3496, Yf);
+      }
     }
     return;
   }
@@ -2067,7 +2407,9 @@ function v254() {
   }
   function v136(a$$355) {
     this.j = 0;
-    a$$355.fn();
+    introspect(JAM.policy.p3) {
+      a$$355.fn();
+    }
     return;
   }
   function v135() {
@@ -2080,23 +2422,35 @@ function v254() {
     var v533 = v2260;
     if (v533) {
       var v530 = this.oa;
-      var a$$354 = v530.shift();
+      introspect(JAM.policy.p3) {
+        var a$$354 = v530.shift()
+      }
       this.j = 2;
       var v2261 = this.ab;
-      var v531 = r$$2(v2261, this, a$$354);
+      introspect(JAM.policy.p3) {
+        var v531 = r$$2(v2261, this, a$$354)
+      }
       var b$$282 = xe("sjr::run", v531);
       var v532 = a$$354.win;
-      v532.setTimeout(b$$282, 0);
-      this.sa();
+      introspect(JAM.policy.p3) {
+        v532.setTimeout(b$$282, 0);
+      }
+      introspect(JAM.policy.p3) {
+        this.sa();
+      }
     }
     return;
   }
   function v134() {
     var v2262 = this.Oc;
-    var v534 = r$$2(v2262, this);
+    introspect(JAM.policy.p3) {
+      var v534 = r$$2(v2262, this)
+    }
     var a$$353 = xe("sjr::tryrun", v534);
     var v535 = this.p;
-    v535.setTimeout(a$$353, 0);
+    introspect(JAM.policy.p3) {
+      v535.setTimeout(a$$353, 0);
+    }
     return;
   }
   function v133() {
@@ -2117,22 +2471,30 @@ function v254() {
       if (v3500) {
         var v4666 = this.p;
         var v4667 = this.na;
-        v4666.clearTimeout(v4667);
+        introspect(JAM.policy.p3) {
+          v4666.clearTimeout(v4667);
+        }
         this.na = null;
       }
       this.j = 0;
     }
-    this.sa();
+    introspect(JAM.policy.p3) {
+      this.sa();
+    }
     return;
   }
   function v131(a$$352) {
     this.j = 1;
     if (a$$352) {
       var v2265 = this.ra;
-      var v538 = r$$2(v2265, this);
+      introspect(JAM.policy.p3) {
+        var v538 = r$$2(v2265, this)
+      }
       var b$$281 = xe("sjr::timeout", v538);
       var v539 = this.p;
-      var v5051 = v539.setTimeout(b$$281, a$$352);
+      introspect(JAM.policy.p3) {
+        var v5051 = v539.setTimeout(b$$281, a$$352)
+      }
       this.na = v5051;
     }
     return;
@@ -2146,8 +2508,12 @@ function v254() {
     }
     var v2266 = v3501;
     var v541 = new nf(a$$351, v2266);
-    v540.push(v541);
-    this.sa();
+    introspect(JAM.policy.p3) {
+      v540.push(v541);
+    }
+    introspect(JAM.policy.p3) {
+      this.sa();
+    }
     return;
   }
   function v129(a$$350, b$$279) {
@@ -2171,11 +2537,15 @@ function v254() {
     }
     var v2267 = v3502;
     if (v2267) {
-      v542 = this.Y(a$$350, b$$279);
+      introspect(JAM.policy.p3) {
+        v542 = this.Y(a$$350, b$$279);
+      }
     } else {
       this.j = 2;
       var v3503 = new nf(a$$350, window);
-      v542 = this.ab(v3503);
+      introspect(JAM.policy.p3) {
+        v542 = this.ab(v3503);
+      }
     }
     v542;
     return;
@@ -2190,9 +2560,7 @@ function v254() {
     }
     try {
       var v544 = T$$1.NAME_FIRST_GOOGLE_WINDOW;
-      introspect(JAM.policy.p4) {
-        d$$116 = a$$342[v544];
-      }
+      d$$116 = a$$342[v544];
     } catch (f$$43) {
     }
     if (d$$116) {
@@ -2210,13 +2578,13 @@ function v254() {
     var v2269 = a$$342.length;
     var v546 = g$$27 < v2269;
     for (;v546;) {
-      introspect(JAM.policy.p4) {
-        var h$$19 = a$$342[g$$27]
-      }
+      var h$$19 = a$$342[g$$27];
       var v545 = h$$19 != d$$116;
       if (v545) {
         var v4246 = c$$185 + 1;
-        h$$19 = T$$1.Ha(h$$19, b$$273, v4246);
+        introspect(JAM.policy.p3) {
+          h$$19 = T$$1.Ha(h$$19, b$$273, v4246);
+        }
         var v4671 = e$$71.adFrames;
         var v4672 = h$$19.adFrames;
         e$$71.adFrames = v4671 + v4672;
@@ -2242,9 +2610,13 @@ function v254() {
   }
   function v127(a$$341, b$$272, c$$184, d$$115, e$$70) {
     var v547 = a$$341.top;
-    a$$341 = T$$1.Ha(v547, a$$341, 0);
+    introspect(JAM.policy.p3) {
+      a$$341 = T$$1.Ha(v547, a$$341, 0);
+    }
     var v548 = a$$341.signature;
-    var f$$42 = v548.substring(0, 1800);
+    introspect(JAM.policy.p3) {
+      var f$$42 = v548.substring(0, 1800)
+    }
     var v549 = a$$341.adFrames;
     b$$272 = {frmn:v549, frms:f$$42, adk:b$$272, correlator:c$$184, frm:d$$115, frmn0:e$$70};
     var v550 = La$$1();
@@ -2254,9 +2626,7 @@ function v254() {
     var b$$inline_257 = b$$272;
     var c$$inline_258;
     for (c$$inline_258 in b$$inline_257) {
-      introspect(JAM.policy.p4) {
-        var v551 = b$$inline_257[c$$inline_258]
-      }
+      var v551 = b$$inline_257[c$$inline_258];
       Ve(c$$inline_258, v551, a$$inline_256);
     }
     JSCompiler_inline_result$$56 = a$$inline_256;
@@ -2264,14 +2634,24 @@ function v254() {
     var v554 = a$$inline_260[1];
     if (v554) {
       var b$$inline_261 = a$$inline_260[0];
-      var c$$inline_262 = b$$inline_261.indexOf("#");
+      introspect(JAM.policy.p3) {
+        var c$$inline_262 = b$$inline_261.indexOf("#")
+      }
       var v552 = 0 <= c$$inline_262;
       if (v552) {
-        var v3506 = b$$inline_261.substr(c$$inline_262);
-        a$$inline_260.push(v3506);
-        a$$inline_260[0] = b$$inline_261 = b$$inline_261.substr(0, c$$inline_262);
+        introspect(JAM.policy.p3) {
+          var v3506 = b$$inline_261.substr(c$$inline_262)
+        }
+        introspect(JAM.policy.p3) {
+          a$$inline_260.push(v3506);
+        }
+        introspect(JAM.policy.p3) {
+          a$$inline_260[0] = b$$inline_261 = b$$inline_261.substr(0, c$$inline_262);
+        }
       }
-      c$$inline_262 = b$$inline_261.indexOf("?");
+      introspect(JAM.policy.p3) {
+        c$$inline_262 = b$$inline_261.indexOf("?");
+      }
       var v553;
       var v2272 = 0 > c$$inline_262;
       if (v2272) {
@@ -2287,18 +2667,24 @@ function v254() {
       }
       v553;
     }
-    c$$184 = a$$inline_260.join("");
+    introspect(JAM.policy.p3) {
+      c$$184 = a$$inline_260.join("");
+    }
     nb$$1(w$$6, c$$184);
     return;
   }
   function v126(a$$340, b$$271, c$$183, d$$114) {
     var v555 = a$$340.top;
-    var e$$69 = T$$1.Ha(v555, a$$340, 0);
+    introspect(JAM.policy.p3) {
+      var e$$69 = T$$1.Ha(v555, a$$340, 0)
+    }
     var v2273 = T$$1.Uc;
     var v2274 = e$$69.adFrames;
     var v556 = ga$$1(v2273, a$$340, b$$271, c$$183, d$$114, v2274);
     var v557 = T$$1.IFRAME_COUNTS_DELAY;
-    window.setTimeout(v556, v557);
+    introspect(JAM.policy.p3) {
+      window.setTimeout(v556, v557);
+    }
     return e$$69.adFrames;
   }
   function v125(a$$339, b$$270) {
@@ -2315,9 +2701,7 @@ function v254() {
         var v560;
         var v4674 = d$$113.length;
         var v4252 = v4674 - 1;
-        introspect(JAM.policy.p4) {
-          var v3508 = d$$113[v4252]
-        }
+        var v3508 = d$$113[v4252];
         var v4253 = a$$339.location;
         var v3509 = v4253.origin;
         var v2276 = v3508 == v3509;
@@ -2344,14 +2728,18 @@ function v254() {
     var d$$110 = ce(a$$331, "dt");
     var v2278 = Hb(d$$110);
     var v562 = "&dtd=" + v2278;
-    c$$177 = c$$177.replace(/&dtd=(\d+|M)/, v562);
-    this.set(b$$264, c$$177);
+    introspect(JAM.policy.p3) {
+      c$$177 = c$$177.replace(/&dtd=(\d+|M)/, v562);
+    }
+    introspect(JAM.policy.p3) {
+      this.set(b$$264, c$$177);
+    }
     return c$$177;
   }
   function v123(a$$330) {
     var v2279 = this.p;
     var v563 = v2279.document;
-    introspect(JAM.policy.p1) {
+    introspect(JAM.policy.p3) {
       a$$330 = v563.getElementById(a$$330);
     }
     var v564 = a$$330.contentWindow;
@@ -2374,7 +2762,9 @@ function v254() {
     }
     var v565 = v2280;
     if (v565) {
-      a$$330.onload();
+      introspect(JAM.policy.p3) {
+        a$$330.onload();
+      }
     }
     return;
   }
@@ -2389,53 +2779,75 @@ function v254() {
     if (v567) {
       var v2283 = this.p;
       var v3513 = this.Jb;
-      var v2284 = r$$2(v3513, this, a$$329);
+      introspect(JAM.policy.p3) {
+        var v2284 = r$$2(v3513, this, a$$329)
+      }
       var v2285 = !1;
-      v2283.addEventListener("load", v2284, v2285);
+      introspect(JAM.policy.p3) {
+        v2283.addEventListener("load", v2284, v2285);
+      }
     }
     return;
   }
   function v121(a$$322, b$$256) {
-    b$$256.push("{");
+    introspect(JAM.policy.p3) {
+      b$$256.push("{");
+    }
     var c$$173 = "";
     var d$$109;
     for (d$$109 in a$$322) {
-      var v569 = a$$322.hasOwnProperty(d$$109);
+      introspect(JAM.policy.p3) {
+        var v569 = a$$322.hasOwnProperty(d$$109)
+      }
       if (v569) {
-        introspect(JAM.policy.p4) {
-          var e$$68 = a$$322[d$$109]
-        }
+        var e$$68 = a$$322[d$$109];
         var v2286 = typeof e$$68;
         var v568 = "function" != v2286;
         if (v568) {
-          b$$256.push(c$$173);
-          this.r(d$$109, b$$256);
-          b$$256.push(":");
-          this.n(e$$68, b$$256);
+          introspect(JAM.policy.p3) {
+            b$$256.push(c$$173);
+          }
+          introspect(JAM.policy.p3) {
+            this.r(d$$109, b$$256);
+          }
+          introspect(JAM.policy.p3) {
+            b$$256.push(":");
+          }
+          introspect(JAM.policy.p3) {
+            this.n(e$$68, b$$256);
+          }
           c$$173 = ",";
         }
       }
     }
-    b$$256.push("}");
+    introspect(JAM.policy.p3) {
+      b$$256.push("}");
+    }
     return;
   }
   function v120(a$$321, b$$255) {
     var c$$172 = a$$321.length;
-    b$$255.push("[");
+    introspect(JAM.policy.p3) {
+      b$$255.push("[");
+    }
     var d$$108 = "";
     var e$$67 = 0;
     var v570 = e$$67 < c$$172;
     for (;v570;) {
-      b$$255.push(d$$108);
-      introspect(JAM.policy.p4) {
-        var v3514 = a$$321[e$$67]
+      introspect(JAM.policy.p3) {
+        b$$255.push(d$$108);
       }
-      this.n(v3514, b$$255);
+      var v3514 = a$$321[e$$67];
+      introspect(JAM.policy.p3) {
+        this.n(v3514, b$$255);
+      }
       d$$108 = ",";
       e$$67++;
       v570 = e$$67 < c$$172;
     }
-    b$$255.push("]");
+    introspect(JAM.policy.p3) {
+      b$$255.push("]");
+    }
     return;
   }
   function v119(a$$320, b$$254) {
@@ -2452,18 +2864,20 @@ function v254() {
       v2287 = "null";
     }
     var v571 = v2287;
-    b$$254.push(v571);
+    introspect(JAM.policy.p3) {
+      b$$254.push(v571);
+    }
     return;
   }
   function v118(a$$318, b$$252) {
     function v117(a$$319) {
       var v572 = a$$319 in Ce;
       if (v572) {
-        introspect(JAM.policy.p4) {
-          return Ce[a$$319];
-        }
+        return Ce[a$$319];
       }
-      var b$$253 = a$$319.charCodeAt(0);
+      introspect(JAM.policy.p3) {
+        var b$$253 = a$$319.charCodeAt(0)
+      }
       var e$$66 = "\\u";
       var v573;
       var v2289 = 16 > b$$253;
@@ -2485,44 +2899,68 @@ function v254() {
       }
       v573;
       var v574 = Ce;
-      var v2290 = b$$253.toString(16);
+      introspect(JAM.policy.p3) {
+        var v2290 = b$$253.toString(16)
+      }
       introspect(JAM.policy.p2) {
         return v574[a$$319] = e$$66 + v2290;
       }
     }
-    b$$252.push('"');
-    var v575 = a$$318.replace(De, v117);
-    b$$252.push(v575);
-    b$$252.push('"');
+    introspect(JAM.policy.p3) {
+      b$$252.push('"');
+    }
+    introspect(JAM.policy.p3) {
+      var v575 = a$$318.replace(De, v117)
+    }
+    introspect(JAM.policy.p3) {
+      b$$252.push(v575);
+    }
+    introspect(JAM.policy.p3) {
+      b$$252.push('"');
+    }
     return;
   }
   function v116(a$$317, b$$251) {
     var v579 = typeof a$$317;
     switch(v579) {
       case "string":
-        this.r(a$$317, b$$251);
+        introspect(JAM.policy.p3) {
+          this.r(a$$317, b$$251);
+        }
         break;
       case "number":
-        this.L(a$$317, b$$251);
+        introspect(JAM.policy.p3) {
+          this.L(a$$317, b$$251);
+        }
         break;
       case "boolean":
-        b$$251.push(a$$317);
+        introspect(JAM.policy.p3) {
+          b$$251.push(a$$317);
+        }
         break;
       case "undefined":
-        b$$251.push("null");
+        introspect(JAM.policy.p3) {
+          b$$251.push("null");
+        }
         break;
       case "object":
         var v576 = null == a$$317;
         if (v576) {
-          b$$251.push("null");
+          introspect(JAM.policy.p3) {
+            b$$251.push("null");
+          }
           break;
         }
         var v577 = a$$317 instanceof Array;
         if (v577) {
-          this.yc(a$$317, b$$251);
+          introspect(JAM.policy.p3) {
+            this.yc(a$$317, b$$251);
+          }
           break;
         }
-        this.M(a$$317, b$$251);
+        introspect(JAM.policy.p3) {
+          this.M(a$$317, b$$251);
+        }
         break;
       case "function":
         break;
@@ -2535,8 +2973,12 @@ function v254() {
   }
   function v115(a$$316) {
     var b$$250 = [];
-    this.n(a$$316, b$$250);
-    return b$$250.join("");
+    introspect(JAM.policy.p3) {
+      this.n(a$$316, b$$250);
+    }
+    introspect(JAM.policy.p3) {
+      return b$$250.join("");
+    }
   }
   function v114() {
     return this.Lb;
@@ -2565,21 +3007,29 @@ function v254() {
     var v585 = v2292;
     if (v585) {
       var v582 = !0;
-      this.xa(d$$98, a$$299, b$$236, v582, "", g$$24, "");
+      introspect(JAM.policy.p3) {
+        this.xa(d$$98, a$$299, b$$236, v582, "", g$$24, "");
+      }
     } else {
       var v584 = "js" == c$$162;
       if (v584) {
-        this.oc(a$$299, "google_ad_request_done");
+        introspect(JAM.policy.p3) {
+          this.oc(a$$299, "google_ad_request_done");
+        }
       } else {
         var h$$17 = new le(a$$299, b$$236, c$$162, d$$98, g$$24);
         var v583 = this.q;
-        v583.push(h$$17);
+        introspect(JAM.policy.p3) {
+          v583.push(h$$17);
+        }
         if (d$$98) {
           a$$299 = v111;
           fe(d$$98, a$$299);
         }
       }
-      this.bc();
+      introspect(JAM.policy.p3) {
+        this.bc();
+      }
     }
     return;
   }
@@ -2609,9 +3059,13 @@ function v254() {
     return "";
   }
   function v105(a$$298) {
-    var v589 = this.getOseId();
+    introspect(JAM.policy.p3) {
+      var v589 = this.getOseId()
+    }
     if (v589) {
-      return this.getOseId();
+      introspect(JAM.policy.p3) {
+        return this.getOseId();
+      }
     }
     var b$$235 = window.google_enable_ose;
     var c$$161;
@@ -2644,7 +3098,9 @@ function v254() {
     var v592 = a$$298 || 0;
     var v5052 = String(v592);
     this.Aa = v5052;
-    return this.getOseId();
+    introspect(JAM.policy.p3) {
+      return this.getOseId();
+    }
   }
   function v104() {
     var a$$297 = [];
@@ -2654,11 +3110,11 @@ function v254() {
     var v596 = c$$160 < b$$234;
     for (;v596;) {
       var v594 = this.q;
-      introspect(JAM.policy.p4) {
-        var d$$97 = v594[c$$160]
-      }
+      var d$$97 = v594[c$$160];
       var v595 = d$$97.nb;
-      a$$297.push(v595);
+      introspect(JAM.policy.p3) {
+        a$$297.push(v595);
+      }
       c$$160++;
       v596 = c$$160 < b$$234;
     }
@@ -2667,7 +3123,9 @@ function v254() {
   function v103(a$$296, b$$233) {
     if (b$$233) {
       var v2297 = this.wa;
-      this.Fa(v2297, a$$296, 1);
+      introspect(JAM.policy.p3) {
+        this.Fa(v2297, a$$296, 1);
+      }
     }
     var v597 = this.q;
     var c$$159 = v597.length;
@@ -2675,9 +3133,7 @@ function v254() {
     var v600 = d$$96 < c$$159;
     for (;v600;) {
       var v598 = this.q;
-      introspect(JAM.policy.p4) {
-        var e$$59 = v598[d$$96]
-      }
+      var e$$59 = v598[d$$96];
       var v3521 = e$$59.Vb;
       var v2298 = !v3521;
       if (v2298) {
@@ -2690,7 +3146,9 @@ function v254() {
         var v3524 = e$$59.fd;
         var v3525 = e$$59.lb;
         var v3526 = e$$59.Yc;
-        a$$296(v3522, v3523, v3524, v3525, "", v3526, "");
+        introspect(JAM.policy.p3) {
+          a$$296(v3522, v3523, v3524, v3525, "", v3526, "");
+        }
         e$$59.Vb = !0;
       }
       d$$96++;
@@ -2707,7 +3165,7 @@ function v254() {
     var v615 = 0 < v2299;
     if (v615) {
       var v601 = a$$295.document;
-      introspect(JAM.policy.p6) {
+      introspect(JAM.policy.p3) {
         var e$$58 = v601.getElementsByTagName("a")
       }
       var f$$35 = 0;
@@ -2718,24 +3176,18 @@ function v254() {
         var v2301 = d$$95.length;
         var v613 = g$$23 < v2301;
         for (;v613;) {
-          introspect(JAM.policy.p4) {
-            var v602 = d$$95[g$$23]
-          }
+          var v602 = d$$95[g$$23];
           var h$$16 = v602[1];
-          introspect(JAM.policy.p4) {
-            var v4261 = e$$58[f$$35]
-          }
+          var v4261 = e$$58[f$$35];
           var v3527 = v4261.href;
-          var v2302 = v3527.indexOf(h$$16);
+          introspect(JAM.policy.p3) {
+            var v2302 = v3527.indexOf(h$$16)
+          }
           var v612 = 0 <= v2302;
           if (v612) {
-            introspect(JAM.policy.p4) {
-              var v603 = e$$58[f$$35]
-            }
+            var v603 = e$$58[f$$35];
             h$$16 = v603.parentNode;
-            introspect(JAM.policy.p4) {
-              var v2303 = d$$95[g$$23]
-            }
+            var v2303 = d$$95[g$$23];
             var v606 = v2303[2];
             if (v606) {
               var k$$6 = h$$16;
@@ -2743,11 +3195,11 @@ function v254() {
               var v605 = 4 > l$$9;
               for (;v605;) {
                 var v3528 = k$$6.innerHTML;
-                introspect(JAM.policy.p4) {
-                  var v4262 = d$$95[g$$23]
-                }
+                var v4262 = d$$95[g$$23];
                 var v3529 = v4262[2];
-                var v2304 = v3528.indexOf(v3529);
+                introspect(JAM.policy.p3) {
+                  var v2304 = v3528.indexOf(v3529)
+                }
                 var v604 = 0 <= v2304;
                 if (v604) {
                   h$$16 = k$$6;
@@ -2759,22 +3211,20 @@ function v254() {
               }
             }
             k$$6 = !0;
-            introspect(JAM.policy.p4) {
-              var v607 = d$$95[g$$23]
-            }
+            var v607 = d$$95[g$$23];
             l$$9 = v607[3];
-            introspect(JAM.policy.p4) {
-              var v608 = d$$95[g$$23]
-            }
+            var v608 = d$$95[g$$23];
             var z$$4 = v608[5];
-            introspect(JAM.policy.p4) {
-              var v2305 = d$$95[g$$23]
-            }
+            var v2305 = d$$95[g$$23];
             var v609 = v2305[0];
             var v610 = c$$158 || 0;
             var v611 = void 0;
-            b$$232(h$$16, v609, v610, k$$6, l$$9, v611, z$$4);
-            d$$95.splice(g$$23, 1);
+            introspect(JAM.policy.p3) {
+              b$$232(h$$16, v609, v610, k$$6, l$$9, v611, z$$4);
+            }
+            introspect(JAM.policy.p3) {
+              d$$95.splice(g$$23, 1);
+            }
             break;
           }
           g$$23++;
@@ -2796,7 +3246,9 @@ function v254() {
     if (v617) {
       try {
         var v616 = a$$295.parent;
-        this.Fa(v616, b$$232, c$$158);
+        introspect(JAM.policy.p3) {
+          this.Fa(v616, b$$232, c$$158);
+        }
       } catch (C$$2) {
       }
     }
@@ -2850,16 +3302,18 @@ function v254() {
         var v3534 = v4264.url;
         var v2317 = Va$$1(v3534);
         var v622 = [a$$294, v2317, f$$34, g$$22, null, h$$15];
-        c$$157.push(v622);
+        introspect(JAM.policy.p3) {
+          c$$157.push(v622);
+        }
       }
-      d$$94(b$$231);
+      introspect(JAM.policy.p3) {
+        d$$94(b$$231);
+      }
       return;
     }
     var c$$157 = this.ha;
     var v624 = this.wa;
-    introspect(JAM.policy.p4) {
-      var d$$94 = v624[b$$230]
-    }
+    var d$$94 = v624[b$$230];
     if (d$$94) {
       var v4265 = d$$94.orig_callback;
       var v4677 = !v4265;
@@ -2872,9 +3326,7 @@ function v254() {
         v4266[b$$230] = v99;
       }
       var v4267 = this.wa;
-      introspect(JAM.policy.p4) {
-        var v3535 = v4267[b$$230]
-      }
+      var v3535 = v4267[b$$230];
       v3535.orig_callback = d$$94;
     }
     return;
@@ -2933,46 +3385,70 @@ function v254() {
   }
   function v96() {
     var v627 = this.top;
-    var v5053 = Math.round(v627);
+    introspect(JAM.policy.p3) {
+      var v5053 = Math.round(v627)
+    }
     this.top = v5053;
     var v628 = this.right;
-    var v5054 = Math.round(v628);
+    introspect(JAM.policy.p3) {
+      var v5054 = Math.round(v628)
+    }
     this.right = v5054;
     var v629 = this.bottom;
-    var v5055 = Math.round(v629);
+    introspect(JAM.policy.p3) {
+      var v5055 = Math.round(v629)
+    }
     this.bottom = v5055;
     var v630 = this.left;
-    var v5056 = Math.round(v630);
+    introspect(JAM.policy.p3) {
+      var v5056 = Math.round(v630)
+    }
     this.left = v5056;
     return this;
   }
   function v95() {
     var v631 = this.top;
-    var v5057 = Math.floor(v631);
+    introspect(JAM.policy.p3) {
+      var v5057 = Math.floor(v631)
+    }
     this.top = v5057;
     var v632 = this.right;
-    var v5058 = Math.floor(v632);
+    introspect(JAM.policy.p3) {
+      var v5058 = Math.floor(v632)
+    }
     this.right = v5058;
     var v633 = this.bottom;
-    var v5059 = Math.floor(v633);
+    introspect(JAM.policy.p3) {
+      var v5059 = Math.floor(v633)
+    }
     this.bottom = v5059;
     var v634 = this.left;
-    var v5060 = Math.floor(v634);
+    introspect(JAM.policy.p3) {
+      var v5060 = Math.floor(v634)
+    }
     this.left = v5060;
     return this;
   }
   function v94() {
     var v635 = this.top;
-    var v5061 = Math.ceil(v635);
+    introspect(JAM.policy.p3) {
+      var v5061 = Math.ceil(v635)
+    }
     this.top = v5061;
     var v636 = this.right;
-    var v5062 = Math.ceil(v636);
+    introspect(JAM.policy.p3) {
+      var v5062 = Math.ceil(v636)
+    }
     this.right = v5062;
     var v637 = this.bottom;
-    var v5063 = Math.ceil(v637);
+    introspect(JAM.policy.p3) {
+      var v5063 = Math.ceil(v637)
+    }
     this.bottom = v5063;
     var v638 = this.left;
-    var v5064 = Math.ceil(v638);
+    introspect(JAM.policy.p3) {
+      var v5064 = Math.ceil(v638)
+    }
     this.left = v5064;
     return this;
   }
@@ -3132,11 +3608,15 @@ function v254() {
   function v89(a$$249) {
     var v645 = this.V;
     var v646 = String(a$$249);
-    return v645.createTextNode(v646);
+    introspect(JAM.policy.p3) {
+      return v645.createTextNode(v646);
+    }
   }
   function v88(a$$248) {
     var v647 = this.V;
-    return v647.createElement(a$$248);
+    introspect(JAM.policy.p3) {
+      return v647.createElement(a$$248);
+    }
   }
   function v87() {
     var a$$224 = m$$3.document;
@@ -3200,28 +3680,40 @@ function v254() {
   }
   function v84() {
     var v652 = this.x;
-    var v5065 = Math.round(v652);
+    introspect(JAM.policy.p3) {
+      var v5065 = Math.round(v652)
+    }
     this.x = v5065;
     var v653 = this.y;
-    var v5066 = Math.round(v653);
+    introspect(JAM.policy.p3) {
+      var v5066 = Math.round(v653)
+    }
     this.y = v5066;
     return this;
   }
   function v83() {
     var v654 = this.x;
-    var v5067 = Math.floor(v654);
+    introspect(JAM.policy.p3) {
+      var v5067 = Math.floor(v654)
+    }
     this.x = v5067;
     var v655 = this.y;
-    var v5068 = Math.floor(v655);
+    introspect(JAM.policy.p3) {
+      var v5068 = Math.floor(v655)
+    }
     this.y = v5068;
     return this;
   }
   function v82() {
     var v656 = this.x;
-    var v5069 = Math.ceil(v656);
+    introspect(JAM.policy.p3) {
+      var v5069 = Math.ceil(v656)
+    }
     this.x = v5069;
     var v657 = this.y;
-    var v5070 = Math.ceil(v657);
+    introspect(JAM.policy.p3) {
+      var v5070 = Math.ceil(v657)
+    }
     this.y = v5070;
     return this;
   }
@@ -3229,7 +3721,9 @@ function v254() {
     function b$$153(b$$154) {
       var v658 = "" != b$$154;
       if (v658) {
-        a$$192.push(b$$154);
+        introspect(JAM.policy.p3) {
+          a$$192.push(b$$154);
+        }
       }
       return;
     }
@@ -3247,14 +3741,22 @@ function v254() {
     var v2346 = v3547;
     if (v2346) {
       var v4294 = this.defaultBucket;
-      var v3548 = v4294.join(",");
+      introspect(JAM.policy.p3) {
+        var v3548 = v4294.join(",")
+      }
       var v2342 = v3548 + ",";
-      var v2343 = a$$192.join(",");
+      introspect(JAM.policy.p3) {
+        var v2343 = a$$192.join(",")
+      }
       v660 = v2342 + v2343;
     } else {
       var v3549 = this.defaultBucket;
-      var v2344 = v3549.join(",");
-      var v2345 = a$$192.join(",");
+      introspect(JAM.policy.p3) {
+        var v2344 = v3549.join(",")
+      }
+      introspect(JAM.policy.p3) {
+        var v2345 = a$$192.join(",")
+      }
       v660 = v2344 + v2345;
     }
     return v660;
@@ -3262,12 +3764,12 @@ function v254() {
   function v80(a$$191) {
     var v661;
     var v3550 = this.layers;
-    var v2348 = v3550.hasOwnProperty(a$$191);
+    introspect(JAM.policy.p3) {
+      var v2348 = v3550.hasOwnProperty(a$$191)
+    }
     if (v2348) {
       var v2347 = this.layers;
-      introspect(JAM.policy.p4) {
-        v661 = v2347[a$$191];
-      }
+      v661 = v2347[a$$191];
     } else {
       v661 = "";
     }
@@ -3277,12 +3779,12 @@ function v254() {
     var v662;
     if (a$$190) {
       var v3551 = this.layers;
-      var v2349 = v3551.hasOwnProperty(a$$190);
+      introspect(JAM.policy.p3) {
+        var v2349 = v3551.hasOwnProperty(a$$190)
+      }
       if (v2349) {
         var v4295 = this.layers;
-        introspect(JAM.policy.p4) {
-          var v3552 = v4295[a$$190]
-        }
+        var v3552 = v4295[a$$190];
         v2349 = "" == v3552;
       }
       v662 = v2349;
@@ -3293,13 +3795,17 @@ function v254() {
   }
   function v78(a$$189, b$$152, c$$107) {
     var v663;
-    var v3553 = this.ac(c$$107);
+    introspect(JAM.policy.p3) {
+      var v3553 = this.ac(c$$107)
+    }
     if (v3553) {
       v3553 = a$$189 = vb(a$$189, b$$152);
     }
     var v2350 = v3553;
     if (v2350) {
-      v663 = this.bb(a$$189, c$$107);
+      introspect(JAM.policy.p3) {
+        v663 = this.bb(a$$189, c$$107);
+      }
     } else {
       v663 = "";
     }
@@ -3315,7 +3821,9 @@ function v254() {
       if (b$$151) {
         var v3554;
         var v4693 = this.layers;
-        var v4297 = v4693.hasOwnProperty(b$$151);
+        introspect(JAM.policy.p3) {
+          var v4297 = v4693.hasOwnProperty(b$$151)
+        }
         if (v4297) {
           var v4296 = this.layers;
           introspect(JAM.policy.p2) {
@@ -3327,7 +3835,9 @@ function v254() {
         v2351 = v3554;
       } else {
         var v4298 = this.defaultBucket;
-        v4298.push(a$$188);
+        introspect(JAM.policy.p3) {
+          v4298.push(a$$188);
+        }
         v2351 = a$$188;
       }
       v664 = v2351;
@@ -3349,7 +3859,9 @@ function v254() {
     var v666;
     var v2353 = p$$1(a$$181);
     if (v2353) {
-      v666 = a$$181.split("");
+      introspect(JAM.policy.p3) {
+        v666 = a$$181.split("");
+      }
     } else {
       v666 = a$$181;
     }
@@ -3359,10 +3871,10 @@ function v254() {
     for (;v668;) {
       var v667 = f$$25 in e$$45;
       if (v667) {
-        introspect(JAM.policy.p4) {
-          var v2354 = e$$45[f$$25]
+        var v2354 = e$$45[f$$25];
+        introspect(JAM.policy.p3) {
+          b$$144.call(c$$102, v2354, f$$25, a$$181);
         }
-        b$$144.call(c$$102, v2354, f$$25, a$$181);
       }
       f$$25++;
       v668 = f$$25 < d$$66;
@@ -3371,7 +3883,9 @@ function v254() {
   }
   function v73(a$$180, b$$143, c$$101) {
     var v669 = Xb.forEach;
-    v669.call(a$$180, b$$143, c$$101);
+    introspect(JAM.policy.p3) {
+      v669.call(a$$180, b$$143, c$$101);
+    }
     return;
   }
   function v72(a$$179, b$$142, c$$100) {
@@ -3385,7 +3899,9 @@ function v254() {
       if (v3556) {
         var v4299 = a$$179.length;
         var v3555 = v4299 + c$$100;
-        v2355 = Math.max(0, v3555);
+        introspect(JAM.policy.p3) {
+          v2355 = Math.max(0, v3555);
+        }
       } else {
         v2355 = c$$100;
       }
@@ -3402,7 +3918,9 @@ function v254() {
       }
       var v2357 = v3557;
       if (v2357) {
-        v671 = a$$179.indexOf(b$$142, c$$100);
+        introspect(JAM.policy.p3) {
+          v671 = a$$179.indexOf(b$$142, c$$100);
+        }
       } else {
         v671 = -1;
       }
@@ -3413,9 +3931,7 @@ function v254() {
     for (;v674;) {
       var v2359 = c$$100 in a$$179;
       if (v2359) {
-        introspect(JAM.policy.p4) {
-          var v3558 = a$$179[c$$100]
-        }
+        var v3558 = a$$179[c$$100];
         v2359 = v3558 === b$$142;
       }
       var v673 = v2359;
@@ -3430,7 +3946,9 @@ function v254() {
   }
   function v71(a$$178, b$$141, c$$99) {
     var v675 = Xb.indexOf;
-    return v675.call(a$$178, b$$141, c$$99);
+    introspect(JAM.policy.p3) {
+      return v675.call(a$$178, b$$141, c$$99);
+    }
   }
   function v70(a$$140, b$$111) {
     var v676;
@@ -3449,28 +3967,40 @@ function v254() {
   }
   function v69() {
     var v677 = this.width;
-    var v5071 = Math.round(v677);
+    introspect(JAM.policy.p3) {
+      var v5071 = Math.round(v677)
+    }
     this.width = v5071;
     var v678 = this.height;
-    var v5072 = Math.round(v678);
+    introspect(JAM.policy.p3) {
+      var v5072 = Math.round(v678)
+    }
     this.height = v5072;
     return this;
   }
   function v68() {
     var v679 = this.width;
-    var v5073 = Math.floor(v679);
+    introspect(JAM.policy.p3) {
+      var v5073 = Math.floor(v679)
+    }
     this.width = v5073;
     var v680 = this.height;
-    var v5074 = Math.floor(v680);
+    introspect(JAM.policy.p3) {
+      var v5074 = Math.floor(v680)
+    }
     this.height = v5074;
     return this;
   }
   function v67() {
     var v681 = this.width;
-    var v5075 = Math.ceil(v681);
+    introspect(JAM.policy.p3) {
+      var v5075 = Math.ceil(v681)
+    }
     this.width = v5075;
     var v682 = this.height;
-    var v5076 = Math.ceil(v682);
+    introspect(JAM.policy.p3) {
+      var v5076 = Math.ceil(v682)
+    }
     this.height = v5076;
     return this;
   }
@@ -3480,7 +4010,9 @@ function v254() {
   }
   function gi() {
     var v2364 = H$$1();
-    var v684 = v2364.m(18);
+    introspect(JAM.policy.p3) {
+      var v684 = v2364.m(18)
+    }
     var v2365 = K$$1.ASYNC_EXPANSION_EMBED;
     var v685 = v2365.EXPERIMENT;
     return v684 == v685;
@@ -3495,14 +4027,14 @@ function v254() {
     var b$$440 = window.google_container_id;
     var v2367 = b$$440;
     if (v2367) {
-      introspect(JAM.policy.p1) {
+      introspect(JAM.policy.p3) {
         v2367 = document.getElementById(b$$440);
       }
     }
     var v687 = v2367;
     var v2368 = !v687;
     if (v2368) {
-      introspect(JAM.policy.p1) {
+      introspect(JAM.policy.p3) {
         v687 = document.getElementById(a$$567);
       }
     }
@@ -3517,8 +4049,10 @@ function v254() {
     if (v2370) {
       var v4301 = "<span id=" + a$$567;
       var v3560 = v4301 + "></span>";
-      document.write(v3560);
-      introspect(JAM.policy.p1) {
+      introspect(JAM.policy.p3) {
+        document.write(v3560);
+      }
+      introspect(JAM.policy.p3) {
         c$$299 = document.getElementById(a$$567);
       }
     }
@@ -3563,7 +4097,9 @@ function v254() {
         if (v692) {
         } else {
           var v3562 = new Date;
-          var v2373 = v3562.getTime();
+          introspect(JAM.policy.p3) {
+            var v2373 = v3562.getTime()
+          }
           var v2374 = window.google_num_slots_to_rotate;
           var v691 = v2373 % v2374;
           var b$$inline_551 = v691 + 1;
@@ -3599,7 +4135,9 @@ function v254() {
     var a$$inline_518 = c$$295;
     var b$$inline_519 = "/pagead/blank.gif#?";
     var c$$inline_520 = a$$561;
-    var d$$inline_521 = a$$inline_518.indexOf(b$$inline_519);
+    introspect(JAM.policy.p3) {
+      var d$$inline_521 = a$$inline_518.indexOf(b$$inline_519)
+    }
     var v697;
     var v2377 = -1 == d$$inline_521;
     if (v2377) {
@@ -3607,7 +4145,9 @@ function v254() {
     } else {
       var v4303 = b$$inline_519.length;
       var v3565 = d$$inline_521 + v4303;
-      var v2376 = a$$inline_518.substr(v3565);
+      introspect(JAM.policy.p3) {
+        var v2376 = a$$inline_518.substr(v3565)
+      }
       v697 = c$$inline_520 + v2376;
     }
     d$$180 = v697;
@@ -3619,19 +4159,19 @@ function v254() {
   }
   function $i(a$$558) {
     function v25(b$$431, c$$292) {
-      introspect(JAM.policy.p5) {
+      introspect(JAM.policy.p2) {
         a$$558[b$$431] = window[c$$292];
       }
       return;
     }
     function v24(b$$430, c$$291) {
-      introspect(JAM.policy.p5) {
+      introspect(JAM.policy.p2) {
         a$$558[b$$430] = window[c$$291];
       }
       return;
     }
     function v23(b$$429, c$$290) {
-      introspect(JAM.policy.p5) {
+      introspect(JAM.policy.p2) {
         a$$558[b$$429] = window[c$$290];
       }
       return;
@@ -3647,10 +4187,10 @@ function v254() {
       var v2378 = d$$178.length;
       var v700 = e$$105 < v2378;
       for (;v700;) {
-        introspect(JAM.policy.p4) {
-          var f$$63 = d$$178[e$$105]
+        var f$$63 = d$$178[e$$105];
+        introspect(JAM.policy.p3) {
+          var v2379 = f$$63()
         }
-        var v2379 = f$$63();
         var v699 = !v2379;
         if (v699) {
           return;
@@ -3662,16 +4202,22 @@ function v254() {
     }
     if (Xi) {
       var v3566 = new Date;
-      var v2381 = v3566.getTime();
+      introspect(JAM.policy.p3) {
+        var v2381 = v3566.getTime()
+      }
       Xi = v2381 - Xi;
     }
     var v2382 = c$$289;
     if (v2382) {
-      v2382 = c$$289.fb();
+      introspect(JAM.policy.p3) {
+        v2382 = c$$289.fb();
+      }
     }
     var v701 = v2382;
     if (v701) {
-      c$$289.Hc();
+      introspect(JAM.policy.p3) {
+        c$$289.Hc();
+      }
     }
     JSCompiler_inline_label_Ki_503: {
       var a$$inline_500 = a$$557;
@@ -3696,7 +4242,9 @@ function v254() {
       var b$$inline_945 = f$$inline_774;
       var c$$inline_946 = e$$inline_773.isTopUrl;
       var v707 = D$$1();
-      var d$$inline_947 = T$$1.getIframingState(v707);
+      introspect(JAM.policy.p3) {
+        var d$$inline_947 = T$$1.getIframingState(v707)
+      }
       var e$$inline_948 = 4;
       var v708;
       var v3567 = b$$inline_945;
@@ -3771,9 +4319,15 @@ function v254() {
       if (v713) {
         var v710 = b$$inline_770.URL;
         var v2389 = b$$inline_770.URL;
-        var v711 = v2389.lastIndexOf("http");
-        e$$inline_773 = v710.substring(v711);
-        var v2390 = e$$inline_773.indexOf("%");
+        introspect(JAM.policy.p3) {
+          var v711 = v2389.lastIndexOf("http")
+        }
+        introspect(JAM.policy.p3) {
+          e$$inline_773 = v710.substring(v711);
+        }
+        introspect(JAM.policy.p3) {
+          var v2390 = e$$inline_773.indexOf("%")
+        }
         var v712 = -1 < v2390;
         for (;v712;) {
           try {
@@ -3781,7 +4335,9 @@ function v254() {
           } catch (g$$inline_775) {
             break;
           }
-          var v2391 = e$$inline_773.indexOf("%");
+          introspect(JAM.policy.p3) {
+            var v2391 = e$$inline_773.indexOf("%")
+          }
           v712 = -1 < v2391;
         }
         a$$inline_769.google_page_url = e$$inline_773;
@@ -3819,7 +4375,9 @@ function v254() {
       var v2395 = v3574 == v3575;
       if (v2395) {
         var v3576 = b$$inline_770.lastModified;
-        var v2394 = Date.parse(v3576);
+        introspect(JAM.policy.p3) {
+          var v2394 = Date.parse(v3576)
+        }
         v716 = v2394 / 1E3;
       } else {
         v716 = null;
@@ -3900,7 +4458,9 @@ function v254() {
         var v3584 = a$$inline_701.TOP_URL_REPLACES_MISSING_URL;
         var v2402 = v3584.EXPERIMENT;
         var v721 = [v2401, v2402];
-        v720.k(v721, wa$$1, 4);
+        introspect(JAM.policy.p3) {
+          v720.k(v721, wa$$1, 4);
+        }
       }
       var v3585 = !1;
       var v2403 = Gi(v3585);
@@ -3947,8 +4507,12 @@ function v254() {
         if (v729) {
           var v2407 = c$$inline_781.timing;
           var v726 = v2407.navigationStart;
-          var v2408 = c$$inline_781.now();
-          var v727 = Math.round(v2408);
+          introspect(JAM.policy.p3) {
+            var v2408 = c$$inline_781.now()
+          }
+          introspect(JAM.policy.p3) {
+            var v727 = Math.round(v2408)
+          }
           var d$$inline_782 = v726 + v727;
           var v2409 = c$$inline_781.timing;
           var v728 = v2409.domLoading;
@@ -3961,7 +4525,9 @@ function v254() {
         }
         a$$inline_779 = a$$inline_779 || vf;
         var v2410 = b$$inline_780.Date;
-        var v731 = v2410.now();
+        introspect(JAM.policy.p3) {
+          var v731 = v2410.now()
+        }
         b$$inline_780 = v731 - a$$inline_779;
         b$$inline_780 = d$$inline_782 - b$$inline_780;
         var v732;
@@ -4000,10 +4566,14 @@ function v254() {
         }
         a$$inline_777.tsi = v2415;
       }
-      var v5079 = "/r20130906".replace("/", "");
+      introspect(JAM.policy.p3) {
+        var v5079 = "/r20130906".replace("/", "")
+      }
       a$$inline_777.cbv = v5079;
       var v2416 = window.google_loader_used;
-      var v735 = /^\w{1,3}$/.test(v2416);
+      introspect(JAM.policy.p3) {
+        var v735 = /^\w{1,3}$/.test(v2416)
+      }
       if (v735) {
         a$$inline_777.saldr = window.google_loader_used;
       }
@@ -4017,35 +4587,25 @@ function v254() {
         var d$$inline_787 = window.google_ad_section;
         var e$$inline_788 = window.google_ad_format;
         var f$$inline_789 = window.google_ad_slot;
-        introspect(JAM.policy.p4) {
-          var v736 = c$$inline_786[d$$inline_787]
-        }
+        var v736 = c$$inline_786[d$$inline_787];
         if (v736) {
-          introspect(JAM.policy.p4) {
-            b$$inline_785.prev_fmts = c$$inline_786[d$$inline_787];
-          }
+          b$$inline_785.prev_fmts = c$$inline_786[d$$inline_787];
         }
         var g$$inline_790 = G$$1(a$$inline_784, 9);
-        introspect(JAM.policy.p4) {
-          var v737 = g$$inline_790[d$$inline_787]
-        }
+        var v737 = g$$inline_790[d$$inline_787];
         if (v737) {
-          introspect(JAM.policy.p4) {
-            var v2417 = g$$inline_790[d$$inline_787]
+          var v2417 = g$$inline_790[d$$inline_787];
+          introspect(JAM.policy.p3) {
+            var v5080 = v2417.toLowerCase()
           }
-          var v5080 = v2417.toLowerCase();
           b$$inline_785.prev_slotnames = v5080;
         }
         var v738;
         if (e$$inline_788) {
           var v2418;
-          introspect(JAM.policy.p4) {
-            var v3590 = c$$inline_786[d$$inline_787]
-          }
+          var v3590 = c$$inline_786[d$$inline_787];
           if (v3590) {
-            introspect(JAM.policy.p4) {
-              var v3588 = c$$inline_786[d$$inline_787]
-            }
+            var v3588 = c$$inline_786[d$$inline_787];
             var v3589 = "," + e$$inline_788;
             v2418 = v3588 + v3589;
           } else {
@@ -4058,13 +4618,9 @@ function v254() {
           var v2419 = f$$inline_789;
           if (v2419) {
             var v3591;
-            introspect(JAM.policy.p4) {
-              var v4313 = g$$inline_790[d$$inline_787]
-            }
+            var v4313 = g$$inline_790[d$$inline_787];
             if (v4313) {
-              introspect(JAM.policy.p4) {
-                var v4311 = g$$inline_790[d$$inline_787]
-              }
+              var v4311 = g$$inline_790[d$$inline_787];
               var v4312 = "," + f$$inline_789;
               v3591 = v4311 + v4312;
             } else {
@@ -4085,18 +4641,16 @@ function v254() {
         c$$inline_783 = G$$1(b$$inline_778, 10);
         var d$$inline_791 = "";
         var v740 = window.google_ad_channel;
-        var e$$inline_792 = v740.split(Ni);
+        introspect(JAM.policy.p3) {
+          var e$$inline_792 = v740.split(Ni)
+        }
         var f$$inline_793 = 0;
         var v2420 = e$$inline_792.length;
         var v742 = f$$inline_793 < v2420;
         for (;v742;) {
-          introspect(JAM.policy.p4) {
-            var g$$inline_794 = e$$inline_792[f$$inline_793]
-          }
+          var g$$inline_794 = e$$inline_792[f$$inline_793];
           var v741;
-          introspect(JAM.policy.p4) {
-            var v2421 = c$$inline_783[g$$inline_794]
-          }
+          var v2421 = c$$inline_783[g$$inline_794];
           if (v2421) {
             var v3592 = g$$inline_794 + "+";
             v741 = d$$inline_791 = d$$inline_791 + v3592;
@@ -4117,20 +4671,20 @@ function v254() {
         var JSCompiler_inline_result$$inline_795;
         var b$$inline_796 = G$$1(b$$inline_778, 11);
         var v744 = window.google_ad_host_channel;
-        var c$$inline_797 = v744.split("|");
+        introspect(JAM.policy.p3) {
+          var c$$inline_797 = v744.split("|")
+        }
         var d$$inline_798 = -1;
         var e$$inline_799 = [];
         var f$$inline_800 = 0;
         var v2423 = c$$inline_797.length;
         var v750 = f$$inline_800 < v2423;
         for (;v750;) {
-          introspect(JAM.policy.p4) {
-            var v745 = c$$inline_797[f$$inline_800]
+          var v745 = c$$inline_797[f$$inline_800];
+          introspect(JAM.policy.p3) {
+            var g$$inline_801 = v745.split(Ni)
           }
-          var g$$inline_801 = v745.split(Ni);
-          introspect(JAM.policy.p4) {
-            var v746 = b$$inline_796[f$$inline_800]
-          }
+          var v746 = b$$inline_796[f$$inline_800];
           var v2424 = !v746;
           if (v2424) {
             b$$inline_796[f$$inline_800] = {};
@@ -4140,25 +4694,17 @@ function v254() {
           var v2425 = g$$inline_801.length;
           var v748 = k$$inline_803 < v2425;
           for (;v748;) {
-            introspect(JAM.policy.p4) {
-              var l$$inline_804 = g$$inline_801[k$$inline_803]
-            }
+            var l$$inline_804 = g$$inline_801[k$$inline_803];
             var v747 = "" != l$$inline_804;
             if (v747) {
               var v2426;
-              introspect(JAM.policy.p4) {
-                var v4314 = b$$inline_796[f$$inline_800]
-              }
-              introspect(JAM.policy.p4) {
-                var v3594 = v4314[l$$inline_804]
-              }
+              var v4314 = b$$inline_796[f$$inline_800];
+              var v3594 = v4314[l$$inline_804];
               if (v3594) {
                 var v4315 = "+" + l$$inline_804;
                 v2426 = h$$inline_802 = h$$inline_802 + v4315;
               } else {
-                introspect(JAM.policy.p4) {
-                  var v3593 = b$$inline_796[f$$inline_800]
-                }
+                var v3593 = b$$inline_796[f$$inline_800];
                 introspect(JAM.policy.p2) {
                   v2426 = v3593[l$$inline_804] = !0;
                 }
@@ -4169,7 +4715,9 @@ function v254() {
             var v2427 = g$$inline_801.length;
             v748 = k$$inline_803 < v2427;
           }
-          h$$inline_802 = h$$inline_802.slice(1);
+          introspect(JAM.policy.p3) {
+            h$$inline_802 = h$$inline_802.slice(1);
+          }
           e$$inline_799[f$$inline_800] = h$$inline_802;
           var v749 = "" != h$$inline_802;
           if (v749) {
@@ -4185,17 +4733,13 @@ function v254() {
           f$$inline_800 = 0;
           var v751 = f$$inline_800 < d$$inline_798;
           for (;v751;) {
-            introspect(JAM.policy.p4) {
-              var v3595 = e$$inline_799[f$$inline_800]
-            }
+            var v3595 = e$$inline_799[f$$inline_800];
             var v2429 = v3595 + "|";
             c$$inline_797 = c$$inline_797 + v2429;
             f$$inline_800++;
             v751 = f$$inline_800 < d$$inline_798;
           }
-          introspect(JAM.policy.p4) {
-            var v2430 = e$$inline_799[d$$inline_798]
-          }
+          var v2430 = e$$inline_799[d$$inline_798];
           c$$inline_797 = c$$inline_797 + v2430;
         }
         JSCompiler_inline_result$$inline_795 = c$$inline_797;
@@ -4222,9 +4766,13 @@ function v254() {
       var d$$inline_808 = window.screen;
       var e$$inline_809 = b$$inline_778.referrer;
       var v3596 = new Date;
-      var v2431 = v3596.getTime();
+      introspect(JAM.policy.p3) {
+        var v2431 = v3596.getTime()
+      }
       var v755 = v2431 / 1E3;
-      var f$$inline_810 = Math.round(v755);
+      introspect(JAM.policy.p3) {
+        var f$$inline_810 = Math.round(v755)
+      }
       var g$$inline_811 = window.google_analytics_domain_name;
       var v756;
       var v3597 = typeof g$$inline_811;
@@ -4237,10 +4785,14 @@ function v254() {
       a$$inline_805 = v756;
       var v3598 = "__utma=" + a$$inline_805;
       var v2433 = v3598 + ".";
-      var v757 = b$$inline_806.indexOf(v2433);
+      introspect(JAM.policy.p3) {
+        var v757 = b$$inline_806.indexOf(v2433)
+      }
       var h$$inline_812 = -1 < v757;
       var v2434 = "__utmb=" + a$$inline_805;
-      var v758 = b$$inline_806.indexOf(v2434);
+      introspect(JAM.policy.p3) {
+        var v758 = b$$inline_806.indexOf(v2434)
+      }
       g$$inline_811 = -1 < v758;
       var k$$inline_813 = mc("google_persistent_state");
       var JSCompiler_temp$$929;
@@ -4255,11 +4807,17 @@ function v254() {
       if (h$$inline_812) {
         var v5038 = "__utma=" + a$$inline_805;
         var v5016 = v5038 + ".";
-        var v4983 = b$$inline_806.split(v5016);
+        introspect(JAM.policy.p3) {
+          var v4983 = b$$inline_806.split(v5016)
+        }
         var v4906 = v4983[1];
-        var v4700 = v4906.split(";");
+        introspect(JAM.policy.p3) {
+          var v4700 = v4906.split(";")
+        }
         var v4316 = v4700[0];
-        c$$inline_807 = v4316.split(".");
+        introspect(JAM.policy.p3) {
+          c$$inline_807 = v4316.split(".");
+        }
         var v4317;
         if (g$$inline_811) {
           var v4701 = c$$inline_807[3];
@@ -4296,9 +4854,13 @@ function v254() {
           var b$$inline_973 = c$$inline_807;
           var c$$inline_974 = d$$inline_808;
           var d$$inline_975 = e$$inline_809;
-          var v2436 = Math.random();
+          introspect(JAM.policy.p3) {
+            var v2436 = Math.random()
+          }
           var v761 = 2147483647 * v2436;
-          var JSCompiler_temp_const$$inline_976 = Math.round(v761);
+          introspect(JAM.policy.p3) {
+            var JSCompiler_temp_const$$inline_976 = Math.round(v761)
+          }
           var JSCompiler_inline_result$$inline_977;
           var a$$inline_978 = a$$inline_972;
           var b$$inline_979 = b$$inline_973;
@@ -4317,7 +4879,9 @@ function v254() {
           var v2440 = Dh.platform;
           var v2441 = Dh.userAgent;
           var v3602;
-          var v4320 = Dh.javaEnabled();
+          introspect(JAM.policy.p3) {
+            var v4320 = Dh.javaEnabled()
+          }
           if (v4320) {
             v3602 = 1;
           } else {
@@ -4325,7 +4889,9 @@ function v254() {
           }
           var v2442 = v3602;
           var v762 = [v2437, v2438, v2439, v2440, v2441, v2442];
-          var e$$inline_982 = v762.join("");
+          introspect(JAM.policy.p3) {
+            var e$$inline_982 = v762.join("")
+          }
           var v763;
           if (c$$inline_980) {
             var v4908 = c$$inline_980.width;
@@ -4340,8 +4906,12 @@ function v254() {
             if (v2443) {
               var v4909 = java.awt;
               var v4705 = v4909.Toolkit;
-              var v4323 = v4705.getDefaultToolkit();
-              c$$inline_980 = v4323.getScreenSize();
+              introspect(JAM.policy.p3) {
+                var v4323 = v4705.getDefaultToolkit()
+              }
+              introspect(JAM.policy.p3) {
+                c$$inline_980 = v4323.getScreenSize();
+              }
               var v5017 = c$$inline_980.screen;
               var v4984 = v5017.width;
               var v4910 = v4984 + "x";
@@ -4388,35 +4958,43 @@ function v254() {
           var c$$inline_986 = window.google_analytics_domain_name;
           if (c$$inline_986) {
             var v3606;
-            var v4707 = c$$inline_986.indexOf(".");
+            introspect(JAM.policy.p3) {
+              var v4707 = c$$inline_986.indexOf(".")
+            }
             var v4324 = 0 == v4707;
             if (v4324) {
-              v3606 = c$$inline_986.substr(1);
+              introspect(JAM.policy.p3) {
+                v3606 = c$$inline_986.substr(1);
+              }
             } else {
               v3606 = c$$inline_986;
             }
             c$$inline_986 = v3606;
             var v4325 = "" + c$$inline_986;
-            var v3607 = v4325.split(".");
+            introspect(JAM.policy.p3) {
+              var v3607 = v4325.split(".")
+            }
             b$$inline_985 = v3607.length;
           }
           var d$$inline_987;
           c$$inline_986 = 999;
-          a$$inline_984 = a$$inline_984.split(";");
+          introspect(JAM.policy.p3) {
+            a$$inline_984 = a$$inline_984.split(";");
+          }
           var e$$inline_988 = 0;
           var v2447 = a$$inline_984.length;
           var v770 = e$$inline_988 < v2447;
           for (;v770;) {
-            introspect(JAM.policy.p4) {
-              var v2448 = a$$inline_984[e$$inline_988]
+            var v2448 = a$$inline_984[e$$inline_988];
+            introspect(JAM.policy.p3) {
+              var v767 = Kh.exec(v2448)
             }
-            var v767 = Kh.exec(v2448);
             var v2450 = !v767;
             if (v2450) {
-              introspect(JAM.policy.p4) {
-                var v2449 = a$$inline_984[e$$inline_988]
+              var v2449 = a$$inline_984[e$$inline_988];
+              introspect(JAM.policy.p3) {
+                v767 = Lh.exec(v2449);
               }
-              v767 = Lh.exec(v2449);
             }
             var f$$inline_989 = v767;
             if (f$$inline_989) {
@@ -4443,7 +5021,9 @@ function v254() {
         var v2454;
         var v4326 = l$$inline_814 && b$$inline_806;
         if (v4326) {
-          var v4708 = b$$inline_806.search(/^\d+\.\d+$/);
+          introspect(JAM.policy.p3) {
+            var v4708 = b$$inline_806.search(/^\d+\.\d+$/)
+          }
           v4326 = -1 != v4708;
         }
         var v3609 = v4326;
@@ -4463,9 +5043,13 @@ function v254() {
       var v772 = k$$inline_813.hid;
       var v2456 = !v772;
       if (v2456) {
-        var v3610 = Math.random();
+        introspect(JAM.policy.p3) {
+          var v3610 = Math.random()
+        }
         var v2455 = 2147483647 * v3610;
-        var v5082 = Math.round(v2455);
+        introspect(JAM.policy.p3) {
+          var v5082 = Math.round(v2455)
+        }
         k$$inline_813.hid = v5082;
       }
       b$$inline_778 = k$$inline_813;
@@ -4477,11 +5061,15 @@ function v254() {
       a$$inline_777.ga_wpids = window.google_analytics_uacct;
       var a$$inline_818 = b$$inline_704;
       var v2457 = new Date;
-      var v773 = v2457.getTimezoneOffset();
+      introspect(JAM.policy.p3) {
+        var v773 = v2457.getTimezoneOffset()
+      }
       a$$inline_818.u_tz = -v773;
       var v5083 = ob$$1();
       a$$inline_818.u_his = v5083;
-      var v5084 = navigator.javaEnabled();
+      introspect(JAM.policy.p3) {
+        var v5084 = navigator.javaEnabled()
+      }
       a$$inline_818.u_java = v5084;
       var v774 = window.screen;
       if (v774) {
@@ -4519,10 +5107,16 @@ function v254() {
         var v778 = v2460.createTextRange;
         if (v778) {
           var v777 = b$$inline_992.body;
-          b$$inline_992 = v777.createTextRange();
-          b$$inline_992.moveToElementText(a$$inline_991);
+          introspect(JAM.policy.p3) {
+            b$$inline_992 = v777.createTextRange();
+          }
+          introspect(JAM.policy.p3) {
+            b$$inline_992.moveToElementText(a$$inline_991);
+          }
           try {
-            c$$inline_993 = b$$inline_992.queryCommandValue("FontName");
+            introspect(JAM.policy.p3) {
+              c$$inline_993 = b$$inline_992.queryCommandValue("FontName");
+            }
           } catch (d$$inline_1000) {
             c$$inline_993 = "";
           }
@@ -4531,7 +5125,9 @@ function v254() {
         if (v2461) {
           c$$inline_993 = R$$1(a$$inline_991, "fontFamily");
         }
-        a$$inline_991 = c$$inline_993.split(",");
+        introspect(JAM.policy.p3) {
+          a$$inline_991 = c$$inline_993.split(",");
+        }
         var v2462 = a$$inline_991.length;
         var v779 = 1 < v2462;
         if (v779) {
@@ -4550,22 +5146,30 @@ function v254() {
             if (v2463) {
               v780 = b$$inline_996;
             } else {
-              v780 = b$$inline_996.charAt(d$$inline_998);
+              introspect(JAM.policy.p3) {
+                v780 = b$$inline_996.charAt(d$$inline_998);
+              }
             }
             var e$$inline_999 = v780;
-            var v3612 = a$$inline_995.charAt(0);
+            introspect(JAM.policy.p3) {
+              var v3612 = a$$inline_995.charAt(0)
+            }
             var v2464 = v3612 == e$$inline_999;
             if (v2464) {
               var v4710 = a$$inline_995.length;
               var v4329 = v4710 - 1;
-              var v3613 = a$$inline_995.charAt(v4329);
+              introspect(JAM.policy.p3) {
+                var v3613 = a$$inline_995.charAt(v4329)
+              }
               v2464 = v3613 == e$$inline_999;
             }
             var v782 = v2464;
             if (v782) {
               var v2465 = a$$inline_995.length;
               var v781 = v2465 - 1;
-              JSCompiler_inline_result$$inline_994 = a$$inline_995.substring(1, v781);
+              introspect(JAM.policy.p3) {
+                JSCompiler_inline_result$$inline_994 = a$$inline_995.substring(1, v781);
+              }
               break JSCompiler_inline_label_1001;
             }
             d$$inline_998++;
@@ -4574,7 +5178,9 @@ function v254() {
           JSCompiler_inline_result$$inline_994 = a$$inline_995;
         }
         JSCompiler_inline_result$$931 = JSCompiler_inline_result$$inline_994;
-        var v5085 = JSCompiler_inline_result$$931.toLowerCase();
+        introspect(JAM.policy.p3) {
+          var v5085 = JSCompiler_inline_result$$931.toLowerCase()
+        }
         JSCompiler_temp_const$$930.dff = v5085;
         var v5086 = Wd(a$$inline_820);
         b$$inline_821.dfs = v5086;
@@ -4616,9 +5222,13 @@ function v254() {
             var v3614 = v4330;
             if (v3614) {
               var v4915 = f$$inline_1008 - b$$inline_1004;
-              b$$inline_1004 = Math.abs(v4915);
+              introspect(JAM.policy.p3) {
+                b$$inline_1004 = Math.abs(v4915);
+              }
               var v4916 = a$$inline_1003 - c$$inline_1005;
-              c$$inline_1005 = Math.abs(v4916);
+              introspect(JAM.policy.p3) {
+                c$$inline_1005 = Math.abs(v4916);
+              }
               var v4712 = b$$inline_1004 + c$$inline_1005;
               v3614 = 10 >= v4712;
             }
@@ -4630,10 +5240,14 @@ function v254() {
             }
             d$$inline_826 = v788;
             var v789 = d$$inline_826.x;
-            var v5087 = Math.round(v789);
+            introspect(JAM.policy.p3) {
+              var v5087 = Math.round(v789)
+            }
             b$$inline_824.adx = v5087;
             var v790 = d$$inline_826.y;
-            var v5088 = Math.round(v790);
+            introspect(JAM.policy.p3) {
+              var v5088 = Math.round(v790)
+            }
             b$$inline_824.ady = v5088;
           }
           var v4713 = b$$inline_824.adx;
@@ -4706,7 +5320,9 @@ function v254() {
                     b$$inline_1018 = new M$$1(v2471, v2472);
                   } else {
                     var v793 = dd(a$$inline_1017);
-                    b$$inline_1018 = v793.Ja();
+                    introspect(JAM.policy.p3) {
+                      b$$inline_1018 = v793.Ja();
+                    }
                     var c$$inline_1019 = Cd(a$$inline_1017);
                     var v2473 = c$$inline_1019.x;
                     var v2474 = b$$inline_1018.x;
@@ -4762,7 +5378,9 @@ function v254() {
                     var v798;
                     if (c$$inline_1025) {
                       var v2480;
-                      var v3624 = a$$inline_1023 = c$$inline_1025.match(Xd);
+                      introspect(JAM.policy.p3) {
+                        var v3624 = a$$inline_1023 = c$$inline_1025.match(Xd)
+                      }
                       if (v3624) {
                         var v4336 = a$$inline_1023[1];
                         var v3622 = parseFloat(v4336);
@@ -4813,10 +5431,14 @@ function v254() {
               JSCompiler_inline_result$$926 = c$$inline_1012;
               d$$inline_826 = JSCompiler_inline_result$$926;
               var v3626 = d$$inline_826.x;
-              var v5089 = Math.round(v3626);
+              introspect(JAM.policy.p3) {
+                var v5089 = Math.round(v3626)
+              }
               b$$inline_824.adx = v5089;
               var v2490 = d$$inline_826.y;
-              var v5090 = Math.round(v2490);
+              introspect(JAM.policy.p3) {
+                var v5090 = Math.round(v2490)
+              }
               b$$inline_824.ady = v5090;
             } catch (e$$inline_827) {
               b$$inline_824.adx = -12245933;
@@ -4887,27 +5509,43 @@ function v254() {
         var b$$inline_841 = [];
         var v2495 = a$$inline_840.document;
         var v813 = v2495.URL;
-        b$$inline_841.push(v813);
+        introspect(JAM.policy.p3) {
+          b$$inline_841.push(v813);
+        }
         var v814 = a$$inline_840.name;
         if (v814) {
           var v2496 = a$$inline_840.name;
-          b$$inline_841.push(v2496);
+          introspect(JAM.policy.p3) {
+            b$$inline_841.push(v2496);
+          }
         }
         var c$$inline_842 = !0;
         var v815 = !c$$inline_842;
         a$$inline_840 = de(v815, a$$inline_840);
         var v2497 = a$$inline_840.width;
-        var v816 = v2497.toString();
-        b$$inline_841.push(v816);
+        introspect(JAM.policy.p3) {
+          var v816 = v2497.toString()
+        }
+        introspect(JAM.policy.p3) {
+          b$$inline_841.push(v816);
+        }
         var v2498 = a$$inline_840.height;
-        var v817 = v2498.toString();
-        b$$inline_841.push(v817);
-        var v818 = b$$inline_841.join("");
+        introspect(JAM.policy.p3) {
+          var v817 = v2498.toString()
+        }
+        introspect(JAM.policy.p3) {
+          b$$inline_841.push(v817);
+        }
+        introspect(JAM.policy.p3) {
+          var v818 = b$$inline_841.join("")
+        }
         b$$inline_839 = Ab(v818);
       }
       var v819 = 0 != b$$inline_839;
       if (v819) {
-        var v5091 = b$$inline_839.toString();
+        introspect(JAM.policy.p3) {
+          var v5091 = b$$inline_839.toString()
+        }
         a$$inline_838.ifk = v5091;
       }
       var a$$inline_845 = b$$inline_704;
@@ -4928,16 +5566,14 @@ function v254() {
         var v821 = c$$inline_847 < v2500;
         for (;v821;) {
           var v3633 = window.google_eids;
-          introspect(JAM.policy.p4) {
-            var v2501 = v3633[c$$inline_847]
-          }
+          var v2501 = v3633[c$$inline_847];
           var v820 = p$$1(v2501);
           if (v820) {
             var v3634 = window.google_eids;
-            introspect(JAM.policy.p4) {
-              var v2502 = v3634[c$$inline_847]
+            var v2502 = v3634[c$$inline_847];
+            introspect(JAM.policy.p3) {
+              b$$inline_846.bb(v2502);
             }
-            b$$inline_846.bb(v2502);
           }
           c$$inline_847++;
           var v3635 = window.google_eids;
@@ -4945,11 +5581,15 @@ function v254() {
           v821 = c$$inline_847 < v2503;
         }
       }
-      var v5092 = b$$inline_846.Ka();
+      introspect(JAM.policy.p3) {
+        var v5092 = b$$inline_846.Ka()
+      }
       a$$inline_845.eid = v5092;
       var a$$inline_849 = b$$inline_704;
       var b$$inline_850 = me();
-      var v823 = b$$inline_850 = b$$inline_850.getOseId();
+      introspect(JAM.policy.p3) {
+        var v823 = b$$inline_850 = b$$inline_850.getOseId()
+      }
       if (v823) {
         a$$inline_849.oid = b$$inline_850;
       }
@@ -4964,7 +5604,9 @@ function v254() {
       var f$$inline_857 = J$$1();
       var v824 = d$$inline_855.TOP_URL_REPLACES_MISSING_URL;
       var g$$inline_858 = v824.EXPERIMENT;
-      var v2504 = f$$inline_857.m(e$$inline_856);
+      introspect(JAM.policy.p3) {
+        var v2504 = f$$inline_857.m(e$$inline_856)
+      }
       var v826 = v2504 == g$$inline_858;
       if (v826) {
         var b$$inline_859 = c$$inline_854.url;
@@ -4991,7 +5633,9 @@ function v254() {
       }
       var v827 = d$$inline_855.ALWAYS_USE_DELAYED_IMPRESSIONS;
       d$$inline_855 = v827.EXPERIMENT;
-      var v2507 = f$$inline_857.m(e$$inline_856);
+      introspect(JAM.policy.p3) {
+        var v2507 = f$$inline_857.m(e$$inline_856)
+      }
       var v828 = v2507 == d$$inline_855;
       if (v828) {
         a$$inline_852.unviewed_position_start = "1";
@@ -5036,14 +5680,22 @@ function v254() {
       var v834 = c$$inline_854 = Mh(b$$inline_853);
       if (v834) {
         e$$inline_856 = new Uh(c$$inline_854);
-        var v3640 = e$$inline_856.yb();
+        introspect(JAM.policy.p3) {
+          var v3640 = e$$inline_856.yb()
+        }
         if (v3640) {
-          var v5093 = e$$inline_856.Ob();
+          introspect(JAM.policy.p3) {
+            var v5093 = e$$inline_856.Ob()
+          }
           a$$inline_852.dss = v5093;
         }
-        var v2514 = c$$inline_854.Oa();
+        introspect(JAM.policy.p3) {
+          var v2514 = c$$inline_854.Oa()
+        }
         if (v2514) {
-          var v5094 = c$$inline_854.Oa();
+          introspect(JAM.policy.p3) {
+            var v5094 = c$$inline_854.Oa()
+          }
           a$$inline_852.dsd = v5094;
         }
       }
@@ -5068,7 +5720,9 @@ function v254() {
             break JSCompiler_inline_label_882;
           }
           var d$$inline_865;
-          var v2516 = c$$inline_864.indexOf("google_anchor_debug");
+          introspect(JAM.policy.p3) {
+            var v2516 = c$$inline_864.indexOf("google_anchor_debug")
+          }
           var v837 = -1 != v2516;
           if (v837) {
             d$$inline_865 = Yg(1);
@@ -5078,7 +5732,9 @@ function v254() {
             c$$inline_861 = !1;
             break JSCompiler_inline_label_882;
           }
-          d$$inline_865.ja(a$$inline_862, b$$inline_863);
+          introspect(JAM.policy.p3) {
+            d$$inline_865.ja(a$$inline_862, b$$inline_863);
+          }
           c$$inline_861 = !0;
         }
         var v2517 = !c$$inline_861;
@@ -5099,7 +5755,9 @@ function v254() {
         var a$$inline_867 = "";
         var v848 = document.documentMode;
         if (v848) {
-          var b$$inline_868 = document.createElement("IFRAME");
+          introspect(JAM.policy.p3) {
+            var b$$inline_868 = document.createElement("IFRAME")
+          }
           b$$inline_868.frameBorder = 0;
           var v841 = b$$inline_868.style;
           v841.height = 0;
@@ -5110,19 +5768,29 @@ function v254() {
           var v847 = document.body;
           if (v847) {
             var v844 = document.body;
-            v844.appendChild(b$$inline_868);
+            introspect(JAM.policy.p3) {
+              v844.appendChild(b$$inline_868);
+            }
             try {
               var v845 = b$$inline_868.contentWindow;
               var c$$inline_869 = v845.document;
-              c$$inline_869.open();
-              c$$inline_869.write("<!DOCTYPE html>");
-              c$$inline_869.close();
+              introspect(JAM.policy.p3) {
+                c$$inline_869.open();
+              }
+              introspect(JAM.policy.p3) {
+                c$$inline_869.write("<!DOCTYPE html>");
+              }
+              introspect(JAM.policy.p3) {
+                c$$inline_869.close();
+              }
               var v2518 = c$$inline_869.documentMode;
               a$$inline_867 = a$$inline_867 + v2518;
             } catch (d$$inline_878) {
             }
             var v846 = document.body;
-            v846.removeChild(b$$inline_868);
+            introspect(JAM.policy.p3) {
+              v846.removeChild(b$$inline_868);
+            }
           }
         }
         JSCompiler_inline_result$$inline_866 = a$$inline_867;
@@ -5130,14 +5798,18 @@ function v254() {
       }
       c$$inline_854 = K$$1.SS;
       var v850 = J$$1();
-      e$$inline_856 = v850.m(14);
+      introspect(JAM.policy.p3) {
+        e$$inline_856 = v850.m(14);
+      }
       var v2519 = c$$inline_854.COUNT_AD_FRAMES_ON_PAGE_EXPERIMENT;
       var v851 = e$$inline_856 == v2519;
       if (v851) {
         var v2520 = a$$inline_852.adk;
         var v2521 = a$$inline_852.correlator;
         var v2522 = a$$inline_852.frm;
-        var v5096 = T$$1.frameCountsWithDelayedPingback(b$$inline_853, v2520, v2521, v2522);
+        introspect(JAM.policy.p3) {
+          var v5096 = T$$1.frameCountsWithDelayedPingback(b$$inline_853, v2520, v2521, v2522)
+        }
         a$$inline_852.frmn = v5096;
       }
       var v2523 = c$$inline_854.BROWSER_DIMENSIONS_EXPERIMENT;
@@ -5181,7 +5853,9 @@ function v254() {
         var v855 = v2525;
         JSCompiler_inline_result$$inline_870 = [v852, v853, b$$inline_871, c$$inline_872, v854, v855, e$$inline_873, f$$inline_874, h$$inline_875, k$$inline_876];
         b$$inline_853 = JSCompiler_inline_result$$inline_870;
-        var v5097 = b$$inline_853.join(",");
+        introspect(JAM.policy.p3) {
+          var v5097 = b$$inline_853.join(",")
+        }
         a$$inline_852.brdim = v5097;
       }
       var a$$inline_877 = 0;
@@ -5203,7 +5877,9 @@ function v254() {
       var c$$inline_502 = L$$1(b$$inline_501, "/pagead/ads?");
       var JSCompiler_inline_result$$575;
       var v859 = J$$1();
-      var a$$inline_706 = v859.m(19);
+      introspect(JAM.policy.p3) {
+        var a$$inline_706 = v859.m(19)
+      }
       var b$$inline_707 = K$$1.PRERENDERING_DELAYED_IMPRESSION;
       var v2528 = b$$inline_707.EXPERIMENT;
       var v860 = a$$inline_706 == v2528;
@@ -5273,13 +5949,17 @@ function v254() {
       var v3650 = c$$inline_506.length;
       var v2536 = 1991 < v3650;
       if (v2536) {
-        var v2535 = c$$inline_506.substring(0, 1983);
+        introspect(JAM.policy.p3) {
+          var v2535 = c$$inline_506.substring(0, 1983)
+        }
         v865 = v2535 + "&trunc=1";
       } else {
         v865 = c$$inline_506;
       }
       c$$inline_506 = v865;
-      c$$inline_506 = c$$inline_506.replace(/%\w?$/, "");
+      introspect(JAM.policy.p3) {
+        c$$inline_506 = c$$inline_506.replace(/%\w?$/, "");
+      }
       var f$$inline_509 = "script";
       var g$$inline_510 = Lb(e$$inline_508);
       H$$1();
@@ -5312,7 +5992,9 @@ function v254() {
           var f$$inline_716 = void 0;
           var v866;
           if (e$$inline_715) {
-            var v2539 = c$$inline_713.replace(/&ea=[^&]*/, "");
+            introspect(JAM.policy.p3) {
+              var v2539 = c$$inline_713.replace(/&ea=[^&]*/, "")
+            }
             v866 = v2539 + "&ea=0";
           } else {
             v866 = c$$inline_713;
@@ -5367,10 +6049,16 @@ function v254() {
               a$$inline_884 = a$$inline_884 - 1;
               var v874 = 0 < v2544;
               for (;v874;) {
-                var v4719 = Math.random();
+                introspect(JAM.policy.p3) {
+                  var v4719 = Math.random()
+                }
                 var v4349 = v4719 * d$$inline_887;
-                var v3656 = Math.floor(v4349);
-                var v2545 = c$$inline_886.charAt(v3656);
+                introspect(JAM.policy.p3) {
+                  var v3656 = Math.floor(v4349)
+                }
+                introspect(JAM.policy.p3) {
+                  var v2545 = c$$inline_886.charAt(v3656)
+                }
                 e$$inline_888 = e$$inline_888 + v2545;
                 var v2546 = a$$inline_884;
                 a$$inline_884 = a$$inline_884 - 1;
@@ -5385,11 +6073,15 @@ function v254() {
               var v2547 = !a$$inline_890;
               var v875 = !v2547;
               if (v875) {
-                var v3657 = a$$inline_890.indexOf("?google_debug");
+                introspect(JAM.policy.p3) {
+                  var v3657 = a$$inline_890.indexOf("?google_debug")
+                }
                 var v2548 = 0 < v3657;
                 var v3659 = !v2548;
                 if (v3659) {
-                  var v3658 = a$$inline_890.indexOf("&google_debug");
+                  introspect(JAM.policy.p3) {
+                    var v3658 = a$$inline_890.indexOf("&google_debug")
+                  }
                   v2548 = 0 < v3658;
                 }
                 v875 = v2548;
@@ -5419,9 +6111,7 @@ function v254() {
                 JSCompiler_inline_result$$inline_898 = !1;
                 break JSCompiler_inline_label_908;
               }
-              introspect(JAM.policy.p4) {
-                var v878 = Ug[c$$inline_901]
-              }
+              var v878 = Ug[c$$inline_901];
               var v2550 = !v878;
               if (v2550) {
                 v878 = null;
@@ -5465,9 +6155,7 @@ function v254() {
               }
               var d$$inline_905 = rg(a$$inline_899);
               var v883 = d$$inline_905.wasReactiveAdCreated;
-              introspect(JAM.policy.p4) {
-                var e$$inline_906 = v883[c$$inline_901]
-              }
+              var e$$inline_906 = v883[c$$inline_901];
               var v884 = d$$inline_905.wasReactiveAdCreated;
               introspect(JAM.policy.p2) {
                 v884[c$$inline_901] = !0;
@@ -5483,7 +6171,9 @@ function v254() {
               d$$inline_895.src = v5100;
               c$$inline_894 = Bf(document, d$$inline_895);
               var v885 = document.body;
-              v885.appendChild(c$$inline_894);
+              introspect(JAM.policy.p3) {
+                v885.appendChild(c$$inline_894);
+              }
               var v886 = D$$1();
               qh(a$$inline_892, e$$inline_896, c$$inline_894, v886);
             }
@@ -5512,7 +6202,9 @@ function v254() {
                 Ff(e$$inline_915, c$$inline_913, d$$inline_914, v887, v888);
                 var v889 = a$$inline_911.document;
                 var v890 = Cf(e$$inline_915);
-                v889.write(v890);
+                introspect(JAM.policy.p3) {
+                  v889.write(v890);
+                }
               } else {
                 var v891 = a$$inline_711.google_ad_width;
                 var v892 = a$$inline_711.google_ad_height;
@@ -5544,19 +6236,25 @@ function v254() {
             var v4355 = v4720;
             var v4356 = "google_expandable_ad_slot" + d$$inline_714;
             var v3665 = Yd(h$$inline_718, c$$inline_713, v4352, v4353, I$$inline_723, v4354, v4355, v4356);
-            v3664.push(v3665);
+            introspect(JAM.policy.p3) {
+              v3664.push(v3665);
+            }
           }
           if (B$$2) {
             var a$$inline_918 = a$$inline_711.google_async_iframe_id;
             var v3666 = ["<!DOCTYPE html><html><body>", l$$inline_720, "</body></html>"];
-            var v2554 = v3666.join("");
+            introspect(JAM.policy.p3) {
+              var v2554 = v3666.join("")
+            }
             var v897 = ab$$1(v2554);
             var c$$inline_920 = "javascript:" + v897;
             var d$$inline_921 = D$$1();
             var v898 = new Me(d$$inline_921);
-            v898.set(a$$inline_918, c$$inline_920);
+            introspect(JAM.policy.p3) {
+              v898.set(a$$inline_918, c$$inline_920);
+            }
           }
-          introspect(JAM.policy.p1) {
+          introspect(JAM.policy.p3) {
             a$$inline_711 = document.getElementById(h$$inline_718);
           }
           var v899 = zi && a$$inline_711;
@@ -5573,7 +6271,9 @@ function v254() {
         var v3667 = v4357 + "></";
         var v2555 = v3667 + f$$inline_509;
         var v901 = v2555 + ">";
-        document.write(v901);
+        introspect(JAM.policy.p3) {
+          document.write(v901);
+        }
       }
       var v903 = a$$inline_504.google_ad_output;
       var v904 = a$$inline_504.google_ad_width;
@@ -5589,14 +6289,18 @@ function v254() {
       var JSCompiler_temp$$33;
       var v2556 = a$$557 = bg;
       if (v2556) {
-        var v3668 = a$$557.Ta();
+        introspect(JAM.policy.p3) {
+          var v3668 = a$$557.Ta()
+        }
         v2556 = !v3668;
       }
       var v906 = JSCompiler_temp$$33 = v2556;
       if (v906) {
       } else {
         if (sc) {
-          sc();
+          introspect(JAM.policy.p3) {
+            sc();
+          }
         }
         JSCompiler_temp$$33 = void 0;
       }
@@ -5623,7 +6327,9 @@ function v254() {
       var v4358 = K$$1.SEND_LOAD_TIME_PINGBACKS;
       var v3671 = v4358.EXPERIMENT;
       var v2559 = [v3671];
-      v2558.k(v2559, ra$$1, 16);
+      introspect(JAM.policy.p3) {
+        v2558.k(v2559, ra$$1, 16);
+      }
     }
     return;
   }
@@ -5645,7 +6351,7 @@ function v254() {
     return;
   }
   function wi(a$$540, b$$412, c$$277, d$$169, e$$100) {
-    introspect(JAM.policy.p1) {
+    introspect(JAM.policy.p3) {
       a$$540 = document.getElementById(a$$540);
     }
     var a$$inline_442 = b$$412;
@@ -5654,11 +6360,15 @@ function v254() {
     var d$$inline_445 = d$$169;
     var e$$inline_446 = e$$100;
     var f$$inline_447 = me();
-    var v909 = f$$inline_447.getOseId();
+    introspect(JAM.policy.p3) {
+      var v909 = f$$inline_447.getOseId()
+    }
     if (v909) {
       var v3672 = c$$inline_444 || "";
       var v2562 = String(v3672);
-      f$$inline_447.registerAdBlock(a$$inline_442, 1, v2562, b$$inline_443, d$$inline_445, e$$inline_446);
+      introspect(JAM.policy.p3) {
+        f$$inline_447.registerAdBlock(a$$inline_442, 1, v2562, b$$inline_443, d$$inline_445, e$$inline_446);
+      }
     }
     if (B$$2) {
       uf();
@@ -5683,7 +6393,7 @@ function v254() {
         var c$$inline_434 = a$$537;
         var v4359 = a$$inline_432;
         if (v4359) {
-          introspect(JAM.policy.p1) {
+          introspect(JAM.policy.p3) {
             v4359 = a$$inline_432 = b$$409.getElementById(a$$inline_432);
           }
         }
@@ -5704,7 +6414,9 @@ function v254() {
         }
         JSCompiler_temp$$65 = void 0;
       } else {
-        JSCompiler_temp$$65 = b$$409.write(a$$537);
+        introspect(JAM.policy.p3) {
+          JSCompiler_temp$$65 = b$$409.write(a$$537);
+        }
       }
     } else {
       b$$409 = yb(a$$537);
@@ -5723,7 +6435,9 @@ function v254() {
         v4361 = void 0;
       }
       var v3680 = v4361;
-      var v5102 = ExpandableAdSlotFactory.createIframe(e$$97, v3677, g$$34, h$$26, v3678, v3679, v3680);
+      introspect(JAM.policy.p3) {
+        var v5102 = ExpandableAdSlotFactory.createIframe(e$$97, v3677, g$$34, h$$26, v3678, v3679, v3680)
+      }
       introspect(JAM.policy.p2) {
         a$$537[v2565] = v5102;
       }
@@ -5763,28 +6477,42 @@ function v254() {
     }
     var v914 = v2566;
     if (v914) {
-      d$$165 = d$$165.replace(/&(adx|ady|oid|jp|top)=[^&]*/g, "");
+      introspect(JAM.policy.p3) {
+        d$$165 = d$$165.replace(/&(adx|ady|oid|jp|top)=[^&]*/g, "");
+      }
       d$$165 = d$$165 + "&ea=0";
       c$$273 = !1;
     }
     oi(a$$536, b$$408, c$$273, d$$165, e$$96, f$$55, g$$33, h$$25, k$$12, l$$14, z$$7);
     if (xb$$1) {
       if (sc) {
-        sc();
+        introspect(JAM.policy.p3) {
+          sc();
+        }
       }
     }
     return;
   }
   function ni(a$$535, b$$407, c$$272) {
     function v27() {
-      d$$164.R();
-      var v915 = d$$164.Ta();
+      introspect(JAM.policy.p3) {
+        d$$164.R();
+      }
+      introspect(JAM.policy.p3) {
+        var v915 = d$$164.Ta()
+      }
       var v2567 = !v915;
       if (v2567) {
-        d$$164.ya();
-        var v3683 = d$$164.v();
+        introspect(JAM.policy.p3) {
+          d$$164.ya();
+        }
+        introspect(JAM.policy.p3) {
+          var v3683 = d$$164.v()
+        }
         var v3684 = !0;
-        c$$272(v3683, null, v3684);
+        introspect(JAM.policy.p3) {
+          c$$272(v3683, null, v3684);
+        }
       }
       return;
     }
@@ -5792,35 +6520,57 @@ function v254() {
     var v2569 = !d$$164;
     if (v2569) {
       var v2568 = !1;
-      c$$272(-1, null, v2568);
+      introspect(JAM.policy.p3) {
+        c$$272(-1, null, v2568);
+      }
     }
-    d$$164.R();
+    introspect(JAM.policy.p3) {
+      d$$164.R();
+    }
     var v916;
     var v2573 = d$$164.ma;
     if (v2573) {
-      var v2570 = d$$164.v();
+      introspect(JAM.policy.p3) {
+        var v2570 = d$$164.v()
+      }
       var v2571 = d$$164.za;
       var v2572 = !1;
-      v916 = c$$272(v2570, v2571, v2572);
+      introspect(JAM.policy.p3) {
+        v916 = c$$272(v2570, v2571, v2572);
+      }
     } else {
       var v3685 = mi(b$$407);
-      d$$164.zc(v3685, c$$272);
+      introspect(JAM.policy.p3) {
+        d$$164.zc(v3685, c$$272);
+      }
       var v3686 = d$$164.va;
       var v4365 = !v3686;
       if (v4365) {
         b$$407 = Fe;
         var v4727;
         var v4986 = navigator.userAgent;
-        var v4921 = b$$407.test(v4986);
+        introspect(JAM.policy.p3) {
+          var v4921 = b$$407.test(v4986)
+        }
         if (v4921) {
-          d$$164.Ec();
+          introspect(JAM.policy.p3) {
+            d$$164.Ec();
+          }
           b$$407 = v27;
-          v4727 = a$$535.setTimeout(b$$407, Wh);
+          introspect(JAM.policy.p3) {
+            v4727 = a$$535.setTimeout(b$$407, Wh);
+          }
         } else {
-          d$$164.ya();
-          var v4987 = d$$164.v();
+          introspect(JAM.policy.p3) {
+            d$$164.ya();
+          }
+          introspect(JAM.policy.p3) {
+            var v4987 = d$$164.v()
+          }
           var v4988 = !1;
-          v4727 = c$$272(v4987, null, v4988);
+          introspect(JAM.policy.p3) {
+            v4727 = c$$272(v4987, null, v4988);
+          }
         }
         v3686 = v4727;
       }
@@ -5850,10 +6600,14 @@ function v254() {
     var b$$405 = mc();
     var v918 = a$$533.setUpForcePeriscope;
     if (v918) {
-      a$$533.setUpForcePeriscope();
+      introspect(JAM.policy.p3) {
+        a$$533.setUpForcePeriscope();
+      }
     }
     var v919 = G$$1(b$$405, 7);
-    return a$$533.setupOse(v919);
+    introspect(JAM.policy.p3) {
+      return a$$533.setupOse(v919);
+    }
   }
   function ki(a$$531, b$$403) {
     function v28(a$$532, b$$404) {
@@ -5895,7 +6649,9 @@ function v254() {
       }
       return;
     }
-    var c$$271 = b$$403.slice(-1);
+    introspect(JAM.policy.p3) {
+      var c$$271 = b$$403.slice(-1)
+    }
     var v921;
     var v3694 = "?" == c$$271;
     var v4370 = !v3694;
@@ -5912,14 +6668,18 @@ function v254() {
     var e$$95 = [b$$403];
     c$$271 = v28;
     x$$50(a$$531, c$$271);
-    return e$$95.join("");
+    introspect(JAM.policy.p3) {
+      return e$$95.join("");
+    }
   }
   function di() {
     return L$$1(Vh, "/pagead/expansion_embed.js");
   }
   function bi() {
     var v3695 = window.google_ad_format;
-    var v2577 = /_sdo/.test(v3695);
+    introspect(JAM.policy.p3) {
+      var v2577 = /_sdo/.test(v3695)
+    }
     var v974 = !v2577;
     if (v974) {
       var v2578 = wc();
@@ -5947,7 +6707,9 @@ function v254() {
             if (c$$inline_647) {
               var v2579 = H$$1();
               var v2580 = [c$$inline_647];
-              v2579.k(v2580, 1, 10);
+              introspect(JAM.policy.p3) {
+                v2579.k(v2580, 1, 10);
+              }
             }
           }
         }
@@ -5971,7 +6733,9 @@ function v254() {
           if (c$$inline_651) {
             var v2581 = H$$1();
             var v2582 = [c$$inline_651];
-            v2581.k(v2582, 1, 10);
+            introspect(JAM.policy.p3) {
+              v2581.k(v2582, 1, 10);
+            }
           }
         }
         var v2583 = K$$1.EXPANDABLE_MOBILE_REVERSE;
@@ -5979,7 +6743,9 @@ function v254() {
         var v2584 = K$$1.EXPANDABLE_MOBILE_REVERSE;
         var v928 = v2584.EXPERIMENT;
         var b$$inline_412 = [v927, v928];
-        a$$inline_411.k(b$$inline_412, na$$1, 13);
+        introspect(JAM.policy.p3) {
+          a$$inline_411.k(b$$inline_412, na$$1, 13);
+        }
         var b$$inline_654 = Ge;
         var c$$inline_655 = K$$1.PREFETCH_AD_HANDLING;
         var d$$inline_656;
@@ -5997,22 +6763,30 @@ function v254() {
         if (d$$inline_656) {
           var v2585 = H$$1();
           var v2586 = [d$$inline_656];
-          v2585.k(v2586, 1, 4);
+          introspect(JAM.policy.p3) {
+            v2585.k(v2586, 1, 4);
+          }
         }
         var c$$inline_413 = K$$1.SS;
         var v930 = c$$inline_413.COUNT_AD_FRAMES_ON_PAGE_CONTROL;
         var v931 = c$$inline_413.COUNT_AD_FRAMES_ON_PAGE_EXPERIMENT;
         b$$inline_412 = [v930, v931];
-        a$$inline_411.k(b$$inline_412, va$$1, 14);
+        introspect(JAM.policy.p3) {
+          a$$inline_411.k(b$$inline_412, va$$1, 14);
+        }
         var v932 = c$$inline_413.BROWSER_DIMENSIONS_CONTROL;
         var v933 = c$$inline_413.BROWSER_DIMENSIONS_EXPERIMENT;
         b$$inline_412 = [v932, v933];
-        a$$inline_411.k(b$$inline_412, Ca$$1, 14);
+        introspect(JAM.policy.p3) {
+          a$$inline_411.k(b$$inline_412, Ca$$1, 14);
+        }
         b$$inline_412 = K$$1.PERISCOPE_FOR_TARGETING;
         var v934 = b$$inline_412.CONTROL_REFERER_CLEANUP;
         var v935 = b$$inline_412.EXPERIMENT_REFERER_CLEANUP;
         b$$inline_412 = [v934, v935];
-        a$$inline_411.k(b$$inline_412, qa$$1, 10);
+        introspect(JAM.policy.p3) {
+          a$$inline_411.k(b$$inline_412, qa$$1, 10);
+        }
         var v937 = window.google_ad_unit_key_2;
         if (v937) {
           var a$$inline_658;
@@ -6024,7 +6798,9 @@ function v254() {
             v936 = a$$inline_658 = v2587.CONTROL;
           } else {
             var v3697 = window.google_ad_unit_key_2;
-            var v2588 = /[0-9]+/.test(v3697);
+            introspect(JAM.policy.p3) {
+              var v2588 = /[0-9]+/.test(v3697)
+            }
             if (v2588) {
               var v3698 = K$$1.ADD_ADK2;
               v2588 = a$$inline_658 = v3698.EXPERIMENT;
@@ -6035,7 +6811,9 @@ function v254() {
           if (a$$inline_658) {
             var v2590 = H$$1();
             var v2591 = [a$$inline_658];
-            v2590.k(v2591, 1, 4);
+            introspect(JAM.policy.p3) {
+              v2590.k(v2591, 1, 4);
+            }
           }
         }
         var v2592 = K$$1.ASYNC_EXPANSION_EMBED;
@@ -6043,7 +6821,9 @@ function v254() {
         var v2593 = K$$1.ASYNC_EXPANSION_EMBED;
         var v939 = v2593.CONTROL;
         b$$inline_412 = [v938, v939];
-        a$$inline_411.k(b$$inline_412, ya$$1, 18);
+        introspect(JAM.policy.p3) {
+          a$$inline_411.k(b$$inline_412, ya$$1, 18);
+        }
         var a$$inline_660 = void 0;
         var b$$inline_661 = Pb;
         var c$$inline_662 = K$$1.ASYNC_FOR_OPERA_ANDROID;
@@ -6056,7 +6836,9 @@ function v254() {
         var v942 = window.google_async_for_oa_experiment;
         if (v942) {
           var d$$inline_663;
-          a$$inline_660 = /Chrome/.test(a$$inline_660);
+          introspect(JAM.policy.p3) {
+            a$$inline_660 = /Chrome/.test(a$$inline_660);
+          }
           var v941;
           var v3699 = window.google_async_for_oa_experiment;
           var v3700 = b$$inline_661.CONTROL;
@@ -6088,7 +6870,9 @@ function v254() {
           if (d$$inline_663) {
             var v2598 = H$$1();
             var v2599 = [d$$inline_663];
-            v2598.k(v2599, 1, 4);
+            introspect(JAM.policy.p3) {
+              v2598.k(v2599, 1, 4);
+            }
           }
         }
         var v2600 = K$$1.JS_RNG;
@@ -6096,7 +6880,9 @@ function v254() {
         var v2601 = K$$1.JS_RNG;
         var v944 = v2601.EXPERIMENT;
         b$$inline_412 = [v943, v944];
-        a$$inline_411.k(b$$inline_412, za$$1, 17);
+        introspect(JAM.policy.p3) {
+          a$$inline_411.k(b$$inline_412, za$$1, 17);
+        }
         var a$$inline_665 = v$$1;
         a$$inline_665 = Xe(a$$inline_665);
         var v946 = 3 == a$$inline_665;
@@ -6106,7 +6892,9 @@ function v254() {
           var v2602 = a$$inline_665.CONTROL;
           var v2603 = a$$inline_665.EXPERIMENT;
           var v945 = [v2602, v2603];
-          b$$inline_666.k(v945, ua$$1, 19);
+          introspect(JAM.policy.p3) {
+            b$$inline_666.k(v945, ua$$1, 19);
+          }
         }
       }
       JSCompiler_inline_label_Vf_671: {
@@ -6125,7 +6913,9 @@ function v254() {
           a$$inline_668 = v2604;
           var v2605 = J$$1();
           var v2606 = [a$$inline_668];
-          v2605.k(v2606, 1, 15);
+          introspect(JAM.policy.p3) {
+            v2605.k(v2606, 1, 15);
+          }
           break JSCompiler_inline_label_Vf_671;
         }
       }
@@ -6156,7 +6946,9 @@ function v254() {
           a$$inline_672 = v2608;
           var v2609 = J$$1();
           var v2610 = [a$$inline_672];
-          v2609.k(v2610, 1, 4);
+          introspect(JAM.policy.p3) {
+            v2609.k(v2610, 1, 4);
+          }
           break JSCompiler_inline_label_Tf_676;
         }
       }
@@ -6164,26 +6956,30 @@ function v254() {
       var b$$inline_417;
       var a$$inline_677 = document.URL;
       var b$$inline_678 = {};
-      a$$inline_677 = a$$inline_677.split("?");
+      introspect(JAM.policy.p3) {
+        a$$inline_677 = a$$inline_677.split("?");
+      }
       var v3707 = a$$inline_677.length;
       var v2611 = v3707 - 1;
-      introspect(JAM.policy.p4) {
-        var v949 = a$$inline_677[v2611]
+      var v949 = a$$inline_677[v2611];
+      introspect(JAM.policy.p3) {
+        a$$inline_677 = v949.split("&");
       }
-      a$$inline_677 = v949.split("&");
       var c$$inline_679 = 0;
       var v2612 = a$$inline_677.length;
       var v955 = c$$inline_679 < v2612;
       for (;v955;) {
-        introspect(JAM.policy.p4) {
-          var v950 = a$$inline_677[c$$inline_679]
+        var v950 = a$$inline_677[c$$inline_679];
+        introspect(JAM.policy.p3) {
+          var d$$inline_680 = v950.split("=")
         }
-        var d$$inline_680 = v950.split("=");
         var v954 = d$$inline_680[0];
         if (v954) {
           try {
             var v951 = d$$inline_680[0];
-            var JSCompiler_temp_const$$741 = v951.toLowerCase();
+            introspect(JAM.policy.p3) {
+              var JSCompiler_temp_const$$741 = v951.toLowerCase()
+            }
             var JSCompiler_temp$$742;
             var v2613 = d$$inline_680.length;
             var v953 = 1 < v2613;
@@ -6192,7 +6988,9 @@ function v254() {
               var v952;
               var v2615 = window.decodeURIComponent;
               if (v2615) {
-                var v2614 = a$$inline_755.replace(/\+/g, " ");
+                introspect(JAM.policy.p3) {
+                  var v2614 = a$$inline_755.replace(/\+/g, " ")
+                }
                 v952 = decodeURIComponent(v2614);
               } else {
                 v952 = unescape(a$$inline_755);
@@ -6279,7 +7077,9 @@ function v254() {
           if (v3710) {
             var v4733 = b$$inline_758.location;
             var v4378 = v4733.protocol;
-            var v3709 = /^http/.test(v4378);
+            introspect(JAM.policy.p3) {
+              var v3709 = /^http/.test(v4378)
+            }
             v2617 = !v3709;
           }
           var v963 = JSCompiler_temp$$inline_759 = v2617;
@@ -6290,7 +7090,9 @@ function v254() {
               var b$$inline_761 = b$$inline_758;
               var v958;
               var v4379 = J$$1();
-              var v3711 = v4379.m(13);
+              introspect(JAM.policy.p3) {
+                var v3711 = v4379.m(13)
+              }
               var v4380 = K$$1.EXPANDABLE_MOBILE_REVERSE;
               var v3712 = v4380.EXPERIMENT;
               var v2618 = v3711 == v3712;
@@ -6303,30 +7105,42 @@ function v254() {
               var d$$inline_763 = navigator.userAgent;
               var e$$inline_764 = navigator.platform;
               c$$inline_762 = c$$inline_762 || /Win|Mac|Linux|iPad|iPod|iPhone/;
-              var v2619 = c$$inline_762.test(e$$inline_764);
+              introspect(JAM.policy.p3) {
+                var v2619 = c$$inline_762.test(e$$inline_764)
+              }
               if (v2619) {
-                var v3713 = /^Opera/.test(d$$inline_763);
+                introspect(JAM.policy.p3) {
+                  var v3713 = /^Opera/.test(d$$inline_763)
+                }
                 v2619 = !v3713;
               }
               var v962 = v2619;
               if (v962) {
-                var v2620 = /WebKit\/(\d+)/.exec(d$$inline_763);
+                introspect(JAM.policy.p3) {
+                  var v2620 = /WebKit\/(\d+)/.exec(d$$inline_763)
+                }
                 var v3714 = !v2620;
                 if (v3714) {
                   v2620 = [0, 0];
                 }
                 var v959 = v2620;
                 c$$inline_762 = v959[1];
-                var v2621 = /rv\:(\d+\.\d+)/.exec(d$$inline_763);
+                introspect(JAM.policy.p3) {
+                  var v2621 = /rv\:(\d+\.\d+)/.exec(d$$inline_763)
+                }
                 var v3715 = !v2621;
                 if (v3715) {
                   v2621 = [0, 0];
                 }
                 var v960 = v2621;
                 var f$$inline_765 = v960[1];
-                var v4734 = /Win/.test(e$$inline_764);
+                introspect(JAM.policy.p3) {
+                  var v4734 = /Win/.test(e$$inline_764)
+                }
                 if (v4734) {
-                  v4734 = /MSIE.*Trident/.test(d$$inline_763);
+                  introspect(JAM.policy.p3) {
+                    v4734 = /MSIE.*Trident/.test(d$$inline_763);
+                  }
                 }
                 var v4381 = v4734;
                 if (v4381) {
@@ -6347,7 +7161,9 @@ function v254() {
                   }
                   var v4382 = v4736;
                   if (v4382) {
-                    var v4737 = /rv\:1\.8([^.]|\.0)/.test(d$$inline_763);
+                    introspect(JAM.policy.p3) {
+                      var v4737 = /rv\:1\.8([^.]|\.0)/.test(d$$inline_763)
+                    }
                     v4382 = !v4737;
                   }
                   v3716 = v4382;
@@ -6405,7 +7221,9 @@ function v254() {
         var v3720 = K$$1.DIRECT_CALL_RENDER_AD;
         var v2625 = v3720.EXPERIMENT;
         var v966 = [v2624, v2625];
-        var e$$inline_423 = v965.k(v966, Aa$$1, 4);
+        introspect(JAM.policy.p3) {
+          var e$$inline_423 = v965.k(v966, Aa$$1, 4)
+        }
       }
       var v968 = ci;
       if (v968) {
@@ -6425,7 +7243,9 @@ function v254() {
         var v4386 = v4740 + '"></';
         var v3721 = v4386 + d$$inline_422;
         var v2627 = v3721 + ">";
-        document.write(v2627);
+        introspect(JAM.policy.p3) {
+          document.write(v2627);
+        }
       }
       var v972 = hi(a$$inline_419);
       if (v972) {
@@ -6453,7 +7273,9 @@ function v254() {
         var v4388 = v4742 + '"></';
         var v3723 = v4388 + d$$inline_422;
         var v2628 = v3723 + ">";
-        v973 = document.write(v2628);
+        introspect(JAM.policy.p3) {
+          v973 = document.write(v2628);
+        }
       } else {
         var v2629;
         var v4389 = a$$inline_419;
@@ -6469,7 +7291,9 @@ function v254() {
           var v4745 = v4932 + '>google_protectAndRun("ads_core.google_render_ad", google_handleError, google_render_ad);</';
           var v4390 = v4745 + d$$inline_422;
           var v3724 = v4390 + ">";
-          v2629 = document.write(v3724);
+          introspect(JAM.policy.p3) {
+            v2629 = document.write(v3724);
+          }
         } else {
           v2629 = ii();
         }
@@ -6492,14 +7316,16 @@ function v254() {
       }
       var v975 = v2631;
       if (v975) {
-        d$$161();
+        introspect(JAM.policy.p3) {
+          d$$161();
+        }
       }
       var a$$inline_396 = a$$518;
       var b$$inline_397 = 0;
       var v2632 = a$$inline_396.length;
       var v976 = b$$inline_397 < v2632;
       for (;v976;) {
-        introspect(JAM.policy.p4) {
+        introspect(JAM.policy.p3) {
           a$$inline_396[b$$inline_397]();
         }
         ++b$$inline_397;
@@ -6509,9 +7335,13 @@ function v254() {
       a$$inline_396.length = 0;
       return;
     }
-    a$$518.push(b$$395);
+    introspect(JAM.policy.p3) {
+      a$$518.push(b$$395);
+    }
     if (c$$265) {
-      window.setTimeout(v29, c$$265);
+      introspect(JAM.policy.p3) {
+        window.setTimeout(v29, c$$265);
+      }
     }
     return;
   }
@@ -6534,9 +7364,7 @@ function v254() {
     ze = ze | 2;
     var v2635 = a$$511.length;
     var v978 = b$$391 % v2635;
-    introspect(JAM.policy.p4) {
-      return a$$511[v978];
-    }
+    return a$$511[v978];
   }
   function Bh(a$$510) {
     function v32(b$$390, c$$262) {
@@ -6588,7 +7416,7 @@ function v254() {
       return null;
     }
     var v980 = d$$155.document;
-    introspect(JAM.policy.p1) {
+    introspect(JAM.policy.p3) {
       b$$382 = v980.getElementById(b$$382);
     }
     var v981 = !b$$382;
@@ -6596,9 +7424,7 @@ function v254() {
       return null;
     }
     var v2637 = a$$503.google_reactive_ad_format;
-    introspect(JAM.policy.p4) {
-      var v982 = Ug[v2637]
-    }
+    var v982 = Ug[v2637];
     var v2638 = !v982;
     if (v2638) {
       v982 = null;
@@ -6635,7 +7461,9 @@ function v254() {
     return null;
   }
   function Z$$1(a$$494, b$$378, c$$252) {
-    ih.call(this, a$$494);
+    introspect(JAM.policy.p3) {
+      ih.call(this, a$$494);
+    }
     this.s = b$$378;
     this.Zb = c$$252;
     this.G = {};
@@ -6661,7 +7489,9 @@ function v254() {
     return a$$483 + v985;
   }
   function Y$$1(a$$482, b$$369, c$$247) {
-    hh.call(this, a$$482, b$$369, c$$247);
+    introspect(JAM.policy.p3) {
+      hh.call(this, a$$482, b$$369, c$$247);
+    }
     var v986 = c$$247.location;
     this.Wc = v986.hostname;
     var v2641 = c$$247.location;
@@ -6671,12 +7501,18 @@ function v254() {
     this.ea = [];
     this.ob = this.kd = !1;
     var v988 = !1;
-    this.N(v988);
-    this.Cc();
+    introspect(JAM.policy.p3) {
+      this.N(v988);
+    }
+    introspect(JAM.policy.p3) {
+      this.Cc();
+    }
     return;
   }
   function jh(a$$480, b$$368) {
-    ih.call(this, a$$480);
+    introspect(JAM.policy.p3) {
+      ih.call(this, a$$480);
+    }
     this.Kb = b$$368;
     this.H = this.Cb = !1;
     return;
@@ -6684,11 +7520,15 @@ function v254() {
   function ih(a$$477) {
     this.i = a$$477;
     this.cc = {};
-    this.Wb();
+    introspect(JAM.policy.p3) {
+      this.Wb();
+    }
     return;
   }
   function X$$1(a$$465, b$$360, c$$242, d$$152) {
-    hh.call(this, a$$465, b$$360, c$$242);
+    introspect(JAM.policy.p3) {
+      hh.call(this, a$$465, b$$360, c$$242);
+    }
     this.I = this.Ib = this.Da = !1;
     this.w = null;
     var v2642 = c$$242.document;
@@ -6705,7 +7545,9 @@ function v254() {
       var v2643 = R$$1(b$$inline_372, "display");
       var v990 = "none" != v2643;
       if (v990) {
-        JSCompiler_inline_result$$49 = a$$inline_371(b$$inline_372);
+        introspect(JAM.policy.p3) {
+          JSCompiler_inline_result$$49 = a$$inline_371(b$$inline_372);
+        }
         break JSCompiler_inline_label_Kd_378;
       }
       var c$$inline_373 = b$$inline_372.style;
@@ -6715,7 +7557,9 @@ function v254() {
       c$$inline_373.visibility = "hidden";
       c$$inline_373.position = "absolute";
       c$$inline_373.display = "inline";
-      var g$$inline_377 = a$$inline_371(b$$inline_372);
+      introspect(JAM.policy.p3) {
+        var g$$inline_377 = a$$inline_371(b$$inline_372)
+      }
       c$$inline_373.display = d$$inline_374;
       c$$inline_373.position = f$$inline_376;
       c$$inline_373.visibility = e$$inline_375;
@@ -6723,7 +7567,9 @@ function v254() {
     }
     this.gd = JSCompiler_inline_result$$49;
     this.ua = d$$152;
-    this.hide();
+    introspect(JAM.policy.p3) {
+      this.hide();
+    }
     var v991 = this.i;
     var v992 = this.ec;
     var v5105 = lb$$1(v991, "orientationchange", this, v992);
@@ -6773,7 +7619,9 @@ function v254() {
     var v2644 = Number(v3728);
     var v1006 = [v2644];
     var v1007 = [0];
-    W$$1.call(this, v1006, v1007, b$$358);
+    introspect(JAM.policy.p3) {
+      W$$1.call(this, v1006, v1007, b$$358);
+    }
     return;
   }
   function fh(a$$460, b$$357) {
@@ -6782,7 +7630,9 @@ function v254() {
     var v2645 = Number(v3729);
     var v1008 = [v2645];
     var v1009 = [1];
-    W$$1.call(this, v1008, v1009, b$$357);
+    introspect(JAM.policy.p3) {
+      W$$1.call(this, v1008, v1009, b$$357);
+    }
     return;
   }
   function W$$1(a$$457, b$$355, c$$239) {
@@ -6796,7 +7646,9 @@ function v254() {
   function dh(a$$454) {
     this.lc = a$$454;
     var v2646 = this.ub;
-    var v1010 = r$$2(v2646, this);
+    introspect(JAM.policy.p3) {
+      var v1010 = r$$2(v2646, this)
+    }
     var v5112 = ye("rach::hdlr", v1010);
     this.K = v5112;
     var v1011 = this.K;
@@ -6806,9 +7658,7 @@ function v254() {
   function $g(a$$453, b$$352, c$$236) {
     var d$$150 = rg(b$$352);
     var v2647 = a$$453.google_reactive_ad_format;
-    introspect(JAM.policy.p4) {
-      var v1012 = Ug[v2647]
-    }
+    var v1012 = Ug[v2647];
     var v2648 = !v1012;
     if (v2648) {
       v1012 = null;
@@ -6835,9 +7685,7 @@ function v254() {
     var v1013 = v2649;
     if (v1013) {
       var v3730 = d$$150.wasReactiveAdCreated;
-      introspect(JAM.policy.p4) {
-        var v2650 = v3730[c$$236]
-      }
+      var v2650 = v3730[c$$236];
       v1013 = !v2650;
     }
     return v1013;
@@ -6959,21 +7807,29 @@ function v254() {
         var JSCompiler_inline_result$$41;
         var v1020 = a$$429.navigator;
         var a$$inline_346 = v1020.userAgent;
-        var v4393 = /(Android|iPhone OS|Windows Phone)/.test(a$$inline_346);
+        introspect(JAM.policy.p3) {
+          var v4393 = /(Android|iPhone OS|Windows Phone)/.test(a$$inline_346)
+        }
         var v3734 = !v4393;
         var v4394 = !v3734;
         if (v4394) {
-          v3734 = /Android 2/.test(a$$inline_346);
+          introspect(JAM.policy.p3) {
+            v3734 = /Android 2/.test(a$$inline_346);
+          }
         }
         var v2655 = v3734;
         var v3735 = !v2655;
         if (v3735) {
-          v2655 = /iPhone OS [34]_/.test(a$$inline_346);
+          introspect(JAM.policy.p3) {
+            v2655 = /iPhone OS [34]_/.test(a$$inline_346);
+          }
         }
         var v1021 = v2655;
         var v2656 = !v1021;
         if (v2656) {
-          v1021 = /Windows Phone (?:OS )?[67]/.test(a$$inline_346);
+          introspect(JAM.policy.p3) {
+            v1021 = /Windows Phone (?:OS )?[67]/.test(a$$inline_346);
+          }
         }
         JSCompiler_inline_result$$41 = v1021;
         JSCompiler_temp$$40 = !JSCompiler_inline_result$$41;
@@ -7009,16 +7865,22 @@ function v254() {
     var f$$51 = 0;
     var v1027 = f$$51 < e$$84;
     for (;v1027;) {
-      introspect(JAM.policy.p4) {
-        var g$$30 = d$$142[f$$51]
-      }
+      var g$$30 = d$$142[f$$51];
       var v2658 = g$$30.nodeName;
-      var v1026 = /data-/.test(v2658);
+      introspect(JAM.policy.p3) {
+        var v1026 = /data-/.test(v2658)
+      }
       if (v1026) {
         var v2659 = g$$30.nodeName;
-        var v1024 = v2659.replace("data", "google");
-        var h$$22 = v1024.replace(/-/g, "_");
-        var v1025 = b$$335.hasOwnProperty(h$$22);
+        introspect(JAM.policy.p3) {
+          var v1024 = v2659.replace("data", "google")
+        }
+        introspect(JAM.policy.p3) {
+          var h$$22 = v1024.replace(/-/g, "_")
+        }
+        introspect(JAM.policy.p3) {
+          var v1025 = b$$335.hasOwnProperty(h$$22)
+        }
         var v2660 = !v1025;
         if (v2660) {
           introspect(JAM.policy.p2) {
@@ -7034,7 +7896,9 @@ function v254() {
     var v1028 = "auto" == a$$inline_332;
     var v2661 = !v1028;
     if (v2661) {
-      v1028 = /^((^|,)(horizontal|vertical|rectangle))+$/.test(a$$inline_332);
+      introspect(JAM.policy.p3) {
+        v1028 = /^((^|,)(horizontal|vertical|rectangle))+$/.test(a$$inline_332);
+      }
     }
     JSCompiler_inline_result$$59 = v1028;
     if (JSCompiler_inline_result$$59) {
@@ -7068,7 +7932,9 @@ function v254() {
         if (v3739) {
           v2663 = 1200;
         } else {
-          v2663 = Math.round(d$$inline_337);
+          introspect(JAM.policy.p3) {
+            v2663 = Math.round(d$$inline_337);
+          }
         }
         v1031 = v2663;
       }
@@ -7085,13 +7951,17 @@ function v254() {
       var a$$inline_340 = a$$428;
       var v4399 = a$$inline_340.style;
       var v3740 = v4399.width;
-      var v2666 = sg.test(v3740);
+      introspect(JAM.policy.p3) {
+        var v2666 = sg.test(v3740)
+      }
       var v1033 = !v2666;
       var v2668 = !v1033;
       if (v2668) {
         var v4400 = a$$inline_340.style;
         var v3741 = v4400.height;
-        var v2667 = sg.test(v3741);
+        introspect(JAM.policy.p3) {
+          var v2667 = sg.test(v3741)
+        }
         v1033 = !v2667;
       }
       JSCompiler_inline_result$$54 = v1033;
@@ -7102,7 +7972,9 @@ function v254() {
         var v1034;
         var v2669 = c$$inline_344.getComputedStyle;
         if (v2669) {
-          v1034 = c$$inline_344.getComputedStyle(a$$inline_342, null);
+          introspect(JAM.policy.p3) {
+            v1034 = c$$inline_344.getComputedStyle(a$$inline_342, null);
+          }
         } else {
           v1034 = a$$inline_342.currentStyle;
         }
@@ -7141,23 +8013,13 @@ function v254() {
     var v2671 = d$$141.length;
     var v1040 = e$$83 < v2671;
     for (;v1040;) {
-      introspect(JAM.policy.p4) {
-        var v1039 = d$$141[e$$83]
-      }
-      introspect(JAM.policy.p4) {
-        var v3743 = d$$141[e$$83]
-      }
-      introspect(JAM.policy.p4) {
-        var v2672 = b$$334[v3743]
-      }
+      var v1039 = d$$141[e$$83];
+      var v3743 = d$$141[e$$83];
+      var v2672 = b$$334[v3743];
       var v3745 = !v2672;
       if (v3745) {
-        introspect(JAM.policy.p4) {
-          var v3744 = d$$141[e$$83]
-        }
-        introspect(JAM.policy.p4) {
-          v2672 = c$$221[v3744];
-        }
+        var v3744 = d$$141[e$$83];
+        v2672 = c$$221[v3744];
       }
       introspect(JAM.policy.p2) {
         b$$334[v1039] = v2672;
@@ -7180,7 +8042,9 @@ function v254() {
     return;
   }
   function Cg(a$$426) {
-    a$$426.setAttribute("data-adsbygoogle-status", "done");
+    introspect(JAM.policy.p3) {
+      a$$426.setAttribute("data-adsbygoogle-status", "done");
+    }
     return;
   }
   function Ag(a$$424) {
@@ -7208,7 +8072,9 @@ function v254() {
       return v1044;
     }
     var d$$140 = tg;
-    d$$140.sort(v36);
+    introspect(JAM.policy.p3) {
+      d$$140.sort(v36);
+    }
     var v1045 = "auto" == b$$331;
     if (v1045) {
       var v3746 = a$$422;
@@ -7227,24 +8093,20 @@ function v254() {
     var v1047 = c$$219;
     c$$219 = c$$219 - 1;
     for (;v1047;) {
-      introspect(JAM.policy.p4) {
-        var v4403 = d$$140[c$$219]
-      }
+      var v4403 = d$$140[c$$219];
       var v3749 = v4403.width;
       var v2683 = v3749 <= a$$422;
       if (v2683) {
-        introspect(JAM.policy.p4) {
-          var v4748 = d$$140[c$$219]
-        }
+        var v4748 = d$$140[c$$219];
         var v4404 = v4748.format;
-        var v3750 = b$$331.indexOf(v4404);
+        introspect(JAM.policy.p3) {
+          var v3750 = b$$331.indexOf(v4404)
+        }
         v2683 = -1 != v3750;
       }
       var v1046 = v2683;
       if (v1046) {
-        introspect(JAM.policy.p4) {
-          return d$$140[c$$219];
-        }
+        return d$$140[c$$219];
       }
       v1047 = c$$219;
       c$$219 = c$$219 - 1;
@@ -7257,23 +8119,23 @@ function v254() {
     var v2684 = c$$217.length;
     var v1051 = d$$138 < v2684;
     for (;v1051;) {
-      introspect(JAM.policy.p4) {
-        var v1048 = c$$217[d$$138]
-      }
+      var v1048 = c$$217[d$$138];
       var e$$81 = "google_ad_" + v1048;
-      var v2685 = b$$329.hasOwnProperty(e$$81);
+      introspect(JAM.policy.p3) {
+        var v2685 = b$$329.hasOwnProperty(e$$81)
+      }
       var v1050 = !v2685;
       if (v1050) {
-        introspect(JAM.policy.p4) {
-          var v2686 = c$$217[d$$138]
+        var v2686 = c$$217[d$$138];
+        var v1049 = a$$420[v2686];
+        introspect(JAM.policy.p3) {
+          var f$$50 = sg.exec(v1049)
         }
-        introspect(JAM.policy.p4) {
-          var v1049 = a$$420[v2686]
-        }
-        var f$$50 = sg.exec(v1049);
         if (f$$50) {
           var v2687 = f$$50[1];
-          var v5113 = Math.round(v2687);
+          introspect(JAM.policy.p3) {
+            var v5113 = Math.round(v2687)
+          }
           introspect(JAM.policy.p2) {
             b$$329[e$$81] = v5113;
           }
@@ -7307,7 +8169,9 @@ function v254() {
     a$$414 = a$$414.innerWidth;
     var v3751 = b$$327 / a$$414;
     var v2691 = v3751 - 1;
-    var v1054 = Math.abs(v2691);
+    introspect(JAM.policy.p3) {
+      var v1054 = Math.abs(v2691)
+    }
     return.05 > v1054;
   }
   function ng(a$$413) {
@@ -7339,7 +8203,9 @@ function v254() {
     throw Error(v1059);
   }
   function fg(a$$403) {
-    var v1060 = /^\s*$/.test(a$$403);
+    introspect(JAM.policy.p3) {
+      var v1060 = /^\s*$/.test(a$$403)
+    }
     if (v1060) {
       return!1;
     }
@@ -7347,18 +8213,24 @@ function v254() {
     var c$$213 = /"[^"\\\n\r\u2028\u2029\x00-\x08\x0a-\x1f]*"|true|false|null|-?\d+(?:\.\d*)?(?:[eE][+\-]?\d+)?/g;
     var d$$135 = /(?:^|:|,)(?:[\s\u2028\u2029]*\[)+/g;
     var e$$77 = /^[\],:{}\s\u2028\u2029]*$/;
-    var v3752 = a$$403.replace(b$$318, "@");
-    var v2694 = v3752.replace(c$$213, "]");
-    var v1061 = v2694.replace(d$$135, "");
-    return e$$77.test(v1061);
+    introspect(JAM.policy.p3) {
+      var v3752 = a$$403.replace(b$$318, "@")
+    }
+    introspect(JAM.policy.p3) {
+      var v2694 = v3752.replace(c$$213, "]")
+    }
+    introspect(JAM.policy.p3) {
+      var v1061 = v2694.replace(d$$135, "")
+    }
+    introspect(JAM.policy.p3) {
+      return e$$77.test(v1061);
+    }
   }
   function eg(a$$401, b$$315) {
     try {
       var v1062 = void 0;
       var v2695 = a$$401.frames;
-      introspect(JAM.policy.p4) {
-        var v1063 = v2695[b$$315]
-      }
+      var v1063 = v2695[b$$315];
       return v1062 != v1063;
     } catch (c$$211) {
       return!1;
@@ -7381,7 +8253,9 @@ function v254() {
     this.Sb = this.Fc = this.Pa = this.Tb = this.jc = this.ma = this.va = !1;
     var v3753 = V$$1.prototype;
     var v2696 = v3753.Qa;
-    var v1064 = r$$2(v2696, this);
+    introspect(JAM.policy.p3) {
+      var v1064 = r$$2(v2696, this)
+    }
     var v5115 = ye("zrt_mh::handler", v1064, d$$130);
     this.K = v5115;
     var v1065 = this.K;
@@ -7397,7 +8271,9 @@ function v254() {
     Ff(k$$9, g$$29, h$$21, v1066);
     var v1067 = '"' + Ne;
     k$$9.onload = v1067 + '"';
-    e$$75 = e$$75(a$$378, k$$9, b$$299);
+    introspect(JAM.policy.p3) {
+      e$$75 = e$$75(a$$378, k$$9, b$$299);
+    }
     JSCompiler_inline_label_Lf_304: {
       var v2697 = window.google_override_format;
       var v3755 = !v2697;
@@ -7406,9 +8282,7 @@ function v254() {
         var v4936 = v4996 + "x";
         var v4937 = window.google_ad_height;
         var v4749 = v4936 + v4937;
-        introspect(JAM.policy.p4) {
-          var v4405 = wf[v4749]
-        }
+        var v4405 = wf[v4749];
         var v3754 = !v4405;
         if (v3754) {
           var v4406 = window.google_loader_used;
@@ -7467,9 +8341,7 @@ function v254() {
       var v4750 = v4938 + "x";
       var v4751 = a$$inline_623.google_ad_height;
       var v4408 = v4750 + v4751;
-      introspect(JAM.policy.p4) {
-        var v3763 = wf[v4408]
-      }
+      var v3763 = wf[v4408];
       var v2703 = !v3763;
       if (v2703) {
         var v3764 = a$$inline_623.google_loader_used;
@@ -7481,7 +8353,9 @@ function v254() {
     var v1072;
     var v2705 = d$$inline_626 && c$$inline_625;
     if (v2705) {
-      v1072 = d$$inline_626.toLowerCase();
+      introspect(JAM.policy.p3) {
+        v1072 = d$$inline_626.toLowerCase();
+      }
     } else {
       v1072 = "";
     }
@@ -7652,7 +8526,9 @@ function v254() {
     }
     g$$29 = vf;
     var v1086 = new Date;
-    h$$21 = v1086.getTime();
+    introspect(JAM.policy.p3) {
+      h$$21 = v1086.getTime();
+    }
     var l$$11 = a$$378.google_top_experiment;
     var z$$5 = a$$378.google_async_for_oa_experiment;
     var C$$3 = a$$378.google_always_use_delayed_impressions_experiment;
@@ -7707,10 +8583,12 @@ function v254() {
     var v2725 = v3784;
     var v2726 = xf();
     var v1087 = ["<!doctype html><html><body>", b$$299, "<", f$$48, ">", c$$197, "google_show_ads_impl=true;google_unique_id=", v2719, ';google_async_iframe_id="', e$$75, '";google_start_time=', g$$29, ";", v2720, v2721, v2722, v2723, v2724, "google_bpp=", v2725, ";google_async_rrc=0;</", f$$48, ">", v2726, "</body></html>"];
-    k$$9 = v1087.join("");
+    introspect(JAM.policy.p3) {
+      k$$9 = v1087.join("");
+    }
     var v1088;
     var v3785 = a$$378.document;
-    introspect(JAM.policy.p1) {
+    introspect(JAM.policy.p3) {
       var v2727 = v3785.getElementById(e$$75)
     }
     if (v2727) {
@@ -7721,7 +8599,9 @@ function v254() {
     c$$197 = v1088;
     var v2728 = !0;
     var v1089 = Af(a$$378, e$$75, k$$9, v2728);
-    c$$197(v1089);
+    introspect(JAM.policy.p3) {
+      c$$197(v1089);
+    }
     return;
   }
   function Kf(a$$376, b$$297, c$$196) {
@@ -7739,7 +8619,7 @@ function v254() {
       var v2729 = !c$$inline_614;
       var v3786 = !v2729;
       if (v3786) {
-        introspect(JAM.policy.p1) {
+        introspect(JAM.policy.p3) {
           v2729 = a$$inline_612.getElementById(c$$inline_614);
         }
       }
@@ -7751,7 +8631,7 @@ function v254() {
         var v2730 = !c$$inline_614;
         var v3787 = !v2730;
         if (v3787) {
-          introspect(JAM.policy.p1) {
+          introspect(JAM.policy.p3) {
             v2730 = a$$inline_612.getElementById(c$$inline_614);
           }
         }
@@ -7771,19 +8651,25 @@ function v254() {
       var d$$inline_620 = ["<iframe"];
       var e$$inline_621;
       for (e$$inline_621 in a$$inline_617) {
-        var v1094 = a$$inline_617.hasOwnProperty(e$$inline_621);
+        introspect(JAM.policy.p3) {
+          var v1094 = a$$inline_617.hasOwnProperty(e$$inline_621)
+        }
         if (v1094) {
           var v3788 = e$$inline_621 + "=";
-          introspect(JAM.policy.p4) {
-            var v3789 = a$$inline_617[e$$inline_621]
-          }
+          var v3789 = a$$inline_617[e$$inline_621];
           var v2731 = v3788 + v3789;
           ib$$1(d$$inline_620, v2731);
         }
       }
-      d$$inline_620.push('style="left:0;position:absolute;top:0;"');
-      d$$inline_620.push("></iframe>");
-      d$$inline_620 = d$$inline_620.join(" ");
+      introspect(JAM.policy.p3) {
+        d$$inline_620.push('style="left:0;position:absolute;top:0;"');
+      }
+      introspect(JAM.policy.p3) {
+        d$$inline_620.push("></iframe>");
+      }
+      introspect(JAM.policy.p3) {
+        d$$inline_620 = d$$inline_620.join(" ");
+      }
       var JSCompiler_inline_result$$744;
       var v1095 = a$$inline_617.id;
       var a$$inline_750 = v1095 + "_anchor";
@@ -7793,7 +8679,9 @@ function v254() {
       var v1096 = v2732 + b$$inline_751;
       b$$inline_751 = v1096 + "px;background-color:transparent";
       a$$inline_750 = ['<ins style="display:inline-table;', b$$inline_751, '">', '<ins id="', a$$inline_750, '" style="display:block;', b$$inline_751, '">', d$$inline_620, "</ins></ins>"];
-      JSCompiler_inline_result$$744 = a$$inline_750.join("");
+      introspect(JAM.policy.p3) {
+        JSCompiler_inline_result$$744 = a$$inline_750.join("");
+      }
       JSCompiler_inline_result$$569 = a$$inline_617 = JSCompiler_inline_result$$744;
       JSCompiler_temp_const$$568.innerHTML = JSCompiler_inline_result$$569;
       JSCompiler_inline_result$$68 = b$$inline_299.id;
@@ -7844,7 +8732,9 @@ function v254() {
     }
     var v3792 = v4426;
     var v2734 = ["/pagead/html/", v3791, "/r20130906/zrt_lookup.html", v3792];
-    var v1105 = v2734.join("");
+    introspect(JAM.policy.p3) {
+      var v1105 = v2734.join("")
+    }
     return L$$1(v1104, v1105);
   }
   function Cf(a$$368) {
@@ -7855,24 +8745,34 @@ function v254() {
         var v4427 = v4754 + '="';
         var v3793 = v4427 + a$$369;
         var v2735 = v3793 + '"';
-        b$$291.push(v2735);
+        introspect(JAM.policy.p3) {
+          b$$291.push(v2735);
+        }
       }
       return;
     }
     var b$$291 = ["<iframe"];
     x$$50(a$$368, v38);
-    b$$291.push("></iframe>");
-    return b$$291.join("");
+    introspect(JAM.policy.p3) {
+      b$$291.push("></iframe>");
+    }
+    introspect(JAM.policy.p3) {
+      return b$$291.join("");
+    }
   }
   function Bf(a$$366, b$$289, c$$190) {
     function v39(a$$367, b$$290) {
       var v1107 = null != a$$367;
       if (v1107) {
-        d$$119.setAttribute(b$$290, a$$367);
+        introspect(JAM.policy.p3) {
+          d$$119.setAttribute(b$$290, a$$367);
+        }
       }
       return;
     }
-    var d$$119 = a$$366.createElement("iframe");
+    introspect(JAM.policy.p3) {
+      var d$$119 = a$$366.createElement("iframe")
+    }
     x$$50(b$$289, v39);
     if (c$$190) {
       var v2736 = d$$119.style;
@@ -7885,7 +8785,9 @@ function v254() {
       var e$$72 = !1;
       if (d$$118) {
         var v1108 = qf();
-        v1108.al(3E4);
+        introspect(JAM.policy.p3) {
+          v1108.al(3E4);
+        }
       }
       try {
         var JSCompiler_inline_result$$60;
@@ -7893,7 +8795,7 @@ function v254() {
         var b$$inline_294 = b$$288;
         var c$$inline_295 = c$$189;
         var v1109 = a$$inline_293.document;
-        introspect(JAM.policy.p1) {
+        introspect(JAM.policy.p3) {
           var d$$inline_296 = v1109.getElementById(b$$inline_294)
         }
         d$$inline_296 = d$$inline_296.contentWindow;
@@ -7903,7 +8805,7 @@ function v254() {
           var b$$inline_605 = b$$inline_294;
           var c$$inline_606 = c$$inline_295;
           var v2737 = a$$inline_604.document;
-          introspect(JAM.policy.p1) {
+          introspect(JAM.policy.p3) {
             var v1110 = v2737.getElementById(b$$inline_605)
           }
           a$$inline_604 = v1110.contentWindow;
@@ -7916,22 +8818,28 @@ function v254() {
           var v1111 = v2738;
           var v2739 = !v1111;
           if (v2739) {
-            b$$inline_605.open();
+            introspect(JAM.policy.p3) {
+              b$$inline_605.open();
+            }
             a$$inline_604.google_async_iframe_close = !0;
-            b$$inline_605.write(c$$inline_606);
+            introspect(JAM.policy.p3) {
+              b$$inline_605.write(c$$inline_606);
+            }
           }
         } else {
           var a$$inline_608 = a$$inline_293;
           var c$$inline_610 = c$$inline_295;
           var v2740 = a$$inline_608.document;
-          introspect(JAM.policy.p1) {
+          introspect(JAM.policy.p3) {
             var v1112 = v2740.getElementById(b$$inline_294)
           }
           a$$inline_608 = v1112.contentWindow;
           var v1113 = ab$$1(c$$inline_610);
           c$$inline_610 = "javascript:" + v1113;
           var v1114 = a$$inline_608.location;
-          v1114.replace(c$$inline_610);
+          introspect(JAM.policy.p3) {
+            v1114.replace(c$$inline_610);
+          }
         }
         JSCompiler_inline_result$$60 = void 0;
         JSCompiler_inline_result$$60;
@@ -7944,7 +8852,9 @@ function v254() {
         var v3795 = new Me(a$$365);
         var v4428 = !1;
         var v3796 = Af(a$$365, b$$288, e$$72, v4428);
-        v3795.set(b$$288, v3796);
+        introspect(JAM.policy.p3) {
+          v3795.set(b$$288, v3796);
+        }
       }
       return;
     }
@@ -7967,28 +8877,38 @@ function v254() {
     var v3799 = La$$1();
     var v4755 = Da$$1();
     var v4430 = ["/pagead/js/", v4755, "/r20130906/show_ads_impl.js"];
-    var v3800 = v4430.join("");
+    introspect(JAM.policy.p3) {
+      var v3800 = v4430.join("")
+    }
     var v2743 = L$$1(v3799, v3800, "");
     var v1117 = ["<", a$$363, ' src="', v2743, '"></', a$$363, ">"];
-    return v1117.join("");
+    introspect(JAM.policy.p3) {
+      return v1117.join("");
+    }
   }
   function uf() {
     var v1118 = hc();
     var a$$362 = v1118.google_jobrunner;
     var v1119 = pf(a$$362);
     if (v1119) {
-      a$$362.rl();
+      introspect(JAM.policy.p3) {
+        a$$362.rl();
+      }
     }
     return;
   }
   function sf(a$$360, b$$286) {
     var v1120 = qf();
-    v1120.nqa(a$$360, b$$286);
+    introspect(JAM.policy.p3) {
+      v1120.nqa(a$$360, b$$286);
+    }
     return;
   }
   function rf(a$$359, b$$285) {
     var v1121 = qf();
-    v1121.nq(a$$359, b$$285);
+    introspect(JAM.policy.p3) {
+      v1121.nq(a$$359, b$$285);
+    }
     return;
   }
   function qf() {
@@ -8040,7 +8960,9 @@ function v254() {
   }
   function of(a$$356) {
     try {
-      return a$$356.sz();
+      introspect(JAM.policy.p3) {
+        return a$$356.sz();
+      }
     } catch (b$$283) {
       return!1;
     }
@@ -8093,13 +9015,13 @@ function v254() {
     if (v3804) {
       var v4758 = a$$346.length;
       var v4436 = v4758 - 1;
-      introspect(JAM.policy.p4) {
-        v3804 = a$$346 = a$$346[v4436];
-      }
+      v3804 = a$$346 = a$$346[v4436];
     }
     var v2750 = v3804;
     if (v2750) {
-      var v3805 = b$$277.indexOf(a$$346);
+      introspect(JAM.policy.p3) {
+        var v3805 = b$$277.indexOf(a$$346)
+      }
       v2750 = -1 == v3805;
     }
     var v1130 = v2750;
@@ -8125,7 +9047,9 @@ function v254() {
   }
   function Ye() {
     var v1132 = H$$1();
-    var a$$344 = v1132.m(10);
+    introspect(JAM.policy.p3) {
+      var a$$344 = v1132.m(10)
+    }
     var b$$275 = K$$1.PERISCOPE_FOR_TARGETING;
     var v1133 = b$$275.EXPERIMENT_REFERER_CLEANUP;
     return a$$344 === v1133;
@@ -8148,9 +9072,7 @@ function v254() {
     }
     a$$343 = v1134;
     var b$$274 = {visible:1, hidden:2, prerender:3, preview:4};
-    introspect(JAM.policy.p4) {
-      var v1135 = b$$274[a$$343]
-    }
+    var v1135 = b$$274[a$$343];
     var v2753 = !v1135;
     if (v2753) {
       v1135 = 0;
@@ -8164,9 +9086,7 @@ function v254() {
       var v2754 = b$$268.length;
       var v1137 = d$$112 < v2754;
       for (;v1137;) {
-        introspect(JAM.policy.p4) {
-          var v2755 = b$$268[d$$112]
-        }
+        var v2755 = b$$268[d$$112];
         var v1136 = String(v2755);
         Ve(a$$337, v1136, c$$180);
         d$$112++;
@@ -8186,7 +9106,9 @@ function v254() {
         var v2757 = v3808;
         var v3809 = String(b$$268);
         var v2758 = encodeURIComponent(v3809);
-        c$$180.push("&", a$$337, v2757, v2758);
+        introspect(JAM.policy.p3) {
+          c$$180.push("&", a$$337, v2757, v2758);
+        }
       }
     }
     return;
@@ -8227,13 +9149,17 @@ function v254() {
         }
       }
     }
-    return a$$333.match(Pe);
+    introspect(JAM.policy.p3) {
+      return a$$333.match(Pe);
+    }
   }
   function Oe(a$$332, b$$265) {
     var v2762 = "\\b" + a$$332;
     var v1144 = v2762 + "=(\\d+)";
     var c$$178 = RegExp(v1144);
-    var d$$111 = c$$178.exec(b$$265);
+    introspect(JAM.policy.p3) {
+      var d$$111 = c$$178.exec(b$$265)
+    }
     if (d$$111) {
       var v4759 = d$$111[1];
       var v4439 = +v4759;
@@ -8245,7 +9171,9 @@ function v254() {
       d$$111 = v3811;
       var v4441 = a$$332 + "=";
       var v3812 = v4441 + d$$111;
-      b$$265 = b$$265.replace(c$$178, v3812);
+      introspect(JAM.policy.p3) {
+        b$$265 = b$$265.replace(c$$178, v3812);
+      }
     }
     return b$$265;
   }
@@ -8255,7 +9183,9 @@ function v254() {
     var v2764 = !v1145;
     if (v2764) {
       var v3813 = this.Qc;
-      var v2763 = r$$2(v3813, this);
+      introspect(JAM.policy.p3) {
+        var v2763 = r$$2(v3813, this)
+      }
       a$$328.google_iframe_oncopy = {handlers:{}, upd:v2763};
     }
     this.hd = a$$328.google_iframe_oncopy;
@@ -8282,7 +9212,9 @@ function v254() {
     try {
       var v2768 = a$$326.location;
       var v1147 = v2768.host;
-      var b$$260 = Ie.test(v1147);
+      introspect(JAM.policy.p3) {
+        var b$$260 = Ie.test(v1147)
+      }
       var v4760 = a$$326.postMessage;
       var v4442 = !v4760;
       var v4762 = !v4442;
@@ -8315,7 +9247,9 @@ function v254() {
         var f$$41;
         try {
           var v1149 = new Be;
-          f$$41 = v1149.serialize(a$$324);
+          introspect(JAM.policy.p3) {
+            f$$41 = v1149.serialize(a$$324);
+          }
         } catch (g$$26) {
         }
         if (f$$41) {
@@ -8325,15 +9259,11 @@ function v254() {
       return;
     }
     var b$$257 = "google_page_url";
-    introspect(JAM.policy.p4) {
-      var v1151 = a$$323[b$$257]
-    }
+    var v1151 = a$$323[b$$257];
     if (v1151) {
       var v2770 = a$$323;
       var v2771 = b$$257;
-      introspect(JAM.policy.p4) {
-        var v3819 = a$$323[b$$257]
-      }
+      var v3819 = a$$323[b$$257];
       var v5118 = String(v3819);
       introspect(JAM.policy.p2) {
         v2770[v2771] = v5118;
@@ -8341,7 +9271,9 @@ function v254() {
     }
     var c$$174 = [];
     x$$50(a$$323, v41);
-    return c$$174.join("");
+    introspect(JAM.policy.p3) {
+      return c$$174.join("");
+    }
   }
   function Be() {
     return;
@@ -8391,7 +9323,7 @@ function v254() {
   }
   function ue(a$$307) {
     function v44(a$$308, d$$103) {
-      introspect(JAM.policy.p5) {
+      introspect(JAM.policy.p2) {
         b$$244[d$$103] = w$$6[a$$308];
       }
       return;
@@ -8402,7 +9334,9 @@ function v254() {
   }
   function se(a$$306, b$$243, c$$168) {
     c$$168 = c$$168 || .01;
-    var v2775 = Math.random();
+    introspect(JAM.policy.p3) {
+      var v2775 = Math.random()
+    }
     var v1154 = v2775 < c$$168;
     if (v1154) {
       var v4764 = "/pagead/gen_204?id=" + a$$306;
@@ -8410,7 +9344,9 @@ function v254() {
       a$$306 = v4764 + v4765;
       var v4766 = ma$$1("", "googlesyndication");
       a$$306 = L$$1(v4766, a$$306);
-      a$$306 = a$$306.substring(0, 2E3);
+      introspect(JAM.policy.p3) {
+        a$$306 = a$$306.substring(0, 2E3);
+      }
       nb$$1(w$$6, a$$306);
     }
     return;
@@ -8431,17 +9367,27 @@ function v254() {
       v2777 = 0;
     }
     var v1156 = v2777;
-    var v1157 = b$$242.substring(0, 512);
+    introspect(JAM.policy.p3) {
+      var v1157 = b$$242.substring(0, 512)
+    }
     var v2778 = e$$64;
     if (v2778) {
-      v2778 = e$$64.substring(0, 40);
+      introspect(JAM.policy.p3) {
+        v2778 = e$$64.substring(0, 40);
+      }
     }
     var v1158 = v2778;
-    var v1159 = d$$102.toString();
+    introspect(JAM.policy.p3) {
+      var v1159 = d$$102.toString()
+    }
     var v2779 = f$$39.URL;
-    var v1160 = v2779.substring(0, 512);
+    introspect(JAM.policy.p3) {
+      var v1160 = v2779.substring(0, 512)
+    }
     var v2780 = f$$39.referrer;
-    var v1161 = v2780.substring(0, 512);
+    introspect(JAM.policy.p3) {
+      var v1161 = v2780.substring(0, 512)
+    }
     a$$305 = {jscb:v1155, jscd:v1156, context:a$$305, msg:v1157, eid:v1158, file:c$$167, line:v1159, url:v1160, ref:v1161};
     ue(a$$305);
     se("jserror", a$$305);
@@ -8449,15 +9395,21 @@ function v254() {
   }
   function te(a$$304, b$$241, c$$166, d$$101) {
     try {
-      c$$166();
+      introspect(JAM.policy.p3) {
+        c$$166();
+      }
     } catch (e$$63) {
       c$$166 = !Ga$$1;
       try {
-        var f$$38 = e$$63.toString();
+        introspect(JAM.policy.p3) {
+          var f$$38 = e$$63.toString()
+        }
         var v2781 = e$$63.name;
         if (v2781) {
           var v4447 = e$$63.name;
-          var v3823 = f$$38.indexOf(v4447);
+          introspect(JAM.policy.p3) {
+            var v3823 = f$$38.indexOf(v4447)
+          }
           v2781 = -1 == v3823;
         }
         var v1162 = v2781;
@@ -8469,7 +9421,9 @@ function v254() {
         var v2782 = e$$63.message;
         if (v2782) {
           var v4449 = e$$63.message;
-          var v3825 = f$$38.indexOf(v4449);
+          introspect(JAM.policy.p3) {
+            var v3825 = f$$38.indexOf(v4449)
+          }
           v2782 = -1 == v3825;
         }
         var v1163 = v2782;
@@ -8484,7 +9438,9 @@ function v254() {
             var a$$inline_237 = e$$63.stack;
             var b$$inline_238 = f$$38;
             try {
-              var v2783 = a$$inline_237.indexOf(b$$inline_238);
+              introspect(JAM.policy.p3) {
+                var v2783 = a$$inline_237.indexOf(b$$inline_238)
+              }
               var v1164 = -1 == v2783;
               if (v1164) {
                 var v2784 = b$$inline_238 + "\n";
@@ -8494,10 +9450,14 @@ function v254() {
               var v1165 = a$$inline_237 != c$$inline_239;
               for (;v1165;) {
                 c$$inline_239 = a$$inline_237;
-                a$$inline_237 = a$$inline_237.replace(/((https?:\/..*\/)[^\/:]*:\d+(?:.|\n)*)\2/, "$1");
+                introspect(JAM.policy.p3) {
+                  a$$inline_237 = a$$inline_237.replace(/((https?:\/..*\/)[^\/:]*:\d+(?:.|\n)*)\2/, "$1");
+                }
                 v1165 = a$$inline_237 != c$$inline_239;
               }
-              f$$38 = a$$inline_237.replace(/\n */g, "\n");
+              introspect(JAM.policy.p3) {
+                f$$38 = a$$inline_237.replace(/\n */g, "\n");
+              }
             } catch (d$$inline_240) {
               f$$38 = b$$inline_238;
             }
@@ -8518,7 +9478,9 @@ function v254() {
           try {
             var v1169;
             if (d$$101) {
-              v1169 = d$$101();
+              introspect(JAM.policy.p3) {
+                v1169 = d$$101();
+              }
             } else {
               v1169 = "";
             }
@@ -8528,9 +9490,13 @@ function v254() {
           }
           k$$7 = "";
         }
-        c$$166 = b$$241(a$$304, f$$38, g$$25, h$$18, k$$7);
+        introspect(JAM.policy.p3) {
+          c$$166 = b$$241(a$$304, f$$38, g$$25, h$$18, k$$7);
+        }
       } catch (l$$10) {
-        var v4451 = l$$10.toString();
+        introspect(JAM.policy.p3) {
+          var v4451 = l$$10.toString()
+        }
         var v3827 = v4451 + "\n";
         var v4452 = l$$10.stack;
         var v4767 = !v4452;
@@ -8567,7 +9533,9 @@ function v254() {
       return a$$300.__google_ad_urls = v5119;
     }
     try {
-      var v1173 = b$$237.getOseId();
+      introspect(JAM.policy.p3) {
+        var v1173 = b$$237.getOseId()
+      }
       if (v1173) {
         return b$$237;
       }
@@ -8642,7 +9610,9 @@ function v254() {
       var v2787 = a$$290.readyState;
       var v1181 = "complete" == v2787;
       if (v1181) {
-        b$$227();
+        introspect(JAM.policy.p3) {
+          b$$227();
+        }
       }
       return;
     }
@@ -8702,7 +9672,9 @@ function v254() {
   function ce(a$$287, b$$224) {
     if (a$$287) {
       var v1188 = b$$224 + "=([^&]+)";
-      var c$$152 = a$$287.match(v1188);
+      introspect(JAM.policy.p3) {
+        var c$$152 = a$$287.match(v1188)
+      }
       var v2791 = c$$152;
       if (v2791) {
         var v3832 = c$$152.length;
@@ -8729,7 +9701,9 @@ function v254() {
       var c$$inline_180 = c$$151;
       var v1191 = "&" + b$$inline_179;
       var d$$inline_181 = v1191 + "=";
-      b$$inline_179 = a$$inline_178.indexOf(d$$inline_181);
+      introspect(JAM.policy.p3) {
+        b$$inline_179 = a$$inline_178.indexOf(d$$inline_181);
+      }
       var v1192;
       var v2794 = 0 > b$$inline_179;
       if (v2794) {
@@ -8738,16 +9712,24 @@ function v254() {
       } else {
         var v4768 = d$$inline_181.length;
         b$$inline_179 = b$$inline_179 + v4768;
-        d$$inline_181 = a$$inline_178.indexOf("&", b$$inline_179);
+        introspect(JAM.policy.p3) {
+          d$$inline_181 = a$$inline_178.indexOf("&", b$$inline_179);
+        }
         var v3833;
         var v4457 = 0 <= d$$inline_181;
         if (v4457) {
-          var v4769 = a$$inline_178.substring(0, b$$inline_179);
+          introspect(JAM.policy.p3) {
+            var v4769 = a$$inline_178.substring(0, b$$inline_179)
+          }
           var v4454 = v4769 + c$$inline_180;
-          var v4455 = a$$inline_178.substring(d$$inline_181);
+          introspect(JAM.policy.p3) {
+            var v4455 = a$$inline_178.substring(d$$inline_181)
+          }
           v3833 = v4454 + v4455;
         } else {
-          var v4456 = a$$inline_178.substring(0, b$$inline_179);
+          introspect(JAM.policy.p3) {
+            var v4456 = a$$inline_178.substring(0, b$$inline_179)
+          }
           v3833 = v4456 + c$$inline_180;
         }
         v1192 = a$$inline_178 = v3833;
@@ -8793,7 +9775,9 @@ function v254() {
     var v3839 = v4460.host;
     var v2799 = encodeURIComponent(v3839);
     var v1194 = [v2797, "xpc=", b$$220, "&p=", v2798, "//", v2799];
-    b$$220 = v1194.join("");
+    introspect(JAM.policy.p3) {
+      b$$220 = v1194.join("");
+    }
     var v1195;
     if (d$$89) {
       v1195 = encodeURIComponent;
@@ -8803,17 +9787,27 @@ function v254() {
     d$$89 = v1195;
     var v2800 = a$$282;
     var v3840;
-    var v4940 = d$$89("?");
-    var v4770 = a$$282.indexOf(v4940);
+    introspect(JAM.policy.p3) {
+      var v4940 = d$$89("?")
+    }
+    introspect(JAM.policy.p3) {
+      var v4770 = a$$282.indexOf(v4940)
+    }
     var v4461 = -1 == v4770;
     if (v4461) {
-      v3840 = d$$89("?");
+      introspect(JAM.policy.p3) {
+        v3840 = d$$89("?");
+      }
     } else {
-      v3840 = d$$89("&");
+      introspect(JAM.policy.p3) {
+        v3840 = d$$89("&");
+      }
     }
     var v2801 = v3840;
     var v1196 = v2800 + v2801;
-    var v1197 = d$$89(b$$220);
+    introspect(JAM.policy.p3) {
+      var v1197 = d$$89(b$$220)
+    }
     return v1196 + v1197;
   }
   function Yd(a$$281, b$$219, c$$147, d$$88, e$$56, f$$33, g$$21, h$$14) {
@@ -8823,7 +9817,9 @@ function v254() {
     var b$$217 = R$$1(a$$279, "fontSize");
     var c$$145;
     var a$$inline_169 = b$$217;
-    var v2802 = a$$inline_169 = a$$inline_169.match(Sd);
+    introspect(JAM.policy.p3) {
+      var v2802 = a$$inline_169 = a$$inline_169.match(Sd)
+    }
     if (v2802) {
       v2802 = a$$inline_169[0];
     }
@@ -8873,7 +9869,9 @@ function v254() {
     }
     var v1202 = {style:"visibility:hidden;position:absolute;line-height:0;padding:0;margin:0;border:0;height:1em;"};
     c$$145 = kd("span", v1202);
-    a$$279.appendChild(c$$145);
+    introspect(JAM.policy.p3) {
+      a$$279.appendChild(c$$145);
+    }
     b$$217 = c$$145.offsetHeight;
     qd(c$$145);
     return b$$217;
@@ -8909,9 +9907,7 @@ function v254() {
     var v2808 = a$$275.currentStyle;
     if (v2808) {
       var v2807 = a$$275.currentStyle;
-      introspect(JAM.policy.p4) {
-        v1215 = v2807[b$$214];
-      }
+      v1215 = v2807[b$$214];
     } else {
       v1215 = null;
     }
@@ -8925,21 +9921,19 @@ function v254() {
     return v1216;
   }
   function Od(a$$274, b$$213, c$$141, d$$85) {
-    var v1217 = /^\d+px?$/.test(b$$213);
+    introspect(JAM.policy.p3) {
+      var v1217 = /^\d+px?$/.test(b$$213)
+    }
     if (v1217) {
       return parseInt(b$$213, 10);
     }
     var v1218 = a$$274.style;
-    introspect(JAM.policy.p4) {
-      var e$$54 = v1218[c$$141]
-    }
+    var e$$54 = v1218[c$$141];
     var v1219 = a$$274.runtimeStyle;
-    introspect(JAM.policy.p4) {
-      var f$$31 = v1219[c$$141]
-    }
+    var f$$31 = v1219[c$$141];
     var v1220 = a$$274.runtimeStyle;
     var v2809 = a$$274.currentStyle;
-    introspect(JAM.policy.p5) {
+    introspect(JAM.policy.p2) {
       v1220[c$$141] = v2809[c$$141];
     }
     var v1221 = a$$274.style;
@@ -8947,9 +9941,7 @@ function v254() {
       v1221[c$$141] = b$$213;
     }
     var v1222 = a$$274.style;
-    introspect(JAM.policy.p4) {
-      b$$213 = v1222[d$$85];
-    }
+    b$$213 = v1222[d$$85];
     var v1223 = a$$274.style;
     introspect(JAM.policy.p2) {
       v1223[c$$141] = e$$54;
@@ -9008,7 +10000,9 @@ function v254() {
         var v4465 = "filter" in b$$211;
         if (v4465) {
           var v4774 = b$$211.filter;
-          v4465 = b$$211 = v4774.match(/alpha\(opacity=([\d.]+)\)/);
+          introspect(JAM.policy.p3) {
+            v4465 = b$$211 = v4774.match(/alpha\(opacity=([\d.]+)\)/);
+          }
         }
         var v3845 = v4465;
         if (v3845) {
@@ -9074,7 +10068,9 @@ function v254() {
     if (v1230) {
       var v3850;
       if (b$$206) {
-        v3850 = Math.round(a$$267);
+        introspect(JAM.policy.p3) {
+          v3850 = Math.round(a$$267);
+        }
       } else {
         v3850 = a$$267;
       }
@@ -9124,7 +10120,9 @@ function v254() {
     }
     var v2822 = v3851;
     if (v2822) {
-      v2822 = b$$202 = c$$134.getBoxObjectFor(a$$263);
+      introspect(JAM.policy.p3) {
+        v2822 = b$$202 = c$$134.getBoxObjectFor(a$$263);
+      }
     }
     var v1235 = v2822;
     if (v1235) {
@@ -9162,7 +10160,9 @@ function v254() {
     var v4475 = !v3855;
     if (v4475) {
       var v4474 = dd(a$$inline_149);
-      v3855 = v4474.$b();
+      introspect(JAM.policy.p3) {
+        v3855 = v4474.$b();
+      }
     }
     var v2824 = v3855;
     if (v2824) {
@@ -9179,7 +10179,9 @@ function v254() {
     if (v1245) {
       b$$202 = Ad(a$$263);
       var v4476 = dd(c$$134);
-      a$$263 = v4476.Ja();
+      introspect(JAM.policy.p3) {
+        a$$263 = v4476.Ja();
+      }
       var v3856 = b$$202.left;
       var v3857 = a$$263.x;
       f$$28.x = v3856 + v3857;
@@ -9193,8 +10195,12 @@ function v254() {
       }
       var v1244 = v2827;
       if (v1244) {
-        b$$202 = c$$134.getBoxObjectFor(a$$263);
-        a$$263 = c$$134.getBoxObjectFor(g$$19);
+        introspect(JAM.policy.p3) {
+          b$$202 = c$$134.getBoxObjectFor(a$$263);
+        }
+        introspect(JAM.policy.p3) {
+          a$$263 = c$$134.getBoxObjectFor(g$$19);
+        }
         var v3858 = b$$202.screenX;
         var v3859 = a$$263.screenX;
         f$$28.x = v3858 - v3859;
@@ -9405,7 +10411,9 @@ function v254() {
   function Ad(a$$261) {
     var b$$200;
     try {
-      b$$200 = a$$261.getBoundingClientRect();
+      introspect(JAM.policy.p3) {
+        b$$200 = a$$261.getBoundingClientRect();
+      }
     } catch (c$$132) {
       return{left:0, top:0, right:0, bottom:0};
     }
@@ -9442,9 +10450,7 @@ function v254() {
       var v4492 = a$$259.currentStyle;
       if (v4492) {
         var v4491 = a$$259.currentStyle;
-        introspect(JAM.policy.p4) {
-          v3875 = v4491[b$$199];
-        }
+        v3875 = v4491[b$$199];
       } else {
         v3875 = null;
       }
@@ -9456,9 +10462,7 @@ function v254() {
       var v2853 = a$$259.style;
       if (v2853) {
         var v3877 = a$$259.style;
-        introspect(JAM.policy.p4) {
-          v2853 = v3877[b$$199];
-        }
+        v2853 = v3877[b$$199];
       }
       v1251 = v2853;
     }
@@ -9475,16 +10479,18 @@ function v254() {
     var v3878 = v4493;
     if (v3878) {
       var v4494 = c$$131.defaultView;
-      v3878 = c$$131 = v4494.getComputedStyle(a$$258, null);
+      introspect(JAM.policy.p3) {
+        v3878 = c$$131 = v4494.getComputedStyle(a$$258, null);
+      }
     }
     var v2856 = v3878;
     if (v2856) {
-      introspect(JAM.policy.p4) {
-        var v3879 = c$$131[b$$198]
-      }
+      var v3879 = c$$131[b$$198];
       var v4495 = !v3879;
       if (v4495) {
-        v3879 = c$$131.getPropertyValue(b$$198);
+        introspect(JAM.policy.p3) {
+          v3879 = c$$131.getPropertyValue(b$$198);
+        }
       }
       var v2855 = v3879;
       var v3880 = !v2855;
@@ -9505,9 +10511,7 @@ function v254() {
       var c$$inline_146 = db$$1(b$$inline_145);
       var v2857 = void 0;
       var v3881 = a$$inline_144.style;
-      introspect(JAM.policy.p4) {
-        var v2858 = v3881[c$$inline_146]
-      }
+      var v2858 = v3881[c$$inline_146];
       var v1256 = v2857 === v2858;
       if (v1256) {
         var v2859;
@@ -9539,9 +10543,7 @@ function v254() {
         var d$$inline_147 = v1253 + v1254;
         var v2860 = void 0;
         var v3883 = a$$inline_144.style;
-        introspect(JAM.policy.p4) {
-          var v2861 = v3883[d$$inline_147]
-        }
+        var v2861 = v3883[d$$inline_147];
         var v1255 = v2860 !== v2861;
         if (v1255) {
           JSCompiler_inline_result$$52 = d$$inline_147;
@@ -9636,11 +10638,17 @@ function v254() {
         if (c$$124) {
           var v4498 = a$$245.nodeValue;
           var v3889 = String(v4498);
-          var v2875 = v3889.replace(/(\r\n|\r|\n)/g, "");
-          v1265 = b$$190.push(v2875);
+          introspect(JAM.policy.p3) {
+            var v2875 = v3889.replace(/(\r\n|\r|\n)/g, "")
+          }
+          introspect(JAM.policy.p3) {
+            v1265 = b$$190.push(v2875);
+          }
         } else {
           var v2876 = a$$245.nodeValue;
-          v1265 = b$$190.push(v2876);
+          introspect(JAM.policy.p3) {
+            v1265 = b$$190.push(v2876);
+          }
         }
         v1265;
       } else {
@@ -9648,10 +10656,10 @@ function v254() {
         var v1267 = v2877 in td;
         if (v1267) {
           var v2878 = a$$245.nodeName;
-          introspect(JAM.policy.p4) {
-            var v1266 = td[v2878]
+          var v1266 = td[v2878];
+          introspect(JAM.policy.p3) {
+            b$$190.push(v1266);
           }
-          b$$190.push(v1266);
         } else {
           a$$245 = a$$245.firstChild;
           for (;a$$245;) {
@@ -9690,7 +10698,9 @@ function v254() {
       var v1271 = a$$242 == b$$188;
       var v2882 = !v1271;
       if (v2882) {
-        v1271 = a$$242.contains(b$$188);
+        introspect(JAM.policy.p3) {
+          v1271 = a$$242.contains(b$$188);
+        }
       }
       return v1271;
     }
@@ -9701,7 +10711,9 @@ function v254() {
       var v1273 = a$$242 == b$$188;
       var v2885 = !v1273;
       if (v2885) {
-        var v3894 = a$$242.compareDocumentPosition(b$$188);
+        introspect(JAM.policy.p3) {
+          var v3894 = a$$242.compareDocumentPosition(b$$188)
+        }
         var v2884 = v3894 & 16;
         v1273 = Boolean(v2884);
       }
@@ -9731,7 +10743,9 @@ function v254() {
     var v2889 = v3895;
     if (v2889) {
       var v2888 = a$$241.parentNode;
-      v1276 = v2888.removeChild(a$$241);
+      introspect(JAM.policy.p3) {
+        v1276 = v2888.removeChild(a$$241);
+      }
     } else {
       v1276 = null;
     }
@@ -9743,7 +10757,9 @@ function v254() {
     return;
   }
   function od(a$$239, b$$186) {
-    a$$239.appendChild(b$$186);
+    introspect(JAM.policy.p3) {
+      a$$239.appendChild(b$$186);
+    }
     return;
   }
   function nd(a$$238) {
@@ -9813,21 +10829,23 @@ function v254() {
         var v3896;
         var v4499 = p$$1(c$$123);
         if (v4499) {
-          v3896 = a$$237.createTextNode(c$$123);
+          introspect(JAM.policy.p3) {
+            v3896 = a$$237.createTextNode(c$$123);
+          }
         } else {
           v3896 = c$$123;
         }
         var v2891 = v3896;
-        b$$185.appendChild(v2891);
+        introspect(JAM.policy.p3) {
+          b$$185.appendChild(v2891);
+        }
       }
       return;
     }
     var v2892 = c$$122.length;
     var v1281 = d$$76 < v2892;
     for (;v1281;) {
-      introspect(JAM.policy.p4) {
-        var f$$27 = c$$122[d$$76]
-      }
+      var f$$27 = c$$122[d$$76];
       var v1280;
       var v4500 = ca$$1(f$$27);
       var v3897 = !v4500;
@@ -9852,7 +10870,9 @@ function v254() {
           v3898 = f$$27;
         }
         var v2893 = v3898;
-        v1280 = Zb(v2893, e$$50);
+        introspect(JAM.policy.p3) {
+          v1280 = Zb(v2893, e$$50);
+        }
       }
       v1280;
       d$$76++;
@@ -9886,22 +10906,32 @@ function v254() {
       if (v1282) {
         var v3901 = d$$inline_138.name;
         var v2897 = Sa$$1(v3901);
-        c$$inline_137.push(' name="', v2897, '"');
+        introspect(JAM.policy.p3) {
+          c$$inline_137.push(' name="', v2897, '"');
+        }
       }
       var v1284 = d$$inline_138.type;
       if (v1284) {
         var v2898 = d$$inline_138.type;
         var v1283 = Sa$$1(v2898);
-        c$$inline_137.push(' type="', v1283, '"');
+        introspect(JAM.policy.p3) {
+          c$$inline_137.push(' type="', v1283, '"');
+        }
         var e$$inline_139 = {};
         Gc(e$$inline_139, d$$inline_138);
         delete e$$inline_139.type;
         d$$inline_138 = e$$inline_139;
       }
-      c$$inline_137.push(">");
-      c$$inline_137 = c$$inline_137.join("");
+      introspect(JAM.policy.p3) {
+        c$$inline_137.push(">");
+      }
+      introspect(JAM.policy.p3) {
+        c$$inline_137 = c$$inline_137.join("");
+      }
     }
-    c$$inline_137 = document.createElement(c$$inline_137);
+    introspect(JAM.policy.p3) {
+      c$$inline_137 = document.createElement(c$$inline_137);
+    }
     if (d$$inline_138) {
       var v2899;
       var v3903 = p$$1(d$$inline_138);
@@ -9912,8 +10942,12 @@ function v254() {
         var v4506 = n$$2(d$$inline_138);
         if (v4506) {
           var v4795 = [c$$inline_137];
-          var v4505 = v4795.concat(d$$inline_138);
-          v3902 = ad.apply(null, v4505);
+          introspect(JAM.policy.p3) {
+            var v4505 = v4795.concat(d$$inline_138)
+          }
+          introspect(JAM.policy.p3) {
+            v3902 = ad.apply(null, v4505);
+          }
         } else {
           v3902 = fd(c$$inline_137, d$$inline_138);
         }
@@ -9950,22 +10984,28 @@ function v254() {
             var v4507;
             var v4798 = d$$74 in ed;
             if (v4798) {
-              introspect(JAM.policy.p4) {
-                var v4796 = ed[d$$74]
+              var v4796 = ed[d$$74];
+              introspect(JAM.policy.p3) {
+                v4507 = a$$231.setAttribute(v4796, b$$181);
               }
-              v4507 = a$$231.setAttribute(v4796, b$$181);
             } else {
               var v4797;
-              var v5028 = d$$74.lastIndexOf("aria-", 0);
+              introspect(JAM.policy.p3) {
+                var v5028 = d$$74.lastIndexOf("aria-", 0)
+              }
               var v5001 = 0 == v5028;
               var v5030 = !v5001;
               if (v5030) {
-                var v5029 = d$$74.lastIndexOf("data-", 0);
+                introspect(JAM.policy.p3) {
+                  var v5029 = d$$74.lastIndexOf("data-", 0)
+                }
                 v5001 = 0 == v5029;
               }
               var v4952 = v5001;
               if (v4952) {
-                v4797 = a$$231.setAttribute(d$$74, b$$181);
+                introspect(JAM.policy.p3) {
+                  v4797 = a$$231.setAttribute(d$$74, b$$181);
+                }
               } else {
                 introspect(JAM.policy.p2) {
                   v4797 = a$$231[d$$74] = b$$181;
@@ -10012,22 +11052,22 @@ function v254() {
     var v2906 = b$$inline_129.length;
     var v1292 = c$$inline_130 < v2906;
     for (;v1292;) {
-      introspect(JAM.policy.p4) {
-        var v2907 = b$$inline_129[c$$inline_130]
-      }
+      var v2907 = b$$inline_129[c$$inline_130];
       var v1291 = $b(a$$inline_128, v2907);
       var v2909 = !v1291;
       if (v2909) {
-        introspect(JAM.policy.p4) {
-          var v2908 = b$$inline_129[c$$inline_130]
+        var v2908 = b$$inline_129[c$$inline_130];
+        introspect(JAM.policy.p3) {
+          a$$inline_128.push(v2908);
         }
-        a$$inline_128.push(v2908);
       }
       c$$inline_130++;
       var v2910 = b$$inline_129.length;
       v1292 = c$$inline_130 < v2910;
     }
-    var b$$inline_133 = c$$118.join(" ");
+    introspect(JAM.policy.p3) {
+      var b$$inline_133 = c$$118.join(" ")
+    }
     a$$227.className = b$$inline_133;
     var v1293 = c$$118.length;
     return v1293 == e$$48;
@@ -10036,7 +11076,9 @@ function v254() {
     a$$226 = a$$226.className;
     var v2911 = p$$1(a$$226);
     if (v2911) {
-      v2911 = a$$226.match(/\S+/g);
+      introspect(JAM.policy.p3) {
+        v2911 = a$$226.match(/\S+/g);
+      }
     }
     var v1294 = v2911;
     var v2912 = !v1294;
@@ -10047,23 +11089,31 @@ function v254() {
   }
   function Uc(a$$223) {
     var JSCompiler_temp$$72;
-    introspect(JAM.policy.p4) {
-      var v1309 = JSCompiler_temp$$72 = Tc[a$$223]
-    }
+    var v1309 = JSCompiler_temp$$72 = Tc[a$$223];
     if (v1309) {
     } else {
       var JSCompiler_inline_result$$73;
       var b$$inline_114 = a$$223;
       var c$$inline_115 = 0;
       var v2913 = String(Sc);
-      var v1295 = v2913.replace(/^[\s\xa0]+|[\s\xa0]+$/g, "");
-      var d$$inline_116 = v1295.split(".");
+      introspect(JAM.policy.p3) {
+        var v1295 = v2913.replace(/^[\s\xa0]+|[\s\xa0]+$/g, "")
+      }
+      introspect(JAM.policy.p3) {
+        var d$$inline_116 = v1295.split(".")
+      }
       var v2914 = String(b$$inline_114);
-      var v1296 = v2914.replace(/^[\s\xa0]+|[\s\xa0]+$/g, "");
-      var e$$inline_117 = v1296.split(".");
+      introspect(JAM.policy.p3) {
+        var v1296 = v2914.replace(/^[\s\xa0]+|[\s\xa0]+$/g, "")
+      }
+      introspect(JAM.policy.p3) {
+        var e$$inline_117 = v1296.split(".")
+      }
       var v1297 = d$$inline_116.length;
       var v1298 = e$$inline_117.length;
-      var f$$inline_118 = Math.max(v1297, v1298);
+      introspect(JAM.policy.p3) {
+        var f$$inline_118 = Math.max(v1297, v1298)
+      }
       var g$$inline_119 = 0;
       var v2915 = 0 == c$$inline_115;
       if (v2915) {
@@ -10071,17 +11121,13 @@ function v254() {
       }
       var v1308 = v2915;
       for (;v1308;) {
-        introspect(JAM.policy.p4) {
-          var v1299 = d$$inline_116[g$$inline_119]
-        }
+        var v1299 = d$$inline_116[g$$inline_119];
         var v2916 = !v1299;
         if (v2916) {
           v1299 = "";
         }
         var h$$inline_120 = v1299;
-        introspect(JAM.policy.p4) {
-          var v1300 = e$$inline_117[g$$inline_119]
-        }
+        var v1300 = e$$inline_117[g$$inline_119];
         var v2917 = !v1300;
         if (v2917) {
           v1300 = "";
@@ -10091,13 +11137,17 @@ function v254() {
         var z$$inline_123 = RegExp("(\\d*)(\\D*)", "g");
         var v1307 = 0 == c$$inline_115;
         do {
-          var v1301 = l$$inline_122.exec(h$$inline_120);
+          introspect(JAM.policy.p3) {
+            var v1301 = l$$inline_122.exec(h$$inline_120)
+          }
           var v2918 = !v1301;
           if (v2918) {
             v1301 = ["", "", ""];
           }
           var C$$inline_124 = v1301;
-          var v1302 = z$$inline_123.exec(k$$inline_121);
+          introspect(JAM.policy.p3) {
+            var v1302 = z$$inline_123.exec(k$$inline_121)
+          }
           var v2919 = !v1302;
           if (v2919) {
             v1302 = ["", "", ""];
@@ -10198,7 +11248,9 @@ function v254() {
       var v4801 = typeof a$$221;
       var v4515 = "function" == v4801;
       if (v4515) {
-        v3916 = a$$221();
+        introspect(JAM.policy.p3) {
+          v3916 = a$$221();
+        }
       } else {
         v3916 = a$$221;
       }
@@ -10233,7 +11285,9 @@ function v254() {
           v5002 = null;
         }
         var v4953 = v5002;
-        var v4803 = a$$221 = b$$174.exec(v4953);
+        introspect(JAM.policy.p3) {
+          var v4803 = a$$221 = b$$174.exec(v4953)
+        }
         if (v4803) {
           v4517 = a$$221[1];
         } else {
@@ -10273,15 +11327,21 @@ function v254() {
     var v1317 = a$$220 = v2932;
     if (v1317) {
       var b$$173 = m$$3.navigator;
-      var v1313 = a$$220.lastIndexOf("Opera", 0);
+      introspect(JAM.policy.p3) {
+        var v1313 = a$$220.lastIndexOf("Opera", 0)
+      }
       Hc = 0 == v1313;
       var v1314 = !Hc;
       if (v1314) {
-        var v3922 = a$$220.indexOf("MSIE");
+        introspect(JAM.policy.p3) {
+          var v3922 = a$$220.indexOf("MSIE")
+        }
         var v2933 = -1 != v3922;
         var v3924 = !v2933;
         if (v3924) {
-          var v3923 = a$$220.indexOf("Trident");
+          introspect(JAM.policy.p3) {
+            var v3923 = a$$220.indexOf("Trident")
+          }
           v2933 = -1 != v3923;
         }
         v1314 = v2933;
@@ -10289,7 +11349,9 @@ function v254() {
       Ic = v1314;
       var v1315 = !Hc;
       if (v1315) {
-        var v2934 = a$$220.indexOf("WebKit");
+        introspect(JAM.policy.p3) {
+          var v2934 = a$$220.indexOf("WebKit")
+        }
         v1315 = -1 != v2934;
       }
       Jc = v1315;
@@ -10317,11 +11379,9 @@ function v254() {
     var v2937 = arguments.length;
     var v1319 = e$$47 < v2937;
     for (;v1319;) {
-      introspect(JAM.policy.p4) {
-        d$$72 = arguments[e$$47];
-      }
+      d$$72 = arguments[e$$47];
       for (c$$117 in d$$72) {
-        introspect(JAM.policy.p5) {
+        introspect(JAM.policy.p2) {
           a$$219[c$$117] = d$$72[c$$117];
         }
       }
@@ -10329,14 +11389,14 @@ function v254() {
       var v2938 = Fc.length;
       var v1318 = f$$26 < v2938;
       for (;v1318;) {
-        introspect(JAM.policy.p4) {
-          c$$117 = Fc[f$$26];
-        }
+        c$$117 = Fc[f$$26];
         var v4518 = Object.prototype;
         var v3926 = v4518.hasOwnProperty;
-        var v2939 = v3926.call(d$$72, c$$117);
+        introspect(JAM.policy.p3) {
+          var v2939 = v3926.call(d$$72, c$$117)
+        }
         if (v2939) {
-          introspect(JAM.policy.p5) {
+          introspect(JAM.policy.p2) {
             a$$219[c$$117] = d$$72[c$$117];
           }
         }
@@ -10353,9 +11413,7 @@ function v254() {
   function Ec(a$$218, b$$171) {
     var c$$116;
     for (c$$116 in a$$218) {
-      introspect(JAM.policy.p4) {
-        var v2942 = a$$218[c$$116]
-      }
+      var v2942 = a$$218[c$$116];
       var v1320 = v2942 == b$$171;
       if (v1320) {
         return!0;
@@ -10366,10 +11424,10 @@ function v254() {
   function Dc(a$$217, b$$170, c$$115) {
     var d$$71;
     for (d$$71 in a$$217) {
-      introspect(JAM.policy.p4) {
-        var v1321 = a$$217[d$$71]
+      var v1321 = a$$217[d$$71];
+      introspect(JAM.policy.p3) {
+        b$$170.call(c$$115, v1321, d$$71, a$$217);
       }
-      b$$170.call(c$$115, v1321, d$$71, a$$217);
     }
     return;
   }
@@ -10406,7 +11464,9 @@ function v254() {
       c$$113 = v2945;
     }
     var v1324 = [c$$113, "://", a$$212, b$$165];
-    return v1324.join("");
+    introspect(JAM.policy.p3) {
+      return v1324.join("");
+    }
   }
   function Bc(a$$211) {
     var v1325 = a$$211.google_page_location;
@@ -10423,7 +11483,9 @@ function v254() {
     var a$$inline_111 = a$$211;
     a$$inline_111 = a$$inline_111.google_ad_channel;
     var v1327;
-    var v2948 = zc.test(a$$inline_111);
+    introspect(JAM.policy.p3) {
+      var v2948 = zc.test(a$$inline_111)
+    }
     if (v2948) {
       v1327 = !0;
     } else {
@@ -10442,39 +11504,53 @@ function v254() {
     if (v1328) {
       return!1;
     }
-    b$$164 = b$$164.toString();
+    introspect(JAM.policy.p3) {
+      b$$164 = b$$164.toString();
+    }
     var v1329;
-    var v3930 = b$$164.indexOf("http://");
+    introspect(JAM.policy.p3) {
+      var v3930 = b$$164.indexOf("http://")
+    }
     var v2952 = 0 == v3930;
     if (v2952) {
       var v2950 = b$$164.length;
-      v1329 = b$$164 = b$$164.substring(7, v2950);
+      introspect(JAM.policy.p3) {
+        v1329 = b$$164 = b$$164.substring(7, v2950);
+      }
     } else {
-      var v3931 = b$$164.indexOf("https://");
+      introspect(JAM.policy.p3) {
+        var v3931 = b$$164.indexOf("https://")
+      }
       var v2951 = 0 == v3931;
       if (v2951) {
         var v3932 = b$$164.length;
-        v2951 = b$$164 = b$$164.substring(8, v3932);
+        introspect(JAM.policy.p3) {
+          v2951 = b$$164 = b$$164.substring(8, v3932);
+        }
       }
       v1329 = v2951;
     }
     v1329;
-    a$$211 = b$$164.indexOf("/");
+    introspect(JAM.policy.p3) {
+      a$$211 = b$$164.indexOf("/");
+    }
     var v1330 = -1 == a$$211;
     if (v1330) {
       a$$211 = b$$164.length;
     }
-    b$$164 = b$$164.substring(0, a$$211);
-    b$$164 = b$$164.split(".");
+    introspect(JAM.policy.p3) {
+      b$$164 = b$$164.substring(0, a$$211);
+    }
+    introspect(JAM.policy.p3) {
+      b$$164 = b$$164.split(".");
+    }
     a$$211 = !1;
     var v2953 = b$$164.length;
     var v1331 = 3 <= v2953;
     if (v1331) {
       var v4519 = b$$164.length;
       var v3933 = v4519 - 3;
-      introspect(JAM.policy.p4) {
-        var v2954 = b$$164[v3933]
-      }
+      var v2954 = b$$164[v3933];
       a$$211 = v2954 in yc;
     }
     var v2955 = b$$164.length;
@@ -10485,9 +11561,7 @@ function v254() {
       if (v3935) {
         var v4805 = b$$164.length;
         var v4520 = v4805 - 2;
-        introspect(JAM.policy.p4) {
-          var v3934 = b$$164[v4520]
-        }
+        var v3934 = b$$164[v4520];
         v2956 = v3934 in yc;
       }
       a$$211 = v2956;
@@ -10498,7 +11572,9 @@ function v254() {
     var a$$209 = J$$1();
     var v1333;
     if (a$$209) {
-      v1333 = a$$209.Ka();
+      introspect(JAM.policy.p3) {
+        v1333 = a$$209.Ka();
+      }
     } else {
       v1333 = "";
     }
@@ -10516,17 +11592,19 @@ function v254() {
       for (;v1337;) {
         var v1335 = b$$inline_107.defaultBucket;
         var v2957 = a$$inline_106.defaultBucket;
-        introspect(JAM.policy.p4) {
-          var v1336 = v2957[c$$inline_108]
+        var v1336 = v2957[c$$inline_108];
+        introspect(JAM.policy.p3) {
+          v1335.push(v1336);
         }
-        v1335.push(v1336);
         ++c$$inline_108;
         v1337 = c$$inline_108 < d$$inline_109;
       }
       var v1338 = a$$inline_106.layers;
       var v3936 = E$$1.prototype;
       var v2958 = v3936.Ga;
-      var v1339 = r$$2(v2958, b$$inline_107);
+      introspect(JAM.policy.p3) {
+        var v1339 = r$$2(v2958, b$$inline_107)
+      }
       x$$50(v1338, v1339);
       uc = b$$inline_107;
     }
@@ -10579,7 +11657,9 @@ function v254() {
   }
   function vc(a$$206) {
     try {
-      return a$$206.statusz();
+      introspect(JAM.policy.p3) {
+        return a$$206.statusz();
+      }
     } catch (b$$163) {
       return!1;
     }
@@ -10590,18 +11670,14 @@ function v254() {
     b$$159 = nc(b$$159);
     var v1343;
     var v3938 = void 0;
-    introspect(JAM.policy.p4) {
-      var v3939 = a$$202[b$$159]
-    }
+    var v3939 = a$$202[b$$159];
     var v2961 = v3938 === v3939;
     if (v2961) {
       introspect(JAM.policy.p2) {
         v1343 = a$$202[b$$159] = c$$112;
       }
     } else {
-      introspect(JAM.policy.p4) {
-        v1343 = a$$202[b$$159];
-      }
+      v1343 = a$$202[b$$159];
     }
     return v1343;
   }
@@ -10615,9 +11691,7 @@ function v254() {
   function G$$1(a$$200, b$$157) {
     var c$$110 = nc(b$$157);
     var v1346 = a$$200.S;
-    introspect(JAM.policy.p4) {
-      return c$$110 = v1346[c$$110];
-    }
+    return c$$110 = v1346[c$$110];
   }
   function nc(a$$199) {
     switch(a$$199) {
@@ -10650,9 +11724,7 @@ function v254() {
     var v1347;
     var v3940 = a$$197;
     if (v3940) {
-      introspect(JAM.policy.p4) {
-        v3940 = kc[a$$197];
-      }
+      v3940 = kc[a$$197];
     }
     var v2963 = v3940;
     if (v2963) {
@@ -10667,13 +11739,9 @@ function v254() {
       v1347 = v2962;
     }
     a$$197 = v1347;
-    introspect(JAM.policy.p4) {
-      var v1348 = lc[a$$197]
-    }
+    var v1348 = lc[a$$197];
     if (v1348) {
-      introspect(JAM.policy.p4) {
-        return lc[a$$197];
-      }
+      return lc[a$$197];
     }
     var v1349 = "google_persistent_state_async" == a$$197;
     if (v1349) {
@@ -10682,9 +11750,7 @@ function v254() {
     } else {
       c$$109 = b$$156 = D$$1();
     }
-    introspect(JAM.policy.p4) {
-      var d$$70 = b$$156[a$$197]
-    }
+    var d$$70 = b$$156[a$$197];
     var v1350;
     var v4522 = typeof d$$70;
     var v3941 = "object" != v4522;
@@ -10714,7 +11780,9 @@ function v254() {
     F$$1(this, 5, 0);
     F$$1(this, 6, 0);
     var v2965 = new Date;
-    var v1351 = v2965.getTime();
+    introspect(JAM.policy.p3) {
+      var v1351 = v2965.getTime()
+    }
     F$$1(this, 7, v1351);
     F$$1(this, 8, {});
     F$$1(this, 9, {});
@@ -10765,9 +11833,7 @@ function v254() {
     var v1357 = b$$148 < c$$105;
     for (;v1357;) {
       var v1355 = this.layers;
-      introspect(JAM.policy.p4) {
-        var v1356 = arguments[b$$148]
-      }
+      var v1356 = arguments[b$$148];
       introspect(JAM.policy.p2) {
         v1355[v1356] = "";
       }
@@ -10782,10 +11848,14 @@ function v254() {
     var v2970 = 2 >= v3942;
     if (v2970) {
       var v2968 = Xb.slice;
-      v1358 = v2968.call(a$$184, b$$147);
+      introspect(JAM.policy.p3) {
+        v1358 = v2968.call(a$$184, b$$147);
+      }
     } else {
       var v2969 = Xb.slice;
-      v1358 = v2969.call(a$$184, b$$147, c$$104);
+      introspect(JAM.policy.p3) {
+        v1358 = v2969.call(a$$184, b$$147, c$$104);
+      }
     }
     return v1358;
   }
@@ -10797,9 +11867,7 @@ function v254() {
       var d$$67 = 0;
       var v1359 = d$$67 < b$$146;
       for (;v1359;) {
-        introspect(JAM.policy.p4) {
-          c$$103[d$$67] = a$$183[d$$67];
-        }
+        c$$103[d$$67] = a$$183[d$$67];
         d$$67++;
         v1359 = d$$67 < b$$146;
       }
@@ -10808,13 +11876,17 @@ function v254() {
     return[];
   }
   function $b(a$$182, b$$145) {
-    var v1361 = Yb(a$$182, b$$145);
+    introspect(JAM.policy.p3) {
+      var v1361 = Yb(a$$182, b$$145)
+    }
     return 0 <= v1361;
   }
   function Wb(a$$177) {
     function v48() {
       var v1362 = a$$177.document;
-      v1362.close();
+      introspect(JAM.policy.p3) {
+        v1362.close();
+      }
       return;
     }
     var v3943 = B$$2;
@@ -10828,7 +11900,9 @@ function v254() {
     }
     var v1363 = v2971;
     if (v1363) {
-      a$$177.setTimeout(v48, 0);
+      introspect(JAM.policy.p3) {
+        a$$177.setTimeout(v48, 0);
+      }
     }
     return;
   }
@@ -10842,7 +11916,9 @@ function v254() {
     if (v1367) {
       var v1364 = v$$1.domain;
       var a$$170 = "." + v1364;
-      var v4526 = a$$170.split(".");
+      introspect(JAM.policy.p3) {
+        var v4526 = a$$170.split(".")
+      }
       var v3945 = v4526.length;
       var v2973 = 2 < v3945;
       if (v2973) {
@@ -10852,11 +11928,17 @@ function v254() {
       var v1365 = v2973;
       for (;v1365;) {
         var v2974 = v$$1;
-        var v4527 = a$$170.indexOf(".");
+        introspect(JAM.policy.p3) {
+          var v4527 = a$$170.indexOf(".")
+        }
         var v3947 = v4527 + 1;
-        v2974.domain = a$$170 = a$$170.substr(v3947);
+        introspect(JAM.policy.p3) {
+          v2974.domain = a$$170 = a$$170.substr(v3947);
+        }
         Ob = window.parent;
-        var v4528 = a$$170.split(".");
+        introspect(JAM.policy.p3) {
+          var v4528 = a$$170.split(".")
+        }
         var v3948 = v4528.length;
         var v2975 = 2 < v3948;
         if (v2975) {
@@ -10878,7 +11960,9 @@ function v254() {
       if (a$$168) {
         var b$$133 = a$$168;
         a$$168 = null;
-        b$$133.apply(null, arguments);
+        introspect(JAM.policy.p3) {
+          b$$133.apply(null, arguments);
+        }
       }
       return;
     }
@@ -10907,7 +11991,9 @@ function v254() {
   }
   function Hb(a$$163) {
     var v2980 = new Date;
-    var v1369 = v2980.getTime();
+    introspect(JAM.policy.p3) {
+      var v1369 = v2980.getTime()
+    }
     a$$163 = v1369 - a$$163;
     var v1370;
     var v2981 = 1E4 > a$$163;
@@ -10947,7 +12033,9 @@ function v254() {
           v2983 = "";
         }
         var v1376 = v2983;
-        b$$inline_96.push(v1376);
+        introspect(JAM.policy.p3) {
+          b$$inline_96.push(v1376);
+        }
         a$$inline_95 = a$$inline_95.parentNode;
         ++c$$inline_97;
         var v2984 = a$$inline_95;
@@ -10956,20 +12044,32 @@ function v254() {
         }
         v1377 = v2984;
       }
-      JSCompiler_inline_result$$22 = b$$inline_96.join();
+      introspect(JAM.policy.p3) {
+        JSCompiler_inline_result$$22 = b$$inline_96.join();
+      }
       var v1378 = a$$162 = JSCompiler_inline_result$$22;
       if (v1378) {
-        b$$130.push(a$$162);
+        introspect(JAM.policy.p3) {
+          b$$130.push(a$$162);
+        }
       }
     } else {
       var v2985 = Db(a$$162);
-      b$$130.push(v2985);
+      introspect(JAM.policy.p3) {
+        b$$130.push(v2985);
+      }
       var v2986 = Eb(w$$6);
-      b$$130.push(v2986);
+      introspect(JAM.policy.p3) {
+        b$$130.push(v2986);
+      }
     }
-    var v2987 = b$$130.join(":");
+    introspect(JAM.policy.p3) {
+      var v2987 = b$$130.join(":")
+    }
     var v1379 = Ab(v2987);
-    return v1379.toString();
+    introspect(JAM.policy.p3) {
+      return v1379.toString();
+    }
   }
   function Eb(a$$160) {
     var b$$128 = [];
@@ -10992,12 +12092,12 @@ function v254() {
           var v2989 = e$$42.length;
           var v1381 = f$$23 < v2989;
           for (;v1381;) {
-            introspect(JAM.policy.p4) {
-              var v2990 = e$$42[f$$23]
-            }
+            var v2990 = e$$42[f$$23];
             var v1380 = a$$160 == v2990;
             if (v1380) {
-              b$$128.push(f$$23);
+              introspect(JAM.policy.p3) {
+                b$$128.push(f$$23);
+              }
               break;
             }
             ++f$$23;
@@ -11020,7 +12120,9 @@ function v254() {
       } catch (g$$18) {
       }
     }
-    return b$$128.join();
+    introspect(JAM.policy.p3) {
+      return b$$128.join();
+    }
   }
   function Db(a$$159) {
     var b$$127 = [];
@@ -11047,13 +12149,17 @@ function v254() {
       var v1385 = a$$159.nodeName;
       if (v1385) {
         var v2995 = a$$159.nodeName;
-        v1385 = v2995.toLowerCase();
+        introspect(JAM.policy.p3) {
+          v1385 = v2995.toLowerCase();
+        }
       }
       var e$$41 = v1385;
       var v2996 = e$$41 + d$$58;
       var v2997 = Cb(a$$159);
       var v1386 = v2996 + v2997;
-      b$$127.push(v1386);
+      introspect(JAM.policy.p3) {
+        b$$127.push(v1386);
+      }
       a$$159 = a$$159.parentElement;
       ++c$$87;
       var v2998 = a$$159;
@@ -11062,12 +12168,16 @@ function v254() {
       }
       v1387 = v2998;
     }
-    return b$$127.join();
+    introspect(JAM.policy.p3) {
+      return b$$127.join();
+    }
   }
   function Cb(a$$158) {
     var b$$126 = a$$158.parentElement;
     var v1388 = a$$158.nodeName;
-    var c$$86 = v1388.toLowerCase();
+    introspect(JAM.policy.p3) {
+      var c$$86 = v1388.toLowerCase()
+    }
     if (b$$126) {
       b$$126 = b$$126.childNodes;
       var d$$57 = 0;
@@ -11075,13 +12185,13 @@ function v254() {
       var v2999 = b$$126.length;
       var v1391 = e$$40 < v2999;
       for (;v1391;) {
-        introspect(JAM.policy.p4) {
-          var f$$22 = b$$126[e$$40]
-        }
+        var f$$22 = b$$126[e$$40];
         var v3000 = f$$22.nodeName;
         if (v3000) {
           var v4531 = f$$22.nodeName;
-          var v3956 = v4531.toLowerCase();
+          introspect(JAM.policy.p3) {
+            var v3956 = v4531.toLowerCase()
+          }
           v3000 = v3956 == c$$86;
         }
         var v1390 = v3000;
@@ -11109,7 +12219,9 @@ function v254() {
     var e$$39 = 0;
     var v1394 = e$$39 < c$$84;
     for (;v1394;) {
-      var f$$21 = a$$156.charCodeAt(e$$39);
+      introspect(JAM.policy.p3) {
+        var f$$21 = a$$156.charCodeAt(e$$39)
+      }
       var v4532 = d$$56 << 5;
       var v4533 = d$$56 >> 2;
       var v3957 = v4532 + v4533;
@@ -11130,9 +12242,7 @@ function v254() {
   }
   function yb(a$$154) {
     var b$$123 = "google_unique_id";
-    introspect(JAM.policy.p4) {
-      a$$154 = a$$154[b$$123];
-    }
+    a$$154 = a$$154[b$$123];
     var v1396;
     var v3958 = typeof a$$154;
     var v3004 = "number" == v3958;
@@ -11146,13 +12256,9 @@ function v254() {
   function wb(a$$153) {
     var b$$122 = "google_unique_id";
     var v1397;
-    introspect(JAM.policy.p4) {
-      var v3005 = a$$153[b$$122]
-    }
+    var v3005 = a$$153[b$$122];
     if (v3005) {
-      introspect(JAM.policy.p4) {
-        var v3959 = a$$153[b$$122]
-      }
+      var v3959 = a$$153[b$$122];
       introspect(JAM.policy.p2) {
         v1397 = a$$153[b$$122] = v3959 + 1;
       }
@@ -11162,33 +12268,39 @@ function v254() {
       }
     }
     v1397;
-    introspect(JAM.policy.p4) {
-      return a$$153[b$$122];
-    }
+    return a$$153[b$$122];
   }
   function vb(a$$152, b$$121) {
-    var v3960 = Math.random();
+    introspect(JAM.policy.p3) {
+      var v3960 = Math.random()
+    }
     var v3006 = 1E-4 > v3960;
     var v1402 = !v3006;
     if (v1402) {
-      var c$$83 = Math.random();
+      introspect(JAM.policy.p3) {
+        var c$$83 = Math.random()
+      }
       var v1401 = c$$83 < b$$121;
       if (v1401) {
         try {
           var d$$55 = new Uint16Array(1);
           var v1398 = window.crypto;
-          v1398.getRandomValues(d$$55);
+          introspect(JAM.policy.p3) {
+            v1398.getRandomValues(d$$55);
+          }
           var v1399 = d$$55[0];
           c$$83 = v1399 / 65536;
         } catch (e$$38) {
-          c$$83 = Math.random();
+          introspect(JAM.policy.p3) {
+            c$$83 = Math.random();
+          }
         }
         var v3007 = a$$152.length;
         var v1400 = c$$83 * v3007;
-        c$$83 = Math.floor(v1400);
-        introspect(JAM.policy.p4) {
-          return a$$152[c$$83];
+        introspect(JAM.policy.p3) {
+          c$$83 = Math.floor(v1400);
         }
+        return a$$152[c$$83];
       }
     }
     return null;
@@ -11210,10 +12322,14 @@ function v254() {
       a$$150.google_image_requests = [];
     }
     var v1405 = a$$150.document;
-    var c$$82 = v1405.createElement("img");
+    introspect(JAM.policy.p3) {
+      var c$$82 = v1405.createElement("img")
+    }
     c$$82.src = b$$119;
     var v1406 = a$$150.google_image_requests;
-    v1406.push(c$$82);
+    introspect(JAM.policy.p3) {
+      v1406.push(c$$82);
+    }
     return;
   }
   function mb$$1(a$$149) {
@@ -11239,14 +12355,18 @@ function v254() {
         v4534 = !1;
       }
       var v3961 = v4534;
-      a$$148.removeEventListener(b$$118, c$$81, v3961);
+      introspect(JAM.policy.p3) {
+        a$$148.removeEventListener(b$$118, c$$81, v3961);
+      }
       v1408 = !0;
     } else {
       var v3010;
       var v3962 = a$$148.detachEvent;
       if (v3962) {
         var v4535 = "on" + b$$118;
-        a$$148.detachEvent(v4535, c$$81);
+        introspect(JAM.policy.p3) {
+          a$$148.detachEvent(v4535, c$$81);
+        }
         v3010 = !0;
       } else {
         v3010 = !1;
@@ -11256,7 +12376,9 @@ function v254() {
     return v1408;
   }
   function lb$$1(a$$147, b$$117, c$$80, d$$53, e$$37) {
-    c$$80 = r$$2(d$$53, c$$80);
+    introspect(JAM.policy.p3) {
+      c$$80 = r$$2(d$$53, c$$80);
+    }
     var v1409;
     var v3012 = y$$31(a$$147, b$$117, c$$80, e$$37);
     if (v3012) {
@@ -11276,14 +12398,18 @@ function v254() {
         v4536 = !1;
       }
       var v3963 = v4536;
-      a$$146.addEventListener(b$$116, c$$79, v3963);
+      introspect(JAM.policy.p3) {
+        a$$146.addEventListener(b$$116, c$$79, v3963);
+      }
       v1410 = !0;
     } else {
       var v3013;
       var v3964 = a$$146.attachEvent;
       if (v3964) {
         var v4537 = "on" + b$$116;
-        a$$146.attachEvent(v4537, c$$79);
+        introspect(JAM.policy.p3) {
+          a$$146.attachEvent(v4537, c$$79);
+        }
         v3013 = !0;
       } else {
         v3013 = !1;
@@ -11302,10 +12428,10 @@ function v254() {
     var d$$51 = arguments.length;
     var v1413 = c$$78 < d$$51;
     for (;v1413;) {
-      introspect(JAM.policy.p4) {
-        var v1412 = arguments[c$$78]
+      var v1412 = arguments[c$$78];
+      introspect(JAM.policy.p3) {
+        a$$145.push(v1412);
       }
-      a$$145.push(v1412);
       ++c$$78;
       v1413 = c$$78 < d$$51;
     }
@@ -11320,9 +12446,7 @@ function v254() {
       var v3016 = v3965;
       if (v3016) {
         var v3966 = typeof b$$114;
-        introspect(JAM.policy.p4) {
-          var v4538 = a$$144[e$$36]
-        }
+        var v4538 = a$$144[e$$36];
         var v3967 = typeof v4538;
         v3016 = v3966 == v3967;
       }
@@ -11376,12 +12500,14 @@ function v254() {
     for (c$$76 in a$$141) {
       var v3974 = Object.prototype;
       var v3022 = v3974.hasOwnProperty;
-      var v1418 = v3022.call(a$$141, c$$76);
+      introspect(JAM.policy.p3) {
+        var v1418 = v3022.call(a$$141, c$$76)
+      }
       if (v1418) {
-        introspect(JAM.policy.p4) {
-          var v3023 = a$$141[c$$76]
+        var v3023 = a$$141[c$$76];
+        introspect(JAM.policy.p3) {
+          b$$112.call(null, v3023, c$$76, a$$141);
         }
-        b$$112.call(null, v3023, c$$76, a$$141);
       }
     }
     return;
@@ -11393,15 +12519,21 @@ function v254() {
   }
   function eb$$1(a$$137, b$$108) {
     function v52(a$$138, b$$109, c$$74) {
-      var v1419 = c$$74.toUpperCase();
+      introspect(JAM.policy.p3) {
+        var v1419 = c$$74.toUpperCase()
+      }
       return b$$109 + v1419;
     }
     var v1420;
     var v3025 = p$$1(b$$108);
     if (v3025) {
       var v3975 = String(b$$108);
-      var v3024 = v3975.replace(/([-()\[\]{}+?*.$\^|,:#<!\\])/g, "\\$1");
-      v1420 = v3024.replace(/\x08/g, "\\x08");
+      introspect(JAM.policy.p3) {
+        var v3024 = v3975.replace(/([-()\[\]{}+?*.$\^|,:#<!\\])/g, "\\$1")
+      }
+      introspect(JAM.policy.p3) {
+        v1420 = v3024.replace(/\x08/g, "\\x08");
+      }
     } else {
       v1420 = "\\s";
     }
@@ -11417,14 +12549,20 @@ function v254() {
     var v3027 = "(^" + c$$73;
     var v1422 = v3027 + ")([a-z])";
     c$$73 = RegExp(v1422, "g");
-    return a$$137.replace(c$$73, v52);
+    introspect(JAM.policy.p3) {
+      return a$$137.replace(c$$73, v52);
+    }
   }
   function db$$1(a$$135) {
     function v53(a$$136, c$$72) {
-      return c$$72.toUpperCase();
+      introspect(JAM.policy.p3) {
+        return c$$72.toUpperCase();
+      }
     }
     var v1423 = String(a$$135);
-    return v1423.replace(/\-([a-z])/g, v53);
+    introspect(JAM.policy.p3) {
+      return v1423.replace(/\-([a-z])/g, v53);
+    }
   }
   function bb$$1(a$$134, b$$107) {
     var v1424;
@@ -11447,20 +12585,24 @@ function v254() {
     a$$131 = String(a$$131);
     var v1425 = a$$131.quote;
     if (v1425) {
-      return a$$131.quote();
+      introspect(JAM.policy.p3) {
+        return a$$131.quote();
+      }
     }
     var b$$104 = ['"'];
     var c$$69 = 0;
     var v3030 = a$$131.length;
     var v1433 = c$$69 < v3030;
     for (;v1433;) {
-      var d$$49 = a$$131.charAt(c$$69);
-      var e$$34 = d$$49.charCodeAt(0);
+      introspect(JAM.policy.p3) {
+        var d$$49 = a$$131.charAt(c$$69)
+      }
+      introspect(JAM.policy.p3) {
+        var e$$34 = d$$49.charCodeAt(0)
+      }
       var JSCompiler_temp_const$$24 = c$$69 + 1;
       var JSCompiler_temp$$25;
-      introspect(JAM.policy.p4) {
-        var v1432 = JSCompiler_temp$$25 = Ya$$1[d$$49]
-      }
+      var v1432 = JSCompiler_temp$$25 = Ya$$1[d$$49];
       if (v1432) {
       } else {
         var JSCompiler_temp$$26;
@@ -11476,20 +12618,20 @@ function v254() {
             var a$$inline_91 = d$$49;
             var v1426 = a$$inline_91 in Za$$1;
             if (v1426) {
-              introspect(JAM.policy.p4) {
-                JSCompiler_temp$$26 = Za$$1[a$$inline_91];
-              }
+              JSCompiler_temp$$26 = Za$$1[a$$inline_91];
               break JSCompiler_inline_label_$a$$1_94;
             }
             var v1427 = a$$inline_91 in Ya$$1;
             if (v1427) {
-              introspect(JAM.policy.p5) {
+              introspect(JAM.policy.p2) {
                 JSCompiler_temp$$26 = Za$$1[a$$inline_91] = Ya$$1[a$$inline_91];
               }
               break JSCompiler_inline_label_$a$$1_94;
             }
             var b$$inline_92 = a$$inline_91;
-            var c$$inline_93 = a$$inline_91.charCodeAt(0);
+            introspect(JAM.policy.p3) {
+              var c$$inline_93 = a$$inline_91.charCodeAt(0)
+            }
             var v3032 = 31 < c$$inline_93;
             if (v3032) {
               v3032 = 127 > c$$inline_93;
@@ -11517,8 +12659,12 @@ function v254() {
                   b$$inline_92 = b$$inline_92 + "0";
                 }
               }
-              var v3978 = c$$inline_93.toString(16);
-              var v3034 = v3978.toUpperCase();
+              introspect(JAM.policy.p3) {
+                var v3978 = c$$inline_93.toString(16)
+              }
+              introspect(JAM.policy.p3) {
+                var v3034 = v3978.toUpperCase()
+              }
               b$$inline_92 = b$$inline_92 + v3034;
             }
             introspect(JAM.policy.p2) {
@@ -11533,8 +12679,12 @@ function v254() {
       var v3035 = a$$131.length;
       v1433 = c$$69 < v3035;
     }
-    b$$104.push('"');
-    return b$$104.join("");
+    introspect(JAM.policy.p3) {
+      b$$104.push('"');
+    }
+    introspect(JAM.policy.p3) {
+      return b$$104.join("");
+    }
   }
   function Ua$$1(a$$128) {
     function v54(a$$129, c$$67) {
@@ -11548,42 +12698,54 @@ function v254() {
         case "quot":
           return'"';
         default:
-          var v3036 = c$$67.charAt(0);
+          introspect(JAM.policy.p3) {
+            var v3036 = c$$67.charAt(0)
+          }
           var v1436 = "#" == v3036;
           if (v1436) {
-            var v3037 = c$$67.substr(1);
+            introspect(JAM.policy.p3) {
+              var v3037 = c$$67.substr(1)
+            }
             var v1434 = "0" + v3037;
             var d$$47 = Number(v1434);
             var v3038 = isNaN(d$$47);
             var v1435 = !v3038;
             if (v1435) {
-              return String.fromCharCode(d$$47);
+              introspect(JAM.policy.p3) {
+                return String.fromCharCode(d$$47);
+              }
             }
           }
           return a$$129;
       }
       return;
     }
-    return a$$128.replace(/&([^;]+);/g, v54);
+    introspect(JAM.policy.p3) {
+      return a$$128.replace(/&([^;]+);/g, v54);
+    }
   }
   function Ta$$1(a$$126, b$$101) {
     function v55(a$$127, b$$102) {
-      introspect(JAM.policy.p4) {
-        var g$$16 = c$$66[a$$127]
-      }
+      var g$$16 = c$$66[a$$127];
       if (g$$16) {
         return g$$16;
       }
-      var v3039 = b$$102.charAt(0);
+      introspect(JAM.policy.p3) {
+        var v3039 = b$$102.charAt(0)
+      }
       var v1439 = "#" == v3039;
       if (v1439) {
-        var v3040 = b$$102.substr(1);
+        introspect(JAM.policy.p3) {
+          var v3040 = b$$102.substr(1)
+        }
         var v1437 = "0" + v3040;
         var h$$12 = Number(v1437);
         var v1438 = isNaN(h$$12);
         var v3041 = !v1438;
         if (v3041) {
-          g$$16 = String.fromCharCode(h$$12);
+          introspect(JAM.policy.p3) {
+            g$$16 = String.fromCharCode(h$$12);
+          }
         }
       }
       var v3042 = !g$$16;
@@ -11591,7 +12753,9 @@ function v254() {
         d$$46.innerHTML = a$$127 + " ";
         var v4540 = d$$46.firstChild;
         var v3979 = v4540.nodeValue;
-        g$$16 = v3979.slice(0, -1);
+        introspect(JAM.policy.p3) {
+          g$$16 = v3979.slice(0, -1);
+        }
       }
       introspect(JAM.policy.p2) {
         return c$$66[a$$127] = g$$16;
@@ -11601,16 +12765,24 @@ function v254() {
     var d$$46;
     var v1440;
     if (b$$101) {
-      v1440 = b$$101.createElement("div");
+      introspect(JAM.policy.p3) {
+        v1440 = b$$101.createElement("div");
+      }
     } else {
-      v1440 = document.createElement("div");
+      introspect(JAM.policy.p3) {
+        v1440 = document.createElement("div");
+      }
     }
     d$$46 = v1440;
-    return a$$126.replace(Wa$$1, v55);
+    introspect(JAM.policy.p3) {
+      return a$$126.replace(Wa$$1, v55);
+    }
   }
   function Va$$1(a$$125) {
     var v1441;
-    var v3980 = a$$125.indexOf("&");
+    introspect(JAM.policy.p3) {
+      var v3980 = a$$125.indexOf("&")
+    }
     var v3044 = -1 != v3980;
     if (v3044) {
       var v3043;
@@ -11628,35 +12800,61 @@ function v254() {
   }
   function Sa$$1(a$$124, b$$100) {
     if (b$$100) {
-      var v3982 = a$$124.replace(Na$$1, "&amp;");
-      var v3045 = v3982.replace(Oa$$1, "&lt;");
-      var v1442 = v3045.replace(Pa$$1, "&gt;");
-      return v1442.replace(Qa$$1, "&quot;");
+      introspect(JAM.policy.p3) {
+        var v3982 = a$$124.replace(Na$$1, "&amp;")
+      }
+      introspect(JAM.policy.p3) {
+        var v3045 = v3982.replace(Oa$$1, "&lt;")
+      }
+      introspect(JAM.policy.p3) {
+        var v1442 = v3045.replace(Pa$$1, "&gt;")
+      }
+      introspect(JAM.policy.p3) {
+        return v1442.replace(Qa$$1, "&quot;");
+      }
     }
-    var v3046 = Ra$$1.test(a$$124);
+    introspect(JAM.policy.p3) {
+      var v3046 = Ra$$1.test(a$$124)
+    }
     var v1443 = !v3046;
     if (v1443) {
       return a$$124;
     }
-    var v3047 = a$$124.indexOf("&");
+    introspect(JAM.policy.p3) {
+      var v3047 = a$$124.indexOf("&")
+    }
     var v1444 = -1 != v3047;
     if (v1444) {
-      a$$124 = a$$124.replace(Na$$1, "&amp;");
+      introspect(JAM.policy.p3) {
+        a$$124 = a$$124.replace(Na$$1, "&amp;");
+      }
     }
-    var v3048 = a$$124.indexOf("<");
+    introspect(JAM.policy.p3) {
+      var v3048 = a$$124.indexOf("<")
+    }
     var v1445 = -1 != v3048;
     if (v1445) {
-      a$$124 = a$$124.replace(Oa$$1, "&lt;");
+      introspect(JAM.policy.p3) {
+        a$$124 = a$$124.replace(Oa$$1, "&lt;");
+      }
     }
-    var v3049 = a$$124.indexOf(">");
+    introspect(JAM.policy.p3) {
+      var v3049 = a$$124.indexOf(">")
+    }
     var v1446 = -1 != v3049;
     if (v1446) {
-      a$$124 = a$$124.replace(Pa$$1, "&gt;");
+      introspect(JAM.policy.p3) {
+        a$$124 = a$$124.replace(Pa$$1, "&gt;");
+      }
     }
-    var v3050 = a$$124.indexOf('"');
+    introspect(JAM.policy.p3) {
+      var v3050 = a$$124.indexOf('"')
+    }
     var v1447 = -1 != v3050;
     if (v1447) {
-      a$$124 = a$$124.replace(Qa$$1, "&quot;");
+      introspect(JAM.policy.p3) {
+        a$$124 = a$$124.replace(Qa$$1, "&quot;");
+      }
     }
     return a$$124;
   }
@@ -11681,7 +12879,9 @@ function v254() {
     if (v1449) {
       return b$$99;
     }
-    var c$$65 = a$$121.match(la$$1);
+    introspect(JAM.policy.p3) {
+      var c$$65 = a$$121.match(la$$1)
+    }
     var v1450;
     if (c$$65) {
       v1450 = c$$65[0];
@@ -11692,12 +12892,16 @@ function v254() {
   }
   function ka$$1(a$$120, b$$98) {
     var v1451;
-    var v3052 = /^true$/.test(a$$120);
+    introspect(JAM.policy.p3) {
+      var v3052 = /^true$/.test(a$$120)
+    }
     if (v3052) {
       v1451 = !0;
     } else {
       var v3051;
-      var v3983 = /^false$/.test(a$$120);
+      introspect(JAM.policy.p3) {
+        var v3983 = /^false$/.test(a$$120)
+      }
       if (v3983) {
         v3051 = !1;
       } else {
@@ -11743,14 +12947,22 @@ function v254() {
   }
   function ga$$1(a$$115, b$$92) {
     function v56() {
-      var b$$93 = c$$60.slice();
+      introspect(JAM.policy.p3) {
+        var b$$93 = c$$60.slice()
+      }
       var v1455 = b$$93.push;
-      v1455.apply(b$$93, arguments);
-      return a$$115.apply(this, b$$93);
+      introspect(JAM.policy.p3) {
+        v1455.apply(b$$93, arguments);
+      }
+      introspect(JAM.policy.p3) {
+        return a$$115.apply(this, b$$93);
+      }
     }
     var v3054 = Array.prototype;
     var v1456 = v3054.slice;
-    var c$$60 = v1456.call(arguments, 1);
+    introspect(JAM.policy.p3) {
+      var c$$60 = v1456.call(arguments, 1)
+    }
     return v56;
   }
   function r$$2(a$$114, b$$91, c$$59) {
@@ -11760,8 +12972,12 @@ function v254() {
     if (v3985) {
       var v5003 = Function.prototype;
       var v4954 = v5003.bind;
-      var v4812 = v4954.toString();
-      var v4544 = v4812.indexOf("native code");
+      introspect(JAM.policy.p3) {
+        var v4812 = v4954.toString()
+      }
+      introspect(JAM.policy.p3) {
+        var v4544 = v4812.indexOf("native code")
+      }
       v3985 = -1 != v4544;
     }
     var v3055 = v3985;
@@ -11771,20 +12987,30 @@ function v254() {
       v1457 = fa$$1;
     }
     r$$2 = v1457;
-    return r$$2.apply(null, arguments);
+    introspect(JAM.policy.p3) {
+      return r$$2.apply(null, arguments);
+    }
   }
   function fa$$1(a$$113, b$$90, c$$57) {
     function v58() {
-      return a$$113.apply(b$$90, arguments);
+      introspect(JAM.policy.p3) {
+        return a$$113.apply(b$$90, arguments);
+      }
     }
     function v57() {
       var v3056 = Array.prototype;
       var v1458 = v3056.slice;
-      var c$$58 = v1458.call(arguments);
+      introspect(JAM.policy.p3) {
+        var c$$58 = v1458.call(arguments)
+      }
       var v3057 = Array.prototype;
       var v1459 = v3057.unshift;
-      v1459.apply(c$$58, d$$45);
-      return a$$113.apply(b$$90, c$$58);
+      introspect(JAM.policy.p3) {
+        v1459.apply(c$$58, d$$45);
+      }
+      introspect(JAM.policy.p3) {
+        return a$$113.apply(b$$90, c$$58);
+      }
     }
     var v1460 = !a$$113;
     if (v1460) {
@@ -11795,7 +13021,9 @@ function v254() {
     if (v1462) {
       var v3059 = Array.prototype;
       var v1461 = v3059.slice;
-      var d$$45 = v1461.call(arguments, 2);
+      introspect(JAM.policy.p3) {
+        var d$$45 = v1461.call(arguments, 2)
+      }
       return v57;
     }
     return v58;
@@ -11803,7 +13031,9 @@ function v254() {
   function ea$$1(a$$112, b$$89, c$$56) {
     var v1463 = a$$112.call;
     var v1464 = a$$112.bind;
-    return v1463.apply(v1464, arguments);
+    introspect(JAM.policy.p3) {
+      return v1463.apply(v1464, arguments);
+    }
   }
   function da$$1(a$$111) {
     var b$$88 = typeof a$$111;
@@ -11860,7 +13090,9 @@ function v254() {
         }
         var v3064 = Object.prototype;
         var v1472 = v3064.toString;
-        var c$$55 = v1472.call(a$$106);
+        introspect(JAM.policy.p3) {
+          var c$$55 = v1472.call(a$$106)
+        }
         var v1473 = "[object Window]" == c$$55;
         if (v1473) {
           return "object";
@@ -11884,7 +13116,9 @@ function v254() {
           }
           var v3987 = v4546;
           if (v3987) {
-            var v4547 = a$$106.propertyIsEnumerable("splice");
+            introspect(JAM.policy.p3) {
+              var v4547 = a$$106.propertyIsEnumerable("splice")
+            }
             v3987 = !v4547;
           }
           v3065 = v3987;
@@ -11906,7 +13140,9 @@ function v254() {
           }
           var v3989 = v4548;
           if (v3989) {
-            var v4549 = a$$106.propertyIsEnumerable("call");
+            introspect(JAM.policy.p3) {
+              var v4549 = a$$106.propertyIsEnumerable("call")
+            }
             v3989 = !v4549;
           }
           v3066 = v3989;
@@ -11933,7 +13169,9 @@ function v254() {
     return b$$86;
   }
   function aa$$1(a$$105, b$$85, c$$54) {
-    a$$105 = a$$105.split(".");
+    introspect(JAM.policy.p3) {
+      a$$105 = a$$105.split(".");
+    }
     c$$54 = c$$54 || m$$3;
     var v3992 = a$$105[0];
     var v3068 = v3992 in c$$54;
@@ -11947,12 +13185,16 @@ function v254() {
     if (v3070) {
       var v3995 = a$$105[0];
       var v3069 = "var " + v3995;
-      c$$54.execScript(v3069);
+      introspect(JAM.policy.p3) {
+        c$$54.execScript(v3069);
+      }
     }
     var d$$44;
     var v3071 = a$$105.length;
     if (v3071) {
-      v3071 = d$$44 = a$$105.shift();
+      introspect(JAM.policy.p3) {
+        v3071 = d$$44 = a$$105.shift();
+      }
     }
     var v1480 = v3071;
     for (;v1480;) {
@@ -11966,13 +13208,9 @@ function v254() {
       var v3073 = v3996;
       if (v3073) {
         var v3072;
-        introspect(JAM.policy.p4) {
-          var v3997 = c$$54[d$$44]
-        }
+        var v3997 = c$$54[d$$44];
         if (v3997) {
-          introspect(JAM.policy.p4) {
-            v3072 = c$$54[d$$44];
-          }
+          v3072 = c$$54[d$$44];
         } else {
           introspect(JAM.policy.p2) {
             v3072 = c$$54[d$$44] = {};
@@ -11987,7 +13225,9 @@ function v254() {
       v1479;
       var v3074 = a$$105.length;
       if (v3074) {
-        v3074 = d$$44 = a$$105.shift();
+        introspect(JAM.policy.p3) {
+          v3074 = d$$44 = a$$105.shift();
+        }
       }
       v1480 = v3074;
     }
@@ -11995,7 +13235,9 @@ function v254() {
   }
   function jb$$1(a$$70, b$$56, c$$33, d$$25) {
     function v60() {
-      f$$10.appendChild(e$$20);
+      introspect(JAM.policy.p3) {
+        f$$10.appendChild(e$$20);
+      }
       return;
     }
     function v59() {
@@ -12009,14 +13251,18 @@ function v254() {
       var v1481 = v3075;
       if (v1481) {
         try {
-          b$$56();
+          introspect(JAM.policy.p3) {
+            b$$56();
+          }
         } catch (a$$71) {
         }
       }
       return;
     }
     d$$25 = d$$25 || document;
-    var e$$20 = d$$25.createElement("script");
+    introspect(JAM.policy.p3) {
+      var e$$20 = d$$25.createElement("script")
+    }
     e$$20.type = "text/javascript";
     if (b$$56) {
       var v3076;
@@ -12034,7 +13280,7 @@ function v254() {
       e$$20.id = c$$33;
     }
     e$$20.src = a$$70;
-    introspect(JAM.policy.p6) {
+    introspect(JAM.policy.p3) {
       var v1482 = d$$25.getElementsByTagName("head")
     }
     var f$$10 = v1482[0];
@@ -12043,7 +13289,9 @@ function v254() {
       return!1;
     }
     try {
-      window.setTimeout(v60, 0);
+      introspect(JAM.policy.p3) {
+        window.setTimeout(v60, 0);
+      }
     } catch (g$$8) {
       return!1;
     }
@@ -12058,14 +13306,16 @@ function v254() {
     var v1484;
     var v3078 = a$$inline_78 in qb$$1;
     if (v3078) {
-      introspect(JAM.policy.p4) {
-        v1484 = qb$$1[a$$inline_78];
-      }
+      v1484 = qb$$1[a$$inline_78];
     } else {
       var v3077 = qb$$1;
       var v4817 = navigator.userAgent;
-      var v4555 = v4817.toLowerCase();
-      var v4002 = v4555.indexOf(a$$inline_78);
+      introspect(JAM.policy.p3) {
+        var v4555 = v4817.toLowerCase()
+      }
+      introspect(JAM.policy.p3) {
+        var v4002 = v4555.indexOf(a$$inline_78)
+      }
       introspect(JAM.policy.p2) {
         v1484 = v3077[a$$inline_78] = -1 != v4002;
       }
@@ -12095,14 +13345,20 @@ function v254() {
       var v1488 = v3081;
       if (v1488) {
         var v3082 = a$$75.description;
-        var v1487 = v3082.replace(/([a-zA-Z]|\s)+/, "");
-        return v1487.replace(/(\s)+r/, ".");
+        introspect(JAM.policy.p3) {
+          var v1487 = v3082.replace(/([a-zA-Z]|\s)+/, "")
+        }
+        introspect(JAM.policy.p3) {
+          return v1487.replace(/(\s)+r/, ".");
+        }
       }
     } else {
       var v3083 = navigator.userAgent;
       if (v3083) {
         var v4556 = navigator.userAgent;
-        var v4004 = v4556.indexOf("Windows CE");
+        introspect(JAM.policy.p3) {
+          var v4004 = v4556.indexOf("Windows CE")
+        }
         v3083 = 0 <= v4004;
       }
       var v1489 = v3083;
@@ -12119,7 +13375,9 @@ function v254() {
             b$$58 = null;
           }
         }
-        return a$$75.toString();
+        introspect(JAM.policy.p3) {
+          return a$$75.toString();
+        }
       }
       var v1491 = rb$$1();
       if (v1491) {
@@ -12135,7 +13393,9 @@ function v254() {
           } catch (e$$21) {
             var v1490 = 6 == a$$75;
             if (v1490) {
-              return a$$75.toString();
+              introspect(JAM.policy.p3) {
+                return a$$75.toString();
+              }
             }
           }
           try {
@@ -12144,10 +13404,16 @@ function v254() {
           }
         }
         if (b$$58) {
-          var v4006 = b$$58.GetVariable("$version");
-          var v3085 = v4006.split(" ");
+          introspect(JAM.policy.p3) {
+            var v4006 = b$$58.GetVariable("$version")
+          }
+          introspect(JAM.policy.p3) {
+            var v3085 = v4006.split(" ")
+          }
           a$$75 = v3085[1];
-          return a$$75.replace(/,/g, ".");
+          introspect(JAM.policy.p3) {
+            return a$$75.replace(/,/g, ".");
+          }
         }
       }
     }
@@ -12157,7 +13423,9 @@ function v254() {
     var b$$59 = a$$76.google_ad_format;
     var v1493;
     if (b$$59) {
-      var v3086 = b$$59.indexOf("_0ads");
+      introspect(JAM.policy.p3) {
+        var v3086 = b$$59.indexOf("_0ads")
+      }
       v1493 = 0 < v3086;
     } else {
       var v4007 = a$$76.google_ad_output;
@@ -12278,7 +13546,9 @@ function v254() {
       d$$36 = v3096 - 1;
       var v1502 = 0 <= d$$36;
       for (;v1502;) {
-        c$$45 = a$$90.charCodeAt(d$$36);
+        introspect(JAM.policy.p3) {
+          c$$45 = a$$90.charCodeAt(d$$36);
+        }
         var v4960 = b$$74 << 6;
         var v4820 = v4960 & 268435455;
         var v4558 = v4820 + c$$45;
@@ -12314,14 +13584,20 @@ function v254() {
     var v1505 = "auto" == a$$91;
     if (v1505) {
       a$$91 = b$$75;
-      var v4560 = a$$91.substring(0, 4);
+      introspect(JAM.policy.p3) {
+        var v4560 = a$$91.substring(0, 4)
+      }
       var v4018 = "www." == v4560;
       if (v4018) {
         var v4561 = a$$91.length;
-        a$$91 = a$$91.substring(4, v4561);
+        introspect(JAM.policy.p3) {
+          a$$91 = a$$91.substring(4, v4561);
+        }
       }
     }
-    var v1506 = a$$91.toLowerCase();
+    introspect(JAM.policy.p3) {
+      var v1506 = a$$91.toLowerCase()
+    }
     return Jh(v1506);
   }
   function ji(a$$94) {
@@ -12344,14 +13620,16 @@ function v254() {
       var v1509 = a$$100 < v3101;
       for (;v1509;) {
         var v4020 = c$$51.google_top_js_callbacks;
-        introspect(JAM.policy.p4) {
-          var v3102 = v4020[a$$100]
-        }
+        var v3102 = v4020[a$$100];
         var v1508 = v3102 === h$$11;
         if (v1508) {
           var v4021 = c$$51.google_top_js_callbacks;
-          v4021.splice(a$$100, 1);
-          h$$11();
+          introspect(JAM.policy.p3) {
+            v4021.splice(a$$100, 1);
+          }
+          introspect(JAM.policy.p3) {
+            h$$11();
+          }
         }
         a$$100++;
         var v4022 = c$$51.google_top_js_callbacks;
@@ -12441,7 +13719,7 @@ function v254() {
     var v1518;
     if (a$$99) {
       var v3117 = c$$51.document;
-      introspect(JAM.policy.p1) {
+      introspect(JAM.policy.p3) {
         v1518 = a$$99 = v3117.getElementById(a$$99);
       }
     } else {
@@ -12464,10 +13742,14 @@ function v254() {
     if (v4030) {
       var v4029 = e$$31;
       if (v4029) {
-        var v4564 = e$$31.P();
+        introspect(JAM.policy.p3) {
+          var v4564 = e$$31.P()
+        }
         var v4821 = !v4564;
         if (v4821) {
-          v4564 = e$$31.O();
+          introspect(JAM.policy.p3) {
+            v4564 = e$$31.O();
+          }
         }
         v4029 = v4564;
       }
@@ -12478,28 +13760,40 @@ function v254() {
       var f$$19 = !1;
       var g$$15 = [];
       if (d$$42) {
-        g$$15.push(v62);
+        introspect(JAM.policy.p3) {
+          g$$15.push(v62);
+        }
       }
       var v3122 = e$$31;
       if (v3122) {
-        v3122 = e$$31.P();
+        introspect(JAM.policy.p3) {
+          v3122 = e$$31.P();
+        }
       }
       var v1520 = v3122;
       if (v1520) {
-        g$$15.push(v63);
+        introspect(JAM.policy.p3) {
+          g$$15.push(v63);
+        }
       }
       var v3123 = e$$31;
       if (v3123) {
-        v3123 = e$$31.O();
+        introspect(JAM.policy.p3) {
+          v3123 = e$$31.O();
+        }
       }
       var v1521 = v3123;
       if (v1521) {
-        g$$15.push(v64);
+        introspect(JAM.policy.p3) {
+          g$$15.push(v64);
+        }
       }
       var h$$11 = ga$$1(Yi, a$$99, b$$81, e$$31, g$$15);
       if (d$$42) {
         var v4961 = new Date;
-        Xi = v4961.getTime();
+        introspect(JAM.policy.p3) {
+          Xi = v4961.getTime();
+        }
         var v4962 = c$$51.google_top_js_callbacks;
         var v5006 = !v4962;
         if (v5006) {
@@ -12507,33 +13801,49 @@ function v254() {
         }
         c$$51.google_top_js_callbacks = v4962;
         var v4822 = c$$51.google_top_js_callbacks;
-        v4822.push(h$$11);
+        introspect(JAM.policy.p3) {
+          v4822.push(h$$11);
+        }
         b$$81 = v65;
-        window.setTimeout(b$$81, 150);
+        introspect(JAM.policy.p3) {
+          window.setTimeout(b$$81, 150);
+        }
       }
       var v3124 = e$$31;
       if (v3124) {
-        v3124 = e$$31.fb();
+        introspect(JAM.policy.p3) {
+          v3124 = e$$31.fb();
+        }
       }
       var v1522 = v3124;
       if (v1522) {
-        e$$31.Gc();
+        introspect(JAM.policy.p3) {
+          e$$31.Gc();
+        }
       }
       var v3125 = e$$31;
       if (v3125) {
-        v3125 = e$$31.P();
+        introspect(JAM.policy.p3) {
+          v3125 = e$$31.P();
+        }
       }
       var v1523 = v3125;
       if (v1523) {
-        e$$31.nc(h$$11, 1E3);
+        introspect(JAM.policy.p3) {
+          e$$31.nc(h$$11, 1E3);
+        }
       }
       var v3126 = e$$31;
       if (v3126) {
-        v3126 = e$$31.O();
+        introspect(JAM.policy.p3) {
+          v3126 = e$$31.O();
+        }
       }
       var v1524 = v3126;
       if (v1524) {
-        e$$31.mc(h$$11, 1E3);
+        introspect(JAM.policy.p3) {
+          e$$31.mc(h$$11, 1E3);
+        }
       }
     } else {
       Yi(a$$99, b$$81);
@@ -12555,12 +13865,16 @@ function v254() {
         JSCompiler_inline_result$$579 = "";
         break JSCompiler_inline_label_yh_592;
       }
-      b$$inline_589 = b$$inline_589.toLowerCase();
+      introspect(JAM.policy.p3) {
+        b$$inline_589 = b$$inline_589.toLowerCase();
+      }
       var JSCompiler_inline_result$$inline_590;
       var a$$inline_591 = b$$inline_589;
       var v3128 = a$$inline_591;
       if (v3128) {
-        var v4031 = a$$inline_591.substring(0, 3);
+        introspect(JAM.policy.p3) {
+          var v4031 = a$$inline_591.substring(0, 3)
+        }
         v3128 = "ca-" != v4031;
       }
       var v1528 = v3128;
@@ -12608,7 +13922,9 @@ function v254() {
     }
     window.google_country = v1531;
     var v1532 = new Date;
-    var a$$inline_89 = v1532.getTime();
+    introspect(JAM.policy.p3) {
+      var a$$inline_89 = v1532.getTime()
+    }
     var v3134 = window.google_color_bg;
     var v1533 = n$$2(v3134);
     if (v1533) {
@@ -12799,7 +14115,9 @@ function v254() {
   v1582.translate = v85;
   var v1583 = M$$1.prototype;
   v1583.scale = v86;
-  var Fc = "constructor hasOwnProperty isPrototypeOf propertyIsEnumerable toLocaleString toString valueOf".split(" ");
+  introspect(JAM.policy.p3) {
+    var Fc = "constructor hasOwnProperty isPrototypeOf propertyIsEnumerable toLocaleString toString valueOf".split(" ")
+  }
   var Hc;
   var Ic;
   var Jc;
@@ -12981,7 +14299,9 @@ function v254() {
   v1645.n = v116;
   var Ce = {'"':'\\"', "\\":"\\\\", "/":"\\/", "\b":"\\b", "\f":"\\f", "\n":"\\n", "\r":"\\r", "\t":"\\t", "\x0B":"\\u000b"};
   var v1646;
-  var v3170 = /\uffff/.test("\uffff");
+  introspect(JAM.policy.p3) {
+    var v3170 = /\uffff/.test("\uffff")
+  }
   if (v3170) {
     v1646 = /[\\\"\x00-\x1f\x7f-\uffff]/g;
   } else {
@@ -13043,7 +14363,9 @@ function v254() {
   var v1666 = U$$1.prototype;
   v1666.ab = v136;
   var v1667 = new Date;
-  var vf = v1667.getTime();
+  introspect(JAM.policy.p3) {
+    var vf = v1667.getTime()
+  }
   var v1668 = !0;
   var v1669 = !0;
   var v1670 = !0;
@@ -13106,7 +14428,9 @@ function v254() {
   v1695.n = v159;
   var ig = {'"':'\\"', "\\":"\\\\", "/":"\\/", "\b":"\\b", "\f":"\\f", "\n":"\\n", "\r":"\\r", "\t":"\\t", "\x0B":"\\u000b"};
   var v1696;
-  var v3176 = /\uffff/.test("\uffff");
+  introspect(JAM.policy.p3) {
+    var v3176 = /\uffff/.test("\uffff")
+  }
   if (v3176) {
     v1696 = /[\\\"\x00-\x1f\x7f-\uffff]/g;
   } else {
@@ -13358,7 +14682,9 @@ function v254() {
 function v22() {
   function v21(a$$45) {
     this.a = 0;
-    a$$45.k();
+    introspect(JAM.policy.p3) {
+      a$$45.k();
+    }
     return;
   }
   function v20() {
@@ -13371,13 +14697,19 @@ function v22() {
     var v1809 = v3178;
     if (v1809) {
       var v1806 = this.c;
-      var a$$44 = v1806.shift();
+      introspect(JAM.policy.p3) {
+        var a$$44 = v1806.shift()
+      }
       this.a = 2;
       var v3179 = this.f;
-      var v1807 = p(v3179, this, a$$44);
+      introspect(JAM.policy.p3) {
+        var v1807 = p(v3179, this, a$$44)
+      }
       var b$$36 = M("sjr::run", v1807);
       var v1808 = a$$44.h;
-      v1808.setTimeout(b$$36, 0);
+      introspect(JAM.policy.p3) {
+        v1808.setTimeout(b$$36, 0);
+      }
       Ua(this);
     }
     return;
@@ -13400,7 +14732,9 @@ function v22() {
       if (v4046) {
         var v4823 = this.b;
         var v4824 = this.d;
-        v4823.clearTimeout(v4824);
+        introspect(JAM.policy.p3) {
+          v4823.clearTimeout(v4824);
+        }
         this.d = null;
       }
       this.a = 0;
@@ -13412,10 +14746,14 @@ function v22() {
     this.a = 1;
     if (a$$42) {
       var v3182 = this.e;
-      var v1812 = p(v3182, this);
+      introspect(JAM.policy.p3) {
+        var v1812 = p(v3182, this)
+      }
       var b$$34 = M("sjr::timeout", v1812);
       var v1813 = this.b;
-      var v5131 = v1813.setTimeout(b$$34, a$$42);
+      introspect(JAM.policy.p3) {
+        var v5131 = v1813.setTimeout(b$$34, a$$42)
+      }
       this.d = v5131;
     }
     return;
@@ -13429,7 +14767,9 @@ function v22() {
     }
     var v3183 = v4047;
     var v1815 = new Ta(a$$41, v3183);
-    v1814.push(v1815);
+    introspect(JAM.policy.p3) {
+      v1814.push(v1815);
+    }
     Ua(this);
     return;
   }
@@ -13454,11 +14794,15 @@ function v22() {
     }
     var v3184 = v4048;
     if (v3184) {
-      v1816 = this.g(a$$40, b$$32);
+      introspect(JAM.policy.p3) {
+        v1816 = this.g(a$$40, b$$32);
+      }
     } else {
       this.a = 2;
       var v4049 = new Ta(a$$40, window);
-      v1816 = this.f(v4049);
+      introspect(JAM.policy.p3) {
+        v1816 = this.f(v4049);
+      }
     }
     v1816;
     return;
@@ -13469,7 +14813,9 @@ function v22() {
     t: {
       var v4050 = a$$36;
       if (v4050) {
-        v4050 = d$$13 = a$$36.match("dt=([^&]+)");
+        introspect(JAM.policy.p3) {
+          v4050 = d$$13 = a$$36.match("dt=([^&]+)");
+        }
       }
       var v3185 = v4050;
       if (v3185) {
@@ -13484,7 +14830,9 @@ function v22() {
       d$$13 = "";
     }
     var v3186 = new Date;
-    var v1818 = v3186.getTime();
+    introspect(JAM.policy.p3) {
+      var v1818 = v3186.getTime()
+    }
     d$$13 = v1818 - d$$13;
     var v4052;
     var v4570 = 1E4 > d$$13;
@@ -13495,14 +14843,18 @@ function v22() {
     }
     var v3187 = v4052;
     var v1819 = "&dtd=" + v3187;
-    c$$19 = c$$19.replace(/&dtd=(\d+|M)/, v1819);
-    this.set(b$$29, c$$19);
+    introspect(JAM.policy.p3) {
+      c$$19 = c$$19.replace(/&dtd=(\d+|M)/, v1819);
+    }
+    introspect(JAM.policy.p3) {
+      this.set(b$$29, c$$19);
+    }
     return c$$19;
   }
   function v13(a$$35) {
     var v3188 = this.b;
     var v1820 = v3188.document;
-    introspect(JAM.policy.p1) {
+    introspect(JAM.policy.p3) {
       a$$35 = v1820.getElementById(a$$35);
     }
     var v1821 = a$$35.contentWindow;
@@ -13525,7 +14877,9 @@ function v22() {
     }
     var v1822 = v3189;
     if (v1822) {
-      a$$35.onload();
+      introspect(JAM.policy.p3) {
+        a$$35.onload();
+      }
     }
     return;
   }
@@ -13540,9 +14894,13 @@ function v22() {
     if (v1824) {
       var v3192 = this.b;
       var v4055 = this.j;
-      var v3193 = p(v4055, this, a$$34);
+      introspect(JAM.policy.p3) {
+        var v3193 = p(v4055, this, a$$34)
+      }
       var v3194 = !1;
-      v3192.addEventListener("load", v3193, v3194);
+      introspect(JAM.policy.p3) {
+        v3192.addEventListener("load", v3193, v3194);
+      }
     }
     return;
   }
@@ -13607,11 +14965,15 @@ function v22() {
               var v3200 = a$$69.addEventListener;
               if (v3200) {
                 var v3198 = !1;
-                v1826 = a$$69.addEventListener("message", hb, v3198);
+                introspect(JAM.policy.p3) {
+                  v1826 = a$$69.addEventListener("message", hb, v3198);
+                }
               } else {
                 var v3199 = a$$69.attachEvent;
                 if (v3199) {
-                  v3199 = a$$69.attachEvent("onmessage", hb);
+                  introspect(JAM.policy.p3) {
+                    v3199 = a$$69.attachEvent("onmessage", hb);
+                  }
                 }
                 v1826 = v3199;
               }
@@ -13622,14 +14984,18 @@ function v22() {
               var d$$24;
               for (d$$24 in a$$69) {
                 var v3201 = d$$24 + "=";
-                introspect(JAM.policy.p4) {
-                  var v3202 = a$$69[d$$24]
-                }
+                var v3202 = a$$69[d$$24];
                 var v1827 = v3201 + v3202;
-                b$$55.push(v1827);
+                introspect(JAM.policy.p3) {
+                  b$$55.push(v1827);
+                }
               }
-              var v1828 = b$$55.join("\n");
-              top.postMessage(v1828, "*");
+              introspect(JAM.policy.p3) {
+                var v1828 = b$$55.join("\n")
+              }
+              introspect(JAM.policy.p3) {
+                top.postMessage(v1828, "*");
+              }
             }
           } else {
             window.google_top_js_status = 2;
@@ -13646,7 +15012,9 @@ function v22() {
     var v1834 = v3203;
     if (v1834) {
       b$$55 = 20;
-      var v3204 = a$$69 = d$$24.shift();
+      introspect(JAM.policy.p3) {
+        var v3204 = a$$69 = d$$24.shift()
+      }
       if (v3204) {
         var v4062 = b$$55;
         b$$55 = b$$55 - 1;
@@ -13657,10 +15025,14 @@ function v22() {
         try {
           qb(a$$69);
         } catch (e$$19) {
-          window.setTimeout(rb, 0);
+          introspect(JAM.policy.p3) {
+            window.setTimeout(rb, 0);
+          }
           throw e$$19;
         }
-        var v3205 = a$$69 = d$$24.shift();
+        introspect(JAM.policy.p3) {
+          var v3205 = a$$69 = d$$24.shift()
+        }
         if (v3205) {
           var v4063 = b$$55;
           b$$55 = b$$55 - 1;
@@ -13709,18 +15081,18 @@ function v22() {
       }
     }
     var c$$31 = window;
-    b$$54.setAttribute("data-adsbygoogle-status", "done");
+    introspect(JAM.policy.p3) {
+      b$$54.setAttribute("data-adsbygoogle-status", "done");
+    }
     ob(b$$54, a$$68, c$$31);
     return;
   }
   function pb(a$$67) {
-    introspect(JAM.policy.p6) {
+    introspect(JAM.policy.p3) {
       var b$$53 = document.getElementsByTagName("ins")
     }
     var c$$30 = 0;
-    introspect(JAM.policy.p4) {
-      var d$$23 = b$$53[c$$30]
-    }
+    var d$$23 = b$$53[c$$30];
     var v3209 = b$$53.length;
     var v1840 = c$$30 < v3209;
     for (;v1840;) {
@@ -13739,9 +15111,7 @@ function v22() {
         return d$$23;
       }
       var v3211 = c$$30 = c$$30 + 1;
-      introspect(JAM.policy.p4) {
-        d$$23 = b$$53[v3211];
-      }
+      d$$23 = b$$53[v3211];
       var v3212 = b$$53.length;
       v1840 = c$$30 < v3212;
     }
@@ -13753,16 +15123,22 @@ function v22() {
     var f$$9 = 0;
     var v1844 = f$$9 < e$$18;
     for (;v1844;) {
-      introspect(JAM.policy.p4) {
-        var g$$7 = d$$22[f$$9]
-      }
+      var g$$7 = d$$22[f$$9];
       var v3213 = g$$7.nodeName;
-      var v1843 = /data-/.test(v3213);
+      introspect(JAM.policy.p3) {
+        var v1843 = /data-/.test(v3213)
+      }
       if (v1843) {
         var v3214 = g$$7.nodeName;
-        var v1841 = v3214.replace("data", "google");
-        var l$$5 = v1841.replace(/-/g, "_");
-        var v1842 = b$$52.hasOwnProperty(l$$5);
+        introspect(JAM.policy.p3) {
+          var v1841 = v3214.replace("data", "google")
+        }
+        introspect(JAM.policy.p3) {
+          var l$$5 = v1841.replace(/-/g, "_")
+        }
+        introspect(JAM.policy.p3) {
+          var v1842 = b$$52.hasOwnProperty(l$$5)
+        }
         var v3215 = !v1842;
         if (v3215) {
           introspect(JAM.policy.p2) {
@@ -13777,7 +15153,9 @@ function v22() {
     var v3216 = "auto" == d$$22;
     var v4066 = !v3216;
     if (v4066) {
-      v3216 = /^((^|,)(horizontal|vertical|rectangle))+$/.test(d$$22);
+      introspect(JAM.policy.p3) {
+        v3216 = /^((^|,)(horizontal|vertical|rectangle))+$/.test(d$$22);
+      }
     }
     var v1850 = v3216;
     if (v1850) {
@@ -13807,7 +15185,9 @@ function v22() {
         if (v4069) {
           v3218 = 1200;
         } else {
-          v3218 = Math.round(d$$22);
+          introspect(JAM.policy.p3) {
+            v3218 = Math.round(d$$22);
+          }
         }
         v1847 = v3218;
       }
@@ -13821,11 +15201,15 @@ function v22() {
       var v1849;
       var v4832 = a$$66.style;
       var v4582 = v4832.width;
-      var v4070 = ib.test(v4582);
+      introspect(JAM.policy.p3) {
+        var v4070 = ib.test(v4582)
+      }
       if (v4070) {
         var v4833 = a$$66.style;
         var v4583 = v4833.height;
-        v4070 = ib.test(v4583);
+        introspect(JAM.policy.p3) {
+          v4070 = ib.test(v4583);
+        }
       }
       var v3222 = v4070;
       if (v3222) {
@@ -13835,7 +15219,9 @@ function v22() {
         var v4834;
         var v4965 = c$$29.getComputedStyle;
         if (v4965) {
-          v4834 = c$$29.getComputedStyle(a$$66, null);
+          introspect(JAM.policy.p3) {
+            v4834 = c$$29.getComputedStyle(a$$66, null);
+          }
         } else {
           v4834 = a$$66.currentStyle;
         }
@@ -13871,23 +15257,13 @@ function v22() {
     var v3224 = $.length;
     var v1853 = d$$21 < v3224;
     for (;v1853;) {
-      introspect(JAM.policy.p4) {
-        var v1852 = $[d$$21]
-      }
-      introspect(JAM.policy.p4) {
-        var v4072 = $[d$$21]
-      }
-      introspect(JAM.policy.p4) {
-        var v3225 = b$$51[v4072]
-      }
+      var v1852 = $[d$$21];
+      var v4072 = $[d$$21];
+      var v3225 = b$$51[v4072];
       var v4074 = !v3225;
       if (v4074) {
-        introspect(JAM.policy.p4) {
-          var v4073 = $[d$$21]
-        }
-        introspect(JAM.policy.p4) {
-          v3225 = c$$28[v4073];
-        }
+        var v4073 = $[d$$21];
+        v3225 = c$$28[v4073];
       }
       introspect(JAM.policy.p2) {
         b$$51[v1852] = v3225;
@@ -13911,9 +15287,13 @@ function v22() {
   }
   function mb(a$$64) {
     var v3228 = a$$64.className;
-    var v1856 = /(^| )adsbygoogle($| )/.test(v3228);
+    introspect(JAM.policy.p3) {
+      var v1856 = /(^| )adsbygoogle($| )/.test(v3228)
+    }
     if (v1856) {
-      var v3229 = a$$64.getAttribute("data-adsbygoogle-status");
+      introspect(JAM.policy.p3) {
+        var v3229 = a$$64.getAttribute("data-adsbygoogle-status")
+      }
       v1856 = "done" != v3229;
     }
     return v1856;
@@ -13942,7 +15322,9 @@ function v22() {
       }
       return v1858;
     }
-    Z.sort(v1);
+    introspect(JAM.policy.p3) {
+      Z.sort(v1);
+    }
     var v1859 = "auto" == b$$49;
     if (v1859) {
       var v3238;
@@ -13961,24 +15343,20 @@ function v22() {
     var v1861 = c$$27;
     c$$27 = c$$27 - 1;
     for (;v1861;) {
-      introspect(JAM.policy.p4) {
-        var v4587 = Z[c$$27]
-      }
+      var v4587 = Z[c$$27];
       var v4076 = v4587.width;
       var v3239 = v4076 <= a$$61;
       if (v3239) {
-        introspect(JAM.policy.p4) {
-          var v4838 = Z[c$$27]
-        }
+        var v4838 = Z[c$$27];
         var v4588 = v4838.format;
-        var v4077 = b$$49.indexOf(v4588);
+        introspect(JAM.policy.p3) {
+          var v4077 = b$$49.indexOf(v4588)
+        }
         v3239 = -1 != v4077;
       }
       var v1860 = v3239;
       if (v1860) {
-        introspect(JAM.policy.p4) {
-          return Z[c$$27];
-        }
+        return Z[c$$27];
       }
       v1861 = c$$27;
       c$$27 = c$$27 - 1;
@@ -13991,23 +15369,23 @@ function v22() {
     var v3240 = c$$26.length;
     var v1865 = d$$20 < v3240;
     for (;v1865;) {
-      introspect(JAM.policy.p4) {
-        var v1862 = c$$26[d$$20]
-      }
+      var v1862 = c$$26[d$$20];
       var e$$17 = "google_ad_" + v1862;
-      var v3241 = b$$48.hasOwnProperty(e$$17);
+      introspect(JAM.policy.p3) {
+        var v3241 = b$$48.hasOwnProperty(e$$17)
+      }
       var v1864 = !v3241;
       if (v1864) {
-        introspect(JAM.policy.p4) {
-          var v3242 = c$$26[d$$20]
+        var v3242 = c$$26[d$$20];
+        var v1863 = a$$60[v3242];
+        introspect(JAM.policy.p3) {
+          var f$$8 = ib.exec(v1863)
         }
-        introspect(JAM.policy.p4) {
-          var v1863 = a$$60[v3242]
-        }
-        var f$$8 = ib.exec(v1863);
         if (f$$8) {
           var v3243 = f$$8[1];
-          var v5133 = Math.round(v3243);
+          introspect(JAM.policy.p3) {
+            var v5133 = Math.round(v3243)
+          }
           introspect(JAM.policy.p2) {
             b$$48[e$$17] = v5133;
           }
@@ -14021,27 +15399,29 @@ function v22() {
   }
   function hb(a$$59) {
     var v1866 = a$$59.data;
-    var b$$47 = v1866.split("\n");
+    introspect(JAM.policy.p3) {
+      var b$$47 = v1866.split("\n")
+    }
     var c$$25 = {};
     var d$$19 = 0;
     var v3245 = b$$47.length;
     var v1869 = d$$19 < v3245;
     for (;v1869;) {
-      introspect(JAM.policy.p4) {
-        var v1867 = b$$47[d$$19]
+      var v1867 = b$$47[d$$19];
+      introspect(JAM.policy.p3) {
+        var e$$16 = v1867.indexOf("=")
       }
-      var e$$16 = v1867.indexOf("=");
       var v1868 = -1 != e$$16;
       if (v1868) {
-        introspect(JAM.policy.p4) {
-          var v4078 = b$$47[d$$19]
+        var v4078 = b$$47[d$$19];
+        introspect(JAM.policy.p3) {
+          var v3246 = v4078.substr(0, e$$16)
         }
-        var v3246 = v4078.substr(0, e$$16);
-        introspect(JAM.policy.p4) {
-          var v4079 = b$$47[d$$19]
-        }
+        var v4079 = b$$47[d$$19];
         var v4080 = e$$16 + 1;
-        var v5134 = v4079.substr(v4080);
+        introspect(JAM.policy.p3) {
+          var v5134 = v4079.substr(v4080)
+        }
         introspect(JAM.policy.p2) {
           c$$25[v3246] = v5134;
         }
@@ -14059,7 +15439,9 @@ function v22() {
       var v4966 = v5007 == top;
       if (v4966) {
         var v5033 = a$$59.origin;
-        var v5008 = b$$47.indexOf(v5033);
+        introspect(JAM.policy.p3) {
+          var v5008 = b$$47.indexOf(v5033)
+        }
         v4966 = 0 == v5008;
       }
       var v4839 = v4966;
@@ -14077,7 +15459,7 @@ function v22() {
       var v1871 = a$$59 < v3249;
       for (;v1871;) {
         var v1870 = window.google_top_js_callbacks;
-        introspect(JAM.policy.p4) {
+        introspect(JAM.policy.p3) {
           v1870[a$$59]();
         }
         a$$59++;
@@ -14099,7 +15481,9 @@ function v22() {
     db(l$$4, f$$7, g$$6, v1874);
     var v1875 = '"' + Ka;
     l$$4.onload = v1875 + '"';
-    d$$18 = d$$18(a$$58, l$$4, b$$46);
+    introspect(JAM.policy.p3) {
+      d$$18 = d$$18(a$$58, l$$4, b$$46);
+    }
     var v1876;
     var v4084 = window.google_override_format;
     var v4590 = !v4084;
@@ -14108,9 +15492,7 @@ function v22() {
       var v5009 = v5034 + "x";
       var v5010 = window.google_ad_height;
       var v4967 = v5009 + v5010;
-      introspect(JAM.policy.p4) {
-        var v4840 = $a[v4967]
-      }
+      var v4840 = $a[v4967];
       var v4589 = !v4840;
       if (v4589) {
         var v4841 = window.google_loader_used;
@@ -14162,9 +15544,7 @@ function v22() {
       var v4842 = v4968 + "x";
       var v4843 = b$$46.google_ad_height;
       var v4592 = v4842 + v4843;
-      introspect(JAM.policy.p4) {
-        var v4092 = $a[v4592]
-      }
+      var v4092 = $a[v4592];
       var v3256 = !v4092;
       if (v3256) {
         var v4093 = b$$46.google_loader_used;
@@ -14176,7 +15556,9 @@ function v22() {
     var v1879;
     var v3258 = k$$2 && h$$8;
     if (v3258) {
-      v1879 = k$$2.toLowerCase();
+      introspect(JAM.policy.p3) {
+        v1879 = k$$2.toLowerCase();
+      }
     } else {
       v1879 = "";
     }
@@ -14231,9 +15613,7 @@ function v22() {
       v4595 = "";
     }
     var v4097 = v4595;
-    introspect(JAM.policy.p4) {
-      var v3262 = v4096[v4097]
-    }
+    var v3262 = v4096[v4097];
     var v4098 = !v3262;
     if (v4098) {
       v3262 = 0;
@@ -14419,7 +15799,9 @@ function v22() {
       }
       var v4114 = v4601;
       var v3279 = ["/pagead/html/r20131120/r20130906/zrt_lookup.html", v4114];
-      var v1900 = v3279.join("");
+      introspect(JAM.policy.p3) {
+        var v1900 = v3279.join("")
+      }
       f$$7 = C(v1899, v1900);
       b$$46.src = f$$7;
       f$$7 = cb(b$$46);
@@ -14427,7 +15809,9 @@ function v22() {
       f$$7 = null;
     }
     var v1902 = new Date;
-    g$$6 = v1902.getTime();
+    introspect(JAM.policy.p3) {
+      g$$6 = v1902.getTime();
+    }
     b$$46 = a$$58.google_top_experiment;
     h$$8 = a$$58.google_async_for_oa_experiment;
     m$$2 = a$$58.google_always_use_delayed_impressions_experiment;
@@ -14482,10 +15866,12 @@ function v22() {
     var v3286 = v4120;
     var v3287 = ab();
     var v1903 = ["<!doctype html><html><body>", f$$7, "<", e$$15, ">", c$$24, "google_show_ads_impl=true;google_unique_id=", v3280, ';google_async_iframe_id="', d$$18, '";google_start_time=', v, ";", v3281, v3282, v3283, v3284, v3285, "google_bpp=", v3286, ";google_async_rrc=0;</", e$$15, ">", v3287, "</body></html>"];
-    l$$4 = v1903.join("");
+    introspect(JAM.policy.p3) {
+      l$$4 = v1903.join("");
+    }
     var v3288;
     var v4608 = a$$58.document;
-    introspect(JAM.policy.p1) {
+    introspect(JAM.policy.p3) {
       var v4121 = v4608.getElementById(d$$18)
     }
     if (v4121) {
@@ -14496,7 +15882,9 @@ function v22() {
     var v1904 = v3288;
     var v3289 = !0;
     var v1905 = bb(a$$58, d$$18, l$$4, v3289);
-    v1904(v1905);
+    introspect(JAM.policy.p3) {
+      v1904(v1905);
+    }
     return;
   }
   function fb(a$$56, b$$44, c$$23) {
@@ -14507,7 +15895,7 @@ function v22() {
       var v4123 = !v3290;
       if (v4123) {
         var v4122 = a$$57.document;
-        introspect(JAM.policy.p1) {
+        introspect(JAM.policy.p3) {
           v3290 = v4122.getElementById(g$$5);
         }
       }
@@ -14520,7 +15908,7 @@ function v22() {
         var v4125 = !v3291;
         if (v4125) {
           var v4124 = a$$57.document;
-          introspect(JAM.policy.p1) {
+          introspect(JAM.policy.p3) {
             v3291 = v4124.getElementById(g$$5);
           }
         }
@@ -14535,18 +15923,22 @@ function v22() {
       f$$6 = ["<iframe"];
       var h$$7;
       for (h$$7 in b$$45) {
-        var v1910 = b$$45.hasOwnProperty(h$$7);
+        introspect(JAM.policy.p3) {
+          var v1910 = b$$45.hasOwnProperty(h$$7)
+        }
         if (v1910) {
           var v4126 = h$$7 + "=";
-          introspect(JAM.policy.p4) {
-            var v4127 = b$$45[h$$7]
-          }
+          var v4127 = b$$45[h$$7];
           var v3292 = v4126 + v4127;
           ua(f$$6, v3292);
         }
       }
-      f$$6.push('style="left:0;position:absolute;top:0;"');
-      f$$6.push("></iframe>");
+      introspect(JAM.policy.p3) {
+        f$$6.push('style="left:0;position:absolute;top:0;"');
+      }
+      introspect(JAM.policy.p3) {
+        f$$6.push("></iframe>");
+      }
       var v4128 = "border:none;height:" + g$$5;
       var v3293 = v4128 + "px;margin:0;padding:0;position:relative;visibility:visible;width:";
       var v1911 = v3293 + a$$57;
@@ -14554,9 +15946,13 @@ function v22() {
       var v1912 = c$$23;
       var v4609 = b$$45.id;
       var v4129 = v4609 + "_anchor";
-      var v4130 = f$$6.join(" ");
+      introspect(JAM.policy.p3) {
+        var v4130 = f$$6.join(" ")
+      }
       var v3294 = ['<ins style="display:inline-table;', h$$7, '"><ins id="', v4129, '" style="display:block;', h$$7, '">', v4130, "</ins></ins>"];
-      var v5136 = v3294.join("");
+      introspect(JAM.policy.p3) {
+        var v5136 = v3294.join("")
+      }
       v1912.innerHTML = v5136;
       return b$$45.id;
     }
@@ -14596,32 +15992,40 @@ function v22() {
         var v4610 = v4850 + '="';
         var v4131 = v4610 + a$$54;
         var v3295 = v4131 + '"';
-        b$$42.push(v3295);
+        introspect(JAM.policy.p3) {
+          b$$42.push(v3295);
+        }
       }
       return;
     }
     var b$$42 = ["<iframe"];
     G(a$$53, v3);
-    b$$42.push("></iframe>");
-    return b$$42.join("");
+    introspect(JAM.policy.p3) {
+      b$$42.push("></iframe>");
+    }
+    introspect(JAM.policy.p3) {
+      return b$$42.join("");
+    }
   }
   function bb(a$$52, b$$41, c$$21, d$$15) {
     function v4() {
       var e$$13 = !1;
       if (d$$15) {
         var v3296 = Xa();
-        v3296.al(3E4);
+        introspect(JAM.policy.p3) {
+          v3296.al(3E4);
+        }
       }
       try {
         var v4611 = a$$52.document;
-        introspect(JAM.policy.p1) {
+        introspect(JAM.policy.p3) {
           var v4132 = v4611.getElementById(b$$41)
         }
         var v3297 = v4132.contentWindow;
         var v1934 = J(v3297);
         if (v1934) {
           var v3298 = a$$52.document;
-          introspect(JAM.policy.p1) {
+          introspect(JAM.policy.p3) {
             var v1920 = v3298.getElementById(b$$41)
           }
           var f$$5 = v1920.contentWindow;
@@ -14634,13 +16038,17 @@ function v22() {
           var v1921 = v3299;
           var v3300 = !v1921;
           if (v3300) {
-            g$$4.open();
+            introspect(JAM.policy.p3) {
+              g$$4.open();
+            }
             f$$5.google_async_iframe_close = !0;
-            g$$4.write(c$$21);
+            introspect(JAM.policy.p3) {
+              g$$4.write(c$$21);
+            }
           }
         } else {
           var v3301 = a$$52.document;
-          introspect(JAM.policy.p1) {
+          introspect(JAM.policy.p3) {
             var v1922 = v3301.getElementById(b$$41)
           }
           var l$$2 = v1922.contentWindow;
@@ -14649,21 +16057,25 @@ function v22() {
           f$$5 = String(f$$5);
           var v1931 = f$$5.quote;
           if (v1931) {
-            h$$6 = f$$5.quote();
+            introspect(JAM.policy.p3) {
+              h$$6 = f$$5.quote();
+            }
           } else {
             g$$4 = ['"'];
             var k$$1 = 0;
             var v3302 = f$$5.length;
             var v1930 = k$$1 < v3302;
             for (;v1930;) {
-              var m$$1 = f$$5.charAt(k$$1);
-              var q$$1 = m$$1.charCodeAt(0);
+              introspect(JAM.policy.p3) {
+                var m$$1 = f$$5.charAt(k$$1)
+              }
+              introspect(JAM.policy.p3) {
+                var q$$1 = m$$1.charCodeAt(0)
+              }
               var x$$48 = g$$4;
               var B = k$$1 + 1;
               var u;
-              introspect(JAM.policy.p4) {
-                var v3303 = u = E[m$$1]
-              }
+              var v3303 = u = E[m$$1];
               var v1929 = !v3303;
               if (v1929) {
                 var r;
@@ -14678,18 +16090,18 @@ function v22() {
                   var t = m$$1;
                   var v1927 = t in F;
                   if (v1927) {
-                    introspect(JAM.policy.p4) {
-                      r = F[t];
-                    }
+                    r = F[t];
                   } else {
                     var v1926 = t in E;
                     if (v1926) {
-                      introspect(JAM.policy.p5) {
+                      introspect(JAM.policy.p2) {
                         r = F[t] = E[t];
                       }
                     } else {
                       var s$$2 = t;
-                      var y$$30 = t.charCodeAt(0);
+                      introspect(JAM.policy.p3) {
+                        var y$$30 = t.charCodeAt(0)
+                      }
                       var v3305 = 31 < y$$30;
                       if (v3305) {
                         v3305 = 127 > y$$30;
@@ -14717,8 +16129,12 @@ function v22() {
                             s$$2 = s$$2 + "0";
                           }
                         }
-                        var v4135 = y$$30.toString(16);
-                        var v3307 = v4135.toUpperCase();
+                        introspect(JAM.policy.p3) {
+                          var v4135 = y$$30.toString(16)
+                        }
+                        introspect(JAM.policy.p3) {
+                          var v3307 = v4135.toUpperCase()
+                        }
                         s$$2 = s$$2 + v3307;
                       }
                       introspect(JAM.policy.p2) {
@@ -14734,12 +16150,18 @@ function v22() {
               var v3308 = f$$5.length;
               v1930 = k$$1 < v3308;
             }
-            g$$4.push('"');
-            h$$6 = g$$4.join("");
+            introspect(JAM.policy.p3) {
+              g$$4.push('"');
+            }
+            introspect(JAM.policy.p3) {
+              h$$6 = g$$4.join("");
+            }
           }
           var v1932 = l$$2.location;
           var v1933 = "javascript:" + h$$6;
-          v1932.replace(v1933);
+          introspect(JAM.policy.p3) {
+            v1932.replace(v1933);
+          }
         }
         e$$13 = !0;
       } catch (sb) {
@@ -14747,7 +16169,9 @@ function v22() {
         l$$2 = v3309.google_jobrunner;
         var v3310 = Wa(l$$2);
         if (v3310) {
-          l$$2.rl();
+          introspect(JAM.policy.p3) {
+            l$$2.rl();
+          }
         }
       }
       if (e$$13) {
@@ -14755,7 +16179,9 @@ function v22() {
         var v4136 = new Q(a$$52);
         var v4613 = !1;
         var v4137 = bb(a$$52, b$$41, e$$13, v4613);
-        v4136.set(b$$41, v4137);
+        introspect(JAM.policy.p3) {
+          v4136.set(b$$41, v4137);
+        }
       }
       return;
     }
@@ -14766,16 +16192,22 @@ function v22() {
     var v4138 = A("", "googlesyndication");
     var v3311 = C(v4138, "/pagead/js/r20131120/r20130906/show_ads_impl.js", "");
     var v1935 = ["<", a$$51, ' src="', v3311, '"></', a$$51, ">"];
-    return v1935.join("");
+    introspect(JAM.policy.p3) {
+      return v1935.join("");
+    }
   }
   function Za(a$$50, b$$40) {
     var v1936 = Xa();
-    v1936.nqa(a$$50, b$$40);
+    introspect(JAM.policy.p3) {
+      v1936.nqa(a$$50, b$$40);
+    }
     return;
   }
   function Ya(a$$49, b$$39) {
     var v1937 = Xa();
-    v1937.nq(a$$49, b$$39);
+    introspect(JAM.policy.p3) {
+      v1937.nq(a$$49, b$$39);
+    }
     return;
   }
   function Xa() {
@@ -14839,7 +16271,9 @@ function v22() {
   }
   function Va(a$$46) {
     try {
-      return a$$46.sz();
+      introspect(JAM.policy.p3) {
+        return a$$46.sz();
+      }
     } catch (b$$37) {
       return!1;
     }
@@ -14847,10 +16281,14 @@ function v22() {
   }
   function Ua(a$$43) {
     var v3316 = a$$43.m;
-    var v1941 = p(v3316, a$$43);
+    introspect(JAM.policy.p3) {
+      var v1941 = p(v3316, a$$43)
+    }
     var b$$35 = M("sjr::tryrun", v1941);
     var v1942 = a$$43.b;
-    v1942.setTimeout(b$$35, 0);
+    introspect(JAM.policy.p3) {
+      v1942.setTimeout(b$$35, 0);
+    }
     return;
   }
   function Ta(a$$39, b$$31) {
@@ -14869,7 +16307,9 @@ function v22() {
     var v3317 = "\\b" + a$$37;
     var v1943 = v3317 + "=(\\d+)";
     var c$$20 = RegExp(v1943);
-    var d$$14 = c$$20.exec(b$$30);
+    introspect(JAM.policy.p3) {
+      var d$$14 = c$$20.exec(b$$30)
+    }
     if (d$$14) {
       var v4141 = a$$37 + "=";
       var v4972 = d$$14[1];
@@ -14881,7 +16321,9 @@ function v22() {
       }
       var v4142 = v4616;
       var v3318 = v4141 + v4142;
-      b$$30 = b$$30.replace(c$$20, v3318);
+      introspect(JAM.policy.p3) {
+        b$$30 = b$$30.replace(c$$20, v3318);
+      }
     }
     return b$$30;
   }
@@ -14891,7 +16333,9 @@ function v22() {
     var v3320 = !v1944;
     if (v3320) {
       var v4143 = this.l;
-      var v3319 = p(v4143, this);
+      introspect(JAM.policy.p3) {
+        var v3319 = p(v4143, this)
+      }
       a$$33.google_iframe_oncopy = {handlers:{}, upd:v3319};
     }
     this.i = a$$33.google_iframe_oncopy;
@@ -14901,7 +16345,9 @@ function v22() {
     try {
       var v3321 = a$$32.location;
       var v1945 = v3321.host;
-      var b$$26 = Ia.test(v1945);
+      introspect(JAM.policy.p3) {
+        var b$$26 = Ia.test(v1945)
+      }
       var v4855 = a$$32.postMessage;
       var v4617 = !v4855;
       var v4857 = !v4617;
@@ -14936,7 +16382,9 @@ function v22() {
           var f$$4 = [];
           var v1947 = new Ea;
           O(v1947, a$$31, f$$4);
-          e$$12 = f$$4.join("");
+          introspect(JAM.policy.p3) {
+            e$$12 = f$$4.join("");
+          }
         } catch (g$$3) {
         }
         if (e$$12) {
@@ -14954,17 +16402,19 @@ function v22() {
     }
     var b$$25 = [];
     G(a$$30, v5);
-    return b$$25.join("");
+    introspect(JAM.policy.p3) {
+      return b$$25.join("");
+    }
   }
   function Fa(a$$28, b$$23) {
     function v6(a$$29) {
       var v1950 = a$$29 in P;
       if (v1950) {
-        introspect(JAM.policy.p4) {
-          return P[a$$29];
-        }
+        return P[a$$29];
       }
-      var b$$24 = a$$29.charCodeAt(0);
+      introspect(JAM.policy.p3) {
+        var b$$24 = a$$29.charCodeAt(0)
+      }
       var e$$11 = "\\u";
       var v1951;
       var v3325 = 16 > b$$24;
@@ -14986,15 +16436,25 @@ function v22() {
       }
       v1951;
       var v1952 = P;
-      var v3326 = b$$24.toString(16);
+      introspect(JAM.policy.p3) {
+        var v3326 = b$$24.toString(16)
+      }
       introspect(JAM.policy.p2) {
         return v1952[a$$29] = e$$11 + v3326;
       }
     }
-    b$$23.push('"');
-    var v1953 = a$$28.replace(Ga, v6);
-    b$$23.push(v1953);
-    b$$23.push('"');
+    introspect(JAM.policy.p3) {
+      b$$23.push('"');
+    }
+    introspect(JAM.policy.p3) {
+      var v1953 = a$$28.replace(Ga, v6)
+    }
+    introspect(JAM.policy.p3) {
+      b$$23.push(v1953);
+    }
+    introspect(JAM.policy.p3) {
+      b$$23.push('"');
+    }
     return;
   }
   function O(a$$27, b$$22, c$$17) {
@@ -15017,60 +16477,80 @@ function v22() {
           v3327 = "null";
         }
         var v1954 = v3327;
-        c$$17.push(v1954);
+        introspect(JAM.policy.p3) {
+          c$$17.push(v1954);
+        }
         break;
       case "boolean":
-        c$$17.push(b$$22);
+        introspect(JAM.policy.p3) {
+          c$$17.push(b$$22);
+        }
         break;
       case "undefined":
-        c$$17.push("null");
+        introspect(JAM.policy.p3) {
+          c$$17.push("null");
+        }
         break;
       case "object":
         var v1955 = null == b$$22;
         if (v1955) {
-          c$$17.push("null");
+          introspect(JAM.policy.p3) {
+            c$$17.push("null");
+          }
           break;
         }
         var v1957 = b$$22 instanceof Array;
         if (v1957) {
           var d$$11 = b$$22.length;
-          c$$17.push("[");
+          introspect(JAM.policy.p3) {
+            c$$17.push("[");
+          }
           var e$$10 = "";
           var f$$3 = 0;
           var v1956 = f$$3 < d$$11;
           for (;v1956;) {
-            c$$17.push(e$$10);
-            introspect(JAM.policy.p4) {
-              var v4150 = b$$22[f$$3]
+            introspect(JAM.policy.p3) {
+              c$$17.push(e$$10);
             }
+            var v4150 = b$$22[f$$3];
             O(a$$27, v4150, c$$17);
             e$$10 = ",";
             f$$3++;
             v1956 = f$$3 < d$$11;
           }
-          c$$17.push("]");
+          introspect(JAM.policy.p3) {
+            c$$17.push("]");
+          }
           break;
         }
-        c$$17.push("{");
+        introspect(JAM.policy.p3) {
+          c$$17.push("{");
+        }
         d$$11 = "";
         for (e$$10 in b$$22) {
-          var v1958 = b$$22.hasOwnProperty(e$$10);
+          introspect(JAM.policy.p3) {
+            var v1958 = b$$22.hasOwnProperty(e$$10)
+          }
           if (v1958) {
-            introspect(JAM.policy.p4) {
-              f$$3 = b$$22[e$$10];
-            }
+            f$$3 = b$$22[e$$10];
             var v4621 = typeof f$$3;
             var v4151 = "function" != v4621;
             if (v4151) {
-              c$$17.push(d$$11);
+              introspect(JAM.policy.p3) {
+                c$$17.push(d$$11);
+              }
               Fa(e$$10, c$$17);
-              c$$17.push(":");
+              introspect(JAM.policy.p3) {
+                c$$17.push(":");
+              }
               O(a$$27, f$$3, c$$17);
               d$$11 = ",";
             }
           }
         }
-        c$$17.push("}");
+        introspect(JAM.policy.p3) {
+          c$$17.push("}");
+        }
         break;
       case "function":
         break;
@@ -15144,7 +16624,7 @@ function v22() {
   }
   function Ba(a$$21) {
     function v8(a$$22, d$$9) {
-      introspect(JAM.policy.p5) {
+      introspect(JAM.policy.p2) {
         b$$18[d$$9] = D[a$$22];
       }
       return;
@@ -15154,24 +16634,32 @@ function v22() {
     return;
   }
   function Aa(a$$20) {
-    var v3334 = Math.random();
+    introspect(JAM.policy.p3) {
+      var v3334 = Math.random()
+    }
     var v1971 = .01 > v3334;
     if (v1971) {
       var v1966 = Ca(a$$20);
       a$$20 = "/pagead/gen_204?id=jserror" + v1966;
       var v1967 = A("", "googlesyndication");
       a$$20 = C(v1967, a$$20);
-      a$$20 = a$$20.substring(0, 2E3);
+      introspect(JAM.policy.p3) {
+        a$$20 = a$$20.substring(0, 2E3);
+      }
       var v1968 = D.google_image_requests;
       var v3335 = !v1968;
       if (v3335) {
         D.google_image_requests = [];
       }
       var v1969 = D.document;
-      var b$$17 = v1969.createElement("img");
+      introspect(JAM.policy.p3) {
+        var b$$17 = v1969.createElement("img")
+      }
       b$$17.src = a$$20;
       var v1970 = D.google_image_requests;
-      v1970.push(b$$17);
+      introspect(JAM.policy.p3) {
+        v1970.push(b$$17);
+      }
     }
     return;
   }
@@ -15190,17 +16678,27 @@ function v22() {
       v3337 = 0;
     }
     var v1973 = v3337;
-    var v1974 = b$$16.substring(0, 512);
+    introspect(JAM.policy.p3) {
+      var v1974 = b$$16.substring(0, 512)
+    }
     var v3338 = e$$9;
     if (v3338) {
-      v3338 = e$$9.substring(0, 40);
+      introspect(JAM.policy.p3) {
+        v3338 = e$$9.substring(0, 40);
+      }
     }
     var v1975 = v3338;
-    var v1976 = d$$8.toString();
+    introspect(JAM.policy.p3) {
+      var v1976 = d$$8.toString()
+    }
     var v3339 = pa.URL;
-    var v1977 = v3339.substring(0, 512);
+    introspect(JAM.policy.p3) {
+      var v1977 = v3339.substring(0, 512)
+    }
     var v3340 = pa.referrer;
-    var v1978 = v3340.substring(0, 512);
+    introspect(JAM.policy.p3) {
+      var v1978 = v3340.substring(0, 512)
+    }
     a$$19 = {jscb:v1972, jscd:v1973, context:a$$19, msg:v1974, eid:v1975, file:c$$15, line:v1976, url:v1977, ref:v1978};
     Ba(a$$19);
     Aa(a$$19);
@@ -15208,15 +16706,21 @@ function v22() {
   }
   function K(a$$18, b$$15, c$$14, d$$7) {
     try {
-      c$$14();
+      introspect(JAM.policy.p3) {
+        c$$14();
+      }
     } catch (e$$8) {
       c$$14 = !ha;
       try {
-        var f$$2 = e$$8.toString();
+        introspect(JAM.policy.p3) {
+          var f$$2 = e$$8.toString()
+        }
         var v3341 = e$$8.name;
         if (v3341) {
           var v4624 = e$$8.name;
-          var v4155 = f$$2.indexOf(v4624);
+          introspect(JAM.policy.p3) {
+            var v4155 = f$$2.indexOf(v4624)
+          }
           v3341 = -1 == v4155;
         }
         var v1979 = v3341;
@@ -15228,7 +16732,9 @@ function v22() {
         var v3342 = e$$8.message;
         if (v3342) {
           var v4626 = e$$8.message;
-          var v4157 = f$$2.indexOf(v4626);
+          introspect(JAM.policy.p3) {
+            var v4157 = f$$2.indexOf(v4626)
+          }
           v3342 = -1 == v4157;
         }
         var v1980 = v3342;
@@ -15242,7 +16748,9 @@ function v22() {
           var g$$2 = e$$8.stack;
           var l$$1 = f$$2;
           try {
-            var v3343 = g$$2.indexOf(l$$1);
+            introspect(JAM.policy.p3) {
+              var v3343 = g$$2.indexOf(l$$1)
+            }
             var v1981 = -1 == v3343;
             if (v1981) {
               var v3344 = l$$1 + "\n";
@@ -15252,10 +16760,14 @@ function v22() {
             var v1982 = g$$2 != h$$5;
             for (;v1982;) {
               h$$5 = g$$2;
-              g$$2 = g$$2.replace(/((https?:\/..*\/)[^\/:]*:\d+(?:.|\n)*)\2/, "$1");
+              introspect(JAM.policy.p3) {
+                g$$2 = g$$2.replace(/((https?:\/..*\/)[^\/:]*:\d+(?:.|\n)*)\2/, "$1");
+              }
               v1982 = g$$2 != h$$5;
             }
-            f$$2 = g$$2.replace(/\n */g, "\n");
+            introspect(JAM.policy.p3) {
+              f$$2 = g$$2.replace(/\n */g, "\n");
+            }
           } catch (k) {
             f$$2 = l$$1;
           }
@@ -15275,7 +16787,9 @@ function v22() {
           try {
             var v1986;
             if (d$$7) {
-              v1986 = d$$7();
+              introspect(JAM.policy.p3) {
+                v1986 = d$$7();
+              }
             } else {
               v1986 = "";
             }
@@ -15285,9 +16799,13 @@ function v22() {
           }
           m = "";
         }
-        c$$14 = b$$15(a$$18, f$$2, g$$2, h$$5, m);
+        introspect(JAM.policy.p3) {
+          c$$14 = b$$15(a$$18, f$$2, g$$2, h$$5, m);
+        }
       } catch (x$$47) {
-        var v4628 = x$$47.toString();
+        introspect(JAM.policy.p3) {
+          var v4628 = x$$47.toString()
+        }
         var v4159 = v4628 + "\n";
         var v4629 = x$$47.stack;
         var v4860 = !v4629;
@@ -15351,7 +16869,9 @@ function v22() {
           v3350 = "";
         }
         var v1995 = v3350;
-        c$$13.push(v1995);
+        introspect(JAM.policy.p3) {
+          c$$13.push(v1995);
+        }
         a$$16 = a$$16.parentNode;
         ++d$$6;
         var v3351 = a$$16;
@@ -15360,17 +16880,27 @@ function v22() {
         }
         v1996 = v3351;
       }
-      var v1997 = a$$16 = c$$13.join();
+      introspect(JAM.policy.p3) {
+        var v1997 = a$$16 = c$$13.join()
+      }
       if (v1997) {
-        b$$13.push(a$$16);
+        introspect(JAM.policy.p3) {
+          b$$13.push(a$$16);
+        }
       }
     } else {
       var v3352 = wa(a$$16);
-      b$$13.push(v3352);
+      introspect(JAM.policy.p3) {
+        b$$13.push(v3352);
+      }
       var v3353 = xa();
-      b$$13.push(v3353);
+      introspect(JAM.policy.p3) {
+        b$$13.push(v3353);
+      }
     }
-    b$$13 = b$$13.join(":");
+    introspect(JAM.policy.p3) {
+      b$$13 = b$$13.join(":");
+    }
     a$$16 = b$$13.length;
     var v2000 = 0 == a$$16;
     if (v2000) {
@@ -15383,7 +16913,9 @@ function v22() {
         var v4861 = c$$13 << 5;
         var v4862 = c$$13 >> 2;
         var v4632 = v4861 + v4862;
-        var v4633 = b$$13.charCodeAt(d$$6);
+        introspect(JAM.policy.p3) {
+          var v4633 = b$$13.charCodeAt(d$$6)
+        }
         var v4165 = v4632 + v4633;
         var v3354 = v4165 & 4294967295;
         c$$13 = c$$13 ^ v3354;
@@ -15399,7 +16931,9 @@ function v22() {
       }
       b$$13 = v1999;
     }
-    return b$$13.toString();
+    introspect(JAM.policy.p3) {
+      return b$$13.toString();
+    }
   }
   function xa() {
     var a$$15 = D;
@@ -15423,12 +16957,12 @@ function v22() {
           var v3357 = e$$7.length;
           var v2002 = f$$1 < v3357;
           for (;v2002;) {
-            introspect(JAM.policy.p4) {
-              var v3358 = e$$7[f$$1]
-            }
+            var v3358 = e$$7[f$$1];
             var v2001 = a$$15 == v3358;
             if (v2001) {
-              b$$12.push(f$$1);
+              introspect(JAM.policy.p3) {
+                b$$12.push(f$$1);
+              }
               break;
             }
             ++f$$1;
@@ -15451,7 +16985,9 @@ function v22() {
       } catch (g$$1) {
       }
     }
-    return b$$12.join();
+    introspect(JAM.policy.p3) {
+      return b$$12.join();
+    }
   }
   function wa(a$$14) {
     var b$$11 = [];
@@ -15479,7 +17015,9 @@ function v22() {
       t: {
         var f = a$$14.parentElement;
         var v2006 = a$$14.nodeName;
-        e$$6 = v2006.toLowerCase();
+        introspect(JAM.policy.p3) {
+          e$$6 = v2006.toLowerCase();
+        }
         if (f) {
           f = f.childNodes;
           var g = 0;
@@ -15487,13 +17025,13 @@ function v22() {
           var v3363 = f.length;
           var v2009 = l < v3363;
           for (;v2009;) {
-            introspect(JAM.policy.p4) {
-              var h$$4 = f[l]
-            }
+            var h$$4 = f[l];
             var v3364 = h$$4.nodeName;
             if (v3364) {
               var v4634 = h$$4.nodeName;
-              var v4168 = v4634.toLowerCase();
+              introspect(JAM.policy.p3) {
+                var v4168 = v4634.toLowerCase()
+              }
               v3364 = v4168 == e$$6;
             }
             var v2008 = v3364;
@@ -15515,12 +17053,16 @@ function v22() {
       var v4635 = a$$14.nodeName;
       if (v4635) {
         var v4863 = a$$14.nodeName;
-        v4635 = v4863.toLowerCase();
+        introspect(JAM.policy.p3) {
+          v4635 = v4863.toLowerCase();
+        }
       }
       var v4169 = v4635;
       var v3366 = v4169 + d$$4;
       var v2010 = v3366 + e$$6;
-      b$$11.push(v2010);
+      introspect(JAM.policy.p3) {
+        b$$11.push(v2010);
+      }
       a$$14 = a$$14.parentElement;
       ++c$$11;
       var v3367 = a$$14;
@@ -15529,7 +17071,9 @@ function v22() {
       }
       v2011 = v3367;
     }
-    return b$$11.join();
+    introspect(JAM.policy.p3) {
+      return b$$11.join();
+    }
   }
   function va(a$$13) {
     var v2012;
@@ -15544,28 +17088,36 @@ function v22() {
     return;
   }
   function I(a$$12, b$$10) {
-    var v4171 = Math.random();
+    introspect(JAM.policy.p3) {
+      var v4171 = Math.random()
+    }
     var v3369 = 1E-4 > v4171;
     var v2017 = !v3369;
     if (v2017) {
-      var c$$10 = Math.random();
+      introspect(JAM.policy.p3) {
+        var c$$10 = Math.random()
+      }
       var v2016 = c$$10 < b$$10;
       if (v2016) {
         try {
           var d$$3 = new Uint16Array(1);
           var v2013 = window.crypto;
-          v2013.getRandomValues(d$$3);
+          introspect(JAM.policy.p3) {
+            v2013.getRandomValues(d$$3);
+          }
           var v2014 = d$$3[0];
           c$$10 = v2014 / 65536;
         } catch (e$$5) {
-          c$$10 = Math.random();
+          introspect(JAM.policy.p3) {
+            c$$10 = Math.random();
+          }
         }
         var v4172 = a$$12.length;
         var v3370 = c$$10 * v4172;
-        var v2015 = Math.floor(v3370);
-        introspect(JAM.policy.p4) {
-          return a$$12[v2015];
+        introspect(JAM.policy.p3) {
+          var v2015 = Math.floor(v3370)
         }
+        return a$$12[v2015];
       }
     }
     return null;
@@ -15579,10 +17131,10 @@ function v22() {
       var d$$2 = arguments.length;
       var v2019 = c$$9 < d$$2;
       for (;v2019;) {
-        introspect(JAM.policy.p4) {
-          var v2018 = arguments[c$$9]
+        var v2018 = arguments[c$$9];
+        introspect(JAM.policy.p3) {
+          a$$11.push(v2018);
         }
-        a$$11.push(v2018);
         ++c$$9;
         v2019 = c$$9 < d$$2;
       }
@@ -15609,12 +17161,14 @@ function v22() {
     for (c$$8 in a$$9) {
       var v4177 = Object.prototype;
       var v3374 = v4177.hasOwnProperty;
-      var v2022 = v3374.call(a$$9, c$$8);
+      introspect(JAM.policy.p3) {
+        var v2022 = v3374.call(a$$9, c$$8)
+      }
       if (v2022) {
-        introspect(JAM.policy.p4) {
-          var v3375 = a$$9[c$$8]
+        var v3375 = a$$9[c$$8];
+        introspect(JAM.policy.p3) {
+          b$$8.call(null, v3375, c$$8, a$$9);
         }
-        b$$8.call(null, v3375, c$$8, a$$9);
       }
     }
     return;
@@ -15631,14 +17185,18 @@ function v22() {
       c$$7 = v3376;
     }
     var v2023 = [c$$7, "://", a$$8, b$$7];
-    return v2023.join("");
+    introspect(JAM.policy.p3) {
+      return v2023.join("");
+    }
   }
   function A(a$$7, b$$6) {
     var v2024 = !a$$7;
     if (v2024) {
       return b$$6;
     }
-    var c$$6 = a$$7.match(ea);
+    introspect(JAM.policy.p3) {
+      var c$$6 = a$$7.match(ea)
+    }
     var v2025;
     if (c$$6) {
       v2025 = c$$6[0];
@@ -15649,7 +17207,9 @@ function v22() {
   }
   function z$$2(a$$6) {
     var v2026;
-    var v3378 = /^true$/.test(a$$6);
+    introspect(JAM.policy.p3) {
+      var v3378 = /^true$/.test(a$$6)
+    }
     if (v3378) {
       v2026 = !0;
     } else {
@@ -15680,14 +17240,22 @@ function v22() {
   }
   function da(a$$4, b$$4) {
     function v9() {
-      var b$$5 = c$$5.slice();
+      introspect(JAM.policy.p3) {
+        var b$$5 = c$$5.slice()
+      }
       var v2028 = b$$5.push;
-      v2028.apply(b$$5, arguments);
-      return a$$4.apply(this, b$$5);
+      introspect(JAM.policy.p3) {
+        v2028.apply(b$$5, arguments);
+      }
+      introspect(JAM.policy.p3) {
+        return a$$4.apply(this, b$$5);
+      }
     }
     var v3380 = Array.prototype;
     var v2029 = v3380.slice;
-    var c$$5 = v2029.call(arguments, 1);
+    introspect(JAM.policy.p3) {
+      var c$$5 = v2029.call(arguments, 1)
+    }
     return v9;
   }
   function p(a$$3, b$$3, c$$4) {
@@ -15697,8 +17265,12 @@ function v22() {
     if (v4179) {
       var v5014 = Function.prototype;
       var v4974 = v5014.bind;
-      var v4865 = v4974.toString();
-      var v4639 = v4865.indexOf("native code");
+      introspect(JAM.policy.p3) {
+        var v4865 = v4974.toString()
+      }
+      introspect(JAM.policy.p3) {
+        var v4639 = v4865.indexOf("native code")
+      }
       v4179 = -1 != v4639;
     }
     var v3381 = v4179;
@@ -15708,20 +17280,30 @@ function v22() {
       v2030 = ca;
     }
     p = v2030;
-    return p.apply(null, arguments);
+    introspect(JAM.policy.p3) {
+      return p.apply(null, arguments);
+    }
   }
   function ca(a$$2, b$$2, c$$2) {
     function v11() {
-      return a$$2.apply(b$$2, arguments);
+      introspect(JAM.policy.p3) {
+        return a$$2.apply(b$$2, arguments);
+      }
     }
     function v10() {
       var v3382 = Array.prototype;
       var v2031 = v3382.slice;
-      var c$$3 = v2031.call(arguments);
+      introspect(JAM.policy.p3) {
+        var c$$3 = v2031.call(arguments)
+      }
       var v3383 = Array.prototype;
       var v2032 = v3383.unshift;
-      v2032.apply(c$$3, d$$1);
-      return a$$2.apply(b$$2, c$$3);
+      introspect(JAM.policy.p3) {
+        v2032.apply(c$$3, d$$1);
+      }
+      introspect(JAM.policy.p3) {
+        return a$$2.apply(b$$2, c$$3);
+      }
     }
     var v2033 = !a$$2;
     if (v2033) {
@@ -15732,7 +17314,9 @@ function v22() {
     if (v2035) {
       var v3385 = Array.prototype;
       var v2034 = v3385.slice;
-      var d$$1 = v2034.call(arguments, 2);
+      introspect(JAM.policy.p3) {
+        var d$$1 = v2034.call(arguments, 2)
+      }
       return v10;
     }
     return v11;
@@ -15740,10 +17324,14 @@ function v22() {
   function ba(a$$1, b$$1, c$$1) {
     var v2036 = a$$1.call;
     var v2037 = a$$1.bind;
-    return v2036.apply(v2037, arguments);
+    introspect(JAM.policy.p3) {
+      return v2036.apply(v2037, arguments);
+    }
   }
   function aa(a, b) {
-    var c = a.split(".");
+    introspect(JAM.policy.p3) {
+      var c = a.split(".")
+    }
     var d = n$$1;
     var v4180 = c[0];
     var v3386 = v4180 in d;
@@ -15757,12 +17345,16 @@ function v22() {
     if (v3388) {
       var v4183 = c[0];
       var v3387 = "var " + v4183;
-      d.execScript(v3387);
+      introspect(JAM.policy.p3) {
+        d.execScript(v3387);
+      }
     }
     var e$$4;
     var v3389 = c.length;
     if (v3389) {
-      v3389 = e$$4 = c.shift();
+      introspect(JAM.policy.p3) {
+        v3389 = e$$4 = c.shift();
+      }
     }
     var v2040 = v3389;
     for (;v2040;) {
@@ -15776,13 +17368,9 @@ function v22() {
       var v3391 = v4184;
       if (v3391) {
         var v3390;
-        introspect(JAM.policy.p4) {
-          var v4185 = d[e$$4]
-        }
+        var v4185 = d[e$$4];
         if (v4185) {
-          introspect(JAM.policy.p4) {
-            v3390 = d[e$$4];
-          }
+          v3390 = d[e$$4];
         } else {
           introspect(JAM.policy.p2) {
             v3390 = d[e$$4] = {};
@@ -15797,7 +17385,9 @@ function v22() {
       v2039;
       var v3392 = c.length;
       if (v3392) {
-        v3392 = e$$4 = c.shift();
+        introspect(JAM.policy.p3) {
+          v3392 = e$$4 = c.shift();
+        }
       }
       v2040 = v3392;
     }
@@ -15805,7 +17395,9 @@ function v22() {
   }
   var n$$1 = this;
   var v2041 = new Date;
-  var v = v2041.getTime();
+  introspect(JAM.policy.p3) {
+    var v = v2041.getTime()
+  }
   var ea = /^([\w-]+\.)*([\w-]{2,})(\:[0-9]+)?$/;
   var fa = z$$2("false");
   var ga = z$$2("false");
@@ -15831,7 +17423,9 @@ function v22() {
   var N = null;
   var P = {'"':'\\"', "\\":"\\\\", "/":"\\/", "\b":"\\b", "\f":"\\f", "\n":"\\n", "\r":"\\r", "\t":"\\t", "\x0B":"\\u000b"};
   var v2042;
-  var v3393 = /\uffff/.test("\uffff");
+  introspect(JAM.policy.p3) {
+    var v3393 = /\uffff/.test("\uffff")
+  }
   if (v3393) {
     v2042 = /[\\\"\x00-\x1f\x7f-\uffff]/g;
   } else {
@@ -15841,27 +17435,45 @@ function v22() {
   var Ia = /\.((google(|groups|mail|images|print))|gmail)\./;
   var Ka;
   var R = "var i=this.id,s=window.google_iframe_oncopy,H=s&&s.handlers,h=H&&H[i],w=this.contentWindow,d;try{d=w.document}catch(e){}if(h&&d&&(!d.body||!d.body.firstChild)){if(h.call){setTimeout(h,0)}else if(h.match){try{h=s.upd(h,i)}catch(e){}w.location.replace(h)}}";
-  var v2043 = /[&<>\"]/.test(R);
+  introspect(JAM.policy.p3) {
+    var v2043 = /[&<>\"]/.test(R)
+  }
   if (v2043) {
-    var v4975 = R.indexOf("&");
+    introspect(JAM.policy.p3) {
+      var v4975 = R.indexOf("&")
+    }
     var v4866 = -1 != v4975;
     if (v4866) {
-      R = R.replace(qa, "&amp;");
+      introspect(JAM.policy.p3) {
+        R = R.replace(qa, "&amp;");
+      }
     }
-    var v4976 = R.indexOf("<");
+    introspect(JAM.policy.p3) {
+      var v4976 = R.indexOf("<")
+    }
     var v4867 = -1 != v4976;
     if (v4867) {
-      R = R.replace(ra, "&lt;");
+      introspect(JAM.policy.p3) {
+        R = R.replace(ra, "&lt;");
+      }
     }
-    var v4868 = R.indexOf(">");
+    introspect(JAM.policy.p3) {
+      var v4868 = R.indexOf(">")
+    }
     var v4642 = -1 != v4868;
     if (v4642) {
-      R = R.replace(sa, "&gt;");
+      introspect(JAM.policy.p3) {
+        R = R.replace(sa, "&gt;");
+      }
     }
-    var v4643 = R.indexOf('"');
+    introspect(JAM.policy.p3) {
+      var v4643 = R.indexOf('"')
+    }
     var v4186 = -1 != v4643;
     if (v4186) {
-      R = R.replace(ta, "&quot;");
+      introspect(JAM.policy.p3) {
+        R = R.replace(ta, "&quot;");
+      }
     }
   }
   Ka = R;
@@ -15888,15 +17500,21 @@ function v22() {
   var v2051 = V = v3394;
   if (v2051) {
     var Oa = n$$1.navigator;
-    var v2047 = V.lastIndexOf("Opera", 0);
+    introspect(JAM.policy.p3) {
+      var v2047 = V.lastIndexOf("Opera", 0)
+    }
     S = 0 == v2047;
     var v2048 = !S;
     if (v2048) {
-      var v4189 = V.indexOf("MSIE");
+      introspect(JAM.policy.p3) {
+        var v4189 = V.indexOf("MSIE")
+      }
       var v3395 = -1 != v4189;
       var v4191 = !v3395;
       if (v4191) {
-        var v4190 = V.indexOf("Trident");
+        introspect(JAM.policy.p3) {
+          var v4190 = V.indexOf("Trident")
+        }
         v3395 = -1 != v4190;
       }
       v2048 = v3395;
@@ -15904,7 +17522,9 @@ function v22() {
     T = v2048;
     var v2049 = !S;
     if (v2049) {
-      var v3396 = V.indexOf("WebKit");
+      introspect(JAM.policy.p3) {
+        var v3396 = V.indexOf("WebKit")
+      }
       v2049 = -1 != v3396;
     }
     U = v2049;
@@ -15938,7 +17558,9 @@ function v22() {
     var v3400 = typeof Sa;
     var v2053 = "function" == v3400;
     if (v2053) {
-      Sa();
+      introspect(JAM.policy.p3) {
+        Sa();
+      }
     }
   } else {
     var v3401;
@@ -15968,7 +17590,9 @@ function v22() {
         v4645 = null;
       }
       var v4194 = v4645;
-      W.exec(v4194);
+      introspect(JAM.policy.p3) {
+        W.exec(v4194);
+      }
     }
   }
   var X;
@@ -16008,9 +17632,13 @@ function v22() {
   var v2071 = !0;
   var v2072 = !0;
   var $a = {"120x90":v2067, "160x90":v2068, "180x90":v2069, "200x90":v2070, "468x15":v2071, "728x15":v2072};
-  var v3407 = Math.random();
+  introspect(JAM.policy.p3) {
+    var v3407 = Math.random()
+  }
   var v2073 = 1E6 * v3407;
-  var gb = Math.floor(v2073);
+  introspect(JAM.policy.p3) {
+    var gb = Math.floor(v2073)
+  }
   var ib = /([0-9.]+)px/;
   var v2074 = {width:120, height:240, format:"vertical"};
   var v2075 = {width:120, height:600, format:"vertical"};

@@ -670,11 +670,11 @@ function testScript() {
     return false;
   }
   var testNum = 2489.8237;
-  if (JAM.call(testNum.toFixed, testNum, [3], JAM.policy.p11) != 2489.824) {
+  if (JAM.call(testNum.toFixed, testNum, [3], JAM.policy.p10) != 2489.824) {
     alert("Number toFixed() method not supported. See browser compatibility page.");
     return false;
   }
-  if (JAM.call(testNum.toPrecision, testNum, [5], JAM.policy.p11) != 2489.8) {
+  if (JAM.call(testNum.toPrecision, testNum, [5], JAM.policy.p10) != 2489.8) {
     alert("Number toPrecision() method not supported. See browser compatibility page.");
     return false;
   }
@@ -1170,7 +1170,7 @@ function writeSequenceStats(sequence$$16, arrayOfItems$$1) {
     var v253 = outputWindow.document;
     var v664 = arrayOfItems$$1[i$$10];
     var v645 = JAM.call(v664.match, v664, [/\([^\(]+\)\b/], JAM.policy.p17).toString();
-    JAM.call(v253.write, v253, ["<tr><td>" + JAM.call(v645.replace, v645, [/\(|\)/g, ""], JAM.policy.p15) + "</td><td>" + tempNumber + "</td><td>" + JAM.call(percentage.toFixed, percentage, [2], JAM.policy.p11) + "</td></tr>\n"], JAM.policy.p16);
+    JAM.call(v253.write, v253, ["<tr><td>" + JAM.call(v645.replace, v645, [/\(|\)/g, ""], JAM.policy.p15) + "</td><td>" + tempNumber + "</td><td>" + JAM.call(percentage.toFixed, percentage, [2], JAM.policy.p10) + "</td></tr>\n"], JAM.policy.p16);
     i$$10++;
     v255 = i$$10 < arrayOfItems$$1.length;
   }

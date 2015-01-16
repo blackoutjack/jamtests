@@ -7,10 +7,18 @@ function warmup() {
     var i$$2 = 0;
     var v1 = i$$2 < 100;
     for (;v1;) {
-      var v42 = Math.random();
-      var v41 = Math.asin(v42);
-      var v38 = Math.acos(v41);
-      var v24 = Math.atan(v38);
+      introspect(JAM.policy.p153) {
+        var v42 = Math.random()
+      }
+      introspect(JAM.policy.p156) {
+        var v41 = Math.asin(v42)
+      }
+      introspect(JAM.policy.p156) {
+        var v38 = Math.acos(v41)
+      }
+      introspect(JAM.policy.p156) {
+        var v24 = Math.atan(v38)
+      }
       var v0 = v24 > 4;
       if (v0) {
         return;
@@ -25,40 +33,64 @@ function warmup() {
   return;
 }
 function start() {
-  window.setTimeout(next, 128);
+  introspect(JAM.policy.p156) {
+    window.setTimeout(next, 128);
+  }
   return;
 }
 function next() {
-  var v3 = document.getElementById("frameparent");
-  v3.innerHTML = "";
-  var v4 = document.getElementById("frameparent");
-  v4.innerHTML = "<iframe id='testframe'>";
-  var testFrame = document.getElementById("testframe");
+  introspect(JAM.policy.p155) {
+    var v3 = document.getElementById("frameparent")
+  }
+  introspect(JAM.policy.p101) {
+    v3.innerHTML = "";
+  }
+  introspect(JAM.policy.p155) {
+    var v4 = document.getElementById("frameparent")
+  }
+  introspect(JAM.policy.p101) {
+    v4.innerHTML = "<iframe id='testframe'>";
+  }
+  introspect(JAM.policy.p155) {
+    var testFrame = document.getElementById("testframe")
+  }
   var v26 = testIndex = testIndex + 1;
   var v27 = tests.length;
   var v11 = v26 < v27;
   if (v11) {
     warmup();
     var v5 = testFrame.contentDocument;
-    introspect(JAM.policy.p1) {
+    introspect(JAM.policy.p157) {
       v5.open();
     }
     var v6 = testFrame.contentDocument;
-    introspect(JAM.policy.p1) {
+    introspect(JAM.policy.p163) {
       var v7 = testContents[testIndex]
     }
-    v6.write(v7);
+    introspect(JAM.policy.p152) {
+      v6.write(v7);
+    }
     var v8 = testFrame.contentDocument;
-    v8.close();
-    window.setTimeout(next, 0);
+    introspect(JAM.policy.p153) {
+      v8.close();
+    }
+    introspect(JAM.policy.p156) {
+      window.setTimeout(next, 0);
+    }
   } else {
     var v28 = currentRepeat = currentRepeat + 1;
     var v10 = v28 < repeatCount;
     if (v10) {
-      var v9 = document.getElementById("countdown");
-      v9.innerHTML = repeatCount - currentRepeat;
+      introspect(JAM.policy.p155) {
+        var v9 = document.getElementById("countdown")
+      }
+      introspect(JAM.policy.p101) {
+        v9.innerHTML = repeatCount - currentRepeat;
+      }
       testIndex = -1;
-      window.setTimeout(next, 128);
+      introspect(JAM.policy.p156) {
+        window.setTimeout(next, 128);
+      }
     } else {
       finish();
     }
@@ -68,13 +100,15 @@ function next() {
 function recordResult(time) {
   var v14 = currentRepeat >= 0;
   if (v14) {
-    introspect(JAM.policy.p1) {
+    introspect(JAM.policy.p163) {
       var v12 = output[currentRepeat]
     }
-    introspect(JAM.policy.p1) {
+    introspect(JAM.policy.p163) {
       var v13 = tests[testIndex]
     }
-    v12[v13] = time;
+    introspect(JAM.policy.p164) {
+      v12[v13] = time;
+    }
   }
   return;
 }
@@ -91,10 +125,10 @@ function finish() {
     var v30 = output.length;
     var v17 = i$$3 < v30;
     for (;v17;) {
-      introspect(JAM.policy.p1) {
+      introspect(JAM.policy.p163) {
         var v15 = output[i$$3]
       }
-      introspect(JAM.policy.p1) {
+      introspect(JAM.policy.p163) {
         var time$$1 = v15[test]
       }
       var v16 = time$$1 != time$$1;
@@ -109,12 +143,16 @@ function finish() {
     }
     var v33 = outputString.length;
     var v18 = v33 - 1;
-    outputString = outputString.substring(0, v18);
+    introspect(JAM.policy.p154) {
+      outputString = outputString.substring(0, v18);
+    }
     outputString = outputString + "],";
   }
   var v34 = outputString.length;
   var v20 = v34 - 1;
-  outputString = outputString.substring(0, v20);
+  introspect(JAM.policy.p154) {
+    outputString = outputString.substring(0, v20);
+  }
   outputString = outputString + "}";
   var v21 = encodeURI(outputString);
   location = "results.html?" + v21;
@@ -320,12 +358,16 @@ var currentRepeat = -1;
 var repeatCount = 10;
 var warmupMS = 8;
 var output = [];
-output.length = repeatCount;
+introspect(JAM.policy.p12) {
+  output.length = repeatCount;
+}
 var i = 0;
 var v35 = output.length;
 var v22 = i < v35;
 for (;v22;) {
-  output[i] = {};
+  introspect(JAM.policy.p12) {
+    output[i] = {};
+  }
   i++;
   var v36 = output.length;
   v22 = i < v36;

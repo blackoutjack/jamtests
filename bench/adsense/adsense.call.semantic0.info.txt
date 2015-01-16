@@ -1,6 +1,6 @@
 predicate-limit:0
 syntax-only:false
-policy-files:[tests/bench/adsense/adsense.call.policy]
+policy-files:[/home/rich/cs/jam/tests/bench/adsense/adsense.call.policy]
 adsense.original.js:37709
 adsense.normalized.js:59464
 policy.aut:19
@@ -16,8 +16,8 @@ callbacks-added-edges:581009
 callbacks-added-states:21889
 concrete-query-cache:concrete731558547.bin
 symbolic-query-cache:symbolic731558547.bin
-modular.policy.js:162
-policy.js:356
+modular.policy.js:168
+policy.js:362
 transactions:1089
 checks:2116
 callsites-indirected:1029

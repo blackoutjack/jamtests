@@ -1,6 +1,6 @@
 predicate-limit:0
 syntax-only:false
-policy-files:[tests/bench/sms2-protein-gravy/sms2.policy]
+policy-files:[/home/rich/cs/jam/tests/bench/sms2-protein-gravy/sms2.policy]
 sms2-protein-gravy.original.js:5492
 sms2-protein-gravy.normalized.js:8116
 policy.aut:346
@@ -16,8 +16,8 @@ callbacks-added-edges:2508
 callbacks-added-states:2249
 concrete-query-cache:concrete-1445667350.bin
 symbolic-query-cache:symbolic-1445667350.bin
-modular.policy.js:834
-policy.js:2577
+modular.policy.js:852
+policy.js:2667
 transactions:255
 checks:1103
 callsites-indirected:260

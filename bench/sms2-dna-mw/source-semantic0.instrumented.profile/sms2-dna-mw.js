@@ -500,32 +500,32 @@ function complement(dnaSequence) {
 }
 function closeForm() {
   var v44 = outputWindow.document;
-  introspect(JAM.policy.p9) {
+  introspect(JAM.policy.p11) {
     v44.write("</form>");
   }
   return true;
 }
 function closePre() {
   var v45 = outputWindow.document;
-  introspect(JAM.policy.p9) {
+  introspect(JAM.policy.p11) {
     v45.write("</div>");
   }
   var v46 = outputWindow.document;
-  introspect(JAM.policy.p9) {
+  introspect(JAM.policy.p11) {
     v46.write("</pre>\n");
   }
   return;
 }
 function closeTextArea() {
   var v47 = outputWindow.document;
-  introspect(JAM.policy.p9) {
+  introspect(JAM.policy.p11) {
     v47.write("</textarea>");
   }
   return true;
 }
 function closeWindow() {
   var v48 = outputWindow.document;
-  introspect(JAM.policy.p9) {
+  introspect(JAM.policy.p11) {
     v48.write("</body>\n</html>\n");
   }
   outputWindow.status = "Done.";
@@ -858,7 +858,7 @@ function getRandomSequence(components, lengthOut) {
     j$$4++;
     v96 = j$$4 < lengthOut;
   }
-  introspect(JAM.policy.p9) {
+  introspect(JAM.policy.p11) {
     return sequenceArray.join("");
   }
 }
@@ -989,25 +989,25 @@ function moreExpressionCheck(expressionToCheck) {
 }
 function openForm() {
   var v101 = outputWindow.document;
-  introspect(JAM.policy.p9) {
+  introspect(JAM.policy.p11) {
     v101.write('<form action="">\n');
   }
   return true;
 }
 function openPre() {
   var v102 = outputWindow.document;
-  introspect(JAM.policy.p9) {
+  introspect(JAM.policy.p11) {
     v102.write("<pre>");
   }
   var v103 = outputWindow.document;
-  introspect(JAM.policy.p9) {
+  introspect(JAM.policy.p11) {
     v103.write('<div class="pre">');
   }
   return;
 }
 function openTextArea() {
   var v104 = outputWindow.document;
-  introspect(JAM.policy.p9) {
+  introspect(JAM.policy.p11) {
     v104.write('<br /><textarea rows="6" cols="61">\n');
   }
   return true;
@@ -1209,7 +1209,7 @@ function reverse(dnaSequence$$1) {
       tempDnaArray = dnaSequence$$1.match(/./g);
     }
     tempDnaArray = tempDnaArray.reverse();
-    introspect(JAM.policy.p9) {
+    introspect(JAM.policy.p11) {
       dnaSequence$$1 = tempDnaArray.join("");
     }
   }
@@ -1277,7 +1277,7 @@ function testScript() {
     return false;
   }
   var testNum = 2489.8237;
-  introspect(JAM.policy.p11) {
+  introspect(JAM.policy.p9) {
     var v418 = testNum.toFixed(3)
   }
   var v129 = v418 != 2489.824;
@@ -1285,7 +1285,7 @@ function testScript() {
     alert("Number toFixed() method not supported. See browser compatibility page.");
     return false;
   }
-  introspect(JAM.policy.p11) {
+  introspect(JAM.policy.p9) {
     var v419 = testNum.toPrecision(5)
   }
   var v130 = v419 != 2489.8;
@@ -1631,7 +1631,7 @@ function writeGroupNumDnaSetStart(text$$12, tabIn$$3, groupSize$$2, basePerLine$
           v162.write(v163);
         }
         var v164 = outputWindow.document;
-        introspect(JAM.policy.p9) {
+        introspect(JAM.policy.p11) {
           v164.write("\n");
         }
       }
@@ -1657,7 +1657,7 @@ function writeGroupNumDnaSetStart(text$$12, tabIn$$3, groupSize$$2, basePerLine$
             v168.write(v169);
           }
           var v170 = outputWindow.document;
-          introspect(JAM.policy.p9) {
+          introspect(JAM.policy.p11) {
             v170.write("\n");
           }
         }
@@ -1683,7 +1683,7 @@ function writeGroupNumDnaSetStart(text$$12, tabIn$$3, groupSize$$2, basePerLine$
               v176.write(v177);
             }
             var v178 = outputWindow.document;
-            introspect(JAM.policy.p9) {
+            introspect(JAM.policy.p11) {
               v178.write("\n");
             }
           }
@@ -1940,7 +1940,7 @@ function writeRestrictionSites(sequence$$15, arrayOfItems, dnaConformation) {
     upperLimit = upperLimit + shiftValue;
   }
   var v225 = outputWindow.document;
-  introspect(JAM.policy.p9) {
+  introspect(JAM.policy.p11) {
     v225.write('<table border="1" width="100%" cellspacing="0" cellpadding="2"><tbody>\n');
   }
   var v226 = outputWindow.document;
@@ -2056,7 +2056,7 @@ function writeRestrictionSites(sequence$$15, arrayOfItems, dnaConformation) {
     v243 = i$$9 < v476;
   }
   var v244 = outputWindow.document;
-  introspect(JAM.policy.p9) {
+  introspect(JAM.policy.p11) {
     v244.write("</tbody></table>\n");
   }
   return true;
@@ -2064,7 +2064,7 @@ function writeRestrictionSites(sequence$$15, arrayOfItems, dnaConformation) {
 function writeSequenceStats(sequence$$16, arrayOfItems$$1) {
   var originalLength = sequence$$16.length;
   var v245 = outputWindow.document;
-  introspect(JAM.policy.p9) {
+  introspect(JAM.policy.p11) {
     v245.write('<table border="1" width="100%" cellspacing="0" cellpadding="2"><tbody>\n');
   }
   var v246 = outputWindow.document;
@@ -2131,7 +2131,7 @@ function writeSequenceStats(sequence$$16, arrayOfItems$$1) {
     var v675 = v695 + "</td><td>";
     var v638 = v675 + tempNumber;
     var v576 = v638 + "</td><td>";
-    introspect(JAM.policy.p11) {
+    introspect(JAM.policy.p9) {
       var v577 = percentage.toFixed(2)
     }
     var v484 = v576 + v577;
@@ -2144,7 +2144,7 @@ function writeSequenceStats(sequence$$16, arrayOfItems$$1) {
     v256 = i$$10 < v485;
   }
   var v257 = outputWindow.document;
-  introspect(JAM.policy.p9) {
+  introspect(JAM.policy.p11) {
     v257.write("</tbody></table>\n");
   }
   return true;
@@ -2275,7 +2275,7 @@ function dnaMw(theDocument) {
     var v275 = v495.value;
     writeDnaMw(newDna, v274, v275);
     var v276 = outputWindow.document;
-    introspect(JAM.policy.p9) {
+    introspect(JAM.policy.p11) {
       v276.write("<br />\n<br />\n");
     }
     i$$11++;
@@ -2302,7 +2302,7 @@ function writeDnaMw(sequence$$18, strandType, topology$$1) {
       if (v279) {
         mw = mw - OH;
       }
-      introspect(JAM.policy.p11) {
+      introspect(JAM.policy.p9) {
         mw = mw.toFixed(2);
       }
       var v280 = outputWindow.document;
@@ -2323,10 +2323,10 @@ function writeDnaMw(sequence$$18, strandType, topology$$1) {
           mw_lower = mw_lower - OH;
           mw_upper = mw_upper - OH;
         }
-        introspect(JAM.policy.p11) {
+        introspect(JAM.policy.p9) {
           mw_lower = mw_lower.toFixed(2);
         }
-        introspect(JAM.policy.p11) {
+        introspect(JAM.policy.p9) {
           mw_upper = mw_upper.toFixed(2);
         }
         var v285 = outputWindow.document;
@@ -2363,7 +2363,7 @@ function writeDnaMw(sequence$$18, strandType, topology$$1) {
           mw_reverse = mw_reverse - OH;
         }
         mw = mw_direct + mw_reverse;
-        introspect(JAM.policy.p11) {
+        introspect(JAM.policy.p9) {
           mw = mw.toFixed(2);
         }
         var v293 = outputWindow.document;
@@ -2397,10 +2397,10 @@ function writeDnaMw(sequence$$18, strandType, topology$$1) {
           }
           mw_lower = mw_direct_lower + mw_reverse_lower;
           mw_upper = mw_direct_upper + mw_reverse_upper;
-          introspect(JAM.policy.p11) {
+          introspect(JAM.policy.p9) {
             mw_lower = mw_lower.toFixed(2);
           }
-          introspect(JAM.policy.p11) {
+          introspect(JAM.policy.p9) {
             mw_upper = mw_upper.toFixed(2);
           }
           var v300 = outputWindow.document;
@@ -2559,11 +2559,11 @@ function _removeNonPrimer(sequence$$25) {
   }
 }
 document.onload = v2;
-introspect(JAM.policy.p9) {
+introspect(JAM.policy.p11) {
   var v311 = document.getElementById("submitbtn")
 }
 v311.onclick = v3;
-introspect(JAM.policy.p9) {
+introspect(JAM.policy.p11) {
   var v312 = document.getElementById("clearbtn")
 }
 v312.onclick = v4
