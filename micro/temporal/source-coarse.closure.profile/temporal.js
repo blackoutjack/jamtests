@@ -6,7 +6,7 @@ x = 2;
 x = 6;
 x = 5
 
-JAM.log("Result: " + " + respred ");
+JAM.log("Result: " + (x === 6));
 
 }
 

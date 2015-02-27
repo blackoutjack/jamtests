@@ -6,4 +6,4 @@ if (JAM.isEval(eval)) {
 }
 var b = new String
 
-JAM.log("Result: " + " + respred ");
+JAM.log("Result: " + (b instanceof Boolean && !(a instanceof Boolean)));

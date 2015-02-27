@@ -8,6 +8,6 @@ with(o) {
 }
 print("d: " + d + " e: " + e)
 
-JAM.log("Result: " + " + respred ");
+JAM.log("Result: " + ("RESULT NOT SPECIFIED"));
 
 JAM.stopProfile('load');

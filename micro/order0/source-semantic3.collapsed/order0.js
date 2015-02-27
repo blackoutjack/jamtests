@@ -9,4 +9,4 @@ var v2 = v;
 ++v;
 var a = v2 + f() + g()
 
-JAM.log("Result: " + " + respred ");
+JAM.log("Result: " + (a === 8));

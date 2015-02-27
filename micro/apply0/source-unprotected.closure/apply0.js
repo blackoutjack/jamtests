@@ -3,4 +3,4 @@ var e = eval;
 e.apply(null, ["x = 2"]);
 alert(x)
 
-JAM.log("Result: " + " + respred ");
+JAM.log("Result: " + (x === 1));

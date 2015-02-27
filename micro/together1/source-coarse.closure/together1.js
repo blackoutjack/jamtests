@@ -15,6 +15,6 @@ try {
   console.error(ex$$1.name + ": " + ex$$1.message);
 }
 
-JAM.log("Result: " + " + respred ");
+JAM.log("Result: " + (typeof x === "undefined"));
 
 }

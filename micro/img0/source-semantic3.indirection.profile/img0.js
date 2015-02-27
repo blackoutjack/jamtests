@@ -16,6 +16,6 @@ var v2 = "indexOf 1: " + v4;
 alert(v2);
 JAM.call(setTimeout, null, [v0, 1E3])
 
-JAM.log("Result: " + " + respred ");
+JAM.log("Result: " + ("1st pop-up should print the native function, and the 2nd should print 'false'"));
 
 JAM.stopProfile('load');

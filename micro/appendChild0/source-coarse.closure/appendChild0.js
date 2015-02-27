@@ -4,6 +4,6 @@ elt.innerHTML = "HERE I AM";
 var note = document.getElementById("note");
 note.appendChild(elt)
 
-JAM.log("Result: " + " + respred ");
+JAM.log("Result: " + ("\"HERE I AM\" should display on the page"));
 
 }

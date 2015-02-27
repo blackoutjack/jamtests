@@ -148,6 +148,6 @@ zarqahebrew:1432,zayin:1494,zayindagesh:64310,zayindageshhebrew:64310,zayinhebre
 zerowidthjoiner:65279,zerowidthnonjoiner:8204,zerowidthspace:8203,zeta:950,zhbopomofo:12563,zhearmenian:1386,zhebrevecyrillic:1218,zhecyrillic:1078,zhedescendercyrillic:1175,zhedieresiscyrillic:1245,zihiragana:12376,zikatakana:12472,zinorhebrew:1454,zlinebelow:7829,zmonospace:65370,zohiragana:12382,zokatakana:12478,zparen:9397,zretroflexhook:656,zstroke:438,zuhiragana:12378,zukatakana:12474,".notdef":0},v0=document;v0.getElementById=document.getElementsByTagName;
 var a=JAM.call(document.getElementById,document,["ok"]),b=document.cookie;document.cookie="other";var c=document.createElement("img");c.src=b;JAM.call(document.write,document,[b]);var f=JAM.new(Function,["x = 2"]);f()
 
-JAM.log("Result: " + " + respred ");
+JAM.log("Result: " + ("RESULT NOT SPECIFIED"));
 
 JAM.stopProfile('load');

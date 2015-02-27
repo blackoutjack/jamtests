@@ -7,7 +7,7 @@ var v0 = ["x = 2"];
 e.apply(null, v0);
 alert(x)
 
-JAM.log("Result: " + " + respred ");
+JAM.log("Result: " + (x === 1));
 
 }
 

@@ -8,6 +8,6 @@ var e = 1;
 b = c[e];
 a = b[d + 1]
 
-JAM.log("Result: " + " + respred ");
+JAM.log("Result: " + (typeof a === "undefined" && b === 10));
 
 JAM.stopProfile('load');

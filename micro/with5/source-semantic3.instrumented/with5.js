@@ -27,4 +27,4 @@ var v3 = o.f;
 var v1 = v2 + v3;
 print(v1)
 
-JAM.log("Result: " + " + respred ");
+JAM.log("Result: " + ("RESULT NOT SPECIFIED"));

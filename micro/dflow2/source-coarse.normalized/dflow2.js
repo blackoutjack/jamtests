@@ -3,6 +3,6 @@ z = 3;
 y = z;
 x = y
 
-JAM.log("Result: " + " + respred ");
+JAM.log("Result: " + (x === 3));
 
 }

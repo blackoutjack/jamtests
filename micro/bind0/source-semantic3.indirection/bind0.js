@@ -4,4 +4,4 @@ function f() {
 var g = JAM.call(f.bind, f, ["ok"]);
 var v = g()
 
-JAM.log("Result: " + " + respred ");
+JAM.log("Result: " + (v === 1));

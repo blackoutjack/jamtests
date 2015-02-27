@@ -5,4 +5,4 @@ function f() {
 x = 0;
 f()
 
-JAM.log("Result: " + " + respred ");
+JAM.log("Result: " + (x === 0));

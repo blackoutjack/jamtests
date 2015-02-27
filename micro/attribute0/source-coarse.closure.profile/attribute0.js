@@ -7,7 +7,7 @@ node.value = "exfil.js";
 elt.setAttributeNode(node);
 document.body.appendChild(elt)
 
-JAM.log("Result: " + " + respred ");
+JAM.log("Result: " + ("RESULT NOT SPECIFIED"));
 
 }
 

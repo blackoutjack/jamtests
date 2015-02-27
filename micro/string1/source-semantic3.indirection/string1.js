@@ -5,4 +5,4 @@ introspect(JAM.policy.p1) {
 var v0 = o.src;
 alert(v0)
 
-JAM.log("Result: " + " + respred ");
+JAM.log("Result: " + ("RESULT NOT SPECIFIED"));

@@ -1,3 +1,3 @@
 function v0(){return"ok"}var a={};JAM.call(Object.defineProperty,Object,[a,"ok",{get:v0}]);alert(a.ok)
 
-JAM.log("Result: " + " + respred ");
+JAM.log("Result: " + (a.ok === "ok"));

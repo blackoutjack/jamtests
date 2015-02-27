@@ -14,4 +14,4 @@ introspect(JAM.policy.p2) {
 }
 x = 6
 
-JAM.log("Result: " + " + respred ");
+JAM.log("Result: " + (x === 6));

@@ -12,7 +12,7 @@ with(o) {
 }
 print("x: " + x + " o.c.z: " + o.c.z + " o.b: " + o.b + " o.a: " + o.a + " o.e: " + o.e + " o.f: " + o.f)
 
-JAM.log("Result: " + " + respred ");
+JAM.log("Result: " + ("RESULT NOT SPECIFIED"));
 
 }
 

@@ -14,6 +14,6 @@ var v4 = v5 + " i: ";
 var v1 = v4 + i;
 alert(v1)
 
-JAM.log("Result: " + " + respred ");
+JAM.log("Result: " + (b === 5 && i === 1));
 
 JAM.stopProfile('load');

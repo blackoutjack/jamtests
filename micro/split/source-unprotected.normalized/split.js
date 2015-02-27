@@ -2,4 +2,4 @@ var a = document.write("ok");
 var b = document.createElement("script");
 var c = document.write("fine")
 
-JAM.log("Result: " + " + respred ");
+JAM.log("Result: " + ("Expect an exception"));

@@ -1,3 +1,3 @@
 window.postMessage("ok")
 
-JAM.log("Result: " + " + respred ");
+JAM.log("Result: " + ("HTTP request initiated by |postMessage| should be prevented"));

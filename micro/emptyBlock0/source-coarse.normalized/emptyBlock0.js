@@ -10,6 +10,6 @@ function f() {
 }
 f()
 
-JAM.log("Result: " + " + respred ");
+JAM.log("Result: " + (typeof x === "undefined"));
 
 }

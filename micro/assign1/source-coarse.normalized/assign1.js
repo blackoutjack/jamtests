@@ -11,6 +11,6 @@ var v2 = v3 + " c: ";
 var v0 = v2 + c;
 alert(v0)
 
-JAM.log("Result: " + " + respred ");
+JAM.log("Result: " + (a === 32 && b === 32 && c === 22));
 
 }

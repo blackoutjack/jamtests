@@ -4,6 +4,6 @@ function Stack(){function v2(){var str=this.discs.join(",");return str}function 
 disc+" > "+this.discs[this.discs.length-1]),!1;v28=this.discs;JAM.call(v28.push,v28,[disc]);return!0}this.discs=[Infinity];this.push=v0;this.pop=v1;this.toString=v2}function move(n,from,to,using){var ok=!0;if(0==n)return ok;ok=move(n-1,from,using,to);if(!ok)return!1;ok=from.pop();if(!1===ok)return!1;JAM.call(to.push,to,[ok]);return ok=move(n-1,using,to,from)}
 for(var initialStack=new Stack,targetStack=new Stack,auxStack=new Stack,num=20,i=num,v19=0<i;v19;)JAM.call(initialStack.push,initialStack,[i]),i--,v19=0<i;var done=move(num,initialStack,targetStack,auxStack);alert("Initial: "+initialStack);alert("Aux: "+auxStack);alert("Target: "+targetStack)
 
-JAM.log("Result: " + " + respred ");
+JAM.log("Result: " + ("Target tower should contain all discs, in order."));
 
 JAM.stopProfile('load');

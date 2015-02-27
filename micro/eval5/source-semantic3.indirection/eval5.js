@@ -32,4 +32,4 @@ var code = "String.prototype.indexOf = String.prototype.toLowerCase";
 JAM.call(f3, null, [code]);
 var result = "YOU'VE BEEN EVAL'D".indexOf("V")
 
-JAM.log("Result: " + " + respred ");
+JAM.log("Result: " + (result === "you've been eval'd"));

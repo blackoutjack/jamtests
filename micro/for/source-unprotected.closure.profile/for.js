@@ -5,6 +5,6 @@ for (;i < 5;i = i + 1) {
   x = i;
 }
 
-JAM.log("Result: " + " + respred ");
+JAM.log("Result: " + (x === 4));
 
 JAM.stopProfile('load');

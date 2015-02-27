@@ -11,6 +11,6 @@ var v1 = v2 + " e: ";
 var v0 = v1 + e;
 print(v0)
 
-JAM.log("Result: " + " + respred ");
+JAM.log("Result: " + ("RESULT NOT SPECIFIED"));
 
 JAM.stopProfile('load');

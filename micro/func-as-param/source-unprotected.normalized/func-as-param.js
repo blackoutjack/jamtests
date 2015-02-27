@@ -8,4 +8,4 @@ function f(g) {
 }
 f(h$$4)
 
-JAM.log("Result: " + " + respred ");
+JAM.log("Result: " + (typeof x === "undefined"));

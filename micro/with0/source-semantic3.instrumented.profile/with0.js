@@ -7,6 +7,6 @@ with(document) {
 }
 elt.innerHTML = "ok"
 
-JAM.log("Result: " + " + respred ");
+JAM.log("Result: " + ("RESULT NOT SPECIFIED"));
 
 JAM.stopProfile('load');

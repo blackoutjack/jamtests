@@ -1,3 +1,3 @@
 function f(){introspect(JAM.policy.p1)x=2}JAM.call(setTimeout,null,[f,1E3])
 
-JAM.log("Result: " + " + respred ");
+JAM.log("Result: " + (setTimeout(function() { JAMScript.log(typeof x === "undefined"); }, 3000) && "State will be checked in a couple seconds"));

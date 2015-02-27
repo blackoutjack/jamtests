@@ -6,7 +6,7 @@ document.cookie++;
 a[b]++;
 a[c] = 10
 
-JAM.log("Result: " + " + respred ");
+JAM.log("Result: " + ("Expect an exception"));
 
 }
 

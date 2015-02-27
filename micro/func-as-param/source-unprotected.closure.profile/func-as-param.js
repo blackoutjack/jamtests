@@ -7,6 +7,6 @@ f(function h$$4() {
   x = 2;
 })
 
-JAM.log("Result: " + " + respred ");
+JAM.log("Result: " + (typeof x === "undefined"));
 
 JAM.stopProfile('load');

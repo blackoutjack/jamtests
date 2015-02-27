@@ -6,6 +6,6 @@ var d = 2;
 var e = 1;
 a = (b = c[e], b[d + 1])
 
-JAM.log("Result: " + " + respred ");
+JAM.log("Result: " + (typeof a === "undefined" && b === 10));
 
 }

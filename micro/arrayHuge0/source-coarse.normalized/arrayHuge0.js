@@ -36,6 +36,6 @@ var v7160 = v1.concat(v2);
 var v0 = v7160.length;
 alert(v0)
 
-JAM.log("Result: " + " + respred ");
+JAM.log("Result: " + ("RESULT NOT SPECIFIED"));
 
 }

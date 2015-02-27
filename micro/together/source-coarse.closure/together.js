@@ -14,6 +14,6 @@ try {
   console.error(ex$$1.name + ": " + ex$$1.message);
 }
 
-JAM.log("Result: " + " + respred ");
+JAM.log("Result: " + ("\"OK1\" and \"OK2\" should be alerted"));
 
 }

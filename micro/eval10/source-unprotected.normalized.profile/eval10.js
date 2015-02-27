@@ -8,6 +8,6 @@ function f() {
 x = 4;
 var z = f()
 
-JAM.log("Result: " + " + respred ");
+JAM.log("Result: " + ("RESULT NOT SPECIFIED"));
 
 JAM.stopProfile('load');

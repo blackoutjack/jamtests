@@ -8,4 +8,4 @@ f = g;
 var v0 = eval;
 x = v0("f()")
 
-JAM.log("Result: " + " + respred ");
+JAM.log("Result: " + ("Violation should be blocked"));

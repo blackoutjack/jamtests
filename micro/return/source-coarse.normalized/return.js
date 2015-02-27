@@ -6,6 +6,6 @@ function f() {
 f();
 x = 2
 
-JAM.log("Result: " + " + respred ");
+JAM.log("Result: " + (typeof x === "undefined"));
 
 }

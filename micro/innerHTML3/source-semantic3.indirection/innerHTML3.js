@@ -3,4 +3,4 @@ introspect(pol) {
   elt.innerHTML = "<input onclick='alert(\"gotcha\")' type='button' value='try it' />";
 }
 
-JAM.log("Result: " + " + respred ");
+JAM.log("Result: " + ("RESULT NOT SPECIFIED"));

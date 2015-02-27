@@ -21,4 +21,4 @@ for (p in o) {
   alert("o[" + p + "]: " + o[p]);
 }
 
-JAM.log("Result: " + " + respred ");
+JAM.log("Result: " + (prop === "b" && n["a"] === 2 && n["b"] === 7 && n["c"] === "ok" && o["x"] === "other"));

@@ -19,6 +19,6 @@ print("c: " + o.c);
 print("d: " + o.d);
 print("e: " + o.e)
 
-JAM.log("Result: " + " + respred ");
+JAM.log("Result: " + ("RESULT NOT SPECIFIED"));
 
 }

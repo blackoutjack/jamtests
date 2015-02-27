@@ -15,4 +15,4 @@ x = 3;
 g();
 print(x)
 
-JAM.log("Result: " + " + respred ");
+JAM.log("Result: " + ("RESULT NOT SPECIFIED"));

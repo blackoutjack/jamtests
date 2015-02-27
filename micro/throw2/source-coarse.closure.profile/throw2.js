@@ -6,7 +6,7 @@ function f() {
 }
 throw f()
 
-JAM.log("Result: " + " + respred ");
+JAM.log("Result: " + ("Exception thrown"));
 
 }
 

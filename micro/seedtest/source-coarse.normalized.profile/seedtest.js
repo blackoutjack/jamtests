@@ -11,7 +11,7 @@ c[b] = 1;
 c[d] = 3;
 c[e] = 4
 
-JAM.log("Result: " + " + respred ");
+JAM.log("Result: " + (c.fine === 3));
 
 }
 

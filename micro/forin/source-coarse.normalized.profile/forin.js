@@ -9,7 +9,7 @@ for (i in o) {
   x = o[i];
 }
 
-JAM.log("Result: " + " + respred ");
+JAM.log("Result: " + (x === 3));
 
 }
 

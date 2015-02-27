@@ -8,7 +8,7 @@ x = 5;
 x = Math.random() * 3;
 x = 6
 
-JAM.log("Result: " + " + respred ");
+JAM.log("Result: " + (x === 6));
 
 }
 

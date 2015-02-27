@@ -12,6 +12,6 @@ introspect(JAM.policy.p1) {
   x = v0("f()");
 }
 
-JAM.log("Result: " + " + respred ");
+JAM.log("Result: " + ("Violation should be blocked"));
 
 JAM.stopProfile('load');

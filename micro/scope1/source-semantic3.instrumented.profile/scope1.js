@@ -9,6 +9,6 @@ introspect(JAM.policy.p1) {
   x = a();
 }
 
-JAM.log("Result: " + " + respred ");
+JAM.log("Result: " + (typeof x === "undefined"));
 
 JAM.stopProfile('load');

@@ -10,6 +10,6 @@ var b;
 b = a[f()] += 1;
 alert("a: " + a + " b: " + b + " i: " + i + " cnt: " + cnt)
 
-JAM.log("Result: " + " + respred ");
+JAM.log("Result: " + (b === 11 && i === 2 && cnt === 11));
 
 }

@@ -10,6 +10,6 @@ var lastRow = 3;
 var nextRow = 2;
 result = x[currentRow] = (y[currentRow] + a * (result + x[++currentRow] + x[++lastRow] + x[++nextRow])) * z
 
-JAM.log("Result: " + " + respred ");
+JAM.log("Result: " + (result === 153));
 
 JAM.stopProfile('load');

@@ -3,4 +3,4 @@ with(document) {
 }
 JAM.set(elt, "innerHTML", "ok")
 
-JAM.log("Result: " + " + respred ");
+JAM.log("Result: " + ("RESULT NOT SPECIFIED"));

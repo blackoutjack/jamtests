@@ -9,6 +9,6 @@ JAM.call(Object.defineProperty, Object, [a, "ok", v2]);
 var v1 = a.ok;
 alert(v1)
 
-JAM.log("Result: " + " + respred ");
+JAM.log("Result: " + (a.ok === "ok"));
 
 JAM.stopProfile('load');

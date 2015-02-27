@@ -20,6 +20,6 @@ var v1 = v2 + " f: ";
 var v0 = v1 + f;
 print(v0)
 
-JAM.log("Result: " + " + respred ");
+JAM.log("Result: " + ("RESULT NOT SPECIFIED"));
 
 }

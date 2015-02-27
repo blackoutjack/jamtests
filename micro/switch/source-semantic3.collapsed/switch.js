@@ -28,4 +28,4 @@ switch(x) {
     alert("ERROR");
 }
 
-JAM.log("Result: " + " + respred ");
+JAM.log("Result: " + (x !== 2));

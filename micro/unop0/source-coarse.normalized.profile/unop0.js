@@ -28,7 +28,7 @@ for (;v2;) {
   v2 = i < v6;
 }
 
-JAM.log("Result: " + " + respred ");
+JAM.log("Result: " + (i === 7 && b === 7 && idx === 7 && a[idx] === undefined && a[i] === undefined));
 
 }
 

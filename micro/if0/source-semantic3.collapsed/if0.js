@@ -5,4 +5,4 @@ if (!s.indexOf("k")) {
   }
 }
 
-JAM.log("Result: " + " + respred ");
+JAM.log("Result: " + (typeof x === "undefined"));

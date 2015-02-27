@@ -6,4 +6,4 @@ introspect(pol) {
   x = 2;
 }
 
-JAM.log("Result: " + " + respred ");
+JAM.log("Result: " + (x === undefined));

@@ -3,6 +3,6 @@ JAM.startProfile('load');
 var s = 'is " this " ok' + "?";
 x = 2
 
-JAM.log("Result: " + " + respred ");
+JAM.log("Result: " + (typeof x === "undefined" && s === "is \" this \" ok?"));
 
 JAM.stopProfile('load');

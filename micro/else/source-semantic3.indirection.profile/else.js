@@ -8,6 +8,6 @@ if (v0) {
   x = 2;
 }
 
-JAM.log("Result: " + " + respred ");
+JAM.log("Result: " + (x === 3));
 
 JAM.stopProfile('load');

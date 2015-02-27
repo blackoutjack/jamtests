@@ -7,4 +7,4 @@ introspect(JAM.policy.p2) {
   x = 5;
 }
 
-JAM.log("Result: " + " + respred ");
+JAM.log("Result: " + (x === 6));

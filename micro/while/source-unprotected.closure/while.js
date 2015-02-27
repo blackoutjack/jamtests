@@ -4,4 +4,4 @@ for (;i < 5;) {
   i++;
 }
 
-JAM.log("Result: " + " + respred ");
+JAM.log("Result: " + (x === 4));

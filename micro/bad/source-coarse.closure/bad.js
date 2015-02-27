@@ -1,6 +1,6 @@
 introspect(JAM.policy.pFull) {
 x = 2
 
-JAM.log("Result: " + " + respred ");
+JAM.log("Result: " + (typeof x === "undefined"));
 
 }

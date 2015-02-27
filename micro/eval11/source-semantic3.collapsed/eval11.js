@@ -15,4 +15,4 @@ if (JAM.isEval(eval)) {
 z = f();
 alert(z)
 
-JAM.log("Result: " + " + respred ");
+JAM.log("Result: " + ("RESULT NOT SPECIFIED"));

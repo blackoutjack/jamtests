@@ -7,4 +7,4 @@ eval("var x = 4;");
 z = f();
 alert(z)
 
-JAM.log("Result: " + " + respred ");
+JAM.log("Result: " + ("RESULT NOT SPECIFIED"));

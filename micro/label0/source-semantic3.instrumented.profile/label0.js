@@ -15,6 +15,6 @@ lbl: for (;v1;) {
   v1 = i < 4;
 }
 
-JAM.log("Result: " + " + respred ");
+JAM.log("Result: " + (x === 1));
 
 JAM.stopProfile('load');

@@ -2,6 +2,6 @@
 JAM.startProfile('load');
 x=9;var o={a:1,b:2,c:3};with(o){introspect(JAM.policy.p1)x=b;var d=x,e=c}print("x: "+x+" d: "+d+" e: "+e)
 
-JAM.log("Result: " + " + respred ");
+JAM.log("Result: " + ("RESULT NOT SPECIFIED"));
 
 JAM.stopProfile('load');

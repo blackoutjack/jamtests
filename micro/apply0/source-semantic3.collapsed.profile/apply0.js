@@ -5,6 +5,6 @@ var e = eval;
 JAM.call(e.apply, e, [null, ["x = 2"]]);
 alert(x)
 
-JAM.log("Result: " + " + respred ");
+JAM.log("Result: " + (x === 1));
 
 JAM.stopProfile('load');

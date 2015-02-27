@@ -1,3 +1,3 @@
 x = Math.floor(Math.random())
 
-JAM.log("Result: " + " + respred ");
+JAM.log("Result: " + (x !== 2));

@@ -2,6 +2,6 @@
 JAM.startProfile('load');
 for(var i=0,v0=5>i;v0;)x=i,i+=1,v0=5>i
 
-JAM.log("Result: " + " + respred ");
+JAM.log("Result: " + (x === 4));
 
 JAM.stopProfile('load');

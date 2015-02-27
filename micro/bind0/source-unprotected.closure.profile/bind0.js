@@ -6,6 +6,6 @@ function f() {
 var g = f.bind("ok");
 var v = g()
 
-JAM.log("Result: " + " + respred ");
+JAM.log("Result: " + (v === 1));
 
 JAM.stopProfile('load');

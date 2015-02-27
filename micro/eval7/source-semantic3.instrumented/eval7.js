@@ -6,4 +6,4 @@ function transformed() {
 transformed();
 alert(xxx)
 
-JAM.log("Result: " + " + respred ");
+JAM.log("Result: " + ("RESULT NOT SPECIFIED"));

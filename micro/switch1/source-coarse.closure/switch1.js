@@ -26,6 +26,6 @@ out: for (;true;) {
   i *= 2;
 }
 
-JAM.log("Result: " + " + respred ");
+JAM.log("Result: " + (i === 0 && cnt === 5));
 
 }

@@ -4,6 +4,6 @@ introspect(p) {
   alert("1");
 }
 
-JAM.log("Result: " + " + respred ");
+JAM.log("Result: " + ("RESULT NOT SPECIFIED"));
 
 }

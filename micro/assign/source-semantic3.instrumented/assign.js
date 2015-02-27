@@ -3,4 +3,4 @@ introspect(JAM.policy.p1) {
   a.cookie = "ok";
 }
 
-JAM.log("Result: " + " + respred ");
+JAM.log("Result: " + (document.cookie !== "ok"));

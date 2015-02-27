@@ -7,4 +7,4 @@ function c() {
 var o = new c;
 var a = o.m("ok")
 
-JAM.log("Result: " + " + respred ");
+JAM.log("Result: " + (a === undefined));

@@ -37,6 +37,6 @@ for (p in o) {
   alert(v4);
 }
 
-JAM.log("Result: " + " + respred ");
+JAM.log("Result: " + (prop === "b" && n["a"] === 2 && n["b"] === 7 && n["c"] === "ok" && o["x"] === "other"));
 
 JAM.stopProfile('load');

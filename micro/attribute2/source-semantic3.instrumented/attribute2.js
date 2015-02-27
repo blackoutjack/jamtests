@@ -5,4 +5,4 @@ node.value = "exfil.js";
 var v0 = document.body;
 v0.appendChild(elt)
 
-JAM.log("Result: " + " + respred ");
+JAM.log("Result: " + ("RESULT NOT SPECIFIED"));

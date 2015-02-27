@@ -7,6 +7,6 @@ x = 0;
 var e = eval;
 f()
 
-JAM.log("Result: " + " + respred ");
+JAM.log("Result: " + (x === 0));
 
 JAM.stopProfile('load');

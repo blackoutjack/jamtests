@@ -5,4 +5,4 @@ introspect(JAM.policy.p1) {
   x = v2
 }
 
-JAM.log("Result: " + " + respred ");
+JAM.log("Result: " + (typeof x === "undefined" || x !== 2));

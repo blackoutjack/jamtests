@@ -10,6 +10,6 @@ function g() {
   };
 }
 
-JAM.log("Result: " + " + respred ");
+JAM.log("Result: " + ("No state to inspect"));
 
 }

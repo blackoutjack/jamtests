@@ -52,6 +52,6 @@ for (;i < cnt;i++) {
 }
 var sorted = mergeSort(vals)
 
-JAM.log("Result: " + " + respred ");
+JAM.log("Result: " + (sorted[1] === sorted.sort()[1]));
 
 JAM.stopProfile('load');

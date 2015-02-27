@@ -20,4 +20,4 @@ switch(y) {
 }
 print("x: " + x)
 
-JAM.log("Result: " + " + respred ");
+JAM.log("Result: " + ("RESULT NOT SPECIFIED"));

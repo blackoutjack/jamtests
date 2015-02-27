@@ -18,6 +18,6 @@ Object.defineProperty(a, "ok", v4);
 var v3 = a.ok;
 alert(v3)
 
-JAM.log("Result: " + " + respred ");
+JAM.log("Result: " + (a.ok === "okhello whatever"));
 
 JAM.stopProfile('load');

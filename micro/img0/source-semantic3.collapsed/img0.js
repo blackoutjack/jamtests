@@ -8,4 +8,4 @@ JAM.set(elt, "innerHTML", html);
 alert("indexOf 1: " + String.prototype.indexOf);
 JAM.call(setTimeout, null, [v0, 1E3])
 
-JAM.log("Result: " + " + respred ");
+JAM.log("Result: " + ("1st pop-up should print the native function, and the 2nd should print 'false'"));

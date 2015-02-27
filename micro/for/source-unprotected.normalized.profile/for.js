@@ -8,6 +8,6 @@ for (;v0;) {
   v0 = i < 5;
 }
 
-JAM.log("Result: " + " + respred ");
+JAM.log("Result: " + (x === 4));
 
 JAM.stopProfile('load');

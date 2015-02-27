@@ -2,4 +2,4 @@ introspect(JAM.policy.pFull) {
   document.write("<script>x = 2;\x3c/script>");
 }
 
-JAM.log("Result: " + " + respred ");
+JAM.log("Result: " + ("RESULT NOT SPECIFIED"));

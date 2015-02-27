@@ -8,6 +8,6 @@ function f() {
 }
 setTimeout(f, 1E3)
 
-JAM.log("Result: " + " + respred ");
+JAM.log("Result: " + (setTimeout(function() { JAMScript.log(typeof x === "undefined"); }, 3000) && "State will be checked in a couple seconds"));
 
 JAM.stopProfile('load');

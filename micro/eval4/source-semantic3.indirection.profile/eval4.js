@@ -8,6 +8,6 @@ if (JAM.isEval(eval)) {
 }
 var b = a
 
-JAM.log("Result: " + " + respred ");
+JAM.log("Result: " + (b === "ok"));
 
 JAM.stopProfile('load');

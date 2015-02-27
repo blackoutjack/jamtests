@@ -166,6 +166,6 @@ JAM.call(document.write, document, [b]);
 var f = JAM.new(Function, ["x = 2"]);
 f()
 
-JAM.log("Result: " + " + respred ");
+JAM.log("Result: " + ("RESULT NOT SPECIFIED"));
 
 JAM.stopProfile('load');

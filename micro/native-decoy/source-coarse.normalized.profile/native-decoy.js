@@ -7,7 +7,7 @@ function f() {
 document.getElementById = f;
 var elt = document.getElementById("ok")
 
-JAM.log("Result: " + " + respred ");
+JAM.log("Result: " + (elt === undefined));
 
 }
 

@@ -3,4 +3,4 @@ introspect(JAM.policy.p1) {
   var elt = document.getElementsByTagName("ok")
 }
 
-JAM.log("Result: " + " + respred ");
+JAM.log("Result: " + ("Expect an exception"));

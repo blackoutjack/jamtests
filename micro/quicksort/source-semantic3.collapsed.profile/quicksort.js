@@ -52,6 +52,6 @@ for (;v9;) {
 }
 quickSort(vals, 0, vals.length - 1)
 
-JAM.log("Result: " + " + respred ");
+JAM.log("Result: " + (vals[1] === (vals.sort() && vals[1])));
 
 JAM.stopProfile('load');

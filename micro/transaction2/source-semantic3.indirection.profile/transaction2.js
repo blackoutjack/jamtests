@@ -13,6 +13,6 @@ function f() {
 }
 f()
 
-JAM.log("Result: " + " + respred ");
+JAM.log("Result: " + ("The Tx object should be alerted, followed by 'undefined'"));
 
 JAM.stopProfile('load');

@@ -3,6 +3,6 @@ JAM.startProfile('load');
 var a = document.getElementById("ok");
 a.innerHTML = 1
 
-JAM.log("Result: " + " + respred ");
+JAM.log("Result: " + (a.innerHTML === "THIS SHOULD REMAIN"));
 
 JAM.stopProfile('load');

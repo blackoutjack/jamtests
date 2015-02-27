@@ -9,7 +9,7 @@ function g() {
 }
 var v = f()[g()]
 
-JAM.log("Result: " + " + respred ");
+JAM.log("Result: " + (v === "got it!"));
 
 }
 

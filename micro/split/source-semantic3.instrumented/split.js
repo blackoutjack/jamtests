@@ -8,4 +8,4 @@ introspect(JAM.policy.p2) {
   var c = document.write("fine")
 }
 
-JAM.log("Result: " + " + respred ");
+JAM.log("Result: " + ("Expect an exception"));

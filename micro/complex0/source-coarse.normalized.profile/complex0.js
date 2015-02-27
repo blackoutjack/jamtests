@@ -24,7 +24,7 @@ var v3 = a * v4;
 var v1 = v2 + v3;
 result = x[v0] = v1 * z
 
-JAM.log("Result: " + " + respred ");
+JAM.log("Result: " + (result === 153));
 
 }
 

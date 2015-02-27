@@ -10,4 +10,4 @@ var v0 = f();
 b = JAM.set(a, v0, a[v0] + 1);
 alert("a: " + a + " b: " + b + " i: " + i + " cnt: " + cnt)
 
-JAM.log("Result: " + " + respred ");
+JAM.log("Result: " + (b === 11 && i === 2 && cnt === 11));

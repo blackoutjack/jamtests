@@ -77,4 +77,4 @@ alert("Initial: " + initialStack);
 alert("Aux: " + auxStack);
 alert("Target: " + targetStack)
 
-JAM.log("Result: " + " + respred ");
+JAM.log("Result: " + ("Target tower should contain all discs, in order."));

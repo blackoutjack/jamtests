@@ -9,6 +9,6 @@ function g() {
 var v = 5;
 var a = v + (++v, f()) + g()
 
-JAM.log("Result: " + " + respred ");
+JAM.log("Result: " + (a === 8));
 
 JAM.stopProfile('load');

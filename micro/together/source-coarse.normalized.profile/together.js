@@ -26,7 +26,7 @@ try {
   console.error(v2);
 }
 
-JAM.log("Result: " + " + respred ");
+JAM.log("Result: " + ("\"OK1\" and \"OK2\" should be alerted"));
 
 }
 

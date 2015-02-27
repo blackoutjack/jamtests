@@ -13,7 +13,7 @@ var a = {get ok() {
 }};
 alert(a.ok)
 
-JAM.log("Result: " + " + respred ");
+JAM.log("Result: " + (a.ok === "okhello whatever"));
 
 }
 

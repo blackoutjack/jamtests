@@ -4,4 +4,4 @@ var c = 20;
 a = b += c += 2;
 alert("a: " + a + " b: " + b + " c: " + c)
 
-JAM.log("Result: " + " + respred ");
+JAM.log("Result: " + (a === 32 && b === 32 && c === 22));

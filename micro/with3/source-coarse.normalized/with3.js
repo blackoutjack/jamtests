@@ -33,6 +33,6 @@ var v4 = v5 + " f: ";
 var v3 = v4 + f;
 print(v3)
 
-JAM.log("Result: " + " + respred ");
+JAM.log("Result: " + ("RESULT NOT SPECIFIED"));
 
 }

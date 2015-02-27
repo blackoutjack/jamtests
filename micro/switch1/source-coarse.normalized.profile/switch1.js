@@ -29,7 +29,7 @@ out: for (;true;) {
   i = i * 2;
 }
 
-JAM.log("Result: " + " + respred ");
+JAM.log("Result: " + (i === 0 && cnt === 5));
 
 }
 

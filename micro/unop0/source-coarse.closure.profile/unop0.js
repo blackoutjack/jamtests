@@ -12,7 +12,7 @@ for (;i < a.length;i++) {
   alert("i: " + i + " b: " + b + " idx: " + idx + " a[idx]: " + a[idx] + " a[i]: " + a[i]);
 }
 
-JAM.log("Result: " + " + respred ");
+JAM.log("Result: " + (i === 7 && b === 7 && idx === 7 && a[idx] === undefined && a[i] === undefined));
 
 }
 

@@ -7,6 +7,6 @@ if (JAM.isEval(eval)) {
 }
 alert(xxx)
 
-JAM.log("Result: " + " + respred ");
+JAM.log("Result: " + ("RESULT NOT SPECIFIED"));
 
 JAM.stopProfile('load');

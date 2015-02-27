@@ -20,6 +20,6 @@ var v2 = v4 + " cnt: ";
 var v1 = v2 + cnt;
 alert(v1)
 
-JAM.log("Result: " + " + respred ");
+JAM.log("Result: " + (b === 11 && i === 2 && cnt === 11));
 
 JAM.stopProfile('load');

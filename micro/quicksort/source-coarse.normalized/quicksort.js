@@ -69,6 +69,6 @@ var v20 = vals.length;
 var v10 = v20 - 1;
 quickSort(vals, 0, v10)
 
-JAM.log("Result: " + " + respred ");
+JAM.log("Result: " + (vals[1] === (vals.sort() && vals[1])));
 
 }

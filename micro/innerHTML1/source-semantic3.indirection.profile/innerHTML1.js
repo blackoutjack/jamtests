@@ -9,6 +9,6 @@ introspect(JAM.process) {
 var v1 = "VALUE: " + d;
 alert(v1)
 
-JAM.log("Result: " + " + respred ");
+JAM.log("Result: " + ("The URL (with # appended) should be alerted"));
 
 JAM.stopProfile('load');

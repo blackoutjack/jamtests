@@ -110,4 +110,4 @@ alert(v21);
 var v22 = "Target: " + targetStack;
 alert(v22)
 
-JAM.log("Result: " + " + respred ");
+JAM.log("Result: " + ("Target tower should contain all discs, in order."));

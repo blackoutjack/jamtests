@@ -8,7 +8,7 @@ function a() {
 var z = 3;
 x = a()
 
-JAM.log("Result: " + " + respred ");
+JAM.log("Result: " + (typeof x === "undefined"));
 
 }
 

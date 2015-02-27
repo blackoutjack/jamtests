@@ -7,6 +7,6 @@ for (;;) {
   i++;
 }
 
-JAM.log("Result: " + " + respred ");
+JAM.log("Result: " + (i === 6));
 
 }

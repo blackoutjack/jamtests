@@ -8,6 +8,6 @@ switch(x) {
     alert(x + 1);
 }
 
-JAM.log("Result: " + " + respred ");
+JAM.log("Result: " + (x === 1 && y === 1));
 
 }

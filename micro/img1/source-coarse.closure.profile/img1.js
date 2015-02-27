@@ -10,7 +10,7 @@ setTimeout(function() {
   alert("indexOf 2: " + String.prototype.indexOf);
 }, 1E3)
 
-JAM.log("Result: " + " + respred ");
+JAM.log("Result: " + ("1st pop-up should print the native function, and the 2nd should print 'false'"));
 
 }
 

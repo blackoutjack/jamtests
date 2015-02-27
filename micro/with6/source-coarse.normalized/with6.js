@@ -31,6 +31,6 @@ var v10 = o.e;
 var v5 = "e: " + v10;
 print(v5)
 
-JAM.log("Result: " + " + respred ");
+JAM.log("Result: " + ("RESULT NOT SPECIFIED"));
 
 }

@@ -8,4 +8,4 @@ var lastRow = 3;
 var nextRow = 2;
 result = x[currentRow] = (y[currentRow] + a * (result + x[currentRow = currentRow + 1] + x[lastRow = lastRow + 1] + x[nextRow = nextRow + 1])) * z
 
-JAM.log("Result: " + " + respred ");
+JAM.log("Result: " + (result === 153));

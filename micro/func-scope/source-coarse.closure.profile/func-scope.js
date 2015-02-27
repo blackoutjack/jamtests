@@ -20,7 +20,7 @@ if (x) {
   g();
 }
 
-JAM.log("Result: " + " + respred ");
+JAM.log("Result: " + (cnt === 6));
 
 }
 

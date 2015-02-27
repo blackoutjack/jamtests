@@ -4,4 +4,4 @@ var v0 = ["x = 2"];
 JAM.call(e.apply, e, [null, v0]);
 alert(x)
 
-JAM.log("Result: " + " + respred ");
+JAM.log("Result: " + (x === 1));

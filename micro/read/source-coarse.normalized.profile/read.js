@@ -4,7 +4,7 @@ introspect(JAM.policy.pFull) {
 var a = document;
 var b = a.cookie
 
-JAM.log("Result: " + " + respred ");
+JAM.log("Result: " + (b === undefined));
 
 }
 

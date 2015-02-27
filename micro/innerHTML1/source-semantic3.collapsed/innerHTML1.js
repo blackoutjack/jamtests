@@ -6,4 +6,4 @@ introspect(JAM.process) {
 }
 alert("VALUE: " + d)
 
-JAM.log("Result: " + " + respred ");
+JAM.log("Result: " + ("The URL (with # appended) should be alerted"));

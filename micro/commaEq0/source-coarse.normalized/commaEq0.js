@@ -8,6 +8,6 @@ b = c[e];
 var v0 = d + 1;
 a = b[v0]
 
-JAM.log("Result: " + " + respred ");
+JAM.log("Result: " + (typeof a === "undefined" && b === 10));
 
 }

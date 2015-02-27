@@ -6,4 +6,4 @@ if (v0) {
 }
 x = v0
 
-JAM.log("Result: " + " + respred ");
+JAM.log("Result: " + (x === 0));

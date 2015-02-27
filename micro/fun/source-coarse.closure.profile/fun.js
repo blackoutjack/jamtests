@@ -7,7 +7,7 @@ function f() {
 x = 3;
 x = f()
 
-JAM.log("Result: " + " + respred ");
+JAM.log("Result: " + (x === 3));
 
 }
 

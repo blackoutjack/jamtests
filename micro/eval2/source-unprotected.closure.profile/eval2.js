@@ -7,6 +7,6 @@ function f() {
 }
 x = f()
 
-JAM.log("Result: " + " + respred ");
+JAM.log("Result: " + (x === "ok"));
 
 JAM.stopProfile('load');

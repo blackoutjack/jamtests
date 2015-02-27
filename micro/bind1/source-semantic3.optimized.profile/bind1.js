@@ -2,6 +2,6 @@
 JAM.startProfile('load');
 x=1;var e=JAM.call(eval.bind,eval,[null,"x = 2"]);e()
 
-JAM.log("Result: " + " + respred ");
+JAM.log("Result: " + (x === 1));
 
 JAM.stopProfile('load');

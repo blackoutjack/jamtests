@@ -12,6 +12,6 @@ with(o) {
 var v0 = "x: " + x;
 print(v0)
 
-JAM.log("Result: " + " + respred ");
+JAM.log("Result: " + ("RESULT NOT SPECIFIED"));
 
 JAM.stopProfile('load');

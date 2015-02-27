@@ -6,6 +6,6 @@ introspect(JAM.policy.pFull) {
   document.close();
 }
 
-JAM.log("Result: " + " + respred ");
+JAM.log("Result: " + ("'BOY HOWDY' should be written on the page"));
 
 }

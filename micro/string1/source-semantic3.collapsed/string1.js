@@ -4,4 +4,4 @@ introspect(JAM.policy.p1) {
 }
 alert(o.src)
 
-JAM.log("Result: " + " + respred ");
+JAM.log("Result: " + ("RESULT NOT SPECIFIED"));

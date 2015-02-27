@@ -5,6 +5,6 @@ JAM.call(document.write, document, ["'BOY HOWDY'"]);
 JAM.call(document.write, document, [");\x3c/script>"]);
 JAM.call(document.close, document, [])
 
-JAM.log("Result: " + " + respred ");
+JAM.log("Result: " + ("'BOY HOWDY' should be written on the page"));
 
 JAM.stopProfile('load');
