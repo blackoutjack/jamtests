@@ -42,6 +42,8 @@ if (sizeof($scripts) == 0) {
   $err = "No 'script' or 'sources[]' parameter specified.";
 }
 
+// Apply JAM sandboxing through HTTP header.
+$http = isset($_REQUEST['http']) ? (!$_REQUEST['http'] ? false : true) : false;
 // Pass a falsy |lib| parameter to suppress libTx.js.
 $lib = isset($_REQUEST['lib']) ? (!$_REQUEST['lib'] ? false : true) : true;
 // Optional policy and html files
@@ -63,7 +65,21 @@ if (file_exists('actions.txt')) {
     }
   }
 }
+
+if ($http) {
+  $includes = array();
+  if ($policy) $includes[] = $policy;
+  if ($lib) $includes[] = 'libTx.js';
+
+  if (sizeof($includes) > 0) {
+    header('JAM-Include: '.implode(',', $includes));
+  }
+  if ($policy) {
+    header('JAM-Introspector: pFull');
+  }
+}
 ?>
+<!DOCTYPE html>
 <html lang="en">
   <head>
     <title>JAMScript - <?=$title?></title>
@@ -94,13 +110,13 @@ if ($profile) {
     <script>JAM.startProfile('init');</script>
 <?
 }
-if ($policy) {
+if (!$http && $policy) {
 ?>
     <script src="<?=$policy?>"></script>
 <?
 }
 
-if ($lib) {
+if (!$http && $lib) {
 ?>
     <script src="libTx.js"></script>
 <?

@@ -201,7 +201,8 @@ function getHTMLLink($info, $name) {
   return $html;
 }
 
-function findFile($info, $filetype, $key) {
+// Add the specified value to the |$dest| array.
+function findFile($info, $filetype, $key, &$dest) {
   $sub = $info[$key];
   if (isset($sub[$filetype])) return $sub[$filetype];
 
@@ -209,12 +210,12 @@ function findFile($info, $filetype, $key) {
   for ($i=sizeof($keyparts)-1; $i>=0; $i--) {
     $subkey = $keyparts[$i];
     if (isset($info[$subkey]) and isset($info[$subkey][$filetype])) {
-      return $info[$subkey][$filetype];
+      $dest[$filetype] = $info[$subkey][$filetype];
     }
   }
 
   if (isset($info['main']) and isset($info['main'][$filetype])) {
-    return $info['main'][$filetype];
+    $dest[$filetype] = $info['main'][$filetype];
   }
 }
 
@@ -290,8 +291,8 @@ foreach ($srcinfo as $okey => $sub) {
       }
 
       foreach ($htmlinfo as $hkey => $hsub) {
-        $sub['head'] = findFile($htmlinfo, 'head', $okey);
-        $sub['body'] = findFile($htmlinfo, 'body', $okey);
+        findFile($htmlinfo, 'head', $okey, $sub);
+        findFile($htmlinfo, 'body', $okey, $sub);
         if ($hkey == 'main') {
           $dkey = $key;
         } else {
