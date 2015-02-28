@@ -40,5 +40,5 @@ var policy = function() {
   p1.subsumedBy = pFull;
   p1.itype = "call";
   Object.freeze(p1);
-  return{p1:p1, pFull:pFull, woven:true};
+  return {p1:p1, pFull:pFull, woven:true};
 }()

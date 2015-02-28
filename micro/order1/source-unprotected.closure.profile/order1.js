@@ -1,7 +1,7 @@
 
 JAM.startProfile('load');
 function f() {
-  return{ok:"got it!"};
+  return {ok:"got it!"};
 }
 function g() {
   return "ok";

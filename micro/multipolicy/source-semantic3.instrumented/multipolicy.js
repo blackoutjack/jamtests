@@ -17,4 +17,4 @@ introspect(JAM.policy.p6) {
   document.write(b);
 }
 
-JAM.log("Result: " + " + respred ");
+JAM.log("Result: " + (a === null && b instanceof HTMLElement));

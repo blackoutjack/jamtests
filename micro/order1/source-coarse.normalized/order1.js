@@ -1,6 +1,6 @@
 introspect(JAM.policy.pFull) {
 function f() {
-  return{ok:"got it!"};
+  return {ok:"got it!"};
 }
 function g() {
   return "ok";

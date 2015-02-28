@@ -6,7 +6,7 @@ function f() {
 function g() {
   n = o;
   o = {x:"other"};
-  return-1;
+  return -1;
 }
 var o = {a:5, b:7, c:"ok"};
 var prop = "a";

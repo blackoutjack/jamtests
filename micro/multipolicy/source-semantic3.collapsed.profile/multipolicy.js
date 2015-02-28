@@ -13,6 +13,6 @@ introspect(JAM.policy.p3) {
 }
 JAM.call(document.write, document, [b], JAM.policy.p6)
 
-JAM.log("Result: " + " + respred ");
+JAM.log("Result: " + (a === null && b instanceof HTMLElement));
 
 JAM.stopProfile('load');

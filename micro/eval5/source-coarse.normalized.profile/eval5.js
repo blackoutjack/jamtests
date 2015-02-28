@@ -1,7 +1,8 @@
 
 JAM.startProfile('load');
 introspect(JAM.policy.pFull) {
-function f1(a) {
+function f1() {
+  var a = name;
   var i$$1 = 0;
   var v1 = i$$1 < 2;
   for (;v1;) {
@@ -12,7 +13,8 @@ function f1(a) {
   }
   return;
 }
-function f2(a$$1) {
+function f2() {
+  var a$$1 = name;
   var i$$2 = 0;
   var v3 = i$$2 < 2;
   for (;v3;) {
@@ -27,8 +29,8 @@ function f2(a$$1) {
 }
 var letters = ["e", "a", "v", "l"];
 var name = [];
-f1(name);
-f2(name);
+f1();
+f2();
 name = name.join("");
 var f3 = this[name];
 var code = "String.prototype.indexOf = String.prototype.toLowerCase";
