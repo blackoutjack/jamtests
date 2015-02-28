@@ -554,7 +554,7 @@ function v32() {
       v139 = setTimeout(f$$2, when);
     }
     r$$3 = v139;
-    return{interval:periodic, cancel:v27};
+    return {interval:periodic, cancel:v27};
   }
   function v25() {
     var o$$12 = {};
@@ -1120,7 +1120,7 @@ function v6() {
   }
   return;
 }
-function v5(agent) {
+function v5() {
   function numberify(s$$2) {
     function v4() {
       var v215;
@@ -1138,6 +1138,7 @@ function v5(agent) {
     var v216 = s$$2.replace(/\./g, v4);
     return parseFloat(v216);
   }
+  var agent;
   var nav = navigator;
   var v413 = nav;
   if (v413) {
@@ -1485,7 +1486,7 @@ function v0() {
     var v450 = a.length;
     v265 = i$$1 < v450;
   }
-  return o;
+  return;
 }
 function doLoad() {
   var v552 = YAHOO.util;

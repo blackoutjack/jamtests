@@ -202,7 +202,6 @@ function closeWindow() {
   outputWindow.document.write("</body>\n</html>\n");
   outputWindow.status = "Done.";
   outputWindow.document.close();
-  return true;
 }
 function convertDegenerates(sequence$$1) {
   sequence$$1 = sequence$$1.toLowerCase();
@@ -276,7 +275,7 @@ function getFuzzySearchTitle(fastaSequenceTitleOne, sequenceOne, fastaSequenceTi
     stringToReturn$$1 = stringToReturn$$1 + '"' + fastaSequenceTitleTwo + '"';
   }
   stringToReturn$$1 = stringToReturn$$1 + ' starting "' + sequenceTwo.substring(0, 10) + '"';
-  return'<div class="info">' + stringToReturn$$1 + "</div>\n";
+  return '<div class="info">' + stringToReturn$$1 + "</div>\n";
 }
 function getGeneticCodeMatchExp(arrayOfPatterns$$3) {
   var geneticCodeMatchExp$$1 = new Array(arrayOfPatterns$$3.length);
@@ -301,7 +300,7 @@ function getInfoFromTitleAndSequence(fastaSequenceTitle$$1, sequence$$3) {
     stringToReturn$$2 = stringToReturn$$2 + '"' + fastaSequenceTitle$$1 + '"';
   }
   stringToReturn$$2 = stringToReturn$$2 + ' starting "' + sequence$$3.substring(0, 10) + '"';
-  return'<div class="info">' + stringToReturn$$2 + "</div>\n";
+  return '<div class="info">' + stringToReturn$$2 + "</div>\n";
 }
 function getInfoFromTitleAndSequenceAndTopology(fastaSequenceTitle$$2, sequence$$4, topology) {
   var stringToReturn$$3 = "Results for " + topology + " " + sequence$$4.length + " residue sequence ";
@@ -309,7 +308,7 @@ function getInfoFromTitleAndSequenceAndTopology(fastaSequenceTitle$$2, sequence$
     stringToReturn$$3 = stringToReturn$$3 + '"' + fastaSequenceTitle$$2 + '"';
   }
   stringToReturn$$3 = stringToReturn$$3 + ' starting "' + sequence$$4.substring(0, 10) + '"';
-  return'<div class="info">' + stringToReturn$$3 + "</div>\n";
+  return '<div class="info">' + stringToReturn$$3 + "</div>\n";
 }
 function getPairwiseAlignTitle(fastaSequenceTitleOne$$1, sequenceOne$$1, fastaSequenceTitleTwo$$1, sequenceTwo$$1) {
   var stringToReturn$$4 = "Alignment results for " + sequenceOne$$1.length + " residue sequence ";
@@ -322,7 +321,7 @@ function getPairwiseAlignTitle(fastaSequenceTitleOne$$1, sequenceOne$$1, fastaSe
     stringToReturn$$4 = stringToReturn$$4 + '"' + fastaSequenceTitleTwo$$1 + '"';
   }
   stringToReturn$$4 = stringToReturn$$4 + ' starting "' + sequenceTwo$$1.substring(0, 10) + '"';
-  return'<div class="info">' + stringToReturn$$4 + "</div>\n";
+  return '<div class="info">' + stringToReturn$$4 + "</div>\n";
 }
 function getRandomSequence(components, lengthOut) {
   var sequenceArray = new Array;
@@ -371,10 +370,12 @@ function openTextArea() {
   outputWindow.document.write('<br /><textarea rows="6" cols="61">\n');
   return true;
 }
-function openWindow(title$$5) {
-  _openWindow(title$$5, true);
+function openWindow() {
+  var title$$5 = "EMBL Trans Extractor";
+  _openWindow(title$$5);
 }
-function _openWindow(title$$6, isColor) {
+function _openWindow(title$$6) {
+  var isColor = true;
   outputWindow = window.open("", "my_new_window", "toolbar=no, location=no, directories=no, status=yes, menubar=yes, scrollbars=yes, resizable=yes, copyhistory=no, width=800, height=400");
   outputWindow.focus();
   outputWindow.document.write('<!DOCTYPE html PUBLIC "-//W3C//DTD XHTML 1.0 Transitional//EN" "http://www.w3.org/TR/xhtml1/DTD/xhtml1-transitional.dtd">\n' + '<html lang="en">\n' + "<head>\n" + "<title>Sequence Manipulation Suite</title>\n" + '<meta http-equiv="Content-Type" content="text/html; charset=ISO-8859-1" />\n');
@@ -389,12 +390,12 @@ function _openWindow(title$$6, isColor) {
   }
   outputWindow.document.write("</head>\n" + '<body class="main">\n' + '<div class="title">' + title$$6 + " results</div>\n");
   outputWindow.status = "Please Wait.";
-  return true;
 }
 function openWindowAlign(title$$7) {
-  _openWindowAlign(title$$7, true);
+  _openWindowAlign(title$$7);
 }
-function _openWindowAlign(title$$8, isBackground) {
+function _openWindowAlign(title$$8) {
+  var isBackground = true;
   outputWindow = window.open("", "my_new_window", "toolbar=no, location=no, directories=no, status=yes, menubar=yes, scrollbars=yes, resizable=yes, copyhistory=no, width=800, height=400");
   outputWindow.focus();
   outputWindow.document.write('<!DOCTYPE html PUBLIC "-//W3C//DTD XHTML 1.0 Transitional//EN" "http://www.w3.org/TR/xhtml1/DTD/xhtml1-transitional.dtd">\n' + '<html lang="en">\n' + "<head>\n" + "<title>Sequence Manipulation Suite</title>\n" + '<meta http-equiv="Content-Type" content="text/html; charset=ISO-8859-1" />\n');
@@ -409,7 +410,6 @@ function _openWindowAlign(title$$8, isBackground) {
   }
   outputWindow.document.write("</head>\n" + '<body class="main">\n' + '<div class="title">' + title$$8 + " results</div>\n");
   outputWindow.status = "Please Wait.";
-  return true;
 }
 function removeFormatting(sequence$$5) {
   return sequence$$5.replace(/[\d\s]/g, "");
@@ -590,10 +590,11 @@ function writeGroupNum(text$$10, tabIn$$1, groupSize, basePerLine, startBase, st
   return true;
 }
 function writeGroupNumDna(text$$11, tabIn$$2, groupSize$$1, basePerLine$$1, startBase$$1, stopBase$$1, strands, numberPosition) {
-  writeGroupNumDnaSetStart(text$$11, tabIn$$2, groupSize$$1, basePerLine$$1, startBase$$1, stopBase$$1, strands, numberPosition, 0);
+  writeGroupNumDnaSetStart(text$$11, tabIn$$2, groupSize$$1, basePerLine$$1, startBase$$1, stopBase$$1, strands, numberPosition);
   return true;
 }
-function writeGroupNumDnaSetStart(text$$12, tabIn$$3, groupSize$$2, basePerLine$$2, startBase$$2, stopBase$$2, strands$$1, numberPosition$$1, numberingAdjustment) {
+function writeGroupNumDnaSetStart(text$$12, tabIn$$3, groupSize$$2, basePerLine$$2, startBase$$2, stopBase$$2, strands$$1, numberPosition$$1) {
+  var numberingAdjustment = 0;
   function adjustNumbering(original, adjustment) {
     var adjusted = original + adjustment;
     if (adjustment < 0 && adjusted >= 0) {
@@ -658,7 +659,6 @@ function writeGroupNumDnaSetStart(text$$12, tabIn$$3, groupSize$$2, basePerLine$
     aboveNum = "";
     lineOfText$$1 = "";
   }
-  return true;
 }
 function writeGroupNumProtein(text$$13, tabIn$$4, groupSize$$3, basePerLine$$3, startBase$$3, stopBase$$3, numberPosition$$2) {
   var i$$7 = parseInt(startBase$$3);
@@ -867,24 +867,20 @@ function writeShuffledSequence(sequence$$17) {
   outputWindow.document.write(tempSeq + "\n");
   return true;
 }
-function emblTrans(theDocument) {
-  JAM.startProfile('compute');
-
+function emblTrans() {
+  var theDocument = document;
   var maxInput$$3 = 2E5;
   if (testScript() == false) {
-    return false;
+    return;
   }
   if (checkFormElement(theDocument.forms[0].elements[0]) == false || verifyEmblFeat(theDocument.forms[0].elements[0].value) == false || checkTextLength(theDocument.forms[0].elements[0].value, maxInput$$3) == false) {
-    return false;
+    return;
   }
-  openWindow("EMBL Trans Extractor");
+  openWindow();
   openPre();
   emblTransExtract(theDocument.forms[0].elements[0].value);
   closePre();
   closeWindow();
-
-  JAM.stopProfile('compute');
-  return true;
 }
 function emblTransExtract(emblFile$$2) {
   var title$$9;
@@ -908,7 +904,6 @@ function emblTransExtract(emblFile$$2) {
     var featureArray = mainArray[1].split(/[\f\n\r]FT {3,12}\b/);
     showFeatureTrans(featureArray);
   }
-  return true;
 }
 function showFeatureTrans(arrayOfFeatures) {
   var featureTitle = "";
@@ -940,14 +935,13 @@ function showFeatureTrans(arrayOfFeatures) {
   if (translationFound == false) {
     outputWindow.document.write("No translations were found.\n");
   }
-  return true;
 }
 document.onload = function() {
   document.main_form.main_submit.focus();
 };
 document.getElementById("submitbtn").onclick = function() {
   try {
-    emblTrans(document);
+    emblTrans();
   } catch (e$$5) {
     alert("The following error was encountered: " + e$$5);
   }

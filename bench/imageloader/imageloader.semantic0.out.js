@@ -414,7 +414,7 @@ function v32() {
       v139 = JAM.call(setTimeout, null, [f$$2, when]);
     }
     r$$3 = v139;
-    return{interval:periodic, cancel:v27};
+    return {interval:periodic, cancel:v27};
   }
   function v25() {
     var o$$12 = {};
@@ -879,7 +879,7 @@ function v6() {
   }
   return;
 }
-function v5(agent) {
+function v5() {
   function numberify(s$$2) {
     function v4() {
       var v215;
@@ -895,6 +895,7 @@ function v5(agent) {
     var c = 0;
     return parseFloat(s$$2.replace(/\./g, v4));
   }
+  var agent;
   var nav = navigator;
   var v413 = nav;
   if (v413) {
@@ -1185,7 +1186,7 @@ function v0() {
     i$$1 = i$$1 + 1;
     v265 = i$$1 < a.length;
   }
-  return o;
+  return;
 }
 function doLoad() {
   var img$$2 = JAM.new(YAHOO.util.ImageLoader.srcImgObj, ["image", "http://www.blackoutjack.com/pics/TweekGhost.jpg"]);

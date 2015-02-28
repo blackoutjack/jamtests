@@ -1,6 +1,12 @@
 
 JAM.startProfile('load');
-function Benchmark(name$$30, doWarmup, doDeterministic, deterministicIterations, run, setup, tearDown, rmsResult, minIterations) {
+function Benchmark(name$$30, deterministicIterations, run) {
+  var setup;
+  var tearDown;
+  var rmsResult;
+  var minIterations;
+  var doWarmup = true;
+  var doDeterministic = false;
   this.name = name$$30;
   this.doWarmup = doWarmup;
   this.doDeterministic = doDeterministic;
@@ -663,7 +669,7 @@ function montMulTo(x$$66, y$$34, r$$20) {
 }
 function bnpIsEven() {
   var this_array$$19 = this.array;
-  return(this.t > 0 ? this_array$$19[0] & 1 : this.s) == 0;
+  return (this.t > 0 ? this_array$$19[0] & 1 : this.s) == 0;
 }
 function bnpExp(e$$8, z$$2) {
   if (e$$8 > 4294967295 || e$$8 < 1) {
@@ -707,7 +713,7 @@ function bnIntValue() {
       return this_array$$20[0] - BI_DV;
     } else {
       if (this.t == 0) {
-        return-1;
+        return -1;
       }
     }
   } else {
@@ -719,7 +725,7 @@ function bnIntValue() {
       }
     }
   }
-  return(this_array$$20[1] & (1 << 32 - BI_DB) - 1) << BI_DB | this_array$$20[0];
+  return (this_array$$20[1] & (1 << 32 - BI_DB) - 1) << BI_DB | this_array$$20[0];
 }
 function bnByteValue() {
   var this_array$$21 = this.array;
@@ -735,7 +741,7 @@ function bnpChunkSize(r$$23) {
 function bnSigNum() {
   var this_array$$23 = this.array;
   if (this.s < 0) {
-    return-1;
+    return -1;
   } else {
     if (this.t <= 0 || this.t == 1 && this_array$$23[0] <= 0) {
       return 0;
@@ -969,7 +975,7 @@ function bnShiftRight(n$$11) {
 }
 function lbit(x$$73) {
   if (x$$73 == 0) {
-    return-1;
+    return -1;
   }
   var r$$34 = 0;
   if ((x$$73 & 65535) == 0) {
@@ -1004,7 +1010,7 @@ function bnGetLowestSetBit() {
   if (this.s < 0) {
     return this.t * BI_DB;
   }
-  return-1;
+  return -1;
 }
 function cbit(x$$74) {
   var r$$35 = 0;
@@ -1029,7 +1035,7 @@ function bnTestBit(n$$12) {
   if (j$$7 >= this.t) {
     return this.s != 0;
   }
-  return(this_array$$28[j$$7] & 1 << n$$12 % BI_DB) != 0;
+  return (this_array$$28[j$$7] & 1 << n$$12 % BI_DB) != 0;
 }
 function bnpChangeBit(n$$13, op$$1) {
   var r$$37 = BigInteger.ONE.shiftLeft(n$$13);
@@ -1570,7 +1576,8 @@ function ARC4next() {
 function prng_newstate() {
   return new Arcfour;
 }
-function rng_seed_int(x$$86) {
+function rng_seed_int() {
+  var x$$86 = 1122926989487;
   rng_pool[rng_pptr++] ^= x$$86 & 255;
   rng_pool[rng_pptr++] ^= x$$86 >> 8 & 255;
   rng_pool[rng_pptr++] ^= x$$86 >> 16 & 255;
@@ -1580,7 +1587,7 @@ function rng_seed_int(x$$86) {
   }
 }
 function rng_seed_time() {
-  rng_seed_int(1122926989487);
+  rng_seed_int();
 }
 function rng_get_byte() {
   if (rng_state == null) {
@@ -1604,7 +1611,8 @@ function rng_get_bytes(ba) {
 }
 function SecureRandom() {
 }
-function parseBigInt(str$$6, r$$55) {
+function parseBigInt(str$$6) {
+  var r$$55 = 16;
   return new BigInteger(str$$6, r$$55);
 }
 function linebrk(s$$6, n$$23) {
@@ -1659,7 +1667,7 @@ function RSAKey() {
 }
 function RSASetPublic(N, E) {
   if (N != null && E != null && N.length > 0 && E.length > 0) {
-    this.n = parseBigInt(N, 16);
+    this.n = parseBigInt(N);
     this.e = parseInt(E, 16);
   } else {
     alert("Invalid RSA public key");
@@ -1707,23 +1715,23 @@ function pkcs1unpad2(d$$6, n$$25) {
 }
 function RSASetPrivate(N$$1, E$$1, D) {
   if (N$$1 != null && E$$1 != null && N$$1.length > 0 && E$$1.length > 0) {
-    this.n = parseBigInt(N$$1, 16);
+    this.n = parseBigInt(N$$1);
     this.e = parseInt(E$$1, 16);
-    this.d = parseBigInt(D, 16);
+    this.d = parseBigInt(D);
   } else {
     alert("Invalid RSA private key");
   }
 }
 function RSASetPrivateEx(N$$2, E$$2, D$$1, P, Q, DP, DQ, C) {
   if (N$$2 != null && E$$2 != null && N$$2.length > 0 && E$$2.length > 0) {
-    this.n = parseBigInt(N$$2, 16);
+    this.n = parseBigInt(N$$2);
     this.e = parseInt(E$$2, 16);
-    this.d = parseBigInt(D$$1, 16);
-    this.p = parseBigInt(P, 16);
-    this.q = parseBigInt(Q, 16);
-    this.dmp1 = parseBigInt(DP, 16);
-    this.dmq1 = parseBigInt(DQ, 16);
-    this.coeff = parseBigInt(C, 16);
+    this.d = parseBigInt(D$$1);
+    this.p = parseBigInt(P);
+    this.q = parseBigInt(Q);
+    this.dmp1 = parseBigInt(DP);
+    this.dmq1 = parseBigInt(DQ);
+    this.coeff = parseBigInt(C);
   } else {
     alert("Invalid RSA private key");
   }
@@ -1776,7 +1784,7 @@ function RSADoPrivate(x$$89) {
   return xp.subtract(xq).multiply(this.coeff).mod(this.p).multiply(this.q).add(xq);
 }
 function RSADecrypt(ctext) {
-  var c$$14 = parseBigInt(ctext, 16);
+  var c$$14 = parseBigInt(ctext);
   var m$$16 = this.doPrivate(c$$14);
   if (m$$16 == null) {
     return null;
@@ -1848,7 +1856,7 @@ function Run() {
   parent.removeChild(anchor);
   document.getElementById("startup-text").innerHTML = "";
   document.getElementById("progress-bar-container").style.visibility = "visible";
-  BenchmarkSuite.RunSuites({NotifyStart:ShowBox, NotifyError:AddError, NotifyResult:AddResult, NotifyScore:AddScore}, skipBenchmarks);
+  BenchmarkSuite.RunSuites();
 }
 function CheckCompatibility() {
   var hasTypedArrays = typeof Uint8Array != "undefined" && typeof Float64Array != "undefined" && typeof(new Uint8Array(0)).subarray != "undefined";
@@ -1889,11 +1897,13 @@ BenchmarkSuite.ResetRNG = function() {
       seed = (seed + 3550635116 ^ seed << 9) & 4294967295;
       seed = seed + 4251993797 + (seed << 3) & 4294967295;
       seed = (seed ^ 3042594569 ^ seed >>> 16) & 4294967295;
-      return(seed & 268435455) / 268435456;
+      return (seed & 268435455) / 268435456;
     };
   }();
 };
-BenchmarkSuite.RunSuites = function(runner, skipBenchmarks$$1) {
+BenchmarkSuite.RunSuites = function() {
+  var runner = {NotifyStart:ShowBox, NotifyError:AddError, NotifyResult:AddResult, NotifyScore:AddScore};
+  var skipBenchmarks$$1 = skipBenchmarks;
   function RunStep() {
     for (;continuation || index$$39 < length$$11;) {
       if (continuation) {
@@ -1915,7 +1925,7 @@ BenchmarkSuite.RunSuites = function(runner, skipBenchmarks$$1) {
       }
     }
     if (runner.NotifyScore) {
-      var score = BenchmarkSuite.GeometricMean(BenchmarkSuite.scores);
+      var score = BenchmarkSuite.GeometricMean();
       var formatted = BenchmarkSuite.FormatScore(100 * score);
       runner.NotifyScore(formatted);
     }
@@ -1937,7 +1947,8 @@ BenchmarkSuite.CountBenchmarks = function() {
   }
   return result;
 };
-BenchmarkSuite.GeometricMean = function(numbers) {
+BenchmarkSuite.GeometricMean = function() {
+  var numbers = BenchmarkSuite.scores;
   var log = 0;
   var i$$2 = 0;
   for (;i$$2 < numbers.length;i$$2++) {
@@ -2038,7 +2049,7 @@ BenchmarkSuite.prototype.RunSingleBenchmark = function(benchmark$$1, data$$18) {
   }
   if (data$$18 == null) {
     Measure(null);
-    return{runs:0, elapsed:0};
+    return {runs:0, elapsed:0};
   } else {
     Measure(data$$18);
     if (data$$18.runs < benchmark$$1.minIterations) {
@@ -2091,7 +2102,7 @@ BenchmarkSuite.prototype.RunStep = function(runner$$2) {
   var data$$20;
   return RunNextSetup();
 };
-var Crypto = new BenchmarkSuite("Crypto", [266181], [new Benchmark("Encrypt", true, false, 3900, encrypt), new Benchmark("Decrypt", true, false, 220, decrypt)]);
+var Crypto = new BenchmarkSuite("Crypto", [266181], [new Benchmark("Encrypt", 3900, encrypt), new Benchmark("Decrypt", 220, decrypt)]);
 var dbits;
 var BI_DB;
 var BI_DM;

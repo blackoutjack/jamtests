@@ -1,4 +1,6 @@
-function SNote(serverPath, divParent) {
+function SNote() {
+  var serverPath = "./SNote/";
+  var divParent = document.getElementById("div1");
   function init(divParent$$1, serverPath$$1) {
     m_serverPath = serverPath$$1;
     m_divInternal$$1 = divParent$$1;
@@ -6,16 +8,20 @@ function SNote(serverPath, divParent) {
     m_divInternal$$1.style.border = "2px solid";
     m_divInternal$$1.style.backgroundColor = "#FFFFCC";
     m_preNote = document.createElement("pre");
-    m_preNote.id = "note";
+    var JSCompiler_temp_const$$21 = m_preNote;
+    var JSCompiler_inline_result$$22;
+    var strElemId$$inline_23 = "note";
+    JSCompiler_inline_result$$22 = strElemId$$inline_23;
+    JSCompiler_temp_const$$21.id = JSCompiler_inline_result$$22;
     m_preNote.className = "write-only non-editable";
     m_divInternal$$1.appendChild(m_preNote);
-    var serverPath$$inline_21 = serverPath$$inline_0;
+    var serverPath$$inline_25 = serverPath$$inline_0;
     m_divButtons = document.createElement("div");
     m_divButtons.style.textAlign = "left";
     m_divInternal$$1.appendChild(m_divButtons);
-    m_imageEdit = createNoteButton(serverPath$$inline_21 + "SNoteEdit.png", handleEditButtonClick, m_divButtons);
-    m_imageView = createNoteButton(serverPath$$inline_21 + "SNoteRead.png", handleUnlockButtonClick, m_divButtons);
-    m_imageDelete = createNoteButton(serverPath$$inline_21 + "SNoteDelete.png", handleDeleteButtonClick, m_divButtons);
+    m_imageEdit = createNoteButton(serverPath$$inline_25 + "SNoteEdit.png", handleEditButtonClick);
+    m_imageView = createNoteButton(serverPath$$inline_25 + "SNoteRead.png", handleUnlockButtonClick);
+    m_imageDelete = createNoteButton(serverPath$$inline_25 + "SNoteDelete.png", handleDeleteButtonClick);
     m_divEdit = createPopupDialog("edit_dialog", m_divInternal$$1);
     m_divEdit.style.width = 400;
     m_inputNewPassword = createPasswordPanel(m_divEdit, "Enter password:", "edit_password");
@@ -33,15 +39,17 @@ function SNote(serverPath, divParent) {
     createDialogButtonPanel(handleUnlockDialogOk, handleUnlockDialogCancel, m_divUnlock);
     m_divUnlock.style.display = "none";
     m_divDeleteDialog = createPopupDialog("delete_dialog", m_divInternal$$1);
-    var parent$$inline_25 = m_divDeleteDialog;
+    var strLabelText$$inline_29 = "Are you sure you want to delete?";
+    var parent$$inline_30 = m_divDeleteDialog;
     label = document.createElement("label");
-    label.textContent = "Are you sure you want to delete?";
-    parent$$inline_25.appendChild(label);
+    label.textContent = strLabelText$$inline_29;
+    parent$$inline_30.appendChild(label);
     createDialogButtonPanel(handleDeleteDialogOk, handleDeleteDialogCancel, m_divDeleteDialog);
     m_divDeleteDialog.style.display = "none";
     fetch(m_strId, handleSuccessfulFetch, handleFailedFetch);
   }
-  function createNoteButton(strIconFile, funcHandleClick, parent) {
+  function createNoteButton(strIconFile, funcHandleClick) {
+    var parent = m_divButtons;
     image = document.createElement("input");
     image.type = "image";
     image.style.width = 23;
@@ -150,7 +158,7 @@ function SNote(serverPath, divParent) {
       if (strNewPass != strNewPassRetype) {
         alert("Passwords do not match");
       } else {
-        save(destructiveRead(m_inputNote), strNewPass, function(strId$$1) {
+        save(destructiveRead(m_inputNote), function(strId$$1) {
           if (strId$$1 != "") {
             closeEditDialog();
           } else {
@@ -183,7 +191,8 @@ function SNote(serverPath, divParent) {
       callbackSuccess(message);
     }
   }
-  function save(strEncNote, pwd, callbackDone) {
+  function save(strEncNote, callbackDone) {
+    var pwd = strNewPass;
     password = pwd;
     message = strEncNote;
     callbackDone("Saved");
@@ -208,28 +217,36 @@ function SNote(serverPath, divParent) {
   var m_inputPassword = null;
   init(divParent, serverPath);
 }
-function SNoteSwindler(serverPath$$4, divParent$$2, strNoteId) {
-  function createButton(strLabel, strFunc, parent$$5) {
+function SNoteSwindler() {
+  var serverPath$$4 = "";
+  var divParent$$2 = document.getElementById("div2");
+  var strNoteId = "div1";
+  function createButton(strLabel, strFunc) {
+    var parent$$5 = m_divInternal;
     button = document.createElement("button");
     button.type = "input";
     button.textContent = strLabel;
     button.onclick = strFunc;
     parent$$5.appendChild(button);
   }
+  function genNoteElemId() {
+    var strElemId$$1 = "note";
+    return strElemId$$1;
+  }
   function forgeNote() {
-    preNote = document.getElementById("note");
+    preNote = document.getElementById(genNoteElemId());
     preNote.textContent = "Forged note";
   }
   function forgeNoteInnerHTML() {
-    preNote = document.getElementById("note");
+    preNote = document.getElementById(genNoteElemId());
     preNote.innerHTML = "Forged note";
   }
   function readNote() {
-    preNote = document.getElementById("note");
+    preNote = document.getElementById(genNoteElemId());
     alert(preNote.textContent);
   }
   function readNoteInnerHTML() {
-    preNote = document.getElementById("note");
+    preNote = document.getElementById(genNoteElemId());
     alert(preNote.innerHTML);
   }
   m_divParent = null;
@@ -240,12 +257,12 @@ function SNoteSwindler(serverPath$$4, divParent$$2, strNoteId) {
   m_divInternal.style.border = "2px solid";
   m_divInternal.style.backgroundColor = "#CCCCCC";
   m_divParent.appendChild(m_divInternal);
-  createButton("Forge Note", forgeNote, m_divInternal);
-  createButton("Forge Note Inner HTML", forgeNoteInnerHTML, m_divInternal);
-  createButton("Read Note", readNote, m_divInternal);
-  createButton("Read Note Inner HTML", readNoteInnerHTML, m_divInternal);
+  createButton("Forge Note", forgeNote);
+  createButton("Forge Note Inner HTML", forgeNoteInnerHTML);
+  createButton("Read Note", readNote);
+  createButton("Read Note Inner HTML", readNoteInnerHTML);
 }
 var message = "Here's a secret stored message";
 var password = "test";
-new SNote("./SNote/", document.getElementById("div1"));
-new SNoteSwindler("", document.getElementById("div2"), "div1")
+new SNote;
+new SNoteSwindler

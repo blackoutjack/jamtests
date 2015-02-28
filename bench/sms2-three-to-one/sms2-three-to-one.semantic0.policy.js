@@ -55,7 +55,7 @@ var policy = function() {
   }
   pFull.subsumedBy = pFull;
   Object.freeze(pFull);
-  function p17(tx) {
+  function p15(tx) {
     var commit = true;
     var as = tx.getActionSequence();
     var len = as.length;
@@ -76,9 +76,9 @@ var policy = function() {
       JAM.prevent(tx);
     }
   }
-  p17.subsumedBy = pFull;
-  Object.freeze(p17);
-  function p11(tx) {
+  p15.subsumedBy = pFull;
+  Object.freeze(p15);
+  function p10(tx) {
     var commit = true;
     var as = tx.getCallSequence();
     var len = as.length;
@@ -95,9 +95,9 @@ var policy = function() {
       JAM.prevent(tx);
     }
   }
-  p11.subsumedBy = pFull;
-  p11.itype = "call";
-  Object.freeze(p11);
+  p10.subsumedBy = pFull;
+  p10.itype = "call";
+  Object.freeze(p10);
   function p14(tx) {
     var commit = true;
     var as = tx.getCallSequence();
@@ -147,7 +147,7 @@ var policy = function() {
   }
   p27.subsumedBy = pFull;
   Object.freeze(p27);
-  function p15(tx) {
+  function p16(tx) {
     var commit = true;
     var as = tx.getActionSequence();
     var len = as.length;
@@ -168,8 +168,8 @@ var policy = function() {
       JAM.prevent(tx);
     }
   }
-  p15.subsumedBy = pFull;
-  Object.freeze(p15);
+  p16.subsumedBy = pFull;
+  Object.freeze(p16);
   function p13(tx) {
     var commit = true;
     var as = tx.getCallSequence();
@@ -190,7 +190,7 @@ var policy = function() {
   p13.subsumedBy = pFull;
   p13.itype = "call";
   Object.freeze(p13);
-  function p16(tx) {
+  function p17(tx) {
     var commit = true;
     var as = tx.getActionSequence();
     var len = as.length;
@@ -211,9 +211,9 @@ var policy = function() {
       JAM.prevent(tx);
     }
   }
-  p16.subsumedBy = pFull;
-  Object.freeze(p16);
-  function p9(tx) {
+  p17.subsumedBy = pFull;
+  Object.freeze(p17);
+  function p11(tx) {
     var commit = true;
     var as = tx.getCallSequence();
     var len = as.length;
@@ -230,8 +230,8 @@ var policy = function() {
       JAM.prevent(tx);
     }
   }
-  p9.subsumedBy = pFull;
-  p9.itype = "call";
-  Object.freeze(p9);
-  return{p17:p17, p11:p11, p14:p14, p27:p27, p15:p15, p13:p13, p16:p16, p9:p9, pFull:pFull, woven:true};
+  p11.subsumedBy = pFull;
+  p11.itype = "call";
+  Object.freeze(p11);
+  return {p15:p15, p10:p10, p14:p14, p27:p27, p16:p16, p13:p13, p17:p17, p11:p11, pFull:pFull, woven:true};
 }()

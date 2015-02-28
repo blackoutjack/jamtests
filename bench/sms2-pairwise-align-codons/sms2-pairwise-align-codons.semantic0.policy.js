@@ -103,27 +103,7 @@ var policy = function() {
   }
   p33.subsumedBy = pFull;
   Object.freeze(p33);
-  function p18(tx) {
-    var commit = true;
-    var as = tx.getCallSequence();
-    var len = as.length;
-    for (var i = 0;i < len;i++) {
-      var node = as[i];
-      if (JAM.identical(node.value, _HTMLDocument_prototype_write) && (node.argc > 0 && typeof node.args[0] === "string") || JAM.identical(node.value, _HTMLDocument_prototype_writeln) && (node.argc > 0 && typeof node.args[0] === "string") || JAM.identical(node.value, _Window_prototype_open) && (node.argc > 0 && node.args[0] !== _undefined) || JAM.identical(node.value, _Window_prototype_openDialog) && (node.argc > 0 && node.args[0] !== _undefined)) {
-        commit = false;
-        break;
-      }
-    }
-    if (commit) {
-      JAM.process(tx);
-    } else {
-      JAM.prevent(tx);
-    }
-  }
-  p18.subsumedBy = pFull;
-  p18.itype = "call";
-  Object.freeze(p18);
-  function p21(tx) {
+  function p24(tx) {
     var commit = true;
     var as = tx.getActionSequence();
     var len = as.length;
@@ -144,8 +124,28 @@ var policy = function() {
       JAM.prevent(tx);
     }
   }
-  p21.subsumedBy = pFull;
-  Object.freeze(p21);
+  p24.subsumedBy = pFull;
+  Object.freeze(p24);
+  function p18(tx) {
+    var commit = true;
+    var as = tx.getCallSequence();
+    var len = as.length;
+    for (var i = 0;i < len;i++) {
+      var node = as[i];
+      if (JAM.identical(node.value, _HTMLDocument_prototype_write) && (node.argc > 0 && typeof node.args[0] === "string") || JAM.identical(node.value, _HTMLDocument_prototype_writeln) && (node.argc > 0 && typeof node.args[0] === "string") || JAM.identical(node.value, _Window_prototype_open) && (node.argc > 0 && node.args[0] !== _undefined) || JAM.identical(node.value, _Window_prototype_openDialog) && (node.argc > 0 && node.args[0] !== _undefined)) {
+        commit = false;
+        break;
+      }
+    }
+    if (commit) {
+      JAM.process(tx);
+    } else {
+      JAM.prevent(tx);
+    }
+  }
+  p18.subsumedBy = pFull;
+  p18.itype = "call";
+  Object.freeze(p18);
   function p20(tx) {
     var commit = true;
     var as = tx.getCallSequence();
@@ -253,5 +253,5 @@ var policy = function() {
   p15.subsumedBy = pFull;
   p15.itype = "call";
   Object.freeze(p15);
-  return{p6:p6, p33:p33, p18:p18, p21:p21, p20:p20, p22:p22, p19:p19, p23:p23, p15:p15, pFull:pFull, woven:true};
+  return {p6:p6, p33:p33, p24:p24, p18:p18, p20:p20, p22:p22, p19:p19, p23:p23, p15:p15, pFull:pFull, woven:true};
 }()

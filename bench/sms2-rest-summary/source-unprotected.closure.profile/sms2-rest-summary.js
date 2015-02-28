@@ -102,7 +102,8 @@ function checkGroupInput(arrayOfPatterns$$1) {
   }
   return true;
 }
-function checkRestPatterns(arrayOfPatterns$$2) {
+function checkRestPatterns() {
+  var arrayOfPatterns$$2 = itemsToCheck;
   var z$$4 = 0;
   for (;z$$4 < arrayOfPatterns$$2.length;) {
     if (arrayOfPatterns$$2[z$$4].search(/^\s*\/[acgturyswkmbdhvn\[\]]+\/\s+\([^\/]+\)\d+/i) == -1) {
@@ -202,7 +203,6 @@ function closeWindow() {
   outputWindow.document.write("</body>\n</html>\n");
   outputWindow.status = "Done.";
   outputWindow.document.close();
-  return true;
 }
 function convertDegenerates(sequence$$1) {
   sequence$$1 = sequence$$1.toLowerCase();
@@ -276,7 +276,7 @@ function getFuzzySearchTitle(fastaSequenceTitleOne, sequenceOne, fastaSequenceTi
     stringToReturn$$1 = stringToReturn$$1 + '"' + fastaSequenceTitleTwo + '"';
   }
   stringToReturn$$1 = stringToReturn$$1 + ' starting "' + sequenceTwo.substring(0, 10) + '"';
-  return'<div class="info">' + stringToReturn$$1 + "</div>\n";
+  return '<div class="info">' + stringToReturn$$1 + "</div>\n";
 }
 function getGeneticCodeMatchExp(arrayOfPatterns$$3) {
   var geneticCodeMatchExp$$1 = new Array(arrayOfPatterns$$3.length);
@@ -301,7 +301,7 @@ function getInfoFromTitleAndSequence(fastaSequenceTitle$$1, sequence$$3) {
     stringToReturn$$2 = stringToReturn$$2 + '"' + fastaSequenceTitle$$1 + '"';
   }
   stringToReturn$$2 = stringToReturn$$2 + ' starting "' + sequence$$3.substring(0, 10) + '"';
-  return'<div class="info">' + stringToReturn$$2 + "</div>\n";
+  return '<div class="info">' + stringToReturn$$2 + "</div>\n";
 }
 function getInfoFromTitleAndSequenceAndTopology(fastaSequenceTitle$$2, sequence$$4, topology) {
   var stringToReturn$$3 = "Results for " + topology + " " + sequence$$4.length + " residue sequence ";
@@ -309,7 +309,7 @@ function getInfoFromTitleAndSequenceAndTopology(fastaSequenceTitle$$2, sequence$
     stringToReturn$$3 = stringToReturn$$3 + '"' + fastaSequenceTitle$$2 + '"';
   }
   stringToReturn$$3 = stringToReturn$$3 + ' starting "' + sequence$$4.substring(0, 10) + '"';
-  return'<div class="info">' + stringToReturn$$3 + "</div>\n";
+  return '<div class="info">' + stringToReturn$$3 + "</div>\n";
 }
 function getPairwiseAlignTitle(fastaSequenceTitleOne$$1, sequenceOne$$1, fastaSequenceTitleTwo$$1, sequenceTwo$$1) {
   var stringToReturn$$4 = "Alignment results for " + sequenceOne$$1.length + " residue sequence ";
@@ -322,7 +322,7 @@ function getPairwiseAlignTitle(fastaSequenceTitleOne$$1, sequenceOne$$1, fastaSe
     stringToReturn$$4 = stringToReturn$$4 + '"' + fastaSequenceTitleTwo$$1 + '"';
   }
   stringToReturn$$4 = stringToReturn$$4 + ' starting "' + sequenceTwo$$1.substring(0, 10) + '"';
-  return'<div class="info">' + stringToReturn$$4 + "</div>\n";
+  return '<div class="info">' + stringToReturn$$4 + "</div>\n";
 }
 function getRandomSequence(components, lengthOut) {
   var sequenceArray = new Array;
@@ -371,10 +371,12 @@ function openTextArea() {
   outputWindow.document.write('<br /><textarea rows="6" cols="61">\n');
   return true;
 }
-function openWindow(title$$5) {
-  _openWindow(title$$5, true);
+function openWindow() {
+  var title$$5 = "Restriction Summary";
+  _openWindow(title$$5);
 }
-function _openWindow(title$$6, isColor) {
+function _openWindow(title$$6) {
+  var isColor = true;
   outputWindow = window.open("", "my_new_window", "toolbar=no, location=no, directories=no, status=yes, menubar=yes, scrollbars=yes, resizable=yes, copyhistory=no, width=800, height=400");
   outputWindow.focus();
   outputWindow.document.write('<!DOCTYPE html PUBLIC "-//W3C//DTD XHTML 1.0 Transitional//EN" "http://www.w3.org/TR/xhtml1/DTD/xhtml1-transitional.dtd">\n' + '<html lang="en">\n' + "<head>\n" + "<title>Sequence Manipulation Suite</title>\n" + '<meta http-equiv="Content-Type" content="text/html; charset=ISO-8859-1" />\n');
@@ -389,12 +391,12 @@ function _openWindow(title$$6, isColor) {
   }
   outputWindow.document.write("</head>\n" + '<body class="main">\n' + '<div class="title">' + title$$6 + " results</div>\n");
   outputWindow.status = "Please Wait.";
-  return true;
 }
 function openWindowAlign(title$$7) {
-  _openWindowAlign(title$$7, true);
+  _openWindowAlign(title$$7);
 }
-function _openWindowAlign(title$$8, isBackground) {
+function _openWindowAlign(title$$8) {
+  var isBackground = true;
   outputWindow = window.open("", "my_new_window", "toolbar=no, location=no, directories=no, status=yes, menubar=yes, scrollbars=yes, resizable=yes, copyhistory=no, width=800, height=400");
   outputWindow.focus();
   outputWindow.document.write('<!DOCTYPE html PUBLIC "-//W3C//DTD XHTML 1.0 Transitional//EN" "http://www.w3.org/TR/xhtml1/DTD/xhtml1-transitional.dtd">\n' + '<html lang="en">\n' + "<head>\n" + "<title>Sequence Manipulation Suite</title>\n" + '<meta http-equiv="Content-Type" content="text/html; charset=ISO-8859-1" />\n');
@@ -409,7 +411,6 @@ function _openWindowAlign(title$$8, isBackground) {
   }
   outputWindow.document.write("</head>\n" + '<body class="main">\n' + '<div class="title">' + title$$8 + " results</div>\n");
   outputWindow.status = "Please Wait.";
-  return true;
 }
 function removeFormatting(sequence$$5) {
   return sequence$$5.replace(/[\d\s]/g, "");
@@ -590,10 +591,11 @@ function writeGroupNum(text$$10, tabIn$$1, groupSize, basePerLine, startBase, st
   return true;
 }
 function writeGroupNumDna(text$$11, tabIn$$2, groupSize$$1, basePerLine$$1, startBase$$1, stopBase$$1, strands, numberPosition) {
-  writeGroupNumDnaSetStart(text$$11, tabIn$$2, groupSize$$1, basePerLine$$1, startBase$$1, stopBase$$1, strands, numberPosition, 0);
+  writeGroupNumDnaSetStart(text$$11, tabIn$$2, groupSize$$1, basePerLine$$1, startBase$$1, stopBase$$1, strands, numberPosition);
   return true;
 }
-function writeGroupNumDnaSetStart(text$$12, tabIn$$3, groupSize$$2, basePerLine$$2, startBase$$2, stopBase$$2, strands$$1, numberPosition$$1, numberingAdjustment) {
+function writeGroupNumDnaSetStart(text$$12, tabIn$$3, groupSize$$2, basePerLine$$2, startBase$$2, stopBase$$2, strands$$1, numberPosition$$1) {
+  var numberingAdjustment = 0;
   function adjustNumbering(original, adjustment) {
     var adjusted = original + adjustment;
     if (adjustment < 0 && adjusted >= 0) {
@@ -658,7 +660,6 @@ function writeGroupNumDnaSetStart(text$$12, tabIn$$3, groupSize$$2, basePerLine$
     aboveNum = "";
     lineOfText$$1 = "";
   }
-  return true;
 }
 function writeGroupNumProtein(text$$13, tabIn$$4, groupSize$$3, basePerLine$$3, startBase$$3, stopBase$$3, numberPosition$$2) {
   var i$$7 = parseInt(startBase$$3);
@@ -760,7 +761,8 @@ function writeRandomSequence(components$$2, lengthOut$$1) {
   outputWindow.document.write(sequence$$14 + "\n");
   return true;
 }
-function writeRestrictionSites(sequence$$15, arrayOfItems, dnaConformation) {
+function writeRestrictionSites(sequence$$15, dnaConformation) {
+  var arrayOfItems = itemsToCheck;
   var resultArray = new Array;
   var lookAhead = 50;
   var lowerLimit = 0;
@@ -821,7 +823,6 @@ function writeRestrictionSites(sequence$$15, arrayOfItems, dnaConformation) {
     timesFound = 0;
   }
   outputWindow.document.write("</tbody></table>\n");
-  return true;
 }
 function writeSequenceStats(sequence$$16, arrayOfItems$$1) {
   var originalLength = sequence$$16.length;
@@ -867,7 +868,8 @@ function writeShuffledSequence(sequence$$17) {
   outputWindow.document.write(tempSeq + "\n");
   return true;
 }
-function getRestrictionSiteString(type$$25) {
+function getRestrictionSiteString() {
+  var type$$25 = "standard";
   if (type$$25.toLowerCase() == "standard") {
     return "/aggcct/ (AatI agg|cct)3," + "/gacgtc/ (AatII gacgt|c)1," + "/tgcgca/ (Acc16I tgc|gca)3," + "/cgcg/ (AccII cg|cg)2," + "/tccgga/ (AccIII t|ccgga)5," + "/aacgtt/ (AclI aa|cgtt)4," + "/cacgtg/ (AcvI cac|gtg)3," + "/gtac/ (AfaI gt|ac)2," + "/agcgct/ (AfeI agc|gct)3," + "/cttaag/ (AflII c|ttaag)5," + "/accggt/ (AgeI a|ccggt)5," + "/actagt/ (AhlI a|ctagt)5," + "/gtgcac/ (Alw441 g|tgcac)5," + "/agct/ (AluI ag|ct)2," + "/agcgct/ (Aor51HI agc|gct)3," + "/gggccc/ (ApaI gggcc|c)1," + "/gtgcac/ (ApaLI g|tgcac)5," + 
     "/ggcgcgcc/ (AscI gg|cgcgcc)6," + "/attaat/ (AseI at|taat)4," + "/ggtacc/ (Asp718I g|gtacc)5," + "/ttcgaa/ (AsuII tt|cgaa)4," + "/c[cty]cg[agr]g/ (AvaI c|ycgrg)5," + "/tgcgca/ (AviII tgc|gca)3," + "/cctagg/ (AvrII c|ctagg)5," + "/tggcca/ (BalI tgg|cca)3," + "/ggatcc/ (BamHI g|gatcc)5," + "/atcgat/ (BanIII at|cgat)4," + "/ggcgcc/ (BbeI ggcgc|c)1," + "/cacgtg/ (BbrPI cac|gtg)3," + "/gcatgc/ (BbuI gcatg|c)1," + "/actagt/ (BcuI a|ctagt)5," + "/tgatca/ (BclI t|gatca)5," + "/ctag/ (BfaI c|tag)3," + 
@@ -879,21 +881,20 @@ function getRestrictionSiteString(type$$25) {
   }
   return true;
 }
-function restSummary(theDocument) {
-  JAM.startProfile('compute');
-
+function restSummary() {
+  var theDocument = document;
   var newDna = "";
   var title$$9 = "";
   var maxInput$$3 = 1E5;
-  var restrictionSites = getRestrictionSiteString("standard");
+  var restrictionSites = getRestrictionSiteString();
   if (checkFormElement(theDocument.forms[0].elements[0]) == false || checkSequenceLength(theDocument.forms[0].elements[0].value, maxInput$$3) == false) {
-    return false;
+    return;
   }
   itemsToCheck = restrictionSites.split(/,/);
-  if (checkRestPatterns(itemsToCheck) == false) {
-    return false;
+  if (checkRestPatterns() == false) {
+    return;
   }
-  openWindow("Restriction Summary");
+  openWindow();
   outputWindow.document.write('<span class="one">' + "cuts once" + "</span><br />\n");
   outputWindow.document.write('<span class="two">' + "cuts twice" + "</span><br />\n");
   outputWindow.document.write("\n");
@@ -904,20 +905,17 @@ function restSummary(theDocument) {
     title$$9 = getTitleFromFasta(arrayOfFasta$$1[i$$11]);
     newDna = removeNonDna(newDna);
     outputWindow.document.write(getInfoFromTitleAndSequenceAndTopology(title$$9, newDna, theDocument.forms[0].elements[4].options[theDocument.forms[0].elements[4].selectedIndex].value));
-    writeRestrictionSites(newDna, itemsToCheck, theDocument.forms[0].elements[4].options[theDocument.forms[0].elements[4].selectedIndex].value);
+    writeRestrictionSites(newDna, theDocument.forms[0].elements[4].options[theDocument.forms[0].elements[4].selectedIndex].value);
     outputWindow.document.write("<br />\n<br />\n");
   }
   closeWindow();
-
-  JAM.stopProfile('compute');
-  return true;
 }
 document.onload = function() {
   document.main_form.main_submit.focus();
 };
 document.getElementById("submitbtn").onclick = function() {
   try {
-    restSummary(document);
+    restSummary();
   } catch (e$$5) {
     alert("The following error was encountered: " + e$$5);
   }

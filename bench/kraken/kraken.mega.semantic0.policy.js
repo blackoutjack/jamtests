@@ -894,5 +894,5 @@ var policy = function() {
   p12.subsumedBy = pFull;
   p12.itype = "write";
   Object.freeze(p12);
-  return{p161:p161, p171:p171, p164:p164, p172:p172, p162:p162, p160:p160, p163:p163, p165:p165, p105:p105, p12:p12, pFull:pFull, woven:true};
+  return {p161:p161, p171:p171, p164:p164, p172:p172, p162:p162, p160:p160, p163:p163, p165:p165, p105:p105, p12:p12, pFull:pFull, woven:true};
 }()

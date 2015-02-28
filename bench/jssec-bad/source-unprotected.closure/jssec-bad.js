@@ -1,10 +1,12 @@
-function snipDisplay(c, p) {
+function snipDisplay() {
+  var c = "c1";
+  var p = "s1";
   document.getElementById(c).checked == true ? document.getElementById(p).style.display = "block" : document.getElementById(p).style.displayx = "none";
 }
 function initSnippets() {
   var d = document;
   document.getElementById("c1").onclick = function() {
-    snipDisplay("c1", "s1");
+    snipDisplay();
   };
 }
 function snapDisplay(c$$1) {

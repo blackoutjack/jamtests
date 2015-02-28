@@ -3,12 +3,12 @@ function v154(patterns) {
   function distance(pattern1$$1, pattern2$$1) {
     xDiff = pattern1$$1.X - pattern2$$1.X;
     yDiff = pattern1$$1.Y - pattern2$$1.Y;
-    return JAM.call(Math.sqrt, Math, [xDiff * xDiff + yDiff * yDiff], JAM.policy.p21);
+    return JAM.call(Math.sqrt, Math, [xDiff * xDiff + yDiff * yDiff], JAM.policy.p22);
   }
   function crossProductZ(pointA$$1, pointB$$1, pointC$$1) {
     var bX = pointB$$1.x;
     var bY = pointB$$1.y;
-    return(pointC$$1.x - bX) * (pointA$$1.y - bY) - (pointC$$1.y - bY) * (pointA$$1.x - bX);
+    return (pointC$$1.x - bX) * (pointA$$1.y - bY) - (pointC$$1.y - bY) * (pointA$$1.x - bX);
   }
   var zeroOneDistance = distance(patterns[0], patterns[1]);
   var oneTwoDistance = distance(patterns[1], patterns[2]);
@@ -16,20 +16,20 @@ function v154(patterns) {
   var pointA;
   var pointB;
   var pointC;
-  var v1064 = oneTwoDistance >= zeroOneDistance;
-  if (v1064) {
-    v1064 = oneTwoDistance >= zeroTwoDistance;
+  var v1063 = oneTwoDistance >= zeroOneDistance;
+  if (v1063) {
+    v1063 = oneTwoDistance >= zeroTwoDistance;
   }
-  if (v1064) {
+  if (v1063) {
     pointB = patterns[0];
     pointA = patterns[1];
     pointC = patterns[2];
   } else {
-    var v1065 = zeroTwoDistance >= oneTwoDistance;
-    if (v1065) {
-      v1065 = zeroTwoDistance >= zeroOneDistance;
+    var v1064 = zeroTwoDistance >= oneTwoDistance;
+    if (v1064) {
+      v1064 = zeroTwoDistance >= zeroOneDistance;
     }
-    if (v1065) {
+    if (v1064) {
       pointB = patterns[1];
       pointA = patterns[0];
       pointC = patterns[2];
@@ -50,11 +50,11 @@ function v154(patterns) {
   return;
 }
 function v153(from, to) {
-  var v1067 = (to || from) + 1;
-  if (!v1067) {
-    v1067 = this.length;
+  var v1066 = (to || from) + 1;
+  if (!v1066) {
+    v1066 = this.length;
   }
-  var rest = JAM.call(this.slice, this, [v1067], JAM.policy.p21);
+  var rest = JAM.call(this.slice, this, [v1066], JAM.policy.p22);
   var v172;
   if (from < 0) {
     v172 = this.length + from;
@@ -83,11 +83,12 @@ function v152() {
   }
   return ret$$1;
 }
-function v151(grayScale) {
-  var middle$$1 = JAM.call(qrcode.getMiddleBrightnessPerArea, qrcode, [grayScale], JAM.policy.p21);
+function v151() {
+  var grayScale = qrcode.grayscale();
+  var middle$$1 = JAM.call(qrcode.getMiddleBrightnessPerArea, qrcode, [grayScale], JAM.policy.p22);
   var sqrtNumArea = middle$$1.length;
-  var areaWidth$$1 = JAM.call(Math.floor, Math, [qrcode.width / sqrtNumArea], JAM.policy.p21);
-  var areaHeight$$1 = JAM.call(Math.floor, Math, [qrcode.height / sqrtNumArea], JAM.policy.p21);
+  var areaWidth$$1 = JAM.call(Math.floor, Math, [qrcode.width / sqrtNumArea], JAM.policy.p22);
+  var areaHeight$$1 = JAM.call(Math.floor, Math, [qrcode.height / sqrtNumArea], JAM.policy.p22);
   var bitmap = new Array(qrcode.height * qrcode.width);
   var ay$$1 = 0;
   var v185 = ay$$1 < sqrtNumArea;
@@ -102,13 +103,13 @@ function v151(grayScale) {
         var v182 = dx$$6 < areaWidth$$1;
         for (;v182;) {
           var v181 = areaWidth$$1 * ax$$1 + dx$$6 + (areaHeight$$1 * ay$$1 + dy$$6) * qrcode.width;
-          var v1083;
+          var v1082;
           if (grayScale[areaWidth$$1 * ax$$1 + dx$$6 + (areaHeight$$1 * ay$$1 + dy$$6) * qrcode.width] < middle$$1[ax$$1][ay$$1]) {
-            v1083 = true;
+            v1082 = true;
           } else {
-            v1083 = false;
+            v1082 = false;
           }
-          bitmap[v181] = v1083;
+          bitmap[v181] = v1082;
           dx$$6++;
           v182 = dx$$6 < areaWidth$$1;
         }
@@ -125,20 +126,20 @@ function v151(grayScale) {
 }
 function v150(image$$9) {
   var numSqrtArea = 4;
-  var areaWidth = JAM.call(Math.floor, Math, [qrcode.width / numSqrtArea], JAM.policy.p21);
-  var areaHeight = JAM.call(Math.floor, Math, [qrcode.height / numSqrtArea], JAM.policy.p21);
+  var areaWidth = JAM.call(Math.floor, Math, [qrcode.width / numSqrtArea], JAM.policy.p22);
+  var areaHeight = JAM.call(Math.floor, Math, [qrcode.height / numSqrtArea], JAM.policy.p22);
   var minmax = new Array(numSqrtArea);
   var i$$46 = 0;
   var v190 = i$$46 < numSqrtArea;
   for (;v190;) {
-    var v2793 = new Array(numSqrtArea);
-    minmax[i$$46] = v2793;
+    var v2791 = new Array(numSqrtArea);
+    minmax[i$$46] = v2791;
     var i2 = 0;
     var v189 = i2 < numSqrtArea;
     for (;v189;) {
       var v188 = minmax[i$$46];
-      var v2794 = new Array(0, 0);
-      v188[i2] = v2794;
+      var v2792 = new Array(0, 0);
+      v188[i2] = v2792;
       i2++;
       v189 = i2 < numSqrtArea;
     }
@@ -181,8 +182,8 @@ function v150(image$$9) {
   var i3 = 0;
   var v201 = i3 < numSqrtArea;
   for (;v201;) {
-    var v2795 = new Array(numSqrtArea);
-    middle[i3] = v2795;
+    var v2793 = new Array(numSqrtArea);
+    middle[i3] = v2793;
     i3++;
     v201 = i3 < numSqrtArea;
   }
@@ -193,8 +194,8 @@ function v150(image$$9) {
     var v203 = ax < numSqrtArea;
     for (;v203;) {
       var v202 = middle[ax];
-      var v2796 = JAM.call(Math.floor, Math, [(minmax[ax][ay][0] + minmax[ax][ay][1]) / 2], JAM.policy.p21);
-      v202[ay] = v2796;
+      var v2794 = JAM.call(Math.floor, Math, [(minmax[ax][ay][0] + minmax[ax][ay][1]) / 2], JAM.policy.p22);
+      v202[ay] = v2794;
       ax++;
       v203 = ax < numSqrtArea;
     }
@@ -213,13 +214,13 @@ function v149(th) {
     for (;v207;) {
       var gray = JAM.call(qrcode.getPixel, qrcode, [x$$60, y$$42], JAM.policy.p33);
       var v206 = x$$60 + y$$42 * qrcode.width;
-      var v1099;
+      var v1098;
       if (gray <= th) {
-        v1099 = true;
+        v1098 = true;
       } else {
-        v1099 = false;
+        v1098 = false;
       }
-      ret[v206] = v1099;
+      ret[v206] = v1098;
       x$$60++;
       v207 = x$$60 < qrcode.width;
     }
@@ -241,46 +242,46 @@ function v148(x$$59, y$$41) {
 }
 function v147(ctx) {
   var start$$4 = (new Date).getTime();
-  var image$$8 = JAM.call(qrcode.grayScaleToBitmap, qrcode, [qrcode.grayscale()], JAM.policy.p21);
+  var image$$8 = qrcode.grayScaleToBitmap();
   if (qrcode.debug) {
     var y$$40 = 0;
-    var v224 = y$$40 < qrcode.height;
-    for (;v224;) {
+    var v223 = y$$40 < qrcode.height;
+    for (;v223;) {
       var x$$58 = 0;
-      var v223 = x$$58 < qrcode.width;
-      for (;v223;) {
+      var v222 = x$$58 < qrcode.width;
+      for (;v222;) {
         var point = x$$58 * 4 + y$$40 * qrcode.width * 4;
+        var v217 = qrcode.imagedata.data;
+        var v1110;
+        if (image$$8[x$$58 + y$$40 * qrcode.width]) {
+          v1110 = 0;
+        } else {
+          v1110 = 0;
+        }
+        v217[point] = v1110;
         var v218 = qrcode.imagedata.data;
-        var v1111;
+        var v219 = point + 1;
+        var v1112;
         if (image$$8[x$$58 + y$$40 * qrcode.width]) {
-          v1111 = 0;
+          v1112 = 0;
         } else {
-          v1111 = 0;
+          v1112 = 0;
         }
-        v218[point] = v1111;
-        var v219 = qrcode.imagedata.data;
-        var v220 = point + 1;
-        var v1113;
+        v218[v219] = v1112;
+        var v220 = qrcode.imagedata.data;
+        var v221 = point + 2;
+        var v1114;
         if (image$$8[x$$58 + y$$40 * qrcode.width]) {
-          v1113 = 0;
+          v1114 = 255;
         } else {
-          v1113 = 0;
+          v1114 = 0;
         }
-        v219[v220] = v1113;
-        var v221 = qrcode.imagedata.data;
-        var v222 = point + 2;
-        var v1115;
-        if (image$$8[x$$58 + y$$40 * qrcode.width]) {
-          v1115 = 255;
-        } else {
-          v1115 = 0;
-        }
-        v221[v222] = v1115;
+        v220[v221] = v1114;
         x$$58++;
-        v223 = x$$58 < qrcode.width;
+        v222 = x$$58 < qrcode.width;
       }
       y$$40++;
-      v224 = y$$40 < qrcode.height;
+      v223 = y$$40 < qrcode.height;
     }
     JAM.call(ctx.putImageData, ctx, [qrcode.imagedata, 0, 0], JAM.policy.p25);
   }
@@ -289,37 +290,37 @@ function v147(ctx) {
   if (qrcode.debug) {
     JAM.call(ctx.putImageData, ctx, [qrcode.imagedata, 0, 0], JAM.policy.p25);
   }
-  var reader$$1 = JAM.call(Decoder.decode, Decoder, [qRCodeMatrix.bits], JAM.policy.p21);
+  var reader$$1 = JAM.call(Decoder.decode, Decoder, [qRCodeMatrix.bits], JAM.policy.p22);
   var data$$18 = reader$$1.DataByte;
   var str$$6 = "";
   var i$$45 = 0;
-  var v231 = i$$45 < data$$18.length;
-  for (;v231;) {
+  var v230 = i$$45 < data$$18.length;
+  for (;v230;) {
     var j$$24 = 0;
-    var v230 = j$$24 < data$$18[i$$45].length;
-    for (;v230;) {
-      str$$6 = str$$6 + JAM.call(String.fromCharCode, String, [data$$18[i$$45][j$$24]], JAM.policy.p21);
+    var v229 = j$$24 < data$$18[i$$45].length;
+    for (;v229;) {
+      str$$6 = str$$6 + JAM.call(String.fromCharCode, String, [data$$18[i$$45][j$$24]], JAM.policy.p22);
       j$$24++;
-      v230 = j$$24 < data$$18[i$$45].length;
+      v229 = j$$24 < data$$18[i$$45].length;
     }
     i$$45++;
-    v231 = i$$45 < data$$18.length;
+    v230 = i$$45 < data$$18.length;
   }
   var end$$1 = (new Date).getTime();
   var time = end$$1 - start$$4;
   JAM.call(console.log, console, [time], JAM.policy.p24);
-  return JAM.call(qrcode.decode_utf8, qrcode, [str$$6], JAM.policy.p21);
+  return JAM.call(qrcode.decode_utf8, qrcode, [str$$6], JAM.policy.p22);
 }
 function v146(s$$4) {
   return decodeURIComponent(escape(s$$4));
 }
 function v145(src$$1) {
   function v144() {
-    var canvas_qr$$1 = JAM.call(document.createElement, document, ["canvas"], JAM.policy.p15);
-    var context$$1 = JAM.call(canvas_qr$$1.getContext, canvas_qr$$1, ["2d"], JAM.policy.p15);
-    var canvas_out = JAM.call(document.getElementById, document, ["out-canvas"], JAM.policy.p15);
+    var canvas_qr$$1 = JAM.call(document.createElement, document, ["canvas"], JAM.policy.p16);
+    var context$$1 = JAM.call(canvas_qr$$1.getContext, canvas_qr$$1, ["2d"], JAM.policy.p16);
+    var canvas_out = JAM.call(document.getElementById, document, ["out-canvas"], JAM.policy.p16);
     if (canvas_out != null) {
-      var outctx = JAM.call(canvas_out.getContext, canvas_out, ["2d"], JAM.policy.p15);
+      var outctx = JAM.call(canvas_out.getContext, canvas_out, ["2d"], JAM.policy.p16);
       JAM.call(outctx.clearRect, outctx, [0, 0, 320, 240], JAM.policy.p20);
       JAM.call(outctx.drawImage, outctx, [image$$7, 0, 0, 320, 240], JAM.policy.p25);
     }
@@ -329,42 +330,42 @@ function v145(src$$1) {
     qrcode.width = image$$7.width;
     qrcode.height = image$$7.height;
     try {
-      var v235 = qrcode;
-      var v2797 = JAM.call(context$$1.getImageData, context$$1, [0, 0, image$$7.width, image$$7.height], JAM.policy.p20);
-      v235.imagedata = v2797;
+      var v234 = qrcode;
+      var v2795 = JAM.call(context$$1.getImageData, context$$1, [0, 0, image$$7.width, image$$7.height], JAM.policy.p20);
+      v234.imagedata = v2795;
     } catch (e$$5) {
       qrcode.result = "Cross domain image reading not supported in your browser! Save it to your computer then drag and drop the file!";
       if (qrcode.callback != null) {
-        JAM.call(qrcode.callback, qrcode, [qrcode.result], JAM.policy.p21);
+        JAM.call(qrcode.callback, qrcode, [qrcode.result], JAM.policy.p22);
       }
       return;
     }
     try {
-      var v238 = qrcode;
-      var v2798 = JAM.call(qrcode.process, qrcode, [context$$1], JAM.policy.p21);
-      v238.result = v2798;
+      var v237 = qrcode;
+      var v2796 = JAM.call(qrcode.process, qrcode, [context$$1], JAM.policy.p22);
+      v237.result = v2796;
     } catch (e$$6) {
-      JAM.call(console.log, console, [e$$6], JAM.policy.p21);
+      JAM.call(console.log, console, [e$$6], JAM.policy.p22);
       qrcode.result = "error decoding QR Code";
     }
     if (qrcode.callback != null) {
-      JAM.call(qrcode.callback, qrcode, [qrcode.result], JAM.policy.p21);
+      JAM.call(qrcode.callback, qrcode, [qrcode.result], JAM.policy.p22);
     }
     return;
   }
   if (arguments.length == 0) {
-    var canvas_qr = JAM.call(document.getElementById, document, ["qr-canvas"], JAM.policy.p15);
-    var context = JAM.call(canvas_qr.getContext, canvas_qr, ["2d"], JAM.policy.p15);
+    var canvas_qr = JAM.call(document.getElementById, document, ["qr-canvas"], JAM.policy.p16);
+    var context = JAM.call(canvas_qr.getContext, canvas_qr, ["2d"], JAM.policy.p16);
     qrcode.width = canvas_qr.width;
     qrcode.height = canvas_qr.height;
+    var v240 = qrcode;
+    var v2797 = JAM.call(context.getImageData, context, [0, 0, qrcode.width, qrcode.height], JAM.policy.p20);
+    v240.imagedata = v2797;
     var v241 = qrcode;
-    var v2799 = JAM.call(context.getImageData, context, [0, 0, qrcode.width, qrcode.height], JAM.policy.p20);
-    v241.imagedata = v2799;
-    var v242 = qrcode;
-    var v2800 = JAM.call(qrcode.process, qrcode, [context], JAM.policy.p21);
-    v242.result = v2800;
+    var v2798 = JAM.call(qrcode.process, qrcode, [context], JAM.policy.p22);
+    v241.result = v2798;
     if (qrcode.callback != null) {
-      JAM.call(qrcode.callback, qrcode, [qrcode.result], JAM.policy.p21);
+      JAM.call(qrcode.callback, qrcode, [qrcode.result], JAM.policy.p22);
     }
     return qrcode.result;
   } else {
@@ -384,32 +385,32 @@ function v143(bits$$13) {
   var dataBlocks = JAM.call(DataBlock.getDataBlocks, DataBlock, [codewords$$1, version$$7, ecLevel$$2], JAM.policy.p33);
   var totalBytes = 0;
   var i$$44 = 0;
-  var v247 = i$$44 < dataBlocks.Length;
-  for (;v247;) {
+  var v246 = i$$44 < dataBlocks.Length;
+  for (;v246;) {
     totalBytes = totalBytes + dataBlocks[i$$44].NumDataCodewords;
     i$$44++;
-    v247 = i$$44 < dataBlocks.Length;
+    v246 = i$$44 < dataBlocks.Length;
   }
   var resultBytes = new Array(totalBytes);
   var resultOffset$$1 = 0;
   var j$$23 = 0;
-  var v250 = j$$23 < dataBlocks.length;
-  for (;v250;) {
+  var v249 = j$$23 < dataBlocks.length;
+  for (;v249;) {
     var dataBlock = dataBlocks[j$$23];
     var codewordBytes$$1 = dataBlock.Codewords;
     var numDataCodewords$$3 = dataBlock.NumDataCodewords;
     JAM.call(Decoder.correctErrors, Decoder, [codewordBytes$$1, numDataCodewords$$3], JAM.policy.p33);
     i$$44 = 0;
-    var v249 = i$$44 < numDataCodewords$$3;
-    for (;v249;) {
-      var v248 = resultOffset$$1;
+    var v248 = i$$44 < numDataCodewords$$3;
+    for (;v248;) {
+      var v247 = resultOffset$$1;
       resultOffset$$1 = resultOffset$$1 + 1;
-      resultBytes[v248] = codewordBytes$$1[i$$44];
+      resultBytes[v247] = codewordBytes$$1[i$$44];
       i$$44++;
-      v249 = i$$44 < numDataCodewords$$3;
+      v248 = i$$44 < numDataCodewords$$3;
     }
     j$$23++;
-    v250 = j$$23 < dataBlocks.length;
+    v249 = j$$23 < dataBlocks.length;
   }
   var reader = new QRCodeDataBlockReader(resultBytes, version$$7.VersionNumber, ecLevel$$2.Bits);
   return reader;
@@ -418,25 +419,25 @@ function v142(codewordBytes, numDataCodewords$$2) {
   var numCodewords$$1 = codewordBytes.length;
   var codewordsInts = new Array(numCodewords$$1);
   var i$$43 = 0;
-  var v254 = i$$43 < numCodewords$$1;
-  for (;v254;) {
+  var v253 = i$$43 < numCodewords$$1;
+  for (;v253;) {
     codewordsInts[i$$43] = codewordBytes[i$$43] & 255;
     i$$43++;
-    v254 = i$$43 < numCodewords$$1;
+    v253 = i$$43 < numCodewords$$1;
   }
   var numECCodewords = codewordBytes.length - numDataCodewords$$2;
   try {
-    var v256 = Decoder.rsDecoder;
-    JAM.call(v256.decode, v256, [codewordsInts, numECCodewords], JAM.policy.p33);
+    var v255 = Decoder.rsDecoder;
+    JAM.call(v255.decode, v255, [codewordsInts, numECCodewords], JAM.policy.p33);
   } catch (rse) {
     throw rse;
   }
   i$$43 = 0;
-  var v257 = i$$43 < numDataCodewords$$2;
-  for (;v257;) {
+  var v256 = i$$43 < numDataCodewords$$2;
+  for (;v256;) {
     codewordBytes[i$$43] = codewordsInts[i$$43];
     i$$43++;
-    v257 = i$$43 < numDataCodewords$$2;
+    v256 = i$$43 < numDataCodewords$$2;
   }
   return;
 }
@@ -444,11 +445,11 @@ function v141(a$$7, b$$4) {
   return a$$7 ^ b$$4;
 }
 function v140(reference) {
-  var v1136 = reference < 0;
-  if (!v1136) {
-    v1136 = reference > 7;
+  var v1135 = reference < 0;
+  if (!v1135) {
+    v1135 = reference > 7;
   }
-  if (v1136) {
+  if (v1135) {
     throw "System.ArgumentException";
   }
   return DataMask.DATA_MASKS[reference];
@@ -457,109 +458,109 @@ function v139(rawCodewords, version$$5, ecLevel$$1) {
   if (rawCodewords.length != version$$5.TotalCodewords) {
     throw "ArgumentException";
   }
-  var ecBlocks = JAM.call(version$$5.getECBlocksForLevel, version$$5, [ecLevel$$1], JAM.policy.p21);
+  var ecBlocks = JAM.call(version$$5.getECBlocksForLevel, version$$5, [ecLevel$$1], JAM.policy.p22);
   var totalBlocks = 0;
   var ecBlockArray = ecBlocks.ecBlocks;
   var i$$11 = 0;
-  var v261 = i$$11 < ecBlockArray.length;
-  for (;v261;) {
+  var v260 = i$$11 < ecBlockArray.length;
+  for (;v260;) {
     totalBlocks = totalBlocks + ecBlockArray[i$$11].Count;
     i$$11++;
-    v261 = i$$11 < ecBlockArray.length;
+    v260 = i$$11 < ecBlockArray.length;
   }
   var result$$1 = new Array(totalBlocks);
   var numResultBlocks = 0;
   var j = 0;
-  var v265 = j < ecBlockArray.length;
-  for (;v265;) {
+  var v264 = j < ecBlockArray.length;
+  for (;v264;) {
     var ecBlock$$1 = ecBlockArray[j];
     i$$11 = 0;
-    var v264 = i$$11 < ecBlock$$1.Count;
-    for (;v264;) {
+    var v263 = i$$11 < ecBlock$$1.Count;
+    for (;v263;) {
       var numDataCodewords$$1 = ecBlock$$1.DataCodewords;
       var numBlockCodewords = ecBlocks.ECCodewordsPerBlock + numDataCodewords$$1;
-      var v263 = numResultBlocks;
+      var v262 = numResultBlocks;
       numResultBlocks = numResultBlocks + 1;
-      var v2801 = new DataBlock(numDataCodewords$$1, new Array(numBlockCodewords));
-      result$$1[v263] = v2801;
+      var v2799 = new DataBlock(numDataCodewords$$1, new Array(numBlockCodewords));
+      result$$1[v262] = v2799;
       i$$11++;
-      v264 = i$$11 < ecBlock$$1.Count;
+      v263 = i$$11 < ecBlock$$1.Count;
     }
     j++;
-    v265 = j < ecBlockArray.length;
+    v264 = j < ecBlockArray.length;
   }
   var shorterBlocksTotalCodewords = result$$1[0].codewords.length;
   var longerBlocksStartAt = result$$1.length - 1;
-  var v270 = longerBlocksStartAt >= 0;
-  for (;v270;) {
+  var v269 = longerBlocksStartAt >= 0;
+  for (;v269;) {
     var numCodewords = result$$1[longerBlocksStartAt].codewords.length;
     if (numCodewords == shorterBlocksTotalCodewords) {
       break;
     }
     longerBlocksStartAt--;
-    v270 = longerBlocksStartAt >= 0;
+    v269 = longerBlocksStartAt >= 0;
   }
   longerBlocksStartAt++;
   var shorterBlocksNumDataCodewords = shorterBlocksTotalCodewords - ecBlocks.ECCodewordsPerBlock;
   var rawCodewordsOffset = 0;
   i$$11 = 0;
-  var v274 = i$$11 < shorterBlocksNumDataCodewords;
-  for (;v274;) {
+  var v273 = i$$11 < shorterBlocksNumDataCodewords;
+  for (;v273;) {
     j = 0;
-    var v273 = j < numResultBlocks;
-    for (;v273;) {
-      var v272 = result$$1[j].codewords;
-      var v1150 = rawCodewordsOffset;
+    var v272 = j < numResultBlocks;
+    for (;v272;) {
+      var v271 = result$$1[j].codewords;
+      var v1149 = rawCodewordsOffset;
       rawCodewordsOffset = rawCodewordsOffset + 1;
-      v272[i$$11] = rawCodewords[v1150];
+      v271[i$$11] = rawCodewords[v1149];
       j++;
-      v273 = j < numResultBlocks;
+      v272 = j < numResultBlocks;
     }
     i$$11++;
-    v274 = i$$11 < shorterBlocksNumDataCodewords;
+    v273 = i$$11 < shorterBlocksNumDataCodewords;
   }
   j = longerBlocksStartAt;
-  var v276 = j < numResultBlocks;
-  for (;v276;) {
-    var v275 = result$$1[j].codewords;
-    var v1152 = rawCodewordsOffset;
+  var v275 = j < numResultBlocks;
+  for (;v275;) {
+    var v274 = result$$1[j].codewords;
+    var v1151 = rawCodewordsOffset;
     rawCodewordsOffset = rawCodewordsOffset + 1;
-    v275[shorterBlocksNumDataCodewords] = rawCodewords[v1152];
+    v274[shorterBlocksNumDataCodewords] = rawCodewords[v1151];
     j++;
-    v276 = j < numResultBlocks;
+    v275 = j < numResultBlocks;
   }
   var max$$4 = result$$1[0].codewords.length;
   i$$11 = shorterBlocksNumDataCodewords;
-  var v281 = i$$11 < max$$4;
-  for (;v281;) {
+  var v280 = i$$11 < max$$4;
+  for (;v280;) {
     j = 0;
-    var v280 = j < numResultBlocks;
-    for (;v280;) {
-      var v278;
+    var v279 = j < numResultBlocks;
+    for (;v279;) {
+      var v277;
       if (j < longerBlocksStartAt) {
-        v278 = i$$11;
+        v277 = i$$11;
       } else {
-        v278 = i$$11 + 1;
+        v277 = i$$11 + 1;
       }
-      var iOffset = v278;
-      var v279 = result$$1[j].codewords;
-      var v1156 = rawCodewordsOffset;
+      var iOffset = v277;
+      var v278 = result$$1[j].codewords;
+      var v1155 = rawCodewordsOffset;
       rawCodewordsOffset = rawCodewordsOffset + 1;
-      v279[iOffset] = rawCodewords[v1156];
+      v278[iOffset] = rawCodewords[v1155];
       j++;
-      v280 = j < numResultBlocks;
+      v279 = j < numResultBlocks;
     }
     i$$11++;
-    v281 = i$$11 < max$$4;
+    v280 = i$$11 < max$$4;
   }
   return result$$1;
 }
 function v138(bits$$4) {
-  var v1157 = bits$$4 < 0;
-  if (!v1157) {
-    v1157 = bits$$4 >= FOR_BITS.Length;
+  var v1156 = bits$$4 < 0;
+  if (!v1156) {
+    v1156 = bits$$4 >= FOR_BITS.Length;
   }
-  if (v1157) {
+  if (v1156) {
     throw "ArgumentException";
   }
   return FOR_BITS[bits$$4];
@@ -568,8 +569,8 @@ function v137(maskedFormatInfo$$1) {
   var bestDifference$$1 = 4294967295;
   var bestFormatInfo = 0;
   var i$$8 = 0;
-  var v286 = i$$8 < FORMAT_INFO_DECODE_LOOKUP.length;
-  for (;v286;) {
+  var v285 = i$$8 < FORMAT_INFO_DECODE_LOOKUP.length;
+  for (;v285;) {
     var decodeInfo = FORMAT_INFO_DECODE_LOOKUP[i$$8];
     var targetInfo = decodeInfo[0];
     if (targetInfo == maskedFormatInfo$$1) {
@@ -581,7 +582,7 @@ function v137(maskedFormatInfo$$1) {
       bestDifference$$1 = bitsDifference$$1;
     }
     i$$8++;
-    v286 = i$$8 < FORMAT_INFO_DECODE_LOOKUP.length;
+    v285 = i$$8 < FORMAT_INFO_DECODE_LOOKUP.length;
   }
   if (bestDifference$$1 <= 3) {
     return new FormatInformation(bestFormatInfo);
@@ -589,11 +590,11 @@ function v137(maskedFormatInfo$$1) {
   return null;
 }
 function v136(maskedFormatInfo) {
-  var formatInfo$$1 = JAM.call(FormatInformation.doDecodeFormatInformation, FormatInformation, [maskedFormatInfo], JAM.policy.p21);
+  var formatInfo$$1 = JAM.call(FormatInformation.doDecodeFormatInformation, FormatInformation, [maskedFormatInfo], JAM.policy.p22);
   if (formatInfo$$1 != null) {
     return formatInfo$$1;
   }
-  return JAM.call(FormatInformation.doDecodeFormatInformation, FormatInformation, [maskedFormatInfo ^ FORMAT_INFO_MASK_QR], JAM.policy.p21);
+  return JAM.call(FormatInformation.doDecodeFormatInformation, FormatInformation, [maskedFormatInfo ^ FORMAT_INFO_MASK_QR], JAM.policy.p22);
 }
 function v135(a, b$$1) {
   a = a ^ b$$1;
@@ -605,11 +606,11 @@ function v134(x0$$4, y0$$4, x1$$5, y1$$5, x2$$3, y2$$3, x3$$2, y3$$2) {
 function v133(x0$$3, y0$$3, x1$$4, y1$$4, x2$$2, y2$$2, x3$$1, y3$$1) {
   dy2 = y3$$1 - y2$$2;
   dy3 = y0$$3 - y1$$4 + y2$$2 - y3$$1;
-  var v1165 = dy2 == 0;
-  if (v1165) {
-    v1165 = dy3 == 0;
+  var v1164 = dy2 == 0;
+  if (v1164) {
+    v1164 = dy3 == 0;
   }
-  if (v1165) {
+  if (v1164) {
     return new PerspectiveTransform(x1$$4 - x0$$3, x2$$2 - x1$$4, x0$$3, y1$$4 - y0$$3, y2$$2 - y1$$4, y0$$3, 0, 0, 1);
   } else {
     dx1 = x1$$4 - x2$$2;
@@ -626,17 +627,17 @@ function v133(x0$$3, y0$$3, x1$$4, y1$$4, x2$$2, y2$$2, x3$$1, y3$$1) {
 function v132(x0$$2, y0$$2, x1$$3, y1$$3, x2$$1, y2$$1, x3, y3, x0p, y0p, x1p, y1p, x2p, y2p, x3p, y3p) {
   var qToS = JAM.call(this.quadrilateralToSquare, this, [x0$$2, y0$$2, x1$$3, y1$$3, x2$$1, y2$$1, x3, y3], JAM.policy.p33);
   var sToQ = JAM.call(this.squareToQuadrilateral, this, [x0p, y0p, x1p, y1p, x2p, y2p, x3p, y3p], JAM.policy.p33);
-  return JAM.call(sToQ.times, sToQ, [qToS], JAM.policy.p21);
+  return JAM.call(sToQ.times, sToQ, [qToS], JAM.policy.p22);
 }
 function v131(versionBits) {
   var bestDifference = 4294967295;
   var bestVersion = 0;
   var i$$4 = 0;
-  var v312 = i$$4 < Version.VERSION_DECODE_INFO.length;
-  for (;v312;) {
+  var v311 = i$$4 < Version.VERSION_DECODE_INFO.length;
+  for (;v311;) {
     var targetVersion = Version.VERSION_DECODE_INFO[i$$4];
     if (targetVersion == versionBits) {
-      return JAM.call(this.getVersionForNumber, this, [i$$4 + 7], JAM.policy.p21);
+      return JAM.call(this.getVersionForNumber, this, [i$$4 + 7], JAM.policy.p22);
     }
     var bitsDifference = JAM.call(FormatInformation.numBitsDiffering, FormatInformation, [versionBits, targetVersion], JAM.policy.p33);
     if (bitsDifference < bestDifference) {
@@ -644,10 +645,10 @@ function v131(versionBits) {
       bestDifference = bitsDifference;
     }
     i$$4++;
-    v312 = i$$4 < Version.VERSION_DECODE_INFO.length;
+    v311 = i$$4 < Version.VERSION_DECODE_INFO.length;
   }
   if (bestDifference <= 3) {
-    return JAM.call(this.getVersionForNumber, this, [bestVersion], JAM.policy.p21);
+    return JAM.call(this.getVersionForNumber, this, [bestVersion], JAM.policy.p22);
   }
   return null;
 }
@@ -656,18 +657,18 @@ function v130(dimension$$3) {
     throw "Error getProvisionalVersionForDimension";
   }
   try {
-    return JAM.call(Version.getVersionForNumber, Version, [dimension$$3 - 17 >> 2], JAM.policy.p21);
+    return JAM.call(Version.getVersionForNumber, Version, [dimension$$3 - 17 >> 2], JAM.policy.p22);
   } catch (iae) {
     throw "Error getVersionForNumber";
   }
   return;
 }
 function v129(versionNumber$$1) {
-  var v1183 = versionNumber$$1 < 1;
-  if (!v1183) {
-    v1183 = versionNumber$$1 > 40;
+  var v1182 = versionNumber$$1 < 1;
+  if (!v1182) {
+    v1182 = versionNumber$$1 > 40;
   }
-  if (v1183) {
+  if (v1182) {
     throw "ArgumentException";
   }
   return Version.VERSIONS[versionNumber$$1 - 1];
@@ -680,56 +681,56 @@ function v127(image$$3, dimension, transform) {
   var bits = new BitMatrix(dimension);
   var points$$1 = new Array(dimension << 1);
   var y$$31 = 0;
-  var v335 = y$$31 < dimension;
-  for (;v335;) {
+  var v334 = y$$31 < dimension;
+  for (;v334;) {
     var max = points$$1.length;
     var iValue = y$$31 + .5;
     var x$$48 = 0;
-    var v322 = x$$48 < max;
-    for (;v322;) {
+    var v321 = x$$48 < max;
+    for (;v321;) {
       points$$1[x$$48] = (x$$48 >> 1) + .5;
       points$$1[x$$48 + 1] = iValue;
       x$$48 = x$$48 + 2;
-      v322 = x$$48 < max;
+      v321 = x$$48 < max;
     }
-    JAM.call(transform.transformPoints1, transform, [points$$1], JAM.policy.p21);
+    JAM.call(transform.transformPoints1, transform, [points$$1], JAM.policy.p22);
     JAM.call(GridSampler.checkAndNudgePoints, GridSampler, [image$$3, points$$1], JAM.policy.p33);
     try {
       x$$48 = 0;
-      var v334 = x$$48 < max;
-      for (;v334;) {
-        var xpoint = JAM.call(Math.floor, Math, [points$$1[x$$48]], JAM.policy.p21) * 4 + JAM.call(Math.floor, Math, [points$$1[x$$48 + 1]], JAM.policy.p21) * qrcode.width * 4;
-        var bit = image$$3[JAM.call(Math.floor, Math, [points$$1[x$$48]], JAM.policy.p21) + qrcode.width * JAM.call(Math.floor, Math, [points$$1[x$$48 + 1]], JAM.policy.p21)];
+      var v333 = x$$48 < max;
+      for (;v333;) {
+        var xpoint = JAM.call(Math.floor, Math, [points$$1[x$$48]], JAM.policy.p22) * 4 + JAM.call(Math.floor, Math, [points$$1[x$$48 + 1]], JAM.policy.p22) * qrcode.width * 4;
+        var bit = image$$3[JAM.call(Math.floor, Math, [points$$1[x$$48]], JAM.policy.p22) + qrcode.width * JAM.call(Math.floor, Math, [points$$1[x$$48 + 1]], JAM.policy.p22)];
+        var v325 = qrcode.imagedata.data;
+        var v1188;
+        if (bit) {
+          v1188 = 255;
+        } else {
+          v1188 = 0;
+        }
+        v325[xpoint] = v1188;
         var v326 = qrcode.imagedata.data;
-        var v1189;
+        var v327 = xpoint + 1;
+        var v1190;
         if (bit) {
-          v1189 = 255;
+          v1190 = 255;
         } else {
-          v1189 = 0;
+          v1190 = 0;
         }
-        v326[xpoint] = v1189;
-        var v327 = qrcode.imagedata.data;
-        var v328 = xpoint + 1;
-        var v1191;
-        if (bit) {
-          v1191 = 255;
-        } else {
-          v1191 = 0;
-        }
-        v327[v328] = v1191;
+        v326[v327] = v1190;
         qrcode.imagedata.data[xpoint + 2] = 0;
         qrcode.imagedata.data[xpoint + 3] = 255;
         if (bit) {
           JAM.call(bits.set_Renamed, bits, [x$$48 >> 1, y$$31], JAM.policy.p23);
         }
         x$$48 = x$$48 + 2;
-        v334 = x$$48 < max;
+        v333 = x$$48 < max;
       }
     } catch (aioobe) {
       throw "Error.checkAndNudgePoints";
     }
     y$$31++;
-    v335 = y$$31 < dimension;
+    v334 = y$$31 < dimension;
   }
   return bits;
 }
@@ -738,27 +739,27 @@ function v126(image$$2, points) {
   var height$$8 = qrcode.height;
   var nudged = true;
   var offset$$8 = 0;
-  var v1194 = offset$$8 < points.Length;
-  if (v1194) {
-    v1194 = nudged;
+  var v1193 = offset$$8 < points.Length;
+  if (v1193) {
+    v1193 = nudged;
   }
-  var v345 = v1194;
-  for (;v345;) {
-    var x$$47 = JAM.call(Math.floor, Math, [points[offset$$8]], JAM.policy.p21);
-    var y$$30 = JAM.call(Math.floor, Math, [points[offset$$8 + 1]], JAM.policy.p21);
-    var v2483 = x$$47 < -1;
-    if (!v2483) {
-      v2483 = x$$47 > width$$9;
+  var v344 = v1193;
+  for (;v344;) {
+    var x$$47 = JAM.call(Math.floor, Math, [points[offset$$8]], JAM.policy.p22);
+    var y$$30 = JAM.call(Math.floor, Math, [points[offset$$8 + 1]], JAM.policy.p22);
+    var v2481 = x$$47 < -1;
+    if (!v2481) {
+      v2481 = x$$47 > width$$9;
     }
-    var v1856 = v2483;
-    if (!v1856) {
-      v1856 = y$$30 < -1;
+    var v1854 = v2481;
+    if (!v1854) {
+      v1854 = y$$30 < -1;
     }
-    var v1196 = v1856;
-    if (!v1196) {
-      v1196 = y$$30 > height$$8;
+    var v1195 = v1854;
+    if (!v1195) {
+      v1195 = y$$30 > height$$8;
     }
-    if (v1196) {
+    if (v1195) {
       throw "Error.checkAndNudgePoints ";
     }
     nudged = false;
@@ -781,35 +782,35 @@ function v126(image$$2, points) {
       }
     }
     offset$$8 = offset$$8 + 2;
-    var v1197 = offset$$8 < points.Length;
-    if (v1197) {
-      v1197 = nudged;
+    var v1196 = offset$$8 < points.Length;
+    if (v1196) {
+      v1196 = nudged;
     }
-    v345 = v1197;
+    v344 = v1196;
   }
   nudged = true;
   offset$$8 = points.Length - 2;
-  var v1198 = offset$$8 >= 0;
-  if (v1198) {
-    v1198 = nudged;
+  var v1197 = offset$$8 >= 0;
+  if (v1197) {
+    v1197 = nudged;
   }
-  var v356 = v1198;
-  for (;v356;) {
-    x$$47 = JAM.call(Math.floor, Math, [points[offset$$8]], JAM.policy.p21);
-    y$$30 = JAM.call(Math.floor, Math, [points[offset$$8 + 1]], JAM.policy.p21);
-    var v2485 = x$$47 < -1;
-    if (!v2485) {
-      v2485 = x$$47 > width$$9;
+  var v355 = v1197;
+  for (;v355;) {
+    x$$47 = JAM.call(Math.floor, Math, [points[offset$$8]], JAM.policy.p22);
+    y$$30 = JAM.call(Math.floor, Math, [points[offset$$8 + 1]], JAM.policy.p22);
+    var v2483 = x$$47 < -1;
+    if (!v2483) {
+      v2483 = x$$47 > width$$9;
     }
-    var v1859 = v2485;
-    if (!v1859) {
-      v1859 = y$$30 < -1;
+    var v1857 = v2483;
+    if (!v1857) {
+      v1857 = y$$30 < -1;
     }
-    var v1200 = v1859;
-    if (!v1200) {
-      v1200 = y$$30 > height$$8;
+    var v1199 = v1857;
+    if (!v1199) {
+      v1199 = y$$30 > height$$8;
     }
-    if (v1200) {
+    if (v1199) {
       throw "Error.checkAndNudgePoints ";
     }
     nudged = false;
@@ -832,11 +833,11 @@ function v126(image$$2, points) {
       }
     }
     offset$$8 = offset$$8 - 2;
-    var v1201 = offset$$8 >= 0;
-    if (v1201) {
-      v1201 = nudged;
+    var v1200 = offset$$8 >= 0;
+    if (v1200) {
+      v1200 = nudged;
     }
-    v356 = v1201;
+    v355 = v1200;
   }
   return;
 }
@@ -860,11 +861,11 @@ function ECBlocks(ecCodewordsPerBlock, ecBlocks1, ecBlocks2) {
   function v4() {
     var total = 0;
     var i$$1 = 0;
-    var v357 = i$$1 < this.ecBlocks.length;
-    for (;v357;) {
+    var v356 = i$$1 < this.ecBlocks.length;
+    for (;v356;) {
       total = total + this.ecBlocks[i$$1].length;
       i$$1++;
-      v357 = i$$1 < this.ecBlocks.length;
+      v356 = i$$1 < this.ecBlocks.length;
     }
     return total;
   }
@@ -876,11 +877,11 @@ function ECBlocks(ecCodewordsPerBlock, ecBlocks1, ecBlocks2) {
   }
   this.ecCodewordsPerBlock = ecCodewordsPerBlock;
   if (ecBlocks2) {
-    var v2802 = new Array(ecBlocks1, ecBlocks2);
-    this.ecBlocks = v2802;
+    var v2800 = new Array(ecBlocks1, ecBlocks2);
+    this.ecBlocks = v2800;
   } else {
-    var v2803 = new Array(ecBlocks1);
-    this.ecBlocks = v2803;
+    var v2801 = new Array(ecBlocks1);
+    this.ecBlocks = v2801;
   }
   JAM.call(this.__defineGetter__, this, ["ECCodewordsPerBlock", v2], JAM.policy.p19);
   JAM.call(this.__defineGetter__, this, ["TotalECCodewords", v3], JAM.policy.p19);
@@ -900,39 +901,39 @@ function Version(versionNumber, alignmentPatternCenters, ecBlocks1$$1, ecBlocks2
     JAM.call(bitMatrix.setRegion, bitMatrix, [0, dimension$$2 - 8, 9, 8], JAM.policy.p20);
     var max$$1 = this.alignmentPatternCenters.length;
     var x$$49 = 0;
-    var v369 = x$$49 < max$$1;
-    for (;v369;) {
+    var v368 = x$$49 < max$$1;
+    for (;v368;) {
       var i$$3 = this.alignmentPatternCenters[x$$49] - 2;
       var y$$32 = 0;
-      var v368 = y$$32 < max$$1;
-      for (;v368;) {
-        var v1864 = x$$49 == 0;
-        if (v1864) {
-          var v2488 = y$$32 == 0;
-          if (!v2488) {
-            v2488 = y$$32 == max$$1 - 1;
+      var v367 = y$$32 < max$$1;
+      for (;v367;) {
+        var v1862 = x$$49 == 0;
+        if (v1862) {
+          var v2486 = y$$32 == 0;
+          if (!v2486) {
+            v2486 = y$$32 == max$$1 - 1;
           }
-          v1864 = v2488;
+          v1862 = v2486;
         }
-        var v1206 = v1864;
-        if (!v1206) {
-          var v1865 = x$$49 == max$$1 - 1;
-          if (v1865) {
-            v1865 = y$$32 == 0;
+        var v1205 = v1862;
+        if (!v1205) {
+          var v1863 = x$$49 == max$$1 - 1;
+          if (v1863) {
+            v1863 = y$$32 == 0;
           }
-          v1206 = v1865;
+          v1205 = v1863;
         }
-        if (v1206) {
+        if (v1205) {
           y$$32++;
-          v368 = y$$32 < max$$1;
+          v367 = y$$32 < max$$1;
           continue;
         }
         JAM.call(bitMatrix.setRegion, bitMatrix, [this.alignmentPatternCenters[y$$32] - 2, i$$3, 5, 5], JAM.policy.p23);
         y$$32++;
-        v368 = y$$32 < max$$1;
+        v367 = y$$32 < max$$1;
       }
       x$$49++;
-      v369 = x$$49 < max$$1;
+      v368 = x$$49 < max$$1;
     }
     JAM.call(bitMatrix.setRegion, bitMatrix, [6, 9, 1, dimension$$2 - 17], JAM.policy.p20);
     JAM.call(bitMatrix.setRegion, bitMatrix, [9, 6, dimension$$2 - 17, 1], JAM.policy.p20);
@@ -956,18 +957,18 @@ function Version(versionNumber, alignmentPatternCenters, ecBlocks1$$1, ecBlocks2
   }
   this.versionNumber = versionNumber;
   this.alignmentPatternCenters = alignmentPatternCenters;
-  var v2804 = new Array(ecBlocks1$$1, ecBlocks2$$1, ecBlocks3, ecBlocks4);
-  this.ecBlocks = v2804;
+  var v2802 = new Array(ecBlocks1$$1, ecBlocks2$$1, ecBlocks3, ecBlocks4);
+  this.ecBlocks = v2802;
   var total$$1 = 0;
   var ecCodewords = ecBlocks1$$1.ECCodewordsPerBlock;
   var ecbArray = ecBlocks1$$1.ecBlocks;
   var i$$2 = 0;
-  var v376 = i$$2 < ecbArray.length;
-  for (;v376;) {
+  var v375 = i$$2 < ecbArray.length;
+  for (;v375;) {
     var ecBlock = ecbArray[i$$2];
     total$$1 = total$$1 + ecBlock.Count * (ecBlock.DataCodewords + ecCodewords);
     i$$2++;
-    v376 = i$$2 < ecbArray.length;
+    v375 = i$$2 < ecbArray.length;
   }
   this.totalCodewords = total$$1;
   JAM.call(this.__defineGetter__, this, ["VersionNumber", v6], JAM.policy.p19);
@@ -1010,15 +1011,15 @@ function PerspectiveTransform(a11, a21, a31, a12, a22, a32, a13$$1, a23$$1, a33)
   function v13(xValues, yValues) {
     var n$$1 = xValues.length;
     var i$$6 = 0;
-    var v439 = i$$6 < n$$1;
-    for (;v439;) {
+    var v438 = i$$6 < n$$1;
+    for (;v438;) {
       var x$$51 = xValues[i$$6];
       var y$$34 = yValues[i$$6];
       var denominator$$2 = this.a13 * x$$51 + this.a23 * y$$34 + this.a33;
       xValues[i$$6] = (this.a11 * x$$51 + this.a21 * y$$34 + this.a31) / denominator$$2;
       yValues[i$$6] = (this.a12 * x$$51 + this.a22 * y$$34 + this.a32) / denominator$$2;
       i$$6++;
-      v439 = i$$6 < n$$1;
+      v438 = i$$6 < n$$1;
     }
     return;
   }
@@ -1034,15 +1035,15 @@ function PerspectiveTransform(a11, a21, a31, a12, a22, a32, a13$$1, a23$$1, a33)
     var a32$$1 = this.a32;
     var a33$$1 = this.a33;
     var i$$5 = 0;
-    var v444 = i$$5 < max$$2;
-    for (;v444;) {
+    var v443 = i$$5 < max$$2;
+    for (;v443;) {
       var x$$50 = points$$2[i$$5];
       var y$$33 = points$$2[i$$5 + 1];
       var denominator$$1 = a13$$2 * x$$50 + a23$$2 * y$$33 + a33$$1;
       points$$2[i$$5] = (a11$$1 * x$$50 + a21$$1 * y$$33 + a31$$1) / denominator$$1;
       points$$2[i$$5 + 1] = (a12$$1 * x$$50 + a22$$1 * y$$33 + a32$$1) / denominator$$1;
       i$$5 = i$$5 + 2;
-      v444 = i$$5 < max$$2;
+      v443 = i$$5 < max$$2;
     }
     return;
   }
@@ -1068,9 +1069,9 @@ function DetectorResult(bits$$1, points$$3) {
 }
 function Detector(image$$5) {
   function v26() {
-    var v445 = new FinderPatternFinder;
-    var info$$1 = JAM.call(v445.findFinderPattern, v445, [this.image], JAM.policy.p21);
-    return JAM.call(this.processFinderPatternInfo, this, [info$$1], JAM.policy.p21);
+    var v444 = new FinderPatternFinder;
+    var info$$1 = JAM.call(v444.findFinderPattern, v444, [this.image], JAM.policy.p22);
+    return JAM.call(this.processFinderPatternInfo, this, [info$$1], JAM.policy.p22);
   }
   function v25(info) {
     var topLeft$$3 = info.TopLeft;
@@ -1081,18 +1082,18 @@ function Detector(image$$5) {
       throw "Error";
     }
     var dimension$$7 = JAM.call(this.computeDimension, this, [topLeft$$3, topRight$$3, bottomLeft$$3, moduleSize$$1], JAM.policy.p33);
-    var provisionalVersion = JAM.call(Version.getProvisionalVersionForDimension, Version, [dimension$$7], JAM.policy.p21);
+    var provisionalVersion = JAM.call(Version.getProvisionalVersionForDimension, Version, [dimension$$7], JAM.policy.p22);
     var modulesBetweenFPCenters = provisionalVersion.DimensionForVersion - 7;
     var alignmentPattern$$1 = null;
     if (provisionalVersion.AlignmentPatternCenters.length > 0) {
       var bottomRightX$$1 = topRight$$3.X - topLeft$$3.X + bottomLeft$$3.X;
       var bottomRightY$$1 = topRight$$3.Y - topLeft$$3.Y + bottomLeft$$3.Y;
       var correctionToTopLeft = 1 - 3 / modulesBetweenFPCenters;
-      var estAlignmentX$$1 = JAM.call(Math.floor, Math, [topLeft$$3.X + correctionToTopLeft * (bottomRightX$$1 - topLeft$$3.X)], JAM.policy.p21);
-      var estAlignmentY$$1 = JAM.call(Math.floor, Math, [topLeft$$3.Y + correctionToTopLeft * (bottomRightY$$1 - topLeft$$3.Y)], JAM.policy.p21);
+      var estAlignmentX$$1 = JAM.call(Math.floor, Math, [topLeft$$3.X + correctionToTopLeft * (bottomRightX$$1 - topLeft$$3.X)], JAM.policy.p22);
+      var estAlignmentY$$1 = JAM.call(Math.floor, Math, [topLeft$$3.Y + correctionToTopLeft * (bottomRightY$$1 - topLeft$$3.Y)], JAM.policy.p22);
       var i$$7 = 4;
-      var v456 = i$$7 <= 16;
-      for (;v456;) {
+      var v455 = i$$7 <= 16;
+      for (;v455;) {
         alignmentPattern$$1 = JAM.call(this.findAlignmentInRegion, this, [moduleSize$$1, estAlignmentX$$1, estAlignmentY$$1, i$$7], JAM.policy.p33);
         break;
       }
@@ -1130,7 +1131,7 @@ function Detector(image$$5) {
     return transform$$2;
   }
   function v22(overallEstModuleSize, estAlignmentX, estAlignmentY, allowanceFactor) {
-    var allowance = JAM.call(Math.floor, Math, [allowanceFactor * overallEstModuleSize], JAM.policy.p21);
+    var allowance = JAM.call(Math.floor, Math, [allowanceFactor * overallEstModuleSize], JAM.policy.p22);
     var alignmentAreaLeftX = JAM.call(Math.max, Math, [0, estAlignmentX - allowance], JAM.policy.p20);
     var alignmentAreaRightX = JAM.call(Math.min, Math, [qrcode.width - 1, estAlignmentX + allowance], JAM.policy.p33);
     if (alignmentAreaRightX - alignmentAreaLeftX < overallEstModuleSize * 3) {
@@ -1142,8 +1143,8 @@ function Detector(image$$5) {
     return alignmentFinder.find();
   }
   function v21(topLeft$$1, topRight$$1, bottomLeft$$1, moduleSize) {
-    var tltrCentersDimension = JAM.call(Math.round, Math, [JAM.call(this.distance, this, [topLeft$$1, topRight$$1], JAM.policy.p33) / moduleSize], JAM.policy.p21);
-    var tlblCentersDimension = JAM.call(Math.round, Math, [JAM.call(this.distance, this, [topLeft$$1, bottomLeft$$1], JAM.policy.p33) / moduleSize], JAM.policy.p21);
+    var tltrCentersDimension = JAM.call(Math.round, Math, [JAM.call(this.distance, this, [topLeft$$1, topRight$$1], JAM.policy.p33) / moduleSize], JAM.policy.p22);
+    var tlblCentersDimension = JAM.call(Math.round, Math, [JAM.call(this.distance, this, [topLeft$$1, bottomLeft$$1], JAM.policy.p33) / moduleSize], JAM.policy.p22);
     var dimension$$4 = (tltrCentersDimension + tlblCentersDimension >> 1) + 7;
     switch(dimension$$4 & 3) {
       case 0:
@@ -1160,21 +1161,21 @@ function Detector(image$$5) {
   function v20(pattern1, pattern2) {
     xDiff = pattern1.X - pattern2.X;
     yDiff = pattern1.Y - pattern2.Y;
-    return JAM.call(Math.sqrt, Math, [xDiff * xDiff + yDiff * yDiff], JAM.policy.p21);
+    return JAM.call(Math.sqrt, Math, [xDiff * xDiff + yDiff * yDiff], JAM.policy.p22);
   }
   function v19(topLeft, topRight, bottomLeft) {
-    return(JAM.call(this.calculateModuleSizeOneWay, this, [topLeft, topRight], JAM.policy.p33) + JAM.call(this.calculateModuleSizeOneWay, this, [topLeft, bottomLeft], JAM.policy.p33)) / 2;
+    return (JAM.call(this.calculateModuleSizeOneWay, this, [topLeft, topRight], JAM.policy.p33) + JAM.call(this.calculateModuleSizeOneWay, this, [topLeft, bottomLeft], JAM.policy.p33)) / 2;
   }
   function v18(pattern$$1, otherPattern) {
-    var moduleSizeEst1 = JAM.call(this.sizeOfBlackWhiteBlackRunBothWays, this, [JAM.call(Math.floor, Math, [pattern$$1.X], JAM.policy.p21), JAM.call(Math.floor, Math, [pattern$$1.Y], JAM.policy.p21), JAM.call(Math.floor, Math, [otherPattern.X], JAM.policy.p21), JAM.call(Math.floor, Math, [otherPattern.Y], JAM.policy.p21)], JAM.policy.p33);
-    var moduleSizeEst2 = JAM.call(this.sizeOfBlackWhiteBlackRunBothWays, this, [JAM.call(Math.floor, Math, [otherPattern.X], JAM.policy.p21), JAM.call(Math.floor, Math, [otherPattern.Y], JAM.policy.p21), JAM.call(Math.floor, Math, [pattern$$1.X], JAM.policy.p21), JAM.call(Math.floor, Math, [pattern$$1.Y], JAM.policy.p21)], JAM.policy.p33);
+    var moduleSizeEst1 = JAM.call(this.sizeOfBlackWhiteBlackRunBothWays, this, [JAM.call(Math.floor, Math, [pattern$$1.X], JAM.policy.p22), JAM.call(Math.floor, Math, [pattern$$1.Y], JAM.policy.p22), JAM.call(Math.floor, Math, [otherPattern.X], JAM.policy.p22), JAM.call(Math.floor, Math, [otherPattern.Y], JAM.policy.p22)], JAM.policy.p33);
+    var moduleSizeEst2 = JAM.call(this.sizeOfBlackWhiteBlackRunBothWays, this, [JAM.call(Math.floor, Math, [otherPattern.X], JAM.policy.p22), JAM.call(Math.floor, Math, [otherPattern.Y], JAM.policy.p22), JAM.call(Math.floor, Math, [pattern$$1.X], JAM.policy.p22), JAM.call(Math.floor, Math, [pattern$$1.Y], JAM.policy.p22)], JAM.policy.p33);
     if (isNaN(moduleSizeEst1)) {
       return moduleSizeEst2 / 7;
     }
     if (isNaN(moduleSizeEst2)) {
       return moduleSizeEst1 / 7;
     }
-    return(moduleSizeEst1 + moduleSizeEst2) / 14;
+    return (moduleSizeEst1 + moduleSizeEst2) / 14;
   }
   function v17(fromX$$1, fromY$$1, toX$$1, toY$$1) {
     var result = JAM.call(this.sizeOfBlackWhiteBlackRun, this, [fromX$$1, fromY$$1, toX$$1, toY$$1], JAM.policy.p33);
@@ -1189,7 +1190,7 @@ function Detector(image$$5) {
         otherToX = qrcode.width - 1;
       }
     }
-    var otherToY = JAM.call(Math.floor, Math, [fromY$$1 - (toY$$1 - fromY$$1) * scale], JAM.policy.p21);
+    var otherToY = JAM.call(Math.floor, Math, [fromY$$1 - (toY$$1 - fromY$$1) * scale], JAM.policy.p22);
     scale = 1;
     if (otherToY < 0) {
       scale = fromY$$1 / (fromY$$1 - otherToY);
@@ -1200,12 +1201,12 @@ function Detector(image$$5) {
         otherToY = qrcode.height - 1;
       }
     }
-    otherToX = JAM.call(Math.floor, Math, [fromX$$1 + (otherToX - fromX$$1) * scale], JAM.policy.p21);
+    otherToX = JAM.call(Math.floor, Math, [fromX$$1 + (otherToX - fromX$$1) * scale], JAM.policy.p22);
     result = result + JAM.call(this.sizeOfBlackWhiteBlackRun, this, [fromX$$1, fromY$$1, otherToX, otherToY], JAM.policy.p33);
     return result - 1;
   }
   function v16(fromX, fromY, toX, toY) {
-    var steep = JAM.call(Math.abs, Math, [toY - fromY], JAM.policy.p21) > JAM.call(Math.abs, Math, [toX - fromX], JAM.policy.p21);
+    var steep = JAM.call(Math.abs, Math, [toY - fromY], JAM.policy.p22) > JAM.call(Math.abs, Math, [toX - fromX], JAM.policy.p22);
     if (steep) {
       var temp = fromX;
       fromX = fromY;
@@ -1214,42 +1215,42 @@ function Detector(image$$5) {
       toX = toY;
       toY = temp;
     }
-    var dx$$4 = JAM.call(Math.abs, Math, [toX - fromX], JAM.policy.p21);
-    var dy$$4 = JAM.call(Math.abs, Math, [toY - fromY], JAM.policy.p21);
+    var dx$$4 = JAM.call(Math.abs, Math, [toX - fromX], JAM.policy.p22);
+    var dy$$4 = JAM.call(Math.abs, Math, [toY - fromY], JAM.policy.p22);
     var error$$1 = -dx$$4 >> 1;
-    var v524;
+    var v523;
     if (fromY < toY) {
+      v523 = 1;
+    } else {
+      v523 = -1;
+    }
+    var ystep = v523;
+    var v524;
+    if (fromX < toX) {
       v524 = 1;
     } else {
       v524 = -1;
     }
-    var ystep = v524;
-    var v525;
-    if (fromX < toX) {
-      v525 = 1;
-    } else {
-      v525 = -1;
-    }
-    var xstep = v525;
+    var xstep = v524;
     var state = 0;
     var x$$52 = fromX;
     var y$$35 = fromY;
-    var v535 = x$$52 != toX;
-    for (;v535;) {
+    var v534 = x$$52 != toX;
+    for (;v534;) {
+      var v525;
+      if (steep) {
+        v525 = y$$35;
+      } else {
+        v525 = x$$52;
+      }
+      var realX = v525;
       var v526;
       if (steep) {
-        v526 = y$$35;
-      } else {
         v526 = x$$52;
-      }
-      var realX = v526;
-      var v527;
-      if (steep) {
-        v527 = x$$52;
       } else {
-        v527 = y$$35;
+        v526 = y$$35;
       }
-      var realY = v527;
+      var realY = v526;
       if (state == 1) {
         if (this.image[realX + realY * qrcode.width]) {
           state++;
@@ -1262,7 +1263,7 @@ function Detector(image$$5) {
       if (state == 3) {
         var diffX = x$$52 - fromX;
         var diffY = y$$35 - fromY;
-        return JAM.call(Math.sqrt, Math, [diffX * diffX + diffY * diffY], JAM.policy.p21);
+        return JAM.call(Math.sqrt, Math, [diffX * diffX + diffY * diffY], JAM.policy.p22);
       }
       error$$1 = error$$1 + dy$$4;
       if (error$$1 > 0) {
@@ -1273,11 +1274,11 @@ function Detector(image$$5) {
         error$$1 = error$$1 - dx$$4;
       }
       x$$52 = x$$52 + xstep;
-      v535 = x$$52 != toX;
+      v534 = x$$52 != toX;
     }
     var diffX2 = toX - fromX;
     var diffY2 = toY - fromY;
-    return JAM.call(Math.sqrt, Math, [diffX2 * diffX2 + diffY2 * diffY2], JAM.policy.p21);
+    return JAM.call(Math.sqrt, Math, [diffX2 * diffX2 + diffY2 * diffY2], JAM.policy.p22);
   }
   this.image = image$$5;
   this.resultPointCallback = null;
@@ -1297,11 +1298,11 @@ function Detector(image$$5) {
 function FormatInformation(formatInfo) {
   function v30(o) {
     var other$$5 = o;
-    var v537 = this.errorCorrectionLevel == other$$5.errorCorrectionLevel;
-    if (v537) {
-      v537 = this.dataMask == other$$5.dataMask;
+    var v536 = this.errorCorrectionLevel == other$$5.errorCorrectionLevel;
+    if (v536) {
+      v536 = this.dataMask == other$$5.dataMask;
     }
-    return v537;
+    return v536;
   }
   function v29() {
     return this.errorCorrectionLevel.ordinal_Renamed_Field << 3 | dataMask;
@@ -1312,8 +1313,8 @@ function FormatInformation(formatInfo) {
   function v27() {
     return this.errorCorrectionLevel;
   }
-  var v2805 = JAM.call(ErrorCorrectionLevel.forBits, ErrorCorrectionLevel, [formatInfo >> 3 & 3], JAM.policy.p21);
-  this.errorCorrectionLevel = v2805;
+  var v2803 = JAM.call(ErrorCorrectionLevel.forBits, ErrorCorrectionLevel, [formatInfo >> 3 & 3], JAM.policy.p22);
+  this.errorCorrectionLevel = v2803;
   this.dataMask = formatInfo & 7;
   JAM.call(this.__defineGetter__, this, ["ErrorCorrectionLevel", v27], JAM.policy.p19);
   JAM.call(this.__defineGetter__, this, ["DataMask", v28], JAM.policy.p19);
@@ -1339,75 +1340,75 @@ function ErrorCorrectionLevel(ordinal, bits$$3, name$$30) {
   this.ordinal = v33;
   return;
 }
-function BitMatrix(width$$10, height$$9) {
+function BitMatrix(width$$10) {
   function v41(left$$1, top$$1, width$$11, height$$10) {
-    var v1515 = top$$1 < 0;
-    if (!v1515) {
-      v1515 = left$$1 < 0;
+    var v1514 = top$$1 < 0;
+    if (!v1514) {
+      v1514 = left$$1 < 0;
     }
-    if (v1515) {
+    if (v1514) {
       throw "Left and top must be nonnegative";
     }
-    var v1516 = height$$10 < 1;
-    if (!v1516) {
-      v1516 = width$$11 < 1;
+    var v1515 = height$$10 < 1;
+    if (!v1515) {
+      v1515 = width$$11 < 1;
     }
-    if (v1516) {
+    if (v1515) {
       throw "Height and width must be at least 1";
     }
     var right$$1 = left$$1 + width$$11;
     var bottom = top$$1 + height$$10;
-    var v1517 = bottom > this.height;
-    if (!v1517) {
-      v1517 = right$$1 > this.width;
+    var v1516 = bottom > this.height;
+    if (!v1516) {
+      v1516 = right$$1 > this.width;
     }
-    if (v1517) {
+    if (v1516) {
       throw "The region must fit inside the matrix";
     }
     var y$$39 = top$$1;
-    var v547 = y$$39 < bottom;
-    for (;v547;) {
+    var v546 = y$$39 < bottom;
+    for (;v546;) {
       var offset$$12 = y$$39 * this.rowSize;
       var x$$56 = left$$1;
-      var v546 = x$$56 < right$$1;
-      for (;v546;) {
-        var v544 = this.bits;
-        var v545 = offset$$12 + (x$$56 >> 5);
-        v544[v545] = v544[v545] | 1 << (x$$56 & 31);
+      var v545 = x$$56 < right$$1;
+      for (;v545;) {
+        var v543 = this.bits;
+        var v544 = offset$$12 + (x$$56 >> 5);
+        v543[v544] = v543[v544] | 1 << (x$$56 & 31);
         x$$56++;
-        v546 = x$$56 < right$$1;
+        v545 = x$$56 < right$$1;
       }
       y$$39++;
-      v547 = y$$39 < bottom;
+      v546 = y$$39 < bottom;
     }
     return;
   }
   function v40() {
     var max$$3 = this.bits.length;
     var i$$10 = 0;
-    var v550 = i$$10 < max$$3;
-    for (;v550;) {
+    var v549 = i$$10 < max$$3;
+    for (;v549;) {
       this.bits[i$$10] = 0;
       i$$10++;
-      v550 = i$$10 < max$$3;
+      v549 = i$$10 < max$$3;
     }
     return;
   }
   function v39(x$$55, y$$38) {
     var offset$$11 = y$$38 * this.rowSize + (x$$55 >> 5);
-    var v553 = this.bits;
-    v553[offset$$11] = v553[offset$$11] ^ 1 << (x$$55 & 31);
+    var v552 = this.bits;
+    v552[offset$$11] = v552[offset$$11] ^ 1 << (x$$55 & 31);
     return;
   }
   function v38(x$$54, y$$37) {
     var offset$$10 = y$$37 * this.rowSize + (x$$54 >> 5);
-    var v556 = this.bits;
-    v556[offset$$10] = v556[offset$$10] | 1 << (x$$54 & 31);
+    var v555 = this.bits;
+    v555[offset$$10] = v555[offset$$10] | 1 << (x$$54 & 31);
     return;
   }
   function v37(x$$53, y$$36) {
     var offset$$9 = y$$36 * this.rowSize + (x$$53 >> 5);
-    return(URShift(this.bits[offset$$9], x$$53 & 31) & 1) != 0;
+    return (URShift(this.bits[offset$$9], x$$53 & 31) & 1) != 0;
   }
   function v36() {
     if (this.width != this.height) {
@@ -1421,14 +1422,15 @@ function BitMatrix(width$$10, height$$9) {
   function v34() {
     return this.width;
   }
+  var height$$9;
   if (!height$$9) {
     height$$9 = width$$10;
   }
-  var v1525 = width$$10 < 1;
-  if (!v1525) {
-    v1525 = height$$9 < 1;
+  var v1524 = width$$10 < 1;
+  if (!v1524) {
+    v1524 = height$$9 < 1;
   }
-  if (v1525) {
+  if (v1524) {
     throw "Both dimensions must be greater than 0";
   }
   this.width = width$$10;
@@ -1438,14 +1440,14 @@ function BitMatrix(width$$10, height$$9) {
     rowSize++;
   }
   this.rowSize = rowSize;
-  var v2806 = new Array(rowSize * height$$9);
-  this.bits = v2806;
+  var v2804 = new Array(rowSize * height$$9);
+  this.bits = v2804;
   var i$$9 = 0;
-  var v566 = i$$9 < this.bits.length;
-  for (;v566;) {
+  var v565 = i$$9 < this.bits.length;
+  for (;v565;) {
     this.bits[i$$9] = 0;
     i$$9++;
-    v566 = i$$9 < this.bits.length;
+    v565 = i$$9 < this.bits.length;
   }
   JAM.call(this.__defineGetter__, this, ["Width", v34], JAM.policy.p19);
   JAM.call(this.__defineGetter__, this, ["Height", v35], JAM.policy.p19);
@@ -1474,7 +1476,7 @@ function BitMatrixParser(bitMatrix$$1) {
   function v47() {
     var formatInfo$$2 = this.readFormatInformation();
     var version$$6 = this.readVersion();
-    var dataMask$$1 = JAM.call(DataMask.forReference, DataMask, [formatInfo$$2.DataMask], JAM.policy.p21);
+    var dataMask$$1 = JAM.call(DataMask.forReference, DataMask, [formatInfo$$2.DataMask], JAM.policy.p22);
     var dimension$$11 = this.bitMatrix.Dimension;
     JAM.call(dataMask$$1.unmaskBitMatrix, dataMask$$1, [this.bitMatrix, dimension$$11], JAM.policy.p33);
     var functionPattern = version$$6.buildFunctionPattern();
@@ -1484,48 +1486,48 @@ function BitMatrixParser(bitMatrix$$1) {
     var currentByte = 0;
     var bitsRead = 0;
     var j$$4 = dimension$$11 - 1;
-    var v579 = j$$4 > 0;
-    for (;v579;) {
+    var v578 = j$$4 > 0;
+    for (;v578;) {
       if (j$$4 == 6) {
         j$$4--;
       }
       var count$$4 = 0;
-      var v578 = count$$4 < dimension$$11;
-      for (;v578;) {
-        var v572;
+      var v577 = count$$4 < dimension$$11;
+      for (;v577;) {
+        var v571;
         if (readingUp) {
-          v572 = dimension$$11 - 1 - count$$4;
+          v571 = dimension$$11 - 1 - count$$4;
         } else {
-          v572 = count$$4;
+          v571 = count$$4;
         }
-        var i$$15 = v572;
+        var i$$15 = v571;
         var col = 0;
-        var v577 = col < 2;
-        for (;v577;) {
+        var v576 = col < 2;
+        for (;v576;) {
           if (!JAM.call(functionPattern.get_Renamed, functionPattern, [j$$4 - col, i$$15], JAM.policy.p33)) {
             bitsRead++;
             currentByte = currentByte << 1;
-            var v1531 = this.bitMatrix;
-            if (JAM.call(v1531.get_Renamed, v1531, [j$$4 - col, i$$15], JAM.policy.p33)) {
+            var v1530 = this.bitMatrix;
+            if (JAM.call(v1530.get_Renamed, v1530, [j$$4 - col, i$$15], JAM.policy.p33)) {
               currentByte = currentByte | 1;
             }
             if (bitsRead == 8) {
-              var v574 = resultOffset;
+              var v573 = resultOffset;
               resultOffset = resultOffset + 1;
-              result$$2[v574] = currentByte;
+              result$$2[v573] = currentByte;
               bitsRead = 0;
               currentByte = 0;
             }
           }
           col++;
-          v577 = col < 2;
+          v576 = col < 2;
         }
         count$$4++;
-        v578 = count$$4 < dimension$$11;
+        v577 = count$$4 < dimension$$11;
       }
       readingUp = readingUp ^ true;
       j$$4 = j$$4 - 2;
-      v579 = j$$4 > 0;
+      v578 = j$$4 > 0;
     }
     if (resultOffset != version$$6.TotalCodewords) {
       throw "Error readCodewords";
@@ -1539,53 +1541,53 @@ function BitMatrixParser(bitMatrix$$1) {
     var dimension$$10 = this.bitMatrix.Dimension;
     var provisionalVersion$$1 = dimension$$10 - 17 >> 2;
     if (provisionalVersion$$1 <= 6) {
-      return JAM.call(Version.getVersionForNumber, Version, [provisionalVersion$$1], JAM.policy.p21);
+      return JAM.call(Version.getVersionForNumber, Version, [provisionalVersion$$1], JAM.policy.p22);
     }
     var versionBits$$2 = 0;
     var ijMin = dimension$$10 - 11;
     var j$$3 = 5;
-    var v586 = j$$3 >= 0;
-    for (;v586;) {
+    var v585 = j$$3 >= 0;
+    for (;v585;) {
       var i$$14 = dimension$$10 - 9;
-      var v585 = i$$14 >= ijMin;
-      for (;v585;) {
+      var v584 = i$$14 >= ijMin;
+      for (;v584;) {
         versionBits$$2 = JAM.call(this.copyBit, this, [i$$14, j$$3, versionBits$$2], JAM.policy.p23);
         i$$14--;
-        v585 = i$$14 >= ijMin;
+        v584 = i$$14 >= ijMin;
       }
       j$$3--;
-      v586 = j$$3 >= 0;
+      v585 = j$$3 >= 0;
     }
-    var v2807 = JAM.call(Version.decodeVersionInformation, Version, [versionBits$$2], JAM.policy.p21);
-    this.parsedVersion = v2807;
+    var v2805 = JAM.call(Version.decodeVersionInformation, Version, [versionBits$$2], JAM.policy.p22);
+    this.parsedVersion = v2805;
+    var v1534 = this.parsedVersion != null;
+    if (v1534) {
+      v1534 = this.parsedVersion.DimensionForVersion == dimension$$10;
+    }
+    if (v1534) {
+      return this.parsedVersion;
+    }
+    versionBits$$2 = 0;
+    i$$14 = 5;
+    var v588 = i$$14 >= 0;
+    for (;v588;) {
+      j$$3 = dimension$$10 - 9;
+      var v587 = j$$3 >= ijMin;
+      for (;v587;) {
+        versionBits$$2 = JAM.call(this.copyBit, this, [i$$14, j$$3, versionBits$$2], JAM.policy.p23);
+        j$$3--;
+        v587 = j$$3 >= ijMin;
+      }
+      i$$14--;
+      v588 = i$$14 >= 0;
+    }
+    var v2806 = JAM.call(Version.decodeVersionInformation, Version, [versionBits$$2], JAM.policy.p22);
+    this.parsedVersion = v2806;
     var v1535 = this.parsedVersion != null;
     if (v1535) {
       v1535 = this.parsedVersion.DimensionForVersion == dimension$$10;
     }
     if (v1535) {
-      return this.parsedVersion;
-    }
-    versionBits$$2 = 0;
-    i$$14 = 5;
-    var v589 = i$$14 >= 0;
-    for (;v589;) {
-      j$$3 = dimension$$10 - 9;
-      var v588 = j$$3 >= ijMin;
-      for (;v588;) {
-        versionBits$$2 = JAM.call(this.copyBit, this, [i$$14, j$$3, versionBits$$2], JAM.policy.p23);
-        j$$3--;
-        v588 = j$$3 >= ijMin;
-      }
-      i$$14--;
-      v589 = i$$14 >= 0;
-    }
-    var v2808 = JAM.call(Version.decodeVersionInformation, Version, [versionBits$$2], JAM.policy.p21);
-    this.parsedVersion = v2808;
-    var v1536 = this.parsedVersion != null;
-    if (v1536) {
-      v1536 = this.parsedVersion.DimensionForVersion == dimension$$10;
-    }
-    if (v1536) {
       return this.parsedVersion;
     }
     throw "Error readVersion";
@@ -1596,24 +1598,24 @@ function BitMatrixParser(bitMatrix$$1) {
     }
     var formatInfoBits = 0;
     var i$$13 = 0;
-    var v592 = i$$13 < 6;
-    for (;v592;) {
+    var v591 = i$$13 < 6;
+    for (;v591;) {
       formatInfoBits = JAM.call(this.copyBit, this, [i$$13, 8, formatInfoBits], JAM.policy.p23);
       i$$13++;
-      v592 = i$$13 < 6;
+      v591 = i$$13 < 6;
     }
     formatInfoBits = JAM.call(this.copyBit, this, [7, 8, formatInfoBits], JAM.policy.p20);
     formatInfoBits = JAM.call(this.copyBit, this, [8, 8, formatInfoBits], JAM.policy.p20);
     formatInfoBits = JAM.call(this.copyBit, this, [8, 7, formatInfoBits], JAM.policy.p20);
     var j$$2 = 5;
-    var v593 = j$$2 >= 0;
-    for (;v593;) {
+    var v592 = j$$2 >= 0;
+    for (;v592;) {
       formatInfoBits = JAM.call(this.copyBit, this, [8, j$$2, formatInfoBits], JAM.policy.p20);
       j$$2--;
-      v593 = j$$2 >= 0;
+      v592 = j$$2 >= 0;
     }
-    var v2809 = JAM.call(FormatInformation.decodeFormatInformation, FormatInformation, [formatInfoBits], JAM.policy.p21);
-    this.parsedFormatInfo = v2809;
+    var v2807 = JAM.call(FormatInformation.decodeFormatInformation, FormatInformation, [formatInfoBits], JAM.policy.p22);
+    this.parsedFormatInfo = v2807;
     if (this.parsedFormatInfo != null) {
       return this.parsedFormatInfo;
     }
@@ -1621,42 +1623,42 @@ function BitMatrixParser(bitMatrix$$1) {
     formatInfoBits = 0;
     var iMin = dimension$$9 - 8;
     i$$13 = dimension$$9 - 1;
-    var v596 = i$$13 >= iMin;
-    for (;v596;) {
+    var v595 = i$$13 >= iMin;
+    for (;v595;) {
       formatInfoBits = JAM.call(this.copyBit, this, [i$$13, 8, formatInfoBits], JAM.policy.p23);
       i$$13--;
-      v596 = i$$13 >= iMin;
+      v595 = i$$13 >= iMin;
     }
     j$$2 = dimension$$9 - 7;
-    var v597 = j$$2 < dimension$$9;
-    for (;v597;) {
+    var v596 = j$$2 < dimension$$9;
+    for (;v596;) {
       formatInfoBits = JAM.call(this.copyBit, this, [8, j$$2, formatInfoBits], JAM.policy.p20);
       j$$2++;
-      v597 = j$$2 < dimension$$9;
+      v596 = j$$2 < dimension$$9;
     }
-    var v2810 = JAM.call(FormatInformation.decodeFormatInformation, FormatInformation, [formatInfoBits], JAM.policy.p21);
-    this.parsedFormatInfo = v2810;
+    var v2808 = JAM.call(FormatInformation.decodeFormatInformation, FormatInformation, [formatInfoBits], JAM.policy.p22);
+    this.parsedFormatInfo = v2808;
     if (this.parsedFormatInfo != null) {
       return this.parsedFormatInfo;
     }
     throw "Error readFormatInformation";
   }
   function v44(i$$12, j$$1, versionBits$$1) {
-    var v599;
-    var v2271 = this.bitMatrix;
-    if (JAM.call(v2271.get_Renamed, v2271, [i$$12, j$$1], JAM.policy.p33)) {
-      v599 = versionBits$$1 << 1 | 1;
+    var v598;
+    var v2269 = this.bitMatrix;
+    if (JAM.call(v2269.get_Renamed, v2269, [i$$12, j$$1], JAM.policy.p33)) {
+      v598 = versionBits$$1 << 1 | 1;
     } else {
-      v599 = versionBits$$1 << 1;
+      v598 = versionBits$$1 << 1;
     }
-    return v599;
+    return v598;
   }
   var dimension$$8 = bitMatrix$$1.Dimension;
-  var v1542 = dimension$$8 < 21;
-  if (!v1542) {
-    v1542 = (dimension$$8 & 3) != 1;
+  var v1541 = dimension$$8 < 21;
+  if (!v1541) {
+    v1541 = (dimension$$8 & 3) != 1;
   }
-  if (v1542) {
+  if (v1541) {
     throw "Error BitMatrixParser";
   }
   this.bitMatrix = bitMatrix$$1;
@@ -1670,23 +1672,23 @@ function BitMatrixParser(bitMatrix$$1) {
 }
 function DataMask000() {
   function v49(i$$17, j$$6) {
-    return(i$$17 + j$$6 & 1) == 0;
+    return (i$$17 + j$$6 & 1) == 0;
   }
   function v48(bits$$5, dimension$$12) {
     var i$$16 = 0;
-    var v604 = i$$16 < dimension$$12;
-    for (;v604;) {
+    var v603 = i$$16 < dimension$$12;
+    for (;v603;) {
       var j$$5 = 0;
-      var v603 = j$$5 < dimension$$12;
-      for (;v603;) {
+      var v602 = j$$5 < dimension$$12;
+      for (;v602;) {
         if (JAM.call(this.isMasked, this, [i$$16, j$$5], JAM.policy.p33)) {
           JAM.call(bits$$5.flip, bits$$5, [j$$5, i$$16], JAM.policy.p23);
         }
         j$$5++;
-        v603 = j$$5 < dimension$$12;
+        v602 = j$$5 < dimension$$12;
       }
       i$$16++;
-      v604 = i$$16 < dimension$$12;
+      v603 = i$$16 < dimension$$12;
     }
     return;
   }
@@ -1696,23 +1698,23 @@ function DataMask000() {
 }
 function DataMask001() {
   function v51(i$$19, j$$8) {
-    return(i$$19 & 1) == 0;
+    return (i$$19 & 1) == 0;
   }
   function v50(bits$$6, dimension$$13) {
     var i$$18 = 0;
-    var v608 = i$$18 < dimension$$13;
-    for (;v608;) {
+    var v607 = i$$18 < dimension$$13;
+    for (;v607;) {
       var j$$7 = 0;
-      var v607 = j$$7 < dimension$$13;
-      for (;v607;) {
+      var v606 = j$$7 < dimension$$13;
+      for (;v606;) {
         if (JAM.call(this.isMasked, this, [i$$18, j$$7], JAM.policy.p33)) {
           JAM.call(bits$$6.flip, bits$$6, [j$$7, i$$18], JAM.policy.p23);
         }
         j$$7++;
-        v607 = j$$7 < dimension$$13;
+        v606 = j$$7 < dimension$$13;
       }
       i$$18++;
-      v608 = i$$18 < dimension$$13;
+      v607 = i$$18 < dimension$$13;
     }
     return;
   }
@@ -1726,19 +1728,19 @@ function DataMask010() {
   }
   function v52(bits$$7, dimension$$14) {
     var i$$20 = 0;
-    var v612 = i$$20 < dimension$$14;
-    for (;v612;) {
+    var v611 = i$$20 < dimension$$14;
+    for (;v611;) {
       var j$$9 = 0;
-      var v611 = j$$9 < dimension$$14;
-      for (;v611;) {
+      var v610 = j$$9 < dimension$$14;
+      for (;v610;) {
         if (JAM.call(this.isMasked, this, [i$$20, j$$9], JAM.policy.p33)) {
           JAM.call(bits$$7.flip, bits$$7, [j$$9, i$$20], JAM.policy.p23);
         }
         j$$9++;
-        v611 = j$$9 < dimension$$14;
+        v610 = j$$9 < dimension$$14;
       }
       i$$20++;
-      v612 = i$$20 < dimension$$14;
+      v611 = i$$20 < dimension$$14;
     }
     return;
   }
@@ -1748,23 +1750,23 @@ function DataMask010() {
 }
 function DataMask011() {
   function v55(i$$23, j$$12) {
-    return(i$$23 + j$$12) % 3 == 0;
+    return (i$$23 + j$$12) % 3 == 0;
   }
   function v54(bits$$8, dimension$$15) {
     var i$$22 = 0;
-    var v616 = i$$22 < dimension$$15;
-    for (;v616;) {
+    var v615 = i$$22 < dimension$$15;
+    for (;v615;) {
       var j$$11 = 0;
-      var v615 = j$$11 < dimension$$15;
-      for (;v615;) {
+      var v614 = j$$11 < dimension$$15;
+      for (;v614;) {
         if (JAM.call(this.isMasked, this, [i$$22, j$$11], JAM.policy.p33)) {
           JAM.call(bits$$8.flip, bits$$8, [j$$11, i$$22], JAM.policy.p23);
         }
         j$$11++;
-        v615 = j$$11 < dimension$$15;
+        v614 = j$$11 < dimension$$15;
       }
       i$$22++;
-      v616 = i$$22 < dimension$$15;
+      v615 = i$$22 < dimension$$15;
     }
     return;
   }
@@ -1774,23 +1776,23 @@ function DataMask011() {
 }
 function DataMask100() {
   function v57(i$$25, j$$14) {
-    return(URShift(i$$25, 1) + j$$14 / 3 & 1) == 0;
+    return (URShift(i$$25, 1) + j$$14 / 3 & 1) == 0;
   }
   function v56(bits$$9, dimension$$16) {
     var i$$24 = 0;
-    var v620 = i$$24 < dimension$$16;
-    for (;v620;) {
+    var v619 = i$$24 < dimension$$16;
+    for (;v619;) {
       var j$$13 = 0;
-      var v619 = j$$13 < dimension$$16;
-      for (;v619;) {
+      var v618 = j$$13 < dimension$$16;
+      for (;v618;) {
         if (JAM.call(this.isMasked, this, [i$$24, j$$13], JAM.policy.p33)) {
           JAM.call(bits$$9.flip, bits$$9, [j$$13, i$$24], JAM.policy.p23);
         }
         j$$13++;
-        v619 = j$$13 < dimension$$16;
+        v618 = j$$13 < dimension$$16;
       }
       i$$24++;
-      v620 = i$$24 < dimension$$16;
+      v619 = i$$24 < dimension$$16;
     }
     return;
   }
@@ -1801,23 +1803,23 @@ function DataMask100() {
 function DataMask101() {
   function v59(i$$27, j$$16) {
     var temp$$1 = i$$27 * j$$16;
-    return(temp$$1 & 1) + temp$$1 % 3 == 0;
+    return (temp$$1 & 1) + temp$$1 % 3 == 0;
   }
   function v58(bits$$10, dimension$$17) {
     var i$$26 = 0;
-    var v624 = i$$26 < dimension$$17;
-    for (;v624;) {
+    var v623 = i$$26 < dimension$$17;
+    for (;v623;) {
       var j$$15 = 0;
-      var v623 = j$$15 < dimension$$17;
-      for (;v623;) {
+      var v622 = j$$15 < dimension$$17;
+      for (;v622;) {
         if (JAM.call(this.isMasked, this, [i$$26, j$$15], JAM.policy.p33)) {
           JAM.call(bits$$10.flip, bits$$10, [j$$15, i$$26], JAM.policy.p23);
         }
         j$$15++;
-        v623 = j$$15 < dimension$$17;
+        v622 = j$$15 < dimension$$17;
       }
       i$$26++;
-      v624 = i$$26 < dimension$$17;
+      v623 = i$$26 < dimension$$17;
     }
     return;
   }
@@ -1828,23 +1830,23 @@ function DataMask101() {
 function DataMask110() {
   function v61(i$$29, j$$18) {
     var temp$$2 = i$$29 * j$$18;
-    return((temp$$2 & 1) + temp$$2 % 3 & 1) == 0;
+    return ((temp$$2 & 1) + temp$$2 % 3 & 1) == 0;
   }
   function v60(bits$$11, dimension$$18) {
     var i$$28 = 0;
-    var v628 = i$$28 < dimension$$18;
-    for (;v628;) {
+    var v627 = i$$28 < dimension$$18;
+    for (;v627;) {
       var j$$17 = 0;
-      var v627 = j$$17 < dimension$$18;
-      for (;v627;) {
+      var v626 = j$$17 < dimension$$18;
+      for (;v626;) {
         if (JAM.call(this.isMasked, this, [i$$28, j$$17], JAM.policy.p33)) {
           JAM.call(bits$$11.flip, bits$$11, [j$$17, i$$28], JAM.policy.p23);
         }
         j$$17++;
-        v627 = j$$17 < dimension$$18;
+        v626 = j$$17 < dimension$$18;
       }
       i$$28++;
-      v628 = i$$28 < dimension$$18;
+      v627 = i$$28 < dimension$$18;
     }
     return;
   }
@@ -1854,23 +1856,23 @@ function DataMask110() {
 }
 function DataMask111() {
   function v63(i$$31, j$$20) {
-    return((i$$31 + j$$20 & 1) + i$$31 * j$$20 % 3 & 1) == 0;
+    return ((i$$31 + j$$20 & 1) + i$$31 * j$$20 % 3 & 1) == 0;
   }
   function v62(bits$$12, dimension$$19) {
     var i$$30 = 0;
-    var v632 = i$$30 < dimension$$19;
-    for (;v632;) {
+    var v631 = i$$30 < dimension$$19;
+    for (;v631;) {
       var j$$19 = 0;
-      var v631 = j$$19 < dimension$$19;
-      for (;v631;) {
+      var v630 = j$$19 < dimension$$19;
+      for (;v630;) {
         if (JAM.call(this.isMasked, this, [i$$30, j$$19], JAM.policy.p33)) {
           JAM.call(bits$$12.flip, bits$$12, [j$$19, i$$30], JAM.policy.p23);
         }
         j$$19++;
-        v631 = j$$19 < dimension$$19;
+        v630 = j$$19 < dimension$$19;
       }
       i$$30++;
-      v632 = i$$30 < dimension$$19;
+      v631 = i$$30 < dimension$$19;
     }
     return;
   }
@@ -1878,39 +1880,39 @@ function DataMask111() {
   this.isMasked = v63;
   return;
 }
-function ReedSolomonDecoder(field) {
+function ReedSolomonDecoder() {
   function v67(errorEvaluator, errorLocations$$1, dataMatrix$$1) {
     var s$$3 = errorLocations$$1.length;
     var result$$4 = new Array(s$$3);
     var i$$34 = 0;
-    var v644 = i$$34 < s$$3;
-    for (;v644;) {
-      var v633 = this.field;
-      var xiInverse = JAM.call(v633.inverse, v633, [errorLocations$$1[i$$34]], JAM.policy.p21);
+    var v643 = i$$34 < s$$3;
+    for (;v643;) {
+      var v632 = this.field;
+      var xiInverse = JAM.call(v632.inverse, v632, [errorLocations$$1[i$$34]], JAM.policy.p22);
       var denominator$$3 = 1;
       var j$$21 = 0;
-      var v638 = j$$21 < s$$3;
-      for (;v638;) {
+      var v637 = j$$21 < s$$3;
+      for (;v637;) {
         if (i$$34 != j$$21) {
-          var v635 = this.field;
-          var v2280 = this.field;
-          denominator$$3 = JAM.call(v635.multiply, v635, [denominator$$3, JAM.call(GF256.addOrSubtract, GF256, [1, JAM.call(v2280.multiply, v2280, [errorLocations$$1[j$$21], xiInverse], JAM.policy.p33)], JAM.policy.p20)], JAM.policy.p33);
+          var v634 = this.field;
+          var v2278 = this.field;
+          denominator$$3 = JAM.call(v634.multiply, v634, [denominator$$3, JAM.call(GF256.addOrSubtract, GF256, [1, JAM.call(v2278.multiply, v2278, [errorLocations$$1[j$$21], xiInverse], JAM.policy.p33)], JAM.policy.p20)], JAM.policy.p33);
         }
         j$$21++;
-        v638 = j$$21 < s$$3;
+        v637 = j$$21 < s$$3;
       }
-      var v639 = this.field;
-      var v640 = JAM.call(errorEvaluator.evaluateAt, errorEvaluator, [xiInverse], JAM.policy.p21);
-      var v1551 = this.field;
-      var v2811 = JAM.call(v639.multiply, v639, [v640, JAM.call(v1551.inverse, v1551, [denominator$$3], JAM.policy.p21)], JAM.policy.p33);
-      result$$4[i$$34] = v2811;
+      var v638 = this.field;
+      var v639 = JAM.call(errorEvaluator.evaluateAt, errorEvaluator, [xiInverse], JAM.policy.p22);
+      var v1550 = this.field;
+      var v2809 = JAM.call(v638.multiply, v638, [v639, JAM.call(v1550.inverse, v1550, [denominator$$3], JAM.policy.p22)], JAM.policy.p33);
+      result$$4[i$$34] = v2809;
       if (dataMatrix$$1) {
-        var v642 = this.field;
-        var v2812 = JAM.call(v642.multiply, v642, [result$$4[i$$34], xiInverse], JAM.policy.p33);
-        result$$4[i$$34] = v2812;
+        var v641 = this.field;
+        var v2810 = JAM.call(v641.multiply, v641, [result$$4[i$$34], xiInverse], JAM.policy.p33);
+        result$$4[i$$34] = v2810;
       }
       i$$34++;
-      v644 = i$$34 < s$$3;
+      v643 = i$$34 < s$$3;
     }
     return result$$4;
   }
@@ -1922,24 +1924,24 @@ function ReedSolomonDecoder(field) {
     var result$$3 = new Array(numErrors);
     var e$$4 = 0;
     var i$$33 = 1;
-    var v1552 = i$$33 < 256;
-    if (v1552) {
-      v1552 = e$$4 < numErrors;
+    var v1551 = i$$33 < 256;
+    if (v1551) {
+      v1551 = e$$4 < numErrors;
     }
-    var v649 = v1552;
-    for (;v649;) {
-      if (JAM.call(errorLocator.evaluateAt, errorLocator, [i$$33], JAM.policy.p21) == 0) {
-        var v647 = this.field;
-        var v2813 = JAM.call(v647.inverse, v647, [i$$33], JAM.policy.p21);
-        result$$3[e$$4] = v2813;
+    var v648 = v1551;
+    for (;v648;) {
+      if (JAM.call(errorLocator.evaluateAt, errorLocator, [i$$33], JAM.policy.p22) == 0) {
+        var v646 = this.field;
+        var v2811 = JAM.call(v646.inverse, v646, [i$$33], JAM.policy.p22);
+        result$$3[e$$4] = v2811;
         e$$4++;
       }
       i$$33++;
-      var v1554 = i$$33 < 256;
-      if (v1554) {
-        v1554 = e$$4 < numErrors;
+      var v1553 = i$$33 < 256;
+      if (v1553) {
+        v1553 = e$$4 < numErrors;
       }
-      v649 = v1554;
+      v648 = v1553;
     }
     if (e$$4 != numErrors) {
       throw "Error locator degree does not match number of roots";
@@ -1958,8 +1960,8 @@ function ReedSolomonDecoder(field) {
     var s$$2 = this.field.Zero;
     var tLast = this.field.Zero;
     var t = this.field.One;
-    var v669 = r$$1.Degree >= JAM.call(Math.floor, Math, [R / 2], JAM.policy.p21);
-    for (;v669;) {
+    var v668 = r$$1.Degree >= JAM.call(Math.floor, Math, [R / 2], JAM.policy.p22);
+    for (;v668;) {
       var rLastLast = rLast;
       var sLastLast = sLast;
       var tLastLast = tLast;
@@ -1971,99 +1973,100 @@ function ReedSolomonDecoder(field) {
       }
       r$$1 = rLastLast;
       var q = this.field.Zero;
-      var denominatorLeadingTerm = JAM.call(rLast.getCoefficient, rLast, [rLast.Degree], JAM.policy.p21);
-      var v659 = this.field;
-      var dltInverse = JAM.call(v659.inverse, v659, [denominatorLeadingTerm], JAM.policy.p21);
-      var v1559 = r$$1.Degree >= rLast.Degree;
-      if (v1559) {
-        v1559 = !r$$1.Zero;
+      var denominatorLeadingTerm = JAM.call(rLast.getCoefficient, rLast, [rLast.Degree], JAM.policy.p22);
+      var v658 = this.field;
+      var dltInverse = JAM.call(v658.inverse, v658, [denominatorLeadingTerm], JAM.policy.p22);
+      var v1558 = r$$1.Degree >= rLast.Degree;
+      if (v1558) {
+        v1558 = !r$$1.Zero;
       }
-      var v666 = v1559;
-      for (;v666;) {
+      var v665 = v1558;
+      for (;v665;) {
         var degreeDiff = r$$1.Degree - rLast.Degree;
-        var v662 = this.field;
-        var scale$$1 = JAM.call(v662.multiply, v662, [JAM.call(r$$1.getCoefficient, r$$1, [r$$1.Degree], JAM.policy.p21), dltInverse], JAM.policy.p33);
-        var v1561 = this.field;
-        q = JAM.call(q.addOrSubtract, q, [JAM.call(v1561.buildMonomial, v1561, [degreeDiff, scale$$1], JAM.policy.p33)], JAM.policy.p21);
-        r$$1 = JAM.call(r$$1.addOrSubtract, r$$1, [JAM.call(rLast.multiplyByMonomial, rLast, [degreeDiff, scale$$1], JAM.policy.p33)], JAM.policy.p21);
-        var v1562 = r$$1.Degree >= rLast.Degree;
-        if (v1562) {
-          v1562 = !r$$1.Zero;
+        var v661 = this.field;
+        var scale$$1 = JAM.call(v661.multiply, v661, [JAM.call(r$$1.getCoefficient, r$$1, [r$$1.Degree], JAM.policy.p22), dltInverse], JAM.policy.p33);
+        var v1560 = this.field;
+        q = JAM.call(q.addOrSubtract, q, [JAM.call(v1560.buildMonomial, v1560, [degreeDiff, scale$$1], JAM.policy.p33)], JAM.policy.p22);
+        r$$1 = JAM.call(r$$1.addOrSubtract, r$$1, [JAM.call(rLast.multiplyByMonomial, rLast, [degreeDiff, scale$$1], JAM.policy.p33)], JAM.policy.p22);
+        var v1561 = r$$1.Degree >= rLast.Degree;
+        if (v1561) {
+          v1561 = !r$$1.Zero;
         }
-        v666 = v1562;
+        v665 = v1561;
       }
-      var v667 = JAM.call(q.multiply1, q, [sLast], JAM.policy.p21);
-      s$$2 = JAM.call(v667.addOrSubtract, v667, [sLastLast], JAM.policy.p21);
-      var v668 = JAM.call(q.multiply1, q, [tLast], JAM.policy.p21);
-      t = JAM.call(v668.addOrSubtract, v668, [tLastLast], JAM.policy.p21);
-      v669 = r$$1.Degree >= JAM.call(Math.floor, Math, [R / 2], JAM.policy.p21);
+      var v666 = JAM.call(q.multiply1, q, [sLast], JAM.policy.p22);
+      s$$2 = JAM.call(v666.addOrSubtract, v666, [sLastLast], JAM.policy.p22);
+      var v667 = JAM.call(q.multiply1, q, [tLast], JAM.policy.p22);
+      t = JAM.call(v667.addOrSubtract, v667, [tLastLast], JAM.policy.p22);
+      v668 = r$$1.Degree >= JAM.call(Math.floor, Math, [R / 2], JAM.policy.p22);
     }
     var sigmaTildeAtZero = JAM.call(t.getCoefficient, t, [0], JAM.policy.p18);
     if (sigmaTildeAtZero == 0) {
       throw "ReedSolomonException sigmaTilde(0) was zero";
     }
-    var v671 = this.field;
-    var inverse = JAM.call(v671.inverse, v671, [sigmaTildeAtZero], JAM.policy.p21);
-    var sigma$$1 = JAM.call(t.multiply2, t, [inverse], JAM.policy.p21);
-    var omega$$1 = JAM.call(r$$1.multiply2, r$$1, [inverse], JAM.policy.p21);
+    var v670 = this.field;
+    var inverse = JAM.call(v670.inverse, v670, [sigmaTildeAtZero], JAM.policy.p22);
+    var sigma$$1 = JAM.call(t.multiply2, t, [inverse], JAM.policy.p22);
+    var omega$$1 = JAM.call(r$$1.multiply2, r$$1, [inverse], JAM.policy.p22);
     return new Array(sigma$$1, omega$$1);
   }
   function v64(received, twoS) {
     var poly = new GF256Poly(this.field, received);
     var syndromeCoefficients = new Array(twoS);
     var i$$32 = 0;
-    var v673 = i$$32 < syndromeCoefficients.length;
-    for (;v673;) {
+    var v672 = i$$32 < syndromeCoefficients.length;
+    for (;v672;) {
       syndromeCoefficients[i$$32] = 0;
       i$$32++;
-      v673 = i$$32 < syndromeCoefficients.length;
+      v672 = i$$32 < syndromeCoefficients.length;
     }
     var dataMatrix = false;
     var noError = true;
     i$$32 = 0;
-    var v677 = i$$32 < twoS;
-    for (;v677;) {
-      var v1567 = this.field;
-      var v2290;
+    var v676 = i$$32 < twoS;
+    for (;v676;) {
+      var v1566 = this.field;
+      var v2288;
       if (dataMatrix) {
-        v2290 = i$$32 + 1;
+        v2288 = i$$32 + 1;
       } else {
-        v2290 = i$$32;
+        v2288 = i$$32;
       }
-      var eval$$1 = JAM.call(poly.evaluateAt, poly, [JAM.call(v1567.exp, v1567, [v2290], JAM.policy.p21)], JAM.policy.p21);
+      var eval$$1 = JAM.call(poly.evaluateAt, poly, [JAM.call(v1566.exp, v1566, [v2288], JAM.policy.p22)], JAM.policy.p22);
       syndromeCoefficients[syndromeCoefficients.length - 1 - i$$32] = eval$$1;
       if (eval$$1 != 0) {
         noError = false;
       }
       i$$32++;
-      v677 = i$$32 < twoS;
+      v676 = i$$32 < twoS;
     }
     if (noError) {
       return;
     }
     var syndrome = new GF256Poly(this.field, syndromeCoefficients);
-    var v1570 = this.field;
-    var sigmaOmega = JAM.call(this.runEuclideanAlgorithm, this, [JAM.call(v1570.buildMonomial, v1570, [twoS, 1], JAM.policy.p25), syndrome, twoS], JAM.policy.p33);
+    var v1569 = this.field;
+    var sigmaOmega = JAM.call(this.runEuclideanAlgorithm, this, [JAM.call(v1569.buildMonomial, v1569, [twoS, 1], JAM.policy.p25), syndrome, twoS], JAM.policy.p33);
     var sigma = sigmaOmega[0];
     var omega = sigmaOmega[1];
-    var errorLocations = JAM.call(this.findErrorLocations, this, [sigma], JAM.policy.p21);
+    var errorLocations = JAM.call(this.findErrorLocations, this, [sigma], JAM.policy.p22);
     var errorMagnitudes = JAM.call(this.findErrorMagnitudes, this, [omega, errorLocations, dataMatrix], JAM.policy.p33);
     i$$32 = 0;
-    var v685 = i$$32 < errorLocations.length;
-    for (;v685;) {
-      var v680 = received.length - 1;
-      var v1573 = this.field;
-      var position = v680 - JAM.call(v1573.log, v1573, [errorLocations[i$$32]], JAM.policy.p21);
+    var v684 = i$$32 < errorLocations.length;
+    for (;v684;) {
+      var v679 = received.length - 1;
+      var v1572 = this.field;
+      var position = v679 - JAM.call(v1572.log, v1572, [errorLocations[i$$32]], JAM.policy.p22);
       if (position < 0) {
         throw "ReedSolomonException Bad error location";
       }
-      var v2814 = JAM.call(GF256.addOrSubtract, GF256, [received[position], errorMagnitudes[i$$32]], JAM.policy.p33);
-      received[position] = v2814;
+      var v2812 = JAM.call(GF256.addOrSubtract, GF256, [received[position], errorMagnitudes[i$$32]], JAM.policy.p33);
+      received[position] = v2812;
       i$$32++;
-      v685 = i$$32 < errorLocations.length;
+      v684 = i$$32 < errorLocations.length;
     }
     return;
   }
+  var field = GF256.QR_CODE_FIELD;
   this.field = field;
   this.decode = v64;
   this.runEuclideanAlgorithm = v65;
@@ -2081,28 +2084,28 @@ function GF256Poly(field$$1, coefficients) {
     }
     var quotient = this.field.Zero;
     var remainder = this;
-    var denominatorLeadingTerm$$1 = JAM.call(other$$8.getCoefficient, other$$8, [other$$8.Degree], JAM.policy.p21);
-    var v690 = this.field;
-    var inverseDenominatorLeadingTerm = JAM.call(v690.inverse, v690, [denominatorLeadingTerm$$1], JAM.policy.p21);
-    var v1578 = remainder.Degree >= other$$8.Degree;
-    if (v1578) {
-      v1578 = !remainder.Zero;
+    var denominatorLeadingTerm$$1 = JAM.call(other$$8.getCoefficient, other$$8, [other$$8.Degree], JAM.policy.p22);
+    var v689 = this.field;
+    var inverseDenominatorLeadingTerm = JAM.call(v689.inverse, v689, [denominatorLeadingTerm$$1], JAM.policy.p22);
+    var v1577 = remainder.Degree >= other$$8.Degree;
+    if (v1577) {
+      v1577 = !remainder.Zero;
     }
-    var v696 = v1578;
-    for (;v696;) {
+    var v695 = v1577;
+    for (;v695;) {
       var degreeDifference = remainder.Degree - other$$8.Degree;
-      var v693 = this.field;
-      var scale$$2 = JAM.call(v693.multiply, v693, [JAM.call(remainder.getCoefficient, remainder, [remainder.Degree], JAM.policy.p21), inverseDenominatorLeadingTerm], JAM.policy.p33);
+      var v692 = this.field;
+      var scale$$2 = JAM.call(v692.multiply, v692, [JAM.call(remainder.getCoefficient, remainder, [remainder.Degree], JAM.policy.p22), inverseDenominatorLeadingTerm], JAM.policy.p33);
       var term = JAM.call(other$$8.multiplyByMonomial, other$$8, [degreeDifference, scale$$2], JAM.policy.p33);
-      var v695 = this.field;
-      var iterationQuotient = JAM.call(v695.buildMonomial, v695, [degreeDifference, scale$$2], JAM.policy.p33);
-      quotient = JAM.call(quotient.addOrSubtract, quotient, [iterationQuotient], JAM.policy.p21);
-      remainder = JAM.call(remainder.addOrSubtract, remainder, [term], JAM.policy.p21);
-      var v1580 = remainder.Degree >= other$$8.Degree;
-      if (v1580) {
-        v1580 = !remainder.Zero;
+      var v694 = this.field;
+      var iterationQuotient = JAM.call(v694.buildMonomial, v694, [degreeDifference, scale$$2], JAM.policy.p33);
+      quotient = JAM.call(quotient.addOrSubtract, quotient, [iterationQuotient], JAM.policy.p22);
+      remainder = JAM.call(remainder.addOrSubtract, remainder, [term], JAM.policy.p22);
+      var v1579 = remainder.Degree >= other$$8.Degree;
+      if (v1579) {
+        v1579 = !remainder.Zero;
       }
-      v696 = v1580;
+      v695 = v1579;
     }
     return new Array(quotient, remainder);
   }
@@ -2116,20 +2119,20 @@ function GF256Poly(field$$1, coefficients) {
     var size$$6 = this.coefficients.length;
     var product$$2 = new Array(size$$6 + degree$$1);
     var i$$40 = 0;
-    var v702 = i$$40 < product$$2.length;
-    for (;v702;) {
+    var v701 = i$$40 < product$$2.length;
+    for (;v701;) {
       product$$2[i$$40] = 0;
       i$$40++;
-      v702 = i$$40 < product$$2.length;
+      v701 = i$$40 < product$$2.length;
     }
     i$$40 = 0;
-    var v705 = i$$40 < size$$6;
-    for (;v705;) {
-      var v703 = this.field;
-      var v2815 = JAM.call(v703.multiply, v703, [this.coefficients[i$$40], coefficient], JAM.policy.p33);
-      product$$2[i$$40] = v2815;
+    var v704 = i$$40 < size$$6;
+    for (;v704;) {
+      var v702 = this.field;
+      var v2813 = JAM.call(v702.multiply, v702, [this.coefficients[i$$40], coefficient], JAM.policy.p33);
+      product$$2[i$$40] = v2813;
       i$$40++;
-      v705 = i$$40 < size$$6;
+      v704 = i$$40 < size$$6;
     }
     return new GF256Poly(this.field, product$$2);
   }
@@ -2143,13 +2146,13 @@ function GF256Poly(field$$1, coefficients) {
     var size$$5 = this.coefficients.length;
     var product$$1 = new Array(size$$5);
     var i$$39 = 0;
-    var v713 = i$$39 < size$$5;
-    for (;v713;) {
-      var v711 = this.field;
-      var v2816 = JAM.call(v711.multiply, v711, [this.coefficients[i$$39], scalar], JAM.policy.p33);
-      product$$1[i$$39] = v2816;
+    var v712 = i$$39 < size$$5;
+    for (;v712;) {
+      var v710 = this.field;
+      var v2814 = JAM.call(v710.multiply, v710, [this.coefficients[i$$39], scalar], JAM.policy.p33);
+      product$$1[i$$39] = v2814;
       i$$39++;
-      v713 = i$$39 < size$$5;
+      v712 = i$$39 < size$$5;
     }
     return new GF256Poly(this.field, product$$1);
   }
@@ -2157,11 +2160,11 @@ function GF256Poly(field$$1, coefficients) {
     if (this.field != other$$7.field) {
       throw "GF256Polys do not have same GF256 field";
     }
-    var v1587 = this.Zero;
-    if (!v1587) {
-      v1587 = other$$7.Zero;
+    var v1586 = this.Zero;
+    if (!v1586) {
+      v1586 = other$$7.Zero;
     }
-    if (v1587) {
+    if (v1586) {
       return this.field.Zero;
     }
     var aCoefficients = this.coefficients;
@@ -2170,22 +2173,22 @@ function GF256Poly(field$$1, coefficients) {
     var bLength = bCoefficients.length;
     var product = new Array(aLength + bLength - 1);
     var i$$38 = 0;
-    var v721 = i$$38 < aLength;
-    for (;v721;) {
+    var v720 = i$$38 < aLength;
+    for (;v720;) {
       var aCoeff = aCoefficients[i$$38];
       var j$$22 = 0;
-      var v720 = j$$22 < bLength;
-      for (;v720;) {
-        var v719 = i$$38 + j$$22;
-        var v1589 = product[i$$38 + j$$22];
-        var v2300 = this.field;
-        var v2817 = JAM.call(GF256.addOrSubtract, GF256, [v1589, JAM.call(v2300.multiply, v2300, [aCoeff, bCoefficients[j$$22]], JAM.policy.p33)], JAM.policy.p33);
-        product[v719] = v2817;
+      var v719 = j$$22 < bLength;
+      for (;v719;) {
+        var v718 = i$$38 + j$$22;
+        var v1588 = product[i$$38 + j$$22];
+        var v2298 = this.field;
+        var v2815 = JAM.call(GF256.addOrSubtract, GF256, [v1588, JAM.call(v2298.multiply, v2298, [aCoeff, bCoefficients[j$$22]], JAM.policy.p33)], JAM.policy.p33);
+        product[v718] = v2815;
         j$$22++;
-        v720 = j$$22 < bLength;
+        v719 = j$$22 < bLength;
       }
       i$$38++;
-      v721 = i$$38 < aLength;
+      v720 = i$$38 < aLength;
     }
     return new GF256Poly(this.field, product);
   }
@@ -2209,19 +2212,19 @@ function GF256Poly(field$$1, coefficients) {
     var sumDiff = new Array(largerCoefficients.length);
     var lengthDiff = largerCoefficients.length - smallerCoefficients.length;
     var ci$$1 = 0;
-    var v730 = ci$$1 < lengthDiff;
-    for (;v730;) {
+    var v729 = ci$$1 < lengthDiff;
+    for (;v729;) {
       sumDiff[ci$$1] = largerCoefficients[ci$$1];
       ci$$1++;
-      v730 = ci$$1 < lengthDiff;
+      v729 = ci$$1 < lengthDiff;
     }
     var i$$37 = lengthDiff;
-    var v733 = i$$37 < largerCoefficients.length;
-    for (;v733;) {
-      var v2818 = JAM.call(GF256.addOrSubtract, GF256, [smallerCoefficients[i$$37 - lengthDiff], largerCoefficients[i$$37]], JAM.policy.p33);
-      sumDiff[i$$37] = v2818;
+    var v732 = i$$37 < largerCoefficients.length;
+    for (;v732;) {
+      var v2816 = JAM.call(GF256.addOrSubtract, GF256, [smallerCoefficients[i$$37 - lengthDiff], largerCoefficients[i$$37]], JAM.policy.p33);
+      sumDiff[i$$37] = v2816;
       i$$37++;
-      v733 = i$$37 < largerCoefficients.length;
+      v732 = i$$37 < largerCoefficients.length;
     }
     return new GF256Poly(field$$1, sumDiff);
   }
@@ -2233,22 +2236,22 @@ function GF256Poly(field$$1, coefficients) {
     if (a$$2 == 1) {
       var result$$5 = 0;
       var i$$36 = 0;
-      var v737 = i$$36 < size$$4;
-      for (;v737;) {
+      var v736 = i$$36 < size$$4;
+      for (;v736;) {
         result$$5 = JAM.call(GF256.addOrSubtract, GF256, [result$$5, this.coefficients[i$$36]], JAM.policy.p33);
         i$$36++;
-        v737 = i$$36 < size$$4;
+        v736 = i$$36 < size$$4;
       }
       return result$$5;
     }
     var result2 = this.coefficients[0];
     i$$36 = 1;
-    var v742 = i$$36 < size$$4;
-    for (;v742;) {
-      var v1599 = this.field;
-      result2 = JAM.call(GF256.addOrSubtract, GF256, [JAM.call(v1599.multiply, v1599, [a$$2, result2], JAM.policy.p33), this.coefficients[i$$36]], JAM.policy.p33);
+    var v741 = i$$36 < size$$4;
+    for (;v741;) {
+      var v1598 = this.field;
+      result2 = JAM.call(GF256.addOrSubtract, GF256, [JAM.call(v1598.multiply, v1598, [a$$2, result2], JAM.policy.p33), this.coefficients[i$$36]], JAM.policy.p33);
       i$$36++;
-      v742 = i$$36 < size$$4;
+      v741 = i$$36 < size$$4;
     }
     return result2;
   }
@@ -2264,52 +2267,52 @@ function GF256Poly(field$$1, coefficients) {
   function v68() {
     return this.coefficients[0] == 0;
   }
-  var v1604 = coefficients == null;
-  if (!v1604) {
-    v1604 = coefficients.length == 0;
+  var v1603 = coefficients == null;
+  if (!v1603) {
+    v1603 = coefficients.length == 0;
   }
-  if (v1604) {
+  if (v1603) {
     throw "System.ArgumentException";
   }
   this.field = field$$1;
   var coefficientsLength = coefficients.length;
-  var v1605 = coefficientsLength > 1;
-  if (v1605) {
-    v1605 = coefficients[0] == 0;
+  var v1604 = coefficientsLength > 1;
+  if (v1604) {
+    v1604 = coefficients[0] == 0;
   }
-  if (v1605) {
+  if (v1604) {
     var firstNonZero = 1;
-    var v1606 = firstNonZero < coefficientsLength;
-    if (v1606) {
-      v1606 = coefficients[firstNonZero] == 0;
+    var v1605 = firstNonZero < coefficientsLength;
+    if (v1605) {
+      v1605 = coefficients[firstNonZero] == 0;
     }
-    var v748 = v1606;
-    for (;v748;) {
+    var v747 = v1605;
+    for (;v747;) {
       firstNonZero++;
-      var v1607 = firstNonZero < coefficientsLength;
-      if (v1607) {
-        v1607 = coefficients[firstNonZero] == 0;
+      var v1606 = firstNonZero < coefficientsLength;
+      if (v1606) {
+        v1606 = coefficients[firstNonZero] == 0;
       }
-      v748 = v1607;
+      v747 = v1606;
     }
     if (firstNonZero == coefficientsLength) {
       this.coefficients = field$$1.Zero.coefficients;
     } else {
-      var v2819 = new Array(coefficientsLength - firstNonZero);
-      this.coefficients = v2819;
+      var v2817 = new Array(coefficientsLength - firstNonZero);
+      this.coefficients = v2817;
       var i$$35 = 0;
-      var v752 = i$$35 < this.coefficients.length;
-      for (;v752;) {
+      var v751 = i$$35 < this.coefficients.length;
+      for (;v751;) {
         this.coefficients[i$$35] = 0;
         i$$35++;
-        v752 = i$$35 < this.coefficients.length;
+        v751 = i$$35 < this.coefficients.length;
       }
       var ci = 0;
-      var v754 = ci < this.coefficients.length;
-      for (;v754;) {
+      var v753 = ci < this.coefficients.length;
+      for (;v753;) {
         this.coefficients[ci] = coefficients[firstNonZero + ci];
         ci++;
-        v754 = ci < this.coefficients.length;
+        v753 = ci < this.coefficients.length;
       }
     }
   } else {
@@ -2329,11 +2332,11 @@ function GF256Poly(field$$1, coefficients) {
 }
 function GF256(primitive) {
   function v84(a$$6, b$$3) {
-    var v1613 = a$$6 == 0;
-    if (!v1613) {
-      v1613 = b$$3 == 0;
+    var v1612 = a$$6 == 0;
+    if (!v1612) {
+      v1612 = b$$3 == 0;
     }
-    if (v1613) {
+    if (v1612) {
       return 0;
     }
     if (a$$6 == 1) {
@@ -2368,11 +2371,11 @@ function GF256(primitive) {
     }
     var coefficients$$1 = new Array(degree$$2 + 1);
     var i$$42 = 0;
-    var v771 = i$$42 < coefficients$$1.length;
-    for (;v771;) {
+    var v770 = i$$42 < coefficients$$1.length;
+    for (;v770;) {
       coefficients$$1[i$$42] = 0;
       i$$42++;
-      v771 = i$$42 < coefficients$$1.length;
+      v770 = i$$42 < coefficients$$1.length;
     }
     coefficients$$1[0] = coefficient$$1;
     return new GF256Poly(this, coefficients$$1);
@@ -2383,41 +2386,41 @@ function GF256(primitive) {
   function v78() {
     return this.zero;
   }
-  var v2820 = new Array(256);
-  this.expTable = v2820;
-  var v2821 = new Array(256);
-  this.logTable = v2821;
+  var v2818 = new Array(256);
+  this.expTable = v2818;
+  var v2819 = new Array(256);
+  this.logTable = v2819;
   var x$$57 = 1;
   var i$$41 = 0;
-  var v774 = i$$41 < 256;
-  for (;v774;) {
+  var v773 = i$$41 < 256;
+  for (;v773;) {
     this.expTable[i$$41] = x$$57;
     x$$57 = x$$57 << 1;
     if (x$$57 >= 256) {
       x$$57 = x$$57 ^ primitive;
     }
     i$$41++;
-    v774 = i$$41 < 256;
+    v773 = i$$41 < 256;
   }
   i$$41 = 0;
-  var v777 = i$$41 < 255;
-  for (;v777;) {
-    var v775 = this.logTable;
-    var v776 = this.expTable[i$$41];
+  var v776 = i$$41 < 255;
+  for (;v776;) {
+    var v774 = this.logTable;
+    var v775 = this.expTable[i$$41];
     introspect(JAM.policy.p6) {
-      v775[v776] = i$$41;
+      v774[v775] = i$$41;
     }
     i$$41++;
-    v777 = i$$41 < 255;
+    v776 = i$$41 < 255;
   }
   var at0 = new Array(1);
   at0[0] = 0;
-  var v2822 = new GF256Poly(this, new Array(at0));
-  this.zero = v2822;
+  var v2820 = new GF256Poly(this, new Array(at0));
+  this.zero = v2820;
   var at1 = new Array(1);
   at1[0] = 1;
-  var v2823 = new GF256Poly(this, new Array(at1));
-  this.one = v2823;
+  var v2821 = new GF256Poly(this, new Array(at1));
+  this.one = v2821;
   JAM.call(this.__defineGetter__, this, ["Zero", v78], JAM.policy.p19);
   JAM.call(this.__defineGetter__, this, ["One", v79], JAM.policy.p19);
   this.buildMonomial = v80;
@@ -2431,23 +2434,23 @@ function URShift(number, bits$$14) {
   if (number >= 0) {
     return number >> bits$$14;
   } else {
-    return(number >> bits$$14) + (2 << ~bits$$14);
+    return (number >> bits$$14) + (2 << ~bits$$14);
   }
   return;
 }
 function FinderPattern(posX, posY, estimatedModuleSize) {
   function v90(moduleSize$$2, i$$47, j$$25) {
-    var v1620 = JAM.call(Math.abs, Math, [i$$47 - this.y], JAM.policy.p21) <= moduleSize$$2;
-    if (v1620) {
-      v1620 = JAM.call(Math.abs, Math, [j$$25 - this.x], JAM.policy.p21) <= moduleSize$$2;
+    var v1619 = JAM.call(Math.abs, Math, [i$$47 - this.y], JAM.policy.p22) <= moduleSize$$2;
+    if (v1619) {
+      v1619 = JAM.call(Math.abs, Math, [j$$25 - this.x], JAM.policy.p22) <= moduleSize$$2;
     }
-    if (v1620) {
-      var moduleSizeDiff = JAM.call(Math.abs, Math, [moduleSize$$2 - this.estimatedModuleSize], JAM.policy.p21);
-      var v784 = moduleSizeDiff <= 1;
-      if (!v784) {
-        v784 = moduleSizeDiff / this.estimatedModuleSize <= 1;
+    if (v1619) {
+      var moduleSizeDiff = JAM.call(Math.abs, Math, [moduleSize$$2 - this.estimatedModuleSize], JAM.policy.p22);
+      var v783 = moduleSizeDiff <= 1;
+      if (!v783) {
+        v783 = moduleSizeDiff / this.estimatedModuleSize <= 1;
       }
-      return v784;
+      return v783;
     }
     return false;
   }
@@ -2503,23 +2506,23 @@ function FinderPatternFinder() {
     this.image = image$$12;
     var maxI$$1 = qrcode.height;
     var maxJ$$1 = qrcode.width;
-    var iSkip = JAM.call(Math.floor, Math, [3 * maxI$$1 / (4 * MAX_MODULES)], JAM.policy.p21);
-    var v1626 = iSkip < MIN_SKIP;
-    if (!v1626) {
-      v1626 = tryHarder;
+    var iSkip = JAM.call(Math.floor, Math, [3 * maxI$$1 / (4 * MAX_MODULES)], JAM.policy.p22);
+    var v1625 = iSkip < MIN_SKIP;
+    if (!v1625) {
+      v1625 = tryHarder;
     }
-    if (v1626) {
+    if (v1625) {
       iSkip = MIN_SKIP;
     }
     var done = false;
     var stateCount$$5 = new Array(5);
     var i$$54 = iSkip - 1;
-    var v1627 = i$$54 < maxI$$1;
-    if (v1627) {
-      v1627 = !done;
+    var v1626 = i$$54 < maxI$$1;
+    if (v1626) {
+      v1626 = !done;
     }
-    var v799 = v1627;
-    for (;v799;) {
+    var v798 = v1626;
+    for (;v798;) {
       stateCount$$5[0] = 0;
       stateCount$$5[1] = 0;
       stateCount$$5[2] = 0;
@@ -2527,8 +2530,8 @@ function FinderPatternFinder() {
       stateCount$$5[4] = 0;
       var currentState = 0;
       var j$$28 = 0;
-      var v796 = j$$28 < maxJ$$1;
-      for (;v796;) {
+      var v795 = j$$28 < maxJ$$1;
+      for (;v795;) {
         if (image$$12[j$$28 + i$$54 * qrcode.width]) {
           if ((currentState & 1) == 1) {
             currentState++;
@@ -2537,7 +2540,7 @@ function FinderPatternFinder() {
         } else {
           if ((currentState & 1) == 0) {
             if (currentState == 4) {
-              if (JAM.call(this.foundPatternCross, this, [stateCount$$5], JAM.policy.p21)) {
+              if (JAM.call(this.foundPatternCross, this, [stateCount$$5], JAM.policy.p22)) {
                 var confirmed = JAM.call(this.handlePossibleCenter, this, [stateCount$$5, i$$54, j$$28], JAM.policy.p33);
                 if (confirmed) {
                   iSkip = 2;
@@ -2551,19 +2554,19 @@ function FinderPatternFinder() {
                     }
                   }
                 } else {
-                  var v1633 = j$$28 < maxJ$$1;
-                  if (v1633) {
-                    v1633 = !image$$12[j$$28 + i$$54 * qrcode.width];
+                  var v1632 = j$$28 < maxJ$$1;
+                  if (v1632) {
+                    v1632 = !image$$12[j$$28 + i$$54 * qrcode.width];
                   }
-                  var v791 = v1633;
+                  var v790 = v1632;
                   do {
                     j$$28++;
-                    var v1634 = j$$28 < maxJ$$1;
-                    if (v1634) {
-                      v1634 = !image$$12[j$$28 + i$$54 * qrcode.width];
+                    var v1633 = j$$28 < maxJ$$1;
+                    if (v1633) {
+                      v1633 = !image$$12[j$$28 + i$$54 * qrcode.width];
                     }
-                    v791 = v1634;
-                  } while (v791);
+                    v790 = v1633;
+                  } while (v790);
                   j$$28--;
                 }
                 currentState = 0;
@@ -2590,9 +2593,9 @@ function FinderPatternFinder() {
           }
         }
         j$$28++;
-        v796 = j$$28 < maxJ$$1;
+        v795 = j$$28 < maxJ$$1;
       }
-      if (JAM.call(this.foundPatternCross, this, [stateCount$$5], JAM.policy.p21)) {
+      if (JAM.call(this.foundPatternCross, this, [stateCount$$5], JAM.policy.p22)) {
         confirmed = JAM.call(this.handlePossibleCenter, this, [stateCount$$5, i$$54, maxJ$$1], JAM.policy.p33);
         if (confirmed) {
           iSkip = stateCount$$5[0];
@@ -2602,14 +2605,14 @@ function FinderPatternFinder() {
         }
       }
       i$$54 = i$$54 + iSkip;
-      var v1635 = i$$54 < maxI$$1;
-      if (v1635) {
-        v1635 = !done;
+      var v1634 = i$$54 < maxI$$1;
+      if (v1634) {
+        v1634 = !done;
       }
-      v799 = v1635;
+      v798 = v1634;
     }
     var patternInfo = this.selectBestPatterns();
-    JAM.call(qrcode.orderBestPatterns, qrcode, [patternInfo], JAM.policy.p21);
+    JAM.call(qrcode.orderBestPatterns, qrcode, [patternInfo], JAM.policy.p22);
     return new FinderPatternInfo(patternInfo);
   }
   function v103() {
@@ -2617,15 +2620,15 @@ function FinderPatternFinder() {
     var totalModuleSize$$2 = 0;
     var max$$7 = this.possibleCenters.length;
     var i$$53 = 0;
-    var v803 = i$$53 < max$$7;
-    for (;v803;) {
+    var v802 = i$$53 < max$$7;
+    for (;v802;) {
       var pattern$$3 = this.possibleCenters[i$$53];
       if (pattern$$3.Count >= CENTER_QUORUM) {
         confirmedCount++;
         totalModuleSize$$2 = totalModuleSize$$2 + pattern$$3.EstimatedModuleSize;
       }
       i$$53++;
-      v803 = i$$53 < max$$7;
+      v802 = i$$53 < max$$7;
     }
     if (confirmedCount < 3) {
       return false;
@@ -2633,12 +2636,12 @@ function FinderPatternFinder() {
     var average$$1 = totalModuleSize$$2 / max$$7;
     var totalDeviation = 0;
     i$$53 = 0;
-    var v806 = i$$53 < max$$7;
-    for (;v806;) {
+    var v805 = i$$53 < max$$7;
+    for (;v805;) {
       pattern$$3 = this.possibleCenters[i$$53];
-      totalDeviation = totalDeviation + JAM.call(Math.abs, Math, [pattern$$3.EstimatedModuleSize - average$$1], JAM.policy.p21);
+      totalDeviation = totalDeviation + JAM.call(Math.abs, Math, [pattern$$3.EstimatedModuleSize - average$$1], JAM.policy.p22);
       i$$53++;
-      v806 = i$$53 < max$$7;
+      v805 = i$$53 < max$$7;
     }
     return totalDeviation <= .05 * totalModuleSize$$2;
   }
@@ -2649,26 +2652,26 @@ function FinderPatternFinder() {
     }
     var firstConfirmedCenter = null;
     var i$$52 = 0;
-    var v814 = i$$52 < max$$6;
-    for (;v814;) {
+    var v813 = i$$52 < max$$6;
+    for (;v813;) {
       var center$$1 = this.possibleCenters[i$$52];
       if (center$$1.Count >= CENTER_QUORUM) {
         if (firstConfirmedCenter == null) {
           firstConfirmedCenter = center$$1;
         } else {
           this.hasSkipped = true;
-          return JAM.call(Math.floor, Math, [(JAM.call(Math.abs, Math, [firstConfirmedCenter.X - center$$1.X], JAM.policy.p21) - JAM.call(Math.abs, Math, [firstConfirmedCenter.Y - center$$1.Y], JAM.policy.p21)) / 2], JAM.policy.p21);
+          return JAM.call(Math.floor, Math, [(JAM.call(Math.abs, Math, [firstConfirmedCenter.X - center$$1.X], JAM.policy.p22) - JAM.call(Math.abs, Math, [firstConfirmedCenter.Y - center$$1.Y], JAM.policy.p22)) / 2], JAM.policy.p22);
         }
       }
       i$$52++;
-      v814 = i$$52 < max$$6;
+      v813 = i$$52 < max$$6;
     }
     return 0;
   }
   function v101() {
     function v100(a$$8, b$$5) {
       if (a$$8.count > b$$5.count) {
-        return-1;
+        return -1;
       }
       if (a$$8.count < b$$5.count) {
         return 1;
@@ -2682,53 +2685,53 @@ function FinderPatternFinder() {
     if (startSize > 3) {
       var totalModuleSize$$1 = 0;
       var i$$51 = 0;
-      var v819 = i$$51 < startSize;
-      for (;v819;) {
+      var v818 = i$$51 < startSize;
+      for (;v818;) {
         totalModuleSize$$1 = totalModuleSize$$1 + this.possibleCenters[i$$51].EstimatedModuleSize;
         i$$51++;
-        v819 = i$$51 < startSize;
+        v818 = i$$51 < startSize;
       }
       var average = totalModuleSize$$1 / startSize;
       i$$51 = 0;
-      var v1646 = i$$51 < this.possibleCenters.length;
-      if (v1646) {
-        v1646 = this.possibleCenters.length > 3;
+      var v1645 = i$$51 < this.possibleCenters.length;
+      if (v1645) {
+        v1645 = this.possibleCenters.length > 3;
       }
-      var v823 = v1646;
-      for (;v823;) {
+      var v822 = v1645;
+      for (;v822;) {
         var pattern$$2 = this.possibleCenters[i$$51];
-        if (JAM.call(Math.abs, Math, [pattern$$2.EstimatedModuleSize - average], JAM.policy.p21) > .2 * average) {
-          var v821 = this.possibleCenters;
-          JAM.call(v821.remove, v821, [i$$51], JAM.policy.p24);
+        if (JAM.call(Math.abs, Math, [pattern$$2.EstimatedModuleSize - average], JAM.policy.p22) > .2 * average) {
+          var v820 = this.possibleCenters;
+          JAM.call(v820.remove, v820, [i$$51], JAM.policy.p24);
           i$$51--;
         }
         i$$51++;
-        var v1649 = i$$51 < this.possibleCenters.length;
-        if (v1649) {
-          v1649 = this.possibleCenters.length > 3;
+        var v1648 = i$$51 < this.possibleCenters.length;
+        if (v1648) {
+          v1648 = this.possibleCenters.length > 3;
         }
-        v823 = v1649;
+        v822 = v1648;
       }
     }
     if (this.possibleCenters.length > 3) {
-      var v825 = this.possibleCenters;
-      JAM.call(v825.sort, v825, [v100], JAM.policy.p21);
+      var v824 = this.possibleCenters;
+      JAM.call(v824.sort, v824, [v100], JAM.policy.p22);
     }
     return new Array(this.possibleCenters[0], this.possibleCenters[1], this.possibleCenters[2]);
   }
   function v99(stateCount$$4, i$$50, j$$27) {
     var stateCountTotal$$2 = stateCount$$4[0] + stateCount$$4[1] + stateCount$$4[2] + stateCount$$4[3] + stateCount$$4[4];
     var centerJ$$1 = JAM.call(this.centerFromEnd, this, [stateCount$$4, j$$27], JAM.policy.p33);
-    var centerI$$1 = JAM.call(this.crossCheckVertical, this, [i$$50, JAM.call(Math.floor, Math, [centerJ$$1], JAM.policy.p21), stateCount$$4[2], stateCountTotal$$2], JAM.policy.p33);
+    var centerI$$1 = JAM.call(this.crossCheckVertical, this, [i$$50, JAM.call(Math.floor, Math, [centerJ$$1], JAM.policy.p22), stateCount$$4[2], stateCountTotal$$2], JAM.policy.p33);
     if (!isNaN(centerI$$1)) {
-      centerJ$$1 = JAM.call(this.crossCheckHorizontal, this, [JAM.call(Math.floor, Math, [centerJ$$1], JAM.policy.p21), JAM.call(Math.floor, Math, [centerI$$1], JAM.policy.p21), stateCount$$4[2], stateCountTotal$$2], JAM.policy.p23);
+      centerJ$$1 = JAM.call(this.crossCheckHorizontal, this, [JAM.call(Math.floor, Math, [centerJ$$1], JAM.policy.p22), JAM.call(Math.floor, Math, [centerI$$1], JAM.policy.p22), stateCount$$4[2], stateCountTotal$$2], JAM.policy.p23);
       if (!isNaN(centerJ$$1)) {
         var estimatedModuleSize$$1 = stateCountTotal$$2 / 7;
         var found = false;
         var max$$5 = this.possibleCenters.length;
         var index$$39 = 0;
-        var v840 = index$$39 < max$$5;
-        for (;v840;) {
+        var v839 = index$$39 < max$$5;
+        for (;v839;) {
           var center = this.possibleCenters[index$$39];
           if (JAM.call(center.aboutEquals, center, [estimatedModuleSize$$1, centerI$$1, centerJ$$1], JAM.policy.p33)) {
             center.incrementCount();
@@ -2736,15 +2739,15 @@ function FinderPatternFinder() {
             break;
           }
           index$$39++;
-          v840 = index$$39 < max$$5;
+          v839 = index$$39 < max$$5;
         }
         if (!found) {
           var point$$2 = new FinderPattern(centerJ$$1, centerI$$1, estimatedModuleSize$$1);
-          var v841 = this.possibleCenters;
-          JAM.call(v841.push, v841, [point$$2], JAM.policy.p21);
+          var v840 = this.possibleCenters;
+          JAM.call(v840.push, v840, [point$$2], JAM.policy.p22);
           if (this.resultPointCallback != null) {
-            var v842 = this.resultPointCallback;
-            JAM.call(v842.foundPossibleResultPoint, v842, [point$$2], JAM.policy.p21);
+            var v841 = this.resultPointCallback;
+            JAM.call(v841.foundPossibleResultPoint, v841, [point$$2], JAM.policy.p22);
           }
         }
         return true;
@@ -2757,320 +2760,320 @@ function FinderPatternFinder() {
     var maxJ = qrcode.width;
     var stateCount$$3 = this.CrossCheckStateCount;
     var j$$26 = startJ;
-    var v1659 = j$$26 >= 0;
-    if (v1659) {
-      v1659 = image$$11[j$$26 + centerI * qrcode.width];
+    var v1658 = j$$26 >= 0;
+    if (v1658) {
+      v1658 = image$$11[j$$26 + centerI * qrcode.width];
     }
-    var v847 = v1659;
-    for (;v847;) {
+    var v846 = v1658;
+    for (;v846;) {
       stateCount$$3[2]++;
       j$$26--;
-      var v1660 = j$$26 >= 0;
-      if (v1660) {
-        v1660 = image$$11[j$$26 + centerI * qrcode.width];
+      var v1659 = j$$26 >= 0;
+      if (v1659) {
+        v1659 = image$$11[j$$26 + centerI * qrcode.width];
       }
-      v847 = v1660;
+      v846 = v1659;
     }
     if (j$$26 < 0) {
       return NaN;
     }
-    var v2338 = j$$26 >= 0;
-    if (v2338) {
-      v2338 = !image$$11[j$$26 + centerI * qrcode.width];
+    var v2336 = j$$26 >= 0;
+    if (v2336) {
+      v2336 = !image$$11[j$$26 + centerI * qrcode.width];
     }
-    var v1661 = v2338;
-    if (v1661) {
-      v1661 = stateCount$$3[1] <= maxCount$$1;
+    var v1660 = v2336;
+    if (v1660) {
+      v1660 = stateCount$$3[1] <= maxCount$$1;
     }
-    var v849 = v1661;
-    for (;v849;) {
+    var v848 = v1660;
+    for (;v848;) {
       stateCount$$3[1]++;
       j$$26--;
-      var v2340 = j$$26 >= 0;
-      if (v2340) {
-        v2340 = !image$$11[j$$26 + centerI * qrcode.width];
+      var v2338 = j$$26 >= 0;
+      if (v2338) {
+        v2338 = !image$$11[j$$26 + centerI * qrcode.width];
       }
-      var v1662 = v2340;
-      if (v1662) {
-        v1662 = stateCount$$3[1] <= maxCount$$1;
+      var v1661 = v2338;
+      if (v1661) {
+        v1661 = stateCount$$3[1] <= maxCount$$1;
       }
-      v849 = v1662;
+      v848 = v1661;
     }
-    var v1663 = j$$26 < 0;
-    if (!v1663) {
-      v1663 = stateCount$$3[1] > maxCount$$1;
+    var v1662 = j$$26 < 0;
+    if (!v1662) {
+      v1662 = stateCount$$3[1] > maxCount$$1;
     }
-    if (v1663) {
+    if (v1662) {
       return NaN;
     }
-    var v2344 = j$$26 >= 0;
-    if (v2344) {
-      v2344 = image$$11[j$$26 + centerI * qrcode.width];
+    var v2342 = j$$26 >= 0;
+    if (v2342) {
+      v2342 = image$$11[j$$26 + centerI * qrcode.width];
     }
-    var v1664 = v2344;
-    if (v1664) {
-      v1664 = stateCount$$3[0] <= maxCount$$1;
+    var v1663 = v2342;
+    if (v1663) {
+      v1663 = stateCount$$3[0] <= maxCount$$1;
     }
-    var v851 = v1664;
-    for (;v851;) {
+    var v850 = v1663;
+    for (;v850;) {
       stateCount$$3[0]++;
       j$$26--;
-      var v2346 = j$$26 >= 0;
-      if (v2346) {
-        v2346 = image$$11[j$$26 + centerI * qrcode.width];
+      var v2344 = j$$26 >= 0;
+      if (v2344) {
+        v2344 = image$$11[j$$26 + centerI * qrcode.width];
       }
-      var v1665 = v2346;
-      if (v1665) {
-        v1665 = stateCount$$3[0] <= maxCount$$1;
+      var v1664 = v2344;
+      if (v1664) {
+        v1664 = stateCount$$3[0] <= maxCount$$1;
       }
-      v851 = v1665;
+      v850 = v1664;
     }
     if (stateCount$$3[0] > maxCount$$1) {
       return NaN;
     }
     j$$26 = startJ + 1;
-    var v1667 = j$$26 < maxJ;
-    if (v1667) {
-      v1667 = image$$11[j$$26 + centerI * qrcode.width];
+    var v1666 = j$$26 < maxJ;
+    if (v1666) {
+      v1666 = image$$11[j$$26 + centerI * qrcode.width];
     }
-    var v853 = v1667;
-    for (;v853;) {
+    var v852 = v1666;
+    for (;v852;) {
       stateCount$$3[2]++;
       j$$26++;
-      var v1668 = j$$26 < maxJ;
-      if (v1668) {
-        v1668 = image$$11[j$$26 + centerI * qrcode.width];
+      var v1667 = j$$26 < maxJ;
+      if (v1667) {
+        v1667 = image$$11[j$$26 + centerI * qrcode.width];
       }
-      v853 = v1668;
+      v852 = v1667;
     }
     if (j$$26 == maxJ) {
       return NaN;
     }
-    var v2350 = j$$26 < maxJ;
-    if (v2350) {
-      v2350 = !image$$11[j$$26 + centerI * qrcode.width];
+    var v2348 = j$$26 < maxJ;
+    if (v2348) {
+      v2348 = !image$$11[j$$26 + centerI * qrcode.width];
     }
-    var v1669 = v2350;
-    if (v1669) {
-      v1669 = stateCount$$3[3] < maxCount$$1;
+    var v1668 = v2348;
+    if (v1668) {
+      v1668 = stateCount$$3[3] < maxCount$$1;
     }
-    var v855 = v1669;
-    for (;v855;) {
+    var v854 = v1668;
+    for (;v854;) {
       stateCount$$3[3]++;
       j$$26++;
-      var v2352 = j$$26 < maxJ;
-      if (v2352) {
-        v2352 = !image$$11[j$$26 + centerI * qrcode.width];
+      var v2350 = j$$26 < maxJ;
+      if (v2350) {
+        v2350 = !image$$11[j$$26 + centerI * qrcode.width];
       }
-      var v1670 = v2352;
-      if (v1670) {
-        v1670 = stateCount$$3[3] < maxCount$$1;
+      var v1669 = v2350;
+      if (v1669) {
+        v1669 = stateCount$$3[3] < maxCount$$1;
       }
-      v855 = v1670;
+      v854 = v1669;
     }
-    var v1671 = j$$26 == maxJ;
-    if (!v1671) {
-      v1671 = stateCount$$3[3] >= maxCount$$1;
+    var v1670 = j$$26 == maxJ;
+    if (!v1670) {
+      v1670 = stateCount$$3[3] >= maxCount$$1;
     }
-    if (v1671) {
+    if (v1670) {
       return NaN;
     }
-    var v2356 = j$$26 < maxJ;
-    if (v2356) {
-      v2356 = image$$11[j$$26 + centerI * qrcode.width];
+    var v2354 = j$$26 < maxJ;
+    if (v2354) {
+      v2354 = image$$11[j$$26 + centerI * qrcode.width];
     }
-    var v1672 = v2356;
-    if (v1672) {
-      v1672 = stateCount$$3[4] < maxCount$$1;
+    var v1671 = v2354;
+    if (v1671) {
+      v1671 = stateCount$$3[4] < maxCount$$1;
     }
-    var v857 = v1672;
-    for (;v857;) {
+    var v856 = v1671;
+    for (;v856;) {
       stateCount$$3[4]++;
       j$$26++;
-      var v2358 = j$$26 < maxJ;
-      if (v2358) {
-        v2358 = image$$11[j$$26 + centerI * qrcode.width];
+      var v2356 = j$$26 < maxJ;
+      if (v2356) {
+        v2356 = image$$11[j$$26 + centerI * qrcode.width];
       }
-      var v1673 = v2358;
-      if (v1673) {
-        v1673 = stateCount$$3[4] < maxCount$$1;
+      var v1672 = v2356;
+      if (v1672) {
+        v1672 = stateCount$$3[4] < maxCount$$1;
       }
-      v857 = v1673;
+      v856 = v1672;
     }
     if (stateCount$$3[4] >= maxCount$$1) {
       return NaN;
     }
     var stateCountTotal$$1 = stateCount$$3[0] + stateCount$$3[1] + stateCount$$3[2] + stateCount$$3[3] + stateCount$$3[4];
-    if (5 * JAM.call(Math.abs, Math, [stateCountTotal$$1 - originalStateCountTotal$$1], JAM.policy.p21) >= originalStateCountTotal$$1) {
+    if (5 * JAM.call(Math.abs, Math, [stateCountTotal$$1 - originalStateCountTotal$$1], JAM.policy.p22) >= originalStateCountTotal$$1) {
       return NaN;
     }
-    var v862;
-    if (JAM.call(this.foundPatternCross, this, [stateCount$$3], JAM.policy.p21)) {
-      v862 = JAM.call(this.centerFromEnd, this, [stateCount$$3, j$$26], JAM.policy.p33);
+    var v861;
+    if (JAM.call(this.foundPatternCross, this, [stateCount$$3], JAM.policy.p22)) {
+      v861 = JAM.call(this.centerFromEnd, this, [stateCount$$3, j$$26], JAM.policy.p33);
     } else {
-      v862 = NaN;
+      v861 = NaN;
     }
-    return v862;
+    return v861;
   }
   function v97(startI, centerJ, maxCount, originalStateCountTotal) {
     var image$$10 = this.image;
     var maxI = qrcode.height;
     var stateCount$$2 = this.CrossCheckStateCount;
     var i$$49 = startI;
-    var v1679 = i$$49 >= 0;
-    if (v1679) {
-      v1679 = image$$10[centerJ + i$$49 * qrcode.width];
+    var v1678 = i$$49 >= 0;
+    if (v1678) {
+      v1678 = image$$10[centerJ + i$$49 * qrcode.width];
     }
-    var v863 = v1679;
-    for (;v863;) {
+    var v862 = v1678;
+    for (;v862;) {
       stateCount$$2[2]++;
       i$$49--;
-      var v1680 = i$$49 >= 0;
-      if (v1680) {
-        v1680 = image$$10[centerJ + i$$49 * qrcode.width];
+      var v1679 = i$$49 >= 0;
+      if (v1679) {
+        v1679 = image$$10[centerJ + i$$49 * qrcode.width];
       }
-      v863 = v1680;
+      v862 = v1679;
     }
     if (i$$49 < 0) {
       return NaN;
     }
-    var v2365 = i$$49 >= 0;
-    if (v2365) {
-      v2365 = !image$$10[centerJ + i$$49 * qrcode.width];
+    var v2363 = i$$49 >= 0;
+    if (v2363) {
+      v2363 = !image$$10[centerJ + i$$49 * qrcode.width];
     }
-    var v1681 = v2365;
-    if (v1681) {
-      v1681 = stateCount$$2[1] <= maxCount;
+    var v1680 = v2363;
+    if (v1680) {
+      v1680 = stateCount$$2[1] <= maxCount;
     }
-    var v865 = v1681;
-    for (;v865;) {
+    var v864 = v1680;
+    for (;v864;) {
       stateCount$$2[1]++;
       i$$49--;
-      var v2367 = i$$49 >= 0;
-      if (v2367) {
-        v2367 = !image$$10[centerJ + i$$49 * qrcode.width];
+      var v2365 = i$$49 >= 0;
+      if (v2365) {
+        v2365 = !image$$10[centerJ + i$$49 * qrcode.width];
       }
-      var v1682 = v2367;
-      if (v1682) {
-        v1682 = stateCount$$2[1] <= maxCount;
+      var v1681 = v2365;
+      if (v1681) {
+        v1681 = stateCount$$2[1] <= maxCount;
       }
-      v865 = v1682;
+      v864 = v1681;
     }
-    var v1683 = i$$49 < 0;
-    if (!v1683) {
-      v1683 = stateCount$$2[1] > maxCount;
+    var v1682 = i$$49 < 0;
+    if (!v1682) {
+      v1682 = stateCount$$2[1] > maxCount;
     }
-    if (v1683) {
+    if (v1682) {
       return NaN;
     }
-    var v2371 = i$$49 >= 0;
-    if (v2371) {
-      v2371 = image$$10[centerJ + i$$49 * qrcode.width];
+    var v2369 = i$$49 >= 0;
+    if (v2369) {
+      v2369 = image$$10[centerJ + i$$49 * qrcode.width];
     }
-    var v1684 = v2371;
-    if (v1684) {
-      v1684 = stateCount$$2[0] <= maxCount;
+    var v1683 = v2369;
+    if (v1683) {
+      v1683 = stateCount$$2[0] <= maxCount;
     }
-    var v867 = v1684;
-    for (;v867;) {
+    var v866 = v1683;
+    for (;v866;) {
       stateCount$$2[0]++;
       i$$49--;
-      var v2373 = i$$49 >= 0;
-      if (v2373) {
-        v2373 = image$$10[centerJ + i$$49 * qrcode.width];
+      var v2371 = i$$49 >= 0;
+      if (v2371) {
+        v2371 = image$$10[centerJ + i$$49 * qrcode.width];
       }
-      var v1685 = v2373;
-      if (v1685) {
-        v1685 = stateCount$$2[0] <= maxCount;
+      var v1684 = v2371;
+      if (v1684) {
+        v1684 = stateCount$$2[0] <= maxCount;
       }
-      v867 = v1685;
+      v866 = v1684;
     }
     if (stateCount$$2[0] > maxCount) {
       return NaN;
     }
     i$$49 = startI + 1;
-    var v1687 = i$$49 < maxI;
-    if (v1687) {
-      v1687 = image$$10[centerJ + i$$49 * qrcode.width];
+    var v1686 = i$$49 < maxI;
+    if (v1686) {
+      v1686 = image$$10[centerJ + i$$49 * qrcode.width];
     }
-    var v869 = v1687;
-    for (;v869;) {
+    var v868 = v1686;
+    for (;v868;) {
       stateCount$$2[2]++;
       i$$49++;
-      var v1688 = i$$49 < maxI;
-      if (v1688) {
-        v1688 = image$$10[centerJ + i$$49 * qrcode.width];
+      var v1687 = i$$49 < maxI;
+      if (v1687) {
+        v1687 = image$$10[centerJ + i$$49 * qrcode.width];
       }
-      v869 = v1688;
+      v868 = v1687;
     }
     if (i$$49 == maxI) {
       return NaN;
     }
-    var v2377 = i$$49 < maxI;
-    if (v2377) {
-      v2377 = !image$$10[centerJ + i$$49 * qrcode.width];
+    var v2375 = i$$49 < maxI;
+    if (v2375) {
+      v2375 = !image$$10[centerJ + i$$49 * qrcode.width];
     }
-    var v1689 = v2377;
-    if (v1689) {
-      v1689 = stateCount$$2[3] < maxCount;
+    var v1688 = v2375;
+    if (v1688) {
+      v1688 = stateCount$$2[3] < maxCount;
     }
-    var v871 = v1689;
-    for (;v871;) {
+    var v870 = v1688;
+    for (;v870;) {
       stateCount$$2[3]++;
       i$$49++;
-      var v2379 = i$$49 < maxI;
-      if (v2379) {
-        v2379 = !image$$10[centerJ + i$$49 * qrcode.width];
+      var v2377 = i$$49 < maxI;
+      if (v2377) {
+        v2377 = !image$$10[centerJ + i$$49 * qrcode.width];
       }
-      var v1690 = v2379;
-      if (v1690) {
-        v1690 = stateCount$$2[3] < maxCount;
+      var v1689 = v2377;
+      if (v1689) {
+        v1689 = stateCount$$2[3] < maxCount;
       }
-      v871 = v1690;
+      v870 = v1689;
     }
-    var v1691 = i$$49 == maxI;
-    if (!v1691) {
-      v1691 = stateCount$$2[3] >= maxCount;
+    var v1690 = i$$49 == maxI;
+    if (!v1690) {
+      v1690 = stateCount$$2[3] >= maxCount;
     }
-    if (v1691) {
+    if (v1690) {
       return NaN;
     }
-    var v2383 = i$$49 < maxI;
-    if (v2383) {
-      v2383 = image$$10[centerJ + i$$49 * qrcode.width];
+    var v2381 = i$$49 < maxI;
+    if (v2381) {
+      v2381 = image$$10[centerJ + i$$49 * qrcode.width];
     }
-    var v1692 = v2383;
-    if (v1692) {
-      v1692 = stateCount$$2[4] < maxCount;
+    var v1691 = v2381;
+    if (v1691) {
+      v1691 = stateCount$$2[4] < maxCount;
     }
-    var v873 = v1692;
-    for (;v873;) {
+    var v872 = v1691;
+    for (;v872;) {
       stateCount$$2[4]++;
       i$$49++;
-      var v2385 = i$$49 < maxI;
-      if (v2385) {
-        v2385 = image$$10[centerJ + i$$49 * qrcode.width];
+      var v2383 = i$$49 < maxI;
+      if (v2383) {
+        v2383 = image$$10[centerJ + i$$49 * qrcode.width];
       }
-      var v1693 = v2385;
-      if (v1693) {
-        v1693 = stateCount$$2[4] < maxCount;
+      var v1692 = v2383;
+      if (v1692) {
+        v1692 = stateCount$$2[4] < maxCount;
       }
-      v873 = v1693;
+      v872 = v1692;
     }
     if (stateCount$$2[4] >= maxCount) {
       return NaN;
     }
     var stateCountTotal = stateCount$$2[0] + stateCount$$2[1] + stateCount$$2[2] + stateCount$$2[3] + stateCount$$2[4];
-    if (5 * JAM.call(Math.abs, Math, [stateCountTotal - originalStateCountTotal], JAM.policy.p21) >= 2 * originalStateCountTotal) {
+    if (5 * JAM.call(Math.abs, Math, [stateCountTotal - originalStateCountTotal], JAM.policy.p22) >= 2 * originalStateCountTotal) {
       return NaN;
     }
-    var v878;
-    if (JAM.call(this.foundPatternCross, this, [stateCount$$2], JAM.policy.p21)) {
-      v878 = JAM.call(this.centerFromEnd, this, [stateCount$$2, i$$49], JAM.policy.p33);
+    var v877;
+    if (JAM.call(this.foundPatternCross, this, [stateCount$$2], JAM.policy.p22)) {
+      v877 = JAM.call(this.centerFromEnd, this, [stateCount$$2, i$$49], JAM.policy.p33);
     } else {
-      v878 = NaN;
+      v877 = NaN;
     }
-    return v878;
+    return v877;
   }
   function v96(stateCount$$1, end$$2) {
     return end$$2 - stateCount$$1[4] - stateCount$$1[3] - stateCount$$1[2] / 2;
@@ -3078,38 +3081,38 @@ function FinderPatternFinder() {
   function v95(stateCount) {
     var totalModuleSize = 0;
     var i$$48 = 0;
-    var v882 = i$$48 < 5;
-    for (;v882;) {
+    var v881 = i$$48 < 5;
+    for (;v881;) {
       var count$$5 = stateCount[i$$48];
       if (count$$5 == 0) {
         return false;
       }
       totalModuleSize = totalModuleSize + count$$5;
       i$$48++;
-      v882 = i$$48 < 5;
+      v881 = i$$48 < 5;
     }
     if (totalModuleSize < 7) {
       return false;
     }
-    var moduleSize$$3 = JAM.call(Math.floor, Math, [(totalModuleSize << INTEGER_MATH_SHIFT) / 7], JAM.policy.p21);
-    var maxVariance = JAM.call(Math.floor, Math, [moduleSize$$3 / 2], JAM.policy.p21);
-    var v2595 = JAM.call(Math.abs, Math, [moduleSize$$3 - (stateCount[0] << INTEGER_MATH_SHIFT)], JAM.policy.p21) < maxVariance;
-    if (v2595) {
-      v2595 = JAM.call(Math.abs, Math, [moduleSize$$3 - (stateCount[1] << INTEGER_MATH_SHIFT)], JAM.policy.p21) < maxVariance;
+    var moduleSize$$3 = JAM.call(Math.floor, Math, [(totalModuleSize << INTEGER_MATH_SHIFT) / 7], JAM.policy.p22);
+    var maxVariance = JAM.call(Math.floor, Math, [moduleSize$$3 / 2], JAM.policy.p22);
+    var v2593 = JAM.call(Math.abs, Math, [moduleSize$$3 - (stateCount[0] << INTEGER_MATH_SHIFT)], JAM.policy.p22) < maxVariance;
+    if (v2593) {
+      v2593 = JAM.call(Math.abs, Math, [moduleSize$$3 - (stateCount[1] << INTEGER_MATH_SHIFT)], JAM.policy.p22) < maxVariance;
     }
-    var v2391 = v2595;
-    if (v2391) {
-      v2391 = JAM.call(Math.abs, Math, [3 * moduleSize$$3 - (stateCount[2] << INTEGER_MATH_SHIFT)], JAM.policy.p21) < 3 * maxVariance;
+    var v2389 = v2593;
+    if (v2389) {
+      v2389 = JAM.call(Math.abs, Math, [3 * moduleSize$$3 - (stateCount[2] << INTEGER_MATH_SHIFT)], JAM.policy.p22) < 3 * maxVariance;
     }
-    var v1704 = v2391;
-    if (v1704) {
-      v1704 = JAM.call(Math.abs, Math, [moduleSize$$3 - (stateCount[3] << INTEGER_MATH_SHIFT)], JAM.policy.p21) < maxVariance;
+    var v1703 = v2389;
+    if (v1703) {
+      v1703 = JAM.call(Math.abs, Math, [moduleSize$$3 - (stateCount[3] << INTEGER_MATH_SHIFT)], JAM.policy.p22) < maxVariance;
     }
-    var v886 = v1704;
-    if (v886) {
-      v886 = JAM.call(Math.abs, Math, [moduleSize$$3 - (stateCount[4] << INTEGER_MATH_SHIFT)], JAM.policy.p21) < maxVariance;
+    var v885 = v1703;
+    if (v885) {
+      v885 = JAM.call(Math.abs, Math, [moduleSize$$3 - (stateCount[4] << INTEGER_MATH_SHIFT)], JAM.policy.p22) < maxVariance;
     }
-    return v886;
+    return v885;
   }
   function v94() {
     this.crossCheckStateCount[0] = 0;
@@ -3122,8 +3125,8 @@ function FinderPatternFinder() {
   this.image = null;
   this.possibleCenters = [];
   this.hasSkipped = false;
-  var v2824 = new Array(0, 0, 0, 0, 0);
-  this.crossCheckStateCount = v2824;
+  var v2822 = new Array(0, 0, 0, 0, 0);
+  this.crossCheckStateCount = v2822;
   this.resultPointCallback = null;
   JAM.call(this.__defineGetter__, this, ["CrossCheckStateCount", v94], JAM.policy.p19);
   this.foundPatternCross = v95;
@@ -3139,17 +3142,17 @@ function FinderPatternFinder() {
 }
 function AlignmentPattern(posX$$1, posY$$1, estimatedModuleSize$$2) {
   function v110(moduleSize$$4, i$$55, j$$29) {
-    var v1706 = JAM.call(Math.abs, Math, [i$$55 - this.y], JAM.policy.p21) <= moduleSize$$4;
-    if (v1706) {
-      v1706 = JAM.call(Math.abs, Math, [j$$29 - this.x], JAM.policy.p21) <= moduleSize$$4;
+    var v1705 = JAM.call(Math.abs, Math, [i$$55 - this.y], JAM.policy.p22) <= moduleSize$$4;
+    if (v1705) {
+      v1705 = JAM.call(Math.abs, Math, [j$$29 - this.x], JAM.policy.p22) <= moduleSize$$4;
     }
-    if (v1706) {
-      var moduleSizeDiff$$1 = JAM.call(Math.abs, Math, [moduleSize$$4 - this.estimatedModuleSize], JAM.policy.p21);
-      var v893 = moduleSizeDiff$$1 <= 1;
-      if (!v893) {
-        v893 = moduleSizeDiff$$1 / this.estimatedModuleSize <= 1;
+    if (v1705) {
+      var moduleSizeDiff$$1 = JAM.call(Math.abs, Math, [moduleSize$$4 - this.estimatedModuleSize], JAM.policy.p22);
+      var v892 = moduleSizeDiff$$1 <= 1;
+      if (!v892) {
+        v892 = moduleSizeDiff$$1 / this.estimatedModuleSize <= 1;
       }
-      return v893;
+      return v892;
     }
     return false;
   }
@@ -3158,10 +3161,10 @@ function AlignmentPattern(posX$$1, posY$$1, estimatedModuleSize$$2) {
     return;
   }
   function v108() {
-    return JAM.call(Math.floor, Math, [this.y], JAM.policy.p21);
+    return JAM.call(Math.floor, Math, [this.y], JAM.policy.p22);
   }
   function v107() {
-    return JAM.call(Math.floor, Math, [this.x], JAM.policy.p21);
+    return JAM.call(Math.floor, Math, [this.x], JAM.policy.p22);
   }
   function v106() {
     return this.count;
@@ -3189,41 +3192,41 @@ function AlignmentPatternFinder(image$$13, startX, startY, width$$12, height$$11
     var middleI = startY + (height$$12 >> 1);
     var stateCount$$10 = new Array(0, 0, 0);
     var iGen = 0;
-    var v909 = iGen < height$$12;
-    for (;v909;) {
-      var v1710;
+    var v908 = iGen < height$$12;
+    for (;v908;) {
+      var v1709;
       if ((iGen & 1) == 0) {
-        v1710 = iGen + 1 >> 1;
+        v1709 = iGen + 1 >> 1;
       } else {
-        v1710 = -(iGen + 1 >> 1);
+        v1709 = -(iGen + 1 >> 1);
       }
-      var i$$59 = middleI + v1710;
+      var i$$59 = middleI + v1709;
       stateCount$$10[0] = 0;
       stateCount$$10[1] = 0;
       stateCount$$10[2] = 0;
       var j$$31 = startX$$1;
-      var v1711 = j$$31 < maxJ$$2;
-      if (v1711) {
-        v1711 = !image$$13[j$$31 + qrcode.width * i$$59];
+      var v1710 = j$$31 < maxJ$$2;
+      if (v1710) {
+        v1710 = !image$$13[j$$31 + qrcode.width * i$$59];
       }
-      var v899 = v1711;
-      for (;v899;) {
+      var v898 = v1710;
+      for (;v898;) {
         j$$31++;
-        var v1712 = j$$31 < maxJ$$2;
-        if (v1712) {
-          v1712 = !image$$13[j$$31 + qrcode.width * i$$59];
+        var v1711 = j$$31 < maxJ$$2;
+        if (v1711) {
+          v1711 = !image$$13[j$$31 + qrcode.width * i$$59];
         }
-        v899 = v1712;
+        v898 = v1711;
       }
       var currentState$$1 = 0;
-      var v906 = j$$31 < maxJ$$2;
-      for (;v906;) {
+      var v905 = j$$31 < maxJ$$2;
+      for (;v905;) {
         if (image$$13[j$$31 + i$$59 * qrcode.width]) {
           if (currentState$$1 == 1) {
             stateCount$$10[currentState$$1]++;
           } else {
             if (currentState$$1 == 2) {
-              if (JAM.call(this.foundPatternCross, this, [stateCount$$10], JAM.policy.p21)) {
+              if (JAM.call(this.foundPatternCross, this, [stateCount$$10], JAM.policy.p22)) {
                 var confirmed$$1 = JAM.call(this.handlePossibleCenter, this, [stateCount$$10, i$$59, j$$31], JAM.policy.p33);
                 if (confirmed$$1 != null) {
                   return confirmed$$1;
@@ -3246,16 +3249,16 @@ function AlignmentPatternFinder(image$$13, startX, startY, width$$12, height$$11
           stateCount$$10[currentState$$1]++;
         }
         j$$31++;
-        v906 = j$$31 < maxJ$$2;
+        v905 = j$$31 < maxJ$$2;
       }
-      if (JAM.call(this.foundPatternCross, this, [stateCount$$10], JAM.policy.p21)) {
+      if (JAM.call(this.foundPatternCross, this, [stateCount$$10], JAM.policy.p22)) {
         confirmed$$1 = JAM.call(this.handlePossibleCenter, this, [stateCount$$10, i$$59, maxJ$$2], JAM.policy.p33);
         if (confirmed$$1 != null) {
           return confirmed$$1;
         }
       }
       iGen++;
-      v909 = iGen < height$$12;
+      v908 = iGen < height$$12;
     }
     if (!(this.possibleCenters.length == 0)) {
       return this.possibleCenters[0];
@@ -3265,26 +3268,26 @@ function AlignmentPatternFinder(image$$13, startX, startY, width$$12, height$$11
   function v114(stateCount$$9, i$$58, j$$30) {
     var stateCountTotal$$4 = stateCount$$9[0] + stateCount$$9[1] + stateCount$$9[2];
     var centerJ$$3 = JAM.call(this.centerFromEnd, this, [stateCount$$9, j$$30], JAM.policy.p33);
-    var centerI$$2 = JAM.call(this.crossCheckVertical, this, [i$$58, JAM.call(Math.floor, Math, [centerJ$$3], JAM.policy.p21), 2 * stateCount$$9[1], stateCountTotal$$4], JAM.policy.p33);
+    var centerI$$2 = JAM.call(this.crossCheckVertical, this, [i$$58, JAM.call(Math.floor, Math, [centerJ$$3], JAM.policy.p22), 2 * stateCount$$9[1], stateCountTotal$$4], JAM.policy.p33);
     if (!isNaN(centerI$$2)) {
       var estimatedModuleSize$$3 = (stateCount$$9[0] + stateCount$$9[1] + stateCount$$9[2]) / 3;
       var max$$8 = this.possibleCenters.length;
       var index$$40 = 0;
-      var v920 = index$$40 < max$$8;
-      for (;v920;) {
+      var v919 = index$$40 < max$$8;
+      for (;v919;) {
         var center$$2 = this.possibleCenters[index$$40];
         if (JAM.call(center$$2.aboutEquals, center$$2, [estimatedModuleSize$$3, centerI$$2, centerJ$$3], JAM.policy.p33)) {
           return new AlignmentPattern(centerJ$$3, centerI$$2, estimatedModuleSize$$3);
         }
         index$$40++;
-        v920 = index$$40 < max$$8;
+        v919 = index$$40 < max$$8;
       }
       var point$$3 = new AlignmentPattern(centerJ$$3, centerI$$2, estimatedModuleSize$$3);
-      var v921 = this.possibleCenters;
-      JAM.call(v921.push, v921, [point$$3], JAM.policy.p21);
+      var v920 = this.possibleCenters;
+      JAM.call(v920.push, v920, [point$$3], JAM.policy.p22);
       if (this.resultPointCallback != null) {
-        var v922 = this.resultPointCallback;
-        JAM.call(v922.foundPossibleResultPoint, v922, [point$$3], JAM.policy.p21);
+        var v921 = this.resultPointCallback;
+        JAM.call(v921.foundPossibleResultPoint, v921, [point$$3], JAM.policy.p22);
       }
     }
     return null;
@@ -3297,138 +3300,138 @@ function AlignmentPatternFinder(image$$13, startX, startY, width$$12, height$$11
     stateCount$$8[1] = 0;
     stateCount$$8[2] = 0;
     var i$$57 = startI$$1;
-    var v2406 = i$$57 >= 0;
-    if (v2406) {
-      v2406 = image$$14[centerJ$$2 + i$$57 * qrcode.width];
+    var v2404 = i$$57 >= 0;
+    if (v2404) {
+      v2404 = image$$14[centerJ$$2 + i$$57 * qrcode.width];
     }
-    var v1722 = v2406;
-    if (v1722) {
-      v1722 = stateCount$$8[1] <= maxCount$$2;
+    var v1721 = v2404;
+    if (v1721) {
+      v1721 = stateCount$$8[1] <= maxCount$$2;
     }
-    var v925 = v1722;
-    for (;v925;) {
+    var v924 = v1721;
+    for (;v924;) {
       stateCount$$8[1]++;
       i$$57--;
-      var v2408 = i$$57 >= 0;
-      if (v2408) {
-        v2408 = image$$14[centerJ$$2 + i$$57 * qrcode.width];
+      var v2406 = i$$57 >= 0;
+      if (v2406) {
+        v2406 = image$$14[centerJ$$2 + i$$57 * qrcode.width];
       }
-      var v1723 = v2408;
-      if (v1723) {
-        v1723 = stateCount$$8[1] <= maxCount$$2;
+      var v1722 = v2406;
+      if (v1722) {
+        v1722 = stateCount$$8[1] <= maxCount$$2;
       }
-      v925 = v1723;
+      v924 = v1722;
     }
-    var v1724 = i$$57 < 0;
-    if (!v1724) {
-      v1724 = stateCount$$8[1] > maxCount$$2;
+    var v1723 = i$$57 < 0;
+    if (!v1723) {
+      v1723 = stateCount$$8[1] > maxCount$$2;
     }
-    if (v1724) {
+    if (v1723) {
       return NaN;
     }
-    var v2412 = i$$57 >= 0;
-    if (v2412) {
-      v2412 = !image$$14[centerJ$$2 + i$$57 * qrcode.width];
+    var v2410 = i$$57 >= 0;
+    if (v2410) {
+      v2410 = !image$$14[centerJ$$2 + i$$57 * qrcode.width];
     }
-    var v1725 = v2412;
-    if (v1725) {
-      v1725 = stateCount$$8[0] <= maxCount$$2;
+    var v1724 = v2410;
+    if (v1724) {
+      v1724 = stateCount$$8[0] <= maxCount$$2;
     }
-    var v927 = v1725;
-    for (;v927;) {
+    var v926 = v1724;
+    for (;v926;) {
       stateCount$$8[0]++;
       i$$57--;
-      var v2414 = i$$57 >= 0;
-      if (v2414) {
-        v2414 = !image$$14[centerJ$$2 + i$$57 * qrcode.width];
+      var v2412 = i$$57 >= 0;
+      if (v2412) {
+        v2412 = !image$$14[centerJ$$2 + i$$57 * qrcode.width];
       }
-      var v1726 = v2414;
-      if (v1726) {
-        v1726 = stateCount$$8[0] <= maxCount$$2;
+      var v1725 = v2412;
+      if (v1725) {
+        v1725 = stateCount$$8[0] <= maxCount$$2;
       }
-      v927 = v1726;
+      v926 = v1725;
     }
     if (stateCount$$8[0] > maxCount$$2) {
       return NaN;
     }
     i$$57 = startI$$1 + 1;
-    var v2416 = i$$57 < maxI$$2;
-    if (v2416) {
-      v2416 = image$$14[centerJ$$2 + i$$57 * qrcode.width];
+    var v2414 = i$$57 < maxI$$2;
+    if (v2414) {
+      v2414 = image$$14[centerJ$$2 + i$$57 * qrcode.width];
     }
-    var v1728 = v2416;
-    if (v1728) {
-      v1728 = stateCount$$8[1] <= maxCount$$2;
+    var v1727 = v2414;
+    if (v1727) {
+      v1727 = stateCount$$8[1] <= maxCount$$2;
     }
-    var v929 = v1728;
-    for (;v929;) {
+    var v928 = v1727;
+    for (;v928;) {
       stateCount$$8[1]++;
       i$$57++;
-      var v2418 = i$$57 < maxI$$2;
-      if (v2418) {
-        v2418 = image$$14[centerJ$$2 + i$$57 * qrcode.width];
+      var v2416 = i$$57 < maxI$$2;
+      if (v2416) {
+        v2416 = image$$14[centerJ$$2 + i$$57 * qrcode.width];
       }
-      var v1729 = v2418;
-      if (v1729) {
-        v1729 = stateCount$$8[1] <= maxCount$$2;
+      var v1728 = v2416;
+      if (v1728) {
+        v1728 = stateCount$$8[1] <= maxCount$$2;
       }
-      v929 = v1729;
+      v928 = v1728;
     }
-    var v1730 = i$$57 == maxI$$2;
-    if (!v1730) {
-      v1730 = stateCount$$8[1] > maxCount$$2;
+    var v1729 = i$$57 == maxI$$2;
+    if (!v1729) {
+      v1729 = stateCount$$8[1] > maxCount$$2;
     }
-    if (v1730) {
+    if (v1729) {
       return NaN;
     }
-    var v2422 = i$$57 < maxI$$2;
-    if (v2422) {
-      v2422 = !image$$14[centerJ$$2 + i$$57 * qrcode.width];
+    var v2420 = i$$57 < maxI$$2;
+    if (v2420) {
+      v2420 = !image$$14[centerJ$$2 + i$$57 * qrcode.width];
     }
-    var v1731 = v2422;
-    if (v1731) {
-      v1731 = stateCount$$8[2] <= maxCount$$2;
+    var v1730 = v2420;
+    if (v1730) {
+      v1730 = stateCount$$8[2] <= maxCount$$2;
     }
-    var v931 = v1731;
-    for (;v931;) {
+    var v930 = v1730;
+    for (;v930;) {
       stateCount$$8[2]++;
       i$$57++;
-      var v2424 = i$$57 < maxI$$2;
-      if (v2424) {
-        v2424 = !image$$14[centerJ$$2 + i$$57 * qrcode.width];
+      var v2422 = i$$57 < maxI$$2;
+      if (v2422) {
+        v2422 = !image$$14[centerJ$$2 + i$$57 * qrcode.width];
       }
-      var v1732 = v2424;
-      if (v1732) {
-        v1732 = stateCount$$8[2] <= maxCount$$2;
+      var v1731 = v2422;
+      if (v1731) {
+        v1731 = stateCount$$8[2] <= maxCount$$2;
       }
-      v931 = v1732;
+      v930 = v1731;
     }
     if (stateCount$$8[2] > maxCount$$2) {
       return NaN;
     }
     var stateCountTotal$$3 = stateCount$$8[0] + stateCount$$8[1] + stateCount$$8[2];
-    if (5 * JAM.call(Math.abs, Math, [stateCountTotal$$3 - originalStateCountTotal$$2], JAM.policy.p21) >= 2 * originalStateCountTotal$$2) {
+    if (5 * JAM.call(Math.abs, Math, [stateCountTotal$$3 - originalStateCountTotal$$2], JAM.policy.p22) >= 2 * originalStateCountTotal$$2) {
       return NaN;
     }
-    var v936;
-    if (JAM.call(this.foundPatternCross, this, [stateCount$$8], JAM.policy.p21)) {
-      v936 = JAM.call(this.centerFromEnd, this, [stateCount$$8, i$$57], JAM.policy.p33);
+    var v935;
+    if (JAM.call(this.foundPatternCross, this, [stateCount$$8], JAM.policy.p22)) {
+      v935 = JAM.call(this.centerFromEnd, this, [stateCount$$8, i$$57], JAM.policy.p33);
     } else {
-      v936 = NaN;
+      v935 = NaN;
     }
-    return v936;
+    return v935;
   }
   function v112(stateCount$$7) {
     var moduleSize$$6 = this.moduleSize;
     var maxVariance$$1 = moduleSize$$6 / 2;
     var i$$56 = 0;
-    var v938 = i$$56 < 3;
-    for (;v938;) {
-      if (JAM.call(Math.abs, Math, [moduleSize$$6 - stateCount$$7[i$$56]], JAM.policy.p21) >= maxVariance$$1) {
+    var v937 = i$$56 < 3;
+    for (;v937;) {
+      if (JAM.call(Math.abs, Math, [moduleSize$$6 - stateCount$$7[i$$56]], JAM.policy.p22) >= maxVariance$$1) {
         return false;
       }
       i$$56++;
-      v938 = i$$56 < 3;
+      v937 = i$$56 < 3;
     }
     return true;
   }
@@ -3436,15 +3439,15 @@ function AlignmentPatternFinder(image$$13, startX, startY, width$$12, height$$11
     return end$$3 - stateCount$$6[2] - stateCount$$6[1] / 2;
   }
   this.image = image$$13;
-  var v2825 = new Array;
-  this.possibleCenters = v2825;
+  var v2823 = new Array;
+  this.possibleCenters = v2823;
   this.startX = startX;
   this.startY = startY;
   this.width = width$$12;
   this.height = height$$11;
   this.moduleSize = moduleSize$$5;
-  var v2826 = new Array(0, 0, 0);
-  this.crossCheckStateCount = v2826;
+  var v2824 = new Array(0, 0, 0);
+  this.crossCheckStateCount = v2824;
   this.resultPointCallback = resultPointCallback;
   this.centerFromEnd = v111;
   this.foundPatternCross = v112;
@@ -3469,68 +3472,69 @@ function QRCodeDataBlockReader(blocks, version$$8, numErrorCorrectionCode) {
           throw "Empty data block";
         }
       }
-      var v2618 = mode$$7 != MODE_NUMBER;
-      if (v2618) {
-        v2618 = mode$$7 != MODE_ROMAN_AND_NUMBER;
+      var v2616 = mode$$7 != MODE_NUMBER;
+      if (v2616) {
+        v2616 = mode$$7 != MODE_ROMAN_AND_NUMBER;
       }
-      var v2428 = v2618;
-      if (v2428) {
-        v2428 = mode$$7 != MODE_8BIT_BYTE;
+      var v2426 = v2616;
+      if (v2426) {
+        v2426 = mode$$7 != MODE_8BIT_BYTE;
       }
-      var v1743 = v2428;
-      if (v1743) {
-        v1743 = mode$$7 != MODE_KANJI;
+      var v1742 = v2426;
+      if (v1742) {
+        v1742 = mode$$7 != MODE_KANJI;
       }
-      if (v1743) {
+      if (v1742) {
         throw "Invalid mode: " + mode$$7 + " in (block:" + this.blockPointer + " bit:" + this.bitPointer + ")";
       }
-      dataLength = JAM.call(this.getDataLength, this, [mode$$7], JAM.policy.p21);
+      dataLength = JAM.call(this.getDataLength, this, [mode$$7], JAM.policy.p22);
       if (dataLength < 1) {
         throw "Invalid data length: " + dataLength;
       }
       switch(mode$$7) {
         case MODE_NUMBER:
-          var temp_str = JAM.call(this.getFigureString, this, [dataLength], JAM.policy.p21);
+          var temp_str = this.getFigureString();
           var ta = new Array(temp_str.length);
           var j$$32 = 0;
-          var v947 = j$$32 < temp_str.length;
-          for (;v947;) {
-            var v2827 = JAM.call(temp_str.charCodeAt, temp_str, [j$$32], JAM.policy.p21);
-            ta[j$$32] = v2827;
+          var v946 = j$$32 < temp_str.length;
+          for (;v946;) {
+            var v2825 = JAM.call(temp_str.charCodeAt, temp_str, [j$$32], JAM.policy.p22);
+            ta[j$$32] = v2825;
             j$$32++;
-            v947 = j$$32 < temp_str.length;
+            v946 = j$$32 < temp_str.length;
           }
-          JAM.call(output$$1.push, output$$1, [ta], JAM.policy.p21);
+          JAM.call(output$$1.push, output$$1, [ta], JAM.policy.p22);
           break;
         case MODE_ROMAN_AND_NUMBER:
-          temp_str = JAM.call(this.getRomanAndFigureString, this, [dataLength], JAM.policy.p21);
+          temp_str = this.getRomanAndFigureString();
           ta = new Array(temp_str.length);
           j$$32 = 0;
-          var v949 = j$$32 < temp_str.length;
-          for (;v949;) {
-            var v2828 = JAM.call(temp_str.charCodeAt, temp_str, [j$$32], JAM.policy.p21);
-            ta[j$$32] = v2828;
+          var v948 = j$$32 < temp_str.length;
+          for (;v948;) {
+            var v2826 = JAM.call(temp_str.charCodeAt, temp_str, [j$$32], JAM.policy.p22);
+            ta[j$$32] = v2826;
             j$$32++;
-            v949 = j$$32 < temp_str.length;
+            v948 = j$$32 < temp_str.length;
           }
-          JAM.call(output$$1.push, output$$1, [ta], JAM.policy.p21);
+          JAM.call(output$$1.push, output$$1, [ta], JAM.policy.p22);
           break;
         case MODE_8BIT_BYTE:
-          var temp_sbyteArray3 = JAM.call(this.get8bitByteArray, this, [dataLength], JAM.policy.p21);
-          JAM.call(output$$1.push, output$$1, [temp_sbyteArray3], JAM.policy.p21);
+          var temp_sbyteArray3 = this.get8bitByteArray();
+          JAM.call(output$$1.push, output$$1, [temp_sbyteArray3], JAM.policy.p22);
           break;
         case MODE_KANJI:
-          temp_str = JAM.call(this.getKanjiString, this, [dataLength], JAM.policy.p21);
-          JAM.call(output$$1.push, output$$1, [temp_str], JAM.policy.p21);
+          temp_str = this.getKanjiString();
+          JAM.call(output$$1.push, output$$1, [temp_str], JAM.policy.p22);
       }
     } while (true);
     return output$$1;
   }
-  function v122(dataLength$$4) {
+  function v122() {
+    var dataLength$$4 = dataLength;
     var length$$14 = dataLength$$4;
     var intData$$3 = 0;
     var unicodeString = "";
-    var v952 = length$$14 > 0;
+    var v951 = length$$14 > 0;
     do {
       intData$$3 = JAM.call(getNextBits, null, [13], JAM.policy.p18);
       var lowerByte = intData$$3 % 192;
@@ -3542,30 +3546,32 @@ function QRCodeDataBlockReader(blocks, version$$8, numErrorCorrectionCode) {
       } else {
         shiftjisWord = tempWord + 49472;
       }
-      unicodeString = unicodeString + JAM.call(String.fromCharCode, String, [shiftjisWord], JAM.policy.p21);
+      unicodeString = unicodeString + JAM.call(String.fromCharCode, String, [shiftjisWord], JAM.policy.p22);
       length$$14--;
-      v952 = length$$14 > 0;
-    } while (v952);
+      v951 = length$$14 > 0;
+    } while (v951);
     return unicodeString;
   }
-  function v121(dataLength$$3) {
+  function v121() {
+    var dataLength$$3 = dataLength;
     var length$$13 = dataLength$$3;
     var intData$$2 = 0;
     var output = new Array;
-    var v953 = length$$13 > 0;
+    var v952 = length$$13 > 0;
     do {
       intData$$2 = JAM.call(this.getNextBits, this, [8], JAM.policy.p18);
-      JAM.call(output.push, output, [intData$$2], JAM.policy.p21);
+      JAM.call(output.push, output, [intData$$2], JAM.policy.p22);
       length$$13--;
-      v953 = length$$13 > 0;
-    } while (v953);
+      v952 = length$$13 > 0;
+    } while (v952);
     return output;
   }
-  function v120(dataLength$$2) {
+  function v120() {
+    var dataLength$$2 = dataLength;
     var length$$12 = dataLength$$2;
     var intData$$1 = 0;
     var strData$$1 = "";
-    var v960 = length$$12 > 0;
+    var v959 = length$$12 > 0;
     do {
       if (length$$12 >= 3) {
         intData$$1 = JAM.call(this.getNextBits, this, [10], JAM.policy.p18);
@@ -3591,20 +3597,21 @@ function QRCodeDataBlockReader(blocks, version$$8, numErrorCorrectionCode) {
         }
       }
       strData$$1 = strData$$1 + intData$$1;
-      v960 = length$$12 > 0;
-    } while (v960);
+      v959 = length$$12 > 0;
+    } while (v959);
     return strData$$1;
   }
-  function v119(dataLength$$1) {
+  function v119() {
+    var dataLength$$1 = dataLength;
     var length$$11 = dataLength$$1;
     var intData = 0;
     var strData = "";
     var tableRomanAndFigure = new Array("0", "1", "2", "3", "4", "5", "6", "7", "8", "9", "A", "B", "C", "D", "E", "F", "G", "H", "I", "J", "K", "L", "M", "N", "O", "P", "Q", "R", "S", "T", "U", "V", "W", "X", "Y", "Z", " ", "$", "%", "*", "+", "-", ".", "/", ":");
-    var v964 = length$$11 > 0;
+    var v963 = length$$11 > 0;
     do {
       if (length$$11 > 1) {
         intData = JAM.call(this.getNextBits, this, [11], JAM.policy.p18);
-        var firstLetter = JAM.call(Math.floor, Math, [intData / 45], JAM.policy.p21);
+        var firstLetter = JAM.call(Math.floor, Math, [intData / 45], JAM.policy.p22);
         var secondLetter = intData % 45;
         strData = strData + tableRomanAndFigure[firstLetter];
         strData = strData + tableRomanAndFigure[secondLetter];
@@ -3616,8 +3623,8 @@ function QRCodeDataBlockReader(blocks, version$$8, numErrorCorrectionCode) {
           length$$11 = length$$11 - 1;
         }
       }
-      v964 = length$$11 > 0;
-    } while (v964);
+      v963 = length$$11 > 0;
+    } while (v963);
     return strData;
   }
   function v118(modeIndicator) {
@@ -3628,7 +3635,7 @@ function QRCodeDataBlockReader(blocks, version$$8, numErrorCorrectionCode) {
       }
       index$$41++;
     }
-    return JAM.call(this.getNextBits, this, [qrcode.sizeOfDataLengthInfo[this.dataLengthMode][index$$41]], JAM.policy.p21);
+    return JAM.call(this.getNextBits, this, [qrcode.sizeOfDataLengthInfo[this.dataLengthMode][index$$41]], JAM.policy.p22);
   }
   function v117() {
     if (this.blockPointer > this.blocks.length - this.numErrorCorrectionCode - 2) {
@@ -3643,11 +3650,11 @@ function QRCodeDataBlockReader(blocks, version$$8, numErrorCorrectionCode) {
     if (numBits < this.bitPointer + 1) {
       var mask$$5 = 0;
       var i$$60 = 0;
-      var v968 = i$$60 < numBits;
-      for (;v968;) {
+      var v967 = i$$60 < numBits;
+      for (;v967;) {
         mask$$5 = mask$$5 + (1 << i$$60);
         i$$60++;
-        v968 = i$$60 < numBits;
+        v967 = i$$60 < numBits;
       }
       mask$$5 = mask$$5 << this.bitPointer - numBits + 1;
       bits$$15 = (this.blocks[this.blockPointer] & mask$$5) >> this.bitPointer - numBits + 1;
@@ -3657,11 +3664,11 @@ function QRCodeDataBlockReader(blocks, version$$8, numErrorCorrectionCode) {
       if (numBits < this.bitPointer + 1 + 8) {
         var mask1 = 0;
         i$$60 = 0;
-        var v971 = i$$60 < this.bitPointer + 1;
-        for (;v971;) {
+        var v970 = i$$60 < this.bitPointer + 1;
+        for (;v970;) {
           mask1 = mask1 + (1 << i$$60);
           i$$60++;
-          v971 = i$$60 < this.bitPointer + 1;
+          v970 = i$$60 < this.bitPointer + 1;
         }
         bits$$15 = (this.blocks[this.blockPointer] & mask1) << numBits - (this.bitPointer + 1);
         this.blockPointer++;
@@ -3676,22 +3683,22 @@ function QRCodeDataBlockReader(blocks, version$$8, numErrorCorrectionCode) {
           mask1 = 0;
           var mask3 = 0;
           i$$60 = 0;
-          var v978 = i$$60 < this.bitPointer + 1;
-          for (;v978;) {
+          var v977 = i$$60 < this.bitPointer + 1;
+          for (;v977;) {
             mask1 = mask1 + (1 << i$$60);
             i$$60++;
-            v978 = i$$60 < this.bitPointer + 1;
+            v977 = i$$60 < this.bitPointer + 1;
           }
           var bitsFirstBlock = (this.blocks[this.blockPointer] & mask1) << numBits - (this.bitPointer + 1);
           this.blockPointer++;
           var bitsSecondBlock = this.blocks[this.blockPointer] << numBits - (this.bitPointer + 1 + 8);
           this.blockPointer++;
           i$$60 = 0;
-          var v983 = i$$60 < numBits - (this.bitPointer + 1 + 8);
-          for (;v983;) {
+          var v982 = i$$60 < numBits - (this.bitPointer + 1 + 8);
+          for (;v982;) {
             mask3 = mask3 + (1 << i$$60);
             i$$60++;
-            v983 = i$$60 < numBits - (this.bitPointer + 1 + 8);
+            v982 = i$$60 < numBits - (this.bitPointer + 1 + 8);
           }
           mask3 = mask3 << 8 - (numBits - (this.bitPointer + 1 + 8));
           var bitsThirdBlock = (this.blocks[this.blockPointer] & mask3) >> 8 - (numBits - (this.bitPointer + 1 + 8));
@@ -3716,18 +3723,18 @@ function QRCodeDataBlockReader(blocks, version$$8, numErrorCorrectionCode) {
   if (version$$8 <= 9) {
     this.dataLengthMode = 0;
   } else {
-    var v1790 = version$$8 >= 10;
-    if (v1790) {
-      v1790 = version$$8 <= 26;
+    var v1789 = version$$8 >= 10;
+    if (v1789) {
+      v1789 = version$$8 <= 26;
     }
-    if (v1790) {
+    if (v1789) {
       this.dataLengthMode = 1;
     } else {
-      var v1791 = version$$8 >= 27;
-      if (v1791) {
-        v1791 = version$$8 <= 40;
+      var v1790 = version$$8 >= 27;
+      if (v1790) {
+        v1790 = version$$8 <= 40;
       }
-      if (v1791) {
+      if (v1790) {
         this.dataLengthMode = 2;
       }
     }
@@ -3763,22 +3770,22 @@ function drop(e$$9) {
 function handleFiles(f) {
   function v125(theFile) {
     function v124(e$$10) {
-      JAM.call(qrcode.decode, qrcode, [e$$10.target.result], JAM.policy.p21);
+      JAM.call(qrcode.decode, qrcode, [e$$10.target.result], JAM.policy.p22);
       return;
     }
     return v124;
   }
   var o$$1 = [];
   var i$$61 = 0;
-  var v1000 = i$$61 < f.length;
-  for (;v1000;) {
+  var v999 = i$$61 < f.length;
+  for (;v999;) {
     var reader$$2 = new FileReader;
-    var v998 = reader$$2;
-    var v2829 = v125(f[i$$61]);
-    JAM.set(v998, "onload", v2829);
-    JAM.call(reader$$2.readAsDataURL, reader$$2, [f[i$$61]], JAM.policy.p21);
+    var v997 = reader$$2;
+    var v2827 = v125(f[i$$61]);
+    JAM.set(v997, "onload", v2827);
+    JAM.call(reader$$2.readAsDataURL, reader$$2, [f[i$$61]], JAM.policy.p22);
     i$$61++;
-    v1000 = i$$61 < f.length;
+    v999 = i$$61 < f.length;
   }
   return;
 }
@@ -3788,42 +3795,42 @@ function read(a$$9) {
 }
 function load() {
   qrcode.callback = read;
-  var img$$2 = JAM.call(document.getElementById, document, ["imgpath"], JAM.policy.p15).value;
-  JAM.call(qrcode.decode, qrcode, [img$$2], JAM.policy.p21);
+  var img$$2 = JAM.call(document.getElementById, document, ["imgpath"], JAM.policy.p16).value;
+  JAM.call(qrcode.decode, qrcode, [img$$2], JAM.policy.p22);
   return;
 }
 function passLine(stringPixels) {
-  var coll = JAM.call(stringPixels.split, stringPixels, ["-"], JAM.policy.p15);
+  var coll = JAM.call(stringPixels.split, stringPixels, ["-"], JAM.policy.p16);
   var i$$62 = 0;
-  var v1013 = i$$62 < 320;
-  for (;v1013;) {
+  var v1012 = i$$62 < 320;
+  for (;v1012;) {
     var intVal = parseInt(coll[i$$62]);
     r = intVal >> 16 & 255;
     g = intVal >> 8 & 255;
     b = intVal & 255;
-    var v1005 = imageData.data;
-    var v1006 = c + 0;
+    var v1004 = imageData.data;
+    var v1005 = c + 0;
     introspect(JAM.policy.p6) {
-      v1005[v1006] = r;
+      v1004[v1005] = r;
     }
-    var v1007 = imageData.data;
-    var v1008 = c + 1;
+    var v1006 = imageData.data;
+    var v1007 = c + 1;
     introspect(JAM.policy.p6) {
-      v1007[v1008] = g;
+      v1006[v1007] = g;
     }
-    var v1009 = imageData.data;
-    var v1010 = c + 2;
+    var v1008 = imageData.data;
+    var v1009 = c + 2;
     introspect(JAM.policy.p6) {
-      v1009[v1010] = b;
+      v1008[v1009] = b;
     }
-    var v1011 = imageData.data;
-    var v1012 = c + 3;
+    var v1010 = imageData.data;
+    var v1011 = c + 3;
     introspect(JAM.policy.p6) {
-      v1011[v1012] = 255;
+      v1010[v1011] = 255;
     }
     c = c + 4;
     i$$62++;
-    v1013 = i$$62 < 320;
+    v1012 = i$$62 < 320;
   }
   if (c >= 320 * 240 * 4) {
     c = 0;
@@ -3832,7 +3839,7 @@ function passLine(stringPixels) {
   return;
 }
 function captureToCanvas() {
-  flash = JAM.call(document.getElementById, document, ["embedflash"], JAM.policy.p15);
+  flash = JAM.call(document.getElementById, document, ["embedflash"], JAM.policy.p16);
   flash.ccCapture();
   qrcode.decode();
   return;
@@ -3841,12 +3848,12 @@ GridSampler = {};
 GridSampler.checkAndNudgePoints = v126;
 GridSampler.sampleGrid3 = v127;
 GridSampler.sampleGridx = v128;
+var v1014 = Version;
+var v2828 = new Array(31892, 34236, 39577, 42195, 48118, 51042, 55367, 58893, 63784, 68472, 70749, 76311, 79154, 84390, 87683, 92361, 96236, 102084, 102881, 110507, 110734, 117786, 119615, 126325, 127568, 133589, 136944, 141498, 145311, 150283, 152622, 158308, 161089, 167017);
+v1014.VERSION_DECODE_INFO = v2828;
 var v1015 = Version;
-var v2830 = new Array(31892, 34236, 39577, 42195, 48118, 51042, 55367, 58893, 63784, 68472, 70749, 76311, 79154, 84390, 87683, 92361, 96236, 102084, 102881, 110507, 110734, 117786, 119615, 126325, 127568, 133589, 136944, 141498, 145311, 150283, 152622, 158308, 161089, 167017);
-v1015.VERSION_DECODE_INFO = v2830;
-var v1016 = Version;
-var v2831 = buildVersions();
-v1016.VERSIONS = v2831;
+var v2829 = buildVersions();
+v1015.VERSIONS = v2829;
 Version.getVersionForNumber = v129;
 Version.getProvisionalVersionForDimension = v130;
 Version.decodeVersionInformation = v131;
@@ -3869,20 +3876,20 @@ var FOR_BITS = new Array(M, L, H, Q);
 DataBlock.getDataBlocks = v139;
 DataMask = {};
 DataMask.forReference = v140;
-var v1049 = DataMask;
-var v2832 = new Array(new DataMask000, new DataMask001, new DataMask010, new DataMask011, new DataMask100, new DataMask101, new DataMask110, new DataMask111);
-v1049.DATA_MASKS = v2832;
+var v1048 = DataMask;
+var v2830 = new Array(new DataMask000, new DataMask001, new DataMask010, new DataMask011, new DataMask100, new DataMask101, new DataMask110, new DataMask111);
+v1048.DATA_MASKS = v2830;
+var v1049 = GF256;
+var v2831 = new GF256(285);
+v1049.QR_CODE_FIELD = v2831;
 var v1050 = GF256;
-var v2833 = new GF256(285);
-v1050.QR_CODE_FIELD = v2833;
-var v1051 = GF256;
-var v2834 = new GF256(301);
-v1051.DATA_MATRIX_FIELD = v2834;
+var v2832 = new GF256(301);
+v1050.DATA_MATRIX_FIELD = v2832;
 GF256.addOrSubtract = v141;
 Decoder = {};
-var v1052 = Decoder;
-var v2835 = new ReedSolomonDecoder(GF256.QR_CODE_FIELD);
-v1052.rsDecoder = v2835;
+var v1051 = Decoder;
+var v2833 = new ReedSolomonDecoder;
+v1051.rsDecoder = v2833;
 Decoder.correctErrors = v142;
 Decoder.decode = v143;
 qrcode = {};
@@ -3913,4 +3920,4 @@ var imageData = null;
 var ii = 0;
 var jj = 0;
 var c = 0;
-JAM.set(JAM.call(document.getElementById, document, ["decode"], JAM.policy.p15), "onclick", load)
+JAM.set(JAM.call(document.getElementById, document, ["decode"], JAM.policy.p16), "onclick", load)

@@ -14952,7 +14952,7 @@ function v1() {
       b = String(b);
       var v7005 = a < b;
       if (v7005) {
-        return-1;
+        return -1;
       }
       var v7006 = a > b;
       if (v7006) {

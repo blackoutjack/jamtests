@@ -29,7 +29,7 @@ function v316() {
       return;
     }
     if (typeof onready_handler$$2 == "undefined") {
-      return false;
+      return;
     }
     if (document.readyState === "complete") {
       JAM.call(onready_handler$$2, null, [], JAM.policy.p1);
@@ -466,7 +466,7 @@ function v309() {
           oldSection = getCurrentSection();
           node$$6 = JAM.call(Y$$1.one, Y$$1, [node$$6], JAM.policy.p1);
           if (!node$$6) {
-            return false;
+            return;
           }
           id$$2 = JAM.call(node$$6.get, node$$6, ["id"], JAM.policy.p1);
           targetY = JAM.call(node$$6.getY, node$$6, [], JAM.policy.p1);
@@ -482,7 +482,7 @@ function v309() {
             }
           } else {
             if (scrollAnimation) {
-              return false;
+              return;
             }
           }
           if (!didFirstScroll) {
@@ -988,7 +988,7 @@ function v309() {
           return;
         }
         if (isOldIE) {
-          return false;
+          return;
         }
         var v504 = JAM.call(Y$$1.one, Y$$1, ["window"], JAM.policy.p1);
         JAM.call(v504.on, v504, ["resize", resizeHandler, false], JAM.policy.p1);
@@ -1521,7 +1521,7 @@ function v268(F$$4) {
     dimensions$$1 = v588;
     dimensions$$1.width = dimensions$$1.width / pixelRatio$$2;
     dimensions$$1.height = dimensions$$1.height / pixelRatio$$2;
-    return{w:dimensions$$1.width, h:dimensions$$1.height - HEIGHT_TO_PHOTO_TOP - PHOTO_ATTRIBUTION_HEIGHT};
+    return {w:dimensions$$1.width, h:dimensions$$1.height - HEIGHT_TO_PHOTO_TOP - PHOTO_ATTRIBUTION_HEIGHT};
   }
   function v263() {
     var dimensions;
@@ -1536,7 +1536,7 @@ function v268(F$$4) {
       v592 = {width:MIN_PAGE_WIDTH, height:MIN_PAGE_HEIGHT};
     }
     dimensions = v592;
-    return{w:JAM.call(Math.max, Math, [dimensions.width - 2 * pixelRatio$$1 * PHOTO_INTERIOR_PADDING_SIDES, pixelRatio$$1 * MIN_PHOTO_WIDTH], JAM.policy.p1), h:dimensions.height - pixelRatio$$1 * (HEIGHT_TO_PHOTO_TOP + PHOTO_INTERIOR_PADDING_TOP + PHOTO_TITLE_HEIGHT + PHOTO_ATTRIBUTION_HEIGHT)};
+    return {w:JAM.call(Math.max, Math, [dimensions.width - 2 * pixelRatio$$1 * PHOTO_INTERIOR_PADDING_SIDES, pixelRatio$$1 * MIN_PHOTO_WIDTH], JAM.policy.p1), h:dimensions.height - pixelRatio$$1 * (HEIGHT_TO_PHOTO_TOP + PHOTO_INTERIOR_PADDING_TOP + PHOTO_TITLE_HEIGHT + PHOTO_ATTRIBUTION_HEIGHT)};
   }
   function v262(preventHighResolution) {
     var doc = window.document;
@@ -1583,7 +1583,7 @@ function v268(F$$4) {
       v1950 = v3161;
     }
     if (v1950) {
-      return{height:h$$17, width:w$$13, isHighResolution:pixelRatio > 1};
+      return {height:h$$17, width:w$$13, isHighResolution:pixelRatio > 1};
     }
     return false;
   }
@@ -1640,7 +1640,7 @@ function v261(F$$3) {
     handleEvent(window, "hashchange", v259, true);
     return;
   }
-  function alignToAnchor(anchor, preventDelay) {
+  function alignToAnchor(anchor) {
     function v255() {
       var destination = elt$$1.offsetTop;
       var origPosition = elt$$1.style.position;
@@ -1660,6 +1660,7 @@ function v261(F$$3) {
       JAM.call(window.scrollTo, window, [0, destination], JAM.policy.p1);
       return;
     }
+    var preventDelay;
     var v610;
     var v3162 = !preventDelay;
     if (v3162) {
@@ -1842,7 +1843,7 @@ function v252(e$$153, t$$150) {
         r$$106 = !1;
       }
     }
-    return!r$$106;
+    return !r$$106;
   }
   function v247(e$$165) {
     function i$$96(e$$166, t$$162) {
@@ -1873,7 +1874,7 @@ function v252(e$$153, t$$150) {
         r$$105 = !1;
       }
     }
-    return!r$$105;
+    return !r$$105;
   }
   function v246(e$$164) {
     var v635 = e$$164.config.doc;
@@ -3488,7 +3489,7 @@ function v231(e$$114, t$$103) {
       v2128 = v3336;
     }
     if (v2128) {
-      return!1;
+      return !1;
     }
     var r$$84 = YUI.Env.cssStampEl;
     var i$$76 = !1;
@@ -4675,7 +4676,7 @@ function v231(e$$114, t$$103) {
       v2247 = !f$$17;
     }
     if (v2247) {
-      return!1;
+      return !1;
     }
     r$$77 = a$$20.expanded_map;
     i$$68 = a$$20.after_map;
@@ -4684,7 +4685,7 @@ function v231(e$$114, t$$103) {
       v2248 = t$$112 in i$$68;
     }
     if (v2248) {
-      return!0;
+      return !0;
     }
     i$$68 = f$$17.after_map;
     var v2249 = i$$68;
@@ -4692,7 +4693,7 @@ function v231(e$$114, t$$103) {
       v2249 = e$$121 in i$$68;
     }
     if (v2249) {
-      return!1;
+      return !1;
     }
     var v882 = o$$30[t$$112];
     if (v882) {
@@ -4704,7 +4705,7 @@ function v231(e$$114, t$$103) {
       var v884 = n$$88 < s$$51.length;
       for (;v884;) {
         if (JAM.call(this._requires, this, [e$$121, s$$51[n$$88]], JAM.policy.p1)) {
-          return!0;
+          return !0;
         }
         n$$88++;
         v884 = n$$88 < s$$51.length;
@@ -4720,7 +4721,7 @@ function v231(e$$114, t$$103) {
       var v887 = n$$88 < s$$51.length;
       for (;v887;) {
         if (JAM.call(this._requires, this, [t$$112, s$$51[n$$88]], JAM.policy.p1)) {
-          return!1;
+          return !1;
         }
         n$$88++;
         v887 = n$$88 < s$$51.length;
@@ -5178,7 +5179,7 @@ function v173(e$$113, t$$101) {
       v914 = JAM.call(setTimeout, null, [f$$14, t$$102]);
     }
     var l$$9 = v914;
-    return{id:l$$9, interval:o$$26, cancel:v171};
+    return {id:l$$9, interval:o$$26, cancel:v171};
   }
   var n$$80 = [];
   e$$113.later = v172;
@@ -5472,7 +5473,7 @@ function v165(e$$90, t$$77) {
         r$$64 = !1;
       }
     }
-    return!r$$64;
+    return !r$$64;
   }
   function v160(e$$103) {
     function i$$57(e$$104, t$$92) {
@@ -5503,7 +5504,7 @@ function v165(e$$90, t$$77) {
         r$$63 = !1;
       }
     }
-    return!r$$63;
+    return !r$$63;
   }
   function v159(e$$102) {
     var v940 = e$$102.config.doc;
@@ -6711,7 +6712,7 @@ function v113(e$$36, t$$24) {
         i$$40 = 0;
       }
       if (n$$47 < i$$40) {
-        return-1;
+        return -1;
       }
       if (n$$47 > i$$40) {
         return 1;
@@ -7133,7 +7134,7 @@ function v113(e$$36, t$$24) {
     return s$$27;
   }
   function v109(e$$74) {
-    return!JAM.call(E$$2.keys, E$$2, [Object(e$$74)], JAM.policy.p1).length;
+    return !JAM.call(E$$2.keys, E$$2, [Object(e$$74)], JAM.policy.p1).length;
   }
   function v108(t$$55, n$$45, r$$40) {
     var i$$38;
@@ -7196,11 +7197,11 @@ function v113(e$$36, t$$24) {
       }
       if (v2429) {
         if (JAM.call(n$$43.call, n$$43, [r$$38 || e$$36, t$$53[s$$24], s$$24, t$$53], JAM.policy.p1)) {
-          return!0;
+          return !0;
         }
       }
     }
-    return!1;
+    return !1;
   }
   function v105(t$$52, n$$42, r$$37, i$$35) {
     var s$$23;
@@ -7569,12 +7570,12 @@ function v113(e$$36, t$$24) {
         v2460 = JAM.call(t$$40.call, t$$40, [n$$34, e$$64[r$$31], r$$31, e$$64], JAM.policy.p1);
       }
       if (v2460) {
-        return!0;
+        return !0;
       }
       ++r$$31;
       v1096 = r$$31 < i$$29;
     }
-    return!1;
+    return !1;
   }
   function v83(e$$63, t$$39, n$$33) {
     var v1097 = d$$5.some;
@@ -7615,7 +7616,7 @@ function v113(e$$36, t$$24) {
       ++n$$32;
       v1099 = n$$32 < r$$30;
     }
-    return-1;
+    return -1;
   }
   function v80(e$$60, t$$36, n$$31) {
     var v1100 = d$$5.indexOf;
@@ -7807,9 +7808,9 @@ function v113(e$$36, t$$24) {
       case "null":
       ;
       case "undefined":
-        return!1;
+        return !1;
       default:
-        return!!t$$28;
+        return !!t$$28;
     }
     return;
   }
@@ -7882,7 +7883,7 @@ function v113(e$$36, t$$24) {
     if (v3614) {
       v3614 = JAM.call(h$$8.test, h$$8, [t$$26], JAM.policy.p1);
     }
-    return!!v3614;
+    return !!v3614;
   }
   function m$$3(e$$37, t$$25, n$$25) {
     var r$$22;
@@ -7910,7 +7911,7 @@ function v113(e$$36, t$$24) {
         return i$$24;
       }
     }
-    return[e$$37];
+    return [e$$37];
   }
   function g$$3() {
     JAM.call(this._init, this, [], JAM.policy.p1);
@@ -8850,7 +8851,7 @@ function v53() {
             for (;v1193;) {
               if (!v$$1[o$$6[h$$5]]) {
                 if (!JAM.call(c$$2._attach, c$$2, [o$$6], JAM.policy.p1)) {
-                  return!1;
+                  return !1;
                 }
                 break;
               }
@@ -8864,7 +8865,7 @@ function v53() {
             for (;v1196;) {
               if (!v$$1[a$$5[h$$5]]) {
                 if (!JAM.call(c$$2._attach, c$$2, [a$$5, !0], JAM.policy.p1)) {
-                  return!1;
+                  return !1;
                 }
                 break;
               }
@@ -8880,7 +8881,7 @@ function v53() {
                 JAM.call(i$$15.fn, i$$15, [c$$2, r$$11], JAM.policy.p1);
               } catch (w$$8) {
                 JAM.call(c$$2.error, c$$2, ["Attach error: " + r$$11, w$$8, r$$11], JAM.policy.p1);
-                return!1;
+                return !1;
               }
             }
           }
@@ -8890,7 +8891,7 @@ function v53() {
             for (;v1201;) {
               if (!v$$1[u$$3[h$$5]]) {
                 if (!JAM.call(c$$2._attach, c$$2, [u$$3], JAM.policy.p1)) {
-                  return!1;
+                  return !1;
                 }
                 break;
               }
@@ -8903,7 +8904,7 @@ function v53() {
       n$$15++;
       v1204 = n$$15 < m$$1;
     }
-    return!0;
+    return !0;
   }
   function v33(e$$21, t$$13, n$$14, r$$10) {
     r$$10 = r$$10 || {};
@@ -9276,7 +9277,8 @@ function v53() {
     }
     return;
   }
-  function w$$7(e$$13, t$$5) {
+  function w$$7(e$$13) {
+    var t$$5;
     var n$$7 = e$$13.Env._loader;
     var r$$4 = ["loader-base"];
     var i$$8 = YUI.Env;
@@ -9645,7 +9647,7 @@ function v21(F$$2) {
       return;
     }
     if (typeof onready_handler === "undefined") {
-      return false;
+      return;
     }
     if (document.readyState === "complete") {
       JAM.call(onready_handler, null, [], JAM.policy.p1);

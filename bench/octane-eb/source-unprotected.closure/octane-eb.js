@@ -1,4 +1,10 @@
-function Benchmark(name$$30, doWarmup, doDeterministic, deterministicIterations, run, setup, tearDown, rmsResult, minIterations) {
+function Benchmark(name$$30, deterministicIterations, run) {
+  var setup;
+  var tearDown;
+  var rmsResult;
+  var minIterations;
+  var doWarmup = true;
+  var doDeterministic = false;
   this.name = name$$30;
   this.doWarmup = doWarmup;
   this.doDeterministic = doDeterministic;
@@ -198,7 +204,7 @@ function sc_multi() {
 }
 function sc_minus(x$$58) {
   if (arguments.length === 1) {
-    return-x$$58;
+    return -x$$58;
   } else {
     var res$$1 = x$$58;
     var i$$16 = 1;
@@ -335,7 +341,8 @@ function sc_Pair(car, cdr) {
 function sc_isPair(p) {
   return p instanceof sc_Pair;
 }
-function sc_isPairEqual(p1, p2, comp) {
+function sc_isPairEqual(p1, p2) {
+  var comp = sc_isEqual;
   return comp(p1.car, p2.car) && comp(p1.cdr, p2.cdr);
 }
 function sc_cons(car$$1, cdr$$1) {
@@ -827,7 +834,8 @@ function sc_list2jsstring(l$$12) {
 function sc_isVector(v) {
   return v instanceof sc_Vector;
 }
-function sc_isVectorEqual(v1, v2, comp$$1) {
+function sc_isVectorEqual(v1, v2) {
+  var comp$$1 = sc_isEqual;
   if (v1.length !== v2.length) {
     return false;
   }
@@ -1156,7 +1164,7 @@ function sc_setStructFieldBang(s$$8, name$$36, field$$1, val$$4) {
   s$$8[field$$1] = val$$4;
 }
 function sc_bitNot(x$$66) {
-  return~x$$66;
+  return ~x$$66;
 }
 function sc_bitAnd(x$$67, y$$36) {
   return x$$67 & y$$36;
@@ -1661,7 +1669,8 @@ function sc_toDisplayString(o$$29) {
     }
   }
 }
-function sc_newline(p$$42) {
+function sc_newline() {
+  var p$$42;
   if (p$$42 === undefined) {
     p$$42 = SC_DEFAULT_OUT;
   }
@@ -1840,7 +1849,7 @@ function sc_isKeyword(s$$29) {
   return typeof s$$29 === "string" && s$$29.charAt(0) === sc_KEYWORD_PREFIX;
 }
 function sc_isEqual(o1$$2, o2$$2) {
-  return o1$$2 === o2$$2 || sc_isPair(o1$$2) && sc_isPair(o2$$2) && sc_isPairEqual(o1$$2, o2$$2, sc_isEqual) || sc_isVector(o1$$2) && sc_isVector(o2$$2) && sc_isVectorEqual(o1$$2, o2$$2, sc_isEqual);
+  return o1$$2 === o2$$2 || sc_isPair(o1$$2) && sc_isPair(o2$$2) && sc_isPairEqual(o1$$2, o2$$2) || sc_isVector(o1$$2) && sc_isVector(o2$$2) && sc_isVectorEqual(o1$$2, o2$$2);
 }
 function sc_number2symbol(x$$73, radix$$2) {
   return sc_SYMBOL_PREFIX + sc_number2jsstring(x$$73, radix$$2);
@@ -1850,12 +1859,12 @@ function sc_symbol2number(s$$30, radix$$3) {
 }
 function sc_string2integer(s$$31, radix$$4) {
   if (!radix$$4) {
-    return+s$$31;
+    return +s$$31;
   }
   return parseInt(s$$31, radix$$4);
 }
 function sc_string2real(s$$32) {
-  return+s$$32;
+  return +s$$32;
 }
 function sc_isSymbol(s$$33) {
   return typeof s$$33 === "string" && s$$33.charAt(0) === sc_SYMBOL_PREFIX;
@@ -2003,7 +2012,7 @@ function Run() {
   parent.removeChild(anchor);
   document.getElementById("startup-text").innerHTML = "";
   document.getElementById("progress-bar-container").style.visibility = "visible";
-  BenchmarkSuite.RunSuites({NotifyStart:ShowBox, NotifyError:AddError, NotifyResult:AddResult, NotifyScore:AddScore}, skipBenchmarks);
+  BenchmarkSuite.RunSuites();
 }
 function CheckCompatibility() {
   var hasTypedArrays = typeof Uint8Array != "undefined" && typeof Float64Array != "undefined" && typeof(new Uint8Array(0)).subarray != "undefined";
@@ -2044,11 +2053,13 @@ BenchmarkSuite.ResetRNG = function() {
       seed = (seed + 3550635116 ^ seed << 9) & 4294967295;
       seed = seed + 4251993797 + (seed << 3) & 4294967295;
       seed = (seed ^ 3042594569 ^ seed >>> 16) & 4294967295;
-      return(seed & 268435455) / 268435456;
+      return (seed & 268435455) / 268435456;
     };
   }();
 };
-BenchmarkSuite.RunSuites = function(runner, skipBenchmarks$$1) {
+BenchmarkSuite.RunSuites = function() {
+  var runner = {NotifyStart:ShowBox, NotifyError:AddError, NotifyResult:AddResult, NotifyScore:AddScore};
+  var skipBenchmarks$$1 = skipBenchmarks;
   function RunStep() {
     for (;continuation || index$$39 < length$$11;) {
       if (continuation) {
@@ -2070,7 +2081,7 @@ BenchmarkSuite.RunSuites = function(runner, skipBenchmarks$$1) {
       }
     }
     if (runner.NotifyScore) {
-      var score = BenchmarkSuite.GeometricMean(BenchmarkSuite.scores);
+      var score = BenchmarkSuite.GeometricMean();
       var formatted = BenchmarkSuite.FormatScore(100 * score);
       runner.NotifyScore(formatted);
     }
@@ -2092,7 +2103,8 @@ BenchmarkSuite.CountBenchmarks = function() {
   }
   return result$$1;
 };
-BenchmarkSuite.GeometricMean = function(numbers) {
+BenchmarkSuite.GeometricMean = function() {
+  var numbers = BenchmarkSuite.scores;
   var log = 0;
   var i$$3 = 0;
   for (;i$$3 < numbers.length;i$$3++) {
@@ -2193,7 +2205,7 @@ BenchmarkSuite.prototype.RunSingleBenchmark = function(benchmark$$1, data$$18) {
   }
   if (data$$18 == null) {
     Measure(null);
-    return{runs:0, elapsed:0};
+    return {runs:0, elapsed:0};
   } else {
     Measure(data$$18);
     if (data$$18.runs < benchmark$$1.minIterations) {
@@ -2246,9 +2258,9 @@ BenchmarkSuite.prototype.RunStep = function(runner$$2) {
   var data$$20;
   return RunNextSetup();
 };
-var EarleyBoyer = new BenchmarkSuite("EarleyBoyer", [666463], [new Benchmark("Earley", true, false, 2500, function() {
+var EarleyBoyer = new BenchmarkSuite("EarleyBoyer", [666463], [new Benchmark("Earley", 2500, function() {
   BgL_earleyzd2benchmarkzd2();
-}), new Benchmark("Boyer", true, false, 200, function() {
+}), new Benchmark("Boyer", 200, function() {
   BgL_nboyerzd2benchmarkzd2();
 })]);
 var sc_JS_GLOBALS = this;
@@ -2929,7 +2941,7 @@ String.prototype.sc_toWriteString = function() {
     if (this.charAt(0) === sc_KEYWORD_PREFIX) {
       return ":" + this.slice(1);
     } else {
-      return'"' + sc_escapeWriteString(this) + '"';
+      return '"' + sc_escapeWriteString(this) + '"';
     }
   }
 };
@@ -3054,7 +3066,7 @@ BgL_nboyerzd2benchmarkzd2 = function() {
     args$$5 = sc_cons(arguments[sc_tmp], args$$5);
   }
   var n$$10;
-  return n$$10 = args$$5 === null ? 0 : args$$5.car, BgL_setupzd2boyerzd2(), BgL_runzd2benchmarkzd2("nboyer" + sc_number2string(n$$10), 1, function() {
+  n$$10 = args$$5 === null ? 0 : args$$5.car, BgL_setupzd2boyerzd2(), BgL_runzd2benchmarkzd2("nboyer" + sc_number2string(n$$10), 1, function() {
     return BgL_testzd2boyerzd2(n$$10);
   }, function(rewrites) {
     if (sc_isNumber(rewrites)) {
@@ -3087,7 +3099,7 @@ BgL_testzd2boyerzd2 = function() {
 };
 translate_term_nboyer = function(term) {
   var lst;
-  return!(term instanceof sc_Pair) ? term : new sc_Pair(BgL_sc_symbolzd2ze3symbolzd2record_1ze3_nboyer(term.car), (lst = term.cdr, lst === null ? null : new sc_Pair(translate_term_nboyer(lst.car), translate_args_nboyer(lst.cdr))));
+  return !(term instanceof sc_Pair) ? term : new sc_Pair(BgL_sc_symbolzd2ze3symbolzd2record_1ze3_nboyer(term.car), (lst = term.cdr, lst === null ? null : new sc_Pair(translate_term_nboyer(lst.car), translate_args_nboyer(lst.cdr))));
 };
 translate_args_nboyer = function(lst$$1) {
   var sc_lst_5;
@@ -3129,7 +3141,7 @@ translate_alist_nboyer = function(alist) {
 apply_subst_nboyer = function(alist$$1, term$$4) {
   var lst$$2;
   var temp_temp;
-  return!(term$$4 instanceof sc_Pair) ? (temp_temp = sc_assq(term$$4, alist$$1), temp_temp !== false ? temp_temp.cdr : term$$4) : new sc_Pair(term$$4.car, (lst$$2 = term$$4.cdr, lst$$2 === null ? null : new sc_Pair(apply_subst_nboyer(alist$$1, lst$$2.car), apply_subst_lst_nboyer(alist$$1, lst$$2.cdr))));
+  return !(term$$4 instanceof sc_Pair) ? (temp_temp = sc_assq(term$$4, alist$$1), temp_temp !== false ? temp_temp.cdr : term$$4) : new sc_Pair(term$$4.car, (lst$$2 = term$$4.cdr, lst$$2 === null ? null : new sc_Pair(apply_subst_nboyer(alist$$1, lst$$2.car), apply_subst_lst_nboyer(alist$$1, lst$$2.cdr))));
 };
 apply_subst_lst_nboyer = function(alist$$2, lst$$3) {
   var sc_lst_7;
@@ -3607,11 +3619,11 @@ BgL_makezd2parserzd2 = function(grammar, lexer) {
       return BgL_sc_confzd2set_55zd2 = state[sc_conf_54 + 1], BgL_sc_confzd2set_55zd2 !== false ? BgL_sc_confzd2set_55zd2 : (conf_set = sc_makeVector(BgL_sc_statezd2num_53zd2 + 6, false), conf_set[1] = -3, conf_set[2] = -1, conf_set[3] = -1, conf_set[4] = -1, state[sc_conf_54 + 1] = conf_set, conf_set);
     };
     conf_set_merge_new_bang = function(conf_set$$1) {
-      return conf_set$$1[conf_set$$1[1] + 5] = conf_set$$1[4], conf_set$$1[1] = conf_set$$1[3], conf_set$$1[3] = -1, conf_set$$1[4] = -1;
+      conf_set$$1[conf_set$$1[1] + 5] = conf_set$$1[4], conf_set$$1[1] = conf_set$$1[3], conf_set$$1[3] = -1, conf_set$$1[4] = -1;
     };
     conf_set_adjoin = function(state$$1, conf_set$$2, sc_conf_56, i$$58) {
       var tail$$5;
-      return tail$$5 = conf_set$$2[3], conf_set$$2[i$$58 + 5] = -1, conf_set$$2[tail$$5 + 5] = i$$58, conf_set$$2[3] = i$$58, tail$$5 < 0 ? (conf_set$$2[0] = state$$1[0], state$$1[0] = sc_conf_56) : undefined;
+      tail$$5 = conf_set$$2[3], conf_set$$2[i$$58 + 5] = -1, conf_set$$2[tail$$5 + 5] = i$$58, conf_set$$2[3] = i$$58, tail$$5 < 0 ? (conf_set$$2[0] = state$$1[0], state$$1[0] = sc_conf_56) : undefined;
     };
     BgL_sc_confzd2setzd2adjoinza2_45za2 = function(sc_states_57, BgL_sc_statezd2num_58zd2, l$$23, i$$59) {
       var conf_set$$3;
@@ -3630,7 +3642,6 @@ BgL_makezd2parserzd2 = function(grammar, lexer) {
           l1$$13 = l1$$13.cdr;
         }
       }
-      return undefined;
     };
     BgL_sc_confzd2setzd2adjoinza2za2_46z00 = function(sc_states_60, BgL_sc_statesza2_61za2, BgL_sc_statezd2num_62zd2, sc_conf_63, i$$60) {
       var BgL_sc_confzd2setza2_64z70;
@@ -3651,7 +3662,6 @@ BgL_makezd2parserzd2 = function(grammar, lexer) {
           i$$61 = other_set[i$$61 + 5];
         }
       }
-      return undefined;
     };
     forw = function(sc_states_67, BgL_sc_statezd2num_68zd2, sc_starters_69, sc_enders_70, sc_predictors_71, sc_steps_72, sc_nts_73) {
       var next_set;
@@ -3741,7 +3751,7 @@ BgL_makezd2parserzd2 = function(grammar, lexer) {
             sc_loop1_75(preds);
           }
         } else {
-          return undefined;
+          return;
         }
       }
     };
@@ -4057,7 +4067,7 @@ BgL_makezd2parserzd2 = function(grammar, lexer) {
       --i$$55;
     }
     optrOpnd$$2 = BgL_sc_statesza2_30za2;
-    return[sc_nts_42, sc_starters_41, sc_enders_40, sc_predictors_39, sc_steps_38, sc_names_37, sc_toks_36, optrOpnd$$2, is_parsed, BgL_sc_derivzd2treesza2_47z70, BgL_sc_nbzd2derivzd2treesza2_48za2];
+    return [sc_nts_42, sc_starters_41, sc_enders_40, sc_predictors_39, sc_steps_38, sc_names_37, sc_toks_36, optrOpnd$$2, is_parsed, BgL_sc_derivzd2treesza2_47z70, BgL_sc_nbzd2derivzd2treesza2_48za2];
   };
 };
 BgL_parsezd2ze3parsedzf3zc2 = function(parse, nt$$7, i$$69, j$$9) {
@@ -4065,7 +4075,7 @@ BgL_parsezd2ze3parsedzf3zc2 = function(parse, nt$$7, i$$69, j$$9) {
   var states$$1;
   var enders$$1;
   var nts$$1;
-  return nts$$1 = parse[0], enders$$1 = parse[2], states$$1 = parse[7], is_parsed$$1 = parse[8], is_parsed$$1(nt$$7, i$$69, j$$9, nts$$1, enders$$1, states$$1);
+  nts$$1 = parse[0], enders$$1 = parse[2], states$$1 = parse[7], is_parsed$$1 = parse[8], is_parsed$$1(nt$$7, i$$69, j$$9, nts$$1, enders$$1, states$$1);
 };
 BgL_parsezd2ze3treesz31 = function(parse$$1, nt$$8, i$$70, j$$10) {
   var BgL_sc_derivzd2treesza2_132z70;
@@ -4084,7 +4094,7 @@ BgL_parsezd2ze3nbzd2treesze3 = function(parse$$2, nt$$9, i$$71, j$$11) {
   var steps$$2;
   var enders$$3;
   var nts$$3;
-  return nts$$3 = parse$$2[0], enders$$3 = parse$$2[2], steps$$2 = parse$$2[4], toks$$2 = parse$$2[6], states$$3 = parse$$2[7], BgL_sc_nbzd2derivzd2treesza2_133za2 = parse$$2[10], BgL_sc_nbzd2derivzd2treesza2_133za2(nt$$9, i$$71, j$$11, nts$$3, enders$$3, steps$$2, toks$$2, states$$3);
+  nts$$3 = parse$$2[0], enders$$3 = parse$$2[2], steps$$2 = parse$$2[4], toks$$2 = parse$$2[6], states$$3 = parse$$2[7], BgL_sc_nbzd2derivzd2treesza2_133za2 = parse$$2[10], BgL_sc_nbzd2derivzd2treesza2_133za2(nt$$9, i$$71, j$$11, nts$$3, enders$$3, steps$$2, toks$$2, states$$3);
 };
 test = function(k$$9) {
   var x$$78;
@@ -4112,7 +4122,7 @@ BgL_earleyzd2benchmarkzd2 = function() {
     args$$6 = sc_cons(arguments[sc_tmp$$1], args$$6);
   }
   var k$$10;
-  return k$$10 = args$$6 === null ? 7 : args$$6.car, BgL_runzd2benchmarkzd2("earley", 1, function() {
+  k$$10 = args$$6 === null ? 7 : args$$6.car, BgL_runzd2benchmarkzd2("earley", 1, function() {
     return test(k$$10);
   }, function(result$$4) {
     return sc_display(result$$4), sc_newline(), result$$4 == 132;

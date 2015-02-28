@@ -42,7 +42,7 @@ function v392() {
     return;
   }
   function v386() {
-    return!!store$$1;
+    return !!store$$1;
   }
   function v385() {
     var i$$66 = 0;
@@ -161,9 +161,9 @@ function v392() {
     return;
   }
   function v371() {
-    var JSCompiler_temp$$1;
-    if (JSCompiler_temp$$1 = !!window.ActiveXObject) {
-      var JSCompiler_inline_result$$2;
+    var JSCompiler_temp$$3;
+    if (JSCompiler_temp$$3 = !!window.ActiveXObject) {
+      var JSCompiler_inline_result$$4;
       JSCompiler_inline_label_msieVersion_86: {
         var reg$$inline_85 = /MSIE ([0-9]+[\.0-9]*)/;
         var v2089 = navigator.appName == "Microsoft Internet Explorer";
@@ -171,14 +171,14 @@ function v392() {
           v2089 = JAM.call(reg$$inline_85.test, reg$$inline_85, [navigator.userAgent], JAM.policy.p1);
         }
         if (v2089) {
-          JSCompiler_inline_result$$2 = parseFloat(RegExp.$1);
+          JSCompiler_inline_result$$4 = parseFloat(RegExp.$1);
           break JSCompiler_inline_label_msieVersion_86;
         }
-        JSCompiler_inline_result$$2 = 0;
+        JSCompiler_inline_result$$4 = 0;
       }
-      JSCompiler_temp$$1 = JSCompiler_inline_result$$2 >= 7;
+      JSCompiler_temp$$3 = JSCompiler_inline_result$$4 >= 7;
     }
-    return JSCompiler_temp$$1;
+    return JSCompiler_temp$$3;
   }
   function v370() {
     function v369(key$$34) {
@@ -522,10 +522,10 @@ function v335(mode$$7, element$$207) {
     return 0;
   }
   if (mode$$7 == "vertical") {
-    return(this.offset[1] + element$$207.offsetHeight - this.ycomp) / element$$207.offsetHeight;
+    return (this.offset[1] + element$$207.offsetHeight - this.ycomp) / element$$207.offsetHeight;
   }
   if (mode$$7 == "horizontal") {
-    return(this.offset[0] + element$$207.offsetWidth - this.xcomp) / element$$207.offsetWidth;
+    return (this.offset[0] + element$$207.offsetWidth - this.xcomp) / element$$207.offsetWidth;
   }
   return;
 }
@@ -835,7 +835,7 @@ function v322(GLOBAL$$1) {
     return true;
   }
   function v309(event$$19) {
-    return!(event$$19 instanceof window.Event);
+    return !(event$$19 instanceof window.Event);
   }
   function isIELegacyEvent(event$$18) {
     return false;
@@ -944,7 +944,7 @@ function v322(GLOBAL$$1) {
     return;
   }
   function pointer(event$$11) {
-    return{x:pointerX(event$$11), y:pointerY(event$$11)};
+    return {x:pointerX(event$$11), y:pointerY(event$$11)};
   }
   function pointerX(event$$12) {
     var docElement = document.documentElement;
@@ -1550,7 +1550,7 @@ function v298() {
     }
     return v642;
   }
-  return{input:input$$1, inputSelector:inputSelector, textarea:valueSelector, select:select$$3, selectOne:selectOne, selectMany:selectMany, optionValue:optionValue, button:valueSelector};
+  return {input:input$$1, inputSelector:inputSelector, textarea:valueSelector, select:select$$3, selectOne:selectOne, selectMany:selectMany, optionValue:optionValue, button:valueSelector};
 }
 function v297(element$$162) {
   element$$162 = JAM.call($, null, [element$$162], JAM.policy.p1);
@@ -1916,7 +1916,7 @@ function v269() {
     return false;
   }
   function v266(a$$11, b$$5) {
-    return!!(JAM.call(a$$11.compareDocumentPosition, a$$11, [b$$5], JAM.policy.p1) & 16);
+    return !!(JAM.call(a$$11.compareDocumentPosition, a$$11, [b$$5], JAM.policy.p1) & 16);
   }
   function v265(a$$10, b$$4) {
     var v703 = a$$10 !== b$$4;
@@ -2283,7 +2283,7 @@ function v269() {
     var cur$$4 = a$$9.nextSibling;
     for (;cur$$4;) {
       if (cur$$4 === b$$3) {
-        return-1;
+        return -1;
       }
       cur$$4 = cur$$4.nextSibling;
     }
@@ -2313,7 +2313,7 @@ function v269() {
       return JAM.call(siblingCheck, null, [a$$8, b$$2], JAM.policy.p1);
     } else {
       if (!aup) {
-        return-1;
+        return -1;
       } else {
         if (!bup) {
           return 1;
@@ -2772,13 +2772,13 @@ function v269() {
     return JAM.call(/h\d/i.test, /h\d/i, [elem$$15.nodeName], JAM.policy.p1);
   }
   function v220(elem$$14, i$$39, match$$27) {
-    return!!JAM.call(Sizzle$$1, null, [match$$27[3], elem$$14], JAM.policy.p1).length;
+    return !!JAM.call(Sizzle$$1, null, [match$$27[3], elem$$14], JAM.policy.p1).length;
   }
   function v219(elem$$13) {
-    return!elem$$13.firstChild;
+    return !elem$$13.firstChild;
   }
   function v218(elem$$12) {
-    return!!elem$$12.firstChild;
+    return !!elem$$12.firstChild;
   }
   function v217(elem$$11) {
     return elem$$11.selected === true;
@@ -3240,7 +3240,7 @@ function v269() {
             }
             expr$$7 = JAM.call(expr$$7.replace, expr$$7, [Expr.match[type$$29], ""], JAM.policy.p1);
             if (!anyFound) {
-              return[];
+              return [];
             }
             break;
           }
@@ -3265,7 +3265,7 @@ function v269() {
   function v195(expr$$6, context$$30, isXML$$2) {
     var set$$3;
     if (!expr$$6) {
-      return[];
+      return [];
     }
     var i$$33 = 0;
     var l$$2 = Expr.order.length;
@@ -3305,7 +3305,7 @@ function v269() {
       }
       set$$3 = v926;
     }
-    return{set:set$$3, expr:expr$$6};
+    return {set:set$$3, expr:expr$$6};
   }
   function v194(node$$15, expr$$5) {
     return JAM.call(Sizzle$$1, null, [expr$$5, null, null, [node$$15]], JAM.policy.p1).length > 0;
@@ -3331,7 +3331,7 @@ function v269() {
         }
       }
     }
-    return results$$14;
+    return;
   }
   function v191() {
     baseHasDuplicate = false;
@@ -3395,7 +3395,7 @@ function v269() {
       v2396 = context$$29.nodeType !== 9;
     }
     if (v2396) {
-      return[];
+      return [];
     }
     var v2397 = !selector$$1;
     if (!v2397) {
@@ -3806,7 +3806,7 @@ function v190() {
   } else {
     v2441 = extendElements;
   }
-  return{select:select$$1, match:match$$11, find:find, extendElements:v2441, extendElement:Element.extend};
+  return {select:select$$1, match:match$$11, find:find, extendElements:v2441, extendElement:Element.extend};
 }
 function v189() {
   var v1018 = $A(arguments);
@@ -3829,7 +3829,7 @@ function v188() {
     return ROOT;
   }
   function getDimensions$$1() {
-    return{width:JAM.call(this.getWidth, this, [], JAM.policy.p1), height:JAM.call(this.getHeight, this, [], JAM.policy.p1)};
+    return {width:JAM.call(this.getWidth, this, [], JAM.policy.p1), height:JAM.call(this.getHeight, this, [], JAM.policy.p1)};
   }
   function getWidth$$1() {
     return getRootElement().clientWidth;
@@ -3953,7 +3953,7 @@ function v187() {
     return value$$85;
   }
   function v182() {
-    return[this.left, this.top];
+    return [this.left, this.top];
   }
   function v181() {
     return JAM.call("[#{left}, #{top}]".interpolate, "[#{left}, #{top}]", [this], JAM.policy.p1);
@@ -4150,14 +4150,14 @@ function v187() {
       }
       var value$$84 = JAM.call(this.get, this, [key$$26], JAM.policy.p1);
       if (value$$84 != null) {
-        var JSCompiler_inline_result$$0;
+        var JSCompiler_inline_result$$2;
         var key$$inline_31 = key$$26;
         if (JAM.call(key$$inline_31.include, key$$inline_31, ["border"], JAM.policy.p1)) {
           key$$inline_31 = key$$inline_31 + "-width";
         }
-        JSCompiler_inline_result$$0 = JAM.call(key$$inline_31.camelize, key$$inline_31, [], JAM.policy.p1);
+        JSCompiler_inline_result$$2 = JAM.call(key$$inline_31.camelize, key$$inline_31, [], JAM.policy.p1);
         introspect(JAM.policy.p2) {
-          css$$2[JSCompiler_inline_result$$0] = value$$84 + "px";
+          css$$2[JSCompiler_inline_result$$2] = value$$84 + "px";
         }
       }
       return;
@@ -4236,7 +4236,7 @@ function v187() {
       return;
     }
     var element$$113 = this.element;
-    var JSCompiler_inline_result$$4;
+    var JSCompiler_inline_result$$1;
     JSCompiler_inline_label_isDisplayed_30: {
       var element$$inline_28 = element$$113;
       var v2494 = element$$inline_28;
@@ -4247,7 +4247,7 @@ function v187() {
       for (;v1098;) {
         var display$$inline_29 = JAM.call(element$$inline_28.getStyle, element$$inline_28, ["display"], JAM.policy.p1);
         if (display$$inline_29 === "none") {
-          JSCompiler_inline_result$$4 = false;
+          JSCompiler_inline_result$$1 = false;
           break JSCompiler_inline_label_isDisplayed_30;
         }
         element$$inline_28 = JAM.call($, null, [element$$inline_28.parentNode], JAM.policy.p1);
@@ -4257,9 +4257,9 @@ function v187() {
         }
         v1098 = v2495;
       }
-      JSCompiler_inline_result$$4 = true;
+      JSCompiler_inline_result$$1 = true;
     }
-    if (JSCompiler_inline_result$$4) {
+    if (JSCompiler_inline_result$$1) {
       JAM.call(this._setPrepared, this, [true], JAM.policy.p1);
       return;
     }
@@ -4572,7 +4572,7 @@ function v187() {
       v2532 = display$$1 !== "none";
     }
     if (v2532) {
-      return{width:element$$93.offsetWidth, height:element$$93.offsetHeight};
+      return {width:element$$93.offsetWidth, height:element$$93.offsetHeight};
     }
     var style$$9 = element$$93.style;
     var originalStyles = {visibility:style$$9.visibility, position:style$$9.position, display:style$$9.display};
@@ -5109,20 +5109,20 @@ function v134(GLOBAL) {
         v1266[tagName$$2] = v3951;
       }
     }
-    var JSCompiler_inline_result$$3;
+    var JSCompiler_inline_result$$0;
     JSCompiler_inline_label_shouldUseCreationCache_7: {
       if (tagName$$2 === "select") {
-        JSCompiler_inline_result$$3 = false;
+        JSCompiler_inline_result$$0 = false;
         break JSCompiler_inline_label_shouldUseCreationCache_7;
       }
       if ("type" in attributes$$1) {
-        JSCompiler_inline_result$$3 = false;
+        JSCompiler_inline_result$$0 = false;
         break JSCompiler_inline_label_shouldUseCreationCache_7;
       }
-      JSCompiler_inline_result$$3 = true;
+      JSCompiler_inline_result$$0 = true;
     }
     var v1270;
-    if (JSCompiler_inline_result$$3) {
+    if (JSCompiler_inline_result$$0) {
       var v2611 = ELEMENT_CACHE[tagName$$2];
       v1270 = JAM.call(v2611.cloneNode, v2611, [false], JAM.policy.p1);
     } else {
@@ -5751,7 +5751,7 @@ function v134(GLOBAL) {
   function descendantOf_compareDocumentPosition(element$$39, ancestor$$3) {
     element$$39 = $$$1(element$$39);
     ancestor$$3 = $$$1(ancestor$$3);
-    return(JAM.call(element$$39.compareDocumentPosition, element$$39, [ancestor$$3], JAM.policy.p1) & 8) === 8;
+    return (JAM.call(element$$39.compareDocumentPosition, element$$39, [ancestor$$3], JAM.policy.p1) & 8) === 8;
   }
   function identify(element$$40) {
     element$$40 = $$$1(element$$40);
@@ -5858,7 +5858,7 @@ function v134(GLOBAL) {
     if (v3367) {
       v3367 = node$$9.specified;
     }
-    return!!v3367;
+    return !!v3367;
   }
   function classNames$$1(element$$46) {
     return JAM.new(Element$$1.ClassNames, [element$$46]);
@@ -6206,7 +6206,8 @@ function v134(GLOBAL) {
     }
     return value$$69;
   }
-  function checkElementPrototypeDeficiency(tagName$$7) {
+  function checkElementPrototypeDeficiency() {
+    var tagName$$7 = "object";
     if (typeof window.Element === "undefined") {
       return false;
     }
@@ -6556,7 +6557,7 @@ function v134(GLOBAL) {
     GLOBAL.HTMLElement.prototype = DIV["__proto__"];
     F.ElementExtensions = true;
   }
-  var HTMLOBJECTELEMENT_PROTOTYPE_BUGGY = checkElementPrototypeDeficiency("object");
+  var HTMLOBJECTELEMENT_PROTOTYPE_BUGGY = checkElementPrototypeDeficiency();
   var EXTENDED = {};
   if (F.SpecificElementExtensions) {
     var v1573;
@@ -7252,7 +7253,7 @@ function v74() {
     }
     return value$$60 <= this.end;
   }
-  return{initialize:initialize$$1, _each:_each$$2, include:include$$2};
+  return {initialize:initialize$$1, _each:_each$$2, include:include$$2};
 }
 function v73() {
   function toColorPart() {
@@ -7262,7 +7263,7 @@ function v73() {
     return this + 1;
   }
   function times$$1(iterator$$23, context$$23) {
-    var v1700 = $R(0, this, true);
+    var v1700 = $R(this);
     JAM.call(v1700.each, v1700, [iterator$$23, context$$23], JAM.policy.p1);
     return this;
   }
@@ -7282,7 +7283,7 @@ function v73() {
   function floor() {
     return JAM.call(Math.floor, Math, [this], JAM.policy.p1);
   }
-  return{toColorPart:toColorPart, succ:succ$$1, times:times$$1, toPaddedString:toPaddedString, abs:abs, round:round, ceil:ceil, floor:floor};
+  return {toColorPart:toColorPart, succ:succ$$1, times:times$$1, toPaddedString:toPaddedString, abs:abs, round:round, ceil:ceil, floor:floor};
 }
 function v72() {
   function initialize(object$$23) {
@@ -7407,7 +7408,7 @@ function v72() {
   function clone$$2() {
     return JAM.new(Hash, [this]);
   }
-  return{initialize:initialize, _each:_each$$1, set:set, get:get, unset:unset, toObject:toObject, toTemplateReplacements:toObject, keys:keys$$2, values:values$$6, index:index$$54, merge:merge$$1, update:update$$1, toQueryString:toQueryString$$1, inspect:inspect$$4, toJSON:toObject, clone:clone$$2};
+  return {initialize:initialize, _each:_each$$1, set:set, get:get, unset:unset, toObject:toObject, toTemplateReplacements:toObject, keys:keys$$2, values:values$$6, index:index$$54, merge:merge$$1, update:update$$1, toQueryString:toQueryString$$1, inspect:inspect$$4, toJSON:toObject, clone:clone$$2};
 }
 function v67() {
   function v66() {
@@ -7454,7 +7455,7 @@ function v67() {
   }
   function without() {
     function v62(value$$50) {
-      return!JAM.call(values$$5.include, values$$5, [value$$50], JAM.policy.p1);
+      return !JAM.call(values$$5.include, values$$5, [value$$50], JAM.policy.p1);
     }
     var values$$5 = JAM.call(slice$$2.call, slice$$2, [arguments, 0], JAM.policy.p1);
     return JAM.call(this.select, this, [v62], JAM.policy.p1);
@@ -7512,7 +7513,7 @@ function v67() {
     var array$$15 = Object(this);
     var length$$18 = array$$15.length >>> 0;
     if (length$$18 === 0) {
-      return-1;
+      return -1;
     }
     i$$6 = Number(i$$6);
     if (isNaN(i$$6)) {
@@ -7533,7 +7534,7 @@ function v67() {
       }
     }
     if (i$$6 > length$$18) {
-      return-1;
+      return -1;
     }
     var v1751;
     if (i$$6 >= 0) {
@@ -7554,7 +7555,7 @@ function v67() {
       k++;
       v1753 = k < length$$18;
     }
-    return-1;
+    return -1;
   }
   function lastIndexOf(item$$2, i$$7) {
     if (this == null) {
@@ -7563,7 +7564,7 @@ function v67() {
     var array$$16 = Object(this);
     var length$$19 = array$$16.length >>> 0;
     if (length$$19 === 0) {
-      return-1;
+      return -1;
     }
     if (!JAM.call(Object.isUndefined, Object, [i$$7], JAM.policy.p1)) {
       i$$7 = Number(i$$7);
@@ -7606,7 +7607,7 @@ function v67() {
       k$$1--;
       v1764 = k$$1 >= 0;
     }
-    return-1;
+    return -1;
   }
   function concat(_) {
     var array$$17 = [];
@@ -8052,7 +8053,7 @@ function v59() {
     var trues = [];
     var falses = [];
     JAM.call(this.each, this, [v53, this], JAM.policy.p1);
-    return[trues, falses];
+    return [trues, falses];
   }
   function pluck(property$$4) {
     function v54(value$$44) {
@@ -8093,7 +8094,7 @@ function v59() {
       return v1844;
     }
     function v56(value$$46, index$$51) {
-      return{value:value$$46, criteria:JAM.call(iterator$$14.call, iterator$$14, [context$$15, value$$46, index$$51, this], JAM.policy.p1)};
+      return {value:value$$46, criteria:JAM.call(iterator$$14.call, iterator$$14, [context$$15, value$$46, index$$51, this], JAM.policy.p1)};
     }
     var v2911 = JAM.call(this.map, this, [v56, this], JAM.policy.p1);
     var v1846 = JAM.call(v2911.sort, v2911, [v57], JAM.policy.p1);
@@ -8123,7 +8124,7 @@ function v59() {
     var v3484 = JAM.call(this.toArray, this, [], JAM.policy.p1);
     return "#<Enumerable:" + JAM.call(v3484.inspect, v3484, [], JAM.policy.p1) + ">";
   }
-  return{each:each, eachSlice:eachSlice, all:all, every:all, any:any, some:any, collect:collect, map:collect, detect:detect, findAll:findAll, select:findAll, filter:findAll, grep:grep, include:include$$1, member:include$$1, inGroupsOf:inGroupsOf, inject:inject, invoke:invoke, max:max, min:min, partition:partition, pluck:pluck, reject:reject, sortBy:sortBy, toArray:toArray$$1, entries:toArray$$1, zip:zip, size:size$$4, inspect:inspect$$2, find:detect};
+  return {each:each, eachSlice:eachSlice, all:all, every:all, any:any, some:any, collect:collect, map:collect, detect:detect, findAll:findAll, select:findAll, filter:findAll, grep:grep, include:include$$1, member:include$$1, inGroupsOf:inGroupsOf, inject:inject, invoke:invoke, max:max, min:min, partition:partition, pluck:pluck, reject:reject, sortBy:sortBy, toArray:toArray$$1, entries:toArray$$1, zip:zip, size:size$$4, inspect:inspect$$2, find:detect};
 }
 function v40(object$$16) {
   function v39(match$$5) {
@@ -8359,7 +8360,7 @@ function v37() {
     var v1894 = JAM.call(this.strip, this, [], JAM.policy.p1);
     var match$$3 = JAM.call(v1894.match, v1894, [/([^?#]*)(#.*)?$/], JAM.policy.p1);
     if (!match$$3) {
-      return{};
+      return {};
     }
     var v2943 = match$$3[1];
     var v1896 = JAM.call(v2943.split, v2943, [separator || "&"], JAM.policy.p1);
@@ -8419,7 +8420,7 @@ function v37() {
     }
     var escapedString = JAM.call(this.replace, this, [/[\x00-\x1f\\]/g, v35], JAM.policy.p1);
     if (useDoubleQuotes) {
-      return'"' + JAM.call(escapedString.replace, escapedString, [/"/g, '\\"'], JAM.policy.p1) + '"';
+      return '"' + JAM.call(escapedString.replace, escapedString, [/"/g, '\\"'], JAM.policy.p1) + '"';
     }
     return "'" + JAM.call(escapedString.replace, escapedString, [/'/g, "\\'"], JAM.policy.p1) + "'";
   }
@@ -8516,7 +8517,7 @@ function v37() {
   } else {
     v2965 = evalJSON;
   }
-  return{gsub:gsub, sub:sub, scan:scan, truncate:truncate, strip:v1923, stripTags:stripTags, stripScripts:stripScripts, extractScripts:extractScripts, evalScripts:evalScripts, escapeHTML:escapeHTML, unescapeHTML:unescapeHTML, toQueryParams:toQueryParams, parseQuery:toQueryParams, toArray:toArray, succ:succ, times:times, camelize:camelize, capitalize:capitalize, underscore:underscore, dasherize:dasherize, inspect:inspect$$1, unfilterJSON:unfilterJSON, isJSON:isJSON, evalJSON:v2965, include:include, 
+  return {gsub:gsub, sub:sub, scan:scan, truncate:truncate, strip:v1923, stripTags:stripTags, stripScripts:stripScripts, extractScripts:extractScripts, evalScripts:evalScripts, escapeHTML:escapeHTML, unescapeHTML:unescapeHTML, toQueryParams:toQueryParams, parseQuery:toQueryParams, toArray:toArray, succ:succ, times:times, camelize:camelize, capitalize:capitalize, underscore:underscore, dasherize:dasherize, inspect:inspect$$1, unfilterJSON:unfilterJSON, isJSON:isJSON, evalJSON:v2965, include:include, 
   startsWith:startsWith, endsWith:endsWith, empty:empty, blank:blank, interpolate:interpolate};
 }
 function v28(value$$30) {
@@ -8944,7 +8945,7 @@ function v14() {
     if (v3527) {
       v3527 = object$$7.nodeType == 1;
     }
-    return!!v3527;
+    return !!v3527;
   }
   function isArray(object$$8) {
     return JAM.call(_toString.call, _toString, [object$$8], JAM.policy.p1) === ARRAY_CLASS;
@@ -9142,7 +9143,7 @@ function v12() {
     return this;
   }
   var IS_DONTENUM_BUGGY = v11();
-  return{create:create, Methods:{addMethods:addMethods}};
+  return {create:create, Methods:{addMethods:addMethods}};
 }
 function v4(x$$47) {
   return x$$47;
@@ -9177,7 +9178,7 @@ function v1() {
   if (v3542) {
     v3542 = constructor.prototype;
   }
-  return!!v3542;
+  return !!v3542;
 }
 function v0() {
   var ua = navigator.userAgent;
@@ -9193,11 +9194,11 @@ function v0() {
   if (v3019) {
     v3019 = JAM.call(ua.indexOf, ua, ["KHTML"], JAM.policy.p1) === -1;
   }
-  return{IE:v2021, Opera:isOpera, WebKit:v2022, Gecko:v3019, MobileSafari:JAM.call(/Apple.*Mobile/.test, /Apple.*Mobile/, [ua], JAM.policy.p1)};
+  return {IE:v2021, Opera:isOpera, WebKit:v2022, Gecko:v3019, MobileSafari:JAM.call(/Apple.*Mobile/.test, /Apple.*Mobile/, [ua], JAM.policy.p1)};
 }
 function $A(iterable) {
   if (!iterable) {
-    return[];
+    return [];
   }
   if ("toArray" in Object(iterable)) {
     return JAM.call(iterable.toArray, iterable, [], JAM.policy.p1);
@@ -9221,7 +9222,7 @@ function $A(iterable) {
 }
 function $w(string) {
   if (!JAM.call(Object.isString, Object, [string], JAM.policy.p1)) {
-    return[];
+    return [];
   }
   string = JAM.call(string.strip, string, [], JAM.policy.p1);
   var v2030;
@@ -9235,7 +9236,9 @@ function $w(string) {
 function $H(object$$22) {
   return JAM.new(Hash, [object$$22]);
 }
-function $R(start$$4, end$$1, exclusive) {
+function $R(end$$1) {
+  var start$$4 = 0;
+  var exclusive = true;
   return JAM.new(ObjectRange, [start$$4, end$$1, exclusive]);
 }
 var Prototype = {Version:"1.7.1", Browser:v0(), BrowserFeatures:{XPath:!!document.evaluate, SelectorsAPI:!!document.querySelector, ElementExtensions:v1(), SpecificElementExtensions:v2()}, ScriptFragment:"<script[^>]*>([\\S\\s]*?)\x3c/script\\s*>", JSONFilter:/^\/\*-secure-([\s\S]*)\*\/\s*$/, emptyFunction:v3, K:v4};

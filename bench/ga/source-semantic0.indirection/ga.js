@@ -138,7 +138,7 @@ function v209() {
         v785 = M(v1233);
       }
       var v228 = v785;
-      return!v228;
+      return !v228;
     }
     function v202() {
       var a$$45 = [];
@@ -2123,12 +2123,12 @@ function v209() {
       var v931 = b$$67.Mc();
       var v465 = !v931;
       if (v465) {
-        return!1;
+        return !1;
       }
       var v932 = L.Ic();
       var v466 = !v932;
       if (v466) {
-        return!1;
+        return !1;
       }
       var v467 = b$$67.sb();
       if (v467) {
@@ -2137,7 +2137,7 @@ function v209() {
         var v935 = !1;
         ta(v933, "load", v934, v935);
       }
-      return!0;
+      return !0;
     }
     function v96() {
       var d$$61 = b$$67.Kc();
@@ -2148,15 +2148,15 @@ function v209() {
       }
       var v468 = v936;
       if (v468) {
-        return!1;
+        return !1;
       }
       var v469 = d$$61 <= 0;
       if (v469) {
-        return!0;
+        return !0;
       }
       var v470 = d$$61 > 2147483648;
       if (v470) {
-        return!1;
+        return !1;
       }
       var a$$66 = b$$67.rb;
       JAM.call(a$$66.t, a$$66, [14], JAM.policy.p2);
@@ -2179,7 +2179,7 @@ function v209() {
       if (v472) {
         h$$31.setPageReadyTime();
       }
-      return!1;
+      return !1;
     }
     function v95(b$$69) {
       var v939 = b$$69 / 100;
@@ -2326,20 +2326,20 @@ function v209() {
       }
       var v486 = v945;
       if (v486) {
-        return!1;
+        return !1;
       }
       var v487 = n$$15.toString();
       d$$54(a$$62, c$$37, b$$63, v487);
-      return!0;
+      return !0;
     }
     function v102(b$$62, c$$43, n$$14) {
       var v946 = typeof n$$14;
       var v488 = v946 != "string";
       if (v488) {
-        return!1;
+        return !1;
       }
       d$$54(b$$62, a$$54, c$$43, n$$14);
-      return!0;
+      return !0;
     }
     function v101(a$$61) {
       var v489 = a$$61 == k;
@@ -2989,7 +2989,7 @@ function v209() {
       var v999 = JAM.call(g$$13.h, g$$13, [a$$42], JAM.policy.p3);
       var v545 = !v999;
       if (v545) {
-        return!0;
+        return !0;
       }
       var v546 = L[w$$5];
       c$$30 = v546[y$$30];
@@ -3281,9 +3281,9 @@ function v209() {
       }
       var v568 = v1026;
       if (v568) {
-        return!0;
+        return !0;
       }
-      return!1;
+      return !1;
     }
     function v115(a$$33) {
       var c$$22 = g$$13.ua();
@@ -3721,7 +3721,8 @@ function v209() {
       var v612 = JAM.call(c$$16.join, c$$16, ["+"], JAM.policy.p2);
       return P(v612);
     }
-    function v132(a$$24, c$$15, d$$31, j$$8, i$$5, s$$3) {
+    function v132(a$$24, c$$15, d$$31, j$$8, i$$5) {
+      var s$$3;
       var v1066 = !e$$17;
       if (v1066) {
         e$$17 = new Ja;
@@ -4043,9 +4044,9 @@ function v209() {
       if (h$$14) {
         JAM.set(h$$14, "onreadystatechange", v138);
         JAM.call(h$$14.send, h$$14, [d$$28], JAM.policy.p3);
-        return!0;
+        return !0;
       }
-      return!1;
+      return !1;
     }
     function v137(f$$18, b$$25) {
       var v647 = JAM.call(d$$26.ed, d$$26, [f$$18, b$$25], JAM.policy.p3);
@@ -4675,7 +4676,7 @@ function v209() {
         a = JAM.call(i$$1.indexOf, i$$1, [v715], JAM.policy.p3);
         var v716 = a < 0;
         if (v716) {
-          return["", 0];
+          return ["", 0];
         }
         var v1502 = b$$16[v];
         var v1163 = a + v1502;
@@ -4705,7 +4706,7 @@ function v209() {
       if (v722) {
         i$$1 = "";
       }
-      return[i$$1, d$$21];
+      return [i$$1, d$$21];
     }
     function b$$15(a$$1, c$$1) {
       var v1851 = a$$1[1];
@@ -4859,7 +4860,8 @@ function v209() {
     var v734 = JAM.call(d$$14.indexOf, d$$14, [f$$9], JAM.policy.p3);
     return v734 > -1;
   }
-  function Q(d$$13, f$$8) {
+  function Q(d$$13) {
+    var f$$8;
     var b$$12 = decodeURIComponent;
     var h$$8;
     var v735 = JAM.call(d$$13.split, d$$13, ["+"], JAM.policy.p2);
@@ -5032,12 +5034,12 @@ function v209() {
     }
     return v183;
   }
-  function ra(d$$4, f$$1) {
+  function ra() {
     function v193(d$$5) {
       var v1193 = !d$$5;
       var v1520 = !v1193;
       if (v1520) {
-        var v1519 = JAM.call(b$$2.Jb, b$$2, ["Firefox"], JAM.policy.p2);
+        var v1519 = b$$2.Jb();
         v1193 = !v1519;
       }
       var v745 = v1193;
@@ -5119,14 +5121,15 @@ function v209() {
       return v758[ja];
     }
     function v186() {
-      var v759 = JAM.call(b$$2.Jb, b$$2, ["Firefox"], JAM.policy.p2);
+      var v759 = b$$2.Jb();
       if (v759) {
         var v1205 = [].reduce;
         v759 = !v1205;
       }
       return v759;
     }
-    function v185(b$$4) {
+    function v185() {
+      var b$$4 = "Firefox";
       var v1206 = navigator.userAgent;
       var v760 = JAM.call(v1206.indexOf, v1206, [b$$4], JAM.policy.p3);
       return v760 >= 0;
@@ -5135,6 +5138,8 @@ function v209() {
       JAM.call(setTimeout, null, [b$$3, e$$5]);
       return;
     }
+    var d$$4 = window;
+    var f$$1 = document;
     var b$$2 = this;
     b$$2.window = d$$4;
     b$$2.document = f$$1;
@@ -5304,7 +5309,7 @@ function v209() {
   var na = "__utmx=";
   var oa = "GASO=";
   var qa = new pa;
-  var L = new ra(window, document);
+  var L = new ra;
   var v770;
   var v1860 = L[w$$5];
   var v1736 = v1860[y$$30];

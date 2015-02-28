@@ -1,5 +1,14 @@
 introspect(JAM.policy.pFull) {
-function Benchmark(name$$30, doWarmup, doDeterministic, deterministicIterations, run, setup, tearDown, rmsResult, minIterations) {
+function Benchmark() {
+  var name$$30 = "Typescript";
+  var doWarmup = false;
+  var doDeterministic = true;
+  var deterministicIterations = 5;
+  var run = runTypescript;
+  var setup = setupTypescript;
+  var tearDown = tearDownTypescript;
+  var rmsResult = null;
+  var minIterations = 1;
   this.name = name$$30;
   this.doWarmup = doWarmup;
   this.doDeterministic = doDeterministic;
@@ -108,7 +117,7 @@ function Run() {
   parent$$73.removeChild(anchor);
   document.getElementById("startup-text").innerHTML = "";
   document.getElementById("progress-bar-container").style.visibility = "visible";
-  BenchmarkSuite.RunSuites({NotifyStart:ShowBox, NotifyError:AddError, NotifyResult:AddResult, NotifyScore:AddScore}, skipBenchmarks);
+  BenchmarkSuite.RunSuites();
 }
 function CheckCompatibility() {
   var hasTypedArrays = typeof Uint8Array != "undefined" && typeof Float64Array != "undefined" && typeof(new Uint8Array(0)).subarray != "undefined";
@@ -149,11 +158,13 @@ BenchmarkSuite.ResetRNG = function() {
       seed = (seed + 3550635116 ^ seed << 9) & 4294967295;
       seed = seed + 4251993797 + (seed << 3) & 4294967295;
       seed = (seed ^ 3042594569 ^ seed >>> 16) & 4294967295;
-      return(seed & 268435455) / 268435456;
+      return (seed & 268435455) / 268435456;
     };
   }();
 };
-BenchmarkSuite.RunSuites = function(runner, skipBenchmarks$$1) {
+BenchmarkSuite.RunSuites = function() {
+  var runner = {NotifyStart:ShowBox, NotifyError:AddError, NotifyResult:AddResult, NotifyScore:AddScore};
+  var skipBenchmarks$$1 = skipBenchmarks;
   function RunStep() {
     for (;continuation || index$$39 < length$$11;) {
       if (continuation) {
@@ -175,7 +186,7 @@ BenchmarkSuite.RunSuites = function(runner, skipBenchmarks$$1) {
       }
     }
     if (runner.NotifyScore) {
-      var score = BenchmarkSuite.GeometricMean(BenchmarkSuite.scores);
+      var score = BenchmarkSuite.GeometricMean();
       var formatted = BenchmarkSuite.FormatScore(100 * score);
       runner.NotifyScore(formatted);
     }
@@ -197,7 +208,8 @@ BenchmarkSuite.CountBenchmarks = function() {
   }
   return result;
 };
-BenchmarkSuite.GeometricMean = function(numbers) {
+BenchmarkSuite.GeometricMean = function() {
+  var numbers = BenchmarkSuite.scores;
   var log = 0;
   var i$$2 = 0;
   for (;i$$2 < numbers.length;i$$2++) {
@@ -298,7 +310,7 @@ BenchmarkSuite.prototype.RunSingleBenchmark = function(benchmark$$1, data$$18) {
   }
   if (data$$18 == null) {
     Measure(null);
-    return{runs:0, elapsed:0};
+    return {runs:0, elapsed:0};
   } else {
     Measure(data$$18);
     if (data$$18.runs < benchmark$$1.minIterations) {
@@ -351,7 +363,7 @@ BenchmarkSuite.prototype.RunStep = function(runner$$2) {
   var data$$20;
   return RunNextSetup();
 };
-var typescript = new BenchmarkSuite("Typescript", [255011322], [new Benchmark("Typescript", false, true, 5, runTypescript, setupTypescript, tearDownTypescript, null, 1)]);
+var typescript = new BenchmarkSuite("Typescript", [255011322], [new Benchmark]);
 var parseErrors = [];
 var outfile = {checksum:-412589664, cumulative_checksum:0, Write:function(s$$3) {
   this.Verify(s$$3);
@@ -389,7 +401,7 @@ var compiler_input = '//\n// Copyright (c) Microsoft Corporation.  All rights re
 var TypeScript;
 (function(TypeScript$$1) {
   function hasFlag(val, flag$$1) {
-    return(val & flag$$1) != 0;
+    return (val & flag$$1) != 0;
   }
   function ToDeclFlags(fncOrVarOrSymbolOrModuleFlags) {
     return fncOrVarOrSymbolOrModuleFlags;
@@ -1118,7 +1130,7 @@ var TypeScript;
       var i$$10 = 0;
       for (;i$$10 < searchArray.length;i$$10++) {
         if (searchArray[i$$10] == key$$25) {
-          return{key:this.keys[i$$10], data:this.values[i$$10]};
+          return {key:this.keys[i$$10], data:this.values[i$$10]};
         }
       }
       return null;
@@ -1317,7 +1329,7 @@ var __extends = this.__extends || function(d, b) {
     };
     AST$$1.prototype.getDocComments = function() {
       if (!this.isDeclaration() || !this.preComments || this.preComments.length == 0) {
-        return[];
+        return [];
       }
       if (!this.docComments) {
         var preCommentsLength = this.preComments.length;
@@ -1389,7 +1401,7 @@ var __extends = this.__extends || function(d, b) {
     };
     ASTList$$1.prototype.emit = function(emitter$$1, tokenId$$1, startLine$$1) {
       emitter$$1.recordSourceMappingStart(this);
-      emitter$$1.emitJavascriptList(this, null, TypeScript$$4.TokenID.Semicolon, startLine$$1, false, false);
+      emitter$$1.emitJavascriptList(this, null, TypeScript$$4.TokenID.Semicolon, startLine$$1, false);
       emitter$$1.recordSourceMappingEnd(this);
     };
     ASTList$$1.prototype.typeCheck = function(typeFlow$$1) {
@@ -2176,7 +2188,8 @@ var __extends = this.__extends || function(d, b) {
     FuncDecl$$1.prototype.setHasSuperReferenceInFatArrowFunction = function() {
       this.fncFlags |= TypeScript$$4.FncFlags.HasSuperReferenceInFatArrowFunction;
     };
-    FuncDecl$$1.prototype.addCloRef = function(id$$5, sym) {
+    FuncDecl$$1.prototype.addCloRef = function(id$$5) {
+      var sym = null;
       if (this.envids == null) {
         this.envids = new Array;
       }
@@ -2197,7 +2210,7 @@ var __extends = this.__extends || function(d, b) {
       var id$$6 = new Identifier(sym$$1.name);
       this.jumpRefs[this.jumpRefs.length] = id$$6;
       id$$6.sym = sym$$1;
-      id$$6.cloId = this.addCloRef(id$$6, null);
+      id$$6.cloId = this.addCloRef(id$$6);
     };
     FuncDecl$$1.prototype.buildControlFlow = function() {
       function controlFlowPrefix(ast$$2, parent, walker$$1) {
@@ -2226,7 +2239,7 @@ var __extends = this.__extends || function(d, b) {
       }
     };
     FuncDecl$$1.prototype.isMethod = function() {
-      return(this.fncFlags & TypeScript$$4.FncFlags.Method) != TypeScript$$4.FncFlags.None;
+      return (this.fncFlags & TypeScript$$4.FncFlags.Method) != TypeScript$$4.FncFlags.None;
     };
     FuncDecl$$1.prototype.isCallMember = function() {
       return TypeScript$$4.hasFlag(this.fncFlags, TypeScript$$4.FncFlags.CallMember);
@@ -2278,7 +2291,7 @@ var __extends = this.__extends || function(d, b) {
       this.fncFlags = TypeScript$$4.FncFlags.None;
     };
     FuncDecl$$1.prototype.isSignature = function() {
-      return(this.fncFlags & TypeScript$$4.FncFlags.Signature) != TypeScript$$4.FncFlags.None;
+      return (this.fncFlags & TypeScript$$4.FncFlags.Signature) != TypeScript$$4.FncFlags.None;
     };
     return FuncDecl$$1;
   }(AST);
@@ -2369,7 +2382,7 @@ var __extends = this.__extends || function(d, b) {
     Script$$1.prototype.emit = function(emitter$$16, tokenId$$16, startLine$$16) {
       if (this.emitRequired(emitter$$16.emitOptions)) {
         emitter$$16.emitParensAndCommentsInPlace(this.bod, true);
-        emitter$$16.emitJavascriptList(this.bod, null, TypeScript$$4.TokenID.Semicolon, true, false, false, true, this.requiresExtendsBlock);
+        emitter$$16.emitJavascriptList(this.bod, null, TypeScript$$4.TokenID.Semicolon, true, false, true, this.requiresExtendsBlock);
         emitter$$16.emitParensAndCommentsInPlace(this.bod, false);
       }
     };
@@ -2577,7 +2590,7 @@ var __extends = this.__extends || function(d, b) {
       }
       var temp = emitter$$21.setInObjectLiteral(false);
       if (this.statements) {
-        emitter$$21.emitJavascriptList(this.statements, null, TypeScript$$4.TokenID.Semicolon, true, false, false);
+        emitter$$21.emitJavascriptList(this.statements, null, TypeScript$$4.TokenID.Semicolon, true, false);
       }
       if (this.isStatementBlock) {
         emitter$$21.indenter.decreaseIndent();
@@ -2626,18 +2639,15 @@ var __extends = this.__extends || function(d, b) {
     Jump$$1.prototype.setResolvedTarget = function(parser, stmt$$2) {
       if (stmt$$2.isLoop()) {
         this.resolvedTarget = stmt$$2;
-        return true;
+        return;
       }
       if (this.nodeType === TypeScript$$4.NodeType.Continue) {
         parser.reportParseError("continue statement applies only to loops");
-        return false;
       } else {
         if (stmt$$2.nodeType == TypeScript$$4.NodeType.Switch || this.target) {
           this.resolvedTarget = stmt$$2;
-          return true;
         } else {
           parser.reportParseError("break statement with no label can apply only to a loop or switch statement");
-          return false;
         }
       }
     };
@@ -3026,7 +3036,7 @@ var __extends = this.__extends || function(d, b) {
           emitter$$28.emitJavascript(this.init, TypeScript$$4.TokenID.For, false);
         } else {
           emitter$$28.setInVarBlock(this.init.members.length);
-          emitter$$28.emitJavascriptList(this.init, null, TypeScript$$4.TokenID.For, false, false, false);
+          emitter$$28.emitJavascriptList(this.init, null, TypeScript$$4.TokenID.For, false, false);
         }
       }
       emitter$$28.writeToOutput("; ");
@@ -3554,7 +3564,7 @@ var __extends = this.__extends || function(d, b) {
       if (endIndex != line.length) {
         return endIndex;
       }
-      return-1;
+      return -1;
     };
     Comment$$2.isSpaceChar = function isSpaceChar(line$$1, index$$41) {
       var length$$13 = line$$1.length;
@@ -3577,7 +3587,7 @@ var __extends = this.__extends || function(d, b) {
             return null;
           }
         }
-        return{minChar:nonSpaceIndex, limChar:line$$2.charAt(line$$2.length - 1) == "\r" ? line$$2.length - 1 : line$$2.length, jsDocSpacesRemoved:jsDocSpacesRemoved};
+        return {minChar:nonSpaceIndex, limChar:line$$2.charAt(line$$2.length - 1) == "\r" ? line$$2.length - 1 : line$$2.length, jsDocSpacesRemoved:jsDocSpacesRemoved};
       }
       return null;
     };
@@ -3756,7 +3766,8 @@ var __extends = this.__extends || function(d, b) {
       this.goNextSibling = true;
       this.reverseSiblings = false;
     }
-    AstWalkOptions$$1.prototype.stopWalk = function(stop) {
+    AstWalkOptions$$1.prototype.stopWalk = function() {
+      var stop;
       if (typeof stop === "undefined") {
         stop = true;
       }
@@ -4933,7 +4944,7 @@ var __extends = this.__extends || function(d, b) {
         shift += i$$34 == 0 ? 4 : 5;
         if ((byte & 32) === 32) {
         } else {
-          return{value:negative ? -result$$6 : result$$6, rest:inString.substr(i$$34 + 1)};
+          return {value:negative ? -result$$6 : result$$6, rest:inString.substr(i$$34 + 1)};
         }
       }
       throw new Error('Base64 value "' + inString + '" finished with a continuation bit');
@@ -5201,7 +5212,7 @@ var JSON2 = {};
       try {
         sourceMapOut$$1.Close();
       } catch (ex) {
-        sourceMapper.errorReporter.emitterError(null, ex.message);
+        sourceMapper.errorReporter.emitterError(ex.message);
       }
     };
     return SourceMapper$$1;
@@ -5423,7 +5434,7 @@ var JSON2 = {};
       this.writeLineToOutput("{");
       this.indenter.increaseIndent();
       var inObjectLiteral = this.setInObjectLiteral(true);
-      this.emitJavascriptList(content$$2, ",", TypeScript$$12.TokenID.Comma, true, false, false);
+      this.emitJavascriptList(content$$2, ",", TypeScript$$12.TokenID.Comma, true, false);
       this.setInObjectLiteral(inObjectLiteral);
       this.indenter.decreaseIndent();
       this.emitIndent();
@@ -5434,7 +5445,7 @@ var JSON2 = {};
       if (content$$3) {
         this.writeLineToOutput("");
         this.indenter.increaseIndent();
-        this.emitJavascriptList(content$$3, ", ", TypeScript$$12.TokenID.Comma, true, false, false);
+        this.emitJavascriptList(content$$3, ", ", TypeScript$$12.TokenID.Comma, true, false);
         this.indenter.decreaseIndent();
         this.emitIndent();
       }
@@ -5454,7 +5465,7 @@ var JSON2 = {};
         this.emitJavascript(target$$28, TypeScript$$12.TokenID.Tilde, false);
         this.recordSourceMappingStart(args$$3);
         this.writeToOutput("(");
-        this.emitJavascriptList(args$$3, ", ", TypeScript$$12.TokenID.Comma, false, false, false);
+        this.emitJavascriptList(args$$3, ", ", TypeScript$$12.TokenID.Comma, false, false);
         this.writeToOutput(")");
         this.recordSourceMappingEnd(args$$3);
       }
@@ -5504,7 +5515,7 @@ var JSON2 = {};
               this.writeToOutput(", ");
             }
           }
-          this.emitJavascriptList(args$$4, ", ", TypeScript$$12.TokenID.Comma, false, false, false);
+          this.emitJavascriptList(args$$4, ", ", TypeScript$$12.TokenID.Comma, false, false);
           this.writeToOutput(")");
           this.recordSourceMappingEnd(args$$4);
         } else {
@@ -5543,7 +5554,7 @@ var JSON2 = {};
           var args$$5 = baseExpr.arguments;
           if (args$$5 && args$$5.members.length > 0) {
             this.writeToOutput(", ");
-            this.emitJavascriptList(args$$5, ", ", TypeScript$$12.TokenID.Comma, false, false, false);
+            this.emitJavascriptList(args$$5, ", ", TypeScript$$12.TokenID.Comma, false, false);
           }
           this.writeToOutput(")");
         } else {
@@ -5835,7 +5846,7 @@ var JSON2 = {};
         if (moduleDecl.modFlags & TypeScript$$12.ModuleFlags.MustCaptureThis) {
           this.writeCaptureThisStatement(moduleDecl);
         }
-        this.emitJavascriptList(moduleDecl.members, null, TypeScript$$12.TokenID.Semicolon, true, false, false);
+        this.emitJavascriptList(moduleDecl.members, null, TypeScript$$12.TokenID.Semicolon, true, false);
         if (!isDynamicMod || TypeScript$$12.moduleGenTarget == TypeScript$$12.ModuleGenTarget.Asynchronous) {
           this.indenter.decreaseIndent();
         }
@@ -5922,7 +5933,7 @@ var JSON2 = {};
       var temp$$11 = this.setInObjectLiteral(false);
       this.emitJavascript(operand1$$2, TypeScript$$12.TokenID.Tilde, false);
       this.writeToOutput("[");
-      this.emitJavascriptList(operand2$$2, ", ", TypeScript$$12.TokenID.Comma, false, false, false);
+      this.emitJavascriptList(operand2$$2, ", ", TypeScript$$12.TokenID.Comma, false, false);
       this.writeToOutput("]");
       this.setInObjectLiteral(temp$$11);
     };
@@ -6006,7 +6017,6 @@ var JSON2 = {};
         this.writeToOutput("var ");
         this.setInVarBlock(-this.varListCount());
       }
-      return true;
     };
     Emitter$$1.prototype.onEmitVar = function() {
       if (this.varListCount() > 0) {
@@ -6184,7 +6194,7 @@ var JSON2 = {};
               this.writeLineToOutput(" {");
               this.indenter.increaseIndent();
             }
-            this.emitJavascriptList(stmts$$1, null, TypeScript$$12.TokenID.Semicolon, true, false, false);
+            this.emitJavascriptList(stmts$$1, null, TypeScript$$12.TokenID.Semicolon, true, false);
             if (!hasOnlyBlockStatement) {
               this.writeLineToOutput("");
               this.indenter.decreaseIndent();
@@ -6213,7 +6223,7 @@ var JSON2 = {};
             this.emitJavascript(stmtList.members[0], TypeScript$$12.TokenID.Semicolon, true);
             this.writeLineToOutput("");
           } else {
-            this.emitJavascriptList(stmts$$2, null, TypeScript$$12.TokenID.Semicolon, true, false, emitClassPropertiesAfterSuperCall);
+            this.emitJavascriptList(stmts$$2, null, TypeScript$$12.TokenID.Semicolon, true, emitClassPropertiesAfterSuperCall);
           }
         } else {
           this.emitJavascript(stmts$$2, TypeScript$$12.TokenID.Semicolon, true);
@@ -6277,10 +6287,11 @@ var JSON2 = {};
       try {
         this.outfile.Close();
       } catch (ex$$1) {
-        this.errorReporter.emitterError(null, ex$$1.message);
+        this.errorReporter.emitterError(ex$$1.message);
       }
     };
-    Emitter$$1.prototype.emitJavascriptList = function(ast$$18, delimiter, tokenId$$40, startLine$$39, onlyStatics, emitClassPropertiesAfterSuperCall$$1, emitPrologue, requiresExtendsBlock) {
+    Emitter$$1.prototype.emitJavascriptList = function(ast$$18, delimiter, tokenId$$40, startLine$$39, emitClassPropertiesAfterSuperCall$$1, emitPrologue, requiresExtendsBlock) {
+      var onlyStatics = false;
       if (typeof emitClassPropertiesAfterSuperCall$$1 === "undefined") {
         emitClassPropertiesAfterSuperCall$$1 = false;
       }
@@ -6639,7 +6650,7 @@ var JSON2 = {};
           this.emitThis();
           if (callEx.arguments && callEx.arguments.members.length > 0) {
             this.writeToOutput(", ");
-            this.emitJavascriptList(callEx.arguments, ", ", TypeScript$$12.TokenID.Comma, false, false, false);
+            this.emitJavascriptList(callEx.arguments, ", ", TypeScript$$12.TokenID.Comma, false, false);
           }
           this.writeToOutput(")");
           return true;
@@ -6661,7 +6672,7 @@ var JSON2 = {};
       try {
         return this.emitOptions.ioHost.createFile(fileName$$2, useUTF8);
       } catch (ex$$2) {
-        this.errorReporter.emitterError(null, ex$$2.message);
+        this.errorReporter.emitterError(ex$$2.message);
       }
     };
     return Emitter$$1;
@@ -6752,7 +6763,8 @@ var JSON2 = {};
         this.outfile.WriteLine(message$$11);
       }
     };
-    ErrorReporter$$1.prototype.emitterError = function(ast$$23, message$$12) {
+    ErrorReporter$$1.prototype.emitterError = function(message$$12) {
+      var ast$$23 = null;
       this.reportError(ast$$23, message$$12);
       throw Error("EmitError");
     };
@@ -6943,7 +6955,7 @@ var JSON2 = {};
       this.statementInfoStack.push(info);
     };
     Parser$$1.prototype.popStmt = function() {
-      return this.statementInfoStack.pop();
+      this.statementInfoStack.pop();
     };
     Parser$$1.prototype.resolveJumpTarget = function(jump) {
       var resolvedTarget = TypeScript$$14.AST.getResolvedIdentifierName(jump.target);
@@ -7022,7 +7034,8 @@ var JSON2 = {};
         }
       }
     };
-    Parser$$1.prototype.checkNextToken = function(tokenId$$42, errorRecoverySet, errorText) {
+    Parser$$1.prototype.checkNextToken = function(tokenId$$42, errorRecoverySet) {
+      var errorText;
       if (typeof errorText === "undefined") {
         errorText = null;
       }
@@ -8332,7 +8345,6 @@ var JSON2 = {};
       constructorFuncDecl.fncFlags |= TypeScript$$14.FncFlags.ClassMethod;
       this.currentClassDefinition.members.members[this.currentClassDefinition.members.members.length] = constructorFuncDecl;
       this.parsingClassConstructorDefinition = false;
-      return constructorFuncDecl;
     };
     Parser$$1.prototype.parseClassMemberVariableDeclaration = function(text$$15, minChar$$17, isDeclaredInConstructor, errorRecoverySet$$19, modifiers$$7) {
       var varDecl$$7 = new TypeScript$$14.VarDecl(text$$15, this.nestingLevel);
@@ -8402,7 +8414,7 @@ var JSON2 = {};
       }
       var ast$$38 = this.parseFncDecl(errorRecoverySet$$20, true, isAmbient$$2, true, methodName$$1, false, isStatic$$2, isAmbient$$2, modifiers$$8, null, true);
       if (ast$$38.nodeType == TypeScript$$14.NodeType.Error) {
-        return ast$$38;
+        return;
       }
       var funcDecl$$8 = ast$$38;
       funcDecl$$8.minChar = minChar$$18;
@@ -8433,7 +8445,6 @@ var JSON2 = {};
       funcDecl$$8.fncFlags |= TypeScript$$14.FncFlags.ClassMethod;
       this.currentClassDefinition.knownMemberNames[methodName$$1.actualText] = true;
       this.currentClassDefinition.members.members[this.currentClassDefinition.members.members.length] = funcDecl$$8;
-      return funcDecl$$8;
     };
     Parser$$1.prototype.parseTypeMember = function(errorRecoverySet$$21) {
       var minChar$$19 = this.scanner.startPos;
@@ -8720,7 +8731,8 @@ var JSON2 = {};
         return varDecl$$9;
       }
     };
-    Parser$$1.prototype.parseVariableDeclaration = function(errorRecoverySet$$25, modifiers$$11, allowIn, isStatic$$4) {
+    Parser$$1.prototype.parseVariableDeclaration = function(errorRecoverySet$$25, modifiers$$11, allowIn) {
+      var isStatic$$4 = false;
       var isConst = TypeScript$$14.hasFlag(modifiers$$11, TypeScript$$14.Modifiers.Readonly);
       var minChar$$22 = this.scanner.startPos;
       var varDecl$$10 = null;
@@ -9444,7 +9456,7 @@ var JSON2 = {};
           etryNode.minChar = minChar$$26;
           etryNode.limChar = this.scanner.lastTokenLimChar();
           etryNode.flags |= TypeScript$$14.ASTFlags.Error;
-          return etryNode;
+          return;
         }
       }
       tryNode$$2.body = this.parseStatement(errorRecoverySet$$33, TypeScript$$14.AllowedElements.None, parentModifiers$$3);
@@ -9452,7 +9464,6 @@ var JSON2 = {};
       tryNode$$2.limChar = tryNode$$2.body.limChar;
       tryNode$$2.preComments = preComments$$5;
       tryNode$$2.postComments = this.parseComments();
-      return tryNode$$2;
     };
     Parser$$1.prototype.parseCatch = function(errorRecoverySet$$34, parentModifiers$$4) {
       var catchMinChar = this.scanner.startPos;
@@ -9812,7 +9823,7 @@ var JSON2 = {};
             }
             break;
           case TypeScript$$14.TokenID.Var:
-            var declAst = this.parseVariableDeclaration(errorRecoverySet$$37 | TypeScript$$14.ErrorRecoverySet.StmtStart, modifiers$$12, true, false);
+            var declAst = this.parseVariableDeclaration(errorRecoverySet$$37 | TypeScript$$14.ErrorRecoverySet.StmtStart, modifiers$$12, true);
             if (declAst.nodeType == TypeScript$$14.NodeType.VarDecl) {
               ast$$44 = declAst;
             } else {
@@ -9872,7 +9883,7 @@ var JSON2 = {};
             forInOk = true;
             switch(this.currentToken.tokenId) {
               case TypeScript$$14.TokenID.Var:
-                temp$$15 = this.parseVariableDeclaration(errorRecoverySet$$37 | TypeScript$$14.ErrorRecoverySet.SColon | TypeScript$$14.ErrorRecoverySet.In, TypeScript$$14.Modifiers.None, false, false);
+                temp$$15 = this.parseVariableDeclaration(errorRecoverySet$$37 | TypeScript$$14.ErrorRecoverySet.SColon | TypeScript$$14.ErrorRecoverySet.In, TypeScript$$14.Modifiers.None, false);
                 break;
               case TypeScript$$14.TokenID.Semicolon:
                 temp$$15 = null;
@@ -10915,7 +10926,7 @@ var JSON2 = {};
           return this.col + this.lineMap[this.line];
         }
       }
-      return-1;
+      return -1;
     };
     SavedTokens$$1.prototype.lastTokenLimChar = function() {
       if (this.prevSavedToken !== null) {
@@ -11215,14 +11226,14 @@ var JSON2 = {};
               this.tokenStart();
             }
             this.lexState = LexState.Start;
-            return true;
+            return;
           }
         } else {
           if (this.ch == TypeScript$$16.LexCodeNWL) {
             this.newLine();
             if (this.mode == LexMode.Line) {
               this.nextChar();
-              return false;
+              return;
             }
           } else {
             if (this.ch >= TypeScript$$16.LexCodeASCIIChars) {
@@ -11232,7 +11243,6 @@ var JSON2 = {};
         }
         this.nextChar();
       }
-      return false;
     };
     Scanner$$1.prototype.pushComment = function(comment$$4) {
       this.commentStack.push(comment$$4);
@@ -11294,7 +11304,7 @@ var JSON2 = {};
         }
         ch2$$1 = this.src.charCodeAt(index$$48);
       }
-      return-1;
+      return -1;
     };
     Scanner$$1.prototype.speculateRegex = function() {
       if (TypeScript$$16.noRegexTable[this.prevTok.tokenId] != undefined) {
@@ -12508,9 +12518,12 @@ var JSON2 = {};
       return result$$11;
     };
     Signature$$1.prototype.toString = function() {
-      return this.toStringHelper(false, false, null);
+      return this.toStringHelper();
     };
-    Signature$$1.prototype.toStringHelper = function(shortform, brackets, scope$$10) {
+    Signature$$1.prototype.toStringHelper = function() {
+      var shortform = false;
+      var brackets = false;
+      var scope$$10 = null;
       return this.toStringHelperEx(shortform, brackets, scope$$10).toString();
     };
     Signature$$1.prototype.toStringHelperEx = function(shortform$$1, brackets$$1, scope$$11, prefix$$2) {
@@ -12903,7 +12916,7 @@ var JSON2 = {};
       if (this.declAST != null) {
         return this.declAST.getDocComments();
       }
-      return[];
+      return [];
     };
     Symbol$$1.prototype.isStatic = function() {
       return TypeScript$$20.hasFlag(this.flags, TypeScript$$20.SymbolFlags.Static);
@@ -13138,7 +13151,7 @@ var JSON2 = {};
           return this.declAST.getDocComments();
         }
       }
-      return[];
+      return [];
     };
     return FieldSymbol$$1;
   }(InferenceSymbol);
@@ -13252,10 +13265,10 @@ var JSON2 = {};
       this.privateMembers = this.dualMembers.secondaryTable;
     }
     ScopedMembers$$1.prototype.addPublicMember = function(key$$33, data$$33) {
-      return this.dualMembers.primaryTable.add(key$$33, data$$33);
+      this.dualMembers.primaryTable.add(key$$33, data$$33);
     };
     ScopedMembers$$1.prototype.addPrivateMember = function(key$$34, data$$34) {
-      return this.dualMembers.secondaryTable.add(key$$34, data$$34);
+      this.dualMembers.secondaryTable.add(key$$34, data$$34);
     };
     return ScopedMembers$$1;
   }();
@@ -13282,13 +13295,13 @@ var JSON2 = {};
       return "base";
     };
     SymbolScope$$1.prototype.getAllSymbolNames = function(members$$13) {
-      return["please", "implement", "in", "derived", "classes"];
+      return ["please", "implement", "in", "derived", "classes"];
     };
     SymbolScope$$1.prototype.getAllTypeSymbolNames = function(members$$14) {
-      return["please", "implement", "in", "derived", "classes"];
+      return ["please", "implement", "in", "derived", "classes"];
     };
     SymbolScope$$1.prototype.getAllValueSymbolNames = function(members$$15) {
-      return["please", "implement", "in", "derived", "classes"];
+      return ["please", "implement", "in", "derived", "classes"];
     };
     SymbolScope$$1.prototype.search = function(filter, name$$57, publicOnly$$1, typespace) {
       return null;
@@ -14566,7 +14579,7 @@ var JSON2 = {};
       this.mod.containedScope = this.globalScope;
       this.gloMod = new TypeScript$$23.TypeSymbol(TypeScript$$23.globalId, -1, 0, -1, this.mod);
       this.mod.members.addPublicMember(this.gloMod.name, this.gloMod);
-      this.defineGlobalValue("undefined", this.undefinedType);
+      this.defineGlobalValue(this.undefinedType);
     }
     PersistentGlobalTypeState$$1.prototype.enterPrimitive = function(flags$$3, name$$79) {
       var primitive = new TypeScript$$23.Type;
@@ -14598,7 +14611,8 @@ var JSON2 = {};
       this.dualAmbientGlobalValues.secondaryTable = this.ambientGlobals;
       this.dualAmbientGlobalTypes.secondaryTable = this.ambientGlobalTypes;
     };
-    PersistentGlobalTypeState$$1.prototype.defineGlobalValue = function(name$$80, type$$37) {
+    PersistentGlobalTypeState$$1.prototype.defineGlobalValue = function(type$$37) {
+      var name$$80 = "undefined";
       var valueLocation = new TypeScript$$23.ValueLocation;
       valueLocation.typeLink = new TypeScript$$23.TypeLink;
       var sym$$28 = new TypeScript$$23.VariableSymbol(name$$80, 0, -1, valueLocation);
@@ -14641,13 +14655,13 @@ var JSON2 = {};
       return tc$$2;
     };
     ContextualTypingContextStack$$1.prototype.getContextualType = function() {
-      return!this.contextStack.length ? null : this.contextStack[this.contextStack.length - 1];
+      return !this.contextStack.length ? null : this.contextStack[this.contextStack.length - 1];
     };
     ContextualTypingContextStack$$1.prototype.getContextID = function() {
-      return!this.contextStack.length ? TypeScript$$23.TypeCheckStatus.Finished : this.contextStack[this.contextStack.length - 1].contextID;
+      return !this.contextStack.length ? TypeScript$$23.TypeCheckStatus.Finished : this.contextStack[this.contextStack.length - 1].contextID;
     };
     ContextualTypingContextStack$$1.prototype.isProvisional = function() {
-      return!this.contextStack.length ? false : this.contextStack[this.contextStack.length - 1].provisional;
+      return !this.contextStack.length ? false : this.contextStack[this.contextStack.length - 1].provisional;
     };
     return ContextualTypingContextStack$$1;
   }();
@@ -14705,7 +14719,6 @@ var JSON2 = {};
     TypeChecker$$1.prototype.unsetContextualType = function() {
       var lastTC = this.typingContextStack.popContextualType();
       this.currentContextualTypeContext = this.typingContextStack.getContextualType();
-      return lastTC;
     };
     TypeChecker$$1.prototype.hadProvisionalErrors = function() {
       return this.typingContextStack.hadProvisionalErrors;
@@ -14809,7 +14822,7 @@ var JSON2 = {};
           }
         }
       }
-      return{parameters:result$$27, nonOptionalParameterCount:nonOptionalParams};
+      return {parameters:result$$27, nonOptionalParameterCount:nonOptionalParams};
     };
     TypeChecker$$1.prototype.createFunctionSignature = function(funcDecl$$17, container$$12, scope$$22, overloadGroupSym, addToScope) {
       var isExported$$1 = TypeScript$$23.hasFlag(funcDecl$$17.fncFlags, TypeScript$$23.FncFlags.Exported | TypeScript$$23.FncFlags.ClassPropertyMethodExported) || container$$12 == this.gloMod;
@@ -15384,7 +15397,7 @@ var JSON2 = {};
     };
     TypeChecker$$1.prototype.findMostApplicableSignature = function(signatures$$2, args$$12) {
       if (signatures$$2.length == 1) {
-        return{sig:signatures$$2[0].signature, ambiguous:false};
+        return {sig:signatures$$2[0].signature, ambiguous:false};
       }
       var best = signatures$$2[0];
       var Q = null;
@@ -15444,7 +15457,7 @@ var JSON2 = {};
           ambiguous = false;
         }
       }
-      return{sig:best.signature, ambiguous:ambiguous};
+      return {sig:best.signature, ambiguous:ambiguous};
     };
     TypeChecker$$1.prototype.getApplicableSignatures = function(signatures$$3, args$$13, comparisonInfo$$1) {
       var applicableSigs = [];
@@ -15817,7 +15830,8 @@ var JSON2 = {};
     TypeChecker$$1.prototype.signatureGroupIsAssignableToTarget = function(sg1$$2, sg2$$2, comparisonInfo$$7) {
       return this.signatureGroupIsRelatableToTarget(sg1$$2, sg2$$2, true, this.assignableCache, comparisonInfo$$7);
     };
-    TypeChecker$$1.prototype.signatureIsAssignableToTarget = function(s1$$2, s2$$2, comparisonInfo$$8) {
+    TypeChecker$$1.prototype.signatureIsAssignableToTarget = function(s1$$2, s2$$2) {
+      var comparisonInfo$$8;
       return this.signatureIsRelatableToTarget(s1$$2, s2$$2, true, this.assignableCache, comparisonInfo$$8);
     };
     TypeChecker$$1.prototype.sourceIsRelatableToTarget = function(source$$3, target$$33, assignableTo, comparisonCache, comparisonInfo$$9) {
@@ -17070,7 +17084,7 @@ var JSON2 = {};
       this.currentSwitch.push(bb$$2);
     };
     ControlFlowContext$$1.prototype.popSwitch = function() {
-      return this.currentSwitch.pop();
+      this.currentSwitch.pop();
     };
     ControlFlowContext$$1.prototype.reportUnreachable = function(er) {
       if (this.unreachable && this.unreachable.length > 0) {
@@ -17409,7 +17423,6 @@ var JSON2 = {};
       this.checker.currentModDecl = svCurrentModDecl;
       this.enclosingFncIsMethod = prevMethodStatus;
       this.scope = prevScope$$1;
-      return updated;
     };
     TypeFlow$$1.prototype.typeCheck = function(ast$$86) {
       if (ast$$86) {
@@ -20126,10 +20139,10 @@ var JSON2 = {};
       return TypeScript$$26.hasFlag(this.primitiveTypeClass, Primitive.Null);
     };
     Type$$1.prototype.getTypeName = function() {
-      return this.getMemberTypeName("", true, false, null);
+      return this.getMemberTypeName(null);
     };
     Type$$1.prototype.getScopedTypeName = function(scope$$31) {
-      return this.getMemberTypeName("", true, false, scope$$31);
+      return this.getMemberTypeName(scope$$31);
     };
     Type$$1.prototype.getScopedTypeNameEx = function(scope$$32) {
       return this.getMemberTypeNameEx("", true, false, scope$$32);
@@ -20147,7 +20160,10 @@ var JSON2 = {};
       }
       return total;
     };
-    Type$$1.prototype.getMemberTypeName = function(prefix$$4, topLevel, isElementType, scope$$33) {
+    Type$$1.prototype.getMemberTypeName = function(scope$$33) {
+      var prefix$$4 = "";
+      var topLevel = true;
+      var isElementType = false;
       var memberName$$4 = this.getMemberTypeNameEx(prefix$$4, topLevel, isElementType, scope$$33);
       return memberName$$4.toString();
     };
@@ -20415,7 +20431,7 @@ var JSON2 = {};
     };
     Type$$1.prototype.getDocComments = function() {
       if (this.elementType || !this.symbol) {
-        return[];
+        return [];
       }
       if (this.isClassInstance() || this.isClass()) {
         if (this.symbol.declAST.nodeType == TypeScript$$26.NodeType.FuncDecl) {
@@ -20427,7 +20443,7 @@ var JSON2 = {};
       if (this.symbol.name && this.symbol.name != "_anonymous" && (this.call == null && this.construct == null && this.index == null || this.members)) {
         return this.symbol.getDocComments();
       }
-      return[];
+      return [];
     };
     return Type$$1;
   }();
@@ -20500,7 +20516,7 @@ var JSON2 = {};
     return str$$8.indexOf('"') != -1 || str$$8.indexOf("'") != -1 || str$$8.indexOf("'") != -1 || str$$8.indexOf('"') != -1;
   }
   function quoteStr(str$$9) {
-    return'"' + str$$9 + '"';
+    return '"' + str$$9 + '"';
   }
   function swapQuotes(str$$10) {
     if (str$$10.indexOf('"') != -1) {
@@ -20664,7 +20680,7 @@ var JSON2 = {};
         i$$115 -= 2;
       }
     }
-    return(startedWithSep ? "/" : "") + parts.join("/");
+    return (startedWithSep ? "/" : "") + parts.join("/");
   }
   function normalizeImportPath(path$$15) {
     return normalizePath(path$$15);
@@ -20997,7 +21013,7 @@ var JSON2 = {};
         }
       }
     }
-    return{settings:settings$$3, referencedFiles:referencedFiles, importedFiles:importedFiles, isLibFile:isLibFile};
+    return {settings:settings$$3, referencedFiles:referencedFiles, importedFiles:importedFiles, isLibFile:isLibFile};
   }
   var StyleSettings = function() {
     function StyleSettings$$1() {
@@ -21042,10 +21058,9 @@ var JSON2 = {};
           }
         }
         if (!this.setOption(opt$$1, val$$7)) {
-          return false;
+          return;
         }
       }
-      return true;
     };
     return StyleSettings$$1;
   }();
@@ -21344,7 +21359,7 @@ var JSON2 = {};
       try {
         this.declFile.Close();
       } catch (ex$$3) {
-        this.errorReporter.emitterError(null, ex$$3.message);
+        this.errorReporter.emitterError(ex$$3.message);
       }
     };
     DeclarationEmitter$$1.prototype.emitDeclarations = function(script$$20) {
@@ -21437,7 +21452,7 @@ var JSON2 = {};
       if (typeof declFlag === "undefined") {
         declFlag = TypeScript$$31.DeclFlags.None;
       }
-      return!TypeScript$$31.hasFlag(declFlag, TypeScript$$31.DeclFlags.Private);
+      return !TypeScript$$31.hasFlag(declFlag, TypeScript$$31.DeclFlags.Private);
     };
     DeclarationEmitter$$1.prototype.pushDeclarationContainer = function(ast$$119) {
       this.declarationContainerStack.push(ast$$119);
@@ -21851,7 +21866,7 @@ var JSON2 = {};
     };
     DeclarationEmitter$$1.prototype.emitEnumSignature = function(moduleDecl$$8) {
       if (!this.canEmitSignature(TypeScript$$31.ToDeclFlags(moduleDecl$$8.modFlags))) {
-        return false;
+        return;
       }
       this.emitDeclarationComments(moduleDecl$$8);
       this.emitDeclFlags(TypeScript$$31.ToDeclFlags(moduleDecl$$8.modFlags), "enum");
@@ -21872,7 +21887,6 @@ var JSON2 = {};
       this.indenter.decreaseIndent();
       this.emitIndent();
       this.declFile.WriteLine("}");
-      return false;
     };
     DeclarationEmitter$$1.prototype.ModuleDeclarationCallback = function(pre$$19, moduleDecl$$9) {
       if (TypeScript$$31.hasFlag(moduleDecl$$9.modFlags, TypeScript$$31.ModuleFlags.IsWholeFile)) {
@@ -21886,7 +21900,7 @@ var JSON2 = {};
               try {
                 this.declFile = new DeclFileWriter(this.emitOptions.ioHost.createFile(declareFileName, useUTF8InOutputfile$$1));
               } catch (ex$$4) {
-                this.errorReporter.emitterError(null, ex$$4.message);
+                this.errorReporter.emitterError(ex$$4.message);
               }
             }
             this.pushDeclarationContainer(moduleDecl$$9);
@@ -21897,7 +21911,7 @@ var JSON2 = {};
               try {
                 this.declFile.Close();
               } catch (ex$$5) {
-                this.errorReporter.emitterError(null, ex$$5.message);
+                this.errorReporter.emitterError(ex$$5.message);
               }
               this.declFile = this.singleDeclFile;
             }
@@ -21966,7 +21980,7 @@ var JSON2 = {};
       return true;
     };
     DeclarationEmitter$$1.prototype.DefaultCallback = function(pre$$21, ast$$121) {
-      return!TypeScript$$31.hasFlag(ast$$121.flags, TypeScript$$31.ASTFlags.IsStatement);
+      return !TypeScript$$31.hasFlag(ast$$121.flags, TypeScript$$31.ASTFlags.IsStatement);
     };
     return DeclarationEmitter$$1;
   }();
@@ -22169,14 +22183,14 @@ var JSON2 = {};
       if (typeof referencedFiles$$1 === "undefined") {
         referencedFiles$$1 = [];
       }
-      return this.addSourceUnit(new TypeScript$$32.StringSourceText(prog$$1), filename$$6, keepResident, referencedFiles$$1);
+      this.addSourceUnit(new TypeScript$$32.StringSourceText(prog$$1), filename$$6, keepResident, referencedFiles$$1);
     };
     TypeScriptCompiler$$1.prototype.addSourceUnit = function(sourceText$$8, filename$$7, keepResident$$1, referencedFiles$$2) {
       if (typeof referencedFiles$$2 === "undefined") {
         referencedFiles$$2 = [];
       }
       var _this$$17 = this;
-      return this.timeFunction("addSourceUnit(" + filename$$7 + ", " + keepResident$$1 + ")", function() {
+      this.timeFunction("addSourceUnit(" + filename$$7 + ", " + keepResident$$1 + ")", function() {
         var script$$23 = _this$$17.parser.parse(sourceText$$8, filename$$7, _this$$17.units.length, TypeScript$$32.AllowedElements.Global);
         script$$23.referencedFiles = referencedFiles$$2;
         script$$23.isResident = keepResident$$1;
@@ -22187,9 +22201,10 @@ var JSON2 = {};
         _this$$17.scripts.append(script$$23);
         return script$$23;
       });
+      return;
     };
     TypeScriptCompiler$$1.prototype.parseUnit = function(prog$$2, filename$$8) {
-      return this.parseSourceUnit(new TypeScript$$32.StringSourceText(prog$$2), filename$$8);
+      this.parseSourceUnit(new TypeScript$$32.StringSourceText(prog$$2), filename$$8);
     };
     TypeScriptCompiler$$1.prototype.parseSourceUnit = function(sourceText$$9, filename$$9) {
       this.parser.setErrorRecovery(this.errorOutput);
@@ -22298,7 +22313,7 @@ var JSON2 = {};
     };
     TypeScriptCompiler$$1.prototype.cleanTypesForReTypeCheck = function() {
       var _this$$19 = this;
-      return this.timeFunction("cleanTypesForReTypeCheck()", function() {
+      this.timeFunction("cleanTypesForReTypeCheck()", function() {
         var i$$129 = 0;
         var len$$61 = _this$$19.scripts.members.length;
         for (;i$$129 < len$$61;i$$129++) {
@@ -22319,7 +22334,7 @@ var JSON2 = {};
     };
     TypeScriptCompiler$$1.prototype.reTypeCheck = function() {
       var _this$$20 = this;
-      return this.timeFunction("reTypeCheck()", function() {
+      this.timeFunction("reTypeCheck()", function() {
         TypeScript$$32.CompilerDiagnostics.analysisPass++;
         _this$$20.initTypeChecker(_this$$20.errorOutput);
         _this$$20.persistentTypeState.setCollectionMode(TypeScript$$32.TypeCheckCollectionMode.Transient);
@@ -22359,7 +22374,7 @@ var JSON2 = {};
                 commonComponentsLength = j$$20;
                 updatedPath = true;
                 if (j$$20 == 0) {
-                  this.errorReporter.emitterError(null, "Cannot find the common subdirectory path for the input files");
+                  this.errorReporter.emitterError("Cannot find the common subdirectory path for the input files");
                   return;
                 }
                 break;
@@ -22394,7 +22409,7 @@ var JSON2 = {};
         }
       }
       if (this.isDynamicModuleCompilation() && !this.emitSettings.outputMany) {
-        this.errorReporter.emitterError(null, "Cannot compile dynamic modules when emitting into single file");
+        this.errorReporter.emitterError("Cannot compile dynamic modules when emitting into single file");
       }
       if (this.emitSettings.outputMany) {
         this.updateCommonDirectoryPath();
@@ -22558,7 +22573,7 @@ var JSON2 = {};
           try {
             outFile$$1.Close();
           } catch (e$$11) {
-            this.errorReporter.emitterError(null, e$$11.message);
+            this.errorReporter.emitterError(e$$11.message);
           }
         }
       }
@@ -22566,7 +22581,7 @@ var JSON2 = {};
         try {
           outFile$$1.Close();
         } catch (e$$12) {
-          this.errorReporter.emitterError(null, e$$12.message);
+          this.errorReporter.emitterError(e$$12.message);
         }
       }
     };
@@ -22588,7 +22603,7 @@ var JSON2 = {};
       try {
         return this.emitSettings.ioHost.createFile(fileName$$8, useUTF8$$1);
       } catch (ex$$6) {
-        this.errorReporter.emitterError(null, ex$$6.message);
+        this.errorReporter.emitterError(ex$$6.message);
       }
     };
     return TypeScriptCompiler$$1;
@@ -22625,7 +22640,7 @@ var JSON2 = {};
     ScopeTraversal$$1.prototype.getScopeEntries = function(enclosingScopeContext$$4) {
       var scope$$35 = this.getScope(enclosingScopeContext$$4);
       if (scope$$35 == null) {
-        return[];
+        return [];
       }
       var inScopeNames = new TypeScript$$32.StringHashTable;
       var allSymbolNames = scope$$35.getAllSymbolNames(enclosingScopeContext$$4.isMemberCompletion);
@@ -22885,7 +22900,7 @@ var IO = function() {
     for (;i$$140 < WScript.Arguments.length;i$$140++) {
       args$$17[i$$140] = WScript.Arguments.Item(i$$140);
     }
-    return{readFile:function(path$$20) {
+    return {readFile:function(path$$20) {
       try {
         var streamObj = getStreamObject();
         streamObj.Open();
@@ -22924,7 +22939,7 @@ var IO = function() {
         if (fso.FileExists(path$$25)) {
           try {
             var content$$6 = this.readFile(path$$25);
-            return{content:content$$6, path:path$$25};
+            return {content:content$$6, path:path$$25};
           } catch (err$$5) {
           }
         } else {
@@ -22949,7 +22964,7 @@ var IO = function() {
         var streamObj$$1 = getStreamObject();
         streamObj$$1.Charset = useUTF8$$3 ? "utf-8" : "x-ansi";
         streamObj$$1.Open();
-        return{Write:function(str$$14) {
+        return {Write:function(str$$14) {
           streamObj$$1.WriteText(str$$14, 0);
         }, WriteLine:function(str$$15) {
           streamObj$$1.WriteText(str$$15, 1);
@@ -23026,7 +23041,7 @@ var IO = function() {
     var _fs = require("fs");
     var _path = require("path");
     var _module = require("module");
-    return{readFile:function(file$$2) {
+    return {readFile:function(file$$2) {
       try {
         var buffer$$8 = _fs.readFileSync(file$$2);
         switch(buffer$$8[0]) {
@@ -23084,7 +23099,7 @@ var IO = function() {
       } catch (e$$19) {
         IOUtils.throwIOError("Couldn't write to file '" + path$$33 + "'.", e$$19);
       }
-      return{Write:function(str$$18) {
+      return {Write:function(str$$18) {
         _fs.writeSync(fd, str$$18);
       }, WriteLine:function(str$$19) {
         _fs.writeSync(fd, str$$19 + "\r\n");
@@ -23131,7 +23146,7 @@ var IO = function() {
         if (_fs.existsSync(path$$40)) {
           try {
             var content$$7 = this.readFile(path$$40);
-            return{content:content$$7, path:path$$40};
+            return {content:content$$7, path:path$$40};
           } catch (err$$6) {
           }
         } else {
@@ -23179,7 +23194,7 @@ var IO = function() {
       var firstRun = true;
       var processingChange = false;
       fileChanged();
-      return{filename:filename$$11, close:function() {
+      return {filename:filename$$11, close:function() {
         _fs.unwatchFile(filename$$11, fileChanged);
       }};
     }, run:function(source$$5, filename$$12) {
@@ -23234,7 +23249,7 @@ var OptionsParser = function() {
         return 1;
       } else {
         if (aName < bName) {
-          return-1;
+          return -1;
         } else {
           return 0;
         }
@@ -23266,7 +23281,8 @@ var OptionsParser = function() {
       this.host.printLine(output$$1[i$$144][0] + (new Array(maxLength - output$$1[i$$144][0].length + 3)).join(" ") + output$$1[i$$144][1]);
     }
   };
-  OptionsParser$$1.prototype.option = function(name$$90, config$$1, short) {
+  OptionsParser$$1.prototype.option = function(name$$90, config$$1) {
+    var short;
     if (!config$$1) {
       config$$1 = short;
       short = null;
@@ -23294,19 +23310,19 @@ var OptionsParser = function() {
     for (;position$$4 < tokens.length;) {
       var token$$7 = tokens[position$$4];
       if (token$$7 === '"') {
-        var JSCompiler_temp_const$$34 = currentArg;
-        var JSCompiler_inline_result$$35;
-        var value$$inline_36 = "";
+        var JSCompiler_temp_const$$39 = currentArg;
+        var JSCompiler_inline_result$$40;
+        var value$$inline_41 = "";
         tokens[position$$4++];
-        var token$$inline_37 = tokens[position$$4];
-        for (;token$$inline_37 && token$$inline_37 !== '"';) {
+        var token$$inline_42 = tokens[position$$4];
+        for (;token$$inline_42 && token$$inline_42 !== '"';) {
           tokens[position$$4++];
-          value$$inline_36 += token$$inline_37;
-          token$$inline_37 = tokens[position$$4];
+          value$$inline_41 += token$$inline_42;
+          token$$inline_42 = tokens[position$$4];
         }
         tokens[position$$4++];
-        JSCompiler_inline_result$$35 = value$$inline_36;
-        currentArg = JSCompiler_temp_const$$34 + JSCompiler_inline_result$$35;
+        JSCompiler_inline_result$$40 = value$$inline_41;
+        currentArg = JSCompiler_temp_const$$39 + JSCompiler_inline_result$$40;
       } else {
         if (token$$7.match(/\s/)) {
           if (currentArg.length > 0) {
@@ -23366,10 +23382,11 @@ var CommandLineHost = function() {
   CommandLineHost$$1.prototype.isResolved = function(path$$42) {
     return this.resolvedPaths[this.getPathIdentifier(this.pathMap[path$$42])] != undefined;
   };
-  CommandLineHost$$1.prototype.resolveCompilationEnvironment = function(preEnv, resolver, traceDependencies) {
+  CommandLineHost$$1.prototype.resolveCompilationEnvironment = function(preEnv, resolver) {
     function postResolutionError(errorFile, errorMessage$$1) {
       TypeScript.CompilerDiagnostics.debugPrint("Could not resolve file '" + errorFile + "'" + (errorMessage$$1 == "" ? "" : ": " + errorMessage$$1));
     }
+    var traceDependencies = true;
     var _this$$21 = this;
     var resolvedEnv = new TypeScript.CompilationEnvironment(preEnv.compilationSettings, preEnv.ioHost);
     var nCode = preEnv.code.length;
@@ -23404,7 +23421,7 @@ var BatchCompiler = function() {
   BatchCompiler$$1.prototype.resolve = function() {
     var resolver$$1 = new TypeScript.CodeResolver(this.compilationEnvironment);
     var commandLineHost = new CommandLineHost(this.compilationSettings);
-    var ret$$2 = commandLineHost.resolveCompilationEnvironment(this.compilationEnvironment, resolver$$1, true);
+    var ret$$2 = commandLineHost.resolveCompilationEnvironment(this.compilationEnvironment, resolver$$1);
     this.hasResolveErrors = false;
     var i$$146 = 0;
     for (;i$$146 < this.compilationEnvironment.code.length;i$$146++) {
@@ -23421,7 +23438,8 @@ var BatchCompiler = function() {
     return ret$$2;
   };
   BatchCompiler$$1.prototype.compile = function() {
-    function consumeUnit(code$$11, addAsResident) {
+    function consumeUnit(code$$11) {
+      var addAsResident = false;
       try {
         if (!_this$$22.compilationSettings.resolve) {
           code$$11.content = _this$$22.ioHost.readFile(code$$11.path);
@@ -23467,7 +23485,7 @@ var BatchCompiler = function() {
     var iCode = 0;
     for (;iCode < this.resolvedEnvironment.code.length;iCode++) {
       if (!this.compilationSettings.parseOnly || iCode > 0) {
-        consumeUnit(this.resolvedEnvironment.code[iCode], false);
+        consumeUnit(this.resolvedEnvironment.code[iCode]);
       }
     }
     var emitterIOHost = {createFile:function(fileName$$10, useUTF8$$5) {

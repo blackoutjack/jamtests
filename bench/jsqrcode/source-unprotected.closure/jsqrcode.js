@@ -250,10 +250,10 @@ function Detector(image$$5) {
     if (isNaN(moduleSizeEst2)) {
       return moduleSizeEst1 / 7;
     }
-    return(moduleSizeEst1 + moduleSizeEst2) / 14;
+    return (moduleSizeEst1 + moduleSizeEst2) / 14;
   };
   this.calculateModuleSize = function(topLeft, topRight, bottomLeft) {
-    return(this.calculateModuleSizeOneWay(topLeft, topRight) + this.calculateModuleSizeOneWay(topLeft, bottomLeft)) / 2;
+    return (this.calculateModuleSizeOneWay(topLeft, topRight) + this.calculateModuleSizeOneWay(topLeft, bottomLeft)) / 2;
   };
   this.distance = function(pattern1, pattern2) {
     xDiff = pattern1.X - pattern2.X;
@@ -380,7 +380,8 @@ function ErrorCorrectionLevel(ordinal, bits$$3, name$$30) {
     return this.ordinal_Renamed_Field;
   };
 }
-function BitMatrix(width$$10, height$$9) {
+function BitMatrix(width$$10) {
+  var height$$9;
   if (!height$$9) {
     height$$9 = width$$10;
   }
@@ -413,7 +414,7 @@ function BitMatrix(width$$10, height$$9) {
   });
   this.get_Renamed = function(x$$53, y$$36) {
     var offset$$9 = y$$36 * this.rowSize + (x$$53 >> 5);
-    return(URShift(this.bits[offset$$9], x$$53 & 31) & 1) != 0;
+    return (URShift(this.bits[offset$$9], x$$53 & 31) & 1) != 0;
   };
   this.set_Renamed = function(x$$54, y$$37) {
     var offset$$10 = y$$37 * this.rowSize + (x$$54 >> 5);
@@ -603,7 +604,7 @@ function DataMask000() {
     }
   };
   this.isMasked = function(i$$17, j$$6) {
-    return(i$$17 + j$$6 & 1) == 0;
+    return (i$$17 + j$$6 & 1) == 0;
   };
 }
 function DataMask001() {
@@ -619,7 +620,7 @@ function DataMask001() {
     }
   };
   this.isMasked = function(i$$19, j$$8) {
-    return(i$$19 & 1) == 0;
+    return (i$$19 & 1) == 0;
   };
 }
 function DataMask010() {
@@ -651,7 +652,7 @@ function DataMask011() {
     }
   };
   this.isMasked = function(i$$23, j$$12) {
-    return(i$$23 + j$$12) % 3 == 0;
+    return (i$$23 + j$$12) % 3 == 0;
   };
 }
 function DataMask100() {
@@ -667,7 +668,7 @@ function DataMask100() {
     }
   };
   this.isMasked = function(i$$25, j$$14) {
-    return(URShift(i$$25, 1) + j$$14 / 3 & 1) == 0;
+    return (URShift(i$$25, 1) + j$$14 / 3 & 1) == 0;
   };
 }
 function DataMask101() {
@@ -684,7 +685,7 @@ function DataMask101() {
   };
   this.isMasked = function(i$$27, j$$16) {
     var temp$$1 = i$$27 * j$$16;
-    return(temp$$1 & 1) + temp$$1 % 3 == 0;
+    return (temp$$1 & 1) + temp$$1 % 3 == 0;
   };
 }
 function DataMask110() {
@@ -701,7 +702,7 @@ function DataMask110() {
   };
   this.isMasked = function(i$$29, j$$18) {
     var temp$$2 = i$$29 * j$$18;
-    return((temp$$2 & 1) + temp$$2 % 3 & 1) == 0;
+    return ((temp$$2 & 1) + temp$$2 % 3 & 1) == 0;
   };
 }
 function DataMask111() {
@@ -717,10 +718,11 @@ function DataMask111() {
     }
   };
   this.isMasked = function(i$$31, j$$20) {
-    return((i$$31 + j$$20 & 1) + i$$31 * j$$20 % 3 & 1) == 0;
+    return ((i$$31 + j$$20 & 1) + i$$31 * j$$20 % 3 & 1) == 0;
   };
 }
-function ReedSolomonDecoder(field) {
+function ReedSolomonDecoder() {
+  var field = GF256.QR_CODE_FIELD;
   this.field = field;
   this.decode = function(received, twoS) {
     var poly = new GF256Poly(this.field, received);
@@ -1082,7 +1084,7 @@ function URShift(number, bits$$14) {
   if (number >= 0) {
     return number >> bits$$14;
   } else {
-    return(number >> bits$$14) + (2 << ~bits$$14);
+    return (number >> bits$$14) + (2 << ~bits$$14);
   }
 }
 function FinderPattern(posX, posY, estimatedModuleSize) {
@@ -1324,7 +1326,7 @@ function FinderPatternFinder() {
     if (this.possibleCenters.length > 3) {
       this.possibleCenters.sort(function(a$$8, b$$5) {
         if (a$$8.count > b$$5.count) {
-          return-1;
+          return -1;
         }
         if (a$$8.count < b$$5.count) {
           return 1;
@@ -1729,7 +1731,8 @@ function QRCodeDataBlockReader(blocks, version$$8, numErrorCorrectionCode) {
     }
     return this.getNextBits(qrcode.sizeOfDataLengthInfo[this.dataLengthMode][index$$41]);
   };
-  this.getRomanAndFigureString = function(dataLength$$1) {
+  this.getRomanAndFigureString = function() {
+    var dataLength$$1 = dataLength;
     var length$$11 = dataLength$$1;
     var intData = 0;
     var strData = "";
@@ -1752,7 +1755,8 @@ function QRCodeDataBlockReader(blocks, version$$8, numErrorCorrectionCode) {
     } while (length$$11 > 0);
     return strData;
   };
-  this.getFigureString = function(dataLength$$2) {
+  this.getFigureString = function() {
+    var dataLength$$2 = dataLength;
     var length$$12 = dataLength$$2;
     var intData$$1 = 0;
     var strData$$1 = "";
@@ -1784,7 +1788,8 @@ function QRCodeDataBlockReader(blocks, version$$8, numErrorCorrectionCode) {
     } while (length$$12 > 0);
     return strData$$1;
   };
-  this.get8bitByteArray = function(dataLength$$3) {
+  this.get8bitByteArray = function() {
+    var dataLength$$3 = dataLength;
     var length$$13 = dataLength$$3;
     var intData$$2 = 0;
     var output = new Array;
@@ -1795,7 +1800,8 @@ function QRCodeDataBlockReader(blocks, version$$8, numErrorCorrectionCode) {
     } while (length$$13 > 0);
     return output;
   };
-  this.getKanjiString = function(dataLength$$4) {
+  this.getKanjiString = function() {
+    var dataLength$$4 = dataLength;
     var length$$14 = dataLength$$4;
     var intData$$3 = 0;
     var unicodeString = "";
@@ -1839,7 +1845,7 @@ function QRCodeDataBlockReader(blocks, version$$8, numErrorCorrectionCode) {
       }
       switch(mode$$7) {
         case MODE_NUMBER:
-          var temp_str = this.getFigureString(dataLength);
+          var temp_str = this.getFigureString();
           var ta = new Array(temp_str.length);
           var j$$32 = 0;
           for (;j$$32 < temp_str.length;j$$32++) {
@@ -1848,7 +1854,7 @@ function QRCodeDataBlockReader(blocks, version$$8, numErrorCorrectionCode) {
           output$$1.push(ta);
           break;
         case MODE_ROMAN_AND_NUMBER:
-          temp_str = this.getRomanAndFigureString(dataLength);
+          temp_str = this.getRomanAndFigureString();
           ta = new Array(temp_str.length);
           j$$32 = 0;
           for (;j$$32 < temp_str.length;j$$32++) {
@@ -1857,11 +1863,11 @@ function QRCodeDataBlockReader(blocks, version$$8, numErrorCorrectionCode) {
           output$$1.push(ta);
           break;
         case MODE_8BIT_BYTE:
-          var temp_sbyteArray3 = this.get8bitByteArray(dataLength);
+          var temp_sbyteArray3 = this.get8bitByteArray();
           output$$1.push(temp_sbyteArray3);
           break;
         case MODE_KANJI:
-          temp_str = this.getKanjiString(dataLength);
+          temp_str = this.getKanjiString();
           output$$1.push(temp_str);
       }
     } while (true);
@@ -2206,7 +2212,7 @@ GF256.addOrSubtract = function(a$$7, b$$4) {
   return a$$7 ^ b$$4;
 };
 Decoder = {};
-Decoder.rsDecoder = new ReedSolomonDecoder(GF256.QR_CODE_FIELD);
+Decoder.rsDecoder = new ReedSolomonDecoder;
 Decoder.correctErrors = function(codewordBytes, numDataCodewords$$2) {
   var numCodewords$$1 = codewordBytes.length;
   var codewordsInts = new Array(numCodewords$$1);
@@ -2315,7 +2321,7 @@ qrcode.decode_utf8 = function(s$$4) {
 };
 qrcode.process = function(ctx) {
   var start$$4 = (new Date).getTime();
-  var image$$8 = qrcode.grayScaleToBitmap(qrcode.grayscale());
+  var image$$8 = qrcode.grayScaleToBitmap();
   if (qrcode.debug) {
     var y$$40 = 0;
     for (;y$$40 < qrcode.height;y$$40++) {
@@ -2419,7 +2425,8 @@ qrcode.getMiddleBrightnessPerArea = function(image$$9) {
   }
   return middle;
 };
-qrcode.grayScaleToBitmap = function(grayScale) {
+qrcode.grayScaleToBitmap = function() {
+  var grayScale = qrcode.grayscale();
   var middle$$1 = qrcode.getMiddleBrightnessPerArea(grayScale);
   var sqrtNumArea = middle$$1.length;
   var areaWidth$$1 = Math.floor(qrcode.width / sqrtNumArea);
@@ -2470,7 +2477,7 @@ qrcode.orderBestPatterns = function(patterns) {
   function crossProductZ(pointA$$1, pointB$$1, pointC$$1) {
     var bX = pointB$$1.x;
     var bY = pointB$$1.y;
-    return(pointC$$1.x - bX) * (pointA$$1.y - bY) - (pointC$$1.y - bY) * (pointA$$1.x - bX);
+    return (pointC$$1.x - bX) * (pointA$$1.y - bY) - (pointC$$1.y - bY) * (pointA$$1.x - bX);
   }
   var zeroOneDistance = distance(patterns[0], patterns[1]);
   var oneTwoDistance = distance(patterns[1], patterns[2]);

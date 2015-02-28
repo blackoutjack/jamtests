@@ -1,5 +1,14 @@
 introspect(JAM.policy.pFull) {
-function Benchmark(name$$30, doWarmup, doDeterministic, deterministicIterations, run, setup, tearDown, rmsResult, minIterations) {
+function Benchmark() {
+  var name$$30 = "zlib";
+  var doWarmup = false;
+  var doDeterministic = true;
+  var deterministicIterations = 10;
+  var run = runZlib;
+  var setup = undefined;
+  var tearDown = tearDownZlib;
+  var rmsResult = null;
+  var minIterations = 3;
   this.name = name$$30;
   this.doWarmup = doWarmup;
   this.doDeterministic = doDeterministic;
@@ -217,7 +226,7 @@ function Run() {
   parent.removeChild(anchor);
   document.getElementById("startup-text").innerHTML = "";
   document.getElementById("progress-bar-container").style.visibility = "visible";
-  BenchmarkSuite.RunSuites({NotifyStart:ShowBox, NotifyError:AddError, NotifyResult:AddResult, NotifyScore:AddScore}, skipBenchmarks);
+  BenchmarkSuite.RunSuites();
 }
 function CheckCompatibility() {
   var hasTypedArrays = typeof Uint8Array != "undefined" && typeof Float64Array != "undefined" && typeof(new Uint8Array(0)).subarray != "undefined";
@@ -258,11 +267,13 @@ BenchmarkSuite.ResetRNG = function() {
       seed = (seed + 3550635116 ^ seed << 9) & 4294967295;
       seed = seed + 4251993797 + (seed << 3) & 4294967295;
       seed = (seed ^ 3042594569 ^ seed >>> 16) & 4294967295;
-      return(seed & 268435455) / 268435456;
+      return (seed & 268435455) / 268435456;
     };
   }();
 };
-BenchmarkSuite.RunSuites = function(runner, skipBenchmarks$$1) {
+BenchmarkSuite.RunSuites = function() {
+  var runner = {NotifyStart:ShowBox, NotifyError:AddError, NotifyResult:AddResult, NotifyScore:AddScore};
+  var skipBenchmarks$$1 = skipBenchmarks;
   function RunStep() {
     for (;continuation || index$$39 < length$$11;) {
       if (continuation) {
@@ -284,7 +295,7 @@ BenchmarkSuite.RunSuites = function(runner, skipBenchmarks$$1) {
       }
     }
     if (runner.NotifyScore) {
-      var score = BenchmarkSuite.GeometricMean(BenchmarkSuite.scores);
+      var score = BenchmarkSuite.GeometricMean();
       var formatted = BenchmarkSuite.FormatScore(100 * score);
       runner.NotifyScore(formatted);
     }
@@ -306,7 +317,8 @@ BenchmarkSuite.CountBenchmarks = function() {
   }
   return result;
 };
-BenchmarkSuite.GeometricMean = function(numbers) {
+BenchmarkSuite.GeometricMean = function() {
+  var numbers = BenchmarkSuite.scores;
   var log = 0;
   var i$$2 = 0;
   for (;i$$2 < numbers.length;i$$2++) {
@@ -407,7 +419,7 @@ BenchmarkSuite.prototype.RunSingleBenchmark = function(benchmark$$1, data$$18) {
   }
   if (data$$18 == null) {
     Measure(null);
-    return{runs:0, elapsed:0};
+    return {runs:0, elapsed:0};
   } else {
     Measure(data$$18);
     if (data$$18.runs < benchmark$$1.minIterations) {
@@ -460,7 +472,7 @@ BenchmarkSuite.prototype.RunStep = function(runner$$2) {
   var data$$20;
   return RunNextSetup();
 };
-new BenchmarkSuite("zlib", [152815148], [new Benchmark("zlib", false, true, 10, runZlib, undefined, tearDownZlib, null, 3)]);
+new BenchmarkSuite("zlib", [152815148], [new Benchmark]);
 var zlibEval = eval;
 var completed = 0;
 var benchmarks = BenchmarkSuite.CountBenchmarks();

@@ -106,7 +106,7 @@ function do_js_beautify() {
     v24.value = v49;
   }
   document.getElementById("beautify").disabled = false;
-  return false;
+  return;
 }
 function get_var(name$$30) {
   var reg = new RegExp("[\\?&]" + name$$30 + "=([^&#]*)");

@@ -23,7 +23,6 @@ YAHOO.namespace = function() {
       o = o[d[j]];
     }
   }
-  return o;
 };
 YAHOO.log = function(msg, cat, src$$1) {
   var l = YAHOO.widget.Logger;
@@ -68,13 +67,14 @@ YAHOO.env = YAHOO.env || {modules:[], listeners:[]};
 YAHOO.env.getVersion = function(name$$31) {
   return YAHOO.env.modules[name$$31] || null;
 };
-YAHOO.env.parseUA = function(agent) {
+YAHOO.env.parseUA = function() {
   function numberify(s$$2) {
     var c = 0;
     return parseFloat(s$$2.replace(/\./g, function() {
       return c++ == 1 ? "" : ".";
     }));
   }
+  var agent;
   var nav = navigator;
   var o$$1 = {ie:0, opera:0, gecko:0, webkit:0, chrome:0, mobile:null, air:0, ipad:0, iphone:0, ipod:0, ios:null, android:0, webos:0, caja:nav && nav.cajaVersion, secure:false, os:null};
   var ua = agent || navigator && navigator.userAgent;
@@ -453,7 +453,7 @@ YAHOO.lang = YAHOO.lang || {};
       m$$2.apply(o$$13, d$$2 || NOTHING);
     };
     r$$3 = periodic ? setInterval(f$$2, when) : setTimeout(f$$2, when);
-    return{interval:periodic, cancel:function() {
+    return {interval:periodic, cancel:function() {
       if (this.interval) {
         clearInterval(r$$3);
       } else {
@@ -466,7 +466,7 @@ YAHOO.lang = YAHOO.lang || {};
   L.hasOwnProperty = OP.hasOwnProperty ? function(o$$15, prop$$4) {
     return o$$15 && o$$15.hasOwnProperty && o$$15.hasOwnProperty(prop$$4);
   } : function(o$$16, prop$$5) {
-    return!L.isUndefined(o$$16[prop$$5]) && o$$16.constructor.prototype[prop$$5] !== o$$16[prop$$5];
+    return !L.isUndefined(o$$16[prop$$5]) && o$$16.constructor.prototype[prop$$5] !== o$$16[prop$$5];
   };
   OB.augmentObject(L, OB, true);
   YAHOO.util.Lang = L;

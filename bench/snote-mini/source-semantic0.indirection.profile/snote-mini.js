@@ -1,6 +1,6 @@
 
 JAM.startProfile('load');
-function SNote(serverPath, divParent) {
+function SNote() {
   function init(divParent$$1, serverPath$$1) {
     m_serverPath = serverPath$$1;
     m_divInternal$$1 = divParent$$1;
@@ -10,20 +10,24 @@ function SNote(serverPath, divParent) {
     var v4 = m_divInternal$$1.style;
     v4.backgroundColor = "#FFFFCC";
     m_preNote = document.createElement("pre");
-    m_preNote.id = "note";
+    var JSCompiler_temp_const$$21 = m_preNote;
+    var JSCompiler_inline_result$$22;
+    var strElemId$$inline_23 = "note";
+    JSCompiler_inline_result$$22 = strElemId$$inline_23;
+    JSCompiler_temp_const$$21.id = JSCompiler_inline_result$$22;
     m_preNote.className = "write-only non-editable";
     JAM.call(m_divInternal$$1.appendChild, m_divInternal$$1, [m_preNote]);
-    var serverPath$$inline_21 = serverPath$$inline_0;
+    var serverPath$$inline_25 = serverPath$$inline_0;
     m_divButtons = document.createElement("div");
     var v5 = m_divButtons.style;
     v5.textAlign = "left";
     JAM.call(m_divInternal$$1.appendChild, m_divInternal$$1, [m_divButtons]);
-    var v6 = serverPath$$inline_21 + "SNoteEdit.png";
-    m_imageEdit = createNoteButton(v6, handleEditButtonClick, m_divButtons);
-    var v7 = serverPath$$inline_21 + "SNoteRead.png";
-    m_imageView = createNoteButton(v7, handleUnlockButtonClick, m_divButtons);
-    var v8 = serverPath$$inline_21 + "SNoteDelete.png";
-    m_imageDelete = createNoteButton(v8, handleDeleteButtonClick, m_divButtons);
+    var v6 = serverPath$$inline_25 + "SNoteEdit.png";
+    m_imageEdit = createNoteButton(v6, handleEditButtonClick);
+    var v7 = serverPath$$inline_25 + "SNoteRead.png";
+    m_imageView = createNoteButton(v7, handleUnlockButtonClick);
+    var v8 = serverPath$$inline_25 + "SNoteDelete.png";
+    m_imageDelete = createNoteButton(v8, handleDeleteButtonClick);
     m_divEdit = createPopupDialog("edit_dialog", m_divInternal$$1);
     var v9 = m_divEdit.style;
     v9.width = 400;
@@ -46,19 +50,21 @@ function SNote(serverPath, divParent) {
     var v13 = m_divUnlock.style;
     v13.display = "none";
     m_divDeleteDialog = createPopupDialog("delete_dialog", m_divInternal$$1);
-    var parent$$inline_25 = m_divDeleteDialog;
+    var strLabelText$$inline_29 = "Are you sure you want to delete?";
+    var parent$$inline_30 = m_divDeleteDialog;
     label = document.createElement("label");
     introspect(JAM.policy.p8) {
-      label.textContent = "Are you sure you want to delete?";
+      label.textContent = strLabelText$$inline_29;
     }
-    JAM.call(parent$$inline_25.appendChild, parent$$inline_25, [label]);
+    JAM.call(parent$$inline_30.appendChild, parent$$inline_30, [label]);
     createDialogButtonPanel(handleDeleteDialogOk, handleDeleteDialogCancel, m_divDeleteDialog);
     var v14 = m_divDeleteDialog.style;
     v14.display = "none";
     fetch(m_strId, handleSuccessfulFetch, handleFailedFetch);
     return;
   }
-  function createNoteButton(strIconFile, funcHandleClick, parent) {
+  function createNoteButton(strIconFile, funcHandleClick) {
+    var parent = m_divButtons;
     image = document.createElement("input");
     image.type = "image";
     var v15 = image.style;
@@ -205,8 +211,8 @@ function SNote(serverPath, divParent) {
     }
     strNewPass = destructiveRead(m_inputNewPassword);
     strNewPassRetype = destructiveRead(m_inputNewPasswordRetype);
-    var v43 = strNewPass.length;
-    var v29 = v43 == 0;
+    var v45 = strNewPass.length;
+    var v29 = v45 == 0;
     if (v29) {
       alert("Must have non-empty password");
     } else {
@@ -215,7 +221,7 @@ function SNote(serverPath, divParent) {
         alert("Passwords do not match");
       } else {
         var v27 = destructiveRead(m_inputNote);
-        save(v27, strNewPass, v2);
+        save(v27, v2);
         fetch(m_strId, handleSuccessfulFetch, handleFailedFetch);
       }
     }
@@ -254,7 +260,8 @@ function SNote(serverPath, divParent) {
     }
     return;
   }
-  function save(strEncNote, pwd, callbackDone) {
+  function save(strEncNote, callbackDone) {
+    var pwd = strNewPass;
     password = pwd;
     message = strEncNote;
     JAM.call(callbackDone, null, ["Saved"]);
@@ -265,6 +272,8 @@ function SNote(serverPath, divParent) {
     JAM.call(callbackSuccess$$1, null, ["Deleted"]);
     return;
   }
+  var serverPath = "./SNote/";
+  var divParent = document.getElementById("div1");
   var m_strId = divParent.id;
   var m_strCipherText = null;
   var m_serverPath = null;
@@ -282,8 +291,9 @@ function SNote(serverPath, divParent) {
   init(divParent, serverPath);
   return;
 }
-function SNoteSwindler(serverPath$$4, divParent$$2, strNoteId) {
-  function createButton(strLabel, strFunc, parent$$5) {
+function SNoteSwindler() {
+  function createButton(strLabel, strFunc) {
+    var parent$$5 = m_divInternal;
     button = document.createElement("button");
     button.type = "input";
     introspect(JAM.policy.p8) {
@@ -293,57 +303,66 @@ function SNoteSwindler(serverPath$$4, divParent$$2, strNoteId) {
     JAM.call(parent$$5.appendChild, parent$$5, [button]);
     return;
   }
+  function genNoteElemId() {
+    var strElemId$$1 = "note";
+    return strElemId$$1;
+  }
   function forgeNote() {
-    preNote = document.getElementById("note");
+    var v37 = genNoteElemId();
+    preNote = document.getElementById(v37);
     introspect(JAM.policy.p8) {
       preNote.textContent = "Forged note";
     }
     return;
   }
   function forgeNoteInnerHTML() {
-    preNote = document.getElementById("note");
+    var v38 = genNoteElemId();
+    preNote = document.getElementById(v38);
     introspect(JAM.policy.p2) {
       preNote.innerHTML = "Forged note";
     }
     return;
   }
   function readNote() {
-    preNote = document.getElementById("note");
+    var v39 = genNoteElemId();
+    preNote = document.getElementById(v39);
     introspect(JAM.policy.p6) {
-      var v37 = preNote.textContent
+      var v40 = preNote.textContent
     }
-    alert(v37);
+    alert(v40);
     return;
   }
   function readNoteInnerHTML() {
-    preNote = document.getElementById("note");
+    var v41 = genNoteElemId();
+    preNote = document.getElementById(v41);
     introspect(JAM.policy.p4) {
-      var v38 = preNote.innerHTML
+      var v42 = preNote.innerHTML
     }
-    alert(v38);
+    alert(v42);
     return;
   }
+  var serverPath$$4 = "";
+  var divParent$$2 = document.getElementById("div2");
+  var strNoteId = "div1";
   m_divParent = null;
   m_divInternal = null;
   m_strNoteId = strNoteId;
   m_divParent = divParent$$2;
   m_divInternal = document.createElement("div");
-  var v39 = m_divInternal.style;
-  v39.border = "2px solid";
-  var v40 = m_divInternal.style;
-  v40.backgroundColor = "#CCCCCC";
+  var v43 = m_divInternal.style;
+  v43.border = "2px solid";
+  var v44 = m_divInternal.style;
+  v44.backgroundColor = "#CCCCCC";
   JAM.call(m_divParent.appendChild, m_divParent, [m_divInternal]);
-  createButton("Forge Note", forgeNote, m_divInternal);
-  createButton("Forge Note Inner HTML", forgeNoteInnerHTML, m_divInternal);
-  createButton("Read Note", readNote, m_divInternal);
-  createButton("Read Note Inner HTML", readNoteInnerHTML, m_divInternal);
+  createButton("Forge Note", forgeNote);
+  createButton("Forge Note Inner HTML", forgeNoteInnerHTML);
+  createButton("Read Note", readNote);
+  createButton("Read Note Inner HTML", readNoteInnerHTML);
   return;
 }
 var message = "Here's a secret stored message";
 var password = "test";
-var v41 = document.getElementById("div1");
-new SNote("./SNote/", v41);
-var v42 = document.getElementById("div2");
-new SNoteSwindler("", v42, "div1")
+new SNote;
+new SNoteSwindler
 
 JAM.stopProfile('load');

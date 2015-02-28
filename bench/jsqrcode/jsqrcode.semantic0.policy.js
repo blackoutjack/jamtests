@@ -95,7 +95,7 @@ var policy = function() {
   p6.subsumedBy = pFull;
   p6.itype = "write";
   Object.freeze(p6);
-  function p21(tx) {
+  function p22(tx) {
     var commit = true;
     var as = tx.getActionSequence();
     var len = as.length;
@@ -116,8 +116,8 @@ var policy = function() {
       JAM.prevent(tx);
     }
   }
-  p21.subsumedBy = pFull;
-  Object.freeze(p21);
+  p22.subsumedBy = pFull;
+  Object.freeze(p22);
   function p33(tx) {
     var commit = true;
     var as = tx.getActionSequence();
@@ -146,47 +146,6 @@ var policy = function() {
   }
   p33.subsumedBy = pFull;
   Object.freeze(p33);
-  function p19(tx) {
-    var commit = true;
-    var as = tx.getCallSequence();
-    var len = as.length;
-    for (var i = 0;i < len;i++) {
-      var node = as[i];
-      if (JAM.identical(node.value, _HTMLDocument_prototype_write) && (node.argc > 0 && typeof node.args[0] === "string") || JAM.identical(node.value, _HTMLDocument_prototype_writeln) && (node.argc > 0 && typeof node.args[0] === "string") || JAM.identical(node.value, _XMLHttpRequest_prototype_open) && node.argc > 1 || JAM.identical(node.value, _Window_prototype_open) && (node.argc > 0 && node.args[0] !== _undefined) || JAM.identical(node.value, _Window_prototype_openDialog) && (node.argc > 0 && node.args[0] !== 
-      _undefined) || JAM.identical(node.value, _Window_prototype_postMessage) && node.argc > 1) {
-        commit = false;
-        break;
-      }
-    }
-    if (commit) {
-      JAM.process(tx);
-    } else {
-      JAM.prevent(tx);
-    }
-  }
-  p19.subsumedBy = pFull;
-  p19.itype = "call";
-  Object.freeze(p19);
-  function p15(tx) {
-    var commit = true;
-    var as = tx.getCallSequence();
-    var len = as.length;
-    for (var i = 0;i < len;i++) {
-      var node = as[i];
-      if (JAM.identical(node.value, _HTMLDocument_prototype_write) && (node.argc > 0 && typeof node.args[0] === "string") || JAM.identical(node.value, _HTMLDocument_prototype_writeln) && (node.argc > 0 && typeof node.args[0] === "string") || JAM.identical(node.value, _Window_prototype_open) && (node.argc > 0 && node.args[0] !== _undefined) || JAM.identical(node.value, _Window_prototype_openDialog) && (node.argc > 0 && node.args[0] !== _undefined)) {
-        commit = false;
-        break;
-      }
-    }
-    if (commit) {
-      JAM.process(tx);
-    } else {
-      JAM.prevent(tx);
-    }
-  }
-  p15.subsumedBy = pFull;
-  p15.itype = "call";
-  Object.freeze(p15);
   function p25(tx) {
     var commit = true;
     var as = tx.getActionSequence();
@@ -211,13 +170,14 @@ var policy = function() {
   }
   p25.subsumedBy = pFull;
   Object.freeze(p25);
-  function p20(tx) {
+  function p19(tx) {
     var commit = true;
     var as = tx.getCallSequence();
     var len = as.length;
     for (var i = 0;i < len;i++) {
       var node = as[i];
-      if (JAM.identical(node.value, _XMLHttpRequest_prototype_open) && node.argc > 1 || JAM.identical(node.value, _Window_prototype_open) && (node.argc > 0 && node.args[0] !== _undefined) || JAM.identical(node.value, _Window_prototype_openDialog) && (node.argc > 0 && node.args[0] !== _undefined) || JAM.identical(node.value, _Window_prototype_postMessage) && node.argc > 1) {
+      if (JAM.identical(node.value, _HTMLDocument_prototype_write) && (node.argc > 0 && typeof node.args[0] === "string") || JAM.identical(node.value, _HTMLDocument_prototype_writeln) && (node.argc > 0 && typeof node.args[0] === "string") || JAM.identical(node.value, _XMLHttpRequest_prototype_open) && node.argc > 1 || JAM.identical(node.value, _Window_prototype_open) && (node.argc > 0 && node.args[0] !== _undefined) || JAM.identical(node.value, _Window_prototype_openDialog) && (node.argc > 0 && node.args[0] !== 
+      _undefined) || JAM.identical(node.value, _Window_prototype_postMessage) && node.argc > 1) {
         commit = false;
         break;
       }
@@ -228,9 +188,29 @@ var policy = function() {
       JAM.prevent(tx);
     }
   }
-  p20.subsumedBy = pFull;
-  p20.itype = "call";
-  Object.freeze(p20);
+  p19.subsumedBy = pFull;
+  p19.itype = "call";
+  Object.freeze(p19);
+  function p16(tx) {
+    var commit = true;
+    var as = tx.getCallSequence();
+    var len = as.length;
+    for (var i = 0;i < len;i++) {
+      var node = as[i];
+      if (JAM.identical(node.value, _HTMLDocument_prototype_write) && (node.argc > 0 && typeof node.args[0] === "string") || JAM.identical(node.value, _HTMLDocument_prototype_writeln) && (node.argc > 0 && typeof node.args[0] === "string") || JAM.identical(node.value, _Window_prototype_open) && (node.argc > 0 && node.args[0] !== _undefined) || JAM.identical(node.value, _Window_prototype_openDialog) && (node.argc > 0 && node.args[0] !== _undefined)) {
+        commit = false;
+        break;
+      }
+    }
+    if (commit) {
+      JAM.process(tx);
+    } else {
+      JAM.prevent(tx);
+    }
+  }
+  p16.subsumedBy = pFull;
+  p16.itype = "call";
+  Object.freeze(p16);
   function p23(tx) {
     var commit = true;
     var as = tx.getActionSequence();
@@ -254,6 +234,26 @@ var policy = function() {
   }
   p23.subsumedBy = pFull;
   Object.freeze(p23);
+  function p20(tx) {
+    var commit = true;
+    var as = tx.getCallSequence();
+    var len = as.length;
+    for (var i = 0;i < len;i++) {
+      var node = as[i];
+      if (JAM.identical(node.value, _XMLHttpRequest_prototype_open) && node.argc > 1 || JAM.identical(node.value, _Window_prototype_open) && (node.argc > 0 && node.args[0] !== _undefined) || JAM.identical(node.value, _Window_prototype_openDialog) && (node.argc > 0 && node.args[0] !== _undefined) || JAM.identical(node.value, _Window_prototype_postMessage) && node.argc > 1) {
+        commit = false;
+        break;
+      }
+    }
+    if (commit) {
+      JAM.process(tx);
+    } else {
+      JAM.prevent(tx);
+    }
+  }
+  p20.subsumedBy = pFull;
+  p20.itype = "call";
+  Object.freeze(p20);
   function p18(tx) {
     var commit = true;
     var as = tx.getCallSequence();
@@ -297,5 +297,5 @@ var policy = function() {
   }
   p24.subsumedBy = pFull;
   Object.freeze(p24);
-  return{p1:p1, p6:p6, p21:p21, p33:p33, p19:p19, p15:p15, p25:p25, p20:p20, p23:p23, p18:p18, p24:p24, pFull:pFull, woven:true};
+  return {p1:p1, p6:p6, p22:p22, p33:p33, p25:p25, p19:p19, p16:p16, p23:p23, p20:p20, p18:p18, p24:p24, pFull:pFull, woven:true};
 }()

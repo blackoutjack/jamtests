@@ -5,27 +5,27 @@ function getNSLayer(inNode, inName) {
   var i$$1;
   node$$2 = inNode[inName];
   i$$1 = 0;
-  var v496 = !node$$2;
-  if (v496) {
-    v496 = inNode.layers;
+  var v483 = !node$$2;
+  if (v483) {
+    v483 = inNode.layers;
   }
-  var v277 = v496;
-  if (v277) {
-    v277 = i$$1 < inNode.layers.length;
+  var v273 = v483;
+  if (v273) {
+    v273 = i$$1 < inNode.layers.length;
   }
-  var v1 = v277;
+  var v1 = v273;
   for (;v1;) {
     node$$2 = getNSLayer(inNode.layers[i$$1].document, inName);
     i$$1++;
-    var v499 = !node$$2;
-    if (v499) {
-      v499 = inNode.layers;
+    var v486 = !node$$2;
+    if (v486) {
+      v486 = inNode.layers;
     }
-    var v279 = v499;
-    if (v279) {
-      v279 = i$$1 < inNode.layers.length;
+    var v275 = v486;
+    if (v275) {
+      v275 = i$$1 < inNode.layers.length;
     }
-    v1 = v279;
+    v1 = v275;
   }
   return node$$2;
 }
@@ -49,11 +49,11 @@ function getLayer(inNode$$1, inName$$1) {
 }
 function getStyle(inNode$$2) {
   var style;
-  var v281 = is.w3c;
-  if (!v281) {
-    v281 = is.ie4;
+  var v277 = is.w3c;
+  if (!v277) {
+    v277 = is.ie4;
   }
-  if (v281) {
+  if (v277) {
     style = inNode$$2.style;
   } else {
     if (is.ns4) {
@@ -65,11 +65,11 @@ function getStyle(inNode$$2) {
   return style;
 }
 function setLayerPos(inNode$$3, left$$1, top$$1) {
-  var v282 = is.ie4;
-  if (!v282) {
-    v282 = is.w3c;
+  var v278 = is.ie4;
+  if (!v278) {
+    v278 = is.w3c;
   }
-  if (v282) {
+  if (v278) {
     inNode$$3.style.left = left$$1 + "px";
     inNode$$3.style.top = top$$1 + "px";
   } else {
@@ -88,7 +88,8 @@ function showLayer(mNode) {
   }
   return;
 }
-function hideLayer(mNode$$1) {
+function hideLayer() {
+  var mNode$$1 = nodeStack[stackDepth];
   var style$$2;
   style$$2 = getStyle(mNode$$1);
   if (style$$2) {
@@ -105,11 +106,11 @@ function isPositioned(mNode$$2) {
 }
 function layerWidth(mNode$$3) {
   var nWidth;
-  var v285 = is.ie4;
-  if (!v285) {
-    v285 = is.w3c;
+  var v281 = is.ie4;
+  if (!v281) {
+    v281 = is.w3c;
   }
-  if (v285) {
+  if (v281) {
     nWidth = parseInt(mNode$$3.style.width);
   } else {
     if (is.ns4) {
@@ -156,7 +157,9 @@ function setLayerColor(tag, bgColor, tColor) {
   }
   return;
 }
-function setStyle(divType, fontSize, left$$2, top$$2, width$$9, height$$8, zIndex, bgColor$$1, visibility) {
+function setStyle(left$$2, top$$2, width$$9, height$$8, zIndex, bgColor$$1, visibility) {
+  var divType = blInfo.divType;
+  var fontSize = blInfo.fontSize;
   var dStyle;
   if (divType == "layer") {
     dStyle = 'left="' + left$$2;
@@ -199,10 +202,10 @@ function Is() {
   var version$$5 = navigator.appVersion.toLowerCase();
   var agent = navigator.userAgent.toLowerCase();
   var platform = navigator.platform.toLowerCase();
-  var v684 = parseInt(version$$5);
-  this.major = v684;
-  var v685 = parseFloat(version$$5);
-  this.minor = v685;
+  var v669 = parseInt(version$$5);
+  this.major = v669;
+  var v670 = parseFloat(version$$5);
+  this.minor = v670;
   this.nsa = agent.indexOf("netscape") != -1;
   this.mza = agent.indexOf("mozilla") != -1;
   this.gla = agent.indexOf("galeon") != -1;
@@ -215,10 +218,10 @@ function Is() {
     version$$5 = agent.substring(agent.indexOf("rv:") + 3, agent.indexOf(")"));
     this.nsa = false;
     if (agent.indexOf("rv:") != -1) {
-      var v686 = parseInt(version$$5);
-      this.major = v686;
-      var v687 = parseFloat(version$$5);
-      this.minor = v687;
+      var v671 = parseInt(version$$5);
+      this.major = v671;
+      var v672 = parseFloat(version$$5);
+      this.minor = v672;
       var v32 = this.mza;
       if (v32) {
         v32 = this.major == 1;
@@ -233,10 +236,10 @@ function Is() {
     version$$5 = agent.substring(agent.indexOf("galeon/") + 7, agent.indexOf("(") - 1);
     this.nsa = false;
     if (agent.indexOf("galeon/") != -1) {
-      var v688 = parseInt(version$$5);
-      this.major = v688;
-      var v689 = parseFloat(version$$5);
-      this.minor = v689;
+      var v673 = parseInt(version$$5);
+      this.major = v673;
+      var v674 = parseFloat(version$$5);
+      this.minor = v674;
       var v37 = this.gla;
       if (v37) {
         v37 = this.major == 1;
@@ -270,8 +273,8 @@ function Is() {
   }
   this.ns6 = v44;
   if (this.ns6) {
-    var v690 = JAM.call(agent.slice, agent, [agent.indexOf("netscape6/") + 10, agent.length], JAM.policy.p1);
-    this.version = v690;
+    var v675 = JAM.call(agent.slice, agent, [agent.indexOf("netscape6/") + 10, agent.length], JAM.policy.p1);
+    this.version = v675;
   }
   var v48 = appName.indexOf("internet explorer") != -1;
   if (v48) {
@@ -283,80 +286,80 @@ function Is() {
     v49 = this.major == 3;
   }
   this.ie3 = v49;
-  var v316 = this.ie;
-  if (v316) {
-    v316 = this.major == 4;
+  var v312 = this.ie;
+  if (v312) {
+    v312 = this.major == 4;
   }
-  var v50 = v316;
+  var v50 = v312;
   if (v50) {
     v50 = agent.indexOf("msie 4.") != -1;
   }
   this.ie4 = v50;
-  var v318 = this.ie;
-  if (v318) {
-    v318 = this.major == 4;
+  var v314 = this.ie;
+  if (v314) {
+    v314 = this.major == 4;
   }
-  var v51 = v318;
+  var v51 = v314;
   if (v51) {
     v51 = agent.indexOf("msie 5.") != -1;
   }
   this.ie5 = v51;
-  var v320 = this.ie;
-  if (v320) {
-    v320 = this.major == 4;
+  var v316 = this.ie;
+  if (v316) {
+    v316 = this.major == 4;
   }
-  var v52 = v320;
+  var v52 = v316;
   if (v52) {
     v52 = agent.indexOf("msie 6.") != -1;
   }
   this.ie6 = v52;
-  var v515 = this.ie4;
-  if (!v515) {
-    v515 = this.ie5;
+  var v502 = this.ie4;
+  if (!v502) {
+    v502 = this.ie5;
   }
-  var v322 = v515;
-  if (!v322) {
-    v322 = this.ie6;
+  var v318 = v502;
+  if (!v318) {
+    v318 = this.ie6;
   }
-  if (v322) {
-    var v691 = JAM.call(agent.slice, agent, [agent.indexOf("msie ") + 5, agent.length], JAM.policy.p1);
-    this.version = v691;
-    var v692 = this.version.slice(0, this.version.indexOf(";"));
-    this.version = v692;
+  if (v318) {
+    var v676 = JAM.call(agent.slice, agent, [agent.indexOf("msie ") + 5, agent.length], JAM.policy.p1);
+    this.version = v676;
+    var v677 = this.version.slice(0, this.version.indexOf(";"));
+    this.version = v677;
   }
-  var v325 = this.ie;
-  if (v325) {
-    v325 = !this.ie3;
+  var v321 = this.ie;
+  if (v321) {
+    v321 = !this.ie3;
   }
-  var v58 = v325;
+  var v58 = v321;
   if (v58) {
     v58 = !this.ie4;
   }
   this.ieX = v58;
   this.op = agent.indexOf("opera") != -1;
-  var v327 = this.op;
-  if (v327) {
-    v327 = this.major == 4;
+  var v323 = this.op;
+  if (v323) {
+    v323 = this.major == 4;
   }
-  var v60 = v327;
+  var v60 = v323;
   if (v60) {
     v60 = agent.indexOf("opera 4.") != -1;
   }
   this.op4 = v60;
-  var v329 = this.op;
-  if (v329) {
-    v329 = this.major == 4;
+  var v325 = this.op;
+  if (v325) {
+    v325 = this.major == 4;
   }
-  var v61 = v329;
+  var v61 = v325;
   if (v61) {
     v61 = agent.indexOf("opera 5.") != -1;
   }
   this.op5 = v61;
-  var v331 = this.op;
-  if (v331) {
-    v331 = this.major == 4;
+  var v327 = this.op;
+  if (v327) {
+    v327 = this.major == 4;
   }
-  var v62 = v331;
+  var v62 = v327;
   if (v62) {
     v62 = agent.indexOf("opera 6.") != -1;
   }
@@ -366,21 +369,21 @@ function Is() {
     this.ie4 = false;
     this.ie5 = false;
     this.ie6 = false;
-    var v693 = JAM.call(agent.slice, agent, [agent.indexOf("opera") + 6, agent.length], JAM.policy.p1);
-    this.version = v693;
-    var v694 = parseFloat(this.version);
-    this.version = v694;
+    var v678 = JAM.call(agent.slice, agent, [agent.indexOf("opera") + 6, agent.length], JAM.policy.p1);
+    this.version = v678;
+    var v679 = parseFloat(this.version);
+    this.version = v679;
   }
   this.kq = agent.indexOf("konqueror") != -1;
   if (this.kq) {
-    var v695 = JAM.call(agent.substring, agent, [agent.indexOf("konqueror/") + 10, agent.length], JAM.policy.p1);
-    this.version = v695;
-    var v696 = this.version.substring(0, this.version.indexOf(";"));
-    this.version = v696;
-    var v697 = parseInt(this.version);
-    this.major = v697;
-    var v698 = parseFloat(this.version);
-    this.minor = v698;
+    var v680 = JAM.call(agent.substring, agent, [agent.indexOf("konqueror/") + 10, agent.length], JAM.policy.p1);
+    this.version = v680;
+    var v681 = this.version.substring(0, this.version.indexOf(";"));
+    this.version = v681;
+    var v682 = parseInt(this.version);
+    this.major = v682;
+    var v683 = parseFloat(this.version);
+    this.minor = v683;
     this.mza = false;
   }
   var v75 = this.kq;
@@ -400,11 +403,11 @@ function Is() {
   return;
 }
 function setTagFontColor(tag$$1, color$$2) {
-  var v339 = is.ie4;
-  if (!v339) {
-    v339 = is.w3c;
+  var v335 = is.ie4;
+  if (!v335) {
+    v335 = is.w3c;
   }
-  if (v339) {
+  if (v335) {
     tag$$1.style.color = color$$2;
   } else {
     if (is.ns4) {
@@ -415,11 +418,11 @@ function setTagFontColor(tag$$1, color$$2) {
   return;
 }
 function setTagFontStyle(tag$$2, style$$6) {
-  var v340 = is.ie4;
-  if (!v340) {
-    v340 = is.w3c;
+  var v336 = is.ie4;
+  if (!v336) {
+    v336 = is.w3c;
   }
-  if (v340) {
+  if (v336) {
     tag$$2.style.fontStyle = style$$6;
   } else {
     if (is.ns4) {
@@ -431,30 +434,30 @@ function setTagFontStyle(tag$$2, style$$6) {
 }
 function mousePosLeft(event$$1) {
   var leftPos;
-  var v341 = is.ie4;
-  if (!v341) {
-    var v523 = is.w3c;
-    if (v523) {
-      var v665 = is.ns6;
-      if (!v665) {
-        v665 = is.mza;
+  var v337 = is.ie4;
+  if (!v337) {
+    var v510 = is.w3c;
+    if (v510) {
+      var v650 = is.ns6;
+      if (!v650) {
+        v650 = is.mza;
       }
-      v523 = !v665;
+      v510 = !v650;
     }
-    v341 = v523;
+    v337 = v510;
   }
-  if (v341) {
+  if (v337) {
     leftPos = event$$1.clientX;
   } else {
-    var v525 = is.ns4;
-    if (!v525) {
-      v525 = is.ns6;
+    var v512 = is.ns4;
+    if (!v512) {
+      v512 = is.ns6;
     }
-    var v342 = v525;
-    if (!v342) {
-      v342 = is.mza;
+    var v338 = v512;
+    if (!v338) {
+      v338 = is.mza;
     }
-    if (v342) {
+    if (v338) {
       leftPos = event$$1.pageX;
     }
   }
@@ -462,30 +465,30 @@ function mousePosLeft(event$$1) {
 }
 function mousePosTop(event$$2) {
   var topPos;
-  var v343 = is.ie4;
-  if (!v343) {
-    var v527 = is.w3c;
-    if (v527) {
-      var v666 = is.ns6;
-      if (!v666) {
-        v666 = is.mza;
+  var v339 = is.ie4;
+  if (!v339) {
+    var v514 = is.w3c;
+    if (v514) {
+      var v651 = is.ns6;
+      if (!v651) {
+        v651 = is.mza;
       }
-      v527 = !v666;
+      v514 = !v651;
     }
-    v343 = v527;
+    v339 = v514;
   }
-  if (v343) {
+  if (v339) {
     topPos = event$$2.clientY;
   } else {
-    var v529 = is.ns4;
-    if (!v529) {
-      v529 = is.ns6;
+    var v516 = is.ns4;
+    if (!v516) {
+      v516 = is.ns6;
     }
-    var v344 = v529;
-    if (!v344) {
-      v344 = is.mza;
+    var v340 = v516;
+    if (!v340) {
+      v340 = is.mza;
     }
-    if (v344) {
+    if (v340) {
       topPos = event$$2.pageY;
     }
   }
@@ -550,11 +553,11 @@ function BrowserMenuInfo() {
       this.charWidth = 7;
       this.divType = "div";
     } else {
-      var v345 = is.op5;
-      if (!v345) {
-        v345 = is.op6;
+      var v341 = is.op5;
+      if (!v341) {
+        v341 = is.op6;
       }
-      if (v345) {
+      if (v341) {
         this.itemHeight = 17;
         this.cellOffset = 4;
         this.leftOffset = 2;
@@ -630,15 +633,15 @@ function BrowserMenuInfo() {
               this.charWidth = 6;
               this.divType = "div";
             } else {
-              var v532 = is.mza;
-              if (!v532) {
-                v532 = is.gla;
+              var v519 = is.mza;
+              if (!v519) {
+                v519 = is.gla;
               }
-              var v346 = v532;
-              if (!v346) {
-                v346 = is.ns6;
+              var v342 = v519;
+              if (!v342) {
+                v342 = is.ns6;
               }
-              if (v346) {
+              if (v342) {
                 this.itemHeight = 18;
                 this.cellOffset = 4;
                 this.leftOffset = 0;
@@ -688,29 +691,31 @@ function BrowserMenuInfo() {
   }
   return;
 }
-function startSiteMap(mName, mTarget) {
+function startSiteMap() {
+  var mName = "Menu";
+  var mTarget = "_top";
   window.menuName = mName;
   window.menuTarget = mTarget;
   window.menuPntr = "images/tri.gif";
   var v103 = window;
-  var v699 = new Array;
-  v103.menuCells = v699;
+  var v684 = new Array;
+  v103.menuCells = v684;
   window.menuPopups = 0;
   window.menuHeads = 0;
   window.menuLevel = 0;
   window.menuMain = 0;
   var v104 = window;
-  var v700 = new Object;
-  v104.menuLayers = v700;
+  var v685 = new Object;
+  v104.menuLayers = v685;
   var v105 = window;
-  var v701 = new Array;
-  v105.menuStack = v701;
+  var v686 = new Array;
+  v105.menuStack = v686;
   var v106 = window;
-  var v702 = new Array;
-  v106.menuBody = v702;
+  var v687 = new Array;
+  v106.menuBody = v687;
   var v107 = window;
-  var v703 = new Array;
-  v107.bodyCells = v703;
+  var v688 = new Array;
+  v107.bodyCells = v688;
   window.mbActive = "#FF0000";
   window.mtActive = "#FFFF00";
   return;
@@ -727,7 +732,8 @@ function menuItem(label, action, width$$10, level$$7, popup) {
   this.popup = popup;
   return;
 }
-function bodyItem(cells, popup$$1, level$$8, left$$3, top$$3, width$$11, height$$9) {
+function bodyItem(popup$$1, level$$8, left$$3, top$$3, width$$11, height$$9) {
+  var cells = window.bodyCells.length;
   this.cells = cells;
   this.popup = popup$$1;
   this.level = level$$8;
@@ -740,7 +746,7 @@ function bodyItem(cells, popup$$1, level$$8, left$$3, top$$3, width$$11, height$
 function stackMenuBody(queue, bPopup, bLevel, bLeft, bTop, bWidth, bHeight) {
   var mBody;
   var i$$2;
-  mBody = new bodyItem(window.bodyCells.length, bPopup, bLevel, bLeft, bTop, bWidth, bHeight);
+  mBody = new bodyItem(bPopup, bLevel, bLeft, bTop, bWidth, bHeight);
   JAM.set(window.menuBody, window.menuBody.length, mBody);
   i$$2 = 0;
   var v114 = i$$2 < queue.length;
@@ -793,11 +799,11 @@ function addMenuItem(label$$2, action$$1, popup$$2) {
     mAction = "clearMenus(" + mLevel$$1 + ")";
   }
   mPopup$$1 = popup$$2;
-  var v358 = mPopup$$1;
-  if (v358) {
-    v358 = mLevel$$1 > 0;
+  var v353 = mPopup$$1;
+  if (v353) {
+    v353 = mLevel$$1 > 0;
   }
-  if (v358) {
+  if (v353) {
     mWidth = mWidth + 15;
   }
   if (mLevel$$1 == 0) {
@@ -807,10 +813,11 @@ function addMenuItem(label$$2, action$$1, popup$$2) {
   JAM.set(window.menuCells, window.menuCells.length, mItem$$1);
   return;
 }
-function startMenu(label$$3, action$$2) {
-  var v360 = window.menuPopups;
+function startMenu(label$$3) {
+  var action$$2;
+  var v355 = window.menuPopups;
   window.menuPopups = window.menuPopups + 1;
-  addMenuItem(label$$3, action$$2, "popup" + v360);
+  addMenuItem(label$$3, action$$2, "popup" + v355);
   window.menuLevel++;
   return;
 }
@@ -824,7 +831,8 @@ function menuLayer(label$$4, action$$3) {
   this.action = action$$3;
   return;
 }
-function buildMenuCell(index$$39, left$$4, top$$4, width$$12, height$$10) {
+function buildMenuCell(index$$39, left$$4, top$$4, width$$12) {
+  var height$$10 = blInfo.itemHeight;
   var mName$$1;
   var mLabel$$2;
   var mLeft;
@@ -844,7 +852,7 @@ function buildMenuCell(index$$39, left$$4, top$$4, width$$12, height$$10) {
   mAction$$1 = window.menuCells[index$$39].action;
   JAM.call(document.write, document, ["<" + blInfo.divType + ' id="' + mName$$1], JAM.policy.p1);
   JAM.call(document.write, document, ['" class="' + mClass + '" '], JAM.policy.p1);
-  JAM.call(document.write, document, [setStyle(blInfo.divType, blInfo.fontSize, mLeft, mTop, mWidth$$1, mHeight, 0, window.mbPassive, "inherit")], JAM.policy.p1);
+  JAM.call(document.write, document, [setStyle(mLeft, mTop, mWidth$$1, mHeight, 0, window.mbPassive, "inherit")], JAM.policy.p1);
   JAM.call(document.write, document, [' onclick="' + mAction$$1 + '" '], JAM.policy.p1);
   mPopup = window.menuCells[index$$39].popup;
   if (mPopup) {
@@ -855,18 +863,18 @@ function buildMenuCell(index$$39, left$$4, top$$4, width$$12, height$$10) {
     JAM.call(document.write, document, ['onmouseout="setColorPassive(' + "'" + mName$$1 + "'" + ');">'], JAM.policy.p1);
   }
   var v141 = window.menuLayers;
-  var v704 = new menuLayer(mLabel$$2, mAction$$1);
-  JAM.set(v141, mName$$1, v704);
+  var v689 = new menuLayer(mLabel$$2, mAction$$1);
+  JAM.set(v141, mName$$1, v689);
   if (blInfo.divType == "layer") {
     JAM.call(document.write, document, [JAM.call(mLabel$$2.fontcolor, mLabel$$2, [mtPassive], JAM.policy.p1)], JAM.policy.p1);
   } else {
     JAM.call(document.write, document, [mLabel$$2], JAM.policy.p1);
   }
-  var v376 = mPopup;
-  if (v376) {
-    v376 = mLevel$$2 >= 1;
+  var v369 = mPopup;
+  if (v369) {
+    v369 = mLevel$$2 >= 1;
   }
-  if (v376) {
+  if (v369) {
     JAM.call(document.write, document, ['&nbsp;<img src="' + window.menuPntr + '" border="0">'], JAM.policy.p1);
   }
   JAM.call(document.writeln, document, ["</" + blInfo.divType + ">"], JAM.policy.p1);
@@ -887,27 +895,27 @@ function buildMenuBody(cQueue, bName, bLevel$$1, bLeft$$1, bTop$$1, bWidth$$1, b
   lWidth$$1 = bWidth$$1 + blInfo.bwPadding;
   lHeight = bHeight$$1 + blInfo.bhPadding;
   JAM.call(document.write, document, ["<" + blInfo.divType + ' id="' + bName + '" class="' + bClass + '" '], JAM.policy.p1);
-  JAM.call(document.write, document, [setStyle(blInfo.divType, blInfo.fontSize, bLeft$$1, bTop$$1, lWidth$$1, lHeight, bLevel$$1 + 1, "#000000", "hidden")], JAM.policy.p1);
+  JAM.call(document.write, document, [setStyle(bLeft$$1, bTop$$1, lWidth$$1, lHeight, bLevel$$1 + 1, "#000000", "hidden")], JAM.policy.p1);
   JAM.call(document.writeln, document, [">"]);
   mLeft$$1 = blInfo.leftOffset;
   mTop$$1 = blInfo.mTopOffset;
   i$$4 = 0;
-  var v155 = i$$4 < cQueue.length;
-  for (;v155;) {
+  var v154 = i$$4 < cQueue.length;
+  for (;v154;) {
     mLabel = window.menuCells[cQueue[i$$4]].label;
     if (mLabel) {
-      buildMenuCell(cQueue[i$$4], mLeft$$1, mTop$$1, bWidth$$1, blInfo.itemHeight);
+      buildMenuCell(cQueue[i$$4], mLeft$$1, mTop$$1, bWidth$$1);
       mTop$$1 = mTop$$1 + (blInfo.itemHeight + blInfo.cellOffset);
     } else {
       if (mLabel == 0) {
         mTop$$1 = mTop$$1 + blInfo.dividerHeight;
       } else {
         alert("Expecting label in buildMenuBody.");
-        return 0;
+        return;
       }
     }
     i$$4++;
-    v155 = i$$4 < cQueue.length;
+    v154 = i$$4 < cQueue.length;
   }
   JAM.call(document.writeln, document, ["</" + blInfo.divType + ">"], JAM.policy.p1);
   return;
@@ -923,8 +931,8 @@ function buildMenuBodies() {
   var bHeight$$2;
   var bCells;
   i$$5 = 0;
-  var v166 = i$$5 < window.menuBody.length;
-  for (;v166;) {
+  var v165 = i$$5 < window.menuBody.length;
+  for (;v165;) {
     bCells = window.menuBody[i$$5].cells;
     bName$$1 = window.menuBody[i$$5].popup;
     bLevel$$2 = window.menuBody[i$$5].level;
@@ -934,28 +942,28 @@ function buildMenuBodies() {
     bHeight$$2 = window.menuBody[i$$5].height;
     cQueue$$1 = new Array;
     cCount = 0;
-    var v398 = bCells < window.bodyCells.length;
-    if (v398) {
-      v398 = window.bodyCells[bCells] > 0;
+    var v389 = bCells < window.bodyCells.length;
+    if (v389) {
+      v389 = window.bodyCells[bCells] > 0;
     }
-    var v165 = v398;
-    for (;v165;) {
-      var v164 = cCount;
+    var v164 = v389;
+    for (;v164;) {
+      var v163 = cCount;
       cCount = cCount + 1;
-      var v399 = window.bodyCells;
-      var v400 = bCells;
+      var v390 = window.bodyCells;
+      var v391 = bCells;
       bCells = bCells + 1;
-      cQueue$$1[v164] = v399[v400];
-      var v401 = bCells < window.bodyCells.length;
-      if (v401) {
-        v401 = window.bodyCells[bCells] > 0;
+      cQueue$$1[v163] = v390[v391];
+      var v392 = bCells < window.bodyCells.length;
+      if (v392) {
+        v392 = window.bodyCells[bCells] > 0;
       }
-      v165 = v401;
+      v164 = v392;
     }
     buildMenuBody(cQueue$$1, bName$$1, bLevel$$2, bLeft$$2, bTop$$2, bWidth$$2, bHeight$$2);
     cQueue$$1 = null;
     i$$5++;
-    v166 = i$$5 < window.menuBody.length;
+    v165 = i$$5 < window.menuBody.length;
   }
   return;
 }
@@ -971,30 +979,30 @@ function queueMenuBuilds(mIndex, mLevel$$3, mPopup$$2, mLeft$$2, mTop$$2) {
   sWidth = 0;
   sHeight = 0;
   i$$6 = mIndex;
-  var v403 = i$$6 < window.menuCells.length;
-  if (v403) {
-    v403 = window.menuCells[i$$6].level >= mLevel$$3;
+  var v394 = i$$6 < window.menuCells.length;
+  if (v394) {
+    v394 = window.menuCells[i$$6].level >= mLevel$$3;
   }
-  var v169 = v403;
-  for (;v169;) {
+  var v168 = v394;
+  for (;v168;) {
     if (window.menuCells[i$$6].level == mLevel$$3) {
       sWidth = JAM.call(Math.max, Math, [sWidth, window.menuCells[i$$6].width], JAM.policy.p1);
     }
     i$$6++;
-    var v406 = i$$6 < window.menuCells.length;
-    if (v406) {
-      v406 = window.menuCells[i$$6].level >= mLevel$$3;
+    var v397 = i$$6 < window.menuCells.length;
+    if (v397) {
+      v397 = window.menuCells[i$$6].level >= mLevel$$3;
     }
-    v169 = v406;
+    v168 = v397;
   }
   sLeft = mLeft$$2 + sWidth + 2;
   i$$6 = mIndex;
-  var v407 = i$$6 < window.menuCells.length;
-  if (v407) {
-    v407 = window.menuCells[i$$6].level >= mLevel$$3;
+  var v398 = i$$6 < window.menuCells.length;
+  if (v398) {
+    v398 = window.menuCells[i$$6].level >= mLevel$$3;
   }
-  var v176 = v407;
-  for (;v176;) {
+  var v175 = v398;
+  for (;v175;) {
     queue$$1[queue$$1.length] = i$$6;
     if (window.menuCells[i$$6].popup) {
       sPopup = window.menuCells[i$$6].popup;
@@ -1013,11 +1021,11 @@ function queueMenuBuilds(mIndex, mLevel$$3, mPopup$$2, mLeft$$2, mTop$$2) {
         sHeight = sHeight + blInfo.dividerHeight;
       }
     }
-    var v417 = i$$6 < window.menuCells.length;
-    if (v417) {
-      v417 = window.menuCells[i$$6].level >= mLevel$$3;
+    var v408 = i$$6 < window.menuCells.length;
+    if (v408) {
+      v408 = window.menuCells[i$$6].level >= mLevel$$3;
     }
-    v176 = v417;
+    v175 = v408;
   }
   if (queue$$1.length > 0) {
     stackMenuBody(queue$$1, mPopup$$2, mLevel$$3, mLeft$$2, mTop$$2, sWidth, sHeight - blInfo.cellOffset);
@@ -1028,7 +1036,13 @@ function queueMenuBuilds(mIndex, mLevel$$3, mPopup$$2, mLeft$$2, mTop$$2) {
 function endSiteMap() {
   return;
 }
-function drawHMenuBar(left$$5, top$$5, width$$13, height$$11, padding, graphic) {
+function drawHMenuBar() {
+  var left$$5 = barLeft;
+  var top$$5 = barTop;
+  var width$$13 = barWidth;
+  var height$$11 = barHeight;
+  var padding = itemPadding;
+  var graphic = barImage;
   var bLeft$$3;
   var bTop$$3;
   var bWidth$$3;
@@ -1048,18 +1062,18 @@ function drawHMenuBar(left$$5, top$$5, width$$13, height$$11, padding, graphic) 
   iPadding = padding + blInfo.itemPadding;
   bGraphic = graphic;
   JAM.call(document.write, document, ["<" + blInfo.divType + ' id="menuBar" class="menuBar" '], JAM.policy.p1);
-  JAM.call(document.write, document, [setStyle(blInfo.divType, blInfo.fontSize, bLeft$$3, bTop$$3, bWidth$$3, bHeight$$3, 0, null, "visible")], JAM.policy.p1);
+  JAM.call(document.write, document, [setStyle(bLeft$$3, bTop$$3, bWidth$$3, bHeight$$3, 0, null, "visible")], JAM.policy.p1);
   JAM.call(document.writeln, document, [">"]);
   JAM.call(document.writeln, document, ['<img name="menuImage" src="' + bGraphic + '" class="menuBar" border="1" width="' + width$$13 + '" height="' + height$$11 + '">'], JAM.policy.p1);
   iLeft = blInfo.leftOffset;
   mTop$$3 = height$$11 + blInfo.mBarOffset;
   bTop$$3 = bTop$$3 + blInfo.bBarOffset;
   i$$7 = 0;
-  var v193 = i$$7 < window.menuCells.length;
-  for (;v193;) {
+  var v191 = i$$7 < window.menuCells.length;
+  for (;v191;) {
     iWidth = window.menuCells[i$$7].width + iPadding;
     iWidth = JAM.call(Math.min, Math, [iWidth, bWidth$$3 - iLeft + blInfo.menuPadding], JAM.policy.p1);
-    buildMenuCell(i$$7, iLeft, mTop$$3, iWidth, blInfo.itemHeight);
+    buildMenuCell(i$$7, iLeft, mTop$$3, iWidth);
     if (window.menuCells[i$$7].popup) {
       mPopup = window.menuCells[i$$7].popup;
       i$$7++;
@@ -1067,7 +1081,7 @@ function drawHMenuBar(left$$5, top$$5, width$$13, height$$11, padding, graphic) 
     }
     bLeft$$3 = bLeft$$3 + (iWidth + blInfo.itemSpacing);
     iLeft = iLeft + (iWidth + blInfo.itemSpacing);
-    v193 = i$$7 < window.menuCells.length;
+    v191 = i$$7 < window.menuCells.length;
   }
   JAM.call(document.writeln, document, ["</" + blInfo.divType + ">"], JAM.policy.p1);
   buildMenuBodies();
@@ -1095,30 +1109,30 @@ function drawVMenuBar(left$$6, top$$6, width$$14, height$$12, padding$$1, graphi
   bHeight$$4 = height$$12;
   nTopItems = 0;
   i$$8 = 0;
-  var v197 = i$$8 < window.menuCells.length;
-  for (;v197;) {
+  var v195 = i$$8 < window.menuCells.length;
+  for (;v195;) {
     if (window.menuCells[i$$8].level == 0) {
       nTopItems++;
     }
     i$$8++;
-    v197 = i$$8 < window.menuCells.length;
+    v195 = i$$8 < window.menuCells.length;
   }
   mHeight$$1 = nTopItems * (blInfo.itemHeight + blInfo.cellOffset);
   i$$8 = 0;
   iPadding$$1 = padding$$1 + blInfo.itemPadding;
   bGraphic$$1 = graphic$$1;
   JAM.call(document.write, document, ["<" + blInfo.divType + ' id="menuBar" class="menuBar" '], JAM.policy.p1);
-  JAM.call(document.write, document, [setStyle(blInfo.divType, blInfo.fontSize, bLeft$$4, bTop$$4, bWidth$$4, bHeight$$4 + mHeight$$1, 0, null, "visible")], JAM.policy.p1);
+  JAM.call(document.write, document, [setStyle(bLeft$$4, bTop$$4, bWidth$$4, bHeight$$4 + mHeight$$1, 0, null, "visible")], JAM.policy.p1);
   JAM.call(document.writeln, document, [">"]);
   JAM.call(document.writeln, document, ['<img name="menuImage" src="' + bGraphic$$1 + '"class="menuBar" border="1" width="' + width$$14 + '" height="' + height$$12 + '">'], JAM.policy.p1);
   iLeft$$1 = blInfo.leftOffset;
   mTop$$4 = height$$12 + blInfo.mBarOffset;
   bTop$$4 = bTop$$4 + blInfo.bBarOffset;
-  var v211 = i$$8 < window.menuCells.length;
-  for (;v211;) {
+  var v208 = i$$8 < window.menuCells.length;
+  for (;v208;) {
     iWidth$$1 = window.menuCells[i$$8].width + iPadding$$1;
     iWidth$$1 = JAM.call(Math.min, Math, [iWidth$$1, bWidth$$4 - iLeft$$1 + blInfo.menuPadding], JAM.policy.p1);
-    buildMenuCell(i$$8, iLeft$$1, mTop$$4, iWidth$$1, blInfo.itemHeight);
+    buildMenuCell(i$$8, iLeft$$1, mTop$$4, iWidth$$1);
     if (window.menuCells[i$$8].popup) {
       mPopup = window.menuCells[i$$8].popup;
       i$$8++;
@@ -1126,7 +1140,7 @@ function drawVMenuBar(left$$6, top$$6, width$$14, height$$12, padding$$1, graphi
     }
     mTop$$4 = mTop$$4 + (blInfo.itemHeight + blInfo.cellOffset);
     bTop$$4 = bTop$$4 + (blInfo.itemHeight + blInfo.cellOffset);
-    v211 = i$$8 < window.menuCells.length;
+    v208 = i$$8 < window.menuCells.length;
   }
   JAM.call(document.writeln, document, ["</" + blInfo.divType + ">"], JAM.policy.p1);
   buildMenuBodies();
@@ -1134,11 +1148,11 @@ function drawVMenuBar(left$$6, top$$6, width$$14, height$$12, padding$$1, graphi
   return;
 }
 function loadMe() {
-  var v213 = this.action;
+  var v210 = this.action;
   if (JAM.isEval(eval)) {
-    eval("introspect(JAM.policy.pFull) { " + v213 + " }");
+    eval("introspect(JAM.policy.pFull) { " + v210 + " }");
   } else {
-    JAM.call(eval, null, [v213]);
+    JAM.call(eval, null, [v210]);
   }
   return;
 }
@@ -1168,30 +1182,30 @@ function findNode(elMain, mName$$3) {
   var elIndex;
   elNode = getLayer(elMain, mName$$3);
   elIndex = 0;
-  var v459 = !elNode;
-  if (v459) {
-    v459 = elIndex < stackDepth;
+  var v446 = !elNode;
+  if (v446) {
+    v446 = elIndex < stackDepth;
   }
-  var v220 = v459;
-  for (;v220;) {
+  var v217 = v446;
+  for (;v217;) {
     elNode = getLayer(nodeStack[elIndex], mName$$3);
     elIndex++;
-    var v460 = !elNode;
-    if (v460) {
-      v460 = elIndex < stackDepth;
+    var v447 = !elNode;
+    if (v447) {
+      v447 = elIndex < stackDepth;
     }
-    v220 = v460;
+    v217 = v447;
   }
   return elNode;
 }
 function clearMenus(mNum) {
-  var v222 = stackDepth > mNum;
-  for (;v222;) {
+  var v218 = stackDepth > mNum;
+  for (;v218;) {
     stackDepth--;
-    hideLayer(nodeStack[stackDepth]);
+    hideLayer();
     nameStack[stackDepth] = 0;
     nodeStack[stackDepth] = 0;
-    v222 = stackDepth > mNum;
+    v218 = stackDepth > mNum;
   }
   return;
 }
@@ -1243,7 +1257,7 @@ var is = new Is;
 var blInfo = new BrowserMenuInfo;
 JAM.call(document.write, document, ["<" + blInfo.divType + ' id="test.cell"'], JAM.policy.p1);
 JAM.call(document.write, document, ['" class="menuItem" ']);
-JAM.call(document.write, document, [setStyle(blInfo.divType, blInfo.fontSize, 0, 0, 100, 20, null, null, "hidden") + ">"], JAM.policy.p1);
+JAM.call(document.write, document, [setStyle(0, 0, 100, 20, null, null, "hidden") + ">"], JAM.policy.p1);
 JAM.call(document.write, document, ["test.cell"]);
 JAM.call(document.writeln, document, ["</" + blInfo.divType + ">"], JAM.policy.p1);
 var alphaWidth = Array();
@@ -1255,19 +1269,19 @@ alphaWidth["e"] = blInfo.charWidth;
 alphaWidth["f"] = blInfo.charWidth;
 alphaWidth["g"] = blInfo.charWidth;
 alphaWidth["h"] = blInfo.charWidth;
-var v238 = alphaWidth;
-var v705 = JAM.call(Math.floor, Math, [blInfo.charWidth * .4], JAM.policy.p1);
-v238["i"] = v705;
-var v239 = alphaWidth;
-var v706 = JAM.call(Math.floor, Math, [blInfo.charWidth * .7], JAM.policy.p1);
-v239["j"] = v706;
+var v234 = alphaWidth;
+var v690 = JAM.call(Math.floor, Math, [blInfo.charWidth * .4], JAM.policy.p1);
+v234["i"] = v690;
+var v235 = alphaWidth;
+var v691 = JAM.call(Math.floor, Math, [blInfo.charWidth * .7], JAM.policy.p1);
+v235["j"] = v691;
 alphaWidth["k"] = blInfo.charWidth;
-var v240 = alphaWidth;
-var v707 = JAM.call(Math.floor, Math, [blInfo.charWidth * .4], JAM.policy.p1);
-v240["l"] = v707;
-var v241 = alphaWidth;
-var v708 = JAM.call(Math.floor, Math, [blInfo.charWidth * 1.6], JAM.policy.p1);
-v241["m"] = v708;
+var v236 = alphaWidth;
+var v692 = JAM.call(Math.floor, Math, [blInfo.charWidth * .4], JAM.policy.p1);
+v236["l"] = v692;
+var v237 = alphaWidth;
+var v693 = JAM.call(Math.floor, Math, [blInfo.charWidth * 1.6], JAM.policy.p1);
+v237["m"] = v693;
 alphaWidth["n"] = blInfo.charWidth;
 alphaWidth["o"] = blInfo.charWidth;
 alphaWidth["p"] = blInfo.charWidth;
@@ -1277,90 +1291,90 @@ alphaWidth["s"] = blInfo.charWidth;
 alphaWidth["t"] = blInfo.charWidth;
 alphaWidth["u"] = blInfo.charWidth;
 alphaWidth["v"] = blInfo.charWidth;
-var v242 = alphaWidth;
-var v709 = JAM.call(Math.floor, Math, [blInfo.charWidth * 1.8], JAM.policy.p1);
-v242["w"] = v709;
+var v238 = alphaWidth;
+var v694 = JAM.call(Math.floor, Math, [blInfo.charWidth * 1.8], JAM.policy.p1);
+v238["w"] = v694;
 alphaWidth["x"] = blInfo.charWidth;
 alphaWidth["y"] = blInfo.charWidth;
 alphaWidth["z"] = blInfo.charWidth;
+var v239 = alphaWidth;
+var v695 = JAM.call(Math.floor, Math, [blInfo.charWidth * 1.6], JAM.policy.p1);
+v239["A"] = v695;
+var v240 = alphaWidth;
+var v696 = JAM.call(Math.floor, Math, [blInfo.charWidth * 1.6], JAM.policy.p1);
+v240["B"] = v696;
+var v241 = alphaWidth;
+var v697 = JAM.call(Math.floor, Math, [blInfo.charWidth * 1.6], JAM.policy.p1);
+v241["C"] = v697;
+var v242 = alphaWidth;
+var v698 = JAM.call(Math.floor, Math, [blInfo.charWidth * 1.6], JAM.policy.p1);
+v242["D"] = v698;
 var v243 = alphaWidth;
-var v710 = JAM.call(Math.floor, Math, [blInfo.charWidth * 1.6], JAM.policy.p1);
-v243["A"] = v710;
+var v699 = JAM.call(Math.floor, Math, [blInfo.charWidth * 1.6], JAM.policy.p1);
+v243["E"] = v699;
 var v244 = alphaWidth;
-var v711 = JAM.call(Math.floor, Math, [blInfo.charWidth * 1.6], JAM.policy.p1);
-v244["B"] = v711;
+var v700 = JAM.call(Math.floor, Math, [blInfo.charWidth * 1.6], JAM.policy.p1);
+v244["F"] = v700;
 var v245 = alphaWidth;
-var v712 = JAM.call(Math.floor, Math, [blInfo.charWidth * 1.6], JAM.policy.p1);
-v245["C"] = v712;
+var v701 = JAM.call(Math.floor, Math, [blInfo.charWidth * 1.6], JAM.policy.p1);
+v245["G"] = v701;
 var v246 = alphaWidth;
-var v713 = JAM.call(Math.floor, Math, [blInfo.charWidth * 1.6], JAM.policy.p1);
-v246["D"] = v713;
+var v702 = JAM.call(Math.floor, Math, [blInfo.charWidth * 1.6], JAM.policy.p1);
+v246["H"] = v702;
 var v247 = alphaWidth;
-var v714 = JAM.call(Math.floor, Math, [blInfo.charWidth * 1.6], JAM.policy.p1);
-v247["E"] = v714;
+var v703 = JAM.call(Math.floor, Math, [blInfo.charWidth], JAM.policy.p1);
+v247["I"] = v703;
 var v248 = alphaWidth;
-var v715 = JAM.call(Math.floor, Math, [blInfo.charWidth * 1.6], JAM.policy.p1);
-v248["F"] = v715;
+var v704 = JAM.call(Math.floor, Math, [blInfo.charWidth], JAM.policy.p1);
+v248["J"] = v704;
 var v249 = alphaWidth;
-var v716 = JAM.call(Math.floor, Math, [blInfo.charWidth * 1.6], JAM.policy.p1);
-v249["G"] = v716;
+var v705 = JAM.call(Math.floor, Math, [blInfo.charWidth * 1.6], JAM.policy.p1);
+v249["K"] = v705;
 var v250 = alphaWidth;
-var v717 = JAM.call(Math.floor, Math, [blInfo.charWidth * 1.6], JAM.policy.p1);
-v250["H"] = v717;
+var v706 = JAM.call(Math.floor, Math, [blInfo.charWidth * 1.6], JAM.policy.p1);
+v250["L"] = v706;
 var v251 = alphaWidth;
-var v718 = JAM.call(Math.floor, Math, [blInfo.charWidth], JAM.policy.p1);
-v251["I"] = v718;
+var v707 = JAM.call(Math.floor, Math, [blInfo.charWidth * 2], JAM.policy.p1);
+v251["M"] = v707;
 var v252 = alphaWidth;
-var v719 = JAM.call(Math.floor, Math, [blInfo.charWidth], JAM.policy.p1);
-v252["J"] = v719;
+var v708 = JAM.call(Math.floor, Math, [blInfo.charWidth * 1.6], JAM.policy.p1);
+v252["N"] = v708;
 var v253 = alphaWidth;
-var v720 = JAM.call(Math.floor, Math, [blInfo.charWidth * 1.6], JAM.policy.p1);
-v253["K"] = v720;
+var v709 = JAM.call(Math.floor, Math, [blInfo.charWidth * 1.6], JAM.policy.p1);
+v253["O"] = v709;
 var v254 = alphaWidth;
-var v721 = JAM.call(Math.floor, Math, [blInfo.charWidth * 1.6], JAM.policy.p1);
-v254["L"] = v721;
+var v710 = JAM.call(Math.floor, Math, [blInfo.charWidth * 1.6], JAM.policy.p1);
+v254["P"] = v710;
 var v255 = alphaWidth;
-var v722 = JAM.call(Math.floor, Math, [blInfo.charWidth * 2], JAM.policy.p1);
-v255["M"] = v722;
+var v711 = JAM.call(Math.floor, Math, [blInfo.charWidth * 1.6], JAM.policy.p1);
+v255["Q"] = v711;
 var v256 = alphaWidth;
-var v723 = JAM.call(Math.floor, Math, [blInfo.charWidth * 1.6], JAM.policy.p1);
-v256["N"] = v723;
+var v712 = JAM.call(Math.floor, Math, [blInfo.charWidth * 1.6], JAM.policy.p1);
+v256["R"] = v712;
 var v257 = alphaWidth;
-var v724 = JAM.call(Math.floor, Math, [blInfo.charWidth * 1.6], JAM.policy.p1);
-v257["O"] = v724;
+var v713 = JAM.call(Math.floor, Math, [blInfo.charWidth * 1.6], JAM.policy.p1);
+v257["S"] = v713;
 var v258 = alphaWidth;
-var v725 = JAM.call(Math.floor, Math, [blInfo.charWidth * 1.6], JAM.policy.p1);
-v258["P"] = v725;
+var v714 = JAM.call(Math.floor, Math, [blInfo.charWidth * 1.6], JAM.policy.p1);
+v258["T"] = v714;
 var v259 = alphaWidth;
-var v726 = JAM.call(Math.floor, Math, [blInfo.charWidth * 1.6], JAM.policy.p1);
-v259["Q"] = v726;
+var v715 = JAM.call(Math.floor, Math, [blInfo.charWidth * 1.6], JAM.policy.p1);
+v259["U"] = v715;
 var v260 = alphaWidth;
-var v727 = JAM.call(Math.floor, Math, [blInfo.charWidth * 1.6], JAM.policy.p1);
-v260["R"] = v727;
+var v716 = JAM.call(Math.floor, Math, [blInfo.charWidth * 1.6], JAM.policy.p1);
+v260["V"] = v716;
 var v261 = alphaWidth;
-var v728 = JAM.call(Math.floor, Math, [blInfo.charWidth * 1.6], JAM.policy.p1);
-v261["S"] = v728;
+var v717 = JAM.call(Math.floor, Math, [blInfo.charWidth * 3], JAM.policy.p1);
+v261["W"] = v717;
 var v262 = alphaWidth;
-var v729 = JAM.call(Math.floor, Math, [blInfo.charWidth * 1.6], JAM.policy.p1);
-v262["T"] = v729;
+var v718 = JAM.call(Math.floor, Math, [blInfo.charWidth * 1.6], JAM.policy.p1);
+v262["X"] = v718;
 var v263 = alphaWidth;
-var v730 = JAM.call(Math.floor, Math, [blInfo.charWidth * 1.6], JAM.policy.p1);
-v263["U"] = v730;
+var v719 = JAM.call(Math.floor, Math, [blInfo.charWidth * 1.6], JAM.policy.p1);
+v263["Y"] = v719;
 var v264 = alphaWidth;
-var v731 = JAM.call(Math.floor, Math, [blInfo.charWidth * 1.6], JAM.policy.p1);
-v264["V"] = v731;
-var v265 = alphaWidth;
-var v732 = JAM.call(Math.floor, Math, [blInfo.charWidth * 3], JAM.policy.p1);
-v265["W"] = v732;
-var v266 = alphaWidth;
-var v733 = JAM.call(Math.floor, Math, [blInfo.charWidth * 1.6], JAM.policy.p1);
-v266["X"] = v733;
-var v267 = alphaWidth;
-var v734 = JAM.call(Math.floor, Math, [blInfo.charWidth * 1.6], JAM.policy.p1);
-v267["Y"] = v734;
-var v268 = alphaWidth;
-var v735 = JAM.call(Math.floor, Math, [blInfo.charWidth * 1.6], JAM.policy.p1);
-v268["Z"] = v735;
+var v720 = JAM.call(Math.floor, Math, [blInfo.charWidth * 1.6], JAM.policy.p1);
+v264["Z"] = v720;
 alphaWidth["0"] = blInfo.charWidth;
 alphaWidth["1"] = blInfo.charWidth;
 alphaWidth["2"] = blInfo.charWidth;
@@ -1409,7 +1423,7 @@ if (is.ns4) {
   JAM.call(document.captureEvents, document, [Event.MOUSEDOWN], JAM.policy.p1);
   JAM.set(document, "onmousedown", clearAll);
 }
-startSiteMap("Menu", "_top");
+startSiteMap();
 startMenu("jsWidgets");
 addMenuItem("Home", "/home.shtml");
 addMenuItem("What is jsWidgets?", "/readme.shtml");
@@ -1456,26 +1470,26 @@ addMenuItem("Javascript Resources", "http://www.jsr.communitech.net/index3.htm")
 addMenuItem("W3Schools Examples", "http://www.w3schools.com/js/js_examples.asp");
 endMenu();
 endSiteMap();
-var v629 = is.w3c;
-if (!v629) {
-  v629 = is.ie4;
+var v614 = is.w3c;
+if (!v614) {
+  v614 = is.ie4;
 }
-var v495 = v629;
-if (!v495) {
-  var v630 = is.ns4;
-  if (v630) {
-    v630 = !is.hj;
+var v482 = v614;
+if (!v482) {
+  var v615 = is.ns4;
+  if (v615) {
+    v615 = !is.hj;
   }
-  v495 = v630;
+  v482 = v615;
 }
-if (v495) {
+if (v482) {
   var barTop = 20;
   var barLeft = 50;
   var barWidth = 370;
   var barHeight = 44;
   var itemPadding = 5;
   var barImage = "images/title.png";
-  drawHMenuBar(barLeft, barTop, barWidth, barHeight, itemPadding, barImage);
+  drawHMenuBar();
 }
 if (is.w3c) {
   JAM.call(document.writeln, document, ['<div style="position : relative; top : 15px; float : right; padding-right : 42px; text-align : right">']);

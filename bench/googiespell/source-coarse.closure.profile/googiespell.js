@@ -13,7 +13,7 @@ function GoogieSpell(img_dir, server_url) {
   }
   var cookie_value;
   var lang;
-  cookie_value = getCookie("language");
+  cookie_value = getCookie();
   if (cookie_value != null) {
     GOOGIE_CUR_LANG = cookie_value;
   } else {
@@ -58,11 +58,16 @@ function GoogieSpell(img_dir, server_url) {
   this.cnt_errors_fixed = 0;
   AJS.AEV(document, "click", AJS.$b(fn$$16, this));
 }
-function setCookie(name$$36, value$$29, expires, path, domain, secure) {
+function setCookie(value$$29, expires) {
+  var path;
+  var domain;
+  var secure;
+  var name$$36 = "language";
   var curCookie = name$$36 + "=" + escape(value$$29) + (expires ? "; expires=" + expires.toGMTString() : "") + (path ? "; path=" + path : "") + (domain ? "; domain=" + domain : "") + (secure ? "; secure" : "");
   document.cookie = curCookie;
 }
-function getCookie(name$$37) {
+function getCookie() {
+  var name$$37 = "language";
   var dc = document.cookie;
   var prefix$$2 = name$$37 + "=";
   var begin$$11 = dc.indexOf("; " + prefix$$2);
@@ -114,9 +119,9 @@ if (!window.AJS) {
       return v;
     } else {
       if (!v) {
-        return[];
+        return [];
       } else {
-        return[v];
+        return [v];
       }
     }
   }, forceArray:function(args) {
@@ -150,7 +155,7 @@ if (!window.AJS) {
         return i$$5;
       }
     }
-    return-1;
+    return -1;
   }, getFirst:function(list$$3) {
     if (list$$3.length > 0) {
       return list$$3[0];
@@ -522,7 +527,7 @@ if (!window.AJS) {
   }, isElementHidden:function(elm$$25) {
     return elm$$25.style.display == "none" || elm$$25.style.visibility == "hidden";
   }, isElementShown:function(elm$$26) {
-    return!AJS.isElementHidden(elm$$26);
+    return !AJS.isElementHidden(elm$$26);
   }, setStyle:function() {
     var args$$8 = AJS.flattenElmArguments(arguments);
     var value$$27 = args$$8.pop();
@@ -753,7 +758,7 @@ if (!window.AJS) {
     }
     return post_data.join("&");
   }, _reprString:function(o$$4) {
-    return('"' + o$$4.replace(/(["\\])/g, "\\$1") + '"').replace(/[\f]/g, "\\f").replace(/[\b]/g, "\\b").replace(/[\n]/g, "\\n").replace(/[\t]/g, "\\t").replace(/[\r]/g, "\\r");
+    return ('"' + o$$4.replace(/(["\\])/g, "\\$1") + '"').replace(/[\f]/g, "\\f").replace(/[\b]/g, "\\b").replace(/[\n]/g, "\\n").replace(/[\t]/g, "\\t").replace(/[\r]/g, "\\r");
   }, _reprDate:function(date$$1) {
     function leadingZero(nr) {
       if (nr < 10) {
@@ -764,7 +769,7 @@ if (!window.AJS) {
     var year$$1 = date$$1.getUTCFullYear();
     var dd = date$$1.getUTCDate();
     var mm = date$$1.getUTCMonth() + 1;
-    return'"' + year$$1 + "-" + mm + "-" + dd + "T" + leadingZero(date$$1.getUTCHours()) + ":" + leadingZero(date$$1.getUTCMinutes()) + ":" + leadingZero(date$$1.getUTCSeconds()) + '"';
+    return '"' + year$$1 + "-" + mm + "-" + dd + "T" + leadingZero(date$$1.getUTCHours()) + ":" + leadingZero(date$$1.getUTCMinutes()) + ":" + leadingZero(date$$1.getUTCSeconds()) + '"';
   }, getMousePos:function(e$$9) {
     var posx = 0;
     var posy = 0;
@@ -780,7 +785,7 @@ if (!window.AJS) {
         posy = e$$9.clientY + document.body.scrollTop + document.documentElement.scrollTop;
       }
     }
-    return{x:posx, y:posy};
+    return {x:posx, y:posy};
   }, getScrollTop:function() {
     var t;
     if (document.documentElement && document.documentElement.scrollTop) {
@@ -793,13 +798,13 @@ if (!window.AJS) {
     return t;
   }, absolutePosition:function(elm$$34) {
     if (!elm$$34) {
-      return{x:0, y:0};
+      return {x:0, y:0};
     }
     if (elm$$34.scrollLeft) {
-      return{x:elm$$34.scrollLeft, y:elm$$34.scrollTop};
+      return {x:elm$$34.scrollLeft, y:elm$$34.scrollTop};
     } else {
       if (elm$$34.clientX) {
-        return{x:elm$$34.clientX, y:elm$$34.clientY};
+        return {x:elm$$34.clientX, y:elm$$34.clientY};
       }
     }
     var posObj = {"x":elm$$34.offsetLeft, "y":elm$$34.offsetTop};
@@ -834,7 +839,7 @@ if (!window.AJS) {
         }
       }
     }
-    return{"w":win_w, "h":win_h};
+    return {"w":win_w, "h":win_h};
   }, isOverlapping:function(elm1, elm2) {
     function getSign(v$$1) {
       if (v$$1 > 0) {
@@ -1268,7 +1273,8 @@ AJS.exportToGlobalScope();
 AJS.bindReady();
 var GOOGIE_CUR_LANG = null;
 var GOOGIE_DEFAULT_LANG = "en";
-GoogieSpell.prototype.decorateTextarea = function(id$$1) {
+GoogieSpell.prototype.decorateTextarea = function() {
+  var id$$1 = "ta1";
   if (typeof id$$1 == "string") {
     this.text_area = AJS.$(id$$1);
   } else {
@@ -1362,11 +1368,9 @@ GoogieSpell.escapeSepcial = function(val$$4) {
   return val$$4.replace(/&/g, "&amp;").replace(/</g, "&lt;").replace(/>/g, "&gt;");
 };
 GoogieSpell.createXMLReq = function(text$$9) {
-  return'<?xml version="1.0" encoding="utf-8" ?><spellrequest textalreadyclipped="0" ignoredups="0" ignoredigits="1" ignoreallcaps="1"><text>' + text$$9 + "</text></spellrequest>";
+  return '<?xml version="1.0" encoding="utf-8" ?><spellrequest textalreadyclipped="0" ignoredups="0" ignoredigits="1" ignoreallcaps="1"><text>' + text$$9 + "</text></spellrequest>";
 };
-GoogieSpell.prototype.spellCheck = function(ignore) {
-      JAM.startProfile('submit');
-
+GoogieSpell.prototype.spellCheck = function() {
   function reqfailed(res_txt$$1, req$$7) {
     if (me$$2.custom_ajax_error) {
       me$$2.custom_ajax_error(req$$7);
@@ -1394,6 +1398,7 @@ GoogieSpell.prototype.spellCheck = function(ignore) {
     }
     me$$2.removeIndicator();
   }
+  var ignore;
   var me$$2 = this;
   this.cnt_errors_fixed = 0;
   this.cnt_errors = 0;
@@ -1431,8 +1436,6 @@ GoogieSpell.prototype.spellCheck = function(ignore) {
   reqfailed = null;
   var req_text = GoogieSpell.escapeSepcial(this.orginal_text);
   d$$3.sendReq(GoogieSpell.createXMLReq(req_text));
-
-      JAM.stopProfile('submit');
 };
 GoogieSpell.prototype.parseResult = function(r_text$$1) {
   JAM.startProfile('parse');
@@ -1530,7 +1533,8 @@ GoogieSpell.prototype.createListSeparator = function() {
   e_col.style.paddingTop = "3px";
   return AJS.TR(e_col);
 };
-GoogieSpell.prototype.correctError = function(id$$3, elm$$42, l_elm, rm_pre_space) {
+GoogieSpell.prototype.correctError = function(id$$3, elm$$42, l_elm) {
+  var rm_pre_space;
   var old_value$$2 = elm$$42.innerHTML;
   var new_value$$1 = l_elm.innerHTML;
   var offset$$9 = this.results[id$$3]["attrs"]["o"];
@@ -1892,7 +1896,7 @@ GoogieSpell.prototype.setCurrentLanguage = function(lan_code) {
   GOOGIE_CUR_LANG = lan_code;
   var now = new Date;
   now.setTime(now.getTime() + 365 * 24 * 60 * 60 * 1E3);
-  setCookie("language", lan_code, now);
+  setCookie(lan_code, now);
 };
 GoogieSpell.prototype.isLangWindowShown = function() {
   return this.language_window != null && this.language_window.style.visibility == "visible";
@@ -1921,7 +1925,9 @@ GoogieSpell.prototype.highlightCurSel = function() {
     }
   }
 };
-GoogieSpell.prototype.showLangWindow = function(elm$$47, ofst_top, ofst_left) {
+GoogieSpell.prototype.showLangWindow = function(elm$$47) {
+  var ofst_top;
+  var ofst_left;
   if (this.show_menu_observer) {
     this.show_menu_observer(this);
   }
@@ -1969,7 +1975,8 @@ GoogieSpell.prototype.createSpellDiv = function() {
   }
   return AJS.SPAN(spell_img, " ", chk_spell);
 };
-GoogieSpell.prototype.flashNoSpellingErrorState = function(on_finish) {
+GoogieSpell.prototype.flashNoSpellingErrorState = function() {
+  var on_finish;
   var no_spell_errors;
   if (on_finish) {
     var fn$$22 = function() {
@@ -2058,9 +2065,10 @@ GoogieSpell.item_onmouseout = function(e$$34) {
   }
 };
 GoogieSpell.prototype.createCloseButton = function(c_fn) {
-  return this.createButton(this.lang_close, "googie_list_close", AJS.$b(c_fn, this));
+  return this.createButton(this.lang_close, AJS.$b(c_fn, this));
 };
-GoogieSpell.prototype.createButton = function(name$$34, css_class, c_fn$$1) {
+GoogieSpell.prototype.createButton = function(name$$34, c_fn$$1) {
+  var css_class = "googie_list_close";
   var btn_row = AJS.TR();
   var btn = AJS.TD();
   btn.onmouseover = GoogieSpell.item_onmouseover;
@@ -2077,7 +2085,8 @@ GoogieSpell.prototype.createButton = function(name$$34, css_class, c_fn$$1) {
   btn_row.appendChild(btn);
   return btn_row;
 };
-GoogieSpell.prototype.removeIndicator = function(elm$$51) {
+GoogieSpell.prototype.removeIndicator = function() {
+  var elm$$51;
   try {
     AJS.removeElement(this.indicator);
   } catch (e$$35) {
@@ -2099,7 +2108,7 @@ GoogieSpell.prototype.createFocusLink = function(name$$35) {
 };
 var x = document.cookie;
 var googie1 = new GoogieSpell("./", "./spell-check/spell-check.php?lang=");
-googie1.decorateTextarea("ta1")
+googie1.decorateTextarea()
 
 }
 

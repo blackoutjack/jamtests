@@ -17955,7 +17955,7 @@ function v1() {
       a = String(a);
       b = String(b);
       if (a < b) {
-        return-1;
+        return -1;
       }
       if (a > b) {
         return 1;

@@ -19,14 +19,15 @@ function v117() {
     v121 = sc_tmp$$1 >= 0;
   }
   var k$$10;
-  var v1096;
+  var v1094;
   if (args$$6 === null) {
-    v1096 = 7;
+    v1094 = 7;
   } else {
-    v1096 = args$$6.car;
+    v1094 = args$$6.car;
   }
-  k$$10 = v1096;
-  return JAM.call(BgL_runzd2benchmarkzd2, null, ["earley", 1, v115, v116]);
+  k$$10 = v1094;
+  JAM.call(BgL_runzd2benchmarkzd2, null, ["earley", 1, v115, v116]);
+  return;
 }
 function v114(k$$9) {
   function v113(l$$31) {
@@ -40,8 +41,8 @@ function v114(k$$9) {
     var v123 = !(L1130 === null);
     for (;v123;) {
       sc_x_134 = L1130.car;
-      var v3687 = new sc_Pair(sc_list(sc_x_134, sc_x_134), null);
-      tail1134.cdr = v3687;
+      var v3685 = new sc_Pair(sc_list(sc_x_134, sc_x_134), null);
+      tail1134.cdr = v3685;
       tail1134 = tail1134.cdr;
       L1130 = L1130.cdr;
       v123 = !(L1130 === null);
@@ -67,7 +68,8 @@ function v112(parse$$2, nt$$9, i$$71, j$$11) {
   toks$$2 = parse$$2[6];
   states$$3 = parse$$2[7];
   BgL_sc_nbzd2derivzd2treesza2_133za2 = parse$$2[10];
-  return JAM.call(BgL_sc_nbzd2derivzd2treesza2_133za2, null, [nt$$9, i$$71, j$$11, nts$$3, enders$$3, steps$$2, toks$$2, states$$3], JAM.policy.p1);
+  JAM.call(BgL_sc_nbzd2derivzd2treesza2_133za2, null, [nt$$9, i$$71, j$$11, nts$$3, enders$$3, steps$$2, toks$$2, states$$3], JAM.policy.p1);
+  return;
 }
 function v111(parse$$1, nt$$8, i$$70, j$$10) {
   var BgL_sc_derivzd2treesza2_132z70;
@@ -95,7 +97,8 @@ function v110(parse, nt$$7, i$$69, j$$9) {
   enders$$1 = parse[2];
   states$$1 = parse[7];
   is_parsed$$1 = parse[8];
-  return JAM.call(is_parsed$$1, null, [nt$$7, i$$69, j$$9, nts$$1, enders$$1, states$$1], JAM.policy.p1);
+  JAM.call(is_parsed$$1, null, [nt$$7, i$$69, j$$9, nts$$1, enders$$1, states$$1], JAM.policy.p1);
+  return;
 }
 function v109(grammar, lexer) {
   function v108(input) {
@@ -156,11 +159,11 @@ function v109(grammar, lexer) {
           sc_states_129 = states;
           BgL_sc_statesza2_128za2 = BgL_sc_statesza2_27za2;
           prev$$2 = sc_conf_131 - 1;
-          var v1102 = sc_conf_131 >= BgL_sc_nbzd2nts_24zd2;
-          if (v1102) {
-            v1102 = sc_steps_25[prev$$2] >= 0;
+          var v1100 = sc_conf_131 >= BgL_sc_nbzd2nts_24zd2;
+          if (v1100) {
+            v1100 = sc_steps_25[prev$$2] >= 0;
           }
-          if (v1102) {
+          if (v1100) {
             sc_loop1_127 = v106;
             JAM.call(sc_loop1_127, null, [sc_enders_26[sc_steps_25[prev$$2]]]);
           }
@@ -191,13 +194,13 @@ function v109(grammar, lexer) {
           sc_conf_124 = l$$29.car;
           state$$10 = sc_states_123[j$$7];
           conf_set$$11 = state$$10[sc_conf_124 + 1];
-          var v2091;
+          var v2089;
           if (conf_set$$11 !== false) {
-            v2091 = conf_set$$11[i$$67 + 5];
+            v2089 = conf_set$$11[i$$67 + 5];
           } else {
-            v2091 = false;
+            v2089 = false;
           }
-          if (v2091 !== false) {
+          if (v2089 !== false) {
             l$$29 = l$$29.cdr;
             nb_trees = JAM.call(nb_deriv_trees, null, [sc_conf_124, i$$67, j$$7, sc_enders_120, sc_steps_121, sc_toks_122, sc_states_123, BgL_sc_nbzd2nts_125zd2], JAM.policy.p1) + nb_trees;
           } else {
@@ -232,19 +235,19 @@ function v109(grammar, lexer) {
               n$$13 = sc_n_118;
               var v144 = k$$7 >= 0;
               for (;v144;) {
-                var v1106 = k$$7 >= i$$66;
-                if (v1106) {
+                var v1104 = k$$7 >= i$$66;
+                if (v1104) {
                   state$$9 = sc_states_114[k$$7];
                   conf_set$$10 = state$$9[prev$$1 + 1];
-                  var v2400;
+                  var v2398;
                   if (conf_set$$10 !== false) {
-                    v2400 = conf_set$$10[i$$66 + 5];
+                    v2398 = conf_set$$10[i$$66 + 5];
                   } else {
-                    v2400 = false;
+                    v2398 = false;
                   }
-                  v1106 = v2400 !== false;
+                  v1104 = v2398 !== false;
                 }
-                if (v1106) {
+                if (v1104) {
                   nb_prev_trees = JAM.call(nb_deriv_trees, null, [prev$$1, i$$66, k$$7, sc_enders_111, sc_steps_112, sc_toks_113, sc_states_114, BgL_sc_nbzd2nts_115zd2], JAM.policy.p1);
                   nb_ender_trees = JAM.call(nb_deriv_trees, null, [ender$$2, k$$7, j$$6, sc_enders_111, sc_steps_112, sc_toks_113, sc_states_114, BgL_sc_nbzd2nts_115zd2], JAM.policy.p1);
                   k$$7 = ender_set$$1[k$$7 + 5];
@@ -268,21 +271,21 @@ function v109(grammar, lexer) {
       var tmp1124;
       var prev$$1;
       prev$$1 = sc_conf_110 - 1;
-      var v1108;
+      var v1106;
       tmp1124 = sc_conf_110 < BgL_sc_nbzd2nts_115zd2;
-      var v2728;
+      var v2726;
       if (tmp1124 !== false) {
-        v2728 = tmp1124;
+        v2726 = tmp1124;
       } else {
-        v2728 = sc_steps_112[prev$$1] < 0;
+        v2726 = sc_steps_112[prev$$1] < 0;
       }
-      if (v2728 !== false) {
-        v1108 = 1;
+      if (v2726 !== false) {
+        v1106 = 1;
       } else {
         sc_loop1_116 = v103;
-        v1108 = JAM.call(sc_loop1_116, null, [sc_enders_111[sc_steps_112[prev$$1]], 0], JAM.policy.p1);
+        v1106 = JAM.call(sc_loop1_116, null, [sc_enders_111[sc_steps_112[prev$$1]], 0], JAM.policy.p1);
       }
-      return v1108;
+      return v1106;
     }
     function v102(nt$$5, i$$65, j$$5, sc_nts_101, sc_enders_102, sc_steps_103, sc_names_104, sc_toks_105, sc_states_106) {
       var conf_set$$9;
@@ -302,13 +305,13 @@ function v109(grammar, lexer) {
           sc_conf_107 = l$$27.car;
           state$$8 = sc_states_106[j$$5];
           conf_set$$9 = state$$8[sc_conf_107 + 1];
-          var v2094;
+          var v2092;
           if (conf_set$$9 !== false) {
-            v2094 = conf_set$$9[i$$65 + 5];
+            v2092 = conf_set$$9[i$$65 + 5];
           } else {
-            v2094 = false;
+            v2092 = false;
           }
-          if (v2094 !== false) {
+          if (v2092 !== false) {
             l$$27 = l$$27.cdr;
             trees = sc_append(JAM.call(deriv_trees, null, [sc_conf_107, i$$65, j$$5, sc_enders_102, sc_steps_103, sc_names_104, sc_toks_105, sc_states_106, BgL_sc_nbzd2nts_108zd2], JAM.policy.p1), trees);
           } else {
@@ -352,19 +355,19 @@ function v109(grammar, lexer) {
           var sc_state_99;
           for (;true;) {
             if (k$$6 >= 0) {
-              var v1112 = k$$6 >= i$$64;
-              if (v1112) {
+              var v1110 = k$$6 >= i$$64;
+              if (v1110) {
                 sc_state_99 = sc_states_96[k$$6];
                 conf_set$$8 = sc_state_99[prev + 1];
-                var v2405;
+                var v2403;
                 if (conf_set$$8 !== false) {
-                  v2405 = conf_set$$8[i$$64 + 5];
+                  v2403 = conf_set$$8[i$$64 + 5];
                 } else {
-                  v2405 = false;
+                  v2403 = false;
                 }
-                v1112 = v2405 !== false;
+                v1110 = v2403 !== false;
               }
-              if (v1112) {
+              if (v1110) {
                 prev_trees = JAM.call(deriv_trees, null, [prev, i$$64, k$$6, sc_enders_92, sc_steps_93, sc_names_94, sc_toks_95, sc_states_96, BgL_sc_nbzd2nts_97zd2], JAM.policy.p1);
                 ender_trees = JAM.call(deriv_trees, null, [ender$$1, k$$6, j$$4, sc_enders_92, sc_steps_93, sc_names_94, sc_toks_95, sc_states_96, BgL_sc_nbzd2nts_97zd2], JAM.policy.p1);
                 loop3 = v98;
@@ -403,21 +406,21 @@ function v109(grammar, lexer) {
       var prev;
       var name$$37;
       name$$37 = sc_names_94[sc_conf_91];
-      var v1114;
+      var v1112;
       if (name$$37 !== false) {
-        var v1705;
+        var v1703;
         if (sc_conf_91 < BgL_sc_nbzd2nts_97zd2) {
-          v1705 = sc_list(sc_list(name$$37, sc_toks_95[i$$64].car));
+          v1703 = sc_list(sc_list(name$$37, sc_toks_95[i$$64].car));
         } else {
-          v1705 = sc_list(sc_list(name$$37));
+          v1703 = sc_list(sc_list(name$$37));
         }
-        v1114 = v1705;
+        v1112 = v1703;
       } else {
         prev = sc_conf_91 - 1;
         sc_loop1_98 = v100;
-        v1114 = JAM.call(sc_loop1_98, null, [sc_enders_92[sc_steps_93[prev]], null], JAM.policy.p1);
+        v1112 = JAM.call(sc_loop1_98, null, [sc_enders_92[sc_steps_93[prev]], null], JAM.policy.p1);
       }
-      return v1114;
+      return v1112;
     }
     function v97(nt$$4, i$$63, j$$3, sc_nts_86, sc_enders_87, sc_states_88) {
       var conf_set$$7;
@@ -433,13 +436,13 @@ function v109(grammar, lexer) {
             sc_conf_89 = l$$26.car;
             state$$6 = sc_states_88[j$$3];
             conf_set$$7 = state$$6[sc_conf_89 + 1];
-            var v2099;
+            var v2097;
             if (conf_set$$7 !== false) {
-              v2099 = conf_set$$7[i$$63 + 5];
+              v2097 = conf_set$$7[i$$63 + 5];
             } else {
-              v2099 = false;
+              v2097 = false;
             }
-            if (v2099 !== false) {
+            if (v2097 !== false) {
               return true;
             } else {
               l$$26 = l$$26.cdr;
@@ -531,13 +534,13 @@ function v109(grammar, lexer) {
             for (;v177;) {
               ender = l$$24.car;
               conf_set$$6 = sc_state_82[ender + 1];
-              var v2101;
+              var v2099;
               if (conf_set$$6 !== false) {
-                v2101 = conf_set$$6[BgL_sc_statezd2num_68zd2 + 5];
+                v2099 = conf_set$$6[BgL_sc_statezd2num_68zd2 + 5];
               } else {
-                v2101 = false;
+                v2099 = false;
               }
-              if (v2101 !== false) {
+              if (v2099 !== false) {
                 next$$1 = sc_conf_80 + 1;
                 next_set = JAM.call(BgL_sc_confzd2setzd2getza2_44za2, null, [sc_state_82, BgL_sc_statezd2num_68zd2, next$$1], JAM.policy.p1);
                 JAM.call(conf_set_union, null, [sc_state_82, next_set, next$$1, BgL_sc_confzd2set_79zd2], JAM.policy.p1);
@@ -557,7 +560,7 @@ function v109(grammar, lexer) {
             JAM.call(sc_loop1_75, null, [preds]);
           }
         } else {
-          return undefined;
+          return;
         }
       }
       return;
@@ -575,7 +578,7 @@ function v109(grammar, lexer) {
         }
         v184 = i$$61 >= 0;
       }
-      return undefined;
+      return;
     }
     function v93(sc_states_60, BgL_sc_statesza2_61za2, BgL_sc_statezd2num_62zd2, sc_conf_63, i$$60) {
       var BgL_sc_confzd2setza2_64z70;
@@ -583,29 +586,29 @@ function v109(grammar, lexer) {
       var conf_set$$4;
       var state$$3;
       state$$3 = sc_states_60[BgL_sc_statezd2num_62zd2];
-      var v1120;
+      var v1118;
       conf_set$$4 = state$$3[sc_conf_63 + 1];
-      var v2734;
+      var v2732;
       if (conf_set$$4 !== false) {
-        v2734 = conf_set$$4[i$$60 + 5];
+        v2732 = conf_set$$4[i$$60 + 5];
       } else {
-        v2734 = false;
+        v2732 = false;
       }
-      if (v2734 !== false) {
+      if (v2732 !== false) {
         BgL_sc_stateza2_65za2 = BgL_sc_statesza2_61za2[BgL_sc_statezd2num_62zd2];
         BgL_sc_confzd2setza2_64z70 = JAM.call(BgL_sc_confzd2setzd2getza2_44za2, null, [BgL_sc_stateza2_65za2, BgL_sc_statezd2num_62zd2, sc_conf_63], JAM.policy.p1);
-        var v2413;
+        var v2411;
         if (BgL_sc_confzd2setza2_64z70[i$$60 + 5] === false) {
-          v2413 = JAM.call(conf_set_adjoin, null, [BgL_sc_stateza2_65za2, BgL_sc_confzd2setza2_64z70, sc_conf_63, i$$60], JAM.policy.p1);
+          v2411 = JAM.call(conf_set_adjoin, null, [BgL_sc_stateza2_65za2, BgL_sc_confzd2setza2_64z70, sc_conf_63, i$$60], JAM.policy.p1);
         } else {
-          v2413 = undefined;
+          v2411 = undefined;
         }
-        v2413;
-        v1120 = true;
+        v2411;
+        v1118 = true;
       } else {
-        v1120 = false;
+        v1118 = false;
       }
-      return v1120;
+      return v1118;
     }
     function v92(sc_states_57, BgL_sc_statezd2num_58zd2, l$$23, i$$59) {
       var conf_set$$3;
@@ -626,7 +629,7 @@ function v109(grammar, lexer) {
         }
         v186 = l1$$13 instanceof sc_Pair;
       }
-      return undefined;
+      return;
     }
     function v91(state$$1, conf_set$$2, sc_conf_56, i$$58) {
       var tail$$5;
@@ -634,28 +637,30 @@ function v109(grammar, lexer) {
       conf_set$$2[i$$58 + 5] = -1;
       JAM.set(conf_set$$2, tail$$5 + 5, i$$58);
       conf_set$$2[3] = i$$58;
-      var v1122;
+      var v1120;
       if (tail$$5 < 0) {
         conf_set$$2[0] = state$$1[0];
-        v1122 = state$$1[0] = sc_conf_56;
+        v1120 = state$$1[0] = sc_conf_56;
       } else {
-        v1122 = undefined;
+        v1120 = undefined;
       }
-      return v1122;
+      v1120;
+      return;
     }
     function v90(conf_set$$1) {
       JAM.set(conf_set$$1, conf_set$$1[1] + 5, conf_set$$1[4]);
       conf_set$$1[1] = conf_set$$1[3];
       conf_set$$1[3] = -1;
-      return conf_set$$1[4] = -1;
+      conf_set$$1[4] = -1;
+      return;
     }
     function v89(state, BgL_sc_statezd2num_53zd2, sc_conf_54) {
       var conf_set;
       var BgL_sc_confzd2set_55zd2;
       BgL_sc_confzd2set_55zd2 = state[sc_conf_54 + 1];
-      var v1124;
+      var v1122;
       if (BgL_sc_confzd2set_55zd2 !== false) {
-        v1124 = BgL_sc_confzd2set_55zd2;
+        v1122 = BgL_sc_confzd2set_55zd2;
       } else {
         conf_set = sc_makeVector(BgL_sc_statezd2num_53zd2 + 6, false);
         conf_set[1] = -3;
@@ -663,9 +668,9 @@ function v109(grammar, lexer) {
         conf_set[3] = -1;
         conf_set[4] = -1;
         JAM.set(state, sc_conf_54 + 1, conf_set);
-        v1124 = conf_set;
+        v1122 = conf_set;
       }
-      return v1124;
+      return v1122;
     }
     function v88(BgL_sc_nbzd2toks_50zd2, BgL_sc_nbzd2confs_51zd2) {
       var v$$5;
@@ -849,7 +854,7 @@ function v109(grammar, lexer) {
       v204 = i$$55 >= 0;
     }
     optrOpnd$$2 = BgL_sc_statesza2_30za2;
-    return[sc_nts_42, sc_starters_41, sc_enders_40, sc_predictors_39, sc_steps_38, sc_names_37, sc_toks_36, optrOpnd$$2, is_parsed, BgL_sc_derivzd2treesza2_47z70, BgL_sc_nbzd2derivzd2treesza2_48za2];
+    return [sc_nts_42, sc_starters_41, sc_enders_40, sc_predictors_39, sc_steps_38, sc_names_37, sc_toks_36, optrOpnd$$2, is_parsed, BgL_sc_derivzd2treesza2_47z70, BgL_sc_nbzd2derivzd2treesza2_48za2];
   }
   function v86(defs$$2, conf) {
     function v85(rules$$2, conf$$1, rule_num) {
@@ -862,23 +867,23 @@ function v109(grammar, lexer) {
       var rule$$4;
       if (rules$$2 instanceof sc_Pair) {
         rule$$4 = rules$$2.car;
-        var v3688 = sc_list(head$$2, rule_num);
-        JAM.set(names, conf$$1, v3688);
+        var v3686 = sc_list(head$$2, rule_num);
+        JAM.set(names, conf$$1, v3686);
         sc_i_19 = JAM.call(ind, null, [head$$2, nts], JAM.policy.p1);
         var v205 = starters;
-        var v3689 = new sc_Pair(conf$$1, starters[sc_i_19]);
-        JAM.set(v205, sc_i_19, v3689);
+        var v3687 = new sc_Pair(conf$$1, starters[sc_i_19]);
+        JAM.set(v205, sc_i_19, v3687);
         l$$21 = rule$$4;
         sc_conf_18 = conf$$1;
         var v207 = l$$21 instanceof sc_Pair;
         for (;v207;) {
           nt$$2 = l$$21.car;
-          var v3690 = JAM.call(ind, null, [nt$$2, nts], JAM.policy.p1);
-          JAM.set(steps, sc_conf_18, v3690);
+          var v3688 = JAM.call(ind, null, [nt$$2, nts], JAM.policy.p1);
+          JAM.set(steps, sc_conf_18, v3688);
           sc_i_17 = JAM.call(ind, null, [nt$$2, nts], JAM.policy.p1);
           var v206 = predictors;
-          var v3691 = new sc_Pair(sc_conf_18, predictors[sc_i_17]);
-          JAM.set(v206, sc_i_17, v3691);
+          var v3689 = new sc_Pair(sc_conf_18, predictors[sc_i_17]);
+          JAM.set(v206, sc_i_17, v3689);
           l$$21 = l$$21.cdr;
           ++sc_conf_18;
           v207 = l$$21 instanceof sc_Pair;
@@ -886,8 +891,8 @@ function v109(grammar, lexer) {
         steps[sc_conf_18] = JAM.call(ind, null, [head$$2, nts], JAM.policy.p1) - nb_nts;
         i$$54 = JAM.call(ind, null, [head$$2, nts], JAM.policy.p1);
         var v209 = enders;
-        var v3692 = new sc_Pair(sc_conf_18, enders[i$$54]);
-        JAM.set(v209, i$$54, v3692);
+        var v3690 = new sc_Pair(sc_conf_18, enders[i$$54]);
+        JAM.set(v209, i$$54, v3690);
         return JAM.call(rule_loop$$2, null, [rules$$2.cdr, sc_conf_18 + 1, rule_num + 1], JAM.policy.p1);
       } else {
         return JAM.call(def_loop, null, [defs$$2.cdr, conf$$1], JAM.policy.p1);
@@ -978,14 +983,14 @@ function v109(grammar, lexer) {
       def = defs.car;
       head$$1 = def.car;
       rule_loop = v81;
-      var v1716 = def.cdr;
-      var v2105;
+      var v1714 = def.cdr;
+      var v2103;
       if (sc_member(head$$1, sc_nts_11) !== false) {
-        v2105 = sc_nts_11;
+        v2103 = sc_nts_11;
       } else {
-        v2105 = new sc_Pair(head$$1, sc_nts_11);
+        v2103 = new sc_Pair(head$$1, sc_nts_11);
       }
-      v227 = JAM.call(rule_loop, null, [v1716, v2105], JAM.policy.p1);
+      v227 = JAM.call(rule_loop, null, [v1714, v2103], JAM.policy.p1);
     } else {
       v227 = sc_list2vector(sc_reverse(sc_nts_11));
     }
@@ -1052,10 +1057,10 @@ function v109(grammar, lexer) {
     sc_steps_2[i$$52] = i$$52 - nb_nts;
     var v232 = sc_names_1;
     var v233 = i$$52;
-    var v3693 = sc_list(sc_nts_8[i$$52], 0);
-    v232[v233] = v3693;
-    var v3694 = sc_list(i$$52);
-    JAM.set(sc_enders_4, i$$52, v3694);
+    var v3691 = sc_list(sc_nts_8[i$$52], 0);
+    v232[v233] = v3691;
+    var v3692 = sc_list(i$$52);
+    JAM.set(sc_enders_4, i$$52, v3692);
     --i$$52;
     v234 = i$$52 >= 0;
   }
@@ -1086,13 +1091,13 @@ function v79(n$$12) {
   } else {
     optrOpnd$$1 = new sc_Pair(JAM.call(BgL_sc_symbolzd2ze3symbolzd2record_1ze3_nboyer, null, [sc_term_22.car]), JAM.call(translate_args_nboyer, null, [sc_term_22.cdr]));
   }
-  var v1144;
+  var v1142;
   if (const_nboyer === null) {
-    v1144 = null;
+    v1142 = null;
   } else {
-    v1144 = new sc_Pair(new sc_Pair(const_nboyer.car.car, JAM.call(translate_term_nboyer, null, [const_nboyer.car.cdr])), JAM.call(translate_alist_nboyer, null, [const_nboyer.cdr]));
+    v1142 = new sc_Pair(new sc_Pair(const_nboyer.car.car, JAM.call(translate_term_nboyer, null, [const_nboyer.car.cdr])), JAM.call(translate_alist_nboyer, null, [const_nboyer.cdr]));
   }
-  sc_term_21 = JAM.call(apply_subst_nboyer, null, [v1144, optrOpnd$$1]);
+  sc_term_21 = JAM.call(apply_subst_nboyer, null, [v1142, optrOpnd$$1]);
   answer = JAM.call(tautologyp_nboyer, null, [JAM.call(rewrite_nboyer, null, [sc_term_21]), null, null]);
   sc_write(rewrite_count_nboyer);
   sc_display(" rewrites");
@@ -1117,42 +1122,42 @@ function v78() {
   BgL_sc_za2symbolzd2recordszd2alistza2_2z00_nboyer = null;
   if_constructor_nboyer = JAM.call(BgL_sc_symbolzd2ze3symbolzd2record_1ze3_nboyer, null, ["\u1e9cif"]);
   sc_term_19 = new sc_Pair("\u1e9cf", null);
-  var v1145;
+  var v1143;
   if (!(sc_term_19 instanceof sc_Pair)) {
-    v1145 = sc_term_19;
+    v1143 = sc_term_19;
   } else {
-    v1145 = new sc_Pair(JAM.call(BgL_sc_symbolzd2ze3symbolzd2record_1ze3_nboyer, null, [sc_term_19.car]), JAM.call(translate_args_nboyer, null, [sc_term_19.cdr]));
+    v1143 = new sc_Pair(JAM.call(BgL_sc_symbolzd2ze3symbolzd2record_1ze3_nboyer, null, [sc_term_19.car]), JAM.call(translate_args_nboyer, null, [sc_term_19.cdr]));
   }
-  false_term_nboyer = v1145;
+  false_term_nboyer = v1143;
   sc_term_18 = new sc_Pair("\u1e9ct", null);
-  var v1146;
+  var v1144;
   if (!(sc_term_18 instanceof sc_Pair)) {
-    v1146 = sc_term_18;
+    v1144 = sc_term_18;
   } else {
-    v1146 = new sc_Pair(JAM.call(BgL_sc_symbolzd2ze3symbolzd2record_1ze3_nboyer, null, [sc_term_18.car]), JAM.call(translate_args_nboyer, null, [sc_term_18.cdr]));
+    v1144 = new sc_Pair(JAM.call(BgL_sc_symbolzd2ze3symbolzd2record_1ze3_nboyer, null, [sc_term_18.car]), JAM.call(translate_args_nboyer, null, [sc_term_18.cdr]));
   }
-  true_term_nboyer = v1146;
+  true_term_nboyer = v1144;
   lst$$7 = sc_const_3_nboyer;
   var v248 = !(lst$$7 === null);
   for (;v248;) {
     term$$6 = lst$$7.car;
-    var v1148 = term$$6 instanceof sc_Pair;
-    if (v1148) {
-      var v1727 = term$$6.car === "\u1e9cequal";
-      if (v1727) {
-        v1727 = term$$6.cdr.car instanceof sc_Pair;
+    var v1146 = term$$6 instanceof sc_Pair;
+    if (v1146) {
+      var v1725 = term$$6.car === "\u1e9cequal";
+      if (v1725) {
+        v1725 = term$$6.cdr.car instanceof sc_Pair;
       }
-      v1148 = v1727;
+      v1146 = v1725;
     }
-    if (v1148) {
+    if (v1146) {
       sc_sym_17 = term$$6.cdr.car.car;
-      var v1150;
+      var v1148;
       if (!(term$$6 instanceof sc_Pair)) {
-        v1150 = term$$6;
+        v1148 = term$$6;
       } else {
-        v1150 = new sc_Pair(JAM.call(BgL_sc_symbolzd2ze3symbolzd2record_1ze3_nboyer, null, [term$$6.car]), JAM.call(translate_args_nboyer, null, [term$$6.cdr]));
+        v1148 = new sc_Pair(JAM.call(BgL_sc_symbolzd2ze3symbolzd2record_1ze3_nboyer, null, [term$$6.car]), JAM.call(translate_args_nboyer, null, [term$$6.cdr]));
       }
-      var v245 = v1150;
+      var v245 = v1148;
       sym$$5 = term$$6.cdr.car.car;
       BgL_sc_symbolzd2record_16zd2 = JAM.call(BgL_sc_symbolzd2ze3symbolzd2record_1ze3_nboyer, null, [sym$$5]);
       value$$28 = new sc_Pair(v245, BgL_sc_symbolzd2record_16zd2[1]);
@@ -1225,15 +1230,15 @@ function v75(n$$11) {
   if (sc_isEqual(n$$11, 1)) {
     v257 = sc_list("\u1e9cimplies", 0, 1);
   } else {
-    var v1155 = sc_list("\u1e9cimplies", n$$11 - 1, n$$11);
+    var v1153 = sc_list("\u1e9cimplies", n$$11 - 1, n$$11);
     sc_n_15 = n$$11 - 1;
-    var v2121;
+    var v2119;
     if (sc_isEqual(sc_n_15, 1)) {
-      v2121 = sc_list("\u1e9cimplies", 0, 1);
+      v2119 = sc_list("\u1e9cimplies", 0, 1);
     } else {
-      v2121 = sc_list("\u1e9cand", sc_list("\u1e9cimplies", sc_n_15 - 1, sc_n_15), JAM.call(trans_of_implies1_nboyer, null, [sc_n_15 - 1]));
+      v2119 = sc_list("\u1e9cand", sc_list("\u1e9cimplies", sc_n_15 - 1, sc_n_15), JAM.call(trans_of_implies1_nboyer, null, [sc_n_15 - 1]));
     }
-    v257 = sc_list("\u1e9cand", v1155, v2121);
+    v257 = sc_list("\u1e9cand", v1153, v2119);
   }
   return v257;
 }
@@ -1289,15 +1294,15 @@ function v73(lst$$5) {
   if (lst$$5 === null) {
     v268 = null;
   } else {
-    var v1163 = JAM.call(rewrite_nboyer, null, [lst$$5.car]);
+    var v1161 = JAM.call(rewrite_nboyer, null, [lst$$5.car]);
     sc_lst_14 = lst$$5.cdr;
-    var v2122;
+    var v2120;
     if (sc_lst_14 === null) {
-      v2122 = null;
+      v2120 = null;
     } else {
-      v2122 = new sc_Pair(JAM.call(rewrite_nboyer, null, [sc_lst_14.car]), JAM.call(rewrite_args_nboyer, null, [sc_lst_14.cdr]));
+      v2120 = new sc_Pair(JAM.call(rewrite_nboyer, null, [sc_lst_14.car]), JAM.call(rewrite_args_nboyer, null, [sc_lst_14.cdr]));
     }
-    v268 = new sc_Pair(v1163, v2122);
+    v268 = new sc_Pair(v1161, v2120);
   }
   return v268;
 }
@@ -1313,13 +1318,13 @@ function v72(term$$5) {
   } else {
     var v269 = term$$5.car;
     sc_lst_13 = term$$5.cdr;
-    var v1738;
+    var v1736;
     if (sc_lst_13 === null) {
-      v1738 = null;
+      v1736 = null;
     } else {
-      v1738 = new sc_Pair(JAM.call(rewrite_nboyer, null, [sc_lst_13.car]), JAM.call(rewrite_args_nboyer, null, [sc_lst_13.cdr]));
+      v1736 = new sc_Pair(JAM.call(rewrite_nboyer, null, [sc_lst_13.car]), JAM.call(rewrite_args_nboyer, null, [sc_lst_13.cdr]));
     }
-    sc_term_12 = new sc_Pair(v269, v1738);
+    sc_term_12 = new sc_Pair(v269, v1736);
     symbol_record$$1 = term$$5.car;
     lst$$4 = symbol_record$$1[1];
     for (;true;) {
@@ -1347,23 +1352,23 @@ function v71(sc_x_11, true_lst, false_lst) {
   var sc_tmp1126_10;
   for (;true;) {
     sc_tmp1126_10 = JAM.call(is_term_equal_nboyer, null, [sc_x_11, true_term_nboyer]);
-    var v2127;
+    var v2125;
     if (sc_tmp1126_10 !== false) {
-      v2127 = sc_tmp1126_10;
+      v2125 = sc_tmp1126_10;
     } else {
-      v2127 = JAM.call(is_term_member_nboyer, null, [sc_x_11, true_lst]);
+      v2125 = JAM.call(is_term_member_nboyer, null, [sc_x_11, true_lst]);
     }
-    if (v2127 !== false) {
+    if (v2125 !== false) {
       return true;
     } else {
       sc_tmp1125_9 = JAM.call(is_term_equal_nboyer, null, [sc_x_11, false_term_nboyer]);
-      var v2128;
+      var v2126;
       if (sc_tmp1125_9 !== false) {
-        v2128 = sc_tmp1125_9;
+        v2126 = sc_tmp1125_9;
       } else {
-        v2128 = JAM.call(is_term_member_nboyer, null, [sc_x_11, false_lst]);
+        v2126 = JAM.call(is_term_member_nboyer, null, [sc_x_11, false_lst]);
       }
-      if (v2128 !== false) {
+      if (v2126 !== false) {
         return false;
       } else {
         if (!(sc_x_11 instanceof sc_Pair)) {
@@ -1372,24 +1377,24 @@ function v71(sc_x_11, true_lst, false_lst) {
           if (sc_x_11.car === if_constructor_nboyer) {
             sc_x_8 = sc_x_11.cdr.car;
             tmp1126 = JAM.call(is_term_equal_nboyer, null, [sc_x_8, true_term_nboyer]);
-            var v2129;
+            var v2127;
             if (tmp1126 !== false) {
-              v2129 = tmp1126;
+              v2127 = tmp1126;
             } else {
-              v2129 = JAM.call(is_term_member_nboyer, null, [sc_x_8, true_lst]);
+              v2127 = JAM.call(is_term_member_nboyer, null, [sc_x_8, true_lst]);
             }
-            if (v2129 !== false) {
+            if (v2127 !== false) {
               sc_x_11 = sc_x_11.cdr.cdr.car;
             } else {
               x$$75 = sc_x_11.cdr.car;
               tmp1125 = JAM.call(is_term_equal_nboyer, null, [x$$75, false_term_nboyer]);
-              var v2130;
+              var v2128;
               if (tmp1125 !== false) {
-                v2130 = tmp1125;
+                v2128 = tmp1125;
               } else {
-                v2130 = JAM.call(is_term_member_nboyer, null, [x$$75, false_lst]);
+                v2128 = JAM.call(is_term_member_nboyer, null, [x$$75, false_lst]);
               }
-              if (v2130 !== false) {
+              if (v2128 !== false) {
                 sc_x_11 = sc_x_11.cdr.cdr.cdr.car;
               } else {
                 if (JAM.call(tautologyp_nboyer, null, [sc_x_11.cdr.cdr.car, new sc_Pair(sc_x_11.cdr.car, true_lst), false_lst]) !== false) {
@@ -1415,15 +1420,15 @@ function v70(alist$$2, lst$$3) {
   if (lst$$3 === null) {
     v286 = null;
   } else {
-    var v1180 = JAM.call(apply_subst_nboyer, null, [alist$$2, lst$$3.car]);
+    var v1178 = JAM.call(apply_subst_nboyer, null, [alist$$2, lst$$3.car]);
     sc_lst_7 = lst$$3.cdr;
-    var v2133;
+    var v2131;
     if (sc_lst_7 === null) {
-      v2133 = null;
+      v2131 = null;
     } else {
-      v2133 = new sc_Pair(JAM.call(apply_subst_nboyer, null, [alist$$2, sc_lst_7.car]), JAM.call(apply_subst_lst_nboyer, null, [alist$$2, sc_lst_7.cdr]));
+      v2131 = new sc_Pair(JAM.call(apply_subst_nboyer, null, [alist$$2, sc_lst_7.car]), JAM.call(apply_subst_lst_nboyer, null, [alist$$2, sc_lst_7.cdr]));
     }
-    v286 = new sc_Pair(v1180, v2133);
+    v286 = new sc_Pair(v1178, v2131);
   }
   return v286;
 }
@@ -1433,23 +1438,23 @@ function v69(alist$$1, term$$4) {
   var v287;
   if (!(term$$4 instanceof sc_Pair)) {
     temp_temp = sc_assq(term$$4, alist$$1);
-    var v1746;
+    var v1744;
     if (temp_temp !== false) {
-      v1746 = temp_temp.cdr;
+      v1744 = temp_temp.cdr;
     } else {
-      v1746 = term$$4;
+      v1744 = term$$4;
     }
-    v287 = v1746;
+    v287 = v1744;
   } else {
-    var v1183 = term$$4.car;
+    var v1181 = term$$4.car;
     lst$$2 = term$$4.cdr;
-    var v2135;
+    var v2133;
     if (lst$$2 === null) {
-      v2135 = null;
+      v2133 = null;
     } else {
-      v2135 = new sc_Pair(JAM.call(apply_subst_nboyer, null, [alist$$1, lst$$2.car]), JAM.call(apply_subst_lst_nboyer, null, [alist$$1, lst$$2.cdr]));
+      v2133 = new sc_Pair(JAM.call(apply_subst_nboyer, null, [alist$$1, lst$$2.car]), JAM.call(apply_subst_lst_nboyer, null, [alist$$1, lst$$2.cdr]));
     }
-    v287 = new sc_Pair(v1183, v2135);
+    v287 = new sc_Pair(v1181, v2133);
   }
   return v287;
 }
@@ -1460,23 +1465,23 @@ function v68(alist) {
   if (alist === null) {
     v288 = null;
   } else {
-    var v1747 = alist.car.car;
+    var v1745 = alist.car.car;
     term$$3 = alist.car.cdr;
-    var v2447;
+    var v2445;
     if (!(term$$3 instanceof sc_Pair)) {
-      v2447 = term$$3;
+      v2445 = term$$3;
     } else {
-      v2447 = new sc_Pair(JAM.call(BgL_sc_symbolzd2ze3symbolzd2record_1ze3_nboyer, null, [term$$3.car]), JAM.call(translate_args_nboyer, null, [term$$3.cdr]));
+      v2445 = new sc_Pair(JAM.call(BgL_sc_symbolzd2ze3symbolzd2record_1ze3_nboyer, null, [term$$3.car]), JAM.call(translate_args_nboyer, null, [term$$3.cdr]));
     }
-    var v1186 = new sc_Pair(v1747, v2447);
+    var v1184 = new sc_Pair(v1745, v2445);
     sc_alist_6 = alist.cdr;
-    var v2137;
+    var v2135;
     if (sc_alist_6 === null) {
-      v2137 = null;
+      v2135 = null;
     } else {
-      v2137 = new sc_Pair(new sc_Pair(sc_alist_6.car.car, JAM.call(translate_term_nboyer, null, [sc_alist_6.car.cdr])), JAM.call(translate_alist_nboyer, null, [sc_alist_6.cdr]));
+      v2135 = new sc_Pair(new sc_Pair(sc_alist_6.car.car, JAM.call(translate_term_nboyer, null, [sc_alist_6.car.cdr])), JAM.call(translate_alist_nboyer, null, [sc_alist_6.cdr]));
     }
-    v288 = new sc_Pair(v1186, v2137);
+    v288 = new sc_Pair(v1184, v2135);
   }
   return v288;
 }
@@ -1484,15 +1489,15 @@ function v67(sym$$4) {
   var r;
   var x$$74;
   x$$74 = sc_assq(sym$$4, BgL_sc_za2symbolzd2recordszd2alistza2_2z00_nboyer);
-  var v1189;
+  var v1187;
   if (x$$74 !== false) {
-    v1189 = x$$74.cdr;
+    v1187 = x$$74.cdr;
   } else {
     r = [sym$$4, null];
     BgL_sc_za2symbolzd2recordszd2alistza2_2z00_nboyer = new sc_Pair(new sc_Pair(sym$$4, r), BgL_sc_za2symbolzd2recordszd2alistza2_2z00_nboyer);
-    v1189 = r;
+    v1187 = r;
   }
-  return v1189;
+  return v1187;
 }
 function v66(term$$2) {
   var optrOpnd;
@@ -1508,8 +1513,8 @@ function v66(term$$2) {
     tail1131 = falseHead1130;
     var v290 = !(L1127 === null);
     for (;v290;) {
-      var v3695 = new sc_Pair(JAM.call(untranslate_term_nboyer, null, [L1127.car]), null);
-      tail1131.cdr = v3695;
+      var v3693 = new sc_Pair(JAM.call(untranslate_term_nboyer, null, [L1127.car]), null);
+      tail1131.cdr = v3693;
       tail1131 = tail1131.cdr;
       L1127 = L1127.cdr;
       v290 = !(L1127 === null);
@@ -1528,21 +1533,21 @@ function v65(lst$$1) {
     v293 = null;
   } else {
     term$$1 = lst$$1.car;
-    var v2138;
+    var v2136;
     if (!(term$$1 instanceof sc_Pair)) {
-      v2138 = term$$1;
+      v2136 = term$$1;
     } else {
-      v2138 = new sc_Pair(JAM.call(BgL_sc_symbolzd2ze3symbolzd2record_1ze3_nboyer, null, [term$$1.car]), JAM.call(translate_args_nboyer, null, [term$$1.cdr]));
+      v2136 = new sc_Pair(JAM.call(BgL_sc_symbolzd2ze3symbolzd2record_1ze3_nboyer, null, [term$$1.car]), JAM.call(translate_args_nboyer, null, [term$$1.cdr]));
     }
-    var v1194 = v2138;
+    var v1192 = v2136;
     sc_lst_5 = lst$$1.cdr;
-    var v2139;
+    var v2137;
     if (sc_lst_5 === null) {
-      v2139 = null;
+      v2137 = null;
     } else {
-      v2139 = new sc_Pair(JAM.call(translate_term_nboyer, null, [sc_lst_5.car]), JAM.call(translate_args_nboyer, null, [sc_lst_5.cdr]));
+      v2137 = new sc_Pair(JAM.call(translate_term_nboyer, null, [sc_lst_5.car]), JAM.call(translate_args_nboyer, null, [sc_lst_5.cdr]));
     }
-    v293 = new sc_Pair(v1194, v2139);
+    v293 = new sc_Pair(v1192, v2137);
   }
   return v293;
 }
@@ -1552,15 +1557,15 @@ function v64(term) {
   if (!(term instanceof sc_Pair)) {
     v294 = term;
   } else {
-    var v1197 = JAM.call(BgL_sc_symbolzd2ze3symbolzd2record_1ze3_nboyer, null, [term.car]);
+    var v1195 = JAM.call(BgL_sc_symbolzd2ze3symbolzd2record_1ze3_nboyer, null, [term.car]);
     lst = term.cdr;
-    var v2140;
+    var v2138;
     if (lst === null) {
-      v2140 = null;
+      v2138 = null;
     } else {
-      v2140 = new sc_Pair(JAM.call(translate_term_nboyer, null, [lst.car]), JAM.call(translate_args_nboyer, null, [lst.cdr]));
+      v2138 = new sc_Pair(JAM.call(translate_term_nboyer, null, [lst.car]), JAM.call(translate_args_nboyer, null, [lst.cdr]));
     }
-    v294 = new sc_Pair(v1197, v2140);
+    v294 = new sc_Pair(v1195, v2138);
   }
   return v294;
 }
@@ -1606,15 +1611,16 @@ function v61() {
     v298 = sc_tmp >= 0;
   }
   var n$$10;
-  var v1752;
+  var v1750;
   if (args$$5 === null) {
-    v1752 = 0;
+    v1750 = 0;
   } else {
-    v1752 = args$$5.car;
+    v1750 = args$$5.car;
   }
-  n$$10 = v1752;
+  n$$10 = v1750;
   BgL_setupzd2boyerzd2();
-  return JAM.call(BgL_runzd2benchmarkzd2, null, ["nboyer" + JAM.call(sc_number2string, null, [n$$10]), 1, v59, v60]);
+  JAM.call(BgL_runzd2benchmarkzd2, null, ["nboyer" + JAM.call(sc_number2string, null, [n$$10]), 1, v59, v60]);
+  return;
 }
 function v58() {
   if (this.charAt(0) === sc_SYMBOL_PREFIX) {
@@ -1623,7 +1629,7 @@ function v58() {
     if (this.charAt(0) === sc_KEYWORD_PREFIX) {
       return ":" + this.slice(1);
     } else {
-      return'"' + sc_escapeWriteString(this) + '"';
+      return '"' + sc_escapeWriteString(this) + '"';
     }
   }
   return;
@@ -1654,18 +1660,18 @@ function v56() {
 function v54(symb$$4) {
   if (this[symb$$4 + "use"]) {
     var nb$$5 = this[symb$$4 + "nb"];
-    var v1208 = this[symb$$4];
+    var v1206 = this[symb$$4];
     this[symb$$4] = this[symb$$4] - 1;
-    if (v1208 === 0) {
+    if (v1206 === 0) {
       delete this[symb$$4];
       delete this[symb$$4 + "nb"];
       delete this[symb$$4 + "use"];
     }
     return "#" + nb$$5 + "#";
   }
-  var v1209 = this[symb$$4];
+  var v1207 = this[symb$$4];
   this[symb$$4] = this[symb$$4] - 1;
-  if (v1209 === 0) {
+  if (v1207 === 0) {
     delete this[symb$$4];
     delete this[symb$$4 + "nb"];
     delete this[symb$$4 + "use"];
@@ -1692,9 +1698,9 @@ function v54(symb$$4) {
 function v53(symb$$3, inList) {
   if (this[symb$$3 + "use"]) {
     var nb$$4 = this[symb$$3 + "nb"];
-    var v1217 = this[symb$$3];
+    var v1215 = this[symb$$3];
     this[symb$$3] = this[symb$$3] - 1;
-    if (v1217 === 0) {
+    if (v1215 === 0) {
       delete this[symb$$3];
       delete this[symb$$3 + "nb"];
       delete this[symb$$3 + "use"];
@@ -1705,9 +1711,9 @@ function v53(symb$$3, inList) {
       return "#" + nb$$4 + "#";
     }
   }
-  var v1218 = this[symb$$3];
+  var v1216 = this[symb$$3];
   this[symb$$3] = this[symb$$3] - 1;
-  if (v1218 === 0) {
+  if (v1216 === 0) {
     delete this[symb$$3];
     delete this[symb$$3 + "nb"];
     delete this[symb$$3 + "use"];
@@ -1727,8 +1733,8 @@ function v53(symb$$3, inList) {
   }
   res$$27 = res$$27 + sc_genToWriteCircleString(this.car, symb$$3);
   if (sc_isPair(this.cdr)) {
-    var v2149 = this.cdr;
-    res$$27 = res$$27 + (" " + JAM.call(v2149.sc_toWriteCircleString, v2149, [symb$$3, true], JAM.policy.p1));
+    var v2147 = this.cdr;
+    res$$27 = res$$27 + (" " + JAM.call(v2147.sc_toWriteCircleString, v2147, [symb$$3, true], JAM.policy.p1));
   } else {
     if (this.cdr !== null) {
       res$$27 = res$$27 + (" . " + sc_genToWriteCircleString(this.cdr, symb$$3));
@@ -1761,25 +1767,25 @@ function v47(obj$$17) {
 function v46() {
   function readList(listBeginType) {
     function matchesPeer(open$$2, close) {
-      var v1763 = open$$2 === 1;
-      if (v1763) {
-        v1763 = close === 2;
+      var v1761 = open$$2 === 1;
+      if (v1761) {
+        v1761 = close === 2;
       }
-      var v1228 = v1763;
-      if (!v1228) {
-        var v1764 = open$$2 === 3;
-        if (v1764) {
-          v1764 = close === 4;
+      var v1226 = v1761;
+      if (!v1226) {
+        var v1762 = open$$2 === 3;
+        if (v1762) {
+          v1762 = close === 4;
         }
-        v1228 = v1764;
+        v1226 = v1762;
       }
-      var v338 = v1228;
+      var v338 = v1226;
       if (!v338) {
-        var v1229 = open$$2 === 5;
-        if (v1229) {
-          v1229 = close === 6;
+        var v1227 = open$$2 === 5;
+        if (v1227) {
+          v1227 = close === 6;
         }
-        v338 = v1229;
+        v338 = v1227;
       }
       return v338;
     }
@@ -1896,28 +1902,28 @@ function v45() {
   function isIdOrNumberChar(c$$16) {
     var v363 = SC_ID_CLASS.indexOf(c$$16) != -1;
     if (!v363) {
-      var v1240 = c$$16 >= "0";
-      if (v1240) {
-        v1240 = c$$16 <= "9";
+      var v1238 = c$$16 >= "0";
+      if (v1238) {
+        v1238 = c$$16 <= "9";
       }
-      v363 = v1240;
+      v363 = v1238;
     }
     return v363;
   }
   function isWhitespace(c$$17) {
-    var v2151 = c$$17 === " ";
-    if (!v2151) {
-      v2151 = c$$17 === "\r";
+    var v2149 = c$$17 === " ";
+    if (!v2149) {
+      v2149 = c$$17 === "\r";
     }
-    var v1768 = v2151;
-    if (!v1768) {
-      v1768 = c$$17 === "\n";
+    var v1766 = v2149;
+    if (!v1766) {
+      v1766 = c$$17 === "\n";
     }
-    var v1242 = v1768;
-    if (!v1242) {
-      v1242 = c$$17 === "\t";
+    var v1240 = v1766;
+    if (!v1240) {
+      v1240 = c$$17 === "\t";
     }
-    var v364 = v1242;
+    var v364 = v1240;
     if (!v364) {
       v364 = c$$17 === "\f";
     }
@@ -1974,27 +1980,27 @@ function v45() {
               var nb = 0;
               for (;true;) {
                 var hexC = port$$1.peekChar();
-                var v1245 = hexC >= "0";
-                if (v1245) {
-                  v1245 = hexC <= "9";
+                var v1243 = hexC >= "0";
+                if (v1243) {
+                  v1243 = hexC <= "9";
                 }
-                if (v1245) {
+                if (v1243) {
                   port$$1.readChar();
                   nb = nb * 16 + hexC.charCodeAt(0) - "0".charCodeAt(0);
                 } else {
-                  var v1248 = hexC >= "a";
-                  if (v1248) {
-                    v1248 = hexC <= "f";
+                  var v1246 = hexC >= "a";
+                  if (v1246) {
+                    v1246 = hexC <= "f";
                   }
-                  if (v1248) {
+                  if (v1246) {
                     port$$1.readChar();
                     nb = nb * 16 + hexC.charCodeAt(0) - "a".charCodeAt(0);
                   } else {
-                    var v1251 = hexC >= "A";
-                    if (v1251) {
-                      v1251 = hexC <= "F";
+                    var v1249 = hexC >= "A";
+                    if (v1249) {
+                      v1249 = hexC <= "F";
                     }
-                    if (v1251) {
+                    if (v1249) {
                       port$$1.readChar();
                       nb = nb * 16 + hexC.charCodeAt(0) - "A".charCodeAt(0);
                     } else {
@@ -2050,11 +2056,11 @@ function v45() {
         done = false;
         for (;true;) {
           curChar = port$$1.readChar();
-          var v1262 = curChar === SC_EOF_OBJECT;
-          if (!v1262) {
-            v1262 = curChar === "\n";
+          var v1260 = curChar === SC_EOF_OBJECT;
+          if (!v1260) {
+            v1260 = curChar === "\n";
           }
-          if (v1262) {
+          if (v1260) {
             break;
           }
         }
@@ -2134,22 +2140,22 @@ function v45() {
     }
     for (;true;) {
       c$$20 = port$$1.peekChar();
-      var v1773 = isWhitespaceOrEOF(c$$20);
-      if (!v1773) {
-        v1773 = c$$20 === ")";
+      var v1771 = isWhitespaceOrEOF(c$$20);
+      if (!v1771) {
+        v1771 = c$$20 === ")";
       }
-      var v1270 = v1773;
-      if (v1270) {
-        v1270 = needing == "";
+      var v1268 = v1771;
+      if (v1268) {
+        v1268 = needing == "";
       }
-      if (v1270) {
+      if (v1268) {
         return res$$24;
       } else {
-        var v1271 = isWhitespace(c$$20);
-        if (!v1271) {
-          v1271 = needing == "";
+        var v1269 = isWhitespace(c$$20);
+        if (!v1269) {
+          v1269 = needing == "";
         }
-        if (v1271) {
+        if (v1269) {
           return new sc_Token(13, "bad #-pattern4 " + c$$20 + " " + needing);
         } else {
           if (needing.charAt(0) == c$$20) {
@@ -2253,8 +2259,8 @@ function v37() {
 }
 function v36() {
   if (!("peeked" in this)) {
-    var v3696 = this.getNextChar();
-    this.peeked = v3696;
+    var v3694 = this.getNextChar();
+    this.peeked = v3694;
   }
   return this.peeked;
 }
@@ -2379,10 +2385,10 @@ function v21(runner$$2) {
   }
   function RunNextTearDown() {
     try {
-      var v1291 = suite$$1.benchmarks;
-      var v1292 = index$$40;
+      var v1289 = suite$$1.benchmarks;
+      var v1290 = index$$40;
       index$$40 = index$$40 + 1;
-      v1291[v1292].TearDown();
+      v1289[v1290].TearDown();
     } catch (e$$6) {
       JAM.call(suite$$1.NotifyError, suite$$1, [e$$6]);
       return null;
@@ -2403,24 +2409,24 @@ function v20(benchmark$$1, data$$18) {
     var elapsed = 0;
     var start$$4 = new Date;
     var i$$6 = 0;
-    var v1293;
+    var v1291;
     if (doDeterministic$$1) {
-      v1293 = i$$6 < benchmark$$1.deterministicIterations;
+      v1291 = i$$6 < benchmark$$1.deterministicIterations;
     } else {
-      v1293 = elapsed < 1E3;
+      v1291 = elapsed < 1E3;
     }
-    var v435 = v1293;
+    var v435 = v1291;
     for (;v435;) {
       benchmark$$1.run();
       elapsed = new Date - start$$4;
       i$$6++;
-      var v1294;
+      var v1292;
       if (doDeterministic$$1) {
-        v1294 = i$$6 < benchmark$$1.deterministicIterations;
+        v1292 = i$$6 < benchmark$$1.deterministicIterations;
       } else {
-        v1294 = elapsed < 1E3;
+        v1292 = elapsed < 1E3;
       }
-      v435 = v1294;
+      v435 = v1292;
     }
     if (data$$19 != null) {
       data$$19.runs = data$$19.runs + i$$6;
@@ -2443,16 +2449,16 @@ function v20(benchmark$$1, data$$18) {
     v438 = benchmark$$1.doDeterministic;
   }
   var doDeterministic$$1 = v438;
-  var v1299 = !doWarmup$$1;
-  if (v1299) {
-    v1299 = data$$18 == null;
+  var v1297 = !doWarmup$$1;
+  if (v1297) {
+    v1297 = data$$18 == null;
   }
-  if (v1299) {
+  if (v1297) {
     data$$18 = {runs:0, elapsed:0};
   }
   if (data$$18 == null) {
     Measure(null);
-    return{runs:0, elapsed:0};
+    return {runs:0, elapsed:0};
   } else {
     Measure(data$$18);
     if (data$$18.runs < benchmark$$1.minIterations) {
@@ -2559,7 +2565,8 @@ function v13(measurements) {
   }
   return JAM.call(Math.pow, Math, [Math.E, log$$1 / measurements.length], JAM.policy.p1);
 }
-function v12(numbers) {
+function v12() {
+  var numbers = BenchmarkSuite.scores;
   var log = 0;
   var i$$3 = 0;
   var v483 = i$$3 < numbers.length;
@@ -2582,13 +2589,13 @@ function v11() {
   }
   return result$$1;
 }
-function v10(runner, skipBenchmarks$$1) {
+function v10() {
   function RunStep() {
-    var v1330 = continuation;
-    if (!v1330) {
-      v1330 = index$$39 < length$$11;
+    var v1328 = continuation;
+    if (!v1328) {
+      v1328 = index$$39 < length$$11;
     }
-    var v492 = v1330;
+    var v492 = v1328;
     for (;v492;) {
       if (continuation) {
         continuation = continuation();
@@ -2605,38 +2612,40 @@ function v10(runner, skipBenchmarks$$1) {
           continuation = JAM.call(suite.RunStep, suite, [runner]);
         }
       }
-      var v1794 = continuation;
-      if (v1794) {
-        v1794 = typeof window != "undefined";
+      var v1792 = continuation;
+      if (v1792) {
+        v1792 = typeof window != "undefined";
       }
-      var v1332 = v1794;
-      if (v1332) {
-        v1332 = window.setTimeout;
+      var v1330 = v1792;
+      if (v1330) {
+        v1330 = window.setTimeout;
       }
-      if (v1332) {
+      if (v1330) {
         JAM.call(window.setTimeout, window, [RunStep, 25], JAM.policy.p1);
         return;
       }
-      var v1333 = continuation;
-      if (!v1333) {
-        v1333 = index$$39 < length$$11;
+      var v1331 = continuation;
+      if (!v1331) {
+        v1331 = index$$39 < length$$11;
       }
-      v492 = v1333;
+      v492 = v1331;
     }
     if (runner.NotifyScore) {
-      var score = JAM.call(BenchmarkSuite.GeometricMean, BenchmarkSuite, [BenchmarkSuite.scores]);
+      var score = BenchmarkSuite.GeometricMean();
       var formatted = JAM.call(BenchmarkSuite.FormatScore, BenchmarkSuite, [100 * score]);
       JAM.call(runner.NotifyScore, runner, [formatted]);
     }
     return;
   }
-  var v496;
+  var runner = {NotifyStart:ShowBox, NotifyError:AddError, NotifyResult:AddResult, NotifyScore:AddScore};
+  var skipBenchmarks$$1 = skipBenchmarks;
+  var v495;
   if (typeof skipBenchmarks$$1 === "undefined") {
-    v496 = [];
+    v495 = [];
   } else {
-    v496 = skipBenchmarks$$1;
+    v495 = skipBenchmarks$$1;
   }
-  skipBenchmarks$$1 = v496;
+  skipBenchmarks$$1 = v495;
   var continuation = null;
   var suites = BenchmarkSuite.suites;
   var length$$11 = suites.length;
@@ -2654,14 +2663,14 @@ function v9() {
       seed = (seed + 3550635116 ^ seed << 9) & 4294967295;
       seed = seed + 4251993797 + (seed << 3) & 4294967295;
       seed = (seed ^ 3042594569 ^ seed >>> 16) & 4294967295;
-      return(seed & 268435455) / 268435456;
+      return (seed & 268435455) / 268435456;
     }
     var seed = 49734321;
     return v7;
   }
-  var v504 = Math;
-  var v3697 = v8();
-  v504.random = v3697;
+  var v503 = Math;
+  var v3695 = v8();
+  v503.random = v3695;
   return;
 }
 function v6(s$$2) {
@@ -2671,68 +2680,74 @@ function v5() {
   return this.time;
 }
 function v4() {
-  var v2465 = performance.now;
-  if (!v2465) {
-    v2465 = performance.mozNow;
+  var v2463 = performance.now;
+  if (!v2463) {
+    v2463 = performance.mozNow;
   }
-  var v2160 = v2465;
-  if (!v2160) {
-    v2160 = performance.msNow;
+  var v2158 = v2463;
+  if (!v2158) {
+    v2158 = performance.msNow;
   }
-  var v1797 = v2160;
-  if (!v1797) {
-    v1797 = performance.oNow;
+  var v1795 = v2158;
+  if (!v1795) {
+    v1795 = performance.oNow;
   }
-  var v1347 = v1797;
-  if (!v1347) {
-    v1347 = performance.webkitNow;
+  var v1345 = v1795;
+  if (!v1345) {
+    v1345 = performance.webkitNow;
   }
-  var v505 = v1347;
-  if (!v505) {
-    v505 = Date.now;
+  var v504 = v1345;
+  if (!v504) {
+    v504 = Date.now;
   }
-  return v505;
+  return v504;
 }
-function Benchmark(name$$30, doWarmup, doDeterministic, deterministicIterations, run, setup, tearDown, rmsResult, minIterations) {
+function Benchmark(name$$30, deterministicIterations, run) {
   function v1() {
     return;
   }
   function v0() {
     return;
   }
+  var setup;
+  var tearDown;
+  var rmsResult;
+  var minIterations;
+  var doWarmup = true;
+  var doDeterministic = false;
   this.name = name$$30;
   this.doWarmup = doWarmup;
   this.doDeterministic = doDeterministic;
   this.deterministicIterations = deterministicIterations;
   this.run = run;
-  var v506;
+  var v505;
   if (setup) {
-    v506 = setup;
+    v505 = setup;
   } else {
-    v506 = v0;
+    v505 = v0;
   }
-  this.Setup = v506;
-  var v507;
+  this.Setup = v505;
+  var v506;
   if (tearDown) {
-    v507 = tearDown;
+    v506 = tearDown;
   } else {
-    v507 = v1;
+    v506 = v1;
   }
-  this.TearDown = v507;
-  var v508;
+  this.TearDown = v506;
+  var v507;
   if (rmsResult) {
-    v508 = rmsResult;
+    v507 = rmsResult;
   } else {
-    v508 = null;
+    v507 = null;
   }
-  this.rmsResult = v508;
-  var v509;
+  this.rmsResult = v507;
+  var v508;
   if (minIterations) {
-    v509 = minIterations;
+    v508 = minIterations;
   } else {
-    v509 = 32;
+    v508 = 32;
   }
-  this.minIterations = v509;
+  this.minIterations = v508;
   return;
 }
 function BenchmarkResult(benchmark, time, latency) {
@@ -2757,11 +2772,11 @@ function sc_alert() {
   var s$$3 = "";
   var i$$7;
   i$$7 = 0;
-  var v511 = i$$7 < len;
-  for (;v511;) {
+  var v510 = i$$7 < len;
+  for (;v510;) {
     s$$3 = s$$3 + sc_toDisplayString(arguments[i$$7]);
     i$$7++;
-    v511 = i$$7 < len;
+    v510 = i$$7 < len;
   }
   return JAM.call(alert, null, [s$$3]);
 }
@@ -2771,11 +2786,11 @@ function sc_typeof(x$$47) {
 function sc_error() {
   var a = [sc_jsstring2symbol("*error*")];
   var i$$8 = 0;
-  var v514 = i$$8 < arguments.length;
-  for (;v514;) {
+  var v513 = i$$8 < arguments.length;
+  for (;v513;) {
     a[i$$8 + 1] = arguments[i$$8];
     i$$8++;
-    v514 = i$$8 < arguments.length;
+    v513 = i$$8 < arguments.length;
   }
   throw a;
 }
@@ -2855,65 +2870,65 @@ function sc_isInexact(n$$7) {
 }
 function sc_equal(x$$48) {
   var i$$9 = 1;
-  var v522 = i$$9 < arguments.length;
-  for (;v522;) {
+  var v521 = i$$9 < arguments.length;
+  for (;v521;) {
     if (x$$48 !== arguments[i$$9]) {
       return false;
     }
     i$$9++;
-    v522 = i$$9 < arguments.length;
+    v521 = i$$9 < arguments.length;
   }
   return true;
 }
 function sc_less(x$$49) {
   var i$$10 = 1;
-  var v524 = i$$10 < arguments.length;
-  for (;v524;) {
+  var v523 = i$$10 < arguments.length;
+  for (;v523;) {
     if (x$$49 >= arguments[i$$10]) {
       return false;
     }
     x$$49 = arguments[i$$10];
     i$$10++;
-    v524 = i$$10 < arguments.length;
+    v523 = i$$10 < arguments.length;
   }
   return true;
 }
 function sc_greater(x$$50, y$$30) {
   var i$$11 = 1;
-  var v526 = i$$11 < arguments.length;
-  for (;v526;) {
+  var v525 = i$$11 < arguments.length;
+  for (;v525;) {
     if (x$$50 <= arguments[i$$11]) {
       return false;
     }
     x$$50 = arguments[i$$11];
     i$$11++;
-    v526 = i$$11 < arguments.length;
+    v525 = i$$11 < arguments.length;
   }
   return true;
 }
 function sc_lessEqual(x$$51, y$$31) {
   var i$$12 = 1;
-  var v528 = i$$12 < arguments.length;
-  for (;v528;) {
+  var v527 = i$$12 < arguments.length;
+  for (;v527;) {
     if (x$$51 > arguments[i$$12]) {
       return false;
     }
     x$$51 = arguments[i$$12];
     i$$12++;
-    v528 = i$$12 < arguments.length;
+    v527 = i$$12 < arguments.length;
   }
   return true;
 }
 function sc_greaterEqual(x$$52, y$$32) {
   var i$$13 = 1;
-  var v530 = i$$13 < arguments.length;
-  for (;v530;) {
+  var v529 = i$$13 < arguments.length;
+  for (;v529;) {
     if (x$$52 < arguments[i$$13]) {
       return false;
     }
     x$$52 = arguments[i$$13];
     i$$13++;
-    v530 = i$$13 < arguments.length;
+    v529 = i$$13 < arguments.length;
   }
   return true;
 }
@@ -2935,36 +2950,36 @@ function sc_isEven(x$$57) {
 function sc_plus() {
   var sum = 0;
   var i$$14 = 0;
-  var v533 = i$$14 < arguments.length;
-  for (;v533;) {
+  var v532 = i$$14 < arguments.length;
+  for (;v532;) {
     sum = sum + arguments[i$$14];
     i$$14++;
-    v533 = i$$14 < arguments.length;
+    v532 = i$$14 < arguments.length;
   }
   return sum;
 }
 function sc_multi() {
   var product = 1;
   var i$$15 = 0;
-  var v534 = i$$15 < arguments.length;
-  for (;v534;) {
+  var v533 = i$$15 < arguments.length;
+  for (;v533;) {
     product = product * arguments[i$$15];
     i$$15++;
-    v534 = i$$15 < arguments.length;
+    v533 = i$$15 < arguments.length;
   }
   return product;
 }
 function sc_minus(x$$58) {
   if (arguments.length === 1) {
-    return-x$$58;
+    return -x$$58;
   } else {
     var res$$1 = x$$58;
     var i$$16 = 1;
-    var v535 = i$$16 < arguments.length;
-    for (;v535;) {
+    var v534 = i$$16 < arguments.length;
+    for (;v534;) {
       res$$1 = res$$1 - arguments[i$$16];
       i$$16++;
-      v535 = i$$16 < arguments.length;
+      v534 = i$$16 < arguments.length;
     }
     return res$$1;
   }
@@ -2976,11 +2991,11 @@ function sc_div(x$$59) {
   } else {
     var res$$2 = x$$59;
     var i$$17 = 1;
-    var v537 = i$$17 < arguments.length;
-    for (;v537;) {
+    var v536 = i$$17 < arguments.length;
+    for (;v536;) {
       res$$2 = res$$2 / arguments[i$$17];
       i$$17++;
-      v537 = i$$17 < arguments.length;
+      v536 = i$$17 < arguments.length;
     }
     return res$$2;
   }
@@ -3035,23 +3050,23 @@ function sc_euclid_gcd(a$$1, b) {
 function sc_gcd() {
   var gcd = 0;
   var i$$18 = 0;
-  var v549 = i$$18 < arguments.length;
-  for (;v549;) {
+  var v548 = i$$18 < arguments.length;
+  for (;v548;) {
     gcd = sc_euclid_gcd(gcd, arguments[i$$18]);
     i$$18++;
-    v549 = i$$18 < arguments.length;
+    v548 = i$$18 < arguments.length;
   }
   return gcd;
 }
 function sc_lcm() {
   var lcm = 1;
   var i$$19 = 0;
-  var v551 = i$$19 < arguments.length;
-  for (;v551;) {
+  var v550 = i$$19 < arguments.length;
+  for (;v550;) {
     var f = Math.round(arguments[i$$19] / sc_euclid_gcd(arguments[i$$19], lcm));
     lcm = lcm * Math.abs(f);
     i$$19++;
-    v551 = i$$19 < arguments.length;
+    v550 = i$$19 < arguments.length;
   }
   return lcm;
 }
@@ -3075,11 +3090,11 @@ function sc_jsstring2number(s$$4, radix$$1) {
   }
   if (radix$$1) {
     var t = parseInt(s$$4, radix$$1);
-    var v1390 = !t;
-    if (v1390) {
-      v1390 = t !== 0;
+    var v1388 = !t;
+    if (v1388) {
+      v1388 = t !== 0;
     }
-    if (v1390) {
+    if (v1388) {
       return false;
     }
     var allowedChars = JAM.call("01234567890abcdefghijklmnopqrstuvwxyz".substring, "01234567890abcdefghijklmnopqrstuvwxyz", [0, radix$$1 + 1], JAM.policy.p1);
@@ -3090,19 +3105,19 @@ function sc_jsstring2number(s$$4, radix$$1) {
     }
   } else {
     t = +s$$4;
-    var v1392 = !t;
-    if (v1392) {
-      v1392 = t !== 0;
+    var v1390 = !t;
+    if (v1390) {
+      v1390 = t !== 0;
     }
-    if (v1392) {
+    if (v1390) {
       return false;
     }
     var c = s$$4.charAt(0);
-    var v1393 = +c === 0;
-    if (v1393) {
-      v1393 = c !== "0";
+    var v1391 = +c === 0;
+    if (v1391) {
+      v1391 = c !== "0";
     }
-    if (v1393) {
+    if (v1391) {
       return false;
     }
     return t;
@@ -3113,11 +3128,11 @@ function sc_not(b$$1) {
   return b$$1 === false;
 }
 function sc_isBoolean(b$$2) {
-  var v558 = b$$2 === true;
-  if (!v558) {
-    v558 = b$$2 === false;
+  var v557 = b$$2 === true;
+  if (!v557) {
+    v557 = b$$2 === false;
   }
-  return v558;
+  return v557;
 }
 function sc_Pair(car, cdr) {
   this.car = car;
@@ -3127,12 +3142,13 @@ function sc_Pair(car, cdr) {
 function sc_isPair(p) {
   return p instanceof sc_Pair;
 }
-function sc_isPairEqual(p1, p2, comp) {
-  var v559 = JAM.call(comp, null, [p1.car, p2.car], JAM.policy.p1);
-  if (v559) {
-    v559 = JAM.call(comp, null, [p1.cdr, p2.cdr], JAM.policy.p1);
+function sc_isPairEqual(p1, p2) {
+  var comp = sc_isEqual;
+  var v558 = JAM.call(comp, null, [p1.car, p2.car], JAM.policy.p1);
+  if (v558) {
+    v558 = JAM.call(comp, null, [p1.cdr, p2.cdr], JAM.policy.p1);
   }
-  return v559;
+  return v558;
 }
 function sc_cons(car$$1, cdr$$1) {
   return new sc_Pair(car$$1, cdr$$1);
@@ -3140,11 +3156,11 @@ function sc_cons(car$$1, cdr$$1) {
 function sc_consStar() {
   var res$$4 = arguments[arguments.length - 1];
   var i$$20 = arguments.length - 2;
-  var v563 = i$$20 >= 0;
-  for (;v563;) {
+  var v562 = i$$20 >= 0;
+  for (;v562;) {
     res$$4 = new sc_Pair(arguments[i$$20], res$$4);
     i$$20--;
-    v563 = i$$20 >= 0;
+    v562 = i$$20 >= 0;
   }
   return res$$4;
 }
@@ -3252,11 +3268,11 @@ function sc_lastPair(l) {
   }
   var res$$5 = l;
   var cdr$$2 = l.cdr;
-  var v593 = sc_isPair(cdr$$2);
-  for (;v593;) {
+  var v592 = sc_isPair(cdr$$2);
+  for (;v592;) {
     res$$5 = cdr$$2;
     cdr$$2 = res$$5.cdr;
-    v593 = sc_isPair(cdr$$2);
+    v592 = sc_isPair(cdr$$2);
   }
   return res$$5;
 }
@@ -3269,22 +3285,22 @@ function sc_isList(o$$2) {
   rabbit = o$$2;
   turtle = o$$2;
   for (;true;) {
-    var v1425 = rabbit === null;
-    if (!v1425) {
-      var v1819 = rabbit instanceof sc_Pair;
-      if (v1819) {
-        v1819 = rabbit.cdr === null;
+    var v1423 = rabbit === null;
+    if (!v1423) {
+      var v1817 = rabbit instanceof sc_Pair;
+      if (v1817) {
+        v1817 = rabbit.cdr === null;
       }
-      v1425 = v1819;
+      v1423 = v1817;
     }
-    if (v1425) {
+    if (v1423) {
       return true;
     } else {
-      var v1426 = rabbit instanceof sc_Pair;
-      if (v1426) {
-        v1426 = rabbit.cdr instanceof sc_Pair;
+      var v1424 = rabbit instanceof sc_Pair;
+      if (v1424) {
+        v1424 = rabbit.cdr instanceof sc_Pair;
       }
-      if (v1426) {
+      if (v1424) {
         rabbit = rabbit.cdr.cdr;
         turtle = turtle.cdr;
         if (rabbit === turtle) {
@@ -3301,11 +3317,11 @@ function sc_list() {
   var res$$6 = null;
   var a$$2 = arguments;
   var i$$21 = a$$2.length - 1;
-  var v600 = i$$21 >= 0;
-  for (;v600;) {
+  var v599 = i$$21 >= 0;
+  for (;v599;) {
     res$$6 = new sc_Pair(a$$2[i$$21], res$$6);
     i$$21--;
-    v600 = i$$21 >= 0;
+    v599 = i$$21 >= 0;
   }
   return res$$6;
 }
@@ -3315,47 +3331,47 @@ function sc_iota(num$$4, init) {
     init = 0;
   }
   var i$$22 = num$$4 - 1;
-  var v603 = i$$22 >= 0;
-  for (;v603;) {
+  var v602 = i$$22 >= 0;
+  for (;v602;) {
     res$$7 = new sc_Pair(i$$22 + init, res$$7);
     i$$22--;
-    v603 = i$$22 >= 0;
+    v602 = i$$22 >= 0;
   }
   return res$$7;
 }
 function sc_makeList(nbEls, fill) {
   var res$$8 = null;
   var i$$23 = 0;
-  var v604 = i$$23 < nbEls;
-  for (;v604;) {
+  var v603 = i$$23 < nbEls;
+  for (;v603;) {
     res$$8 = new sc_Pair(fill, res$$8);
     i$$23++;
-    v604 = i$$23 < nbEls;
+    v603 = i$$23 < nbEls;
   }
   return res$$8;
 }
 function sc_length(l$$1) {
   var res$$9 = 0;
-  var v605 = l$$1 !== null;
-  for (;v605;) {
+  var v604 = l$$1 !== null;
+  for (;v604;) {
     res$$9++;
     l$$1 = l$$1.cdr;
-    v605 = l$$1 !== null;
+    v604 = l$$1 !== null;
   }
   return res$$9;
 }
 function sc_remq(o$$3, l$$2) {
   var dummy = {cdr:null};
   var tail = dummy;
-  var v608 = l$$2 !== null;
-  for (;v608;) {
+  var v607 = l$$2 !== null;
+  for (;v607;) {
     if (l$$2.car !== o$$3) {
-      var v3698 = sc_cons(l$$2.car, null);
-      tail.cdr = v3698;
+      var v3696 = sc_cons(l$$2.car, null);
+      tail.cdr = v3696;
       tail = tail.cdr;
     }
     l$$2 = l$$2.cdr;
-    v608 = l$$2 !== null;
+    v607 = l$$2 !== null;
   }
   return dummy.cdr;
 }
@@ -3363,8 +3379,8 @@ function sc_remqBang(o$$4, l$$3) {
   var dummy$$1 = {cdr:null};
   var tail$$1 = dummy$$1;
   var needsAssig = true;
-  var v610 = l$$3 !== null;
-  for (;v610;) {
+  var v609 = l$$3 !== null;
+  for (;v609;) {
     if (l$$3.car === o$$4) {
       needsAssig = true;
     } else {
@@ -3375,7 +3391,7 @@ function sc_remqBang(o$$4, l$$3) {
       tail$$1 = l$$3;
     }
     l$$3 = l$$3.cdr;
-    v610 = l$$3 !== null;
+    v609 = l$$3 !== null;
   }
   tail$$1.cdr = null;
   return dummy$$1.cdr;
@@ -3383,15 +3399,15 @@ function sc_remqBang(o$$4, l$$3) {
 function sc_delete(o$$5, l$$4) {
   var dummy$$2 = {cdr:null};
   var tail$$2 = dummy$$2;
-  var v613 = l$$4 !== null;
-  for (;v613;) {
+  var v612 = l$$4 !== null;
+  for (;v612;) {
     if (!sc_isEqual(l$$4.car, o$$5)) {
-      var v3699 = sc_cons(l$$4.car, null);
-      tail$$2.cdr = v3699;
+      var v3697 = sc_cons(l$$4.car, null);
+      tail$$2.cdr = v3697;
       tail$$2 = tail$$2.cdr;
     }
     l$$4 = l$$4.cdr;
-    v613 = l$$4 !== null;
+    v612 = l$$4 !== null;
   }
   return dummy$$2.cdr;
 }
@@ -3399,8 +3415,8 @@ function sc_deleteBang(o$$6, l$$5) {
   var dummy$$3 = {cdr:null};
   var tail$$3 = dummy$$3;
   var needsAssig$$1 = true;
-  var v615 = l$$5 !== null;
-  for (;v615;) {
+  var v614 = l$$5 !== null;
+  for (;v614;) {
     if (sc_isEqual(l$$5.car, o$$6)) {
       needsAssig$$1 = true;
     } else {
@@ -3411,20 +3427,20 @@ function sc_deleteBang(o$$6, l$$5) {
       tail$$3 = l$$5;
     }
     l$$5 = l$$5.cdr;
-    v615 = l$$5 !== null;
+    v614 = l$$5 !== null;
   }
   tail$$3.cdr = null;
   return dummy$$3.cdr;
 }
 function sc_reverseAppendBang(l1, l2) {
   var res$$10 = l2;
-  var v616 = l1 !== null;
-  for (;v616;) {
+  var v615 = l1 !== null;
+  for (;v615;) {
     var tmp = res$$10;
     res$$10 = l1;
     l1 = l1.cdr;
     res$$10.cdr = tmp;
-    v616 = l1 !== null;
+    v615 = l1 !== null;
   }
   return res$$10;
 }
@@ -3444,11 +3460,11 @@ function sc_append() {
   }
   var res$$11 = arguments[arguments.length - 1];
   var i$$24 = arguments.length - 2;
-  var v623 = i$$24 >= 0;
-  for (;v623;) {
+  var v622 = i$$24 >= 0;
+  for (;v622;) {
     res$$11 = sc_dualAppend(arguments[i$$24], res$$11);
     i$$24--;
-    v623 = i$$24 >= 0;
+    v622 = i$$24 >= 0;
   }
   return res$$11;
 }
@@ -3460,10 +3476,10 @@ function sc_dualAppendBang(l1$$2, l2$$2) {
     return l1$$2;
   }
   var tmp$$1 = l1$$2;
-  var v626 = tmp$$1.cdr !== null;
-  for (;v626;) {
+  var v625 = tmp$$1.cdr !== null;
+  for (;v625;) {
     tmp$$1 = tmp$$1.cdr;
-    v626 = tmp$$1.cdr !== null;
+    v625 = tmp$$1.cdr !== null;
   }
   tmp$$1.cdr = l2$$2;
   return l1$$2;
@@ -3471,21 +3487,21 @@ function sc_dualAppendBang(l1$$2, l2$$2) {
 function sc_appendBang() {
   var res$$12 = null;
   var i$$25 = 0;
-  var v628 = i$$25 < arguments.length;
-  for (;v628;) {
+  var v627 = i$$25 < arguments.length;
+  for (;v627;) {
     res$$12 = sc_dualAppendBang(res$$12, arguments[i$$25]);
     i$$25++;
-    v628 = i$$25 < arguments.length;
+    v627 = i$$25 < arguments.length;
   }
   return res$$12;
 }
 function sc_reverse(l1$$3) {
   var res$$13 = null;
-  var v630 = l1$$3 !== null;
-  for (;v630;) {
+  var v629 = l1$$3 !== null;
+  for (;v629;) {
     res$$13 = sc_cons(l1$$3.car, res$$13);
     l1$$3 = l1$$3.cdr;
-    v630 = l1$$3 !== null;
+    v629 = l1$$3 !== null;
   }
   return res$$13;
 }
@@ -3495,11 +3511,11 @@ function sc_reverseBang(l$$6) {
 function sc_listTail(l$$7, k) {
   var res$$14 = l$$7;
   var i$$26 = 0;
-  var v631 = i$$26 < k;
-  for (;v631;) {
+  var v630 = i$$26 < k;
+  for (;v630;) {
     res$$14 = res$$14.cdr;
     i$$26++;
-    v631 = i$$26 < k;
+    v630 = i$$26 < k;
   }
   return res$$14;
 }
@@ -3507,68 +3523,68 @@ function sc_listRef(l$$8, k$$1) {
   return sc_listTail(l$$8, k$$1).car;
 }
 function sc_memq(o$$7, l$$9) {
-  var v634 = l$$9 !== null;
-  for (;v634;) {
+  var v633 = l$$9 !== null;
+  for (;v633;) {
     if (l$$9.car === o$$7) {
       return l$$9;
     }
     l$$9 = l$$9.cdr;
-    v634 = l$$9 !== null;
+    v633 = l$$9 !== null;
   }
   return false;
 }
 function sc_memv(o$$8, l$$10) {
-  var v636 = l$$10 !== null;
-  for (;v636;) {
+  var v635 = l$$10 !== null;
+  for (;v635;) {
     if (l$$10.car === o$$8) {
       return l$$10;
     }
     l$$10 = l$$10.cdr;
-    v636 = l$$10 !== null;
+    v635 = l$$10 !== null;
   }
   return false;
 }
 function sc_member(o$$9, l$$11) {
-  var v638 = l$$11 !== null;
-  for (;v638;) {
+  var v637 = l$$11 !== null;
+  for (;v637;) {
     if (sc_isEqual(l$$11.car, o$$9)) {
       return l$$11;
     }
     l$$11 = l$$11.cdr;
-    v638 = l$$11 !== null;
+    v637 = l$$11 !== null;
   }
   return false;
 }
 function sc_assq(o$$10, al) {
-  var v640 = al !== null;
-  for (;v640;) {
+  var v639 = al !== null;
+  for (;v639;) {
     if (al.car.car === o$$10) {
       return al.car;
     }
     al = al.cdr;
-    v640 = al !== null;
+    v639 = al !== null;
   }
   return false;
 }
 function sc_assv(o$$11, al$$1) {
-  var v642 = al$$1 !== null;
-  for (;v642;) {
+  var v641 = al$$1 !== null;
+  for (;v641;) {
     if (al$$1.car.car === o$$11) {
       return al$$1.car;
     }
     al$$1 = al$$1.cdr;
-    v642 = al$$1 !== null;
+    v641 = al$$1 !== null;
   }
   return false;
 }
 function sc_assoc(o$$12, al$$2) {
-  var v644 = al$$2 !== null;
-  for (;v644;) {
+  var v643 = al$$2 !== null;
+  for (;v643;) {
     if (sc_isEqual(al$$2.car.car, o$$12)) {
       return al$$2.car;
     }
     al$$2 = al$$2.cdr;
-    v644 = al$$2 !== null;
+    v643 = al$$2 !== null;
   }
   return false;
 }
@@ -3618,34 +3634,34 @@ function sc_isCharOfClass(c$$3, cl) {
   return cl.indexOf(c$$3) != -1;
 }
 function sc_isCharAlphabetic(c$$4) {
-  var v668 = sc_isCharOfClass(c$$4.val, SC_LOWER_CLASS);
-  if (!v668) {
-    v668 = sc_isCharOfClass(c$$4.val, SC_UPPER_CLASS);
+  var v667 = sc_isCharOfClass(c$$4.val, SC_LOWER_CLASS);
+  if (!v667) {
+    v667 = sc_isCharOfClass(c$$4.val, SC_UPPER_CLASS);
   }
-  return v668;
+  return v667;
 }
 function sc_isCharNumeric(c$$5) {
   return sc_isCharOfClass(c$$5.val, SC_NUMBER_CLASS);
 }
 function sc_isCharWhitespace(c$$6) {
   var tmp$$2 = c$$6.val;
-  var v2164 = tmp$$2 === " ";
-  if (!v2164) {
-    v2164 = tmp$$2 === "\r";
+  var v2162 = tmp$$2 === " ";
+  if (!v2162) {
+    v2162 = tmp$$2 === "\r";
   }
-  var v1826 = v2164;
-  if (!v1826) {
-    v1826 = tmp$$2 === "\n";
+  var v1824 = v2162;
+  if (!v1824) {
+    v1824 = tmp$$2 === "\n";
   }
-  var v1456 = v1826;
-  if (!v1456) {
-    v1456 = tmp$$2 === "\t";
+  var v1454 = v1824;
+  if (!v1454) {
+    v1454 = tmp$$2 === "\t";
   }
-  var v670 = v1456;
-  if (!v670) {
-    v670 = tmp$$2 === "\f";
+  var v669 = v1454;
+  if (!v669) {
+    v669 = tmp$$2 === "\f";
   }
-  return v670;
+  return v669;
 }
 function sc_isCharUpperCase(c$$7) {
   return sc_isCharOfClass(c$$7.val, SC_UPPER_CLASS);
@@ -3674,14 +3690,14 @@ function sc_makeJSStringOfLength(k$$2, c$$12) {
   }
   var res$$15 = "";
   var len$$1 = 1;
-  var v679 = k$$2 >= len$$1;
-  for (;v679;) {
+  var v678 = k$$2 >= len$$1;
+  for (;v678;) {
     if (k$$2 & len$$1) {
       res$$15 = res$$15.concat(fill$$1);
     }
     fill$$1 = fill$$1.concat(fill$$1);
     len$$1 = len$$1 * 2;
-    v679 = k$$2 >= len$$1;
+    v678 = k$$2 >= len$$1;
   }
   return res$$15;
 }
@@ -3697,40 +3713,41 @@ function sc_makejsString(k$$3, c$$13) {
 function sc_jsstring2list(s$$5) {
   var res$$16 = null;
   var i$$27 = s$$5.length - 1;
-  var v682 = i$$27 >= 0;
-  for (;v682;) {
+  var v681 = i$$27 >= 0;
+  for (;v681;) {
     res$$16 = sc_cons(new sc_Char(s$$5.charAt(i$$27)), res$$16);
     i$$27--;
-    v682 = i$$27 >= 0;
+    v681 = i$$27 >= 0;
   }
   return res$$16;
 }
 function sc_list2jsstring(l$$12) {
   var a$$3 = new Array;
-  var v684 = l$$12 !== null;
-  for (;v684;) {
+  var v683 = l$$12 !== null;
+  for (;v683;) {
     a$$3.push(l$$12.car.val);
     l$$12 = l$$12.cdr;
-    v684 = l$$12 !== null;
+    v683 = l$$12 !== null;
   }
-  var v685 = "".concat;
-  return JAM.call(v685.apply, v685, ["", a$$3], JAM.policy.p1);
+  var v684 = "".concat;
+  return JAM.call(v684.apply, v684, ["", a$$3], JAM.policy.p1);
 }
 function sc_isVector(v) {
   return v instanceof sc_Vector;
 }
-function sc_isVectorEqual(v1$$1, v2, comp$$1) {
+function sc_isVectorEqual(v1$$1, v2) {
+  var comp$$1 = sc_isEqual;
   if (v1$$1.length !== v2.length) {
     return false;
   }
   var i$$29 = 0;
-  var v688 = i$$29 < v1$$1.length;
-  for (;v688;) {
+  var v687 = i$$29 < v1$$1.length;
+  for (;v687;) {
     if (!JAM.call(comp$$1, null, [v1$$1[i$$29], v2[i$$29]], JAM.policy.p1)) {
       return false;
     }
     i$$29++;
-    v688 = i$$29 < v1$$1.length;
+    v687 = i$$29 < v1$$1.length;
   }
   return true;
 }
@@ -3744,11 +3761,11 @@ function sc_makeVector(size$$4, fill$$3) {
 function sc_vector() {
   var a$$5 = new sc_Vector;
   var i$$30 = 0;
-  var v691 = i$$30 < arguments.length;
-  for (;v691;) {
+  var v690 = i$$30 < arguments.length;
+  for (;v690;) {
     a$$5.push(arguments[i$$30]);
     i$$30++;
-    v691 = i$$30 < arguments.length;
+    v690 = i$$30 < arguments.length;
   }
   return a$$5;
 }
@@ -3765,31 +3782,31 @@ function sc_vectorSetBang(v$$3, pos$$1, val$$3) {
 function sc_vector2list(a$$6) {
   var res$$18 = null;
   var i$$31 = a$$6.length - 1;
-  var v694 = i$$31 >= 0;
-  for (;v694;) {
+  var v693 = i$$31 >= 0;
+  for (;v693;) {
     res$$18 = sc_cons(a$$6[i$$31], res$$18);
     i$$31--;
-    v694 = i$$31 >= 0;
+    v693 = i$$31 >= 0;
   }
   return res$$18;
 }
 function sc_list2vector(l$$13) {
   var a$$7 = new sc_Vector;
-  var v696 = l$$13 !== null;
-  for (;v696;) {
+  var v695 = l$$13 !== null;
+  for (;v695;) {
     a$$7.push(l$$13.car);
     l$$13 = l$$13.cdr;
-    v696 = l$$13 !== null;
+    v695 = l$$13 !== null;
   }
   return a$$7;
 }
 function sc_vectorFillBang(a$$8, fill$$4) {
   var i$$32 = 0;
-  var v697 = i$$32 < a$$8.length;
-  for (;v697;) {
+  var v696 = i$$32 < a$$8.length;
+  for (;v696;) {
     a$$8[i$$32] = fill$$4;
     i$$32++;
-    v697 = i$$32 < a$$8.length;
+    v696 = i$$32 < a$$8.length;
   }
   return;
 }
@@ -3816,23 +3833,23 @@ function sc_vectorCopyBang(target$$26, tstart, source$$1, sstart, send) {
   if (tstart <= sstart) {
     var i$$33 = tstart;
     var j = sstart;
-    var v701 = j < send;
-    for (;v701;) {
+    var v700 = j < send;
+    for (;v700;) {
       JAM.set(target$$26, i$$33, source$$1[j]);
       i$$33++;
       j++;
-      v701 = j < send;
+      v700 = j < send;
     }
   } else {
     var diff = send - sstart;
     i$$33 = tstart + diff - 1;
     j = send - 1;
-    var v703 = j >= sstart;
-    for (;v703;) {
+    var v702 = j >= sstart;
+    for (;v702;) {
       JAM.set(target$$26, i$$33, source$$1[j]);
       i$$33--;
       j--;
-      v703 = j >= sstart;
+      v702 = j >= sstart;
     }
   }
   return target$$26;
@@ -3843,18 +3860,18 @@ function sc_isProcedure(o$$13) {
 function sc_apply(proc) {
   var args = new Array;
   var i$$34 = 1;
-  var v707 = i$$34 < arguments.length - 1;
-  for (;v707;) {
+  var v706 = i$$34 < arguments.length - 1;
+  for (;v706;) {
     args.push(arguments[i$$34]);
     i$$34++;
-    v707 = i$$34 < arguments.length - 1;
+    v706 = i$$34 < arguments.length - 1;
   }
   var l$$14 = arguments[arguments.length - 1];
-  var v710 = l$$14 !== null;
-  for (;v710;) {
+  var v709 = l$$14 !== null;
+  for (;v709;) {
     args.push(l$$14.car);
     l$$14 = l$$14.cdr;
-    v710 = l$$14 !== null;
+    v709 = l$$14 !== null;
   }
   return JAM.call(proc.apply, proc, [null, args], JAM.policy.p1);
 }
@@ -3865,18 +3882,18 @@ function sc_map(proc$$1, l1$$4) {
   var nbApplyArgs = arguments.length - 1;
   var applyArgs = new Array(nbApplyArgs);
   var revres = null;
-  var v717 = l1$$4 !== null;
-  for (;v717;) {
+  var v716 = l1$$4 !== null;
+  for (;v716;) {
     var i$$35 = 0;
-    var v715 = i$$35 < nbApplyArgs;
-    for (;v715;) {
+    var v714 = i$$35 < nbApplyArgs;
+    for (;v714;) {
       applyArgs[i$$35] = arguments[i$$35 + 1].car;
       arguments[i$$35 + 1] = arguments[i$$35 + 1].cdr;
       i$$35++;
-      v715 = i$$35 < nbApplyArgs;
+      v714 = i$$35 < nbApplyArgs;
     }
     revres = sc_cons(JAM.call(proc$$1.apply, proc$$1, [null, applyArgs], JAM.policy.p1), revres);
-    v717 = l1$$4 !== null;
+    v716 = l1$$4 !== null;
   }
   return sc_reverseAppendBang(revres, null);
 }
@@ -3887,20 +3904,20 @@ function sc_mapBang(proc$$2, l1$$5) {
   var l1_orig = l1$$5;
   var nbApplyArgs$$1 = arguments.length - 1;
   var applyArgs$$1 = new Array(nbApplyArgs$$1);
-  var v723 = l1$$5 !== null;
-  for (;v723;) {
+  var v722 = l1$$5 !== null;
+  for (;v722;) {
     var tmp$$4 = l1$$5;
     var i$$36 = 0;
-    var v722 = i$$36 < nbApplyArgs$$1;
-    for (;v722;) {
+    var v721 = i$$36 < nbApplyArgs$$1;
+    for (;v721;) {
       applyArgs$$1[i$$36] = arguments[i$$36 + 1].car;
       arguments[i$$36 + 1] = arguments[i$$36 + 1].cdr;
       i$$36++;
-      v722 = i$$36 < nbApplyArgs$$1;
+      v721 = i$$36 < nbApplyArgs$$1;
     }
-    var v3700 = JAM.call(proc$$2.apply, proc$$2, [null, applyArgs$$1], JAM.policy.p1);
-    tmp$$4.car = v3700;
-    v723 = l1$$5 !== null;
+    var v3698 = JAM.call(proc$$2.apply, proc$$2, [null, applyArgs$$1], JAM.policy.p1);
+    tmp$$4.car = v3698;
+    v722 = l1$$5 !== null;
   }
   return l1_orig;
 }
@@ -3910,33 +3927,33 @@ function sc_forEach(proc$$3, l1$$6) {
   }
   var nbApplyArgs$$2 = arguments.length - 1;
   var applyArgs$$2 = new Array(nbApplyArgs$$2);
-  var v729 = l1$$6 !== null;
-  for (;v729;) {
+  var v728 = l1$$6 !== null;
+  for (;v728;) {
     var i$$37 = 0;
-    var v728 = i$$37 < nbApplyArgs$$2;
-    for (;v728;) {
+    var v727 = i$$37 < nbApplyArgs$$2;
+    for (;v727;) {
       applyArgs$$2[i$$37] = arguments[i$$37 + 1].car;
       arguments[i$$37 + 1] = arguments[i$$37 + 1].cdr;
       i$$37++;
-      v728 = i$$37 < nbApplyArgs$$2;
+      v727 = i$$37 < nbApplyArgs$$2;
     }
     JAM.call(proc$$3.apply, proc$$3, [null, applyArgs$$2], JAM.policy.p1);
-    v729 = l1$$6 !== null;
+    v728 = l1$$6 !== null;
   }
   return undefined;
 }
 function sc_filter(proc$$4, l1$$7) {
   var dummy$$4 = {cdr:null};
   var tail$$4 = dummy$$4;
-  var v732 = l1$$7 !== null;
-  for (;v732;) {
+  var v731 = l1$$7 !== null;
+  for (;v731;) {
     if (JAM.call(proc$$4, null, [l1$$7.car]) !== false) {
-      var v3701 = sc_cons(l1$$7.car, null);
-      tail$$4.cdr = v3701;
+      var v3699 = sc_cons(l1$$7.car, null);
+      tail$$4.cdr = v3699;
       tail$$4 = tail$$4.cdr;
     }
     l1$$7 = l1$$7.cdr;
-    v732 = l1$$7 !== null;
+    v731 = l1$$7 !== null;
   }
   return dummy$$4.cdr;
 }
@@ -3944,42 +3961,42 @@ function sc_filterBang(proc$$5, l1$$8) {
   var head = sc_cons("dummy", l1$$8);
   var it = head;
   var next = l1$$8;
-  var v734 = next !== null;
-  for (;v734;) {
+  var v733 = next !== null;
+  for (;v733;) {
     if (JAM.call(proc$$5, null, [next.car]) !== false) {
       it.cdr = next;
       it = next;
     }
     next = next.cdr;
-    v734 = next !== null;
+    v733 = next !== null;
   }
   it.cdr = null;
   return head.cdr;
 }
 function sc_filterMap1(proc$$6, l1$$9) {
   var revres$$1 = null;
-  var v737 = l1$$9 !== null;
-  for (;v737;) {
+  var v736 = l1$$9 !== null;
+  for (;v736;) {
     var tmp$$5 = JAM.call(proc$$6, null, [l1$$9.car]);
     if (tmp$$5 !== false) {
       revres$$1 = sc_cons(tmp$$5, revres$$1);
     }
     l1$$9 = l1$$9.cdr;
-    v737 = l1$$9 !== null;
+    v736 = l1$$9 !== null;
   }
   return sc_reverseAppendBang(revres$$1, null);
 }
 function sc_filterMap2(proc$$7, l1$$10, l2$$3) {
   var revres$$2 = null;
-  var v741 = l1$$10 !== null;
-  for (;v741;) {
+  var v740 = l1$$10 !== null;
+  for (;v740;) {
     var tmp$$6 = JAM.call(proc$$7, null, [l1$$10.car, l2$$3.car], JAM.policy.p1);
     if (tmp$$6 !== false) {
       revres$$2 = sc_cons(tmp$$6, revres$$2);
     }
     l1$$10 = l1$$10.cdr;
     l2$$3 = l2$$3.cdr;
-    v741 = l1$$10 !== null;
+    v740 = l1$$10 !== null;
   }
   return sc_reverseAppendBang(revres$$2, null);
 }
@@ -3994,34 +4011,34 @@ function sc_filterMap(proc$$8, l1$$11, l2$$4, l3) {
   var nbApplyArgs$$3 = arguments.length - 1;
   var applyArgs$$3 = new Array(nbApplyArgs$$3);
   var revres$$3 = null;
-  var v749 = l1$$11 !== null;
-  for (;v749;) {
+  var v748 = l1$$11 !== null;
+  for (;v748;) {
     var i$$38 = 0;
-    var v747 = i$$38 < nbApplyArgs$$3;
-    for (;v747;) {
+    var v746 = i$$38 < nbApplyArgs$$3;
+    for (;v746;) {
       applyArgs$$3[i$$38] = arguments[i$$38 + 1].car;
       arguments[i$$38 + 1] = arguments[i$$38 + 1].cdr;
       i$$38++;
-      v747 = i$$38 < nbApplyArgs$$3;
+      v746 = i$$38 < nbApplyArgs$$3;
     }
     var tmp$$7 = JAM.call(proc$$8.apply, proc$$8, [null, applyArgs$$3], JAM.policy.p1);
     if (tmp$$7 !== false) {
       revres$$3 = sc_cons(tmp$$7, revres$$3);
     }
-    v749 = l1$$11 !== null;
+    v748 = l1$$11 !== null;
   }
   return sc_reverseAppendBang(revres$$3, null);
 }
 function sc_any(proc$$9, l$$15) {
   var revres$$4 = null;
-  var v752 = l$$15 !== null;
-  for (;v752;) {
+  var v751 = l$$15 !== null;
+  for (;v751;) {
     var tmp$$8 = JAM.call(proc$$9, null, [l$$15.car]);
     if (tmp$$8 !== false) {
       return tmp$$8;
     }
     l$$15 = l$$15.cdr;
-    v752 = l$$15 !== null;
+    v751 = l$$15 !== null;
   }
   return false;
 }
@@ -4031,14 +4048,14 @@ function sc_anyPred(proc$$10, l$$16) {
 function sc_every(proc$$11, l$$17) {
   var revres$$5 = null;
   var tmp$$9 = true;
-  var v756 = l$$17 !== null;
-  for (;v756;) {
+  var v755 = l$$17 !== null;
+  for (;v755;) {
     tmp$$9 = JAM.call(proc$$11, null, [l$$17.car]);
     if (tmp$$9 === false) {
       return false;
     }
     l$$17 = l$$17.cdr;
-    v756 = l$$17 !== null;
+    v755 = l$$17 !== null;
   }
   return tmp$$9;
 }
@@ -4109,11 +4126,11 @@ function sc_isStruct(o$$15) {
   return o$$15 instanceof sc_Struct;
 }
 function sc_isStructNamed(name$$34, s$$6) {
-  var v763 = s$$6 instanceof sc_Struct;
-  if (v763) {
-    v763 = s$$6.name === name$$34;
+  var v762 = s$$6 instanceof sc_Struct;
+  if (v762) {
+    v762 = s$$6.name === name$$34;
   }
-  return v763;
+  return v762;
 }
 function sc_getStructField(s$$7, name$$35, field) {
   return s$$7[field];
@@ -4123,7 +4140,7 @@ function sc_setStructFieldBang(s$$8, name$$36, field$$1, val$$4) {
   return;
 }
 function sc_bitNot(x$$66) {
-  return~x$$66;
+  return ~x$$66;
 }
 function sc_bitAnd(x$$67, y$$36) {
   return x$$67 & y$$36;
@@ -4156,41 +4173,41 @@ function sc_deleteJsFieldBang(o$$18, field$$4) {
 function sc_jsCall(o$$19, fun$$3) {
   var args$$1 = new Array;
   var i$$39 = 2;
-  var v765 = i$$39 < arguments.length;
-  for (;v765;) {
+  var v764 = i$$39 < arguments.length;
+  for (;v764;) {
     args$$1[i$$39 - 2] = arguments[i$$39];
     i$$39++;
-    v765 = i$$39 < arguments.length;
+    v764 = i$$39 < arguments.length;
   }
   return JAM.call(fun$$3.apply, fun$$3, [o$$19, args$$1], JAM.policy.p1);
 }
 function sc_jsMethodCall(o$$20, field$$5) {
   var args$$2 = new Array;
   var i$$40 = 2;
-  var v767 = i$$40 < arguments.length;
-  for (;v767;) {
+  var v766 = i$$40 < arguments.length;
+  for (;v766;) {
     args$$2[i$$40 - 2] = arguments[i$$40];
     i$$40++;
-    v767 = i$$40 < arguments.length;
+    v766 = i$$40 < arguments.length;
   }
-  var v768 = o$$20[field$$5];
-  return JAM.call(v768.apply, v768, [o$$20, args$$2], JAM.policy.p1);
+  var v767 = o$$20[field$$5];
+  return JAM.call(v767.apply, v767, [o$$20, args$$2], JAM.policy.p1);
 }
 function sc_jsNew(c$$14) {
   var evalStr = "new c(";
-  var v1838;
+  var v1836;
   if (arguments.length > 1) {
-    v1838 = "arguments[1]";
+    v1836 = "arguments[1]";
   } else {
-    v1838 = "";
+    v1836 = "";
   }
-  evalStr = evalStr + v1838;
+  evalStr = evalStr + v1836;
   var i$$41 = 2;
-  var v769 = i$$41 < arguments.length;
-  for (;v769;) {
+  var v768 = i$$41 < arguments.length;
+  for (;v768;) {
     evalStr = evalStr + (", arguments[" + i$$41 + "]");
     i$$41++;
-    v769 = i$$41 < arguments.length;
+    v768 = i$$41 < arguments.length;
   }
   evalStr = evalStr + ")";
   if (JAM.isEval(eval)) {
@@ -4203,28 +4220,28 @@ function sc_pregexp(re) {
   return new RegExp(sc_string2jsstring(re));
 }
 function sc_pregexpMatch(re$$1, s$$9) {
-  var v771;
+  var v770;
   if (re$$1 instanceof RegExp) {
-    v771 = re$$1;
+    v770 = re$$1;
   } else {
-    v771 = sc_pregexp(re$$1);
+    v770 = sc_pregexp(re$$1);
   }
-  var reg = v771;
+  var reg = v770;
   var tmp$$12 = reg.exec(sc_string2jsstring(s$$9));
   if (tmp$$12 == null) {
     return false;
   }
   var res$$20 = null;
   var i$$42 = tmp$$12.length - 1;
-  var v777 = i$$42 >= 0;
-  for (;v777;) {
+  var v776 = i$$42 >= 0;
+  for (;v776;) {
     if (tmp$$12[i$$42] !== null) {
       res$$20 = sc_cons(sc_jsstring2string(tmp$$12[i$$42]), res$$20);
     } else {
       res$$20 = sc_cons(false, res$$20);
     }
     i$$42--;
-    v777 = i$$42 >= 0;
+    v776 = i$$42 >= 0;
   }
   return res$$20;
 }
@@ -4259,13 +4276,13 @@ function sc_pregexpReplaceAll(re$$3, s1$$1, s2$$1) {
   return JAM.call(jss1$$1.replace, jss1$$1, [reg$$2, jss2$$1], JAM.policy.p1);
 }
 function sc_pregexpSplit(re$$4, s$$10) {
-  var v786;
+  var v785;
   if (re$$4 instanceof RegExp) {
-    v786 = re$$4;
+    v785 = re$$4;
   } else {
-    v786 = new RegExp(sc_string2jsstring(re$$4));
+    v785 = new RegExp(sc_string2jsstring(re$$4));
   }
-  var reg$$3 = v786;
+  var reg$$3 = v785;
   var jss = sc_string2jsstring(s$$10);
   var tmp$$13 = jss.split(reg$$3);
   if (tmp$$13 == null) {
@@ -4292,8 +4309,8 @@ function sc_makeHashtable() {
 }
 function sc_hashtablePutBang(ht$$3, key$$18, val$$7) {
   var hash = sc_hash(key$$18);
-  var v3702 = new sc_HashtableElement(key$$18, val$$7);
-  JAM.set(ht$$3, hash, v3702);
+  var v3700 = new sc_HashtableElement(key$$18, val$$7);
+  JAM.set(ht$$3, hash, v3700);
   return;
 }
 function sc_hashtableGet(ht$$4, key$$19) {
@@ -4401,8 +4418,8 @@ function sc_ErrorInputPort() {
   return;
 }
 function sc_StringInputPort(jsStr) {
-  var v3703 = new String(jsStr);
-  this.str = v3703;
+  var v3701 = new String(jsStr);
+  this.str = v3701;
   this.pos = 0;
   return;
 }
@@ -4418,8 +4435,8 @@ function sc_Tokenizer(port) {
 }
 function sc_Reader(tokenizer) {
   this.tokenizer = tokenizer;
-  var v3704 = new Array;
-  this.backref = v3704;
+  var v3702 = new Array;
+  this.backref = v3702;
   return;
 }
 function sc_read(port$$2) {
@@ -4434,26 +4451,26 @@ function sc_readChar(port$$3) {
     port$$3 = SC_DEFAULT_IN;
   }
   var t$$1 = port$$3.readChar();
-  var v807;
+  var v806;
   if (t$$1 === SC_EOF_OBJECT) {
-    v807 = t$$1;
+    v806 = t$$1;
   } else {
-    v807 = new sc_Char(t$$1);
+    v806 = new sc_Char(t$$1);
   }
-  return v807;
+  return v806;
 }
 function sc_peekChar(port$$4) {
   if (port$$4 === undefined) {
     port$$4 = SC_DEFAULT_IN;
   }
   var t$$2 = port$$4.peekChar();
-  var v809;
+  var v808;
   if (t$$2 === SC_EOF_OBJECT) {
-    v809 = t$$2;
+    v808 = t$$2;
   } else {
-    v809 = new sc_Char(t$$2);
+    v808 = new sc_Char(t$$2);
   }
-  return v809;
+  return v808;
 }
 function sc_isCharReady(port$$5) {
   if (port$$5 === undefined) {
@@ -4615,8 +4632,8 @@ function sc_escapeWriteString(s$$21) {
   var res$$26 = "";
   var j$$1 = 0;
   i = 0;
-  var v833 = i < s$$21.length;
-  for (;v833;) {
+  var v832 = i < s$$21.length;
+  for (;v832;) {
     switch(s$$21.charAt(i)) {
       case "\x00":
         res$$26 = res$$26 + (JAM.call(s$$21.substring, s$$21, [j$$1, i], JAM.policy.p1) + "\\0");
@@ -4656,38 +4673,38 @@ function sc_escapeWriteString(s$$21) {
         break;
       default:
         var c$$21 = s$$21.charAt(i);
-        var v1522 = "a" !== "a";
-        if (v1522) {
-          v1522 = c$$21 == "a";
+        var v1520 = "a" !== "a";
+        if (v1520) {
+          v1520 = c$$21 == "a";
         }
-        if (v1522) {
+        if (v1520) {
           res$$26 = res$$26 + (JAM.call(s$$21.substring, s$$21, [j$$1, i], JAM.policy.p1) + "\\a");
           j$$1 = i + 1;
           i++;
-          v833 = i < s$$21.length;
+          v832 = i < s$$21.length;
           continue;
         }
-        var v1525 = "\v" !== "v";
-        if (v1525) {
-          v1525 = c$$21 == "\v";
+        var v1523 = "\v" !== "v";
+        if (v1523) {
+          v1523 = c$$21 == "\v";
         }
-        if (v1525) {
+        if (v1523) {
           res$$26 = res$$26 + (JAM.call(s$$21.substring, s$$21, [j$$1, i], JAM.policy.p1) + "\\v");
           j$$1 = i + 1;
           i++;
-          v833 = i < s$$21.length;
+          v832 = i < s$$21.length;
           continue;
         }
         if (s$$21.charAt(i) < " ") {
-          var v1851 = JAM.call(s$$21.substring, s$$21, [j$$1, i], JAM.policy.p1) + "\\x";
-          var v2168 = s$$21.charCodeAt(i);
-          res$$26 = res$$26 + (v1851 + JAM.call(v2168.toString, v2168, [16]));
+          var v1849 = JAM.call(s$$21.substring, s$$21, [j$$1, i], JAM.policy.p1) + "\\x";
+          var v2166 = s$$21.charCodeAt(i);
+          res$$26 = res$$26 + (v1849 + JAM.call(v2166.toString, v2166, [16]));
           j$$1 = i + 1;
         }
       ;
     }
     i++;
-    v833 = i < s$$21.length;
+    v832 = i < s$$21.length;
   }
   res$$26 = res$$26 + JAM.call(s$$21.substring, s$$21, [j$$1, i], JAM.policy.p1);
   return res$$26;
@@ -4727,7 +4744,8 @@ function sc_toDisplayString(o$$29) {
   }
   return;
 }
-function sc_newline(p$$42) {
+function sc_newline() {
+  var p$$42;
   if (p$$42 === undefined) {
     p$$42 = SC_DEFAULT_OUT;
   }
@@ -4756,11 +4774,11 @@ function sc_toWriteCircleString(o$$31) {
   return sc_genToWriteCircleString(o$$31, symb);
 }
 function sc_prepWriteCircle(o$$32, symb$$1, nbPointer$$1) {
-  var v1534 = o$$32 instanceof sc_Pair;
-  if (!v1534) {
-    v1534 = o$$32 instanceof sc_Vector;
+  var v1532 = o$$32 instanceof sc_Pair;
+  if (!v1532) {
+    v1532 = o$$32 instanceof sc_Vector;
   }
-  if (v1534) {
+  if (v1532) {
     if (o$$32[symb$$1] !== undefined) {
       JAM.set(o$$32, symb$$1, o$$32[symb$$1] + 1);
       if (!o$$32[symb$$1 + "nb"]) {
@@ -4775,22 +4793,22 @@ function sc_prepWriteCircle(o$$32, symb$$1, nbPointer$$1) {
       sc_prepWriteCircle(o$$32.cdr, symb$$1, nbPointer$$1);
     } else {
       var i$$45 = 0;
-      var v854 = i$$45 < o$$32.length;
-      for (;v854;) {
+      var v853 = i$$45 < o$$32.length;
+      for (;v853;) {
         sc_prepWriteCircle(o$$32[i$$45], symb$$1, nbPointer$$1);
         i$$45++;
-        v854 = i$$45 < o$$32.length;
+        v853 = i$$45 < o$$32.length;
       }
     }
   }
   return;
 }
 function sc_genToWriteCircleString(o$$33, symb$$2) {
-  var v1856 = o$$33 instanceof sc_Pair;
-  if (!v1856) {
-    v1856 = o$$33 instanceof sc_Vector;
+  var v1854 = o$$33 instanceof sc_Pair;
+  if (!v1854) {
+    v1854 = o$$33 instanceof sc_Vector;
   }
-  if (!v1856) {
+  if (!v1854) {
     return sc_toWriteString(o$$33);
   }
   return JAM.call(o$$33.sc_toWriteCircleString, o$$33, [symb$$2]);
@@ -4801,11 +4819,11 @@ function sc_print(s$$22) {
     sc_newline();
   } else {
     var i$$47 = 0;
-    var v859 = i$$47 < arguments.length;
-    for (;v859;) {
+    var v858 = i$$47 < arguments.length;
+    for (;v858;) {
       sc_display(arguments[i$$47]);
       i$$47++;
-      v859 = i$$47 < arguments.length;
+      v858 = i$$47 < arguments.length;
     }
     sc_newline();
   }
@@ -4816,8 +4834,8 @@ function sc_format(s$$23, args$$4) {
   var p$$45 = new sc_StringOutputPort;
   var i$$48 = 0;
   var j$$2 = 1;
-  var v876 = i$$48 < len$$3;
-  for (;v876;) {
+  var v875 = i$$48 < len$$3;
+  for (;v875;) {
     var i2 = JAM.call(s$$23.indexOf, s$$23, ["~", i$$48], JAM.policy.p1);
     if (i2 == -1) {
       JAM.call(p$$45.appendJSString, p$$45, [JAM.call(s$$23.substring, s$$23, [i$$48, len$$3], JAM.policy.p1)]);
@@ -4865,24 +4883,24 @@ function sc_format(s$$23, args$$4) {
         case 88:
         ;
         case 120:
-          var v1546 = arguments[j$$2];
-          JAM.call(p$$45.appendJSString, p$$45, [JAM.call(v1546.toString, v1546, [6])]);
+          var v1544 = arguments[j$$2];
+          JAM.call(p$$45.appendJSString, p$$45, [JAM.call(v1544.toString, v1544, [6])]);
           i$$48 = i$$48 + 2;
           j$$2++;
           break;
         case 79:
         ;
         case 111:
-          var v1547 = arguments[j$$2];
-          JAM.call(p$$45.appendJSString, p$$45, [JAM.call(v1547.toString, v1547, [8])]);
+          var v1545 = arguments[j$$2];
+          JAM.call(p$$45.appendJSString, p$$45, [JAM.call(v1545.toString, v1545, [8])]);
           i$$48 = i$$48 + 2;
           j$$2++;
           break;
         case 66:
         ;
         case 98:
-          var v1548 = arguments[j$$2];
-          JAM.call(p$$45.appendJSString, p$$45, [JAM.call(v1548.toString, v1548, [2])]);
+          var v1546 = arguments[j$$2];
+          JAM.call(p$$45.appendJSString, p$$45, [JAM.call(v1546.toString, v1546, [2])]);
           i$$48 = i$$48 + 2;
           j$$2++;
           break;
@@ -4905,7 +4923,7 @@ function sc_format(s$$23, args$$4) {
           return "";
       }
     }
-    v876 = i$$48 < len$$3;
+    v875 = i$$48 < len$$3;
   }
   return p$$45.close();
 }
@@ -4928,38 +4946,38 @@ function sc_jsstring2keyword(s$$28) {
   return sc_KEYWORD_PREFIX + s$$28;
 }
 function sc_isKeyword(s$$29) {
-  var v877 = typeof s$$29 === "string";
-  if (v877) {
-    v877 = s$$29.charAt(0) === sc_KEYWORD_PREFIX;
+  var v876 = typeof s$$29 === "string";
+  if (v876) {
+    v876 = s$$29.charAt(0) === sc_KEYWORD_PREFIX;
   }
-  return v877;
+  return v876;
 }
 function sc_isEqual(o1$$2, o2$$2) {
-  var v1552 = o1$$2 === o2$$2;
-  if (!v1552) {
-    var v2171 = sc_isPair(o1$$2);
-    if (v2171) {
-      v2171 = sc_isPair(o2$$2);
+  var v1550 = o1$$2 === o2$$2;
+  if (!v1550) {
+    var v2169 = sc_isPair(o1$$2);
+    if (v2169) {
+      v2169 = sc_isPair(o2$$2);
     }
-    var v1858 = v2171;
+    var v1856 = v2169;
+    if (v1856) {
+      v1856 = sc_isPairEqual(o1$$2, o2$$2);
+    }
+    v1550 = v1856;
+  }
+  var v877 = v1550;
+  if (!v877) {
+    var v1858 = sc_isVector(o1$$2);
     if (v1858) {
-      v1858 = sc_isPairEqual(o1$$2, o2$$2, sc_isEqual);
+      v1858 = sc_isVector(o2$$2);
     }
-    v1552 = v1858;
+    var v1551 = v1858;
+    if (v1551) {
+      v1551 = sc_isVectorEqual(o1$$2, o2$$2);
+    }
+    v877 = v1551;
   }
-  var v878 = v1552;
-  if (!v878) {
-    var v1860 = sc_isVector(o1$$2);
-    if (v1860) {
-      v1860 = sc_isVector(o2$$2);
-    }
-    var v1553 = v1860;
-    if (v1553) {
-      v1553 = sc_isVectorEqual(o1$$2, o2$$2, sc_isEqual);
-    }
-    v878 = v1553;
-  }
-  return v878;
+  return v877;
 }
 function sc_number2symbol(x$$73, radix$$2) {
   return sc_SYMBOL_PREFIX + sc_number2jsstring(x$$73, radix$$2);
@@ -4969,19 +4987,19 @@ function sc_symbol2number(s$$30, radix$$3) {
 }
 function sc_string2integer(s$$31, radix$$4) {
   if (!radix$$4) {
-    return+s$$31;
+    return +s$$31;
   }
   return parseInt(s$$31, radix$$4);
 }
 function sc_string2real(s$$32) {
-  return+s$$32;
+  return +s$$32;
 }
 function sc_isSymbol(s$$33) {
-  var v883 = typeof s$$33 === "string";
-  if (v883) {
-    v883 = s$$33.charAt(0) === sc_SYMBOL_PREFIX;
+  var v882 = typeof s$$33 === "string";
+  if (v882) {
+    v882 = s$$33.charAt(0) === sc_SYMBOL_PREFIX;
   }
-  return v883;
+  return v882;
 }
 function sc_symbol2string(s$$34) {
   return s$$34.slice(1);
@@ -4992,11 +5010,11 @@ function sc_string2symbol(s$$35) {
 function sc_symbolAppend() {
   var res$$29 = sc_SYMBOL_PREFIX;
   var i$$49 = 0;
-  var v884 = i$$49 < arguments.length;
-  for (;v884;) {
+  var v883 = i$$49 < arguments.length;
+  for (;v883;) {
     res$$29 = res$$29 + arguments[i$$49].slice(1);
     i$$49++;
-    v884 = i$$49 < arguments.length;
+    v883 = i$$49 < arguments.length;
   }
   return res$$29;
 }
@@ -5007,22 +5025,22 @@ function sc_char2symbol(c$$24) {
   return sc_SYMBOL_PREFIX + c$$24.val;
 }
 function sc_isString(s$$36) {
-  var v886 = typeof s$$36 === "string";
-  if (v886) {
-    v886 = s$$36.charAt(0) !== sc_SYMBOL_PREFIX;
+  var v885 = typeof s$$36 === "string";
+  if (v885) {
+    v885 = s$$36.charAt(0) !== sc_SYMBOL_PREFIX;
   }
-  return v886;
+  return v885;
 }
 function sc_string() {
   var i$$50 = 0;
-  var v888 = i$$50 < arguments.length;
-  for (;v888;) {
+  var v887 = i$$50 < arguments.length;
+  for (;v887;) {
     arguments[i$$50] = arguments[i$$50].val;
     i$$50++;
-    v888 = i$$50 < arguments.length;
+    v887 = i$$50 < arguments.length;
   }
-  var v889 = "".concat;
-  return JAM.call(v889.apply, v889, ["", arguments], JAM.policy.p1);
+  var v888 = "".concat;
+  return JAM.call(v888.apply, v888, ["", arguments], JAM.policy.p1);
 }
 function sc_stringLength(s$$37) {
   return s$$37.length;
@@ -5067,8 +5085,8 @@ function sc_isSubstring_at(s1$$12, s2$$12, i$$51) {
   return s2$$12 == JAM.call(s1$$12.substring, s1$$12, [i$$51, i$$51 + s2$$12.length], JAM.policy.p1);
 }
 function sc_stringAppend() {
-  var v902 = "".concat;
-  return JAM.call(v902.apply, v902, ["", arguments], JAM.policy.p1);
+  var v901 = "".concat;
+  return JAM.call(v901.apply, v901, ["", arguments], JAM.policy.p1);
 }
 function sc_stringCopy(s$$40) {
   return s$$40;
@@ -5081,14 +5099,14 @@ function sc_string2keyword(o$$35) {
 }
 function RunBenchmark(name$$38, count$$3, run$$1, warn) {
   var n$$14 = 0;
-  var v904 = n$$14 < count$$3;
-  for (;v904;) {
+  var v903 = n$$14 < count$$3;
+  for (;v903;) {
     result = run$$1();
     if (!JAM.call(warn, null, [result])) {
       throw new Error("Earley or Boyer did incorrect number of rewrites");
     }
     ++n$$14;
-    v904 = n$$14 < count$$3;
+    v903 = n$$14 < count$$3;
   }
   return;
 }
@@ -5148,19 +5166,19 @@ function Run() {
   parent.removeChild(anchor);
   JAM.set(document.getElementById("startup-text"), "innerHTML", "");
   document.getElementById("progress-bar-container").style.visibility = "visible";
-  JAM.call(BenchmarkSuite.RunSuites, BenchmarkSuite, [{NotifyStart:ShowBox, NotifyError:AddError, NotifyResult:AddResult, NotifyScore:AddScore}, skipBenchmarks], JAM.policy.p1);
+  BenchmarkSuite.RunSuites();
   return;
 }
 function CheckCompatibility() {
-  var v1578 = typeof Uint8Array != "undefined";
-  if (v1578) {
-    v1578 = typeof Float64Array != "undefined";
+  var v1576 = typeof Uint8Array != "undefined";
+  if (v1576) {
+    v1576 = typeof Float64Array != "undefined";
   }
-  var v927 = v1578;
-  if (v927) {
-    v927 = typeof(new Uint8Array(0)).subarray != "undefined";
+  var v925 = v1576;
+  if (v925) {
+    v925 = typeof(new Uint8Array(0)).subarray != "undefined";
   }
-  var hasTypedArrays = v927;
+  var hasTypedArrays = v925;
   if (!hasTypedArrays) {
     console.log("Typed Arrays not supported");
     document.getElementById("alertbox").style.display = "block";
@@ -5178,9 +5196,9 @@ function Load() {
   return;
 }
 var performance = performance || {};
-var v932 = performance;
-var v3705 = v4();
-v932.now = v3705;
+var v930 = performance;
+var v3703 = v4();
+v930.now = v3703;
 BenchmarkResult.prototype.valueOf = v5;
 BenchmarkSuite.suites = [];
 BenchmarkSuite.version = "9";
@@ -5199,7 +5217,7 @@ BenchmarkSuite.prototype.NotifySkipped = v18;
 BenchmarkSuite.prototype.NotifyError = v19;
 BenchmarkSuite.prototype.RunSingleBenchmark = v20;
 BenchmarkSuite.prototype.RunStep = v21;
-var EarleyBoyer = new BenchmarkSuite("EarleyBoyer", [666463], [new Benchmark("Earley", true, false, 2500, v22), new Benchmark("Boyer", true, false, 200, v23)]);
+var EarleyBoyer = new BenchmarkSuite("EarleyBoyer", [666463], [new Benchmark("Earley", 2500, v22), new Benchmark("Boyer", 200, v23)]);
 var sc_JS_GLOBALS = this;
 var __sc_LINE = -1;
 var __sc_FILE = "";
@@ -5225,9 +5243,9 @@ sc_Pair.prototype.toString = v24;
 sc_Pair.prototype.sc_toWriteOrDisplayString = v25;
 sc_Pair.prototype.sc_toDisplayString = v26;
 sc_Pair.prototype.sc_toWriteString = v27;
-var v946 = sc_Char;
-var v3706 = new Object;
-v946.lazy = v3706;
+var v944 = sc_Char;
+var v3704 = new Object;
+v944.lazy = v3704;
 sc_Char.char2readable = {"\x00":"#\\null", "\u0007":"#\\bell", "\b":"#\\backspace", "\t":"#\\tab", "\n":"#\\newline", "\f":"#\\page", "\r":"#\\return", "\u001b":"#\\escape", " ":"#\\space", "\u007f":"#\\delete", "\u0001":"#\\soh", "\u0002":"#\\stx", "\u0003":"#\\etx", "\u0004":"#\\eot", "\u0005":"#\\enq", "\u0006":"#\\ack", "\x0B":"#\\vt", "\u000e":"#\\so", "\u000f":"#\\si", "\u0010":"#\\dle", "\u0011":"#\\dc1", "\u0012":"#\\dc2", "\u0013":"#\\dc3", "\u0014":"#\\dc4", "\u0015":"#\\nak", "\u0016":"#\\syn", 
 "\u0017":"#\\etb", "\u0018":"#\\can", "\u0019":"#\\em", "\u001a":"#\\sub", "\u001b":"#\\esc", "\u001c":"#\\fs", "\u001d":"#\\gs", "\u001e":"#\\rs", "\u001f":"#\\us"};
 sc_Char.readable2char = {"null":"\x00", "bell":"\u0007", "backspace":"\b", "tab":"\t", "newline":"\n", "page":"\f", "return":"\r", "escape":"\u001b", "space":" ", "delete":"\x00", "soh":"\u0001", "stx":"\u0002", "etx":"\u0003", "eot":"\u0004", "enq":"\u0005", "ack":"\u0006", "bel":"\u0007", "bs":"\b", "ht":"\t", "nl":"\n", "vt":"\x0B", "np":"\f", "cr":"\r", "so":"\u000e", "si":"\u000f", "dle":"\u0010", "dc1":"\u0011", "dc2":"\u0012", "dc3":"\u0013", "dc4":"\u0014", "nak":"\u0015", "syn":"\u0016", 
@@ -5261,21 +5279,21 @@ var SC_SCM2JS_GLOBALS = new Object;
 var SC_TAIL_OBJECT = new Object;
 SC_SCM2JS_GLOBALS.TAIL_OBJECT = SC_TAIL_OBJECT;
 var SC_EOF_OBJECT = new sc_EOF;
-var v956 = sc_InputPort;
-var v3707 = new sc_Port;
-v956.prototype = v3707;
+var v954 = sc_InputPort;
+var v3705 = new sc_Port;
+v954.prototype = v3705;
 sc_InputPort.prototype.peekChar = v36;
 sc_InputPort.prototype.readChar = v37;
 sc_InputPort.prototype.isCharReady = v38;
 sc_InputPort.prototype.close = v39;
-var v961 = sc_ErrorInputPort;
-var v3708 = new sc_InputPort;
-v961.prototype = v3708;
+var v959 = sc_ErrorInputPort;
+var v3706 = new sc_InputPort;
+v959.prototype = v3706;
 sc_ErrorInputPort.prototype.getNextChar = v40;
 sc_ErrorInputPort.prototype.isCharReady = v41;
-var v964 = sc_StringInputPort;
-var v3709 = new sc_InputPort;
-v964.prototype = v3709;
+var v962 = sc_StringInputPort;
+var v3707 = new sc_InputPort;
+v962.prototype = v3707;
 sc_StringInputPort.prototype.getNextChar = v42;
 sc_Token.EOF = 0;
 sc_Token.OPEN_PAR = 1;
@@ -5303,24 +5321,24 @@ sc_Tokenizer.prototype.peekToken = v43;
 sc_Tokenizer.prototype.readToken = v44;
 sc_Tokenizer.prototype.nextToken = v45;
 sc_Reader.prototype.read = v46;
-var v971 = sc_OutputPort;
-var v3710 = new sc_Port;
-v971.prototype = v3710;
+var v969 = sc_OutputPort;
+var v3708 = new sc_Port;
+v969.prototype = v3708;
 sc_OutputPort.prototype.appendJSString = v47;
 sc_OutputPort.prototype.close = v48;
-var v974 = sc_StringOutputPort;
-var v3711 = new sc_OutputPort;
-v974.prototype = v3711;
+var v972 = sc_StringOutputPort;
+var v3709 = new sc_OutputPort;
+v972.prototype = v3709;
 sc_StringOutputPort.prototype.appendJSString = v49;
 sc_StringOutputPort.prototype.close = v50;
-var v977 = sc_ErrorOutputPort;
-var v3712 = new sc_OutputPort;
-v977.prototype = v3712;
+var v975 = sc_ErrorOutputPort;
+var v3710 = new sc_OutputPort;
+v975.prototype = v3710;
 sc_ErrorOutputPort.prototype.appendJSString = v51;
 sc_ErrorOutputPort.prototype.close = v52;
-var v980 = sc_GenericOutputPort;
-var v3713 = new sc_OutputPort;
-v980.prototype = v3713;
+var v978 = sc_GenericOutputPort;
+var v3711 = new sc_OutputPort;
+v978.prototype = v3711;
 sc_Pair.prototype.sc_toWriteCircleString = v53;
 sc_Vector.prototype.sc_toWriteCircleString = v54;
 var SC_DEFAULT_IN = new sc_ErrorInputPort;
@@ -5496,10 +5514,10 @@ var completed = 0;
 var benchmarks = BenchmarkSuite.CountBenchmarks();
 var success = true;
 var latencyBenchmarks = ["Splay", "Mandreel"];
-var v1095;
+var v1093;
 if (typeof skipBenchmarks === "undefined") {
-  v1095 = [];
+  v1093 = [];
 } else {
-  v1095 = skipBenchmarks;
+  v1093 = skipBenchmarks;
 }
-var skipBenchmarks = v1095
+var skipBenchmarks = v1093

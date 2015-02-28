@@ -1,8 +1,7 @@
 var policy = function() {
   var states = [true, false];
   var _document = document;
-  var _HTMLDocument_prototype_getElementById = HTMLDocument.prototype.getElementById;
-  var _HTMLDocument_prototype_getElementsByTagName = HTMLDocument.prototype.getElementsByTagName;
+  var _HTMLDocument = HTMLDocument;
   function pFull(tx) {
     var commit = true;
     var as = tx.getActionSequence();
@@ -13,7 +12,7 @@ var policy = function() {
         commit = false;
         break;
       }
-      if (!states[1] && (node.type === "call" || node.type === "construct") && (JAM.identical(node.value, _HTMLDocument_prototype_getElementById) || JAM.identical(node.value, _HTMLDocument_prototype_getElementsByTagName))) {
+      if (!states[1] && node.type === "read" && (node.id === "getElementById" && JAM.instanceof(node.obj, _HTMLDocument) || node.id === "getElementsByTagName" && JAM.instanceof(node.obj, _HTMLDocument))) {
         states[1] = true;
       }
     }
@@ -25,5 +24,5 @@ var policy = function() {
   }
   pFull.subsumedBy = pFull;
   Object.freeze(pFull);
-  return{pFull:pFull};
+  return {pFull:pFull};
 }()

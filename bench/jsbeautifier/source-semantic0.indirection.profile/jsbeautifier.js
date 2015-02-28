@@ -138,7 +138,7 @@ function do_js_beautify() {
   }
   var v26 = document.getElementById("beautify");
   v26.disabled = false;
-  return false;
+  return;
 }
 function get_var(name$$30) {
   var v40 = "[\\?&]" + name$$30;

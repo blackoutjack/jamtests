@@ -22,7 +22,8 @@ function isInteger(s$$2) {
   }
   return true;
 }
-function stripCharsInBag(s$$3, bag) {
+function stripCharsInBag(s$$3) {
+  var bag = dtCh;
   var i$$2;
   var returnString = "";
   i$$2 = 0;
@@ -41,7 +42,8 @@ function stripCharsInBag(s$$3, bag) {
   }
   return returnString;
 }
-function daysInFebruary(year$$2) {
+function daysInFebruary() {
+  var year$$2 = year;
   var v4;
   var v82 = year$$2 % 4;
   var v54 = v82 == 0;
@@ -64,7 +66,8 @@ function daysInFebruary(year$$2) {
   }
   return v4;
 }
-function DaysArray(n$$1) {
+function DaysArray() {
+  var n$$1 = 12;
   var i$$3 = 1;
   var v7 = i$$3 <= n$$1;
   for (;v7;) {
@@ -98,7 +101,7 @@ function DaysArray(n$$1) {
   return this;
 }
 function isDate(dtStr) {
-  var daysInMonth = DaysArray(12);
+  var daysInMonth = DaysArray();
   var pos1 = dtStr.indexOf(dtCh);
   var v8 = pos1 + 1;
   var pos2 = JAM.call(dtStr.indexOf, dtStr, [dtCh, v8], JAM.policy.p1);
@@ -190,7 +193,7 @@ function isDate(dtStr) {
     var v89 = month == 2;
     if (v89) {
       var v107 = day;
-      var v108 = daysInFebruary(year);
+      var v108 = daysInFebruary();
       v89 = v107 > v108;
     }
     v66 = v89;
@@ -235,7 +238,7 @@ function isDate(dtStr) {
   var v44 = v72 != -1;
   var v74 = !v44;
   if (v74) {
-    var v94 = stripCharsInBag(dtStr, dtCh);
+    var v94 = stripCharsInBag(dtStr);
     var v73 = isInteger(v94);
     v44 = v73 == false;
   }

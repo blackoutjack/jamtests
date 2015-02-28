@@ -1,7 +1,16 @@
 
 JAM.startProfile('load');
 introspect(JAM.policy.pFull) {
-function Benchmark(name$$30, doWarmup, doDeterministic, deterministicIterations, run$$1, setup, tearDown, rmsResult, minIterations) {
+function Benchmark() {
+  var name$$30 = "Gameboy";
+  var doWarmup = false;
+  var doDeterministic = false;
+  var deterministicIterations = 20;
+  var run$$1 = runGameboy;
+  var setup = setupGameboy;
+  var tearDown = tearDownGameboy;
+  var rmsResult = null;
+  var minIterations = 4;
   this.name = name$$30;
   this.doWarmup = doWarmup;
   this.doDeterministic = doDeterministic;
@@ -33,7 +42,7 @@ function setupGameboy() {
   rom = null;
 }
 function runGameboy() {
-  start(new GameBoyCanvas, decoded_gameboy_rom);
+  start();
   gameboy.instructions = 0;
   gameboy.totalInstructions = 25E4;
   for (;gameboy.instructions <= gameboy.totalInstructions;) {
@@ -80,16 +89,19 @@ function clear_terminal() {
 }
 function GameBoyAudioContext() {
   this.createBufferSource = function() {
-    return{noteOn:function() {
+    return {noteOn:function() {
     }, connect:function() {
     }};
   };
   this.sampleRate = 48E3;
   this.destination = {};
   this.createBuffer = function(channels, len, sampleRate) {
-    return{gain:1, numberOfChannels:1, length:1, duration:2.0833333110203966E-5, sampleRate:48E3};
+    return {gain:1, numberOfChannels:1, length:1, duration:2.0833333110203966E-5, sampleRate:48E3};
   };
-  this.createJavaScriptNode = function(bufferSize, inputChannels, outputChannels) {
+  this.createJavaScriptNode = function() {
+    var bufferSize = samplesPerCallback;
+    var inputChannels = 1;
+    var outputChannels = 2;
     GameBoyAudioNode.bufferSize = bufferSize;
     GameBoyAudioNode.outputBuffer = {getChannelData:function(i$$8) {
       return this.channelData[i$$8];
@@ -102,7 +114,7 @@ function GameBoyAudioContext() {
   };
 }
 function new_Date() {
-  return{getTime:function() {
+  return {getTime:function() {
     mock_date_time_counter += 16;
     return mock_date_time_counter;
   }};
@@ -262,7 +274,8 @@ function getFloat32(size$$4) {
     return new Array(size$$4);
   }
 }
-function getFloat32Flat(size$$5) {
+function getFloat32Flat() {
+  var size$$5 = resampleBufferSize;
   try {
     var newBuffer = new Float32Array(size$$5);
   } catch (error$$11) {
@@ -350,7 +363,7 @@ function resampleRefill() {
   }
 }
 function resampledSamplesLeft() {
-  return(resampleBufferStart <= resampleBufferEnd ? 0 : resampleBufferSize) + resampleBufferEnd - resampleBufferStart;
+  return (resampleBufferStart <= resampleBufferEnd ? 0 : resampleBufferSize) + resampleBufferEnd - resampleBufferStart;
 }
 function getBufferSamples() {
   try {
@@ -364,19 +377,20 @@ function getBufferSamples() {
     }
   }
 }
-function resetCallbackAPIAudioBuffer(APISampleRate, bufferAlloc) {
+function resetCallbackAPIAudioBuffer(APISampleRate) {
+  var bufferAlloc = samplesPerCallback;
   audioContextSampleBuffer = getFloat32(webAudioMaxBufferSize);
   audioBufferSize = webAudioMaxBufferSize;
   resampleBufferStart = 0;
   resampleBufferEnd = 0;
   resampleBufferSize = Math.max(webAudioMaxBufferSize * Math.ceil(XAudioJSSampleRate / APISampleRate), samplesPerCallback) << 1;
   if (webAudioMono) {
-    resampled = getFloat32Flat(resampleBufferSize);
+    resampled = getFloat32Flat();
     resampleControl = new Resampler(XAudioJSSampleRate, APISampleRate, 1, resampleBufferSize, true);
     outputConvert = generateFlashMonoString;
   } else {
     resampleBufferSize <<= 1;
-    resampled = getFloat32Flat(resampleBufferSize);
+    resampled = getFloat32Flat();
     resampleControl = new Resampler(XAudioJSSampleRate, APISampleRate, 2, resampleBufferSize, true);
     outputConvert = generateFlashStereoString;
   }
@@ -622,7 +636,9 @@ function GameBoyCore(canvas, ROMImage) {
   this.offscreenRGBCount = this.onscreenWidth * this.onscreenHeight * 4;
   this.intializeWhiteNoise();
 }
-function start(canvas$$1, ROM) {
+function start() {
+  var canvas$$1 = new GameBoyCanvas;
+  var ROM = decoded_gameboy_rom;
   clearLastEmulation();
   autoSave();
   gameboy = new GameBoyCore(canvas$$1, ROM);
@@ -745,7 +761,7 @@ function openSRAM(filename) {
   } catch (error$$30) {
     cout("Could not open the  SRAM of the saved emulation state.", 2);
   }
-  return[];
+  return [];
 }
 function openRTC(filename$$1) {
   try {
@@ -758,7 +774,7 @@ function openRTC(filename$$1) {
   } catch (error$$31) {
     cout("Could not open the RTC data of the saved emulation state.", 2);
   }
-  return[];
+  return [];
 }
 function openState(filename$$2, canvas$$2) {
   try {
@@ -893,13 +909,13 @@ function matchKey(key$$15) {
       return index$$71;
     }
   }
-  return-1;
+  return -1;
 }
 function GameBoyEmulatorInitialized() {
   return typeof gameboy == "object" && gameboy != null;
 }
 function GameBoyEmulatorPlaying() {
-  return(gameboy.stopEmulator & 2) == 0;
+  return (gameboy.stopEmulator & 2) == 0;
 }
 function GameBoyKeyDown(e$$7) {
   if (GameBoyEmulatorInitialized() && GameBoyEmulatorPlaying()) {
@@ -1007,7 +1023,7 @@ function Run() {
   parent.removeChild(anchor);
   document.getElementById("startup-text").innerHTML = "";
   document.getElementById("progress-bar-container").style.visibility = "visible";
-  BenchmarkSuite.RunSuites({NotifyStart:ShowBox, NotifyError:AddError, NotifyResult:AddResult, NotifyScore:AddScore}, skipBenchmarks);
+  BenchmarkSuite.RunSuites();
 }
 function CheckCompatibility() {
   var hasTypedArrays = typeof Uint8Array != "undefined" && typeof Float64Array != "undefined" && typeof(new Uint8Array(0)).subarray != "undefined";
@@ -1048,11 +1064,13 @@ BenchmarkSuite.ResetRNG = function() {
       seed = (seed + 3550635116 ^ seed << 9) & 4294967295;
       seed = seed + 4251993797 + (seed << 3) & 4294967295;
       seed = (seed ^ 3042594569 ^ seed >>> 16) & 4294967295;
-      return(seed & 268435455) / 268435456;
+      return (seed & 268435455) / 268435456;
     };
   }();
 };
-BenchmarkSuite.RunSuites = function(runner, skipBenchmarks$$1) {
+BenchmarkSuite.RunSuites = function() {
+  var runner = {NotifyStart:ShowBox, NotifyError:AddError, NotifyResult:AddResult, NotifyScore:AddScore};
+  var skipBenchmarks$$1 = skipBenchmarks;
   function RunStep() {
     for (;continuation || index$$39 < length$$11;) {
       if (continuation) {
@@ -1074,7 +1092,7 @@ BenchmarkSuite.RunSuites = function(runner, skipBenchmarks$$1) {
       }
     }
     if (runner.NotifyScore) {
-      var score = BenchmarkSuite.GeometricMean(BenchmarkSuite.scores);
+      var score = BenchmarkSuite.GeometricMean();
       var formatted = BenchmarkSuite.FormatScore(100 * score);
       runner.NotifyScore(formatted);
     }
@@ -1096,7 +1114,8 @@ BenchmarkSuite.CountBenchmarks = function() {
   }
   return result;
 };
-BenchmarkSuite.GeometricMean = function(numbers) {
+BenchmarkSuite.GeometricMean = function() {
+  var numbers = BenchmarkSuite.scores;
   var log = 0;
   var i$$2 = 0;
   for (;i$$2 < numbers.length;i$$2++) {
@@ -1197,7 +1216,7 @@ BenchmarkSuite.prototype.RunSingleBenchmark = function(benchmark$$1, data$$18) {
   }
   if (data$$18 == null) {
     Measure(null);
-    return{runs:0, elapsed:0};
+    return {runs:0, elapsed:0};
   } else {
     Measure(data$$18);
     if (data$$18.runs < benchmark$$1.minIterations) {
@@ -1250,7 +1269,7 @@ BenchmarkSuite.prototype.RunStep = function(runner$$2) {
   var data$$20;
   return RunNextSetup();
 };
-var GameboyBenchmark = new BenchmarkSuite("Gameboy", [26288412], [new Benchmark("Gameboy", false, false, 20, runGameboy, setupGameboy, tearDownGameboy, null, 4)]);
+var GameboyBenchmark = new BenchmarkSuite("Gameboy", [26288412], [new Benchmark]);
 var decoded_gameboy_rom = null;
 var expectedGameboyStateStr = '{"registerA":160,"registerB":255,"registerC":255,"registerE":11,' + '"registersHL":51600,"programCounter":24309,"stackPointer":49706,' + '"sumROM":10171578,"sumMemory":3435856,"sumMBCRam":234598,"sumVRam":0}';
 var GameBoyWindow = {};
@@ -1412,11 +1431,11 @@ XAudioServer.prototype.remainingBuffer = function() {
     return this.samplesAlreadyWritten - this.audioHandleMoz.mozCurrentSampleOffset();
   } else {
     if (this.audioType == 1) {
-      return(resampledSamplesLeft() * resampleControl.ratioWeight >> this.audioChannels - 1 << this.audioChannels - 1) + audioBufferSize;
+      return (resampledSamplesLeft() * resampleControl.ratioWeight >> this.audioChannels - 1 << this.audioChannels - 1) + audioBufferSize;
     } else {
       if (this.audioType == 2) {
         if (this.checkFlashInit() || launchedContext) {
-          return(resampledSamplesLeft() * resampleControl.ratioWeight >> this.audioChannels - 1 << this.audioChannels - 1) + audioBufferSize;
+          return (resampledSamplesLeft() * resampleControl.ratioWeight >> this.audioChannels - 1 << this.audioChannels - 1) + audioBufferSize;
         } else {
           if (this.mozAudioFound) {
             return this.samplesAlreadyWritten - this.audioHandleMoz.mozCurrentSampleOffset();
@@ -1499,7 +1518,7 @@ XAudioServer.prototype.initializeMozAudio = function() {
 };
 XAudioServer.prototype.initializeWebAudio = function() {
   if (launchedContext) {
-    resetCallbackAPIAudioBuffer(webAudioActualSampleRate, samplesPerCallback);
+    resetCallbackAPIAudioBuffer(webAudioActualSampleRate);
     this.audioType = 1;
   } else {
     throw new Error("");
@@ -1558,7 +1577,7 @@ XAudioServer.prototype.checkFlashInit = function() {
   if (!this.flashInitialized && this.audioHandleFlash && this.audioHandleFlash.initialize) {
     this.flashInitialized = true;
     this.audioHandleFlash.initialize(this.audioChannels, XAudioJSVolume);
-    resetCallbackAPIAudioBuffer(44100, samplesPerCallback);
+    resetCallbackAPIAudioBuffer(44100);
   }
   return this.flashInitialized;
 };
@@ -1597,7 +1616,7 @@ var resampleBufferSize = 2;
       audioSource.loop = false;
       XAudioJSSampleRate = webAudioActualSampleRate = audioContextHandle.sampleRate;
       audioSource.buffer = audioContextHandle.createBuffer(1, 1, webAudioActualSampleRate);
-      audioNode = audioContextHandle.createJavaScriptNode(samplesPerCallback, 1, 2);
+      audioNode = audioContextHandle.createJavaScriptNode();
       audioNode.onaudioprocess = audioOutputEvent;
     } catch (error$$16) {
       return;
@@ -1949,21 +1968,21 @@ Resize.prototype.generateFloatBuffer = function(bufferLength) {
   try {
     return new Float32Array(bufferLength);
   } catch (error$$17) {
-    return[];
+    return [];
   }
 };
 Resize.prototype.generateUint8Buffer = function(bufferLength$$1) {
   try {
     return this.checkForOperaMathBug(new Uint8Array(bufferLength$$1));
   } catch (error$$18) {
-    return[];
+    return [];
   }
 };
 Resize.prototype.checkForOperaMathBug = function(typedArray) {
   typedArray[0] = -1;
   typedArray[0] >>= 0;
   if (typedArray[0] != 255) {
-    return[];
+    return [];
   } else {
     return typedArray;
   }
@@ -3984,20 +4003,20 @@ GameBoyCore.prototype.SecondaryTICKTable = [8, 8, 8, 8, 8, 8, 16, 8, 8, 8, 8, 8,
 8, 8, 8, 16, 8, 8, 8, 8, 8, 8, 8, 16, 8, 8, 8, 8, 8, 8, 8, 16, 8, 8, 8, 8, 8, 8, 8, 16, 8, 8, 8, 8, 8, 8, 8, 16, 8, 8, 8, 8, 8, 8, 8, 16, 8, 8, 8, 8, 8, 8, 8, 16, 8, 8, 8, 8, 8, 8, 8, 16, 8, 8, 8, 8, 8, 8, 8, 16, 8, 8, 8, 8, 8, 8, 8, 16, 8, 8, 8, 8, 8, 8, 8, 16, 8, 8, 8, 8, 8, 8, 8, 16, 8, 8, 8, 8, 8, 8, 8, 16, 8, 8, 8, 8, 8, 8, 8, 16, 8];
 GameBoyCore.prototype.saveSRAMState = function() {
   if (!this.cBATT || this.MBCRam.length == 0) {
-    return[];
+    return [];
   } else {
     return this.fromTypedArray(this.MBCRam);
   }
 };
 GameBoyCore.prototype.saveRTCState = function() {
   if (!this.cTIMER) {
-    return[];
+    return [];
   } else {
-    return[this.lastIteration, this.RTCisLatched, this.latchedSeconds, this.latchedMinutes, this.latchedHours, this.latchedLDays, this.latchedHDays, this.RTCSeconds, this.RTCMinutes, this.RTCHours, this.RTCDays, this.RTCDayOverFlow, this.RTCHALT];
+    return [this.lastIteration, this.RTCisLatched, this.latchedSeconds, this.latchedMinutes, this.latchedHours, this.latchedLDays, this.latchedHDays, this.RTCSeconds, this.RTCMinutes, this.RTCHours, this.RTCDays, this.RTCDayOverFlow, this.RTCHALT];
   }
 };
 GameBoyCore.prototype.saveState = function() {
-  return[this.fromTypedArray(this.ROM), this.inBootstrap, this.registerA, this.FZero, this.FSubtract, this.FHalfCarry, this.FCarry, this.registerB, this.registerC, this.registerD, this.registerE, this.registersHL, this.stackPointer, this.programCounter, this.halt, this.IME, this.hdmaRunning, this.CPUTicks, this.doubleSpeedShifter, this.fromTypedArray(this.memory), this.fromTypedArray(this.MBCRam), this.fromTypedArray(this.VRAM), this.currVRAMBank, this.fromTypedArray(this.GBCMemory), this.MBC1Mode, 
+  return [this.fromTypedArray(this.ROM), this.inBootstrap, this.registerA, this.FZero, this.FSubtract, this.FHalfCarry, this.FCarry, this.registerB, this.registerC, this.registerD, this.registerE, this.registersHL, this.stackPointer, this.programCounter, this.halt, this.IME, this.hdmaRunning, this.CPUTicks, this.doubleSpeedShifter, this.fromTypedArray(this.memory), this.fromTypedArray(this.MBCRam), this.fromTypedArray(this.VRAM), this.currVRAMBank, this.fromTypedArray(this.GBCMemory), this.MBC1Mode, 
   this.MBCRAMBanksEnabled, this.currMBCRAMBank, this.currMBCRAMBankPosition, this.cGBC, this.gbcRamBank, this.gbcRamBankPosition, this.ROMBank1offs, this.currentROMBank, this.cartridgeType, this.name, this.gameCode, this.modeSTAT, this.LYCMatchTriggerSTAT, this.mode2TriggerSTAT, this.mode1TriggerSTAT, this.mode0TriggerSTAT, this.LCDisOn, this.gfxWindowCHRBankPosition, this.gfxWindowDisplay, this.gfxSpriteShow, this.gfxSpriteNormalHeight, this.gfxBackgroundCHRBankPosition, this.gfxBackgroundBankOffset, 
   this.TIMAEnabled, this.DIVTicks, this.LCDTicks, this.timerTicks, this.TACClocker, this.serialTimer, this.serialShiftTimer, this.serialShiftTimerAllocated, this.IRQEnableDelay, this.lastIteration, this.cMBC1, this.cMBC2, this.cMBC3, this.cMBC5, this.cMBC7, this.cSRAM, this.cMMMO1, this.cRUMBLE, this.cCamera, this.cTAMA5, this.cHuC3, this.cHuC1, this.drewBlank, this.fromTypedArray(this.frameBuffer), this.bgEnabled, this.BGPriorityEnabled, this.channel1FrequencyTracker, this.channel1FrequencyCounter, 
   this.channel1totalLength, this.channel1envelopeVolume, this.channel1envelopeType, this.channel1envelopeSweeps, this.channel1envelopeSweepsLast, this.channel1consecutive, this.channel1frequency, this.channel1SweepFault, this.channel1ShadowFrequency, this.channel1timeSweep, this.channel1lastTimeSweep, this.channel1numSweep, this.channel1frequencySweepDivider, this.channel1decreaseSweep, this.channel2FrequencyTracker, this.channel2FrequencyCounter, this.channel2totalLength, this.channel2envelopeVolume, 
@@ -7157,11 +7176,11 @@ GameBoyCore.prototype.memoryReadJumpCompile = function() {
                           case 65282:
                             if (this.cGBC) {
                               this.memoryHighReader[2] = this.memoryReader[65282] = function(parentObj$$520, address$$12) {
-                                return(parentObj$$520.serialTimer <= 0 ? 124 : 252) | parentObj$$520.memory[65282];
+                                return (parentObj$$520.serialTimer <= 0 ? 124 : 252) | parentObj$$520.memory[65282];
                               };
                             } else {
                               this.memoryHighReader[2] = this.memoryReader[65282] = function(parentObj$$521, address$$13) {
-                                return(parentObj$$521.serialTimer <= 0 ? 126 : 254) | parentObj$$521.memory[65282];
+                                return (parentObj$$521.serialTimer <= 0 ? 126 : 254) | parentObj$$521.memory[65282];
                               };
                             }
                             break;
@@ -7477,7 +7496,7 @@ GameBoyCore.prototype.memoryReadMBC3 = function(parentObj$$556, address$$48) {
       case 11:
         return parentObj$$556.latchedLDays;
       case 12:
-        return(parentObj$$556.RTCDayOverFlow ? 128 : 0) + (parentObj$$556.RTCHALT ? 64 : 0) + parentObj$$556.latchedHDays;
+        return (parentObj$$556.RTCDayOverFlow ? 128 : 0) + (parentObj$$556.RTCHALT ? 64 : 0) + parentObj$$556.latchedHDays;
     }
   }
   return 255;
@@ -8782,7 +8801,7 @@ GameBoyCore.prototype.toTypedArray = function(baseArray, memtype) {
       return baseArray;
     }
     if (!baseArray || !baseArray.length) {
-      return[];
+      return [];
     }
     var length$$19 = baseArray.length;
     switch(memtype) {
@@ -8811,7 +8830,7 @@ GameBoyCore.prototype.toTypedArray = function(baseArray, memtype) {
 GameBoyCore.prototype.fromTypedArray = function(baseArray$$1) {
   try {
     if (!baseArray$$1 || !baseArray$$1.length) {
-      return[];
+      return [];
     }
     var arrayTemp = [];
     var index$$66 = 0;

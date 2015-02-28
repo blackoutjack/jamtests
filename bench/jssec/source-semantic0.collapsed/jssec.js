@@ -1,4 +1,6 @@
-function snipDisplay(c, p) {
+function snipDisplay() {
+  var c = "c1";
+  var p = "s1";
   var v1;
   if (document.getElementById(c).checked == true) {
     var v13 = document.getElementById(p).style;
@@ -16,7 +18,7 @@ function snipDisplay(c, p) {
 }
 function initSnippets() {
   function v0() {
-    snipDisplay("c1", "s1");
+    snipDisplay();
     return;
   }
   var d = document;

@@ -518,7 +518,7 @@ function v484($$$4, undefined$$5) {
         }
         return vals$$1;
       } else {
-        return[];
+        return [];
       }
     }
     return;
@@ -1415,7 +1415,7 @@ function v452($$$3, undefined$$4) {
       v713;
     }
     var v715 = this._mouseStarted;
-    return!v715;
+    return !v715;
   }
   function v443(event$$20) {
     function v442(event$$22) {
@@ -1741,7 +1741,7 @@ function v434($$$2, undefined$$3) {
       v2659 = event$$17.isDefaultPrevented();
     }
     var v764 = v2659;
-    return!v764;
+    return !v764;
   }
   function v429(element$$11) {
     function v428(event$$16) {
@@ -2399,7 +2399,7 @@ function v434($$$2, undefined$$3) {
     function v398(elem$$129) {
       var v2718 = JAM.call($$$2.data, $$$2, [elem$$129, fullName]);
       var v855 = !v2718;
-      return!v855;
+      return !v855;
     }
     var fullName;
     var existingConstructor;
@@ -2833,13 +2833,13 @@ function v396($$$1, undefined$$2) {
     var v3950 = match$$37[3];
     var v2770 = JAM.call($$$1.data, $$$1, [elem$$126, v3950]);
     var v916 = !v2770;
-    return!v916;
+    return !v916;
   }
   function v377(dataName) {
     function v376(elem$$125) {
       var v2771 = JAM.call($$$1.data, $$$1, [elem$$125, dataName]);
       var v917 = !v2771;
-      return!v917;
+      return !v917;
     }
     return v376;
   }
@@ -2928,7 +2928,7 @@ function v396($$$1, undefined$$2) {
       var v2778 = v3956 + v3957;
       var v2779 = JAM.call($$$1.css, $$$1, [this, "overflow-x"]);
       var v929 = v2778 + v2779;
-      return/(auto|scroll)/.test(v929);
+      return /(auto|scroll)/.test(v929);
     }
     function v368() {
       var v2780 = JAM.call($$$1.css, $$$1, [this, "position"]);
@@ -3520,7 +3520,7 @@ function v363(window$$1, undefined$$1) {
     var v2835 = offset$$8.left;
     var v2836 = parentOffset.left;
     var v988 = v2835 - v2836;
-    return{top:v987, left:v988};
+    return {top:v987, left:v988};
   }
   function v351(elem$$119, options$$7, i$$93) {
     var v2837 = JAM.call(jQuery$$1.curCSS, jQuery$$1, [elem$$119, "position"]);
@@ -3592,7 +3592,7 @@ function v363(window$$1, undefined$$1) {
       var v2846 = v4012;
       left$$6 = left$$6 + v2846;
     }
-    return{top:top$$3, left:left$$6};
+    return {top:top$$3, left:left$$6};
   }
   function v349() {
     var body$$3 = document$$1.body;
@@ -3842,7 +3842,7 @@ function v363(window$$1, undefined$$1) {
       var v2884 = JAM.call(Math.max, Math, [v4035, v4036]);
       left$$5 = v2883 + v2884;
     }
-    return{top:top$$2, left:left$$5};
+    return {top:top$$2, left:left$$5};
   }
   function v346(options$$5) {
     function v345(i$$91) {
@@ -3935,7 +3935,7 @@ function v363(window$$1, undefined$$1) {
     var v2894 = v4043;
     var v1033 = v2893 + v2894;
     var left$$4 = v1033 - clientLeft;
-    return{top:top$$1, left:left$$4};
+    return {top:top$$1, left:left$$4};
   }
   function v344(elem$$116) {
     function v343(fn$$17) {
@@ -5939,7 +5939,7 @@ function v363(window$$1, undefined$$1) {
     function v291(i$$82, elem$$113) {
       function v290(val$$5, i$$83) {
         var v1300 = elem$$113.name;
-        return{name:v1300, value:val$$5};
+        return {name:v1300, value:val$$5};
       }
       var v1301 = jQuery$$1(this);
       var val$$4 = v1301.val();
@@ -6077,7 +6077,7 @@ function v363(window$$1, undefined$$1) {
     var v4176 = jQuery$$1.expr;
     var v3086 = v4176.filters;
     var v1318 = JAM.call(v3086.hidden, v3086, [elem$$112]);
-    return!v1318;
+    return !v1318;
   }
   function v283(elem$$111) {
     var width$$9 = elem$$111.offsetWidth;
@@ -8091,7 +8091,7 @@ function v363(window$$1, undefined$$1) {
       var v4294 = a$$4.compareDocumentPosition(b$$3);
       var v3236 = v4294 & 16;
       var v1552 = !v3236;
-      return!v1552;
+      return !v1552;
     }
     function v204() {
       function v203(match$$34, context$$11, isXML$$10) {
@@ -8847,7 +8847,7 @@ function v363(window$$1, undefined$$1) {
     }
     function v174(elem$$57) {
       var v1641 = elem$$57.nodeName;
-      return/input|select|textarea|button/i.test(v1641);
+      return /input|select|textarea|button/i.test(v1641);
     }
     function v173(elem$$56) {
       var v3290 = elem$$56.type;
@@ -8894,23 +8894,23 @@ function v363(window$$1, undefined$$1) {
     }
     function v164(elem$$47) {
       var v1651 = elem$$47.nodeName;
-      return/h\d/i.test(v1651);
+      return /h\d/i.test(v1651);
     }
     function v163(elem$$46, i$$45, match$$18) {
       var v4989 = match$$18[3];
       var v4333 = JAM.call(Sizzle, null, [v4989, elem$$46]);
       var v3293 = v4333.length;
       var v1652 = !v3293;
-      return!v1652;
+      return !v1652;
     }
     function v162(elem$$45) {
       var v1653 = elem$$45.firstChild;
-      return!v1653;
+      return !v1653;
     }
     function v161(elem$$44) {
       var v3294 = elem$$44.firstChild;
       var v1654 = !v3294;
-      return!v1654;
+      return !v1654;
     }
     function v160(elem$$43) {
       var v1655 = elem$$43.selected;
@@ -9482,7 +9482,7 @@ function v363(window$$1, undefined$$1) {
               expr$$5 = expr$$5.replace(v1719, "");
               var v1720 = !anyFound;
               if (v1720) {
-                return[];
+                return [];
               }
               break;
             }
@@ -9511,7 +9511,7 @@ function v363(window$$1, undefined$$1) {
       var match$$6;
       var v1727 = !expr$$4;
       if (v1727) {
-        return[];
+        return [];
       }
       var i$$39 = 0;
       var v1728 = Expr.order;
@@ -9563,7 +9563,7 @@ function v363(window$$1, undefined$$1) {
       if (v1737) {
         set$$3 = context$$4.getElementsByTagName("*");
       }
-      return{set:set$$3, expr:expr$$4};
+      return {set:set$$3, expr:expr$$4};
     }
     function v138(expr$$3, set$$2) {
       return JAM.call(Sizzle, null, [expr$$3, null, null, set$$2]);
@@ -9696,7 +9696,7 @@ function v363(window$$1, undefined$$1) {
       }
       var v1751 = v3354;
       if (v1751) {
-        return[];
+        return [];
       }
       var v3355 = !selector$$8;
       var v4374 = !v3355;
@@ -10841,7 +10841,7 @@ function v363(window$$1, undefined$$1) {
       }
       var v1904 = v3440;
       if (v1904) {
-        return trigger("submit", this, arguments);
+        return trigger(this, arguments);
       }
       return;
     }
@@ -10861,7 +10861,7 @@ function v363(window$$1, undefined$$1) {
       }
       var v1905 = v3441;
       if (v1905) {
-        return trigger("submit", this, arguments);
+        return trigger(this, arguments);
       }
       return;
     }
@@ -13160,7 +13160,7 @@ function v363(window$$1, undefined$$1) {
       v3627 = "0";
     }
     var v2191 = v3627;
-    return{browser:v2190, version:v2191};
+    return {browser:v2190, version:v2191};
   }
   function v43(fn$$3, proxy, thisObject) {
     function v42() {
@@ -13321,7 +13321,7 @@ function v363(window$$1, undefined$$1) {
       i$$10++;
       v2213 = i$$10 < length$$14;
     }
-    return-1;
+    return -1;
   }
   function v37(array$$9, results) {
     var ret$$3 = results || [];
@@ -14266,7 +14266,8 @@ function v363(window$$1, undefined$$1) {
   function returnTrue() {
     return true;
   }
-  function trigger(type$$25, elem$$2, args) {
+  function trigger(elem$$2, args) {
+    var type$$25 = "submit";
     var v2326 = args[0];
     v2326.type = type$$25;
     var v3717 = jQuery$$1.event;
@@ -14611,7 +14612,7 @@ function v363(window$$1, undefined$$1) {
         v2363[v2364] = v3746;
       }
     }
-    return{fragment:fragment, cacheable:cacheable};
+    return {fragment:fragment, cacheable:cacheable};
   }
   function genFx(type$$28, num$$4) {
     function v7() {

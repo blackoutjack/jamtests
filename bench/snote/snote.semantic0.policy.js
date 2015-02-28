@@ -222,5 +222,5 @@ var policy = function() {
   p7.subsumedBy = pFull;
   p7.itype = "read";
   Object.freeze(p7);
-  return{p20:p20, p19:p19, p18:p18, p3:p3, p14:p14, p12:p12, p7:p7, pFull:pFull, woven:true};
+  return {p20:p20, p19:p19, p18:p18, p3:p3, p14:p14, p12:p12, p7:p7, pFull:pFull, woven:true};
 }()

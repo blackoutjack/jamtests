@@ -356,7 +356,7 @@ function v484($$$4, undefined$$5) {
         }
         return vals$$1;
       } else {
-        return[];
+        return [];
       }
     }
     return;
@@ -993,7 +993,7 @@ function v452($$$3, undefined$$4) {
       }
       v713;
     }
-    return!this._mouseStarted;
+    return !this._mouseStarted;
   }
   function v443(event$$20) {
     function v442(event$$22) {
@@ -1225,7 +1225,7 @@ function v434($$$2, undefined$$3) {
     if (!v2659) {
       v2659 = event$$17.isDefaultPrevented();
     }
-    return!v2659;
+    return !v2659;
   }
   function v429(element$$11) {
     function v428(event$$16) {
@@ -1755,7 +1755,7 @@ function v434($$$2, undefined$$3) {
       return;
     }
     function v398(elem$$129) {
-      return!!JAM.call($$$2.data, $$$2, [elem$$129, fullName]);
+      return !!JAM.call($$$2.data, $$$2, [elem$$129, fullName]);
     }
     var fullName;
     var existingConstructor;
@@ -2099,11 +2099,11 @@ function v396($$$1, undefined$$2) {
     return focusable(element$$4, !isNaN(JAM.call($$$1.attr, $$$1, [element$$4, "tabindex"])));
   }
   function v378(elem$$126, i$$97, match$$37) {
-    return!!JAM.call($$$1.data, $$$1, [elem$$126, match$$37[3]]);
+    return !!JAM.call($$$1.data, $$$1, [elem$$126, match$$37[3]]);
   }
   function v377(dataName) {
     function v376(elem$$125) {
-      return!!JAM.call($$$1.data, $$$1, [elem$$125, dataName]);
+      return !!JAM.call($$$1.data, $$$1, [elem$$125, dataName]);
     }
     return v376;
   }
@@ -2171,7 +2171,7 @@ function v396($$$1, undefined$$2) {
   }
   function v370() {
     function v369() {
-      return/(auto|scroll)/.test(JAM.call($$$1.css, $$$1, [this, "overflow"]) + JAM.call($$$1.css, $$$1, [this, "overflow-y"]) + JAM.call($$$1.css, $$$1, [this, "overflow-x"]));
+      return /(auto|scroll)/.test(JAM.call($$$1.css, $$$1, [this, "overflow"]) + JAM.call($$$1.css, $$$1, [this, "overflow-y"]) + JAM.call($$$1.css, $$$1, [this, "overflow-x"]));
     }
     function v368() {
       var v930 = /(relative|absolute|fixed)/.test(JAM.call($$$1.css, $$$1, [this, "position"]));
@@ -2623,7 +2623,7 @@ function v363(window$$1, undefined$$1) {
       v4006 = 0;
     }
     parentOffset.left = v2831 + v4006;
-    return{top:offset$$8.top - parentOffset.top, left:offset$$8.left - parentOffset.left};
+    return {top:offset$$8.top - parentOffset.top, left:offset$$8.left - parentOffset.left};
   }
   function v351(elem$$119, options$$7, i$$93) {
     if (/static/.test(JAM.call(jQuery$$1.curCSS, jQuery$$1, [elem$$119, "position"]))) {
@@ -2669,7 +2669,7 @@ function v363(window$$1, undefined$$1) {
       }
       left$$6 = left$$6 + v4012;
     }
-    return{top:top$$3, left:left$$6};
+    return {top:top$$3, left:left$$6};
   }
   function v349() {
     var body$$3 = document$$1.body;
@@ -2846,7 +2846,7 @@ function v363(window$$1, undefined$$1) {
       top$$2 = top$$2 + JAM.call(Math.max, Math, [docElem$$1.scrollTop, body$$2.scrollTop]);
       left$$5 = left$$5 + JAM.call(Math.max, Math, [docElem$$1.scrollLeft, body$$2.scrollLeft]);
     }
-    return{top:top$$2, left:left$$5};
+    return {top:top$$2, left:left$$5};
   }
   function v346(options$$5) {
     function v345(i$$91) {
@@ -2919,7 +2919,7 @@ function v363(window$$1, undefined$$1) {
       v4043 = body$$1.scrollLeft;
     }
     var left$$4 = v2893 + v4043 - clientLeft;
-    return{top:top$$1, left:left$$4};
+    return {top:top$$1, left:left$$4};
   }
   function v344(elem$$116) {
     function v343(fn$$17) {
@@ -3234,7 +3234,7 @@ function v363(window$$1, undefined$$1) {
     return;
   }
   function v331(p$$2, n$$4, firstNum$$1, diff$$2) {
-    return(-Math.cos(p$$2 * Math.PI) / 2 + .5) * diff$$2 + firstNum$$1;
+    return (-Math.cos(p$$2 * Math.PI) / 2 + .5) * diff$$2 + firstNum$$1;
   }
   function v330(p$$1, n$$3, firstNum, diff$$1) {
     return firstNum + diff$$1 * p$$1;
@@ -4477,7 +4477,7 @@ function v363(window$$1, undefined$$1) {
   function v292() {
     function v291(i$$82, elem$$113) {
       function v290(val$$5, i$$83) {
-        return{name:elem$$113.name, value:val$$5};
+        return {name:elem$$113.name, value:val$$5};
       }
       var val$$4 = jQuery$$1(this).val();
       var v1302;
@@ -4581,7 +4581,7 @@ function v363(window$$1, undefined$$1) {
   }
   function v284(elem$$112) {
     var v3086 = jQuery$$1.expr.filters;
-    return!JAM.call(v3086.hidden, v3086, [elem$$112]);
+    return !JAM.call(v3086.hidden, v3086, [elem$$112]);
   }
   function v283(elem$$111) {
     var width$$9 = elem$$111.offsetWidth;
@@ -6211,7 +6211,7 @@ function v363(window$$1, undefined$$1) {
       return v1551;
     }
     function v205(a$$4, b$$3) {
-      return!!(a$$4.compareDocumentPosition(b$$3) & 16);
+      return !!(a$$4.compareDocumentPosition(b$$3) & 16);
     }
     function v204() {
       function v203(match$$34, context$$11, isXML$$10) {
@@ -6629,7 +6629,7 @@ function v363(window$$1, undefined$$1) {
       if (!v5285) {
         v5285 = elem$$70.getAttribute("class");
       }
-      return(" " + v5285 + " ").indexOf(match$$28) > -1;
+      return (" " + v5285 + " ").indexOf(match$$28) > -1;
     }
     function v186(elem$$69, match$$27) {
       var v3270 = match$$27 === "*";
@@ -6793,7 +6793,7 @@ function v363(window$$1, undefined$$1) {
       return i$$46 === 0;
     }
     function v174(elem$$57) {
-      return/input|select|textarea|button/i.test(elem$$57.nodeName);
+      return /input|select|textarea|button/i.test(elem$$57.nodeName);
     }
     function v173(elem$$56) {
       var v1642 = "button" === elem$$56.type;
@@ -6827,16 +6827,16 @@ function v363(window$$1, undefined$$1) {
       return "text" === elem$$48.type;
     }
     function v164(elem$$47) {
-      return/h\d/i.test(elem$$47.nodeName);
+      return /h\d/i.test(elem$$47.nodeName);
     }
     function v163(elem$$46, i$$45, match$$18) {
-      return!!JAM.call(Sizzle, null, [match$$18[3], elem$$46]).length;
+      return !!JAM.call(Sizzle, null, [match$$18[3], elem$$46]).length;
     }
     function v162(elem$$45) {
-      return!elem$$45.firstChild;
+      return !elem$$45.firstChild;
     }
     function v161(elem$$44) {
-      return!!elem$$44.firstChild;
+      return !!elem$$44.firstChild;
     }
     function v160(elem$$43) {
       return elem$$43.selected === true;
@@ -7296,7 +7296,7 @@ function v363(window$$1, undefined$$1) {
               }
               expr$$5 = expr$$5.replace(v1719, "");
               if (!anyFound) {
-                return[];
+                return [];
               }
               break;
             }
@@ -7322,7 +7322,7 @@ function v363(window$$1, undefined$$1) {
       var set$$3;
       var match$$6;
       if (!expr$$4) {
-        return[];
+        return [];
       }
       var i$$39 = 0;
       var l$$10 = Expr.order.length;
@@ -7364,7 +7364,7 @@ function v363(window$$1, undefined$$1) {
       if (!set$$3) {
         set$$3 = context$$4.getElementsByTagName("*");
       }
-      return{set:set$$3, expr:expr$$4};
+      return {set:set$$3, expr:expr$$4};
     }
     function v138(expr$$3, set$$2) {
       return JAM.call(Sizzle, null, [expr$$3, null, null, set$$2]);
@@ -7479,7 +7479,7 @@ function v363(window$$1, undefined$$1) {
         v3354 = context$$3.nodeType !== 9;
       }
       if (v3354) {
-        return[];
+        return [];
       }
       var v3355 = !selector$$8;
       if (!v3355) {
@@ -8414,7 +8414,7 @@ function v363(window$$1, undefined$$1) {
         v3440 = e$$13.keyCode === 13;
       }
       if (v3440) {
-        return trigger("submit", this, arguments);
+        return trigger(this, arguments);
       }
       return;
     }
@@ -8431,7 +8431,7 @@ function v363(window$$1, undefined$$1) {
         v3441 = JAM.call(v5032.closest, v5032, ["form"]).length;
       }
       if (v3441) {
-        return trigger("submit", this, arguments);
+        return trigger(this, arguments);
       }
       return;
     }
@@ -10253,7 +10253,7 @@ function v363(window$$1, undefined$$1) {
     if (!v3627) {
       v3627 = "0";
     }
-    return{browser:v2190, version:v3627};
+    return {browser:v2190, version:v3627};
   }
   function v43(fn$$3, proxy, thisObject) {
     function v42() {
@@ -10393,7 +10393,7 @@ function v363(window$$1, undefined$$1) {
       i$$10++;
       v2213 = i$$10 < length$$14;
     }
-    return-1;
+    return -1;
   }
   function v37(array$$9, results) {
     var ret$$3 = results || [];
@@ -10423,7 +10423,7 @@ function v363(window$$1, undefined$$1) {
     return ret$$3;
   }
   function v36(text$$7) {
-    return(text$$7 || "").replace(rtrim, "");
+    return (text$$7 || "").replace(rtrim, "");
   }
   function v35(object, callback$$27, args$$4) {
     var name$$34;
@@ -11001,7 +11001,7 @@ function v363(window$$1, undefined$$1) {
       return elem$$77 === qualifier === keep;
     }
     function v1(elem$$76, i$$59) {
-      return!!JAM.call(qualifier.call, qualifier, [elem$$76, i$$59, elem$$76]) === keep;
+      return !!JAM.call(qualifier.call, qualifier, [elem$$76, i$$59, elem$$76]) === keep;
     }
     if (JAM.call(jQuery$$1.isFunction, jQuery$$1, [qualifier])) {
       return JAM.call(jQuery$$1.grep, jQuery$$1, [elements, v1]);
@@ -11153,7 +11153,7 @@ function v363(window$$1, undefined$$1) {
     return v2324;
   }
   function now() {
-    return(new Date).getTime();
+    return (new Date).getTime();
   }
   function returnFalse() {
     return false;
@@ -11161,7 +11161,8 @@ function v363(window$$1, undefined$$1) {
   function returnTrue() {
     return true;
   }
-  function trigger(type$$25, elem$$2, args) {
+  function trigger(elem$$2, args) {
+    var type$$25 = "submit";
     args[0].type = type$$25;
     var v2327 = jQuery$$1.event.handle;
     return JAM.call(v2327.apply, v2327, [elem$$2, args]);
@@ -11438,7 +11439,7 @@ function v363(window$$1, undefined$$1) {
         v2363[v2364] = v3746;
       }
     }
-    return{fragment:fragment, cacheable:cacheable};
+    return {fragment:fragment, cacheable:cacheable};
   }
   function genFx(type$$28, num$$4) {
     function v7() {

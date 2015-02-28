@@ -17,7 +17,8 @@ function isInteger(s$$2) {
   }
   return true;
 }
-function stripCharsInBag(s$$3, bag) {
+function stripCharsInBag(s$$3) {
+  var bag = dtCh;
   var i$$2;
   var returnString = "";
   i$$2 = 0;
@@ -32,7 +33,8 @@ function stripCharsInBag(s$$3, bag) {
   }
   return returnString;
 }
-function daysInFebruary(year$$2) {
+function daysInFebruary() {
+  var year$$2 = year;
   var v4;
   var v54 = year$$2 % 4 == 0;
   if (v54) {
@@ -49,7 +51,8 @@ function daysInFebruary(year$$2) {
   }
   return v4;
 }
-function DaysArray(n$$1) {
+function DaysArray() {
+  var n$$1 = 12;
   var i$$3 = 1;
   var v7 = i$$3 <= n$$1;
   for (;v7;) {
@@ -78,7 +81,7 @@ function DaysArray(n$$1) {
   return this;
 }
 function isDate(dtStr) {
-  var daysInMonth = DaysArray(12);
+  var daysInMonth = DaysArray();
   var pos1 = dtStr.indexOf(dtCh);
   var pos2 = JAM.call(dtStr.indexOf, dtStr, [dtCh, pos1 + 1], JAM.policy.p1);
   var strMonth = JAM.call(dtStr.substring, dtStr, [0, pos1], JAM.policy.p1);
@@ -147,7 +150,7 @@ function isDate(dtStr) {
   if (!v66) {
     var v89 = month == 2;
     if (v89) {
-      v89 = day > daysInFebruary(year);
+      v89 = day > daysInFebruary();
     }
     v66 = v89;
   }
@@ -177,7 +180,7 @@ function isDate(dtStr) {
   }
   var v44 = JAM.call(dtStr.indexOf, dtStr, [dtCh, pos2 + 1], JAM.policy.p1) != -1;
   if (!v44) {
-    v44 = isInteger(stripCharsInBag(dtStr, dtCh)) == false;
+    v44 = isInteger(stripCharsInBag(dtStr)) == false;
   }
   if (v44) {
     alert("Please enter a valid date");

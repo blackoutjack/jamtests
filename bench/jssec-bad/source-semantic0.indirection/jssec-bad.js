@@ -1,4 +1,6 @@
-function snipDisplay(c, p) {
+function snipDisplay() {
+  var c = "c1";
+  var p = "s1";
   var v1;
   var v27 = document.getElementById(c);
   var v21 = v27.checked;
@@ -21,7 +23,7 @@ function snipDisplay(c, p) {
 }
 function initSnippets() {
   function v0() {
-    snipDisplay("c1", "s1");
+    snipDisplay();
     return;
   }
   var d = document;

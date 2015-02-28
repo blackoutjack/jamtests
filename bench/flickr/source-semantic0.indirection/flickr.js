@@ -31,7 +31,7 @@ function v316() {
     var v1367 = typeof onready_handler$$2;
     var v320 = v1367 == "undefined";
     if (v320) {
-      return false;
+      return;
     }
     var v1368 = document.readyState;
     var v325 = v1368 === "complete";
@@ -543,7 +543,7 @@ function v309() {
           node$$6 = JAM.call(Y$$1.one, Y$$1, [node$$6], JAM.policy.p1);
           var v390 = !node$$6;
           if (v390) {
-            return false;
+            return;
           }
           id$$2 = JAM.call(node$$6.get, node$$6, ["id"], JAM.policy.p1);
           targetY = JAM.call(node$$6.getY, node$$6, [], JAM.policy.p1);
@@ -560,7 +560,7 @@ function v309() {
             }
           } else {
             if (scrollAnimation) {
-              return false;
+              return;
             }
           }
           var v393 = !didFirstScroll;
@@ -1241,7 +1241,7 @@ function v309() {
           return;
         }
         if (isOldIE) {
-          return false;
+          return;
         }
         var v504 = JAM.call(Y$$1.one, Y$$1, ["window"], JAM.policy.p1);
         JAM.call(v504.on, v504, ["resize", resizeHandler, false], JAM.policy.p1);
@@ -2643,7 +2643,7 @@ function v268(F$$4) {
     var v3155 = dimensions$$1.height;
     var v1940 = v3155 - HEIGHT_TO_PHOTO_TOP;
     var v590 = v1940 - PHOTO_ATTRIBUTION_HEIGHT;
-    return{w:v589, h:v590};
+    return {w:v589, h:v590};
   }
   function v263() {
     var dimensions;
@@ -2672,7 +2672,7 @@ function v268(F$$4) {
     var v3158 = v3804 + PHOTO_ATTRIBUTION_HEIGHT;
     var v1947 = pixelRatio$$1 * v3158;
     var v594 = v1946 - v1947;
-    return{w:v593, h:v594};
+    return {w:v593, h:v594};
   }
   function v262(preventHighResolution) {
     var doc = window.document;
@@ -2726,7 +2726,7 @@ function v268(F$$4) {
     var v599 = v1950;
     if (v599) {
       var v598 = pixelRatio > 1;
-      return{height:h$$17, width:w$$13, isHighResolution:v598};
+      return {height:h$$17, width:w$$13, isHighResolution:v598};
     }
     return false;
   }
@@ -2784,7 +2784,7 @@ function v261(F$$3) {
     handleEvent(window, "hashchange", v259, true);
     return;
   }
-  function alignToAnchor(anchor, preventDelay) {
+  function alignToAnchor(anchor) {
     function v255() {
       var destination = elt$$1.offsetTop;
       var v603 = elt$$1.style;
@@ -2816,6 +2816,7 @@ function v261(F$$3) {
       JAM.call(window.scrollTo, window, [0, destination], JAM.policy.p1);
       return;
     }
+    var preventDelay;
     var v610;
     var v3162 = !preventDelay;
     if (v3162) {
@@ -3051,7 +3052,7 @@ function v252(e$$153, t$$150) {
         r$$106 = !1;
       }
     }
-    return!r$$106;
+    return !r$$106;
   }
   function v247(e$$165) {
     function i$$96(e$$166, t$$162) {
@@ -3092,7 +3093,7 @@ function v252(e$$153, t$$150) {
         r$$105 = !1;
       }
     }
-    return!r$$105;
+    return !r$$105;
   }
   function v246(e$$164) {
     var v1986 = e$$164.config;
@@ -5981,7 +5982,7 @@ function v231(e$$114, t$$103) {
     }
     var v778 = v2128;
     if (v778) {
-      return!1;
+      return !1;
     }
     var v779 = YUI.Env;
     var r$$84 = v779.cssStampEl;
@@ -7524,7 +7525,7 @@ function v231(e$$114, t$$103) {
     }
     var v879 = v2247;
     if (v879) {
-      return!1;
+      return !1;
     }
     r$$77 = a$$20.expanded_map;
     i$$68 = a$$20.after_map;
@@ -7534,7 +7535,7 @@ function v231(e$$114, t$$103) {
     }
     var v880 = v2248;
     if (v880) {
-      return!0;
+      return !0;
     }
     i$$68 = f$$17.after_map;
     var v2249 = i$$68;
@@ -7543,7 +7544,7 @@ function v231(e$$114, t$$103) {
     }
     var v881 = v2249;
     if (v881) {
-      return!1;
+      return !1;
     }
     var v882 = o$$30[t$$112];
     if (v882) {
@@ -7559,7 +7560,7 @@ function v231(e$$114, t$$103) {
         var v2252 = s$$51[n$$88];
         var v883 = JAM.call(this._requires, this, [e$$121, v2252], JAM.policy.p1);
         if (v883) {
-          return!0;
+          return !0;
         }
         n$$88++;
         var v2253 = s$$51.length;
@@ -7580,7 +7581,7 @@ function v231(e$$114, t$$103) {
         var v2256 = s$$51[n$$88];
         var v886 = JAM.call(this._requires, this, [t$$112, v2256], JAM.policy.p1);
         if (v886) {
-          return!1;
+          return !1;
         }
         n$$88++;
         var v2257 = s$$51.length;
@@ -8167,7 +8168,7 @@ function v173(e$$113, t$$101) {
       v914 = JAM.call(setTimeout, null, [f$$14, t$$102]);
     }
     var l$$9 = v914;
-    return{id:l$$9, interval:o$$26, cancel:v171};
+    return {id:l$$9, interval:o$$26, cancel:v171};
   }
   var n$$80 = [];
   e$$113.later = v172;
@@ -8525,7 +8526,7 @@ function v165(e$$90, t$$77) {
         r$$64 = !1;
       }
     }
-    return!r$$64;
+    return !r$$64;
   }
   function v160(e$$103) {
     function i$$57(e$$104, t$$92) {
@@ -8566,7 +8567,7 @@ function v165(e$$90, t$$77) {
         r$$63 = !1;
       }
     }
-    return!r$$63;
+    return !r$$63;
   }
   function v159(e$$102) {
     var v2323 = e$$102.config;
@@ -10088,7 +10089,7 @@ function v113(e$$36, t$$24) {
       }
       var v1027 = n$$47 < i$$40;
       if (v1027) {
-        return-1;
+        return -1;
       }
       var v1028 = n$$47 > i$$40;
       if (v1028) {
@@ -10564,7 +10565,7 @@ function v113(e$$36, t$$24) {
     var v3570 = Object(e$$74);
     var v2423 = JAM.call(E$$2.keys, E$$2, [v3570], JAM.policy.p1);
     var v1042 = v2423.length;
-    return!v1042;
+    return !v1042;
   }
   function v108(t$$55, n$$45, r$$40) {
     var i$$38;
@@ -10640,11 +10641,11 @@ function v113(e$$36, t$$24) {
         var v2431 = t$$53[s$$24];
         var v1052 = JAM.call(n$$43.call, n$$43, [v2430, v2431, s$$24, t$$53], JAM.policy.p1);
         if (v1052) {
-          return!0;
+          return !0;
         }
       }
     }
-    return!1;
+    return !1;
   }
   function v105(t$$52, n$$42, r$$37, i$$35) {
     var s$$23;
@@ -11082,12 +11083,12 @@ function v113(e$$36, t$$24) {
       }
       var v1095 = v2460;
       if (v1095) {
-        return!0;
+        return !0;
       }
       ++r$$31;
       v1096 = r$$31 < i$$29;
     }
-    return!1;
+    return !1;
   }
   function v83(e$$63, t$$39, n$$33) {
     var v1097 = d$$5.some;
@@ -11135,7 +11136,7 @@ function v113(e$$36, t$$24) {
       ++n$$32;
       v1099 = n$$32 < r$$30;
     }
-    return-1;
+    return -1;
   }
   function v80(e$$60, t$$36, n$$31) {
     var v1100 = d$$5.indexOf;
@@ -11345,10 +11346,10 @@ function v113(e$$36, t$$24) {
       case "null":
       ;
       case "undefined":
-        return!1;
+        return !1;
       default:
         var v1114 = !t$$28;
-        return!v1114;
+        return !v1114;
     }
     return;
   }
@@ -11436,7 +11437,7 @@ function v113(e$$36, t$$24) {
     }
     var v2486 = v3614;
     var v1123 = !v2486;
-    return!v1123;
+    return !v1123;
   }
   function m$$3(e$$37, t$$25, n$$25) {
     var r$$22;
@@ -11468,7 +11469,7 @@ function v113(e$$36, t$$24) {
         return i$$24;
       }
     }
-    return[e$$37];
+    return [e$$37];
   }
   function g$$3() {
     JAM.call(this._init, this, [], JAM.policy.p1);
@@ -12655,7 +12656,7 @@ function v53() {
                 var v2554 = JAM.call(c$$2._attach, c$$2, [o$$6], JAM.policy.p1);
                 var v1191 = !v2554;
                 if (v1191) {
-                  return!1;
+                  return !1;
                 }
                 break;
               }
@@ -12677,7 +12678,7 @@ function v53() {
                 var v2558 = JAM.call(c$$2._attach, c$$2, [a$$5, v3714], JAM.policy.p1);
                 var v1194 = !v2558;
                 if (v1194) {
-                  return!1;
+                  return !1;
                 }
                 break;
               }
@@ -12698,7 +12699,7 @@ function v53() {
               } catch (w$$8) {
                 var v2561 = "Attach error: " + r$$11;
                 JAM.call(c$$2.error, c$$2, [v2561, w$$8, r$$11], JAM.policy.p1);
-                return!1;
+                return !1;
               }
             }
           }
@@ -12714,7 +12715,7 @@ function v53() {
                 var v2564 = JAM.call(c$$2._attach, c$$2, [u$$3], JAM.policy.p1);
                 var v1199 = !v2564;
                 if (v1199) {
-                  return!1;
+                  return !1;
                 }
                 break;
               }
@@ -12728,7 +12729,7 @@ function v53() {
       n$$15++;
       v1204 = n$$15 < m$$1;
     }
-    return!0;
+    return !0;
   }
   function v33(e$$21, t$$13, n$$14, r$$10) {
     r$$10 = r$$10 || {};
@@ -13199,7 +13200,8 @@ function v53() {
     }
     return;
   }
-  function w$$7(e$$13, t$$5) {
+  function w$$7(e$$13) {
+    var t$$5;
     var v1225 = e$$13.Env;
     var n$$7 = v1225._loader;
     var r$$4 = ["loader-base"];
@@ -13626,7 +13628,7 @@ function v21(F$$2) {
     var v2608 = typeof onready_handler;
     var v1268 = v2608 === "undefined";
     if (v1268) {
-      return false;
+      return;
     }
     var v2609 = document.readyState;
     var v1273 = v2609 === "complete";

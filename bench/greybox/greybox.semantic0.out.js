@@ -499,7 +499,7 @@ function v193(cb) {
   return;
 }
 function v192(t$$2, b$$1, c$$2, d$$4) {
-  return-c$$2 / 2 * (JAM.call(Math.cos, Math, [Math.PI * t$$2 / d$$4], JAM.policy.p1) - 1) + b$$1;
+  return -c$$2 / 2 * (JAM.call(Math.cos, Math, [Math.PI * t$$2 / d$$4], JAM.policy.p1) - 1) + b$$1;
 }
 function v191(t$$1, b, c$$1, d$$3) {
   return c$$1 * t$$1 / d$$3 + b;
@@ -1298,17 +1298,17 @@ function v110(doc) {
       }
     }
   }
-  return{"w":win_w, "h":win_h};
+  return {"w":win_w, "h":win_h};
 }
 function v109(elm$$34) {
   if (!elm$$34) {
-    return{x:0, y:0};
+    return {x:0, y:0};
   }
   if (elm$$34.scrollLeft) {
-    return{x:elm$$34.scrollLeft, y:elm$$34.scrollTop};
+    return {x:elm$$34.scrollLeft, y:elm$$34.scrollTop};
   } else {
     if (elm$$34.clientX) {
-      return{x:elm$$34.clientX, y:elm$$34.clientY};
+      return {x:elm$$34.clientX, y:elm$$34.clientY};
     }
   }
   var posObj = {"x":elm$$34.offsetLeft, "y":elm$$34.offsetTop};
@@ -1368,7 +1368,7 @@ function v107(e$$9) {
       posy = e$$9.clientY + document.body.scrollTop + document.documentElement.scrollTop;
     }
   }
-  return{x:posx, y:posy};
+  return {x:posx, y:posy};
 }
 function v106(date$$1) {
   function leadingZero(nr) {
@@ -1380,10 +1380,10 @@ function v106(date$$1) {
   var year$$1 = date$$1.getUTCFullYear();
   var dd = date$$1.getUTCDate();
   var mm = date$$1.getUTCMonth() + 1;
-  return'"' + year$$1 + "-" + mm + "-" + dd + "T" + leadingZero(date$$1.getUTCHours()) + ":" + leadingZero(date$$1.getUTCMinutes()) + ":" + leadingZero(date$$1.getUTCSeconds()) + '"';
+  return '"' + year$$1 + "-" + mm + "-" + dd + "T" + leadingZero(date$$1.getUTCHours()) + ":" + leadingZero(date$$1.getUTCMinutes()) + ":" + leadingZero(date$$1.getUTCSeconds()) + '"';
 }
 function v105(o$$4) {
-  return('"' + o$$4.replace(/(["\\])/g, "\\$1") + '"').replace(/[\f]/g, "\\f").replace(/[\b]/g, "\\b").replace(/[\n]/g, "\\n").replace(/[\t]/g, "\\t").replace(/[\r]/g, "\\r");
+  return ('"' + o$$4.replace(/(["\\])/g, "\\$1") + '"').replace(/[\f]/g, "\\f").replace(/[\b]/g, "\\b").replace(/[\n]/g, "\\n").replace(/[\t]/g, "\\t").replace(/[\r]/g, "\\r");
 }
 function v104(data$$19) {
   var post_data = [];
@@ -1752,7 +1752,7 @@ function v73() {
   return;
 }
 function v69(elm$$26) {
-  return!JAM.call(AJS.isElementHidden, AJS, [elm$$26], JAM.policy.p1);
+  return !JAM.call(AJS.isElementHidden, AJS, [elm$$26], JAM.policy.p1);
 }
 function v68(elm$$25) {
   var v700 = elm$$25.style.display == "none";
@@ -2300,7 +2300,7 @@ function v14(elm$$2, list$$2, eval_fn) {
     i$$4++;
     v781 = i$$4 < list$$2.length;
   }
-  return-1;
+  return -1;
 }
 function v13(elm$$1, list$$1) {
   var i$$3 = JAM.call(AJS.getIndex, AJS, [elm$$1, list$$1], JAM.policy.p1);
@@ -2349,9 +2349,9 @@ function v9(v) {
     return v;
   } else {
     if (!v) {
-      return[];
+      return [];
     } else {
-      return[v];
+      return [v];
     }
   }
   return;
@@ -2411,7 +2411,7 @@ function insertHeader() {
   JAM.call(AJS.DI, AJS, [tmpl_header], JAM.policy.p1);
   return;
 }
-function insertMenu(current_page) {
+function insertMenu() {
   function v0(item$$1) {
     if (item$$1.className == current_page) {
       JAM.call(AJS.addClass, AJS, [JAM.call(AJS.$bytc, AJS, ["a", null, item$$1])[0], "current"], JAM.policy.p1);
@@ -2424,6 +2424,7 @@ function insertMenu(current_page) {
     JAM.call(AJS.ACN, AJS, [item, JAM.call(AJS.A, AJS, [{href:LINKS[cls$$3]}, name$$33], JAM.policy.p1)], JAM.policy.p1);
     return item;
   }
+  var current_page = "examples";
   var menu = JAM.call(AJS.UL, AJS, [{id:"menu"}], JAM.policy.p1);
   var items = [create_item("installation", "Installation"), create_item("examples", "Examples"), create_item("nrm_usage", "Normal usage"), create_item("adv_usage", "Advance usage"), create_item("cmpr", "Compressing GreyBox"), create_item("about", "About")];
   JAM.call(AJS.map, AJS, [items, v0], JAM.policy.p1);
@@ -2513,4 +2514,4 @@ GB_showImageSet = v239;
 GB_Sets = JAM.call(GB_Gallery.extend, GB_Gallery, [{init:v240, showSet:v241, updateStatus:v242, _setCaption:v243, updateFrame:v244, switchPrev:v245, switchNext:v246}], JAM.policy.p1);
 JAM.call(AJS.AEV, AJS, [window, "load", v247], JAM.policy.p1);
 insertHeader();
-insertMenu("examples")
+insertMenu()

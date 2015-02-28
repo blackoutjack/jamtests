@@ -2,7 +2,7 @@ predicate-limit:0
 syntax-only:false
 policy-files:[/home/rich/cs/jam/tests/bench/sms2-color-align-prop/sms2.policy]
 sms2-color-align-prop.original.js:6294
-sms2-color-align-prop.normalized.js:9730
+sms2-color-align-prop.normalized.js:9713
 policy.aut:346
 allFunctions:74
 allCallsites:427
@@ -14,8 +14,8 @@ returns-added-edges:2808
 returns-added-states:2670
 callbacks-added-edges:2957
 callbacks-added-states:2671
-concrete-query-cache:concrete580747811.bin
-symbolic-query-cache:symbolic580747811.bin
+concrete-query-cache:concrete-2090903052.bin
+symbolic-query-cache:symbolic-2090903052.bin
 modular.policy.js:852
 policy.js:2667
 transactions:289
@@ -23,4 +23,4 @@ checks:1271
 callsites-indirected:294
 property-write-indirection:3
 property-read-indirection:0
-temporary-variables-collapsed:713
+temporary-variables-collapsed:710

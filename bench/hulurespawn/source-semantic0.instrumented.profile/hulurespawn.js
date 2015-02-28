@@ -61,7 +61,7 @@ function v392() {
   }
   function v386() {
     var v397 = !store$$1;
-    return!v397;
+    return !v397;
   }
   function v385() {
     var i$$66 = 0;
@@ -224,12 +224,12 @@ function v392() {
     return;
   }
   function v371() {
-    var JSCompiler_temp$$1;
+    var JSCompiler_temp$$3;
     var v3058 = window.ActiveXObject;
     var v2088 = !v3058;
-    var v413 = JSCompiler_temp$$1 = !v2088;
+    var v413 = JSCompiler_temp$$3 = !v2088;
     if (v413) {
-      var JSCompiler_inline_result$$2;
+      var JSCompiler_inline_result$$4;
       JSCompiler_inline_label_msieVersion_86: {
         var reg$$inline_85 = /MSIE ([0-9]+[\.0-9]*)/;
         var v3059 = navigator.appName;
@@ -243,14 +243,14 @@ function v392() {
         var v412 = v2089;
         if (v412) {
           var v411 = RegExp.$1;
-          JSCompiler_inline_result$$2 = parseFloat(v411);
+          JSCompiler_inline_result$$4 = parseFloat(v411);
           break JSCompiler_inline_label_msieVersion_86;
         }
-        JSCompiler_inline_result$$2 = 0;
+        JSCompiler_inline_result$$4 = 0;
       }
-      JSCompiler_temp$$1 = JSCompiler_inline_result$$2 >= 7;
+      JSCompiler_temp$$3 = JSCompiler_inline_result$$4 >= 7;
     }
-    return JSCompiler_temp$$1;
+    return JSCompiler_temp$$3;
   }
   function v370() {
     function v369(key$$34) {
@@ -1271,7 +1271,7 @@ function v322(GLOBAL$$1) {
   function v309(event$$19) {
     var v2141 = window.Event;
     var v518 = event$$19 instanceof v2141;
-    return!v518;
+    return !v518;
   }
   function isIELegacyEvent(event$$18) {
     return false;
@@ -1429,7 +1429,7 @@ function v322(GLOBAL$$1) {
   function pointer(event$$11) {
     var v532 = pointerX(event$$11);
     var v533 = pointerY(event$$11);
-    return{x:v532, y:v533};
+    return {x:v532, y:v533};
   }
   function pointerX(event$$12) {
     var docElement = document.documentElement;
@@ -2367,7 +2367,7 @@ function v298() {
     }
     return v642;
   }
-  return{input:input$$1, inputSelector:inputSelector, textarea:valueSelector, select:select$$3, selectOne:selectOne, selectMany:selectMany, optionValue:optionValue, button:valueSelector};
+  return {input:input$$1, inputSelector:inputSelector, textarea:valueSelector, select:select$$3, selectOne:selectOne, selectMany:selectMany, optionValue:optionValue, button:valueSelector};
 }
 function v297(element$$162) {
   introspect(JAM.policy.p1) {
@@ -2581,7 +2581,7 @@ function v285(form$$8) {
   function v284(element$$151) {
     var v662 = element$$151.tagName;
     introspect(JAM.policy.p1) {
-      return/^(?:input|select|textarea)$/i.test(v662);
+      return /^(?:input|select|textarea)$/i.test(v662);
     }
   }
   function v283(element$$150) {
@@ -2961,7 +2961,7 @@ function v269() {
     }
     var v2229 = v3135 & 16;
     var v702 = !v2229;
-    return!v702;
+    return !v702;
   }
   function v265(a$$10, b$$4) {
     var v703 = a$$10 !== b$$4;
@@ -3566,7 +3566,7 @@ function v269() {
     for (;cur$$4;) {
       var v765 = cur$$4 === b$$3;
       if (v765) {
-        return-1;
+        return -1;
       }
       cur$$4 = cur$$4.nextSibling;
     }
@@ -3604,7 +3604,7 @@ function v269() {
     } else {
       var v771 = !aup;
       if (v771) {
-        return-1;
+        return -1;
       } else {
         var v770 = !bup;
         if (v770) {
@@ -4116,7 +4116,7 @@ function v269() {
   function v231(elem$$25) {
     var v820 = elem$$25.nodeName;
     introspect(JAM.policy.p1) {
-      return/input|select|textarea|button/i.test(v820);
+      return /input|select|textarea|button/i.test(v820);
     }
   }
   function v230(elem$$24) {
@@ -4257,7 +4257,7 @@ function v269() {
   function v221(elem$$15) {
     var v833 = elem$$15.nodeName;
     introspect(JAM.policy.p1) {
-      return/h\d/i.test(v833);
+      return /h\d/i.test(v833);
     }
   }
   function v220(elem$$14, i$$39, match$$27) {
@@ -4267,16 +4267,16 @@ function v269() {
     }
     var v2329 = v3194.length;
     var v834 = !v2329;
-    return!v834;
+    return !v834;
   }
   function v219(elem$$13) {
     var v835 = elem$$13.firstChild;
-    return!v835;
+    return !v835;
   }
   function v218(elem$$12) {
     var v2330 = elem$$12.firstChild;
     var v836 = !v2330;
-    return!v836;
+    return !v836;
   }
   function v217(elem$$11) {
     var v837 = elem$$11.selected;
@@ -4967,7 +4967,7 @@ function v269() {
             }
             var v909 = !anyFound;
             if (v909) {
-              return[];
+              return [];
             }
             break;
           }
@@ -4997,7 +4997,7 @@ function v269() {
     var set$$3;
     var v916 = !expr$$6;
     if (v916) {
-      return[];
+      return [];
     }
     var i$$33 = 0;
     var v917 = Expr.order;
@@ -5067,7 +5067,7 @@ function v269() {
       }
       set$$3 = v926;
     }
-    return{set:set$$3, expr:expr$$6};
+    return {set:set$$3, expr:expr$$6};
   }
   function v194(node$$15, expr$$5) {
     var v3232 = [node$$15];
@@ -5110,7 +5110,7 @@ function v269() {
         }
       }
     }
-    return results$$14;
+    return;
   }
   function v191() {
     baseHasDuplicate = false;
@@ -5203,7 +5203,7 @@ function v269() {
     }
     var v941 = v2396;
     if (v941) {
-      return[];
+      return [];
     }
     var v2397 = !selector$$1;
     var v3240 = !v2397;
@@ -5832,7 +5832,7 @@ function v190() {
   }
   var v1016 = v2441;
   var v1017 = Element.extend;
-  return{select:select$$1, match:match$$11, find:find, extendElements:v1016, extendElement:v1017};
+  return {select:select$$1, match:match$$11, find:find, extendElements:v1016, extendElement:v1017};
 }
 function v189() {
   var v1018 = $A(arguments);
@@ -5865,7 +5865,7 @@ function v188() {
     introspect(JAM.policy.p1) {
       var v1022 = this.getHeight()
     }
-    return{width:v1021, height:v1022};
+    return {width:v1021, height:v1022};
   }
   function getWidth$$1() {
     var v1023 = getRootElement();
@@ -6092,7 +6092,7 @@ function v187() {
   function v182() {
     var v1048 = this.left;
     var v1049 = this.top;
-    return[v1048, v1049];
+    return [v1048, v1049];
   }
   function v181() {
     introspect(JAM.policy.p1) {
@@ -6464,7 +6464,7 @@ function v187() {
       }
       var v1084 = value$$84 != null;
       if (v1084) {
-        var JSCompiler_inline_result$$0;
+        var JSCompiler_inline_result$$2;
         var key$$inline_31 = key$$26;
         introspect(JAM.policy.p1) {
           var v1083 = key$$inline_31.include("border")
@@ -6473,10 +6473,10 @@ function v187() {
           key$$inline_31 = key$$inline_31 + "-width";
         }
         introspect(JAM.policy.p1) {
-          JSCompiler_inline_result$$0 = key$$inline_31.camelize();
+          JSCompiler_inline_result$$2 = key$$inline_31.camelize();
         }
         introspect(JAM.policy.p2) {
-          css$$2[JSCompiler_inline_result$$0] = value$$84 + "px";
+          css$$2[JSCompiler_inline_result$$2] = value$$84 + "px";
         }
       }
       return;
@@ -6607,7 +6607,7 @@ function v187() {
       return;
     }
     var element$$113 = this.element;
-    var JSCompiler_inline_result$$4;
+    var JSCompiler_inline_result$$1;
     JSCompiler_inline_label_isDisplayed_30: {
       var element$$inline_28 = element$$113;
       var v2494 = element$$inline_28;
@@ -6621,7 +6621,7 @@ function v187() {
         }
         var v1096 = display$$inline_29 === "none";
         if (v1096) {
-          JSCompiler_inline_result$$4 = false;
+          JSCompiler_inline_result$$1 = false;
           break JSCompiler_inline_label_isDisplayed_30;
         }
         var v1097 = element$$inline_28.parentNode;
@@ -6634,9 +6634,9 @@ function v187() {
         }
         v1098 = v2495;
       }
-      JSCompiler_inline_result$$4 = true;
+      JSCompiler_inline_result$$1 = true;
     }
-    if (JSCompiler_inline_result$$4) {
+    if (JSCompiler_inline_result$$1) {
       introspect(JAM.policy.p1) {
         this._setPrepared(true);
       }
@@ -7145,7 +7145,7 @@ function v187() {
     if (v1165) {
       var v1163 = element$$93.offsetWidth;
       var v1164 = element$$93.offsetHeight;
-      return{width:v1163, height:v1164};
+      return {width:v1163, height:v1164};
     }
     var style$$9 = element$$93.style;
     var v1166 = style$$9.visibility;
@@ -8105,22 +8105,22 @@ function v134(GLOBAL) {
         v1266[tagName$$2] = v3951;
       }
     }
-    var JSCompiler_inline_result$$3;
+    var JSCompiler_inline_result$$0;
     JSCompiler_inline_label_shouldUseCreationCache_7: {
       var v1268 = tagName$$2 === "select";
       if (v1268) {
-        JSCompiler_inline_result$$3 = false;
+        JSCompiler_inline_result$$0 = false;
         break JSCompiler_inline_label_shouldUseCreationCache_7;
       }
       var v1269 = "type" in attributes$$1;
       if (v1269) {
-        JSCompiler_inline_result$$3 = false;
+        JSCompiler_inline_result$$0 = false;
         break JSCompiler_inline_label_shouldUseCreationCache_7;
       }
-      JSCompiler_inline_result$$3 = true;
+      JSCompiler_inline_result$$0 = true;
     }
     var v1270;
-    if (JSCompiler_inline_result$$3) {
+    if (JSCompiler_inline_result$$0) {
       var v2611 = ELEMENT_CACHE[tagName$$2];
       introspect(JAM.policy.p1) {
         v1270 = v2611.cloneNode(false);
@@ -9237,7 +9237,7 @@ function v134(GLOBAL) {
     }
     var v2668 = v3367;
     var v1405 = !v2668;
-    return!v1405;
+    return !v1405;
   }
   function classNames$$1(element$$46) {
     var v1406 = Element$$1.ClassNames;
@@ -9743,7 +9743,8 @@ function v134(GLOBAL) {
     }
     return value$$69;
   }
-  function checkElementPrototypeDeficiency(tagName$$7) {
+  function checkElementPrototypeDeficiency() {
+    var tagName$$7 = "object";
     var v3383 = window.Element;
     var v2708 = typeof v3383;
     var v1471 = v2708 === "undefined";
@@ -10364,7 +10365,7 @@ function v134(GLOBAL) {
     v1571.prototype = DIV["__proto__"];
     F.ElementExtensions = true;
   }
-  var HTMLOBJECTELEMENT_PROTOTYPE_BUGGY = checkElementPrototypeDeficiency("object");
+  var HTMLOBJECTELEMENT_PROTOTYPE_BUGGY = checkElementPrototypeDeficiency();
   var EXTENDED = {};
   var v1574 = F.SpecificElementExtensions;
   if (v1574) {
@@ -11459,7 +11460,7 @@ function v74() {
     var v1699 = this.end;
     return value$$60 <= v1699;
   }
-  return{initialize:initialize$$1, _each:_each$$2, include:include$$2};
+  return {initialize:initialize$$1, _each:_each$$2, include:include$$2};
 }
 function v73() {
   function toColorPart() {
@@ -11471,7 +11472,7 @@ function v73() {
     return this + 1;
   }
   function times$$1(iterator$$23, context$$23) {
-    var v1700 = $R(0, this, true);
+    var v1700 = $R(this);
     introspect(JAM.policy.p1) {
       v1700.each(iterator$$23, context$$23);
     }
@@ -11509,7 +11510,7 @@ function v73() {
       return Math.floor(this);
     }
   }
-  return{toColorPart:toColorPart, succ:succ$$1, times:times$$1, toPaddedString:toPaddedString, abs:abs, round:round, ceil:ceil, floor:floor};
+  return {toColorPart:toColorPart, succ:succ$$1, times:times$$1, toPaddedString:toPaddedString, abs:abs, round:round, ceil:ceil, floor:floor};
 }
 function v72() {
   function initialize(object$$23) {
@@ -11712,7 +11713,7 @@ function v72() {
   function clone$$2() {
     return new Hash(this);
   }
-  return{initialize:initialize, _each:_each$$1, set:set, get:get, unset:unset, toObject:toObject, toTemplateReplacements:toObject, keys:keys$$2, values:values$$6, index:index$$54, merge:merge$$1, update:update$$1, toQueryString:toQueryString$$1, inspect:inspect$$4, toJSON:toObject, clone:clone$$2};
+  return {initialize:initialize, _each:_each$$1, set:set, get:get, unset:unset, toObject:toObject, toTemplateReplacements:toObject, keys:keys$$2, values:values$$6, index:index$$54, merge:merge$$1, update:update$$1, toQueryString:toQueryString$$1, inspect:inspect$$4, toJSON:toObject, clone:clone$$2};
 }
 function v67() {
   function v66() {
@@ -11788,7 +11789,7 @@ function v67() {
       introspect(JAM.policy.p1) {
         var v1737 = values$$5.include(value$$50)
       }
-      return!v1737;
+      return !v1737;
     }
     introspect(JAM.policy.p1) {
       var values$$5 = slice$$2.call(arguments, 0)
@@ -11886,7 +11887,7 @@ function v67() {
     var length$$18 = v1744 >>> 0;
     var v1745 = length$$18 === 0;
     if (v1745) {
-      return-1;
+      return -1;
     }
     i$$6 = Number(i$$6);
     var v1749 = isNaN(i$$6);
@@ -11918,7 +11919,7 @@ function v67() {
     }
     var v1750 = i$$6 > length$$18;
     if (v1750) {
-      return-1;
+      return -1;
     }
     var v1751;
     var v2859 = i$$6 >= 0;
@@ -11948,7 +11949,7 @@ function v67() {
       k++;
       v1753 = k < length$$18;
     }
-    return-1;
+    return -1;
   }
   function lastIndexOf(item$$2, i$$7) {
     var v1754 = this == null;
@@ -11960,7 +11961,7 @@ function v67() {
     var length$$19 = v1755 >>> 0;
     var v1756 = length$$19 === 0;
     if (v1756) {
-      return-1;
+      return -1;
     }
     introspect(JAM.policy.p1) {
       var v2861 = Object.isUndefined(i$$7)
@@ -12026,7 +12027,7 @@ function v67() {
       k$$1--;
       v1764 = k$$1 >= 0;
     }
-    return-1;
+    return -1;
   }
   function concat(_) {
     var array$$17 = [];
@@ -12685,7 +12686,7 @@ function v59() {
     introspect(JAM.policy.p1) {
       this.each(v53, this);
     }
-    return[trues, falses];
+    return [trues, falses];
   }
   function pluck(property$$4) {
     function v54(value$$44) {
@@ -12744,7 +12745,7 @@ function v59() {
       introspect(JAM.policy.p1) {
         var v1845 = iterator$$14.call(context$$15, value$$46, index$$51, this)
       }
-      return{value:value$$46, criteria:v1845};
+      return {value:value$$46, criteria:v1845};
     }
     introspect(JAM.policy.p1) {
       var v2911 = this.map(v56, this)
@@ -12810,7 +12811,7 @@ function v59() {
     var v1851 = "#<Enumerable:" + v2914;
     return v1851 + ">";
   }
-  return{each:each, eachSlice:eachSlice, all:all, every:all, any:any, some:any, collect:collect, map:collect, detect:detect, findAll:findAll, select:findAll, filter:findAll, grep:grep, include:include$$1, member:include$$1, inGroupsOf:inGroupsOf, inject:inject, invoke:invoke, max:max, min:min, partition:partition, pluck:pluck, reject:reject, sortBy:sortBy, toArray:toArray$$1, entries:toArray$$1, zip:zip, size:size$$4, inspect:inspect$$2, find:detect};
+  return {each:each, eachSlice:eachSlice, all:all, every:all, any:any, some:any, collect:collect, map:collect, detect:detect, findAll:findAll, select:findAll, filter:findAll, grep:grep, include:include$$1, member:include$$1, inGroupsOf:inGroupsOf, inject:inject, invoke:invoke, max:max, min:min, partition:partition, pluck:pluck, reject:reject, sortBy:sortBy, toArray:toArray$$1, entries:toArray$$1, zip:zip, size:size$$4, inspect:inspect$$2, find:detect};
 }
 function v40(object$$16) {
   function v39(match$$5) {
@@ -13208,7 +13209,7 @@ function v37() {
     }
     var v1895 = !match$$3;
     if (v1895) {
-      return{};
+      return {};
     }
     var v2943 = match$$3[1];
     var v2944 = separator || "&";
@@ -13369,7 +13370,7 @@ function v37() {
       str$$8 = str$$8.replace(/(?:^|:|,)(?:\s*\[)+/g, "");
     }
     introspect(JAM.policy.p1) {
-      return/^[\],:{}\s]*$/.test(str$$8);
+      return /^[\],:{}\s]*$/.test(str$$8);
     }
   }
   function evalJSON(sanitize) {
@@ -13458,7 +13459,7 @@ function v37() {
   }
   function blank() {
     introspect(JAM.policy.p1) {
-      return/^\s*$/.test(this);
+      return /^\s*$/.test(this);
     }
   }
   function interpolate(object$$15, pattern$$7) {
@@ -13495,7 +13496,7 @@ function v37() {
     v2965 = evalJSON;
   }
   var v1924 = v2965;
-  return{gsub:gsub, sub:sub, scan:scan, truncate:truncate, strip:v1923, stripTags:stripTags, stripScripts:stripScripts, extractScripts:extractScripts, evalScripts:evalScripts, escapeHTML:escapeHTML, unescapeHTML:unescapeHTML, toQueryParams:toQueryParams, parseQuery:toQueryParams, toArray:toArray, succ:succ, times:times, camelize:camelize, capitalize:capitalize, underscore:underscore, dasherize:dasherize, inspect:inspect$$1, unfilterJSON:unfilterJSON, isJSON:isJSON, evalJSON:v1924, include:include, 
+  return {gsub:gsub, sub:sub, scan:scan, truncate:truncate, strip:v1923, stripTags:stripTags, stripScripts:stripScripts, extractScripts:extractScripts, evalScripts:evalScripts, escapeHTML:escapeHTML, unescapeHTML:unescapeHTML, toQueryParams:toQueryParams, parseQuery:toQueryParams, toArray:toArray, succ:succ, times:times, camelize:camelize, capitalize:capitalize, underscore:underscore, dasherize:dasherize, inspect:inspect$$1, unfilterJSON:unfilterJSON, isJSON:isJSON, evalJSON:v1924, include:include, 
   startsWith:startsWith, endsWith:endsWith, empty:empty, blank:blank, interpolate:interpolate};
 }
 function v28(value$$30) {
@@ -14132,7 +14133,7 @@ function v14() {
     }
     var v2996 = v3527;
     var v1979 = !v2996;
-    return!v1979;
+    return !v1979;
   }
   function isArray(object$$8) {
     introspect(JAM.policy.p1) {
@@ -14422,7 +14423,7 @@ function v12() {
   }
   var IS_DONTENUM_BUGGY = v11();
   var v2015 = {addMethods:addMethods};
-  return{create:create, Methods:v2015};
+  return {create:create, Methods:v2015};
 }
 function v4(x$$47) {
   return x$$47;
@@ -14470,7 +14471,7 @@ function v1() {
   }
   var v3014 = v3542;
   var v2019 = !v3014;
-  return!v2019;
+  return !v2019;
 }
 function v0() {
   var ua = navigator.userAgent;
@@ -14506,12 +14507,12 @@ function v0() {
   introspect(JAM.policy.p1) {
     var v2024 = /Apple.*Mobile/.test(ua)
   }
-  return{IE:v2021, Opera:isOpera, WebKit:v2022, Gecko:v2023, MobileSafari:v2024};
+  return {IE:v2021, Opera:isOpera, WebKit:v2022, Gecko:v2023, MobileSafari:v2024};
 }
 function $A(iterable) {
   var v2025 = !iterable;
   if (v2025) {
-    return[];
+    return [];
   }
   var v3020 = Object(iterable);
   var v2026 = "toArray" in v3020;
@@ -14544,7 +14545,7 @@ function $w(string) {
   }
   var v2029 = !v3022;
   if (v2029) {
-    return[];
+    return [];
   }
   introspect(JAM.policy.p1) {
     string = string.strip();
@@ -14562,7 +14563,9 @@ function $w(string) {
 function $H(object$$22) {
   return new Hash(object$$22);
 }
-function $R(start$$4, end$$1, exclusive) {
+function $R(end$$1) {
+  var start$$4 = 0;
+  var exclusive = true;
   return new ObjectRange(start$$4, end$$1, exclusive);
 }
 var v2031 = v0();

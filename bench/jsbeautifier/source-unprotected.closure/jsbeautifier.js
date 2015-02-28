@@ -54,7 +54,6 @@ function do_js_beautify() {
     document.getElementById("content").value = js_beautify(unpacker_filter(js_source), {indent_size:indent_size, indent_char:indent_char, preserve_newlines:preserve_newlines, brace_style:brace_style$$1, keep_array_indentation:keep_array_indentation, space_after_anon_function:true});
   }
   document.getElementById("beautify").disabled = false;
-  return false;
 }
 function get_var(name$$30) {
   var reg = new RegExp("[\\?&]" + name$$30 + "=([^&#]*)");

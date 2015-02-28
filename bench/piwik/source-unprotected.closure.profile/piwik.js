@@ -221,14 +221,16 @@ var Piwik = Piwik || function() {
   function J(N$$1, M$$1, L$$1, i$$6) {
     if (N$$1.addEventListener) {
       N$$1.addEventListener(M$$1, L$$1, i$$6);
-      return true;
+      return;
     }
     if (N$$1.attachEvent) {
-      return N$$1.attachEvent("on" + M$$1, L$$1);
+      N$$1.attachEvent("on" + M$$1, L$$1);
+      return;
     }
     N$$1["on" + M$$1] = L$$1;
   }
-  function E(M$$2, P) {
+  function E(M$$2) {
+    var P;
     var L$$2 = "";
     var O;
     var N$$2;
@@ -469,7 +471,7 @@ var Piwik = Piwik || function() {
         M$$9 = b$$1(i$$17);
       }
     }
-    return[M$$9, i$$17, L$$10];
+    return [M$$9, i$$17, L$$10];
   }
   function r$$2(L$$11) {
     var i$$18 = L$$11.length;
@@ -646,7 +648,7 @@ var Piwik = Piwik || function() {
           return be$$10;
         }
       }
-      return{};
+      return {};
     }
     function a0() {
       var be$$11 = new Date;
@@ -679,7 +681,7 @@ var Piwik = Piwik || function() {
         } catch (bf$$11) {
         }
       }
-      return["", "", 0, ""];
+      return ["", "", 0, ""];
     }
     function am(bg$$8, bF, bG, bi$$2) {
       var bD;
@@ -1092,7 +1094,7 @@ var Piwik = Piwik || function() {
     var at;
     a7();
     aC();
-    return{getVisitorId:function() {
+    return {getVisitorId:function() {
       return L$$15()[1];
     }, getVisitorInfo:function() {
       return L$$15();
@@ -1287,7 +1289,8 @@ var Piwik = Piwik || function() {
       ai$$1(function() {
         var bh$$inline_27 = bg$$27;
         var bf$$inline_28 = bf$$38;
-        var bg$$inline_30 = am("search=" + g$$1(be$$68) + (bh$$inline_27 ? "&search_cat=" + g$$1(bh$$inline_27) : "") + (p$$3(bf$$inline_28) ? "&search_count=" + bf$$inline_28 : ""), void 0, "sitesearch");
+        var bi$$inline_29;
+        var bg$$inline_30 = am("search=" + g$$1(be$$68) + (bh$$inline_27 ? "&search_cat=" + g$$1(bh$$inline_27) : "") + (p$$3(bf$$inline_28) ? "&search_count=" + bf$$inline_28 : ""), bi$$inline_29, "sitesearch");
         aq(bg$$inline_30, aF);
       });
     }, setEcommerceView:function(bh$$19, be$$69, bg$$28, bf$$39) {
@@ -1334,7 +1337,7 @@ var Piwik = Piwik || function() {
     }};
   }
   function o$$3() {
-    return{push:G};
+    return {push:G};
   }
   var e$$5;
   var a$$1 = {};
@@ -1358,7 +1361,7 @@ var Piwik = Piwik || function() {
     G(_paq[D]);
   }
   _paq = new o$$3;
-  return{addPlugin:function(i$$23, L$$16) {
+  return {addPlugin:function(i$$23, L$$16) {
     a$$1[i$$23] = L$$16;
   }, getTracker:function(i$$24, L$$17) {
     return new t$$2(i$$24, L$$17);

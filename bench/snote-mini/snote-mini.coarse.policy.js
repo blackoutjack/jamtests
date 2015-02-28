@@ -37,5 +37,5 @@ var policy = function() {
   }
   pFull.subsumedBy = pFull;
   Object.freeze(pFull);
-  return{pFull:pFull};
+  return {pFull:pFull};
 }()

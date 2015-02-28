@@ -201,24 +201,6 @@ function getHTMLLink($info, $name) {
   return $html;
 }
 
-// Add the specified value to the |$dest| array.
-function findFile($info, $filetype, $key, &$dest) {
-  $sub = $info[$key];
-  if (isset($sub[$filetype])) return $sub[$filetype];
-
-  $keyparts = explode('.', $key);
-  for ($i=sizeof($keyparts)-1; $i>=0; $i--) {
-    $subkey = $keyparts[$i];
-    if (isset($info[$subkey]) and isset($info[$subkey][$filetype])) {
-      $dest[$filetype] = $info[$subkey][$filetype];
-    }
-  }
-
-  if (isset($info['main']) and isset($info['main'][$filetype])) {
-    $dest[$filetype] = $info['main'][$filetype];
-  }
-}
-
 function findPolicies($info, $key) {
   $ret = array();
 
@@ -290,9 +272,20 @@ foreach ($srcinfo as $okey => $sub) {
         }
       }
 
+      $mainhtml = $htmlinfo['main'];
       foreach ($htmlinfo as $hkey => $hsub) {
-        findFile($htmlinfo, 'head', $okey, $sub);
-        findFile($htmlinfo, 'body', $okey, $sub);
+        if (isset($hsub['head'])) {
+          $sub['head'] = $hsub['head'];
+        } else if ($hkey !== 'main' && isset($mainhtml['head'])) {
+          $sub['head'] = $mainhtml['head'];
+        }
+
+        if (isset($hsub['body'])) {
+          $sub['body'] = $hsub['body'];
+        } else if ($hkey !== 'main' && isset($mainhtml['body'])) {
+          $sub['body'] = $mainhtml['body'];
+        }
+
         if ($hkey == 'main') {
           $dkey = $key;
         } else {

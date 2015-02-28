@@ -78,7 +78,7 @@ var policy = function() {
   }
   p17.subsumedBy = pFull;
   Object.freeze(p17);
-  function p10(tx) {
+  function p11(tx) {
     var commit = true;
     var as = tx.getCallSequence();
     var len = as.length;
@@ -95,9 +95,9 @@ var policy = function() {
       JAM.prevent(tx);
     }
   }
-  p10.subsumedBy = pFull;
-  p10.itype = "call";
-  Object.freeze(p10);
+  p11.subsumedBy = pFull;
+  p11.itype = "call";
+  Object.freeze(p11);
   function p14(tx) {
     var commit = true;
     var as = tx.getCallSequence();
@@ -213,7 +213,7 @@ var policy = function() {
   }
   p16.subsumedBy = pFull;
   Object.freeze(p16);
-  function p11(tx) {
+  function p12(tx) {
     var commit = true;
     var as = tx.getCallSequence();
     var len = as.length;
@@ -230,8 +230,8 @@ var policy = function() {
       JAM.prevent(tx);
     }
   }
-  p11.subsumedBy = pFull;
-  p11.itype = "call";
-  Object.freeze(p11);
-  return{p17:p17, p10:p10, p14:p14, p27:p27, p15:p15, p13:p13, p16:p16, p11:p11, pFull:pFull, woven:true};
+  p12.subsumedBy = pFull;
+  p12.itype = "call";
+  Object.freeze(p12);
+  return {p17:p17, p11:p11, p14:p14, p27:p27, p15:p15, p13:p13, p16:p16, p12:p12, pFull:pFull, woven:true};
 }()

@@ -200,7 +200,6 @@ function closeWindow() {
   outputWindow.document.write("</body>\n</html>\n");
   outputWindow.status = "Done.";
   outputWindow.document.close();
-  return true;
 }
 function convertDegenerates(sequence$$1) {
   sequence$$1 = sequence$$1.toLowerCase();
@@ -274,7 +273,7 @@ function getFuzzySearchTitle(fastaSequenceTitleOne, sequenceOne, fastaSequenceTi
     stringToReturn$$1 = stringToReturn$$1 + '"' + fastaSequenceTitleTwo + '"';
   }
   stringToReturn$$1 = stringToReturn$$1 + ' starting "' + sequenceTwo.substring(0, 10) + '"';
-  return'<div class="info">' + stringToReturn$$1 + "</div>\n";
+  return '<div class="info">' + stringToReturn$$1 + "</div>\n";
 }
 function getGeneticCodeMatchExp(arrayOfPatterns$$3) {
   var geneticCodeMatchExp$$1 = new Array(arrayOfPatterns$$3.length);
@@ -299,7 +298,7 @@ function getInfoFromTitleAndSequence(fastaSequenceTitle$$1, sequence$$3) {
     stringToReturn$$2 = stringToReturn$$2 + '"' + fastaSequenceTitle$$1 + '"';
   }
   stringToReturn$$2 = stringToReturn$$2 + ' starting "' + sequence$$3.substring(0, 10) + '"';
-  return'<div class="info">' + stringToReturn$$2 + "</div>\n";
+  return '<div class="info">' + stringToReturn$$2 + "</div>\n";
 }
 function getInfoFromTitleAndSequenceAndTopology(fastaSequenceTitle$$2, sequence$$4, topology) {
   var stringToReturn$$3 = "Results for " + topology + " " + sequence$$4.length + " residue sequence ";
@@ -307,7 +306,7 @@ function getInfoFromTitleAndSequenceAndTopology(fastaSequenceTitle$$2, sequence$
     stringToReturn$$3 = stringToReturn$$3 + '"' + fastaSequenceTitle$$2 + '"';
   }
   stringToReturn$$3 = stringToReturn$$3 + ' starting "' + sequence$$4.substring(0, 10) + '"';
-  return'<div class="info">' + stringToReturn$$3 + "</div>\n";
+  return '<div class="info">' + stringToReturn$$3 + "</div>\n";
 }
 function getPairwiseAlignTitle(fastaSequenceTitleOne$$1, sequenceOne$$1, fastaSequenceTitleTwo$$1, sequenceTwo$$1) {
   var stringToReturn$$4 = "Alignment results for " + sequenceOne$$1.length + " residue sequence ";
@@ -320,7 +319,7 @@ function getPairwiseAlignTitle(fastaSequenceTitleOne$$1, sequenceOne$$1, fastaSe
     stringToReturn$$4 = stringToReturn$$4 + '"' + fastaSequenceTitleTwo$$1 + '"';
   }
   stringToReturn$$4 = stringToReturn$$4 + ' starting "' + sequenceTwo$$1.substring(0, 10) + '"';
-  return'<div class="info">' + stringToReturn$$4 + "</div>\n";
+  return '<div class="info">' + stringToReturn$$4 + "</div>\n";
 }
 function getRandomSequence(components, lengthOut) {
   var sequenceArray = new Array;
@@ -369,10 +368,12 @@ function openTextArea() {
   outputWindow.document.write('<br /><textarea rows="6" cols="61">\n');
   return true;
 }
-function openWindow(title$$5) {
-  _openWindow(title$$5, true);
+function openWindow() {
+  var title$$5 = "PCR Primer Stats";
+  _openWindow(title$$5);
 }
-function _openWindow(title$$6, isColor) {
+function _openWindow(title$$6) {
+  var isColor = true;
   outputWindow = window.open("", "my_new_window", "toolbar=no, location=no, directories=no, status=yes, menubar=yes, scrollbars=yes, resizable=yes, copyhistory=no, width=800, height=400");
   outputWindow.focus();
   outputWindow.document.write('<!DOCTYPE html PUBLIC "-//W3C//DTD XHTML 1.0 Transitional//EN" "http://www.w3.org/TR/xhtml1/DTD/xhtml1-transitional.dtd">\n' + '<html lang="en">\n' + "<head>\n" + "<title>Sequence Manipulation Suite</title>\n" + '<meta http-equiv="Content-Type" content="text/html; charset=ISO-8859-1" />\n');
@@ -387,12 +388,12 @@ function _openWindow(title$$6, isColor) {
   }
   outputWindow.document.write("</head>\n" + '<body class="main">\n' + '<div class="title">' + title$$6 + " results</div>\n");
   outputWindow.status = "Please Wait.";
-  return true;
 }
 function openWindowAlign(title$$7) {
-  _openWindowAlign(title$$7, true);
+  _openWindowAlign(title$$7);
 }
-function _openWindowAlign(title$$8, isBackground) {
+function _openWindowAlign(title$$8) {
+  var isBackground = true;
   outputWindow = window.open("", "my_new_window", "toolbar=no, location=no, directories=no, status=yes, menubar=yes, scrollbars=yes, resizable=yes, copyhistory=no, width=800, height=400");
   outputWindow.focus();
   outputWindow.document.write('<!DOCTYPE html PUBLIC "-//W3C//DTD XHTML 1.0 Transitional//EN" "http://www.w3.org/TR/xhtml1/DTD/xhtml1-transitional.dtd">\n' + '<html lang="en">\n' + "<head>\n" + "<title>Sequence Manipulation Suite</title>\n" + '<meta http-equiv="Content-Type" content="text/html; charset=ISO-8859-1" />\n');
@@ -407,7 +408,6 @@ function _openWindowAlign(title$$8, isBackground) {
   }
   outputWindow.document.write("</head>\n" + '<body class="main">\n' + '<div class="title">' + title$$8 + " results</div>\n");
   outputWindow.status = "Please Wait.";
-  return true;
 }
 function removeFormatting(sequence$$5) {
   return sequence$$5.replace(/[\d\s]/g, "");
@@ -588,10 +588,11 @@ function writeGroupNum(text$$10, tabIn$$1, groupSize, basePerLine, startBase, st
   return true;
 }
 function writeGroupNumDna(text$$11, tabIn$$2, groupSize$$1, basePerLine$$1, startBase$$1, stopBase$$1, strands, numberPosition) {
-  writeGroupNumDnaSetStart(text$$11, tabIn$$2, groupSize$$1, basePerLine$$1, startBase$$1, stopBase$$1, strands, numberPosition, 0);
+  writeGroupNumDnaSetStart(text$$11, tabIn$$2, groupSize$$1, basePerLine$$1, startBase$$1, stopBase$$1, strands, numberPosition);
   return true;
 }
-function writeGroupNumDnaSetStart(text$$12, tabIn$$3, groupSize$$2, basePerLine$$2, startBase$$2, stopBase$$2, strands$$1, numberPosition$$1, numberingAdjustment) {
+function writeGroupNumDnaSetStart(text$$12, tabIn$$3, groupSize$$2, basePerLine$$2, startBase$$2, stopBase$$2, strands$$1, numberPosition$$1) {
+  var numberingAdjustment = 0;
   function adjustNumbering(original, adjustment) {
     var adjusted = original + adjustment;
     if (adjustment < 0 && adjusted >= 0) {
@@ -656,7 +657,6 @@ function writeGroupNumDnaSetStart(text$$12, tabIn$$3, groupSize$$2, basePerLine$
     aboveNum = "";
     lineOfText$$1 = "";
   }
-  return true;
 }
 function writeGroupNumProtein(text$$13, tabIn$$4, groupSize$$3, basePerLine$$3, startBase$$3, stopBase$$3, numberPosition$$2) {
   var i$$7 = parseInt(startBase$$3);
@@ -865,7 +865,8 @@ function writeShuffledSequence(sequence$$17) {
   outputWindow.document.write(tempSeq + "\n");
   return true;
 }
-function pcrPrimerStats(theDocument) {
+function pcrPrimerStats() {
+  var theDocument = document;
   var newDna = "";
   var title$$9 = "";
   var maxInput$$3 = 5E3;
@@ -875,16 +876,16 @@ function pcrPrimerStats(theDocument) {
   var nanoMolarPrimerTotal = 200;
   var isPhosphorylated = false;
   if (testScript() == false) {
-    return false;
+    return;
   }
   if (checkFormElement(theDocument.forms[0].elements[0]) == false || checkSequenceLength(theDocument.forms[0].elements[0].value, maxInput$$3) == false) {
-    return false;
+    return;
   }
   molarSalt = milliMolarSalt / 1E3;
   molarMagnesium = milliMolarMagnesium / 1E3;
   molarPrimerTotal = nanoMolarPrimerTotal / 1E9;
   isPhosphorylated = false;
-  openWindow("PCR Primer Stats");
+  openWindow();
   openPre();
   var arrayOfFasta$$1 = getArrayOfFasta(theDocument.forms[0].elements[0].value);
   outputWindow.document.write("Global settings:\n");
@@ -910,9 +911,9 @@ function pcrPrimerStats(theDocument) {
       continue;
     }
     var percentGC = _percentGC(newDna);
-    var nearestNeighborTm = _nearestNeighborTm(newDna, molarSalt, molarPrimerTotal, molarMagnesium);
-    var selfCompHash = _getSelfComplementarityReport(newDna, 3, 50);
-    var hairpinHash = _getHairpinReport(newDna, 3, 50);
+    var nearestNeighborTm = _nearestNeighborTm(newDna);
+    var selfCompHash = _getSelfComplementarityReport(newDna);
+    var hairpinHash = _getHairpinReport(newDna);
     outputWindow.document.write("------------------------------------------------------------\n");
     outputWindow.document.write("General properties:\n");
     outputWindow.document.write("-------------------\n");
@@ -925,17 +926,17 @@ function pcrPrimerStats(theDocument) {
     outputWindow.document.write(rightNum("nmol/A260:", "", 32, "") + _nmolPerA260(newDna) + "\n");
     outputWindow.document.write(rightNum("micrograms/A260:", "", 32, "") + _microgramsPerA260(newDna, isPhosphorylated) + "\n");
     outputWindow.document.write(rightNum("Basic Tm (degrees C):", "", 32, "") + _basicTm(newDna) + "\n");
-    outputWindow.document.write(rightNum("Salt adjusted Tm (degrees C):", "", 32, "") + _molarSaltAdjustedTm(newDna, molarSalt) + "\n");
+    outputWindow.document.write(rightNum("Salt adjusted Tm (degrees C):", "", 32, "") + _molarSaltAdjustedTm(newDna) + "\n");
     outputWindow.document.write(rightNum("Nearest neighbor Tm (degrees C):", "", 32, "") + nearestNeighborTm + "\n");
     outputWindow.document.write("\n");
     outputWindow.document.write("PCR suitability tests (Pass / Warning):\n");
     outputWindow.document.write("------------------------------------\n");
-    outputWindow.document.write(rightNum("Single base runs:", "", 32, "") + _getBaseRunsReport(newDna, 5) + "\n");
-    outputWindow.document.write(rightNum("Dinucleotide base runs:", "", 32, "") + _getDiNucleotideRunsReport(newDna, 5) + "\n");
+    outputWindow.document.write(rightNum("Single base runs:", "", 32, "") + _getBaseRunsReport(newDna) + "\n");
+    outputWindow.document.write(rightNum("Dinucleotide base runs:", "", 32, "") + _getDiNucleotideRunsReport(newDna) + "\n");
     outputWindow.document.write(rightNum("Length:", "", 32, "") + _getSuitableLengthReport(newDna, 14, 30) + "\n");
-    outputWindow.document.write(rightNum("Percent GC:", "", 32, "") + _getSuitableGCReport(newDna, percentGC, 40, 60) + "\n");
-    outputWindow.document.write(rightNum("Tm (Nearest neighbor):", "", 32, "") + _getSuitableTmReport(newDna, nearestNeighborTm, 50, 58) + "\n");
-    outputWindow.document.write(rightNum("GC clamp:", "", 32, "") + _getSuitableThreePrimeGC(newDna, 1, 3) + "\n");
+    outputWindow.document.write(rightNum("Percent GC:", "", 32, "") + _getSuitableGCReport(newDna, percentGC) + "\n");
+    outputWindow.document.write(rightNum("Tm (Nearest neighbor):", "", 32, "") + _getSuitableTmReport(newDna, nearestNeighborTm) + "\n");
+    outputWindow.document.write(rightNum("GC clamp:", "", 32, "") + _getSuitableThreePrimeGC(newDna) + "\n");
     outputWindow.document.write(rightNum("Self-annealing:", "", 32, "") + selfCompHash["report"] + "\n");
     if (selfCompHash["report"] != "Pass") {
       outputWindow.document.write(rightNum(":", "", 32, "") + selfCompHash["upper"] + "\n");
@@ -953,7 +954,6 @@ function pcrPrimerStats(theDocument) {
   }
   closePre();
   closeWindow();
-  return true;
 }
 function _removeNonPrimer(sequence$$18) {
   sequence$$18.replace(/u/g, "t");
@@ -1077,7 +1077,7 @@ function _percentGC(sequence$$28) {
 }
 function _percentGCNonDegen(sequence$$29) {
   var numHits = _getBaseCount(sequence$$29, "g") + _getBaseCount(sequence$$29, "c");
-  return(numHits / sequence$$29.length * 100).toFixed(2);
+  return (numHits / sequence$$29.length * 100).toFixed(2);
 }
 function _percentGCDegen(sequence$$30) {
   var lowerBoundsSequence$$2 = sequence$$30;
@@ -1167,11 +1167,11 @@ function _basicTmNonDegen(sequence$$36) {
     var numC$$1 = _getBaseCount(sequence$$36, "c");
     var numA$$1 = _getBaseCount(sequence$$36, "a");
     var numT$$1 = _getBaseCount(sequence$$36, "t");
-    return(4 * (numG$$1 + numC$$1) + 2 * (numA$$1 + numT$$1)).toFixed(0);
+    return (4 * (numG$$1 + numC$$1) + 2 * (numA$$1 + numT$$1)).toFixed(0);
   } else {
     numG$$1 = _getBaseCount(sequence$$36, "g");
     numC$$1 = _getBaseCount(sequence$$36, "c");
-    return(64.9 + 41 * (numG$$1 + numC$$1 - 16.4) / sequence$$36.length).toFixed(0);
+    return (64.9 + 41 * (numG$$1 + numC$$1 - 16.4) / sequence$$36.length).toFixed(0);
   }
 }
 function _basicTmDegen(sequence$$37) {
@@ -1201,7 +1201,8 @@ function _basicTmDegen(sequence$$37) {
   upperBoundsSequence$$4 = upperBoundsSequence$$4.replace(/n/gi, "g");
   return _basicTmNonDegen(lowerBoundsSequence$$4) + " to " + _basicTmNonDegen(upperBoundsSequence$$4);
 }
-function _molarSaltAdjustedTm(sequence$$38, molarSalt$$1) {
+function _molarSaltAdjustedTm(sequence$$38) {
+  var molarSalt$$1 = molarSalt;
   if (_containsOnlyNonDegenerates(sequence$$38)) {
     return _molarSaltAdjustedTmNonDegen(sequence$$38, molarSalt$$1);
   } else {
@@ -1211,7 +1212,7 @@ function _molarSaltAdjustedTm(sequence$$38, molarSalt$$1) {
 function _molarSaltAdjustedTmNonDegen(sequence$$39, molarSalt$$2) {
   var gcHits = _getBaseCount(sequence$$39, "g") + _getBaseCount(sequence$$39, "c");
   var pGC = gcHits / sequence$$39.length * 100;
-  return(81.5 + 7.21 * Math.log(molarSalt$$2) + .41 * pGC - 675 / sequence$$39.length).toFixed(0);
+  return (81.5 + 7.21 * Math.log(molarSalt$$2) + .41 * pGC - 675 / sequence$$39.length).toFixed(0);
 }
 function _molarSaltAdjustedTmDegen(sequence$$40, molarSalt$$3) {
   var lowerBoundsSequence$$5 = sequence$$40;
@@ -1240,7 +1241,10 @@ function _molarSaltAdjustedTmDegen(sequence$$40, molarSalt$$3) {
   upperBoundsSequence$$5 = upperBoundsSequence$$5.replace(/n/gi, "g");
   return _molarSaltAdjustedTmNonDegen(lowerBoundsSequence$$5, molarSalt$$3) + " to " + _molarSaltAdjustedTmNonDegen(upperBoundsSequence$$5, molarSalt$$3);
 }
-function _nearestNeighborTm(sequence$$41, molarSalt$$4, molarPrimerTotal$$1, molarMagnesium$$1) {
+function _nearestNeighborTm(sequence$$41) {
+  var molarSalt$$4 = molarSalt;
+  var molarPrimerTotal$$1 = molarPrimerTotal;
+  var molarMagnesium$$1 = molarMagnesium;
   if (_containsOnlyNonDegenerates(sequence$$41)) {
     return _nearestNeighborTmNonDegen(sequence$$41, molarSalt$$4, molarPrimerTotal$$1, molarMagnesium$$1);
   } else {
@@ -1267,7 +1271,7 @@ function _nearestNeighborTmNonDegen(sequence$$42, molarSalt$$5, molarPrimerTotal
     ds = ds + dsValues[sequence$$42.charAt(i$$13) + sequence$$42.charAt(i$$13 + 1)];
     dh = dh + dhValues[sequence$$42.charAt(i$$13) + sequence$$42.charAt(i$$13 + 1)];
   }
-  return(1E3 * dh / (ds + R * Math.log(molarPrimerTotal$$2 / 2)) - 273.15).toFixed(2);
+  return (1E3 * dh / (ds + R * Math.log(molarPrimerTotal$$2 / 2)) - 273.15).toFixed(2);
 }
 function _nearestNeighborTmDegen(sequence$$43, molarSalt$$6, molarPrimerTotal$$3, molarMagnesium$$3) {
   var lowerBoundsSequence$$6 = sequence$$43;
@@ -1388,7 +1392,8 @@ function _getSingleExtinctionCoefficients() {
   hash$$5["c"] = 7.4;
   return hash$$5;
 }
-function _getBaseRunsReport(sequence$$45, minRunLength) {
+function _getBaseRunsReport(sequence$$45) {
+  var minRunLength = 5;
   var report = "";
   var hasRun = false;
   var nucleotides = ["G", "A", "T", "C"];
@@ -1405,7 +1410,8 @@ function _getBaseRunsReport(sequence$$45, minRunLength) {
     return "Pass";
   }
 }
-function _getDiNucleotideRunsReport(sequence$$46, minRunLength$$1) {
+function _getDiNucleotideRunsReport(sequence$$46) {
+  var minRunLength$$1 = 5;
   var report$$1 = "";
   var hasRun$$1 = false;
   var diNucleotides = ["GA", "GT", "GC", "AG", "AT", "AC", "TG", "TA", "TC", "CG", "CA", "CT"];
@@ -1447,7 +1453,9 @@ function _getSuitableLengthReport(sequence$$48, minSuitableLength, maxSuitableLe
     return "Pass";
   }
 }
-function _getSuitableGCReport(sequence$$49, percentGCRange, minSuitableGC, maxSuitableGC) {
+function _getSuitableGCReport(sequence$$49, percentGCRange) {
+  var minSuitableGC = 40;
+  var maxSuitableGC = 60;
   var report$$3 = "";
   var hasProblem$$1 = false;
   var lowerCalculated;
@@ -1491,7 +1499,9 @@ function _getSuitableLengthReport(sequence$$50, minSuitableLength$$1, maxSuitabl
     return "Pass";
   }
 }
-function _getSuitableTmReport(sequence$$51, range$$5, minSuitable, maxSuitable) {
+function _getSuitableTmReport(sequence$$51, range$$5) {
+  var minSuitable = 50;
+  var maxSuitable = 58;
   var report$$5 = "";
   var hasProblem$$3 = false;
   var lowerCalculated$$1;
@@ -1518,7 +1528,9 @@ function _getSuitableTmReport(sequence$$51, range$$5, minSuitable, maxSuitable) 
     return "Pass";
   }
 }
-function _getSuitableThreePrimeGC(sequence$$52, minSuitable$$1, maxSuitable$$1) {
+function _getSuitableThreePrimeGC(sequence$$52) {
+  var minSuitable$$1 = 1;
+  var maxSuitable$$1 = 3;
   var threePrimeEnd;
   var desiredThreePrimeEndSize = 5;
   var report$$6 = "";
@@ -1544,7 +1556,9 @@ function _getSuitableThreePrimeGC(sequence$$52, minSuitable$$1, maxSuitable$$1) 
     return "Pass";
   }
 }
-function _getSelfComplementarityReport(sequence$$53, maxContig, maxPercentIdent) {
+function _getSelfComplementarityReport(sequence$$53) {
+  var maxContig = 3;
+  var maxPercentIdent = 50;
   var matchScore = 1;
   var mismatchScore = -1;
   var gapPenalty = 99;
@@ -1610,7 +1624,9 @@ function _getSelfComplementarityReport(sequence$$53, maxContig, maxPercentIdent)
   returnHash["divider"] = divider.join("");
   return returnHash;
 }
-function _getHairpinReport(sequence$$54, maxContig$$1, maxPercentIdent$$1) {
+function _getHairpinReport(sequence$$54) {
+  var maxContig$$1 = 3;
+  var maxPercentIdent$$1 = 50;
   var upper = sequence$$54;
   upper = upper.match(/./g);
   var loop = "";
@@ -1929,7 +1945,7 @@ document.onload = function() {
 };
 document.getElementById("submitbtn").onclick = function() {
   try {
-    pcrPrimerStats(document);
+    pcrPrimerStats();
   } catch (e$$5) {
     alert("The following error was encountered: " + e$$5);
   }

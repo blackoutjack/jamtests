@@ -25,7 +25,7 @@ function refreshSwatch() {
   function winnow(elements, qualifier, keep) {
     if (jQuery$$1.isFunction(qualifier)) {
       return jQuery$$1.grep(elements, function(elem$$76, i$$59) {
-        return!!qualifier.call(elem$$76, i$$59, elem$$76) === keep;
+        return !!qualifier.call(elem$$76, i$$59, elem$$76) === keep;
       });
     } else {
       if (qualifier.nodeType) {
@@ -116,7 +116,7 @@ function refreshSwatch() {
     return length$$11 ? fn(elems[0], key$$14) : undefined$$1;
   }
   function now() {
-    return(new Date).getTime();
+    return (new Date).getTime();
   }
   function returnFalse() {
     return false;
@@ -124,7 +124,8 @@ function refreshSwatch() {
   function returnTrue() {
     return true;
   }
-  function trigger(type$$25, elem$$2, args) {
+  function trigger(elem$$2, args) {
+    var type$$25 = "submit";
     args[0].type = type$$25;
     return jQuery$$1.event.handle.apply(elem$$2, args);
   }
@@ -191,7 +192,7 @@ function refreshSwatch() {
     return "live." + (type$$26 && type$$26 !== "*" ? type$$26 + "." : "") + selector.replace(/\./g, "`").replace(/ /g, "&");
   }
   function isDisconnected(node$$2) {
-    return!node$$2 || !node$$2.parentNode || node$$2.parentNode.nodeType === 11;
+    return !node$$2 || !node$$2.parentNode || node$$2.parentNode.nodeType === 11;
   }
   function cloneCopyEvent(orig, ret) {
     var i$$4 = 0;
@@ -236,7 +237,7 @@ function refreshSwatch() {
     if (cacheable) {
       jQuery$$1.fragments[args$$2[0]] = cacheresults ? fragment : 1;
     }
-    return{fragment:fragment, cacheable:cacheable};
+    return {fragment:fragment, cacheable:cacheable};
   }
   function genFx(type$$28, num$$4) {
     var obj$$16 = {};
@@ -326,7 +327,7 @@ function refreshSwatch() {
           return jQuery$$1.merge(this, selector$$2);
         } else {
           if (!context$$1 || context$$1.jquery) {
-            return(context$$1 || rootjQuery).find(selector$$2);
+            return (context$$1 || rootjQuery).find(selector$$2);
           } else {
             return jQuery$$1(context$$1).find(selector$$2);
           }
@@ -567,7 +568,7 @@ function refreshSwatch() {
     }
     return object;
   }, trim:function(text$$7) {
-    return(text$$7 || "").replace(rtrim, "");
+    return (text$$7 || "").replace(rtrim, "");
   }, makeArray:function(array$$9, results) {
     var ret$$3 = results || [];
     if (array$$9 != null) {
@@ -589,7 +590,7 @@ function refreshSwatch() {
         return i$$10;
       }
     }
-    return-1;
+    return -1;
   }, merge:function(first$$1, second) {
     var i$$11 = first$$1.length;
     var j$$1 = 0;
@@ -652,7 +653,7 @@ function refreshSwatch() {
   }, uaMatch:function(ua) {
     ua = ua.toLowerCase();
     var match$$2 = /(webkit)[ \/]([\w.]+)/.exec(ua) || /(opera)(?:.*version)?[ \/]([\w.]+)/.exec(ua) || /(msie) ([\w.]+)/.exec(ua) || !/compatible/.test(ua) && /(mozilla)(?:.*? rv:([\w.]+))?/.exec(ua) || [];
-    return{browser:match$$2[1] || "", version:match$$2[2] || "0"};
+    return {browser:match$$2[1] || "", version:match$$2[2] || "0"};
   }, browser:{}});
   browserMatch = jQuery$$1.uaMatch(userAgent);
   if (browserMatch.browser) {
@@ -1018,7 +1019,7 @@ function refreshSwatch() {
       var elem$$18 = this[0];
       if (elem$$18) {
         if (jQuery$$1.nodeName(elem$$18, "option")) {
-          return(elem$$18.attributes.value || {}).specified ? elem$$18.value : elem$$18.text;
+          return (elem$$18.attributes.value || {}).specified ? elem$$18.value : elem$$18.text;
         }
         if (jQuery$$1.nodeName(elem$$18, "select")) {
           var index$$39 = elem$$18.selectedIndex;
@@ -1045,7 +1046,7 @@ function refreshSwatch() {
         if (rradiocheck.test(elem$$18.type) && !jQuery$$1.support.checkOn) {
           return elem$$18.getAttribute("value") === null ? "on" : elem$$18.value;
         }
-        return(elem$$18.value || "").replace(rreturn, "");
+        return (elem$$18.value || "").replace(rreturn, "");
       }
       return undefined$$1;
     }
@@ -1513,14 +1514,14 @@ function refreshSwatch() {
           var elem$$25 = e$$12.target;
           var type$$42 = elem$$25.type;
           if ((type$$42 === "submit" || type$$42 === "image") && jQuery$$1(elem$$25).closest("form").length) {
-            return trigger("submit", this, arguments);
+            return trigger(this, arguments);
           }
         });
         jQuery$$1.event.add(this, "keypress.specialSubmit", function(e$$13) {
           var elem$$26 = e$$13.target;
           var type$$43 = elem$$26.type;
           if ((type$$43 === "text" || type$$43 === "password") && jQuery$$1(elem$$26).closest("form").length && e$$13.keyCode === 13) {
-            return trigger("submit", this, arguments);
+            return trigger(this, arguments);
           }
         });
       } else {
@@ -1792,7 +1793,7 @@ function refreshSwatch() {
       results$$1 = results$$1 || [];
       var origContext = context$$3 = context$$3 || document$$1;
       if (context$$3.nodeType !== 1 && context$$3.nodeType !== 9) {
-        return[];
+        return [];
       }
       if (!selector$$8 || typeof selector$$8 !== "string") {
         return results$$1;
@@ -2001,7 +2002,7 @@ function refreshSwatch() {
       var set$$3;
       var match$$6;
       if (!expr$$4) {
-        return[];
+        return [];
       }
       var i$$39 = 0;
       var l$$10 = Expr.order.length;
@@ -2023,7 +2024,7 @@ function refreshSwatch() {
       if (!set$$3) {
         set$$3 = context$$4.getElementsByTagName("*");
       }
-      return{set:set$$3, expr:expr$$4};
+      return {set:set$$3, expr:expr$$4};
     };
     Sizzle.filter = function(expr$$5, set$$4, inplace, not) {
       var old$$1 = expr$$5;
@@ -2085,7 +2086,7 @@ function refreshSwatch() {
               }
               expr$$5 = expr$$5.replace(Expr.match[type$$55], "");
               if (!anyFound) {
-                return[];
+                return [];
               }
               break;
             }
@@ -2261,13 +2262,13 @@ function refreshSwatch() {
     }, selected:function(elem$$43) {
       return elem$$43.selected === true;
     }, parent:function(elem$$44) {
-      return!!elem$$44.firstChild;
+      return !!elem$$44.firstChild;
     }, empty:function(elem$$45) {
-      return!elem$$45.firstChild;
+      return !elem$$45.firstChild;
     }, has:function(elem$$46, i$$45, match$$18) {
-      return!!Sizzle(match$$18[3], elem$$46).length;
+      return !!Sizzle(match$$18[3], elem$$46).length;
     }, header:function(elem$$47) {
-      return/h\d/i.test(elem$$47.nodeName);
+      return /h\d/i.test(elem$$47.nodeName);
     }, text:function(elem$$48) {
       return "text" === elem$$48.type;
     }, radio:function(elem$$49) {
@@ -2287,7 +2288,7 @@ function refreshSwatch() {
     }, button:function(elem$$56) {
       return "button" === elem$$56.type || elem$$56.nodeName.toLowerCase() === "button";
     }, input:function(elem$$57) {
-      return/input|select|textarea|button/i.test(elem$$57.nodeName);
+      return /input|select|textarea|button/i.test(elem$$57.nodeName);
     }}, setFilters:{first:function(elem$$58, i$$46) {
       return i$$46 === 0;
     }, last:function(elem$$59, i$$47, match$$19, array$$12) {
@@ -2311,7 +2312,7 @@ function refreshSwatch() {
         return filter$$1(elem$$66, i$$54, match$$24, array$$13);
       } else {
         if (name$$44 === "contains") {
-          return(elem$$66.textContent || elem$$66.innerText || getText([elem$$66]) || "").indexOf(match$$24[3]) >= 0;
+          return (elem$$66.textContent || elem$$66.innerText || getText([elem$$66]) || "").indexOf(match$$24[3]) >= 0;
         } else {
           if (name$$44 === "not") {
             var not$$4 = match$$24[3];
@@ -2382,7 +2383,7 @@ function refreshSwatch() {
     }, TAG:function(elem$$69, match$$27) {
       return match$$27 === "*" && elem$$69.nodeType === 1 || elem$$69.nodeName.toLowerCase() === match$$27;
     }, CLASS:function(elem$$70, match$$28) {
-      return(" " + (elem$$70.className || elem$$70.getAttribute("class")) + " ").indexOf(match$$28) > -1;
+      return (" " + (elem$$70.className || elem$$70.getAttribute("class")) + " ").indexOf(match$$28) > -1;
     }, ATTR:function(elem$$71, match$$29) {
       var name$$45 = match$$29[1];
       var result$$4 = Expr.attrHandle[name$$45] ? Expr.attrHandle[name$$45](elem$$71) : elem$$71[name$$45] != null ? elem$$71[name$$45] : elem$$71.getAttribute(name$$45);
@@ -2576,7 +2577,7 @@ function refreshSwatch() {
       div$$4 = null;
     })();
     var contains = document$$1.compareDocumentPosition ? function(a$$4, b$$3) {
-      return!!(a$$4.compareDocumentPosition(b$$3) & 16);
+      return !!(a$$4.compareDocumentPosition(b$$3) & 16);
     } : function(a$$5, b$$4) {
       return a$$5 !== b$$4 && (a$$5.contains ? a$$5.contains(b$$4) : true);
     };
@@ -2630,7 +2631,7 @@ function refreshSwatch() {
   }, filter:function(selector$$12) {
     return this.pushStack(winnow(this, selector$$12, true), "filter", selector$$12);
   }, is:function(selector$$13) {
-    return!!selector$$13 && jQuery$$1.filter(selector$$13, this).length > 0;
+    return !!selector$$13 && jQuery$$1.filter(selector$$13, this).length > 0;
   }, closest:function(selectors$$8, context$$13) {
     if (jQuery$$1.isArray(selectors$$8)) {
       var ret$$17 = [];
@@ -3284,7 +3285,7 @@ function refreshSwatch() {
       return width$$9 === 0 && height$$8 === 0 && !skip ? true : width$$9 > 0 && height$$8 > 0 && !skip ? false : jQuery$$1.curCSS(elem$$111, "display") === "none";
     };
     jQuery$$1.expr.filters.visible = function(elem$$112) {
-      return!jQuery$$1.expr.filters.hidden(elem$$112);
+      return !jQuery$$1.expr.filters.hidden(elem$$112);
     };
   }
   var jsc = now();
@@ -3342,7 +3343,7 @@ function refreshSwatch() {
     }).map(function(i$$82, elem$$113) {
       var val$$4 = jQuery$$1(this).val();
       return val$$4 == null ? null : jQuery$$1.isArray(val$$4) ? jQuery$$1.map(val$$4, function(val$$5, i$$83) {
-        return{name:elem$$113.name, value:val$$5};
+        return {name:elem$$113.name, value:val$$5};
       }) : {name:elem$$113.name, value:val$$4};
     }).get();
   }});
@@ -3597,7 +3598,7 @@ function refreshSwatch() {
     }
   }, active:0, httpSuccess:function(xhr$$2) {
     try {
-      return!xhr$$2.status && location.protocol === "file:" || xhr$$2.status >= 200 && xhr$$2.status < 300 || xhr$$2.status === 304 || xhr$$2.status === 1223 || xhr$$2.status === 0;
+      return !xhr$$2.status && location.protocol === "file:" || xhr$$2.status >= 200 && xhr$$2.status < 300 || xhr$$2.status === 304 || xhr$$2.status === 1223 || xhr$$2.status === 0;
     } catch (e$$29) {
     }
     return false;
@@ -3846,7 +3847,7 @@ function refreshSwatch() {
   }, easing:{linear:function(p$$1, n$$3, firstNum, diff$$1) {
     return firstNum + diff$$1 * p$$1;
   }, swing:function(p$$2, n$$4, firstNum$$1, diff$$2) {
-    return(-Math.cos(p$$2 * Math.PI) / 2 + .5) * diff$$2 + firstNum$$1;
+    return (-Math.cos(p$$2 * Math.PI) / 2 + .5) * diff$$2 + firstNum$$1;
   }}, timers:[], fx:function(elem$$115, options$$4, prop$$7) {
     this.options = options$$4;
     this.elem = elem$$115;
@@ -3991,7 +3992,7 @@ function refreshSwatch() {
       var clientLeft = docElem.clientLeft || body$$1.clientLeft || 0;
       var top$$1 = box.top + (self.pageYOffset || jQuery$$1.support.boxModel && docElem.scrollTop || body$$1.scrollTop) - clientTop;
       var left$$4 = box.left + (self.pageXOffset || jQuery$$1.support.boxModel && docElem.scrollLeft || body$$1.scrollLeft) - clientLeft;
-      return{top:top$$1, left:left$$4};
+      return {top:top$$1, left:left$$4};
     };
   } else {
     jQuery$$1.fn.offset = function(options$$6) {
@@ -4048,7 +4049,7 @@ function refreshSwatch() {
         top$$2 += Math.max(docElem$$1.scrollTop, body$$2.scrollTop);
         left$$5 += Math.max(docElem$$1.scrollLeft, body$$2.scrollLeft);
       }
-      return{top:top$$2, left:left$$5};
+      return {top:top$$2, left:left$$5};
     };
   }
   jQuery$$1.offset = {initialize:function() {
@@ -4085,7 +4086,7 @@ function refreshSwatch() {
       top$$3 += parseFloat(jQuery$$1.curCSS(body$$4, "marginTop", true)) || 0;
       left$$6 += parseFloat(jQuery$$1.curCSS(body$$4, "marginLeft", true)) || 0;
     }
-    return{top:top$$3, left:left$$6};
+    return {top:top$$3, left:left$$6};
   }, setOffset:function(elem$$119, options$$7, i$$93) {
     if (/static/.test(jQuery$$1.curCSS(elem$$119, "position"))) {
       elem$$119.style.position = "relative";
@@ -4116,7 +4117,7 @@ function refreshSwatch() {
     offset$$8.left -= parseFloat(jQuery$$1.curCSS(elem$$120, "marginLeft", true)) || 0;
     parentOffset.top += parseFloat(jQuery$$1.curCSS(offsetParent$$1[0], "borderTopWidth", true)) || 0;
     parentOffset.left += parseFloat(jQuery$$1.curCSS(offsetParent$$1[0], "borderLeftWidth", true)) || 0;
-    return{top:offset$$8.top - parentOffset.top, left:offset$$8.left - parentOffset.left};
+    return {top:offset$$8.top - parentOffset.top, left:offset$$8.left - parentOffset.left};
   }, offsetParent:function() {
     return this.map(function() {
       var offsetParent$$2 = this.offsetParent || document$$1.body;
@@ -4187,9 +4188,9 @@ function refreshSwatch() {
         return false;
       }
       img$$2 = $$$1("img[usemap=#" + mapName + "]")[0];
-      return!!img$$2 && visible(img$$2);
+      return !!img$$2 && visible(img$$2);
     }
-    return(/input|select|textarea|button|object/.test(nodeName$$1) ? !element$$2.disabled : "a" === nodeName$$1 ? element$$2.href || isTabIndexNotNaN : isTabIndexNotNaN) && visible(element$$2);
+    return (/input|select|textarea|button|object/.test(nodeName$$1) ? !element$$2.disabled : "a" === nodeName$$1 ? element$$2.href || isTabIndexNotNaN : isTabIndexNotNaN) && visible(element$$2);
   }
   function visible(element$$3) {
     return $$$1.expr.filters.visible(element$$3) && !$$$1(element$$3).parents().addBack().filter(function() {
@@ -4217,14 +4218,14 @@ function refreshSwatch() {
     var scrollParent;
     if ($$$1.ui.ie && /(static|relative)/.test(this.css("position")) || /absolute/.test(this.css("position"))) {
       scrollParent = this.parents().filter(function() {
-        return/(relative|absolute|fixed)/.test($$$1.css(this, "position")) && /(auto|scroll)/.test($$$1.css(this, "overflow") + $$$1.css(this, "overflow-y") + $$$1.css(this, "overflow-x"));
+        return /(relative|absolute|fixed)/.test($$$1.css(this, "position")) && /(auto|scroll)/.test($$$1.css(this, "overflow") + $$$1.css(this, "overflow-y") + $$$1.css(this, "overflow-x"));
       }).eq(0);
     } else {
       scrollParent = this.parents().filter(function() {
-        return/(auto|scroll)/.test($$$1.css(this, "overflow") + $$$1.css(this, "overflow-y") + $$$1.css(this, "overflow-x"));
+        return /(auto|scroll)/.test($$$1.css(this, "overflow") + $$$1.css(this, "overflow-y") + $$$1.css(this, "overflow-x"));
       }).eq(0);
     }
-    return/fixed/.test(this.css("position")) || !scrollParent.length ? $$$1(document) : scrollParent;
+    return /fixed/.test(this.css("position")) || !scrollParent.length ? $$$1(document) : scrollParent;
   }, zIndex:function(zIndex) {
     if (zIndex !== undefined$$2) {
       return this.css("zIndex", zIndex);
@@ -4260,16 +4261,16 @@ function refreshSwatch() {
   }});
   $$$1.extend($$$1.expr[":"], {data:$$$1.expr.createPseudo ? $$$1.expr.createPseudo(function(dataName) {
     return function(elem$$125) {
-      return!!$$$1.data(elem$$125, dataName);
+      return !!$$$1.data(elem$$125, dataName);
     };
   }) : function(elem$$126, i$$97, match$$37) {
-    return!!$$$1.data(elem$$126, match$$37[3]);
+    return !!$$$1.data(elem$$126, match$$37[3]);
   }, focusable:function(element$$4) {
     return focusable(element$$4, !isNaN($$$1.attr(element$$4, "tabindex")));
   }, tabbable:function(element$$5) {
     var tabIndex = $$$1.attr(element$$5, "tabindex");
     var isTabIndexNaN = isNaN(tabIndex);
-    return(isTabIndexNaN || tabIndex >= 0) && focusable(element$$5, !isTabIndexNaN);
+    return (isTabIndexNaN || tabIndex >= 0) && focusable(element$$5, !isTabIndexNaN);
   }});
   if (!$$$1("<a>").outerWidth(1).jquery) {
     $$$1.each(["Width", "Height"], function(i$$98, name$$60) {
@@ -4394,7 +4395,7 @@ function refreshSwatch() {
       base$$1 = $$$2.Widget;
     }
     $$$2.expr[":"][fullName.toLowerCase()] = function(elem$$129) {
-      return!!$$$2.data(elem$$129, fullName);
+      return !!$$$2.data(elem$$129, fullName);
     };
     $$$2[namespace$$3] = $$$2[namespace$$3] || {};
     existingConstructor = $$$2[namespace$$3][name$$62];
@@ -4608,7 +4609,7 @@ function refreshSwatch() {
         if (!suppressDisabledCheck && (instance$$3.options.disabled === true || $$$2(this).hasClass("ui-state-disabled"))) {
           return;
         }
-        return(typeof handler$$8 === "string" ? instance$$3[handler$$8] : handler$$8).apply(instance$$3, arguments);
+        return (typeof handler$$8 === "string" ? instance$$3[handler$$8] : handler$$8).apply(instance$$3, arguments);
       }
       if (typeof handler$$8 !== "string") {
         handlerProxy.guid = handler$$8.guid = handler$$8.guid || handlerProxy.guid || $$$2.guid++;
@@ -4627,7 +4628,7 @@ function refreshSwatch() {
     element$$9.unbind(eventName$$2).undelegate(eventName$$2);
   }, _delay:function(handler$$9, delay$$4) {
     function handlerProxy$$1() {
-      return(typeof handler$$9 === "string" ? instance$$4[handler$$9] : handler$$9).apply(instance$$4, arguments);
+      return (typeof handler$$9 === "string" ? instance$$4[handler$$9] : handler$$9).apply(instance$$4, arguments);
     }
     var instance$$4 = this;
     return setTimeout(handlerProxy$$1, delay$$4 || 0);
@@ -4662,7 +4663,7 @@ function refreshSwatch() {
       }
     }
     this.element.trigger(event$$17, data$$44);
-    return!($$$2.isFunction(callback$$42) && callback$$42.apply(this.element[0], [event$$17].concat(data$$44)) === false || event$$17.isDefaultPrevented());
+    return !($$$2.isFunction(callback$$42) && callback$$42.apply(this.element[0], [event$$17].concat(data$$44)) === false || event$$17.isDefaultPrevented());
   }};
   $$$2.each({show:"fadeIn", hide:"fadeOut"}, function(method$$2, defaultEffect) {
     $$$2.Widget.prototype["_" + method$$2] = function(element$$12, options$$13, callback$$43) {
@@ -4770,7 +4771,7 @@ function refreshSwatch() {
       this._mouseStarted = this._mouseStart(this._mouseDownEvent, event$$23) !== false;
       this._mouseStarted ? this._mouseDrag(event$$23) : this._mouseUp(event$$23);
     }
-    return!this._mouseStarted;
+    return !this._mouseStarted;
   }, _mouseUp:function(event$$24) {
     $$$3(document).unbind("mousemove." + this.widgetName, this._mouseMoveDelegate).unbind("mouseup." + this.widgetName, this._mouseUpDelegate);
     if (this._mouseStarted) {
@@ -5115,7 +5116,7 @@ function refreshSwatch() {
         }
         return vals$$1;
       } else {
-        return[];
+        return [];
       }
     }
   }, _trimAlignValue:function(val$$10) {

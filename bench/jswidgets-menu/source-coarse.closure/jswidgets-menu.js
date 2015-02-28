@@ -58,7 +58,8 @@ function showLayer(mNode) {
     style$$1.visibility = "visible";
   }
 }
-function hideLayer(mNode$$1) {
+function hideLayer() {
+  var mNode$$1 = nodeStack[stackDepth];
   var style$$2;
   style$$2 = getStyle(mNode$$1);
   if (style$$2) {
@@ -113,7 +114,9 @@ function setLayerColor(tag, bgColor, tColor) {
     }
   }
 }
-function setStyle(divType, fontSize, left$$2, top$$2, width$$9, height$$8, zIndex, bgColor$$1, visibility) {
+function setStyle(left$$2, top$$2, width$$9, height$$8, zIndex, bgColor$$1, visibility) {
+  var divType = blInfo.divType;
+  var fontSize = blInfo.fontSize;
   var dStyle;
   if (divType == "layer") {
     dStyle = 'left="' + left$$2;
@@ -458,7 +461,9 @@ function BrowserMenuInfo() {
     }
   }
 }
-function startSiteMap(mName, mTarget) {
+function startSiteMap() {
+  var mName = "Menu";
+  var mTarget = "_top";
   window.menuName = mName;
   window.menuTarget = mTarget;
   window.menuPntr = "images/tri.gif";
@@ -485,7 +490,8 @@ function menuItem(label, action, width$$10, level$$7, popup) {
   this.level = level$$7;
   this.popup = popup;
 }
-function bodyItem(cells, popup$$1, level$$8, left$$3, top$$3, width$$11, height$$9) {
+function bodyItem(popup$$1, level$$8, left$$3, top$$3, width$$11, height$$9) {
+  var cells = window.bodyCells.length;
   this.cells = cells;
   this.popup = popup$$1;
   this.level = level$$8;
@@ -497,7 +503,7 @@ function bodyItem(cells, popup$$1, level$$8, left$$3, top$$3, width$$11, height$
 function stackMenuBody(queue, bPopup, bLevel, bLeft, bTop, bWidth, bHeight) {
   var mBody;
   var i$$2;
-  mBody = new bodyItem(window.bodyCells.length, bPopup, bLevel, bLeft, bTop, bWidth, bHeight);
+  mBody = new bodyItem(bPopup, bLevel, bLeft, bTop, bWidth, bHeight);
   window.menuBody[window.menuBody.length] = mBody;
   i$$2 = 0;
   for (;i$$2 < queue.length;i$$2++) {
@@ -551,7 +557,8 @@ function addMenuItem(label$$2, action$$1, popup$$2) {
   mItem$$1 = new menuItem(mLabel$$1, mAction, mWidth, mLevel$$1, mPopup$$1);
   window.menuCells[window.menuCells.length] = mItem$$1;
 }
-function startMenu(label$$3, action$$2) {
+function startMenu(label$$3) {
+  var action$$2;
   addMenuItem(label$$3, action$$2, "popup" + window.menuPopups++);
   window.menuLevel++;
 }
@@ -563,7 +570,8 @@ function menuLayer(label$$4, action$$3) {
   this.label = label$$4;
   this.action = action$$3;
 }
-function buildMenuCell(index$$39, left$$4, top$$4, width$$12, height$$10) {
+function buildMenuCell(index$$39, left$$4, top$$4, width$$12) {
+  var height$$10 = blInfo.itemHeight;
   var mName$$1;
   var mLabel$$2;
   var mLeft;
@@ -583,7 +591,7 @@ function buildMenuCell(index$$39, left$$4, top$$4, width$$12, height$$10) {
   mAction$$1 = window.menuCells[index$$39].action;
   document.write("<" + blInfo.divType + ' id="' + mName$$1);
   document.write('" class="' + mClass + '" ');
-  document.write(setStyle(blInfo.divType, blInfo.fontSize, mLeft, mTop, mWidth$$1, mHeight, 0, window.mbPassive, "inherit"));
+  document.write(setStyle(mLeft, mTop, mWidth$$1, mHeight, 0, window.mbPassive, "inherit"));
   document.write(' onclick="' + mAction$$1 + '" ');
   mPopup = window.menuCells[index$$39].popup;
   if (mPopup) {
@@ -619,7 +627,7 @@ function buildMenuBody(cQueue, bName, bLevel$$1, bLeft$$1, bTop$$1, bWidth$$1, b
   lWidth$$1 = bWidth$$1 + blInfo.bwPadding;
   lHeight = bHeight$$1 + blInfo.bhPadding;
   document.write("<" + blInfo.divType + ' id="' + bName + '" class="' + bClass + '" ');
-  document.write(setStyle(blInfo.divType, blInfo.fontSize, bLeft$$1, bTop$$1, lWidth$$1, lHeight, bLevel$$1 + 1, "#000000", "hidden"));
+  document.write(setStyle(bLeft$$1, bTop$$1, lWidth$$1, lHeight, bLevel$$1 + 1, "#000000", "hidden"));
   document.writeln(">");
   mLeft$$1 = blInfo.leftOffset;
   mTop$$1 = blInfo.mTopOffset;
@@ -627,14 +635,14 @@ function buildMenuBody(cQueue, bName, bLevel$$1, bLeft$$1, bTop$$1, bWidth$$1, b
   for (;i$$4 < cQueue.length;i$$4++) {
     mLabel = window.menuCells[cQueue[i$$4]].label;
     if (mLabel) {
-      buildMenuCell(cQueue[i$$4], mLeft$$1, mTop$$1, bWidth$$1, blInfo.itemHeight);
+      buildMenuCell(cQueue[i$$4], mLeft$$1, mTop$$1, bWidth$$1);
       mTop$$1 += blInfo.itemHeight + blInfo.cellOffset;
     } else {
       if (mLabel == 0) {
         mTop$$1 += blInfo.dividerHeight;
       } else {
         alert("Expecting label in buildMenuBody.");
-        return 0;
+        return;
       }
     }
   }
@@ -716,7 +724,13 @@ function queueMenuBuilds(mIndex, mLevel$$3, mPopup$$2, mLeft$$2, mTop$$2) {
 }
 function endSiteMap() {
 }
-function drawHMenuBar(left$$5, top$$5, width$$13, height$$11, padding, graphic) {
+function drawHMenuBar() {
+  var left$$5 = barLeft;
+  var top$$5 = barTop;
+  var width$$13 = barWidth;
+  var height$$11 = barHeight;
+  var padding = itemPadding;
+  var graphic = barImage;
   var bLeft$$3;
   var bTop$$3;
   var bWidth$$3;
@@ -736,7 +750,7 @@ function drawHMenuBar(left$$5, top$$5, width$$13, height$$11, padding, graphic) 
   iPadding = padding + blInfo.itemPadding;
   bGraphic = graphic;
   document.write("<" + blInfo.divType + ' id="menuBar" class="menuBar" ');
-  document.write(setStyle(blInfo.divType, blInfo.fontSize, bLeft$$3, bTop$$3, bWidth$$3, bHeight$$3, 0, null, "visible"));
+  document.write(setStyle(bLeft$$3, bTop$$3, bWidth$$3, bHeight$$3, 0, null, "visible"));
   document.writeln(">");
   document.writeln('<img name="menuImage" src="' + bGraphic + '" class="menuBar" border="1" width="' + width$$13 + '" height="' + height$$11 + '">');
   iLeft = blInfo.leftOffset;
@@ -746,7 +760,7 @@ function drawHMenuBar(left$$5, top$$5, width$$13, height$$11, padding, graphic) 
   for (;i$$7 < window.menuCells.length;) {
     iWidth = window.menuCells[i$$7].width + iPadding;
     iWidth = Math.min(iWidth, bWidth$$3 - iLeft + blInfo.menuPadding);
-    buildMenuCell(i$$7, iLeft, mTop$$3, iWidth, blInfo.itemHeight);
+    buildMenuCell(i$$7, iLeft, mTop$$3, iWidth);
     if (window.menuCells[i$$7].popup) {
       mPopup = window.menuCells[i$$7].popup;
       i$$7++;
@@ -791,7 +805,7 @@ function drawVMenuBar(left$$6, top$$6, width$$14, height$$12, padding$$1, graphi
   iPadding$$1 = padding$$1 + blInfo.itemPadding;
   bGraphic$$1 = graphic$$1;
   document.write("<" + blInfo.divType + ' id="menuBar" class="menuBar" ');
-  document.write(setStyle(blInfo.divType, blInfo.fontSize, bLeft$$4, bTop$$4, bWidth$$4, bHeight$$4 + mHeight$$1, 0, null, "visible"));
+  document.write(setStyle(bLeft$$4, bTop$$4, bWidth$$4, bHeight$$4 + mHeight$$1, 0, null, "visible"));
   document.writeln(">");
   document.writeln('<img name="menuImage" src="' + bGraphic$$1 + '"class="menuBar" border="1" width="' + width$$14 + '" height="' + height$$12 + '">');
   iLeft$$1 = blInfo.leftOffset;
@@ -800,7 +814,7 @@ function drawVMenuBar(left$$6, top$$6, width$$14, height$$12, padding$$1, graphi
   for (;i$$8 < window.menuCells.length;) {
     iWidth$$1 = window.menuCells[i$$8].width + iPadding$$1;
     iWidth$$1 = Math.min(iWidth$$1, bWidth$$4 - iLeft$$1 + blInfo.menuPadding);
-    buildMenuCell(i$$8, iLeft$$1, mTop$$4, iWidth$$1, blInfo.itemHeight);
+    buildMenuCell(i$$8, iLeft$$1, mTop$$4, iWidth$$1);
     if (window.menuCells[i$$8].popup) {
       mPopup = window.menuCells[i$$8].popup;
       i$$8++;
@@ -850,7 +864,7 @@ function findNode(elMain, mName$$3) {
 function clearMenus(mNum) {
   for (;stackDepth > mNum;) {
     stackDepth--;
-    hideLayer(nodeStack[stackDepth]);
+    hideLayer();
     nameStack[stackDepth] = 0;
     nodeStack[stackDepth] = 0;
   }
@@ -898,7 +912,7 @@ var is = new Is;
 var blInfo = new BrowserMenuInfo;
 document.write("<" + blInfo.divType + ' id="test.cell"');
 document.write('" class="menuItem" ');
-document.write(setStyle(blInfo.divType, blInfo.fontSize, 0, 0, 100, 20, null, null, "hidden") + ">");
+document.write(setStyle(0, 0, 100, 20, null, null, "hidden") + ">");
 document.write("test.cell");
 document.writeln("</" + blInfo.divType + ">");
 var alphaWidth = Array();
@@ -1002,7 +1016,7 @@ if (is.ns4) {
   document.captureEvents(Event.MOUSEDOWN);
   document.onmousedown = clearAll;
 }
-startSiteMap("Menu", "_top");
+startSiteMap();
 startMenu("jsWidgets");
 addMenuItem("Home", "/home.shtml");
 addMenuItem("What is jsWidgets?", "/readme.shtml");
@@ -1056,7 +1070,7 @@ if (is.w3c || is.ie4 || is.ns4 && !is.hj) {
   var barHeight = 44;
   var itemPadding = 5;
   var barImage = "images/title.png";
-  drawHMenuBar(barLeft, barTop, barWidth, barHeight, itemPadding, barImage);
+  drawHMenuBar();
 }
 if (is.w3c) {
   document.writeln('<div style="position : relative; top : 15px; float : right; padding-right : 42px; text-align : right">');

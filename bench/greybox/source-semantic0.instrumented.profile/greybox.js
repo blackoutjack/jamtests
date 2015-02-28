@@ -2237,24 +2237,24 @@ function v110(doc) {
       }
     }
   }
-  return{"w":win_w, "h":win_h};
+  return {"w":win_w, "h":win_h};
 }
 function v109(elm$$34) {
   var v617 = !elm$$34;
   if (v617) {
-    return{x:0, y:0};
+    return {x:0, y:0};
   }
   var v623 = elm$$34.scrollLeft;
   if (v623) {
     var v618 = elm$$34.scrollLeft;
     var v619 = elm$$34.scrollTop;
-    return{x:v618, y:v619};
+    return {x:v618, y:v619};
   } else {
     var v622 = elm$$34.clientX;
     if (v622) {
       var v620 = elm$$34.clientX;
       var v621 = elm$$34.clientY;
-      return{x:v620, y:v621};
+      return {x:v620, y:v621};
     }
   }
   var v624 = elm$$34.offsetLeft;
@@ -2352,7 +2352,7 @@ function v107(e$$9) {
       posy = v635 + v636;
     }
   }
-  return{x:posx, y:posy};
+  return {x:posx, y:posy};
 }
 function v106(date$$1) {
   function leadingZero(nr) {
@@ -2917,7 +2917,7 @@ function v69(elm$$26) {
   introspect(JAM.policy.p1) {
     var v699 = AJS.isElementHidden(elm$$26)
   }
-  return!v699;
+  return !v699;
 }
 function v68(elm$$25) {
   var v1155 = elm$$25.style;
@@ -3727,7 +3727,7 @@ function v14(elm$$2, list$$2, eval_fn) {
     var v1045 = list$$2.length;
     v781 = i$$4 < v1045;
   }
-  return-1;
+  return -1;
 }
 function v13(elm$$1, list$$1) {
   introspect(JAM.policy.p1) {
@@ -3797,9 +3797,9 @@ function v9(v) {
   } else {
     var v786 = !v;
     if (v786) {
-      return[];
+      return [];
     } else {
-      return[v];
+      return [v];
     }
   }
   return;
@@ -3888,7 +3888,7 @@ function insertHeader() {
   }
   return;
 }
-function insertMenu(current_page) {
+function insertMenu() {
   function v0(item$$1) {
     var v1065 = item$$1.className;
     var v801 = v1065 == current_page;
@@ -3919,6 +3919,7 @@ function insertMenu(current_page) {
     }
     return item;
   }
+  var current_page = "examples";
   var v804 = {id:"menu"};
   introspect(JAM.policy.p1) {
     var menu = AJS.UL(v804)
@@ -4065,6 +4066,6 @@ introspect(JAM.policy.p1) {
   AJS.AEV(window, "load", v247);
 }
 insertHeader();
-insertMenu("examples")
+insertMenu()
 
 JAM.stopProfile('load');

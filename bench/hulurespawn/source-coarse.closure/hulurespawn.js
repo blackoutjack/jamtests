@@ -1,7 +1,7 @@
 introspect(JAM.policy.pFull) {
 function $A(iterable) {
   if (!iterable) {
-    return[];
+    return [];
   }
   if ("toArray" in Object(iterable)) {
     return iterable.toArray();
@@ -15,7 +15,7 @@ function $A(iterable) {
 }
 function $w(string) {
   if (!Object.isString(string)) {
-    return[];
+    return [];
   }
   string = string.strip();
   return string ? string.split(/\s+/) : [];
@@ -23,16 +23,18 @@ function $w(string) {
 function $H(object$$22) {
   return new Hash(object$$22);
 }
-function $R(start$$4, end$$1, exclusive) {
+function $R(end$$1) {
+  var start$$4 = 0;
+  var exclusive = true;
   return new ObjectRange(start$$4, end$$1, exclusive);
 }
 var Prototype = {Version:"1.7.1", Browser:function() {
   var ua = navigator.userAgent;
   var isOpera = Object.prototype.toString.call(window.opera) == "[object Opera]";
-  return{IE:!!window.attachEvent && !isOpera, Opera:isOpera, WebKit:ua.indexOf("AppleWebKit/") > -1, Gecko:ua.indexOf("Gecko") > -1 && ua.indexOf("KHTML") === -1, MobileSafari:/Apple.*Mobile/.test(ua)};
+  return {IE:!!window.attachEvent && !isOpera, Opera:isOpera, WebKit:ua.indexOf("AppleWebKit/") > -1, Gecko:ua.indexOf("Gecko") > -1 && ua.indexOf("KHTML") === -1, MobileSafari:/Apple.*Mobile/.test(ua)};
 }(), BrowserFeatures:{XPath:!!document.evaluate, SelectorsAPI:!!document.querySelector, ElementExtensions:function() {
   var constructor = window.Element || window.HTMLElement;
-  return!!(constructor && constructor.prototype);
+  return !!(constructor && constructor.prototype);
 }(), SpecificElementExtensions:function() {
   if (typeof window.HTMLDivElement !== "undefined") {
     return true;
@@ -130,7 +132,7 @@ var Class = function() {
     }
     return true;
   }();
-  return{create:create, Methods:{addMethods:addMethods}};
+  return {create:create, Methods:{addMethods:addMethods}};
 }();
 (function() {
   function Type(o) {
@@ -282,7 +284,7 @@ var Class = function() {
     return extend({}, object$$6);
   }
   function isElement(object$$7) {
-    return!!(object$$7 && object$$7.nodeType == 1);
+    return !!(object$$7 && object$$7.nodeType == 1);
   }
   function isArray(object$$8) {
     return _toString.call(object$$8) === ARRAY_CLASS;
@@ -541,8 +543,8 @@ Object.extend(String.prototype, function() {
   function extractScripts() {
     var matchAll = new RegExp(Prototype.ScriptFragment, "img");
     var matchOne = new RegExp(Prototype.ScriptFragment, "im");
-    return(this.match(matchAll) || []).map(function(scriptTag) {
-      return(scriptTag.match(matchOne) || ["", ""])[1];
+    return (this.match(matchAll) || []).map(function(scriptTag) {
+      return (scriptTag.match(matchOne) || ["", ""])[1];
     });
   }
   function evalScripts() {
@@ -559,7 +561,7 @@ Object.extend(String.prototype, function() {
   function toQueryParams(separator) {
     var match$$3 = this.strip().match(/([^?#]*)(#.*)?$/);
     if (!match$$3) {
-      return{};
+      return {};
     }
     return match$$3[1].split(separator || "&").inject({}, function(hash, pair) {
       if ((pair = pair.split("="))[0]) {
@@ -611,7 +613,7 @@ Object.extend(String.prototype, function() {
       return "\\u00" + character.charCodeAt().toPaddedString(2, 16);
     });
     if (useDoubleQuotes) {
-      return'"' + escapedString.replace(/"/g, '\\"') + '"';
+      return '"' + escapedString.replace(/"/g, '\\"') + '"';
     }
     return "'" + escapedString.replace(/'/g, "\\'") + "'";
   }
@@ -626,7 +628,7 @@ Object.extend(String.prototype, function() {
     str$$8 = str$$8.replace(/\\(?:["\\\/bfnrt]|u[0-9a-fA-F]{4})/g, "@");
     str$$8 = str$$8.replace(/"[^"\\\n\r]*"|true|false|null|-?\d+(?:\.\d*)?(?:[eE][+\-]?\d+)?/g, "]");
     str$$8 = str$$8.replace(/(?:^|:|,)(?:\s*\[)+/g, "");
-    return/^[\],:{}\s]*$/.test(str$$8);
+    return /^[\],:{}\s]*$/.test(str$$8);
   }
   function evalJSON(sanitize) {
     var json = this.unfilterJSON();
@@ -662,13 +664,13 @@ Object.extend(String.prototype, function() {
     return this == "";
   }
   function blank() {
-    return/^\s*$/.test(this);
+    return /^\s*$/.test(this);
   }
   function interpolate(object$$15, pattern$$7) {
-    return(new Template(this, pattern$$7)).evaluate(object$$15);
+    return (new Template(this, pattern$$7)).evaluate(object$$15);
   }
   var NATIVE_JSON_PARSE_SUPPORT = window.JSON && typeof JSON.parse === "function" && JSON.parse('{"test": true}').test;
-  return{gsub:gsub, sub:sub, scan:scan, truncate:truncate, strip:String.prototype.trim || strip, stripTags:stripTags, stripScripts:stripScripts, extractScripts:extractScripts, evalScripts:evalScripts, escapeHTML:escapeHTML, unescapeHTML:unescapeHTML, toQueryParams:toQueryParams, parseQuery:toQueryParams, toArray:toArray, succ:succ, times:times, camelize:camelize, capitalize:capitalize, underscore:underscore, dasherize:dasherize, inspect:inspect$$1, unfilterJSON:unfilterJSON, isJSON:isJSON, evalJSON:NATIVE_JSON_PARSE_SUPPORT ? 
+  return {gsub:gsub, sub:sub, scan:scan, truncate:truncate, strip:String.prototype.trim || strip, stripTags:stripTags, stripScripts:stripScripts, extractScripts:extractScripts, evalScripts:evalScripts, escapeHTML:escapeHTML, unescapeHTML:unescapeHTML, toQueryParams:toQueryParams, parseQuery:toQueryParams, toArray:toArray, succ:succ, times:times, camelize:camelize, capitalize:capitalize, underscore:underscore, dasherize:dasherize, inspect:inspect$$1, unfilterJSON:unfilterJSON, isJSON:isJSON, evalJSON:NATIVE_JSON_PARSE_SUPPORT ? 
   parseJSON : evalJSON, include:include, startsWith:startsWith, endsWith:endsWith, empty:empty, blank:blank, interpolate:interpolate};
 }());
 var Template = Class.create({initialize:function(template$$1, pattern$$8) {
@@ -856,7 +858,7 @@ var Enumerable = function() {
     this.each(function(value$$43, index$$49) {
       (iterator$$12.call(context$$13, value$$43, index$$49, this) ? trues : falses).push(value$$43);
     }, this);
-    return[trues, falses];
+    return [trues, falses];
   }
   function pluck(property$$4) {
     var results$$6 = [];
@@ -876,7 +878,7 @@ var Enumerable = function() {
   }
   function sortBy(iterator$$14, context$$15) {
     return this.map(function(value$$46, index$$51) {
-      return{value:value$$46, criteria:iterator$$14.call(context$$15, value$$46, index$$51, this)};
+      return {value:value$$46, criteria:iterator$$14.call(context$$15, value$$46, index$$51, this)};
     }, this).sort(function(left$$1, right$$1) {
       var a$$6 = left$$1.criteria;
       var b = right$$1.criteria;
@@ -903,7 +905,7 @@ var Enumerable = function() {
   function inspect$$2() {
     return "#<Enumerable:" + this.toArray().inspect() + ">";
   }
-  return{each:each, eachSlice:eachSlice, all:all, every:all, any:any, some:any, collect:collect, map:collect, detect:detect, findAll:findAll, select:findAll, filter:findAll, grep:grep, include:include$$1, member:include$$1, inGroupsOf:inGroupsOf, inject:inject, invoke:invoke, max:max, min:min, partition:partition, pluck:pluck, reject:reject, sortBy:sortBy, toArray:toArray$$1, entries:toArray$$1, zip:zip, size:size$$4, inspect:inspect$$2, find:detect};
+  return {each:each, eachSlice:eachSlice, all:all, every:all, any:any, some:any, collect:collect, map:collect, detect:detect, findAll:findAll, select:findAll, filter:findAll, grep:grep, include:include$$1, member:include$$1, inGroupsOf:inGroupsOf, inject:inject, invoke:invoke, max:max, min:min, partition:partition, pluck:pluck, reject:reject, sortBy:sortBy, toArray:toArray$$1, entries:toArray$$1, zip:zip, size:size$$4, inspect:inspect$$2, find:detect};
 }();
 Array.from = $A;
 (function() {
@@ -943,11 +945,11 @@ Array.from = $A;
   function without() {
     var values$$5 = slice$$2.call(arguments, 0);
     return this.select(function(value$$50) {
-      return!values$$5.include(value$$50);
+      return !values$$5.include(value$$50);
     });
   }
   function reverse(inline) {
-    return(inline === false ? this.toArray() : this)._reverse();
+    return (inline === false ? this.toArray() : this)._reverse();
   }
   function uniq(sorted) {
     return this.inject([], function(array$$13, value$$51, index$$53) {
@@ -978,7 +980,7 @@ Array.from = $A;
     var array$$15 = Object(this);
     var length$$18 = array$$15.length >>> 0;
     if (length$$18 === 0) {
-      return-1;
+      return -1;
     }
     i$$6 = Number(i$$6);
     if (isNaN(i$$6)) {
@@ -989,7 +991,7 @@ Array.from = $A;
       }
     }
     if (i$$6 > length$$18) {
-      return-1;
+      return -1;
     }
     var k = i$$6 >= 0 ? i$$6 : Math.max(length$$18 - Math.abs(i$$6), 0);
     for (;k < length$$18;k++) {
@@ -997,7 +999,7 @@ Array.from = $A;
         return k;
       }
     }
-    return-1;
+    return -1;
   }
   function lastIndexOf(item$$2, i$$7) {
     if (this == null) {
@@ -1006,7 +1008,7 @@ Array.from = $A;
     var array$$16 = Object(this);
     var length$$19 = array$$16.length >>> 0;
     if (length$$19 === 0) {
-      return-1;
+      return -1;
     }
     if (!Object.isUndefined(i$$7)) {
       i$$7 = Number(i$$7);
@@ -1026,7 +1028,7 @@ Array.from = $A;
         return k$$1;
       }
     }
-    return-1;
+    return -1;
   }
   function concat(_) {
     var array$$17 = [];
@@ -1174,7 +1176,7 @@ Array.from = $A;
   }
   Object.extend(arrayProto, {_each:_each, map:map, collect:map, select:filter$$2, filter:filter$$2, findAll:filter$$2, some:some, any:some, every:every, all:every, inject:inject$$1, clear:clear, first:first$$1, last:last, compact:compact, flatten:flatten, without:without, reverse:reverse, uniq:uniq, intersect:intersect, clone:clone$$1, toArray:clone$$1, size:size$$5, inspect:inspect$$3});
   var CONCAT_ARGUMENTS_BUGGY = function() {
-    return[].concat(arguments)[0][0] !== 1;
+    return [].concat(arguments)[0][0] !== 1;
   }(1, 2);
   if (CONCAT_ARGUMENTS_BUGGY) {
     arrayProto.concat = concat;
@@ -1232,7 +1234,7 @@ var Hash = Class.create(Enumerable, function() {
     return this.clone().update(object$$24);
   }
   function update$$1(object$$25) {
-    return(new Hash(object$$25)).inject(this, function(result$$6, pair$$3) {
+    return (new Hash(object$$25)).inject(this, function(result$$6, pair$$3) {
       result$$6.set(pair$$3.key, pair$$3.value);
       return result$$6;
     });
@@ -1277,7 +1279,7 @@ var Hash = Class.create(Enumerable, function() {
   function clone$$2() {
     return new Hash(this);
   }
-  return{initialize:initialize, _each:_each$$1, set:set, get:get, unset:unset, toObject:toObject, toTemplateReplacements:toObject, keys:keys$$2, values:values$$6, index:index$$54, merge:merge$$1, update:update$$1, toQueryString:toQueryString$$1, inspect:inspect$$4, toJSON:toObject, clone:clone$$2};
+  return {initialize:initialize, _each:_each$$1, set:set, get:get, unset:unset, toObject:toObject, toTemplateReplacements:toObject, keys:keys$$2, values:values$$6, index:index$$54, merge:merge$$1, update:update$$1, toQueryString:toQueryString$$1, inspect:inspect$$4, toJSON:toObject, clone:clone$$2};
 }());
 Hash.from = $H;
 Object.extend(Number.prototype, function() {
@@ -1288,7 +1290,7 @@ Object.extend(Number.prototype, function() {
     return this + 1;
   }
   function times$$1(iterator$$23, context$$23) {
-    $R(0, this, true).each(iterator$$23, context$$23);
+    $R(this).each(iterator$$23, context$$23);
     return this;
   }
   function toPaddedString(length$$25, radix) {
@@ -1307,7 +1309,7 @@ Object.extend(Number.prototype, function() {
   function floor() {
     return Math.floor(this);
   }
-  return{toColorPart:toColorPart, succ:succ$$1, times:times$$1, toPaddedString:toPaddedString, abs:abs, round:round, ceil:ceil, floor:floor};
+  return {toColorPart:toColorPart, succ:succ$$1, times:times$$1, toPaddedString:toPaddedString, abs:abs, round:round, ceil:ceil, floor:floor};
 }());
 var ObjectRange = Class.create(Enumerable, function() {
   function initialize$$1(start$$5, end$$2, exclusive$$1) {
@@ -1331,7 +1333,7 @@ var ObjectRange = Class.create(Enumerable, function() {
     }
     return value$$60 <= this.end;
   }
-  return{initialize:initialize$$1, _each:_each$$2, include:include$$2};
+  return {initialize:initialize$$1, _each:_each$$2, include:include$$2};
 }());
 var Abstract = {};
 var Try = {these:function() {
@@ -1458,7 +1460,7 @@ Ajax.Request = Class.create(Ajax.Base, {_complete:false, initialize:function($su
   }
 }, success:function() {
   var status = this.getStatus();
-  return!status || status >= 200 && status < 300 || status == 304;
+  return !status || status >= 200 && status < 300 || status == 304;
 }, getStatus:function() {
   try {
     if (this.transport.status === 1223) {
@@ -1494,7 +1496,7 @@ Ajax.Request = Class.create(Ajax.Base, {_complete:false, initialize:function($su
   }
 }, isSameOrigin:function() {
   var m$$1 = this.url.match(/^\s*https?:\/\/[^\/]*/);
-  return!m$$1 || m$$1[0] == "#{protocol}//#{domain}#{port}".interpolate({protocol:location.protocol, domain:document.domain, port:location.port ? ":" + location.port : ""});
+  return !m$$1 || m$$1[0] == "#{protocol}//#{domain}#{port}".interpolate({protocol:location.protocol, domain:document.domain, port:location.port ? ":" + location.port : ""});
 }, getHeader:function(name$$31) {
   try {
     return this.transport.getResponseHeader(name$$31) || null;
@@ -1651,19 +1653,19 @@ Ajax.PeriodicalUpdater = Class.create(Ajax.Base, {initialize:function($super$$2,
     if (!ELEMENT_CACHE[tagName$$2]) {
       ELEMENT_CACHE[tagName$$2] = Element$$1.extend(document.createElement(tagName$$2));
     }
-    var JSCompiler_inline_result$$3;
+    var JSCompiler_inline_result$$0;
     JSCompiler_inline_label_shouldUseCreationCache_7: {
       if (tagName$$2 === "select") {
-        JSCompiler_inline_result$$3 = false;
+        JSCompiler_inline_result$$0 = false;
         break JSCompiler_inline_label_shouldUseCreationCache_7;
       }
       if ("type" in attributes$$1) {
-        JSCompiler_inline_result$$3 = false;
+        JSCompiler_inline_result$$0 = false;
         break JSCompiler_inline_label_shouldUseCreationCache_7;
       }
-      JSCompiler_inline_result$$3 = true;
+      JSCompiler_inline_result$$0 = true;
     }
-    var node$$2 = JSCompiler_inline_result$$3 ? ELEMENT_CACHE[tagName$$2].cloneNode(false) : document.createElement(tagName$$2);
+    var node$$2 = JSCompiler_inline_result$$0 ? ELEMENT_CACHE[tagName$$2].cloneNode(false) : document.createElement(tagName$$2);
     return Element$$1.writeAttribute(node$$2, attributes$$1);
   }
   function inspect$$5(element$$3) {
@@ -2098,7 +2100,7 @@ Ajax.PeriodicalUpdater = Class.create(Ajax.Base, {initialize:function($super$$2,
   }
   function descendantOf_compareDocumentPosition(element$$39, ancestor$$3) {
     element$$39 = $$$1(element$$39), ancestor$$3 = $$$1(ancestor$$3);
-    return(element$$39.compareDocumentPosition(ancestor$$3) & 8) === 8;
+    return (element$$39.compareDocumentPosition(ancestor$$3) & 8) === 8;
   }
   function identify(element$$40) {
     element$$40 = $$$1(element$$40);
@@ -2169,7 +2171,7 @@ Ajax.PeriodicalUpdater = Class.create(Ajax.Base, {initialize:function($super$$2,
   function hasAttribute(element$$45, attribute$$1) {
     attribute$$1 = ATTRIBUTE_TRANSLATIONS.has[attribute$$1] || attribute$$1;
     var node$$9 = $$$1(element$$45).getAttributeNode(attribute$$1);
-    return!!(node$$9 && node$$9.specified);
+    return !!(node$$9 && node$$9.specified);
   }
   function classNames$$1(element$$46) {
     return new Element$$1.ClassNames(element$$46);
@@ -2410,7 +2412,8 @@ Ajax.PeriodicalUpdater = Class.create(Ajax.Base, {initialize:function($super$$2,
     }
     return value$$69;
   }
-  function checkElementPrototypeDeficiency(tagName$$7) {
+  function checkElementPrototypeDeficiency() {
+    var tagName$$7 = "object";
     if (typeof window.Element === "undefined") {
       return false;
     }
@@ -2768,7 +2771,7 @@ Ajax.PeriodicalUpdater = Class.create(Ajax.Base, {initialize:function($super$$2,
     GLOBAL.HTMLElement.prototype = DIV["__proto__"];
     F.ElementExtensions = true;
   }
-  var HTMLOBJECTELEMENT_PROTOTYPE_BUGGY = checkElementPrototypeDeficiency("object");
+  var HTMLOBJECTELEMENT_PROTOTYPE_BUGGY = checkElementPrototypeDeficiency();
   var EXTENDED = {};
   if (F.SpecificElementExtensions) {
     extend$$1 = HTMLOBJECTELEMENT_PROTOTYPE_BUGGY ? extend_IE8 : Prototype.K;
@@ -2891,7 +2894,7 @@ Ajax.PeriodicalUpdater = Class.create(Ajax.Base, {initialize:function($super$$2,
     element$$93 = $(element$$93);
     var display$$1 = Element.getStyle(element$$93, "display");
     if (display$$1 && display$$1 !== "none") {
-      return{width:element$$93.offsetWidth, height:element$$93.offsetHeight};
+      return {width:element$$93.offsetWidth, height:element$$93.offsetHeight};
     }
     var style$$9 = element$$93.style;
     var originalStyles = {visibility:style$$9.visibility, position:style$$9.position, display:style$$9.display};
@@ -3141,20 +3144,20 @@ Ajax.PeriodicalUpdater = Class.create(Ajax.Base, {initialize:function($super$$2,
       return;
     }
     var element$$113 = this.element;
-    var JSCompiler_inline_result$$4;
+    var JSCompiler_inline_result$$1;
     JSCompiler_inline_label_isDisplayed_30: {
       var element$$inline_28 = element$$113;
       for (;element$$inline_28 && element$$inline_28.parentNode;) {
         var display$$inline_29 = element$$inline_28.getStyle("display");
         if (display$$inline_29 === "none") {
-          JSCompiler_inline_result$$4 = false;
+          JSCompiler_inline_result$$1 = false;
           break JSCompiler_inline_label_isDisplayed_30;
         }
         element$$inline_28 = $(element$$inline_28.parentNode);
       }
-      JSCompiler_inline_result$$4 = true;
+      JSCompiler_inline_result$$1 = true;
     }
-    if (JSCompiler_inline_result$$4) {
+    if (JSCompiler_inline_result$$1) {
       this._setPrepared(true);
       return;
     }
@@ -3233,13 +3236,13 @@ Ajax.PeriodicalUpdater = Class.create(Ajax.Base, {initialize:function($super$$2,
       }
       var value$$84 = this.get(key$$26);
       if (value$$84 != null) {
-        var JSCompiler_inline_result$$0;
+        var JSCompiler_inline_result$$2;
         var key$$inline_31 = key$$26;
         if (key$$inline_31.include("border")) {
           key$$inline_31 = key$$inline_31 + "-width";
         }
-        JSCompiler_inline_result$$0 = key$$inline_31.camelize();
-        css$$2[JSCompiler_inline_result$$0] = value$$84 + "px";
+        JSCompiler_inline_result$$2 = key$$inline_31.camelize();
+        css$$2[JSCompiler_inline_result$$2] = value$$84 + "px";
       }
     }, this);
     return css$$2;
@@ -3376,12 +3379,12 @@ Ajax.PeriodicalUpdater = Class.create(Ajax.Base, {initialize:function($super$$2,
       var parent$$6 = hasLayout(element$$139.getOffsetParent());
       var rect = element$$139.getBoundingClientRect();
       var pRect = parent$$6.getBoundingClientRect();
-      return(pRect.right - rect.right).round();
+      return (pRect.right - rect.right).round();
     }, "bottom":function(element$$140) {
       var parent$$7 = hasLayout(element$$140.getOffsetParent());
       var rect$$1 = element$$140.getBoundingClientRect();
       var pRect$$1 = parent$$7.getBoundingClientRect();
-      return(pRect$$1.bottom - rect$$1.bottom).round();
+      return (pRect$$1.bottom - rect$$1.bottom).round();
     }});
   }
   Element.Offset = Class.create({initialize:function(left$$2, top$$1) {
@@ -3396,7 +3399,7 @@ Ajax.PeriodicalUpdater = Class.create(Ajax.Base, {initialize:function($super$$2,
   }, toString:function() {
     return "[#{left}, #{top}]".interpolate(this);
   }, toArray:function() {
-    return[this.left, this.top];
+    return [this.left, this.top];
   }});
   if (Prototype.Browser.IE) {
     getOffsetParent = getOffsetParent.wrap(function(proceed, element$$141) {
@@ -3473,7 +3476,7 @@ Ajax.PeriodicalUpdater = Class.create(Ajax.Base, {initialize:function($super$$2,
     return ROOT;
   }
   function getDimensions$$1() {
-    return{width:this.getWidth(), height:this.getHeight()};
+    return {width:this.getWidth(), height:this.getHeight()};
   }
   function getWidth$$1() {
     return getRootElement().clientWidth;
@@ -3523,7 +3526,7 @@ Prototype.Selector = function() {
     return elements$$5;
   }
   var K = Prototype.K;
-  return{select:select$$1, match:match$$11, find:find, extendElements:Element.extend === K ? K : extendElements, extendElement:Element.extend};
+  return {select:select$$1, match:match$$11, find:find, extendElements:Element.extend === K ? K : extendElements, extendElement:Element.extend};
 }();
 (function() {
   function posProcess(selector$$2, context$$38) {
@@ -3559,7 +3562,7 @@ Prototype.Selector = function() {
     context$$29 = context$$29 || document;
     var origContext = context$$29;
     if (context$$29.nodeType !== 1 && context$$29.nodeType !== 9) {
-      return[];
+      return [];
     }
     if (!selector$$1 || typeof selector$$1 !== "string") {
       return results$$13;
@@ -3753,7 +3756,6 @@ Prototype.Selector = function() {
         }
       }
     }
-    return results$$14;
   };
   Sizzle$$1.matches = function(expr$$4, set$$2) {
     return Sizzle$$1(expr$$4, null, null, set$$2);
@@ -3764,7 +3766,7 @@ Prototype.Selector = function() {
   Sizzle$$1.find = function(expr$$6, context$$30, isXML$$2) {
     var set$$3;
     if (!expr$$6) {
-      return[];
+      return [];
     }
     var i$$33 = 0;
     var l$$2 = Expr.order.length;
@@ -3787,7 +3789,7 @@ Prototype.Selector = function() {
     if (!set$$3) {
       set$$3 = typeof context$$30.getElementsByTagName !== "undefined" ? context$$30.getElementsByTagName("*") : [];
     }
-    return{set:set$$3, expr:expr$$6};
+    return {set:set$$3, expr:expr$$6};
   };
   Sizzle$$1.filter = function(expr$$7, set$$4, inplace, not) {
     var match$$16;
@@ -3849,7 +3851,7 @@ Prototype.Selector = function() {
             }
             expr$$7 = expr$$7.replace(Expr.match[type$$29], "");
             if (!anyFound) {
-              return[];
+              return [];
             }
             break;
           }
@@ -4041,13 +4043,13 @@ Prototype.Selector = function() {
   }, selected:function(elem$$11) {
     return elem$$11.selected === true;
   }, parent:function(elem$$12) {
-    return!!elem$$12.firstChild;
+    return !!elem$$12.firstChild;
   }, empty:function(elem$$13) {
-    return!elem$$13.firstChild;
+    return !elem$$13.firstChild;
   }, has:function(elem$$14, i$$39, match$$27) {
-    return!!Sizzle$$1(match$$27[3], elem$$14).length;
+    return !!Sizzle$$1(match$$27[3], elem$$14).length;
   }, header:function(elem$$15) {
-    return/h\d/i.test(elem$$15.nodeName);
+    return /h\d/i.test(elem$$15.nodeName);
   }, text:function(elem$$16) {
     var attr$$2 = elem$$16.getAttribute("type");
     var type$$30 = elem$$16.type;
@@ -4062,17 +4064,17 @@ Prototype.Selector = function() {
     return elem$$20.nodeName.toLowerCase() === "input" && "password" === elem$$20.type;
   }, submit:function(elem$$21) {
     var name$$38 = elem$$21.nodeName.toLowerCase();
-    return(name$$38 === "input" || name$$38 === "button") && "submit" === elem$$21.type;
+    return (name$$38 === "input" || name$$38 === "button") && "submit" === elem$$21.type;
   }, image:function(elem$$22) {
     return elem$$22.nodeName.toLowerCase() === "input" && "image" === elem$$22.type;
   }, reset:function(elem$$23) {
     var name$$39 = elem$$23.nodeName.toLowerCase();
-    return(name$$39 === "input" || name$$39 === "button") && "reset" === elem$$23.type;
+    return (name$$39 === "input" || name$$39 === "button") && "reset" === elem$$23.type;
   }, button:function(elem$$24) {
     var name$$40 = elem$$24.nodeName.toLowerCase();
     return name$$40 === "input" && "button" === elem$$24.type || name$$40 === "button";
   }, input:function(elem$$25) {
-    return/input|select|textarea|button/i.test(elem$$25.nodeName);
+    return /input|select|textarea|button/i.test(elem$$25.nodeName);
   }, focus:function(elem$$26) {
     return elem$$26 === elem$$26.ownerDocument.activeElement;
   }}, setFilters:{first:function(elem$$27, i$$40) {
@@ -4098,7 +4100,7 @@ Prototype.Selector = function() {
       return filter$$7(elem$$35, i$$48, match$$33, array$$19);
     } else {
       if (name$$41 === "contains") {
-        return(elem$$35.textContent || elem$$35.innerText || Sizzle$$1.getText([elem$$35]) || "").indexOf(match$$33[3]) >= 0;
+        return (elem$$35.textContent || elem$$35.innerText || Sizzle$$1.getText([elem$$35]) || "").indexOf(match$$33[3]) >= 0;
       } else {
         if (name$$41 === "not") {
           var not$$4 = match$$33[3];
@@ -4169,7 +4171,7 @@ Prototype.Selector = function() {
   }, TAG:function(elem$$38, match$$36) {
     return match$$36 === "*" && elem$$38.nodeType === 1 || elem$$38.nodeName.toLowerCase() === match$$36;
   }, CLASS:function(elem$$39, match$$37) {
-    return(" " + (elem$$39.className || elem$$39.getAttribute("class")) + " ").indexOf(match$$37) > -1;
+    return (" " + (elem$$39.className || elem$$39.getAttribute("class")) + " ").indexOf(match$$37) > -1;
   }, ATTR:function(elem$$40, match$$38) {
     var name$$42 = match$$38[1];
     var result$$12 = Expr.attrHandle[name$$42] ? Expr.attrHandle[name$$42](elem$$40) : elem$$40[name$$42] != null ? elem$$40[name$$42] : elem$$40.getAttribute(name$$42);
@@ -4248,7 +4250,7 @@ Prototype.Selector = function() {
         return siblingCheck(a$$8, b$$2);
       } else {
         if (!aup) {
-          return-1;
+          return -1;
         } else {
           if (!bup) {
             return 1;
@@ -4281,7 +4283,7 @@ Prototype.Selector = function() {
       var cur$$4 = a$$9.nextSibling;
       for (;cur$$4;) {
         if (cur$$4 === b$$3) {
-          return-1;
+          return -1;
         }
         cur$$4 = cur$$4.nextSibling;
       }
@@ -4483,7 +4485,7 @@ Prototype.Selector = function() {
   } else {
     if (document.documentElement.compareDocumentPosition) {
       Sizzle$$1.contains = function(a$$11, b$$5) {
-        return!!(a$$11.compareDocumentPosition(b$$5) & 16);
+        return !!(a$$11.compareDocumentPosition(b$$5) & 16);
       };
     } else {
       Sizzle$$1.contains = function() {
@@ -4612,7 +4614,7 @@ Form.Methods = {serialize:function(form$$3, options$$9) {
     return element$$150.tabIndex;
   }).first();
   return firstByIndex ? firstByIndex : elements$$8.find(function(element$$151) {
-    return/^(?:input|select|textarea)$/i.test(element$$151.tagName);
+    return /^(?:input|select|textarea)$/i.test(element$$151.tagName);
   });
 }, focusFirstElement:function(form$$9) {
   form$$9 = $(form$$9);
@@ -4720,7 +4722,7 @@ Form.Element.Serializers = function() {
   }
   function select$$3(element$$166, value$$96) {
     if (Object.isUndefined(value$$96)) {
-      return(element$$166.type === "select-one" ? selectOne : selectMany)(element$$166);
+      return (element$$166.type === "select-one" ? selectOne : selectMany)(element$$166);
     }
     var opt;
     var currentValue;
@@ -4763,7 +4765,7 @@ Form.Element.Serializers = function() {
   function optionValue(opt$$2) {
     return Element.hasAttribute(opt$$2, "value") ? opt$$2.value : opt$$2.text;
   }
-  return{input:input$$1, inputSelector:inputSelector, textarea:valueSelector, select:select$$3, selectOne:selectOne, selectMany:selectMany, optionValue:optionValue, button:valueSelector};
+  return {input:input$$1, inputSelector:inputSelector, textarea:valueSelector, select:select$$3, selectOne:selectOne, selectMany:selectMany, optionValue:optionValue, button:valueSelector};
 }();
 Abstract.TimedObserver = Class.create(PeriodicalExecuter, {initialize:function($super$$5, element$$169, frequency$$1, callback$$27) {
   $super$$5(callback$$27, frequency$$1);
@@ -4881,7 +4883,7 @@ Form.EventObserver = Class.create(Abstract.EventObserver, {getValue:function() {
     }
   }
   function pointer(event$$11) {
-    return{x:pointerX(event$$11), y:pointerY(event$$11)};
+    return {x:pointerX(event$$11), y:pointerY(event$$11)};
   }
   function pointerX(event$$12) {
     var docElement = document.documentElement;
@@ -5123,7 +5125,7 @@ Form.EventObserver = Class.create(Abstract.EventObserver, {getValue:function() {
     if (Object.isFunction(selector$$5) && Object.isUndefined(callback$$29)) {
       callback$$29 = selector$$5, selector$$5 = null;
     }
-    return(new Event$$1.Handler(element$$193, eventName$$16, selector$$5, callback$$29)).start();
+    return (new Event$$1.Handler(element$$193, eventName$$16, selector$$5, callback$$29)).start();
   }
   function destroyCache_IE() {
     GLOBAL$$1.Event.cache = null;
@@ -5135,7 +5137,7 @@ Form.EventObserver = Class.create(Abstract.EventObserver, {getValue:function() {
   if (window.attachEvent) {
     if (window.addEventListener) {
       isIELegacyEvent = function(event$$19) {
-        return!(event$$19 instanceof window.Event);
+        return !(event$$19 instanceof window.Event);
       };
     } else {
       isIELegacyEvent = function(event$$20) {
@@ -5384,10 +5386,10 @@ var Position = {includeScrollOffsets:false, prepare:function() {
     return 0;
   }
   if (mode$$7 == "vertical") {
-    return(this.offset[1] + element$$207.offsetHeight - this.ycomp) / element$$207.offsetHeight;
+    return (this.offset[1] + element$$207.offsetHeight - this.ycomp) / element$$207.offsetHeight;
   }
   if (mode$$7 == "horizontal") {
-    return(this.offset[0] + element$$207.offsetWidth - this.xcomp) / element$$207.offsetWidth;
+    return (this.offset[0] + element$$207.offsetWidth - this.xcomp) / element$$207.offsetWidth;
   }
 }, cumulativeOffset:Element.Methods.cumulativeOffset, positionedOffset:Element.Methods.positionedOffset, absolutize:function(element$$208) {
   Position.prepare();
@@ -5422,7 +5424,7 @@ if (!document.getElementsByClassName) {
       var cn;
       for (;child$$2 = nodes$$1[i$$63];i$$63++) {
         if (child$$2.className && (cn = " " + child$$2.className + " ") && (cn.include(className$$6) || classNames$$2 && classNames$$2.all(function(name$$47) {
-          return!name$$47.toString().blank() && cn.include(" " + name$$47 + " ");
+          return !name$$47.toString().blank() && cn.include(" " + name$$47 + " ");
         }))) {
           elements$$9.push(Element.extend(child$$2));
         }
@@ -5559,20 +5561,20 @@ var cram = function() {
     };
   });
   var userData = backend.create(function() {
-    var JSCompiler_temp$$1;
-    if (JSCompiler_temp$$1 = !!window.ActiveXObject) {
-      var JSCompiler_inline_result$$2;
+    var JSCompiler_temp$$3;
+    if (JSCompiler_temp$$3 = !!window.ActiveXObject) {
+      var JSCompiler_inline_result$$4;
       JSCompiler_inline_label_msieVersion_86: {
         var reg$$inline_85 = /MSIE ([0-9]+[\.0-9]*)/;
         if (navigator.appName == "Microsoft Internet Explorer" && reg$$inline_85.test(navigator.userAgent)) {
-          JSCompiler_inline_result$$2 = parseFloat(RegExp.$1);
+          JSCompiler_inline_result$$4 = parseFloat(RegExp.$1);
           break JSCompiler_inline_label_msieVersion_86;
         }
-        JSCompiler_inline_result$$2 = 0;
+        JSCompiler_inline_result$$4 = 0;
       }
-      JSCompiler_temp$$1 = JSCompiler_inline_result$$2 >= 7;
+      JSCompiler_temp$$3 = JSCompiler_inline_result$$4 >= 7;
     }
-    return JSCompiler_temp$$1;
+    return JSCompiler_temp$$3;
   }, function() {
     var store$$3 = appendDiv(function(div$$6) {
       div$$6.id = "_cram_userData";
@@ -5653,7 +5655,7 @@ var cram = function() {
     }
     document.fire("cram:load");
   }, methods:methods$$8, valid:function() {
-    return!!store$$1;
+    return !!store$$1;
   }, unload:function() {
     if (store$$1 && store$$1.free) {
       store$$1.free();

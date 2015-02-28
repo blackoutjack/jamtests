@@ -876,5 +876,5 @@ var policy = function() {
   p12.subsumedBy = pFull;
   p12.itype = "write";
   Object.freeze(p12);
-  return{p155:p155, p163:p163, p164:p164, p153:p153, p157:p157, p156:p156, p152:p152, p154:p154, p101:p101, p12:p12, pFull:pFull, woven:true};
+  return {p155:p155, p163:p163, p164:p164, p153:p153, p157:p157, p156:p156, p152:p152, p154:p154, p101:p101, p12:p12, pFull:pFull, woven:true};
 }()

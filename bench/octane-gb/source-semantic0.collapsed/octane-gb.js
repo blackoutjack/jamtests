@@ -15,15 +15,15 @@ function v887(length$$20, defaultValue, numberType) {
     if (settings[5]) {
       throw new Error("");
     }
-    var v8430 = numberType != "float32";
-    if (v8430) {
-      v8430 = GameBoyWindow.opera;
+    var v8427 = numberType != "float32";
+    if (v8427) {
+      v8427 = GameBoyWindow.opera;
     }
-    var v5550 = v8430;
-    if (v5550) {
-      v5550 = this.checkForOperaMathBug();
+    var v5547 = v8427;
+    if (v5547) {
+      v5547 = this.checkForOperaMathBug();
     }
-    if (v5550) {
+    if (v5547) {
       throw new Error("");
     }
     switch(numberType) {
@@ -65,12 +65,12 @@ function v887(length$$20, defaultValue, numberType) {
 }
 function v886(baseArray$$1) {
   try {
-    var v5552 = !baseArray$$1;
-    if (!v5552) {
-      v5552 = !baseArray$$1.length;
+    var v5549 = !baseArray$$1;
+    if (!v5549) {
+      v5549 = !baseArray$$1.length;
     }
-    if (v5552) {
-      return[];
+    if (v5549) {
+      return [];
     }
     var arrayTemp = [];
     var index$$66 = 0;
@@ -89,27 +89,27 @@ function v886(baseArray$$1) {
 }
 function v885(baseArray, memtype) {
   try {
-    var v5556 = settings[5];
-    if (!v5556) {
-      var v9677 = memtype != "float32";
-      if (v9677) {
-        v9677 = GameBoyWindow.opera;
+    var v5553 = settings[5];
+    if (!v5553) {
+      var v9674 = memtype != "float32";
+      if (v9674) {
+        v9674 = GameBoyWindow.opera;
       }
-      var v8433 = v9677;
-      if (v8433) {
-        v8433 = this.checkForOperaMathBug();
+      var v8430 = v9674;
+      if (v8430) {
+        v8430 = this.checkForOperaMathBug();
       }
-      v5556 = v8433;
+      v5553 = v8430;
     }
-    if (v5556) {
+    if (v5553) {
       return baseArray;
     }
-    var v5557 = !baseArray;
-    if (!v5557) {
-      v5557 = !baseArray.length;
+    var v5554 = !baseArray;
+    if (!v5554) {
+      v5554 = !baseArray.length;
     }
-    if (v5557) {
-      return[];
+    if (v5554) {
+      return [];
     }
     var length$$19 = baseArray.length;
     switch(memtype) {
@@ -200,11 +200,11 @@ function v881() {
   }
   function v876(parentObj$$667, address$$161, data$$135) {
     parentObj$$667.memory[65350] = data$$135;
-    var v5567 = data$$135 > 127;
-    if (v5567) {
-      v5567 = data$$135 < 224;
+    var v5564 = data$$135 > 127;
+    if (v5564) {
+      v5564 = data$$135 < 224;
     }
-    if (v5567) {
+    if (v5564) {
       data$$135 = data$$135 << 8;
       address$$161 = 65024;
       var stat$$1 = parentObj$$667.modeSTAT;
@@ -234,35 +234,35 @@ function v881() {
           var v930 = parentObj$$667.memory;
           var v931 = address$$161;
           address$$161 = address$$161 + 1;
-          var v5571 = parentObj$$667.memoryReader;
-          var v5572 = data$$135;
+          var v5568 = parentObj$$667.memoryReader;
+          var v5569 = data$$135;
           data$$135 = data$$135 + 1;
-          var v10606 = JAM.call(v5571[data$$135], v5571, [parentObj$$667, v5572], JAM.policy.p1);
-          v930[v931] = v10606;
+          var v10603 = JAM.call(v5568[data$$135], v5568, [parentObj$$667, v5569], JAM.policy.p1);
+          v930[v931] = v10603;
           var v932 = parentObj$$667.memory;
           var v933 = address$$161;
           address$$161 = address$$161 + 1;
-          var v5573 = parentObj$$667.memoryReader;
-          var v5574 = data$$135;
+          var v5570 = parentObj$$667.memoryReader;
+          var v5571 = data$$135;
           data$$135 = data$$135 + 1;
-          var v10607 = JAM.call(v5573[data$$135], v5573, [parentObj$$667, v5574], JAM.policy.p1);
-          v932[v933] = v10607;
+          var v10604 = JAM.call(v5570[data$$135], v5570, [parentObj$$667, v5571], JAM.policy.p1);
+          v932[v933] = v10604;
           var v934 = parentObj$$667.memory;
           var v935 = address$$161;
           address$$161 = address$$161 + 1;
-          var v5575 = parentObj$$667.memoryReader;
-          var v5576 = data$$135;
+          var v5572 = parentObj$$667.memoryReader;
+          var v5573 = data$$135;
           data$$135 = data$$135 + 1;
-          var v10608 = JAM.call(v5575[data$$135], v5575, [parentObj$$667, v5576], JAM.policy.p1);
-          v934[v935] = v10608;
+          var v10605 = JAM.call(v5572[data$$135], v5572, [parentObj$$667, v5573], JAM.policy.p1);
+          v934[v935] = v10605;
           var v936 = parentObj$$667.memory;
           var v937 = address$$161;
           address$$161 = address$$161 + 1;
-          var v5577 = parentObj$$667.memoryReader;
-          var v5578 = data$$135;
+          var v5574 = parentObj$$667.memoryReader;
+          var v5575 = data$$135;
           data$$135 = data$$135 + 1;
-          var v10609 = JAM.call(v5577[data$$135], v5577, [parentObj$$667, v5578], JAM.policy.p1);
-          v936[v937] = v10609;
+          var v10606 = JAM.call(v5574[data$$135], v5574, [parentObj$$667, v5575], JAM.policy.p1);
+          v936[v937] = v10606;
           v938 = address$$161 < 65184;
         } while (v938);
       }
@@ -276,19 +276,19 @@ function v881() {
     parentObj$$666.mode1TriggerSTAT = (data$$134 & 16) == 16;
     parentObj$$666.mode0TriggerSTAT = (data$$134 & 8) == 8;
     parentObj$$666.memory[65345] = data$$134 & 120;
-    var v9681 = !parentObj$$666.usedBootROM;
-    if (!v9681) {
-      v9681 = !parentObj$$666.usedGBCBootROM;
+    var v9678 = !parentObj$$666.usedBootROM;
+    if (!v9678) {
+      v9678 = !parentObj$$666.usedGBCBootROM;
     }
-    var v8443 = v9681;
-    if (v8443) {
-      v8443 = parentObj$$666.LCDisOn;
+    var v8440 = v9678;
+    if (v8440) {
+      v8440 = parentObj$$666.LCDisOn;
     }
-    var v5579 = v8443;
-    if (v5579) {
-      v5579 = parentObj$$666.modeSTAT < 2;
+    var v5576 = v8440;
+    if (v5576) {
+      v5576 = parentObj$$666.modeSTAT < 2;
     }
-    if (v5579) {
+    if (v5576) {
       parentObj$$666.interruptsRequested = parentObj$$666.interruptsRequested | 2;
       parentObj$$666.checkIRQMatching();
     }
@@ -361,17 +361,17 @@ function v881() {
   }
   function v871(parentObj$$662, address$$156, data$$130) {
     var addressCheck = parentObj$$662.memory[65361] << 8 | parentObj$$662.memory[65362];
-    var v8451 = !parentObj$$662.hdmaRunning;
-    if (!v8451) {
-      v8451 = addressCheck < 53248;
+    var v8448 = !parentObj$$662.hdmaRunning;
+    if (!v8448) {
+      v8448 = addressCheck < 53248;
     }
-    var v5590 = v8451;
-    if (!v5590) {
-      v5590 = addressCheck >= 57344;
+    var v5587 = v8448;
+    if (!v5587) {
+      v5587 = addressCheck >= 57344;
     }
-    if (v5590) {
-      var v10610 = JAM.call(Math.max, Math, [data$$130 & 7, 1], JAM.policy.p1);
-      parentObj$$662.gbcRamBank = v10610;
+    if (v5587) {
+      var v10607 = JAM.call(Math.max, Math, [data$$130 & 7, 1], JAM.policy.p1);
+      parentObj$$662.gbcRamBank = v10607;
       parentObj$$662.gbcRamBankPosition = (parentObj$$662.gbcRamBank - 1 << 12) - 53248;
       parentObj$$662.gbcRamBankPositionECHO = parentObj$$662.gbcRamBankPosition - 8192;
     }
@@ -499,35 +499,35 @@ function v881() {
           var v1012 = parentObj$$650.memory;
           var v1013 = address$$144;
           address$$144 = address$$144 + 1;
-          var v5618 = parentObj$$650.memoryReader;
-          var v5619 = data$$118;
+          var v5615 = parentObj$$650.memoryReader;
+          var v5616 = data$$118;
           data$$118 = data$$118 + 1;
-          var v10611 = JAM.call(v5618[data$$118], v5618, [parentObj$$650, v5619], JAM.policy.p1);
-          v1012[v1013] = v10611;
+          var v10608 = JAM.call(v5615[data$$118], v5615, [parentObj$$650, v5616], JAM.policy.p1);
+          v1012[v1013] = v10608;
           var v1014 = parentObj$$650.memory;
           var v1015 = address$$144;
           address$$144 = address$$144 + 1;
-          var v5620 = parentObj$$650.memoryReader;
-          var v5621 = data$$118;
+          var v5617 = parentObj$$650.memoryReader;
+          var v5618 = data$$118;
           data$$118 = data$$118 + 1;
-          var v10612 = JAM.call(v5620[data$$118], v5620, [parentObj$$650, v5621], JAM.policy.p1);
-          v1014[v1015] = v10612;
+          var v10609 = JAM.call(v5617[data$$118], v5617, [parentObj$$650, v5618], JAM.policy.p1);
+          v1014[v1015] = v10609;
           var v1016 = parentObj$$650.memory;
           var v1017 = address$$144;
           address$$144 = address$$144 + 1;
-          var v5622 = parentObj$$650.memoryReader;
-          var v5623 = data$$118;
+          var v5619 = parentObj$$650.memoryReader;
+          var v5620 = data$$118;
           data$$118 = data$$118 + 1;
-          var v10613 = JAM.call(v5622[data$$118], v5622, [parentObj$$650, v5623], JAM.policy.p1);
-          v1016[v1017] = v10613;
+          var v10610 = JAM.call(v5619[data$$118], v5619, [parentObj$$650, v5620], JAM.policy.p1);
+          v1016[v1017] = v10610;
           var v1018 = parentObj$$650.memory;
           var v1019 = address$$144;
           address$$144 = address$$144 + 1;
-          var v5624 = parentObj$$650.memoryReader;
-          var v5625 = data$$118;
+          var v5621 = parentObj$$650.memoryReader;
+          var v5622 = data$$118;
           data$$118 = data$$118 + 1;
-          var v10614 = JAM.call(v5624[data$$118], v5624, [parentObj$$650, v5625], JAM.policy.p1);
-          v1018[v1019] = v10614;
+          var v10611 = JAM.call(v5621[data$$118], v5621, [parentObj$$650, v5622], JAM.policy.p1);
+          v1018[v1019] = v10611;
           v1020 = address$$144 < 65184;
         } while (v1020);
       }
@@ -786,20 +786,20 @@ function v855() {
   }
   function v828(parentObj$$620, address$$114, data$$88) {
     parentObj$$620.audioJIT();
-    var v5674 = !parentObj$$620.soundMasterEnabled;
-    if (v5674) {
-      v5674 = data$$88 > 127;
+    var v5671 = !parentObj$$620.soundMasterEnabled;
+    if (v5671) {
+      v5671 = data$$88 > 127;
     }
-    if (v5674) {
+    if (v5671) {
       parentObj$$620.memory[65318] = 128;
       parentObj$$620.soundMasterEnabled = true;
       parentObj$$620.initializeAudioStartState();
     } else {
-      var v5675 = parentObj$$620.soundMasterEnabled;
-      if (v5675) {
-        v5675 = data$$88 < 128;
+      var v5672 = parentObj$$620.soundMasterEnabled;
+      if (v5672) {
+        v5672 = data$$88 < 128;
       }
-      if (v5675) {
+      if (v5672) {
         parentObj$$620.memory[65318] = 0;
         parentObj$$620.soundMasterEnabled = false;
         var index$$64 = 65296;
@@ -815,11 +815,11 @@ function v855() {
     return;
   }
   function v827(parentObj$$619, address$$113, data$$87) {
-    var v5676 = parentObj$$619.soundMasterEnabled;
-    if (v5676) {
-      v5676 = parentObj$$619.memory[65317] != data$$87;
+    var v5673 = parentObj$$619.soundMasterEnabled;
+    if (v5673) {
+      v5673 = parentObj$$619.memory[65317] != data$$87;
     }
-    if (v5676) {
+    if (v5673) {
       parentObj$$619.audioJIT();
       parentObj$$619.memory[65317] = data$$87;
       parentObj$$619.rightChannel1 = (data$$87 & 1) == 1;
@@ -838,11 +838,11 @@ function v855() {
     return;
   }
   function v826(parentObj$$618, address$$112, data$$86) {
-    var v5677 = parentObj$$618.soundMasterEnabled;
-    if (v5677) {
-      v5677 = parentObj$$618.memory[65316] != data$$86;
+    var v5674 = parentObj$$618.soundMasterEnabled;
+    if (v5674) {
+      v5674 = parentObj$$618.memory[65316] != data$$86;
     }
-    if (v5677) {
+    if (v5674) {
       parentObj$$618.audioJIT();
       parentObj$$618.memory[65316] = data$$86;
       parentObj$$618.VinLeftChannelMasterVolume = (data$$86 >> 4 & 7) + 1;
@@ -878,19 +878,19 @@ function v855() {
       parentObj$$616.audioJIT();
       parentObj$$616.channel4FrequencyPeriod = JAM.call(Math.max, Math, [(data$$84 & 7) << 4, 8], JAM.policy.p1) << (data$$84 >> 4);
       var bitWidth = data$$84 & 8;
-      var v8477 = bitWidth == 8;
-      if (v8477) {
-        v8477 = parentObj$$616.channel4BitRange == 32767;
+      var v8474 = bitWidth == 8;
+      if (v8474) {
+        v8474 = parentObj$$616.channel4BitRange == 32767;
       }
-      var v5682 = v8477;
-      if (!v5682) {
-        var v8478 = bitWidth == 0;
-        if (v8478) {
-          v8478 = parentObj$$616.channel4BitRange == 127;
+      var v5679 = v8474;
+      if (!v5679) {
+        var v8475 = bitWidth == 0;
+        if (v8475) {
+          v8475 = parentObj$$616.channel4BitRange == 127;
         }
-        v5682 = v8478;
+        v5679 = v8475;
       }
-      if (v5682) {
+      if (v5679) {
         parentObj$$616.channel4lastSampleLookup = 0;
         var v1126;
         if (bitWidth == 8) {
@@ -923,11 +923,11 @@ function v855() {
   function v823(parentObj$$615, address$$109, data$$83) {
     if (parentObj$$615.soundMasterEnabled) {
       parentObj$$615.audioJIT();
-      var v5686 = parentObj$$615.channel4Enabled;
-      if (v5686) {
-        v5686 = parentObj$$615.channel4envelopeSweeps == 0;
+      var v5683 = parentObj$$615.channel4Enabled;
+      if (v5683) {
+        v5683 = parentObj$$615.channel4envelopeSweeps == 0;
       }
-      if (v5686) {
+      if (v5683) {
         if (((parentObj$$615.memory[65313] ^ data$$83) & 8) == 8) {
           if ((parentObj$$615.memory[65313] & 8) == 0) {
             if ((parentObj$$615.memory[65313] & 7) == 7) {
@@ -952,11 +952,11 @@ function v855() {
     return;
   }
   function v822(parentObj$$614, address$$108, data$$82) {
-    var v5694 = parentObj$$614.soundMasterEnabled;
-    if (!v5694) {
-      v5694 = !parentObj$$614.cGBC;
+    var v5691 = parentObj$$614.soundMasterEnabled;
+    if (!v5691) {
+      v5691 = !parentObj$$614.cGBC;
     }
-    if (v5694) {
+    if (v5691) {
       if (parentObj$$614.soundMasterEnabled) {
         parentObj$$614.audioJIT();
       }
@@ -1012,11 +1012,11 @@ function v855() {
     return;
   }
   function v818(parentObj$$610, address$$104, data$$78) {
-    var v5704 = parentObj$$610.soundMasterEnabled;
-    if (!v5704) {
-      v5704 = !parentObj$$610.cGBC;
+    var v5701 = parentObj$$610.soundMasterEnabled;
+    if (!v5701) {
+      v5701 = !parentObj$$610.cGBC;
     }
-    if (v5704) {
+    if (v5701) {
       if (parentObj$$610.soundMasterEnabled) {
         parentObj$$610.audioJIT();
       }
@@ -1029,24 +1029,24 @@ function v855() {
   function v817(parentObj$$609, address$$103, data$$77) {
     if (parentObj$$609.soundMasterEnabled) {
       parentObj$$609.audioJIT();
-      var v5705 = !parentObj$$609.channel3canPlay;
-      if (v5705) {
-        v5705 = data$$77 >= 128;
+      var v5702 = !parentObj$$609.channel3canPlay;
+      if (v5702) {
+        v5702 = data$$77 >= 128;
       }
-      if (v5705) {
+      if (v5702) {
         parentObj$$609.channel3lastSampleLookup = 0;
         parentObj$$609.channel3UpdateCache();
       }
       parentObj$$609.channel3canPlay = data$$77 > 127;
-      var v8491 = parentObj$$609.channel3canPlay;
-      if (v8491) {
-        v8491 = parentObj$$609.memory[65306] > 127;
+      var v8488 = parentObj$$609.channel3canPlay;
+      if (v8488) {
+        v8488 = parentObj$$609.memory[65306] > 127;
       }
-      var v5706 = v8491;
-      if (v5706) {
-        v5706 = !parentObj$$609.channel3consecutive;
+      var v5703 = v8488;
+      if (v5703) {
+        v5703 = !parentObj$$609.channel3consecutive;
       }
-      if (v5706) {
+      if (v5703) {
         var v1171 = parentObj$$609.memory;
         v1171[65318] = v1171[65318] | 4;
       }
@@ -1090,11 +1090,11 @@ function v855() {
   function v814(parentObj$$606, address$$100, data$$74) {
     if (parentObj$$606.soundMasterEnabled) {
       parentObj$$606.audioJIT();
-      var v5714 = parentObj$$606.channel2Enabled;
-      if (v5714) {
-        v5714 = parentObj$$606.channel2envelopeSweeps == 0;
+      var v5711 = parentObj$$606.channel2Enabled;
+      if (v5711) {
+        v5711 = parentObj$$606.channel2envelopeSweeps == 0;
       }
-      if (v5714) {
+      if (v5711) {
         if (((parentObj$$606.memory[65303] ^ data$$74) & 8) == 8) {
           if ((parentObj$$606.memory[65303] & 8) == 0) {
             if ((parentObj$$606.memory[65303] & 7) == 7) {
@@ -1118,11 +1118,11 @@ function v855() {
     return;
   }
   function v813(parentObj$$605, address$$99, data$$73) {
-    var v5722 = parentObj$$605.soundMasterEnabled;
-    if (!v5722) {
-      v5722 = !parentObj$$605.cGBC;
+    var v5719 = parentObj$$605.soundMasterEnabled;
+    if (!v5719) {
+      v5719 = !parentObj$$605.cGBC;
     }
-    if (v5722) {
+    if (v5719) {
       if (parentObj$$605.soundMasterEnabled) {
         parentObj$$605.audioJIT();
       } else {
@@ -1151,11 +1151,11 @@ function v855() {
         if (parentObj$$604.channel1totalLength == 0) {
           parentObj$$604.channel1totalLength = 64;
         }
-        var v5727 = parentObj$$604.channel1lastTimeSweep > 0;
-        if (!v5727) {
-          v5727 = parentObj$$604.channel1frequencySweepDivider > 0;
+        var v5724 = parentObj$$604.channel1lastTimeSweep > 0;
+        if (!v5724) {
+          v5724 = parentObj$$604.channel1frequencySweepDivider > 0;
         }
-        if (v5727) {
+        if (v5724) {
           var v1214 = parentObj$$604.memory;
           v1214[65318] = v1214[65318] | 1;
         } else {
@@ -1187,11 +1187,11 @@ function v855() {
   function v810(parentObj$$602, address$$96, data$$70) {
     if (parentObj$$602.soundMasterEnabled) {
       parentObj$$602.audioJIT();
-      var v5731 = parentObj$$602.channel1Enabled;
-      if (v5731) {
-        v5731 = parentObj$$602.channel1envelopeSweeps == 0;
+      var v5728 = parentObj$$602.channel1Enabled;
+      if (v5728) {
+        v5728 = parentObj$$602.channel1envelopeSweeps == 0;
       }
-      if (v5731) {
+      if (v5728) {
         if (((parentObj$$602.memory[65298] ^ data$$70) & 8) == 8) {
           if ((parentObj$$602.memory[65298] & 8) == 0) {
             if ((parentObj$$602.memory[65298] & 7) == 7) {
@@ -1215,11 +1215,11 @@ function v855() {
     return;
   }
   function v809(parentObj$$601, address$$95, data$$69) {
-    var v5739 = parentObj$$601.soundMasterEnabled;
-    if (!v5739) {
-      v5739 = !parentObj$$601.cGBC;
+    var v5736 = parentObj$$601.soundMasterEnabled;
+    if (!v5736) {
+      v5736 = !parentObj$$601.cGBC;
     }
-    if (v5739) {
+    if (v5736) {
       if (parentObj$$601.soundMasterEnabled) {
         parentObj$$601.audioJIT();
       } else {
@@ -1235,11 +1235,11 @@ function v855() {
   function v808(parentObj$$600, address$$94, data$$68) {
     if (parentObj$$600.soundMasterEnabled) {
       parentObj$$600.audioJIT();
-      var v5740 = parentObj$$600.channel1decreaseSweep;
-      if (v5740) {
-        v5740 = (data$$68 & 8) == 0;
+      var v5737 = parentObj$$600.channel1decreaseSweep;
+      if (v5737) {
+        v5737 = (data$$68 & 8) == 0;
       }
-      if (v5740) {
+      if (v5737) {
         if (parentObj$$600.channel1numSweep != parentObj$$600.channel1frequencySweepDivider) {
           parentObj$$600.channel1SweepFault = true;
         }
@@ -1260,13 +1260,13 @@ function v855() {
   function v806(parentObj$$598, address$$92, data$$66) {
     parentObj$$598.memory[65287] = data$$66 & 7;
     parentObj$$598.TIMAEnabled = (data$$66 & 4) == 4;
-    var v8516;
+    var v8513;
     if ((data$$66 & 3) != 0) {
-      v8516 = data$$66 & 3;
+      v8513 = data$$66 & 3;
     } else {
-      v8516 = 4;
+      v8513 = 4;
     }
-    parentObj$$598.TACClocker = JAM.call(Math.pow, Math, [4, v8516], JAM.policy.p1) << 2;
+    parentObj$$598.TACClocker = JAM.call(Math.pow, Math, [4, v8513], JAM.policy.p1) << 2;
     return;
   }
   function v805(parentObj$$597, address$$91, data$$65) {
@@ -1290,21 +1290,21 @@ function v855() {
   }
   function v801(parentObj$$593, address$$87, data$$61) {
     var v1256 = parentObj$$593.memory;
-    var v5746 = data$$61 & 48;
-    var v9703;
+    var v5743 = data$$61 & 48;
+    var v9700;
     if ((data$$61 & 32) == 0) {
-      v9703 = parentObj$$593.JoyPad >> 4;
+      v9700 = parentObj$$593.JoyPad >> 4;
     } else {
-      v9703 = 15;
+      v9700 = 15;
     }
-    var v8518 = v9703;
-    var v9704;
+    var v8515 = v9700;
+    var v9701;
     if ((data$$61 & 16) == 0) {
-      v9704 = parentObj$$593.JoyPad & 15;
+      v9701 = parentObj$$593.JoyPad & 15;
     } else {
-      v9704 = 15;
+      v9701 = 15;
     }
-    v1256[65280] = v5746 | v8518 & v9704;
+    v1256[65280] = v5743 | v8515 & v9701;
     return;
   }
   this.memoryHighWriter[0] = this.memoryWriter[65280] = v801;
@@ -1390,85 +1390,85 @@ function v800(tilesToTransfer) {
     do {
       if (destination < 6144) {
         var v1327 = 32768 | destination;
+        var v5818 = source$$1;
+        source$$1 = source$$1 + 1;
+        var v10612 = JAM.call(memoryReader[source$$1], memoryReader, [this, v5818], JAM.policy.p1);
+        memory[v1327] = v10612;
+        var v1328 = 32769 | destination;
+        var v5819 = source$$1;
+        source$$1 = source$$1 + 1;
+        var v10613 = JAM.call(memoryReader[source$$1], memoryReader, [this, v5819], JAM.policy.p1);
+        memory[v1328] = v10613;
+        var v1329 = 32770 | destination;
+        var v5820 = source$$1;
+        source$$1 = source$$1 + 1;
+        var v10614 = JAM.call(memoryReader[source$$1], memoryReader, [this, v5820], JAM.policy.p1);
+        memory[v1329] = v10614;
+        var v1330 = 32771 | destination;
         var v5821 = source$$1;
         source$$1 = source$$1 + 1;
         var v10615 = JAM.call(memoryReader[source$$1], memoryReader, [this, v5821], JAM.policy.p1);
-        memory[v1327] = v10615;
-        var v1328 = 32769 | destination;
+        memory[v1330] = v10615;
+        var v1331 = 32772 | destination;
         var v5822 = source$$1;
         source$$1 = source$$1 + 1;
         var v10616 = JAM.call(memoryReader[source$$1], memoryReader, [this, v5822], JAM.policy.p1);
-        memory[v1328] = v10616;
-        var v1329 = 32770 | destination;
+        memory[v1331] = v10616;
+        var v1332 = 32773 | destination;
         var v5823 = source$$1;
         source$$1 = source$$1 + 1;
         var v10617 = JAM.call(memoryReader[source$$1], memoryReader, [this, v5823], JAM.policy.p1);
-        memory[v1329] = v10617;
-        var v1330 = 32771 | destination;
+        memory[v1332] = v10617;
+        var v1333 = 32774 | destination;
         var v5824 = source$$1;
         source$$1 = source$$1 + 1;
         var v10618 = JAM.call(memoryReader[source$$1], memoryReader, [this, v5824], JAM.policy.p1);
-        memory[v1330] = v10618;
-        var v1331 = 32772 | destination;
+        memory[v1333] = v10618;
+        var v1334 = 32775 | destination;
         var v5825 = source$$1;
         source$$1 = source$$1 + 1;
         var v10619 = JAM.call(memoryReader[source$$1], memoryReader, [this, v5825], JAM.policy.p1);
-        memory[v1331] = v10619;
-        var v1332 = 32773 | destination;
+        memory[v1334] = v10619;
+        var v1335 = 32776 | destination;
         var v5826 = source$$1;
         source$$1 = source$$1 + 1;
         var v10620 = JAM.call(memoryReader[source$$1], memoryReader, [this, v5826], JAM.policy.p1);
-        memory[v1332] = v10620;
-        var v1333 = 32774 | destination;
+        memory[v1335] = v10620;
+        var v1336 = 32777 | destination;
         var v5827 = source$$1;
         source$$1 = source$$1 + 1;
         var v10621 = JAM.call(memoryReader[source$$1], memoryReader, [this, v5827], JAM.policy.p1);
-        memory[v1333] = v10621;
-        var v1334 = 32775 | destination;
+        memory[v1336] = v10621;
+        var v1337 = 32778 | destination;
         var v5828 = source$$1;
         source$$1 = source$$1 + 1;
         var v10622 = JAM.call(memoryReader[source$$1], memoryReader, [this, v5828], JAM.policy.p1);
-        memory[v1334] = v10622;
-        var v1335 = 32776 | destination;
+        memory[v1337] = v10622;
+        var v1338 = 32779 | destination;
         var v5829 = source$$1;
         source$$1 = source$$1 + 1;
         var v10623 = JAM.call(memoryReader[source$$1], memoryReader, [this, v5829], JAM.policy.p1);
-        memory[v1335] = v10623;
-        var v1336 = 32777 | destination;
+        memory[v1338] = v10623;
+        var v1339 = 32780 | destination;
         var v5830 = source$$1;
         source$$1 = source$$1 + 1;
         var v10624 = JAM.call(memoryReader[source$$1], memoryReader, [this, v5830], JAM.policy.p1);
-        memory[v1336] = v10624;
-        var v1337 = 32778 | destination;
+        memory[v1339] = v10624;
+        var v1340 = 32781 | destination;
         var v5831 = source$$1;
         source$$1 = source$$1 + 1;
         var v10625 = JAM.call(memoryReader[source$$1], memoryReader, [this, v5831], JAM.policy.p1);
-        memory[v1337] = v10625;
-        var v1338 = 32779 | destination;
+        memory[v1340] = v10625;
+        var v1341 = 32782 | destination;
         var v5832 = source$$1;
         source$$1 = source$$1 + 1;
         var v10626 = JAM.call(memoryReader[source$$1], memoryReader, [this, v5832], JAM.policy.p1);
-        memory[v1338] = v10626;
-        var v1339 = 32780 | destination;
+        memory[v1341] = v10626;
+        var v1342 = 32783 | destination;
         var v5833 = source$$1;
         source$$1 = source$$1 + 1;
         var v10627 = JAM.call(memoryReader[source$$1], memoryReader, [this, v5833], JAM.policy.p1);
-        memory[v1339] = v10627;
-        var v1340 = 32781 | destination;
-        var v5834 = source$$1;
-        source$$1 = source$$1 + 1;
-        var v10628 = JAM.call(memoryReader[source$$1], memoryReader, [this, v5834], JAM.policy.p1);
-        memory[v1340] = v10628;
-        var v1341 = 32782 | destination;
-        var v5835 = source$$1;
-        source$$1 = source$$1 + 1;
-        var v10629 = JAM.call(memoryReader[source$$1], memoryReader, [this, v5835], JAM.policy.p1);
-        memory[v1341] = v10629;
-        var v1342 = 32783 | destination;
-        var v5836 = source$$1;
-        source$$1 = source$$1 + 1;
-        var v10630 = JAM.call(memoryReader[source$$1], memoryReader, [this, v5836], JAM.policy.p1);
-        memory[v1342] = v10630;
+        memory[v1342] = v10627;
         JAM.call(this.generateGBCTileBank1, this, [destination]);
         destination = destination + 16;
       } else {
@@ -1476,115 +1476,115 @@ function v800(tilesToTransfer) {
         var v1343 = this.BGCHRBank1;
         var v1344 = destination;
         destination = destination + 1;
+        var v5834 = source$$1;
+        source$$1 = source$$1 + 1;
+        var v10628 = JAM.call(memoryReader[source$$1], memoryReader, [this, v5834], JAM.policy.p1);
+        v1343[v1344] = v10628;
+        var v1345 = this.BGCHRBank1;
+        var v1346 = destination;
+        destination = destination + 1;
+        var v5835 = source$$1;
+        source$$1 = source$$1 + 1;
+        var v10629 = JAM.call(memoryReader[source$$1], memoryReader, [this, v5835], JAM.policy.p1);
+        v1345[v1346] = v10629;
+        var v1347 = this.BGCHRBank1;
+        var v1348 = destination;
+        destination = destination + 1;
+        var v5836 = source$$1;
+        source$$1 = source$$1 + 1;
+        var v10630 = JAM.call(memoryReader[source$$1], memoryReader, [this, v5836], JAM.policy.p1);
+        v1347[v1348] = v10630;
+        var v1349 = this.BGCHRBank1;
+        var v1350 = destination;
+        destination = destination + 1;
         var v5837 = source$$1;
         source$$1 = source$$1 + 1;
         var v10631 = JAM.call(memoryReader[source$$1], memoryReader, [this, v5837], JAM.policy.p1);
-        v1343[v1344] = v10631;
-        var v1345 = this.BGCHRBank1;
-        var v1346 = destination;
+        v1349[v1350] = v10631;
+        var v1351 = this.BGCHRBank1;
+        var v1352 = destination;
         destination = destination + 1;
         var v5838 = source$$1;
         source$$1 = source$$1 + 1;
         var v10632 = JAM.call(memoryReader[source$$1], memoryReader, [this, v5838], JAM.policy.p1);
-        v1345[v1346] = v10632;
-        var v1347 = this.BGCHRBank1;
-        var v1348 = destination;
+        v1351[v1352] = v10632;
+        var v1353 = this.BGCHRBank1;
+        var v1354 = destination;
         destination = destination + 1;
         var v5839 = source$$1;
         source$$1 = source$$1 + 1;
         var v10633 = JAM.call(memoryReader[source$$1], memoryReader, [this, v5839], JAM.policy.p1);
-        v1347[v1348] = v10633;
-        var v1349 = this.BGCHRBank1;
-        var v1350 = destination;
+        v1353[v1354] = v10633;
+        var v1355 = this.BGCHRBank1;
+        var v1356 = destination;
         destination = destination + 1;
         var v5840 = source$$1;
         source$$1 = source$$1 + 1;
         var v10634 = JAM.call(memoryReader[source$$1], memoryReader, [this, v5840], JAM.policy.p1);
-        v1349[v1350] = v10634;
-        var v1351 = this.BGCHRBank1;
-        var v1352 = destination;
+        v1355[v1356] = v10634;
+        var v1357 = this.BGCHRBank1;
+        var v1358 = destination;
         destination = destination + 1;
         var v5841 = source$$1;
         source$$1 = source$$1 + 1;
         var v10635 = JAM.call(memoryReader[source$$1], memoryReader, [this, v5841], JAM.policy.p1);
-        v1351[v1352] = v10635;
-        var v1353 = this.BGCHRBank1;
-        var v1354 = destination;
+        v1357[v1358] = v10635;
+        var v1359 = this.BGCHRBank1;
+        var v1360 = destination;
         destination = destination + 1;
         var v5842 = source$$1;
         source$$1 = source$$1 + 1;
         var v10636 = JAM.call(memoryReader[source$$1], memoryReader, [this, v5842], JAM.policy.p1);
-        v1353[v1354] = v10636;
-        var v1355 = this.BGCHRBank1;
-        var v1356 = destination;
+        v1359[v1360] = v10636;
+        var v1361 = this.BGCHRBank1;
+        var v1362 = destination;
         destination = destination + 1;
         var v5843 = source$$1;
         source$$1 = source$$1 + 1;
         var v10637 = JAM.call(memoryReader[source$$1], memoryReader, [this, v5843], JAM.policy.p1);
-        v1355[v1356] = v10637;
-        var v1357 = this.BGCHRBank1;
-        var v1358 = destination;
+        v1361[v1362] = v10637;
+        var v1363 = this.BGCHRBank1;
+        var v1364 = destination;
         destination = destination + 1;
         var v5844 = source$$1;
         source$$1 = source$$1 + 1;
         var v10638 = JAM.call(memoryReader[source$$1], memoryReader, [this, v5844], JAM.policy.p1);
-        v1357[v1358] = v10638;
-        var v1359 = this.BGCHRBank1;
-        var v1360 = destination;
+        v1363[v1364] = v10638;
+        var v1365 = this.BGCHRBank1;
+        var v1366 = destination;
         destination = destination + 1;
         var v5845 = source$$1;
         source$$1 = source$$1 + 1;
         var v10639 = JAM.call(memoryReader[source$$1], memoryReader, [this, v5845], JAM.policy.p1);
-        v1359[v1360] = v10639;
-        var v1361 = this.BGCHRBank1;
-        var v1362 = destination;
+        v1365[v1366] = v10639;
+        var v1367 = this.BGCHRBank1;
+        var v1368 = destination;
         destination = destination + 1;
         var v5846 = source$$1;
         source$$1 = source$$1 + 1;
         var v10640 = JAM.call(memoryReader[source$$1], memoryReader, [this, v5846], JAM.policy.p1);
-        v1361[v1362] = v10640;
-        var v1363 = this.BGCHRBank1;
-        var v1364 = destination;
+        v1367[v1368] = v10640;
+        var v1369 = this.BGCHRBank1;
+        var v1370 = destination;
         destination = destination + 1;
         var v5847 = source$$1;
         source$$1 = source$$1 + 1;
         var v10641 = JAM.call(memoryReader[source$$1], memoryReader, [this, v5847], JAM.policy.p1);
-        v1363[v1364] = v10641;
-        var v1365 = this.BGCHRBank1;
-        var v1366 = destination;
+        v1369[v1370] = v10641;
+        var v1371 = this.BGCHRBank1;
+        var v1372 = destination;
         destination = destination + 1;
         var v5848 = source$$1;
         source$$1 = source$$1 + 1;
         var v10642 = JAM.call(memoryReader[source$$1], memoryReader, [this, v5848], JAM.policy.p1);
-        v1365[v1366] = v10642;
-        var v1367 = this.BGCHRBank1;
-        var v1368 = destination;
+        v1371[v1372] = v10642;
+        var v1373 = this.BGCHRBank1;
+        var v1374 = destination;
         destination = destination + 1;
         var v5849 = source$$1;
         source$$1 = source$$1 + 1;
         var v10643 = JAM.call(memoryReader[source$$1], memoryReader, [this, v5849], JAM.policy.p1);
-        v1367[v1368] = v10643;
-        var v1369 = this.BGCHRBank1;
-        var v1370 = destination;
-        destination = destination + 1;
-        var v5850 = source$$1;
-        source$$1 = source$$1 + 1;
-        var v10644 = JAM.call(memoryReader[source$$1], memoryReader, [this, v5850], JAM.policy.p1);
-        v1369[v1370] = v10644;
-        var v1371 = this.BGCHRBank1;
-        var v1372 = destination;
-        destination = destination + 1;
-        var v5851 = source$$1;
-        source$$1 = source$$1 + 1;
-        var v10645 = JAM.call(memoryReader[source$$1], memoryReader, [this, v5851], JAM.policy.p1);
-        v1371[v1372] = v10645;
-        var v1373 = this.BGCHRBank1;
-        var v1374 = destination;
-        destination = destination + 1;
-        var v5852 = source$$1;
-        source$$1 = source$$1 + 1;
-        var v10646 = JAM.call(memoryReader[source$$1], memoryReader, [this, v5852], JAM.policy.p1);
-        v1373[v1374] = v10646;
+        v1373[v1374] = v10643;
         destination = destination + 6144 & 8176;
       }
       source$$1 = source$$1 & 65520;
@@ -1598,83 +1598,83 @@ function v800(tilesToTransfer) {
       if (destination < 6144) {
         var v1378 = source$$1;
         source$$1 = source$$1 + 1;
-        var v10647 = JAM.call(memoryReader[source$$1], memoryReader, [this, v1378], JAM.policy.p1);
-        VRAM[destination] = v10647;
+        var v10644 = JAM.call(memoryReader[source$$1], memoryReader, [this, v1378], JAM.policy.p1);
+        VRAM[destination] = v10644;
         var v1379 = destination | 1;
+        var v5850 = source$$1;
+        source$$1 = source$$1 + 1;
+        var v10645 = JAM.call(memoryReader[source$$1], memoryReader, [this, v5850], JAM.policy.p1);
+        VRAM[v1379] = v10645;
+        var v1380 = destination | 2;
+        var v5851 = source$$1;
+        source$$1 = source$$1 + 1;
+        var v10646 = JAM.call(memoryReader[source$$1], memoryReader, [this, v5851], JAM.policy.p1);
+        VRAM[v1380] = v10646;
+        var v1381 = destination | 3;
+        var v5852 = source$$1;
+        source$$1 = source$$1 + 1;
+        var v10647 = JAM.call(memoryReader[source$$1], memoryReader, [this, v5852], JAM.policy.p1);
+        VRAM[v1381] = v10647;
+        var v1382 = destination | 4;
         var v5853 = source$$1;
         source$$1 = source$$1 + 1;
         var v10648 = JAM.call(memoryReader[source$$1], memoryReader, [this, v5853], JAM.policy.p1);
-        VRAM[v1379] = v10648;
-        var v1380 = destination | 2;
+        VRAM[v1382] = v10648;
+        var v1383 = destination | 5;
         var v5854 = source$$1;
         source$$1 = source$$1 + 1;
         var v10649 = JAM.call(memoryReader[source$$1], memoryReader, [this, v5854], JAM.policy.p1);
-        VRAM[v1380] = v10649;
-        var v1381 = destination | 3;
+        VRAM[v1383] = v10649;
+        var v1384 = destination | 6;
         var v5855 = source$$1;
         source$$1 = source$$1 + 1;
         var v10650 = JAM.call(memoryReader[source$$1], memoryReader, [this, v5855], JAM.policy.p1);
-        VRAM[v1381] = v10650;
-        var v1382 = destination | 4;
+        VRAM[v1384] = v10650;
+        var v1385 = destination | 7;
         var v5856 = source$$1;
         source$$1 = source$$1 + 1;
         var v10651 = JAM.call(memoryReader[source$$1], memoryReader, [this, v5856], JAM.policy.p1);
-        VRAM[v1382] = v10651;
-        var v1383 = destination | 5;
+        VRAM[v1385] = v10651;
+        var v1386 = destination | 8;
         var v5857 = source$$1;
         source$$1 = source$$1 + 1;
         var v10652 = JAM.call(memoryReader[source$$1], memoryReader, [this, v5857], JAM.policy.p1);
-        VRAM[v1383] = v10652;
-        var v1384 = destination | 6;
+        VRAM[v1386] = v10652;
+        var v1387 = destination | 9;
         var v5858 = source$$1;
         source$$1 = source$$1 + 1;
         var v10653 = JAM.call(memoryReader[source$$1], memoryReader, [this, v5858], JAM.policy.p1);
-        VRAM[v1384] = v10653;
-        var v1385 = destination | 7;
+        VRAM[v1387] = v10653;
+        var v1388 = destination | 10;
         var v5859 = source$$1;
         source$$1 = source$$1 + 1;
         var v10654 = JAM.call(memoryReader[source$$1], memoryReader, [this, v5859], JAM.policy.p1);
-        VRAM[v1385] = v10654;
-        var v1386 = destination | 8;
+        VRAM[v1388] = v10654;
+        var v1389 = destination | 11;
         var v5860 = source$$1;
         source$$1 = source$$1 + 1;
         var v10655 = JAM.call(memoryReader[source$$1], memoryReader, [this, v5860], JAM.policy.p1);
-        VRAM[v1386] = v10655;
-        var v1387 = destination | 9;
+        VRAM[v1389] = v10655;
+        var v1390 = destination | 12;
         var v5861 = source$$1;
         source$$1 = source$$1 + 1;
         var v10656 = JAM.call(memoryReader[source$$1], memoryReader, [this, v5861], JAM.policy.p1);
-        VRAM[v1387] = v10656;
-        var v1388 = destination | 10;
+        VRAM[v1390] = v10656;
+        var v1391 = destination | 13;
         var v5862 = source$$1;
         source$$1 = source$$1 + 1;
         var v10657 = JAM.call(memoryReader[source$$1], memoryReader, [this, v5862], JAM.policy.p1);
-        VRAM[v1388] = v10657;
-        var v1389 = destination | 11;
+        VRAM[v1391] = v10657;
+        var v1392 = destination | 14;
         var v5863 = source$$1;
         source$$1 = source$$1 + 1;
         var v10658 = JAM.call(memoryReader[source$$1], memoryReader, [this, v5863], JAM.policy.p1);
-        VRAM[v1389] = v10658;
-        var v1390 = destination | 12;
+        VRAM[v1392] = v10658;
+        var v1393 = destination | 15;
         var v5864 = source$$1;
         source$$1 = source$$1 + 1;
         var v10659 = JAM.call(memoryReader[source$$1], memoryReader, [this, v5864], JAM.policy.p1);
-        VRAM[v1390] = v10659;
-        var v1391 = destination | 13;
-        var v5865 = source$$1;
-        source$$1 = source$$1 + 1;
-        var v10660 = JAM.call(memoryReader[source$$1], memoryReader, [this, v5865], JAM.policy.p1);
-        VRAM[v1391] = v10660;
-        var v1392 = destination | 14;
-        var v5866 = source$$1;
-        source$$1 = source$$1 + 1;
-        var v10661 = JAM.call(memoryReader[source$$1], memoryReader, [this, v5866], JAM.policy.p1);
-        VRAM[v1392] = v10661;
-        var v1393 = destination | 15;
-        var v5867 = source$$1;
-        source$$1 = source$$1 + 1;
-        var v10662 = JAM.call(memoryReader[source$$1], memoryReader, [this, v5867], JAM.policy.p1);
-        VRAM[v1393] = v10662;
+        VRAM[v1393] = v10659;
         JAM.call(this.generateGBCTileBank2, this, [destination]);
         destination = destination + 16;
       } else {
@@ -1682,115 +1682,115 @@ function v800(tilesToTransfer) {
         var v1394 = this.BGCHRBank2;
         var v1395 = destination;
         destination = destination + 1;
+        var v5865 = source$$1;
+        source$$1 = source$$1 + 1;
+        var v10660 = JAM.call(memoryReader[source$$1], memoryReader, [this, v5865], JAM.policy.p1);
+        v1394[v1395] = v10660;
+        var v1396 = this.BGCHRBank2;
+        var v1397 = destination;
+        destination = destination + 1;
+        var v5866 = source$$1;
+        source$$1 = source$$1 + 1;
+        var v10661 = JAM.call(memoryReader[source$$1], memoryReader, [this, v5866], JAM.policy.p1);
+        v1396[v1397] = v10661;
+        var v1398 = this.BGCHRBank2;
+        var v1399 = destination;
+        destination = destination + 1;
+        var v5867 = source$$1;
+        source$$1 = source$$1 + 1;
+        var v10662 = JAM.call(memoryReader[source$$1], memoryReader, [this, v5867], JAM.policy.p1);
+        v1398[v1399] = v10662;
+        var v1400 = this.BGCHRBank2;
+        var v1401 = destination;
+        destination = destination + 1;
         var v5868 = source$$1;
         source$$1 = source$$1 + 1;
         var v10663 = JAM.call(memoryReader[source$$1], memoryReader, [this, v5868], JAM.policy.p1);
-        v1394[v1395] = v10663;
-        var v1396 = this.BGCHRBank2;
-        var v1397 = destination;
+        v1400[v1401] = v10663;
+        var v1402 = this.BGCHRBank2;
+        var v1403 = destination;
         destination = destination + 1;
         var v5869 = source$$1;
         source$$1 = source$$1 + 1;
         var v10664 = JAM.call(memoryReader[source$$1], memoryReader, [this, v5869], JAM.policy.p1);
-        v1396[v1397] = v10664;
-        var v1398 = this.BGCHRBank2;
-        var v1399 = destination;
+        v1402[v1403] = v10664;
+        var v1404 = this.BGCHRBank2;
+        var v1405 = destination;
         destination = destination + 1;
         var v5870 = source$$1;
         source$$1 = source$$1 + 1;
         var v10665 = JAM.call(memoryReader[source$$1], memoryReader, [this, v5870], JAM.policy.p1);
-        v1398[v1399] = v10665;
-        var v1400 = this.BGCHRBank2;
-        var v1401 = destination;
+        v1404[v1405] = v10665;
+        var v1406 = this.BGCHRBank2;
+        var v1407 = destination;
         destination = destination + 1;
         var v5871 = source$$1;
         source$$1 = source$$1 + 1;
         var v10666 = JAM.call(memoryReader[source$$1], memoryReader, [this, v5871], JAM.policy.p1);
-        v1400[v1401] = v10666;
-        var v1402 = this.BGCHRBank2;
-        var v1403 = destination;
+        v1406[v1407] = v10666;
+        var v1408 = this.BGCHRBank2;
+        var v1409 = destination;
         destination = destination + 1;
         var v5872 = source$$1;
         source$$1 = source$$1 + 1;
         var v10667 = JAM.call(memoryReader[source$$1], memoryReader, [this, v5872], JAM.policy.p1);
-        v1402[v1403] = v10667;
-        var v1404 = this.BGCHRBank2;
-        var v1405 = destination;
+        v1408[v1409] = v10667;
+        var v1410 = this.BGCHRBank2;
+        var v1411 = destination;
         destination = destination + 1;
         var v5873 = source$$1;
         source$$1 = source$$1 + 1;
         var v10668 = JAM.call(memoryReader[source$$1], memoryReader, [this, v5873], JAM.policy.p1);
-        v1404[v1405] = v10668;
-        var v1406 = this.BGCHRBank2;
-        var v1407 = destination;
+        v1410[v1411] = v10668;
+        var v1412 = this.BGCHRBank2;
+        var v1413 = destination;
         destination = destination + 1;
         var v5874 = source$$1;
         source$$1 = source$$1 + 1;
         var v10669 = JAM.call(memoryReader[source$$1], memoryReader, [this, v5874], JAM.policy.p1);
-        v1406[v1407] = v10669;
-        var v1408 = this.BGCHRBank2;
-        var v1409 = destination;
+        v1412[v1413] = v10669;
+        var v1414 = this.BGCHRBank2;
+        var v1415 = destination;
         destination = destination + 1;
         var v5875 = source$$1;
         source$$1 = source$$1 + 1;
         var v10670 = JAM.call(memoryReader[source$$1], memoryReader, [this, v5875], JAM.policy.p1);
-        v1408[v1409] = v10670;
-        var v1410 = this.BGCHRBank2;
-        var v1411 = destination;
+        v1414[v1415] = v10670;
+        var v1416 = this.BGCHRBank2;
+        var v1417 = destination;
         destination = destination + 1;
         var v5876 = source$$1;
         source$$1 = source$$1 + 1;
         var v10671 = JAM.call(memoryReader[source$$1], memoryReader, [this, v5876], JAM.policy.p1);
-        v1410[v1411] = v10671;
-        var v1412 = this.BGCHRBank2;
-        var v1413 = destination;
+        v1416[v1417] = v10671;
+        var v1418 = this.BGCHRBank2;
+        var v1419 = destination;
         destination = destination + 1;
         var v5877 = source$$1;
         source$$1 = source$$1 + 1;
         var v10672 = JAM.call(memoryReader[source$$1], memoryReader, [this, v5877], JAM.policy.p1);
-        v1412[v1413] = v10672;
-        var v1414 = this.BGCHRBank2;
-        var v1415 = destination;
+        v1418[v1419] = v10672;
+        var v1420 = this.BGCHRBank2;
+        var v1421 = destination;
         destination = destination + 1;
         var v5878 = source$$1;
         source$$1 = source$$1 + 1;
         var v10673 = JAM.call(memoryReader[source$$1], memoryReader, [this, v5878], JAM.policy.p1);
-        v1414[v1415] = v10673;
-        var v1416 = this.BGCHRBank2;
-        var v1417 = destination;
+        v1420[v1421] = v10673;
+        var v1422 = this.BGCHRBank2;
+        var v1423 = destination;
         destination = destination + 1;
         var v5879 = source$$1;
         source$$1 = source$$1 + 1;
         var v10674 = JAM.call(memoryReader[source$$1], memoryReader, [this, v5879], JAM.policy.p1);
-        v1416[v1417] = v10674;
-        var v1418 = this.BGCHRBank2;
-        var v1419 = destination;
+        v1422[v1423] = v10674;
+        var v1424 = this.BGCHRBank2;
+        var v1425 = destination;
         destination = destination + 1;
         var v5880 = source$$1;
         source$$1 = source$$1 + 1;
         var v10675 = JAM.call(memoryReader[source$$1], memoryReader, [this, v5880], JAM.policy.p1);
-        v1418[v1419] = v10675;
-        var v1420 = this.BGCHRBank2;
-        var v1421 = destination;
-        destination = destination + 1;
-        var v5881 = source$$1;
-        source$$1 = source$$1 + 1;
-        var v10676 = JAM.call(memoryReader[source$$1], memoryReader, [this, v5881], JAM.policy.p1);
-        v1420[v1421] = v10676;
-        var v1422 = this.BGCHRBank2;
-        var v1423 = destination;
-        destination = destination + 1;
-        var v5882 = source$$1;
-        source$$1 = source$$1 + 1;
-        var v10677 = JAM.call(memoryReader[source$$1], memoryReader, [this, v5882], JAM.policy.p1);
-        v1422[v1423] = v10677;
-        var v1424 = this.BGCHRBank2;
-        var v1425 = destination;
-        destination = destination + 1;
-        var v5883 = source$$1;
-        source$$1 = source$$1 + 1;
-        var v10678 = JAM.call(memoryReader[source$$1], memoryReader, [this, v5883], JAM.policy.p1);
-        v1424[v1425] = v10678;
+        v1424[v1425] = v10675;
         destination = destination + 6144 & 8176;
       }
       source$$1 = source$$1 & 65520;
@@ -1885,11 +1885,11 @@ function v791(parentObj$$584, address$$78, data$$52) {
   return;
 }
 function v790(parentObj$$583, address$$77, data$$51) {
-  var v5900 = parentObj$$583.MBCRAMBanksEnabled;
-  if (!v5900) {
-    v5900 = settings[10];
+  var v5897 = parentObj$$583.MBCRAMBanksEnabled;
+  if (!v5897) {
+    v5897 = settings[10];
   }
-  if (v5900) {
+  if (v5897) {
     switch(parentObj$$583.currMBCRAMBank) {
       case 0:
       ;
@@ -1936,11 +1936,11 @@ function v790(parentObj$$583, address$$77, data$$51) {
   return;
 }
 function v789(parentObj$$582, address$$76, data$$50) {
-  var v5909 = parentObj$$582.MBCRAMBanksEnabled;
-  if (!v5909) {
-    v5909 = settings[10];
+  var v5906 = parentObj$$582.MBCRAMBanksEnabled;
+  if (!v5906) {
+    v5906 = settings[10];
   }
-  if (v5909) {
+  if (v5906) {
     JAM.set(parentObj$$582.MBCRam, address$$76 + parentObj$$582.currMBCRAMBankPosition, data$$50);
   }
   return;
@@ -2067,11 +2067,11 @@ function v772() {
           if (index$$63 < 4096) {
             this.memoryWriter[index$$63] = this.MBCWriteEnable;
           } else {
-            var v5924 = index$$63 >= 8448;
-            if (v5924) {
-              v5924 = index$$63 < 8704;
+            var v5921 = index$$63 >= 8448;
+            if (v5921) {
+              v5921 = index$$63 < 8704;
             }
-            if (v5924) {
+            if (v5921) {
               this.memoryWriter[index$$63] = this.MBC2WriteROMBank;
             } else {
               this.memoryWriter[index$$63] = this.cartIgnoreWrite;
@@ -2093,15 +2093,15 @@ function v772() {
               }
             }
           } else {
-            var v8535 = this.cMBC5;
-            if (!v8535) {
-              v8535 = this.cRUMBLE;
+            var v8532 = this.cMBC5;
+            if (!v8532) {
+              v8532 = this.cRUMBLE;
             }
-            var v5925 = v8535;
-            if (!v5925) {
-              v5925 = this.cMBC7;
+            var v5922 = v8532;
+            if (!v5922) {
+              v5922 = this.cMBC7;
             }
-            if (v5925) {
+            if (v5922) {
               if (index$$63 < 8192) {
                 this.memoryWriter[index$$63] = this.MBCWriteEnable;
               } else {
@@ -2113,13 +2113,13 @@ function v772() {
                   } else {
                     if (index$$63 < 24576) {
                       var v1523 = this.memoryWriter;
-                      var v5926;
+                      var v5923;
                       if (this.cRUMBLE) {
-                        v5926 = this.RUMBLEWriteRAMBank;
+                        v5923 = this.RUMBLEWriteRAMBank;
                       } else {
-                        v5926 = this.MBC5WriteRAMBank;
+                        v5923 = this.MBC5WriteRAMBank;
                       }
-                      v1523[index$$63] = v5926;
+                      v1523[index$$63] = v5923;
                     } else {
                       this.memoryWriter[index$$63] = this.cartIgnoreWrite;
                     }
@@ -2151,44 +2151,44 @@ function v772() {
     } else {
       if (index$$63 < 36864) {
         var v1542 = this.memoryWriter;
-        var v5927;
+        var v5924;
         if (this.cGBC) {
-          v5927 = this.VRAMGBCDATAWrite;
+          v5924 = this.VRAMGBCDATAWrite;
         } else {
-          v5927 = this.VRAMGBDATAWrite;
+          v5924 = this.VRAMGBDATAWrite;
         }
-        v1542[index$$63] = v5927;
+        v1542[index$$63] = v5924;
       } else {
         if (index$$63 < 38912) {
           var v1543 = this.memoryWriter;
-          var v5928;
+          var v5925;
           if (this.cGBC) {
-            v5928 = this.VRAMGBCDATAWrite;
+            v5925 = this.VRAMGBCDATAWrite;
           } else {
-            v5928 = this.VRAMGBDATAUpperWrite;
+            v5925 = this.VRAMGBDATAUpperWrite;
           }
-          v1543[index$$63] = v5928;
+          v1543[index$$63] = v5925;
         } else {
           if (index$$63 < 40960) {
             var v1544 = this.memoryWriter;
-            var v5929;
+            var v5926;
             if (this.cGBC) {
-              v5929 = this.VRAMGBCCHRMAPWrite;
+              v5926 = this.VRAMGBCCHRMAPWrite;
             } else {
-              v5929 = this.VRAMGBCHRMAPWrite;
+              v5926 = this.VRAMGBCHRMAPWrite;
             }
-            v1544[index$$63] = v5929;
+            v1544[index$$63] = v5926;
           } else {
             if (index$$63 < 49152) {
-              var v8541 = this.numRAMBanks == 1 / 16;
-              if (v8541) {
-                v8541 = index$$63 < 41472;
+              var v8538 = this.numRAMBanks == 1 / 16;
+              if (v8538) {
+                v8538 = index$$63 < 41472;
               }
-              var v5930 = v8541;
-              if (!v5930) {
-                v5930 = this.numRAMBanks >= 1;
+              var v5927 = v8538;
+              if (!v5927) {
+                v5927 = this.numRAMBanks >= 1;
               }
-              if (v5930) {
+              if (v5927) {
                 if (!this.cMBC3) {
                   this.memoryWriter[index$$63] = this.memoryWriteMBCRAM;
                 } else {
@@ -2199,22 +2199,22 @@ function v772() {
               }
             } else {
               if (index$$63 < 57344) {
-                var v5932 = this.cGBC;
-                if (v5932) {
-                  v5932 = index$$63 >= 53248;
+                var v5929 = this.cGBC;
+                if (v5929) {
+                  v5929 = index$$63 >= 53248;
                 }
-                if (v5932) {
+                if (v5929) {
                   this.memoryWriter[index$$63] = this.memoryWriteGBCRAM;
                 } else {
                   this.memoryWriter[index$$63] = this.memoryWriteNormal;
                 }
               } else {
                 if (index$$63 < 65024) {
-                  var v5933 = this.cGBC;
-                  if (v5933) {
-                    v5933 = index$$63 >= 61440;
+                  var v5930 = this.cGBC;
+                  if (v5930) {
+                    v5930 = index$$63 >= 61440;
                   }
-                  if (v5933) {
+                  if (v5930) {
                     this.memoryWriter[index$$63] = this.memoryWriteECHOGBCRAM;
                   } else {
                     this.memoryWriter[index$$63] = this.memoryWriteECHONormal;
@@ -2313,13 +2313,13 @@ function v763(parentObj$$562, address$$54) {
   if (parentObj$$562.modeSTAT > 2) {
     v1583 = 255;
   } else {
-    var v5947;
+    var v5944;
     if (parentObj$$562.currVRAMBank == 0) {
-      v5947 = parentObj$$562.memory[address$$54];
+      v5944 = parentObj$$562.memory[address$$54];
     } else {
-      v5947 = parentObj$$562.VRAM[address$$54 & 8191];
+      v5944 = parentObj$$562.VRAM[address$$54 & 8191];
     }
-    v1583 = v5947;
+    v1583 = v5944;
   }
   return v1583;
 }
@@ -2345,11 +2345,11 @@ function v758(parentObj$$557, address$$49) {
   return parentObj$$557.GBCMemory[address$$49 + parentObj$$557.gbcRamBankPosition];
 }
 function v757(parentObj$$556, address$$48) {
-  var v5953 = parentObj$$556.MBCRAMBanksEnabled;
-  if (!v5953) {
-    v5953 = settings[10];
+  var v5950 = parentObj$$556.MBCRAMBanksEnabled;
+  if (!v5950) {
+    v5950 = settings[10];
   }
-  if (v5953) {
+  if (v5950) {
     switch(parentObj$$556.currMBCRAMBank) {
       case 0:
       ;
@@ -2368,30 +2368,30 @@ function v757(parentObj$$556, address$$48) {
       case 11:
         return parentObj$$556.latchedLDays;
       case 12:
-        var v8559;
+        var v8556;
         if (parentObj$$556.RTCDayOverFlow) {
-          v8559 = 128;
+          v8556 = 128;
         } else {
-          v8559 = 0;
+          v8556 = 0;
         }
-        var v5955 = v8559;
-        var v8560;
+        var v5952 = v8556;
+        var v8557;
         if (parentObj$$556.RTCHALT) {
-          v8560 = 64;
+          v8557 = 64;
         } else {
-          v8560 = 0;
+          v8557 = 0;
         }
-        return v5955 + v8560 + parentObj$$556.latchedHDays;
+        return v5952 + v8557 + parentObj$$556.latchedHDays;
     }
   }
   return 255;
 }
 function v756(parentObj$$555, address$$47) {
-  var v5957 = parentObj$$555.MBCRAMBanksEnabled;
-  if (!v5957) {
-    v5957 = settings[10];
+  var v5954 = parentObj$$555.MBCRAMBanksEnabled;
+  if (!v5954) {
+    v5954 = settings[10];
   }
-  if (v5957) {
+  if (v5954) {
     switch(address$$47) {
       case 40960:
       ;
@@ -2416,11 +2416,11 @@ function v756(parentObj$$555, address$$47) {
   return 255;
 }
 function v755(parentObj$$554, address$$46) {
-  var v5959 = parentObj$$554.MBCRAMBanksEnabled;
-  if (!v5959) {
-    v5959 = settings[10];
+  var v5956 = parentObj$$554.MBCRAMBanksEnabled;
+  if (!v5956) {
+    v5956 = settings[10];
   }
-  if (v5959) {
+  if (v5956) {
     return parentObj$$554.MBCRam[address$$46 + parentObj$$554.currMBCRAMBankPosition];
   }
   return 255;
@@ -2451,20 +2451,20 @@ function v751() {
     return 254 | parentObj$$546.memory[65388];
   }
   function v745(parentObj$$545, address$$37) {
-    var v5965;
+    var v5962;
     if (parentObj$$545.memory[65366] >= 192) {
-      v5965 = 2 | parentObj$$545.memory[65366] & 193;
+      v5962 = 2 | parentObj$$545.memory[65366] & 193;
     } else {
-      v5965 = parentObj$$545.memory[65366] & 195;
+      v5962 = parentObj$$545.memory[65366] & 195;
     }
-    return 60 | v5965;
+    return 60 | v5962;
   }
   function v744(parentObj$$544, address$$36) {
-    var v5966 = !parentObj$$544.LCDisOn;
-    if (v5966) {
-      v5966 = parentObj$$544.hdmaRunning;
+    var v5963 = !parentObj$$544.LCDisOn;
+    if (v5963) {
+      v5963 = parentObj$$544.hdmaRunning;
     }
-    if (v5966) {
+    if (v5963) {
       JAM.call(parentObj$$544.DMAWrite, parentObj$$544, [(parentObj$$544.memory[65365] & 127) + 1]);
       parentObj$$544.memory[65365] = 255;
       parentObj$$544.hdmaRunning = false;
@@ -2559,22 +2559,22 @@ function v751() {
     return parentObj$$522.memory[65284];
   }
   function v721(parentObj$$521, address$$13) {
-    var v5993;
+    var v5990;
     if (parentObj$$521.serialTimer <= 0) {
-      v5993 = 126;
+      v5990 = 126;
     } else {
-      v5993 = 254;
+      v5990 = 254;
     }
-    return v5993 | parentObj$$521.memory[65282];
+    return v5990 | parentObj$$521.memory[65282];
   }
   function v720(parentObj$$520, address$$12) {
-    var v5995;
+    var v5992;
     if (parentObj$$520.serialTimer <= 0) {
-      v5995 = 124;
+      v5992 = 124;
     } else {
-      v5995 = 252;
+      v5992 = 252;
     }
-    return v5995 | parentObj$$520.memory[65282];
+    return v5992 | parentObj$$520.memory[65282];
   }
   function v719(parentObj$$519, address$$11) {
     var v1639;
@@ -2599,38 +2599,38 @@ function v751() {
       } else {
         if (index$$62 < 38912) {
           var v1643 = this.memoryReader;
-          var v6000;
+          var v5997;
           if (this.cGBC) {
-            v6000 = this.VRAMDATAReadCGBCPU;
+            v5997 = this.VRAMDATAReadCGBCPU;
           } else {
-            v6000 = this.VRAMDATAReadDMGCPU;
+            v5997 = this.VRAMDATAReadDMGCPU;
           }
-          v1643[index$$62] = v6000;
+          v1643[index$$62] = v5997;
         } else {
           if (index$$62 < 40960) {
             var v1644 = this.memoryReader;
-            var v6001;
+            var v5998;
             if (this.cGBC) {
-              v6001 = this.VRAMCHRReadCGBCPU;
+              v5998 = this.VRAMCHRReadCGBCPU;
             } else {
-              v6001 = this.VRAMCHRReadDMGCPU;
+              v5998 = this.VRAMCHRReadDMGCPU;
             }
-            v1644[index$$62] = v6001;
+            v1644[index$$62] = v5998;
           } else {
-            var v6002 = index$$62 >= 40960;
-            if (v6002) {
-              v6002 = index$$62 < 49152;
+            var v5999 = index$$62 >= 40960;
+            if (v5999) {
+              v5999 = index$$62 < 49152;
             }
-            if (v6002) {
-              var v8578 = this.numRAMBanks == 1 / 16;
-              if (v8578) {
-                v8578 = index$$62 < 41472;
+            if (v5999) {
+              var v8575 = this.numRAMBanks == 1 / 16;
+              if (v8575) {
+                v8575 = index$$62 < 41472;
               }
-              var v6003 = v8578;
-              if (!v6003) {
-                v6003 = this.numRAMBanks >= 1;
+              var v6000 = v8575;
+              if (!v6000) {
+                v6000 = this.numRAMBanks >= 1;
               }
-              if (v6003) {
+              if (v6000) {
                 if (this.cMBC7) {
                   this.memoryReader[index$$62] = this.memoryReadMBC7;
                 } else {
@@ -2644,31 +2644,31 @@ function v751() {
                 this.memoryReader[index$$62] = this.memoryReadBAD;
               }
             } else {
-              var v6005 = index$$62 >= 49152;
-              if (v6005) {
-                v6005 = index$$62 < 57344;
+              var v6002 = index$$62 >= 49152;
+              if (v6002) {
+                v6002 = index$$62 < 57344;
               }
-              if (v6005) {
-                var v6006 = !this.cGBC;
-                if (!v6006) {
-                  v6006 = index$$62 < 53248;
+              if (v6002) {
+                var v6003 = !this.cGBC;
+                if (!v6003) {
+                  v6003 = index$$62 < 53248;
                 }
-                if (v6006) {
+                if (v6003) {
                   this.memoryReader[index$$62] = this.memoryReadNormal;
                 } else {
                   this.memoryReader[index$$62] = this.memoryReadGBCMemory;
                 }
               } else {
-                var v6007 = index$$62 >= 57344;
-                if (v6007) {
-                  v6007 = index$$62 < 65024;
+                var v6004 = index$$62 >= 57344;
+                if (v6004) {
+                  v6004 = index$$62 < 65024;
                 }
-                if (v6007) {
-                  var v6008 = !this.cGBC;
-                  if (!v6008) {
-                    v6008 = index$$62 < 61440;
+                if (v6004) {
+                  var v6005 = !this.cGBC;
+                  if (!v6005) {
+                    v6005 = index$$62 < 61440;
                   }
-                  if (v6008) {
+                  if (v6005) {
                     this.memoryReader[index$$62] = this.memoryReadECHONormal;
                   } else {
                     this.memoryReader[index$$62] = this.memoryReadECHOGBCMemory;
@@ -2677,15 +2677,15 @@ function v751() {
                   if (index$$62 < 65184) {
                     this.memoryReader[index$$62] = this.memoryReadOAM;
                   } else {
-                    var v8585 = this.cGBC;
-                    if (v8585) {
-                      v8585 = index$$62 >= 65184;
+                    var v8582 = this.cGBC;
+                    if (v8582) {
+                      v8582 = index$$62 >= 65184;
                     }
-                    var v6009 = v8585;
-                    if (v6009) {
-                      v6009 = index$$62 < 65280;
+                    var v6006 = v8582;
+                    if (v6006) {
+                      v6006 = index$$62 < 65280;
                     }
-                    if (v6009) {
+                    if (v6006) {
                       this.memoryReader[index$$62] = this.memoryReadNormal;
                     } else {
                       if (index$$62 >= 65280) {
@@ -2907,37 +2907,53 @@ function v715() {
     var temp_var$$20 = 0;
     if (this.LCDisOn) {
       if ((this.interruptsEnabled & 1) == 1) {
-        var v10239;
+        var v10236;
         if (this.modeSTAT == 1) {
-          v10239 = 298;
+          v10236 = 298;
         } else {
-          v10239 = 144;
+          v10236 = 144;
         }
-        currentClocks = 456 * (v10239 - this.actualScanLine) - this.LCDTicks << this.doubleSpeedShifter;
+        currentClocks = 456 * (v10236 - this.actualScanLine) - this.LCDTicks << this.doubleSpeedShifter;
       }
       if ((this.interruptsEnabled & 2) == 2) {
         if (this.mode0TriggerSTAT) {
           temp_var$$20 = this.clocksUntilMode0() - this.LCDTicks << this.doubleSpeedShifter;
-          var v6055 = temp_var$$20 <= currentClocks;
-          if (!v6055) {
-            v6055 = currentClocks == -1;
+          var v6052 = temp_var$$20 <= currentClocks;
+          if (!v6052) {
+            v6052 = currentClocks == -1;
           }
-          if (v6055) {
+          if (v6052) {
             currentClocks = temp_var$$20;
           }
         }
-        var v6056 = this.mode1TriggerSTAT;
-        if (v6056) {
-          v6056 = (this.interruptsEnabled & 1) == 0;
+        var v6053 = this.mode1TriggerSTAT;
+        if (v6053) {
+          v6053 = (this.interruptsEnabled & 1) == 0;
         }
-        if (v6056) {
-          var v10240;
+        if (v6053) {
+          var v10237;
           if (this.modeSTAT == 1) {
-            v10240 = 298;
+            v10237 = 298;
           } else {
-            v10240 = 144;
+            v10237 = 144;
           }
-          temp_var$$20 = 456 * (v10240 - this.actualScanLine) - this.LCDTicks << this.doubleSpeedShifter;
+          temp_var$$20 = 456 * (v10237 - this.actualScanLine) - this.LCDTicks << this.doubleSpeedShifter;
+          var v6056 = temp_var$$20 <= currentClocks;
+          if (!v6056) {
+            v6056 = currentClocks == -1;
+          }
+          if (v6056) {
+            currentClocks = temp_var$$20;
+          }
+        }
+        if (this.mode2TriggerSTAT) {
+          var v8590;
+          if (this.actualScanLine >= 143) {
+            v8590 = 456 * (154 - this.actualScanLine);
+          } else {
+            v8590 = 456;
+          }
+          temp_var$$20 = v8590 - this.LCDTicks << this.doubleSpeedShifter;
           var v6059 = temp_var$$20 <= currentClocks;
           if (!v6059) {
             v6059 = currentClocks == -1;
@@ -2946,62 +2962,46 @@ function v715() {
             currentClocks = temp_var$$20;
           }
         }
-        if (this.mode2TriggerSTAT) {
-          var v8593;
-          if (this.actualScanLine >= 143) {
-            v8593 = 456 * (154 - this.actualScanLine);
-          } else {
-            v8593 = 456;
-          }
-          temp_var$$20 = v8593 - this.LCDTicks << this.doubleSpeedShifter;
-          var v6062 = temp_var$$20 <= currentClocks;
-          if (!v6062) {
-            v6062 = currentClocks == -1;
-          }
-          if (v6062) {
-            currentClocks = temp_var$$20;
-          }
+        var v6060 = this.LYCMatchTriggerSTAT;
+        if (v6060) {
+          v6060 = this.memory[65349] <= 153;
         }
-        var v6063 = this.LYCMatchTriggerSTAT;
-        if (v6063) {
-          v6063 = this.memory[65349] <= 153;
-        }
-        if (v6063) {
+        if (v6060) {
           temp_var$$20 = this.clocksUntilLYCMatch() - this.LCDTicks << this.doubleSpeedShifter;
-          var v6066 = temp_var$$20 <= currentClocks;
-          if (!v6066) {
-            v6066 = currentClocks == -1;
+          var v6063 = temp_var$$20 <= currentClocks;
+          if (!v6063) {
+            v6063 = currentClocks == -1;
           }
-          if (v6066) {
+          if (v6063) {
             currentClocks = temp_var$$20;
           }
         }
       }
     }
-    var v6067 = this.TIMAEnabled;
-    if (v6067) {
-      v6067 = (this.interruptsEnabled & 4) == 4;
+    var v6064 = this.TIMAEnabled;
+    if (v6064) {
+      v6064 = (this.interruptsEnabled & 4) == 4;
     }
-    if (v6067) {
+    if (v6064) {
       temp_var$$20 = (256 - this.memory[65285]) * this.TACClocker - this.timerTicks;
-      var v6070 = temp_var$$20 <= currentClocks;
-      if (!v6070) {
-        v6070 = currentClocks == -1;
+      var v6067 = temp_var$$20 <= currentClocks;
+      if (!v6067) {
+        v6067 = currentClocks == -1;
       }
-      if (v6070) {
+      if (v6067) {
         currentClocks = temp_var$$20;
       }
     }
-    var v6071 = this.serialTimer > 0;
-    if (v6071) {
-      v6071 = (this.interruptsEnabled & 8) == 8;
+    var v6068 = this.serialTimer > 0;
+    if (v6068) {
+      v6068 = (this.interruptsEnabled & 8) == 8;
     }
-    if (v6071) {
-      var v6072 = this.serialTimer <= currentClocks;
-      if (!v6072) {
-        v6072 = currentClocks == -1;
+    if (v6068) {
+      var v6069 = this.serialTimer <= currentClocks;
+      if (!v6069) {
+        v6069 = currentClocks == -1;
       }
-      if (v6072) {
+      if (v6069) {
         currentClocks = this.serialTimer;
       }
     }
@@ -3011,14 +3011,14 @@ function v715() {
   var maxClocks = this.CPUCyclesTotal - this.emulatorTicks << this.doubleSpeedShifter;
   if (currentClocks >= 0) {
     if (currentClocks <= maxClocks) {
-      var v10679 = JAM.call(Math.max, Math, [currentClocks, this.CPUTicks], JAM.policy.p1);
-      this.CPUTicks = v10679;
+      var v10676 = JAM.call(Math.max, Math, [currentClocks, this.CPUTicks], JAM.policy.p1);
+      this.CPUTicks = v10676;
       this.updateCoreFull();
       this.halt = false;
       this.CPUTicks = 0;
     } else {
-      var v10680 = JAM.call(Math.max, Math, [maxClocks, this.CPUTicks], JAM.policy.p1);
-      this.CPUTicks = v10680;
+      var v10677 = JAM.call(Math.max, Math, [maxClocks, this.CPUTicks], JAM.policy.p1);
+      this.CPUTicks = v10677;
       this.remainingClocks = currentClocks - this.CPUTicks;
     }
   } else {
@@ -3242,11 +3242,11 @@ function v701(scanlineToRender$$9) {
     var currentPixel$$1 = 0;
     var spriteCount$$2 = 0;
     if (this.gfxSpriteNormalHeight) {
-      var v6174 = OAMAddress$$2 < 65184;
-      if (v6174) {
-        v6174 = spriteCount$$2 < 10;
+      var v6171 = OAMAddress$$2 < 65184;
+      if (v6171) {
+        v6171 = spriteCount$$2 < 10;
       }
-      var v1915 = v6174;
+      var v1915 = v6171;
       for (;v1915;) {
         yoffset$$5 = lineAdjusted$$2 - this.memory[OAMAddress$$2];
         if ((yoffset$$5 & 7) == yoffset$$5) {
@@ -3274,11 +3274,11 @@ function v701(scanlineToRender$$9) {
             } else {
               if (this.frameBuffer[currentPixel$$1] < 16777216) {
                 data$$31 = tile$$7[xCounter - xcoord$$1];
-                var v6187 = data$$31 > 0;
-                if (v6187) {
-                  v6187 = attrCode$$5 < 128;
+                var v6184 = data$$31 > 0;
+                if (v6184) {
+                  v6184 = attrCode$$5 < 128;
                 }
-                if (v6187) {
+                if (v6184) {
                   JAM.set(this.frameBuffer, currentPixel$$1, this.gbcOBJPalette[palette$$5 | data$$31]);
                 }
               }
@@ -3290,18 +3290,18 @@ function v701(scanlineToRender$$9) {
           ++spriteCount$$2;
         }
         OAMAddress$$2 = OAMAddress$$2 + 4;
-        var v6190 = OAMAddress$$2 < 65184;
-        if (v6190) {
-          v6190 = spriteCount$$2 < 10;
+        var v6187 = OAMAddress$$2 < 65184;
+        if (v6187) {
+          v6187 = spriteCount$$2 < 10;
         }
-        v1915 = v6190;
+        v1915 = v6187;
       }
     } else {
-      var v6191 = OAMAddress$$2 < 65184;
-      if (v6191) {
-        v6191 = spriteCount$$2 < 10;
+      var v6188 = OAMAddress$$2 < 65184;
+      if (v6188) {
+        v6188 = spriteCount$$2 < 10;
       }
-      var v1939 = v6191;
+      var v1939 = v6188;
       for (;v1939;) {
         yoffset$$5 = lineAdjusted$$2 - this.memory[OAMAddress$$2];
         if ((yoffset$$5 & 15) == yoffset$$5) {
@@ -3333,11 +3333,11 @@ function v701(scanlineToRender$$9) {
             } else {
               if (this.frameBuffer[currentPixel$$1] < 16777216) {
                 data$$31 = tile$$7[xCounter - xcoord$$1];
-                var v6207 = data$$31 > 0;
-                if (v6207) {
-                  v6207 = attrCode$$5 < 128;
+                var v6204 = data$$31 > 0;
+                if (v6204) {
+                  v6204 = attrCode$$5 < 128;
                 }
-                if (v6207) {
+                if (v6204) {
                   JAM.set(this.frameBuffer, currentPixel$$1, this.gbcOBJPalette[palette$$5 | data$$31]);
                 }
               }
@@ -3349,11 +3349,11 @@ function v701(scanlineToRender$$9) {
           ++spriteCount$$2;
         }
         OAMAddress$$2 = OAMAddress$$2 + 4;
-        var v6210 = OAMAddress$$2 < 65184;
-        if (v6210) {
-          v6210 = spriteCount$$2 < 10;
+        var v6207 = OAMAddress$$2 < 65184;
+        if (v6207) {
+          v6207 = spriteCount$$2 < 10;
         }
-        v1939 = v6210;
+        v1939 = v6207;
       }
     }
   }
@@ -3363,11 +3363,11 @@ function v700(scanlineToRender$$8, drawableRange) {
   var address$$1 = 65024;
   var spriteCount$$1 = 0;
   var diff = 0;
-  var v6211 = address$$1 < 65184;
-  if (v6211) {
-    v6211 = spriteCount$$1 < 10;
+  var v6208 = address$$1 < 65184;
+  if (v6208) {
+    v6208 = spriteCount$$1 < 10;
   }
-  var v1946 = v6211;
+  var v1946 = v6208;
   for (;v1946;) {
     diff = scanlineToRender$$8 - this.memory[address$$1];
     if ((diff & drawableRange) == diff) {
@@ -3377,11 +3377,11 @@ function v700(scanlineToRender$$8, drawableRange) {
       v1943[v1944] = address$$1;
     }
     address$$1 = address$$1 + 4;
-    var v6214 = address$$1 < 65184;
-    if (v6214) {
-      v6214 = spriteCount$$1 < 10;
+    var v6211 = address$$1 < 65184;
+    if (v6211) {
+      v6211 = spriteCount$$1 < 10;
     }
-    v1946 = v6214;
+    v1946 = v6211;
   }
   return spriteCount$$1;
 }
@@ -3428,13 +3428,13 @@ function v699(scanlineToRender$$7) {
         }
         xcoord = v1960;
         var v1961 = this.pixelStart;
-        var v6219;
+        var v6216;
         if (linePixel > 8) {
-          v6219 = linePixel - 8;
+          v6216 = linePixel - 8;
         } else {
-          v6219 = 0;
+          v6216 = 0;
         }
-        currentPixel = v1961 + v6219;
+        currentPixel = v1961 + v6216;
         var v1974 = xcoord < xCoordEnd;
         for (;v1974;) {
           if (this.sortBuffer[linePixel] > xCoordStart) {
@@ -3447,11 +3447,11 @@ function v699(scanlineToRender$$7) {
             } else {
               if (this.frameBuffer[currentPixel] < 16777216) {
                 data$$30 = tile$$6[yoffset$$4 | xcoord];
-                var v6225 = data$$30 > 0;
-                if (v6225) {
-                  v6225 = attrCode$$4 < 128;
+                var v6222 = data$$30 > 0;
+                if (v6222) {
+                  v6222 = attrCode$$4 < 128;
                 }
-                if (v6225) {
+                if (v6222) {
                   JAM.set(this.frameBuffer, currentPixel, this.OBJPalette[palette$$4 | data$$30]);
                   JAM.set(this.sortBuffer, linePixel, xCoordStart);
                 }
@@ -3490,13 +3490,13 @@ function v699(scanlineToRender$$7) {
         }
         xcoord = v1989;
         var v1990 = this.pixelStart;
-        var v6235;
+        var v6232;
         if (linePixel > 8) {
-          v6235 = linePixel - 8;
+          v6232 = linePixel - 8;
         } else {
-          v6235 = 0;
+          v6232 = 0;
         }
-        currentPixel = v1990 + v6235;
+        currentPixel = v1990 + v6232;
         var v2003 = xcoord < xCoordEnd;
         for (;v2003;) {
           if (this.sortBuffer[linePixel] > xCoordStart) {
@@ -3509,11 +3509,11 @@ function v699(scanlineToRender$$7) {
             } else {
               if (this.frameBuffer[currentPixel] < 16777216) {
                 data$$30 = tile$$6[yoffset$$4 | xcoord];
-                var v6241 = data$$30 > 0;
-                if (v6241) {
-                  v6241 = attrCode$$4 < 128;
+                var v6238 = data$$30 > 0;
+                if (v6238) {
+                  v6238 = attrCode$$4 < 128;
                 }
-                if (v6241) {
+                if (v6238) {
                   JAM.set(this.frameBuffer, currentPixel, this.OBJPalette[palette$$4 | data$$30]);
                   JAM.set(this.sortBuffer, linePixel, xCoordStart);
                 }
@@ -3562,10 +3562,10 @@ function v698(scanlineToRender$$6) {
           var v2023 = this.frameBuffer;
           var v2024 = pixelPosition$$7;
           pixelPosition$$7 = pixelPosition$$7 + 1;
-          var v6254 = this.gbcBGPalette;
-          var v10305 = texel$$5;
+          var v6251 = this.gbcBGPalette;
+          var v10302 = texel$$5;
           texel$$5 = texel$$5 + 1;
-          JAM.set(v2023, v2024, v6254[palette$$3 | tile$$5[tileYLine$$5 | v10305]]);
+          JAM.set(v2023, v2024, v6251[palette$$3 | tile$$5[tileYLine$$5 | v10302]]);
           v2025 = texel$$5 < scrollXRangeAdjusted$$2;
         }
         scrollXRangeAdjusted$$2 = tileNumber$$6 + (pixelPositionEnd$$5 - pixelPosition$$7 >> 3);
@@ -3582,52 +3582,52 @@ function v698(scanlineToRender$$6) {
           var v2034 = this.frameBuffer;
           var v2035 = pixelPosition$$7;
           pixelPosition$$7 = pixelPosition$$7 + 1;
-          var v6259 = this.gbcBGPalette;
-          var v9807 = texel$$5;
+          var v6256 = this.gbcBGPalette;
+          var v9804 = texel$$5;
           texel$$5 = texel$$5 + 1;
-          JAM.set(v2034, v2035, v6259[palette$$3 | tile$$5[v9807]]);
+          JAM.set(v2034, v2035, v6256[palette$$3 | tile$$5[v9804]]);
           var v2036 = this.frameBuffer;
           var v2037 = pixelPosition$$7;
           pixelPosition$$7 = pixelPosition$$7 + 1;
-          var v6261 = this.gbcBGPalette;
-          var v9808 = texel$$5;
+          var v6258 = this.gbcBGPalette;
+          var v9805 = texel$$5;
           texel$$5 = texel$$5 + 1;
-          JAM.set(v2036, v2037, v6261[palette$$3 | tile$$5[v9808]]);
+          JAM.set(v2036, v2037, v6258[palette$$3 | tile$$5[v9805]]);
           var v2038 = this.frameBuffer;
           var v2039 = pixelPosition$$7;
           pixelPosition$$7 = pixelPosition$$7 + 1;
-          var v6263 = this.gbcBGPalette;
-          var v9809 = texel$$5;
+          var v6260 = this.gbcBGPalette;
+          var v9806 = texel$$5;
           texel$$5 = texel$$5 + 1;
-          JAM.set(v2038, v2039, v6263[palette$$3 | tile$$5[v9809]]);
+          JAM.set(v2038, v2039, v6260[palette$$3 | tile$$5[v9806]]);
           var v2040 = this.frameBuffer;
           var v2041 = pixelPosition$$7;
           pixelPosition$$7 = pixelPosition$$7 + 1;
-          var v6265 = this.gbcBGPalette;
-          var v9810 = texel$$5;
+          var v6262 = this.gbcBGPalette;
+          var v9807 = texel$$5;
           texel$$5 = texel$$5 + 1;
-          JAM.set(v2040, v2041, v6265[palette$$3 | tile$$5[v9810]]);
+          JAM.set(v2040, v2041, v6262[palette$$3 | tile$$5[v9807]]);
           var v2042 = this.frameBuffer;
           var v2043 = pixelPosition$$7;
           pixelPosition$$7 = pixelPosition$$7 + 1;
-          var v6267 = this.gbcBGPalette;
-          var v9811 = texel$$5;
+          var v6264 = this.gbcBGPalette;
+          var v9808 = texel$$5;
           texel$$5 = texel$$5 + 1;
-          JAM.set(v2042, v2043, v6267[palette$$3 | tile$$5[v9811]]);
+          JAM.set(v2042, v2043, v6264[palette$$3 | tile$$5[v9808]]);
           var v2044 = this.frameBuffer;
           var v2045 = pixelPosition$$7;
           pixelPosition$$7 = pixelPosition$$7 + 1;
-          var v6269 = this.gbcBGPalette;
-          var v9812 = texel$$5;
+          var v6266 = this.gbcBGPalette;
+          var v9809 = texel$$5;
           texel$$5 = texel$$5 + 1;
-          JAM.set(v2044, v2045, v6269[palette$$3 | tile$$5[v9812]]);
+          JAM.set(v2044, v2045, v6266[palette$$3 | tile$$5[v9809]]);
           var v2046 = this.frameBuffer;
           var v2047 = pixelPosition$$7;
           pixelPosition$$7 = pixelPosition$$7 + 1;
-          var v6271 = this.gbcBGPalette;
-          var v9813 = texel$$5;
+          var v6268 = this.gbcBGPalette;
+          var v9810 = texel$$5;
           texel$$5 = texel$$5 + 1;
-          JAM.set(v2046, v2047, v6271[palette$$3 | tile$$5[v9813]]);
+          JAM.set(v2046, v2047, v6268[palette$$3 | tile$$5[v9810]]);
           var v2048 = this.frameBuffer;
           var v2049 = pixelPosition$$7;
           pixelPosition$$7 = pixelPosition$$7 + 1;
@@ -3694,10 +3694,10 @@ function v697(scanlineToRender$$5) {
           var v2093 = this.frameBuffer;
           var v2094 = pixelPosition$$6;
           pixelPosition$$6 = pixelPosition$$6 + 1;
-          var v6303 = this.gbcBGPalette;
-          var v10306 = texel$$4;
+          var v6300 = this.gbcBGPalette;
+          var v10303 = texel$$4;
           texel$$4 = texel$$4 + 1;
-          JAM.set(v2093, v2094, v6303[palette$$2 | tile$$4[tileYLine$$4 | v10306]]);
+          JAM.set(v2093, v2094, v6300[palette$$2 | tile$$4[tileYLine$$4 | v10303]]);
           v2095 = texel$$4 < scrollXRangeAdjusted$$1;
         }
         scrollXRangeAdjusted$$1 = tileNumber$$5 + (pixelPositionEnd$$4 - pixelPosition$$6 >> 3);
@@ -3714,52 +3714,52 @@ function v697(scanlineToRender$$5) {
           var v2105 = this.frameBuffer;
           var v2106 = pixelPosition$$6;
           pixelPosition$$6 = pixelPosition$$6 + 1;
-          var v6310 = this.gbcBGPalette;
-          var v9827 = texel$$4;
+          var v6307 = this.gbcBGPalette;
+          var v9824 = texel$$4;
           texel$$4 = texel$$4 + 1;
-          JAM.set(v2105, v2106, v6310[palette$$2 | tile$$4[v9827]]);
+          JAM.set(v2105, v2106, v6307[palette$$2 | tile$$4[v9824]]);
           var v2107 = this.frameBuffer;
           var v2108 = pixelPosition$$6;
           pixelPosition$$6 = pixelPosition$$6 + 1;
-          var v6312 = this.gbcBGPalette;
-          var v9828 = texel$$4;
+          var v6309 = this.gbcBGPalette;
+          var v9825 = texel$$4;
           texel$$4 = texel$$4 + 1;
-          JAM.set(v2107, v2108, v6312[palette$$2 | tile$$4[v9828]]);
+          JAM.set(v2107, v2108, v6309[palette$$2 | tile$$4[v9825]]);
           var v2109 = this.frameBuffer;
           var v2110 = pixelPosition$$6;
           pixelPosition$$6 = pixelPosition$$6 + 1;
-          var v6314 = this.gbcBGPalette;
-          var v9829 = texel$$4;
+          var v6311 = this.gbcBGPalette;
+          var v9826 = texel$$4;
           texel$$4 = texel$$4 + 1;
-          JAM.set(v2109, v2110, v6314[palette$$2 | tile$$4[v9829]]);
+          JAM.set(v2109, v2110, v6311[palette$$2 | tile$$4[v9826]]);
           var v2111 = this.frameBuffer;
           var v2112 = pixelPosition$$6;
           pixelPosition$$6 = pixelPosition$$6 + 1;
-          var v6316 = this.gbcBGPalette;
-          var v9830 = texel$$4;
+          var v6313 = this.gbcBGPalette;
+          var v9827 = texel$$4;
           texel$$4 = texel$$4 + 1;
-          JAM.set(v2111, v2112, v6316[palette$$2 | tile$$4[v9830]]);
+          JAM.set(v2111, v2112, v6313[palette$$2 | tile$$4[v9827]]);
           var v2113 = this.frameBuffer;
           var v2114 = pixelPosition$$6;
           pixelPosition$$6 = pixelPosition$$6 + 1;
-          var v6318 = this.gbcBGPalette;
-          var v9831 = texel$$4;
+          var v6315 = this.gbcBGPalette;
+          var v9828 = texel$$4;
           texel$$4 = texel$$4 + 1;
-          JAM.set(v2113, v2114, v6318[palette$$2 | tile$$4[v9831]]);
+          JAM.set(v2113, v2114, v6315[palette$$2 | tile$$4[v9828]]);
           var v2115 = this.frameBuffer;
           var v2116 = pixelPosition$$6;
           pixelPosition$$6 = pixelPosition$$6 + 1;
-          var v6320 = this.gbcBGPalette;
-          var v9832 = texel$$4;
+          var v6317 = this.gbcBGPalette;
+          var v9829 = texel$$4;
           texel$$4 = texel$$4 + 1;
-          JAM.set(v2115, v2116, v6320[palette$$2 | tile$$4[v9832]]);
+          JAM.set(v2115, v2116, v6317[palette$$2 | tile$$4[v9829]]);
           var v2117 = this.frameBuffer;
           var v2118 = pixelPosition$$6;
           pixelPosition$$6 = pixelPosition$$6 + 1;
-          var v6322 = this.gbcBGPalette;
-          var v9833 = texel$$4;
+          var v6319 = this.gbcBGPalette;
+          var v9830 = texel$$4;
           texel$$4 = texel$$4 + 1;
-          JAM.set(v2117, v2118, v6322[palette$$2 | tile$$4[v9833]]);
+          JAM.set(v2117, v2118, v6319[palette$$2 | tile$$4[v9830]]);
           var v2119 = this.frameBuffer;
           var v2120 = pixelPosition$$6;
           pixelPosition$$6 = pixelPosition$$6 + 1;
@@ -3824,10 +3824,10 @@ function v696(scanlineToRender$$4) {
           var v2161 = this.frameBuffer;
           var v2162 = pixelPosition$$5;
           pixelPosition$$5 = pixelPosition$$5 + 1;
-          var v6353 = this.BGPalette;
-          var v9842 = texel$$3;
+          var v6350 = this.BGPalette;
+          var v9839 = texel$$3;
           texel$$3 = texel$$3 + 1;
-          JAM.set(v2161, v2162, v6353[tile$$3[tileYLine$$3 | v9842]]);
+          JAM.set(v2161, v2162, v6350[tile$$3[tileYLine$$3 | v9839]]);
           v2163 = texel$$3 < scrollXRangeAdjusted;
         }
         scrollXRangeAdjusted = tileNumber$$4 + (pixelPositionEnd$$3 - pixelPosition$$5 >> 3);
@@ -3842,52 +3842,52 @@ function v696(scanlineToRender$$4) {
           var v2169 = this.frameBuffer;
           var v2170 = pixelPosition$$5;
           pixelPosition$$5 = pixelPosition$$5 + 1;
-          var v6357 = this.BGPalette;
-          var v8763 = texel$$3;
+          var v6354 = this.BGPalette;
+          var v8760 = texel$$3;
           texel$$3 = texel$$3 + 1;
-          JAM.set(v2169, v2170, v6357[tile$$3[v8763]]);
+          JAM.set(v2169, v2170, v6354[tile$$3[v8760]]);
           var v2171 = this.frameBuffer;
           var v2172 = pixelPosition$$5;
           pixelPosition$$5 = pixelPosition$$5 + 1;
-          var v6359 = this.BGPalette;
-          var v8764 = texel$$3;
+          var v6356 = this.BGPalette;
+          var v8761 = texel$$3;
           texel$$3 = texel$$3 + 1;
-          JAM.set(v2171, v2172, v6359[tile$$3[v8764]]);
+          JAM.set(v2171, v2172, v6356[tile$$3[v8761]]);
           var v2173 = this.frameBuffer;
           var v2174 = pixelPosition$$5;
           pixelPosition$$5 = pixelPosition$$5 + 1;
-          var v6361 = this.BGPalette;
-          var v8765 = texel$$3;
+          var v6358 = this.BGPalette;
+          var v8762 = texel$$3;
           texel$$3 = texel$$3 + 1;
-          JAM.set(v2173, v2174, v6361[tile$$3[v8765]]);
+          JAM.set(v2173, v2174, v6358[tile$$3[v8762]]);
           var v2175 = this.frameBuffer;
           var v2176 = pixelPosition$$5;
           pixelPosition$$5 = pixelPosition$$5 + 1;
-          var v6363 = this.BGPalette;
-          var v8766 = texel$$3;
+          var v6360 = this.BGPalette;
+          var v8763 = texel$$3;
           texel$$3 = texel$$3 + 1;
-          JAM.set(v2175, v2176, v6363[tile$$3[v8766]]);
+          JAM.set(v2175, v2176, v6360[tile$$3[v8763]]);
           var v2177 = this.frameBuffer;
           var v2178 = pixelPosition$$5;
           pixelPosition$$5 = pixelPosition$$5 + 1;
-          var v6365 = this.BGPalette;
-          var v8767 = texel$$3;
+          var v6362 = this.BGPalette;
+          var v8764 = texel$$3;
           texel$$3 = texel$$3 + 1;
-          JAM.set(v2177, v2178, v6365[tile$$3[v8767]]);
+          JAM.set(v2177, v2178, v6362[tile$$3[v8764]]);
           var v2179 = this.frameBuffer;
           var v2180 = pixelPosition$$5;
           pixelPosition$$5 = pixelPosition$$5 + 1;
-          var v6367 = this.BGPalette;
-          var v8768 = texel$$3;
+          var v6364 = this.BGPalette;
+          var v8765 = texel$$3;
           texel$$3 = texel$$3 + 1;
-          JAM.set(v2179, v2180, v6367[tile$$3[v8768]]);
+          JAM.set(v2179, v2180, v6364[tile$$3[v8765]]);
           var v2181 = this.frameBuffer;
           var v2182 = pixelPosition$$5;
           pixelPosition$$5 = pixelPosition$$5 + 1;
-          var v6369 = this.BGPalette;
-          var v8769 = texel$$3;
+          var v6366 = this.BGPalette;
+          var v8766 = texel$$3;
           texel$$3 = texel$$3 + 1;
-          JAM.set(v2181, v2182, v6369[tile$$3[v8769]]);
+          JAM.set(v2181, v2182, v6366[tile$$3[v8766]]);
           var v2183 = this.frameBuffer;
           var v2184 = pixelPosition$$5;
           pixelPosition$$5 = pixelPosition$$5 + 1;
@@ -3929,17 +3929,17 @@ function v695(scanlineToRender$$3) {
   var scrollXAdjusted$$2 = this.backgroundX + this.currentX & 255;
   var pixelPosition$$4 = this.pixelStart + this.currentX;
   var v2215 = this.pixelStart;
-  var v6392;
-  var v9843 = this.gfxWindowDisplay;
-  if (v9843) {
-    v9843 = scanlineToRender$$3 - this.windowY >= 0;
+  var v6389;
+  var v9840 = this.gfxWindowDisplay;
+  if (v9840) {
+    v9840 = scanlineToRender$$3 - this.windowY >= 0;
   }
-  if (v9843) {
-    v6392 = JAM.call(Math.min, Math, [JAM.call(Math.max, Math, [this.windowX, 0], JAM.policy.p1) + this.currentX, this.pixelEnd], JAM.policy.p1);
+  if (v9840) {
+    v6389 = JAM.call(Math.min, Math, [JAM.call(Math.max, Math, [this.windowX, 0], JAM.policy.p1) + this.currentX, this.pixelEnd], JAM.policy.p1);
   } else {
-    v6392 = this.pixelEnd;
+    v6389 = this.pixelEnd;
   }
-  var pixelPositionEnd$$2 = v2215 + v6392;
+  var pixelPositionEnd$$2 = v2215 + v6389;
   var tileNumber$$3 = tileYDown$$2 + (scrollXAdjusted$$2 >> 3);
   var chrCode$$2 = this.BGCHRBank1[tileNumber$$3];
   if (chrCode$$2 < this.gfxBackgroundBankOffset) {
@@ -3949,33 +3949,33 @@ function v695(scanlineToRender$$3) {
   var tile$$2 = this.tileCache[(attrCode$$1 & 8) << 8 | (attrCode$$1 & 96) << 4 | chrCode$$2];
   var palette$$1 = (attrCode$$1 & 7) << 2;
   var texel$$2 = scrollXAdjusted$$2 & 7;
-  var v8781 = texel$$2 < 8;
-  if (v8781) {
-    v8781 = pixelPosition$$4 < pixelPositionEnd$$2;
+  var v8778 = texel$$2 < 8;
+  if (v8778) {
+    v8778 = pixelPosition$$4 < pixelPositionEnd$$2;
   }
-  var v6395 = v8781;
-  if (v6395) {
-    v6395 = scrollXAdjusted$$2 < 256;
+  var v6392 = v8778;
+  if (v6392) {
+    v6392 = scrollXAdjusted$$2 < 256;
   }
-  var v2226 = v6395;
+  var v2226 = v6392;
   for (;v2226;) {
     var v2224 = this.frameBuffer;
     var v2225 = pixelPosition$$4;
     pixelPosition$$4 = pixelPosition$$4 + 1;
-    var v6396 = this.gbcBGPalette;
-    var v10309 = texel$$2;
+    var v6393 = this.gbcBGPalette;
+    var v10306 = texel$$2;
     texel$$2 = texel$$2 + 1;
-    JAM.set(v2224, v2225, v6396[palette$$1 | tile$$2[tileYLine$$2 | v10309]]);
+    JAM.set(v2224, v2225, v6393[palette$$1 | tile$$2[tileYLine$$2 | v10306]]);
     ++scrollXAdjusted$$2;
-    var v8783 = texel$$2 < 8;
-    if (v8783) {
-      v8783 = pixelPosition$$4 < pixelPositionEnd$$2;
+    var v8780 = texel$$2 < 8;
+    if (v8780) {
+      v8780 = pixelPosition$$4 < pixelPositionEnd$$2;
     }
-    var v6398 = v8783;
-    if (v6398) {
-      v6398 = scrollXAdjusted$$2 < 256;
+    var v6395 = v8780;
+    if (v6395) {
+      v6395 = scrollXAdjusted$$2 < 256;
     }
-    v2226 = v6398;
+    v2226 = v6395;
   }
   var scrollXAdjustedAligned$$2 = JAM.call(Math.min, Math, [pixelPositionEnd$$2 - pixelPosition$$4, 256 - scrollXAdjusted$$2], JAM.policy.p1) >> 3;
   scrollXAdjusted$$2 = scrollXAdjusted$$2 + (scrollXAdjustedAligned$$2 << 3);
@@ -3993,52 +3993,52 @@ function v695(scanlineToRender$$3) {
     var v2235 = this.frameBuffer;
     var v2236 = pixelPosition$$4;
     pixelPosition$$4 = pixelPosition$$4 + 1;
-    var v6404 = this.gbcBGPalette;
-    var v9851 = texel$$2;
+    var v6401 = this.gbcBGPalette;
+    var v9848 = texel$$2;
     texel$$2 = texel$$2 + 1;
-    JAM.set(v2235, v2236, v6404[palette$$1 | tile$$2[v9851]]);
+    JAM.set(v2235, v2236, v6401[palette$$1 | tile$$2[v9848]]);
     var v2237 = this.frameBuffer;
     var v2238 = pixelPosition$$4;
     pixelPosition$$4 = pixelPosition$$4 + 1;
-    var v6406 = this.gbcBGPalette;
-    var v9852 = texel$$2;
+    var v6403 = this.gbcBGPalette;
+    var v9849 = texel$$2;
     texel$$2 = texel$$2 + 1;
-    JAM.set(v2237, v2238, v6406[palette$$1 | tile$$2[v9852]]);
+    JAM.set(v2237, v2238, v6403[palette$$1 | tile$$2[v9849]]);
     var v2239 = this.frameBuffer;
     var v2240 = pixelPosition$$4;
     pixelPosition$$4 = pixelPosition$$4 + 1;
-    var v6408 = this.gbcBGPalette;
-    var v9853 = texel$$2;
+    var v6405 = this.gbcBGPalette;
+    var v9850 = texel$$2;
     texel$$2 = texel$$2 + 1;
-    JAM.set(v2239, v2240, v6408[palette$$1 | tile$$2[v9853]]);
+    JAM.set(v2239, v2240, v6405[palette$$1 | tile$$2[v9850]]);
     var v2241 = this.frameBuffer;
     var v2242 = pixelPosition$$4;
     pixelPosition$$4 = pixelPosition$$4 + 1;
-    var v6410 = this.gbcBGPalette;
-    var v9854 = texel$$2;
+    var v6407 = this.gbcBGPalette;
+    var v9851 = texel$$2;
     texel$$2 = texel$$2 + 1;
-    JAM.set(v2241, v2242, v6410[palette$$1 | tile$$2[v9854]]);
+    JAM.set(v2241, v2242, v6407[palette$$1 | tile$$2[v9851]]);
     var v2243 = this.frameBuffer;
     var v2244 = pixelPosition$$4;
     pixelPosition$$4 = pixelPosition$$4 + 1;
-    var v6412 = this.gbcBGPalette;
-    var v9855 = texel$$2;
+    var v6409 = this.gbcBGPalette;
+    var v9852 = texel$$2;
     texel$$2 = texel$$2 + 1;
-    JAM.set(v2243, v2244, v6412[palette$$1 | tile$$2[v9855]]);
+    JAM.set(v2243, v2244, v6409[palette$$1 | tile$$2[v9852]]);
     var v2245 = this.frameBuffer;
     var v2246 = pixelPosition$$4;
     pixelPosition$$4 = pixelPosition$$4 + 1;
-    var v6414 = this.gbcBGPalette;
-    var v9856 = texel$$2;
+    var v6411 = this.gbcBGPalette;
+    var v9853 = texel$$2;
     texel$$2 = texel$$2 + 1;
-    JAM.set(v2245, v2246, v6414[palette$$1 | tile$$2[v9856]]);
+    JAM.set(v2245, v2246, v6411[palette$$1 | tile$$2[v9853]]);
     var v2247 = this.frameBuffer;
     var v2248 = pixelPosition$$4;
     pixelPosition$$4 = pixelPosition$$4 + 1;
-    var v6416 = this.gbcBGPalette;
-    var v9857 = texel$$2;
+    var v6413 = this.gbcBGPalette;
+    var v9854 = texel$$2;
     texel$$2 = texel$$2 + 1;
-    JAM.set(v2247, v2248, v6416[palette$$1 | tile$$2[v9857]]);
+    JAM.set(v2247, v2248, v6413[palette$$1 | tile$$2[v9854]]);
     var v2249 = this.frameBuffer;
     var v2250 = pixelPosition$$4;
     pixelPosition$$4 = pixelPosition$$4 + 1;
@@ -4055,22 +4055,22 @@ function v695(scanlineToRender$$3) {
       tile$$2 = this.tileCache[(attrCode$$1 & 8) << 8 | (attrCode$$1 & 96) << 4 | chrCode$$2];
       palette$$1 = (attrCode$$1 & 7) << 2;
       texel$$2 = tileYLine$$2 - 1;
-      var v6422 = pixelPosition$$4 < pixelPositionEnd$$2;
-      if (v6422) {
-        v6422 = scrollXAdjusted$$2 < 256;
+      var v6419 = pixelPosition$$4 < pixelPositionEnd$$2;
+      if (v6419) {
+        v6419 = scrollXAdjusted$$2 < 256;
       }
-      var v2261 = v6422;
+      var v2261 = v6419;
       for (;v2261;) {
         var v2259 = this.frameBuffer;
         var v2260 = pixelPosition$$4;
         pixelPosition$$4 = pixelPosition$$4 + 1;
         JAM.set(v2259, v2260, this.gbcBGPalette[palette$$1 | tile$$2[texel$$2 = texel$$2 + 1]]);
         ++scrollXAdjusted$$2;
-        var v6425 = pixelPosition$$4 < pixelPositionEnd$$2;
-        if (v6425) {
-          v6425 = scrollXAdjusted$$2 < 256;
+        var v6422 = pixelPosition$$4 < pixelPositionEnd$$2;
+        if (v6422) {
+          v6422 = scrollXAdjusted$$2 < 256;
         }
-        v2261 = v6425;
+        v2261 = v6422;
       }
     }
     scrollXAdjustedAligned$$2 = (pixelPositionEnd$$2 - pixelPosition$$4 >> 3) + tileYDown$$2;
@@ -4090,52 +4090,52 @@ function v695(scanlineToRender$$3) {
       var v2271 = this.frameBuffer;
       var v2272 = pixelPosition$$4;
       pixelPosition$$4 = pixelPosition$$4 + 1;
-      var v6429 = this.gbcBGPalette;
-      var v9863 = texel$$2;
+      var v6426 = this.gbcBGPalette;
+      var v9860 = texel$$2;
       texel$$2 = texel$$2 + 1;
-      JAM.set(v2271, v2272, v6429[palette$$1 | tile$$2[v9863]]);
+      JAM.set(v2271, v2272, v6426[palette$$1 | tile$$2[v9860]]);
       var v2273 = this.frameBuffer;
       var v2274 = pixelPosition$$4;
       pixelPosition$$4 = pixelPosition$$4 + 1;
-      var v6431 = this.gbcBGPalette;
-      var v9864 = texel$$2;
+      var v6428 = this.gbcBGPalette;
+      var v9861 = texel$$2;
       texel$$2 = texel$$2 + 1;
-      JAM.set(v2273, v2274, v6431[palette$$1 | tile$$2[v9864]]);
+      JAM.set(v2273, v2274, v6428[palette$$1 | tile$$2[v9861]]);
       var v2275 = this.frameBuffer;
       var v2276 = pixelPosition$$4;
       pixelPosition$$4 = pixelPosition$$4 + 1;
-      var v6433 = this.gbcBGPalette;
-      var v9865 = texel$$2;
+      var v6430 = this.gbcBGPalette;
+      var v9862 = texel$$2;
       texel$$2 = texel$$2 + 1;
-      JAM.set(v2275, v2276, v6433[palette$$1 | tile$$2[v9865]]);
+      JAM.set(v2275, v2276, v6430[palette$$1 | tile$$2[v9862]]);
       var v2277 = this.frameBuffer;
       var v2278 = pixelPosition$$4;
       pixelPosition$$4 = pixelPosition$$4 + 1;
-      var v6435 = this.gbcBGPalette;
-      var v9866 = texel$$2;
+      var v6432 = this.gbcBGPalette;
+      var v9863 = texel$$2;
       texel$$2 = texel$$2 + 1;
-      JAM.set(v2277, v2278, v6435[palette$$1 | tile$$2[v9866]]);
+      JAM.set(v2277, v2278, v6432[palette$$1 | tile$$2[v9863]]);
       var v2279 = this.frameBuffer;
       var v2280 = pixelPosition$$4;
       pixelPosition$$4 = pixelPosition$$4 + 1;
-      var v6437 = this.gbcBGPalette;
-      var v9867 = texel$$2;
+      var v6434 = this.gbcBGPalette;
+      var v9864 = texel$$2;
       texel$$2 = texel$$2 + 1;
-      JAM.set(v2279, v2280, v6437[palette$$1 | tile$$2[v9867]]);
+      JAM.set(v2279, v2280, v6434[palette$$1 | tile$$2[v9864]]);
       var v2281 = this.frameBuffer;
       var v2282 = pixelPosition$$4;
       pixelPosition$$4 = pixelPosition$$4 + 1;
-      var v6439 = this.gbcBGPalette;
-      var v9868 = texel$$2;
+      var v6436 = this.gbcBGPalette;
+      var v9865 = texel$$2;
       texel$$2 = texel$$2 + 1;
-      JAM.set(v2281, v2282, v6439[palette$$1 | tile$$2[v9868]]);
+      JAM.set(v2281, v2282, v6436[palette$$1 | tile$$2[v9865]]);
       var v2283 = this.frameBuffer;
       var v2284 = pixelPosition$$4;
       pixelPosition$$4 = pixelPosition$$4 + 1;
-      var v6441 = this.gbcBGPalette;
-      var v9869 = texel$$2;
+      var v6438 = this.gbcBGPalette;
+      var v9866 = texel$$2;
       texel$$2 = texel$$2 + 1;
-      JAM.set(v2283, v2284, v6441[palette$$1 | tile$$2[v9869]]);
+      JAM.set(v2283, v2284, v6438[palette$$1 | tile$$2[v9866]]);
       var v2285 = this.frameBuffer;
       var v2286 = pixelPosition$$4;
       pixelPosition$$4 = pixelPosition$$4 + 1;
@@ -4177,17 +4177,17 @@ function v694(scanlineToRender$$2) {
   var scrollXAdjusted$$1 = this.backgroundX + this.currentX & 255;
   var pixelPosition$$3 = this.pixelStart + this.currentX;
   var v2317 = this.pixelStart;
-  var v6465;
-  var v9878 = this.gfxWindowDisplay;
-  if (v9878) {
-    v9878 = scanlineToRender$$2 - this.windowY >= 0;
+  var v6462;
+  var v9875 = this.gfxWindowDisplay;
+  if (v9875) {
+    v9875 = scanlineToRender$$2 - this.windowY >= 0;
   }
-  if (v9878) {
-    v6465 = JAM.call(Math.min, Math, [JAM.call(Math.max, Math, [this.windowX, 0], JAM.policy.p1) + this.currentX, this.pixelEnd], JAM.policy.p1);
+  if (v9875) {
+    v6462 = JAM.call(Math.min, Math, [JAM.call(Math.max, Math, [this.windowX, 0], JAM.policy.p1) + this.currentX, this.pixelEnd], JAM.policy.p1);
   } else {
-    v6465 = this.pixelEnd;
+    v6462 = this.pixelEnd;
   }
-  var pixelPositionEnd$$1 = v2317 + v6465;
+  var pixelPositionEnd$$1 = v2317 + v6462;
   var tileNumber$$2 = tileYDown$$1 + (scrollXAdjusted$$1 >> 3);
   var chrCode$$1 = this.BGCHRBank1[tileNumber$$2];
   if (chrCode$$1 < this.gfxBackgroundBankOffset) {
@@ -4197,33 +4197,33 @@ function v694(scanlineToRender$$2) {
   var tile$$1 = this.tileCache[(attrCode & 8) << 8 | (attrCode & 96) << 4 | chrCode$$1];
   var palette = (attrCode & 7) << 2 | (attrCode & 128) >> 2;
   var texel$$1 = scrollXAdjusted$$1 & 7;
-  var v8821 = texel$$1 < 8;
-  if (v8821) {
-    v8821 = pixelPosition$$3 < pixelPositionEnd$$1;
+  var v8818 = texel$$1 < 8;
+  if (v8818) {
+    v8818 = pixelPosition$$3 < pixelPositionEnd$$1;
   }
-  var v6470 = v8821;
-  if (v6470) {
-    v6470 = scrollXAdjusted$$1 < 256;
+  var v6467 = v8818;
+  if (v6467) {
+    v6467 = scrollXAdjusted$$1 < 256;
   }
-  var v2329 = v6470;
+  var v2329 = v6467;
   for (;v2329;) {
     var v2327 = this.frameBuffer;
     var v2328 = pixelPosition$$3;
     pixelPosition$$3 = pixelPosition$$3 + 1;
-    var v6471 = this.gbcBGPalette;
-    var v10312 = texel$$1;
+    var v6468 = this.gbcBGPalette;
+    var v10309 = texel$$1;
     texel$$1 = texel$$1 + 1;
-    JAM.set(v2327, v2328, v6471[palette | tile$$1[tileYLine$$1 | v10312]]);
+    JAM.set(v2327, v2328, v6468[palette | tile$$1[tileYLine$$1 | v10309]]);
     ++scrollXAdjusted$$1;
-    var v8823 = texel$$1 < 8;
-    if (v8823) {
-      v8823 = pixelPosition$$3 < pixelPositionEnd$$1;
+    var v8820 = texel$$1 < 8;
+    if (v8820) {
+      v8820 = pixelPosition$$3 < pixelPositionEnd$$1;
     }
-    var v6473 = v8823;
-    if (v6473) {
-      v6473 = scrollXAdjusted$$1 < 256;
+    var v6470 = v8820;
+    if (v6470) {
+      v6470 = scrollXAdjusted$$1 < 256;
     }
-    v2329 = v6473;
+    v2329 = v6470;
   }
   var scrollXAdjustedAligned$$1 = JAM.call(Math.min, Math, [pixelPositionEnd$$1 - pixelPosition$$3, 256 - scrollXAdjusted$$1], JAM.policy.p1) >> 3;
   scrollXAdjusted$$1 = scrollXAdjusted$$1 + (scrollXAdjustedAligned$$1 << 3);
@@ -4241,52 +4241,52 @@ function v694(scanlineToRender$$2) {
     var v2339 = this.frameBuffer;
     var v2340 = pixelPosition$$3;
     pixelPosition$$3 = pixelPosition$$3 + 1;
-    var v6481 = this.gbcBGPalette;
-    var v9886 = texel$$1;
+    var v6478 = this.gbcBGPalette;
+    var v9883 = texel$$1;
     texel$$1 = texel$$1 + 1;
-    JAM.set(v2339, v2340, v6481[palette | tile$$1[v9886]]);
+    JAM.set(v2339, v2340, v6478[palette | tile$$1[v9883]]);
     var v2341 = this.frameBuffer;
     var v2342 = pixelPosition$$3;
     pixelPosition$$3 = pixelPosition$$3 + 1;
-    var v6483 = this.gbcBGPalette;
-    var v9887 = texel$$1;
+    var v6480 = this.gbcBGPalette;
+    var v9884 = texel$$1;
     texel$$1 = texel$$1 + 1;
-    JAM.set(v2341, v2342, v6483[palette | tile$$1[v9887]]);
+    JAM.set(v2341, v2342, v6480[palette | tile$$1[v9884]]);
     var v2343 = this.frameBuffer;
     var v2344 = pixelPosition$$3;
     pixelPosition$$3 = pixelPosition$$3 + 1;
-    var v6485 = this.gbcBGPalette;
-    var v9888 = texel$$1;
+    var v6482 = this.gbcBGPalette;
+    var v9885 = texel$$1;
     texel$$1 = texel$$1 + 1;
-    JAM.set(v2343, v2344, v6485[palette | tile$$1[v9888]]);
+    JAM.set(v2343, v2344, v6482[palette | tile$$1[v9885]]);
     var v2345 = this.frameBuffer;
     var v2346 = pixelPosition$$3;
     pixelPosition$$3 = pixelPosition$$3 + 1;
-    var v6487 = this.gbcBGPalette;
-    var v9889 = texel$$1;
+    var v6484 = this.gbcBGPalette;
+    var v9886 = texel$$1;
     texel$$1 = texel$$1 + 1;
-    JAM.set(v2345, v2346, v6487[palette | tile$$1[v9889]]);
+    JAM.set(v2345, v2346, v6484[palette | tile$$1[v9886]]);
     var v2347 = this.frameBuffer;
     var v2348 = pixelPosition$$3;
     pixelPosition$$3 = pixelPosition$$3 + 1;
-    var v6489 = this.gbcBGPalette;
-    var v9890 = texel$$1;
+    var v6486 = this.gbcBGPalette;
+    var v9887 = texel$$1;
     texel$$1 = texel$$1 + 1;
-    JAM.set(v2347, v2348, v6489[palette | tile$$1[v9890]]);
+    JAM.set(v2347, v2348, v6486[palette | tile$$1[v9887]]);
     var v2349 = this.frameBuffer;
     var v2350 = pixelPosition$$3;
     pixelPosition$$3 = pixelPosition$$3 + 1;
-    var v6491 = this.gbcBGPalette;
-    var v9891 = texel$$1;
+    var v6488 = this.gbcBGPalette;
+    var v9888 = texel$$1;
     texel$$1 = texel$$1 + 1;
-    JAM.set(v2349, v2350, v6491[palette | tile$$1[v9891]]);
+    JAM.set(v2349, v2350, v6488[palette | tile$$1[v9888]]);
     var v2351 = this.frameBuffer;
     var v2352 = pixelPosition$$3;
     pixelPosition$$3 = pixelPosition$$3 + 1;
-    var v6493 = this.gbcBGPalette;
-    var v9892 = texel$$1;
+    var v6490 = this.gbcBGPalette;
+    var v9889 = texel$$1;
     texel$$1 = texel$$1 + 1;
-    JAM.set(v2351, v2352, v6493[palette | tile$$1[v9892]]);
+    JAM.set(v2351, v2352, v6490[palette | tile$$1[v9889]]);
     var v2353 = this.frameBuffer;
     var v2354 = pixelPosition$$3;
     pixelPosition$$3 = pixelPosition$$3 + 1;
@@ -4303,22 +4303,22 @@ function v694(scanlineToRender$$2) {
       tile$$1 = this.tileCache[(attrCode & 8) << 8 | (attrCode & 96) << 4 | chrCode$$1];
       palette = (attrCode & 7) << 2 | (attrCode & 128) >> 2;
       texel$$1 = tileYLine$$1 - 1;
-      var v6501 = pixelPosition$$3 < pixelPositionEnd$$1;
-      if (v6501) {
-        v6501 = scrollXAdjusted$$1 < 256;
+      var v6498 = pixelPosition$$3 < pixelPositionEnd$$1;
+      if (v6498) {
+        v6498 = scrollXAdjusted$$1 < 256;
       }
-      var v2366 = v6501;
+      var v2366 = v6498;
       for (;v2366;) {
         var v2364 = this.frameBuffer;
         var v2365 = pixelPosition$$3;
         pixelPosition$$3 = pixelPosition$$3 + 1;
         JAM.set(v2364, v2365, this.gbcBGPalette[palette | tile$$1[texel$$1 = texel$$1 + 1]]);
         ++scrollXAdjusted$$1;
-        var v6504 = pixelPosition$$3 < pixelPositionEnd$$1;
-        if (v6504) {
-          v6504 = scrollXAdjusted$$1 < 256;
+        var v6501 = pixelPosition$$3 < pixelPositionEnd$$1;
+        if (v6501) {
+          v6501 = scrollXAdjusted$$1 < 256;
         }
-        v2366 = v6504;
+        v2366 = v6501;
       }
     }
     scrollXAdjustedAligned$$1 = (pixelPositionEnd$$1 - pixelPosition$$3 >> 3) + tileYDown$$1;
@@ -4338,52 +4338,52 @@ function v694(scanlineToRender$$2) {
       var v2377 = this.frameBuffer;
       var v2378 = pixelPosition$$3;
       pixelPosition$$3 = pixelPosition$$3 + 1;
-      var v6510 = this.gbcBGPalette;
-      var v9898 = texel$$1;
+      var v6507 = this.gbcBGPalette;
+      var v9895 = texel$$1;
       texel$$1 = texel$$1 + 1;
-      JAM.set(v2377, v2378, v6510[palette | tile$$1[v9898]]);
+      JAM.set(v2377, v2378, v6507[palette | tile$$1[v9895]]);
       var v2379 = this.frameBuffer;
       var v2380 = pixelPosition$$3;
       pixelPosition$$3 = pixelPosition$$3 + 1;
-      var v6512 = this.gbcBGPalette;
-      var v9899 = texel$$1;
+      var v6509 = this.gbcBGPalette;
+      var v9896 = texel$$1;
       texel$$1 = texel$$1 + 1;
-      JAM.set(v2379, v2380, v6512[palette | tile$$1[v9899]]);
+      JAM.set(v2379, v2380, v6509[palette | tile$$1[v9896]]);
       var v2381 = this.frameBuffer;
       var v2382 = pixelPosition$$3;
       pixelPosition$$3 = pixelPosition$$3 + 1;
-      var v6514 = this.gbcBGPalette;
-      var v9900 = texel$$1;
+      var v6511 = this.gbcBGPalette;
+      var v9897 = texel$$1;
       texel$$1 = texel$$1 + 1;
-      JAM.set(v2381, v2382, v6514[palette | tile$$1[v9900]]);
+      JAM.set(v2381, v2382, v6511[palette | tile$$1[v9897]]);
       var v2383 = this.frameBuffer;
       var v2384 = pixelPosition$$3;
       pixelPosition$$3 = pixelPosition$$3 + 1;
-      var v6516 = this.gbcBGPalette;
-      var v9901 = texel$$1;
+      var v6513 = this.gbcBGPalette;
+      var v9898 = texel$$1;
       texel$$1 = texel$$1 + 1;
-      JAM.set(v2383, v2384, v6516[palette | tile$$1[v9901]]);
+      JAM.set(v2383, v2384, v6513[palette | tile$$1[v9898]]);
       var v2385 = this.frameBuffer;
       var v2386 = pixelPosition$$3;
       pixelPosition$$3 = pixelPosition$$3 + 1;
-      var v6518 = this.gbcBGPalette;
-      var v9902 = texel$$1;
+      var v6515 = this.gbcBGPalette;
+      var v9899 = texel$$1;
       texel$$1 = texel$$1 + 1;
-      JAM.set(v2385, v2386, v6518[palette | tile$$1[v9902]]);
+      JAM.set(v2385, v2386, v6515[palette | tile$$1[v9899]]);
       var v2387 = this.frameBuffer;
       var v2388 = pixelPosition$$3;
       pixelPosition$$3 = pixelPosition$$3 + 1;
-      var v6520 = this.gbcBGPalette;
-      var v9903 = texel$$1;
+      var v6517 = this.gbcBGPalette;
+      var v9900 = texel$$1;
       texel$$1 = texel$$1 + 1;
-      JAM.set(v2387, v2388, v6520[palette | tile$$1[v9903]]);
+      JAM.set(v2387, v2388, v6517[palette | tile$$1[v9900]]);
       var v2389 = this.frameBuffer;
       var v2390 = pixelPosition$$3;
       pixelPosition$$3 = pixelPosition$$3 + 1;
-      var v6522 = this.gbcBGPalette;
-      var v9904 = texel$$1;
+      var v6519 = this.gbcBGPalette;
+      var v9901 = texel$$1;
       texel$$1 = texel$$1 + 1;
-      JAM.set(v2389, v2390, v6522[palette | tile$$1[v9904]]);
+      JAM.set(v2389, v2390, v6519[palette | tile$$1[v9901]]);
       var v2391 = this.frameBuffer;
       var v2392 = pixelPosition$$3;
       pixelPosition$$3 = pixelPosition$$3 + 1;
@@ -4425,17 +4425,17 @@ function v693(scanlineToRender$$1) {
   var scrollXAdjusted = this.backgroundX + this.currentX & 255;
   var pixelPosition$$2 = this.pixelStart + this.currentX;
   var v2424 = this.pixelStart;
-  var v6548;
-  var v9913 = this.gfxWindowDisplay;
-  if (v9913) {
-    v9913 = scanlineToRender$$1 - this.windowY >= 0;
+  var v6545;
+  var v9910 = this.gfxWindowDisplay;
+  if (v9910) {
+    v9910 = scanlineToRender$$1 - this.windowY >= 0;
   }
-  if (v9913) {
-    v6548 = JAM.call(Math.min, Math, [JAM.call(Math.max, Math, [this.windowX, 0], JAM.policy.p1) + this.currentX, this.pixelEnd], JAM.policy.p1);
+  if (v9910) {
+    v6545 = JAM.call(Math.min, Math, [JAM.call(Math.max, Math, [this.windowX, 0], JAM.policy.p1) + this.currentX, this.pixelEnd], JAM.policy.p1);
   } else {
-    v6548 = this.pixelEnd;
+    v6545 = this.pixelEnd;
   }
-  var pixelPositionEnd = v2424 + v6548;
+  var pixelPositionEnd = v2424 + v6545;
   var tileNumber$$1 = tileYDown + (scrollXAdjusted >> 3);
   var chrCode = this.BGCHRBank1[tileNumber$$1];
   if (chrCode < this.gfxBackgroundBankOffset) {
@@ -4443,33 +4443,33 @@ function v693(scanlineToRender$$1) {
   }
   var tile = this.tileCache[chrCode];
   var texel = scrollXAdjusted & 7;
-  var v8859 = texel < 8;
-  if (v8859) {
-    v8859 = pixelPosition$$2 < pixelPositionEnd;
+  var v8856 = texel < 8;
+  if (v8856) {
+    v8856 = pixelPosition$$2 < pixelPositionEnd;
   }
-  var v6550 = v8859;
-  if (v6550) {
-    v6550 = scrollXAdjusted < 256;
+  var v6547 = v8856;
+  if (v6547) {
+    v6547 = scrollXAdjusted < 256;
   }
-  var v2432 = v6550;
+  var v2432 = v6547;
   for (;v2432;) {
     var v2430 = this.frameBuffer;
     var v2431 = pixelPosition$$2;
     pixelPosition$$2 = pixelPosition$$2 + 1;
-    var v6551 = this.BGPalette;
-    var v9916 = texel;
+    var v6548 = this.BGPalette;
+    var v9913 = texel;
     texel = texel + 1;
-    JAM.set(v2430, v2431, v6551[tile[tileYLine | v9916]]);
+    JAM.set(v2430, v2431, v6548[tile[tileYLine | v9913]]);
     ++scrollXAdjusted;
-    var v8861 = texel < 8;
-    if (v8861) {
-      v8861 = pixelPosition$$2 < pixelPositionEnd;
+    var v8858 = texel < 8;
+    if (v8858) {
+      v8858 = pixelPosition$$2 < pixelPositionEnd;
     }
-    var v6553 = v8861;
-    if (v6553) {
-      v6553 = scrollXAdjusted < 256;
+    var v6550 = v8858;
+    if (v6550) {
+      v6550 = scrollXAdjusted < 256;
     }
-    v2432 = v6553;
+    v2432 = v6550;
   }
   var scrollXAdjustedAligned = JAM.call(Math.min, Math, [pixelPositionEnd - pixelPosition$$2, 256 - scrollXAdjusted], JAM.policy.p1) >> 3;
   scrollXAdjusted = scrollXAdjusted + (scrollXAdjustedAligned << 3);
@@ -4485,52 +4485,52 @@ function v693(scanlineToRender$$1) {
     var v2438 = this.frameBuffer;
     var v2439 = pixelPosition$$2;
     pixelPosition$$2 = pixelPosition$$2 + 1;
-    var v6558 = this.BGPalette;
-    var v8862 = texel;
+    var v6555 = this.BGPalette;
+    var v8859 = texel;
     texel = texel + 1;
-    JAM.set(v2438, v2439, v6558[tile[v8862]]);
+    JAM.set(v2438, v2439, v6555[tile[v8859]]);
     var v2440 = this.frameBuffer;
     var v2441 = pixelPosition$$2;
     pixelPosition$$2 = pixelPosition$$2 + 1;
-    var v6560 = this.BGPalette;
-    var v8863 = texel;
+    var v6557 = this.BGPalette;
+    var v8860 = texel;
     texel = texel + 1;
-    JAM.set(v2440, v2441, v6560[tile[v8863]]);
+    JAM.set(v2440, v2441, v6557[tile[v8860]]);
     var v2442 = this.frameBuffer;
     var v2443 = pixelPosition$$2;
     pixelPosition$$2 = pixelPosition$$2 + 1;
-    var v6562 = this.BGPalette;
-    var v8864 = texel;
+    var v6559 = this.BGPalette;
+    var v8861 = texel;
     texel = texel + 1;
-    JAM.set(v2442, v2443, v6562[tile[v8864]]);
+    JAM.set(v2442, v2443, v6559[tile[v8861]]);
     var v2444 = this.frameBuffer;
     var v2445 = pixelPosition$$2;
     pixelPosition$$2 = pixelPosition$$2 + 1;
-    var v6564 = this.BGPalette;
-    var v8865 = texel;
+    var v6561 = this.BGPalette;
+    var v8862 = texel;
     texel = texel + 1;
-    JAM.set(v2444, v2445, v6564[tile[v8865]]);
+    JAM.set(v2444, v2445, v6561[tile[v8862]]);
     var v2446 = this.frameBuffer;
     var v2447 = pixelPosition$$2;
     pixelPosition$$2 = pixelPosition$$2 + 1;
-    var v6566 = this.BGPalette;
-    var v8866 = texel;
+    var v6563 = this.BGPalette;
+    var v8863 = texel;
     texel = texel + 1;
-    JAM.set(v2446, v2447, v6566[tile[v8866]]);
+    JAM.set(v2446, v2447, v6563[tile[v8863]]);
     var v2448 = this.frameBuffer;
     var v2449 = pixelPosition$$2;
     pixelPosition$$2 = pixelPosition$$2 + 1;
-    var v6568 = this.BGPalette;
-    var v8867 = texel;
+    var v6565 = this.BGPalette;
+    var v8864 = texel;
     texel = texel + 1;
-    JAM.set(v2448, v2449, v6568[tile[v8867]]);
+    JAM.set(v2448, v2449, v6565[tile[v8864]]);
     var v2450 = this.frameBuffer;
     var v2451 = pixelPosition$$2;
     pixelPosition$$2 = pixelPosition$$2 + 1;
-    var v6570 = this.BGPalette;
-    var v8868 = texel;
+    var v6567 = this.BGPalette;
+    var v8865 = texel;
     texel = texel + 1;
-    JAM.set(v2450, v2451, v6570[tile[v8868]]);
+    JAM.set(v2450, v2451, v6567[tile[v8865]]);
     var v2452 = this.frameBuffer;
     var v2453 = pixelPosition$$2;
     pixelPosition$$2 = pixelPosition$$2 + 1;
@@ -4545,22 +4545,22 @@ function v693(scanlineToRender$$1) {
       }
       tile = this.tileCache[chrCode];
       texel = tileYLine - 1;
-      var v6575 = pixelPosition$$2 < pixelPositionEnd;
-      if (v6575) {
-        v6575 = scrollXAdjusted < 256;
+      var v6572 = pixelPosition$$2 < pixelPositionEnd;
+      if (v6572) {
+        v6572 = scrollXAdjusted < 256;
       }
-      var v2461 = v6575;
+      var v2461 = v6572;
       for (;v2461;) {
         var v2459 = this.frameBuffer;
         var v2460 = pixelPosition$$2;
         pixelPosition$$2 = pixelPosition$$2 + 1;
         JAM.set(v2459, v2460, this.BGPalette[tile[texel = texel + 1]]);
         ++scrollXAdjusted;
-        var v6578 = pixelPosition$$2 < pixelPositionEnd;
-        if (v6578) {
-          v6578 = scrollXAdjusted < 256;
+        var v6575 = pixelPosition$$2 < pixelPositionEnd;
+        if (v6575) {
+          v6575 = scrollXAdjusted < 256;
         }
-        v2461 = v6578;
+        v2461 = v6575;
       }
     }
     scrollXAdjustedAligned = (pixelPositionEnd - pixelPosition$$2 >> 3) + tileYDown;
@@ -4578,52 +4578,52 @@ function v693(scanlineToRender$$1) {
       var v2468 = this.frameBuffer;
       var v2469 = pixelPosition$$2;
       pixelPosition$$2 = pixelPosition$$2 + 1;
-      var v6581 = this.BGPalette;
-      var v8870 = texel;
+      var v6578 = this.BGPalette;
+      var v8867 = texel;
       texel = texel + 1;
-      JAM.set(v2468, v2469, v6581[tile[v8870]]);
+      JAM.set(v2468, v2469, v6578[tile[v8867]]);
       var v2470 = this.frameBuffer;
       var v2471 = pixelPosition$$2;
       pixelPosition$$2 = pixelPosition$$2 + 1;
-      var v6583 = this.BGPalette;
-      var v8871 = texel;
+      var v6580 = this.BGPalette;
+      var v8868 = texel;
       texel = texel + 1;
-      JAM.set(v2470, v2471, v6583[tile[v8871]]);
+      JAM.set(v2470, v2471, v6580[tile[v8868]]);
       var v2472 = this.frameBuffer;
       var v2473 = pixelPosition$$2;
       pixelPosition$$2 = pixelPosition$$2 + 1;
-      var v6585 = this.BGPalette;
-      var v8872 = texel;
+      var v6582 = this.BGPalette;
+      var v8869 = texel;
       texel = texel + 1;
-      JAM.set(v2472, v2473, v6585[tile[v8872]]);
+      JAM.set(v2472, v2473, v6582[tile[v8869]]);
       var v2474 = this.frameBuffer;
       var v2475 = pixelPosition$$2;
       pixelPosition$$2 = pixelPosition$$2 + 1;
-      var v6587 = this.BGPalette;
-      var v8873 = texel;
+      var v6584 = this.BGPalette;
+      var v8870 = texel;
       texel = texel + 1;
-      JAM.set(v2474, v2475, v6587[tile[v8873]]);
+      JAM.set(v2474, v2475, v6584[tile[v8870]]);
       var v2476 = this.frameBuffer;
       var v2477 = pixelPosition$$2;
       pixelPosition$$2 = pixelPosition$$2 + 1;
-      var v6589 = this.BGPalette;
-      var v8874 = texel;
+      var v6586 = this.BGPalette;
+      var v8871 = texel;
       texel = texel + 1;
-      JAM.set(v2476, v2477, v6589[tile[v8874]]);
+      JAM.set(v2476, v2477, v6586[tile[v8871]]);
       var v2478 = this.frameBuffer;
       var v2479 = pixelPosition$$2;
       pixelPosition$$2 = pixelPosition$$2 + 1;
-      var v6591 = this.BGPalette;
-      var v8875 = texel;
+      var v6588 = this.BGPalette;
+      var v8872 = texel;
       texel = texel + 1;
-      JAM.set(v2478, v2479, v6591[tile[v8875]]);
+      JAM.set(v2478, v2479, v6588[tile[v8872]]);
       var v2480 = this.frameBuffer;
       var v2481 = pixelPosition$$2;
       pixelPosition$$2 = pixelPosition$$2 + 1;
-      var v6593 = this.BGPalette;
-      var v8876 = texel;
+      var v6590 = this.BGPalette;
+      var v8873 = texel;
       texel = texel + 1;
-      JAM.set(v2480, v2481, v6593[tile[v8876]]);
+      JAM.set(v2480, v2481, v6590[tile[v8873]]);
       var v2482 = this.frameBuffer;
       var v2483 = pixelPosition$$2;
       pixelPosition$$2 = pixelPosition$$2 + 1;
@@ -4716,11 +4716,11 @@ function v686() {
   for (;v2542;) {
     var adjustedIndex = counter << 1;
     var v2540 = this.cachedBGPaletteConversion;
-    var v10681 = JAM.call(this.RGBTint, this, [this.gbcBGRawPalette[adjustedIndex | 1] << 8 | this.gbcBGRawPalette[adjustedIndex]]);
-    v2540[counter] = v10681;
+    var v10678 = JAM.call(this.RGBTint, this, [this.gbcBGRawPalette[adjustedIndex | 1] << 8 | this.gbcBGRawPalette[adjustedIndex]]);
+    v2540[counter] = v10678;
     var v2541 = this.cachedOBJPaletteConversion;
-    var v10682 = JAM.call(this.RGBTint, this, [this.gbcOBJRawPalette[adjustedIndex | 1] << 8 | this.gbcOBJRawPalette[adjustedIndex]]);
-    v2541[counter] = v10682;
+    var v10679 = JAM.call(this.RGBTint, this, [this.gbcOBJRawPalette[adjustedIndex | 1] << 8 | this.gbcOBJRawPalette[adjustedIndex]]);
+    v2541[counter] = v10679;
     counter++;
     v2542 = counter < 4;
   }
@@ -4729,8 +4729,8 @@ function v686() {
   for (;v2544;) {
     adjustedIndex = counter << 1;
     var v2543 = this.cachedOBJPaletteConversion;
-    var v10683 = JAM.call(this.RGBTint, this, [this.gbcOBJRawPalette[adjustedIndex | 1] << 8 | this.gbcOBJRawPalette[adjustedIndex]]);
-    v2543[counter] = v10683;
+    var v10680 = JAM.call(this.RGBTint, this, [this.gbcOBJRawPalette[adjustedIndex | 1] << 8 | this.gbcOBJRawPalette[adjustedIndex]]);
+    v2543[counter] = v10680;
     counter++;
     v2544 = counter < 8;
   }
@@ -4767,8 +4767,8 @@ function v684() {
       this.BGPalette = this.gbBGPalette;
       this.OBJPalette = this.gbOBJPalette;
     }
-    var v10684 = JAM.call(this.generateCacheArray, this, [1792]);
-    this.tileCache = v10684;
+    var v10681 = JAM.call(this.generateCacheArray, this, [1792]);
+    this.tileCache = v10681;
     tileIndex = 32768;
     var v2554 = tileIndex < 36864;
     for (;v2554;) {
@@ -4783,10 +4783,10 @@ function v684() {
       tileIndex = tileIndex + 2;
       v2555 = tileIndex < 38912;
     }
-    var v10685 = JAM.call(this.getTypedArray, this, [256, 0, "uint8"], JAM.policy.p1);
-    this.sortBuffer = v10685;
-    var v10686 = JAM.call(this.getTypedArray, this, [10, 0, "int32"], JAM.policy.p1);
-    this.OAMAddressCache = v10686;
+    var v10682 = JAM.call(this.getTypedArray, this, [256, 0, "uint8"], JAM.policy.p1);
+    this.sortBuffer = v10682;
+    var v10683 = JAM.call(this.getTypedArray, this, [10, 0, "int32"], JAM.policy.p1);
+    this.OAMAddressCache = v10683;
   } else {
     var v2556;
     if (this.currVRAMBank > 0) {
@@ -4795,8 +4795,8 @@ function v684() {
       v2556 = this.BGCHRBank1;
     }
     this.BGCHRCurrentBank = v2556;
-    var v10687 = JAM.call(this.generateCacheArray, this, [3968]);
-    this.tileCache = v10687;
+    var v10684 = JAM.call(this.generateCacheArray, this, [3968]);
+    this.tileCache = v10684;
     var v2557 = tileIndex < 6144;
     for (;v2557;) {
       JAM.call(this.generateGBCTileBank1, this, [tileIndex]);
@@ -4834,30 +4834,30 @@ function v681() {
   this.VRAM = this.GBCMemory = this.BGCHRCurrentBank = this.BGCHRBank2 = null;
   this.tileCache.length = 1792;
   if (settings[4]) {
-    var v10688 = JAM.call(this.getTypedArray, this, [4, 0, "int32"], JAM.policy.p1);
-    this.gbBGColorizedPalette = v10688;
-    var v10689 = JAM.call(this.getTypedArray, this, [8, 0, "int32"], JAM.policy.p1);
-    this.gbOBJColorizedPalette = v10689;
-    var v10690 = JAM.call(this.getTypedArray, this, [4, 0, "int32"], JAM.policy.p1);
-    this.cachedBGPaletteConversion = v10690;
-    var v10691 = JAM.call(this.getTypedArray, this, [8, 0, "int32"], JAM.policy.p1);
-    this.cachedOBJPaletteConversion = v10691;
+    var v10685 = JAM.call(this.getTypedArray, this, [4, 0, "int32"], JAM.policy.p1);
+    this.gbBGColorizedPalette = v10685;
+    var v10686 = JAM.call(this.getTypedArray, this, [8, 0, "int32"], JAM.policy.p1);
+    this.gbOBJColorizedPalette = v10686;
+    var v10687 = JAM.call(this.getTypedArray, this, [4, 0, "int32"], JAM.policy.p1);
+    this.cachedBGPaletteConversion = v10687;
+    var v10688 = JAM.call(this.getTypedArray, this, [8, 0, "int32"], JAM.policy.p1);
+    this.cachedOBJPaletteConversion = v10688;
     this.BGPalette = this.gbBGColorizedPalette;
     this.OBJPalette = this.gbOBJColorizedPalette;
     this.gbOBJPalette = this.gbBGPalette = null;
     this.getGBCColor();
   } else {
-    var v10692 = JAM.call(this.getTypedArray, this, [8, 0, "int32"], JAM.policy.p1);
-    this.gbOBJPalette = v10692;
-    var v10693 = JAM.call(this.getTypedArray, this, [4, 0, "int32"], JAM.policy.p1);
-    this.gbBGPalette = v10693;
+    var v10689 = JAM.call(this.getTypedArray, this, [8, 0, "int32"], JAM.policy.p1);
+    this.gbOBJPalette = v10689;
+    var v10690 = JAM.call(this.getTypedArray, this, [4, 0, "int32"], JAM.policy.p1);
+    this.gbBGPalette = v10690;
     this.BGPalette = this.gbBGPalette;
     this.OBJPalette = this.gbOBJPalette;
   }
-  var v10694 = JAM.call(this.getTypedArray, this, [256, 0, "uint8"], JAM.policy.p1);
-  this.sortBuffer = v10694;
-  var v10695 = JAM.call(this.getTypedArray, this, [10, 0, "int32"], JAM.policy.p1);
-  this.OAMAddressCache = v10695;
+  var v10691 = JAM.call(this.getTypedArray, this, [256, 0, "uint8"], JAM.policy.p1);
+  this.sortBuffer = v10691;
+  var v10692 = JAM.call(this.getTypedArray, this, [10, 0, "int32"], JAM.policy.p1);
+  this.OAMAddressCache = v10692;
   this.renderPathBuild();
   this.memoryReadJumpCompile();
   this.memoryWriteJumpCompile();
@@ -4872,16 +4872,16 @@ function v680() {
   }
   this.LCDCONTROL = v2563;
   if (this.cGBC) {
-    var v10696 = JAM.call(this.getTypedArray, this, [64, 0, "uint8"], JAM.policy.p1);
-    this.gbcOBJRawPalette = v10696;
-    var v10697 = JAM.call(this.getTypedArray, this, [64, 0, "uint8"], JAM.policy.p1);
-    this.gbcBGRawPalette = v10697;
-    var v10698 = JAM.call(this.getTypedArray, this, [32, 16777216, "int32"], JAM.policy.p1);
-    this.gbcOBJPalette = v10698;
-    var v10699 = JAM.call(this.getTypedArray, this, [64, 0, "int32"], JAM.policy.p1);
-    this.gbcBGPalette = v10699;
-    var v10700 = JAM.call(this.getTypedArray, this, [2048, 0, "uint8"], JAM.policy.p1);
-    this.BGCHRBank2 = v10700;
+    var v10693 = JAM.call(this.getTypedArray, this, [64, 0, "uint8"], JAM.policy.p1);
+    this.gbcOBJRawPalette = v10693;
+    var v10694 = JAM.call(this.getTypedArray, this, [64, 0, "uint8"], JAM.policy.p1);
+    this.gbcBGRawPalette = v10694;
+    var v10695 = JAM.call(this.getTypedArray, this, [32, 16777216, "int32"], JAM.policy.p1);
+    this.gbcOBJPalette = v10695;
+    var v10696 = JAM.call(this.getTypedArray, this, [64, 0, "int32"], JAM.policy.p1);
+    this.gbcBGPalette = v10696;
+    var v10697 = JAM.call(this.getTypedArray, this, [2048, 0, "uint8"], JAM.policy.p1);
+    this.BGCHRBank2 = v10697;
     var v2564;
     if (this.currVRAMBank > 0) {
       v2564 = this.BGCHRBank2;
@@ -4889,38 +4889,38 @@ function v680() {
       v2564 = this.BGCHRBank1;
     }
     this.BGCHRCurrentBank = v2564;
-    var v10701 = JAM.call(this.generateCacheArray, this, [3968]);
-    this.tileCache = v10701;
+    var v10698 = JAM.call(this.generateCacheArray, this, [3968]);
+    this.tileCache = v10698;
   } else {
-    var v10702 = JAM.call(this.getTypedArray, this, [8, 0, "int32"], JAM.policy.p1);
-    this.gbOBJPalette = v10702;
-    var v10703 = JAM.call(this.getTypedArray, this, [4, 0, "int32"], JAM.policy.p1);
-    this.gbBGPalette = v10703;
+    var v10699 = JAM.call(this.getTypedArray, this, [8, 0, "int32"], JAM.policy.p1);
+    this.gbOBJPalette = v10699;
+    var v10700 = JAM.call(this.getTypedArray, this, [4, 0, "int32"], JAM.policy.p1);
+    this.gbBGPalette = v10700;
     this.BGPalette = this.gbBGPalette;
     this.OBJPalette = this.gbOBJPalette;
-    var v10704 = JAM.call(this.generateCacheArray, this, [1792]);
-    this.tileCache = v10704;
-    var v10705 = JAM.call(this.getTypedArray, this, [256, 0, "uint8"], JAM.policy.p1);
-    this.sortBuffer = v10705;
-    var v10706 = JAM.call(this.getTypedArray, this, [10, 0, "int32"], JAM.policy.p1);
-    this.OAMAddressCache = v10706;
+    var v10701 = JAM.call(this.generateCacheArray, this, [1792]);
+    this.tileCache = v10701;
+    var v10702 = JAM.call(this.getTypedArray, this, [256, 0, "uint8"], JAM.policy.p1);
+    this.sortBuffer = v10702;
+    var v10703 = JAM.call(this.getTypedArray, this, [10, 0, "int32"], JAM.policy.p1);
+    this.OAMAddressCache = v10703;
   }
   this.renderPathBuild();
   return;
 }
 function v679() {
-  var v6661 = this.actualScanLine < 144;
-  if (v6661) {
-    v6661 = this.modeSTAT == 3;
+  var v6658 = this.actualScanLine < 144;
+  if (v6658) {
+    v6658 = this.modeSTAT == 3;
   }
-  if (v6661) {
+  if (v6658) {
     if (this.midScanlineOffset == -1) {
       this.midScanlineOffset = this.backgroundX & 7;
     }
     if (this.LCDTicks >= 82) {
       this.pixelEnd = this.LCDTicks - 74;
-      var v10707 = JAM.call(Math.min, Math, [this.pixelEnd - this.midScanlineOffset - this.pixelEnd % 8, 160], JAM.policy.p1);
-      this.pixelEnd = v10707;
+      var v10704 = JAM.call(Math.min, Math, [this.pixelEnd - this.midScanlineOffset - this.pixelEnd % 8, 160], JAM.policy.p1);
+      this.pixelEnd = v10704;
       if (this.bgEnabled) {
         this.pixelStart = this.lastUnrenderedLine * 160;
         JAM.call(this.BGLayerRender, this, [this.lastUnrenderedLine]);
@@ -4928,11 +4928,11 @@ function v679() {
       } else {
         var pixelLine$$1 = this.lastUnrenderedLine * 160 + this.pixelEnd;
         var v2575;
-        var v8921 = this.cGBC;
-        if (!v8921) {
-          v8921 = this.colorizedGBPalettes;
+        var v8918 = this.cGBC;
+        if (!v8918) {
+          v8918 = this.colorizedGBPalettes;
         }
-        if (v8921) {
+        if (v8918) {
           v2575 = 16316664;
         } else {
           v2575 = 15728606;
@@ -4960,11 +4960,11 @@ function v678(scanlineToRender) {
   } else {
     var pixelLine = (scanlineToRender + 1) * 160;
     var v2584;
-    var v8922 = this.cGBC;
-    if (!v8922) {
-      v8922 = this.colorizedGBPalettes;
+    var v8919 = this.cGBC;
+    if (!v8919) {
+      v8919 = this.colorizedGBPalettes;
     }
-    if (v8922) {
+    if (v8919) {
       v2584 = 16316664;
     } else {
       v2584 = 15728606;
@@ -4985,8 +4985,8 @@ function v678(scanlineToRender) {
 }
 function v677() {
   if (this.offscreenRGBCount > 0) {
-    var v10708 = new Resize(160, 144, this.offscreenWidth, this.offscreenHeight, false, true);
-    this.resizer = v10708;
+    var v10705 = new Resize(160, 144, this.offscreenWidth, this.offscreenHeight, false, true);
+    this.resizer = v10705;
   }
   return;
 }
@@ -4997,11 +4997,11 @@ function v676() {
 function v675() {
   var bufferIndex$$2 = 0;
   var frameBuffer$$2 = this.swizzledFrame;
-  var v6671 = this.cGBC;
-  if (!v6671) {
-    v6671 = this.colorizedGBPalettes;
+  var v6668 = this.cGBC;
+  if (!v6668) {
+    v6668 = this.colorizedGBPalettes;
   }
-  if (v6671) {
+  if (v6668) {
     var v2596 = bufferIndex$$2 < 69120;
     for (;v2596;) {
       var v2595 = bufferIndex$$2;
@@ -5041,9 +5041,9 @@ function v674() {
     swizzledFrame[v2603] = frameBuffer$$1[bufferIndex$$1] >> 8 & 255;
     var v2604 = canvasIndex$$1;
     canvasIndex$$1 = canvasIndex$$1 + 1;
-    var v8926 = bufferIndex$$1;
+    var v8923 = bufferIndex$$1;
     bufferIndex$$1 = bufferIndex$$1 + 1;
-    swizzledFrame[v2604] = frameBuffer$$1[v8926] & 255;
+    swizzledFrame[v2604] = frameBuffer$$1[v8923] & 255;
     v2605 = canvasIndex$$1 < 69120;
   }
   return;
@@ -5065,19 +5065,19 @@ function v673() {
     for (;v2611;) {
       var v2608 = canvasIndex;
       canvasIndex = canvasIndex + 1;
-      var v6676 = bufferIndex;
+      var v6673 = bufferIndex;
       bufferIndex = bufferIndex + 1;
-      canvasData[v2608] = frameBuffer[v6676];
+      canvasData[v2608] = frameBuffer[v6673];
       var v2609 = canvasIndex;
       canvasIndex = canvasIndex + 1;
-      var v6677 = bufferIndex;
+      var v6674 = bufferIndex;
       bufferIndex = bufferIndex + 1;
-      canvasData[v2609] = frameBuffer[v6677];
+      canvasData[v2609] = frameBuffer[v6674];
       var v2610 = canvasIndex;
       canvasIndex = canvasIndex + 1;
-      var v6678 = bufferIndex;
+      var v6675 = bufferIndex;
       bufferIndex = bufferIndex + 1;
-      canvasData[v2610] = frameBuffer[v6678];
+      canvasData[v2610] = frameBuffer[v6675];
       ++canvasIndex;
       v2611 = canvasIndex < canvasRGBALength;
     }
@@ -5102,11 +5102,11 @@ function v670() {
     var newTime = dateObj.getTime();
     var timeElapsed = newTime - this.lastIteration;
     this.lastIteration = newTime;
-    var v6679 = this.cTIMER;
-    if (v6679) {
-      v6679 = !this.RTCHALT;
+    var v6676 = this.cTIMER;
+    if (v6676) {
+      v6676 = !this.RTCHALT;
     }
-    if (v6679) {
+    if (v6676) {
       this.RTCSeconds = this.RTCSeconds + timeElapsed / 1E3;
       var v2618 = this.RTCSeconds >= 60;
       for (;v2618;) {
@@ -5159,11 +5159,11 @@ function v668() {
 function v667() {
   function v666(parentObj$$517) {
     if (parentObj$$517.LCDTicks >= 8) {
-      var v6701 = parentObj$$517.STATTracker != 4;
-      if (v6701) {
-        v6701 = parentObj$$517.memory[65348] == 153;
+      var v6698 = parentObj$$517.STATTracker != 4;
+      if (v6698) {
+        v6698 = parentObj$$517.memory[65348] == 153;
       }
-      if (v6701) {
+      if (v6698) {
         parentObj$$517.memory[65348] = 0;
         if (parentObj$$517.memory[65349] == 0) {
           var v2630 = parentObj$$517.memory;
@@ -5220,11 +5220,11 @@ function v667() {
           parentObj$$515.LCDTicks = parentObj$$515.LCDTicks - 456;
           if (parentObj$$515.STATTracker != 3) {
             if (parentObj$$515.STATTracker != 2) {
-              var v6718 = parentObj$$515.STATTracker == 0;
-              if (v6718) {
-                v6718 = parentObj$$515.mode2TriggerSTAT;
+              var v6715 = parentObj$$515.STATTracker == 0;
+              if (v6715) {
+                v6715 = parentObj$$515.mode2TriggerSTAT;
               }
-              if (v6718) {
+              if (v6715) {
                 parentObj$$515.interruptsRequested = parentObj$$515.interruptsRequested | 2;
               }
               parentObj$$515.incrementScanLineQueue();
@@ -5249,25 +5249,25 @@ function v667() {
           }
           parentObj$$515.STATTracker = 0;
           parentObj$$515.modeSTAT = 1;
-          var v6723 = parentObj$$515.interruptsRequested;
-          var v8948;
+          var v6720 = parentObj$$515.interruptsRequested;
+          var v8945;
           if (parentObj$$515.mode1TriggerSTAT) {
-            v8948 = 3;
+            v8945 = 3;
           } else {
-            v8948 = 1;
+            v8945 = 1;
           }
-          parentObj$$515.interruptsRequested = v6723 | v8948;
+          parentObj$$515.interruptsRequested = v6720 | v8945;
           parentObj$$515.checkIRQMatching();
           if (parentObj$$515.drewBlank == 0) {
-            var v6726 = parentObj$$515.totalLinesPassed < 144;
-            if (!v6726) {
-              var v8950 = parentObj$$515.totalLinesPassed == 144;
-              if (v8950) {
-                v8950 = parentObj$$515.midScanlineOffset > -1;
+            var v6723 = parentObj$$515.totalLinesPassed < 144;
+            if (!v6723) {
+              var v8947 = parentObj$$515.totalLinesPassed == 144;
+              if (v8947) {
+                v8947 = parentObj$$515.midScanlineOffset > -1;
               }
-              v6726 = v8950;
+              v6723 = v8947;
             }
-            if (v6726) {
+            if (v6723) {
               parentObj$$515.graphicsJITVBlank();
               parentObj$$515.prepareFrame();
             }
@@ -5294,11 +5294,11 @@ function v667() {
           parentObj$$514.LCDTicks = parentObj$$514.LCDTicks - 456;
           if (parentObj$$514.STATTracker != 3) {
             if (parentObj$$514.STATTracker != 2) {
-              var v6733 = parentObj$$514.STATTracker == 0;
-              if (v6733) {
-                v6733 = parentObj$$514.mode2TriggerSTAT;
+              var v6730 = parentObj$$514.STATTracker == 0;
+              if (v6730) {
+                v6730 = parentObj$$514.mode2TriggerSTAT;
               }
-              if (v6733) {
+              if (v6730) {
                 parentObj$$514.interruptsRequested = parentObj$$514.interruptsRequested | 2;
               }
               parentObj$$514.incrementScanLineQueue();
@@ -5410,11 +5410,11 @@ function v660() {
 }
 function v659(line$$2) {
   this.spriteCount = 252;
-  var v6771 = this.cGBC;
-  if (v6771) {
-    v6771 = this.gfxSpriteShow;
+  var v6768 = this.cGBC;
+  if (v6768) {
+    v6768 = this.gfxSpriteShow;
   }
-  if (v6771) {
+  if (v6768) {
     var lineAdjusted = line$$2 + 16;
     var yoffset$$3 = 0;
     var v2700;
@@ -5425,26 +5425,26 @@ function v659(line$$2) {
     }
     var yCap = v2700;
     var OAMAddress = 65024;
-    var v6773 = OAMAddress < 65184;
-    if (v6773) {
-      v6773 = this.spriteCount < 312;
+    var v6770 = OAMAddress < 65184;
+    if (v6770) {
+      v6770 = this.spriteCount < 312;
     }
-    var v2703 = v6773;
+    var v2703 = v6770;
     for (;v2703;) {
       yoffset$$3 = lineAdjusted - this.memory[OAMAddress];
-      var v6775 = yoffset$$3 > -1;
-      if (v6775) {
-        v6775 = yoffset$$3 < yCap;
+      var v6772 = yoffset$$3 > -1;
+      if (v6772) {
+        v6772 = yoffset$$3 < yCap;
       }
-      if (v6775) {
+      if (v6772) {
         this.spriteCount = this.spriteCount + 6;
       }
       OAMAddress = OAMAddress + 4;
-      var v6777 = OAMAddress < 65184;
-      if (v6777) {
-        v6777 = this.spriteCount < 312;
+      var v6774 = OAMAddress < 65184;
+      if (v6774) {
+        v6774 = this.spriteCount < 312;
       }
-      v2703 = v6777;
+      v2703 = v6774;
     }
   }
   return;
@@ -5476,17 +5476,17 @@ function v657() {
     }
     return 456 * (154 - this.actualScanLine + this.memory[65349]);
   }
-  var v8972;
-  var v10329 = this.actualScanLine == 153;
-  if (v10329) {
-    v10329 = this.memory[65348] == 0;
+  var v8969;
+  var v10326 = this.actualScanLine == 153;
+  if (v10326) {
+    v10326 = this.memory[65348] == 0;
   }
-  if (v10329) {
-    v8972 = 154;
+  if (v10326) {
+    v8969 = 154;
   } else {
-    v8972 = 153 - this.actualScanLine;
+    v8969 = 153 - this.actualScanLine;
   }
-  return 456 * v8972 + 8;
+  return 456 * v8969 + 8;
 }
 function v656() {
   if (this.modeSTAT != 0) {
@@ -5518,11 +5518,11 @@ function v656() {
 }
 function v655() {
   if (this.modeSTAT != 3) {
-    var v6797 = this.STATTracker == 0;
-    if (v6797) {
-      v6797 = this.mode2TriggerSTAT;
+    var v6794 = this.STATTracker == 0;
+    if (v6794) {
+      v6794 = this.mode2TriggerSTAT;
     }
-    if (v6797) {
+    if (v6794) {
       this.interruptsRequested = this.interruptsRequested | 2;
       this.checkIRQMatching();
     }
@@ -5732,11 +5732,11 @@ function v642() {
   return;
 }
 function v641() {
-  var v6868 = this.channel4consecutive;
-  if (!v6868) {
-    v6868 = this.channel4totalLength > 0;
+  var v6865 = this.channel4consecutive;
+  if (!v6865) {
+    v6865 = this.channel4totalLength > 0;
   }
-  var v2781 = v6868;
+  var v2781 = v6865;
   if (v2781) {
     v2781 = this.channel4canPlay;
   }
@@ -5829,11 +5829,11 @@ function v634() {
   return;
 }
 function v633() {
-  var v6878 = this.channel2consecutive;
-  if (!v6878) {
-    v6878 = this.channel2totalLength > 0;
+  var v6875 = this.channel2consecutive;
+  if (!v6875) {
+    v6875 = this.channel2totalLength > 0;
   }
-  var v2791 = v6878;
+  var v2791 = v6875;
   if (v2791) {
     v2791 = this.channel2canPlay;
   }
@@ -5888,15 +5888,15 @@ function v629() {
   return;
 }
 function v628() {
-  var v8990 = this.channel1consecutive;
-  if (!v8990) {
-    v8990 = this.channel1totalLength > 0;
+  var v8987 = this.channel1consecutive;
+  if (!v8987) {
+    v8987 = this.channel1totalLength > 0;
   }
-  var v6884 = v8990;
-  if (v6884) {
-    v6884 = !this.channel1SweepFault;
+  var v6881 = v8987;
+  if (v6881) {
+    v6881 = !this.channel1SweepFault;
   }
-  var v2797 = v6884;
+  var v2797 = v6881;
   if (v2797) {
     v2797 = this.channel1canPlay;
   }
@@ -6039,11 +6039,11 @@ function v625() {
   return;
 }
 function v624() {
-  var v6920 = !this.channel1SweepFault;
-  if (v6920) {
-    v6920 = this.channel1timeSweep > 0;
+  var v6917 = !this.channel1SweepFault;
+  if (v6917) {
+    v6917 = this.channel1timeSweep > 0;
   }
-  if (v6920) {
+  if (v6917) {
     if ((this.channel1timeSweep = this.channel1timeSweep - 1) == 0) {
       this.runAudioSweep();
     }
@@ -6127,11 +6127,11 @@ function v621() {
   return;
 }
 function v620(numSamples$$1) {
-  var v6930 = this.soundMasterEnabled;
-  if (v6930) {
-    v6930 = !this.CPUStopped;
+  var v6927 = this.soundMasterEnabled;
+  if (v6927) {
+    v6927 = !this.CPUStopped;
   }
-  if (v6930) {
+  if (v6927) {
     var v2857 = (numSamples$$1 = numSamples$$1 - 1) > -1;
     for (;v2857;) {
       this.computeAudioChannels();
@@ -6145,11 +6145,11 @@ function v620(numSamples$$1) {
   return;
 }
 function v619(numSamples) {
-  var v6934 = this.soundMasterEnabled;
-  if (v6934) {
-    v6934 = !this.CPUStopped;
+  var v6931 = this.soundMasterEnabled;
+  if (v6931) {
+    v6931 = !this.CPUStopped;
   }
-  if (v6934) {
+  if (v6931) {
     var samplesToGenerate = 0;
     var v2865 = numSamples > 0;
     for (;v2865;) {
@@ -6319,8 +6319,8 @@ function v616() {
 }
 function v615() {
   var randomFactor = 1;
-  var v10709 = JAM.call(this.getTypedArray, this, [524288, 0, "int8"], JAM.policy.p1);
-  this.LSFR15Table = v10709;
+  var v10706 = JAM.call(this.getTypedArray, this, [524288, 0, "int8"], JAM.policy.p1);
+  this.LSFR15Table = v10706;
   var LSFR = 32767;
   var LSFRShifted = 16383;
   var index$$57 = 0;
@@ -6347,8 +6347,8 @@ function v615() {
     ++index$$57;
     v2919 = index$$57 < 32768;
   }
-  var v10710 = JAM.call(this.getTypedArray, this, [2048, 0, "int8"], JAM.policy.p1);
-  this.LSFR7Table = v10710;
+  var v10707 = JAM.call(this.getTypedArray, this, [2048, 0, "int8"], JAM.policy.p1);
+  this.LSFR7Table = v10707;
   LSFR = 127;
   index$$57 = 0;
   var v2952 = index$$57 < 128;
@@ -6374,11 +6374,11 @@ function v615() {
     ++index$$57;
     v2952 = index$$57 < 128;
   }
-  var v6957 = !this.noiseSampleTable;
-  if (v6957) {
-    v6957 = this.memory.length == 65536;
+  var v6954 = !this.noiseSampleTable;
+  if (v6954) {
+    v6954 = this.memory.length == 65536;
   }
-  if (v6957) {
+  if (v6954) {
     var v2953;
     if ((this.memory[65314] & 8) == 8) {
       v2953 = this.LSFR7Table;
@@ -6393,18 +6393,18 @@ function v614() {
   this.audioIndex = 0;
   this.bufferContainAmount = JAM.call(Math.max, Math, [this.sampleSize * settings[7] / settings[13], 4096], JAM.policy.p1) << 1;
   this.numSamplesTotal = this.sampleSize - this.sampleSize % settings[13] | 0;
-  var v10711 = JAM.call(this.getTypedArray, this, [this.numSamplesTotal, 61680, "int32"], JAM.policy.p1);
-  this.currentBuffer = v10711;
-  var v10712 = JAM.call(this.getTypedArray, this, [(this.numSamplesTotal << 1) / settings[13], 0, "float32"], JAM.policy.p1);
-  this.secondaryBuffer = v10712;
+  var v10708 = JAM.call(this.getTypedArray, this, [this.numSamplesTotal, 61680, "int32"], JAM.policy.p1);
+  this.currentBuffer = v10708;
+  var v10709 = JAM.call(this.getTypedArray, this, [(this.numSamplesTotal << 1) / settings[13], 0, "float32"], JAM.policy.p1);
+  this.secondaryBuffer = v10709;
   return;
 }
 function v613() {
-  var v6964 = settings[0];
-  if (v6964) {
-    v6964 = this.audioHandle;
+  var v6961 = settings[0];
+  if (v6961) {
+    v6961 = this.audioHandle;
   }
-  if (v6964) {
+  if (v6961) {
     try {
       var v2959 = this.audioHandle;
       JAM.call(v2959.changeVolume, v2959, [settings[14]]);
@@ -6419,8 +6419,8 @@ function v612() {
   if (settings[0]) {
     try {
       var parentObj$$513 = this;
-      var v10713 = new XAudioServer(2, 4194304 / settings[13], 0, JAM.call(Math.max, Math, [this.sampleSize * settings[8] / settings[13], 8192], JAM.policy.p1) << 1, null, settings[14]);
-      this.audioHandle = v10713;
+      var v10710 = new XAudioServer(2, 4194304 / settings[13], 0, JAM.call(Math.max, Math, [this.sampleSize * settings[8] / settings[13], 8192], JAM.policy.p1) << 1, null, settings[14]);
+      this.audioHandle = v10710;
       this.initAudioBuffer();
     } catch (error$$21) {
       cout("Audio system cannot run: " + error$$21.message, 2);
@@ -6451,15 +6451,15 @@ function v611(x$$48, y$$31) {
 function v610(key$$14, down) {
   if (down) {
     this.JoyPad = this.JoyPad & (255 ^ 1 << key$$14);
-    var v6970 = !this.cGBC;
-    if (v6970) {
-      var v9029 = !this.usedBootROM;
-      if (!v9029) {
-        v9029 = !this.usedGBCBootROM;
+    var v6967 = !this.cGBC;
+    if (v6967) {
+      var v9026 = !this.usedBootROM;
+      if (!v9026) {
+        v9026 = !this.usedGBCBootROM;
       }
-      v6970 = v9029;
+      v6967 = v9026;
     }
-    if (v6970) {
+    if (v6967) {
       this.interruptsRequested = this.interruptsRequested | 16;
       this.remainingClocks = 0;
       this.checkIRQMatching();
@@ -6468,30 +6468,30 @@ function v610(key$$14, down) {
     this.JoyPad = this.JoyPad | 1 << key$$14;
   }
   var v2972 = this.memory;
-  var v6974 = this.memory[65280] & 48;
-  var v9978;
+  var v6971 = this.memory[65280] & 48;
+  var v9975;
   if ((this.memory[65280] & 32) == 0) {
-    v9978 = this.JoyPad >> 4;
+    v9975 = this.JoyPad >> 4;
   } else {
-    v9978 = 15;
+    v9975 = 15;
   }
-  var v9031 = v9978;
-  var v9979;
+  var v9028 = v9975;
+  var v9976;
   if ((this.memory[65280] & 16) == 0) {
-    v9979 = this.JoyPad & 15;
+    v9976 = this.JoyPad & 15;
   } else {
-    v9979 = 15;
+    v9976 = 15;
   }
-  v2972[65280] = v6974 + (v9031 & v9979);
+  v2972[65280] = v6971 + (v9028 & v9976);
   this.CPUStopped = false;
   return;
 }
 function v609() {
-  var v6976 = this.offscreenWidth == this.onscreenWidth;
-  if (v6976) {
-    v6976 = this.offscreenHeight == this.onscreenHeight;
+  var v6973 = this.offscreenWidth == this.onscreenWidth;
+  if (v6973) {
+    v6973 = this.offscreenHeight == this.onscreenHeight;
   }
-  if (v6976) {
+  if (v6973) {
     var v2973 = this.drawContextOnscreen;
     JAM.call(v2973.putImageData, v2973, [this.canvasBuffer, 0, 0], JAM.policy.p1);
   } else {
@@ -6510,25 +6510,25 @@ function v608() {
     this.resizer = null;
   }
   try {
-    var v10714 = new GameBoyCanvas;
-    this.canvasOffscreen = v10714;
+    var v10711 = new GameBoyCanvas;
+    this.canvasOffscreen = v10711;
     this.canvasOffscreen.width = this.offscreenWidth;
     this.canvasOffscreen.height = this.offscreenHeight;
     var v2985 = this.canvasOffscreen;
-    var v10715 = JAM.call(v2985.getContext, v2985, ["2d"]);
-    this.drawContextOffscreen = v10715;
+    var v10712 = JAM.call(v2985.getContext, v2985, ["2d"]);
+    this.drawContextOffscreen = v10712;
     var v2986 = this.canvas;
-    var v10716 = JAM.call(v2986.getContext, v2986, ["2d"]);
-    this.drawContextOnscreen = v10716;
+    var v10713 = JAM.call(v2986.getContext, v2986, ["2d"]);
+    this.drawContextOnscreen = v10713;
     try {
       var v2987 = this.drawContextOffscreen;
-      var v10717 = JAM.call(v2987.createImageData, v2987, [this.offscreenWidth, this.offscreenHeight], JAM.policy.p1);
-      this.canvasBuffer = v10717;
+      var v10714 = JAM.call(v2987.createImageData, v2987, [this.offscreenWidth, this.offscreenHeight], JAM.policy.p1);
+      this.canvasBuffer = v10714;
     } catch (error$$19) {
       cout('Falling back to the getImageData initialization (Error "' + error$$19.message + '").', 1);
       var v2991 = this.drawContextOffscreen;
-      var v10718 = JAM.call(v2991.getImageData, v2991, [0, 0, this.offscreenWidth, this.offscreenHeight], JAM.policy.p1);
-      this.canvasBuffer = v10718;
+      var v10715 = JAM.call(v2991.getImageData, v2991, [0, 0, this.offscreenWidth, this.offscreenHeight], JAM.policy.p1);
+      this.canvasBuffer = v10715;
     }
     var index$$56 = this.offscreenRGBCount;
     var v3002 = index$$56 > 0;
@@ -6542,8 +6542,8 @@ function v608() {
     this.graphicsBlit();
     this.canvas.style.visibility = "visible";
     if (this.swizzledFrame == null) {
-      var v10719 = JAM.call(this.getTypedArray, this, [69120, 255, "uint8"], JAM.policy.p1);
-      this.swizzledFrame = v10719;
+      var v10716 = JAM.call(this.getTypedArray, this, [69120, 255, "uint8"], JAM.policy.p1);
+      this.swizzledFrame = v10716;
     }
     this.drewFrame = true;
     this.requestDraw();
@@ -6556,27 +6556,27 @@ function v607() {
   initNewCanvas();
   this.onscreenWidth = this.canvas.width;
   this.onscreenHeight = this.canvas.height;
-  var v6987 = GameBoyWindow;
-  if (v6987) {
-    v6987 = GameBoyWindow.mozRequestAnimationFrame;
+  var v6984 = GameBoyWindow;
+  if (v6984) {
+    v6984 = GameBoyWindow.mozRequestAnimationFrame;
   }
-  if (v6987) {
+  if (v6984) {
     var v3008 = this.canvas;
-    var v6988;
+    var v6985;
     if (!settings[12]) {
-      v6988 = 160;
+      v6985 = 160;
     } else {
-      v6988 = this.canvas.width;
+      v6985 = this.canvas.width;
     }
-    v3008.width = this.onscreenWidth = v6988;
+    v3008.width = this.onscreenWidth = v6985;
     var v3009 = this.canvas;
-    var v6989;
+    var v6986;
     if (!settings[12]) {
-      v6989 = 144;
+      v6986 = 144;
     } else {
-      v6989 = this.canvas.height;
+      v6986 = this.canvas.height;
     }
-    v3009.height = this.onscreenHeight = v6989;
+    v3009.height = this.onscreenHeight = v6986;
   } else {
     this.onscreenWidth = this.canvas.width;
     this.onscreenHeight = this.canvas.height;
@@ -6599,23 +6599,23 @@ function v607() {
   return;
 }
 function v606() {
-  var v10344 = this.cMBC1;
-  if (!v10344) {
-    v10344 = this.cMBC2;
+  var v10341 = this.cMBC1;
+  if (!v10341) {
+    v10341 = this.cMBC2;
   }
-  var v9984 = v10344;
-  if (!v9984) {
-    v9984 = this.cMBC3;
+  var v9981 = v10341;
+  if (!v9981) {
+    v9981 = this.cMBC3;
   }
-  var v9045 = v9984;
-  if (!v9045) {
-    v9045 = this.cMBC5;
+  var v9042 = v9981;
+  if (!v9042) {
+    v9042 = this.cMBC5;
   }
-  var v6996 = v9045;
-  if (!v6996) {
-    v6996 = this.cMBC7;
+  var v6993 = v9042;
+  if (!v6993) {
+    v6993 = this.cMBC7;
   }
-  var v3016 = v6996;
+  var v3016 = v6993;
   if (!v3016) {
     v3016 = this.cRUMBLE;
   }
@@ -6625,19 +6625,19 @@ function v605() {
   if (this.cMBC2) {
     this.numRAMBanks = 1 / 16;
   } else {
-    var v9986 = this.cMBC1;
-    if (!v9986) {
-      v9986 = this.cRUMBLE;
+    var v9983 = this.cMBC1;
+    if (!v9983) {
+      v9983 = this.cRUMBLE;
     }
-    var v9047 = v9986;
-    if (!v9047) {
-      v9047 = this.cMBC3;
+    var v9044 = v9983;
+    if (!v9044) {
+      v9044 = this.cMBC3;
     }
-    var v6998 = v9047;
-    if (!v6998) {
-      v6998 = this.cHuC3;
+    var v6995 = v9044;
+    if (!v6995) {
+      v6995 = this.cHuC3;
     }
-    if (v6998) {
+    if (v6995) {
       this.numRAMBanks = 4;
     } else {
       if (this.cMBC5) {
@@ -6661,20 +6661,20 @@ function v605() {
     }
     var MBCRam = v3022;
     if (MBCRam.length > 0) {
-      var v10720 = JAM.call(this.toTypedArray, this, [MBCRam, "uint8"], JAM.policy.p1);
-      this.MBCRam = v10720;
+      var v10717 = JAM.call(this.toTypedArray, this, [MBCRam, "uint8"], JAM.policy.p1);
+      this.MBCRam = v10717;
     } else {
-      var v10721 = JAM.call(this.getTypedArray, this, [this.numRAMBanks * 8192, 0, "uint8"], JAM.policy.p1);
-      this.MBCRam = v10721;
+      var v10718 = JAM.call(this.getTypedArray, this, [this.numRAMBanks * 8192, 0, "uint8"], JAM.policy.p1);
+      this.MBCRam = v10718;
     }
   }
   cout("Actual bytes of MBC RAM allocated: " + this.numRAMBanks * 8192, 0);
   this.returnFromRTCState();
   if (this.cGBC) {
-    var v10722 = JAM.call(this.getTypedArray, this, [8192, 0, "uint8"], JAM.policy.p1);
-    this.VRAM = v10722;
-    var v10723 = JAM.call(this.getTypedArray, this, [28672, 0, "uint8"], JAM.policy.p1);
-    this.GBCMemory = v10723;
+    var v10719 = JAM.call(this.getTypedArray, this, [8192, 0, "uint8"], JAM.policy.p1);
+    this.VRAM = v10719;
+    var v10720 = JAM.call(this.getTypedArray, this, [28672, 0, "uint8"], JAM.policy.p1);
+    this.GBCMemory = v10720;
   }
   this.memoryReadJumpCompile();
   this.memoryWriteJumpCompile();
@@ -6903,11 +6903,11 @@ function v602() {
         cout("Only GB mode detected.", 0);
         break;
       case 50:
-        var v7028 = !settings[2];
-        if (v7028) {
-          v7028 = this.name + this.gameCode + this.ROM[323] == "Game and Watch 50";
+        var v7025 = !settings[2];
+        if (v7025) {
+          v7025 = this.name + this.gameCode + this.ROM[323] == "Game and Watch 50";
         }
-        if (v7028) {
+        if (v7025) {
           this.cGBC = true;
           cout("Created a boot exception for Game and Watch Gallery 2 (GBC ID byte is wrong on the cartridge).", 1);
         } else {
@@ -6967,8 +6967,8 @@ function v600() {
   if (maxLength < 16384) {
     throw new Error("ROM image size too small.");
   }
-  var v10724 = JAM.call(this.getTypedArray, this, [maxLength, 0, "uint8"], JAM.policy.p1);
-  this.ROM = v10724;
+  var v10721 = JAM.call(this.getTypedArray, this, [maxLength, 0, "uint8"], JAM.policy.p1);
+  this.ROM = v10721;
   var romIndex = 0;
   if (this.usedBootROM) {
     if (!settings[11]) {
@@ -7022,8 +7022,8 @@ function v600() {
     ++romIndex;
     v3088 = romIndex < maxLength;
   }
-  var v10725 = Math.floor(this.ROM.length / 16384);
-  this.ROMBankEdge = v10725;
+  var v10722 = Math.floor(this.ROM.length / 16384);
+  this.ROMBankEdge = v10722;
   this.interpretCartridge();
   this.checkIRQMatching();
   return;
@@ -7061,11 +7061,11 @@ function v598() {
   var index$$52 = 255;
   var v3098 = index$$52 >= 0;
   for (;v3098;) {
-    var v7048 = index$$52 >= 48;
-    if (v7048) {
-      v7048 = index$$52 < 64;
+    var v7045 = index$$52 >= 48;
+    if (v7045) {
+      v7045 = index$$52 < 64;
     }
-    if (v7048) {
+    if (v7045) {
       JAM.call(this.memoryWrite, this, [65280 | index$$52, this.ffxxDump[index$$52]], JAM.policy.p1);
     } else {
       switch(index$$52) {
@@ -7225,25 +7225,25 @@ function v597(tileAmount) {
   for (;v3110;) {
     var v3109 = tileNumber;
     tileNumber = tileNumber + 1;
-    var v10726 = JAM.call(this.getTypedArray, this, [64, 0, "uint8"], JAM.policy.p1);
-    tileArray[v3109] = v10726;
+    var v10723 = JAM.call(this.getTypedArray, this, [64, 0, "uint8"], JAM.policy.p1);
+    tileArray[v3109] = v10723;
     v3110 = tileNumber < tileAmount;
   }
   return tileArray;
 }
 function v596() {
-  var v10727 = JAM.call(this.getTypedArray, this, [65536, 0, "uint8"], JAM.policy.p1);
-  this.memory = v10727;
-  var v10728 = JAM.call(this.getTypedArray, this, [23040, 16316664, "int32"], JAM.policy.p1);
-  this.frameBuffer = v10728;
-  var v10729 = JAM.call(this.getTypedArray, this, [2048, 0, "uint8"], JAM.policy.p1);
-  this.BGCHRBank1 = v10729;
-  var v10730 = JAM.call(this.toTypedArray, this, [this.TICKTable, "uint8"], JAM.policy.p1);
-  this.TICKTable = v10730;
-  var v10731 = JAM.call(this.toTypedArray, this, [this.SecondaryTICKTable, "uint8"], JAM.policy.p1);
-  this.SecondaryTICKTable = v10731;
-  var v10732 = JAM.call(this.getTypedArray, this, [32, 0, "int8"], JAM.policy.p1);
-  this.channel3PCM = v10732;
+  var v10724 = JAM.call(this.getTypedArray, this, [65536, 0, "uint8"], JAM.policy.p1);
+  this.memory = v10724;
+  var v10725 = JAM.call(this.getTypedArray, this, [23040, 16316664, "int32"], JAM.policy.p1);
+  this.frameBuffer = v10725;
+  var v10726 = JAM.call(this.getTypedArray, this, [2048, 0, "uint8"], JAM.policy.p1);
+  this.BGCHRBank1 = v10726;
+  var v10727 = JAM.call(this.toTypedArray, this, [this.TICKTable, "uint8"], JAM.policy.p1);
+  this.TICKTable = v10727;
+  var v10728 = JAM.call(this.toTypedArray, this, [this.SecondaryTICKTable, "uint8"], JAM.policy.p1);
+  this.SecondaryTICKTable = v10728;
+  var v10729 = JAM.call(this.getTypedArray, this, [32, 0, "int8"], JAM.policy.p1);
+  this.channel3PCM = v10729;
   return;
 }
 function v595() {
@@ -7255,11 +7255,11 @@ function v595() {
   return;
 }
 function v594() {
-  var v7053 = typeof this.openRTC == "function";
-  if (v7053) {
-    v7053 = this.cTIMER;
+  var v7050 = typeof this.openRTC == "function";
+  if (v7050) {
+    v7050 = this.cTIMER;
   }
-  if (v7053) {
+  if (v7050) {
     var rtcData = JAM.call(this.openRTC, this, [this.name]);
     var index$$51 = 0;
     var v3114 = index$$51;
@@ -7305,12 +7305,12 @@ function v594() {
 function v593(returnedFrom) {
   var index$$50 = 0;
   var state$$1 = returnedFrom.slice(0);
-  var v7054 = index$$50;
+  var v7051 = index$$50;
   index$$50 = index$$50 + 1;
-  var v10733 = JAM.call(this.toTypedArray, this, [state$$1[v7054], "uint8"], JAM.policy.p1);
-  this.ROM = v10733;
-  var v10734 = Math.floor(this.ROM.length / 16384);
-  this.ROMBankEdge = v10734;
+  var v10730 = JAM.call(this.toTypedArray, this, [state$$1[v7051], "uint8"], JAM.policy.p1);
+  this.ROM = v10730;
+  var v10731 = Math.floor(this.ROM.length / 16384);
+  this.ROMBankEdge = v10731;
   var v3129 = index$$50;
   index$$50 = index$$50 + 1;
   this.inBootstrap = state$$1[v3129];
@@ -7365,25 +7365,25 @@ function v593(returnedFrom) {
   var v3146 = index$$50;
   index$$50 = index$$50 + 1;
   this.doubleSpeedShifter = state$$1[v3146];
-  var v7056 = index$$50;
+  var v7053 = index$$50;
   index$$50 = index$$50 + 1;
-  var v10735 = JAM.call(this.toTypedArray, this, [state$$1[v7056], "uint8"], JAM.policy.p1);
-  this.memory = v10735;
-  var v7057 = index$$50;
+  var v10732 = JAM.call(this.toTypedArray, this, [state$$1[v7053], "uint8"], JAM.policy.p1);
+  this.memory = v10732;
+  var v7054 = index$$50;
   index$$50 = index$$50 + 1;
-  var v10736 = JAM.call(this.toTypedArray, this, [state$$1[v7057], "uint8"], JAM.policy.p1);
-  this.MBCRam = v10736;
-  var v7058 = index$$50;
+  var v10733 = JAM.call(this.toTypedArray, this, [state$$1[v7054], "uint8"], JAM.policy.p1);
+  this.MBCRam = v10733;
+  var v7055 = index$$50;
   index$$50 = index$$50 + 1;
-  var v10737 = JAM.call(this.toTypedArray, this, [state$$1[v7058], "uint8"], JAM.policy.p1);
-  this.VRAM = v10737;
+  var v10734 = JAM.call(this.toTypedArray, this, [state$$1[v7055], "uint8"], JAM.policy.p1);
+  this.VRAM = v10734;
   var v3150 = index$$50;
   index$$50 = index$$50 + 1;
   this.currVRAMBank = state$$1[v3150];
-  var v7059 = index$$50;
+  var v7056 = index$$50;
   index$$50 = index$$50 + 1;
-  var v10738 = JAM.call(this.toTypedArray, this, [state$$1[v7059], "uint8"], JAM.policy.p1);
-  this.GBCMemory = v10738;
+  var v10735 = JAM.call(this.toTypedArray, this, [state$$1[v7056], "uint8"], JAM.policy.p1);
+  this.GBCMemory = v10735;
   var v3152 = index$$50;
   index$$50 = index$$50 + 1;
   this.MBC1Mode = state$$1[v3152];
@@ -7525,10 +7525,10 @@ function v593(returnedFrom) {
   var v3198 = index$$50;
   index$$50 = index$$50 + 1;
   this.drewBlank = state$$1[v3198];
-  var v7060 = index$$50;
+  var v7057 = index$$50;
   index$$50 = index$$50 + 1;
-  var v10739 = JAM.call(this.toTypedArray, this, [state$$1[v7060], "int32"], JAM.policy.p1);
-  this.frameBuffer = v10739;
+  var v10736 = JAM.call(this.toTypedArray, this, [state$$1[v7057], "int32"], JAM.policy.p1);
+  this.frameBuffer = v10736;
   var v3200 = index$$50;
   index$$50 = index$$50 + 1;
   this.bgEnabled = state$$1[v3200];
@@ -7625,10 +7625,10 @@ function v593(returnedFrom) {
   var v3231 = index$$50;
   index$$50 = index$$50 + 1;
   this.channel3consecutive = state$$1[v3231];
-  var v7061 = index$$50;
+  var v7058 = index$$50;
   index$$50 = index$$50 + 1;
-  var v10740 = JAM.call(this.toTypedArray, this, [state$$1[v7061], "int8"], JAM.policy.p1);
-  this.channel3PCM = v10740;
+  var v10737 = JAM.call(this.toTypedArray, this, [state$$1[v7058], "int8"], JAM.policy.p1);
+  this.channel3PCM = v10737;
   var v3233 = index$$50;
   index$$50 = index$$50 + 1;
   this.channel4FrequencyPeriod = state$$1[v3233];
@@ -7869,54 +7869,54 @@ function v593(returnedFrom) {
   var v3312 = index$$50;
   index$$50 = index$$50 + 1;
   this.windowX = state$$1[v3312];
+  var v7059 = index$$50;
+  index$$50 = index$$50 + 1;
+  var v10738 = JAM.call(this.toTypedArray, this, [state$$1[v7059], "uint8"], JAM.policy.p1);
+  this.gbcOBJRawPalette = v10738;
+  var v7060 = index$$50;
+  index$$50 = index$$50 + 1;
+  var v10739 = JAM.call(this.toTypedArray, this, [state$$1[v7060], "uint8"], JAM.policy.p1);
+  this.gbcBGRawPalette = v10739;
+  var v7061 = index$$50;
+  index$$50 = index$$50 + 1;
+  var v10740 = JAM.call(this.toTypedArray, this, [state$$1[v7061], "int32"], JAM.policy.p1);
+  this.gbOBJPalette = v10740;
   var v7062 = index$$50;
   index$$50 = index$$50 + 1;
-  var v10741 = JAM.call(this.toTypedArray, this, [state$$1[v7062], "uint8"], JAM.policy.p1);
-  this.gbcOBJRawPalette = v10741;
+  var v10741 = JAM.call(this.toTypedArray, this, [state$$1[v7062], "int32"], JAM.policy.p1);
+  this.gbBGPalette = v10741;
   var v7063 = index$$50;
   index$$50 = index$$50 + 1;
-  var v10742 = JAM.call(this.toTypedArray, this, [state$$1[v7063], "uint8"], JAM.policy.p1);
-  this.gbcBGRawPalette = v10742;
+  var v10742 = JAM.call(this.toTypedArray, this, [state$$1[v7063], "int32"], JAM.policy.p1);
+  this.gbcOBJPalette = v10742;
   var v7064 = index$$50;
   index$$50 = index$$50 + 1;
   var v10743 = JAM.call(this.toTypedArray, this, [state$$1[v7064], "int32"], JAM.policy.p1);
-  this.gbOBJPalette = v10743;
+  this.gbcBGPalette = v10743;
   var v7065 = index$$50;
   index$$50 = index$$50 + 1;
   var v10744 = JAM.call(this.toTypedArray, this, [state$$1[v7065], "int32"], JAM.policy.p1);
-  this.gbBGPalette = v10744;
+  this.gbBGColorizedPalette = v10744;
   var v7066 = index$$50;
   index$$50 = index$$50 + 1;
   var v10745 = JAM.call(this.toTypedArray, this, [state$$1[v7066], "int32"], JAM.policy.p1);
-  this.gbcOBJPalette = v10745;
+  this.gbOBJColorizedPalette = v10745;
   var v7067 = index$$50;
   index$$50 = index$$50 + 1;
   var v10746 = JAM.call(this.toTypedArray, this, [state$$1[v7067], "int32"], JAM.policy.p1);
-  this.gbcBGPalette = v10746;
+  this.cachedBGPaletteConversion = v10746;
   var v7068 = index$$50;
   index$$50 = index$$50 + 1;
   var v10747 = JAM.call(this.toTypedArray, this, [state$$1[v7068], "int32"], JAM.policy.p1);
-  this.gbBGColorizedPalette = v10747;
+  this.cachedOBJPaletteConversion = v10747;
   var v7069 = index$$50;
   index$$50 = index$$50 + 1;
-  var v10748 = JAM.call(this.toTypedArray, this, [state$$1[v7069], "int32"], JAM.policy.p1);
-  this.gbOBJColorizedPalette = v10748;
+  var v10748 = JAM.call(this.toTypedArray, this, [state$$1[v7069], "uint8"], JAM.policy.p1);
+  this.BGCHRBank1 = v10748;
   var v7070 = index$$50;
   index$$50 = index$$50 + 1;
-  var v10749 = JAM.call(this.toTypedArray, this, [state$$1[v7070], "int32"], JAM.policy.p1);
-  this.cachedBGPaletteConversion = v10749;
-  var v7071 = index$$50;
-  index$$50 = index$$50 + 1;
-  var v10750 = JAM.call(this.toTypedArray, this, [state$$1[v7071], "int32"], JAM.policy.p1);
-  this.cachedOBJPaletteConversion = v10750;
-  var v7072 = index$$50;
-  index$$50 = index$$50 + 1;
-  var v10751 = JAM.call(this.toTypedArray, this, [state$$1[v7072], "uint8"], JAM.policy.p1);
-  this.BGCHRBank1 = v10751;
-  var v7073 = index$$50;
-  index$$50 = index$$50 + 1;
-  var v10752 = JAM.call(this.toTypedArray, this, [state$$1[v7073], "uint8"], JAM.policy.p1);
-  this.BGCHRBank2 = v10752;
+  var v10749 = JAM.call(this.toTypedArray, this, [state$$1[v7070], "uint8"], JAM.policy.p1);
+  this.BGCHRBank2 = v10749;
   var v3325 = index$$50;
   index$$50 = index$$50 + 1;
   this.haltPostClocks = state$$1[v3325];
@@ -7941,10 +7941,10 @@ function v593(returnedFrom) {
   this.backgroundX = state$$1[v3331];
   this.CPUStopped = state$$1[index$$50];
   this.fromSaveState = true;
-  var v10753 = JAM.call(this.toTypedArray, this, [this.TICKTable, "uint8"], JAM.policy.p1);
-  this.TICKTable = v10753;
-  var v10754 = JAM.call(this.toTypedArray, this, [this.SecondaryTICKTable, "uint8"], JAM.policy.p1);
-  this.SecondaryTICKTable = v10754;
+  var v10750 = JAM.call(this.toTypedArray, this, [this.TICKTable, "uint8"], JAM.policy.p1);
+  this.TICKTable = v10750;
+  var v10751 = JAM.call(this.toTypedArray, this, [this.SecondaryTICKTable, "uint8"], JAM.policy.p1);
+  this.SecondaryTICKTable = v10751;
   this.initializeReferencesFromSaveState();
   this.memoryReadJumpCompile();
   this.memoryWriteJumpCompile();
@@ -7967,7 +7967,7 @@ function v593(returnedFrom) {
   return;
 }
 function v592() {
-  return[JAM.call(this.fromTypedArray, this, [this.ROM]), this.inBootstrap, this.registerA, this.FZero, this.FSubtract, this.FHalfCarry, this.FCarry, this.registerB, this.registerC, this.registerD, this.registerE, this.registersHL, this.stackPointer, this.programCounter, this.halt, this.IME, this.hdmaRunning, this.CPUTicks, this.doubleSpeedShifter, JAM.call(this.fromTypedArray, this, [this.memory]), JAM.call(this.fromTypedArray, this, [this.MBCRam]), JAM.call(this.fromTypedArray, this, [this.VRAM]), 
+  return [JAM.call(this.fromTypedArray, this, [this.ROM]), this.inBootstrap, this.registerA, this.FZero, this.FSubtract, this.FHalfCarry, this.FCarry, this.registerB, this.registerC, this.registerD, this.registerE, this.registersHL, this.stackPointer, this.programCounter, this.halt, this.IME, this.hdmaRunning, this.CPUTicks, this.doubleSpeedShifter, JAM.call(this.fromTypedArray, this, [this.memory]), JAM.call(this.fromTypedArray, this, [this.MBCRam]), JAM.call(this.fromTypedArray, this, [this.VRAM]), 
   this.currVRAMBank, JAM.call(this.fromTypedArray, this, [this.GBCMemory]), this.MBC1Mode, this.MBCRAMBanksEnabled, this.currMBCRAMBank, this.currMBCRAMBankPosition, this.cGBC, this.gbcRamBank, this.gbcRamBankPosition, this.ROMBank1offs, this.currentROMBank, this.cartridgeType, this.name, this.gameCode, this.modeSTAT, this.LYCMatchTriggerSTAT, this.mode2TriggerSTAT, this.mode1TriggerSTAT, this.mode0TriggerSTAT, this.LCDisOn, this.gfxWindowCHRBankPosition, this.gfxWindowDisplay, this.gfxSpriteShow, 
   this.gfxSpriteNormalHeight, this.gfxBackgroundCHRBankPosition, this.gfxBackgroundBankOffset, this.TIMAEnabled, this.DIVTicks, this.LCDTicks, this.timerTicks, this.TACClocker, this.serialTimer, this.serialShiftTimer, this.serialShiftTimerAllocated, this.IRQEnableDelay, this.lastIteration, this.cMBC1, this.cMBC2, this.cMBC3, this.cMBC5, this.cMBC7, this.cSRAM, this.cMMMO1, this.cRUMBLE, this.cCamera, this.cTAMA5, this.cHuC3, this.cHuC1, this.drewBlank, JAM.call(this.fromTypedArray, this, [this.frameBuffer]), 
   this.bgEnabled, this.BGPriorityEnabled, this.channel1FrequencyTracker, this.channel1FrequencyCounter, this.channel1totalLength, this.channel1envelopeVolume, this.channel1envelopeType, this.channel1envelopeSweeps, this.channel1envelopeSweepsLast, this.channel1consecutive, this.channel1frequency, this.channel1SweepFault, this.channel1ShadowFrequency, this.channel1timeSweep, this.channel1lastTimeSweep, this.channel1numSweep, this.channel1frequencySweepDivider, this.channel1decreaseSweep, this.channel2FrequencyTracker, 
@@ -7981,19 +7981,19 @@ function v592() {
 }
 function v591() {
   if (!this.cTIMER) {
-    return[];
+    return [];
   } else {
-    return[this.lastIteration, this.RTCisLatched, this.latchedSeconds, this.latchedMinutes, this.latchedHours, this.latchedLDays, this.latchedHDays, this.RTCSeconds, this.RTCMinutes, this.RTCHours, this.RTCDays, this.RTCDayOverFlow, this.RTCHALT];
+    return [this.lastIteration, this.RTCisLatched, this.latchedSeconds, this.latchedMinutes, this.latchedHours, this.latchedLDays, this.latchedHDays, this.RTCSeconds, this.RTCMinutes, this.RTCHours, this.RTCDays, this.RTCDayOverFlow, this.RTCHALT];
   }
   return;
 }
 function v590() {
-  var v7096 = !this.cBATT;
-  if (!v7096) {
-    v7096 = this.MBCRam.length == 0;
+  var v7093 = !this.cBATT;
+  if (!v7093) {
+    v7093 = this.MBCRam.length == 0;
   }
-  if (v7096) {
-    return[];
+  if (v7093) {
+    return [];
   } else {
     return JAM.call(this.fromTypedArray, this, [this.MBCRam]);
   }
@@ -8007,8 +8007,8 @@ function v588(parentObj$$511) {
   var v3557 = parentObj$$511.memoryWriter;
   var v3558 = parentObj$$511.registersHL;
   var v3559 = parentObj$$511.registersHL;
-  var v9080 = parentObj$$511.memoryReader;
-  JAM.call(v3557[v3558], v3557, [parentObj$$511, v3559, JAM.call(v9080[parentObj$$511.registersHL], v9080, [parentObj$$511, parentObj$$511.registersHL], JAM.policy.p1) | 128], JAM.policy.p1);
+  var v9077 = parentObj$$511.memoryReader;
+  JAM.call(v3557[v3558], v3557, [parentObj$$511, v3559, JAM.call(v9077[parentObj$$511.registersHL], v9077, [parentObj$$511, parentObj$$511.registersHL], JAM.policy.p1) | 128], JAM.policy.p1);
   return;
 }
 function v587(parentObj$$510) {
@@ -8043,8 +8043,8 @@ function v580(parentObj$$503) {
   var v3561 = parentObj$$503.memoryWriter;
   var v3562 = parentObj$$503.registersHL;
   var v3563 = parentObj$$503.registersHL;
-  var v9083 = parentObj$$503.memoryReader;
-  JAM.call(v3561[v3562], v3561, [parentObj$$503, v3563, JAM.call(v9083[parentObj$$503.registersHL], v9083, [parentObj$$503, parentObj$$503.registersHL], JAM.policy.p1) | 64], JAM.policy.p1);
+  var v9080 = parentObj$$503.memoryReader;
+  JAM.call(v3561[v3562], v3561, [parentObj$$503, v3563, JAM.call(v9080[parentObj$$503.registersHL], v9080, [parentObj$$503, parentObj$$503.registersHL], JAM.policy.p1) | 64], JAM.policy.p1);
   return;
 }
 function v579(parentObj$$502) {
@@ -8079,8 +8079,8 @@ function v572(parentObj$$495) {
   var v3565 = parentObj$$495.memoryWriter;
   var v3566 = parentObj$$495.registersHL;
   var v3567 = parentObj$$495.registersHL;
-  var v9086 = parentObj$$495.memoryReader;
-  JAM.call(v3565[v3566], v3565, [parentObj$$495, v3567, JAM.call(v9086[parentObj$$495.registersHL], v9086, [parentObj$$495, parentObj$$495.registersHL], JAM.policy.p1) | 32], JAM.policy.p1);
+  var v9083 = parentObj$$495.memoryReader;
+  JAM.call(v3565[v3566], v3565, [parentObj$$495, v3567, JAM.call(v9083[parentObj$$495.registersHL], v9083, [parentObj$$495, parentObj$$495.registersHL], JAM.policy.p1) | 32], JAM.policy.p1);
   return;
 }
 function v571(parentObj$$494) {
@@ -8115,8 +8115,8 @@ function v564(parentObj$$487) {
   var v3569 = parentObj$$487.memoryWriter;
   var v3570 = parentObj$$487.registersHL;
   var v3571 = parentObj$$487.registersHL;
-  var v9089 = parentObj$$487.memoryReader;
-  JAM.call(v3569[v3570], v3569, [parentObj$$487, v3571, JAM.call(v9089[parentObj$$487.registersHL], v9089, [parentObj$$487, parentObj$$487.registersHL], JAM.policy.p1) | 16], JAM.policy.p1);
+  var v9086 = parentObj$$487.memoryReader;
+  JAM.call(v3569[v3570], v3569, [parentObj$$487, v3571, JAM.call(v9086[parentObj$$487.registersHL], v9086, [parentObj$$487, parentObj$$487.registersHL], JAM.policy.p1) | 16], JAM.policy.p1);
   return;
 }
 function v563(parentObj$$486) {
@@ -8151,8 +8151,8 @@ function v556(parentObj$$479) {
   var v3573 = parentObj$$479.memoryWriter;
   var v3574 = parentObj$$479.registersHL;
   var v3575 = parentObj$$479.registersHL;
-  var v9092 = parentObj$$479.memoryReader;
-  JAM.call(v3573[v3574], v3573, [parentObj$$479, v3575, JAM.call(v9092[parentObj$$479.registersHL], v9092, [parentObj$$479, parentObj$$479.registersHL], JAM.policy.p1) | 8], JAM.policy.p1);
+  var v9089 = parentObj$$479.memoryReader;
+  JAM.call(v3573[v3574], v3573, [parentObj$$479, v3575, JAM.call(v9089[parentObj$$479.registersHL], v9089, [parentObj$$479, parentObj$$479.registersHL], JAM.policy.p1) | 8], JAM.policy.p1);
   return;
 }
 function v555(parentObj$$478) {
@@ -8187,8 +8187,8 @@ function v548(parentObj$$471) {
   var v3577 = parentObj$$471.memoryWriter;
   var v3578 = parentObj$$471.registersHL;
   var v3579 = parentObj$$471.registersHL;
-  var v9095 = parentObj$$471.memoryReader;
-  JAM.call(v3577[v3578], v3577, [parentObj$$471, v3579, JAM.call(v9095[parentObj$$471.registersHL], v9095, [parentObj$$471, parentObj$$471.registersHL], JAM.policy.p1) | 4], JAM.policy.p1);
+  var v9092 = parentObj$$471.memoryReader;
+  JAM.call(v3577[v3578], v3577, [parentObj$$471, v3579, JAM.call(v9092[parentObj$$471.registersHL], v9092, [parentObj$$471, parentObj$$471.registersHL], JAM.policy.p1) | 4], JAM.policy.p1);
   return;
 }
 function v547(parentObj$$470) {
@@ -8223,8 +8223,8 @@ function v540(parentObj$$463) {
   var v3581 = parentObj$$463.memoryWriter;
   var v3582 = parentObj$$463.registersHL;
   var v3583 = parentObj$$463.registersHL;
-  var v9098 = parentObj$$463.memoryReader;
-  JAM.call(v3581[v3582], v3581, [parentObj$$463, v3583, JAM.call(v9098[parentObj$$463.registersHL], v9098, [parentObj$$463, parentObj$$463.registersHL], JAM.policy.p1) | 2], JAM.policy.p1);
+  var v9095 = parentObj$$463.memoryReader;
+  JAM.call(v3581[v3582], v3581, [parentObj$$463, v3583, JAM.call(v9095[parentObj$$463.registersHL], v9095, [parentObj$$463, parentObj$$463.registersHL], JAM.policy.p1) | 2], JAM.policy.p1);
   return;
 }
 function v539(parentObj$$462) {
@@ -8259,8 +8259,8 @@ function v532(parentObj$$455) {
   var v3585 = parentObj$$455.memoryWriter;
   var v3586 = parentObj$$455.registersHL;
   var v3587 = parentObj$$455.registersHL;
-  var v9101 = parentObj$$455.memoryReader;
-  JAM.call(v3585[v3586], v3585, [parentObj$$455, v3587, JAM.call(v9101[parentObj$$455.registersHL], v9101, [parentObj$$455, parentObj$$455.registersHL], JAM.policy.p1) | 1], JAM.policy.p1);
+  var v9098 = parentObj$$455.memoryReader;
+  JAM.call(v3585[v3586], v3585, [parentObj$$455, v3587, JAM.call(v9098[parentObj$$455.registersHL], v9098, [parentObj$$455, parentObj$$455.registersHL], JAM.policy.p1) | 1], JAM.policy.p1);
   return;
 }
 function v531(parentObj$$454) {
@@ -8295,8 +8295,8 @@ function v524(parentObj$$447) {
   var v3589 = parentObj$$447.memoryWriter;
   var v3590 = parentObj$$447.registersHL;
   var v3591 = parentObj$$447.registersHL;
-  var v9104 = parentObj$$447.memoryReader;
-  JAM.call(v3589[v3590], v3589, [parentObj$$447, v3591, JAM.call(v9104[parentObj$$447.registersHL], v9104, [parentObj$$447, parentObj$$447.registersHL], JAM.policy.p1) & 127], JAM.policy.p1);
+  var v9101 = parentObj$$447.memoryReader;
+  JAM.call(v3589[v3590], v3589, [parentObj$$447, v3591, JAM.call(v9101[parentObj$$447.registersHL], v9101, [parentObj$$447, parentObj$$447.registersHL], JAM.policy.p1) & 127], JAM.policy.p1);
   return;
 }
 function v523(parentObj$$446) {
@@ -8331,8 +8331,8 @@ function v516(parentObj$$439) {
   var v3593 = parentObj$$439.memoryWriter;
   var v3594 = parentObj$$439.registersHL;
   var v3595 = parentObj$$439.registersHL;
-  var v9107 = parentObj$$439.memoryReader;
-  JAM.call(v3593[v3594], v3593, [parentObj$$439, v3595, JAM.call(v9107[parentObj$$439.registersHL], v9107, [parentObj$$439, parentObj$$439.registersHL], JAM.policy.p1) & 191], JAM.policy.p1);
+  var v9104 = parentObj$$439.memoryReader;
+  JAM.call(v3593[v3594], v3593, [parentObj$$439, v3595, JAM.call(v9104[parentObj$$439.registersHL], v9104, [parentObj$$439, parentObj$$439.registersHL], JAM.policy.p1) & 191], JAM.policy.p1);
   return;
 }
 function v515(parentObj$$438) {
@@ -8367,8 +8367,8 @@ function v508(parentObj$$431) {
   var v3597 = parentObj$$431.memoryWriter;
   var v3598 = parentObj$$431.registersHL;
   var v3599 = parentObj$$431.registersHL;
-  var v9110 = parentObj$$431.memoryReader;
-  JAM.call(v3597[v3598], v3597, [parentObj$$431, v3599, JAM.call(v9110[parentObj$$431.registersHL], v9110, [parentObj$$431, parentObj$$431.registersHL], JAM.policy.p1) & 223], JAM.policy.p1);
+  var v9107 = parentObj$$431.memoryReader;
+  JAM.call(v3597[v3598], v3597, [parentObj$$431, v3599, JAM.call(v9107[parentObj$$431.registersHL], v9107, [parentObj$$431, parentObj$$431.registersHL], JAM.policy.p1) & 223], JAM.policy.p1);
   return;
 }
 function v507(parentObj$$430) {
@@ -8403,8 +8403,8 @@ function v500(parentObj$$423) {
   var v3601 = parentObj$$423.memoryWriter;
   var v3602 = parentObj$$423.registersHL;
   var v3603 = parentObj$$423.registersHL;
-  var v9113 = parentObj$$423.memoryReader;
-  JAM.call(v3601[v3602], v3601, [parentObj$$423, v3603, JAM.call(v9113[parentObj$$423.registersHL], v9113, [parentObj$$423, parentObj$$423.registersHL], JAM.policy.p1) & 239], JAM.policy.p1);
+  var v9110 = parentObj$$423.memoryReader;
+  JAM.call(v3601[v3602], v3601, [parentObj$$423, v3603, JAM.call(v9110[parentObj$$423.registersHL], v9110, [parentObj$$423, parentObj$$423.registersHL], JAM.policy.p1) & 239], JAM.policy.p1);
   return;
 }
 function v499(parentObj$$422) {
@@ -8439,8 +8439,8 @@ function v492(parentObj$$415) {
   var v3605 = parentObj$$415.memoryWriter;
   var v3606 = parentObj$$415.registersHL;
   var v3607 = parentObj$$415.registersHL;
-  var v9116 = parentObj$$415.memoryReader;
-  JAM.call(v3605[v3606], v3605, [parentObj$$415, v3607, JAM.call(v9116[parentObj$$415.registersHL], v9116, [parentObj$$415, parentObj$$415.registersHL], JAM.policy.p1) & 247], JAM.policy.p1);
+  var v9113 = parentObj$$415.memoryReader;
+  JAM.call(v3605[v3606], v3605, [parentObj$$415, v3607, JAM.call(v9113[parentObj$$415.registersHL], v9113, [parentObj$$415, parentObj$$415.registersHL], JAM.policy.p1) & 247], JAM.policy.p1);
   return;
 }
 function v491(parentObj$$414) {
@@ -8475,8 +8475,8 @@ function v484(parentObj$$407) {
   var v3609 = parentObj$$407.memoryWriter;
   var v3610 = parentObj$$407.registersHL;
   var v3611 = parentObj$$407.registersHL;
-  var v9119 = parentObj$$407.memoryReader;
-  JAM.call(v3609[v3610], v3609, [parentObj$$407, v3611, JAM.call(v9119[parentObj$$407.registersHL], v9119, [parentObj$$407, parentObj$$407.registersHL], JAM.policy.p1) & 251], JAM.policy.p1);
+  var v9116 = parentObj$$407.memoryReader;
+  JAM.call(v3609[v3610], v3609, [parentObj$$407, v3611, JAM.call(v9116[parentObj$$407.registersHL], v9116, [parentObj$$407, parentObj$$407.registersHL], JAM.policy.p1) & 251], JAM.policy.p1);
   return;
 }
 function v483(parentObj$$406) {
@@ -8511,8 +8511,8 @@ function v476(parentObj$$399) {
   var v3613 = parentObj$$399.memoryWriter;
   var v3614 = parentObj$$399.registersHL;
   var v3615 = parentObj$$399.registersHL;
-  var v9122 = parentObj$$399.memoryReader;
-  JAM.call(v3613[v3614], v3613, [parentObj$$399, v3615, JAM.call(v9122[parentObj$$399.registersHL], v9122, [parentObj$$399, parentObj$$399.registersHL], JAM.policy.p1) & 253], JAM.policy.p1);
+  var v9119 = parentObj$$399.memoryReader;
+  JAM.call(v3613[v3614], v3613, [parentObj$$399, v3615, JAM.call(v9119[parentObj$$399.registersHL], v9119, [parentObj$$399, parentObj$$399.registersHL], JAM.policy.p1) & 253], JAM.policy.p1);
   return;
 }
 function v475(parentObj$$398) {
@@ -8547,8 +8547,8 @@ function v468(parentObj$$391) {
   var v3617 = parentObj$$391.memoryWriter;
   var v3618 = parentObj$$391.registersHL;
   var v3619 = parentObj$$391.registersHL;
-  var v9125 = parentObj$$391.memoryReader;
-  JAM.call(v3617[v3618], v3617, [parentObj$$391, v3619, JAM.call(v9125[parentObj$$391.registersHL], v9125, [parentObj$$391, parentObj$$391.registersHL], JAM.policy.p1) & 254], JAM.policy.p1);
+  var v9122 = parentObj$$391.memoryReader;
+  JAM.call(v3617[v3618], v3617, [parentObj$$391, v3619, JAM.call(v9122[parentObj$$391.registersHL], v9122, [parentObj$$391, parentObj$$391.registersHL], JAM.policy.p1) & 254], JAM.policy.p1);
   return;
 }
 function v467(parentObj$$390) {
@@ -8584,8 +8584,8 @@ function v461(parentObj$$384) {
 function v460(parentObj$$383) {
   parentObj$$383.FHalfCarry = true;
   parentObj$$383.FSubtract = false;
-  var v9128 = parentObj$$383.memoryReader;
-  parentObj$$383.FZero = (JAM.call(v9128[parentObj$$383.registersHL], v9128, [parentObj$$383, parentObj$$383.registersHL], JAM.policy.p1) & 128) == 0;
+  var v9125 = parentObj$$383.memoryReader;
+  parentObj$$383.FZero = (JAM.call(v9125[parentObj$$383.registersHL], v9125, [parentObj$$383, parentObj$$383.registersHL], JAM.policy.p1) & 128) == 0;
   return;
 }
 function v459(parentObj$$382) {
@@ -8633,8 +8633,8 @@ function v453(parentObj$$376) {
 function v452(parentObj$$375) {
   parentObj$$375.FHalfCarry = true;
   parentObj$$375.FSubtract = false;
-  var v9131 = parentObj$$375.memoryReader;
-  parentObj$$375.FZero = (JAM.call(v9131[parentObj$$375.registersHL], v9131, [parentObj$$375, parentObj$$375.registersHL], JAM.policy.p1) & 64) == 0;
+  var v9128 = parentObj$$375.memoryReader;
+  parentObj$$375.FZero = (JAM.call(v9128[parentObj$$375.registersHL], v9128, [parentObj$$375, parentObj$$375.registersHL], JAM.policy.p1) & 64) == 0;
   return;
 }
 function v451(parentObj$$374) {
@@ -8682,8 +8682,8 @@ function v445(parentObj$$368) {
 function v444(parentObj$$367) {
   parentObj$$367.FHalfCarry = true;
   parentObj$$367.FSubtract = false;
-  var v9134 = parentObj$$367.memoryReader;
-  parentObj$$367.FZero = (JAM.call(v9134[parentObj$$367.registersHL], v9134, [parentObj$$367, parentObj$$367.registersHL], JAM.policy.p1) & 32) == 0;
+  var v9131 = parentObj$$367.memoryReader;
+  parentObj$$367.FZero = (JAM.call(v9131[parentObj$$367.registersHL], v9131, [parentObj$$367, parentObj$$367.registersHL], JAM.policy.p1) & 32) == 0;
   return;
 }
 function v443(parentObj$$366) {
@@ -8731,8 +8731,8 @@ function v437(parentObj$$360) {
 function v436(parentObj$$359) {
   parentObj$$359.FHalfCarry = true;
   parentObj$$359.FSubtract = false;
-  var v9137 = parentObj$$359.memoryReader;
-  parentObj$$359.FZero = (JAM.call(v9137[parentObj$$359.registersHL], v9137, [parentObj$$359, parentObj$$359.registersHL], JAM.policy.p1) & 16) == 0;
+  var v9134 = parentObj$$359.memoryReader;
+  parentObj$$359.FZero = (JAM.call(v9134[parentObj$$359.registersHL], v9134, [parentObj$$359, parentObj$$359.registersHL], JAM.policy.p1) & 16) == 0;
   return;
 }
 function v435(parentObj$$358) {
@@ -8780,8 +8780,8 @@ function v429(parentObj$$352) {
 function v428(parentObj$$351) {
   parentObj$$351.FHalfCarry = true;
   parentObj$$351.FSubtract = false;
-  var v9140 = parentObj$$351.memoryReader;
-  parentObj$$351.FZero = (JAM.call(v9140[parentObj$$351.registersHL], v9140, [parentObj$$351, parentObj$$351.registersHL], JAM.policy.p1) & 8) == 0;
+  var v9137 = parentObj$$351.memoryReader;
+  parentObj$$351.FZero = (JAM.call(v9137[parentObj$$351.registersHL], v9137, [parentObj$$351, parentObj$$351.registersHL], JAM.policy.p1) & 8) == 0;
   return;
 }
 function v427(parentObj$$350) {
@@ -8829,8 +8829,8 @@ function v421(parentObj$$344) {
 function v420(parentObj$$343) {
   parentObj$$343.FHalfCarry = true;
   parentObj$$343.FSubtract = false;
-  var v9143 = parentObj$$343.memoryReader;
-  parentObj$$343.FZero = (JAM.call(v9143[parentObj$$343.registersHL], v9143, [parentObj$$343, parentObj$$343.registersHL], JAM.policy.p1) & 4) == 0;
+  var v9140 = parentObj$$343.memoryReader;
+  parentObj$$343.FZero = (JAM.call(v9140[parentObj$$343.registersHL], v9140, [parentObj$$343, parentObj$$343.registersHL], JAM.policy.p1) & 4) == 0;
   return;
 }
 function v419(parentObj$$342) {
@@ -8878,8 +8878,8 @@ function v413(parentObj$$336) {
 function v412(parentObj$$335) {
   parentObj$$335.FHalfCarry = true;
   parentObj$$335.FSubtract = false;
-  var v9146 = parentObj$$335.memoryReader;
-  parentObj$$335.FZero = (JAM.call(v9146[parentObj$$335.registersHL], v9146, [parentObj$$335, parentObj$$335.registersHL], JAM.policy.p1) & 2) == 0;
+  var v9143 = parentObj$$335.memoryReader;
+  parentObj$$335.FZero = (JAM.call(v9143[parentObj$$335.registersHL], v9143, [parentObj$$335, parentObj$$335.registersHL], JAM.policy.p1) & 2) == 0;
   return;
 }
 function v411(parentObj$$334) {
@@ -8927,8 +8927,8 @@ function v405(parentObj$$328) {
 function v404(parentObj$$327) {
   parentObj$$327.FHalfCarry = true;
   parentObj$$327.FSubtract = false;
-  var v9149 = parentObj$$327.memoryReader;
-  parentObj$$327.FZero = (JAM.call(v9149[parentObj$$327.registersHL], v9149, [parentObj$$327, parentObj$$327.registersHL], JAM.policy.p1) & 1) == 0;
+  var v9146 = parentObj$$327.memoryReader;
+  parentObj$$327.FZero = (JAM.call(v9146[parentObj$$327.registersHL], v9146, [parentObj$$327, parentObj$$327.registersHL], JAM.policy.p1) & 1) == 0;
   return;
 }
 function v403(parentObj$$326) {
@@ -9200,13 +9200,13 @@ function v366(parentObj$$289) {
 }
 function v365(parentObj$$288) {
   var newFCarry$$15 = (parentObj$$288.registerA & 1) == 1;
-  var v7358;
+  var v7355;
   if (parentObj$$288.FCarry) {
-    v7358 = 128;
+    v7355 = 128;
   } else {
-    v7358 = 0;
+    v7355 = 0;
   }
-  parentObj$$288.registerA = v7358 | parentObj$$288.registerA >> 1;
+  parentObj$$288.registerA = v7355 | parentObj$$288.registerA >> 1;
   parentObj$$288.FCarry = newFCarry$$15;
   parentObj$$288.FHalfCarry = parentObj$$288.FSubtract = false;
   parentObj$$288.FZero = parentObj$$288.registerA == 0;
@@ -9216,13 +9216,13 @@ function v364(parentObj$$287) {
   var v3811 = parentObj$$287.memoryReader;
   var temp_var$$15 = JAM.call(v3811[parentObj$$287.registersHL], v3811, [parentObj$$287, parentObj$$287.registersHL], JAM.policy.p1);
   var newFCarry$$14 = (temp_var$$15 & 1) == 1;
-  var v7360;
+  var v7357;
   if (parentObj$$287.FCarry) {
-    v7360 = 128;
+    v7357 = 128;
   } else {
-    v7360 = 0;
+    v7357 = 0;
   }
-  temp_var$$15 = v7360 | temp_var$$15 >> 1;
+  temp_var$$15 = v7357 | temp_var$$15 >> 1;
   parentObj$$287.FCarry = newFCarry$$14;
   var v3817 = parentObj$$287.memoryWriter;
   JAM.call(v3817[parentObj$$287.registersHL], v3817, [parentObj$$287, parentObj$$287.registersHL, temp_var$$15], JAM.policy.p1);
@@ -9232,14 +9232,14 @@ function v364(parentObj$$287) {
 }
 function v363(parentObj$$286) {
   var newFCarry$$13 = (parentObj$$286.registersHL & 1) == 1;
-  var v7362 = parentObj$$286.registersHL & 65280;
-  var v9171;
+  var v7359 = parentObj$$286.registersHL & 65280;
+  var v9168;
   if (parentObj$$286.FCarry) {
-    v9171 = 128;
+    v9168 = 128;
   } else {
-    v9171 = 0;
+    v9168 = 0;
   }
-  parentObj$$286.registersHL = v7362 | v9171 | (parentObj$$286.registersHL & 255) >> 1;
+  parentObj$$286.registersHL = v7359 | v9168 | (parentObj$$286.registersHL & 255) >> 1;
   parentObj$$286.FCarry = newFCarry$$13;
   parentObj$$286.FHalfCarry = parentObj$$286.FSubtract = false;
   parentObj$$286.FZero = (parentObj$$286.registersHL & 255) == 0;
@@ -9247,13 +9247,13 @@ function v363(parentObj$$286) {
 }
 function v362(parentObj$$285) {
   var newFCarry$$12 = (parentObj$$285.registersHL & 256) == 256;
-  var v9173;
+  var v9170;
   if (parentObj$$285.FCarry) {
-    v9173 = 32768;
+    v9170 = 32768;
   } else {
-    v9173 = 0;
+    v9170 = 0;
   }
-  parentObj$$285.registersHL = v9173 | parentObj$$285.registersHL >> 1 & 65280 | parentObj$$285.registersHL & 255;
+  parentObj$$285.registersHL = v9170 | parentObj$$285.registersHL >> 1 & 65280 | parentObj$$285.registersHL & 255;
   parentObj$$285.FCarry = newFCarry$$12;
   parentObj$$285.FHalfCarry = parentObj$$285.FSubtract = false;
   parentObj$$285.FZero = parentObj$$285.registersHL < 256;
@@ -9261,13 +9261,13 @@ function v362(parentObj$$285) {
 }
 function v361(parentObj$$284) {
   var newFCarry$$11 = (parentObj$$284.registerE & 1) == 1;
-  var v7371;
+  var v7368;
   if (parentObj$$284.FCarry) {
-    v7371 = 128;
+    v7368 = 128;
   } else {
-    v7371 = 0;
+    v7368 = 0;
   }
-  parentObj$$284.registerE = v7371 | parentObj$$284.registerE >> 1;
+  parentObj$$284.registerE = v7368 | parentObj$$284.registerE >> 1;
   parentObj$$284.FCarry = newFCarry$$11;
   parentObj$$284.FHalfCarry = parentObj$$284.FSubtract = false;
   parentObj$$284.FZero = parentObj$$284.registerE == 0;
@@ -9275,13 +9275,13 @@ function v361(parentObj$$284) {
 }
 function v360(parentObj$$283) {
   var newFCarry$$10 = (parentObj$$283.registerD & 1) == 1;
-  var v7374;
+  var v7371;
   if (parentObj$$283.FCarry) {
-    v7374 = 128;
+    v7371 = 128;
   } else {
-    v7374 = 0;
+    v7371 = 0;
   }
-  parentObj$$283.registerD = v7374 | parentObj$$283.registerD >> 1;
+  parentObj$$283.registerD = v7371 | parentObj$$283.registerD >> 1;
   parentObj$$283.FCarry = newFCarry$$10;
   parentObj$$283.FHalfCarry = parentObj$$283.FSubtract = false;
   parentObj$$283.FZero = parentObj$$283.registerD == 0;
@@ -9289,13 +9289,13 @@ function v360(parentObj$$283) {
 }
 function v359(parentObj$$282) {
   var newFCarry$$9 = (parentObj$$282.registerC & 1) == 1;
-  var v7377;
+  var v7374;
   if (parentObj$$282.FCarry) {
-    v7377 = 128;
+    v7374 = 128;
   } else {
-    v7377 = 0;
+    v7374 = 0;
   }
-  parentObj$$282.registerC = v7377 | parentObj$$282.registerC >> 1;
+  parentObj$$282.registerC = v7374 | parentObj$$282.registerC >> 1;
   parentObj$$282.FCarry = newFCarry$$9;
   parentObj$$282.FHalfCarry = parentObj$$282.FSubtract = false;
   parentObj$$282.FZero = parentObj$$282.registerC == 0;
@@ -9303,13 +9303,13 @@ function v359(parentObj$$282) {
 }
 function v358(parentObj$$281) {
   var newFCarry$$8 = (parentObj$$281.registerB & 1) == 1;
-  var v7380;
+  var v7377;
   if (parentObj$$281.FCarry) {
-    v7380 = 128;
+    v7377 = 128;
   } else {
-    v7380 = 0;
+    v7377 = 0;
   }
-  parentObj$$281.registerB = v7380 | parentObj$$281.registerB >> 1;
+  parentObj$$281.registerB = v7377 | parentObj$$281.registerB >> 1;
   parentObj$$281.FCarry = newFCarry$$8;
   parentObj$$281.FHalfCarry = parentObj$$281.FSubtract = false;
   parentObj$$281.FZero = parentObj$$281.registerB == 0;
@@ -9318,13 +9318,13 @@ function v358(parentObj$$281) {
 function v357(parentObj$$280) {
   var newFCarry$$7 = parentObj$$280.registerA > 127;
   var v3845 = parentObj$$280.registerA << 1 & 255;
-  var v7383;
+  var v7380;
   if (parentObj$$280.FCarry) {
-    v7383 = 1;
+    v7380 = 1;
   } else {
-    v7383 = 0;
+    v7380 = 0;
   }
-  parentObj$$280.registerA = v3845 | v7383;
+  parentObj$$280.registerA = v3845 | v7380;
   parentObj$$280.FCarry = newFCarry$$7;
   parentObj$$280.FHalfCarry = parentObj$$280.FSubtract = false;
   parentObj$$280.FZero = parentObj$$280.registerA == 0;
@@ -9335,13 +9335,13 @@ function v356(parentObj$$279) {
   var temp_var$$14 = JAM.call(v3848[parentObj$$279.registersHL], v3848, [parentObj$$279, parentObj$$279.registersHL], JAM.policy.p1);
   var newFCarry$$6 = temp_var$$14 > 127;
   var v3851 = temp_var$$14 << 1 & 255;
-  var v7385;
+  var v7382;
   if (parentObj$$279.FCarry) {
-    v7385 = 1;
+    v7382 = 1;
   } else {
-    v7385 = 0;
+    v7382 = 0;
   }
-  temp_var$$14 = v3851 | v7385;
+  temp_var$$14 = v3851 | v7382;
   parentObj$$279.FCarry = newFCarry$$6;
   var v3853 = parentObj$$279.memoryWriter;
   JAM.call(v3853[parentObj$$279.registersHL], v3853, [parentObj$$279, parentObj$$279.registersHL, temp_var$$14], JAM.policy.p1);
@@ -9352,13 +9352,13 @@ function v356(parentObj$$279) {
 function v355(parentObj$$278) {
   var newFCarry$$5 = (parentObj$$278.registersHL & 128) == 128;
   var v3857 = parentObj$$278.registersHL & 65280 | parentObj$$278.registersHL << 1 & 255;
-  var v7389;
+  var v7386;
   if (parentObj$$278.FCarry) {
-    v7389 = 1;
+    v7386 = 1;
   } else {
-    v7389 = 0;
+    v7386 = 0;
   }
-  parentObj$$278.registersHL = v3857 | v7389;
+  parentObj$$278.registersHL = v3857 | v7386;
   parentObj$$278.FCarry = newFCarry$$5;
   parentObj$$278.FHalfCarry = parentObj$$278.FSubtract = false;
   parentObj$$278.FZero = (parentObj$$278.registersHL & 255) == 0;
@@ -9366,14 +9366,14 @@ function v355(parentObj$$278) {
 }
 function v354(parentObj$$277) {
   var newFCarry$$4 = parentObj$$277.registersHL > 32767;
-  var v7391 = parentObj$$277.registersHL << 1 & 65024;
-  var v9186;
+  var v7388 = parentObj$$277.registersHL << 1 & 65024;
+  var v9183;
   if (parentObj$$277.FCarry) {
-    v9186 = 256;
+    v9183 = 256;
   } else {
-    v9186 = 0;
+    v9183 = 0;
   }
-  parentObj$$277.registersHL = v7391 | v9186 | parentObj$$277.registersHL & 255;
+  parentObj$$277.registersHL = v7388 | v9183 | parentObj$$277.registersHL & 255;
   parentObj$$277.FCarry = newFCarry$$4;
   parentObj$$277.FHalfCarry = parentObj$$277.FSubtract = false;
   parentObj$$277.FZero = parentObj$$277.registersHL < 256;
@@ -9382,13 +9382,13 @@ function v354(parentObj$$277) {
 function v353(parentObj$$276) {
   var newFCarry$$3 = parentObj$$276.registerE > 127;
   var v3865 = parentObj$$276.registerE << 1 & 255;
-  var v7395;
+  var v7392;
   if (parentObj$$276.FCarry) {
-    v7395 = 1;
+    v7392 = 1;
   } else {
-    v7395 = 0;
+    v7392 = 0;
   }
-  parentObj$$276.registerE = v3865 | v7395;
+  parentObj$$276.registerE = v3865 | v7392;
   parentObj$$276.FCarry = newFCarry$$3;
   parentObj$$276.FHalfCarry = parentObj$$276.FSubtract = false;
   parentObj$$276.FZero = parentObj$$276.registerE == 0;
@@ -9397,13 +9397,13 @@ function v353(parentObj$$276) {
 function v352(parentObj$$275) {
   var newFCarry$$2 = parentObj$$275.registerD > 127;
   var v3869 = parentObj$$275.registerD << 1 & 255;
-  var v7397;
+  var v7394;
   if (parentObj$$275.FCarry) {
-    v7397 = 1;
+    v7394 = 1;
   } else {
-    v7397 = 0;
+    v7394 = 0;
   }
-  parentObj$$275.registerD = v3869 | v7397;
+  parentObj$$275.registerD = v3869 | v7394;
   parentObj$$275.FCarry = newFCarry$$2;
   parentObj$$275.FHalfCarry = parentObj$$275.FSubtract = false;
   parentObj$$275.FZero = parentObj$$275.registerD == 0;
@@ -9412,13 +9412,13 @@ function v352(parentObj$$275) {
 function v351(parentObj$$274) {
   var newFCarry$$1 = parentObj$$274.registerC > 127;
   var v3873 = parentObj$$274.registerC << 1 & 255;
-  var v7399;
+  var v7396;
   if (parentObj$$274.FCarry) {
-    v7399 = 1;
+    v7396 = 1;
   } else {
-    v7399 = 0;
+    v7396 = 0;
   }
-  parentObj$$274.registerC = v3873 | v7399;
+  parentObj$$274.registerC = v3873 | v7396;
   parentObj$$274.FCarry = newFCarry$$1;
   parentObj$$274.FHalfCarry = parentObj$$274.FSubtract = false;
   parentObj$$274.FZero = parentObj$$274.registerC == 0;
@@ -9427,13 +9427,13 @@ function v351(parentObj$$274) {
 function v350(parentObj$$273) {
   var newFCarry = parentObj$$273.registerB > 127;
   var v3877 = parentObj$$273.registerB << 1 & 255;
-  var v7401;
+  var v7398;
   if (parentObj$$273.FCarry) {
-    v7401 = 1;
+    v7398 = 1;
   } else {
-    v7401 = 0;
+    v7398 = 0;
   }
-  parentObj$$273.registerB = v3877 | v7401;
+  parentObj$$273.registerB = v3877 | v7398;
   parentObj$$273.FCarry = newFCarry;
   parentObj$$273.FHalfCarry = parentObj$$273.FSubtract = false;
   parentObj$$273.FZero = parentObj$$273.registerB == 0;
@@ -9441,13 +9441,13 @@ function v350(parentObj$$273) {
 }
 function v349(parentObj$$272) {
   parentObj$$272.FCarry = (parentObj$$272.registerA & 1) == 1;
-  var v7403;
+  var v7400;
   if (parentObj$$272.FCarry) {
-    v7403 = 128;
+    v7400 = 128;
   } else {
-    v7403 = 0;
+    v7400 = 0;
   }
-  parentObj$$272.registerA = v7403 | parentObj$$272.registerA >> 1;
+  parentObj$$272.registerA = v7400 | parentObj$$272.registerA >> 1;
   parentObj$$272.FHalfCarry = parentObj$$272.FSubtract = false;
   parentObj$$272.FZero = parentObj$$272.registerA == 0;
   return;
@@ -9456,13 +9456,13 @@ function v348(parentObj$$271) {
   var v3884 = parentObj$$271.memoryReader;
   var temp_var$$13 = JAM.call(v3884[parentObj$$271.registersHL], v3884, [parentObj$$271, parentObj$$271.registersHL], JAM.policy.p1);
   parentObj$$271.FCarry = (temp_var$$13 & 1) == 1;
-  var v7405;
+  var v7402;
   if (parentObj$$271.FCarry) {
-    v7405 = 128;
+    v7402 = 128;
   } else {
-    v7405 = 0;
+    v7402 = 0;
   }
-  temp_var$$13 = v7405 | temp_var$$13 >> 1;
+  temp_var$$13 = v7402 | temp_var$$13 >> 1;
   var v3890 = parentObj$$271.memoryWriter;
   JAM.call(v3890[parentObj$$271.registersHL], v3890, [parentObj$$271, parentObj$$271.registersHL, temp_var$$13], JAM.policy.p1);
   parentObj$$271.FHalfCarry = parentObj$$271.FSubtract = false;
@@ -9471,79 +9471,79 @@ function v348(parentObj$$271) {
 }
 function v347(parentObj$$270) {
   parentObj$$270.FCarry = (parentObj$$270.registersHL & 1) == 1;
-  var v7407 = parentObj$$270.registersHL & 65280;
-  var v9198;
+  var v7404 = parentObj$$270.registersHL & 65280;
+  var v9195;
   if (parentObj$$270.FCarry) {
-    v9198 = 128;
+    v9195 = 128;
   } else {
-    v9198 = 0;
+    v9195 = 0;
   }
-  parentObj$$270.registersHL = v7407 | v9198 | (parentObj$$270.registersHL & 255) >> 1;
+  parentObj$$270.registersHL = v7404 | v9195 | (parentObj$$270.registersHL & 255) >> 1;
   parentObj$$270.FHalfCarry = parentObj$$270.FSubtract = false;
   parentObj$$270.FZero = (parentObj$$270.registersHL & 255) == 0;
   return;
 }
 function v346(parentObj$$269) {
   parentObj$$269.FCarry = (parentObj$$269.registersHL & 256) == 256;
-  var v9200;
+  var v9197;
   if (parentObj$$269.FCarry) {
-    v9200 = 32768;
+    v9197 = 32768;
   } else {
-    v9200 = 0;
+    v9197 = 0;
   }
-  parentObj$$269.registersHL = v9200 | parentObj$$269.registersHL >> 1 & 65280 | parentObj$$269.registersHL & 255;
+  parentObj$$269.registersHL = v9197 | parentObj$$269.registersHL >> 1 & 65280 | parentObj$$269.registersHL & 255;
   parentObj$$269.FHalfCarry = parentObj$$269.FSubtract = false;
   parentObj$$269.FZero = parentObj$$269.registersHL < 256;
   return;
 }
 function v345(parentObj$$268) {
   parentObj$$268.FCarry = (parentObj$$268.registerE & 1) == 1;
-  var v7416;
+  var v7413;
   if (parentObj$$268.FCarry) {
-    v7416 = 128;
+    v7413 = 128;
   } else {
-    v7416 = 0;
+    v7413 = 0;
   }
-  parentObj$$268.registerE = v7416 | parentObj$$268.registerE >> 1;
+  parentObj$$268.registerE = v7413 | parentObj$$268.registerE >> 1;
   parentObj$$268.FHalfCarry = parentObj$$268.FSubtract = false;
   parentObj$$268.FZero = parentObj$$268.registerE == 0;
   return;
 }
 function v344(parentObj$$267) {
   parentObj$$267.FCarry = (parentObj$$267.registerD & 1) == 1;
-  var v7419;
+  var v7416;
   if (parentObj$$267.FCarry) {
-    v7419 = 128;
+    v7416 = 128;
   } else {
-    v7419 = 0;
+    v7416 = 0;
   }
-  parentObj$$267.registerD = v7419 | parentObj$$267.registerD >> 1;
+  parentObj$$267.registerD = v7416 | parentObj$$267.registerD >> 1;
   parentObj$$267.FHalfCarry = parentObj$$267.FSubtract = false;
   parentObj$$267.FZero = parentObj$$267.registerD == 0;
   return;
 }
 function v343(parentObj$$266) {
   parentObj$$266.FCarry = (parentObj$$266.registerC & 1) == 1;
-  var v7422;
+  var v7419;
   if (parentObj$$266.FCarry) {
-    v7422 = 128;
+    v7419 = 128;
   } else {
-    v7422 = 0;
+    v7419 = 0;
   }
-  parentObj$$266.registerC = v7422 | parentObj$$266.registerC >> 1;
+  parentObj$$266.registerC = v7419 | parentObj$$266.registerC >> 1;
   parentObj$$266.FHalfCarry = parentObj$$266.FSubtract = false;
   parentObj$$266.FZero = parentObj$$266.registerC == 0;
   return;
 }
 function v342(parentObj$$265) {
   parentObj$$265.FCarry = (parentObj$$265.registerB & 1) == 1;
-  var v7425;
+  var v7422;
   if (parentObj$$265.FCarry) {
-    v7425 = 128;
+    v7422 = 128;
   } else {
-    v7425 = 0;
+    v7422 = 0;
   }
-  parentObj$$265.registerB = v7425 | parentObj$$265.registerB >> 1;
+  parentObj$$265.registerB = v7422 | parentObj$$265.registerB >> 1;
   parentObj$$265.FHalfCarry = parentObj$$265.FSubtract = false;
   parentObj$$265.FZero = parentObj$$265.registerB == 0;
   return;
@@ -9551,13 +9551,13 @@ function v342(parentObj$$265) {
 function v341(parentObj$$264) {
   parentObj$$264.FCarry = parentObj$$264.registerA > 127;
   var v3918 = parentObj$$264.registerA << 1 & 255;
-  var v7428;
+  var v7425;
   if (parentObj$$264.FCarry) {
-    v7428 = 1;
+    v7425 = 1;
   } else {
-    v7428 = 0;
+    v7425 = 0;
   }
-  parentObj$$264.registerA = v3918 | v7428;
+  parentObj$$264.registerA = v3918 | v7425;
   parentObj$$264.FHalfCarry = parentObj$$264.FSubtract = false;
   parentObj$$264.FZero = parentObj$$264.registerA == 0;
   return;
@@ -9567,13 +9567,13 @@ function v340(parentObj$$263) {
   var temp_var$$12 = JAM.call(v3921[parentObj$$263.registersHL], v3921, [parentObj$$263, parentObj$$263.registersHL], JAM.policy.p1);
   parentObj$$263.FCarry = temp_var$$12 > 127;
   var v3924 = temp_var$$12 << 1 & 255;
-  var v7430;
+  var v7427;
   if (parentObj$$263.FCarry) {
-    v7430 = 1;
+    v7427 = 1;
   } else {
-    v7430 = 0;
+    v7427 = 0;
   }
-  temp_var$$12 = v3924 | v7430;
+  temp_var$$12 = v3924 | v7427;
   var v3926 = parentObj$$263.memoryWriter;
   JAM.call(v3926[parentObj$$263.registersHL], v3926, [parentObj$$263, parentObj$$263.registersHL, temp_var$$12], JAM.policy.p1);
   parentObj$$263.FHalfCarry = parentObj$$263.FSubtract = false;
@@ -9583,27 +9583,27 @@ function v340(parentObj$$263) {
 function v339(parentObj$$262) {
   parentObj$$262.FCarry = (parentObj$$262.registersHL & 128) == 128;
   var v3930 = parentObj$$262.registersHL & 65280 | parentObj$$262.registersHL << 1 & 255;
-  var v7434;
+  var v7431;
   if (parentObj$$262.FCarry) {
-    v7434 = 1;
+    v7431 = 1;
   } else {
-    v7434 = 0;
+    v7431 = 0;
   }
-  parentObj$$262.registersHL = v3930 | v7434;
+  parentObj$$262.registersHL = v3930 | v7431;
   parentObj$$262.FHalfCarry = parentObj$$262.FSubtract = false;
   parentObj$$262.FZero = (parentObj$$262.registersHL & 255) == 0;
   return;
 }
 function v338(parentObj$$261) {
   parentObj$$261.FCarry = parentObj$$261.registersHL > 32767;
-  var v7436 = parentObj$$261.registersHL << 1 & 65024;
-  var v9213;
+  var v7433 = parentObj$$261.registersHL << 1 & 65024;
+  var v9210;
   if (parentObj$$261.FCarry) {
-    v9213 = 256;
+    v9210 = 256;
   } else {
-    v9213 = 0;
+    v9210 = 0;
   }
-  parentObj$$261.registersHL = v7436 | v9213 | parentObj$$261.registersHL & 255;
+  parentObj$$261.registersHL = v7433 | v9210 | parentObj$$261.registersHL & 255;
   parentObj$$261.FHalfCarry = parentObj$$261.FSubtract = false;
   parentObj$$261.FZero = parentObj$$261.registersHL < 256;
   return;
@@ -9611,13 +9611,13 @@ function v338(parentObj$$261) {
 function v337(parentObj$$260) {
   parentObj$$260.FCarry = parentObj$$260.registerE > 127;
   var v3938 = parentObj$$260.registerE << 1 & 255;
-  var v7440;
+  var v7437;
   if (parentObj$$260.FCarry) {
-    v7440 = 1;
+    v7437 = 1;
   } else {
-    v7440 = 0;
+    v7437 = 0;
   }
-  parentObj$$260.registerE = v3938 | v7440;
+  parentObj$$260.registerE = v3938 | v7437;
   parentObj$$260.FHalfCarry = parentObj$$260.FSubtract = false;
   parentObj$$260.FZero = parentObj$$260.registerE == 0;
   return;
@@ -9625,13 +9625,13 @@ function v337(parentObj$$260) {
 function v336(parentObj$$259) {
   parentObj$$259.FCarry = parentObj$$259.registerD > 127;
   var v3942 = parentObj$$259.registerD << 1 & 255;
-  var v7442;
+  var v7439;
   if (parentObj$$259.FCarry) {
-    v7442 = 1;
+    v7439 = 1;
   } else {
-    v7442 = 0;
+    v7439 = 0;
   }
-  parentObj$$259.registerD = v3942 | v7442;
+  parentObj$$259.registerD = v3942 | v7439;
   parentObj$$259.FHalfCarry = parentObj$$259.FSubtract = false;
   parentObj$$259.FZero = parentObj$$259.registerD == 0;
   return;
@@ -9639,13 +9639,13 @@ function v336(parentObj$$259) {
 function v335(parentObj$$258) {
   parentObj$$258.FCarry = parentObj$$258.registerC > 127;
   var v3946 = parentObj$$258.registerC << 1 & 255;
-  var v7444;
+  var v7441;
   if (parentObj$$258.FCarry) {
-    v7444 = 1;
+    v7441 = 1;
   } else {
-    v7444 = 0;
+    v7441 = 0;
   }
-  parentObj$$258.registerC = v3946 | v7444;
+  parentObj$$258.registerC = v3946 | v7441;
   parentObj$$258.FHalfCarry = parentObj$$258.FSubtract = false;
   parentObj$$258.FZero = parentObj$$258.registerC == 0;
   return;
@@ -9653,13 +9653,13 @@ function v335(parentObj$$258) {
 function v334(parentObj$$257) {
   parentObj$$257.FCarry = parentObj$$257.registerB > 127;
   var v3950 = parentObj$$257.registerB << 1 & 255;
-  var v7446;
+  var v7443;
   if (parentObj$$257.FCarry) {
-    v7446 = 1;
+    v7443 = 1;
   } else {
-    v7446 = 0;
+    v7443 = 0;
   }
-  parentObj$$257.registerB = v3950 | v7446;
+  parentObj$$257.registerB = v3950 | v7443;
   parentObj$$257.FHalfCarry = parentObj$$257.FSubtract = false;
   parentObj$$257.FZero = parentObj$$257.registerB == 0;
   return;
@@ -9676,8 +9676,8 @@ function v333(parentObj$$256) {
 }
 function v332(parentObj$$255) {
   var v3963 = parentObj$$255.registerA;
-  var v7451 = parentObj$$255.memoryReader;
-  var dirtySum$$43 = v3963 - JAM.call(v7451[parentObj$$255.programCounter], v7451, [parentObj$$255, parentObj$$255.programCounter], JAM.policy.p1);
+  var v7448 = parentObj$$255.memoryReader;
+  var dirtySum$$43 = v3963 - JAM.call(v7448[parentObj$$255.programCounter], v7448, [parentObj$$255, parentObj$$255.programCounter], JAM.policy.p1);
   parentObj$$255.programCounter = parentObj$$255.programCounter + 1 & 65535;
   parentObj$$255.FHalfCarry = (dirtySum$$43 & 15) > (parentObj$$255.registerA & 15);
   parentObj$$255.FCarry = dirtySum$$43 < 0;
@@ -9697,12 +9697,12 @@ function v330(parentObj$$253) {
 }
 function v329(parentObj$$252) {
   var v3968;
-  var v9222 = parentObj$$252.IRQEnableDelay == 2;
-  if (!v9222) {
-    var v10352 = parentObj$$252.memoryReader;
-    v9222 = JAM.call(v10352[parentObj$$252.programCounter], v10352, [parentObj$$252, parentObj$$252.programCounter], JAM.policy.p1) == 118;
+  var v9219 = parentObj$$252.IRQEnableDelay == 2;
+  if (!v9219) {
+    var v10349 = parentObj$$252.memoryReader;
+    v9219 = JAM.call(v10349[parentObj$$252.programCounter], v10349, [parentObj$$252, parentObj$$252.programCounter], JAM.policy.p1) == 118;
   }
-  if (v9222) {
+  if (v9219) {
     v3968 = 1;
   } else {
     v3968 = 2;
@@ -9711,10 +9711,10 @@ function v329(parentObj$$252) {
   return;
 }
 function v328(parentObj$$251) {
-  var v7457 = JAM.call(parentObj$$251.memoryRead, parentObj$$251, [parentObj$$251.programCounter + 1 & 65535]) << 8;
-  var v9224 = parentObj$$251.memoryReader;
-  var v10755 = JAM.call(parentObj$$251.memoryRead, parentObj$$251, [v7457 | JAM.call(v9224[parentObj$$251.programCounter], v9224, [parentObj$$251, parentObj$$251.programCounter], JAM.policy.p1)]);
-  parentObj$$251.registerA = v10755;
+  var v7454 = JAM.call(parentObj$$251.memoryRead, parentObj$$251, [parentObj$$251.programCounter + 1 & 65535]) << 8;
+  var v9221 = parentObj$$251.memoryReader;
+  var v10752 = JAM.call(parentObj$$251.memoryRead, parentObj$$251, [v7454 | JAM.call(v9221[parentObj$$251.programCounter], v9221, [parentObj$$251, parentObj$$251.programCounter], JAM.policy.p1)]);
+  parentObj$$251.registerA = v10752;
   parentObj$$251.programCounter = parentObj$$251.programCounter + 2 & 65535;
   return;
 }
@@ -9723,8 +9723,8 @@ function v327(parentObj$$250) {
   return;
 }
 function v326(parentObj$$249) {
-  var v9227 = parentObj$$249.memoryReader;
-  var temp_var$$11 = JAM.call(v9227[parentObj$$249.programCounter], v9227, [parentObj$$249, parentObj$$249.programCounter], JAM.policy.p1) << 24 >> 24;
+  var v9224 = parentObj$$249.memoryReader;
+  var temp_var$$11 = JAM.call(v9224[parentObj$$249.programCounter], v9224, [parentObj$$249, parentObj$$249.programCounter], JAM.policy.p1) << 24 >> 24;
   parentObj$$249.programCounter = parentObj$$249.programCounter + 1 & 65535;
   parentObj$$249.registersHL = parentObj$$249.stackPointer + temp_var$$11 & 65535;
   temp_var$$11 = parentObj$$249.stackPointer ^ temp_var$$11 ^ parentObj$$249.registersHL;
@@ -9744,9 +9744,9 @@ function v325(parentObj$$248) {
   return;
 }
 function v324(parentObj$$247) {
-  var v7468 = parentObj$$247.registerA;
-  var v9230 = parentObj$$247.memoryReader;
-  parentObj$$247.registerA = v7468 | JAM.call(v9230[parentObj$$247.programCounter], v9230, [parentObj$$247, parentObj$$247.programCounter], JAM.policy.p1);
+  var v7465 = parentObj$$247.registerA;
+  var v9227 = parentObj$$247.memoryReader;
+  parentObj$$247.registerA = v7465 | JAM.call(v9227[parentObj$$247.programCounter], v9227, [parentObj$$247, parentObj$$247.programCounter], JAM.policy.p1);
   parentObj$$247.FZero = parentObj$$247.registerA == 0;
   parentObj$$247.programCounter = parentObj$$247.programCounter + 1 & 65535;
   parentObj$$247.FSubtract = parentObj$$247.FCarry = parentObj$$247.FHalfCarry = false;
@@ -9760,34 +9760,34 @@ function v323(parentObj$$246) {
   var v3996 = parentObj$$246.memoryWriter;
   var v3997 = parentObj$$246.stackPointer;
   var v3998 = parentObj$$246.stackPointer;
-  var v10356;
+  var v10353;
   if (parentObj$$246.FZero) {
-    v10356 = 128;
+    v10353 = 128;
   } else {
-    v10356 = 0;
+    v10353 = 0;
   }
-  var v10019 = v10356;
-  var v10357;
+  var v10016 = v10353;
+  var v10354;
   if (parentObj$$246.FSubtract) {
-    v10357 = 64;
+    v10354 = 64;
   } else {
-    v10357 = 0;
+    v10354 = 0;
   }
-  var v9233 = v10019 | v10357;
-  var v10021;
+  var v9230 = v10016 | v10354;
+  var v10018;
   if (parentObj$$246.FHalfCarry) {
-    v10021 = 32;
+    v10018 = 32;
   } else {
-    v10021 = 0;
+    v10018 = 0;
   }
-  var v7473 = v9233 | v10021;
-  var v9235;
+  var v7470 = v9230 | v10018;
+  var v9232;
   if (parentObj$$246.FCarry) {
-    v9235 = 16;
+    v9232 = 16;
   } else {
-    v9235 = 0;
+    v9232 = 0;
   }
-  JAM.call(v3996[v3997], v3996, [parentObj$$246, v3998, v7473 | v9235], JAM.policy.p1);
+  JAM.call(v3996[v3997], v3996, [parentObj$$246, v3998, v7470 | v9232], JAM.policy.p1);
   return;
 }
 function v322(parentObj$$245) {
@@ -9802,8 +9802,8 @@ function v321(parentObj$$244) {
 }
 function v320(parentObj$$243) {
   var v4000 = parentObj$$243.memoryHighReader;
-  var v10756 = JAM.call(v4000[parentObj$$243.registerC], v4000, [parentObj$$243, parentObj$$243.registerC], JAM.policy.p1);
-  parentObj$$243.registerA = v10756;
+  var v10753 = JAM.call(v4000[parentObj$$243.registerC], v4000, [parentObj$$243, parentObj$$243.registerC], JAM.policy.p1);
+  parentObj$$243.registerA = v10753;
   return;
 }
 function v319(parentObj$$242) {
@@ -9813,15 +9813,15 @@ function v319(parentObj$$242) {
   parentObj$$242.FSubtract = (temp_var$$10 & 64) == 64;
   parentObj$$242.FHalfCarry = (temp_var$$10 & 32) == 32;
   parentObj$$242.FCarry = (temp_var$$10 & 16) == 16;
-  var v10757 = JAM.call(parentObj$$242.memoryRead, parentObj$$242, [parentObj$$242.stackPointer + 1 & 65535]);
-  parentObj$$242.registerA = v10757;
+  var v10754 = JAM.call(parentObj$$242.memoryRead, parentObj$$242, [parentObj$$242.stackPointer + 1 & 65535]);
+  parentObj$$242.registerA = v10754;
   parentObj$$242.stackPointer = parentObj$$242.stackPointer + 2 & 65535;
   return;
 }
 function v318(parentObj$$241) {
-  var v7477 = parentObj$$241.memoryReader;
-  var v10758 = JAM.call(parentObj$$241.memoryHighRead, parentObj$$241, [JAM.call(v7477[parentObj$$241.programCounter], v7477, [parentObj$$241, parentObj$$241.programCounter], JAM.policy.p1)]);
-  parentObj$$241.registerA = v10758;
+  var v7474 = parentObj$$241.memoryReader;
+  var v10755 = JAM.call(parentObj$$241.memoryHighRead, parentObj$$241, [JAM.call(v7474[parentObj$$241.programCounter], v7474, [parentObj$$241, parentObj$$241.programCounter], JAM.policy.p1)]);
+  parentObj$$241.registerA = v10755;
   parentObj$$241.programCounter = parentObj$$241.programCounter + 1 & 65535;
   return;
 }
@@ -9836,9 +9836,9 @@ function v317(parentObj$$240) {
   return;
 }
 function v316(parentObj$$239) {
-  var v7485 = parentObj$$239.registerA;
-  var v9237 = parentObj$$239.memoryReader;
-  parentObj$$239.registerA = v7485 ^ JAM.call(v9237[parentObj$$239.programCounter], v9237, [parentObj$$239, parentObj$$239.programCounter], JAM.policy.p1);
+  var v7482 = parentObj$$239.registerA;
+  var v9234 = parentObj$$239.memoryReader;
+  parentObj$$239.registerA = v7482 ^ JAM.call(v9234[parentObj$$239.programCounter], v9234, [parentObj$$239, parentObj$$239.programCounter], JAM.policy.p1);
   parentObj$$239.programCounter = parentObj$$239.programCounter + 1 & 65535;
   parentObj$$239.FZero = parentObj$$239.registerA == 0;
   parentObj$$239.FSubtract = parentObj$$239.FHalfCarry = parentObj$$239.FCarry = false;
@@ -9860,9 +9860,9 @@ function v313(parentObj$$236) {
   return;
 }
 function v312(parentObj$$235) {
-  var v7488 = JAM.call(parentObj$$235.memoryRead, parentObj$$235, [parentObj$$235.programCounter + 1 & 65535]) << 8;
-  var v9241 = parentObj$$235.memoryReader;
-  JAM.call(parentObj$$235.memoryWrite, parentObj$$235, [v7488 | JAM.call(v9241[parentObj$$235.programCounter], v9241, [parentObj$$235, parentObj$$235.programCounter], JAM.policy.p1), parentObj$$235.registerA], JAM.policy.p1);
+  var v7485 = JAM.call(parentObj$$235.memoryRead, parentObj$$235, [parentObj$$235.programCounter + 1 & 65535]) << 8;
+  var v9238 = parentObj$$235.memoryReader;
+  JAM.call(parentObj$$235.memoryWrite, parentObj$$235, [v7485 | JAM.call(v9238[parentObj$$235.programCounter], v9238, [parentObj$$235, parentObj$$235.programCounter], JAM.policy.p1), parentObj$$235.registerA], JAM.policy.p1);
   parentObj$$235.programCounter = parentObj$$235.programCounter + 2 & 65535;
   return;
 }
@@ -9871,8 +9871,8 @@ function v311(parentObj$$234) {
   return;
 }
 function v310(parentObj$$233) {
-  var v9244 = parentObj$$233.memoryReader;
-  var temp_value2 = JAM.call(v9244[parentObj$$233.programCounter], v9244, [parentObj$$233, parentObj$$233.programCounter], JAM.policy.p1) << 24 >> 24;
+  var v9241 = parentObj$$233.memoryReader;
+  var temp_value2 = JAM.call(v9241[parentObj$$233.programCounter], v9241, [parentObj$$233, parentObj$$233.programCounter], JAM.policy.p1) << 24 >> 24;
   parentObj$$233.programCounter = parentObj$$233.programCounter + 1 & 65535;
   var temp_value = parentObj$$233.stackPointer + temp_value2 & 65535;
   temp_value2 = parentObj$$233.stackPointer ^ temp_value2 ^ temp_value;
@@ -9893,9 +9893,9 @@ function v309(parentObj$$232) {
   return;
 }
 function v308(parentObj$$231) {
-  var v7499 = parentObj$$231.registerA;
-  var v9247 = parentObj$$231.memoryReader;
-  parentObj$$231.registerA = v7499 & JAM.call(v9247[parentObj$$231.programCounter], v9247, [parentObj$$231, parentObj$$231.programCounter], JAM.policy.p1);
+  var v7496 = parentObj$$231.registerA;
+  var v9244 = parentObj$$231.memoryReader;
+  parentObj$$231.registerA = v7496 & JAM.call(v9244[parentObj$$231.programCounter], v9244, [parentObj$$231, parentObj$$231.programCounter], JAM.policy.p1);
   parentObj$$231.programCounter = parentObj$$231.programCounter + 1 & 65535;
   parentObj$$231.FZero = parentObj$$231.registerA == 0;
   parentObj$$231.FHalfCarry = true;
@@ -9928,14 +9928,14 @@ function v304(parentObj$$227) {
 }
 function v303(parentObj$$226) {
   var v4060 = JAM.call(parentObj$$226.memoryRead, parentObj$$226, [parentObj$$226.stackPointer + 1 & 65535]) << 8;
-  var v7507 = parentObj$$226.memoryReader;
-  parentObj$$226.registersHL = v4060 | JAM.call(v7507[parentObj$$226.stackPointer], v7507, [parentObj$$226, parentObj$$226.stackPointer], JAM.policy.p1);
+  var v7504 = parentObj$$226.memoryReader;
+  parentObj$$226.registersHL = v4060 | JAM.call(v7504[parentObj$$226.stackPointer], v7504, [parentObj$$226, parentObj$$226.stackPointer], JAM.policy.p1);
   parentObj$$226.stackPointer = parentObj$$226.stackPointer + 2 & 65535;
   return;
 }
 function v302(parentObj$$225) {
-  var v7511 = parentObj$$225.memoryReader;
-  JAM.call(parentObj$$225.memoryHighWrite, parentObj$$225, [JAM.call(v7511[parentObj$$225.programCounter], v7511, [parentObj$$225, parentObj$$225.programCounter], JAM.policy.p1), parentObj$$225.registerA], JAM.policy.p1);
+  var v7508 = parentObj$$225.memoryReader;
+  JAM.call(parentObj$$225.memoryHighWrite, parentObj$$225, [JAM.call(v7508[parentObj$$225.programCounter], v7508, [parentObj$$225, parentObj$$225.programCounter], JAM.policy.p1), parentObj$$225.registerA], JAM.policy.p1);
   parentObj$$225.programCounter = parentObj$$225.programCounter + 1 & 65535;
   return;
 }
@@ -9954,21 +9954,21 @@ function v300(parentObj$$223) {
   var temp_var$$9 = JAM.call(v4076[parentObj$$223.programCounter], v4076, [parentObj$$223, parentObj$$223.programCounter], JAM.policy.p1);
   parentObj$$223.programCounter = parentObj$$223.programCounter + 1 & 65535;
   var v4080 = parentObj$$223.registerA - temp_var$$9;
-  var v7521;
+  var v7518;
   if (parentObj$$223.FCarry) {
-    v7521 = 1;
+    v7518 = 1;
   } else {
-    v7521 = 0;
+    v7518 = 0;
   }
-  var dirtySum$$42 = v4080 - v7521;
-  var v7522 = (parentObj$$223.registerA & 15) - (temp_var$$9 & 15);
-  var v9254;
+  var dirtySum$$42 = v4080 - v7518;
+  var v7519 = (parentObj$$223.registerA & 15) - (temp_var$$9 & 15);
+  var v9251;
   if (parentObj$$223.FCarry) {
-    v9254 = 1;
+    v9251 = 1;
   } else {
-    v9254 = 0;
+    v9251 = 0;
   }
-  parentObj$$223.FHalfCarry = v7522 - v9254 < 0;
+  parentObj$$223.FHalfCarry = v7519 - v9251 < 0;
   parentObj$$223.FCarry = dirtySum$$42 < 0;
   parentObj$$223.registerA = dirtySum$$42 & 255;
   parentObj$$223.FZero = parentObj$$223.registerA == 0;
@@ -9983,8 +9983,8 @@ function v299(parentObj$$222) {
 function v298(parentObj$$221) {
   if (parentObj$$221.FCarry) {
     var v4084 = JAM.call(parentObj$$221.memoryRead, parentObj$$221, [parentObj$$221.programCounter + 1 & 65535]) << 8;
-    var v7525 = parentObj$$221.memoryReader;
-    var temp_pc$$4 = v4084 | JAM.call(v7525[parentObj$$221.programCounter], v7525, [parentObj$$221, parentObj$$221.programCounter], JAM.policy.p1);
+    var v7522 = parentObj$$221.memoryReader;
+    var temp_pc$$4 = v4084 | JAM.call(v7522[parentObj$$221.programCounter], v7522, [parentObj$$221, parentObj$$221.programCounter], JAM.policy.p1);
     parentObj$$221.programCounter = parentObj$$221.programCounter + 2 & 65535;
     parentObj$$221.stackPointer = parentObj$$221.stackPointer - 1 & 65535;
     var v4088 = parentObj$$221.memoryWriter;
@@ -10007,8 +10007,8 @@ function v297(parentObj$$220) {
 function v296(parentObj$$219) {
   if (parentObj$$219.FCarry) {
     var v4099 = JAM.call(parentObj$$219.memoryRead, parentObj$$219, [parentObj$$219.programCounter + 1 & 65535]) << 8;
-    var v7536 = parentObj$$219.memoryReader;
-    parentObj$$219.programCounter = v4099 | JAM.call(v7536[parentObj$$219.programCounter], v7536, [parentObj$$219, parentObj$$219.programCounter], JAM.policy.p1);
+    var v7533 = parentObj$$219.memoryReader;
+    parentObj$$219.programCounter = v4099 | JAM.call(v7533[parentObj$$219.programCounter], v7533, [parentObj$$219, parentObj$$219.programCounter], JAM.policy.p1);
     parentObj$$219.CPUTicks = parentObj$$219.CPUTicks + 4;
   } else {
     parentObj$$219.programCounter = parentObj$$219.programCounter + 2 & 65535;
@@ -10017,16 +10017,16 @@ function v296(parentObj$$219) {
 }
 function v295(parentObj$$218) {
   var v4103 = JAM.call(parentObj$$218.memoryRead, parentObj$$218, [parentObj$$218.stackPointer + 1 & 65535]) << 8;
-  var v7542 = parentObj$$218.memoryReader;
-  parentObj$$218.programCounter = v4103 | JAM.call(v7542[parentObj$$218.stackPointer], v7542, [parentObj$$218, parentObj$$218.stackPointer], JAM.policy.p1);
+  var v7539 = parentObj$$218.memoryReader;
+  parentObj$$218.programCounter = v4103 | JAM.call(v7539[parentObj$$218.stackPointer], v7539, [parentObj$$218, parentObj$$218.stackPointer], JAM.policy.p1);
   parentObj$$218.stackPointer = parentObj$$218.stackPointer + 2 & 65535;
   var v4106;
-  var v9258 = parentObj$$218.IRQEnableDelay == 2;
-  if (!v9258) {
-    var v10364 = parentObj$$218.memoryReader;
-    v9258 = JAM.call(v10364[parentObj$$218.programCounter], v10364, [parentObj$$218, parentObj$$218.programCounter], JAM.policy.p1) == 118;
+  var v9255 = parentObj$$218.IRQEnableDelay == 2;
+  if (!v9255) {
+    var v10361 = parentObj$$218.memoryReader;
+    v9255 = JAM.call(v10361[parentObj$$218.programCounter], v10361, [parentObj$$218, parentObj$$218.programCounter], JAM.policy.p1) == 118;
   }
-  if (v9258) {
+  if (v9255) {
     v4106 = 1;
   } else {
     v4106 = 2;
@@ -10037,8 +10037,8 @@ function v295(parentObj$$218) {
 function v294(parentObj$$217) {
   if (parentObj$$217.FCarry) {
     var v4107 = JAM.call(parentObj$$217.memoryRead, parentObj$$217, [parentObj$$217.stackPointer + 1 & 65535]) << 8;
-    var v7548 = parentObj$$217.memoryReader;
-    parentObj$$217.programCounter = v4107 | JAM.call(v7548[parentObj$$217.stackPointer], v7548, [parentObj$$217, parentObj$$217.stackPointer], JAM.policy.p1);
+    var v7545 = parentObj$$217.memoryReader;
+    parentObj$$217.programCounter = v4107 | JAM.call(v7545[parentObj$$217.stackPointer], v7545, [parentObj$$217, parentObj$$217.stackPointer], JAM.policy.p1);
     parentObj$$217.stackPointer = parentObj$$217.stackPointer + 2 & 65535;
     parentObj$$217.CPUTicks = parentObj$$217.CPUTicks + 12;
   }
@@ -10056,8 +10056,8 @@ function v293(parentObj$$216) {
 }
 function v292(parentObj$$215) {
   var v4121 = parentObj$$215.registerA;
-  var v7557 = parentObj$$215.memoryReader;
-  var dirtySum$$41 = v4121 - JAM.call(v7557[parentObj$$215.programCounter], v7557, [parentObj$$215, parentObj$$215.programCounter], JAM.policy.p1);
+  var v7554 = parentObj$$215.memoryReader;
+  var dirtySum$$41 = v4121 - JAM.call(v7554[parentObj$$215.programCounter], v7554, [parentObj$$215, parentObj$$215.programCounter], JAM.policy.p1);
   parentObj$$215.programCounter = parentObj$$215.programCounter + 1 & 65535;
   parentObj$$215.FHalfCarry = (parentObj$$215.registerA & 15) < (dirtySum$$41 & 15);
   parentObj$$215.FCarry = dirtySum$$41 < 0;
@@ -10078,8 +10078,8 @@ function v291(parentObj$$214) {
 function v290(parentObj$$213) {
   if (!parentObj$$213.FCarry) {
     var v4136 = JAM.call(parentObj$$213.memoryRead, parentObj$$213, [parentObj$$213.programCounter + 1 & 65535]) << 8;
-    var v7566 = parentObj$$213.memoryReader;
-    var temp_pc$$3 = v4136 | JAM.call(v7566[parentObj$$213.programCounter], v7566, [parentObj$$213, parentObj$$213.programCounter], JAM.policy.p1);
+    var v7563 = parentObj$$213.memoryReader;
+    var temp_pc$$3 = v4136 | JAM.call(v7563[parentObj$$213.programCounter], v7563, [parentObj$$213, parentObj$$213.programCounter], JAM.policy.p1);
     parentObj$$213.programCounter = parentObj$$213.programCounter + 2 & 65535;
     parentObj$$213.stackPointer = parentObj$$213.stackPointer - 1 & 65535;
     var v4140 = parentObj$$213.memoryWriter;
@@ -10102,8 +10102,8 @@ function v289(parentObj$$212) {
 function v288(parentObj$$211) {
   if (!parentObj$$211.FCarry) {
     var v4151 = JAM.call(parentObj$$211.memoryRead, parentObj$$211, [parentObj$$211.programCounter + 1 & 65535]) << 8;
-    var v7578 = parentObj$$211.memoryReader;
-    parentObj$$211.programCounter = v4151 | JAM.call(v7578[parentObj$$211.programCounter], v7578, [parentObj$$211, parentObj$$211.programCounter], JAM.policy.p1);
+    var v7575 = parentObj$$211.memoryReader;
+    parentObj$$211.programCounter = v4151 | JAM.call(v7575[parentObj$$211.programCounter], v7575, [parentObj$$211, parentObj$$211.programCounter], JAM.policy.p1);
     parentObj$$211.CPUTicks = parentObj$$211.CPUTicks + 4;
   } else {
     parentObj$$211.programCounter = parentObj$$211.programCounter + 2 & 65535;
@@ -10112,18 +10112,18 @@ function v288(parentObj$$211) {
 }
 function v287(parentObj$$210) {
   var v4155 = parentObj$$210.memoryReader;
-  var v10759 = JAM.call(v4155[parentObj$$210.stackPointer], v4155, [parentObj$$210, parentObj$$210.stackPointer], JAM.policy.p1);
-  parentObj$$210.registerE = v10759;
-  var v10760 = JAM.call(parentObj$$210.memoryRead, parentObj$$210, [parentObj$$210.stackPointer + 1 & 65535]);
-  parentObj$$210.registerD = v10760;
+  var v10756 = JAM.call(v4155[parentObj$$210.stackPointer], v4155, [parentObj$$210, parentObj$$210.stackPointer], JAM.policy.p1);
+  parentObj$$210.registerE = v10756;
+  var v10757 = JAM.call(parentObj$$210.memoryRead, parentObj$$210, [parentObj$$210.stackPointer + 1 & 65535]);
+  parentObj$$210.registerD = v10757;
   parentObj$$210.stackPointer = parentObj$$210.stackPointer + 2 & 65535;
   return;
 }
 function v286(parentObj$$209) {
   if (!parentObj$$209.FCarry) {
     var v4160 = JAM.call(parentObj$$209.memoryRead, parentObj$$209, [parentObj$$209.stackPointer + 1 & 65535]) << 8;
-    var v7587 = parentObj$$209.memoryReader;
-    parentObj$$209.programCounter = v4160 | JAM.call(v7587[parentObj$$209.stackPointer], v7587, [parentObj$$209, parentObj$$209.stackPointer], JAM.policy.p1);
+    var v7584 = parentObj$$209.memoryReader;
+    parentObj$$209.programCounter = v4160 | JAM.call(v7584[parentObj$$209.stackPointer], v7584, [parentObj$$209, parentObj$$209.stackPointer], JAM.policy.p1);
     parentObj$$209.stackPointer = parentObj$$209.stackPointer + 2 & 65535;
     parentObj$$209.CPUTicks = parentObj$$209.CPUTicks + 12;
   }
@@ -10144,21 +10144,21 @@ function v284(parentObj$$207) {
   var tempValue$$3 = JAM.call(v4174[parentObj$$207.programCounter], v4174, [parentObj$$207, parentObj$$207.programCounter], JAM.policy.p1);
   parentObj$$207.programCounter = parentObj$$207.programCounter + 1 & 65535;
   var v4178 = parentObj$$207.registerA + tempValue$$3;
-  var v7598;
+  var v7595;
   if (parentObj$$207.FCarry) {
-    v7598 = 1;
+    v7595 = 1;
   } else {
-    v7598 = 0;
+    v7595 = 0;
   }
-  var dirtySum$$40 = v4178 + v7598;
-  var v7599 = (parentObj$$207.registerA & 15) + (tempValue$$3 & 15);
-  var v9267;
+  var dirtySum$$40 = v4178 + v7595;
+  var v7596 = (parentObj$$207.registerA & 15) + (tempValue$$3 & 15);
+  var v9264;
   if (parentObj$$207.FCarry) {
-    v9267 = 1;
+    v9264 = 1;
   } else {
-    v9267 = 0;
+    v9264 = 0;
   }
-  parentObj$$207.FHalfCarry = v7599 + v9267 > 15;
+  parentObj$$207.FHalfCarry = v7596 + v9264 > 15;
   parentObj$$207.FCarry = dirtySum$$40 > 255;
   parentObj$$207.registerA = dirtySum$$40 & 255;
   parentObj$$207.FZero = parentObj$$207.registerA == 0;
@@ -10167,8 +10167,8 @@ function v284(parentObj$$207) {
 }
 function v283(parentObj$$206) {
   var v4182 = JAM.call(parentObj$$206.memoryRead, parentObj$$206, [parentObj$$206.programCounter + 1 & 65535]) << 8;
-  var v7602 = parentObj$$206.memoryReader;
-  var temp_pc$$2 = v4182 | JAM.call(v7602[parentObj$$206.programCounter], v7602, [parentObj$$206, parentObj$$206.programCounter], JAM.policy.p1);
+  var v7599 = parentObj$$206.memoryReader;
+  var temp_pc$$2 = v4182 | JAM.call(v7599[parentObj$$206.programCounter], v7599, [parentObj$$206, parentObj$$206.programCounter], JAM.policy.p1);
   parentObj$$206.programCounter = parentObj$$206.programCounter + 2 & 65535;
   parentObj$$206.stackPointer = parentObj$$206.stackPointer - 1 & 65535;
   var v4186 = parentObj$$206.memoryWriter;
@@ -10182,8 +10182,8 @@ function v283(parentObj$$206) {
 function v282(parentObj$$205) {
   if (parentObj$$205.FZero) {
     var v4195 = JAM.call(parentObj$$205.memoryRead, parentObj$$205, [parentObj$$205.programCounter + 1 & 65535]) << 8;
-    var v7611 = parentObj$$205.memoryReader;
-    var temp_pc$$1 = v4195 | JAM.call(v7611[parentObj$$205.programCounter], v7611, [parentObj$$205, parentObj$$205.programCounter], JAM.policy.p1);
+    var v7608 = parentObj$$205.memoryReader;
+    var temp_pc$$1 = v4195 | JAM.call(v7608[parentObj$$205.programCounter], v7608, [parentObj$$205, parentObj$$205.programCounter], JAM.policy.p1);
     parentObj$$205.programCounter = parentObj$$205.programCounter + 2 & 65535;
     parentObj$$205.stackPointer = parentObj$$205.stackPointer - 1 & 65535;
     var v4199 = parentObj$$205.memoryWriter;
@@ -10210,8 +10210,8 @@ function v281(parentObj$$204) {
 function v280(parentObj$$203) {
   if (parentObj$$203.FZero) {
     var v4215 = JAM.call(parentObj$$203.memoryRead, parentObj$$203, [parentObj$$203.programCounter + 1 & 65535]) << 8;
-    var v7625 = parentObj$$203.memoryReader;
-    parentObj$$203.programCounter = v4215 | JAM.call(v7625[parentObj$$203.programCounter], v7625, [parentObj$$203, parentObj$$203.programCounter], JAM.policy.p1);
+    var v7622 = parentObj$$203.memoryReader;
+    parentObj$$203.programCounter = v4215 | JAM.call(v7622[parentObj$$203.programCounter], v7622, [parentObj$$203, parentObj$$203.programCounter], JAM.policy.p1);
     parentObj$$203.CPUTicks = parentObj$$203.CPUTicks + 4;
   } else {
     parentObj$$203.programCounter = parentObj$$203.programCounter + 2 & 65535;
@@ -10220,16 +10220,16 @@ function v280(parentObj$$203) {
 }
 function v279(parentObj$$202) {
   var v4219 = JAM.call(parentObj$$202.memoryRead, parentObj$$202, [parentObj$$202.stackPointer + 1 & 65535]) << 8;
-  var v7631 = parentObj$$202.memoryReader;
-  parentObj$$202.programCounter = v4219 | JAM.call(v7631[parentObj$$202.stackPointer], v7631, [parentObj$$202, parentObj$$202.stackPointer], JAM.policy.p1);
+  var v7628 = parentObj$$202.memoryReader;
+  parentObj$$202.programCounter = v4219 | JAM.call(v7628[parentObj$$202.stackPointer], v7628, [parentObj$$202, parentObj$$202.stackPointer], JAM.policy.p1);
   parentObj$$202.stackPointer = parentObj$$202.stackPointer + 2 & 65535;
   return;
 }
 function v278(parentObj$$201) {
   if (parentObj$$201.FZero) {
     var v4222 = JAM.call(parentObj$$201.memoryRead, parentObj$$201, [parentObj$$201.stackPointer + 1 & 65535]) << 8;
-    var v7636 = parentObj$$201.memoryReader;
-    parentObj$$201.programCounter = v4222 | JAM.call(v7636[parentObj$$201.stackPointer], v7636, [parentObj$$201, parentObj$$201.stackPointer], JAM.policy.p1);
+    var v7633 = parentObj$$201.memoryReader;
+    parentObj$$201.programCounter = v4222 | JAM.call(v7633[parentObj$$201.stackPointer], v7633, [parentObj$$201, parentObj$$201.stackPointer], JAM.policy.p1);
     parentObj$$201.stackPointer = parentObj$$201.stackPointer + 2 & 65535;
     parentObj$$201.CPUTicks = parentObj$$201.CPUTicks + 12;
   }
@@ -10247,8 +10247,8 @@ function v277(parentObj$$200) {
 }
 function v276(parentObj$$199) {
   var v4236 = parentObj$$199.registerA;
-  var v7645 = parentObj$$199.memoryReader;
-  var dirtySum$$39 = v4236 + JAM.call(v7645[parentObj$$199.programCounter], v7645, [parentObj$$199, parentObj$$199.programCounter], JAM.policy.p1);
+  var v7642 = parentObj$$199.memoryReader;
+  var dirtySum$$39 = v4236 + JAM.call(v7642[parentObj$$199.programCounter], v7642, [parentObj$$199, parentObj$$199.programCounter], JAM.policy.p1);
   parentObj$$199.programCounter = parentObj$$199.programCounter + 1 & 65535;
   parentObj$$199.FHalfCarry = (dirtySum$$39 & 15) < (parentObj$$199.registerA & 15);
   parentObj$$199.FCarry = dirtySum$$39 > 255;
@@ -10269,8 +10269,8 @@ function v275(parentObj$$198) {
 function v274(parentObj$$197) {
   if (!parentObj$$197.FZero) {
     var v4252 = JAM.call(parentObj$$197.memoryRead, parentObj$$197, [parentObj$$197.programCounter + 1 & 65535]) << 8;
-    var v7654 = parentObj$$197.memoryReader;
-    var temp_pc = v4252 | JAM.call(v7654[parentObj$$197.programCounter], v7654, [parentObj$$197, parentObj$$197.programCounter], JAM.policy.p1);
+    var v7651 = parentObj$$197.memoryReader;
+    var temp_pc = v4252 | JAM.call(v7651[parentObj$$197.programCounter], v7651, [parentObj$$197, parentObj$$197.programCounter], JAM.policy.p1);
     parentObj$$197.programCounter = parentObj$$197.programCounter + 2 & 65535;
     parentObj$$197.stackPointer = parentObj$$197.stackPointer - 1 & 65535;
     var v4256 = parentObj$$197.memoryWriter;
@@ -10287,15 +10287,15 @@ function v274(parentObj$$197) {
 }
 function v273(parentObj$$196) {
   var v4267 = JAM.call(parentObj$$196.memoryRead, parentObj$$196, [parentObj$$196.programCounter + 1 & 65535]) << 8;
-  var v7665 = parentObj$$196.memoryReader;
-  parentObj$$196.programCounter = v4267 | JAM.call(v7665[parentObj$$196.programCounter], v7665, [parentObj$$196, parentObj$$196.programCounter], JAM.policy.p1);
+  var v7662 = parentObj$$196.memoryReader;
+  parentObj$$196.programCounter = v4267 | JAM.call(v7662[parentObj$$196.programCounter], v7662, [parentObj$$196, parentObj$$196.programCounter], JAM.policy.p1);
   return;
 }
 function v272(parentObj$$195) {
   if (!parentObj$$195.FZero) {
     var v4269 = JAM.call(parentObj$$195.memoryRead, parentObj$$195, [parentObj$$195.programCounter + 1 & 65535]) << 8;
-    var v7670 = parentObj$$195.memoryReader;
-    parentObj$$195.programCounter = v4269 | JAM.call(v7670[parentObj$$195.programCounter], v7670, [parentObj$$195, parentObj$$195.programCounter], JAM.policy.p1);
+    var v7667 = parentObj$$195.memoryReader;
+    parentObj$$195.programCounter = v4269 | JAM.call(v7667[parentObj$$195.programCounter], v7667, [parentObj$$195, parentObj$$195.programCounter], JAM.policy.p1);
     parentObj$$195.CPUTicks = parentObj$$195.CPUTicks + 4;
   } else {
     parentObj$$195.programCounter = parentObj$$195.programCounter + 2 & 65535;
@@ -10304,18 +10304,18 @@ function v272(parentObj$$195) {
 }
 function v271(parentObj$$194) {
   var v4273 = parentObj$$194.memoryReader;
-  var v10761 = JAM.call(v4273[parentObj$$194.stackPointer], v4273, [parentObj$$194, parentObj$$194.stackPointer], JAM.policy.p1);
-  parentObj$$194.registerC = v10761;
-  var v10762 = JAM.call(parentObj$$194.memoryRead, parentObj$$194, [parentObj$$194.stackPointer + 1 & 65535]);
-  parentObj$$194.registerB = v10762;
+  var v10758 = JAM.call(v4273[parentObj$$194.stackPointer], v4273, [parentObj$$194, parentObj$$194.stackPointer], JAM.policy.p1);
+  parentObj$$194.registerC = v10758;
+  var v10759 = JAM.call(parentObj$$194.memoryRead, parentObj$$194, [parentObj$$194.stackPointer + 1 & 65535]);
+  parentObj$$194.registerB = v10759;
   parentObj$$194.stackPointer = parentObj$$194.stackPointer + 2 & 65535;
   return;
 }
 function v270(parentObj$$193) {
   if (!parentObj$$193.FZero) {
     var v4278 = JAM.call(parentObj$$193.memoryRead, parentObj$$193, [parentObj$$193.stackPointer + 1 & 65535]) << 8;
-    var v7679 = parentObj$$193.memoryReader;
-    parentObj$$193.programCounter = v4278 | JAM.call(v7679[parentObj$$193.stackPointer], v7679, [parentObj$$193, parentObj$$193.stackPointer], JAM.policy.p1);
+    var v7676 = parentObj$$193.memoryReader;
+    parentObj$$193.programCounter = v4278 | JAM.call(v7676[parentObj$$193.stackPointer], v7676, [parentObj$$193, parentObj$$193.stackPointer], JAM.policy.p1);
     parentObj$$193.stackPointer = parentObj$$193.stackPointer + 2 & 65535;
     parentObj$$193.CPUTicks = parentObj$$193.CPUTicks + 12;
   }
@@ -10328,8 +10328,8 @@ function v269(parentObj$$192) {
 }
 function v268(parentObj$$191) {
   var v4282 = parentObj$$191.registerA;
-  var v7684 = parentObj$$191.memoryReader;
-  var dirtySum$$38 = v4282 - JAM.call(v7684[parentObj$$191.registersHL], v7684, [parentObj$$191, parentObj$$191.registersHL], JAM.policy.p1);
+  var v7681 = parentObj$$191.memoryReader;
+  var dirtySum$$38 = v4282 - JAM.call(v7681[parentObj$$191.registersHL], v7681, [parentObj$$191, parentObj$$191.registersHL], JAM.policy.p1);
   parentObj$$191.FHalfCarry = (dirtySum$$38 & 15) > (parentObj$$191.registerA & 15);
   parentObj$$191.FCarry = dirtySum$$38 < 0;
   parentObj$$191.FZero = dirtySum$$38 == 0;
@@ -10390,9 +10390,9 @@ function v261(parentObj$$184) {
   return;
 }
 function v260(parentObj$$183) {
-  var v7696 = parentObj$$183.registerA;
-  var v9279 = parentObj$$183.memoryReader;
-  parentObj$$183.registerA = v7696 | JAM.call(v9279[parentObj$$183.registersHL], v9279, [parentObj$$183, parentObj$$183.registersHL], JAM.policy.p1);
+  var v7693 = parentObj$$183.registerA;
+  var v9276 = parentObj$$183.memoryReader;
+  parentObj$$183.registerA = v7693 | JAM.call(v9276[parentObj$$183.registersHL], v9276, [parentObj$$183, parentObj$$183.registersHL], JAM.policy.p1);
   parentObj$$183.FZero = parentObj$$183.registerA == 0;
   parentObj$$183.FSubtract = parentObj$$183.FCarry = parentObj$$183.FHalfCarry = false;
   return;
@@ -10440,9 +10440,9 @@ function v253(parentObj$$176) {
   return;
 }
 function v252(parentObj$$175) {
-  var v7710 = parentObj$$175.registerA;
-  var v9284 = parentObj$$175.memoryReader;
-  parentObj$$175.registerA = v7710 ^ JAM.call(v9284[parentObj$$175.registersHL], v9284, [parentObj$$175, parentObj$$175.registersHL], JAM.policy.p1);
+  var v7707 = parentObj$$175.registerA;
+  var v9281 = parentObj$$175.memoryReader;
+  parentObj$$175.registerA = v7707 ^ JAM.call(v9281[parentObj$$175.registersHL], v9281, [parentObj$$175, parentObj$$175.registersHL], JAM.policy.p1);
   parentObj$$175.FZero = parentObj$$175.registerA == 0;
   parentObj$$175.FSubtract = parentObj$$175.FHalfCarry = parentObj$$175.FCarry = false;
   return;
@@ -10490,9 +10490,9 @@ function v245(parentObj$$168) {
   return;
 }
 function v244(parentObj$$167) {
-  var v7724 = parentObj$$167.registerA;
-  var v9289 = parentObj$$167.memoryReader;
-  parentObj$$167.registerA = v7724 & JAM.call(v9289[parentObj$$167.registersHL], v9289, [parentObj$$167, parentObj$$167.registersHL], JAM.policy.p1);
+  var v7721 = parentObj$$167.registerA;
+  var v9286 = parentObj$$167.memoryReader;
+  parentObj$$167.registerA = v7721 & JAM.call(v9286[parentObj$$167.registersHL], v9286, [parentObj$$167, parentObj$$167.registersHL], JAM.policy.p1);
   parentObj$$167.FZero = parentObj$$167.registerA == 0;
   parentObj$$167.FHalfCarry = true;
   parentObj$$167.FSubtract = parentObj$$167.FCarry = false;
@@ -10556,21 +10556,21 @@ function v236(parentObj$$159) {
   var v4334 = parentObj$$159.memoryReader;
   var temp_var$$8 = JAM.call(v4334[parentObj$$159.registersHL], v4334, [parentObj$$159, parentObj$$159.registersHL], JAM.policy.p1);
   var v4337 = parentObj$$159.registerA - temp_var$$8;
-  var v7739;
+  var v7736;
   if (parentObj$$159.FCarry) {
-    v7739 = 1;
+    v7736 = 1;
   } else {
-    v7739 = 0;
+    v7736 = 0;
   }
-  var dirtySum$$31 = v4337 - v7739;
-  var v7740 = (parentObj$$159.registerA & 15) - (temp_var$$8 & 15);
-  var v9296;
+  var dirtySum$$31 = v4337 - v7736;
+  var v7737 = (parentObj$$159.registerA & 15) - (temp_var$$8 & 15);
+  var v9293;
   if (parentObj$$159.FCarry) {
-    v9296 = 1;
+    v9293 = 1;
   } else {
-    v9296 = 0;
+    v9293 = 0;
   }
-  parentObj$$159.FHalfCarry = v7740 - v9296 < 0;
+  parentObj$$159.FHalfCarry = v7737 - v9293 < 0;
   parentObj$$159.FCarry = dirtySum$$31 < 0;
   parentObj$$159.registerA = dirtySum$$31 & 255;
   parentObj$$159.FZero = parentObj$$159.registerA == 0;
@@ -10579,21 +10579,21 @@ function v236(parentObj$$159) {
 }
 function v235(parentObj$$158) {
   var v4341 = parentObj$$158.registerA - (parentObj$$158.registersHL & 255);
-  var v7744;
+  var v7741;
   if (parentObj$$158.FCarry) {
-    v7744 = 1;
+    v7741 = 1;
   } else {
-    v7744 = 0;
+    v7741 = 0;
   }
-  var dirtySum$$30 = v4341 - v7744;
-  var v7745 = (parentObj$$158.registerA & 15) - (parentObj$$158.registersHL & 15);
-  var v9301;
+  var dirtySum$$30 = v4341 - v7741;
+  var v7742 = (parentObj$$158.registerA & 15) - (parentObj$$158.registersHL & 15);
+  var v9298;
   if (parentObj$$158.FCarry) {
-    v9301 = 1;
+    v9298 = 1;
   } else {
-    v9301 = 0;
+    v9298 = 0;
   }
-  parentObj$$158.FHalfCarry = v7745 - v9301 < 0;
+  parentObj$$158.FHalfCarry = v7742 - v9298 < 0;
   parentObj$$158.FCarry = dirtySum$$30 < 0;
   parentObj$$158.registerA = dirtySum$$30 & 255;
   parentObj$$158.FZero = parentObj$$158.registerA == 0;
@@ -10603,21 +10603,21 @@ function v235(parentObj$$158) {
 function v234(parentObj$$157) {
   var temp_var$$7 = parentObj$$157.registersHL >> 8;
   var v4346 = parentObj$$157.registerA - temp_var$$7;
-  var v7748;
+  var v7745;
   if (parentObj$$157.FCarry) {
-    v7748 = 1;
+    v7745 = 1;
   } else {
-    v7748 = 0;
+    v7745 = 0;
   }
-  var dirtySum$$29 = v4346 - v7748;
-  var v7749 = (parentObj$$157.registerA & 15) - (temp_var$$7 & 15);
-  var v9305;
+  var dirtySum$$29 = v4346 - v7745;
+  var v7746 = (parentObj$$157.registerA & 15) - (temp_var$$7 & 15);
+  var v9302;
   if (parentObj$$157.FCarry) {
-    v9305 = 1;
+    v9302 = 1;
   } else {
-    v9305 = 0;
+    v9302 = 0;
   }
-  parentObj$$157.FHalfCarry = v7749 - v9305 < 0;
+  parentObj$$157.FHalfCarry = v7746 - v9302 < 0;
   parentObj$$157.FCarry = dirtySum$$29 < 0;
   parentObj$$157.registerA = dirtySum$$29 & 255;
   parentObj$$157.FZero = parentObj$$157.registerA == 0;
@@ -10626,21 +10626,21 @@ function v234(parentObj$$157) {
 }
 function v233(parentObj$$156) {
   var v4350 = parentObj$$156.registerA - parentObj$$156.registerE;
-  var v7753;
+  var v7750;
   if (parentObj$$156.FCarry) {
-    v7753 = 1;
+    v7750 = 1;
   } else {
-    v7753 = 0;
+    v7750 = 0;
   }
-  var dirtySum$$28 = v4350 - v7753;
-  var v7754 = (parentObj$$156.registerA & 15) - (parentObj$$156.registerE & 15);
-  var v9309;
+  var dirtySum$$28 = v4350 - v7750;
+  var v7751 = (parentObj$$156.registerA & 15) - (parentObj$$156.registerE & 15);
+  var v9306;
   if (parentObj$$156.FCarry) {
-    v9309 = 1;
+    v9306 = 1;
   } else {
-    v9309 = 0;
+    v9306 = 0;
   }
-  parentObj$$156.FHalfCarry = v7754 - v9309 < 0;
+  parentObj$$156.FHalfCarry = v7751 - v9306 < 0;
   parentObj$$156.FCarry = dirtySum$$28 < 0;
   parentObj$$156.registerA = dirtySum$$28 & 255;
   parentObj$$156.FZero = parentObj$$156.registerA == 0;
@@ -10649,21 +10649,21 @@ function v233(parentObj$$156) {
 }
 function v232(parentObj$$155) {
   var v4354 = parentObj$$155.registerA - parentObj$$155.registerD;
-  var v7758;
+  var v7755;
   if (parentObj$$155.FCarry) {
-    v7758 = 1;
+    v7755 = 1;
   } else {
-    v7758 = 0;
+    v7755 = 0;
   }
-  var dirtySum$$27 = v4354 - v7758;
-  var v7759 = (parentObj$$155.registerA & 15) - (parentObj$$155.registerD & 15);
-  var v9313;
+  var dirtySum$$27 = v4354 - v7755;
+  var v7756 = (parentObj$$155.registerA & 15) - (parentObj$$155.registerD & 15);
+  var v9310;
   if (parentObj$$155.FCarry) {
-    v9313 = 1;
+    v9310 = 1;
   } else {
-    v9313 = 0;
+    v9310 = 0;
   }
-  parentObj$$155.FHalfCarry = v7759 - v9313 < 0;
+  parentObj$$155.FHalfCarry = v7756 - v9310 < 0;
   parentObj$$155.FCarry = dirtySum$$27 < 0;
   parentObj$$155.registerA = dirtySum$$27 & 255;
   parentObj$$155.FZero = parentObj$$155.registerA == 0;
@@ -10672,21 +10672,21 @@ function v232(parentObj$$155) {
 }
 function v231(parentObj$$154) {
   var v4358 = parentObj$$154.registerA - parentObj$$154.registerC;
-  var v7763;
+  var v7760;
   if (parentObj$$154.FCarry) {
-    v7763 = 1;
+    v7760 = 1;
   } else {
-    v7763 = 0;
+    v7760 = 0;
   }
-  var dirtySum$$26 = v4358 - v7763;
-  var v7764 = (parentObj$$154.registerA & 15) - (parentObj$$154.registerC & 15);
-  var v9317;
+  var dirtySum$$26 = v4358 - v7760;
+  var v7761 = (parentObj$$154.registerA & 15) - (parentObj$$154.registerC & 15);
+  var v9314;
   if (parentObj$$154.FCarry) {
-    v9317 = 1;
+    v9314 = 1;
   } else {
-    v9317 = 0;
+    v9314 = 0;
   }
-  parentObj$$154.FHalfCarry = v7764 - v9317 < 0;
+  parentObj$$154.FHalfCarry = v7761 - v9314 < 0;
   parentObj$$154.FCarry = dirtySum$$26 < 0;
   parentObj$$154.registerA = dirtySum$$26 & 255;
   parentObj$$154.FZero = parentObj$$154.registerA == 0;
@@ -10695,21 +10695,21 @@ function v231(parentObj$$154) {
 }
 function v230(parentObj$$153) {
   var v4362 = parentObj$$153.registerA - parentObj$$153.registerB;
-  var v7768;
+  var v7765;
   if (parentObj$$153.FCarry) {
-    v7768 = 1;
+    v7765 = 1;
   } else {
-    v7768 = 0;
+    v7765 = 0;
   }
-  var dirtySum$$25 = v4362 - v7768;
-  var v7769 = (parentObj$$153.registerA & 15) - (parentObj$$153.registerB & 15);
-  var v9321;
+  var dirtySum$$25 = v4362 - v7765;
+  var v7766 = (parentObj$$153.registerA & 15) - (parentObj$$153.registerB & 15);
+  var v9318;
   if (parentObj$$153.FCarry) {
-    v9321 = 1;
+    v9318 = 1;
   } else {
-    v9321 = 0;
+    v9318 = 0;
   }
-  parentObj$$153.FHalfCarry = v7769 - v9321 < 0;
+  parentObj$$153.FHalfCarry = v7766 - v9318 < 0;
   parentObj$$153.FCarry = dirtySum$$25 < 0;
   parentObj$$153.registerA = dirtySum$$25 & 255;
   parentObj$$153.FZero = parentObj$$153.registerA == 0;
@@ -10724,8 +10724,8 @@ function v229(parentObj$$152) {
 }
 function v228(parentObj$$151) {
   var v4366 = parentObj$$151.registerA;
-  var v7771 = parentObj$$151.memoryReader;
-  var dirtySum$$24 = v4366 - JAM.call(v7771[parentObj$$151.registersHL], v7771, [parentObj$$151, parentObj$$151.registersHL], JAM.policy.p1);
+  var v7768 = parentObj$$151.memoryReader;
+  var dirtySum$$24 = v4366 - JAM.call(v7768[parentObj$$151.registersHL], v7768, [parentObj$$151, parentObj$$151.registersHL], JAM.policy.p1);
   parentObj$$151.FHalfCarry = (parentObj$$151.registerA & 15) < (dirtySum$$24 & 15);
   parentObj$$151.FCarry = dirtySum$$24 < 0;
   parentObj$$151.registerA = dirtySum$$24 & 255;
@@ -10789,21 +10789,21 @@ function v222(parentObj$$145) {
 }
 function v221(parentObj$$144) {
   var v4394 = parentObj$$144.registerA << 1;
-  var v7784;
+  var v7781;
   if (parentObj$$144.FCarry) {
-    v7784 = 1;
+    v7781 = 1;
   } else {
-    v7784 = 0;
+    v7781 = 0;
   }
-  var dirtySum$$17 = v4394 | v7784;
-  var v7785 = parentObj$$144.registerA << 1 & 30;
-  var v9324;
+  var dirtySum$$17 = v4394 | v7781;
+  var v7782 = parentObj$$144.registerA << 1 & 30;
+  var v9321;
   if (parentObj$$144.FCarry) {
-    v9324 = 1;
+    v9321 = 1;
   } else {
-    v9324 = 0;
+    v9321 = 0;
   }
-  parentObj$$144.FHalfCarry = (v7785 | v9324) > 15;
+  parentObj$$144.FHalfCarry = (v7782 | v9321) > 15;
   parentObj$$144.FCarry = dirtySum$$17 > 255;
   parentObj$$144.registerA = dirtySum$$17 & 255;
   parentObj$$144.FZero = parentObj$$144.registerA == 0;
@@ -10814,21 +10814,21 @@ function v220(parentObj$$143) {
   var v4398 = parentObj$$143.memoryReader;
   var tempValue$$2 = JAM.call(v4398[parentObj$$143.registersHL], v4398, [parentObj$$143, parentObj$$143.registersHL], JAM.policy.p1);
   var v4401 = parentObj$$143.registerA + tempValue$$2;
-  var v7788;
+  var v7785;
   if (parentObj$$143.FCarry) {
-    v7788 = 1;
+    v7785 = 1;
   } else {
-    v7788 = 0;
+    v7785 = 0;
   }
-  var dirtySum$$16 = v4401 + v7788;
-  var v7789 = (parentObj$$143.registerA & 15) + (tempValue$$2 & 15);
-  var v9328;
+  var dirtySum$$16 = v4401 + v7785;
+  var v7786 = (parentObj$$143.registerA & 15) + (tempValue$$2 & 15);
+  var v9325;
   if (parentObj$$143.FCarry) {
-    v9328 = 1;
+    v9325 = 1;
   } else {
-    v9328 = 0;
+    v9325 = 0;
   }
-  parentObj$$143.FHalfCarry = v7789 + v9328 > 15;
+  parentObj$$143.FHalfCarry = v7786 + v9325 > 15;
   parentObj$$143.FCarry = dirtySum$$16 > 255;
   parentObj$$143.registerA = dirtySum$$16 & 255;
   parentObj$$143.FZero = parentObj$$143.registerA == 0;
@@ -10838,21 +10838,21 @@ function v220(parentObj$$143) {
 function v219(parentObj$$142) {
   var tempValue$$1 = parentObj$$142.registersHL & 255;
   var v4406 = parentObj$$142.registerA + tempValue$$1;
-  var v7792;
+  var v7789;
   if (parentObj$$142.FCarry) {
-    v7792 = 1;
+    v7789 = 1;
   } else {
-    v7792 = 0;
+    v7789 = 0;
   }
-  var dirtySum$$15 = v4406 + v7792;
-  var v7793 = (parentObj$$142.registerA & 15) + (tempValue$$1 & 15);
-  var v9332;
+  var dirtySum$$15 = v4406 + v7789;
+  var v7790 = (parentObj$$142.registerA & 15) + (tempValue$$1 & 15);
+  var v9329;
   if (parentObj$$142.FCarry) {
-    v9332 = 1;
+    v9329 = 1;
   } else {
-    v9332 = 0;
+    v9329 = 0;
   }
-  parentObj$$142.FHalfCarry = v7793 + v9332 > 15;
+  parentObj$$142.FHalfCarry = v7790 + v9329 > 15;
   parentObj$$142.FCarry = dirtySum$$15 > 255;
   parentObj$$142.registerA = dirtySum$$15 & 255;
   parentObj$$142.FZero = parentObj$$142.registerA == 0;
@@ -10862,21 +10862,21 @@ function v219(parentObj$$142) {
 function v218(parentObj$$141) {
   var tempValue = parentObj$$141.registersHL >> 8;
   var v4411 = parentObj$$141.registerA + tempValue;
-  var v7796;
+  var v7793;
   if (parentObj$$141.FCarry) {
-    v7796 = 1;
+    v7793 = 1;
   } else {
-    v7796 = 0;
+    v7793 = 0;
   }
-  var dirtySum$$14 = v4411 + v7796;
-  var v7797 = (parentObj$$141.registerA & 15) + (tempValue & 15);
-  var v9336;
+  var dirtySum$$14 = v4411 + v7793;
+  var v7794 = (parentObj$$141.registerA & 15) + (tempValue & 15);
+  var v9333;
   if (parentObj$$141.FCarry) {
-    v9336 = 1;
+    v9333 = 1;
   } else {
-    v9336 = 0;
+    v9333 = 0;
   }
-  parentObj$$141.FHalfCarry = v7797 + v9336 > 15;
+  parentObj$$141.FHalfCarry = v7794 + v9333 > 15;
   parentObj$$141.FCarry = dirtySum$$14 > 255;
   parentObj$$141.registerA = dirtySum$$14 & 255;
   parentObj$$141.FZero = parentObj$$141.registerA == 0;
@@ -10885,21 +10885,21 @@ function v218(parentObj$$141) {
 }
 function v217(parentObj$$140) {
   var v4415 = parentObj$$140.registerA + parentObj$$140.registerE;
-  var v7801;
+  var v7798;
   if (parentObj$$140.FCarry) {
-    v7801 = 1;
+    v7798 = 1;
   } else {
-    v7801 = 0;
+    v7798 = 0;
   }
-  var dirtySum$$13 = v4415 + v7801;
-  var v7802 = (parentObj$$140.registerA & 15) + (parentObj$$140.registerE & 15);
-  var v9340;
+  var dirtySum$$13 = v4415 + v7798;
+  var v7799 = (parentObj$$140.registerA & 15) + (parentObj$$140.registerE & 15);
+  var v9337;
   if (parentObj$$140.FCarry) {
-    v9340 = 1;
+    v9337 = 1;
   } else {
-    v9340 = 0;
+    v9337 = 0;
   }
-  parentObj$$140.FHalfCarry = v7802 + v9340 > 15;
+  parentObj$$140.FHalfCarry = v7799 + v9337 > 15;
   parentObj$$140.FCarry = dirtySum$$13 > 255;
   parentObj$$140.registerA = dirtySum$$13 & 255;
   parentObj$$140.FZero = parentObj$$140.registerA == 0;
@@ -10908,21 +10908,21 @@ function v217(parentObj$$140) {
 }
 function v216(parentObj$$139) {
   var v4419 = parentObj$$139.registerA + parentObj$$139.registerD;
-  var v7806;
+  var v7803;
   if (parentObj$$139.FCarry) {
-    v7806 = 1;
+    v7803 = 1;
   } else {
-    v7806 = 0;
+    v7803 = 0;
   }
-  var dirtySum$$12 = v4419 + v7806;
-  var v7807 = (parentObj$$139.registerA & 15) + (parentObj$$139.registerD & 15);
-  var v9344;
+  var dirtySum$$12 = v4419 + v7803;
+  var v7804 = (parentObj$$139.registerA & 15) + (parentObj$$139.registerD & 15);
+  var v9341;
   if (parentObj$$139.FCarry) {
-    v9344 = 1;
+    v9341 = 1;
   } else {
-    v9344 = 0;
+    v9341 = 0;
   }
-  parentObj$$139.FHalfCarry = v7807 + v9344 > 15;
+  parentObj$$139.FHalfCarry = v7804 + v9341 > 15;
   parentObj$$139.FCarry = dirtySum$$12 > 255;
   parentObj$$139.registerA = dirtySum$$12 & 255;
   parentObj$$139.FZero = parentObj$$139.registerA == 0;
@@ -10931,21 +10931,21 @@ function v216(parentObj$$139) {
 }
 function v215(parentObj$$138) {
   var v4423 = parentObj$$138.registerA + parentObj$$138.registerC;
-  var v7811;
+  var v7808;
   if (parentObj$$138.FCarry) {
-    v7811 = 1;
+    v7808 = 1;
   } else {
-    v7811 = 0;
+    v7808 = 0;
   }
-  var dirtySum$$11 = v4423 + v7811;
-  var v7812 = (parentObj$$138.registerA & 15) + (parentObj$$138.registerC & 15);
-  var v9348;
+  var dirtySum$$11 = v4423 + v7808;
+  var v7809 = (parentObj$$138.registerA & 15) + (parentObj$$138.registerC & 15);
+  var v9345;
   if (parentObj$$138.FCarry) {
-    v9348 = 1;
+    v9345 = 1;
   } else {
-    v9348 = 0;
+    v9345 = 0;
   }
-  parentObj$$138.FHalfCarry = v7812 + v9348 > 15;
+  parentObj$$138.FHalfCarry = v7809 + v9345 > 15;
   parentObj$$138.FCarry = dirtySum$$11 > 255;
   parentObj$$138.registerA = dirtySum$$11 & 255;
   parentObj$$138.FZero = parentObj$$138.registerA == 0;
@@ -10954,21 +10954,21 @@ function v215(parentObj$$138) {
 }
 function v214(parentObj$$137) {
   var v4427 = parentObj$$137.registerA + parentObj$$137.registerB;
-  var v7816;
+  var v7813;
   if (parentObj$$137.FCarry) {
-    v7816 = 1;
+    v7813 = 1;
   } else {
-    v7816 = 0;
+    v7813 = 0;
   }
-  var dirtySum$$10 = v4427 + v7816;
-  var v7817 = (parentObj$$137.registerA & 15) + (parentObj$$137.registerB & 15);
-  var v9352;
+  var dirtySum$$10 = v4427 + v7813;
+  var v7814 = (parentObj$$137.registerA & 15) + (parentObj$$137.registerB & 15);
+  var v9349;
   if (parentObj$$137.FCarry) {
-    v9352 = 1;
+    v9349 = 1;
   } else {
-    v9352 = 0;
+    v9349 = 0;
   }
-  parentObj$$137.FHalfCarry = v7817 + v9352 > 15;
+  parentObj$$137.FHalfCarry = v7814 + v9349 > 15;
   parentObj$$137.FCarry = dirtySum$$10 > 255;
   parentObj$$137.registerA = dirtySum$$10 & 255;
   parentObj$$137.FZero = parentObj$$137.registerA == 0;
@@ -10985,8 +10985,8 @@ function v213(parentObj$$136) {
 }
 function v212(parentObj$$135) {
   var v4435 = parentObj$$135.registerA;
-  var v7821 = parentObj$$135.memoryReader;
-  var dirtySum$$9 = v4435 + JAM.call(v7821[parentObj$$135.registersHL], v7821, [parentObj$$135, parentObj$$135.registersHL], JAM.policy.p1);
+  var v7818 = parentObj$$135.memoryReader;
+  var dirtySum$$9 = v4435 + JAM.call(v7818[parentObj$$135.registersHL], v7818, [parentObj$$135, parentObj$$135.registersHL], JAM.policy.p1);
   parentObj$$135.FHalfCarry = (dirtySum$$9 & 15) < (parentObj$$135.registerA & 15);
   parentObj$$135.FCarry = dirtySum$$9 > 255;
   parentObj$$135.registerA = dirtySum$$9 & 255;
@@ -11053,8 +11053,8 @@ function v205(parentObj$$128) {
 }
 function v204(parentObj$$127) {
   var v4470 = parentObj$$127.memoryReader;
-  var v10763 = JAM.call(v4470[parentObj$$127.registersHL], v4470, [parentObj$$127, parentObj$$127.registersHL], JAM.policy.p1);
-  parentObj$$127.registerA = v10763;
+  var v10760 = JAM.call(v4470[parentObj$$127.registersHL], v4470, [parentObj$$127, parentObj$$127.registersHL], JAM.policy.p1);
+  parentObj$$127.registerA = v10760;
   return;
 }
 function v203(parentObj$$126) {
@@ -11088,11 +11088,11 @@ function v197(parentObj$$120) {
 }
 function v196(parentObj$$119) {
   if ((parentObj$$119.interruptsEnabled & parentObj$$119.interruptsRequested & 31) > 0) {
-    var v7834 = !parentObj$$119.cGBC;
-    if (v7834) {
-      v7834 = !parentObj$$119.usedBootROM;
+    var v7831 = !parentObj$$119.cGBC;
+    if (v7831) {
+      v7831 = !parentObj$$119.usedBootROM;
     }
-    if (v7834) {
+    if (v7831) {
       parentObj$$119.skipPCIncrement = true;
     } else {
       parentObj$$119.CPUTicks = parentObj$$119.CPUTicks + 4;
@@ -11138,8 +11138,8 @@ function v189(parentObj$$112) {
 }
 function v188(parentObj$$111) {
   var v4507 = parentObj$$111.registersHL & 65280;
-  var v7840 = parentObj$$111.memoryReader;
-  parentObj$$111.registersHL = v4507 | JAM.call(v7840[parentObj$$111.registersHL], v7840, [parentObj$$111, parentObj$$111.registersHL], JAM.policy.p1);
+  var v7837 = parentObj$$111.memoryReader;
+  parentObj$$111.registersHL = v4507 | JAM.call(v7837[parentObj$$111.registersHL], v7837, [parentObj$$111, parentObj$$111.registersHL], JAM.policy.p1);
   return;
 }
 function v187(parentObj$$110) {
@@ -11170,8 +11170,8 @@ function v181(parentObj$$104) {
   return;
 }
 function v180(parentObj$$103) {
-  var v9356 = parentObj$$103.memoryReader;
-  parentObj$$103.registersHL = JAM.call(v9356[parentObj$$103.registersHL], v9356, [parentObj$$103, parentObj$$103.registersHL], JAM.policy.p1) << 8 | parentObj$$103.registersHL & 255;
+  var v9353 = parentObj$$103.memoryReader;
+  parentObj$$103.registersHL = JAM.call(v9353[parentObj$$103.registersHL], v9353, [parentObj$$103, parentObj$$103.registersHL], JAM.policy.p1) << 8 | parentObj$$103.registersHL & 255;
   return;
 }
 function v179(parentObj$$102) {
@@ -11203,8 +11203,8 @@ function v173(parentObj$$96) {
 }
 function v172(parentObj$$95) {
   var v4532 = parentObj$$95.memoryReader;
-  var v10764 = JAM.call(v4532[parentObj$$95.registersHL], v4532, [parentObj$$95, parentObj$$95.registersHL], JAM.policy.p1);
-  parentObj$$95.registerE = v10764;
+  var v10761 = JAM.call(v4532[parentObj$$95.registersHL], v4532, [parentObj$$95, parentObj$$95.registersHL], JAM.policy.p1);
+  parentObj$$95.registerE = v10761;
   return;
 }
 function v171(parentObj$$94) {
@@ -11236,8 +11236,8 @@ function v165(parentObj$$88) {
 }
 function v164(parentObj$$87) {
   var v4537 = parentObj$$87.memoryReader;
-  var v10765 = JAM.call(v4537[parentObj$$87.registersHL], v4537, [parentObj$$87, parentObj$$87.registersHL], JAM.policy.p1);
-  parentObj$$87.registerD = v10765;
+  var v10762 = JAM.call(v4537[parentObj$$87.registersHL], v4537, [parentObj$$87, parentObj$$87.registersHL], JAM.policy.p1);
+  parentObj$$87.registerD = v10762;
   return;
 }
 function v163(parentObj$$86) {
@@ -11269,8 +11269,8 @@ function v157(parentObj$$80) {
 }
 function v156(parentObj$$79) {
   var v4542 = parentObj$$79.memoryReader;
-  var v10766 = JAM.call(v4542[parentObj$$79.registersHL], v4542, [parentObj$$79, parentObj$$79.registersHL], JAM.policy.p1);
-  parentObj$$79.registerC = v10766;
+  var v10763 = JAM.call(v4542[parentObj$$79.registersHL], v4542, [parentObj$$79, parentObj$$79.registersHL], JAM.policy.p1);
+  parentObj$$79.registerC = v10763;
   return;
 }
 function v155(parentObj$$78) {
@@ -11302,8 +11302,8 @@ function v149(parentObj$$72) {
 }
 function v148(parentObj$$71) {
   var v4547 = parentObj$$71.memoryReader;
-  var v10767 = JAM.call(v4547[parentObj$$71.registersHL], v4547, [parentObj$$71, parentObj$$71.registersHL], JAM.policy.p1);
-  parentObj$$71.registerB = v10767;
+  var v10764 = JAM.call(v4547[parentObj$$71.registersHL], v4547, [parentObj$$71, parentObj$$71.registersHL], JAM.policy.p1);
+  parentObj$$71.registerB = v10764;
   return;
 }
 function v147(parentObj$$70) {
@@ -11336,8 +11336,8 @@ function v141(parentObj$$64) {
 }
 function v140(parentObj$$63) {
   var v4553 = parentObj$$63.memoryReader;
-  var v10768 = JAM.call(v4553[parentObj$$63.programCounter], v4553, [parentObj$$63, parentObj$$63.programCounter], JAM.policy.p1);
-  parentObj$$63.registerA = v10768;
+  var v10765 = JAM.call(v4553[parentObj$$63.programCounter], v4553, [parentObj$$63, parentObj$$63.programCounter], JAM.policy.p1);
+  parentObj$$63.registerA = v10765;
   parentObj$$63.programCounter = parentObj$$63.programCounter + 1 & 65535;
   return;
 }
@@ -11361,8 +11361,8 @@ function v137(parentObj$$60) {
 }
 function v136(parentObj$$59) {
   var v4564 = parentObj$$59.memoryReader;
-  var v10769 = JAM.call(v4564[parentObj$$59.registersHL], v4564, [parentObj$$59, parentObj$$59.registersHL], JAM.policy.p1);
-  parentObj$$59.registerA = v10769;
+  var v10766 = JAM.call(v4564[parentObj$$59.registersHL], v4564, [parentObj$$59, parentObj$$59.registersHL], JAM.policy.p1);
+  parentObj$$59.registerA = v10766;
   parentObj$$59.registersHL = parentObj$$59.registersHL - 1 & 65535;
   return;
 }
@@ -11376,9 +11376,9 @@ function v135(parentObj$$58) {
 }
 function v134(parentObj$$57) {
   if (parentObj$$57.FCarry) {
-    var v9359 = parentObj$$57.programCounter;
-    var v10534 = parentObj$$57.memoryReader;
-    parentObj$$57.programCounter = v9359 + (JAM.call(v10534[parentObj$$57.programCounter], v10534, [parentObj$$57, parentObj$$57.programCounter], JAM.policy.p1) << 24 >> 24) + 1 & 65535;
+    var v9356 = parentObj$$57.programCounter;
+    var v10531 = parentObj$$57.memoryReader;
+    parentObj$$57.programCounter = v9356 + (JAM.call(v10531[parentObj$$57.programCounter], v10531, [parentObj$$57, parentObj$$57.programCounter], JAM.policy.p1) << 24 >> 24) + 1 & 65535;
     parentObj$$57.CPUTicks = parentObj$$57.CPUTicks + 4;
   } else {
     parentObj$$57.programCounter = parentObj$$57.programCounter + 1 & 65535;
@@ -11394,14 +11394,14 @@ function v132(parentObj$$55) {
   var v4575 = parentObj$$55.memoryWriter;
   var v4576 = parentObj$$55.registersHL;
   var v4577 = parentObj$$55.registersHL;
-  var v7873 = parentObj$$55.memoryReader;
-  JAM.call(v4575[v4576], v4575, [parentObj$$55, v4577, JAM.call(v7873[parentObj$$55.programCounter], v7873, [parentObj$$55, parentObj$$55.programCounter], JAM.policy.p1)], JAM.policy.p1);
+  var v7870 = parentObj$$55.memoryReader;
+  JAM.call(v4575[v4576], v4575, [parentObj$$55, v4577, JAM.call(v7870[parentObj$$55.programCounter], v7870, [parentObj$$55, parentObj$$55.programCounter], JAM.policy.p1)], JAM.policy.p1);
   parentObj$$55.programCounter = parentObj$$55.programCounter + 1 & 65535;
   return;
 }
 function v131(parentObj$$54) {
-  var v9361 = parentObj$$54.memoryReader;
-  var temp_var$$6 = JAM.call(v9361[parentObj$$54.registersHL], v9361, [parentObj$$54, parentObj$$54.registersHL], JAM.policy.p1) - 1 & 255;
+  var v9358 = parentObj$$54.memoryReader;
+  var temp_var$$6 = JAM.call(v9358[parentObj$$54.registersHL], v9358, [parentObj$$54, parentObj$$54.registersHL], JAM.policy.p1) - 1 & 255;
   parentObj$$54.FZero = temp_var$$6 == 0;
   parentObj$$54.FHalfCarry = (temp_var$$6 & 15) == 15;
   parentObj$$54.FSubtract = true;
@@ -11410,8 +11410,8 @@ function v131(parentObj$$54) {
   return;
 }
 function v130(parentObj$$53) {
-  var v9364 = parentObj$$53.memoryReader;
-  var temp_var$$5 = JAM.call(v9364[parentObj$$53.registersHL], v9364, [parentObj$$53, parentObj$$53.registersHL], JAM.policy.p1) + 1 & 255;
+  var v9361 = parentObj$$53.memoryReader;
+  var temp_var$$5 = JAM.call(v9361[parentObj$$53.registersHL], v9361, [parentObj$$53, parentObj$$53.registersHL], JAM.policy.p1) + 1 & 255;
   parentObj$$53.FZero = temp_var$$5 == 0;
   parentObj$$53.FHalfCarry = (temp_var$$5 & 15) == 0;
   parentObj$$53.FSubtract = false;
@@ -11431,16 +11431,16 @@ function v128(parentObj$$51) {
 }
 function v127(parentObj$$50) {
   var v4596 = JAM.call(parentObj$$50.memoryRead, parentObj$$50, [parentObj$$50.programCounter + 1 & 65535]) << 8;
-  var v7882 = parentObj$$50.memoryReader;
-  parentObj$$50.stackPointer = v4596 | JAM.call(v7882[parentObj$$50.programCounter], v7882, [parentObj$$50, parentObj$$50.programCounter], JAM.policy.p1);
+  var v7879 = parentObj$$50.memoryReader;
+  parentObj$$50.stackPointer = v4596 | JAM.call(v7879[parentObj$$50.programCounter], v7879, [parentObj$$50, parentObj$$50.programCounter], JAM.policy.p1);
   parentObj$$50.programCounter = parentObj$$50.programCounter + 2 & 65535;
   return;
 }
 function v126(parentObj$$49) {
   if (!parentObj$$49.FCarry) {
-    var v9368 = parentObj$$49.programCounter;
-    var v10537 = parentObj$$49.memoryReader;
-    parentObj$$49.programCounter = v9368 + (JAM.call(v10537[parentObj$$49.programCounter], v10537, [parentObj$$49, parentObj$$49.programCounter], JAM.policy.p1) << 24 >> 24) + 1 & 65535;
+    var v9365 = parentObj$$49.programCounter;
+    var v10534 = parentObj$$49.memoryReader;
+    parentObj$$49.programCounter = v9365 + (JAM.call(v10534[parentObj$$49.programCounter], v10534, [parentObj$$49, parentObj$$49.programCounter], JAM.policy.p1) << 24 >> 24) + 1 & 65535;
     parentObj$$49.CPUTicks = parentObj$$49.CPUTicks + 4;
   } else {
     parentObj$$49.programCounter = parentObj$$49.programCounter + 1 & 65535;
@@ -11454,8 +11454,8 @@ function v125(parentObj$$48) {
 }
 function v124(parentObj$$47) {
   var v4602 = parentObj$$47.registersHL & 65280;
-  var v7892 = parentObj$$47.memoryReader;
-  parentObj$$47.registersHL = v4602 | JAM.call(v7892[parentObj$$47.programCounter], v7892, [parentObj$$47, parentObj$$47.programCounter], JAM.policy.p1);
+  var v7889 = parentObj$$47.memoryReader;
+  parentObj$$47.registersHL = v4602 | JAM.call(v7889[parentObj$$47.programCounter], v7889, [parentObj$$47, parentObj$$47.programCounter], JAM.policy.p1);
   parentObj$$47.programCounter = parentObj$$47.programCounter + 1 & 65535;
   return;
 }
@@ -11481,8 +11481,8 @@ function v121(parentObj$$44) {
 }
 function v120(parentObj$$43) {
   var v4612 = parentObj$$43.memoryReader;
-  var v10770 = JAM.call(v4612[parentObj$$43.registersHL], v4612, [parentObj$$43, parentObj$$43.registersHL], JAM.policy.p1);
-  parentObj$$43.registerA = v10770;
+  var v10767 = JAM.call(v4612[parentObj$$43.registersHL], v4612, [parentObj$$43, parentObj$$43.registersHL], JAM.policy.p1);
+  parentObj$$43.registerA = v10767;
   parentObj$$43.registersHL = parentObj$$43.registersHL + 1 & 65535;
   return;
 }
@@ -11495,9 +11495,9 @@ function v119(parentObj$$42) {
 }
 function v118(parentObj$$41) {
   if (parentObj$$41.FZero) {
-    var v9370 = parentObj$$41.programCounter;
-    var v10540 = parentObj$$41.memoryReader;
-    parentObj$$41.programCounter = v9370 + (JAM.call(v10540[parentObj$$41.programCounter], v10540, [parentObj$$41, parentObj$$41.programCounter], JAM.policy.p1) << 24 >> 24) + 1 & 65535;
+    var v9367 = parentObj$$41.programCounter;
+    var v10537 = parentObj$$41.memoryReader;
+    parentObj$$41.programCounter = v9367 + (JAM.call(v10537[parentObj$$41.programCounter], v10537, [parentObj$$41, parentObj$$41.programCounter], JAM.policy.p1) << 24 >> 24) + 1 & 65535;
     parentObj$$41.CPUTicks = parentObj$$41.CPUTicks + 4;
   } else {
     parentObj$$41.programCounter = parentObj$$41.programCounter + 1 & 65535;
@@ -11506,28 +11506,28 @@ function v118(parentObj$$41) {
 }
 function v117(parentObj$$40) {
   if (!parentObj$$40.FSubtract) {
-    var v7908 = parentObj$$40.FCarry;
-    if (!v7908) {
-      v7908 = parentObj$$40.registerA > 153;
+    var v7905 = parentObj$$40.FCarry;
+    if (!v7905) {
+      v7905 = parentObj$$40.registerA > 153;
     }
-    if (v7908) {
+    if (v7905) {
       parentObj$$40.registerA = parentObj$$40.registerA + 96 & 255;
       parentObj$$40.FCarry = true;
     }
-    var v7910 = parentObj$$40.FHalfCarry;
-    if (!v7910) {
-      v7910 = (parentObj$$40.registerA & 15) > 9;
+    var v7907 = parentObj$$40.FHalfCarry;
+    if (!v7907) {
+      v7907 = (parentObj$$40.registerA & 15) > 9;
     }
-    if (v7910) {
+    if (v7907) {
       parentObj$$40.registerA = parentObj$$40.registerA + 6 & 255;
       parentObj$$40.FHalfCarry = false;
     }
   } else {
-    var v7912 = parentObj$$40.FCarry;
-    if (v7912) {
-      v7912 = parentObj$$40.FHalfCarry;
+    var v7909 = parentObj$$40.FCarry;
+    if (v7909) {
+      v7909 = parentObj$$40.FHalfCarry;
     }
-    if (v7912) {
+    if (v7909) {
       parentObj$$40.registerA = parentObj$$40.registerA + 154 & 255;
       parentObj$$40.FHalfCarry = false;
     } else {
@@ -11545,8 +11545,8 @@ function v117(parentObj$$40) {
   return;
 }
 function v116(parentObj$$39) {
-  var v9376 = parentObj$$39.memoryReader;
-  parentObj$$39.registersHL = JAM.call(v9376[parentObj$$39.programCounter], v9376, [parentObj$$39, parentObj$$39.programCounter], JAM.policy.p1) << 8 | parentObj$$39.registersHL & 255;
+  var v9373 = parentObj$$39.memoryReader;
+  parentObj$$39.registersHL = JAM.call(v9373[parentObj$$39.programCounter], v9373, [parentObj$$39, parentObj$$39.programCounter], JAM.policy.p1) << 8 | parentObj$$39.registersHL & 255;
   parentObj$$39.programCounter = parentObj$$39.programCounter + 1 & 65535;
   return;
 }
@@ -11578,16 +11578,16 @@ function v112(parentObj$$35) {
 }
 function v111(parentObj$$34) {
   var v4651 = JAM.call(parentObj$$34.memoryRead, parentObj$$34, [parentObj$$34.programCounter + 1 & 65535]) << 8;
-  var v7926 = parentObj$$34.memoryReader;
-  parentObj$$34.registersHL = v4651 | JAM.call(v7926[parentObj$$34.programCounter], v7926, [parentObj$$34, parentObj$$34.programCounter], JAM.policy.p1);
+  var v7923 = parentObj$$34.memoryReader;
+  parentObj$$34.registersHL = v4651 | JAM.call(v7923[parentObj$$34.programCounter], v7923, [parentObj$$34, parentObj$$34.programCounter], JAM.policy.p1);
   parentObj$$34.programCounter = parentObj$$34.programCounter + 2 & 65535;
   return;
 }
 function v110(parentObj$$33) {
   if (!parentObj$$33.FZero) {
-    var v9382 = parentObj$$33.programCounter;
-    var v10543 = parentObj$$33.memoryReader;
-    parentObj$$33.programCounter = v9382 + (JAM.call(v10543[parentObj$$33.programCounter], v10543, [parentObj$$33, parentObj$$33.programCounter], JAM.policy.p1) << 24 >> 24) + 1 & 65535;
+    var v9379 = parentObj$$33.programCounter;
+    var v10540 = parentObj$$33.memoryReader;
+    parentObj$$33.programCounter = v9379 + (JAM.call(v10540[parentObj$$33.programCounter], v10540, [parentObj$$33, parentObj$$33.programCounter], JAM.policy.p1) << 24 >> 24) + 1 & 65535;
     parentObj$$33.CPUTicks = parentObj$$33.CPUTicks + 4;
   } else {
     parentObj$$33.programCounter = parentObj$$33.programCounter + 1 & 65535;
@@ -11609,8 +11609,8 @@ function v109(parentObj$$32) {
 }
 function v108(parentObj$$31) {
   var v4660 = parentObj$$31.memoryReader;
-  var v10771 = JAM.call(v4660[parentObj$$31.programCounter], v4660, [parentObj$$31, parentObj$$31.programCounter], JAM.policy.p1);
-  parentObj$$31.registerE = v10771;
+  var v10768 = JAM.call(v4660[parentObj$$31.programCounter], v4660, [parentObj$$31, parentObj$$31.programCounter], JAM.policy.p1);
+  parentObj$$31.registerE = v10768;
   parentObj$$31.programCounter = parentObj$$31.programCounter + 1 & 65535;
   return;
 }
@@ -11635,8 +11635,8 @@ function v105(parentObj$$28) {
   return;
 }
 function v104(parentObj$$27) {
-  var v10772 = JAM.call(parentObj$$27.memoryRead, parentObj$$27, [parentObj$$27.registerD << 8 | parentObj$$27.registerE]);
-  parentObj$$27.registerA = v10772;
+  var v10769 = JAM.call(parentObj$$27.memoryRead, parentObj$$27, [parentObj$$27.registerD << 8 | parentObj$$27.registerE]);
+  parentObj$$27.registerA = v10769;
   return;
 }
 function v103(parentObj$$26) {
@@ -11648,9 +11648,9 @@ function v103(parentObj$$26) {
   return;
 }
 function v102(parentObj$$25) {
-  var v9388 = parentObj$$25.programCounter;
-  var v10546 = parentObj$$25.memoryReader;
-  parentObj$$25.programCounter = v9388 + (JAM.call(v10546[parentObj$$25.programCounter], v10546, [parentObj$$25, parentObj$$25.programCounter], JAM.policy.p1) << 24 >> 24) + 1 & 65535;
+  var v9385 = parentObj$$25.programCounter;
+  var v10543 = parentObj$$25.memoryReader;
+  parentObj$$25.programCounter = v9385 + (JAM.call(v10543[parentObj$$25.programCounter], v10543, [parentObj$$25, parentObj$$25.programCounter], JAM.policy.p1) << 24 >> 24) + 1 & 65535;
   return;
 }
 function v101(parentObj$$24) {
@@ -11668,8 +11668,8 @@ function v101(parentObj$$24) {
 }
 function v100(parentObj$$23) {
   var v4680 = parentObj$$23.memoryReader;
-  var v10773 = JAM.call(v4680[parentObj$$23.programCounter], v4680, [parentObj$$23, parentObj$$23.programCounter], JAM.policy.p1);
-  parentObj$$23.registerD = v10773;
+  var v10770 = JAM.call(v4680[parentObj$$23.programCounter], v4680, [parentObj$$23, parentObj$$23.programCounter], JAM.policy.p1);
+  parentObj$$23.registerD = v10770;
   parentObj$$23.programCounter = parentObj$$23.programCounter + 1 & 65535;
   return;
 }
@@ -11699,10 +11699,10 @@ function v96(parentObj$$19) {
 }
 function v95(parentObj$$18) {
   var v4694 = parentObj$$18.memoryReader;
-  var v10774 = JAM.call(v4694[parentObj$$18.programCounter], v4694, [parentObj$$18, parentObj$$18.programCounter], JAM.policy.p1);
-  parentObj$$18.registerE = v10774;
-  var v10775 = JAM.call(parentObj$$18.memoryRead, parentObj$$18, [parentObj$$18.programCounter + 1 & 65535]);
-  parentObj$$18.registerD = v10775;
+  var v10771 = JAM.call(v4694[parentObj$$18.programCounter], v4694, [parentObj$$18, parentObj$$18.programCounter], JAM.policy.p1);
+  parentObj$$18.registerE = v10771;
+  var v10772 = JAM.call(parentObj$$18.memoryRead, parentObj$$18, [parentObj$$18.programCounter + 1 & 65535]);
+  parentObj$$18.registerD = v10772;
   parentObj$$18.programCounter = parentObj$$18.programCounter + 2 & 65535;
   return;
 }
@@ -11738,8 +11738,8 @@ function v93(parentObj$$16) {
 }
 function v92(parentObj$$15) {
   var v4708 = parentObj$$15.memoryReader;
-  var v10776 = JAM.call(v4708[parentObj$$15.programCounter], v4708, [parentObj$$15, parentObj$$15.programCounter], JAM.policy.p1);
-  parentObj$$15.registerC = v10776;
+  var v10773 = JAM.call(v4708[parentObj$$15.programCounter], v4708, [parentObj$$15, parentObj$$15.programCounter], JAM.policy.p1);
+  parentObj$$15.registerC = v10773;
   parentObj$$15.programCounter = parentObj$$15.programCounter + 1 & 65535;
   return;
 }
@@ -11764,8 +11764,8 @@ function v89(parentObj$$12) {
   return;
 }
 function v88(parentObj$$11) {
-  var v10777 = JAM.call(parentObj$$11.memoryRead, parentObj$$11, [parentObj$$11.registerB << 8 | parentObj$$11.registerC]);
-  parentObj$$11.registerA = v10777;
+  var v10774 = JAM.call(parentObj$$11.memoryRead, parentObj$$11, [parentObj$$11.registerB << 8 | parentObj$$11.registerC]);
+  parentObj$$11.registerA = v10774;
   return;
 }
 function v87(parentObj$$10) {
@@ -11778,8 +11778,8 @@ function v87(parentObj$$10) {
 }
 function v86(parentObj$$9) {
   var v4724 = JAM.call(parentObj$$9.memoryRead, parentObj$$9, [parentObj$$9.programCounter + 1 & 65535]) << 8;
-  var v7978 = parentObj$$9.memoryReader;
-  var temp_var$$1 = v4724 | JAM.call(v7978[parentObj$$9.programCounter], v7978, [parentObj$$9, parentObj$$9.programCounter], JAM.policy.p1);
+  var v7975 = parentObj$$9.memoryReader;
+  var temp_var$$1 = v4724 | JAM.call(v7975[parentObj$$9.programCounter], v7975, [parentObj$$9, parentObj$$9.programCounter], JAM.policy.p1);
   parentObj$$9.programCounter = parentObj$$9.programCounter + 2 & 65535;
   JAM.call(parentObj$$9.memoryWrite, parentObj$$9, [temp_var$$1, parentObj$$9.stackPointer & 255], JAM.policy.p1);
   JAM.call(parentObj$$9.memoryWrite, parentObj$$9, [temp_var$$1 + 1 & 65535, parentObj$$9.stackPointer >> 8], JAM.policy.p1);
@@ -11793,8 +11793,8 @@ function v85(parentObj$$8) {
 }
 function v84(parentObj$$7) {
   var v4733 = parentObj$$7.memoryReader;
-  var v10778 = JAM.call(v4733[parentObj$$7.programCounter], v4733, [parentObj$$7, parentObj$$7.programCounter], JAM.policy.p1);
-  parentObj$$7.registerB = v10778;
+  var v10775 = JAM.call(v4733[parentObj$$7.programCounter], v4733, [parentObj$$7, parentObj$$7.programCounter], JAM.policy.p1);
+  parentObj$$7.registerB = v10775;
   parentObj$$7.programCounter = parentObj$$7.programCounter + 1 & 65535;
   return;
 }
@@ -11824,10 +11824,10 @@ function v80(parentObj$$3) {
 }
 function v79(parentObj$$2) {
   var v4747 = parentObj$$2.memoryReader;
-  var v10779 = JAM.call(v4747[parentObj$$2.programCounter], v4747, [parentObj$$2, parentObj$$2.programCounter], JAM.policy.p1);
-  parentObj$$2.registerC = v10779;
-  var v10780 = JAM.call(parentObj$$2.memoryRead, parentObj$$2, [parentObj$$2.programCounter + 1 & 65535]);
-  parentObj$$2.registerB = v10780;
+  var v10776 = JAM.call(v4747[parentObj$$2.programCounter], v4747, [parentObj$$2, parentObj$$2.programCounter], JAM.policy.p1);
+  parentObj$$2.registerC = v10776;
+  var v10777 = JAM.call(parentObj$$2.memoryRead, parentObj$$2, [parentObj$$2.programCounter + 1 & 65535]);
+  parentObj$$2.registerB = v10777;
   parentObj$$2.programCounter = parentObj$$2.programCounter + 2 & 65535;
   return;
 }
@@ -11838,7 +11838,7 @@ function v77(typedArray) {
   typedArray[0] = -1;
   typedArray[0] = typedArray[0] >> 0;
   if (typedArray[0] != 255) {
-    return[];
+    return [];
   } else {
     return typedArray;
   }
@@ -11848,7 +11848,7 @@ function v76(bufferLength$$1) {
   try {
     return JAM.call(this.checkForOperaMathBug, this, [new Uint8Array(bufferLength$$1)]);
   } catch (error$$18) {
-    return[];
+    return [];
   }
   return;
 }
@@ -11856,25 +11856,25 @@ function v75(bufferLength) {
   try {
     return new Float32Array(bufferLength);
   } catch (error$$17) {
-    return[];
+    return [];
   }
   return;
 }
 function v74(BILINEARAlgo$$1) {
-  var v10781 = JAM.call(this.generateUint8Buffer, this, [this.finalResultSize]);
-  this.heightBuffer = v10781;
+  var v10778 = JAM.call(this.generateUint8Buffer, this, [this.finalResultSize]);
+  this.heightBuffer = v10778;
   if (!BILINEARAlgo$$1) {
-    var v10782 = JAM.call(this.generateFloatBuffer, this, [this.targetWidthMultipliedByChannels]);
-    this.outputHeightWorkBench = v10782;
+    var v10779 = JAM.call(this.generateFloatBuffer, this, [this.targetWidthMultipliedByChannels]);
+    this.outputHeightWorkBench = v10779;
   }
   return;
 }
 function v73(BILINEARAlgo) {
-  var v10783 = JAM.call(this.generateFloatBuffer, this, [this.widthPassResultSize]);
-  this.widthBuffer = v10783;
+  var v10780 = JAM.call(this.generateFloatBuffer, this, [this.widthPassResultSize]);
+  this.widthBuffer = v10780;
   if (!BILINEARAlgo) {
-    var v10784 = JAM.call(this.generateFloatBuffer, this, [this.originalHeightMultipliedByChannels]);
-    this.outputWidthWorkBench = v10784;
+    var v10781 = JAM.call(this.generateFloatBuffer, this, [this.originalHeightMultipliedByChannels]);
+    this.outputWidthWorkBench = v10781;
   }
   return;
 }
@@ -11947,11 +11947,11 @@ function v69(buffer$$23) {
       v4774 = pixelOffset$$6 < this.targetWidthMultipliedByChannels;
     }
     weight$$6 = ratioWeight$$6;
-    var v8016 = weight$$6 > 0;
-    if (v8016) {
-      v8016 = actualPosition$$3 < this.widthPassResultSize;
+    var v8013 = weight$$6 > 0;
+    if (v8013) {
+      v8013 = actualPosition$$3 < this.widthPassResultSize;
     }
-    var v4787 = v8016;
+    var v4787 = v8013;
     do {
       amountToNext$$3 = 1 + actualPosition$$3 - currentPosition$$3;
       if (weight$$6 >= amountToNext$$3) {
@@ -11960,28 +11960,28 @@ function v69(buffer$$23) {
         for (;v4780;) {
           var v4776 = pixelOffset$$6;
           pixelOffset$$6 = pixelOffset$$6 + 1;
-          var v9418 = output$$3[v4776];
-          var v10388 = actualPosition$$3;
+          var v9415 = output$$3[v4776];
+          var v10385 = actualPosition$$3;
           actualPosition$$3 = actualPosition$$3 + 1;
-          output$$3[v4776] = v9418 + buffer$$23[v10388] * amountToNext$$3;
+          output$$3[v4776] = v9415 + buffer$$23[v10385] * amountToNext$$3;
           var v4777 = pixelOffset$$6;
           pixelOffset$$6 = pixelOffset$$6 + 1;
-          var v9420 = output$$3[v4777];
-          var v10389 = actualPosition$$3;
+          var v9417 = output$$3[v4777];
+          var v10386 = actualPosition$$3;
           actualPosition$$3 = actualPosition$$3 + 1;
-          output$$3[v4777] = v9420 + buffer$$23[v10389] * amountToNext$$3;
+          output$$3[v4777] = v9417 + buffer$$23[v10386] * amountToNext$$3;
           var v4778 = pixelOffset$$6;
           pixelOffset$$6 = pixelOffset$$6 + 1;
-          var v9422 = output$$3[v4778];
-          var v10390 = actualPosition$$3;
+          var v9419 = output$$3[v4778];
+          var v10387 = actualPosition$$3;
           actualPosition$$3 = actualPosition$$3 + 1;
-          output$$3[v4778] = v9422 + buffer$$23[v10390] * amountToNext$$3;
+          output$$3[v4778] = v9419 + buffer$$23[v10387] * amountToNext$$3;
           var v4779 = pixelOffset$$6;
           pixelOffset$$6 = pixelOffset$$6 + 1;
-          var v9424 = output$$3[v4779];
-          var v10391 = actualPosition$$3;
+          var v9421 = output$$3[v4779];
+          var v10388 = actualPosition$$3;
           actualPosition$$3 = actualPosition$$3 + 1;
-          output$$3[v4779] = v9424 + buffer$$23[v10391] * amountToNext$$3;
+          output$$3[v4779] = v9421 + buffer$$23[v10388] * amountToNext$$3;
           v4780 = pixelOffset$$6 < this.targetWidthMultipliedByChannels;
         }
         currentPosition$$3 = actualPosition$$3;
@@ -11993,66 +11993,66 @@ function v69(buffer$$23) {
         for (;v4785;) {
           var v4781 = pixelOffset$$6;
           pixelOffset$$6 = pixelOffset$$6 + 1;
-          var v9426 = output$$3[v4781];
-          var v10392 = amountToNext$$3;
+          var v9423 = output$$3[v4781];
+          var v10389 = amountToNext$$3;
           amountToNext$$3 = amountToNext$$3 + 1;
-          output$$3[v4781] = v9426 + buffer$$23[v10392] * weight$$6;
+          output$$3[v4781] = v9423 + buffer$$23[v10389] * weight$$6;
           var v4782 = pixelOffset$$6;
           pixelOffset$$6 = pixelOffset$$6 + 1;
-          var v9428 = output$$3[v4782];
-          var v10393 = amountToNext$$3;
+          var v9425 = output$$3[v4782];
+          var v10390 = amountToNext$$3;
           amountToNext$$3 = amountToNext$$3 + 1;
-          output$$3[v4782] = v9428 + buffer$$23[v10393] * weight$$6;
+          output$$3[v4782] = v9425 + buffer$$23[v10390] * weight$$6;
           var v4783 = pixelOffset$$6;
           pixelOffset$$6 = pixelOffset$$6 + 1;
-          var v9430 = output$$3[v4783];
-          var v10394 = amountToNext$$3;
+          var v9427 = output$$3[v4783];
+          var v10391 = amountToNext$$3;
           amountToNext$$3 = amountToNext$$3 + 1;
-          output$$3[v4783] = v9430 + buffer$$23[v10394] * weight$$6;
+          output$$3[v4783] = v9427 + buffer$$23[v10391] * weight$$6;
           var v4784 = pixelOffset$$6;
           pixelOffset$$6 = pixelOffset$$6 + 1;
-          var v9432 = output$$3[v4784];
-          var v10395 = amountToNext$$3;
+          var v9429 = output$$3[v4784];
+          var v10392 = amountToNext$$3;
           amountToNext$$3 = amountToNext$$3 + 1;
-          output$$3[v4784] = v9432 + buffer$$23[v10395] * weight$$6;
+          output$$3[v4784] = v9429 + buffer$$23[v10392] * weight$$6;
           v4785 = pixelOffset$$6 < this.targetWidthMultipliedByChannels;
         }
         currentPosition$$3 = currentPosition$$3 + weight$$6;
         break;
       }
-      var v8021 = weight$$6 > 0;
-      if (v8021) {
-        v8021 = actualPosition$$3 < this.widthPassResultSize;
+      var v8018 = weight$$6 > 0;
+      if (v8018) {
+        v8018 = actualPosition$$3 < this.widthPassResultSize;
       }
-      v4787 = v8021;
+      v4787 = v8018;
     } while (v4787);
     pixelOffset$$6 = 0;
     var v4792 = pixelOffset$$6 < this.targetWidthMultipliedByChannels;
     for (;v4792;) {
       var v4788 = outputOffset$$3;
       outputOffset$$3 = outputOffset$$3 + 1;
+      var v10113 = pixelOffset$$6;
+      pixelOffset$$6 = pixelOffset$$6 + 1;
+      var v10782 = Math.round(output$$3[v10113] / ratioWeight$$6);
+      outputBuffer$$6[v4788] = v10782;
+      var v4789 = outputOffset$$3;
+      outputOffset$$3 = outputOffset$$3 + 1;
+      var v10114 = pixelOffset$$6;
+      pixelOffset$$6 = pixelOffset$$6 + 1;
+      var v10783 = Math.round(output$$3[v10114] / ratioWeight$$6);
+      outputBuffer$$6[v4789] = v10783;
+      var v4790 = outputOffset$$3;
+      outputOffset$$3 = outputOffset$$3 + 1;
+      var v10115 = pixelOffset$$6;
+      pixelOffset$$6 = pixelOffset$$6 + 1;
+      var v10784 = Math.round(output$$3[v10115] / ratioWeight$$6);
+      outputBuffer$$6[v4790] = v10784;
+      var v4791 = outputOffset$$3;
+      outputOffset$$3 = outputOffset$$3 + 1;
       var v10116 = pixelOffset$$6;
       pixelOffset$$6 = pixelOffset$$6 + 1;
       var v10785 = Math.round(output$$3[v10116] / ratioWeight$$6);
-      outputBuffer$$6[v4788] = v10785;
-      var v4789 = outputOffset$$3;
-      outputOffset$$3 = outputOffset$$3 + 1;
-      var v10117 = pixelOffset$$6;
-      pixelOffset$$6 = pixelOffset$$6 + 1;
-      var v10786 = Math.round(output$$3[v10117] / ratioWeight$$6);
-      outputBuffer$$6[v4789] = v10786;
-      var v4790 = outputOffset$$3;
-      outputOffset$$3 = outputOffset$$3 + 1;
-      var v10118 = pixelOffset$$6;
-      pixelOffset$$6 = pixelOffset$$6 + 1;
-      var v10787 = Math.round(output$$3[v10118] / ratioWeight$$6);
-      outputBuffer$$6[v4790] = v10787;
-      var v4791 = outputOffset$$3;
-      outputOffset$$3 = outputOffset$$3 + 1;
-      var v10119 = pixelOffset$$6;
-      pixelOffset$$6 = pixelOffset$$6 + 1;
-      var v10788 = Math.round(output$$3[v10119] / ratioWeight$$6);
-      outputBuffer$$6[v4791] = v10788;
+      outputBuffer$$6[v4791] = v10785;
       v4792 = pixelOffset$$6 < this.targetWidthMultipliedByChannels;
     }
     v4793 = outputOffset$$3 < this.finalResultSize;
@@ -12114,11 +12114,11 @@ function v67(buffer$$21) {
       v4805 = pixelOffset$$4 < this.targetWidthMultipliedByChannels;
     }
     weight$$4 = ratioWeight$$4;
-    var v8039 = weight$$4 > 0;
-    if (v8039) {
-      v8039 = actualPosition$$2 < this.widthPassResultSize;
+    var v8036 = weight$$4 > 0;
+    if (v8036) {
+      v8036 = actualPosition$$2 < this.widthPassResultSize;
     }
-    var v4816 = v8039;
+    var v4816 = v8036;
     do {
       amountToNext$$2 = 1 + actualPosition$$2 - currentPosition$$2;
       if (weight$$4 >= amountToNext$$2) {
@@ -12127,22 +12127,22 @@ function v67(buffer$$21) {
         for (;v4810;) {
           var v4807 = pixelOffset$$4;
           pixelOffset$$4 = pixelOffset$$4 + 1;
-          var v9442 = output$$2[v4807];
-          var v10396 = actualPosition$$2;
+          var v9439 = output$$2[v4807];
+          var v10393 = actualPosition$$2;
           actualPosition$$2 = actualPosition$$2 + 1;
-          output$$2[v4807] = v9442 + buffer$$21[v10396] * amountToNext$$2;
+          output$$2[v4807] = v9439 + buffer$$21[v10393] * amountToNext$$2;
           var v4808 = pixelOffset$$4;
           pixelOffset$$4 = pixelOffset$$4 + 1;
-          var v9444 = output$$2[v4808];
-          var v10397 = actualPosition$$2;
+          var v9441 = output$$2[v4808];
+          var v10394 = actualPosition$$2;
           actualPosition$$2 = actualPosition$$2 + 1;
-          output$$2[v4808] = v9444 + buffer$$21[v10397] * amountToNext$$2;
+          output$$2[v4808] = v9441 + buffer$$21[v10394] * amountToNext$$2;
           var v4809 = pixelOffset$$4;
           pixelOffset$$4 = pixelOffset$$4 + 1;
-          var v9446 = output$$2[v4809];
-          var v10398 = actualPosition$$2;
+          var v9443 = output$$2[v4809];
+          var v10395 = actualPosition$$2;
           actualPosition$$2 = actualPosition$$2 + 1;
-          output$$2[v4809] = v9446 + buffer$$21[v10398] * amountToNext$$2;
+          output$$2[v4809] = v9443 + buffer$$21[v10395] * amountToNext$$2;
           v4810 = pixelOffset$$4 < this.targetWidthMultipliedByChannels;
         }
         currentPosition$$2 = actualPosition$$2;
@@ -12154,54 +12154,54 @@ function v67(buffer$$21) {
         for (;v4814;) {
           var v4811 = pixelOffset$$4;
           pixelOffset$$4 = pixelOffset$$4 + 1;
-          var v9448 = output$$2[v4811];
-          var v10399 = amountToNext$$2;
+          var v9445 = output$$2[v4811];
+          var v10396 = amountToNext$$2;
           amountToNext$$2 = amountToNext$$2 + 1;
-          output$$2[v4811] = v9448 + buffer$$21[v10399] * weight$$4;
+          output$$2[v4811] = v9445 + buffer$$21[v10396] * weight$$4;
           var v4812 = pixelOffset$$4;
           pixelOffset$$4 = pixelOffset$$4 + 1;
-          var v9450 = output$$2[v4812];
-          var v10400 = amountToNext$$2;
+          var v9447 = output$$2[v4812];
+          var v10397 = amountToNext$$2;
           amountToNext$$2 = amountToNext$$2 + 1;
-          output$$2[v4812] = v9450 + buffer$$21[v10400] * weight$$4;
+          output$$2[v4812] = v9447 + buffer$$21[v10397] * weight$$4;
           var v4813 = pixelOffset$$4;
           pixelOffset$$4 = pixelOffset$$4 + 1;
-          var v9452 = output$$2[v4813];
-          var v10401 = amountToNext$$2;
+          var v9449 = output$$2[v4813];
+          var v10398 = amountToNext$$2;
           amountToNext$$2 = amountToNext$$2 + 1;
-          output$$2[v4813] = v9452 + buffer$$21[v10401] * weight$$4;
+          output$$2[v4813] = v9449 + buffer$$21[v10398] * weight$$4;
           v4814 = pixelOffset$$4 < this.targetWidthMultipliedByChannels;
         }
         currentPosition$$2 = currentPosition$$2 + weight$$4;
         break;
       }
-      var v8044 = weight$$4 > 0;
-      if (v8044) {
-        v8044 = actualPosition$$2 < this.widthPassResultSize;
+      var v8041 = weight$$4 > 0;
+      if (v8041) {
+        v8041 = actualPosition$$2 < this.widthPassResultSize;
       }
-      v4816 = v8044;
+      v4816 = v8041;
     } while (v4816);
     pixelOffset$$4 = 0;
     var v4820 = pixelOffset$$4 < this.targetWidthMultipliedByChannels;
     for (;v4820;) {
       var v4817 = outputOffset$$2;
       outputOffset$$2 = outputOffset$$2 + 1;
-      var v10128 = pixelOffset$$4;
+      var v10125 = pixelOffset$$4;
       pixelOffset$$4 = pixelOffset$$4 + 1;
-      var v10789 = Math.round(output$$2[v10128] / ratioWeight$$4);
-      outputBuffer$$4[v4817] = v10789;
+      var v10786 = Math.round(output$$2[v10125] / ratioWeight$$4);
+      outputBuffer$$4[v4817] = v10786;
       var v4818 = outputOffset$$2;
       outputOffset$$2 = outputOffset$$2 + 1;
-      var v10129 = pixelOffset$$4;
+      var v10126 = pixelOffset$$4;
       pixelOffset$$4 = pixelOffset$$4 + 1;
-      var v10790 = Math.round(output$$2[v10129] / ratioWeight$$4);
-      outputBuffer$$4[v4818] = v10790;
+      var v10787 = Math.round(output$$2[v10126] / ratioWeight$$4);
+      outputBuffer$$4[v4818] = v10787;
       var v4819 = outputOffset$$2;
       outputOffset$$2 = outputOffset$$2 + 1;
-      var v10130 = pixelOffset$$4;
+      var v10127 = pixelOffset$$4;
       pixelOffset$$4 = pixelOffset$$4 + 1;
-      var v10791 = Math.round(output$$2[v10130] / ratioWeight$$4);
-      outputBuffer$$4[v4819] = v10791;
+      var v10788 = Math.round(output$$2[v10127] / ratioWeight$$4);
+      outputBuffer$$4[v4819] = v10788;
       v4820 = pixelOffset$$4 < this.targetWidthMultipliedByChannels;
     }
     v4821 = outputOffset$$2 < this.finalResultSize;
@@ -12270,11 +12270,11 @@ function v65(buffer$$19) {
       v4837 = line$$1 < this.originalHeightMultipliedByChannels;
     }
     weight$$2 = ratioWeight$$2;
-    var v8068 = weight$$2 > 0;
-    if (v8068) {
-      v8068 = actualPosition$$1 < this.originalWidthMultipliedByChannels;
+    var v8065 = weight$$2 > 0;
+    if (v8065) {
+      v8065 = actualPosition$$1 < this.originalWidthMultipliedByChannels;
     }
-    var v4850 = v8068;
+    var v4850 = v8065;
     do {
       amountToNext$$1 = 1 + actualPosition$$1 - currentPosition$$1;
       if (weight$$2 >= amountToNext$$1) {
@@ -12284,22 +12284,22 @@ function v65(buffer$$19) {
         for (;v4843;) {
           var v4839 = line$$1;
           line$$1 = line$$1 + 1;
-          var v9466 = output$$1[v4839];
-          var v10402 = pixelOffset$$2;
+          var v9463 = output$$1[v4839];
+          var v10399 = pixelOffset$$2;
           pixelOffset$$2 = pixelOffset$$2 + 1;
-          output$$1[v4839] = v9466 + buffer$$19[v10402] * amountToNext$$1;
+          output$$1[v4839] = v9463 + buffer$$19[v10399] * amountToNext$$1;
           var v4840 = line$$1;
           line$$1 = line$$1 + 1;
-          var v9468 = output$$1[v4840];
-          var v10403 = pixelOffset$$2;
+          var v9465 = output$$1[v4840];
+          var v10400 = pixelOffset$$2;
           pixelOffset$$2 = pixelOffset$$2 + 1;
-          output$$1[v4840] = v9468 + buffer$$19[v10403] * amountToNext$$1;
+          output$$1[v4840] = v9465 + buffer$$19[v10400] * amountToNext$$1;
           var v4841 = line$$1;
           line$$1 = line$$1 + 1;
-          var v9470 = output$$1[v4841];
-          var v10404 = pixelOffset$$2;
+          var v9467 = output$$1[v4841];
+          var v10401 = pixelOffset$$2;
           pixelOffset$$2 = pixelOffset$$2 + 1;
-          output$$1[v4841] = v9470 + buffer$$19[v10404] * amountToNext$$1;
+          output$$1[v4841] = v9467 + buffer$$19[v10401] * amountToNext$$1;
           var v4842 = line$$1;
           line$$1 = line$$1 + 1;
           output$$1[v4842] = output$$1[v4842] + buffer$$19[pixelOffset$$2] * amountToNext$$1;
@@ -12315,22 +12315,22 @@ function v65(buffer$$19) {
         for (;v4848;) {
           var v4844 = line$$1;
           line$$1 = line$$1 + 1;
-          var v9474 = output$$1[v4844];
-          var v10405 = pixelOffset$$2;
+          var v9471 = output$$1[v4844];
+          var v10402 = pixelOffset$$2;
           pixelOffset$$2 = pixelOffset$$2 + 1;
-          output$$1[v4844] = v9474 + buffer$$19[v10405] * weight$$2;
+          output$$1[v4844] = v9471 + buffer$$19[v10402] * weight$$2;
           var v4845 = line$$1;
           line$$1 = line$$1 + 1;
-          var v9476 = output$$1[v4845];
-          var v10406 = pixelOffset$$2;
+          var v9473 = output$$1[v4845];
+          var v10403 = pixelOffset$$2;
           pixelOffset$$2 = pixelOffset$$2 + 1;
-          output$$1[v4845] = v9476 + buffer$$19[v10406] * weight$$2;
+          output$$1[v4845] = v9473 + buffer$$19[v10403] * weight$$2;
           var v4846 = line$$1;
           line$$1 = line$$1 + 1;
-          var v9478 = output$$1[v4846];
-          var v10407 = pixelOffset$$2;
+          var v9475 = output$$1[v4846];
+          var v10404 = pixelOffset$$2;
           pixelOffset$$2 = pixelOffset$$2 + 1;
-          output$$1[v4846] = v9478 + buffer$$19[v10407] * weight$$2;
+          output$$1[v4846] = v9475 + buffer$$19[v10404] * weight$$2;
           var v4847 = line$$1;
           line$$1 = line$$1 + 1;
           output$$1[v4847] = output$$1[v4847] + buffer$$19[pixelOffset$$2] * weight$$2;
@@ -12340,11 +12340,11 @@ function v65(buffer$$19) {
         currentPosition$$1 = currentPosition$$1 + weight$$2;
         break;
       }
-      var v8073 = weight$$2 > 0;
-      if (v8073) {
-        v8073 = actualPosition$$1 < this.originalWidthMultipliedByChannels;
+      var v8070 = weight$$2 > 0;
+      if (v8070) {
+        v8070 = actualPosition$$1 < this.originalWidthMultipliedByChannels;
       }
-      v4850 = v8073;
+      v4850 = v8070;
     } while (v4850);
     line$$1 = 0;
     pixelOffset$$2 = outputOffset$$1;
@@ -12352,22 +12352,22 @@ function v65(buffer$$19) {
     for (;v4855;) {
       var v4851 = pixelOffset$$2;
       pixelOffset$$2 = pixelOffset$$2 + 1;
-      var v9483 = line$$1;
+      var v9480 = line$$1;
       line$$1 = line$$1 + 1;
-      outputBuffer$$2[v4851] = output$$1[v9483] / ratioWeight$$2;
+      outputBuffer$$2[v4851] = output$$1[v9480] / ratioWeight$$2;
       var v4852 = pixelOffset$$2;
       pixelOffset$$2 = pixelOffset$$2 + 1;
-      var v9484 = line$$1;
+      var v9481 = line$$1;
       line$$1 = line$$1 + 1;
-      outputBuffer$$2[v4852] = output$$1[v9484] / ratioWeight$$2;
+      outputBuffer$$2[v4852] = output$$1[v9481] / ratioWeight$$2;
       var v4853 = pixelOffset$$2;
       pixelOffset$$2 = pixelOffset$$2 + 1;
-      var v9485 = line$$1;
+      var v9482 = line$$1;
       line$$1 = line$$1 + 1;
-      outputBuffer$$2[v4853] = output$$1[v9485] / ratioWeight$$2;
-      var v8078 = line$$1;
+      outputBuffer$$2[v4853] = output$$1[v9482] / ratioWeight$$2;
+      var v8075 = line$$1;
       line$$1 = line$$1 + 1;
-      outputBuffer$$2[pixelOffset$$2] = output$$1[v8078] / ratioWeight$$2;
+      outputBuffer$$2[pixelOffset$$2] = output$$1[v8075] / ratioWeight$$2;
       pixelOffset$$2 = pixelOffset$$2 + nextLineOffsetTargetWidth$$1;
       v4855 = line$$1 < this.originalHeightMultipliedByChannels;
     }
@@ -12434,11 +12434,11 @@ function v63(buffer$$17) {
       v4870 = line < this.originalHeightMultipliedByChannels;
     }
     weight = ratioWeight;
-    var v8096 = weight > 0;
-    if (v8096) {
-      v8096 = actualPosition < this.originalWidthMultipliedByChannels;
+    var v8093 = weight > 0;
+    if (v8093) {
+      v8093 = actualPosition < this.originalWidthMultipliedByChannels;
     }
-    var v4881 = v8096;
+    var v4881 = v8093;
     do {
       amountToNext = 1 + actualPosition - currentPosition;
       if (weight >= amountToNext) {
@@ -12448,16 +12448,16 @@ function v63(buffer$$17) {
         for (;v4875;) {
           var v4872 = line;
           line = line + 1;
-          var v9492 = output[v4872];
-          var v10408 = pixelOffset;
+          var v9489 = output[v4872];
+          var v10405 = pixelOffset;
           pixelOffset = pixelOffset + 1;
-          output[v4872] = v9492 + buffer$$17[v10408] * amountToNext;
+          output[v4872] = v9489 + buffer$$17[v10405] * amountToNext;
           var v4873 = line;
           line = line + 1;
-          var v9494 = output[v4873];
-          var v10409 = pixelOffset;
+          var v9491 = output[v4873];
+          var v10406 = pixelOffset;
           pixelOffset = pixelOffset + 1;
-          output[v4873] = v9494 + buffer$$17[v10409] * amountToNext;
+          output[v4873] = v9491 + buffer$$17[v10406] * amountToNext;
           var v4874 = line;
           line = line + 1;
           output[v4874] = output[v4874] + buffer$$17[pixelOffset] * amountToNext;
@@ -12473,16 +12473,16 @@ function v63(buffer$$17) {
         for (;v4879;) {
           var v4876 = line;
           line = line + 1;
-          var v9498 = output[v4876];
-          var v10410 = pixelOffset;
+          var v9495 = output[v4876];
+          var v10407 = pixelOffset;
           pixelOffset = pixelOffset + 1;
-          output[v4876] = v9498 + buffer$$17[v10410] * weight;
+          output[v4876] = v9495 + buffer$$17[v10407] * weight;
           var v4877 = line;
           line = line + 1;
-          var v9500 = output[v4877];
-          var v10411 = pixelOffset;
+          var v9497 = output[v4877];
+          var v10408 = pixelOffset;
           pixelOffset = pixelOffset + 1;
-          output[v4877] = v9500 + buffer$$17[v10411] * weight;
+          output[v4877] = v9497 + buffer$$17[v10408] * weight;
           var v4878 = line;
           line = line + 1;
           output[v4878] = output[v4878] + buffer$$17[pixelOffset] * weight;
@@ -12492,11 +12492,11 @@ function v63(buffer$$17) {
         currentPosition = currentPosition + weight;
         break;
       }
-      var v8101 = weight > 0;
-      if (v8101) {
-        v8101 = actualPosition < this.originalWidthMultipliedByChannels;
+      var v8098 = weight > 0;
+      if (v8098) {
+        v8098 = actualPosition < this.originalWidthMultipliedByChannels;
       }
-      v4881 = v8101;
+      v4881 = v8098;
     } while (v4881);
     line = 0;
     pixelOffset = outputOffset;
@@ -12504,17 +12504,17 @@ function v63(buffer$$17) {
     for (;v4885;) {
       var v4882 = pixelOffset;
       pixelOffset = pixelOffset + 1;
-      var v9505 = line;
+      var v9502 = line;
       line = line + 1;
-      outputBuffer[v4882] = output[v9505] / ratioWeight;
+      outputBuffer[v4882] = output[v9502] / ratioWeight;
       var v4883 = pixelOffset;
       pixelOffset = pixelOffset + 1;
-      var v9506 = line;
+      var v9503 = line;
       line = line + 1;
-      outputBuffer[v4883] = output[v9506] / ratioWeight;
-      var v8105 = line;
+      outputBuffer[v4883] = output[v9503] / ratioWeight;
+      var v8102 = line;
       line = line + 1;
-      outputBuffer[pixelOffset] = output[v8105] / ratioWeight;
+      outputBuffer[pixelOffset] = output[v8102] / ratioWeight;
       pixelOffset = pixelOffset + nextLineOffsetTargetWidth;
       v4885 = line < this.originalHeightMultipliedByChannels;
     }
@@ -12524,28 +12524,28 @@ function v63(buffer$$17) {
   return outputBuffer;
 }
 function v62() {
-  var v10159 = this.widthOriginal > 0;
-  if (v10159) {
-    v10159 = this.heightOriginal > 0;
+  var v10156 = this.widthOriginal > 0;
+  if (v10156) {
+    v10156 = this.heightOriginal > 0;
   }
-  var v9507 = v10159;
-  if (v9507) {
-    v9507 = this.targetWidth > 0;
+  var v9504 = v10156;
+  if (v9504) {
+    v9504 = this.targetWidth > 0;
   }
-  var v8108 = v9507;
-  if (v8108) {
-    v8108 = this.targetHeight > 0;
+  var v8105 = v9504;
+  if (v8105) {
+    v8105 = this.targetHeight > 0;
   }
-  if (v8108) {
+  if (v8105) {
     if (this.widthOriginal == this.targetWidth) {
       this.resizeWidth = this.bypassResizer;
     } else {
       this.ratioWeightWidthPass = this.widthOriginal / this.targetWidth;
-      var v8111 = this.ratioWeightWidthPass < 1;
-      if (v8111) {
-        v8111 = this.interpolationPass;
+      var v8108 = this.ratioWeightWidthPass < 1;
+      if (v8108) {
+        v8108 = this.interpolationPass;
       }
-      if (v8111) {
+      if (v8108) {
         JAM.call(this.initializeFirstPassBuffers, this, [true]);
         var v4889;
         if (this.colorChannels == 4) {
@@ -12569,11 +12569,11 @@ function v62() {
       this.resizeHeight = this.bypassResizer;
     } else {
       this.ratioWeightHeightPass = this.heightOriginal / this.targetHeight;
-      var v8116 = this.ratioWeightHeightPass < 1;
-      if (v8116) {
-        v8116 = this.interpolationPass;
+      var v8113 = this.ratioWeightHeightPass < 1;
+      if (v8113) {
+        v8113 = this.interpolationPass;
       }
-      if (v8116) {
+      if (v8113) {
         JAM.call(this.initializeSecondPassBuffers, this, [true]);
         this.resizeHeight = this.resizeHeightInterpolated;
       } else {
@@ -12608,9 +12608,9 @@ function v61() {
       audioSource.loop = false;
       XAudioJSSampleRate = webAudioActualSampleRate = audioContextHandle.sampleRate;
       var v4899 = audioSource;
-      var v10792 = JAM.call(audioContextHandle.createBuffer, audioContextHandle, [1, 1, webAudioActualSampleRate], JAM.policy.p1);
-      v4899.buffer = v10792;
-      audioNode = JAM.call(audioContextHandle.createJavaScriptNode, audioContextHandle, [samplesPerCallback, 1, 2], JAM.policy.p1);
+      var v10789 = JAM.call(audioContextHandle.createBuffer, audioContextHandle, [1, 1, webAudioActualSampleRate], JAM.policy.p1);
+      v4899.buffer = v10789;
+      audioNode = audioContextHandle.createJavaScriptNode();
       audioNode.onaudioprocess = audioOutputEvent;
     } catch (error$$16) {
       return;
@@ -12620,19 +12620,19 @@ function v61() {
   return;
 }
 function v60() {
-  var v9514 = !this.flashInitialized;
-  if (v9514) {
-    v9514 = this.audioHandleFlash;
+  var v9511 = !this.flashInitialized;
+  if (v9511) {
+    v9511 = this.audioHandleFlash;
   }
-  var v8118 = v9514;
-  if (v8118) {
-    v8118 = this.audioHandleFlash.initialize;
+  var v8115 = v9511;
+  if (v8115) {
+    v8115 = this.audioHandleFlash.initialize;
   }
-  if (v8118) {
+  if (v8115) {
     this.flashInitialized = true;
     var v4901 = this.audioHandleFlash;
     JAM.call(v4901.initialize, v4901, [this.audioChannels, XAudioJSVolume], JAM.policy.p1);
-    resetCallbackAPIAudioBuffer(44100, samplesPerCallback);
+    resetCallbackAPIAudioBuffer(44100);
   }
   return this.flashInitialized;
 }
@@ -12653,20 +12653,20 @@ function v59(buffer$$16) {
   var v4914 = length$$16 > samplesAccepted;
   for (;v4914;) {
     var v4912 = this.mozAudioTail;
-    var v8123 = index$$46;
+    var v8120 = index$$46;
     index$$46 = index$$46 + 1;
-    v4912.push(buffer$$16[v8123]);
+    v4912.push(buffer$$16[v8120]);
     --length$$16;
     v4914 = length$$16 > samplesAccepted;
   }
   return;
 }
 function v58(newVolume) {
-  var v8124 = newVolume >= 0;
-  if (v8124) {
-    v8124 = newVolume <= 1;
+  var v8121 = newVolume >= 0;
+  if (v8121) {
+    v8121 = newVolume <= 1;
   }
-  if (v8124) {
+  if (v8121) {
     XAudioJSVolume = newVolume;
     if (this.checkFlashInit()) {
       var v4915 = this.audioHandleFlash;
@@ -12707,7 +12707,7 @@ function v57() {
 }
 function v55() {
   if (launchedContext) {
-    resetCallbackAPIAudioBuffer(webAudioActualSampleRate, samplesPerCallback);
+    resetCallbackAPIAudioBuffer(webAudioActualSampleRate);
     this.audioType = 1;
   } else {
     throw new Error("");
@@ -12720,8 +12720,8 @@ function v54() {
   return;
 }
 function v53() {
-  var v10793 = new Audio;
-  this.audioHandleMoz = v10793;
+  var v10790 = new Audio;
+  this.audioHandleMoz = v10790;
   var v4926 = this.audioHandleMoz;
   JAM.call(v4926.mozSetup, v4926, [this.audioChannels, XAudioJSSampleRate], JAM.policy.p1);
   this.samplesAlreadyWritten = 0;
@@ -12733,24 +12733,24 @@ function v53() {
   }
   var emptySampleFrame = v4928;
   var prebufferAmount = 0;
-  var v8127 = navigator.platform != "MacIntel";
-  if (v8127) {
-    v8127 = navigator.platform != "MacPPC";
+  var v8124 = navigator.platform != "MacIntel";
+  if (v8124) {
+    v8124 = navigator.platform != "MacPPC";
   }
-  if (v8127) {
+  if (v8124) {
     var v4929 = this.audioHandleMoz.mozCurrentSampleOffset() == 0;
     for (;v4929;) {
-      var v9522 = this.audioHandleMoz;
-      prebufferAmount = prebufferAmount + JAM.call(v9522.mozWriteAudio, v9522, [emptySampleFrame]);
+      var v9519 = this.audioHandleMoz;
+      prebufferAmount = prebufferAmount + JAM.call(v9519.mozWriteAudio, v9519, [emptySampleFrame]);
       v4929 = this.audioHandleMoz.mozCurrentSampleOffset() == 0;
     }
     var samplesToDoubleBuffer = prebufferAmount / this.audioChannels;
     var index$$45 = 0;
     var v4931 = index$$45 < samplesToDoubleBuffer;
     for (;v4931;) {
-      var v8131 = this.samplesAlreadyWritten;
-      var v9524 = this.audioHandleMoz;
-      this.samplesAlreadyWritten = v8131 + JAM.call(v9524.mozWriteAudio, v9524, [emptySampleFrame]);
+      var v8128 = this.samplesAlreadyWritten;
+      var v9521 = this.audioHandleMoz;
+      this.samplesAlreadyWritten = v8128 + JAM.call(v9521.mozWriteAudio, v9521, [emptySampleFrame]);
       index$$45++;
       v4931 = index$$45 < samplesToDoubleBuffer;
     }
@@ -12784,11 +12784,11 @@ function v51() {
       this.callbackBasedExecuteCallback();
     } else {
       if (this.audioType == 2) {
-        var v8138 = this.checkFlashInit();
-        if (!v8138) {
-          v8138 = launchedContext;
+        var v8135 = this.checkFlashInit();
+        if (!v8135) {
+          v8135 = launchedContext;
         }
-        if (v8138) {
+        if (v8135) {
           this.callbackBasedExecuteCallback();
         } else {
           if (this.mozAudioFound) {
@@ -12819,15 +12819,15 @@ function v48() {
     return this.samplesAlreadyWritten - this.audioHandleMoz.mozCurrentSampleOffset();
   } else {
     if (this.audioType == 1) {
-      return(resampledSamplesLeft() * resampleControl.ratioWeight >> this.audioChannels - 1 << this.audioChannels - 1) + audioBufferSize;
+      return (resampledSamplesLeft() * resampleControl.ratioWeight >> this.audioChannels - 1 << this.audioChannels - 1) + audioBufferSize;
     } else {
       if (this.audioType == 2) {
-        var v8145 = this.checkFlashInit();
-        if (!v8145) {
-          v8145 = launchedContext;
+        var v8142 = this.checkFlashInit();
+        if (!v8142) {
+          v8142 = launchedContext;
         }
-        if (v8145) {
-          return(resampledSamplesLeft() * resampleControl.ratioWeight >> this.audioChannels - 1 << this.audioChannels - 1) + audioBufferSize;
+        if (v8142) {
+          return (resampledSamplesLeft() * resampleControl.ratioWeight >> this.audioChannels - 1 << this.audioChannels - 1) + audioBufferSize;
         } else {
           if (this.mozAudioFound) {
             return this.samplesAlreadyWritten - this.audioHandleMoz.mozCurrentSampleOffset();
@@ -12846,11 +12846,11 @@ function v47(buffer$$15) {
       JAM.call(this.callbackBasedWriteAudioNoCallback, this, [buffer$$15]);
     } else {
       if (this.audioType == 2) {
-        var v8152 = this.checkFlashInit();
-        if (!v8152) {
-          v8152 = launchedContext;
+        var v8149 = this.checkFlashInit();
+        if (!v8149) {
+          v8149 = launchedContext;
         }
-        if (v8152) {
+        if (v8149) {
           JAM.call(this.callbackBasedWriteAudioNoCallback, this, [buffer$$15]);
         } else {
           if (this.mozAudioFound) {
@@ -12870,11 +12870,11 @@ function v46(buffer$$14) {
       JAM.call(this.callbackBasedWriteAudio, this, [buffer$$14]);
     } else {
       if (this.audioType == 2) {
-        var v8156 = this.checkFlashInit();
-        if (!v8156) {
-          v8156 = launchedContext;
+        var v8153 = this.checkFlashInit();
+        if (!v8153) {
+          v8153 = launchedContext;
         }
-        if (v8156) {
+        if (v8153) {
           JAM.call(this.callbackBasedWriteAudio, this, [buffer$$14]);
         } else {
           if (this.mozAudioFound) {
@@ -12889,22 +12889,22 @@ function v46(buffer$$14) {
 function v45(buffer$$13) {
   var length$$15 = buffer$$13.length;
   var bufferCounter = 0;
-  var v8157 = bufferCounter < length$$15;
-  if (v8157) {
-    v8157 = audioBufferSize < webAudioMaxBufferSize;
+  var v8154 = bufferCounter < length$$15;
+  if (v8154) {
+    v8154 = audioBufferSize < webAudioMaxBufferSize;
   }
-  var v4968 = v8157;
+  var v4968 = v8154;
   for (;v4968;) {
     var v4967 = audioBufferSize;
     audioBufferSize = audioBufferSize + 1;
-    var v8158 = bufferCounter;
+    var v8155 = bufferCounter;
     bufferCounter = bufferCounter + 1;
-    JAM.set(audioContextSampleBuffer, v4967, buffer$$13[v8158]);
-    var v8159 = bufferCounter < length$$15;
-    if (v8159) {
-      v8159 = audioBufferSize < webAudioMaxBufferSize;
+    JAM.set(audioContextSampleBuffer, v4967, buffer$$13[v8155]);
+    var v8156 = bufferCounter < length$$15;
+    if (v8156) {
+      v8156 = audioBufferSize < webAudioMaxBufferSize;
     }
-    v4968 = v8159;
+    v4968 = v8156;
   }
   return;
 }
@@ -12924,10 +12924,10 @@ function v42(buffer$$10) {
 }
 function v41() {
   try {
-    var v10794 = new Float32Array(this.outputBufferSize);
-    this.outputBuffer = v10794;
-    var v10795 = new Float32Array(this.channels);
-    this.lastOutput = v10795;
+    var v10791 = new Float32Array(this.outputBufferSize);
+    this.outputBuffer = v10791;
+    var v10792 = new Float32Array(this.channels);
+    this.lastOutput = v10792;
   } catch (error$$6) {
     this.outputBuffer = [];
     this.lastOutput = [];
@@ -12999,14 +12999,14 @@ function v38() {
   channel = 0;
   var v4981 = channel < this.channels;
   for (;v4981;) {
-    var v10169 = "output" + channel + " += buffer[actualPosition";
-    var v10416;
+    var v10166 = "output" + channel + " += buffer[actualPosition";
+    var v10413;
     if (channel > 0) {
-      v10416 = " + " + channel;
+      v10413 = " + " + channel;
     } else {
-      v10416 = "";
+      v10413 = "";
     }
-    toCompile = toCompile + (v10169 + v10416 + "] * weight;");
+    toCompile = toCompile + (v10166 + v10413 + "] * weight;");
     ++channel;
     v4981 = channel < this.channels;
   }
@@ -13027,20 +13027,20 @@ function v38() {
     v4983 = channel < this.channels;
   }
   toCompile = toCompile + 'this.tailExists = true;          break;        }      } while (actualPosition < bufferLength);      return this.bufferSlice(outputOffset);    }    else {      return (this.noReturn) ? 0 : [];    }  }  else {    throw(new Error("Buffer was of incorrect sample length."));  }';
-  var v10796 = JAM.call(Function, null, ["buffer", toCompile]);
-  this.interpolate = v10796;
+  var v10793 = JAM.call(Function, null, ["buffer", toCompile]);
+  this.interpolate = v10793;
   return;
 }
 function v37() {
-  var v9542 = this.fromSampleRate > 0;
-  if (v9542) {
-    v9542 = this.toSampleRate > 0;
+  var v9539 = this.fromSampleRate > 0;
+  if (v9539) {
+    v9539 = this.toSampleRate > 0;
   }
-  var v8182 = v9542;
-  if (v8182) {
-    v8182 = this.channels > 0;
+  var v8179 = v9539;
+  if (v8179) {
+    v8179 = this.channels > 0;
   }
-  if (v8182) {
+  if (v8179) {
     if (this.fromSampleRate == this.toSampleRate) {
       this.resampler = this.bypassResampler;
       this.ratioWeight = 1;
@@ -13096,10 +13096,10 @@ function v34(runner$$2) {
   }
   function RunNextTearDown() {
     try {
-      var v8188 = suite$$1.benchmarks;
-      var v8189 = index$$40;
+      var v8185 = suite$$1.benchmarks;
+      var v8186 = index$$40;
       index$$40 = index$$40 + 1;
-      v8188[v8189].TearDown();
+      v8185[v8186].TearDown();
     } catch (e$$6) {
       JAM.call(suite$$1.NotifyError, suite$$1, [e$$6]);
       return null;
@@ -13120,24 +13120,24 @@ function v33(benchmark$$1, data$$18) {
     var elapsed = 0;
     var start$$5 = new Date;
     var i$$5 = 0;
-    var v8190;
+    var v8187;
     if (doDeterministic$$1) {
-      v8190 = i$$5 < benchmark$$1.deterministicIterations;
+      v8187 = i$$5 < benchmark$$1.deterministicIterations;
     } else {
-      v8190 = elapsed < 1E3;
+      v8187 = elapsed < 1E3;
     }
-    var v4996 = v8190;
+    var v4996 = v8187;
     for (;v4996;) {
       benchmark$$1.run();
       elapsed = new Date - start$$5;
       i$$5++;
-      var v8191;
+      var v8188;
       if (doDeterministic$$1) {
-        v8191 = i$$5 < benchmark$$1.deterministicIterations;
+        v8188 = i$$5 < benchmark$$1.deterministicIterations;
       } else {
-        v8191 = elapsed < 1E3;
+        v8188 = elapsed < 1E3;
       }
-      v4996 = v8191;
+      v4996 = v8188;
     }
     if (data$$19 != null) {
       data$$19.runs = data$$19.runs + i$$5;
@@ -13160,16 +13160,16 @@ function v33(benchmark$$1, data$$18) {
     v4999 = benchmark$$1.doDeterministic;
   }
   var doDeterministic$$1 = v4999;
-  var v8196 = !doWarmup$$1;
-  if (v8196) {
-    v8196 = data$$18 == null;
+  var v8193 = !doWarmup$$1;
+  if (v8193) {
+    v8193 = data$$18 == null;
   }
-  if (v8196) {
+  if (v8193) {
     data$$18 = {runs:0, elapsed:0};
   }
   if (data$$18 == null) {
     Measure(null);
-    return{runs:0, elapsed:0};
+    return {runs:0, elapsed:0};
   } else {
     Measure(data$$18);
     if (data$$18.runs < benchmark$$1.minIterations) {
@@ -13276,7 +13276,8 @@ function v26(measurements) {
   }
   return JAM.call(Math.pow, Math, [Math.E, log$$1 / measurements.length], JAM.policy.p1);
 }
-function v25(numbers) {
+function v25() {
+  var numbers = BenchmarkSuite.scores;
   var log = 0;
   var i$$2 = 0;
   var v5044 = i$$2 < numbers.length;
@@ -13299,13 +13300,13 @@ function v24() {
   }
   return result;
 }
-function v23(runner, skipBenchmarks$$1) {
+function v23() {
   function RunStep() {
-    var v8227 = continuation;
-    if (!v8227) {
-      v8227 = index$$39 < length$$11;
+    var v8224 = continuation;
+    if (!v8224) {
+      v8224 = index$$39 < length$$11;
     }
-    var v5053 = v8227;
+    var v5053 = v8224;
     for (;v5053;) {
       if (continuation) {
         continuation = continuation();
@@ -13322,38 +13323,40 @@ function v23(runner, skipBenchmarks$$1) {
           continuation = JAM.call(suite.RunStep, suite, [runner]);
         }
       }
-      var v9557 = continuation;
-      if (v9557) {
-        v9557 = typeof window != "undefined";
+      var v9554 = continuation;
+      if (v9554) {
+        v9554 = typeof window != "undefined";
       }
-      var v8229 = v9557;
-      if (v8229) {
-        v8229 = window.setTimeout;
+      var v8226 = v9554;
+      if (v8226) {
+        v8226 = window.setTimeout;
       }
-      if (v8229) {
+      if (v8226) {
         JAM.call(window.setTimeout, window, [RunStep, 25], JAM.policy.p1);
         return;
       }
-      var v8230 = continuation;
-      if (!v8230) {
-        v8230 = index$$39 < length$$11;
+      var v8227 = continuation;
+      if (!v8227) {
+        v8227 = index$$39 < length$$11;
       }
-      v5053 = v8230;
+      v5053 = v8227;
     }
     if (runner.NotifyScore) {
-      var score = JAM.call(BenchmarkSuite.GeometricMean, BenchmarkSuite, [BenchmarkSuite.scores]);
+      var score = BenchmarkSuite.GeometricMean();
       var formatted = JAM.call(BenchmarkSuite.FormatScore, BenchmarkSuite, [100 * score]);
       JAM.call(runner.NotifyScore, runner, [formatted]);
     }
     return;
   }
-  var v5057;
+  var runner = {NotifyStart:ShowBox, NotifyError:AddError, NotifyResult:AddResult, NotifyScore:AddScore};
+  var skipBenchmarks$$1 = skipBenchmarks;
+  var v5056;
   if (typeof skipBenchmarks$$1 === "undefined") {
-    v5057 = [];
+    v5056 = [];
   } else {
-    v5057 = skipBenchmarks$$1;
+    v5056 = skipBenchmarks$$1;
   }
-  skipBenchmarks$$1 = v5057;
+  skipBenchmarks$$1 = v5056;
   var continuation = null;
   var suites = BenchmarkSuite.suites;
   var length$$11 = suites.length;
@@ -13371,14 +13374,14 @@ function v22() {
       seed = (seed + 3550635116 ^ seed << 9) & 4294967295;
       seed = seed + 4251993797 + (seed << 3) & 4294967295;
       seed = (seed ^ 3042594569 ^ seed >>> 16) & 4294967295;
-      return(seed & 268435455) / 268435456;
+      return (seed & 268435455) / 268435456;
     }
     var seed = 49734321;
     return v20;
   }
-  var v5065 = Math;
-  var v10797 = v21();
-  v5065.random = v10797;
+  var v5064 = Math;
+  var v10794 = v21();
+  v5064.random = v10794;
   return;
 }
 function v19(s$$2) {
@@ -13388,68 +13391,77 @@ function v18() {
   return this.time;
 }
 function v17() {
-  var v10418 = performance.now;
-  if (!v10418) {
-    v10418 = performance.mozNow;
+  var v10415 = performance.now;
+  if (!v10415) {
+    v10415 = performance.mozNow;
   }
-  var v10178 = v10418;
-  if (!v10178) {
-    v10178 = performance.msNow;
+  var v10175 = v10415;
+  if (!v10175) {
+    v10175 = performance.msNow;
   }
-  var v9560 = v10178;
-  if (!v9560) {
-    v9560 = performance.oNow;
+  var v9557 = v10175;
+  if (!v9557) {
+    v9557 = performance.oNow;
   }
-  var v8244 = v9560;
-  if (!v8244) {
-    v8244 = performance.webkitNow;
+  var v8241 = v9557;
+  if (!v8241) {
+    v8241 = performance.webkitNow;
   }
-  var v5066 = v8244;
-  if (!v5066) {
-    v5066 = Date.now;
+  var v5065 = v8241;
+  if (!v5065) {
+    v5065 = Date.now;
   }
-  return v5066;
+  return v5065;
 }
-function Benchmark(name$$30, doWarmup, doDeterministic, deterministicIterations, run$$1, setup, tearDown, rmsResult, minIterations) {
+function Benchmark() {
   function v1() {
     return;
   }
   function v0() {
     return;
   }
+  var name$$30 = "Gameboy";
+  var doWarmup = false;
+  var doDeterministic = false;
+  var deterministicIterations = 20;
+  var run$$1 = runGameboy;
+  var setup = setupGameboy;
+  var tearDown = tearDownGameboy;
+  var rmsResult = null;
+  var minIterations = 4;
   this.name = name$$30;
   this.doWarmup = doWarmup;
   this.doDeterministic = doDeterministic;
   this.deterministicIterations = deterministicIterations;
   this.run = run$$1;
-  var v5067;
+  var v5066;
   if (setup) {
-    v5067 = setup;
+    v5066 = setup;
   } else {
-    v5067 = v0;
+    v5066 = v0;
   }
-  this.Setup = v5067;
-  var v5068;
+  this.Setup = v5066;
+  var v5067;
   if (tearDown) {
-    v5068 = tearDown;
+    v5067 = tearDown;
   } else {
-    v5068 = v1;
+    v5067 = v1;
   }
-  this.TearDown = v5068;
-  var v5069;
+  this.TearDown = v5067;
+  var v5068;
   if (rmsResult) {
-    v5069 = rmsResult;
+    v5068 = rmsResult;
   } else {
-    v5069 = null;
+    v5068 = null;
   }
-  this.rmsResult = v5069;
-  var v5070;
+  this.rmsResult = v5068;
+  var v5069;
   if (minIterations) {
-    v5070 = minIterations;
+    v5069 = minIterations;
   } else {
-    v5070 = 32;
+    v5069 = 32;
   }
-  this.minIterations = v5070;
+  this.minIterations = v5069;
   return;
 }
 function BenchmarkResult(benchmark, time, latency) {
@@ -13466,19 +13478,19 @@ function BenchmarkSuite(name$$31, reference, benchmarks$$1) {
   return;
 }
 function setupGameboy() {
-  var v10420 = typeof Uint8Array != "undefined";
-  if (v10420) {
-    v10420 = typeof Int8Array != "undefined";
+  var v10417 = typeof Uint8Array != "undefined";
+  if (v10417) {
+    v10417 = typeof Int8Array != "undefined";
   }
-  var v10180 = v10420;
-  if (v10180) {
-    v10180 = typeof Float32Array != "undefined";
+  var v10177 = v10417;
+  if (v10177) {
+    v10177 = typeof Float32Array != "undefined";
   }
-  var v9562 = v10180;
-  if (v9562) {
-    v9562 = typeof Int32Array != "undefined";
+  var v9559 = v10177;
+  if (v9559) {
+    v9559 = typeof Int32Array != "undefined";
   }
-  if (!v9562) {
+  if (!v9559) {
     throw "TypedArrayUnsupported";
   }
   decoded_gameboy_rom = base64_decode(gameboy_rom);
@@ -13486,14 +13498,14 @@ function setupGameboy() {
   return;
 }
 function runGameboy() {
-  start(new GameBoyCanvas, decoded_gameboy_rom);
+  start();
   gameboy.instructions = 0;
   gameboy.totalInstructions = 25E4;
-  var v5074 = gameboy.instructions <= gameboy.totalInstructions;
-  for (;v5074;) {
+  var v5072 = gameboy.instructions <= gameboy.totalInstructions;
+  for (;v5072;) {
     gameboy.run();
     GameBoyAudioNode.run();
-    v5074 = gameboy.instructions <= gameboy.totalInstructions;
+    v5072 = gameboy.instructions <= gameboy.totalInstructions;
   }
   resetGlobalVariables();
   return;
@@ -13510,19 +13522,19 @@ function GameBoyContext() {
   function v4(buffer$$8, x$$47, y$$30) {
     var sum = 0;
     var i$$6 = 0;
-    var v5075 = i$$6 < buffer$$8.data.length;
-    for (;v5075;) {
+    var v5073 = i$$6 < buffer$$8.data.length;
+    for (;v5073;) {
       sum = sum + i$$6 * buffer$$8.data[i$$6];
       sum = sum % 1E3;
       i$$6++;
-      v5075 = i$$6 < buffer$$8.data.length;
+      v5073 = i$$6 < buffer$$8.data.length;
     }
     return;
   }
   function v3(w$$5, h$$4) {
     var result$$2 = {};
-    var v10798 = new Uint8Array(w$$5 * h$$4 * 4);
-    result$$2.data = v10798;
+    var v10795 = new Uint8Array(w$$5 * h$$4 * 4);
+    result$$2.data = v10795;
     return result$$2;
   }
   function v2() {
@@ -13551,26 +13563,29 @@ function clear_terminal() {
   return;
 }
 function GameBoyAudioContext() {
-  function v12(bufferSize, inputChannels, outputChannels) {
+  function v12() {
     function v11(i$$8) {
       return this.channelData[i$$8];
     }
+    var bufferSize = samplesPerCallback;
+    var inputChannels = 1;
+    var outputChannels = 2;
     GameBoyAudioNode.bufferSize = bufferSize;
     GameBoyAudioNode.outputBuffer = {getChannelData:v11, channelData:[]};
     var i$$7 = 0;
-    var v5080 = i$$7 < outputChannels;
-    for (;v5080;) {
-      var v5078 = GameBoyAudioNode.outputBuffer.channelData;
-      var v5079 = i$$7;
-      var v10799 = new Float32Array(bufferSize);
-      v5078[v5079] = v10799;
+    var v5078 = i$$7 < outputChannels;
+    for (;v5078;) {
+      var v5076 = GameBoyAudioNode.outputBuffer.channelData;
+      var v5077 = i$$7;
+      var v10796 = new Float32Array(bufferSize);
+      v5076[v5077] = v10796;
       i$$7++;
-      v5080 = i$$7 < outputChannels;
+      v5078 = i$$7 < outputChannels;
     }
     return GameBoyAudioNode;
   }
   function v10(channels, len, sampleRate) {
-    return{gain:1, numberOfChannels:1, length:1, duration:2.0833333110203966E-5, sampleRate:48E3};
+    return {gain:1, numberOfChannels:1, length:1, duration:2.0833333110203966E-5, sampleRate:48E3};
   }
   function v9() {
     function v8() {
@@ -13579,7 +13594,7 @@ function GameBoyAudioContext() {
     function v7() {
       return;
     }
-    return{noteOn:v7, connect:v8};
+    return {noteOn:v7, connect:v8};
   }
   this.createBufferSource = v9;
   this.sampleRate = 48E3;
@@ -13593,17 +13608,17 @@ function new_Date() {
     mock_date_time_counter = mock_date_time_counter + 16;
     return mock_date_time_counter;
   }
-  return{getTime:v13};
+  return {getTime:v13};
 }
 function checkFinalState() {
   function sum$$1(a) {
     var result$$3 = 0;
     var i$$9 = 0;
-    var v5081 = i$$9 < a.length;
-    for (;v5081;) {
+    var v5079 = i$$9 < a.length;
+    for (;v5079;) {
       result$$3 = result$$3 + a[i$$9];
       i$$9++;
-      v5081 = i$$9 < a.length;
+      v5079 = i$$9 < a.length;
     }
     return result$$3;
   }
@@ -13651,24 +13666,24 @@ function base64(data$$21) {
       var bytes = [0, 0, 0];
       var index$$41 = 0;
       var remainder = dataLength % 3;
-      var v5098 = data$$21.length % 3 > 0;
-      for (;v5098;) {
+      var v5096 = data$$21.length % 3 > 0;
+      for (;v5096;) {
         JAM.set(data$$21, data$$21.length, " ");
-        v5098 = data$$21.length % 3 > 0;
+        v5096 = data$$21.length % 3 > 0;
       }
-      var v5102 = index$$41 < dataLength;
-      for (;v5102;) {
-        var v9573 = index$$41;
+      var v5100 = index$$41 < dataLength;
+      for (;v5100;) {
+        var v9570 = index$$41;
         index$$41 = index$$41 + 1;
-        var v5099 = data$$21.charCodeAt(v9573) & 255;
-        var v9574 = index$$41;
+        var v5097 = data$$21.charCodeAt(v9570) & 255;
+        var v9571 = index$$41;
         index$$41 = index$$41 + 1;
-        var v5100 = data$$21.charCodeAt(v9574) & 255;
-        var v9575 = index$$41;
+        var v5098 = data$$21.charCodeAt(v9571) & 255;
+        var v9572 = index$$41;
         index$$41 = index$$41 + 1;
-        bytes = [v5099, v5100, data$$21.charCodeAt(v9575) & 255];
+        bytes = [v5097, v5098, data$$21.charCodeAt(v9572) & 255];
         base64$$1 = base64$$1 + (toBase64[bytes[0] >> 2] + toBase64[(bytes[0] & 3) << 4 | bytes[1] >> 4] + toBase64[(bytes[1] & 15) << 2 | bytes[2] >> 6] + toBase64[bytes[2] & 63]);
-        v5102 = index$$41 < dataLength;
+        v5100 = index$$41 < dataLength;
       }
       if (remainder > 0) {
         base64$$1[base64$$1.length - 1] = "=";
@@ -13689,29 +13704,29 @@ function base64_decode(data$$22) {
   } catch (error$$3) {
     decode64 = "";
     var dataLength$$1 = data$$22.length;
-    var v8277 = dataLength$$1 > 3;
-    if (v8277) {
-      v8277 = dataLength$$1 % 4 == 0;
+    var v8274 = dataLength$$1 > 3;
+    if (v8274) {
+      v8274 = dataLength$$1 % 4 == 0;
     }
-    if (v8277) {
+    if (v8274) {
       var sixbits = [0, 0, 0, 0];
       var index$$42 = 0;
-      var v5114 = index$$42 < dataLength$$1;
-      for (;v5114;) {
+      var v5112 = index$$42 < dataLength$$1;
+      for (;v5112;) {
+        var v9578 = index$$42;
+        index$$42 = index$$42 + 1;
+        var v5108 = fromBase64.indexOf(data$$22.charAt(v9578));
+        var v9579 = index$$42;
+        index$$42 = index$$42 + 1;
+        var v5109 = fromBase64.indexOf(data$$22.charAt(v9579));
+        var v9580 = index$$42;
+        index$$42 = index$$42 + 1;
+        var v5110 = fromBase64.indexOf(data$$22.charAt(v9580));
         var v9581 = index$$42;
         index$$42 = index$$42 + 1;
-        var v5110 = fromBase64.indexOf(data$$22.charAt(v9581));
-        var v9582 = index$$42;
-        index$$42 = index$$42 + 1;
-        var v5111 = fromBase64.indexOf(data$$22.charAt(v9582));
-        var v9583 = index$$42;
-        index$$42 = index$$42 + 1;
-        var v5112 = fromBase64.indexOf(data$$22.charAt(v9583));
-        var v9584 = index$$42;
-        index$$42 = index$$42 + 1;
-        sixbits = [v5110, v5111, v5112, fromBase64.indexOf(data$$22.charAt(v9584))];
+        sixbits = [v5108, v5109, v5110, fromBase64.indexOf(data$$22.charAt(v9581))];
         decode64 = decode64 + (String.fromCharCode(sixbits[0] << 2 | sixbits[1] >> 4) + String.fromCharCode((sixbits[1] & 15) << 4 | sixbits[2] >> 2) + String.fromCharCode((sixbits[2] & 3) << 6 | sixbits[3]));
-        v5114 = index$$42 < dataLength$$1;
+        v5112 = index$$42 < dataLength$$1;
       }
       if (sixbits[3] >= 64) {
         decode64.length = decode64.length - 1;
@@ -13736,13 +13751,13 @@ function arrayToBase64(arrayIn) {
   var binString = "";
   var length$$13 = arrayIn.length;
   var index$$43 = 0;
-  var v5124 = index$$43 < length$$13;
-  for (;v5124;) {
+  var v5122 = index$$43 < length$$13;
+  for (;v5122;) {
     if (typeof arrayIn[index$$43] == "number") {
       binString = binString + String.fromCharCode(arrayIn[index$$43]);
     }
     ++index$$43;
-    v5124 = index$$43 < length$$13;
+    v5122 = index$$43 < length$$13;
   }
   return base64(binString);
 }
@@ -13751,12 +13766,12 @@ function base64ToArray(b64String) {
   var outArray = [];
   var length$$14 = binString$$1.length;
   var index$$44 = 0;
-  var v5126 = index$$44 < length$$14;
-  for (;v5126;) {
-    var v9592 = index$$44;
+  var v5124 = index$$44 < length$$14;
+  for (;v5124;) {
+    var v9589 = index$$44;
     index$$44 = index$$44 + 1;
-    outArray.push(binString$$1.charCodeAt(v9592) & 255);
-    v5126 = index$$44 < length$$14;
+    outArray.push(binString$$1.charCodeAt(v9589) & 255);
+    v5124 = index$$44 < length$$14;
   }
   return outArray;
 }
@@ -13773,73 +13788,73 @@ function XAudioServer(channels$$2, sampleRate$$1, minBufferSize, maxBufferSize, 
   function v14() {
     return;
   }
-  var v5128;
+  var v5126;
   if (channels$$2 == 2) {
-    v5128 = 2;
+    v5126 = 2;
   } else {
-    v5128 = 1;
+    v5126 = 1;
   }
-  this.audioChannels = v5128;
+  this.audioChannels = v5126;
   webAudioMono = this.audioChannels == 1;
-  var v5130;
-  var v9593 = sampleRate$$1 > 0;
-  if (v9593) {
-    v9593 = sampleRate$$1 <= 16777215;
+  var v5128;
+  var v9590 = sampleRate$$1 > 0;
+  if (v9590) {
+    v9590 = sampleRate$$1 <= 16777215;
   }
-  if (v9593) {
-    v5130 = sampleRate$$1;
+  if (v9590) {
+    v5128 = sampleRate$$1;
   } else {
-    v5130 = 44100;
+    v5128 = 44100;
   }
-  XAudioJSSampleRate = v5130;
-  var v5131;
-  var v9594 = minBufferSize >= samplesPerCallback << 1;
-  if (v9594) {
-    v9594 = minBufferSize < maxBufferSize;
+  XAudioJSSampleRate = v5128;
+  var v5129;
+  var v9591 = minBufferSize >= samplesPerCallback << 1;
+  if (v9591) {
+    v9591 = minBufferSize < maxBufferSize;
   }
-  if (v9594) {
+  if (v9591) {
+    var v9592;
+    if (webAudioMono) {
+      v9592 = 4294967295;
+    } else {
+      v9592 = 4294967294;
+    }
+    v5129 = minBufferSize & v9592;
+  } else {
+    v5129 = samplesPerCallback << 1;
+  }
+  webAudioMinBufferSize = v5129;
+  var v5130;
+  if (Math.floor(maxBufferSize) > webAudioMinBufferSize + this.audioChannels) {
     var v9595;
     if (webAudioMono) {
       v9595 = 4294967295;
     } else {
       v9595 = 4294967294;
     }
-    v5131 = minBufferSize & v9595;
+    v5130 = maxBufferSize & v9595;
   } else {
-    v5131 = samplesPerCallback << 1;
+    v5130 = minBufferSize << 1;
   }
-  webAudioMinBufferSize = v5131;
-  var v5132;
-  if (Math.floor(maxBufferSize) > webAudioMinBufferSize + this.audioChannels) {
-    var v9598;
-    if (webAudioMono) {
-      v9598 = 4294967295;
-    } else {
-      v9598 = 4294967294;
-    }
-    v5132 = maxBufferSize & v9598;
-  } else {
-    v5132 = minBufferSize << 1;
-  }
-  webAudioMaxBufferSize = v5132;
-  var v5133;
+  webAudioMaxBufferSize = v5130;
+  var v5131;
   if (typeof underRunCallback == "function") {
-    v5133 = underRunCallback;
+    v5131 = underRunCallback;
   } else {
-    v5133 = v14;
+    v5131 = v14;
   }
-  this.underRunCallback = v5133;
-  var v5134;
-  var v9600 = volume >= 0;
-  if (v9600) {
-    v9600 = volume <= 1;
+  this.underRunCallback = v5131;
+  var v5132;
+  var v9597 = volume >= 0;
+  if (v9597) {
+    v9597 = volume <= 1;
   }
-  if (v9600) {
-    v5134 = volume;
+  if (v9597) {
+    v5132 = volume;
   } else {
-    v5134 = 1;
+    v5132 = 1;
   }
-  XAudioJSVolume = v5134;
+  XAudioJSVolume = v5132;
   this.audioType = -1;
   this.mozAudioTail = [];
   this.audioHandleMoz = null;
@@ -13857,17 +13872,18 @@ function getFloat32(size$$4) {
   }
   return;
 }
-function getFloat32Flat(size$$5) {
+function getFloat32Flat() {
+  var size$$5 = resampleBufferSize;
   try {
     var newBuffer = new Float32Array(size$$5);
   } catch (error$$11) {
     newBuffer = new Array(size$$5);
     var audioSampleIndice = 0;
-    var v5135 = (audioSampleIndice = audioSampleIndice + 1) < size$$5;
+    var v5133 = (audioSampleIndice = audioSampleIndice + 1) < size$$5;
     do {
       newBuffer[audioSampleIndice] = 0;
-      v5135 = (audioSampleIndice = audioSampleIndice + 1) < size$$5;
-    } while (v5135);
+      v5133 = (audioSampleIndice = audioSampleIndice + 1) < size$$5;
+    } while (v5133);
   }
   return newBuffer;
 }
@@ -13879,76 +13895,96 @@ function generateFlashStereoString() {
   var copyBinaryStringLeft = "";
   var copyBinaryStringRight = "";
   var index$$47 = 0;
-  var v8303 = index$$47 < samplesPerCallback;
-  if (v8303) {
-    v8303 = resampleBufferStart != resampleBufferEnd;
+  var v8300 = index$$47 < samplesPerCallback;
+  if (v8300) {
+    v8300 = resampleBufferStart != resampleBufferEnd;
   }
-  var v5137 = v8303;
-  for (;v5137;) {
-    var v10603 = resampleBufferStart;
+  var v5135 = v8300;
+  for (;v5135;) {
+    var v10600 = resampleBufferStart;
     resampleBufferStart = resampleBufferStart + 1;
-    copyBinaryStringLeft = copyBinaryStringLeft + String.fromCharCode((JAM.call(Math.min, Math, [JAM.call(Math.max, Math, [resampled[v10603] + 1, 0], JAM.policy.p1), 2], JAM.policy.p1) * 16383 | 0) + 12288);
-    var v10604 = resampleBufferStart;
+    copyBinaryStringLeft = copyBinaryStringLeft + String.fromCharCode((JAM.call(Math.min, Math, [JAM.call(Math.max, Math, [resampled[v10600] + 1, 0], JAM.policy.p1), 2], JAM.policy.p1) * 16383 | 0) + 12288);
+    var v10601 = resampleBufferStart;
     resampleBufferStart = resampleBufferStart + 1;
-    copyBinaryStringRight = copyBinaryStringRight + String.fromCharCode((JAM.call(Math.min, Math, [JAM.call(Math.max, Math, [resampled[v10604] + 1, 0], JAM.policy.p1), 2], JAM.policy.p1) * 16383 | 0) + 12288);
+    copyBinaryStringRight = copyBinaryStringRight + String.fromCharCode((JAM.call(Math.min, Math, [JAM.call(Math.max, Math, [resampled[v10601] + 1, 0], JAM.policy.p1), 2], JAM.policy.p1) * 16383 | 0) + 12288);
     if (resampleBufferStart == resampleBufferSize) {
       resampleBufferStart = 0;
     }
     ++index$$47;
-    var v8306 = index$$47 < samplesPerCallback;
-    if (v8306) {
-      v8306 = resampleBufferStart != resampleBufferEnd;
+    var v8303 = index$$47 < samplesPerCallback;
+    if (v8303) {
+      v8303 = resampleBufferStart != resampleBufferEnd;
     }
-    v5137 = v8306;
+    v5135 = v8303;
   }
   return copyBinaryStringLeft + copyBinaryStringRight;
 }
 function generateFlashMonoString() {
   var copyBinaryString = "";
   var index$$48 = 0;
-  var v8307 = index$$48 < samplesPerCallback;
-  if (v8307) {
-    v8307 = resampleBufferStart != resampleBufferEnd;
+  var v8304 = index$$48 < samplesPerCallback;
+  if (v8304) {
+    v8304 = resampleBufferStart != resampleBufferEnd;
   }
-  var v5139 = v8307;
-  for (;v5139;) {
-    var v10605 = resampleBufferStart;
+  var v5137 = v8304;
+  for (;v5137;) {
+    var v10602 = resampleBufferStart;
     resampleBufferStart = resampleBufferStart + 1;
-    copyBinaryString = copyBinaryString + String.fromCharCode((JAM.call(Math.min, Math, [JAM.call(Math.max, Math, [resampled[v10605] + 1, 0], JAM.policy.p1), 2], JAM.policy.p1) * 16383 | 0) + 12288);
+    copyBinaryString = copyBinaryString + String.fromCharCode((JAM.call(Math.min, Math, [JAM.call(Math.max, Math, [resampled[v10602] + 1, 0], JAM.policy.p1), 2], JAM.policy.p1) * 16383 | 0) + 12288);
     if (resampleBufferStart == resampleBufferSize) {
       resampleBufferStart = 0;
     }
     ++index$$48;
-    var v8309 = index$$48 < samplesPerCallback;
-    if (v8309) {
-      v8309 = resampleBufferStart != resampleBufferEnd;
+    var v8306 = index$$48 < samplesPerCallback;
+    if (v8306) {
+      v8306 = resampleBufferStart != resampleBufferEnd;
     }
-    v5139 = v8309;
+    v5137 = v8306;
   }
   return copyBinaryString;
 }
 function audioOutputEvent(event$$3) {
   var index$$49 = 0;
-  var v5140 = event$$3.outputBuffer;
-  var buffer1 = JAM.call(v5140.getChannelData, v5140, [0]);
-  var v5141 = event$$3.outputBuffer;
-  var buffer2 = JAM.call(v5141.getChannelData, v5141, [1]);
+  var v5138 = event$$3.outputBuffer;
+  var buffer1 = JAM.call(v5138.getChannelData, v5138, [0]);
+  var v5139 = event$$3.outputBuffer;
+  var buffer2 = JAM.call(v5139.getChannelData, v5139, [1]);
   resampleRefill();
   if (!webAudioMono) {
-    var v8310 = index$$49 < samplesPerCallback;
-    if (v8310) {
-      v8310 = resampleBufferStart != resampleBufferEnd;
+    var v8307 = index$$49 < samplesPerCallback;
+    if (v8307) {
+      v8307 = resampleBufferStart != resampleBufferEnd;
     }
-    var v5145 = v8310;
-    for (;v5145;) {
-      var v8311 = resampleBufferStart;
+    var v5143 = v8307;
+    for (;v5143;) {
+      var v8308 = resampleBufferStart;
       resampleBufferStart = resampleBufferStart + 1;
-      buffer1[index$$49] = resampled[v8311] * XAudioJSVolume;
-      var v5143 = index$$49;
+      buffer1[index$$49] = resampled[v8308] * XAudioJSVolume;
+      var v5141 = index$$49;
       index$$49 = index$$49 + 1;
-      var v9604 = resampleBufferStart;
+      var v9601 = resampleBufferStart;
       resampleBufferStart = resampleBufferStart + 1;
-      buffer2[v5143] = resampled[v9604] * XAudioJSVolume;
+      buffer2[v5141] = resampled[v9601] * XAudioJSVolume;
+      if (resampleBufferStart == resampleBufferSize) {
+        resampleBufferStart = 0;
+      }
+      var v8310 = index$$49 < samplesPerCallback;
+      if (v8310) {
+        v8310 = resampleBufferStart != resampleBufferEnd;
+      }
+      v5143 = v8310;
+    }
+  } else {
+    var v8311 = index$$49 < samplesPerCallback;
+    if (v8311) {
+      v8311 = resampleBufferStart != resampleBufferEnd;
+    }
+    var v5146 = v8311;
+    for (;v5146;) {
+      var v8312 = resampleBufferStart;
+      resampleBufferStart = resampleBufferStart + 1;
+      buffer2[index$$49] = buffer1[index$$49] = resampled[v8312] * XAudioJSVolume;
+      ++index$$49;
       if (resampleBufferStart == resampleBufferSize) {
         resampleBufferStart = 0;
       }
@@ -13956,34 +13992,14 @@ function audioOutputEvent(event$$3) {
       if (v8313) {
         v8313 = resampleBufferStart != resampleBufferEnd;
       }
-      v5145 = v8313;
-    }
-  } else {
-    var v8314 = index$$49 < samplesPerCallback;
-    if (v8314) {
-      v8314 = resampleBufferStart != resampleBufferEnd;
-    }
-    var v5148 = v8314;
-    for (;v5148;) {
-      var v8315 = resampleBufferStart;
-      resampleBufferStart = resampleBufferStart + 1;
-      buffer2[index$$49] = buffer1[index$$49] = resampled[v8315] * XAudioJSVolume;
-      ++index$$49;
-      if (resampleBufferStart == resampleBufferSize) {
-        resampleBufferStart = 0;
-      }
-      var v8316 = index$$49 < samplesPerCallback;
-      if (v8316) {
-        v8316 = resampleBufferStart != resampleBufferEnd;
-      }
-      v5148 = v8316;
+      v5146 = v8313;
     }
   }
-  var v5150 = index$$49 < samplesPerCallback;
-  for (;v5150;) {
+  var v5148 = index$$49 < samplesPerCallback;
+  for (;v5148;) {
     buffer2[index$$49] = buffer1[index$$49] = 0;
     ++index$$49;
-    v5150 = index$$49 < samplesPerCallback;
+    v5148 = index$$49 < samplesPerCallback;
   }
   return;
 }
@@ -13992,11 +14008,11 @@ function resampleRefill() {
     var resampleLength = JAM.call(resampleControl.resampler, resampleControl, [getBufferSamples()]);
     var resampledResult = resampleControl.outputBuffer;
     var index2 = 0;
-    var v5156 = index2 < resampleLength;
-    for (;v5156;) {
-      var v5152 = resampleBufferEnd;
+    var v5154 = index2 < resampleLength;
+    for (;v5154;) {
+      var v5150 = resampleBufferEnd;
       resampleBufferEnd = resampleBufferEnd + 1;
-      JAM.set(resampled, v5152, resampledResult[index2]);
+      JAM.set(resampled, v5150, resampledResult[index2]);
       if (resampleBufferEnd == resampleBufferSize) {
         resampleBufferEnd = 0;
       }
@@ -14007,20 +14023,20 @@ function resampleRefill() {
         }
       }
       ++index2;
-      v5156 = index2 < resampleLength;
+      v5154 = index2 < resampleLength;
     }
     audioBufferSize = 0;
   }
   return;
 }
 function resampledSamplesLeft() {
-  var v9605;
+  var v9602;
   if (resampleBufferStart <= resampleBufferEnd) {
-    v9605 = 0;
+    v9602 = 0;
   } else {
-    v9605 = resampleBufferSize;
+    v9602 = resampleBufferSize;
   }
-  return v9605 + resampleBufferEnd - resampleBufferStart;
+  return v9602 + resampleBufferEnd - resampleBufferStart;
 }
 function getBufferSamples() {
   try {
@@ -14035,56 +14051,57 @@ function getBufferSamples() {
   }
   return;
 }
-function resetCallbackAPIAudioBuffer(APISampleRate, bufferAlloc) {
+function resetCallbackAPIAudioBuffer(APISampleRate) {
+  var bufferAlloc = samplesPerCallback;
   audioContextSampleBuffer = getFloat32(webAudioMaxBufferSize);
   audioBufferSize = webAudioMaxBufferSize;
   resampleBufferStart = 0;
   resampleBufferEnd = 0;
   resampleBufferSize = JAM.call(Math.max, Math, [webAudioMaxBufferSize * Math.ceil(XAudioJSSampleRate / APISampleRate), samplesPerCallback], JAM.policy.p1) << 1;
   if (webAudioMono) {
-    resampled = getFloat32Flat(resampleBufferSize);
+    resampled = getFloat32Flat();
     resampleControl = new Resampler(XAudioJSSampleRate, APISampleRate, 1, resampleBufferSize, true);
     outputConvert = generateFlashMonoString;
   } else {
     resampleBufferSize = resampleBufferSize << 1;
-    resampled = getFloat32Flat(resampleBufferSize);
+    resampled = getFloat32Flat();
     resampleControl = new Resampler(XAudioJSSampleRate, APISampleRate, 2, resampleBufferSize, true);
     outputConvert = generateFlashStereoString;
   }
   return;
 }
 function Resize(widthOriginal, heightOriginal, targetWidth, targetHeight, blendAlpha, interpolationPass) {
-  var v8319 = parseInt(widthOriginal);
+  var v8316 = parseInt(widthOriginal);
+  if (!v8316) {
+    v8316 = 0;
+  }
+  var v10797 = Math.abs(v8316);
+  this.widthOriginal = v10797;
+  var v8317 = parseInt(heightOriginal);
+  if (!v8317) {
+    v8317 = 0;
+  }
+  var v10798 = Math.abs(v8317);
+  this.heightOriginal = v10798;
+  var v8318 = parseInt(targetWidth);
+  if (!v8318) {
+    v8318 = 0;
+  }
+  var v10799 = Math.abs(v8318);
+  this.targetWidth = v10799;
+  var v8319 = parseInt(targetHeight);
   if (!v8319) {
     v8319 = 0;
   }
   var v10800 = Math.abs(v8319);
-  this.widthOriginal = v10800;
-  var v8320 = parseInt(heightOriginal);
-  if (!v8320) {
-    v8320 = 0;
-  }
-  var v10801 = Math.abs(v8320);
-  this.heightOriginal = v10801;
-  var v8321 = parseInt(targetWidth);
-  if (!v8321) {
-    v8321 = 0;
-  }
-  var v10802 = Math.abs(v8321);
-  this.targetWidth = v10802;
-  var v8322 = parseInt(targetHeight);
-  if (!v8322) {
-    v8322 = 0;
-  }
-  var v10803 = Math.abs(v8322);
-  this.targetHeight = v10803;
-  var v5164;
+  this.targetHeight = v10800;
+  var v5162;
   if (!!blendAlpha) {
-    v5164 = 4;
+    v5162 = 4;
   } else {
-    v5164 = 3;
+    v5162 = 3;
   }
-  this.colorChannels = v5164;
+  this.colorChannels = v5162;
   this.interpolationPass = !!interpolationPass;
   this.targetWidthMultipliedByChannels = this.targetWidth * this.colorChannels;
   this.originalWidthMultipliedByChannels = this.widthOriginal * this.colorChannels;
@@ -14246,11 +14263,11 @@ function GameBoyCore(canvas, ROMImage) {
   this.serialShiftTimerAllocated = 0;
   this.IRQEnableDelay = 0;
   var dateVar = new_Date();
-  var v10804 = dateVar.getTime();
-  this.lastIteration = v10804;
+  var v10801 = dateVar.getTime();
+  this.lastIteration = v10801;
   dateVar = new_Date();
-  var v10805 = dateVar.getTime();
-  this.firstIteration = v10805;
+  var v10802 = dateVar.getTime();
+  this.firstIteration = v10802;
   this.iterations = 0;
   this.actualScanLine = 0;
   this.lastUnrenderedLine = 0;
@@ -14326,7 +14343,9 @@ function GameBoyCore(canvas, ROMImage) {
   this.intializeWhiteNoise();
   return;
 }
-function start(canvas$$1, ROM) {
+function start() {
+  var canvas$$1 = new GameBoyCanvas;
+  var ROM = decoded_gameboy_rom;
   clearLastEmulation();
   autoSave();
   gameboy = new GameBoyCore(canvas$$1, ROM);
@@ -14342,9 +14361,9 @@ function run() {
       gameboy.stopEmulator = gameboy.stopEmulator & 1;
       cout("Starting the iterator.", 0);
       var dateObj$$1 = new_Date();
-      var v5184 = gameboy;
-      var v10806 = dateObj$$1.getTime();
-      v5184.firstIteration = v10806;
+      var v5182 = gameboy;
+      var v10803 = dateObj$$1.getTime();
+      v5182.firstIteration = v10803;
       gameboy.iterations = 0;
     } else {
       cout("The GameBoy core is already running.", 1);
@@ -14367,11 +14386,11 @@ function pause() {
   return;
 }
 function clearLastEmulation() {
-  var v8328 = GameBoyEmulatorInitialized();
-  if (v8328) {
-    v8328 = GameBoyEmulatorPlaying();
+  var v8325 = GameBoyEmulatorInitialized();
+  if (v8325) {
+    v8325 = GameBoyEmulatorPlaying();
   }
-  if (v8328) {
+  if (v8325) {
     clearInterval(gbRunInterval);
     gameboy.stopEmulator = gameboy.stopEmulator | 2;
     cout("The previous emulation has been cleared.", 0);
@@ -14384,10 +14403,10 @@ function save() {
   if (GameBoyEmulatorInitialized()) {
     try {
       var state_suffix = 0;
-      var v5190 = findValue("FREEZE_" + gameboy.name + "_" + state_suffix) != null;
-      for (;v5190;) {
+      var v5188 = findValue("FREEZE_" + gameboy.name + "_" + state_suffix) != null;
+      for (;v5188;) {
         state_suffix++;
-        v5190 = findValue("FREEZE_" + gameboy.name + "_" + state_suffix) != null;
+        v5188 = findValue("FREEZE_" + gameboy.name + "_" + state_suffix) != null;
       }
       JAM.call(setValue, null, ["FREEZE_" + gameboy.name + "_" + state_suffix, gameboy.saveState()], JAM.policy.p1);
       cout("Saved the current state as: FREEZE_" + gameboy.name + "_" + state_suffix, 0);
@@ -14465,7 +14484,7 @@ function openSRAM(filename) {
   } catch (error$$30) {
     cout("Could not open the  SRAM of the saved emulation state.", 2);
   }
-  return[];
+  return [];
 }
 function openRTC(filename$$1) {
   try {
@@ -14478,7 +14497,7 @@ function openRTC(filename$$1) {
   } catch (error$$31) {
     cout("Could not open the RTC data of the saved emulation state.", 2);
   }
-  return[];
+  return [];
 }
 function openState(filename$$2, canvas$$2) {
   try {
@@ -14503,19 +14522,19 @@ function openState(filename$$2, canvas$$2) {
 }
 function import_save(blobData) {
   blobData = decodeBlob(blobData);
-  var v8350 = blobData;
-  if (v8350) {
-    v8350 = blobData.blobs;
+  var v8347 = blobData;
+  if (v8347) {
+    v8347 = blobData.blobs;
   }
-  if (v8350) {
+  if (v8347) {
     if (blobData.blobs.length > 0) {
       var index$$68 = 0;
-      var v5229 = index$$68 < blobData.blobs.length;
-      for (;v5229;) {
+      var v5227 = index$$68 < blobData.blobs.length;
+      for (;v5227;) {
         cout('Importing blob "' + blobData.blobs[index$$68].blobID + '"', 0);
         if (blobData.blobs[index$$68].blobContent) {
-          var v9629 = blobData.blobs[index$$68].blobID;
-          if (JAM.call(v9629.substring, v9629, [0, 5], JAM.policy.p1) == "SRAM_") {
+          var v9626 = blobData.blobs[index$$68].blobID;
+          if (JAM.call(v9626.substring, v9626, [0, 5], JAM.policy.p1) == "SRAM_") {
             JAM.call(setValue, null, ["B64_" + blobData.blobs[index$$68].blobID, base64(blobData.blobs[index$$68].blobContent)], JAM.policy.p1);
           } else {
             JAM.call(setValue, null, [blobData.blobs[index$$68].blobID, JSON.parse(blobData.blobs[index$$68].blobContent)], JAM.policy.p1);
@@ -14528,7 +14547,7 @@ function import_save(blobData) {
           }
         }
         ++index$$68;
-        v5229 = index$$68 < blobData.blobs.length;
+        v5227 = index$$68 < blobData.blobs.length;
       }
     } else {
       cout("Could not decode the imported file.", 2);
@@ -14559,8 +14578,8 @@ function generateMultiBlob(blobPairs) {
   var keyName$$1 = "";
   var encodedData$$2 = "";
   var index$$69 = 0;
-  var v5239 = index$$69 < blobPairs.length;
-  for (;v5239;) {
+  var v5237 = index$$69 < blobPairs.length;
+  for (;v5237;) {
     keyName$$1 = blobPairs[index$$69][0];
     encodedData$$2 = blobPairs[index$$69][1];
     saveString$$1 = saveString$$1 + to_byte(keyName$$1.length);
@@ -14569,7 +14588,7 @@ function generateMultiBlob(blobPairs) {
     saveString$$1 = saveString$$1 + encodedData$$2;
     totalLength$$1 = totalLength$$1 + (1 + keyName$$1.length + 4 + encodedData$$2.length);
     ++index$$69;
-    v5239 = index$$69 < blobPairs.length;
+    v5237 = index$$69 < blobPairs.length;
   }
   saveString$$1 = "EMULATOR_DATA" + to_little_endian_dword(totalLength$$1) + saveString$$1;
   return saveString$$1;
@@ -14585,29 +14604,29 @@ function decodeBlob(blobData$$1) {
       length$$21 = JAM.call(Math.min, Math, [(blobData$$1.charCodeAt(16) & 255) << 24 | (blobData$$1.charCodeAt(15) & 255) << 16 | (blobData$$1.charCodeAt(14) & 255) << 8 | blobData$$1.charCodeAt(13) & 255, length$$21], JAM.policy.p1);
       var consoleIDLength = blobData$$1.charCodeAt(17) & 255;
       if (length$$21 > 17 + consoleIDLength) {
-        var v10807 = JAM.call(blobData$$1.substring, blobData$$1, [18, 18 + consoleIDLength], JAM.policy.p1);
-        blobProperties.consoleID = v10807;
+        var v10804 = JAM.call(blobData$$1.substring, blobData$$1, [18, 18 + consoleIDLength], JAM.policy.p1);
+        blobProperties.consoleID = v10804;
         var blobIDLength = 0;
         var blobLength = 0;
         var index$$70 = 18 + consoleIDLength;
-        var v5254 = index$$70 < length$$21;
-        for (;v5254;) {
-          var v8382 = index$$70;
+        var v5252 = index$$70 < length$$21;
+        for (;v5252;) {
+          var v8379 = index$$70;
           index$$70 = index$$70 + 1;
-          blobIDLength = blobData$$1.charCodeAt(v8382) & 255;
+          blobIDLength = blobData$$1.charCodeAt(v8379) & 255;
           if (index$$70 + blobIDLength < length$$21) {
             blobProperties.blobs[blobsCount = blobsCount + 1] = {};
-            var v5247 = blobProperties.blobs[blobsCount];
-            var v10808 = JAM.call(blobData$$1.substring, blobData$$1, [index$$70, index$$70 + blobIDLength], JAM.policy.p1);
-            v5247.blobID = v10808;
+            var v5245 = blobProperties.blobs[blobsCount];
+            var v10805 = JAM.call(blobData$$1.substring, blobData$$1, [index$$70, index$$70 + blobIDLength], JAM.policy.p1);
+            v5245.blobID = v10805;
             index$$70 = index$$70 + blobIDLength;
             if (index$$70 + 4 < length$$21) {
               blobLength = (blobData$$1.charCodeAt(index$$70 + 3) & 255) << 24 | (blobData$$1.charCodeAt(index$$70 + 2) & 255) << 16 | (blobData$$1.charCodeAt(index$$70 + 1) & 255) << 8 | blobData$$1.charCodeAt(index$$70) & 255;
               index$$70 = index$$70 + 4;
               if (index$$70 + blobLength <= length$$21) {
-                var v5250 = blobProperties.blobs[blobsCount];
-                var v10809 = JAM.call(blobData$$1.substring, blobData$$1, [index$$70, index$$70 + blobLength], JAM.policy.p1);
-                v5250.blobContent = v10809;
+                var v5248 = blobProperties.blobs[blobsCount];
+                var v10806 = JAM.call(blobData$$1.substring, blobData$$1, [index$$70, index$$70 + blobLength], JAM.policy.p1);
+                v5248.blobContent = v10806;
                 index$$70 = index$$70 + blobLength;
               } else {
                 cout("Blob length check failed, blob determined to be incomplete.", 2);
@@ -14621,7 +14640,7 @@ function decodeBlob(blobData$$1) {
             cout("Blob was incomplete, bailing out.", 2);
             break;
           }
-          v5254 = index$$70 < length$$21;
+          v5252 = index$$70 < length$$21;
         }
       }
     }
@@ -14630,38 +14649,38 @@ function decodeBlob(blobData$$1) {
 }
 function matchKey(key$$15) {
   var index$$71 = 0;
-  var v5259 = index$$71 < settings[3].length;
-  for (;v5259;) {
+  var v5257 = index$$71 < settings[3].length;
+  for (;v5257;) {
     if (settings[3][index$$71] == key$$15) {
       return index$$71;
     }
     index$$71++;
-    v5259 = index$$71 < settings[3].length;
+    v5257 = index$$71 < settings[3].length;
   }
-  return-1;
+  return -1;
 }
 function GameBoyEmulatorInitialized() {
-  var v5260 = typeof gameboy == "object";
-  if (v5260) {
-    v5260 = gameboy != null;
+  var v5258 = typeof gameboy == "object";
+  if (v5258) {
+    v5258 = gameboy != null;
   }
-  return v5260;
+  return v5258;
 }
 function GameBoyEmulatorPlaying() {
-  return(gameboy.stopEmulator & 2) == 0;
+  return (gameboy.stopEmulator & 2) == 0;
 }
 function GameBoyKeyDown(e$$7) {
-  var v8398 = GameBoyEmulatorInitialized();
-  if (v8398) {
-    v8398 = GameBoyEmulatorPlaying();
+  var v8395 = GameBoyEmulatorInitialized();
+  if (v8395) {
+    v8395 = GameBoyEmulatorPlaying();
   }
-  if (v8398) {
+  if (v8395) {
     var keycode = matchKey(e$$7.keyCode);
-    var v8399 = keycode >= 0;
-    if (v8399) {
-      v8399 = keycode < 8;
+    var v8396 = keycode >= 0;
+    if (v8396) {
+      v8396 = keycode < 8;
     }
-    if (v8399) {
+    if (v8396) {
       JAM.call(gameboy.JoyPadEvent, gameboy, [keycode, true], JAM.policy.p1);
       try {
         e$$7.preventDefault();
@@ -14672,17 +14691,17 @@ function GameBoyKeyDown(e$$7) {
   return;
 }
 function GameBoyKeyUp(e$$8) {
-  var v8400 = GameBoyEmulatorInitialized();
-  if (v8400) {
-    v8400 = GameBoyEmulatorPlaying();
+  var v8397 = GameBoyEmulatorInitialized();
+  if (v8397) {
+    v8397 = GameBoyEmulatorPlaying();
   }
-  if (v8400) {
+  if (v8397) {
     var keycode$$1 = matchKey(e$$8.keyCode);
-    var v8401 = keycode$$1 >= 0;
-    if (v8401) {
-      v8401 = keycode$$1 < 8;
+    var v8398 = keycode$$1 >= 0;
+    if (v8398) {
+      v8398 = keycode$$1 < 8;
     }
-    if (v8401) {
+    if (v8398) {
       JAM.call(gameboy.JoyPadEvent, gameboy, [keycode$$1, false], JAM.policy.p1);
       try {
         e$$8.preventDefault();
@@ -14693,16 +14712,16 @@ function GameBoyKeyUp(e$$8) {
   return;
 }
 function GameBoyGyroSignalHandler(e$$9) {
-  var v8402 = GameBoyEmulatorInitialized();
-  if (v8402) {
-    v8402 = GameBoyEmulatorPlaying();
+  var v8399 = GameBoyEmulatorInitialized();
+  if (v8399) {
+    v8399 = GameBoyEmulatorPlaying();
   }
-  if (v8402) {
-    var v8403 = e$$9.gamma;
-    if (!v8403) {
-      v8403 = e$$9.beta;
+  if (v8399) {
+    var v8400 = e$$9.gamma;
+    if (!v8400) {
+      v8400 = e$$9.beta;
     }
-    if (v8403) {
+    if (v8400) {
       JAM.call(gameboy.GyroEvent, gameboy, [e$$9.gamma * Math.PI / 180, e$$9.beta * Math.PI / 180], JAM.policy.p1);
     } else {
       JAM.call(gameboy.GyroEvent, gameboy, [e$$9.x, e$$9.y], JAM.policy.p1);
@@ -14724,19 +14743,19 @@ function initNewCanvas() {
 function initNewCanvasSize() {
   if (GameBoyEmulatorInitialized()) {
     if (!settings[12]) {
-      var v8409 = gameboy.onscreenWidth != 160;
-      if (!v8409) {
-        v8409 = gameboy.onscreenHeight != 144;
+      var v8406 = gameboy.onscreenWidth != 160;
+      if (!v8406) {
+        v8406 = gameboy.onscreenHeight != 144;
       }
-      if (v8409) {
+      if (v8406) {
         gameboy.initLCD();
       }
     } else {
-      var v8410 = gameboy.onscreenWidth != gameboy.canvas.clientWidth;
-      if (!v8410) {
-        v8410 = gameboy.onscreenHeight != gameboy.canvas.clientHeight;
+      var v8407 = gameboy.onscreenWidth != gameboy.canvas.clientWidth;
+      if (!v8407) {
+        v8407 = gameboy.onscreenHeight != gameboy.canvas.clientHeight;
       }
-      if (v8410) {
+      if (v8407) {
         gameboy.initLCD();
       }
     }
@@ -14799,19 +14818,19 @@ function Run() {
   parent.removeChild(anchor);
   JAM.set(document.getElementById("startup-text"), "innerHTML", "");
   document.getElementById("progress-bar-container").style.visibility = "visible";
-  JAM.call(BenchmarkSuite.RunSuites, BenchmarkSuite, [{NotifyStart:ShowBox, NotifyError:AddError, NotifyResult:AddResult, NotifyScore:AddScore}, skipBenchmarks], JAM.policy.p1);
+  BenchmarkSuite.RunSuites();
   return;
 }
 function CheckCompatibility() {
-  var v8423 = typeof Uint8Array != "undefined";
-  if (v8423) {
-    v8423 = typeof Float64Array != "undefined";
+  var v8420 = typeof Uint8Array != "undefined";
+  if (v8420) {
+    v8420 = typeof Float64Array != "undefined";
   }
-  var v5303 = v8423;
-  if (v5303) {
-    v5303 = typeof(new Uint8Array(0)).subarray != "undefined";
+  var v5300 = v8420;
+  if (v5300) {
+    v5300 = typeof(new Uint8Array(0)).subarray != "undefined";
   }
-  var hasTypedArrays = v5303;
+  var hasTypedArrays = v5300;
   if (!hasTypedArrays) {
     console.log("Typed Arrays not supported");
     document.getElementById("alertbox").style.display = "block";
@@ -14829,9 +14848,9 @@ function Load() {
   return;
 }
 var performance = performance || {};
-var v5308 = performance;
-var v10810 = v17();
-v5308.now = v10810;
+var v5305 = performance;
+var v10807 = v17();
+v5305.now = v10807;
 BenchmarkResult.prototype.valueOf = v18;
 BenchmarkSuite.suites = [];
 BenchmarkSuite.version = "9";
@@ -14850,7 +14869,7 @@ BenchmarkSuite.prototype.NotifySkipped = v31;
 BenchmarkSuite.prototype.NotifyError = v32;
 BenchmarkSuite.prototype.RunSingleBenchmark = v33;
 BenchmarkSuite.prototype.RunStep = v34;
-var GameboyBenchmark = new BenchmarkSuite("Gameboy", [26288412], [new Benchmark("Gameboy", false, false, 20, runGameboy, setupGameboy, tearDownGameboy, null, 4)]);
+var GameboyBenchmark = new BenchmarkSuite("Gameboy", [26288412], [new Benchmark]);
 var decoded_gameboy_rom = null;
 var expectedGameboyStateStr = '{"registerA":160,"registerB":255,"registerC":255,"registerE":11,' + '"registersHL":51600,"programCounter":24309,"stackPointer":49706,' + '"sumROM":10171578,"sumMemory":3435856,"sumMBCRam":234598,"sumVRam":0}';
 var GameBoyWindow = {};
@@ -15118,33 +15137,33 @@ GameBoyCore.prototype.checkForOperaMathBug = v888;
 var gameboy = null;
 var gbRunInterval = null;
 var settings = [true, false, false, [39, 37, 38, 40, 88, 90, 16, 13], true, false, 4, 15, 30, false, false, false, false, 16, 1];
-var v10827 = "r+BPyZiEZwA+AeBPySAobeEq6gAgKlYj5WJv6SRmZjjhKuXqACDJ/////////////////////////////////xgHZwCYhGcA2fX6/3/1xdXlIRPKNgHN9f/h0cHx6gAg+hLKtyAC8cnwgLcoF/CC7hjgUT6Q4FOv4FLgVOCAPv/gVfHZ8IG3IALx2fBA7gjgQA8PD+YB7gHgT/CC4FHuEOCCPojgU6/gUuBU4IE+/uBV4ID6NMs86jTL8dkKCgoKbWFkZSBieSBhZ28uIGVtYWlsOmdvYnV6b3ZAeWFob28uY29tCnVybDogc3BlY2N5LmRhLnJ1CgoKCv///////wDDSgnO7WZmzA0ACwNzAIMADAANAAgRH4iJAA7czG7m3d3Zmbu7Z2NuDuzM3dyZn7u5Mz5BR08nUyBSRUFMVElNRSCAAAAAAgEDADMBSTQeIUD/y37I8P/1y4fg//BE/pEg+su+8eD/yT7A4EY+KD0g/cnF1eWvEQPK1RITEhMGAyEAyuXFTgYAIWAMCQkqEhMqEhPB4SMFIOrhrwYIzYsU4dHByf////////////////////////////////////////////////////////////////////////////////////////////////////////////////////////8AAgMFBggJCwwOEBETFBYXGBobHR4fISIjJSYnKSorLC0uLzAxMjM0NTY3ODg5Ojo7PDw9PT4+Pj8/Pz9AQEBAQEBAQEBAPz8/Pz4+PT08PDs7Ojk5ODc2NTU0MzIxMC8uLCsqKSgmJSQjISAfHRwaGRcWFRMSEA8NCwoIBwUEAgH//fz6+ff29PPx8O7t6+ro5+Xk4uHg3t3c2tnY19bU09LR0M/OzczLysnJyMfGxsXFxMPDw8LCwcHBwcDAwMDAwMDAwMDBwcHBwsLDw8PExcXGxsfIycnKy8zNzs/Q0dLT1NXX2Nna3N3e4OHi5OXn6Onr7O7v8fL09vf5+vz9AAEECRAZJDFAUWR5kKnE4QAhRGmQueQRQHGk2RBJhMEAQYTJEFmk8UCR5DmQ6UShAGHEKZD5ZNFAsSSZEIkEgQCBBIkQmSSxQNFk+ZApxGEAoUTpkDnkkUDxpFkQyYRBAMGESRDZpHFAEeS5kGlEIQDhxKmQeWRRQDEkGRAJBAEAAQQJEBkkMUBRZHmQqcThACFEaZC55BFAcaTZEEmEwQBBhMkQWaTxQJHkOZDpRKEAYcQpkPlk0UCxJJkQiQSBAIEEiRCZJLFA0WT5kCnEYQChROmQOeSRQPGkWRDJhEEAwYRJENmkcUAR5LmQaUQhAOHEqZB5ZFFAMSQZEAkEAQAAAAAAAAAAAAAAAAAAAAABAQEBAQEBAgICAgIDAwMDBAQEBAUFBQUGBgYHBwcICAkJCQoKCgsLDAwNDQ4ODw8QEBEREhITExQUFRUWFxcYGRkaGhscHB0eHh8gISEiIyQkJSYnJygpKisrLC0uLzAxMTIzNDU2Nzg5Ojs8PT4/QEFCQ0RFRkdISUpLTE1OT1FSU1RVVldZWltcXV9gYWJkZWZnaWprbG5vcHJzdHZ3eXp7fX5/gYKEhYeIiouNjpCRk5SWl5manJ2foKKkpaepqqytr7GytLa3ubu9vsDCxMXHycvMztDS1NXX2dvd3+Hi5Obo6uzu8PL09vj6/P4A//z38Ofcz8CvnIdwVzwfAN+8l3BHHO/Aj1wn8Ld8PwC/fDfwp1wPwG8cx3AXvF8AnzzXcAecL8BP3Gfwd/x/AH/8d/Bn3E/AL5wHcNc8nwBfvBdwxxxvwA9cp/A3fL8AP3y38Cdcj8DvHEdwl7zfAB88V3CHnK/Az9zn8Pf8/wD//Pfw59zPwK+ch3BXPB8A37yXcEcc78CPXCfwt3w/AL98N/CnXA/AbxzHcBe8XwCfPNdwB5wvwE/cZ/B3/H8Af/x38GfcT8AvnAdw1zyfAF+8F3DHHG/AD1yn8Dd8vwA/fLfwJ1yPwO8cR3CXvN8AHzxXcIecr8DP3Ofw9/z/AP/////////////////////+/v7+/v79/f39/fz8/Pz8+/v7+vr6+vn5+fj4+Pf39/b29fX19PTz8/Ly8fHw8PDv7u7t7ezs6+vq6uno6Ofn5uXl5OPj4uHh4N/e3t3c3Nva2djY19bV1NTT0tHQz8/OzczLysnIx8bFxMPCwcDAvr28u7q5uLe2tbSzsrGwr62sq6qpqKalpKOioJ+enZyamZiWlZSTkZCPjYyLiYiHhYSCgYB+fXt6eHd1dHJxcG5sa2loZmVjYmBfXVtaWFdVU1JQTk1LSUhGREJBPz08Ojg2NDMxLy0rKigmJCIgHx0bGRcVExEPDQsJ" + 
+var v10824 = "r+BPyZiEZwA+AeBPySAobeEq6gAgKlYj5WJv6SRmZjjhKuXqACDJ/////////////////////////////////xgHZwCYhGcA2fX6/3/1xdXlIRPKNgHN9f/h0cHx6gAg+hLKtyAC8cnwgLcoF/CC7hjgUT6Q4FOv4FLgVOCAPv/gVfHZ8IG3IALx2fBA7gjgQA8PD+YB7gHgT/CC4FHuEOCCPojgU6/gUuBU4IE+/uBV4ID6NMs86jTL8dkKCgoKbWFkZSBieSBhZ28uIGVtYWlsOmdvYnV6b3ZAeWFob28uY29tCnVybDogc3BlY2N5LmRhLnJ1CgoKCv///////wDDSgnO7WZmzA0ACwNzAIMADAANAAgRH4iJAA7czG7m3d3Zmbu7Z2NuDuzM3dyZn7u5Mz5BR08nUyBSRUFMVElNRSCAAAAAAgEDADMBSTQeIUD/y37I8P/1y4fg//BE/pEg+su+8eD/yT7A4EY+KD0g/cnF1eWvEQPK1RITEhMGAyEAyuXFTgYAIWAMCQkqEhMqEhPB4SMFIOrhrwYIzYsU4dHByf////////////////////////////////////////////////////////////////////////////////////////////////////////////////////////8AAgMFBggJCwwOEBETFBYXGBobHR4fISIjJSYnKSorLC0uLzAxMjM0NTY3ODg5Ojo7PDw9PT4+Pj8/Pz9AQEBAQEBAQEBAPz8/Pz4+PT08PDs7Ojk5ODc2NTU0MzIxMC8uLCsqKSgmJSQjISAfHRwaGRcWFRMSEA8NCwoIBwUEAgH//fz6+ff29PPx8O7t6+ro5+Xk4uHg3t3c2tnY19bU09LR0M/OzczLysnJyMfGxsXFxMPDw8LCwcHBwcDAwMDAwMDAwMDBwcHBwsLDw8PExcXGxsfIycnKy8zNzs/Q0dLT1NXX2Nna3N3e4OHi5OXn6Onr7O7v8fL09vf5+vz9AAEECRAZJDFAUWR5kKnE4QAhRGmQueQRQHGk2RBJhMEAQYTJEFmk8UCR5DmQ6UShAGHEKZD5ZNFAsSSZEIkEgQCBBIkQmSSxQNFk+ZApxGEAoUTpkDnkkUDxpFkQyYRBAMGESRDZpHFAEeS5kGlEIQDhxKmQeWRRQDEkGRAJBAEAAQQJEBkkMUBRZHmQqcThACFEaZC55BFAcaTZEEmEwQBBhMkQWaTxQJHkOZDpRKEAYcQpkPlk0UCxJJkQiQSBAIEEiRCZJLFA0WT5kCnEYQChROmQOeSRQPGkWRDJhEEAwYRJENmkcUAR5LmQaUQhAOHEqZB5ZFFAMSQZEAkEAQAAAAAAAAAAAAAAAAAAAAABAQEBAQEBAgICAgIDAwMDBAQEBAUFBQUGBgYHBwcICAkJCQoKCgsLDAwNDQ4ODw8QEBEREhITExQUFRUWFxcYGRkaGhscHB0eHh8gISEiIyQkJSYnJygpKisrLC0uLzAxMTIzNDU2Nzg5Ojs8PT4/QEFCQ0RFRkdISUpLTE1OT1FSU1RVVldZWltcXV9gYWJkZWZnaWprbG5vcHJzdHZ3eXp7fX5/gYKEhYeIiouNjpCRk5SWl5manJ2foKKkpaepqqytr7GytLa3ubu9vsDCxMXHycvMztDS1NXX2dvd3+Hi5Obo6uzu8PL09vj6/P4A//z38Ofcz8CvnIdwVzwfAN+8l3BHHO/Aj1wn8Ld8PwC/fDfwp1wPwG8cx3AXvF8AnzzXcAecL8BP3Gfwd/x/AH/8d/Bn3E/AL5wHcNc8nwBfvBdwxxxvwA9cp/A3fL8AP3y38Cdcj8DvHEdwl7zfAB88V3CHnK/Az9zn8Pf8/wD//Pfw59zPwK+ch3BXPB8A37yXcEcc78CPXCfwt3w/AL98N/CnXA/AbxzHcBe8XwCfPNdwB5wvwE/cZ/B3/H8Af/x38GfcT8AvnAdw1zyfAF+8F3DHHG/AD1yn8Dd8vwA/fLfwJ1yPwO8cR3CXvN8AHzxXcIecr8DP3Ofw9/z/AP/////////////////////+/v7+/v79/f39/fz8/Pz8+/v7+vr6+vn5+fj4+Pf39/b29fX19PTz8/Ly8fHw8PDv7u7t7ezs6+vq6uno6Ofn5uXl5OPj4uHh4N/e3t3c3Nva2djY19bV1NTT0tHQz8/OzczLysnIx8bFxMPCwcDAvr28u7q5uLe2tbSzsrGwr62sq6qpqKalpKOioJ+enZyamZiWlZSTkZCPjYyLiYiHhYSCgYB+fXt6eHd1dHJxcG5sa2loZmVjYmBfXVtaWFdVU1JQTk1LSUhGREJBPz08Ojg2NDMxLy0rKigmJCIgHx0bGRcVExEPDQsJ" + 
 "BwUDAf9/Px8PBwMBgEAgEAgEAgEAAQEBAQEBAQEBAQEA//////////////+AEAcAAQABAAEBAAEBAAEA/wD//wD//wD/AP+AKwcBAAEAAQD/AP8A/wD/AP8A/wABAAEAAQCARgcBAQEBAQD//////////////wABAQEBAQGAYQf///////////////////////////////////////////////////////////////////////////////////////////////////////////////////////////////////////////////////////////////////////////////+AwODw+Pz+/xEAwAGxwj4E9cU+BfUKbwMKZ37+gCALI34LAiN+AwILGOsahhIDHBwcHPE9IN7BIRAAGVRdPgX1Cm8DCmcalhIjfAILfQIDAx0dHR3xPSDnIRgAGVRd8T0grskRAcAB6cI+BPUKbwMKZ37+gCALI34LAiN+AwILGOs+CvUahhIcHBwc8T0g9CN8Agt9AgMD8T0g0MkgIEZJTExFRCAgIFBPTFlHT05TIEhFTElDT1BURVJJTiBBQ1RJT04gIQDADgpwLHQsGhPWICI2ACwNIPE+oOoQyngBCQDlYmsJVF3hDMYKR3AsdCwaG9YgIjYALA0g8a/qEcrJ+hDK/jDI1gTqEMpHPqCQ/lA4Aj5QDgAM1ggw+3ghAcARBAB3xggZDSD5+hHKg+oRykf+UDgCPlAOAAzWCDD7eC4td9YIGQ0g+ckh9grzMf/PzVABr+Am4P/gD+BD4EL2SOBFPkDgQT4E4AfN9RM+CuoAAA4HeeBwJqCvIstsKPsNIPIh/v8yy30g+wEKABH1/yFpAc3kE+cCAVYAEQDBIVt2zeQTrwYYIWsOzYsUIYsOzaQUxwGwAxEAgCGhF8XlzeQT4cERAIjN5BMhAJgRAwABYMDHcc9yIwUg+BQdIPHN9RMhuxUGAc2WE82JEz5E4EGv4EU+A+D/+z4B6hLK4E0QAAB4zccTBSD6zZATxwEACFkhAIhzIwt4sSD5IQDHPv9FdyRwJCJ3JXclcCwg8x5/IQCYx3PPNgDL1DYIx3PLlCPLVCjuPoABDxARIAAhIpjF5XfL1HfLlDwZDSD1POEswQUg7D486jPLr+o0yz3qL8s+oOCCPgLqG8vNiRM+ROBBr+BFPgPg/68+ACEXyyI+CiI+IHev6h7L4ITgluodyz4B6h/L6g/D6g3KBlARnAjNxAjNcwsBLAHFzTsLzQAJwQt4sSDzzZATxwEACFkhAIhzIwt4sSD5zfUTeQYQIYMOzYsUPv/qKcsGgBGwCM3ECM2JEwEsAcXNbAzNAAnBC3ixIPOv6hLKzZATPpDgU/PHAbADEQCIIaEXzeQTzfUTIQIWBgHNlhPNiRM+ROBBr+BFPgPg//sY/j4D6gAgzcRGBgMhF8t+gCJ+gDwifoB3zckP+jDLb/oxy2fNtgs+AeCB8IG3IPv6Dcq3KAPNcwHJ+h3LBgARTg2Hb2AZKmZvTgkq4ItfKjzgjD1PKuCNe4eHg0cRAMUqEhwFIPp5h4eBRxEAxCoSHAUg+n3qMMt86jHLyfCL4I7wjOCP8I3gkBEAw9XlzcoQ4dHwpeaAEhwBAwAJ8JA94JAg6CEAxQYPKk+gXxq3IB95yzegXxq3IBYqT6BfGrcgD3nLN6BfGrcgBiwsLBhHLOXNyhDwlrcoKwYB8KXGP0/LfygBBcXwpMY/Vx4AzZMOe8H18KPGP1ceAM2TDsHhJCJwGAzhJPCjxj8i8KTGPyIsJRbDBg/wjj3gjsLiCz4C6gAgw1JhfBjcHwAL7mpIYL9vBgMhF8t+gCJ+gDwifoB3zckPIcsNEQDGzf4MI+U+A+oAICEgy83+DPocy9YIb+ocy82vYAYDESDLIWIOxeXVzcoQ4fCjxhQi8KQiNg8jVF3hIyMjwQUg5M3ERsE+AeoAIAr+/ygiEQDGbyYAKRnlAwoDbyYAKRleI1bhKmZvxc0xHMwAQMEY2T4B4IHwgbcg+8l+PMjl1c3KEAYB8KVPy38oAQXF8KTLf/UoAi88Vx4AzZMO8XsgAi88xn/B9fCjy3/1KAIvPFceAM2TDvF7KAIvPMZ/wdESE3gSE+EjIyMYsFANAgAIDAYCRCgoFANEKAAUE0QAABQSRAAoFAJVKCjsA1UoAOwTVQAA7BJVACjsAAAEBQAAAAEFAAEBAwIGAQEDBwYCAgAHAwICAAcEAwMBAgYDAwEFBgQEAAECBAQAAwIFBQQFBgUFBAcGMgAAzgAAADIAAM4AAAAyAADOKAAAHhEAChEAAAAACu8AHu8AFAAKFAD2FAAPCgAF6AAC4gAQ3gAQ4gD+CgD74g4C3Q4C4QAC4vIC3fIC4AAM4PsM4PsQ4/sJ3fsJ/wABAQICAwMEBAUFAAAGAQYCBgMGBAYFBgAHAQcCBwMHBAcFBwYICQoKCwsMDA0NDgoPDxAQEQoSEhMTERQVFRYVFxUYCBkIGggb/yAAD/AbD/DlD/9//3+XEQAAAGD/f5cRAAAYAP9/lxEAAIB8lxH/f/9/QHz/f18IAADLI8sSeC9HeS9PAyEAAH2Pb3yPZwk4BWd9kW+3yxPLEn2Pb3yPZwk4BWd9kW+3yxPLEn2Pb3yPZwk4BWd9kW+3yxPLEn2Pb3yPZwk4BWd9kW+3yxPLEn2Pb3yPZwk4BWd9kW+3yxPLEn2Pb3yPZwk4BWd9kW+3yxPLEn2Pb3yPZwk4BWd9kW+3yxPLEn2Pb3yPZwk4BWd9kW+3yxPLEn2Pb3yPZwk4BWd9kW+3yxPLEn2Pb3yPZwk4BWd9kW+3yxPLEn2Pb3yPZwk4BWd9kW+3yxPLEn2Pb3yPZwk4BWd9kW+3yxPLEn2Pb3yPZwk4BWd9kW+3yxPLEn2Pb3yPZwk4BWd9kW+3yxPLEn2Pb3yPZwk4BWd9kW+3yxPLEn2Pb3yPZwk4BWd9kW+3yxPLEssoyxkJ0BPJ+hfLJgJvfuCcLzzgnn3GQG9+4Jvgn6/gmOCZ4JrgneChPkDgl/oYy29OfcZAb0bFeOCgeeCizdMQ8KPgpvCk4KnwpeCsr+Cg4KI+QOChzdMQ8KPgp/Ck4KrwpeCtwXkvPOCgr+CheOCizdMQ8KPgmfCk4JzwpeCf8Kbgl/Cp4JrwrOCd8KfgmPCq4JvwreCe+hnLJgJvTn3GQG9GxXjgoHkvPOChr+CizdMQ8KPgpvCk4KnwpeCswXngoHjgoa/gos3TEPCj4KfwpOCq8KXgra/goOChPkDgos3TEPCj4JnwpOCc8KXgn/Cm4JfwqeCa8KzgnfCn4JjwquCb8K3gnskq4KAq4KEq4KLwl1/woCYGV8t6ICDLe3soJy88X3qTMAIvPG96g1YlXiVvfiVuZxl8LzwYH3ovPFfLeyjhey88X5IwAi88b3qDViVeJW9+JW5nGXxH8Jhf8KEmBlfLeiAgy3t7KCcvPF96kzACLzxveoNWJV4lb34lbmcZfC88GB96LzxXy3so4XsvPF+SMAIvPG96g1YlXiVvfiVuZxl8T/CZX/CiJgZXy3ogIMt7eygnLzxfepMwAi88b3qDViVeJW9+JW5nGXwvPBgfei88V8t7KOF7LzxfkjACLzxveoNWJV4lb34lbmcZfICB4KPwml/woCYGV8t6ICDLe3soJy88X3qTMAIvPG96g1YlXiVvfiVuZxl8LzwYH3ovPFfLeyjhey88X5IwAi88b3qDViVeJW9+JW5nGXxH8Jtf8KEmBlfLeiAgy3t7KCcvPF96kzACLzxveoNWJV4lb34lbmcZfC88GB96LzxXy3so4XsvPF+SMAIvPG96g1YlXiVvfiVuZxl8T/CcX/CiJgZXy3ogIMt7eygnLzxfepMwAi88b3qDViVeJW9+JW5nGXwvPBgfei88V8t7KOF7LzxfkjACLzxveoNWJV4lb34lbmcZfICB4KTwnV/woCYGV8t6ICDLe3soJy88X3qTMAIvPG96g1YlXiVvfiVuZxl8LzwYH3ovPFfLeyjhey88X5IwAi88b3qDViVeJW9+JW5nGXxH8J5f8KEmBlfLeiAgy3t7KCcvPF96kzACLzxveoNWJV4lb34lbmcZfC88GB96LzxXy3so4XsvPF+SMAIvPG96g1YlXiVvfiVuZxl8T/CfX/CiJgZXy3ogIMt7eygnLzxfepMwAi88b3qDViVeJW9+JW5nGXwvPBgfei88V8t7KOF7LzxfkjACLzxveoNWJV4lb34lbmcZfICB4KXJ9T6D4EDxyfWv4EDxyfXF1eXHKv7/KFD+FiAaTiMqh4eHVF1vJgApKXgGmAlHelRne11vGNzGYBLPeBIcGNN2ACETyjQ1KPc1yfvFBmR2AAUg+8HJ+3YABSD7yfXF1eUqEhMLeLEg+OHRwfHJxeUBAKAhAMDNAxThwcnF5XEjBSD74cHJxdXlAQCAIZXKzQMU4dHBycXV5a/qFcuwIAwaEyIaEzIEDXjqFcvlxRq+EyAPIxq+IAkTIw0gCMHhGBkrGyMjBSDmecFPBBoTIhoTIiEVyzThDSDS+hXL4dHBydVfzXIUuzD60cnF9cH6FMrLD6mAR/CLkR+AR/AFqOoUysHJ9cXltxcXF/aA4Ggq4GkFIPo+5OBH4cHxyfXF5bcXFxf2gOBqKuBrBSD6PuTgSOBJ4cHxyT4Q4ADwAC/LN+bwRz4g4ADwAC/mD7DqFsvJzyEAgK8GIE8+CCINIPwFIPnHIQCABiBPIg0g/AUg+cnFzQMVSs0eFcHJxc0RFUjNGRVLzSMVwcnFBgHNKxXBycUGABj2xQYDGPHFBgLNKxXByfXlh4eAJsBvceHxyfXlh4cmwG9GI04jXiNW4fHJ9cXV5eCDKjzK8BPWIF/wg835FF95xghPezwY6PXF1eXF1c13FdHBex4FIS3LGNUBKssR8NjNlRURGPzNlRURnP/NlRUR9v/NlRUR//8+LzwZOPwCA3ovV3sv";
-var v10826 = v10827 + "XxMZyTAwRlBT/zAwUE5UU/8wMExJTkVT/xYFB1dFTENPTUUgVE8WBQgtUkVBTFRJTUUtFgAJREVNTyBNQURFIEVTUEVDSUFMTFkWAQpGT1IgTENQJzIwMDAgUEFSVFn/FgAAR1JFRVRJTlg6ICAgICAgICAgICAWAAFEU0MsUEFOLFNBQixGQVRBTElUWRYAAkpFRkYgRlJPSFdFSU4sSUNBUlVTFgADRE9YLFFVQU5HLEFCWVNTICAgICAWAAQgICAgICAgICAgICAgICAgICAgIBYABUNSRURJVFM6ICAgICAgICAgICAgFgAGQUxMIEdGWCZDT0RFIEJZIEFHTyAWAAdIRUxJQ09QVEVSIDNEIE1PREVMIBYACENSRUFURUQgQlkgQlVTWSAgICAgFgAJICAgICAgICAgICAgICAgICAgICAWAApVU0VEIFNPRlRXQVJFOiAgICAgIBYAC1JHQkRTLE5PJENBU0gsRkFSICAgFgAMICAgICAgICAgICAgICAgICAgICAWAA1DT05UQUNUOiAgICAgICAgICAgIBYADkdPQlVaT1ZAWUFIT08uQ09NICAgFgAPSFRUUDovL1NQRUNDWS5EQS5SVSAWABAgICAgICAgICAgICAgICAgICAgIBYAEVNFRSBZT1UgT04gR0JERVYyMDAw/wAAAAAAAAAAAAAAAAAAAAAICBwUHBQ4KDgoMDBwUCAgKCh8VHxUKCgAAAAAAAAAABQUPip/QT4qfFT+gnxUKCgICDw0fkL8rP6Cfmr8hHhYJCR+Wn5SPCR4SPyU/LRISBgYPCR+Wjwkflr8tH5KNDQQEDgocFAgIAAAAAAAAAAABAQOChwUOCg4KDgoHBQICBAQOCgcFBwUHBQ4KHBQICAAABQUPio8NH5CPCx8VCgoAAAICBwUPDR+QjwsOCgQEAAAAAAAAAAAEBA4KHBQcFAAAAAAAAB8fP6CfHwAAAAAAAAAAAAAAAAwMHhIeEgwMAQEDgoeEjwkeEjwkOCgQEAYGDwkflr+qv6q/LR4SDAwGBg8JHxUPDQ4KHxs/oJ8fBwcPiJ+Wjw0eEj8vP6CfHwcHD4iflo8NE5K/LR4SDAwJCR+Wn5afFT8tP6CfGwQEBwcPiJ8XPyEfnr8tHhIMDAYGDwkeFj8pP66/LR4SDAwPDx+Qv66XFQ4KHBQcFAgIBwcPiJ+Wjwkflr8tPiIcHAcHD4iflr+sn5KfHT4iHBwAAAAAAgIHBQICBAQOCgQEAAACAgcFAgIEBA4KDgocFAAAAAAHBQ4KHBQcFA4KAAAAAAAADw8fkJ8fPyEeHgAAAAAAAA4KBwUHBQ4KHBQAAAYGDwkflr8tHhoEBA4KBAQHBw+In5a/rL8pPi4+IhwcBwcPiJ+Wv66/oL+uvy0SEg4OHxEflr8pP6a/LT4iHBwHBw+In5a5qbgoP6y/IxwcDAweEh8VH5a7qr+uvyEeHgcHD4ifFx8RHhY/Lz+gnx8HBw+Inxc/IT4uOCg4KBAQBwcPiJ+Wvy8/qL+uvyEeHgkJH5a/rr+gv66/LT8tEhIPDx+QjwsOChwUHhY/IR4eDw8fkI+Og4KXFT8tHhIMDAkJH5afFR+Qv66/LT8tEhIICBwUHBQ4KDkpP66fEQ4OCgofFR+Qv6q/rr8tPy0SEgkJH5a/pr+qv6y7qr8tEhIHBw+In5a7qruqvy0+IhwcBwcPiJ+Wv66/IT4uOCgQEAcHD4iflr+uv6q/LT+inZ2HBw+In5a/LT4iPy0/LRISBwcPiJ8XP6Cfnr8tPiIcHB8fP6CfGw4KHBQcFBwUCAgJCR+Wn5a7qruqvy0eEgwMERE7qruqnxUfFR4SHBQICAkJH5aflr+uv6q/KR8VCgoJCR+WnxUOCg8JH5a/LRISCQkflr8tPy0eEhwUHBQICA8PH5C/LT46Dwsflr8hHh4HBw+IjwsOChwUHhYfEQ4OEBA4KDwkHhIPCQeEg4KBAQ4OHxEPDQcFDgoeGj4iHBwGBg8JH5a7qpERAAAAAAAAAAAAAAAAAAAAAB8fP6CfHx81rdPfJJne5X1MAIvPEevyxkwAYAfyxkwAYAfyxkwAYAfyxkwAYAfyxkwAYAfyxkwAYAfyxkwAYAfyxkwAYAfyxnLEcsXlDABhMsRyxeUMAGEyxHLF5QwAYTLEcsXlDABhMsRyxeUMAGEyxHLF5QwAYTLEcsXlDABhMsRyxeUMAGEeRcvT/F5MAIvPIVvJrcBAAA+t7zLEbrLED6/vcsRu8sQPj+8P8sRuj/LEL0/yxG7P8sQeLHIeKHAebcgB3xiV31rX3jLH9L/HD5AlU97lW96lPUwAi88R6/LGTABgB/LGTABgB/LGTABgB/LGTABgB/LGTABgB/LGTABgB/LGTABgB/LGTABgB/LGcsRyxeVMAGFyxHLF5UwAYXLEcsXlTABhcsRyxeVMAGFyxHLF5UwAYXLEcsXlTABhcsRyxeVMAGFyxHLF5UwAYV5Fy9P8XkwAi88hGcuQMMxHMsf0pcdPkCUT3qUZ3uV9TACLzxHr8sZMAGAH8sZMAGAH8sZMAGAH8sZMAGAH8sZMAGAH8sZMAGAH8sZMAGAH8sZMAGAH8sZyxHLF5QwAYTLEcsXlDABhMsRyxeUMAGEyxHLF5QwAYTLEcsXlDABhMsRyxeUMAGEyxHLF5QwAYTLEcsXlDABhHkXL0/xeTACLzyFbyZAwzEcyx/SoRt91r9PfZNvepT1MAIvPEevyxkwAYAfyxkwAYAfyxkwAYAfyxkwAYAfyxkwAYAfyxkwAYAfyxkwAYAfyxkwAYAfyxnLEcsXlTABhcsRyxeVMAGFyxHLF5UwAYXLEcsXlTABhcsRyxeVMAGFyxHLF5UwAYXLEcsXlTABhcsRyxeVMAGFeRcvT/F5MAIvPIRnLr/DMRz/////////////////////////////////////////////////////////////////////////////////////////////////////////////////////////////////////////////////////////////////////////////////////////////////////////////////////////////////////////////////////////////////////////////////////////////////////////////////////////////////////////////////////////////////////////////////////////////////////////////////////////////////////////////////////////////////////////////////////////////////////////////////////////////////////////////////////////////////////////////////////////////////////////////////////////////////////////////////////////////////////////////////////////////////////////////////////////////////////////////////////////////////////////////////////////////////////////////////////////////////////////////////////////////////////////////////////////////////////////////////////////////////////////////////////////////////////////////////////////////////////////////////////////////////////////////////////////////////////////////////////////////////////////////////////////////////////////////////////////////////////////////////////////////////////////////////////////////////////////////////////////////////////////////////////////////////////////////////////////////////////////////////////////////////////////////////////////////////////////////////////////////////////////////////////////////////////////////////////////////////////////////////////////////////////////////////////////////////////////////////////////////////////////////////////////////////////////////////////////////////////////////////////////////////////////////////////////////////////////////////////////////////////////////////////////////////////////////////////////////////////////////////////////////////////////////////////////////////////////////////////////////////////////////////////////////////////////////////////////////////////////////////////////////////////////////////////////////////////////////////////////////////////////////////////////////////////////////////////////////////";
-var v10825 = v10826 + "////////////////////////////////////////////////////////////////////////////////////////////////////////////////////////////////////////////////////////////////////////////////////////////////////////////////////////////////////////////////////////////////////////////////////////////////////////////////////////////////////////////////////////////////////////////////////////////////////////////////////////////////////////////////////////////////////////////////////////////////////////////////////////////////////////////////////////////////////////////////////////////////////////////////////////////////////////////////////////////////////////////////////////////////////////////////////////////////////////////////////////////////////////////////////////////////////////////////////////////////////////////////////////////////////////////////////////////////////////////////////////////////////////////////////////////////////////////////////////////////////////////////////////////////////////////////////////////////////////////////////////////////////////////////////////////////////////////////////////////////////////////////////////////////////////////////////////////////////////////////////////////////////////////////////////////////////////////////////////////////////////////////////////////////////////////////////////////////////////////////////////////////////////////////////////////////////////////////////////////////////////////////////////////////////////////////////////////////////////////////////////////////////////////////////////////////////////////////////////////////////////////////////////////////////////////////////////////////////////////////////////////////////////////////////////////////////////////////////////////////////////////////////////////////////////////////////////////////////////////////////////////////////////////////////////////////////////////////////////////////////////////////////////////////////////////////////////////////////////////////////////////////////////////////////////////////////////////////////////////////////////////////////////////////////////////////////////////////////////////////////////////////////////////////////////////////////////////////////////////////////////////////////////////////////////////////////////////////////////////////////////////////////////////////////////////////////////////////////////////////////////////////////////////////////////////////////////////////////////////////////////////////////////////////////////////////////////////////////////////////////////////////////////////////////////////////////////////////////////////////////////////////////////////////////////////////////////////////////////////////////////////////////////////////////////////////////////////////////////////////////////////////////////////////////////////////////////////////////////////////////////////////////////////////////////////////////////////////////////////////////////////////////////////////////////////////////////////////////////////////////////////////////////////////////////////////////////////////////////////////////////////////////////////////////////////////////////////////////////////////////////////////////////////////////////////////////////////////////////////////////////////////////////////////////////////////////////////////////////////////////////////////////////////////////////////////////////////////////////////////////////////////////////////////////////////////////////////////////////////////////////////////////////////////////////////////////////////////////////////////////////////////////////////////////////////////////////////////////////////////////////////////////////////////////////////////////////////////////////////////////////////////////////////////////////////////////////////////////////////////////////////////////////////////////////////////////////////////////////////////////////////////////////////////////////////////////////////////////////////////////////////////////////////////////////////////////////////////////////////////////////////////////////////////////////////////////////////////////////////////////////////////////////////////////////////////////////////////////////////////////////////////////////////////////////////////////////////////////////////////////////////////////////////////////////////////////////////////////////////////////////////////////////////////////////////////////////////////////////////////////////////////////////////////////////////////////////////////////////////////////////////////////////////////////////////////////////////////////////////////////////////////////////////////////////////////////////////////////////////////////////////////////////////////////////////////////////////////////////////////////////////////////////////////////////////////////////////////////////////////////////////////////////////////////////////////////////////////////////////////////////////////////////////////////////";
-var v10824 = v10825 + "/////////////////////////////////////////////////////////////////////////////////////////////////////////////////////////////////////////////////////////////////////////////////////////////////////////////////////////////////////////////////////////////////////////////////////////////////////////////////////////////////////////////////////////////////////////////////////////////////////////////////////////////////////////////////////////////////////////////////////////////////////////////////////////////////////////////////////////////////////////////////////////////////////////////////////////////////////////////////////////////////////////////////////////////////////////////////////////////////////////////////////////////////////////////////////////////////////////////////////////////////////////////////////////////////////////////////////////////////////////////////////////////////////////////////////////////////////////////////////////////////////////////////////////////////////////////////////////////////////////////////////////////////////////////////////////////////////////////////////////////////////////////////////////////////////////////////////////////////////////////////////////////////////////////////////////////////////////////////////////////////////////////////////////////////////////////////////////////////////////////////////////////////////////////////////////////////////////////////////////////////////////////////////////////////////////////////////////////////////////////////////////////////////////////////////////////////////////////////////////////////////////////////////////////////////////////////////////////////////////////////////////////////////////////////////////////////////////////////////////////////////////////////////////////////////////////////////////////////////////////////////////////////////////////////////////////////////////////////////////////////////////////////////////////////////////////////////////////////////////////////////////////////////////////////////////////////////////////////////////////////////////////////////////////////////////////////////////////////////////////////////////////////////////////////////////////////////////////////////////////////////////////////////////////////////////////////////////////////////////////////////////////////////////////////////////////////////////////////////////////////////////////////////////////////////////////////////////////////////////////////////////////////////////////////////////////////////////////////////////////////////////////////////////////////////////////////////////////////////////////////////////////////////////////////////////////////////////////////////////////////////////////////////////////////////////////////////////////////////////////////////////////////////////////////////////////////////////////////////////////////////////////////////////////////////////////////////////////////////////////////////////////////////////////////////////////////////////////////////////////////////////////////////////////////////////////////////////////////////////////////////////////////////////////////////////////////////////////////////////////////////////////////////////////////////////////////////////////////////////////////////////////////////////////////////////////////////////////////////////////////////////////////////////////////////////////////////////////////////////////////////////////////////////////////////////////////////////////////////////////////////////////////////////////////////////////////////////////////////////////////////////////////////////////////////////////////////////////////////////////////////////////////////////////////////////////////////////////////////////////////////////////////////////////////////////////////////////////////////////////////////////////////////////////////////////////////////////////////////////////////////////////////////////////////////////////////////////////////////////////////////////////////////////////////////////////////////////////////////////////////////////////////////////////////////////////////////////////////////////////////////////////////////////////////////////////////////////////////////////////////////////////////////////////////////////////////////////////////////////////////////////////////////////////////////////////////////////////////////////////////////////////////////////////////////////////////////////////3q8MAVUZ3tdb3u90pdAfZNPepRfkTA+V3nLPy88g+CDPn+R5YdPbyYARCkpKQkBkVIJweV41kAXb3nWQB8fH+YPZ/CChGd55gcGB/YITwpP8INHLMl5S1+RV3nLPy88g+CDPneR5YdPbyYARCkpKQkBklsJweV41kAXb3nWQB8fH+YPZ/CChGd55gcGB/YITwpP8INHLMmVT3qUX5EwPld5yz8vPIPggz5/keWHT28mAEQpKSkJAR9BCcHleNZAF2951kAfHx/mD2fwgoRneeYHBgf2CE8KT/CDRyzJeUtfkVd5yz8vPIPggz53keWHT28mAEQpKSkJASBKCcHleNZAF2951kAfHx/mD2fwgoRneeYHBgf2CE8KT/CDRyzJfrF3e8t4IAN6LCyAR8sJMAEkfrF3e8t4IAN6LCyAR8sJMAEkfrF3e8t4IAN6LCyAR8sJMAEkfrF3e8t4IAN6LCyAR8sJMAEkfrF3e8t4IAN6LCyAR8sJMAEkfrF3e8t4IAN6LCyAR8sJMAEkfrF3e8t4IAN6";
-var v10823 = v10824 + "LCyAR8sJMAEkfrF3e8t4IAN6LCyAR8sJMAEkfrF3e8t4IAN6LCyAR8sJMAEkfrF3e8t4IAN6LCyAR8sJMAEkfrF3e8t4IAN6LCyAR8sJMAEkfrF3e8t4IAN6LCyAR8sJMAEkfrF3e8t4IAN6LCyAR8sJMAEkfrF3e8t4IAN6LCyAR8sJMAEkfrF3e8t4IAN6LCyAR8sJMAEkfrF3e8t4IAN6LCyAR8sJMAEkfrF3e8t4IAN6LCyAR8sJMAEkfrF3e8t4IAN6LCyAR8sJMAEkfrF3e8t4IAN6LCyAR8sJMAEkfrF3e8t4IAN6LCyAR8sJMAEkfrF3e8t4IAN6LCyAR8sJMAEkfrF3e8t4IAN6LCyAR8sJMAEkfrF3e8t4IAN6LCyAR8sJMAEkfrF3e8t4IAN6LCyAR8sJMAEkfrF3e8t4IAN6LCyAR8sJMAEkfrF3e8t4IAN6LCyAR8sJMAEkfrF3e8t4IAN6LCyAR8sJMAEkfrF3e8t4IAN6LCyAR8sJMAEkfrF3e8t4IAN6LCyAR8sJMAEkfrF3e8t4IAN6LCyAR8sJMAEkfrF3e8t4IAN6LCyAR8sJMAEkfrF3e8t4IAN6LCyAR8sJMAEkfrF3e8t4IAN6LCyAR8sJMAEkfrF3e8t4IAN6LCyAR8sJMAEkfrF3e8t4IAN6LCyAR8sJMAEkfrF3e8t4IAN6LCyAR8sJMAEkfrF3e8t4IAN6LCyAR8sJMAEkfrF3e8t4IAN6LCyAR8sJMAEkfrF3e8t4IAN6LCyAR8sJMAEkfrF3e8t4IAN6LCyAR8sJMAEkfrF3e8t4IAN6LCyAR8sJMAEkfrF3e8t4IAN6LCyAR8sJMAEkfrF3e8t4IAN6LCyAR8sJMAEkfrF3e8t4IAN6LCyAR8sJMAEkfrF3e8t4IAN6LCyAR8sJMAEkfrF3e8t4IAN6LCyAR8sJMAEkfrF3e8t4IAN6LCyAR8sJMAEkfrF3e8t4IAN6LCyAR8sJMAEkfrF3e8t4IAN6LCyAR8sJMAEkfrF3e8t4IAN6LCyAR8sJMAEkfrF3e8t4IAN6LCyAR8sJMAEkfrF3e8t4IAN6LCyAR8sJMAEkfrF3e8t4IAN6LCyAR8sJMAEkfrF3e8t4IAN6LCyAR8sJMAEkfrF3e8t4IAN6LCyAR8sJMAEkfrF3e8t4IAN6LCyAR8sJMAEkfrF3e8t4IAN6LCyAR8sJMAEkfrF3e8t4IAN6LCyAR8sJMAEkfrF3e8t4IAN6LCyAR8sJMAEkfrF3e8t4IAN6LCyAR8sJMAEkfrF3e8t4IAN6LCyAR8sJMAEkfrF3e8t4IAN6LCyAR8sJMAEkfrF3e8t4IAN6LCyAR8sJMAEkfrF3e8t4IAN6LCyAR8sJMAEkfrF3e8t4IAN6LCyAR8sJMAEkfrF3e8t4IAN6LCyAR8sJMAEkfrF3e8t4IAN6LCyAR8sJMAEkfrF3e8t4IAN6LCyAR8sJMAEkfrF3e8t4IAN6LCyAR8sJMAEkfrF3e8t4IAN6LCyAR8sJMAEkfrF3e8t4IAN6LCyAR8sJMAEkfrF3e8t4IAN6LCyAR8sJMAEkfrF3e8t4IAN6LCyAR8sJMAEkfrF3e8t4IAN6LCyAR8sJMAEkfrF3e8t4IAN6LCyAR8sJMAEkfrF3e8t4IAN6LCyAR8sJMAEkfrF3e8t4IAN6LCyAR8sJMAEkfrF3e8t4IAN6LCyAR8sJMAEkfrF3e8t4IAN6LCyAR8sJMAEkfrF3e8t4IAN6LCyAR8sJMAEkfrF3e8t4IAN6LCyAR8sJMAEkfrF3e8t4IAN6LCyAR8sJMAEkfrF3e8t4IAN6LCyAR8sJMAEkfrF3e8t4IAN6LCyAR8sJMAEkfrF3e8t4IAN6LCyAR8sJMAEkfrF3e8t4IAN6LCyAR8sJMAEkfrF3e8t4IAN6LCyAR8sJMAEkfrF3e8t4IAN6LCyAR8sJMAEkfrF3e8t4IAN6LCyAR8sJMAEkfrF3e8t4IAN6LCyAR8sJMAEkfrF3e8t4IAN6LCyAR8sJMAEkfrF3e8t4IAN6LCyAR8sJMAEkfrF3e8t4IAN6LCyAR8sJMAEkfrF3e8t4IAN6LCyAR8sJMAEkfrF3e8t4IAN6LCyAR8sJMAEkfrF3e8t4IAN6LCyAR8sJMAEkfrF3e8t4IAN6LCyAR8sJMAEkfrF3e8t4IAN6LCyAR8sJMAEkfrF3e8t4IAN6LCyAR8sJMAEkfrF3e8t4IAN6LCyAR8sJMAEkfrF3e8t4IAN6LCyAR8sJMAEkfrF3e8t4IAN6LCyAR8sJMAEkfrF3e8t4IAN6LCyAR8sJMAEkfrF3e8t4IAN6LCyAR8sJMAEkfrF3e8t4IAN6LCyAR8sJMAEkfrF3e8t4IAN6LCyAR8sJMAEkfrF3e8t4IAN6LCyAR8sJMAEkfrF3e8t4IAN6LCyAR8sJMAEkfrF3e8t4IAN6LCyAR8sJMAEkfrF3e8t4IAN6LCyAR8sJMAEkfrF3e8t4IAN6LCyAR8sJMAEkfrF3e8t4IAN6LCyAR8sJMAEkfrF3e8t4IAN6LCyAR8sJMAEkfrF3e8t4IAN6LCyAR8sJMAEkfrF3e8t4IAN6LCyAR8sJMAEkfrF3e8t4IAN6LCyAR8sJMAEkfrF3e8t4IAN6LCyAR8sJMAEkfrF3e8t4IAN6LCyAR8sJMAEkfrF3e8t4IAN6LCyAR8sJMAEkfrF3e8t4IAN6LCyAR8sJMAEkfrF3e8t4IAN6LCyAR8sJMAEkfrF3e8t4IAN6LCyAR8sJMAEkfrF3e8t4IAN6LCyAR8sJMAEkfrF3e8t4IAN6LCyAR8sJMAEkfrF3e8t4IAN6LCyAR8sJMAEkfrF3e8t4IAN6LCyAR8sJMAEkfrF3e8t4IAN6LCyAR8sJMAEkfrF3e8t4IAN6LCyAR8sJMAEkyX6xInvLeCAGessJMAEkgEcALH6xInvLeCAGessJMAEkgEcALH6xInvLeCAGessJMAEkgEcALH6xInvLeCAGessJMAEkgEcALH6xInvLeCAGessJMAEkgEcALH6xInvLeCAGessJMAEkgEcALH6xInvLeCAGessJMAEkgEcALH6xInvLeCAGessJMAEkgEcALH6xInvLeCAGessJMAEkgEcALH6xInvLeCAGessJMAEkgEcALH6xInvLeCAGessJMAEkgEcALH6xInvLeCAGessJMAEkgEcALH6xInvLeCAGessJMAEkgEcALH6xInvLeCAGessJMAEkgEcALH6xInvLeCAGessJMAEkgEcALH6xInvLeCAGessJMAEkgEcALH6xInvLeCAGessJMAEkgEcALH6xInvLeCAGessJMAEkgEcALH6xInvLeCAGessJMAEkgEcALH6xInvLeCAGessJMAEkgEcALH6xInvLeCAGessJMAEkgEcALH6xInvLeCAGessJMAEkgEcALH6xInvLeCAGessJMAEkgEcALH6xInvLeCAGessJMAEkgEcALH6xInvLeCAGessJMAEkgEcALH6xInvLeCAGessJMAEkgEcALH6xInvLeCAGessJMAEkgEcALH6xInvLeCAGessJMAEkgEcALH6xInvLeCAGessJMAEkgEcALH6xInvLeCAGessJMAEkgEcALH6xInvLeCAGessJMAEkgEcALH6xInvLeCAGessJMAEkgEcALH6xInvLeCAGessJMAEkgEcALH6xInvLeCAGessJMAEkgEcALH6xInvLeCAGessJMAEkgEcALH6xInvLeCAGessJMAEkgEcALH6xInvLeCAGessJMAEkgEcALH6xInvLeCAGessJMAEkgEcALH6xInvLeCAGessJMAEkgEcALH6xInvLeCAGessJMAEkgEcALH6xInvLeCAGessJMAEkgEcALH6xInvLeCAGessJMAEkgEcALH6xInvLeCAGessJMAEkgEcALH6xInvLeCAGessJMAEkgEcALH6xInvLeCAGessJMAEkgEcALH6xInvLeCAGessJMAEkgEcALH6xInvLeCAGessJMAEkgEcALH6xInvLeCAGessJMAEkgEcALH6xInvLeCAGessJMAEkgEcALH6xInvLeCAGessJMAEkgEcALH6xInvLeCAGessJMAEkgEcALH6xInvLeCAGessJMAEkgEcALH6xInvLeCAGessJMAEkgEcALH6xInvLeCAGessJMAEkgEcALH6xInvLeCAGessJMAEkgEcALH6xInvLeCAGessJMAEkgEcALH6xInvLeCAGessJMAEkgEcALH6xInvLeCAGessJMAEkgEcALH6xInvLeCAGessJMAEkgEcALH6xInvLeCAGessJMAEkgEcALH6xInvLeCAGessJMAEkgEcALH6xInvLeCAGessJMAEkgEcALH6xInvLeCAGessJMAEkgEcALH6xInvLeCAGessJMAEkgEcALH6xInvLeCAGessJMAEkgEcALH6xInvLeCAGessJMAEkgEcALH6xInvLeCAGessJMAEkgEcALH6xInvLeCAGessJMAEkgEcALH6xInvLeCAGessJMAEkgEcALH6xInvLeCAGessJMAEkgEcALH6xInvLeCAGessJMAEkgEcALH6xInvLeCAGessJMAEkgEcALH6xInvLeCAGessJMAEkgEcALH6xInvLeCAGessJMAEkgEcALH6xInvLeCAGessJMAEkgEcALH6xInvLeCAGessJMAEkgEcALH6xInvLeCAGessJMAEkgEcALH6xInvLeCAGessJMAEkgEcALH6xInvLeCAGessJMAEkgEcALH6xInvLeCAGessJMAEkgEcALH6xInvLeCAGessJMAEkgEcALH6xInvLeCAGessJMAEkgEcALH6xInvLeCAGessJMAEkgEcALH6xInvLeCAGessJMAEkgEcALH6xInvLeCAGessJMAEkgEcALH6xInvLeCAGessJMAEkgEcALH6xInvLeCAGessJMAEk";
-var v10822 = v10823 + "gEcALH6xInvLeCAGessJMAEkgEcALH6xInvLeCAGessJMAEkgEcALH6xInvLeCAGessJMAEkgEcALH6xInvLeCAGessJMAEkgEcALH6xInvLeCAGessJMAEkgEcALH6xInvLeCAGessJMAEkgEcALH6xInvLeCAGessJMAEkgEcALH6xInvLeCAGessJMAEkgEcALH6xInvLeCAGessJMAEkgEcALH6xInvLeCAGessJMAEkgEcALH6xInvLeCAGessJMAEkgEcALH6xInvLeCAGessJMAEkgEcALH6xInvLeCAGessJMAEkgEcALH6xInvLeCAGessJMAEkgEcALH6xInvLeCAGessJMAEkgEcALH6xInvLeCAGessJMAEkgEcALH6xInvLeCAGessJMAEkgEcALH6xInvLeCAGessJMAEkgEcALH6xInvLeCAGessJMAEkgEcALH6xInvLeCAGessJMAEkgEcALH6xInvLeCAGessJMAEkgEcALH6xInvLeCAGessJMAEkgEcALH6xInvLeCAGessJMAEkgEcALH6xInvLeCAGessJMAEkgEcALH6xInvLeCAGessJMAEkgEcALH6xInvLeCAGessJMAEkgEcALH6xInvLeCAGessJMAEkgEcALH6xInvLeCAGessJMAEkgEcALH6xInvLeCAGessJMAEkgEcALH6xInvLeCAGessJMAEkgEcALH6xInvLeCAGessJMAEkgEcALH6xInvLeCAGessJMAEkgEcALH6xInvLeCAGessJMAEkgEcALMl+sXd7y3ggA3osLIBHywEwASV+sXd7y3ggA3osLIBHywEwASV+sXd7y3ggA3osLIBHywEwASV+sXd7y3ggA3osLIBHywEwASV+sXd7y3ggA3osLIBHywEwASV+sXd7y3ggA3osLIBHywEwASV+sXd7y3ggA3osLIBHywEwASV+sXd7y3ggA3osLIBHywEwASV+sXd7y3ggA3osLIBHywEwASV+sXd7y3ggA3osLIBHywEwASV+sXd7y3ggA3osLIBHywEwASV+sXd7y3ggA3osLIBHywEwASV+sXd7y3ggA3osLIBHywEwASV+sXd7y3ggA3osLIBHywEwASV+sXd7y3ggA3osLIBHywEwASV+sXd7y3ggA3osLIBHywEwASV+sXd7y3ggA3osLIBHywEwASV+sXd7y3ggA3osLIBHywEwASV+sXd7y3ggA3osLIBHywEwASV+sXd7y3ggA3osLIBHywEwASV+sXd7y3ggA3osLIBHywEwASV+sXd7y3ggA3osLIBHywEwASV+sXd7y3ggA3osLIBHywEwASV+sXd7y3ggA3osLIBHywEwASV+sXd7y3ggA3osLIBHywEwASV+sXd7y3ggA3osLIBHywEwASV+sXd7y3ggA3osLIBHywEwASV+sXd7y3ggA3osLIBHywEwASV+sXd7y3ggA3osLIBHywEwASV+sXd7y3ggA3osLIBHywEwASV+sXd7y3ggA3osLIBHywEwASV+sXd7y3ggA3osLIBHywEwASV+sXd7y3ggA3osLIBHywEwASV+sXd7y3ggA3osLIBHywEwASV+sXd7y3ggA3osLIBHywEwASV+sXd7y3ggA3osLIBHywEwASV+sXd7y3ggA3osLIBHywEwASV+sXd7y3ggA3osLIBHywEwASV+sXd7y3ggA3osLIBHywEwASV+sXd7y3ggA3osLIBHywEwASV+sXd7y3ggA3osLIBHywEwASV+sXd7y3ggA3osLIBHywEwASV+sXd7y3ggA3osLIBHywEwASV+sXd7y3ggA3osLIBHywEwASV+sXd7y3ggA3osLIBHywEwASV+sXd7y3ggA3osLIBHywEwASV+sXd7y3ggA3osLIBHywEwASV+sXd7y3ggA3osLIBHywEwASV+sXd7y3ggA3osLIBHywEwASV+sXd7y3ggA3osLIBHywEwASV+sXd7y3ggA3osLIBHywEwASV+sXd7y3ggA3osLIBHywEwASV+sXd7y3ggA3osLIBHywEwASV+sXd7y3ggA3osLIBHywEwASV+sXd7y3ggA3osLIBHywEwASV+sXd7y3ggA3osLIBHywEwASV+sXd7y3ggA3osLIBHywEwASV+sXd7y3ggA3osLIBHywEwASV+sXd7y3ggA3osLIBHywEwASV+sXd7y3ggA3osLIBHywEwASV+sXd7y3ggA3osLIBHywEwASV+sXd7y3ggA3osLIBHywEwASV+sXd7y3ggA3osLIBHywEwASV+sXd7y3ggA3osLIBHywEwASV+sXd7y3ggA3osLIBHywEwASV+sXd7y3ggA3osLIBHywEwASV+sXd7y3ggA3osLIBHywEwASV+sXd7y3ggA3osLIBHywEwASV+sXd7y3ggA3osLIBHywEwASV+sXd7y3ggA3osLIBHywEwASV+sXd7y3ggA3osLIBHywEwASV+sXd7y3ggA3osLIBHywEwASV+sXd7y3ggA3osLIBHywEwASV+sXd7y3ggA3osLIBHywEwASV+sXd7y3ggA3osLIBHywEwASV+sXd7y3ggA3osLIBHywEwASV+sXd7y3ggA3osLIBHywEwASV+sXd7y3ggA3osLIBHywEwASV+sXd7y3ggA3osLIBHywEwASV+sXd7y3ggA3osLIBHywEwASV+sXd7y3ggA3osLIBHywEwASV+sXd7y3ggA3osLIBHywEwASV+sXd7y3ggA3osLIBHywEwASV+sXd7y3ggA3osLIBHywEwASV+sXd7y3ggA3osLIBHywEwASV+sXd7y3ggA3osLIBHywEwASV+sXd7y3ggA3osLIBHywEwASV+sXd7y3ggA3osLIBHywEwASV+sXd7y3ggA3osLIBHywEwASV+sXd7y3ggA3osLIBHywEwASV+sXd7y3ggA3osLIBHywEwASV+sXd7y3ggA3osLIBHywEwASV+sXd7y3ggA3osLIBHywEwASV+sXd7y3ggA3osLIBHywEwASV+sXd7y3ggA3osLIBHywEwASV+sXd7y3ggA3osLIBHywEwASV+sXd7y3ggA3osLIBHywEwASV+sXd7y3ggA3osLIBHywEwASV+sXd7y3ggA3osLIBHywEwASV+sXd7y3ggA3osLIBHywEwASV+sXd7y3ggA3osLIBHywEwASV+sXd7y3ggA3osLIBHywEwASV+sXd7y3ggA3osLIBHywEwASV+sXd7y3ggA3osLIBHywEwASV+sXd7y3ggA3osLIBHywEwASV+sXd7y3ggA3osLIBHywEwASV+sXd7y3ggA3osLIBHywEwASV+sXd7y3ggA3osLIBHywEwASV+sXd7y3ggA3osLIBHywEwASV+sXd7y3ggA3osLIBHywEwASV+sXd7y3ggA3osLIBHywEwASV+sXd7y3ggA3osLIBHywEwASV+sXd7y3ggA3osLIBHywEwASV+sXd7y3ggA3osLIBHywEwASV+sXd7y3ggA3osLIBHywEwASV+sXd7y3ggA3osLIBHywEwASV+sXd7y3ggA3osLIBHywEwASV+sXd7y3ggA3osLIBHywEwASV+sXd7y3ggA3osLIBHywEwASV+sXd7y3ggA3osLIBHywEwASV+sXd7y3ggA3osLIBHywEwASV+sXd7y3ggA3osLIBHywEwASV+sXd7y3ggA3osLIBHywEwASV+sXd7y3ggA3osLIBHywEwASV+sXd7y3ggA3osLIBHywEwASV+sXd7y3ggA3osLIBHywEwASV+sXd7y3ggA3osLIBHywEwASV+sXd7y3ggA3osLIBHywEwASXJfrF3e8t4IAZ6ywEwASWARywsfrF3e8t4IAZ6ywEwASWARywsfrF3e8t4IAZ6ywEwASWARywsfrF3e8t4IAZ6ywEwASWARywsfrF3e8t4IAZ6ywEwASWARywsfrF3e8t4IAZ6ywEwASWARywsfrF3e8t4IAZ6ywEwASWARywsfrF3e8t4IAZ6ywEwASWARywsfrF3e8t4IAZ6ywEwASWARywsfrF3e8t4IAZ6ywEwASWARywsfrF3e8t4IAZ6ywEwASWARywsfrF3e8t4IAZ6ywEwASWARywsfrF3e8t4IAZ6ywEwASWARywsfrF3e8t4IAZ6ywEwASWARywsfrF3e8t4IAZ6ywEwASWARywsfrF3e8t4IAZ6ywEwASWARywsfrF3e8t4IAZ6ywEwASWARywsfrF3e8t4IAZ6ywEwASWARywsfrF3e8t4IAZ6ywEwASWARywsfrF3e8t4IAZ6ywEwASWARywsfrF3e8t4IAZ6ywEwASWARywsfrF3e8t4IAZ6ywEwASWARywsfrF3e8t4IAZ6ywEwASWARywsfrF3e8t4IAZ6ywEwASWARywsfrF3e8t4IAZ6ywEwASWARywsfrF3e8t4IAZ6ywEwASWARywsfrF3e8t4IAZ6ywEwASWARywsfrF3e8t4IAZ6ywEwASWARywsfrF3e8t4IAZ6ywEwASWARywsfrF3e8t4IAZ6ywEwASWARywsfrF3e8t4IAZ6ywEwASWARywsfrF3e8t4IAZ6ywEwASWARywsfrF3e8t4IAZ6ywEwASWARywsfrF3e8t4IAZ6ywEwASWARywsfrF3e8t4IAZ6ywEwASWARywsfrF3e8t4IAZ6ywEwASWARywsfrF3e8t4IAZ6ywEwASWARywsfrF3e8t4IAZ6ywEwASWARywsfrF3e8t4IAZ6ywEwASWARywsfrF3e8t4IAZ6ywEwASWARywsfrF3e8t4IAZ6ywEwASWARywsfrF3e8t4IAZ6ywEwASWARywsfrF3e8t4IAZ6ywEwASWARywsfrF3e8t4IAZ6ywEwASWARywsfrF3e8t4IAZ6ywEwASWARywsfrF3e8t4IAZ6ywEwASWARywsfrF3e8t4IAZ6ywEwASWARyws";
-var v10821 = v10822 + "frF3e8t4IAZ6ywEwASWARywsfrF3e8t4IAZ6ywEwASWARywsfrF3e8t4IAZ6ywEwASWARywsfrF3e8t4IAZ6ywEwASWARywsfrF3e8t4IAZ6ywEwASWARywsfrF3e8t4IAZ6ywEwASWARywsfrF3e8t4IAZ6ywEwASWARywsfrF3e8t4IAZ6ywEwASWARywsfrF3e8t4IAZ6ywEwASWARywsfrF3e8t4IAZ6ywEwASWARywsfrF3e8t4IAZ6ywEwASWARywsfrF3e8t4IAZ6ywEwASWARywsfrF3e8t4IAZ6ywEwASWARywsfrF3e8t4IAZ6ywEwASWARywsfrF3e8t4IAZ6ywEwASWARywsfrF3e8t4IAZ6ywEwASWARywsfrF3e8t4IAZ6ywEwASWARywsfrF3e8t4IAZ6ywEwASWARywsfrF3e8t4IAZ6ywEwASWARywsfrF3e8t4IAZ6ywEwASWARywsfrF3e8t4IAZ6ywEwASWARywsfrF3e8t4IAZ6ywEwASWARywsfrF3e8t4IAZ6ywEwASWARywsfrF3e8t4IAZ6ywEwASWARywsfrF3e8t4IAZ6ywEwASWARywsfrF3e8t4IAZ6ywEwASWARywsfrF3e8t4IAZ6ywEwASWARywsfrF3e8t4IAZ6ywEwASWARywsfrF3e8t4IAZ6ywEwASWARywsfrF3e8t4IAZ6ywEwASWARywsfrF3e8t4IAZ6ywEwASWARywsfrF3e8t4IAZ6ywEwASWARywsfrF3e8t4IAZ6ywEwASWARywsfrF3e8t4IAZ6ywEwASWARywsfrF3e8t4IAZ6ywEwASWARywsfrF3e8t4IAZ6ywEwASWARywsfrF3e8t4IAZ6ywEwASWARywsfrF3e8t4IAZ6ywEwASWARywsfrF3e8t4IAZ6ywEwASWARywsfrF3e8t4IAZ6ywEwASWARywsfrF3e8t4IAZ6ywEwASWARywsfrF3e8t4IAZ6ywEwASWARywsfrF3e8t4IAZ6ywEwASWARywsfrF3e8t4IAZ6ywEwASWARywsfrF3e8t4IAZ6ywEwASWARywsfrF3e8t4IAZ6ywEwASWARywsfrF3e8t4IAZ6ywEwASWARywsfrF3e8t4IAZ6ywEwASWARywsfrF3e8t4IAZ6ywEwASWARywsfrF3e8t4IAZ6ywEwASWARywsfrF3e8t4IAZ6ywEwASWARywsfrF3e8t4IAZ6ywEwASWARywsfrF3e8t4IAZ6ywEwASWARywsfrF3e8t4IAZ6ywEwASWARywsfrF3e8t4IAZ6ywEwASWARywsfrF3e8t4IAZ6ywEwASWARywsfrF3e8t4IAZ6ywEwASWARywsfrF3e8t4IAZ6ywEwASWARywsfrF3e8t4IAZ6ywEwASWARywsfrF3e8t4IAZ6ywEwASWARywsfrF3e8t4IAZ6ywEwASWARywsfrF3e8t4IAZ6ywEwASWARywsfrF3e8t4IAZ6ywEwASWARywsfrF3e8t4IAZ6ywEwASWARywsfrF3e8t4IAZ6ywEwASWARywsfrF3e8t4IAZ6ywEwASWARywsfrF3e8t4IAZ6ywEwASWARywsfrF3e8t4IAZ6ywEwASWARywsfrF3e8t4IAZ6ywEwASWARywsfrF3e8t4IAZ6ywEwASWARywsfrF3e8t4IAZ6ywEwASWARywsfrF3e8t4IAZ6ywEwASWARywsfrF3e8t4IAZ6ywEwASWARywsyf//////////////////////////////////////////////////////////////////////////////////////////////////////////////////////////////////////////////////////////////////////////////////////////////////////////////////////////////////////////////////////////////////////////////////////////////////////////////////////////////////////////////////////////////////////////////////////////////////////////////////////////////////////////////////////////////////////////////////////////////////////////////////////////////////////////////////////////////////////////////////////////////////////////////////////////////////////////////////////////////////////////////////////////////////////////////////////////////////////////////////////////////////////////////////////////////////////////////////////////////////////////////////////////////////////////////////////////////////////////////////////////////////////////////////////////////////////////////////////////////////////////////////////////////////////////////////////////////////////////////////////////////////////////////////////////////////////////////////////////////////////////////////////////////////////////////////////////////////////////////////////////////////////////////////////////////////////////////////////////////////////////////////////////////////////////////////////////////////////////////////////////////////////////////////////////////////////////////////////////////////////////////////////////////////////////////////////////////////////////////////////////////////////////////////////////////////////////////////////////////////////////////////////////////////////////////////////////////////////////////////////////////////////////////////////////////////////////////////////////////////////////////////////////////////////////////////////////////////////////////////////////////////////////////////////////////////////////////////////////////////////////////////////////////////////////////////////////////////////////////////////////////////////////////////////////////////////////////////////////////////////////////////////////////////////////////////////////////////////////////////////////////////////////////////////////////////////////////////////////////////////////////////////////////////////////////////////////////////////////////////////////////////////////////////////////////////////////////////////////////////////////////////////////////////////////////////////////////////////////////////////////////////////////////////////////////////////////////////////////////////////////////////////////////////////////////////////////////////////////////////////////////////////////////////////////////////////////////////////////////////////////////////////////////////////////////////////////////////////////////////////////////////////////////////////////////////////////////////////////////////////////////////////////////////////////////////////////////////////////////////////////////////////////////////////////////////////////////////////////////////////////////////////////////////////////////////////////////////////////////////////////////////////////////////////////////////////////////////////////////////////////////////////////////////////////////";
-var v10820 = v10821 + "////////////////////////////////////////////////////////////////////////////////////////////////////////////////////////////////////////////////////////////////////////////////////////////////////////////////////////////////////////////////////////////////////////////////////////////////////////////////////////////////////////////////////////////////////////////////////////////////////////////////////////////////////////////////////////////////////////////////////////////////////////////////////////////////////////////////////////////////////////////////////////////////////////////////////////////////////////////////////////////////////////////////////////////////////////////////////////////////////////////////////////////////////////////////////////////////////////////////////////////////////////////////////////////////////////////////////////////////////////////////////////////////////////////////////////////////////////////////////////////////////////////////////////////////////////////////////////////////////////////////////////////////////////////////////////////////////////////////////////////////////////////////////////////////////////////////////////////////////////////////////////////////////////////////////////////////////////////////////////////////////////////////////////////////////////////////////////////////////////////////////////////////////////////////////////////////////////////////////////////////////////////////////////////////////////////////////////////////////////////////////////////////////////////////////////////////////////////////////////////////////////////////////////////////////////////////////////////////////////////////////////////////////////////////////////////////////////////////////////////////////////////////////////////////////////////////////////////////////////////////////////////////////////////////////////////////////////////////////////////////////////////////////////////////////////////////////////////////////////////////////////////////////////////////////////////////////////////////////////////////////////////////////////////////////////////////////////////////////////////////////////////////////////////////////////////////////////////////////////////////////////////////////////////////////////////////////////////////////////////////////////////////////////////////////////////////////////////////////////////////////////////////////////////////////////////////////////////////////////////////////////////////////////////////////////////////////////////////////////////////////////////////////////////////////////////////////////////////////////////////////////////////////////////////////////////////////////////////////////////////////////////////////////////////////////////////////////////////////////////////////////////////////////////////////////////////////////////////////////////////////////////////////////////////////////////////////////////////////////////////////////////////////////////////////////////////////////////////////////////////////////////////////////////////////////////////////////////////////////////////////////////////////////////////////////////////////////////////////////////////////////////////////////////////////////////////////////////////////////////////////////////////////////////////////////////////////////////////////////////////////////////////////////////////////////////////////////////////////////////////////////////////////////////////////////////////////////////////////////////////////////////////////////////////////////////////////////////////////////////////////////////////////////////////////////////////////////////////////////////////////////////////////////////////////////////////////////////////////////////////////////////////////////////////////////////////////////////////////////////////////////////////////////////////////////////////////////////////////////////////////////////////////////////////////////////////////////////////////////////////////////////////////////////////////////////////////////////////////////////////////////////////////////////////////////////////////////////////////////////////////////////////////////////////////////////////////////////////////////////////////////////////////////////////////////////////////////////////////////////////////////////////////////////////////////////////////////////////////////////////////////////////////////////////////////////////////////////////////////////////////////////////////////////////////////////////////////////////////////////////////////////////////////////////////////////////////////////////////////////////////////////////////////////////////////////////////////////////////////////////////////////////////////////////////////////////////////////////////////////////////////////////////////////////////////////////////////////////////////////////////////////////////////////////////////////////////////////////////////////////////////////////////////////////////////";
-var v10819 = v10820 + "/////////////////////////////////////////////////////////////////////////////////////////////////////////////////////////////////////////////////////////////////////////////////////////////////////////////////////////////////////////////////////////////////////////////////////////////////////////////////////////////////////////////////////////////////////////////////////////////////////////////////////////////////////////////////////////////////////////////////////////////////////////////////////////////////////////////////////////////////////////////////////////////////////////////////////////////////////////////////////////////////////////////////////////////////////////////////////////////////////////////////////////////////////////////////////////////////////////////////////////////////////////////////////////////////////////////////////////////////////////////////////////////////////////////////////////////////////////////////////////////////////////////////////////////////////////////////////////////////////////////////////////////////////////////////////////////////////////////////////////////////////////////////////////////////////////////////////////////////////////////////////////////////////////////////////////////////////////////////////////////////////////////////////////wHRe7o4A1pXewYHoE8K9XqgTwQK4JF6Hx8f5g9X8JNnTixGLXsfHx/mD1/wgoNne5LRxADB8JGiVy+mX3qhsyJ6L6ZfeqCzItF7ujgDWld7BgegTwr1eqBPBArgkXofHx/mD1fwk2dOLEYtex8fH+YPX/CCg2d7ktHEAMHwkaJXL6ZfeqGzInovpl96oLMi0Xu6OANaV3sGB6BPCvV6oE8ECuCReh8fH+YPV/CTZ04sRi17Hx8f5g9f8IKDZ3uS0cQAwfCRolcvpl96obMiei+mX3qgsyLRe7o4A1pXewYHoE8K9XqgTwQK4JF6Hx8f5g9X8JNnTixGLXsfHx/mD1/wgoNne5LRxADB8JGiVy+mX3qhsyJ6L6ZfeqCzItF7ujgDWld7BgegTwr1eqBPBArgkXofHx/mD1fwk2dOLEYtex8fH+YPX/CCg2d7ktHEAMHwkaJXL6ZfeqGzInovpl96oLMi0Xu6OANaV3sGB6BPCvV6oE8ECuCReh8fH+YPV/CTZ04sRi17Hx8f5g9f8IKDZ3uS0cQAwfCRolcvpl96obMiei+mX3qgsyLRe7o4A1pXewYHoE8K9XqgTwQK4JF6Hx8f5g9X8JNnTixGLXsfHx/mD1/wgoNne5LRxADB8JGiVy+mX3qhsyJ6L6ZfeqCzItF7ujgDWld7BgegTwr1eqBPBArgkXofHx/mD1fwk2dOLEYtex8fH+YPX/CCg2d7ktHEAMHwkaJXL6ZfeqGzInovpl96oLMi0Xu6OANaV3sGB6BPCvV6oE8ECuCReh8fH+YPV/CTZ04sRi17Hx8f5g9f8IKDZ3uS0cQAwfCRolcvpl96obMiei+mX3qgsyLRe7o4A1pXewYHoE8K9XqgTwQK4JF6Hx8f5g9X8JNnTixGLXsfHx/mD1/wgoNne5LRxADB8JGiVy+mX3qhsyJ6L6ZfeqCzItF7ujgDWld7BgegTwr1eqBPBArgkXofHx/mD1fwk2dOLEYtex8fH+YPX/CCg2d7ktHEAMHwkaJXL6ZfeqGzInovpl96oLMi0Xu6OANaV3sGB6BPCvV6oE8ECuCReh8fH+YPV/CTZ04sRi17Hx8f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";
-var v10818 = v10819 + "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";
-var v10817 = v10818 + "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DYO4MAWTgnEsLA2DuDAFk4JxLCwNg7gwBZOCcSwsDYO4MAWTgnEsLA2DuDAFk4JxLCwNg7gwBZOCcSwsDYO4MAWTgnEsLA2DuDAFk4JxLCwNg7gwBZOCcSwsDYO4MAWTgnEsLA2DuDAFk4JxLCwNg7gwBZOCcSwsDYO4MAWTgnEsLA2DuDAFk4JxLCwNg7gwBZOCcSwsDYO4MAWTgnEsLA2DuDAFk4JxLCwNg7gwBZOCcSwsDYO4MAWTgnEsLA2DuDAFk4JxLCwNg7gwBZOCcSwsDYO4MAWTgnEsLA2DuDAFk4JxLCwNg7gwBZOCcSwsDYO4MAWTgnEsLA2DuDAFk4JxLCwNg7gwBZOCcSwsDYO4MAWTgnEsLA2DuDAFk4JxLCwNg7gwBZOCcSwsDYO4MAWTgnEsLA2DuDAFk4JxLCwNg7gwBZOCcSwsDYO4MAWTgnEsLA2DuDAFk4JxLCwNg7gwBZOCcSwsDYO4MAWTgnEsLA2DuDAFk4JxLCwNg7gwBZOCcSwsDYO4MAWTgnEsLA2DuDAFk4JxLCwNg7gwBZOCcSwsDYO4MAWTgnEsLA2DuDAFk4JxLCwNg7gwBZOCcSwsDYO4MAWTgnEsLA2DuDAFk4JxLCwNg7gwBZOCcSwsDYO4MAWTgnEsLA2DuDAFk4JxLCwNg7gwBZOCcSwsDYO4MAWTgnEsLA2DuDAFk4JxLCwNg7gwBZOCcSwsDYO4MAWTgnEsLA2DuDAFk4JxLCwNg7gwBZOCcSwsDYO4MAWTgnEsLA2DuDAFk4JxLCwNg7gwBZOCcSwsDYO4MAWTgnEsLA2DuDAFk4JxLCwNg7gwBZOCcSwsDYO4MAWTgnEsLA2DuDAFk4JxLCwNg7gwBZOCcSwsDYO4MAWTgnEsLA2DuDAFk4JxLCwNg7gwBZOCcSwsDYO4MAWTgnEsLA2DuDAFk4JxLCwNg7gwBZOCcSwsDYO4MAWTgnEsLA2DuDAFk4JxLCwNg7gwBZOCcSwsDYO4MAWTgnEsLA2DuDAFk4JxLCwNg7gwBZOCcSwsDYO4MAWTgnEsLA2DuDAFk4JxLCwNg7gwBZOCcSwsDYO4MAWTgnEsLA2DuDAFk4JxLCwNg7gwBZOCcSwsDYO4MAWTgnEsLA2DuDAFk4JxLCwNg7gwBZOCcSwsDYO4MAWTgnEsLA2DuDAFk4JxLCwNg7gwBZOCcSwsDYO4MAWTgnEsLA2DuDAFk4JxLCwNg7gwBZOCcSwsDYO4MAWTgnEsLA2DuDAFk4JxLCwNg7gwBZOCcSwsDYO4MAWTgnEsLA2DuDAFk4JxLCwNg7gwBZOCcSwsDYO4MAWTgnEsLA2DuDAFk4JxLCwNyXEsLIO4MAOTgg1xLCyDuDADk4INcSwsg7gwA5OCDXEsLIO4MAOT";
-var v10816 = v10817 + "gg1xLCyDuDADk4INcSwsg7gwA5OCDXEsLIO4MAOTgg1xLCyDuDADk4INcSwsg7gwA5OCDXEsLIO4MAOTgg1xLCyDuDADk4INcSwsg7gwA5OCDXEsLIO4MAOTgg1xLCyDuDADk4INcSwsg7gwA5OCDXEsLIO4MAOTgg1xLCyDuDADk4INcSwsg7gwA5OCDXEsLIO4MAOTgg1xLCyDuDADk4INcSwsg7gwA5OCDXEsLIO4MAOTgg1xLCyDuDADk4INcSwsg7gwA5OCDXEsLIO4MAOTgg1xLCyDuDADk4INcSwsg7gwA5OCDXEsLIO4MAOTgg1xLCyDuDADk4INcSwsg7gwA5OCDXEsLIO4MAOTgg1xLCyDuDADk4INcSwsg7gwA5OCDXEsLIO4MAOTgg1xLCyDuDADk4INcSwsg7gwA5OCDXEsLIO4MAOTgg1xLCyDuDADk4INcSwsg7gwA5OCDXEsLIO4MAOTgg1xLCyDuDADk4INcSwsg7gwA5OCDXEsLIO4MAOTgg1xLCyDuDADk4INcSwsg7gwA5OCDXEsLIO4MAOTgg1xLCyDuDADk4INcSwsg7gwA5OCDXEsLIO4MAOTgg1xLCyDuDADk4INcSwsg7gwA5OCDXEsLIO4MAOTgg1xLCyDuDADk4INcSwsg7gwA5OCDXEsLIO4MAOTgg1xLCyDuDADk4INcSwsg7gwA5OCDXEsLIO4MAOTgg1xLCyDuDADk4INcSwsg7gwA5OCDXEsLIO4MAOTgg1xLCyDuDADk4INcSwsg7gwA5OCDXEsLIO4MAOTgg1xLCyDuDADk4INcSwsg7gwA5OCDXEsLIO4MAOTgg1xLCyDuDADk4INcSwsg7gwA5OCDXEsLIO4MAOTgg1xLCyDuDADk4INcSwsg7gwA5OCDXEsLIO4MAOTgg1xLCyDuDADk4INcSwsg7gwA5OCDXEsLIO4MAOTgg1xLCyDuDADk4INcSwsg7gwA5OCDXEsLIO4MAOTgg1xLCyDuDADk4INcSwsg7gwA5OCDXEsLIO4MAOTgg1xLCyDuDADk4INcSwsg7gwA5OCDXEsLIO4MAOTgg1xLCyDuDADk4INcSwsg7gwA5OCDXEsLIO4MAOTgg1xLCyDuDADk4INcSwsg7gwA5OCDXEsLIO4MAOTgg1xLCyDuDADk4INcSwsg7gwA5OCDXEsLIO4MAOTgg1xLCyDuDADk4INcSwsg7gwA5OCDXEsLIO4MAOTgg1xLCyDuDADk4INcSwsg7gwA5OCDXEsLIO4MAOTgg1xLCyDuDADk4INcSwsg7gwA5OCDXEsLIO4MAOTgg1xLCyDuDADk4INcSwsg7gwA5OCDXEsLIO4MAOTgg1xLCyDuDADk4INcSwsg7gwA5OCDXEsLIO4MAOTgg1xLCyDuDADk4INcSwsg7gwA5OCDXEsLIO4MAOTgg1xLCyDuDADk4INcSwsg7gwA5OCDXEsLIO4MAOTgg1xLCyDuDADk4INcSwsg7gwA5OCDXEsLIO4MAOTgg1xLCyDuDADk4INcSwsg7gwA5OCDcmDuDAFk4JxLCwMg7gwBZOCcSwsDIO4MAWTgnEsLAyDuDAFk4JxLCwMg7gwBZOCcSwsDIO4MAWTgnEsLAyDuDAFk4JxLCwMg7gwBZOCcSwsDIO4MAWTgnEsLAyDuDAFk4JxLCwMg7gwBZOCcSwsDIO4MAWTgnEsLAyDuDAFk4JxLCwMg7gwBZOCcSwsDIO4MAWTgnEsLAyDuDAFk4JxLCwMg7gwBZOCcSwsDIO4MAWTgnEsLAyDuDAFk4JxLCwMg7gwBZOCcSwsDIO4MAWTgnEsLAyDuDAFk4JxLCwMg7gwBZOCcSwsDIO4MAWTgnEsLAyDuDAFk4JxLCwMg7gwBZOCcSwsDIO4MAWTgnEsLAyDuDAFk4JxLCwMg7gwBZOCcSwsDIO4MAWTgnEsLAyDuDAFk4JxLCwMg7gwBZOCcSwsDIO4MAWTgnEsLAyDuDAFk4JxLCwMg7gwBZOCcSwsDIO4MAWTgnEsLAyDuDAFk4JxLCwMg7gwBZOCcSwsDIO4MAWTgnEsLAyDuDAFk4JxLCwMg7gwBZOCcSwsDIO4MAWTgnEsLAyDuDAFk4JxLCwMg7gwBZOCcSwsDIO4MAWTgnEsLAyDuDAFk4JxLCwMg7gwBZOCcSwsDIO4MAWTgnEsLAyDuDAFk4JxLCwMg7gwBZOCcSwsDIO4MAWTgnEsLAyDuDAFk4JxLCwMg7gwBZOCcSwsDIO4MAWTgnEsLAyDuDAFk4JxLCwMg7gwBZOCcSwsDIO4MAWTgnEsLAyDuDAFk4JxLCwMg7gwBZOCcSwsDIO4MAWTgnEsLAyDuDAFk4JxLCwMg7gwBZOCcSwsDIO4MAWTgnEsLAyDuDAFk4JxLCwMg7gwBZOCcSwsDIO4MAWTgnEsLAyDuDAFk4JxLCwMg7gwBZOCcSwsDIO4MAWTgnEsLAyDuDAFk4JxLCwMg7gwBZOCcSwsDIO4MAWTgnEsLAyDuDAFk4JxLCwMg7gwBZOCcSwsDIO4MAWTgnEsLAyDuDAFk4JxLCwMg7gwBZOCcSwsDIO4MAWTgnEsLAyDuDAFk4JxLCwMg7gwBZOCcSwsDIO4MAWTgnEsLAyDuDAFk4JxLCwMg7gwBZOCcSwsDIO4MAWTgnEsLAyDuDAFk4JxLCwMg7gwBZOCcSwsDIO4MAWTgnEsLAyDuDAFk4JxLCwMg7gwBZOCcSwsDIO4MAWTgnEsLAyDuDAFk4JxLCwMg7gwBZOCcSwsDIO4MAWTgnEsLAyDuDAFk4JxLCwMg7gwBZOCcSwsDIO4MAWTgnEsLAyDuDAFk4JxLCwMg7gwBZOCcSwsDIO4MAWTgnEsLAyDuDAFk4JxLCwMg7gwBZOCcSwsDIO4MAWTgnEsLAyDuDAFk4JxLCwMg7gwBZOCcSwsDIO4MAWTgnEsLAyDuDAFk4JxLCwMg7gwBZOCcSwsDIO4MAWTgnEsLAyDuDAFk4JxLCwMg7gwBZOCcSwsDIO4MAWTgnEsLAyDuDAFk4JxLCwMg7gwBZOCcSwsDIO4MAWTgnEsLAyDuDAFk4JxLCwMg7gwBZOCcSwsDIO4MAWTgnEsLAyDuDAFk4JxLCwMg7gwBZOCcSwsDIO4MAWTgnEsLAyDuDAFk4JxLCwMg7gwBZOCcSwsDIO4MAWTgnEsLAyDuDAFk4JxLCwMg7gwBZOCcSwsDIO4MAWTgnEsLAyDuDAFk4JxLCwMg7gwBZOCcSwsDMlxLCyDuDADk4IMcSwsg7gwA5OCDHEsLIO4MAOTggxxLCyDuDADk4IMcSwsg7gwA5OCDHEsLIO4MAOTggxxLCyDuDADk4IMcSwsg7gwA5OCDHEsLIO4MAOTggxxLCyDuDADk4IMcSwsg7gwA5OCDHEsLIO4MAOTggxxLCyDuDADk4IMcSwsg7gwA5OCDHEsLIO4MAOTggxxLCyDuDADk4IMcSwsg7gwA5OCDHEsLIO4MAOTggxxLCyDuDADk4IMcSwsg7gwA5OCDHEsLIO4MAOTggxxLCyDuDADk4IMcSwsg7gwA5OCDHEsLIO4MAOTggxxLCyDuDADk4IMcSwsg7gwA5OCDHEsLIO4MAOTggxxLCyDuDADk4IMcSwsg7gwA5OCDHEsLIO4MAOTggxxLCyDuDADk4IMcSwsg7gwA5OCDHEsLIO4MAOTggxxLCyDuDADk4IMcSwsg7gwA5OCDHEsLIO4MAOTggxxLCyDuDADk4IMcSwsg7gwA5OCDHEsLIO4MAOTggxxLCyDuDADk4IMcSwsg7gwA5OCDHEsLIO4MAOTggxxLCyDuDADk4IMcSwsg7gwA5OCDHEsLIO4MAOTggxxLCyDuDADk4IMcSwsg7gwA5OCDHEsLIO4MAOTggxxLCyDuDADk4IMcSwsg7gwA5OCDHEsLIO4MAOTggxxLCyDuDADk4IMcSwsg7gwA5OCDHEsLIO4MAOTggxxLCyDuDADk4IMcSwsg7gwA5OCDHEsLIO4MAOTggxxLCyDuDADk4IMcSwsg7gwA5OCDHEsLIO4MAOTggxxLCyDuDADk4IMcSwsg7gwA5OCDHEsLIO4MAOTggxxLCyDuDADk4IMcSwsg7gwA5OCDHEsLIO4MAOTggxxLCyDuDADk4IMcSwsg7gwA5OCDHEsLIO4MAOTggxxLCyDuDADk4IMcSwsg7gwA5OCDHEsLIO4MAOTggxxLCyDuDADk4IMcSwsg7gwA5OCDHEsLIO4MAOTggxxLCyDuDADk4IMcSwsg7gwA5OCDHEsLIO4MAOTggxxLCyDuDADk4IMcSwsg7gwA5OCDHEsLIO4MAOTggxxLCyDuDADk4IMcSwsg7gwA5OCDHEsLIO4MAOTggxxLCyDuDADk4IMcSwsg7gwA5OCDHEsLIO4MAOTggxxLCyDuDADk4IMcSwsg7gwA5OCDHEsLIO4MAOTggxxLCyDuDADk4IMcSwsg7gwA5OCDHEsLIO4MAOTggxxLCyDuDADk4IMcSwsg7gwA5OCDHEsLIO4MAOTggxxLCyDuDADk4IMcSwsg7gwA5OCDHEsLIO4MAOTggxxLCyDuDADk4IMcSwsg7gwA5OCDHEsLIO4MAOTggxxLCyDuDADk4IMcSwsg7gwA5OCDHEsLIO4MAOTggxxLCyDuDADk4IMcSwsg7gwA5OCDHEsLIO4MAOTggxxLCyDuDADk4IMcSwsg7gwA5OCDHEsLIO4MAOTggxxLCyDuDADk4IMcSwsg7gwA5OCDHEsLIO4MAOTggxxLCyDuDADk4IMcSwsg7gwA5OCDHEsLIO4MAOTggxxLCyDuDADk4IMcSwsg7gwA5OCDHEsLIO4MAOTggzJxg+Hh+oawXovpl96obMiei+mX3qgszIkeRgAInAtJCJwLSQicC0kInAtJCJwLSQicC0kInAtJCJwLSQicC0kInAtJCJwLSQicC0kInAtJCJwLSQW/8n/////////////////////////";
-var v10815 = v10816 + "//////////////////////////////////////////////////////////////////////////////////////////////////////////////////////////////////////////////////////////////////////////////////////////////////////////////////////////////////////////////////////////////////////////////////////////////////////////////////////////////////////////////////////////////////////////////////////////////////////////////////////////////////////////////////////////////////////////////////////////////////////////////////////////////////////////////////////////////////////////////////////////////////////////////////////////////////////////////////////////////////////////////////////////////////////////////////////////////////////////////////////////////////////////////////////////+qqlVVqqpVVaqqVVWqqlVVqqpVVaqqVVWqqlVVqqpVVaqqVVWqqlVVqqpVVaqqVVWqqlVVqqpVVaqqVVWqqlVVqqpVVaqqVVWqqlVVqqpVVaqqVVWqqlVVqqpVVaqqVVWqqlVVqqpVVaqqVVWqqlVVqqpVVaqqVVWqqlVVqqpVVaqqVVWqqlVVqqpVVaqqVVWqqlVVqqpVVaqqVVWqqlVVqqpVVaqqVVWqqlVVqqpVVaqqVVWqqlVVqqpVVaqqVVWqqlVVqqpVVaqqVVWqqlVVqqpVVaqqVVWqqlVVqqpVVaqqVVWqqlVVqqpVVaqqVVWqqlVVqqpVVaqqVVWqqlVVACEzDDPAABIAEjPAMwwAIQAhMwwzwAASABIzwDMMACEAITMMM8AAEgASM8AzDAAhACEzDDPAABIAEjPAMwwAIQAhMwwzwAAS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cixwCXsicAkicAkicAkicAkicAkicAkicAkicAkicAkicAksLCXLZcgkaMnJycnJ4SJwCSJwCSJwCSJwCSJwCSJwCXIscAl7InAJInAJInAJInAJInAJInAJInAJInAJInAJLCwly2XIJGjJycnJyeEicAkicAkicAkicAkicAkicAkicAlyLHAJeyJwCSJwCSJwCSJwCSJwCSJwCSJwCSJwCSwsJctlyCRoycnJycnhInAJInAJInAJInAJInAJInAJInAJInAJcixwCXsicAkicAkicAkicAkicAkicAkicAksLCXLZcgkaMnJycnJ4SJwCSJwCSJwCSJwCSJwCSJwCSJwCSJwCSJwCXIscAl7InAJInAJInAJInAJInAJInAJLCwly2XIJGjJycnJyeEicAkicAkicAkicAkicAkicAkicAkicAkicAkicAlyLHAJeyJwCSJwCSJwCSJwCSJwCSwsJctlyCRoycnJycnhInAJInAJInAJInAJInAJInAJInAJInAJInAJInAJInAJcixwCXsicAkicAkicAkicAksLCXLZcgkaMnJycnJ4SJwCSJwCSJwCSJwCSJwCSJwCSJwCSJwCSJwCSJwCSJwCSJwCXIscAl7InAJInAJInAJLCwly2XIJGjJycnJyeEicAkicAkicAkicAkicAkicAkicAkicAkicAkicAkicAkicAkicAlyLHAJeyJwCSJwCSwsJctlyCRoycnJycnhInAJInAJInAJInAJInAJInAJInAJInAJInAJInAJInAJInAJInAJInAJcixwCXsicAksLCXLZcgkaMnJycnJ4SJwCSJwCSJwCSJwCSJwCSJwCSJwCSJwCSJwCSJwCSJwCSJwCSJwCSJwCSJwCXIscAl7LCwly2XIJGjJycnJydE+t5LI4IXmB8RSRPCFHx8focjlzTJE4XkicCwicCwicCwicCwicCwicCwicCwicCzJ+ABUXWhHeZAfyx1nATNZCfCCMQCv/qAoAzEAvwH/AOlHPgeQVF1HDjOvyxkwAYAfyxkwAYAfyxkwAYAfyxkwAYAfyxkwAYAfyxkwAYAfyxkwAYAfyxkwAYAfyxlHIbRXCeViaz7/AQ8Ayfoay2/6G8uFZ/4UIAU+/y0YBtbsIAU8LOoby3zqGsvNr2AhlEbNyhDwpMagV/Cjxn9f1SGXRs3KEPCkxqBn8KPGf2/RzTEcKAsf2hhZH9oYWcPERny6OAViV31rX+XNmkbh1Xu90sxFe9ZA4Ih9k0884Il6lF/ghjzgij2RMGvgh3nLPy88g+CF8IIBDwBvVHzWQBfLN6GFZ3rmBxdvGAjwij3KAETgivCJX/CGV/CFGASCHSgLy38g+Ffwh4LghR3NYkUY2nvgifCIg1/l";
-var v10814 = v10815 + "5gf2CG8mB1Z7aB8fHx/LHR/LHeYDxkBnrx7/6XnghpPgh3vLPy88geCF8IIBDwBvVHzWQBfLN6GFZ3rmBxdv8Ilf8IZX8IXLfyAHV/CHgh0YAYLghc1iRfCKPcoAROCKGN171kDgiHuVTzzgiXqUX+CGPOCKPZEwa+CHecs/LzyD4IXwggEPAG9UfNZAF8s3oYVneuYHF28YCPCKPcoAROCK8Ilf8IZX8IUYBIIdKAvLfyD4V/CHguCFHc0qRhjae+CJ8IiTX+XmB/YQbyYHVntoHx8fH8sdH8sd5gPGQGc+/1jpeeCGk+CHe8s/LzyB4IXwggEPAG9UfNZAF8s3oYVneuYHF2/wiV/whlfwhct/IAdX8IeCHRgBguCFzSpG8Io9ygBE4IoY3UYAALoAAHzWQMhPHx8f5h9HeeYHKAsE/gUwBvUhylblBT4PkCHJRoRn5fCCZ69vyfCCZ69vIiIiIiIiIiIiIiIiIiIiIiIiIiIiIiIiIiIiIiIiIiIiIiIiIiIiIiIiIiIiIiIiIiIiIiIiIiIiIiIiIiIiIiIiIiIiIiIiIiIiIiIiIiIiIiIiIiIiIiIiIiIiIiIiIiIiIiIiIiIiIiIiIiIiIiIiIiIiIiIiIiIiIiIiIiIiIiIiIiIiIiIiIiIiIiIiIiIiIiIiIiIiIiIiIiIiIiIiIiIiIiIiIiIiIiIiIiIiIiIiIiIiIiIiIiIiIiIiIiIiIiIiIiIiIiIiIiIiIiIiIiIiIiIiIiIiIiIiIiIiIiIiIiIiIiIiIiIiIiIiIiIiIiIiIiIiIiIiIiIiIiIiIiIiIiIiIiIiIiIiIiIiIiIiIiIiIiIiIiIiIiIiIiIiIiIiIiIiIiIiIiIiIiIiIiIiIiIiIiIiIiIiIiIiIiIiIiIiIiIiIiIiIiIiIiIiIiIiIiIiIiIiIiIiIiIiIiIiIiIiIiIiIiIiIiIiIiIiIiIiIiIiIiIiIiIiIiIiIiIiIiIiIiIiIiIiIiIiIiIiIiIiIiIiIiIiIiIiIiIiIiIiIiIiIiIiIiIiIiIiIiIiIiIiIiIiIiIiIiIiIiIiIiIiIiIiIiIiIiIiIiIiIiIiIiIiIiIiIiIiIiIiIiIiIiIiIiIiIiIiIiIiIiIiIiIiIiIiIiIiIiIiIiIiIiIiIiIiIiIiIiIiIiIiIiIiIiIiIiIiIiIiIiIiIiIiIiIiIiIiIiIiIiIiIiIiIiIiIiIiIiIiIiIiIiIiIiIiIiIiIiIiIiIiIiIiIiIiIiIiIiIiIiIiIiIiIiIiIiIiIiIiIiIiIiIiIiIiIiIiIiIiIiIiIiIiIiIiIiIiIiIiIiIiIiIiIiIiIiIiIiIiIiIiIiIiIiIiIiIiIiIiIiIiIiIiIiIiIiIiIiIiIiIiIiIiIiIiIiIiIiIiIiIiIiIiIiIiIiIiIiIiIiIiIiIiIiIiIiIiIiIiIiIiIiIiIiIiIiIiIiIiIiIiIiIiIiIiIiIiIiIiIiIiIiIiIiIiIiIiIiIiIiIiIiIiIiIiIiIiIiIiIiIiIiIiIiIiIiIiIiIiIiIiIiIiIiIiIiIiIiIiIiIiIiIiIiIiIiIiIiIiIiIiIiIiIiIiIiIiIiIiIiIiIiIiIiIiIiIiIiIiIiIiIiIiIiIiIiIiIiIiIiIiIiIiIiIiIiIiIiIiIiIiIiIiIiIiIiIiIiIiIiIiIiIiIiIiIiIiIiIiIiIiIiIiIiIiIiIiIiIiIiIiIiIiIiIiIiIiIiIiIiIiIiIiIiIiIiIiIiIiIiIiIiIiIiIiIiIiIiIiIiIiIiIiIiIiIiIiIiIiIiIiIiIiIiIiIiIiIiIiIiIiIiIiIiIiIiIiIiIiIiIiIiIiIiIiIiIiIiIiIiIiIiIiIiIiIiIiIiIiIiIiIiIiIiIiIiIiIiIiIiIiIiIiIiIiIiIiIiIiIiIiIiIiIiIiIiIiIiIiIiIiIiIiIiIiIiIiIiIiIiIiIiIiIiIiIiIiIiIiIiIiIiIiIiIiIiIiIiIiIiIiIiIiIiIiIiIiIiIiIiIiIiIiIiIiIiIiIiIiIiIiIiIiIiIiIiIiIiIiIiIiIiIiIiIiIiIiIiIiIiIiIiIiIiIiIiIiIiIiIiIiIiIiIiIiIiIiIiIiIiIiIiIiIiIiIiIiIiIiIiIiIiIiIiIiIiIiIiIiIiIiIiIiIiIiIiIiIiIiIiIiIiIiIiIiIiIiIiIiIiIiIiIiIiIiIiIiIiIiIiIiIiIiIiIiIiIiIiIiIiIiIiIiIiIiIiIiIiIiIiIiIiIiIiIiIiIiIiIiIiIiIiIiIiIiIiIiIiIiIiIiIiIiIiIiIiIiIiIiIiIiIiIiIiIiIiIiIiIiIiIiIiIiIiIiIiIiIiIiIiIiIiIiIiIiIiIiIiIiIiIiIiIiIiIiIiIiIiIiIiIiIiIiIiIiIiIiIiIiIiIiIiIiIiIiIiIiIiIiIiIiIiIiIiIiIiIiIiIiIiIiIiIiIiIiIiIiIiIiIiIiIiIiIiIiIiIiIiIiIiIiIiIiIiIiIiIiIiIiIiIiIiIiIiIiIiIiIiIiIiIiIiIiIiIiIiIiIiIiIiIiIiIiIiIiIiIiIiIiIiIiIiIiIiIiIiIiIiIiIiIiIiIiIiIiIiIiIiIiIiIiIiIiIiIiIiIiIiIiIiIiIiIiIiIiIiIiIiIiIiIiIiIiIiIiIiIiIiIiIiIiIiIiIiIiIiIiIiIiIiIiIiIiIiIiIiIiIiIiIiIiIiIiIiIiIiIiIiIiIiIiIiIiIiIiIiIiIiIiIiIiIiIiIiIiIiIiIiIiIiIiIiIiIiIiIiIiIiIiIiIiIiIiIiIiIiIiIiIiIiIiIiIiIiIiIiIiIiIiIiIiIiIiIiIiIiIiIiIiIiIiIiIiIiIiIiIiIiIiIiIiIiIiIiIiIiIiIiIiIiIiIiIiIiIiIiIiIiIiIiIiIiIiIiIiIiIiIiIiIiIiIiIiIiIiIiIiIiIiIiIiIiIiIiIiIiIiIiIiIiIiIiIiIiIiIiIiIiIiIiIiIiIiIiIiIiIiIiIiIiIiIiIiIiIiIiIiIiIiIiIiIiIiIiIiIiIiIiIiIiIiIiIiIiIiIiIiIiIiIiIiIiIiIiIiIiIiIiIiIiIiIiIiIiIiIiIiIiIiIiIiIiIiIiIiIiIiIiIiIiIiIiIiIiIiIiIiIiIiIiIiIiIiIiIiIiIiIiIiIiIiIiIiIiIiIiIiIiIiIiIiIiIiIiIiIiIiIiIiIiIiIiIiIiIiIiIiIiIiIiIiIiIiIiIiIiIiIiIiIiIiIiIiIiIiIiIiIiIiIiIiIiIiIiIiIiIiIiIiIiIiIiIiIiIiIiIiIiIiIiIiIiIiIiIiIiIiIiIiIiIiIiIiIiIiIiIiIiIiIiIiIiIiIiIiIiIiIiIiIiIiIiIiIiIiIiIiIiIiIiIiIiIiIiIiIiIiIiIiIiIiIiIiIiIiIiIiIiIiIiIiIiIiIiIiIiIiIiIiIiIiIiIiIiIiIiIiIiIiIiIiIiIiIiIiIiIiIiIiIiIiIiIiIiIiIiIiIiIiIiIiIiIiIiIiIiIiIiIiIiIiIiIiIiIiIiIiIiIiIiIiIiIiIiIiIiIiIiIiIiIiIiIiIiIiIiIiIiIiIiIiIiIiIiIiIiIiIiIiIiIiIiIiIiIiIiIiIiIiIiIiIiIiIiIiIiIiIiIiIiIiIiIiIiIiIiIiIiIiIiIiIiIiIiIiIiIiIiIiIiIiIiIiIiIiIiIiIiIiIiIiIiIiIiIiIiIiIiIiIiIiIiIiIiIiIiIiIiIiIiIiIiIiIiIiIiIiIiIiIiIiIiIiIiIiIiIiIiIiIiIiIiIiIiIiIiIiIiIiIiIiIiIiIiIiIiIiIiIiIiIiIiIiIiIiIiIiIiIiIiIiIiIiIiIiIiIiIiIiIiIiIiIiIiIiIiIiIiIiIiIiIiIiIiIiIiIiIiIiIiIiIiIiIiIiIiIiIiIiIiIiIiIiIiIiIiIiIiIiIiIiIiIiIiIiIiIiIiIiIiIiIiIiIiIiIiIiIiIiIiIiIiIiIiIiIiIiIiIiIiIiIiIiIiIiIiIiIiIiIiIiIiIiIiIiIiIiIiIiIiIiIiIiIiIiIiIiIiIiIiIiIiIiIiIiIiIiIiIiIiIiIiIiIiIiIiIiIiIiIiIiIiIiIiIiIiIiIiIiIiIiIiIiIiIiIiIiIiIiIiIiIiIiIiIiIiIiIiIiIiIiIiIiIiIiIiIiIiIiIiIiIiIiIiIiIiIiIiIiIiIiIiIiIiIiIiIiIiIiIiIiIiIiIiIiIiIiIiIiIiIiIiIiIiIiIiIiIiIiIiIiIiIiIiIiIiIiIiIiIiIiIiIiIiIiIiIiIiIiIiIiIiIiIiIiIiIiIiIiIiIiIiIiIiIiIiIiIiIiIiIiIiIiIiIiIiIiIiIiIiIiIiIiIiIiIiIiIiIiIiIiIiIiIiIiIiIiIiIiIiIiIiIiIiIiIiIiIiIiIiIiIiIiIiIiIiIiIiIiIiIiIiIiIiIiIiIiIiIiIiIiIiIiIiIiIiIiIiIiIiIiIiIiIiIiIiIiIiIiIiIiIiIiIiIiIiIiIiIiIiIiIiIiIiIiIiIiIiIiIiIiIiIiIiIiIiIiIiIiIiIiIiIiIiIiIiIiIiIiIiIiIiIiIiIiIiIiIiIiIiIiIiIiIiIiIiIiIiIiIiIiIiIiIiIiIiIiIiIiIiIiIiIiIiIiIiIiIiIiIiIiIiIiIiIiIiIiIiIiIiIiIiIiIiIiIiIiIiIiIiIiIiIiIiIiIiIiIiIiIiIiIiIiIiIiIiIiIiIiIiIiIiIiIiIiIiIiIiIiIiIiIiIiIiIiIiIiIiIiIiIiIiIiIiIiIiIiIiIiIiIiIiIiIiIiIiIiIiIiIiIiIiIiIiIiIiIiIiIiIiIiIiIiIiIiIiIiIiIiIiIiIiIiIiIiIiIiIiIiIiIiIiIiIiIiIiIiIiIiIiIiIiIiIiIiIiIiIiIiIiIiIiIiIiIiIiIiIiIiIiIiIiIiIiIiIiIiIiIiIiIiIiIi";
-var v10813 = v10814 + "IiIiIiIiIiIiIiIiIiIiIiIiIiIiIiIiIiIiIiIiIiIiIiIiIiIiIiIiIiIiIiIiIiIiIiIiIiIiIiIiIiIiIiIiIiIiIiIiIiIiIiIiIiIiIiIiIiIiIiIiIiIiIiIiIiIiIiIiIiIiIiIiIiIiIiIiIiIiIiIiIiIiIiIiIiIiIiIiIiIiIiIiIiIiIiIiIiIiIiIiIiIiIiIiIiIiIiIiIiIiIiIiIiIiIiIiIiIiIiIiIiIiIiIiIiIiIiIiIiIiIiIiIiIiIiIiIiIiIiIiIiIiIiIiIiIiIiIiIiIiIiIiIiIiIiIiIiIiIiIiIiIiIiIiIiIiIiIiIiIiIiIiIiIiIiIiIiIiIiIiIiIiIiIiIiIiIiIiIiIiIiIiIiIiIiIiIiIiIiIiIiIiIiIiIiIiIiIiIiIiIiIiIiIiIiIiIiIiIiIiIiIiIiIiIiIiIiIiIiIiIiIiIiIiIiIiIiIiIiIiIiIiIiIiIiIiIiIiIiIiIiIiIiIiIiIiIiIiIiIiIiIiIiIiIiIiIiIiIiIiIiIiIiIiIiIiIiIiIiIiIiIiIiIiIiIiIiIiIiIiIiIiIiIiIiIiIiIiIiIiIiIiIiIiIiIiIiIiIiIiIiIiIiIiIiIiIiIiIiIiIiIiIiIiIiIiIiIiIiIiIiIiIiIiIiIiIiIiIiIiIiIiIiIiIiIiIiIiIiIiIiIiIiIiIiIiIiIiIiIiIiIiIiIiIiIiIiIiIiIiIiIiIiIiIiIiIiIiIiIiIiIiIiIiIiIiIiIiIiIiIiIiIiIiIiIiIiIiIiIiIiIiIiIiIiIiIiIiIiIiIiIiIiIiIiIiIiIiIiIiIiIiIiIiIiIiIiIiIiIiIiIiIiIiIiIiIiIiIiIiIiIiIiIiIiIiIiIiIiIiIiIiIiIiIiIiIiIiIiIiIiIiIiIiIsnxAQ8APcqEVz0odj0oOj0idwkidwkidwkidwkidwkidwkidwkidwkidwkidwkidwkidwkidwkidwkidwkidwksLCXLZSgCJGgidwkidwkidwkidwkidwkidwkidwkidwkidwkidwkidwkidwkidwkidwkidwkidwksLCXLZSgCJGgidwkidwkidwkidwkidwkidwkidwkidwkidwkidwkidwkidwkidwkidwkidwkidwksLCXLZSgCJGgidwkidwkidwkidwkidwkidwkidwkidwkidwkidwkidwkidwkidwkidwkidwkid8kicAkicAkicAkicAkicAkicAkicAkicAkicAkicAkicAkicAkicAkicAkicAkicAksLCUicAkicAkicAkicAkicAkicAkicAkicAkicAkicAkicAkicAkicAkicAkicAkicAksLCUicAkicAkicAkicAkicAkicAkicAkicAkicAkicAkicAkicAkicAkicAkicAkicAksLCUicAkicAkicAkicAkicAkicAkicAkicAkicAkicAkicAkicAkicAkicAkicAkicAksLCUicAkicAkicAkicAkicAkicAkicAkicAkicAkicAkicAkicAkicAkicAkicAkicAksLCUicAkicAkicAkicAkicAkicAkicAkicAkicAkicAkicAkicAkicAkicAkicAkicAksLCUicAkicAkicAkicAkicAkicAkicAkicAkicAkicAkicAkicAkicAkicAkicAkicAloyfgAVF3wgjEAr/6gKAMxAL8B/wDFxcXFxcXFxcXFxcXFxcXFxcXFxcXFxcXFxcXFxcXFxcXFxcXFxcXFxcXFxcXFxcXFxcXFxcXFxcXFxcXFxcXFxcXFxcXFxcXFxcXFxcXFxcXFxcXFxcXFxcXFxcXFxcXFxcXFxcXFxcXFxcXFxcXFxcXFxcXFxcXFxcXFxcXFxcXFxcXFxcXFxcXFxcXFxcXFxcXFxcXFxcXFxcXFxcXFxcXFxcXFxcXFxcXFxcXFxcXFxcXFxcXFxcXFxcXFxcXFxcXFxcXFxcXFxcXFxcXFxcXFxcXFxcXFxcXFxcXFxcXFxcXFxcXFxcXFxcXFxcXFxcXFxcXFxcXFxcXFxcXFxcXFxcXFxcXFxcXFxcXFxcXFxcXFxcXFxcXFxcXFxcXFxcXFxcXFxcXFxcXFxcXFxcXFxcXFxcXFxcXFxcXFxcXFxcXFxcXFxcXFxcXFxcXFxcXFxcXFxcXFxcXFxcXFxcXFxcXFxcXFxcXFxcXFxcXFxcXFxcXFxcXFxcXFxcXFxcXFxcXFxcXFxcXFxcXFxcXFxcXFxcXFxcXFxcXFxcXFxcXFxcXFxcXFxcXFxcXFxcXFxcXFxcXFxcXFxcXFxcXFxcXFxcXFxcXFxcXFxcXFxcXFxcXFxcXFxcXFxcXFxcXFxcXFxcXFxcXFxcXFxcXFxcXFxcXFxcXFxcXFxcXFxcXFxcXFxcXFxcXFxcXFxcXFxcXFxcXFxcXFxcXFxcXFxcXFxcXFxcXFxcXFxcXFxcXFxcXFxcXFxcXFxcXFxcXFxcXFxcXFxcXFxcXFxcXFxcXFxcXFxcXFxcXFxcXFxcXFxcXFxcXFxcXFxcXFxcXFxcXFxcXFxcXFxcXFxcXFxcXFxcXFxcXFxcXFxcXFxcXFxcXFxcXFxcXFxcXFxcXFxcXFxcXFxcXFxcXFxcXFxcXFxcXFxcXFxcXFxcXFxcXFxcXFxcXFxcXFxcXFxcXFxcXFxcXFxcXFxcXFxcXFxcXFxcXFxcXFxcXFxcXFxcXFxcXFxcXFxcXFxcXFxcXFxcXFxcXFxcXFxcXFxcXFxcXFxcXFxcXFxcXFxcXFxcXFxcXFxcXFxcXFxcXFxcXFxcXFxcXFxcXFxcXFxcXFxcXFxcXFxcXFxcXFxcXFxcXFxcXFxcXFxcXFxcXFxcXFxcXFxcXFxcXFxcXFxcXFxcXFxcXFxcXFxcXFxcXFxcXFxcXFxcXFxcXFxcXFxcXFxcXFxcXFxcXFxcXFxcXFxcXFxcXFxcXFxcXFxcXFxcXFxcXFxcXFxcXFxcXFxcXFxcXFxcXFxcXFxcXFxcXFxcXFxcXFxcXFxcXFxcXFxcXFxcXFxcXFxcXFxcXFxcXFxcXFxcXFxcXFxcXFxcXFxcXFxcXFxcXFxcXFxcXFxcXFxcXFxcXFxcXFxcXFxcXFxcXFxcXFxcXFxcXFxcXFxcXFxcXFxcXFxcXFxcXFxcXFxcXFxcXFxcXFxcXFxcXFxcXFxcXFxcXFxcXFxcXFxcXFxcXFxcXFxcXFxcXFxcXFxcXFxcXFxcXFxcXFxcXFxcXFxcXFxcXFxcXFxcXFxcXFxcXFxcXFxcXFxcXFxcXFxcXFxcXFxcXFxcXFxcXFxcXFxcXFxcXFxcXFxcXFxcXFxcXFxcXFxcXFxcXFxcXFxcXFxcXFxcXFxcXFxcXFxcXFxcXFxcXFxcXFxcXFxcXFxcXFxcXFxcXFxcXFxcXFxcXFxcXFxcXFxcXFxcXFxcXFxcXFxcXFxcXFxcXFxcXFxcXFxcXFxcXFxcXFxcXFxcXFxcXFxcXFxcXFxcXFxcXFxcXFxcXFxcXFxcXFxcXFxcXFxcXFxcXFxcXFxcXFxcXFxcXFxcXFxcXFxcXFxcXFxcXFxcXFxcXFxcXFxcXFxcXFxcXFxcXFxcXFxcXFxcXFxcXFxcXFxcXFxcXFxcXFxcXFxcXFxcXFxcXFxcXFxcXFxcXFxcXFxcXFxcXFxcXFxcXFxcXFxcXFxcXFxcXFxcXFxcXFxcXFxcXFxcXFxcXFxcXFxcXFxcXFxcXFxcXFxcXFxcXFxcXFxcXFxcXFxcXFxcXFxcXFxcXFxcXFxcXFxcXFxcXFxcXFxcXFxcXFxcXFxcXFxcXFxcXFxcXFxcXFxcXFxcXFxcXFxcXFxcXFxcXFxcXFxcXFxcXFxcXFxcXFxcXFxcXFxcXFxcXFxcXFxcXFxcXFxcXFxcXFxcXFxcXFxcXFxcXFxcXFxcXFxcXFxcXFxcXFxcXFxcXFxcXFxcXFxcXFxcXFxcXFxcXFxcXFxcXFxcXFxcXFxcXFxcXFxcXFxcXFxcXFxcXFxcXFxcXFxcXFxcXFxcXFxcXFxcXFxcXFxcXFxcXFxcXFxcXFxcXFxcXFxcXFxcXFxcXFxcXFxcXFxcXFxcXFxcXFxcXFxcXFxcXFxcXFxcXFxcXFxcXFxcXFxcXFxcXFxcXFxcXFxcXFxcXFxcXFxcXFxcXFxcXFxcXFxcXFxcXFxcXFxcXFxcXFxcXFxcXFxcXFxcXFxcXFxcXFxcXFxcXFxcXFxcXFxcXFxcXFxcXFxcXFxcXFxcVia/nJJgJ+4JovPOCYfcZAb37gl+Cbr+CZ4JzgneCePkDgn8n/////////////////////////////////////////////////////////////////////////////////////////////////////////////////////////////////////////////////////////////////////////////////////////////////////////////////////////////////////////////////////////////////////////////////////////////////////////////////////////////////////////////////////////////////////////////////////////////////////////////////////////////////////////////////////////////////////////////////////////////////////////////////////////////////////////////////////////////////////////////////////////////////////////////////////////////////////////////////////////////////////////";
-var v10812 = v10813 + "////////////////////////////////////////////////////////////////////////////////////////////////////////////////////////////////////////////////////////////////////////////////////////////////////////////////////////////////////////////////////////////////////////////////////////////////////////////////////////////////////////////////////////////////////////////////////////////////////////////////////////////////////////////////////////////////////////////////////////////////////////////////////////////////////////////////////////////////////////////////////////////////////////////////////////////////////////////////////////////////////////////////////////////////////////////////////////////////////////////////////////////////////////////////////////////////////////////////////////////////////////////////////////////////////////////////////////////////////////////////////////////////////////////////////////////////////////////////////////////////////////////////////////////////////////////////////////////////////////////////////////////////////////////////////////////////////////////////////////////////////////////////////////////////////////////////////////////////////////////////////////////////////////////////////////////////////////////////////////////////////////////////////////////////////////////////////////////////////////////////////////////////////////////////////////////////////////////////////////////////////////////////////////////////////////////////////////////////////////////////////////////////////////////////////////////////////////////////////////////////////////////////////////////////////////////////////////////////////////////////////////////////////////////////////////////////////////////////////////////////////////////////////////////////////////////////////////////////////////////////////////////////////////////////////////////////////////////////////////////////////////////////////////////////////////////////////////////////////////////////////////////////////////////////////////////////////////////////////////////////////////////////////////////////////////////////////////////////////////////////////////////////////////////////////////////////////////////////////////////////////////////////////////////////////////////////////////////////////////////////////////////////////////////////////////////////////////////////////////////////////////////////////////////////////////////////////////////////////////////////////////////////////////////////////////////////////////////////////////////////////////////////////////////////////////////////////////////////////////////////////////////////////////////////////////////////////////////////////////////////////////////////////////////////////////////////////////////////////////////////////////////////////////////////////////////////////////////////////////////////////////////////////////////////////////////////////////////////////////////////////////////////////////////////////////////////////////////////////////////////////////////////////////////////////////////////////////////////////////////////////////////////////////////////////////////////////////////////////////////////////////////////////////////////////////////////////////////////////////////////////////////////////////////////////////////////////////////////////////////////////////////////////////////////////////////////////////////////////////////////////////////////////////////////////////////////////////////////////////////////////////////////////////////////////////////////////////////////////////////////////////////////////////////////////////////////////////////////////////////////////////////////////////////////////////////////////////////////////////////////////////////////////////////////////////////////////////////////////////////////////////////////////////////////////////////////////////////////////////////////////////////////////////////////////////////////////////////////////////////////////////////////////////////////////////////////////////////////////////////////////////////////////////////////////////////////////////////////////////////////////////////////////////////////////////////////////////////////////////////////////////////////////////////////////////////////////////////////////////////////////////////////////////////////////////////////////////////////////////////////////////////////////////////////////////////////////////////////////////////////////////////////////////////////////////////////////////////////////////////////////////////////////////////////////////////////////////////////////////////////////////////////////////////////////////////////////////////////////////////////////////////////////////////////////////////////////////////////////////////////////////////////////////////////////////////////////////////////////////////////////////////////////////////////////////////////////////////////////////////////////////////////////////////////////////";
-var v10811 = v10812 + "////////////////////////////////////////////////////////////////////////////////////////////////////////////////////////////////////////////////////////////////////////////////////////////////////////////////////////////////////////////////////////////////////////////////////////////////////////////////////////////////////////////////////////////////////////////////////////////////////////////////////////////////////////////////////////////////////////////////////////////////////////////////////////////////////////////////////////////////////////////////////////////////////////////////////////////////////////////////////////////////////////////////////////////////////////////////////////////////////////////////////////////////////////////////////////////////////////////////////////////////////////////////////////////////////////////////////////////////////////////////////////////////////////////////////////////////////////////////////////////////////////////////////////////////////////////////////////////////////////////////////////////////////////////////////////////////////////////////////////////////////////////////////////////////////////////////////////////////////////////////////////////////////////////////////////////////////////////////////////////////////////////////////////////////////////////////////////////////////////////////////////////////////////////////////////////////////////////////////////////////////////////////////////////////////////////////////////////////////////////////////////////////////////////////////////////////////////////////////////////////////////////////////////////////////////////////////////////////////////////////////////////////////////////////////////////////////////////////////////////////////////////////////////////////////////////////////////////////////////////////////////////////////////////////////////////////////////////////////////////////////////////////////////////////////////////////////////////////////////////////////////////////////////////////////////////////////////////////////////////////////////////////////////////////////////////////////////////////////////////////////////////////////////////////////////////////////////////////////////////////////////////////////////////////////////////////////////////////////////////////////////////////////////////////////////////////////////////////////////////////////////////////////////////////////////////////////////////////////////////////////////////////////////////////////////////////////////////////////////////////////////////////////////////////////////////////////////////////////////////////////////////////////////////////////////////////////////////////////////////////////////////////////////////////////////////////////////////////////////////////////////////////////////////////////////////////////////////////////////////////////////////////////////////////////////////////////////////////////////////////////////////////////////////////////////////////////////////////////////////////////////////////////////////////////////////////////////////////////////////////////////////////////////////////////////////////////////////////////////////////////////////////////////////////////////////////////////////////////////////////////////////////////////////////////////////////////////////////////////////////////////////////////////////////////////////////////////////////////////////////////////////////////////////////////////////////////////////////////////////////////////////////////////////////////////////////////////////////////////////////////////////////////////////////////////////////////////////////////////////////////////////////////////////////////////////////////////////////////////////////////////////////////////////////////////////////////////////////////////////////////////////////////////////////////////////////////////////////////////////////////////////////////////////////////////////////////////////////////////////////////////////////////////////////////////////////////////////////////////////////////////////////////////////////////////////////////////////////////////////////////////////////////////////////////////////////////////////////////////////////////////////////////////////////////////////////////////////////////////////////////////////////////////////////////////////////////////////////////////////////////////////////////////////////////////////////////////////////////////////////////////////////////////////////////////////////////////////////////////////////////////////////////////////////////////////////////////////////////////////////////////////////////////////////////////////////////////////////////////////////////////////////////////////////////////////////////////////////////////////////////////////////////////////////////////////////////////////////////////////////////////////////////////////////////////////////////////////////////////////////////////////////////////////////////Aw==";
-var gameboy_rom = v10811;
+var v10823 = v10824 + "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gB/LGcsRyxeVMAGFyxHLF5UwAYXLEcsXlTABhcsRyxeVMAGFyxHLF5UwAYXLEcsXlTABhcsRyxeVMAGFyxHLF5UwAYV5Fy9P8XkwAi88hGcuQMMxHMsf0pcdPkCUT3qUZ3uV9TACLzxHr8sZMAGAH8sZMAGAH8sZMAGAH8sZMAGAH8sZMAGAH8sZMAGAH8sZMAGAH8sZMAGAH8sZyxHLF5QwAYTLEcsXlDABhMsRyxeUMAGEyxHLF5QwAYTLEcsXlDABhMsRyxeUMAGEyxHLF5QwAYTLEcsXlDABhHkXL0/xeTACLzyFbyZAwzEcyx/SoRt91r9PfZNvepT1MAIvPEevyxkwAYAfyxkwAYAfyxkwAYAfyxkwAYAfyxkwAYAfyxkwAYAfyxkwAYAfyxkwAYAfyxnLEcsXlTABhcsRyxeVMAGFyxHLF5UwAYXLEcsXlTABhcsRyxeVMAGFyxHLF5UwAYXLEcsXlTABhcsRyxeVMAGFeRcvT/F5MAIvPIRnLr/DMRz/////////////////////////////////////////////////////////////////////////////////////////////////////////////////////////////////////////////////////////////////////////////////////////////////////////////////////////////////////////////////////////////////////////////////////////////////////////////////////////////////////////////////////////////////////////////////////////////////////////////////////////////////////////////////////////////////////////////////////////////////////////////////////////////////////////////////////////////////////////////////////////////////////////////////////////////////////////////////////////////////////////////////////////////////////////////////////////////////////////////////////////////////////////////////////////////////////////////////////////////////////////////////////////////////////////////////////////////////////////////////////////////////////////////////////////////////////////////////////////////////////////////////////////////////////////////////////////////////////////////////////////////////////////////////////////////////////////////////////////////////////////////////////////////////////////////////////////////////////////////////////////////////////////////////////////////////////////////////////////////////////////////////////////////////////////////////////////////////////////////////////////////////////////////////////////////////////////////////////////////////////////////////////////////////////////////////////////////////////////////////////////////////////////////////////////////////////////////////////////////////////////////////////////////////////////////////////////////////////////////////////////////////////////////////////////////////////////////////////////////////////////////////////////////////////////////////////////////////////////////////////////////////////////////////////////////////////////////////////////////////////////////////////////////////////////////////////////////////////////////////////////////////////////////////////////////////////////////////////////////////";
+var v10822 = v10823 + "////////////////////////////////////////////////////////////////////////////////////////////////////////////////////////////////////////////////////////////////////////////////////////////////////////////////////////////////////////////////////////////////////////////////////////////////////////////////////////////////////////////////////////////////////////////////////////////////////////////////////////////////////////////////////////////////////////////////////////////////////////////////////////////////////////////////////////////////////////////////////////////////////////////////////////////////////////////////////////////////////////////////////////////////////////////////////////////////////////////////////////////////////////////////////////////////////////////////////////////////////////////////////////////////////////////////////////////////////////////////////////////////////////////////////////////////////////////////////////////////////////////////////////////////////////////////////////////////////////////////////////////////////////////////////////////////////////////////////////////////////////////////////////////////////////////////////////////////////////////////////////////////////////////////////////////////////////////////////////////////////////////////////////////////////////////////////////////////////////////////////////////////////////////////////////////////////////////////////////////////////////////////////////////////////////////////////////////////////////////////////////////////////////////////////////////////////////////////////////////////////////////////////////////////////////////////////////////////////////////////////////////////////////////////////////////////////////////////////////////////////////////////////////////////////////////////////////////////////////////////////////////////////////////////////////////////////////////////////////////////////////////////////////////////////////////////////////////////////////////////////////////////////////////////////////////////////////////////////////////////////////////////////////////////////////////////////////////////////////////////////////////////////////////////////////////////////////////////////////////////////////////////////////////////////////////////////////////////////////////////////////////////////////////////////////////////////////////////////////////////////////////////////////////////////////////////////////////////////////////////////////////////////////////////////////////////////////////////////////////////////////////////////////////////////////////////////////////////////////////////////////////////////////////////////////////////////////////////////////////////////////////////////////////////////////////////////////////////////////////////////////////////////////////////////////////////////////////////////////////////////////////////////////////////////////////////////////////////////////////////////////////////////////////////////////////////////////////////////////////////////////////////////////////////////////////////////////////////////////////////////////////////////////////////////////////////////////////////////////////////////////////////////////////////////////////////////////////////////////////////////////////////////////////////////////////////////////////////////////////////////////////////////////////////////////////////////////////////////////////////////////////////////////////////////////////////////////////////////////////////////////////////////////////////////////////////////////////////////////////////////////////////////////////////////////////////////////////////////////////////////////////////////////////////////////////////////////////////////////////////////////////////////////////////////////////////////////////////////////////////////////////////////////////////////////////////////////////////////////////////////////////////////////////////////////////////////////////////////////////////////////////////////////////////////////////////////////////////////////////////////////////////////////////////////////////////////////////////////////////////////////////////////////////////////////////////////////////////////////////////////////////////////////////////////////////////////////////////////////////////////////////////////////////////////////////////////////////////////////////////////////////////////////////////////////////////////////////////////////////////////////////////////////////////////////////////////////////////////////////////////////////////////////////////////////////////////////////////////////////////////////////////////////////////////////////////////////////////////////////////////////////////////////////////////////////////////////////////////////////////////////////////////////////////////////////////////////////////////////////////////////////////////////////////////////////////////////////////////////////////////////////////////////////////////////";
+var v10821 = v10822 + "/////////////////////////////////////////////////////////////////////////////////////////////////////////////////////////////////////////////////////////////////////////////////////////////////////////////////////////////////////////////////////////////////////////////////////////////////////////////////////////////////////////////////////////////////////////////////////////////////////////////////////////////////////////////////////////////////////////////////////////////////////////////////////////////////////////////////////////////////////////////////////////////////////////////////////////////////////////////////////////////////////////////////////////////////////////////////////////////////////////////////////////////////////////////////////////////////////////////////////////////////////////////////////////////////////////////////////////////////////////////////////////////////////////////////////////////////////////////////////////////////////////////////////////////////////////////////////////////////////////////////////////////////////////////////////////////////////////////////////////////////////////////////////////////////////////////////////////////////////////////////////////////////////////////////////////////////////////////////////////////////////////////////////////////////////////////////////////////////////////////////////////////////////////////////////////////////////////////////////////////////////////////////////////////////////////////////////////////////////////////////////////////////////////////////////////////////////////////////////////////////////////////////////////////////////////////////////////////////////////////////////////////////////////////////////////////////////////////////////////////////////////////////////////////////////////////////////////////////////////////////////////////////////////////////////////////////////////////////////////////////////////////////////////////////////////////////////////////////////////////////////////////////////////////////////////////////////////////////////////////////////////////////////////////////////////////////////////////////////////////////////////////////////////////////////////////////////////////////////////////////////////////////////////////////////////////////////////////////////////////////////////////////////////////////////////////////////////////////////////////////////////////////////////////////////////////////////////////////////////////////////////////////////////////////////////////////////////////////////////////////////////////////////////////////////////////////////////////////////////////////////////////////////////////////////////////////////////////////////////////////////////////////////////////////////////////////////////////////////////////////////////////////////////////////////////////////////////////////////////////////////////////////////////////////////////////////////////////////////////////////////////////////////////////////////////////////////////////////////////////////////////////////////////////////////////////////////////////////////////////////////////////////////////////////////////////////////////////////////////////////////////////////////////////////////////////////////////////////////////////////////////////////////////////////////////////////////////////////////////////////////////////////////////////////////////////////////////////////////////////////////////////////////////////////////////////////////////////////////////////////////////////////////////////////////////////////////////////////////////////////////////////////////////////////////////////////////////////////////////////////////////////////////////////////////////////////////////////////////////////////////////////////////////////////////////////////////////////////////////////////////////////////////////////////////////////////////////////////////////////////////////////////////////////////////////////////////////////////////////////////////////////////////////////////////////////////////////////////////////////////////////////////////////////////////////////////////////////////////////////////////////////////////////////////////////////////////////////////////////////////////////////////////////////////////////////////////////////////////////////////////////////////////////////////////////////////////////////////////////////////////////////////////////////////////////////////////////////3q8MAVUZ3tdb3u90pdAfZNPepRfkTA+V3nLPy88g+CDPn+R5YdPbyYARCkpKQkBkVIJweV41kAXb3nWQB8fH+YPZ/CChGd55gcGB/YITwpP8INHLMl5S1+RV3nLPy88g+CDPneR5YdPbyYARCkpKQkBklsJweV41kAXb3nWQB8fH+YPZ/CChGd55gcGB/YITwpP8INHLMmVT3qUX5EwPld5yz8vPIPggz5/keWHT28mAEQpKSkJAR9BCcHleNZAF2951kAfHx/mD2fwgoRneeYHBgf2CE8KT/CDRyzJeUtfkVd5yz8vPIPggz53keWHT28mAEQpKSkJASBKCcHleNZAF2951kAfHx/mD2fwgoRneeYHBgf2CE8KT/CDRyzJfrF3e8t4IAN6LCyAR8sJMAEkfrF3e8t4IAN6LCyAR8sJMAEkfrF3e8t4IAN6LCyAR8sJMAEkfrF3e8t4IAN6LCyAR8sJMAEkfrF3e8t4IAN6LCyAR8sJMAEkfrF3e8t4IAN6LCyAR8sJMAEkfrF3e8t4IAN6";
+var v10820 = v10821 + "LCyAR8sJMAEkfrF3e8t4IAN6LCyAR8sJMAEkfrF3e8t4IAN6LCyAR8sJMAEkfrF3e8t4IAN6LCyAR8sJMAEkfrF3e8t4IAN6LCyAR8sJMAEkfrF3e8t4IAN6LCyAR8sJMAEkfrF3e8t4IAN6LCyAR8sJMAEkfrF3e8t4IAN6LCyAR8sJMAEkfrF3e8t4IAN6LCyAR8sJMAEkfrF3e8t4IAN6LCyAR8sJMAEkfrF3e8t4IAN6LCyAR8sJMAEkfrF3e8t4IAN6LCyAR8sJMAEkfrF3e8t4IAN6LCyAR8sJMAEkfrF3e8t4IAN6LCyAR8sJMAEkfrF3e8t4IAN6LCyAR8sJMAEkfrF3e8t4IAN6LCyAR8sJMAEkfrF3e8t4IAN6LCyAR8sJMAEkfrF3e8t4IAN6LCyAR8sJMAEkfrF3e8t4IAN6LCyAR8sJMAEkfrF3e8t4IAN6LCyAR8sJMAEkfrF3e8t4IAN6LCyAR8sJMAEkfrF3e8t4IAN6LCyAR8sJMAEkfrF3e8t4IAN6LCyAR8sJMAEkfrF3e8t4IAN6LCyAR8sJMAEkfrF3e8t4IAN6LCyAR8sJMAEkfrF3e8t4IAN6LCyAR8sJMAEkfrF3e8t4IAN6LCyAR8sJMAEkfrF3e8t4IAN6LCyAR8sJMAEkfrF3e8t4IAN6LCyAR8sJMAEkfrF3e8t4IAN6LCyAR8sJMAEkfrF3e8t4IAN6LCyAR8sJMAEkfrF3e8t4IAN6LCyAR8sJMAEkfrF3e8t4IAN6LCyAR8sJMAEkfrF3e8t4IAN6LCyAR8sJMAEkfrF3e8t4IAN6LCyAR8sJMAEkfrF3e8t4IAN6LCyAR8sJMAEkfrF3e8t4IAN6LCyAR8sJMAEkfrF3e8t4IAN6LCyAR8sJMAEkfrF3e8t4IAN6LCyAR8sJMAEkfrF3e8t4IAN6LCyAR8sJMAEkfrF3e8t4IAN6LCyAR8sJMAEkfrF3e8t4IAN6LCyAR8sJMAEkfrF3e8t4IAN6LCyAR8sJMAEkfrF3e8t4IAN6LCyAR8sJMAEkfrF3e8t4IAN6LCyAR8sJMAEkfrF3e8t4IAN6LCyAR8sJMAEkfrF3e8t4IAN6LCyAR8sJMAEkfrF3e8t4IAN6LCyAR8sJMAEkfrF3e8t4IAN6LCyAR8sJMAEkfrF3e8t4IAN6LCyAR8sJMAEkfrF3e8t4IAN6LCyAR8sJMAEkfrF3e8t4IAN6LCyAR8sJMAEkfrF3e8t4IAN6LCyAR8sJMAEkfrF3e8t4IAN6LCyAR8sJMAEkfrF3e8t4IAN6LCyAR8sJMAEkfrF3e8t4IAN6LCyAR8sJMAEkfrF3e8t4IAN6LCyAR8sJMAEkfrF3e8t4IAN6LCyAR8sJMAEkfrF3e8t4IAN6LCyAR8sJMAEkfrF3e8t4IAN6LCyAR8sJMAEkfrF3e8t4IAN6LCyAR8sJMAEkfrF3e8t4IAN6LCyAR8sJMAEkfrF3e8t4IAN6LCyAR8sJMAEkfrF3e8t4IAN6LCyAR8sJMAEkfrF3e8t4IAN6LCyAR8sJMAEkfrF3e8t4IAN6LCyAR8sJMAEkfrF3e8t4IAN6LCyAR8sJMAEkfrF3e8t4IAN6LCyAR8sJMAEkfrF3e8t4IAN6LCyAR8sJMAEkfrF3e8t4IAN6LCyAR8sJMAEkfrF3e8t4IAN6LCyAR8sJMAEkfrF3e8t4IAN6LCyAR8sJMAEkfrF3e8t4IAN6LCyAR8sJMAEkfrF3e8t4IAN6LCyAR8sJMAEkfrF3e8t4IAN6LCyAR8sJMAEkfrF3e8t4IAN6LCyAR8sJMAEkfrF3e8t4IAN6LCyAR8sJMAEkfrF3e8t4IAN6LCyAR8sJMAEkfrF3e8t4IAN6LCyAR8sJMAEkfrF3e8t4IAN6LCyAR8sJMAEkfrF3e8t4IAN6LCyAR8sJMAEkfrF3e8t4IAN6LCyAR8sJMAEkfrF3e8t4IAN6LCyAR8sJMAEkfrF3e8t4IAN6LCyAR8sJMAEkfrF3e8t4IAN6LCyAR8sJMAEkfrF3e8t4IAN6LCyAR8sJMAEkfrF3e8t4IAN6LCyAR8sJMAEkfrF3e8t4IAN6LCyAR8sJMAEkfrF3e8t4IAN6LCyAR8sJMAEkfrF3e8t4IAN6LCyAR8sJMAEkfrF3e8t4IAN6LCyAR8sJMAEkfrF3e8t4IAN6LCyAR8sJMAEkfrF3e8t4IAN6LCyAR8sJMAEkfrF3e8t4IAN6LCyAR8sJMAEkfrF3e8t4IAN6LCyAR8sJMAEkfrF3e8t4IAN6LCyAR8sJMAEkfrF3e8t4IAN6LCyAR8sJMAEkfrF3e8t4IAN6LCyAR8sJMAEkfrF3e8t4IAN6LCyAR8sJMAEkfrF3e8t4IAN6LCyAR8sJMAEkfrF3e8t4IAN6LCyAR8sJMAEkfrF3e8t4IAN6LCyAR8sJMAEkfrF3e8t4IAN6LCyAR8sJMAEkfrF3e8t4IAN6LCyAR8sJMAEkfrF3e8t4IAN6LCyAR8sJMAEkfrF3e8t4IAN6LCyAR8sJMAEkfrF3e8t4IAN6LCyAR8sJMAEkfrF3e8t4IAN6LCyAR8sJMAEkfrF3e8t4IAN6LCyAR8sJMAEkfrF3e8t4IAN6LCyAR8sJMAEkfrF3e8t4IAN6LCyAR8sJMAEkfrF3e8t4IAN6LCyAR8sJMAEkfrF3e8t4IAN6LCyAR8sJMAEkfrF3e8t4IAN6LCyAR8sJMAEkfrF3e8t4IAN6LCyAR8sJMAEkfrF3e8t4IAN6LCyAR8sJMAEkfrF3e8t4IAN6LCyAR8sJMAEkfrF3e8t4IAN6LCyAR8sJMAEkfrF3e8t4IAN6LCyAR8sJMAEkfrF3e8t4IAN6LCyAR8sJMAEkfrF3e8t4IAN6LCyAR8sJMAEkfrF3e8t4IAN6LCyAR8sJMAEkyX6xInvLeCAGessJMAEkgEcALH6xInvLeCAGessJMAEkgEcALH6xInvLeCAGessJMAEkgEcALH6xInvLeCAGessJMAEkgEcALH6xInvLeCAGessJMAEkgEcALH6xInvLeCAGessJMAEkgEcALH6xInvLeCAGessJMAEkgEcALH6xInvLeCAGessJMAEkgEcALH6xInvLeCAGessJMAEkgEcALH6xInvLeCAGessJMAEkgEcALH6xInvLeCAGessJMAEkgEcALH6xInvLeCAGessJMAEkgEcALH6xInvLeCAGessJMAEkgEcALH6xInvLeCAGessJMAEkgEcALH6xInvLeCAGessJMAEkgEcALH6xInvLeCAGessJMAEkgEcALH6xInvLeCAGessJMAEkgEcALH6xInvLeCAGessJMAEkgEcALH6xInvLeCAGessJMAEkgEcALH6xInvLeCAGessJMAEkgEcALH6xInvLeCAGessJMAEkgEcALH6xInvLeCAGessJMAEkgEcALH6xInvLeCAGessJMAEkgEcALH6xInvLeCAGessJMAEkgEcALH6xInvLeCAGessJMAEkgEcALH6xInvLeCAGessJMAEkgEcALH6xInvLeCAGessJMAEkgEcALH6xInvLeCAGessJMAEkgEcALH6xInvLeCAGessJMAEkgEcALH6xInvLeCAGessJMAEkgEcALH6xInvLeCAGessJMAEkgEcALH6xInvLeCAGessJMAEkgEcALH6xInvLeCAGessJMAEkgEcALH6xInvLeCAGessJMAEkgEcALH6xInvLeCAGessJMAEkgEcALH6xInvLeCAGessJMAEkgEcALH6xInvLeCAGessJMAEkgEcALH6xInvLeCAGessJMAEkgEcALH6xInvLeCAGessJMAEkgEcALH6xInvLeCAGessJMAEkgEcALH6xInvLeCAGessJMAEkgEcALH6xInvLeCAGessJMAEkgEcALH6xInvLeCAGessJMAEkgEcALH6xInvLeCAGessJMAEkgEcALH6xInvLeCAGessJMAEkgEcALH6xInvLeCAGessJMAEkgEcALH6xInvLeCAGessJMAEkgEcALH6xInvLeCAGessJMAEkgEcALH6xInvLeCAGessJMAEkgEcALH6xInvLeCAGessJMAEkgEcALH6xInvLeCAGessJMAEkgEcALH6xInvLeCAGessJMAEkgEcALH6xInvLeCAGessJMAEkgEcALH6xInvLeCAGessJMAEkgEcALH6xInvLeCAGessJMAEkgEcALH6xInvLeCAGessJMAEkgEcALH6xInvLeCAGessJMAEkgEcALH6xInvLeCAGessJMAEkgEcALH6xInvLeCAGessJMAEkgEcALH6xInvLeCAGessJMAEkgEcALH6xInvLeCAGessJMAEkgEcALH6xInvLeCAGessJMAEkgEcALH6xInvLeCAGessJMAEkgEcALH6xInvLeCAGessJMAEkgEcALH6xInvLeCAGessJMAEkgEcALH6xInvLeCAGessJMAEkgEcALH6xInvLeCAGessJMAEkgEcALH6xInvLeCAGessJMAEkgEcALH6xInvLeCAGessJMAEkgEcALH6xInvLeCAGessJMAEkgEcALH6xInvLeCAGessJMAEkgEcALH6xInvLeCAGessJMAEkgEcALH6xInvLeCAGessJMAEkgEcALH6xInvLeCAGessJMAEkgEcALH6xInvLeCAGessJMAEkgEcALH6xInvLeCAGessJMAEkgEcALH6xInvLeCAGessJMAEkgEcALH6xInvLeCAGessJMAEkgEcALH6xInvLeCAGessJMAEkgEcALH6xInvLeCAGessJMAEkgEcALH6xInvLeCAGessJMAEkgEcALH6xInvLeCAGessJMAEkgEcALH6xInvLeCAGessJMAEkgEcALH6xInvLeCAGessJMAEkgEcALH6xInvLeCAGessJMAEkgEcALH6xInvLeCAGessJMAEkgEcALH6xInvLeCAGessJMAEk";
+var v10819 = v10820 + "gEcALH6xInvLeCAGessJMAEkgEcALH6xInvLeCAGessJMAEkgEcALH6xInvLeCAGessJMAEkgEcALH6xInvLeCAGessJMAEkgEcALH6xInvLeCAGessJMAEkgEcALH6xInvLeCAGessJMAEkgEcALH6xInvLeCAGessJMAEkgEcALH6xInvLeCAGessJMAEkgEcALH6xInvLeCAGessJMAEkgEcALH6xInvLeCAGessJMAEkgEcALH6xInvLeCAGessJMAEkgEcALH6xInvLeCAGessJMAEkgEcALH6xInvLeCAGessJMAEkgEcALH6xInvLeCAGessJMAEkgEcALH6xInvLeCAGessJMAEkgEcALH6xInvLeCAGessJMAEkgEcALH6xInvLeCAGessJMAEkgEcALH6xInvLeCAGessJMAEkgEcALH6xInvLeCAGessJMAEkgEcALH6xInvLeCAGessJMAEkgEcALH6xInvLeCAGessJMAEkgEcALH6xInvLeCAGessJMAEkgEcALH6xInvLeCAGessJMAEkgEcALH6xInvLeCAGessJMAEkgEcALH6xInvLeCAGessJMAEkgEcALH6xInvLeCAGessJMAEkgEcALH6xInvLeCAGessJMAEkgEcALH6xInvLeCAGessJMAEkgEcALH6xInvLeCAGessJMAEkgEcALH6xInvLeCAGessJMAEkgEcALH6xInvLeCAGessJMAEkgEcALH6xInvLeCAGessJMAEkgEcALH6xInvLeCAGessJMAEkgEcALMl+sXd7y3ggA3osLIBHywEwASV+sXd7y3ggA3osLIBHywEwASV+sXd7y3ggA3osLIBHywEwASV+sXd7y3ggA3osLIBHywEwASV+sXd7y3ggA3osLIBHywEwASV+sXd7y3ggA3osLIBHywEwASV+sXd7y3ggA3osLIBHywEwASV+sXd7y3ggA3osLIBHywEwASV+sXd7y3ggA3osLIBHywEwASV+sXd7y3ggA3osLIBHywEwASV+sXd7y3ggA3osLIBHywEwASV+sXd7y3ggA3osLIBHywEwASV+sXd7y3ggA3osLIBHywEwASV+sXd7y3ggA3osLIBHywEwASV+sXd7y3ggA3osLIBHywEwASV+sXd7y3ggA3osLIBHywEwASV+sXd7y3ggA3osLIBHywEwASV+sXd7y3ggA3osLIBHywEwASV+sXd7y3ggA3osLIBHywEwASV+sXd7y3ggA3osLIBHywEwASV+sXd7y3ggA3osLIBHywEwASV+sXd7y3ggA3osLIBHywEwASV+sXd7y3ggA3osLIBHywEwASV+sXd7y3ggA3osLIBHywEwASV+sXd7y3ggA3osLIBHywEwASV+sXd7y3ggA3osLIBHywEwASV+sXd7y3ggA3osLIBHywEwASV+sXd7y3ggA3osLIBHywEwASV+sXd7y3ggA3osLIBHywEwASV+sXd7y3ggA3osLIBHywEwASV+sXd7y3ggA3osLIBHywEwASV+sXd7y3ggA3osLIBHywEwASV+sXd7y3ggA3osLIBHywEwASV+sXd7y3ggA3osLIBHywEwASV+sXd7y3ggA3osLIBHywEwASV+sXd7y3ggA3osLIBHywEwASV+sXd7y3ggA3osLIBHywEwASV+sXd7y3ggA3osLIBHywEwASV+sXd7y3ggA3osLIBHywEwASV+sXd7y3ggA3osLIBHywEwASV+sXd7y3ggA3osLIBHywEwASV+sXd7y3ggA3osLIBHywEwASV+sXd7y3ggA3osLIBHywEwASV+sXd7y3ggA3osLIBHywEwASV+sXd7y3ggA3osLIBHywEwASV+sXd7y3ggA3osLIBHywEwASV+sXd7y3ggA3osLIBHywEwASV+sXd7y3ggA3osLIBHywEwASV+sXd7y3ggA3osLIBHywEwASV+sXd7y3ggA3osLIBHywEwASV+sXd7y3ggA3osLIBHywEwASV+sXd7y3ggA3osLIBHywEwASV+sXd7y3ggA3osLIBHywEwASV+sXd7y3ggA3osLIBHywEwASV+sXd7y3ggA3osLIBHywEwASV+sXd7y3ggA3osLIBHywEwASV+sXd7y3ggA3osLIBHywEwASV+sXd7y3ggA3osLIBHywEwASV+sXd7y3ggA3osLIBHywEwASV+sXd7y3ggA3osLIBHywEwASV+sXd7y3ggA3osLIBHywEwASV+sXd7y3ggA3osLIBHywEwASV+sXd7y3ggA3osLIBHywEwASV+sXd7y3ggA3osLIBHywEwASV+sXd7y3ggA3osLIBHywEwASV+sXd7y3ggA3osLIBHywEwASV+sXd7y3ggA3osLIBHywEwASV+sXd7y3ggA3osLIBHywEwASV+sXd7y3ggA3osLIBHywEwASV+sXd7y3ggA3osLIBHywEwASV+sXd7y3ggA3osLIBHywEwASV+sXd7y3ggA3osLIBHywEwASV+sXd7y3ggA3osLIBHywEwASV+sXd7y3ggA3osLIBHywEwASV+sXd7y3ggA3osLIBHywEwASV+sXd7y3ggA3osLIBHywEwASV+sXd7y3ggA3osLIBHywEwASV+sXd7y3ggA3osLIBHywEwASV+sXd7y3ggA3osLIBHywEwASV+sXd7y3ggA3osLIBHywEwASV+sXd7y3ggA3osLIBHywEwASV+sXd7y3ggA3osLIBHywEwASV+sXd7y3ggA3osLIBHywEwASV+sXd7y3ggA3osLIBHywEwASV+sXd7y3ggA3osLIBHywEwASV+sXd7y3ggA3osLIBHywEwASV+sXd7y3ggA3osLIBHywEwASV+sXd7y3ggA3osLIBHywEwASV+sXd7y3ggA3osLIBHywEwASV+sXd7y3ggA3osLIBHywEwASV+sXd7y3ggA3osLIBHywEwASV+sXd7y3ggA3osLIBHywEwASV+sXd7y3ggA3osLIBHywEwASV+sXd7y3ggA3osLIBHywEwASV+sXd7y3ggA3osLIBHywEwASV+sXd7y3ggA3osLIBHywEwASV+sXd7y3ggA3osLIBHywEwASV+sXd7y3ggA3osLIBHywEwASV+sXd7y3ggA3osLIBHywEwASV+sXd7y3ggA3osLIBHywEwASV+sXd7y3ggA3osLIBHywEwASV+sXd7y3ggA3osLIBHywEwASV+sXd7y3ggA3osLIBHywEwASV+sXd7y3ggA3osLIBHywEwASV+sXd7y3ggA3osLIBHywEwASV+sXd7y3ggA3osLIBHywEwASV+sXd7y3ggA3osLIBHywEwASV+sXd7y3ggA3osLIBHywEwASV+sXd7y3ggA3osLIBHywEwASV+sXd7y3ggA3osLIBHywEwASV+sXd7y3ggA3osLIBHywEwASV+sXd7y3ggA3osLIBHywEwASV+sXd7y3ggA3osLIBHywEwASV+sXd7y3ggA3osLIBHywEwASV+sXd7y3ggA3osLIBHywEwASV+sXd7y3ggA3osLIBHywEwASV+sXd7y3ggA3osLIBHywEwASV+sXd7y3ggA3osLIBHywEwASV+sXd7y3ggA3osLIBHywEwASV+sXd7y3ggA3osLIBHywEwASV+sXd7y3ggA3osLIBHywEwASV+sXd7y3ggA3osLIBHywEwASV+sXd7y3ggA3osLIBHywEwASV+sXd7y3ggA3osLIBHywEwASV+sXd7y3ggA3osLIBHywEwASV+sXd7y3ggA3osLIBHywEwASV+sXd7y3ggA3osLIBHywEwASV+sXd7y3ggA3osLIBHywEwASXJfrF3e8t4IAZ6ywEwASWARywsfrF3e8t4IAZ6ywEwASWARywsfrF3e8t4IAZ6ywEwASWARywsfrF3e8t4IAZ6ywEwASWARywsfrF3e8t4IAZ6ywEwASWARywsfrF3e8t4IAZ6ywEwASWARywsfrF3e8t4IAZ6ywEwASWARywsfrF3e8t4IAZ6ywEwASWARywsfrF3e8t4IAZ6ywEwASWARywsfrF3e8t4IAZ6ywEwASWARywsfrF3e8t4IAZ6ywEwASWARywsfrF3e8t4IAZ6ywEwASWARywsfrF3e8t4IAZ6ywEwASWARywsfrF3e8t4IAZ6ywEwASWARywsfrF3e8t4IAZ6ywEwASWARywsfrF3e8t4IAZ6ywEwASWARywsfrF3e8t4IAZ6ywEwASWARywsfrF3e8t4IAZ6ywEwASWARywsfrF3e8t4IAZ6ywEwASWARywsfrF3e8t4IAZ6ywEwASWARywsfrF3e8t4IAZ6ywEwASWARywsfrF3e8t4IAZ6ywEwASWARywsfrF3e8t4IAZ6ywEwASWARywsfrF3e8t4IAZ6ywEwASWARywsfrF3e8t4IAZ6ywEwASWARywsfrF3e8t4IAZ6ywEwASWARywsfrF3e8t4IAZ6ywEwASWARywsfrF3e8t4IAZ6ywEwASWARywsfrF3e8t4IAZ6ywEwASWARywsfrF3e8t4IAZ6ywEwASWARywsfrF3e8t4IAZ6ywEwASWARywsfrF3e8t4IAZ6ywEwASWARywsfrF3e8t4IAZ6ywEwASWARywsfrF3e8t4IAZ6ywEwASWARywsfrF3e8t4IAZ6ywEwASWARywsfrF3e8t4IAZ6ywEwASWARywsfrF3e8t4IAZ6ywEwASWARywsfrF3e8t4IAZ6ywEwASWARywsfrF3e8t4IAZ6ywEwASWARywsfrF3e8t4IAZ6ywEwASWARywsfrF3e8t4IAZ6ywEwASWARywsfrF3e8t4IAZ6ywEwASWARywsfrF3e8t4IAZ6ywEwASWARywsfrF3e8t4IAZ6ywEwASWARywsfrF3e8t4IAZ6ywEwASWARywsfrF3e8t4IAZ6ywEwASWARywsfrF3e8t4IAZ6ywEwASWARyws";
+var v10818 = v10819 + "frF3e8t4IAZ6ywEwASWARywsfrF3e8t4IAZ6ywEwASWARywsfrF3e8t4IAZ6ywEwASWARywsfrF3e8t4IAZ6ywEwASWARywsfrF3e8t4IAZ6ywEwASWARywsfrF3e8t4IAZ6ywEwASWARywsfrF3e8t4IAZ6ywEwASWARywsfrF3e8t4IAZ6ywEwASWARywsfrF3e8t4IAZ6ywEwASWARywsfrF3e8t4IAZ6ywEwASWARywsfrF3e8t4IAZ6ywEwASWARywsfrF3e8t4IAZ6ywEwASWARywsfrF3e8t4IAZ6ywEwASWARywsfrF3e8t4IAZ6ywEwASWARywsfrF3e8t4IAZ6ywEwASWARywsfrF3e8t4IAZ6ywEwASWARywsfrF3e8t4IAZ6ywEwASWARywsfrF3e8t4IAZ6ywEwASWARywsfrF3e8t4IAZ6ywEwASWARywsfrF3e8t4IAZ6ywEwASWARywsfrF3e8t4IAZ6ywEwASWARywsfrF3e8t4IAZ6ywEwASWARywsfrF3e8t4IAZ6ywEwASWARywsfrF3e8t4IAZ6ywEwASWARywsfrF3e8t4IAZ6ywEwASWARywsfrF3e8t4IAZ6ywEwASWARywsfrF3e8t4IAZ6ywEwASWARywsfrF3e8t4IAZ6ywEwASWARywsfrF3e8t4IAZ6ywEwASWARywsfrF3e8t4IAZ6ywEwASWARywsfrF3e8t4IAZ6ywEwASWARywsfrF3e8t4IAZ6ywEwASWARywsfrF3e8t4IAZ6ywEwASWARywsfrF3e8t4IAZ6ywEwASWARywsfrF3e8t4IAZ6ywEwASWARywsfrF3e8t4IAZ6ywEwASWARywsfrF3e8t4IAZ6ywEwASWARywsfrF3e8t4IAZ6ywEwASWARywsfrF3e8t4IAZ6ywEwASWARywsfrF3e8t4IAZ6ywEwASWARywsfrF3e8t4IAZ6ywEwASWARywsfrF3e8t4IAZ6ywEwASWARywsfrF3e8t4IAZ6ywEwASWARywsfrF3e8t4IAZ6ywEwASWARywsfrF3e8t4IAZ6ywEwASWARywsfrF3e8t4IAZ6ywEwASWARywsfrF3e8t4IAZ6ywEwASWARywsfrF3e8t4IAZ6ywEwASWARywsfrF3e8t4IAZ6ywEwASWARywsfrF3e8t4IAZ6ywEwASWARywsfrF3e8t4IAZ6ywEwASWARywsfrF3e8t4IAZ6ywEwASWARywsfrF3e8t4IAZ6ywEwASWARywsfrF3e8t4IAZ6ywEwASWARywsfrF3e8t4IAZ6ywEwASWARywsfrF3e8t4IAZ6ywEwASWARywsfrF3e8t4IAZ6ywEwASWARywsfrF3e8t4IAZ6ywEwASWARywsfrF3e8t4IAZ6ywEwASWARywsfrF3e8t4IAZ6ywEwASWARywsfrF3e8t4IAZ6ywEwASWARywsfrF3e8t4IAZ6ywEwASWARywsfrF3e8t4IAZ6ywEwASWARywsfrF3e8t4IAZ6ywEwASWARywsfrF3e8t4IAZ6ywEwASWARywsfrF3e8t4IAZ6ywEwASWARywsfrF3e8t4IAZ6ywEwASWARywsfrF3e8t4IAZ6ywEwASWARywsfrF3e8t4IAZ6ywEwASWARywsfrF3e8t4IAZ6ywEwASWARywsfrF3e8t4IAZ6ywEwASWARywsfrF3e8t4IAZ6ywEwASWARywsfrF3e8t4IAZ6ywEwASWARywsyf//////////////////////////////////////////////////////////////////////////////////////////////////////////////////////////////////////////////////////////////////////////////////////////////////////////////////////////////////////////////////////////////////////////////////////////////////////////////////////////////////////////////////////////////////////////////////////////////////////////////////////////////////////////////////////////////////////////////////////////////////////////////////////////////////////////////////////////////////////////////////////////////////////////////////////////////////////////////////////////////////////////////////////////////////////////////////////////////////////////////////////////////////////////////////////////////////////////////////////////////////////////////////////////////////////////////////////////////////////////////////////////////////////////////////////////////////////////////////////////////////////////////////////////////////////////////////////////////////////////////////////////////////////////////////////////////////////////////////////////////////////////////////////////////////////////////////////////////////////////////////////////////////////////////////////////////////////////////////////////////////////////////////////////////////////////////////////////////////////////////////////////////////////////////////////////////////////////////////////////////////////////////////////////////////////////////////////////////////////////////////////////////////////////////////////////////////////////////////////////////////////////////////////////////////////////////////////////////////////////////////////////////////////////////////////////////////////////////////////////////////////////////////////////////////////////////////////////////////////////////////////////////////////////////////////////////////////////////////////////////////////////////////////////////////////////////////////////////////////////////////////////////////////////////////////////////////////////////////////////////////////////////////////////////////////////////////////////////////////////////////////////////////////////////////////////////////////////////////////////////////////////////////////////////////////////////////////////////////////////////////////////////////////////////////////////////////////////////////////////////////////////////////////////////////////////////////////////////////////////////////////////////////////////////////////////////////////////////////////////////////////////////////////////////////////////////////////////////////////////////////////////////////////////////////////////////////////////////////////////////////////////////////////////////////////////////////////////////////////////////////////////////////////////////////////////////////////////////////////////////////////////////////////////////////////////////////////////////////////////////////////////////////////////////////////////////////////////////////////////////////////////////////////////////////////////////////////////////////////////////////////////////////////////////////////////////////////////////////////////////////////////////////////////////////////////////";
+var v10817 = v10818 + "////////////////////////////////////////////////////////////////////////////////////////////////////////////////////////////////////////////////////////////////////////////////////////////////////////////////////////////////////////////////////////////////////////////////////////////////////////////////////////////////////////////////////////////////////////////////////////////////////////////////////////////////////////////////////////////////////////////////////////////////////////////////////////////////////////////////////////////////////////////////////////////////////////////////////////////////////////////////////////////////////////////////////////////////////////////////////////////////////////////////////////////////////////////////////////////////////////////////////////////////////////////////////////////////////////////////////////////////////////////////////////////////////////////////////////////////////////////////////////////////////////////////////////////////////////////////////////////////////////////////////////////////////////////////////////////////////////////////////////////////////////////////////////////////////////////////////////////////////////////////////////////////////////////////////////////////////////////////////////////////////////////////////////////////////////////////////////////////////////////////////////////////////////////////////////////////////////////////////////////////////////////////////////////////////////////////////////////////////////////////////////////////////////////////////////////////////////////////////////////////////////////////////////////////////////////////////////////////////////////////////////////////////////////////////////////////////////////////////////////////////////////////////////////////////////////////////////////////////////////////////////////////////////////////////////////////////////////////////////////////////////////////////////////////////////////////////////////////////////////////////////////////////////////////////////////////////////////////////////////////////////////////////////////////////////////////////////////////////////////////////////////////////////////////////////////////////////////////////////////////////////////////////////////////////////////////////////////////////////////////////////////////////////////////////////////////////////////////////////////////////////////////////////////////////////////////////////////////////////////////////////////////////////////////////////////////////////////////////////////////////////////////////////////////////////////////////////////////////////////////////////////////////////////////////////////////////////////////////////////////////////////////////////////////////////////////////////////////////////////////////////////////////////////////////////////////////////////////////////////////////////////////////////////////////////////////////////////////////////////////////////////////////////////////////////////////////////////////////////////////////////////////////////////////////////////////////////////////////////////////////////////////////////////////////////////////////////////////////////////////////////////////////////////////////////////////////////////////////////////////////////////////////////////////////////////////////////////////////////////////////////////////////////////////////////////////////////////////////////////////////////////////////////////////////////////////////////////////////////////////////////////////////////////////////////////////////////////////////////////////////////////////////////////////////////////////////////////////////////////////////////////////////////////////////////////////////////////////////////////////////////////////////////////////////////////////////////////////////////////////////////////////////////////////////////////////////////////////////////////////////////////////////////////////////////////////////////////////////////////////////////////////////////////////////////////////////////////////////////////////////////////////////////////////////////////////////////////////////////////////////////////////////////////////////////////////////////////////////////////////////////////////////////////////////////////////////////////////////////////////////////////////////////////////////////////////////////////////////////////////////////////////////////////////////////////////////////////////////////////////////////////////////////////////////////////////////////////////////////////////////////////////////////////////////////////////////////////////////////////////////////////////////////////////////////////////////////////////////////////////////////////////////////////////////////////////////////////////////////////////////////////////////////////////////////////////////////////////////////////////////////////////////////////////////////////////////////////////////////////////////////////////////////////////////////";
+var v10816 = v10817 + "/////////////////////////////////////////////////////////////////////////////////////////////////////////////////////////////////////////////////////////////////////////////////////////////////////////////////////////////////////////////////////////////////////////////////////////////////////////////////////////////////////////////////////////////////////////////////////////////////////////////////////////////////////////////////////////////////////////////////////////////////////////////////////////////////////////////////////////////////////////////////////////////////////////////////////////////////////////////////////////////////////////////////////////////////////////////////////////////////////////////////////////////////////////////////////////////////////////////////////////////////////////////////////////////////////////////////////////////////////////////////////////////////////////////////////////////////////////////////////////////////////////////////////////////////////////////////////////////////////////////////////////////////////////////////////////////////////////////////////////////////////////////////////////////////////////////////////////////////////////////////////////////////////////////////////////////////////////////////////////////////////////////////////////wHRe7o4A1pXewYHoE8K9XqgTwQK4JF6Hx8f5g9X8JNnTixGLXsfHx/mD1/wgoNne5LRxADB8JGiVy+mX3qhsyJ6L6ZfeqCzItF7ujgDWld7BgegTwr1eqBPBArgkXofHx/mD1fwk2dOLEYtex8fH+YPX/CCg2d7ktHEAMHwkaJXL6ZfeqGzInovpl96oLMi0Xu6OANaV3sGB6BPCvV6oE8ECuCReh8fH+YPV/CTZ04sRi17Hx8f5g9f8IKDZ3uS0cQAwfCRolcvpl96obMiei+mX3qgsyLRe7o4A1pXewYHoE8K9XqgTwQK4JF6Hx8f5g9X8JNnTixGLXsfHx/mD1/wgoNne5LRxADB8JGiVy+mX3qhsyJ6L6ZfeqCzItF7ujgDWld7BgegTwr1eqBPBArgkXofHx/mD1fwk2dOLEYtex8fH+YPX/CCg2d7ktHEAMHwkaJXL6ZfeqGzInovpl96oLMi0Xu6OANaV3sGB6BPCvV6oE8ECuCReh8fH+YPV/CTZ04sRi17Hx8f5g9f8IKDZ3uS0cQAwfCRolcvpl96obMiei+mX3qgsyLRe7o4A1pXewYHoE8K9XqgTwQK4JF6Hx8f5g9X8JNnTixGLXsfHx/mD1/wgoNne5LRxADB8JGiVy+mX3qhsyJ6L6ZfeqCzItF7ujgDWld7BgegTwr1eqBPBArgkXofHx/mD1fwk2dOLEYtex8fH+YPX/CCg2d7ktHEAMHwkaJXL6ZfeqGzInovpl96oLMi0Xu6OANaV3sGB6BPCvV6oE8ECuCReh8fH+YPV/CTZ04sRi17Hx8f5g9f8IKDZ3uS0cQAwfCRolcvpl96obMiei+mX3qgsyLRe7o4A1pXewYHoE8K9XqgTwQK4JF6Hx8f5g9X8JNnTixGLXsfHx/mD1/wgoNne5LRxADB8JGiVy+mX3qhsyJ6L6ZfeqCzItF7ujgDWld7BgegTwr1eqBPBArgkXofHx/mD1fwk2dOLEYtex8fH+YPX/CCg2d7ktHEAMHwkaJXL6ZfeqGzInovpl96oLMi0Xu6OANaV3sGB6BPCvV6oE8ECuCReh8fH+YPV/CTZ04sRi17Hx8f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";
+var v10815 = v10816 + "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";
+var v10814 = v10815 + "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DYO4MAWTgnEsLA2DuDAFk4JxLCwNg7gwBZOCcSwsDYO4MAWTgnEsLA2DuDAFk4JxLCwNg7gwBZOCcSwsDYO4MAWTgnEsLA2DuDAFk4JxLCwNg7gwBZOCcSwsDYO4MAWTgnEsLA2DuDAFk4JxLCwNg7gwBZOCcSwsDYO4MAWTgnEsLA2DuDAFk4JxLCwNg7gwBZOCcSwsDYO4MAWTgnEsLA2DuDAFk4JxLCwNg7gwBZOCcSwsDYO4MAWTgnEsLA2DuDAFk4JxLCwNg7gwBZOCcSwsDYO4MAWTgnEsLA2DuDAFk4JxLCwNg7gwBZOCcSwsDYO4MAWTgnEsLA2DuDAFk4JxLCwNg7gwBZOCcSwsDYO4MAWTgnEsLA2DuDAFk4JxLCwNg7gwBZOCcSwsDYO4MAWTgnEsLA2DuDAFk4JxLCwNg7gwBZOCcSwsDYO4MAWTgnEsLA2DuDAFk4JxLCwNg7gwBZOCcSwsDYO4MAWTgnEsLA2DuDAFk4JxLCwNg7gwBZOCcSwsDYO4MAWTgnEsLA2DuDAFk4JxLCwNg7gwBZOCcSwsDYO4MAWTgnEsLA2DuDAFk4JxLCwNg7gwBZOCcSwsDYO4MAWTgnEsLA2DuDAFk4JxLCwNg7gwBZOCcSwsDYO4MAWTgnEsLA2DuDAFk4JxLCwNg7gwBZOCcSwsDYO4MAWTgnEsLA2DuDAFk4JxLCwNg7gwBZOCcSwsDYO4MAWTgnEsLA2DuDAFk4JxLCwNg7gwBZOCcSwsDYO4MAWTgnEsLA2DuDAFk4JxLCwNg7gwBZOCcSwsDYO4MAWTgnEsLA2DuDAFk4JxLCwNg7gwBZOCcSwsDYO4MAWTgnEsLA2DuDAFk4JxLCwNg7gwBZOCcSwsDYO4MAWTgnEsLA2DuDAFk4JxLCwNg7gwBZOCcSwsDYO4MAWTgnEsLA2DuDAFk4JxLCwNg7gwBZOCcSwsDYO4MAWTgnEsLA2DuDAFk4JxLCwNg7gwBZOCcSwsDYO4MAWTgnEsLA2DuDAFk4JxLCwNg7gwBZOCcSwsDYO4MAWTgnEsLA2DuDAFk4JxLCwNg7gwBZOCcSwsDYO4MAWTgnEsLA2DuDAFk4JxLCwNg7gwBZOCcSwsDYO4MAWTgnEsLA2DuDAFk4JxLCwNg7gwBZOCcSwsDYO4MAWTgnEsLA2DuDAFk4JxLCwNg7gwBZOCcSwsDYO4MAWTgnEsLA2DuDAFk4JxLCwNg7gwBZOCcSwsDYO4MAWTgnEsLA2DuDAFk4JxLCwNg7gwBZOCcSwsDYO4MAWTgnEsLA2DuDAFk4JxLCwNg7gwBZOCcSwsDYO4MAWTgnEsLA2DuDAFk4JxLCwNyXEsLIO4MAOTgg1xLCyDuDADk4INcSwsg7gwA5OCDXEsLIO4MAOT";
+var v10813 = v10814 + "gg1xLCyDuDADk4INcSwsg7gwA5OCDXEsLIO4MAOTgg1xLCyDuDADk4INcSwsg7gwA5OCDXEsLIO4MAOTgg1xLCyDuDADk4INcSwsg7gwA5OCDXEsLIO4MAOTgg1xLCyDuDADk4INcSwsg7gwA5OCDXEsLIO4MAOTgg1xLCyDuDADk4INcSwsg7gwA5OCDXEsLIO4MAOTgg1xLCyDuDADk4INcSwsg7gwA5OCDXEsLIO4MAOTgg1xLCyDuDADk4INcSwsg7gwA5OCDXEsLIO4MAOTgg1xLCyDuDADk4INcSwsg7gwA5OCDXEsLIO4MAOTgg1xLCyDuDADk4INcSwsg7gwA5OCDXEsLIO4MAOTgg1xLCyDuDADk4INcSwsg7gwA5OCDXEsLIO4MAOTgg1xLCyDuDADk4INcSwsg7gwA5OCDXEsLIO4MAOTgg1xLCyDuDADk4INcSwsg7gwA5OCDXEsLIO4MAOTgg1xLCyDuDADk4INcSwsg7gwA5OCDXEsLIO4MAOTgg1xLCyDuDADk4INcSwsg7gwA5OCDXEsLIO4MAOTgg1xLCyDuDADk4INcSwsg7gwA5OCDXEsLIO4MAOTgg1xLCyDuDADk4INcSwsg7gwA5OCDXEsLIO4MAOTgg1xLCyDuDADk4INcSwsg7gwA5OCDXEsLIO4MAOTgg1xLCyDuDADk4INcSwsg7gwA5OCDXEsLIO4MAOTgg1xLCyDuDADk4INcSwsg7gwA5OCDXEsLIO4MAOTgg1xLCyDuDADk4INcSwsg7gwA5OCDXEsLIO4MAOTgg1xLCyDuDADk4INcSwsg7gwA5OCDXEsLIO4MAOTgg1xLCyDuDADk4INcSwsg7gwA5OCDXEsLIO4MAOTgg1xLCyDuDADk4INcSwsg7gwA5OCDXEsLIO4MAOTgg1xLCyDuDADk4INcSwsg7gwA5OCDXEsLIO4MAOTgg1xLCyDuDADk4INcSwsg7gwA5OCDXEsLIO4MAOTgg1xLCyDuDADk4INcSwsg7gwA5OCDXEsLIO4MAOTgg1xLCyDuDADk4INcSwsg7gwA5OCDXEsLIO4MAOTgg1xLCyDuDADk4INcSwsg7gwA5OCDXEsLIO4MAOTgg1xLCyDuDADk4INcSwsg7gwA5OCDXEsLIO4MAOTgg1xLCyDuDADk4INcSwsg7gwA5OCDXEsLIO4MAOTgg1xLCyDuDADk4INcSwsg7gwA5OCDXEsLIO4MAOTgg1xLCyDuDADk4INcSwsg7gwA5OCDXEsLIO4MAOTgg1xLCyDuDADk4INcSwsg7gwA5OCDXEsLIO4MAOTgg1xLCyDuDADk4INcSwsg7gwA5OCDXEsLIO4MAOTgg1xLCyDuDADk4INcSwsg7gwA5OCDXEsLIO4MAOTgg1xLCyDuDADk4INcSwsg7gwA5OCDXEsLIO4MAOTgg1xLCyDuDADk4INcSwsg7gwA5OCDXEsLIO4MAOTgg1xLCyDuDADk4INcSwsg7gwA5OCDXEsLIO4MAOTgg1xLCyDuDADk4INcSwsg7gwA5OCDcmDuDAFk4JxLCwMg7gwBZOCcSwsDIO4MAWTgnEsLAyDuDAFk4JxLCwMg7gwBZOCcSwsDIO4MAWTgnEsLAyDuDAFk4JxLCwMg7gwBZOCcSwsDIO4MAWTgnEsLAyDuDAFk4JxLCwMg7gwBZOCcSwsDIO4MAWTgnEsLAyDuDAFk4JxLCwMg7gwBZOCcSwsDIO4MAWTgnEsLAyDuDAFk4JxLCwMg7gwBZOCcSwsDIO4MAWTgnEsLAyDuDAFk4JxLCwMg7gwBZOCcSwsDIO4MAWTgnEsLAyDuDAFk4JxLCwMg7gwBZOCcSwsDIO4MAWTgnEsLAyDuDAFk4JxLCwMg7gwBZOCcSwsDIO4MAWTgnEsLAyDuDAFk4JxLCwMg7gwBZOCcSwsDIO4MAWTgnEsLAyDuDAFk4JxLCwMg7gwBZOCcSwsDIO4MAWTgnEsLAyDuDAFk4JxLCwMg7gwBZOCcSwsDIO4MAWTgnEsLAyDuDAFk4JxLCwMg7gwBZOCcSwsDIO4MAWTgnEsLAyDuDAFk4JxLCwMg7gwBZOCcSwsDIO4MAWTgnEsLAyDuDAFk4JxLCwMg7gwBZOCcSwsDIO4MAWTgnEsLAyDuDAFk4JxLCwMg7gwBZOCcSwsDIO4MAWTgnEsLAyDuDAFk4JxLCwMg7gwBZOCcSwsDIO4MAWTgnEsLAyDuDAFk4JxLCwMg7gwBZOCcSwsDIO4MAWTgnEsLAyDuDAFk4JxLCwMg7gwBZOCcSwsDIO4MAWTgnEsLAyDuDAFk4JxLCwMg7gwBZOCcSwsDIO4MAWTgnEsLAyDuDAFk4JxLCwMg7gwBZOCcSwsDIO4MAWTgnEsLAyDuDAFk4JxLCwMg7gwBZOCcSwsDIO4MAWTgnEsLAyDuDAFk4JxLCwMg7gwBZOCcSwsDIO4MAWTgnEsLAyDuDAFk4JxLCwMg7gwBZOCcSwsDIO4MAWTgnEsLAyDuDAFk4JxLCwMg7gwBZOCcSwsDIO4MAWTgnEsLAyDuDAFk4JxLCwMg7gwBZOCcSwsDIO4MAWTgnEsLAyDuDAFk4JxLCwMg7gwBZOCcSwsDIO4MAWTgnEsLAyDuDAFk4JxLCwMg7gwBZOCcSwsDIO4MAWTgnEsLAyDuDAFk4JxLCwMg7gwBZOCcSwsDIO4MAWTgnEsLAyDuDAFk4JxLCwMg7gwBZOCcSwsDIO4MAWTgnEsLAyDuDAFk4JxLCwMg7gwBZOCcSwsDIO4MAWTgnEsLAyDuDAFk4JxLCwMg7gwBZOCcSwsDIO4MAWTgnEsLAyDuDAFk4JxLCwMg7gwBZOCcSwsDIO4MAWTgnEsLAyDuDAFk4JxLCwMg7gwBZOCcSwsDIO4MAWTgnEsLAyDuDAFk4JxLCwMg7gwBZOCcSwsDIO4MAWTgnEsLAyDuDAFk4JxLCwMg7gwBZOCcSwsDIO4MAWTgnEsLAyDuDAFk4JxLCwMg7gwBZOCcSwsDIO4MAWTgnEsLAyDuDAFk4JxLCwMg7gwBZOCcSwsDIO4MAWTgnEsLAyDuDAFk4JxLCwMg7gwBZOCcSwsDIO4MAWTgnEsLAyDuDAFk4JxLCwMg7gwBZOCcSwsDIO4MAWTgnEsLAyDuDAFk4JxLCwMg7gwBZOCcSwsDIO4MAWTgnEsLAyDuDAFk4JxLCwMg7gwBZOCcSwsDIO4MAWTgnEsLAyDuDAFk4JxLCwMg7gwBZOCcSwsDMlxLCyDuDADk4IMcSwsg7gwA5OCDHEsLIO4MAOTggxxLCyDuDADk4IMcSwsg7gwA5OCDHEsLIO4MAOTggxxLCyDuDADk4IMcSwsg7gwA5OCDHEsLIO4MAOTggxxLCyDuDADk4IMcSwsg7gwA5OCDHEsLIO4MAOTggxxLCyDuDADk4IMcSwsg7gwA5OCDHEsLIO4MAOTggxxLCyDuDADk4IMcSwsg7gwA5OCDHEsLIO4MAOTggxxLCyDuDADk4IMcSwsg7gwA5OCDHEsLIO4MAOTggxxLCyDuDADk4IMcSwsg7gwA5OCDHEsLIO4MAOTggxxLCyDuDADk4IMcSwsg7gwA5OCDHEsLIO4MAOTggxxLCyDuDADk4IMcSwsg7gwA5OCDHEsLIO4MAOTggxxLCyDuDADk4IMcSwsg7gwA5OCDHEsLIO4MAOTggxxLCyDuDADk4IMcSwsg7gwA5OCDHEsLIO4MAOTggxxLCyDuDADk4IMcSwsg7gwA5OCDHEsLIO4MAOTggxxLCyDuDADk4IMcSwsg7gwA5OCDHEsLIO4MAOTggxxLCyDuDADk4IMcSwsg7gwA5OCDHEsLIO4MAOTggxxLCyDuDADk4IMcSwsg7gwA5OCDHEsLIO4MAOTggxxLCyDuDADk4IMcSwsg7gwA5OCDHEsLIO4MAOTggxxLCyDuDADk4IMcSwsg7gwA5OCDHEsLIO4MAOTggxxLCyDuDADk4IMcSwsg7gwA5OCDHEsLIO4MAOTggxxLCyDuDADk4IMcSwsg7gwA5OCDHEsLIO4MAOTggxxLCyDuDADk4IMcSwsg7gwA5OCDHEsLIO4MAOTggxxLCyDuDADk4IMcSwsg7gwA5OCDHEsLIO4MAOTggxxLCyDuDADk4IMcSwsg7gwA5OCDHEsLIO4MAOTggxxLCyDuDADk4IMcSwsg7gwA5OCDHEsLIO4MAOTggxxLCyDuDADk4IMcSwsg7gwA5OCDHEsLIO4MAOTggxxLCyDuDADk4IMcSwsg7gwA5OCDHEsLIO4MAOTggxxLCyDuDADk4IMcSwsg7gwA5OCDHEsLIO4MAOTggxxLCyDuDADk4IMcSwsg7gwA5OCDHEsLIO4MAOTggxxLCyDuDADk4IMcSwsg7gwA5OCDHEsLIO4MAOTggxxLCyDuDADk4IMcSwsg7gwA5OCDHEsLIO4MAOTggxxLCyDuDADk4IMcSwsg7gwA5OCDHEsLIO4MAOTggxxLCyDuDADk4IMcSwsg7gwA5OCDHEsLIO4MAOTggxxLCyDuDADk4IMcSwsg7gwA5OCDHEsLIO4MAOTggxxLCyDuDADk4IMcSwsg7gwA5OCDHEsLIO4MAOTggxxLCyDuDADk4IMcSwsg7gwA5OCDHEsLIO4MAOTggxxLCyDuDADk4IMcSwsg7gwA5OCDHEsLIO4MAOTggxxLCyDuDADk4IMcSwsg7gwA5OCDHEsLIO4MAOTggxxLCyDuDADk4IMcSwsg7gwA5OCDHEsLIO4MAOTggxxLCyDuDADk4IMcSwsg7gwA5OCDHEsLIO4MAOTggxxLCyDuDADk4IMcSwsg7gwA5OCDHEsLIO4MAOTggzJxg+Hh+oawXovpl96obMiei+mX3qgszIkeRgAInAtJCJwLSQicC0kInAtJCJwLSQicC0kInAtJCJwLSQicC0kInAtJCJwLSQicC0kInAtJCJwLSQW/8n/////////////////////////";
+var v10812 = v10813 + "//////////////////////////////////////////////////////////////////////////////////////////////////////////////////////////////////////////////////////////////////////////////////////////////////////////////////////////////////////////////////////////////////////////////////////////////////////////////////////////////////////////////////////////////////////////////////////////////////////////////////////////////////////////////////////////////////////////////////////////////////////////////////////////////////////////////////////////////////////////////////////////////////////////////////////////////////////////////////////////////////////////////////////////////////////////////////////////////////////////////////////////////////////////////////////////+qqlVVqqpVVaqqVVWqqlVVqqpVVaqqVVWqqlVVqqpVVaqqVVWqqlVVqqpVVaqqVVWqqlVVqqpVVaqqVVWqqlVVqqpVVaqqVVWqqlVVqqpVVaqqVVWqqlVVqqpVVaqqVVWqqlVVqqpVVaqqVVWqqlVVqqpVVaqqVVWqqlVVqqpVVaqqVVWqqlVVqqpVVaqqVVWqqlVVqqpVVaqqVVWqqlVVqqpVVaqqVVWqqlVVqqpVVaqqVVWqqlVVqqpVVaqqVVWqqlVVqqpVVaqqVVWqqlVVqqpVVaqqVVWqqlVVqqpVVaqqVVWqqlVVqqpVVaqqVVWqqlVVqqpVVaqqVVWqqlVVACEzDDPAABIAEjPAMwwAIQAhMwwzwAASABIzwDMMACEAITMMM8AAEgASM8AzDAAhACEzDDPAABIAEjPAMwwAIQAhMwwzwAAS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cixwCXsicAkicAkicAkicAkicAkicAkicAkicAkicAkicAksLCXLZcgkaMnJycnJ4SJwCSJwCSJwCSJwCSJwCSJwCXIscAl7InAJInAJInAJInAJInAJInAJInAJInAJInAJLCwly2XIJGjJycnJyeEicAkicAkicAkicAkicAkicAkicAlyLHAJeyJwCSJwCSJwCSJwCSJwCSJwCSJwCSJwCSwsJctlyCRoycnJycnhInAJInAJInAJInAJInAJInAJInAJInAJcixwCXsicAkicAkicAkicAkicAkicAkicAksLCXLZcgkaMnJycnJ4SJwCSJwCSJwCSJwCSJwCSJwCSJwCSJwCSJwCXIscAl7InAJInAJInAJInAJInAJInAJLCwly2XIJGjJycnJyeEicAkicAkicAkicAkicAkicAkicAkicAkicAkicAlyLHAJeyJwCSJwCSJwCSJwCSJwCSwsJctlyCRoycnJycnhInAJInAJInAJInAJInAJInAJInAJInAJInAJInAJInAJcixwCXsicAkicAkicAkicAksLCXLZcgkaMnJycnJ4SJwCSJwCSJwCSJwCSJwCSJwCSJwCSJwCSJwCSJwCSJwCSJwCXIscAl7InAJInAJInAJLCwly2XIJGjJycnJyeEicAkicAkicAkicAkicAkicAkicAkicAkicAkicAkicAkicAkicAlyLHAJeyJwCSJwCSwsJctlyCRoycnJycnhInAJInAJInAJInAJInAJInAJInAJInAJInAJInAJInAJInAJInAJInAJcixwCXsicAksLCXLZcgkaMnJycnJ4SJwCSJwCSJwCSJwCSJwCSJwCSJwCSJwCSJwCSJwCSJwCSJwCSJwCSJwCSJwCXIscAl7LCwly2XIJGjJycnJydE+t5LI4IXmB8RSRPCFHx8focjlzTJE4XkicCwicCwicCwicCwicCwicCwicCwicCzJ+ABUXWhHeZAfyx1nATNZCfCCMQCv/qAoAzEAvwH/AOlHPgeQVF1HDjOvyxkwAYAfyxkwAYAfyxkwAYAfyxkwAYAfyxkwAYAfyxkwAYAfyxkwAYAfyxkwAYAfyxlHIbRXCeViaz7/AQ8Ayfoay2/6G8uFZ/4UIAU+/y0YBtbsIAU8LOoby3zqGsvNr2AhlEbNyhDwpMagV/Cjxn9f1SGXRs3KEPCkxqBn8KPGf2/RzTEcKAsf2hhZH9oYWcPERny6OAViV31rX+XNmkbh1Xu90sxFe9ZA4Ih9k0884Il6lF/ghjzgij2RMGvgh3nLPy88g+CF8IIBDwBvVHzWQBfLN6GFZ3rmBxdvGAjwij3KAETgivCJX/CGV/CFGASCHSgLy38g+Ffwh4LghR3NYkUY2nvgifCIg1/l";
+var v10811 = v10812 + "5gf2CG8mB1Z7aB8fHx/LHR/LHeYDxkBnrx7/6XnghpPgh3vLPy88geCF8IIBDwBvVHzWQBfLN6GFZ3rmBxdv8Ilf8IZX8IXLfyAHV/CHgh0YAYLghc1iRfCKPcoAROCKGN171kDgiHuVTzzgiXqUX+CGPOCKPZEwa+CHecs/LzyD4IXwggEPAG9UfNZAF8s3oYVneuYHF28YCPCKPcoAROCK8Ilf8IZX8IUYBIIdKAvLfyD4V/CHguCFHc0qRhjae+CJ8IiTX+XmB/YQbyYHVntoHx8fH8sdH8sd5gPGQGc+/1jpeeCGk+CHe8s/LzyB4IXwggEPAG9UfNZAF8s3oYVneuYHF2/wiV/whlfwhct/IAdX8IeCHRgBguCFzSpG8Io9ygBE4IoY3UYAALoAAHzWQMhPHx8f5h9HeeYHKAsE/gUwBvUhylblBT4PkCHJRoRn5fCCZ69vyfCCZ69vIiIiIiIiIiIiIiIiIiIiIiIiIiIiIiIiIiIiIiIiIiIiIiIiIiIiIiIiIiIiIiIiIiIiIiIiIiIiIiIiIiIiIiIiIiIiIiIiIiIiIiIiIiIiIiIiIiIiIiIiIiIiIiIiIiIiIiIiIiIiIiIiIiIiIiIiIiIiIiIiIiIiIiIiIiIiIiIiIiIiIiIiIiIiIiIiIiIiIiIiIiIiIiIiIiIiIiIiIiIiIiIiIiIiIiIiIiIiIiIiIiIiIiIiIiIiIiIiIiIiIiIiIiIiIiIiIiIiIiIiIiIiIiIiIiIiIiIiIiIiIiIiIiIiIiIiIiIiIiIiIiIiIiIiIiIiIiIiIiIiIiIiIiIiIiIiIiIiIiIiIiIiIiIiIiIiIiIiIiIiIiIiIiIiIiIiIiIiIiIiIiIiIiIiIiIiIiIiIiIiIiIiIiIiIiIiIiIiIiIiIiIiIiIiIiIiIiIiIiIiIiIiIiIiIiIiIiIiIiIiIiIiIiIiIiIiIiIiIiIiIiIiIiIiIiIiIiIiIiIiIiIiIiIiIiIiIiIiIiIiIiIiIiIiIiIiIiIiIiIiIiIiIiIiIiIiIiIiIiIiIiIiIiIiIiIiIiIiIiIiIiIiIiIiIiIiIiIiIiIiIiIiIiIiIiIiIiIiIiIiIiIiIiIiIiIiIiIiIiIiIiIiIiIiIiIiIiIiIiIiIiIiIiIiIiIiIiIiIiIiIiIiIiIiIiIiIiIiIiIiIiIiIiIiIiIiIiIiIiIiIiIiIiIiIiIiIiIiIiIiIiIiIiIiIiIiIiIiIiIiIiIiIiIiIiIiIiIiIiIiIiIiIiIiIiIiIiIiIiIiIiIiIiIiIiIiIiIiIiIiIiIiIiIiIiIiIiIiIiIiIiIiIiIiIiIiIiIiIiIiIiIiIiIiIiIiIiIiIiIiIiIiIiIiIiIiIiIiIiIiIiIiIiIiIiIiIiIiIiIiIiIiIiIiIiIiIiIiIiIiIiIiIiIiIiIiIiIiIiIiIiIiIiIiIiIiIiIiIiIiIiIiIiIiIiIiIiIiIiIiIiIiIiIiIiIiIiIiIiIiIiIiIiIiIiIiIiIiIiIiIiIiIiIiIiIiIiIiIiIiIiIiIiIiIiIiIiIiIiIiIiIiIiIiIiIiIiIiIiIiIiIiIiIiIiIiIiIiIiIiIiIiIiIiIiIiIiIiIiIiIiIiIiIiIiIiIiIiIiIiIiIiIiIiIiIiIiIiIiIiIiIiIiIiIiIiIiIiIiIiIiIiIiIiIiIiIiIiIiIiIiIiIiIiIiIiIiIiIiIiIiIiIiIiIiIiIiIiIiIiIiIiIiIiIiIiIiIiIiIiIiIiIiIiIiIiIiIiIiIiIiIiIiIiIiIiIiIiIiIiIiIiIiIiIiIiIiIiIiIiIiIiIiIiIiIiIiIiIiIiIiIiIiIiIiIiIiIiIiIiIiIiIiIiIiIiIiIiIiIiIiIiIiIiIiIiIiIiIiIiIiIiIiIiIiIiIiIiIiIiIiIiIiIiIiIiIiIiIiIiIiIiIiIiIiIiIiIiIiIiIiIiIiIiIiIiIiIiIiIiIiIiIiIiIiIiIiIiIiIiIiIiIiIiIiIiIiIiIiIiIiIiIiIiIiIiIiIiIiIiIiIiIiIiIiIiIiIiIiIiIiIiIiIiIiIiIiIiIiIiIiIiIiIiIiIiIiIiIiIiIiIiIiIiIiIiIiIiIiIiIiIiIiIiIiIiIiIiIiIiIiIiIiIiIiIiIiIiIiIiIiIiIiIiIiIiIiIiIiIiIiIiIiIiIiIiIiIiIiIiIiIiIiIiIiIiIiIiIiIiIiIiIiIiIiIiIiIiIiIiIiIiIiIiIiIiIiIiIiIiIiIiIiIiIiIiIiIiIiIiIiIiIiIiIiIiIiIiIiIiIiIiIiIiIiIiIiIiIiIiIiIiIiIiIiIiIiIiIiIiIiIiIiIiIiIiIiIiIiIiIiIiIiIiIiIiIiIiIiIiIiIiIiIiIiIiIiIiIiIiIiIiIiIiIiIiIiIiIiIiIiIiIiIiIiIiIiIiIiIiIiIiIiIiIiIiIiIiIiIiIiIiIiIiIiIiIiIiIiIiIiIiIiIiIiIiIiIiIiIiIiIiIiIiIiIiIiIiIiIiIiIiIiIiIiIiIiIiIiIiIiIiIiIiIiIiIiIiIiIiIiIiIiIiIiIiIiIiIiIiIiIiIiIiIiIiIiIiIiIiIiIiIiIiIiIiIiIiIiIiIiIiIiIiIiIiIiIiIiIiIiIiIiIiIiIiIiIiIiIiIiIiIiIiIiIiIiIiIiIiIiIiIiIiIiIiIiIiIiIiIiIiIiIiIiIiIiIiIiIiIiIiIiIiIiIiIiIiIiIiIiIiIiIiIiIiIiIiIiIiIiIiIiIiIiIiIiIiIiIiIiIiIiIiIiIiIiIiIiIiIiIiIiIiIiIiIiIiIiIiIiIiIiIiIiIiIiIiIiIiIiIiIiIiIiIiIiIiIiIiIiIiIiIiIiIiIiIiIiIiIiIiIiIiIiIiIiIiIiIiIiIiIiIiIiIiIiIiIiIiIiIiIiIiIiIiIiIiIiIiIiIiIiIiIiIiIiIiIiIiIiIiIiIiIiIiIiIiIiIiIiIiIiIiIiIiIiIiIiIiIiIiIiIiIiIiIiIiIiIiIiIiIiIiIiIiIiIiIiIiIiIiIiIiIiIiIiIiIiIiIiIiIiIiIiIiIiIiIiIiIiIiIiIiIiIiIiIiIiIiIiIiIiIiIiIiIiIiIiIiIiIiIiIiIiIiIiIiIiIiIiIiIiIiIiIiIiIiIiIiIiIiIiIiIiIiIiIiIiIiIiIiIiIiIiIiIiIiIiIiIiIiIiIiIiIiIiIiIiIiIiIiIiIiIiIiIiIiIiIiIiIiIiIiIiIiIiIiIiIiIiIiIiIiIiIiIiIiIiIiIiIiIiIiIiIiIiIiIiIiIiIiIiIiIiIiIiIiIiIiIiIiIiIiIiIiIiIiIiIiIiIiIiIiIiIiIiIiIiIiIiIiIiIiIiIiIiIiIiIiIiIiIiIiIiIiIiIiIiIiIiIiIiIiIiIiIiIiIiIiIiIiIiIiIiIiIiIiIiIiIiIiIiIiIiIiIiIiIiIiIiIiIiIiIiIiIiIiIiIiIiIiIiIiIiIiIiIiIiIiIiIiIiIiIiIiIiIiIiIiIiIiIiIiIiIiIiIiIiIiIiIiIiIiIiIiIiIiIiIiIiIiIiIiIiIiIiIiIiIiIiIiIiIiIiIiIiIiIiIiIiIiIiIiIiIiIiIiIiIiIiIiIiIiIiIiIiIiIiIiIiIiIiIiIiIiIiIiIiIiIiIiIiIiIiIiIiIiIiIiIiIiIiIiIiIiIiIiIiIiIiIiIiIiIiIiIiIiIiIiIiIiIiIiIiIiIiIiIiIiIiIiIiIiIiIiIiIiIiIiIiIiIiIiIiIiIiIiIiIiIiIiIiIiIiIiIiIiIiIiIiIiIiIiIiIiIiIiIiIiIiIiIiIiIiIiIiIiIiIiIiIiIiIiIiIiIiIiIiIiIiIiIiIiIiIiIiIiIiIiIiIiIiIiIiIiIiIiIiIiIiIiIiIiIiIiIiIiIiIiIiIiIiIiIiIiIiIiIiIiIiIiIiIiIiIiIiIiIiIiIiIiIiIiIiIiIiIiIiIiIiIiIiIiIiIiIiIiIiIiIiIiIiIiIiIiIiIiIiIiIiIiIiIiIiIiIiIiIiIiIiIiIiIiIiIiIiIiIiIiIiIiIiIiIiIiIiIiIiIiIiIiIiIiIiIiIiIiIiIiIiIiIiIiIiIiIiIiIiIiIiIiIiIiIiIiIiIiIiIiIiIiIiIiIiIiIiIiIiIiIiIiIiIiIiIiIiIiIiIiIiIiIiIiIiIiIiIiIiIiIiIiIiIiIiIiIiIiIiIiIiIiIiIiIiIiIiIiIiIiIiIiIiIiIiIiIiIiIiIiIiIiIiIiIiIiIiIiIiIiIiIiIiIiIiIiIiIiIiIiIiIiIiIiIiIiIiIiIiIiIiIiIiIiIiIiIiIiIiIiIiIiIiIiIiIiIiIiIiIiIiIiIiIiIiIiIiIiIiIiIiIiIiIiIiIiIiIiIiIiIiIiIiIiIiIiIiIiIiIiIiIiIiIiIiIiIiIiIiIiIiIiIiIiIiIiIiIiIiIiIiIiIiIiIiIiIiIiIiIiIiIiIiIiIiIiIiIiIiIiIiIiIiIiIiIiIiIiIiIiIiIiIiIiIiIiIiIiIiIiIiIiIiIiIiIiIiIiIiIiIiIiIiIiIiIiIiIiIiIiIiIiIiIiIiIiIiIiIiIiIiIiIiIiIiIiIiIiIiIiIiIiIiIiIiIiIiIiIiIiIiIiIiIiIiIiIiIiIiIiIiIiIiIiIiIiIiIiIiIiIiIiIiIiIiIiIiIiIiIiIiIiIiIiIiIiIiIiIiIiIiIiIiIiIiIiIiIiIiIiIiIiIiIiIiIiIiIiIiIiIiIiIiIiIiIiIiIiIiIiIiIiIiIiIiIiIiIiIiIiIiIiIiIiIiIiIiIiIiIiIiIiIiIiIiIiIiIiIiIiIiIiIiIiIiIiIiIiIiIiIiIiIiIiIiIiIiIiIiIiIiIiIiIiIiIiIiIiIiIiIiIiIiIiIiIiIiIiIiIiIiIiIiIiIiIiIiIiIiIiIiIiIiIiIiIiIiIiIiIiIiIiIiIiIiIiIiIiIiIiIiIiIiIiIiIi";
+var v10810 = v10811 + "IiIiIiIiIiIiIiIiIiIiIiIiIiIiIiIiIiIiIiIiIiIiIiIiIiIiIiIiIiIiIiIiIiIiIiIiIiIiIiIiIiIiIiIiIiIiIiIiIiIiIiIiIiIiIiIiIiIiIiIiIiIiIiIiIiIiIiIiIiIiIiIiIiIiIiIiIiIiIiIiIiIiIiIiIiIiIiIiIiIiIiIiIiIiIiIiIiIiIiIiIiIiIiIiIiIiIiIiIiIiIiIiIiIiIiIiIiIiIiIiIiIiIiIiIiIiIiIiIiIiIiIiIiIiIiIiIiIiIiIiIiIiIiIiIiIiIiIiIiIiIiIiIiIiIiIiIiIiIiIiIiIiIiIiIiIiIiIiIiIiIiIiIiIiIiIiIiIiIiIiIiIiIiIiIiIiIiIiIiIiIiIiIiIiIiIiIiIiIiIiIiIiIiIiIiIiIiIiIiIiIiIiIiIiIiIiIiIiIiIiIiIiIiIiIiIiIiIiIiIiIiIiIiIiIiIiIiIiIiIiIiIiIiIiIiIiIiIiIiIiIiIiIiIiIiIiIiIiIiIiIiIiIiIiIiIiIiIiIiIiIiIiIiIiIiIiIiIiIiIiIiIiIiIiIiIiIiIiIiIiIiIiIiIiIiIiIiIiIiIiIiIiIiIiIiIiIiIiIiIiIiIiIiIiIiIiIiIiIiIiIiIiIiIiIiIiIiIiIiIiIiIiIiIiIiIiIiIiIiIiIiIiIiIiIiIiIiIiIiIiIiIiIiIiIiIiIiIiIiIiIiIiIiIiIiIiIiIiIiIiIiIiIiIiIiIiIiIiIiIiIiIiIiIiIiIiIiIiIiIiIiIiIiIiIiIiIiIiIiIiIiIiIiIiIiIiIiIiIiIiIiIiIiIiIiIiIiIiIiIiIiIiIiIiIiIiIiIiIiIiIiIiIiIiIiIiIiIiIiIiIiIiIiIiIiIiIiIiIiIiIiIiIiIiIiIiIiIiIiIiIiIiIiIiIsnxAQ8APcqEVz0odj0oOj0idwkidwkidwkidwkidwkidwkidwkidwkidwkidwkidwkidwkidwkidwkidwkidwksLCXLZSgCJGgidwkidwkidwkidwkidwkidwkidwkidwkidwkidwkidwkidwkidwkidwkidwkidwksLCXLZSgCJGgidwkidwkidwkidwkidwkidwkidwkidwkidwkidwkidwkidwkidwkidwkidwkidwksLCXLZSgCJGgidwkidwkidwkidwkidwkidwkidwkidwkidwkidwkidwkidwkidwkidwkidwkid8kicAkicAkicAkicAkicAkicAkicAkicAkicAkicAkicAkicAkicAkicAkicAkicAksLCUicAkicAkicAkicAkicAkicAkicAkicAkicAkicAkicAkicAkicAkicAkicAkicAksLCUicAkicAkicAkicAkicAkicAkicAkicAkicAkicAkicAkicAkicAkicAkicAkicAksLCUicAkicAkicAkicAkicAkicAkicAkicAkicAkicAkicAkicAkicAkicAkicAkicAksLCUicAkicAkicAkicAkicAkicAkicAkicAkicAkicAkicAkicAkicAkicAkicAkicAksLCUicAkicAkicAkicAkicAkicAkicAkicAkicAkicAkicAkicAkicAkicAkicAkicAksLCUicAkicAkicAkicAkicAkicAkicAkicAkicAkicAkicAkicAkicAkicAkicAkicAloyfgAVF3wgjEAr/6gKAMxAL8B/wDFxcXFxcXFxcXFxcXFxcXFxcXFxcXFxcXFxcXFxcXFxcXFxcXFxcXFxcXFxcXFxcXFxcXFxcXFxcXFxcXFxcXFxcXFxcXFxcXFxcXFxcXFxcXFxcXFxcXFxcXFxcXFxcXFxcXFxcXFxcXFxcXFxcXFxcXFxcXFxcXFxcXFxcXFxcXFxcXFxcXFxcXFxcXFxcXFxcXFxcXFxcXFxcXFxcXFxcXFxcXFxcXFxcXFxcXFxcXFxcXFxcXFxcXFxcXFxcXFxcXFxcXFxcXFxcXFxcXFxcXFxcXFxcXFxcXFxcXFxcXFxcXFxcXFxcXFxcXFxcXFxcXFxcXFxcXFxcXFxcXFxcXFxcXFxcXFxcXFxcXFxcXFxcXFxcXFxcXFxcXFxcXFxcXFxcXFxcXFxcXFxcXFxcXFxcXFxcXFxcXFxcXFxcXFxcXFxcXFxcXFxcXFxcXFxcXFxcXFxcXFxcXFxcXFxcXFxcXFxcXFxcXFxcXFxcXFxcXFxcXFxcXFxcXFxcXFxcXFxcXFxcXFxcXFxcXFxcXFxcXFxcXFxcXFxcXFxcXFxcXFxcXFxcXFxcXFxcXFxcXFxcXFxcXFxcXFxcXFxcXFxcXFxcXFxcXFxcXFxcXFxcXFxcXFxcXFxcXFxcXFxcXFxcXFxcXFxcXFxcXFxcXFxcXFxcXFxcXFxcXFxcXFxcXFxcXFxcXFxcXFxcXFxcXFxcXFxcXFxcXFxcXFxcXFxcXFxcXFxcXFxcXFxcXFxcXFxcXFxcXFxcXFxcXFxcXFxcXFxcXFxcXFxcXFxcXFxcXFxcXFxcXFxcXFxcXFxcXFxcXFxcXFxcXFxcXFxcXFxcXFxcXFxcXFxcXFxcXFxcXFxcXFxcXFxcXFxcXFxcXFxcXFxcXFxcXFxcXFxcXFxcXFxcXFxcXFxcXFxcXFxcXFxcXFxcXFxcXFxcXFxcXFxcXFxcXFxcXFxcXFxcXFxcXFxcXFxcXFxcXFxcXFxcXFxcXFxcXFxcXFxcXFxcXFxcXFxcXFxcXFxcXFxcXFxcXFxcXFxcXFxcXFxcXFxcXFxcXFxcXFxcXFxcXFxcXFxcXFxcXFxcXFxcXFxcXFxcXFxcXFxcXFxcXFxcXFxcXFxcXFxcXFxcXFxcXFxcXFxcXFxcXFxcXFxcXFxcXFxcXFxcXFxcXFxcXFxcXFxcXFxcXFxcXFxcXFxcXFxcXFxcXFxcXFxcXFxcXFxcXFxcXFxcXFxcXFxcXFxcXFxcXFxcXFxcXFxcXFxcXFxcXFxcXFxcXFxcXFxcXFxcXFxcXFxcXFxcXFxcXFxcXFxcXFxcXFxcXFxcXFxcXFxcXFxcXFxcXFxcXFxcXFxcXFxcXFxcXFxcXFxcXFxcXFxcXFxcXFxcXFxcXFxcXFxcXFxcXFxcXFxcXFxcXFxcXFxcXFxcXFxcXFxcXFxcXFxcXFxcXFxcXFxcXFxcXFxcXFxcXFxcXFxcXFxcXFxcXFxcXFxcXFxcXFxcXFxcXFxcXFxcXFxcXFxcXFxcXFxcXFxcXFxcXFxcXFxcXFxcXFxcXFxcXFxcXFxcXFxcXFxcXFxcXFxcXFxcXFxcXFxcXFxcXFxcXFxcXFxcXFxcXFxcXFxcXFxcXFxcXFxcXFxcXFxcXFxcXFxcXFxcXFxcXFxcXFxcXFxcXFxcXFxcXFxcXFxcXFxcXFxcXFxcXFxcXFxcXFxcXFxcXFxcXFxcXFxcXFxcXFxcXFxcXFxcXFxcXFxcXFxcXFxcXFxcXFxcXFxcXFxcXFxcXFxcXFxcXFxcXFxcXFxcXFxcXFxcXFxcXFxcXFxcXFxcXFxcXFxcXFxcXFxcXFxcXFxcXFxcXFxcXFxcXFxcXFxcXFxcXFxcXFxcXFxcXFxcXFxcXFxcXFxcXFxcXFxcXFxcXFxcXFxcXFxcXFxcXFxcXFxcXFxcXFxcXFxcXFxcXFxcXFxcXFxcXFxcXFxcXFxcXFxcXFxcXFxcXFxcXFxcXFxcXFxcXFxcXFxcXFxcXFxcXFxcXFxcXFxcXFxcXFxcXFxcXFxcXFxcXFxcXFxcXFxcXFxcXFxcXFxcXFxcXFxcXFxcXFxcXFxcXFxcXFxcXFxcXFxcXFxcXFxcXFxcXFxcXFxcXFxcXFxcXFxcXFxcXFxcXFxcXFxcXFxcXFxcXFxcXFxcXFxcXFxcXFxcXFxcXFxcXFxcXFxcXFxcXFxcXFxcXFxcXFxcXFxcXFxcXFxcXFxcXFxcXFxcXFxcXFxcXFxcXFxcXFxcXFxcXFxcXFxcXFxcXFxcXFxcXFxcXFxcXFxcXFxcXFxcXFxcXFxcXFxcXFxcXFxcXFxcXFxcXFxcXFxcXFxcXFxcXFxcXFxcXFxcXFxcXFxcXFxcXFxcXFxcXFxcXFxcXFxcXFxcXFxcXFxcXFxcXFxcXFxcXFxcXFxcXFxcXFxcXFxcXFxcXFxcXFxcXFxcXFxcXFxcXFxcXFxcXFxcXFxcXFxcXFxcXFxcXFxcXFxcXFxcXFxcXFxcXFxcXFxcXFxcXFxcXFxcXFxcXFxcXFxcXFxcXFxcXFxcXFxcXFxcXFxcVia/nJJgJ+4JovPOCYfcZAb37gl+Cbr+CZ4JzgneCePkDgn8n/////////////////////////////////////////////////////////////////////////////////////////////////////////////////////////////////////////////////////////////////////////////////////////////////////////////////////////////////////////////////////////////////////////////////////////////////////////////////////////////////////////////////////////////////////////////////////////////////////////////////////////////////////////////////////////////////////////////////////////////////////////////////////////////////////////////////////////////////////////////////////////////////////////////////////////////////////////////////////////////////////////";
+var v10809 = v10810 + "////////////////////////////////////////////////////////////////////////////////////////////////////////////////////////////////////////////////////////////////////////////////////////////////////////////////////////////////////////////////////////////////////////////////////////////////////////////////////////////////////////////////////////////////////////////////////////////////////////////////////////////////////////////////////////////////////////////////////////////////////////////////////////////////////////////////////////////////////////////////////////////////////////////////////////////////////////////////////////////////////////////////////////////////////////////////////////////////////////////////////////////////////////////////////////////////////////////////////////////////////////////////////////////////////////////////////////////////////////////////////////////////////////////////////////////////////////////////////////////////////////////////////////////////////////////////////////////////////////////////////////////////////////////////////////////////////////////////////////////////////////////////////////////////////////////////////////////////////////////////////////////////////////////////////////////////////////////////////////////////////////////////////////////////////////////////////////////////////////////////////////////////////////////////////////////////////////////////////////////////////////////////////////////////////////////////////////////////////////////////////////////////////////////////////////////////////////////////////////////////////////////////////////////////////////////////////////////////////////////////////////////////////////////////////////////////////////////////////////////////////////////////////////////////////////////////////////////////////////////////////////////////////////////////////////////////////////////////////////////////////////////////////////////////////////////////////////////////////////////////////////////////////////////////////////////////////////////////////////////////////////////////////////////////////////////////////////////////////////////////////////////////////////////////////////////////////////////////////////////////////////////////////////////////////////////////////////////////////////////////////////////////////////////////////////////////////////////////////////////////////////////////////////////////////////////////////////////////////////////////////////////////////////////////////////////////////////////////////////////////////////////////////////////////////////////////////////////////////////////////////////////////////////////////////////////////////////////////////////////////////////////////////////////////////////////////////////////////////////////////////////////////////////////////////////////////////////////////////////////////////////////////////////////////////////////////////////////////////////////////////////////////////////////////////////////////////////////////////////////////////////////////////////////////////////////////////////////////////////////////////////////////////////////////////////////////////////////////////////////////////////////////////////////////////////////////////////////////////////////////////////////////////////////////////////////////////////////////////////////////////////////////////////////////////////////////////////////////////////////////////////////////////////////////////////////////////////////////////////////////////////////////////////////////////////////////////////////////////////////////////////////////////////////////////////////////////////////////////////////////////////////////////////////////////////////////////////////////////////////////////////////////////////////////////////////////////////////////////////////////////////////////////////////////////////////////////////////////////////////////////////////////////////////////////////////////////////////////////////////////////////////////////////////////////////////////////////////////////////////////////////////////////////////////////////////////////////////////////////////////////////////////////////////////////////////////////////////////////////////////////////////////////////////////////////////////////////////////////////////////////////////////////////////////////////////////////////////////////////////////////////////////////////////////////////////////////////////////////////////////////////////////////////////////////////////////////////////////////////////////////////////////////////////////////////////////////////////////////////////////////////////////////////////////////////////////////////////////////////////////////////////////////////////////////////////////////////////////////////////////////////////////////////////////////////////////////////////////////////////////////////////////////////////////////////////////////////////////////////////////////////////////////////////////////////";
+var v10808 = v10809 + "////////////////////////////////////////////////////////////////////////////////////////////////////////////////////////////////////////////////////////////////////////////////////////////////////////////////////////////////////////////////////////////////////////////////////////////////////////////////////////////////////////////////////////////////////////////////////////////////////////////////////////////////////////////////////////////////////////////////////////////////////////////////////////////////////////////////////////////////////////////////////////////////////////////////////////////////////////////////////////////////////////////////////////////////////////////////////////////////////////////////////////////////////////////////////////////////////////////////////////////////////////////////////////////////////////////////////////////////////////////////////////////////////////////////////////////////////////////////////////////////////////////////////////////////////////////////////////////////////////////////////////////////////////////////////////////////////////////////////////////////////////////////////////////////////////////////////////////////////////////////////////////////////////////////////////////////////////////////////////////////////////////////////////////////////////////////////////////////////////////////////////////////////////////////////////////////////////////////////////////////////////////////////////////////////////////////////////////////////////////////////////////////////////////////////////////////////////////////////////////////////////////////////////////////////////////////////////////////////////////////////////////////////////////////////////////////////////////////////////////////////////////////////////////////////////////////////////////////////////////////////////////////////////////////////////////////////////////////////////////////////////////////////////////////////////////////////////////////////////////////////////////////////////////////////////////////////////////////////////////////////////////////////////////////////////////////////////////////////////////////////////////////////////////////////////////////////////////////////////////////////////////////////////////////////////////////////////////////////////////////////////////////////////////////////////////////////////////////////////////////////////////////////////////////////////////////////////////////////////////////////////////////////////////////////////////////////////////////////////////////////////////////////////////////////////////////////////////////////////////////////////////////////////////////////////////////////////////////////////////////////////////////////////////////////////////////////////////////////////////////////////////////////////////////////////////////////////////////////////////////////////////////////////////////////////////////////////////////////////////////////////////////////////////////////////////////////////////////////////////////////////////////////////////////////////////////////////////////////////////////////////////////////////////////////////////////////////////////////////////////////////////////////////////////////////////////////////////////////////////////////////////////////////////////////////////////////////////////////////////////////////////////////////////////////////////////////////////////////////////////////////////////////////////////////////////////////////////////////////////////////////////////////////////////////////////////////////////////////////////////////////////////////////////////////////////////////////////////////////////////////////////////////////////////////////////////////////////////////////////////////////////////////////////////////////////////////////////////////////////////////////////////////////////////////////////////////////////////////////////////////////////////////////////////////////////////////////////////////////////////////////////////////////////////////////////////////////////////////////////////////////////////////////////////////////////////////////////////////////////////////////////////////////////////////////////////////////////////////////////////////////////////////////////////////////////////////////////////////////////////////////////////////////////////////////////////////////////////////////////////////////////////////////////////////////////////////////////////////////////////////////////////////////////////////////////////////////////////////////////////////////////////////////////////////////////////////////////////////////////////////////////////////////////////////////////////////////////////////////////////////////////////////////////////////////////////////////////////////////////////////////////////////////////////////////////////////////////////////////////////////////////////////////////////////////////////////////////////////////////////////////////////////////////////////Aw==";
+var gameboy_rom = v10808;
 var completed = 0;
 var benchmarks = BenchmarkSuite.CountBenchmarks();
 var success = true;
 var latencyBenchmarks = ["Splay", "Mandreel"];
-var v5547;
+var v5544;
 if (typeof skipBenchmarks === "undefined") {
-  v5547 = [];
+  v5544 = [];
 } else {
-  v5547 = skipBenchmarks;
+  v5544 = skipBenchmarks;
 }
-var skipBenchmarks = v5547
+var skipBenchmarks = v5544

@@ -11,7 +11,8 @@ function isInteger(s$$2) {
   }
   return true;
 }
-function stripCharsInBag(s$$3, bag) {
+function stripCharsInBag(s$$3) {
+  var bag = dtCh;
   var i$$2;
   var returnString = "";
   i$$2 = 0;
@@ -23,10 +24,12 @@ function stripCharsInBag(s$$3, bag) {
   }
   return returnString;
 }
-function daysInFebruary(year$$2) {
+function daysInFebruary() {
+  var year$$2 = year;
   return year$$2 % 4 == 0 && (!(year$$2 % 100 == 0) || year$$2 % 400 == 0) ? 29 : 28;
 }
-function DaysArray(n$$1) {
+function DaysArray() {
+  var n$$1 = 12;
   var i$$3 = 1;
   for (;i$$3 <= n$$1;i$$3++) {
     this[i$$3] = 31;
@@ -40,7 +43,7 @@ function DaysArray(n$$1) {
   return this;
 }
 function isDate(dtStr) {
-  var daysInMonth = DaysArray(12);
+  var daysInMonth = DaysArray();
   var pos1 = dtStr.indexOf(dtCh);
   var pos2 = dtStr.indexOf(dtCh, pos1 + 1);
   var strMonth = dtStr.substring(0, pos1);
@@ -70,7 +73,7 @@ function isDate(dtStr) {
     alert("Please enter a valid month");
     return false;
   }
-  if (strDay.length < 1 || day < 1 || day > 31 || month == 2 && day > daysInFebruary(year) || day > daysInMonth[month]) {
+  if (strDay.length < 1 || day < 1 || day > 31 || month == 2 && day > daysInFebruary() || day > daysInMonth[month]) {
     alert("Please enter a valid day");
     return false;
   }
@@ -78,7 +81,7 @@ function isDate(dtStr) {
     alert("Please enter a valid 4 digit year between " + minYear + " and " + maxYear);
     return false;
   }
-  if (dtStr.indexOf(dtCh, pos2 + 1) != -1 || isInteger(stripCharsInBag(dtStr, dtCh)) == false) {
+  if (dtStr.indexOf(dtCh, pos2 + 1) != -1 || isInteger(stripCharsInBag(dtStr)) == false) {
     alert("Please enter a valid date");
     return false;
   }

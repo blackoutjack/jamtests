@@ -75,7 +75,7 @@ function v76(a$$136) {
   return b$$91;
 }
 function v75(a$$135) {
-  return(a$$135 & 255) << 24 | (a$$135 >> 8 & 255) << 16 | (a$$135 >> 16 & 255) << 8 | a$$135 >>> 24;
+  return (a$$135 & 255) << 24 | (a$$135 >> 8 & 255) << 16 | (a$$135 >> 16 & 255) << 8 | a$$135 >>> 24;
 }
 function v74() {
   return eb;
@@ -264,7 +264,7 @@ function v69(a$$131) {
     case 79:
     ;
     case 19:
-      return-1;
+      return -1;
     case 92:
     ;
     case 93:
@@ -363,7 +363,7 @@ function v69(a$$131) {
       return 1;
   }
   V(db);
-  return-1;
+  return -1;
 }
 function v68(a$$130, b$$88, c$$58) {
   try {
@@ -12974,7 +12974,7 @@ function v60(global, env, buffer$$8) {
   var aK = [bx, bx, bf, bx];
   var aL = [by, by];
   var aM = [bz, bz, a5, bz, a8, bz, a4, bz];
-  return{_malloc:bk, _strlen:bl, _memcpy:bn, _main:a2, _memset:bm, stackAlloc:aN, stackSave:aO, stackRestore:aP, setThrew:aQ, setTempRet0:aT, setTempRet1:aU, setTempRet2:aV, setTempRet3:aW, setTempRet4:aX, setTempRet5:aY, setTempRet6:aZ, setTempRet7:a_, setTempRet8:a$, setTempRet9:a0, dynCall_ii:bo, dynCall_vi:bp, dynCall_vii:bq, dynCall_iiii:br, dynCall_v:bs, dynCall_iii:bt};
+  return {_malloc:bk, _strlen:bl, _memcpy:bn, _main:a2, _memset:bm, stackAlloc:aN, stackSave:aO, stackRestore:aP, setThrew:aQ, setTempRet0:aT, setTempRet1:aU, setTempRet2:aV, setTempRet3:aW, setTempRet4:aX, setTempRet5:aY, setTempRet6:aZ, setTempRet7:a_, setTempRet8:a$, setTempRet9:a0, dynCall_ii:bo, dynCall_vi:bp, dynCall_vii:bq, dynCall_iiii:br, dynCall_v:bs, dynCall_iii:bt};
 }
 function v59() {
   var v4899 = window.s;
@@ -13485,7 +13485,7 @@ function v45(a$$72, b$$49, c$$36, d$$22, e$$20, f$$10, g$$6, i$$5) {
     return;
   }
   function y$$33(a$$73) {
-    return{jpg:"image/jpeg", jpeg:"image/jpeg", png:"image/png", bmp:"image/bmp", ogg:"audio/ogg", wav:"audio/wav", mp3:"audio/mpeg"}[a$$73.substr(a$$73.lastIndexOf(".") + 1)];
+    return {jpg:"image/jpeg", jpeg:"image/jpeg", png:"image/png", bmp:"image/bmp", ogg:"audio/ogg", wav:"audio/wav", mp3:"audio/mpeg"}[a$$73.substr(a$$73.lastIndexOf(".") + 1)];
   }
   function E$$2(c$$37) {
     function v32(a$$74) {
@@ -13687,7 +13687,7 @@ function v28() {
         v11383 = "function" == typeof window.prompt;
       }
       if (v11383) {
-        b$$48 = JAM.call(window.prompt, window, ["Input: "]);
+        b$$48 = window.prompt("Input: ");
         var v11384 = b$$48 === r;
         if (v11384) {
           v11384 = b$$48 = String.fromCharCode(0);
@@ -14833,7 +14833,7 @@ function ob() {
 function vb(a$$53, b$$36, c$$26) {
   a$$53 = X[a$$53];
   if (!a$$53) {
-    return-1;
+    return -1;
   }
   JAM.call(a$$53.sender, a$$53, [JAM.call(Q.subarray, Q, [b$$36, b$$36 + c$$26], JAM.policy.p1)]);
   return c$$26;
@@ -14846,12 +14846,12 @@ function wb(a$$54, b$$37, c$$27, d$$16) {
   }
   if (v9318) {
     V(bb);
-    return-1;
+    return -1;
   }
   if (a$$54.f) {
     if (a$$54.object.c) {
       V(cb);
-      return-1;
+      return -1;
     }
     var v9320 = 0 > c$$27;
     if (!v9320) {
@@ -14859,7 +14859,7 @@ function wb(a$$54, b$$37, c$$27, d$$16) {
     }
     if (v9320) {
       V(db);
-      return-1;
+      return -1;
     }
     var e$$15 = a$$54.object.a;
     var v5164 = e$$15.length < d$$16;
@@ -14880,7 +14880,7 @@ function wb(a$$54, b$$37, c$$27, d$$16) {
     return f$$6;
   }
   V(U);
-  return-1;
+  return -1;
 }
 function xb(a$$55, b$$38, c$$28) {
   var d$$17 = X[a$$55];
@@ -14895,7 +14895,7 @@ function xb(a$$55, b$$38, c$$28) {
     if (d$$17.f) {
       if (0 > c$$28) {
         V(db);
-        return-1;
+        return -1;
       }
       if (d$$17.object.b) {
         if (d$$17.object.d) {
@@ -14907,7 +14907,7 @@ function xb(a$$55, b$$38, c$$28) {
               JAM.call(v5171.d, v5171, [J[b$$38 + a$$55 | 0]]);
             } catch (e$$16) {
               V($a);
-              return-1;
+              return -1;
             }
             a$$55++;
             v5173 = a$$55 < c$$28;
@@ -14918,7 +14918,7 @@ function xb(a$$55, b$$38, c$$28) {
           return a$$55;
         }
         V(ab);
-        return-1;
+        return -1;
       }
       b$$38 = wb(a$$55, b$$38, c$$28, d$$17.position);
       var v5178 = -1 != b$$38;
@@ -14928,10 +14928,10 @@ function xb(a$$55, b$$38, c$$28) {
       return b$$38;
     }
     V(U);
-    return-1;
+    return -1;
   }
   V(bb);
-  return-1;
+  return -1;
 }
 function yb(a$$56, b$$39, c$$29, d$$18) {
   c$$29 = c$$29 * b$$39;
@@ -15597,7 +15597,7 @@ function Db(a$$63, b$$42, c$$33) {
       break;
     }
     if (0 == e$$18) {
-      return-1;
+      return -1;
     }
     if (0 == f$$8) {
       return 1;

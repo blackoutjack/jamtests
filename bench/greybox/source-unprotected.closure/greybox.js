@@ -1,12 +1,13 @@
 function insertHeader() {
   AJS.DI(tmpl_header);
 }
-function insertMenu(current_page) {
+function insertMenu() {
   function create_item(cls$$3, name$$33) {
     var item = AJS.LI({"class":cls$$3});
     AJS.ACN(item, AJS.A({href:LINKS[cls$$3]}, name$$33));
     return item;
   }
+  var current_page = "examples";
   var menu = AJS.UL({id:"menu"});
   var items = [create_item("installation", "Installation"), create_item("examples", "Examples"), create_item("nrm_usage", "Normal usage"), create_item("adv_usage", "Advance usage"), create_item("cmpr", "Compressing GreyBox"), create_item("about", "About")];
   AJS.map(items, function(item$$1) {
@@ -60,9 +61,9 @@ if (!window.AJS) {
       return v;
     } else {
       if (!v) {
-        return[];
+        return [];
       } else {
-        return[v];
+        return [v];
       }
     }
   }, forceArray:function(args) {
@@ -96,7 +97,7 @@ if (!window.AJS) {
         return i$$4;
       }
     }
-    return-1;
+    return -1;
   }, getFirst:function(list$$3) {
     if (list$$3.length > 0) {
       return list$$3[0];
@@ -468,7 +469,7 @@ if (!window.AJS) {
   }, isElementHidden:function(elm$$25) {
     return elm$$25.style.display == "none" || elm$$25.style.visibility == "hidden";
   }, isElementShown:function(elm$$26) {
-    return!AJS.isElementHidden(elm$$26);
+    return !AJS.isElementHidden(elm$$26);
   }, setStyle:function() {
     var args$$8 = AJS.flattenElmArguments(arguments);
     var value$$27 = args$$8.pop();
@@ -700,7 +701,7 @@ if (!window.AJS) {
     }
     return post_data.join("&");
   }, _reprString:function(o$$4) {
-    return('"' + o$$4.replace(/(["\\])/g, "\\$1") + '"').replace(/[\f]/g, "\\f").replace(/[\b]/g, "\\b").replace(/[\n]/g, "\\n").replace(/[\t]/g, "\\t").replace(/[\r]/g, "\\r");
+    return ('"' + o$$4.replace(/(["\\])/g, "\\$1") + '"').replace(/[\f]/g, "\\f").replace(/[\b]/g, "\\b").replace(/[\n]/g, "\\n").replace(/[\t]/g, "\\t").replace(/[\r]/g, "\\r");
   }, _reprDate:function(date$$1) {
     function leadingZero(nr) {
       if (nr < 10) {
@@ -711,7 +712,7 @@ if (!window.AJS) {
     var year$$1 = date$$1.getUTCFullYear();
     var dd = date$$1.getUTCDate();
     var mm = date$$1.getUTCMonth() + 1;
-    return'"' + year$$1 + "-" + mm + "-" + dd + "T" + leadingZero(date$$1.getUTCHours()) + ":" + leadingZero(date$$1.getUTCMinutes()) + ":" + leadingZero(date$$1.getUTCSeconds()) + '"';
+    return '"' + year$$1 + "-" + mm + "-" + dd + "T" + leadingZero(date$$1.getUTCHours()) + ":" + leadingZero(date$$1.getUTCMinutes()) + ":" + leadingZero(date$$1.getUTCSeconds()) + '"';
   }, getMousePos:function(e$$9) {
     var posx = 0;
     var posy = 0;
@@ -727,7 +728,7 @@ if (!window.AJS) {
         posy = e$$9.clientY + document.body.scrollTop + document.documentElement.scrollTop;
       }
     }
-    return{x:posx, y:posy};
+    return {x:posx, y:posy};
   }, getScrollTop:function() {
     var t;
     if (document.documentElement && document.documentElement.scrollTop) {
@@ -740,13 +741,13 @@ if (!window.AJS) {
     return t;
   }, absolutePosition:function(elm$$34) {
     if (!elm$$34) {
-      return{x:0, y:0};
+      return {x:0, y:0};
     }
     if (elm$$34.scrollLeft) {
-      return{x:elm$$34.scrollLeft, y:elm$$34.scrollTop};
+      return {x:elm$$34.scrollLeft, y:elm$$34.scrollTop};
     } else {
       if (elm$$34.clientX) {
-        return{x:elm$$34.clientX, y:elm$$34.clientY};
+        return {x:elm$$34.clientX, y:elm$$34.clientY};
       }
     }
     var posObj = {"x":elm$$34.offsetLeft, "y":elm$$34.offsetTop};
@@ -781,7 +782,7 @@ if (!window.AJS) {
         }
       }
     }
-    return{"w":win_w, "h":win_h};
+    return {"w":win_w, "h":win_h};
   }, isOverlapping:function(elm1, elm2) {
     function getSign(v$$1) {
       if (v$$1 > 0) {
@@ -1347,7 +1348,7 @@ AJS.fx.Styles = AJS.fx.Base.extend({init:function(elm$$46, options$$9) {
 AJS.fx.Transitions = {linear:function(t$$1, b, c$$1, d$$3) {
   return c$$1 * t$$1 / d$$3 + b;
 }, sineInOut:function(t$$2, b$$1, c$$2, d$$4) {
-  return-c$$2 / 2 * (Math.cos(Math.PI * t$$2 / d$$4) - 1) + b$$1;
+  return -c$$2 / 2 * (Math.cos(Math.PI * t$$2 / d$$4) - 1) + b$$1;
 }};
 script_loaded = true;
 var tmpl_header = AJS.join("", ['<div id="top"> <img src="logo.gif" alt="" /> <br />', '<span style="font-weight: bold; color: #333">A pop-up window that doesn\'t suck.</span>', "</div>"]);
@@ -1733,4 +1734,4 @@ AJS.AEV(window, "load", function() {
   AJS.preloadImages(GB_ROOT_DIR + "next.gif", GB_ROOT_DIR + "prev.gif");
 });
 insertHeader();
-insertMenu("examples")
+insertMenu()

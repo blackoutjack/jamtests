@@ -768,7 +768,7 @@ function v83(obj$$22, stopAt) {
     var v771 = obj$$22.offsetParent;
     v231 = v771 != stopAt;
   }
-  return{x:xPos, y:yPos};
+  return {x:xPos, y:yPos};
 }
 function v82() {
   var v772 = this.browserType;
@@ -780,12 +780,12 @@ function v82() {
     var v233 = v774.clientHeight;
     var v775 = document.documentElement;
     var v234 = v775.scrollTop;
-    return{windowWidth:v232, windowHeight:v233, scrollTop:v234};
+    return {windowWidth:v232, windowHeight:v233, scrollTop:v234};
   } else {
     var v235 = window.innerWidth;
     var v236 = window.innerHeight;
     var v237 = window.scrollY;
-    return{windowWidth:v235, windowHeight:v236, scrollTop:v237};
+    return {windowWidth:v235, windowHeight:v236, scrollTop:v237};
   }
   return;
 }
@@ -1300,7 +1300,7 @@ function v60(event$$2) {
     var v1168 = event$$2.targetTouches;
     var v831 = v1168[0];
     var v305 = v831.pageY;
-    return{x:v304, y:v305};
+    return {x:v304, y:v305};
   } else {
     var v832 = event$$2.pageX;
     var v1169 = !v832;
@@ -1311,7 +1311,7 @@ function v60(event$$2) {
     if (v310) {
       var v306 = event$$2.pageX;
       var v307 = event$$2.pageY;
-      return{x:v306, y:v307};
+      return {x:v306, y:v307};
     } else {
       var v1170 = event$$2.clientX;
       var v1379 = document.documentElement;
@@ -1327,7 +1327,7 @@ function v60(event$$2) {
       var v1175 = document.body;
       var v836 = v1175.clientTop;
       var v309 = v835 - v836;
-      return{x:v308, y:v309};
+      return {x:v308, y:v309};
     }
   }
   return;
@@ -2225,7 +2225,7 @@ function v42(selectorText) {
     i$$1++;
     v433 = i$$1 < len;
   }
-  return{elements:elements, attrs:attrs, separators:separators};
+  return {elements:elements, attrs:attrs, separators:separators};
 }
 function v41(obj$$16, direction$$3) {
   var sibling = obj$$16;
@@ -2988,8 +2988,10 @@ function midoriDragDrop(containerId$$1, dropCallback) {
   this.init();
   return;
 }
-function midoriAjax(callback$$29, params$$1, cache) {
-  function v20(where, what$$3, verb, headers) {
+function midoriAjax(callback$$29) {
+  function v20(where, what$$3) {
+    var verb;
+    var headers;
     var cachedValue;
     var v547 = where + "?";
     this.cacheKey = v547 + what$$3;
@@ -3105,6 +3107,8 @@ function midoriAjax(callback$$29, params$$1, cache) {
     JAM.call(thisObj$$2.callback, thisObj$$2, [params$$1]);
     return;
   }
+  var params$$1 = "";
+  var cache = true;
   var thisObj$$2 = this;
   this.cache = {};
   this.callback = callback$$29;
@@ -3202,7 +3206,7 @@ function midoriAutoComplete(vars$$7) {
     var v1016 = v1283 == "string";
     if (v1016) {
       var v1015 = this.ajaxCallback;
-      v581 = new midoriAjax(v1015, "", true);
+      v581 = new midoriAjax(v1015);
     } else {
       v581 = {};
     }

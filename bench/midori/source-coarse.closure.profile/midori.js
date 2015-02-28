@@ -235,7 +235,9 @@ function midoriDragDrop(containerId$$1, dropCallback) {
   this.dropCallback = dropCallback ? dropCallback : this.defaultDropCallback;
   this.init();
 }
-function midoriAjax(callback$$29, params$$1, cache) {
+function midoriAjax(callback$$29) {
+  var params$$1 = "";
+  var cache = true;
   var thisObj$$2 = this;
   this.cache = {};
   this.callback = callback$$29;
@@ -260,7 +262,9 @@ function midoriAjax(callback$$29, params$$1, cache) {
     }
     thisObj$$2.callback(params$$1);
   };
-  this.post = function(where, what$$3, verb, headers) {
+  this.post = function(where, what$$3) {
+    var verb;
+    var headers;
     var cachedValue;
     this.cacheKey = where + "?" + what$$3;
     if (cache && (cachedValue = this.cache[this.cacheKey]) != null) {
@@ -444,7 +448,7 @@ function midoriAutoComplete(vars$$7) {
     this.content = this.obj.value;
     this.oldContent = this.content;
     this.suggestions = [];
-    this.ajax = typeof vars$$7.fileName == "string" ? new midoriAjax(this.ajaxCallback, "", true) : {};
+    this.ajax = typeof vars$$7.fileName == "string" ? new midoriAjax(this.ajaxCallback) : {};
     if (this.browserType != "Gecko") {
       var parentNode$$2 = this.obj;
       midori.addEventListener(parentNode$$2, "keypress", function(e$$19) {
@@ -621,7 +625,7 @@ var midori = {browserType:window.opera ? "Opera" : navigator.userAgent.indexOf("
       }
     }
   }
-  return{elements:elements, attrs:attrs, separators:separators};
+  return {elements:elements, attrs:attrs, separators:separators};
 }, processAttrs:function(match, a, exprs) {
   var i$$2 = 0;
   var numA = a.length;
@@ -946,12 +950,12 @@ var midori = {browserType:window.opera ? "Opera" : navigator.userAgent.indexOf("
   return target$$28;
 }, getMousePos:function(event$$2) {
   if (event$$2.targetTouches && event$$2.targetTouches.length) {
-    return{x:event$$2.targetTouches[0].pageX, y:event$$2.targetTouches[0].pageY};
+    return {x:event$$2.targetTouches[0].pageX, y:event$$2.targetTouches[0].pageY};
   } else {
     if (event$$2.pageX || event$$2.pageY) {
-      return{x:event$$2.pageX, y:event$$2.pageY};
+      return {x:event$$2.pageX, y:event$$2.pageY};
     } else {
-      return{x:event$$2.clientX + document.documentElement.scrollLeft - document.body.clientLeft, y:event$$2.clientY + document.documentElement.scrollTop - document.body.clientTop};
+      return {x:event$$2.clientX + document.documentElement.scrollLeft - document.body.clientLeft, y:event$$2.clientY + document.documentElement.scrollTop - document.body.clientTop};
     }
   }
 }, preventBubble:function(event$$3) {
@@ -1125,9 +1129,9 @@ var midori = {browserType:window.opera ? "Opera" : navigator.userAgent.indexOf("
   }
 }, getWindowDims:function() {
   if (this.browserType == "MSIE") {
-    return{windowWidth:document.documentElement.clientWidth, windowHeight:document.documentElement.clientHeight, scrollTop:document.documentElement.scrollTop};
+    return {windowWidth:document.documentElement.clientWidth, windowHeight:document.documentElement.clientHeight, scrollTop:document.documentElement.scrollTop};
   } else {
-    return{windowWidth:window.innerWidth, windowHeight:window.innerHeight, scrollTop:window.scrollY};
+    return {windowWidth:window.innerWidth, windowHeight:window.innerHeight, scrollTop:window.scrollY};
   }
 }, getPos:function(obj$$22, stopAt) {
   var xPos = 0;
@@ -1136,7 +1140,7 @@ var midori = {browserType:window.opera ? "Opera" : navigator.userAgent.indexOf("
   for (;obj$$22.offsetParent != stopAt;) {
     xPos += obj$$22.offsetLeft, yPos += obj$$22.offsetTop - obj$$22.scrollTop, obj$$22 = obj$$22.offsetParent;
   }
-  return{x:xPos, y:yPos};
+  return {x:xPos, y:yPos};
 }, highlightRow:function(obj$$23, highlightClass, removeAll) {
   this.get("td", obj$$23).apply(function(o$$5) {
     var className$$1 = o$$5.className.split(" ");

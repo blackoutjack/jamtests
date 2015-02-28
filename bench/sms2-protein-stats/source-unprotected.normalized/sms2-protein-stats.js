@@ -1,14 +1,14 @@
 function v4() {
-  var v531 = document.forms;
-  var v458 = v531[0];
-  var v277 = v458.elements;
-  var v5 = v277[0];
+  var v528 = document.forms;
+  var v456 = v528[0];
+  var v275 = v456.elements;
+  var v5 = v275[0];
   v5.value = " ";
   return;
 }
 function v3() {
   try {
-    proteinStats(document);
+    proteinStats();
   } catch (e$$5) {
     var v6 = "The following error was encountered: " + e$$5;
     alert(v6);
@@ -16,8 +16,8 @@ function v3() {
   return;
 }
 function v2() {
-  var v278 = document.main_form;
-  var v7 = v278.main_submit;
+  var v276 = document.main_form;
+  var v7 = v276.main_submit;
   v7.focus();
   return;
 }
@@ -31,70 +31,70 @@ function addReturns(sequence) {
 function checkAlign(arrayOfTitles, arrayOfSequences) {
   var v8 = arrayOfSequences[0];
   var lengthOfAlign = v8.length;
-  var v279 = arrayOfSequences.length;
-  var v9 = v279 < 2;
+  var v277 = arrayOfSequences.length;
+  var v9 = v277 < 2;
   if (v9) {
     alert("Please enter an alignment consisting of at least two sequences.");
     return false;
   }
   var i$$1 = 0;
-  var v280 = arrayOfTitles.length;
-  var v11 = i$$1 < v280;
+  var v278 = arrayOfTitles.length;
+  var v11 = i$$1 < v278;
   for (;v11;) {
-    var v578 = arrayOfTitles[i$$1];
-    var v532 = v578.search(/\S/);
-    var v459 = v532 == -1;
-    var v534 = !v459;
-    if (v534) {
-      var v579 = arrayOfSequences[i$$1];
-      var v533 = v579.search(/\S/);
-      v459 = v533 == -1;
+    var v575 = arrayOfTitles[i$$1];
+    var v529 = v575.search(/\S/);
+    var v457 = v529 == -1;
+    var v531 = !v457;
+    if (v531) {
+      var v576 = arrayOfSequences[i$$1];
+      var v530 = v576.search(/\S/);
+      v457 = v530 == -1;
     }
-    var v281 = v459;
-    var v461 = !v281;
-    if (v461) {
-      var v535 = arrayOfSequences[i$$1];
-      var v460 = v535.length;
-      v281 = v460 != lengthOfAlign;
+    var v279 = v457;
+    var v459 = !v279;
+    if (v459) {
+      var v532 = arrayOfSequences[i$$1];
+      var v458 = v532.length;
+      v279 = v458 != lengthOfAlign;
     }
-    var v10 = v281;
+    var v10 = v279;
     if (v10) {
       alert("There is a problem with the alignment format.");
       return false;
     }
     i$$1++;
-    var v282 = arrayOfTitles.length;
-    v11 = i$$1 < v282;
+    var v280 = arrayOfTitles.length;
+    v11 = i$$1 < v280;
   }
   return true;
 }
 function checkCodonTable(codonTable) {
-  var v609 = codonTable.search(/AmAcid/);
-  var v580 = v609 == -1;
-  var v611 = !v580;
-  if (v611) {
-    var v610 = codonTable.search(/Codon/);
-    v580 = v610 == -1;
+  var v606 = codonTable.search(/AmAcid/);
+  var v577 = v606 == -1;
+  var v608 = !v577;
+  if (v608) {
+    var v607 = codonTable.search(/Codon/);
+    v577 = v607 == -1;
   }
-  var v536 = v580;
-  var v582 = !v536;
-  if (v582) {
-    var v581 = codonTable.search(/Number/);
-    v536 = v581 == -1;
+  var v533 = v577;
+  var v579 = !v533;
+  if (v579) {
+    var v578 = codonTable.search(/Number/);
+    v533 = v578 == -1;
   }
-  var v462 = v536;
-  var v538 = !v462;
-  if (v538) {
-    var v537 = codonTable.search(/\/1000/);
-    v462 = v537 == -1;
+  var v460 = v533;
+  var v535 = !v460;
+  if (v535) {
+    var v534 = codonTable.search(/\/1000/);
+    v460 = v534 == -1;
   }
-  var v283 = v462;
-  var v464 = !v283;
-  if (v464) {
-    var v463 = codonTable.search(/Fraction\s*\.\./);
-    v283 = v463 == -1;
+  var v281 = v460;
+  var v462 = !v281;
+  if (v462) {
+    var v461 = codonTable.search(/Fraction\s*\.\./);
+    v281 = v461 == -1;
   }
-  var v12 = v283;
+  var v12 = v281;
   if (v12) {
     alert("The codon table has been entered incorrectly.");
     return false;
@@ -102,9 +102,9 @@ function checkCodonTable(codonTable) {
   return true;
 }
 function checkFormElement(formElement) {
-  var v465 = formElement.value;
-  var v284 = v465.search(/\S/);
-  var v13 = v284 == -1;
+  var v463 = formElement.value;
+  var v282 = v463.search(/\S/);
+  var v13 = v282 == -1;
   if (v13) {
     alert("Please enter some text.");
     return false;
@@ -116,78 +116,78 @@ function checkGeneticCode(arrayOfPatterns) {
   var codon = "";
   var oneMatch = false;
   var testSequence = "gggggaggtggcgaggaagatgacgtggtagttgtcgcggcagctgccaggagaagtagcaagaaaaataacatgataattatcacgacaactacctggtgatgttgctagtaatattacttgttatttttctcgtcatcttcccggcgacgtcgccagcaacatcacctgctacttctcccgccacctccc";
-  var v285 = arrayOfPatterns.length;
-  var v16 = z$$2 < v285;
+  var v283 = arrayOfPatterns.length;
+  var v16 = z$$2 < v283;
   for (;v16;) {
-    var v466 = arrayOfPatterns[z$$2];
-    var v286 = v466.search(/^\s*\/[a-zA-Z\|\[\]]+\/=[a-zA-Z\*]/);
-    var v14 = v286 == -1;
+    var v464 = arrayOfPatterns[z$$2];
+    var v284 = v464.search(/^\s*\/[a-zA-Z\|\[\]]+\/=[a-zA-Z\*]/);
+    var v14 = v284 == -1;
     if (v14) {
       alert("Genetic code error: one or more patterns have been entered incorrectly.");
       return false;
     }
-    var v467 = arrayOfPatterns[z$$2];
-    var v287 = moreExpressionCheck(v467);
-    var v15 = v287 == false;
+    var v465 = arrayOfPatterns[z$$2];
+    var v285 = moreExpressionCheck(v465);
+    var v15 = v285 == false;
     if (v15) {
       alert("Genetic code error: one or more patterns have been entered incorrectly.");
       return false;
     }
     z$$2 = z$$2 + 1;
-    var v288 = arrayOfPatterns.length;
-    v16 = z$$2 < v288;
+    var v286 = arrayOfPatterns.length;
+    v16 = z$$2 < v286;
   }
   var v17 = arrayOfPatterns.length;
   var geneticCodeMatchResult = new Array(v17);
   var v18 = arrayOfPatterns.length;
   var geneticCodeMatchExp = new Array(v18);
   var j = 0;
-  var v289 = arrayOfPatterns.length;
-  var v22 = j < v289;
+  var v287 = arrayOfPatterns.length;
+  var v22 = j < v287;
   for (;v22;) {
-    var v468 = arrayOfPatterns[j];
-    var v290 = v468.match(/\/.+\//);
-    var v19 = v290 + "gi";
-    var v694 = eval(v19);
-    geneticCodeMatchExp[j] = v694;
-    var v291 = arrayOfPatterns[j];
-    var v20 = v291.match(/=[a-zA-Z\*]/);
-    var v695 = v20.toString();
-    geneticCodeMatchResult[j] = v695;
+    var v466 = arrayOfPatterns[j];
+    var v288 = v466.match(/\/.+\//);
+    var v19 = v288 + "gi";
+    var v691 = eval(v19);
+    geneticCodeMatchExp[j] = v691;
+    var v289 = arrayOfPatterns[j];
+    var v20 = v289.match(/=[a-zA-Z\*]/);
+    var v692 = v20.toString();
+    geneticCodeMatchResult[j] = v692;
     var v21 = geneticCodeMatchResult[j];
-    var v696 = v21.replace(/=/g, "");
-    geneticCodeMatchResult[j] = v696;
+    var v693 = v21.replace(/=/g, "");
+    geneticCodeMatchResult[j] = v693;
     j++;
-    var v292 = arrayOfPatterns.length;
-    v22 = j < v292;
+    var v290 = arrayOfPatterns.length;
+    v22 = j < v290;
   }
   var i$$2 = 0;
-  var v469 = testSequence.length;
-  var v293 = v469 - 3;
-  var v29 = i$$2 <= v293;
+  var v467 = testSequence.length;
+  var v291 = v467 - 3;
+  var v29 = i$$2 <= v291;
   for (;v29;) {
     var v23 = i$$2 + 3;
     codon = testSequence.substring(i$$2, v23);
     j = 0;
-    var v294 = geneticCodeMatchExp.length;
-    var v27 = j < v294;
+    var v292 = geneticCodeMatchExp.length;
+    var v27 = j < v292;
     for (;v27;) {
-      var v470 = geneticCodeMatchExp[j];
-      var v295 = codon.search(v470);
-      var v26 = v295 != -1;
+      var v468 = geneticCodeMatchExp[j];
+      var v293 = codon.search(v468);
+      var v26 = v293 != -1;
       if (v26) {
         var v25 = oneMatch == true;
         if (v25) {
-          var v296 = "Genetic code error: more than one amino acid is coded by the codon: " + codon;
-          var v24 = v296 + ".";
+          var v294 = "Genetic code error: more than one amino acid is coded by the codon: " + codon;
+          var v24 = v294 + ".";
           alert(v24);
           return false;
         }
         oneMatch = true;
       }
       j++;
-      var v297 = geneticCodeMatchExp.length;
-      v27 = j < v297;
+      var v295 = geneticCodeMatchExp.length;
+      v27 = j < v295;
     }
     var v28 = oneMatch == false;
     if (v28) {
@@ -196,90 +196,90 @@ function checkGeneticCode(arrayOfPatterns) {
     }
     oneMatch = false;
     i$$2 = i$$2 + 3;
-    var v471 = testSequence.length;
-    var v298 = v471 - 3;
-    v29 = i$$2 <= v298;
+    var v469 = testSequence.length;
+    var v296 = v469 - 3;
+    v29 = i$$2 <= v296;
   }
   return true;
 }
 function checkGroupInput(arrayOfPatterns$$1) {
   var z$$3 = 0;
-  var v299 = arrayOfPatterns$$1.length;
-  var v31 = z$$3 < v299;
+  var v297 = arrayOfPatterns$$1.length;
+  var v31 = z$$3 < v297;
   for (;v31;) {
-    var v472 = arrayOfPatterns$$1[z$$3];
-    var v300 = v472.search(/[^acdefghiklmnpqrstvwyz]/i);
-    var v30 = v300 != -1;
+    var v470 = arrayOfPatterns$$1[z$$3];
+    var v298 = v470.search(/[^acdefghiklmnpqrstvwyz]/i);
+    var v30 = v298 != -1;
     if (v30) {
       alert("One or more groups have been entered incorrectly.");
       return false;
     }
     z$$3 = z$$3 + 1;
-    var v301 = arrayOfPatterns$$1.length;
-    v31 = z$$3 < v301;
+    var v299 = arrayOfPatterns$$1.length;
+    v31 = z$$3 < v299;
   }
   var i$$3 = 0;
-  var v302 = arrayOfPatterns$$1.length;
-  var v35 = i$$3 < v302;
+  var v300 = arrayOfPatterns$$1.length;
+  var v35 = i$$3 < v300;
   for (;v35;) {
-    var v473 = arrayOfPatterns$$1[i$$3];
-    var v303 = "[" + v473;
-    var v32 = v303 + "]";
+    var v471 = arrayOfPatterns$$1[i$$3];
+    var v301 = "[" + v471;
+    var v32 = v301 + "]";
     var re = new RegExp(v32, "gi");
     var j$$1 = i$$3 + 1;
-    var v304 = arrayOfPatterns$$1.length;
-    var v34 = j$$1 < v304;
+    var v302 = arrayOfPatterns$$1.length;
+    var v34 = j$$1 < v302;
     for (;v34;) {
-      var v474 = arrayOfPatterns$$1[j$$1];
-      var v305 = v474.search(re);
-      var v33 = v305 != -1;
+      var v472 = arrayOfPatterns$$1[j$$1];
+      var v303 = v472.search(re);
+      var v33 = v303 != -1;
       if (v33) {
         alert("The same amino acid is in more than one similarity group.");
         return false;
       }
       j$$1++;
-      var v306 = arrayOfPatterns$$1.length;
-      v34 = j$$1 < v306;
+      var v304 = arrayOfPatterns$$1.length;
+      v34 = j$$1 < v304;
     }
     i$$3++;
-    var v307 = arrayOfPatterns$$1.length;
-    v35 = i$$3 < v307;
+    var v305 = arrayOfPatterns$$1.length;
+    v35 = i$$3 < v305;
   }
   return true;
 }
 function checkRestPatterns(arrayOfPatterns$$2) {
   var z$$4 = 0;
-  var v308 = arrayOfPatterns$$2.length;
-  var v38 = z$$4 < v308;
+  var v306 = arrayOfPatterns$$2.length;
+  var v38 = z$$4 < v306;
   for (;v38;) {
-    var v475 = arrayOfPatterns$$2[z$$4];
-    var v309 = v475.search(/^\s*\/[acgturyswkmbdhvn\[\]]+\/\s+\([^\/]+\)\d+/i);
-    var v36 = v309 == -1;
+    var v473 = arrayOfPatterns$$2[z$$4];
+    var v307 = v473.search(/^\s*\/[acgturyswkmbdhvn\[\]]+\/\s+\([^\/]+\)\d+/i);
+    var v36 = v307 == -1;
     if (v36) {
       alert("One or more patterns have been entered incorrectly.");
       return false;
     }
-    var v476 = arrayOfPatterns$$2[z$$4];
-    var v310 = moreExpressionCheck(v476);
-    var v37 = v310 == false;
+    var v474 = arrayOfPatterns$$2[z$$4];
+    var v308 = moreExpressionCheck(v474);
+    var v37 = v308 == false;
     if (v37) {
       alert("One or more patterns have been entered incorrectly.");
       return false;
     }
     z$$4 = z$$4 + 1;
-    var v311 = arrayOfPatterns$$2.length;
-    v38 = z$$4 < v311;
+    var v309 = arrayOfPatterns$$2.length;
+    v38 = z$$4 < v309;
   }
   return true;
 }
 function checkSequenceLength(text$$7, maxInput) {
-  var v539 = getSequenceFromFasta(text$$7);
-  var v477 = v539.replace(/[^A-Za-z]/g, "");
-  var v312 = v477.length;
-  var v40 = v312 > maxInput;
+  var v536 = getSequenceFromFasta(text$$7);
+  var v475 = v536.replace(/[^A-Za-z]/g, "");
+  var v310 = v475.length;
+  var v40 = v310 > maxInput;
   if (v40) {
-    var v313 = "Please enter a sequence consisting of less than or equal to " + maxInput;
-    var v39 = v313 + " characters.";
+    var v311 = "Please enter a sequence consisting of less than or equal to " + maxInput;
+    var v39 = v311 + " characters.";
     alert(v39);
     return false;
   } else {
@@ -288,11 +288,11 @@ function checkSequenceLength(text$$7, maxInput) {
   return;
 }
 function checkTextLength(text$$8, maxInput$$1) {
-  var v314 = text$$8.length;
-  var v42 = v314 > maxInput$$1;
+  var v312 = text$$8.length;
+  var v42 = v312 > maxInput$$1;
   if (v42) {
-    var v315 = "Please enter text consisting of less than or equal to " + maxInput$$1;
-    var v41 = v315 + " characters.";
+    var v313 = "Please enter text consisting of less than or equal to " + maxInput$$1;
+    var v41 = v313 + " characters.";
     alert(v41);
     return false;
   } else {
@@ -376,7 +376,7 @@ function closeWindow() {
   outputWindow.status = "Done.";
   var v48 = outputWindow.document;
   v48.close();
-  return true;
+  return;
 }
 function convertDegenerates(sequence$$1) {
   sequence$$1 = sequence$$1.toLowerCase();
@@ -395,26 +395,26 @@ function convertDegenerates(sequence$$1) {
   return sequence$$1;
 }
 function earlyCheckAlign(alignArray) {
-  var v316 = alignArray.length;
-  var v49 = v316 < 3;
+  var v314 = alignArray.length;
+  var v49 = v314 < 3;
   if (v49) {
     alert("There is a problem with the alignment format.");
     return false;
   }
   var i$$4 = 1;
-  var v317 = alignArray.length;
-  var v51 = i$$4 < v317;
+  var v315 = alignArray.length;
+  var v51 = i$$4 < v315;
   for (;v51;) {
-    var v478 = alignArray[i$$4];
-    var v318 = v478.search(/[^\s]+\s/);
-    var v50 = v318 == -1;
+    var v476 = alignArray[i$$4];
+    var v316 = v476.search(/[^\s]+\s/);
+    var v50 = v316 == -1;
     if (v50) {
       alert("There is a problem with the alignment format.");
       return false;
     }
     i$$4++;
-    var v319 = alignArray.length;
-    v51 = i$$4 < v319;
+    var v317 = alignArray.length;
+    v51 = i$$4 < v317;
   }
   return true;
 }
@@ -432,8 +432,8 @@ function getArrayOfFasta(sequenceData) {
   var arrayOfFasta = new Array;
   var matchArray;
   var re$$1 = /\>[^\>]+/g;
-  var v320 = sequenceData.search(/\>[^\f\n\r]+[\f\n\r]/);
-  var v54 = v320 != -1;
+  var v318 = sequenceData.search(/\>[^\f\n\r]+[\f\n\r]/);
+  var v54 = v318 != -1;
   if (v54) {
     var v53 = matchArray = re$$1.exec(sequenceData);
     for (;v53;) {
@@ -447,51 +447,51 @@ function getArrayOfFasta(sequenceData) {
   return arrayOfFasta;
 }
 function getFastaTitleFromTitleAndSequence(fastaSequenceTitle, sequence$$2) {
-  var v321 = sequence$$2.length;
-  var v55 = "&gt;results for " + v321;
+  var v319 = sequence$$2.length;
+  var v55 = "&gt;results for " + v319;
   var stringToReturn = v55 + " residue sequence ";
-  var v322 = fastaSequenceTitle.search(/[^\s]/);
-  var v57 = v322 != -1;
+  var v320 = fastaSequenceTitle.search(/[^\s]/);
+  var v57 = v320 != -1;
   if (v57) {
-    var v323 = stringToReturn + '"';
-    var v56 = v323 + fastaSequenceTitle;
+    var v321 = stringToReturn + '"';
+    var v56 = v321 + fastaSequenceTitle;
     stringToReturn = v56 + '"';
   }
-  var v324 = stringToReturn + ' starting "';
-  var v325 = sequence$$2.substring(0, 10);
-  var v58 = v324 + v325;
+  var v322 = stringToReturn + ' starting "';
+  var v323 = sequence$$2.substring(0, 10);
+  var v58 = v322 + v323;
   stringToReturn = v58 + '"';
   return stringToReturn + "\n";
 }
 function getFuzzySearchTitle(fastaSequenceTitleOne, sequenceOne, fastaSequenceTitleTwo, sequenceTwo) {
-  var v326 = sequenceOne.length;
-  var v59 = "Search results for " + v326;
+  var v324 = sequenceOne.length;
+  var v59 = "Search results for " + v324;
   var stringToReturn$$1 = v59 + " residue sequence ";
-  var v327 = fastaSequenceTitleOne.search(/[^\s]/);
-  var v61 = v327 != -1;
+  var v325 = fastaSequenceTitleOne.search(/[^\s]/);
+  var v61 = v325 != -1;
   if (v61) {
-    var v328 = stringToReturn$$1 + '"';
-    var v60 = v328 + fastaSequenceTitleOne;
+    var v326 = stringToReturn$$1 + '"';
+    var v60 = v326 + fastaSequenceTitleOne;
     stringToReturn$$1 = v60 + '"';
   }
-  var v329 = stringToReturn$$1 + ' starting "';
-  var v330 = sequenceOne.substring(0, 10);
-  var v62 = v329 + v330;
+  var v327 = stringToReturn$$1 + ' starting "';
+  var v328 = sequenceOne.substring(0, 10);
+  var v62 = v327 + v328;
   stringToReturn$$1 = v62 + '"\n';
-  var v331 = stringToReturn$$1 + "and ";
-  var v332 = sequenceTwo.length;
-  var v63 = v331 + v332;
+  var v329 = stringToReturn$$1 + "and ";
+  var v330 = sequenceTwo.length;
+  var v63 = v329 + v330;
   stringToReturn$$1 = v63 + " residue sequence ";
-  var v333 = fastaSequenceTitleTwo.search(/[^\s]/);
-  var v65 = v333 != -1;
+  var v331 = fastaSequenceTitleTwo.search(/[^\s]/);
+  var v65 = v331 != -1;
   if (v65) {
-    var v334 = stringToReturn$$1 + '"';
-    var v64 = v334 + fastaSequenceTitleTwo;
+    var v332 = stringToReturn$$1 + '"';
+    var v64 = v332 + fastaSequenceTitleTwo;
     stringToReturn$$1 = v64 + '"';
   }
-  var v335 = stringToReturn$$1 + ' starting "';
-  var v336 = sequenceTwo.substring(0, 10);
-  var v66 = v335 + v336;
+  var v333 = stringToReturn$$1 + ' starting "';
+  var v334 = sequenceTwo.substring(0, 10);
+  var v66 = v333 + v334;
   stringToReturn$$1 = v66 + '"';
   var v67 = '<div class="info">' + stringToReturn$$1;
   return v67 + "</div>\n";
@@ -500,17 +500,17 @@ function getGeneticCodeMatchExp(arrayOfPatterns$$3) {
   var v68 = arrayOfPatterns$$3.length;
   var geneticCodeMatchExp$$1 = new Array(v68);
   var j$$2 = 0;
-  var v337 = arrayOfPatterns$$3.length;
-  var v70 = j$$2 < v337;
+  var v335 = arrayOfPatterns$$3.length;
+  var v70 = j$$2 < v335;
   for (;v70;) {
-    var v479 = arrayOfPatterns$$3[j$$2];
-    var v338 = v479.match(/\/.+\//);
-    var v69 = v338 + "gi";
-    var v697 = eval(v69);
-    geneticCodeMatchExp$$1[j$$2] = v697;
+    var v477 = arrayOfPatterns$$3[j$$2];
+    var v336 = v477.match(/\/.+\//);
+    var v69 = v336 + "gi";
+    var v694 = eval(v69);
+    geneticCodeMatchExp$$1[j$$2] = v694;
     j$$2++;
-    var v339 = arrayOfPatterns$$3.length;
-    v70 = j$$2 < v339;
+    var v337 = arrayOfPatterns$$3.length;
+    v70 = j$$2 < v337;
   }
   return geneticCodeMatchExp$$1;
 }
@@ -518,89 +518,89 @@ function getGeneticCodeMatchResult(arrayOfPatterns$$4) {
   var v71 = arrayOfPatterns$$4.length;
   var geneticCodeMatchResult$$1 = new Array(v71);
   var j$$3 = 0;
-  var v340 = arrayOfPatterns$$4.length;
-  var v74 = j$$3 < v340;
+  var v338 = arrayOfPatterns$$4.length;
+  var v74 = j$$3 < v338;
   for (;v74;) {
-    var v341 = arrayOfPatterns$$4[j$$3];
-    var v72 = v341.match(/=[a-zA-Z\*]/);
-    var v698 = v72.toString();
-    geneticCodeMatchResult$$1[j$$3] = v698;
+    var v339 = arrayOfPatterns$$4[j$$3];
+    var v72 = v339.match(/=[a-zA-Z\*]/);
+    var v695 = v72.toString();
+    geneticCodeMatchResult$$1[j$$3] = v695;
     var v73 = geneticCodeMatchResult$$1[j$$3];
-    var v699 = v73.replace(/=/g, "");
-    geneticCodeMatchResult$$1[j$$3] = v699;
+    var v696 = v73.replace(/=/g, "");
+    geneticCodeMatchResult$$1[j$$3] = v696;
     j$$3++;
-    var v342 = arrayOfPatterns$$4.length;
-    v74 = j$$3 < v342;
+    var v340 = arrayOfPatterns$$4.length;
+    v74 = j$$3 < v340;
   }
   return geneticCodeMatchResult$$1;
 }
 function getInfoFromTitleAndSequence(fastaSequenceTitle$$1, sequence$$3) {
-  var v343 = sequence$$3.length;
-  var v75 = "Results for " + v343;
+  var v341 = sequence$$3.length;
+  var v75 = "Results for " + v341;
   var stringToReturn$$2 = v75 + " residue sequence ";
-  var v344 = fastaSequenceTitle$$1.search(/[^\s]/);
-  var v77 = v344 != -1;
+  var v342 = fastaSequenceTitle$$1.search(/[^\s]/);
+  var v77 = v342 != -1;
   if (v77) {
-    var v345 = stringToReturn$$2 + '"';
-    var v76 = v345 + fastaSequenceTitle$$1;
+    var v343 = stringToReturn$$2 + '"';
+    var v76 = v343 + fastaSequenceTitle$$1;
     stringToReturn$$2 = v76 + '"';
   }
-  var v346 = stringToReturn$$2 + ' starting "';
-  var v347 = sequence$$3.substring(0, 10);
-  var v78 = v346 + v347;
+  var v344 = stringToReturn$$2 + ' starting "';
+  var v345 = sequence$$3.substring(0, 10);
+  var v78 = v344 + v345;
   stringToReturn$$2 = v78 + '"';
   var v79 = '<div class="info">' + stringToReturn$$2;
   return v79 + "</div>\n";
 }
 function getInfoFromTitleAndSequenceAndTopology(fastaSequenceTitle$$2, sequence$$4, topology) {
-  var v480 = "Results for " + topology;
-  var v348 = v480 + " ";
-  var v349 = sequence$$4.length;
-  var v80 = v348 + v349;
+  var v478 = "Results for " + topology;
+  var v346 = v478 + " ";
+  var v347 = sequence$$4.length;
+  var v80 = v346 + v347;
   var stringToReturn$$3 = v80 + " residue sequence ";
-  var v350 = fastaSequenceTitle$$2.search(/[^\s]/);
-  var v82 = v350 != -1;
+  var v348 = fastaSequenceTitle$$2.search(/[^\s]/);
+  var v82 = v348 != -1;
   if (v82) {
-    var v351 = stringToReturn$$3 + '"';
-    var v81 = v351 + fastaSequenceTitle$$2;
+    var v349 = stringToReturn$$3 + '"';
+    var v81 = v349 + fastaSequenceTitle$$2;
     stringToReturn$$3 = v81 + '"';
   }
-  var v352 = stringToReturn$$3 + ' starting "';
-  var v353 = sequence$$4.substring(0, 10);
-  var v83 = v352 + v353;
+  var v350 = stringToReturn$$3 + ' starting "';
+  var v351 = sequence$$4.substring(0, 10);
+  var v83 = v350 + v351;
   stringToReturn$$3 = v83 + '"';
   var v84 = '<div class="info">' + stringToReturn$$3;
   return v84 + "</div>\n";
 }
 function getPairwiseAlignTitle(fastaSequenceTitleOne$$1, sequenceOne$$1, fastaSequenceTitleTwo$$1, sequenceTwo$$1) {
-  var v354 = sequenceOne$$1.length;
-  var v85 = "Alignment results for " + v354;
+  var v352 = sequenceOne$$1.length;
+  var v85 = "Alignment results for " + v352;
   var stringToReturn$$4 = v85 + " residue sequence ";
-  var v355 = fastaSequenceTitleOne$$1.search(/[^\s]/);
-  var v87 = v355 != -1;
+  var v353 = fastaSequenceTitleOne$$1.search(/[^\s]/);
+  var v87 = v353 != -1;
   if (v87) {
-    var v356 = stringToReturn$$4 + '"';
-    var v86 = v356 + fastaSequenceTitleOne$$1;
+    var v354 = stringToReturn$$4 + '"';
+    var v86 = v354 + fastaSequenceTitleOne$$1;
     stringToReturn$$4 = v86 + '"';
   }
-  var v357 = stringToReturn$$4 + ' starting "';
-  var v358 = sequenceOne$$1.substring(0, 10);
-  var v88 = v357 + v358;
+  var v355 = stringToReturn$$4 + ' starting "';
+  var v356 = sequenceOne$$1.substring(0, 10);
+  var v88 = v355 + v356;
   stringToReturn$$4 = v88 + '"\n';
-  var v359 = stringToReturn$$4 + "and ";
-  var v360 = sequenceTwo$$1.length;
-  var v89 = v359 + v360;
+  var v357 = stringToReturn$$4 + "and ";
+  var v358 = sequenceTwo$$1.length;
+  var v89 = v357 + v358;
   stringToReturn$$4 = v89 + " residue sequence ";
-  var v361 = fastaSequenceTitleTwo$$1.search(/[^\s]/);
-  var v91 = v361 != -1;
+  var v359 = fastaSequenceTitleTwo$$1.search(/[^\s]/);
+  var v91 = v359 != -1;
   if (v91) {
-    var v362 = stringToReturn$$4 + '"';
-    var v90 = v362 + fastaSequenceTitleTwo$$1;
+    var v360 = stringToReturn$$4 + '"';
+    var v90 = v360 + fastaSequenceTitleTwo$$1;
     stringToReturn$$4 = v90 + '"';
   }
-  var v363 = stringToReturn$$4 + ' starting "';
-  var v364 = sequenceTwo$$1.substring(0, 10);
-  var v92 = v363 + v364;
+  var v361 = stringToReturn$$4 + ' starting "';
+  var v362 = sequenceTwo$$1.substring(0, 10);
+  var v92 = v361 + v362;
   stringToReturn$$4 = v92 + '"';
   var v93 = '<div class="info">' + stringToReturn$$4;
   return v93 + "</div>\n";
@@ -612,9 +612,9 @@ function getRandomSequence(components, lengthOut) {
   var j$$4 = 0;
   var v95 = j$$4 < lengthOut;
   for (;v95;) {
-    var v365 = Math.random();
-    var v366 = components.length;
-    var v94 = v365 * v366;
+    var v363 = Math.random();
+    var v364 = components.length;
+    var v94 = v363 * v364;
     tempNum = Math.floor(v94);
     tempChar = components[tempNum];
     sequenceArray.push(tempChar);
@@ -624,8 +624,8 @@ function getRandomSequence(components, lengthOut) {
   return sequenceArray.join("");
 }
 function getSequenceFromFasta(sequenceRecord) {
-  var v367 = sequenceRecord.search(/\>[^\f\n\r]+[\f\n\r]/);
-  var v96 = v367 != -1;
+  var v365 = sequenceRecord.search(/\>[^\f\n\r]+[\f\n\r]/);
+  var v96 = v365 != -1;
   if (v96) {
     sequenceRecord = sequenceRecord.replace(/\>[^\f\n\r]+[\f\n\r]/, "");
   }
@@ -633,8 +633,8 @@ function getSequenceFromFasta(sequenceRecord) {
 }
 function getTitleFromFasta(sequenceRecord$$1) {
   var fastaTitle = "Untitled";
-  var v368 = sequenceRecord$$1.search(/\>[^\f\n\r]+[\f\n\r]/);
-  var v98 = v368 != -1;
+  var v366 = sequenceRecord$$1.search(/\>[^\f\n\r]+[\f\n\r]/);
+  var v98 = v366 != -1;
   if (v98) {
     var v97 = sequenceRecord$$1.match(/\>[^\f\n\r]+[\f\n\r]/, "");
     fastaTitle = v97.toString();
@@ -645,68 +645,68 @@ function getTitleFromFasta(sequenceRecord$$1) {
   return fastaTitle;
 }
 function moreExpressionCheck(expressionToCheck) {
-  var v672 = expressionToCheck.search(/\[[A-Za-z\|]*\[/);
-  var v665 = v672 != -1;
-  var v674 = !v665;
-  if (v674) {
-    var v673 = expressionToCheck.search(/\][A-Za-z\|]*\]/);
-    v665 = v673 != -1;
+  var v669 = expressionToCheck.search(/\[[A-Za-z\|]*\[/);
+  var v662 = v669 != -1;
+  var v671 = !v662;
+  if (v671) {
+    var v670 = expressionToCheck.search(/\][A-Za-z\|]*\]/);
+    v662 = v670 != -1;
   }
-  var v656 = v665;
-  var v667 = !v656;
-  if (v667) {
-    var v666 = expressionToCheck.search(/\[\]/);
-    v656 = v666 != -1;
+  var v653 = v662;
+  var v664 = !v653;
+  if (v664) {
+    var v663 = expressionToCheck.search(/\[\]/);
+    v653 = v663 != -1;
   }
-  var v647 = v656;
-  var v658 = !v647;
-  if (v658) {
-    var v657 = expressionToCheck.search(/\/[A-Za-z\|]*\]/);
-    v647 = v657 != -1;
+  var v644 = v653;
+  var v655 = !v644;
+  if (v655) {
+    var v654 = expressionToCheck.search(/\/[A-Za-z\|]*\]/);
+    v644 = v654 != -1;
   }
-  var v636 = v647;
-  var v649 = !v636;
-  if (v649) {
-    var v648 = expressionToCheck.search(/\[[A-Za-z\|]*\//);
-    v636 = v648 != -1;
+  var v633 = v644;
+  var v646 = !v633;
+  if (v646) {
+    var v645 = expressionToCheck.search(/\[[A-Za-z\|]*\//);
+    v633 = v645 != -1;
   }
-  var v624 = v636;
-  var v638 = !v624;
-  if (v638) {
-    var v637 = expressionToCheck.search(/\|\|/);
-    v624 = v637 != -1;
+  var v621 = v633;
+  var v635 = !v621;
+  if (v635) {
+    var v634 = expressionToCheck.search(/\|\|/);
+    v621 = v634 != -1;
   }
-  var v612 = v624;
-  var v626 = !v612;
-  if (v626) {
-    var v625 = expressionToCheck.search(/\/\|/);
-    v612 = v625 != -1;
+  var v609 = v621;
+  var v623 = !v609;
+  if (v623) {
+    var v622 = expressionToCheck.search(/\/\|/);
+    v609 = v622 != -1;
   }
-  var v583 = v612;
-  var v614 = !v583;
-  if (v614) {
-    var v613 = expressionToCheck.search(/\|\//);
-    v583 = v613 != -1;
+  var v580 = v609;
+  var v611 = !v580;
+  if (v611) {
+    var v610 = expressionToCheck.search(/\|\//);
+    v580 = v610 != -1;
   }
-  var v540 = v583;
-  var v585 = !v540;
-  if (v585) {
-    var v584 = expressionToCheck.search(/\[.\]/);
-    v540 = v584 != -1;
+  var v537 = v580;
+  var v582 = !v537;
+  if (v582) {
+    var v581 = expressionToCheck.search(/\[.\]/);
+    v537 = v581 != -1;
   }
-  var v481 = v540;
-  var v542 = !v481;
-  if (v542) {
-    var v541 = expressionToCheck.search(/\</);
-    v481 = v541 != -1;
+  var v479 = v537;
+  var v539 = !v479;
+  if (v539) {
+    var v538 = expressionToCheck.search(/\</);
+    v479 = v538 != -1;
   }
-  var v369 = v481;
-  var v483 = !v369;
-  if (v483) {
-    var v482 = expressionToCheck.search(/\>/);
-    v369 = v482 != -1;
+  var v367 = v479;
+  var v481 = !v367;
+  if (v481) {
+    var v480 = expressionToCheck.search(/\>/);
+    v367 = v480 != -1;
   }
-  var v99 = v369;
+  var v99 = v367;
   if (v99) {
     return false;
   }
@@ -729,126 +729,129 @@ function openTextArea() {
   v103.write('<br /><textarea rows="6" cols="61">\n');
   return true;
 }
-function openWindow(title$$5) {
-  _openWindow(title$$5, true);
+function openWindow() {
+  var title$$5 = "Protein Stats";
+  _openWindow(title$$5);
   return;
 }
-function _openWindow(title$$6, isColor) {
+function _openWindow(title$$6) {
+  var isColor = true;
   outputWindow = window.open("", "my_new_window", "toolbar=no, location=no, directories=no, status=yes, menubar=yes, scrollbars=yes, resizable=yes, copyhistory=no, width=800, height=400");
   outputWindow.focus();
   var v104 = outputWindow.document;
-  var v543 = '<!DOCTYPE html PUBLIC "-//W3C//DTD XHTML 1.0 Transitional//EN" "http://www.w3.org/TR/xhtml1/DTD/xhtml1-transitional.dtd">\n' + '<html lang="en">\n';
-  var v484 = v543 + "<head>\n";
-  var v370 = v484 + "<title>Sequence Manipulation Suite</title>\n";
-  var v105 = v370 + '<meta http-equiv="Content-Type" content="text/html; charset=ISO-8859-1" />\n';
+  var v540 = '<!DOCTYPE html PUBLIC "-//W3C//DTD XHTML 1.0 Transitional//EN" "http://www.w3.org/TR/xhtml1/DTD/xhtml1-transitional.dtd">\n' + '<html lang="en">\n';
+  var v482 = v540 + "<head>\n";
+  var v368 = v482 + "<title>Sequence Manipulation Suite</title>\n";
+  var v105 = v368 + '<meta http-equiv="Content-Type" content="text/html; charset=ISO-8859-1" />\n';
   v104.write(v105);
   if (isColor) {
     var v106 = outputWindow.document;
-    var v687 = '<style type="text/css">\n' + "body.main {font-size: medium; font-family: arial, sans-serif; color: #000000; background-color: #FFFFFF}\n";
-    var v683 = v687 + "div.pre {font-size: medium; color: #000000; font-family: courier, sans-serif; white-space: pre}\n";
-    var v679 = v683 + "div.title {font-size: x-large; color: #000000; text-align: left; background-color: #FFFFFF}\n";
-    var v675 = v679 + "div.info {font-weight: bold}\n";
-    var v668 = v675 + "span.none, td.none {color: #000000; background-color: #FFFFFF}\n";
-    var v659 = v668 + "span.one, td.one {color: #000000; background-color: #66FF00}\n";
-    var v650 = v659 + "span.two, td.two {color: #000000; background-color: #FFFF66}\n";
-    var v639 = v650 + "span.three, td.three {color: #000000; background-color: #FFFFFF}\n";
-    var v627 = v639 + "span.forward_primer, td.forward_primer {color: #000000; background-color: #FF66FF}\n";
-    var v615 = v627 + "span.reverse_primer, td.reverse_primer {color: #000000; background-color: #FF9933}\n";
-    var v586 = v615 + "span.current_sequence {color: #000000; background-color: #FFFFFF}\n";
-    var v544 = v586 + "span.mutated_sequence {color: #990066; background-color: #FFFFFF}\n";
-    var v485 = v544 + "td.many {color: #000000}\n";
-    var v371 = v485 + "td.title {font-weight: bold; color: #000000; background-color: #FFFFFF}\n";
-    var v107 = v371 + "</style>\n";
+    var v684 = '<style type="text/css">\n' + "body.main {font-size: medium; font-family: arial, sans-serif; color: #000000; background-color: #FFFFFF}\n";
+    var v680 = v684 + "div.pre {font-size: medium; color: #000000; font-family: courier, sans-serif; white-space: pre}\n";
+    var v676 = v680 + "div.title {font-size: x-large; color: #000000; text-align: left; background-color: #FFFFFF}\n";
+    var v672 = v676 + "div.info {font-weight: bold}\n";
+    var v665 = v672 + "span.none, td.none {color: #000000; background-color: #FFFFFF}\n";
+    var v656 = v665 + "span.one, td.one {color: #000000; background-color: #66FF00}\n";
+    var v647 = v656 + "span.two, td.two {color: #000000; background-color: #FFFF66}\n";
+    var v636 = v647 + "span.three, td.three {color: #000000; background-color: #FFFFFF}\n";
+    var v624 = v636 + "span.forward_primer, td.forward_primer {color: #000000; background-color: #FF66FF}\n";
+    var v612 = v624 + "span.reverse_primer, td.reverse_primer {color: #000000; background-color: #FF9933}\n";
+    var v583 = v612 + "span.current_sequence {color: #000000; background-color: #FFFFFF}\n";
+    var v541 = v583 + "span.mutated_sequence {color: #990066; background-color: #FFFFFF}\n";
+    var v483 = v541 + "td.many {color: #000000}\n";
+    var v369 = v483 + "td.title {font-weight: bold; color: #000000; background-color: #FFFFFF}\n";
+    var v107 = v369 + "</style>\n";
     v106.write(v107);
   } else {
     var v108 = outputWindow.document;
-    var v691 = '<style type="text/css">\n' + "body.main {font-size: medium; font-family: arial, sans-serif; color: #000000; background-color: #FFFFFF; margin: 0 auto; padding: 0}\n";
-    var v688 = v691 + "div.pre {font-size: medium; color: #000000; background-color: #FFFFFF; font-family: courier, sans-serif; white-space: pre}\n";
-    var v684 = v688 + "div.title {display: none}\n";
-    var v680 = v684 + "div.info {font-weight: bold}\n";
-    var v676 = v680 + "span.none, td.none {color: #000000; background-color: #FFFFFF}\n";
-    var v669 = v676 + "span.one, td.one {color: #000000; text-decoration: underline; background-color: #FFFFFF}\n";
-    var v660 = v669 + "span.two, td.two {color: #000000; font-style: italic; background-color: #FFFFFF}\n";
-    var v651 = v660 + "span.three, td.three {color: #000000; background-color: #FFFFFF}\n";
-    var v640 = v651 + "span.forward_primer, td.forward_primer {color: #000000; background-color: #FFFFFF}\n";
-    var v628 = v640 + "span.reverse_primer, td.reverse_primer {color: #000000; background-color: #FFFFFF}\n";
-    var v616 = v628 + "span.current_sequence {color: #000000; background-color: #FFFFFF}\n";
-    var v587 = v616 + "span.mutated_sequence {color: #000000; text-decoration: underline; background-color: #FFFFFF}\n";
-    var v545 = v587 + "td.many {color: #000000; background-color: #FFFFFF}\n";
-    var v486 = v545 + "td.title {font-weight: bold; color: #000000; background-color: #FFFFFF}\n";
-    var v372 = v486 + "img {display: none}\n";
-    var v109 = v372 + "</style>\n";
+    var v688 = '<style type="text/css">\n' + "body.main {font-size: medium; font-family: arial, sans-serif; color: #000000; background-color: #FFFFFF; margin: 0 auto; padding: 0}\n";
+    var v685 = v688 + "div.pre {font-size: medium; color: #000000; background-color: #FFFFFF; font-family: courier, sans-serif; white-space: pre}\n";
+    var v681 = v685 + "div.title {display: none}\n";
+    var v677 = v681 + "div.info {font-weight: bold}\n";
+    var v673 = v677 + "span.none, td.none {color: #000000; background-color: #FFFFFF}\n";
+    var v666 = v673 + "span.one, td.one {color: #000000; text-decoration: underline; background-color: #FFFFFF}\n";
+    var v657 = v666 + "span.two, td.two {color: #000000; font-style: italic; background-color: #FFFFFF}\n";
+    var v648 = v657 + "span.three, td.three {color: #000000; background-color: #FFFFFF}\n";
+    var v637 = v648 + "span.forward_primer, td.forward_primer {color: #000000; background-color: #FFFFFF}\n";
+    var v625 = v637 + "span.reverse_primer, td.reverse_primer {color: #000000; background-color: #FFFFFF}\n";
+    var v613 = v625 + "span.current_sequence {color: #000000; background-color: #FFFFFF}\n";
+    var v584 = v613 + "span.mutated_sequence {color: #000000; text-decoration: underline; background-color: #FFFFFF}\n";
+    var v542 = v584 + "td.many {color: #000000; background-color: #FFFFFF}\n";
+    var v484 = v542 + "td.title {font-weight: bold; color: #000000; background-color: #FFFFFF}\n";
+    var v370 = v484 + "img {display: none}\n";
+    var v109 = v370 + "</style>\n";
     v108.write(v109);
   }
   var v110 = outputWindow.document;
-  var v546 = "</head>\n" + '<body class="main">\n';
-  var v487 = v546 + '<div class="title">';
-  var v373 = v487 + title$$6;
-  var v111 = v373 + " results</div>\n";
+  var v543 = "</head>\n" + '<body class="main">\n';
+  var v485 = v543 + '<div class="title">';
+  var v371 = v485 + title$$6;
+  var v111 = v371 + " results</div>\n";
   v110.write(v111);
   outputWindow.status = "Please Wait.";
-  return true;
-}
-function openWindowAlign(title$$7) {
-  _openWindowAlign(title$$7, true);
   return;
 }
-function _openWindowAlign(title$$8, isBackground) {
+function openWindowAlign(title$$7) {
+  _openWindowAlign(title$$7);
+  return;
+}
+function _openWindowAlign(title$$8) {
+  var isBackground = true;
   outputWindow = window.open("", "my_new_window", "toolbar=no, location=no, directories=no, status=yes, menubar=yes, scrollbars=yes, resizable=yes, copyhistory=no, width=800, height=400");
   outputWindow.focus();
   var v112 = outputWindow.document;
-  var v547 = '<!DOCTYPE html PUBLIC "-//W3C//DTD XHTML 1.0 Transitional//EN" "http://www.w3.org/TR/xhtml1/DTD/xhtml1-transitional.dtd">\n' + '<html lang="en">\n';
-  var v488 = v547 + "<head>\n";
-  var v374 = v488 + "<title>Sequence Manipulation Suite</title>\n";
-  var v113 = v374 + '<meta http-equiv="Content-Type" content="text/html; charset=ISO-8859-1" />\n';
+  var v544 = '<!DOCTYPE html PUBLIC "-//W3C//DTD XHTML 1.0 Transitional//EN" "http://www.w3.org/TR/xhtml1/DTD/xhtml1-transitional.dtd">\n' + '<html lang="en">\n';
+  var v486 = v544 + "<head>\n";
+  var v372 = v486 + "<title>Sequence Manipulation Suite</title>\n";
+  var v113 = v372 + '<meta http-equiv="Content-Type" content="text/html; charset=ISO-8859-1" />\n';
   v112.write(v113);
   if (isBackground) {
     var v114 = outputWindow.document;
-    var v689 = '<style type="text/css">\n' + "body.main {font-family: arial, sans-serif; color: #000000; background-color: #FFFFFF}\n";
-    var v685 = v689 + "div.pre {font-size: medium; color: #000000; font-family: courier, sans-serif; white-space: pre}\n";
-    var v681 = v685 + "div.title {font-size: x-large; color: #000000; text-align: left; background-color: #FFFFFF}\n";
-    var v677 = v681 + "div.info {font-weight: bold}\n";
-    var v670 = v677 + "span.ident {color: #FFFFFF; background-color: #000000}\n";
-    var v661 = v670 + "span.sim {color: #FFFFFF; background-color: #666666}\n";
-    var v652 = v661 + "span.g, span.a, span.v, span.l, span.i {color: #000000; background-color: #C0C0C0}\n";
-    var v641 = v652 + "span.f, span.y, span.w {color: #000000; background-color: #FF6600}\n";
-    var v629 = v641 + "span.c, span.m {color: #000000; background-color: #FFFF00}\n";
-    var v617 = v629 + "span.s, span.t {color: #000000; background-color: #66FF00}\n";
-    var v588 = v617 + "span.k, span.r, span.h {color: #000000; background-color: #FF0000}\n";
-    var v548 = v588 + "span.d, span.e {color: #000000; background-color: #0066FF}\n";
-    var v489 = v548 + "span.n, span.q {color: #000000; background-color: #996633}\n";
-    var v375 = v489 + "span.p {color: #000000; background-color: #FF99FF}\n";
-    var v115 = v375 + "</style>\n";
+    var v686 = '<style type="text/css">\n' + "body.main {font-family: arial, sans-serif; color: #000000; background-color: #FFFFFF}\n";
+    var v682 = v686 + "div.pre {font-size: medium; color: #000000; font-family: courier, sans-serif; white-space: pre}\n";
+    var v678 = v682 + "div.title {font-size: x-large; color: #000000; text-align: left; background-color: #FFFFFF}\n";
+    var v674 = v678 + "div.info {font-weight: bold}\n";
+    var v667 = v674 + "span.ident {color: #FFFFFF; background-color: #000000}\n";
+    var v658 = v667 + "span.sim {color: #FFFFFF; background-color: #666666}\n";
+    var v649 = v658 + "span.g, span.a, span.v, span.l, span.i {color: #000000; background-color: #C0C0C0}\n";
+    var v638 = v649 + "span.f, span.y, span.w {color: #000000; background-color: #FF6600}\n";
+    var v626 = v638 + "span.c, span.m {color: #000000; background-color: #FFFF00}\n";
+    var v614 = v626 + "span.s, span.t {color: #000000; background-color: #66FF00}\n";
+    var v585 = v614 + "span.k, span.r, span.h {color: #000000; background-color: #FF0000}\n";
+    var v545 = v585 + "span.d, span.e {color: #000000; background-color: #0066FF}\n";
+    var v487 = v545 + "span.n, span.q {color: #000000; background-color: #996633}\n";
+    var v373 = v487 + "span.p {color: #000000; background-color: #FF99FF}\n";
+    var v115 = v373 + "</style>\n";
     v114.write(v115);
   } else {
     var v116 = outputWindow.document;
-    var v693 = '<style type="text/css">\n' + "body.main {font-family: arial, sans-serif; color: #000000; background-color: #FFFFFF}\n";
-    var v692 = v693 + "div.pre {font-size: medium; color: #000000; font-family: courier, sans-serif; white-space: pre}\n";
-    var v690 = v692 + "div.title {display: none}\n";
-    var v686 = v690 + "div.info {font-weight: bold}\n";
-    var v682 = v686 + "span.ident {color: #000000; font-weight: bold; text-decoration: underline; background-color: #FFFFFF}\n";
-    var v678 = v682 + "span.sim {color: #000000; font-weight: bold; background-color: #FFFFFF}\n";
-    var v671 = v678 + "span.diff {color: #999999; background-color: #FFFFFF}\n";
-    var v662 = v671 + "span.g, span.a, span.v, span.l, span.i {color: #CC33CC; background-color: #FFFFFF}\n";
-    var v653 = v662 + "span.f, span.y, span.w {color: #FF6600; background-color: #FFFFFF}\n";
-    var v642 = v653 + "span.c, span.m {color: #FFCC00; background-color: #FFFFFF}\n";
-    var v630 = v642 + "span.s, span.t {color: #CCFF00; background-color: #FFFFFF}\n";
-    var v618 = v630 + "span.k, span.r, span.h {color: #FF0000; background-color: #FFFFFF}\n";
-    var v589 = v618 + "span.d, span.e {color: #0000FF; background-color: #FFFFFF}\n";
-    var v549 = v589 + "span.n, span.q {color: #996633; background-color: #FFFFFF}\n";
-    var v490 = v549 + "span.p {color: #00FFCC; background-color: #FFFFFF}\n";
-    var v376 = v490 + "img {display: none}\n";
-    var v117 = v376 + "</style>\n";
+    var v690 = '<style type="text/css">\n' + "body.main {font-family: arial, sans-serif; color: #000000; background-color: #FFFFFF}\n";
+    var v689 = v690 + "div.pre {font-size: medium; color: #000000; font-family: courier, sans-serif; white-space: pre}\n";
+    var v687 = v689 + "div.title {display: none}\n";
+    var v683 = v687 + "div.info {font-weight: bold}\n";
+    var v679 = v683 + "span.ident {color: #000000; font-weight: bold; text-decoration: underline; background-color: #FFFFFF}\n";
+    var v675 = v679 + "span.sim {color: #000000; font-weight: bold; background-color: #FFFFFF}\n";
+    var v668 = v675 + "span.diff {color: #999999; background-color: #FFFFFF}\n";
+    var v659 = v668 + "span.g, span.a, span.v, span.l, span.i {color: #CC33CC; background-color: #FFFFFF}\n";
+    var v650 = v659 + "span.f, span.y, span.w {color: #FF6600; background-color: #FFFFFF}\n";
+    var v639 = v650 + "span.c, span.m {color: #FFCC00; background-color: #FFFFFF}\n";
+    var v627 = v639 + "span.s, span.t {color: #CCFF00; background-color: #FFFFFF}\n";
+    var v615 = v627 + "span.k, span.r, span.h {color: #FF0000; background-color: #FFFFFF}\n";
+    var v586 = v615 + "span.d, span.e {color: #0000FF; background-color: #FFFFFF}\n";
+    var v546 = v586 + "span.n, span.q {color: #996633; background-color: #FFFFFF}\n";
+    var v488 = v546 + "span.p {color: #00FFCC; background-color: #FFFFFF}\n";
+    var v374 = v488 + "img {display: none}\n";
+    var v117 = v374 + "</style>\n";
     v116.write(v117);
   }
   var v118 = outputWindow.document;
-  var v550 = "</head>\n" + '<body class="main">\n';
-  var v491 = v550 + '<div class="title">';
-  var v377 = v491 + title$$8;
-  var v119 = v377 + " results</div>\n";
+  var v547 = "</head>\n" + '<body class="main">\n';
+  var v489 = v547 + '<div class="title">';
+  var v375 = v489 + title$$8;
+  var v119 = v375 + " results</div>\n";
   v118.write(v119);
   outputWindow.status = "Please Wait.";
-  return true;
+  return;
 }
 function removeFormatting(sequence$$5) {
   return sequence$$5.replace(/[\d\s]/g, "");
@@ -879,8 +882,8 @@ function removeNonLetters(sequence$$12) {
 }
 function reverse(dnaSequence$$1) {
   var tempDnaArray = new Array;
-  var v378 = dnaSequence$$1.search(/./);
-  var v120 = v378 != -1;
+  var v376 = dnaSequence$$1.search(/./);
+  var v120 = v376 != -1;
   if (v120) {
     tempDnaArray = dnaSequence$$1.match(/./g);
     tempDnaArray = tempDnaArray.reverse();
@@ -912,16 +915,16 @@ function testScript() {
   var testArray = new Array;
   var testString = "1234567890";
   testArray.push(testString);
-  var v379 = testArray[0];
-  var v124 = v379 != testString;
+  var v377 = testArray[0];
+  var v124 = v377 != testString;
   if (v124) {
     alert("Array object push method not supported. See browser compatibility page.");
     return false;
   }
   testString = "1\n2\n3";
   var re$$2 = /^2$/m;
-  var v380 = testString.search(re$$2);
-  var v125 = v380 == -1;
+  var v378 = testString.search(re$$2);
+  var v125 = v378 == -1;
   if (v125) {
     alert("Regular expression 'm' flag not supported. See browser compatibility page.");
     return false;
@@ -944,14 +947,14 @@ function testScript() {
     return false;
   }
   var testNum = 2489.8237;
-  var v381 = testNum.toFixed(3);
-  var v128 = v381 != 2489.824;
+  var v379 = testNum.toFixed(3);
+  var v128 = v379 != 2489.824;
   if (v128) {
     alert("Number toFixed() method not supported. See browser compatibility page.");
     return false;
   }
-  var v382 = testNum.toPrecision(5);
-  var v129 = v382 != 2489.8;
+  var v380 = testNum.toPrecision(5);
+  var v129 = v380 != 2489.8;
   if (v129) {
     alert("Number toPrecision() method not supported. See browser compatibility page.");
     return false;
@@ -959,8 +962,8 @@ function testScript() {
   return true;
 }
 function verifyDigits(theNumber$$1) {
-  var v383 = theNumber$$1.search(/\d/);
-  var v130 = v383 == -1;
+  var v381 = theNumber$$1.search(/\d/);
+  var v130 = v381 == -1;
   if (v130) {
     alert("Please enter a number");
     return false;
@@ -968,26 +971,26 @@ function verifyDigits(theNumber$$1) {
   return;
 }
 function verifyEmbl(emblFile) {
-  var v590 = emblFile.search(/ID/);
-  var v551 = v590 == -1;
-  var v592 = !v551;
-  if (v592) {
-    var v591 = emblFile.search(/AC/);
-    v551 = v591 == -1;
+  var v587 = emblFile.search(/ID/);
+  var v548 = v587 == -1;
+  var v589 = !v548;
+  if (v589) {
+    var v588 = emblFile.search(/AC/);
+    v548 = v588 == -1;
   }
-  var v492 = v551;
-  var v553 = !v492;
-  if (v553) {
-    var v552 = emblFile.search(/DE/);
-    v492 = v552 == -1;
+  var v490 = v548;
+  var v550 = !v490;
+  if (v550) {
+    var v549 = emblFile.search(/DE/);
+    v490 = v549 == -1;
   }
-  var v384 = v492;
-  var v494 = !v384;
-  if (v494) {
-    var v493 = emblFile.search(/SQ/);
-    v384 = v493 == -1;
+  var v382 = v490;
+  var v492 = !v382;
+  if (v492) {
+    var v491 = emblFile.search(/SQ/);
+    v382 = v491 == -1;
   }
-  var v131 = v384;
+  var v131 = v382;
   if (v131) {
     alert("Please enter the contents of an EMBL file.");
     return false;
@@ -995,58 +998,58 @@ function verifyEmbl(emblFile) {
   return true;
 }
 function verifyMaxDigits(theNumber$$2, maxInput$$2) {
-  var v385 = theNumber$$2.search(/\d/);
-  var v132 = v385 == -1;
+  var v383 = theNumber$$2.search(/\d/);
+  var v132 = v383 == -1;
   if (v132) {
     alert("Please enter a number.");
     return false;
   }
   var v134 = theNumber$$2 > maxInput$$2;
   if (v134) {
-    var v386 = "Please enter a number less than or equal to " + maxInput$$2;
-    var v133 = v386 + ".";
+    var v384 = "Please enter a number less than or equal to " + maxInput$$2;
+    var v133 = v384 + ".";
     alert(v133);
     return false;
   }
   return;
 }
 function verifyDna(dnaSequence$$2) {
-  var v387 = dnaSequence$$2.search(/[^gatucryswkmbdhvnx\s]/i);
-  var v135 = v387 != -1;
+  var v385 = dnaSequence$$2.search(/[^gatucryswkmbdhvnx\s]/i);
+  var v135 = v385 != -1;
   if (v135) {
     alert("The sequence contains non-DNA characters, which will be omitted.");
   }
   return true;
 }
 function verifyProtein(proteinSequence) {
-  var v388 = proteinSequence.search(/[^acdefghiklmnpqrstvwyz\*\s]/i);
-  var v136 = v388 != -1;
+  var v386 = proteinSequence.search(/[^acdefghiklmnpqrstvwyz\*\s]/i);
+  var v136 = v386 != -1;
   if (v136) {
     alert("The sequence contains non-protein characters, which will be omitted.");
   }
   return true;
 }
 function verifyGenBank(genBankFile) {
-  var v593 = genBankFile.search(/LOCUS/);
-  var v554 = v593 == -1;
-  var v595 = !v554;
-  if (v595) {
-    var v594 = genBankFile.search(/DEFINITION/);
-    v554 = v594 == -1;
+  var v590 = genBankFile.search(/LOCUS/);
+  var v551 = v590 == -1;
+  var v592 = !v551;
+  if (v592) {
+    var v591 = genBankFile.search(/DEFINITION/);
+    v551 = v591 == -1;
   }
-  var v495 = v554;
-  var v556 = !v495;
-  if (v556) {
-    var v555 = genBankFile.search(/ACCESSION/);
-    v495 = v555 == -1;
+  var v493 = v551;
+  var v553 = !v493;
+  if (v553) {
+    var v552 = genBankFile.search(/ACCESSION/);
+    v493 = v552 == -1;
   }
-  var v389 = v495;
-  var v497 = !v389;
-  if (v497) {
-    var v496 = genBankFile.search(/ORIGIN/);
-    v389 = v496 == -1;
+  var v387 = v493;
+  var v495 = !v387;
+  if (v495) {
+    var v494 = genBankFile.search(/ORIGIN/);
+    v387 = v494 == -1;
   }
-  var v137 = v389;
+  var v137 = v387;
   if (v137) {
     alert("Please enter the contents of a GenBank file.");
     return false;
@@ -1054,32 +1057,32 @@ function verifyGenBank(genBankFile) {
   return true;
 }
 function verifyGenBankFeat(genBankFile$$1) {
-  var v596 = genBankFile$$1.search(/LOCUS/);
-  var v557 = v596 == -1;
-  var v598 = !v557;
-  if (v598) {
-    var v597 = genBankFile$$1.search(/DEFINITION/);
-    v557 = v597 == -1;
+  var v593 = genBankFile$$1.search(/LOCUS/);
+  var v554 = v593 == -1;
+  var v595 = !v554;
+  if (v595) {
+    var v594 = genBankFile$$1.search(/DEFINITION/);
+    v554 = v594 == -1;
   }
-  var v498 = v557;
-  var v559 = !v498;
-  if (v559) {
-    var v558 = genBankFile$$1.search(/ACCESSION/);
-    v498 = v558 == -1;
+  var v496 = v554;
+  var v556 = !v496;
+  if (v556) {
+    var v555 = genBankFile$$1.search(/ACCESSION/);
+    v496 = v555 == -1;
   }
-  var v390 = v498;
-  var v500 = !v390;
-  if (v500) {
-    var v499 = genBankFile$$1.search(/ORIGIN/);
-    v390 = v499 == -1;
+  var v388 = v496;
+  var v498 = !v388;
+  if (v498) {
+    var v497 = genBankFile$$1.search(/ORIGIN/);
+    v388 = v497 == -1;
   }
-  var v138 = v390;
+  var v138 = v388;
   if (v138) {
     alert("Please enter the contents of a GenBank file.");
     return false;
   }
-  var v391 = genBankFile$$1.search(/FEATURES {13}/);
-  var v139 = v391 == -1;
+  var v389 = genBankFile$$1.search(/FEATURES {13}/);
+  var v139 = v389 == -1;
   if (v139) {
     alert("The file has no defined features.");
     return false;
@@ -1087,32 +1090,32 @@ function verifyGenBankFeat(genBankFile$$1) {
   return true;
 }
 function verifyEmblFeat(emblFile$$1) {
-  var v599 = emblFile$$1.search(/ID/);
-  var v560 = v599 == -1;
-  var v601 = !v560;
-  if (v601) {
-    var v600 = emblFile$$1.search(/AC/);
-    v560 = v600 == -1;
+  var v596 = emblFile$$1.search(/ID/);
+  var v557 = v596 == -1;
+  var v598 = !v557;
+  if (v598) {
+    var v597 = emblFile$$1.search(/AC/);
+    v557 = v597 == -1;
   }
-  var v501 = v560;
-  var v562 = !v501;
-  if (v562) {
-    var v561 = emblFile$$1.search(/DE/);
-    v501 = v561 == -1;
+  var v499 = v557;
+  var v559 = !v499;
+  if (v559) {
+    var v558 = emblFile$$1.search(/DE/);
+    v499 = v558 == -1;
   }
-  var v392 = v501;
-  var v503 = !v392;
-  if (v503) {
-    var v502 = emblFile$$1.search(/SQ/);
-    v392 = v502 == -1;
+  var v390 = v499;
+  var v501 = !v390;
+  if (v501) {
+    var v500 = emblFile$$1.search(/SQ/);
+    v390 = v500 == -1;
   }
-  var v140 = v392;
+  var v140 = v390;
   if (v140) {
     alert("Please enter the contents of an EMBL file.");
     return false;
   }
-  var v393 = emblFile$$1.search(/^FT/m);
-  var v141 = v393 == -1;
+  var v391 = emblFile$$1.search(/^FT/m);
+  var v141 = v391 == -1;
   if (v141) {
     alert("The file has no defined features.");
     return false;
@@ -1131,13 +1134,13 @@ function writeGroupNum(text$$10, tabIn$$1, groupSize, basePerLine, startBase, st
     var v142 = i$$5 + 1;
     lineOfText = rightNum(v142, lineOfText, 8, tabIn$$1);
     var j$$6 = 1;
-    var v394 = basePerLine / groupSize;
-    var v145 = j$$6 <= v394;
+    var v392 = basePerLine / groupSize;
+    var v145 = j$$6 <= v392;
     for (;v145;) {
       var v144 = k < groupSize;
       for (;v144;) {
-        var v395 = k + i$$5;
-        var v143 = text$$10.charAt(v395);
+        var v393 = k + i$$5;
+        var v143 = text$$10.charAt(v393);
         lineOfText = lineOfText + v143;
         k = k + 1;
         v144 = k < groupSize;
@@ -1146,8 +1149,8 @@ function writeGroupNum(text$$10, tabIn$$1, groupSize, basePerLine, startBase, st
       k = 0;
       lineOfText = lineOfText + sepChar;
       j$$6++;
-      var v396 = basePerLine / groupSize;
-      v145 = j$$6 <= v396;
+      var v394 = basePerLine / groupSize;
+      v145 = j$$6 <= v394;
     }
     var v146 = outputWindow.document;
     var v147 = lineOfText + "\n";
@@ -1158,17 +1161,18 @@ function writeGroupNum(text$$10, tabIn$$1, groupSize, basePerLine, startBase, st
   return true;
 }
 function writeGroupNumDna(text$$11, tabIn$$2, groupSize$$1, basePerLine$$1, startBase$$1, stopBase$$1, strands, numberPosition) {
-  writeGroupNumDnaSetStart(text$$11, tabIn$$2, groupSize$$1, basePerLine$$1, startBase$$1, stopBase$$1, strands, numberPosition, 0);
+  writeGroupNumDnaSetStart(text$$11, tabIn$$2, groupSize$$1, basePerLine$$1, startBase$$1, stopBase$$1, strands, numberPosition);
   return true;
 }
-function writeGroupNumDnaSetStart(text$$12, tabIn$$3, groupSize$$2, basePerLine$$2, startBase$$2, stopBase$$2, strands$$1, numberPosition$$1, numberingAdjustment) {
+function writeGroupNumDnaSetStart(text$$12, tabIn$$3, groupSize$$2, basePerLine$$2, startBase$$2, stopBase$$2, strands$$1, numberPosition$$1) {
+  var numberingAdjustment = 0;
   function adjustNumbering(original, adjustment) {
     var adjusted = original + adjustment;
-    var v397 = adjustment < 0;
-    if (v397) {
-      v397 = adjusted >= 0;
+    var v395 = adjustment < 0;
+    if (v395) {
+      v395 = adjusted >= 0;
     }
-    var v149 = v397;
+    var v149 = v395;
     if (v149) {
       adjusted++;
     }
@@ -1183,111 +1187,108 @@ function writeGroupNumDnaSetStart(text$$12, tabIn$$3, groupSize$$2, basePerLine$
   groupSize$$2 = parseInt(groupSize$$2);
   basePerLine$$2 = parseInt(basePerLine$$2);
   numberingAdjustment = parseInt(numberingAdjustment);
-  var v182 = i$$6 < stopBase$$2;
-  for (;v182;) {
+  var v180 = i$$6 < stopBase$$2;
+  for (;v180;) {
     lineNum = i$$6 + 1;
     var j$$7 = 1;
-    var v398 = basePerLine$$2 / groupSize$$2;
-    var v158 = j$$7 <= v398;
-    for (;v158;) {
-      var v153 = k$$1 < groupSize$$2;
-      for (;v153;) {
-        var v399 = i$$6 + k$$1;
-        var v150 = v399 >= stopBase$$2;
+    var v396 = basePerLine$$2 / groupSize$$2;
+    var v156 = j$$7 <= v396;
+    for (;v156;) {
+      var v152 = k$$1 < groupSize$$2;
+      for (;v152;) {
+        var v397 = i$$6 + k$$1;
+        var v150 = v397 >= stopBase$$2;
         if (v150) {
           break;
         }
-        var v151 = lineOfText$$1;
-        var v400 = k$$1 + i$$6;
-        var v152 = text$$12.charAt(v400);
-        lineOfText$$1 = v151 + v152;
+        var v398 = k$$1 + i$$6;
+        var v151 = text$$12.charAt(v398);
+        lineOfText$$1 = lineOfText$$1 + v151;
         k$$1 = k$$1 + 1;
-        v153 = k$$1 < groupSize$$2;
+        v152 = k$$1 < groupSize$$2;
       }
       lineOfText$$1 = lineOfText$$1 + sepChar$$1;
       i$$6 = i$$6 + k$$1;
-      var v156 = numberPosition$$1 == "above";
-      if (v156) {
-        var v154 = aboveNum;
-        var v401 = adjustNumbering(i$$6, numberingAdjustment);
-        var v155 = rightNum(v401, "", groupSize$$2, tabIn$$3);
-        aboveNum = v154 + v155;
+      var v154 = numberPosition$$1 == "above";
+      if (v154) {
+        var v399 = adjustNumbering(i$$6, numberingAdjustment);
+        var v153 = rightNum(v399, "", groupSize$$2, tabIn$$3);
+        aboveNum = aboveNum + v153;
       }
-      var v157 = i$$6 >= stopBase$$2;
-      if (v157) {
+      var v155 = i$$6 >= stopBase$$2;
+      if (v155) {
         break;
       }
       k$$1 = 0;
       j$$7++;
-      var v402 = basePerLine$$2 / groupSize$$2;
-      v158 = j$$7 <= v402;
+      var v400 = basePerLine$$2 / groupSize$$2;
+      v156 = j$$7 <= v400;
     }
-    var v181 = numberPosition$$1 == "left";
-    if (v181) {
-      var v159 = outputWindow.document;
-      var v563 = adjustNumbering(lineNum, numberingAdjustment);
-      var v504 = rightNum(v563, "", 8, tabIn$$3);
-      var v403 = v504 + lineOfText$$1;
-      var v160 = v403 + "\n";
-      v159.write(v160);
-      var v164 = strands$$1 == "two";
-      if (v164) {
+    var v179 = numberPosition$$1 == "left";
+    if (v179) {
+      var v157 = outputWindow.document;
+      var v560 = adjustNumbering(lineNum, numberingAdjustment);
+      var v502 = rightNum(v560, "", 8, tabIn$$3);
+      var v401 = v502 + lineOfText$$1;
+      var v158 = v401 + "\n";
+      v157.write(v158);
+      var v162 = strands$$1 == "two";
+      if (v162) {
+        var v159 = outputWindow.document;
+        var v561 = adjustNumbering(lineNum, numberingAdjustment);
+        var v503 = rightNum(v561, "", 8, tabIn$$3);
+        var v504 = complement(lineOfText$$1);
+        var v402 = v503 + v504;
+        var v160 = v402 + "\n";
+        v159.write(v160);
         var v161 = outputWindow.document;
-        var v564 = adjustNumbering(lineNum, numberingAdjustment);
-        var v505 = rightNum(v564, "", 8, tabIn$$3);
-        var v506 = complement(lineOfText$$1);
-        var v404 = v505 + v506;
-        var v162 = v404 + "\n";
-        v161.write(v162);
-        var v163 = outputWindow.document;
-        v163.write("\n");
+        v161.write("\n");
       }
     } else {
-      var v180 = numberPosition$$1 == "right";
-      if (v180) {
-        var v165 = outputWindow.document;
-        var v507 = lineOfText$$1;
-        var v508 = adjustNumbering(i$$6, numberingAdjustment);
-        var v405 = v507 + v508;
-        var v166 = v405 + "\n";
-        v165.write(v166);
-        var v170 = strands$$1 == "two";
-        if (v170) {
+      var v178 = numberPosition$$1 == "right";
+      if (v178) {
+        var v163 = outputWindow.document;
+        var v505 = adjustNumbering(i$$6, numberingAdjustment);
+        var v403 = lineOfText$$1 + v505;
+        var v164 = v403 + "\n";
+        v163.write(v164);
+        var v168 = strands$$1 == "two";
+        if (v168) {
+          var v165 = outputWindow.document;
+          var v506 = complement(lineOfText$$1);
+          var v507 = adjustNumbering(i$$6, numberingAdjustment);
+          var v404 = v506 + v507;
+          var v166 = v404 + "\n";
+          v165.write(v166);
           var v167 = outputWindow.document;
-          var v509 = complement(lineOfText$$1);
-          var v510 = adjustNumbering(i$$6, numberingAdjustment);
-          var v406 = v509 + v510;
-          var v168 = v406 + "\n";
-          v167.write(v168);
-          var v169 = outputWindow.document;
-          v169.write("\n");
+          v167.write("\n");
         }
       } else {
-        var v179 = numberPosition$$1 == "above";
-        if (v179) {
+        var v177 = numberPosition$$1 == "above";
+        if (v177) {
+          var v169 = outputWindow.document;
+          var v170 = aboveNum + "\n";
+          v169.write(v170);
           var v171 = outputWindow.document;
-          var v172 = aboveNum + "\n";
+          var v172 = lineOfText$$1 + "\n";
           v171.write(v172);
-          var v173 = outputWindow.document;
-          var v174 = lineOfText$$1 + "\n";
-          v173.write(v174);
-          var v178 = strands$$1 == "two";
-          if (v178) {
+          var v176 = strands$$1 == "two";
+          if (v176) {
+            var v173 = outputWindow.document;
+            var v405 = complement(lineOfText$$1);
+            var v174 = v405 + "\n";
+            v173.write(v174);
             var v175 = outputWindow.document;
-            var v407 = complement(lineOfText$$1);
-            var v176 = v407 + "\n";
-            v175.write(v176);
-            var v177 = outputWindow.document;
-            v177.write("\n");
+            v175.write("\n");
           }
         }
       }
     }
     aboveNum = "";
     lineOfText$$1 = "";
-    v182 = i$$6 < stopBase$$2;
+    v180 = i$$6 < stopBase$$2;
   }
-  return true;
+  return;
 }
 function writeGroupNumProtein(text$$13, tabIn$$4, groupSize$$3, basePerLine$$3, startBase$$3, stopBase$$3, numberPosition$$2) {
   var i$$7 = parseInt(startBase$$3);
@@ -1298,71 +1299,71 @@ function writeGroupNumProtein(text$$13, tabIn$$4, groupSize$$3, basePerLine$$3, 
   var aboveNum$$1 = "";
   groupSize$$3 = parseInt(groupSize$$3);
   basePerLine$$3 = parseInt(basePerLine$$3);
-  var v201 = i$$7 < stopBase$$3;
-  for (;v201;) {
+  var v199 = i$$7 < stopBase$$3;
+  for (;v199;) {
     lineNum$$1 = i$$7 + 1;
     var j$$8 = 1;
-    var v408 = basePerLine$$3 / groupSize$$3;
-    var v189 = j$$8 <= v408;
-    for (;v189;) {
-      var v185 = k$$2 < groupSize$$3;
-      for (;v185;) {
-        var v409 = i$$7 + k$$2;
-        var v183 = v409 >= stopBase$$3;
-        if (v183) {
+    var v406 = basePerLine$$3 / groupSize$$3;
+    var v187 = j$$8 <= v406;
+    for (;v187;) {
+      var v183 = k$$2 < groupSize$$3;
+      for (;v183;) {
+        var v407 = i$$7 + k$$2;
+        var v181 = v407 >= stopBase$$3;
+        if (v181) {
           break;
         }
-        var v410 = k$$2 + i$$7;
-        var v184 = text$$13.charAt(v410);
-        lineOfText$$2 = lineOfText$$2 + v184;
+        var v408 = k$$2 + i$$7;
+        var v182 = text$$13.charAt(v408);
+        lineOfText$$2 = lineOfText$$2 + v182;
         k$$2 = k$$2 + 1;
-        v185 = k$$2 < groupSize$$3;
+        v183 = k$$2 < groupSize$$3;
       }
       lineOfText$$2 = lineOfText$$2 + sepChar$$2;
       i$$7 = i$$7 + k$$2;
-      var v187 = numberPosition$$2 == "above";
-      if (v187) {
-        var v186 = rightNum(i$$7, "", groupSize$$3, tabIn$$4);
-        aboveNum$$1 = aboveNum$$1 + v186;
+      var v185 = numberPosition$$2 == "above";
+      if (v185) {
+        var v184 = rightNum(i$$7, "", groupSize$$3, tabIn$$4);
+        aboveNum$$1 = aboveNum$$1 + v184;
       }
-      var v188 = i$$7 >= stopBase$$3;
-      if (v188) {
+      var v186 = i$$7 >= stopBase$$3;
+      if (v186) {
         break;
       }
       k$$2 = 0;
       j$$8++;
-      var v411 = basePerLine$$3 / groupSize$$3;
-      v189 = j$$8 <= v411;
+      var v409 = basePerLine$$3 / groupSize$$3;
+      v187 = j$$8 <= v409;
     }
-    var v200 = numberPosition$$2 == "left";
-    if (v200) {
-      var v190 = outputWindow.document;
-      var v511 = rightNum(lineNum$$1, "", 8, tabIn$$4);
-      var v412 = v511 + lineOfText$$2;
-      var v191 = v412 + "\n";
-      v190.write(v191);
+    var v198 = numberPosition$$2 == "left";
+    if (v198) {
+      var v188 = outputWindow.document;
+      var v508 = rightNum(lineNum$$1, "", 8, tabIn$$4);
+      var v410 = v508 + lineOfText$$2;
+      var v189 = v410 + "\n";
+      v188.write(v189);
     } else {
-      var v199 = numberPosition$$2 == "right";
-      if (v199) {
-        var v192 = outputWindow.document;
-        var v413 = lineOfText$$2 + i$$7;
-        var v193 = v413 + "\n";
-        v192.write(v193);
+      var v197 = numberPosition$$2 == "right";
+      if (v197) {
+        var v190 = outputWindow.document;
+        var v411 = lineOfText$$2 + i$$7;
+        var v191 = v411 + "\n";
+        v190.write(v191);
       } else {
-        var v198 = numberPosition$$2 == "above";
-        if (v198) {
+        var v196 = numberPosition$$2 == "above";
+        if (v196) {
+          var v192 = outputWindow.document;
+          var v193 = aboveNum$$1 + "\n";
+          v192.write(v193);
           var v194 = outputWindow.document;
-          var v195 = aboveNum$$1 + "\n";
+          var v195 = lineOfText$$2 + "\n";
           v194.write(v195);
-          var v196 = outputWindow.document;
-          var v197 = lineOfText$$2 + "\n";
-          v196.write(v197);
         }
       }
     }
     aboveNum$$1 = "";
     lineOfText$$2 = "";
-    v201 = i$$7 < stopBase$$3;
+    v199 = i$$7 < stopBase$$3;
   }
   return true;
 }
@@ -1375,71 +1376,71 @@ function writeMutatedSequence(sequence$$13, components$$1, numMut, firstIndexToM
   numMut = parseInt(numMut);
   firstIndexToMutate = parseInt(firstIndexToMutate);
   lastIndexToMutate = parseInt(lastIndexToMutate);
-  var v565 = sequence$$13.length;
-  var v512 = v565 <= firstIndexToMutate;
-  var v566 = !v512;
-  if (v566) {
-    v512 = lastIndexToMutate < 0;
+  var v562 = sequence$$13.length;
+  var v509 = v562 <= firstIndexToMutate;
+  var v563 = !v509;
+  if (v563) {
+    v509 = lastIndexToMutate < 0;
   }
-  var v414 = v512;
-  var v513 = !v414;
-  if (v513) {
-    v414 = lastIndexToMutate <= firstIndexToMutate;
+  var v412 = v509;
+  var v510 = !v412;
+  if (v510) {
+    v412 = lastIndexToMutate <= firstIndexToMutate;
   }
-  var v202 = v414;
-  if (v202) {
+  var v200 = v412;
+  if (v200) {
     numMut = 0;
   }
   var i$$8 = 0;
-  var v210 = i$$8 < numMut;
-  for (;v210;) {
+  var v208 = i$$8 < numMut;
+  for (;v208;) {
     maxNum = sequence$$13.length;
-    var v415 = Math.random();
-    var v203 = v415 * maxNum;
-    randNum = Math.floor(v203);
-    var v416 = randNum < firstIndexToMutate;
-    var v514 = !v416;
-    if (v514) {
-      v416 = randNum > lastIndexToMutate;
+    var v413 = Math.random();
+    var v201 = v413 * maxNum;
+    randNum = Math.floor(v201);
+    var v414 = randNum < firstIndexToMutate;
+    var v511 = !v414;
+    if (v511) {
+      v414 = randNum > lastIndexToMutate;
     }
-    var v204 = v416;
-    if (v204) {
+    var v202 = v414;
+    if (v202) {
       numMut++;
       i$$8++;
-      v210 = i$$8 < numMut;
+      v208 = i$$8 < numMut;
       continue;
     }
     currentChar = sequence$$13.charAt(randNum);
     needNewChar = true;
     for (;needNewChar;) {
-      var v417 = Math.random();
-      var v418 = components$$1.length;
-      var v205 = v417 * v418;
-      componentsIndex = Math.round(v205);
-      var v419 = components$$1.length;
-      var v206 = componentsIndex == v419;
-      if (v206) {
+      var v415 = Math.random();
+      var v416 = components$$1.length;
+      var v203 = v415 * v416;
+      componentsIndex = Math.round(v203);
+      var v417 = components$$1.length;
+      var v204 = componentsIndex == v417;
+      if (v204) {
         componentsIndex = 0;
       }
-      var v420 = components$$1[componentsIndex];
-      var v207 = v420 != currentChar;
-      if (v207) {
+      var v418 = components$$1[componentsIndex];
+      var v205 = v418 != currentChar;
+      if (v205) {
         needNewChar = false;
       }
     }
-    var v421 = sequence$$13.substring(0, randNum);
-    var v422 = components$$1[componentsIndex];
-    var v208 = v421 + v422;
-    var v423 = randNum + 1;
-    var v424 = sequence$$13.length;
-    var v209 = sequence$$13.substring(v423, v424);
-    sequence$$13 = v208 + v209;
+    var v419 = sequence$$13.substring(0, randNum);
+    var v420 = components$$1[componentsIndex];
+    var v206 = v419 + v420;
+    var v421 = randNum + 1;
+    var v422 = sequence$$13.length;
+    var v207 = sequence$$13.substring(v421, v422);
+    sequence$$13 = v206 + v207;
     i$$8++;
-    v210 = i$$8 < numMut;
+    v208 = i$$8 < numMut;
   }
-  var v211 = outputWindow.document;
-  var v212 = addReturns(sequence$$13);
-  v211.write(v212);
+  var v209 = outputWindow.document;
+  var v210 = addReturns(sequence$$13);
+  v209.write(v210);
   return true;
 }
 function writeRandomSequence(components$$2, lengthOut$$1) {
@@ -1447,28 +1448,28 @@ function writeRandomSequence(components$$2, lengthOut$$1) {
   var tempNum$$1 = 0;
   var tempChar$$1 = "";
   var j$$9 = 0;
-  var v217 = j$$9 < lengthOut$$1;
-  for (;v217;) {
-    var v425 = Math.random();
-    var v426 = components$$2.length;
-    var v213 = v425 * v426;
-    tempNum$$1 = Math.floor(v213);
+  var v215 = j$$9 < lengthOut$$1;
+  for (;v215;) {
+    var v423 = Math.random();
+    var v424 = components$$2.length;
+    var v211 = v423 * v424;
+    tempNum$$1 = Math.floor(v211);
     tempChar$$1 = components$$2[tempNum$$1];
     sequence$$14 = sequence$$14 + tempChar$$1;
-    var v427 = sequence$$14.length;
-    var v216 = v427 == 60;
-    if (v216) {
-      var v214 = outputWindow.document;
-      var v215 = sequence$$14 + "\n";
-      v214.write(v215);
+    var v425 = sequence$$14.length;
+    var v214 = v425 == 60;
+    if (v214) {
+      var v212 = outputWindow.document;
+      var v213 = sequence$$14 + "\n";
+      v212.write(v213);
       sequence$$14 = "";
     }
     j$$9++;
-    v217 = j$$9 < lengthOut$$1;
+    v215 = j$$9 < lengthOut$$1;
   }
-  var v218 = outputWindow.document;
-  var v219 = sequence$$14 + "\n";
-  v218.write(v219);
+  var v216 = outputWindow.document;
+  var v217 = sequence$$14 + "\n";
+  v216.write(v217);
   return true;
 }
 function writeRestrictionSites(sequence$$15, arrayOfItems, dnaConformation) {
@@ -1484,86 +1485,86 @@ function writeRestrictionSites(sequence$$15, arrayOfItems, dnaConformation) {
   var backGroundClass;
   var matchArray$$1;
   var timesFound = 0;
-  var v223 = dnaConformation == "circular";
-  if (v223) {
+  var v221 = dnaConformation == "circular";
+  if (v221) {
+    var v218 = sequence$$15.substring(0, lookAhead);
+    shiftValue = v218.length;
+    var v564 = sequence$$15.length;
+    var v512 = v564 - lookAhead;
+    var v513 = sequence$$15.length;
+    var v426 = sequence$$15.substring(v512, v513);
+    var v219 = v426 + sequence$$15;
     var v220 = sequence$$15.substring(0, lookAhead);
-    shiftValue = v220.length;
-    var v567 = sequence$$15.length;
-    var v515 = v567 - lookAhead;
-    var v516 = sequence$$15.length;
-    var v428 = sequence$$15.substring(v515, v516);
-    var v221 = v428 + sequence$$15;
-    var v222 = sequence$$15.substring(0, lookAhead);
-    sequence$$15 = v221 + v222;
+    sequence$$15 = v219 + v220;
     lowerLimit = 0 + shiftValue;
     upperLimit = upperLimit + shiftValue;
   }
-  var v224 = outputWindow.document;
-  v224.write('<table border="1" width="100%" cellspacing="0" cellpadding="2"><tbody>\n');
-  var v225 = outputWindow.document;
-  var v568 = '<tr><td class="title" width="200px">' + "Site:";
-  var v517 = v568 + '</td><td class="title">';
-  var v429 = v517 + "Positions:";
-  var v226 = v429 + "</td></tr>\n";
-  v225.write(v226);
+  var v222 = outputWindow.document;
+  v222.write('<table border="1" width="100%" cellspacing="0" cellpadding="2"><tbody>\n');
+  var v223 = outputWindow.document;
+  var v565 = '<tr><td class="title" width="200px">' + "Site:";
+  var v514 = v565 + '</td><td class="title">';
+  var v427 = v514 + "Positions:";
+  var v224 = v427 + "</td></tr>\n";
+  v223.write(v224);
   var i$$9 = 0;
-  var v430 = arrayOfItems.length;
-  var v242 = i$$9 < v430;
-  for (;v242;) {
+  var v428 = arrayOfItems.length;
+  var v240 = i$$9 < v428;
+  for (;v240;) {
     tempString$$1 = "none";
     backGroundClass = "many";
-    var v431 = arrayOfItems[i$$9];
-    var v227 = v431.match(/\/.+\//);
-    matchExp = v227 + "gi";
+    var v429 = arrayOfItems[i$$9];
+    var v225 = v429.match(/\/.+\//);
+    matchExp = v225 + "gi";
     matchPosition = 0;
     matchExp = eval(matchExp);
-    var v569 = arrayOfItems[i$$9];
-    var v518 = v569.match(/\)\D*\d+/);
-    var v432 = v518.toString();
-    var v228 = v432.replace(/\)\D*/, "");
-    cutDistance = parseFloat(v228);
-    var v234 = matchArray$$1 = matchExp.exec(sequence$$15);
-    for (;v234;) {
-      var v229 = matchExp.lastIndex;
-      matchPosition = v229 - cutDistance;
-      var v433 = matchPosition >= lowerLimit;
-      if (v433) {
-        v433 = matchPosition < upperLimit;
+    var v566 = arrayOfItems[i$$9];
+    var v515 = v566.match(/\)\D*\d+/);
+    var v430 = v515.toString();
+    var v226 = v430.replace(/\)\D*/, "");
+    cutDistance = parseFloat(v226);
+    var v232 = matchArray$$1 = matchExp.exec(sequence$$15);
+    for (;v232;) {
+      var v227 = matchExp.lastIndex;
+      matchPosition = v227 - cutDistance;
+      var v431 = matchPosition >= lowerLimit;
+      if (v431) {
+        v431 = matchPosition < upperLimit;
       }
-      var v232 = v433;
-      if (v232) {
+      var v230 = v431;
+      if (v230) {
         timesFound++;
-        var v230 = tempString$$1 + ", ";
-        var v434 = matchPosition - shiftValue;
-        var v231 = v434 + 1;
-        tempString$$1 = v230 + v231;
+        var v228 = tempString$$1 + ", ";
+        var v432 = matchPosition - shiftValue;
+        var v229 = v432 + 1;
+        tempString$$1 = v228 + v229;
       }
-      var v435 = matchExp.lastIndex;
-      var v519 = RegExp.lastMatch;
-      var v436 = v519.length;
-      var v233 = v435 - v436;
-      matchExp.lastIndex = v233 + 1;
-      v234 = matchArray$$1 = matchExp.exec(sequence$$15);
+      var v433 = matchExp.lastIndex;
+      var v516 = RegExp.lastMatch;
+      var v434 = v516.length;
+      var v231 = v433 - v434;
+      matchExp.lastIndex = v231 + 1;
+      v232 = matchArray$$1 = matchExp.exec(sequence$$15);
     }
-    var v437 = tempString$$1.search(/\d/);
-    var v235 = v437 != -1;
-    if (v235) {
+    var v435 = tempString$$1.search(/\d/);
+    var v233 = v435 != -1;
+    if (v233) {
       tempString$$1 = tempString$$1.replace(/none,\s*/, "");
     }
-    var v239 = timesFound == 0;
-    if (v239) {
+    var v237 = timesFound == 0;
+    if (v237) {
       backGroundClass = "none";
     } else {
-      var v238 = timesFound == 1;
-      if (v238) {
+      var v236 = timesFound == 1;
+      if (v236) {
         backGroundClass = "one";
       } else {
-        var v237 = timesFound == 2;
-        if (v237) {
+        var v235 = timesFound == 2;
+        if (v235) {
           backGroundClass = "two";
         } else {
-          var v236 = timesFound == 3;
-          if (v236) {
+          var v234 = timesFound == 3;
+          if (v234) {
             backGroundClass = "three";
           } else {
             backGroundClass = "many";
@@ -1571,92 +1572,92 @@ function writeRestrictionSites(sequence$$15, arrayOfItems, dnaConformation) {
         }
       }
     }
-    var v240 = outputWindow.document;
-    var v643 = '<tr><td class="' + backGroundClass;
-    var v631 = v643 + '">';
-    var v663 = arrayOfItems[i$$9];
-    var v654 = v663.match(/\([^\(]+\)/);
-    var v644 = v654.toString();
-    var v632 = v644.replace(/\(|\)/g, "");
-    var v619 = v631 + v632;
-    var v602 = v619 + '</td><td class="';
-    var v570 = v602 + backGroundClass;
-    var v520 = v570 + '">';
-    var v438 = v520 + tempString$$1;
-    var v241 = v438 + "</td></tr>\n";
-    v240.write(v241);
+    var v238 = outputWindow.document;
+    var v640 = '<tr><td class="' + backGroundClass;
+    var v628 = v640 + '">';
+    var v660 = arrayOfItems[i$$9];
+    var v651 = v660.match(/\([^\(]+\)/);
+    var v641 = v651.toString();
+    var v629 = v641.replace(/\(|\)/g, "");
+    var v616 = v628 + v629;
+    var v599 = v616 + '</td><td class="';
+    var v567 = v599 + backGroundClass;
+    var v517 = v567 + '">';
+    var v436 = v517 + tempString$$1;
+    var v239 = v436 + "</td></tr>\n";
+    v238.write(v239);
     timesFound = 0;
     i$$9++;
-    var v439 = arrayOfItems.length;
-    v242 = i$$9 < v439;
+    var v437 = arrayOfItems.length;
+    v240 = i$$9 < v437;
   }
-  var v243 = outputWindow.document;
-  v243.write("</tbody></table>\n");
+  var v241 = outputWindow.document;
+  v241.write("</tbody></table>\n");
   return true;
 }
 function writeSequenceStats(sequence$$16, arrayOfItems$$1) {
   var originalLength = sequence$$16.length;
-  var v244 = outputWindow.document;
-  v244.write('<table border="1" width="100%" cellspacing="0" cellpadding="2"><tbody>\n');
-  var v245 = outputWindow.document;
-  var v620 = '<tr><td class="title">' + "Pattern:";
-  var v603 = v620 + '</td><td class="title">';
-  var v571 = v603 + "Times found:";
-  var v521 = v571 + '</td><td class="title">';
-  var v440 = v521 + "Percentage:";
-  var v246 = v440 + "</td></tr>\n";
-  v245.write(v246);
+  var v242 = outputWindow.document;
+  v242.write('<table border="1" width="100%" cellspacing="0" cellpadding="2"><tbody>\n');
+  var v243 = outputWindow.document;
+  var v617 = '<tr><td class="title">' + "Pattern:";
+  var v600 = v617 + '</td><td class="title">';
+  var v568 = v600 + "Times found:";
+  var v518 = v568 + '</td><td class="title">';
+  var v438 = v518 + "Percentage:";
+  var v244 = v438 + "</td></tr>\n";
+  v243.write(v244);
   var i$$10 = 0;
-  var v441 = arrayOfItems$$1.length;
-  var v255 = i$$10 < v441;
-  for (;v255;) {
+  var v439 = arrayOfItems$$1.length;
+  var v253 = i$$10 < v439;
+  for (;v253;) {
     var tempNumber = 0;
-    var v442 = arrayOfItems$$1[i$$10];
-    var v247 = v442.match(/\/[^\/]+\//);
-    var matchExp$$1 = v247 + "gi";
+    var v440 = arrayOfItems$$1[i$$10];
+    var v245 = v440.match(/\/[^\/]+\//);
+    var matchExp$$1 = v245 + "gi";
     matchExp$$1 = eval(matchExp$$1);
-    var v443 = sequence$$16.search(matchExp$$1);
-    var v249 = v443 != -1;
-    if (v249) {
-      var v248 = sequence$$16.match(matchExp$$1);
-      tempNumber = v248.length;
+    var v441 = sequence$$16.search(matchExp$$1);
+    var v247 = v441 != -1;
+    if (v247) {
+      var v246 = sequence$$16.match(matchExp$$1);
+      tempNumber = v246.length;
     }
     var percentage = 0;
-    var v522 = originalLength + 1;
-    var v604 = arrayOfItems$$1[i$$10];
-    var v572 = v604.match(/\d+/);
-    var v523 = parseFloat(v572);
-    var v444 = v522 - v523;
-    var v252 = v444 > 0;
-    if (v252) {
-      var v250 = 100 * tempNumber;
-      var v445 = originalLength + 1;
-      var v573 = arrayOfItems$$1[i$$10];
-      var v524 = v573.match(/\d+/);
-      var v446 = parseFloat(v524);
-      var v251 = v445 - v446;
-      percentage = v250 / v251;
+    var v519 = originalLength + 1;
+    var v601 = arrayOfItems$$1[i$$10];
+    var v569 = v601.match(/\d+/);
+    var v520 = parseFloat(v569);
+    var v442 = v519 - v520;
+    var v250 = v442 > 0;
+    if (v250) {
+      var v248 = 100 * tempNumber;
+      var v443 = originalLength + 1;
+      var v570 = arrayOfItems$$1[i$$10];
+      var v521 = v570.match(/\d+/);
+      var v444 = parseFloat(v521);
+      var v249 = v443 - v444;
+      percentage = v248 / v249;
     }
-    var v253 = outputWindow.document;
-    var v664 = arrayOfItems$$1[i$$10];
-    var v655 = v664.match(/\([^\(]+\)\b/);
-    var v645 = v655.toString();
-    var v633 = v645.replace(/\(|\)/g, "");
-    var v621 = "<tr><td>" + v633;
-    var v605 = v621 + "</td><td>";
-    var v574 = v605 + tempNumber;
-    var v525 = v574 + "</td><td>";
-    var v526 = percentage.toFixed(2);
-    var v447 = v525 + v526;
-    var v254 = v447 + "</td></tr>\n";
-    v253.write(v254);
+    var v251 = outputWindow.document;
+    var v661 = arrayOfItems$$1[i$$10];
+    var v652 = v661.match(/\([^\(]+\)\b/);
+    var v642 = v652.toString();
+    var v630 = v642.replace(/\(|\)/g, "");
+    var v618 = "<tr><td>" + v630;
+    var v602 = v618 + "</td><td>";
+    var v571 = v602 + tempNumber;
+    var v522 = v571 + "</td><td>";
+    var v523 = percentage.toFixed(2);
+    var v445 = v522 + v523;
+    var v252 = v445 + "</td></tr>\n";
+    v251.write(v252);
     i$$10++;
-    var v448 = arrayOfItems$$1.length;
-    v255 = i$$10 < v448;
+    var v446 = arrayOfItems$$1.length;
+    v253 = i$$10 < v446;
   }
-  var v256 = outputWindow.document;
-  v256.write("</tbody></table>\n");
-  return true;
+  var v254 = outputWindow.document;
+  v254.write("</tbody></table>\n");
+  return;
 }
 function writeShuffledSequence(sequence$$17) {
   var tempSeq = "";
@@ -1665,98 +1666,99 @@ function writeShuffledSequence(sequence$$17) {
   var tempString2 = "";
   var randNum$$1 = 0;
   var maxNum$$1 = 0;
-  var v449 = sequence$$17.length;
-  var v263 = v449 > 0;
-  for (;v263;) {
+  var v447 = sequence$$17.length;
+  var v261 = v447 > 0;
+  for (;v261;) {
     maxNum$$1 = sequence$$17.length;
-    var v450 = Math.random();
-    var v257 = v450 * maxNum$$1;
-    randNum$$1 = Math.floor(v257);
+    var v448 = Math.random();
+    var v255 = v448 * maxNum$$1;
+    randNum$$1 = Math.floor(v255);
     tempChar$$2 = sequence$$17.charAt(randNum$$1);
     tempSeq = tempSeq + tempChar$$2;
     tempString1 = sequence$$17.substring(0, randNum$$1);
-    var v258 = randNum$$1 + 1;
-    var v259 = sequence$$17.length;
-    tempString2 = sequence$$17.substring(v258, v259);
+    var v256 = randNum$$1 + 1;
+    var v257 = sequence$$17.length;
+    tempString2 = sequence$$17.substring(v256, v257);
     sequence$$17 = tempString1 + tempString2;
-    var v451 = tempSeq.length;
-    var v262 = v451 == 60;
-    if (v262) {
-      var v260 = outputWindow.document;
-      var v261 = tempSeq + "\n";
-      v260.write(v261);
+    var v449 = tempSeq.length;
+    var v260 = v449 == 60;
+    if (v260) {
+      var v258 = outputWindow.document;
+      var v259 = tempSeq + "\n";
+      v258.write(v259);
       tempSeq = "";
     }
-    var v452 = sequence$$17.length;
-    v263 = v452 > 0;
+    var v450 = sequence$$17.length;
+    v261 = v450 > 0;
   }
-  var v264 = outputWindow.document;
-  var v265 = tempSeq + "\n";
-  v264.write(v265);
+  var v262 = outputWindow.document;
+  var v263 = tempSeq + "\n";
+  v262.write(v263);
   return true;
 }
-function proteinStats(theDocument) {
+function proteinStats() {
+  var theDocument = document;
   var newProtein = "";
   var title$$9 = "";
   var maxInput$$3 = 5E5;
-  var v453 = testScript();
-  var v266 = v453 == false;
-  if (v266) {
-    return false;
+  var v451 = testScript();
+  var v264 = v451 == false;
+  if (v264) {
+    return;
   }
-  var v634 = theDocument.forms;
-  var v622 = v634[0];
-  var v606 = v622.elements;
-  var v575 = v606[0];
-  var v527 = checkFormElement(v575);
-  var v454 = v527 == false;
-  var v529 = !v454;
-  if (v529) {
-    var v646 = theDocument.forms;
-    var v635 = v646[0];
-    var v623 = v635.elements;
-    var v607 = v623[0];
-    var v576 = v607.value;
-    var v528 = checkSequenceLength(v576, maxInput$$3);
-    v454 = v528 == false;
+  var v631 = theDocument.forms;
+  var v619 = v631[0];
+  var v603 = v619.elements;
+  var v572 = v603[0];
+  var v524 = checkFormElement(v572);
+  var v452 = v524 == false;
+  var v526 = !v452;
+  if (v526) {
+    var v643 = theDocument.forms;
+    var v632 = v643[0];
+    var v620 = v632.elements;
+    var v604 = v620[0];
+    var v573 = v604.value;
+    var v525 = checkSequenceLength(v573, maxInput$$3);
+    v452 = v525 == false;
   }
-  var v267 = v454;
-  if (v267) {
-    return false;
+  var v265 = v452;
+  if (v265) {
+    return;
   }
   var itemsToCheck = ["/A/ (A)1", "/B/ (B)1", "/C/ (C)1", "/D/ (D)1", "/E/ (E)1", "/F/ (F)1", "/G/ (G)1", "/H/ (H)1", "/I/ (I)1", "/K/ (K)1", "/L/ (L)1", "/M/ (M)1", "/N/ (N)1", "/P/ (P)1", "/Q/ (Q)1", "/R/ (R)1", "/S/ (S)1", "/T/ (T)1", "/V/ (V)1", "/W/ (W)1", "/X/ (X)1", "/Y/ (Y)1", "/Z/ (Z)1", "/[GAVLI]/ (Aliphatic G,A,V,L,I)1", "/[FWY]/ (Aromatic F,W,Y)1", "/[CM]/ (Sulphur C,M)1", "/[KRH]/ (Basic K,R,H)1", "/[BDENQZ]/ (Acidic B,D,E,N,Q,Z)1", "/[ST]/ (Aliphatic hydroxyl S,T)1", "/[ZEQRCMVILYW]/ (tRNA synthetase class I Z,E,Q,R,C,M,V,I,L,Y,W)1", 
   "/[BGAPSTHDNKF]/ (tRNA synthetase class II B,G,A,P,S,T,H,D,N,K,F)1"];
-  openWindow("Protein Stats");
-  var v608 = theDocument.forms;
-  var v577 = v608[0];
-  var v530 = v577.elements;
-  var v455 = v530[0];
-  var v268 = v455.value;
-  var arrayOfFasta$$1 = getArrayOfFasta(v268);
+  openWindow();
+  var v605 = theDocument.forms;
+  var v574 = v605[0];
+  var v527 = v574.elements;
+  var v453 = v527[0];
+  var v266 = v453.value;
+  var arrayOfFasta$$1 = getArrayOfFasta(v266);
   var i$$11 = 0;
-  var v456 = arrayOfFasta$$1.length;
-  var v274 = i$$11 < v456;
-  for (;v274;) {
-    var v269 = arrayOfFasta$$1[i$$11];
-    newProtein = getSequenceFromFasta(v269);
-    var v270 = arrayOfFasta$$1[i$$11];
-    title$$9 = getTitleFromFasta(v270);
+  var v454 = arrayOfFasta$$1.length;
+  var v272 = i$$11 < v454;
+  for (;v272;) {
+    var v267 = arrayOfFasta$$1[i$$11];
+    newProtein = getSequenceFromFasta(v267);
+    var v268 = arrayOfFasta$$1[i$$11];
+    title$$9 = getTitleFromFasta(v268);
     newProtein = removeNonProteinAllowDegen(newProtein);
-    var v271 = outputWindow.document;
-    var v272 = getInfoFromTitleAndSequence(title$$9, newProtein);
-    v271.write(v272);
+    var v269 = outputWindow.document;
+    var v270 = getInfoFromTitleAndSequence(title$$9, newProtein);
+    v269.write(v270);
     writeSequenceStats(newProtein, itemsToCheck);
-    var v273 = outputWindow.document;
-    v273.write("<br />\n<br />\n");
+    var v271 = outputWindow.document;
+    v271.write("<br />\n<br />\n");
     i$$11++;
-    var v457 = arrayOfFasta$$1.length;
-    v274 = i$$11 < v457;
+    var v455 = arrayOfFasta$$1.length;
+    v272 = i$$11 < v455;
   }
   closeWindow();
-  return true;
+  return;
 }
 document.onload = v2;
-var v275 = document.getElementById("submitbtn");
-v275.onclick = v3;
-var v276 = document.getElementById("clearbtn");
-v276.onclick = v4
+var v273 = document.getElementById("submitbtn");
+v273.onclick = v3;
+var v274 = document.getElementById("clearbtn");
+v274.onclick = v4

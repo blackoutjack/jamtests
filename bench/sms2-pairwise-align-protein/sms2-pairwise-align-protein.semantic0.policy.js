@@ -75,6 +75,49 @@ var policy = function() {
   p6.subsumedBy = pFull;
   p6.itype = "write";
   Object.freeze(p6);
+  function p24(tx) {
+    var commit = true;
+    var as = tx.getActionSequence();
+    var len = as.length;
+    for (var i = 0;i < len;i++) {
+      var node = as[i];
+      if (node.type === "call" && (JAM.identical(node.value, _HTMLDocument_prototype_write) && (node.argc > 0 && typeof node.args[0] === "string") || JAM.identical(node.value, _HTMLDocument_prototype_writeln) && (node.argc > 0 && typeof node.args[0] === "string") || JAM.identical(node.value, _Window_prototype_open) && (node.argc > 0 && node.args[0] !== _undefined) || JAM.identical(node.value, _Window_prototype_openDialog) && (node.argc > 0 && node.args[0] !== _undefined))) {
+        commit = false;
+        break;
+      }
+      if ((node.type === "call" || node.type === "construct") && (JAM.identical(node.value, _WebSocket) && (node.argc > 0 && __RegExp_prototype_test_call_bind__RegExp_prototype_test_(/^ws:\/\//i, node.args[0])))) {
+        commit = false;
+        break;
+      }
+    }
+    if (commit) {
+      JAM.process(tx);
+    } else {
+      JAM.prevent(tx);
+    }
+  }
+  p24.subsumedBy = pFull;
+  Object.freeze(p24);
+  function p18(tx) {
+    var commit = true;
+    var as = tx.getCallSequence();
+    var len = as.length;
+    for (var i = 0;i < len;i++) {
+      var node = as[i];
+      if (JAM.identical(node.value, _HTMLDocument_prototype_write) && (node.argc > 0 && typeof node.args[0] === "string") || JAM.identical(node.value, _HTMLDocument_prototype_writeln) && (node.argc > 0 && typeof node.args[0] === "string") || JAM.identical(node.value, _Window_prototype_open) && (node.argc > 0 && node.args[0] !== _undefined) || JAM.identical(node.value, _Window_prototype_openDialog) && (node.argc > 0 && node.args[0] !== _undefined)) {
+        commit = false;
+        break;
+      }
+    }
+    if (commit) {
+      JAM.process(tx);
+    } else {
+      JAM.prevent(tx);
+    }
+  }
+  p18.subsumedBy = pFull;
+  p18.itype = "call";
+  Object.freeze(p18);
   function p33(tx) {
     var commit = true;
     var as = tx.getActionSequence();
@@ -103,49 +146,6 @@ var policy = function() {
   }
   p33.subsumedBy = pFull;
   Object.freeze(p33);
-  function p24(tx) {
-    var commit = true;
-    var as = tx.getActionSequence();
-    var len = as.length;
-    for (var i = 0;i < len;i++) {
-      var node = as[i];
-      if (node.type === "call" && (JAM.identical(node.value, _HTMLDocument_prototype_write) && (node.argc > 0 && typeof node.args[0] === "string") || JAM.identical(node.value, _HTMLDocument_prototype_writeln) && (node.argc > 0 && typeof node.args[0] === "string") || JAM.identical(node.value, _Window_prototype_open) && (node.argc > 0 && node.args[0] !== _undefined) || JAM.identical(node.value, _Window_prototype_openDialog) && (node.argc > 0 && node.args[0] !== _undefined))) {
-        commit = false;
-        break;
-      }
-      if ((node.type === "call" || node.type === "construct") && (JAM.identical(node.value, _WebSocket) && (node.argc > 0 && __RegExp_prototype_test_call_bind__RegExp_prototype_test_(/^ws:\/\//i, node.args[0])))) {
-        commit = false;
-        break;
-      }
-    }
-    if (commit) {
-      JAM.process(tx);
-    } else {
-      JAM.prevent(tx);
-    }
-  }
-  p24.subsumedBy = pFull;
-  Object.freeze(p24);
-  function p17(tx) {
-    var commit = true;
-    var as = tx.getCallSequence();
-    var len = as.length;
-    for (var i = 0;i < len;i++) {
-      var node = as[i];
-      if (JAM.identical(node.value, _HTMLDocument_prototype_write) && (node.argc > 0 && typeof node.args[0] === "string") || JAM.identical(node.value, _HTMLDocument_prototype_writeln) && (node.argc > 0 && typeof node.args[0] === "string") || JAM.identical(node.value, _Window_prototype_open) && (node.argc > 0 && node.args[0] !== _undefined) || JAM.identical(node.value, _Window_prototype_openDialog) && (node.argc > 0 && node.args[0] !== _undefined)) {
-        commit = false;
-        break;
-      }
-    }
-    if (commit) {
-      JAM.process(tx);
-    } else {
-      JAM.prevent(tx);
-    }
-  }
-  p17.subsumedBy = pFull;
-  p17.itype = "call";
-  Object.freeze(p17);
   function p20(tx) {
     var commit = true;
     var as = tx.getCallSequence();
@@ -233,7 +233,7 @@ var policy = function() {
   }
   p21.subsumedBy = pFull;
   Object.freeze(p21);
-  function p16(tx) {
+  function p17(tx) {
     var commit = true;
     var as = tx.getCallSequence();
     var len = as.length;
@@ -250,8 +250,8 @@ var policy = function() {
       JAM.prevent(tx);
     }
   }
-  p16.subsumedBy = pFull;
-  p16.itype = "call";
-  Object.freeze(p16);
-  return{p6:p6, p33:p33, p24:p24, p17:p17, p20:p20, p22:p22, p19:p19, p21:p21, p16:p16, pFull:pFull, woven:true};
+  p17.subsumedBy = pFull;
+  p17.itype = "call";
+  Object.freeze(p17);
+  return {p6:p6, p24:p24, p18:p18, p33:p33, p20:p20, p22:p22, p19:p19, p21:p21, p17:p17, pFull:pFull, woven:true};
 }()

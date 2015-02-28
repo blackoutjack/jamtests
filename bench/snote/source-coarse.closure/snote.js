@@ -1,5 +1,7 @@
 introspect(JAM.policy.pFull) {
-function SNote(serverPath, divParent) {
+function SNote() {
+  var serverPath = "./SNote/";
+  var divParent = document.getElementById("div1");
   function init(divParent$$1, serverPath$$1) {
     m_serverPath = serverPath$$1;
     m_divInternal$$1 = divParent$$1;
@@ -7,15 +9,19 @@ function SNote(serverPath, divParent) {
     m_divInternal$$1.style.border = "2px solid";
     m_divInternal$$1.style.backgroundColor = "#FFFFCC";
     m_preNote = document.createElement("pre");
-    m_preNote.id = "note";
+    var JSCompiler_temp_const$$29 = m_preNote;
+    var JSCompiler_inline_result$$30;
+    var strElemId$$inline_31 = "note";
+    JSCompiler_inline_result$$30 = strElemId$$inline_31;
+    JSCompiler_temp_const$$29.id = JSCompiler_inline_result$$30;
     m_preNote.className = "write-only non-editable";
     m_divInternal$$1.appendChild(m_preNote);
     m_divButtons = document.createElement("div");
     m_divButtons.style.textAlign = "left";
     m_divInternal$$1.appendChild(m_divButtons);
-    m_imageEdit = createNoteButton("Edit", handleEditButtonClick, m_divButtons);
-    m_imageView = createNoteButton("Read", handleUnlockButtonClick, m_divButtons);
-    m_imageDelete = createNoteButton("Delete", handleDeleteButtonClick, m_divButtons);
+    m_imageEdit = createNoteButton("Edit", handleEditButtonClick);
+    m_imageView = createNoteButton("Read", handleUnlockButtonClick);
+    m_imageDelete = createNoteButton("Delete", handleDeleteButtonClick);
     m_divEdit = createPopupDialog("edit_dialog", m_divInternal$$1);
     m_divEdit.style.width = 400;
     m_inputNewPassword = createPasswordPanel(m_divEdit, "Enter password:", "edit_password");
@@ -33,15 +39,17 @@ function SNote(serverPath, divParent) {
     createDialogButtonPanel(handleUnlockDialogOk, handleUnlockDialogCancel, m_divUnlock);
     m_divUnlock.style.display = "none";
     m_divDeleteDialog = createPopupDialog("delete_dialog", m_divInternal$$1);
-    var parent$$inline_33 = m_divDeleteDialog;
+    var strLabelText$$inline_37 = "Are you sure you want to delete?";
+    var parent$$inline_38 = m_divDeleteDialog;
     label = document.createElement("label");
-    label.textContent = "Are you sure you want to delete?";
-    parent$$inline_33.appendChild(label);
+    label.textContent = strLabelText$$inline_37;
+    parent$$inline_38.appendChild(label);
     createDialogButtonPanel(handleDeleteDialogOk, handleDeleteDialogCancel, m_divDeleteDialog);
     m_divDeleteDialog.style.display = "none";
     fetch(m_strId, handleSuccessfulFetch, handleFailedFetch);
   }
-  function createNoteButton(strLabel, funcHandleClick, parent) {
+  function createNoteButton(strLabel, funcHandleClick) {
+    var parent = m_divButtons;
     button = document.createElement("input");
     button.type = "button";
     button.value = strLabel;
@@ -137,19 +145,19 @@ function SNote(serverPath, divParent) {
     div$$inline_12.style.display = "block";
   }
   function handleUnlockDialogOk() {
-    var JSCompiler_inline_result$$0;
+    var JSCompiler_inline_result$$2;
     JSCompiler_inline_label_decryptText_16: {
       var strPasswd$$inline_15 = destructiveRead(m_inputPassword);
       if (strPasswd$$inline_15 != undefined) {
         wordArrPlainText = CryptoJS.AES.decrypt(m_strCipherText, strPasswd$$inline_15);
-        JSCompiler_inline_result$$0 = CryptoJS.enc.Utf8.stringify(wordArrPlainText);
+        JSCompiler_inline_result$$2 = CryptoJS.enc.Utf8.stringify(wordArrPlainText);
         break JSCompiler_inline_label_decryptText_16;
       } else {
-        JSCompiler_inline_result$$0 = undefined;
+        JSCompiler_inline_result$$2 = undefined;
         break JSCompiler_inline_label_decryptText_16;
       }
     }
-    m_preNote.textContent = JSCompiler_inline_result$$0;
+    m_preNote.textContent = JSCompiler_inline_result$$2;
     closeDialogsBoxes();
     m_imageEdit.style.display = "none";
     m_imageView.style.display = "none";
@@ -171,7 +179,7 @@ function SNote(serverPath, divParent) {
       if (strNewPass != strNewPassRetype) {
         alert("Passwords do not match");
       } else {
-        encryptAndSave(destructiveRead(m_inputNote), strNewPass, function(strId$$1) {
+        encryptAndSave(destructiveRead(m_inputNote), function(strId$$1) {
           if (strId$$1 != "") {
             switchToLockedViewMode();
             fetch(m_strId, handleSuccessfulFetch, handleFailedFetch);
@@ -212,19 +220,20 @@ function SNote(serverPath, divParent) {
     xmlhttp.open("GET", strUrl, true);
     xmlhttp.send();
   }
-  function encryptAndSave(strNote, strPassword, callbackDone) {
-    var JSCompiler_temp_const$$1 = save;
-    var JSCompiler_inline_result$$2;
+  function encryptAndSave(strNote, callbackDone) {
+    var strPassword = strNewPass;
+    var JSCompiler_temp_const$$0 = save;
+    var JSCompiler_inline_result$$1;
     JSCompiler_inline_label_encryptText_25: {
       var strPasswd$$inline_24 = strPassword;
       if (strPasswd$$inline_24) {
         wordArrPlainText = CryptoJS.enc.Utf8.parse(strNote);
-        JSCompiler_inline_result$$2 = CryptoJS.AES.encrypt(wordArrPlainText, strPasswd$$inline_24).toString();
+        JSCompiler_inline_result$$1 = CryptoJS.AES.encrypt(wordArrPlainText, strPasswd$$inline_24).toString();
       } else {
-        JSCompiler_inline_result$$2 = undefined;
+        JSCompiler_inline_result$$1 = undefined;
       }
     }
-    JSCompiler_temp_const$$1(JSCompiler_inline_result$$2, callbackDone);
+    JSCompiler_temp_const$$0(JSCompiler_inline_result$$1, callbackDone);
   }
   function save(strEncNote, callbackDone$$1) {
     xmlhttp = new XMLHttpRequest;
@@ -272,28 +281,36 @@ function SNote(serverPath, divParent) {
   var m_inputPassword = null;
   init(divParent, serverPath);
 }
-function SNoteSwindler(serverPath$$4, divParent$$2, strNoteId) {
-  function createButton(strLabel$$1, strFunc, parent$$5) {
+function SNoteSwindler() {
+  var serverPath$$4 = "";
+  var divParent$$2 = document.getElementById("div2");
+  var strNoteId = "div1";
+  function createButton(strLabel$$1, strFunc) {
+    var parent$$5 = m_divInternal;
     button = document.createElement("button");
     button.type = "input";
     button.textContent = strLabel$$1;
     button.onclick = strFunc;
     parent$$5.appendChild(button);
   }
+  function genNoteElemId() {
+    var strElemId$$1 = "note";
+    return strElemId$$1;
+  }
   function forgeNote() {
-    preNote = document.getElementById("note");
+    preNote = document.getElementById(genNoteElemId());
     preNote.textContent = "Forged note";
   }
   function forgeNoteInnerHTML() {
-    preNote = document.getElementById("note");
+    preNote = document.getElementById(genNoteElemId());
     preNote.innerHTML = "Forged note";
   }
   function readNote() {
-    preNote = document.getElementById("note");
+    preNote = document.getElementById(genNoteElemId());
     alert(preNote.textContent);
   }
   function readNoteInnerHTML() {
-    preNote = document.getElementById("note");
+    preNote = document.getElementById(genNoteElemId());
     alert(preNote.innerHTML);
   }
   m_divParent = null;
@@ -304,10 +321,10 @@ function SNoteSwindler(serverPath$$4, divParent$$2, strNoteId) {
   m_divInternal.style.border = "2px solid";
   m_divInternal.style.backgroundColor = "#CCCCCC";
   m_divParent.appendChild(m_divInternal);
-  createButton("Forge Note", forgeNote, m_divInternal);
-  createButton("Forge Note Inner HTML", forgeNoteInnerHTML, m_divInternal);
-  createButton("Read Note", readNote, m_divInternal);
-  createButton("Read Note Inner HTML", readNoteInnerHTML, m_divInternal);
+  createButton("Forge Note", forgeNote);
+  createButton("Forge Note Inner HTML", forgeNoteInnerHTML);
+  createButton("Read Note", readNote);
+  createButton("Read Note Inner HTML", readNoteInnerHTML);
 }
 var CryptoJS = CryptoJS || function(p, h$$4) {
   var i$$1 = {};
@@ -315,7 +332,7 @@ var CryptoJS = CryptoJS || function(p, h$$4) {
   var r = l.Base = function() {
     function a() {
     }
-    return{extend:function(e$$4) {
+    return {extend:function(e$$4) {
       a.prototype = this;
       var c = new a;
       e$$4 && c.mixIn(e$$4);
@@ -340,7 +357,7 @@ var CryptoJS = CryptoJS || function(p, h$$4) {
     a$$3 = this.words = a$$3 || [];
     this.sigBytes = e$$5 != h$$4 ? e$$5 : 4 * a$$3.length;
   }, toString:function(a$$4) {
-    return(a$$4 || s$$2).stringify(this);
+    return (a$$4 || s$$2).stringify(this);
   }, concat:function(a$$5) {
     var e$$6 = this.words;
     var c$$2 = a$$5.words;
@@ -534,19 +551,19 @@ var CryptoJS = CryptoJS || function(p, h$$4) {
 (function(p$$2) {
   function h$$7(f$$1, g$$1, a$$23, e$$17, c$$11, b$$6, d$$3) {
     f$$1 = f$$1 + (g$$1 & a$$23 | ~g$$1 & e$$17) + c$$11 + d$$3;
-    return(f$$1 << b$$6 | f$$1 >>> 32 - b$$6) + g$$1;
+    return (f$$1 << b$$6 | f$$1 >>> 32 - b$$6) + g$$1;
   }
   function i$$4(f$$2, g$$2, a$$24, e$$18, c$$12, b$$7, d$$4) {
     f$$2 = f$$2 + (g$$2 & e$$18 | a$$24 & ~e$$18) + c$$12 + d$$4;
-    return(f$$2 << b$$7 | f$$2 >>> 32 - b$$7) + g$$2;
+    return (f$$2 << b$$7 | f$$2 >>> 32 - b$$7) + g$$2;
   }
   function l$$3(f$$3, g$$3, a$$25, e$$19, c$$13, b$$8, d$$5) {
     f$$3 = f$$3 + (g$$3 ^ a$$25 ^ e$$19) + c$$13 + d$$5;
-    return(f$$3 << b$$8 | f$$3 >>> 32 - b$$8) + g$$3;
+    return (f$$3 << b$$8 | f$$3 >>> 32 - b$$8) + g$$3;
   }
   function r$$2(f$$4, g$$4, a$$26, e$$20, c$$14, b$$9, d$$6) {
     f$$4 = f$$4 + (a$$26 ^ (g$$4 | ~e$$20)) + c$$14 + d$$6;
-    return(f$$4 << b$$9 | f$$4 >>> 32 - b$$9) + g$$4;
+    return (f$$4 << b$$9 | f$$4 >>> 32 - b$$9) + g$$4;
   }
   var o$$3 = CryptoJS;
   var m$$3 = o$$3.lib;
@@ -662,10 +679,10 @@ CryptoJS.lib.Cipher || function(p$$4) {
     return this._doFinalize();
   }, keySize:4, ivSize:4, _ENC_XFORM_MODE:1, _DEC_XFORM_MODE:2, _createHelper:function() {
     return function(b$$16) {
-      return{encrypt:function(a$$32, q$$2, j$$1) {
-        return("string" == typeof q$$2 ? c$$16 : e$$24).encrypt(b$$16, a$$32, q$$2, j$$1);
+      return {encrypt:function(a$$32, q$$2, j$$1) {
+        return ("string" == typeof q$$2 ? c$$16 : e$$24).encrypt(b$$16, a$$32, q$$2, j$$1);
       }, decrypt:function(a$$33, q$$3, j$$2) {
-        return("string" == typeof q$$3 ? c$$16 : e$$24).decrypt(b$$16, a$$33, q$$3, j$$2);
+        return ("string" == typeof q$$3 ? c$$16 : e$$24).decrypt(b$$16, a$$33, q$$3, j$$2);
       }};
     };
   }()});
@@ -748,7 +765,7 @@ CryptoJS.lib.Cipher || function(p$$4) {
   var a$$30 = i$$9.CipherParams = l$$6.extend({init:function(a$$45) {
     this.mixIn(a$$45);
   }, toString:function(a$$46) {
-    return(a$$46 || this.formatter).stringify(this);
+    return (a$$46 || this.formatter).stringify(this);
   }});
   k$$4 = (h$$11.format = {}).OpenSSL = {stringify:function(a$$47) {
     var d$$14 = a$$47.ciphertext;
@@ -904,7 +921,7 @@ CryptoJS.lib.Cipher || function(p$$4) {
   }, keySize:8});
   p$$5.AES = h$$12._createHelper(i$$10);
 })();
-new SNote("./SNote/", document.getElementById("div1"));
-new SNoteSwindler("", document.getElementById("div2"), "div1")
+new SNote;
+new SNoteSwindler
 
 }

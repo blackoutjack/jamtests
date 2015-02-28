@@ -1,5 +1,14 @@
 introspect(JAM.policy.pFull) {
-function Benchmark(name$$30, doWarmup, doDeterministic, deterministicIterations, run, setup, tearDown, rmsResult, minIterations) {
+function Benchmark() {
+  var name$$30 = "PdfJS";
+  var doWarmup = false;
+  var doDeterministic = false;
+  var deterministicIterations = 24;
+  var run = runPdfJS;
+  var setup = setupPdfJS;
+  var tearDown = tearDownPdfJS;
+  var rmsResult = null;
+  var minIterations = 4;
   this.name = name$$30;
   this.doWarmup = doWarmup;
   this.doDeterministic = doDeterministic;
@@ -27,7 +36,7 @@ function setupPdfJS() {
   if (!(typeof Uint8Array != "undefined" && typeof Float64Array != "undefined" && typeof(new Uint8Array(0)).subarray != "undefined")) {
     throw "TypedArrayUnsupported";
   }
-  PdfJS_window.__resources__[pdf_file] = buffer(PdfJS_window.atob(getPDF()));
+  PdfJS_window.__resources__[pdf_file] = buffer();
 }
 function runPdfJS() {
   PDFJS.getDocument(pdf_file).then(function(pdf) {
@@ -67,7 +76,8 @@ function tearDownPdfJS() {
   delete this.PDFJS;
   delete this.PdfJS_window;
 }
-function buffer(s$$3) {
+function buffer() {
+  var s$$3 = PdfJS_window.atob(getPDF());
   var b = new ArrayBuffer(s$$3.length);
   var a = new Uint8Array(b);
   var i$$8 = 0;
@@ -144,7 +154,7 @@ function Run() {
   parent$$1.removeChild(anchor);
   document.getElementById("startup-text").innerHTML = "";
   document.getElementById("progress-bar-container").style.visibility = "visible";
-  BenchmarkSuite.RunSuites({NotifyStart:ShowBox, NotifyError:AddError, NotifyResult:AddResult, NotifyScore:AddScore}, skipBenchmarks);
+  BenchmarkSuite.RunSuites();
 }
 function CheckCompatibility() {
   var hasTypedArrays = typeof Uint8Array != "undefined" && typeof Float64Array != "undefined" && typeof(new Uint8Array(0)).subarray != "undefined";
@@ -185,11 +195,13 @@ BenchmarkSuite.ResetRNG = function() {
       seed = (seed + 3550635116 ^ seed << 9) & 4294967295;
       seed = seed + 4251993797 + (seed << 3) & 4294967295;
       seed = (seed ^ 3042594569 ^ seed >>> 16) & 4294967295;
-      return(seed & 268435455) / 268435456;
+      return (seed & 268435455) / 268435456;
     };
   }();
 };
-BenchmarkSuite.RunSuites = function(runner, skipBenchmarks$$1) {
+BenchmarkSuite.RunSuites = function() {
+  var runner = {NotifyStart:ShowBox, NotifyError:AddError, NotifyResult:AddResult, NotifyScore:AddScore};
+  var skipBenchmarks$$1 = skipBenchmarks;
   function RunStep() {
     for (;continuation || index$$39 < length$$11;) {
       if (continuation) {
@@ -211,7 +223,7 @@ BenchmarkSuite.RunSuites = function(runner, skipBenchmarks$$1) {
       }
     }
     if (runner.NotifyScore) {
-      var score = BenchmarkSuite.GeometricMean(BenchmarkSuite.scores);
+      var score = BenchmarkSuite.GeometricMean();
       var formatted = BenchmarkSuite.FormatScore(100 * score);
       runner.NotifyScore(formatted);
     }
@@ -233,7 +245,8 @@ BenchmarkSuite.CountBenchmarks = function() {
   }
   return result;
 };
-BenchmarkSuite.GeometricMean = function(numbers) {
+BenchmarkSuite.GeometricMean = function() {
+  var numbers = BenchmarkSuite.scores;
   var log = 0;
   var i$$2 = 0;
   for (;i$$2 < numbers.length;i$$2++) {
@@ -334,7 +347,7 @@ BenchmarkSuite.prototype.RunSingleBenchmark = function(benchmark$$1, data$$18) {
   }
   if (data$$18 == null) {
     Measure(null);
-    return{runs:0, elapsed:0};
+    return {runs:0, elapsed:0};
   } else {
     Measure(data$$18);
     if (data$$18.runs < benchmark$$1.minIterations) {
@@ -389,7 +402,7 @@ BenchmarkSuite.prototype.RunStep = function(runner$$2) {
 };
 var pdf_file = "test.pdf";
 var canvas_logs = [];
-var PdfJS = new BenchmarkSuite("PdfJS", [10124921], [new Benchmark("PdfJS", false, false, 24, runPdfJS, setupPdfJS, tearDownPdfJS, null, 4)]);
+var PdfJS = new BenchmarkSuite("PdfJS", [10124921], [new Benchmark]);
 var PdfJS_window = Object.create(this);
 PdfJS_windowInstall("setTimeout", function(cmd, delay$$3) {
   PdfJS_window.__timeouts__.push(cmd);
@@ -487,7 +500,7 @@ PdfJS_windowInstall("Element", function(type$$26) {
   };
   this.getElementsByTagName = function(name$$36) {
     if (name$$36 === "head") {
-      return[{appendChild:function() {
+      return [{appendChild:function() {
       }}];
     }
   };
@@ -550,7 +563,7 @@ PdfJS_windowInstall("Context", function() {
   };
   this.getImageData = function(x$$56, y$$38, w$$9, h$$7) {
     this.__log__.push("getImageData", x$$56, y$$38, w$$9, h$$7, "\n");
-    return{data:[]};
+    return {data:[]};
   };
   this.putImageData = function(data$$23, x$$57, y$$39) {
     this.__log__.push("putImageData", "{...}", x$$57, y$$39, "\n");
@@ -784,7 +797,7 @@ var PDFJS = {};
         }
         charstring$$2.push(value$$50);
       }
-      return{charstring:charstring$$2, width:width$$23, lsb:lsb};
+      return {charstring:charstring$$2, width:width$$23, lsb:lsb};
     }
     function readNumberArray(str$$23, index$$48) {
       var start$$11 = index$$48;
@@ -1064,15 +1077,15 @@ var PDFJS = {};
   }
   function error$$2(msg$$2) {
     log$$3("Error: " + msg$$2);
-    var JSCompiler_inline_result$$6;
+    var JSCompiler_inline_result$$0;
     JSCompiler_inline_label_backtrace_11: {
       try {
         throw new Error;
       } catch (e$$inline_10) {
-        JSCompiler_inline_result$$6 = e$$inline_10.stack ? e$$inline_10.stack.split("\n").slice(2).join("\n") : "";
+        JSCompiler_inline_result$$0 = e$$inline_10.stack ? e$$inline_10.stack.split("\n").slice(2).join("\n") : "";
       }
     }
-    log$$3(JSCompiler_inline_result$$6);
+    log$$3(JSCompiler_inline_result$$0);
     throw new Error(msg$$2);
   }
   function TODO(what) {
@@ -1184,7 +1197,7 @@ var PDFJS = {};
         var f$$1 = m$$1[5];
         var ad_bc = a$$3 * d$$1 - b$$3 * c$$1;
         var bc_ad = b$$3 * c$$1 - a$$3 * d$$1;
-        return[d$$1 / ad_bc, b$$3 / bc_ad, c$$1 / bc_ad, a$$3 / ad_bc, (d$$1 * e$$10 - c$$1 * f$$1) / bc_ad, (b$$3 * e$$10 - a$$3 * f$$1) / ad_bc];
+        return [d$$1 / ad_bc, b$$3 / bc_ad, c$$1 / bc_ad, a$$3 / ad_bc, (d$$1 * e$$10 - c$$1 * f$$1) / bc_ad, (b$$3 * e$$10 - a$$3 * f$$1) / ad_bc];
       }});
       ctx$$1.save = function ctxSave() {
         var old = this._transformMatrix;
@@ -1694,20 +1707,20 @@ var PDFJS = {};
     Util$$1.applyTransform = function Util_applyTransform(p, m$$8) {
       var xt = p[0] * m$$8[0] + p[1] * m$$8[2] + m$$8[4];
       var yt = p[0] * m$$8[1] + p[1] * m$$8[3] + m$$8[5];
-      return[xt, yt];
+      return [xt, yt];
     };
     Util$$1.applyInverseTransform = function Util_applyInverseTransform(p$$1, m$$9) {
       var d$$3 = m$$9[0] * m$$9[3] - m$$9[1] * m$$9[2];
       var xt$$1 = (p$$1[0] * m$$9[3] - p$$1[1] * m$$9[2] + m$$9[2] * m$$9[5] - m$$9[4] * m$$9[3]) / d$$3;
       var yt$$1 = (-p$$1[0] * m$$9[1] + p$$1[1] * m$$9[0] + m$$9[4] * m$$9[1] - m$$9[5] * m$$9[0]) / d$$3;
-      return[xt$$1, yt$$1];
+      return [xt$$1, yt$$1];
     };
     Util$$1.inverseTransform = function Util_inverseTransform(m$$10) {
       var d$$4 = m$$10[0] * m$$10[3] - m$$10[1] * m$$10[2];
-      return[m$$10[3] / d$$4, -m$$10[1] / d$$4, -m$$10[2] / d$$4, m$$10[0] / d$$4, (m$$10[2] * m$$10[5] - m$$10[4] * m$$10[3]) / d$$4, (m$$10[4] * m$$10[1] - m$$10[5] * m$$10[0]) / d$$4];
+      return [m$$10[3] / d$$4, -m$$10[1] / d$$4, -m$$10[2] / d$$4, m$$10[0] / d$$4, (m$$10[2] * m$$10[5] - m$$10[4] * m$$10[3]) / d$$4, (m$$10[4] * m$$10[1] - m$$10[5] * m$$10[0]) / d$$4];
     };
     Util$$1.apply3dTransform = function Util_apply3dTransform(m$$11, v$$14) {
-      return[m$$11[0] * v$$14[0] + m$$11[1] * v$$14[1] + m$$11[2] * v$$14[2], m$$11[3] * v$$14[0] + m$$11[4] * v$$14[1] + m$$11[5] * v$$14[2], m$$11[6] * v$$14[0] + m$$11[7] * v$$14[1] + m$$11[8] * v$$14[2]];
+      return [m$$11[0] * v$$14[0] + m$$11[1] * v$$14[1] + m$$11[2] * v$$14[2], m$$11[3] * v$$14[0] + m$$11[4] * v$$14[1] + m$$11[5] * v$$14[2], m$$11[6] * v$$14[0] + m$$11[7] * v$$14[1] + m$$11[8] * v$$14[2]];
     };
     Util$$1.normalizeRect = function Util_normalizeRect(rect$$1) {
       var r$$2 = rect$$1.slice(0);
@@ -1819,7 +1832,7 @@ var PDFJS = {};
     }, convertToViewportRectangle:function PageViewport_convertToViewportRectangle(rect$$2) {
       var tl = Util.applyTransform([rect$$2[0], rect$$2[1]], this.transform);
       var br = Util.applyTransform([rect$$2[2], rect$$2[3]], this.transform);
-      return[tl[0], tl[1], br[0], br[1]];
+      return [tl[0], tl[1], br[0], br[1]];
     }, convertToPdfPoint:function PageViewport_convertToPdfPoint(x$$63, y$$46) {
       return Util.applyInverseTransform([x$$63, y$$46], this.transform);
     }};
@@ -1993,14 +2006,15 @@ var PDFJS = {};
       for (;i$$23 < ii$$5;++i$$23) {
         var span = times[i$$23];
         var duration = span.end - span.start;
-        var JSCompiler_temp_const$$0 = out;
-        var JSCompiler_inline_result$$1;
+        var JSCompiler_temp_const$$3 = out;
+        var JSCompiler_inline_result$$4;
         var str$$inline_14 = span["name"];
+        var pad$$inline_16 = " ";
         for (;str$$inline_14.length < longest;) {
-          str$$inline_14 += " ";
+          str$$inline_14 += pad$$inline_16;
         }
-        JSCompiler_inline_result$$1 = str$$inline_14;
-        out = JSCompiler_temp_const$$0 + (JSCompiler_inline_result$$1 + " " + duration + "ms\n");
+        JSCompiler_inline_result$$4 = str$$inline_14;
+        out = JSCompiler_temp_const$$3 + (JSCompiler_inline_result$$4 + " " + duration + "ms\n");
       }
       return out;
     }};
@@ -2368,14 +2382,14 @@ var PDFJS = {};
     }};
     return WorkerTransport$$1;
   }();
-  var JSCompiler_object_inline_FILL_287 = 0;
-  var JSCompiler_object_inline_STROKE_288 = 1;
-  var JSCompiler_object_inline_FILL_STROKE_289 = 2;
-  var JSCompiler_object_inline_INVISIBLE_290 = 3;
-  var JSCompiler_object_inline_FILL_ADD_TO_PATH_291 = 4;
-  var JSCompiler_object_inline_STROKE_ADD_TO_PATH_292 = 5;
-  var JSCompiler_object_inline_FILL_STROKE_ADD_TO_PATH_293 = 6;
-  var JSCompiler_object_inline_ADD_TO_PATH_294 = 7;
+  var JSCompiler_object_inline_FILL_253 = 0;
+  var JSCompiler_object_inline_STROKE_254 = 1;
+  var JSCompiler_object_inline_FILL_STROKE_255 = 2;
+  var JSCompiler_object_inline_INVISIBLE_256 = 3;
+  var JSCompiler_object_inline_FILL_ADD_TO_PATH_257 = 4;
+  var JSCompiler_object_inline_STROKE_ADD_TO_PATH_258 = 5;
+  var JSCompiler_object_inline_FILL_STROKE_ADD_TO_PATH_259 = 6;
+  var JSCompiler_object_inline_ADD_TO_PATH_260 = 7;
   var MIN_FONT_SIZE = 1;
   var CanvasExtraState = function CanvasExtraStateClosure() {
     function CanvasExtraState$$1(old$$1) {
@@ -2392,7 +2406,7 @@ var PDFJS = {};
       this.charSpacing = 0;
       this.wordSpacing = 0;
       this.textHScale = 1;
-      this.textRenderingMode = JSCompiler_object_inline_FILL_287;
+      this.textRenderingMode = JSCompiler_object_inline_FILL_253;
       this.fillColorSpace = new DeviceGrayCS;
       this.fillColorSpaceObj = null;
       this.strokeColorSpace = new DeviceGrayCS;
@@ -2690,7 +2704,7 @@ var PDFJS = {};
       var rule$$2 = italic + " " + bold + " " + browserFontSize + "px " + typeface;
       this.ctx.font = rule$$2;
     }, setTextRenderingMode:function CanvasGraphics_setTextRenderingMode(mode$$7) {
-      if (mode$$7 >= JSCompiler_object_inline_FILL_ADD_TO_PATH_291) {
+      if (mode$$7 >= JSCompiler_object_inline_FILL_ADD_TO_PATH_257) {
         TODO("unsupported text rendering mode: " + mode$$7);
       }
       this.current.textRenderingMode = mode$$7;
@@ -2815,46 +2829,46 @@ var PDFJS = {};
             switch(textRenderingMode) {
               default:
               ;
-              case JSCompiler_object_inline_FILL_287:
+              case JSCompiler_object_inline_FILL_253:
               ;
-              case JSCompiler_object_inline_FILL_ADD_TO_PATH_291:
+              case JSCompiler_object_inline_FILL_ADD_TO_PATH_257:
                 ctx$$6.fillText(character, scaledX, 0);
                 break;
-              case JSCompiler_object_inline_STROKE_288:
+              case JSCompiler_object_inline_STROKE_254:
               ;
-              case JSCompiler_object_inline_STROKE_ADD_TO_PATH_292:
+              case JSCompiler_object_inline_STROKE_ADD_TO_PATH_258:
                 ctx$$6.strokeText(character, scaledX, 0);
                 break;
-              case JSCompiler_object_inline_FILL_STROKE_289:
+              case JSCompiler_object_inline_FILL_STROKE_255:
               ;
-              case JSCompiler_object_inline_FILL_STROKE_ADD_TO_PATH_293:
+              case JSCompiler_object_inline_FILL_STROKE_ADD_TO_PATH_259:
                 ctx$$6.fillText(character, scaledX, 0);
                 ctx$$6.strokeText(character, scaledX, 0);
-              case JSCompiler_object_inline_INVISIBLE_290:
+              case JSCompiler_object_inline_INVISIBLE_256:
               ;
             }
           }
           x$$70 += charWidth;
           var glyphUnicode = glyph.unicode === " " ? "\u00a0" : glyph.unicode;
           var glyphUnicodeLength = glyphUnicode.length;
-          var JSCompiler_temp$$8;
-          if (JSCompiler_temp$$8 = glyphUnicodeLength > 1) {
+          var JSCompiler_temp$$2;
+          if (JSCompiler_temp$$2 = glyphUnicodeLength > 1) {
             JSCompiler_inline_label_isRTLRangeFor_20: {
               var value$$inline_18 = glyphUnicode.charCodeAt(0);
               var range$$inline_19 = UnicodeRanges[13];
               if (value$$inline_18 >= range$$inline_19.begin && value$$inline_18 < range$$inline_19.end) {
-                JSCompiler_temp$$8 = true;
+                JSCompiler_temp$$2 = true;
                 break JSCompiler_inline_label_isRTLRangeFor_20;
               }
               range$$inline_19 = UnicodeRanges[11];
               if (value$$inline_18 >= range$$inline_19.begin && value$$inline_18 < range$$inline_19.end) {
-                JSCompiler_temp$$8 = true;
+                JSCompiler_temp$$2 = true;
                 break JSCompiler_inline_label_isRTLRangeFor_20;
               }
-              JSCompiler_temp$$8 = false;
+              JSCompiler_temp$$2 = false;
             }
           }
-          if (JSCompiler_temp$$8) {
+          if (JSCompiler_temp$$2) {
             var ii$$8 = glyphUnicodeLength - 1;
             for (;ii$$8 >= 0;ii$$8--) {
               text$$7.str += glyphUnicode[ii$$8];
@@ -3288,7 +3302,7 @@ var PDFJS = {};
       this.dict = {};
     }
     RefSet$$1.prototype = {has:function RefSet_has(ref$$4) {
-      return!!this.dict["R" + ref$$4.num + "." + ref$$4.gen];
+      return !!this.dict["R" + ref$$4.num + "." + ref$$4.gen];
     }, put:function RefSet_put(ref$$5) {
       this.dict["R" + ref$$5.num + "." + ref$$5.gen] = ref$$5;
     }};
@@ -3870,7 +3884,7 @@ var PDFJS = {};
     var CONSTRUCT_INTERPOLATED = 2;
     var CONSTRUCT_STICHED = 3;
     var CONSTRUCT_POSTSCRIPT = 4;
-    return{getSampleArray:function PDFFunction_getSampleArray(size$$6, outputSize, bps, str$$13) {
+    return {getSampleArray:function PDFFunction_getSampleArray(size$$6, outputSize, bps, str$$13) {
       var length$$21 = 1;
       var i$$41 = 0;
       var ii$$11 = size$$6.length;
@@ -3973,7 +3987,7 @@ var PDFJS = {};
         decode = toMultiArray(decode);
       }
       var samples = this.getSampleArray(size$$7, outputSize$$1, bps$$1, str$$14);
-      return[CONSTRUCT_SAMPLED, inputSize$$1, domain, encode, decode, samples, size$$7, outputSize$$1, Math.pow(2, bps$$1) - 1, range$$8];
+      return [CONSTRUCT_SAMPLED, inputSize$$1, domain, encode, decode, samples, size$$7, outputSize$$1, Math.pow(2, bps$$1) - 1, range$$8];
     }, constructSampledFromIR:function PDFFunction_constructSampledFromIR(IR$$3) {
       return function constructSampledFromIRResult(args$$1) {
         var m$$15 = IR$$3[1];
@@ -4053,7 +4067,7 @@ var PDFJS = {};
       for (;i$$45 < length$$22;++i$$45) {
         diff.push(c1[i$$45] - c0[i$$45]);
       }
-      return[CONSTRUCT_INTERPOLATED, c0, diff, n$$15];
+      return [CONSTRUCT_INTERPOLATED, c0, diff, n$$15];
     }, constructInterpolatedFromIR:function PDFFunction_constructInterpolatedFromIR(IR$$4) {
       var c0$$1 = IR$$4[1];
       var diff$$1 = IR$$4[2];
@@ -4086,7 +4100,7 @@ var PDFJS = {};
       }
       var bounds = dict$$7.get("Bounds");
       var encode$$2 = dict$$7.get("Encode");
-      return[CONSTRUCT_STICHED, domain$$2, bounds, encode$$2, fns];
+      return [CONSTRUCT_STICHED, domain$$2, bounds, encode$$2, fns];
     }, constructStichedFromIR:function PDFFunction_constructStichedFromIR(IR$$5) {
       var domain$$3 = IR$$5[1];
       var bounds$$1 = IR$$5[2];
@@ -4143,7 +4157,7 @@ var PDFJS = {};
       var lexer = new PostScriptLexer(fn$$3);
       var parser$$4 = new PostScriptParser(lexer);
       var code$$4 = parser$$4.parse();
-      return[CONSTRUCT_POSTSCRIPT, domain$$4, range$$10, code$$4];
+      return [CONSTRUCT_POSTSCRIPT, domain$$4, range$$10, code$$4];
     }, constructPostScriptFromIR:function PDFFunction_constructPostScriptFromIR(IR$$6) {
       var domain$$5 = IR$$6[1];
       var range$$11 = IR$$6[2];
@@ -5704,7 +5718,7 @@ var PDFJS = {};
           case "CMYK":
             return "DeviceCmykCS";
           case "Pattern":
-            return["PatternCS", null];
+            return ["PatternCS", null];
           default:
             error$$2("unrecognized colorspace " + mode$$8);
         }
@@ -5748,14 +5762,14 @@ var PDFJS = {};
               if (basePatternCS$$1) {
                 basePatternCS$$1 = ColorSpace$$1.parseToIR(basePatternCS$$1, xref$$14, res$$1);
               }
-              return["PatternCS", basePatternCS$$1];
+              return ["PatternCS", basePatternCS$$1];
             case "Indexed":
             ;
             case "I":
               var baseIndexedCS$$1 = ColorSpace$$1.parseToIR(cs$$6[1], xref$$14, res$$1);
               var hiVal$$1 = cs$$6[2] + 1;
               var lookup$$1 = xref$$14.fetchIfRef(cs$$6[3]);
-              return["IndexedCS", baseIndexedCS$$1, hiVal$$1, lookup$$1];
+              return ["IndexedCS", baseIndexedCS$$1, hiVal$$1, lookup$$1];
             case "Separation":
             ;
             case "DeviceN":
@@ -5770,10 +5784,10 @@ var PDFJS = {};
               }
               var alt$$1 = ColorSpace$$1.parseToIR(cs$$6[2], xref$$14, res$$1);
               var tintFnIR$$1 = PDFFunction.getIR(xref$$14, xref$$14.fetchIfRef(cs$$6[3]));
-              return["AlternateCS", numComps$$1, alt$$1, tintFnIR$$1];
+              return ["AlternateCS", numComps$$1, alt$$1, tintFnIR$$1];
             case "Lab":
               var params$$2 = cs$$6[1].getAll();
-              return["LabCS", params$$2];
+              return ["LabCS", params$$2];
             default:
               error$$2('unimplemented color space object "' + mode$$8 + '"');
           }
@@ -5917,7 +5931,7 @@ var PDFJS = {};
     }
     DeviceGrayCS$$1.prototype = {getRgb:function DeviceGrayCS_getRgb(color$$14) {
       var c$$10 = color$$14[0];
-      return[c$$10, c$$10, c$$10];
+      return [c$$10, c$$10, c$$10];
     }, getRgbBuffer:function DeviceGrayCS_getRgbBuffer(input$$3, bits$$1) {
       var scale$$6 = 255 / ((1 << bits$$1) - 1);
       var length$$28 = input$$3.length;
@@ -5979,7 +5993,7 @@ var PDFJS = {};
       var r$$6 = 1 - c$$12;
       var g$$4 = 1 - m$$16;
       var b$$12 = 1 - y$$56;
-      return[r$$6, g$$4, b$$12];
+      return [r$$6, g$$4, b$$12];
     }, getRgbBuffer:function DeviceCmykCS_getRgbBuffer(colorBuf, bits$$3) {
       var scale$$8 = 1 / ((1 << bits$$3) - 1);
       var length$$30 = colorBuf.length / 4;
@@ -6227,7 +6241,7 @@ var PDFJS = {};
   }();
   var AES128Cipher = function AES128CipherClosure() {
     function AES128Cipher$$1(key$$30) {
-      var JSCompiler_inline_result$$2;
+      var JSCompiler_inline_result$$5;
       var cipherKey$$inline_48 = key$$30;
       var b$$inline_49 = 176;
       var result$$inline_50 = new Uint8Array(b$$inline_49);
@@ -6256,8 +6270,8 @@ var PDFJS = {};
           j$$inline_51++;
         }
       }
-      JSCompiler_inline_result$$2 = result$$inline_50;
-      this.key = JSCompiler_inline_result$$2;
+      JSCompiler_inline_result$$5 = result$$inline_50;
+      this.key = JSCompiler_inline_result$$5;
       this.buffer = new Uint8Array(16);
       this.bufferPosition = 0;
     }
@@ -6463,7 +6477,7 @@ var PDFJS = {};
       if (password$$1) {
         passwordBytes = stringToBytes(password$$1);
       }
-      var JSCompiler_inline_result$$5;
+      var JSCompiler_inline_result$$6;
       var fileId$$inline_73 = fileIdBytes;
       var password$$inline_74 = passwordBytes;
       var ownerPassword$$inline_75 = ownerPassword$$2;
@@ -6546,8 +6560,8 @@ var PDFJS = {};
           error$$2("incorrect password");
         }
       }
-      JSCompiler_inline_result$$5 = encryptionKey$$inline_88;
-      this.encryptionKey = JSCompiler_inline_result$$5;
+      JSCompiler_inline_result$$6 = encryptionKey$$inline_88;
+      this.encryptionKey = JSCompiler_inline_result$$6;
       if (algorithm == 4) {
         this.cf = dict$$10.get("CF");
         this.stmf = dict$$10.get("StmF") || identityName;
@@ -6628,7 +6642,7 @@ var PDFJS = {};
         var op1 = operations.substring(0, i$$71);
         var op2 = operations.substring(i$$71);
         if (op1 in OP_MAP && op2 in OP_MAP) {
-          return[op1, op2];
+          return [op1, op2];
         }
       }
       return null;
@@ -7187,7 +7201,7 @@ var PDFJS = {};
       } else {
         widths$$1 = glyphWidths;
       }
-      return{defaultWidth:defaultWidth$$1, widths:widths$$1};
+      return {defaultWidth:defaultWidth$$1, widths:widths$$1};
     }, translateFont:function PartialEvaluator_translateFont(dict$$15, xref$$20, resources$$2, dependency$$2) {
       var baseDict$$1 = dict$$15;
       var type$$37 = dict$$15.get("Subtype");
@@ -7220,7 +7234,7 @@ var PDFJS = {};
           var flags$$4 = (serifFonts[fontNameWoStyle] || fontNameWoStyle.search(/serif/gi) != -1 ? FontFlags.Serif : 0) | (symbolsFonts[fontNameWoStyle] ? FontFlags.Symbolic : FontFlags.Nonsymbolic);
           var properties$$6 = {type:type$$37.name, widths:metrics$$1.widths, defaultWidth:metrics$$1.defaultWidth, flags:flags$$4, firstChar:0, lastChar:maxCharIndex};
           this.extractDataStructures(dict$$15, dict$$15, xref$$20, properties$$6);
-          return{name:baseFontName$$1, dict:baseDict$$1, properties:properties$$6};
+          return {name:baseFontName$$1, dict:baseDict$$1, properties:properties$$6};
         }
       }
       var firstChar$$1 = dict$$15.get("FirstChar") || 0;
@@ -7256,7 +7270,7 @@ var PDFJS = {};
           properties$$6.charProcOperatorList[key$$35] = this.getOperatorList(glyphStream, fontResources, dependency$$2);
         }
       }
-      return{name:fontName$$1.name, dict:baseDict$$1, file:fontFile, properties:properties$$6};
+      return {name:fontName$$1.name, dict:baseDict$$1, file:fontFile, properties:properties$$6};
     }};
     return PartialEvaluator$$1;
   }();
@@ -7546,10 +7560,10 @@ var PDFJS = {};
       return str$$21;
     }
     function int16(bytes$$3) {
-      return(bytes$$3[0] << 8) + (bytes$$3[1] & 255);
+      return (bytes$$3[0] << 8) + (bytes$$3[1] & 255);
     }
     function int32(bytes$$4) {
-      return(bytes$$4[0] << 24) + (bytes$$4[1] << 16) + (bytes$$4[2] << 8) + (bytes$$4[3] & 255);
+      return (bytes$$4[0] << 24) + (bytes$$4[1] << 16) + (bytes$$4[2] << 8) + (bytes$$4[3] & 255);
     }
     function getMaxPower2(number$$1) {
       var maxPower = 0;
@@ -7814,10 +7828,10 @@ var PDFJS = {};
           data$$60[8] = data$$60[9] = data$$60[10] = data$$60[11] = 0;
           data$$60[17] |= 32;
         }
-        return{tag:tag$$5, checksum:checksum$$1, length:length$$36, offset:offset$$15, data:data$$60};
+        return {tag:tag$$5, checksum:checksum$$1, length:length$$36, offset:offset$$15, data:data$$60};
       }
       function readOpenTypeHeader(ttf$$1) {
-        return{version:arrayToString(ttf$$1.getBytes(4)), numTables:int16(ttf$$1.getBytes(2)), searchRange:int16(ttf$$1.getBytes(2)), entrySelector:int16(ttf$$1.getBytes(2)), rangeShift:int16(ttf$$1.getBytes(2))};
+        return {version:arrayToString(ttf$$1.getBytes(4)), numTables:int16(ttf$$1.getBytes(2)), searchRange:int16(ttf$$1.getBytes(2)), entrySelector:int16(ttf$$1.getBytes(2)), rangeShift:int16(ttf$$1.getBytes(2))};
       }
       function createGlyphNameMap(glyphs$$4, ids$$1, properties$$11) {
         var glyphNames$$1 = properties$$11.glyphNames;
@@ -7855,7 +7869,7 @@ var PDFJS = {};
           records.push({platformID:int16(font$$8.getBytes(2)), encodingID:int16(font$$8.getBytes(2)), offset:int32(font$$8.getBytes(4))});
         }
         records.sort(function fontReadCMapTableSort(a$$13, b$$18) {
-          return(a$$13.platformID << 16) + a$$13.encodingID - ((b$$18.platformID << 16) + b$$18.encodingID);
+          return (a$$13.platformID << 16) + a$$13.encodingID - ((b$$18.platformID << 16) + b$$18.encodingID);
         });
         var tables$$1 = [records[0]];
         i$$88 = 1;
@@ -7900,7 +7914,7 @@ var PDFJS = {};
                 ids$$2.push(index$$46);
               }
             }
-            return{glyphs:glyphs$$5, ids:ids$$2, hasShortCmap:true};
+            return {glyphs:glyphs$$5, ids:ids$$2, hasShortCmap:true};
           } else {
             if (format$$7 == 4) {
               var segCount$$1 = int16(font$$8.getBytes(2)) >> 1;
@@ -7961,7 +7975,7 @@ var PDFJS = {};
                   ids$$2.push(glyphCode);
                 }
               }
-              return{glyphs:glyphs$$5, ids:ids$$2};
+              return {glyphs:glyphs$$5, ids:ids$$2};
             } else {
               if (format$$7 == 6) {
                 var firstCode = int16(font$$8.getBytes(2));
@@ -7975,7 +7989,7 @@ var PDFJS = {};
                   glyphs$$5.push({unicode:code$$12, code:code$$12});
                   ids$$2.push(glyphCode);
                 }
-                return{glyphs:glyphs$$5, ids:ids$$2};
+                return {glyphs:glyphs$$5, ids:ids$$2};
               }
             }
           }
@@ -8533,7 +8547,7 @@ var PDFJS = {};
         tables.push({tag:"name", data:stringToArray(createNameTable(this.name))});
       }
       tables.sort(function tables_sort(a$$14, b$$19) {
-        return(a$$14.tag > b$$19.tag) - (a$$14.tag < b$$19.tag);
+        return (a$$14.tag > b$$19.tag) - (a$$14.tag < b$$19.tag);
       });
       i$$86 = 0;
       ii$$29 = tables.length;
@@ -8830,7 +8844,7 @@ var PDFJS = {};
       }
       width$$22 = (isNum(width$$22) ? width$$22 : this.defaultWidth) * this.widthMultiplier;
       disabled = this.unicodeIsEnabled ? !this.unicodeIsEnabled[fontCharCode$$2] : false;
-      return{fontChar:String.fromCharCode(fontCharCode$$2), unicode:unicodeChars, width:width$$22, disabled:disabled, operatorList:operatorList$$4};
+      return {fontChar:String.fromCharCode(fontCharCode$$2), unicode:unicodeChars, width:width$$22, disabled:disabled, operatorList:operatorList$$4};
     }, charsToGlyphs:function Font_charsToGlyphs(chars) {
       var charsCache = this.charsCache;
       var glyphs$$7;
@@ -9204,7 +9218,7 @@ var PDFJS = {};
       var hdrSize = bytes$$5[2];
       var offSize = bytes$$5[3];
       var header$$7 = new CFFHeader(major, minor, hdrSize, offSize);
-      return{obj:header$$7, endPos:hdrSize};
+      return {obj:header$$7, endPos:hdrSize};
     }, parseDict:function CFFParser_parseDict(dict$$17) {
       function parseOperand() {
         var value$$53 = dict$$17[pos$$5++];
@@ -9246,10 +9260,10 @@ var PDFJS = {};
                 return value$$53 - 139;
               } else {
                 if (value$$53 >= 247 && value$$53 <= 250) {
-                  return(value$$53 - 247) * 256 + dict$$17[pos$$5++] + 108;
+                  return (value$$53 - 247) * 256 + dict$$17[pos$$5++] + 108;
                 } else {
                   if (value$$53 >= 251 && value$$53 <= 254) {
-                    return-((value$$53 - 251) * 256) - dict$$17[pos$$5++] - 108;
+                    return -((value$$53 - 251) * 256) - dict$$17[pos$$5++] - 108;
                   } else {
                     error$$2("255 is not a valid DICT command");
                   }
@@ -9258,7 +9272,7 @@ var PDFJS = {};
             }
           }
         }
-        return-1;
+        return -1;
       }
       var pos$$5 = 0;
       var operands$$1 = [];
@@ -9309,7 +9323,7 @@ var PDFJS = {};
         var offsetEnd = offsets$$1[i$$119 + 1];
         cffIndex.add(bytes$$6.subarray(offsetStart, offsetEnd));
       }
-      return{obj:cffIndex, endPos:end$$8};
+      return {obj:cffIndex, endPos:end$$8};
     }, parseNameIndex:function CFFParser_parseNameIndex(index$$54) {
       var names$$5 = [];
       var i$$120 = 0;
@@ -9710,9 +9724,9 @@ var PDFJS = {};
     return CFFPrivateDict$$1;
   }();
   var CFFCharsetPredefinedTypes = {ISO_ADOBE:0, EXPERT:1, EXPERT_SUBSET:2};
-  var JSCompiler_object_inline_FORMAT0_295 = 0;
-  var JSCompiler_object_inline_FORMAT1_296 = 1;
-  var JSCompiler_object_inline_FORMAT2_297 = 2;
+  var JSCompiler_object_inline_FORMAT0_261 = 0;
+  var JSCompiler_object_inline_FORMAT1_262 = 1;
+  var JSCompiler_object_inline_FORMAT2_263 = 2;
   var CFFCharset = function CFFCharsetClosure() {
     function CFFCharset$$1(predefined$$1, format$$11, charset$$5, raw$$4) {
       this.predefined = predefined$$1;
@@ -9722,9 +9736,9 @@ var PDFJS = {};
     }
     return CFFCharset$$1;
   }();
-  var JSCompiler_object_inline_STANDARD_298 = 0;
-  var JSCompiler_object_inline_EXPERT_299 = 1;
-  JSCompiler_object_inline_FORMAT0_295 = 0, JSCompiler_object_inline_FORMAT1_296 = 1, JSCompiler_object_inline_FORMAT2_297 = void 0, true;
+  var JSCompiler_object_inline_STANDARD_264 = 0;
+  var JSCompiler_object_inline_EXPERT_265 = 1;
+  JSCompiler_object_inline_FORMAT0_261 = 0, JSCompiler_object_inline_FORMAT1_262 = 1, JSCompiler_object_inline_FORMAT2_263 = void 0, true;
   var CFFEncoding = function CFFEncodingClosure() {
     function CFFEncoding$$1(predefined$$2, format$$12, encoding$$10, raw$$5) {
       this.predefined = predefined$$2;
@@ -9924,7 +9938,7 @@ var PDFJS = {};
       }
       return code$$15;
     }, compileHeader:function CFFCompiler_compileHeader(header$$9) {
-      return[header$$9.major, header$$9.minor, header$$9.hdrSize, header$$9.offSize];
+      return [header$$9.major, header$$9.minor, header$$9.hdrSize, header$$9.offSize];
     }, compileNameIndex:function CFFCompiler_compileNameIndex(names$$6) {
       var nameIndex$$2 = new CFFIndex;
       var i$$132 = 0;
@@ -9947,7 +9961,7 @@ var PDFJS = {};
         fontDictTracker.offset(length$$49);
       }
       fdArrayIndex$$1 = this.compileIndex(fdArrayIndex$$1, fontDictTrackers$$1);
-      return{trackers:fontDictTrackers$$1, output:fdArrayIndex$$1};
+      return {trackers:fontDictTrackers$$1, output:fdArrayIndex$$1};
     }, compilePrivateDicts:function CFFCompiler_compilePrivateDicts(dicts$$1, trackers, output$$4) {
       var i$$134 = 0;
       var ii$$59 = dicts$$1.length;
@@ -10055,7 +10069,7 @@ var PDFJS = {};
       var objects$$1 = index$$59.objects;
       var count$$17 = objects$$1.length;
       if (count$$17 == 0) {
-        return[0, 0, 0];
+        return [0, 0, 0];
       }
       var data$$82 = [count$$17 >> 8 & 255, count$$17 & 255];
       var lastOffset$$1 = 1;
@@ -10913,7 +10927,7 @@ var PDFJS = {};
       if (ch$$6 >= "A" && ch$$6 <= "F") {
         return ch$$6.charCodeAt(0) - 55;
       }
-      return-1;
+      return -1;
     }
     Lexer$$1.isSpace = function Lexer_isSpace(ch$$7) {
       return ch$$7 == " " || ch$$7 == "\t" || ch$$7 == "\r" || ch$$7 == "\n";
@@ -11275,8 +11289,8 @@ var PDFJS = {};
     }};
     return Linearization$$1;
   }();
-  var JSCompiler_object_inline_AXIAL_300 = 2;
-  var JSCompiler_object_inline_RADIAL_301 = 3;
+  var JSCompiler_object_inline_AXIAL_266 = 2;
+  var JSCompiler_object_inline_RADIAL_267 = 3;
   var Pattern = function PatternClosure() {
     function Pattern$$1() {
       error$$2("should not call Pattern constructor");
@@ -11291,9 +11305,9 @@ var PDFJS = {};
       var dict$$27 = isStream(shading$$1) ? shading$$1.dict : shading$$1;
       var type$$42 = dict$$27.get("ShadingType");
       switch(type$$42) {
-        case JSCompiler_object_inline_AXIAL_300:
+        case JSCompiler_object_inline_AXIAL_266:
         ;
-        case JSCompiler_object_inline_RADIAL_301:
+        case JSCompiler_object_inline_RADIAL_267:
           return new Shadings.RadialAxial(dict$$27, matrix$$3, xref$$25, res$$6);
         default:
           return new Shadings.Dummy;
@@ -11333,12 +11347,12 @@ var PDFJS = {};
       if (isArray(fnObj)) {
         error$$2("No support for array of functions");
       }
-      var JSCompiler_inline_result$$3;
+      var JSCompiler_inline_result$$1;
       JSCompiler_inline_label_isPDFFunction_131: {
         var v$$inline_129 = fnObj;
         var fnDict$$inline_130;
         if (typeof v$$inline_129 != "object") {
-          JSCompiler_inline_result$$3 = false;
+          JSCompiler_inline_result$$1 = false;
           break JSCompiler_inline_label_isPDFFunction_131;
         } else {
           if (isDict(v$$inline_129)) {
@@ -11347,14 +11361,14 @@ var PDFJS = {};
             if (isStream(v$$inline_129)) {
               fnDict$$inline_130 = v$$inline_129.dict;
             } else {
-              JSCompiler_inline_result$$3 = false;
+              JSCompiler_inline_result$$1 = false;
               break JSCompiler_inline_label_isPDFFunction_131;
             }
           }
         }
-        JSCompiler_inline_result$$3 = fnDict$$inline_130.has("FunctionType");
+        JSCompiler_inline_result$$1 = fnDict$$inline_130.has("FunctionType");
       }
-      if (!JSCompiler_inline_result$$3) {
+      if (!JSCompiler_inline_result$$1) {
         error$$2("Invalid function");
       }
       var fn$$5 = PDFFunction.parse(xref$$26, fnObj);
@@ -11376,7 +11390,7 @@ var PDFJS = {};
       var p1 = raw$$8[4];
       var r0$$1 = raw$$8[5];
       var r1$$1 = raw$$8[6];
-      return{type:"Pattern", getPattern:function RadialAxial_getPattern(ctx$$16) {
+      return {type:"Pattern", getPattern:function RadialAxial_getPattern(ctx$$16) {
         var curMatrix = ctx$$16.mozCurrentTransform;
         if (curMatrix) {
           var userMatrix = ctx$$16.mozCurrentTransformInverse;
@@ -11386,10 +11400,10 @@ var PDFJS = {};
           p1 = Util.applyTransform(p1, userMatrix);
         }
         var grad;
-        if (type$$43 == JSCompiler_object_inline_AXIAL_300) {
+        if (type$$43 == JSCompiler_object_inline_AXIAL_266) {
           grad = ctx$$16.createLinearGradient(p0[0], p0[1], p1[0], p1[1]);
         } else {
-          if (type$$43 == JSCompiler_object_inline_RADIAL_301) {
+          if (type$$43 == JSCompiler_object_inline_RADIAL_267) {
             grad = ctx$$16.createRadialGradient(p0[0], p0[1], r0$$1, p1[0], p1[1], r1$$1);
           }
         }
@@ -11405,13 +11419,13 @@ var PDFJS = {};
     RadialAxial.prototype = {getIR:function RadialAxial_getIR() {
       var coordsArr = this.coordsArr;
       var type$$44 = this.shadingType;
-      if (type$$44 == JSCompiler_object_inline_AXIAL_300) {
+      if (type$$44 == JSCompiler_object_inline_AXIAL_266) {
         var p0$$1 = [coordsArr[0], coordsArr[1]];
         var p1$$1 = [coordsArr[2], coordsArr[3]];
         var r0$$2 = null;
         var r1$$2 = null;
       } else {
-        if (type$$44 == JSCompiler_object_inline_RADIAL_301) {
+        if (type$$44 == JSCompiler_object_inline_RADIAL_267) {
           p0$$1 = [coordsArr[0], coordsArr[1]];
           p1$$1 = [coordsArr[3], coordsArr[4]];
           r0$$2 = coordsArr[2];
@@ -11425,7 +11439,7 @@ var PDFJS = {};
         p0$$1 = Util.applyTransform(p0$$1, matrix$$5);
         p1$$1 = Util.applyTransform(p1$$1, matrix$$5);
       }
-      return["RadialAxial", type$$44, this.colorStops, p0$$1, p1$$1, r0$$2, r1$$2];
+      return ["RadialAxial", type$$44, this.colorStops, p0$$1, p1$$1, r0$$2, r1$$2];
     }};
     return RadialAxial;
   }();
@@ -11437,7 +11451,7 @@ var PDFJS = {};
       return "hotpink";
     };
     Dummy.prototype = {getIR:function Dummy_getIR() {
-      return["Dummy"];
+      return ["Dummy"];
     }};
     return Dummy;
   }();
@@ -11505,7 +11519,7 @@ var PDFJS = {};
       var xstep$$1 = dict$$29.get("XStep");
       var ystep$$1 = dict$$29.get("YStep");
       var paintType$$1 = dict$$29.get("PaintType");
-      return["TilingPattern", args$$6, operatorList$$6, matrix$$6, bbox$$3, xstep$$1, ystep$$1, paintType$$1];
+      return ["TilingPattern", args$$6, operatorList$$6, matrix$$6, bbox$$3, xstep$$1, ystep$$1, paintType$$1];
     };
     TilingPattern$$1.prototype = {getPattern:function TilingPattern_getPattern() {
       var matrix$$7 = this.matrix;
@@ -11851,7 +11865,7 @@ var PDFJS = {};
           }
         }
       }
-      return[codes$$3, maxLen$$1];
+      return [codes$$3, maxLen$$1];
     };
     FlateStream$$1.prototype.readBlock = function FlateStream_readBlock() {
       var hdr = this.getBits(3);
@@ -12174,23 +12188,23 @@ var PDFJS = {};
       this.dict = dict$$33;
       this.isAdobeImage = false;
       this.colorTransform = dict$$33.get("ColorTransform") || -1;
-      var JSCompiler_inline_result$$9;
+      var JSCompiler_inline_result$$8;
       JSCompiler_inline_label_isAdobeImage_135: {
         var bytes$$inline_132 = bytes$$19;
         var maxBytesScanned$$inline_133 = Math.max(bytes$$inline_132.length - 16, 1024);
         var i$$inline_134 = 0;
         for (;i$$inline_134 < maxBytesScanned$$inline_133;++i$$inline_134) {
           if (bytes$$inline_132[i$$inline_134] == 255 && bytes$$inline_132[i$$inline_134 + 1] == 238 && bytes$$inline_132[i$$inline_134 + 2] == 0 && bytes$$inline_132[i$$inline_134 + 3] == 14 && bytes$$inline_132[i$$inline_134 + 4] == 65 && bytes$$inline_132[i$$inline_134 + 5] == 100 && bytes$$inline_132[i$$inline_134 + 6] == 111 && bytes$$inline_132[i$$inline_134 + 7] == 98 && bytes$$inline_132[i$$inline_134 + 8] == 101 && bytes$$inline_132[i$$inline_134 + 9] == 0) {
-            JSCompiler_inline_result$$9 = true;
+            JSCompiler_inline_result$$8 = true;
             break JSCompiler_inline_label_isAdobeImage_135;
           }
           if (bytes$$inline_132[i$$inline_134] == 255 && bytes$$inline_132[i$$inline_134 + 1] == 192) {
             break;
           }
         }
-        JSCompiler_inline_result$$9 = false;
+        JSCompiler_inline_result$$8 = false;
       }
-      if (JSCompiler_inline_result$$9) {
+      if (JSCompiler_inline_result$$8) {
         this.isAdobeImage = true;
         var bytes$$inline_136 = bytes$$19;
         var embedMarker$$inline_137 = new Uint8Array([255, 236, 0, 8, 69, 77, 66, 69, 68, 0]);
@@ -12945,7 +12959,7 @@ var PDFJS = {};
       for (;i$$161 <= end$$16;++i$$161) {
         var code$$19 = this.lookBits(i$$161);
         if (code$$19 == EOF) {
-          return[true, 1, false];
+          return [true, 1, false];
         }
         if (i$$161 < end$$16) {
           code$$19 <<= end$$16 - i$$161;
@@ -12954,11 +12968,11 @@ var PDFJS = {};
           var p$$4 = table$$4[code$$19 - limitValue];
           if (p$$4[0] == i$$161) {
             this.eatBits(i$$161);
-            return[true, p$$4[1], true];
+            return [true, p$$4[1], true];
           }
         }
       }
-      return[false, 0, false];
+      return [false, 0, false];
     };
     CCITTFaxStream$$1.prototype.getTwoDimCode = function ccittFaxStreamGetTwoDimCode() {
       var code$$20 = 0;
@@ -14301,7 +14315,7 @@ var PDFJS = {};
           precinctCodeblocks.push(codeblock$$1);
         }
       }
-      return{layerNumber:layerNumber, codeblocks:precinctCodeblocks};
+      return {layerNumber:layerNumber, codeblocks:precinctCodeblocks};
     }
     function LayerResolutionComponentPositionIterator(context$$5) {
       var siz$$2 = context$$5.SIZ;
@@ -14412,14 +14426,14 @@ var PDFJS = {};
         }
         value$$68 = value$$68 << 2 | readBits(2);
         if (value$$68 <= 14) {
-          return(value$$68 & 3) + 3;
+          return (value$$68 & 3) + 3;
         }
         value$$68 = value$$68 << 5 | readBits(5);
         if (value$$68 <= 510) {
-          return(value$$68 & 31) + 6;
+          return (value$$68 & 31) + 6;
         }
         value$$68 = value$$68 << 7 | readBits(7);
-        return(value$$68 & 127) + 37;
+        return (value$$68 & 127) + 37;
       }
       var position$$2 = 0;
       var buffer$$28;
@@ -14523,7 +14537,6 @@ var PDFJS = {};
           position$$2 += packetItem.dataLength;
         }
       }
-      return position$$2;
     }
     var SubbandsGainLog2 = {"LL":0, "LH":1, "HL":1, "HH":2};
     JpxImage$$1.prototype = {load:function JpxImage_load(url$$6) {
@@ -14615,58 +14628,58 @@ var PDFJS = {};
               var i$$183 = 0;
               for (;i$$183 < componentsCount$$8;i$$183++) {
                 var component$$20 = {precision:(data$$105[j$$66] & 127) + 1, isSigned:!!(data$$105[j$$66] & 128), XRsiz:data$$105[j$$66 + 1], YRsiz:data$$105[j$$66 + 1]};
-                var component$$inline_195 = component$$20;
-                var siz$$inline_196 = siz$$7;
-                component$$inline_195.x0 = Math.ceil(siz$$inline_196.XOsiz / component$$inline_195.XRsiz);
-                component$$inline_195.x1 = Math.ceil(siz$$inline_196.Xsiz / component$$inline_195.XRsiz);
-                component$$inline_195.y0 = Math.ceil(siz$$inline_196.YOsiz / component$$inline_195.YRsiz);
-                component$$inline_195.y1 = Math.ceil(siz$$inline_196.Ysiz / component$$inline_195.YRsiz);
-                component$$inline_195.width = component$$inline_195.x1 - component$$inline_195.x0;
-                component$$inline_195.height = component$$inline_195.y1 - component$$inline_195.y0;
+                var component$$inline_161 = component$$20;
+                var siz$$inline_162 = siz$$7;
+                component$$inline_161.x0 = Math.ceil(siz$$inline_162.XOsiz / component$$inline_161.XRsiz);
+                component$$inline_161.x1 = Math.ceil(siz$$inline_162.Xsiz / component$$inline_161.XRsiz);
+                component$$inline_161.y0 = Math.ceil(siz$$inline_162.YOsiz / component$$inline_161.YRsiz);
+                component$$inline_161.y1 = Math.ceil(siz$$inline_162.Ysiz / component$$inline_161.YRsiz);
+                component$$inline_161.width = component$$inline_161.x1 - component$$inline_161.x0;
+                component$$inline_161.height = component$$inline_161.y1 - component$$inline_161.y0;
                 components$$6.push(component$$20);
               }
               context$$12.SIZ = siz$$7;
               context$$12.components = components$$6;
-              var context$$inline_198 = context$$12;
-              var components$$inline_199 = components$$6;
-              var siz$$inline_200 = context$$inline_198.SIZ;
-              var tiles$$inline_201 = [];
-              var numXtiles$$inline_202 = Math.ceil((siz$$inline_200.Xsiz - siz$$inline_200.XTOsiz) / siz$$inline_200.XTsiz);
-              var numYtiles$$inline_203 = Math.ceil((siz$$inline_200.Ysiz - siz$$inline_200.YTOsiz) / siz$$inline_200.YTsiz);
-              var q$$inline_204 = 0;
-              for (;q$$inline_204 < numYtiles$$inline_203;q$$inline_204++) {
-                var p$$inline_205 = 0;
-                for (;p$$inline_205 < numXtiles$$inline_202;p$$inline_205++) {
-                  var tile$$inline_206 = {};
-                  tile$$inline_206.tx0 = Math.max(siz$$inline_200.XTOsiz + p$$inline_205 * siz$$inline_200.XTsiz, siz$$inline_200.XOsiz);
-                  tile$$inline_206.ty0 = Math.max(siz$$inline_200.YTOsiz + q$$inline_204 * siz$$inline_200.YTsiz, siz$$inline_200.YOsiz);
-                  tile$$inline_206.tx1 = Math.min(siz$$inline_200.XTOsiz + (p$$inline_205 + 1) * siz$$inline_200.XTsiz, siz$$inline_200.Xsiz);
-                  tile$$inline_206.ty1 = Math.min(siz$$inline_200.YTOsiz + (q$$inline_204 + 1) * siz$$inline_200.YTsiz, siz$$inline_200.Ysiz);
-                  tile$$inline_206.width = tile$$inline_206.tx1 - tile$$inline_206.tx0;
-                  tile$$inline_206.height = tile$$inline_206.ty1 - tile$$inline_206.ty0;
-                  tile$$inline_206.components = [];
-                  tiles$$inline_201.push(tile$$inline_206);
+              var context$$inline_164 = context$$12;
+              var components$$inline_165 = components$$6;
+              var siz$$inline_166 = context$$inline_164.SIZ;
+              var tiles$$inline_167 = [];
+              var numXtiles$$inline_168 = Math.ceil((siz$$inline_166.Xsiz - siz$$inline_166.XTOsiz) / siz$$inline_166.XTsiz);
+              var numYtiles$$inline_169 = Math.ceil((siz$$inline_166.Ysiz - siz$$inline_166.YTOsiz) / siz$$inline_166.YTsiz);
+              var q$$inline_170 = 0;
+              for (;q$$inline_170 < numYtiles$$inline_169;q$$inline_170++) {
+                var p$$inline_171 = 0;
+                for (;p$$inline_171 < numXtiles$$inline_168;p$$inline_171++) {
+                  var tile$$inline_172 = {};
+                  tile$$inline_172.tx0 = Math.max(siz$$inline_166.XTOsiz + p$$inline_171 * siz$$inline_166.XTsiz, siz$$inline_166.XOsiz);
+                  tile$$inline_172.ty0 = Math.max(siz$$inline_166.YTOsiz + q$$inline_170 * siz$$inline_166.YTsiz, siz$$inline_166.YOsiz);
+                  tile$$inline_172.tx1 = Math.min(siz$$inline_166.XTOsiz + (p$$inline_171 + 1) * siz$$inline_166.XTsiz, siz$$inline_166.Xsiz);
+                  tile$$inline_172.ty1 = Math.min(siz$$inline_166.YTOsiz + (q$$inline_170 + 1) * siz$$inline_166.YTsiz, siz$$inline_166.Ysiz);
+                  tile$$inline_172.width = tile$$inline_172.tx1 - tile$$inline_172.tx0;
+                  tile$$inline_172.height = tile$$inline_172.ty1 - tile$$inline_172.ty0;
+                  tile$$inline_172.components = [];
+                  tiles$$inline_167.push(tile$$inline_172);
                 }
               }
-              context$$inline_198.tiles = tiles$$inline_201;
-              var componentsCount$$inline_207 = siz$$inline_200.Csiz;
-              var i$$inline_208 = 0;
-              var ii$$inline_209 = componentsCount$$inline_207;
-              for (;i$$inline_208 < ii$$inline_209;i$$inline_208++) {
-                var component$$inline_210 = components$$inline_199[i$$inline_208];
-                var tileComponents$$inline_211 = [];
-                var j$$inline_212 = 0;
-                var jj$$inline_213 = tiles$$inline_201.length;
-                for (;j$$inline_212 < jj$$inline_213;j$$inline_212++) {
-                  var tileComponent$$inline_214 = {};
-                  tile$$inline_206 = tiles$$inline_201[j$$inline_212];
-                  tileComponent$$inline_214.tcx0 = Math.ceil(tile$$inline_206.tx0 / component$$inline_210.XRsiz);
-                  tileComponent$$inline_214.tcy0 = Math.ceil(tile$$inline_206.ty0 / component$$inline_210.YRsiz);
-                  tileComponent$$inline_214.tcx1 = Math.ceil(tile$$inline_206.tx1 / component$$inline_210.XRsiz);
-                  tileComponent$$inline_214.tcy1 = Math.ceil(tile$$inline_206.ty1 / component$$inline_210.YRsiz);
-                  tileComponent$$inline_214.width = tileComponent$$inline_214.tcx1 - tileComponent$$inline_214.tcx0;
-                  tileComponent$$inline_214.height = tileComponent$$inline_214.tcy1 - tileComponent$$inline_214.tcy0;
-                  tile$$inline_206.components[i$$inline_208] = tileComponent$$inline_214;
+              context$$inline_164.tiles = tiles$$inline_167;
+              var componentsCount$$inline_173 = siz$$inline_166.Csiz;
+              var i$$inline_174 = 0;
+              var ii$$inline_175 = componentsCount$$inline_173;
+              for (;i$$inline_174 < ii$$inline_175;i$$inline_174++) {
+                var component$$inline_176 = components$$inline_165[i$$inline_174];
+                var tileComponents$$inline_177 = [];
+                var j$$inline_178 = 0;
+                var jj$$inline_179 = tiles$$inline_167.length;
+                for (;j$$inline_178 < jj$$inline_179;j$$inline_178++) {
+                  var tileComponent$$inline_180 = {};
+                  tile$$inline_172 = tiles$$inline_167[j$$inline_178];
+                  tileComponent$$inline_180.tcx0 = Math.ceil(tile$$inline_172.tx0 / component$$inline_176.XRsiz);
+                  tileComponent$$inline_180.tcy0 = Math.ceil(tile$$inline_172.ty0 / component$$inline_176.YRsiz);
+                  tileComponent$$inline_180.tcx1 = Math.ceil(tile$$inline_172.tx1 / component$$inline_176.XRsiz);
+                  tileComponent$$inline_180.tcy1 = Math.ceil(tile$$inline_172.ty1 / component$$inline_176.YRsiz);
+                  tileComponent$$inline_180.width = tileComponent$$inline_180.tcx1 - tileComponent$$inline_180.tcx0;
+                  tileComponent$$inline_180.height = tileComponent$$inline_180.tcy1 - tileComponent$$inline_180.tcy0;
+                  tile$$inline_172.components[i$$inline_174] = tileComponent$$inline_180;
                 }
               }
               context$$12.QCC = [];
@@ -14831,125 +14844,125 @@ var PDFJS = {};
             case 65427:
               tile$$8 = context$$12.currentTile;
               if (tile$$8.partIndex == 0) {
-                var context$$inline_216 = context$$12;
-                var siz$$inline_218 = context$$inline_216.SIZ;
-                var componentsCount$$inline_219 = siz$$inline_218.Csiz;
-                var tile$$inline_220 = context$$inline_216.tiles[tile$$8.index];
-                var resultTiles$$inline_221 = [];
-                var c$$inline_222 = 0;
-                for (;c$$inline_222 < componentsCount$$inline_219;c$$inline_222++) {
-                  var component$$inline_223 = tile$$inline_220.components[c$$inline_222];
-                  var qcdOrQcc$$inline_224 = c$$inline_222 in context$$inline_216.currentTile.QCC ? context$$inline_216.currentTile.QCC[c$$inline_222] : context$$inline_216.currentTile.QCD;
-                  component$$inline_223.quantizationParameters = qcdOrQcc$$inline_224;
-                  var codOrCoc$$inline_225 = c$$inline_222 in context$$inline_216.currentTile.COC ? context$$inline_216.currentTile.COC[c$$inline_222] : context$$inline_216.currentTile.COD;
-                  component$$inline_223.codingStyleParameters = codOrCoc$$inline_225;
+                var context$$inline_182 = context$$12;
+                var siz$$inline_184 = context$$inline_182.SIZ;
+                var componentsCount$$inline_185 = siz$$inline_184.Csiz;
+                var tile$$inline_186 = context$$inline_182.tiles[tile$$8.index];
+                var resultTiles$$inline_187 = [];
+                var c$$inline_188 = 0;
+                for (;c$$inline_188 < componentsCount$$inline_185;c$$inline_188++) {
+                  var component$$inline_189 = tile$$inline_186.components[c$$inline_188];
+                  var qcdOrQcc$$inline_190 = c$$inline_188 in context$$inline_182.currentTile.QCC ? context$$inline_182.currentTile.QCC[c$$inline_188] : context$$inline_182.currentTile.QCD;
+                  component$$inline_189.quantizationParameters = qcdOrQcc$$inline_190;
+                  var codOrCoc$$inline_191 = c$$inline_188 in context$$inline_182.currentTile.COC ? context$$inline_182.currentTile.COC[c$$inline_188] : context$$inline_182.currentTile.COD;
+                  component$$inline_189.codingStyleParameters = codOrCoc$$inline_191;
                 }
-                tile$$inline_220.codingStyleDefaultParameters = context$$inline_216.currentTile.COD;
-                var context$$inline_227 = context$$12;
-                var siz$$inline_228 = context$$inline_227.SIZ;
-                var tileIndex$$inline_229 = context$$inline_227.currentTile.index;
-                var tile$$inline_230 = context$$inline_227.tiles[tileIndex$$inline_229];
-                var componentsCount$$inline_231 = siz$$inline_228.Csiz;
-                var c$$inline_232 = 0;
-                for (;c$$inline_232 < componentsCount$$inline_231;c$$inline_232++) {
-                  var component$$inline_233 = tile$$inline_230.components[c$$inline_232];
-                  var decompositionLevelsCount$$inline_234 = component$$inline_233.codingStyleParameters.decompositionLevelsCount;
-                  var resolutions$$inline_235 = [];
-                  var subbands$$inline_236 = [];
-                  var r$$inline_237 = 0;
-                  for (;r$$inline_237 <= decompositionLevelsCount$$inline_234;r$$inline_237++) {
-                    var blocksDimensions$$inline_238;
-                    var r$$inline_304 = r$$inline_237;
-                    var codOrCoc$$inline_305 = component$$inline_233.codingStyleParameters;
-                    var result$$inline_306 = {};
-                    if (!codOrCoc$$inline_305.entropyCoderWithCustomPrecincts) {
-                      result$$inline_306.PPx = 15;
-                      result$$inline_306.PPy = 15;
+                tile$$inline_186.codingStyleDefaultParameters = context$$inline_182.currentTile.COD;
+                var context$$inline_193 = context$$12;
+                var siz$$inline_194 = context$$inline_193.SIZ;
+                var tileIndex$$inline_195 = context$$inline_193.currentTile.index;
+                var tile$$inline_196 = context$$inline_193.tiles[tileIndex$$inline_195];
+                var componentsCount$$inline_197 = siz$$inline_194.Csiz;
+                var c$$inline_198 = 0;
+                for (;c$$inline_198 < componentsCount$$inline_197;c$$inline_198++) {
+                  var component$$inline_199 = tile$$inline_196.components[c$$inline_198];
+                  var decompositionLevelsCount$$inline_200 = component$$inline_199.codingStyleParameters.decompositionLevelsCount;
+                  var resolutions$$inline_201 = [];
+                  var subbands$$inline_202 = [];
+                  var r$$inline_203 = 0;
+                  for (;r$$inline_203 <= decompositionLevelsCount$$inline_200;r$$inline_203++) {
+                    var blocksDimensions$$inline_204;
+                    var r$$inline_270 = r$$inline_203;
+                    var codOrCoc$$inline_271 = component$$inline_199.codingStyleParameters;
+                    var result$$inline_272 = {};
+                    if (!codOrCoc$$inline_271.entropyCoderWithCustomPrecincts) {
+                      result$$inline_272.PPx = 15;
+                      result$$inline_272.PPy = 15;
                     } else {
-                      result$$inline_306.PPx = codOrCoc$$inline_305.precinctsSizes[r$$inline_304].PPx;
-                      result$$inline_306.PPy = codOrCoc$$inline_305.precinctsSizes[r$$inline_304].PPy;
+                      result$$inline_272.PPx = codOrCoc$$inline_271.precinctsSizes[r$$inline_270].PPx;
+                      result$$inline_272.PPy = codOrCoc$$inline_271.precinctsSizes[r$$inline_270].PPy;
                     }
-                    result$$inline_306.xcb_ = r$$inline_304 > 0 ? Math.min(codOrCoc$$inline_305.xcb, result$$inline_306.PPx - 1) : Math.min(codOrCoc$$inline_305.xcb, result$$inline_306.PPx);
-                    result$$inline_306.ycb_ = r$$inline_304 > 0 ? Math.min(codOrCoc$$inline_305.ycb, result$$inline_306.PPy - 1) : Math.min(codOrCoc$$inline_305.ycb, result$$inline_306.PPy);
-                    blocksDimensions$$inline_238 = result$$inline_306;
-                    var resolution$$inline_239 = {};
-                    var scale$$inline_240 = 1 << decompositionLevelsCount$$inline_234 - r$$inline_237;
-                    resolution$$inline_239.trx0 = Math.ceil(component$$inline_233.tcx0 / scale$$inline_240);
-                    resolution$$inline_239.try0 = Math.ceil(component$$inline_233.tcy0 / scale$$inline_240);
-                    resolution$$inline_239.trx1 = Math.ceil(component$$inline_233.tcx1 / scale$$inline_240);
-                    resolution$$inline_239.try1 = Math.ceil(component$$inline_233.tcy1 / scale$$inline_240);
-                    var resolution$$inline_309 = resolution$$inline_239;
-                    var precinctWidth$$inline_311 = 1 << blocksDimensions$$inline_238.PPx;
-                    var precinctHeight$$inline_312 = 1 << blocksDimensions$$inline_238.PPy;
-                    var numprecinctswide$$inline_313 = resolution$$inline_309.trx1 > resolution$$inline_309.trx0 ? Math.ceil(resolution$$inline_309.trx1 / precinctWidth$$inline_311) - Math.floor(resolution$$inline_309.trx0 / precinctWidth$$inline_311) : 0;
-                    var numprecinctshigh$$inline_314 = resolution$$inline_309.try1 > resolution$$inline_309.try0 ? Math.ceil(resolution$$inline_309.try1 / precinctHeight$$inline_312) - Math.floor(resolution$$inline_309.try0 / precinctHeight$$inline_312) : 0;
-                    var numprecincts$$inline_315 = numprecinctswide$$inline_313 * numprecinctshigh$$inline_314;
-                    var precinctXOffset$$inline_316 = Math.floor(resolution$$inline_309.trx0 / precinctWidth$$inline_311) * precinctWidth$$inline_311;
-                    var precinctYOffset$$inline_317 = Math.floor(resolution$$inline_309.try0 / precinctHeight$$inline_312) * precinctHeight$$inline_312;
-                    resolution$$inline_309.precinctParameters = {precinctXOffset:precinctXOffset$$inline_316, precinctYOffset:precinctYOffset$$inline_317, precinctWidth:precinctWidth$$inline_311, precinctHeight:precinctHeight$$inline_312, numprecinctswide:numprecinctswide$$inline_313, numprecinctshigh:numprecinctshigh$$inline_314, numprecincts:numprecincts$$inline_315};
-                    resolutions$$inline_235.push(resolution$$inline_239);
-                    var subband$$inline_241;
-                    if (r$$inline_237 == 0) {
-                      subband$$inline_241 = {};
-                      subband$$inline_241.type = "LL";
-                      subband$$inline_241.tbx0 = Math.ceil(component$$inline_233.tcx0 / scale$$inline_240);
-                      subband$$inline_241.tby0 = Math.ceil(component$$inline_233.tcy0 / scale$$inline_240);
-                      subband$$inline_241.tbx1 = Math.ceil(component$$inline_233.tcx1 / scale$$inline_240);
-                      subband$$inline_241.tby1 = Math.ceil(component$$inline_233.tcy1 / scale$$inline_240);
-                      subband$$inline_241.resolution = resolution$$inline_239;
-                      buildCodeblocks(context$$inline_227, subband$$inline_241, blocksDimensions$$inline_238);
-                      subbands$$inline_236.push(subband$$inline_241);
-                      resolution$$inline_239.subbands = [subband$$inline_241];
+                    result$$inline_272.xcb_ = r$$inline_270 > 0 ? Math.min(codOrCoc$$inline_271.xcb, result$$inline_272.PPx - 1) : Math.min(codOrCoc$$inline_271.xcb, result$$inline_272.PPx);
+                    result$$inline_272.ycb_ = r$$inline_270 > 0 ? Math.min(codOrCoc$$inline_271.ycb, result$$inline_272.PPy - 1) : Math.min(codOrCoc$$inline_271.ycb, result$$inline_272.PPy);
+                    blocksDimensions$$inline_204 = result$$inline_272;
+                    var resolution$$inline_205 = {};
+                    var scale$$inline_206 = 1 << decompositionLevelsCount$$inline_200 - r$$inline_203;
+                    resolution$$inline_205.trx0 = Math.ceil(component$$inline_199.tcx0 / scale$$inline_206);
+                    resolution$$inline_205.try0 = Math.ceil(component$$inline_199.tcy0 / scale$$inline_206);
+                    resolution$$inline_205.trx1 = Math.ceil(component$$inline_199.tcx1 / scale$$inline_206);
+                    resolution$$inline_205.try1 = Math.ceil(component$$inline_199.tcy1 / scale$$inline_206);
+                    var resolution$$inline_275 = resolution$$inline_205;
+                    var precinctWidth$$inline_277 = 1 << blocksDimensions$$inline_204.PPx;
+                    var precinctHeight$$inline_278 = 1 << blocksDimensions$$inline_204.PPy;
+                    var numprecinctswide$$inline_279 = resolution$$inline_275.trx1 > resolution$$inline_275.trx0 ? Math.ceil(resolution$$inline_275.trx1 / precinctWidth$$inline_277) - Math.floor(resolution$$inline_275.trx0 / precinctWidth$$inline_277) : 0;
+                    var numprecinctshigh$$inline_280 = resolution$$inline_275.try1 > resolution$$inline_275.try0 ? Math.ceil(resolution$$inline_275.try1 / precinctHeight$$inline_278) - Math.floor(resolution$$inline_275.try0 / precinctHeight$$inline_278) : 0;
+                    var numprecincts$$inline_281 = numprecinctswide$$inline_279 * numprecinctshigh$$inline_280;
+                    var precinctXOffset$$inline_282 = Math.floor(resolution$$inline_275.trx0 / precinctWidth$$inline_277) * precinctWidth$$inline_277;
+                    var precinctYOffset$$inline_283 = Math.floor(resolution$$inline_275.try0 / precinctHeight$$inline_278) * precinctHeight$$inline_278;
+                    resolution$$inline_275.precinctParameters = {precinctXOffset:precinctXOffset$$inline_282, precinctYOffset:precinctYOffset$$inline_283, precinctWidth:precinctWidth$$inline_277, precinctHeight:precinctHeight$$inline_278, numprecinctswide:numprecinctswide$$inline_279, numprecinctshigh:numprecinctshigh$$inline_280, numprecincts:numprecincts$$inline_281};
+                    resolutions$$inline_201.push(resolution$$inline_205);
+                    var subband$$inline_207;
+                    if (r$$inline_203 == 0) {
+                      subband$$inline_207 = {};
+                      subband$$inline_207.type = "LL";
+                      subband$$inline_207.tbx0 = Math.ceil(component$$inline_199.tcx0 / scale$$inline_206);
+                      subband$$inline_207.tby0 = Math.ceil(component$$inline_199.tcy0 / scale$$inline_206);
+                      subband$$inline_207.tbx1 = Math.ceil(component$$inline_199.tcx1 / scale$$inline_206);
+                      subband$$inline_207.tby1 = Math.ceil(component$$inline_199.tcy1 / scale$$inline_206);
+                      subband$$inline_207.resolution = resolution$$inline_205;
+                      buildCodeblocks(context$$inline_193, subband$$inline_207, blocksDimensions$$inline_204);
+                      subbands$$inline_202.push(subband$$inline_207);
+                      resolution$$inline_205.subbands = [subband$$inline_207];
                     } else {
-                      var bscale$$inline_242 = 1 << decompositionLevelsCount$$inline_234 - r$$inline_237 + 1;
-                      var resolutionSubbands$$inline_243 = [];
-                      subband$$inline_241 = {};
-                      subband$$inline_241.type = "HL";
-                      subband$$inline_241.tbx0 = Math.ceil(component$$inline_233.tcx0 / bscale$$inline_242 - .5);
-                      subband$$inline_241.tby0 = Math.ceil(component$$inline_233.tcy0 / bscale$$inline_242);
-                      subband$$inline_241.tbx1 = Math.ceil(component$$inline_233.tcx1 / bscale$$inline_242 - .5);
-                      subband$$inline_241.tby1 = Math.ceil(component$$inline_233.tcy1 / bscale$$inline_242);
-                      subband$$inline_241.resolution = resolution$$inline_239;
-                      buildCodeblocks(context$$inline_227, subband$$inline_241, blocksDimensions$$inline_238);
-                      subbands$$inline_236.push(subband$$inline_241);
-                      resolutionSubbands$$inline_243.push(subband$$inline_241);
-                      subband$$inline_241 = {};
-                      subband$$inline_241.type = "LH";
-                      subband$$inline_241.tbx0 = Math.ceil(component$$inline_233.tcx0 / bscale$$inline_242);
-                      subband$$inline_241.tby0 = Math.ceil(component$$inline_233.tcy0 / bscale$$inline_242 - .5);
-                      subband$$inline_241.tbx1 = Math.ceil(component$$inline_233.tcx1 / bscale$$inline_242);
-                      subband$$inline_241.tby1 = Math.ceil(component$$inline_233.tcy1 / bscale$$inline_242 - .5);
-                      subband$$inline_241.resolution = resolution$$inline_239;
-                      buildCodeblocks(context$$inline_227, subband$$inline_241, blocksDimensions$$inline_238);
-                      subbands$$inline_236.push(subband$$inline_241);
-                      resolutionSubbands$$inline_243.push(subband$$inline_241);
-                      subband$$inline_241 = {};
-                      subband$$inline_241.type = "HH";
-                      subband$$inline_241.tbx0 = Math.ceil(component$$inline_233.tcx0 / bscale$$inline_242 - .5);
-                      subband$$inline_241.tby0 = Math.ceil(component$$inline_233.tcy0 / bscale$$inline_242 - .5);
-                      subband$$inline_241.tbx1 = Math.ceil(component$$inline_233.tcx1 / bscale$$inline_242 - .5);
-                      subband$$inline_241.tby1 = Math.ceil(component$$inline_233.tcy1 / bscale$$inline_242 - .5);
-                      subband$$inline_241.resolution = resolution$$inline_239;
-                      buildCodeblocks(context$$inline_227, subband$$inline_241, blocksDimensions$$inline_238);
-                      subbands$$inline_236.push(subband$$inline_241);
-                      resolutionSubbands$$inline_243.push(subband$$inline_241);
-                      resolution$$inline_239.subbands = resolutionSubbands$$inline_243;
+                      var bscale$$inline_208 = 1 << decompositionLevelsCount$$inline_200 - r$$inline_203 + 1;
+                      var resolutionSubbands$$inline_209 = [];
+                      subband$$inline_207 = {};
+                      subband$$inline_207.type = "HL";
+                      subband$$inline_207.tbx0 = Math.ceil(component$$inline_199.tcx0 / bscale$$inline_208 - .5);
+                      subband$$inline_207.tby0 = Math.ceil(component$$inline_199.tcy0 / bscale$$inline_208);
+                      subband$$inline_207.tbx1 = Math.ceil(component$$inline_199.tcx1 / bscale$$inline_208 - .5);
+                      subband$$inline_207.tby1 = Math.ceil(component$$inline_199.tcy1 / bscale$$inline_208);
+                      subband$$inline_207.resolution = resolution$$inline_205;
+                      buildCodeblocks(context$$inline_193, subband$$inline_207, blocksDimensions$$inline_204);
+                      subbands$$inline_202.push(subband$$inline_207);
+                      resolutionSubbands$$inline_209.push(subband$$inline_207);
+                      subband$$inline_207 = {};
+                      subband$$inline_207.type = "LH";
+                      subband$$inline_207.tbx0 = Math.ceil(component$$inline_199.tcx0 / bscale$$inline_208);
+                      subband$$inline_207.tby0 = Math.ceil(component$$inline_199.tcy0 / bscale$$inline_208 - .5);
+                      subband$$inline_207.tbx1 = Math.ceil(component$$inline_199.tcx1 / bscale$$inline_208);
+                      subband$$inline_207.tby1 = Math.ceil(component$$inline_199.tcy1 / bscale$$inline_208 - .5);
+                      subband$$inline_207.resolution = resolution$$inline_205;
+                      buildCodeblocks(context$$inline_193, subband$$inline_207, blocksDimensions$$inline_204);
+                      subbands$$inline_202.push(subband$$inline_207);
+                      resolutionSubbands$$inline_209.push(subband$$inline_207);
+                      subband$$inline_207 = {};
+                      subband$$inline_207.type = "HH";
+                      subband$$inline_207.tbx0 = Math.ceil(component$$inline_199.tcx0 / bscale$$inline_208 - .5);
+                      subband$$inline_207.tby0 = Math.ceil(component$$inline_199.tcy0 / bscale$$inline_208 - .5);
+                      subband$$inline_207.tbx1 = Math.ceil(component$$inline_199.tcx1 / bscale$$inline_208 - .5);
+                      subband$$inline_207.tby1 = Math.ceil(component$$inline_199.tcy1 / bscale$$inline_208 - .5);
+                      subband$$inline_207.resolution = resolution$$inline_205;
+                      buildCodeblocks(context$$inline_193, subband$$inline_207, blocksDimensions$$inline_204);
+                      subbands$$inline_202.push(subband$$inline_207);
+                      resolutionSubbands$$inline_209.push(subband$$inline_207);
+                      resolution$$inline_205.subbands = resolutionSubbands$$inline_209;
                     }
                   }
-                  component$$inline_233.resolutions = resolutions$$inline_235;
-                  component$$inline_233.subbands = subbands$$inline_236;
+                  component$$inline_199.resolutions = resolutions$$inline_201;
+                  component$$inline_199.subbands = subbands$$inline_202;
                 }
-                var progressionOrder$$inline_244 = tile$$inline_230.codingStyleDefaultParameters.progressionOrder;
-                var packetsIterator$$inline_245 = void 0;
-                switch(progressionOrder$$inline_244) {
+                var progressionOrder$$inline_210 = tile$$inline_196.codingStyleDefaultParameters.progressionOrder;
+                var packetsIterator$$inline_211 = void 0;
+                switch(progressionOrder$$inline_210) {
                   case 0:
-                    tile$$inline_230.packetsIterator = new LayerResolutionComponentPositionIterator(context$$inline_227);
+                    tile$$inline_196.packetsIterator = new LayerResolutionComponentPositionIterator(context$$inline_193);
                     break;
                   case 1:
-                    tile$$inline_230.packetsIterator = new ResolutionLayerComponentPositionIterator(context$$inline_227);
+                    tile$$inline_196.packetsIterator = new ResolutionLayerComponentPositionIterator(context$$inline_193);
                     break;
                   default:
-                    throw "Unsupported progression order " + progressionOrder$$inline_244;;
+                    throw "Unsupported progression order " + progressionOrder$$inline_210;;
                 }
               }
               length$$73 = tile$$8.dataEnd - position$$5;
@@ -14970,197 +14983,197 @@ var PDFJS = {};
           warn("JPX error: " + e$$29 + ". Trying to recover");
         }
       }
-      var JSCompiler_inline_result$$4;
-      var context$$inline_247 = context$$12;
-      var siz$$inline_248 = context$$inline_247.SIZ;
-      var components$$inline_249 = context$$inline_247.components;
-      var componentsCount$$inline_250 = siz$$inline_248.Csiz;
-      var resultImages$$inline_251 = [];
-      var i$$inline_252 = 0;
-      var ii$$inline_253 = context$$inline_247.tiles.length;
-      for (;i$$inline_252 < ii$$inline_253;i$$inline_252++) {
-        var tile$$inline_254 = context$$inline_247.tiles[i$$inline_252];
-        var result$$inline_255 = [];
-        var c$$inline_256 = 0;
-        for (;c$$inline_256 < componentsCount$$inline_250;c$$inline_256++) {
-          var image$$inline_257;
-          var component$$inline_322 = tile$$inline_254.components[c$$inline_256];
-          var codingStyleParameters$$inline_323 = component$$inline_322.codingStyleParameters;
-          var quantizationParameters$$inline_324 = component$$inline_322.quantizationParameters;
-          var decompositionLevelsCount$$inline_325 = codingStyleParameters$$inline_323.decompositionLevelsCount;
-          var spqcds$$inline_326 = quantizationParameters$$inline_324.SPqcds;
-          var scalarExpounded$$inline_327 = quantizationParameters$$inline_324.scalarExpounded;
-          var guardBits$$inline_328 = quantizationParameters$$inline_324.guardBits;
-          var transformation$$inline_329 = codingStyleParameters$$inline_323.transformation;
-          var precision$$inline_330 = context$$inline_247.components[c$$inline_256].precision;
-          var subbandCoefficients$$inline_331 = [];
-          var k$$inline_332 = 0;
-          var b$$inline_333 = 0;
-          var i$$inline_334 = 0;
-          for (;i$$inline_334 <= decompositionLevelsCount$$inline_325;i$$inline_334++) {
-            var resolution$$inline_335 = component$$inline_322.resolutions[i$$inline_334];
-            var j$$inline_336 = 0;
-            var jj$$inline_337 = resolution$$inline_335.subbands.length;
-            for (;j$$inline_336 < jj$$inline_337;j$$inline_336++) {
-              var mu$$inline_338;
-              var epsilon$$inline_339;
-              if (!scalarExpounded$$inline_327) {
-                mu$$inline_338 = spqcds$$inline_326[0].mu;
-                epsilon$$inline_339 = spqcds$$inline_326[0].epsilon + (i$$inline_334 > 0 ? 1 - i$$inline_334 : 0);
+      var JSCompiler_inline_result$$9;
+      var context$$inline_213 = context$$12;
+      var siz$$inline_214 = context$$inline_213.SIZ;
+      var components$$inline_215 = context$$inline_213.components;
+      var componentsCount$$inline_216 = siz$$inline_214.Csiz;
+      var resultImages$$inline_217 = [];
+      var i$$inline_218 = 0;
+      var ii$$inline_219 = context$$inline_213.tiles.length;
+      for (;i$$inline_218 < ii$$inline_219;i$$inline_218++) {
+        var tile$$inline_220 = context$$inline_213.tiles[i$$inline_218];
+        var result$$inline_221 = [];
+        var c$$inline_222 = 0;
+        for (;c$$inline_222 < componentsCount$$inline_216;c$$inline_222++) {
+          var image$$inline_223;
+          var component$$inline_288 = tile$$inline_220.components[c$$inline_222];
+          var codingStyleParameters$$inline_289 = component$$inline_288.codingStyleParameters;
+          var quantizationParameters$$inline_290 = component$$inline_288.quantizationParameters;
+          var decompositionLevelsCount$$inline_291 = codingStyleParameters$$inline_289.decompositionLevelsCount;
+          var spqcds$$inline_292 = quantizationParameters$$inline_290.SPqcds;
+          var scalarExpounded$$inline_293 = quantizationParameters$$inline_290.scalarExpounded;
+          var guardBits$$inline_294 = quantizationParameters$$inline_290.guardBits;
+          var transformation$$inline_295 = codingStyleParameters$$inline_289.transformation;
+          var precision$$inline_296 = context$$inline_213.components[c$$inline_222].precision;
+          var subbandCoefficients$$inline_297 = [];
+          var k$$inline_298 = 0;
+          var b$$inline_299 = 0;
+          var i$$inline_300 = 0;
+          for (;i$$inline_300 <= decompositionLevelsCount$$inline_291;i$$inline_300++) {
+            var resolution$$inline_301 = component$$inline_288.resolutions[i$$inline_300];
+            var j$$inline_302 = 0;
+            var jj$$inline_303 = resolution$$inline_301.subbands.length;
+            for (;j$$inline_302 < jj$$inline_303;j$$inline_302++) {
+              var mu$$inline_304;
+              var epsilon$$inline_305;
+              if (!scalarExpounded$$inline_293) {
+                mu$$inline_304 = spqcds$$inline_292[0].mu;
+                epsilon$$inline_305 = spqcds$$inline_292[0].epsilon + (i$$inline_300 > 0 ? 1 - i$$inline_300 : 0);
               } else {
-                mu$$inline_338 = spqcds$$inline_326[b$$inline_333].mu;
-                epsilon$$inline_339 = spqcds$$inline_326[b$$inline_333].epsilon;
+                mu$$inline_304 = spqcds$$inline_292[b$$inline_299].mu;
+                epsilon$$inline_305 = spqcds$$inline_292[b$$inline_299].epsilon;
               }
-              var subband$$inline_340 = resolution$$inline_335.subbands[j$$inline_336];
-              var width$$inline_341 = subband$$inline_340.tbx1 - subband$$inline_340.tbx0;
-              var height$$inline_342 = subband$$inline_340.tby1 - subband$$inline_340.tby0;
-              var gainLog2$$inline_343 = SubbandsGainLog2[subband$$inline_340.type];
-              var delta$$inline_344 = Math.pow(2, precision$$inline_330 + gainLog2$$inline_343 - epsilon$$inline_339) * (1 + mu$$inline_338 / 2048);
-              var mb$$inline_345 = guardBits$$inline_328 + epsilon$$inline_339 - 1;
-              var coefficients$$inline_346 = new Float32Array(width$$inline_341 * height$$inline_342);
-              var coefficients$$inline_347 = coefficients$$inline_346;
-              var x0$$inline_348 = subband$$inline_340.tbx0;
-              var y0$$inline_349 = subband$$inline_340.tby0;
-              var width$$inline_350 = width$$inline_341;
-              var delta$$inline_351 = delta$$inline_344;
-              var mb$$inline_352 = mb$$inline_345;
-              var codeblocks$$inline_353 = subband$$inline_340.codeblocks;
-              var transformation$$inline_354 = transformation$$inline_329;
-              var r$$inline_355 = .5;
-              var i$$inline_356 = 0;
-              var ii$$inline_357 = codeblocks$$inline_353.length;
-              for (;i$$inline_356 < ii$$inline_357;++i$$inline_356) {
-                var codeblock$$inline_358 = codeblocks$$inline_353[i$$inline_356];
-                var blockWidth$$inline_359 = codeblock$$inline_358.tbx1_ - codeblock$$inline_358.tbx0_;
-                var blockHeight$$inline_360 = codeblock$$inline_358.tby1_ - codeblock$$inline_358.tby0_;
-                if (blockWidth$$inline_359 == 0 || blockHeight$$inline_360 == 0) {
+              var subband$$inline_306 = resolution$$inline_301.subbands[j$$inline_302];
+              var width$$inline_307 = subband$$inline_306.tbx1 - subband$$inline_306.tbx0;
+              var height$$inline_308 = subband$$inline_306.tby1 - subband$$inline_306.tby0;
+              var gainLog2$$inline_309 = SubbandsGainLog2[subband$$inline_306.type];
+              var delta$$inline_310 = Math.pow(2, precision$$inline_296 + gainLog2$$inline_309 - epsilon$$inline_305) * (1 + mu$$inline_304 / 2048);
+              var mb$$inline_311 = guardBits$$inline_294 + epsilon$$inline_305 - 1;
+              var coefficients$$inline_312 = new Float32Array(width$$inline_307 * height$$inline_308);
+              var coefficients$$inline_316 = coefficients$$inline_312;
+              var x0$$inline_317 = subband$$inline_306.tbx0;
+              var y0$$inline_318 = subband$$inline_306.tby0;
+              var width$$inline_319 = width$$inline_307;
+              var delta$$inline_321 = delta$$inline_310;
+              var mb$$inline_322 = mb$$inline_311;
+              var codeblocks$$inline_323 = subband$$inline_306.codeblocks;
+              var transformation$$inline_324 = transformation$$inline_295;
+              var r$$inline_325 = .5;
+              var i$$inline_326 = 0;
+              var ii$$inline_327 = codeblocks$$inline_323.length;
+              for (;i$$inline_326 < ii$$inline_327;++i$$inline_326) {
+                var codeblock$$inline_328 = codeblocks$$inline_323[i$$inline_326];
+                var blockWidth$$inline_329 = codeblock$$inline_328.tbx1_ - codeblock$$inline_328.tbx0_;
+                var blockHeight$$inline_330 = codeblock$$inline_328.tby1_ - codeblock$$inline_328.tby0_;
+                if (blockWidth$$inline_329 == 0 || blockHeight$$inline_330 == 0) {
                   continue;
                 }
-                if (!("data" in codeblock$$inline_358)) {
+                if (!("data" in codeblock$$inline_328)) {
                   continue;
                 }
-                var bitModel$$inline_361;
-                var currentCodingpassType$$inline_362;
-                bitModel$$inline_361 = new BitModel(blockWidth$$inline_359, blockHeight$$inline_360, codeblock$$inline_358.subbandType, codeblock$$inline_358.zeroBitPlanes);
-                currentCodingpassType$$inline_362 = 2;
-                var data$$inline_363 = codeblock$$inline_358.data;
-                var totalLength$$inline_364 = 0;
-                var codingpasses$$inline_365 = 0;
-                var q$$inline_366 = 0;
-                var qq$$inline_367 = data$$inline_363.length;
-                for (;q$$inline_366 < qq$$inline_367;q$$inline_366++) {
-                  var dataItem$$inline_368 = data$$inline_363[q$$inline_366];
-                  totalLength$$inline_364 += dataItem$$inline_368.end - dataItem$$inline_368.start;
-                  codingpasses$$inline_365 += dataItem$$inline_368.codingpasses;
+                var bitModel$$inline_331;
+                var currentCodingpassType$$inline_332;
+                bitModel$$inline_331 = new BitModel(blockWidth$$inline_329, blockHeight$$inline_330, codeblock$$inline_328.subbandType, codeblock$$inline_328.zeroBitPlanes);
+                currentCodingpassType$$inline_332 = 2;
+                var data$$inline_333 = codeblock$$inline_328.data;
+                var totalLength$$inline_334 = 0;
+                var codingpasses$$inline_335 = 0;
+                var q$$inline_336 = 0;
+                var qq$$inline_337 = data$$inline_333.length;
+                for (;q$$inline_336 < qq$$inline_337;q$$inline_336++) {
+                  var dataItem$$inline_338 = data$$inline_333[q$$inline_336];
+                  totalLength$$inline_334 += dataItem$$inline_338.end - dataItem$$inline_338.start;
+                  codingpasses$$inline_335 += dataItem$$inline_338.codingpasses;
                 }
-                var encodedData$$inline_369 = new Uint8Array(totalLength$$inline_364);
-                var k$$inline_370 = 0;
-                q$$inline_366 = 0;
-                qq$$inline_367 = data$$inline_363.length;
-                for (;q$$inline_366 < qq$$inline_367;q$$inline_366++) {
-                  dataItem$$inline_368 = data$$inline_363[q$$inline_366];
-                  var chunk$$inline_371 = dataItem$$inline_368.data.subarray(dataItem$$inline_368.start, dataItem$$inline_368.end);
-                  encodedData$$inline_369.set(chunk$$inline_371, k$$inline_370);
-                  k$$inline_370 += chunk$$inline_371.length;
+                var encodedData$$inline_339 = new Uint8Array(totalLength$$inline_334);
+                var k$$inline_340 = 0;
+                q$$inline_336 = 0;
+                qq$$inline_337 = data$$inline_333.length;
+                for (;q$$inline_336 < qq$$inline_337;q$$inline_336++) {
+                  dataItem$$inline_338 = data$$inline_333[q$$inline_336];
+                  var chunk$$inline_341 = dataItem$$inline_338.data.subarray(dataItem$$inline_338.start, dataItem$$inline_338.end);
+                  encodedData$$inline_339.set(chunk$$inline_341, k$$inline_340);
+                  k$$inline_340 += chunk$$inline_341.length;
                 }
-                var decoder$$inline_372 = new ArithmeticDecoder(encodedData$$inline_369, 0, totalLength$$inline_364);
-                bitModel$$inline_361.setDecoder(decoder$$inline_372);
-                q$$inline_366 = 0;
-                for (;q$$inline_366 < codingpasses$$inline_365;q$$inline_366++) {
-                  switch(currentCodingpassType$$inline_362) {
+                var decoder$$inline_342 = new ArithmeticDecoder(encodedData$$inline_339, 0, totalLength$$inline_334);
+                bitModel$$inline_331.setDecoder(decoder$$inline_342);
+                q$$inline_336 = 0;
+                for (;q$$inline_336 < codingpasses$$inline_335;q$$inline_336++) {
+                  switch(currentCodingpassType$$inline_332) {
                     case 0:
-                      bitModel$$inline_361.runSignificancePropogationPass();
+                      bitModel$$inline_331.runSignificancePropogationPass();
                       break;
                     case 1:
-                      bitModel$$inline_361.runMagnitudeRefinementPass();
+                      bitModel$$inline_331.runMagnitudeRefinementPass();
                       break;
                     case 2:
-                      bitModel$$inline_361.runCleanupPass();
+                      bitModel$$inline_331.runCleanupPass();
                   }
-                  currentCodingpassType$$inline_362 = (currentCodingpassType$$inline_362 + 1) % 3;
+                  currentCodingpassType$$inline_332 = (currentCodingpassType$$inline_332 + 1) % 3;
                 }
-                var offset$$inline_373 = codeblock$$inline_358.tbx0_ - x0$$inline_348 + (codeblock$$inline_358.tby0_ - y0$$inline_349) * width$$inline_350;
-                var position$$inline_374 = 0;
-                var j$$inline_375 = 0;
-                for (;j$$inline_375 < blockHeight$$inline_360;j$$inline_375++) {
-                  k$$inline_370 = 0;
-                  for (;k$$inline_370 < blockWidth$$inline_359;k$$inline_370++) {
-                    var n$$inline_376 = (bitModel$$inline_361.coefficentsSign[position$$inline_374] ? -1 : 1) * bitModel$$inline_361.coefficentsMagnitude[position$$inline_374];
-                    var nb$$inline_377 = bitModel$$inline_361.bitsDecoded[position$$inline_374];
-                    var correction$$inline_378;
-                    if (transformation$$inline_354 == 0 || mb$$inline_352 > nb$$inline_377) {
-                      n$$inline_376 += n$$inline_376 < 0 ? n$$inline_376 - r$$inline_355 : n$$inline_376 > 0 ? n$$inline_376 + r$$inline_355 : 0;
-                      correction$$inline_378 = 1 << mb$$inline_352 - nb$$inline_377;
+                var offset$$inline_343 = codeblock$$inline_328.tbx0_ - x0$$inline_317 + (codeblock$$inline_328.tby0_ - y0$$inline_318) * width$$inline_319;
+                var position$$inline_344 = 0;
+                var j$$inline_345 = 0;
+                for (;j$$inline_345 < blockHeight$$inline_330;j$$inline_345++) {
+                  k$$inline_340 = 0;
+                  for (;k$$inline_340 < blockWidth$$inline_329;k$$inline_340++) {
+                    var n$$inline_346 = (bitModel$$inline_331.coefficentsSign[position$$inline_344] ? -1 : 1) * bitModel$$inline_331.coefficentsMagnitude[position$$inline_344];
+                    var nb$$inline_347 = bitModel$$inline_331.bitsDecoded[position$$inline_344];
+                    var correction$$inline_348;
+                    if (transformation$$inline_324 == 0 || mb$$inline_322 > nb$$inline_347) {
+                      n$$inline_346 += n$$inline_346 < 0 ? n$$inline_346 - r$$inline_325 : n$$inline_346 > 0 ? n$$inline_346 + r$$inline_325 : 0;
+                      correction$$inline_348 = 1 << mb$$inline_322 - nb$$inline_347;
                     } else {
-                      correction$$inline_378 = 1;
+                      correction$$inline_348 = 1;
                     }
-                    coefficients$$inline_347[offset$$inline_373++] = n$$inline_376 * correction$$inline_378 * delta$$inline_351;
-                    position$$inline_374++;
+                    coefficients$$inline_316[offset$$inline_343++] = n$$inline_346 * correction$$inline_348 * delta$$inline_321;
+                    position$$inline_344++;
                   }
-                  offset$$inline_373 += width$$inline_350 - blockWidth$$inline_359;
+                  offset$$inline_343 += width$$inline_319 - blockWidth$$inline_329;
                 }
               }
-              subbandCoefficients$$inline_331.push({width:width$$inline_341, height:height$$inline_342, items:coefficients$$inline_346});
-              b$$inline_333++;
+              subbandCoefficients$$inline_297.push({width:width$$inline_307, height:height$$inline_308, items:coefficients$$inline_312});
+              b$$inline_299++;
             }
           }
-          transformation$$inline_329 = codingStyleParameters$$inline_323.transformation;
-          var transform$$inline_379 = transformation$$inline_329 == 0 ? new IrreversibleTransform : new ReversibleTransform;
-          var result$$inline_380 = transform$$inline_379.calculate(subbandCoefficients$$inline_331, component$$inline_322.tcx0, component$$inline_322.tcy0);
-          image$$inline_257 = {left:component$$inline_322.tcx0, top:component$$inline_322.tcy0, width:result$$inline_380.width, height:result$$inline_380.height, items:result$$inline_380.items};
-          result$$inline_255.push(image$$inline_257);
+          transformation$$inline_295 = codingStyleParameters$$inline_289.transformation;
+          var transform$$inline_313 = transformation$$inline_295 == 0 ? new IrreversibleTransform : new ReversibleTransform;
+          var result$$inline_314 = transform$$inline_313.calculate(subbandCoefficients$$inline_297, component$$inline_288.tcx0, component$$inline_288.tcy0);
+          image$$inline_223 = {left:component$$inline_288.tcx0, top:component$$inline_288.tcy0, width:result$$inline_314.width, height:result$$inline_314.height, items:result$$inline_314.items};
+          result$$inline_221.push(image$$inline_223);
         }
-        if (tile$$inline_254.codingStyleDefaultParameters.multipleComponentTransform) {
-          var y0items$$inline_258 = result$$inline_255[0].items;
-          var y1items$$inline_259 = result$$inline_255[1].items;
-          var y2items$$inline_260 = result$$inline_255[2].items;
-          var j$$inline_261 = 0;
-          var jj$$inline_262 = y0items$$inline_258.length;
-          for (;j$$inline_261 < jj$$inline_262;j$$inline_261++) {
-            var y0$$inline_263 = y0items$$inline_258[j$$inline_261];
-            var y1$$inline_264 = y1items$$inline_259[j$$inline_261];
-            var y2$$inline_265 = y2items$$inline_260[j$$inline_261];
-            var i1$$inline_266 = y0$$inline_263 - (y2$$inline_265 + y1$$inline_264 >> 2);
-            y1items$$inline_259[j$$inline_261] = i1$$inline_266;
-            y0items$$inline_258[j$$inline_261] = y2$$inline_265 + i1$$inline_266;
-            y2items$$inline_260[j$$inline_261] = y1$$inline_264 + i1$$inline_266;
+        if (tile$$inline_220.codingStyleDefaultParameters.multipleComponentTransform) {
+          var y0items$$inline_224 = result$$inline_221[0].items;
+          var y1items$$inline_225 = result$$inline_221[1].items;
+          var y2items$$inline_226 = result$$inline_221[2].items;
+          var j$$inline_227 = 0;
+          var jj$$inline_228 = y0items$$inline_224.length;
+          for (;j$$inline_227 < jj$$inline_228;j$$inline_227++) {
+            var y0$$inline_229 = y0items$$inline_224[j$$inline_227];
+            var y1$$inline_230 = y1items$$inline_225[j$$inline_227];
+            var y2$$inline_231 = y2items$$inline_226[j$$inline_227];
+            var i1$$inline_232 = y0$$inline_229 - (y2$$inline_231 + y1$$inline_230 >> 2);
+            y1items$$inline_225[j$$inline_227] = i1$$inline_232;
+            y0items$$inline_224[j$$inline_227] = y2$$inline_231 + i1$$inline_232;
+            y2items$$inline_226[j$$inline_227] = y1$$inline_230 + i1$$inline_232;
           }
         }
-        c$$inline_256 = 0;
-        for (;c$$inline_256 < componentsCount$$inline_250;c$$inline_256++) {
-          var component$$inline_267 = components$$inline_249[c$$inline_256];
-          if (component$$inline_267.isSigned) {
+        c$$inline_222 = 0;
+        for (;c$$inline_222 < componentsCount$$inline_216;c$$inline_222++) {
+          var component$$inline_233 = components$$inline_215[c$$inline_222];
+          if (component$$inline_233.isSigned) {
             continue;
           }
-          var offset$$inline_268 = 1 << component$$inline_267.precision - 1;
-          var tileImage$$inline_269 = result$$inline_255[c$$inline_256];
-          var items$$inline_270 = tileImage$$inline_269.items;
-          j$$inline_261 = 0;
-          jj$$inline_262 = items$$inline_270.length;
-          for (;j$$inline_261 < jj$$inline_262;j$$inline_261++) {
-            items$$inline_270[j$$inline_261] += offset$$inline_268;
+          var offset$$inline_234 = 1 << component$$inline_233.precision - 1;
+          var tileImage$$inline_235 = result$$inline_221[c$$inline_222];
+          var items$$inline_236 = tileImage$$inline_235.items;
+          j$$inline_227 = 0;
+          jj$$inline_228 = items$$inline_236.length;
+          for (;j$$inline_227 < jj$$inline_228;j$$inline_227++) {
+            items$$inline_236[j$$inline_227] += offset$$inline_234;
           }
         }
-        c$$inline_256 = 0;
-        for (;c$$inline_256 < componentsCount$$inline_250;c$$inline_256++) {
-          component$$inline_267 = components$$inline_249[c$$inline_256];
-          offset$$inline_268 = component$$inline_267.isSigned ? 128 : 0;
-          var shift$$inline_271 = component$$inline_267.precision - 8;
-          tileImage$$inline_269 = result$$inline_255[c$$inline_256];
-          items$$inline_270 = tileImage$$inline_269.items;
-          var data$$inline_272 = new Uint8Array(items$$inline_270.length);
-          j$$inline_261 = 0;
-          jj$$inline_262 = items$$inline_270.length;
-          for (;j$$inline_261 < jj$$inline_262;j$$inline_261++) {
-            var value$$inline_273 = (items$$inline_270[j$$inline_261] >> shift$$inline_271) + offset$$inline_268;
-            data$$inline_272[j$$inline_261] = value$$inline_273 < 0 ? 0 : value$$inline_273 > 255 ? 255 : value$$inline_273;
+        c$$inline_222 = 0;
+        for (;c$$inline_222 < componentsCount$$inline_216;c$$inline_222++) {
+          component$$inline_233 = components$$inline_215[c$$inline_222];
+          offset$$inline_234 = component$$inline_233.isSigned ? 128 : 0;
+          var shift$$inline_237 = component$$inline_233.precision - 8;
+          tileImage$$inline_235 = result$$inline_221[c$$inline_222];
+          items$$inline_236 = tileImage$$inline_235.items;
+          var data$$inline_238 = new Uint8Array(items$$inline_236.length);
+          j$$inline_227 = 0;
+          jj$$inline_228 = items$$inline_236.length;
+          for (;j$$inline_227 < jj$$inline_228;j$$inline_227++) {
+            var value$$inline_239 = (items$$inline_236[j$$inline_227] >> shift$$inline_237) + offset$$inline_234;
+            data$$inline_238[j$$inline_227] = value$$inline_239 < 0 ? 0 : value$$inline_239 > 255 ? 255 : value$$inline_239;
           }
-          result$$inline_255[c$$inline_256].items = data$$inline_272;
+          result$$inline_221[c$$inline_222].items = data$$inline_238;
         }
-        resultImages$$inline_251.push(result$$inline_255);
+        resultImages$$inline_217.push(result$$inline_221);
       }
-      JSCompiler_inline_result$$4 = resultImages$$inline_251;
-      this.tiles = JSCompiler_inline_result$$4;
+      JSCompiler_inline_result$$9 = resultImages$$inline_217;
+      this.tiles = JSCompiler_inline_result$$9;
       this.width = context$$12.SIZ.Xsiz - context$$12.SIZ.XOsiz;
       this.height = context$$12.SIZ.Ysiz - context$$12.SIZ.YOsiz;
       this.componentsCount = context$$12.SIZ.Csiz;
@@ -15785,7 +15798,7 @@ var PDFJS = {};
             items$$4[k$$23] = bufferOut[l$$4];
           }
         }
-        return{width:width$$45, height:height$$37, items:items$$4};
+        return {width:width$$45, height:height$$37, items:items$$4};
       };
       return Transform$$1;
     }();
@@ -16014,17 +16027,18 @@ var PDFJS = {};
       for (;i$$198 < strLength;++i$$198) {
         if (types$$3[i$$198] == "ON") {
           var end$$21;
-          JSCompiler_inline_label_findUnequal_280: {
-            var j$$inline_278 = void 0;
-            j$$inline_278 = i$$198 + 1;
-            var jj$$inline_279 = types$$3.length;
-            for (;j$$inline_278 < jj$$inline_279;++j$$inline_278) {
-              if (types$$3[j$$inline_278] != "ON") {
-                end$$21 = j$$inline_278;
-                break JSCompiler_inline_label_findUnequal_280;
+          JSCompiler_inline_label_findUnequal_246: {
+            var value$$inline_243 = "ON";
+            var j$$inline_244 = void 0;
+            j$$inline_244 = i$$198 + 1;
+            var jj$$inline_245 = types$$3.length;
+            for (;j$$inline_244 < jj$$inline_245;++j$$inline_244) {
+              if (types$$3[j$$inline_244] != value$$inline_243) {
+                end$$21 = j$$inline_244;
+                break JSCompiler_inline_label_findUnequal_246;
               }
             }
-            end$$21 = j$$inline_278;
+            end$$21 = j$$inline_244;
           }
           var before$$1 = sor;
           if (i$$198 > 0) {
@@ -16041,12 +16055,12 @@ var PDFJS = {};
             after = "R";
           }
           if (before$$1 == after) {
-            var arr$$inline_281 = types$$3;
-            var end$$inline_283 = end$$21;
-            var value$$inline_284 = before$$1;
-            var j$$inline_285 = i$$198;
-            for (;j$$inline_285 < end$$inline_283;++j$$inline_285) {
-              arr$$inline_281[j$$inline_285] = value$$inline_284;
+            var arr$$inline_247 = types$$3;
+            var end$$inline_249 = end$$21;
+            var value$$inline_250 = before$$1;
+            var j$$inline_251 = i$$198;
+            for (;j$$inline_251 < end$$inline_249;++j$$inline_251) {
+              arr$$inline_247[j$$inline_251] = value$$inline_250;
             }
           }
           i$$198 = end$$21 - 1;

@@ -9,24 +9,24 @@ function v154(patterns) {
     var v157 = pattern1$$1.Y;
     var v158 = pattern2$$1.Y;
     yDiff = v157 - v158;
-    var v1058 = xDiff * xDiff;
-    var v1059 = yDiff * yDiff;
-    var v159 = v1058 + v1059;
+    var v1057 = xDiff * xDiff;
+    var v1058 = yDiff * yDiff;
+    var v159 = v1057 + v1058;
     return Math.sqrt(v159);
   }
   function crossProductZ(pointA$$1, pointB$$1, pointC$$1) {
     var bX = pointB$$1.x;
     var bY = pointB$$1.y;
-    var v1806 = pointC$$1.x;
-    var v1060 = v1806 - bX;
-    var v1807 = pointA$$1.y;
-    var v1061 = v1807 - bY;
-    var v160 = v1060 * v1061;
-    var v1808 = pointC$$1.y;
-    var v1062 = v1808 - bY;
-    var v1809 = pointA$$1.x;
-    var v1063 = v1809 - bX;
-    var v161 = v1062 * v1063;
+    var v1804 = pointC$$1.x;
+    var v1059 = v1804 - bX;
+    var v1805 = pointA$$1.y;
+    var v1060 = v1805 - bY;
+    var v160 = v1059 * v1060;
+    var v1806 = pointC$$1.y;
+    var v1061 = v1806 - bY;
+    var v1807 = pointA$$1.x;
+    var v1062 = v1807 - bX;
+    var v161 = v1061 * v1062;
     return v160 - v161;
   }
   var v162 = patterns[0];
@@ -41,21 +41,21 @@ function v154(patterns) {
   var pointA;
   var pointB;
   var pointC;
-  var v1064 = oneTwoDistance >= zeroOneDistance;
-  if (v1064) {
-    v1064 = oneTwoDistance >= zeroTwoDistance;
+  var v1063 = oneTwoDistance >= zeroOneDistance;
+  if (v1063) {
+    v1063 = oneTwoDistance >= zeroTwoDistance;
   }
-  var v169 = v1064;
+  var v169 = v1063;
   if (v169) {
     pointB = patterns[0];
     pointA = patterns[1];
     pointC = patterns[2];
   } else {
-    var v1065 = zeroTwoDistance >= oneTwoDistance;
-    if (v1065) {
-      v1065 = zeroTwoDistance >= zeroOneDistance;
+    var v1064 = zeroTwoDistance >= oneTwoDistance;
+    if (v1064) {
+      v1064 = zeroTwoDistance >= zeroOneDistance;
     }
-    var v168 = v1065;
+    var v168 = v1064;
     if (v168) {
       pointB = patterns[1];
       pointA = patterns[0];
@@ -66,8 +66,8 @@ function v154(patterns) {
       pointC = patterns[1];
     }
   }
-  var v1066 = crossProductZ(pointA, pointB, pointC);
-  var v170 = v1066 < 0;
+  var v1065 = crossProductZ(pointA, pointB, pointC);
+  var v170 = v1065 < 0;
   if (v170) {
     var temp$$5 = pointA;
     pointA = pointC;
@@ -79,19 +79,19 @@ function v154(patterns) {
   return;
 }
 function v153(from, to) {
-  var v1810 = to || from;
-  var v1067 = v1810 + 1;
-  var v1811 = !v1067;
-  if (v1811) {
-    v1067 = this.length;
+  var v1808 = to || from;
+  var v1066 = v1808 + 1;
+  var v1809 = !v1066;
+  if (v1809) {
+    v1066 = this.length;
   }
-  var v171 = v1067;
+  var v171 = v1066;
   var rest = this.slice(v171);
   var v172;
-  var v1069 = from < 0;
-  if (v1069) {
-    var v1068 = this.length;
-    v172 = v1068 + from;
+  var v1068 = from < 0;
+  if (v1068) {
+    var v1067 = this.length;
+    v172 = v1067 + from;
   } else {
     v172 = from;
   }
@@ -100,45 +100,46 @@ function v153(from, to) {
   return v173.apply(this, rest);
 }
 function v152() {
-  var v1070 = qrcode.width;
-  var v1071 = qrcode.height;
-  var v174 = v1070 * v1071;
+  var v1069 = qrcode.width;
+  var v1070 = qrcode.height;
+  var v174 = v1069 * v1070;
   var ret$$1 = new Array(v174);
   var y$$43 = 0;
-  var v1072 = qrcode.height;
-  var v177 = y$$43 < v1072;
+  var v1071 = qrcode.height;
+  var v177 = y$$43 < v1071;
   for (;v177;) {
     var x$$61 = 0;
-    var v1073 = qrcode.width;
-    var v176 = x$$61 < v1073;
+    var v1072 = qrcode.width;
+    var v176 = x$$61 < v1072;
     for (;v176;) {
       var gray$$1 = qrcode.getPixel(x$$61, y$$43);
-      var v1812 = qrcode.width;
-      var v1074 = y$$43 * v1812;
-      var v175 = x$$61 + v1074;
+      var v1810 = qrcode.width;
+      var v1073 = y$$43 * v1810;
+      var v175 = x$$61 + v1073;
       ret$$1[v175] = gray$$1;
       x$$61++;
-      var v1075 = qrcode.width;
-      v176 = x$$61 < v1075;
+      var v1074 = qrcode.width;
+      v176 = x$$61 < v1074;
     }
     y$$43++;
-    var v1076 = qrcode.height;
-    v177 = y$$43 < v1076;
+    var v1075 = qrcode.height;
+    v177 = y$$43 < v1075;
   }
   return ret$$1;
 }
-function v151(grayScale) {
+function v151() {
+  var grayScale = qrcode.grayscale();
   var middle$$1 = qrcode.getMiddleBrightnessPerArea(grayScale);
   var sqrtNumArea = middle$$1.length;
-  var v1077 = qrcode.width;
-  var v178 = v1077 / sqrtNumArea;
+  var v1076 = qrcode.width;
+  var v178 = v1076 / sqrtNumArea;
   var areaWidth$$1 = Math.floor(v178);
-  var v1078 = qrcode.height;
-  var v179 = v1078 / sqrtNumArea;
+  var v1077 = qrcode.height;
+  var v179 = v1077 / sqrtNumArea;
   var areaHeight$$1 = Math.floor(v179);
-  var v1079 = qrcode.height;
-  var v1080 = qrcode.width;
-  var v180 = v1079 * v1080;
+  var v1078 = qrcode.height;
+  var v1079 = qrcode.width;
+  var v180 = v1078 * v1079;
   var bitmap = new Array(v180);
   var ay$$1 = 0;
   var v185 = ay$$1 < sqrtNumArea;
@@ -152,31 +153,31 @@ function v151(grayScale) {
         var dx$$6 = 0;
         var v182 = dx$$6 < areaWidth$$1;
         for (;v182;) {
-          var v1813 = areaWidth$$1 * ax$$1;
-          var v1081 = v1813 + dx$$6;
-          var v2460 = areaHeight$$1 * ay$$1;
-          var v1814 = v2460 + dy$$6;
-          var v1815 = qrcode.width;
-          var v1082 = v1814 * v1815;
-          var v181 = v1081 + v1082;
-          var v1083;
-          var v2762 = areaWidth$$1 * ax$$1;
-          var v2713 = v2762 + dx$$6;
-          var v2785 = areaHeight$$1 * ay$$1;
-          var v2763 = v2785 + dy$$6;
-          var v2764 = qrcode.width;
-          var v2714 = v2763 * v2764;
-          var v2634 = v2713 + v2714;
-          var v2461 = grayScale[v2634];
-          var v2635 = middle$$1[ax$$1];
-          var v2462 = v2635[ay$$1];
-          var v1816 = v2461 < v2462;
-          if (v1816) {
-            v1083 = true;
+          var v1811 = areaWidth$$1 * ax$$1;
+          var v1080 = v1811 + dx$$6;
+          var v2458 = areaHeight$$1 * ay$$1;
+          var v1812 = v2458 + dy$$6;
+          var v1813 = qrcode.width;
+          var v1081 = v1812 * v1813;
+          var v181 = v1080 + v1081;
+          var v1082;
+          var v2760 = areaWidth$$1 * ax$$1;
+          var v2711 = v2760 + dx$$6;
+          var v2783 = areaHeight$$1 * ay$$1;
+          var v2761 = v2783 + dy$$6;
+          var v2762 = qrcode.width;
+          var v2712 = v2761 * v2762;
+          var v2632 = v2711 + v2712;
+          var v2459 = grayScale[v2632];
+          var v2633 = middle$$1[ax$$1];
+          var v2460 = v2633[ay$$1];
+          var v1814 = v2459 < v2460;
+          if (v1814) {
+            v1082 = true;
           } else {
-            v1083 = false;
+            v1082 = false;
           }
-          bitmap[v181] = v1083;
+          bitmap[v181] = v1082;
           dx$$6++;
           v182 = dx$$6 < areaWidth$$1;
         }
@@ -193,24 +194,24 @@ function v151(grayScale) {
 }
 function v150(image$$9) {
   var numSqrtArea = 4;
-  var v1084 = qrcode.width;
-  var v186 = v1084 / numSqrtArea;
+  var v1083 = qrcode.width;
+  var v186 = v1083 / numSqrtArea;
   var areaWidth = Math.floor(v186);
-  var v1085 = qrcode.height;
-  var v187 = v1085 / numSqrtArea;
+  var v1084 = qrcode.height;
+  var v187 = v1084 / numSqrtArea;
   var areaHeight = Math.floor(v187);
   var minmax = new Array(numSqrtArea);
   var i$$46 = 0;
   var v190 = i$$46 < numSqrtArea;
   for (;v190;) {
-    var v2793 = new Array(numSqrtArea);
-    minmax[i$$46] = v2793;
+    var v2791 = new Array(numSqrtArea);
+    minmax[i$$46] = v2791;
     var i2 = 0;
     var v189 = i2 < numSqrtArea;
     for (;v189;) {
       var v188 = minmax[i$$46];
-      var v2794 = new Array(0, 0);
-      v188[i2] = v2794;
+      var v2792 = new Array(0, 0);
+      v188[i2] = v2792;
       i2++;
       v189 = i2 < numSqrtArea;
     }
@@ -223,8 +224,8 @@ function v150(image$$9) {
     var ax = 0;
     var v199 = ax < numSqrtArea;
     for (;v199;) {
-      var v1086 = minmax[ax];
-      var v191 = v1086[ay];
+      var v1085 = minmax[ax];
+      var v191 = v1085[ay];
       v191[0] = 255;
       var dy$$5 = 0;
       var v198 = dy$$5 < areaHeight;
@@ -232,30 +233,30 @@ function v150(image$$9) {
         var dx$$5 = 0;
         var v197 = dx$$5 < areaWidth;
         for (;v197;) {
-          var v1817 = areaWidth * ax;
-          var v1087 = v1817 + dx$$5;
-          var v2463 = areaHeight * ay;
-          var v1818 = v2463 + dy$$5;
-          var v1819 = qrcode.width;
-          var v1088 = v1818 * v1819;
-          var v192 = v1087 + v1088;
+          var v1815 = areaWidth * ax;
+          var v1086 = v1815 + dx$$5;
+          var v2461 = areaHeight * ay;
+          var v1816 = v2461 + dy$$5;
+          var v1817 = qrcode.width;
+          var v1087 = v1816 * v1817;
+          var v192 = v1086 + v1087;
           var target$$26 = image$$9[v192];
-          var v2464 = minmax[ax];
-          var v1820 = v2464[ay];
-          var v1089 = v1820[0];
-          var v194 = target$$26 < v1089;
+          var v2462 = minmax[ax];
+          var v1818 = v2462[ay];
+          var v1088 = v1818[0];
+          var v194 = target$$26 < v1088;
           if (v194) {
-            var v1090 = minmax[ax];
-            var v193 = v1090[ay];
+            var v1089 = minmax[ax];
+            var v193 = v1089[ay];
             v193[0] = target$$26;
           }
-          var v2465 = minmax[ax];
-          var v1821 = v2465[ay];
-          var v1091 = v1821[1];
-          var v196 = target$$26 > v1091;
+          var v2463 = minmax[ax];
+          var v1819 = v2463[ay];
+          var v1090 = v1819[1];
+          var v196 = target$$26 > v1090;
           if (v196) {
-            var v1092 = minmax[ax];
-            var v195 = v1092[ay];
+            var v1091 = minmax[ax];
+            var v195 = v1091[ay];
             v195[1] = target$$26;
           }
           dx$$5++;
@@ -274,8 +275,8 @@ function v150(image$$9) {
   var i3 = 0;
   var v201 = i3 < numSqrtArea;
   for (;v201;) {
-    var v2795 = new Array(numSqrtArea);
-    middle[i3] = v2795;
+    var v2793 = new Array(numSqrtArea);
+    middle[i3] = v2793;
     i3++;
     v201 = i3 < numSqrtArea;
   }
@@ -286,16 +287,16 @@ function v150(image$$9) {
     var v203 = ax < numSqrtArea;
     for (;v203;) {
       var v202 = middle[ax];
-      var v2715 = minmax[ax];
-      var v2636 = v2715[ay];
-      var v2466 = v2636[0];
-      var v2716 = minmax[ax];
-      var v2637 = v2716[ay];
-      var v2467 = v2637[1];
-      var v1822 = v2466 + v2467;
-      var v1093 = v1822 / 2;
-      var v2796 = Math.floor(v1093);
-      v202[ay] = v2796;
+      var v2713 = minmax[ax];
+      var v2634 = v2713[ay];
+      var v2464 = v2634[0];
+      var v2714 = minmax[ax];
+      var v2635 = v2714[ay];
+      var v2465 = v2635[1];
+      var v1820 = v2464 + v2465;
+      var v1092 = v1820 / 2;
+      var v2794 = Math.floor(v1092);
+      v202[ay] = v2794;
       ax++;
       v203 = ax < numSqrtArea;
     }
@@ -305,197 +306,198 @@ function v150(image$$9) {
   return middle;
 }
 function v149(th) {
-  var v1094 = qrcode.width;
-  var v1095 = qrcode.height;
-  var v205 = v1094 * v1095;
+  var v1093 = qrcode.width;
+  var v1094 = qrcode.height;
+  var v205 = v1093 * v1094;
   var ret = new Array(v205);
   var y$$42 = 0;
-  var v1096 = qrcode.height;
-  var v208 = y$$42 < v1096;
+  var v1095 = qrcode.height;
+  var v208 = y$$42 < v1095;
   for (;v208;) {
     var x$$60 = 0;
-    var v1097 = qrcode.width;
-    var v207 = x$$60 < v1097;
+    var v1096 = qrcode.width;
+    var v207 = x$$60 < v1096;
     for (;v207;) {
       var gray = qrcode.getPixel(x$$60, y$$42);
-      var v1823 = qrcode.width;
-      var v1098 = y$$42 * v1823;
-      var v206 = x$$60 + v1098;
-      var v1099;
-      var v1824 = gray <= th;
-      if (v1824) {
-        v1099 = true;
+      var v1821 = qrcode.width;
+      var v1097 = y$$42 * v1821;
+      var v206 = x$$60 + v1097;
+      var v1098;
+      var v1822 = gray <= th;
+      if (v1822) {
+        v1098 = true;
       } else {
-        v1099 = false;
+        v1098 = false;
       }
-      ret[v206] = v1099;
+      ret[v206] = v1098;
       x$$60++;
-      var v1100 = qrcode.width;
-      v207 = x$$60 < v1100;
+      var v1099 = qrcode.width;
+      v207 = x$$60 < v1099;
     }
     y$$42++;
-    var v1101 = qrcode.height;
-    v208 = y$$42 < v1101;
+    var v1100 = qrcode.height;
+    v208 = y$$42 < v1100;
   }
   return ret;
 }
 function v148(x$$59, y$$41) {
-  var v1102 = qrcode.width;
-  var v209 = v1102 < x$$59;
+  var v1101 = qrcode.width;
+  var v209 = v1101 < x$$59;
   if (v209) {
     throw "point error";
   }
-  var v1103 = qrcode.height;
-  var v210 = v1103 < y$$41;
+  var v1102 = qrcode.height;
+  var v210 = v1102 < y$$41;
   if (v210) {
     throw "point error";
   }
   var v211 = x$$59 * 4;
-  var v1825 = qrcode.width;
-  var v1104 = y$$41 * v1825;
-  var v212 = v1104 * 4;
+  var v1823 = qrcode.width;
+  var v1103 = y$$41 * v1823;
+  var v212 = v1103 * 4;
   var point$$1 = v211 + v212;
-  var v2717 = qrcode.imagedata;
-  var v2638 = v2717.data;
-  var v2468 = v2638[point$$1];
-  var v1826 = v2468 * 33;
-  var v2718 = qrcode.imagedata;
-  var v2639 = v2718.data;
-  var v2640 = point$$1 + 1;
-  var v2469 = v2639[v2640];
-  var v1827 = v2469 * 34;
-  var v1105 = v1826 + v1827;
-  var v2641 = qrcode.imagedata;
-  var v2470 = v2641.data;
-  var v2471 = point$$1 + 2;
-  var v1828 = v2470[v2471];
-  var v1106 = v1828 * 33;
-  var v213 = v1105 + v1106;
+  var v2715 = qrcode.imagedata;
+  var v2636 = v2715.data;
+  var v2466 = v2636[point$$1];
+  var v1824 = v2466 * 33;
+  var v2716 = qrcode.imagedata;
+  var v2637 = v2716.data;
+  var v2638 = point$$1 + 1;
+  var v2467 = v2637[v2638];
+  var v1825 = v2467 * 34;
+  var v1104 = v1824 + v1825;
+  var v2639 = qrcode.imagedata;
+  var v2468 = v2639.data;
+  var v2469 = point$$1 + 2;
+  var v1826 = v2468[v2469];
+  var v1105 = v1826 * 33;
+  var v213 = v1104 + v1105;
   p = v213 / 100;
   return p;
 }
 function v147(ctx) {
   var v214 = new Date;
   var start$$4 = v214.getTime();
-  var v215 = qrcode.grayscale();
-  var image$$8 = qrcode.grayScaleToBitmap(v215);
-  var v226 = qrcode.debug;
-  if (v226) {
+  var image$$8 = qrcode.grayScaleToBitmap();
+  var v225 = qrcode.debug;
+  if (v225) {
     var y$$40 = 0;
-    var v1107 = qrcode.height;
-    var v224 = y$$40 < v1107;
-    for (;v224;) {
+    var v1106 = qrcode.height;
+    var v223 = y$$40 < v1106;
+    for (;v223;) {
       var x$$58 = 0;
-      var v1108 = qrcode.width;
-      var v223 = x$$58 < v1108;
-      for (;v223;) {
-        var v216 = x$$58 * 4;
-        var v1829 = qrcode.width;
-        var v1109 = y$$40 * v1829;
-        var v217 = v1109 * 4;
-        var point = v216 + v217;
-        var v1110 = qrcode.imagedata;
-        var v218 = v1110.data;
-        var v1111;
+      var v1107 = qrcode.width;
+      var v222 = x$$58 < v1107;
+      for (;v222;) {
+        var v215 = x$$58 * 4;
+        var v1827 = qrcode.width;
+        var v1108 = y$$40 * v1827;
+        var v216 = v1108 * 4;
+        var point = v215 + v216;
+        var v1109 = qrcode.imagedata;
+        var v217 = v1109.data;
+        var v1110;
+        var v2717 = qrcode.width;
+        var v2640 = y$$40 * v2717;
+        var v2470 = x$$58 + v2640;
+        var v1828 = image$$8[v2470];
+        if (v1828) {
+          v1110 = 0;
+        } else {
+          v1110 = 0;
+        }
+        v217[point] = v1110;
+        var v1111 = qrcode.imagedata;
+        var v218 = v1111.data;
+        var v219 = point + 1;
+        var v1112;
+        var v2718 = qrcode.width;
+        var v2641 = y$$40 * v2718;
+        var v2471 = x$$58 + v2641;
+        var v1829 = image$$8[v2471];
+        if (v1829) {
+          v1112 = 0;
+        } else {
+          v1112 = 0;
+        }
+        v218[v219] = v1112;
+        var v1113 = qrcode.imagedata;
+        var v220 = v1113.data;
+        var v221 = point + 2;
+        var v1114;
         var v2719 = qrcode.width;
         var v2642 = y$$40 * v2719;
         var v2472 = x$$58 + v2642;
         var v1830 = image$$8[v2472];
         if (v1830) {
-          v1111 = 0;
+          v1114 = 255;
         } else {
-          v1111 = 0;
+          v1114 = 0;
         }
-        v218[point] = v1111;
-        var v1112 = qrcode.imagedata;
-        var v219 = v1112.data;
-        var v220 = point + 1;
-        var v1113;
-        var v2720 = qrcode.width;
-        var v2643 = y$$40 * v2720;
-        var v2473 = x$$58 + v2643;
-        var v1831 = image$$8[v2473];
-        if (v1831) {
-          v1113 = 0;
-        } else {
-          v1113 = 0;
-        }
-        v219[v220] = v1113;
-        var v1114 = qrcode.imagedata;
-        var v221 = v1114.data;
-        var v222 = point + 2;
-        var v1115;
-        var v2721 = qrcode.width;
-        var v2644 = y$$40 * v2721;
-        var v2474 = x$$58 + v2644;
-        var v1832 = image$$8[v2474];
-        if (v1832) {
-          v1115 = 255;
-        } else {
-          v1115 = 0;
-        }
-        v221[v222] = v1115;
+        v220[v221] = v1114;
         x$$58++;
-        var v1116 = qrcode.width;
-        v223 = x$$58 < v1116;
+        var v1115 = qrcode.width;
+        v222 = x$$58 < v1115;
       }
       y$$40++;
-      var v1117 = qrcode.height;
-      v224 = y$$40 < v1117;
+      var v1116 = qrcode.height;
+      v223 = y$$40 < v1116;
     }
-    var v225 = qrcode.imagedata;
-    ctx.putImageData(v225, 0, 0);
+    var v224 = qrcode.imagedata;
+    ctx.putImageData(v224, 0, 0);
   }
   var detector = new Detector(image$$8);
   var qRCodeMatrix = detector.detect();
-  var v228 = qrcode.debug;
-  if (v228) {
-    var v227 = qrcode.imagedata;
-    ctx.putImageData(v227, 0, 0);
+  var v227 = qrcode.debug;
+  if (v227) {
+    var v226 = qrcode.imagedata;
+    ctx.putImageData(v226, 0, 0);
   }
-  var v229 = qRCodeMatrix.bits;
-  var reader$$1 = Decoder.decode(v229);
+  var v228 = qRCodeMatrix.bits;
+  var reader$$1 = Decoder.decode(v228);
   var data$$18 = reader$$1.DataByte;
   var str$$6 = "";
   var i$$45 = 0;
-  var v1118 = data$$18.length;
-  var v231 = i$$45 < v1118;
-  for (;v231;) {
+  var v1117 = data$$18.length;
+  var v230 = i$$45 < v1117;
+  for (;v230;) {
     var j$$24 = 0;
-    var v1833 = data$$18[i$$45];
-    var v1119 = v1833.length;
-    var v230 = j$$24 < v1119;
-    for (;v230;) {
-      var v2475 = data$$18[i$$45];
-      var v1834 = v2475[j$$24];
-      var v1120 = String.fromCharCode(v1834);
-      str$$6 = str$$6 + v1120;
+    var v1831 = data$$18[i$$45];
+    var v1118 = v1831.length;
+    var v229 = j$$24 < v1118;
+    for (;v229;) {
+      var v2473 = data$$18[i$$45];
+      var v1832 = v2473[j$$24];
+      var v1119 = String.fromCharCode(v1832);
+      str$$6 = str$$6 + v1119;
       j$$24++;
-      var v1835 = data$$18[i$$45];
-      var v1121 = v1835.length;
-      v230 = j$$24 < v1121;
+      var v1833 = data$$18[i$$45];
+      var v1120 = v1833.length;
+      v229 = j$$24 < v1120;
     }
     i$$45++;
-    var v1122 = data$$18.length;
-    v231 = i$$45 < v1122;
+    var v1121 = data$$18.length;
+    v230 = i$$45 < v1121;
   }
-  var v232 = new Date;
-  var end$$1 = v232.getTime();
+  var v231 = new Date;
+  var end$$1 = v231.getTime();
   var time = end$$1 - start$$4;
   console.log(time);
   return qrcode.decode_utf8(str$$6);
 }
 function v146(s$$4) {
-  var v233 = escape(s$$4);
-  return decodeURIComponent(v233);
+  var v232 = escape(s$$4);
+  return decodeURIComponent(v232);
 }
 function v145(src$$1) {
   function v144() {
+    JAM.startProfile('decode');
+
     var canvas_qr$$1 = document.createElement("canvas");
     var context$$1 = canvas_qr$$1.getContext("2d");
     var canvas_out = document.getElementById("out-canvas");
-    var v234 = canvas_out != null;
-    if (v234) {
+    var v233 = canvas_out != null;
+    if (v233) {
       var outctx = canvas_out.getContext("2d");
       outctx.clearRect(0, 0, 320, 240);
       outctx.drawImage(image$$7, 0, 0, 320, 240);
@@ -506,57 +508,59 @@ function v145(src$$1) {
     qrcode.width = image$$7.width;
     qrcode.height = image$$7.height;
     try {
-      var v235 = qrcode;
-      var v1123 = image$$7.width;
-      var v1124 = image$$7.height;
-      var v2797 = context$$1.getImageData(0, 0, v1123, v1124);
-      v235.imagedata = v2797;
+      var v234 = qrcode;
+      var v1122 = image$$7.width;
+      var v1123 = image$$7.height;
+      var v2795 = context$$1.getImageData(0, 0, v1122, v1123);
+      v234.imagedata = v2795;
     } catch (e$$5) {
       qrcode.result = "Cross domain image reading not supported in your browser! Save it to your computer then drag and drop the file!";
-      var v1125 = qrcode.callback;
-      var v237 = v1125 != null;
-      if (v237) {
-        var v236 = qrcode.result;
-        qrcode.callback(v236);
+      var v1124 = qrcode.callback;
+      var v236 = v1124 != null;
+      if (v236) {
+        var v235 = qrcode.result;
+        qrcode.callback(v235);
       }
       return;
     }
     try {
-      var v238 = qrcode;
-      var v2798 = qrcode.process(context$$1);
-      v238.result = v2798;
+      var v237 = qrcode;
+      var v2796 = qrcode.process(context$$1);
+      v237.result = v2796;
     } catch (e$$6) {
       console.log(e$$6);
       qrcode.result = "error decoding QR Code";
     }
-    var v1126 = qrcode.callback;
-    var v240 = v1126 != null;
-    if (v240) {
-      var v239 = qrcode.result;
-      qrcode.callback(v239);
+    var v1125 = qrcode.callback;
+    var v239 = v1125 != null;
+    
+    JAM.stopProfile('decode');
+if (v239) {
+      var v238 = qrcode.result;
+      qrcode.callback(v238);
     }
     return;
   }
-  var v1127 = arguments.length;
-  var v245 = v1127 == 0;
-  if (v245) {
+  var v1126 = arguments.length;
+  var v244 = v1126 == 0;
+  if (v244) {
     var canvas_qr = document.getElementById("qr-canvas");
     var context = canvas_qr.getContext("2d");
     qrcode.width = canvas_qr.width;
     qrcode.height = canvas_qr.height;
+    var v240 = qrcode;
+    var v1127 = qrcode.width;
+    var v1128 = qrcode.height;
+    var v2797 = context.getImageData(0, 0, v1127, v1128);
+    v240.imagedata = v2797;
     var v241 = qrcode;
-    var v1128 = qrcode.width;
-    var v1129 = qrcode.height;
-    var v2799 = context.getImageData(0, 0, v1128, v1129);
-    v241.imagedata = v2799;
-    var v242 = qrcode;
-    var v2800 = qrcode.process(context);
-    v242.result = v2800;
-    var v1130 = qrcode.callback;
-    var v244 = v1130 != null;
-    if (v244) {
-      var v243 = qrcode.result;
-      qrcode.callback(v243);
+    var v2798 = qrcode.process(context);
+    v241.result = v2798;
+    var v1129 = qrcode.callback;
+    var v243 = v1129 != null;
+    if (v243) {
+      var v242 = qrcode.result;
+      qrcode.callback(v242);
     }
     return qrcode.result;
   } else {
@@ -569,75 +573,75 @@ function v145(src$$1) {
 function v143(bits$$13) {
   var parser = new BitMatrixParser(bits$$13);
   var version$$7 = parser.readVersion();
-  var v246 = parser.readFormatInformation();
-  var ecLevel$$2 = v246.ErrorCorrectionLevel;
+  var v245 = parser.readFormatInformation();
+  var ecLevel$$2 = v245.ErrorCorrectionLevel;
   var codewords$$1 = parser.readCodewords();
   var dataBlocks = DataBlock.getDataBlocks(codewords$$1, version$$7, ecLevel$$2);
   var totalBytes = 0;
   var i$$44 = 0;
-  var v1131 = dataBlocks.Length;
-  var v247 = i$$44 < v1131;
-  for (;v247;) {
-    var v1836 = dataBlocks[i$$44];
-    var v1132 = v1836.NumDataCodewords;
-    totalBytes = totalBytes + v1132;
+  var v1130 = dataBlocks.Length;
+  var v246 = i$$44 < v1130;
+  for (;v246;) {
+    var v1834 = dataBlocks[i$$44];
+    var v1131 = v1834.NumDataCodewords;
+    totalBytes = totalBytes + v1131;
     i$$44++;
-    var v1133 = dataBlocks.Length;
-    v247 = i$$44 < v1133;
+    var v1132 = dataBlocks.Length;
+    v246 = i$$44 < v1132;
   }
   var resultBytes = new Array(totalBytes);
   var resultOffset$$1 = 0;
   var j$$23 = 0;
-  var v1134 = dataBlocks.length;
-  var v250 = j$$23 < v1134;
-  for (;v250;) {
+  var v1133 = dataBlocks.length;
+  var v249 = j$$23 < v1133;
+  for (;v249;) {
     var dataBlock = dataBlocks[j$$23];
     var codewordBytes$$1 = dataBlock.Codewords;
     var numDataCodewords$$3 = dataBlock.NumDataCodewords;
     Decoder.correctErrors(codewordBytes$$1, numDataCodewords$$3);
     i$$44 = 0;
-    var v249 = i$$44 < numDataCodewords$$3;
-    for (;v249;) {
-      var v248 = resultOffset$$1;
+    var v248 = i$$44 < numDataCodewords$$3;
+    for (;v248;) {
+      var v247 = resultOffset$$1;
       resultOffset$$1 = resultOffset$$1 + 1;
-      resultBytes[v248] = codewordBytes$$1[i$$44];
+      resultBytes[v247] = codewordBytes$$1[i$$44];
       i$$44++;
-      v249 = i$$44 < numDataCodewords$$3;
+      v248 = i$$44 < numDataCodewords$$3;
     }
     j$$23++;
-    var v1135 = dataBlocks.length;
-    v250 = j$$23 < v1135;
+    var v1134 = dataBlocks.length;
+    v249 = j$$23 < v1134;
   }
-  var v251 = version$$7.VersionNumber;
-  var v252 = ecLevel$$2.Bits;
-  var reader = new QRCodeDataBlockReader(resultBytes, v251, v252);
+  var v250 = version$$7.VersionNumber;
+  var v251 = ecLevel$$2.Bits;
+  var reader = new QRCodeDataBlockReader(resultBytes, v250, v251);
   return reader;
 }
 function v142(codewordBytes, numDataCodewords$$2) {
   var numCodewords$$1 = codewordBytes.length;
   var codewordsInts = new Array(numCodewords$$1);
   var i$$43 = 0;
-  var v254 = i$$43 < numCodewords$$1;
-  for (;v254;) {
-    var v253 = codewordBytes[i$$43];
-    codewordsInts[i$$43] = v253 & 255;
+  var v253 = i$$43 < numCodewords$$1;
+  for (;v253;) {
+    var v252 = codewordBytes[i$$43];
+    codewordsInts[i$$43] = v252 & 255;
     i$$43++;
-    v254 = i$$43 < numCodewords$$1;
+    v253 = i$$43 < numCodewords$$1;
   }
-  var v255 = codewordBytes.length;
-  var numECCodewords = v255 - numDataCodewords$$2;
+  var v254 = codewordBytes.length;
+  var numECCodewords = v254 - numDataCodewords$$2;
   try {
-    var v256 = Decoder.rsDecoder;
-    v256.decode(codewordsInts, numECCodewords);
+    var v255 = Decoder.rsDecoder;
+    v255.decode(codewordsInts, numECCodewords);
   } catch (rse) {
     throw rse;
   }
   i$$43 = 0;
-  var v257 = i$$43 < numDataCodewords$$2;
-  for (;v257;) {
+  var v256 = i$$43 < numDataCodewords$$2;
+  for (;v256;) {
     codewordBytes[i$$43] = codewordsInts[i$$43];
     i$$43++;
-    v257 = i$$43 < numDataCodewords$$2;
+    v256 = i$$43 < numDataCodewords$$2;
   }
   return;
 }
@@ -645,154 +649,154 @@ function v141(a$$7, b$$4) {
   return a$$7 ^ b$$4;
 }
 function v140(reference) {
-  var v1136 = reference < 0;
-  var v1837 = !v1136;
-  if (v1837) {
-    v1136 = reference > 7;
+  var v1135 = reference < 0;
+  var v1835 = !v1135;
+  if (v1835) {
+    v1135 = reference > 7;
   }
-  var v258 = v1136;
-  if (v258) {
+  var v257 = v1135;
+  if (v257) {
     throw "System.ArgumentException";
   }
-  var v259 = DataMask.DATA_MASKS;
-  return v259[reference];
+  var v258 = DataMask.DATA_MASKS;
+  return v258[reference];
 }
 function v139(rawCodewords, version$$5, ecLevel$$1) {
-  var v1137 = rawCodewords.length;
-  var v1138 = version$$5.TotalCodewords;
-  var v260 = v1137 != v1138;
-  if (v260) {
+  var v1136 = rawCodewords.length;
+  var v1137 = version$$5.TotalCodewords;
+  var v259 = v1136 != v1137;
+  if (v259) {
     throw "ArgumentException";
   }
   var ecBlocks = version$$5.getECBlocksForLevel(ecLevel$$1);
   var totalBlocks = 0;
   var ecBlockArray = ecBlocks.ecBlocks;
   var i$$11 = 0;
-  var v1139 = ecBlockArray.length;
-  var v261 = i$$11 < v1139;
-  for (;v261;) {
-    var v1838 = ecBlockArray[i$$11];
-    var v1140 = v1838.Count;
-    totalBlocks = totalBlocks + v1140;
+  var v1138 = ecBlockArray.length;
+  var v260 = i$$11 < v1138;
+  for (;v260;) {
+    var v1836 = ecBlockArray[i$$11];
+    var v1139 = v1836.Count;
+    totalBlocks = totalBlocks + v1139;
     i$$11++;
-    var v1141 = ecBlockArray.length;
-    v261 = i$$11 < v1141;
+    var v1140 = ecBlockArray.length;
+    v260 = i$$11 < v1140;
   }
   var result$$1 = new Array(totalBlocks);
   var numResultBlocks = 0;
   var j = 0;
-  var v1142 = ecBlockArray.length;
-  var v265 = j < v1142;
-  for (;v265;) {
+  var v1141 = ecBlockArray.length;
+  var v264 = j < v1141;
+  for (;v264;) {
     var ecBlock$$1 = ecBlockArray[j];
     i$$11 = 0;
-    var v1143 = ecBlock$$1.Count;
-    var v264 = i$$11 < v1143;
-    for (;v264;) {
+    var v1142 = ecBlock$$1.Count;
+    var v263 = i$$11 < v1142;
+    for (;v263;) {
       var numDataCodewords$$1 = ecBlock$$1.DataCodewords;
-      var v262 = ecBlocks.ECCodewordsPerBlock;
-      var numBlockCodewords = v262 + numDataCodewords$$1;
-      var v263 = numResultBlocks;
+      var v261 = ecBlocks.ECCodewordsPerBlock;
+      var numBlockCodewords = v261 + numDataCodewords$$1;
+      var v262 = numResultBlocks;
       numResultBlocks = numResultBlocks + 1;
-      var v1144 = new Array(numBlockCodewords);
-      var v2801 = new DataBlock(numDataCodewords$$1, v1144);
-      result$$1[v263] = v2801;
+      var v1143 = new Array(numBlockCodewords);
+      var v2799 = new DataBlock(numDataCodewords$$1, v1143);
+      result$$1[v262] = v2799;
       i$$11++;
-      var v1145 = ecBlock$$1.Count;
-      v264 = i$$11 < v1145;
+      var v1144 = ecBlock$$1.Count;
+      v263 = i$$11 < v1144;
     }
     j++;
-    var v1146 = ecBlockArray.length;
-    v265 = j < v1146;
+    var v1145 = ecBlockArray.length;
+    v264 = j < v1145;
   }
-  var v1147 = result$$1[0];
-  var v266 = v1147.codewords;
-  var shorterBlocksTotalCodewords = v266.length;
-  var v267 = result$$1.length;
-  var longerBlocksStartAt = v267 - 1;
-  var v270 = longerBlocksStartAt >= 0;
-  for (;v270;) {
-    var v1148 = result$$1[longerBlocksStartAt];
-    var v268 = v1148.codewords;
-    var numCodewords = v268.length;
-    var v269 = numCodewords == shorterBlocksTotalCodewords;
-    if (v269) {
+  var v1146 = result$$1[0];
+  var v265 = v1146.codewords;
+  var shorterBlocksTotalCodewords = v265.length;
+  var v266 = result$$1.length;
+  var longerBlocksStartAt = v266 - 1;
+  var v269 = longerBlocksStartAt >= 0;
+  for (;v269;) {
+    var v1147 = result$$1[longerBlocksStartAt];
+    var v267 = v1147.codewords;
+    var numCodewords = v267.length;
+    var v268 = numCodewords == shorterBlocksTotalCodewords;
+    if (v268) {
       break;
     }
     longerBlocksStartAt--;
-    v270 = longerBlocksStartAt >= 0;
+    v269 = longerBlocksStartAt >= 0;
   }
   longerBlocksStartAt++;
-  var v271 = ecBlocks.ECCodewordsPerBlock;
-  var shorterBlocksNumDataCodewords = shorterBlocksTotalCodewords - v271;
+  var v270 = ecBlocks.ECCodewordsPerBlock;
+  var shorterBlocksNumDataCodewords = shorterBlocksTotalCodewords - v270;
   var rawCodewordsOffset = 0;
   i$$11 = 0;
-  var v274 = i$$11 < shorterBlocksNumDataCodewords;
-  for (;v274;) {
+  var v273 = i$$11 < shorterBlocksNumDataCodewords;
+  for (;v273;) {
     j = 0;
-    var v273 = j < numResultBlocks;
-    for (;v273;) {
-      var v1149 = result$$1[j];
-      var v272 = v1149.codewords;
-      var v1150 = rawCodewordsOffset;
+    var v272 = j < numResultBlocks;
+    for (;v272;) {
+      var v1148 = result$$1[j];
+      var v271 = v1148.codewords;
+      var v1149 = rawCodewordsOffset;
       rawCodewordsOffset = rawCodewordsOffset + 1;
-      v272[i$$11] = rawCodewords[v1150];
+      v271[i$$11] = rawCodewords[v1149];
       j++;
-      v273 = j < numResultBlocks;
+      v272 = j < numResultBlocks;
     }
     i$$11++;
-    v274 = i$$11 < shorterBlocksNumDataCodewords;
+    v273 = i$$11 < shorterBlocksNumDataCodewords;
   }
   j = longerBlocksStartAt;
-  var v276 = j < numResultBlocks;
-  for (;v276;) {
-    var v1151 = result$$1[j];
-    var v275 = v1151.codewords;
-    var v1152 = rawCodewordsOffset;
+  var v275 = j < numResultBlocks;
+  for (;v275;) {
+    var v1150 = result$$1[j];
+    var v274 = v1150.codewords;
+    var v1151 = rawCodewordsOffset;
     rawCodewordsOffset = rawCodewordsOffset + 1;
-    v275[shorterBlocksNumDataCodewords] = rawCodewords[v1152];
+    v274[shorterBlocksNumDataCodewords] = rawCodewords[v1151];
     j++;
-    v276 = j < numResultBlocks;
+    v275 = j < numResultBlocks;
   }
-  var v1153 = result$$1[0];
-  var v277 = v1153.codewords;
-  var max$$4 = v277.length;
+  var v1152 = result$$1[0];
+  var v276 = v1152.codewords;
+  var max$$4 = v276.length;
   i$$11 = shorterBlocksNumDataCodewords;
-  var v281 = i$$11 < max$$4;
-  for (;v281;) {
+  var v280 = i$$11 < max$$4;
+  for (;v280;) {
     j = 0;
-    var v280 = j < numResultBlocks;
-    for (;v280;) {
-      var v278;
-      var v1154 = j < longerBlocksStartAt;
-      if (v1154) {
-        v278 = i$$11;
+    var v279 = j < numResultBlocks;
+    for (;v279;) {
+      var v277;
+      var v1153 = j < longerBlocksStartAt;
+      if (v1153) {
+        v277 = i$$11;
       } else {
-        v278 = i$$11 + 1;
+        v277 = i$$11 + 1;
       }
-      var iOffset = v278;
-      var v1155 = result$$1[j];
-      var v279 = v1155.codewords;
-      var v1156 = rawCodewordsOffset;
+      var iOffset = v277;
+      var v1154 = result$$1[j];
+      var v278 = v1154.codewords;
+      var v1155 = rawCodewordsOffset;
       rawCodewordsOffset = rawCodewordsOffset + 1;
-      v279[iOffset] = rawCodewords[v1156];
+      v278[iOffset] = rawCodewords[v1155];
       j++;
-      v280 = j < numResultBlocks;
+      v279 = j < numResultBlocks;
     }
     i$$11++;
-    v281 = i$$11 < max$$4;
+    v280 = i$$11 < max$$4;
   }
   return result$$1;
 }
 function v138(bits$$4) {
-  var v1157 = bits$$4 < 0;
-  var v1840 = !v1157;
-  if (v1840) {
-    var v1839 = FOR_BITS.Length;
-    v1157 = bits$$4 >= v1839;
+  var v1156 = bits$$4 < 0;
+  var v1838 = !v1156;
+  if (v1838) {
+    var v1837 = FOR_BITS.Length;
+    v1156 = bits$$4 >= v1837;
   }
-  var v282 = v1157;
-  if (v282) {
+  var v281 = v1156;
+  if (v281) {
     throw "ArgumentException";
   }
   return FOR_BITS[bits$$4];
@@ -801,132 +805,132 @@ function v137(maskedFormatInfo$$1) {
   var bestDifference$$1 = 4294967295;
   var bestFormatInfo = 0;
   var i$$8 = 0;
-  var v1158 = FORMAT_INFO_DECODE_LOOKUP.length;
-  var v286 = i$$8 < v1158;
-  for (;v286;) {
+  var v1157 = FORMAT_INFO_DECODE_LOOKUP.length;
+  var v285 = i$$8 < v1157;
+  for (;v285;) {
     var decodeInfo = FORMAT_INFO_DECODE_LOOKUP[i$$8];
     var targetInfo = decodeInfo[0];
-    var v284 = targetInfo == maskedFormatInfo$$1;
-    if (v284) {
-      var v283 = decodeInfo[1];
-      return new FormatInformation(v283);
+    var v283 = targetInfo == maskedFormatInfo$$1;
+    if (v283) {
+      var v282 = decodeInfo[1];
+      return new FormatInformation(v282);
     }
     var bitsDifference$$1 = this.numBitsDiffering(maskedFormatInfo$$1, targetInfo);
-    var v285 = bitsDifference$$1 < bestDifference$$1;
-    if (v285) {
+    var v284 = bitsDifference$$1 < bestDifference$$1;
+    if (v284) {
       bestFormatInfo = decodeInfo[1];
       bestDifference$$1 = bitsDifference$$1;
     }
     i$$8++;
-    var v1159 = FORMAT_INFO_DECODE_LOOKUP.length;
-    v286 = i$$8 < v1159;
+    var v1158 = FORMAT_INFO_DECODE_LOOKUP.length;
+    v285 = i$$8 < v1158;
   }
-  var v287 = bestDifference$$1 <= 3;
-  if (v287) {
+  var v286 = bestDifference$$1 <= 3;
+  if (v286) {
     return new FormatInformation(bestFormatInfo);
   }
   return null;
 }
 function v136(maskedFormatInfo) {
   var formatInfo$$1 = FormatInformation.doDecodeFormatInformation(maskedFormatInfo);
-  var v288 = formatInfo$$1 != null;
-  if (v288) {
+  var v287 = formatInfo$$1 != null;
+  if (v287) {
     return formatInfo$$1;
   }
-  var v289 = maskedFormatInfo ^ FORMAT_INFO_MASK_QR;
-  return FormatInformation.doDecodeFormatInformation(v289);
+  var v288 = maskedFormatInfo ^ FORMAT_INFO_MASK_QR;
+  return FormatInformation.doDecodeFormatInformation(v288);
 }
 function v135(a, b$$1) {
   a = a ^ b$$1;
-  var v2786 = a & 15;
-  var v2765 = BITS_SET_IN_HALF_BYTE[v2786];
-  var v2787 = BITS_SET_IN_HALF_BYTE;
-  var v2792 = URShift(a, 4);
-  var v2788 = v2792 & 15;
-  var v2766 = v2787[v2788];
-  var v2722 = v2765 + v2766;
-  var v2767 = BITS_SET_IN_HALF_BYTE;
-  var v2789 = URShift(a, 8);
-  var v2768 = v2789 & 15;
-  var v2723 = v2767[v2768];
-  var v2645 = v2722 + v2723;
-  var v2724 = BITS_SET_IN_HALF_BYTE;
-  var v2769 = URShift(a, 12);
-  var v2725 = v2769 & 15;
-  var v2646 = v2724[v2725];
-  var v2476 = v2645 + v2646;
-  var v2647 = BITS_SET_IN_HALF_BYTE;
-  var v2726 = URShift(a, 16);
-  var v2648 = v2726 & 15;
-  var v2477 = v2647[v2648];
-  var v1841 = v2476 + v2477;
-  var v2478 = BITS_SET_IN_HALF_BYTE;
-  var v2649 = URShift(a, 20);
-  var v2479 = v2649 & 15;
-  var v1842 = v2478[v2479];
-  var v1160 = v1841 + v1842;
-  var v1843 = BITS_SET_IN_HALF_BYTE;
-  var v2480 = URShift(a, 24);
-  var v1844 = v2480 & 15;
-  var v1161 = v1843[v1844];
-  var v290 = v1160 + v1161;
-  var v1162 = BITS_SET_IN_HALF_BYTE;
-  var v1845 = URShift(a, 28);
-  var v1163 = v1845 & 15;
-  var v291 = v1162[v1163];
-  return v290 + v291;
+  var v2784 = a & 15;
+  var v2763 = BITS_SET_IN_HALF_BYTE[v2784];
+  var v2785 = BITS_SET_IN_HALF_BYTE;
+  var v2790 = URShift(a, 4);
+  var v2786 = v2790 & 15;
+  var v2764 = v2785[v2786];
+  var v2720 = v2763 + v2764;
+  var v2765 = BITS_SET_IN_HALF_BYTE;
+  var v2787 = URShift(a, 8);
+  var v2766 = v2787 & 15;
+  var v2721 = v2765[v2766];
+  var v2643 = v2720 + v2721;
+  var v2722 = BITS_SET_IN_HALF_BYTE;
+  var v2767 = URShift(a, 12);
+  var v2723 = v2767 & 15;
+  var v2644 = v2722[v2723];
+  var v2474 = v2643 + v2644;
+  var v2645 = BITS_SET_IN_HALF_BYTE;
+  var v2724 = URShift(a, 16);
+  var v2646 = v2724 & 15;
+  var v2475 = v2645[v2646];
+  var v1839 = v2474 + v2475;
+  var v2476 = BITS_SET_IN_HALF_BYTE;
+  var v2647 = URShift(a, 20);
+  var v2477 = v2647 & 15;
+  var v1840 = v2476[v2477];
+  var v1159 = v1839 + v1840;
+  var v1841 = BITS_SET_IN_HALF_BYTE;
+  var v2478 = URShift(a, 24);
+  var v1842 = v2478 & 15;
+  var v1160 = v1841[v1842];
+  var v289 = v1159 + v1160;
+  var v1161 = BITS_SET_IN_HALF_BYTE;
+  var v1843 = URShift(a, 28);
+  var v1162 = v1843 & 15;
+  var v290 = v1161[v1162];
+  return v289 + v290;
 }
 function v134(x0$$4, y0$$4, x1$$5, y1$$5, x2$$3, y2$$3, x3$$2, y3$$2) {
-  var v292 = this.squareToQuadrilateral(x0$$4, y0$$4, x1$$5, y1$$5, x2$$3, y2$$3, x3$$2, y3$$2);
-  return v292.buildAdjoint();
+  var v291 = this.squareToQuadrilateral(x0$$4, y0$$4, x1$$5, y1$$5, x2$$3, y2$$3, x3$$2, y3$$2);
+  return v291.buildAdjoint();
 }
 function v133(x0$$3, y0$$3, x1$$4, y1$$4, x2$$2, y2$$2, x3$$1, y3$$1) {
   dy2 = y3$$1 - y2$$2;
-  var v1164 = y0$$3 - y1$$4;
-  var v293 = v1164 + y2$$2;
-  dy3 = v293 - y3$$1;
-  var v1165 = dy2 == 0;
-  if (v1165) {
-    v1165 = dy3 == 0;
+  var v1163 = y0$$3 - y1$$4;
+  var v292 = v1163 + y2$$2;
+  dy3 = v292 - y3$$1;
+  var v1164 = dy2 == 0;
+  if (v1164) {
+    v1164 = dy3 == 0;
   }
-  var v307 = v1165;
-  if (v307) {
-    var v294 = x1$$4 - x0$$3;
-    var v295 = x2$$2 - x1$$4;
-    var v296 = y1$$4 - y0$$3;
-    var v297 = y2$$2 - y1$$4;
-    return new PerspectiveTransform(v294, v295, x0$$3, v296, v297, y0$$3, 0, 0, 1);
+  var v306 = v1164;
+  if (v306) {
+    var v293 = x1$$4 - x0$$3;
+    var v294 = x2$$2 - x1$$4;
+    var v295 = y1$$4 - y0$$3;
+    var v296 = y2$$2 - y1$$4;
+    return new PerspectiveTransform(v293, v294, x0$$3, v295, v296, y0$$3, 0, 0, 1);
   } else {
     dx1 = x1$$4 - x2$$2;
     dx2 = x3$$1 - x2$$2;
-    var v1166 = x0$$3 - x1$$4;
-    var v298 = v1166 + x2$$2;
-    dx3 = v298 - x3$$1;
+    var v1165 = x0$$3 - x1$$4;
+    var v297 = v1165 + x2$$2;
+    dx3 = v297 - x3$$1;
     dy1 = y1$$4 - y2$$2;
-    var v299 = dx1 * dy2;
-    var v300 = dx2 * dy1;
-    denominator = v299 - v300;
-    var v1167 = dx3 * dy2;
-    var v1168 = dx2 * dy3;
-    var v301 = v1167 - v1168;
-    a13 = v301 / denominator;
-    var v1169 = dx1 * dy3;
-    var v1170 = dx3 * dy1;
-    var v302 = v1169 - v1170;
-    a23 = v302 / denominator;
-    var v1171 = x1$$4 - x0$$3;
-    var v1172 = a13 * x1$$4;
-    var v303 = v1171 + v1172;
-    var v1173 = x3$$1 - x0$$3;
-    var v1174 = a23 * x3$$1;
-    var v304 = v1173 + v1174;
-    var v1175 = y1$$4 - y0$$3;
-    var v1176 = a13 * y1$$4;
-    var v305 = v1175 + v1176;
-    var v1177 = y3$$1 - y0$$3;
-    var v1178 = a23 * y3$$1;
-    var v306 = v1177 + v1178;
-    return new PerspectiveTransform(v303, v304, x0$$3, v305, v306, y0$$3, a13, a23, 1);
+    var v298 = dx1 * dy2;
+    var v299 = dx2 * dy1;
+    denominator = v298 - v299;
+    var v1166 = dx3 * dy2;
+    var v1167 = dx2 * dy3;
+    var v300 = v1166 - v1167;
+    a13 = v300 / denominator;
+    var v1168 = dx1 * dy3;
+    var v1169 = dx3 * dy1;
+    var v301 = v1168 - v1169;
+    a23 = v301 / denominator;
+    var v1170 = x1$$4 - x0$$3;
+    var v1171 = a13 * x1$$4;
+    var v302 = v1170 + v1171;
+    var v1172 = x3$$1 - x0$$3;
+    var v1173 = a23 * x3$$1;
+    var v303 = v1172 + v1173;
+    var v1174 = y1$$4 - y0$$3;
+    var v1175 = a13 * y1$$4;
+    var v304 = v1174 + v1175;
+    var v1176 = y3$$1 - y0$$3;
+    var v1177 = a23 * y3$$1;
+    var v305 = v1176 + v1177;
+    return new PerspectiveTransform(v302, v303, x0$$3, v304, v305, y0$$3, a13, a23, 1);
   }
   return;
 }
@@ -939,62 +943,62 @@ function v131(versionBits) {
   var bestDifference = 4294967295;
   var bestVersion = 0;
   var i$$4 = 0;
-  var v1846 = Version.VERSION_DECODE_INFO;
-  var v1179 = v1846.length;
-  var v312 = i$$4 < v1179;
-  for (;v312;) {
-    var v308 = Version.VERSION_DECODE_INFO;
-    var targetVersion = v308[i$$4];
-    var v310 = targetVersion == versionBits;
-    if (v310) {
-      var v309 = i$$4 + 7;
-      return this.getVersionForNumber(v309);
+  var v1844 = Version.VERSION_DECODE_INFO;
+  var v1178 = v1844.length;
+  var v311 = i$$4 < v1178;
+  for (;v311;) {
+    var v307 = Version.VERSION_DECODE_INFO;
+    var targetVersion = v307[i$$4];
+    var v309 = targetVersion == versionBits;
+    if (v309) {
+      var v308 = i$$4 + 7;
+      return this.getVersionForNumber(v308);
     }
     var bitsDifference = FormatInformation.numBitsDiffering(versionBits, targetVersion);
-    var v311 = bitsDifference < bestDifference;
-    if (v311) {
+    var v310 = bitsDifference < bestDifference;
+    if (v310) {
       bestVersion = i$$4 + 7;
       bestDifference = bitsDifference;
     }
     i$$4++;
-    var v1847 = Version.VERSION_DECODE_INFO;
-    var v1180 = v1847.length;
-    v312 = i$$4 < v1180;
+    var v1845 = Version.VERSION_DECODE_INFO;
+    var v1179 = v1845.length;
+    v311 = i$$4 < v1179;
   }
-  var v313 = bestDifference <= 3;
-  if (v313) {
+  var v312 = bestDifference <= 3;
+  if (v312) {
     return this.getVersionForNumber(bestVersion);
   }
   return null;
 }
 function v130(dimension$$3) {
-  var v1181 = dimension$$3 % 4;
-  var v314 = v1181 != 1;
-  if (v314) {
+  var v1180 = dimension$$3 % 4;
+  var v313 = v1180 != 1;
+  if (v313) {
     throw "Error getProvisionalVersionForDimension";
   }
   try {
-    var v1182 = dimension$$3 - 17;
-    var v315 = v1182 >> 2;
-    return Version.getVersionForNumber(v315);
+    var v1181 = dimension$$3 - 17;
+    var v314 = v1181 >> 2;
+    return Version.getVersionForNumber(v314);
   } catch (iae) {
     throw "Error getVersionForNumber";
   }
   return;
 }
 function v129(versionNumber$$1) {
-  var v1183 = versionNumber$$1 < 1;
-  var v1848 = !v1183;
-  if (v1848) {
-    v1183 = versionNumber$$1 > 40;
+  var v1182 = versionNumber$$1 < 1;
+  var v1846 = !v1182;
+  if (v1846) {
+    v1182 = versionNumber$$1 > 40;
   }
-  var v316 = v1183;
-  if (v316) {
+  var v315 = v1182;
+  if (v315) {
     throw "ArgumentException";
   }
-  var v317 = Version.VERSIONS;
-  var v318 = versionNumber$$1 - 1;
-  return v317[v318];
+  var v316 = Version.VERSIONS;
+  var v317 = versionNumber$$1 - 1;
+  return v316[v317];
 }
 function v128(image$$4, dimension$$1, p1ToX, p1ToY, p2ToX, p2ToY, p3ToX, p3ToY, p4ToX, p4ToY, p1FromX, p1FromY, p2FromX, p2FromY, p3FromX, p3FromY, p4FromX, p4FromY) {
   var transform$$1 = PerspectiveTransform.quadrilateralToQuadrilateral(p1ToX, p1ToY, p2ToX, p2ToY, p3ToX, p3ToY, p4ToX, p4ToY, p1FromX, p1FromY, p2FromX, p2FromY, p3FromX, p3FromY, p4FromX, p4FromY);
@@ -1002,87 +1006,87 @@ function v128(image$$4, dimension$$1, p1ToX, p1ToY, p2ToX, p2ToY, p3ToX, p3ToY, 
 }
 function v127(image$$3, dimension, transform) {
   var bits = new BitMatrix(dimension);
-  var v319 = dimension << 1;
-  var points$$1 = new Array(v319);
+  var v318 = dimension << 1;
+  var points$$1 = new Array(v318);
   var y$$31 = 0;
-  var v335 = y$$31 < dimension;
-  for (;v335;) {
+  var v334 = y$$31 < dimension;
+  for (;v334;) {
     var max = points$$1.length;
     var iValue = y$$31 + .5;
     var x$$48 = 0;
-    var v322 = x$$48 < max;
-    for (;v322;) {
-      var v320 = x$$48 >> 1;
-      points$$1[x$$48] = v320 + .5;
-      var v321 = x$$48 + 1;
-      points$$1[v321] = iValue;
+    var v321 = x$$48 < max;
+    for (;v321;) {
+      var v319 = x$$48 >> 1;
+      points$$1[x$$48] = v319 + .5;
+      var v320 = x$$48 + 1;
+      points$$1[v320] = iValue;
       x$$48 = x$$48 + 2;
-      v322 = x$$48 < max;
+      v321 = x$$48 < max;
     }
     transform.transformPoints1(points$$1);
     GridSampler.checkAndNudgePoints(image$$3, points$$1);
     try {
       x$$48 = 0;
-      var v334 = x$$48 < max;
-      for (;v334;) {
-        var v1849 = points$$1[x$$48];
-        var v1184 = Math.floor(v1849);
+      var v333 = x$$48 < max;
+      for (;v333;) {
+        var v1847 = points$$1[x$$48];
+        var v1183 = Math.floor(v1847);
+        var v322 = v1183 * 4;
+        var v2648 = x$$48 + 1;
+        var v2479 = points$$1[v2648];
+        var v1848 = Math.floor(v2479);
+        var v1849 = qrcode.width;
+        var v1184 = v1848 * v1849;
         var v323 = v1184 * 4;
-        var v2650 = x$$48 + 1;
-        var v2481 = points$$1[v2650];
-        var v1850 = Math.floor(v2481);
+        var xpoint = v322 + v323;
+        var v1850 = points$$1[x$$48];
+        var v1185 = Math.floor(v1850);
         var v1851 = qrcode.width;
-        var v1185 = v1850 * v1851;
-        var v324 = v1185 * 4;
-        var xpoint = v323 + v324;
-        var v1852 = points$$1[x$$48];
-        var v1186 = Math.floor(v1852);
-        var v1853 = qrcode.width;
-        var v2651 = x$$48 + 1;
-        var v2482 = points$$1[v2651];
-        var v1854 = Math.floor(v2482);
-        var v1187 = v1853 * v1854;
-        var v325 = v1186 + v1187;
-        var bit = image$$3[v325];
-        var v1188 = qrcode.imagedata;
-        var v326 = v1188.data;
-        var v1189;
+        var v2649 = x$$48 + 1;
+        var v2480 = points$$1[v2649];
+        var v1852 = Math.floor(v2480);
+        var v1186 = v1851 * v1852;
+        var v324 = v1185 + v1186;
+        var bit = image$$3[v324];
+        var v1187 = qrcode.imagedata;
+        var v325 = v1187.data;
+        var v1188;
         if (bit) {
-          v1189 = 255;
+          v1188 = 255;
         } else {
-          v1189 = 0;
+          v1188 = 0;
         }
-        v326[xpoint] = v1189;
-        var v1190 = qrcode.imagedata;
-        var v327 = v1190.data;
-        var v328 = xpoint + 1;
-        var v1191;
+        v325[xpoint] = v1188;
+        var v1189 = qrcode.imagedata;
+        var v326 = v1189.data;
+        var v327 = xpoint + 1;
+        var v1190;
         if (bit) {
-          v1191 = 255;
+          v1190 = 255;
         } else {
-          v1191 = 0;
+          v1190 = 0;
         }
-        v327[v328] = v1191;
+        v326[v327] = v1190;
+        var v1191 = qrcode.imagedata;
+        var v328 = v1191.data;
+        var v329 = xpoint + 2;
+        v328[v329] = 0;
         var v1192 = qrcode.imagedata;
-        var v329 = v1192.data;
-        var v330 = xpoint + 2;
-        v329[v330] = 0;
-        var v1193 = qrcode.imagedata;
-        var v331 = v1193.data;
-        var v332 = xpoint + 3;
-        v331[v332] = 255;
+        var v330 = v1192.data;
+        var v331 = xpoint + 3;
+        v330[v331] = 255;
         if (bit) {
-          var v333 = x$$48 >> 1;
-          bits.set_Renamed(v333, y$$31);
+          var v332 = x$$48 >> 1;
+          bits.set_Renamed(v332, y$$31);
         }
         x$$48 = x$$48 + 2;
-        v334 = x$$48 < max;
+        v333 = x$$48 < max;
       }
     } catch (aioobe) {
       throw "Error.checkAndNudgePoints";
     }
     y$$31++;
-    v335 = y$$31 < dimension;
+    v334 = y$$31 < dimension;
   }
   return bits;
 }
@@ -1091,134 +1095,134 @@ function v126(image$$2, points) {
   var height$$8 = qrcode.height;
   var nudged = true;
   var offset$$8 = 0;
-  var v1855 = points.Length;
-  var v1194 = offset$$8 < v1855;
-  if (v1194) {
-    v1194 = nudged;
+  var v1853 = points.Length;
+  var v1193 = offset$$8 < v1853;
+  if (v1193) {
+    v1193 = nudged;
   }
-  var v345 = v1194;
-  for (;v345;) {
-    var v336 = points[offset$$8];
-    var x$$47 = Math.floor(v336);
-    var v1195 = offset$$8 + 1;
-    var v337 = points[v1195];
-    var y$$30 = Math.floor(v337);
-    var v2483 = x$$47 < -1;
-    var v2652 = !v2483;
-    if (v2652) {
-      v2483 = x$$47 > width$$9;
+  var v344 = v1193;
+  for (;v344;) {
+    var v335 = points[offset$$8];
+    var x$$47 = Math.floor(v335);
+    var v1194 = offset$$8 + 1;
+    var v336 = points[v1194];
+    var y$$30 = Math.floor(v336);
+    var v2481 = x$$47 < -1;
+    var v2650 = !v2481;
+    if (v2650) {
+      v2481 = x$$47 > width$$9;
     }
-    var v1856 = v2483;
-    var v2484 = !v1856;
-    if (v2484) {
-      v1856 = y$$30 < -1;
+    var v1854 = v2481;
+    var v2482 = !v1854;
+    if (v2482) {
+      v1854 = y$$30 < -1;
     }
-    var v1196 = v1856;
-    var v1857 = !v1196;
-    if (v1857) {
-      v1196 = y$$30 > height$$8;
+    var v1195 = v1854;
+    var v1855 = !v1195;
+    if (v1855) {
+      v1195 = y$$30 > height$$8;
     }
-    var v338 = v1196;
-    if (v338) {
+    var v337 = v1195;
+    if (v337) {
       throw "Error.checkAndNudgePoints ";
     }
     nudged = false;
-    var v340 = x$$47 == -1;
-    if (v340) {
+    var v339 = x$$47 == -1;
+    if (v339) {
       points[offset$$8] = 0;
       nudged = true;
     } else {
-      var v339 = x$$47 == width$$9;
-      if (v339) {
+      var v338 = x$$47 == width$$9;
+      if (v338) {
         points[offset$$8] = width$$9 - 1;
         nudged = true;
       }
     }
-    var v344 = y$$30 == -1;
-    if (v344) {
-      var v341 = offset$$8 + 1;
-      points[v341] = 0;
+    var v343 = y$$30 == -1;
+    if (v343) {
+      var v340 = offset$$8 + 1;
+      points[v340] = 0;
       nudged = true;
     } else {
-      var v343 = y$$30 == height$$8;
-      if (v343) {
-        var v342 = offset$$8 + 1;
-        points[v342] = height$$8 - 1;
+      var v342 = y$$30 == height$$8;
+      if (v342) {
+        var v341 = offset$$8 + 1;
+        points[v341] = height$$8 - 1;
         nudged = true;
       }
     }
     offset$$8 = offset$$8 + 2;
-    var v1858 = points.Length;
-    var v1197 = offset$$8 < v1858;
-    if (v1197) {
-      v1197 = nudged;
+    var v1856 = points.Length;
+    var v1196 = offset$$8 < v1856;
+    if (v1196) {
+      v1196 = nudged;
     }
-    v345 = v1197;
+    v344 = v1196;
   }
   nudged = true;
-  var v346 = points.Length;
-  offset$$8 = v346 - 2;
-  var v1198 = offset$$8 >= 0;
-  if (v1198) {
-    v1198 = nudged;
+  var v345 = points.Length;
+  offset$$8 = v345 - 2;
+  var v1197 = offset$$8 >= 0;
+  if (v1197) {
+    v1197 = nudged;
   }
-  var v356 = v1198;
-  for (;v356;) {
-    var v347 = points[offset$$8];
-    x$$47 = Math.floor(v347);
-    var v1199 = offset$$8 + 1;
-    var v348 = points[v1199];
-    y$$30 = Math.floor(v348);
-    var v2485 = x$$47 < -1;
-    var v2653 = !v2485;
-    if (v2653) {
-      v2485 = x$$47 > width$$9;
+  var v355 = v1197;
+  for (;v355;) {
+    var v346 = points[offset$$8];
+    x$$47 = Math.floor(v346);
+    var v1198 = offset$$8 + 1;
+    var v347 = points[v1198];
+    y$$30 = Math.floor(v347);
+    var v2483 = x$$47 < -1;
+    var v2651 = !v2483;
+    if (v2651) {
+      v2483 = x$$47 > width$$9;
     }
-    var v1859 = v2485;
-    var v2486 = !v1859;
-    if (v2486) {
-      v1859 = y$$30 < -1;
+    var v1857 = v2483;
+    var v2484 = !v1857;
+    if (v2484) {
+      v1857 = y$$30 < -1;
     }
-    var v1200 = v1859;
-    var v1860 = !v1200;
-    if (v1860) {
-      v1200 = y$$30 > height$$8;
+    var v1199 = v1857;
+    var v1858 = !v1199;
+    if (v1858) {
+      v1199 = y$$30 > height$$8;
     }
-    var v349 = v1200;
-    if (v349) {
+    var v348 = v1199;
+    if (v348) {
       throw "Error.checkAndNudgePoints ";
     }
     nudged = false;
-    var v351 = x$$47 == -1;
-    if (v351) {
+    var v350 = x$$47 == -1;
+    if (v350) {
       points[offset$$8] = 0;
       nudged = true;
     } else {
-      var v350 = x$$47 == width$$9;
-      if (v350) {
+      var v349 = x$$47 == width$$9;
+      if (v349) {
         points[offset$$8] = width$$9 - 1;
         nudged = true;
       }
     }
-    var v355 = y$$30 == -1;
-    if (v355) {
-      var v352 = offset$$8 + 1;
-      points[v352] = 0;
+    var v354 = y$$30 == -1;
+    if (v354) {
+      var v351 = offset$$8 + 1;
+      points[v351] = 0;
       nudged = true;
     } else {
-      var v354 = y$$30 == height$$8;
-      if (v354) {
-        var v353 = offset$$8 + 1;
-        points[v353] = height$$8 - 1;
+      var v353 = y$$30 == height$$8;
+      if (v353) {
+        var v352 = offset$$8 + 1;
+        points[v352] = height$$8 - 1;
         nudged = true;
       }
     }
     offset$$8 = offset$$8 - 2;
-    var v1201 = offset$$8 >= 0;
-    if (v1201) {
-      v1201 = nudged;
+    var v1200 = offset$$8 >= 0;
+    if (v1200) {
+      v1200 = nudged;
     }
-    v356 = v1201;
+    v355 = v1200;
   }
   return;
 }
@@ -1242,36 +1246,36 @@ function ECBlocks(ecCodewordsPerBlock, ecBlocks1, ecBlocks2) {
   function v4() {
     var total = 0;
     var i$$1 = 0;
-    var v1861 = this.ecBlocks;
-    var v1202 = v1861.length;
-    var v357 = i$$1 < v1202;
-    for (;v357;) {
-      var v2487 = this.ecBlocks;
-      var v1862 = v2487[i$$1];
-      var v1203 = v1862.length;
-      total = total + v1203;
+    var v1859 = this.ecBlocks;
+    var v1201 = v1859.length;
+    var v356 = i$$1 < v1201;
+    for (;v356;) {
+      var v2485 = this.ecBlocks;
+      var v1860 = v2485[i$$1];
+      var v1202 = v1860.length;
+      total = total + v1202;
       i$$1++;
-      var v1863 = this.ecBlocks;
-      var v1204 = v1863.length;
-      v357 = i$$1 < v1204;
+      var v1861 = this.ecBlocks;
+      var v1203 = v1861.length;
+      v356 = i$$1 < v1203;
     }
     return total;
   }
   function v3() {
-    var v358 = this.ecCodewordsPerBlock;
-    var v359 = this.NumBlocks;
-    return v358 * v359;
+    var v357 = this.ecCodewordsPerBlock;
+    var v358 = this.NumBlocks;
+    return v357 * v358;
   }
   function v2() {
     return this.ecCodewordsPerBlock;
   }
   this.ecCodewordsPerBlock = ecCodewordsPerBlock;
   if (ecBlocks2) {
-    var v2802 = new Array(ecBlocks1, ecBlocks2);
-    this.ecBlocks = v2802;
+    var v2800 = new Array(ecBlocks1, ecBlocks2);
+    this.ecBlocks = v2800;
   } else {
-    var v2803 = new Array(ecBlocks1);
-    this.ecBlocks = v2803;
+    var v2801 = new Array(ecBlocks1);
+    this.ecBlocks = v2801;
   }
   this.__defineGetter__("ECCodewordsPerBlock", v2);
   this.__defineGetter__("TotalECCodewords", v3);
@@ -1281,83 +1285,83 @@ function ECBlocks(ecCodewordsPerBlock, ecBlocks1, ecBlocks2) {
 }
 function Version(versionNumber, alignmentPatternCenters, ecBlocks1$$1, ecBlocks2$$1, ecBlocks3, ecBlocks4) {
   function v11(ecLevel) {
-    var v360 = this.ecBlocks;
-    var v361 = ecLevel.ordinal_Renamed_Field;
-    return v360[v361];
+    var v359 = this.ecBlocks;
+    var v360 = ecLevel.ordinal_Renamed_Field;
+    return v359[v360];
   }
   function v10() {
     var dimension$$2 = this.DimensionForVersion;
     var bitMatrix = new BitMatrix(dimension$$2);
     bitMatrix.setRegion(0, 0, 9, 9);
+    var v361 = dimension$$2 - 8;
+    bitMatrix.setRegion(v361, 0, 8, 9);
     var v362 = dimension$$2 - 8;
-    bitMatrix.setRegion(v362, 0, 8, 9);
-    var v363 = dimension$$2 - 8;
-    bitMatrix.setRegion(0, v363, 9, 8);
-    var v364 = this.alignmentPatternCenters;
-    var max$$1 = v364.length;
+    bitMatrix.setRegion(0, v362, 9, 8);
+    var v363 = this.alignmentPatternCenters;
+    var max$$1 = v363.length;
     var x$$49 = 0;
-    var v369 = x$$49 < max$$1;
-    for (;v369;) {
-      var v1205 = this.alignmentPatternCenters;
-      var v365 = v1205[x$$49];
-      var i$$3 = v365 - 2;
+    var v368 = x$$49 < max$$1;
+    for (;v368;) {
+      var v1204 = this.alignmentPatternCenters;
+      var v364 = v1204[x$$49];
+      var i$$3 = v364 - 2;
       var y$$32 = 0;
-      var v368 = y$$32 < max$$1;
-      for (;v368;) {
-        var v1864 = x$$49 == 0;
+      var v367 = y$$32 < max$$1;
+      for (;v367;) {
+        var v1862 = x$$49 == 0;
+        if (v1862) {
+          var v2486 = y$$32 == 0;
+          var v2653 = !v2486;
+          if (v2653) {
+            var v2652 = max$$1 - 1;
+            v2486 = y$$32 == v2652;
+          }
+          v1862 = v2486;
+        }
+        var v1205 = v1862;
+        var v1864 = !v1205;
         if (v1864) {
-          var v2488 = y$$32 == 0;
-          var v2655 = !v2488;
-          if (v2655) {
-            var v2654 = max$$1 - 1;
-            v2488 = y$$32 == v2654;
+          var v2487 = max$$1 - 1;
+          var v1863 = x$$49 == v2487;
+          if (v1863) {
+            v1863 = y$$32 == 0;
           }
-          v1864 = v2488;
+          v1205 = v1863;
         }
-        var v1206 = v1864;
-        var v1866 = !v1206;
-        if (v1866) {
-          var v2489 = max$$1 - 1;
-          var v1865 = x$$49 == v2489;
-          if (v1865) {
-            v1865 = y$$32 == 0;
-          }
-          v1206 = v1865;
-        }
-        var v366 = v1206;
-        if (v366) {
+        var v365 = v1205;
+        if (v365) {
           y$$32++;
-          v368 = y$$32 < max$$1;
+          v367 = y$$32 < max$$1;
           continue;
         }
-        var v1867 = this.alignmentPatternCenters;
-        var v1207 = v1867[y$$32];
-        var v367 = v1207 - 2;
-        bitMatrix.setRegion(v367, i$$3, 5, 5);
+        var v1865 = this.alignmentPatternCenters;
+        var v1206 = v1865[y$$32];
+        var v366 = v1206 - 2;
+        bitMatrix.setRegion(v366, i$$3, 5, 5);
         y$$32++;
-        v368 = y$$32 < max$$1;
+        v367 = y$$32 < max$$1;
       }
       x$$49++;
-      v369 = x$$49 < max$$1;
+      v368 = x$$49 < max$$1;
     }
+    var v369 = dimension$$2 - 17;
+    bitMatrix.setRegion(6, 9, 1, v369);
     var v370 = dimension$$2 - 17;
-    bitMatrix.setRegion(6, 9, 1, v370);
-    var v371 = dimension$$2 - 17;
-    bitMatrix.setRegion(9, 6, v371, 1);
-    var v1208 = this.versionNumber;
-    var v374 = v1208 > 6;
-    if (v374) {
+    bitMatrix.setRegion(9, 6, v370, 1);
+    var v1207 = this.versionNumber;
+    var v373 = v1207 > 6;
+    if (v373) {
+      var v371 = dimension$$2 - 11;
+      bitMatrix.setRegion(v371, 0, 3, 6);
       var v372 = dimension$$2 - 11;
-      bitMatrix.setRegion(v372, 0, 3, 6);
-      var v373 = dimension$$2 - 11;
-      bitMatrix.setRegion(0, v373, 6, 3);
+      bitMatrix.setRegion(0, v372, 6, 3);
     }
     return bitMatrix;
   }
   function v9() {
-    var v1209 = this.versionNumber;
-    var v375 = 4 * v1209;
-    return 17 + v375;
+    var v1208 = this.versionNumber;
+    var v374 = 4 * v1208;
+    return 17 + v374;
   }
   function v8() {
     return this.totalCodewords;
@@ -1370,24 +1374,24 @@ function Version(versionNumber, alignmentPatternCenters, ecBlocks1$$1, ecBlocks2
   }
   this.versionNumber = versionNumber;
   this.alignmentPatternCenters = alignmentPatternCenters;
-  var v2804 = new Array(ecBlocks1$$1, ecBlocks2$$1, ecBlocks3, ecBlocks4);
-  this.ecBlocks = v2804;
+  var v2802 = new Array(ecBlocks1$$1, ecBlocks2$$1, ecBlocks3, ecBlocks4);
+  this.ecBlocks = v2802;
   var total$$1 = 0;
   var ecCodewords = ecBlocks1$$1.ECCodewordsPerBlock;
   var ecbArray = ecBlocks1$$1.ecBlocks;
   var i$$2 = 0;
-  var v1210 = ecbArray.length;
-  var v376 = i$$2 < v1210;
-  for (;v376;) {
+  var v1209 = ecbArray.length;
+  var v375 = i$$2 < v1209;
+  for (;v375;) {
     var ecBlock = ecbArray[i$$2];
-    var v1868 = ecBlock.Count;
-    var v2490 = ecBlock.DataCodewords;
-    var v1869 = v2490 + ecCodewords;
-    var v1211 = v1868 * v1869;
-    total$$1 = total$$1 + v1211;
+    var v1866 = ecBlock.Count;
+    var v2488 = ecBlock.DataCodewords;
+    var v1867 = v2488 + ecCodewords;
+    var v1210 = v1866 * v1867;
+    total$$1 = total$$1 + v1210;
     i$$2++;
-    var v1212 = ecbArray.length;
-    v376 = i$$2 < v1212;
+    var v1211 = ecbArray.length;
+    v375 = i$$2 < v1211;
   }
   this.totalCodewords = total$$1;
   this.__defineGetter__("VersionNumber", v6);
@@ -1399,737 +1403,737 @@ function Version(versionNumber, alignmentPatternCenters, ecBlocks1$$1, ecBlocks2
   return;
 }
 function buildVersions() {
-  var v1213 = new Array;
-  var v1870 = new ECB(1, 19);
-  var v1214 = new ECBlocks(7, v1870);
-  var v1871 = new ECB(1, 16);
-  var v1215 = new ECBlocks(10, v1871);
-  var v1872 = new ECB(1, 13);
-  var v1216 = new ECBlocks(13, v1872);
-  var v1873 = new ECB(1, 9);
-  var v1217 = new ECBlocks(17, v1873);
-  var v377 = new Version(1, v1213, v1214, v1215, v1216, v1217);
-  var v1218 = new Array(6, 18);
-  var v1874 = new ECB(1, 34);
-  var v1219 = new ECBlocks(10, v1874);
-  var v1875 = new ECB(1, 28);
-  var v1220 = new ECBlocks(16, v1875);
-  var v1876 = new ECB(1, 22);
-  var v1221 = new ECBlocks(22, v1876);
-  var v1877 = new ECB(1, 16);
-  var v1222 = new ECBlocks(28, v1877);
-  var v378 = new Version(2, v1218, v1219, v1220, v1221, v1222);
-  var v1223 = new Array(6, 22);
-  var v1878 = new ECB(1, 55);
-  var v1224 = new ECBlocks(15, v1878);
-  var v1879 = new ECB(1, 44);
-  var v1225 = new ECBlocks(26, v1879);
-  var v1880 = new ECB(2, 17);
-  var v1226 = new ECBlocks(18, v1880);
-  var v1881 = new ECB(2, 13);
-  var v1227 = new ECBlocks(22, v1881);
-  var v379 = new Version(3, v1223, v1224, v1225, v1226, v1227);
-  var v1228 = new Array(6, 26);
-  var v1882 = new ECB(1, 80);
-  var v1229 = new ECBlocks(20, v1882);
-  var v1883 = new ECB(2, 32);
-  var v1230 = new ECBlocks(18, v1883);
-  var v1884 = new ECB(2, 24);
-  var v1231 = new ECBlocks(26, v1884);
-  var v1885 = new ECB(4, 9);
-  var v1232 = new ECBlocks(16, v1885);
-  var v380 = new Version(4, v1228, v1229, v1230, v1231, v1232);
-  var v1233 = new Array(6, 30);
-  var v1886 = new ECB(1, 108);
-  var v1234 = new ECBlocks(26, v1886);
-  var v1887 = new ECB(2, 43);
-  var v1235 = new ECBlocks(24, v1887);
-  var v1888 = new ECB(2, 15);
-  var v1889 = new ECB(2, 16);
-  var v1236 = new ECBlocks(18, v1888, v1889);
-  var v1890 = new ECB(2, 11);
-  var v1891 = new ECB(2, 12);
-  var v1237 = new ECBlocks(22, v1890, v1891);
-  var v381 = new Version(5, v1233, v1234, v1235, v1236, v1237);
-  var v1238 = new Array(6, 34);
-  var v1892 = new ECB(2, 68);
-  var v1239 = new ECBlocks(18, v1892);
-  var v1893 = new ECB(4, 27);
-  var v1240 = new ECBlocks(16, v1893);
-  var v1894 = new ECB(4, 19);
-  var v1241 = new ECBlocks(24, v1894);
-  var v1895 = new ECB(4, 15);
-  var v1242 = new ECBlocks(28, v1895);
-  var v382 = new Version(6, v1238, v1239, v1240, v1241, v1242);
-  var v1243 = new Array(6, 22, 38);
-  var v1896 = new ECB(2, 78);
-  var v1244 = new ECBlocks(20, v1896);
-  var v1897 = new ECB(4, 31);
-  var v1245 = new ECBlocks(18, v1897);
-  var v1898 = new ECB(2, 14);
-  var v1899 = new ECB(4, 15);
-  var v1246 = new ECBlocks(18, v1898, v1899);
-  var v1900 = new ECB(4, 13);
-  var v1901 = new ECB(1, 14);
-  var v1247 = new ECBlocks(26, v1900, v1901);
-  var v383 = new Version(7, v1243, v1244, v1245, v1246, v1247);
-  var v1248 = new Array(6, 24, 42);
-  var v1902 = new ECB(2, 97);
-  var v1249 = new ECBlocks(24, v1902);
-  var v1903 = new ECB(2, 38);
-  var v1904 = new ECB(2, 39);
+  var v1212 = new Array;
+  var v1868 = new ECB(1, 19);
+  var v1213 = new ECBlocks(7, v1868);
+  var v1869 = new ECB(1, 16);
+  var v1214 = new ECBlocks(10, v1869);
+  var v1870 = new ECB(1, 13);
+  var v1215 = new ECBlocks(13, v1870);
+  var v1871 = new ECB(1, 9);
+  var v1216 = new ECBlocks(17, v1871);
+  var v376 = new Version(1, v1212, v1213, v1214, v1215, v1216);
+  var v1217 = new Array(6, 18);
+  var v1872 = new ECB(1, 34);
+  var v1218 = new ECBlocks(10, v1872);
+  var v1873 = new ECB(1, 28);
+  var v1219 = new ECBlocks(16, v1873);
+  var v1874 = new ECB(1, 22);
+  var v1220 = new ECBlocks(22, v1874);
+  var v1875 = new ECB(1, 16);
+  var v1221 = new ECBlocks(28, v1875);
+  var v377 = new Version(2, v1217, v1218, v1219, v1220, v1221);
+  var v1222 = new Array(6, 22);
+  var v1876 = new ECB(1, 55);
+  var v1223 = new ECBlocks(15, v1876);
+  var v1877 = new ECB(1, 44);
+  var v1224 = new ECBlocks(26, v1877);
+  var v1878 = new ECB(2, 17);
+  var v1225 = new ECBlocks(18, v1878);
+  var v1879 = new ECB(2, 13);
+  var v1226 = new ECBlocks(22, v1879);
+  var v378 = new Version(3, v1222, v1223, v1224, v1225, v1226);
+  var v1227 = new Array(6, 26);
+  var v1880 = new ECB(1, 80);
+  var v1228 = new ECBlocks(20, v1880);
+  var v1881 = new ECB(2, 32);
+  var v1229 = new ECBlocks(18, v1881);
+  var v1882 = new ECB(2, 24);
+  var v1230 = new ECBlocks(26, v1882);
+  var v1883 = new ECB(4, 9);
+  var v1231 = new ECBlocks(16, v1883);
+  var v379 = new Version(4, v1227, v1228, v1229, v1230, v1231);
+  var v1232 = new Array(6, 30);
+  var v1884 = new ECB(1, 108);
+  var v1233 = new ECBlocks(26, v1884);
+  var v1885 = new ECB(2, 43);
+  var v1234 = new ECBlocks(24, v1885);
+  var v1886 = new ECB(2, 15);
+  var v1887 = new ECB(2, 16);
+  var v1235 = new ECBlocks(18, v1886, v1887);
+  var v1888 = new ECB(2, 11);
+  var v1889 = new ECB(2, 12);
+  var v1236 = new ECBlocks(22, v1888, v1889);
+  var v380 = new Version(5, v1232, v1233, v1234, v1235, v1236);
+  var v1237 = new Array(6, 34);
+  var v1890 = new ECB(2, 68);
+  var v1238 = new ECBlocks(18, v1890);
+  var v1891 = new ECB(4, 27);
+  var v1239 = new ECBlocks(16, v1891);
+  var v1892 = new ECB(4, 19);
+  var v1240 = new ECBlocks(24, v1892);
+  var v1893 = new ECB(4, 15);
+  var v1241 = new ECBlocks(28, v1893);
+  var v381 = new Version(6, v1237, v1238, v1239, v1240, v1241);
+  var v1242 = new Array(6, 22, 38);
+  var v1894 = new ECB(2, 78);
+  var v1243 = new ECBlocks(20, v1894);
+  var v1895 = new ECB(4, 31);
+  var v1244 = new ECBlocks(18, v1895);
+  var v1896 = new ECB(2, 14);
+  var v1897 = new ECB(4, 15);
+  var v1245 = new ECBlocks(18, v1896, v1897);
+  var v1898 = new ECB(4, 13);
+  var v1899 = new ECB(1, 14);
+  var v1246 = new ECBlocks(26, v1898, v1899);
+  var v382 = new Version(7, v1242, v1243, v1244, v1245, v1246);
+  var v1247 = new Array(6, 24, 42);
+  var v1900 = new ECB(2, 97);
+  var v1248 = new ECBlocks(24, v1900);
+  var v1901 = new ECB(2, 38);
+  var v1902 = new ECB(2, 39);
+  var v1249 = new ECBlocks(22, v1901, v1902);
+  var v1903 = new ECB(4, 18);
+  var v1904 = new ECB(2, 19);
   var v1250 = new ECBlocks(22, v1903, v1904);
-  var v1905 = new ECB(4, 18);
-  var v1906 = new ECB(2, 19);
-  var v1251 = new ECBlocks(22, v1905, v1906);
-  var v1907 = new ECB(4, 14);
-  var v1908 = new ECB(2, 15);
-  var v1252 = new ECBlocks(26, v1907, v1908);
-  var v384 = new Version(8, v1248, v1249, v1250, v1251, v1252);
-  var v1253 = new Array(6, 26, 46);
-  var v1909 = new ECB(2, 116);
-  var v1254 = new ECBlocks(30, v1909);
-  var v1910 = new ECB(3, 36);
-  var v1911 = new ECB(2, 37);
-  var v1255 = new ECBlocks(22, v1910, v1911);
-  var v1912 = new ECB(4, 16);
-  var v1913 = new ECB(4, 17);
-  var v1256 = new ECBlocks(20, v1912, v1913);
-  var v1914 = new ECB(4, 12);
-  var v1915 = new ECB(4, 13);
-  var v1257 = new ECBlocks(24, v1914, v1915);
-  var v385 = new Version(9, v1253, v1254, v1255, v1256, v1257);
-  var v1258 = new Array(6, 28, 50);
-  var v1916 = new ECB(2, 68);
-  var v1917 = new ECB(2, 69);
-  var v1259 = new ECBlocks(18, v1916, v1917);
-  var v1918 = new ECB(4, 43);
-  var v1919 = new ECB(1, 44);
-  var v1260 = new ECBlocks(26, v1918, v1919);
-  var v1920 = new ECB(6, 19);
-  var v1921 = new ECB(2, 20);
-  var v1261 = new ECBlocks(24, v1920, v1921);
-  var v1922 = new ECB(6, 15);
-  var v1923 = new ECB(2, 16);
-  var v1262 = new ECBlocks(28, v1922, v1923);
-  var v386 = new Version(10, v1258, v1259, v1260, v1261, v1262);
-  var v1263 = new Array(6, 30, 54);
-  var v1924 = new ECB(4, 81);
-  var v1264 = new ECBlocks(20, v1924);
-  var v1925 = new ECB(1, 50);
-  var v1926 = new ECB(4, 51);
-  var v1265 = new ECBlocks(30, v1925, v1926);
-  var v1927 = new ECB(4, 22);
-  var v1928 = new ECB(4, 23);
-  var v1266 = new ECBlocks(28, v1927, v1928);
-  var v1929 = new ECB(3, 12);
-  var v1930 = new ECB(8, 13);
-  var v1267 = new ECBlocks(24, v1929, v1930);
-  var v387 = new Version(11, v1263, v1264, v1265, v1266, v1267);
-  var v1268 = new Array(6, 32, 58);
-  var v1931 = new ECB(2, 92);
-  var v1932 = new ECB(2, 93);
-  var v1269 = new ECBlocks(24, v1931, v1932);
-  var v1933 = new ECB(6, 36);
-  var v1934 = new ECB(2, 37);
-  var v1270 = new ECBlocks(22, v1933, v1934);
-  var v1935 = new ECB(4, 20);
-  var v1936 = new ECB(6, 21);
-  var v1271 = new ECBlocks(26, v1935, v1936);
-  var v1937 = new ECB(7, 14);
-  var v1938 = new ECB(4, 15);
-  var v1272 = new ECBlocks(28, v1937, v1938);
-  var v388 = new Version(12, v1268, v1269, v1270, v1271, v1272);
-  var v1273 = new Array(6, 34, 62);
-  var v1939 = new ECB(4, 107);
-  var v1274 = new ECBlocks(26, v1939);
-  var v1940 = new ECB(8, 37);
-  var v1941 = new ECB(1, 38);
-  var v1275 = new ECBlocks(22, v1940, v1941);
-  var v1942 = new ECB(8, 20);
-  var v1943 = new ECB(4, 21);
-  var v1276 = new ECBlocks(24, v1942, v1943);
-  var v1944 = new ECB(12, 11);
-  var v1945 = new ECB(4, 12);
-  var v1277 = new ECBlocks(22, v1944, v1945);
-  var v389 = new Version(13, v1273, v1274, v1275, v1276, v1277);
-  var v1278 = new Array(6, 26, 46, 66);
-  var v1946 = new ECB(3, 115);
-  var v1947 = new ECB(1, 116);
-  var v1279 = new ECBlocks(30, v1946, v1947);
-  var v1948 = new ECB(4, 40);
-  var v1949 = new ECB(5, 41);
-  var v1280 = new ECBlocks(24, v1948, v1949);
-  var v1950 = new ECB(11, 16);
-  var v1951 = new ECB(5, 17);
-  var v1281 = new ECBlocks(20, v1950, v1951);
-  var v1952 = new ECB(11, 12);
-  var v1953 = new ECB(5, 13);
-  var v1282 = new ECBlocks(24, v1952, v1953);
-  var v390 = new Version(14, v1278, v1279, v1280, v1281, v1282);
-  var v1283 = new Array(6, 26, 48, 70);
-  var v1954 = new ECB(5, 87);
-  var v1955 = new ECB(1, 88);
-  var v1284 = new ECBlocks(22, v1954, v1955);
-  var v1956 = new ECB(5, 41);
-  var v1957 = new ECB(5, 42);
-  var v1285 = new ECBlocks(24, v1956, v1957);
-  var v1958 = new ECB(5, 24);
-  var v1959 = new ECB(7, 25);
-  var v1286 = new ECBlocks(30, v1958, v1959);
-  var v1960 = new ECB(11, 12);
-  var v1961 = new ECB(7, 13);
-  var v1287 = new ECBlocks(24, v1960, v1961);
-  var v391 = new Version(15, v1283, v1284, v1285, v1286, v1287);
-  var v1288 = new Array(6, 26, 50, 74);
-  var v1962 = new ECB(5, 98);
-  var v1963 = new ECB(1, 99);
-  var v1289 = new ECBlocks(24, v1962, v1963);
-  var v1964 = new ECB(7, 45);
-  var v1965 = new ECB(3, 46);
-  var v1290 = new ECBlocks(28, v1964, v1965);
-  var v1966 = new ECB(15, 19);
-  var v1967 = new ECB(2, 20);
-  var v1291 = new ECBlocks(24, v1966, v1967);
-  var v1968 = new ECB(3, 15);
-  var v1969 = new ECB(13, 16);
-  var v1292 = new ECBlocks(30, v1968, v1969);
-  var v392 = new Version(16, v1288, v1289, v1290, v1291, v1292);
-  var v1293 = new Array(6, 30, 54, 78);
-  var v1970 = new ECB(1, 107);
-  var v1971 = new ECB(5, 108);
+  var v1905 = new ECB(4, 14);
+  var v1906 = new ECB(2, 15);
+  var v1251 = new ECBlocks(26, v1905, v1906);
+  var v383 = new Version(8, v1247, v1248, v1249, v1250, v1251);
+  var v1252 = new Array(6, 26, 46);
+  var v1907 = new ECB(2, 116);
+  var v1253 = new ECBlocks(30, v1907);
+  var v1908 = new ECB(3, 36);
+  var v1909 = new ECB(2, 37);
+  var v1254 = new ECBlocks(22, v1908, v1909);
+  var v1910 = new ECB(4, 16);
+  var v1911 = new ECB(4, 17);
+  var v1255 = new ECBlocks(20, v1910, v1911);
+  var v1912 = new ECB(4, 12);
+  var v1913 = new ECB(4, 13);
+  var v1256 = new ECBlocks(24, v1912, v1913);
+  var v384 = new Version(9, v1252, v1253, v1254, v1255, v1256);
+  var v1257 = new Array(6, 28, 50);
+  var v1914 = new ECB(2, 68);
+  var v1915 = new ECB(2, 69);
+  var v1258 = new ECBlocks(18, v1914, v1915);
+  var v1916 = new ECB(4, 43);
+  var v1917 = new ECB(1, 44);
+  var v1259 = new ECBlocks(26, v1916, v1917);
+  var v1918 = new ECB(6, 19);
+  var v1919 = new ECB(2, 20);
+  var v1260 = new ECBlocks(24, v1918, v1919);
+  var v1920 = new ECB(6, 15);
+  var v1921 = new ECB(2, 16);
+  var v1261 = new ECBlocks(28, v1920, v1921);
+  var v385 = new Version(10, v1257, v1258, v1259, v1260, v1261);
+  var v1262 = new Array(6, 30, 54);
+  var v1922 = new ECB(4, 81);
+  var v1263 = new ECBlocks(20, v1922);
+  var v1923 = new ECB(1, 50);
+  var v1924 = new ECB(4, 51);
+  var v1264 = new ECBlocks(30, v1923, v1924);
+  var v1925 = new ECB(4, 22);
+  var v1926 = new ECB(4, 23);
+  var v1265 = new ECBlocks(28, v1925, v1926);
+  var v1927 = new ECB(3, 12);
+  var v1928 = new ECB(8, 13);
+  var v1266 = new ECBlocks(24, v1927, v1928);
+  var v386 = new Version(11, v1262, v1263, v1264, v1265, v1266);
+  var v1267 = new Array(6, 32, 58);
+  var v1929 = new ECB(2, 92);
+  var v1930 = new ECB(2, 93);
+  var v1268 = new ECBlocks(24, v1929, v1930);
+  var v1931 = new ECB(6, 36);
+  var v1932 = new ECB(2, 37);
+  var v1269 = new ECBlocks(22, v1931, v1932);
+  var v1933 = new ECB(4, 20);
+  var v1934 = new ECB(6, 21);
+  var v1270 = new ECBlocks(26, v1933, v1934);
+  var v1935 = new ECB(7, 14);
+  var v1936 = new ECB(4, 15);
+  var v1271 = new ECBlocks(28, v1935, v1936);
+  var v387 = new Version(12, v1267, v1268, v1269, v1270, v1271);
+  var v1272 = new Array(6, 34, 62);
+  var v1937 = new ECB(4, 107);
+  var v1273 = new ECBlocks(26, v1937);
+  var v1938 = new ECB(8, 37);
+  var v1939 = new ECB(1, 38);
+  var v1274 = new ECBlocks(22, v1938, v1939);
+  var v1940 = new ECB(8, 20);
+  var v1941 = new ECB(4, 21);
+  var v1275 = new ECBlocks(24, v1940, v1941);
+  var v1942 = new ECB(12, 11);
+  var v1943 = new ECB(4, 12);
+  var v1276 = new ECBlocks(22, v1942, v1943);
+  var v388 = new Version(13, v1272, v1273, v1274, v1275, v1276);
+  var v1277 = new Array(6, 26, 46, 66);
+  var v1944 = new ECB(3, 115);
+  var v1945 = new ECB(1, 116);
+  var v1278 = new ECBlocks(30, v1944, v1945);
+  var v1946 = new ECB(4, 40);
+  var v1947 = new ECB(5, 41);
+  var v1279 = new ECBlocks(24, v1946, v1947);
+  var v1948 = new ECB(11, 16);
+  var v1949 = new ECB(5, 17);
+  var v1280 = new ECBlocks(20, v1948, v1949);
+  var v1950 = new ECB(11, 12);
+  var v1951 = new ECB(5, 13);
+  var v1281 = new ECBlocks(24, v1950, v1951);
+  var v389 = new Version(14, v1277, v1278, v1279, v1280, v1281);
+  var v1282 = new Array(6, 26, 48, 70);
+  var v1952 = new ECB(5, 87);
+  var v1953 = new ECB(1, 88);
+  var v1283 = new ECBlocks(22, v1952, v1953);
+  var v1954 = new ECB(5, 41);
+  var v1955 = new ECB(5, 42);
+  var v1284 = new ECBlocks(24, v1954, v1955);
+  var v1956 = new ECB(5, 24);
+  var v1957 = new ECB(7, 25);
+  var v1285 = new ECBlocks(30, v1956, v1957);
+  var v1958 = new ECB(11, 12);
+  var v1959 = new ECB(7, 13);
+  var v1286 = new ECBlocks(24, v1958, v1959);
+  var v390 = new Version(15, v1282, v1283, v1284, v1285, v1286);
+  var v1287 = new Array(6, 26, 50, 74);
+  var v1960 = new ECB(5, 98);
+  var v1961 = new ECB(1, 99);
+  var v1288 = new ECBlocks(24, v1960, v1961);
+  var v1962 = new ECB(7, 45);
+  var v1963 = new ECB(3, 46);
+  var v1289 = new ECBlocks(28, v1962, v1963);
+  var v1964 = new ECB(15, 19);
+  var v1965 = new ECB(2, 20);
+  var v1290 = new ECBlocks(24, v1964, v1965);
+  var v1966 = new ECB(3, 15);
+  var v1967 = new ECB(13, 16);
+  var v1291 = new ECBlocks(30, v1966, v1967);
+  var v391 = new Version(16, v1287, v1288, v1289, v1290, v1291);
+  var v1292 = new Array(6, 30, 54, 78);
+  var v1968 = new ECB(1, 107);
+  var v1969 = new ECB(5, 108);
+  var v1293 = new ECBlocks(28, v1968, v1969);
+  var v1970 = new ECB(10, 46);
+  var v1971 = new ECB(1, 47);
   var v1294 = new ECBlocks(28, v1970, v1971);
-  var v1972 = new ECB(10, 46);
-  var v1973 = new ECB(1, 47);
+  var v1972 = new ECB(1, 22);
+  var v1973 = new ECB(15, 23);
   var v1295 = new ECBlocks(28, v1972, v1973);
-  var v1974 = new ECB(1, 22);
-  var v1975 = new ECB(15, 23);
+  var v1974 = new ECB(2, 14);
+  var v1975 = new ECB(17, 15);
   var v1296 = new ECBlocks(28, v1974, v1975);
-  var v1976 = new ECB(2, 14);
-  var v1977 = new ECB(17, 15);
-  var v1297 = new ECBlocks(28, v1976, v1977);
-  var v393 = new Version(17, v1293, v1294, v1295, v1296, v1297);
-  var v1298 = new Array(6, 30, 56, 82);
-  var v1978 = new ECB(5, 120);
-  var v1979 = new ECB(1, 121);
-  var v1299 = new ECBlocks(30, v1978, v1979);
-  var v1980 = new ECB(9, 43);
-  var v1981 = new ECB(4, 44);
-  var v1300 = new ECBlocks(26, v1980, v1981);
-  var v1982 = new ECB(17, 22);
-  var v1983 = new ECB(1, 23);
+  var v392 = new Version(17, v1292, v1293, v1294, v1295, v1296);
+  var v1297 = new Array(6, 30, 56, 82);
+  var v1976 = new ECB(5, 120);
+  var v1977 = new ECB(1, 121);
+  var v1298 = new ECBlocks(30, v1976, v1977);
+  var v1978 = new ECB(9, 43);
+  var v1979 = new ECB(4, 44);
+  var v1299 = new ECBlocks(26, v1978, v1979);
+  var v1980 = new ECB(17, 22);
+  var v1981 = new ECB(1, 23);
+  var v1300 = new ECBlocks(28, v1980, v1981);
+  var v1982 = new ECB(2, 14);
+  var v1983 = new ECB(19, 15);
   var v1301 = new ECBlocks(28, v1982, v1983);
-  var v1984 = new ECB(2, 14);
-  var v1985 = new ECB(19, 15);
-  var v1302 = new ECBlocks(28, v1984, v1985);
-  var v394 = new Version(18, v1298, v1299, v1300, v1301, v1302);
-  var v1303 = new Array(6, 30, 58, 86);
-  var v1986 = new ECB(3, 113);
-  var v1987 = new ECB(4, 114);
-  var v1304 = new ECBlocks(28, v1986, v1987);
-  var v1988 = new ECB(3, 44);
-  var v1989 = new ECB(11, 45);
+  var v393 = new Version(18, v1297, v1298, v1299, v1300, v1301);
+  var v1302 = new Array(6, 30, 58, 86);
+  var v1984 = new ECB(3, 113);
+  var v1985 = new ECB(4, 114);
+  var v1303 = new ECBlocks(28, v1984, v1985);
+  var v1986 = new ECB(3, 44);
+  var v1987 = new ECB(11, 45);
+  var v1304 = new ECBlocks(26, v1986, v1987);
+  var v1988 = new ECB(17, 21);
+  var v1989 = new ECB(4, 22);
   var v1305 = new ECBlocks(26, v1988, v1989);
-  var v1990 = new ECB(17, 21);
-  var v1991 = new ECB(4, 22);
+  var v1990 = new ECB(9, 13);
+  var v1991 = new ECB(16, 14);
   var v1306 = new ECBlocks(26, v1990, v1991);
-  var v1992 = new ECB(9, 13);
-  var v1993 = new ECB(16, 14);
-  var v1307 = new ECBlocks(26, v1992, v1993);
-  var v395 = new Version(19, v1303, v1304, v1305, v1306, v1307);
-  var v1308 = new Array(6, 34, 62, 90);
-  var v1994 = new ECB(3, 107);
-  var v1995 = new ECB(5, 108);
-  var v1309 = new ECBlocks(28, v1994, v1995);
-  var v1996 = new ECB(3, 41);
-  var v1997 = new ECB(13, 42);
-  var v1310 = new ECBlocks(26, v1996, v1997);
-  var v1998 = new ECB(15, 24);
-  var v1999 = new ECB(5, 25);
-  var v1311 = new ECBlocks(30, v1998, v1999);
-  var v2000 = new ECB(15, 15);
-  var v2001 = new ECB(10, 16);
-  var v1312 = new ECBlocks(28, v2000, v2001);
-  var v396 = new Version(20, v1308, v1309, v1310, v1311, v1312);
-  var v1313 = new Array(6, 28, 50, 72, 94);
-  var v2002 = new ECB(4, 116);
-  var v2003 = new ECB(4, 117);
-  var v1314 = new ECBlocks(28, v2002, v2003);
-  var v2004 = new ECB(17, 42);
-  var v1315 = new ECBlocks(26, v2004);
-  var v2005 = new ECB(17, 22);
-  var v2006 = new ECB(6, 23);
-  var v1316 = new ECBlocks(28, v2005, v2006);
-  var v2007 = new ECB(19, 16);
-  var v2008 = new ECB(6, 17);
-  var v1317 = new ECBlocks(30, v2007, v2008);
-  var v397 = new Version(21, v1313, v1314, v1315, v1316, v1317);
-  var v1318 = new Array(6, 26, 50, 74, 98);
-  var v2009 = new ECB(2, 111);
-  var v2010 = new ECB(7, 112);
-  var v1319 = new ECBlocks(28, v2009, v2010);
-  var v2011 = new ECB(17, 46);
-  var v1320 = new ECBlocks(28, v2011);
-  var v2012 = new ECB(7, 24);
-  var v2013 = new ECB(16, 25);
-  var v1321 = new ECBlocks(30, v2012, v2013);
-  var v2014 = new ECB(34, 13);
-  var v1322 = new ECBlocks(24, v2014);
-  var v398 = new Version(22, v1318, v1319, v1320, v1321, v1322);
-  var v1323 = new Array(6, 30, 54, 74, 102);
-  var v2015 = new ECB(4, 121);
-  var v2016 = new ECB(5, 122);
-  var v1324 = new ECBlocks(30, v2015, v2016);
-  var v2017 = new ECB(4, 47);
-  var v2018 = new ECB(14, 48);
-  var v1325 = new ECBlocks(28, v2017, v2018);
-  var v2019 = new ECB(11, 24);
-  var v2020 = new ECB(14, 25);
+  var v394 = new Version(19, v1302, v1303, v1304, v1305, v1306);
+  var v1307 = new Array(6, 34, 62, 90);
+  var v1992 = new ECB(3, 107);
+  var v1993 = new ECB(5, 108);
+  var v1308 = new ECBlocks(28, v1992, v1993);
+  var v1994 = new ECB(3, 41);
+  var v1995 = new ECB(13, 42);
+  var v1309 = new ECBlocks(26, v1994, v1995);
+  var v1996 = new ECB(15, 24);
+  var v1997 = new ECB(5, 25);
+  var v1310 = new ECBlocks(30, v1996, v1997);
+  var v1998 = new ECB(15, 15);
+  var v1999 = new ECB(10, 16);
+  var v1311 = new ECBlocks(28, v1998, v1999);
+  var v395 = new Version(20, v1307, v1308, v1309, v1310, v1311);
+  var v1312 = new Array(6, 28, 50, 72, 94);
+  var v2000 = new ECB(4, 116);
+  var v2001 = new ECB(4, 117);
+  var v1313 = new ECBlocks(28, v2000, v2001);
+  var v2002 = new ECB(17, 42);
+  var v1314 = new ECBlocks(26, v2002);
+  var v2003 = new ECB(17, 22);
+  var v2004 = new ECB(6, 23);
+  var v1315 = new ECBlocks(28, v2003, v2004);
+  var v2005 = new ECB(19, 16);
+  var v2006 = new ECB(6, 17);
+  var v1316 = new ECBlocks(30, v2005, v2006);
+  var v396 = new Version(21, v1312, v1313, v1314, v1315, v1316);
+  var v1317 = new Array(6, 26, 50, 74, 98);
+  var v2007 = new ECB(2, 111);
+  var v2008 = new ECB(7, 112);
+  var v1318 = new ECBlocks(28, v2007, v2008);
+  var v2009 = new ECB(17, 46);
+  var v1319 = new ECBlocks(28, v2009);
+  var v2010 = new ECB(7, 24);
+  var v2011 = new ECB(16, 25);
+  var v1320 = new ECBlocks(30, v2010, v2011);
+  var v2012 = new ECB(34, 13);
+  var v1321 = new ECBlocks(24, v2012);
+  var v397 = new Version(22, v1317, v1318, v1319, v1320, v1321);
+  var v1322 = new Array(6, 30, 54, 74, 102);
+  var v2013 = new ECB(4, 121);
+  var v2014 = new ECB(5, 122);
+  var v1323 = new ECBlocks(30, v2013, v2014);
+  var v2015 = new ECB(4, 47);
+  var v2016 = new ECB(14, 48);
+  var v1324 = new ECBlocks(28, v2015, v2016);
+  var v2017 = new ECB(11, 24);
+  var v2018 = new ECB(14, 25);
+  var v1325 = new ECBlocks(30, v2017, v2018);
+  var v2019 = new ECB(16, 15);
+  var v2020 = new ECB(14, 16);
   var v1326 = new ECBlocks(30, v2019, v2020);
-  var v2021 = new ECB(16, 15);
-  var v2022 = new ECB(14, 16);
-  var v1327 = new ECBlocks(30, v2021, v2022);
-  var v399 = new Version(23, v1323, v1324, v1325, v1326, v1327);
-  var v1328 = new Array(6, 28, 54, 80, 106);
-  var v2023 = new ECB(6, 117);
-  var v2024 = new ECB(4, 118);
-  var v1329 = new ECBlocks(30, v2023, v2024);
-  var v2025 = new ECB(6, 45);
-  var v2026 = new ECB(14, 46);
-  var v1330 = new ECBlocks(28, v2025, v2026);
-  var v2027 = new ECB(11, 24);
-  var v2028 = new ECB(16, 25);
+  var v398 = new Version(23, v1322, v1323, v1324, v1325, v1326);
+  var v1327 = new Array(6, 28, 54, 80, 106);
+  var v2021 = new ECB(6, 117);
+  var v2022 = new ECB(4, 118);
+  var v1328 = new ECBlocks(30, v2021, v2022);
+  var v2023 = new ECB(6, 45);
+  var v2024 = new ECB(14, 46);
+  var v1329 = new ECBlocks(28, v2023, v2024);
+  var v2025 = new ECB(11, 24);
+  var v2026 = new ECB(16, 25);
+  var v1330 = new ECBlocks(30, v2025, v2026);
+  var v2027 = new ECB(30, 16);
+  var v2028 = new ECB(2, 17);
   var v1331 = new ECBlocks(30, v2027, v2028);
-  var v2029 = new ECB(30, 16);
-  var v2030 = new ECB(2, 17);
-  var v1332 = new ECBlocks(30, v2029, v2030);
-  var v400 = new Version(24, v1328, v1329, v1330, v1331, v1332);
-  var v1333 = new Array(6, 32, 58, 84, 110);
-  var v2031 = new ECB(8, 106);
-  var v2032 = new ECB(4, 107);
-  var v1334 = new ECBlocks(26, v2031, v2032);
-  var v2033 = new ECB(8, 47);
-  var v2034 = new ECB(13, 48);
-  var v1335 = new ECBlocks(28, v2033, v2034);
-  var v2035 = new ECB(7, 24);
-  var v2036 = new ECB(22, 25);
+  var v399 = new Version(24, v1327, v1328, v1329, v1330, v1331);
+  var v1332 = new Array(6, 32, 58, 84, 110);
+  var v2029 = new ECB(8, 106);
+  var v2030 = new ECB(4, 107);
+  var v1333 = new ECBlocks(26, v2029, v2030);
+  var v2031 = new ECB(8, 47);
+  var v2032 = new ECB(13, 48);
+  var v1334 = new ECBlocks(28, v2031, v2032);
+  var v2033 = new ECB(7, 24);
+  var v2034 = new ECB(22, 25);
+  var v1335 = new ECBlocks(30, v2033, v2034);
+  var v2035 = new ECB(22, 15);
+  var v2036 = new ECB(13, 16);
   var v1336 = new ECBlocks(30, v2035, v2036);
-  var v2037 = new ECB(22, 15);
-  var v2038 = new ECB(13, 16);
-  var v1337 = new ECBlocks(30, v2037, v2038);
-  var v401 = new Version(25, v1333, v1334, v1335, v1336, v1337);
-  var v1338 = new Array(6, 30, 58, 86, 114);
-  var v2039 = new ECB(10, 114);
-  var v2040 = new ECB(2, 115);
+  var v400 = new Version(25, v1332, v1333, v1334, v1335, v1336);
+  var v1337 = new Array(6, 30, 58, 86, 114);
+  var v2037 = new ECB(10, 114);
+  var v2038 = new ECB(2, 115);
+  var v1338 = new ECBlocks(28, v2037, v2038);
+  var v2039 = new ECB(19, 46);
+  var v2040 = new ECB(4, 47);
   var v1339 = new ECBlocks(28, v2039, v2040);
-  var v2041 = new ECB(19, 46);
-  var v2042 = new ECB(4, 47);
+  var v2041 = new ECB(28, 22);
+  var v2042 = new ECB(6, 23);
   var v1340 = new ECBlocks(28, v2041, v2042);
-  var v2043 = new ECB(28, 22);
-  var v2044 = new ECB(6, 23);
-  var v1341 = new ECBlocks(28, v2043, v2044);
-  var v2045 = new ECB(33, 16);
-  var v2046 = new ECB(4, 17);
-  var v1342 = new ECBlocks(30, v2045, v2046);
-  var v402 = new Version(26, v1338, v1339, v1340, v1341, v1342);
-  var v1343 = new Array(6, 34, 62, 90, 118);
-  var v2047 = new ECB(8, 122);
-  var v2048 = new ECB(4, 123);
-  var v1344 = new ECBlocks(30, v2047, v2048);
-  var v2049 = new ECB(22, 45);
-  var v2050 = new ECB(3, 46);
-  var v1345 = new ECBlocks(28, v2049, v2050);
-  var v2051 = new ECB(8, 23);
-  var v2052 = new ECB(26, 24);
+  var v2043 = new ECB(33, 16);
+  var v2044 = new ECB(4, 17);
+  var v1341 = new ECBlocks(30, v2043, v2044);
+  var v401 = new Version(26, v1337, v1338, v1339, v1340, v1341);
+  var v1342 = new Array(6, 34, 62, 90, 118);
+  var v2045 = new ECB(8, 122);
+  var v2046 = new ECB(4, 123);
+  var v1343 = new ECBlocks(30, v2045, v2046);
+  var v2047 = new ECB(22, 45);
+  var v2048 = new ECB(3, 46);
+  var v1344 = new ECBlocks(28, v2047, v2048);
+  var v2049 = new ECB(8, 23);
+  var v2050 = new ECB(26, 24);
+  var v1345 = new ECBlocks(30, v2049, v2050);
+  var v2051 = new ECB(12, 15);
+  var v2052 = new ECB(28, 16);
   var v1346 = new ECBlocks(30, v2051, v2052);
-  var v2053 = new ECB(12, 15);
-  var v2054 = new ECB(28, 16);
-  var v1347 = new ECBlocks(30, v2053, v2054);
-  var v403 = new Version(27, v1343, v1344, v1345, v1346, v1347);
-  var v1348 = new Array(6, 26, 50, 74, 98, 122);
-  var v2055 = new ECB(3, 117);
-  var v2056 = new ECB(10, 118);
-  var v1349 = new ECBlocks(30, v2055, v2056);
-  var v2057 = new ECB(3, 45);
-  var v2058 = new ECB(23, 46);
-  var v1350 = new ECBlocks(28, v2057, v2058);
-  var v2059 = new ECB(4, 24);
-  var v2060 = new ECB(31, 25);
+  var v402 = new Version(27, v1342, v1343, v1344, v1345, v1346);
+  var v1347 = new Array(6, 26, 50, 74, 98, 122);
+  var v2053 = new ECB(3, 117);
+  var v2054 = new ECB(10, 118);
+  var v1348 = new ECBlocks(30, v2053, v2054);
+  var v2055 = new ECB(3, 45);
+  var v2056 = new ECB(23, 46);
+  var v1349 = new ECBlocks(28, v2055, v2056);
+  var v2057 = new ECB(4, 24);
+  var v2058 = new ECB(31, 25);
+  var v1350 = new ECBlocks(30, v2057, v2058);
+  var v2059 = new ECB(11, 15);
+  var v2060 = new ECB(31, 16);
   var v1351 = new ECBlocks(30, v2059, v2060);
-  var v2061 = new ECB(11, 15);
-  var v2062 = new ECB(31, 16);
-  var v1352 = new ECBlocks(30, v2061, v2062);
-  var v404 = new Version(28, v1348, v1349, v1350, v1351, v1352);
-  var v1353 = new Array(6, 30, 54, 78, 102, 126);
-  var v2063 = new ECB(7, 116);
-  var v2064 = new ECB(7, 117);
-  var v1354 = new ECBlocks(30, v2063, v2064);
-  var v2065 = new ECB(21, 45);
-  var v2066 = new ECB(7, 46);
-  var v1355 = new ECBlocks(28, v2065, v2066);
-  var v2067 = new ECB(1, 23);
-  var v2068 = new ECB(37, 24);
+  var v403 = new Version(28, v1347, v1348, v1349, v1350, v1351);
+  var v1352 = new Array(6, 30, 54, 78, 102, 126);
+  var v2061 = new ECB(7, 116);
+  var v2062 = new ECB(7, 117);
+  var v1353 = new ECBlocks(30, v2061, v2062);
+  var v2063 = new ECB(21, 45);
+  var v2064 = new ECB(7, 46);
+  var v1354 = new ECBlocks(28, v2063, v2064);
+  var v2065 = new ECB(1, 23);
+  var v2066 = new ECB(37, 24);
+  var v1355 = new ECBlocks(30, v2065, v2066);
+  var v2067 = new ECB(19, 15);
+  var v2068 = new ECB(26, 16);
   var v1356 = new ECBlocks(30, v2067, v2068);
-  var v2069 = new ECB(19, 15);
-  var v2070 = new ECB(26, 16);
-  var v1357 = new ECBlocks(30, v2069, v2070);
-  var v405 = new Version(29, v1353, v1354, v1355, v1356, v1357);
-  var v1358 = new Array(6, 26, 52, 78, 104, 130);
-  var v2071 = new ECB(5, 115);
-  var v2072 = new ECB(10, 116);
-  var v1359 = new ECBlocks(30, v2071, v2072);
-  var v2073 = new ECB(19, 47);
-  var v2074 = new ECB(10, 48);
-  var v1360 = new ECBlocks(28, v2073, v2074);
-  var v2075 = new ECB(15, 24);
-  var v2076 = new ECB(25, 25);
+  var v404 = new Version(29, v1352, v1353, v1354, v1355, v1356);
+  var v1357 = new Array(6, 26, 52, 78, 104, 130);
+  var v2069 = new ECB(5, 115);
+  var v2070 = new ECB(10, 116);
+  var v1358 = new ECBlocks(30, v2069, v2070);
+  var v2071 = new ECB(19, 47);
+  var v2072 = new ECB(10, 48);
+  var v1359 = new ECBlocks(28, v2071, v2072);
+  var v2073 = new ECB(15, 24);
+  var v2074 = new ECB(25, 25);
+  var v1360 = new ECBlocks(30, v2073, v2074);
+  var v2075 = new ECB(23, 15);
+  var v2076 = new ECB(25, 16);
   var v1361 = new ECBlocks(30, v2075, v2076);
-  var v2077 = new ECB(23, 15);
-  var v2078 = new ECB(25, 16);
-  var v1362 = new ECBlocks(30, v2077, v2078);
-  var v406 = new Version(30, v1358, v1359, v1360, v1361, v1362);
-  var v1363 = new Array(6, 30, 56, 82, 108, 134);
-  var v2079 = new ECB(13, 115);
-  var v2080 = new ECB(3, 116);
-  var v1364 = new ECBlocks(30, v2079, v2080);
-  var v2081 = new ECB(2, 46);
-  var v2082 = new ECB(29, 47);
-  var v1365 = new ECBlocks(28, v2081, v2082);
-  var v2083 = new ECB(42, 24);
-  var v2084 = new ECB(1, 25);
+  var v405 = new Version(30, v1357, v1358, v1359, v1360, v1361);
+  var v1362 = new Array(6, 30, 56, 82, 108, 134);
+  var v2077 = new ECB(13, 115);
+  var v2078 = new ECB(3, 116);
+  var v1363 = new ECBlocks(30, v2077, v2078);
+  var v2079 = new ECB(2, 46);
+  var v2080 = new ECB(29, 47);
+  var v1364 = new ECBlocks(28, v2079, v2080);
+  var v2081 = new ECB(42, 24);
+  var v2082 = new ECB(1, 25);
+  var v1365 = new ECBlocks(30, v2081, v2082);
+  var v2083 = new ECB(23, 15);
+  var v2084 = new ECB(28, 16);
   var v1366 = new ECBlocks(30, v2083, v2084);
-  var v2085 = new ECB(23, 15);
-  var v2086 = new ECB(28, 16);
-  var v1367 = new ECBlocks(30, v2085, v2086);
-  var v407 = new Version(31, v1363, v1364, v1365, v1366, v1367);
-  var v1368 = new Array(6, 34, 60, 86, 112, 138);
-  var v2087 = new ECB(17, 115);
-  var v1369 = new ECBlocks(30, v2087);
-  var v2088 = new ECB(10, 46);
-  var v2089 = new ECB(23, 47);
-  var v1370 = new ECBlocks(28, v2088, v2089);
-  var v2090 = new ECB(10, 24);
-  var v2091 = new ECB(35, 25);
+  var v406 = new Version(31, v1362, v1363, v1364, v1365, v1366);
+  var v1367 = new Array(6, 34, 60, 86, 112, 138);
+  var v2085 = new ECB(17, 115);
+  var v1368 = new ECBlocks(30, v2085);
+  var v2086 = new ECB(10, 46);
+  var v2087 = new ECB(23, 47);
+  var v1369 = new ECBlocks(28, v2086, v2087);
+  var v2088 = new ECB(10, 24);
+  var v2089 = new ECB(35, 25);
+  var v1370 = new ECBlocks(30, v2088, v2089);
+  var v2090 = new ECB(19, 15);
+  var v2091 = new ECB(35, 16);
   var v1371 = new ECBlocks(30, v2090, v2091);
-  var v2092 = new ECB(19, 15);
-  var v2093 = new ECB(35, 16);
-  var v1372 = new ECBlocks(30, v2092, v2093);
-  var v408 = new Version(32, v1368, v1369, v1370, v1371, v1372);
-  var v1373 = new Array(6, 30, 58, 86, 114, 142);
-  var v2094 = new ECB(17, 115);
-  var v2095 = new ECB(1, 116);
-  var v1374 = new ECBlocks(30, v2094, v2095);
-  var v2096 = new ECB(14, 46);
-  var v2097 = new ECB(21, 47);
-  var v1375 = new ECBlocks(28, v2096, v2097);
-  var v2098 = new ECB(29, 24);
-  var v2099 = new ECB(19, 25);
+  var v407 = new Version(32, v1367, v1368, v1369, v1370, v1371);
+  var v1372 = new Array(6, 30, 58, 86, 114, 142);
+  var v2092 = new ECB(17, 115);
+  var v2093 = new ECB(1, 116);
+  var v1373 = new ECBlocks(30, v2092, v2093);
+  var v2094 = new ECB(14, 46);
+  var v2095 = new ECB(21, 47);
+  var v1374 = new ECBlocks(28, v2094, v2095);
+  var v2096 = new ECB(29, 24);
+  var v2097 = new ECB(19, 25);
+  var v1375 = new ECBlocks(30, v2096, v2097);
+  var v2098 = new ECB(11, 15);
+  var v2099 = new ECB(46, 16);
   var v1376 = new ECBlocks(30, v2098, v2099);
-  var v2100 = new ECB(11, 15);
-  var v2101 = new ECB(46, 16);
-  var v1377 = new ECBlocks(30, v2100, v2101);
-  var v409 = new Version(33, v1373, v1374, v1375, v1376, v1377);
-  var v1378 = new Array(6, 34, 62, 90, 118, 146);
-  var v2102 = new ECB(13, 115);
-  var v2103 = new ECB(6, 116);
-  var v1379 = new ECBlocks(30, v2102, v2103);
-  var v2104 = new ECB(14, 46);
-  var v2105 = new ECB(23, 47);
-  var v1380 = new ECBlocks(28, v2104, v2105);
-  var v2106 = new ECB(44, 24);
-  var v2107 = new ECB(7, 25);
+  var v408 = new Version(33, v1372, v1373, v1374, v1375, v1376);
+  var v1377 = new Array(6, 34, 62, 90, 118, 146);
+  var v2100 = new ECB(13, 115);
+  var v2101 = new ECB(6, 116);
+  var v1378 = new ECBlocks(30, v2100, v2101);
+  var v2102 = new ECB(14, 46);
+  var v2103 = new ECB(23, 47);
+  var v1379 = new ECBlocks(28, v2102, v2103);
+  var v2104 = new ECB(44, 24);
+  var v2105 = new ECB(7, 25);
+  var v1380 = new ECBlocks(30, v2104, v2105);
+  var v2106 = new ECB(59, 16);
+  var v2107 = new ECB(1, 17);
   var v1381 = new ECBlocks(30, v2106, v2107);
-  var v2108 = new ECB(59, 16);
-  var v2109 = new ECB(1, 17);
-  var v1382 = new ECBlocks(30, v2108, v2109);
-  var v410 = new Version(34, v1378, v1379, v1380, v1381, v1382);
-  var v1383 = new Array(6, 30, 54, 78, 102, 126, 150);
-  var v2110 = new ECB(12, 121);
-  var v2111 = new ECB(7, 122);
-  var v1384 = new ECBlocks(30, v2110, v2111);
-  var v2112 = new ECB(12, 47);
-  var v2113 = new ECB(26, 48);
-  var v1385 = new ECBlocks(28, v2112, v2113);
-  var v2114 = new ECB(39, 24);
-  var v2115 = new ECB(14, 25);
+  var v409 = new Version(34, v1377, v1378, v1379, v1380, v1381);
+  var v1382 = new Array(6, 30, 54, 78, 102, 126, 150);
+  var v2108 = new ECB(12, 121);
+  var v2109 = new ECB(7, 122);
+  var v1383 = new ECBlocks(30, v2108, v2109);
+  var v2110 = new ECB(12, 47);
+  var v2111 = new ECB(26, 48);
+  var v1384 = new ECBlocks(28, v2110, v2111);
+  var v2112 = new ECB(39, 24);
+  var v2113 = new ECB(14, 25);
+  var v1385 = new ECBlocks(30, v2112, v2113);
+  var v2114 = new ECB(22, 15);
+  var v2115 = new ECB(41, 16);
   var v1386 = new ECBlocks(30, v2114, v2115);
-  var v2116 = new ECB(22, 15);
-  var v2117 = new ECB(41, 16);
-  var v1387 = new ECBlocks(30, v2116, v2117);
-  var v411 = new Version(35, v1383, v1384, v1385, v1386, v1387);
-  var v1388 = new Array(6, 24, 50, 76, 102, 128, 154);
-  var v2118 = new ECB(6, 121);
-  var v2119 = new ECB(14, 122);
-  var v1389 = new ECBlocks(30, v2118, v2119);
-  var v2120 = new ECB(6, 47);
-  var v2121 = new ECB(34, 48);
-  var v1390 = new ECBlocks(28, v2120, v2121);
-  var v2122 = new ECB(46, 24);
-  var v2123 = new ECB(10, 25);
+  var v410 = new Version(35, v1382, v1383, v1384, v1385, v1386);
+  var v1387 = new Array(6, 24, 50, 76, 102, 128, 154);
+  var v2116 = new ECB(6, 121);
+  var v2117 = new ECB(14, 122);
+  var v1388 = new ECBlocks(30, v2116, v2117);
+  var v2118 = new ECB(6, 47);
+  var v2119 = new ECB(34, 48);
+  var v1389 = new ECBlocks(28, v2118, v2119);
+  var v2120 = new ECB(46, 24);
+  var v2121 = new ECB(10, 25);
+  var v1390 = new ECBlocks(30, v2120, v2121);
+  var v2122 = new ECB(2, 15);
+  var v2123 = new ECB(64, 16);
   var v1391 = new ECBlocks(30, v2122, v2123);
-  var v2124 = new ECB(2, 15);
-  var v2125 = new ECB(64, 16);
-  var v1392 = new ECBlocks(30, v2124, v2125);
-  var v412 = new Version(36, v1388, v1389, v1390, v1391, v1392);
-  var v1393 = new Array(6, 28, 54, 80, 106, 132, 158);
-  var v2126 = new ECB(17, 122);
-  var v2127 = new ECB(4, 123);
-  var v1394 = new ECBlocks(30, v2126, v2127);
-  var v2128 = new ECB(29, 46);
-  var v2129 = new ECB(14, 47);
-  var v1395 = new ECBlocks(28, v2128, v2129);
-  var v2130 = new ECB(49, 24);
-  var v2131 = new ECB(10, 25);
+  var v411 = new Version(36, v1387, v1388, v1389, v1390, v1391);
+  var v1392 = new Array(6, 28, 54, 80, 106, 132, 158);
+  var v2124 = new ECB(17, 122);
+  var v2125 = new ECB(4, 123);
+  var v1393 = new ECBlocks(30, v2124, v2125);
+  var v2126 = new ECB(29, 46);
+  var v2127 = new ECB(14, 47);
+  var v1394 = new ECBlocks(28, v2126, v2127);
+  var v2128 = new ECB(49, 24);
+  var v2129 = new ECB(10, 25);
+  var v1395 = new ECBlocks(30, v2128, v2129);
+  var v2130 = new ECB(24, 15);
+  var v2131 = new ECB(46, 16);
   var v1396 = new ECBlocks(30, v2130, v2131);
-  var v2132 = new ECB(24, 15);
-  var v2133 = new ECB(46, 16);
-  var v1397 = new ECBlocks(30, v2132, v2133);
-  var v413 = new Version(37, v1393, v1394, v1395, v1396, v1397);
-  var v1398 = new Array(6, 32, 58, 84, 110, 136, 162);
-  var v2134 = new ECB(4, 122);
-  var v2135 = new ECB(18, 123);
-  var v1399 = new ECBlocks(30, v2134, v2135);
-  var v2136 = new ECB(13, 46);
-  var v2137 = new ECB(32, 47);
-  var v1400 = new ECBlocks(28, v2136, v2137);
-  var v2138 = new ECB(48, 24);
-  var v2139 = new ECB(14, 25);
+  var v412 = new Version(37, v1392, v1393, v1394, v1395, v1396);
+  var v1397 = new Array(6, 32, 58, 84, 110, 136, 162);
+  var v2132 = new ECB(4, 122);
+  var v2133 = new ECB(18, 123);
+  var v1398 = new ECBlocks(30, v2132, v2133);
+  var v2134 = new ECB(13, 46);
+  var v2135 = new ECB(32, 47);
+  var v1399 = new ECBlocks(28, v2134, v2135);
+  var v2136 = new ECB(48, 24);
+  var v2137 = new ECB(14, 25);
+  var v1400 = new ECBlocks(30, v2136, v2137);
+  var v2138 = new ECB(42, 15);
+  var v2139 = new ECB(32, 16);
   var v1401 = new ECBlocks(30, v2138, v2139);
-  var v2140 = new ECB(42, 15);
-  var v2141 = new ECB(32, 16);
-  var v1402 = new ECBlocks(30, v2140, v2141);
-  var v414 = new Version(38, v1398, v1399, v1400, v1401, v1402);
-  var v1403 = new Array(6, 26, 54, 82, 110, 138, 166);
-  var v2142 = new ECB(20, 117);
-  var v2143 = new ECB(4, 118);
-  var v1404 = new ECBlocks(30, v2142, v2143);
-  var v2144 = new ECB(40, 47);
-  var v2145 = new ECB(7, 48);
-  var v1405 = new ECBlocks(28, v2144, v2145);
-  var v2146 = new ECB(43, 24);
-  var v2147 = new ECB(22, 25);
+  var v413 = new Version(38, v1397, v1398, v1399, v1400, v1401);
+  var v1402 = new Array(6, 26, 54, 82, 110, 138, 166);
+  var v2140 = new ECB(20, 117);
+  var v2141 = new ECB(4, 118);
+  var v1403 = new ECBlocks(30, v2140, v2141);
+  var v2142 = new ECB(40, 47);
+  var v2143 = new ECB(7, 48);
+  var v1404 = new ECBlocks(28, v2142, v2143);
+  var v2144 = new ECB(43, 24);
+  var v2145 = new ECB(22, 25);
+  var v1405 = new ECBlocks(30, v2144, v2145);
+  var v2146 = new ECB(10, 15);
+  var v2147 = new ECB(67, 16);
   var v1406 = new ECBlocks(30, v2146, v2147);
-  var v2148 = new ECB(10, 15);
-  var v2149 = new ECB(67, 16);
-  var v1407 = new ECBlocks(30, v2148, v2149);
-  var v415 = new Version(39, v1403, v1404, v1405, v1406, v1407);
-  var v1408 = new Array(6, 30, 58, 86, 114, 142, 170);
-  var v2150 = new ECB(19, 118);
-  var v2151 = new ECB(6, 119);
-  var v1409 = new ECBlocks(30, v2150, v2151);
-  var v2152 = new ECB(18, 47);
-  var v2153 = new ECB(31, 48);
-  var v1410 = new ECBlocks(28, v2152, v2153);
-  var v2154 = new ECB(34, 24);
-  var v2155 = new ECB(34, 25);
+  var v414 = new Version(39, v1402, v1403, v1404, v1405, v1406);
+  var v1407 = new Array(6, 30, 58, 86, 114, 142, 170);
+  var v2148 = new ECB(19, 118);
+  var v2149 = new ECB(6, 119);
+  var v1408 = new ECBlocks(30, v2148, v2149);
+  var v2150 = new ECB(18, 47);
+  var v2151 = new ECB(31, 48);
+  var v1409 = new ECBlocks(28, v2150, v2151);
+  var v2152 = new ECB(34, 24);
+  var v2153 = new ECB(34, 25);
+  var v1410 = new ECBlocks(30, v2152, v2153);
+  var v2154 = new ECB(20, 15);
+  var v2155 = new ECB(61, 16);
   var v1411 = new ECBlocks(30, v2154, v2155);
-  var v2156 = new ECB(20, 15);
-  var v2157 = new ECB(61, 16);
-  var v1412 = new ECBlocks(30, v2156, v2157);
-  var v416 = new Version(40, v1408, v1409, v1410, v1411, v1412);
-  return new Array(v377, v378, v379, v380, v381, v382, v383, v384, v385, v386, v387, v388, v389, v390, v391, v392, v393, v394, v395, v396, v397, v398, v399, v400, v401, v402, v403, v404, v405, v406, v407, v408, v409, v410, v411, v412, v413, v414, v415, v416);
+  var v415 = new Version(40, v1407, v1408, v1409, v1410, v1411);
+  return new Array(v376, v377, v378, v379, v380, v381, v382, v383, v384, v385, v386, v387, v388, v389, v390, v391, v392, v393, v394, v395, v396, v397, v398, v399, v400, v401, v402, v403, v404, v405, v406, v407, v408, v409, v410, v411, v412, v413, v414, v415);
 }
 function PerspectiveTransform(a11, a21, a31, a12, a22, a32, a13$$1, a23$$1, a33) {
   function v15(other$$4) {
-    var v2491 = this.a11;
-    var v2492 = other$$4.a11;
-    var v2158 = v2491 * v2492;
-    var v2493 = this.a21;
-    var v2494 = other$$4.a12;
-    var v2159 = v2493 * v2494;
-    var v1413 = v2158 + v2159;
-    var v2160 = this.a31;
-    var v2161 = other$$4.a13;
-    var v1414 = v2160 * v2161;
-    var v417 = v1413 + v1414;
-    var v2495 = this.a11;
-    var v2496 = other$$4.a21;
-    var v2162 = v2495 * v2496;
-    var v2497 = this.a21;
-    var v2498 = other$$4.a22;
-    var v2163 = v2497 * v2498;
-    var v1415 = v2162 + v2163;
-    var v2164 = this.a31;
-    var v2165 = other$$4.a23;
-    var v1416 = v2164 * v2165;
-    var v418 = v1415 + v1416;
-    var v2499 = this.a11;
-    var v2500 = other$$4.a31;
-    var v2166 = v2499 * v2500;
-    var v2501 = this.a21;
-    var v2502 = other$$4.a32;
-    var v2167 = v2501 * v2502;
-    var v1417 = v2166 + v2167;
-    var v2168 = this.a31;
-    var v2169 = other$$4.a33;
-    var v1418 = v2168 * v2169;
-    var v419 = v1417 + v1418;
-    var v2503 = this.a12;
-    var v2504 = other$$4.a11;
-    var v2170 = v2503 * v2504;
-    var v2505 = this.a22;
-    var v2506 = other$$4.a12;
-    var v2171 = v2505 * v2506;
-    var v1419 = v2170 + v2171;
-    var v2172 = this.a32;
-    var v2173 = other$$4.a13;
-    var v1420 = v2172 * v2173;
-    var v420 = v1419 + v1420;
-    var v2507 = this.a12;
-    var v2508 = other$$4.a21;
-    var v2174 = v2507 * v2508;
-    var v2509 = this.a22;
-    var v2510 = other$$4.a22;
-    var v2175 = v2509 * v2510;
-    var v1421 = v2174 + v2175;
-    var v2176 = this.a32;
-    var v2177 = other$$4.a23;
-    var v1422 = v2176 * v2177;
-    var v421 = v1421 + v1422;
-    var v2511 = this.a12;
-    var v2512 = other$$4.a31;
-    var v2178 = v2511 * v2512;
-    var v2513 = this.a22;
-    var v2514 = other$$4.a32;
-    var v2179 = v2513 * v2514;
-    var v1423 = v2178 + v2179;
-    var v2180 = this.a32;
-    var v2181 = other$$4.a33;
-    var v1424 = v2180 * v2181;
-    var v422 = v1423 + v1424;
-    var v2515 = this.a13;
-    var v2516 = other$$4.a11;
-    var v2182 = v2515 * v2516;
-    var v2517 = this.a23;
-    var v2518 = other$$4.a12;
-    var v2183 = v2517 * v2518;
-    var v1425 = v2182 + v2183;
-    var v2184 = this.a33;
-    var v2185 = other$$4.a13;
-    var v1426 = v2184 * v2185;
-    var v423 = v1425 + v1426;
-    var v2519 = this.a13;
-    var v2520 = other$$4.a21;
-    var v2186 = v2519 * v2520;
-    var v2521 = this.a23;
-    var v2522 = other$$4.a22;
-    var v2187 = v2521 * v2522;
-    var v1427 = v2186 + v2187;
-    var v2188 = this.a33;
-    var v2189 = other$$4.a23;
-    var v1428 = v2188 * v2189;
-    var v424 = v1427 + v1428;
-    var v2523 = this.a13;
-    var v2524 = other$$4.a31;
-    var v2190 = v2523 * v2524;
-    var v2525 = this.a23;
-    var v2526 = other$$4.a32;
-    var v2191 = v2525 * v2526;
-    var v1429 = v2190 + v2191;
-    var v2192 = this.a33;
-    var v2193 = other$$4.a33;
-    var v1430 = v2192 * v2193;
-    var v425 = v1429 + v1430;
-    return new PerspectiveTransform(v417, v418, v419, v420, v421, v422, v423, v424, v425);
+    var v2489 = this.a11;
+    var v2490 = other$$4.a11;
+    var v2156 = v2489 * v2490;
+    var v2491 = this.a21;
+    var v2492 = other$$4.a12;
+    var v2157 = v2491 * v2492;
+    var v1412 = v2156 + v2157;
+    var v2158 = this.a31;
+    var v2159 = other$$4.a13;
+    var v1413 = v2158 * v2159;
+    var v416 = v1412 + v1413;
+    var v2493 = this.a11;
+    var v2494 = other$$4.a21;
+    var v2160 = v2493 * v2494;
+    var v2495 = this.a21;
+    var v2496 = other$$4.a22;
+    var v2161 = v2495 * v2496;
+    var v1414 = v2160 + v2161;
+    var v2162 = this.a31;
+    var v2163 = other$$4.a23;
+    var v1415 = v2162 * v2163;
+    var v417 = v1414 + v1415;
+    var v2497 = this.a11;
+    var v2498 = other$$4.a31;
+    var v2164 = v2497 * v2498;
+    var v2499 = this.a21;
+    var v2500 = other$$4.a32;
+    var v2165 = v2499 * v2500;
+    var v1416 = v2164 + v2165;
+    var v2166 = this.a31;
+    var v2167 = other$$4.a33;
+    var v1417 = v2166 * v2167;
+    var v418 = v1416 + v1417;
+    var v2501 = this.a12;
+    var v2502 = other$$4.a11;
+    var v2168 = v2501 * v2502;
+    var v2503 = this.a22;
+    var v2504 = other$$4.a12;
+    var v2169 = v2503 * v2504;
+    var v1418 = v2168 + v2169;
+    var v2170 = this.a32;
+    var v2171 = other$$4.a13;
+    var v1419 = v2170 * v2171;
+    var v419 = v1418 + v1419;
+    var v2505 = this.a12;
+    var v2506 = other$$4.a21;
+    var v2172 = v2505 * v2506;
+    var v2507 = this.a22;
+    var v2508 = other$$4.a22;
+    var v2173 = v2507 * v2508;
+    var v1420 = v2172 + v2173;
+    var v2174 = this.a32;
+    var v2175 = other$$4.a23;
+    var v1421 = v2174 * v2175;
+    var v420 = v1420 + v1421;
+    var v2509 = this.a12;
+    var v2510 = other$$4.a31;
+    var v2176 = v2509 * v2510;
+    var v2511 = this.a22;
+    var v2512 = other$$4.a32;
+    var v2177 = v2511 * v2512;
+    var v1422 = v2176 + v2177;
+    var v2178 = this.a32;
+    var v2179 = other$$4.a33;
+    var v1423 = v2178 * v2179;
+    var v421 = v1422 + v1423;
+    var v2513 = this.a13;
+    var v2514 = other$$4.a11;
+    var v2180 = v2513 * v2514;
+    var v2515 = this.a23;
+    var v2516 = other$$4.a12;
+    var v2181 = v2515 * v2516;
+    var v1424 = v2180 + v2181;
+    var v2182 = this.a33;
+    var v2183 = other$$4.a13;
+    var v1425 = v2182 * v2183;
+    var v422 = v1424 + v1425;
+    var v2517 = this.a13;
+    var v2518 = other$$4.a21;
+    var v2184 = v2517 * v2518;
+    var v2519 = this.a23;
+    var v2520 = other$$4.a22;
+    var v2185 = v2519 * v2520;
+    var v1426 = v2184 + v2185;
+    var v2186 = this.a33;
+    var v2187 = other$$4.a23;
+    var v1427 = v2186 * v2187;
+    var v423 = v1426 + v1427;
+    var v2521 = this.a13;
+    var v2522 = other$$4.a31;
+    var v2188 = v2521 * v2522;
+    var v2523 = this.a23;
+    var v2524 = other$$4.a32;
+    var v2189 = v2523 * v2524;
+    var v1428 = v2188 + v2189;
+    var v2190 = this.a33;
+    var v2191 = other$$4.a33;
+    var v1429 = v2190 * v2191;
+    var v424 = v1428 + v1429;
+    return new PerspectiveTransform(v416, v417, v418, v419, v420, v421, v422, v423, v424);
   }
   function v14() {
-    var v2194 = this.a22;
-    var v2195 = this.a33;
+    var v2192 = this.a22;
+    var v2193 = this.a33;
+    var v1430 = v2192 * v2193;
+    var v2194 = this.a23;
+    var v2195 = this.a32;
     var v1431 = v2194 * v2195;
+    var v425 = v1430 - v1431;
     var v2196 = this.a23;
-    var v2197 = this.a32;
+    var v2197 = this.a31;
     var v1432 = v2196 * v2197;
-    var v426 = v1431 - v1432;
-    var v2198 = this.a23;
-    var v2199 = this.a31;
+    var v2198 = this.a21;
+    var v2199 = this.a33;
     var v1433 = v2198 * v2199;
+    var v426 = v1432 - v1433;
     var v2200 = this.a21;
-    var v2201 = this.a33;
+    var v2201 = this.a32;
     var v1434 = v2200 * v2201;
-    var v427 = v1433 - v1434;
-    var v2202 = this.a21;
-    var v2203 = this.a32;
+    var v2202 = this.a22;
+    var v2203 = this.a31;
     var v1435 = v2202 * v2203;
-    var v2204 = this.a22;
-    var v2205 = this.a31;
+    var v427 = v1434 - v1435;
+    var v2204 = this.a13;
+    var v2205 = this.a32;
     var v1436 = v2204 * v2205;
-    var v428 = v1435 - v1436;
-    var v2206 = this.a13;
-    var v2207 = this.a32;
+    var v2206 = this.a12;
+    var v2207 = this.a33;
     var v1437 = v2206 * v2207;
-    var v2208 = this.a12;
+    var v428 = v1436 - v1437;
+    var v2208 = this.a11;
     var v2209 = this.a33;
     var v1438 = v2208 * v2209;
-    var v429 = v1437 - v1438;
-    var v2210 = this.a11;
-    var v2211 = this.a33;
+    var v2210 = this.a13;
+    var v2211 = this.a31;
     var v1439 = v2210 * v2211;
-    var v2212 = this.a13;
+    var v429 = v1438 - v1439;
+    var v2212 = this.a12;
     var v2213 = this.a31;
     var v1440 = v2212 * v2213;
-    var v430 = v1439 - v1440;
-    var v2214 = this.a12;
-    var v2215 = this.a31;
+    var v2214 = this.a11;
+    var v2215 = this.a32;
     var v1441 = v2214 * v2215;
-    var v2216 = this.a11;
-    var v2217 = this.a32;
+    var v430 = v1440 - v1441;
+    var v2216 = this.a12;
+    var v2217 = this.a23;
     var v1442 = v2216 * v2217;
-    var v431 = v1441 - v1442;
-    var v2218 = this.a12;
-    var v2219 = this.a23;
+    var v2218 = this.a13;
+    var v2219 = this.a22;
     var v1443 = v2218 * v2219;
+    var v431 = v1442 - v1443;
     var v2220 = this.a13;
-    var v2221 = this.a22;
+    var v2221 = this.a21;
     var v1444 = v2220 * v2221;
-    var v432 = v1443 - v1444;
-    var v2222 = this.a13;
-    var v2223 = this.a21;
+    var v2222 = this.a11;
+    var v2223 = this.a23;
     var v1445 = v2222 * v2223;
+    var v432 = v1444 - v1445;
     var v2224 = this.a11;
-    var v2225 = this.a23;
+    var v2225 = this.a22;
     var v1446 = v2224 * v2225;
-    var v433 = v1445 - v1446;
-    var v2226 = this.a11;
-    var v2227 = this.a22;
+    var v2226 = this.a12;
+    var v2227 = this.a21;
     var v1447 = v2226 * v2227;
-    var v2228 = this.a12;
-    var v2229 = this.a21;
-    var v1448 = v2228 * v2229;
-    var v434 = v1447 - v1448;
-    return new PerspectiveTransform(v426, v427, v428, v429, v430, v431, v432, v433, v434);
+    var v433 = v1446 - v1447;
+    return new PerspectiveTransform(v425, v426, v427, v428, v429, v430, v431, v432, v433);
   }
   function v13(xValues, yValues) {
     var n$$1 = xValues.length;
     var i$$6 = 0;
-    var v439 = i$$6 < n$$1;
-    for (;v439;) {
+    var v438 = i$$6 < n$$1;
+    for (;v438;) {
       var x$$51 = xValues[i$$6];
       var y$$34 = yValues[i$$6];
-      var v2230 = this.a13;
-      var v1449 = v2230 * x$$51;
-      var v2231 = this.a23;
-      var v1450 = v2231 * y$$34;
-      var v435 = v1449 + v1450;
-      var v436 = this.a33;
-      var denominator$$2 = v435 + v436;
-      var v2527 = this.a11;
+      var v2228 = this.a13;
+      var v1448 = v2228 * x$$51;
+      var v2229 = this.a23;
+      var v1449 = v2229 * y$$34;
+      var v434 = v1448 + v1449;
+      var v435 = this.a33;
+      var denominator$$2 = v434 + v435;
+      var v2525 = this.a11;
+      var v2230 = v2525 * x$$51;
+      var v2526 = this.a21;
+      var v2231 = v2526 * y$$34;
+      var v1450 = v2230 + v2231;
+      var v1451 = this.a31;
+      var v436 = v1450 + v1451;
+      xValues[i$$6] = v436 / denominator$$2;
+      var v2527 = this.a12;
       var v2232 = v2527 * x$$51;
-      var v2528 = this.a21;
+      var v2528 = this.a22;
       var v2233 = v2528 * y$$34;
-      var v1451 = v2232 + v2233;
-      var v1452 = this.a31;
-      var v437 = v1451 + v1452;
-      xValues[i$$6] = v437 / denominator$$2;
-      var v2529 = this.a12;
-      var v2234 = v2529 * x$$51;
-      var v2530 = this.a22;
-      var v2235 = v2530 * y$$34;
-      var v1453 = v2234 + v2235;
-      var v1454 = this.a32;
-      var v438 = v1453 + v1454;
-      yValues[i$$6] = v438 / denominator$$2;
+      var v1452 = v2232 + v2233;
+      var v1453 = this.a32;
+      var v437 = v1452 + v1453;
+      yValues[i$$6] = v437 / denominator$$2;
       i$$6++;
-      v439 = i$$6 < n$$1;
+      v438 = i$$6 < n$$1;
     }
     return;
   }
@@ -2145,28 +2149,28 @@ function PerspectiveTransform(a11, a21, a31, a12, a22, a32, a13$$1, a23$$1, a33)
     var a32$$1 = this.a32;
     var a33$$1 = this.a33;
     var i$$5 = 0;
-    var v444 = i$$5 < max$$2;
-    for (;v444;) {
+    var v443 = i$$5 < max$$2;
+    for (;v443;) {
       var x$$50 = points$$2[i$$5];
-      var v440 = i$$5 + 1;
-      var y$$33 = points$$2[v440];
-      var v1455 = a13$$2 * x$$50;
-      var v1456 = a23$$2 * y$$33;
-      var v441 = v1455 + v1456;
-      var denominator$$1 = v441 + a33$$1;
-      var v2236 = a11$$1 * x$$50;
-      var v2237 = a21$$1 * y$$33;
-      var v1457 = v2236 + v2237;
-      var v442 = v1457 + a31$$1;
-      points$$2[i$$5] = v442 / denominator$$1;
-      var v443 = i$$5 + 1;
-      var v2531 = a12$$1 * x$$50;
-      var v2532 = a22$$1 * y$$33;
-      var v2238 = v2531 + v2532;
-      var v1458 = v2238 + a32$$1;
-      points$$2[v443] = v1458 / denominator$$1;
+      var v439 = i$$5 + 1;
+      var y$$33 = points$$2[v439];
+      var v1454 = a13$$2 * x$$50;
+      var v1455 = a23$$2 * y$$33;
+      var v440 = v1454 + v1455;
+      var denominator$$1 = v440 + a33$$1;
+      var v2234 = a11$$1 * x$$50;
+      var v2235 = a21$$1 * y$$33;
+      var v1456 = v2234 + v2235;
+      var v441 = v1456 + a31$$1;
+      points$$2[i$$5] = v441 / denominator$$1;
+      var v442 = i$$5 + 1;
+      var v2529 = a12$$1 * x$$50;
+      var v2530 = a22$$1 * y$$33;
+      var v2236 = v2529 + v2530;
+      var v1457 = v2236 + a32$$1;
+      points$$2[v442] = v1457 / denominator$$1;
       i$$5 = i$$5 + 2;
-      v444 = i$$5 < max$$2;
+      v443 = i$$5 < max$$2;
     }
     return;
   }
@@ -2192,9 +2196,9 @@ function DetectorResult(bits$$1, points$$3) {
 }
 function Detector(image$$5) {
   function v26() {
-    var v445 = new FinderPatternFinder;
-    var v446 = this.image;
-    var info$$1 = v445.findFinderPattern(v446);
+    var v444 = new FinderPatternFinder;
+    var v445 = this.image;
+    var info$$1 = v444.findFinderPattern(v445);
     return this.processFinderPatternInfo(info$$1);
   }
   function v25(info) {
@@ -2202,56 +2206,56 @@ function Detector(image$$5) {
     var topRight$$3 = info.TopRight;
     var bottomLeft$$3 = info.BottomLeft;
     var moduleSize$$1 = this.calculateModuleSize(topLeft$$3, topRight$$3, bottomLeft$$3);
-    var v447 = moduleSize$$1 < 1;
-    if (v447) {
+    var v446 = moduleSize$$1 < 1;
+    if (v446) {
       throw "Error";
     }
     var dimension$$7 = this.computeDimension(topLeft$$3, topRight$$3, bottomLeft$$3, moduleSize$$1);
     var provisionalVersion = Version.getProvisionalVersionForDimension(dimension$$7);
-    var v448 = provisionalVersion.DimensionForVersion;
-    var modulesBetweenFPCenters = v448 - 7;
+    var v447 = provisionalVersion.DimensionForVersion;
+    var modulesBetweenFPCenters = v447 - 7;
     var alignmentPattern$$1 = null;
-    var v2239 = provisionalVersion.AlignmentPatternCenters;
-    var v1459 = v2239.length;
-    var v457 = v1459 > 0;
-    if (v457) {
-      var v1460 = topRight$$3.X;
-      var v1461 = topLeft$$3.X;
-      var v449 = v1460 - v1461;
-      var v450 = bottomLeft$$3.X;
-      var bottomRightX$$1 = v449 + v450;
-      var v1462 = topRight$$3.Y;
-      var v1463 = topLeft$$3.Y;
-      var v451 = v1462 - v1463;
-      var v452 = bottomLeft$$3.Y;
-      var bottomRightY$$1 = v451 + v452;
-      var v453 = 3 / modulesBetweenFPCenters;
-      var correctionToTopLeft = 1 - v453;
-      var v1464 = topLeft$$3.X;
-      var v2533 = topLeft$$3.X;
-      var v2240 = bottomRightX$$1 - v2533;
-      var v1465 = correctionToTopLeft * v2240;
-      var v454 = v1464 + v1465;
-      var estAlignmentX$$1 = Math.floor(v454);
-      var v1466 = topLeft$$3.Y;
-      var v2534 = topLeft$$3.Y;
-      var v2241 = bottomRightY$$1 - v2534;
-      var v1467 = correctionToTopLeft * v2241;
-      var v455 = v1466 + v1467;
-      var estAlignmentY$$1 = Math.floor(v455);
+    var v2237 = provisionalVersion.AlignmentPatternCenters;
+    var v1458 = v2237.length;
+    var v456 = v1458 > 0;
+    if (v456) {
+      var v1459 = topRight$$3.X;
+      var v1460 = topLeft$$3.X;
+      var v448 = v1459 - v1460;
+      var v449 = bottomLeft$$3.X;
+      var bottomRightX$$1 = v448 + v449;
+      var v1461 = topRight$$3.Y;
+      var v1462 = topLeft$$3.Y;
+      var v450 = v1461 - v1462;
+      var v451 = bottomLeft$$3.Y;
+      var bottomRightY$$1 = v450 + v451;
+      var v452 = 3 / modulesBetweenFPCenters;
+      var correctionToTopLeft = 1 - v452;
+      var v1463 = topLeft$$3.X;
+      var v2531 = topLeft$$3.X;
+      var v2238 = bottomRightX$$1 - v2531;
+      var v1464 = correctionToTopLeft * v2238;
+      var v453 = v1463 + v1464;
+      var estAlignmentX$$1 = Math.floor(v453);
+      var v1465 = topLeft$$3.Y;
+      var v2532 = topLeft$$3.Y;
+      var v2239 = bottomRightY$$1 - v2532;
+      var v1466 = correctionToTopLeft * v2239;
+      var v454 = v1465 + v1466;
+      var estAlignmentY$$1 = Math.floor(v454);
       var i$$7 = 4;
-      var v456 = i$$7 <= 16;
-      for (;v456;) {
+      var v455 = i$$7 <= 16;
+      for (;v455;) {
         alignmentPattern$$1 = this.findAlignmentInRegion(moduleSize$$1, estAlignmentX$$1, estAlignmentY$$1, i$$7);
         break;
       }
     }
     var transform$$4 = this.createTransform(topLeft$$3, topRight$$3, bottomLeft$$3, alignmentPattern$$1, dimension$$7);
-    var v458 = this.image;
-    var bits$$2 = this.sampleGrid(v458, transform$$4, dimension$$7);
+    var v457 = this.image;
+    var bits$$2 = this.sampleGrid(v457, transform$$4, dimension$$7);
     var points$$4;
-    var v459 = alignmentPattern$$1 == null;
-    if (v459) {
+    var v458 = alignmentPattern$$1 == null;
+    if (v458) {
       points$$4 = new Array(bottomLeft$$3, topLeft$$3, topRight$$3);
     } else {
       points$$4 = new Array(bottomLeft$$3, topLeft$$3, topRight$$3, alignmentPattern$$1);
@@ -2268,73 +2272,73 @@ function Detector(image$$5) {
     var bottomRightY;
     var sourceBottomRightX;
     var sourceBottomRightY;
-    var v464 = alignmentPattern != null;
-    if (v464) {
+    var v463 = alignmentPattern != null;
+    if (v463) {
       bottomRightX = alignmentPattern.X;
       bottomRightY = alignmentPattern.Y;
       sourceBottomRightX = sourceBottomRightY = dimMinusThree - 3;
     } else {
-      var v1468 = topRight$$2.X;
-      var v1469 = topLeft$$2.X;
-      var v460 = v1468 - v1469;
-      var v461 = bottomLeft$$2.X;
-      bottomRightX = v460 + v461;
-      var v1470 = topRight$$2.Y;
-      var v1471 = topLeft$$2.Y;
-      var v462 = v1470 - v1471;
-      var v463 = bottomLeft$$2.Y;
-      bottomRightY = v462 + v463;
+      var v1467 = topRight$$2.X;
+      var v1468 = topLeft$$2.X;
+      var v459 = v1467 - v1468;
+      var v460 = bottomLeft$$2.X;
+      bottomRightX = v459 + v460;
+      var v1469 = topRight$$2.Y;
+      var v1470 = topLeft$$2.Y;
+      var v461 = v1469 - v1470;
+      var v462 = bottomLeft$$2.Y;
+      bottomRightY = v461 + v462;
       sourceBottomRightX = sourceBottomRightY = dimMinusThree;
     }
-    var v465 = topLeft$$2.X;
-    var v466 = topLeft$$2.Y;
-    var v467 = topRight$$2.X;
-    var v468 = topRight$$2.Y;
-    var v469 = bottomLeft$$2.X;
-    var v470 = bottomLeft$$2.Y;
-    var transform$$2 = PerspectiveTransform.quadrilateralToQuadrilateral(3.5, 3.5, dimMinusThree, 3.5, sourceBottomRightX, sourceBottomRightY, 3.5, dimMinusThree, v465, v466, v467, v468, bottomRightX, bottomRightY, v469, v470);
+    var v464 = topLeft$$2.X;
+    var v465 = topLeft$$2.Y;
+    var v466 = topRight$$2.X;
+    var v467 = topRight$$2.Y;
+    var v468 = bottomLeft$$2.X;
+    var v469 = bottomLeft$$2.Y;
+    var transform$$2 = PerspectiveTransform.quadrilateralToQuadrilateral(3.5, 3.5, dimMinusThree, 3.5, sourceBottomRightX, sourceBottomRightY, 3.5, dimMinusThree, v464, v465, v466, v467, bottomRightX, bottomRightY, v468, v469);
     return transform$$2;
   }
   function v22(overallEstModuleSize, estAlignmentX, estAlignmentY, allowanceFactor) {
-    var v471 = allowanceFactor * overallEstModuleSize;
-    var allowance = Math.floor(v471);
-    var v472 = estAlignmentX - allowance;
-    var alignmentAreaLeftX = Math.max(0, v472);
-    var v1472 = qrcode.width;
-    var v473 = v1472 - 1;
-    var v474 = estAlignmentX + allowance;
-    var alignmentAreaRightX = Math.min(v473, v474);
-    var v1473 = alignmentAreaRightX - alignmentAreaLeftX;
-    var v1474 = overallEstModuleSize * 3;
-    var v475 = v1473 < v1474;
-    if (v475) {
+    var v470 = allowanceFactor * overallEstModuleSize;
+    var allowance = Math.floor(v470);
+    var v471 = estAlignmentX - allowance;
+    var alignmentAreaLeftX = Math.max(0, v471);
+    var v1471 = qrcode.width;
+    var v472 = v1471 - 1;
+    var v473 = estAlignmentX + allowance;
+    var alignmentAreaRightX = Math.min(v472, v473);
+    var v1472 = alignmentAreaRightX - alignmentAreaLeftX;
+    var v1473 = overallEstModuleSize * 3;
+    var v474 = v1472 < v1473;
+    if (v474) {
       throw "Error";
     }
-    var v476 = estAlignmentY - allowance;
-    var alignmentAreaTopY = Math.max(0, v476);
-    var v1475 = qrcode.height;
-    var v477 = v1475 - 1;
-    var v478 = estAlignmentY + allowance;
-    var alignmentAreaBottomY = Math.min(v477, v478);
-    var v479 = this.image;
-    var v480 = alignmentAreaRightX - alignmentAreaLeftX;
-    var v481 = alignmentAreaBottomY - alignmentAreaTopY;
-    var v482 = this.resultPointCallback;
-    var alignmentFinder = new AlignmentPatternFinder(v479, alignmentAreaLeftX, alignmentAreaTopY, v480, v481, overallEstModuleSize, v482);
+    var v475 = estAlignmentY - allowance;
+    var alignmentAreaTopY = Math.max(0, v475);
+    var v1474 = qrcode.height;
+    var v476 = v1474 - 1;
+    var v477 = estAlignmentY + allowance;
+    var alignmentAreaBottomY = Math.min(v476, v477);
+    var v478 = this.image;
+    var v479 = alignmentAreaRightX - alignmentAreaLeftX;
+    var v480 = alignmentAreaBottomY - alignmentAreaTopY;
+    var v481 = this.resultPointCallback;
+    var alignmentFinder = new AlignmentPatternFinder(v478, alignmentAreaLeftX, alignmentAreaTopY, v479, v480, overallEstModuleSize, v481);
     return alignmentFinder.find();
   }
   function v21(topLeft$$1, topRight$$1, bottomLeft$$1, moduleSize) {
-    var v1476 = this.distance(topLeft$$1, topRight$$1);
+    var v1475 = this.distance(topLeft$$1, topRight$$1);
+    var v482 = v1475 / moduleSize;
+    var tltrCentersDimension = Math.round(v482);
+    var v1476 = this.distance(topLeft$$1, bottomLeft$$1);
     var v483 = v1476 / moduleSize;
-    var tltrCentersDimension = Math.round(v483);
-    var v1477 = this.distance(topLeft$$1, bottomLeft$$1);
-    var v484 = v1477 / moduleSize;
-    var tlblCentersDimension = Math.round(v484);
-    var v1478 = tltrCentersDimension + tlblCentersDimension;
-    var v485 = v1478 >> 1;
-    var dimension$$4 = v485 + 7;
-    var v486 = dimension$$4 & 3;
-    switch(v486) {
+    var tlblCentersDimension = Math.round(v483);
+    var v1477 = tltrCentersDimension + tlblCentersDimension;
+    var v484 = v1477 >> 1;
+    var dimension$$4 = v484 + 7;
+    var v485 = dimension$$4 & 3;
+    switch(v485) {
       case 0:
         dimension$$4++;
         break;
@@ -2347,113 +2351,113 @@ function Detector(image$$5) {
     return dimension$$4;
   }
   function v20(pattern1, pattern2) {
-    var v487 = pattern1.X;
-    var v488 = pattern2.X;
-    xDiff = v487 - v488;
-    var v489 = pattern1.Y;
-    var v490 = pattern2.Y;
-    yDiff = v489 - v490;
-    var v1479 = xDiff * xDiff;
-    var v1480 = yDiff * yDiff;
-    var v491 = v1479 + v1480;
-    return Math.sqrt(v491);
+    var v486 = pattern1.X;
+    var v487 = pattern2.X;
+    xDiff = v486 - v487;
+    var v488 = pattern1.Y;
+    var v489 = pattern2.Y;
+    yDiff = v488 - v489;
+    var v1478 = xDiff * xDiff;
+    var v1479 = yDiff * yDiff;
+    var v490 = v1478 + v1479;
+    return Math.sqrt(v490);
   }
   function v19(topLeft, topRight, bottomLeft) {
-    var v1481 = this.calculateModuleSizeOneWay(topLeft, topRight);
-    var v1482 = this.calculateModuleSizeOneWay(topLeft, bottomLeft);
-    var v492 = v1481 + v1482;
-    return v492 / 2;
+    var v1480 = this.calculateModuleSizeOneWay(topLeft, topRight);
+    var v1481 = this.calculateModuleSizeOneWay(topLeft, bottomLeft);
+    var v491 = v1480 + v1481;
+    return v491 / 2;
   }
   function v18(pattern$$1, otherPattern) {
-    var v1483 = pattern$$1.X;
+    var v1482 = pattern$$1.X;
+    var v492 = Math.floor(v1482);
+    var v1483 = pattern$$1.Y;
     var v493 = Math.floor(v1483);
-    var v1484 = pattern$$1.Y;
+    var v1484 = otherPattern.X;
     var v494 = Math.floor(v1484);
-    var v1485 = otherPattern.X;
+    var v1485 = otherPattern.Y;
     var v495 = Math.floor(v1485);
-    var v1486 = otherPattern.Y;
+    var moduleSizeEst1 = this.sizeOfBlackWhiteBlackRunBothWays(v492, v493, v494, v495);
+    var v1486 = otherPattern.X;
     var v496 = Math.floor(v1486);
-    var moduleSizeEst1 = this.sizeOfBlackWhiteBlackRunBothWays(v493, v494, v495, v496);
-    var v1487 = otherPattern.X;
+    var v1487 = otherPattern.Y;
     var v497 = Math.floor(v1487);
-    var v1488 = otherPattern.Y;
+    var v1488 = pattern$$1.X;
     var v498 = Math.floor(v1488);
-    var v1489 = pattern$$1.X;
+    var v1489 = pattern$$1.Y;
     var v499 = Math.floor(v1489);
-    var v1490 = pattern$$1.Y;
-    var v500 = Math.floor(v1490);
-    var moduleSizeEst2 = this.sizeOfBlackWhiteBlackRunBothWays(v497, v498, v499, v500);
-    var v501 = isNaN(moduleSizeEst1);
-    if (v501) {
+    var moduleSizeEst2 = this.sizeOfBlackWhiteBlackRunBothWays(v496, v497, v498, v499);
+    var v500 = isNaN(moduleSizeEst1);
+    if (v500) {
       return moduleSizeEst2 / 7;
     }
-    var v502 = isNaN(moduleSizeEst2);
-    if (v502) {
+    var v501 = isNaN(moduleSizeEst2);
+    if (v501) {
       return moduleSizeEst1 / 7;
     }
-    var v503 = moduleSizeEst1 + moduleSizeEst2;
-    return v503 / 14;
+    var v502 = moduleSizeEst1 + moduleSizeEst2;
+    return v502 / 14;
   }
   function v17(fromX$$1, fromY$$1, toX$$1, toY$$1) {
     var result = this.sizeOfBlackWhiteBlackRun(fromX$$1, fromY$$1, toX$$1, toY$$1);
     var scale = 1;
-    var v504 = toX$$1 - fromX$$1;
-    var otherToX = fromX$$1 - v504;
-    var v510 = otherToX < 0;
-    if (v510) {
-      var v505 = fromX$$1 - otherToX;
-      scale = fromX$$1 / v505;
+    var v503 = toX$$1 - fromX$$1;
+    var otherToX = fromX$$1 - v503;
+    var v509 = otherToX < 0;
+    if (v509) {
+      var v504 = fromX$$1 - otherToX;
+      scale = fromX$$1 / v504;
       otherToX = 0;
     } else {
-      var v1491 = qrcode.width;
-      var v509 = otherToX >= v1491;
-      if (v509) {
-        var v2242 = qrcode.width;
-        var v1492 = v2242 - 1;
-        var v506 = v1492 - fromX$$1;
-        var v507 = otherToX - fromX$$1;
-        scale = v506 / v507;
-        var v508 = qrcode.width;
-        otherToX = v508 - 1;
+      var v1490 = qrcode.width;
+      var v508 = otherToX >= v1490;
+      if (v508) {
+        var v2240 = qrcode.width;
+        var v1491 = v2240 - 1;
+        var v505 = v1491 - fromX$$1;
+        var v506 = otherToX - fromX$$1;
+        scale = v505 / v506;
+        var v507 = qrcode.width;
+        otherToX = v507 - 1;
       }
     }
-    var v2243 = toY$$1 - fromY$$1;
-    var v1493 = v2243 * scale;
-    var v511 = fromY$$1 - v1493;
-    var otherToY = Math.floor(v511);
+    var v2241 = toY$$1 - fromY$$1;
+    var v1492 = v2241 * scale;
+    var v510 = fromY$$1 - v1492;
+    var otherToY = Math.floor(v510);
     scale = 1;
-    var v517 = otherToY < 0;
-    if (v517) {
-      var v512 = fromY$$1 - otherToY;
-      scale = fromY$$1 / v512;
+    var v516 = otherToY < 0;
+    if (v516) {
+      var v511 = fromY$$1 - otherToY;
+      scale = fromY$$1 / v511;
       otherToY = 0;
     } else {
-      var v1494 = qrcode.height;
-      var v516 = otherToY >= v1494;
-      if (v516) {
-        var v2244 = qrcode.height;
-        var v1495 = v2244 - 1;
-        var v513 = v1495 - fromY$$1;
-        var v514 = otherToY - fromY$$1;
-        scale = v513 / v514;
-        var v515 = qrcode.height;
-        otherToY = v515 - 1;
+      var v1493 = qrcode.height;
+      var v515 = otherToY >= v1493;
+      if (v515) {
+        var v2242 = qrcode.height;
+        var v1494 = v2242 - 1;
+        var v512 = v1494 - fromY$$1;
+        var v513 = otherToY - fromY$$1;
+        scale = v512 / v513;
+        var v514 = qrcode.height;
+        otherToY = v514 - 1;
       }
     }
-    var v2245 = otherToX - fromX$$1;
-    var v1496 = v2245 * scale;
-    var v518 = fromX$$1 + v1496;
-    otherToX = Math.floor(v518);
-    var v1497 = this.sizeOfBlackWhiteBlackRun(fromX$$1, fromY$$1, otherToX, otherToY);
-    result = result + v1497;
+    var v2243 = otherToX - fromX$$1;
+    var v1495 = v2243 * scale;
+    var v517 = fromX$$1 + v1495;
+    otherToX = Math.floor(v517);
+    var v1496 = this.sizeOfBlackWhiteBlackRun(fromX$$1, fromY$$1, otherToX, otherToY);
+    result = result + v1496;
     return result - 1;
   }
   function v16(fromX, fromY, toX, toY) {
-    var v1498 = toY - fromY;
+    var v1497 = toY - fromY;
+    var v518 = Math.abs(v1497);
+    var v1498 = toX - fromX;
     var v519 = Math.abs(v1498);
-    var v1499 = toX - fromX;
-    var v520 = Math.abs(v1499);
-    var steep = v519 > v520;
+    var steep = v518 > v519;
     if (steep) {
       var temp = fromX;
       fromX = fromY;
@@ -2462,96 +2466,96 @@ function Detector(image$$5) {
       toX = toY;
       toY = temp;
     }
-    var v521 = toX - fromX;
-    var dx$$4 = Math.abs(v521);
-    var v522 = toY - fromY;
-    var dy$$4 = Math.abs(v522);
-    var v523 = -dx$$4;
-    var error$$1 = v523 >> 1;
+    var v520 = toX - fromX;
+    var dx$$4 = Math.abs(v520);
+    var v521 = toY - fromY;
+    var dy$$4 = Math.abs(v521);
+    var v522 = -dx$$4;
+    var error$$1 = v522 >> 1;
+    var v523;
+    var v1499 = fromY < toY;
+    if (v1499) {
+      v523 = 1;
+    } else {
+      v523 = -1;
+    }
+    var ystep = v523;
     var v524;
-    var v1500 = fromY < toY;
+    var v1500 = fromX < toX;
     if (v1500) {
       v524 = 1;
     } else {
       v524 = -1;
     }
-    var ystep = v524;
-    var v525;
-    var v1501 = fromX < toX;
-    if (v1501) {
-      v525 = 1;
-    } else {
-      v525 = -1;
-    }
-    var xstep = v525;
+    var xstep = v524;
     var state = 0;
     var x$$52 = fromX;
     var y$$35 = fromY;
-    var v535 = x$$52 != toX;
-    for (;v535;) {
+    var v534 = x$$52 != toX;
+    for (;v534;) {
+      var v525;
+      if (steep) {
+        v525 = y$$35;
+      } else {
+        v525 = x$$52;
+      }
+      var realX = v525;
       var v526;
       if (steep) {
-        v526 = y$$35;
-      } else {
         v526 = x$$52;
-      }
-      var realX = v526;
-      var v527;
-      if (steep) {
-        v527 = x$$52;
       } else {
-        v527 = y$$35;
+        v526 = y$$35;
       }
-      var realY = v527;
-      var v530 = state == 1;
-      if (v530) {
-        var v1502 = this.image;
-        var v2535 = qrcode.width;
-        var v2246 = realY * v2535;
-        var v1503 = realX + v2246;
-        var v528 = v1502[v1503];
+      var realY = v526;
+      var v529 = state == 1;
+      if (v529) {
+        var v1501 = this.image;
+        var v2533 = qrcode.width;
+        var v2244 = realY * v2533;
+        var v1502 = realX + v2244;
+        var v527 = v1501[v1502];
+        if (v527) {
+          state++;
+        }
+      } else {
+        var v2245 = this.image;
+        var v2654 = qrcode.width;
+        var v2534 = realY * v2654;
+        var v2246 = realX + v2534;
+        var v1503 = v2245[v2246];
+        var v528 = !v1503;
         if (v528) {
           state++;
         }
-      } else {
-        var v2247 = this.image;
-        var v2656 = qrcode.width;
-        var v2536 = realY * v2656;
-        var v2248 = realX + v2536;
-        var v1504 = v2247[v2248];
-        var v529 = !v1504;
-        if (v529) {
-          state++;
-        }
       }
-      var v532 = state == 3;
-      if (v532) {
+      var v531 = state == 3;
+      if (v531) {
         var diffX = x$$52 - fromX;
         var diffY = y$$35 - fromY;
-        var v1505 = diffX * diffX;
-        var v1506 = diffY * diffY;
-        var v531 = v1505 + v1506;
-        return Math.sqrt(v531);
+        var v1504 = diffX * diffX;
+        var v1505 = diffY * diffY;
+        var v530 = v1504 + v1505;
+        return Math.sqrt(v530);
       }
       error$$1 = error$$1 + dy$$4;
-      var v534 = error$$1 > 0;
-      if (v534) {
-        var v533 = y$$35 == toY;
-        if (v533) {
+      var v533 = error$$1 > 0;
+      if (v533) {
+        var v532 = y$$35 == toY;
+        if (v532) {
           break;
         }
         y$$35 = y$$35 + ystep;
         error$$1 = error$$1 - dx$$4;
       }
       x$$52 = x$$52 + xstep;
-      v535 = x$$52 != toX;
+      v534 = x$$52 != toX;
     }
     var diffX2 = toX - fromX;
     var diffY2 = toY - fromY;
-    var v1507 = diffX2 * diffX2;
-    var v1508 = diffY2 * diffY2;
-    var v536 = v1507 + v1508;
-    return Math.sqrt(v536);
+    var v1506 = diffX2 * diffX2;
+    var v1507 = diffY2 * diffY2;
+    var v535 = v1506 + v1507;
+    return Math.sqrt(v535);
   }
   this.image = image$$5;
   this.resultPointCallback = null;
@@ -2571,21 +2575,21 @@ function Detector(image$$5) {
 function FormatInformation(formatInfo) {
   function v30(o) {
     var other$$5 = o;
-    var v1509 = this.errorCorrectionLevel;
-    var v1510 = other$$5.errorCorrectionLevel;
-    var v537 = v1509 == v1510;
-    if (v537) {
-      var v1511 = this.dataMask;
-      var v1512 = other$$5.dataMask;
-      v537 = v1511 == v1512;
+    var v1508 = this.errorCorrectionLevel;
+    var v1509 = other$$5.errorCorrectionLevel;
+    var v536 = v1508 == v1509;
+    if (v536) {
+      var v1510 = this.dataMask;
+      var v1511 = other$$5.dataMask;
+      v536 = v1510 == v1511;
     }
-    return v537;
+    return v536;
   }
   function v29() {
-    var v2249 = this.errorCorrectionLevel;
-    var v1513 = v2249.ordinal_Renamed_Field;
-    var v538 = v1513 << 3;
-    return v538 | dataMask;
+    var v2247 = this.errorCorrectionLevel;
+    var v1512 = v2247.ordinal_Renamed_Field;
+    var v537 = v1512 << 3;
+    return v537 | dataMask;
   }
   function v28() {
     return this.dataMask;
@@ -2593,10 +2597,10 @@ function FormatInformation(formatInfo) {
   function v27() {
     return this.errorCorrectionLevel;
   }
-  var v1514 = formatInfo >> 3;
-  var v539 = v1514 & 3;
-  var v2805 = ErrorCorrectionLevel.forBits(v539);
-  this.errorCorrectionLevel = v2805;
+  var v1513 = formatInfo >> 3;
+  var v538 = v1513 & 3;
+  var v2803 = ErrorCorrectionLevel.forBits(v538);
+  this.errorCorrectionLevel = v2803;
   this.dataMask = formatInfo & 7;
   this.__defineGetter__("ErrorCorrectionLevel", v27);
   this.__defineGetter__("DataMask", v28);
@@ -2622,116 +2626,116 @@ function ErrorCorrectionLevel(ordinal, bits$$3, name$$30) {
   this.ordinal = v33;
   return;
 }
-function BitMatrix(width$$10, height$$9) {
+function BitMatrix(width$$10) {
   function v41(left$$1, top$$1, width$$11, height$$10) {
-    var v1515 = top$$1 < 0;
-    var v2250 = !v1515;
-    if (v2250) {
-      v1515 = left$$1 < 0;
+    var v1514 = top$$1 < 0;
+    var v2248 = !v1514;
+    if (v2248) {
+      v1514 = left$$1 < 0;
+    }
+    var v539 = v1514;
+    if (v539) {
+      throw "Left and top must be nonnegative";
+    }
+    var v1515 = height$$10 < 1;
+    var v2249 = !v1515;
+    if (v2249) {
+      v1515 = width$$11 < 1;
     }
     var v540 = v1515;
     if (v540) {
-      throw "Left and top must be nonnegative";
-    }
-    var v1516 = height$$10 < 1;
-    var v2251 = !v1516;
-    if (v2251) {
-      v1516 = width$$11 < 1;
-    }
-    var v541 = v1516;
-    if (v541) {
       throw "Height and width must be at least 1";
     }
     var right$$1 = left$$1 + width$$11;
     var bottom = top$$1 + height$$10;
-    var v2252 = this.height;
-    var v1517 = bottom > v2252;
-    var v2254 = !v1517;
-    if (v2254) {
-      var v2253 = this.width;
-      v1517 = right$$1 > v2253;
+    var v2250 = this.height;
+    var v1516 = bottom > v2250;
+    var v2252 = !v1516;
+    if (v2252) {
+      var v2251 = this.width;
+      v1516 = right$$1 > v2251;
     }
-    var v542 = v1517;
-    if (v542) {
+    var v541 = v1516;
+    if (v541) {
       throw "The region must fit inside the matrix";
     }
     var y$$39 = top$$1;
-    var v547 = y$$39 < bottom;
-    for (;v547;) {
-      var v543 = this.rowSize;
-      var offset$$12 = y$$39 * v543;
+    var v546 = y$$39 < bottom;
+    for (;v546;) {
+      var v542 = this.rowSize;
+      var offset$$12 = y$$39 * v542;
       var x$$56 = left$$1;
-      var v546 = x$$56 < right$$1;
-      for (;v546;) {
-        var v544 = this.bits;
-        var v1518 = x$$56 >> 5;
-        var v545 = offset$$12 + v1518;
-        var v2255 = v544[v545];
-        var v2537 = x$$56 & 31;
-        var v2256 = 1 << v2537;
-        v544[v545] = v2255 | v2256;
+      var v545 = x$$56 < right$$1;
+      for (;v545;) {
+        var v543 = this.bits;
+        var v1517 = x$$56 >> 5;
+        var v544 = offset$$12 + v1517;
+        var v2253 = v543[v544];
+        var v2535 = x$$56 & 31;
+        var v2254 = 1 << v2535;
+        v543[v544] = v2253 | v2254;
         x$$56++;
-        v546 = x$$56 < right$$1;
+        v545 = x$$56 < right$$1;
       }
       y$$39++;
-      v547 = y$$39 < bottom;
+      v546 = y$$39 < bottom;
     }
     return;
   }
   function v40() {
-    var v548 = this.bits;
-    var max$$3 = v548.length;
+    var v547 = this.bits;
+    var max$$3 = v547.length;
     var i$$10 = 0;
-    var v550 = i$$10 < max$$3;
-    for (;v550;) {
-      var v549 = this.bits;
-      v549[i$$10] = 0;
+    var v549 = i$$10 < max$$3;
+    for (;v549;) {
+      var v548 = this.bits;
+      v548[i$$10] = 0;
       i$$10++;
-      v550 = i$$10 < max$$3;
+      v549 = i$$10 < max$$3;
     }
     return;
   }
   function v39(x$$55, y$$38) {
-    var v1519 = this.rowSize;
-    var v551 = y$$38 * v1519;
-    var v552 = x$$55 >> 5;
-    var offset$$11 = v551 + v552;
-    var v553 = this.bits;
-    var v2257 = v553[offset$$11];
-    var v2538 = x$$55 & 31;
-    var v2258 = 1 << v2538;
-    v553[offset$$11] = v2257 ^ v2258;
+    var v1518 = this.rowSize;
+    var v550 = y$$38 * v1518;
+    var v551 = x$$55 >> 5;
+    var offset$$11 = v550 + v551;
+    var v552 = this.bits;
+    var v2255 = v552[offset$$11];
+    var v2536 = x$$55 & 31;
+    var v2256 = 1 << v2536;
+    v552[offset$$11] = v2255 ^ v2256;
     return;
   }
   function v38(x$$54, y$$37) {
-    var v1520 = this.rowSize;
-    var v554 = y$$37 * v1520;
-    var v555 = x$$54 >> 5;
-    var offset$$10 = v554 + v555;
-    var v556 = this.bits;
-    var v2259 = v556[offset$$10];
-    var v2539 = x$$54 & 31;
-    var v2260 = 1 << v2539;
-    v556[offset$$10] = v2259 | v2260;
+    var v1519 = this.rowSize;
+    var v553 = y$$37 * v1519;
+    var v554 = x$$54 >> 5;
+    var offset$$10 = v553 + v554;
+    var v555 = this.bits;
+    var v2257 = v555[offset$$10];
+    var v2537 = x$$54 & 31;
+    var v2258 = 1 << v2537;
+    v555[offset$$10] = v2257 | v2258;
     return;
   }
   function v37(x$$53, y$$36) {
-    var v1521 = this.rowSize;
-    var v557 = y$$36 * v1521;
-    var v558 = x$$53 >> 5;
-    var offset$$9 = v557 + v558;
-    var v2540 = this.bits;
-    var v2261 = v2540[offset$$9];
-    var v2262 = x$$53 & 31;
-    var v1522 = URShift(v2261, v2262);
-    var v559 = v1522 & 1;
-    return v559 != 0;
+    var v1520 = this.rowSize;
+    var v556 = y$$36 * v1520;
+    var v557 = x$$53 >> 5;
+    var offset$$9 = v556 + v557;
+    var v2538 = this.bits;
+    var v2259 = v2538[offset$$9];
+    var v2260 = x$$53 & 31;
+    var v1521 = URShift(v2259, v2260);
+    var v558 = v1521 & 1;
+    return v558 != 0;
   }
   function v36() {
-    var v1523 = this.width;
-    var v1524 = this.height;
-    var v560 = v1523 != v1524;
-    if (v560) {
+    var v1522 = this.width;
+    var v1523 = this.height;
+    var v559 = v1522 != v1523;
+    if (v559) {
       throw "Can't call getDimension() on a non-square matrix";
     }
     return this.width;
@@ -2742,42 +2746,43 @@ function BitMatrix(width$$10, height$$9) {
   function v34() {
     return this.width;
   }
-  var v561 = !height$$9;
-  if (v561) {
+  var height$$9;
+  var v560 = !height$$9;
+  if (v560) {
     height$$9 = width$$10;
   }
-  var v1525 = width$$10 < 1;
-  var v2263 = !v1525;
-  if (v2263) {
-    v1525 = height$$9 < 1;
+  var v1524 = width$$10 < 1;
+  var v2261 = !v1524;
+  if (v2261) {
+    v1524 = height$$9 < 1;
   }
-  var v562 = v1525;
-  if (v562) {
+  var v561 = v1524;
+  if (v561) {
     throw "Both dimensions must be greater than 0";
   }
   this.width = width$$10;
   this.height = height$$9;
   var rowSize = width$$10 >> 5;
-  var v1526 = width$$10 & 31;
-  var v563 = v1526 != 0;
-  if (v563) {
+  var v1525 = width$$10 & 31;
+  var v562 = v1525 != 0;
+  if (v562) {
     rowSize++;
   }
   this.rowSize = rowSize;
-  var v564 = rowSize * height$$9;
-  var v2806 = new Array(v564);
-  this.bits = v2806;
+  var v563 = rowSize * height$$9;
+  var v2804 = new Array(v563);
+  this.bits = v2804;
   var i$$9 = 0;
-  var v2264 = this.bits;
-  var v1527 = v2264.length;
-  var v566 = i$$9 < v1527;
-  for (;v566;) {
-    var v565 = this.bits;
-    v565[i$$9] = 0;
+  var v2262 = this.bits;
+  var v1526 = v2262.length;
+  var v565 = i$$9 < v1526;
+  for (;v565;) {
+    var v564 = this.bits;
+    v564[i$$9] = 0;
     i$$9++;
-    var v2265 = this.bits;
-    var v1528 = v2265.length;
-    v566 = i$$9 < v1528;
+    var v2263 = this.bits;
+    var v1527 = v2263.length;
+    v565 = i$$9 < v1527;
   }
   this.__defineGetter__("Width", v34);
   this.__defineGetter__("Height", v35);
@@ -2806,228 +2811,228 @@ function BitMatrixParser(bitMatrix$$1) {
   function v47() {
     var formatInfo$$2 = this.readFormatInformation();
     var version$$6 = this.readVersion();
-    var v567 = formatInfo$$2.DataMask;
-    var dataMask$$1 = DataMask.forReference(v567);
+    var v566 = formatInfo$$2.DataMask;
+    var dataMask$$1 = DataMask.forReference(v566);
+    var v567 = this.bitMatrix;
+    var dimension$$11 = v567.Dimension;
     var v568 = this.bitMatrix;
-    var dimension$$11 = v568.Dimension;
-    var v569 = this.bitMatrix;
-    dataMask$$1.unmaskBitMatrix(v569, dimension$$11);
+    dataMask$$1.unmaskBitMatrix(v568, dimension$$11);
     var functionPattern = version$$6.buildFunctionPattern();
     var readingUp = true;
-    var v570 = version$$6.TotalCodewords;
-    var result$$2 = new Array(v570);
+    var v569 = version$$6.TotalCodewords;
+    var result$$2 = new Array(v569);
     var resultOffset = 0;
     var currentByte = 0;
     var bitsRead = 0;
     var j$$4 = dimension$$11 - 1;
-    var v579 = j$$4 > 0;
-    for (;v579;) {
-      var v571 = j$$4 == 6;
-      if (v571) {
+    var v578 = j$$4 > 0;
+    for (;v578;) {
+      var v570 = j$$4 == 6;
+      if (v570) {
         j$$4--;
       }
       var count$$4 = 0;
-      var v578 = count$$4 < dimension$$11;
-      for (;v578;) {
-        var v572;
+      var v577 = count$$4 < dimension$$11;
+      for (;v577;) {
+        var v571;
         if (readingUp) {
-          var v1529 = dimension$$11 - 1;
-          v572 = v1529 - count$$4;
+          var v1528 = dimension$$11 - 1;
+          v571 = v1528 - count$$4;
         } else {
-          v572 = count$$4;
+          v571 = count$$4;
         }
-        var i$$15 = v572;
+        var i$$15 = v571;
         var col = 0;
-        var v577 = col < 2;
-        for (;v577;) {
-          var v2266 = j$$4 - col;
-          var v1530 = functionPattern.get_Renamed(v2266, i$$15);
-          var v576 = !v1530;
-          if (v576) {
+        var v576 = col < 2;
+        for (;v576;) {
+          var v2264 = j$$4 - col;
+          var v1529 = functionPattern.get_Renamed(v2264, i$$15);
+          var v575 = !v1529;
+          if (v575) {
             bitsRead++;
             currentByte = currentByte << 1;
-            var v1531 = this.bitMatrix;
-            var v1532 = j$$4 - col;
-            var v573 = v1531.get_Renamed(v1532, i$$15);
-            if (v573) {
+            var v1530 = this.bitMatrix;
+            var v1531 = j$$4 - col;
+            var v572 = v1530.get_Renamed(v1531, i$$15);
+            if (v572) {
               currentByte = currentByte | 1;
             }
-            var v575 = bitsRead == 8;
-            if (v575) {
-              var v574 = resultOffset;
+            var v574 = bitsRead == 8;
+            if (v574) {
+              var v573 = resultOffset;
               resultOffset = resultOffset + 1;
-              result$$2[v574] = currentByte;
+              result$$2[v573] = currentByte;
               bitsRead = 0;
               currentByte = 0;
             }
           }
           col++;
-          v577 = col < 2;
+          v576 = col < 2;
         }
         count$$4++;
-        v578 = count$$4 < dimension$$11;
+        v577 = count$$4 < dimension$$11;
       }
       readingUp = readingUp ^ true;
       j$$4 = j$$4 - 2;
-      v579 = j$$4 > 0;
+      v578 = j$$4 > 0;
     }
-    var v1533 = version$$6.TotalCodewords;
-    var v580 = resultOffset != v1533;
-    if (v580) {
+    var v1532 = version$$6.TotalCodewords;
+    var v579 = resultOffset != v1532;
+    if (v579) {
       throw "Error readCodewords";
     }
     return result$$2;
   }
   function v46() {
-    var v1534 = this.parsedVersion;
-    var v581 = v1534 != null;
-    if (v581) {
+    var v1533 = this.parsedVersion;
+    var v580 = v1533 != null;
+    if (v580) {
       return this.parsedVersion;
     }
-    var v582 = this.bitMatrix;
-    var dimension$$10 = v582.Dimension;
-    var v583 = dimension$$10 - 17;
-    var provisionalVersion$$1 = v583 >> 2;
-    var v584 = provisionalVersion$$1 <= 6;
-    if (v584) {
+    var v581 = this.bitMatrix;
+    var dimension$$10 = v581.Dimension;
+    var v582 = dimension$$10 - 17;
+    var provisionalVersion$$1 = v582 >> 2;
+    var v583 = provisionalVersion$$1 <= 6;
+    if (v583) {
       return Version.getVersionForNumber(provisionalVersion$$1);
     }
     var versionBits$$2 = 0;
     var ijMin = dimension$$10 - 11;
     var j$$3 = 5;
-    var v586 = j$$3 >= 0;
-    for (;v586;) {
+    var v585 = j$$3 >= 0;
+    for (;v585;) {
       var i$$14 = dimension$$10 - 9;
-      var v585 = i$$14 >= ijMin;
-      for (;v585;) {
+      var v584 = i$$14 >= ijMin;
+      for (;v584;) {
         versionBits$$2 = this.copyBit(i$$14, j$$3, versionBits$$2);
         i$$14--;
-        v585 = i$$14 >= ijMin;
+        v584 = i$$14 >= ijMin;
       }
       j$$3--;
-      v586 = j$$3 >= 0;
+      v585 = j$$3 >= 0;
     }
-    var v2807 = Version.decodeVersionInformation(versionBits$$2);
-    this.parsedVersion = v2807;
-    var v2267 = this.parsedVersion;
-    var v1535 = v2267 != null;
-    if (v1535) {
-      var v2541 = this.parsedVersion;
-      var v2268 = v2541.DimensionForVersion;
-      v1535 = v2268 == dimension$$10;
+    var v2805 = Version.decodeVersionInformation(versionBits$$2);
+    this.parsedVersion = v2805;
+    var v2265 = this.parsedVersion;
+    var v1534 = v2265 != null;
+    if (v1534) {
+      var v2539 = this.parsedVersion;
+      var v2266 = v2539.DimensionForVersion;
+      v1534 = v2266 == dimension$$10;
     }
-    var v587 = v1535;
-    if (v587) {
+    var v586 = v1534;
+    if (v586) {
       return this.parsedVersion;
     }
     versionBits$$2 = 0;
     i$$14 = 5;
-    var v589 = i$$14 >= 0;
-    for (;v589;) {
+    var v588 = i$$14 >= 0;
+    for (;v588;) {
       j$$3 = dimension$$10 - 9;
-      var v588 = j$$3 >= ijMin;
-      for (;v588;) {
+      var v587 = j$$3 >= ijMin;
+      for (;v587;) {
         versionBits$$2 = this.copyBit(i$$14, j$$3, versionBits$$2);
         j$$3--;
-        v588 = j$$3 >= ijMin;
+        v587 = j$$3 >= ijMin;
       }
       i$$14--;
-      v589 = i$$14 >= 0;
+      v588 = i$$14 >= 0;
     }
-    var v2808 = Version.decodeVersionInformation(versionBits$$2);
-    this.parsedVersion = v2808;
-    var v2269 = this.parsedVersion;
-    var v1536 = v2269 != null;
-    if (v1536) {
-      var v2542 = this.parsedVersion;
-      var v2270 = v2542.DimensionForVersion;
-      v1536 = v2270 == dimension$$10;
+    var v2806 = Version.decodeVersionInformation(versionBits$$2);
+    this.parsedVersion = v2806;
+    var v2267 = this.parsedVersion;
+    var v1535 = v2267 != null;
+    if (v1535) {
+      var v2540 = this.parsedVersion;
+      var v2268 = v2540.DimensionForVersion;
+      v1535 = v2268 == dimension$$10;
     }
-    var v590 = v1536;
-    if (v590) {
+    var v589 = v1535;
+    if (v589) {
       return this.parsedVersion;
     }
     throw "Error readVersion";
   }
   function v45() {
-    var v1537 = this.parsedFormatInfo;
-    var v591 = v1537 != null;
-    if (v591) {
+    var v1536 = this.parsedFormatInfo;
+    var v590 = v1536 != null;
+    if (v590) {
       return this.parsedFormatInfo;
     }
     var formatInfoBits = 0;
     var i$$13 = 0;
-    var v592 = i$$13 < 6;
-    for (;v592;) {
+    var v591 = i$$13 < 6;
+    for (;v591;) {
       formatInfoBits = this.copyBit(i$$13, 8, formatInfoBits);
       i$$13++;
-      v592 = i$$13 < 6;
+      v591 = i$$13 < 6;
     }
     formatInfoBits = this.copyBit(7, 8, formatInfoBits);
     formatInfoBits = this.copyBit(8, 8, formatInfoBits);
     formatInfoBits = this.copyBit(8, 7, formatInfoBits);
     var j$$2 = 5;
-    var v593 = j$$2 >= 0;
-    for (;v593;) {
+    var v592 = j$$2 >= 0;
+    for (;v592;) {
       formatInfoBits = this.copyBit(8, j$$2, formatInfoBits);
       j$$2--;
-      v593 = j$$2 >= 0;
+      v592 = j$$2 >= 0;
     }
-    var v2809 = FormatInformation.decodeFormatInformation(formatInfoBits);
-    this.parsedFormatInfo = v2809;
-    var v1538 = this.parsedFormatInfo;
-    var v594 = v1538 != null;
-    if (v594) {
+    var v2807 = FormatInformation.decodeFormatInformation(formatInfoBits);
+    this.parsedFormatInfo = v2807;
+    var v1537 = this.parsedFormatInfo;
+    var v593 = v1537 != null;
+    if (v593) {
       return this.parsedFormatInfo;
     }
-    var v595 = this.bitMatrix;
-    var dimension$$9 = v595.Dimension;
+    var v594 = this.bitMatrix;
+    var dimension$$9 = v594.Dimension;
     formatInfoBits = 0;
     var iMin = dimension$$9 - 8;
     i$$13 = dimension$$9 - 1;
-    var v596 = i$$13 >= iMin;
-    for (;v596;) {
+    var v595 = i$$13 >= iMin;
+    for (;v595;) {
       formatInfoBits = this.copyBit(i$$13, 8, formatInfoBits);
       i$$13--;
-      v596 = i$$13 >= iMin;
+      v595 = i$$13 >= iMin;
     }
     j$$2 = dimension$$9 - 7;
-    var v597 = j$$2 < dimension$$9;
-    for (;v597;) {
+    var v596 = j$$2 < dimension$$9;
+    for (;v596;) {
       formatInfoBits = this.copyBit(8, j$$2, formatInfoBits);
       j$$2++;
-      v597 = j$$2 < dimension$$9;
+      v596 = j$$2 < dimension$$9;
     }
-    var v2810 = FormatInformation.decodeFormatInformation(formatInfoBits);
-    this.parsedFormatInfo = v2810;
-    var v1539 = this.parsedFormatInfo;
-    var v598 = v1539 != null;
-    if (v598) {
+    var v2808 = FormatInformation.decodeFormatInformation(formatInfoBits);
+    this.parsedFormatInfo = v2808;
+    var v1538 = this.parsedFormatInfo;
+    var v597 = v1538 != null;
+    if (v597) {
       return this.parsedFormatInfo;
     }
     throw "Error readFormatInformation";
   }
   function v44(i$$12, j$$1, versionBits$$1) {
-    var v599;
-    var v2271 = this.bitMatrix;
-    var v1541 = v2271.get_Renamed(i$$12, j$$1);
-    if (v1541) {
-      var v1540 = versionBits$$1 << 1;
-      v599 = v1540 | 1;
+    var v598;
+    var v2269 = this.bitMatrix;
+    var v1540 = v2269.get_Renamed(i$$12, j$$1);
+    if (v1540) {
+      var v1539 = versionBits$$1 << 1;
+      v598 = v1539 | 1;
     } else {
-      v599 = versionBits$$1 << 1;
+      v598 = versionBits$$1 << 1;
     }
-    return v599;
+    return v598;
   }
   var dimension$$8 = bitMatrix$$1.Dimension;
-  var v1542 = dimension$$8 < 21;
-  var v2273 = !v1542;
-  if (v2273) {
-    var v2272 = dimension$$8 & 3;
-    v1542 = v2272 != 1;
+  var v1541 = dimension$$8 < 21;
+  var v2271 = !v1541;
+  if (v2271) {
+    var v2270 = dimension$$8 & 3;
+    v1541 = v2270 != 1;
   }
-  var v600 = v1542;
-  if (v600) {
+  var v599 = v1541;
+  if (v599) {
     throw "Error BitMatrixParser";
   }
   this.bitMatrix = bitMatrix$$1;
@@ -3041,26 +3046,26 @@ function BitMatrixParser(bitMatrix$$1) {
 }
 function DataMask000() {
   function v49(i$$17, j$$6) {
-    var v1543 = i$$17 + j$$6;
-    var v601 = v1543 & 1;
-    return v601 == 0;
+    var v1542 = i$$17 + j$$6;
+    var v600 = v1542 & 1;
+    return v600 == 0;
   }
   function v48(bits$$5, dimension$$12) {
     var i$$16 = 0;
-    var v604 = i$$16 < dimension$$12;
-    for (;v604;) {
+    var v603 = i$$16 < dimension$$12;
+    for (;v603;) {
       var j$$5 = 0;
-      var v603 = j$$5 < dimension$$12;
-      for (;v603;) {
-        var v602 = this.isMasked(i$$16, j$$5);
-        if (v602) {
+      var v602 = j$$5 < dimension$$12;
+      for (;v602;) {
+        var v601 = this.isMasked(i$$16, j$$5);
+        if (v601) {
           bits$$5.flip(j$$5, i$$16);
         }
         j$$5++;
-        v603 = j$$5 < dimension$$12;
+        v602 = j$$5 < dimension$$12;
       }
       i$$16++;
-      v604 = i$$16 < dimension$$12;
+      v603 = i$$16 < dimension$$12;
     }
     return;
   }
@@ -3070,25 +3075,25 @@ function DataMask000() {
 }
 function DataMask001() {
   function v51(i$$19, j$$8) {
-    var v605 = i$$19 & 1;
-    return v605 == 0;
+    var v604 = i$$19 & 1;
+    return v604 == 0;
   }
   function v50(bits$$6, dimension$$13) {
     var i$$18 = 0;
-    var v608 = i$$18 < dimension$$13;
-    for (;v608;) {
+    var v607 = i$$18 < dimension$$13;
+    for (;v607;) {
       var j$$7 = 0;
-      var v607 = j$$7 < dimension$$13;
-      for (;v607;) {
-        var v606 = this.isMasked(i$$18, j$$7);
-        if (v606) {
+      var v606 = j$$7 < dimension$$13;
+      for (;v606;) {
+        var v605 = this.isMasked(i$$18, j$$7);
+        if (v605) {
           bits$$6.flip(j$$7, i$$18);
         }
         j$$7++;
-        v607 = j$$7 < dimension$$13;
+        v606 = j$$7 < dimension$$13;
       }
       i$$18++;
-      v608 = i$$18 < dimension$$13;
+      v607 = i$$18 < dimension$$13;
     }
     return;
   }
@@ -3098,25 +3103,25 @@ function DataMask001() {
 }
 function DataMask010() {
   function v53(i$$21, j$$10) {
-    var v609 = j$$10 % 3;
-    return v609 == 0;
+    var v608 = j$$10 % 3;
+    return v608 == 0;
   }
   function v52(bits$$7, dimension$$14) {
     var i$$20 = 0;
-    var v612 = i$$20 < dimension$$14;
-    for (;v612;) {
+    var v611 = i$$20 < dimension$$14;
+    for (;v611;) {
       var j$$9 = 0;
-      var v611 = j$$9 < dimension$$14;
-      for (;v611;) {
-        var v610 = this.isMasked(i$$20, j$$9);
-        if (v610) {
+      var v610 = j$$9 < dimension$$14;
+      for (;v610;) {
+        var v609 = this.isMasked(i$$20, j$$9);
+        if (v609) {
           bits$$7.flip(j$$9, i$$20);
         }
         j$$9++;
-        v611 = j$$9 < dimension$$14;
+        v610 = j$$9 < dimension$$14;
       }
       i$$20++;
-      v612 = i$$20 < dimension$$14;
+      v611 = i$$20 < dimension$$14;
     }
     return;
   }
@@ -3126,26 +3131,26 @@ function DataMask010() {
 }
 function DataMask011() {
   function v55(i$$23, j$$12) {
-    var v1544 = i$$23 + j$$12;
-    var v613 = v1544 % 3;
-    return v613 == 0;
+    var v1543 = i$$23 + j$$12;
+    var v612 = v1543 % 3;
+    return v612 == 0;
   }
   function v54(bits$$8, dimension$$15) {
     var i$$22 = 0;
-    var v616 = i$$22 < dimension$$15;
-    for (;v616;) {
+    var v615 = i$$22 < dimension$$15;
+    for (;v615;) {
       var j$$11 = 0;
-      var v615 = j$$11 < dimension$$15;
-      for (;v615;) {
-        var v614 = this.isMasked(i$$22, j$$11);
-        if (v614) {
+      var v614 = j$$11 < dimension$$15;
+      for (;v614;) {
+        var v613 = this.isMasked(i$$22, j$$11);
+        if (v613) {
           bits$$8.flip(j$$11, i$$22);
         }
         j$$11++;
-        v615 = j$$11 < dimension$$15;
+        v614 = j$$11 < dimension$$15;
       }
       i$$22++;
-      v616 = i$$22 < dimension$$15;
+      v615 = i$$22 < dimension$$15;
     }
     return;
   }
@@ -3155,28 +3160,28 @@ function DataMask011() {
 }
 function DataMask100() {
   function v57(i$$25, j$$14) {
-    var v2274 = URShift(i$$25, 1);
-    var v2275 = j$$14 / 3;
-    var v1545 = v2274 + v2275;
-    var v617 = v1545 & 1;
-    return v617 == 0;
+    var v2272 = URShift(i$$25, 1);
+    var v2273 = j$$14 / 3;
+    var v1544 = v2272 + v2273;
+    var v616 = v1544 & 1;
+    return v616 == 0;
   }
   function v56(bits$$9, dimension$$16) {
     var i$$24 = 0;
-    var v620 = i$$24 < dimension$$16;
-    for (;v620;) {
+    var v619 = i$$24 < dimension$$16;
+    for (;v619;) {
       var j$$13 = 0;
-      var v619 = j$$13 < dimension$$16;
-      for (;v619;) {
-        var v618 = this.isMasked(i$$24, j$$13);
-        if (v618) {
+      var v618 = j$$13 < dimension$$16;
+      for (;v618;) {
+        var v617 = this.isMasked(i$$24, j$$13);
+        if (v617) {
           bits$$9.flip(j$$13, i$$24);
         }
         j$$13++;
-        v619 = j$$13 < dimension$$16;
+        v618 = j$$13 < dimension$$16;
       }
       i$$24++;
-      v620 = i$$24 < dimension$$16;
+      v619 = i$$24 < dimension$$16;
     }
     return;
   }
@@ -3187,27 +3192,27 @@ function DataMask100() {
 function DataMask101() {
   function v59(i$$27, j$$16) {
     var temp$$1 = i$$27 * j$$16;
-    var v1546 = temp$$1 & 1;
-    var v1547 = temp$$1 % 3;
-    var v621 = v1546 + v1547;
-    return v621 == 0;
+    var v1545 = temp$$1 & 1;
+    var v1546 = temp$$1 % 3;
+    var v620 = v1545 + v1546;
+    return v620 == 0;
   }
   function v58(bits$$10, dimension$$17) {
     var i$$26 = 0;
-    var v624 = i$$26 < dimension$$17;
-    for (;v624;) {
+    var v623 = i$$26 < dimension$$17;
+    for (;v623;) {
       var j$$15 = 0;
-      var v623 = j$$15 < dimension$$17;
-      for (;v623;) {
-        var v622 = this.isMasked(i$$26, j$$15);
-        if (v622) {
+      var v622 = j$$15 < dimension$$17;
+      for (;v622;) {
+        var v621 = this.isMasked(i$$26, j$$15);
+        if (v621) {
           bits$$10.flip(j$$15, i$$26);
         }
         j$$15++;
-        v623 = j$$15 < dimension$$17;
+        v622 = j$$15 < dimension$$17;
       }
       i$$26++;
-      v624 = i$$26 < dimension$$17;
+      v623 = i$$26 < dimension$$17;
     }
     return;
   }
@@ -3218,28 +3223,28 @@ function DataMask101() {
 function DataMask110() {
   function v61(i$$29, j$$18) {
     var temp$$2 = i$$29 * j$$18;
-    var v2276 = temp$$2 & 1;
-    var v2277 = temp$$2 % 3;
-    var v1548 = v2276 + v2277;
-    var v625 = v1548 & 1;
-    return v625 == 0;
+    var v2274 = temp$$2 & 1;
+    var v2275 = temp$$2 % 3;
+    var v1547 = v2274 + v2275;
+    var v624 = v1547 & 1;
+    return v624 == 0;
   }
   function v60(bits$$11, dimension$$18) {
     var i$$28 = 0;
-    var v628 = i$$28 < dimension$$18;
-    for (;v628;) {
+    var v627 = i$$28 < dimension$$18;
+    for (;v627;) {
       var j$$17 = 0;
-      var v627 = j$$17 < dimension$$18;
-      for (;v627;) {
-        var v626 = this.isMasked(i$$28, j$$17);
-        if (v626) {
+      var v626 = j$$17 < dimension$$18;
+      for (;v626;) {
+        var v625 = this.isMasked(i$$28, j$$17);
+        if (v625) {
           bits$$11.flip(j$$17, i$$28);
         }
         j$$17++;
-        v627 = j$$17 < dimension$$18;
+        v626 = j$$17 < dimension$$18;
       }
       i$$28++;
-      v628 = i$$28 < dimension$$18;
+      v627 = i$$28 < dimension$$18;
     }
     return;
   }
@@ -3249,30 +3254,30 @@ function DataMask110() {
 }
 function DataMask111() {
   function v63(i$$31, j$$20) {
-    var v2543 = i$$31 + j$$20;
-    var v2278 = v2543 & 1;
-    var v2544 = i$$31 * j$$20;
-    var v2279 = v2544 % 3;
-    var v1549 = v2278 + v2279;
-    var v629 = v1549 & 1;
-    return v629 == 0;
+    var v2541 = i$$31 + j$$20;
+    var v2276 = v2541 & 1;
+    var v2542 = i$$31 * j$$20;
+    var v2277 = v2542 % 3;
+    var v1548 = v2276 + v2277;
+    var v628 = v1548 & 1;
+    return v628 == 0;
   }
   function v62(bits$$12, dimension$$19) {
     var i$$30 = 0;
-    var v632 = i$$30 < dimension$$19;
-    for (;v632;) {
+    var v631 = i$$30 < dimension$$19;
+    for (;v631;) {
       var j$$19 = 0;
-      var v631 = j$$19 < dimension$$19;
-      for (;v631;) {
-        var v630 = this.isMasked(i$$30, j$$19);
-        if (v630) {
+      var v630 = j$$19 < dimension$$19;
+      for (;v630;) {
+        var v629 = this.isMasked(i$$30, j$$19);
+        if (v629) {
           bits$$12.flip(j$$19, i$$30);
         }
         j$$19++;
-        v631 = j$$19 < dimension$$19;
+        v630 = j$$19 < dimension$$19;
       }
       i$$30++;
-      v632 = i$$30 < dimension$$19;
+      v631 = i$$30 < dimension$$19;
     }
     return;
   }
@@ -3280,252 +3285,253 @@ function DataMask111() {
   this.isMasked = v63;
   return;
 }
-function ReedSolomonDecoder(field) {
+function ReedSolomonDecoder() {
   function v67(errorEvaluator, errorLocations$$1, dataMatrix$$1) {
     var s$$3 = errorLocations$$1.length;
     var result$$4 = new Array(s$$3);
     var i$$34 = 0;
-    var v644 = i$$34 < s$$3;
-    for (;v644;) {
-      var v633 = this.field;
-      var v634 = errorLocations$$1[i$$34];
-      var xiInverse = v633.inverse(v634);
+    var v643 = i$$34 < s$$3;
+    for (;v643;) {
+      var v632 = this.field;
+      var v633 = errorLocations$$1[i$$34];
+      var xiInverse = v632.inverse(v633);
       var denominator$$3 = 1;
       var j$$21 = 0;
-      var v638 = j$$21 < s$$3;
-      for (;v638;) {
-        var v637 = i$$34 != j$$21;
-        if (v637) {
-          var v635 = this.field;
-          var v2280 = this.field;
-          var v2281 = errorLocations$$1[j$$21];
-          var v1550 = v2280.multiply(v2281, xiInverse);
-          var v636 = GF256.addOrSubtract(1, v1550);
-          denominator$$3 = v635.multiply(denominator$$3, v636);
+      var v637 = j$$21 < s$$3;
+      for (;v637;) {
+        var v636 = i$$34 != j$$21;
+        if (v636) {
+          var v634 = this.field;
+          var v2278 = this.field;
+          var v2279 = errorLocations$$1[j$$21];
+          var v1549 = v2278.multiply(v2279, xiInverse);
+          var v635 = GF256.addOrSubtract(1, v1549);
+          denominator$$3 = v634.multiply(denominator$$3, v635);
         }
         j$$21++;
-        v638 = j$$21 < s$$3;
+        v637 = j$$21 < s$$3;
       }
-      var v639 = this.field;
-      var v640 = errorEvaluator.evaluateAt(xiInverse);
-      var v1551 = this.field;
-      var v641 = v1551.inverse(denominator$$3);
-      var v2811 = v639.multiply(v640, v641);
-      result$$4[i$$34] = v2811;
+      var v638 = this.field;
+      var v639 = errorEvaluator.evaluateAt(xiInverse);
+      var v1550 = this.field;
+      var v640 = v1550.inverse(denominator$$3);
+      var v2809 = v638.multiply(v639, v640);
+      result$$4[i$$34] = v2809;
       if (dataMatrix$$1) {
-        var v642 = this.field;
-        var v643 = result$$4[i$$34];
-        var v2812 = v642.multiply(v643, xiInverse);
-        result$$4[i$$34] = v2812;
+        var v641 = this.field;
+        var v642 = result$$4[i$$34];
+        var v2810 = v641.multiply(v642, xiInverse);
+        result$$4[i$$34] = v2810;
       }
       i$$34++;
-      v644 = i$$34 < s$$3;
+      v643 = i$$34 < s$$3;
     }
     return result$$4;
   }
   function v66(errorLocator) {
     var numErrors = errorLocator.Degree;
-    var v646 = numErrors == 1;
-    if (v646) {
-      var v645 = errorLocator.getCoefficient(1);
-      return new Array(v645);
+    var v645 = numErrors == 1;
+    if (v645) {
+      var v644 = errorLocator.getCoefficient(1);
+      return new Array(v644);
     }
     var result$$3 = new Array(numErrors);
     var e$$4 = 0;
     var i$$33 = 1;
-    var v1552 = i$$33 < 256;
-    if (v1552) {
-      v1552 = e$$4 < numErrors;
+    var v1551 = i$$33 < 256;
+    if (v1551) {
+      v1551 = e$$4 < numErrors;
     }
-    var v649 = v1552;
-    for (;v649;) {
-      var v1553 = errorLocator.evaluateAt(i$$33);
-      var v648 = v1553 == 0;
-      if (v648) {
-        var v647 = this.field;
-        var v2813 = v647.inverse(i$$33);
-        result$$3[e$$4] = v2813;
+    var v648 = v1551;
+    for (;v648;) {
+      var v1552 = errorLocator.evaluateAt(i$$33);
+      var v647 = v1552 == 0;
+      if (v647) {
+        var v646 = this.field;
+        var v2811 = v646.inverse(i$$33);
+        result$$3[e$$4] = v2811;
         e$$4++;
       }
       i$$33++;
-      var v1554 = i$$33 < 256;
-      if (v1554) {
-        v1554 = e$$4 < numErrors;
+      var v1553 = i$$33 < 256;
+      if (v1553) {
+        v1553 = e$$4 < numErrors;
       }
-      v649 = v1554;
+      v648 = v1553;
     }
-    var v650 = e$$4 != numErrors;
-    if (v650) {
+    var v649 = e$$4 != numErrors;
+    if (v649) {
       throw "Error locator degree does not match number of roots";
     }
     return result$$3;
   }
   function v65(a$$1, b$$2, R) {
-    var v1555 = a$$1.Degree;
-    var v1556 = b$$2.Degree;
-    var v651 = v1555 < v1556;
-    if (v651) {
+    var v1554 = a$$1.Degree;
+    var v1555 = b$$2.Degree;
+    var v650 = v1554 < v1555;
+    if (v650) {
       var temp$$3 = a$$1;
       a$$1 = b$$2;
       b$$2 = temp$$3;
     }
     var rLast = a$$1;
     var r$$1 = b$$2;
+    var v651 = this.field;
+    var sLast = v651.One;
     var v652 = this.field;
-    var sLast = v652.One;
+    var s$$2 = v652.Zero;
     var v653 = this.field;
-    var s$$2 = v653.Zero;
+    var tLast = v653.Zero;
     var v654 = this.field;
-    var tLast = v654.Zero;
-    var v655 = this.field;
-    var t = v655.One;
-    var v1557 = r$$1.Degree;
-    var v2282 = R / 2;
-    var v1558 = Math.floor(v2282);
-    var v669 = v1557 >= v1558;
-    for (;v669;) {
+    var t = v654.One;
+    var v1556 = r$$1.Degree;
+    var v2280 = R / 2;
+    var v1557 = Math.floor(v2280);
+    var v668 = v1556 >= v1557;
+    for (;v668;) {
       var rLastLast = rLast;
       var sLastLast = sLast;
       var tLastLast = tLast;
       rLast = r$$1;
       sLast = s$$2;
       tLast = t;
-      var v656 = rLast.Zero;
-      if (v656) {
+      var v655 = rLast.Zero;
+      if (v655) {
         throw "r_{i-1} was zero";
       }
       r$$1 = rLastLast;
-      var v657 = this.field;
-      var q = v657.Zero;
-      var v658 = rLast.Degree;
-      var denominatorLeadingTerm = rLast.getCoefficient(v658);
-      var v659 = this.field;
-      var dltInverse = v659.inverse(denominatorLeadingTerm);
-      var v2283 = r$$1.Degree;
-      var v2284 = rLast.Degree;
-      var v1559 = v2283 >= v2284;
-      if (v1559) {
-        var v2285 = r$$1.Zero;
-        v1559 = !v2285;
+      var v656 = this.field;
+      var q = v656.Zero;
+      var v657 = rLast.Degree;
+      var denominatorLeadingTerm = rLast.getCoefficient(v657);
+      var v658 = this.field;
+      var dltInverse = v658.inverse(denominatorLeadingTerm);
+      var v2281 = r$$1.Degree;
+      var v2282 = rLast.Degree;
+      var v1558 = v2281 >= v2282;
+      if (v1558) {
+        var v2283 = r$$1.Zero;
+        v1558 = !v2283;
       }
-      var v666 = v1559;
-      for (;v666;) {
-        var v660 = r$$1.Degree;
-        var v661 = rLast.Degree;
-        var degreeDiff = v660 - v661;
-        var v662 = this.field;
-        var v1560 = r$$1.Degree;
-        var v663 = r$$1.getCoefficient(v1560);
-        var scale$$1 = v662.multiply(v663, dltInverse);
-        var v1561 = this.field;
-        var v664 = v1561.buildMonomial(degreeDiff, scale$$1);
-        q = q.addOrSubtract(v664);
-        var v665 = rLast.multiplyByMonomial(degreeDiff, scale$$1);
-        r$$1 = r$$1.addOrSubtract(v665);
-        var v2286 = r$$1.Degree;
-        var v2287 = rLast.Degree;
-        var v1562 = v2286 >= v2287;
-        if (v1562) {
-          var v2288 = r$$1.Zero;
-          v1562 = !v2288;
+      var v665 = v1558;
+      for (;v665;) {
+        var v659 = r$$1.Degree;
+        var v660 = rLast.Degree;
+        var degreeDiff = v659 - v660;
+        var v661 = this.field;
+        var v1559 = r$$1.Degree;
+        var v662 = r$$1.getCoefficient(v1559);
+        var scale$$1 = v661.multiply(v662, dltInverse);
+        var v1560 = this.field;
+        var v663 = v1560.buildMonomial(degreeDiff, scale$$1);
+        q = q.addOrSubtract(v663);
+        var v664 = rLast.multiplyByMonomial(degreeDiff, scale$$1);
+        r$$1 = r$$1.addOrSubtract(v664);
+        var v2284 = r$$1.Degree;
+        var v2285 = rLast.Degree;
+        var v1561 = v2284 >= v2285;
+        if (v1561) {
+          var v2286 = r$$1.Zero;
+          v1561 = !v2286;
         }
-        v666 = v1562;
+        v665 = v1561;
       }
-      var v667 = q.multiply1(sLast);
-      s$$2 = v667.addOrSubtract(sLastLast);
-      var v668 = q.multiply1(tLast);
-      t = v668.addOrSubtract(tLastLast);
-      var v1563 = r$$1.Degree;
-      var v2289 = R / 2;
-      var v1564 = Math.floor(v2289);
-      v669 = v1563 >= v1564;
+      var v666 = q.multiply1(sLast);
+      s$$2 = v666.addOrSubtract(sLastLast);
+      var v667 = q.multiply1(tLast);
+      t = v667.addOrSubtract(tLastLast);
+      var v1562 = r$$1.Degree;
+      var v2287 = R / 2;
+      var v1563 = Math.floor(v2287);
+      v668 = v1562 >= v1563;
     }
     var sigmaTildeAtZero = t.getCoefficient(0);
-    var v670 = sigmaTildeAtZero == 0;
-    if (v670) {
+    var v669 = sigmaTildeAtZero == 0;
+    if (v669) {
       throw "ReedSolomonException sigmaTilde(0) was zero";
     }
-    var v671 = this.field;
-    var inverse = v671.inverse(sigmaTildeAtZero);
+    var v670 = this.field;
+    var inverse = v670.inverse(sigmaTildeAtZero);
     var sigma$$1 = t.multiply2(inverse);
     var omega$$1 = r$$1.multiply2(inverse);
     return new Array(sigma$$1, omega$$1);
   }
   function v64(received, twoS) {
-    var v672 = this.field;
-    var poly = new GF256Poly(v672, received);
+    var v671 = this.field;
+    var poly = new GF256Poly(v671, received);
     var syndromeCoefficients = new Array(twoS);
     var i$$32 = 0;
-    var v1565 = syndromeCoefficients.length;
-    var v673 = i$$32 < v1565;
-    for (;v673;) {
+    var v1564 = syndromeCoefficients.length;
+    var v672 = i$$32 < v1564;
+    for (;v672;) {
       syndromeCoefficients[i$$32] = 0;
       i$$32++;
-      var v1566 = syndromeCoefficients.length;
-      v673 = i$$32 < v1566;
+      var v1565 = syndromeCoefficients.length;
+      v672 = i$$32 < v1565;
     }
     var dataMatrix = false;
     var noError = true;
     i$$32 = 0;
-    var v677 = i$$32 < twoS;
-    for (;v677;) {
-      var v1567 = this.field;
-      var v2290;
+    var v676 = i$$32 < twoS;
+    for (;v676;) {
+      var v1566 = this.field;
+      var v2288;
       if (dataMatrix) {
-        v2290 = i$$32 + 1;
+        v2288 = i$$32 + 1;
       } else {
-        v2290 = i$$32;
+        v2288 = i$$32;
       }
-      var v1568 = v2290;
-      var v674 = v1567.exp(v1568);
-      var eval$$1 = poly.evaluateAt(v674);
-      var v2291 = syndromeCoefficients.length;
-      var v1569 = v2291 - 1;
-      var v675 = v1569 - i$$32;
-      syndromeCoefficients[v675] = eval$$1;
-      var v676 = eval$$1 != 0;
-      if (v676) {
+      var v1567 = v2288;
+      var v673 = v1566.exp(v1567);
+      var eval$$1 = poly.evaluateAt(v673);
+      var v2289 = syndromeCoefficients.length;
+      var v1568 = v2289 - 1;
+      var v674 = v1568 - i$$32;
+      syndromeCoefficients[v674] = eval$$1;
+      var v675 = eval$$1 != 0;
+      if (v675) {
         noError = false;
       }
       i$$32++;
-      v677 = i$$32 < twoS;
+      v676 = i$$32 < twoS;
     }
     if (noError) {
       return;
     }
-    var v678 = this.field;
-    var syndrome = new GF256Poly(v678, syndromeCoefficients);
-    var v1570 = this.field;
-    var v679 = v1570.buildMonomial(twoS, 1);
-    var sigmaOmega = this.runEuclideanAlgorithm(v679, syndrome, twoS);
+    var v677 = this.field;
+    var syndrome = new GF256Poly(v677, syndromeCoefficients);
+    var v1569 = this.field;
+    var v678 = v1569.buildMonomial(twoS, 1);
+    var sigmaOmega = this.runEuclideanAlgorithm(v678, syndrome, twoS);
     var sigma = sigmaOmega[0];
     var omega = sigmaOmega[1];
     var errorLocations = this.findErrorLocations(sigma);
     var errorMagnitudes = this.findErrorMagnitudes(omega, errorLocations, dataMatrix);
     i$$32 = 0;
-    var v1571 = errorLocations.length;
-    var v685 = i$$32 < v1571;
-    for (;v685;) {
-      var v1572 = received.length;
-      var v680 = v1572 - 1;
-      var v1573 = this.field;
-      var v1574 = errorLocations[i$$32];
-      var v681 = v1573.log(v1574);
-      var position = v680 - v681;
-      var v682 = position < 0;
-      if (v682) {
+    var v1570 = errorLocations.length;
+    var v684 = i$$32 < v1570;
+    for (;v684;) {
+      var v1571 = received.length;
+      var v679 = v1571 - 1;
+      var v1572 = this.field;
+      var v1573 = errorLocations[i$$32];
+      var v680 = v1572.log(v1573);
+      var position = v679 - v680;
+      var v681 = position < 0;
+      if (v681) {
         throw "ReedSolomonException Bad error location";
       }
-      var v683 = received[position];
-      var v684 = errorMagnitudes[i$$32];
-      var v2814 = GF256.addOrSubtract(v683, v684);
-      received[position] = v2814;
+      var v682 = received[position];
+      var v683 = errorMagnitudes[i$$32];
+      var v2812 = GF256.addOrSubtract(v682, v683);
+      received[position] = v2812;
       i$$32++;
-      var v1575 = errorLocations.length;
-      v685 = i$$32 < v1575;
+      var v1574 = errorLocations.length;
+      v684 = i$$32 < v1574;
     }
     return;
   }
+  var field = GF256.QR_CODE_FIELD;
   this.field = field;
   this.decode = v64;
   this.runEuclideanAlgorithm = v65;
@@ -3535,343 +3541,343 @@ function ReedSolomonDecoder(field) {
 }
 function GF256Poly(field$$1, coefficients) {
   function v77(other$$8) {
-    var v1576 = this.field;
-    var v1577 = other$$8.field;
-    var v686 = v1576 != v1577;
-    if (v686) {
+    var v1575 = this.field;
+    var v1576 = other$$8.field;
+    var v685 = v1575 != v1576;
+    if (v685) {
       throw "GF256Polys do not have same GF256 field";
     }
-    var v687 = other$$8.Zero;
-    if (v687) {
+    var v686 = other$$8.Zero;
+    if (v686) {
       throw "Divide by 0";
     }
-    var v688 = this.field;
-    var quotient = v688.Zero;
+    var v687 = this.field;
+    var quotient = v687.Zero;
     var remainder = this;
-    var v689 = other$$8.Degree;
-    var denominatorLeadingTerm$$1 = other$$8.getCoefficient(v689);
-    var v690 = this.field;
-    var inverseDenominatorLeadingTerm = v690.inverse(denominatorLeadingTerm$$1);
-    var v2292 = remainder.Degree;
-    var v2293 = other$$8.Degree;
-    var v1578 = v2292 >= v2293;
-    if (v1578) {
-      var v2294 = remainder.Zero;
-      v1578 = !v2294;
+    var v688 = other$$8.Degree;
+    var denominatorLeadingTerm$$1 = other$$8.getCoefficient(v688);
+    var v689 = this.field;
+    var inverseDenominatorLeadingTerm = v689.inverse(denominatorLeadingTerm$$1);
+    var v2290 = remainder.Degree;
+    var v2291 = other$$8.Degree;
+    var v1577 = v2290 >= v2291;
+    if (v1577) {
+      var v2292 = remainder.Zero;
+      v1577 = !v2292;
     }
-    var v696 = v1578;
-    for (;v696;) {
-      var v691 = remainder.Degree;
-      var v692 = other$$8.Degree;
-      var degreeDifference = v691 - v692;
-      var v693 = this.field;
-      var v1579 = remainder.Degree;
-      var v694 = remainder.getCoefficient(v1579);
-      var scale$$2 = v693.multiply(v694, inverseDenominatorLeadingTerm);
+    var v695 = v1577;
+    for (;v695;) {
+      var v690 = remainder.Degree;
+      var v691 = other$$8.Degree;
+      var degreeDifference = v690 - v691;
+      var v692 = this.field;
+      var v1578 = remainder.Degree;
+      var v693 = remainder.getCoefficient(v1578);
+      var scale$$2 = v692.multiply(v693, inverseDenominatorLeadingTerm);
       var term = other$$8.multiplyByMonomial(degreeDifference, scale$$2);
-      var v695 = this.field;
-      var iterationQuotient = v695.buildMonomial(degreeDifference, scale$$2);
+      var v694 = this.field;
+      var iterationQuotient = v694.buildMonomial(degreeDifference, scale$$2);
       quotient = quotient.addOrSubtract(iterationQuotient);
       remainder = remainder.addOrSubtract(term);
-      var v2295 = remainder.Degree;
-      var v2296 = other$$8.Degree;
-      var v1580 = v2295 >= v2296;
-      if (v1580) {
-        var v2297 = remainder.Zero;
-        v1580 = !v2297;
+      var v2293 = remainder.Degree;
+      var v2294 = other$$8.Degree;
+      var v1579 = v2293 >= v2294;
+      if (v1579) {
+        var v2295 = remainder.Zero;
+        v1579 = !v2295;
       }
-      v696 = v1580;
+      v695 = v1579;
     }
     return new Array(quotient, remainder);
   }
   function v76(degree$$1, coefficient) {
-    var v697 = degree$$1 < 0;
-    if (v697) {
+    var v696 = degree$$1 < 0;
+    if (v696) {
       throw "System.ArgumentException";
     }
-    var v699 = coefficient == 0;
-    if (v699) {
-      var v698 = this.field;
-      return v698.Zero;
+    var v698 = coefficient == 0;
+    if (v698) {
+      var v697 = this.field;
+      return v697.Zero;
     }
-    var v700 = this.coefficients;
-    var size$$6 = v700.length;
-    var v701 = size$$6 + degree$$1;
-    var product$$2 = new Array(v701);
+    var v699 = this.coefficients;
+    var size$$6 = v699.length;
+    var v700 = size$$6 + degree$$1;
+    var product$$2 = new Array(v700);
     var i$$40 = 0;
-    var v1581 = product$$2.length;
-    var v702 = i$$40 < v1581;
-    for (;v702;) {
+    var v1580 = product$$2.length;
+    var v701 = i$$40 < v1580;
+    for (;v701;) {
       product$$2[i$$40] = 0;
       i$$40++;
-      var v1582 = product$$2.length;
-      v702 = i$$40 < v1582;
+      var v1581 = product$$2.length;
+      v701 = i$$40 < v1581;
     }
     i$$40 = 0;
-    var v705 = i$$40 < size$$6;
-    for (;v705;) {
-      var v703 = this.field;
-      var v1583 = this.coefficients;
-      var v704 = v1583[i$$40];
-      var v2815 = v703.multiply(v704, coefficient);
-      product$$2[i$$40] = v2815;
+    var v704 = i$$40 < size$$6;
+    for (;v704;) {
+      var v702 = this.field;
+      var v1582 = this.coefficients;
+      var v703 = v1582[i$$40];
+      var v2813 = v702.multiply(v703, coefficient);
+      product$$2[i$$40] = v2813;
       i$$40++;
-      v705 = i$$40 < size$$6;
+      v704 = i$$40 < size$$6;
     }
-    var v706 = this.field;
-    return new GF256Poly(v706, product$$2);
+    var v705 = this.field;
+    return new GF256Poly(v705, product$$2);
   }
   function v75(scalar) {
-    var v708 = scalar == 0;
-    if (v708) {
-      var v707 = this.field;
-      return v707.Zero;
+    var v707 = scalar == 0;
+    if (v707) {
+      var v706 = this.field;
+      return v706.Zero;
     }
-    var v709 = scalar == 1;
-    if (v709) {
+    var v708 = scalar == 1;
+    if (v708) {
       return this;
     }
-    var v710 = this.coefficients;
-    var size$$5 = v710.length;
+    var v709 = this.coefficients;
+    var size$$5 = v709.length;
     var product$$1 = new Array(size$$5);
     var i$$39 = 0;
-    var v713 = i$$39 < size$$5;
-    for (;v713;) {
-      var v711 = this.field;
-      var v1584 = this.coefficients;
-      var v712 = v1584[i$$39];
-      var v2816 = v711.multiply(v712, scalar);
-      product$$1[i$$39] = v2816;
+    var v712 = i$$39 < size$$5;
+    for (;v712;) {
+      var v710 = this.field;
+      var v1583 = this.coefficients;
+      var v711 = v1583[i$$39];
+      var v2814 = v710.multiply(v711, scalar);
+      product$$1[i$$39] = v2814;
       i$$39++;
-      v713 = i$$39 < size$$5;
+      v712 = i$$39 < size$$5;
     }
-    var v714 = this.field;
-    return new GF256Poly(v714, product$$1);
+    var v713 = this.field;
+    return new GF256Poly(v713, product$$1);
   }
   function v74(other$$7) {
-    var v1585 = this.field;
-    var v1586 = other$$7.field;
-    var v715 = v1585 != v1586;
-    if (v715) {
+    var v1584 = this.field;
+    var v1585 = other$$7.field;
+    var v714 = v1584 != v1585;
+    if (v714) {
       throw "GF256Polys do not have same GF256 field";
     }
-    var v1587 = this.Zero;
-    var v2298 = !v1587;
-    if (v2298) {
-      v1587 = other$$7.Zero;
+    var v1586 = this.Zero;
+    var v2296 = !v1586;
+    if (v2296) {
+      v1586 = other$$7.Zero;
     }
-    var v717 = v1587;
-    if (v717) {
-      var v716 = this.field;
-      return v716.Zero;
+    var v716 = v1586;
+    if (v716) {
+      var v715 = this.field;
+      return v715.Zero;
     }
     var aCoefficients = this.coefficients;
     var aLength = aCoefficients.length;
     var bCoefficients = other$$7.coefficients;
     var bLength = bCoefficients.length;
-    var v1588 = aLength + bLength;
-    var v718 = v1588 - 1;
-    var product = new Array(v718);
+    var v1587 = aLength + bLength;
+    var v717 = v1587 - 1;
+    var product = new Array(v717);
     var i$$38 = 0;
-    var v721 = i$$38 < aLength;
-    for (;v721;) {
+    var v720 = i$$38 < aLength;
+    for (;v720;) {
       var aCoeff = aCoefficients[i$$38];
       var j$$22 = 0;
-      var v720 = j$$22 < bLength;
-      for (;v720;) {
-        var v719 = i$$38 + j$$22;
-        var v2299 = i$$38 + j$$22;
-        var v1589 = product[v2299];
-        var v2300 = this.field;
-        var v2301 = bCoefficients[j$$22];
-        var v1590 = v2300.multiply(aCoeff, v2301);
-        var v2817 = GF256.addOrSubtract(v1589, v1590);
-        product[v719] = v2817;
+      var v719 = j$$22 < bLength;
+      for (;v719;) {
+        var v718 = i$$38 + j$$22;
+        var v2297 = i$$38 + j$$22;
+        var v1588 = product[v2297];
+        var v2298 = this.field;
+        var v2299 = bCoefficients[j$$22];
+        var v1589 = v2298.multiply(aCoeff, v2299);
+        var v2815 = GF256.addOrSubtract(v1588, v1589);
+        product[v718] = v2815;
         j$$22++;
-        v720 = j$$22 < bLength;
+        v719 = j$$22 < bLength;
       }
       i$$38++;
-      v721 = i$$38 < aLength;
+      v720 = i$$38 < aLength;
     }
-    var v722 = this.field;
-    return new GF256Poly(v722, product);
+    var v721 = this.field;
+    return new GF256Poly(v721, product);
   }
   function v73(other$$6) {
-    var v1591 = this.field;
-    var v1592 = other$$6.field;
-    var v723 = v1591 != v1592;
-    if (v723) {
+    var v1590 = this.field;
+    var v1591 = other$$6.field;
+    var v722 = v1590 != v1591;
+    if (v722) {
       throw "GF256Polys do not have same GF256 field";
     }
-    var v724 = this.Zero;
-    if (v724) {
+    var v723 = this.Zero;
+    if (v723) {
       return other$$6;
     }
-    var v725 = other$$6.Zero;
-    if (v725) {
+    var v724 = other$$6.Zero;
+    if (v724) {
       return this;
     }
     var smallerCoefficients = this.coefficients;
     var largerCoefficients = other$$6.coefficients;
-    var v1593 = smallerCoefficients.length;
-    var v1594 = largerCoefficients.length;
-    var v726 = v1593 > v1594;
-    if (v726) {
+    var v1592 = smallerCoefficients.length;
+    var v1593 = largerCoefficients.length;
+    var v725 = v1592 > v1593;
+    if (v725) {
       var temp$$4 = smallerCoefficients;
       smallerCoefficients = largerCoefficients;
       largerCoefficients = temp$$4;
     }
+    var v726 = largerCoefficients.length;
+    var sumDiff = new Array(v726);
     var v727 = largerCoefficients.length;
-    var sumDiff = new Array(v727);
-    var v728 = largerCoefficients.length;
-    var v729 = smallerCoefficients.length;
-    var lengthDiff = v728 - v729;
+    var v728 = smallerCoefficients.length;
+    var lengthDiff = v727 - v728;
     var ci$$1 = 0;
-    var v730 = ci$$1 < lengthDiff;
-    for (;v730;) {
+    var v729 = ci$$1 < lengthDiff;
+    for (;v729;) {
       sumDiff[ci$$1] = largerCoefficients[ci$$1];
       ci$$1++;
-      v730 = ci$$1 < lengthDiff;
+      v729 = ci$$1 < lengthDiff;
     }
     var i$$37 = lengthDiff;
-    var v1595 = largerCoefficients.length;
-    var v733 = i$$37 < v1595;
-    for (;v733;) {
-      var v1596 = i$$37 - lengthDiff;
-      var v731 = smallerCoefficients[v1596];
-      var v732 = largerCoefficients[i$$37];
-      var v2818 = GF256.addOrSubtract(v731, v732);
-      sumDiff[i$$37] = v2818;
+    var v1594 = largerCoefficients.length;
+    var v732 = i$$37 < v1594;
+    for (;v732;) {
+      var v1595 = i$$37 - lengthDiff;
+      var v730 = smallerCoefficients[v1595];
+      var v731 = largerCoefficients[i$$37];
+      var v2816 = GF256.addOrSubtract(v730, v731);
+      sumDiff[i$$37] = v2816;
       i$$37++;
-      var v1597 = largerCoefficients.length;
-      v733 = i$$37 < v1597;
+      var v1596 = largerCoefficients.length;
+      v732 = i$$37 < v1596;
     }
     return new GF256Poly(field$$1, sumDiff);
   }
   function v72(a$$2) {
-    var v734 = a$$2 == 0;
-    if (v734) {
+    var v733 = a$$2 == 0;
+    if (v733) {
       return this.getCoefficient(0);
     }
-    var v735 = this.coefficients;
-    var size$$4 = v735.length;
-    var v738 = a$$2 == 1;
-    if (v738) {
+    var v734 = this.coefficients;
+    var size$$4 = v734.length;
+    var v737 = a$$2 == 1;
+    if (v737) {
       var result$$5 = 0;
       var i$$36 = 0;
-      var v737 = i$$36 < size$$4;
-      for (;v737;) {
-        var v1598 = this.coefficients;
-        var v736 = v1598[i$$36];
-        result$$5 = GF256.addOrSubtract(result$$5, v736);
+      var v736 = i$$36 < size$$4;
+      for (;v736;) {
+        var v1597 = this.coefficients;
+        var v735 = v1597[i$$36];
+        result$$5 = GF256.addOrSubtract(result$$5, v735);
         i$$36++;
-        v737 = i$$36 < size$$4;
+        v736 = i$$36 < size$$4;
       }
       return result$$5;
     }
-    var v739 = this.coefficients;
-    var result2 = v739[0];
+    var v738 = this.coefficients;
+    var result2 = v738[0];
     i$$36 = 1;
-    var v742 = i$$36 < size$$4;
-    for (;v742;) {
-      var v1599 = this.field;
-      var v740 = v1599.multiply(a$$2, result2);
-      var v1600 = this.coefficients;
-      var v741 = v1600[i$$36];
-      result2 = GF256.addOrSubtract(v740, v741);
+    var v741 = i$$36 < size$$4;
+    for (;v741;) {
+      var v1598 = this.field;
+      var v739 = v1598.multiply(a$$2, result2);
+      var v1599 = this.coefficients;
+      var v740 = v1599[i$$36];
+      result2 = GF256.addOrSubtract(v739, v740);
       i$$36++;
-      v742 = i$$36 < size$$4;
+      v741 = i$$36 < size$$4;
     }
     return result2;
   }
   function v71(degree) {
-    var v743 = this.coefficients;
-    var v2545 = this.coefficients;
-    var v2302 = v2545.length;
-    var v1601 = v2302 - 1;
-    var v744 = v1601 - degree;
-    return v743[v744];
+    var v742 = this.coefficients;
+    var v2543 = this.coefficients;
+    var v2300 = v2543.length;
+    var v1600 = v2300 - 1;
+    var v743 = v1600 - degree;
+    return v742[v743];
   }
   function v70() {
     return this.coefficients;
   }
   function v69() {
-    var v1602 = this.coefficients;
-    var v745 = v1602.length;
-    return v745 - 1;
+    var v1601 = this.coefficients;
+    var v744 = v1601.length;
+    return v744 - 1;
   }
   function v68() {
-    var v1603 = this.coefficients;
-    var v746 = v1603[0];
-    return v746 == 0;
+    var v1602 = this.coefficients;
+    var v745 = v1602[0];
+    return v745 == 0;
   }
-  var v1604 = coefficients == null;
-  var v2304 = !v1604;
-  if (v2304) {
-    var v2303 = coefficients.length;
-    v1604 = v2303 == 0;
+  var v1603 = coefficients == null;
+  var v2302 = !v1603;
+  if (v2302) {
+    var v2301 = coefficients.length;
+    v1603 = v2301 == 0;
   }
-  var v747 = v1604;
-  if (v747) {
+  var v746 = v1603;
+  if (v746) {
     throw "System.ArgumentException";
   }
   this.field = field$$1;
   var coefficientsLength = coefficients.length;
-  var v1605 = coefficientsLength > 1;
-  if (v1605) {
-    var v2305 = coefficients[0];
-    v1605 = v2305 == 0;
+  var v1604 = coefficientsLength > 1;
+  if (v1604) {
+    var v2303 = coefficients[0];
+    v1604 = v2303 == 0;
   }
-  var v756 = v1605;
-  if (v756) {
+  var v755 = v1604;
+  if (v755) {
     var firstNonZero = 1;
-    var v1606 = firstNonZero < coefficientsLength;
-    if (v1606) {
-      var v2306 = coefficients[firstNonZero];
-      v1606 = v2306 == 0;
+    var v1605 = firstNonZero < coefficientsLength;
+    if (v1605) {
+      var v2304 = coefficients[firstNonZero];
+      v1605 = v2304 == 0;
     }
-    var v748 = v1606;
-    for (;v748;) {
+    var v747 = v1605;
+    for (;v747;) {
       firstNonZero++;
-      var v1607 = firstNonZero < coefficientsLength;
-      if (v1607) {
-        var v2307 = coefficients[firstNonZero];
-        v1607 = v2307 == 0;
+      var v1606 = firstNonZero < coefficientsLength;
+      if (v1606) {
+        var v2305 = coefficients[firstNonZero];
+        v1606 = v2305 == 0;
       }
-      v748 = v1607;
+      v747 = v1606;
     }
-    var v755 = firstNonZero == coefficientsLength;
-    if (v755) {
-      var v749 = field$$1.Zero;
-      this.coefficients = v749.coefficients;
+    var v754 = firstNonZero == coefficientsLength;
+    if (v754) {
+      var v748 = field$$1.Zero;
+      this.coefficients = v748.coefficients;
     } else {
-      var v750 = coefficientsLength - firstNonZero;
-      var v2819 = new Array(v750);
-      this.coefficients = v2819;
+      var v749 = coefficientsLength - firstNonZero;
+      var v2817 = new Array(v749);
+      this.coefficients = v2817;
       var i$$35 = 0;
-      var v2308 = this.coefficients;
-      var v1608 = v2308.length;
-      var v752 = i$$35 < v1608;
-      for (;v752;) {
-        var v751 = this.coefficients;
-        v751[i$$35] = 0;
+      var v2306 = this.coefficients;
+      var v1607 = v2306.length;
+      var v751 = i$$35 < v1607;
+      for (;v751;) {
+        var v750 = this.coefficients;
+        v750[i$$35] = 0;
         i$$35++;
-        var v2309 = this.coefficients;
-        var v1609 = v2309.length;
-        v752 = i$$35 < v1609;
+        var v2307 = this.coefficients;
+        var v1608 = v2307.length;
+        v751 = i$$35 < v1608;
       }
       var ci = 0;
-      var v2310 = this.coefficients;
-      var v1610 = v2310.length;
-      var v754 = ci < v1610;
-      for (;v754;) {
-        var v753 = this.coefficients;
-        var v1611 = firstNonZero + ci;
-        v753[ci] = coefficients[v1611];
+      var v2308 = this.coefficients;
+      var v1609 = v2308.length;
+      var v753 = ci < v1609;
+      for (;v753;) {
+        var v752 = this.coefficients;
+        var v1610 = firstNonZero + ci;
+        v752[ci] = coefficients[v1610];
         ci++;
-        var v2311 = this.coefficients;
-        var v1612 = v2311.length;
-        v754 = ci < v1612;
+        var v2309 = this.coefficients;
+        var v1611 = v2309.length;
+        v753 = ci < v1611;
       }
     }
   } else {
@@ -3891,74 +3897,74 @@ function GF256Poly(field$$1, coefficients) {
 }
 function GF256(primitive) {
   function v84(a$$6, b$$3) {
-    var v1613 = a$$6 == 0;
-    var v2312 = !v1613;
-    if (v2312) {
-      v1613 = b$$3 == 0;
+    var v1612 = a$$6 == 0;
+    var v2310 = !v1612;
+    if (v2310) {
+      v1612 = b$$3 == 0;
     }
-    var v757 = v1613;
-    if (v757) {
+    var v756 = v1612;
+    if (v756) {
       return 0;
     }
-    var v758 = a$$6 == 1;
-    if (v758) {
+    var v757 = a$$6 == 1;
+    if (v757) {
       return b$$3;
     }
-    var v759 = b$$3 == 1;
-    if (v759) {
+    var v758 = b$$3 == 1;
+    if (v758) {
       return a$$6;
     }
-    var v760 = this.expTable;
-    var v2546 = this.logTable;
-    var v2313 = v2546[a$$6];
-    var v2547 = this.logTable;
-    var v2314 = v2547[b$$3];
-    var v1614 = v2313 + v2314;
-    var v761 = v1614 % 255;
-    return v760[v761];
+    var v759 = this.expTable;
+    var v2544 = this.logTable;
+    var v2311 = v2544[a$$6];
+    var v2545 = this.logTable;
+    var v2312 = v2545[b$$3];
+    var v1613 = v2311 + v2312;
+    var v760 = v1613 % 255;
+    return v759[v760];
   }
   function v83(a$$5) {
-    var v762 = a$$5 == 0;
-    if (v762) {
+    var v761 = a$$5 == 0;
+    if (v761) {
       throw "System.ArithmeticException";
     }
-    var v763 = this.expTable;
-    var v2315 = this.logTable;
-    var v1615 = v2315[a$$5];
-    var v764 = 255 - v1615;
-    return v763[v764];
+    var v762 = this.expTable;
+    var v2313 = this.logTable;
+    var v1614 = v2313[a$$5];
+    var v763 = 255 - v1614;
+    return v762[v763];
   }
   function v82(a$$4) {
-    var v765 = a$$4 == 0;
-    if (v765) {
+    var v764 = a$$4 == 0;
+    if (v764) {
       throw "System.ArgumentException";
     }
-    var v766 = this.logTable;
-    return v766[a$$4];
+    var v765 = this.logTable;
+    return v765[a$$4];
   }
   function v81(a$$3) {
-    var v767 = this.expTable;
-    return v767[a$$3];
+    var v766 = this.expTable;
+    return v766[a$$3];
   }
   function v80(degree$$2, coefficient$$1) {
-    var v768 = degree$$2 < 0;
-    if (v768) {
+    var v767 = degree$$2 < 0;
+    if (v767) {
       throw "System.ArgumentException";
     }
-    var v769 = coefficient$$1 == 0;
-    if (v769) {
+    var v768 = coefficient$$1 == 0;
+    if (v768) {
       return zero;
     }
-    var v770 = degree$$2 + 1;
-    var coefficients$$1 = new Array(v770);
+    var v769 = degree$$2 + 1;
+    var coefficients$$1 = new Array(v769);
     var i$$42 = 0;
-    var v1616 = coefficients$$1.length;
-    var v771 = i$$42 < v1616;
-    for (;v771;) {
+    var v1615 = coefficients$$1.length;
+    var v770 = i$$42 < v1615;
+    for (;v770;) {
       coefficients$$1[i$$42] = 0;
       i$$42++;
-      var v1617 = coefficients$$1.length;
-      v771 = i$$42 < v1617;
+      var v1616 = coefficients$$1.length;
+      v770 = i$$42 < v1616;
     }
     coefficients$$1[0] = coefficient$$1;
     return new GF256Poly(this, coefficients$$1);
@@ -3969,44 +3975,44 @@ function GF256(primitive) {
   function v78() {
     return this.zero;
   }
-  var v2820 = new Array(256);
-  this.expTable = v2820;
-  var v2821 = new Array(256);
-  this.logTable = v2821;
+  var v2818 = new Array(256);
+  this.expTable = v2818;
+  var v2819 = new Array(256);
+  this.logTable = v2819;
   var x$$57 = 1;
   var i$$41 = 0;
-  var v774 = i$$41 < 256;
-  for (;v774;) {
-    var v772 = this.expTable;
-    v772[i$$41] = x$$57;
+  var v773 = i$$41 < 256;
+  for (;v773;) {
+    var v771 = this.expTable;
+    v771[i$$41] = x$$57;
     x$$57 = x$$57 << 1;
-    var v773 = x$$57 >= 256;
-    if (v773) {
+    var v772 = x$$57 >= 256;
+    if (v772) {
       x$$57 = x$$57 ^ primitive;
     }
     i$$41++;
-    v774 = i$$41 < 256;
+    v773 = i$$41 < 256;
   }
   i$$41 = 0;
-  var v777 = i$$41 < 255;
-  for (;v777;) {
-    var v775 = this.logTable;
-    var v1618 = this.expTable;
-    var v776 = v1618[i$$41];
-    v775[v776] = i$$41;
+  var v776 = i$$41 < 255;
+  for (;v776;) {
+    var v774 = this.logTable;
+    var v1617 = this.expTable;
+    var v775 = v1617[i$$41];
+    v774[v775] = i$$41;
     i$$41++;
-    v777 = i$$41 < 255;
+    v776 = i$$41 < 255;
   }
   var at0 = new Array(1);
   at0[0] = 0;
-  var v778 = new Array(at0);
-  var v2822 = new GF256Poly(this, v778);
-  this.zero = v2822;
+  var v777 = new Array(at0);
+  var v2820 = new GF256Poly(this, v777);
+  this.zero = v2820;
   var at1 = new Array(1);
   at1[0] = 1;
-  var v779 = new Array(at1);
-  var v2823 = new GF256Poly(this, v779);
-  this.one = v2823;
+  var v778 = new Array(at1);
+  var v2821 = new GF256Poly(this, v778);
+  this.one = v2821;
   this.__defineGetter__("Zero", v78);
   this.__defineGetter__("One", v79);
   this.buildMonomial = v80;
@@ -4017,42 +4023,42 @@ function GF256(primitive) {
   return;
 }
 function URShift(number, bits$$14) {
-  var v782 = number >= 0;
-  if (v782) {
+  var v781 = number >= 0;
+  if (v781) {
     return number >> bits$$14;
   } else {
-    var v780 = number >> bits$$14;
-    var v1619 = ~bits$$14;
-    var v781 = 2 << v1619;
-    return v780 + v781;
+    var v779 = number >> bits$$14;
+    var v1618 = ~bits$$14;
+    var v780 = 2 << v1618;
+    return v779 + v780;
   }
   return;
 }
 function FinderPattern(posX, posY, estimatedModuleSize) {
   function v90(moduleSize$$2, i$$47, j$$25) {
-    var v2657 = this.y;
-    var v2548 = i$$47 - v2657;
-    var v2316 = Math.abs(v2548);
-    var v1620 = v2316 <= moduleSize$$2;
-    if (v1620) {
-      var v2658 = this.x;
-      var v2549 = j$$25 - v2658;
-      var v2317 = Math.abs(v2549);
-      v1620 = v2317 <= moduleSize$$2;
+    var v2655 = this.y;
+    var v2546 = i$$47 - v2655;
+    var v2314 = Math.abs(v2546);
+    var v1619 = v2314 <= moduleSize$$2;
+    if (v1619) {
+      var v2656 = this.x;
+      var v2547 = j$$25 - v2656;
+      var v2315 = Math.abs(v2547);
+      v1619 = v2315 <= moduleSize$$2;
     }
-    var v785 = v1620;
-    if (v785) {
-      var v1621 = this.estimatedModuleSize;
-      var v783 = moduleSize$$2 - v1621;
-      var moduleSizeDiff = Math.abs(v783);
-      var v784 = moduleSizeDiff <= 1;
-      var v1623 = !v784;
-      if (v1623) {
-        var v2318 = this.estimatedModuleSize;
-        var v1622 = moduleSizeDiff / v2318;
-        v784 = v1622 <= 1;
+    var v784 = v1619;
+    if (v784) {
+      var v1620 = this.estimatedModuleSize;
+      var v782 = moduleSize$$2 - v1620;
+      var moduleSizeDiff = Math.abs(v782);
+      var v783 = moduleSizeDiff <= 1;
+      var v1622 = !v783;
+      if (v1622) {
+        var v2316 = this.estimatedModuleSize;
+        var v1621 = moduleSizeDiff / v2316;
+        v783 = v1621 <= 1;
       }
-      return v784;
+      return v783;
     }
     return false;
   }
@@ -4108,28 +4114,28 @@ function FinderPatternFinder() {
     this.image = image$$12;
     var maxI$$1 = qrcode.height;
     var maxJ$$1 = qrcode.width;
-    var v1624 = 3 * maxI$$1;
-    var v1625 = 4 * MAX_MODULES;
-    var v786 = v1624 / v1625;
-    var iSkip = Math.floor(v786);
-    var v1626 = iSkip < MIN_SKIP;
-    var v2319 = !v1626;
-    if (v2319) {
-      v1626 = tryHarder;
+    var v1623 = 3 * maxI$$1;
+    var v1624 = 4 * MAX_MODULES;
+    var v785 = v1623 / v1624;
+    var iSkip = Math.floor(v785);
+    var v1625 = iSkip < MIN_SKIP;
+    var v2317 = !v1625;
+    if (v2317) {
+      v1625 = tryHarder;
     }
-    var v787 = v1626;
-    if (v787) {
+    var v786 = v1625;
+    if (v786) {
       iSkip = MIN_SKIP;
     }
     var done = false;
     var stateCount$$5 = new Array(5);
     var i$$54 = iSkip - 1;
-    var v1627 = i$$54 < maxI$$1;
-    if (v1627) {
-      v1627 = !done;
+    var v1626 = i$$54 < maxI$$1;
+    if (v1626) {
+      v1626 = !done;
     }
-    var v799 = v1627;
-    for (;v799;) {
+    var v798 = v1626;
+    for (;v798;) {
       stateCount$$5[0] = 0;
       stateCount$$5[1] = 0;
       stateCount$$5[2] = 0;
@@ -4137,67 +4143,67 @@ function FinderPatternFinder() {
       stateCount$$5[4] = 0;
       var currentState = 0;
       var j$$28 = 0;
-      var v796 = j$$28 < maxJ$$1;
-      for (;v796;) {
-        var v2550 = qrcode.width;
-        var v2320 = i$$54 * v2550;
-        var v1628 = j$$28 + v2320;
-        var v795 = image$$12[v1628];
-        if (v795) {
-          var v1629 = currentState & 1;
-          var v788 = v1629 == 1;
-          if (v788) {
+      var v795 = j$$28 < maxJ$$1;
+      for (;v795;) {
+        var v2548 = qrcode.width;
+        var v2318 = i$$54 * v2548;
+        var v1627 = j$$28 + v2318;
+        var v794 = image$$12[v1627];
+        if (v794) {
+          var v1628 = currentState & 1;
+          var v787 = v1628 == 1;
+          if (v787) {
             currentState++;
           }
           stateCount$$5[currentState]++;
         } else {
-          var v1630 = currentState & 1;
-          var v794 = v1630 == 0;
-          if (v794) {
-            var v793 = currentState == 4;
-            if (v793) {
-              var v792 = this.foundPatternCross(stateCount$$5);
-              if (v792) {
+          var v1629 = currentState & 1;
+          var v793 = v1629 == 0;
+          if (v793) {
+            var v792 = currentState == 4;
+            if (v792) {
+              var v791 = this.foundPatternCross(stateCount$$5);
+              if (v791) {
                 var confirmed = this.handlePossibleCenter(stateCount$$5, i$$54, j$$28);
                 if (confirmed) {
                   iSkip = 2;
-                  var v790 = this.hasSkipped;
-                  if (v790) {
+                  var v789 = this.hasSkipped;
+                  if (v789) {
                     done = this.haveMultiplyConfirmedCenters();
                   } else {
                     var rowSkip = this.findRowSkip();
-                    var v1631 = stateCount$$5[2];
-                    var v789 = rowSkip > v1631;
-                    if (v789) {
-                      var v2551 = stateCount$$5[2];
-                      var v2321 = rowSkip - v2551;
-                      var v1632 = v2321 - iSkip;
-                      i$$54 = i$$54 + v1632;
+                    var v1630 = stateCount$$5[2];
+                    var v788 = rowSkip > v1630;
+                    if (v788) {
+                      var v2549 = stateCount$$5[2];
+                      var v2319 = rowSkip - v2549;
+                      var v1631 = v2319 - iSkip;
+                      i$$54 = i$$54 + v1631;
                       j$$28 = maxJ$$1 - 1;
                     }
                   }
                 } else {
-                  var v1633 = j$$28 < maxJ$$1;
-                  if (v1633) {
-                    var v2727 = qrcode.width;
-                    var v2659 = i$$54 * v2727;
-                    var v2552 = j$$28 + v2659;
-                    var v2322 = image$$12[v2552];
-                    v1633 = !v2322;
+                  var v1632 = j$$28 < maxJ$$1;
+                  if (v1632) {
+                    var v2725 = qrcode.width;
+                    var v2657 = i$$54 * v2725;
+                    var v2550 = j$$28 + v2657;
+                    var v2320 = image$$12[v2550];
+                    v1632 = !v2320;
                   }
-                  var v791 = v1633;
+                  var v790 = v1632;
                   do {
                     j$$28++;
-                    var v1634 = j$$28 < maxJ$$1;
-                    if (v1634) {
-                      var v2728 = qrcode.width;
-                      var v2660 = i$$54 * v2728;
-                      var v2553 = j$$28 + v2660;
-                      var v2323 = image$$12[v2553];
-                      v1634 = !v2323;
+                    var v1633 = j$$28 < maxJ$$1;
+                    if (v1633) {
+                      var v2726 = qrcode.width;
+                      var v2658 = i$$54 * v2726;
+                      var v2551 = j$$28 + v2658;
+                      var v2321 = image$$12[v2551];
+                      v1633 = !v2321;
                     }
-                    v791 = v1634;
-                  } while (v791);
+                    v790 = v1633;
+                  } while (v790);
                   j$$28--;
                 }
                 currentState = 0;
@@ -4222,25 +4228,25 @@ function FinderPatternFinder() {
           }
         }
         j$$28++;
-        v796 = j$$28 < maxJ$$1;
+        v795 = j$$28 < maxJ$$1;
       }
-      var v798 = this.foundPatternCross(stateCount$$5);
-      if (v798) {
+      var v797 = this.foundPatternCross(stateCount$$5);
+      if (v797) {
         confirmed = this.handlePossibleCenter(stateCount$$5, i$$54, maxJ$$1);
         if (confirmed) {
           iSkip = stateCount$$5[0];
-          var v797 = this.hasSkipped;
-          if (v797) {
+          var v796 = this.hasSkipped;
+          if (v796) {
             done = haveMultiplyConfirmedCenters();
           }
         }
       }
       i$$54 = i$$54 + iSkip;
-      var v1635 = i$$54 < maxI$$1;
-      if (v1635) {
-        v1635 = !done;
+      var v1634 = i$$54 < maxI$$1;
+      if (v1634) {
+        v1634 = !done;
       }
-      v799 = v1635;
+      v798 = v1634;
     }
     var patternInfo = this.selectBestPatterns();
     qrcode.orderBestPatterns(patternInfo);
@@ -4249,221 +4255,221 @@ function FinderPatternFinder() {
   function v103() {
     var confirmedCount = 0;
     var totalModuleSize$$2 = 0;
-    var v800 = this.possibleCenters;
-    var max$$7 = v800.length;
+    var v799 = this.possibleCenters;
+    var max$$7 = v799.length;
     var i$$53 = 0;
-    var v803 = i$$53 < max$$7;
-    for (;v803;) {
-      var v801 = this.possibleCenters;
-      var pattern$$3 = v801[i$$53];
-      var v1636 = pattern$$3.Count;
-      var v802 = v1636 >= CENTER_QUORUM;
-      if (v802) {
+    var v802 = i$$53 < max$$7;
+    for (;v802;) {
+      var v800 = this.possibleCenters;
+      var pattern$$3 = v800[i$$53];
+      var v1635 = pattern$$3.Count;
+      var v801 = v1635 >= CENTER_QUORUM;
+      if (v801) {
         confirmedCount++;
-        var v1637 = pattern$$3.EstimatedModuleSize;
-        totalModuleSize$$2 = totalModuleSize$$2 + v1637;
+        var v1636 = pattern$$3.EstimatedModuleSize;
+        totalModuleSize$$2 = totalModuleSize$$2 + v1636;
       }
       i$$53++;
-      v803 = i$$53 < max$$7;
+      v802 = i$$53 < max$$7;
     }
-    var v804 = confirmedCount < 3;
-    if (v804) {
+    var v803 = confirmedCount < 3;
+    if (v803) {
       return false;
     }
     var average$$1 = totalModuleSize$$2 / max$$7;
     var totalDeviation = 0;
     i$$53 = 0;
-    var v806 = i$$53 < max$$7;
-    for (;v806;) {
-      var v805 = this.possibleCenters;
-      pattern$$3 = v805[i$$53];
-      var v2554 = pattern$$3.EstimatedModuleSize;
-      var v2324 = v2554 - average$$1;
-      var v1638 = Math.abs(v2324);
-      totalDeviation = totalDeviation + v1638;
+    var v805 = i$$53 < max$$7;
+    for (;v805;) {
+      var v804 = this.possibleCenters;
+      pattern$$3 = v804[i$$53];
+      var v2552 = pattern$$3.EstimatedModuleSize;
+      var v2322 = v2552 - average$$1;
+      var v1637 = Math.abs(v2322);
+      totalDeviation = totalDeviation + v1637;
       i$$53++;
-      v806 = i$$53 < max$$7;
+      v805 = i$$53 < max$$7;
     }
-    var v807 = .05 * totalModuleSize$$2;
-    return totalDeviation <= v807;
+    var v806 = .05 * totalModuleSize$$2;
+    return totalDeviation <= v806;
   }
   function v102() {
-    var v808 = this.possibleCenters;
-    var max$$6 = v808.length;
-    var v809 = max$$6 <= 1;
-    if (v809) {
+    var v807 = this.possibleCenters;
+    var max$$6 = v807.length;
+    var v808 = max$$6 <= 1;
+    if (v808) {
       return 0;
     }
     var firstConfirmedCenter = null;
     var i$$52 = 0;
-    var v814 = i$$52 < max$$6;
-    for (;v814;) {
-      var v810 = this.possibleCenters;
-      var center$$1 = v810[i$$52];
-      var v1639 = center$$1.Count;
-      var v813 = v1639 >= CENTER_QUORUM;
-      if (v813) {
-        var v812 = firstConfirmedCenter == null;
-        if (v812) {
+    var v813 = i$$52 < max$$6;
+    for (;v813;) {
+      var v809 = this.possibleCenters;
+      var center$$1 = v809[i$$52];
+      var v1638 = center$$1.Count;
+      var v812 = v1638 >= CENTER_QUORUM;
+      if (v812) {
+        var v811 = firstConfirmedCenter == null;
+        if (v811) {
           firstConfirmedCenter = center$$1;
         } else {
           this.hasSkipped = true;
-          var v2661 = firstConfirmedCenter.X;
-          var v2662 = center$$1.X;
-          var v2555 = v2661 - v2662;
-          var v2325 = Math.abs(v2555);
-          var v2663 = firstConfirmedCenter.Y;
-          var v2664 = center$$1.Y;
-          var v2556 = v2663 - v2664;
-          var v2326 = Math.abs(v2556);
-          var v1640 = v2325 - v2326;
-          var v811 = v1640 / 2;
-          return Math.floor(v811);
+          var v2659 = firstConfirmedCenter.X;
+          var v2660 = center$$1.X;
+          var v2553 = v2659 - v2660;
+          var v2323 = Math.abs(v2553);
+          var v2661 = firstConfirmedCenter.Y;
+          var v2662 = center$$1.Y;
+          var v2554 = v2661 - v2662;
+          var v2324 = Math.abs(v2554);
+          var v1639 = v2323 - v2324;
+          var v810 = v1639 / 2;
+          return Math.floor(v810);
         }
       }
       i$$52++;
-      v814 = i$$52 < max$$6;
+      v813 = i$$52 < max$$6;
     }
     return 0;
   }
   function v101() {
     function v100(a$$8, b$$5) {
-      var v1641 = a$$8.count;
-      var v1642 = b$$5.count;
-      var v815 = v1641 > v1642;
-      if (v815) {
-        return-1;
+      var v1640 = a$$8.count;
+      var v1641 = b$$5.count;
+      var v814 = v1640 > v1641;
+      if (v814) {
+        return -1;
       }
-      var v1643 = a$$8.count;
-      var v1644 = b$$5.count;
-      var v816 = v1643 < v1644;
-      if (v816) {
+      var v1642 = a$$8.count;
+      var v1643 = b$$5.count;
+      var v815 = v1642 < v1643;
+      if (v815) {
         return 1;
       }
       return 0;
     }
-    var v817 = this.possibleCenters;
-    var startSize = v817.length;
-    var v818 = startSize < 3;
-    if (v818) {
+    var v816 = this.possibleCenters;
+    var startSize = v816.length;
+    var v817 = startSize < 3;
+    if (v817) {
       throw "Couldn't find enough finder patterns";
     }
-    var v824 = startSize > 3;
-    if (v824) {
+    var v823 = startSize > 3;
+    if (v823) {
       var totalModuleSize$$1 = 0;
       var i$$51 = 0;
-      var v819 = i$$51 < startSize;
-      for (;v819;) {
-        var v2557 = this.possibleCenters;
-        var v2327 = v2557[i$$51];
-        var v1645 = v2327.EstimatedModuleSize;
-        totalModuleSize$$1 = totalModuleSize$$1 + v1645;
+      var v818 = i$$51 < startSize;
+      for (;v818;) {
+        var v2555 = this.possibleCenters;
+        var v2325 = v2555[i$$51];
+        var v1644 = v2325.EstimatedModuleSize;
+        totalModuleSize$$1 = totalModuleSize$$1 + v1644;
         i$$51++;
-        v819 = i$$51 < startSize;
+        v818 = i$$51 < startSize;
       }
       var average = totalModuleSize$$1 / startSize;
       i$$51 = 0;
-      var v2558 = this.possibleCenters;
-      var v2328 = v2558.length;
-      var v1646 = i$$51 < v2328;
-      if (v1646) {
-        var v2559 = this.possibleCenters;
-        var v2329 = v2559.length;
-        v1646 = v2329 > 3;
+      var v2556 = this.possibleCenters;
+      var v2326 = v2556.length;
+      var v1645 = i$$51 < v2326;
+      if (v1645) {
+        var v2557 = this.possibleCenters;
+        var v2327 = v2557.length;
+        v1645 = v2327 > 3;
       }
-      var v823 = v1646;
-      for (;v823;) {
-        var v820 = this.possibleCenters;
-        var pattern$$2 = v820[i$$51];
-        var v2560 = pattern$$2.EstimatedModuleSize;
-        var v2330 = v2560 - average;
-        var v1647 = Math.abs(v2330);
-        var v1648 = .2 * average;
-        var v822 = v1647 > v1648;
-        if (v822) {
-          var v821 = this.possibleCenters;
-          v821.remove(i$$51);
+      var v822 = v1645;
+      for (;v822;) {
+        var v819 = this.possibleCenters;
+        var pattern$$2 = v819[i$$51];
+        var v2558 = pattern$$2.EstimatedModuleSize;
+        var v2328 = v2558 - average;
+        var v1646 = Math.abs(v2328);
+        var v1647 = .2 * average;
+        var v821 = v1646 > v1647;
+        if (v821) {
+          var v820 = this.possibleCenters;
+          v820.remove(i$$51);
           i$$51--;
         }
         i$$51++;
-        var v2561 = this.possibleCenters;
-        var v2331 = v2561.length;
-        var v1649 = i$$51 < v2331;
-        if (v1649) {
-          var v2562 = this.possibleCenters;
-          var v2332 = v2562.length;
-          v1649 = v2332 > 3;
+        var v2559 = this.possibleCenters;
+        var v2329 = v2559.length;
+        var v1648 = i$$51 < v2329;
+        if (v1648) {
+          var v2560 = this.possibleCenters;
+          var v2330 = v2560.length;
+          v1648 = v2330 > 3;
         }
-        v823 = v1649;
+        v822 = v1648;
       }
     }
-    var v2333 = this.possibleCenters;
-    var v1650 = v2333.length;
-    var v826 = v1650 > 3;
-    if (v826) {
-      var v825 = this.possibleCenters;
-      v825.sort(v100);
+    var v2331 = this.possibleCenters;
+    var v1649 = v2331.length;
+    var v825 = v1649 > 3;
+    if (v825) {
+      var v824 = this.possibleCenters;
+      v824.sort(v100);
     }
+    var v1650 = this.possibleCenters;
+    var v826 = v1650[0];
     var v1651 = this.possibleCenters;
-    var v827 = v1651[0];
+    var v827 = v1651[1];
     var v1652 = this.possibleCenters;
-    var v828 = v1652[1];
-    var v1653 = this.possibleCenters;
-    var v829 = v1653[2];
-    return new Array(v827, v828, v829);
+    var v828 = v1652[2];
+    return new Array(v826, v827, v828);
   }
   function v99(stateCount$$4, i$$50, j$$27) {
-    var v2563 = stateCount$$4[0];
-    var v2564 = stateCount$$4[1];
-    var v2334 = v2563 + v2564;
-    var v2335 = stateCount$$4[2];
-    var v1654 = v2334 + v2335;
-    var v1655 = stateCount$$4[3];
-    var v830 = v1654 + v1655;
-    var v831 = stateCount$$4[4];
-    var stateCountTotal$$2 = v830 + v831;
+    var v2561 = stateCount$$4[0];
+    var v2562 = stateCount$$4[1];
+    var v2332 = v2561 + v2562;
+    var v2333 = stateCount$$4[2];
+    var v1653 = v2332 + v2333;
+    var v1654 = stateCount$$4[3];
+    var v829 = v1653 + v1654;
+    var v830 = stateCount$$4[4];
+    var stateCountTotal$$2 = v829 + v830;
     var centerJ$$1 = this.centerFromEnd(stateCount$$4, j$$27);
-    var v832 = Math.floor(centerJ$$1);
-    var v833 = stateCount$$4[2];
-    var centerI$$1 = this.crossCheckVertical(i$$50, v832, v833, stateCountTotal$$2);
-    var v1656 = isNaN(centerI$$1);
-    var v846 = !v1656;
-    if (v846) {
-      var v834 = Math.floor(centerJ$$1);
-      var v835 = Math.floor(centerI$$1);
-      var v836 = stateCount$$4[2];
-      centerJ$$1 = this.crossCheckHorizontal(v834, v835, v836, stateCountTotal$$2);
-      var v1657 = isNaN(centerJ$$1);
-      var v845 = !v1657;
-      if (v845) {
+    var v831 = Math.floor(centerJ$$1);
+    var v832 = stateCount$$4[2];
+    var centerI$$1 = this.crossCheckVertical(i$$50, v831, v832, stateCountTotal$$2);
+    var v1655 = isNaN(centerI$$1);
+    var v845 = !v1655;
+    if (v845) {
+      var v833 = Math.floor(centerJ$$1);
+      var v834 = Math.floor(centerI$$1);
+      var v835 = stateCount$$4[2];
+      centerJ$$1 = this.crossCheckHorizontal(v833, v834, v835, stateCountTotal$$2);
+      var v1656 = isNaN(centerJ$$1);
+      var v844 = !v1656;
+      if (v844) {
         var estimatedModuleSize$$1 = stateCountTotal$$2 / 7;
         var found = false;
-        var v837 = this.possibleCenters;
-        var max$$5 = v837.length;
+        var v836 = this.possibleCenters;
+        var max$$5 = v836.length;
         var index$$39 = 0;
-        var v840 = index$$39 < max$$5;
-        for (;v840;) {
-          var v838 = this.possibleCenters;
-          var center = v838[index$$39];
-          var v839 = center.aboutEquals(estimatedModuleSize$$1, centerI$$1, centerJ$$1);
-          if (v839) {
+        var v839 = index$$39 < max$$5;
+        for (;v839;) {
+          var v837 = this.possibleCenters;
+          var center = v837[index$$39];
+          var v838 = center.aboutEquals(estimatedModuleSize$$1, centerI$$1, centerJ$$1);
+          if (v838) {
             center.incrementCount();
             found = true;
             break;
           }
           index$$39++;
-          v840 = index$$39 < max$$5;
+          v839 = index$$39 < max$$5;
         }
-        var v844 = !found;
-        if (v844) {
+        var v843 = !found;
+        if (v843) {
           var point$$2 = new FinderPattern(centerJ$$1, centerI$$1, estimatedModuleSize$$1);
-          var v841 = this.possibleCenters;
-          v841.push(point$$2);
-          var v1658 = this.resultPointCallback;
-          var v843 = v1658 != null;
-          if (v843) {
-            var v842 = this.resultPointCallback;
-            v842.foundPossibleResultPoint(point$$2);
+          var v840 = this.possibleCenters;
+          v840.push(point$$2);
+          var v1657 = this.resultPointCallback;
+          var v842 = v1657 != null;
+          if (v842) {
+            var v841 = this.resultPointCallback;
+            v841.foundPossibleResultPoint(point$$2);
           }
         }
         return true;
@@ -4476,558 +4482,558 @@ function FinderPatternFinder() {
     var maxJ = qrcode.width;
     var stateCount$$3 = this.CrossCheckStateCount;
     var j$$26 = startJ;
-    var v1659 = j$$26 >= 0;
-    if (v1659) {
-      var v2665 = qrcode.width;
-      var v2565 = centerI * v2665;
-      var v2336 = j$$26 + v2565;
-      v1659 = image$$11[v2336];
+    var v1658 = j$$26 >= 0;
+    if (v1658) {
+      var v2663 = qrcode.width;
+      var v2563 = centerI * v2663;
+      var v2334 = j$$26 + v2563;
+      v1658 = image$$11[v2334];
     }
-    var v847 = v1659;
-    for (;v847;) {
+    var v846 = v1658;
+    for (;v846;) {
       stateCount$$3[2]++;
       j$$26--;
-      var v1660 = j$$26 >= 0;
-      if (v1660) {
-        var v2666 = qrcode.width;
-        var v2566 = centerI * v2666;
-        var v2337 = j$$26 + v2566;
-        v1660 = image$$11[v2337];
+      var v1659 = j$$26 >= 0;
+      if (v1659) {
+        var v2664 = qrcode.width;
+        var v2564 = centerI * v2664;
+        var v2335 = j$$26 + v2564;
+        v1659 = image$$11[v2335];
       }
-      v847 = v1660;
+      v846 = v1659;
     }
-    var v848 = j$$26 < 0;
-    if (v848) {
+    var v847 = j$$26 < 0;
+    if (v847) {
       return NaN;
     }
-    var v2338 = j$$26 >= 0;
-    if (v2338) {
-      var v2770 = qrcode.width;
-      var v2729 = centerI * v2770;
-      var v2667 = j$$26 + v2729;
-      var v2567 = image$$11[v2667];
-      v2338 = !v2567;
+    var v2336 = j$$26 >= 0;
+    if (v2336) {
+      var v2768 = qrcode.width;
+      var v2727 = centerI * v2768;
+      var v2665 = j$$26 + v2727;
+      var v2565 = image$$11[v2665];
+      v2336 = !v2565;
     }
-    var v1661 = v2338;
-    if (v1661) {
-      var v2339 = stateCount$$3[1];
-      v1661 = v2339 <= maxCount$$1;
+    var v1660 = v2336;
+    if (v1660) {
+      var v2337 = stateCount$$3[1];
+      v1660 = v2337 <= maxCount$$1;
     }
-    var v849 = v1661;
-    for (;v849;) {
+    var v848 = v1660;
+    for (;v848;) {
       stateCount$$3[1]++;
       j$$26--;
-      var v2340 = j$$26 >= 0;
-      if (v2340) {
-        var v2771 = qrcode.width;
-        var v2730 = centerI * v2771;
-        var v2668 = j$$26 + v2730;
-        var v2568 = image$$11[v2668];
-        v2340 = !v2568;
+      var v2338 = j$$26 >= 0;
+      if (v2338) {
+        var v2769 = qrcode.width;
+        var v2728 = centerI * v2769;
+        var v2666 = j$$26 + v2728;
+        var v2566 = image$$11[v2666];
+        v2338 = !v2566;
       }
-      var v1662 = v2340;
-      if (v1662) {
-        var v2341 = stateCount$$3[1];
-        v1662 = v2341 <= maxCount$$1;
+      var v1661 = v2338;
+      if (v1661) {
+        var v2339 = stateCount$$3[1];
+        v1661 = v2339 <= maxCount$$1;
       }
-      v849 = v1662;
+      v848 = v1661;
     }
-    var v1663 = j$$26 < 0;
-    var v2343 = !v1663;
-    if (v2343) {
-      var v2342 = stateCount$$3[1];
-      v1663 = v2342 > maxCount$$1;
+    var v1662 = j$$26 < 0;
+    var v2341 = !v1662;
+    if (v2341) {
+      var v2340 = stateCount$$3[1];
+      v1662 = v2340 > maxCount$$1;
     }
-    var v850 = v1663;
-    if (v850) {
+    var v849 = v1662;
+    if (v849) {
       return NaN;
     }
-    var v2344 = j$$26 >= 0;
-    if (v2344) {
-      var v2731 = qrcode.width;
-      var v2669 = centerI * v2731;
-      var v2569 = j$$26 + v2669;
-      v2344 = image$$11[v2569];
+    var v2342 = j$$26 >= 0;
+    if (v2342) {
+      var v2729 = qrcode.width;
+      var v2667 = centerI * v2729;
+      var v2567 = j$$26 + v2667;
+      v2342 = image$$11[v2567];
     }
-    var v1664 = v2344;
-    if (v1664) {
-      var v2345 = stateCount$$3[0];
-      v1664 = v2345 <= maxCount$$1;
+    var v1663 = v2342;
+    if (v1663) {
+      var v2343 = stateCount$$3[0];
+      v1663 = v2343 <= maxCount$$1;
     }
-    var v851 = v1664;
-    for (;v851;) {
+    var v850 = v1663;
+    for (;v850;) {
       stateCount$$3[0]++;
       j$$26--;
-      var v2346 = j$$26 >= 0;
-      if (v2346) {
-        var v2732 = qrcode.width;
-        var v2670 = centerI * v2732;
-        var v2570 = j$$26 + v2670;
-        v2346 = image$$11[v2570];
+      var v2344 = j$$26 >= 0;
+      if (v2344) {
+        var v2730 = qrcode.width;
+        var v2668 = centerI * v2730;
+        var v2568 = j$$26 + v2668;
+        v2344 = image$$11[v2568];
       }
-      var v1665 = v2346;
-      if (v1665) {
-        var v2347 = stateCount$$3[0];
-        v1665 = v2347 <= maxCount$$1;
+      var v1664 = v2344;
+      if (v1664) {
+        var v2345 = stateCount$$3[0];
+        v1664 = v2345 <= maxCount$$1;
       }
-      v851 = v1665;
+      v850 = v1664;
     }
-    var v1666 = stateCount$$3[0];
-    var v852 = v1666 > maxCount$$1;
-    if (v852) {
+    var v1665 = stateCount$$3[0];
+    var v851 = v1665 > maxCount$$1;
+    if (v851) {
       return NaN;
     }
     j$$26 = startJ + 1;
-    var v1667 = j$$26 < maxJ;
-    if (v1667) {
-      var v2671 = qrcode.width;
-      var v2571 = centerI * v2671;
-      var v2348 = j$$26 + v2571;
-      v1667 = image$$11[v2348];
+    var v1666 = j$$26 < maxJ;
+    if (v1666) {
+      var v2669 = qrcode.width;
+      var v2569 = centerI * v2669;
+      var v2346 = j$$26 + v2569;
+      v1666 = image$$11[v2346];
     }
-    var v853 = v1667;
-    for (;v853;) {
+    var v852 = v1666;
+    for (;v852;) {
       stateCount$$3[2]++;
       j$$26++;
-      var v1668 = j$$26 < maxJ;
-      if (v1668) {
-        var v2672 = qrcode.width;
-        var v2572 = centerI * v2672;
-        var v2349 = j$$26 + v2572;
-        v1668 = image$$11[v2349];
+      var v1667 = j$$26 < maxJ;
+      if (v1667) {
+        var v2670 = qrcode.width;
+        var v2570 = centerI * v2670;
+        var v2347 = j$$26 + v2570;
+        v1667 = image$$11[v2347];
       }
-      v853 = v1668;
+      v852 = v1667;
     }
-    var v854 = j$$26 == maxJ;
-    if (v854) {
+    var v853 = j$$26 == maxJ;
+    if (v853) {
       return NaN;
     }
-    var v2350 = j$$26 < maxJ;
-    if (v2350) {
-      var v2772 = qrcode.width;
-      var v2733 = centerI * v2772;
-      var v2673 = j$$26 + v2733;
-      var v2573 = image$$11[v2673];
-      v2350 = !v2573;
+    var v2348 = j$$26 < maxJ;
+    if (v2348) {
+      var v2770 = qrcode.width;
+      var v2731 = centerI * v2770;
+      var v2671 = j$$26 + v2731;
+      var v2571 = image$$11[v2671];
+      v2348 = !v2571;
     }
-    var v1669 = v2350;
-    if (v1669) {
-      var v2351 = stateCount$$3[3];
-      v1669 = v2351 < maxCount$$1;
+    var v1668 = v2348;
+    if (v1668) {
+      var v2349 = stateCount$$3[3];
+      v1668 = v2349 < maxCount$$1;
     }
-    var v855 = v1669;
-    for (;v855;) {
+    var v854 = v1668;
+    for (;v854;) {
       stateCount$$3[3]++;
       j$$26++;
-      var v2352 = j$$26 < maxJ;
-      if (v2352) {
-        var v2773 = qrcode.width;
-        var v2734 = centerI * v2773;
-        var v2674 = j$$26 + v2734;
-        var v2574 = image$$11[v2674];
-        v2352 = !v2574;
+      var v2350 = j$$26 < maxJ;
+      if (v2350) {
+        var v2771 = qrcode.width;
+        var v2732 = centerI * v2771;
+        var v2672 = j$$26 + v2732;
+        var v2572 = image$$11[v2672];
+        v2350 = !v2572;
       }
-      var v1670 = v2352;
-      if (v1670) {
-        var v2353 = stateCount$$3[3];
-        v1670 = v2353 < maxCount$$1;
+      var v1669 = v2350;
+      if (v1669) {
+        var v2351 = stateCount$$3[3];
+        v1669 = v2351 < maxCount$$1;
       }
-      v855 = v1670;
+      v854 = v1669;
     }
-    var v1671 = j$$26 == maxJ;
-    var v2355 = !v1671;
-    if (v2355) {
-      var v2354 = stateCount$$3[3];
-      v1671 = v2354 >= maxCount$$1;
+    var v1670 = j$$26 == maxJ;
+    var v2353 = !v1670;
+    if (v2353) {
+      var v2352 = stateCount$$3[3];
+      v1670 = v2352 >= maxCount$$1;
+    }
+    var v855 = v1670;
+    if (v855) {
+      return NaN;
+    }
+    var v2354 = j$$26 < maxJ;
+    if (v2354) {
+      var v2733 = qrcode.width;
+      var v2673 = centerI * v2733;
+      var v2573 = j$$26 + v2673;
+      v2354 = image$$11[v2573];
+    }
+    var v1671 = v2354;
+    if (v1671) {
+      var v2355 = stateCount$$3[4];
+      v1671 = v2355 < maxCount$$1;
     }
     var v856 = v1671;
-    if (v856) {
-      return NaN;
-    }
-    var v2356 = j$$26 < maxJ;
-    if (v2356) {
-      var v2735 = qrcode.width;
-      var v2675 = centerI * v2735;
-      var v2575 = j$$26 + v2675;
-      v2356 = image$$11[v2575];
-    }
-    var v1672 = v2356;
-    if (v1672) {
-      var v2357 = stateCount$$3[4];
-      v1672 = v2357 < maxCount$$1;
-    }
-    var v857 = v1672;
-    for (;v857;) {
+    for (;v856;) {
       stateCount$$3[4]++;
       j$$26++;
-      var v2358 = j$$26 < maxJ;
-      if (v2358) {
-        var v2736 = qrcode.width;
-        var v2676 = centerI * v2736;
-        var v2576 = j$$26 + v2676;
-        v2358 = image$$11[v2576];
+      var v2356 = j$$26 < maxJ;
+      if (v2356) {
+        var v2734 = qrcode.width;
+        var v2674 = centerI * v2734;
+        var v2574 = j$$26 + v2674;
+        v2356 = image$$11[v2574];
       }
-      var v1673 = v2358;
-      if (v1673) {
-        var v2359 = stateCount$$3[4];
-        v1673 = v2359 < maxCount$$1;
+      var v1672 = v2356;
+      if (v1672) {
+        var v2357 = stateCount$$3[4];
+        v1672 = v2357 < maxCount$$1;
       }
-      v857 = v1673;
+      v856 = v1672;
     }
-    var v1674 = stateCount$$3[4];
-    var v858 = v1674 >= maxCount$$1;
-    if (v858) {
+    var v1673 = stateCount$$3[4];
+    var v857 = v1673 >= maxCount$$1;
+    if (v857) {
       return NaN;
     }
-    var v2577 = stateCount$$3[0];
-    var v2578 = stateCount$$3[1];
-    var v2360 = v2577 + v2578;
-    var v2361 = stateCount$$3[2];
-    var v1675 = v2360 + v2361;
-    var v1676 = stateCount$$3[3];
-    var v859 = v1675 + v1676;
-    var v860 = stateCount$$3[4];
-    var stateCountTotal$$1 = v859 + v860;
-    var v2579 = stateCountTotal$$1 - originalStateCountTotal$$1;
-    var v2362 = Math.abs(v2579);
-    var v1677 = 5 * v2362;
-    var v861 = v1677 >= originalStateCountTotal$$1;
-    if (v861) {
+    var v2575 = stateCount$$3[0];
+    var v2576 = stateCount$$3[1];
+    var v2358 = v2575 + v2576;
+    var v2359 = stateCount$$3[2];
+    var v1674 = v2358 + v2359;
+    var v1675 = stateCount$$3[3];
+    var v858 = v1674 + v1675;
+    var v859 = stateCount$$3[4];
+    var stateCountTotal$$1 = v858 + v859;
+    var v2577 = stateCountTotal$$1 - originalStateCountTotal$$1;
+    var v2360 = Math.abs(v2577);
+    var v1676 = 5 * v2360;
+    var v860 = v1676 >= originalStateCountTotal$$1;
+    if (v860) {
       return NaN;
     }
-    var v862;
-    var v1678 = this.foundPatternCross(stateCount$$3);
-    if (v1678) {
-      v862 = this.centerFromEnd(stateCount$$3, j$$26);
+    var v861;
+    var v1677 = this.foundPatternCross(stateCount$$3);
+    if (v1677) {
+      v861 = this.centerFromEnd(stateCount$$3, j$$26);
     } else {
-      v862 = NaN;
+      v861 = NaN;
     }
-    return v862;
+    return v861;
   }
   function v97(startI, centerJ, maxCount, originalStateCountTotal) {
     var image$$10 = this.image;
     var maxI = qrcode.height;
     var stateCount$$2 = this.CrossCheckStateCount;
     var i$$49 = startI;
-    var v1679 = i$$49 >= 0;
-    if (v1679) {
-      var v2677 = qrcode.width;
-      var v2580 = i$$49 * v2677;
-      var v2363 = centerJ + v2580;
-      v1679 = image$$10[v2363];
+    var v1678 = i$$49 >= 0;
+    if (v1678) {
+      var v2675 = qrcode.width;
+      var v2578 = i$$49 * v2675;
+      var v2361 = centerJ + v2578;
+      v1678 = image$$10[v2361];
     }
-    var v863 = v1679;
-    for (;v863;) {
+    var v862 = v1678;
+    for (;v862;) {
       stateCount$$2[2]++;
       i$$49--;
-      var v1680 = i$$49 >= 0;
-      if (v1680) {
-        var v2678 = qrcode.width;
-        var v2581 = i$$49 * v2678;
-        var v2364 = centerJ + v2581;
-        v1680 = image$$10[v2364];
+      var v1679 = i$$49 >= 0;
+      if (v1679) {
+        var v2676 = qrcode.width;
+        var v2579 = i$$49 * v2676;
+        var v2362 = centerJ + v2579;
+        v1679 = image$$10[v2362];
       }
-      v863 = v1680;
+      v862 = v1679;
     }
-    var v864 = i$$49 < 0;
-    if (v864) {
+    var v863 = i$$49 < 0;
+    if (v863) {
       return NaN;
     }
-    var v2365 = i$$49 >= 0;
-    if (v2365) {
-      var v2774 = qrcode.width;
-      var v2737 = i$$49 * v2774;
-      var v2679 = centerJ + v2737;
-      var v2582 = image$$10[v2679];
-      v2365 = !v2582;
+    var v2363 = i$$49 >= 0;
+    if (v2363) {
+      var v2772 = qrcode.width;
+      var v2735 = i$$49 * v2772;
+      var v2677 = centerJ + v2735;
+      var v2580 = image$$10[v2677];
+      v2363 = !v2580;
     }
-    var v1681 = v2365;
-    if (v1681) {
-      var v2366 = stateCount$$2[1];
-      v1681 = v2366 <= maxCount;
+    var v1680 = v2363;
+    if (v1680) {
+      var v2364 = stateCount$$2[1];
+      v1680 = v2364 <= maxCount;
     }
-    var v865 = v1681;
-    for (;v865;) {
+    var v864 = v1680;
+    for (;v864;) {
       stateCount$$2[1]++;
       i$$49--;
-      var v2367 = i$$49 >= 0;
-      if (v2367) {
-        var v2775 = qrcode.width;
-        var v2738 = i$$49 * v2775;
-        var v2680 = centerJ + v2738;
-        var v2583 = image$$10[v2680];
-        v2367 = !v2583;
+      var v2365 = i$$49 >= 0;
+      if (v2365) {
+        var v2773 = qrcode.width;
+        var v2736 = i$$49 * v2773;
+        var v2678 = centerJ + v2736;
+        var v2581 = image$$10[v2678];
+        v2365 = !v2581;
       }
-      var v1682 = v2367;
-      if (v1682) {
-        var v2368 = stateCount$$2[1];
-        v1682 = v2368 <= maxCount;
+      var v1681 = v2365;
+      if (v1681) {
+        var v2366 = stateCount$$2[1];
+        v1681 = v2366 <= maxCount;
       }
-      v865 = v1682;
+      v864 = v1681;
     }
-    var v1683 = i$$49 < 0;
-    var v2370 = !v1683;
-    if (v2370) {
-      var v2369 = stateCount$$2[1];
-      v1683 = v2369 > maxCount;
+    var v1682 = i$$49 < 0;
+    var v2368 = !v1682;
+    if (v2368) {
+      var v2367 = stateCount$$2[1];
+      v1682 = v2367 > maxCount;
     }
-    var v866 = v1683;
-    if (v866) {
+    var v865 = v1682;
+    if (v865) {
       return NaN;
     }
-    var v2371 = i$$49 >= 0;
-    if (v2371) {
-      var v2739 = qrcode.width;
-      var v2681 = i$$49 * v2739;
-      var v2584 = centerJ + v2681;
-      v2371 = image$$10[v2584];
+    var v2369 = i$$49 >= 0;
+    if (v2369) {
+      var v2737 = qrcode.width;
+      var v2679 = i$$49 * v2737;
+      var v2582 = centerJ + v2679;
+      v2369 = image$$10[v2582];
     }
-    var v1684 = v2371;
-    if (v1684) {
-      var v2372 = stateCount$$2[0];
-      v1684 = v2372 <= maxCount;
+    var v1683 = v2369;
+    if (v1683) {
+      var v2370 = stateCount$$2[0];
+      v1683 = v2370 <= maxCount;
     }
-    var v867 = v1684;
-    for (;v867;) {
+    var v866 = v1683;
+    for (;v866;) {
       stateCount$$2[0]++;
       i$$49--;
-      var v2373 = i$$49 >= 0;
-      if (v2373) {
-        var v2740 = qrcode.width;
-        var v2682 = i$$49 * v2740;
-        var v2585 = centerJ + v2682;
-        v2373 = image$$10[v2585];
+      var v2371 = i$$49 >= 0;
+      if (v2371) {
+        var v2738 = qrcode.width;
+        var v2680 = i$$49 * v2738;
+        var v2583 = centerJ + v2680;
+        v2371 = image$$10[v2583];
       }
-      var v1685 = v2373;
-      if (v1685) {
-        var v2374 = stateCount$$2[0];
-        v1685 = v2374 <= maxCount;
+      var v1684 = v2371;
+      if (v1684) {
+        var v2372 = stateCount$$2[0];
+        v1684 = v2372 <= maxCount;
       }
-      v867 = v1685;
+      v866 = v1684;
     }
-    var v1686 = stateCount$$2[0];
-    var v868 = v1686 > maxCount;
-    if (v868) {
+    var v1685 = stateCount$$2[0];
+    var v867 = v1685 > maxCount;
+    if (v867) {
       return NaN;
     }
     i$$49 = startI + 1;
-    var v1687 = i$$49 < maxI;
-    if (v1687) {
-      var v2683 = qrcode.width;
-      var v2586 = i$$49 * v2683;
-      var v2375 = centerJ + v2586;
-      v1687 = image$$10[v2375];
+    var v1686 = i$$49 < maxI;
+    if (v1686) {
+      var v2681 = qrcode.width;
+      var v2584 = i$$49 * v2681;
+      var v2373 = centerJ + v2584;
+      v1686 = image$$10[v2373];
     }
-    var v869 = v1687;
-    for (;v869;) {
+    var v868 = v1686;
+    for (;v868;) {
       stateCount$$2[2]++;
       i$$49++;
-      var v1688 = i$$49 < maxI;
-      if (v1688) {
-        var v2684 = qrcode.width;
-        var v2587 = i$$49 * v2684;
-        var v2376 = centerJ + v2587;
-        v1688 = image$$10[v2376];
+      var v1687 = i$$49 < maxI;
+      if (v1687) {
+        var v2682 = qrcode.width;
+        var v2585 = i$$49 * v2682;
+        var v2374 = centerJ + v2585;
+        v1687 = image$$10[v2374];
       }
-      v869 = v1688;
+      v868 = v1687;
     }
-    var v870 = i$$49 == maxI;
-    if (v870) {
+    var v869 = i$$49 == maxI;
+    if (v869) {
       return NaN;
     }
-    var v2377 = i$$49 < maxI;
-    if (v2377) {
-      var v2776 = qrcode.width;
-      var v2741 = i$$49 * v2776;
-      var v2685 = centerJ + v2741;
-      var v2588 = image$$10[v2685];
-      v2377 = !v2588;
+    var v2375 = i$$49 < maxI;
+    if (v2375) {
+      var v2774 = qrcode.width;
+      var v2739 = i$$49 * v2774;
+      var v2683 = centerJ + v2739;
+      var v2586 = image$$10[v2683];
+      v2375 = !v2586;
     }
-    var v1689 = v2377;
-    if (v1689) {
-      var v2378 = stateCount$$2[3];
-      v1689 = v2378 < maxCount;
+    var v1688 = v2375;
+    if (v1688) {
+      var v2376 = stateCount$$2[3];
+      v1688 = v2376 < maxCount;
     }
-    var v871 = v1689;
-    for (;v871;) {
+    var v870 = v1688;
+    for (;v870;) {
       stateCount$$2[3]++;
       i$$49++;
-      var v2379 = i$$49 < maxI;
-      if (v2379) {
-        var v2777 = qrcode.width;
-        var v2742 = i$$49 * v2777;
-        var v2686 = centerJ + v2742;
-        var v2589 = image$$10[v2686];
-        v2379 = !v2589;
+      var v2377 = i$$49 < maxI;
+      if (v2377) {
+        var v2775 = qrcode.width;
+        var v2740 = i$$49 * v2775;
+        var v2684 = centerJ + v2740;
+        var v2587 = image$$10[v2684];
+        v2377 = !v2587;
       }
-      var v1690 = v2379;
-      if (v1690) {
-        var v2380 = stateCount$$2[3];
-        v1690 = v2380 < maxCount;
+      var v1689 = v2377;
+      if (v1689) {
+        var v2378 = stateCount$$2[3];
+        v1689 = v2378 < maxCount;
       }
-      v871 = v1690;
+      v870 = v1689;
     }
-    var v1691 = i$$49 == maxI;
-    var v2382 = !v1691;
-    if (v2382) {
-      var v2381 = stateCount$$2[3];
-      v1691 = v2381 >= maxCount;
+    var v1690 = i$$49 == maxI;
+    var v2380 = !v1690;
+    if (v2380) {
+      var v2379 = stateCount$$2[3];
+      v1690 = v2379 >= maxCount;
+    }
+    var v871 = v1690;
+    if (v871) {
+      return NaN;
+    }
+    var v2381 = i$$49 < maxI;
+    if (v2381) {
+      var v2741 = qrcode.width;
+      var v2685 = i$$49 * v2741;
+      var v2588 = centerJ + v2685;
+      v2381 = image$$10[v2588];
+    }
+    var v1691 = v2381;
+    if (v1691) {
+      var v2382 = stateCount$$2[4];
+      v1691 = v2382 < maxCount;
     }
     var v872 = v1691;
-    if (v872) {
-      return NaN;
-    }
-    var v2383 = i$$49 < maxI;
-    if (v2383) {
-      var v2743 = qrcode.width;
-      var v2687 = i$$49 * v2743;
-      var v2590 = centerJ + v2687;
-      v2383 = image$$10[v2590];
-    }
-    var v1692 = v2383;
-    if (v1692) {
-      var v2384 = stateCount$$2[4];
-      v1692 = v2384 < maxCount;
-    }
-    var v873 = v1692;
-    for (;v873;) {
+    for (;v872;) {
       stateCount$$2[4]++;
       i$$49++;
-      var v2385 = i$$49 < maxI;
-      if (v2385) {
-        var v2744 = qrcode.width;
-        var v2688 = i$$49 * v2744;
-        var v2591 = centerJ + v2688;
-        v2385 = image$$10[v2591];
+      var v2383 = i$$49 < maxI;
+      if (v2383) {
+        var v2742 = qrcode.width;
+        var v2686 = i$$49 * v2742;
+        var v2589 = centerJ + v2686;
+        v2383 = image$$10[v2589];
       }
-      var v1693 = v2385;
-      if (v1693) {
-        var v2386 = stateCount$$2[4];
-        v1693 = v2386 < maxCount;
+      var v1692 = v2383;
+      if (v1692) {
+        var v2384 = stateCount$$2[4];
+        v1692 = v2384 < maxCount;
       }
-      v873 = v1693;
+      v872 = v1692;
     }
-    var v1694 = stateCount$$2[4];
-    var v874 = v1694 >= maxCount;
-    if (v874) {
+    var v1693 = stateCount$$2[4];
+    var v873 = v1693 >= maxCount;
+    if (v873) {
       return NaN;
     }
-    var v2592 = stateCount$$2[0];
-    var v2593 = stateCount$$2[1];
-    var v2387 = v2592 + v2593;
-    var v2388 = stateCount$$2[2];
-    var v1695 = v2387 + v2388;
-    var v1696 = stateCount$$2[3];
-    var v875 = v1695 + v1696;
-    var v876 = stateCount$$2[4];
-    var stateCountTotal = v875 + v876;
-    var v2594 = stateCountTotal - originalStateCountTotal;
-    var v2389 = Math.abs(v2594);
-    var v1697 = 5 * v2389;
-    var v1698 = 2 * originalStateCountTotal;
-    var v877 = v1697 >= v1698;
-    if (v877) {
+    var v2590 = stateCount$$2[0];
+    var v2591 = stateCount$$2[1];
+    var v2385 = v2590 + v2591;
+    var v2386 = stateCount$$2[2];
+    var v1694 = v2385 + v2386;
+    var v1695 = stateCount$$2[3];
+    var v874 = v1694 + v1695;
+    var v875 = stateCount$$2[4];
+    var stateCountTotal = v874 + v875;
+    var v2592 = stateCountTotal - originalStateCountTotal;
+    var v2387 = Math.abs(v2592);
+    var v1696 = 5 * v2387;
+    var v1697 = 2 * originalStateCountTotal;
+    var v876 = v1696 >= v1697;
+    if (v876) {
       return NaN;
     }
-    var v878;
-    var v1699 = this.foundPatternCross(stateCount$$2);
-    if (v1699) {
-      v878 = this.centerFromEnd(stateCount$$2, i$$49);
+    var v877;
+    var v1698 = this.foundPatternCross(stateCount$$2);
+    if (v1698) {
+      v877 = this.centerFromEnd(stateCount$$2, i$$49);
     } else {
-      v878 = NaN;
+      v877 = NaN;
     }
-    return v878;
+    return v877;
   }
   function v96(stateCount$$1, end$$2) {
-    var v2390 = stateCount$$1[4];
-    var v1700 = end$$2 - v2390;
-    var v1701 = stateCount$$1[3];
-    var v879 = v1700 - v1701;
-    var v1702 = stateCount$$1[2];
-    var v880 = v1702 / 2;
-    return v879 - v880;
+    var v2388 = stateCount$$1[4];
+    var v1699 = end$$2 - v2388;
+    var v1700 = stateCount$$1[3];
+    var v878 = v1699 - v1700;
+    var v1701 = stateCount$$1[2];
+    var v879 = v1701 / 2;
+    return v878 - v879;
   }
   function v95(stateCount) {
     var totalModuleSize = 0;
     var i$$48 = 0;
-    var v882 = i$$48 < 5;
-    for (;v882;) {
+    var v881 = i$$48 < 5;
+    for (;v881;) {
       var count$$5 = stateCount[i$$48];
-      var v881 = count$$5 == 0;
-      if (v881) {
+      var v880 = count$$5 == 0;
+      if (v880) {
         return false;
       }
       totalModuleSize = totalModuleSize + count$$5;
       i$$48++;
-      v882 = i$$48 < 5;
+      v881 = i$$48 < 5;
     }
-    var v883 = totalModuleSize < 7;
-    if (v883) {
+    var v882 = totalModuleSize < 7;
+    if (v882) {
       return false;
     }
-    var v1703 = totalModuleSize << INTEGER_MATH_SHIFT;
-    var v884 = v1703 / 7;
-    var moduleSize$$3 = Math.floor(v884);
-    var v885 = moduleSize$$3 / 2;
-    var maxVariance = Math.floor(v885);
-    var v2790 = stateCount[0];
-    var v2778 = v2790 << INTEGER_MATH_SHIFT;
-    var v2745 = moduleSize$$3 - v2778;
-    var v2689 = Math.abs(v2745);
-    var v2595 = v2689 < maxVariance;
-    if (v2595) {
-      var v2791 = stateCount[1];
-      var v2779 = v2791 << INTEGER_MATH_SHIFT;
-      var v2746 = moduleSize$$3 - v2779;
-      var v2690 = Math.abs(v2746);
-      v2595 = v2690 < maxVariance;
+    var v1702 = totalModuleSize << INTEGER_MATH_SHIFT;
+    var v883 = v1702 / 7;
+    var moduleSize$$3 = Math.floor(v883);
+    var v884 = moduleSize$$3 / 2;
+    var maxVariance = Math.floor(v884);
+    var v2788 = stateCount[0];
+    var v2776 = v2788 << INTEGER_MATH_SHIFT;
+    var v2743 = moduleSize$$3 - v2776;
+    var v2687 = Math.abs(v2743);
+    var v2593 = v2687 < maxVariance;
+    if (v2593) {
+      var v2789 = stateCount[1];
+      var v2777 = v2789 << INTEGER_MATH_SHIFT;
+      var v2744 = moduleSize$$3 - v2777;
+      var v2688 = Math.abs(v2744);
+      v2593 = v2688 < maxVariance;
     }
-    var v2391 = v2595;
-    if (v2391) {
-      var v2747 = 3 * moduleSize$$3;
-      var v2780 = stateCount[2];
-      var v2748 = v2780 << INTEGER_MATH_SHIFT;
-      var v2691 = v2747 - v2748;
-      var v2596 = Math.abs(v2691);
-      var v2597 = 3 * maxVariance;
-      v2391 = v2596 < v2597;
+    var v2389 = v2593;
+    if (v2389) {
+      var v2745 = 3 * moduleSize$$3;
+      var v2778 = stateCount[2];
+      var v2746 = v2778 << INTEGER_MATH_SHIFT;
+      var v2689 = v2745 - v2746;
+      var v2594 = Math.abs(v2689);
+      var v2595 = 3 * maxVariance;
+      v2389 = v2594 < v2595;
     }
-    var v1704 = v2391;
-    if (v1704) {
-      var v2749 = stateCount[3];
-      var v2692 = v2749 << INTEGER_MATH_SHIFT;
-      var v2598 = moduleSize$$3 - v2692;
-      var v2392 = Math.abs(v2598);
-      v1704 = v2392 < maxVariance;
+    var v1703 = v2389;
+    if (v1703) {
+      var v2747 = stateCount[3];
+      var v2690 = v2747 << INTEGER_MATH_SHIFT;
+      var v2596 = moduleSize$$3 - v2690;
+      var v2390 = Math.abs(v2596);
+      v1703 = v2390 < maxVariance;
     }
-    var v886 = v1704;
-    if (v886) {
-      var v2693 = stateCount[4];
-      var v2599 = v2693 << INTEGER_MATH_SHIFT;
-      var v2393 = moduleSize$$3 - v2599;
-      var v1705 = Math.abs(v2393);
-      v886 = v1705 < maxVariance;
+    var v885 = v1703;
+    if (v885) {
+      var v2691 = stateCount[4];
+      var v2597 = v2691 << INTEGER_MATH_SHIFT;
+      var v2391 = moduleSize$$3 - v2597;
+      var v1704 = Math.abs(v2391);
+      v885 = v1704 < maxVariance;
     }
-    return v886;
+    return v885;
   }
   function v94() {
+    var v886 = this.crossCheckStateCount;
+    v886[0] = 0;
     var v887 = this.crossCheckStateCount;
-    v887[0] = 0;
+    v887[1] = 0;
     var v888 = this.crossCheckStateCount;
-    v888[1] = 0;
+    v888[2] = 0;
     var v889 = this.crossCheckStateCount;
-    v889[2] = 0;
+    v889[3] = 0;
     var v890 = this.crossCheckStateCount;
-    v890[3] = 0;
-    var v891 = this.crossCheckStateCount;
-    v891[4] = 0;
+    v890[4] = 0;
     return this.crossCheckStateCount;
   }
   this.image = null;
   this.possibleCenters = [];
   this.hasSkipped = false;
-  var v2824 = new Array(0, 0, 0, 0, 0);
-  this.crossCheckStateCount = v2824;
+  var v2822 = new Array(0, 0, 0, 0, 0);
+  this.crossCheckStateCount = v2822;
   this.resultPointCallback = null;
   this.__defineGetter__("CrossCheckStateCount", v94);
   this.foundPatternCross = v95;
@@ -5043,29 +5049,29 @@ function FinderPatternFinder() {
 }
 function AlignmentPattern(posX$$1, posY$$1, estimatedModuleSize$$2) {
   function v110(moduleSize$$4, i$$55, j$$29) {
-    var v2694 = this.y;
-    var v2600 = i$$55 - v2694;
-    var v2394 = Math.abs(v2600);
-    var v1706 = v2394 <= moduleSize$$4;
-    if (v1706) {
-      var v2695 = this.x;
-      var v2601 = j$$29 - v2695;
-      var v2395 = Math.abs(v2601);
-      v1706 = v2395 <= moduleSize$$4;
+    var v2692 = this.y;
+    var v2598 = i$$55 - v2692;
+    var v2392 = Math.abs(v2598);
+    var v1705 = v2392 <= moduleSize$$4;
+    if (v1705) {
+      var v2693 = this.x;
+      var v2599 = j$$29 - v2693;
+      var v2393 = Math.abs(v2599);
+      v1705 = v2393 <= moduleSize$$4;
     }
-    var v894 = v1706;
-    if (v894) {
-      var v1707 = this.estimatedModuleSize;
-      var v892 = moduleSize$$4 - v1707;
-      var moduleSizeDiff$$1 = Math.abs(v892);
-      var v893 = moduleSizeDiff$$1 <= 1;
-      var v1709 = !v893;
-      if (v1709) {
-        var v2396 = this.estimatedModuleSize;
-        var v1708 = moduleSizeDiff$$1 / v2396;
-        v893 = v1708 <= 1;
+    var v893 = v1705;
+    if (v893) {
+      var v1706 = this.estimatedModuleSize;
+      var v891 = moduleSize$$4 - v1706;
+      var moduleSizeDiff$$1 = Math.abs(v891);
+      var v892 = moduleSizeDiff$$1 <= 1;
+      var v1708 = !v892;
+      if (v1708) {
+        var v2394 = this.estimatedModuleSize;
+        var v1707 = moduleSizeDiff$$1 / v2394;
+        v892 = v1707 <= 1;
       }
-      return v893;
+      return v892;
     }
     return false;
   }
@@ -5074,12 +5080,12 @@ function AlignmentPattern(posX$$1, posY$$1, estimatedModuleSize$$2) {
     return;
   }
   function v108() {
-    var v895 = this.y;
-    return Math.floor(v895);
+    var v894 = this.y;
+    return Math.floor(v894);
   }
   function v107() {
-    var v896 = this.x;
-    return Math.floor(v896);
+    var v895 = this.x;
+    return Math.floor(v895);
   }
   function v106() {
     return this.count;
@@ -5104,69 +5110,69 @@ function AlignmentPatternFinder(image$$13, startX, startY, width$$12, height$$11
     var startX$$1 = this.startX;
     var height$$12 = this.height;
     var maxJ$$2 = startX$$1 + width$$12;
-    var v897 = height$$12 >> 1;
-    var middleI = startY + v897;
+    var v896 = height$$12 >> 1;
+    var middleI = startY + v896;
     var stateCount$$10 = new Array(0, 0, 0);
     var iGen = 0;
-    var v909 = iGen < height$$12;
-    for (;v909;) {
-      var v1710;
-      var v2602 = iGen & 1;
-      var v2399 = v2602 == 0;
-      if (v2399) {
-        var v2397 = iGen + 1;
-        v1710 = v2397 >> 1;
+    var v908 = iGen < height$$12;
+    for (;v908;) {
+      var v1709;
+      var v2600 = iGen & 1;
+      var v2397 = v2600 == 0;
+      if (v2397) {
+        var v2395 = iGen + 1;
+        v1709 = v2395 >> 1;
       } else {
-        var v2603 = iGen + 1;
-        var v2398 = v2603 >> 1;
-        v1710 = -v2398;
+        var v2601 = iGen + 1;
+        var v2396 = v2601 >> 1;
+        v1709 = -v2396;
       }
-      var v898 = v1710;
-      var i$$59 = middleI + v898;
+      var v897 = v1709;
+      var i$$59 = middleI + v897;
       stateCount$$10[0] = 0;
       stateCount$$10[1] = 0;
       stateCount$$10[2] = 0;
       var j$$31 = startX$$1;
-      var v1711 = j$$31 < maxJ$$2;
-      if (v1711) {
-        var v2750 = qrcode.width;
-        var v2696 = v2750 * i$$59;
-        var v2604 = j$$31 + v2696;
-        var v2400 = image$$13[v2604];
-        v1711 = !v2400;
+      var v1710 = j$$31 < maxJ$$2;
+      if (v1710) {
+        var v2748 = qrcode.width;
+        var v2694 = v2748 * i$$59;
+        var v2602 = j$$31 + v2694;
+        var v2398 = image$$13[v2602];
+        v1710 = !v2398;
       }
-      var v899 = v1711;
-      for (;v899;) {
+      var v898 = v1710;
+      for (;v898;) {
         j$$31++;
-        var v1712 = j$$31 < maxJ$$2;
-        if (v1712) {
-          var v2751 = qrcode.width;
-          var v2697 = v2751 * i$$59;
-          var v2605 = j$$31 + v2697;
-          var v2401 = image$$13[v2605];
-          v1712 = !v2401;
+        var v1711 = j$$31 < maxJ$$2;
+        if (v1711) {
+          var v2749 = qrcode.width;
+          var v2695 = v2749 * i$$59;
+          var v2603 = j$$31 + v2695;
+          var v2399 = image$$13[v2603];
+          v1711 = !v2399;
         }
-        v899 = v1712;
+        v898 = v1711;
       }
       var currentState$$1 = 0;
-      var v906 = j$$31 < maxJ$$2;
-      for (;v906;) {
-        var v2606 = qrcode.width;
-        var v2402 = i$$59 * v2606;
-        var v1713 = j$$31 + v2402;
-        var v905 = image$$13[v1713];
-        if (v905) {
-          var v903 = currentState$$1 == 1;
-          if (v903) {
+      var v905 = j$$31 < maxJ$$2;
+      for (;v905;) {
+        var v2604 = qrcode.width;
+        var v2400 = i$$59 * v2604;
+        var v1712 = j$$31 + v2400;
+        var v904 = image$$13[v1712];
+        if (v904) {
+          var v902 = currentState$$1 == 1;
+          if (v902) {
             stateCount$$10[currentState$$1]++;
           } else {
-            var v902 = currentState$$1 == 2;
-            if (v902) {
-              var v901 = this.foundPatternCross(stateCount$$10);
-              if (v901) {
+            var v901 = currentState$$1 == 2;
+            if (v901) {
+              var v900 = this.foundPatternCross(stateCount$$10);
+              if (v900) {
                 var confirmed$$1 = this.handlePossibleCenter(stateCount$$10, i$$59, j$$31);
-                var v900 = confirmed$$1 != null;
-                if (v900) {
+                var v899 = confirmed$$1 != null;
+                if (v899) {
                   return confirmed$$1;
                 }
               }
@@ -5179,78 +5185,78 @@ function AlignmentPatternFinder(image$$13, startX, startY, width$$12, height$$11
             }
           }
         } else {
-          var v904 = currentState$$1 == 1;
-          if (v904) {
+          var v903 = currentState$$1 == 1;
+          if (v903) {
             currentState$$1++;
           }
           stateCount$$10[currentState$$1]++;
         }
         j$$31++;
-        v906 = j$$31 < maxJ$$2;
+        v905 = j$$31 < maxJ$$2;
       }
-      var v908 = this.foundPatternCross(stateCount$$10);
-      if (v908) {
+      var v907 = this.foundPatternCross(stateCount$$10);
+      if (v907) {
         confirmed$$1 = this.handlePossibleCenter(stateCount$$10, i$$59, maxJ$$2);
-        var v907 = confirmed$$1 != null;
-        if (v907) {
+        var v906 = confirmed$$1 != null;
+        if (v906) {
           return confirmed$$1;
         }
       }
       iGen++;
-      v909 = iGen < height$$12;
+      v908 = iGen < height$$12;
     }
-    var v2607 = this.possibleCenters;
-    var v2403 = v2607.length;
-    var v1714 = v2403 == 0;
-    var v911 = !v1714;
-    if (v911) {
-      var v910 = this.possibleCenters;
-      return v910[0];
+    var v2605 = this.possibleCenters;
+    var v2401 = v2605.length;
+    var v1713 = v2401 == 0;
+    var v910 = !v1713;
+    if (v910) {
+      var v909 = this.possibleCenters;
+      return v909[0];
     }
     throw "Couldn't find enough alignment patterns";
   }
   function v114(stateCount$$9, i$$58, j$$30) {
-    var v1715 = stateCount$$9[0];
-    var v1716 = stateCount$$9[1];
-    var v912 = v1715 + v1716;
-    var v913 = stateCount$$9[2];
-    var stateCountTotal$$4 = v912 + v913;
+    var v1714 = stateCount$$9[0];
+    var v1715 = stateCount$$9[1];
+    var v911 = v1714 + v1715;
+    var v912 = stateCount$$9[2];
+    var stateCountTotal$$4 = v911 + v912;
     var centerJ$$3 = this.centerFromEnd(stateCount$$9, j$$30);
-    var v914 = Math.floor(centerJ$$3);
-    var v1717 = stateCount$$9[1];
-    var v915 = 2 * v1717;
-    var centerI$$2 = this.crossCheckVertical(i$$58, v914, v915, stateCountTotal$$4);
-    var v1718 = isNaN(centerI$$2);
-    var v924 = !v1718;
-    if (v924) {
-      var v2404 = stateCount$$9[0];
-      var v2405 = stateCount$$9[1];
-      var v1719 = v2404 + v2405;
-      var v1720 = stateCount$$9[2];
-      var v916 = v1719 + v1720;
-      var estimatedModuleSize$$3 = v916 / 3;
-      var v917 = this.possibleCenters;
-      var max$$8 = v917.length;
+    var v913 = Math.floor(centerJ$$3);
+    var v1716 = stateCount$$9[1];
+    var v914 = 2 * v1716;
+    var centerI$$2 = this.crossCheckVertical(i$$58, v913, v914, stateCountTotal$$4);
+    var v1717 = isNaN(centerI$$2);
+    var v923 = !v1717;
+    if (v923) {
+      var v2402 = stateCount$$9[0];
+      var v2403 = stateCount$$9[1];
+      var v1718 = v2402 + v2403;
+      var v1719 = stateCount$$9[2];
+      var v915 = v1718 + v1719;
+      var estimatedModuleSize$$3 = v915 / 3;
+      var v916 = this.possibleCenters;
+      var max$$8 = v916.length;
       var index$$40 = 0;
-      var v920 = index$$40 < max$$8;
-      for (;v920;) {
-        var v918 = this.possibleCenters;
-        var center$$2 = v918[index$$40];
-        var v919 = center$$2.aboutEquals(estimatedModuleSize$$3, centerI$$2, centerJ$$3);
-        if (v919) {
+      var v919 = index$$40 < max$$8;
+      for (;v919;) {
+        var v917 = this.possibleCenters;
+        var center$$2 = v917[index$$40];
+        var v918 = center$$2.aboutEquals(estimatedModuleSize$$3, centerI$$2, centerJ$$3);
+        if (v918) {
           return new AlignmentPattern(centerJ$$3, centerI$$2, estimatedModuleSize$$3);
         }
         index$$40++;
-        v920 = index$$40 < max$$8;
+        v919 = index$$40 < max$$8;
       }
       var point$$3 = new AlignmentPattern(centerJ$$3, centerI$$2, estimatedModuleSize$$3);
-      var v921 = this.possibleCenters;
-      v921.push(point$$3);
-      var v1721 = this.resultPointCallback;
-      var v923 = v1721 != null;
-      if (v923) {
-        var v922 = this.resultPointCallback;
-        v922.foundPossibleResultPoint(point$$3);
+      var v920 = this.possibleCenters;
+      v920.push(point$$3);
+      var v1720 = this.resultPointCallback;
+      var v922 = v1720 != null;
+      if (v922) {
+        var v921 = this.resultPointCallback;
+        v921.foundPossibleResultPoint(point$$3);
       }
     }
     return null;
@@ -5263,218 +5269,218 @@ function AlignmentPatternFinder(image$$13, startX, startY, width$$12, height$$11
     stateCount$$8[1] = 0;
     stateCount$$8[2] = 0;
     var i$$57 = startI$$1;
-    var v2406 = i$$57 >= 0;
-    if (v2406) {
-      var v2752 = qrcode.width;
-      var v2698 = i$$57 * v2752;
-      var v2608 = centerJ$$2 + v2698;
-      v2406 = image$$14[v2608];
+    var v2404 = i$$57 >= 0;
+    if (v2404) {
+      var v2750 = qrcode.width;
+      var v2696 = i$$57 * v2750;
+      var v2606 = centerJ$$2 + v2696;
+      v2404 = image$$14[v2606];
     }
-    var v1722 = v2406;
-    if (v1722) {
-      var v2407 = stateCount$$8[1];
-      v1722 = v2407 <= maxCount$$2;
+    var v1721 = v2404;
+    if (v1721) {
+      var v2405 = stateCount$$8[1];
+      v1721 = v2405 <= maxCount$$2;
     }
-    var v925 = v1722;
-    for (;v925;) {
+    var v924 = v1721;
+    for (;v924;) {
       stateCount$$8[1]++;
       i$$57--;
-      var v2408 = i$$57 >= 0;
-      if (v2408) {
-        var v2753 = qrcode.width;
-        var v2699 = i$$57 * v2753;
-        var v2609 = centerJ$$2 + v2699;
-        v2408 = image$$14[v2609];
+      var v2406 = i$$57 >= 0;
+      if (v2406) {
+        var v2751 = qrcode.width;
+        var v2697 = i$$57 * v2751;
+        var v2607 = centerJ$$2 + v2697;
+        v2406 = image$$14[v2607];
       }
-      var v1723 = v2408;
-      if (v1723) {
-        var v2409 = stateCount$$8[1];
-        v1723 = v2409 <= maxCount$$2;
+      var v1722 = v2406;
+      if (v1722) {
+        var v2407 = stateCount$$8[1];
+        v1722 = v2407 <= maxCount$$2;
       }
-      v925 = v1723;
+      v924 = v1722;
     }
-    var v1724 = i$$57 < 0;
-    var v2411 = !v1724;
-    if (v2411) {
-      var v2410 = stateCount$$8[1];
-      v1724 = v2410 > maxCount$$2;
+    var v1723 = i$$57 < 0;
+    var v2409 = !v1723;
+    if (v2409) {
+      var v2408 = stateCount$$8[1];
+      v1723 = v2408 > maxCount$$2;
     }
-    var v926 = v1724;
-    if (v926) {
+    var v925 = v1723;
+    if (v925) {
       return NaN;
     }
-    var v2412 = i$$57 >= 0;
-    if (v2412) {
-      var v2781 = qrcode.width;
-      var v2754 = i$$57 * v2781;
-      var v2700 = centerJ$$2 + v2754;
-      var v2610 = image$$14[v2700];
-      v2412 = !v2610;
+    var v2410 = i$$57 >= 0;
+    if (v2410) {
+      var v2779 = qrcode.width;
+      var v2752 = i$$57 * v2779;
+      var v2698 = centerJ$$2 + v2752;
+      var v2608 = image$$14[v2698];
+      v2410 = !v2608;
     }
-    var v1725 = v2412;
-    if (v1725) {
-      var v2413 = stateCount$$8[0];
-      v1725 = v2413 <= maxCount$$2;
+    var v1724 = v2410;
+    if (v1724) {
+      var v2411 = stateCount$$8[0];
+      v1724 = v2411 <= maxCount$$2;
     }
-    var v927 = v1725;
-    for (;v927;) {
+    var v926 = v1724;
+    for (;v926;) {
       stateCount$$8[0]++;
       i$$57--;
-      var v2414 = i$$57 >= 0;
-      if (v2414) {
-        var v2782 = qrcode.width;
-        var v2755 = i$$57 * v2782;
-        var v2701 = centerJ$$2 + v2755;
-        var v2611 = image$$14[v2701];
-        v2414 = !v2611;
+      var v2412 = i$$57 >= 0;
+      if (v2412) {
+        var v2780 = qrcode.width;
+        var v2753 = i$$57 * v2780;
+        var v2699 = centerJ$$2 + v2753;
+        var v2609 = image$$14[v2699];
+        v2412 = !v2609;
       }
-      var v1726 = v2414;
-      if (v1726) {
-        var v2415 = stateCount$$8[0];
-        v1726 = v2415 <= maxCount$$2;
+      var v1725 = v2412;
+      if (v1725) {
+        var v2413 = stateCount$$8[0];
+        v1725 = v2413 <= maxCount$$2;
       }
-      v927 = v1726;
+      v926 = v1725;
     }
-    var v1727 = stateCount$$8[0];
-    var v928 = v1727 > maxCount$$2;
-    if (v928) {
+    var v1726 = stateCount$$8[0];
+    var v927 = v1726 > maxCount$$2;
+    if (v927) {
       return NaN;
     }
     i$$57 = startI$$1 + 1;
-    var v2416 = i$$57 < maxI$$2;
-    if (v2416) {
-      var v2756 = qrcode.width;
-      var v2702 = i$$57 * v2756;
-      var v2612 = centerJ$$2 + v2702;
-      v2416 = image$$14[v2612];
+    var v2414 = i$$57 < maxI$$2;
+    if (v2414) {
+      var v2754 = qrcode.width;
+      var v2700 = i$$57 * v2754;
+      var v2610 = centerJ$$2 + v2700;
+      v2414 = image$$14[v2610];
     }
-    var v1728 = v2416;
-    if (v1728) {
-      var v2417 = stateCount$$8[1];
-      v1728 = v2417 <= maxCount$$2;
+    var v1727 = v2414;
+    if (v1727) {
+      var v2415 = stateCount$$8[1];
+      v1727 = v2415 <= maxCount$$2;
     }
-    var v929 = v1728;
-    for (;v929;) {
+    var v928 = v1727;
+    for (;v928;) {
       stateCount$$8[1]++;
       i$$57++;
-      var v2418 = i$$57 < maxI$$2;
-      if (v2418) {
-        var v2757 = qrcode.width;
-        var v2703 = i$$57 * v2757;
-        var v2613 = centerJ$$2 + v2703;
-        v2418 = image$$14[v2613];
+      var v2416 = i$$57 < maxI$$2;
+      if (v2416) {
+        var v2755 = qrcode.width;
+        var v2701 = i$$57 * v2755;
+        var v2611 = centerJ$$2 + v2701;
+        v2416 = image$$14[v2611];
       }
-      var v1729 = v2418;
-      if (v1729) {
-        var v2419 = stateCount$$8[1];
-        v1729 = v2419 <= maxCount$$2;
+      var v1728 = v2416;
+      if (v1728) {
+        var v2417 = stateCount$$8[1];
+        v1728 = v2417 <= maxCount$$2;
       }
-      v929 = v1729;
+      v928 = v1728;
     }
-    var v1730 = i$$57 == maxI$$2;
-    var v2421 = !v1730;
-    if (v2421) {
-      var v2420 = stateCount$$8[1];
-      v1730 = v2420 > maxCount$$2;
+    var v1729 = i$$57 == maxI$$2;
+    var v2419 = !v1729;
+    if (v2419) {
+      var v2418 = stateCount$$8[1];
+      v1729 = v2418 > maxCount$$2;
+    }
+    var v929 = v1729;
+    if (v929) {
+      return NaN;
+    }
+    var v2420 = i$$57 < maxI$$2;
+    if (v2420) {
+      var v2781 = qrcode.width;
+      var v2756 = i$$57 * v2781;
+      var v2702 = centerJ$$2 + v2756;
+      var v2612 = image$$14[v2702];
+      v2420 = !v2612;
+    }
+    var v1730 = v2420;
+    if (v1730) {
+      var v2421 = stateCount$$8[2];
+      v1730 = v2421 <= maxCount$$2;
     }
     var v930 = v1730;
-    if (v930) {
-      return NaN;
-    }
-    var v2422 = i$$57 < maxI$$2;
-    if (v2422) {
-      var v2783 = qrcode.width;
-      var v2758 = i$$57 * v2783;
-      var v2704 = centerJ$$2 + v2758;
-      var v2614 = image$$14[v2704];
-      v2422 = !v2614;
-    }
-    var v1731 = v2422;
-    if (v1731) {
-      var v2423 = stateCount$$8[2];
-      v1731 = v2423 <= maxCount$$2;
-    }
-    var v931 = v1731;
-    for (;v931;) {
+    for (;v930;) {
       stateCount$$8[2]++;
       i$$57++;
-      var v2424 = i$$57 < maxI$$2;
-      if (v2424) {
-        var v2784 = qrcode.width;
-        var v2759 = i$$57 * v2784;
-        var v2705 = centerJ$$2 + v2759;
-        var v2615 = image$$14[v2705];
-        v2424 = !v2615;
+      var v2422 = i$$57 < maxI$$2;
+      if (v2422) {
+        var v2782 = qrcode.width;
+        var v2757 = i$$57 * v2782;
+        var v2703 = centerJ$$2 + v2757;
+        var v2613 = image$$14[v2703];
+        v2422 = !v2613;
       }
-      var v1732 = v2424;
-      if (v1732) {
-        var v2425 = stateCount$$8[2];
-        v1732 = v2425 <= maxCount$$2;
+      var v1731 = v2422;
+      if (v1731) {
+        var v2423 = stateCount$$8[2];
+        v1731 = v2423 <= maxCount$$2;
       }
-      v931 = v1732;
+      v930 = v1731;
     }
-    var v1733 = stateCount$$8[2];
-    var v932 = v1733 > maxCount$$2;
-    if (v932) {
+    var v1732 = stateCount$$8[2];
+    var v931 = v1732 > maxCount$$2;
+    if (v931) {
       return NaN;
     }
-    var v1734 = stateCount$$8[0];
-    var v1735 = stateCount$$8[1];
-    var v933 = v1734 + v1735;
-    var v934 = stateCount$$8[2];
-    var stateCountTotal$$3 = v933 + v934;
-    var v2616 = stateCountTotal$$3 - originalStateCountTotal$$2;
-    var v2426 = Math.abs(v2616);
-    var v1736 = 5 * v2426;
-    var v1737 = 2 * originalStateCountTotal$$2;
-    var v935 = v1736 >= v1737;
-    if (v935) {
+    var v1733 = stateCount$$8[0];
+    var v1734 = stateCount$$8[1];
+    var v932 = v1733 + v1734;
+    var v933 = stateCount$$8[2];
+    var stateCountTotal$$3 = v932 + v933;
+    var v2614 = stateCountTotal$$3 - originalStateCountTotal$$2;
+    var v2424 = Math.abs(v2614);
+    var v1735 = 5 * v2424;
+    var v1736 = 2 * originalStateCountTotal$$2;
+    var v934 = v1735 >= v1736;
+    if (v934) {
       return NaN;
     }
-    var v936;
-    var v1738 = this.foundPatternCross(stateCount$$8);
-    if (v1738) {
-      v936 = this.centerFromEnd(stateCount$$8, i$$57);
+    var v935;
+    var v1737 = this.foundPatternCross(stateCount$$8);
+    if (v1737) {
+      v935 = this.centerFromEnd(stateCount$$8, i$$57);
     } else {
-      v936 = NaN;
+      v935 = NaN;
     }
-    return v936;
+    return v935;
   }
   function v112(stateCount$$7) {
     var moduleSize$$6 = this.moduleSize;
     var maxVariance$$1 = moduleSize$$6 / 2;
     var i$$56 = 0;
-    var v938 = i$$56 < 3;
-    for (;v938;) {
-      var v2617 = stateCount$$7[i$$56];
-      var v2427 = moduleSize$$6 - v2617;
-      var v1739 = Math.abs(v2427);
-      var v937 = v1739 >= maxVariance$$1;
-      if (v937) {
+    var v937 = i$$56 < 3;
+    for (;v937;) {
+      var v2615 = stateCount$$7[i$$56];
+      var v2425 = moduleSize$$6 - v2615;
+      var v1738 = Math.abs(v2425);
+      var v936 = v1738 >= maxVariance$$1;
+      if (v936) {
         return false;
       }
       i$$56++;
-      v938 = i$$56 < 3;
+      v937 = i$$56 < 3;
     }
     return true;
   }
   function v111(stateCount$$6, end$$3) {
-    var v1740 = stateCount$$6[2];
-    var v939 = end$$3 - v1740;
-    var v1741 = stateCount$$6[1];
-    var v940 = v1741 / 2;
-    return v939 - v940;
+    var v1739 = stateCount$$6[2];
+    var v938 = end$$3 - v1739;
+    var v1740 = stateCount$$6[1];
+    var v939 = v1740 / 2;
+    return v938 - v939;
   }
   this.image = image$$13;
-  var v2825 = new Array;
-  this.possibleCenters = v2825;
+  var v2823 = new Array;
+  this.possibleCenters = v2823;
   this.startX = startX;
   this.startY = startY;
   this.width = width$$12;
   this.height = height$$11;
   this.moduleSize = moduleSize$$5;
-  var v2826 = new Array(0, 0, 0);
-  this.crossCheckStateCount = v2826;
+  var v2824 = new Array(0, 0, 0);
+  this.crossCheckStateCount = v2824;
   this.resultPointCallback = resultPointCallback;
   this.centerFromEnd = v111;
   this.foundPatternCross = v112;
@@ -5492,223 +5498,227 @@ function QRCodeDataBlockReader(blocks, version$$8, numErrorCorrectionCode) {
     var MODE_KANJI = 8;
     do {
       var mode$$7 = this.NextMode();
-      var v942 = mode$$7 == 0;
-      if (v942) {
-        var v1742 = output$$1.length;
-        var v941 = v1742 > 0;
-        if (v941) {
+      var v941 = mode$$7 == 0;
+      if (v941) {
+        var v1741 = output$$1.length;
+        var v940 = v1741 > 0;
+        if (v940) {
           break;
         } else {
           throw "Empty data block";
         }
       }
-      var v2618 = mode$$7 != MODE_NUMBER;
-      if (v2618) {
-        v2618 = mode$$7 != MODE_ROMAN_AND_NUMBER;
+      var v2616 = mode$$7 != MODE_NUMBER;
+      if (v2616) {
+        v2616 = mode$$7 != MODE_ROMAN_AND_NUMBER;
       }
-      var v2428 = v2618;
-      if (v2428) {
-        v2428 = mode$$7 != MODE_8BIT_BYTE;
+      var v2426 = v2616;
+      if (v2426) {
+        v2426 = mode$$7 != MODE_8BIT_BYTE;
       }
-      var v1743 = v2428;
-      if (v1743) {
-        v1743 = mode$$7 != MODE_KANJI;
+      var v1742 = v2426;
+      if (v1742) {
+        v1742 = mode$$7 != MODE_KANJI;
       }
-      var v944 = v1743;
-      if (v944) {
-        var v2706 = "Invalid mode: " + mode$$7;
-        var v2619 = v2706 + " in (block:";
-        var v2620 = this.blockPointer;
-        var v2429 = v2619 + v2620;
-        var v1744 = v2429 + " bit:";
-        var v1745 = this.bitPointer;
-        var v943 = v1744 + v1745;
-        throw v943 + ")";
+      var v943 = v1742;
+      if (v943) {
+        var v2704 = "Invalid mode: " + mode$$7;
+        var v2617 = v2704 + " in (block:";
+        var v2618 = this.blockPointer;
+        var v2427 = v2617 + v2618;
+        var v1743 = v2427 + " bit:";
+        var v1744 = this.bitPointer;
+        var v942 = v1743 + v1744;
+        throw v942 + ")";
       }
       dataLength = this.getDataLength(mode$$7);
-      var v945 = dataLength < 1;
-      if (v945) {
+      var v944 = dataLength < 1;
+      if (v944) {
         throw "Invalid data length: " + dataLength;
       }
       switch(mode$$7) {
         case MODE_NUMBER:
-          var temp_str = this.getFigureString(dataLength);
-          var v946 = temp_str.length;
-          var ta = new Array(v946);
+          var temp_str = this.getFigureString();
+          var v945 = temp_str.length;
+          var ta = new Array(v945);
           var j$$32 = 0;
-          var v1746 = temp_str.length;
-          var v947 = j$$32 < v1746;
-          for (;v947;) {
-            var v2827 = temp_str.charCodeAt(j$$32);
-            ta[j$$32] = v2827;
+          var v1745 = temp_str.length;
+          var v946 = j$$32 < v1745;
+          for (;v946;) {
+            var v2825 = temp_str.charCodeAt(j$$32);
+            ta[j$$32] = v2825;
             j$$32++;
-            var v1747 = temp_str.length;
-            v947 = j$$32 < v1747;
+            var v1746 = temp_str.length;
+            v946 = j$$32 < v1746;
           }
           output$$1.push(ta);
           break;
         case MODE_ROMAN_AND_NUMBER:
-          temp_str = this.getRomanAndFigureString(dataLength);
-          var v948 = temp_str.length;
-          ta = new Array(v948);
+          temp_str = this.getRomanAndFigureString();
+          var v947 = temp_str.length;
+          ta = new Array(v947);
           j$$32 = 0;
-          var v1748 = temp_str.length;
-          var v949 = j$$32 < v1748;
-          for (;v949;) {
-            var v2828 = temp_str.charCodeAt(j$$32);
-            ta[j$$32] = v2828;
+          var v1747 = temp_str.length;
+          var v948 = j$$32 < v1747;
+          for (;v948;) {
+            var v2826 = temp_str.charCodeAt(j$$32);
+            ta[j$$32] = v2826;
             j$$32++;
-            var v1749 = temp_str.length;
-            v949 = j$$32 < v1749;
+            var v1748 = temp_str.length;
+            v948 = j$$32 < v1748;
           }
           output$$1.push(ta);
           break;
         case MODE_8BIT_BYTE:
-          var temp_sbyteArray3 = this.get8bitByteArray(dataLength);
+          var temp_sbyteArray3 = this.get8bitByteArray();
           output$$1.push(temp_sbyteArray3);
           break;
         case MODE_KANJI:
-          temp_str = this.getKanjiString(dataLength);
+          temp_str = this.getKanjiString();
           output$$1.push(temp_str);
       }
     } while (true);
     return output$$1;
   }
-  function v122(dataLength$$4) {
+  function v122() {
+    var dataLength$$4 = dataLength;
     var length$$14 = dataLength$$4;
     var intData$$3 = 0;
     var unicodeString = "";
-    var v952 = length$$14 > 0;
+    var v951 = length$$14 > 0;
     do {
       intData$$3 = getNextBits(13);
       var lowerByte = intData$$3 % 192;
       var higherByte = intData$$3 / 192;
-      var v950 = higherByte << 8;
-      var tempWord = v950 + lowerByte;
+      var v949 = higherByte << 8;
+      var tempWord = v949 + lowerByte;
       var shiftjisWord = 0;
-      var v1750 = tempWord + 33088;
-      var v951 = v1750 <= 40956;
-      if (v951) {
+      var v1749 = tempWord + 33088;
+      var v950 = v1749 <= 40956;
+      if (v950) {
         shiftjisWord = tempWord + 33088;
       } else {
         shiftjisWord = tempWord + 49472;
       }
-      var v1751 = String.fromCharCode(shiftjisWord);
-      unicodeString = unicodeString + v1751;
+      var v1750 = String.fromCharCode(shiftjisWord);
+      unicodeString = unicodeString + v1750;
       length$$14--;
-      v952 = length$$14 > 0;
-    } while (v952);
+      v951 = length$$14 > 0;
+    } while (v951);
     return unicodeString;
   }
-  function v121(dataLength$$3) {
+  function v121() {
+    var dataLength$$3 = dataLength;
     var length$$13 = dataLength$$3;
     var intData$$2 = 0;
     var output = new Array;
-    var v953 = length$$13 > 0;
+    var v952 = length$$13 > 0;
     do {
       intData$$2 = this.getNextBits(8);
       output.push(intData$$2);
       length$$13--;
-      v953 = length$$13 > 0;
-    } while (v953);
+      v952 = length$$13 > 0;
+    } while (v952);
     return output;
   }
-  function v120(dataLength$$2) {
+  function v120() {
+    var dataLength$$2 = dataLength;
     var length$$12 = dataLength$$2;
     var intData$$1 = 0;
     var strData$$1 = "";
-    var v960 = length$$12 > 0;
+    var v959 = length$$12 > 0;
     do {
-      var v959 = length$$12 >= 3;
-      if (v959) {
+      var v958 = length$$12 >= 3;
+      if (v958) {
         intData$$1 = this.getNextBits(10);
-        var v954 = intData$$1 < 100;
-        if (v954) {
+        var v953 = intData$$1 < 100;
+        if (v953) {
           strData$$1 = strData$$1 + "0";
         }
-        var v955 = intData$$1 < 10;
-        if (v955) {
+        var v954 = intData$$1 < 10;
+        if (v954) {
           strData$$1 = strData$$1 + "0";
         }
         length$$12 = length$$12 - 3;
       } else {
-        var v958 = length$$12 == 2;
-        if (v958) {
+        var v957 = length$$12 == 2;
+        if (v957) {
           intData$$1 = this.getNextBits(7);
-          var v956 = intData$$1 < 10;
-          if (v956) {
+          var v955 = intData$$1 < 10;
+          if (v955) {
             strData$$1 = strData$$1 + "0";
           }
           length$$12 = length$$12 - 2;
         } else {
-          var v957 = length$$12 == 1;
-          if (v957) {
+          var v956 = length$$12 == 1;
+          if (v956) {
             intData$$1 = this.getNextBits(4);
             length$$12 = length$$12 - 1;
           }
         }
       }
       strData$$1 = strData$$1 + intData$$1;
-      v960 = length$$12 > 0;
-    } while (v960);
+      v959 = length$$12 > 0;
+    } while (v959);
     return strData$$1;
   }
-  function v119(dataLength$$1) {
+  function v119() {
+    var dataLength$$1 = dataLength;
     var length$$11 = dataLength$$1;
     var intData = 0;
     var strData = "";
     var tableRomanAndFigure = new Array("0", "1", "2", "3", "4", "5", "6", "7", "8", "9", "A", "B", "C", "D", "E", "F", "G", "H", "I", "J", "K", "L", "M", "N", "O", "P", "Q", "R", "S", "T", "U", "V", "W", "X", "Y", "Z", " ", "$", "%", "*", "+", "-", ".", "/", ":");
-    var v964 = length$$11 > 0;
+    var v963 = length$$11 > 0;
     do {
-      var v963 = length$$11 > 1;
-      if (v963) {
+      var v962 = length$$11 > 1;
+      if (v962) {
         intData = this.getNextBits(11);
-        var v961 = intData / 45;
-        var firstLetter = Math.floor(v961);
+        var v960 = intData / 45;
+        var firstLetter = Math.floor(v960);
         var secondLetter = intData % 45;
-        var v1752 = tableRomanAndFigure[firstLetter];
+        var v1751 = tableRomanAndFigure[firstLetter];
+        strData = strData + v1751;
+        var v1752 = tableRomanAndFigure[secondLetter];
         strData = strData + v1752;
-        var v1753 = tableRomanAndFigure[secondLetter];
-        strData = strData + v1753;
         length$$11 = length$$11 - 2;
       } else {
-        var v962 = length$$11 == 1;
-        if (v962) {
+        var v961 = length$$11 == 1;
+        if (v961) {
           intData = this.getNextBits(6);
-          var v1754 = tableRomanAndFigure[intData];
-          strData = strData + v1754;
+          var v1753 = tableRomanAndFigure[intData];
+          strData = strData + v1753;
           length$$11 = length$$11 - 1;
         }
       }
-      v964 = length$$11 > 0;
-    } while (v964);
+      v963 = length$$11 > 0;
+    } while (v963);
     return strData;
   }
   function v118(modeIndicator) {
     var index$$41 = 0;
     for (;true;) {
-      var v1755 = modeIndicator >> index$$41;
-      var v965 = v1755 == 1;
-      if (v965) {
+      var v1754 = modeIndicator >> index$$41;
+      var v964 = v1754 == 1;
+      if (v964) {
         break;
       }
       index$$41++;
     }
-    var v2430 = qrcode.sizeOfDataLengthInfo;
-    var v2431 = this.dataLengthMode;
-    var v1756 = v2430[v2431];
-    var v966 = v1756[index$$41];
-    return this.getNextBits(v966);
+    var v2428 = qrcode.sizeOfDataLengthInfo;
+    var v2429 = this.dataLengthMode;
+    var v1755 = v2428[v2429];
+    var v965 = v1755[index$$41];
+    return this.getNextBits(v965);
   }
   function v117() {
-    var v1757 = this.blockPointer;
-    var v2707 = this.blocks;
-    var v2621 = v2707.length;
-    var v2622 = this.numErrorCorrectionCode;
-    var v2432 = v2621 - v2622;
-    var v1758 = v2432 - 2;
-    var v967 = v1757 > v1758;
-    if (v967) {
+    var v1756 = this.blockPointer;
+    var v2705 = this.blocks;
+    var v2619 = v2705.length;
+    var v2620 = this.numErrorCorrectionCode;
+    var v2430 = v2619 - v2620;
+    var v1757 = v2430 - 2;
+    var v966 = v1756 > v1757;
+    if (v966) {
       return 0;
     } else {
       return this.getNextBits(4);
@@ -5717,162 +5727,162 @@ function QRCodeDataBlockReader(blocks, version$$8, numErrorCorrectionCode) {
   }
   function v116(numBits) {
     var bits$$15 = 0;
-    var v2433 = this.bitPointer;
-    var v1759 = v2433 + 1;
-    var v993 = numBits < v1759;
-    if (v993) {
+    var v2431 = this.bitPointer;
+    var v1758 = v2431 + 1;
+    var v992 = numBits < v1758;
+    if (v992) {
       var mask$$5 = 0;
       var i$$60 = 0;
-      var v968 = i$$60 < numBits;
-      for (;v968;) {
-        var v1760 = 1 << i$$60;
-        mask$$5 = mask$$5 + v1760;
+      var v967 = i$$60 < numBits;
+      for (;v967;) {
+        var v1759 = 1 << i$$60;
+        mask$$5 = mask$$5 + v1759;
         i$$60++;
-        v968 = i$$60 < numBits;
+        v967 = i$$60 < numBits;
       }
-      var v2623 = this.bitPointer;
-      var v2434 = v2623 - numBits;
-      var v1761 = v2434 + 1;
-      mask$$5 = mask$$5 << v1761;
-      var v2435 = this.blocks;
-      var v2436 = this.blockPointer;
-      var v1762 = v2435[v2436];
-      var v969 = v1762 & mask$$5;
-      var v2437 = this.bitPointer;
-      var v1763 = v2437 - numBits;
-      var v970 = v1763 + 1;
-      bits$$15 = v969 >> v970;
-      var v1764 = this.bitPointer;
-      this.bitPointer = v1764 - numBits;
+      var v2621 = this.bitPointer;
+      var v2432 = v2621 - numBits;
+      var v1760 = v2432 + 1;
+      mask$$5 = mask$$5 << v1760;
+      var v2433 = this.blocks;
+      var v2434 = this.blockPointer;
+      var v1761 = v2433[v2434];
+      var v968 = v1761 & mask$$5;
+      var v2435 = this.bitPointer;
+      var v1762 = v2435 - numBits;
+      var v969 = v1762 + 1;
+      bits$$15 = v968 >> v969;
+      var v1763 = this.bitPointer;
+      this.bitPointer = v1763 - numBits;
       return bits$$15;
     } else {
-      var v2624 = this.bitPointer;
-      var v2438 = v2624 + 1;
-      var v1765 = v2438 + 8;
-      var v992 = numBits < v1765;
-      if (v992) {
+      var v2622 = this.bitPointer;
+      var v2436 = v2622 + 1;
+      var v1764 = v2436 + 8;
+      var v991 = numBits < v1764;
+      if (v991) {
         var mask1 = 0;
         i$$60 = 0;
-        var v2439 = this.bitPointer;
-        var v1766 = v2439 + 1;
-        var v971 = i$$60 < v1766;
-        for (;v971;) {
-          var v1767 = 1 << i$$60;
-          mask1 = mask1 + v1767;
+        var v2437 = this.bitPointer;
+        var v1765 = v2437 + 1;
+        var v970 = i$$60 < v1765;
+        for (;v970;) {
+          var v1766 = 1 << i$$60;
+          mask1 = mask1 + v1766;
           i$$60++;
-          var v2440 = this.bitPointer;
-          var v1768 = v2440 + 1;
-          v971 = i$$60 < v1768;
+          var v2438 = this.bitPointer;
+          var v1767 = v2438 + 1;
+          v970 = i$$60 < v1767;
         }
-        var v2441 = this.blocks;
-        var v2442 = this.blockPointer;
-        var v1769 = v2441[v2442];
-        var v972 = v1769 & mask1;
-        var v2443 = this.bitPointer;
-        var v1770 = v2443 + 1;
-        var v973 = numBits - v1770;
-        bits$$15 = v972 << v973;
+        var v2439 = this.blocks;
+        var v2440 = this.blockPointer;
+        var v1768 = v2439[v2440];
+        var v971 = v1768 & mask1;
+        var v2441 = this.bitPointer;
+        var v1769 = v2441 + 1;
+        var v972 = numBits - v1769;
+        bits$$15 = v971 << v972;
         this.blockPointer++;
-        var v2625 = this.blocks;
-        var v2626 = this.blockPointer;
-        var v2444 = v2625[v2626];
-        var v2760 = this.bitPointer;
-        var v2708 = v2760 + 1;
-        var v2627 = numBits - v2708;
-        var v2445 = 8 - v2627;
-        var v1771 = v2444 >> v2445;
-        bits$$15 = bits$$15 + v1771;
-        var v974 = this.bitPointer;
-        var v975 = numBits % 8;
-        this.bitPointer = v974 - v975;
-        var v1772 = this.bitPointer;
-        var v977 = v1772 < 0;
-        if (v977) {
-          var v976 = this.bitPointer;
-          this.bitPointer = 8 + v976;
+        var v2623 = this.blocks;
+        var v2624 = this.blockPointer;
+        var v2442 = v2623[v2624];
+        var v2758 = this.bitPointer;
+        var v2706 = v2758 + 1;
+        var v2625 = numBits - v2706;
+        var v2443 = 8 - v2625;
+        var v1770 = v2442 >> v2443;
+        bits$$15 = bits$$15 + v1770;
+        var v973 = this.bitPointer;
+        var v974 = numBits % 8;
+        this.bitPointer = v973 - v974;
+        var v1771 = this.bitPointer;
+        var v976 = v1771 < 0;
+        if (v976) {
+          var v975 = this.bitPointer;
+          this.bitPointer = 8 + v975;
         }
         return bits$$15;
       } else {
-        var v2628 = this.bitPointer;
-        var v2446 = v2628 + 1;
-        var v1773 = v2446 + 16;
-        var v991 = numBits < v1773;
-        if (v991) {
+        var v2626 = this.bitPointer;
+        var v2444 = v2626 + 1;
+        var v1772 = v2444 + 16;
+        var v990 = numBits < v1772;
+        if (v990) {
           mask1 = 0;
           var mask3 = 0;
           i$$60 = 0;
-          var v2447 = this.bitPointer;
-          var v1774 = v2447 + 1;
-          var v978 = i$$60 < v1774;
-          for (;v978;) {
-            var v1775 = 1 << i$$60;
-            mask1 = mask1 + v1775;
+          var v2445 = this.bitPointer;
+          var v1773 = v2445 + 1;
+          var v977 = i$$60 < v1773;
+          for (;v977;) {
+            var v1774 = 1 << i$$60;
+            mask1 = mask1 + v1774;
             i$$60++;
-            var v2448 = this.bitPointer;
-            var v1776 = v2448 + 1;
-            v978 = i$$60 < v1776;
+            var v2446 = this.bitPointer;
+            var v1775 = v2446 + 1;
+            v977 = i$$60 < v1775;
           }
-          var v2449 = this.blocks;
-          var v2450 = this.blockPointer;
-          var v1777 = v2449[v2450];
-          var v979 = v1777 & mask1;
-          var v2451 = this.bitPointer;
-          var v1778 = v2451 + 1;
-          var v980 = numBits - v1778;
-          var bitsFirstBlock = v979 << v980;
+          var v2447 = this.blocks;
+          var v2448 = this.blockPointer;
+          var v1776 = v2447[v2448];
+          var v978 = v1776 & mask1;
+          var v2449 = this.bitPointer;
+          var v1777 = v2449 + 1;
+          var v979 = numBits - v1777;
+          var bitsFirstBlock = v978 << v979;
           this.blockPointer++;
-          var v1779 = this.blocks;
-          var v1780 = this.blockPointer;
-          var v981 = v1779[v1780];
-          var v2629 = this.bitPointer;
-          var v2452 = v2629 + 1;
-          var v1781 = v2452 + 8;
-          var v982 = numBits - v1781;
-          var bitsSecondBlock = v981 << v982;
+          var v1778 = this.blocks;
+          var v1779 = this.blockPointer;
+          var v980 = v1778[v1779];
+          var v2627 = this.bitPointer;
+          var v2450 = v2627 + 1;
+          var v1780 = v2450 + 8;
+          var v981 = numBits - v1780;
+          var bitsSecondBlock = v980 << v981;
           this.blockPointer++;
           i$$60 = 0;
-          var v2709 = this.bitPointer;
-          var v2630 = v2709 + 1;
-          var v2453 = v2630 + 8;
-          var v1782 = numBits - v2453;
-          var v983 = i$$60 < v1782;
-          for (;v983;) {
-            var v1783 = 1 << i$$60;
-            mask3 = mask3 + v1783;
+          var v2707 = this.bitPointer;
+          var v2628 = v2707 + 1;
+          var v2451 = v2628 + 8;
+          var v1781 = numBits - v2451;
+          var v982 = i$$60 < v1781;
+          for (;v982;) {
+            var v1782 = 1 << i$$60;
+            mask3 = mask3 + v1782;
             i$$60++;
-            var v2710 = this.bitPointer;
-            var v2631 = v2710 + 1;
-            var v2454 = v2631 + 8;
-            var v1784 = numBits - v2454;
-            v983 = i$$60 < v1784;
+            var v2708 = this.bitPointer;
+            var v2629 = v2708 + 1;
+            var v2452 = v2629 + 8;
+            var v1783 = numBits - v2452;
+            v982 = i$$60 < v1783;
           }
-          var v2761 = this.bitPointer;
-          var v2711 = v2761 + 1;
-          var v2632 = v2711 + 8;
-          var v2455 = numBits - v2632;
-          var v1785 = 8 - v2455;
-          mask3 = mask3 << v1785;
-          var v2456 = this.blocks;
-          var v2457 = this.blockPointer;
-          var v1786 = v2456[v2457];
-          var v984 = v1786 & mask3;
-          var v2712 = this.bitPointer;
-          var v2633 = v2712 + 1;
-          var v2458 = v2633 + 8;
-          var v1787 = numBits - v2458;
-          var v985 = 8 - v1787;
-          var bitsThirdBlock = v984 >> v985;
-          var v986 = bitsFirstBlock + bitsSecondBlock;
-          bits$$15 = v986 + bitsThirdBlock;
-          var v987 = this.bitPointer;
-          var v1788 = numBits - 8;
-          var v988 = v1788 % 8;
-          this.bitPointer = v987 - v988;
-          var v1789 = this.bitPointer;
-          var v990 = v1789 < 0;
-          if (v990) {
-            var v989 = this.bitPointer;
-            this.bitPointer = 8 + v989;
+          var v2759 = this.bitPointer;
+          var v2709 = v2759 + 1;
+          var v2630 = v2709 + 8;
+          var v2453 = numBits - v2630;
+          var v1784 = 8 - v2453;
+          mask3 = mask3 << v1784;
+          var v2454 = this.blocks;
+          var v2455 = this.blockPointer;
+          var v1785 = v2454[v2455];
+          var v983 = v1785 & mask3;
+          var v2710 = this.bitPointer;
+          var v2631 = v2710 + 1;
+          var v2456 = v2631 + 8;
+          var v1786 = numBits - v2456;
+          var v984 = 8 - v1786;
+          var bitsThirdBlock = v983 >> v984;
+          var v985 = bitsFirstBlock + bitsSecondBlock;
+          bits$$15 = v985 + bitsThirdBlock;
+          var v986 = this.bitPointer;
+          var v1787 = numBits - 8;
+          var v987 = v1787 % 8;
+          this.bitPointer = v986 - v987;
+          var v1788 = this.bitPointer;
+          var v989 = v1788 < 0;
+          if (v989) {
+            var v988 = this.bitPointer;
+            this.bitPointer = 8 + v988;
           }
           return bits$$15;
         } else {
@@ -5887,24 +5897,24 @@ function QRCodeDataBlockReader(blocks, version$$8, numErrorCorrectionCode) {
   this.dataLength = 0;
   this.blocks = blocks;
   this.numErrorCorrectionCode = numErrorCorrectionCode;
-  var v996 = version$$8 <= 9;
-  if (v996) {
+  var v995 = version$$8 <= 9;
+  if (v995) {
     this.dataLengthMode = 0;
   } else {
-    var v1790 = version$$8 >= 10;
-    if (v1790) {
-      v1790 = version$$8 <= 26;
+    var v1789 = version$$8 >= 10;
+    if (v1789) {
+      v1789 = version$$8 <= 26;
     }
-    var v995 = v1790;
-    if (v995) {
+    var v994 = v1789;
+    if (v994) {
       this.dataLengthMode = 1;
     } else {
-      var v1791 = version$$8 >= 27;
-      if (v1791) {
-        v1791 = version$$8 <= 40;
+      var v1790 = version$$8 >= 27;
+      if (v1790) {
+        v1790 = version$$8 <= 40;
       }
-      var v994 = v1791;
-      if (v994) {
+      var v993 = v1790;
+      if (v993) {
         this.dataLengthMode = 2;
       }
     }
@@ -5940,28 +5950,28 @@ function drop(e$$9) {
 function handleFiles(f) {
   function v125(theFile) {
     function v124(e$$10) {
-      var v1792 = e$$10.target;
-      var v997 = v1792.result;
-      qrcode.decode(v997);
+      var v1791 = e$$10.target;
+      var v996 = v1791.result;
+      qrcode.decode(v996);
       return;
     }
     return v124;
   }
   var o$$1 = [];
   var i$$61 = 0;
-  var v1793 = f.length;
-  var v1000 = i$$61 < v1793;
-  for (;v1000;) {
+  var v1792 = f.length;
+  var v999 = i$$61 < v1792;
+  for (;v999;) {
     var reader$$2 = new FileReader;
-    var v998 = reader$$2;
-    var v1794 = f[i$$61];
-    var v2829 = v125(v1794);
-    v998.onload = v2829;
-    var v999 = f[i$$61];
-    reader$$2.readAsDataURL(v999);
+    var v997 = reader$$2;
+    var v1793 = f[i$$61];
+    var v2827 = v125(v1793);
+    v997.onload = v2827;
+    var v998 = f[i$$61];
+    reader$$2.readAsDataURL(v998);
     i$$61++;
-    var v1795 = f.length;
-    v1000 = i$$61 < v1795;
+    var v1794 = f.length;
+    v999 = i$$61 < v1794;
   }
   return;
 }
@@ -5971,43 +5981,43 @@ function read(a$$9) {
 }
 function load() {
   qrcode.callback = read;
-  var v1001 = document.getElementById("imgpath");
-  var img$$2 = v1001.value;
+  var v1000 = document.getElementById("imgpath");
+  var img$$2 = v1000.value;
   qrcode.decode(img$$2);
   return;
 }
 function passLine(stringPixels) {
   var coll = stringPixels.split("-");
   var i$$62 = 0;
-  var v1013 = i$$62 < 320;
-  for (;v1013;) {
-    var v1002 = coll[i$$62];
-    var intVal = parseInt(v1002);
-    var v1003 = intVal >> 16;
-    r = v1003 & 255;
-    var v1004 = intVal >> 8;
-    g = v1004 & 255;
+  var v1012 = i$$62 < 320;
+  for (;v1012;) {
+    var v1001 = coll[i$$62];
+    var intVal = parseInt(v1001);
+    var v1002 = intVal >> 16;
+    r = v1002 & 255;
+    var v1003 = intVal >> 8;
+    g = v1003 & 255;
     b = intVal & 255;
-    var v1005 = imageData.data;
-    var v1006 = c + 0;
-    v1005[v1006] = r;
-    var v1007 = imageData.data;
-    var v1008 = c + 1;
-    v1007[v1008] = g;
-    var v1009 = imageData.data;
-    var v1010 = c + 2;
-    v1009[v1010] = b;
-    var v1011 = imageData.data;
-    var v1012 = c + 3;
-    v1011[v1012] = 255;
+    var v1004 = imageData.data;
+    var v1005 = c + 0;
+    v1004[v1005] = r;
+    var v1006 = imageData.data;
+    var v1007 = c + 1;
+    v1006[v1007] = g;
+    var v1008 = imageData.data;
+    var v1009 = c + 2;
+    v1008[v1009] = b;
+    var v1010 = imageData.data;
+    var v1011 = c + 3;
+    v1010[v1011] = 255;
     c = c + 4;
     i$$62++;
-    v1013 = i$$62 < 320;
+    v1012 = i$$62 < 320;
   }
-  var v2459 = 320 * 240;
-  var v1796 = v2459 * 4;
-  var v1014 = c >= v1796;
-  if (v1014) {
+  var v2457 = 320 * 240;
+  var v1795 = v2457 * 4;
+  var v1013 = c >= v1795;
+  if (v1013) {
     c = 0;
     gCtx.putImageData(imageData, 0, 0);
   }
@@ -6023,12 +6033,12 @@ GridSampler = {};
 GridSampler.checkAndNudgePoints = v126;
 GridSampler.sampleGrid3 = v127;
 GridSampler.sampleGridx = v128;
+var v1014 = Version;
+var v2828 = new Array(31892, 34236, 39577, 42195, 48118, 51042, 55367, 58893, 63784, 68472, 70749, 76311, 79154, 84390, 87683, 92361, 96236, 102084, 102881, 110507, 110734, 117786, 119615, 126325, 127568, 133589, 136944, 141498, 145311, 150283, 152622, 158308, 161089, 167017);
+v1014.VERSION_DECODE_INFO = v2828;
 var v1015 = Version;
-var v2830 = new Array(31892, 34236, 39577, 42195, 48118, 51042, 55367, 58893, 63784, 68472, 70749, 76311, 79154, 84390, 87683, 92361, 96236, 102084, 102881, 110507, 110734, 117786, 119615, 126325, 127568, 133589, 136944, 141498, 145311, 150283, 152622, 158308, 161089, 167017);
-v1015.VERSION_DECODE_INFO = v2830;
-var v1016 = Version;
-var v2831 = buildVersions();
-v1016.VERSIONS = v2831;
+var v2829 = buildVersions();
+v1015.VERSIONS = v2829;
 Version.getVersionForNumber = v129;
 Version.getProvisionalVersionForDimension = v130;
 Version.decodeVersionInformation = v131;
@@ -6036,39 +6046,39 @@ PerspectiveTransform.quadrilateralToQuadrilateral = v132;
 PerspectiveTransform.squareToQuadrilateral = v133;
 PerspectiveTransform.quadrilateralToSquare = v134;
 var FORMAT_INFO_MASK_QR = 21522;
-var v1017 = new Array(21522, 0);
-var v1018 = new Array(20773, 1);
-var v1019 = new Array(24188, 2);
-var v1020 = new Array(23371, 3);
-var v1021 = new Array(17913, 4);
-var v1022 = new Array(16590, 5);
-var v1023 = new Array(20375, 6);
-var v1024 = new Array(19104, 7);
-var v1025 = new Array(30660, 8);
-var v1026 = new Array(29427, 9);
-var v1027 = new Array(32170, 10);
-var v1028 = new Array(30877, 11);
-var v1029 = new Array(26159, 12);
-var v1030 = new Array(25368, 13);
-var v1031 = new Array(27713, 14);
-var v1032 = new Array(26998, 15);
-var v1033 = new Array(5769, 16);
-var v1034 = new Array(5054, 17);
-var v1035 = new Array(7399, 18);
-var v1036 = new Array(6608, 19);
-var v1037 = new Array(1890, 20);
-var v1038 = new Array(597, 21);
-var v1039 = new Array(3340, 22);
-var v1040 = new Array(2107, 23);
-var v1041 = new Array(13663, 24);
-var v1042 = new Array(12392, 25);
-var v1043 = new Array(16177, 26);
-var v1044 = new Array(14854, 27);
-var v1045 = new Array(9396, 28);
-var v1046 = new Array(8579, 29);
-var v1047 = new Array(11994, 30);
-var v1048 = new Array(11245, 31);
-var FORMAT_INFO_DECODE_LOOKUP = new Array(v1017, v1018, v1019, v1020, v1021, v1022, v1023, v1024, v1025, v1026, v1027, v1028, v1029, v1030, v1031, v1032, v1033, v1034, v1035, v1036, v1037, v1038, v1039, v1040, v1041, v1042, v1043, v1044, v1045, v1046, v1047, v1048);
+var v1016 = new Array(21522, 0);
+var v1017 = new Array(20773, 1);
+var v1018 = new Array(24188, 2);
+var v1019 = new Array(23371, 3);
+var v1020 = new Array(17913, 4);
+var v1021 = new Array(16590, 5);
+var v1022 = new Array(20375, 6);
+var v1023 = new Array(19104, 7);
+var v1024 = new Array(30660, 8);
+var v1025 = new Array(29427, 9);
+var v1026 = new Array(32170, 10);
+var v1027 = new Array(30877, 11);
+var v1028 = new Array(26159, 12);
+var v1029 = new Array(25368, 13);
+var v1030 = new Array(27713, 14);
+var v1031 = new Array(26998, 15);
+var v1032 = new Array(5769, 16);
+var v1033 = new Array(5054, 17);
+var v1034 = new Array(7399, 18);
+var v1035 = new Array(6608, 19);
+var v1036 = new Array(1890, 20);
+var v1037 = new Array(597, 21);
+var v1038 = new Array(3340, 22);
+var v1039 = new Array(2107, 23);
+var v1040 = new Array(13663, 24);
+var v1041 = new Array(12392, 25);
+var v1042 = new Array(16177, 26);
+var v1043 = new Array(14854, 27);
+var v1044 = new Array(9396, 28);
+var v1045 = new Array(8579, 29);
+var v1046 = new Array(11994, 30);
+var v1047 = new Array(11245, 31);
+var FORMAT_INFO_DECODE_LOOKUP = new Array(v1016, v1017, v1018, v1019, v1020, v1021, v1022, v1023, v1024, v1025, v1026, v1027, v1028, v1029, v1030, v1031, v1032, v1033, v1034, v1035, v1036, v1037, v1038, v1039, v1040, v1041, v1042, v1043, v1044, v1045, v1046, v1047);
 var BITS_SET_IN_HALF_BYTE = new Array(0, 1, 1, 2, 1, 2, 2, 3, 1, 2, 2, 3, 2, 3, 3, 4);
 FormatInformation.numBitsDiffering = v135;
 FormatInformation.decodeFormatInformation = v136;
@@ -6082,29 +6092,28 @@ var FOR_BITS = new Array(M, L, H, Q);
 DataBlock.getDataBlocks = v139;
 DataMask = {};
 DataMask.forReference = v140;
-var v1049 = DataMask;
-var v1797 = new DataMask000;
-var v1798 = new DataMask001;
-var v1799 = new DataMask010;
-var v1800 = new DataMask011;
-var v1801 = new DataMask100;
-var v1802 = new DataMask101;
-var v1803 = new DataMask110;
-var v1804 = new DataMask111;
-var v2832 = new Array(v1797, v1798, v1799, v1800, v1801, v1802, v1803, v1804);
-v1049.DATA_MASKS = v2832;
+var v1048 = DataMask;
+var v1796 = new DataMask000;
+var v1797 = new DataMask001;
+var v1798 = new DataMask010;
+var v1799 = new DataMask011;
+var v1800 = new DataMask100;
+var v1801 = new DataMask101;
+var v1802 = new DataMask110;
+var v1803 = new DataMask111;
+var v2830 = new Array(v1796, v1797, v1798, v1799, v1800, v1801, v1802, v1803);
+v1048.DATA_MASKS = v2830;
+var v1049 = GF256;
+var v2831 = new GF256(285);
+v1049.QR_CODE_FIELD = v2831;
 var v1050 = GF256;
-var v2833 = new GF256(285);
-v1050.QR_CODE_FIELD = v2833;
-var v1051 = GF256;
-var v2834 = new GF256(301);
-v1051.DATA_MATRIX_FIELD = v2834;
+var v2832 = new GF256(301);
+v1050.DATA_MATRIX_FIELD = v2832;
 GF256.addOrSubtract = v141;
 Decoder = {};
-var v1052 = Decoder;
-var v1805 = GF256.QR_CODE_FIELD;
-var v2835 = new ReedSolomonDecoder(v1805);
-v1052.rsDecoder = v2835;
+var v1051 = Decoder;
+var v2833 = new ReedSolomonDecoder;
+v1051.rsDecoder = v2833;
 Decoder.correctErrors = v142;
 Decoder.decode = v143;
 qrcode = {};
@@ -6113,10 +6122,10 @@ qrcode.width = 0;
 qrcode.height = 0;
 qrcode.qrCodeSymbol = null;
 qrcode.debug = false;
-var v1053 = [10, 9, 8, 8];
-var v1054 = [12, 11, 16, 10];
-var v1055 = [14, 13, 16, 12];
-qrcode.sizeOfDataLengthInfo = [v1053, v1054, v1055];
+var v1052 = [10, 9, 8, 8];
+var v1053 = [12, 11, 16, 10];
+var v1054 = [14, 13, 16, 12];
+qrcode.sizeOfDataLengthInfo = [v1052, v1053, v1054];
 qrcode.callback = null;
 qrcode.decode = v145;
 qrcode.decode_utf8 = v146;
@@ -6126,8 +6135,8 @@ qrcode.binarize = v149;
 qrcode.getMiddleBrightnessPerArea = v150;
 qrcode.grayScaleToBitmap = v151;
 qrcode.grayscale = v152;
-var v1056 = Array.prototype;
-v1056.remove = v153;
+var v1055 = Array.prototype;
+v1055.remove = v153;
 var MIN_SKIP = 3;
 var MAX_MODULES = 57;
 var INTEGER_MATH_SHIFT = 8;
@@ -6139,8 +6148,8 @@ var imageData = null;
 var ii = 0;
 var jj = 0;
 var c = 0;
-var v1057 = document.getElementById("decode");
-v1057.onclick = load
+var v1056 = document.getElementById("decode");
+v1056.onclick = load
 
 }
 

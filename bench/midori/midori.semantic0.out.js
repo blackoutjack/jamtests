@@ -474,13 +474,13 @@ function v83(obj$$22, stopAt) {
     obj$$22 = obj$$22.offsetParent;
     v231 = obj$$22.offsetParent != stopAt;
   }
-  return{x:xPos, y:yPos};
+  return {x:xPos, y:yPos};
 }
 function v82() {
   if (this.browserType == "MSIE") {
-    return{windowWidth:document.documentElement.clientWidth, windowHeight:document.documentElement.clientHeight, scrollTop:document.documentElement.scrollTop};
+    return {windowWidth:document.documentElement.clientWidth, windowHeight:document.documentElement.clientHeight, scrollTop:document.documentElement.scrollTop};
   } else {
-    return{windowWidth:window.innerWidth, windowHeight:window.innerHeight, scrollTop:window.scrollY};
+    return {windowWidth:window.innerWidth, windowHeight:window.innerHeight, scrollTop:window.scrollY};
   }
   return;
 }
@@ -856,16 +856,16 @@ function v60(event$$2) {
     v829 = event$$2.targetTouches.length;
   }
   if (v829) {
-    return{x:event$$2.targetTouches[0].pageX, y:event$$2.targetTouches[0].pageY};
+    return {x:event$$2.targetTouches[0].pageX, y:event$$2.targetTouches[0].pageY};
   } else {
     var v832 = event$$2.pageX;
     if (!v832) {
       v832 = event$$2.pageY;
     }
     if (v832) {
-      return{x:event$$2.pageX, y:event$$2.pageY};
+      return {x:event$$2.pageX, y:event$$2.pageY};
     } else {
-      return{x:event$$2.clientX + document.documentElement.scrollLeft - document.body.clientLeft, y:event$$2.clientY + document.documentElement.scrollTop - document.body.clientTop};
+      return {x:event$$2.clientX + document.documentElement.scrollLeft - document.body.clientLeft, y:event$$2.clientY + document.documentElement.scrollTop - document.body.clientTop};
     }
   }
   return;
@@ -1530,7 +1530,7 @@ function v42(selectorText) {
     i$$1++;
     v433 = i$$1 < len;
   }
-  return{elements:elements, attrs:attrs, separators:separators};
+  return {elements:elements, attrs:attrs, separators:separators};
 }
 function v41(obj$$16, direction$$3) {
   var sibling = obj$$16;
@@ -2010,8 +2010,10 @@ function midoriDragDrop(containerId$$1, dropCallback) {
   this.init();
   return;
 }
-function midoriAjax(callback$$29, params$$1, cache) {
-  function v20(where, what$$3, verb, headers) {
+function midoriAjax(callback$$29) {
+  function v20(where, what$$3) {
+    var verb;
+    var headers;
     var cachedValue;
     this.cacheKey = where + "?" + what$$3;
     var v999 = cache;
@@ -2093,6 +2095,8 @@ function midoriAjax(callback$$29, params$$1, cache) {
     JAM.call(thisObj$$2.callback, thisObj$$2, [params$$1]);
     return;
   }
+  var params$$1 = "";
+  var cache = true;
   var thisObj$$2 = this;
   this.cache = {};
   this.callback = callback$$29;
@@ -2166,7 +2170,7 @@ function midoriAutoComplete(vars$$7) {
     this.suggestions = [];
     var v581;
     if (typeof vars$$7.fileName == "string") {
-      v581 = new midoriAjax(this.ajaxCallback, "", true);
+      v581 = new midoriAjax(this.ajaxCallback);
     } else {
       v581 = {};
     }

@@ -10,7 +10,7 @@ function v4() {
 }
 function v3() {
   try {
-    groupDna(document);
+    groupDna();
   } catch (e$$5) {
     var v6 = "The following error was encountered: " + e$$5;
     alert(v6);
@@ -382,7 +382,7 @@ function closeWindow() {
   outputWindow.status = "Done.";
   var v48 = outputWindow.document;
   v48.close();
-  return true;
+  return;
 }
 function convertDegenerates(sequence$$1) {
   sequence$$1 = sequence$$1.toLowerCase();
@@ -739,11 +739,13 @@ function openTextArea() {
   JAM.call(v103.write, v103, ['<br /><textarea rows="6" cols="61">\n'], JAM.policy.p9);
   return true;
 }
-function openWindow(title$$5) {
-  _openWindow(title$$5, true);
+function openWindow() {
+  var title$$5 = "Group DNA";
+  _openWindow(title$$5);
   return;
 }
-function _openWindow(title$$6, isColor) {
+function _openWindow(title$$6) {
+  var isColor = true;
   outputWindow = JAM.call(window.open, window, ["", "my_new_window", "toolbar=no, location=no, directories=no, status=yes, menubar=yes, scrollbars=yes, resizable=yes, copyhistory=no, width=800, height=400"], JAM.policy.p14);
   outputWindow.focus();
   var v104 = outputWindow.document;
@@ -797,13 +799,14 @@ function _openWindow(title$$6, isColor) {
   var v111 = v381 + " results</div>\n";
   JAM.call(v110.write, v110, [v111], JAM.policy.p17);
   outputWindow.status = "Please Wait.";
-  return true;
-}
-function openWindowAlign(title$$7) {
-  _openWindowAlign(title$$7, true);
   return;
 }
-function _openWindowAlign(title$$8, isBackground) {
+function openWindowAlign(title$$7) {
+  _openWindowAlign(title$$7);
+  return;
+}
+function _openWindowAlign(title$$8) {
+  var isBackground = true;
   outputWindow = JAM.call(window.open, window, ["", "my_new_window", "toolbar=no, location=no, directories=no, status=yes, menubar=yes, scrollbars=yes, resizable=yes, copyhistory=no, width=800, height=400"], JAM.policy.p14);
   outputWindow.focus();
   var v112 = outputWindow.document;
@@ -858,7 +861,7 @@ function _openWindowAlign(title$$8, isBackground) {
   var v119 = v385 + " results</div>\n";
   JAM.call(v118.write, v118, [v119], JAM.policy.p17);
   outputWindow.status = "Please Wait.";
-  return true;
+  return;
 }
 function removeFormatting(sequence$$5) {
   return JAM.call(sequence$$5.replace, sequence$$5, [/[\d\s]/g, ""], JAM.policy.p16);
@@ -1008,7 +1011,8 @@ function verifyEmbl(emblFile) {
   }
   return true;
 }
-function verifyMaxDigits(theNumber$$2, maxInput$$2) {
+function verifyMaxDigits(theNumber$$2) {
+  var maxInput$$2 = 9999999999;
   var v393 = JAM.call(theNumber$$2.search, theNumber$$2, [/\d/], JAM.policy.p15);
   var v132 = v393 == -1;
   if (v132) {
@@ -1301,7 +1305,7 @@ function writeGroupNumDnaSetStart(text$$12, tabIn$$3, groupSize$$2, basePerLine$
     lineOfText$$1 = "";
     v182 = i$$6 < stopBase$$2;
   }
-  return true;
+  return;
 }
 function writeGroupNumProtein(text$$13, tabIn$$4, groupSize$$3, basePerLine$$3, startBase$$3, stopBase$$3, numberPosition$$2) {
   var i$$7 = parseInt(startBase$$3);
@@ -1717,9 +1721,8 @@ function writeShuffledSequence(sequence$$17) {
   JAM.call(v264.write, v264, [v265], JAM.policy.p17);
   return true;
 }
-function groupDna(theDocument) {
-  JAM.startProfile('compute');
-
+function groupDna() {
+  var theDocument = document;
   var newDna = "";
   var title$$9 = "";
   var maxInput$$3 = 1E5;
@@ -1727,7 +1730,7 @@ function groupDna(theDocument) {
   var v461 = testScript();
   var v266 = v461 == false;
   if (v266) {
-    return false;
+    return;
   }
   var v689 = theDocument.forms;
   var v668 = v689[0];
@@ -1747,7 +1750,7 @@ function groupDna(theDocument) {
   }
   var v267 = v462;
   if (v267) {
-    return false;
+    return;
   }
   var v644 = theDocument.forms;
   var v603 = v644[0];
@@ -1763,16 +1766,16 @@ function groupDna(theDocument) {
   var v464 = v545 == false;
   var v547 = !v464;
   if (v547) {
-    var v546 = verifyMaxDigits(adjustedStart, 9999999999);
+    var v546 = verifyMaxDigits(adjustedStart);
     v464 = v546 == false;
   }
   var v269 = v464;
   if (v269) {
-    return false;
+    return;
   }
   var v270 = parseInt(adjustedStart);
   adjustedStart = v270 - 1;
-  openWindow("Group DNA");
+  openWindow();
   openPre();
   var v646 = theDocument.forms;
   var v605 = v646[0];
@@ -1850,9 +1853,7 @@ function groupDna(theDocument) {
   }
   closePre();
   closeWindow();
-
-  JAM.stopProfile('compute');
-  return true;
+  return;
 }
 JAM.set(document, "onload", v2);
 var v283 = JAM.call(document.getElementById, document, ["submitbtn"], JAM.policy.p9);

@@ -408,7 +408,7 @@ function ob() {
 function vb(a$$53, b$$36, c$$26) {
   a$$53 = X[a$$53];
   if (!a$$53) {
-    return-1;
+    return -1;
   }
   a$$53.sender(Q.subarray(b$$36, b$$36 + c$$26));
   return c$$26;
@@ -437,7 +437,7 @@ function wb(a$$54, b$$37, c$$27, d$$16) {
     return f$$6;
   }
   V(U);
-  return-1;
+  return -1;
 }
 function xb(a$$55, b$$38, c$$28) {
   var d$$17 = X[a$$55];
@@ -463,17 +463,17 @@ function xb(a$$55, b$$38, c$$28) {
           return a$$55;
         }
         V(ab);
-        return-1;
+        return -1;
       }
       b$$38 = wb(a$$55, b$$38, c$$28, d$$17.position);
       -1 != b$$38 && (d$$17.position += b$$38);
       return b$$38;
     }
     V(U);
-    return-1;
+    return -1;
   }
   V(bb);
-  return-1;
+  return -1;
 }
 function yb(a$$56, b$$39, c$$29, d$$18) {
   c$$29 *= b$$39;
@@ -481,7 +481,7 @@ function yb(a$$56, b$$39, c$$29, d$$18) {
     return 0;
   }
   a$$56 = xb(d$$18, a$$56, c$$29);
-  return-1 == a$$56 ? (X[d$$18] && (X[d$$18].error = n), 0) : Math.floor(a$$56 / b$$39);
+  return -1 == a$$56 ? (X[d$$18] && (X[d$$18].error = n), 0) : Math.floor(a$$56 / b$$39);
 }
 function Ab(a$$57) {
   return 0 > a$$57 || 0 === a$$57 && -Infinity === 1 / a$$57;
@@ -783,7 +783,7 @@ function Db(a$$63, b$$42, c$$33) {
       break;
     }
     if (0 == e$$18) {
-      return-1;
+      return -1;
     }
     if (0 == f$$8) {
       return 1;
@@ -810,7 +810,7 @@ function Gb(a$$65, b$$44) {
 function Hb(a$$66, b$$45) {
   var c$$34 = Qa(a$$66 & 255);
   J[Hb.D | 0] = c$$34;
-  return-1 == xb(b$$45, Hb.D, 1) ? (X[b$$45] && (X[b$$45].error = n), -1) : c$$34;
+  return -1 == xb(b$$45, Hb.D, 1) ? (X[b$$45] && (X[b$$45].error = n), -1) : c$$34;
 }
 function Pb() {
   var a$$67 = Module.canvas;
@@ -1280,7 +1280,7 @@ Module.FS_createPreloadedFile = function(a$$72, b$$49, c$$36, d$$22, e$$20, f$$1
     Kb = document.pointerLockElement === q$$1 || document.mozPointerLockElement === q$$1 || document.webkitPointerLockElement === q$$1;
   }
   function y$$33(a$$73) {
-    return{jpg:"image/jpeg", jpeg:"image/jpeg", png:"image/png", bmp:"image/bmp", ogg:"audio/ogg", wav:"audio/wav", mp3:"audio/mpeg"}[a$$73.substr(a$$73.lastIndexOf(".") + 1)];
+    return {jpg:"image/jpeg", jpeg:"image/jpeg", png:"image/png", bmp:"image/bmp", ogg:"audio/ogg", wav:"audio/wav", mp3:"audio/mpeg"}[a$$73.substr(a$$73.lastIndexOf(".") + 1)];
   }
   function E$$2(c$$37) {
     function h$$6(c$$38) {
@@ -1308,7 +1308,7 @@ Module.FS_createPreloadedFile = function(a$$72, b$$49, c$$36, d$$22, e$$20, f$$1
     Ub = "undefined" != typeof MozBlobBuilder ? MozBlobBuilder : "undefined" != typeof WebKitBlobBuilder ? WebKitBlobBuilder : !Tb ? console.log("warning: no BlobBuilder") : r;
     Vb = "undefined" != typeof window ? window.URL ? window.URL : window.webkitURL : console.log("warning: cannot create object URLs");
     Module.preloadPlugins.push({canHandle:function(a$$75) {
-      return!Module.W && /\.(jpg|jpeg|png|bmp)$/.exec(a$$75);
+      return !Module.W && /\.(jpg|jpeg|png|bmp)$/.exec(a$$75);
     }, handle:function(a$$76, b$$50, c$$39, d$$23) {
       var e$$21 = r;
       if (Tb) {
@@ -1340,7 +1340,7 @@ Module.FS_createPreloadedFile = function(a$$72, b$$49, c$$36, d$$22, e$$20, f$$1
       h$$7.src = i$$6;
     }});
     Module.preloadPlugins.push({canHandle:function(a$$77) {
-      return!Module.V && a$$77.substr(-4) in {".ogg":1, ".wav":1, ".mp3":1};
+      return !Module.V && a$$77.substr(-4) in {".ogg":1, ".wav":1, ".mp3":1};
     }, handle:function(a$$78, b$$51, c$$40, d$$25) {
       function e$$22(d$$26) {
         g$$8 || (g$$8 = n, Module.preloadedAudios[b$$51] = d$$26, c$$40 && c$$40(a$$78));
@@ -13408,7 +13408,7 @@ var $ = function(global, env, buffer$$8) {
   var aK = [bx, bx, bf, bx];
   var aL = [by, by];
   var aM = [bz, bz, a5, bz, a8, bz, a4, bz];
-  return{_malloc:bk, _strlen:bl, _memcpy:bn, _main:a2, _memset:bm, stackAlloc:aN, stackSave:aO, stackRestore:aP, setThrew:aQ, setTempRet0:aT, setTempRet1:aU, setTempRet2:aV, setTempRet3:aW, setTempRet4:aX, setTempRet5:aY, setTempRet6:aZ, setTempRet7:a_, setTempRet8:a$, setTempRet9:a0, dynCall_ii:bo, dynCall_vi:bp, dynCall_vii:bq, dynCall_iiii:br, dynCall_v:bs, dynCall_iii:bt};
+  return {_malloc:bk, _strlen:bl, _memcpy:bn, _main:a2, _memset:bm, stackAlloc:aN, stackSave:aO, stackRestore:aP, setThrew:aQ, setTempRet0:aT, setTempRet1:aU, setTempRet2:aV, setTempRet3:aW, setTempRet4:aX, setTempRet5:aY, setTempRet6:aZ, setTempRet7:a_, setTempRet8:a$, setTempRet9:a0, dynCall_ii:bo, dynCall_vi:bp, dynCall_vii:bq, dynCall_iiii:br, dynCall_v:bs, dynCall_iii:bt};
 }({Math:Math, Int8Array:Int8Array, Int16Array:Int16Array, Int32Array:Int32Array, Uint8Array:Uint8Array, Uint16Array:Uint16Array, Uint32Array:Uint32Array, Float32Array:Float32Array, Float64Array:Float64Array}, {abort:F, assert:z, asmPrintInt:function(a$$123, b$$81) {
   Module.print("int " + a$$123 + "," + b$$81);
 }, asmPrintFloat:function(a$$124, b$$82) {
@@ -13598,7 +13598,7 @@ var $ = function(global, env, buffer$$8) {
     case 79:
     ;
     case 19:
-      return-1;
+      return -1;
     case 92:
     ;
     case 93:
@@ -13697,7 +13697,7 @@ var $ = function(global, env, buffer$$8) {
       return 1;
   }
   V(db);
-  return-1;
+  return -1;
 }, _abort:function() {
   G = n;
   j("abort() at " + Error().stack);
@@ -13708,7 +13708,7 @@ var $ = function(global, env, buffer$$8) {
 }, _pwrite:wb, _sbrk:Z, ___errno_location:function() {
   return eb;
 }, _llvm_lifetime_start:u(), _llvm_bswap_i32:function(a$$135) {
-  return(a$$135 & 255) << 24 | (a$$135 >> 8 & 255) << 16 | (a$$135 >> 16 & 255) << 8 | a$$135 >>> 24;
+  return (a$$135 & 255) << 24 | (a$$135 >> 8 & 255) << 16 | (a$$135 >> 16 & 255) << 8 | a$$135 >>> 24;
 }, _time:function(a$$136) {
   var b$$91 = Math.floor(Date.now() / 1E3);
   a$$136 && (L[a$$136 >> 2] = b$$91);

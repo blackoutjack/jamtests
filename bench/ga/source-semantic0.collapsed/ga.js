@@ -109,7 +109,7 @@ function v209() {
       if (v785) {
         v785 = M(c$$32.xa);
       }
-      return!v785;
+      return !v785;
     }
     function v202() {
       var a$$45 = [];
@@ -1697,16 +1697,16 @@ function v209() {
   function Pa(d$$60, f$$37) {
     function v97() {
       if (!b$$67.Mc()) {
-        return!1;
+        return !1;
       }
       if (!L.Ic()) {
-        return!1;
+        return !1;
       }
       var v467 = b$$67.sb();
       if (v467) {
         ta(L[t], "load", b$$67.sb, !1);
       }
-      return!0;
+      return !0;
     }
     function v96() {
       var d$$61 = b$$67.Kc();
@@ -1715,13 +1715,13 @@ function v209() {
         v936 = isNaN(d$$61);
       }
       if (v936) {
-        return!1;
+        return !1;
       }
       if (d$$61 <= 0) {
-        return!0;
+        return !0;
       }
       if (d$$61 > 2147483648) {
-        return!1;
+        return !1;
       }
       var a$$66 = b$$67.rb;
       JAM.call(a$$66.t, a$$66, [14], JAM.policy.p2);
@@ -1743,7 +1743,7 @@ function v209() {
       if (v472) {
         h$$31.setPageReadyTime();
       }
-      return!1;
+      return !1;
     }
     function v95(b$$69) {
       b$$69 = JAM.call(Math.min, Math, [JAM.call(Math.floor, Math, [b$$69 / 100], JAM.policy.p3), 5E3], JAM.policy.p2);
@@ -1861,17 +1861,17 @@ function v209() {
         v945 = n$$15 == Infinity;
       }
       if (v945) {
-        return!1;
+        return !1;
       }
       d$$54(a$$62, c$$37, b$$63, n$$15.toString());
-      return!0;
+      return !0;
     }
     function v102(b$$62, c$$43, n$$14) {
       if (typeof n$$14 != "string") {
-        return!1;
+        return !1;
       }
       d$$54(b$$62, a$$54, c$$43, n$$14);
-      return!0;
+      return !0;
     }
     function v101(a$$61) {
       if (a$$61 == k) {
@@ -2362,7 +2362,7 @@ function v209() {
       var v998 = JAM.call(c$$30.slice, c$$30, [4], JAM.policy.p2);
       JAM.call(a$$42.gb, a$$42, [JAM.call(v998.join, v998, ["."], JAM.policy.p2)], JAM.policy.p3);
       if (!JAM.call(g$$13.h, g$$13, [a$$42], JAM.policy.p3)) {
-        return!0;
+        return !0;
       }
       c$$30 = L[w$$5][y$$30];
       c$$30 = JAM.call(g$$13.kb, g$$13, [c$$30], JAM.policy.p3);
@@ -2582,9 +2582,9 @@ function v209() {
         v1026 = v1659;
       }
       if (v1026) {
-        return!0;
+        return !0;
       }
-      return!1;
+      return !1;
     }
     function v115(a$$33) {
       var c$$22 = g$$13.ua();
@@ -2897,7 +2897,8 @@ function v209() {
       }
       return P(JAM.call(c$$16.join, c$$16, ["+"], JAM.policy.p2));
     }
-    function v132(a$$24, c$$15, d$$31, j$$8, i$$5, s$$3) {
+    function v132(a$$24, c$$15, d$$31, j$$8, i$$5) {
+      var s$$3;
       if (!e$$17) {
         e$$17 = new Ja;
       }
@@ -3134,9 +3135,9 @@ function v209() {
       if (h$$14) {
         JAM.set(h$$14, "onreadystatechange", v138);
         JAM.call(h$$14.send, h$$14, [d$$28], JAM.policy.p3);
-        return!0;
+        return !0;
       }
-      return!1;
+      return !1;
     }
     function v137(f$$18, b$$25) {
       var v647 = JAM.call(d$$26.ed, d$$26, [f$$18, b$$25], JAM.policy.p3);
@@ -3607,7 +3608,7 @@ function v209() {
       if (!M(i$$1)) {
         a = JAM.call(i$$1.indexOf, i$$1, ["^" + b$$16 + "."], JAM.policy.p3);
         if (a < 0) {
-          return["", 0];
+          return ["", 0];
         }
         i$$1 = JAM.call(i$$1.substring, i$$1, [a + b$$16[v] + 2], JAM.policy.p3);
         var v718 = JAM.call(i$$1.indexOf, i$$1, ["^"], JAM.policy.p2) > 0;
@@ -3630,7 +3631,7 @@ function v209() {
       if (v722) {
         i$$1 = "";
       }
-      return[i$$1, d$$21];
+      return [i$$1, d$$21];
     }
     function b$$15(a$$1, c$$1) {
       var v1717 = [c$$1, a$$1[1]];
@@ -3756,7 +3757,8 @@ function v209() {
   function R(d$$14, f$$9) {
     return JAM.call(d$$14.indexOf, d$$14, [f$$9], JAM.policy.p3) > -1;
   }
-  function Q(d$$13, f$$8) {
+  function Q(d$$13) {
+    var f$$8;
     var b$$12 = decodeURIComponent;
     var h$$8;
     var v735 = JAM.call(d$$13.split, d$$13, ["+"], JAM.policy.p2);
@@ -3904,11 +3906,11 @@ function v209() {
     }
     return v183;
   }
-  function ra(d$$4, f$$1) {
+  function ra() {
     function v193(d$$5) {
       var v1193 = !d$$5;
       if (!v1193) {
-        v1193 = !JAM.call(b$$2.Jb, b$$2, ["Firefox"], JAM.policy.p2);
+        v1193 = !b$$2.Jb();
       }
       if (v1193) {
         return d$$5;
@@ -3968,13 +3970,14 @@ function v209() {
       return L[t][ja];
     }
     function v186() {
-      var v759 = JAM.call(b$$2.Jb, b$$2, ["Firefox"], JAM.policy.p2);
+      var v759 = b$$2.Jb();
       if (v759) {
         v759 = ![].reduce;
       }
       return v759;
     }
-    function v185(b$$4) {
+    function v185() {
+      var b$$4 = "Firefox";
       var v1206 = navigator.userAgent;
       return JAM.call(v1206.indexOf, v1206, [b$$4], JAM.policy.p3) >= 0;
     }
@@ -3982,6 +3985,8 @@ function v209() {
       JAM.call(setTimeout, null, [b$$3, e$$5]);
       return;
     }
+    var d$$4 = window;
+    var f$$1 = document;
     var b$$2 = this;
     b$$2.window = d$$4;
     b$$2.document = f$$1;
@@ -4112,7 +4117,7 @@ function v209() {
   var na = "__utmx=";
   var oa = "GASO=";
   var qa = new pa;
-  var L = new ra(window, document);
+  var L = new ra;
   var v770;
   if ("https:" == L[w$$5][y$$30][ea]) {
     v770 = "https://ssl.google-analytics.com/";

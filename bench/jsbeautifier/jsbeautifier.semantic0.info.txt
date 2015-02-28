@@ -2,7 +2,7 @@ predicate-limit:0
 syntax-only:false
 policy-files:[/home/rich/cs/jam/tests/bench/jsbeautifier/jsbeautifier.policy]
 jsbeautifier.original.js:500
-jsbeautifier.normalized.js:683
+jsbeautifier.normalized.js:682
 policy.aut:23
 allFunctions:8
 allCallsites:50
