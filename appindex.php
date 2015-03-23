@@ -1,7 +1,7 @@
 <?php
 error_reporting(E_ALL);
 
-$err = '';
+$errors = array();
 
 // Disable or enable some application if we're testing performance.
 define('PERFORMANCE', 1);
@@ -95,9 +95,10 @@ foreach ($apps as $app) {
 ?>
     </ul>
 <?
-if ($err) {
+if (sizeof($errors) > 0) {
+  $errtxt = htmlspecialchars(implode('<br/>', $errors));
 ?>
-    <p class="error"><pre><?=$err?></pre></p>
+    <p class="error"><?=$errtxt?></p>
 <?
 }
 if ($auto) {

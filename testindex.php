@@ -1,9 +1,9 @@
 <?php
 error_reporting(E_ALL);
 
-$err = '';
-define(COLUMN_HEIGHT, 12);
-define(SCRIPT_INDEX_NAME, 'scripts.txt');
+$errors = array();
+define('COLUMN_HEIGHT', 12);
+define('SCRIPT_INDEX_NAME', 'scripts.txt');
 
 $appname = basename(getcwd());
 include "auto.php";
@@ -50,7 +50,7 @@ foreach ($allfiles as $fl) {
         if (sizeof($parts) == 3) {
           $scriptindex[] = $parts;
         } else {
-          $err .= "Invalid script index line: $ln\n";
+          $errors[] = "Invalid script index line: $ln\n";
         }
       }
     } else if (strpos($fl, $appname.'.') === 0) {
@@ -138,7 +138,7 @@ foreach ($sourcedirs as $sourcedir) {
       if (file_exists($srcpath) && !is_dir($srcpath)) {
         $subinfo[] = $srcpath;
       } else {
-        $err .= "Source file is inaccessible: $srcpath";
+        $errors[] = "Source file is inaccessible: $srcpath";
       }
     }
   }
@@ -204,29 +204,34 @@ function getHTMLLink($info, $name) {
 function findPolicies($info, $key) {
   $ret = array();
 
+  // Remove the last part (in addition to a trailing "profile", if
+  // present). The last part indicates the intermittant output stage,
+  // which doesn't bear on which policy file to associate.
   $keyparts = explode('.', $key);
   $keylen = sizeof($keyparts);
+  // Remove the "profile" segment.
   if ($keyparts[$keylen - 1] == 'profile') {
-    $keyparts = array_slice($keyparts, 0, $keylen - 2);
-  } else {
+    $keyparts = array_slice($keyparts, 0, $keylen - 1);
+  }
+  // Remove the output stage indicator. (The conditional is because we
+  // want to leave "input".
+  if (sizeof($keyparts) > 1) {
     $keyparts = array_slice($keyparts, 0, $keylen - 1);
   }
   $key = implode('.', $keyparts);
 
+  // Search for a policy file corresponding to the trimmed key.
   foreach ($info as $pkey => $pol) {
-    if (strpos($pkey, $key) > -1) {
+    if ($key === '' || strpos($pkey, $key) > -1) {
       $pnub = str_replace($key, '', $pkey);
       $pnub = trim($pnub, '.');
       $ret[$pnub] = $info[$pkey];
     }
   }
 
+  // Don't use any policy.
   if (sizeof($ret) == 0) {
-    if (isset($info['main'])) {
-      $ret['main'] = $info['main'];
-    } else {
-      $ret['main'] = null;
-    }
+    $ret[$key] = null;
   }
   return $ret;
 }
@@ -309,12 +314,13 @@ foreach ($htmlsolo as $key => $sub) {
 $linksrc = implode('<br/>', $linksrcs);
 
 if (!$linksrc) {
-  $err .= "WARNING: $appname has no test cases.\n";
+  $errors[] = "WARNING: $appname has no test cases.\n";
 }
 
-if ($err) {
+if (sizeof($errors) > 0) {
+  $errtxt = htmlspecialchars(implode('<br/>', $errors));
 ?>
-    <p class="error"><pre><?=$err?></pre></p>
+    <p class="error"><?=$errtxt?></p>
 <?
 }
 
