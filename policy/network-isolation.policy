@@ -1,10 +1,9 @@
 0,-1: jam#set(`x,"src",`z) && `x instanceof #HTMLElement && jam#regextest(/^\s*(http|ftp)/i,`z)
 0,-1: jam#set(`x,"action") && `x instanceof #HTMLFormElement
 0,-1: jam#set(`x,"location") && `x instanceof #Window
-# These next 3 are questionably needed.
 0,-1: jam#set(`x,"cookie") && `x instanceof #HTMLDocument
 0,-1: jam#set(`x,"href") && `x instanceof #HTMLElement
-0,-1: jam#set(`x,"innerHTML") && `x instanceof #HTMLElement
+0,-1: jam#set(`x,"innerHTML",`y) && `x instanceof #HTMLElement && jam#regextest(/^\s*(audio|frame|iframe|img|input|source|video)/i,`y)
 0,-1: jam#call(#HTMLDocument#prototype#write) && jam#type(jam#arg(0),"String")
 0,-1: jam#call(#HTMLDocument#prototype#writeln) && jam#type(jam#arg(0),"String")
 # This call fails with less than 2 arguments, but passing |undefined|

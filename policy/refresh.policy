@@ -1,0 +1,10 @@
+0,-1: jam#invoke(#Location#prototype#reload)
+0,-1: jam#invoke(#Location#prototype#replace)
+0,-1: jam#invoke(#Location#prototype#assign)
+0,-1: jam#set(`x,"location") && `x instanceof #Window
+0,-1: jam#set(`x,"location") && `x instanceof #Window
+0,-1: jam#set(`x,`y) && `x instanceof #Location
+# Submitting a form is essentially a refresh if the action is "" or
+# points to the current URI. This is therefore overly conservative, but
+# it's difficult to see how to precisely rule out all self-submits.
+0,-1: jam#invoke(#HTMLFormElement#prototype#submit)

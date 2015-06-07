@@ -1,0 +1,6 @@
+# This policy prevents all audio and video from being initiated through
+# JavaScript.
+0,1:jam#call(#HTMLAudioElement#prototype#play)
+0,1:jam#set(`x,"autoplay",`v) && `x instanceof #HTMLAudioElement && `v !== false
+0,1:jam#call(#HTMLVidioElement#prototype#play)
+0,1:jam#set(`x,"autoplay",`v) && `x instanceof #HTMLVidioElement && `v !== false
